@@ -45,12 +45,12 @@ export default function ConceptsPage() {
           className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
         >
           <h2 className="px-5 pb-1 pt-4 text-[16px] font-bold">{major}</h2>
+
           {Array.from(minors.entries()).map(([minor, concepts]) => {
             const key = `${major}>${minor}`;
+            // 중단원(소단원)은 기본으로 펼친다 — 대단원 아래 목차가 보여야 한다
             const isOpen = open[key] ?? true;
-            const studied = concepts.filter(
-              (c) => (progress.concepts[c.id]?.level ?? 0) > 0,
-            ).length;
+            const studied = countStudied(concepts, progress);
             return (
               <div key={key}>
                 <button
@@ -61,53 +61,107 @@ export default function ConceptsPage() {
                   <span className="text-[15px] font-semibold text-ink-sub">
                     {minor}
                   </span>
-                  <span className="flex items-center gap-2">
-                    <span className="rounded-full bg-primary-50 px-2.5 py-0.5 text-[12px] font-bold text-primary-600">
-                      {studied}/{concepts.length}
-                    </span>
-                    <span
-                      className={`text-ink-faint transition-transform ${isOpen ? "rotate-180" : ""}`}
-                      aria-hidden
-                    >
-                      ⌄
-                    </span>
-                  </span>
+                  <Meta studied={studied} total={concepts.length} open={isOpen} />
                 </button>
-                {isOpen && (
-                  <div className="pb-2">
-                    {byTopic(concepts).map(([topic, list]) => (
-                      <div key={topic || "_"}>
-                        {topic && (
-                          <p className="px-5 pb-1 pt-2 text-[12px] font-bold tracking-wide text-ink-faint">
-                            {topic}
-                          </p>
+
+                {isOpen &&
+                  byTopic(concepts).map(([topic, list]) => {
+                    const tkey = `${key}>${topic}`;
+                    // 세부 개념은 기본으로 접어 둔다 — 목차부터 보고 필요한 것만 편다
+                    const tOpen = open[tkey] ?? false;
+                    const tStudied = countStudied(list, progress);
+                    return (
+                      <div key={tkey || "_"}>
+                        <button
+                          onClick={() =>
+                            setOpen((o) => ({ ...o, [tkey]: !tOpen }))
+                          }
+                          className="flex w-full items-center justify-between py-2 pl-8 pr-5 text-left active:bg-bg-subtle"
+                          aria-expanded={tOpen}
+                        >
+                          <span className="text-[14px] font-medium text-ink">
+                            {topic || "개념"}
+                          </span>
+                          <Meta
+                            studied={tStudied}
+                            total={list.length}
+                            open={tOpen}
+                            subtle
+                          />
+                        </button>
+
+                        {tOpen && (
+                          <div className="pb-1">
+                            {list.map((c) => (
+                              <Link
+                                key={c.id}
+                                href={`/concepts/${c.id}`}
+                                className="mx-2 flex min-h-[48px] items-center justify-between rounded-2xl py-2.5 pl-9 pr-3 active:bg-bg-subtle"
+                              >
+                                <span className="text-[15px] font-medium">
+                                  {c.term}
+                                </span>
+                                <span className="flex items-center gap-2.5">
+                                  <LevelDots
+                                    level={progress.concepts[c.id]?.level ?? 0}
+                                  />
+                                  <span className="text-ink-faint" aria-hidden>
+                                    ›
+                                  </span>
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
                         )}
-                        {list.map((c) => (
-                          <Link
-                            key={c.id}
-                            href={`/concepts/${c.id}`}
-                            className="mx-2 flex min-h-[48px] items-center justify-between rounded-2xl px-3 py-2.5 active:bg-bg-subtle"
-                          >
-                            <span className="text-[15px] font-medium">{c.term}</span>
-                            <span className="flex items-center gap-2.5">
-                              <LevelDots
-                                level={progress.concepts[c.id]?.level ?? 0}
-                              />
-                              <span className="text-ink-faint" aria-hidden>
-                                ›
-                              </span>
-                            </span>
-                          </Link>
-                        ))}
                       </div>
-                    ))}
-                  </div>
-                )}
+                    );
+                  })}
+                {isOpen && <div className="pb-1" />}
               </div>
             );
           })}
         </section>
       ))}
     </Screen>
+  );
+}
+
+function countStudied(
+  list: Concept[],
+  progress: { concepts: Record<string, { level: number }> },
+) {
+  return list.filter((c) => (progress.concepts[c.id]?.level ?? 0) > 0).length;
+}
+
+/** 진도 뱃지 + 펼침 화살표 — 중단원과 소주제가 같은 모양을 쓴다 */
+function Meta({
+  studied,
+  total,
+  open,
+  subtle = false,
+}: {
+  studied: number;
+  total: number;
+  open: boolean;
+  subtle?: boolean;
+}) {
+  return (
+    <span className="flex items-center gap-2">
+      <span
+        className={`rounded-full px-2.5 py-0.5 text-[12px] font-bold ${
+          subtle
+            ? "bg-bg-subtle text-ink-sub"
+            : "bg-primary-50 text-primary-600"
+        }`}
+      >
+        {studied}/{total}
+      </span>
+      <span
+        className={`text-ink-faint transition-transform ${open ? "rotate-180" : ""}`}
+        aria-hidden
+      >
+        ⌄
+      </span>
+    </span>
   );
 }

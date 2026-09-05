@@ -4,7 +4,7 @@
 > `node app/scripts/gen-art-doc.mjs` 를 다시 돌려라.
 
 앱에서 이모지를 전부 걷어냈다. 아래 **27개 자리**가 비어 있고, 이미지를 넣으면 그 자리에 나타난다.
-현재 채워진 것 **0 / 27**.
+현재 채워진 것 **1 / 27**.
 
 ## 넣는 법
 
@@ -26,7 +26,7 @@
 |---|---|---|---|---|---|---|---|
 | **필요** | `streak-flame` | 🔥 | 20px | 헤더 배지 · 리스트 행 · 결과 히어로 배지 | 며칠 연속으로 학습했는지. 끊기지 않았다는 신호 | — | 높음 |
 | **필요** | `daily-todo` | 🧪 | 200px | 히어로 카드 우하단, 파란 배경 위 장식 | 오늘 학습을 아직 안 한 상태. 시작을 권하는 분위기 | — | 높음 |
-| **필요** | `daily-done` | 🎉 | 200px | 히어로 카드 우하단, 파란 배경 위 장식 | 오늘 학습을 끝낸 상태. daily-todo 와 같은 자리에서 교체된다 | — | 높음 |
+| 완료 | `daily-done` | 🎉 | 200px | 히어로 카드 우하단, 파란 배경 위 장식 | 오늘 학습을 끝낸 상태. daily-todo 와 같은 자리에서 교체된다 | — | 높음 |
 | **필요** | `review-return` | 🔁 | 24px | 오늘의 구성 리스트 행 | 망각곡선에 따라 다시 돌아온 개념 | — | 보통 |
 | **필요** | `concept-new` | ✨ | 24px | 오늘의 구성 리스트 행 | 오늘 처음 만나는 개념 | — | 보통 |
 | **필요** | `attendance` | 🌱 | 20px | 출석 잔디 카드 제목 옆 | 매일 조금씩 쌓이는 기록 | — | 낮음 |
@@ -106,7 +106,7 @@
 
 ## 우선순위
 
-- **높음** (10개) — `streak-flame` · `daily-todo` · `daily-done` · `grade-again` · `grade-vague` · `grade-perfect` · `feedback-correct` · `feedback-wrong` · `ox-true` · `ox-false`
+- **높음** (9개) — `streak-flame` · `daily-todo` · `grade-again` · `grade-vague` · `grade-perfect` · `feedback-correct` · `feedback-wrong` · `ox-true` · `ox-false`
 - **보통** (12개) — `review-return` · `concept-new` · `section-relations` · `section-caution` · `section-links` · `hint` · `result-perfect` · `result-good` · `locked` · `empty-map` · `empty-items` · `empty-lines`
 - **낮음** (5개) — `attendance` · `timer` · `masked` · `answer-correct` · `empty-default`
 
