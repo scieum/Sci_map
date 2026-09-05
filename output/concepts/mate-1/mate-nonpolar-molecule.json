@@ -1,0 +1,122 @@
+{
+  "id": "mate-nonpolar-molecule",
+  "concept_key": "concept:nonpolar-molecule",
+  "registry_status": "new",
+  "term": "무극성 분자",
+  "notation": {
+    "hanja": "無極性分子",
+    "hanja_gloss": "無 없을 무 · 極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
+    "english": "nonpolar molecule"
+  },
+  "definition": "평균적인 전자 분포가 대칭이어서 분자 전체의 쌍극자 모멘트가 0인 분자. 같은 원소끼리 결합한 이원자 분자가 대표적이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-npm-symmetry",
+      "text": "무극성 분자는 전자 분포가 평균적으로 대칭이어서 영구 쌍극자를 갖지 않는다.",
+      "form": {
+        "condition": "전자 분포를 시간에 대해 평균 내어 볼 때",
+        "type": "conditional",
+        "scope": "무극성 분자",
+        "antecedent": {
+          "quantity": "전자 분포의 대칭성",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "영구 쌍극자",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "무극성이라는 정의 자체가 영구 쌍극자가 없다는 뜻이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무극성 분자도 영구 쌍극자를 가진다."
+    },
+    {
+      "id": "rel-npm-instant",
+      "text": "무극성 분자도 전자가 한쪽으로 몰리는 순간에는 짧은 시간 쌍극자를 만든다.",
+      "form": {
+        "condition": "분자 안의 전자가 끊임없이 움직이고 있을 때",
+        "type": "causal",
+        "scope": "모든 분자 — 무극성 분자를 포함한다"
+      },
+      "invertible": false,
+      "invertible_reason": "'순간 쌍극자가 생기면 무극성 분자다'라는 역방향은 극성 분자에서도 참이라 항상 거짓이 아니다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-npm-condense",
+      "text": "무극성 분자로 된 물질도 온도를 충분히 낮추면 액체나 고체가 된다.",
+      "form": {
+        "condition": "압력을 일정하게 두고 온도를 계속 낮출 때",
+        "type": "causal",
+        "scope": "무극성 분자로 이루어진 물질",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "액체·고체로 응축할 경향",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분자 사이에 분산력이 있는 한 냉각으로 응축시킬 수 있으므로 응축하지 않는다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무극성 분자로 된 물질은 온도를 아무리 낮추어도 액체나 고체가 되지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무극성 분자 사이에는 아무런 힘도 작용하지 않는다",
+      "why_wrong": "순간 쌍극자에서 비롯한 분산력이 작용한다. 그 힘이 있기 때문에 산소나 질소도 충분히 식히면 액체가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-npm-instant"
+    },
+    {
+      "text": "무극성 분자 사이에서도 쌍극자·쌍극자 힘이 작용한다",
+      "why_wrong": "쌍극자·쌍극자 힘은 영구 쌍극자가 있어야 생긴다. 무극성 분자 사이에 작용하는 것은 분산력이다.",
+      "source": "llm",
+      "linked_relation": "rel-npm-symmetry"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-dispersion-force"
+    },
+    {
+      "type": "related",
+      "target": "mate-polar-molecule",
+      "note": "전자 분포의 대칭 여부로 갈리는 대립쌍이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-intermolecular-force"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-01",
+  "pages": [
+    30,
+    31
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

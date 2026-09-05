@@ -1,0 +1,113 @@
+{
+  "id": "mate-covalent-crystal",
+  "concept_key": "concept:covalent-crystal",
+  "registry_status": "new",
+  "term": "공유 결정",
+  "aliases": [
+    "원자 결정"
+  ],
+  "notation": {
+    "hanja": "共有結晶",
+    "hanja_gloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 晶 맑을 정",
+    "english": "covalent crystal"
+  },
+  "definition": "모든 원자가 공유 결합으로 그물처럼 이어져, 결정 하나가 거대한 분자 한 덩이나 다름없게 된 결정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cc-mp",
+      "text": "결정 전체가 공유 결합으로 이어져 있어 공유 결정은 매우 단단하고 녹는점이 아주 높다.",
+      "form": {
+        "condition": "다른 종류의 결정과 상온·상압에서 견줄 때",
+        "type": "causal",
+        "scope": "공유 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "녹이려면 공유 결합 자체를 끊어야 하므로 녹는점이 낮다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공유 결정은 공유 결합으로 이어져 있어 녹는점이 낮고 무르다."
+    },
+    {
+      "id": "rel-cc-vs-molecular",
+      "text": "같은 공유 결합이라도 그물로 이어지면 공유 결정, 낱낱의 분자로 끊기면 분자 결정이 된다.",
+      "form": {
+        "condition": "입자를 잇는 결합이 공유 결합일 때",
+        "type": "conditional",
+        "scope": "공유 결합으로 이루어진 고체"
+      },
+      "invertible": false,
+      "invertible_reason": "두 갈래를 가르는 기준을 밝힌 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-graphite",
+      "text": "흑연은 공유 결정이지만 각 탄소가 내놓은 전자가 층을 따라 움직여 전기를 통한다.",
+      "form": {
+        "condition": "탄소 원자가 평면 층 구조를 이룰 때",
+        "type": "conditional",
+        "scope": "흑연 — 공유 결정 가운데 예외 사례"
+      },
+      "invertible": false,
+      "invertible_reason": "예외 하나를 짚은 진술이라 방향을 뒤집으면 참·거짓을 판정할 수 없다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공유 결정도 공유 결합으로 된 물질이므로 분자 결정처럼 녹는점이 낮다",
+      "why_wrong": "분자 결정은 분자 사이의 약한 힘만 끊으면 녹지만, 공유 결정은 결정 전체를 잇는 공유 결합을 끊어야 하므로 녹는점이 매우 높다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-vs-molecular"
+    },
+    {
+      "text": "다이아몬드는 탄소 분자들이 모여 이룬 분자 결정이다",
+      "why_wrong": "다이아몬드에는 낱낱의 분자가 없다. 탄소 원자가 그물처럼 이어진 공유 결정이다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-mp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-crystalline-solid",
+      "note": "결정 분류의 상위 개념이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-molecular-crystal",
+      "note": "같은 공유 결합을 쓰지만 구조가 다르다"
+    },
+    {
+      "type": "related",
+      "target": "mate-amorphous-solid",
+      "note": "석영(결정성)과 유리(비결정성)는 화학식이 같다"
+    },
+    {
+      "type": "related",
+      "target": "mate-metallic-crystal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-04"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-03",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

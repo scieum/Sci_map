@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "candidates.schema.json",
+  "title": "C1 개념 후보 목록",
+  "description": "textbook-analyst 가 단원 하나에서 뽑은 개념 후보와 단원 내 위계. 카드가 아니라 카드의 씨앗이다.",
+  "type": "object",
+  "required": ["unit_id", "subject", "generated_at", "source", "candidates", "hierarchy"],
+  "additionalProperties": false,
+  "properties": {
+    "unit_id":      { "type": "string", "pattern": "^[a-z]+-[0-9]+$" },
+    "subject":      { "type": "string" },
+    "unit_title":   { "type": "string" },
+    "generated_at": { "type": "string" },
+    "attempt":      { "type": "integer", "minimum": 1, "default": 1 },
+    "source": {
+      "type": "object",
+      "required": ["text_jsonl", "standards"],
+      "additionalProperties": false,
+      "properties": {
+        "text_jsonl": { "type": "string" },
+        "standards":  { "type": "string" },
+        "registry":   { "type": "string" }
+      }
+    },
+
+    "candidates": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 30,
+      "items": { "$ref": "#/$defs/candidate" }
+    },
+
+    "hierarchy": {
+      "description": "단원 내 위계 초안. from 을 알아야 to 를 이해한다 (prereq 방향).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "additionalProperties": false,
+        "properties": {
+          "from": { "type": "string" },
+          "to":   { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+
+    "excluded": {
+      "description": "카드로 만들지 않기로 한 것. 왜 뺐는지 남긴다 — C10 튜닝의 재료다.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["term", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "term":   { "type": "string" },
+          "reason": { "type": "string", "enum": ["활동", "실험 유의사항", "사례", "인물", "단위·기호", "중복", "범위 밖", "기타"] },
+          "note":   { "type": "string" },
+          "pages":  { "type": "array", "items": { "type": "integer" } }
+        }
+      }
+    },
+
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "required": ["id", "term", "concept_key", "registry_status", "pages", "topic_id", "curriculum", "role", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "카드 id 후보. 접두어 뒤 첫 글자는 영문자 — 단원 id 와 구별하기 위한 규칙이다 (concept_registry.yaml id_format).",
+          "type": "string",
+          "pattern": "^(isci1|isci2|chem|mate|reac)-[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+        },
+        "term":    { "type": "string", "minLength": 1 },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "term_en": { "type": "string" },
+
+        "concept_key": {
+          "description": "기존 사전에 있으면 그 키를 그대로 쓴다 (same 링크의 씨앗). 없으면 규칙대로 지어 registry_status: new 로 둔다.",
+          "type": "string",
+          "pattern": "^concept:[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+        },
+        "registry_status": {
+          "description": "reused = concept_registry.yaml 에 실재하는 키. new = 이 단원에서 처음 지은 키 (G3 사람 승인 대상).",
+          "type": "string",
+          "enum": ["reused", "new"]
+        },
+        "same_candidate": {
+          "description": "registry_status 가 reused 일 때 이어질 기존 카드 id. 표기 일치가 아니라 키 일치가 근거다 (R9).",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "homonym_flag": {
+          "description": "표기가 homonyms.yaml 의 surface 와 겹칠 때 true. 링크는 사람 게이트 전까지 걸지 않는다.",
+          "type": "boolean",
+          "default": false
+        },
+
+        "pages":    { "type": "array", "minItems": 1, "items": { "type": "integer" } },
+        "topic_id": { "type": "string" },
+        "section_id": { "type": "string" },
+
+        "curriculum": {
+          "description": "성취기준 코드. crosscheck 가 '일치' 인 코드만 쓴다.",
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+
+        "role": {
+          "description": "core = 이 단원의 뼈대. supporting = 뼈대를 받치는 개념. context = 배경 지식.",
+          "type": "string",
+          "enum": ["core", "supporting", "context"]
+        },
+        "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+
+        "evidence": {
+          "description": "이 개념이 교과서 어디에 있는지. 원문을 옮겨 적지 않는다 — 위치만 가리킨다 (§9.4 원문 배포 금지).",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["page", "block_id"],
+            "additionalProperties": false,
+            "properties": {
+              "page":     { "type": "integer" },
+              "block_id": { "type": "string" },
+              "hint":     { "type": "string", "maxLength": 40 }
+            }
+          }
+        },
+
+        "relation_seeds": {
+          "description": "C2 가 관계 명제로 키울 씨앗. 여기서는 명제를 완성하지 않는다 — condition·scope 는 C2 의 몫이다.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

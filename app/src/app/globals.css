@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/*
+ * 컬러 시스템 — Design.md §2
+ * 키 컬러는 미확정. 컴포넌트는 의미 토큰(primary-*)만 참조하고,
+ * 의미 토큰이 후보 램프(--ramp-*)를 가리킨다. 팔레트 교체 = 램프 6줄 교체.
+ */
+:root {
+  /* 후보 A — Sky (잠정 기본값). 후보 B(Green)는 Design.md §2.2 참조 */
+  --ramp-50: #eff9ff;
+  --ramp-100: #def2ff;
+  --ramp-300: #7ccfff;
+  --ramp-500: #189fe6;
+  --ramp-600: #0e82c4;
+  --ramp-700: #0a669b;
+}
+
+@theme inline {
+  --color-primary-50: var(--ramp-50);
+  --color-primary-100: var(--ramp-100);
+  --color-primary-300: var(--ramp-300);
+  --color-primary-500: var(--ramp-500);
+  --color-primary-600: var(--ramp-600);
+  --color-primary-700: var(--ramp-700);
+
+  /* 페이지는 연회색, 카드는 흰색 — 보더 대신 은은한 그림자 (티키타카·핑글 결) */
+  --color-bg: #f3f5f8;
+  --color-bg-subtle: #eef1f5;
+  --color-surface: #ffffff;
+  --color-line: #edf0f4;
+  --color-ink: #20242b;
+  --color-ink-sub: #6b7684;
+  --color-ink-faint: #a3adb8;
+
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-warning: #d97706;
+  --color-warning-bg: #fef6ec;
+  --color-info: #2563eb;
+  --color-info-bg: #eef4ff;
+  --color-lock: #6b7280;
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system,
+    "Noto Sans KR", sans-serif;
+  /* 포인트 폰트 — 미정(빈칸). 확정 시 아래 첫 자리에 이름만 추가한다.
+     예: --font-display: "확정폰트명", var(--font-sans); */
+  --font-display: var(--font-sans);
+
+  --radius-card: 24px;
+  --shadow-card: 0 2px 14px rgba(23, 58, 94, 0.06);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 접근성 — 포커스 링 (Design.md §6) */
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

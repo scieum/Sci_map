@@ -1,0 +1,83 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+/**
+ * 학습 상태 — MVP는 localStorage.
+ * Supabase `study_states`(FSRS) 연동 시 이 모듈만 교체한다 (설계서 §2.5).
+ */
+
+export interface Progress {
+  /** 개념별 상태: 마지막 자기평가 (recall 모드·퀴즈 결과 반영) */
+  concepts: Record<string, { level: 0 | 1 | 2 | 3; updatedAt: string }>;
+  /** 최근 세션에서 틀린 개념 — 다음 데일리 세트의 복습 후보 */
+  wrongConceptIds: string[];
+  streak: { count: number; lastDate: string };
+  /** 데일리 완료 날짜 목록 (출석 잔디) */
+  doneDates: string[];
+}
+
+const KEY = "scisherpa-progress-v1";
+
+const EMPTY: Progress = {
+  concepts: {},
+  wrongConceptIds: [],
+  streak: { count: 0, lastDate: "" },
+  doneDates: [],
+};
+
+export function todayKey(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+export function loadProgress(): Progress {
+  if (typeof window === "undefined") return EMPTY;
+  try {
+    const raw = localStorage.getItem(KEY);
+    return raw ? { ...EMPTY, ...(JSON.parse(raw) as Progress) } : EMPTY;
+  } catch {
+    return EMPTY;
+  }
+}
+
+export function saveProgress(p: Progress) {
+  localStorage.setItem(KEY, JSON.stringify(p));
+}
+
+export function markConcept(level: 0 | 1 | 2 | 3, conceptId: string) {
+  const p = loadProgress();
+  p.concepts[conceptId] = { level, updatedAt: new Date().toISOString() };
+  saveProgress(p);
+}
+
+/** 데일리 세트 완료 처리 — 스트릭·잔디·오답 개념 갱신 */
+export function completeDaily(wrongConceptIds: string[]) {
+  const p = loadProgress();
+  const today = todayKey();
+  if (!p.doneDates.includes(today)) p.doneDates.push(today);
+
+  const yesterday = (() => {
+    const d = new Date();
+    d.setDate(d.getDate() - 1);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  })();
+  if (p.streak.lastDate === today) {
+    // 같은 날 재완료 — 유지
+  } else if (p.streak.lastDate === yesterday) {
+    p.streak = { count: p.streak.count + 1, lastDate: today };
+  } else {
+    p.streak = { count: 1, lastDate: today };
+  }
+  p.wrongConceptIds = Array.from(new Set(wrongConceptIds));
+  saveProgress(p);
+}
+
+/** SSR 안전 훅 — 마운트 후 localStorage 값으로 갱신 */
+export function useProgress(): Progress {
+  const [p, setP] = useState<Progress>(EMPTY);
+  useEffect(() => {
+    setP(loadProgress());
+  }, []);
+  return p;
+}

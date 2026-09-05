@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 410" width="800" height="410"
+     font-family="Pretendard, 'Malgun Gothic', sans-serif">
+  <title>이상 기체 — 분자의 부피와 분자 사이의 힘을 없다고 놓은 모형이라 실제 기체와 다르다</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#189fe6"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#20242b">이상 기체는 가정 위에 세운 모형이다 — 실제 기체와 다르다</text>
+
+  <text x="210" y="52" text-anchor="middle" font-size="15" font-weight="600" fill="#189fe6">이상 기체 (가정된 모형)</text>
+  <text x="590" y="52" text-anchor="middle" font-size="15" font-weight="600" fill="#dc2626">실제 기체</text>
+
+  <rect x="40" y="60" width="340" height="170" rx="12" fill="#eff9ff" stroke="#0e82c4" stroke-width="2"/>
+  <rect x="420" y="60" width="340" height="170" rx="12" fill="#eef1f5" stroke="#6b7684" stroke-width="2"/>
+
+  <!-- 이상 기체 : 점으로 본 분자, 힘 없음 -->
+  <g fill="#189fe6">
+    <circle cx="85" cy="105" r="3"/><circle cx="150" cy="90" r="3"/><circle cx="215" cy="120" r="3"/>
+    <circle cx="285" cy="100" r="3"/><circle cx="340" cy="150" r="3"/><circle cx="110" cy="180" r="3"/>
+    <circle cx="190" cy="175" r="3"/><circle cx="265" cy="200" r="3"/>
+  </g>
+  <g stroke="#189fe6" stroke-width="2" stroke-linecap="round" marker-end="url(#a)">
+    <line x1="91" y1="105" x2="115" y2="99"/>
+    <line x1="156" y1="90" x2="178" y2="98"/>
+    <line x1="116" y1="180" x2="140" y2="190"/>
+    <line x1="271" y1="200" x2="295" y2="192"/>
+  </g>
+  <line x1="221" y1="118" x2="279" y2="102" stroke="#6b7684" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <g stroke="#dc2626" stroke-width="2.5" stroke-linecap="round">
+    <line x1="243" y1="103" x2="257" y2="117"/>
+    <line x1="257" y1="103" x2="243" y2="117"/>
+  </g>
+  <text x="250" y="140" text-anchor="middle" font-size="12" fill="#dc2626">끌림 없음</text>
+  <text x="370" y="84" text-anchor="end" font-size="12" fill="#6b7684">분자를 점으로 본다</text>
+
+  <!-- 실제 기체 : 크기가 있고 서로 끌어당김 -->
+  <g fill="#dc2626" fill-opacity="0.2" stroke="#dc2626" stroke-width="2">
+    <circle cx="470" cy="105" r="10"/><circle cx="540" cy="95" r="10"/><circle cx="610" cy="120" r="10"/>
+    <circle cx="690" cy="100" r="10"/><circle cx="500" cy="185" r="10"/><circle cx="580" cy="180" r="10"/>
+    <circle cx="660" cy="195" r="10"/><circle cx="730" cy="160" r="10"/>
+  </g>
+  <g stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3 3">
+    <line x1="480" y1="103" x2="530" y2="97"/>
+    <line x1="620" y1="117" x2="680" y2="103"/>
+    <line x1="510" y1="184" x2="570" y2="181"/>
+  </g>
+  <text x="590" y="222" text-anchor="middle" font-size="12" fill="#6b7684">점선 = 분자 사이에 작용하는 인력</text>
+  <text x="750" y="84" text-anchor="end" font-size="12" fill="#6b7684">분자에 크기가 있다</text>
+
+  <text x="210" y="254" text-anchor="middle" font-size="13" fill="#20242b">분자 자체의 부피 = 0</text>
+  <text x="210" y="274" text-anchor="middle" font-size="13" fill="#20242b">분자 사이의 힘 = 0</text>
+  <text x="590" y="254" text-anchor="middle" font-size="13" fill="#20242b">분자가 부피를 차지한다</text>
+  <text x="590" y="274" text-anchor="middle" font-size="13" fill="#20242b">분자 사이에 인력이 작용한다</text>
+
+  <line x1="24" y1="294" x2="776" y2="294" stroke="#edf0f4" stroke-width="2"/>
+
+  <text x="400" y="318" text-anchor="middle" font-size="15" font-weight="600" fill="#20242b">실제 기체가 이상 기체에 가까워지는 조건</text>
+  <line x1="170" y1="344" x2="630" y2="344" stroke="#6b7684" stroke-width="2"
+        marker-start="url(#ar)" marker-end="url(#a)"/>
+  <text x="170" y="368" font-size="13" font-weight="600" fill="#dc2626">압력 높음 · 온도 낮음</text>
+  <text x="630" y="368" text-anchor="end" font-size="13" font-weight="600" fill="#189fe6">압력 낮음 · 온도 높음</text>
+  <text x="170" y="388" font-size="12" fill="#6b7684">이상 기체에서 멀어진다</text>
+  <text x="630" y="388" text-anchor="end" font-size="12" fill="#6b7684">이상 기체에 가까워진다</text>
+</svg>

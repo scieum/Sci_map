@@ -1,0 +1,136 @@
+{
+  "id": "mate-charles-law",
+  "concept_key": "concept:charles-law",
+  "registry_status": "new",
+  "term": "샤를 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 Charles 의 음차 표기가 앞에 오므로 낱말 전체에 대응하는 한자어가 없다. 뒤의 '법칙'만 法則에 해당한다.",
+    "english": "Charles's law",
+    "symbol_display": "V₁/T₁ = V₂/T₂ = k",
+    "symbol_plain": "V1/T1 = V2/T2 = k"
+  },
+  "definition": "압력과 기체의 양을 붙들어 둔 채 절대 온도를 바꾸면 부피가 그와 같은 비율로 변한다는 법칙. 기체의 종류는 가리지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-charles-volume-temperature",
+      "text": "압력과 기체의 양이 고정되어 있으면 절대 온도가 오른 비율만큼 기체의 부피도 늘어난다",
+      "form": {
+        "condition": "압력 일정, 기체의 양(mol) 일정",
+        "type": "direct",
+        "scope": "온도를 절대 온도로 나타냈을 때, 이상 기체로 근사할 수 있는 범위",
+        "antecedent": {
+          "quantity": "절대 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 오르는데 부피가 줄어든다고 뒤집으면 정비례 관계와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "압력과 기체의 양이 고정되어 있으면 절대 온도가 오른 비율만큼 기체의 부피는 줄어든다"
+    },
+    {
+      "id": "rel-charles-scale-matters",
+      "text": "부피가 온도에 정비례한다는 말은 절대 온도에서만 맞고 섭씨온도에서는 맞지 않는다",
+      "form": {
+        "condition": "압력과 기체의 양이 고정된 상태에서 온도 눈금을 고를 때",
+        "type": "conditional",
+        "scope": "부피가 0이 되는 자리를 눈금의 0으로 삼은 절대 온도 눈금",
+        "antecedent": {
+          "quantity": "쓰는 온도 눈금",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "정비례의 성립 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 눈금의 자리를 맞바꾸면 -273 ℃에서 부피가 0이 된다는 사실과 어긋나 반드시 거짓이 된다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부피가 온도에 정비례한다는 말은 섭씨온도에서만 맞고 절대 온도에서는 맞지 않는다"
+    },
+    {
+      "id": "rel-charles-molecular-motion",
+      "text": "압력이 일정할 때 온도를 올리면 분자 운동이 활발해져 바깥 압력과 균형이 잡힐 때까지 부피가 늘어난다",
+      "form": {
+        "condition": "바깥 압력이 일정하고 피스톤이 움직일 수 있음",
+        "type": "causal",
+        "scope": "분자 운동으로 설명할 수 있는 기체 상태",
+        "antecedent": {
+          "quantity": "절대 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 올라 충돌이 거세지는데 부피가 줄어든다는 말은 힘의 균형과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "압력이 일정할 때 온도를 올리면 분자 운동이 활발해져 바깥 압력과 균형이 잡힐 때까지 부피가 줄어든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "섭씨 20 ℃에서 40 ℃로 온도를 두 배 올렸으니 기체의 부피도 두 배가 된다",
+      "why_wrong": "부피는 절대 온도에 비례한다. 293 K에서 313 K로 바뀐 것이므로 부피는 두 배가 아니라 약 1.07배가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-charles-scale-matters"
+    },
+    {
+      "text": "샤를 법칙에서 부피가 늘어나는 정도는 기체의 종류에 따라 다르다",
+      "why_wrong": "압력과 양(mol)이 같다면 온도에 따른 부피 증가 비율은 기체의 종류와 관계없이 같다.",
+      "source": "llm",
+      "linked_relation": "rel-charles-volume-temperature"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-gas-pressure"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-absolute-temperature",
+      "note": "부피가 온도에 비례한다는 서술은 절대 온도 위에서만 성립한다"
+    },
+    {
+      "type": "next",
+      "target": "mate-ideal-gas-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-boyle-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-01",
+  "pages": [
+    16
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

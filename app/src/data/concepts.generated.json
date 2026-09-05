@@ -1,0 +1,2126 @@
+[
+  {
+    "id": "mate-absolute-temperature",
+    "term": "절대 온도",
+    "aliases": [
+      "켈빈 온도"
+    ],
+    "hanja": "絶對溫度",
+    "english": "absolute temperature",
+    "definition": "기체의 부피가 이론적으로 0이 되는 -273 ℃를 눈금의 출발점으로 삼아 매긴 온도. 단위는 K를 쓰고, 섭씨온도에 273을 더해 얻는다.",
+    "relations": [
+      {
+        "id": "rel-abs-temp-celsius-offset",
+        "text": "절대 온도는 섭씨온도에 273을 더한 값이므로 두 눈금은 눈금 한 칸의 크기가 서로 같다",
+        "condition": "같은 물체의 온도를 두 눈금으로 옮겨 적을 때",
+        "scope": "1 K와 1 ℃의 간격이 같도록 정한 현행 온도 눈금",
+        "invertible": true,
+        "invertedText": "섭씨온도가 높아질수록 절대 온도는 낮아진다"
+      },
+      {
+        "id": "rel-abs-temp-no-negative",
+        "text": "절대 온도는 0 K보다 낮은 값을 가질 수 없어 음수로 적히는 일이 없다",
+        "condition": "온도를 절대 온도 눈금으로 나타낼 때",
+        "scope": "열역학 온도 눈금",
+        "invertible": false
+      },
+      {
+        "id": "rel-abs-temp-required-in-gas-law",
+        "text": "기체 법칙과 이상 기체 방정식에 온도를 넣을 때는 반드시 절대 온도를 써야 한다",
+        "condition": "기체 법칙에 온도 값을 대입해 계산할 때",
+        "scope": "PV = nRT를 비롯한 기체 법칙 전부",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "0 K는 온도가 없는 상태이므로 물질도 존재하지 않는다",
+        "whyWrong": "0 K는 분자 운동이 이론적으로 가장 작아지는 온도일 뿐, 물질이 사라진다는 뜻이 아니다."
+      },
+      {
+        "text": "절대 온도는 섭씨온도보다 눈금 한 칸이 더 촘촘하다",
+        "whyWrong": "두 눈금은 시작점만 다르고 한 칸의 크기는 같다. 온도 차이를 나타낼 때는 K와 ℃의 값이 서로 같다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-charles-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-ideal-gas-law",
+        "note": "PV = nRT의 T 자리에 들어가는 온도다"
+      },
+      {
+        "type": "related",
+        "target": "mate-kinetic-molecular-theory",
+        "note": "분자의 평균 운동 에너지가 이 온도에 비례한다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "기체 법칙",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "絶 끊을 절 · 對 대할 대 · 溫 따뜻할 온 · 度 법도 도",
+    "mediaCaption": "그림 Ⅰ-5 온도에 따른 기체의 부피 변화",
+    "mediaFile": "mate-1-fig-05.png"
+  },
+  {
+    "id": "mate-atmospheric-pressure",
+    "term": "대기압",
+    "aliases": [
+      "기압"
+    ],
+    "hanja": "大氣壓",
+    "english": "atmospheric pressure",
+    "definition": "지구를 둘러싼 공기가 지표면을 누르는 압력. 높이 760 mm의 수은 기둥이 나타내는 압력만큼을 1 atm으로 정해 쓴다.",
+    "relations": [
+      {
+        "id": "rel-atm-mercury-height",
+        "text": "대기압이 클수록 토리첼리 관 속 수은 기둥은 더 높은 자리에서 멈춘다",
+        "condition": "관 위쪽이 진공이고 온도가 일정함",
+        "scope": "같은 액체(수은)를 쓰는 액체 기둥 압력계",
+        "invertible": true,
+        "invertedText": "대기압이 클수록 토리첼리 관 속 수은 기둥은 더 낮은 자리에서 멈춘다"
+      },
+      {
+        "id": "rel-atm-liquid-density",
+        "text": "같은 대기압을 재더라도 밀도가 큰 액체를 쓰면 기둥이 서는 높이는 낮아진다",
+        "condition": "재는 대기압이 서로 같고 관이 충분히 긺",
+        "scope": "위쪽이 진공인 액체 기둥 압력계",
+        "invertible": true,
+        "invertedText": "같은 대기압을 재더라도 밀도가 큰 액체를 쓰면 기둥이 서는 높이는 높아진다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "대기압은 위에서 아래로만 누르므로 컵을 뒤집으면 물이 바로 쏟아진다",
+        "whyWrong": "대기압은 모든 방향으로 같은 크기로 작용한다. 뒤집은 컵의 종이를 아래에서 위로 받쳐 주는 것도 대기압이다."
+      },
+      {
+        "text": "높은 산에 올라가면 공기가 얇아지지만 대기압은 지표면과 같다",
+        "whyWrong": "위로 올라갈수록 그 위에 쌓인 공기의 양이 줄어들므로 대기압도 함께 작아진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-gas-pressure"
+      },
+      {
+        "type": "related",
+        "target": "mate-boyle-law",
+        "note": "보일의 실험에서 기체에 걸리는 압력의 기준이 대기압이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-partial-pressure",
+        "note": "공기는 혼합 기체이므로 대기압은 성분 기체 부분 압력의 합이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-boiling-point",
+        "note": "열린 그릇에서 액체에 걸리는 외부 압력이 곧 대기압이라, 대기압이 낮으면 끓는점도 낮다"
+      },
+      {
+        "type": "related",
+        "target": "mate-standard-boiling-point",
+        "note": "기준 끓는점의 기준인 1 atm이 곧 대기압의 표준값(수은 기둥 760 mm)이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "기체 법칙",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "大 큰 대 · 氣 기운 기 · 壓 누를 압",
+    "mediaCaption": "그림 Ⅰ-2 대기압",
+    "mediaFile": "mate-1-fig-02.png"
+  },
+  {
+    "id": "mate-avogadro-law",
+    "term": "아보가드로 법칙",
+    "aliases": [],
+    "hanja": null,
+    "english": "Avogadro's law",
+    "definition": "온도와 압력을 붙들어 둔 채 기체의 양(mol)을 바꾸면 부피가 그와 같은 비율로 변한다는 법칙. 기체의 종류는 따지지 않는다.",
+    "relations": [
+      {
+        "id": "rel-avogadro-volume-mole",
+        "text": "온도와 압력이 같게 유지되면 기체의 부피는 그 속에 든 분자의 양(mol)에 정비례한다",
+        "condition": "온도 일정, 압력 일정",
+        "scope": "기체의 종류와 무관하되 이상 기체로 근사할 수 있는 범위",
+        "invertible": true,
+        "invertedText": "온도와 압력이 같게 유지되면 기체의 부피는 그 속에 든 분자의 양(mol)이 늘어날수록 줄어든다"
+      },
+      {
+        "id": "rel-avogadro-equal-volume-equal-number",
+        "text": "온도와 압력이 같을 때 부피가 같은 두 기체는 종류가 달라도 들어 있는 분자 수가 서로 같다",
+        "condition": "두 기체의 온도와 압력이 서로 같음",
+        "scope": "서로 반응하지 않고 이상 기체로 근사할 수 있는 기체",
+        "invertible": true,
+        "invertedText": "온도와 압력이 같더라도 종류가 다른 두 기체는 부피가 같으면 들어 있는 분자 수가 서로 다르다"
+      },
+      {
+        "id": "rel-avogadro-molar-volume",
+        "text": "0 ℃, 1 atm에서 기체 1 mol이 차지하는 자리는 종류를 가리지 않고 22.4 L다",
+        "condition": "0 ℃, 1 atm 조건",
+        "scope": "이상 기체로 근사할 수 있는 기체",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "같은 부피의 수소와 산소는 무게가 다르므로 들어 있는 분자 수도 다르다",
+        "whyWrong": "온도와 압력이 같으면 같은 부피 속 분자 수는 같다. 무게 차이는 분자 하나의 질량이 다르기 때문이다."
+      },
+      {
+        "text": "22.4 L는 어떤 온도와 압력에서든 기체 1 mol이 차지하는 부피다",
+        "whyWrong": "22.4 L는 0 ℃, 1 atm이라는 특정한 조건에서의 값이다. 온도나 압력이 달라지면 몰 부피도 달라진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-gas-pressure"
+      },
+      {
+        "type": "next",
+        "target": "mate-ideal-gas-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-boyle-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-charles-law"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "기체 법칙",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-8 아보가드로 법칙과 기체 분자의 운동",
+    "mediaFile": "mate-1-fig-08.png"
+  },
+  {
+    "id": "mate-boyle-law",
+    "term": "보일 법칙",
+    "aliases": [],
+    "hanja": null,
+    "english": "Boyle's law",
+    "definition": "온도와 기체의 양을 붙들어 둔 채 압력을 바꾸면 부피가 그 반대 방향으로 변한다는 법칙. 압력과 부피의 곱은 늘 같은 값이다.",
+    "relations": [
+      {
+        "id": "rel-boyle-pressure-volume",
+        "text": "온도와 기체의 양을 고정한 채 압력을 두 배로 키우면 부피는 처음의 절반으로 줄어든다",
+        "condition": "온도 일정, 기체의 양(mol) 일정",
+        "scope": "이상 기체로 근사할 수 있는 범위(낮은 압력·높은 온도)",
+        "invertible": true,
+        "invertedText": "온도와 기체의 양을 고정한 채 압력을 두 배로 키우면 부피도 처음의 두 배가 된다"
+      },
+      {
+        "id": "rel-boyle-product-constant",
+        "text": "일정량의 기체를 온도 변화 없이 누르거나 부풀려도 압력과 부피의 곱은 처음 값 그대로다",
+        "condition": "온도 일정, 기체의 양(mol) 일정",
+        "scope": "이상 기체로 근사할 수 있는 범위",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "압력을 두 배로 하면 부피도 두 배가 된다",
+        "whyWrong": "온도가 일정할 때 압력과 부피는 반비례한다. 압력이 두 배가 되면 부피는 절반이 된다."
+      },
+      {
+        "text": "보일 법칙은 온도가 달라져도 그대로 성립한다",
+        "whyWrong": "압력과 부피의 곱이 일정하다는 것은 온도와 기체의 양이 고정되었을 때만 성립하는 관계다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-gas-pressure"
+      },
+      {
+        "type": "next",
+        "target": "mate-ideal-gas-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-charles-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-avogadro-law"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "기체 법칙",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-4 보일 법칙과 기체 분자의 운동",
+    "mediaFile": "mate-1-fig-04.png"
+  },
+  {
+    "id": "mate-charles-law",
+    "term": "샤를 법칙",
+    "aliases": [],
+    "hanja": null,
+    "english": "Charles's law",
+    "definition": "압력과 기체의 양을 붙들어 둔 채 절대 온도를 바꾸면 부피가 그와 같은 비율로 변한다는 법칙. 기체의 종류는 가리지 않는다.",
+    "relations": [
+      {
+        "id": "rel-charles-volume-temperature",
+        "text": "압력과 기체의 양이 고정되어 있으면 절대 온도가 오른 비율만큼 기체의 부피도 늘어난다",
+        "condition": "압력 일정, 기체의 양(mol) 일정",
+        "scope": "온도를 절대 온도로 나타냈을 때, 이상 기체로 근사할 수 있는 범위",
+        "invertible": true,
+        "invertedText": "압력과 기체의 양이 고정되어 있으면 절대 온도가 오른 비율만큼 기체의 부피는 줄어든다"
+      },
+      {
+        "id": "rel-charles-scale-matters",
+        "text": "부피가 온도에 정비례한다는 말은 절대 온도에서만 맞고 섭씨온도에서는 맞지 않는다",
+        "condition": "압력과 기체의 양이 고정된 상태에서 온도 눈금을 고를 때",
+        "scope": "부피가 0이 되는 자리를 눈금의 0으로 삼은 절대 온도 눈금",
+        "invertible": true,
+        "invertedText": "부피가 온도에 정비례한다는 말은 섭씨온도에서만 맞고 절대 온도에서는 맞지 않는다"
+      },
+      {
+        "id": "rel-charles-molecular-motion",
+        "text": "압력이 일정할 때 온도를 올리면 분자 운동이 활발해져 바깥 압력과 균형이 잡힐 때까지 부피가 늘어난다",
+        "condition": "바깥 압력이 일정하고 피스톤이 움직일 수 있음",
+        "scope": "분자 운동으로 설명할 수 있는 기체 상태",
+        "invertible": true,
+        "invertedText": "압력이 일정할 때 온도를 올리면 분자 운동이 활발해져 바깥 압력과 균형이 잡힐 때까지 부피가 줄어든다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "섭씨 20 ℃에서 40 ℃로 온도를 두 배 올렸으니 기체의 부피도 두 배가 된다",
+        "whyWrong": "부피는 절대 온도에 비례한다. 293 K에서 313 K로 바뀐 것이므로 부피는 두 배가 아니라 약 1.07배가 된다."
+      },
+      {
+        "text": "샤를 법칙에서 부피가 늘어나는 정도는 기체의 종류에 따라 다르다",
+        "whyWrong": "압력과 양(mol)이 같다면 온도에 따른 부피 증가 비율은 기체의 종류와 관계없이 같다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-gas-pressure"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-absolute-temperature",
+        "note": "부피가 온도에 비례한다는 서술은 절대 온도 위에서만 성립한다"
+      },
+      {
+        "type": "next",
+        "target": "mate-ideal-gas-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-boyle-law"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "기체 법칙",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-6 샤를 법칙과 기체 분자의 운동",
+    "mediaFile": "mate-1-fig-06.png"
+  },
+  {
+    "id": "mate-gas-pressure",
+    "term": "기체의 압력",
+    "aliases": [
+      "기체 압력"
+    ],
+    "hanja": "氣體壓力",
+    "english": "gas pressure",
+    "definition": "단위 넓이마다 수직으로 작용하는 힘 가운데, 쉼 없이 움직이는 기체 분자가 벽면에 부딪치며 만들어 내는 몫을 가리키는 양.",
+    "relations": [
+      {
+        "id": "rel-gas-pressure-collision-count",
+        "text": "부피가 정해진 용기에서 분자가 벽에 부딪치는 횟수가 잦아질수록 기체의 압력은 커진다",
+        "condition": "용기의 부피가 일정하고 기체가 새어 나가지 않음",
+        "scope": "분자가 무질서하게 운동하는 기체 상태",
+        "invertible": true,
+        "invertedText": "부피가 정해진 용기에서 분자가 벽에 부딪치는 횟수가 잦아질수록 기체의 압력은 작아진다"
+      },
+      {
+        "id": "rel-gas-pressure-collision-strength",
+        "text": "부딪치는 횟수가 같더라도 분자 하나가 더 세게 충돌할수록 기체의 압력은 커진다",
+        "condition": "단위 시간당 충돌 횟수가 서로 같음",
+        "scope": "분자의 평균 운동 에너지로 충돌 세기를 견줄 수 있는 기체 상태",
+        "invertible": true,
+        "invertedText": "부딪치는 횟수가 같더라도 분자 하나가 더 세게 충돌할수록 기체의 압력은 작아진다"
+      },
+      {
+        "id": "rel-gas-pressure-piston-balance",
+        "text": "피스톤이 달린 용기에서 안쪽 기체의 압력이 바깥 압력보다 크면 기체의 부피가 늘어난다",
+        "condition": "피스톤이 마찰 없이 움직일 수 있음",
+        "scope": "바깥 압력이 일정하게 유지되는 동안의 기체",
+        "invertible": true,
+        "invertedText": "피스톤이 달린 용기에서 안쪽 기체의 압력이 바깥 압력보다 크면 기체의 부피가 줄어든다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "용기 속 기체의 압력은 무게 때문에 바닥 쪽이 천장 쪽보다 크다",
+        "whyWrong": "기체 분자는 모든 방향으로 무질서하게 운동하므로 용기 어느 벽에서나 같은 크기의 압력이 작용한다."
+      },
+      {
+        "text": "무거운 분자로 이루어진 기체일수록 압력이 항상 크다",
+        "whyWrong": "온도·부피·양(mol)이 같으면 압력은 기체의 종류와 무관하다. 무거운 분자는 느리게 움직여 충돌 횟수가 줄어들기 때문이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-atmospheric-pressure",
+        "note": "기체가 압력을 나타내는 까닭을 알아야 대기압을 읽는다"
+      },
+      {
+        "type": "next",
+        "target": "mate-boyle-law"
+      },
+      {
+        "type": "next",
+        "target": "mate-avogadro-law"
+      },
+      {
+        "type": "next",
+        "target": "mate-partial-pressure"
+      },
+      {
+        "type": "related",
+        "target": "mate-kinetic-molecular-theory",
+        "note": "압력이 생기는 까닭을 분자 운동으로 설명한다"
+      },
+      {
+        "type": "next",
+        "target": "mate-vapor-pressure",
+        "note": "액체 위 증기가 나타내는 압력도 분자가 벽에 부딪쳐 생기는 기체의 압력이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "기체 법칙",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "氣 기운 기 · 體 몸 체 · 壓 누를 압 · 力 힘 력",
+    "mediaCaption": "그림 Ⅰ-1 기체의 압력",
+    "mediaFile": "mate-1-fig-01.png"
+  },
+  {
+    "id": "mate-gas-constant",
+    "term": "기체 상수",
+    "aliases": [],
+    "hanja": "氣體常數",
+    "english": "gas constant",
+    "definition": "이상 기체 방정식에서 압력·부피 쪽과 양(mol)·절대 온도 쪽을 이어 주는 비례 상수 R. 몰 부피를 대입해 그 값을 얻는다.",
+    "relations": [
+      {
+        "id": "rel-r-from-molar-volume",
+        "text": "0 ℃, 1 atm에서 1 mol의 부피 22.4 L를 식에 넣으면 R 값은 약 0.082로 계산된다",
+        "condition": "atm·L·mol·K 단위계를 쓸 때",
+        "scope": "이상 기체로 근사한 몰 부피를 대입하는 경우",
+        "invertible": false
+      },
+      {
+        "id": "rel-r-independent-of-gas",
+        "text": "기체 상수는 기체의 종류나 담긴 양이 달라져도 같은 값을 그대로 지킨다",
+        "condition": "같은 단위계로 나타낼 때",
+        "scope": "이상 기체",
+        "invertible": true,
+        "invertedText": "기체 상수는 기체의 종류가 달라지면 그 값도 함께 달라진다"
+      },
+      {
+        "id": "rel-r-unit-dependent",
+        "text": "R의 수치는 압력과 부피를 어떤 단위로 적느냐에 따라 달라지므로 단위를 함께 밝혀야 한다",
+        "condition": "같은 물리량을 다른 단위로 바꿔 적을 때",
+        "scope": "단위계를 지정해 계산하는 모든 경우",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "기체 상수는 기체마다 다르므로 산소와 질소는 R 값이 서로 다르다",
+        "whyWrong": "R는 이상 기체라면 종류를 가리지 않고 같은 값을 갖는 보편 상수다."
+      },
+      {
+        "text": "R 값은 언제나 0.082다",
+        "whyWrong": "0.082는 압력을 atm, 부피를 L로 쓸 때의 값이다. 단위를 바꾸면 수치도 달라진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-ideal-gas-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-avogadro-law",
+        "note": "R 값을 얻는 데 쓰는 몰 부피 22.4 L가 여기서 나온다"
+      },
+      {
+        "type": "related",
+        "target": "mate-absolute-temperature",
+        "note": "R의 단위 안에 절대 온도가 들어 있다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "이상 기체 방정식",
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "氣 기운 기 · 體 몸 체 · 常 항상 상 · 數 셈 수"
+  },
+  {
+    "id": "mate-ideal-gas-law",
+    "term": "이상 기체 방정식",
+    "aliases": [
+      "이상 기체 상태 방정식"
+    ],
+    "hanja": "理想氣體方程式",
+    "english": "ideal gas law",
+    "definition": "세 기체 법칙을 하나로 묶어 압력·부피·양(mol)·절대 온도를 PV = nRT 한 줄로 이어 놓은 관계식.",
+    "relations": [
+      {
+        "id": "rel-igl-combines-three-laws",
+        "text": "보일·샤를·아보가드로 법칙을 함께 놓으면 부피는 양(mol)과 절대 온도에 비례하고 압력에 반비례한다",
+        "condition": "세 법칙이 모두 성립하는 조건",
+        "scope": "이상 기체",
+        "invertible": false
+      },
+      {
+        "id": "rel-igl-equation",
+        "text": "이상 기체에서는 압력과 부피를 곱한 값이 양(mol)과 기체 상수와 절대 온도를 곱한 값과 같다",
+        "condition": "기체를 이상 기체로 볼 수 있을 때",
+        "scope": "이상 기체, 온도는 절대 온도로 나타냄",
+        "invertible": false
+      },
+      {
+        "id": "rel-igl-solve-unknown",
+        "text": "압력·부피·온도·양(mol) 가운데 셋을 재면 나머지 하나는 이 식으로 계산해 낼 수 있다",
+        "condition": "네 변수 가운데 셋의 값을 알고 있음",
+        "scope": "이상 기체로 근사할 수 있는 기체",
+        "invertible": false
+      },
+      {
+        "id": "rel-igl-partial-pressure-link",
+        "text": "부피와 온도가 같은 용기 안에서는 성분 기체의 부분 압력이 그 기체의 양(mol)에 비례한다",
+        "condition": "용기의 부피와 온도가 일정함",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "invertible": true,
+        "invertedText": "부피와 온도가 같은 용기 안에서는 성분 기체의 양(mol)이 많을수록 부분 압력이 작아진다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "PV = nRT의 T 자리에는 섭씨온도를 그대로 넣어도 된다",
+        "whyWrong": "이 식의 T는 절대 온도다. 섭씨온도를 넣으면 0 ℃에서 압력이나 부피가 0이 되는 잘못된 결과가 나온다."
+      },
+      {
+        "text": "이상 기체 방정식은 기체마다 R 값이 달라 종류별로 따로 세워야 한다",
+        "whyWrong": "R는 모든 이상 기체에 공통으로 쓰이는 상수다. 그래서 하나의 식으로 어떤 기체든 다룰 수 있다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-boyle-law"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-charles-law"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-avogadro-law"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-ideal-gas"
+      },
+      {
+        "type": "next",
+        "target": "mate-gas-constant"
+      },
+      {
+        "type": "next",
+        "target": "mate-molecular-mass",
+        "note": "이 식을 변형하면 기체의 분자량을 구할 수 있다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "이상 기체 방정식",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체 · 方 모 방 · 程 법 정 · 式 법 식",
+    "mediaCaption": "그림 Ⅰ-9 기체의 부피와 압력, 온도, 물질의 양(mol) 사이의 관계",
+    "mediaFile": "mate-1-fig-09.png"
+  },
+  {
+    "id": "mate-ideal-gas",
+    "term": "이상 기체",
+    "aliases": [],
+    "hanja": "理想氣體",
+    "english": "ideal gas",
+    "definition": "어떤 온도와 압력에서도 기체 법칙을 어김없이 따른다고 가정한 기체 모형. 분자 자체의 부피와 분자 사이의 힘을 없는 것으로 놓는다.",
+    "relations": [
+      {
+        "id": "rel-ideal-gas-follows-laws",
+        "text": "기체 법칙에서 벗어나는 일 없이 언제나 그대로 들어맞는 기체를 이상 기체라 부른다",
+        "condition": "기체 법칙을 이론적으로 다룰 때",
+        "scope": "실제로는 존재하지 않는 이상화된 모형",
+        "invertible": false
+      },
+      {
+        "id": "rel-ideal-gas-real-deviation",
+        "text": "실제 기체는 압력이 낮고 온도가 높을수록 이상 기체에 가깝게 행동한다",
+        "condition": "실제 기체를 이상 기체 모형과 견줄 때",
+        "scope": "분자 사이의 힘과 분자 자체의 부피를 무시할 만한 조건",
+        "invertible": true,
+        "invertedText": "실제 기체는 압력이 높고 온도가 낮을수록 이상 기체에 가깝게 행동한다"
+      },
+      {
+        "id": "rel-ideal-gas-assumptions",
+        "text": "이상 기체에서는 분자가 차지하는 부피도, 분자끼리 끌거나 미는 힘도 모두 없는 것으로 본다",
+        "condition": "기체 분자 운동론의 가정을 받아들일 때",
+        "scope": "이상 기체 모형 안에서만",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "헬륨이나 수소처럼 가벼운 기체는 실제로 이상 기체다",
+        "whyWrong": "이상 기체는 조건을 단순하게 만든 모형이며 실제로 존재하는 기체가 아니다. 가벼운 기체는 이상 기체에 가까울 뿐이다."
+      },
+      {
+        "text": "압력을 아주 높이면 기체가 더 규칙적으로 움직여 이상 기체에 가까워진다",
+        "whyWrong": "압력이 높아지면 분자 사이의 거리가 가까워져 인력과 분자 자체의 부피가 두드러지므로 오히려 이상 기체에서 멀어진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-kinetic-molecular-theory",
+        "note": "운동론의 가정을 만족하는 기체가 이상 기체다"
+      },
+      {
+        "type": "next",
+        "target": "mate-ideal-gas-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-boyle-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-charles-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force",
+        "note": "이상 기체가 없다고 가정한 바로 그 힘 — 실제 기체가 이상 기체에서 벗어나는 까닭이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "이상 기체 방정식",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체",
+    "mediaCaption": "그림 Ⅰ-10 기체 분자 운동론의 가정",
+    "mediaFile": "mate-1-fig-10.png"
+  },
+  {
+    "id": "mate-kinetic-molecular-theory",
+    "term": "기체 분자 운동론",
+    "aliases": [],
+    "hanja": "氣體分子運動論",
+    "english": "kinetic molecular theory of gases",
+    "definition": "분자의 움직임에 관한 몇 가지 가정을 세워 기체의 성질을 설명하는 이론. 그 가정을 그대로 만족하는 기체가 이상 기체다.",
+    "relations": [
+      {
+        "id": "rel-kmt-average-kinetic-energy",
+        "text": "기체의 종류가 무엇이든 분자의 평균 운동 에너지는 절대 온도가 오른 만큼만 커진다",
+        "condition": "여러 기체를 같은 절대 온도에서 견줄 때",
+        "scope": "운동론의 가정을 만족하는 이상 기체",
+        "invertible": true,
+        "invertedText": "기체의 종류가 무엇이든 분자의 평균 운동 에너지는 절대 온도가 오를수록 작아진다"
+      },
+      {
+        "id": "rel-kmt-no-intermolecular-force",
+        "text": "운동론은 분자 사이에 끌어당기거나 밀어내는 힘이 없다고 놓고 출발한다",
+        "condition": "운동론의 가정을 세울 때",
+        "scope": "이상 기체 모형",
+        "invertible": false
+      },
+      {
+        "id": "rel-kmt-elastic-collision",
+        "text": "충돌에서 운동 에너지가 사라지지 않는다고 보기 때문에 기체 분자의 운동은 저절로 멎지 않는다",
+        "condition": "충돌에서 에너지 손실이 없다고 가정할 때",
+        "scope": "이상 기체 모형",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "기체 분자는 서로 부딪칠 때마다 에너지를 잃어 결국 바닥에 가라앉는다",
+        "whyWrong": "운동론은 충돌에서 운동 에너지가 손실되지 않는다고 가정한다. 그래서 분자 운동은 멈추지 않는다."
+      },
+      {
+        "text": "같은 온도라면 무거운 기체 분자가 가벼운 분자보다 평균 운동 에너지가 크다",
+        "whyWrong": "같은 절대 온도에서 평균 운동 에너지는 기체의 종류와 무관하게 같다. 무거운 분자는 대신 평균 속력이 느리다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-ideal-gas",
+        "note": "이 가정을 만족하는 기체가 이상 기체다"
+      },
+      {
+        "type": "related",
+        "target": "mate-gas-pressure",
+        "note": "압력이 생기는 까닭을 분자의 충돌로 설명한다"
+      },
+      {
+        "type": "related",
+        "target": "mate-absolute-temperature",
+        "note": "평균 운동 에너지가 비례하는 온도가 절대 온도다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "이상 기체 방정식",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "氣 기운 기 · 體 몸 체 · 分 나눌 분 · 子 아들 자 · 運 옮길 운 · 動 움직일 동 · 論 논할 론",
+    "mediaCaption": "그림 Ⅰ-10 기체 분자 운동론의 가정",
+    "mediaFile": "mate-1-fig-10.png"
+  },
+  {
+    "id": "mate-molecular-mass",
+    "term": "분자량",
+    "aliases": [],
+    "hanja": "分子量",
+    "english": "molecular mass",
+    "definition": "분자 하나의 질량을 탄소-12 원자 질량의 12분의 1과 견주어 나타낸 상대적인 값. 기체에서는 이상 기체 방정식을 고쳐 써서 구한다.",
+    "relations": [
+      {
+        "id": "rel-mm-from-ideal-gas-law",
+        "text": "기체의 질량과 부피, 압력, 절대 온도를 재면 이상 기체 방정식을 고쳐 써서 분자량을 얻을 수 있다",
+        "condition": "질량·부피·압력·절대 온도를 모두 알고 있음",
+        "scope": "이상 기체로 근사할 수 있는 기체",
+        "invertible": false
+      },
+      {
+        "id": "rel-mm-mass-to-mole",
+        "text": "질량이 같은 두 기체라면 분자량이 큰 쪽에 들어 있는 분자의 양(mol)이 더 적다",
+        "condition": "두 기체의 질량이 서로 같음",
+        "scope": "순수한 기체끼리 견줄 때",
+        "invertible": true,
+        "invertedText": "질량이 같은 두 기체라면 분자량이 큰 쪽에 들어 있는 분자의 양(mol)이 더 많다"
+      },
+      {
+        "id": "rel-mm-density",
+        "text": "온도와 압력이 같다면 분자량이 큰 기체일수록 밀도가 크게 나타난다",
+        "condition": "두 기체의 온도와 압력이 서로 같음",
+        "scope": "이상 기체로 근사할 수 있는 기체끼리 견줄 때",
+        "invertible": true,
+        "invertedText": "온도와 압력이 같다면 분자량이 큰 기체일수록 밀도가 작게 나타난다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "분자량은 g 단위로 잰 분자 하나의 질량이다",
+        "whyWrong": "분자량은 기준 질량과 견준 상대적인 값이라 단위가 없다. g 단위가 붙는 것은 1 mol의 질량인 몰 질량이다."
+      },
+      {
+        "text": "같은 질량의 기체라면 종류가 달라도 들어 있는 분자 수는 같다",
+        "whyWrong": "분자 하나의 질량이 다르므로 같은 질량이라도 분자 수는 다르다. 분자량이 클수록 분자 수는 적다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-ideal-gas-law",
+        "note": "이 식을 변형해 분자량을 구한다"
+      },
+      {
+        "type": "related",
+        "target": "mate-gas-constant"
+      },
+      {
+        "type": "related",
+        "target": "mate-avogadro-law",
+        "note": "같은 부피 속 분자 수가 같다는 사실이 분자량 비교의 발판이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-dispersion-force",
+        "note": "구조가 닮은 분자끼리라면 분자량이 큰 쪽이 분산력도 크다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "이상 기체 방정식",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "分 나눌 분 · 子 아들 자 · 量 헤아릴 량",
+    "mediaCaption": "그림 Ⅰ-18 메테인, 뷰테인, 노말펜테인, 네오펜테인의 분자량과 끓는점",
+    "mediaFile": "mate-1-fig-18.png"
+  },
+  {
+    "id": "mate-dalton-law-of-partial-pressure",
+    "term": "부분 압력 법칙",
+    "aliases": [
+      "돌턴의 분압 법칙"
+    ],
+    "hanja": "部分壓力法則",
+    "english": "Dalton's law of partial pressure",
+    "definition": "혼합 기체 전체의 압력이 성분 기체들의 부분 압력을 모두 더한 값과 같다는 법칙. 성분끼리 반응하지 않을 때 성립한다.",
+    "relations": [
+      {
+        "id": "rel-dalton-sum-of-partials",
+        "text": "반응하지 않는 기체를 한 용기에 섞으면 전체 압력은 성분 기체 부분 압력의 합이 된다",
+        "condition": "성분 기체끼리 화학 반응을 하지 않음, 온도 일정",
+        "scope": "이상 기체로 근사할 수 있는 혼합 기체",
+        "invertible": false
+      },
+      {
+        "id": "rel-dalton-adding-gas",
+        "text": "부피가 일정한 용기에 반응하지 않는 기체를 더 넣으면 넣은 기체의 부분 압력만큼 전체 압력이 커진다",
+        "condition": "용기의 부피와 온도가 일정함",
+        "scope": "서로 반응하지 않는 이상 기체",
+        "invertible": true,
+        "invertedText": "부피가 일정한 용기에 반응하지 않는 기체를 더 넣으면 전체 압력은 오히려 작아진다"
+      },
+      {
+        "id": "rel-dalton-independence",
+        "text": "한 성분의 부분 압력은 곁에 어떤 기체가 함께 들어 있든 그 종류에 좌우되지 않는다",
+        "condition": "성분 기체끼리 반응하지 않음",
+        "scope": "이상 기체로 근사할 수 있는 혼합 기체",
+        "invertible": true,
+        "invertedText": "한 성분의 부분 압력은 곁에 함께 들어 있는 기체의 종류에 따라 달라진다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "두 기체를 섞으면 전체 압력은 두 기체 압력의 평균이 된다",
+        "whyWrong": "전체 압력은 평균이 아니라 각 성분의 부분 압력을 더한 값이다."
+      },
+      {
+        "text": "1 atm인 기체와 1 atm인 기체를 같은 부피의 용기에 함께 넣으면 전체 압력은 그대로 1 atm이다",
+        "whyWrong": "각 기체가 새 용기에서 갖는 부분 압력을 구해 더해야 한다. 부피가 그대로라면 전체 압력은 2 atm이 된다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-partial-pressure"
+      },
+      {
+        "type": "next",
+        "target": "mate-mole-fraction"
+      },
+      {
+        "type": "related",
+        "target": "mate-ideal-gas-law"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "혼합 기체의 부분 압력",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "部 떼 부 · 分 나눌 분 · 壓 누를 압 · 力 힘 력 · 法 법 법 · 則 법칙 칙",
+    "mediaCaption": "그림 Ⅰ-12 이상 기체 방정식과 부분 압력 법칙",
+    "mediaFile": "mate-1-fig-12.png"
+  },
+  {
+    "id": "mate-mole-fraction",
+    "term": "몰분율",
+    "aliases": [],
+    "hanja": null,
+    "english": "mole fraction",
+    "definition": "혼합물에서 어떤 성분의 양(mol)이 전체 양(mol) 가운데 차지하는 몫을 나타낸 비. 단위가 없는 값이다.",
+    "relations": [
+      {
+        "id": "rel-mf-sum-is-one",
+        "text": "혼합물을 이루는 성분의 몰분율을 빠짐없이 더하면 그 합은 언제나 1이 된다",
+        "condition": "혼합물의 성분을 하나도 빠뜨리지 않고 셀 때",
+        "scope": "기체·액체·고체를 가리지 않는 모든 혼합물",
+        "invertible": false
+      },
+      {
+        "id": "rel-mf-proportional-to-partial-pressure",
+        "text": "같은 혼합 기체 안에서는 몰분율이 큰 성분일수록 나타내는 부분 압력도 크다",
+        "condition": "같은 용기, 같은 온도의 혼합 기체 안에서 성분끼리 견줄 때",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "invertible": true,
+        "invertedText": "같은 혼합 기체 안에서는 몰분율이 큰 성분일수록 나타내는 부분 압력이 작다"
+      },
+      {
+        "id": "rel-mf-dimensionless",
+        "text": "몰분율은 양(mol)끼리 나눈 값이라 단위가 붙지 않고 0과 1 사이에만 놓인다",
+        "condition": "각 성분의 양(mol)이 0보다 큼",
+        "scope": "성분을 모두 헤아린 혼합물",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "몰분율은 백분율이므로 모두 더하면 100이 된다",
+        "whyWrong": "몰분율은 전체를 1로 놓고 나눈 비다. 성분의 몰분율을 모두 더하면 100이 아니라 1이 된다."
+      },
+      {
+        "text": "몰분율은 성분 기체의 질량을 전체 질량으로 나눈 값이다",
+        "whyWrong": "나누는 것은 질량이 아니라 양(mol)이다. 질량으로 나눈 값은 질량 백분율이며 몰분율과 다르다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-dalton-law-of-partial-pressure"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-ideal-gas-law",
+        "note": "부분 압력과 몰분율의 관계식을 유도하는 데 쓰인다"
+      },
+      {
+        "type": "related",
+        "target": "mate-partial-pressure"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "혼합 기체의 부분 압력",
+    "hasRestrictedMedia": false
+  },
+  {
+    "id": "mate-partial-pressure",
+    "term": "부분 압력",
+    "aliases": [
+      "분압"
+    ],
+    "hanja": "部分壓力",
+    "english": "partial pressure",
+    "definition": "혼합 기체 속 성분 기체 하나가 그 용기를 홀로 차지했다면 나타냈을 압력. 서로 반응하지 않는 기체를 섞었을 때 따진다.",
+    "relations": [
+      {
+        "id": "rel-pp-proportional-to-mole",
+        "text": "용기의 부피와 온도가 정해져 있으면 성분 기체의 부분 압력은 그 기체의 양(mol)에 비례한다",
+        "condition": "용기의 부피 일정, 온도 일정",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "invertible": true,
+        "invertedText": "용기의 부피와 온도가 정해져 있으면 성분 기체의 양(mol)이 많을수록 부분 압력은 작아진다"
+      },
+      {
+        "id": "rel-pp-from-total-pressure",
+        "text": "성분 기체의 부분 압력은 혼합 기체의 전체 압력에 그 기체의 몰분율을 곱해서 얻는다",
+        "condition": "전체 압력과 몰분율을 알고 있을 때",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "invertible": true,
+        "invertedText": "몰분율이 큰 성분 기체일수록 혼합 기체 속에서 나타내는 부분 압력은 작다"
+      },
+      {
+        "id": "rel-pp-alone-in-container",
+        "text": "성분 기체의 부분 압력은 그 기체만 남기고 나머지를 치웠을 때 같은 용기에서 재는 압력과 같다",
+        "condition": "온도가 같고 용기의 부피가 그대로임",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "혼합 기체에서 각 성분 기체의 부분 압력은 모두 같다",
+        "whyWrong": "부분 압력은 성분 기체의 양(mol)에 비례하므로, 많이 들어 있는 성분일수록 부분 압력이 크다."
+      },
+      {
+        "text": "성분 기체의 부분 압력은 전체 압력을 성분 기체의 가짓수로 나눈 값이다",
+        "whyWrong": "나누는 기준은 가짓수가 아니라 몰분율이다. 두 기체가 있어도 양(mol)이 다르면 부분 압력은 같지 않다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-gas-pressure"
+      },
+      {
+        "type": "next",
+        "target": "mate-dalton-law-of-partial-pressure"
+      },
+      {
+        "type": "related",
+        "target": "mate-mole-fraction"
+      },
+      {
+        "type": "related",
+        "target": "mate-ideal-gas-law",
+        "note": "PV = nRT로 부분 압력과 양(mol)의 관계를 유도한다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "혼합 기체의 부분 압력",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "部 떼 부 · 分 나눌 분 · 壓 누를 압 · 力 힘 력",
+    "mediaCaption": "그림 Ⅰ-11 혼합 기체의 압력",
+    "mediaFile": "mate-1-fig-11.png"
+  },
+  {
+    "id": "mate-dipole-dipole-force",
+    "term": "쌍극자·쌍극자 힘",
+    "aliases": [
+      "쌍극자-쌍극자 힘"
+    ],
+    "hanja": null,
+    "english": "dipole-dipole force",
+    "definition": "영구 쌍극자를 가진 극성 분자들이 반대 전하끼리 마주 보도록 늘어설 때, 이웃한 두 쌍극자 사이에 생기는 인력.",
+    "relations": [
+      {
+        "id": "rel-ddf-moment",
+        "text": "극성 분자의 쌍극자 모멘트가 클수록 이웃 분자와 주고받는 이 힘이 세진다.",
+        "condition": "분자량과 분자 크기가 비슷한 물질끼리 비교할 때",
+        "scope": "영구 쌍극자를 가진 극성 분자 사이",
+        "invertible": true,
+        "invertedText": "극성 분자의 쌍극자 모멘트가 클수록 이웃 분자와 주고받는 이 힘이 약해진다."
+      },
+      {
+        "id": "rel-ddf-scope",
+        "text": "쌍극자·쌍극자 힘은 영구 쌍극자를 가진 분자 사이에서만 나타난다.",
+        "condition": "분자에 영구 쌍극자가 있는가를 따질 때",
+        "scope": "분자로 이루어진 물질",
+        "invertible": true,
+        "invertedText": "쌍극자·쌍극자 힘은 무극성 분자 사이에서도 나타난다."
+      },
+      {
+        "id": "rel-ddf-bp",
+        "text": "분자량이 비슷하면 극성 분자 물질이 무극성 분자 물질보다 끓는점이 높다.",
+        "condition": "분자량이 비슷하고 수소 결합은 하지 않는 물질끼리 비교할 때",
+        "scope": "수소 결합이 없는 분자성 물질",
+        "invertible": true,
+        "invertedText": "분자량이 비슷하면 극성 분자 물질이 무극성 분자 물질보다 끓는점이 낮다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "쌍극자·쌍극자 힘은 극성 분자 안에서 원자들을 붙잡아 두는 힘이다",
+        "whyWrong": "분자 안이 아니라 분자와 분자 사이에 작용한다. 분자 안의 원자를 잇는 것은 공유 결합이다."
+      },
+      {
+        "text": "극성 분자 사이에는 분산력이 작용하지 않는다",
+        "whyWrong": "분산력은 전자를 가진 모든 분자 사이에 작용한다. 극성 분자에서는 그 위에 쌍극자·쌍극자 힘이 더해질 뿐이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-polar-molecule",
+        "note": "영구 쌍극자가 무엇인지 알아야 이 힘을 설명할 수 있다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-intermolecular-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-dispersion-force",
+        "note": "작용하는 분자의 범위가 다르다"
+      },
+      {
+        "type": "related",
+        "target": "mate-hydrogen-bond",
+        "note": "세기 비교의 상대다"
+      },
+      {
+        "type": "next",
+        "target": "mate-boiling-point"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "분자 간 상호 작용",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-16 극성 분자 사이에 작용하는 쌍극자·쌍극자 힘",
+    "mediaFile": "mate-1-fig-16.png"
+  },
+  {
+    "id": "mate-dispersion-force",
+    "term": "분산력",
+    "aliases": [],
+    "hanja": "分散力",
+    "english": "dispersion force",
+    "definition": "전자가 잠깐 한쪽으로 몰려 생긴 순간 쌍극자가 이웃 분자에도 순간 쌍극자를 만들면서, 두 순간 쌍극자 사이에 작용하는 인력.",
+    "relations": [
+      {
+        "id": "rel-df-universal",
+        "text": "분산력은 극성인지 무극성인지를 가리지 않고 모든 분자 사이에서 작용한다.",
+        "condition": "분자들이 인력이 미칠 만큼 가까이 있을 때",
+        "scope": "전자를 가진 모든 분자성 물질",
+        "invertible": true,
+        "invertedText": "분산력은 무극성 분자 사이에서만 작용한다."
+      },
+      {
+        "id": "rel-df-mass",
+        "text": "구조가 비슷한 분자끼리는 분자량이 클수록 분산력이 크다.",
+        "condition": "분자의 구조와 모양이 비슷한 물질끼리 비교할 때",
+        "scope": "동족 계열처럼 구조가 닮은 분자성 물질",
+        "invertible": true,
+        "invertedText": "구조가 비슷한 분자끼리는 분자량이 클수록 분산력이 작다."
+      },
+      {
+        "id": "rel-df-shape",
+        "text": "분자량이 같아도 길고 넓적한 분자가 둥근 분자보다 분산력이 크다.",
+        "condition": "분자량이 같은 이성질체끼리 비교할 때",
+        "scope": "분자량이 같고 모양만 다른 분자성 물질",
+        "invertible": true,
+        "invertedText": "분자량이 같으면 길고 넓적한 분자가 둥근 분자보다 분산력이 작다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "분산력은 무극성 분자 사이에만 작용하는 힘이다",
+        "whyWrong": "모든 분자에는 전자가 있고 전자는 늘 움직이므로, 극성 분자 사이에서도 분산력은 함께 작용한다."
+      },
+      {
+        "text": "분자량이 크면 언제나 끓는점이 높다",
+        "whyWrong": "분자량은 분산력의 크기를 가늠하는 잣대일 뿐이다. 수소 결합을 하는 물질은 분자량이 작아도 끓는점이 더 높을 수 있다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-nonpolar-molecule",
+        "note": "무극성 분자에서 왜 인력이 생기는지가 출발점이다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-intermolecular-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-dipole-dipole-force",
+        "note": "작용하는 분자의 범위가 다르다"
+      },
+      {
+        "type": "next",
+        "target": "mate-boiling-point"
+      },
+      {
+        "type": "related",
+        "target": "mate-molecular-mass",
+        "note": "분산력의 크기를 견주는 잣대로 분자량을 쓴다 — 구조가 닮은 분자끼리일 때만"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "분자 간 상호 작용",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "分 나눌 분 · 散 흩을 산 · 力 힘 력",
+    "mediaCaption": "그림 Ⅰ-17 분산력 형성 과정",
+    "mediaFile": "mate-1-fig-17.png"
+  },
+  {
+    "id": "mate-hydrogen-bond",
+    "term": "수소 결합",
+    "aliases": [],
+    "hanja": "水素結合",
+    "english": "hydrogen bond",
+    "definition": "질소·산소·플루오린에 붙은 수소 원자가 이웃 분자의 질소·산소·플루오린에 강하게 끌리며 생기는, 분자 간 상호 작용 가운데 가장 센 힘.",
+    "relations": [
+      {
+        "id": "rel-hb-condition",
+        "text": "수소 결합은 수소가 질소·산소·플루오린과 결합해 있을 때에만 분자 사이에 나타난다.",
+        "condition": "수소가 어떤 원자와 결합해 있는가를 따질 때",
+        "scope": "분자로 이루어진 물질",
+        "invertible": true,
+        "invertedText": "수소 결합은 수소를 가진 분자라면 어느 것 사이에서나 나타난다."
+      },
+      {
+        "id": "rel-hb-strength",
+        "text": "분자량이 비슷하면 끓는점은 수소 결합, 쌍극자·쌍극자 힘, 분산력만 있는 물질 순으로 낮아진다.",
+        "condition": "분자량이 비슷한 물질끼리 비교할 때",
+        "scope": "분자로 이루어진 순물질",
+        "invertible": true,
+        "invertedText": "분자량이 비슷하면 끓는점은 분산력만 있는 물질, 쌍극자·쌍극자 힘, 수소 결합 순으로 낮아진다."
+      },
+      {
+        "id": "rel-hb-anomaly",
+        "text": "물·플루오린화 수소·암모니아는 같은 족의 다른 수소 화합물보다 분자량이 작은데도 끓는점이 높다.",
+        "condition": "같은 족 수소 화합물의 끓는점을 주기별로 비교할 때",
+        "scope": "14~17족 원소의 수소 화합물",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "수소 결합은 수소를 포함한 모든 분자 사이에 작용한다",
+        "whyWrong": "수소가 질소·산소·플루오린과 결합해 큰 부분 전하를 띨 때에만 생긴다. 메테인처럼 탄소에 붙은 수소로는 수소 결합이 만들어지지 않는다."
+      },
+      {
+        "text": "수소 결합은 공유 결합과 같은 화학 결합이므로 분자를 이루는 결합이다",
+        "whyWrong": "분자 안의 결합이 아니라 분자와 분자 사이의 인력이다. 세기도 공유 결합보다 훨씬 약해 끓을 때 끊어지는 쪽은 수소 결합이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-polar-molecule",
+        "note": "부분 전하를 알아야 이 힘을 설명할 수 있다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-dipole-dipole-force",
+        "note": "쌍극자 사이의 인력이 특별히 강해진 경우로 본다"
+      },
+      {
+        "type": "related",
+        "target": "mate-dispersion-force",
+        "note": "세기 비교의 상대다"
+      },
+      {
+        "type": "next",
+        "target": "mate-boiling-point"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "분자 간 상호 작용",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "水 물 수 · 素 본디 소 · 結 맺을 결 · 合 합할 합",
+    "mediaCaption": "그림 Ⅰ-20 물과 플루오린화 수소에서 분자 간의 수소 결합",
+    "mediaFile": "mate-1-fig-20.png"
+  },
+  {
+    "id": "mate-intermolecular-force",
+    "term": "분자 간 상호 작용",
+    "aliases": [
+      "분자 간 힘",
+      "분자 사이의 힘"
+    ],
+    "hanja": "分子間相互作用",
+    "english": "intermolecular force",
+    "definition": "분자와 분자 사이에서 서로를 끌어당기는 힘을 통틀어 이르는 말. 그 세기가 같은 조건에서 물질이 어느 상태로 존재할지를 갈라 놓는다.",
+    "relations": [
+      {
+        "id": "rel-imf-state",
+        "text": "분자 간 상호 작용이 클수록 물질은 기체보다 액체나 고체로 존재하기 쉽다.",
+        "condition": "온도와 압력이 같은 조건에서 서로 다른 물질을 비교할 때",
+        "scope": "분자로 이루어진 물질",
+        "invertible": true,
+        "invertedText": "분자 간 상호 작용이 작을수록 물질은 액체나 고체로 존재하기 쉽다."
+      },
+      {
+        "id": "rel-imf-bp",
+        "text": "분자 간 상호 작용이 큰 물질일수록 녹는점과 끓는점이 높다.",
+        "condition": "외부 압력이 같고 분자성 물질끼리 비교할 때",
+        "scope": "분자로 이루어진 순물질",
+        "invertible": true,
+        "invertedText": "분자 간 상호 작용이 큰 물질일수록 녹는점과 끓는점이 낮다."
+      },
+      {
+        "id": "rel-imf-phase",
+        "text": "같은 물질에서 분자 간 인력이 미치는 영향은 고체·액체·기체 순으로 작아진다.",
+        "condition": "같은 물질을 상태만 바꾸어 비교할 때",
+        "scope": "분자로 이루어진 순물질의 세 가지 상태",
+        "invertible": true,
+        "invertedText": "같은 물질에서 분자 간 인력이 미치는 영향은 기체·액체·고체 순으로 작아진다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "분자 간 상호 작용은 분자 안의 원자를 붙잡아 두는 공유 결합과 같은 힘이다",
+        "whyWrong": "공유 결합은 분자 안에서 원자를 잇는 결합이고, 분자 간 상호 작용은 분자와 분자 사이에 작용하는 훨씬 약한 인력이다. 작용하는 자리가 다르다."
+      },
+      {
+        "text": "기체 분자 사이에는 분자 간 상호 작용이 아예 없다",
+        "whyWrong": "매우 약할 뿐 없지는 않다. 힘이 전혀 없다면 어떤 기체도 온도를 낮추어 액체로 만들 수 없을 것이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-dipole-dipole-force"
+      },
+      {
+        "type": "next",
+        "target": "mate-dispersion-force"
+      },
+      {
+        "type": "next",
+        "target": "mate-hydrogen-bond"
+      },
+      {
+        "type": "next",
+        "target": "mate-vapor-pressure",
+        "note": "액체가 증발하기 어려운 정도를 이 힘으로 설명한다"
+      },
+      {
+        "type": "related",
+        "target": "mate-molecular-crystal",
+        "note": "분자 결정을 붙들고 있는 힘이 바로 이것이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-ideal-gas",
+        "note": "이 힘을 0으로 놓고 세운 기체 모형이 이상 기체다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "분자 간 상호 작용",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "分 나눌 분 · 子 아들 자 · 間 사이 간 · 相 서로 상 · 互 서로 호 · 作 지을 작 · 用 쓸 용",
+    "mediaCaption": "그림 Ⅰ-14 물질의 세 가지 상태와 분자 배열",
+    "mediaFile": "mate-1-fig-14.png"
+  },
+  {
+    "id": "mate-nonpolar-molecule",
+    "term": "무극성 분자",
+    "aliases": [],
+    "hanja": "無極性分子",
+    "english": "nonpolar molecule",
+    "definition": "평균적인 전자 분포가 대칭이어서 분자 전체의 쌍극자 모멘트가 0인 분자. 같은 원소끼리 결합한 이원자 분자가 대표적이다.",
+    "relations": [
+      {
+        "id": "rel-npm-symmetry",
+        "text": "무극성 분자는 전자 분포가 평균적으로 대칭이어서 영구 쌍극자를 갖지 않는다.",
+        "condition": "전자 분포를 시간에 대해 평균 내어 볼 때",
+        "scope": "무극성 분자",
+        "invertible": true,
+        "invertedText": "무극성 분자도 영구 쌍극자를 가진다."
+      },
+      {
+        "id": "rel-npm-instant",
+        "text": "무극성 분자도 전자가 한쪽으로 몰리는 순간에는 짧은 시간 쌍극자를 만든다.",
+        "condition": "분자 안의 전자가 끊임없이 움직이고 있을 때",
+        "scope": "모든 분자 — 무극성 분자를 포함한다",
+        "invertible": false
+      },
+      {
+        "id": "rel-npm-condense",
+        "text": "무극성 분자로 된 물질도 온도를 충분히 낮추면 액체나 고체가 된다.",
+        "condition": "압력을 일정하게 두고 온도를 계속 낮출 때",
+        "scope": "무극성 분자로 이루어진 물질",
+        "invertible": true,
+        "invertedText": "무극성 분자로 된 물질은 온도를 아무리 낮추어도 액체나 고체가 되지 않는다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "무극성 분자 사이에는 아무런 힘도 작용하지 않는다",
+        "whyWrong": "순간 쌍극자에서 비롯한 분산력이 작용한다. 그 힘이 있기 때문에 산소나 질소도 충분히 식히면 액체가 된다."
+      },
+      {
+        "text": "무극성 분자 사이에서도 쌍극자·쌍극자 힘이 작용한다",
+        "whyWrong": "쌍극자·쌍극자 힘은 영구 쌍극자가 있어야 생긴다. 무극성 분자 사이에 작용하는 것은 분산력이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-dispersion-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-polar-molecule",
+        "note": "전자 분포의 대칭 여부로 갈리는 대립쌍이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "분자 간 상호 작용",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "無 없을 무 · 極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
+    "mediaCaption": "그림 Ⅰ-17 분산력 형성 과정",
+    "mediaFile": "mate-1-fig-17.png"
+  },
+  {
+    "id": "mate-polar-molecule",
+    "term": "극성 분자",
+    "aliases": [],
+    "hanja": "極性分子",
+    "english": "polar molecule",
+    "definition": "전하 분포가 한쪽으로 치우쳐 분자 전체의 쌍극자 모멘트가 0이 아닌 분자. 원자 사이의 전기음성도 차이와 분자의 모양이 함께 이 치우침을 만든다.",
+    "relations": [
+      {
+        "id": "rel-pm-en",
+        "text": "결합한 두 원자의 전기음성도 차이가 클수록 그 결합의 쌍극자 모멘트가 커진다.",
+        "condition": "결합 길이가 비슷한 결합끼리 비교할 때",
+        "scope": "두 원자 사이의 공유 결합 하나",
+        "invertible": true,
+        "invertedText": "결합한 두 원자의 전기음성도 차이가 클수록 그 결합의 쌍극자 모멘트가 작아진다."
+      },
+      {
+        "id": "rel-pm-shape",
+        "text": "결합마다 극성이 있어도 분자 모양이 대칭이면 쌍극자가 상쇄되어 무극성 분자가 된다.",
+        "condition": "분자를 이루는 결합에 극성이 있을 때",
+        "scope": "원자 세 개 이상으로 된 다원자 분자",
+        "invertible": false
+      },
+      {
+        "id": "rel-pm-force",
+        "text": "극성 분자끼리 이웃하면 영구 쌍극자 사이에 쌍극자·쌍극자 힘이 작용한다.",
+        "condition": "분자들이 인력이 미칠 만큼 가까이 있을 때",
+        "scope": "극성 분자로 이루어진 물질",
+        "invertible": true,
+        "invertedText": "무극성 분자끼리 이웃해도 쌍극자·쌍극자 힘이 작용한다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "분자 안에 극성 결합이 하나라도 있으면 그 분자는 극성 분자이다",
+        "whyWrong": "결합의 쌍극자가 대칭으로 놓이면 서로 상쇄되어 분자 전체로는 무극성이 된다. 이산화 탄소가 그런 경우다."
+      },
+      {
+        "text": "극성 분자는 이온처럼 분자 전체가 양전하나 음전하를 띤다",
+        "whyWrong": "치우침 때문에 생기는 것은 부분 전하일 뿐이고, 분자 전체의 전하는 0이다. 그래서 극성 분자는 전기장에서 방향만 정렬할 뿐 끌려가 버리지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-dipole-dipole-force"
+      },
+      {
+        "type": "next",
+        "target": "mate-hydrogen-bond"
+      },
+      {
+        "type": "related",
+        "target": "mate-nonpolar-molecule",
+        "note": "전자 분포의 대칭 여부로 갈리는 대립쌍이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "분자 간 상호 작용",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
+    "mediaCaption": "그림 Ⅰ-15 염화 수소 분자의 쌍극자",
+    "mediaFile": "mate-1-fig-15.png"
+  },
+  {
+    "id": "mate-boiling-point",
+    "term": "끓는점",
+    "aliases": [],
+    "hanja": null,
+    "english": "boiling point",
+    "definition": "액체의 증기 압력이 외부 압력과 같아져 표면뿐 아니라 액체 속에서도 기화가 일어나기 시작하는 온도.",
+    "relations": [
+      {
+        "id": "rel-bp-external",
+        "text": "같은 액체라도 외부 압력이 낮아지면 끓는점이 낮아진다.",
+        "condition": "액체의 종류가 같고 외부 압력만 바꿀 때",
+        "scope": "순수한 액체",
+        "invertible": true,
+        "invertedText": "같은 액체라도 외부 압력이 낮아지면 끓는점이 높아진다."
+      },
+      {
+        "id": "rel-bp-imf",
+        "text": "분자 간 상호 작용이 큰 액체일수록 끓는점이 높다.",
+        "condition": "외부 압력이 같은 조건에서 비교할 때",
+        "scope": "분자로 이루어진 순수한 액체끼리 비교",
+        "invertible": true,
+        "invertedText": "분자 간 상호 작용이 큰 액체일수록 끓는점이 낮다."
+      },
+      {
+        "id": "rel-bp-vp",
+        "text": "같은 온도에서 증기 압력이 높은 액체일수록 끓는점이 낮다.",
+        "condition": "외부 압력이 같고 같은 온도에서 증기 압력을 견줄 때",
+        "scope": "순수한 액체끼리 비교",
+        "invertible": true,
+        "invertedText": "같은 온도에서 증기 압력이 높은 액체일수록 끓는점이 높다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "끓는점은 물질마다 정해진 값이므로 어디에서 끓이든 물은 100 ℃에서 끓는다",
+        "whyWrong": "끓는점은 외부 압력에 따라 달라진다. 기압이 낮은 높은 산에서는 물이 100 ℃보다 낮은 온도에서 끓는다."
+      },
+      {
+        "text": "불을 더 세게 하면 끓는점이 높아진다",
+        "whyWrong": "불의 세기는 끓는 빠르기를 바꿀 뿐이다. 끓기 시작하는 온도는 액체의 종류와 외부 압력으로 정해진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-vapor-pressure",
+        "note": "증기 압력이 외부 압력에 닿는 지점으로 정의된다"
+      },
+      {
+        "type": "next",
+        "target": "mate-standard-boiling-point"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-hydrogen-bond"
+      },
+      {
+        "type": "related",
+        "target": "mate-dispersion-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-atmospheric-pressure",
+        "note": "끓는점을 정하는 외부 압력은 열린 그릇에서는 대기압이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "액체",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-18 메테인, 뷰테인, 노말펜테인, 네오펜테인의 분자량과 끓는점",
+    "mediaFile": "mate-1-fig-18.png"
+  },
+  {
+    "id": "mate-dynamic-equilibrium",
+    "term": "동적 평형",
+    "aliases": [],
+    "hanja": "動的平衡",
+    "english": "dynamic equilibrium",
+    "definition": "서로 반대 방향의 두 변화가 같은 빠르기로 계속 일어나, 겉으로는 아무것도 달라지지 않는 것처럼 보이는 상태.",
+    "relations": [
+      {
+        "id": "rel-de-rate",
+        "text": "동적 평형에 이르면 단위 시간에 증발하는 분자 수와 응축하는 분자 수가 같아진다.",
+        "condition": "온도가 일정하게 유지되는 닫힌 용기일 때",
+        "scope": "액체와 그 증기가 함께 있는 순물질계",
+        "invertible": true,
+        "invertedText": "동적 평형에 이르면 증발하는 분자 수가 응축하는 분자 수보다 많아진다."
+      },
+      {
+        "id": "rel-de-macro",
+        "text": "동적 평형 상태에서는 액체의 양과 증기의 압력이 겉보기에 변하지 않는다.",
+        "condition": "온도가 일정한 닫힌 용기에서 충분한 시간이 지난 뒤",
+        "scope": "액체와 증기가 이룬 평형",
+        "invertible": true,
+        "invertedText": "동적 평형 상태에서도 액체의 양은 계속 줄어든다."
+      },
+      {
+        "id": "rel-de-before",
+        "text": "평형에 이르기 전에는 증발이 응축보다 빨라 증기의 압력이 점점 커진다.",
+        "condition": "닫힌 용기에 액체를 넣은 직후부터 평형에 닿기 전까지",
+        "scope": "동적 평형에 아직 이르지 않은 구간",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "동적 평형에 이르면 증발과 응축이 둘 다 멈춘다",
+        "whyWrong": "두 변화는 멈추지 않고 계속 일어난다. 다만 빠르기가 같아져서 겉으로 보이는 양이 달라지지 않을 뿐이다."
+      },
+      {
+        "text": "열린 용기에 둔 액체도 시간이 지나면 동적 평형에 이른다",
+        "whyWrong": "증기가 용기 밖으로 달아나 응축이 증발을 따라잡지 못한다. 그래서 열린 용기의 액체는 결국 모두 증발한다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-vapor-pressure",
+        "note": "이 상태에서 증기가 나타내는 압력이 증기 압력이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-boiling-point"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force",
+        "note": "증발과 응축의 빠르기를 좌우하는 것이 이 힘이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "액체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "動 움직일 동 · 的 과녁 적 · 平 평평할 평 · 衡 저울대 형",
+    "mediaCaption": "그림 Ⅰ-22 동적 평형 상태에서 액체의 증기 압력",
+    "mediaFile": "mate-1-fig-22.png"
+  },
+  {
+    "id": "mate-standard-boiling-point",
+    "term": "기준 끓는점",
+    "aliases": [],
+    "hanja": null,
+    "english": "standard boiling point",
+    "definition": "외부 압력을 1 atm으로 고정했을 때의 끓는점. 압력에 따라 달라지는 끓는점을 물질끼리 견줄 수 있도록 조건을 못박은 값이다.",
+    "relations": [
+      {
+        "id": "rel-sbp-compare",
+        "text": "압력을 1 atm으로 고정하면 여러 액체의 끓는점을 같은 잣대로 견줄 수 있다.",
+        "condition": "비교하는 모든 액체에 같은 외부 압력을 적용할 때",
+        "scope": "순수한 액체",
+        "invertible": false
+      },
+      {
+        "id": "rel-sbp-imf",
+        "text": "기준 끓는점이 높은 액체일수록 분자 간 상호 작용이 크다.",
+        "condition": "외부 압력을 모두 1 atm으로 맞추었을 때",
+        "scope": "분자로 이루어진 액체끼리 비교",
+        "invertible": true,
+        "invertedText": "기준 끓는점이 높은 액체일수록 분자 간 상호 작용이 작다."
+      },
+      {
+        "id": "rel-sbp-curve",
+        "text": "증기 압력 곡선에서 증기 압력이 760 mmHg가 되는 온도를 읽으면 그 액체의 기준 끓는점이다.",
+        "condition": "외부 압력이 1 atm, 곧 760 mmHg일 때",
+        "scope": "순수한 액체의 증기 압력 곡선",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "기준 끓는점은 그 물질이 끓을 수 있는 가장 높은 온도이다",
+        "whyWrong": "외부 압력을 1 atm보다 높이면 더 높은 온도에서 끓는다. 기준 끓는점은 최댓값이 아니라 약속된 압력에서의 값일 뿐이다."
+      },
+      {
+        "text": "끓는점은 어차피 물질마다 하나이므로 기준 끓는점을 따로 둘 필요가 없다",
+        "whyWrong": "끓는점은 외부 압력에 따라 달라지므로, 압력을 밝히지 않은 끓는점끼리는 비교할 수 없다. 그래서 1 atm이라는 기준이 필요하다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-boiling-point",
+        "note": "끓는점의 특수한 경우 — 외부 압력을 1 atm으로 고정한 값이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-vapor-pressure",
+        "note": "증기 압력 곡선에서 760 mmHg 지점으로 읽는다"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-atmospheric-pressure",
+        "note": "1 atm이라는 기준 압력은 대기압의 표준값에서 왔다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "액체",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-23 물의 증기 압력 곡선",
+    "mediaFile": "mate-1-fig-23.png"
+  },
+  {
+    "id": "mate-vapor-pressure",
+    "term": "증기 압력",
+    "aliases": [
+      "증기압",
+      "액체의 증기 압력"
+    ],
+    "hanja": "蒸氣壓力",
+    "english": "vapor pressure",
+    "definition": "닫힌 용기에서 액체와 증기가 동적 평형을 이루었을 때, 그 증기가 용기 벽에 나타내는 압력.",
+    "relations": [
+      {
+        "id": "rel-vp-temp",
+        "text": "같은 액체라도 온도가 높아지면 증기 압력이 커진다.",
+        "condition": "액체의 종류가 같고 닫힌 용기에서 평형을 이룰 때",
+        "scope": "순수한 액체",
+        "invertible": true,
+        "invertedText": "같은 액체라도 온도가 높아지면 증기 압력이 작아진다."
+      },
+      {
+        "id": "rel-vp-imf",
+        "text": "분자 간 상호 작용이 큰 액체일수록 같은 온도에서 증기 압력이 낮다.",
+        "condition": "비교하는 온도가 같을 때",
+        "scope": "순수한 액체끼리 비교",
+        "invertible": true,
+        "invertedText": "분자 간 상호 작용이 큰 액체일수록 같은 온도에서 증기 압력이 높다."
+      },
+      {
+        "id": "rel-vp-amount",
+        "text": "증기 압력은 액체의 종류와 온도로 정해지며 액체의 양이나 용기의 부피에는 좌우되지 않는다.",
+        "condition": "액체가 남아 있는 채로 동적 평형에 이르렀을 때",
+        "scope": "순수한 액체가 든 닫힌 용기",
+        "invertible": true,
+        "invertedText": "같은 온도에서 액체의 양이 많을수록 증기 압력이 크다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "같은 온도라도 액체를 많이 넣을수록 증기 압력이 커진다",
+        "whyWrong": "평형에 이른 뒤의 증기 압력은 액체의 종류와 온도만으로 정해진다. 액체가 남아 있는 한 양을 늘려도 압력은 달라지지 않는다."
+      },
+      {
+        "text": "끓는점이 높은 물질일수록 같은 온도에서 증기 압력도 높다",
+        "whyWrong": "끓는점이 높다는 것은 분자 간 상호 작용이 크다는 뜻이므로 증발이 어렵고, 같은 온도에서 증기 압력은 오히려 낮다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-dynamic-equilibrium",
+        "note": "이 상태를 전제로만 정의되는 압력이다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-intermolecular-force"
+      },
+      {
+        "type": "next",
+        "target": "mate-boiling-point"
+      },
+      {
+        "type": "related",
+        "target": "mate-hydrogen-bond",
+        "note": "수소 결합을 하는 액체는 증기 압력이 두드러지게 낮다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-gas-pressure",
+        "note": "증기가 벽에 부딪쳐 압력을 나타낸다는 점은 기체의 압력과 다르지 않다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "액체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "蒸 찔 증 · 氣 기운 기 · 壓 누를 압 · 力 힘 력",
+    "mediaCaption": "그림 Ⅰ-23 물의 증기 압력 곡선",
+    "mediaFile": "mate-1-fig-23.png"
+  },
+  {
+    "id": "mate-amorphous-solid",
+    "term": "비결정성 고체",
+    "aliases": [
+      "비결정",
+      "무정형 고체"
+    ],
+    "hanja": "非結晶性固體",
+    "english": "amorphous solid",
+    "definition": "입자가 넓은 범위에서는 규칙 없이 놓여 있어 정해진 결정 구조를 갖지 못하는 고체. 유리·고무·엿이 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-as-mp",
+        "text": "비결정성 고체는 녹는점이 하나로 정해지지 않고 넓은 온도 구간에 걸쳐 물러진다.",
+        "condition": "고체를 천천히 가열할 때",
+        "scope": "비결정성 고체",
+        "invertible": true,
+        "invertedText": "비결정성 고체는 정해진 한 온도에서 녹기 시작한다."
+      },
+      {
+        "id": "rel-as-why",
+        "text": "입자 사이의 인력이 자리마다 달라 한꺼번에 끊어지지 않는 것이 녹는점이 흐려지는 까닭이다.",
+        "condition": "입자 배열에 규칙성이 없을 때",
+        "scope": "비결정성 고체",
+        "invertible": false
+      },
+      {
+        "id": "rel-as-quartz",
+        "text": "석영과 유리는 화학식이 같아도 배열의 규칙성이 달라 결정성과 비결정성으로 갈린다.",
+        "condition": "구성 원소와 화학식이 같은 두 고체를 견줄 때",
+        "scope": "이산화 규소로 이루어진 고체",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "비결정성 고체는 고체가 아니라 아주 느리게 흐르는 액체이다",
+        "whyWrong": "입자가 제자리에서 진동만 하고 자리를 옮기지 못하므로 유동성이 없는 고체다. 다만 배열이 무질서할 뿐이다."
+      },
+      {
+        "text": "순물질이면 비결정성 고체라도 녹는점이 하나로 정해진다",
+        "whyWrong": "순물질이어도 배열이 무질서하면 자리마다 인력의 크기가 달라 녹는 온도가 한 점으로 모이지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "related",
+        "target": "mate-crystalline-solid",
+        "note": "입자 배열의 규칙성으로 갈리는 대립쌍이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-covalent-crystal",
+        "note": "석영(결정성)과 유리(비결정성)는 화학식이 같다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "고체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "非 아닐 비 · 結 맺을 결 · 晶 맑을 정 · 性 성품 성 · 固 굳을 고 · 體 몸 체",
+    "mediaCaption": "그림 Ⅰ-24 석영과 유리",
+    "mediaFile": "mate-1-fig-24.png"
+  },
+  {
+    "id": "mate-covalent-crystal",
+    "term": "공유 결정",
+    "aliases": [
+      "원자 결정"
+    ],
+    "hanja": "共有結晶",
+    "english": "covalent crystal",
+    "definition": "모든 원자가 공유 결합으로 그물처럼 이어져, 결정 하나가 거대한 분자 한 덩이나 다름없게 된 결정.",
+    "relations": [
+      {
+        "id": "rel-cc-mp",
+        "text": "결정 전체가 공유 결합으로 이어져 있어 공유 결정은 매우 단단하고 녹는점이 아주 높다.",
+        "condition": "다른 종류의 결정과 상온·상압에서 견줄 때",
+        "scope": "공유 결정",
+        "invertible": true,
+        "invertedText": "공유 결정은 공유 결합으로 이어져 있어 녹는점이 낮고 무르다."
+      },
+      {
+        "id": "rel-cc-vs-molecular",
+        "text": "같은 공유 결합이라도 그물로 이어지면 공유 결정, 낱낱의 분자로 끊기면 분자 결정이 된다.",
+        "condition": "입자를 잇는 결합이 공유 결합일 때",
+        "scope": "공유 결합으로 이루어진 고체",
+        "invertible": false
+      },
+      {
+        "id": "rel-cc-graphite",
+        "text": "흑연은 공유 결정이지만 각 탄소가 내놓은 전자가 층을 따라 움직여 전기를 통한다.",
+        "condition": "탄소 원자가 평면 층 구조를 이룰 때",
+        "scope": "흑연 — 공유 결정 가운데 예외 사례",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "공유 결정도 공유 결합으로 된 물질이므로 분자 결정처럼 녹는점이 낮다",
+        "whyWrong": "분자 결정은 분자 사이의 약한 힘만 끊으면 녹지만, 공유 결정은 결정 전체를 잇는 공유 결합을 끊어야 하므로 녹는점이 매우 높다."
+      },
+      {
+        "text": "다이아몬드는 탄소 분자들이 모여 이룬 분자 결정이다",
+        "whyWrong": "다이아몬드에는 낱낱의 분자가 없다. 탄소 원자가 그물처럼 이어진 공유 결정이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-crystalline-solid",
+        "note": "결정 분류의 상위 개념이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-molecular-crystal",
+        "note": "같은 공유 결합을 쓰지만 구조가 다르다"
+      },
+      {
+        "type": "related",
+        "target": "mate-amorphous-solid",
+        "note": "석영(결정성)과 유리(비결정성)는 화학식이 같다"
+      },
+      {
+        "type": "related",
+        "target": "mate-metallic-crystal"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "고체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 晶 맑을 정",
+    "mediaCaption": "그림 Ⅰ-30 공유 결정의 예",
+    "mediaFile": "mate-1-fig-30.png"
+  },
+  {
+    "id": "mate-crystalline-solid",
+    "term": "결정성 고체",
+    "aliases": [
+      "결정"
+    ],
+    "hanja": "結晶性固體",
+    "english": "crystalline solid",
+    "definition": "구성 입자가 넓은 범위에 걸쳐 규칙적으로 늘어서 일정한 결정 구조를 이루고 있는 고체.",
+    "relations": [
+      {
+        "id": "rel-cs-mp",
+        "text": "입자 사이의 인력이 어디서나 같으므로 결정성 고체는 정해진 온도에서 녹기 시작한다.",
+        "condition": "순물질로 된 결정을 천천히 가열할 때",
+        "scope": "결정성 고체",
+        "invertible": true,
+        "invertedText": "결정성 고체는 녹는점이 일정하지 않고 넓은 온도 범위에서 물러진다."
+      },
+      {
+        "id": "rel-cs-classify",
+        "text": "결정성 고체는 입자를 잇는 화학 결합의 종류에 따라 이온·금속·분자·공유 결정으로 나뉜다.",
+        "condition": "분류 기준을 결정 내부의 화학 결합으로 삼을 때",
+        "scope": "결정성 고체",
+        "invertible": false
+      },
+      {
+        "id": "rel-cs-same-formula",
+        "text": "화학식이 같아도 입자 배열이 규칙적인지에 따라 결정성 고체가 되기도 하고 아니기도 한다.",
+        "condition": "구성 원소와 화학식이 같은 두 고체를 견줄 때",
+        "scope": "석영과 유리처럼 화학식이 같은 고체",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "겉모양이 반듯한 고체만 결정성 고체이다",
+        "whyWrong": "판단 기준은 겉모양이 아니라 입자 배열의 규칙성이다. 곱게 빻은 소금 가루도 여전히 결정성 고체다."
+      },
+      {
+        "text": "유리는 단단하고 투명하니까 결정성 고체이다",
+        "whyWrong": "단단함이나 투명함은 기준이 아니다. 유리는 입자가 무질서하게 배열된 비결정성 고체다."
+      }
+    ],
+    "links": [
+      {
+        "type": "related",
+        "target": "mate-amorphous-solid",
+        "note": "입자 배열의 규칙성으로 갈리는 대립쌍이다"
+      },
+      {
+        "type": "next",
+        "target": "mate-ionic-crystal"
+      },
+      {
+        "type": "next",
+        "target": "mate-metallic-crystal"
+      },
+      {
+        "type": "next",
+        "target": "mate-molecular-crystal"
+      },
+      {
+        "type": "next",
+        "target": "mate-covalent-crystal"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "고체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "結 맺을 결 · 晶 맑을 정 · 性 성품 성 · 固 굳을 고 · 體 몸 체",
+    "mediaCaption": "그림 Ⅰ-24 석영과 유리",
+    "mediaFile": "mate-1-fig-24.png"
+  },
+  {
+    "id": "mate-ionic-crystal",
+    "term": "이온 결정",
+    "aliases": [],
+    "hanja": null,
+    "english": "ionic crystal",
+    "definition": "양이온과 음이온이 정전기적 인력으로 결합해 규칙적이고 연속적으로 쌓여 이루어진 결정.",
+    "relations": [
+      {
+        "id": "rel-ic-mp",
+        "text": "이온 하나가 반대 전하를 띤 여러 이온과 맞물리므로 이온 결정은 단단하고 녹는점이 높다.",
+        "condition": "상온·상압에서 다른 종류의 결정과 견줄 때",
+        "scope": "이온 결정",
+        "invertible": true,
+        "invertedText": "이온 결정은 이온 결합으로 이루어져 녹는점이 낮고 무르다."
+      },
+      {
+        "id": "rel-ic-cleave",
+        "text": "외부 힘으로 이온층이 밀리면 같은 전하끼리 마주쳐 반발력이 생겨 결정이 쪼개진다.",
+        "condition": "결정에 힘을 가해 층이 어긋날 때",
+        "scope": "이온 결정",
+        "invertible": true,
+        "invertedText": "이온 결정은 결합이 강해 힘을 가해도 층만 밀릴 뿐 쪼개지지 않는다."
+      },
+      {
+        "id": "rel-ic-conduct",
+        "text": "이온 결정은 고체에서는 전기를 통하지 않지만 녹거나 물에 녹으면 전기를 통한다.",
+        "condition": "이온이 자리를 옮길 수 있는가에 따라",
+        "scope": "이온 결정",
+        "invertible": true,
+        "invertedText": "이온 결정은 고체 상태에서 전기를 잘 통한다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "이온 결정은 결합이 강하므로 힘을 가해도 잘 쪼개지지 않는다",
+        "whyWrong": "결합은 강하지만 층이 조금만 밀려도 같은 전하가 마주쳐 반발한다. 그래서 오히려 쉽게 쪼개지거나 부서진다."
+      },
+      {
+        "text": "이온으로 이루어진 결정이니까 고체 상태에서도 전기가 잘 통한다",
+        "whyWrong": "전기가 통하려면 전하를 나를 입자가 움직일 수 있어야 한다. 고체에서는 이온이 제자리에 붙들려 있어 통하지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-crystalline-solid",
+        "note": "결정 분류의 상위 개념이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-metallic-crystal",
+        "note": "힘을 받았을 때의 거동이 정반대다"
+      },
+      {
+        "type": "related",
+        "target": "mate-molecular-crystal",
+        "note": "녹는점의 높낮이가 갈리는 상대다"
+      },
+      {
+        "type": "related",
+        "target": "mate-covalent-crystal"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "고체",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅰ-25 이온 결정의 예",
+    "mediaFile": "mate-1-fig-25.png"
+  },
+  {
+    "id": "mate-metallic-crystal",
+    "term": "금속 결정",
+    "aliases": [],
+    "hanja": "金屬結晶",
+    "english": "metallic crystal",
+    "definition": "금속 양이온이 결정 전체를 떠도는 자유 전자에 둘러싸여, 그 사이의 정전기적 인력으로 묶여 있는 결정.",
+    "relations": [
+      {
+        "id": "rel-mc-bond",
+        "text": "금속 양이온과 자유 전자 사이의 인력이 강할수록 금속 결정의 녹는점이 높다.",
+        "condition": "금속끼리 상온·상압에서 견줄 때",
+        "scope": "금속 결정",
+        "invertible": true,
+        "invertedText": "금속 양이온과 자유 전자 사이의 인력이 강할수록 금속 결정의 녹는점이 낮다."
+      },
+      {
+        "id": "rel-mc-free-electron",
+        "text": "자유 전자가 결정 안을 돌아다니므로 금속 결정은 전기와 열을 잘 전달하고 광택을 띤다.",
+        "condition": "자유 전자가 결정 전체에 퍼져 있을 때",
+        "scope": "금속 결정",
+        "invertible": true,
+        "invertedText": "금속 결정은 자유 전자가 있어도 전기와 열을 잘 전달하지 못한다."
+      },
+      {
+        "id": "rel-mc-malleable",
+        "text": "층이 밀려도 자유 전자가 양이온을 계속 감싸 주므로 금속은 펴지고 뽑힐 뿐 부서지지 않는다.",
+        "condition": "결정에 힘을 가해 층이 어긋날 때",
+        "scope": "금속 결정",
+        "invertible": true,
+        "invertedText": "금속 결정은 힘을 가하면 이온 결정처럼 반발력이 생겨 쪼개진다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "금속도 힘을 세게 주면 이온 결정처럼 반발력이 생겨 쪼개진다",
+        "whyWrong": "금속에서는 층이 밀려도 자유 전자가 양이온 사이를 계속 이어 주므로 결합이 끊기지 않고 모양만 달라진다."
+      },
+      {
+        "text": "금속은 고체일 때만 전기를 통한다",
+        "whyWrong": "녹아서 액체가 되어도 자유 전자는 그대로 남아 있으므로 전기를 통한다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-crystalline-solid",
+        "note": "결정 분류의 상위 개념이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-ionic-crystal",
+        "note": "힘을 받았을 때의 거동이 정반대다"
+      },
+      {
+        "type": "related",
+        "target": "mate-covalent-crystal"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "고체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "金 쇠 금 · 屬 무리 속 · 結 맺을 결 · 晶 맑을 정",
+    "mediaCaption": "그림 Ⅰ-28 금속 결합",
+    "mediaFile": "mate-1-fig-28.png"
+  },
+  {
+    "id": "mate-molecular-crystal",
+    "term": "분자 결정",
+    "aliases": [],
+    "hanja": "分子結晶",
+    "english": "molecular crystal",
+    "definition": "공유 결합으로 만들어진 분자들이 분자 간 상호 작용으로 규칙적으로 쌓여 이루어진 결정.",
+    "relations": [
+      {
+        "id": "rel-molc-weak",
+        "text": "분자를 붙잡는 힘이 약한 분자 간 상호 작용이어서 분자 결정은 녹는점이 낮다.",
+        "condition": "다른 종류의 결정과 상온·상압에서 견줄 때",
+        "scope": "분자 결정",
+        "invertible": true,
+        "invertedText": "분자 결정은 분자 간 상호 작용으로 묶여 있어 녹는점이 높다."
+      },
+      {
+        "id": "rel-molc-sublime",
+        "text": "입자 사이의 힘이 약해 분자 결정 가운데는 녹지 않고 바로 기체가 되는 것이 있다.",
+        "condition": "상온·상압에 그대로 두었을 때",
+        "scope": "드라이아이스·아이오딘처럼 승화성을 띠는 일부 분자 결정",
+        "invertible": false
+      },
+      {
+        "id": "rel-molc-nonconduct",
+        "text": "전하를 나를 이온도 자유 전자도 없어 분자 결정은 고체에서도 녹은 뒤에도 전기를 통하지 않는다.",
+        "condition": "순수한 분자 결정을 다룰 때",
+        "scope": "분자 결정",
+        "invertible": true,
+        "invertedText": "분자 결정은 녹여서 액체로 만들면 전기를 통한다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "분자 결정이 녹을 때는 분자 안의 공유 결합이 끊어진다",
+        "whyWrong": "끊어지는 것은 분자와 분자 사이의 힘이다. 분자 자체는 그대로 남아 있어 드라이아이스가 승화해도 이산화 탄소 분자는 그대로다."
+      },
+      {
+        "text": "분자 결정도 결정이므로 녹는점이 높다",
+        "whyWrong": "결정 구조를 이루더라도 입자를 붙잡는 힘이 약한 분자 간 상호 작용이라 녹는점은 오히려 낮다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-crystalline-solid",
+        "note": "결정 분류의 상위 개념이다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-intermolecular-force",
+        "note": "결정을 붙들고 있는 힘이 바로 이것이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-ionic-crystal",
+        "note": "녹는점의 높낮이가 갈리는 상대다"
+      },
+      {
+        "type": "related",
+        "target": "mate-covalent-crystal",
+        "note": "같은 공유 결합을 쓰지만 구조가 다르다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
+    "topic": "고체",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "分 나눌 분 · 子 아들 자 · 結 맺을 결 · 晶 맑을 정",
+    "mediaCaption": "그림 Ⅰ-29 분자 결정의 예",
+    "mediaFile": "mate-1-fig-29.png"
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "id": "mate-metallic-crystal",
+  "concept_key": "concept:metallic-crystal",
+  "registry_status": "new",
+  "term": "금속 결정",
+  "notation": {
+    "hanja": "金屬結晶",
+    "hanja_gloss": "金 쇠 금 · 屬 무리 속 · 結 맺을 결 · 晶 맑을 정",
+    "english": "metallic crystal"
+  },
+  "definition": "금속 양이온이 결정 전체를 떠도는 자유 전자에 둘러싸여, 그 사이의 정전기적 인력으로 묶여 있는 결정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mc-bond",
+      "text": "금속 양이온과 자유 전자 사이의 인력이 강할수록 금속 결정의 녹는점이 높다.",
+      "form": {
+        "condition": "금속끼리 상온·상압에서 견줄 때",
+        "type": "direct",
+        "scope": "금속 결정",
+        "antecedent": {
+          "quantity": "금속 결합의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "녹는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "결합을 끊는 데 드는 에너지가 클수록 녹는 온도가 높아지므로 반대 방향 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속 양이온과 자유 전자 사이의 인력이 강할수록 금속 결정의 녹는점이 낮다."
+    },
+    {
+      "id": "rel-mc-free-electron",
+      "text": "자유 전자가 결정 안을 돌아다니므로 금속 결정은 전기와 열을 잘 전달하고 광택을 띤다.",
+      "form": {
+        "condition": "자유 전자가 결정 전체에 퍼져 있을 때",
+        "type": "causal",
+        "scope": "금속 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "전하를 나르는 자유 전자가 있는데 전도가 되지 않는다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속 결정은 자유 전자가 있어도 전기와 열을 잘 전달하지 못한다."
+    },
+    {
+      "id": "rel-mc-malleable",
+      "text": "층이 밀려도 자유 전자가 양이온을 계속 감싸 주므로 금속은 펴지고 뽑힐 뿐 부서지지 않는다.",
+      "form": {
+        "condition": "결정에 힘을 가해 층이 어긋날 때",
+        "type": "causal",
+        "scope": "금속 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "자유 전자가 층 사이를 이어 주는 한 반발로 갈라질 수 없으므로 쪼개진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속 결정은 힘을 가하면 이온 결정처럼 반발력이 생겨 쪼개진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "금속도 힘을 세게 주면 이온 결정처럼 반발력이 생겨 쪼개진다",
+      "why_wrong": "금속에서는 층이 밀려도 자유 전자가 양이온 사이를 계속 이어 주므로 결합이 끊기지 않고 모양만 달라진다.",
+      "source": "llm",
+      "linked_relation": "rel-mc-malleable"
+    },
+    {
+      "text": "금속은 고체일 때만 전기를 통한다",
+      "why_wrong": "녹아서 액체가 되어도 자유 전자는 그대로 남아 있으므로 전기를 통한다.",
+      "source": "llm",
+      "linked_relation": "rel-mc-free-electron"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-crystalline-solid",
+      "note": "결정 분류의 상위 개념이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-ionic-crystal",
+      "note": "힘을 받았을 때의 거동이 정반대다"
+    },
+    {
+      "type": "related",
+      "target": "mate-covalent-crystal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-04"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-03",
+  "pages": [
+    38
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

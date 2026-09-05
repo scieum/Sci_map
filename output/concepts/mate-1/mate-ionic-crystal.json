@@ -1,0 +1,112 @@
+{
+  "id": "mate-ionic-crystal",
+  "concept_key": "concept:ionic-crystal",
+  "registry_status": "new",
+  "term": "이온 결정",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'이온'은 영어 ion 의 음차어로 한자어 표기가 없어, 표제어 전체에 대응하는 한자어가 성립하지 않는다.",
+    "english": "ionic crystal"
+  },
+  "definition": "양이온과 음이온이 정전기적 인력으로 결합해 규칙적이고 연속적으로 쌓여 이루어진 결정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ic-mp",
+      "text": "이온 하나가 반대 전하를 띤 여러 이온과 맞물리므로 이온 결정은 단단하고 녹는점이 높다.",
+      "form": {
+        "condition": "상온·상압에서 다른 종류의 결정과 견줄 때",
+        "type": "causal",
+        "scope": "이온 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "여러 방향으로 강한 인력이 걸려 있으므로 녹는점이 낮고 무르다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온 결정은 이온 결합으로 이루어져 녹는점이 낮고 무르다."
+    },
+    {
+      "id": "rel-ic-cleave",
+      "text": "외부 힘으로 이온층이 밀리면 같은 전하끼리 마주쳐 반발력이 생겨 결정이 쪼개진다.",
+      "form": {
+        "condition": "결정에 힘을 가해 층이 어긋날 때",
+        "type": "causal",
+        "scope": "이온 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "층이 밀리는 순간 같은 전하가 이웃하게 되어 반드시 반발이 일어나므로 쪼개지지 않는다는 진술은 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온 결정은 결합이 강해 힘을 가해도 층만 밀릴 뿐 쪼개지지 않는다."
+    },
+    {
+      "id": "rel-ic-conduct",
+      "text": "이온 결정은 고체에서는 전기를 통하지 않지만 녹거나 물에 녹으면 전기를 통한다.",
+      "form": {
+        "condition": "이온이 자리를 옮길 수 있는가에 따라",
+        "type": "conditional",
+        "scope": "이온 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "고체에서는 이온이 격자에 붙들려 전하를 나를 수 없으므로 통한다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온 결정은 고체 상태에서 전기를 잘 통한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이온 결정은 결합이 강하므로 힘을 가해도 잘 쪼개지지 않는다",
+      "why_wrong": "결합은 강하지만 층이 조금만 밀려도 같은 전하가 마주쳐 반발한다. 그래서 오히려 쉽게 쪼개지거나 부서진다.",
+      "source": "llm",
+      "linked_relation": "rel-ic-cleave"
+    },
+    {
+      "text": "이온으로 이루어진 결정이니까 고체 상태에서도 전기가 잘 통한다",
+      "why_wrong": "전기가 통하려면 전하를 나를 입자가 움직일 수 있어야 한다. 고체에서는 이온이 제자리에 붙들려 있어 통하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-ic-conduct"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-crystalline-solid",
+      "note": "결정 분류의 상위 개념이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-metallic-crystal",
+      "note": "힘을 받았을 때의 거동이 정반대다"
+    },
+    {
+      "type": "related",
+      "target": "mate-molecular-crystal",
+      "note": "녹는점의 높낮이가 갈리는 상대다"
+    },
+    {
+      "type": "related",
+      "target": "mate-covalent-crystal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-04"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-03",
+  "pages": [
+    38
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

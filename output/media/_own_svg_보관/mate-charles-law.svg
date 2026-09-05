@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400"
+     font-family="Pretendard, 'Malgun Gothic', sans-serif">
+  <title>샤를 법칙 — 부피는 절대 온도에 비례한다. 섭씨온도로는 비례하지 않는다</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#189fe6"/>
+    </marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#0e82c4"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#20242b">부피는 절대 온도에 비례한다 — 섭씨온도에는 비례하지 않는다</text>
+
+  <!-- 세로축 -->
+  <line x1="110" y1="290" x2="110" y2="66" stroke="#0e82c4" stroke-width="2" stroke-linecap="round" marker-end="url(#ad)"/>
+  <text x="120" y="60" font-size="13" fill="#6b7684">부피 V</text>
+
+  <!-- 세로 격자 -->
+  <g stroke="#edf0f4" stroke-width="1">
+    <line x1="208.4" y1="290" x2="208.4" y2="70"/>
+    <line x1="306.9" y1="290" x2="306.9" y2="70"/>
+    <line x1="405.3" y1="290" x2="405.3" y2="70"/>
+    <line x1="503.8" y1="290" x2="503.8" y2="70"/>
+    <line x1="602.2" y1="290" x2="602.2" y2="70"/>
+    <line x1="700.6" y1="290" x2="700.6" y2="70"/>
+  </g>
+
+  <!-- 안내선 -->
+  <g stroke="#6b7684" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="110" y1="189.3" x2="398.4" y2="189.3"/>
+    <line x1="110" y1="88.6" x2="686.8" y2="88.6"/>
+    <line x1="398.4" y1="290" x2="398.4" y2="189.3"/>
+    <line x1="418.1" y1="290" x2="418.1" y2="182.4"/>
+    <line x1="686.8" y1="290" x2="686.8" y2="88.6"/>
+  </g>
+
+  <!-- V ∝ T 직선 -->
+  <line x1="110" y1="290" x2="740" y2="70" stroke="#189fe6" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="110" cy="290" r="4.5" fill="#0e82c4"/>
+
+  <text x="104" y="193" text-anchor="end" font-size="12" fill="#6b7684">V<tspan dy="4" font-size="10">1</tspan></text>
+  <text x="104" y="92" text-anchor="end" font-size="12" fill="#6b7684">2V<tspan dy="4" font-size="10">1</tspan></text>
+
+  <!-- 표시점 -->
+  <circle cx="398.4" cy="189.3" r="5" fill="#189fe6"/>
+  <circle cx="418.1" cy="182.4" r="5" fill="#dc2626"/>
+  <circle cx="686.8" cy="88.6" r="5" fill="#0e82c4"/>
+
+  <!-- 설명 ① -->
+  <rect x="140" y="96" width="268" height="60" rx="8" fill="#eff9ff" stroke="#189fe6" stroke-width="1.5"/>
+  <text x="274" y="120" text-anchor="middle" font-size="13" fill="#20242b">① 20 ℃ → 40 ℃ 는 293 K → 313 K</text>
+  <text x="274" y="140" text-anchor="middle" font-size="13" fill="#20242b">부피는 두 배가 아니라 약 1.07배</text>
+  <line x1="330" y1="156" x2="410" y2="178" stroke="#189fe6" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- 설명 ② -->
+  <text x="678" y="76" text-anchor="end" font-size="13" fill="#20242b">② 부피가 두 배가 되려면 586 K (313 ℃)까지</text>
+
+  <!-- 절대 온도 축 -->
+  <line x1="110" y1="290" x2="740" y2="290" stroke="#0e82c4" stroke-width="2" stroke-linecap="round"/>
+  <g stroke="#0e82c4" stroke-width="1.5">
+    <line x1="110" y1="290" x2="110" y2="296"/>
+    <line x1="208.4" y1="290" x2="208.4" y2="296"/>
+    <line x1="306.9" y1="290" x2="306.9" y2="296"/>
+    <line x1="405.3" y1="290" x2="405.3" y2="296"/>
+    <line x1="503.8" y1="290" x2="503.8" y2="296"/>
+    <line x1="602.2" y1="290" x2="602.2" y2="296"/>
+    <line x1="700.6" y1="290" x2="700.6" y2="296"/>
+  </g>
+  <g font-size="12" fill="#6b7684" text-anchor="middle">
+    <text x="110" y="308">0</text>
+    <text x="208.4" y="308">100</text>
+    <text x="306.9" y="308">200</text>
+    <text x="405.3" y="308">300</text>
+    <text x="503.8" y="308">400</text>
+    <text x="602.2" y="308">500</text>
+    <text x="700.6" y="308">600</text>
+  </g>
+  <text x="100" y="294" text-anchor="end" font-size="13" font-weight="600" fill="#0e82c4">절대 온도 (K)</text>
+
+  <!-- 섭씨온도 축 -->
+  <line x1="110" y1="336" x2="740" y2="336" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/>
+  <g stroke="#dc2626" stroke-width="1.5">
+    <line x1="110" y1="330" x2="110" y2="336"/>
+    <line x1="181.9" y1="330" x2="181.9" y2="336"/>
+    <line x1="280.3" y1="330" x2="280.3" y2="336"/>
+    <line x1="378.7" y1="330" x2="378.7" y2="336"/>
+    <line x1="477.2" y1="330" x2="477.2" y2="336"/>
+    <line x1="575.6" y1="330" x2="575.6" y2="336"/>
+    <line x1="674.0" y1="330" x2="674.0" y2="336"/>
+  </g>
+  <g font-size="12" fill="#6b7684" text-anchor="middle">
+    <text x="110" y="354">-273</text>
+    <text x="181.9" y="354">-200</text>
+    <text x="280.3" y="354">-100</text>
+    <text x="378.7" y="354">0</text>
+    <text x="477.2" y="354">100</text>
+    <text x="575.6" y="354">200</text>
+    <text x="674.0" y="354">300</text>
+  </g>
+  <text x="100" y="340" text-anchor="end" font-size="13" font-weight="600" fill="#dc2626">섭씨온도 (℃)</text>
+
+  <text x="400" y="384" text-anchor="middle" font-size="13" fill="#6b7684">압력과 기체의 양(mol)은 일정 · 0 K(-273 ℃)에서 부피가 0이 되도록 매긴 눈금이라 정비례는 절대 온도에서만 성립한다</text>
+</svg>

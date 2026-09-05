@@ -1,0 +1,130 @@
+{
+  "id": "mate-kinetic-molecular-theory",
+  "concept_key": "concept:kinetic-molecular-theory",
+  "registry_status": "new",
+  "term": "기체 분자 운동론",
+  "notation": {
+    "hanja": "氣體分子運動論",
+    "hanja_gloss": "氣 기운 기 · 體 몸 체 · 分 나눌 분 · 子 아들 자 · 運 옮길 운 · 動 움직일 동 · 論 논할 론",
+    "english": "kinetic molecular theory of gases"
+  },
+  "definition": "분자의 움직임에 관한 몇 가지 가정을 세워 기체의 성질을 설명하는 이론. 그 가정을 그대로 만족하는 기체가 이상 기체다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-kmt-average-kinetic-energy",
+      "text": "기체의 종류가 무엇이든 분자의 평균 운동 에너지는 절대 온도가 오른 만큼만 커진다",
+      "form": {
+        "condition": "여러 기체를 같은 절대 온도에서 견줄 때",
+        "type": "direct",
+        "scope": "운동론의 가정을 만족하는 이상 기체",
+        "antecedent": {
+          "quantity": "절대 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분자의 평균 운동 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 올랐는데 평균 운동 에너지가 줄어든다는 말은 이 비례 관계와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기체의 종류가 무엇이든 분자의 평균 운동 에너지는 절대 온도가 오를수록 작아진다"
+    },
+    {
+      "id": "rel-kmt-no-intermolecular-force",
+      "text": "운동론은 분자 사이에 끌어당기거나 밀어내는 힘이 없다고 놓고 출발한다",
+      "form": {
+        "condition": "운동론의 가정을 세울 때",
+        "type": "classification",
+        "scope": "이상 기체 모형",
+        "antecedent": {
+          "quantity": "분자 사이의 힘",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "가정에서의 취급",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "가정을 진술한 문장이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-kmt-elastic-collision",
+      "text": "충돌에서 운동 에너지가 사라지지 않는다고 보기 때문에 기체 분자의 운동은 저절로 멎지 않는다",
+      "form": {
+        "condition": "충돌에서 에너지 손실이 없다고 가정할 때",
+        "type": "causal",
+        "scope": "이상 기체 모형",
+        "antecedent": {
+          "quantity": "충돌에서 잃는 운동 에너지",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "분자 운동의 지속",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "가정에서 결론이 따라 나오는 구조라 방향을 맞바꾸면 문장 자체가 성립하지 않는다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기체 분자는 서로 부딪칠 때마다 에너지를 잃어 결국 바닥에 가라앉는다",
+      "why_wrong": "운동론은 충돌에서 운동 에너지가 손실되지 않는다고 가정한다. 그래서 분자 운동은 멈추지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-kmt-elastic-collision"
+    },
+    {
+      "text": "같은 온도라면 무거운 기체 분자가 가벼운 분자보다 평균 운동 에너지가 크다",
+      "why_wrong": "같은 절대 온도에서 평균 운동 에너지는 기체의 종류와 무관하게 같다. 무거운 분자는 대신 평균 속력이 느리다.",
+      "source": "llm",
+      "linked_relation": "rel-kmt-average-kinetic-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-ideal-gas",
+      "note": "이 가정을 만족하는 기체가 이상 기체다"
+    },
+    {
+      "type": "related",
+      "target": "mate-gas-pressure",
+      "note": "압력이 생기는 까닭을 분자의 충돌로 설명한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-absolute-temperature",
+      "note": "평균 운동 에너지가 비례하는 온도가 절대 온도다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-02",
+  "pages": [
+    19
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

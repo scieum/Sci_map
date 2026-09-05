@@ -1,0 +1,154 @@
+# 단원 백로그 — 교사 작성. 파이프라인 [A]의 실행 단위 목록.
+# 실행 단위는 "대단원 1개"다 (Sci_Map §4.1, 단원당 카드 10~30장 기준).
+# page 값은 인쇄 쪽수이며, 이 교과서는 인쇄 쪽수 == PDF 쪽수(1-base)임을 C0에서 검증한다.
+
+subject:
+  code: mate
+  name: 물질과 에너지
+  course_type: 진로선택
+  curriculum: 2022 개정
+  standard_prefix: 12물에          # 성취기준 코드 접두어 (지도서 146쪽 이후에서 확인)
+  textbook:
+    file: inbox/textbook/고_물질과에너지(임희준)_교과서.pdf
+    publisher: 천재교과서
+    author: 임희준 외 7인
+    pages: 140
+  guide:
+    file: inbox/textbook/고_물질과에너지(임희준)_지도서.pdf
+    pages: 236
+    parts:                          # 지도서 차례(2쪽) 기준
+      - {id: overview,  title: 총론,              start: 4,   end: 62}
+      - {id: lesson,    title: 각론 · 수업 자료,   start: 64,  end: 145}
+      - {id: assess,    title: 각론 · 평가 자료,   start: 146, end: 234}
+      - {id: qr,        title: QR Book,           start: 235, end: 236}
+
+# ── 착수 순서 ────────────────────────────────────────────────────────────────
+# Sci_Map §9의 1차 대상은 화학 `물질의 구조와 성질`이나, inbox에 해당 교과서가 없고
+# 1차 선정 사유였던 "관계 명제가 선명한 단원"(증기 압력·분자 간 힘)이 이 교과서의
+# mate-1 / mate-2 에 그대로 있으므로, 물질과 에너지를 1차 파일럿으로 대체한다.
+# 6차의 전제였던 성취기준 코드 확정은 지도서 각론·평가 자료에서 충족되었다.
+# ★ 전 단원 동시 착수 금지 — priority 1 이 C9까지 완주한 뒤 다음으로 넘어간다.
+
+units:
+  - id: mate-1
+    numeral: Ⅰ
+    title: 물질의 세 가지 상태
+    priority: 1
+    status: in_progress      # pending | in_progress | gated | deployed
+    stage: C7                # 마지막으로 완료한 단계. 다음은 C8 ★사람 게이트
+    pages: [10, 45]
+    sections:
+      - id: mate-1-1
+        numeral: 1
+        title: 기체의 성질
+        pages: [12, 27]
+        review: 26
+        topics:
+          - {id: mate-1-1-01, numeral: "01", title: 기체 법칙,             pages: [12, 17]}
+          - {id: mate-1-1-02, numeral: "02", title: 이상 기체 방정식,       pages: [18, 21]}
+          - {id: mate-1-1-03, numeral: "03", title: 혼합 기체의 부분 압력,  pages: [22, 25]}
+      - id: mate-1-2
+        numeral: 2
+        title: 액체와 고체의 성질
+        pages: [28, 41]
+        review: 40
+        topics:
+          - {id: mate-1-2-01, numeral: "01", title: 분자 간 상호 작용, pages: [28, 33]}
+          - {id: mate-1-2-02, numeral: "02", title: 액체,             pages: [34, 35]}
+          - {id: mate-1-2-03, numeral: "03", title: 고체,             pages: [36, 39]}
+    extras:
+      wrapup: 42
+      project: 44
+      career: 45
+
+  - id: mate-2
+    numeral: Ⅱ
+    title: 용액의 성질
+    priority: 2
+    status: pending
+    pages: [46, 71]
+    sections:
+      - id: mate-2-1
+        numeral: 1
+        title: 물의 성질
+        pages: [48, 55]
+        review: 54
+        topics:
+          - {id: mate-2-1-01, numeral: "01", title: 물의 구조,            pages: [48, 49]}
+          - {id: mate-2-1-02, numeral: "02", title: 물의 여러 가지 성질,  pages: [50, 53]}
+      - id: mate-2-2
+        numeral: 2
+        title: 묽은 용액의 성질
+        pages: [56, 67]
+        review: 66
+        topics:
+          - {id: mate-2-2-01, numeral: "01", title: 증기 압력 내림,             pages: [56, 57]}
+          - {id: mate-2-2-02, numeral: "02", title: 끓는점 오름과 어는점 내림,  pages: [58, 61]}
+          - {id: mate-2-2-03, numeral: "03", title: 삼투 현상,                 pages: [62, 65]}
+    extras:
+      wrapup: 68
+      project: 70
+      career: 71
+
+  - id: mate-3
+    numeral: Ⅲ
+    title: 화학 변화의 자발성
+    priority: 3
+    status: pending
+    pages: [72, 101]
+    sections:
+      - id: mate-3-1
+        numeral: 1
+        title: 화학 반응과 엔탈피
+        pages: [74, 89]
+        review: 88
+        topics:
+          - {id: mate-3-1-01, numeral: "01", title: 엔탈피와 열화학 반응식, pages: [74, 81]}
+          - {id: mate-3-1-02, numeral: "02", title: 헤스 법칙,             pages: [82, 87]}
+      - id: mate-3-2
+        numeral: 2
+        title: 엔트로피
+        pages: [90, 97]
+        review: 96
+        topics:
+          - {id: mate-3-2-01, numeral: "01", title: 엔트로피,       pages: [90, 91]}
+          - {id: mate-3-2-02, numeral: "02", title: 반응의 자발성,  pages: [92, 95]}
+    extras:
+      wrapup: 98
+      project: 100
+      career: 101
+
+  - id: mate-4
+    numeral: Ⅳ
+    title: 반응 속도
+    priority: 4
+    status: pending
+    pages: [102, 129]
+    sections:
+      - id: mate-4-1
+        numeral: 1
+        title: 화학 반응 속도
+        pages: [104, 115]
+        review: 114
+        topics:
+          - {id: mate-4-1-01, numeral: "01", title: 화학 반응 속도,             pages: [104, 109]}
+          - {id: mate-4-1-02, numeral: "02", title: 1차 반응의 반감기,          pages: [110, 111]}
+          - {id: mate-4-1-03, numeral: "03", title: 유효 충돌과 활성화 에너지,  pages: [112, 113]}
+      - id: mate-4-2
+        numeral: 2
+        title: 농도, 온도, 촉매와 반응 속도
+        pages: [116, 125]
+        review: 124
+        topics:
+          - {id: mate-4-2-01, numeral: "01", title: 농도와 반응 속도, pages: [116, 117]}
+          - {id: mate-4-2-02, numeral: "02", title: 온도와 반응 속도, pages: [118, 119]}
+          - {id: mate-4-2-03, numeral: "03", title: 촉매와 반응 속도, pages: [120, 123]}
+    extras:
+      wrapup: 126
+      project: 128
+      career: 129
+
+# 교과서 부록 — 카드 원천이 아니다 (정답·해설은 C4 대조에도 쓰지 않는다)
+appendix:
+  answers: [131, 139]
+  sources: [140, 140]

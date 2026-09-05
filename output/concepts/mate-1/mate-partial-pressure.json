@@ -1,0 +1,139 @@
+{
+  "id": "mate-partial-pressure",
+  "concept_key": "concept:partial-pressure",
+  "registry_status": "new",
+  "term": "부분 압력",
+  "notation": {
+    "hanja": "部分壓力",
+    "hanja_gloss": "部 떼 부 · 分 나눌 분 · 壓 누를 압 · 力 힘 력",
+    "english": "partial pressure",
+    "symbol_display": "P_A = X_A × P_T",
+    "symbol_plain": "P_A = X_A P_T"
+  },
+  "definition": "혼합 기체 속 성분 기체 하나가 그 용기를 홀로 차지했다면 나타냈을 압력. 서로 반응하지 않는 기체를 섞었을 때 따진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pp-proportional-to-mole",
+      "text": "용기의 부피와 온도가 정해져 있으면 성분 기체의 부분 압력은 그 기체의 양(mol)에 비례한다",
+      "form": {
+        "condition": "용기의 부피 일정, 온도 일정",
+        "type": "direct",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "antecedent": {
+          "quantity": "성분 기체의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "성분 기체의 부분 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 부피·온도에서 분자가 늘었는데 압력이 줄어든다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용기의 부피와 온도가 정해져 있으면 성분 기체의 양(mol)이 많을수록 부분 압력은 작아진다"
+    },
+    {
+      "id": "rel-pp-from-total-pressure",
+      "text": "성분 기체의 부분 압력은 혼합 기체의 전체 압력에 그 기체의 몰분율을 곱해서 얻는다",
+      "form": {
+        "condition": "전체 압력과 몰분율을 알고 있을 때",
+        "type": "direct",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "antecedent": {
+          "quantity": "성분 기체의 몰분율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "성분 기체의 부분 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "몰분율이 큰 성분이 더 작은 압력을 낸다는 말은 이 곱셈 관계와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰분율이 큰 성분 기체일수록 혼합 기체 속에서 나타내는 부분 압력은 작다"
+    },
+    {
+      "id": "rel-pp-alone-in-container",
+      "text": "성분 기체의 부분 압력은 그 기체만 남기고 나머지를 치웠을 때 같은 용기에서 재는 압력과 같다",
+      "form": {
+        "condition": "온도가 같고 용기의 부피가 그대로임",
+        "type": "conditional",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "antecedent": {
+          "quantity": "성분 기체가 차지하는 부피",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "성분 기체가 나타내는 압력",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 상황이 같다는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혼합 기체에서 각 성분 기체의 부분 압력은 모두 같다",
+      "why_wrong": "부분 압력은 성분 기체의 양(mol)에 비례하므로, 많이 들어 있는 성분일수록 부분 압력이 크다.",
+      "source": "llm",
+      "linked_relation": "rel-pp-proportional-to-mole"
+    },
+    {
+      "text": "성분 기체의 부분 압력은 전체 압력을 성분 기체의 가짓수로 나눈 값이다",
+      "why_wrong": "나누는 기준은 가짓수가 아니라 몰분율이다. 두 기체가 있어도 양(mol)이 다르면 부분 압력은 같지 않다.",
+      "source": "llm",
+      "linked_relation": "rel-pp-from-total-pressure"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-gas-pressure"
+    },
+    {
+      "type": "next",
+      "target": "mate-dalton-law-of-partial-pressure"
+    },
+    {
+      "type": "related",
+      "target": "mate-mole-fraction"
+    },
+    {
+      "type": "related",
+      "target": "mate-ideal-gas-law",
+      "note": "PV = nRT로 부분 압력과 양(mol)의 관계를 유도한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-02"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-03",
+  "pages": [
+    23,
+    24
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "분압"
+  ]
+}

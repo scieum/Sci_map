@@ -1,0 +1,118 @@
+{
+  "id": "mate-polar-molecule",
+  "concept_key": "concept:polar-molecule",
+  "registry_status": "new",
+  "term": "극성 분자",
+  "notation": {
+    "hanja": "極性分子",
+    "hanja_gloss": "極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
+    "english": "polar molecule"
+  },
+  "definition": "전하 분포가 한쪽으로 치우쳐 분자 전체의 쌍극자 모멘트가 0이 아닌 분자. 원자 사이의 전기음성도 차이와 분자의 모양이 함께 이 치우침을 만든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pm-en",
+      "text": "결합한 두 원자의 전기음성도 차이가 클수록 그 결합의 쌍극자 모멘트가 커진다.",
+      "form": {
+        "condition": "결합 길이가 비슷한 결합끼리 비교할 때",
+        "type": "direct",
+        "scope": "두 원자 사이의 공유 결합 하나",
+        "antecedent": {
+          "quantity": "두 원자의 전기음성도 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합의 쌍극자 모멘트",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자쌍이 더 치우칠수록 극성이 커지므로 반대 방향 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합한 두 원자의 전기음성도 차이가 클수록 그 결합의 쌍극자 모멘트가 작아진다."
+    },
+    {
+      "id": "rel-pm-shape",
+      "text": "결합마다 극성이 있어도 분자 모양이 대칭이면 쌍극자가 상쇄되어 무극성 분자가 된다.",
+      "form": {
+        "condition": "분자를 이루는 결합에 극성이 있을 때",
+        "type": "conditional",
+        "scope": "원자 세 개 이상으로 된 다원자 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "역방향인 '무극성이면 대칭이다'는 참인 경우가 많아 항상 거짓이라고 할 수 없다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pm-force",
+      "text": "극성 분자끼리 이웃하면 영구 쌍극자 사이에 쌍극자·쌍극자 힘이 작용한다.",
+      "form": {
+        "condition": "분자들이 인력이 미칠 만큼 가까이 있을 때",
+        "type": "causal",
+        "scope": "극성 분자로 이루어진 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "영구 쌍극자가 없는 무극성 분자에서는 이 힘이 생길 수 없으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무극성 분자끼리 이웃해도 쌍극자·쌍극자 힘이 작용한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자 안에 극성 결합이 하나라도 있으면 그 분자는 극성 분자이다",
+      "why_wrong": "결합의 쌍극자가 대칭으로 놓이면 서로 상쇄되어 분자 전체로는 무극성이 된다. 이산화 탄소가 그런 경우다.",
+      "source": "llm",
+      "linked_relation": "rel-pm-shape"
+    },
+    {
+      "text": "극성 분자는 이온처럼 분자 전체가 양전하나 음전하를 띤다",
+      "why_wrong": "치우침 때문에 생기는 것은 부분 전하일 뿐이고, 분자 전체의 전하는 0이다. 그래서 극성 분자는 전기장에서 방향만 정렬할 뿐 끌려가 버리지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-pm-en"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-dipole-dipole-force"
+    },
+    {
+      "type": "next",
+      "target": "mate-hydrogen-bond"
+    },
+    {
+      "type": "related",
+      "target": "mate-nonpolar-molecule",
+      "note": "전자 분포의 대칭 여부로 갈리는 대립쌍이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-intermolecular-force"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-01",
+  "pages": [
+    29,
+    33
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

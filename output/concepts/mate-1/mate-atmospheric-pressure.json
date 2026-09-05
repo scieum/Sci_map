@@ -1,0 +1,123 @@
+{
+  "id": "mate-atmospheric-pressure",
+  "concept_key": "concept:atmospheric-pressure",
+  "registry_status": "new",
+  "term": "대기압",
+  "notation": {
+    "hanja": "大氣壓",
+    "hanja_gloss": "大 큰 대 · 氣 기운 기 · 壓 누를 압",
+    "english": "atmospheric pressure",
+    "symbol_display": "1 atm = 760 mmHg",
+    "symbol_plain": "1 atm = 760 mmHg"
+  },
+  "definition": "지구를 둘러싼 공기가 지표면을 누르는 압력. 높이 760 mm의 수은 기둥이 나타내는 압력만큼을 1 atm으로 정해 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-atm-mercury-height",
+      "text": "대기압이 클수록 토리첼리 관 속 수은 기둥은 더 높은 자리에서 멈춘다",
+      "form": {
+        "condition": "관 위쪽이 진공이고 온도가 일정함",
+        "type": "direct",
+        "scope": "같은 액체(수은)를 쓰는 액체 기둥 압력계",
+        "antecedent": {
+          "quantity": "대기압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수은 기둥의 높이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기둥의 무게가 대기압과 균형을 이루므로 대기압이 커지는데 기둥이 낮아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기압이 클수록 토리첼리 관 속 수은 기둥은 더 낮은 자리에서 멈춘다"
+    },
+    {
+      "id": "rel-atm-liquid-density",
+      "text": "같은 대기압을 재더라도 밀도가 큰 액체를 쓰면 기둥이 서는 높이는 낮아진다",
+      "form": {
+        "condition": "재는 대기압이 서로 같고 관이 충분히 긺",
+        "type": "inverse",
+        "scope": "위쪽이 진공인 액체 기둥 압력계",
+        "antecedent": {
+          "quantity": "액체의 밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "액체 기둥의 높이",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 압력을 떠받치려면 무거운 액체일수록 덜 쌓여야 하므로 방향을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 대기압을 재더라도 밀도가 큰 액체를 쓰면 기둥이 서는 높이는 높아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대기압은 위에서 아래로만 누르므로 컵을 뒤집으면 물이 바로 쏟아진다",
+      "why_wrong": "대기압은 모든 방향으로 같은 크기로 작용한다. 뒤집은 컵의 종이를 아래에서 위로 받쳐 주는 것도 대기압이다.",
+      "source": "llm",
+      "linked_relation": "rel-atm-mercury-height"
+    },
+    {
+      "text": "높은 산에 올라가면 공기가 얇아지지만 대기압은 지표면과 같다",
+      "why_wrong": "위로 올라갈수록 그 위에 쌓인 공기의 양이 줄어들므로 대기압도 함께 작아진다.",
+      "source": "llm",
+      "linked_relation": "rel-atm-mercury-height"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-gas-pressure"
+    },
+    {
+      "type": "related",
+      "target": "mate-boyle-law",
+      "note": "보일의 실험에서 기체에 걸리는 압력의 기준이 대기압이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-partial-pressure",
+      "note": "공기는 혼합 기체이므로 대기압은 성분 기체 부분 압력의 합이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-boiling-point",
+      "note": "열린 그릇에서 액체에 걸리는 외부 압력이 곧 대기압이라, 대기압이 낮으면 끓는점도 낮다"
+    },
+    {
+      "type": "related",
+      "target": "mate-standard-boiling-point",
+      "note": "기준 끓는점의 기준인 1 atm이 곧 대기압의 표준값(수은 기둥 760 mm)이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-01",
+  "pages": [
+    12,
+    13
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "aliases": [
+    "기압"
+  ]
+}

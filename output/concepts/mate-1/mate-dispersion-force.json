@@ -1,0 +1,133 @@
+{
+  "id": "mate-dispersion-force",
+  "concept_key": "concept:dispersion-force",
+  "registry_status": "new",
+  "term": "분산력",
+  "notation": {
+    "hanja": "分散力",
+    "hanja_gloss": "分 나눌 분 · 散 흩을 산 · 力 힘 력",
+    "english": "dispersion force"
+  },
+  "definition": "전자가 잠깐 한쪽으로 몰려 생긴 순간 쌍극자가 이웃 분자에도 순간 쌍극자를 만들면서, 두 순간 쌍극자 사이에 작용하는 인력.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-df-universal",
+      "text": "분산력은 극성인지 무극성인지를 가리지 않고 모든 분자 사이에서 작용한다.",
+      "form": {
+        "condition": "분자들이 인력이 미칠 만큼 가까이 있을 때",
+        "type": "conditional",
+        "scope": "전자를 가진 모든 분자성 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 가진 분자라면 편극이 일어나므로 무극성 분자에서만 작용한다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분산력은 무극성 분자 사이에서만 작용한다."
+    },
+    {
+      "id": "rel-df-mass",
+      "text": "구조가 비슷한 분자끼리는 분자량이 클수록 분산력이 크다.",
+      "form": {
+        "condition": "분자의 구조와 모양이 비슷한 물질끼리 비교할 때",
+        "type": "direct",
+        "scope": "동족 계열처럼 구조가 닮은 분자성 물질",
+        "antecedent": {
+          "quantity": "분자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분산력의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자 수가 많을수록 편극이 쉬워 분산력이 커지므로 반대 방향 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구조가 비슷한 분자끼리는 분자량이 클수록 분산력이 작다."
+    },
+    {
+      "id": "rel-df-shape",
+      "text": "분자량이 같아도 길고 넓적한 분자가 둥근 분자보다 분산력이 크다.",
+      "form": {
+        "condition": "분자량이 같은 이성질체끼리 비교할 때",
+        "type": "direct",
+        "scope": "분자량이 같고 모양만 다른 분자성 물질",
+        "antecedent": {
+          "quantity": "분자의 표면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분산력의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "표면적이 넓을수록 이웃과 편극을 주고받기 쉬우므로 반대 방향 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자량이 같으면 길고 넓적한 분자가 둥근 분자보다 분산력이 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분산력은 무극성 분자 사이에만 작용하는 힘이다",
+      "why_wrong": "모든 분자에는 전자가 있고 전자는 늘 움직이므로, 극성 분자 사이에서도 분산력은 함께 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-df-universal"
+    },
+    {
+      "text": "분자량이 크면 언제나 끓는점이 높다",
+      "why_wrong": "분자량은 분산력의 크기를 가늠하는 잣대일 뿐이다. 수소 결합을 하는 물질은 분자량이 작아도 끓는점이 더 높을 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-df-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-nonpolar-molecule",
+      "note": "무극성 분자에서 왜 인력이 생기는지가 출발점이다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-intermolecular-force"
+    },
+    {
+      "type": "related",
+      "target": "mate-dipole-dipole-force",
+      "note": "작용하는 분자의 범위가 다르다"
+    },
+    {
+      "type": "next",
+      "target": "mate-boiling-point"
+    },
+    {
+      "type": "related",
+      "target": "mate-molecular-mass",
+      "note": "분산력의 크기를 견주는 잣대로 분자량을 쓴다 — 구조가 닮은 분자끼리일 때만"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-01",
+  "pages": [
+    30,
+    31
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

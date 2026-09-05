@@ -1,0 +1,781 @@
+{
+  "unit_id": "mate-1",
+  "subject": "물질과 에너지",
+  "unit_title": "Ⅰ. 물질의 세 가지 상태",
+  "generated_at": "2026-09-05T00:00:00+09:00",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/mate-1/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+
+  "candidates": [
+    {
+      "id": "mate-gas-pressure",
+      "term": "기체의 압력",
+      "aliases": ["기체 압력"],
+      "term_en": "gas pressure",
+      "concept_key": "concept:gas-pressure",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [12, 13],
+      "topic_id": "mate-1-1-01",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 12, "block_id": "p12-b7", "hint": "기체 압력 정의·충돌" },
+        { "page": 13, "block_id": "p13-b26", "hint": "충돌 횟수·세기 확인 문항" },
+        { "page": 26, "block_id": "p26-b31", "hint": "중단원 점검 항목" }
+      ],
+      "relation_seeds": [
+        "기체 분자의 충돌 횟수와 기체 압력",
+        "기체 분자의 충돌 세기와 기체 압력",
+        "기체의 압력과 외부 압력이 같아질 때 부피"
+      ]
+    },
+    {
+      "id": "mate-atmospheric-pressure",
+      "term": "대기압",
+      "aliases": ["기압"],
+      "term_en": "atmospheric pressure",
+      "concept_key": "concept:atmospheric-pressure",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [12, 13],
+      "topic_id": "mate-1-1-01",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 12, "block_id": "p12-b7", "hint": "대기압 측정과 수은 기둥" },
+        { "page": 13, "block_id": "p13-b11", "hint": "대기압 그림 캡션" }
+      ],
+      "relation_seeds": [
+        "수은 기둥의 높이와 대기압의 크기",
+        "고도와 대기압"
+      ],
+      "note": "단위 atm·mmHg 자체는 카드가 아니지만, 그 단위가 정의하는 대기압은 개념으로 둔다."
+    },
+    {
+      "id": "mate-boyle-law",
+      "term": "보일 법칙",
+      "term_en": "Boyle's law",
+      "concept_key": "concept:boyle-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [15],
+      "topic_id": "mate-1-1-01",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 15, "block_id": "p15-b16", "hint": "보일 법칙 서술" },
+        { "page": 15, "block_id": "p15-b20", "hint": "외부 압력 증가와 부피" },
+        { "page": 26, "block_id": "p26-b4", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "온도와 기체의 양이 일정할 때 압력과 부피",
+        "외부 압력 증가와 기체 부피 감소"
+      ]
+    },
+    {
+      "id": "mate-charles-law",
+      "term": "샤를 법칙",
+      "term_en": "Charles's law",
+      "concept_key": "concept:charles-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [16],
+      "topic_id": "mate-1-1-01",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 16, "block_id": "p16-b5", "hint": "샤를 법칙 서술" },
+        { "page": 16, "block_id": "p16-b28", "hint": "절대 온도와 부피 비례" },
+        { "page": 26, "block_id": "p26-b8", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "압력과 기체의 양이 일정할 때 절대 온도와 부피",
+        "온도 상승과 분자 운동·충돌"
+      ]
+    },
+    {
+      "id": "mate-absolute-temperature",
+      "term": "절대 온도",
+      "aliases": ["켈빈 온도"],
+      "term_en": "absolute temperature",
+      "concept_key": "concept:absolute-temperature",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [16],
+      "topic_id": "mate-1-1-01",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 16, "block_id": "p16-b11", "hint": "절대 온도 정의" },
+        { "page": 16, "block_id": "p16-b3", "hint": "섭씨온도와의 관계" }
+      ],
+      "relation_seeds": [
+        "섭씨온도와 절대 온도의 관계",
+        "절대 온도와 기체 부피의 비례"
+      ]
+    },
+    {
+      "id": "mate-avogadro-law",
+      "term": "아보가드로 법칙",
+      "term_en": "Avogadro's law",
+      "concept_key": "concept:avogadro-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [17],
+      "topic_id": "mate-1-1-01",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 17, "block_id": "p17-b1", "hint": "아보가드로 가설" },
+        { "page": 17, "block_id": "p17-b5", "hint": "부피와 기체의 양 비례" },
+        { "page": 26, "block_id": "p26-b9", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "온도와 압력이 일정할 때 기체의 양(mol)과 부피",
+        "같은 부피 속 분자 수와 기체의 종류"
+      ]
+    },
+    {
+      "id": "mate-ideal-gas",
+      "term": "이상 기체",
+      "term_en": "ideal gas",
+      "concept_key": "concept:ideal-gas",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [18, 19],
+      "topic_id": "mate-1-1-02",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 18, "block_id": "p18-b7", "hint": "기체 법칙을 따르는 기체" },
+        { "page": 19, "block_id": "p19-b7", "hint": "운동론 가정과 이상 기체" }
+      ],
+      "relation_seeds": [
+        "기체 법칙을 정확히 따르는 조건과 이상 기체",
+        "이상 기체와 실제 기체의 차이"
+      ]
+    },
+    {
+      "id": "mate-ideal-gas-law",
+      "term": "이상 기체 방정식",
+      "aliases": ["이상 기체 상태 방정식"],
+      "term_en": "ideal gas law",
+      "concept_key": "concept:ideal-gas-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [18, 19, 20],
+      "topic_id": "mate-1-1-02",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01", "12물에01-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 18, "block_id": "p18-b22", "hint": "비례 상수로 정리한 식" },
+        { "page": 18, "block_id": "p18-b23", "hint": "PV = nRT" },
+        { "page": 26, "block_id": "p26-b19", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "세 기체 법칙의 종합과 이상 기체 방정식",
+        "이상 기체 방정식으로 미지의 양(mol) 구하기",
+        "이상 기체 방정식과 부분 압력의 관계식"
+      ]
+    },
+    {
+      "id": "mate-gas-constant",
+      "term": "기체 상수",
+      "term_en": "gas constant",
+      "concept_key": "concept:gas-constant",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [19],
+      "topic_id": "mate-1-1-02",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 19, "block_id": "p19-b1", "hint": "기체 상수 정의" },
+        { "page": 19, "block_id": "p19-b5", "hint": "R 값의 산출" }
+      ],
+      "relation_seeds": [
+        "0 ℃·1 atm 몰 부피와 기체 상수 값",
+        "기체 상수와 단위계"
+      ]
+    },
+    {
+      "id": "mate-kinetic-molecular-theory",
+      "term": "기체 분자 운동론",
+      "term_en": "kinetic molecular theory of gases",
+      "concept_key": "concept:kinetic-molecular-theory",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [19],
+      "topic_id": "mate-1-1-02",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 19, "block_id": "p19-b7", "hint": "운동론의 가정 도입" },
+        { "page": 19, "block_id": "p19-b11", "hint": "불규칙한 직선 운동 가정" },
+        { "page": 19, "block_id": "p19-b13", "hint": "평균 운동 에너지 가정" }
+      ],
+      "relation_seeds": [
+        "평균 운동 에너지와 절대 온도",
+        "분자 간 인력·반발력 무시 가정과 이상 기체"
+      ]
+    },
+    {
+      "id": "mate-molecular-mass",
+      "term": "분자량",
+      "term_en": "molecular mass",
+      "concept_key": "concept:molecular-mass",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [20, 31],
+      "topic_id": "mate-1-1-02",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-01", "12물에01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 20, "block_id": "p20-b1", "hint": "질량·분자량과 기체의 양" },
+        { "page": 20, "block_id": "p20-b5", "hint": "분자량을 구하는 식" },
+        { "page": 31, "block_id": "p31-b20", "hint": "분자량과 분산력 크기" }
+      ],
+      "relation_seeds": [
+        "이상 기체 방정식과 기체의 분자량",
+        "분자량과 분산력의 크기"
+      ],
+      "note": "term_en 이 IUPAC 의 relative molecular mass 와 갈릴 수 있다. G3 등록 전 확인 필요."
+    },
+    {
+      "id": "mate-partial-pressure",
+      "term": "부분 압력",
+      "aliases": ["분압"],
+      "term_en": "partial pressure",
+      "concept_key": "concept:partial-pressure",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [23, 24],
+      "topic_id": "mate-1-1-03",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 23, "block_id": "p23-b1", "hint": "부분 압력 정의" },
+        { "page": 24, "block_id": "p24-b26", "hint": "부분 압력과 몰분율 비례" },
+        { "page": 26, "block_id": "p26-b22", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "성분 기체의 양(mol)과 부분 압력",
+        "전체 압력과 몰분율로 부분 압력 구하기"
+      ]
+    },
+    {
+      "id": "mate-dalton-law-of-partial-pressure",
+      "term": "부분 압력 법칙",
+      "aliases": ["돌턴의 분압 법칙"],
+      "term_en": "Dalton's law of partial pressure",
+      "concept_key": "concept:dalton-law-of-partial-pressure",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [23],
+      "topic_id": "mate-1-1-03",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-02"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 23, "block_id": "p23-b12", "hint": "부분 압력 법칙 서술" },
+        { "page": 23, "block_id": "p23-b13", "hint": "전체 압력 = 분압의 합" },
+        { "page": 26, "block_id": "p26-b14", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "반응하지 않는 혼합 기체의 전체 압력과 부분 압력의 합",
+        "용기에 기체를 더할 때 전체 압력 변화"
+      ]
+    },
+    {
+      "id": "mate-mole-fraction",
+      "term": "몰분율",
+      "term_en": "mole fraction",
+      "concept_key": "concept:mole-fraction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [24],
+      "topic_id": "mate-1-1-03",
+      "section_id": "mate-1-1",
+      "curriculum": ["12물에01-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 24, "block_id": "p24-b22", "hint": "몰분율 정의" },
+        { "page": 24, "block_id": "p24-b23", "hint": "성분 기체 A의 몰분율" },
+        { "page": 26, "block_id": "p26-b24", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "성분 물질의 양(mol)과 전체 양(mol)의 비",
+        "몰분율과 부분 압력의 비례"
+      ]
+    },
+    {
+      "id": "mate-intermolecular-force",
+      "term": "분자 간 상호 작용",
+      "aliases": ["분자 간 힘", "분자 사이의 힘"],
+      "term_en": "intermolecular force",
+      "concept_key": "concept:intermolecular-force",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [28],
+      "topic_id": "mate-1-2-01",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03", "12물에01-04"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 28, "block_id": "p28-b6", "hint": "상태별 인력과 정의" },
+        { "page": 40, "block_id": "p40-b9", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "물질의 상태와 분자 간 인력의 크기",
+        "분자 간 상호 작용의 크기와 녹는점·끓는점"
+      ]
+    },
+    {
+      "id": "mate-polar-molecule",
+      "term": "극성 분자",
+      "term_en": "polar molecule",
+      "concept_key": "concept:polar-molecule",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [29, 33],
+      "topic_id": "mate-1-2-01",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 29, "block_id": "p29-b1", "hint": "부분 전하와 극성 분자" },
+        { "page": 33, "block_id": "p33-b1", "hint": "N·O·F 결합 극성 분자" }
+      ],
+      "relation_seeds": [
+        "전기음성도 차이와 부분 전하",
+        "극성 분자와 쌍극자의 형성"
+      ]
+    },
+    {
+      "id": "mate-nonpolar-molecule",
+      "term": "무극성 분자",
+      "term_en": "nonpolar molecule",
+      "concept_key": "concept:nonpolar-molecule",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [30, 31],
+      "topic_id": "mate-1-2-01",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 30, "block_id": "p30-b1", "hint": "전자 분포가 치우치지 않음" },
+        { "page": 31, "block_id": "p31-b1", "hint": "평균적으로 대칭인 전자 분포" }
+      ],
+      "relation_seeds": [
+        "전자 분포의 대칭과 무극성",
+        "무극성 분자도 액체·고체로 존재하는 까닭"
+      ]
+    },
+    {
+      "id": "mate-dipole-dipole-force",
+      "term": "쌍극자·쌍극자 힘",
+      "aliases": ["쌍극자-쌍극자 힘"],
+      "term_en": "dipole-dipole force",
+      "concept_key": "concept:dipole-dipole-force",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [29],
+      "topic_id": "mate-1-2-01",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 29, "block_id": "p29-b12", "hint": "정의와 쌍극자 모멘트 크기" },
+        { "page": 40, "block_id": "p40-b5", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "쌍극자 모멘트의 크기와 쌍극자·쌍극자 힘",
+        "쌍극자·쌍극자 힘과 끓는점"
+      ]
+    },
+    {
+      "id": "mate-dispersion-force",
+      "term": "분산력",
+      "term_en": "dispersion force",
+      "concept_key": "concept:dispersion-force",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [30, 31],
+      "topic_id": "mate-1-2-01",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 31, "block_id": "p31-b1", "hint": "순간 쌍극자와 분산력 정의" },
+        { "page": 31, "block_id": "p31-b20", "hint": "분자량·분자 모양과 크기" },
+        { "page": 40, "block_id": "p40-b12", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "분자량과 분산력의 크기",
+        "분자의 모양·표면적과 분산력",
+        "분산력과 끓는점"
+      ]
+    },
+    {
+      "id": "mate-hydrogen-bond",
+      "term": "수소 결합",
+      "term_en": "hydrogen bond",
+      "concept_key": "concept:hydrogen-bond",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [32, 33],
+      "topic_id": "mate-1-2-01",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 33, "block_id": "p33-b1", "hint": "수소 결합 정의와 끓는점 순서" },
+        { "page": 40, "block_id": "p40-b6", "hint": "중단원 생각 그물" },
+        { "page": 41, "block_id": "p41-b18", "hint": "중단원 평가 문항" }
+      ],
+      "relation_seeds": [
+        "N·O·F 와 결합한 수소 원자와 수소 결합",
+        "분자량이 비슷할 때 힘의 종류와 끓는점 순서"
+      ]
+    },
+    {
+      "id": "mate-dynamic-equilibrium",
+      "term": "동적 평형",
+      "term_en": "dynamic equilibrium",
+      "concept_key": "concept:dynamic-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [34],
+      "topic_id": "mate-1-2-02",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 34, "block_id": "p34-b7", "hint": "증발·응축 분자 수가 같아짐" },
+        { "page": 34, "block_id": "p34-b15", "hint": "동적 평형 상태 표기" }
+      ],
+      "relation_seeds": [
+        "증발하는 분자 수와 응축하는 분자 수",
+        "동적 평형과 기체 압력의 일정함"
+      ]
+    },
+    {
+      "id": "mate-vapor-pressure",
+      "term": "증기 압력",
+      "aliases": ["증기압", "액체의 증기 압력"],
+      "term_en": "vapor pressure",
+      "concept_key": "concept:vapor-pressure",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [34, 35],
+      "topic_id": "mate-1-2-02",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 34, "block_id": "p34-b7", "hint": "증기 압력 정의" },
+        { "page": 35, "block_id": "p35-b36", "hint": "분자 간 힘과 증기 압력" },
+        { "page": 40, "block_id": "p40-b22", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "온도와 증기 압력",
+        "분자 간 상호 작용의 크기와 증기 압력"
+      ],
+      "note": "naming_policy.md §3 에서 '증기 압력/증기압' 표기가 12물에02-02 crosscheck 불일치로 보류다. 이 단원 태그는 일치 코드(12물에01-03)를 썼으나 표제어 확정은 사람 게이트로 넘긴다."
+    },
+    {
+      "id": "mate-boiling-point",
+      "term": "끓는점",
+      "term_en": "boiling point",
+      "concept_key": "concept:boiling-point",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [35],
+      "topic_id": "mate-1-2-02",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 35, "block_id": "p35-b1", "hint": "끓음과 끓는점 정의" },
+        { "page": 35, "block_id": "p35-b36", "hint": "분자 간 힘과 끓는점" },
+        { "page": 40, "block_id": "p40-b23", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "증기 압력과 외부 압력이 같아지는 온도",
+        "분자 간 상호 작용의 크기와 끓는점",
+        "외부 압력과 끓는점"
+      ]
+    },
+    {
+      "id": "mate-standard-boiling-point",
+      "term": "기준 끓는점",
+      "term_en": "standard boiling point",
+      "concept_key": "concept:standard-boiling-point",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [35],
+      "topic_id": "mate-1-2-02",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-03"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 35, "block_id": "p35-b1", "hint": "외부 압력 1 atm 일 때" },
+        { "page": 40, "block_id": "p40-b24", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "외부 압력 1 atm 조건과 기준 끓는점",
+        "액체의 종류와 기준 끓는점의 차이"
+      ]
+    },
+    {
+      "id": "mate-crystalline-solid",
+      "term": "결정성 고체",
+      "aliases": ["결정"],
+      "term_en": "crystalline solid",
+      "concept_key": "concept:crystalline-solid",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [36, 37],
+      "topic_id": "mate-1-2-03",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-04"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 36, "block_id": "p36-b9", "hint": "규칙적 배열로 정의" },
+        { "page": 37, "block_id": "p37-b23", "hint": "배열 규칙성 비교 정리" },
+        { "page": 40, "block_id": "p40-b18", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "입자 배열의 규칙성과 결정성 고체",
+        "결정성 고체와 일정한 녹는점"
+      ]
+    },
+    {
+      "id": "mate-amorphous-solid",
+      "term": "비결정성 고체",
+      "aliases": ["비결정", "무정형 고체"],
+      "term_en": "amorphous solid",
+      "concept_key": "concept:amorphous-solid",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [36],
+      "topic_id": "mate-1-2-03",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-04"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 36, "block_id": "p36-b9", "hint": "무질서한 배열로 정의" },
+        { "page": 36, "block_id": "p36-b10", "hint": "석영과 유리의 대비" },
+        { "page": 40, "block_id": "p40-b16", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "입자 배열의 무질서와 비결정성 고체",
+        "비결정성 고체와 일정하지 않은 녹는점"
+      ]
+    },
+    {
+      "id": "mate-ionic-crystal",
+      "term": "이온 결정",
+      "term_en": "ionic crystal",
+      "concept_key": "concept:ionic-crystal",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [38],
+      "topic_id": "mate-1-2-03",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 38, "block_id": "p38-b4", "hint": "정의·녹는점·쪼개짐" },
+        { "page": 40, "block_id": "p40-b28", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "이온 결합과 이온 결정의 높은 녹는점",
+        "외부 힘과 이온층의 반발력·쪼개짐"
+      ]
+    },
+    {
+      "id": "mate-metallic-crystal",
+      "term": "금속 결정",
+      "term_en": "metallic crystal",
+      "concept_key": "concept:metallic-crystal",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [38],
+      "topic_id": "mate-1-2-03",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 38, "block_id": "p38-b11", "hint": "금속 결합과 성질" },
+        { "page": 40, "block_id": "p40-b29", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "금속 양이온과 자유 전자 사이의 인력",
+        "자유 전자와 전기 전도도·광택·전성"
+      ]
+    },
+    {
+      "id": "mate-molecular-crystal",
+      "term": "분자 결정",
+      "term_en": "molecular crystal",
+      "concept_key": "concept:molecular-crystal",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [39],
+      "topic_id": "mate-1-2-03",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 39, "block_id": "p39-b1", "hint": "분자 간 힘으로 이루어진 결정" },
+        { "page": 40, "block_id": "p40-b30", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "분자 간 힘의 세기와 분자 결정의 낮은 녹는점",
+        "분자 결정과 승화성"
+      ]
+    },
+    {
+      "id": "mate-covalent-crystal",
+      "term": "공유 결정",
+      "aliases": ["원자 결정"],
+      "term_en": "covalent crystal",
+      "concept_key": "concept:covalent-crystal",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [39],
+      "topic_id": "mate-1-2-03",
+      "section_id": "mate-1-2",
+      "curriculum": ["12물에01-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 39, "block_id": "p39-b7", "hint": "그물 구조 공유 결합 결정" },
+        { "page": 40, "block_id": "p40-b31", "hint": "중단원 생각 그물" }
+      ],
+      "relation_seeds": [
+        "그물 모양 공유 결합과 매우 높은 녹는점",
+        "공유 결정의 단단함"
+      ]
+    }
+  ],
+
+  "hierarchy": [
+    { "from": "mate-gas-pressure", "to": "mate-atmospheric-pressure", "note": "기체가 압력을 나타내는 까닭을 알아야 대기압을 읽는다" },
+    { "from": "mate-gas-pressure", "to": "mate-boyle-law" },
+    { "from": "mate-gas-pressure", "to": "mate-charles-law" },
+    { "from": "mate-gas-pressure", "to": "mate-avogadro-law" },
+    { "from": "mate-absolute-temperature", "to": "mate-charles-law", "note": "부피가 온도에 비례한다는 서술은 절대 온도 위에서만 성립한다" },
+    { "from": "mate-boyle-law", "to": "mate-ideal-gas-law" },
+    { "from": "mate-charles-law", "to": "mate-ideal-gas-law" },
+    { "from": "mate-avogadro-law", "to": "mate-ideal-gas-law" },
+    { "from": "mate-kinetic-molecular-theory", "to": "mate-ideal-gas", "note": "운동론의 가정을 만족하는 기체가 이상 기체다" },
+    { "from": "mate-ideal-gas", "to": "mate-ideal-gas-law" },
+    { "from": "mate-ideal-gas-law", "to": "mate-gas-constant" },
+    { "from": "mate-ideal-gas-law", "to": "mate-molecular-mass", "note": "이상 기체 방정식을 변형해 분자량을 구한다" },
+    { "from": "mate-gas-pressure", "to": "mate-partial-pressure" },
+    { "from": "mate-partial-pressure", "to": "mate-dalton-law-of-partial-pressure" },
+    { "from": "mate-dalton-law-of-partial-pressure", "to": "mate-mole-fraction" },
+    { "from": "mate-ideal-gas-law", "to": "mate-mole-fraction", "note": "부분 압력과 몰분율의 관계식 유도에 필요하다" },
+    { "from": "mate-intermolecular-force", "to": "mate-dipole-dipole-force" },
+    { "from": "mate-intermolecular-force", "to": "mate-dispersion-force" },
+    { "from": "mate-intermolecular-force", "to": "mate-hydrogen-bond" },
+    { "from": "mate-polar-molecule", "to": "mate-dipole-dipole-force" },
+    { "from": "mate-polar-molecule", "to": "mate-hydrogen-bond" },
+    { "from": "mate-nonpolar-molecule", "to": "mate-dispersion-force" },
+    { "from": "mate-molecular-mass", "to": "mate-dispersion-force", "note": "분자량이 분산력 크기의 경향을 설명하는 변수다" },
+    { "from": "mate-dynamic-equilibrium", "to": "mate-vapor-pressure" },
+    { "from": "mate-gas-pressure", "to": "mate-vapor-pressure" },
+    { "from": "mate-intermolecular-force", "to": "mate-vapor-pressure" },
+    { "from": "mate-vapor-pressure", "to": "mate-boiling-point" },
+    { "from": "mate-boiling-point", "to": "mate-standard-boiling-point" },
+    { "from": "mate-crystalline-solid", "to": "mate-amorphous-solid", "note": "규칙적 배열을 먼저 알아야 무질서 배열이 대비된다" },
+    { "from": "mate-crystalline-solid", "to": "mate-ionic-crystal" },
+    { "from": "mate-crystalline-solid", "to": "mate-metallic-crystal" },
+    { "from": "mate-crystalline-solid", "to": "mate-molecular-crystal" },
+    { "from": "mate-crystalline-solid", "to": "mate-covalent-crystal" },
+    { "from": "mate-intermolecular-force", "to": "mate-molecular-crystal", "note": "분자 결정은 분자 간 힘으로 배열된 결정이다" }
+  ],
+
+  "excluded": [
+    { "term": "토리첼리", "reason": "인물", "note": "대기압 측정 실험의 고안자. 인물은 카드로 만들지 않는다", "pages": [12, 13] },
+    { "term": "보일", "reason": "인물", "note": "법칙은 카드로 만들되 인물은 만들지 않는다", "pages": [15] },
+    { "term": "샤를", "reason": "인물", "pages": [16] },
+    { "term": "아보가드로", "reason": "인물", "pages": [17] },
+    { "term": "돌턴", "reason": "인물", "pages": [23] },
+    { "term": "atm · mmHg · Pa", "reason": "단위·기호", "note": "단위 자체는 카드가 아니다. 단위가 정의하는 대기압만 개념으로 남겼다", "pages": [12] },
+    { "term": "가상 실험으로 기체의 부피·압력·온도·양(mol) 관계 알아보기", "reason": "활동", "pages": [14] },
+    { "term": "이상 기체 방정식을 활용하여 기체의 종류 알아내기 (탐구)", "reason": "활동", "pages": [20, 21] },
+    { "term": "고무관 연결·화기 주의·주사기 눈금 범위", "reason": "실험 유의사항", "pages": [20] },
+    { "term": "고압 산소 치료", "reason": "사례", "note": "소주제 도입 상황. 개념이 아니라 맥락이다", "pages": [18] },
+    { "term": "혼합 기체의 이용 (식품 포장·마취용 가스·LPG·산소통)", "reason": "사례", "note": "성취기준 12물에01-02 의 정의적 영역('호기심'). C2 카드의 예시로만 쓴다", "pages": [25] },
+    { "term": "DNA 2중 나선의 수소 결합", "reason": "사례", "note": "수소 결합 카드의 응용 예시로 흡수", "pages": [33] },
+    { "term": "석영과 유리", "reason": "사례", "note": "같은 SiO2 의 결정/비결정 대비 예시. 결정성·비결정성 고체 카드에 흡수", "pages": [36] },
+    { "term": "몰부피", "reason": "기타", "note": "★사람 재검토 권장. 22.4 L 를 아보가드로 법칙·기체 상수 카드 안에서 다뤘으나 독립 카드로 세울 여지가 있다", "pages": [17] },
+    { "term": "쌍극자", "reason": "중복", "note": "★사람 재검토 권장. 극성 분자·쌍극자·쌍극자 힘 카드에 흡수했으나 분리 가능하다", "pages": [29] },
+    { "term": "순간 쌍극자", "reason": "중복", "note": "분산력 카드의 정의 안에서 다룬다", "pages": [31] },
+    { "term": "편극", "reason": "기타", "note": "교과서가 날개 용어로 설명. 분산력 카드에 흡수", "pages": [31] },
+    { "term": "전기음성도", "reason": "범위 밖", "note": "교과서가 '화학 연계'로 표시한 선수 개념. 과목을 넘는 연결은 G 파이프라인의 일이다", "pages": [29] },
+    { "term": "쌍극자 모멘트", "reason": "범위 밖", "note": "날개 용어. 화학 과목 소관", "pages": [29] },
+    { "term": "이온 결합 · 금속 결합 · 공유 결합", "reason": "범위 밖", "note": "결정 분류의 기준으로 인용될 뿐 이 단원에서 정의되지 않는다. 화학 과목 소관", "pages": [38, 39] },
+    { "term": "고체 비누와 액체비누, 나의 선택은?", "reason": "활동", "note": "창의적 문제 해결·진로 지면. 카드 원천이 아니다", "pages": [44, 45] }
+  ],
+
+  "notes": [
+    "이 단원이 덮는 성취기준 12물에01-01 ~ 04 는 standards.yaml 에서 넷 모두 crosscheck: 일치 임을 직접 확인했다. 네 코드 모두 최소 1개 이상의 후보가 붙었다.",
+    "concept_registry.yaml 의 concepts 절이 비어 있으므로(1차 파일럿) 30개 전부 registry_status: new 다. G3 사람 게이트 대상이며, 사전 파일은 수정하지 않았다.",
+    "role 배분 기준: 성취기준이 표제어로 직접 부르는 개념을 core 로, 그 아래 분류 체계의 항(분자 간 힘 3종·결정 4종)과 도출·보조 개념을 supporting 으로 두었다. core 12 / supporting 14 / context 4.",
+    "증기 압력(mate-vapor-pressure)의 표제어는 naming_policy.md §3 에 따라 보류 상태다. 12물에02-02 의 총론('증기압')과 각론('증기 압력')이 갈려 crosscheck 불일치이기 때문이다. 이 단원 태그는 일치 코드를 썼으므로 태깅에는 문제가 없으나, 표제어 확정은 C8/G3 사람 게이트에서 판정해야 한다.",
+    "교과서 p38 은 금속 결정의 예로 구표기 '나트륨'을 쓴다. 현행 표기는 '소듐'이다(naming_policy.md §2). 이 표기는 후보 term 에 쓰지 않았고, C2 카드 작성 시 예시에서도 현행 표기를 써야 한다.",
+    "homonyms.yaml 의 surface(주기·핵·전위·일·계)와 겹치는 표제어는 없다. p32-b43 의 '주기'는 그래프 축 이름이라 후보로 올리지 않았다.",
+    "text.jsonl 의 role 값은 지시문의 'review' 대신 section_review / unit_review 로 기록돼 있다. p26·p40 의 중단원 정리 생각 그물을 누락 점검 체크리스트로 대조했고, 거기 등장하는 모든 항목이 후보 또는 excluded 에 있다."
+  ]
+}

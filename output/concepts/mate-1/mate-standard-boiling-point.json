@@ -1,0 +1,118 @@
+{
+  "id": "mate-standard-boiling-point",
+  "concept_key": "concept:standard-boiling-point",
+  "registry_status": "new",
+  "term": "기준 끓는점",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'기준'은 基準이지만 '끓는점'이 고유어를 품고 있어 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "standard boiling point"
+  },
+  "definition": "외부 압력을 1 atm으로 고정했을 때의 끓는점. 압력에 따라 달라지는 끓는점을 물질끼리 견줄 수 있도록 조건을 못박은 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sbp-compare",
+      "text": "압력을 1 atm으로 고정하면 여러 액체의 끓는점을 같은 잣대로 견줄 수 있다.",
+      "form": {
+        "condition": "비교하는 모든 액체에 같은 외부 압력을 적용할 때",
+        "type": "conditional",
+        "scope": "순수한 액체"
+      },
+      "invertible": false,
+      "invertible_reason": "비교를 가능하게 하는 약속을 말한 것이라 방향을 가진 양적 명제가 아니다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sbp-imf",
+      "text": "기준 끓는점이 높은 액체일수록 분자 간 상호 작용이 크다.",
+      "form": {
+        "condition": "외부 압력을 모두 1 atm으로 맞추었을 때",
+        "type": "direct",
+        "scope": "분자로 이루어진 액체끼리 비교",
+        "antecedent": {
+          "quantity": "기준 끓는점",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분자 간 상호 작용의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "인력이 클수록 더 높은 온도라야 끓으므로 반대 방향 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기준 끓는점이 높은 액체일수록 분자 간 상호 작용이 작다."
+    },
+    {
+      "id": "rel-sbp-curve",
+      "text": "증기 압력 곡선에서 증기 압력이 760 mmHg가 되는 온도를 읽으면 그 액체의 기준 끓는점이다.",
+      "form": {
+        "condition": "외부 압력이 1 atm, 곧 760 mmHg일 때",
+        "type": "conditional",
+        "scope": "순수한 액체의 증기 압력 곡선"
+      },
+      "invertible": false,
+      "invertible_reason": "그래프에서 값을 읽는 절차를 서술한 것이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기준 끓는점은 그 물질이 끓을 수 있는 가장 높은 온도이다",
+      "why_wrong": "외부 압력을 1 atm보다 높이면 더 높은 온도에서 끓는다. 기준 끓는점은 최댓값이 아니라 약속된 압력에서의 값일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-sbp-compare"
+    },
+    {
+      "text": "끓는점은 어차피 물질마다 하나이므로 기준 끓는점을 따로 둘 필요가 없다",
+      "why_wrong": "끓는점은 외부 압력에 따라 달라지므로, 압력을 밝히지 않은 끓는점끼리는 비교할 수 없다. 그래서 1 atm이라는 기준이 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-sbp-compare"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-boiling-point",
+      "note": "끓는점의 특수한 경우 — 외부 압력을 1 atm으로 고정한 값이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-vapor-pressure",
+      "note": "증기 압력 곡선에서 760 mmHg 지점으로 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "mate-intermolecular-force"
+    },
+    {
+      "type": "related",
+      "target": "mate-atmospheric-pressure",
+      "note": "1 atm이라는 기준 압력은 대기압의 표준값에서 왔다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-02",
+  "pages": [
+    35
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

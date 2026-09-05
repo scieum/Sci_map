@@ -1,0 +1,138 @@
+{
+  "id": "mate-ideal-gas",
+  "concept_key": "concept:ideal-gas",
+  "registry_status": "new",
+  "term": "이상 기체",
+  "notation": {
+    "hanja": "理想氣體",
+    "hanja_gloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체",
+    "english": "ideal gas"
+  },
+  "definition": "어떤 온도와 압력에서도 기체 법칙을 어김없이 따른다고 가정한 기체 모형. 분자 자체의 부피와 분자 사이의 힘을 없는 것으로 놓는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ideal-gas-follows-laws",
+      "text": "기체 법칙에서 벗어나는 일 없이 언제나 그대로 들어맞는 기체를 이상 기체라 부른다",
+      "form": {
+        "condition": "기체 법칙을 이론적으로 다룰 때",
+        "type": "classification",
+        "scope": "실제로는 존재하지 않는 이상화된 모형",
+        "antecedent": {
+          "quantity": "기체 법칙을 따르는 정도",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "이상 기체 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류를 정하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ideal-gas-real-deviation",
+      "text": "실제 기체는 압력이 낮고 온도가 높을수록 이상 기체에 가깝게 행동한다",
+      "form": {
+        "condition": "실제 기체를 이상 기체 모형과 견줄 때",
+        "type": "inverse",
+        "scope": "분자 사이의 힘과 분자 자체의 부피를 무시할 만한 조건",
+        "antecedent": {
+          "quantity": "기체에 걸린 압력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이상 기체와의 일치도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "압력이 높고 온도가 낮을수록 분자 사이의 힘이 두드러지므로 뒤집은 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "실제 기체는 압력이 높고 온도가 낮을수록 이상 기체에 가깝게 행동한다"
+    },
+    {
+      "id": "rel-ideal-gas-assumptions",
+      "text": "이상 기체에서는 분자가 차지하는 부피도, 분자끼리 끌거나 미는 힘도 모두 없는 것으로 본다",
+      "form": {
+        "condition": "기체 분자 운동론의 가정을 받아들일 때",
+        "type": "classification",
+        "scope": "이상 기체 모형 안에서만",
+        "antecedent": {
+          "quantity": "가정의 충족 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "이상 기체 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "가정을 나열하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "헬륨이나 수소처럼 가벼운 기체는 실제로 이상 기체다",
+      "why_wrong": "이상 기체는 조건을 단순하게 만든 모형이며 실제로 존재하는 기체가 아니다. 가벼운 기체는 이상 기체에 가까울 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-ideal-gas-follows-laws"
+    },
+    {
+      "text": "압력을 아주 높이면 기체가 더 규칙적으로 움직여 이상 기체에 가까워진다",
+      "why_wrong": "압력이 높아지면 분자 사이의 거리가 가까워져 인력과 분자 자체의 부피가 두드러지므로 오히려 이상 기체에서 멀어진다.",
+      "source": "llm",
+      "linked_relation": "rel-ideal-gas-real-deviation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-kinetic-molecular-theory",
+      "note": "운동론의 가정을 만족하는 기체가 이상 기체다"
+    },
+    {
+      "type": "next",
+      "target": "mate-ideal-gas-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-boyle-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-charles-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-intermolecular-force",
+      "note": "이상 기체가 없다고 가정한 바로 그 힘 — 실제 기체가 이상 기체에서 벗어나는 까닭이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-02",
+  "pages": [
+    18,
+    19
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

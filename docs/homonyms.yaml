@@ -1,0 +1,112 @@
+# 동음이의 금지쌍 — homonyms.yaml
+#
+# ★공용 자산이다 (Sci_Map §0.3). 개념 계열의 `same` 링크(G2)와
+#   노선 계열의 환승 판정(N2)이 **같은 이 파일**을 본다. 복사본을 만들지 마라.
+#
+# ★사람 관리 파일이다. 어느 계열에서 제안하든 사람 승인 없이 갱신하지 않는다
+#   (CLAUDE.md §9.3). 에이전트는 `proposals` 절에 후보만 적는다.
+#
+# ── 이 파일이 존재하는 이유 ────────────────────────────────────────────────
+# 개념 링크와 환승은 **문자열 일치로 걸지 않는다** (R9, CLAUDE.md §9.5).
+# 근거는 `concept_key` 일치 하나뿐이다. 그런데 사람도 기계도 실수한다 —
+# "핵"이라는 두 글자를 보고 원자핵과 세포핵을 잇는 실수가 가장 흔하다.
+# 이 파일은 그 실수를 **차단 목록으로** 만든다. 여기 실린 표기가 같다는 이유로
+# 걸린 링크는 자동으로 reject 된다. 사람이 게이트에서 뒤집을 수는 있다.
+
+version: 1
+updated: 2026-09-05
+
+# ── 금지쌍 ──────────────────────────────────────────────────────────────────
+# surface : 겉으로 같아 보이는 표기 (사람이 헷갈리는 그 낱말)
+# senses  : 그 표기가 가리키는 서로 다른 개념들. 각각 concept_key 가 다르다.
+#           key 가 `null` 인 것은 아직 concept_registry.yaml 에 등록되지 않은 뜻이다.
+#           `proposed_key` 는 등록될 때 쓸 이름의 제안일 뿐 효력이 없다
+#           (등록은 G3/N3 사람 게이트에서). 1차 착수 시점에는 사전이 비어 있으므로
+#           전부 null 이다 — 금지 규칙 자체는 표기(surface)로 동작하므로 지금도 유효하다.
+# rule    : reject = 표기 일치만으로 link/환승을 걸면 무조건 기각
+#
+# ★ 주의: senses 안의 두 항목을 잇는 것이 금지다.
+#   같은 sense 끼리(원자핵 ↔ 원자핵)는 당연히 정상 링크다.
+
+homonyms:
+  - surface: 주기
+    rule: reject
+    senses:
+      - key: null
+        proposed_key: concept:periodic-table-period
+        gloss: 주기율표의 가로줄. 같은 전자 껍질 수를 갖는 원소의 묶음
+        subject: 화학
+      - key: null
+        gloss: 파동이 한 번 진동하는 데 걸리는 시간 (T)
+        subject: 물리
+      - key: null
+        gloss: 천체가 궤도를 한 바퀴 도는 데 걸리는 시간
+        subject: 지구과학
+
+  - surface: 핵
+    rule: reject
+    senses:
+      - key: null
+        proposed_key: concept:atomic-nucleus
+        gloss: 원자핵. 양성자와 중성자로 이루어진 원자의 중심
+        subject: 화학·물리
+      - key: null
+        gloss: 세포핵. 진핵세포의 유전 물질을 담은 세포 소기관
+        subject: 생명과학
+      - key: null
+        gloss: 지구 내부 구조의 최심부 (외핵·내핵)
+        subject: 지구과학
+
+  - surface: 전위
+    rule: reject
+    senses:
+      - key: null
+        gloss: 電位. 단위 전하가 갖는 전기적 위치 에너지 (V)
+        subject: 물리·화학
+      - key: null
+        gloss: 轉位. 결정 격자의 선결함 (dislocation)
+        subject: 화학(고체)
+      - key: null
+        gloss: 轉位. 유기 반응에서 원자단이 자리를 옮기는 반응 (rearrangement)
+        subject: 화학(유기)
+
+  - surface: 일
+    rule: reject
+    senses:
+      - key: null
+        gloss: 힘이 물체를 이동시킬 때 한 일 (W = F·s). 에너지의 한 형태
+        subject: 물리·화학
+      - key: null
+        gloss: 날. 시간 단위 (day)
+        subject: 일반
+    note: >
+      한 글자 표기라 부분 문자열 일치로도 오검출된다.
+      링크 후보 탐지(G1)에서 1글자 표기는 애초에 후보로 올리지 않는다.
+
+  - surface: 계
+    rule: reject
+    senses:
+      - key: null
+        proposed_key: concept:thermodynamic-system
+        gloss: 系. 열역학에서 관찰 대상으로 잘라낸 영역 (계 ↔ 주위)
+        subject: 화학·물리
+      - key: null
+        gloss: 界. 생물 분류 계급의 최상위 (동물계·식물계)
+        subject: 생명과학
+      - key: null
+        gloss: 系. 결정계 (cubic·tetragonal 등 결정 구조의 분류)
+        subject: 화학(고체)
+    note: 위 '일'과 같은 이유로 1글자 표기 규칙이 함께 적용된다.
+
+# ── 부분 문자열 오검출 방지 ─────────────────────────────────────────────────
+# 짧은 표기는 다른 낱말 안에 통째로 들어앉는다. 링크 후보 탐지가
+# "핵"을 보고 "핵산·핵심·중핵"을 물어오는 일을 막는다.
+matching_rules:
+  min_surface_length: 2        # 1글자 표기는 링크 후보로 올리지 않는다
+  whole_word_only: true        # 부분 문자열 일치 금지
+  ignore_spacing: true         # '증기 압력' ≡ '증기압력' (표기 정책 §6)
+
+# ── 제안 대기열 ─────────────────────────────────────────────────────────────
+# 에이전트(graph-curator·network-curator)가 발견한 금지쌍 후보를 여기 적는다.
+# **사람이 homonyms 절로 옮기기 전까지는 효력이 없다.**
+proposals: []

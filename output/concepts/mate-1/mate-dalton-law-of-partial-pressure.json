@@ -1,0 +1,133 @@
+{
+  "id": "mate-dalton-law-of-partial-pressure",
+  "concept_key": "concept:dalton-law-of-partial-pressure",
+  "registry_status": "new",
+  "term": "부분 압력 법칙",
+  "notation": {
+    "hanja": "部分壓力法則",
+    "hanja_gloss": "部 떼 부 · 分 나눌 분 · 壓 누를 압 · 力 힘 력 · 法 법 법 · 則 법칙 칙",
+    "english": "Dalton's law of partial pressure",
+    "symbol_display": "P_T = P_A + P_B",
+    "symbol_plain": "P_T = P_A + P_B"
+  },
+  "definition": "혼합 기체 전체의 압력이 성분 기체들의 부분 압력을 모두 더한 값과 같다는 법칙. 성분끼리 반응하지 않을 때 성립한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dalton-sum-of-partials",
+      "text": "반응하지 않는 기체를 한 용기에 섞으면 전체 압력은 성분 기체 부분 압력의 합이 된다",
+      "form": {
+        "condition": "성분 기체끼리 화학 반응을 하지 않음, 온도 일정",
+        "type": "conditional",
+        "scope": "이상 기체로 근사할 수 있는 혼합 기체",
+        "antecedent": {
+          "quantity": "성분 기체 부분 압력의 합",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "혼합 기체의 전체 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합이 같다는 등식이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dalton-adding-gas",
+      "text": "부피가 일정한 용기에 반응하지 않는 기체를 더 넣으면 넣은 기체의 부분 압력만큼 전체 압력이 커진다",
+      "form": {
+        "condition": "용기의 부피와 온도가 일정함",
+        "type": "direct",
+        "scope": "서로 반응하지 않는 이상 기체",
+        "antecedent": {
+          "quantity": "더 넣은 기체의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "혼합 기체의 전체 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기체를 더 넣었는데 전체 압력이 내려간다는 말은 합의 관계와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부피가 일정한 용기에 반응하지 않는 기체를 더 넣으면 전체 압력은 오히려 작아진다"
+    },
+    {
+      "id": "rel-dalton-independence",
+      "text": "한 성분의 부분 압력은 곁에 어떤 기체가 함께 들어 있든 그 종류에 좌우되지 않는다",
+      "form": {
+        "condition": "성분 기체끼리 반응하지 않음",
+        "type": "classification",
+        "scope": "이상 기체로 근사할 수 있는 혼합 기체",
+        "antecedent": {
+          "quantity": "함께 있는 기체의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "한 성분의 부분 압력",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "곁의 기체 종류에 따라 달라진다고 뒤집으면 분자 사이의 힘을 무시한다는 가정과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 성분의 부분 압력은 곁에 함께 들어 있는 기체의 종류에 따라 달라진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 기체를 섞으면 전체 압력은 두 기체 압력의 평균이 된다",
+      "why_wrong": "전체 압력은 평균이 아니라 각 성분의 부분 압력을 더한 값이다.",
+      "source": "llm",
+      "linked_relation": "rel-dalton-sum-of-partials"
+    },
+    {
+      "text": "1 atm인 기체와 1 atm인 기체를 같은 부피의 용기에 함께 넣으면 전체 압력은 그대로 1 atm이다",
+      "why_wrong": "각 기체가 새 용기에서 갖는 부분 압력을 구해 더해야 한다. 부피가 그대로라면 전체 압력은 2 atm이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-dalton-adding-gas"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-partial-pressure"
+    },
+    {
+      "type": "next",
+      "target": "mate-mole-fraction"
+    },
+    {
+      "type": "related",
+      "target": "mate-ideal-gas-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-02"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-03",
+  "pages": [
+    23
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "돌턴의 분압 법칙"
+  ]
+}

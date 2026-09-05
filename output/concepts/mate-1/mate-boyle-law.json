@@ -1,0 +1,110 @@
+{
+  "id": "mate-boyle-law",
+  "concept_key": "concept:boyle-law",
+  "registry_status": "new",
+  "term": "보일 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 Boyle 의 음차 표기가 앞에 오므로 낱말 전체에 대응하는 한자어가 없다. 뒤의 '법칙'만 法則에 해당한다.",
+    "english": "Boyle's law",
+    "symbol_display": "P₁V₁ = P₂V₂ = k",
+    "symbol_plain": "P1V1 = P2V2 = k"
+  },
+  "definition": "온도와 기체의 양을 붙들어 둔 채 압력을 바꾸면 부피가 그 반대 방향으로 변한다는 법칙. 압력과 부피의 곱은 늘 같은 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-boyle-pressure-volume",
+      "text": "온도와 기체의 양을 고정한 채 압력을 두 배로 키우면 부피는 처음의 절반으로 줄어든다",
+      "form": {
+        "condition": "온도 일정, 기체의 양(mol) 일정",
+        "type": "inverse",
+        "scope": "이상 기체로 근사할 수 있는 범위(낮은 압력·높은 온도)",
+        "antecedent": {
+          "quantity": "기체에 걸리는 압력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "압력과 부피가 함께 커진다고 뒤집으면 두 값의 곱이 일정하다는 사실과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도와 기체의 양을 고정한 채 압력을 두 배로 키우면 부피도 처음의 두 배가 된다"
+    },
+    {
+      "id": "rel-boyle-product-constant",
+      "text": "일정량의 기체를 온도 변화 없이 누르거나 부풀려도 압력과 부피의 곱은 처음 값 그대로다",
+      "form": {
+        "condition": "온도 일정, 기체의 양(mol) 일정",
+        "type": "conditional",
+        "scope": "이상 기체로 근사할 수 있는 범위",
+        "antecedent": {
+          "quantity": "기체의 부피",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "압력과 부피의 곱",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "곱이 변하지 않는다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "압력을 두 배로 하면 부피도 두 배가 된다",
+      "why_wrong": "온도가 일정할 때 압력과 부피는 반비례한다. 압력이 두 배가 되면 부피는 절반이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-boyle-pressure-volume"
+    },
+    {
+      "text": "보일 법칙은 온도가 달라져도 그대로 성립한다",
+      "why_wrong": "압력과 부피의 곱이 일정하다는 것은 온도와 기체의 양이 고정되었을 때만 성립하는 관계다.",
+      "source": "llm",
+      "linked_relation": "rel-boyle-product-constant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-gas-pressure"
+    },
+    {
+      "type": "next",
+      "target": "mate-ideal-gas-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-charles-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-avogadro-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-01",
+  "pages": [
+    15
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

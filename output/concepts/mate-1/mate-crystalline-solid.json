@@ -1,0 +1,124 @@
+{
+  "id": "mate-crystalline-solid",
+  "concept_key": "concept:crystalline-solid",
+  "registry_status": "new",
+  "term": "결정성 고체",
+  "aliases": [
+    "결정"
+  ],
+  "notation": {
+    "hanja": "結晶性固體",
+    "hanja_gloss": "結 맺을 결 · 晶 맑을 정 · 性 성품 성 · 固 굳을 고 · 體 몸 체",
+    "english": "crystalline solid"
+  },
+  "definition": "구성 입자가 넓은 범위에 걸쳐 규칙적으로 늘어서 일정한 결정 구조를 이루고 있는 고체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cs-mp",
+      "text": "입자 사이의 인력이 어디서나 같으므로 결정성 고체는 정해진 온도에서 녹기 시작한다.",
+      "form": {
+        "condition": "순물질로 된 결정을 천천히 가열할 때",
+        "type": "causal",
+        "scope": "결정성 고체"
+      },
+      "invertible": true,
+      "invertible_reason": "배열이 규칙적이면 끊어야 할 인력의 크기가 고르므로 녹는점이 일정하지 않다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결정성 고체는 녹는점이 일정하지 않고 넓은 온도 범위에서 물러진다."
+    },
+    {
+      "id": "rel-cs-classify",
+      "text": "결정성 고체는 입자를 잇는 화학 결합의 종류에 따라 이온·금속·분자·공유 결정으로 나뉜다.",
+      "form": {
+        "condition": "분류 기준을 결정 내부의 화학 결합으로 삼을 때",
+        "type": "classification",
+        "scope": "결정성 고체",
+        "antecedent": {
+          "quantity": "결정 내부의 화학 결합 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "결정의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류를 밝힌 명제라 뒤집을 방향 자체가 없다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cs-same-formula",
+      "text": "화학식이 같아도 입자 배열이 규칙적인지에 따라 결정성 고체가 되기도 하고 아니기도 한다.",
+      "form": {
+        "condition": "구성 원소와 화학식이 같은 두 고체를 견줄 때",
+        "type": "conditional",
+        "scope": "석영과 유리처럼 화학식이 같은 고체"
+      },
+      "invertible": false,
+      "invertible_reason": "판별 기준이 무엇인지를 말한 명제여서 양의 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "겉모양이 반듯한 고체만 결정성 고체이다",
+      "why_wrong": "판단 기준은 겉모양이 아니라 입자 배열의 규칙성이다. 곱게 빻은 소금 가루도 여전히 결정성 고체다.",
+      "source": "llm",
+      "linked_relation": "rel-cs-same-formula"
+    },
+    {
+      "text": "유리는 단단하고 투명하니까 결정성 고체이다",
+      "why_wrong": "단단함이나 투명함은 기준이 아니다. 유리는 입자가 무질서하게 배열된 비결정성 고체다.",
+      "source": "llm",
+      "linked_relation": "rel-cs-mp"
+    }
+  ],
+  "links": [
+    {
+      "type": "related",
+      "target": "mate-amorphous-solid",
+      "note": "입자 배열의 규칙성으로 갈리는 대립쌍이다"
+    },
+    {
+      "type": "next",
+      "target": "mate-ionic-crystal"
+    },
+    {
+      "type": "next",
+      "target": "mate-metallic-crystal"
+    },
+    {
+      "type": "next",
+      "target": "mate-molecular-crystal"
+    },
+    {
+      "type": "next",
+      "target": "mate-covalent-crystal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-04"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-03",
+  "pages": [
+    36,
+    37
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

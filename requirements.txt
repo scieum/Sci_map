@@ -1,0 +1,14 @@
+# Sci_Map 파이프라인 파이썬 의존성
+#
+# ⚠️ PDF 처리는 pypdfium2 + pdfplumber 로 고정한다. PyMuPDF 는 AGPL/상용 이중
+#    라이선스라 금지다 (Sci_Map R11, CLAUDE.md §8).
+#    .claude/skills/textbook-parser/references/forbidden_libraries.md 참조.
+#
+# 리포가 OneDrive 동기화 폴더 안에 있어 가상환경은 리포 밖에 둔다:
+#   python3 -m venv ~/.venvs/scimap
+#   ~/.venvs/scimap/bin/pip install -r requirements.txt
+
+pdfplumber==0.11.8      # MIT — 텍스트·레이아웃 박스 추출
+pypdfium2==5.13.0       # Apache-2.0 — 렌더링, 추출 교차검증, C7 크롭 원본
+Pillow==11.3.0          # MIT-CMU — 이미지 처리 (pdfplumber 의존)
+PyYAML==6.0.3           # MIT — 백로그·사전 파일

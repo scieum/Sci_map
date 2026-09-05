@@ -1,0 +1,112 @@
+{
+  "id": "mate-molecular-crystal",
+  "concept_key": "concept:molecular-crystal",
+  "registry_status": "new",
+  "term": "분자 결정",
+  "notation": {
+    "hanja": "分子結晶",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 結 맺을 결 · 晶 맑을 정",
+    "english": "molecular crystal"
+  },
+  "definition": "공유 결합으로 만들어진 분자들이 분자 간 상호 작용으로 규칙적으로 쌓여 이루어진 결정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-molc-weak",
+      "text": "분자를 붙잡는 힘이 약한 분자 간 상호 작용이어서 분자 결정은 녹는점이 낮다.",
+      "form": {
+        "condition": "다른 종류의 결정과 상온·상압에서 견줄 때",
+        "type": "causal",
+        "scope": "분자 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "네 결정 가운데 입자 사이의 힘이 가장 약하므로 녹는점이 높다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 결정은 분자 간 상호 작용으로 묶여 있어 녹는점이 높다."
+    },
+    {
+      "id": "rel-molc-sublime",
+      "text": "입자 사이의 힘이 약해 분자 결정 가운데는 녹지 않고 바로 기체가 되는 것이 있다.",
+      "form": {
+        "condition": "상온·상압에 그대로 두었을 때",
+        "type": "causal",
+        "scope": "드라이아이스·아이오딘처럼 승화성을 띠는 일부 분자 결정"
+      },
+      "invertible": false,
+      "invertible_reason": "'일부가 그렇다'는 존재 진술이라 방향을 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-molc-nonconduct",
+      "text": "전하를 나를 이온도 자유 전자도 없어 분자 결정은 고체에서도 녹은 뒤에도 전기를 통하지 않는다.",
+      "form": {
+        "condition": "순수한 분자 결정을 다룰 때",
+        "type": "causal",
+        "scope": "분자 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "녹아도 나타나는 것은 중성 분자뿐이므로 전기를 통한다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 결정은 녹여서 액체로 만들면 전기를 통한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자 결정이 녹을 때는 분자 안의 공유 결합이 끊어진다",
+      "why_wrong": "끊어지는 것은 분자와 분자 사이의 힘이다. 분자 자체는 그대로 남아 있어 드라이아이스가 승화해도 이산화 탄소 분자는 그대로다.",
+      "source": "llm",
+      "linked_relation": "rel-molc-weak"
+    },
+    {
+      "text": "분자 결정도 결정이므로 녹는점이 높다",
+      "why_wrong": "결정 구조를 이루더라도 입자를 붙잡는 힘이 약한 분자 간 상호 작용이라 녹는점은 오히려 낮다.",
+      "source": "llm",
+      "linked_relation": "rel-molc-weak"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-crystalline-solid",
+      "note": "결정 분류의 상위 개념이다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-intermolecular-force",
+      "note": "결정을 붙들고 있는 힘이 바로 이것이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-ionic-crystal",
+      "note": "녹는점의 높낮이가 갈리는 상대다"
+    },
+    {
+      "type": "related",
+      "target": "mate-covalent-crystal",
+      "note": "같은 공유 결합을 쓰지만 구조가 다르다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-04"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-03",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

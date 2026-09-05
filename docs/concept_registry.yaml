@@ -1,0 +1,75 @@
+# 개념 키 사전 — concept_registry.yaml
+#
+# ★공용 자산이다 (Sci_Map §0.3). 개념 계열의 `same` 링크와 노선 계열의 환승이
+#   **같은 이 파일**을 본다. 복사본을 만들지 마라 — 복사한 순간 갈라지고,
+#   그 순간 학생이 노선에서 만난 '탄소'와 개념 카드의 '탄소'가 남남이 된다.
+#
+# ★사람 관리 파일이다. 신규 키 등록은 어느 계열에서 제안하든 **사람 승인**을 거친다
+#   (G3 / N3 게이트, CLAUDE.md §5·§9.3). 에이전트는 `proposals` 절에만 쓴다.
+#
+# ── 이 파일이 하는 일 ───────────────────────────────────────────────────────
+# 이름이 달라도 같은 개념이면 같은 키를 준다. 그 키가 학년·과목·계열을 가로지르는
+# 유일한 접착제다. 표기가 같다는 이유로 잇지 않는다 (R9) — 그 반대편 안전장치가
+# docs/homonyms.yaml 이다. 이 둘은 한 쌍으로 읽어야 한다.
+
+version: 1
+updated: 2026-09-05
+
+# ── 키 작명 규칙 ────────────────────────────────────────────────────────────
+key_format:
+  pattern: '^concept:[a-z][a-z0-9]*(-[a-z0-9]+)*$'
+  rules:
+    - "접두어는 언제나 `concept:` 하나다. 과목 접두어를 넣지 않는다 —
+       과목을 넣으면 과목을 가로지르는 순간 키가 갈라진다. 그게 이 파일의 반대다."
+    - "본체는 **영어 소문자 kebab-case**. 한국어 표기를 키에 넣지 않는다
+       (표기 정책이 바뀌면 키가 따라 바뀌어야 하는데, 키는 바뀌면 안 된다)."
+    - "영어명은 IUPAC / 대한화학회 화학술어의 영문을 따른다."
+    - "단수형을 쓴다: `concept:noble-gas` (○) `concept:noble-gases` (✕)"
+    - "한 번 등록한 키는 **철회하지 않는다.** 잘못 지었으면 `deprecated` 로
+       표시하고 `superseded_by` 를 단다. 지우면 이미 배포된 카드의 링크가 깨진다."
+
+# 카드 id 는 키와 다르다. 혼동 주의.
+#   concept_key : `concept:vapor-pressure`  — 개념 그 자체. 과목·학년 무관. 여러 카드가 공유
+#   card id     : `mate-vapor-pressure`     — 그 개념을 이 과목에서 다룬 카드 한 장
+id_format:
+  pattern: '^(isci1|isci2|chem|mate|reac)-[a-z][a-z0-9]*(-[a-z0-9]+)*$'
+  subject_prefix:
+    isci1: 통합과학1
+    isci2: 통합과학2
+    chem: 화학
+    mate: 물질과 에너지
+    reac: 화학 반응의 세계
+  note: >
+    접두어 뒤 첫 글자는 반드시 영문자다. 단원 id(`mate-1`, `mate-1-1-01`)는
+    접두어 뒤가 숫자이므로 정규식만으로 카드 id 와 구별된다. 규칙을 깨지 마라.
+
+# ── 등록된 키 ───────────────────────────────────────────────────────────────
+# 1차 파일럿 착수 시점에는 비어 있다. 이것이 정상이다.
+# C1(개념 추출)은 여기서 기존 키를 찾아 재사용하고, 못 찾으면 잠정 키를 지어
+# candidates.json 에 `registry_status: new` 로 표시한다. **여기에 직접 쓰지 않는다.**
+# 실제 등록은 G3 사람 게이트에서 일어난다.
+#
+# 항목 형식:
+#   - key: concept:vapor-pressure
+#     term_ko: 증기 압력          # 대표 한국어 표기 (표제어. naming_policy.md 를 따른다)
+#     term_en: vapor pressure
+#     aliases: [증기압]           # 검색 허용 표기. 표제어 아님
+#     cards: [mate-vapor-pressure, chem-vapor-pressure]   # 이 키를 쓰는 카드
+#     stations: []                # 이 키를 쓰는 노선 역 (SciMetro)
+#     approved_by: teacher
+#     approved_at: 2026-09-05
+#     status: active              # active | deprecated
+concepts: []
+
+# ── 제안 대기열 ─────────────────────────────────────────────────────────────
+# C1/G2/N2 가 발견한 신규 키 후보. **사람이 concepts 절로 옮기기 전까지 효력이 없다.**
+# 여기 있는 키로 `same` 링크나 환승을 걸지 않는다.
+#
+#   - key: concept:ideal-gas-law
+#     term_ko: 이상 기체 방정식
+#     term_en: ideal gas law
+#     proposed_by: textbook-analyst
+#     proposed_at: 2026-09-05
+#     source_unit: mate-1
+#     rationale: 한 줄 근거
+proposals: []

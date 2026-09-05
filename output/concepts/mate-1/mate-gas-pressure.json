@@ -1,0 +1,150 @@
+{
+  "id": "mate-gas-pressure",
+  "concept_key": "concept:gas-pressure",
+  "registry_status": "new",
+  "term": "기체의 압력",
+  "notation": {
+    "hanja": "氣體壓力",
+    "hanja_gloss": "氣 기운 기 · 體 몸 체 · 壓 누를 압 · 力 힘 력",
+    "english": "gas pressure",
+    "symbol_display": "P",
+    "symbol_plain": "P"
+  },
+  "definition": "단위 넓이마다 수직으로 작용하는 힘 가운데, 쉼 없이 움직이는 기체 분자가 벽면에 부딪치며 만들어 내는 몫을 가리키는 양.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gas-pressure-collision-count",
+      "text": "부피가 정해진 용기에서 분자가 벽에 부딪치는 횟수가 잦아질수록 기체의 압력은 커진다",
+      "form": {
+        "condition": "용기의 부피가 일정하고 기체가 새어 나가지 않음",
+        "type": "direct",
+        "scope": "분자가 무질서하게 운동하는 기체 상태",
+        "antecedent": {
+          "quantity": "단위 시간당 벽면 충돌 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "충돌 횟수와 압력은 한 방향으로만 함께 움직이므로 방향을 맞바꾸면 반드시 거짓이 된다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부피가 정해진 용기에서 분자가 벽에 부딪치는 횟수가 잦아질수록 기체의 압력은 작아진다"
+    },
+    {
+      "id": "rel-gas-pressure-collision-strength",
+      "text": "부딪치는 횟수가 같더라도 분자 하나가 더 세게 충돌할수록 기체의 압력은 커진다",
+      "form": {
+        "condition": "단위 시간당 충돌 횟수가 서로 같음",
+        "type": "direct",
+        "scope": "분자의 평균 운동 에너지로 충돌 세기를 견줄 수 있는 기체 상태",
+        "antecedent": {
+          "quantity": "분자 한 개의 충돌 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세게 부딪칠수록 벽이 받는 힘이 작아진다는 말은 힘의 정의와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부딪치는 횟수가 같더라도 분자 하나가 더 세게 충돌할수록 기체의 압력은 작아진다"
+    },
+    {
+      "id": "rel-gas-pressure-piston-balance",
+      "text": "피스톤이 달린 용기에서 안쪽 기체의 압력이 바깥 압력보다 크면 기체의 부피가 늘어난다",
+      "form": {
+        "condition": "피스톤이 마찰 없이 움직일 수 있음",
+        "type": "causal",
+        "scope": "바깥 압력이 일정하게 유지되는 동안의 기체",
+        "antecedent": {
+          "quantity": "안쪽 압력과 바깥 압력의 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "압력이 더 큰 쪽이 밀리는 방향은 하나뿐이므로 방향을 맞바꾸면 반드시 거짓이 된다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "피스톤이 달린 용기에서 안쪽 기체의 압력이 바깥 압력보다 크면 기체의 부피가 줄어든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "용기 속 기체의 압력은 무게 때문에 바닥 쪽이 천장 쪽보다 크다",
+      "why_wrong": "기체 분자는 모든 방향으로 무질서하게 운동하므로 용기 어느 벽에서나 같은 크기의 압력이 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-gas-pressure-collision-count"
+    },
+    {
+      "text": "무거운 분자로 이루어진 기체일수록 압력이 항상 크다",
+      "why_wrong": "온도·부피·양(mol)이 같으면 압력은 기체의 종류와 무관하다. 무거운 분자는 느리게 움직여 충돌 횟수가 줄어들기 때문이다.",
+      "source": "llm",
+      "linked_relation": "rel-gas-pressure-collision-strength"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-atmospheric-pressure",
+      "note": "기체가 압력을 나타내는 까닭을 알아야 대기압을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "mate-boyle-law"
+    },
+    {
+      "type": "next",
+      "target": "mate-avogadro-law"
+    },
+    {
+      "type": "next",
+      "target": "mate-partial-pressure"
+    },
+    {
+      "type": "related",
+      "target": "mate-kinetic-molecular-theory",
+      "note": "압력이 생기는 까닭을 분자 운동으로 설명한다"
+    },
+    {
+      "type": "next",
+      "target": "mate-vapor-pressure",
+      "note": "액체 위 증기가 나타내는 압력도 분자가 벽에 부딪쳐 생기는 기체의 압력이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-01",
+  "pages": [
+    12,
+    13
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "기체 압력"
+  ]
+}

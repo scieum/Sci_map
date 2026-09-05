@@ -1,0 +1,131 @@
+{
+  "id": "mate-gas-constant",
+  "concept_key": "concept:gas-constant",
+  "registry_status": "new",
+  "term": "기체 상수",
+  "notation": {
+    "hanja": "氣體常數",
+    "hanja_gloss": "氣 기운 기 · 體 몸 체 · 常 항상 상 · 數 셈 수",
+    "english": "gas constant",
+    "symbol_display": "R ≈ 0.082 atm·L/(mol·K)",
+    "symbol_plain": "R = 0.082 atm.L/(mol.K)"
+  },
+  "definition": "이상 기체 방정식에서 압력·부피 쪽과 양(mol)·절대 온도 쪽을 이어 주는 비례 상수 R. 몰 부피를 대입해 그 값을 얻는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-r-from-molar-volume",
+      "text": "0 ℃, 1 atm에서 1 mol의 부피 22.4 L를 식에 넣으면 R 값은 약 0.082로 계산된다",
+      "form": {
+        "condition": "atm·L·mol·K 단위계를 쓸 때",
+        "type": "conditional",
+        "scope": "이상 기체로 근사한 몰 부피를 대입하는 경우",
+        "antecedent": {
+          "quantity": "대입한 몰 부피",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계산된 R 값",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값을 얻는 절차를 적은 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-r-independent-of-gas",
+      "text": "기체 상수는 기체의 종류나 담긴 양이 달라져도 같은 값을 그대로 지킨다",
+      "form": {
+        "condition": "같은 단위계로 나타낼 때",
+        "type": "classification",
+        "scope": "이상 기체",
+        "antecedent": {
+          "quantity": "기체의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기체 상수의 값",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "종류에 따라 달라진다고 뒤집으면 하나의 식이 모든 기체에 통한다는 사실과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기체 상수는 기체의 종류가 달라지면 그 값도 함께 달라진다"
+    },
+    {
+      "id": "rel-r-unit-dependent",
+      "text": "R의 수치는 압력과 부피를 어떤 단위로 적느냐에 따라 달라지므로 단위를 함께 밝혀야 한다",
+      "form": {
+        "condition": "같은 물리량을 다른 단위로 바꿔 적을 때",
+        "type": "conditional",
+        "scope": "단위계를 지정해 계산하는 모든 경우",
+        "antecedent": {
+          "quantity": "쓰는 단위계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "R의 수치",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "단위 선택에 따른 표기 문제라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기체 상수는 기체마다 다르므로 산소와 질소는 R 값이 서로 다르다",
+      "why_wrong": "R는 이상 기체라면 종류를 가리지 않고 같은 값을 갖는 보편 상수다.",
+      "source": "llm",
+      "linked_relation": "rel-r-independent-of-gas"
+    },
+    {
+      "text": "R 값은 언제나 0.082다",
+      "why_wrong": "0.082는 압력을 atm, 부피를 L로 쓸 때의 값이다. 단위를 바꾸면 수치도 달라진다.",
+      "source": "llm",
+      "linked_relation": "rel-r-unit-dependent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-ideal-gas-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-avogadro-law",
+      "note": "R 값을 얻는 데 쓰는 몰 부피 22.4 L가 여기서 나온다"
+    },
+    {
+      "type": "related",
+      "target": "mate-absolute-temperature",
+      "note": "R의 단위 안에 절대 온도가 들어 있다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-02",
+  "pages": [
+    19
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

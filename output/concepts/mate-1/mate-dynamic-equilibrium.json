@@ -1,0 +1,114 @@
+{
+  "id": "mate-dynamic-equilibrium",
+  "concept_key": "concept:dynamic-equilibrium",
+  "registry_status": "new",
+  "term": "동적 평형",
+  "notation": {
+    "hanja": "動的平衡",
+    "hanja_gloss": "動 움직일 동 · 的 과녁 적 · 平 평평할 평 · 衡 저울대 형",
+    "english": "dynamic equilibrium"
+  },
+  "definition": "서로 반대 방향의 두 변화가 같은 빠르기로 계속 일어나, 겉으로는 아무것도 달라지지 않는 것처럼 보이는 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-de-rate",
+      "text": "동적 평형에 이르면 단위 시간에 증발하는 분자 수와 응축하는 분자 수가 같아진다.",
+      "form": {
+        "condition": "온도가 일정하게 유지되는 닫힌 용기일 때",
+        "type": "conditional",
+        "scope": "액체와 그 증기가 함께 있는 순물질계",
+        "antecedent": {
+          "quantity": "증발하는 분자 수",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "응축하는 분자 수",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 빠르기가 어느 한쪽으로 기울면 그것은 이미 평형이 아니므로 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동적 평형에 이르면 증발하는 분자 수가 응축하는 분자 수보다 많아진다."
+    },
+    {
+      "id": "rel-de-macro",
+      "text": "동적 평형 상태에서는 액체의 양과 증기의 압력이 겉보기에 변하지 않는다.",
+      "form": {
+        "condition": "온도가 일정한 닫힌 용기에서 충분한 시간이 지난 뒤",
+        "type": "causal",
+        "scope": "액체와 증기가 이룬 평형"
+      },
+      "invertible": true,
+      "invertible_reason": "평형에서 겉보기 양이 계속 달라진다면 평형의 정의와 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동적 평형 상태에서도 액체의 양은 계속 줄어든다."
+    },
+    {
+      "id": "rel-de-before",
+      "text": "평형에 이르기 전에는 증발이 응축보다 빨라 증기의 압력이 점점 커진다.",
+      "form": {
+        "condition": "닫힌 용기에 액체를 넣은 직후부터 평형에 닿기 전까지",
+        "type": "causal",
+        "scope": "동적 평형에 아직 이르지 않은 구간"
+      },
+      "invertible": false,
+      "invertible_reason": "평형 도달 이전이라는 시간 구간을 함께 뒤집어야 해서 방향만 바꾼 문장의 참·거짓이 정해지지 않는다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "동적 평형에 이르면 증발과 응축이 둘 다 멈춘다",
+      "why_wrong": "두 변화는 멈추지 않고 계속 일어난다. 다만 빠르기가 같아져서 겉으로 보이는 양이 달라지지 않을 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-de-rate"
+    },
+    {
+      "text": "열린 용기에 둔 액체도 시간이 지나면 동적 평형에 이른다",
+      "why_wrong": "증기가 용기 밖으로 달아나 응축이 증발을 따라잡지 못한다. 그래서 열린 용기의 액체는 결국 모두 증발한다.",
+      "source": "llm",
+      "linked_relation": "rel-de-macro"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-vapor-pressure",
+      "note": "이 상태에서 증기가 나타내는 압력이 증기 압력이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-boiling-point"
+    },
+    {
+      "type": "related",
+      "target": "mate-intermolecular-force",
+      "note": "증발과 응축의 빠르기를 좌우하는 것이 이 힘이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-02",
+  "pages": [
+    34
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

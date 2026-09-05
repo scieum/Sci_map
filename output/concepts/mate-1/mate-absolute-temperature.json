@@ -1,0 +1,134 @@
+{
+  "id": "mate-absolute-temperature",
+  "concept_key": "concept:absolute-temperature",
+  "registry_status": "new",
+  "term": "절대 온도",
+  "notation": {
+    "hanja": "絶對溫度",
+    "hanja_gloss": "絶 끊을 절 · 對 대할 대 · 溫 따뜻할 온 · 度 법도 도",
+    "english": "absolute temperature",
+    "symbol_display": "T(K) = t(℃) + 273",
+    "symbol_plain": "T(K) = t(C) + 273"
+  },
+  "definition": "기체의 부피가 이론적으로 0이 되는 -273 ℃를 눈금의 출발점으로 삼아 매긴 온도. 단위는 K를 쓰고, 섭씨온도에 273을 더해 얻는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-abs-temp-celsius-offset",
+      "text": "절대 온도는 섭씨온도에 273을 더한 값이므로 두 눈금은 눈금 한 칸의 크기가 서로 같다",
+      "form": {
+        "condition": "같은 물체의 온도를 두 눈금으로 옮겨 적을 때",
+        "type": "direct",
+        "scope": "1 K와 1 ℃의 간격이 같도록 정한 현행 온도 눈금",
+        "antecedent": {
+          "quantity": "섭씨온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "절대 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "더하기로만 이어진 두 눈금이 서로 반대로 움직인다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "섭씨온도가 높아질수록 절대 온도는 낮아진다"
+    },
+    {
+      "id": "rel-abs-temp-no-negative",
+      "text": "절대 온도는 0 K보다 낮은 값을 가질 수 없어 음수로 적히는 일이 없다",
+      "form": {
+        "condition": "온도를 절대 온도 눈금으로 나타낼 때",
+        "type": "classification",
+        "scope": "열역학 온도 눈금",
+        "antecedent": {
+          "quantity": "온도 눈금의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "음수 값의 존재",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값의 범위를 정하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abs-temp-required-in-gas-law",
+      "text": "기체 법칙과 이상 기체 방정식에 온도를 넣을 때는 반드시 절대 온도를 써야 한다",
+      "form": {
+        "condition": "기체 법칙에 온도 값을 대입해 계산할 때",
+        "type": "conditional",
+        "scope": "PV = nRT를 비롯한 기체 법칙 전부",
+        "antecedent": {
+          "quantity": "대입한 온도 눈금",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계산 결과의 타당성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "눈금을 잘못 고른 것은 방향이 뒤집힌 것이 아니라 규칙을 어긴 것이라 OX 로 삼기에 적절하지 않다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "0 K는 온도가 없는 상태이므로 물질도 존재하지 않는다",
+      "why_wrong": "0 K는 분자 운동이 이론적으로 가장 작아지는 온도일 뿐, 물질이 사라진다는 뜻이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-abs-temp-no-negative"
+    },
+    {
+      "text": "절대 온도는 섭씨온도보다 눈금 한 칸이 더 촘촘하다",
+      "why_wrong": "두 눈금은 시작점만 다르고 한 칸의 크기는 같다. 온도 차이를 나타낼 때는 K와 ℃의 값이 서로 같다.",
+      "source": "llm",
+      "linked_relation": "rel-abs-temp-celsius-offset"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-charles-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-ideal-gas-law",
+      "note": "PV = nRT의 T 자리에 들어가는 온도다"
+    },
+    {
+      "type": "related",
+      "target": "mate-kinetic-molecular-theory",
+      "note": "분자의 평균 운동 에너지가 이 온도에 비례한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-01",
+  "pages": [
+    16
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "켈빈 온도"
+  ]
+}

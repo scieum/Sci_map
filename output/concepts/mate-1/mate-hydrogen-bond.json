@@ -1,0 +1,120 @@
+{
+  "id": "mate-hydrogen-bond",
+  "concept_key": "concept:hydrogen-bond",
+  "registry_status": "new",
+  "term": "수소 결합",
+  "notation": {
+    "hanja": "水素結合",
+    "hanja_gloss": "水 물 수 · 素 본디 소 · 結 맺을 결 · 合 합할 합",
+    "english": "hydrogen bond"
+  },
+  "definition": "질소·산소·플루오린에 붙은 수소 원자가 이웃 분자의 질소·산소·플루오린에 강하게 끌리며 생기는, 분자 간 상호 작용 가운데 가장 센 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hb-condition",
+      "text": "수소 결합은 수소가 질소·산소·플루오린과 결합해 있을 때에만 분자 사이에 나타난다.",
+      "form": {
+        "condition": "수소가 어떤 원자와 결합해 있는가를 따질 때",
+        "type": "conditional",
+        "scope": "분자로 이루어진 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "전기음성도가 크고 크기가 작은 원자라는 조건이 빠지면 힘이 생기지 않으므로 모든 수소 함유 분자로 넓히면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 결합은 수소를 가진 분자라면 어느 것 사이에서나 나타난다."
+    },
+    {
+      "id": "rel-hb-strength",
+      "text": "분자량이 비슷하면 끓는점은 수소 결합, 쌍극자·쌍극자 힘, 분산력만 있는 물질 순으로 낮아진다.",
+      "form": {
+        "condition": "분자량이 비슷한 물질끼리 비교할 때",
+        "type": "direct",
+        "scope": "분자로 이루어진 순물질",
+        "antecedent": {
+          "quantity": "분자 간 힘의 종류가 갖는 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "끓는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세 힘의 세기 순서가 정해져 있어 순서를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자량이 비슷하면 끓는점은 분산력만 있는 물질, 쌍극자·쌍극자 힘, 수소 결합 순으로 낮아진다."
+    },
+    {
+      "id": "rel-hb-anomaly",
+      "text": "물·플루오린화 수소·암모니아는 같은 족의 다른 수소 화합물보다 분자량이 작은데도 끓는점이 높다.",
+      "form": {
+        "condition": "같은 족 수소 화합물의 끓는점을 주기별로 비교할 때",
+        "type": "causal",
+        "scope": "14~17족 원소의 수소 화합물"
+      },
+      "invertible": false,
+      "invertible_reason": "특정 물질들을 짚은 개별 사실 진술이라 양의 방향을 뒤집는 조작 자체가 성립하지 않는다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수소 결합은 수소를 포함한 모든 분자 사이에 작용한다",
+      "why_wrong": "수소가 질소·산소·플루오린과 결합해 큰 부분 전하를 띨 때에만 생긴다. 메테인처럼 탄소에 붙은 수소로는 수소 결합이 만들어지지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-hb-condition"
+    },
+    {
+      "text": "수소 결합은 공유 결합과 같은 화학 결합이므로 분자를 이루는 결합이다",
+      "why_wrong": "분자 안의 결합이 아니라 분자와 분자 사이의 인력이다. 세기도 공유 결합보다 훨씬 약해 끓을 때 끊어지는 쪽은 수소 결합이다.",
+      "source": "llm",
+      "linked_relation": "rel-hb-strength"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-polar-molecule",
+      "note": "부분 전하를 알아야 이 힘을 설명할 수 있다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-dipole-dipole-force",
+      "note": "쌍극자 사이의 인력이 특별히 강해진 경우로 본다"
+    },
+    {
+      "type": "related",
+      "target": "mate-dispersion-force",
+      "note": "세기 비교의 상대다"
+    },
+    {
+      "type": "next",
+      "target": "mate-boiling-point"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-01",
+  "pages": [
+    32,
+    33
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

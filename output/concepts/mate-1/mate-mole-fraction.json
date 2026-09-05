@@ -1,0 +1,130 @@
+{
+  "id": "mate-mole-fraction",
+  "concept_key": "concept:mole-fraction",
+  "registry_status": "new",
+  "term": "몰분율",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰'은 영어 mole 의 음차어라 한자 표기가 없다. 뒤의 '분율'만 分率에 해당하므로 낱말 전체에 대응하는 한자어는 없다.",
+    "english": "mole fraction",
+    "symbol_display": "X_A = n_A / (n_A + n_B)",
+    "symbol_plain": "X_A = n_A / (n_A + n_B)"
+  },
+  "definition": "혼합물에서 어떤 성분의 양(mol)이 전체 양(mol) 가운데 차지하는 몫을 나타낸 비. 단위가 없는 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mf-sum-is-one",
+      "text": "혼합물을 이루는 성분의 몰분율을 빠짐없이 더하면 그 합은 언제나 1이 된다",
+      "form": {
+        "condition": "혼합물의 성분을 하나도 빠뜨리지 않고 셀 때",
+        "type": "classification",
+        "scope": "기체·액체·고체를 가리지 않는 모든 혼합물",
+        "antecedent": {
+          "quantity": "모든 성분의 몰분율의 합",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "그 합이 갖는 값",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값이 1로 정해진다는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mf-proportional-to-partial-pressure",
+      "text": "같은 혼합 기체 안에서는 몰분율이 큰 성분일수록 나타내는 부분 압력도 크다",
+      "form": {
+        "condition": "같은 용기, 같은 온도의 혼합 기체 안에서 성분끼리 견줄 때",
+        "type": "direct",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "antecedent": {
+          "quantity": "성분 기체의 몰분율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "성분 기체의 부분 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "몰분율과 부분 압력은 곱셈으로 이어져 있어 방향을 맞바꾸면 반드시 거짓이 된다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 혼합 기체 안에서는 몰분율이 큰 성분일수록 나타내는 부분 압력이 작다"
+    },
+    {
+      "id": "rel-mf-dimensionless",
+      "text": "몰분율은 양(mol)끼리 나눈 값이라 단위가 붙지 않고 0과 1 사이에만 놓인다",
+      "form": {
+        "condition": "각 성분의 양(mol)이 0보다 큼",
+        "type": "classification",
+        "scope": "성분을 모두 헤아린 혼합물",
+        "antecedent": {
+          "quantity": "성분의 양(mol)",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "몰분율이 놓이는 범위",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값의 범위를 정하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몰분율은 백분율이므로 모두 더하면 100이 된다",
+      "why_wrong": "몰분율은 전체를 1로 놓고 나눈 비다. 성분의 몰분율을 모두 더하면 100이 아니라 1이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-mf-sum-is-one"
+    },
+    {
+      "text": "몰분율은 성분 기체의 질량을 전체 질량으로 나눈 값이다",
+      "why_wrong": "나누는 것은 질량이 아니라 양(mol)이다. 질량으로 나눈 값은 질량 백분율이며 몰분율과 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-mf-dimensionless"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-dalton-law-of-partial-pressure"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-ideal-gas-law",
+      "note": "부분 압력과 몰분율의 관계식을 유도하는 데 쓰인다"
+    },
+    {
+      "type": "related",
+      "target": "mate-partial-pressure"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-02"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-03",
+  "pages": [
+    24
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,137 @@
+{
+  "id": "mate-molecular-mass",
+  "concept_key": "concept:molecular-mass",
+  "registry_status": "new",
+  "term": "분자량",
+  "notation": {
+    "hanja": "分子量",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 量 헤아릴 량",
+    "english": "molecular mass",
+    "symbol_display": "M = wRT/PV",
+    "symbol_plain": "M = wRT/(PV)"
+  },
+  "definition": "분자 하나의 질량을 탄소-12 원자 질량의 12분의 1과 견주어 나타낸 상대적인 값. 기체에서는 이상 기체 방정식을 고쳐 써서 구한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mm-from-ideal-gas-law",
+      "text": "기체의 질량과 부피, 압력, 절대 온도를 재면 이상 기체 방정식을 고쳐 써서 분자량을 얻을 수 있다",
+      "form": {
+        "condition": "질량·부피·압력·절대 온도를 모두 알고 있음",
+        "type": "conditional",
+        "scope": "이상 기체로 근사할 수 있는 기체",
+        "antecedent": {
+          "quantity": "측정한 물리량의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분자량을 정할 수 있는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "계산이 가능한지를 말하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mm-mass-to-mole",
+      "text": "질량이 같은 두 기체라면 분자량이 큰 쪽에 들어 있는 분자의 양(mol)이 더 적다",
+      "form": {
+        "condition": "두 기체의 질량이 서로 같음",
+        "type": "inverse",
+        "scope": "순수한 기체끼리 견줄 때",
+        "antecedent": {
+          "quantity": "분자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "들어 있는 양(mol)",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 질량을 무거운 분자로 채우면 개수가 줄 수밖에 없으므로 뒤집은 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 같은 두 기체라면 분자량이 큰 쪽에 들어 있는 분자의 양(mol)이 더 많다"
+    },
+    {
+      "id": "rel-mm-density",
+      "text": "온도와 압력이 같다면 분자량이 큰 기체일수록 밀도가 크게 나타난다",
+      "form": {
+        "condition": "두 기체의 온도와 압력이 서로 같음",
+        "type": "direct",
+        "scope": "이상 기체로 근사할 수 있는 기체끼리 견줄 때",
+        "antecedent": {
+          "quantity": "분자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 부피에 같은 수의 분자가 들었다면 무거운 분자 쪽이 반드시 더 무거우므로 뒤집으면 거짓이다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도와 압력이 같다면 분자량이 큰 기체일수록 밀도가 작게 나타난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자량은 g 단위로 잰 분자 하나의 질량이다",
+      "why_wrong": "분자량은 기준 질량과 견준 상대적인 값이라 단위가 없다. g 단위가 붙는 것은 1 mol의 질량인 몰 질량이다.",
+      "source": "llm",
+      "linked_relation": "rel-mm-from-ideal-gas-law"
+    },
+    {
+      "text": "같은 질량의 기체라면 종류가 달라도 들어 있는 분자 수는 같다",
+      "why_wrong": "분자 하나의 질량이 다르므로 같은 질량이라도 분자 수는 다르다. 분자량이 클수록 분자 수는 적다.",
+      "source": "llm",
+      "linked_relation": "rel-mm-mass-to-mole"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-ideal-gas-law",
+      "note": "이 식을 변형해 분자량을 구한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-gas-constant"
+    },
+    {
+      "type": "related",
+      "target": "mate-avogadro-law",
+      "note": "같은 부피 속 분자 수가 같다는 사실이 분자량 비교의 발판이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-dispersion-force",
+      "note": "구조가 닮은 분자끼리라면 분자량이 큰 쪽이 분산력도 크다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-02",
+  "pages": [
+    20
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

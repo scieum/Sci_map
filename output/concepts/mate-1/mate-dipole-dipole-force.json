@@ -1,0 +1,135 @@
+{
+  "id": "mate-dipole-dipole-force",
+  "concept_key": "concept:dipole-dipole-force",
+  "registry_status": "new",
+  "term": "쌍극자·쌍극자 힘",
+  "aliases": [
+    "쌍극자-쌍극자 힘"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'쌍극자'는 雙極子에 해당하지만 '힘'은 고유어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "dipole-dipole force"
+  },
+  "definition": "영구 쌍극자를 가진 극성 분자들이 반대 전하끼리 마주 보도록 늘어설 때, 이웃한 두 쌍극자 사이에 생기는 인력.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ddf-moment",
+      "text": "극성 분자의 쌍극자 모멘트가 클수록 이웃 분자와 주고받는 이 힘이 세진다.",
+      "form": {
+        "condition": "분자량과 분자 크기가 비슷한 물질끼리 비교할 때",
+        "type": "direct",
+        "scope": "영구 쌍극자를 가진 극성 분자 사이",
+        "antecedent": {
+          "quantity": "쌍극자 모멘트",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "쌍극자·쌍극자 힘의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전하의 치우침이 클수록 정전기적 인력이 커지므로 반대 방향 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "극성 분자의 쌍극자 모멘트가 클수록 이웃 분자와 주고받는 이 힘이 약해진다."
+    },
+    {
+      "id": "rel-ddf-scope",
+      "text": "쌍극자·쌍극자 힘은 영구 쌍극자를 가진 분자 사이에서만 나타난다.",
+      "form": {
+        "condition": "분자에 영구 쌍극자가 있는가를 따질 때",
+        "type": "conditional",
+        "scope": "분자로 이루어진 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "영구 쌍극자가 없으면 마주 볼 전하 자체가 없으므로 무극성 분자에서 작용한다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "쌍극자·쌍극자 힘은 무극성 분자 사이에서도 나타난다."
+    },
+    {
+      "id": "rel-ddf-bp",
+      "text": "분자량이 비슷하면 극성 분자 물질이 무극성 분자 물질보다 끓는점이 높다.",
+      "form": {
+        "condition": "분자량이 비슷하고 수소 결합은 하지 않는 물질끼리 비교할 때",
+        "type": "direct",
+        "scope": "수소 결합이 없는 분자성 물질",
+        "antecedent": {
+          "quantity": "분자의 극성",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "끓는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "쌍극자·쌍극자 힘이 분산력에 더해지므로 극성 쪽 끓는점이 낮다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자량이 비슷하면 극성 분자 물질이 무극성 분자 물질보다 끓는점이 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "쌍극자·쌍극자 힘은 극성 분자 안에서 원자들을 붙잡아 두는 힘이다",
+      "why_wrong": "분자 안이 아니라 분자와 분자 사이에 작용한다. 분자 안의 원자를 잇는 것은 공유 결합이다.",
+      "source": "llm",
+      "linked_relation": "rel-ddf-scope"
+    },
+    {
+      "text": "극성 분자 사이에는 분산력이 작용하지 않는다",
+      "why_wrong": "분산력은 전자를 가진 모든 분자 사이에 작용한다. 극성 분자에서는 그 위에 쌍극자·쌍극자 힘이 더해질 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-ddf-bp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-polar-molecule",
+      "note": "영구 쌍극자가 무엇인지 알아야 이 힘을 설명할 수 있다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-intermolecular-force"
+    },
+    {
+      "type": "related",
+      "target": "mate-dispersion-force",
+      "note": "작용하는 분자의 범위가 다르다"
+    },
+    {
+      "type": "related",
+      "target": "mate-hydrogen-bond",
+      "note": "세기 비교의 상대다"
+    },
+    {
+      "type": "next",
+      "target": "mate-boiling-point"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-01",
+  "pages": [
+    29
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

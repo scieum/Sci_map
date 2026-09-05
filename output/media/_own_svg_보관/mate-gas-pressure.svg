@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340"
+     font-family="Pretendard, 'Malgun Gothic', sans-serif">
+  <title>기체의 압력 — 벽에 부딪치는 횟수가 잦아지거나 충돌이 세질수록 압력이 커진다</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#189fe6"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#20242b">벽에 부딪치는 횟수가 잦아지거나 충돌이 세질수록 압력이 커진다</text>
+
+  <!-- 패널 이름표 -->
+  <text x="136" y="62" text-anchor="middle" font-size="15" font-weight="600" fill="#20242b">기준 상태</text>
+  <text x="400" y="62" text-anchor="middle" font-size="15" font-weight="600" fill="#20242b">충돌 횟수만 늘면</text>
+  <text x="664" y="62" text-anchor="middle" font-size="15" font-weight="600" fill="#20242b">충돌 세기만 커지면</text>
+
+  <!-- 용기 -->
+  <rect x="24" y="76" width="224" height="140" rx="12" fill="#eef1f5" stroke="#6b7684" stroke-width="2"/>
+  <rect x="288" y="76" width="224" height="140" rx="12" fill="#eef1f5" stroke="#6b7684" stroke-width="2"/>
+  <rect x="552" y="76" width="224" height="140" rx="12" fill="#eef1f5" stroke="#6b7684" stroke-width="2"/>
+
+  <!-- 패널 1 : 기준 -->
+  <g fill="#189fe6">
+    <circle cx="62" cy="112" r="6"/><circle cx="120" cy="160" r="6"/><circle cx="170" cy="196" r="6"/>
+    <circle cx="200" cy="118" r="6"/><circle cx="150" cy="98" r="6"/>
+  </g>
+  <g stroke="#189fe6" stroke-width="2" stroke-linecap="round" marker-end="url(#a)">
+    <line x1="70" y1="112" x2="92" y2="112"/>
+    <line x1="126" y1="154" x2="140" y2="140"/>
+    <line x1="162" y1="196" x2="140" y2="196"/>
+    <line x1="208" y1="118" x2="230" y2="118"/>
+    <line x1="156" y1="104" x2="170" y2="118"/>
+  </g>
+  <g stroke="#189fe6" stroke-width="2.5" stroke-linecap="round">
+    <line x1="240" y1="110" x2="248" y2="110"/>
+    <line x1="240" y1="150" x2="248" y2="150"/>
+    <line x1="240" y1="190" x2="248" y2="190"/>
+  </g>
+
+  <!-- 패널 2 : 충돌 횟수 증가 -->
+  <g fill="#dc2626">
+    <circle cx="326" cy="112" r="6"/><circle cx="384" cy="160" r="6"/><circle cx="434" cy="196" r="6"/>
+    <circle cx="464" cy="118" r="6"/><circle cx="414" cy="98" r="6"/>
+  </g>
+  <g stroke="#dc2626" stroke-width="2" stroke-linecap="round" marker-end="url(#ar)">
+    <line x1="334" y1="112" x2="356" y2="112"/>
+    <line x1="390" y1="154" x2="404" y2="140"/>
+    <line x1="426" y1="196" x2="404" y2="196"/>
+    <line x1="472" y1="118" x2="494" y2="118"/>
+    <line x1="420" y1="104" x2="434" y2="118"/>
+  </g>
+  <g stroke="#dc2626" stroke-width="2.5" stroke-linecap="round">
+    <line x1="504" y1="100" x2="512" y2="100"/>
+    <line x1="504" y1="122" x2="512" y2="122"/>
+    <line x1="504" y1="144" x2="512" y2="144"/>
+    <line x1="504" y1="166" x2="512" y2="166"/>
+    <line x1="504" y1="188" x2="512" y2="188"/>
+    <line x1="504" y1="206" x2="512" y2="206"/>
+  </g>
+
+  <!-- 패널 3 : 충돌 세기 증가 -->
+  <g fill="#dc2626">
+    <circle cx="590" cy="112" r="6"/><circle cx="648" cy="160" r="6"/><circle cx="698" cy="196" r="6"/>
+    <circle cx="728" cy="118" r="6"/><circle cx="678" cy="98" r="6"/>
+  </g>
+  <g stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ar)">
+    <line x1="598" y1="112" x2="636" y2="112"/>
+    <line x1="654" y1="154" x2="682" y2="126"/>
+    <line x1="690" y1="196" x2="652" y2="196"/>
+    <line x1="736" y1="118" x2="766" y2="118"/>
+    <line x1="684" y1="104" x2="712" y2="132"/>
+  </g>
+  <g stroke="#dc2626" stroke-width="4.5" stroke-linecap="round">
+    <line x1="760" y1="110" x2="776" y2="110"/>
+    <line x1="760" y1="150" x2="776" y2="150"/>
+    <line x1="760" y1="190" x2="776" y2="190"/>
+  </g>
+
+  <!-- 설명 -->
+  <text x="136" y="238" text-anchor="middle" font-size="13" fill="#6b7684">같은 시간에 벽 충돌 3회</text>
+  <text x="400" y="238" text-anchor="middle" font-size="13" fill="#6b7684">같은 시간에 벽 충돌 6회</text>
+  <text x="664" y="238" text-anchor="middle" font-size="13" fill="#6b7684">벽 충돌 3회 · 한 번이 더 셈</text>
+
+  <!-- 압력 눈금 -->
+  <rect x="44" y="256" width="184" height="12" rx="6" fill="#edf0f4"/>
+  <rect x="44" y="256" width="74" height="12" rx="6" fill="#189fe6"/>
+  <rect x="308" y="256" width="184" height="12" rx="6" fill="#edf0f4"/>
+  <rect x="308" y="256" width="148" height="12" rx="6" fill="#dc2626"/>
+  <rect x="572" y="256" width="184" height="12" rx="6" fill="#edf0f4"/>
+  <rect x="572" y="256" width="148" height="12" rx="6" fill="#dc2626"/>
+
+  <text x="136" y="290" text-anchor="middle" font-size="13" font-weight="600" fill="#20242b">압력 P (기준)</text>
+  <text x="400" y="290" text-anchor="middle" font-size="13" font-weight="600" fill="#20242b">압력 P 커짐</text>
+  <text x="664" y="290" text-anchor="middle" font-size="13" font-weight="600" fill="#20242b">압력 P 커짐</text>
+
+  <text x="400" y="322" text-anchor="middle" font-size="13" fill="#6b7684">용기의 부피와 기체의 양은 세 경우 모두 같다 · 오른쪽 벽의 짧은 선은 같은 시간 동안의 충돌 자국</text>
+</svg>

@@ -1,0 +1,44 @@
+# ── 저작권상 공개 리포에 올리지 않는 것 ─────────────────────────────────────
+# 아래 셋은 타인 저작물이거나 그 원문이다. 리포가 PUBLIC 이므로 제외한다.
+# 리포를 private 로 바꾸면 다시 판단할 수 있다 (docs/rights_policy.md).
+
+# 교과서·기출 원본 PDF (천재교과서 등)
+/inbox/
+
+# 교과서 원문 텍스트 — C4 n-gram 대조용 내부 자료다. 배포 대상이 아니다 (CLAUDE.md §9.4)
+/output/source/
+
+# 교과서 그림 크롭 — 전부 access_tier: restricted.
+# 공개 URL 노출 0건이 배포 차단 조건이다 (CLAUDE.md §6, 설계서 §0.4)
+/app/public/media/*.png
+/app/public/media/**/*.png
+/app/public/media/**/_preview/
+
+# ── 빌드 산출물·의존성 ──────────────────────────────────────────────────────
+node_modules/
+/app/.next/
+/app/out/
+/app/build/
+*.tsbuildinfo
+next-env.d.ts
+
+# ── 환경·비밀 ───────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── OS·편집기 ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+
+# OneDrive 동기화가 남기는 충돌 사본
+*-DESKTOP-*.*
+*충돌본*
+
+# 파이썬
+__pycache__/
+*.py[cod]
+.venv/

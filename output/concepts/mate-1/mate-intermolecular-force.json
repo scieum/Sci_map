@@ -1,0 +1,141 @@
+{
+  "id": "mate-intermolecular-force",
+  "concept_key": "concept:intermolecular-force",
+  "registry_status": "new",
+  "term": "분자 간 상호 작용",
+  "aliases": [
+    "분자 간 힘",
+    "분자 사이의 힘"
+  ],
+  "notation": {
+    "hanja": "分子間相互作用",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 間 사이 간 · 相 서로 상 · 互 서로 호 · 作 지을 작 · 用 쓸 용",
+    "english": "intermolecular force"
+  },
+  "definition": "분자와 분자 사이에서 서로를 끌어당기는 힘을 통틀어 이르는 말. 그 세기가 같은 조건에서 물질이 어느 상태로 존재할지를 갈라 놓는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-imf-state",
+      "text": "분자 간 상호 작용이 클수록 물질은 기체보다 액체나 고체로 존재하기 쉽다.",
+      "form": {
+        "condition": "온도와 압력이 같은 조건에서 서로 다른 물질을 비교할 때",
+        "type": "causal",
+        "scope": "분자로 이루어진 물질",
+        "antecedent": {
+          "quantity": "분자 간 상호 작용의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "액체·고체로 존재할 경향",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "인력이 작을수록 응집한다는 진술은 상태 변화의 방향과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 간 상호 작용이 작을수록 물질은 액체나 고체로 존재하기 쉽다."
+    },
+    {
+      "id": "rel-imf-bp",
+      "text": "분자 간 상호 작용이 큰 물질일수록 녹는점과 끓는점이 높다.",
+      "form": {
+        "condition": "외부 압력이 같고 분자성 물질끼리 비교할 때",
+        "type": "direct",
+        "scope": "분자로 이루어진 순물질",
+        "antecedent": {
+          "quantity": "분자 간 상호 작용의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "녹는점·끓는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "인력을 끊는 데 드는 에너지가 클수록 상태 변화 온도가 높아지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 간 상호 작용이 큰 물질일수록 녹는점과 끓는점이 낮다."
+    },
+    {
+      "id": "rel-imf-phase",
+      "text": "같은 물질에서 분자 간 인력이 미치는 영향은 고체·액체·기체 순으로 작아진다.",
+      "form": {
+        "condition": "같은 물질을 상태만 바꾸어 비교할 때",
+        "type": "conditional",
+        "scope": "분자로 이루어진 순물질의 세 가지 상태"
+      },
+      "invertible": true,
+      "invertible_reason": "세 상태의 순서를 뒤집으면 기체에서 인력이 가장 크다는 뜻이 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12물에01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 물질에서 분자 간 인력이 미치는 영향은 기체·액체·고체 순으로 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자 간 상호 작용은 분자 안의 원자를 붙잡아 두는 공유 결합과 같은 힘이다",
+      "why_wrong": "공유 결합은 분자 안에서 원자를 잇는 결합이고, 분자 간 상호 작용은 분자와 분자 사이에 작용하는 훨씬 약한 인력이다. 작용하는 자리가 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-imf-state"
+    },
+    {
+      "text": "기체 분자 사이에는 분자 간 상호 작용이 아예 없다",
+      "why_wrong": "매우 약할 뿐 없지는 않다. 힘이 전혀 없다면 어떤 기체도 온도를 낮추어 액체로 만들 수 없을 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-imf-state"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-dipole-dipole-force"
+    },
+    {
+      "type": "next",
+      "target": "mate-dispersion-force"
+    },
+    {
+      "type": "next",
+      "target": "mate-hydrogen-bond"
+    },
+    {
+      "type": "next",
+      "target": "mate-vapor-pressure",
+      "note": "액체가 증발하기 어려운 정도를 이 힘으로 설명한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-molecular-crystal",
+      "note": "분자 결정을 붙들고 있는 힘이 바로 이것이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-ideal-gas",
+      "note": "이 힘을 0으로 놓고 세운 기체 모형이 이상 기체다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-03",
+    "12물에01-04"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-2-01",
+  "pages": [
+    28
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

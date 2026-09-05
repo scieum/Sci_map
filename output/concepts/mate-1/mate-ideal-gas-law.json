@@ -1,0 +1,171 @@
+{
+  "id": "mate-ideal-gas-law",
+  "concept_key": "concept:ideal-gas-law",
+  "registry_status": "new",
+  "term": "이상 기체 방정식",
+  "notation": {
+    "hanja": "理想氣體方程式",
+    "hanja_gloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체 · 方 모 방 · 程 법 정 · 式 법 식",
+    "english": "ideal gas law",
+    "symbol_display": "PV = nRT",
+    "symbol_plain": "PV = nRT"
+  },
+  "definition": "세 기체 법칙을 하나로 묶어 압력·부피·양(mol)·절대 온도를 PV = nRT 한 줄로 이어 놓은 관계식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-igl-combines-three-laws",
+      "text": "보일·샤를·아보가드로 법칙을 함께 놓으면 부피는 양(mol)과 절대 온도에 비례하고 압력에 반비례한다",
+      "form": {
+        "condition": "세 법칙이 모두 성립하는 조건",
+        "type": "conditional",
+        "scope": "이상 기체",
+        "antecedent": {
+          "quantity": "기체에 걸린 압력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "여러 비례 관계를 한 문장에 묶어 두어 방향을 통째로 맞바꾸면 참·거짓이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-igl-equation",
+      "text": "이상 기체에서는 압력과 부피를 곱한 값이 양(mol)과 기체 상수와 절대 온도를 곱한 값과 같다",
+      "form": {
+        "condition": "기체를 이상 기체로 볼 수 있을 때",
+        "type": "conditional",
+        "scope": "이상 기체, 온도는 절대 온도로 나타냄",
+        "antecedent": {
+          "quantity": "기체의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "압력과 부피의 곱",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "등식을 적어 놓은 문장이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-igl-solve-unknown",
+      "text": "압력·부피·온도·양(mol) 가운데 셋을 재면 나머지 하나는 이 식으로 계산해 낼 수 있다",
+      "form": {
+        "condition": "네 변수 가운데 셋의 값을 알고 있음",
+        "type": "conditional",
+        "scope": "이상 기체로 근사할 수 있는 기체",
+        "antecedent": {
+          "quantity": "알고 있는 변수의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "남은 변수를 정할 수 있는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "계산의 가능 여부를 말하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-igl-partial-pressure-link",
+      "text": "부피와 온도가 같은 용기 안에서는 성분 기체의 부분 압력이 그 기체의 양(mol)에 비례한다",
+      "form": {
+        "condition": "용기의 부피와 온도가 일정함",
+        "type": "direct",
+        "scope": "서로 반응하지 않는 이상 기체 혼합물",
+        "antecedent": {
+          "quantity": "성분 기체의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "성분 기체의 부분 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 부피·온도에서 분자가 늘었는데 압력이 줄어든다는 말은 이 식과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12물에01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부피와 온도가 같은 용기 안에서는 성분 기체의 양(mol)이 많을수록 부분 압력이 작아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "PV = nRT의 T 자리에는 섭씨온도를 그대로 넣어도 된다",
+      "why_wrong": "이 식의 T는 절대 온도다. 섭씨온도를 넣으면 0 ℃에서 압력이나 부피가 0이 되는 잘못된 결과가 나온다.",
+      "source": "llm",
+      "linked_relation": "rel-igl-equation"
+    },
+    {
+      "text": "이상 기체 방정식은 기체마다 R 값이 달라 종류별로 따로 세워야 한다",
+      "why_wrong": "R는 모든 이상 기체에 공통으로 쓰이는 상수다. 그래서 하나의 식으로 어떤 기체든 다룰 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-igl-solve-unknown"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-boyle-law"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-charles-law"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-avogadro-law"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-ideal-gas"
+    },
+    {
+      "type": "next",
+      "target": "mate-gas-constant"
+    },
+    {
+      "type": "next",
+      "target": "mate-molecular-mass",
+      "note": "이 식을 변형하면 기체의 분자량을 구할 수 있다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에01-01",
+    "12물에01-02"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅰ. 물질의 세 가지 상태",
+  "unit_id": "mate-1",
+  "topic_id": "mate-1-1-02",
+  "pages": [
+    18,
+    19,
+    20
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "이상 기체 상태 방정식"
+  ]
+}
