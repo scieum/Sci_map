@@ -1,0 +1,106 @@
+{
+  "id": "mate-hydration",
+  "concept_key": "concept:hydration",
+  "registry_status": "new",
+  "term": "수화",
+  "notation": {
+    "hanja": "水和",
+    "hanja_gloss": "水 물 수 · 和 화할 화",
+    "english": "hydration"
+  },
+  "definition": "물 분자가 부분 전하로 이온이나 극성 분자를 에워싸, 그 입자를 고체 결정에서 떼어 내 붙들고 있는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hyd-process",
+      "text": "이온 결정을 물에 넣으면 물 분자가 표면의 이온을 에워싸고, 그 이온이 결정에서 하나씩 떨어져 나와 녹는다.",
+      "form": {
+        "condition": "이온 결정이 물과 맞닿아 있을 때",
+        "type": "causal",
+        "scope": "물에 녹는 이온 결합 물질과 극성 물질에 한정한다"
+      },
+      "invertible": false,
+      "invertible_reason": "용해가 일어나는 차례를 서술한 명제라 특정한 양의 방향을 뒤집는 조작이 성립하지 않는다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hyd-orientation",
+      "text": "수화된 이온 둘레에서 물 분자는 양이온 쪽으로 산소를, 음이온 쪽으로 수소를 돌려 댄다.",
+      "form": {
+        "condition": "수화된 이온을 둘러싼 물 분자의 방향을 볼 때",
+        "type": "causal",
+        "scope": "수용액 속의 양이온·음이온에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "정전기적 인력의 방향이 정해져 있어 산소와 수소를 바꾸면 척력이 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수화된 이온 둘레에서 물 분자는 양이온 쪽으로 수소를, 음이온 쪽으로 산소를 돌려 댄다."
+    },
+    {
+      "id": "rel-hyd-condition",
+      "text": "수화가 일어나려면 용질 입자가 전하나 부분 전하를 띠어야 하므로 무극성 물질은 수화되지 않는다.",
+      "form": {
+        "condition": "용질이 전하나 부분 전하를 띠는지 따질 때",
+        "type": "conditional",
+        "scope": "물을 용매로 삼은 용해에 한정한다"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 진술이라 방향을 뒤집기보다 조건을 지우는 꼴이 되어 반드시 거짓이라 단정하기 어렵다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소금이 물에 녹으면 소금 입자가 사라져 없어진다",
+      "why_wrong": "결정에서 떨어져 나온 이온이 물 분자에 둘러싸인 채 흩어졌을 뿐, 입자 자체는 그대로 물속에 남아 있다.",
+      "source": "llm",
+      "linked_relation": "rel-hyd-process"
+    },
+    {
+      "text": "수화는 물 분자가 용질과 새로운 화학 결합을 만드는 반응이다",
+      "why_wrong": "부분 전하에 의한 정전기적 인력으로 둘러싸는 것이지 새 물질이 만들어지는 화학 변화가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-hyd-orientation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-water-polarity",
+      "note": "부분 전하를 알아야 둘러싸는 방향을 설명한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-water-molecule-structure"
+    },
+    {
+      "type": "related",
+      "target": "mate-hydrogen-bond-in-water",
+      "note": "물 분자끼리의 힘과 물-용질 사이의 힘을 견주어 본다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-01",
+  "pages": [
+    48,
+    54
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

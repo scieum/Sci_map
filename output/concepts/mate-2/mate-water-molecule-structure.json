@@ -1,0 +1,113 @@
+{
+  "id": "mate-water-molecule-structure",
+  "concept_key": "concept:water-molecule-structure",
+  "registry_status": "new",
+  "term": "물 분자의 구조",
+  "aliases": [
+    "물의 굽은 형 구조"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'물'은 고유어라 낱말 전체에 대응하는 한자어가 없다. 뒤의 '분자 구조'만 分子構造에 해당한다.",
+    "english": "molecular structure of water",
+    "symbol_display": "H₂O",
+    "symbol_plain": "H2O"
+  },
+  "definition": "산소 원자 하나에 수소 원자 둘이 공유 결합으로 붙어, 두 결합이 약 104.5°로 벌어진 채 꺾여 있는 물 분자의 생김새.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wms-bond",
+      "text": "물 분자 안에서 산소와 수소를 이어 주는 것은 전자쌍을 함께 쓰는 공유 결합이다.",
+      "form": {
+        "condition": "물 분자 하나의 내부 결합 종류를 물을 때",
+        "type": "classification",
+        "scope": "분자 안의 결합에 한정하며 분자 사이의 힘은 제외한다"
+      },
+      "invertible": false,
+      "invertible_reason": "결합의 종류를 지목한 진술이라 크기나 방향을 뒤집는 조작 자체가 성립하지 않는다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wms-bent",
+      "text": "물 분자는 세 원자가 한 직선에 놓이지 않고 약 104.5°의 각으로 꺾인 굽은 형이다.",
+      "form": {
+        "condition": "물 분자 한 개의 결합각을 따질 때",
+        "type": "classification",
+        "scope": "고체·액체·기체 어느 상태의 물 분자에나 해당한다"
+      },
+      "invertible": true,
+      "invertible_reason": "직선형과 굽은 형은 양립할 수 없는 배타적 분류라 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물 분자는 산소를 가운데 두고 두 수소가 180°로 마주 보는 직선형이다."
+    },
+    {
+      "id": "rel-wms-shape-polarity",
+      "text": "굽은 형이라서 두 결합의 극성이 서로 상쇄되지 못하고 물 분자 전체가 극성을 띤다.",
+      "form": {
+        "condition": "분자의 모양과 극성을 이어 볼 때",
+        "type": "causal",
+        "scope": "결합 자체가 극성인 분자에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "굽은 형이 상쇄를 막는다는 것이 요지이므로 상쇄되어 무극성이 된다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "굽은 형이라서 두 결합의 극성이 서로 상쇄되어 물 분자 전체는 무극성이 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물 분자는 H와 O와 H가 일직선으로 늘어선 직선형이다",
+      "why_wrong": "두 O-H 결합이 약 104.5°로 벌어져 있어 세 원자가 한 직선에 놓이지 않는다. 이 꺾임이 물의 극성을 만드는 출발점이다.",
+      "source": "llm",
+      "linked_relation": "rel-wms-bent"
+    },
+    {
+      "text": "물 분자 안에서 산소와 수소를 붙잡고 있는 힘이 수소 결합이다",
+      "why_wrong": "분자 안의 산소와 수소는 공유 결합으로 이어져 있다. 수소 결합은 분자와 분자 사이에 작용하는 별개의 힘이다.",
+      "source": "llm",
+      "linked_relation": "rel-wms-bond"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-water-polarity",
+      "note": "굽은 형을 알아야 부분 전하가 어디에 몰리는지 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "mate-hydrogen-bond-in-water"
+    },
+    {
+      "type": "related",
+      "target": "mate-water-density",
+      "note": "얼음의 육각형 배열은 이 굽은 형에서 비롯한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-01",
+  "pages": [
+    48,
+    54,
+    55
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

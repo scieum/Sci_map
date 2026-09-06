@@ -61,6 +61,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "기체 법칙",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "絶 끊을 절 · 對 대할 대 · 溫 따뜻할 온 · 度 법도 도",
     "mediaCaption": "섭씨온도와 절대 온도",
@@ -132,6 +134,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "기체 법칙",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "大 큰 대 · 氣 기운 기 · 壓 누를 압",
     "mediaCaption": "그림 Ⅰ-2 대기압",
@@ -200,6 +204,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "기체 법칙",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-01",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-8 아보가드로 법칙과 기체 분자의 운동",
     "mediaFile": "mate-1-fig-08.png"
@@ -259,6 +265,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "기체 법칙",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-01",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-4 보일 법칙과 기체 분자의 운동",
     "mediaFile": "mate-1-fig-04.png"
@@ -328,6 +336,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "기체 법칙",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-01",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-6 샤를 법칙과 기체 분자의 운동",
     "mediaFile": "mate-1-fig-06.png"
@@ -409,6 +419,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "기체 법칙",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "氣 기운 기 · 體 몸 체 · 壓 누를 압 · 力 힘 력",
     "mediaCaption": "그림 Ⅰ-1 기체의 압력",
@@ -474,10 +486,87 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "이상 기체 방정식",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-02",
     "hasRestrictedMedia": true,
     "hanjaGloss": "氣 기운 기 · 體 몸 체 · 常 항상 상 · 數 셈 수",
     "mediaCaption": "기체 상수 R 값의 유도",
     "mediaFile": "mate-1-fig-31.png"
+  },
+  {
+    "id": "mate-ideal-gas",
+    "term": "이상 기체",
+    "aliases": [],
+    "hanja": "理想氣體",
+    "english": "ideal gas",
+    "definition": "어떤 온도와 압력에서도 기체 법칙을 어김없이 따른다고 가정한 기체 모형. 분자 자체의 부피와 분자 사이의 힘을 없는 것으로 놓는다.",
+    "relations": [
+      {
+        "id": "rel-ideal-gas-follows-laws",
+        "text": "기체 법칙에서 벗어나는 일 없이 언제나 그대로 들어맞는 기체를 이상 기체라 부른다",
+        "condition": "기체 법칙을 이론적으로 다룰 때",
+        "scope": "실제로는 존재하지 않는 이상화된 모형",
+        "invertible": false
+      },
+      {
+        "id": "rel-ideal-gas-real-deviation",
+        "text": "실제 기체는 압력이 낮고 온도가 높을수록 이상 기체에 가깝게 행동한다",
+        "condition": "실제 기체를 이상 기체 모형과 견줄 때",
+        "scope": "분자 사이의 힘과 분자 자체의 부피를 무시할 만한 조건",
+        "invertible": true,
+        "invertedText": "실제 기체는 압력이 높고 온도가 낮을수록 이상 기체에 가깝게 행동한다"
+      },
+      {
+        "id": "rel-ideal-gas-assumptions",
+        "text": "이상 기체에서는 분자가 차지하는 부피도, 분자끼리 끌거나 미는 힘도 모두 없는 것으로 본다",
+        "condition": "기체 분자 운동론의 가정을 받아들일 때",
+        "scope": "이상 기체 모형 안에서만",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "헬륨이나 수소처럼 가벼운 기체는 실제로 이상 기체다",
+        "whyWrong": "이상 기체는 조건을 단순하게 만든 모형이며 실제로 존재하는 기체가 아니다. 가벼운 기체는 이상 기체에 가까울 뿐이다."
+      },
+      {
+        "text": "압력을 아주 높이면 기체가 더 규칙적으로 움직여 이상 기체에 가까워진다",
+        "whyWrong": "압력이 높아지면 분자 사이의 거리가 가까워져 인력과 분자 자체의 부피가 두드러지므로 오히려 이상 기체에서 멀어진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-kinetic-molecular-theory",
+        "note": "운동론의 가정을 만족하는 기체가 이상 기체다"
+      },
+      {
+        "type": "next",
+        "target": "mate-ideal-gas-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-boyle-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-charles-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-intermolecular-force",
+        "note": "이상 기체가 없다고 가정한 바로 그 힘 — 실제 기체가 이상 기체에서 벗어나는 까닭이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "물질의 세 가지 상태 > 기체의 성질",
+    "topic": "이상 기체 방정식",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체",
+    "mediaCaption": "그림 Ⅰ-10 기체 분자 운동론의 가정",
+    "mediaFile": "mate-1-fig-10.png"
   },
   {
     "id": "mate-ideal-gas-law",
@@ -559,83 +648,12 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "이상 기체 방정식",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-02",
     "hasRestrictedMedia": true,
     "hanjaGloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체 · 方 모 방 · 程 법 정 · 式 법 식",
     "mediaCaption": "그림 Ⅰ-9 기체의 부피와 압력, 온도, 물질의 양(mol) 사이의 관계",
     "mediaFile": "mate-1-fig-09.png"
-  },
-  {
-    "id": "mate-ideal-gas",
-    "term": "이상 기체",
-    "aliases": [],
-    "hanja": "理想氣體",
-    "english": "ideal gas",
-    "definition": "어떤 온도와 압력에서도 기체 법칙을 어김없이 따른다고 가정한 기체 모형. 분자 자체의 부피와 분자 사이의 힘을 없는 것으로 놓는다.",
-    "relations": [
-      {
-        "id": "rel-ideal-gas-follows-laws",
-        "text": "기체 법칙에서 벗어나는 일 없이 언제나 그대로 들어맞는 기체를 이상 기체라 부른다",
-        "condition": "기체 법칙을 이론적으로 다룰 때",
-        "scope": "실제로는 존재하지 않는 이상화된 모형",
-        "invertible": false
-      },
-      {
-        "id": "rel-ideal-gas-real-deviation",
-        "text": "실제 기체는 압력이 낮고 온도가 높을수록 이상 기체에 가깝게 행동한다",
-        "condition": "실제 기체를 이상 기체 모형과 견줄 때",
-        "scope": "분자 사이의 힘과 분자 자체의 부피를 무시할 만한 조건",
-        "invertible": true,
-        "invertedText": "실제 기체는 압력이 높고 온도가 낮을수록 이상 기체에 가깝게 행동한다"
-      },
-      {
-        "id": "rel-ideal-gas-assumptions",
-        "text": "이상 기체에서는 분자가 차지하는 부피도, 분자끼리 끌거나 미는 힘도 모두 없는 것으로 본다",
-        "condition": "기체 분자 운동론의 가정을 받아들일 때",
-        "scope": "이상 기체 모형 안에서만",
-        "invertible": false
-      }
-    ],
-    "misconceptions": [
-      {
-        "text": "헬륨이나 수소처럼 가벼운 기체는 실제로 이상 기체다",
-        "whyWrong": "이상 기체는 조건을 단순하게 만든 모형이며 실제로 존재하는 기체가 아니다. 가벼운 기체는 이상 기체에 가까울 뿐이다."
-      },
-      {
-        "text": "압력을 아주 높이면 기체가 더 규칙적으로 움직여 이상 기체에 가까워진다",
-        "whyWrong": "압력이 높아지면 분자 사이의 거리가 가까워져 인력과 분자 자체의 부피가 두드러지므로 오히려 이상 기체에서 멀어진다."
-      }
-    ],
-    "links": [
-      {
-        "type": "prereq",
-        "target": "mate-kinetic-molecular-theory",
-        "note": "운동론의 가정을 만족하는 기체가 이상 기체다"
-      },
-      {
-        "type": "next",
-        "target": "mate-ideal-gas-law"
-      },
-      {
-        "type": "related",
-        "target": "mate-boyle-law"
-      },
-      {
-        "type": "related",
-        "target": "mate-charles-law"
-      },
-      {
-        "type": "related",
-        "target": "mate-intermolecular-force",
-        "note": "이상 기체가 없다고 가정한 바로 그 힘 — 실제 기체가 이상 기체에서 벗어나는 까닭이다"
-      }
-    ],
-    "subject": "물질과 에너지",
-    "unit": "물질의 세 가지 상태 > 기체의 성질",
-    "topic": "이상 기체 방정식",
-    "hasRestrictedMedia": true,
-    "hanjaGloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체",
-    "mediaCaption": "그림 Ⅰ-10 기체 분자 운동론의 가정",
-    "mediaFile": "mate-1-fig-10.png"
   },
   {
     "id": "mate-kinetic-molecular-theory",
@@ -698,6 +716,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "이상 기체 방정식",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-02",
     "hasRestrictedMedia": true,
     "hanjaGloss": "氣 기운 기 · 體 몸 체 · 分 나눌 분 · 子 아들 자 · 運 옮길 운 · 動 움직일 동 · 論 논할 론",
     "mediaCaption": "그림 Ⅰ-10 기체 분자 운동론의 가정",
@@ -769,6 +789,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "이상 기체 방정식",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-02",
     "hasRestrictedMedia": true,
     "hanjaGloss": "分 나눌 분 · 子 아들 자 · 量 헤아릴 량",
     "mediaCaption": "그림 Ⅰ-18 메테인, 뷰테인, 노말펜테인, 네오펜테인의 분자량과 끓는점",
@@ -835,6 +857,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "혼합 기체의 부분 압력",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "部 떼 부 · 分 나눌 분 · 壓 누를 압 · 力 힘 력 · 法 법 법 · 則 법칙 칙",
     "mediaCaption": "그림 Ⅰ-12 이상 기체 방정식과 부분 압력 법칙",
@@ -899,6 +923,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "혼합 기체의 부분 압력",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-03",
     "hasRestrictedMedia": true,
     "mediaCaption": "성분 기체 A의 몰분율",
     "mediaFile": "mate-1-fig-32.png"
@@ -969,6 +995,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 기체의 성질",
     "topic": "혼합 기체의 부분 압력",
+    "unitId": "mate-1",
+    "topicId": "mate-1-1-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "部 떼 부 · 分 나눌 분 · 壓 누를 압 · 力 힘 력",
     "mediaCaption": "그림 Ⅰ-11 혼합 기체의 압력",
@@ -1047,6 +1075,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "분자 간 상호 작용",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-01",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-16 극성 분자 사이에 작용하는 쌍극자·쌍극자 힘",
     "mediaFile": "mate-1-fig-16.png"
@@ -1122,6 +1152,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "분자 간 상호 작용",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "分 나눌 분 · 散 흩을 산 · 力 힘 력",
     "mediaCaption": "그림 Ⅰ-17 분산력 형성 과정",
@@ -1193,6 +1225,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "분자 간 상호 작용",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "水 물 수 · 素 본디 소 · 結 맺을 결 · 合 합할 합",
     "mediaCaption": "그림 Ⅰ-20 물과 플루오린화 수소에서 분자 간의 수소 결합",
@@ -1276,6 +1310,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "분자 간 상호 작용",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "分 나눌 분 · 子 아들 자 · 間 사이 간 · 相 서로 상 · 互 서로 호 · 作 지을 작 · 用 쓸 용",
     "mediaCaption": "그림 Ⅰ-14 물질의 세 가지 상태와 분자 배열",
@@ -1341,6 +1377,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "분자 간 상호 작용",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "無 없을 무 · 極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
     "mediaCaption": "그림 Ⅰ-17 분산력 형성 과정",
@@ -1410,6 +1448,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "분자 간 상호 작용",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-01",
     "hasRestrictedMedia": true,
     "hanjaGloss": "極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
     "mediaCaption": "그림 Ⅰ-15 염화 수소 분자의 쌍극자",
@@ -1489,6 +1529,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "액체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-02",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-18 메테인, 뷰테인, 노말펜테인, 네오펜테인의 분자량과 끓는점",
     "mediaFile": "mate-1-fig-18.png"
@@ -1554,6 +1596,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "액체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-02",
     "hasRestrictedMedia": true,
     "hanjaGloss": "動 움직일 동 · 的 과녁 적 · 平 평평할 평 · 衡 저울대 형",
     "mediaCaption": "그림 Ⅰ-22 동적 평형 상태에서 액체의 증기 압력",
@@ -1624,6 +1668,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "액체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-02",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-23 물의 증기 압력 곡선",
     "mediaFile": "mate-1-fig-23.png"
@@ -1702,6 +1748,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "액체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-02",
     "hasRestrictedMedia": true,
     "hanjaGloss": "蒸 찔 증 · 氣 기운 기 · 壓 누를 압 · 力 힘 력",
     "mediaCaption": "그림 Ⅰ-23 물의 증기 압력 곡선",
@@ -1766,6 +1814,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "고체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "非 아닐 비 · 結 맺을 결 · 晶 맑을 정 · 性 성품 성 · 固 굳을 고 · 體 몸 체",
     "mediaCaption": "그림 Ⅰ-24 석영과 유리",
@@ -1838,6 +1888,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "고체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 晶 맑을 정",
     "mediaCaption": "그림 Ⅰ-30 공유 결정의 예",
@@ -1912,6 +1964,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "고체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "結 맺을 결 · 晶 맑을 정 · 性 성품 성 · 固 굳을 고 · 體 몸 체",
     "mediaCaption": "그림 Ⅰ-24 석영과 유리",
@@ -1984,6 +2038,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "고체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-03",
     "hasRestrictedMedia": true,
     "mediaCaption": "그림 Ⅰ-25 이온 결정의 예",
     "mediaFile": "mate-1-fig-25.png"
@@ -2050,6 +2106,8 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "고체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "金 쇠 금 · 屬 무리 속 · 結 맺을 결 · 晶 맑을 정",
     "mediaCaption": "그림 Ⅰ-28 금속 결합",
@@ -2122,9 +2180,1689 @@
     "subject": "물질과 에너지",
     "unit": "물질의 세 가지 상태 > 액체와 고체의 성질",
     "topic": "고체",
+    "unitId": "mate-1",
+    "topicId": "mate-1-2-03",
     "hasRestrictedMedia": true,
     "hanjaGloss": "分 나눌 분 · 子 아들 자 · 結 맺을 결 · 晶 맑을 정",
     "mediaCaption": "그림 Ⅰ-29 분자 결정의 예",
     "mediaFile": "mate-1-fig-29.png"
+  },
+  {
+    "id": "mate-hydration",
+    "term": "수화",
+    "aliases": [],
+    "hanja": "水和",
+    "english": "hydration",
+    "definition": "물 분자가 부분 전하로 이온이나 극성 분자를 에워싸, 그 입자를 고체 결정에서 떼어 내 붙들고 있는 과정.",
+    "relations": [
+      {
+        "id": "rel-hyd-process",
+        "text": "이온 결정을 물에 넣으면 물 분자가 표면의 이온을 에워싸고, 그 이온이 결정에서 하나씩 떨어져 나와 녹는다.",
+        "condition": "이온 결정이 물과 맞닿아 있을 때",
+        "scope": "물에 녹는 이온 결합 물질과 극성 물질에 한정한다",
+        "invertible": false
+      },
+      {
+        "id": "rel-hyd-orientation",
+        "text": "수화된 이온 둘레에서 물 분자는 양이온 쪽으로 산소를, 음이온 쪽으로 수소를 돌려 댄다.",
+        "condition": "수화된 이온을 둘러싼 물 분자의 방향을 볼 때",
+        "scope": "수용액 속의 양이온·음이온에 한정한다",
+        "invertible": true,
+        "invertedText": "수화된 이온 둘레에서 물 분자는 양이온 쪽으로 수소를, 음이온 쪽으로 산소를 돌려 댄다."
+      },
+      {
+        "id": "rel-hyd-condition",
+        "text": "수화가 일어나려면 용질 입자가 전하나 부분 전하를 띠어야 하므로 무극성 물질은 수화되지 않는다.",
+        "condition": "용질이 전하나 부분 전하를 띠는지 따질 때",
+        "scope": "물을 용매로 삼은 용해에 한정한다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "소금이 물에 녹으면 소금 입자가 사라져 없어진다",
+        "whyWrong": "결정에서 떨어져 나온 이온이 물 분자에 둘러싸인 채 흩어졌을 뿐, 입자 자체는 그대로 물속에 남아 있다."
+      },
+      {
+        "text": "수화는 물 분자가 용질과 새로운 화학 결합을 만드는 반응이다",
+        "whyWrong": "부분 전하에 의한 정전기적 인력으로 둘러싸는 것이지 새 물질이 만들어지는 화학 변화가 아니다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-water-polarity",
+        "note": "부분 전하를 알아야 둘러싸는 방향을 설명한다"
+      },
+      {
+        "type": "related",
+        "target": "mate-water-molecule-structure"
+      },
+      {
+        "type": "related",
+        "target": "mate-hydrogen-bond-in-water",
+        "note": "물 분자끼리의 힘과 물-용질 사이의 힘을 견주어 본다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 구조",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-01",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "水 물 수 · 和 화할 화",
+    "mediaCaption": "그림 Ⅱ-2 수화",
+    "mediaFile": "mate-2-fig-02.png"
+  },
+  {
+    "id": "mate-hydrogen-bond-in-water",
+    "term": "물의 수소 결합",
+    "aliases": [
+      "물 분자 사이의 수소 결합"
+    ],
+    "hanja": null,
+    "english": "hydrogen bonding in water",
+    "definition": "산소에 붙어 큰 부분 전하를 띠게 된 수소가 이웃한 물 분자의 산소에 끌리며, 물 분자끼리 서로를 붙드는 강한 인력.",
+    "relations": [
+      {
+        "id": "rel-hbw-origin",
+        "text": "전기음성도가 큰 산소와 작은 수소가 결합해 부분 전하가 크게 벌어지기 때문에 물 분자 사이에 수소 결합이 생긴다.",
+        "condition": "수소 결합이 생기는 까닭을 따질 때",
+        "scope": "산소·질소·플루오린에 결합한 수소를 가진 분자에 한정한다",
+        "invertible": true,
+        "invertedText": "산소와 수소의 전기음성도 차이가 작기 때문에 물 분자 사이에 수소 결합이 생긴다."
+      },
+      {
+        "id": "rel-hbw-four",
+        "text": "물 분자 하나는 수소 둘과 산소의 자리를 써서 이웃한 물 분자 최대 넷과 수소 결합을 맺는다.",
+        "condition": "물 분자 한 개가 맺을 수 있는 결합의 수를 셀 때",
+        "scope": "액체 물과 얼음에 한정한다",
+        "invertible": false
+      },
+      {
+        "id": "rel-hbw-bp",
+        "text": "메테인처럼 분자량이 비슷한 물질과 견주면 물의 녹는점과 끓는점이 뚜렷하게 높은데, 그 까닭이 수소 결합이다.",
+        "condition": "분자량이 비슷한 분자성 물질끼리 견줄 때",
+        "scope": "수소 결합을 하지 않는 분자성 물질과의 비교에 한정한다",
+        "invertible": true,
+        "invertedText": "메테인처럼 분자량이 비슷한 물질과 견주면 물의 녹는점과 끓는점은 오히려 낮다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물이 끓으면 수소와 산소를 잇는 결합이 끊어져 수소 기체와 산소 기체가 생긴다",
+        "whyWrong": "끓을 때 끊어지는 것은 분자 사이의 수소 결합이다. 분자 안의 공유 결합은 그대로여서 수증기도 여전히 물이다."
+      },
+      {
+        "text": "수소 결합은 수소 원자끼리 서로 달라붙는 힘이다",
+        "whyWrong": "한 분자의 수소가 이웃 분자의 산소에 끌리는 힘이다. 수소끼리는 부분 전하의 부호가 같아 서로 밀어낸다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-water-molecule-structure"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-water-polarity",
+        "note": "부분 전하가 있어야 이 힘을 설명한다"
+      },
+      {
+        "type": "next",
+        "target": "mate-water-density"
+      },
+      {
+        "type": "next",
+        "target": "mate-specific-heat"
+      },
+      {
+        "type": "next",
+        "target": "mate-surface-tension"
+      },
+      {
+        "type": "next",
+        "target": "mate-cohesive-force"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 구조",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-01",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅱ-3 물의 수소 결합",
+    "mediaFile": "mate-2-fig-03.png"
+  },
+  {
+    "id": "mate-water-molecule-structure",
+    "term": "물 분자의 구조",
+    "aliases": [
+      "물의 굽은 형 구조"
+    ],
+    "hanja": null,
+    "english": "molecular structure of water",
+    "definition": "산소 원자 하나에 수소 원자 둘이 공유 결합으로 붙어, 두 결합이 약 104.5°로 벌어진 채 꺾여 있는 물 분자의 생김새.",
+    "relations": [
+      {
+        "id": "rel-wms-bond",
+        "text": "물 분자 안에서 산소와 수소를 이어 주는 것은 전자쌍을 함께 쓰는 공유 결합이다.",
+        "condition": "물 분자 하나의 내부 결합 종류를 물을 때",
+        "scope": "분자 안의 결합에 한정하며 분자 사이의 힘은 제외한다",
+        "invertible": false
+      },
+      {
+        "id": "rel-wms-bent",
+        "text": "물 분자는 세 원자가 한 직선에 놓이지 않고 약 104.5°의 각으로 꺾인 굽은 형이다.",
+        "condition": "물 분자 한 개의 결합각을 따질 때",
+        "scope": "고체·액체·기체 어느 상태의 물 분자에나 해당한다",
+        "invertible": true,
+        "invertedText": "물 분자는 산소를 가운데 두고 두 수소가 180°로 마주 보는 직선형이다."
+      },
+      {
+        "id": "rel-wms-shape-polarity",
+        "text": "굽은 형이라서 두 결합의 극성이 서로 상쇄되지 못하고 물 분자 전체가 극성을 띤다.",
+        "condition": "분자의 모양과 극성을 이어 볼 때",
+        "scope": "결합 자체가 극성인 분자에 한정한다",
+        "invertible": true,
+        "invertedText": "굽은 형이라서 두 결합의 극성이 서로 상쇄되어 물 분자 전체는 무극성이 된다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물 분자는 H와 O와 H가 일직선으로 늘어선 직선형이다",
+        "whyWrong": "두 O-H 결합이 약 104.5°로 벌어져 있어 세 원자가 한 직선에 놓이지 않는다. 이 꺾임이 물의 극성을 만드는 출발점이다."
+      },
+      {
+        "text": "물 분자 안에서 산소와 수소를 붙잡고 있는 힘이 수소 결합이다",
+        "whyWrong": "분자 안의 산소와 수소는 공유 결합으로 이어져 있다. 수소 결합은 분자와 분자 사이에 작용하는 별개의 힘이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-water-polarity",
+        "note": "굽은 형을 알아야 부분 전하가 어디에 몰리는지 읽는다"
+      },
+      {
+        "type": "next",
+        "target": "mate-hydrogen-bond-in-water"
+      },
+      {
+        "type": "related",
+        "target": "mate-water-density",
+        "note": "얼음의 육각형 배열은 이 굽은 형에서 비롯한다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 구조",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-01",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅱ-1 물 분자의 구조",
+    "mediaFile": "mate-2-fig-01.png"
+  },
+  {
+    "id": "mate-water-polarity",
+    "term": "물 분자의 극성",
+    "aliases": [
+      "물의 극성"
+    ],
+    "hanja": null,
+    "english": "polarity of the water molecule",
+    "definition": "전하가 분자 안에서 한쪽으로 치우쳐, 산소 쪽은 부분적인 음전하를 수소 쪽은 부분적인 양전하를 띠는 물 분자의 성질.",
+    "relations": [
+      {
+        "id": "rel-wp-charge",
+        "text": "전자를 더 세게 끌어당기는 산소 쪽에 부분적인 음전하가, 수소 쪽에 부분적인 양전하가 몰린다.",
+        "condition": "물 분자 한 개 안의 전하 분포를 따질 때",
+        "scope": "물 분자 내부의 전하 치우침에 한정한다",
+        "invertible": true,
+        "invertedText": "전자를 더 세게 끌어당기는 산소 쪽에 부분적인 양전하가, 수소 쪽에 부분적인 음전하가 몰린다."
+      },
+      {
+        "id": "rel-wp-dissolve",
+        "text": "극성 물질과 이온 결합 물질이 물에 잘 녹는 까닭은 물 분자가 극성을 띠기 때문이다.",
+        "condition": "용매가 물이고 용질의 극성만 바꾸어 볼 때",
+        "scope": "극성 물질과 이온 결합 물질에 한정하며 무극성 물질은 제외한다",
+        "invertible": true,
+        "invertedText": "물 분자가 극성을 띠기 때문에 이온 결합 물질은 오히려 물에 잘 녹지 않는다."
+      },
+      {
+        "id": "rel-wp-nonpolar",
+        "text": "기름처럼 무극성인 물질은 물 분자의 부분 전하에 끌리지 않으므로 물과 잘 섞이지 않는다.",
+        "condition": "용질이 무극성일 때",
+        "scope": "무극성 분자로 이루어진 물질에 한정한다",
+        "invertible": true,
+        "invertedText": "기름처럼 무극성인 물질일수록 물과 더 잘 섞인다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물 분자에서 부분적인 양전하를 띠는 쪽은 산소 원자이다",
+        "whyWrong": "전자를 더 세게 끌어당기는 쪽이 산소라서 산소가 부분적인 음전하를, 수소가 부분적인 양전하를 띤다."
+      },
+      {
+        "text": "물은 무엇이든 잘 녹이는 만능 용매라서 기름도 녹일 수 있다",
+        "whyWrong": "물이 잘 녹이는 것은 극성 물질과 이온 결합 물질이다. 무극성인 기름은 물 분자의 부분 전하에 끌리지 않아 섞이지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-water-molecule-structure",
+        "note": "굽은 형 구조가 극성의 원인이다"
+      },
+      {
+        "type": "next",
+        "target": "mate-hydration"
+      },
+      {
+        "type": "next",
+        "target": "mate-hydrogen-bond-in-water"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 구조",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-01",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅱ-1 물 분자의 구조",
+    "mediaFile": "mate-2-fig-01.png"
+  },
+  {
+    "id": "mate-adhesive-force",
+    "term": "부착력",
+    "aliases": [],
+    "hanja": "附着力",
+    "english": "adhesive force",
+    "definition": "서로 다른 종류의 분자 사이에 작용하는 인력. 액체가 맞닿은 고체 표면에 달라붙게 만드는 힘이다.",
+    "relations": [
+      {
+        "id": "rel-af-different",
+        "text": "부착력은 액체 분자와, 그 액체가 맞닿은 다른 물질의 분자 사이에서 작용한다.",
+        "condition": "힘이 작용하는 두 상대의 종류를 가릴 때",
+        "scope": "액체와 고체가 맞닿은 경계면에 한정한다",
+        "invertible": true,
+        "invertedText": "부착력은 액체 분자끼리 서로 끌어당길 때 작용하는 힘이다."
+      },
+      {
+        "id": "rel-af-glass",
+        "text": "물이 유리관 벽을 타고 오르는 것은 물 분자와 유리 사이의 부착력이 크기 때문이다.",
+        "condition": "가는 유리관을 물에 담갔을 때",
+        "scope": "물과 유리처럼 서로 잘 적시는 조합에 한정한다",
+        "invertible": true,
+        "invertedText": "물이 유리관 벽을 타고 오르는 것은 물 분자와 유리 사이의 부착력이 작기 때문이다."
+      },
+      {
+        "id": "rel-af-vs-cohesive",
+        "text": "액체가 관 벽을 적시며 오르려면 벽에 대한 부착력이 액체 자체의 응집력에 견줄 만큼 커야 한다.",
+        "condition": "부착력과 응집력의 크기를 견줄 때",
+        "scope": "모세관 속에서 액체가 오르는 경우에 한정한다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물이 유리관을 타고 오르는 것은 물끼리 당기는 응집력만으로 설명된다",
+        "whyWrong": "벽을 타고 오르게 하는 것은 유리와의 부착력이다. 응집력은 그 뒤를 따라 오르는 물을 끌어 올리는 몫을 맡는다."
+      },
+      {
+        "text": "부착력은 접착제처럼 두 물질을 화학적으로 붙여 주는 결합이다",
+        "whyWrong": "화학 결합이 아니라 서로 다른 종류의 분자 사이에 작용하는 인력이다. 결합이 새로 생기는 것이 아니다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-hydrogen-bond-in-water"
+      },
+      {
+        "type": "next",
+        "target": "mate-capillary-action"
+      },
+      {
+        "type": "related",
+        "target": "mate-cohesive-force",
+        "note": "짝을 이루어 모세관 현상을 설명한다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "附 붙을 부 · 着 붙을 착 · 力 힘 력",
+    "mediaCaption": "그림 Ⅱ-8 모세관 현상",
+    "mediaFile": "mate-2-fig-08.png"
+  },
+  {
+    "id": "mate-capillary-action",
+    "term": "모세관 현상",
+    "aliases": [],
+    "hanja": "毛細管現象",
+    "english": "capillary action",
+    "definition": "가는 관이나 미세한 틈을 따라 액체가 저절로 이동해 올라가는 현상. 부착력과 응집력이 함께 작용해 일어난다.",
+    "relations": [
+      {
+        "id": "rel-ca-two-forces",
+        "text": "관 벽을 타고 오르게 하는 것은 부착력이고, 올라간 분자가 뒤따르는 분자를 끌어 올리는 것은 응집력이다.",
+        "condition": "모세관 속에서 액체가 오르는 과정을 나눠 볼 때",
+        "scope": "관 벽에 대한 부착력이 응집력에 견줄 만큼 큰 액체에 한정한다",
+        "invertible": true,
+        "invertedText": "관 벽을 타고 오르게 하는 것은 응집력이고, 뒤따르는 분자를 끌어 올리는 것은 부착력이다."
+      },
+      {
+        "id": "rel-ca-tube",
+        "text": "액체와 관의 재질이 같다면 관이 가늘수록 액체가 더 높이 올라간다.",
+        "condition": "액체와 관의 재질이 같고 관의 안지름만 다를 때",
+        "scope": "액체가 관 벽을 적시는 경우에 한정한다",
+        "invertible": true,
+        "invertedText": "액체와 관의 재질이 같다면 관이 굵을수록 액체가 더 높이 올라간다."
+      },
+      {
+        "id": "rel-ca-water-glass",
+        "text": "물이 유리관에서 잘 오르는 것은 물의 응집력이 크고 유리에 대한 부착력도 크기 때문이다.",
+        "condition": "가는 유리관을 물에 담갔을 때",
+        "scope": "물과 유리처럼 서로 잘 적시는 조합에 한정한다",
+        "invertible": true,
+        "invertedText": "물이 유리관에서 잘 오르는 것은 물의 응집력이 작고 유리에 대한 부착력도 작기 때문이다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "모세관 현상은 관 속의 공기가 빠져나가면서 물이 빨려 올라가는 것이다",
+        "whyWrong": "공기를 빼내 생긴 압력 차로 빨아올리는 것이 아니라, 부착력과 응집력이 번갈아 작용해 액체가 스스로 오르는 것이다."
+      },
+      {
+        "text": "수건에 물이 스며드는 것은 모세관 현상과 다른 원리다",
+        "whyWrong": "셀룰로스 사이의 미세한 틈이 가는 관 노릇을 하므로, 유리관 속 물이 오르는 것과 같은 모세관 현상이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-cohesive-force"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-adhesive-force"
+      },
+      {
+        "type": "related",
+        "target": "mate-surface-tension"
+      },
+      {
+        "type": "related",
+        "target": "mate-hydrogen-bond-in-water",
+        "note": "물의 두 힘이 모두 큰 까닭이 수소 결합이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "毛 터럭 모 · 細 가늘 세 · 管 대롱 관 · 現 나타날 현 · 象 코끼리 상",
+    "mediaCaption": "그림 Ⅱ-8 모세관 현상",
+    "mediaFile": "mate-2-fig-08.png"
+  },
+  {
+    "id": "mate-cohesive-force",
+    "term": "응집력",
+    "aliases": [],
+    "hanja": "凝集力",
+    "english": "cohesive force",
+    "definition": "같은 종류의 분자끼리 서로 끌어당기는 힘. 이 힘이 클수록 액체는 흩어지지 않고 뭉쳐 있으려 한다.",
+    "relations": [
+      {
+        "id": "rel-cf-same",
+        "text": "힘이 작용하는 상대가 같은 종류의 분자이면 응집력, 다른 종류의 분자이면 부착력이라 부른다.",
+        "condition": "두 힘을 상대에 따라 갈라 부를 때",
+        "scope": "분자로 이루어진 액체와 그것이 닿는 물질에 한정한다",
+        "invertible": true,
+        "invertedText": "힘이 작용하는 상대가 다른 종류의 분자이면 응집력, 같은 종류의 분자이면 부착력이라 부른다."
+      },
+      {
+        "id": "rel-cf-hbond",
+        "text": "분자 사이의 인력이 셀수록 액체의 응집력이 커지므로, 수소 결합을 하는 물은 응집력이 크다.",
+        "condition": "온도가 같은 액체끼리 견줄 때",
+        "scope": "분자로 이루어진 순수한 액체에 한정한다",
+        "invertible": true,
+        "invertedText": "분자 사이의 인력이 셀수록 액체의 응집력은 오히려 작아진다."
+      },
+      {
+        "id": "rel-cf-surface",
+        "text": "응집력이 큰 액체일수록 겉넓이를 줄이려는 경향이 강해 표면 장력도 크다.",
+        "condition": "온도가 같은 액체끼리 견줄 때",
+        "scope": "순수한 액체에 한정한다",
+        "invertible": true,
+        "invertedText": "응집력이 큰 액체일수록 표면 장력은 작다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "응집력은 분자를 이루는 원자들을 붙잡아 두는 힘이다",
+        "whyWrong": "분자 안이 아니라 분자와 분자 사이에 작용하는 힘이다. 분자 안의 원자를 잇는 것은 공유 결합이다."
+      },
+      {
+        "text": "응집력과 부착력은 같은 힘을 다르게 부르는 이름일 뿐이다",
+        "whyWrong": "힘이 작용하는 상대가 같은 종류 분자인지 다른 종류 분자인지로 갈리는 서로 다른 힘이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-hydrogen-bond-in-water"
+      },
+      {
+        "type": "next",
+        "target": "mate-capillary-action"
+      },
+      {
+        "type": "related",
+        "target": "mate-adhesive-force",
+        "note": "짝을 이루어 모세관 현상을 설명한다"
+      },
+      {
+        "type": "related",
+        "target": "mate-surface-tension"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "凝 엉길 응 · 集 모을 집 · 力 힘 력",
+    "mediaCaption": "그림 Ⅱ-7 수면 위에 있는 소금쟁이와 물에 뜬 클립",
+    "mediaFile": "mate-2-fig-07.png"
+  },
+  {
+    "id": "mate-heat-capacity",
+    "term": "열용량",
+    "aliases": [],
+    "hanja": "熱容量",
+    "english": "heat capacity",
+    "definition": "물체 하나를 통째로 놓고 그 온도를 1 ℃ 올리는 데 드는 열량. 질량에 비열을 곱한 값이라 양이 많으면 커진다.",
+    "relations": [
+      {
+        "id": "rel-hc-product",
+        "text": "열용량은 물체의 질량에 그 물질의 비열을 곱해 구한다.",
+        "condition": "물체 하나의 열용량을 구할 때",
+        "scope": "한 가지 물질로 고르게 이루어진 물체에 한정한다",
+        "invertible": false
+      },
+      {
+        "id": "rel-hc-mass",
+        "text": "물질이 같아도 질량이 클수록 열용량이 커지므로, 같은 열을 주어도 온도가 덜 오른다.",
+        "condition": "물질의 종류가 같고 질량만 다를 때",
+        "scope": "상태 변화가 없는 가열에 한정한다",
+        "invertible": true,
+        "invertedText": "물질이 같아도 질량이 클수록 열용량이 작아져 같은 열에도 온도가 더 많이 오른다."
+      },
+      {
+        "id": "rel-hc-vs-sh",
+        "text": "비열은 1 g을 기준으로 삼고 열용량은 물체 전체를 기준으로 삼으므로, 물질을 구별하는 특성값은 비열 쪽이다.",
+        "condition": "두 양이 무엇을 기준으로 정의되었는지 견줄 때",
+        "scope": "순물질의 특성값을 가릴 때에 한정한다",
+        "invertible": true,
+        "invertedText": "비열과 열용량 가운데 물질을 구별하는 특성값은 열용량 쪽이다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "열용량이 큰 물체는 반드시 비열도 크다",
+        "whyWrong": "열용량은 질량과 비열의 곱이라, 비열이 작아도 질량이 크면 열용량이 클 수 있다."
+      },
+      {
+        "text": "열용량은 물질마다 정해진 값이라 물질을 구별하는 데 쓸 수 있다",
+        "whyWrong": "같은 물질이라도 덩어리가 크면 열용량이 커진다. 물질을 구별하는 값은 양과 무관한 비열이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-specific-heat",
+        "note": "비열을 알아야 곱해서 얻는 이 값을 읽는다"
+      },
+      {
+        "type": "related",
+        "target": "mate-hydrogen-bond-in-water"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "熱 더울 열 · 容 얼굴 용 · 量 헤아릴 량",
+    "mediaCaption": "비열과 열용량",
+    "mediaFile": "mate-2-box-01.png"
+  },
+  {
+    "id": "mate-specific-heat",
+    "term": "비열",
+    "aliases": [],
+    "hanja": "比熱",
+    "english": "specific heat",
+    "definition": "어떤 물질 1 g을 놓고 온도를 1 ℃ 올릴 때 들어가는 열에너지의 양. 물질마다 값이 정해져 있어 물질의 특성이 된다.",
+    "relations": [
+      {
+        "id": "rel-sh-temp",
+        "text": "질량과 가한 열량이 같다면 비열이 큰 물질일수록 온도가 조금밖에 오르지 않는다.",
+        "condition": "질량과 가해 준 열량이 같을 때",
+        "scope": "상태 변화가 일어나지 않는 온도 구간에 한정한다",
+        "invertible": true,
+        "invertedText": "질량과 가한 열량이 같다면 비열이 큰 물질일수록 온도가 더 많이 오른다."
+      },
+      {
+        "id": "rel-sh-hbond",
+        "text": "물의 비열이 큰 까닭은 온도를 올리는 동안 물 분자 사이의 수소 결합을 끊는 데에도 에너지가 쓰이기 때문이다.",
+        "condition": "물과 수소 결합을 하지 않는 액체를 견줄 때",
+        "scope": "액체 상태의 물에 한정한다",
+        "invertible": true,
+        "invertedText": "물의 비열이 큰 까닭은 수소 결합을 끊는 데 에너지가 거의 들지 않기 때문이다."
+      },
+      {
+        "id": "rel-sh-seaside",
+        "text": "여름 낮에 같은 햇빛을 받아도 바닷물이 모래보다 덜 뜨거워지는 것은 물의 비열이 모래보다 크기 때문이다.",
+        "condition": "같은 시간 동안 같은 세기의 햇빛을 받을 때",
+        "scope": "해변의 모래와 바닷물을 견주는 상황에 한정한다",
+        "invertible": true,
+        "invertedText": "여름 낮에 같은 햇빛을 받아도 바닷물이 모래보다 더 빨리 뜨거워지는 것은 물의 비열이 크기 때문이다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "비열이 큰 물질일수록 열을 잘 받아들여 빨리 뜨거워진다",
+        "whyWrong": "비열이 크다는 것은 온도를 1 ℃ 올리는 데 더 많은 에너지가 든다는 뜻이라, 같은 열을 받아도 온도가 잘 오르지 않는다."
+      },
+      {
+        "text": "물의 양이 많아지면 물의 비열도 커진다",
+        "whyWrong": "비열은 1 g을 기준으로 정한 값이라 물질의 양과 상관없이 같다. 양이 늘 때 커지는 것은 열용량이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-hydrogen-bond-in-water",
+        "note": "물의 큰 비열을 설명하려면 수소 결합이 먼저다"
+      },
+      {
+        "type": "next",
+        "target": "mate-heat-capacity"
+      },
+      {
+        "type": "related",
+        "target": "mate-water-density"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "比 견줄 비 · 熱 더울 열",
+    "mediaCaption": "표 Ⅱ-1 여러 가지 물질의 비열",
+    "mediaFile": "mate-2-tbl-01.png"
+  },
+  {
+    "id": "mate-surface-tension",
+    "term": "표면 장력",
+    "aliases": [],
+    "hanja": "表面張力",
+    "english": "surface tension",
+    "definition": "표면에 있는 분자가 안쪽으로만 끌려 들어가면서, 액체가 겉넓이를 되도록 작게 하려는 쪽으로 나타나는 힘.",
+    "relations": [
+      {
+        "id": "rel-st-inward",
+        "text": "안쪽 분자는 사방에서 당겨지는 데 견주어 표면 분자는 옆과 아래로만 당겨져 액체 속으로 끌려 들어간다.",
+        "condition": "액체와 공기가 맞닿은 경계를 볼 때",
+        "scope": "기체와 접한 액체의 표면에 한정한다",
+        "invertible": true,
+        "invertedText": "표면 분자는 사방에서 당겨지는 데 견주어 안쪽 분자는 옆과 아래로만 당겨진다."
+      },
+      {
+        "id": "rel-st-force",
+        "text": "분자 사이에 작용하는 힘이 셀수록 표면 장력이 크며, 물은 수소 결합 덕분에 표면 장력이 특히 크다.",
+        "condition": "온도가 같은 액체끼리 견줄 때",
+        "scope": "순수한 액체에 한정한다. 세제 같은 물질이 섞이면 달라진다",
+        "invertible": true,
+        "invertedText": "분자 사이에 작용하는 힘이 셀수록 액체의 표면 장력은 작아진다."
+      },
+      {
+        "id": "rel-st-sphere",
+        "text": "부피가 같을 때 겉넓이가 가장 작은 모양이 구이므로, 표면 장력이 큰 액체일수록 방울이 더 둥글다.",
+        "condition": "같은 부피의 액체 방울을 같은 판 위에 놓았을 때",
+        "scope": "중력의 영향이 크지 않은 작은 액체 방울에 한정한다",
+        "invertible": true,
+        "invertedText": "표면 장력이 큰 액체일수록 방울이 더 납작하게 퍼진다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "클립이 물에 뜨는 것은 클립의 밀도가 물보다 작기 때문이다",
+        "whyWrong": "클립은 물보다 밀도가 크다. 물의 표면 장력이 표면을 막처럼 버텨 주기 때문에 뜨는 것이다."
+      },
+      {
+        "text": "물에 세제를 풀면 표면 장력이 커져서 물방울이 더 둥글어진다",
+        "whyWrong": "세제는 물의 표면 장력을 낮춘다. 그래서 세제를 섞은 물방울은 오히려 더 납작하게 퍼진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-hydrogen-bond-in-water"
+      },
+      {
+        "type": "related",
+        "target": "mate-cohesive-force",
+        "note": "표면 장력을 만드는 힘이 곧 응집력이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-capillary-action"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "表 겉 표 · 面 낯 면 · 張 베풀 장 · 力 힘 력",
+    "mediaCaption": "그림 Ⅱ-6 물방울 내부와 표면에 있는 분자에 작용하는 힘",
+    "mediaFile": "mate-2-fig-06.png"
+  },
+  {
+    "id": "mate-water-density",
+    "term": "물의 밀도",
+    "aliases": [],
+    "hanja": null,
+    "english": "density of water",
+    "definition": "단위 부피에 든 물의 질량. 상태와 온도에 따라 부피가 달라져 4 ℃ 부근에서 가장 큰 값을 갖는 것이 특징이다.",
+    "relations": [
+      {
+        "id": "rel-wd-ice",
+        "text": "얼 때 수소 결합이 육각형 배열을 이루면서 분자 사이에 빈 공간이 생겨 얼음의 밀도가 액체 물보다 작아진다.",
+        "condition": "1기압에서 물이 얼어 얼음이 될 때",
+        "scope": "물에 한정한다. 대부분의 다른 물질은 굳으면 오히려 밀도가 커진다",
+        "invertible": true,
+        "invertedText": "얼 때 육각형 배열을 이루면서 분자가 더 촘촘해져 얼음의 밀도가 액체 물보다 커진다."
+      },
+      {
+        "id": "rel-wd-float",
+        "text": "얼음이 물 위에 뜨는 것은 같은 부피를 놓고 볼 때 얼음의 질량이 물보다 작기 때문이다.",
+        "condition": "0 ℃ 부근에서 얼음을 물에 넣었을 때",
+        "scope": "순수한 물과 그 얼음에 한정한다",
+        "invertible": true,
+        "invertedText": "얼음이 물 위에 뜨는 것은 같은 부피를 놓고 볼 때 얼음의 질량이 물보다 크기 때문이다."
+      },
+      {
+        "id": "rel-wd-0to4",
+        "text": "0 ℃에서 4 ℃까지는 남아 있던 육각형 구조가 무너져 부피가 줄므로, 온도를 올릴수록 밀도가 커진다.",
+        "condition": "액체 물의 온도를 0 ℃에서 4 ℃까지 올릴 때",
+        "scope": "0~4 ℃ 구간의 액체 물에 한정한다. 4 ℃ 위에서는 반대로 부피가 늘어난다",
+        "invertible": true,
+        "invertedText": "0 ℃에서 4 ℃까지는 온도를 올릴수록 물의 부피가 늘어 밀도가 작아진다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "얼음의 밀도가 물보다 높다",
+        "whyWrong": "얼음이 물 위에 뜬다는 사실 자체가 얼음의 밀도가 더 작다는 증거다. 물이 얼면 부피가 늘어 밀도가 줄어든다."
+      },
+      {
+        "text": "물을 가득 담은 페트병을 얼리면 부피가 줄어 페트병이 찌그러진다",
+        "whyWrong": "물은 얼면서 부피가 늘어난다. 그래서 페트병이 찌그러지는 것이 아니라 부풀어 오른다."
+      },
+      {
+        "text": "물은 온도가 올라가면 언제나 부피가 늘어난다",
+        "whyWrong": "4 ℃보다 높은 구간에서만 그렇다. 0~4 ℃ 사이에서는 온도가 올라갈수록 오히려 부피가 줄어든다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-hydrogen-bond-in-water",
+        "note": "육각형 배열이 밀도 이상성의 원인이다"
+      },
+      {
+        "type": "related",
+        "target": "mate-water-molecule-structure"
+      },
+      {
+        "type": "related",
+        "target": "mate-specific-heat",
+        "note": "수소 결합으로 설명되는 물의 성질끼리 묶어 본다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 물의 성질",
+    "topic": "물의 여러 가지 성질",
+    "unitId": "mate-2",
+    "topicId": "mate-2-1-02",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅱ-5 온도에 따른 물의 부피와 밀도 변화",
+    "mediaFile": "mate-2-fig-05.png"
+  },
+  {
+    "id": "mate-nonvolatile-solute",
+    "term": "비휘발성 용질",
+    "aliases": [],
+    "hanja": "非揮發性溶質",
+    "english": "nonvolatile solute",
+    "definition": "쉽게 증발하지 않아 용액 위쪽 증기에는 거의 섞이지 않는 용질. 설탕이나 포도당처럼 끓는점이 아주 높은 물질이 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-nvs-vapor-only",
+        "text": "용질이 비휘발성이면 용액 위쪽에 모인 증기는 사실상 용매 입자만으로 이루어진다",
+        "condition": "밀폐된 용기에서 온도가 일정하게 유지되며 평형에 이를 때",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "invertible": false
+      },
+      {
+        "id": "rel-nvs-lowers-vp",
+        "text": "비휘발성 용질을 많이 녹일수록 같은 온도에서 용액의 증기 압력은 순수한 용매보다 더 낮아진다",
+        "condition": "용매의 종류와 온도가 같을 때",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "invertible": true,
+        "invertedText": "비휘발성 용질을 많이 녹일수록 같은 온도에서 용액의 증기 압력은 순수한 용매보다 더 높아진다"
+      },
+      {
+        "id": "rel-nvs-condition-of-laws",
+        "text": "묽은 용액의 증기 압력 내림·끓는점 오름·어는점 내림 관계식은 용질이 비휘발성이고 비전해질이라는 전제 위에 세워져 있다",
+        "condition": "관계식을 계산에 그대로 쓰려고 할 때",
+        "scope": "묽은 용액에서 다루는 세 가지 관계식",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물에 녹아 보이지 않게 된 설탕도 물과 함께 증발해 증기에 섞인다",
+        "whyWrong": "설탕은 비휘발성이라 증발하지 않는다. 설탕물 위에 모인 증기는 물만으로 이루어져 있다고 본다."
+      },
+      {
+        "text": "용질이 무엇이든 끓는점 오름과 어는점 내림 공식을 그대로 쓰면 된다",
+        "whyWrong": "이 공식들은 용질이 비휘발성이고 비전해질일 때를 전제로 세운 것이다. 물에서 이온으로 나뉘는 전해질은 입자 수가 늘어나 계산이 달라진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-vapor-pressure-lowering"
+      },
+      {
+        "type": "next",
+        "target": "mate-boiling-point-elevation",
+        "note": "끓는점 오름 식이 성립하려면 용질이 증발하지 않아야 한다"
+      },
+      {
+        "type": "next",
+        "target": "mate-freezing-point-depression"
+      },
+      {
+        "type": "related",
+        "target": "mate-raoult-law",
+        "note": "법칙의 적용 조건을 이루는 개념이다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "증기 압력 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-01",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "非 아닐 비 · 揮 휘두를 휘 · 發 필 발 · 性 성품 성 · 溶 녹을 용 · 質 바탕 질",
+    "mediaCaption": "그림 Ⅱ-10 용매와 용액의 표면에서 일어나는 증발",
+    "mediaFile": "mate-2-fig-10.png"
+  },
+  {
+    "id": "mate-raoult-law",
+    "term": "라울 법칙",
+    "aliases": [
+      "라울의 법칙"
+    ],
+    "hanja": null,
+    "english": "Raoult law",
+    "definition": "용액의 증기 압력을, 순수한 용매의 증기 압력에 용매의 몰분율을 곱한 값으로 보는 법칙. 용액이 묽을수록 잘 들어맞는다.",
+    "relations": [
+      {
+        "id": "rel-raoult-equation",
+        "text": "용액의 증기 압력은 순수한 용매의 증기 압력에 용매의 몰분율을 곱한 만큼이어서, 그 몰분율이 클수록 커진다",
+        "condition": "온도가 일정하고 용액이 평형에 이르렀을 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "용액의 증기 압력은 용매의 몰분율이 클수록 오히려 작아진다"
+      },
+      {
+        "id": "rel-raoult-dilute",
+        "text": "실제로 잰 증기 압력은 용액이 묽을수록 이 법칙으로 계산한 값에 가까워진다",
+        "condition": "같은 용매와 용질로 농도만 바꿔 견줄 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 용액",
+        "invertible": false
+      },
+      {
+        "id": "rel-raoult-conditions",
+        "text": "이 법칙은 용질이 비휘발성이고 비전해질일 때를 전제로 하므로 전해질 수용액에는 그대로 쓸 수 없다",
+        "condition": "법칙을 계산에 적용하려 할 때",
+        "scope": "묽은 용액",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "소금물의 증기 압력도 소금의 몰분율을 라울 법칙에 그대로 넣어 구하면 된다",
+        "whyWrong": "소금은 물에서 이온으로 나뉘어 입자 수가 늘어난다. 라울 법칙은 비전해질 용질을 전제로 세운 식이라 그대로 적용할 수 없다."
+      },
+      {
+        "text": "용액의 증기 압력을 구할 때는 용질의 몰분율을 곱한다",
+        "whyWrong": "곱하는 것은 용매의 몰분율이다. 용질의 몰분율을 곱해 나오는 값은 용액의 증기 압력이 아니라 증기 압력 내림이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-vapor-pressure-lowering"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-nonvolatile-solute"
+      },
+      {
+        "type": "related",
+        "target": "mate-boiling-point-elevation",
+        "note": "끓는점 오름 문항은 대개 이 법칙을 만족한다는 단서를 달고 나온다"
+      },
+      {
+        "type": "related",
+        "target": "mate-freezing-point-depression"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "증기 압력 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-01",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "라울 법칙",
+    "mediaFile": "mate-2-fml-01.png"
+  },
+  {
+    "id": "mate-vapor-pressure-lowering",
+    "term": "증기 압력 내림",
+    "aliases": [],
+    "hanja": null,
+    "english": "vapor pressure lowering",
+    "definition": "표면에서 증발할 수 있는 용매 입자의 비율이 줄어든 탓에, 같은 온도의 순수한 용매보다 용액의 증기 압력이 작아지는 현상.",
+    "relations": [
+      {
+        "id": "rel-vpl-surface-particles",
+        "text": "용액 표면에서 증발할 수 있는 용매 입자의 비율이 줄어드는 것이 증기 압력이 낮아지는 까닭이다",
+        "condition": "밀폐된 용기에서 동적 평형에 이르렀을 때",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "invertible": true,
+        "invertedText": "용액 표면에서 증발할 수 있는 용매 입자의 비율이 줄어들수록 증기 압력은 오히려 높아진다"
+      },
+      {
+        "id": "rel-vpl-mole-fraction",
+        "text": "같은 온도에서 용질의 몰분율이 큰 용액일수록 증기 압력 내림이 크게 나타난다",
+        "condition": "용매의 종류와 온도가 같을 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "같은 온도에서 용질의 몰분율이 큰 용액일수록 증기 압력 내림이 작게 나타난다"
+      },
+      {
+        "id": "rel-vpl-kind-independent",
+        "text": "증기 압력이 얼마나 내려가는지는 어떤 용질을 녹였는가가 아니라 용질 입자가 차지하는 몫으로 정해진다",
+        "condition": "비휘발성·비전해질 용질을 같은 몰분율만큼 녹여 견줄 때",
+        "scope": "묽은 용액",
+        "invertible": true,
+        "invertedText": "같은 몰분율이라도 어떤 용질을 녹였는가에 따라 증기 압력 내림의 크기가 달라진다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "용질을 녹여도 물의 양은 그대로이므로 증기 압력은 변하지 않는다",
+        "whyWrong": "물의 양이 아니라 표면에서 증발할 수 있는 물 입자의 비율이 줄어든다. 그래서 같은 온도라도 용액의 증기 압력은 순수한 물보다 낮다."
+      },
+      {
+        "text": "같은 질량만 녹이면 소금이든 설탕이든 증기 압력이 똑같이 내려간다",
+        "whyWrong": "내려가는 폭은 질량이 아니라 녹아 있는 입자의 몰분율로 정해진다. 소금은 물에서 이온으로 나뉘어 입자 수가 늘어나므로 더 많이 내려간다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-nonvolatile-solute"
+      },
+      {
+        "type": "next",
+        "target": "mate-raoult-law",
+        "note": "내려간 폭을 몰분율로 계산하는 단계로 나아간다"
+      },
+      {
+        "type": "next",
+        "target": "mate-boiling-point-elevation"
+      },
+      {
+        "type": "related",
+        "target": "mate-freezing-point-depression"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "증기 압력 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-01",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅱ-9 물과 설탕물의 증기 압력",
+    "mediaFile": "mate-2-fig-09.png"
+  },
+  {
+    "id": "mate-boiling-point-elevation",
+    "term": "끓는점 오름",
+    "aliases": [],
+    "hanja": null,
+    "english": "boiling point elevation",
+    "definition": "증기 압력이 낮아진 용액을 끓이려면 순수한 용매보다 더 높은 온도까지 데워야 하는데, 이때 벌어진 끓는점의 차이.",
+    "relations": [
+      {
+        "id": "rel-bpe-why",
+        "text": "증기 압력이 낮아진 용액은 그 압력이 외부 압력에 이를 때까지 더 데워야 끓으므로 끓는점이 용매보다 높다",
+        "condition": "외부 압력이 일정하게 유지될 때",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "invertible": true,
+        "invertedText": "증기 압력이 낮아진 용액은 순수한 용매보다 낮은 온도에서 끓는다"
+      },
+      {
+        "id": "rel-bpe-molality",
+        "text": "끓는점이 오르는 폭은 용액의 몰랄 농도에 비례한다",
+        "condition": "용매가 같고 외부 압력이 일정할 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "용액의 몰랄 농도가 클수록 끓는점이 오르는 폭은 작아진다"
+      },
+      {
+        "id": "rel-bpe-difference",
+        "text": "끓는점 오름은 용액의 끓는점에서 순수한 용매의 끓는점을 뺀 차이로 정한 값이다",
+        "condition": "같은 외부 압력에서 두 끓는점을 견줄 때",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "설탕물도 물처럼 1 atm에서 100 ℃가 되면 끓는다",
+        "whyWrong": "비휘발성 용질이 녹으면 증기 압력이 낮아져 100 ℃보다 높은 온도까지 데워야 증기 압력이 1 atm에 이른다."
+      },
+      {
+        "text": "라면을 끓일 때 소금을 넣으면 물이 더 빨리 끓는다",
+        "whyWrong": "용질을 녹이면 끓는점이 오히려 높아져 더 높은 온도까지 가열해야 끓는다. 빨리 끓는 것처럼 보이는 것은 다른 이유 때문이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-vapor-pressure-lowering",
+        "note": "증기 압력이 내려간 것이 끓는점이 오르는 까닭이다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-molality"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-nonvolatile-solute"
+      },
+      {
+        "type": "next",
+        "target": "mate-molal-boiling-point-elevation-constant"
+      },
+      {
+        "type": "related",
+        "target": "mate-freezing-point-depression"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "끓는점 오름과 어는점 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-02",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "그림 Ⅱ-11 증기 압력 내림과 끓는점 오름",
+    "mediaFile": "mate-2-fig-11.png"
+  },
+  {
+    "id": "mate-freezing-point-depression",
+    "term": "어는점 내림",
+    "aliases": [],
+    "hanja": null,
+    "english": "freezing point depression",
+    "definition": "녹아 있는 용질이 용매가 얼어붙는 것을 방해하는 탓에 용액이 순수한 용매보다 낮은 온도에서 얼 때, 그 벌어진 어는점의 차이.",
+    "relations": [
+      {
+        "id": "rel-fpd-why",
+        "text": "용질 입자가 용매 입자끼리 규칙적으로 자리 잡는 것을 가로막으므로 용액은 용매보다 낮은 온도에서 언다",
+        "condition": "외부 압력이 일정하게 유지될 때",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "invertible": true,
+        "invertedText": "용질 입자가 얼음 결정 만들기를 가로막으므로 용액은 용매보다 높은 온도에서 언다"
+      },
+      {
+        "id": "rel-fpd-molality",
+        "text": "어는점이 내려가는 폭은 용액의 몰랄 농도에 비례한다",
+        "condition": "용매가 같고 용질이 비휘발성·비전해질일 때",
+        "scope": "묽은 용액",
+        "invertible": true,
+        "invertedText": "용액의 몰랄 농도가 클수록 어는점이 내려가는 폭은 작아진다"
+      },
+      {
+        "id": "rel-fpd-molar-mass",
+        "text": "녹인 질량이 같다면 분자량이 작은 용질을 쓴 용액일수록 어는점이 더 많이 내려간다",
+        "condition": "용매의 질량과 녹인 용질의 질량이 서로 같을 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "녹인 질량이 같다면 분자량이 큰 용질을 쓴 용액일수록 어는점이 더 많이 내려간다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "눈길에 염화 칼슘을 뿌리면 눈이 녹는 것은 염화 칼슘이 열을 내기 때문이다",
+        "whyWrong": "녹은 물에 염화 칼슘이 녹아 어는점이 0 ℃보다 낮아지기 때문이다. 열을 내서 녹이는 것이 아니다."
+      },
+      {
+        "text": "같은 질량을 녹이면 어떤 용질이든 어는점이 똑같이 내려간다",
+        "whyWrong": "내려가는 폭은 녹아 있는 입자의 수로 정해진다. 같은 질량이라도 분자량이 작을수록 입자 수가 많아 더 많이 내려간다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-molality"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-nonvolatile-solute"
+      },
+      {
+        "type": "next",
+        "target": "mate-molal-freezing-point-depression-constant"
+      },
+      {
+        "type": "related",
+        "target": "mate-boiling-point-elevation",
+        "note": "같은 농도 자료에서 함께 다루어진다"
+      },
+      {
+        "type": "related",
+        "target": "mate-vapor-pressure-lowering"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "끓는점 오름과 어는점 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-02",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "어는점 내림",
+    "mediaFile": "mate-2-fml-03.png"
+  },
+  {
+    "id": "mate-molal-boiling-point-elevation-constant",
+    "term": "몰랄 오름 상수",
+    "aliases": [
+      "끓는점 오름 상수"
+    ],
+    "hanja": null,
+    "english": "molal boiling point elevation constant",
+    "definition": "몰랄 농도가 1 m인 용액에서 끓는점이 오르는 폭에 해당하는 값. 용매마다 정해져 있고 녹인 용질이 무엇인지와는 무관하다.",
+    "relations": [
+      {
+        "id": "rel-mbc-solvent-specific",
+        "text": "몰랄 오름 상수는 용매의 종류로 정해지며 어떤 용질을 녹였는지에 따라 달라지지 않는다",
+        "condition": "같은 용매에 서로 다른 비전해질 용질을 녹여 견줄 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "몰랄 오름 상수는 녹인 용질의 종류에 따라 값이 달라진다"
+      },
+      {
+        "id": "rel-mbc-meaning",
+        "text": "몰랄 농도가 1 m인 용액의 끓는점 오름이 그 용매의 몰랄 오름 상수와 같은 값이 된다",
+        "condition": "몰랄 농도가 1 m이고 용질이 비휘발성·비전해질일 때",
+        "scope": "묽은 용액으로 볼 수 있는 농도 범위",
+        "invertible": false
+      },
+      {
+        "id": "rel-mbc-compare",
+        "text": "몰랄 농도가 같다면 몰랄 오름 상수가 큰 용매를 쓴 용액일수록 끓는점이 더 많이 오른다",
+        "condition": "몰랄 농도가 같은 여러 용매의 용액을 견줄 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "몰랄 농도가 같다면 몰랄 오름 상수가 큰 용매를 쓴 용액일수록 끓는점이 조금만 오른다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물의 몰랄 오름 상수는 녹이는 것이 설탕이냐 포도당이냐에 따라 달라진다",
+        "whyWrong": "이 상수는 용매인 물의 성질로 정해진다. 비전해질 용질이라면 종류가 달라도 같은 값을 쓴다."
+      },
+      {
+        "text": "몰랄 오름 상수가 큰 용매일수록 그 용매의 끓는점도 높다",
+        "whyWrong": "이 상수는 농도가 1 m일 때 끓는점이 오르는 폭일 뿐 용매의 끓는점과는 다른 값이다. 물은 벤젠보다 끓는점이 높지만 몰랄 오름 상수는 오히려 작다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-boiling-point-elevation",
+        "note": "이 상수는 끓는점 오름 관계식 안에서만 뜻을 가진다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-molality"
+      },
+      {
+        "type": "related",
+        "target": "mate-molal-freezing-point-depression-constant"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "끓는점 오름과 어는점 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-02",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "표 Ⅱ-2 여러 가지 용매의 몰랄 오름 상수",
+    "mediaFile": "mate-2-tbl-02.png"
+  },
+  {
+    "id": "mate-molal-freezing-point-depression-constant",
+    "term": "몰랄 내림 상수",
+    "aliases": [
+      "어는점 내림 상수"
+    ],
+    "hanja": null,
+    "english": "molal freezing point depression constant",
+    "definition": "몰랄 농도가 1 m인 용액에서 어는점이 내려가는 폭에 해당하는 값. 용매마다 값이 정해져 있고 용질의 종류와는 상관이 없다.",
+    "relations": [
+      {
+        "id": "rel-mfc-solvent-specific",
+        "text": "몰랄 내림 상수는 용매의 종류로 정해지며 어떤 용질을 녹였는지에 따라 달라지지 않는다",
+        "condition": "같은 용매에 서로 다른 비전해질 용질을 녹여 견줄 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "몰랄 내림 상수는 녹인 용질의 종류에 따라 값이 달라진다"
+      },
+      {
+        "id": "rel-mfc-compare",
+        "text": "몰랄 농도가 같다면 몰랄 내림 상수가 큰 용매를 쓴 용액일수록 어는점이 더 많이 내려간다",
+        "condition": "몰랄 농도가 같은 여러 용매의 용액을 견줄 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "몰랄 농도가 같다면 몰랄 내림 상수가 큰 용매를 쓴 용액일수록 어는점이 조금만 내려간다"
+      },
+      {
+        "id": "rel-mfc-larger-than-kb",
+        "text": "교과서 표에 실린 네 용매에서는 몰랄 내림 상수가 같은 용매의 몰랄 오름 상수보다 크다",
+        "condition": "같은 용매의 두 상수를 나란히 견줄 때",
+        "scope": "표에 실린 물·벤젠·에탄올·아세트산",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "몰랄 내림 상수는 용질에 따라 다르므로 소금물과 설탕물에서 서로 다른 값을 쓴다",
+        "whyWrong": "상수는 용매인 물의 성질이라 같은 값을 쓴다. 소금물이 다르게 나오는 것은 상수 때문이 아니라 소금이 이온으로 나뉘어 입자 수가 늘기 때문이다."
+      },
+      {
+        "text": "물의 몰랄 내림 상수 1.86을 벤젠 용액에도 그대로 쓰면 된다",
+        "whyWrong": "상수는 용매마다 다르다. 벤젠은 값이 훨씬 커서 같은 몰랄 농도라도 어는점이 더 많이 내려간다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-freezing-point-depression",
+        "note": "이 상수는 어는점 내림 관계식 안에서만 뜻을 가진다"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-molality"
+      },
+      {
+        "type": "related",
+        "target": "mate-molal-boiling-point-elevation-constant"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "끓는점 오름과 어는점 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-02",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "표 Ⅱ-3 여러 가지 용매의 몰랄 내림 상수",
+    "mediaFile": "mate-2-tbl-03.png"
+  },
+  {
+    "id": "mate-molality",
+    "term": "몰랄 농도",
+    "aliases": [],
+    "hanja": null,
+    "english": "molality",
+    "definition": "용질의 양(mol)을 용매의 질량 1 kg을 기준으로 나타낸 농도. 부피가 아니라 질량이 기준이라 온도가 달라져도 값이 그대로다.",
+    "relations": [
+      {
+        "id": "rel-molality-quotient",
+        "text": "몰랄 농도는 녹아 있는 용질의 양(mol)을 용매의 질량(kg)으로 나누어 얻는다",
+        "condition": "용매의 질량을 kg 단위로 재어 계산할 때",
+        "scope": "용매와 용질을 가려낼 수 있는 모든 용액",
+        "invertible": true,
+        "invertedText": "같은 질량의 용매에 녹인 용질의 양(mol)이 많을수록 몰랄 농도는 작아진다"
+      },
+      {
+        "id": "rel-molality-temperature",
+        "text": "용액의 온도를 바꾸어도 몰랄 농도의 값은 달라지지 않는다",
+        "condition": "용질과 용매의 양은 그대로 두고 온도만 바꿀 때",
+        "scope": "용매가 증발하거나 얼지 않는 온도 범위",
+        "invertible": true,
+        "invertedText": "용액을 데워 온도를 높이면 몰랄 농도가 커진다"
+      },
+      {
+        "id": "rel-molality-colligative",
+        "text": "같은 용매를 썼다면 몰랄 농도가 큰 용액일수록 끓는점 오름과 어는점 내림이 모두 크다",
+        "condition": "용매가 같고 용질이 비휘발성·비전해질일 때",
+        "scope": "묽은 용액",
+        "invertible": true,
+        "invertedText": "같은 용매를 썼다면 몰랄 농도가 큰 용액일수록 끓는점 오름과 어는점 내림이 모두 작다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "몰랄 농도는 용액 1 kg에 녹아 있는 용질의 양(mol)이다",
+        "whyWrong": "기준이 되는 1 kg은 용액이 아니라 용매다. 용질의 질량까지 더한 용액을 기준으로 잡으면 값이 달라진다."
+      },
+      {
+        "text": "온도를 높이면 용액이 팽창하므로 몰랄 농도가 작아진다",
+        "whyWrong": "부피를 기준으로 삼는 몰농도와 달리 몰랄 농도는 질량이 기준이다. 온도가 바뀌어도 질량과 양(mol)은 그대로여서 값이 변하지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-boiling-point-elevation"
+      },
+      {
+        "type": "next",
+        "target": "mate-freezing-point-depression"
+      },
+      {
+        "type": "related",
+        "target": "mate-molarity",
+        "note": "기준이 용매의 질량인가 용액의 부피인가에서 갈린다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "끓는점 오름과 어는점 내림",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-02",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "몰랄 농도의 정의",
+    "mediaFile": "mate-2-fml-02.png"
+  },
+  {
+    "id": "mate-molarity",
+    "term": "몰농도",
+    "aliases": [],
+    "hanja": null,
+    "english": "molarity",
+    "definition": "용질의 양(mol)을 용액 전체의 부피 1 L를 기준으로 나타낸 농도. 단위는 M을 쓰며 부피가 기준이라 온도를 타는 값이다.",
+    "relations": [
+      {
+        "id": "rel-molarity-quotient",
+        "text": "몰농도는 녹아 있는 용질의 양(mol)을 용액의 부피(L)로 나누어 얻는다",
+        "condition": "용액의 부피를 L 단위로 재어 계산할 때",
+        "scope": "용매와 용질을 가려낼 수 있는 모든 용액",
+        "invertible": true,
+        "invertedText": "같은 부피의 용액에 녹아 있는 용질의 양(mol)이 많을수록 몰농도는 작아진다"
+      },
+      {
+        "id": "rel-molarity-basis",
+        "text": "몰농도는 용매가 아니라 용액 전체의 부피를 기준으로 삼는다는 점에서 몰랄 농도와 갈린다",
+        "condition": "같은 용액을 두 가지 방식으로 나타내어 견줄 때",
+        "scope": "농도를 나타내는 두 방식을 맞대어 볼 때",
+        "invertible": false
+      },
+      {
+        "id": "rel-molarity-temperature",
+        "text": "용질과 용매의 양을 그대로 둔 채 온도를 높이면 용액의 부피가 늘어 몰농도가 작아진다",
+        "condition": "용질과 용매의 양은 그대로 두고 온도만 높일 때",
+        "scope": "온도가 오를 때 부피가 늘어나는 액체 용액",
+        "invertible": true,
+        "invertedText": "용질과 용매의 양을 그대로 둔 채 온도를 높이면 용액의 부피가 늘어 몰농도가 커진다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "몰농도는 용매 1 L에 녹인 용질의 양(mol)이다",
+        "whyWrong": "기준은 용매가 아니라 용액 전체의 부피 1 L다. 용질이 녹으면 부피가 달라지므로 둘은 같지 않다."
+      },
+      {
+        "text": "물 1 L에 설탕 1 mol을 녹이면 1 M 설탕물이 된다",
+        "whyWrong": "설탕이 녹으면 용액의 부피가 1 L보다 커지므로 몰농도는 1 M보다 조금 작아진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-osmotic-pressure",
+        "note": "삼투압의 크기를 견주는 잣대가 된다"
+      },
+      {
+        "type": "next",
+        "target": "mate-vant-hoff-law"
+      },
+      {
+        "type": "related",
+        "target": "mate-molality"
+      },
+      {
+        "type": "related",
+        "target": "mate-osmosis"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "삼투 현상",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-03",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "몰농도가 들어가는 삼투압 식",
+    "mediaFile": "mate-2-fml-04.png"
+  },
+  {
+    "id": "mate-osmosis",
+    "term": "삼투 현상",
+    "aliases": [
+      "삼투"
+    ],
+    "hanja": "滲透現象",
+    "english": "osmosis",
+    "definition": "반투막으로 나뉜 두 용액 가운데 묽은 쪽의 용매가 진한 쪽으로 옮겨 가, 양쪽의 농도 차가 줄어드는 현상.",
+    "relations": [
+      {
+        "id": "rel-osm-direction",
+        "text": "용매는 묽은 용액 쪽에서 진한 용액 쪽으로 반투막을 건너간다",
+        "condition": "반투막을 사이에 두고 농도가 다른 두 용액을 놓아둘 때",
+        "scope": "용질은 막고 용매만 지나게 하는 반투막",
+        "invertible": true,
+        "invertedText": "용매는 진한 용액 쪽에서 묽은 용액 쪽으로 반투막을 건너간다"
+      },
+      {
+        "id": "rel-osm-net-flow",
+        "text": "양쪽을 오가는 용매 입자 가운데 묽은 쪽에서 건너가는 수가 더 많아 한 방향으로 흐르는 것처럼 보인다",
+        "condition": "반투막 양쪽 용액의 농도가 서로 다를 때",
+        "scope": "농도가 다른 두 용액이 반투막으로 나뉘어 있는 경우",
+        "invertible": false
+      },
+      {
+        "id": "rel-osm-gap",
+        "text": "두 용액의 농도 차가 클수록 옮겨 가는 용매의 양이 많아져 삼투 현상이 뚜렷해진다",
+        "condition": "같은 반투막을 쓰고 온도가 일정할 때",
+        "scope": "묽은 용액",
+        "invertible": true,
+        "invertedText": "두 용액의 농도 차가 클수록 삼투 현상은 오히려 약하게 나타난다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "삼투 현상에서는 용질이 진한 쪽에서 묽은 쪽으로 옮겨 가 농도가 같아진다",
+        "whyWrong": "반투막은 용질을 통과시키지 않는다. 옮겨 가는 것은 용매이고, 묽은 쪽에서 진한 쪽으로 건너가면서 농도 차가 줄어든다."
+      },
+      {
+        "text": "배추에 소금을 뿌리면 소금이 배추 속으로 들어가 배추가 쪼그라든다",
+        "whyWrong": "쪼그라드는 까닭은 배추 속 물이 진한 소금물 쪽으로 빠져나오기 때문이다. 옮겨 가는 것은 소금이 아니라 물이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-semipermeable-membrane"
+      },
+      {
+        "type": "next",
+        "target": "mate-osmotic-pressure"
+      },
+      {
+        "type": "related",
+        "target": "mate-molarity"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "삼투 현상",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-03",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "滲 스밀 삼 · 透 통할 투 · 現 나타날 현 · 象 코끼리 상",
+    "mediaCaption": "그림 Ⅱ-13 삼투 현상",
+    "mediaFile": "mate-2-fig-13.png"
+  },
+  {
+    "id": "mate-osmotic-pressure",
+    "term": "삼투압",
+    "aliases": [],
+    "hanja": "滲透壓",
+    "english": "osmotic pressure",
+    "definition": "삼투로 한쪽 액면이 올라갈 때, 양쪽 액면의 높이를 같게 맞추려고 진한 용액 쪽에 걸어 주어야 하는 압력.",
+    "relations": [
+      {
+        "id": "rel-op-definition",
+        "text": "삼투압은 삼투로 생긴 액면 차를 없애려고 진한 용액 쪽에 걸어 주는 압력의 크기다",
+        "condition": "반투막이 든 U자관에 두 용액을 넣어 두었을 때",
+        "scope": "용질은 막고 용매만 지나게 하는 반투막",
+        "invertible": false
+      },
+      {
+        "id": "rel-op-concentration",
+        "text": "온도가 같다면 몰농도가 큰 용액일수록 삼투압이 크다",
+        "condition": "온도가 같고 용매와 반투막이 같을 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "온도가 같다면 몰농도가 큰 용액일수록 삼투압이 작다"
+      },
+      {
+        "id": "rel-op-temperature",
+        "text": "몰농도가 같은 두 용액이라면 절대 온도가 높은 쪽의 삼투압이 더 크다",
+        "condition": "몰농도가 같은 용액끼리 온도만 달리해 견줄 때",
+        "scope": "묽은 용액, 온도는 절대 온도로 나타냄",
+        "invertible": true,
+        "invertedText": "몰농도가 같은 두 용액이라면 절대 온도가 높은 쪽의 삼투압이 더 작다"
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "삼투압은 액면이 낮아진 물 쪽에 걸어 주어야 하는 압력이다",
+        "whyWrong": "액면을 같게 맞추려면 액면이 올라간 진한 용액 쪽을 눌러 주어야 한다. 눌러 주는 쪽은 물이 아니라 용액이다."
+      },
+      {
+        "text": "설탕물을 두 배로 진하게 만들어도 삼투압은 그대로다",
+        "whyWrong": "온도가 같을 때 삼투압은 몰농도에 비례한다. 농도가 두 배가 되면 삼투압도 두 배가 된다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-osmosis"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-semipermeable-membrane"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-molarity"
+      },
+      {
+        "type": "next",
+        "target": "mate-vant-hoff-law"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "삼투 현상",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-03",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "滲 스밀 삼 · 透 통할 투 · 壓 누를 압",
+    "mediaCaption": "그림 Ⅱ-14 삼투압",
+    "mediaFile": "mate-2-fig-14.png"
+  },
+  {
+    "id": "mate-semipermeable-membrane",
+    "term": "반투막",
+    "aliases": [],
+    "hanja": "半透膜",
+    "english": "semipermeable membrane",
+    "definition": "구멍이 아주 작아 용매 입자만 지나가게 하고 그보다 큰 용질 입자는 가로막는 얇은 막. 셀로판이나 세포막이 이에 해당한다.",
+    "relations": [
+      {
+        "id": "rel-spm-size-selective",
+        "text": "반투막을 지날 수 있는지는 입자의 크기로 갈려, 작은 용매 입자는 지나가고 큰 용질 입자는 가로막힌다",
+        "condition": "막에 난 구멍보다 용질 입자가 클 때",
+        "scope": "용질 입자가 막의 구멍보다 큰 용액",
+        "invertible": true,
+        "invertedText": "반투막에서는 입자가 클수록 막을 더 잘 지나간다"
+      },
+      {
+        "id": "rel-spm-two-way",
+        "text": "반투막에서는 용매 입자가 양쪽으로 모두 오가며, 다만 오가는 수가 서로 다를 뿐이다",
+        "condition": "반투막 양쪽에 액체가 닿아 있을 때",
+        "scope": "농도가 다른 두 용액이 반투막으로 나뉘어 있는 경우",
+        "invertible": false
+      },
+      {
+        "id": "rel-spm-precondition",
+        "text": "농도가 다른 두 용액 사이에 삼투 현상이 나타나려면 그 사이를 반투막이 가로막고 있어야 한다",
+        "condition": "농도가 다른 두 용액을 맞대어 둘 때",
+        "scope": "용질은 막고 용매만 지나게 하는 막이 있는 경우",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "반투막은 용매를 한쪽으로만 보내는 일방통행 막이다",
+        "whyWrong": "용매 입자는 양쪽으로 다 오간다. 묽은 쪽에서 진한 쪽으로 건너가는 수가 더 많아 한 방향으로만 움직이는 것처럼 보일 뿐이다."
+      },
+      {
+        "text": "반투막에는 구멍이 없어서 용질이 통과하지 못한다",
+        "whyWrong": "반투막에는 눈에 보이지 않는 작은 구멍이 있다. 그 구멍보다 큰 용질 입자만 지나가지 못하는 것이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "mate-osmosis"
+      },
+      {
+        "type": "next",
+        "target": "mate-osmotic-pressure"
+      },
+      {
+        "type": "related",
+        "target": "mate-molarity",
+        "note": "막 양쪽 용액의 진하기는 대개 몰농도로 견준다"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "삼투 현상",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-03",
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "半 반 반 · 透 통할 투 · 膜 꺼풀 막",
+    "mediaCaption": "그림 Ⅱ-15 삼투 현상의 예",
+    "mediaFile": "mate-2-fig-15.png"
+  },
+  {
+    "id": "mate-vant-hoff-law",
+    "term": "판트호프 법칙",
+    "aliases": [
+      "반트호프 법칙"
+    ],
+    "hanja": null,
+    "english": "van 't Hoff law",
+    "definition": "묽은 용액의 삼투압이 용매나 용질의 종류와 상관없이 몰농도와 절대 온도의 곱에 비례한다고 보는 법칙.",
+    "relations": [
+      {
+        "id": "rel-vh-equation",
+        "text": "삼투압은 용액의 몰농도에 기체 상수와 절대 온도를 곱한 값과 같다",
+        "condition": "용질이 비휘발성·비전해질이고 용액이 충분히 묽을 때",
+        "scope": "묽은 용액, 온도는 절대 온도로 나타냄",
+        "invertible": true,
+        "invertedText": "몰농도와 절대 온도의 곱이 커질수록 삼투압은 작아진다"
+      },
+      {
+        "id": "rel-vh-kind-independent",
+        "text": "삼투압의 크기는 어떤 용매·용질을 썼는가가 아니라 녹아 있는 입자의 몰농도로 정해진다",
+        "condition": "몰농도와 온도가 같은 묽은 용액끼리 견줄 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": true,
+        "invertedText": "몰농도와 온도가 같아도 용매나 용질의 종류가 다르면 삼투압이 달라진다"
+      },
+      {
+        "id": "rel-vh-molar-mass",
+        "text": "용질의 질량과 용액의 부피·온도를 알고 삼투압을 재면 그 용질의 분자량을 구할 수 있다",
+        "condition": "네 값 가운데 분자량만 모르는 상태일 때",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "π = CRT의 T 자리에는 섭씨온도를 그대로 넣으면 된다",
+        "whyWrong": "이 식의 T는 절대 온도다. 섭씨온도를 넣으면 0 ℃에서 삼투압이 0이 되는 잘못된 결과가 나온다."
+      },
+      {
+        "text": "π = CRT의 C에는 몰랄 농도를 넣는다",
+        "whyWrong": "C는 용액의 부피를 기준으로 하는 몰농도다. 용매의 질량을 기준으로 하는 몰랄 농도를 넣으면 값이 어긋난다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "mate-osmotic-pressure"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-molarity"
+      },
+      {
+        "type": "prereq",
+        "target": "mate-nonvolatile-solute",
+        "note": "비휘발성·비전해질이라는 전제 위에서만 성립한다"
+      },
+      {
+        "type": "related",
+        "target": "mate-osmosis"
+      }
+    ],
+    "subject": "물질과 에너지",
+    "unit": "용액의 성질 > 묽은 용액의 성질",
+    "topic": "삼투 현상",
+    "unitId": "mate-2",
+    "topicId": "mate-2-2-03",
+    "hasRestrictedMedia": true,
+    "mediaCaption": "판트호프 법칙과 분자량",
+    "mediaFile": "mate-2-fml-05.png"
   }
 ]

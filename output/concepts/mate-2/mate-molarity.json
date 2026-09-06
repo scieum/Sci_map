@@ -1,0 +1,137 @@
+{
+  "id": "mate-molarity",
+  "concept_key": "concept:molarity",
+  "registry_status": "new",
+  "term": "몰농도",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰'은 영어 mole 의 음차어라 한자 표기가 없다. 뒤의 '농도'만 濃度에 해당하므로 낱말 전체에 대응하는 한자어는 없다.",
+    "english": "molarity",
+    "symbol_display": "M = n_solute(mol) / V_solution(L)",
+    "symbol_plain": "M = n_solute(mol) / V_solution(L)"
+  },
+  "definition": "용질의 양(mol)을 용액 전체의 부피 1 L를 기준으로 나타낸 농도. 단위는 M을 쓰며 부피가 기준이라 온도를 타는 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-molarity-quotient",
+      "text": "몰농도는 녹아 있는 용질의 양(mol)을 용액의 부피(L)로 나누어 얻는다",
+      "form": {
+        "condition": "용액의 부피를 L 단위로 재어 계산할 때",
+        "type": "classification",
+        "scope": "용매와 용질을 가려낼 수 있는 모든 용액",
+        "antecedent": {
+          "quantity": "같은 부피의 용액에 녹아 있는 용질의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몰농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분자가 커지면 몫도 커지는 나눗셈이라 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 부피의 용액에 녹아 있는 용질의 양(mol)이 많을수록 몰농도는 작아진다"
+    },
+    {
+      "id": "rel-molarity-basis",
+      "text": "몰농도는 용매가 아니라 용액 전체의 부피를 기준으로 삼는다는 점에서 몰랄 농도와 갈린다",
+      "form": {
+        "condition": "같은 용액을 두 가지 방식으로 나타내어 견줄 때",
+        "type": "classification",
+        "scope": "농도를 나타내는 두 방식을 맞대어 볼 때",
+        "antecedent": {
+          "quantity": "기준으로 삼는 양",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "농도로 나온 값",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 정의의 기준이 다르다는 것을 짚는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-molarity-temperature",
+      "text": "용질과 용매의 양을 그대로 둔 채 온도를 높이면 용액의 부피가 늘어 몰농도가 작아진다",
+      "form": {
+        "condition": "용질과 용매의 양은 그대로 두고 온도만 높일 때",
+        "type": "inverse",
+        "scope": "온도가 오를 때 부피가 늘어나는 액체 용액",
+        "antecedent": {
+          "quantity": "용액의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몰농도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분모인 부피가 늘어나는데 몫이 커진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용질과 용매의 양을 그대로 둔 채 온도를 높이면 용액의 부피가 늘어 몰농도가 커진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몰농도는 용매 1 L에 녹인 용질의 양(mol)이다",
+      "why_wrong": "기준은 용매가 아니라 용액 전체의 부피 1 L다. 용질이 녹으면 부피가 달라지므로 둘은 같지 않다.",
+      "linked_relation": "rel-molarity-basis",
+      "source": "llm"
+    },
+    {
+      "text": "물 1 L에 설탕 1 mol을 녹이면 1 M 설탕물이 된다",
+      "why_wrong": "설탕이 녹으면 용액의 부피가 1 L보다 커지므로 몰농도는 1 M보다 조금 작아진다.",
+      "linked_relation": "rel-molarity-quotient",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-osmotic-pressure",
+      "note": "삼투압의 크기를 견주는 잣대가 된다"
+    },
+    {
+      "type": "next",
+      "target": "mate-vant-hoff-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-molality"
+    },
+    {
+      "type": "related",
+      "target": "mate-osmosis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-03",
+  "pages": [
+    63,
+    67,
+    68
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

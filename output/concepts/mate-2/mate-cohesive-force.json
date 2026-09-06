@@ -1,0 +1,125 @@
+{
+  "id": "mate-cohesive-force",
+  "concept_key": "concept:cohesive-force",
+  "registry_status": "new",
+  "term": "응집력",
+  "notation": {
+    "hanja": "凝集力",
+    "hanja_gloss": "凝 엉길 응 · 集 모을 집 · 力 힘 력",
+    "english": "cohesive force"
+  },
+  "definition": "같은 종류의 분자끼리 서로 끌어당기는 힘. 이 힘이 클수록 액체는 흩어지지 않고 뭉쳐 있으려 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cf-same",
+      "text": "힘이 작용하는 상대가 같은 종류의 분자이면 응집력, 다른 종류의 분자이면 부착력이라 부른다.",
+      "form": {
+        "condition": "두 힘을 상대에 따라 갈라 부를 때",
+        "type": "classification",
+        "scope": "분자로 이루어진 액체와 그것이 닿는 물질에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 이름이 가리키는 상대가 서로 배타적이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "힘이 작용하는 상대가 다른 종류의 분자이면 응집력, 같은 종류의 분자이면 부착력이라 부른다."
+    },
+    {
+      "id": "rel-cf-hbond",
+      "text": "분자 사이의 인력이 셀수록 액체의 응집력이 커지므로, 수소 결합을 하는 물은 응집력이 크다.",
+      "form": {
+        "condition": "온도가 같은 액체끼리 견줄 때",
+        "type": "direct",
+        "scope": "분자로 이루어진 순수한 액체에 한정한다",
+        "antecedent": {
+          "quantity": "분자 사이의 인력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "응집력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "응집력이 곧 같은 분자 사이의 인력이라 셀수록 작아진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 사이의 인력이 셀수록 액체의 응집력은 오히려 작아진다."
+    },
+    {
+      "id": "rel-cf-surface",
+      "text": "응집력이 큰 액체일수록 겉넓이를 줄이려는 경향이 강해 표면 장력도 크다.",
+      "form": {
+        "condition": "온도가 같은 액체끼리 견줄 때",
+        "type": "direct",
+        "scope": "순수한 액체에 한정한다",
+        "antecedent": {
+          "quantity": "응집력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "표면 장력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "표면 장력의 원인이 응집력이므로 클수록 작아진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "응집력이 큰 액체일수록 표면 장력은 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "응집력은 분자를 이루는 원자들을 붙잡아 두는 힘이다",
+      "why_wrong": "분자 안이 아니라 분자와 분자 사이에 작용하는 힘이다. 분자 안의 원자를 잇는 것은 공유 결합이다.",
+      "source": "llm"
+    },
+    {
+      "text": "응집력과 부착력은 같은 힘을 다르게 부르는 이름일 뿐이다",
+      "why_wrong": "힘이 작용하는 상대가 같은 종류 분자인지 다른 종류 분자인지로 갈리는 서로 다른 힘이다.",
+      "source": "llm",
+      "linked_relation": "rel-cf-same"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-hydrogen-bond-in-water"
+    },
+    {
+      "type": "next",
+      "target": "mate-capillary-action"
+    },
+    {
+      "type": "related",
+      "target": "mate-adhesive-force",
+      "note": "짝을 이루어 모세관 현상을 설명한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-surface-tension"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-02",
+  "pages": [
+    53
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

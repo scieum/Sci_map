@@ -1,0 +1,136 @@
+{
+  "id": "mate-osmotic-pressure",
+  "concept_key": "concept:osmotic-pressure",
+  "registry_status": "new",
+  "term": "삼투압",
+  "notation": {
+    "hanja": "滲透壓",
+    "hanja_gloss": "滲 스밀 삼 · 透 통할 투 · 壓 누를 압",
+    "english": "osmotic pressure",
+    "symbol_display": "π (atm)",
+    "symbol_plain": "pi (atm)"
+  },
+  "definition": "삼투로 한쪽 액면이 올라갈 때, 양쪽 액면의 높이를 같게 맞추려고 진한 용액 쪽에 걸어 주어야 하는 압력.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-op-definition",
+      "text": "삼투압은 삼투로 생긴 액면 차를 없애려고 진한 용액 쪽에 걸어 주는 압력의 크기다",
+      "form": {
+        "condition": "반투막이 든 U자관에 두 용액을 넣어 두었을 때",
+        "type": "classification",
+        "scope": "용질은 막고 용매만 지나게 하는 반투막",
+        "antecedent": {
+          "quantity": "진한 용액 쪽에 걸어 준 압력",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "양쪽 액면의 높이 차",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 재는 값인지 정하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-op-concentration",
+      "text": "온도가 같다면 몰농도가 큰 용액일수록 삼투압이 크다",
+      "form": {
+        "condition": "온도가 같고 용매와 반투막이 같을 때",
+        "type": "direct",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "용액의 몰농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "삼투압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "삼투압은 몰농도에 비례하므로 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 같다면 몰농도가 큰 용액일수록 삼투압이 작다"
+    },
+    {
+      "id": "rel-op-temperature",
+      "text": "몰농도가 같은 두 용액이라면 절대 온도가 높은 쪽의 삼투압이 더 크다",
+      "form": {
+        "condition": "몰농도가 같은 용액끼리 온도만 달리해 견줄 때",
+        "type": "direct",
+        "scope": "묽은 용액, 온도는 절대 온도로 나타냄",
+        "antecedent": {
+          "quantity": "절대 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "삼투압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "삼투압은 절대 온도에 비례하므로 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰농도가 같은 두 용액이라면 절대 온도가 높은 쪽의 삼투압이 더 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "삼투압은 액면이 낮아진 물 쪽에 걸어 주어야 하는 압력이다",
+      "why_wrong": "액면을 같게 맞추려면 액면이 올라간 진한 용액 쪽을 눌러 주어야 한다. 눌러 주는 쪽은 물이 아니라 용액이다.",
+      "linked_relation": "rel-op-definition",
+      "source": "llm"
+    },
+    {
+      "text": "설탕물을 두 배로 진하게 만들어도 삼투압은 그대로다",
+      "why_wrong": "온도가 같을 때 삼투압은 몰농도에 비례한다. 농도가 두 배가 되면 삼투압도 두 배가 된다.",
+      "linked_relation": "rel-op-concentration",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-osmosis"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-semipermeable-membrane"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molarity"
+    },
+    {
+      "type": "next",
+      "target": "mate-vant-hoff-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-03",
+  "pages": [
+    62,
+    67,
+    68
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

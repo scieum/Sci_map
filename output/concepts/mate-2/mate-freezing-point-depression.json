@@ -1,0 +1,143 @@
+{
+  "id": "mate-freezing-point-depression",
+  "concept_key": "concept:freezing-point-depression",
+  "registry_status": "new",
+  "term": "어는점 내림",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'어는'과 '내림'이 고유어여서 표제어 전체에 대응하는 한자어 표기가 없다. 가운데 '점'만 點에 해당한다.",
+    "english": "freezing point depression",
+    "symbol_display": "ΔT_f = K_f × m",
+    "symbol_plain": "deltaT_f = K_f m"
+  },
+  "definition": "녹아 있는 용질이 용매가 얼어붙는 것을 방해하는 탓에 용액이 순수한 용매보다 낮은 온도에서 얼 때, 그 벌어진 어는점의 차이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fpd-why",
+      "text": "용질 입자가 용매 입자끼리 규칙적으로 자리 잡는 것을 가로막으므로 용액은 용매보다 낮은 온도에서 언다",
+      "form": {
+        "condition": "외부 압력이 일정하게 유지될 때",
+        "type": "causal",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "antecedent": {
+          "quantity": "녹아 있는 용질 입자의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액의 어는점",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "결정이 만들어지는 것을 방해받는데 오히려 더 쉽게 언다는 말은 앞뒤가 맞지 않아 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용질 입자가 얼음 결정 만들기를 가로막으므로 용액은 용매보다 높은 온도에서 언다"
+    },
+    {
+      "id": "rel-fpd-molality",
+      "text": "어는점이 내려가는 폭은 용액의 몰랄 농도에 비례한다",
+      "form": {
+        "condition": "용매가 같고 용질이 비휘발성·비전해질일 때",
+        "type": "direct",
+        "scope": "묽은 용액",
+        "antecedent": {
+          "quantity": "몰랄 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "어는점 내림",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "어는점 내림은 몰랄 농도에 상수를 곱한 값이라 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용액의 몰랄 농도가 클수록 어는점이 내려가는 폭은 작아진다"
+    },
+    {
+      "id": "rel-fpd-molar-mass",
+      "text": "녹인 질량이 같다면 분자량이 작은 용질을 쓴 용액일수록 어는점이 더 많이 내려간다",
+      "form": {
+        "condition": "용매의 질량과 녹인 용질의 질량이 서로 같을 때",
+        "type": "inverse",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "용질의 분자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "어는점 내림",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량이 같으면 분자량이 작을수록 입자 수가 많아지므로 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "녹인 질량이 같다면 분자량이 큰 용질을 쓴 용액일수록 어는점이 더 많이 내려간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "눈길에 염화 칼슘을 뿌리면 눈이 녹는 것은 염화 칼슘이 열을 내기 때문이다",
+      "why_wrong": "녹은 물에 염화 칼슘이 녹아 어는점이 0 ℃보다 낮아지기 때문이다. 열을 내서 녹이는 것이 아니다.",
+      "linked_relation": "rel-fpd-why",
+      "source": "llm"
+    },
+    {
+      "text": "같은 질량을 녹이면 어떤 용질이든 어는점이 똑같이 내려간다",
+      "why_wrong": "내려가는 폭은 녹아 있는 입자의 수로 정해진다. 같은 질량이라도 분자량이 작을수록 입자 수가 많아 더 많이 내려간다.",
+      "linked_relation": "rel-fpd-molar-mass",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-molality"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-nonvolatile-solute"
+    },
+    {
+      "type": "next",
+      "target": "mate-molal-freezing-point-depression-constant"
+    },
+    {
+      "type": "related",
+      "target": "mate-boiling-point-elevation",
+      "note": "같은 농도 자료에서 함께 다루어진다"
+    },
+    {
+      "type": "related",
+      "target": "mate-vapor-pressure-lowering"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-02",
+  "pages": [
+    58,
+    61,
+    66,
+    68
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

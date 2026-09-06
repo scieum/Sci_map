@@ -1,0 +1,134 @@
+{
+  "id": "mate-molal-freezing-point-depression-constant",
+  "concept_key": "concept:molal-freezing-point-depression-constant",
+  "registry_status": "new",
+  "term": "몰랄 내림 상수",
+  "aliases": [
+    "어는점 내림 상수"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰랄'은 영어 molal 의 음차어이고 '내림'은 고유어여서 낱말 전체에 대응하는 한자어가 없다. 뒤의 '상수'만 常數에 해당한다.",
+    "english": "molal freezing point depression constant",
+    "symbol_display": "K_f (℃·kg/mol)",
+    "symbol_plain": "K_f (C kg/mol)"
+  },
+  "definition": "몰랄 농도가 1 m인 용액에서 어는점이 내려가는 폭에 해당하는 값. 용매마다 값이 정해져 있고 용질의 종류와는 상관이 없다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mfc-solvent-specific",
+      "text": "몰랄 내림 상수는 용매의 종류로 정해지며 어떤 용질을 녹였는지에 따라 달라지지 않는다",
+      "form": {
+        "condition": "같은 용매에 서로 다른 비전해질 용질을 녹여 견줄 때",
+        "type": "classification",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "용질의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "몰랄 내림 상수",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 상수는 용매만으로 정해지므로 용질에 따라 달라진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰랄 내림 상수는 녹인 용질의 종류에 따라 값이 달라진다"
+    },
+    {
+      "id": "rel-mfc-compare",
+      "text": "몰랄 농도가 같다면 몰랄 내림 상수가 큰 용매를 쓴 용액일수록 어는점이 더 많이 내려간다",
+      "form": {
+        "condition": "몰랄 농도가 같은 여러 용매의 용액을 견줄 때",
+        "type": "direct",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "몰랄 내림 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "어는점 내림",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "어는점 내림은 이 상수에 비례하므로 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰랄 농도가 같다면 몰랄 내림 상수가 큰 용매를 쓴 용액일수록 어는점이 조금만 내려간다"
+    },
+    {
+      "id": "rel-mfc-larger-than-kb",
+      "text": "교과서 표에 실린 네 용매에서는 몰랄 내림 상수가 같은 용매의 몰랄 오름 상수보다 크다",
+      "form": {
+        "condition": "같은 용매의 두 상수를 나란히 견줄 때",
+        "type": "classification",
+        "scope": "표에 실린 물·벤젠·에탄올·아세트산",
+        "antecedent": {
+          "quantity": "몰랄 내림 상수",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "몰랄 오름 상수",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "표에 실린 용매에서 확인되는 경향일 뿐 모든 용매에 대해 반대가 언제나 거짓이라고 단정할 수 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몰랄 내림 상수는 용질에 따라 다르므로 소금물과 설탕물에서 서로 다른 값을 쓴다",
+      "why_wrong": "상수는 용매인 물의 성질이라 같은 값을 쓴다. 소금물이 다르게 나오는 것은 상수 때문이 아니라 소금이 이온으로 나뉘어 입자 수가 늘기 때문이다.",
+      "linked_relation": "rel-mfc-solvent-specific",
+      "source": "llm"
+    },
+    {
+      "text": "물의 몰랄 내림 상수 1.86을 벤젠 용액에도 그대로 쓰면 된다",
+      "why_wrong": "상수는 용매마다 다르다. 벤젠은 값이 훨씬 커서 같은 몰랄 농도라도 어는점이 더 많이 내려간다.",
+      "linked_relation": "rel-mfc-compare",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-freezing-point-depression",
+      "note": "이 상수는 어는점 내림 관계식 안에서만 뜻을 가진다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molality"
+    },
+    {
+      "type": "related",
+      "target": "mate-molal-boiling-point-elevation-constant"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-02",
+  "pages": [
+    61
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

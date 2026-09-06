@@ -1,0 +1,134 @@
+{
+  "id": "mate-water-density",
+  "concept_key": "concept:water-density",
+  "registry_status": "new",
+  "term": "물의 밀도",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'물'은 고유어라 낱말 전체에 대응하는 한자어가 없다. 뒤의 '밀도'만 密度에 해당한다.",
+    "english": "density of water",
+    "symbol_display": "d = m / V",
+    "symbol_plain": "d = m/V"
+  },
+  "definition": "단위 부피에 든 물의 질량. 상태와 온도에 따라 부피가 달라져 4 ℃ 부근에서 가장 큰 값을 갖는 것이 특징이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wd-ice",
+      "text": "얼 때 수소 결합이 육각형 배열을 이루면서 분자 사이에 빈 공간이 생겨 얼음의 밀도가 액체 물보다 작아진다.",
+      "form": {
+        "condition": "1기압에서 물이 얼어 얼음이 될 때",
+        "type": "causal",
+        "scope": "물에 한정한다. 대부분의 다른 물질은 굳으면 오히려 밀도가 커진다",
+        "antecedent": {
+          "quantity": "분자 배열 사이의 빈 공간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "밀도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "빈 공간이 생기면 같은 질량이 더 넓게 퍼지므로 밀도가 커진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "얼 때 육각형 배열을 이루면서 분자가 더 촘촘해져 얼음의 밀도가 액체 물보다 커진다."
+    },
+    {
+      "id": "rel-wd-float",
+      "text": "얼음이 물 위에 뜨는 것은 같은 부피를 놓고 볼 때 얼음의 질량이 물보다 작기 때문이다.",
+      "form": {
+        "condition": "0 ℃ 부근에서 얼음을 물에 넣었을 때",
+        "type": "causal",
+        "scope": "순수한 물과 그 얼음에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "뜨려면 밀도가 작아야 하므로 질량이 더 크다고 뒤집으면 부력 조건과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "얼음이 물 위에 뜨는 것은 같은 부피를 놓고 볼 때 얼음의 질량이 물보다 크기 때문이다."
+    },
+    {
+      "id": "rel-wd-0to4",
+      "text": "0 ℃에서 4 ℃까지는 남아 있던 육각형 구조가 무너져 부피가 줄므로, 온도를 올릴수록 밀도가 커진다.",
+      "form": {
+        "condition": "액체 물의 온도를 0 ℃에서 4 ℃까지 올릴 때",
+        "type": "inverse",
+        "scope": "0~4 ℃ 구간의 액체 물에 한정한다. 4 ℃ 위에서는 반대로 부피가 늘어난다",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "부피",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 구간에서만 부피가 줄어드는 것이 물의 특이점이므로 늘어난다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "0 ℃에서 4 ℃까지는 온도를 올릴수록 물의 부피가 늘어 밀도가 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "얼음의 밀도가 물보다 높다",
+      "why_wrong": "얼음이 물 위에 뜬다는 사실 자체가 얼음의 밀도가 더 작다는 증거다. 물이 얼면 부피가 늘어 밀도가 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-wd-ice"
+    },
+    {
+      "text": "물을 가득 담은 페트병을 얼리면 부피가 줄어 페트병이 찌그러진다",
+      "why_wrong": "물은 얼면서 부피가 늘어난다. 그래서 페트병이 찌그러지는 것이 아니라 부풀어 오른다.",
+      "source": "llm",
+      "linked_relation": "rel-wd-ice"
+    },
+    {
+      "text": "물은 온도가 올라가면 언제나 부피가 늘어난다",
+      "why_wrong": "4 ℃보다 높은 구간에서만 그렇다. 0~4 ℃ 사이에서는 온도가 올라갈수록 오히려 부피가 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-wd-0to4"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-hydrogen-bond-in-water",
+      "note": "육각형 배열이 밀도 이상성의 원인이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-water-molecule-structure"
+    },
+    {
+      "type": "related",
+      "target": "mate-specific-heat",
+      "note": "수소 결합으로 설명되는 물의 성질끼리 묶어 본다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-02",
+  "pages": [
+    50,
+    54,
+    55,
+    68
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

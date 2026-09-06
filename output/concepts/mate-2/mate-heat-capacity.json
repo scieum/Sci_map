@@ -1,0 +1,111 @@
+{
+  "id": "mate-heat-capacity",
+  "concept_key": "concept:heat-capacity",
+  "registry_status": "new",
+  "term": "열용량",
+  "notation": {
+    "hanja": "熱容量",
+    "hanja_gloss": "熱 더울 열 · 容 얼굴 용 · 量 헤아릴 량",
+    "english": "heat capacity",
+    "symbol_display": "C = m × c",
+    "symbol_plain": "C = m x c"
+  },
+  "definition": "물체 하나를 통째로 놓고 그 온도를 1 ℃ 올리는 데 드는 열량. 질량에 비열을 곱한 값이라 양이 많으면 커진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hc-product",
+      "text": "열용량은 물체의 질량에 그 물질의 비열을 곱해 구한다.",
+      "form": {
+        "condition": "물체 하나의 열용량을 구할 때",
+        "type": "classification",
+        "scope": "한 가지 물질로 고르게 이루어진 물체에 한정한다"
+      },
+      "invertible": false,
+      "invertible_reason": "정의식을 그대로 밝힌 진술이라 뒤집을 방향이 따로 없다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hc-mass",
+      "text": "물질이 같아도 질량이 클수록 열용량이 커지므로, 같은 열을 주어도 온도가 덜 오른다.",
+      "form": {
+        "condition": "물질의 종류가 같고 질량만 다를 때",
+        "type": "direct",
+        "scope": "상태 변화가 없는 가열에 한정한다",
+        "antecedent": {
+          "quantity": "질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "열용량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량과 열용량이 곱셈으로 묶여 있어 질량이 클수록 작아진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물질이 같아도 질량이 클수록 열용량이 작아져 같은 열에도 온도가 더 많이 오른다."
+    },
+    {
+      "id": "rel-hc-vs-sh",
+      "text": "비열은 1 g을 기준으로 삼고 열용량은 물체 전체를 기준으로 삼으므로, 물질을 구별하는 특성값은 비열 쪽이다.",
+      "form": {
+        "condition": "두 양이 무엇을 기준으로 정의되었는지 견줄 때",
+        "type": "classification",
+        "scope": "순물질의 특성값을 가릴 때에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "기준이 정해져 있어 특성값 노릇을 하는 쪽을 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비열과 열용량 가운데 물질을 구별하는 특성값은 열용량 쪽이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "열용량이 큰 물체는 반드시 비열도 크다",
+      "why_wrong": "열용량은 질량과 비열의 곱이라, 비열이 작아도 질량이 크면 열용량이 클 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-hc-product"
+    },
+    {
+      "text": "열용량은 물질마다 정해진 값이라 물질을 구별하는 데 쓸 수 있다",
+      "why_wrong": "같은 물질이라도 덩어리가 크면 열용량이 커진다. 물질을 구별하는 값은 양과 무관한 비열이다.",
+      "source": "llm",
+      "linked_relation": "rel-hc-vs-sh"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-specific-heat",
+      "note": "비열을 알아야 곱해서 얻는 이 값을 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "mate-hydrogen-bond-in-water"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-02",
+  "pages": [
+    51
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

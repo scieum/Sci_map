@@ -1,0 +1,135 @@
+{
+  "id": "mate-nonvolatile-solute",
+  "concept_key": "concept:nonvolatile-solute",
+  "registry_status": "new",
+  "term": "비휘발성 용질",
+  "notation": {
+    "hanja": "非揮發性溶質",
+    "hanja_gloss": "非 아닐 비 · 揮 휘두를 휘 · 發 필 발 · 性 성품 성 · 溶 녹을 용 · 質 바탕 질",
+    "english": "nonvolatile solute"
+  },
+  "definition": "쉽게 증발하지 않아 용액 위쪽 증기에는 거의 섞이지 않는 용질. 설탕이나 포도당처럼 끓는점이 아주 높은 물질이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nvs-vapor-only",
+      "text": "용질이 비휘발성이면 용액 위쪽에 모인 증기는 사실상 용매 입자만으로 이루어진다",
+      "form": {
+        "condition": "밀폐된 용기에서 온도가 일정하게 유지되며 평형에 이를 때",
+        "type": "conditional",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "antecedent": {
+          "quantity": "용질의 휘발성",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "증기에 섞이는 용질 입자의 비율",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "휘발성 용질이라면 증기에 용질도 섞이지만 그때의 증기 압력이 어느 쪽으로 갈지는 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nvs-lowers-vp",
+      "text": "비휘발성 용질을 많이 녹일수록 같은 온도에서 용액의 증기 압력은 순수한 용매보다 더 낮아진다",
+      "form": {
+        "condition": "용매의 종류와 온도가 같을 때",
+        "type": "causal",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "antecedent": {
+          "quantity": "녹인 비휘발성 용질의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액의 증기 압력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "표면에서 증발할 수 있는 용매 입자의 비율이 줄어들므로 증기 압력이 오히려 높아진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비휘발성 용질을 많이 녹일수록 같은 온도에서 용액의 증기 압력은 순수한 용매보다 더 높아진다"
+    },
+    {
+      "id": "rel-nvs-condition-of-laws",
+      "text": "묽은 용액의 증기 압력 내림·끓는점 오름·어는점 내림 관계식은 용질이 비휘발성이고 비전해질이라는 전제 위에 세워져 있다",
+      "form": {
+        "condition": "관계식을 계산에 그대로 쓰려고 할 때",
+        "type": "classification",
+        "scope": "묽은 용액에서 다루는 세 가지 관계식",
+        "antecedent": {
+          "quantity": "전제 조건의 충족 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관계식을 그대로 쓸 수 있는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "적용 조건을 밝혀 두는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물에 녹아 보이지 않게 된 설탕도 물과 함께 증발해 증기에 섞인다",
+      "why_wrong": "설탕은 비휘발성이라 증발하지 않는다. 설탕물 위에 모인 증기는 물만으로 이루어져 있다고 본다.",
+      "linked_relation": "rel-nvs-vapor-only",
+      "source": "llm"
+    },
+    {
+      "text": "용질이 무엇이든 끓는점 오름과 어는점 내림 공식을 그대로 쓰면 된다",
+      "why_wrong": "이 공식들은 용질이 비휘발성이고 비전해질일 때를 전제로 세운 것이다. 물에서 이온으로 나뉘는 전해질은 입자 수가 늘어나 계산이 달라진다.",
+      "linked_relation": "rel-nvs-condition-of-laws",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-vapor-pressure-lowering"
+    },
+    {
+      "type": "next",
+      "target": "mate-boiling-point-elevation",
+      "note": "끓는점 오름 식이 성립하려면 용질이 증발하지 않아야 한다"
+    },
+    {
+      "type": "next",
+      "target": "mate-freezing-point-depression"
+    },
+    {
+      "type": "related",
+      "target": "mate-raoult-law",
+      "note": "법칙의 적용 조건을 이루는 개념이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-01",
+  "pages": [
+    56,
+    60,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

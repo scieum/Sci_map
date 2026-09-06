@@ -1,0 +1,128 @@
+{
+  "id": "mate-semipermeable-membrane",
+  "concept_key": "concept:semipermeable-membrane",
+  "registry_status": "new",
+  "term": "반투막",
+  "notation": {
+    "hanja": "半透膜",
+    "hanja_gloss": "半 반 반 · 透 통할 투 · 膜 꺼풀 막",
+    "english": "semipermeable membrane"
+  },
+  "definition": "구멍이 아주 작아 용매 입자만 지나가게 하고 그보다 큰 용질 입자는 가로막는 얇은 막. 셀로판이나 세포막이 이에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spm-size-selective",
+      "text": "반투막을 지날 수 있는지는 입자의 크기로 갈려, 작은 용매 입자는 지나가고 큰 용질 입자는 가로막힌다",
+      "form": {
+        "condition": "막에 난 구멍보다 용질 입자가 클 때",
+        "type": "conditional",
+        "scope": "용질 입자가 막의 구멍보다 큰 용액",
+        "antecedent": {
+          "quantity": "입자의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "막을 지날 수 있는 정도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "구멍보다 큰 입자가 막히는 것이 이 막의 정의라 클수록 잘 지나간다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반투막에서는 입자가 클수록 막을 더 잘 지나간다"
+    },
+    {
+      "id": "rel-spm-two-way",
+      "text": "반투막에서는 용매 입자가 양쪽으로 모두 오가며, 다만 오가는 수가 서로 다를 뿐이다",
+      "form": {
+        "condition": "반투막 양쪽에 액체가 닿아 있을 때",
+        "type": "classification",
+        "scope": "농도가 다른 두 용액이 반투막으로 나뉘어 있는 경우",
+        "antecedent": {
+          "quantity": "한쪽으로 지나가는 용매 입자 수",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반대쪽으로 지나가는 용매 입자 수",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "양쪽 이동을 함께 말하는 서술이라 방향을 맞바꾼 문장의 참·거짓이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spm-precondition",
+      "text": "농도가 다른 두 용액 사이에 삼투 현상이 나타나려면 그 사이를 반투막이 가로막고 있어야 한다",
+      "form": {
+        "condition": "농도가 다른 두 용액을 맞대어 둘 때",
+        "type": "conditional",
+        "scope": "용질은 막고 용매만 지나게 하는 막이 있는 경우",
+        "antecedent": {
+          "quantity": "반투막의 유무",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "삼투 현상의 성립 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "막이 없으면 용질까지 섞이는 확산이 일어나므로 뒤집은 문장의 참·거짓이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반투막은 용매를 한쪽으로만 보내는 일방통행 막이다",
+      "why_wrong": "용매 입자는 양쪽으로 다 오간다. 묽은 쪽에서 진한 쪽으로 건너가는 수가 더 많아 한 방향으로만 움직이는 것처럼 보일 뿐이다.",
+      "linked_relation": "rel-spm-two-way",
+      "source": "llm"
+    },
+    {
+      "text": "반투막에는 구멍이 없어서 용질이 통과하지 못한다",
+      "why_wrong": "반투막에는 눈에 보이지 않는 작은 구멍이 있다. 그 구멍보다 큰 용질 입자만 지나가지 못하는 것이다.",
+      "linked_relation": "rel-spm-size-selective",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-osmosis"
+    },
+    {
+      "type": "next",
+      "target": "mate-osmotic-pressure"
+    },
+    {
+      "type": "related",
+      "target": "mate-molarity",
+      "note": "막 양쪽 용액의 진하기는 대개 몰농도로 견준다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-03",
+  "pages": [
+    62
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

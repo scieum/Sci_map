@@ -1,0 +1,133 @@
+{
+  "id": "mate-osmosis",
+  "concept_key": "concept:osmosis",
+  "registry_status": "new",
+  "term": "삼투 현상",
+  "aliases": [
+    "삼투"
+  ],
+  "notation": {
+    "hanja": "滲透現象",
+    "hanja_gloss": "滲 스밀 삼 · 透 통할 투 · 現 나타날 현 · 象 코끼리 상",
+    "english": "osmosis"
+  },
+  "definition": "반투막으로 나뉜 두 용액 가운데 묽은 쪽의 용매가 진한 쪽으로 옮겨 가, 양쪽의 농도 차가 줄어드는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-osm-direction",
+      "text": "용매는 묽은 용액 쪽에서 진한 용액 쪽으로 반투막을 건너간다",
+      "form": {
+        "condition": "반투막을 사이에 두고 농도가 다른 두 용액을 놓아둘 때",
+        "type": "causal",
+        "scope": "용질은 막고 용매만 지나게 하는 반투막",
+        "antecedent": {
+          "quantity": "반투막 양쪽 용액의 진하기",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "용매가 옮겨 가는 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "정미 이동 방향이 거꾸로 적힌 문장이므로 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용매는 진한 용액 쪽에서 묽은 용액 쪽으로 반투막을 건너간다"
+    },
+    {
+      "id": "rel-osm-net-flow",
+      "text": "양쪽을 오가는 용매 입자 가운데 묽은 쪽에서 건너가는 수가 더 많아 한 방향으로 흐르는 것처럼 보인다",
+      "form": {
+        "condition": "반투막 양쪽 용액의 농도가 서로 다를 때",
+        "type": "causal",
+        "scope": "농도가 다른 두 용액이 반투막으로 나뉘어 있는 경우",
+        "antecedent": {
+          "quantity": "묽은 쪽에서 건너가는 용매 입자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "진한 용액 쪽의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "양방향 이동의 차이를 설명하는 서술이라 통째로 뒤집은 문장의 참·거짓이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-osm-gap",
+      "text": "두 용액의 농도 차가 클수록 옮겨 가는 용매의 양이 많아져 삼투 현상이 뚜렷해진다",
+      "form": {
+        "condition": "같은 반투막을 쓰고 온도가 일정할 때",
+        "type": "direct",
+        "scope": "묽은 용액",
+        "antecedent": {
+          "quantity": "두 용액의 농도 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "옮겨 가는 용매의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도 차가 이 현상을 이끄는 원인이라 클수록 약해진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 용액의 농도 차가 클수록 삼투 현상은 오히려 약하게 나타난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "삼투 현상에서는 용질이 진한 쪽에서 묽은 쪽으로 옮겨 가 농도가 같아진다",
+      "why_wrong": "반투막은 용질을 통과시키지 않는다. 옮겨 가는 것은 용매이고, 묽은 쪽에서 진한 쪽으로 건너가면서 농도 차가 줄어든다.",
+      "linked_relation": "rel-osm-direction",
+      "source": "llm"
+    },
+    {
+      "text": "배추에 소금을 뿌리면 소금이 배추 속으로 들어가 배추가 쪼그라든다",
+      "why_wrong": "쪼그라드는 까닭은 배추 속 물이 진한 소금물 쪽으로 빠져나오기 때문이다. 옮겨 가는 것은 소금이 아니라 물이다.",
+      "linked_relation": "rel-osm-net-flow",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-semipermeable-membrane"
+    },
+    {
+      "type": "next",
+      "target": "mate-osmotic-pressure"
+    },
+    {
+      "type": "related",
+      "target": "mate-molarity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-03",
+  "pages": [
+    62,
+    63,
+    66
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

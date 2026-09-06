@@ -1,0 +1,139 @@
+{
+  "id": "mate-raoult-law",
+  "concept_key": "concept:raoult-law",
+  "registry_status": "new",
+  "term": "라울 법칙",
+  "aliases": [
+    "라울의 법칙"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 Raoult 의 음차 표기가 앞에 오므로 낱말 전체에 대응하는 한자어가 없다. 뒤의 '법칙'만 法則에 해당한다.",
+    "english": "Raoult law",
+    "symbol_display": "P_solution = X_solvent × P°_solvent",
+    "symbol_plain": "P_solution = X_solvent P0_solvent"
+  },
+  "definition": "용액의 증기 압력을, 순수한 용매의 증기 압력에 용매의 몰분율을 곱한 값으로 보는 법칙. 용액이 묽을수록 잘 들어맞는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-raoult-equation",
+      "text": "용액의 증기 압력은 순수한 용매의 증기 압력에 용매의 몰분율을 곱한 만큼이어서, 그 몰분율이 클수록 커진다",
+      "form": {
+        "condition": "온도가 일정하고 용액이 평형에 이르렀을 때",
+        "type": "direct",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "용매의 몰분율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액의 증기 압력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 값이 곱으로 이어져 있어 방향을 맞바꾸면 반드시 거짓이 된다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용액의 증기 압력은 용매의 몰분율이 클수록 오히려 작아진다"
+    },
+    {
+      "id": "rel-raoult-dilute",
+      "text": "실제로 잰 증기 압력은 용액이 묽을수록 이 법칙으로 계산한 값에 가까워진다",
+      "form": {
+        "condition": "같은 용매와 용질로 농도만 바꿔 견줄 때",
+        "type": "direct",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 용액",
+        "antecedent": {
+          "quantity": "용액이 묽은 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계산값과 실제값의 어긋남",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "진한 용액에서 어긋나는 폭은 용액마다 달라 반대 방향이 언제나 거짓이라고 말할 수 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-raoult-conditions",
+      "text": "이 법칙은 용질이 비휘발성이고 비전해질일 때를 전제로 하므로 전해질 수용액에는 그대로 쓸 수 없다",
+      "form": {
+        "condition": "법칙을 계산에 적용하려 할 때",
+        "type": "conditional",
+        "scope": "묽은 용액",
+        "antecedent": {
+          "quantity": "용질이 전해질인지 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "법칙을 그대로 쓸 수 있는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "적용 조건을 밝히는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소금물의 증기 압력도 소금의 몰분율을 라울 법칙에 그대로 넣어 구하면 된다",
+      "why_wrong": "소금은 물에서 이온으로 나뉘어 입자 수가 늘어난다. 라울 법칙은 비전해질 용질을 전제로 세운 식이라 그대로 적용할 수 없다.",
+      "linked_relation": "rel-raoult-conditions",
+      "source": "llm"
+    },
+    {
+      "text": "용액의 증기 압력을 구할 때는 용질의 몰분율을 곱한다",
+      "why_wrong": "곱하는 것은 용매의 몰분율이다. 용질의 몰분율을 곱해 나오는 값은 용액의 증기 압력이 아니라 증기 압력 내림이다.",
+      "linked_relation": "rel-raoult-equation",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-vapor-pressure-lowering"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-nonvolatile-solute"
+    },
+    {
+      "type": "related",
+      "target": "mate-boiling-point-elevation",
+      "note": "끓는점 오름 문항은 대개 이 법칙을 만족한다는 단서를 달고 나온다"
+    },
+    {
+      "type": "related",
+      "target": "mate-freezing-point-depression"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-01",
+  "pages": [
+    57,
+    66,
+    67
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,117 @@
+{
+  "id": "mate-surface-tension",
+  "concept_key": "concept:surface-tension",
+  "registry_status": "new",
+  "term": "표면 장력",
+  "notation": {
+    "hanja": "表面張力",
+    "hanja_gloss": "表 겉 표 · 面 낯 면 · 張 베풀 장 · 力 힘 력",
+    "english": "surface tension"
+  },
+  "definition": "표면에 있는 분자가 안쪽으로만 끌려 들어가면서, 액체가 겉넓이를 되도록 작게 하려는 쪽으로 나타나는 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-st-inward",
+      "text": "안쪽 분자는 사방에서 당겨지는 데 견주어 표면 분자는 옆과 아래로만 당겨져 액체 속으로 끌려 들어간다.",
+      "form": {
+        "condition": "액체와 공기가 맞닿은 경계를 볼 때",
+        "type": "causal",
+        "scope": "기체와 접한 액체의 표면에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "힘을 받는 방향이 안쪽과 표면에서 뒤바뀔 수 없어 자리를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 분자는 사방에서 당겨지는 데 견주어 안쪽 분자는 옆과 아래로만 당겨진다."
+    },
+    {
+      "id": "rel-st-force",
+      "text": "분자 사이에 작용하는 힘이 셀수록 표면 장력이 크며, 물은 수소 결합 덕분에 표면 장력이 특히 크다.",
+      "form": {
+        "condition": "온도가 같은 액체끼리 견줄 때",
+        "type": "direct",
+        "scope": "순수한 액체에 한정한다. 세제 같은 물질이 섞이면 달라진다",
+        "antecedent": {
+          "quantity": "분자 사이에 작용하는 힘",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "표면 장력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "표면을 넓히는 데 드는 일이 인력에 비례하므로 셀수록 작아진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 사이에 작용하는 힘이 셀수록 액체의 표면 장력은 작아진다."
+    },
+    {
+      "id": "rel-st-sphere",
+      "text": "부피가 같을 때 겉넓이가 가장 작은 모양이 구이므로, 표면 장력이 큰 액체일수록 방울이 더 둥글다.",
+      "form": {
+        "condition": "같은 부피의 액체 방울을 같은 판 위에 놓았을 때",
+        "type": "causal",
+        "scope": "중력의 영향이 크지 않은 작은 액체 방울에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "겉넓이를 줄이려는 힘이 클수록 구에 가까워지므로 납작해진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 장력이 큰 액체일수록 방울이 더 납작하게 퍼진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "클립이 물에 뜨는 것은 클립의 밀도가 물보다 작기 때문이다",
+      "why_wrong": "클립은 물보다 밀도가 크다. 물의 표면 장력이 표면을 막처럼 버텨 주기 때문에 뜨는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-st-force"
+    },
+    {
+      "text": "물에 세제를 풀면 표면 장력이 커져서 물방울이 더 둥글어진다",
+      "why_wrong": "세제는 물의 표면 장력을 낮춘다. 그래서 세제를 섞은 물방울은 오히려 더 납작하게 퍼진다.",
+      "source": "llm",
+      "linked_relation": "rel-st-sphere"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-hydrogen-bond-in-water"
+    },
+    {
+      "type": "related",
+      "target": "mate-cohesive-force",
+      "note": "표면 장력을 만드는 힘이 곧 응집력이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-capillary-action"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-02",
+  "pages": [
+    52,
+    53,
+    54,
+    69
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

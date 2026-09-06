@@ -1,0 +1,134 @@
+{
+  "id": "mate-molality",
+  "concept_key": "concept:molality",
+  "registry_status": "new",
+  "term": "몰랄 농도",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰랄'은 영어 molal 의 음차어라 한자 표기가 없다. 뒤의 '농도'만 濃度에 해당하므로 낱말 전체에 대응하는 한자어는 없다.",
+    "english": "molality",
+    "symbol_display": "m = n_solute(mol) / w_solvent(kg)",
+    "symbol_plain": "m = n_solute(mol) / w_solvent(kg)"
+  },
+  "definition": "용질의 양(mol)을 용매의 질량 1 kg을 기준으로 나타낸 농도. 부피가 아니라 질량이 기준이라 온도가 달라져도 값이 그대로다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-molality-quotient",
+      "text": "몰랄 농도는 녹아 있는 용질의 양(mol)을 용매의 질량(kg)으로 나누어 얻는다",
+      "form": {
+        "condition": "용매의 질량을 kg 단위로 재어 계산할 때",
+        "type": "classification",
+        "scope": "용매와 용질을 가려낼 수 있는 모든 용액",
+        "antecedent": {
+          "quantity": "같은 용매에 녹인 용질의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몰랄 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분자가 커지면 몫도 커지는 나눗셈이라 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 질량의 용매에 녹인 용질의 양(mol)이 많을수록 몰랄 농도는 작아진다"
+    },
+    {
+      "id": "rel-molality-temperature",
+      "text": "용액의 온도를 바꾸어도 몰랄 농도의 값은 달라지지 않는다",
+      "form": {
+        "condition": "용질과 용매의 양은 그대로 두고 온도만 바꿀 때",
+        "type": "conditional",
+        "scope": "용매가 증발하거나 얼지 않는 온도 범위",
+        "antecedent": {
+          "quantity": "용액의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몰랄 농도",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량과 양(mol)은 온도로 달라지지 않으므로 값이 변한다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용액을 데워 온도를 높이면 몰랄 농도가 커진다"
+    },
+    {
+      "id": "rel-molality-colligative",
+      "text": "같은 용매를 썼다면 몰랄 농도가 큰 용액일수록 끓는점 오름과 어는점 내림이 모두 크다",
+      "form": {
+        "condition": "용매가 같고 용질이 비휘발성·비전해질일 때",
+        "type": "direct",
+        "scope": "묽은 용액",
+        "antecedent": {
+          "quantity": "몰랄 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "끓는점 오름과 어는점 내림의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 변화량 모두 몰랄 농도에 비례하므로 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 용매를 썼다면 몰랄 농도가 큰 용액일수록 끓는점 오름과 어는점 내림이 모두 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몰랄 농도는 용액 1 kg에 녹아 있는 용질의 양(mol)이다",
+      "why_wrong": "기준이 되는 1 kg은 용액이 아니라 용매다. 용질의 질량까지 더한 용액을 기준으로 잡으면 값이 달라진다.",
+      "linked_relation": "rel-molality-quotient",
+      "source": "llm"
+    },
+    {
+      "text": "온도를 높이면 용액이 팽창하므로 몰랄 농도가 작아진다",
+      "why_wrong": "부피를 기준으로 삼는 몰농도와 달리 몰랄 농도는 질량이 기준이다. 온도가 바뀌어도 질량과 양(mol)은 그대로여서 값이 변하지 않는다.",
+      "linked_relation": "rel-molality-temperature",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-boiling-point-elevation"
+    },
+    {
+      "type": "next",
+      "target": "mate-freezing-point-depression"
+    },
+    {
+      "type": "related",
+      "target": "mate-molarity",
+      "note": "기준이 용매의 질량인가 용액의 부피인가에서 갈린다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-02",
+  "pages": [
+    60,
+    61,
+    67
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

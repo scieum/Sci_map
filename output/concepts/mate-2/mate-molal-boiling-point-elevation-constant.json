@@ -1,0 +1,134 @@
+{
+  "id": "mate-molal-boiling-point-elevation-constant",
+  "concept_key": "concept:molal-boiling-point-elevation-constant",
+  "registry_status": "new",
+  "term": "몰랄 오름 상수",
+  "aliases": [
+    "끓는점 오름 상수"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰랄'은 영어 molal 의 음차어이고 '오름'은 고유어여서 낱말 전체에 대응하는 한자어가 없다. 뒤의 '상수'만 常數에 해당한다.",
+    "english": "molal boiling point elevation constant",
+    "symbol_display": "K_b (℃·kg/mol)",
+    "symbol_plain": "K_b (C kg/mol)"
+  },
+  "definition": "몰랄 농도가 1 m인 용액에서 끓는점이 오르는 폭에 해당하는 값. 용매마다 정해져 있고 녹인 용질이 무엇인지와는 무관하다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mbc-solvent-specific",
+      "text": "몰랄 오름 상수는 용매의 종류로 정해지며 어떤 용질을 녹였는지에 따라 달라지지 않는다",
+      "form": {
+        "condition": "같은 용매에 서로 다른 비전해질 용질을 녹여 견줄 때",
+        "type": "classification",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "용질의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "몰랄 오름 상수",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 상수는 용매만으로 정해지므로 용질에 따라 달라진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰랄 오름 상수는 녹인 용질의 종류에 따라 값이 달라진다"
+    },
+    {
+      "id": "rel-mbc-meaning",
+      "text": "몰랄 농도가 1 m인 용액의 끓는점 오름이 그 용매의 몰랄 오름 상수와 같은 값이 된다",
+      "form": {
+        "condition": "몰랄 농도가 1 m이고 용질이 비휘발성·비전해질일 때",
+        "type": "conditional",
+        "scope": "묽은 용액으로 볼 수 있는 농도 범위",
+        "antecedent": {
+          "quantity": "몰랄 농도",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "끓는점 오름",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "특정한 농도에서의 값을 짚어 주는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mbc-compare",
+      "text": "몰랄 농도가 같다면 몰랄 오름 상수가 큰 용매를 쓴 용액일수록 끓는점이 더 많이 오른다",
+      "form": {
+        "condition": "몰랄 농도가 같은 여러 용매의 용액을 견줄 때",
+        "type": "direct",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "몰랄 오름 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "끓는점 오름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "끓는점 오름은 이 상수에 비례하므로 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰랄 농도가 같다면 몰랄 오름 상수가 큰 용매를 쓴 용액일수록 끓는점이 조금만 오른다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물의 몰랄 오름 상수는 녹이는 것이 설탕이냐 포도당이냐에 따라 달라진다",
+      "why_wrong": "이 상수는 용매인 물의 성질로 정해진다. 비전해질 용질이라면 종류가 달라도 같은 값을 쓴다.",
+      "linked_relation": "rel-mbc-solvent-specific",
+      "source": "llm"
+    },
+    {
+      "text": "몰랄 오름 상수가 큰 용매일수록 그 용매의 끓는점도 높다",
+      "why_wrong": "이 상수는 농도가 1 m일 때 끓는점이 오르는 폭일 뿐 용매의 끓는점과는 다른 값이다. 물은 벤젠보다 끓는점이 높지만 몰랄 오름 상수는 오히려 작다.",
+      "linked_relation": "rel-mbc-meaning",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-boiling-point-elevation",
+      "note": "이 상수는 끓는점 오름 관계식 안에서만 뜻을 가진다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molality"
+    },
+    {
+      "type": "related",
+      "target": "mate-molal-freezing-point-depression-constant"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-02",
+  "pages": [
+    60
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

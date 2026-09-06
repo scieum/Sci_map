@@ -1,0 +1,138 @@
+{
+  "id": "mate-vant-hoff-law",
+  "concept_key": "concept:vant-hoff-law",
+  "registry_status": "new",
+  "term": "판트호프 법칙",
+  "aliases": [
+    "반트호프 법칙"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 van 't Hoff 의 음차 표기가 앞에 오므로 낱말 전체에 대응하는 한자어가 없다. 뒤의 '법칙'만 法則에 해당한다. 영문명의 아포스트로피는 표시용으로만 두고 입력·정답 대조에는 쓰지 않는다 (R8).",
+    "english": "van 't Hoff law",
+    "symbol_display": "π = CRT",
+    "symbol_plain": "pi = CRT"
+  },
+  "definition": "묽은 용액의 삼투압이 용매나 용질의 종류와 상관없이 몰농도와 절대 온도의 곱에 비례한다고 보는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-vh-equation",
+      "text": "삼투압은 용액의 몰농도에 기체 상수와 절대 온도를 곱한 값과 같다",
+      "form": {
+        "condition": "용질이 비휘발성·비전해질이고 용액이 충분히 묽을 때",
+        "type": "conditional",
+        "scope": "묽은 용액, 온도는 절대 온도로 나타냄",
+        "antecedent": {
+          "quantity": "몰농도와 절대 온도의 곱",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "삼투압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "곱한 값에 비례한다고 적은 식이라 커질수록 작아진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰농도와 절대 온도의 곱이 커질수록 삼투압은 작아진다"
+    },
+    {
+      "id": "rel-vh-kind-independent",
+      "text": "삼투압의 크기는 어떤 용매·용질을 썼는가가 아니라 녹아 있는 입자의 몰농도로 정해진다",
+      "form": {
+        "condition": "몰농도와 온도가 같은 묽은 용액끼리 견줄 때",
+        "type": "classification",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "용매와 용질의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "삼투압",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 법칙의 식에는 종류를 나타내는 항이 아예 없으므로 종류에 따라 달라진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰농도와 온도가 같아도 용매나 용질의 종류가 다르면 삼투압이 달라진다"
+    },
+    {
+      "id": "rel-vh-molar-mass",
+      "text": "용질의 질량과 용액의 부피·온도를 알고 삼투압을 재면 그 용질의 분자량을 구할 수 있다",
+      "form": {
+        "condition": "네 값 가운데 분자량만 모르는 상태일 때",
+        "type": "conditional",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "알고 있는 값의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분자량을 정할 수 있는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "계산이 가능한지를 말하는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "π = CRT의 T 자리에는 섭씨온도를 그대로 넣으면 된다",
+      "why_wrong": "이 식의 T는 절대 온도다. 섭씨온도를 넣으면 0 ℃에서 삼투압이 0이 되는 잘못된 결과가 나온다.",
+      "linked_relation": "rel-vh-equation",
+      "source": "llm"
+    },
+    {
+      "text": "π = CRT의 C에는 몰랄 농도를 넣는다",
+      "why_wrong": "C는 용액의 부피를 기준으로 하는 몰농도다. 용매의 질량을 기준으로 하는 몰랄 농도를 넣으면 값이 어긋난다.",
+      "linked_relation": "rel-vh-equation",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-osmotic-pressure"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molarity"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-nonvolatile-solute",
+      "note": "비휘발성·비전해질이라는 전제 위에서만 성립한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-osmosis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-03",
+  "pages": [
+    63
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

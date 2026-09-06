@@ -1,0 +1,105 @@
+{
+  "id": "mate-adhesive-force",
+  "concept_key": "concept:adhesive-force",
+  "registry_status": "new",
+  "term": "부착력",
+  "notation": {
+    "hanja": "附着力",
+    "hanja_gloss": "附 붙을 부 · 着 붙을 착 · 力 힘 력",
+    "english": "adhesive force"
+  },
+  "definition": "서로 다른 종류의 분자 사이에 작용하는 인력. 액체가 맞닿은 고체 표면에 달라붙게 만드는 힘이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-af-different",
+      "text": "부착력은 액체 분자와, 그 액체가 맞닿은 다른 물질의 분자 사이에서 작용한다.",
+      "form": {
+        "condition": "힘이 작용하는 두 상대의 종류를 가릴 때",
+        "type": "classification",
+        "scope": "액체와 고체가 맞닿은 경계면에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 종류끼리의 힘은 응집력이라는 별도의 이름을 가지므로 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부착력은 액체 분자끼리 서로 끌어당길 때 작용하는 힘이다."
+    },
+    {
+      "id": "rel-af-glass",
+      "text": "물이 유리관 벽을 타고 오르는 것은 물 분자와 유리 사이의 부착력이 크기 때문이다.",
+      "form": {
+        "condition": "가는 유리관을 물에 담갔을 때",
+        "type": "causal",
+        "scope": "물과 유리처럼 서로 잘 적시는 조합에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "벽을 타고 오르려면 벽에 끌리는 힘이 커야 하므로 작아서 오른다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물이 유리관 벽을 타고 오르는 것은 물 분자와 유리 사이의 부착력이 작기 때문이다."
+    },
+    {
+      "id": "rel-af-vs-cohesive",
+      "text": "액체가 관 벽을 적시며 오르려면 벽에 대한 부착력이 액체 자체의 응집력에 견줄 만큼 커야 한다.",
+      "form": {
+        "condition": "부착력과 응집력의 크기를 견줄 때",
+        "type": "conditional",
+        "scope": "모세관 속에서 액체가 오르는 경우에 한정한다"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집으면 응집력이 훨씬 큰 액체를 가리키는데, 그런 액체는 관 속에서 내려가는 다른 현상을 보이므로 언제나 거짓이라 단정할 수 없다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물이 유리관을 타고 오르는 것은 물끼리 당기는 응집력만으로 설명된다",
+      "why_wrong": "벽을 타고 오르게 하는 것은 유리와의 부착력이다. 응집력은 그 뒤를 따라 오르는 물을 끌어 올리는 몫을 맡는다.",
+      "source": "llm",
+      "linked_relation": "rel-af-glass"
+    },
+    {
+      "text": "부착력은 접착제처럼 두 물질을 화학적으로 붙여 주는 결합이다",
+      "why_wrong": "화학 결합이 아니라 서로 다른 종류의 분자 사이에 작용하는 인력이다. 결합이 새로 생기는 것이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-af-different"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-hydrogen-bond-in-water"
+    },
+    {
+      "type": "next",
+      "target": "mate-capillary-action"
+    },
+    {
+      "type": "related",
+      "target": "mate-cohesive-force",
+      "note": "짝을 이루어 모세관 현상을 설명한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-02",
+  "pages": [
+    53
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,120 @@
+{
+  "id": "mate-capillary-action",
+  "concept_key": "concept:capillary-action",
+  "registry_status": "new",
+  "term": "모세관 현상",
+  "notation": {
+    "hanja": "毛細管現象",
+    "hanja_gloss": "毛 터럭 모 · 細 가늘 세 · 管 대롱 관 · 現 나타날 현 · 象 코끼리 상",
+    "english": "capillary action"
+  },
+  "definition": "가는 관이나 미세한 틈을 따라 액체가 저절로 이동해 올라가는 현상. 부착력과 응집력이 함께 작용해 일어난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ca-two-forces",
+      "text": "관 벽을 타고 오르게 하는 것은 부착력이고, 올라간 분자가 뒤따르는 분자를 끌어 올리는 것은 응집력이다.",
+      "form": {
+        "condition": "모세관 속에서 액체가 오르는 과정을 나눠 볼 때",
+        "type": "causal",
+        "scope": "관 벽에 대한 부착력이 응집력에 견줄 만큼 큰 액체에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 힘이 맡는 몫이 정해져 있어 서로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관 벽을 타고 오르게 하는 것은 응집력이고, 뒤따르는 분자를 끌어 올리는 것은 부착력이다."
+    },
+    {
+      "id": "rel-ca-tube",
+      "text": "액체와 관의 재질이 같다면 관이 가늘수록 액체가 더 높이 올라간다.",
+      "form": {
+        "condition": "액체와 관의 재질이 같고 관의 안지름만 다를 때",
+        "type": "inverse",
+        "scope": "액체가 관 벽을 적시는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "관의 안지름",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "액체가 오르는 높이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가는 관일수록 높이 오르는 것이 이 현상의 핵심이라 굵을수록 높다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "액체와 관의 재질이 같다면 관이 굵을수록 액체가 더 높이 올라간다."
+    },
+    {
+      "id": "rel-ca-water-glass",
+      "text": "물이 유리관에서 잘 오르는 것은 물의 응집력이 크고 유리에 대한 부착력도 크기 때문이다.",
+      "form": {
+        "condition": "가는 유리관을 물에 담갔을 때",
+        "type": "causal",
+        "scope": "물과 유리처럼 서로 잘 적시는 조합에 한정한다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 힘이 모두 커야 오르는 것이므로 작아서 오른다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물이 유리관에서 잘 오르는 것은 물의 응집력이 작고 유리에 대한 부착력도 작기 때문이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모세관 현상은 관 속의 공기가 빠져나가면서 물이 빨려 올라가는 것이다",
+      "why_wrong": "공기를 빼내 생긴 압력 차로 빨아올리는 것이 아니라, 부착력과 응집력이 번갈아 작용해 액체가 스스로 오르는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-ca-two-forces"
+    },
+    {
+      "text": "수건에 물이 스며드는 것은 모세관 현상과 다른 원리다",
+      "why_wrong": "셀룰로스 사이의 미세한 틈이 가는 관 노릇을 하므로, 유리관 속 물이 오르는 것과 같은 모세관 현상이다.",
+      "source": "llm",
+      "linked_relation": "rel-ca-tube"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-cohesive-force"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-adhesive-force"
+    },
+    {
+      "type": "related",
+      "target": "mate-surface-tension"
+    },
+    {
+      "type": "related",
+      "target": "mate-hydrogen-bond-in-water",
+      "note": "물의 두 힘이 모두 큰 까닭이 수소 결합이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-1-02",
+  "pages": [
+    53,
+    54,
+    55
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

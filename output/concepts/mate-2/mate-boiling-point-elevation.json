@@ -1,0 +1,142 @@
+{
+  "id": "mate-boiling-point-elevation",
+  "concept_key": "concept:boiling-point-elevation",
+  "registry_status": "new",
+  "term": "끓는점 오름",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'끓는'과 '오름'이 고유어여서 표제어 전체에 대응하는 한자어 표기가 없다. 가운데 '점'만 點에 해당한다.",
+    "english": "boiling point elevation",
+    "symbol_display": "ΔT_b = K_b × m",
+    "symbol_plain": "deltaT_b = K_b m"
+  },
+  "definition": "증기 압력이 낮아진 용액을 끓이려면 순수한 용매보다 더 높은 온도까지 데워야 하는데, 이때 벌어진 끓는점의 차이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bpe-why",
+      "text": "증기 압력이 낮아진 용액은 그 압력이 외부 압력에 이를 때까지 더 데워야 끓으므로 끓는점이 용매보다 높다",
+      "form": {
+        "condition": "외부 압력이 일정하게 유지될 때",
+        "type": "causal",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "antecedent": {
+          "quantity": "용액의 증기 압력",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "용액의 끓는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "증기 압력이 외부 압력과 같아지는 온도가 뒤로 밀리므로 끓는점이 낮아진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "증기 압력이 낮아진 용액은 순수한 용매보다 낮은 온도에서 끓는다"
+    },
+    {
+      "id": "rel-bpe-molality",
+      "text": "끓는점이 오르는 폭은 용액의 몰랄 농도에 비례한다",
+      "form": {
+        "condition": "용매가 같고 외부 압력이 일정할 때",
+        "type": "direct",
+        "scope": "비휘발성·비전해질 용질이 녹아 있는 묽은 용액",
+        "antecedent": {
+          "quantity": "몰랄 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "끓는점 오름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "끓는점 오름은 몰랄 농도에 상수를 곱한 값이라 반대 방향의 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용액의 몰랄 농도가 클수록 끓는점이 오르는 폭은 작아진다"
+    },
+    {
+      "id": "rel-bpe-difference",
+      "text": "끓는점 오름은 용액의 끓는점에서 순수한 용매의 끓는점을 뺀 차이로 정한 값이다",
+      "form": {
+        "condition": "같은 외부 압력에서 두 끓는점을 견줄 때",
+        "type": "classification",
+        "scope": "비휘발성 용질이 녹아 있는 용액",
+        "antecedent": {
+          "quantity": "두 끓는점의 차",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "끓는점 오름",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 값의 차로 정의한다는 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12물에02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "설탕물도 물처럼 1 atm에서 100 ℃가 되면 끓는다",
+      "why_wrong": "비휘발성 용질이 녹으면 증기 압력이 낮아져 100 ℃보다 높은 온도까지 데워야 증기 압력이 1 atm에 이른다.",
+      "linked_relation": "rel-bpe-why",
+      "source": "llm"
+    },
+    {
+      "text": "라면을 끓일 때 소금을 넣으면 물이 더 빨리 끓는다",
+      "why_wrong": "용질을 녹이면 끓는점이 오히려 높아져 더 높은 온도까지 가열해야 끓는다. 빨리 끓는 것처럼 보이는 것은 다른 이유 때문이다.",
+      "linked_relation": "rel-bpe-molality",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-vapor-pressure-lowering",
+      "note": "증기 압력이 내려간 것이 끓는점이 오르는 까닭이다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molality"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-nonvolatile-solute"
+    },
+    {
+      "type": "next",
+      "target": "mate-molal-boiling-point-elevation-constant"
+    },
+    {
+      "type": "related",
+      "target": "mate-freezing-point-depression"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에02-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅱ. 용액의 성질",
+  "unit_id": "mate-2",
+  "topic_id": "mate-2-2-02",
+  "pages": [
+    58,
+    60,
+    66,
+    67
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}
