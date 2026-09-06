@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Art } from "@/components/Art";
 import { canViewMedia } from "@/lib/access";
+import { useViewer } from "@/lib/viewer";
 import type { ReactNode } from "react";
 import type { ConceptAsset } from "@/lib/types";
 
@@ -109,7 +110,12 @@ export function LevelDots({ level }: { level: number }) {
   );
 }
 
-/** restricted 자산 잠금 자리 — 카드가 아니라 자산만 잠금 */
+/**
+ * restricted 자산 잠금 자리 — 카드가 아니라 자산만 잠근다 (§0.4, D5).
+ *
+ * 안내 문구와 버튼이 실제로 갈 곳을 가리켜야 한다. 예전에는 onClick 도 href 도
+ * 없는 버튼이라 눌러도 아무 일이 없었다.
+ */
 export function LockedMedia({ caption }: { caption?: string }) {
   return (
     <div className="flex flex-col items-center justify-center gap-2 rounded-[24px] bg-surface px-4 py-9 text-center shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
@@ -118,9 +124,12 @@ export function LockedMedia({ caption }: { caption?: string }) {
         로그인하면 교과서 그림을 볼 수 있어요
       </p>
       {caption && <p className="text-xs text-ink-faint">{caption}</p>}
-      <button className="mt-1 rounded-full bg-primary-50 px-4 py-2 text-[13px] font-bold text-primary-600">
-        초대 코드로 가입하기
-      </button>
+      <Link
+        href="/me"
+        className="mt-1 rounded-full bg-primary-50 px-4 py-2 text-[13px] font-bold text-primary-600"
+      >
+        로그인하고 초대 코드 넣기
+      </Link>
     </div>
   );
 }
@@ -140,7 +149,8 @@ export function ConceptMedia({
   caption?: string;
   file?: string;
 }) {
-  if (!canViewMedia(restricted)) return <LockedMedia caption={caption} />;
+  const viewer = useViewer();
+  if (!canViewMedia(restricted, viewer)) return <LockedMedia caption={caption} />;
 
   // 직접 만든 그림(own/)은 투명 배경 SVG 라 가장자리에 붙으면 어색하다.
   // 교과서 크롭은 흰 여백과 출처 띠를 이미 갖고 있어 꽉 채우는 편이 낫다.
