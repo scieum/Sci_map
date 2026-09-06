@@ -1,0 +1,129 @@
+{
+  "id": "mate-open-system",
+  "concept_key": "concept:open-system",
+  "registry_status": "new",
+  "term": "열린계",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'열린'은 고유어 동사에서 온 말이라 한자가 없다. 뒤의 '계'만 系에 해당하므로 낱말 전체를 옮길 한자어가 없다.",
+    "english": "open system"
+  },
+  "definition": "주위와 물질도 에너지도 모두 주고받는 계. 뚜껑을 덮지 않은 그릇에 담긴 물질이 여기에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-open-uncovered",
+      "text": "뚜껑이 없는 그릇 속의 물은 증발한 기체가 빠져나가고 열도 오가므로 열린계다.",
+      "form": {
+        "condition": "그릇의 위가 열려 있고 단열되지 않았을 때",
+        "type": "classification",
+        "scope": "기체가 드나들 수 있고 열도 통하는 그릇에 담긴 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "물질·열의 통과 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 갈래에 넣은 분류 명제라 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-open-mass-loss",
+      "text": "열린계에서는 반응으로 생긴 기체가 빠져나가 계의 질량이 줄어들 수 있다.",
+      "form": {
+        "condition": "생성물 가운데 기체가 있을 때",
+        "type": "causal",
+        "scope": "물질이 드나들 수 있는 경계를 가진 계에 한정한다. 닫힌계나 고립계에서는 일어나지 않는다.",
+        "antecedent": {
+          "quantity": "계 밖으로 빠져나가는 기체",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계의 질량",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집으면 질량이 늘 수 있다는 말이 되는데, 주위에서 물질이 들어오는 경우도 있어 언제나 거짓이라 할 수 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-open-vs-isolated",
+      "text": "열린계와 고립계는 물질과 에너지를 주고받는지에서 서로 정반대다.",
+      "form": {
+        "condition": "두 갈래의 계를 견줄 때",
+        "type": "classification",
+        "scope": "물질과 에너지의 교환 여부로 계를 가르는 기준에 한정한다.",
+        "antecedent": {
+          "quantity": "물질·에너지 교환 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 갈래의 대비를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "열린계에서도 질량 보존 법칙이 성립하므로 계의 질량은 늘 일정하다",
+      "why_wrong": "계 밖으로 물질이 빠져나가면 계의 질량은 줄어든다. 질량이 보존되는 것은 계와 주위를 합쳐서 볼 때다.",
+      "linked_relation": "rel-open-mass-loss",
+      "source": "llm"
+    },
+    {
+      "text": "열린계는 물질이 드나든다는 뜻일 뿐 에너지 교환과는 상관이 없다",
+      "why_wrong": "열린계는 물질과 에너지를 모두 주고받는 계다. 물질만 드나드는 갈래는 따로 두지 않는다.",
+      "linked_relation": "rel-open-uncovered",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-surroundings"
+    },
+    {
+      "type": "related",
+      "target": "mate-closed-system",
+      "note": "물질 교환 여부에서 갈린다"
+    },
+    {
+      "type": "related",
+      "target": "mate-isolated-system"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    92,
+    93,
+    96
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

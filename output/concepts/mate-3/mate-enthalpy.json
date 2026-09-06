@@ -1,0 +1,125 @@
+{
+  "id": "mate-enthalpy",
+  "concept_key": "concept:enthalpy",
+  "registry_status": "new",
+  "term": "엔탈피",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 enthalpy(그리스어 enthalpo 에서 온 말)의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "enthalpy",
+    "symbol_display": "H",
+    "symbol_plain": "H"
+  },
+  "definition": "압력이 일정하다는 조건 아래에서 어떤 물질이 지니고 있는 에너지의 총량. 절댓값을 직접 재기는 어려워 반응 전후의 차이로만 다룬다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-enthalpy-heat-gap",
+      "text": "일정한 압력에서 반응물과 생성물의 엔탈피 합이 벌어질수록 그 반응에서 드나드는 열도 많아진다.",
+      "form": {
+        "condition": "압력이 일정하게 유지될 때",
+        "type": "causal",
+        "scope": "일정 압력에서 일어나는 화학 반응",
+        "antecedent": {
+          "quantity": "반응물과 생성물의 엔탈피 합의 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "출입하는 열의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "엔탈피 합의 차이가 곧 출입한 열이므로, 차이가 클수록 열이 적다는 진술은 반드시 거짓이다.",
+      "inverted_text": "일정한 압력에서 반응물과 생성물의 엔탈피 합이 벌어질수록 그 반응에서 드나드는 열은 적어진다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enthalpy-extensive",
+      "text": "같은 물질이라도 양이 많아지면 그 물질이 갖는 엔탈피도 함께 커진다.",
+      "form": {
+        "condition": "온도·압력과 물질의 상태를 고정해 놓고 양만 바꿀 때",
+        "type": "direct",
+        "scope": "온도와 압력이 지정된 순물질",
+        "antecedent": {
+          "quantity": "물질의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물질이 갖는 엔탈피",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "엔탈피의 절댓값은 측정할 수 없어 뒤집은 진술의 참·거짓을 언제나 단정하기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enthalpy-state-depend",
+      "text": "같은 물질이라도 상태가 고체·액체·기체 중 무엇이냐에 따라 엔탈피 값이 달라진다.",
+      "form": {
+        "condition": "온도와 압력을 같게 두고 상태만 바꿀 때",
+        "type": "conditional",
+        "scope": "상태 변화가 가능한 순물질"
+      },
+      "invertible": false,
+      "invertible_reason": "세 상태의 엔탈피 크기 순서를 이 명제만으로 뒤집어 단정할 수 없다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질의 엔탈피는 온도계로 온도를 재듯 그 값 자체를 직접 측정할 수 있다",
+      "why_wrong": "잴 수 있는 것은 반응 전후에 드나든 열, 곧 엔탈피의 변화량이다. 물질이 가진 엔탈피의 절댓값은 직접 측정하지 못한다.",
+      "source": "llm",
+      "linked_relation": "rel-enthalpy-heat-gap"
+    },
+    {
+      "text": "엔탈피는 물질마다 정해진 값이므로 물질의 양이 두 배가 되어도 그대로다",
+      "why_wrong": "엔탈피는 물질의 양에 비례하는 양이다. 같은 물질이라도 2 mol 은 1 mol 의 두 배에 해당하는 엔탈피를 갖는다.",
+      "source": "llm",
+      "linked_relation": "rel-enthalpy-extensive"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-reaction-enthalpy",
+      "note": "엔탈피의 뜻을 알아야 그 차이인 반응 엔탈피를 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "mate-bond-energy",
+      "note": "결합이 끊길 때의 엔탈피 변화로 정의되는 값이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-allotrope",
+      "note": "같은 원소로 된 물질끼리 엔탈피를 견주는 자리다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    75,
+    88
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

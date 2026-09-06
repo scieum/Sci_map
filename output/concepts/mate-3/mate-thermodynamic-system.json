@@ -1,0 +1,125 @@
+{
+  "id": "mate-thermodynamic-system",
+  "concept_key": "concept:thermodynamic-system",
+  "registry_status": "new",
+  "term": "계",
+  "aliases": [
+    "열역학 계"
+  ],
+  "notation": {
+    "hanja": "系",
+    "hanja_gloss": "系 맬 계",
+    "english": "system"
+  },
+  "definition": "여러 대상 가운데 관찰자가 살피려고 따로 떼어 놓은 부분. 화학 반응에서는 반응물과 생성물이 여기에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sys-reaction",
+      "text": "화학 반응을 다룰 때 계는 반응물과 생성물이고, 반응 용기와 둘레의 공기는 주위다.",
+      "form": {
+        "condition": "화학 반응에서 관심의 대상을 갈라 놓을 때",
+        "type": "classification",
+        "scope": "반응물과 생성물의 변화에 관심을 두는 보통의 화학 반응에 한정한다.",
+        "antecedent": {
+          "quantity": "관심의 대상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계로 삼는 부분",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "관심의 대상이 계이므로 용기와 공기를 계라 하고 반응물을 주위라 하면 계의 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화학 반응을 다룰 때 계는 반응 용기와 둘레의 공기이고, 반응물과 생성물은 주위다."
+    },
+    {
+      "id": "rel-sys-exchange-classes",
+      "text": "계와 주위 사이에 무엇이 오갈 수 있는지에 따라 계를 고립계·닫힌계·열린계로 나눈다.",
+      "form": {
+        "condition": "물질과 에너지의 교환 여부를 기준으로 삼을 때",
+        "type": "classification",
+        "scope": "계와 주위 둘로 나누어 보는 열역학의 분류에 한정한다.",
+        "antecedent": {
+          "quantity": "물질·에너지 교환 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류를 밝힌 명제라 앞뒤를 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sys-choice",
+      "text": "같은 물체라도 무엇에 관심을 두느냐에 따라 계가 되기도 하고 주위가 되기도 한다.",
+      "form": {
+        "condition": "관찰의 목적에 맞추어 경계를 새로 그을 때",
+        "type": "conditional",
+        "scope": "경계를 정하는 일이 관찰자의 선택인 열역학 문제에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "경계를 정하는 방식을 밝힌 명제라 뒤집을 방향이 없고, 뒤집은 문장이 반드시 거짓이 되지도 않는다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "계는 비커나 시험관처럼 눈에 보이는 실험 기구를 가리킨다",
+      "why_wrong": "계는 살피려고 떼어 낸 부분이다. 화학 반응에서는 용기가 아니라 그 안의 반응물과 생성물이 계다.",
+      "linked_relation": "rel-sys-reaction",
+      "source": "llm"
+    },
+    {
+      "text": "계와 주위는 처음부터 정해져 있어 바꿀 수 없다",
+      "why_wrong": "무엇을 계로 삼을지는 관찰자가 정한다. 경계를 다시 그으면 계였던 것이 주위가 되기도 한다.",
+      "linked_relation": "rel-sys-choice",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-surroundings",
+      "note": "계를 정해야 나머지인 주위가 정해진다"
+    },
+    {
+      "type": "next",
+      "target": "mate-internal-energy"
+    },
+    {
+      "type": "related",
+      "target": "mate-isolated-system",
+      "note": "교환 여부로 나눈 갈래 가운데 하나다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    92,
+    96
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,129 @@
+{
+  "id": "mate-surroundings",
+  "concept_key": "concept:surroundings",
+  "registry_status": "new",
+  "term": "주위",
+  "notation": {
+    "hanja": "周圍",
+    "hanja_gloss": "周 두루 주 · 圍 에워쌀 위",
+    "english": "surroundings"
+  },
+  "definition": "계로 떼어 낸 부분을 뺀 나머지 전부. 반응 용기와 그것을 둘러싼 공기, 그 바깥의 공간이 모두 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sur-complement",
+      "text": "계의 경계를 어디에 긋느냐가 정해지면 주위는 그 나머지 전부로 저절로 정해진다.",
+      "form": {
+        "condition": "계의 경계를 먼저 그었을 때",
+        "type": "conditional",
+        "scope": "대상을 계와 주위 둘로만 나누어 보는 열역학 문제에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "계가 정해지는 것과 주위가 정해지는 것이 한 몸이라 앞뒤를 맞바꾸어도 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sur-exo-warm",
+      "text": "계에서 주위로 에너지가 옮겨 가면 주위의 온도는 높아진다.",
+      "form": {
+        "condition": "발열 반응이 일어날 때",
+        "type": "causal",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 경우에 한정한다. 고립계에서는 주위로 에너지가 넘어가지 않는다.",
+        "antecedent": {
+          "quantity": "주위가 받는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주위가 에너지를 받았는데 온도가 내려가는 일은 없으므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "계에서 주위로 에너지가 옮겨 가면 주위의 온도는 낮아진다."
+    },
+    {
+      "id": "rel-sur-endo-cool",
+      "text": "주위에서 계로 에너지가 옮겨 가면 주위의 온도는 낮아진다.",
+      "form": {
+        "condition": "흡열 반응이 일어날 때",
+        "type": "causal",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "주위가 잃는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주위가 에너지를 빼앗겼는데 온도가 올라가는 일은 없으므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주위에서 계로 에너지가 옮겨 가면 주위의 온도는 높아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발열 반응이 일어나면 주위의 온도가 낮아진다",
+      "why_wrong": "발열 반응은 계가 주위로 에너지를 내보내는 반응이다. 에너지를 받은 주위는 오히려 온도가 높아진다.",
+      "linked_relation": "rel-sur-exo-warm",
+      "source": "llm"
+    },
+    {
+      "text": "주위는 반응 용기의 겉면까지만 가리킨다",
+      "why_wrong": "계를 뺀 나머지가 모두 주위다. 용기뿐 아니라 둘레의 공기와 그 바깥 공간까지 포함된다.",
+      "linked_relation": "rel-sur-complement",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-thermodynamic-system"
+    },
+    {
+      "type": "next",
+      "target": "mate-isolated-system"
+    },
+    {
+      "type": "next",
+      "target": "mate-closed-system"
+    },
+    {
+      "type": "next",
+      "target": "mate-open-system"
+    },
+    {
+      "type": "next",
+      "target": "mate-entropy-change-of-surroundings"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    92,
+    96
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

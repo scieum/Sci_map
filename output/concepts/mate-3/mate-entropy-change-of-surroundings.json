@@ -1,0 +1,141 @@
+{
+  "id": "mate-entropy-change-of-surroundings",
+  "concept_key": "concept:entropy-change-of-surroundings",
+  "registry_status": "new",
+  "term": "주위의 엔트로피 변화",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'주위'는 周圍, '변화'는 變化에 해당하지만 '엔트로피'가 영어 entropy 의 음차어라 낱말 전체를 옮길 한자어가 없다.",
+    "english": "entropy change of the surroundings",
+    "symbol_display": "ΔS_주위",
+    "symbol_plain": "delta S_surr"
+  },
+  "definition": "계와 주위가 에너지를 주고받은 결과로 주위 쪽에서 생기는 엔트로피의 변화. 그 부호는 반응 엔탈피의 부호와 반대가 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sec-exothermic",
+      "text": "발열 반응에서는 주위가 에너지를 받아 온도가 올라가므로 주위의 엔트로피가 증가한다.",
+      "form": {
+        "condition": "반응 엔탈피가 음의 값일 때",
+        "type": "causal",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 경우에 한정한다. 고립계에서는 주위로 에너지가 넘어가지 않는다.",
+        "antecedent": {
+          "quantity": "주위가 받는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "받은 에너지가 주위 입자의 운동을 활발하게 만드는 것이 정해진 방향이라 부호를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발열 반응에서는 주위의 엔트로피가 감소한다."
+    },
+    {
+      "id": "rel-sec-endothermic",
+      "text": "흡열 반응에서는 주위가 에너지를 빼앗겨 온도가 내려가므로 주위의 엔트로피가 감소한다.",
+      "form": {
+        "condition": "반응 엔탈피가 양의 값일 때",
+        "type": "causal",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "주위가 잃는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 엔트로피",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "빼앗긴 에너지만큼 주위 입자의 운동이 잦아드는 것이 정해진 방향이라 부호를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흡열 반응에서는 주위의 엔트로피가 증가한다."
+    },
+    {
+      "id": "rel-sec-motion",
+      "text": "주위의 온도가 올라가면 주위 입자의 운동 에너지가 커져 무질서도도 커진다.",
+      "form": {
+        "condition": "주위가 계로부터 열을 받았을 때",
+        "type": "direct",
+        "scope": "주위를 이루는 입자의 운동으로 엔트로피를 설명하는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "주위의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 오르면 입자 운동이 활발해지는 것이 정해진 방향이라 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주위의 온도가 올라가면 주위 입자의 운동 에너지가 작아져 무질서도도 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발열 반응에서는 계가 에너지를 잃으므로 주위의 엔트로피도 줄어든다",
+      "why_wrong": "계가 내보낸 에너지는 주위로 간다. 에너지를 받은 주위는 온도가 올라 입자 운동이 활발해지므로 엔트로피는 오히려 커진다.",
+      "linked_relation": "rel-sec-exothermic",
+      "source": "llm"
+    },
+    {
+      "text": "주위의 엔트로피 변화는 계의 엔트로피 변화와 늘 같은 부호를 가진다",
+      "why_wrong": "주위 쪽 부호는 반응 엔탈피가 정하고 계 쪽 부호는 입자 배열의 흐트러짐이 정한다. 둘이 반대 부호인 경우가 오히려 흔하다.",
+      "linked_relation": "rel-sec-endothermic",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-surroundings"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-entropy-change"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-reaction-enthalpy",
+      "note": "주위 쪽 부호를 정하는 것이 반응 엔탈피의 부호다"
+    },
+    {
+      "type": "next",
+      "target": "mate-total-entropy-change"
+    },
+    {
+      "type": "related",
+      "target": "mate-internal-energy"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    94,
+    95
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

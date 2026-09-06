@@ -1,0 +1,125 @@
+{
+  "id": "mate-exothermic-reaction",
+  "concept_key": "concept:exothermic-reaction",
+  "registry_status": "new",
+  "term": "발열 반응",
+  "notation": {
+    "hanja": "發熱反應",
+    "hanja_gloss": "發 필 발 · 熱 더울 열 · 反 돌이킬 반 · 應 응할 응",
+    "english": "exothermic reaction"
+  },
+  "definition": "진행되는 동안 열을 주위로 내보내는 화학 반응. 생성물 쪽 엔탈피 합이 더 낮아 반응 엔탈피가 음의 값을 갖는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-exo-classify",
+      "text": "생성물의 엔탈피 합이 반응물의 엔탈피 합보다 낮은 반응은 발열 반응으로 분류한다.",
+      "form": {
+        "condition": "압력이 일정하게 유지될 때",
+        "type": "classification",
+        "scope": "일정 압력에서 일어나는 화학 반응",
+        "antecedent": {
+          "quantity": "반응물과 생성물의 엔탈피 합 비교",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반응의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "엔탈피 합의 대소를 반대로 놓으면 흡열 반응의 조건이 되므로 반드시 거짓이다.",
+      "inverted_text": "생성물의 엔탈피 합이 반응물의 엔탈피 합보다 높은 반응은 발열 반응으로 분류한다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-exo-surroundings-temp",
+      "text": "발열 반응이 일어나면 방출된 열을 받은 주위의 온도가 올라간다.",
+      "form": {
+        "condition": "열이 바깥으로 빠져나가지 않도록 막아 둔 조건에서",
+        "type": "causal",
+        "scope": "단열된 용기 안에서 일어나는 발열 반응",
+        "antecedent": {
+          "quantity": "계가 방출한 열",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "계가 내보낸 열이 주위로 옮겨 가므로 주위가 차가워진다는 진술은 반드시 거짓이다.",
+      "inverted_text": "발열 반응이 일어나면 방출된 열을 받은 주위의 온도가 내려간다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-exo-examples",
+      "text": "연소, 중화, 금속이 산소와 결합하는 반응처럼 열을 내며 진행되는 반응은 반응 엔탈피가 0보다 작다.",
+      "form": {
+        "condition": "일정한 압력에서 반응이 일어날 때",
+        "type": "conditional",
+        "scope": "발열 반응으로 분류되는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "열을 내놓는 반응은 엔탈피가 줄어드는 쪽이므로 값이 0보다 크다는 진술은 반드시 거짓이다.",
+      "inverted_text": "연소, 중화, 금속이 산소와 결합하는 반응처럼 열을 내며 진행되는 반응은 반응 엔탈피가 0보다 크다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발열 반응은 열을 내놓는 반응이므로 반응 엔탈피가 (+)이다",
+      "why_wrong": "열을 내놓았다는 것은 계의 엔탈피가 그만큼 줄었다는 뜻이다. 줄어든 변화이므로 반응 엔탈피는 (-)로 적는다.",
+      "source": "llm",
+      "linked_relation": "rel-exo-examples"
+    },
+    {
+      "text": "발열 반응이 일어나면 반응에 참여한 물질 자신의 엔탈피가 커진다",
+      "why_wrong": "커지는 것은 열을 받은 주위 쪽이다. 반응에 참여한 물질은 엔탈피가 줄고, 줄어든 만큼이 열로 나간다.",
+      "source": "llm",
+      "linked_relation": "rel-exo-classify"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-enthalpy"
+    },
+    {
+      "type": "next",
+      "target": "mate-combustion",
+      "note": "연소가 발열 반응임을 읽는 자리로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "mate-endothermic-reaction",
+      "note": "열의 방향이 정반대인 짝이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    74,
+    75,
+    88
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

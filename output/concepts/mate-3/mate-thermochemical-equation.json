@@ -1,0 +1,107 @@
+{
+  "id": "mate-thermochemical-equation",
+  "concept_key": "concept:thermochemical-equation",
+  "registry_status": "new",
+  "term": "열화학 반응식",
+  "notation": {
+    "hanja": "熱化學反應式",
+    "hanja_gloss": "熱 더울 열 · 化 될 화 · 學 배울 학 · 反 돌이킬 반 · 應 응할 응 · 式 법 식",
+    "english": "thermochemical equation"
+  },
+  "definition": "물질의 변화와 에너지의 출입을 한 줄에 담으려고, 화학 반응식 옆에 그 반응의 반응 엔탈피를 나란히 적은 식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tce-state-label",
+      "text": "엔탈피는 물질의 상태에 따라 달라지므로 열화학 반응식에는 각 물질의 상태를 빠짐없이 적어야 한다.",
+      "form": {
+        "condition": "같은 물질을 서로 다른 상태로 적을 수 있을 때",
+        "type": "causal",
+        "scope": "반응 엔탈피를 함께 적는 열화학 반응식"
+      },
+      "invertible": false,
+      "invertible_reason": "상태 표기를 생략해도 된다는 뒤집은 진술은 방향의 역전이 아니라 규칙의 부정이라 OX 로 삼기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tce-read-heat",
+      "text": "열화학 반응식을 보면 계수만큼의 물질이 반응할 때 드나드는 열이 몇 kJ인지 읽어 낼 수 있다.",
+      "form": {
+        "condition": "반응 엔탈피가 그 반응식의 계수에 맞추어 적혀 있을 때",
+        "type": "conditional",
+        "scope": "계수와 반응 엔탈피가 짝지어진 열화학 반응식"
+      },
+      "invertible": false,
+      "invertible_reason": "읽어 낼 수 있다는 진술에는 뒤집을 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tce-product-state",
+      "text": "수소가 연소할 때 물이 액체로 생기는 쪽이 수증기로 생기는 쪽보다 방출하는 열이 많다.",
+      "form": {
+        "condition": "반응물의 종류와 양이 같고 생성물의 상태만 다를 때",
+        "type": "conditional",
+        "scope": "생성물의 상태만 다른 두 연소 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "수증기가 액체로 응축될 때 열을 더 내놓으므로 순서를 뒤집은 진술은 반드시 거짓이다.",
+      "inverted_text": "수소가 연소할 때 물이 수증기로 생기는 쪽이 액체로 생기는 쪽보다 방출하는 열이 많다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "열화학 반응식에서 물질의 상태 표시는 보기 편하라고 붙인 것이라 빼도 값은 같다",
+      "why_wrong": "상태가 달라지면 그 물질의 엔탈피가 달라지고 반응 엔탈피 값도 달라진다. 상태 표시는 값의 일부다.",
+      "source": "llm",
+      "linked_relation": "rel-tce-state-label"
+    },
+    {
+      "text": "화학 반응식의 계수는 정수여야 하므로 열화학 반응식에 1/2 같은 분수 계수는 쓸 수 없다",
+      "why_wrong": "열화학 반응식은 어떤 물질 1 mol 을 기준으로 삼는 일이 많아 분수 계수를 그대로 쓴다. 계수를 두 배 하면 반응 엔탈피도 두 배가 될 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-tce-read-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-enthalpy"
+    },
+    {
+      "type": "next",
+      "target": "mate-enthalpy-of-combustion",
+      "note": "연소 엔탈피를 나타내는 형식이 이것이다"
+    },
+    {
+      "type": "next",
+      "target": "mate-hess-law",
+      "note": "여러 식을 더하고 빼는 법칙으로 이어진다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    76,
+    77,
+    88
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

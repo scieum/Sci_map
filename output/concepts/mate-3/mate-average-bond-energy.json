@@ -1,0 +1,115 @@
+{
+  "id": "mate-average-bond-energy",
+  "concept_key": "concept:average-bond-energy",
+  "registry_status": "new",
+  "term": "평균 결합 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'평균 결합'은 平均結合에 해당하지만 '에너지'가 영어 energy 의 음차어여서 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "average bond energy"
+  },
+  "definition": "같은 종류의 결합이라도 분자마다 값이 조금씩 다르기 때문에, 여러 분자에서 잰 결합 에너지를 평균 내어 쓰는 값.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-abe-environment",
+      "text": "다원자 분자에서는 둘레에 어떤 원자가 있느냐에 따라 같은 결합의 결합 에너지가 조금씩 달라진다.",
+      "form": {
+        "condition": "결합의 종류를 같게 두고 분자만 바꾸어 볼 때",
+        "type": "causal",
+        "scope": "다원자 분자 안의 공유 결합"
+      },
+      "invertible": false,
+      "invertible_reason": "둘레 환경이 달라도 값이 크게 벌어지지는 않으므로 뒤집은 진술을 반드시 거짓이라 하기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abe-approximate",
+      "text": "평균 결합 에너지로 구한 반응 엔탈피는 실제 측정값과 꼭 같지 않은 근삿값이다.",
+      "form": {
+        "condition": "반응물이나 생성물에 다원자 분자가 들어 있을 때",
+        "type": "conditional",
+        "scope": "평균값 표로 어림한 반응 엔탈피"
+      },
+      "invertible": true,
+      "invertible_reason": "평균을 쓴 계산이 언제나 실젯값과 일치한다는 진술은 평균을 쓰는 까닭 자체와 어긋나 반드시 거짓이다.",
+      "inverted_text": "평균 결합 에너지로 구한 반응 엔탈피는 실제 측정값과 언제나 정확히 일치한다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abe-bond-order",
+      "text": "같은 두 원자 사이라도 단일 결합에서 이중, 삼중 결합으로 갈수록 평균 결합 에너지가 커진다.",
+      "form": {
+        "condition": "결합에 참여한 원자 쌍을 같게 두고 결합 차수만 바꿀 때",
+        "type": "direct",
+        "scope": "같은 원자 쌍이 이루는 단일·이중·삼중 결합",
+        "antecedent": {
+          "quantity": "결합 차수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평균 결합 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "결합 차수가 높을수록 끊는 데 더 많은 에너지가 들므로 작아진다는 진술은 반드시 거짓이다.",
+      "inverted_text": "같은 두 원자 사이라도 단일 결합에서 이중, 삼중 결합으로 갈수록 평균 결합 에너지가 작아진다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평균 결합 에너지로 계산한 반응 엔탈피는 실험으로 잰 값과 정확히 같아야 한다",
+      "why_wrong": "표에 실린 값은 여러 분자에서 잰 값을 평균한 것이다. 그 평균으로 얻은 결과는 실젯값에 가까운 근삿값일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-abe-approximate"
+    },
+    {
+      "text": "표에 실린 결합 에너지는 어느 분자에 들어 있든 딱 그 값이다",
+      "why_wrong": "같은 종류의 결합이라도 둘레 원자의 배치에 따라 값이 조금씩 다르다. 그래서 평균을 내어 쓴다.",
+      "source": "llm",
+      "linked_relation": "rel-abe-environment"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-bond-energy"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-enthalpy",
+      "note": "이 값으로 구한 반응 엔탈피는 근삿값이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-hess-law",
+      "note": "결합을 모두 끊었다 다시 잇는 계산이 경로를 나누는 방식과 같다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    80,
+    81
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

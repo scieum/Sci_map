@@ -1,0 +1,115 @@
+{
+  "id": "mate-combustion",
+  "concept_key": "concept:combustion",
+  "registry_status": "new",
+  "term": "연소 반응",
+  "notation": {
+    "hanja": "燃燒反應",
+    "hanja_gloss": "燃 탈 연 · 燒 불사를 소 · 反 돌이킬 반 · 應 응할 응",
+    "english": "combustion reaction"
+  },
+  "definition": "산소와 빠르게 결합하면서 빛과 열을 한꺼번에 내놓는 산화 반응. 반응 엔탈피가 0보다 작은 대표적인 발열 반응이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-comb-exothermic",
+      "text": "연소 반응은 반응물 쪽 엔탈피 합이 더 높아 반응 엔탈피가 0보다 작다.",
+      "form": {
+        "condition": "일정한 압력에서 연소가 일어날 때",
+        "type": "conditional",
+        "scope": "산소와 결합해 빛과 열을 내는 연소 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "빛과 열을 내놓는 반응은 엔탈피가 줄어드는 쪽이므로 값이 0보다 크다는 진술은 반드시 거짓이다.",
+      "inverted_text": "연소 반응은 반응물 쪽 엔탈피 합이 더 높아 반응 엔탈피가 0보다 크다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-comb-amount",
+      "text": "같은 연료라도 태우는 양이 많을수록 방출되는 열의 양이 그만큼 늘어난다.",
+      "form": {
+        "condition": "완전 연소가 일어나고 생성물의 상태가 같을 때",
+        "type": "direct",
+        "scope": "완전 연소하는 한 가지 연료",
+        "antecedent": {
+          "quantity": "태우는 연료의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "방출되는 열의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응 엔탈피는 반응한 물질의 양에 비례하므로 양이 늘 때 열이 줄어든다는 진술은 반드시 거짓이다.",
+      "inverted_text": "같은 연료라도 태우는 양이 많을수록 방출되는 열의 양은 오히려 줄어든다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-comb-oxygen",
+      "text": "산소가 공급되지 않으면 연소는 이어지지 못하고 멈춘다.",
+      "form": {
+        "condition": "밀폐된 공간에서 산소가 모두 소모될 때",
+        "type": "causal",
+        "scope": "산소와 결합하는 연소 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "산소가 있으면 반드시 연소한다는 뒤집은 진술은 점화 조건 때문에 항상 거짓이라 보기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "철이 녹스는 것도 산소와 반응하는 것이므로 연소 반응이다",
+      "why_wrong": "둘 다 산화이지만 연소는 빛과 열을 내며 빠르게 일어나는 산화다. 철의 부식은 같은 산화라도 느리게 진행되어 빛을 내지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-comb-exothermic"
+    },
+    {
+      "text": "연소는 물질이 타서 없어지는 반응이므로 반응 후 전체 질량이 줄어든다",
+      "why_wrong": "타서 사라진 것처럼 보일 뿐 생성물은 기체로 흩어진다. 결합한 산소까지 세면 반응 전후 질량은 그대로다.",
+      "source": "llm",
+      "linked_relation": "rel-comb-oxygen"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-exothermic-reaction"
+    },
+    {
+      "type": "next",
+      "target": "mate-complete-combustion",
+      "note": "연소의 정의 위에 완전 연소가 얹힌다"
+    },
+    {
+      "type": "related",
+      "target": "mate-enthalpy-of-combustion",
+      "note": "이 반응의 반응 엔탈피에 붙은 이름이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    78,
+    79
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,135 @@
+{
+  "id": "mate-entropy-change",
+  "concept_key": "concept:entropy-change",
+  "registry_status": "new",
+  "term": "엔트로피 변화",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'엔트로피'가 영어 entropy 의 음차어라 한자가 없다. 뒤의 '변화'만 變化에 해당하므로 낱말 전체를 옮길 한자어가 없다.",
+    "english": "entropy change",
+    "symbol_display": "ΔS",
+    "symbol_plain": "delta S"
+  },
+  "definition": "변화가 끝난 뒤의 엔트로피에서 변화가 일어나기 전의 엔트로피를 뺀 값. 양의 값이면 무질서도가 커진 것이고 음의 값이면 작아진 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ds-phase-change",
+      "text": "고체가 액체로, 액체가 기체로 바뀌는 동안 계의 엔트로피 변화는 양의 값을 가진다.",
+      "form": {
+        "condition": "물질의 종류는 그대로이고 상태만 바뀔 때",
+        "type": "conditional",
+        "scope": "융해·기화처럼 입자 배열이 흐트러지는 쪽의 상태 변화에 한정한다. 응고·액화에서는 부호가 반대가 된다.",
+        "antecedent": {
+          "quantity": "상태 변화의 방향(고체→액체→기체)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계의 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "배열이 흐트러지는 쪽의 상태 변화에서 엔트로피가 줄어드는 일은 없으므로 부호를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고체가 액체로, 액체가 기체로 바뀌는 동안 계의 엔트로피 변화는 음의 값을 가진다."
+    },
+    {
+      "id": "rel-ds-gas-particle-count",
+      "text": "반응물과 생성물이 모두 기체인 반응에서 반응 뒤 분자 수가 줄면 계의 엔트로피는 감소한다.",
+      "form": {
+        "condition": "반응 전후 물질이 모두 기체이고 온도와 압력이 일정할 때",
+        "type": "direct",
+        "scope": "반응물과 생성물이 모두 기체인 반응에 한정한다. 고체나 액체가 끼면 분자 수만으로는 예측할 수 없다.",
+        "antecedent": {
+          "quantity": "기체 분자 수",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "계의 엔트로피",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분자 수가 줄어도 생성물의 구조가 훨씬 복잡하면 엔트로피가 늘 수 있어, 뒤집은 문장을 언제나 거짓이라고 단정하기 어렵다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ds-mixing",
+      "text": "서로 반응하지 않는 두 기체를 섞으면 전체 분자 수가 그대로여도 엔트로피는 커진다.",
+      "form": {
+        "condition": "온도가 일정하고 열 출입이 없을 때",
+        "type": "causal",
+        "scope": "같은 온도·압력에서 서로 반응하지 않는 기체를 한 공간에 섞는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "두 기체의 섞임",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계의 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "섞이면서 배열의 가짓수가 늘어나는 것이 정해진 방향이므로, 섞여서 엔트로피가 줄어든다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "서로 반응하지 않는 두 기체를 섞으면 전체 분자 수가 그대로이므로 엔트로피는 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응 전후 분자 수가 같으면 엔트로피 변화는 언제나 0이다",
+      "why_wrong": "분자 수는 판단의 한 가지 단서일 뿐이다. 수가 같아도 두 기체가 섞이는 것처럼 배열이 흐트러지면 엔트로피는 커진다.",
+      "linked_relation": "rel-ds-mixing",
+      "source": "llm"
+    },
+    {
+      "text": "계의 엔트로피 변화가 음이면 그 변화는 절대로 일어나지 않는다",
+      "why_wrong": "계 쪽이 줄어도 주위 쪽이 그보다 크게 늘면 전체는 늘어난다. 그런 반응은 저절로 일어난다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-entropy"
+    },
+    {
+      "type": "next",
+      "target": "mate-entropy-change-of-surroundings"
+    },
+    {
+      "type": "next",
+      "target": "mate-total-entropy-change",
+      "note": "합의 한 항이 된다"
+    },
+    {
+      "type": "related",
+      "target": "mate-gas-diffusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-01",
+  "pages": [
+    91,
+    97
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,120 @@
+{
+  "id": "mate-calorimeter",
+  "concept_key": "concept:calorimeter",
+  "registry_status": "new",
+  "term": "열량계",
+  "notation": {
+    "hanja": "熱量計",
+    "hanja_gloss": "熱 더울 열 · 量 헤아릴 량 · 計 셀 계",
+    "english": "calorimeter",
+    "symbol_display": "Q = c × m × Δt",
+    "symbol_plain": "Q = c x m x dt"
+  },
+  "definition": "화학 반응에서 드나드는 열을 재려고 만든 단열 용기. 반응 앞뒤로 용액의 온도가 얼마나 변했는지로 열량을 계산한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cal-heat-balance",
+      "text": "열량계 안팎으로 열이 새지 않는다면 반응이 내놓거나 흡수한 열은 용액이 얻거나 잃은 열과 같다.",
+      "form": {
+        "condition": "열량계가 바깥과 완전히 단열되어 있을 때",
+        "type": "conditional",
+        "scope": "단열된 열량계 안에서 일어나는 수용액 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "열 손실이 있는 실제 상황에서는 어긋나므로 뒤집은 진술의 참·거짓을 단정하기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cal-q-formula",
+      "text": "용액의 비열과 질량이 같다면 온도 변화가 클수록 용액이 주고받은 열량도 크다.",
+      "form": {
+        "condition": "같은 용액을 같은 질량만큼 쓸 때",
+        "type": "direct",
+        "scope": "단열 용기 속 수용액",
+        "antecedent": {
+          "quantity": "용액의 온도 변화",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액이 주고받은 열량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "열량은 비열·질량·온도 변화의 곱이므로 온도 변화가 커질 때 열량이 준다는 진술은 반드시 거짓이다.",
+      "inverted_text": "용액의 비열과 질량이 같다면 온도 변화가 클수록 용액이 주고받은 열량은 작다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cal-simple-loss",
+      "text": "스타이로폼 컵으로 만든 간이 열량계는 열이 새어 나가 발열량을 실제보다 작게 재기 쉽다.",
+      "form": {
+        "condition": "발열 반응을 간이 열량계로 측정할 때",
+        "type": "causal",
+        "scope": "단열이 완전하지 않은 간이 열량계"
+      },
+      "invertible": true,
+      "invertible_reason": "새어 나간 열은 온도 상승에 잡히지 않으므로 실제보다 크게 나온다는 진술은 반드시 거짓이다.",
+      "inverted_text": "스타이로폼 컵으로 만든 간이 열량계는 열이 새어 나가 발열량을 실제보다 크게 재기 쉽다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "간이 열량계로 잰 값은 열이 조금 새더라도 실제 반응 엔탈피와 같다",
+      "why_wrong": "새어 나간 열은 온도 변화에 잡히지 않는다. 그래서 간이 열량계로 구한 발열량은 실젯값보다 작게 나온다.",
+      "source": "llm",
+      "linked_relation": "rel-cal-simple-loss"
+    },
+    {
+      "text": "온도가 많이 올라간 반응일수록 반응 엔탈피의 크기도 반드시 크다",
+      "why_wrong": "열량은 온도 변화뿐 아니라 용액의 비열과 질량에도 달려 있고, 반응 엔탈피는 다시 반응한 물질의 몰수로 나눈 값이다. 온도 변화만으로는 비교할 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-cal-q-formula"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-enthalpy"
+    },
+    {
+      "type": "related",
+      "target": "mate-exothermic-reaction"
+    },
+    {
+      "type": "related",
+      "target": "mate-endothermic-reaction"
+    },
+    {
+      "type": "related",
+      "target": "mate-hess-law",
+      "note": "경로를 달리한 두 실험의 열을 이 장치로 재어 견준다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    77,
+    83
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

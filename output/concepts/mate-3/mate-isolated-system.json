@@ -1,0 +1,131 @@
+{
+  "id": "mate-isolated-system",
+  "concept_key": "concept:isolated-system",
+  "registry_status": "new",
+  "term": "고립계",
+  "notation": {
+    "hanja": "孤立系",
+    "hanja_gloss": "孤 외로울 고 · 立 설 립 · 系 맬 계",
+    "english": "isolated system"
+  },
+  "definition": "주위와 물질도 에너지도 주고받지 않는 계. 단열된 통에 넣어 열의 출입까지 막은 경우가 여기에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-iso-insulated",
+      "text": "단열재로 감싸 밀폐한 통 속의 물질은 고립계로 본다.",
+      "form": {
+        "condition": "통이 물질도 열도 통과시키지 않을 때",
+        "type": "classification",
+        "scope": "단열이 충분해 열 출입을 없는 것으로 볼 수 있는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "물질·열의 통과 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 갈래에 넣은 분류 명제라 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-iso-no-surrounding-change",
+      "text": "고립계 안에서 발열 반응이 일어나도 주위의 온도는 달라지지 않는다.",
+      "form": {
+        "condition": "계가 주위와 에너지를 주고받지 못할 때",
+        "type": "causal",
+        "scope": "단열이 완전하다고 본 고립계에 한정한다. 실제 용기에서는 새는 열이 있어 어긋날 수 있다.",
+        "antecedent": {
+          "quantity": "계에서 주위로 나가는 에너지",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "주위의 온도",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "에너지가 넘어가지 않으니 주위가 데워질 길이 없어, 온도가 올라간다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고립계 안에서 발열 반응이 일어나면 주위의 온도가 높아진다."
+    },
+    {
+      "id": "rel-iso-vs-closed",
+      "text": "고립계는 닫힌계와 달리 물질뿐 아니라 에너지까지 주위와 주고받지 않는다.",
+      "form": {
+        "condition": "두 갈래의 계를 견줄 때",
+        "type": "classification",
+        "scope": "물질과 에너지의 교환 여부로 계를 가르는 기준에 한정한다.",
+        "antecedent": {
+          "quantity": "에너지 교환 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "에너지를 주고받는 쪽이 닫힌계이므로 두 이름을 맞바꾸면 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "닫힌계는 고립계와 달리 물질뿐 아니라 에너지까지 주위와 주고받지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "뚜껑을 꼭 닫은 병 속의 물은 고립계다",
+      "why_wrong": "뚜껑을 닫으면 물질은 드나들지 못하지만 병의 벽을 통해 열은 오간다. 그런 계는 닫힌계다.",
+      "linked_relation": "rel-iso-vs-closed",
+      "source": "llm"
+    },
+    {
+      "text": "고립계 안에서는 아무 변화도 일어나지 않는다",
+      "why_wrong": "주위와 주고받는 것이 없을 뿐이다. 계 안에서는 반응도 상태 변화도 얼마든지 일어난다.",
+      "linked_relation": "rel-iso-no-surrounding-change",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-surroundings"
+    },
+    {
+      "type": "related",
+      "target": "mate-closed-system",
+      "note": "에너지 교환 여부에서 갈린다"
+    },
+    {
+      "type": "related",
+      "target": "mate-open-system"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    92,
+    93,
+    96
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

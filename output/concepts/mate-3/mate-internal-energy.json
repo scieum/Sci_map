@@ -1,0 +1,124 @@
+{
+  "id": "mate-internal-energy",
+  "concept_key": "concept:internal-energy",
+  "registry_status": "new",
+  "term": "내부 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'내부'는 內部에 해당하지만 '에너지'가 영어 energy 의 음차어라 낱말 전체를 옮길 한자어가 없다.",
+    "english": "internal energy",
+    "symbol_display": "E (변화량은 ΔE)",
+    "symbol_plain": "E"
+  },
+  "definition": "계가 지니고 있는 에너지를 모두 합한 양. 절댓값은 정할 수 없고 변화가 일어나기 전과 후의 차이만 잴 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ie-only-change",
+      "text": "내부 에너지는 그 값 자체를 정할 수 없고 변화량만 잴 수 있다.",
+      "form": {
+        "condition": "실제 실험에서 값을 다룰 때",
+        "type": "conditional",
+        "scope": "화학 변화와 물리 변화에서 내부 에너지를 다루는 경우에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 잴 수 있는가를 밝힌 명제라 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ie-exothermic",
+      "text": "발열 반응에서는 계가 에너지를 내보내므로 반응 뒤 계의 내부 에너지가 반응 전보다 작다.",
+      "form": {
+        "condition": "계가 주위로 에너지를 내보낼 때",
+        "type": "causal",
+        "scope": "주위와 에너지를 주고받을 수 있는 계에서 일어나는 발열 반응에 한정한다.",
+        "antecedent": {
+          "quantity": "계에서 주위로 나가는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계의 내부 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "내보낸 만큼 계에 남은 에너지가 줄어드는 것이 정해진 방향이라 크기를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발열 반응에서는 반응 뒤 계의 내부 에너지가 반응 전보다 크다."
+    },
+    {
+      "id": "rel-ie-endothermic",
+      "text": "흡열 반응에서는 계가 주위에서 에너지를 얻으므로 반응 뒤 계의 내부 에너지가 반응 전보다 크다.",
+      "form": {
+        "condition": "계가 주위에서 에너지를 얻을 때",
+        "type": "causal",
+        "scope": "주위와 에너지를 주고받을 수 있는 계에서 일어나는 흡열 반응에 한정한다.",
+        "antecedent": {
+          "quantity": "주위에서 계로 들어오는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계의 내부 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "받아들인 만큼 계의 에너지가 늘어나는 것이 정해진 방향이라 크기를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흡열 반응에서는 반응 뒤 계의 내부 에너지가 반응 전보다 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "내부 에너지는 온도계로 온도를 재듯 그 값을 곧바로 잴 수 있다",
+      "why_wrong": "계가 가진 에너지의 총량은 정확히 정할 수 없다. 실험으로 얻는 것은 변화 전후의 차이다.",
+      "linked_relation": "rel-ie-only-change",
+      "source": "llm"
+    },
+    {
+      "text": "발열 반응이 일어나면 계의 내부 에너지가 커진다",
+      "why_wrong": "계가 주위로 에너지를 내보냈으므로 계에 남은 에너지는 줄어든다. 에너지를 얻어 더워지는 쪽은 주위다.",
+      "linked_relation": "rel-ie-exothermic",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-thermodynamic-system"
+    },
+    {
+      "type": "related",
+      "target": "mate-surroundings",
+      "note": "계의 에너지 변화는 주위의 온도 변화로 드러난다"
+    },
+    {
+      "type": "related",
+      "target": "mate-entropy-change-of-surroundings",
+      "note": "주위로 옮겨 간 에너지가 주위의 무질서도를 바꾼다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

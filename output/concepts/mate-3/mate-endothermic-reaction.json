@@ -1,0 +1,125 @@
+{
+  "id": "mate-endothermic-reaction",
+  "concept_key": "concept:endothermic-reaction",
+  "registry_status": "new",
+  "term": "흡열 반응",
+  "notation": {
+    "hanja": "吸熱反應",
+    "hanja_gloss": "吸 마실 흡 · 熱 더울 열 · 反 돌이킬 반 · 應 응할 응",
+    "english": "endothermic reaction"
+  },
+  "definition": "진행되는 동안 주위에서 열을 빨아들이는 화학 반응. 생성물 쪽 엔탈피 합이 더 높아 반응 엔탈피가 양의 값을 갖는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-endo-classify",
+      "text": "생성물의 엔탈피 합이 반응물의 엔탈피 합보다 높은 반응은 흡열 반응으로 분류한다.",
+      "form": {
+        "condition": "압력이 일정하게 유지될 때",
+        "type": "classification",
+        "scope": "일정 압력에서 일어나는 화학 반응",
+        "antecedent": {
+          "quantity": "반응물과 생성물의 엔탈피 합 비교",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반응의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "엔탈피 합의 대소를 반대로 놓으면 발열 반응의 조건이 되므로 반드시 거짓이다.",
+      "inverted_text": "생성물의 엔탈피 합이 반응물의 엔탈피 합보다 낮은 반응은 흡열 반응으로 분류한다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-endo-surroundings-temp",
+      "text": "흡열 반응이 일어나면 열을 빼앗긴 주위의 온도가 내려간다.",
+      "form": {
+        "condition": "열이 바깥에서 새로 들어오지 않도록 막아 둔 조건에서",
+        "type": "causal",
+        "scope": "단열된 용기 안에서 일어나는 흡열 반응",
+        "antecedent": {
+          "quantity": "계가 흡수한 열",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "계가 주위에서 열을 가져가므로 주위가 따뜻해진다는 진술은 반드시 거짓이다.",
+      "inverted_text": "흡열 반응이 일어나면 열을 빼앗긴 주위의 온도가 올라간다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-endo-examples",
+      "text": "광합성이나 탄산수소 소듐의 열분해처럼 열을 받아들이며 진행되는 반응은 반응 엔탈피가 0보다 크다.",
+      "form": {
+        "condition": "일정한 압력에서 반응이 일어날 때",
+        "type": "conditional",
+        "scope": "흡열 반응으로 분류되는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "열을 흡수하는 반응은 엔탈피가 늘어나는 쪽이므로 값이 0보다 작다는 진술은 반드시 거짓이다.",
+      "inverted_text": "광합성이나 탄산수소 소듐의 열분해처럼 열을 받아들이며 진행되는 반응은 반응 엔탈피가 0보다 작다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "냉각 팩이 차가워지는 것은 팩 속 물질이 찬 기운을 주위로 내보내기 때문이다",
+      "why_wrong": "차가움이 옮겨 가는 것이 아니다. 팩 속에서 일어나는 흡열 반응이 주위의 열을 가져가기 때문에 주위가 차게 느껴진다.",
+      "source": "llm",
+      "linked_relation": "rel-endo-surroundings-temp"
+    },
+    {
+      "text": "흡열 반응은 열을 흡수하므로 반응 엔탈피가 (-)이다",
+      "why_wrong": "열을 흡수했다는 것은 계의 엔탈피가 그만큼 늘었다는 뜻이므로 반응 엔탈피는 (+)로 적는다.",
+      "source": "llm",
+      "linked_relation": "rel-endo-examples"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-enthalpy"
+    },
+    {
+      "type": "related",
+      "target": "mate-exothermic-reaction",
+      "note": "열의 방향이 정반대인 짝이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-calorimeter",
+      "note": "온도가 내려가는 반응도 같은 장치로 잰다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    74,
+    75,
+    88
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

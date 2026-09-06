@@ -1,0 +1,109 @@
+{
+  "id": "mate-fuel-efficiency",
+  "concept_key": "concept:fuel-efficiency",
+  "registry_status": "new",
+  "term": "연료의 효율성",
+  "aliases": [
+    "연료의 열효율"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'연료'와 '효율성'은 燃料·效率性에 해당하지만 가운데 조사 '의'가 고유어여서 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "fuel efficiency"
+  },
+  "definition": "같은 양(mol)이나 같은 질량을 태웠을 때 열을 얼마나 많이 내놓는지로 연료들을 견주는 잣대.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fe-hydrogen-top",
+      "text": "질량을 기준으로 삼으면 수소가 메테인·뷰테인·에탄올보다 1 g 당 내놓는 열이 많다.",
+      "form": {
+        "condition": "네 연료를 모두 완전 연소시키고 물이 액체로 생성될 때",
+        "type": "conditional",
+        "scope": "수소·메테인·뷰테인·에탄올 네 연료의 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "수소는 분자량이 가장 작아 1 g 당 몰수가 압도적으로 많으므로 가장 적다는 진술은 반드시 거짓이다.",
+      "inverted_text": "질량을 기준으로 삼으면 수소가 메테인·뷰테인·에탄올보다 1 g 당 내놓는 열이 적다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fe-basis-matters",
+      "text": "비교 기준을 mol 로 잡느냐 질량으로 잡느냐에 따라 연료의 효율 순위가 뒤바뀔 수 있다.",
+      "form": {
+        "condition": "분자량이 서로 다른 연료를 견줄 때",
+        "type": "conditional",
+        "scope": "분자량이 다른 연료끼리의 효율 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "메테인과 뷰테인처럼 기준을 바꾸면 순위가 실제로 뒤집히는 예가 있어, 언제나 같다는 진술은 반드시 거짓이다.",
+      "inverted_text": "비교 기준을 mol 로 잡든 질량으로 잡든 연료의 효율 순위는 언제나 같다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fe-environment",
+      "text": "화석 연료는 많은 열을 내지만 이산화 탄소와 오염 물질을 함께 내놓아 열효율만으로 고를 수 없다.",
+      "form": {
+        "condition": "환경에 미치는 영향까지 함께 따질 때",
+        "type": "conditional",
+        "scope": "화석 연료와 대체 연료의 선택"
+      },
+      "invertible": false,
+      "invertible_reason": "가치 판단이 섞인 진술이라 방향을 뒤집은 문장이 반드시 거짓이라고 단정할 수 없다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연소 엔탈피의 절댓값이 가장 큰 연료가 언제나 가장 효율이 좋은 연료다",
+      "why_wrong": "연소 엔탈피는 1 mol 기준 값이다. 같은 질량으로 고쳐 견주면 순위가 달라지고, 오염 물질 배출까지 따지면 또 달라진다.",
+      "source": "llm",
+      "linked_relation": "rel-fe-basis-matters"
+    },
+    {
+      "text": "수소는 1 g 당 내는 열이 가장 크므로 1 mol 당 연소 엔탈피의 크기도 가장 크다",
+      "why_wrong": "수소는 분자량이 2로 아주 작다. 1 g 당으로는 가장 크지만 1 mol 당 연소 엔탈피의 크기는 네 연료 가운데 가장 작다.",
+      "source": "llm",
+      "linked_relation": "rel-fe-hydrogen-top"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-enthalpy-of-combustion"
+    },
+    {
+      "type": "related",
+      "target": "mate-complete-combustion",
+      "note": "효율 비교는 완전 연소를 전제로 한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-combustion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    78,
+    79
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

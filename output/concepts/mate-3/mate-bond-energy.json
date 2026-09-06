@@ -1,0 +1,114 @@
+{
+  "id": "mate-bond-energy",
+  "concept_key": "concept:bond-energy",
+  "registry_status": "new",
+  "term": "결합 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'결합'은 結合에 해당하지만 '에너지'가 영어 energy 의 음차어여서 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "bond energy",
+    "symbol_display": "E(H−H) = 436 kJ/mol",
+    "symbol_plain": "E(H-H) = 436 kJ/mol"
+  },
+  "definition": "기체 상태에서 두 원자를 잇는 공유 결합 1 mol 을 끊는 데 들어가는 에너지. 끊는 쪽을 기준으로 삼아 값이 늘 양수다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-be-positive",
+      "text": "결합을 끊으려면 에너지를 흡수해야 하므로 결합 에너지는 언제나 양의 값이다.",
+      "form": {
+        "condition": "기체 상태에서 공유 결합 1 mol 을 끊을 때",
+        "type": "causal",
+        "scope": "기체 분자 안의 공유 결합"
+      },
+      "invertible": true,
+      "invertible_reason": "결합이 끊길 때는 엔탈피가 높아지므로 방출한다는 진술과 음수라는 결론은 반드시 거짓이다.",
+      "inverted_text": "결합을 끊으려면 에너지를 방출해야 하므로 결합 에너지는 언제나 음의 값이다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-be-reaction-enthalpy",
+      "text": "새로 만들어지는 결합의 에너지 합이 끊어지는 결합의 에너지 합보다 크면 그 반응은 발열 반응이다.",
+      "form": {
+        "condition": "반응물과 생성물이 모두 기체이고 평균 결합 에너지를 쓸 때",
+        "type": "conditional",
+        "scope": "기체끼리 일어나는 반응의 반응 엔탈피 어림"
+      },
+      "invertible": true,
+      "invertible_reason": "반응 엔탈피는 끊는 쪽 합에서 만드는 쪽 합을 뺀 값이므로 대소를 그대로 두고 결론만 바꾸면 반드시 거짓이다.",
+      "inverted_text": "새로 만들어지는 결합의 에너지 합이 끊어지는 결합의 에너지 합보다 크면 그 반응은 흡열 반응이다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-be-similar-across",
+      "text": "같은 두 원자 사이의 결합이라면 어떤 화합물에 들어 있든 결합 에너지가 서로 비슷하다.",
+      "form": {
+        "condition": "결합에 참여한 원자 쌍과 결합 차수가 같을 때",
+        "type": "conditional",
+        "scope": "여러 화합물에 들어 있는 같은 종류의 공유 결합"
+      },
+      "invertible": false,
+      "invertible_reason": "주변 환경에 따라 값이 조금씩 달라지므로 '전혀 다르다'는 뒤집은 진술도 반드시 참이라 할 수 없다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "결합 에너지는 결합이 만들어질 때 나오는 에너지이므로 음의 값이다",
+      "why_wrong": "결합 에너지는 결합을 끊는 데 드는 에너지로 약속한 값이라 항상 (+)다. 결합이 만들어질 때의 값은 크기가 같고 부호만 반대다.",
+      "source": "llm",
+      "linked_relation": "rel-be-positive"
+    },
+    {
+      "text": "결합 에너지는 분자와 분자를 서로 붙잡아 두는 힘의 크기다",
+      "why_wrong": "분자 사이의 인력이 아니라 분자 안에서 원자를 잇는 공유 결합을 끊는 데 드는 에너지다. 작용하는 자리가 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-be-positive"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-enthalpy"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-reaction-enthalpy"
+    },
+    {
+      "type": "next",
+      "target": "mate-average-bond-energy",
+      "note": "실제 계산에 쓰는 평균값으로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "mate-standard-enthalpy-of-formation",
+      "note": "반응 엔탈피를 자료로 구하는 또 다른 길이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    80,
+    81,
+    88
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

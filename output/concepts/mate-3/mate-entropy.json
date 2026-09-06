@@ -1,0 +1,128 @@
+{
+  "id": "mate-entropy",
+  "concept_key": "concept:entropy",
+  "registry_status": "new",
+  "term": "엔트로피",
+  "aliases": [
+    "무질서도"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 entropy 의 음차어다. 낱말 전체에 대응하는 한자어 표기가 존재하지 않는다.",
+    "english": "entropy",
+    "symbol_display": "S",
+    "symbol_plain": "S"
+  },
+  "definition": "물질을 이루는 입자의 배열과 운동이 흐트러진 정도를 나타내는 양. 기호는 S이며, 같은 물질이라도 상태가 달라지면 값이 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-entropy-state-order",
+      "text": "같은 물질이라면 고체일 때보다 액체일 때가, 액체일 때보다 기체일 때가 엔트로피가 크다.",
+      "form": {
+        "condition": "물질의 종류와 양이 같고 상태만 다를 때",
+        "type": "direct",
+        "scope": "같은 물질의 세 상태를 견주는 경우에 한정한다. 서로 다른 물질끼리는 상태만으로 크기를 견줄 수 없다.",
+        "antecedent": {
+          "quantity": "입자 배열과 운동의 흐트러짐(고체→액체→기체)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "상태가 흐트러질수록 엔트로피가 커지는 것이 정해진 방향이므로, 순서를 맞바꾸면 어떤 물질에서도 참이 될 수 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 물질이라면 기체일 때가 고체일 때보다 엔트로피가 작다."
+    },
+    {
+      "id": "rel-entropy-isolated-direction",
+      "text": "주위와 열을 주고받지 않는 변화는 엔트로피가 커지는 쪽으로 저절로 진행한다.",
+      "form": {
+        "condition": "계와 주위 사이에 열 출입이 없을 때",
+        "type": "conditional",
+        "scope": "고립계처럼 에너지를 주고받지 않는 변화에 한정한다. 열이 오가면 주위 쪽 엔트로피까지 합쳐서 판단해야 한다.",
+        "antecedent": {
+          "quantity": "변화의 진행",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "계의 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "열 출입이 없는 변화에서 엔트로피가 줄어드는 쪽으로 저절로 진행하는 경우는 없으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주위와 열을 주고받지 않는 변화는 엔트로피가 작아지는 쪽으로 저절로 진행한다."
+    },
+    {
+      "id": "rel-entropy-motion",
+      "text": "기체의 엔트로피가 큰 까닭은 분자가 자유롭게 움직여 서로 멀리 떨어진 배열을 이루기 때문이다.",
+      "form": {
+        "condition": "상태에 따라 값이 다른 까닭을 분자 수준에서 물을 때",
+        "type": "causal",
+        "scope": "같은 물질의 고체·액체·기체를 견주는 설명에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집으면 분자 운동이 제한된 쪽이 엔트로피가 크다는 말이 되는데, 이는 원인 진술을 부정한 것일 뿐 방향을 뒤집은 명제로 보기 어려워 OX 로 쓰기에 마땅하지 않다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "엔트로피는 물질이 가지고 있는 에너지의 양을 나타내는 값이다",
+      "why_wrong": "엔트로피가 재는 것은 에너지의 크기가 아니라 입자의 배열과 운동이 흩어진 정도다. 에너지를 같게 맞추어도 상태가 다르면 엔트로피는 다르다.",
+      "linked_relation": "rel-entropy-motion",
+      "source": "llm"
+    },
+    {
+      "text": "엔트로피가 커지는 쪽이면 어떤 반응이든 저절로 일어난다",
+      "why_wrong": "계의 엔트로피만 보고 판단할 수 없다. 열이 오가는 반응에서는 주위의 엔트로피까지 합친 전체를 보아야 한다.",
+      "linked_relation": "rel-entropy-isolated-direction",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-entropy-change"
+    },
+    {
+      "type": "next",
+      "target": "mate-gas-diffusion",
+      "note": "확산을 엔트로피로 설명하는 자리다"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-spontaneity",
+      "note": "자발성 판단의 밑감이 되는 양이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-01",
+  "pages": [
+    90,
+    96
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

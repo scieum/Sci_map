@@ -1,0 +1,102 @@
+{
+  "id": "mate-allotrope",
+  "concept_key": "concept:allotrope",
+  "registry_status": "new",
+  "term": "동소체",
+  "notation": {
+    "hanja": "同素體",
+    "hanja_gloss": "同 한가지 동 · 素 본디 소 · 體 몸 체",
+    "english": "allotrope"
+  },
+  "definition": "한 가지 원소로만 이루어졌으면서 원자가 이어진 구조가 달라 성질까지 서로 달라진 물질들. 흑연과 다이아몬드가 그런 사이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-allo-same-element",
+      "text": "동소체끼리는 성분 원소가 같아 연소시키면 같은 생성물이 나오지만, 성질과 엔탈피는 서로 다르다.",
+      "form": {
+        "condition": "같은 원소로만 이루어진 두 물질을 견줄 때",
+        "type": "conditional",
+        "scope": "동소체를 갖는 원소의 홑원소 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "성질이 모두 같다는 뒤집은 진술과 생성물까지 다르다는 진술이 뒤섞여 방향을 단정하기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-allo-zero-formation",
+      "text": "같은 원소의 동소체 가운데 엔탈피가 가장 낮은 것만 표준 생성 엔탈피가 0이고 나머지는 0보다 크다.",
+      "form": {
+        "condition": "25 ℃, 1 atm 의 표준 상태에서 같은 원소의 동소체를 견줄 때",
+        "type": "conditional",
+        "scope": "동소체가 여럿인 원소"
+      },
+      "invertible": true,
+      "invertible_reason": "기준이 가장 안정한(엔탈피가 가장 낮은) 것이므로 순서를 뒤집은 진술은 반드시 거짓이다.",
+      "inverted_text": "같은 원소의 동소체 가운데 엔탈피가 가장 높은 것만 표준 생성 엔탈피가 0이고 나머지는 0보다 작다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-allo-carbon",
+      "text": "탄소 동소체 중 표준 생성 엔탈피가 0인 것은 흑연이므로 다이아몬드의 엔탈피가 흑연보다 높다.",
+      "form": {
+        "condition": "25 ℃, 1 atm 의 표준 상태에서",
+        "type": "conditional",
+        "scope": "탄소의 동소체"
+      },
+      "invertible": true,
+      "invertible_reason": "다이아몬드의 표준 생성 엔탈피가 0보다 큰 값이므로 반대로 놓은 진술은 반드시 거짓이다.",
+      "inverted_text": "탄소 동소체 중 표준 생성 엔탈피가 0인 것은 다이아몬드이므로 흑연의 엔탈피가 다이아몬드보다 높다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흑연과 다이아몬드는 둘 다 탄소로만 되어 있으니 엔탈피도 서로 같다",
+      "why_wrong": "원소는 같아도 원자가 이어진 구조가 다르다. 구조가 다르면 엔탈피도 달라서 다이아몬드가 흑연보다 높다.",
+      "source": "llm",
+      "linked_relation": "rel-allo-carbon"
+    },
+    {
+      "text": "동소체는 같은 물질을 다르게 부르는 이름일 뿐이다",
+      "why_wrong": "이름만 다른 것이 아니라 성질이 다른 서로 다른 물질이다. 흑연은 전기가 통하고 무르지만 다이아몬드는 그렇지 않다.",
+      "source": "llm",
+      "linked_relation": "rel-allo-same-element"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-standard-enthalpy-of-formation",
+      "note": "생성 엔탈피 0의 예외를 읽는 자리로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "mate-enthalpy",
+      "note": "같은 원소로 된 물질끼리 엔탈피를 견주는 예다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-02",
+  "pages": [
+    86
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

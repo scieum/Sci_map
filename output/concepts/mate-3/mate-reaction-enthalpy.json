@@ -1,0 +1,137 @@
+{
+  "id": "mate-reaction-enthalpy",
+  "concept_key": "concept:reaction-enthalpy",
+  "registry_status": "new",
+  "term": "반응 엔탈피",
+  "aliases": [
+    "엔탈피 변화"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'반응'은 反應에 해당하지만 '엔탈피'가 영어 enthalpy 의 음차어여서 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "enthalpy of reaction",
+    "symbol_display": "ΔH = H(생성물) − H(반응물)",
+    "symbol_plain": "deltaH = H(products) - H(reactants)"
+  },
+  "definition": "일정한 압력에서 반응이 일어나는 동안 생긴 엔탈피의 변화량. 생성물 쪽 엔탈피 합에서 반응물 쪽 엔탈피 합을 뺀 값으로 잡는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rxnh-sign",
+      "text": "반응 엔탈피가 0보다 작다는 것은 생성물 쪽 엔탈피 합이 더 낮아 열이 주위로 빠져나갔다는 뜻이다.",
+      "form": {
+        "condition": "압력이 일정하게 유지될 때",
+        "type": "conditional",
+        "scope": "일정 압력에서 일어나는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "부호의 뜻을 반대로 읽은 문장은 정의와 정면으로 어긋나 반드시 거짓이다.",
+      "inverted_text": "반응 엔탈피가 0보다 작다는 것은 생성물 쪽 엔탈피 합이 더 높아 열을 주위에서 흡수했다는 뜻이다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rxnh-coefficient",
+      "text": "같은 반응이라도 화학 반응식의 계수를 두 배로 늘려 쓰면 함께 적는 반응 엔탈피도 두 배가 된다.",
+      "form": {
+        "condition": "물질의 상태와 반응 조건을 그대로 두고 계수만 바꿀 때",
+        "type": "direct",
+        "scope": "같은 반응을 계수만 달리 쓴 열화학 반응식",
+        "antecedent": {
+          "quantity": "화학 반응식의 계수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 엔탈피의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응 엔탈피는 반응한 물질의 양에 비례하므로, 계수를 늘렸는데 값이 줄어든다는 진술은 반드시 거짓이다.",
+      "inverted_text": "같은 반응이라도 화학 반응식의 계수를 두 배로 늘려 쓰면 함께 적는 반응 엔탈피는 절반이 된다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rxnh-reverse",
+      "text": "어떤 반응의 역반응은 반응 엔탈피의 크기가 같고 부호만 반대다.",
+      "form": {
+        "condition": "반응물과 생성물의 종류·상태가 그대로이고 진행 방향만 뒤바뀔 때",
+        "type": "conditional",
+        "scope": "같은 반응의 정반응과 역반응 한 쌍"
+      },
+      "invertible": true,
+      "invertible_reason": "정반응이 내놓은 만큼을 역반응이 되받아야 하므로 부호까지 같다는 진술은 반드시 거짓이다.",
+      "inverted_text": "어떤 반응의 역반응은 반응 엔탈피의 크기도 같고 부호도 같다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응 엔탈피는 반응물의 엔탈피 합에서 생성물의 엔탈피 합을 뺀 값이다",
+      "why_wrong": "빼는 순서가 반대다. 나중 상태인 생성물에서 처음 상태인 반응물을 빼야 변화량이 된다. 순서를 바꾸면 발열과 흡열의 부호가 통째로 뒤집힌다.",
+      "source": "llm",
+      "linked_relation": "rel-rxnh-sign"
+    },
+    {
+      "text": "반응 엔탈피가 (-)라는 것은 반응 후 물질이 가진 에너지가 0보다 작아졌다는 뜻이다",
+      "why_wrong": "부호는 에너지가 음수가 되었다는 뜻이 아니라 엔탈피가 줄어드는 방향으로 변했다는 뜻이다. 줄어든 만큼이 열로 빠져나간다.",
+      "source": "llm",
+      "linked_relation": "rel-rxnh-sign"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-enthalpy"
+    },
+    {
+      "type": "next",
+      "target": "mate-exothermic-reaction",
+      "note": "부호 (-)의 뜻을 여기서 가져간다"
+    },
+    {
+      "type": "next",
+      "target": "mate-endothermic-reaction",
+      "note": "부호 (+)의 뜻을 여기서 가져간다"
+    },
+    {
+      "type": "next",
+      "target": "mate-thermochemical-equation",
+      "note": "반응식에 함께 적는 값이 이것이다"
+    },
+    {
+      "type": "next",
+      "target": "mate-bond-energy",
+      "note": "결합 에너지로 이 값을 구하는 길이 있다"
+    },
+    {
+      "type": "next",
+      "target": "mate-calorimeter",
+      "note": "무엇을 재는 장치인지 알려면 이 개념이 먼저다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    75,
+    77,
+    88
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

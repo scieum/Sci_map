@@ -1,0 +1,130 @@
+{
+  "id": "mate-closed-system",
+  "concept_key": "concept:closed-system",
+  "registry_status": "new",
+  "term": "닫힌계",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'닫힌'은 고유어 동사에서 온 말이라 한자가 없다. 뒤의 '계'만 系에 해당하므로 낱말 전체를 옮길 한자어가 없다.",
+    "english": "closed system"
+  },
+  "definition": "주위와 에너지는 주고받되 물질은 주고받지 않는 계. 뚜껑을 덮은 그릇에 담긴 물질이 여기에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-closed-lid",
+      "text": "뚜껑을 덮은 컵 속의 물은 물질은 빠져나가지 못하고 열만 오가므로 닫힌계다.",
+      "form": {
+        "condition": "그릇이 물질은 막고 열은 통과시킬 때",
+        "type": "classification",
+        "scope": "단열되지 않은 그릇에 담겨 뚜껑만 덮인 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "물질·열의 통과 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 갈래에 넣은 분류 명제라 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-closed-temp-change",
+      "text": "닫힌계 안에서 발열 반응이 일어나면 주위의 온도가 높아진다.",
+      "form": {
+        "condition": "계가 주위와 에너지를 주고받을 수 있을 때",
+        "type": "causal",
+        "scope": "에너지는 교환하되 물질은 교환하지 않는 계에 한정한다.",
+        "antecedent": {
+          "quantity": "계에서 주위로 나가는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주위의 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주위로 나간 에너지가 주위를 데우므로 온도가 내려간다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "닫힌계 안에서 발열 반응이 일어나면 주위의 온도가 낮아진다."
+    },
+    {
+      "id": "rel-closed-vs-open",
+      "text": "닫힌계와 열린계는 에너지를 주고받는 점에서는 같고 물질을 주고받는지에서만 갈린다.",
+      "form": {
+        "condition": "두 갈래의 계를 견줄 때",
+        "type": "classification",
+        "scope": "물질과 에너지의 교환 여부로 계를 가르는 기준에 한정한다.",
+        "antecedent": {
+          "quantity": "물질 교환 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "계의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 갈래가 어디서 갈리는지를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "닫힌계에서는 에너지도 물질도 오가지 않는다",
+      "why_wrong": "닫힌계에서 막히는 것은 물질뿐이고 에너지는 오간다. 둘 다 막힌 것은 고립계다.",
+      "linked_relation": "rel-closed-lid",
+      "source": "llm"
+    },
+    {
+      "text": "닫힌계에서 반응이 일어나도 주위의 온도는 변하지 않는다",
+      "why_wrong": "닫힌계는 주위와 에너지를 주고받는다. 발열 반응이면 주위가 더워지고 흡열 반응이면 주위가 식는다.",
+      "linked_relation": "rel-closed-temp-change",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-surroundings"
+    },
+    {
+      "type": "related",
+      "target": "mate-isolated-system",
+      "note": "에너지까지 막히면 고립계가 된다"
+    },
+    {
+      "type": "related",
+      "target": "mate-open-system"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    92,
+    93,
+    96
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

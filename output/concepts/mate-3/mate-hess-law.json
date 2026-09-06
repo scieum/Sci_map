@@ -1,0 +1,117 @@
+{
+  "id": "mate-hess-law",
+  "concept_key": "concept:hess-law",
+  "registry_status": "new",
+  "term": "헤스 법칙",
+  "aliases": [
+    "총열량 불변의 법칙"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 Hess 의 음차 표기가 앞에 오므로 낱말 전체에 대응하는 한자어가 없다. 뒤의 '법칙'만 法則에 해당한다.",
+    "english": "Hess's law",
+    "symbol_display": "ΔH = ΔH₁ + ΔH₂",
+    "symbol_plain": "deltaH = deltaH1 + deltaH2"
+  },
+  "definition": "처음의 반응물과 끝의 생성물이 종류·상태까지 같기만 하면, 중간에 어느 경로를 거치든 엔탈피 변화의 합은 달라지지 않는다는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hess-path",
+      "text": "여러 단계로 나누어 일어난 반응의 반응 엔탈피를 모두 더하면 한 번에 일어난 반응의 반응 엔탈피와 같다.",
+      "form": {
+        "condition": "각 단계를 합쳤을 때 전체 반응의 반응물·생성물과 종류·상태가 맞아떨어질 때",
+        "type": "conditional",
+        "scope": "처음과 끝이 같은 여러 반응 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "경로를 나눌수록 합이 달라진다는 진술은 법칙의 내용과 정면으로 어긋나 반드시 거짓이다.",
+      "inverted_text": "여러 단계로 나누어 일어난 반응의 반응 엔탈피를 모두 더하면 한 번에 일어난 반응의 반응 엔탈피보다 커진다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hess-manipulate",
+      "text": "반응식의 방향을 뒤집으면 반응 엔탈피의 부호가 바뀌고, 반응식에 어떤 수를 곱하면 반응 엔탈피도 같은 배수가 된다.",
+      "form": {
+        "condition": "목표 반응을 만들려고 열화학 반응식을 조합할 때",
+        "type": "conditional",
+        "scope": "상태 표기가 갖추어진 열화학 반응식의 변형"
+      },
+      "invertible": true,
+      "invertible_reason": "역반응이 부호를 그대로 갖는다면 두 반응을 합쳤을 때 열이 생겨나 버리므로 반드시 거짓이다.",
+      "inverted_text": "반응식의 방향을 뒤집어도 반응 엔탈피의 부호는 그대로다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hess-unmeasurable",
+      "text": "직접 재기 어려운 반응이라도 반응 엔탈피를 아는 반응들을 조합하면 그 값을 구할 수 있다.",
+      "form": {
+        "condition": "조합에 쓰는 반응들의 반응 엔탈피를 이미 알고 있을 때",
+        "type": "conditional",
+        "scope": "직접 측정이 어려운 화학 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "구할 수 있다는 진술에는 뒤집을 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응 경로가 길어 단계를 여러 번 거칠수록 전체 엔탈피 변화도 커진다",
+      "why_wrong": "처음과 끝이 같으면 거쳐 간 단계 수와 상관없이 엔탈피 변화의 합은 같다. 등산로가 달라도 정상의 높이가 같은 것과 마찬가지다.",
+      "source": "llm",
+      "linked_relation": "rel-hess-path"
+    },
+    {
+      "text": "헤스 법칙에 따르면 반응 엔탈피뿐 아니라 반응 속도도 경로와 상관없이 같다",
+      "why_wrong": "헤스 법칙이 말하는 것은 엔탈피 변화의 합뿐이다. 반응 속도는 거쳐 가는 경로에 따라 얼마든지 달라진다.",
+      "source": "llm",
+      "linked_relation": "rel-hess-path"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-thermochemical-equation"
+    },
+    {
+      "type": "next",
+      "target": "mate-standard-enthalpy-of-formation",
+      "note": "생성 엔탈피로 반응 엔탈피를 구하는 근거가 된다"
+    },
+    {
+      "type": "related",
+      "target": "mate-calorimeter",
+      "note": "경로를 달리한 두 실험으로 확인한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-enthalpy"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-02",
+  "pages": [
+    84,
+    85,
+    88
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

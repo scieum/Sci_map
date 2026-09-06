@@ -1,0 +1,134 @@
+{
+  "id": "mate-standard-enthalpy-of-formation",
+  "concept_key": "concept:standard-enthalpy-of-formation",
+  "registry_status": "new",
+  "term": "표준 생성 엔탈피",
+  "aliases": [
+    "생성 엔탈피"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'표준 생성'은 標準生成에 해당하지만 '엔탈피'가 영어 enthalpy 의 음차어여서 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "standard enthalpy of formation",
+    "symbol_display": "ΔH°_f (kJ/mol)",
+    "symbol_plain": "deltaH0_f (kJ/mol)"
+  },
+  "definition": "가장 안정한 성분 원소 물질로부터 어떤 물질 1 mol 이 만들어지는 반응의 반응 엔탈피. 25 ℃, 1 atm 인 표준 상태를 기준으로 삼는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hf-element-zero",
+      "text": "표준 상태에서 가장 안정한 형태로 있는 원소 물질은 표준 생성 엔탈피를 0으로 정한다.",
+      "form": {
+        "condition": "25 ℃, 1 atm 의 표준 상태에서",
+        "type": "conditional",
+        "scope": "가장 안정한 형태의 홑원소 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "0이 아니라고 뒤집은 문장은 방향의 역전이 아니라 약속의 부정이라 OX 로 삼기 어렵다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hf-sum-rule",
+      "text": "반응 엔탈피는 생성물의 생성 엔탈피 합에서 반응물의 생성 엔탈피 합을 뺀 값과 같다.",
+      "form": {
+        "condition": "관련된 모든 물질의 표준 생성 엔탈피를 알고 표준 상태일 때",
+        "type": "conditional",
+        "scope": "표준 상태에서 일어나는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "빼는 순서를 바꾸면 부호가 통째로 뒤집혀 발열과 흡열이 뒤바뀌므로 반드시 거짓이다.",
+      "inverted_text": "반응 엔탈피는 반응물의 생성 엔탈피 합에서 생성물의 생성 엔탈피 합을 뺀 값과 같다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hf-reverse-sign",
+      "text": "어떤 물질이 성분 원소로 분해되는 반응의 반응 엔탈피는 그 물질의 생성 엔탈피와 크기가 같고 부호가 반대다.",
+      "form": {
+        "condition": "생성 반응과 방향만 반대이고 물질의 종류·상태가 같을 때",
+        "type": "conditional",
+        "scope": "생성 반응과 그 역반응 한 쌍"
+      },
+      "invertible": true,
+      "invertible_reason": "역반응인데 부호까지 같다면 두 반응을 합쳤을 때 열이 저절로 생기므로 반드시 거짓이다.",
+      "inverted_text": "어떤 물질이 성분 원소로 분해되는 반응의 반응 엔탈피는 그 물질의 생성 엔탈피와 크기도 같고 부호도 같다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hf-negative-stable",
+      "text": "표준 생성 엔탈피가 0보다 작은 물질은 자신을 이루는 원소 물질보다 엔탈피가 낮다.",
+      "form": {
+        "condition": "표준 상태에서 화합물과 성분 원소 물질을 견줄 때",
+        "type": "conditional",
+        "scope": "표준 생성 엔탈피가 정의된 화합물"
+      },
+      "invertible": true,
+      "invertible_reason": "생성 반응에서 엔탈피가 줄었다는 뜻이므로 더 높다는 진술은 반드시 거짓이다.",
+      "inverted_text": "표준 생성 엔탈피가 0보다 작은 물질은 자신을 이루는 원소 물질보다 엔탈피가 높다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원소 물질이기만 하면 표준 생성 엔탈피는 모두 0이다",
+      "why_wrong": "동소체가 있는 원소에서는 가장 안정한 것 하나만 0이다. 탄소는 흑연이 0이고 다이아몬드는 0보다 큰 값을 갖는다.",
+      "source": "llm",
+      "linked_relation": "rel-hf-element-zero"
+    },
+    {
+      "text": "반응 엔탈피는 반응물의 생성 엔탈피 합에서 생성물의 생성 엔탈피 합을 뺀 값이다",
+      "why_wrong": "빼는 순서가 반대다. 나중 상태인 생성물에서 처음 상태인 반응물을 빼야 하며, 순서를 바꾸면 부호가 뒤집힌다.",
+      "source": "llm",
+      "linked_relation": "rel-hf-sum-rule"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-hess-law"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-allotrope",
+      "note": "흑연과 다이아몬드의 예외를 읽으려면 먼저 알아야 한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-enthalpy-of-combustion",
+      "note": "연소 반응의 반응 엔탈피를 이 값으로 구한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-bond-energy",
+      "note": "반응 엔탈피를 자료로 구하는 또 다른 길이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-02",
+  "pages": [
+    86,
+    87,
+    88
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

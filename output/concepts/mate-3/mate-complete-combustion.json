@@ -1,0 +1,114 @@
+{
+  "id": "mate-complete-combustion",
+  "concept_key": "concept:complete-combustion",
+  "registry_status": "new",
+  "term": "완전 연소",
+  "notation": {
+    "hanja": "完全燃燒",
+    "hanja_gloss": "完 완전할 완 · 全 온전할 전 · 燃 탈 연 · 燒 불사를 소",
+    "english": "complete combustion"
+  },
+  "definition": "그 온도와 압력에서 가장 안정한 산화물이 될 때까지 산화가 끝난 연소. 탄소와 수소로 된 물질이라면 이산화 탄소와 물만 남는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cc-products",
+      "text": "탄소와 수소로만 이루어진 물질이 완전 연소하면 이산화 탄소와 물이 생성된다.",
+      "form": {
+        "condition": "산소가 넉넉하게 공급될 때",
+        "type": "conditional",
+        "scope": "탄화수소의 완전 연소"
+      },
+      "invertible": false,
+      "invertible_reason": "이산화 탄소와 물이 나왔다고 해서 반드시 완전 연소라 단정할 수 없어 뒤집은 문장이 항상 거짓은 아니다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-oxygen-short",
+      "text": "산소가 모자라면 일산화 탄소나 그을음이 함께 생기는 불완전 연소가 일어난다.",
+      "form": {
+        "condition": "연료에 견주어 공급되는 산소의 양이 부족할 때",
+        "type": "causal",
+        "scope": "탄소를 포함한 연료의 연소",
+        "antecedent": {
+          "quantity": "공급되는 산소의 양",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "일산화 탄소·그을음의 생성량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소가 모자랄수록 산화가 덜 끝나 일산화 탄소가 늘어나므로 뒤집은 진술은 반드시 거짓이다.",
+      "inverted_text": "산소가 모자랄수록 일산화 탄소나 그을음은 오히려 덜 생긴다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-more-heat",
+      "text": "같은 양의 연료라면 완전 연소할 때가 불완전 연소할 때보다 방출하는 열이 많다.",
+      "form": {
+        "condition": "태우는 연료의 양이 같을 때",
+        "type": "conditional",
+        "scope": "탄소를 포함한 연료의 연소"
+      },
+      "invertible": true,
+      "invertible_reason": "불완전 연소는 산화가 끝나지 않아 남은 에너지를 생성물이 그대로 지니므로 뒤집은 진술은 반드시 거짓이다.",
+      "inverted_text": "같은 양의 연료라면 불완전 연소할 때가 완전 연소할 때보다 방출하는 열이 많다.",
+      "curriculum": [
+        "12물에03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연료만 충분히 넣으면 산소가 부족해도 완전 연소가 일어난다",
+      "why_wrong": "완전 연소를 가르는 것은 연료의 양이 아니라 산소가 넉넉한가이다. 산소가 모자라면 일산화 탄소나 그을음이 남는 불완전 연소가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-oxygen-short"
+    },
+    {
+      "text": "완전 연소와 불완전 연소는 생성물만 다를 뿐 내놓는 열은 같다",
+      "why_wrong": "불완전 연소의 생성물인 일산화 탄소는 아직 더 탈 수 있는 물질이다. 그만큼의 에너지가 남아 있어 방출되는 열이 더 적다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-more-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-combustion"
+    },
+    {
+      "type": "next",
+      "target": "mate-enthalpy-of-combustion",
+      "note": "완전 연소를 전제로 정의되는 값이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-fuel-efficiency",
+      "note": "효율 비교는 완전 연소를 기준으로 한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-1-01",
+  "pages": [
+    79
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

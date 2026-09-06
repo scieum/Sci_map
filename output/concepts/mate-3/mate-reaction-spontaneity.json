@@ -1,0 +1,161 @@
+{
+  "id": "mate-reaction-spontaneity",
+  "concept_key": "concept:reaction-spontaneity",
+  "registry_status": "new",
+  "term": "반응의 자발성",
+  "aliases": [
+    "자발성"
+  ],
+  "notation": {
+    "hanja": "反應自發性",
+    "hanja_note": "조사 '의'를 뺀 反應自發性에 대응한다.",
+    "hanja_gloss": "反 돌이킬 반 · 應 응할 응 · 自 스스로 자 · 發 필 발 · 性 성품 성",
+    "english": "spontaneity of reaction"
+  },
+  "definition": "바깥에서 계속 손대지 않아도 반응이 스스로 진행하는 성질. 계와 주위를 합친 전체 엔트로피가 커지는 반응이 이 성질을 가진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spon-both-favorable",
+      "text": "발열이면서 계의 엔트로피도 커지는 반응은 전체 엔트로피가 반드시 늘어 자발적이다.",
+      "form": {
+        "condition": "반응 엔탈피가 음이고 계의 엔트로피 변화가 양일 때",
+        "type": "conditional",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 보통의 반응 조건에 한정한다.",
+        "antecedent": {
+          "quantity": "계와 주위의 엔트로피",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응의 자발성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주위 쪽과 계 쪽이 모두 늘어 합이 양일 수밖에 없으므로 비자발적이라고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발열이면서 계의 엔트로피도 커지는 반응은 자발적으로 일어나지 않는다."
+    },
+    {
+      "id": "rel-spon-both-unfavorable",
+      "text": "흡열이면서 계의 엔트로피도 작아지는 반응은 전체 엔트로피가 줄어 자발적으로 일어나지 않는다.",
+      "form": {
+        "condition": "반응 엔탈피가 양이고 계의 엔트로피 변화가 음일 때",
+        "type": "conditional",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 보통의 반응 조건에 한정한다.",
+        "antecedent": {
+          "quantity": "계와 주위의 엔트로피",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "반응의 자발성",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주위 쪽과 계 쪽이 모두 줄어 합이 음일 수밖에 없으므로 자발적이라고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흡열이면서 계의 엔트로피도 작아지는 반응은 자발적으로 일어난다."
+    },
+    {
+      "id": "rel-spon-mixed-sign",
+      "text": "두 변화의 부호가 반대인 반응은 늘어나는 쪽이 줄어드는 쪽보다 클 때에만 자발적이다.",
+      "form": {
+        "condition": "반응 엔탈피와 계의 엔트로피 변화가 서로 반대 방향으로 작용할 때",
+        "type": "conditional",
+        "scope": "계 쪽 변화와 주위 쪽 변화의 부호가 서로 반대인 경우에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "크기 비교라는 단서를 단 명제라 앞뒤를 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spon-not-speed",
+      "text": "자발적이라는 말은 저절로 진행한다는 뜻일 뿐 빠르게 일어난다는 뜻이 아니다.",
+      "form": {
+        "condition": "자발성과 반응 속도를 갈라 볼 때",
+        "type": "classification",
+        "scope": "자발성 판정에 한정한다. 얼마나 빨리 일어나는지는 다른 기준으로 다룬다.",
+        "antecedent": {
+          "quantity": "자발성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 개념의 구별을 밝힌 명제라 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자발적인 반응은 빠르게 일어나는 반응이다",
+      "why_wrong": "자발성은 반응이 어느 쪽으로 진행하는지만 알려 준다. 저절로 일어나지만 아주 느린 반응도 있다.",
+      "linked_relation": "rel-spon-not-speed",
+      "source": "llm"
+    },
+    {
+      "text": "발열 반응은 모두 자발적이다",
+      "why_wrong": "발열이어도 계의 엔트로피가 크게 줄면 전체 엔트로피가 감소해 자발적이지 않을 수 있다.",
+      "linked_relation": "rel-spon-mixed-sign",
+      "source": "llm"
+    },
+    {
+      "text": "불을 붙여야 시작되는 연소는 저절로 일어나는 반응이 아니다",
+      "why_wrong": "시작에 필요한 자극이 있는지와 자발성은 다른 문제다. 한번 시작되면 스스로 이어지는 연소는 자발적인 반응이다.",
+      "linked_relation": "rel-spon-both-favorable",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-total-entropy-change"
+    },
+    {
+      "type": "related",
+      "target": "mate-entropy-change",
+      "note": "계 쪽 부호를 여기서 가져온다"
+    },
+    {
+      "type": "related",
+      "target": "mate-entropy-change-of-surroundings",
+      "note": "주위 쪽 부호를 여기서 가져온다"
+    },
+    {
+      "type": "related",
+      "target": "mate-gas-diffusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    94,
+    95,
+    96
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

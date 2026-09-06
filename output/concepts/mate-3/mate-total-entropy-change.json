@@ -1,0 +1,124 @@
+{
+  "id": "mate-total-entropy-change",
+  "concept_key": "concept:total-entropy-change",
+  "registry_status": "new",
+  "term": "전체 엔트로피 변화",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'전체'는 全體, '변화'는 變化에 해당하지만 '엔트로피'가 영어 entropy 의 음차어라 낱말 전체를 옮길 한자어가 없다.",
+    "english": "total entropy change",
+    "symbol_display": "ΔS_전체",
+    "symbol_plain": "delta S_total"
+  },
+  "definition": "계에서 생긴 엔트로피 변화와 주위에서 생긴 엔트로피 변화를 부호까지 살려 더한 값. 반응이 저절로 일어나는지를 가르는 기준이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-total-criterion",
+      "text": "화학 반응은 전체 엔트로피가 커지는 쪽으로 저절로 진행한다.",
+      "form": {
+        "condition": "계와 주위를 합쳐서 볼 때",
+        "type": "causal",
+        "scope": "온도와 압력이 크게 바뀌지 않는 보통의 화학 반응에 한정한다.",
+        "antecedent": {
+          "quantity": "반응의 자발적 진행",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전체 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자발적 진행의 방향이 전체 엔트로피가 커지는 쪽으로 정해져 있으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화학 반응은 전체 엔트로피가 작아지는 쪽으로 저절로 진행한다."
+    },
+    {
+      "id": "rel-total-offset",
+      "text": "계의 엔트로피가 줄어도 주위의 엔트로피가 그보다 크게 늘면 전체 엔트로피는 증가한다.",
+      "form": {
+        "condition": "계 쪽과 주위 쪽의 부호가 서로 반대일 때",
+        "type": "conditional",
+        "scope": "계와 주위가 에너지를 주고받을 수 있는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "주위의 엔트로피 증가량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전체 엔트로피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 값을 부호까지 살려 더하므로 주위 쪽이 더 크게 늘면 합은 반드시 양이 되어, 감소한다고 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "계의 엔트로피가 줄면 주위의 엔트로피가 아무리 크게 늘어도 전체 엔트로피는 감소한다."
+    },
+    {
+      "id": "rel-total-magnitude",
+      "text": "계와 주위의 엔트로피 변화가 반대 부호일 때는 두 값의 크기가 전체의 부호를 가른다.",
+      "form": {
+        "condition": "두 변화의 부호가 서로 반대일 때",
+        "type": "conditional",
+        "scope": "계와 주위의 엔트로피 변화를 둘 다 아는 경우에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "크기 비교가 부호를 정한다는 절차를 밝힌 명제라 맞바꿀 양의 방향이 없다.",
+      "curriculum": [
+        "12물에03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "계의 엔트로피가 줄어드는 반응은 저절로 일어날 수 없다",
+      "why_wrong": "판단의 기준은 계가 아니라 계와 주위를 합친 전체다. 발열 반응에서는 주위 쪽이 크게 늘어 전체가 증가할 수 있다.",
+      "linked_relation": "rel-total-offset",
+      "source": "llm"
+    },
+    {
+      "text": "전체 엔트로피 변화는 계와 주위의 엔트로피 변화 가운데 큰 쪽의 값이다",
+      "why_wrong": "큰 쪽을 고르는 것이 아니라 두 값을 부호까지 살려 더한 값이다. 부호가 반대면 서로 상쇄된다.",
+      "linked_relation": "rel-total-magnitude",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-entropy-change"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-entropy-change-of-surroundings"
+    },
+    {
+      "type": "next",
+      "target": "mate-reaction-spontaneity",
+      "note": "자발성 판정의 기준이 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에03-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅲ. 화학 변화의 자발성",
+  "unit_id": "mate-3",
+  "topic_id": "mate-3-2-02",
+  "pages": [
+    95,
+    96
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}
