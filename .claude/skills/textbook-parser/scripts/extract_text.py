@@ -20,7 +20,7 @@ from pathlib import Path
 import pdfplumber
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _common import ROOT, clean, escalate, find_unit, load_backlog, log_event  # noqa: E402
+from _common import ROOT, clean, escalate, find_unit, find_subject, load_backlog, log_event  # noqa: E402
 
 # ── 레이아웃 분석 설정 ───────────────────────────────────────────────────────
 # 이 교과서는 본문 단과 곁주 단이 나란히 놓인 2단 판형이다. 글자 좌표만 보고 위에서
@@ -195,7 +195,8 @@ def extract_figures(page) -> list[dict]:
 def run(unit_id: str) -> dict:
     backlog = load_backlog()
     unit = find_unit(backlog, unit_id)
-    pdf_path = ROOT / backlog["subject"]["textbook"]["file"]
+    subject = find_subject(backlog, unit_id)
+    pdf_path = ROOT / subject["textbook"]["file"]
     out_dir = ROOT / "output" / "source" / unit_id
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -226,7 +227,7 @@ def run(unit_id: str) -> dict:
                 figures[str(pno)] = page_figs
 
     meta = {"unit_id": unit_id, "title": unit["title"], "pages": [first, last],
-            "source_pdf": backlog["subject"]["textbook"]["file"],
+            "source_pdf": subject["textbook"]["file"],
             "laparams": LAPARAMS}
     (out_dir / "layout.json").write_text(
         json.dumps({**meta, "pages_layout": layout}, ensure_ascii=False, indent=1),

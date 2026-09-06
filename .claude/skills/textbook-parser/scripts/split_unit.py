@@ -22,7 +22,7 @@ from pathlib import Path
 import pdfplumber
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _common import ROOT, clean, escalate, find_unit, load_backlog, log_event  # noqa: E402
+from _common import ROOT, clean, escalate, find_unit, find_subject, load_backlog, log_event  # noqa: E402
 
 # 쪽 번호는 판면 아래쪽에 세 자리로 찍힌다 (예: 012). 하단 12% 영역에서만 찾는다.
 FOLIO_BAND = 0.88
@@ -119,7 +119,7 @@ def main() -> int:
 
     backlog = load_backlog()
     unit = find_unit(backlog, args.unit_id)
-    pdf_path = ROOT / backlog["subject"]["textbook"]["file"]
+    pdf_path = ROOT / find_subject(backlog, args.unit_id)["textbook"]["file"]
     result = check_unit(unit, pdf_path)
 
     if args.json:

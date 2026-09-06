@@ -20,25 +20,26 @@ export const BRAND = {
  * 클래스 문자열을 통째로 적는 이유: Tailwind 는 소스를 훑어 클래스를 만든다.
  * `bg-${x}-500` 처럼 조립하면 그 클래스가 빌드에서 사라진다.
  */
-export const SUBJECT_ACCENT: Record<string, string> = {
-  "물질과 에너지": "bg-primary-500 shadow-chip",
-  통합과학1: "bg-azure-500 shadow-[0_4px_12px_rgba(33,104,214,0.28)]",
-  통합과학2: "bg-violet-500 shadow-[0_4px_12px_rgba(107,75,214,0.28)]",
-  화학: "bg-rose-500 shadow-[0_4px_12px_rgba(194,58,114,0.28)]",
+const PILL: Record<string, string> = {
+  indigo: "bg-primary-500 shadow-chip",
+  azure: "bg-azure-500 shadow-[0_4px_12px_rgba(33,104,214,0.28)]",
+  violet: "bg-violet-500 shadow-[0_4px_12px_rgba(107,75,214,0.28)]",
+  rose: "bg-rose-500 shadow-[0_4px_12px_rgba(194,58,114,0.28)]",
 };
 
-/** 사전에 없는 과목은 브랜드색으로 떨어뜨린다 — 색이 없는 것보다 낫다 */
+/** 활성 과목 알약 칩 — 과목 색의 채움판. 사전에 없는 과목은 브랜드색 */
 export const subjectAccent = (subject: string): string =>
-  SUBJECT_ACCENT[subject] ?? "bg-primary-500 shadow-chip";
+  PILL[SUBJECT_HUE[subject] ?? "indigo"];
 
 /**
- * 단원 색 — 대단원마다 보조 팔레트에서 하나씩 (Design.md §2.4).
+ * 과목 색 — 과목마다 보조 팔레트에서 하나씩 (Design.md §2.4).
  *
- * 참고 이미지의 범주 타일이 그랬듯, 같은 과목 안에서도 "지금 몇 단원에 있나"를
- * 색이 먼저 말해 준다. 쓰는 자리는 셋으로 못 박는다 — 대단원 카드의 머리띠(tint),
- * 그 번호(text), 그 아래 중단원 진도 배지(tint+text). 카드 본문은 흰색 그대로다.
+ * **같은 과목 안에서는 한 색이다.** 대단원마다 색을 바꾸면 "지금 어느 과목인가"
+ * 라는 큰 신호가 "몇 단원인가" 라는 작은 신호에 묻힌다 (교사 결정 2026-09-07).
+ * 쓰는 자리: 활성 과목 칩(solid), 대단원 카드 머리띠(tint)·번호(text)·중단원
+ * 진도 배지(tint+text). 카드 본문은 흰색 그대로다.
  *
- * 단원 id 가 없으면(시드) 브랜드색으로 떨어진다. 없는 단원에 색을 지어내지 않는다.
+ * 사전에 없는 과목은 브랜드색으로 떨어진다. 없는 과목에 색을 지어내지 않는다.
  */
 export type Accent = { tint: string; text: string; solid: string };
 const ACCENT: Record<string, Accent> = {
@@ -47,14 +48,15 @@ const ACCENT: Record<string, Accent> = {
   violet: { tint: "bg-violet-50", text: "text-violet-700", solid: "bg-violet-500" },
   rose: { tint: "bg-rose-50", text: "text-rose-700", solid: "bg-rose-500" },
 };
-const UNIT_ACCENT: Record<string, keyof typeof ACCENT> = {
-  "mate-1": "indigo",
-  "mate-2": "azure",
-  "mate-3": "violet",
-  "mate-4": "rose",
+/** 과목 이름 → 색 이름. 카드는 과목을 이름으로 갖는다 */
+const SUBJECT_HUE: Record<string, keyof typeof ACCENT> = {
+  "물질과 에너지": "indigo",
+  "화학 반응의 세계": "violet",
+  통합과학1: "azure",
+  통합과학2: "rose",
 };
-export const unitAccent = (unitId?: string): Accent =>
-  ACCENT[UNIT_ACCENT[unitId ?? ""] ?? "indigo"];
+export const accentOfSubject = (subject: string): Accent =>
+  ACCENT[SUBJECT_HUE[subject] ?? "indigo"];
 
 /** 홈 "오늘의 구성" 타일 — 참고 이미지의 파스텔 카드 + 작은 색 태그 */
 export const TILE = {

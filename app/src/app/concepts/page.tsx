@@ -6,7 +6,7 @@ import { buildTree, byTopic, majorNo, minorNo, topicNo } from "@/data/concepts";
 import type { Concept } from "@/lib/types";
 import { LevelDots, Screen, ScreenTitle } from "@/components/ui";
 import { useProgress } from "@/lib/store";
-import { subjectAccent, unitAccent } from "@/lib/brand";
+import { accentOfSubject, subjectAccent } from "@/lib/brand";
 
 /** 개념 탭 — 과목 알약 칩 → 대단원 카드 → 중단원 접기 → 소주제 → 개념 행 */
 export default function ConceptsPage() {
@@ -41,13 +41,14 @@ export default function ConceptsPage() {
       </div>
 
       {Array.from(majors.entries()).map(([major, minors]) => {
-        const accent = unitAccent(firstOf(minors).unitId);
+        // 과목 색 — 같은 과목의 대단원은 전부 같은 색이다
+        const accent = accentOfSubject(subject);
         return (
         <section
           key={major}
           className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
         >
-          {/* 단원 색 머리띠 — 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
+          {/* 과목 색 머리띠 — 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
           <h2 className={`px-5 pb-3 pt-4 text-[16px] font-bold ${accent.tint}`}>
             <No value={majorNo(firstOf(minors))} cls={accent.text} />
             {major}

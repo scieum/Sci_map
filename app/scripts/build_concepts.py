@@ -36,8 +36,11 @@ def unit_titles(unit_id: str):
     import yaml
     with (REPO / "docs" / "unit_backlog.yaml").open(encoding="utf-8") as fh:
         backlog = yaml.safe_load(fh)
-    subject = backlog["subject"]["name"]
-    unit = next((u for u in backlog["units"] if u["id"] == unit_id), None)
+    subject, unit = None, None
+    for subj in _subjects(backlog):
+        for u in subj.get("units", []):
+            if u["id"] == unit_id:
+                subject, unit = subj["name"], u
     if not unit:
         raise SystemExit(f"백로그에 {unit_id} 이 없다")
     topic_of, section_of = {}, {}
@@ -46,6 +49,13 @@ def unit_titles(unit_id: str):
             topic_of[t["id"]] = t["title"]
             section_of[t["id"]] = sec["title"]
     return subject, unit["title"], section_of, topic_of
+
+
+def _subjects(backlog: dict) -> list[dict]:
+    """과목 리스트. 옛 단일 과목 형태(subject/units)도 같은 꼴로."""
+    if "subjects" in backlog:
+        return backlog["subjects"]
+    return [{**backlog["subject"], "units": backlog.get("units", [])}]
 
 
 def load_media(unit_id: str) -> dict[str, list[dict]]:
@@ -161,20 +171,22 @@ def write_catalog(unit_ids: list[str]) -> None:
     import yaml
     with (REPO / "docs" / "unit_backlog.yaml").open(encoding="utf-8") as fh:
         b = yaml.safe_load(fh)
-    subj = b["subject"]
-    units = [
-        {"id": u["id"], "title": u["title"], "semester": u.get("semester"),
-         "status": u.get("status"), "cards": u["id"] in unit_ids}
-        for u in b["units"]
-    ]
-    catalog = {"subjects": [{
-        "code": subj["code"], "name": subj["name"], "courseType": subj.get("course_type"),
-        "grade": subj.get("grade"), "units": units,
-    }]}
+    catalog = {"subjects": []}
+    for subj in _subjects(b):
+        units = [
+            {"id": u["id"], "title": u["title"], "semester": u.get("semester"),
+             "status": u.get("status"), "cards": u["id"] in unit_ids}
+            for u in subj.get("units", [])
+        ]
+        catalog["subjects"].append({
+            "code": subj["code"], "name": subj["name"], "courseType": subj.get("course_type"),
+            "grade": subj.get("grade"), "units": units,
+        })
     out = REPO / "app" / "src" / "data" / "catalog.generated.json"
     out.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8", newline="\n")
-    print(f"=> {out.relative_to(REPO)} · 과목 {len(catalog['subjects'])} · 단원 {len(units)}")
+    print(f"=> {out.relative_to(REPO)} · 과목 {len(catalog['subjects'])} · 단원 "
+          f"{sum(len(s['units']) for s in catalog['subjects'])}")
 
 
 def main() -> int:

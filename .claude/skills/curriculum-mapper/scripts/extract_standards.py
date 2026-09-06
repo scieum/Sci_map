@@ -33,8 +33,8 @@ CROSSCHECK_PAGES = (146, 234)
 
 LAPARAMS = {"line_margin": 1.0, "char_margin": 1.2, "word_margin": 0.1, "boxes_flow": 0.5}
 
-# 코드 안에 조판용 공백이 끼어 있다: '[12물 에01 - 01]'
-CODE_RE = re.compile(r"\[\s*12\s*(물\s*에|화\s*학)\s*(\d{2})\s*-\s*(\d{2})\s*\]")
+# 코드 안에 조판용 공백이 끼어 있다: '[12물 에01 - 01]', '[ 12반응01-05]'
+CODE_RE = re.compile(r"\[\s*12\s*(물\s*에|화\s*학|반\s*응)\s*(\d{2})\s*-\s*(\d{2})\s*\]")
 # 표의 행 이름 칸. 문장 사이에 끼어들므로 미리 걷어낸다.
 ROW_LABELS = {"핵심 아이디어", "성취기준", "탐구 활동", "내용 요소", "범주", "구분",
               "교육과정 성취기준", "교육과정성취기준"}
@@ -43,12 +43,16 @@ ROW_TOL = 5.0
 SENTENCE_END = "다."
 MIN_LEN, MAX_LEN = 20, 200
 
-AREA_NAMES = {
-    "01": "물질의 세 가지 상태",
-    "02": "용액의 성질",
-    "03": "화학 변화의 자발성",
-    "04": "반응 속도",
+# 과목별 영역 이름·기본 쪽 범위. 지도서 판형이 같은 천재교과서 시리즈라 총론 표의
+# 자리가 비슷하지만, 과목마다 다르므로 인자로 덮어쓸 수 있다.
+COURSES = {
+    "12물에": {"name": "물질과 에너지", "type": "진로선택", "primary": (16, 19), "cross": (146, 234),
+              "areas": {"01": "물질의 세 가지 상태", "02": "용액의 성질",
+                        "03": "화학 변화의 자발성", "04": "반응 속도"}},
+    "12반응": {"name": "화학 반응의 세계", "type": "진로선택", "primary": (17, 19), "cross": (146, 200),
+              "areas": {"01": "산 염기 평형", "02": "산화·환원 반응", "03": "탄소 화합물과 반응"}},
 }
+AREA_NAMES = COURSES["12물에"]["areas"]  # 하위 호환
 
 
 def page_stream(page) -> str:
@@ -93,21 +97,35 @@ def harvest(doc, first: int, last: int) -> dict[str, tuple[int, str]]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--guide", type=Path)
+    ap.add_argument("--course", default="12물에", choices=sorted(COURSES),
+                    help="성취기준 코드 접두어. 영역 이름·기본 쪽 범위가 여기서 정해진다")
+    ap.add_argument("--primary", type=int, nargs=2, metavar=("FIRST", "LAST"))
+    ap.add_argument("--cross", type=int, nargs=2, metavar=("FIRST", "LAST"))
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+    course = COURSES[args.course]
+    primary_pages = tuple(args.primary) if args.primary else course["primary"]
+    cross_pages = tuple(args.cross) if args.cross else course["cross"]
+    area_names = course["areas"]
 
     backlog = load_backlog()
-    guide = args.guide or (ROOT / backlog["subject"]["guide"]["file"])
+    subjects = backlog["subjects"] if "subjects" in backlog else [backlog["subject"]]
+    with_guide = [s for s in subjects if s.get("guide")]
+    if not args.guide and not with_guide:
+        raise SystemExit("지도서가 있는 과목이 백로그에 없다 — --guide 로 지정하라")
+    guide = args.guide or (ROOT / with_guide[0]["guide"]["file"])
 
     with pdfplumber.open(str(guide), laparams=LAPARAMS) as doc:
-        primary = harvest(doc, *PRIMARY_PAGES)
-        cross = harvest(doc, *CROSSCHECK_PAGES)
+        primary = harvest(doc, *primary_pages)
+        cross = harvest(doc, *cross_pages)
+    # 다른 과목 코드가 같은 쪽에 섞여 있어도(2015↔2022 비교표) 이 과목만 남긴다
+    primary = {c: v for c, v in primary.items() if c.startswith(args.course)}
+    cross = {c: v for c, v in cross.items() if c.startswith(args.course)}
 
     records, problems = [], []
     for code in sorted(primary):
         pno, text = primary[code]
-        area, seq = code[len("12물에"):].split("-") if code.startswith("12물에") \
-            else (code[-5:-3], code[-2:])
+        area, seq = code[len(args.course):].split("-")
 
         if not (MIN_LEN <= len(text) <= MAX_LEN and text.endswith(SENTENCE_END)):
             problems.append(f"{code}: 문장 형태가 이상하다 ({len(text)}자) — {text[:60]}")
@@ -124,7 +142,7 @@ def main() -> int:
                 problems.append(f"{code}: 총론·각론 판본 불일치 — 사람이 NCIC 원문으로 확정해야 한다")
 
         records.append({"code": code, "area": area, "seq": seq,
-                        "area_name": AREA_NAMES.get(area, ""), "text": text,
+                        "area_name": area_names.get(area, ""), "text": text,
                         "source_page": pno, "crosscheck": agreement, "note": note})
 
     if args.dry_run:
@@ -150,17 +168,25 @@ def main() -> int:
 """
     footer = """
 # ── 아직 수록하지 않은 과목 ──────────────────────────────────────────────────
-# 통합과학1·2, 화학의 성취기준은 이 지도서에 전문이 실려 있지 않다.
-# 총론 22~27쪽의 2015↔2022 비교표에 일부가 보이지만 5단 표라 기계로 읽으면
-# 문장이 뒤섞인다. 반쯤 맞는 문장을 넣느니 비워 둔다.
-# 3차(통합과학1)·5차(화학) 착수 시 NCIC 원문에서 받아 여기에 추가한다.
+# 통합과학1·2, 화학의 성취기준은 지도서 전문이 없다. 착수 시 그 지도서로
+# `extract_standards.py --course …` 를 돌려 여기에 병합한다.
 """
-    payload = {"courses": {"12물에": {
-        "name": "물질과 에너지",
-        "type": "진로선택",
-        "source": "지도서 총론 16~19쪽 (대조 - 각론 평가 자료 146~234쪽)",
+    # 병합 — 다른 과목의 항목은 그대로 두고 이 과목만 갈아끼운다.
+    # 파일 전체를 다시 쓰면 먼저 넣은 과목이 사라진다.
+    existing = {}
+    if OUT.exists():
+        try:
+            existing = (yaml.safe_load(OUT.read_text(encoding="utf-8")) or {}).get("courses", {}) or {}
+        except Exception:
+            existing = {}
+    existing[args.course] = {
+        "name": course["name"],
+        "type": course["type"],
+        "source": f"지도서 {guide.name} 총론 {primary_pages[0]}~{primary_pages[1]}쪽 "
+                  f"(대조 - 각론 {cross_pages[0]}~{cross_pages[1]}쪽)",
         "standards": [{k: v for k, v in r.items() if v is not None} for r in records],
-    }}}
+    }
+    payload = {"courses": dict(sorted(existing.items()))}
     body = yaml.safe_dump(payload, allow_unicode=True, sort_keys=False,
                           default_flow_style=False, width=1000)
     OUT.write_text(header + body + footer, encoding="utf-8")

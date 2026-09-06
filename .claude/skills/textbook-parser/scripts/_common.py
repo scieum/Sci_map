@@ -66,10 +66,27 @@ def load_backlog() -> dict:
         return yaml.safe_load(f)
 
 
+def subjects_of(backlog: dict) -> list:
+    """백로그의 과목 목록. 옛 단일 과목 형태(subject/units)도 같은 꼴로 돌려준다."""
+    if "subjects" in backlog:
+        return backlog["subjects"]
+    return [{**backlog["subject"], "units": backlog.get("units", []),
+             "appendix": backlog.get("appendix")}]
+
+
+def find_subject(backlog: dict, unit_id: str) -> dict:
+    """단원이 속한 과목 — 교과서 파일·과목 이름은 여기서 나온다."""
+    for subj in subjects_of(backlog):
+        if any(u["id"] == unit_id for u in subj.get("units", [])):
+            return subj
+    raise SystemExit(f"unit_backlog.yaml 에 '{unit_id}' 가 속한 과목이 없다")
+
+
 def find_unit(backlog: dict, unit_id: str) -> dict:
-    for unit in backlog["units"]:
-        if unit["id"] == unit_id:
-            return unit
+    for subj in subjects_of(backlog):
+        for unit in subj.get("units", []):
+            if unit["id"] == unit_id:
+                return unit
     raise SystemExit(f"unit_backlog.yaml 에 '{unit_id}' 가 없다")
 
 

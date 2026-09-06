@@ -260,7 +260,8 @@ def check_pages_in_unit(doc, cands, res: Result) -> None:
     if not backlog:
         res.warn("pages_in_unit", "unit_backlog.yaml 을 읽지 못했다 — 검사 건너뜀")
         return
-    unit = next((u for u in backlog.get("units", []) if u["id"] == doc["unit_id"]), None)
+    subjects = backlog.get("subjects") or [{"units": backlog.get("units", [])}]
+    unit = next((u for s in subjects for u in s.get("units", []) if u["id"] == doc["unit_id"]), None)
     if not unit:
         res.warn("pages_in_unit", "백로그에 " + str(doc["unit_id"]) + " 이 없다")
         return
