@@ -48,12 +48,21 @@ def unit_titles(unit_id: str):
     return subject, unit["title"], section_of, topic_of
 
 
-def load_media(unit_id: str) -> dict[str, dict]:
-    """권리 대장에서 concept_id → 그림 1건. 대장에 없는 자산은 배포 대상이 아니다."""
+def load_media(unit_id: str) -> dict[str, list[dict]]:
+    """권리 대장에서 concept_id → 그 카드의 자산 **전부**. 대장에 없으면 배포 대상이 아니다.
+
+    한 카드가 여러 장을 가질 수 있다 — 삽화 하나로 끝나지 않는 개념이 있다.
+    헤스 법칙은 반응 경로 그림과 엔탈피 다이어그램이 함께 있어야 읽히고,
+    열화학 반응식은 식 자체가 그림이라야 한다. 예전에는 dict 에 덮어써서
+    같은 카드의 두 번째 자산이 **조용히 사라졌다**.
+
+    같은 자산이 대장에 두 번 오르면(같은 asset_id) 뒤엣것만 남긴다 — 다시 크롭한
+    경우다. 순서는 대장 기록 순, 즉 계획에 적은 순서를 그대로 따른다.
+    """
     led = REPO / "output" / "rights" / "ledger.jsonl"
     if not led.exists():
         return {}
-    out = {}
+    out: dict[str, dict[str, dict]] = {}
     for line in led.open(encoding="utf-8"):
         r = json.loads(line)
         if r.get("unit_id") != unit_id:
@@ -61,8 +70,8 @@ def load_media(unit_id: str) -> dict[str, dict]:
         # 한 크롭을 여러 카드가 쓸 수 있다 (concept_ids). 대장은 한 행으로 둔다.
         for cid in (r.get("concept_ids") or ([r["concept_id"]] if r.get("concept_id") else [])):
             if cid:
-                out[cid] = r
-    return out
+                out.setdefault(cid, {})[r["asset_id"]] = r
+    return {cid: list(assets.values()) for cid, assets in out.items()}
 
 
 def to_app(card: dict, subject, major, section_of, topic_of, media) -> dict:
@@ -113,26 +122,35 @@ def to_app(card: dict, subject, major, section_of, topic_of, media) -> dict:
     if n.get("hanja_gloss"):
         out["hanjaGloss"] = n["hanja_gloss"]
 
-    m = media.get(card["id"])
-    if m:
-        out["hasRestrictedMedia"] = m["access_tier"] == "restricted"
-        # 번호가 붙은 교과서 삽화는 "그림 Ⅰ-9 …" 로, 번호가 없는 것(수식 크롭,
-        # 사이드 노트 박스)은 캡션만으로, 둘 다 없으면 표제어로 이름표를 만든다.
-        if m.get("figure_no"):
-            out["mediaCaption"] = f"{m['figure_no']} {m['caption']}"
-        else:
-            out["mediaCaption"] = m.get("caption") or card["term"]
-        # public/media 아래 상대 경로를 그대로 살린다.
-        # 파일명만 떼면 own/ 같은 하위 폴더가 사라져 404 가 난다.
-        rel = Path(m["file"]).as_posix()
-        marker = "public/media/"
-        out["mediaFile"] = rel[rel.index(marker) + len(marker):] if marker in rel else Path(rel).name
+    assets = media.get(card["id"]) or []
+    # 카드 단위 플래그는 "한 장이라도 restricted 인가" 다. 잠금은 자산 단위로
+    # 걸지만(§0.4), 화면이 섹션을 통째로 감출지 판단할 때 이 값을 본다.
+    out["hasRestrictedMedia"] = any(a["access_tier"] == "restricted" for a in assets)
+    out["media"] = [
+        {
+            "file": _rel_media(a["file"]),
+            # 번호가 붙은 교과서 삽화는 "그림 Ⅰ-9 …" 로, 번호가 없는 것(수식 크롭,
+            # 곁주 상자, 번호 없는 그래프)은 캡션만으로, 둘 다 없으면 표제어로.
+            "caption": (f"{a['figure_no']} {a['caption']}" if a.get("figure_no")
+                        else (a.get("caption") or card["term"])),
+            "restricted": a["access_tier"] == "restricted",
+            "kind": a.get("kind", "figure"),
+        }
+        for a in assets
+    ]
     return out
+
+
+def _rel_media(path: str) -> str:
+    """public/media 아래 상대 경로를 살린다. 파일명만 떼면 하위 폴더가 사라져 404 가 난다."""
+    rel = Path(path).as_posix()
+    marker = "public/media/"
+    return rel[rel.index(marker) + len(marker):] if marker in rel else Path(rel).name
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2"])
+    ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2", "mate-3"])
     args = ap.parse_args()
 
     cards: list[dict] = []
@@ -157,8 +175,10 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(cards, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8", newline="\n")
-    withfig = sum(1 for c in cards if c.get("mediaFile"))
-    print(f"=> {OUT.relative_to(REPO)} · 카드 {len(cards)}장 (그림 {withfig}장)")
+    withfig = sum(1 for c in cards if c.get("media"))
+    total = sum(len(c.get("media") or []) for c in cards)
+    print(f"=> {OUT.relative_to(REPO)} · 카드 {len(cards)}장 "
+          f"(그림 붙은 카드 {withfig}장 · 자산 {total}건)")
     return 0
 
 

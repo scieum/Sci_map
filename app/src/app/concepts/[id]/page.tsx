@@ -10,7 +10,7 @@ import {
   BottomCta,
   Card,
   Chip,
-  ConceptMedia,
+  ConceptMediaList,
   Screen,
   SectionLabel,
 } from "@/components/ui";
@@ -123,14 +123,10 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         ))}
       </div>
 
-      {(c.hasRestrictedMedia || c.mediaFile) && (
+      {(c.media?.length ?? 0) > 0 && (
         <>
           <SectionLabel>그림</SectionLabel>
-          <ConceptMedia
-            restricted={c.hasRestrictedMedia}
-            caption={c.mediaCaption}
-            file={c.mediaFile}
-          />
+          <ConceptMediaList assets={c.media!} />
         </>
       )}
 

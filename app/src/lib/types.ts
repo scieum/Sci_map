@@ -26,6 +26,16 @@ export interface ConceptLink {
   note?: string;
 }
 
+export interface ConceptAsset {
+  /** public/media/ 아래 상대 경로 */
+  file: string;
+  caption: string;
+  /** access_tier 가 restricted 인가. **판단이 아니라 규칙이다** (CLAUDE.md §6) */
+  restricted: boolean;
+  /** diagram | graph | table | formula | photo | note — 대장의 kind 그대로 */
+  kind: string;
+}
+
 export interface Concept {
   id: string;
   term: string;
@@ -52,9 +62,12 @@ export interface Concept {
    * 실제로 보여줄지는 src/lib/access.ts 의 스위치가 정한다.
    */
   hasRestrictedMedia: boolean;
-  mediaCaption?: string;
-  /** public/media/ 아래 파일명. 없으면 그림 자리만 잡힌다 */
-  mediaFile?: string;
+  /**
+   * 이 카드에 붙은 교과서 자산 전부. 한 장으로 끝나지 않는 개념이 있다 —
+   * 헤스 법칙은 반응 경로 그림과 엔탈피 다이어그램이 함께 있어야 읽히고,
+   * 열화학 반응식은 식 자체가 그림이라야 한다.
+   */
+  media?: ConceptAsset[];
 }
 
 export type QuizKind = "ox" | "short" | "mcq";

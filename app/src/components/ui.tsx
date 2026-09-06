@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Art } from "@/components/Art";
 import { canViewMedia } from "@/lib/access";
 import type { ReactNode } from "react";
+import type { ConceptAsset } from "@/lib/types";
 
 /** 공통 소형 컴포넌트 — 연회색 바탕 + 보더 없는 흰 라운드 카드 + 파스텔 알약 칩 */
 
@@ -165,6 +166,45 @@ export function ConceptMedia({
         </figcaption>
       )}
     </figure>
+  );
+}
+
+/** 자산 종류 꼬리표 — 그림만 있는 카드가 아니게 되면서 필요해졌다 */
+const KIND_LABEL: Record<string, string> = {
+  graph: "그래프",
+  table: "표",
+  formula: "식",
+  photo: "사진",
+  note: "곁주",
+};
+
+/**
+ * 카드의 그림 자리 — 자산 여러 장을 세로로 쌓는다.
+ *
+ * 잠금은 **자산 단위**다 (§0.4). 한 장이 restricted 라고 나머지까지 가리지 않는다.
+ */
+export function ConceptMediaList({ assets }: { assets: ConceptAsset[] }) {
+  if (assets.length === 0) return null;
+  return (
+    <div className="flex flex-col gap-3">
+      {assets.map((a) => {
+        const label = KIND_LABEL[a.kind];
+        return (
+          <div key={a.file}>
+            {label && (
+              <span className="mb-1.5 inline-flex rounded-full bg-bg-subtle px-2.5 py-0.5 text-[12px] font-bold text-ink-sub">
+                {label}
+              </span>
+            )}
+            <ConceptMedia
+              restricted={a.restricted}
+              caption={a.caption}
+              file={a.file}
+            />
+          </div>
+        );
+      })}
+    </div>
   );
 }
 
