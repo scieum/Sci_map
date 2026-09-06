@@ -244,7 +244,7 @@ def check_links(cards, res: Result) -> None:
             f"concept_key 가 다른데 same 으로 걸린 링크 {len(bad_same)}건 (R9)", bad_same)
 
 
-def check_relations(cards, res: Result) -> None:
+def check_relations(cards, res: Result, unit: str) -> None:
     no_cond = []
     for c in cards:
         for r in c["relations"]:
@@ -259,11 +259,31 @@ def check_relations(cards, res: Result) -> None:
     res.add("invertible_has_text", not inv_no_text,
             f"invertible 인데 inverted_text 가 없는 명제 {len(inv_no_text)}건 — OX 생성 불가", inv_no_text)
 
-    verified = [f"{c['id']}/{r['id']}" for c in cards for r in c["relations"]
+    # verified_by=teacher 는 C8 사람 게이트만 찍는다. 그 판정은
+    # output/review/<unit>.approval.json 에 기록으로 남는다(approve_c8.py).
+    # 기록과 대조해, **기록에 없는 승인**만 문제 삼는다 — 손으로 고쳐 넣은
+    # 승인을 잡는 것이 이 검사의 쓸모다. 기록 자체가 없으면 전부가 그런 경우다.
+    verified = [(c["id"], r["id"]) for c in cards for r in c["relations"]
                 if r["verified_by"] == "teacher"]
     if verified:
-        res.warn("verified_before_gate",
-                 f"C8 게이트 전인데 verified_by=teacher 인 명제 {len(verified)}건", verified)
+        rec_path = REPO / "output" / "review" / f"{unit}.approval.json"
+        rec = {}
+        if rec_path.exists():
+            try:
+                rec = json.loads(rec_path.read_text(encoding="utf-8"))
+            except Exception:
+                rec = {}
+        if rec.get("mode") == "all" and rec.get("approved"):
+            covered = {rid for _, rid in verified}
+        else:
+            covered = set(rec.get("relations_approved") or [])
+        stray = [f"{cid}/{rid}" for cid, rid in verified if rid not in covered]
+        res.add("approval_recorded", not stray,
+                f"승인 기록에 없는 verified_by=teacher {len(stray)}건 — C8 우회 의심", stray)
+        if rec and not rec.get("reviewed_item_by_item", True):
+            res.warn("approval_blanket",
+                     f"C8 을 항목별 검토 없이 일괄 승인했다 "
+                     f"(판정: {rec.get('approved_by','?')}, {rec.get('ts','?')})")
 
 
 def check_curriculum(cards, res: Result) -> None:
@@ -372,7 +392,7 @@ def main() -> int:
     check_answer_collision(cards, res)
     check_originality(cards, args.unit, res)
     check_links(cards, res)
-    check_relations(cards, res)
+    check_relations(cards, res, args.unit)
     check_curriculum(cards, res)
     check_registry_and_homonyms(cards, res)
     check_media(cards, res)
