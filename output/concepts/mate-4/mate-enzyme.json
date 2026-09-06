@@ -1,0 +1,70 @@
+{
+  "id": "mate-enzyme",
+  "concept_key": "concept:enzyme",
+  "registry_status": "new",
+  "term": "효소",
+  "notation": {
+    "hanja": "酵素",
+    "hanja_gloss": "酵 삭힐 효 · 素 본디 소",
+    "english": "enzyme"
+  },
+  "definition": "생물의 몸속에서 만들어져 촉매 노릇을 하는 물질. 자신은 소모되지 않으면서 몸 안에서 일어나는 반응의 속도를 바꾼다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-enzyme-biological-catalyst",
+      "text": "상처에 바른 과산화 수소수가 곧바로 거품을 내는 것은 혈액 속 효소가 분해 반응의 촉매로 작용하기 때문이다.",
+      "form": {
+        "condition": "효소가 들어 있는 혈액과 과산화 수소수가 맞닿았을 때",
+        "type": "causal",
+        "scope": "생체 안의 효소가 촉매로 작용하는 반응에 한정한다. 효소가 닿지 않는 성한 피부에서는 같은 분해가 매우 느리게 일어난다."
+      },
+      "invertible": false,
+      "invertible_reason": "빠른 분해의 까닭을 밝힌 진술이라 맞바꿀 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소는 생물이 만든 물질이므로 촉매라고 할 수 없다",
+      "why_wrong": "촉매를 가르는 기준은 어디서 왔느냐가 아니라 자신이 소모되지 않으면서 속도를 바꾸느냐다. 효소는 이 기준을 채우므로 촉매에 속한다.",
+      "linked_relation": "rel-enzyme-biological-catalyst",
+      "source": "llm"
+    },
+    {
+      "text": "효소가 든 반응은 온도를 올릴수록 계속 빨라진다",
+      "why_wrong": "효소는 온도가 너무 높아지면 제 구실을 잃는다. 그 지점을 넘어서면 온도를 더 올려도 반응이 오히려 느려진다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-catalyst",
+      "note": "생체 촉매로 읽으려면 촉매가 먼저다"
+    },
+    {
+      "type": "related",
+      "target": "mate-positive-catalyst",
+      "note": "속도를 빠르게 하는 쪽으로 작용하는 사례다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-03",
+  "pages": [
+    120,
+    123
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

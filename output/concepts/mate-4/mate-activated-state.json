@@ -1,0 +1,107 @@
+{
+  "id": "mate-activated-state",
+  "concept_key": "concept:activated-state",
+  "registry_status": "new",
+  "term": "활성화 상태",
+  "notation": {
+    "hanja": "活性化狀態",
+    "hanja_gloss": "活 살 활 · 性 성품 성 · 化 될 화 · 狀 형상 상 · 態 모습 태",
+    "english": "activated state"
+  },
+  "definition": "반응이 에너지 장벽의 정상에 이른 순간의 상태. 반응물의 결합은 약해지고 생성물이 될 결합은 아직 만들어지는 중인 중간 단계다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-state-peak",
+      "text": "반응의 진행에 따른 에너지 도표에서 활성화 상태는 에너지가 가장 높은 지점에 놓인다.",
+      "form": {
+        "condition": "반응의 진행을 가로축, 엔탈피를 세로축에 두고 볼 때",
+        "type": "conditional",
+        "scope": "에너지 장벽을 갖는 화학 반응의 도표"
+      },
+      "invertible": true,
+      "invertible_reason": "장벽의 정상이라는 규정과 가장 낮은 지점이라는 진술은 함께 성립할 수 없다.",
+      "inverted_text": "반응의 진행에 따른 에너지 도표에서 활성화 상태는 에너지가 가장 낮은 지점에 놓인다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-state-bonds",
+      "text": "활성화 상태에서는 끊어지는 중인 결합과 새로 만들어지는 중인 결합이 함께 존재한다.",
+      "form": {
+        "condition": "반응물이 장벽의 정상에 막 도달했을 때",
+        "type": "conditional",
+        "scope": "결합의 끊김과 형성이 이어져 일어나는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "결합이 모두 끊긴 뒤에야 새 결합이 시작된다면 정상에서 두 결합이 겹쳐 있는 상태를 설명할 수 없다.",
+      "inverted_text": "활성화 상태에서는 반응물의 결합이 모두 끊어진 뒤에야 새 결합이 만들어지기 시작한다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-state-unstable",
+      "text": "활성화 상태는 에너지가 높아 불안정하므로 그대로 머무르지 못하고 곧 반응물이나 생성물 쪽으로 내려간다.",
+      "form": {
+        "condition": "입자가 장벽의 정상에 이른 뒤",
+        "type": "causal",
+        "scope": "에너지 장벽의 정상에 놓인 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "에너지가 가장 높은 지점이 안정해 오래 남는다면 그것은 장벽이 아니라 골짜기가 된다.",
+      "inverted_text": "활성화 상태는 안정하여 반응이 끝난 뒤에도 그대로 남아 있다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "활성화 상태는 반응물보다 에너지가 낮아 안정한 상태이다",
+      "why_wrong": "활성화 상태는 반응 경로에서 에너지가 가장 높은 지점이다. 그래서 그 상태에 이르려면 에너지를 얻어야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-state-peak"
+    },
+    {
+      "text": "활성화 상태는 반응이 끝난 뒤 생성물과 함께 남는 물질의 상태이다",
+      "why_wrong": "활성화 상태는 반응이 진행되는 도중에 잠깐 지나가는 상태다. 반응이 끝나면 남지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-state-unstable"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-activation-energy"
+    },
+    {
+      "type": "next",
+      "target": "mate-activated-complex",
+      "note": "이 상태에 있는 화합물을 따로 부른다"
+    },
+    {
+      "type": "related",
+      "target": "mate-effective-collision",
+      "note": "유효 충돌이라야 이 상태에 이른다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-03",
+  "pages": [
+    113
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

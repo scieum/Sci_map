@@ -1,0 +1,140 @@
+{
+  "id": "mate-catalyst",
+  "concept_key": "concept:catalyst",
+  "registry_status": "new",
+  "term": "촉매",
+  "notation": {
+    "hanja": "觸媒",
+    "hanja_gloss": "觸 닿을 촉 · 媒 중매 매",
+    "english": "catalyst"
+  },
+  "definition": "반응이 끝난 뒤에도 자신의 양은 줄지 않으면서 반응 속도만 바꾸어 놓는 물질. 활성화 에너지를 오르내리게 하여 작용한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-catalyst-not-consumed",
+      "text": "촉매는 반응이 끝난 뒤에도 그대로 남아 있어 반응 전후로 그 양이 달라지지 않는다.",
+      "form": {
+        "condition": "반응 전과 반응 후에 남아 있는 촉매의 양을 견줄 때",
+        "type": "conditional",
+        "scope": "반응 과정에서 자신이 다른 물질로 바뀌어 버리는 물질은 촉매로 보지 않는다."
+      },
+      "invertible": true,
+      "invertible_reason": "소모되는 물질은 애초에 촉매로 분류되지 않으므로, 소모된다는 문장은 반드시 거짓이다.",
+      "inverted_text": "촉매는 반응이 진행되는 동안 조금씩 소모되어 반응이 끝나면 양이 줄어 있다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-catalyst-changes-ea",
+      "text": "촉매를 넣으면 반응의 활성화 에너지가 달라지고, 그에 따라 반응을 일으킬 수 있는 분자 수가 늘거나 줄어 속도가 변한다.",
+      "form": {
+        "condition": "반응물과 생성물이 같고 온도가 일정할 때",
+        "type": "causal",
+        "scope": "촉매가 반응 경로에 관여하는 화학 반응에 한정한다. 반응물이나 생성물의 종류가 달라지면 다른 반응이다."
+      },
+      "invertible": false,
+      "invertible_reason": "속도가 바뀌는 까닭을 밝힌 진술이라 맞바꿀 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-catalyst-enthalpy-unchanged",
+      "text": "촉매를 넣어도 반응물과 생성물의 엔탈피는 그대로여서 반응 엔탈피가 달라지지 않는다.",
+      "form": {
+        "condition": "같은 반응물에서 같은 생성물이 만들어질 때",
+        "type": "conditional",
+        "scope": "반응 엔탈피가 처음과 끝 상태로만 정해진다는 범위. 반응 경로 위에 놓인 활성화 에너지와는 구분한다."
+      },
+      "invertible": true,
+      "invertible_reason": "처음과 끝 상태가 같으면 그 차이도 같으므로, 촉매 때문에 반응 엔탈피가 달라진다는 문장은 반드시 거짓이다.",
+      "inverted_text": "촉매를 넣으면 반응 엔탈피도 활성화 에너지와 함께 작아진다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-catalyst-notation",
+      "text": "화학 반응식에서 촉매는 화살표 위쪽에 적어 반응물이나 생성물과 구분한다.",
+      "form": {
+        "condition": "촉매를 쓴 반응을 화학 반응식으로 나타낼 때",
+        "type": "conditional",
+        "scope": "촉매를 표시하는 표기 약속에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "표기 약속을 정리한 문장이라 방향을 맞바꾸는 것이 참·거짓 판정으로 이어지지 않는다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "촉매를 쓰면 반응 엔탈피가 작아져서 반응이 잘 일어난다",
+      "why_wrong": "촉매가 낮추거나 높이는 것은 넘어가야 할 문턱인 활성화 에너지다. 반응물과 생성물의 엔탈피는 그대로이므로 그 차이인 반응 엔탈피도 그대로다.",
+      "linked_relation": "rel-catalyst-enthalpy-unchanged",
+      "source": "llm"
+    },
+    {
+      "text": "촉매도 반응에 참여하므로 반응물과 함께 화살표 왼쪽에 적는다",
+      "why_wrong": "촉매는 반응 뒤에도 양이 줄지 않아 반응물로 셈하지 않는다. 그래서 반응식에서는 화살표 위에 적어 반응물과 구분한다.",
+      "linked_relation": "rel-catalyst-notation",
+      "source": "llm"
+    },
+    {
+      "text": "촉매를 많이 넣을수록 반응 속도는 끝없이 빨라진다",
+      "why_wrong": "촉매가 하는 일은 반응이 지나갈 문턱을 바꾸는 것이다. 반응물이 촉매와 만날 자리가 이미 넉넉하면 더 넣어도 속도가 그만큼 더 빨라지지는 않는다.",
+      "linked_relation": "rel-catalyst-changes-ea",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-activation-energy",
+      "note": "촉매의 작용은 활성화 에너지의 변화로 설명된다"
+    },
+    {
+      "type": "next",
+      "target": "mate-positive-catalyst",
+      "note": "속도를 빠르게 하는 쪽이다"
+    },
+    {
+      "type": "next",
+      "target": "mate-negative-catalyst",
+      "note": "속도를 느리게 하는 쪽이다"
+    },
+    {
+      "type": "next",
+      "target": "mate-enzyme",
+      "note": "생체 안에서 촉매 노릇을 하는 물질이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-rate",
+      "note": "촉매가 바꾸는 것이 무엇인지를 되짚는다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-03",
+  "pages": [
+    121,
+    122,
+    124
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

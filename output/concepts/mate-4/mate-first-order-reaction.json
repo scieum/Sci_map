@@ -1,0 +1,122 @@
+{
+  "id": "mate-first-order-reaction",
+  "concept_key": "concept:first-order-reaction",
+  "registry_status": "new",
+  "term": "1차 반응",
+  "notation": {
+    "hanja": "一次反應",
+    "hanja_gloss": "一 한 일 · 次 버금 차 · 反 돌이킬 반 · 應 응할 응",
+    "english": "first-order reaction"
+  },
+  "definition": "반응 속도가 어느 한 반응물의 농도에 정비례하는 반응. 농도를 가로축, 초기 속도를 세로축에 두면 자료가 원점을 지나는 직선이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-first-proportional",
+      "text": "1차 반응에서는 반응물의 농도를 2배로 하면 반응 속도도 2배가 된다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 그 반응물의 농도만 바꿀 때",
+        "type": "direct",
+        "scope": "그 반응물에 대해 차수가 1인 반응",
+        "antecedent": {
+          "quantity": "반응물의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "차수가 1이면 농도와 속도가 정비례하므로 농도를 늘렸을 때 속도가 줄어들 수 없다.",
+      "inverted_text": "1차 반응에서는 반응물의 농도를 2배로 하면 반응 속도가 절반이 된다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-first-graph",
+      "text": "농도를 가로축, 초기 반응 속도를 세로축에 두면 1차 반응의 자료는 원점을 지나는 직선으로 나타난다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 처음 농도만 바꾸어 초기 속도를 잴 때",
+        "type": "conditional",
+        "scope": "한 반응물에 대해 차수가 1인 반응의 측정 자료"
+      },
+      "invertible": true,
+      "invertible_reason": "정비례 관계라면 농도가 0일 때 속도도 0이어야 하므로 세로축을 가로질러 시작하는 직선이 될 수 없다.",
+      "inverted_text": "1차 반응의 자료는 원점을 지나지 않고 세로축의 0이 아닌 값에서 시작하는 직선으로 나타난다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-first-halflife",
+      "text": "1차 반응에서는 반응물의 농도가 절반으로 줄어드는 데 걸리는 시간이 처음 농도와 상관없이 일정하다.",
+      "form": {
+        "condition": "온도가 일정하게 유지되는 하나의 1차 반응에서",
+        "type": "conditional",
+        "scope": "1차 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "처음 농도에 따라 그 시간이 달라진다면 1차 반응의 반감기가 일정하다는 성질과 어긋난다.",
+      "inverted_text": "1차 반응에서는 반응물의 처음 농도가 클수록 절반으로 줄어드는 데 걸리는 시간이 길어진다.",
+      "curriculum": [
+        "12물에04-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "1차 반응은 반응물이 한 가지뿐인 반응을 뜻한다",
+      "why_wrong": "1차라는 말은 반응물의 가짓수가 아니라 속도식에서 농도에 붙은 지수가 1이라는 뜻이다.",
+      "source": "llm",
+      "linked_relation": "rel-first-proportional"
+    },
+    {
+      "text": "화학 반응식에서 계수가 1인 반응물이 있으면 그 반응은 1차 반응이다",
+      "why_wrong": "차수는 계수가 아니라 실험 자료로 정해진다. 계수가 1이어도 그 물질에 대한 차수가 2일 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-first-graph"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-order"
+    },
+    {
+      "type": "next",
+      "target": "mate-half-life",
+      "note": "반감기가 일정하다는 성질이 여기서 나온다"
+    },
+    {
+      "type": "related",
+      "target": "mate-initial-reaction-rate",
+      "note": "1차임을 확인하는 자료가 초기 속도다"
+    },
+    {
+      "type": "related",
+      "target": "mate-rate-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01",
+    "12물에04-02"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-02",
+  "pages": [
+    110,
+    115,
+    126
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

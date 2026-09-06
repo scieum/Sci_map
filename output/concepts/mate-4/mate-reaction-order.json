@@ -1,0 +1,126 @@
+{
+  "id": "mate-reaction-order",
+  "concept_key": "concept:reaction-order",
+  "registry_status": "new",
+  "term": "반응 차수",
+  "notation": {
+    "hanja": "反應次數",
+    "hanja_gloss": "反 돌이킬 반 · 應 응할 응 · 次 버금 차 · 數 셈 수",
+    "english": "reaction order"
+  },
+  "definition": "반응 속도식에서 어떤 반응물의 농도에 붙은 지수. 그 반응물의 농도가 반응 속도를 얼마나 크게 좌우하는지를 나타낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-order-experiment",
+      "text": "반응 차수는 초기 농도를 바꾸어 가며 속도를 측정한 자료로 정하며, 반응식의 계수에서 끌어낼 수 없다.",
+      "form": {
+        "condition": "전체 화학 반응식만 주어져 있을 때",
+        "type": "conditional",
+        "scope": "여러 단계를 거칠 수 있는 일반적인 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "계수와 언제나 같다는 주장은 실험으로 결정한다는 원칙과 어긋나 일반 규칙으로 성립하지 않는다.",
+      "inverted_text": "반응 차수는 화학 반응식에서 그 물질 앞에 붙은 계수와 언제나 같다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-order-second",
+      "text": "어떤 반응물에 대한 차수가 2이면 그 반응물의 농도를 2배로 할 때 반응 속도는 4배가 된다.",
+      "form": {
+        "condition": "온도와 다른 반응물의 농도를 고정하고 그 반응물의 농도만 2배로 할 때",
+        "type": "direct",
+        "scope": "속도식이 농도의 거듭제곱 곱으로 주어진 반응",
+        "antecedent": {
+          "quantity": "그 반응물의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "차수 2는 농도를 제곱해 넣는다는 뜻이므로 2배 농도에서 속도가 2배가 되는 결과는 나올 수 없다.",
+      "inverted_text": "어떤 반응물에 대한 차수가 2이면 그 반응물의 농도를 2배로 할 때 반응 속도도 2배가 된다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-order-zero",
+      "text": "어떤 반응물에 대한 차수가 0이면 그 반응물의 농도를 바꾸어도 반응 속도는 변하지 않는다.",
+      "form": {
+        "condition": "온도와 다른 반응물의 농도를 그대로 두고 그 반응물의 농도만 바꿀 때",
+        "type": "conditional",
+        "scope": "0차 항을 갖는 속도식으로 나타나는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "차수 0은 그 농도가 속도식에 남지 않는다는 뜻이라 농도를 늘려 속도가 빨라질 수 없다.",
+      "inverted_text": "어떤 반응물에 대한 차수가 0이면 그 반응물의 농도를 늘릴수록 반응 속도가 빨라진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학 반응식에서 계수가 2인 반응물은 그 물질에 대한 반응 차수도 반드시 2이다",
+      "why_wrong": "차수는 실험 자료로 정해진다. 계수와 값이 맞아떨어지는 반응도 있지만 그것이 규칙은 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-order-experiment"
+    },
+    {
+      "text": "반응이 진행되어 반응물의 농도가 달라지면 반응 차수도 함께 달라진다",
+      "why_wrong": "차수는 온도가 정해진 그 반응의 속도식에 붙박인 값이다. 농도를 따라 변하는 것은 속도이지 차수가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-order-second"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-rate-law"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-initial-reaction-rate",
+      "note": "차수를 정하는 자료가 초기 속도다"
+    },
+    {
+      "type": "next",
+      "target": "mate-overall-reaction-order",
+      "note": "각 차수를 더한 값으로 나아간다"
+    },
+    {
+      "type": "next",
+      "target": "mate-first-order-reaction",
+      "note": "차수가 1인 경우를 따로 본다"
+    },
+    {
+      "type": "related",
+      "target": "mate-rate-constant"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    108,
+    109,
+    114
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

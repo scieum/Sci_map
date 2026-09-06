@@ -1,0 +1,114 @@
+{
+  "id": "mate-instantaneous-reaction-rate",
+  "concept_key": "concept:instantaneous-reaction-rate",
+  "registry_status": "new",
+  "term": "순간 반응 속도",
+  "notation": {
+    "hanja": "瞬間反應速度",
+    "hanja_gloss": "瞬 눈깜짝일 순 · 間 사이 간 · 反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도",
+    "english": "instantaneous reaction rate"
+  },
+  "definition": "어느 한 시각에서 반응이 진행되는 빠르기. 구간의 길이를 0에 가깝게 좁혔을 때의 평균 속도이며, 시간-농도 그래프의 접선 기울기로 읽는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-inst-tangent",
+      "text": "어떤 시각에서 시간-농도 그래프에 그은 접선의 기울기가 그 시각의 순간 반응 속도이다.",
+      "form": {
+        "condition": "그래프의 한 점에서 접선을 그을 수 있을 때",
+        "type": "conditional",
+        "scope": "농도가 시간에 따라 매끄럽게 변하는 반응의 그래프"
+      },
+      "invertible": true,
+      "invertible_reason": "두 점을 이은 직선의 기울기는 구간 전체를 평균한 값이라 한 시각의 값이 될 수 없다.",
+      "inverted_text": "어떤 시각에서 그래프의 두 점을 이은 직선의 기울기가 그 시각의 순간 반응 속도이다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inst-limit",
+      "text": "구간의 길이를 0에 가깝게 줄여 가면 평균 반응 속도는 그 시각의 순간 반응 속도에 가까워진다.",
+      "form": {
+        "condition": "구간의 시작점을 한 시각에 고정하고 길이만 줄여 갈 때",
+        "type": "conditional",
+        "scope": "농도가 시간에 따라 매끄럽게 변하는 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "가까워진다는 서술이라 방향을 뒤집은 문장이 모든 반응에서 반드시 거짓이라고 단정하기 어렵다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inst-decrease",
+      "text": "반응이 진행될수록 그래프의 접선이 완만해져 순간 반응 속도가 점점 작아진다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 반응물을 더 넣지 않을 때",
+        "type": "causal",
+        "scope": "반응물의 농도가 클수록 빨라지는 반응",
+        "antecedent": {
+          "quantity": "반응 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "순간 반응 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 범위에서는 농도가 계속 줄어들므로 시간이 지날수록 속도가 커진다는 진술은 성립할 수 없다.",
+      "inverted_text": "반응이 진행될수록 그래프의 접선이 가팔라져 순간 반응 속도가 점점 커진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "순간 반응 속도는 반응이 진행되는 내내 같은 값으로 유지된다",
+      "why_wrong": "시각마다 반응물의 농도가 다르므로 접선의 기울기도 달라진다. 보통은 시간이 갈수록 값이 작아진다.",
+      "source": "llm",
+      "linked_relation": "rel-inst-decrease"
+    },
+    {
+      "text": "그래프에서 두 점을 이은 직선의 기울기는 그 사이 어느 순간에서든 순간 반응 속도와 같다",
+      "why_wrong": "그 직선의 기울기는 구간을 평균 낸 값이다. 구간 안에서도 시각마다 순간 속도가 달라 두 값이 일치한다고 볼 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-inst-tangent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-average-reaction-rate"
+    },
+    {
+      "type": "next",
+      "target": "mate-initial-reaction-rate",
+      "note": "반응 시간이 0인 시각의 순간 속도다"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-rate"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    107,
+    114
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

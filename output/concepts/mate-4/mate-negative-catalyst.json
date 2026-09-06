@@ -1,0 +1,143 @@
+{
+  "id": "mate-negative-catalyst",
+  "concept_key": "concept:negative-catalyst",
+  "registry_status": "new",
+  "term": "부촉매",
+  "notation": {
+    "hanja": "負觸媒",
+    "hanja_gloss": "負 질 부 · 觸 닿을 촉 · 媒 중매 매",
+    "english": "negative catalyst"
+  },
+  "definition": "넘어야 할 활성화 에너지를 높이는 쪽으로 작용하여 반응 속도를 느리게 하는 촉매. 문턱이 올라간 만큼 반응할 수 있는 분자가 줄어든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-negative-catalyst-raises-ea",
+      "text": "같은 반응을 견줄 때 부촉매를 넣은 쪽이 넣지 않은 쪽보다 활성화 에너지가 높다.",
+      "form": {
+        "condition": "온도와 반응물을 그대로 두고 촉매만 달리하여 견줄 때",
+        "type": "causal",
+        "scope": "부촉매로 분류되는 물질에 한정한다. 정촉매는 반대 방향으로 작용한다.",
+        "antecedent": {
+          "quantity": "부촉매의 사용",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "활성화 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "활성화 에너지를 높이는 것이 부촉매의 분류 기준이므로, 낮춘다는 문장은 반드시 거짓이다.",
+      "inverted_text": "같은 반응을 견줄 때 부촉매를 넣은 쪽이 넣지 않은 쪽보다 활성화 에너지가 낮다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-negative-catalyst-fewer-molecules",
+      "text": "넘어야 할 문턱이 올라가면 그 위에 놓이는 분자 수가 줄어들어 반응 속도가 느려진다.",
+      "form": {
+        "condition": "온도가 일정해 분자의 운동 에너지 분포가 그대로일 때",
+        "type": "inverse",
+        "scope": "분포 곡선은 그대로 두고 활성화 에너지의 자리만 옮겨 견주는 경우에 한정한다.",
+        "antecedent": {
+          "quantity": "활성화 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분포가 그대로인데 문턱만 올라가고 그 위의 분자 수가 늘어나는 일은 있을 수 없다.",
+      "inverted_text": "넘어야 할 문턱이 올라가면 그 위에 놓이는 분자 수가 늘어나 반응 속도가 빨라진다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-negative-catalyst-still-catalyst",
+      "text": "부촉매는 속도를 늦추기는 하지만 반응 뒤에도 소모되지 않으므로 여전히 촉매로 분류된다.",
+      "form": {
+        "condition": "반응 전후 부촉매의 양을 견줄 때",
+        "type": "classification",
+        "scope": "속도를 늦추면서도 자신이 소모되지 않는 물질에 한정한다. 반응해 없어지는 물질은 촉매가 아니다.",
+        "antecedent": {
+          "quantity": "부촉매",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "촉매로 분류됨",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "묶음에 넣고 빼는 분류 진술이라 맞바꿀 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "부촉매는 반응 속도를 느리게 하므로 촉매가 아니다",
+      "why_wrong": "촉매를 가르는 기준은 빠르게 하느냐가 아니라 자신이 소모되지 않으면서 속도를 바꾸느냐다. 부촉매도 이 기준을 채우므로 촉매에 속한다.",
+      "linked_relation": "rel-negative-catalyst-still-catalyst",
+      "source": "llm"
+    },
+    {
+      "text": "부촉매를 넣으면 반응이 아예 일어나지 않는다",
+      "why_wrong": "문턱이 높아져 그것을 넘는 분자가 줄어들 뿐이다. 여전히 넘는 분자가 있으므로 반응은 느리게라도 진행한다.",
+      "linked_relation": "rel-negative-catalyst-fewer-molecules",
+      "source": "llm"
+    },
+    {
+      "text": "부촉매를 넣으면 반응 엔탈피가 커진다",
+      "why_wrong": "달라지는 것은 반응 경로 위의 문턱 높이뿐이다. 반응물과 생성물의 엔탈피가 그대로이므로 그 차이인 반응 엔탈피도 그대로다.",
+      "linked_relation": "rel-negative-catalyst-raises-ea",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-catalyst",
+      "note": "촉매의 정의 위에 방향이 얹힌다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molecular-kinetic-energy-distribution",
+      "note": "분자 수가 줄어드는 사정을 곡선으로 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "mate-positive-catalyst",
+      "note": "작용 방향이 정반대인 짝이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-activation-energy",
+      "note": "높아지는 것이 바로 이 값이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-03",
+  "pages": [
+    121,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

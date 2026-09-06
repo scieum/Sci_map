@@ -1,0 +1,123 @@
+{
+  "id": "mate-activation-energy",
+  "concept_key": "concept:activation-energy",
+  "registry_status": "new",
+  "term": "활성화 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "앞의 '활성화'는 活性化에 해당하지만 뒤의 '에너지'가 영어 energy 의 음차어라 낱말 전체에 대응하는 한자어 표기가 없다.",
+    "english": "activation energy",
+    "symbol_display": "Eₐ",
+    "symbol_plain": "Ea"
+  },
+  "definition": "화학 반응이 일어나려면 반드시 넘어야 하는 에너지 장벽의 높이. 반응물과 활성화물의 에너지 차이로 정해지는 최소한의 에너지다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ea-minimum",
+      "text": "충돌한 입자가 가진 에너지가 활성화 에너지보다 작으면 반응은 일어나지 않는다.",
+      "form": {
+        "condition": "반응물 입자가 서로 충돌하는 순간",
+        "type": "conditional",
+        "scope": "에너지 장벽을 넘어야 진행되는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "장벽보다 낮은 에너지로도 넘어갈 수 있다면 최소한의 에너지라는 규정 자체가 무너진다.",
+      "inverted_text": "충돌한 입자가 가진 에너지가 활성화 에너지보다 작아도 반응은 일어난다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ea-rate",
+      "text": "온도와 농도가 같다면 활성화 에너지가 작은 반응일수록 더 빠르게 일어난다.",
+      "form": {
+        "condition": "온도와 농도를 같게 맞추고 서로 다른 반응을 견줄 때",
+        "type": "inverse",
+        "scope": "온도와 농도를 같게 둔 두 화학 반응의 비교",
+        "antecedent": {
+          "quantity": "활성화 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "장벽이 높을수록 그것을 넘을 수 있는 입자가 줄어들므로 더 빨라진다는 진술과 어긋난다.",
+      "inverted_text": "온도와 농도가 같다면 활성화 에너지가 큰 반응일수록 더 빠르게 일어난다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ea-vs-enthalpy",
+      "text": "정반응과 역반응의 활성화 에너지 차이가 반응 엔탈피이며, 활성화 에너지의 크기만으로 반응 엔탈피를 알 수는 없다.",
+      "form": {
+        "condition": "같은 반응의 정반응과 역반응을 에너지 도표에서 함께 볼 때",
+        "type": "conditional",
+        "scope": "에너지 도표로 나타낼 수 있는 화학 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "두 양이 서로 정해 주지 않는다는 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "활성화 에너지가 큰 반응일수록 반응 엔탈피도 크다",
+      "why_wrong": "활성화 에너지는 넘어야 할 장벽의 높이이고 반응 엔탈피는 반응물과 생성물의 에너지 차이다. 장벽이 높다고 그 차이가 커지지는 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-ea-vs-enthalpy"
+    },
+    {
+      "text": "발열 반응은 열을 내놓는 반응이므로 활성화 에너지를 넘지 않아도 저절로 일어난다",
+      "why_wrong": "열을 내놓는 반응이라도 시작하려면 장벽을 넘어야 한다. 종이가 저절로 타지 않는 것이 그 예다.",
+      "source": "llm",
+      "linked_relation": "rel-ea-minimum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-effective-collision"
+    },
+    {
+      "type": "next",
+      "target": "mate-activated-state",
+      "note": "장벽의 정상에 놓인 상태로 이어진다"
+    },
+    {
+      "type": "next",
+      "target": "mate-molecular-kinetic-energy-distribution",
+      "note": "분포 곡선을 가르는 기준선이 된다"
+    },
+    {
+      "type": "next",
+      "target": "mate-catalyst",
+      "note": "촉매의 작용은 이 값의 변화로 설명된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-03",
+  "pages": [
+    113,
+    114,
+    121
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,138 @@
+{
+  "id": "mate-reaction-rate",
+  "concept_key": "concept:reaction-rate",
+  "registry_status": "new",
+  "term": "반응 속도",
+  "aliases": [
+    "화학 반응 속도"
+  ],
+  "notation": {
+    "hanja": "反應速度",
+    "hanja_gloss": "反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도",
+    "english": "reaction rate",
+    "symbol_display": "v",
+    "symbol_plain": "v"
+  },
+  "definition": "화학 반응이 진행되는 빠르기를 수로 나타낸 값. 단위 시간 동안 줄어든 반응물이나 늘어난 생성물의 몰농도로 계산한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rate-ratio",
+      "text": "반응 속도는 반응물이나 생성물의 몰농도 변화량을 그동안 걸린 시간으로 나누어 M/s 나 M/min 단위로 구한다.",
+      "form": {
+        "condition": "농도를 몰농도로 재고 그 변화를 시간에 견주어 볼 때",
+        "type": "conditional",
+        "scope": "몰농도로 농도를 나타낼 수 있는 용액·기체 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "나누는 두 양을 맞바꾸면 시간을 농도로 나눈 값이 되어 속도의 정의와 어긋나므로 반드시 거짓이다.",
+      "inverted_text": "반응 속도는 걸린 시간을 몰농도 변화량으로 나누어 M/s 나 M/min 단위로 구한다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rate-sign",
+      "text": "반응물 쪽 농도 변화로 속도를 나타낼 때에는 줄어든 양 앞에 음의 부호를 붙여 값이 양수가 되게 한다.",
+      "form": {
+        "condition": "속도를 언제나 양의 값으로 약속하고 반응물 쪽으로 계산할 때",
+        "type": "conditional",
+        "scope": "농도가 줄어드는 반응물로 속도를 표현하는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "부호를 붙이는 쪽을 반대로 잡으면 속도가 음수로 나와 양의 값이라는 약속을 깨므로 반드시 거짓이다.",
+      "inverted_text": "생성물 쪽 농도 변화로 속도를 나타낼 때에는 늘어난 양 앞에 음의 부호를 붙여야 한다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rate-slows",
+      "text": "반응이 진행되어 반응물의 농도가 줄어들면 반응 속도도 함께 느려진다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 반응물을 더 넣지 않을 때",
+        "type": "causal",
+        "scope": "반응물의 농도가 클수록 빨라지는 반응(0차 반응은 제외)",
+        "antecedent": {
+          "quantity": "반응물의 몰농도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도가 줄었는데 속도가 빨라진다는 진술은 이 범위에서 정한 농도와 속도의 관계에 정면으로 어긋난다.",
+      "inverted_text": "반응이 진행되어 반응물의 농도가 줄어들면 반응 속도는 오히려 빨라진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rate-pressure",
+      "text": "부피와 온도를 고정한 용기에서는 기체의 몰농도가 부분 압력에 비례하므로, 압력 변화를 재어 반응 속도를 나타낼 수 있다.",
+      "form": {
+        "condition": "용기의 부피와 온도를 고정해 두고 압력만 측정할 때",
+        "type": "conditional",
+        "scope": "기체가 생기거나 소모되는 밀폐 용기 속 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "압력으로 대신 잴 수 있다는 진술이라 방향을 뒤집어 반드시 거짓인 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응물의 농도가 줄어드는 반응이므로 반응 속도는 음의 값으로 나타낸다",
+      "why_wrong": "반응 속도는 빠르기이므로 언제나 양의 값으로 약속한다. 그래서 줄어드는 반응물 쪽으로 계산할 때에만 음의 부호를 붙여 값을 양수로 맞춘다.",
+      "source": "llm",
+      "linked_relation": "rel-rate-sign"
+    },
+    {
+      "text": "반응이 시작되어 끝날 때까지 반응 속도는 같은 값으로 유지된다",
+      "why_wrong": "반응이 진행되면 반응물이 소모되어 농도가 낮아진다. 농도가 낮아지면 충돌이 줄어 속도도 점점 느려진다.",
+      "source": "llm",
+      "linked_relation": "rel-rate-slows"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-average-reaction-rate",
+      "note": "속도의 뜻을 알아야 구간을 잡아 평균을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "mate-rate-law",
+      "note": "속도를 농도의 식으로 옮기는 다음 걸음이다"
+    },
+    {
+      "type": "next",
+      "target": "mate-effect-of-concentration-on-reaction-rate",
+      "note": "무엇이 빨라지는지 알아야 요인을 읽는다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    104,
+    106,
+    114
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

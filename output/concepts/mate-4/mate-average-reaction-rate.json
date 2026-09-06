@@ -1,0 +1,109 @@
+{
+  "id": "mate-average-reaction-rate",
+  "concept_key": "concept:average-reaction-rate",
+  "registry_status": "new",
+  "term": "평균 반응 속도",
+  "notation": {
+    "hanja": "平均反應速度",
+    "hanja_gloss": "平 평평할 평 · 均 고를 균 · 反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도",
+    "english": "average reaction rate"
+  },
+  "definition": "시간 구간을 통째로 잡아 그동안의 농도 변화를 구간의 길이로 나눈 반응 속도. 시간-농도 그래프에서 두 점을 이은 직선의 기울기에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-avg-slope",
+      "text": "시간-농도 그래프에서 구간의 두 끝점을 이은 직선의 기울기가 그 구간의 평균 반응 속도이다.",
+      "form": {
+        "condition": "구간의 처음 농도와 끝 농도를 그래프에서 읽어 낼 때",
+        "type": "conditional",
+        "scope": "가로축이 시간, 세로축이 농도인 그래프"
+      },
+      "invertible": true,
+      "invertible_reason": "한 점의 접선 기울기는 그 시각의 순간 속도이지 구간 전체를 평균한 값이 아니므로 반드시 거짓이다.",
+      "inverted_text": "시간-농도 그래프에서 한 점에 그은 접선의 기울기가 그 구간의 평균 반응 속도이다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-avg-interval",
+      "text": "같은 반응이라도 구간을 반응 초기에 잡느냐 후기에 잡느냐에 따라 평균 반응 속도 값이 달라진다.",
+      "form": {
+        "condition": "온도와 반응은 그대로 두고 구간만 옮겨 잡을 때",
+        "type": "conditional",
+        "scope": "반응물의 농도에 따라 속도가 달라지는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "농도가 시간에 따라 변하는 이상 어느 구간을 잡아도 값이 같다는 진술은 성립할 수 없다.",
+      "inverted_text": "같은 반응이라면 구간을 어디에 잡아도 평균 반응 속도는 같은 값으로 나온다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-avg-coefficient",
+      "text": "같은 시간 구간에서 각 물질의 농도 변화로 구한 속도의 비는 화학 반응식의 계수비와 같다.",
+      "form": {
+        "condition": "하나의 반응식에서 여러 물질의 농도 변화를 같은 구간으로 견줄 때",
+        "type": "direct",
+        "scope": "계수가 정해진 하나의 화학 반응식"
+      },
+      "invertible": true,
+      "invertible_reason": "계수비의 역수를 쓰면 계수가 큰 물질일수록 덜 변한다는 뜻이 되어 반응 몰비와 어긋난다.",
+      "inverted_text": "같은 시간 구간에서 각 물질의 농도 변화로 구한 속도의 비는 화학 반응식 계수비의 역수와 같다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평균 반응 속도는 시간-농도 그래프의 한 점에 그은 접선의 기울기로 구한다",
+      "why_wrong": "접선의 기울기는 그 시각 하나에서의 순간 반응 속도다. 평균 반응 속도는 구간의 두 끝점을 이은 직선의 기울기로 구한다.",
+      "source": "llm",
+      "linked_relation": "rel-avg-slope"
+    },
+    {
+      "text": "화학 반응식의 계수가 서로 달라도 같은 시간 동안 각 물질의 농도 변화량은 서로 같다",
+      "why_wrong": "반응은 계수가 정한 몰비대로 진행된다. 계수가 2배인 물질은 같은 시간 동안 농도도 2배만큼 변한다.",
+      "source": "llm",
+      "linked_relation": "rel-avg-coefficient"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-rate"
+    },
+    {
+      "type": "next",
+      "target": "mate-instantaneous-reaction-rate",
+      "note": "구간을 0에 가깝게 줄이면 순간 속도가 된다"
+    },
+    {
+      "type": "related",
+      "target": "mate-initial-reaction-rate",
+      "note": "구간을 어디에 잡느냐로 두 값이 갈린다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    107,
+    114,
+    126
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

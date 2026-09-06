@@ -1,0 +1,118 @@
+{
+  "id": "mate-half-life",
+  "concept_key": "concept:half-life",
+  "registry_status": "new",
+  "term": "반감기",
+  "notation": {
+    "hanja": "半減期",
+    "hanja_gloss": "半 반 반 · 減 덜 감 · 期 기약할 기",
+    "english": "half-life",
+    "symbol_display": "t₁/₂",
+    "symbol_plain": "t_1/2"
+  },
+  "definition": "반응물의 농도가 처음 값의 절반까지 줄어드는 데 걸리는 시간. 1차 반응에서는 이 시간이 처음 농도와 상관없이 늘 같다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-halflife-constant",
+      "text": "1차 반응에서는 처음 농도를 얼마로 잡든 반감기가 같은 값으로 유지된다.",
+      "form": {
+        "condition": "온도가 일정하게 유지될 때",
+        "type": "conditional",
+        "scope": "1차 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "1차 반응의 반감기가 처음 농도에 따라 달라진다면 연대 측정처럼 시간을 되짚는 계산이 성립하지 않는다.",
+      "inverted_text": "1차 반응에서는 처음 농도가 클수록 반감기도 길어진다.",
+      "curriculum": [
+        "12물에04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-halflife-fraction",
+      "text": "반감기가 두 번 지나면 반응물은 처음 양의 4분의 1만 남고, 세 번 지나면 8분의 1만 남는다.",
+      "form": {
+        "condition": "반감기가 일정한 반응에서 시간이 반감기의 정수배만큼 지났을 때",
+        "type": "inverse",
+        "scope": "반감기가 일정한 1차 반응",
+        "antecedent": {
+          "quantity": "지나간 반감기 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "남아 있는 반응물의 비율",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반감기마다 절반씩 줄어드는 것이므로 남은 양이 절반씩 늘어나는 일은 일어나지 않는다.",
+      "inverted_text": "반감기가 두 번 지나면 반응물은 처음 양의 2분의 1이 남고, 세 번 지나면 4분의 1이 남는다.",
+      "curriculum": [
+        "12물에04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-halflife-dating",
+      "text": "반감기를 알고 남아 있는 반응물의 비율을 재면 반응이 시작된 뒤 흐른 시간을 추정할 수 있다.",
+      "form": {
+        "condition": "반감기가 알려져 있고 처음 비율을 아는 시료를 다룰 때",
+        "type": "conditional",
+        "scope": "반감기가 일정한 1차 반응(탄소 연대 측정 등)"
+      },
+      "invertible": false,
+      "invertible_reason": "추정할 수 있다는 진술이라 방향을 뒤집어 반드시 거짓인 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반감기가 두 번 지나면 반응물이 모두 없어진다",
+      "why_wrong": "반감기마다 그때 남아 있는 양의 절반이 줄어든다. 두 번 지나면 처음 양의 4분의 1이 남는다.",
+      "source": "llm",
+      "linked_relation": "rel-halflife-fraction"
+    },
+    {
+      "text": "처음 농도를 두 배로 하면 반감기도 두 배로 길어진다",
+      "why_wrong": "1차 반응의 반감기는 처음 농도와 상관없이 일정하다. 농도를 두 배로 해도 절반이 되는 데 걸리는 시간은 같다.",
+      "source": "llm",
+      "linked_relation": "rel-halflife-constant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-first-order-reaction"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-rate",
+      "note": "농도가 줄어드는 빠르기를 시간으로 바꿔 읽은 값이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-rate-law",
+      "note": "속도식이 1차임을 확인해야 반감기가 일정하다고 말할 수 있다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-02"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-02",
+  "pages": [
+    110,
+    111,
+    114
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

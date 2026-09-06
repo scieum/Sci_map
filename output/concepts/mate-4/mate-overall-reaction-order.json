@@ -1,0 +1,114 @@
+{
+  "id": "mate-overall-reaction-order",
+  "concept_key": "concept:overall-reaction-order",
+  "registry_status": "new",
+  "term": "전체 반응 차수",
+  "notation": {
+    "hanja": "全體反應次數",
+    "hanja_gloss": "全 온전할 전 · 體 몸 체 · 反 돌이킬 반 · 應 응할 응 · 次 버금 차 · 數 셈 수",
+    "english": "overall reaction order"
+  },
+  "definition": "속도식에 들어 있는 각 반응물의 반응 차수를 모두 더한 값. 반응 속도가 농도 변화에 얼마나 민감한지를 한 수로 요약한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-overall-sum",
+      "text": "전체 반응 차수는 각 반응물에 대한 반응 차수를 모두 더하여 구한다.",
+      "form": {
+        "condition": "속도식에서 각 반응물의 지수를 모두 읽어 냈을 때",
+        "type": "conditional",
+        "scope": "농도의 거듭제곱 곱으로 쓰인 속도식"
+      },
+      "invertible": true,
+      "invertible_reason": "더하기를 곱하기로 바꾸면 차수가 0인 반응물이 하나만 있어도 전체 값이 0이 되어 셈법으로 쓸 수 없다.",
+      "inverted_text": "전체 반응 차수는 각 반응물에 대한 반응 차수를 모두 곱하여 구한다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-overall-sensitivity",
+      "text": "전체 반응 차수가 클수록 모든 반응물의 농도를 같은 배수로 늘렸을 때 반응 속도가 더 크게 빨라진다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 모든 반응물의 농도를 같은 배수로 늘릴 때",
+        "type": "direct",
+        "scope": "속도식이 농도의 거듭제곱 곱으로 주어진 반응",
+        "antecedent": {
+          "quantity": "전체 반응 차수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "농도를 늘렸을 때 속도가 커지는 배수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전체 차수는 농도를 몇 제곱으로 넣는지를 뜻하므로 차수가 클수록 덜 빨라진다는 진술과 맞지 않는다.",
+      "inverted_text": "전체 반응 차수가 클수록 모든 반응물의 농도를 같은 배수로 늘렸을 때 반응 속도가 덜 빨라진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-overall-not-coefficient",
+      "text": "전체 반응 차수를 화학 반응식 왼쪽 계수의 합과 같다고 보아서는 안 된다.",
+      "form": {
+        "condition": "실험으로 속도식을 확인하지 않은 채 반응식만 볼 때",
+        "type": "conditional",
+        "scope": "속도식이 아직 밝혀지지 않은 화학 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "두 값이 우연히 같아지는 반응도 있어 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전체 반응 차수는 화학 반응식에서 반응물 앞에 붙은 계수를 모두 더한 값과 같다",
+      "why_wrong": "차수는 실험으로 정해지는 값이라 계수의 합과 같다는 보장이 없다. 값이 맞아떨어지는 반응이 있어도 우연일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-overall-not-coefficient"
+    },
+    {
+      "text": "전체 반응 차수가 2인 반응은 모든 반응물의 농도를 2배로 하면 반응 속도도 2배가 된다",
+      "why_wrong": "전체 차수가 2이면 농도를 2배로 할 때 속도는 2의 제곱인 4배가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-overall-sensitivity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-order"
+    },
+    {
+      "type": "related",
+      "target": "mate-rate-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-first-order-reaction",
+      "note": "전체 차수가 1인 경우로 만난다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    109,
+    126
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,107 @@
+{
+  "id": "mate-initial-reaction-rate",
+  "concept_key": "concept:initial-reaction-rate",
+  "registry_status": "new",
+  "term": "초기 반응 속도",
+  "notation": {
+    "hanja": "初期反應速度",
+    "hanja_gloss": "初 처음 초 · 期 기약할 기 · 反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도",
+    "english": "initial reaction rate"
+  },
+  "definition": "반응 시간이 0인 시각에서의 순간 반응 속도. 생성물이 아직 쌓이지 않아 반응물의 처음 농도가 미치는 영향만 드러나는 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-init-t0",
+      "text": "시간-농도 그래프에서 반응이 시작되는 지점에 그은 접선의 기울기가 초기 반응 속도이다.",
+      "form": {
+        "condition": "반응을 시작한 시각을 0으로 잡고 그래프를 읽을 때",
+        "type": "conditional",
+        "scope": "반응 시작 시각의 농도를 아는 반응의 그래프"
+      },
+      "invertible": true,
+      "invertible_reason": "반응이 끝나 갈 무렵의 접선은 농도가 이미 줄어든 뒤의 값이라 처음 시각의 속도가 될 수 없다.",
+      "inverted_text": "시간-농도 그래프에서 반응이 끝나는 지점에 그은 접선의 기울기가 초기 반응 속도이다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-init-largest",
+      "text": "반응물을 처음에 모두 넣고 시작하면 초기 반응 속도가 그 반응에서 가장 큰 순간 반응 속도가 된다.",
+      "form": {
+        "condition": "반응 도중에 반응물을 더 넣지 않고 온도를 일정하게 둘 때",
+        "type": "conditional",
+        "scope": "반응물의 농도가 클수록 빨라지는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "처음 시각의 농도가 가장 크므로 그때의 속도가 가장 작다는 진술은 성립할 수 없다.",
+      "inverted_text": "반응물을 처음에 모두 넣고 시작하면 초기 반응 속도가 그 반응에서 가장 작은 순간 반응 속도가 된다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-init-order",
+      "text": "한 반응물의 처음 농도만 바꾸어 초기 반응 속도를 여러 번 재면 그 자료로 반응 차수를 정할 수 있다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 한 번에 한 반응물의 처음 농도만 바꿀 때",
+        "type": "conditional",
+        "scope": "초기 속도를 견주어 속도식을 구하는 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "정할 수 있다는 진술이라 방향을 뒤집어 반드시 거짓인 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "초기 반응 속도란 반응이 시작된 뒤 처음 얼마 동안의 평균 반응 속도를 뜻한다",
+      "why_wrong": "초기 반응 속도는 반응 시간이 0인 그 시각의 순간 속도다. 구간을 잡아 평균 낸 값이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-init-t0"
+    },
+    {
+      "text": "속도식을 구할 때 초기 반응 속도 대신 반응이 한참 진행된 뒤의 속도를 써도 결과는 같다",
+      "why_wrong": "반응이 진행되면 반응물 농도가 이미 달라져 있고 생성물도 쌓인다. 그러면 처음 농도와 속도의 관계를 깨끗하게 읽을 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-init-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-instantaneous-reaction-rate"
+    },
+    {
+      "type": "next",
+      "target": "mate-reaction-order",
+      "note": "초기 속도 자료가 차수 결정의 근거다"
+    },
+    {
+      "type": "related",
+      "target": "mate-rate-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    107,
+    108,
+    110
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

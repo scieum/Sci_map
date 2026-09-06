@@ -1,0 +1,136 @@
+{
+  "id": "mate-effect-of-temperature-on-reaction-rate",
+  "concept_key": "concept:effect-of-temperature-on-reaction-rate",
+  "registry_status": "new",
+  "term": "온도와 반응 속도",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "온도(溫度)와 반응 속도(反應速度)를 우리말 조사 '와'로 이은 구다. 낱말 전체에 대응하는 한자어 표기가 없다.",
+    "english": "effect of temperature on reaction rate"
+  },
+  "definition": "온도가 반응 속도를 좌우한다는 관계. 온도를 올리면 활성화 에너지를 넘는 운동 에너지를 지닌 분자의 비율이 커져 반응이 빨라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-temperature-rate-up",
+      "text": "다른 조건을 그대로 두고 온도만 올리면 반응 속도는 눈에 띄게 빨라진다.",
+      "form": {
+        "condition": "농도·압력·촉매를 바꾸지 않고 온도만 바꿀 때",
+        "type": "direct",
+        "scope": "온도를 올려도 반응물이 분해되거나 촉매가 망가지지 않는 범위에 한정한다. 높은 온도에서 기능을 잃는 효소가 관여하는 반응은 예외다.",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "정해진 범위 안에서 온도를 올려 반응이 느려지는 경우는 없으므로 방향을 맞바꾸면 반드시 거짓이다.",
+      "inverted_text": "다른 조건을 그대로 두고 온도만 올리면 반응 속도는 느려진다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-temperature-fraction-above-ea",
+      "text": "온도를 올리면 활성화 에너지보다 큰 운동 에너지를 지닌 분자의 비율이 커져 반응을 일으킬 수 있는 분자가 많아진다.",
+      "form": {
+        "condition": "같은 반응이어서 넘어야 할 활성화 에너지가 그대로일 때",
+        "type": "direct",
+        "scope": "활성화 에너지 이상의 운동 에너지를 갖는 분자의 비율로 설명하는 범위. 활성화 에너지 자체를 바꾸는 촉매의 작용과는 구분한다.",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "활성화 에너지 이상의 운동 에너지를 갖는 분자의 비율",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "문턱이 그대로인데 온도가 올라가면서 그 위에 놓이는 분자의 비율이 줄어드는 일은 있을 수 없다.",
+      "inverted_text": "온도를 올리면 활성화 에너지보다 큰 운동 에너지를 지닌 분자의 비율은 오히려 작아진다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-temperature-not-only-collision",
+      "text": "온도를 올렸을 때 속도가 크게 빨라지는 것을 부딪치는 횟수의 증가만으로는 설명할 수 없다.",
+      "form": {
+        "condition": "온도만 올렸을 때 속도가 얼마나 커지는지를 따질 때",
+        "type": "causal",
+        "scope": "기체나 용액에서 온도를 수십 도 범위로 올린 경우의 설명에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "설명이 모자란다는 것을 지적한 문장이라 방향을 맞바꾼 진술이 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온도를 올리면 활성화 에너지가 작아져서 반응이 빨라진다",
+      "why_wrong": "온도가 바꾸는 것은 분자들이 지닌 운동 에너지의 분포이지 넘어야 할 문턱의 높이가 아니다. 활성화 에너지를 바꾸는 것은 촉매다.",
+      "linked_relation": "rel-temperature-fraction-above-ea",
+      "source": "llm"
+    },
+    {
+      "text": "온도를 올리면 모든 분자가 활성화 에너지보다 큰 에너지를 갖게 된다",
+      "why_wrong": "온도가 높아져도 분자들의 운동 에너지는 여전히 넓게 흩어져 있다. 늘어나는 것은 문턱을 넘는 분자의 비율일 뿐 전부가 되지는 않는다.",
+      "linked_relation": "rel-temperature-fraction-above-ea",
+      "source": "llm"
+    },
+    {
+      "text": "냉장고에 음식을 넣으면 음식이 상하는 반응 자체가 아예 멈춘다",
+      "why_wrong": "온도를 낮추면 문턱을 넘는 분자의 비율이 줄어 반응이 느려질 뿐이다. 반응이 멈춘 것이 아니므로 오래 두면 결국 상한다.",
+      "linked_relation": "rel-temperature-rate-up",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-rate",
+      "note": "무엇이 빨라지는지를 알아야 요인을 읽는다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-molecular-kinetic-energy-distribution",
+      "note": "온도 효과는 분포 곡선으로 설명된다"
+    },
+    {
+      "type": "related",
+      "target": "mate-collision-frequency",
+      "note": "충돌수 증가만으로는 설명이 모자란다"
+    },
+    {
+      "type": "related",
+      "target": "mate-activation-energy",
+      "note": "넘어야 할 문턱이 비교의 기준선이 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-02",
+  "pages": [
+    118,
+    119,
+    124
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

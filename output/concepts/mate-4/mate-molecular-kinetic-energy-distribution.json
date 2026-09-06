@@ -1,0 +1,124 @@
+{
+  "id": "mate-molecular-kinetic-energy-distribution",
+  "concept_key": "concept:molecular-kinetic-energy-distribution",
+  "registry_status": "new",
+  "term": "분자 운동 에너지 분포",
+  "aliases": [
+    "운동 에너지 분포 곡선"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 음차어여서 낱말 전체를 한자어로 적을 수 없다. 分子·運動·分布만 한자어에 해당한다.",
+    "english": "distribution of molecular kinetic energy"
+  },
+  "definition": "한 온도의 기체에서 분자마다 운동 에너지가 다르다는 사정을, 에너지 값마다 분자 수가 얼마인지로 나타낸 곡선.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-distribution-spread",
+      "text": "온도가 같은 기체라도 분자마다 운동 에너지가 달라서 분자 수는 특정 값을 중심으로 넓게 퍼져 있다.",
+      "form": {
+        "condition": "분자 수가 아주 많고 열적으로 고르게 섞인 상태일 때",
+        "type": "conditional",
+        "scope": "자유롭게 움직이는 많은 수의 기체 분자 집단에 한정한다."
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 정하는 것은 분포의 모양이지 낱낱 분자의 값이 아니므로, 모두 같은 값을 갖는다는 문장은 반드시 거짓이다.",
+      "inverted_text": "온도가 같은 기체 분자는 모두 같은 크기의 운동 에너지를 갖는다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-distribution-temperature-shift",
+      "text": "온도가 높아지면 곡선의 봉우리가 낮아지면서 오른쪽으로 옮겨 가고, 에너지가 큰 쪽 분자의 비율이 커진다.",
+      "form": {
+        "condition": "분자 수가 같은 같은 기체를 두 온도에서 견줄 때",
+        "type": "direct",
+        "scope": "곡선 아래 전체 넓이가 분자 수로 같게 유지되는 두 온도의 비교에 한정한다.",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동 에너지가 큰 쪽 분자의 비율",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 올라가면서 봉우리가 낮은 에너지 쪽으로 되돌아가는 일은 없으므로 방향을 맞바꾸면 반드시 거짓이다.",
+      "inverted_text": "온도가 높아지면 곡선의 봉우리가 왼쪽으로 옮겨 가고 에너지가 큰 쪽 분자의 비율이 작아진다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-distribution-area-above-ea",
+      "text": "곡선에서 활성화 에너지보다 오른쪽에 놓인 부분의 넓이가 반응을 일으킬 수 있는 분자 수에 해당한다.",
+      "form": {
+        "condition": "가로축을 운동 에너지, 세로축을 분자 수로 잡은 분포 곡선을 읽을 때",
+        "type": "conditional",
+        "scope": "활성화 에너지를 가로축 위의 한 지점으로 표시할 수 있는 반응에 한정한다."
+      },
+      "invertible": false,
+      "invertible_reason": "넓이와 분자 수를 맞대응시킨 읽기 규칙이라 맞바꿀 방향이 마땅하지 않다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온도가 높아지면 곡선이 통째로 위로 올라가 모든 에너지 구간에서 분자 수가 늘어난다",
+      "why_wrong": "분자 수는 그대로이므로 곡선 아래 넓이도 그대로다. 봉우리는 낮아지면서 오른쪽으로 옮겨 가고, 낮은 에너지 쪽 분자 수는 오히려 줄어든다.",
+      "linked_relation": "rel-distribution-temperature-shift",
+      "source": "llm"
+    },
+    {
+      "text": "곡선의 봉우리에 해당하는 에너지가 활성화 에너지다",
+      "why_wrong": "봉우리는 가장 많은 분자가 지닌 운동 에너지일 뿐이다. 활성화 에너지는 반응이 정하는 값이라 가로축의 다른 자리에 따로 표시된다.",
+      "linked_relation": "rel-distribution-area-above-ea",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-activation-energy",
+      "note": "곡선을 가르는 기준선이 활성화 에너지다"
+    },
+    {
+      "type": "next",
+      "target": "mate-effect-of-temperature-on-reaction-rate",
+      "note": "온도 효과를 이 곡선으로 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "mate-positive-catalyst",
+      "note": "반응할 수 있는 분자 수가 늘어남을 곡선에서 확인한다"
+    },
+    {
+      "type": "next",
+      "target": "mate-negative-catalyst",
+      "note": "반응할 수 있는 분자 수가 줄어듦을 곡선에서 확인한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-02",
+  "pages": [
+    119,
+    125
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

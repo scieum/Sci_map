@@ -1,0 +1,116 @@
+{
+  "id": "mate-effect-of-pressure-on-reaction-rate",
+  "concept_key": "concept:effect-of-pressure-on-reaction-rate",
+  "registry_status": "new",
+  "term": "압력과 반응 속도",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "압력(壓力)과 반응 속도(反應速度)를 우리말 조사 '과'로 이은 구다. 낱말 전체에 대응하는 한자어 표기가 없다.",
+    "english": "effect of pressure on reaction rate"
+  },
+  "definition": "기체 반응물을 누르는 압력이 반응 속도를 좌우한다는 관계. 압력을 올리면 같은 부피에 든 입자 수가 늘어 충돌 기회가 많아진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pressure-rate-up",
+      "text": "기체 반응물을 좁은 부피로 몰아 압력을 높이면 반응이 빨라진다.",
+      "form": {
+        "condition": "온도가 일정하고 기체 반응물의 양이 그대로인 채 부피만 줄일 때",
+        "type": "direct",
+        "scope": "기체가 반응물로 참여하는 반응에 한정한다. 액체나 고체만 참여하는 반응은 압력을 올려도 속도가 거의 달라지지 않는다.",
+        "antecedent": {
+          "quantity": "기체 반응물의 압력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기체 반응물을 압축해 놓고 반응이 느려지는 경우는 없으므로 방향을 맞바꾸면 반드시 거짓이다.",
+      "inverted_text": "기체 반응물을 좁은 부피로 몰아 압력을 높이면 반응이 느려진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pressure-is-concentration",
+      "text": "압력이 속도를 바꾸는 까닭은 단위 부피에 든 기체 입자 수, 곧 농도가 커지는 데 있다.",
+      "form": {
+        "condition": "온도가 일정하고 기체의 양이 변하지 않을 때",
+        "type": "causal",
+        "scope": "부피를 줄여 압력을 올린 경우에 한정한다. 부피를 그대로 두고 반응에 참여하지 않는 기체를 넣어 전체 압력만 올린 경우는 해당하지 않는다."
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝히는 진술이라 맞바꿀 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pressure-activation-energy-fixed",
+      "text": "압력을 올려 부딪치는 횟수가 늘어도 반응의 활성화 에너지는 그대로다.",
+      "form": {
+        "condition": "온도가 일정하고 촉매를 넣지 않은 채 압력만 바꿀 때",
+        "type": "conditional",
+        "scope": "활성화 에너지가 반응 경로로 정해지는 범위에서만 참이다. 촉매를 넣어 경로를 바꾸면 달라진다."
+      },
+      "invertible": true,
+      "invertible_reason": "경로가 그대로인데 압력만으로 넘어야 할 문턱이 낮아지는 일은 없으므로 뒤집으면 반드시 거짓이다.",
+      "inverted_text": "압력을 올리면 반응의 활성화 에너지가 작아진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "압력을 높이면 어떤 반응이든 빨라진다",
+      "why_wrong": "압력이 효과를 내는 것은 기체 반응물이 있을 때다. 액체나 고체만 반응하는 경우에는 압력을 올려도 단위 부피당 입자 수가 거의 달라지지 않는다.",
+      "linked_relation": "rel-pressure-rate-up",
+      "source": "llm"
+    },
+    {
+      "text": "부피를 그대로 두고 반응하지 않는 기체를 더 넣어 압력을 올려도 반응 속도가 빨라진다",
+      "why_wrong": "속도를 좌우하는 것은 전체 압력이 아니라 반응물의 농도다. 부피가 그대로면 반응물의 단위 부피당 입자 수가 변하지 않으므로 속도도 그대로다.",
+      "linked_relation": "rel-pressure-is-concentration",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-collision-frequency",
+      "note": "설명의 고리가 충돌수다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-effect-of-concentration-on-reaction-rate",
+      "note": "압력 효과는 농도 효과로 되돌려 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "mate-effect-of-surface-area-on-reaction-rate",
+      "note": "반응물의 상태에 따라 갈리는 같은 계열의 요인이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-01",
+  "pages": [
+    117,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

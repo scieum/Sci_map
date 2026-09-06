@@ -150,7 +150,7 @@ def _rel_media(path: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2", "mate-3"])
+    ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2", "mate-3", "mate-4"])
     args = ap.parse_args()
 
     cards: list[dict] = []

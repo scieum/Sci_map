@@ -1,0 +1,118 @@
+{
+  "id": "mate-rate-constant",
+  "concept_key": "concept:rate-constant",
+  "registry_status": "new",
+  "term": "반응 속도 상수",
+  "notation": {
+    "hanja": "反應速度常數",
+    "hanja_gloss": "反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도 · 常 항상 상 · 數 셈 수",
+    "english": "rate constant",
+    "symbol_display": "k",
+    "symbol_plain": "k"
+  },
+  "definition": "반응 속도식에서 농도의 거듭제곱 앞에 붙는 비례 상수. 반응마다 고유한 값을 가지며 온도가 정해지면 값도 정해진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-k-concentration",
+      "text": "반응물의 농도를 바꾸어도 반응 속도 상수의 값은 달라지지 않는다.",
+      "form": {
+        "condition": "온도를 일정하게 두고 농도만 바꿀 때",
+        "type": "conditional",
+        "scope": "온도가 고정된 하나의 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "농도를 따라 상수가 변한다면 그 값을 상수로 쓸 이유가 없어 정의와 어긋난다.",
+      "inverted_text": "반응물의 농도를 2배로 하면 반응 속도 상수도 2배가 된다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-k-temperature",
+      "text": "온도를 높이면 같은 반응이라도 속도 상수가 커져 같은 농도에서도 반응이 더 빨라진다.",
+      "form": {
+        "condition": "농도 조건을 그대로 두고 온도만 올릴 때",
+        "type": "causal",
+        "scope": "온도를 높이면 빨라지는 일반적인 화학 반응",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도 상수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 범위에서 온도를 올렸을 때 상수가 작아진다면 반응이 느려져야 하므로 관찰과 어긋난다.",
+      "inverted_text": "온도를 높이면 같은 반응의 속도 상수가 작아져 반응이 더 느려진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-k-specific",
+      "text": "반응 속도 상수는 반응마다 고유한 값이므로 온도가 같아도 반응이 다르면 같은 값이라고 볼 수 없다.",
+      "form": {
+        "condition": "서로 다른 반응을 같은 온도에서 견줄 때",
+        "type": "conditional",
+        "scope": "서로 다른 두 화학 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "두 반응의 상수가 우연히 같은 값일 수도 있어 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응물의 농도가 커지면 반응 속도가 빨라지므로 반응 속도 상수도 함께 커진다",
+      "why_wrong": "농도가 커질 때 커지는 것은 속도이지 상수가 아니다. 상수는 온도가 같으면 농도와 상관없이 그대로다.",
+      "source": "llm",
+      "linked_relation": "rel-k-concentration"
+    },
+    {
+      "text": "반응 속도 상수는 이름이 상수이므로 온도가 변해도 값이 변하지 않는다",
+      "why_wrong": "농도에 대해 상수라는 뜻이지 모든 조건에 대해 고정된 값이라는 뜻이 아니다. 온도가 바뀌면 값이 달라진다.",
+      "source": "llm",
+      "linked_relation": "rel-k-temperature"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-rate-law"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-order",
+      "note": "같은 속도식 안에서 서로 다른 자리를 맡는다"
+    },
+    {
+      "type": "related",
+      "target": "mate-effect-of-temperature-on-reaction-rate",
+      "note": "온도가 바뀔 때 실제로 변하는 값이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    108,
+    109,
+    114
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,137 @@
+{
+  "id": "mate-collision-frequency",
+  "concept_key": "concept:collision-frequency",
+  "registry_status": "new",
+  "term": "충돌수",
+  "aliases": [
+    "충돌 횟수"
+  ],
+  "notation": {
+    "hanja": "衝突數",
+    "hanja_gloss": "衝 찌를 충 · 突 갑자기 돌 · 數 셈 수",
+    "english": "collision frequency"
+  },
+  "definition": "정해진 시간 동안 반응물 입자끼리 서로 부딪치는 횟수. 이 가운데 방향과 에너지 조건을 갖춘 것만 반응으로 이어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-collision-frequency-density",
+      "text": "같은 부피 안에 반응물 입자가 빽빽하게 들어 있을수록 단위 시간당 충돌수가 많아진다.",
+      "form": {
+        "condition": "온도가 일정하고 반응물의 종류가 같을 때",
+        "type": "direct",
+        "scope": "입자끼리 부딪쳐 진행하는 반응. 단위 부피당 입자 수 자체가 늘지 않는 변화에는 해당하지 않는다.",
+        "antecedent": {
+          "quantity": "단위 부피당 반응물 입자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "단위 시간당 충돌수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "입자가 빽빽해질수록 부딪칠 기회가 줄어드는 경우는 없으므로 방향을 맞바꾸면 반드시 거짓이다.",
+      "inverted_text": "같은 부피 안에 반응물 입자가 빽빽하게 들어 있을수록 단위 시간당 충돌수는 줄어든다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-collision-frequency-effective",
+      "text": "부딪치는 횟수가 늘면 그 가운데 조건을 갖춘 유효 충돌의 수도 함께 늘어난다.",
+      "form": {
+        "condition": "온도가 일정해 충돌 중 유효 충돌이 차지하는 비율이 그대로일 때",
+        "type": "direct",
+        "scope": "유효 충돌의 비율이 달라지지 않는 비교에 한정한다. 온도나 촉매로 비율 자체가 바뀌면 이 비례만으로 설명할 수 없다.",
+        "antecedent": {
+          "quantity": "단위 시간당 충돌수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "단위 시간당 유효 충돌수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "유효 충돌의 비율이 그대로인데 전체 충돌만 늘고 유효 충돌이 줄어드는 일은 있을 수 없다.",
+      "inverted_text": "부딪치는 횟수가 늘면 그 가운데 유효 충돌의 수는 오히려 줄어든다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-collision-frequency-temperature-limit",
+      "text": "온도를 10 ℃ 올렸을 때 늘어나는 충돌수는 몇 % 수준이어서, 속도가 두 배 가까이 빨라지는 까닭이 되지 못한다.",
+      "form": {
+        "condition": "농도와 압력은 그대로 두고 온도만 올렸을 때",
+        "type": "causal",
+        "scope": "온도 변화로 생긴 속도 증가를 설명하는 자리에 한정한다. 농도·압력·표면적 변화에는 해당하지 않는다."
+      },
+      "invertible": false,
+      "invertible_reason": "증가 폭의 크기를 견주는 진술이라 방향을 맞바꾼 문장이 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "입자가 한 번 부딪치면 반응이 한 번 일어난다",
+      "why_wrong": "부딪친다고 모두 반응하는 것은 아니다. 방향이 알맞고 에너지가 충분한 충돌만 반응으로 이어지므로 유효 충돌수는 전체 충돌수보다 훨씬 적다.",
+      "linked_relation": "rel-collision-frequency-effective",
+      "source": "llm"
+    },
+    {
+      "text": "온도를 올리면 충돌수가 크게 늘어나기 때문에 반응 속도가 빨라진다",
+      "why_wrong": "온도를 10 ℃ 올려도 충돌수는 몇 % 남짓 늘 뿐이다. 속도가 크게 빨라지는 주된 까닭은 활성화 에너지를 넘는 분자의 비율이 커지는 데 있다.",
+      "linked_relation": "rel-collision-frequency-temperature-limit",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-effective-collision",
+      "note": "충돌 가운데 무엇이 반응이 되는지를 먼저 가려야 한다"
+    },
+    {
+      "type": "next",
+      "target": "mate-effect-of-concentration-on-reaction-rate",
+      "note": "농도 효과를 설명하는 고리다"
+    },
+    {
+      "type": "next",
+      "target": "mate-effect-of-pressure-on-reaction-rate",
+      "note": "압력 효과를 설명하는 고리다"
+    },
+    {
+      "type": "next",
+      "target": "mate-effect-of-surface-area-on-reaction-rate",
+      "note": "표면적 효과를 설명하는 고리다"
+    },
+    {
+      "type": "related",
+      "target": "mate-effect-of-temperature-on-reaction-rate",
+      "note": "온도 효과는 충돌수만으로 설명되지 않는다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-01",
+  "pages": [
+    117,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

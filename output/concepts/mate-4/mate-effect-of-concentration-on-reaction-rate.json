@@ -1,0 +1,126 @@
+{
+  "id": "mate-effect-of-concentration-on-reaction-rate",
+  "concept_key": "concept:effect-of-concentration-on-reaction-rate",
+  "registry_status": "new",
+  "term": "농도와 반응 속도",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "농도(濃度)와 반응 속도(反應速度)를 우리말 조사 '와'로 이은 구다. 낱말 전체에 대응하는 한자어 표기가 없다.",
+    "english": "effect of concentration on reaction rate"
+  },
+  "definition": "반응물이 얼마나 진한가가 반응 속도를 좌우한다는 관계. 진할수록 같은 시간에 부딪칠 기회가 많아져 반응이 빨라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-concentration-rate-up",
+      "text": "다른 조건을 그대로 두고 반응물을 더 진하게 하면 같은 시간에 반응하는 입자 수가 많아진다.",
+      "form": {
+        "condition": "온도와 촉매를 바꾸지 않고 반응물의 농도만 바꿀 때",
+        "type": "direct",
+        "scope": "농도가 반응 속도식에 들어가는 반응물에 한정한다. 그 반응물에 대한 차수가 0이면 농도를 올려도 속도는 달라지지 않는다.",
+        "antecedent": {
+          "quantity": "반응물의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도가 속도식에 들어가는 반응물이라면 진하게 할수록 느려지는 경우는 없으므로 방향을 맞바꾸면 반드시 거짓이다.",
+      "inverted_text": "다른 조건을 그대로 두고 반응물을 더 진하게 하면 반응 속도는 느려진다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-concentration-collision-chain",
+      "text": "농도가 속도를 끌어올리는 통로는 충돌수가 늘고 그에 따라 유효 충돌이 늘어나는 데 있다.",
+      "form": {
+        "condition": "온도가 일정해 활성화 에너지를 넘는 분자의 비율이 그대로일 때",
+        "type": "causal",
+        "scope": "입자 충돌로 진행하는 반응의 설명에 한정한다. 활성화 에너지 자체를 바꾸는 촉매의 작용과는 통로가 다르다."
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝히는 진술이라 맞바꿀 방향이 없어 반드시 거짓인 반대 문장을 만들 수 없다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-concentration-daily-example",
+      "text": "부채질을 하면 나무가 더 잘 타는 것은 반응물인 산소가 계속 공급되어 진하게 유지되기 때문이다.",
+      "form": {
+        "condition": "탈 물질과 불이 붙을 조건이 이미 갖추어져 있을 때",
+        "type": "causal",
+        "scope": "기체 반응물이 관여하는 연소에 한정한다. 산소가 이미 넉넉해 농도가 속도를 좌우하지 않는 상황은 제외한다."
+      },
+      "invertible": false,
+      "invertible_reason": "일상의 사례를 원인으로 풀이한 문장이라 방향을 맞바꾼 진술이 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응물의 농도를 두 배로 하면 반응 속도도 반드시 두 배가 된다",
+      "why_wrong": "속도가 농도에 얼마나 민감한지는 반응 차수가 정한다. 차수가 2이면 네 배가 되고, 0이면 아예 달라지지 않는다.",
+      "linked_relation": "rel-concentration-rate-up",
+      "source": "llm"
+    },
+    {
+      "text": "농도를 높이면 반응의 활성화 에너지가 작아져서 반응이 빨라진다",
+      "why_wrong": "활성화 에너지는 반응 경로가 정하는 값이라 농도를 바꾸어도 그대로다. 농도가 바꾸는 것은 부딪치는 횟수뿐이다.",
+      "linked_relation": "rel-concentration-collision-chain",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-rate",
+      "note": "무엇이 빨라지는지를 알아야 요인을 읽는다"
+    },
+    {
+      "type": "prereq",
+      "target": "mate-collision-frequency",
+      "note": "설명의 고리가 충돌수다"
+    },
+    {
+      "type": "next",
+      "target": "mate-effect-of-pressure-on-reaction-rate",
+      "note": "기체에서는 압력이 농도 노릇을 한다"
+    },
+    {
+      "type": "related",
+      "target": "mate-effect-of-surface-area-on-reaction-rate",
+      "note": "고체에서는 표면적이 같은 자리에 놓인다"
+    },
+    {
+      "type": "related",
+      "target": "mate-rate-law",
+      "note": "농도와 속도의 관계를 식으로 적은 것이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-2-01",
+  "pages": [
+    116,
+    117,
+    124
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,108 @@
+{
+  "id": "mate-activated-complex",
+  "concept_key": "concept:activated-complex",
+  "registry_status": "new",
+  "term": "활성화물",
+  "aliases": [
+    "활성 착물"
+  ],
+  "notation": {
+    "hanja": "活性化物",
+    "hanja_gloss": "活 살 활 · 性 성품 성 · 化 될 화 · 物 물건 물",
+    "english": "activated complex"
+  },
+  "definition": "활성화 상태에 놓여 있는 불안정한 화합물. 반응물의 결합이 약해지고 생성물의 결합이 만들어지는 도중에 잠깐 존재한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-complex-gap",
+      "text": "반응물과 활성화물의 에너지 차이가 그 반응의 활성화 에너지이다.",
+      "form": {
+        "condition": "반응의 진행에 따른 에너지 도표를 정반응 쪽으로 읽을 때",
+        "type": "conditional",
+        "scope": "활성화물이 반응물보다 에너지가 높은 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "반응물과 생성물의 에너지 차이는 반응 엔탈피이고 장벽의 높이보다 작으므로 활성화 에너지가 될 수 없다.",
+      "inverted_text": "반응물과 생성물의 에너지 차이가 그 반응의 활성화 에너지이다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-complex-transient",
+      "text": "활성화물은 반응이 진행되는 도중에만 잠깐 나타나므로 반응이 끝난 뒤의 생성물과 구별해야 한다.",
+      "form": {
+        "condition": "에너지 도표에서 반응물·활성화물·생성물을 차례로 짚을 때",
+        "type": "classification",
+        "scope": "활성화물을 거쳐 진행되는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "반응이 끝난 뒤에도 남는다면 그것은 장벽의 정상이 아니라 안정한 생성물이라는 뜻이 된다.",
+      "inverted_text": "활성화물은 반응이 끝난 뒤에 생성물과 함께 남는다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-complex-unstable",
+      "text": "활성화물은 에너지가 높고 불안정하여 따로 분리해 두고 관찰하기 어렵다.",
+      "form": {
+        "condition": "반응이 진행되는 도중에 활성화물을 붙잡으려 할 때",
+        "type": "causal",
+        "scope": "에너지 장벽의 정상에 놓인 화합물"
+      },
+      "invertible": false,
+      "invertible_reason": "분리하기 어렵다는 진술을 뒤집은 문장이 모든 반응에서 반드시 거짓이라고 단정하기 어렵다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "활성화물은 반응이 끝나면 생성물과 함께 그대로 남는다",
+      "why_wrong": "활성화물은 장벽의 정상에서 잠깐 존재하는 불안정한 화합물이다. 곧 반응물이나 생성물 쪽으로 바뀐다.",
+      "source": "llm",
+      "linked_relation": "rel-complex-transient"
+    },
+    {
+      "text": "활성화물은 반응물보다 에너지가 낮아 안정하므로 반응이 저절로 진행된다",
+      "why_wrong": "활성화물은 반응물보다 에너지가 높다. 그 차이만큼의 에너지를 얻어야 반응이 진행된다.",
+      "source": "llm",
+      "linked_relation": "rel-complex-gap"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-activated-state"
+    },
+    {
+      "type": "related",
+      "target": "mate-activation-energy",
+      "note": "반응물과의 에너지 차이로 정의되는 값이다"
+    },
+    {
+      "type": "related",
+      "target": "mate-effective-collision"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-03",
+  "pages": [
+    113
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

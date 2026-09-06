@@ -1,0 +1,117 @@
+{
+  "id": "mate-rate-law",
+  "concept_key": "concept:rate-law",
+  "registry_status": "new",
+  "term": "반응 속도식",
+  "aliases": [
+    "속도식"
+  ],
+  "notation": {
+    "hanja": "反應速度式",
+    "hanja_gloss": "反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도 · 式 법 식",
+    "english": "rate law",
+    "symbol_display": "v = k[A]ᵐ[B]ⁿ"
+  },
+  "definition": "온도가 일정할 때 반응 속도가 반응물의 농도에 어떻게 좌우되는지를, 비례 상수와 농도의 거듭제곱으로 나타낸 식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ratelaw-experiment",
+      "text": "반응 속도식의 모양은 실험으로 얻은 자료에서 결정되며, 화학 반응식의 계수만 보고 미리 알아낼 수 없다.",
+      "form": {
+        "condition": "전체 화학 반응식만 알고 속도식을 새로 구하려 할 때",
+        "type": "conditional",
+        "scope": "여러 단계를 거칠 수 있는 일반적인 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "계수를 그대로 지수로 옮기는 방법이 일반적으로 통한다는 주장은 실험으로 결정한다는 원칙과 어긋난다.",
+      "inverted_text": "반응 속도식은 화학 반응식의 계수를 지수 자리에 그대로 옮겨 적으면 구할 수 있다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ratelaw-parts",
+      "text": "반응 속도식에는 비례 상수인 반응 속도 상수와, 각 반응물의 농도에 붙는 지수인 반응 차수가 함께 들어 있다.",
+      "form": {
+        "condition": "속도식을 부분으로 나누어 읽을 때",
+        "type": "classification",
+        "scope": "농도의 거듭제곱 곱으로 쓰인 속도식"
+      },
+      "invertible": false,
+      "invertible_reason": "식의 구성 요소를 나누어 부르는 명제라 뒤집을 방향 자체가 없다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ratelaw-temperature",
+      "text": "온도가 달라지면 같은 반응이라도 속도 상수 값이 달라져 앞서 쓰던 속도식을 그대로 쓸 수 없다.",
+      "form": {
+        "condition": "농도 조건은 그대로 두고 온도만 바꿀 때",
+        "type": "conditional",
+        "scope": "온도에 따라 속도 상수가 변하는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 바뀌어도 같은 상수를 쓸 수 있다면 온도를 일정하게 두라는 전제가 필요 없어진다.",
+      "inverted_text": "온도가 달라져도 같은 반응이면 앞서 쓰던 속도 상수를 그대로 쓸 수 있다.",
+      "curriculum": [
+        "12물에04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응 속도식의 지수는 화학 반응식에서 각 반응물 앞에 붙은 계수와 항상 같다",
+      "why_wrong": "지수는 실험 자료로 정하는 값이다. 계수와 우연히 같아지는 반응도 있지만 그것을 규칙으로 삼을 수는 없다.",
+      "source": "llm",
+      "linked_relation": "rel-ratelaw-experiment"
+    },
+    {
+      "text": "반응 속도식을 한 번 구해 두면 온도가 달라져도 같은 식으로 속도를 계산할 수 있다",
+      "why_wrong": "속도식 안의 반응 속도 상수는 온도에 따라 달라진다. 온도가 바뀌면 그 온도에서 상수를 다시 구해야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-ratelaw-temperature"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mate-reaction-rate"
+    },
+    {
+      "type": "next",
+      "target": "mate-rate-constant",
+      "note": "속도식의 비례 상수로 정의된다"
+    },
+    {
+      "type": "next",
+      "target": "mate-reaction-order",
+      "note": "속도식의 지수로 정의된다"
+    },
+    {
+      "type": "related",
+      "target": "mate-initial-reaction-rate",
+      "note": "속도식을 구하는 자료가 초기 속도다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-01"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-01",
+  "pages": [
+    108,
+    109,
+    114
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

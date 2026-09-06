@@ -1,0 +1,116 @@
+{
+  "id": "mate-effective-collision",
+  "concept_key": "concept:effective-collision",
+  "registry_status": "new",
+  "term": "유효 충돌",
+  "notation": {
+    "hanja": "有效衝突",
+    "hanja_gloss": "有 있을 유 · 效 본받을 효 · 衝 찌를 충 · 突 부딪칠 돌",
+    "english": "effective collision"
+  },
+  "definition": "반응물 입자가 부딪칠 때 결합 상태가 실제로 바뀌어 생성물이 만들어지는 충돌. 충돌 방향과 충돌 에너지가 모두 조건을 갖춘 경우다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eff-conditions",
+      "text": "충돌 방향이 적합하고 충분히 빠르게 부딪쳐야 유효 충돌이 되어 반응이 일어난다.",
+      "form": {
+        "condition": "반응물 입자끼리 서로 충돌할 때",
+        "type": "conditional",
+        "scope": "입자의 충돌로 진행되는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 조건 가운데 하나만 갖추어도 된다면 방향만 맞고 느린 충돌에서도 생성물이 생겨야 한다.",
+      "inverted_text": "충돌 방향이 적합하기만 하면 아무리 느리게 부딪쳐도 반응이 일어난다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eff-not-all",
+      "text": "반응물 입자가 서로 충돌했다고 해서 그때마다 반응이 일어나는 것은 아니다.",
+      "form": {
+        "condition": "반응물끼리 충돌이 일어나고 있을 때",
+        "type": "conditional",
+        "scope": "입자의 충돌로 진행되는 일반적인 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "모든 충돌이 반응으로 이어진다면 유효 충돌을 따로 가려낼 이유가 없어진다.",
+      "inverted_text": "반응물 입자가 서로 충돌하면 그때마다 반응이 일어난다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eff-rate",
+      "text": "단위 시간당 유효 충돌 수가 많아질수록 반응 속도가 빨라진다.",
+      "form": {
+        "condition": "같은 반응을 같은 조건에서 견줄 때",
+        "type": "direct",
+        "scope": "입자의 충돌로 진행되는 화학 반응",
+        "antecedent": {
+          "quantity": "단위 시간당 유효 충돌 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "유효 충돌은 곧 반응이 일어난 충돌이므로 그 수가 늘었는데 속도가 느려질 수 없다.",
+      "inverted_text": "단위 시간당 유효 충돌 수가 많아질수록 반응 속도는 느려진다.",
+      "curriculum": [
+        "12물에04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응물 분자가 서로 충돌하기만 하면 반드시 생성물이 만들어진다",
+      "why_wrong": "충돌 방향이 맞지 않거나 충돌이 너무 느리면 결합 상태가 바뀌지 않아 반응이 일어나지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-eff-not-all"
+    },
+    {
+      "text": "충돌 에너지가 충분하면 어느 방향으로 부딪쳐도 반응이 일어난다",
+      "why_wrong": "에너지와 방향은 둘 다 갖추어야 하는 조건이다. 에너지가 커도 방향이 맞지 않으면 결합이 재배열되지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-eff-conditions"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mate-activation-energy",
+      "note": "유효 충돌에 필요한 최소 에너지로 나아간다"
+    },
+    {
+      "type": "next",
+      "target": "mate-collision-frequency",
+      "note": "충돌 가운데 유효한 것을 가려야 충돌수의 뜻이 산다"
+    },
+    {
+      "type": "related",
+      "target": "mate-reaction-rate"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물에04-03"
+  ],
+  "subject": "물질과 에너지",
+  "unit": "Ⅳ. 반응 속도",
+  "unit_id": "mate-4",
+  "topic_id": "mate-4-1-03",
+  "pages": [
+    112,
+    114
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}
