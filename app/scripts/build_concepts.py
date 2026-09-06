@@ -103,6 +103,11 @@ def to_app(card: dict, subject, major, section_of, topic_of, media) -> dict:
         "subject": subject,
         "unit": f"{major} > {section_of.get(tid, '')}".rstrip(" >"),
         "topic": topic_of.get(tid, ""),
+        # 목차 번호(Ⅰ. / 1. / 01.)의 근거다. 화면에서 순서를 세지 않는다 —
+        # 세면 카드가 하나 빠지거나 순서가 바뀌는 순간 번호가 어긋난다.
+        # 백로그 id 가 곧 교과서의 번호다: mate-1-1-01 → Ⅰ 단원 · 1 중단원 · 01 소단원.
+        "unitId": card.get("unit_id"),
+        "topicId": tid or None,
         "hasRestrictedMedia": False,
     }
     if n.get("hanja_gloss"):
@@ -127,7 +132,7 @@ def to_app(card: dict, subject, major, section_of, topic_of, media) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--units", nargs="*", default=["mate-1"])
+    ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2"])
     args = ap.parse_args()
 
     cards: list[dict] = []
@@ -144,13 +149,10 @@ def main() -> int:
                                 subject, major, section_of, topic_of, media))
         print(f"{unit_id}: 카드 {len(files)}장 · 그림 {len(media)}장")
 
-    # 소주제 순서대로 — 백로그 순서를 그대로 화면 순서로 쓴다
-    order = {}
-    for unit_id in args.units:
-        _, _, _, topic_of = unit_titles(unit_id)
-        for i, t in enumerate(topic_of):
-            order[topic_of[t]] = i
-    cards.sort(key=lambda c: (c["unit"], order.get(c["topic"], 99)))
+    # 백로그 순서를 그대로 화면 순서로 쓴다. topic_id 가 곧 그 순서다
+    # (mate-1-1-01 < mate-1-1-02 < mate-1-2-01). 소주제 **이름**으로 순서를
+    # 매기면 단원이 둘 이상일 때 같은 이름끼리 자리를 덮어쓴다.
+    cards.sort(key=lambda c: (c.get("unitId") or "", c.get("topicId") or "~", c["id"]))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(cards, ensure_ascii=False, indent=2) + "\n",

@@ -107,8 +107,16 @@ def check_duplicates(cands, res: Result) -> None:
             [k + ": " + ", ".join(v) for k, v in dup_key.items()])
 
     # 기존 카드와의 표제어 충돌 — 중복이면 same 후보로 표시돼 있어야 한다
+    # 확정 카드는 output/concepts/<unit-id>/<card-id>.json 로 단원마다 폴더를 쓴다.
+    # 예전 글롭은 CONCEPTS_DIR 바로 아래만 훑어 그 폴더를 통째로 놓쳤다 —
+    # mate-2 후보가 mate-1 카드 30장과 표제어가 겹쳐도 "기존 카드가 없다"로
+    # 지나갔다. 하위 폴더를 함께 본다 (*.candidates.json 은 카드가 아니다).
     existing: dict[str, str] = {}
-    for p in sorted(CONCEPTS_DIR.glob("*.draft.json")) + sorted(CONCEPTS_DIR.glob("*.card.json")):
+    card_files = (sorted(CONCEPTS_DIR.glob("*.draft.json"))
+                  + sorted(CONCEPTS_DIR.glob("*.card.json"))
+                  + [q for q in sorted(CONCEPTS_DIR.glob("*/*.json"))
+                     if not q.name.endswith(".candidates.json")])
+    for p in card_files:
         try:
             card = json.loads(p.read_text(encoding="utf-8"))
         except Exception:
