@@ -5,7 +5,7 @@ import { Art } from "@/components/Art";
 import { BottomCta, Card, Screen } from "@/components/ui";
 import { BRAND, TILE } from "@/lib/brand";
 import { todayKey, useProgress } from "@/lib/store";
-import { buildDailySet } from "@/data/quiz";
+import { buildDailyOverview } from "@/data/quiz";
 
 /**
  * 오늘 탭(홈) — 컬러 히어로 카드(티키타카) + 진단 리스트 행(핑글) + 출석 잔디
@@ -14,10 +14,12 @@ export default function TodayPage() {
   const progress = useProgress();
   const doneToday = progress.doneDates.includes(todayKey());
 
-  const set = useMemo(
-    () => buildDailySet(todayKey(), progress.wrongConceptIds),
+  // 세 유형의 오늘 세트 — 히어로와 타일은 개념 수로 말한다 (문항 수는 유형마다 다르다)
+  const today = useMemo(
+    () => buildDailyOverview(todayKey(), progress.wrongConceptIds),
     [progress.wrongConceptIds],
   );
+  const perKind = today.sets[0]?.items.length ?? 0;
 
   return (
     <Screen>
@@ -40,7 +42,7 @@ export default function TodayPage() {
       <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-white shadow-hero">
         <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[12px] font-semibold">
           <Art name="timer" />
-          약 3분 · {set.items.length}문항
+          유형당 약 3분 · {perKind}문항
         </span>
         <h2 className="text-[24px] font-extrabold leading-snug">
           {doneToday ? (
@@ -53,12 +55,12 @@ export default function TodayPage() {
             <>
               오늘도 가볍게,
               <br />
-              {set.items.length}문항이면 충분해요
+              한 유형씩 {perKind}문항
             </>
           )}
         </h2>
         <p className="mt-2 text-[14px] text-white/85">
-          복습 {set.reviewCount} + 신규 {set.newCount} 문항으로 골라뒀어요
+          OX · 단답 · 선택형 — 하나 골라 시작해요
         </p>
         <span className="pointer-events-none absolute -bottom-3 -right-1" aria-hidden>
           <Art name={doneToday ? "daily-done" : "daily-todo"} />
@@ -68,8 +70,8 @@ export default function TodayPage() {
       {/* 오늘의 구성 — 파스텔 타일 셋. 참고 이미지의 "이용 방법" 줄처럼
           옅은 바탕 + 작은 색 태그 + 숫자. 브랜드색은 태그와 숫자에만 쓴다 (D1) */}
       <div className="mt-4 grid grid-cols-3 gap-3">
-        <Tile tag="복습" label="돌아온 개념" value={`${set.reviewCount}개`} art="review-return" tone={TILE.review} />
-        <Tile tag="신규" label="새로 만나는 개념" value={`${set.newCount}개`} art="concept-new" tone={TILE.fresh} />
+        <Tile tag="복습" label="돌아온 개념" value={`${today.reviewConceptCount}개`} art="review-return" tone={TILE.review} />
+        <Tile tag="신규" label="새 개념" value={`${today.newConceptCount}개`} art="concept-new" tone={TILE.fresh} />
         <Tile tag="연속" label="이어온 학습" value={`${progress.streak.count}일`} art="streak-flame" tone={TILE.streak} />
       </div>
 
@@ -82,7 +84,7 @@ export default function TodayPage() {
         <Grass doneDates={progress.doneDates} />
       </Card>
 
-      <BottomCta href="/today/run">
+      <BottomCta href="/today">
         {doneToday ? "한 번 더 풀어보기" : "오늘의 학습 시작하기"}
       </BottomCta>
     </Screen>

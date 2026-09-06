@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { buildDailySet, checkShortAnswer } from "@/data/quiz";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useMemo, useState } from "react";
+import { asKind, buildDailySet, checkShortAnswer, KIND_LABEL } from "@/data/quiz";
 import { Art } from "@/components/Art";
 import { conceptById } from "@/data/concepts";
 import type { QuizItem } from "@/lib/types";
@@ -10,6 +11,10 @@ import { completeDaily, loadProgress, markConcept, todayKey } from "@/lib/store"
 
 /**
  * 데일리 퀴즈 러너 — 문항당 1화면 / 즉시 피드백 시트 / 점수 히어로 결과
+ *
+ * 세션 하나는 **한 유형**이다 (`?kind=ox|short|mcq`). 유형이 섞이면 화면도
+ * 채점도 문항마다 갈아끼워야 하고, 학생은 매번 "이번엔 뭘 하는 문제지"부터
+ * 읽어야 한다. 유형은 /today 에서 고른다.
  */
 
 interface Answered {
@@ -19,9 +24,19 @@ interface Answered {
 }
 
 export default function QuizRunPage() {
+  // useSearchParams 는 정적 렌더 경계가 필요하다 — Suspense 로 감싼다
+  return (
+    <Suspense fallback={null}>
+      <Runner />
+    </Suspense>
+  );
+}
+
+function Runner() {
+  const kind = asKind(useSearchParams().get("kind"));
   const set = useMemo(
-    () => buildDailySet(todayKey(), loadProgress().wrongConceptIds),
-    [],
+    () => buildDailySet(todayKey(), loadProgress().wrongConceptIds, kind),
+    [kind],
   );
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Answered[]>([]);
@@ -57,9 +72,9 @@ export default function QuizRunPage() {
   if (total === 0)
     return (
       <main className="mx-auto max-w-xl px-5 py-20 text-center text-ink-sub">
-        출제할 문항이 없어요.
-        <Link href="/" className="mt-4 block font-bold text-primary-600">
-          홈으로
+        {KIND_LABEL[kind]} 문항이 아직 없어요.
+        <Link href="/today" className="mt-4 block font-bold text-primary-600">
+          다른 유형 고르기
         </Link>
       </main>
     );
@@ -138,7 +153,7 @@ function QuestionView({
     <section className="flex flex-1 flex-col">
       <span className="mb-3 self-start rounded-full bg-primary-50 px-3.5 py-1.5 text-[12px] font-bold text-primary-600">
         {concept?.unit.split(" > ").pop()} ·{" "}
-        {item.kind === "ox" ? "OX 퀴즈" : item.kind === "short" ? "단답형" : "선택형"}
+        {KIND_LABEL[item.kind]}
       </span>
       <div className="rounded-[24px] bg-surface p-6 shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
         {item.kind !== "ox" && (

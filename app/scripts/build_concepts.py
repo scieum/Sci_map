@@ -117,6 +117,9 @@ def to_app(card: dict, subject, major, section_of, topic_of, media) -> dict:
         # 백로그 id 가 곧 교과서의 번호다: mate-1-1-01 → Ⅰ 단원 · 1 중단원 · 01 소단원.
         "unitId": card.get("unit_id"),
         "topicId": tid or None,
+        # C8 부분 승인의 결과. false 면 데일리 문항에서 제외한다 (CLAUDE.md §9.1).
+        # 앱이 이 값을 보지 않으면 미승인 명제가 그대로 OX 가 된다.
+        "quizReady": bool(card.get("quiz_ready", False)),
         "hasRestrictedMedia": False,
     }
     if n.get("hanja_gloss"):

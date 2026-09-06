@@ -57,6 +57,12 @@ export interface Concept {
   /** 백로그 소단원 id ("mate-1-1-01"). 목차 번호 1. / 01. 의 근거 */
   topicId?: string;
   /**
+   * C8 에서 명제가 하나라도 승인됐는가. false 면 데일리 문항을 만들지 않는다
+   * (CLAUDE.md §9.1). 시드처럼 값이 없으면 false 로 본다 — 게이트를 지나지 않은
+   * 카드가 문항이 되는 쪽보다 안 되는 쪽이 안전하다.
+   */
+  quizReady?: boolean;
+  /**
    * 이 카드의 그림이 restricted 자산인가 (§0.4 — 카드가 아니라 그림만 잠근다).
    * **판단이 아니라 규칙이다** — rights.holder 가 교사 자신이 아니면 무조건 true.
    * 실제로 보여줄지는 src/lib/access.ts 의 스위치가 정한다.
