@@ -6,6 +6,7 @@ import { buildTree, byTopic, majorNo, minorNo, topicNo } from "@/data/concepts";
 import type { Concept } from "@/lib/types";
 import { LevelDots, Screen, ScreenTitle } from "@/components/ui";
 import { useProgress } from "@/lib/store";
+import { subjectAccent } from "@/lib/brand";
 
 /** 개념 탭 — 과목 알약 칩 → 대단원 카드 → 중단원 접기 → 소주제 → 개념 행 */
 export default function ConceptsPage() {
@@ -30,7 +31,7 @@ export default function ConceptsPage() {
             onClick={() => setSubject(s)}
             className={`shrink-0 rounded-full px-4.5 py-2 text-[14px] font-bold transition-colors ${
               s === subject
-                ? "bg-primary-500 text-white shadow-chip"
+                ? `${subjectAccent(s)} text-white`
                 : "bg-surface text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.05)]"
             }`}
           >
