@@ -15,10 +15,12 @@ import type { ConceptLink, LinkType } from "@/lib/types";
  */
 
 const ROLE: Record<LinkType, { badge: string; cls: string }> = {
+  // 셋이 서로 다른 색이어야 한다. 먼저와 관련이 둘 다 회색이던 때에는
+  // 배지가 붙어 있어도 어느 쪽이 선수인지 형태로 구분되지 않았다.
   prereq: { badge: "먼저", cls: "bg-bg-subtle text-ink-sub" },
   next: { badge: "다음", cls: "bg-primary-50 text-primary-600" },
   same: { badge: "연계", cls: "bg-info-bg text-info" },
-  related: { badge: "관련", cls: "bg-bg-subtle text-ink-sub" },
+  related: { badge: "관련", cls: "bg-info-bg text-info" },
 };
 
 /** 화면에 쌓는 순서 — 배우는 순서(선수 → 다음)를 먼저 두고 곁가지를 뒤에 둔다. */
