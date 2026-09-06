@@ -8,6 +8,7 @@ import { Art } from "@/components/Art";
 import { conceptById } from "@/data/concepts";
 import type { QuizItem } from "@/lib/types";
 import { completeDaily, loadProgress, markConcept, todayKey } from "@/lib/store";
+import { gradeFor, reviewConcept, todayPlan } from "@/lib/scheduler";
 
 /**
  * 데일리 퀴즈 러너 — 문항당 1화면 / 즉시 피드백 시트 / 점수 히어로 결과
@@ -35,9 +36,11 @@ export default function QuizRunPage() {
 function Runner() {
   const kind = asKind(useSearchParams().get("kind"));
   const set = useMemo(
-    () => buildDailySet(todayKey(), loadProgress().wrongConceptIds, kind),
+    () => buildDailySet(todayKey(), todayPlan(), kind),
     [kind],
   );
+  // 응답 시간은 무언 측정한다 — 등급(Hard/Good)의 근거다 (Design.md §5.3)
+  const [shownAt, setShownAt] = useState(() => Date.now());
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Answered[]>([]);
   const [feedback, setFeedback] = useState<Answered | null>(null);
@@ -56,10 +59,13 @@ function Runner() {
     setAnswers((prev) => [...prev, a]);
     setFeedback(a);
     markConcept(correct ? 2 : 1, item.conceptId);
+    // 개념의 기억 상태를 민다 — 다음에 볼 날이 여기서 정해진다
+    reviewConcept(item.conceptId, gradeFor(item.kind, correct, Date.now() - shownAt));
   }
 
   function next() {
     setFeedback(null);
+    setShownAt(Date.now());
     if (idx + 1 >= total) {
       const wrong = answers.filter((a) => !a.correct).map((a) => a.item.conceptId);
       completeDaily(Array.from(new Set(wrong)));
@@ -162,9 +168,39 @@ function QuestionView({
           </p>
         )}
         <p className="text-[18px] font-semibold leading-relaxed">
-          {item.kind === "ox" ? item.prompt : item.prompt}
+          {item.prompt}
         </p>
       </div>
+
+      {item.kind === "short" && (
+        // 문항 카드 바로 아래. 키보드가 올라와도 문항과 입력창이 한 화면에 남는다.
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (input.trim()) onSubmit(input);
+          }}
+          className="mt-4 flex flex-col gap-3"
+        >
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            disabled={!!feedback}
+            placeholder="개념어를 입력해 주세요"
+            // 16px 미만이면 iOS 가 포커스 때 화면을 확대한다
+            className="h-14 scroll-mt-24 rounded-full bg-surface px-5 text-[16px] shadow-[0_2px_14px_rgba(23,58,94,0.06)] outline-none focus:ring-2 focus:ring-primary-300"
+            autoFocus
+            autoComplete="off"
+            enterKeyHint="done"
+          />
+          <button
+            type="submit"
+            disabled={!!feedback || !input.trim()}
+            className="h-14 rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta disabled:opacity-40"
+          >
+            제출하기
+          </button>
+        </form>
+      )}
 
       <div className="mt-auto pb-8 pt-8">
         {item.kind === "ox" && (
@@ -184,32 +220,6 @@ function QuestionView({
               feedback={feedback}
             />
           </div>
-        )}
-
-        {item.kind === "short" && (
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (input.trim()) onSubmit(input);
-            }}
-            className="flex flex-col gap-3"
-          >
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              disabled={!!feedback}
-              placeholder="개념어를 입력해 주세요"
-              className="h-14 rounded-full bg-surface px-5 text-[16px] shadow-[0_2px_14px_rgba(23,58,94,0.06)] outline-none focus:ring-2 focus:ring-primary-300"
-              autoFocus
-            />
-            <button
-              type="submit"
-              disabled={!!feedback || !input.trim()}
-              className="h-14 rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta disabled:opacity-40"
-            >
-              제출하기
-            </button>
-          </form>
         )}
 
         {item.kind === "mcq" && (

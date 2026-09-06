@@ -6,6 +6,7 @@ import { BottomCta, Card, Screen } from "@/components/ui";
 import { BRAND, TILE } from "@/lib/brand";
 import { todayKey, useProgress } from "@/lib/store";
 import { buildDailyOverview } from "@/data/quiz";
+import { todayPlan } from "@/lib/scheduler";
 
 /**
  * 오늘 탭(홈) — 컬러 히어로 카드(티키타카) + 진단 리스트 행(핑글) + 출석 잔디
@@ -15,9 +16,11 @@ export default function TodayPage() {
   const doneToday = progress.doneDates.includes(todayKey());
 
   // 세 유형의 오늘 세트 — 히어로와 타일은 개념 수로 말한다 (문항 수는 유형마다 다르다)
+  // progress 가 마운트 뒤 localStorage 값으로 바뀌면 그때 다시 계산한다
   const today = useMemo(
-    () => buildDailyOverview(todayKey(), progress.wrongConceptIds),
-    [progress.wrongConceptIds],
+    () => buildDailyOverview(todayKey(), todayPlan()),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [progress],
   );
   const perKind = today.sets[0]?.items.length ?? 0;
 

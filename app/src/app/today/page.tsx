@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { Art } from "@/components/Art";
 import { Screen, ScreenTitle } from "@/components/ui";
 import { buildDailyOverview, KIND_LABEL } from "@/data/quiz";
+import { todayPlan } from "@/lib/scheduler";
 import { TILE } from "@/lib/brand";
 import { todayKey, useProgress } from "@/lib/store";
 import type { QuizKind } from "@/lib/types";
@@ -29,8 +30,9 @@ const KIND_META: Record<
 export default function TodayPickPage() {
   const progress = useProgress();
   const today = useMemo(
-    () => buildDailyOverview(todayKey(), progress.wrongConceptIds),
-    [progress.wrongConceptIds],
+    () => buildDailyOverview(todayKey(), todayPlan()),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [progress],
   );
 
   return (

@@ -1,4 +1,5 @@
 import type { QuizItem, QuizKind } from "@/lib/types";
+import type { DayPlan } from "@/lib/scheduler";
 import { CONCEPTS, conceptById } from "./concepts";
 
 /**
@@ -136,23 +137,27 @@ export interface DailySet {
 }
 
 /**
- * 오늘의 세트 — **한 유형** N문항. FSRS 도입 전 대체 규칙:
- * 복습(이전에 틀린 개념의 문항) 우선, 부족분을 신규로 채운다.
+ * 오늘의 세트 — **한 유형** N문항, **오늘의 개념 집합(DayPlan)** 안에서만.
+ * 어떤 개념을 낼지는 스케줄러(FSRS due)가 정했고, 여기서는 그 개념들의 이 유형
+ * 문항만 고른다. 복습(due 지난 개념) 먼저, 부족분을 신규로. 같은 개념 최대 2문항.
  * 세션 하나가 한 유형이라야 화면도 채점도 한 가지만 하면 된다.
  */
 export function buildDailySet(
   dateKey: string,
-  wrongConceptIds: string[],
+  plan: DayPlan,
   kind: QuizKind,
   size = 10,
 ): DailySet {
   const pool = deriveQuizPool(kind);
-  const review = shuffleStable(
-    pool.filter((q) => wrongConceptIds.includes(q.conceptId)),
-    `rev-${kind}-${dateKey}`,
-  );
+  const rank = new Map<string, number>();
+  plan.review.forEach((id, i) => rank.set(id, i));
+  // 복습은 due 가 이른 순(plan 순서)을 지키고, 신규는 날짜 시드로 섞는다
+  const review = pool
+    .filter((q) => rank.has(q.conceptId))
+    .sort((a, b) => rank.get(a.conceptId)! - rank.get(b.conceptId)!);
+  const freshSet = new Set(plan.fresh);
   const fresh = shuffleStable(
-    pool.filter((q) => !wrongConceptIds.includes(q.conceptId)),
+    pool.filter((q) => freshSet.has(q.conceptId)),
     `new-${kind}-${dateKey}`,
   );
   // 개념 편중 방지 — 같은 개념 최대 2문항 (OX 는 한 카드에서 여럿 나온다)
@@ -174,15 +179,9 @@ export function buildDailySet(
 }
 
 /** 세 유형의 오늘 세트를 한 번에 — 유형 선택 화면과 홈 타일이 쓴다 */
-export function buildDailyOverview(dateKey: string, wrongConceptIds: string[]) {
-  const sets = KIND_ORDER.map((k) => buildDailySet(dateKey, wrongConceptIds, k));
-  const reviewConcepts = new Set(
-    sets.flatMap((s) => s.items.filter((q) => wrongConceptIds.includes(q.conceptId)).map((q) => q.conceptId)),
-  );
-  const newConcepts = new Set(
-    sets.flatMap((s) => s.items.filter((q) => !wrongConceptIds.includes(q.conceptId)).map((q) => q.conceptId)),
-  );
-  return { sets, reviewConceptCount: reviewConcepts.size, newConceptCount: newConcepts.size };
+export function buildDailyOverview(dateKey: string, plan: DayPlan) {
+  const sets = KIND_ORDER.map((k) => buildDailySet(dateKey, plan, k));
+  return { sets, reviewConceptCount: plan.review.length, newConceptCount: plan.fresh.length };
 }
 
 /** 단답 채점 — 평문 정규화 (R8 축소판: 공백 제거·소문자화) */

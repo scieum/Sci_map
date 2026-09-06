@@ -12,6 +12,10 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  // 소프트 키보드가 올라오면 레이아웃 뷰포트가 그만큼 줄어든다. 기본값은
+  // 키보드가 화면을 덮기만 해서, 바닥에 붙은 입력창을 브라우저가 스크롤로
+  // 끌어올리며 문항을 위로 밀어냈다 (단답형 치명 버그, 2026-09-06).
+  interactiveWidget: "resizes-content",
   themeColor: "#4b5be8",
 };
 

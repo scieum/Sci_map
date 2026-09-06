@@ -7,9 +7,27 @@ import { useEffect, useState } from "react";
  * Supabase `study_states`(FSRS) 연동 시 이 모듈만 교체한다 (설계서 §2.5).
  */
 
+/** ts-fsrs Card 의 직렬화 형태 — Date 는 ISO 문자열로 */
+export interface StudyState {
+  due: string;
+  stability: number;
+  difficulty: number;
+  elapsed_days: number;
+  scheduled_days: number;
+  learning_steps: number;
+  reps: number;
+  lapses: number;
+  state: number;
+  last_review?: string;
+}
+
 export interface Progress {
   /** 개념별 상태: 마지막 자기평가 (recall 모드·퀴즈 결과 반영) */
   concepts: Record<string, { level: 0 | 1 | 2 | 3; updatedAt: string }>;
+  /** 개념별 FSRS 기억 상태 — 매일 뭘 낼지는 여기 due 가 정한다 (scheduler.ts) */
+  studyStates: Record<string, StudyState>;
+  /** 오늘 뽑은 개념 집합 — 하루 한 번 뽑아 세 유형 세션이 나눠 쓴다 */
+  plan?: { dateKey: string; review: string[]; fresh: string[] };
   /** 최근 세션에서 틀린 개념 — 다음 데일리 세트의 복습 후보 */
   wrongConceptIds: string[];
   streak: { count: number; lastDate: string };
@@ -21,6 +39,7 @@ const KEY = "scisherpa-progress-v1";
 
 const EMPTY: Progress = {
   concepts: {},
+  studyStates: {},
   wrongConceptIds: [],
   streak: { count: 0, lastDate: "" },
   doneDates: [],
@@ -42,6 +61,7 @@ export function loadProgress(): Progress {
 }
 
 export function saveProgress(p: Progress) {
+  if (typeof window === "undefined") return; // 서버 렌더에서는 저장할 곳이 없다
   localStorage.setItem(KEY, JSON.stringify(p));
 }
 
