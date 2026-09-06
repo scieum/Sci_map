@@ -9,8 +9,10 @@ import {
   type Grade,
 } from "ts-fsrs";
 import { CONCEPTS } from "@/data/concepts";
-import { loadProgress, saveProgress, todayKey, type StudyState } from "@/lib/store";
-import type { QuizKind } from "@/lib/types";
+import { subjectByCode } from "@/data/catalog";
+import { loadProgress, saveProgress, todayKey, type Progress, type StudyState } from "@/lib/store";
+import { pushDailyPlan, pushStudyState } from "@/lib/sync";
+import type { Concept, QuizKind } from "@/lib/types";
 
 /**
  * 적응형 스케줄러 — 개념 단위 FSRS (설계서 §2.5, CLAUDE.md §14).
@@ -64,14 +66,30 @@ export function gradeFor(kind: QuizKind, correct: boolean, elapsedMs: number): G
   return elapsedMs > SLOW_MS[kind] ? Rating.Hard : Rating.Good;
 }
 
-/** 한 개념에 대한 응답을 기억 상태에 반영한다 */
+/** 한 개념에 대한 응답을 기억 상태에 반영한다 — 로컬 먼저, 서버는 뒤따른다 */
 export function reviewConcept(conceptId: string, grade: Grade, now = new Date()): void {
   const p = loadProgress();
   const prev = p.studyStates[conceptId];
   const card = prev ? toCard(prev) : createEmptyCard(now);
   const { card: next } = F.next(card, now, grade);
-  p.studyStates[conceptId] = fromCard(next);
+  const state = fromCard(next);
+  p.studyStates[conceptId] = state;
   saveProgress(p);
+  pushStudyState(conceptId, state);
+}
+
+/**
+ * 출제 범위 — 내 정보에서 고른 과목·학기 안의 개념인가.
+ * 범위가 없으면(비로그인·미설정) 전부다. 학기는 백로그가 단원에 학기를 적어 둔
+ * 경우에만 좁힌다 — 미지정(null) 단원은 양 학기 모두에 나온다.
+ */
+function inScope(c: Concept, enr: Progress["enrollment"]): boolean {
+  if (!enr || enr.subjects.length === 0) return true;
+  const subj = enr.subjects.map(subjectByCode).find((s) => s && s.name === c.subject);
+  if (!subj) return false;
+  if (enr.semester == null || !c.unitId) return true;
+  const unit = subj.units.find((u) => u.id === c.unitId);
+  return unit?.semester == null || unit.semester === enr.semester;
 }
 
 export interface DayPlan {
@@ -92,7 +110,7 @@ export function todayPlan(dateKey = todayKey()): DayPlan {
   if (p.plan && p.plan.dateKey === dateKey) return p.plan;
 
   const endOfDay = new Date(`${dateKey}T23:59:59`);
-  const ready = CONCEPTS.filter((c) => c.quizReady);
+  const ready = CONCEPTS.filter((c) => c.quizReady && inScope(c, p.enrollment));
 
   const review = ready
     .filter((c) => p.studyStates[c.id] && new Date(p.studyStates[c.id].due) <= endOfDay)
@@ -109,6 +127,7 @@ export function todayPlan(dateKey = todayKey()): DayPlan {
   const plan: DayPlan = { dateKey, review, fresh };
   p.plan = plan;
   saveProgress(p);
+  pushDailyPlan(plan);
   return plan;
 }
 

@@ -75,6 +75,17 @@ python app/scripts/build_concepts.py
 
 계획 파일에 쪽수와 bbox 가 그대로 있으므로 같은 크롭이 재현된다.
 
+## 로그인 · 내 정보 (Supabase)
+
+다섯째 탭은 **내 정보**다 (노선은 한참 뒤라 그 자리를 빌렸다). 구글 로그인 또는 이메일
+매직 링크 → 개인정보 동의 → 학번 별칭·학년·학기·수강 과목·초대 코드. 고른 과목·학기가
+곧 오늘의 문항 범위다. 로그인은 선택이다 — 없어도 카드·문항은 그대로 쓴다.
+
+연결하려면 `app/.env.example` 을 `.env.local` 로 복사해 키 둘을 채우고,
+`app/supabase/schema.sql` 을 Supabase SQL Editor 에서 실행한다. Vercel 에도 같은
+환경 변수를 넣는다. 동의 문구의 원본은 `docs/privacy_notice.md` 다 — ★ 표시(보유 기간,
+리전, 책임자)는 교사가 확정한다.
+
 ## 매일 뭘 낼지는 FSRS 가 정한다
 
 문항이 아니라 **개념**이 기억 상태를 갖는다 (`app/src/lib/scheduler.ts`). 개념마다

@@ -151,6 +151,32 @@ def _rel_media(path: str) -> str:
     return rel[rel.index(marker) + len(marker):] if marker in rel else Path(rel).name
 
 
+def write_catalog(unit_ids: list[str]) -> None:
+    """과목 카탈로그 — 내 정보 화면의 수강 과목 목록과 스케줄러의 출제 범위 근거.
+
+    백로그가 원본이다. 학년·학기는 교사가 백로그에 채우면 여기로 흘러온다.
+    카드에서 과목을 역산하지 않는다 — 카드가 아직 없는 과목도 목록에 있어야
+    학생이 미리 고를 수 있다.
+    """
+    import yaml
+    with (REPO / "docs" / "unit_backlog.yaml").open(encoding="utf-8") as fh:
+        b = yaml.safe_load(fh)
+    subj = b["subject"]
+    units = [
+        {"id": u["id"], "title": u["title"], "semester": u.get("semester"),
+         "status": u.get("status"), "cards": u["id"] in unit_ids}
+        for u in b["units"]
+    ]
+    catalog = {"subjects": [{
+        "code": subj["code"], "name": subj["name"], "courseType": subj.get("course_type"),
+        "grade": subj.get("grade"), "units": units,
+    }]}
+    out = REPO / "app" / "src" / "data" / "catalog.generated.json"
+    out.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
+                   encoding="utf-8", newline="\n")
+    print(f"=> {out.relative_to(REPO)} · 과목 {len(catalog['subjects'])} · 단원 {len(units)}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2", "mate-3", "mate-4"])
@@ -178,6 +204,7 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(cards, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8", newline="\n")
+    write_catalog(args.units)
     withfig = sum(1 for c in cards if c.get("media"))
     total = sum(len(c.get("media") or []) for c in cards)
     print(f"=> {OUT.relative_to(REPO)} · 카드 {len(cards)}장 "

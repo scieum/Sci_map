@@ -8,7 +8,9 @@ const TABS = [
   { href: "/map", label: "지도", icon: IconGraph },
   { href: "/", label: "오늘", icon: IconBolt },
   { href: "/items", label: "문제", icon: IconPaper },
-  { href: "/lines", label: "노선", icon: IconMetro },
+  // 노선(SciMetro)은 한참 뒤라 그 자리에 내 정보를 둔다 (교사 결정 2026-09-06,
+  // Design.md §4.6). /lines 라우트는 남겨 두되 탭에서만 뺐다.
+  { href: "/me", label: "내 정보", icon: IconUser },
 ] as const;
 
 export default function TabBar() {
@@ -75,6 +77,14 @@ function IconPaper() {
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M6 2h9l4 4v16H6z" />
       <path d="M9 11h7M9 15h7" />
+    </svg>
+  );
+}
+function IconUser() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
     </svg>
   );
 }

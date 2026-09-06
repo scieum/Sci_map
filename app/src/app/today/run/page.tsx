@@ -9,6 +9,7 @@ import { conceptById } from "@/data/concepts";
 import type { QuizItem } from "@/lib/types";
 import { completeDaily, loadProgress, markConcept, todayKey } from "@/lib/store";
 import { gradeFor, reviewConcept, todayPlan } from "@/lib/scheduler";
+import { logAttempt } from "@/lib/sync";
 
 /**
  * 데일리 퀴즈 러너 — 문항당 1화면 / 즉시 피드백 시트 / 점수 히어로 결과
@@ -60,7 +61,10 @@ function Runner() {
     setFeedback(a);
     markConcept(correct ? 2 : 1, item.conceptId);
     // 개념의 기억 상태를 민다 — 다음에 볼 날이 여기서 정해진다
-    reviewConcept(item.conceptId, gradeFor(item.kind, correct, Date.now() - shownAt));
+    const elapsed = Date.now() - shownAt;
+    const grade = gradeFor(item.kind, correct, elapsed);
+    reviewConcept(item.conceptId, grade);
+    logAttempt({ conceptId: item.conceptId, itemId: item.id, kind: item.kind, correct, elapsedMs: elapsed, grade });
   }
 
   function next() {

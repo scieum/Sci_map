@@ -1,0 +1,94 @@
+# 로그인 화면 설계 — login_design.md
+
+> 내 정보 탭(Design.md §4.6)의 첫 화면. 구현은 `app/src/components/LoginPanel.tsx`.
+> 근거는 §5 의 출처. 2026-09-06.
+
+## 1. 원칙 — 남들이 어떻게 하나
+
+로그인 화면 관행을 정리하면 다섯 줄로 줄어든다.
+
+| 관행 | 왜 | 우리 적용 |
+|---|---|---|
+| **비밀번호 없는 로그인이 잔존율이 가장 높다** (매직 링크·소셜) | 잊을 비밀번호가 없고, "비밀번호 찾기" 지원이 사라진다 | 비밀번호를 **아예 두지 않는다**. 구글 + 이메일 링크 둘뿐 |
+| 소셜 로그인은 **3개 이하**, 가장 많이 쓰는 것을 **맨 위** | 선택지가 늘수록 망설인다 | 구글 하나. 학교 계정이 구글인 경우가 많다 |
+| 입력칸은 **2~3개 이하**, 이메일이 아이디보다 낫다 | 기억할 게 없다 | 이메일 한 칸 |
+| 부차적 방법은 **접어 둔다** | 주 흐름을 흐리지 않는다 | 이메일 링크는 구분선 아래, 작게 |
+| 로그인은 **막지 않는다** — 하지 않아도 쓸 수 있어야 한다 | 강제 모달은 이탈을 만든다 (Design.md D5) | 안 해도 카드·문항은 그대로. 기록만 기기에 남는다고 알린다 |
+
+## 2. 화면
+
+```
+┌──────────────────────────────┐
+│ 내 정보                        │
+│                              │
+│ 로그인하면 기록이 서버에 남고    │  ← 왜 로그인하나, 한 줄
+│ 폰을 바꿔도 이어져요.           │
+│                              │
+│ ┌──────────────────────────┐ │
+│ │ [G]  Google로 계속하기     │ │  ← 주 행동. 흰 바탕·회색 테두리·표준 G 로고
+│ └──────────────────────────┘ │
+│ ─────────── 또는 ──────────── │
+│ ┌──────────────────────────┐ │
+│ │ 학교 이메일               │ │  ← 이메일 한 칸
+│ └──────────────────────────┘ │
+│ [ 이메일로 로그인 링크 받기 ]   │  ← 부차. 텍스트 버튼 무게
+│                              │
+│ 로그인은 선택이에요. 안 해도    │  ← 거부해도 되는 길 (D5)
+│ 개념 카드와 오늘의 문항은…     │
+└──────────────────────────────┘
+```
+
+- **한 화면, 한 목적.** 회원가입/로그인 구분이 없다 — 구글이든 링크든 처음이면 가입, 아니면
+  로그인이다. 학생에게 그 차이를 묻지 않는다.
+- 링크를 보낸 뒤: 같은 자리에 "**메일함을 확인해 주세요**" + 보낸 주소 + [다른 주소로] 텍스트 링크.
+  메일이 안 오는 경우가 가장 흔한 실패라, 스팸함 안내를 한 줄 넣는다.
+- 오류: 입력칸 아래 한 줄. 알림창(alert)을 쓰지 않는다.
+- 로딩: 버튼 안에서 "보내는 중…" 로 바뀌고 비활성. 화면을 가리는 스피너 없음.
+- 모바일: 이메일 칸은 `type=email`·`autocomplete=email`·글자 16px(iOS 확대 방지).
+  키보드가 올라와도 버튼이 보이게 칸 바로 아래에 둔다 (단답형 버그와 같은 교훈).
+
+## 3. "Google로 계속하기" 버튼 — 브랜딩 규정
+
+구글이 앱 검수 때 확인하는 항목이다. 어기면 검수를 통과하지 못한다.
+
+| 규정 | 우리 구현 |
+|---|---|
+| **표준 색상 G 로고**만. 크기·색 변경 금지, 로고 단독 사용 금지 | 공식 4색 SVG, 18px, 항상 문구와 함께 |
+| 로고는 **흰 배경** 위에 | 버튼 바탕 `#FFFFFF`, 테두리 `#747775` 1px |
+| 다른 소셜 버튼과 **같은 크기·비중** | 소셜 버튼이 구글 하나라 해당 없음. 이메일 링크는 부차 방법이라 무게를 낮춘다 |
+| 문구는 "Sign in with Google" / "Continue with Google" 계열 | 한국어 **"Google로 계속하기"** (구글이 제공하는 현지화 문구와 같은 계열) |
+| 글꼴은 Roboto Medium 14px 권장 | 앱 서체(Pretendard) 유지 — 규정은 "권장"이며 가독성이 우선. 굵기 500·14px 은 맞춘다 |
+
+## 4. 흐름 (기술)
+
+```
+[Google로 계속하기] → supabase.auth.signInWithOAuth({provider:"google", redirectTo: origin+"/me"})
+   → 구글 동의 화면 → Supabase 콜백(https://<project>.supabase.co/auth/v1/callback)
+   → /me?code=… → supabase-js 가 PKCE 코드를 세션으로 교환(detectSessionInUrl)
+   → 프로필 없음 → 개인정보 동의 → 프로필
+[이메일 링크] → signInWithOtp({email, emailRedirectTo: origin+"/me"}) → 메일의 링크 → 위와 같음
+```
+
+브라우저 클라이언트만 쓴다(`@supabase/supabase-js`). 서버 콜백 라우트는 필요 없다 —
+PKCE 교환을 supabase-js 가 URL 에서 직접 처리한다.
+
+### 운영자 설정 (한 번)
+
+1. **Google Cloud Console** → API 및 서비스 → 사용자 인증 정보 → OAuth 클라이언트 ID(웹).
+   - 승인된 JavaScript 원본: `https://<vercel-domain>`, `http://localhost:3000`
+   - 승인된 리디렉션 URI: `https://<project-ref>.supabase.co/auth/v1/callback`
+   - OAuth 동의 화면: 앱 이름·지원 이메일. 학교 Workspace 라면 **내부** 사용자 유형으로 두면 검수가 없다.
+2. **Supabase** → Authentication → Providers → Google 켜고 클라이언트 ID·시크릿 입력.
+   - Authentication → URL Configuration → Site URL 을 배포 주소로, Redirect URLs 에
+     `https://<vercel-domain>/me`, `http://localhost:3000/me` 추가.
+3. `app/supabase/schema.sql` 실행, `.env.local` 과 Vercel 에 URL·anon key.
+
+## 5. 출처
+
+- Authgear, [Login & Signup UX: The 2025 Guide](https://www.authgear.com/post/login-signup-ux-guide/) — 비밀번호 없는 로그인의 잔존율, 소셜 버튼 3개 이하·맨 위
+- Echobind, [UX Best Practices for Designing Signup and Login Forms](https://echobind.com/post/designing-signup-and-login-forms) — 입력칸 2~3개, 이메일 > 아이디
+- CorsoUX, [UX Login: 15 Guidelines](https://courseux.com/ux-login-signup-password-guidelines/) — 부차 방법 접기
+- LoginRadius, [Passwordless Authentication Magic Links](https://www.loginradius.com/blog/identity/passwordless-authentication-magic-links) — 매직 링크의 장단
+- Google, [Sign in with Google Branding Guidelines](https://developers.google.com/identity/branding-guidelines) — 로고·배경·비중·문구 규정
+- Google, [Building a custom Google Sign-In button](https://developers.google.com/identity/sign-in/web/build-button)
+- Supabase, [Sign in with Google](https://supabase.com/docs/guides/auth/social-login/auth-google) — 콜백 URL·프로바이더 설정

@@ -28,6 +28,14 @@ export interface Progress {
   studyStates: Record<string, StudyState>;
   /** 오늘 뽑은 개념 집합 — 하루 한 번 뽑아 세 유형 세션이 나눠 쓴다 */
   plan?: { dateKey: string; review: string[]; fresh: string[] };
+  /** 로그인한 Supabase 사용자. 없으면 이 기기 안에서만 산다 */
+  userId?: string;
+  /**
+   * 출제 범위 — 내 정보에서 고른 학년·학기·과목. 스케줄러는 서버가 아니라
+   * 이 로컬 값을 본다 (오프라인·비로그인에서도 같은 코드가 돌아야 한다).
+   * 없으면 전체 과목이 범위다.
+   */
+  enrollment?: { grade: number | null; semester: number | null; subjects: string[] };
   /** 최근 세션에서 틀린 개념 — 다음 데일리 세트의 복습 후보 */
   wrongConceptIds: string[];
   streak: { count: number; lastDate: string };
