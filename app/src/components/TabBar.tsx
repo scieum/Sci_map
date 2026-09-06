@@ -6,7 +6,9 @@ import { usePathname } from "next/navigation";
 const TABS = [
   { href: "/concepts", label: "개념", icon: IconCards },
   { href: "/map", label: "지도", icon: IconGraph },
-  { href: "/", label: "오늘", icon: IconBolt },
+  // 라벨은 "홈" — 이 자리가 앱을 열면 닿는 곳이다 (교사 결정 2026-09-07).
+  // 화면 자체는 여전히 데일리 인출이다 (Design.md §4.4).
+  { href: "/", label: "홈", icon: IconHome },
   { href: "/items", label: "문제", icon: IconPaper },
   // 노선(SciMetro)은 한참 뒤라 그 자리에 내 정보를 둔다 (교사 결정 2026-09-06,
   // Design.md §4.6). /lines 라우트는 남겨 두되 탭에서만 뺐다.
@@ -65,10 +67,12 @@ function IconGraph() {
     </svg>
   );
 }
-function IconBolt() {
+function IconHome() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H13L13 2Z" />
+      <path d="M4 10.5 12 3.5l8 7" />
+      <path d="M6 9.8V20h12V9.8" />
+      <path d="M10 20v-5.5h4V20" />
     </svg>
   );
 }
