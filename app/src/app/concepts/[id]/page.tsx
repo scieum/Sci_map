@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use, useState } from "react";
 import { Art } from "@/components/Art";
-import { conceptById, LINK_LABEL } from "@/data/concepts";
+import { ConceptLinks } from "@/components/ConceptLinks";
+import { conceptById } from "@/data/concepts";
 import {
   BottomCta,
   Card,
@@ -133,25 +134,13 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         </>
       )}
 
+      {/* same 링크는 표기 줄 아래 배지가 제자리다 (Design.md §4.1). 여기서 또
+          렌더하면 같은 카드로 가는 입구가 한 화면에 둘이 된다. */}
       <SectionLabel>
         <Art name="section-links" className="mr-1.5 align-[-2px]" />
-        이어지는 개념
+        연결된 개념
       </SectionLabel>
-      <div className="flex flex-wrap gap-2">
-        {c.links.map((l) => {
-          const t = conceptById(l.target);
-          if (!t) return null;
-          return (
-            <Link key={`${l.type}-${l.target}`} href={`/concepts/${t.id}`}>
-              <Chip tone={l.type === "same" ? "info" : "neutral"}>
-                {l.type === "prereq" && "← "}
-                {LINK_LABEL[l.type]} · {t.term}
-                {l.type === "next" && " →"}
-              </Chip>
-            </Link>
-          );
-        })}
-      </div>
+      <ConceptLinks links={c.links.filter((l) => l.type !== "same")} />
 
       <BottomCta href={`/concepts/${c.id}/recall`}>
         가리고 떠올려보기

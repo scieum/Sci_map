@@ -74,7 +74,7 @@ export function BottomCta({
   disabled?: boolean;
 }) {
   const cls =
-    "flex h-14 w-full items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-[0_6px_16px_rgba(24,159,230,0.35)] active:bg-primary-600 disabled:opacity-40";
+    "flex h-14 w-full items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta active:bg-primary-600 disabled:opacity-40";
   return (
     <div className="fixed inset-x-0 bottom-[calc(56px+env(safe-area-inset-bottom))] z-30 bg-gradient-to-t from-bg via-bg/90 to-transparent px-5 pb-3 pt-6">
       <div className="mx-auto max-w-xl">

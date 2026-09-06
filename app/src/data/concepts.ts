@@ -43,9 +43,3 @@ export function byTopic(concepts: Concept[]): [string, Concept[]][] {
   return Array.from(out.entries());
 }
 
-export const LINK_LABEL: Record<string, string> = {
-  prereq: "선수",
-  next: "다음",
-  same: "학년 연계",
-  related: "관련",
-};

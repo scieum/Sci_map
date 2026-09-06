@@ -155,5 +155,6 @@
 ## 14. 앱 구현 시
 
 - 아키텍처: Next.js App Router + Supabase (Postgres·Auth·Storage·RLS). 테이블·5탭 구조는 Sci_Map §7.5의 계약을 따른다.
-- UI/UX는 `Design.md`를 따른다: 색은 의미 토큰(`--primary-*` 등)만 사용(키 컬러 미확정 — 잠정 Sky 팔레트), 화면당 CTA 하나, 3단계 인출 모드, `restricted` 자산은 자산 단위 잠금(카드 전체를 막지 않는다).
+- UI/UX는 `Design.md`를 따른다: 색은 의미 토큰(`--primary-*` 등)만 사용(키 컬러 = **Indigo**, Design.md §2.2 확정), 화면당 CTA 하나, 3단계 인출 모드, `restricted` 자산은 자산 단위 잠금(카드 전체를 막지 않는다).
+- 브랜드색을 컴포넌트에 하드코딩하지 않는다 — 그림자까지 `--glow-*` 토큰을 쓴다. 팔레트 교체가 램프 몇 줄로 끝나야 한다.
 - 적응형 출제는 **py-fsrs(MIT)**, 상태 저장은 개념 카드 단위 `study_states`.

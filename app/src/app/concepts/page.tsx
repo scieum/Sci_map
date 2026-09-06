@@ -30,7 +30,7 @@ export default function ConceptsPage() {
             onClick={() => setSubject(s)}
             className={`shrink-0 rounded-full px-4.5 py-2 text-[14px] font-bold transition-colors ${
               s === subject
-                ? "bg-primary-500 text-white shadow-[0_4px_12px_rgba(24,159,230,0.3)]"
+                ? "bg-primary-500 text-white shadow-chip"
                 : "bg-surface text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.05)]"
             }`}
           >

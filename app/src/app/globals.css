@@ -2,17 +2,24 @@
 
 /*
  * 컬러 시스템 — Design.md §2
- * 키 컬러는 미확정. 컴포넌트는 의미 토큰(primary-*)만 참조하고,
- * 의미 토큰이 후보 램프(--ramp-*)를 가리킨다. 팔레트 교체 = 램프 6줄 교체.
+ * 컴포넌트는 의미 토큰(primary-*)만 참조하고, 의미 토큰이 램프(--ramp-*)를
+ * 가리킨다. 팔레트 교체 = 램프 6줄 교체.
  */
 :root {
-  /* 후보 A — Sky (잠정 기본값). 후보 B(Green)는 Design.md §2.2 참조 */
-  --ramp-50: #eff9ff;
-  --ramp-100: #def2ff;
-  --ramp-300: #7ccfff;
-  --ramp-500: #189fe6;
-  --ramp-600: #0e82c4;
-  --ramp-700: #0a669b;
+  /* 키 컬러 — Indigo. 2026-09-06 참고 이미지에서 뽑았다 (Design.md §2.2).
+     500 은 흰 텍스트 대비 5.3:1, 700 은 흰 배경 대비 9.5:1 — 둘 다 AA 통과. */
+  --ramp-50: #eef0fe;
+  --ramp-100: #dde1fd;
+  --ramp-300: #a3acf7;
+  --ramp-500: #4b5be8;
+  --ramp-600: #3a48cc;
+  --ramp-700: #2c37a0;
+
+  /* 브랜드색 글로 — CTA·히어로 아래 깔리는 색 그림자.
+     램프와 같은 계열이라야 하므로 컴포넌트에 하드코딩하지 않는다. */
+  --glow-cta: 0 6px 16px rgba(75, 91, 232, 0.32);
+  --glow-hero: 0 10px 24px rgba(75, 91, 232, 0.34);
+  --glow-chip: 0 4px 12px rgba(75, 91, 232, 0.28);
 }
 
 @theme inline {
@@ -23,9 +30,10 @@
   --color-primary-600: var(--ramp-600);
   --color-primary-700: var(--ramp-700);
 
-  /* 페이지는 연회색, 카드는 흰색 — 보더 대신 은은한 그림자 (티키타카·핑글 결) */
-  --color-bg: #f3f5f8;
-  --color-bg-subtle: #eef1f5;
+  /* 페이지는 연회색, 카드는 흰색 — 보더 대신 은은한 그림자 (티키타카·핑글 결).
+     인디고 키 컬러에 맞춰 무채색에 아주 옅은 라벤더 기를 넣었다. */
+  --color-bg: #f4f5fb;
+  --color-bg-subtle: #eef0f7;
   --color-surface: #ffffff;
   --color-line: #edf0f4;
   --color-ink: #20242b;
@@ -36,8 +44,10 @@
   --color-danger: #dc2626;
   --color-warning: #d97706;
   --color-warning-bg: #fef6ec;
-  --color-info: #2563eb;
-  --color-info-bg: #eef4ff;
+  /* info 는 same 링크 배지 색이다. 파랑을 그대로 두면 인디고 primary 와
+     구분되지 않아, 참고 이미지의 민트 계열로 옮겼다 (Design.md §2.3). */
+  --color-info: #0e8f99;
+  --color-info-bg: #e4f5f6;
   --color-lock: #6b7280;
 
   --font-sans: "Pretendard Variable", Pretendard, -apple-system,
@@ -48,6 +58,10 @@
 
   --radius-card: 24px;
   --shadow-card: 0 2px 14px rgba(23, 58, 94, 0.06);
+  /* shadow-cta / shadow-hero / shadow-chip 유틸리티로 쓴다 */
+  --shadow-cta: var(--glow-cta);
+  --shadow-hero: var(--glow-hero);
+  --shadow-chip: var(--glow-chip);
 }
 
 body {

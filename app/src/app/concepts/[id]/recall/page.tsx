@@ -84,7 +84,7 @@ export default function RecallPage({
             )}
             <button
               onClick={() => setStage(2)}
-              className="h-14 flex-1 rounded-full bg-primary-500 text-[16px] font-bold text-white shadow-[0_6px_16px_rgba(24,159,230,0.35)]"
+              className="h-14 flex-1 rounded-full bg-primary-500 text-[16px] font-bold text-white shadow-cta"
             >
               정답 보기
             </button>

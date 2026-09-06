@@ -110,7 +110,7 @@ export default function QuizRunPage() {
               className={`h-14 w-full rounded-full text-[17px] font-bold text-white ${
                 feedback.correct
                   ? "bg-success shadow-[0_6px_16px_rgba(22,163,74,0.3)]"
-                  : "bg-primary-500 shadow-[0_6px_16px_rgba(24,159,230,0.35)]"
+                  : "bg-primary-500 shadow-cta"
               }`}
             >
               {idx + 1 >= total ? "결과 보기" : "다음 문제"}
@@ -190,7 +190,7 @@ function QuestionView({
             <button
               type="submit"
               disabled={!!feedback || !input.trim()}
-              className="h-14 rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-[0_6px_16px_rgba(24,159,230,0.35)] disabled:opacity-40"
+              className="h-14 rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta disabled:opacity-40"
             >
               제출하기
             </button>
@@ -265,7 +265,7 @@ function ResultScreen({ answers }: { answers: Answered[] }) {
   return (
     <main className="mx-auto w-full max-w-xl px-5 pb-32 pt-6">
       {/* 점수 히어로 */}
-      <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-center text-white shadow-[0_10px_24px_rgba(24,159,230,0.35)]">
+      <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-center text-white shadow-hero">
         <p className="text-[14px] font-semibold text-white/85">오늘의 학습 완료</p>
         <p className="mt-1 text-[44px] font-extrabold leading-none">
           {correct}
@@ -331,7 +331,7 @@ function ResultScreen({ answers }: { answers: Answered[] }) {
       <div className="fixed inset-x-0 bottom-0 bg-gradient-to-t from-bg via-bg/90 to-transparent px-5 pb-[max(20px,env(safe-area-inset-bottom))] pt-6">
         <Link
           href="/"
-          className="mx-auto flex h-14 max-w-xl items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-[0_6px_16px_rgba(24,159,230,0.35)]"
+          className="mx-auto flex h-14 max-w-xl items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta"
         >
           완료
         </Link>

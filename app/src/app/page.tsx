@@ -37,7 +37,7 @@ export default function TodayPage() {
       </header>
 
       {/* 히어로 카드 */}
-      <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-white shadow-[0_10px_24px_rgba(24,159,230,0.35)]">
+      <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-white shadow-hero">
         <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[12px] font-semibold">
           <Art name="timer" />
           약 3분 · {set.items.length}문항
