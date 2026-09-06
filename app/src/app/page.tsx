@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { Art } from "@/components/Art";
 import { BottomCta, Card, Screen } from "@/components/ui";
-import { BRAND } from "@/lib/brand";
+import { BRAND, TILE } from "@/lib/brand";
 import { todayKey, useProgress } from "@/lib/store";
 import { buildDailySet } from "@/data/quiz";
 
@@ -65,16 +65,13 @@ export default function TodayPage() {
         </span>
       </section>
 
-      {/* 오늘의 구성 — 리스트 행 */}
-      <Card className="mt-4 divide-y divide-line !p-0">
-        <Row label="복습이 돌아온 개념" value={`${set.reviewCount}개`} art="review-return" />
-        <Row label="처음 만나는 개념" value={`${set.newCount}개`} art="concept-new" />
-        <Row
-          label="연속 학습"
-          value={`${progress.streak.count}일`}
-          art="streak-flame"
-        />
-      </Card>
+      {/* 오늘의 구성 — 파스텔 타일 셋. 참고 이미지의 "이용 방법" 줄처럼
+          옅은 바탕 + 작은 색 태그 + 숫자. 브랜드색은 태그와 숫자에만 쓴다 (D1) */}
+      <div className="mt-4 grid grid-cols-3 gap-3">
+        <Tile tag="복습" label="돌아온 개념" value={`${set.reviewCount}개`} art="review-return" tone={TILE.review} />
+        <Tile tag="신규" label="새로 만나는 개념" value={`${set.newCount}개`} art="concept-new" tone={TILE.fresh} />
+        <Tile tag="연속" label="이어온 학습" value={`${progress.streak.count}일`} art="streak-flame" tone={TILE.streak} />
+      </div>
 
       {/* 출석 잔디 */}
       <Card className="mt-4">
@@ -92,22 +89,29 @@ export default function TodayPage() {
   );
 }
 
-function Row({
+function Tile({
+  tag,
   label,
   value,
   art,
+  tone,
 }: {
+  tag: string;
   label: string;
   value: string;
   art: string;
+  tone: { tint: string; tag: string; value: string };
 }) {
   return (
-    <div className="flex items-center justify-between px-5 py-4">
-      <span className="flex items-center gap-2.5 text-[15px] text-ink">
-        <Art name={art} />
+    <div className={`flex min-h-[120px] flex-col justify-between rounded-[20px] px-4 py-3.5 ${tone.tint}`}>
+      <span className={`text-[12px] font-bold ${tone.tag}`}>{tag}</span>
+      <span className={`mt-2 text-[22px] font-extrabold leading-none ${tone.value}`}>
+        {value}
+      </span>
+      <span className="mt-1.5 flex items-center gap-1 text-[12px] leading-snug text-ink-sub">
+        <Art name={art} px={14} />
         {label}
       </span>
-      <span className="text-[15px] font-bold text-primary-600">{value}</span>
     </div>
   );
 }

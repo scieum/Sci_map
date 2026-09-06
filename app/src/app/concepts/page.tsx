@@ -6,7 +6,7 @@ import { buildTree, byTopic, majorNo, minorNo, topicNo } from "@/data/concepts";
 import type { Concept } from "@/lib/types";
 import { LevelDots, Screen, ScreenTitle } from "@/components/ui";
 import { useProgress } from "@/lib/store";
-import { subjectAccent } from "@/lib/brand";
+import { subjectAccent, unitAccent } from "@/lib/brand";
 
 /** 개념 탭 — 과목 알약 칩 → 대단원 카드 → 중단원 접기 → 소주제 → 개념 행 */
 export default function ConceptsPage() {
@@ -40,14 +40,16 @@ export default function ConceptsPage() {
         ))}
       </div>
 
-      {Array.from(majors.entries()).map(([major, minors]) => (
+      {Array.from(majors.entries()).map(([major, minors]) => {
+        const accent = unitAccent(firstOf(minors).unitId);
+        return (
         <section
           key={major}
           className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
         >
-          {/* 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
-          <h2 className="px-5 pb-1 pt-4 text-[16px] font-bold">
-            <No value={majorNo(firstOf(minors))} />
+          {/* 단원 색 머리띠 — 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
+          <h2 className={`px-5 pb-3 pt-4 text-[16px] font-bold ${accent.tint}`}>
+            <No value={majorNo(firstOf(minors))} cls={accent.text} />
             {major}
           </h2>
 
@@ -67,7 +69,7 @@ export default function ConceptsPage() {
                     <No value={minorNo(concepts[0])} />
                     {minor}
                   </span>
-                  <Meta studied={studied} total={concepts.length} open={isOpen} />
+                  <Meta studied={studied} total={concepts.length} open={isOpen} accent={accent} />
                 </button>
 
                 {isOpen &&
@@ -128,7 +130,8 @@ export default function ConceptsPage() {
             );
           })}
         </section>
-      ))}
+        );
+      })}
     </Screen>
   );
 }
@@ -137,10 +140,10 @@ export default function ConceptsPage() {
  * 목차 번호 조각 — 번호가 없는 카드(시드)에서는 아무것도 그리지 않는다.
  * 자리만 차지하는 빈 번호는 정렬을 흐트러뜨린다.
  */
-function No({ value }: { value: string }) {
+function No({ value, cls = "text-primary-600" }: { value: string; cls?: string }) {
   if (!value) return null;
   return (
-    <span className="mr-1.5 font-bold text-primary-600 tabular-nums">
+    <span className={`mr-1.5 font-bold tabular-nums ${cls}`}>
       {value}.
     </span>
   );
@@ -164,11 +167,14 @@ function Meta({
   total,
   open,
   subtle = false,
+  accent,
 }: {
   studied: number;
   total: number;
   open: boolean;
   subtle?: boolean;
+  /** 중단원 배지는 그 단원의 색을 입는다. 소주제(subtle)는 회색 그대로 */
+  accent?: { tint: string; text: string };
 }) {
   return (
     <span className="flex items-center gap-2">
@@ -176,7 +182,7 @@ function Meta({
         className={`rounded-full px-2.5 py-0.5 text-[12px] font-bold ${
           subtle
             ? "bg-bg-subtle text-ink-sub"
-            : "bg-primary-50 text-primary-600"
+            : `${accent?.tint ?? "bg-primary-50"} ${accent?.text ?? "text-primary-600"}`
         }`}
       >
         {studied}/{total}

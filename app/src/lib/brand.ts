@@ -30,3 +30,35 @@ export const SUBJECT_ACCENT: Record<string, string> = {
 /** 사전에 없는 과목은 브랜드색으로 떨어뜨린다 — 색이 없는 것보다 낫다 */
 export const subjectAccent = (subject: string): string =>
   SUBJECT_ACCENT[subject] ?? "bg-primary-500 shadow-chip";
+
+/**
+ * 단원 색 — 대단원마다 보조 팔레트에서 하나씩 (Design.md §2.4).
+ *
+ * 참고 이미지의 범주 타일이 그랬듯, 같은 과목 안에서도 "지금 몇 단원에 있나"를
+ * 색이 먼저 말해 준다. 쓰는 자리는 셋으로 못 박는다 — 대단원 카드의 머리띠(tint),
+ * 그 번호(text), 그 아래 중단원 진도 배지(tint+text). 카드 본문은 흰색 그대로다.
+ *
+ * 단원 id 가 없으면(시드) 브랜드색으로 떨어진다. 없는 단원에 색을 지어내지 않는다.
+ */
+export type Accent = { tint: string; text: string; solid: string };
+const ACCENT: Record<string, Accent> = {
+  indigo: { tint: "bg-primary-50", text: "text-primary-700", solid: "bg-primary-500" },
+  azure: { tint: "bg-azure-50", text: "text-azure-700", solid: "bg-azure-500" },
+  violet: { tint: "bg-violet-50", text: "text-violet-700", solid: "bg-violet-500" },
+  rose: { tint: "bg-rose-50", text: "text-rose-700", solid: "bg-rose-500" },
+};
+const UNIT_ACCENT: Record<string, keyof typeof ACCENT> = {
+  "mate-1": "indigo",
+  "mate-2": "azure",
+  "mate-3": "violet",
+  "mate-4": "rose",
+};
+export const unitAccent = (unitId?: string): Accent =>
+  ACCENT[UNIT_ACCENT[unitId ?? ""] ?? "indigo"];
+
+/** 홈 "오늘의 구성" 타일 — 참고 이미지의 파스텔 카드 + 작은 색 태그 */
+export const TILE = {
+  review: { tint: "bg-violet-50", tag: "text-violet-700", value: "text-violet-700" },
+  fresh: { tint: "bg-azure-50", tag: "text-azure-700", value: "text-azure-700" },
+  streak: { tint: "bg-rose-50", tag: "text-rose-700", value: "text-rose-700" },
+} as const;
