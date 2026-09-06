@@ -19,10 +19,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ko" className="h-full antialiased">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-        />
+        {/* 서체는 globals.css 의 @font-face 가 물린다. 여기서는 그 호스트에
+            미리 붙어 첫 글자가 뜨는 시각을 앞당기는 일만 한다. */}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="" />
       </head>
       <body className="flex min-h-full flex-col bg-bg text-ink">
         {children}

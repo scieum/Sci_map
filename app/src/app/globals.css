@@ -1,6 +1,84 @@
 @import "tailwindcss";
 
 /*
+ * Pretendard — 9단 웨이트를 CDN 에서 직접 물린다.
+ * 앞서 layout.tsx 가 걸어 두었던 variable dynamic-subset 스타일시트를 이것으로
+ * 갈음했다. 같은 서체를 두 경로로 받으면 어느 쪽이 실제로 쓰이는지 알 수 없다.
+ * 브라우저는 실제로 쓰인 굵기만 내려받는다 — 앱이 쓰는 건 400·500·600·700·800 이다.
+ */
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
+/*
  * 컬러 시스템 — Design.md §2
  * 컴포넌트는 의미 토큰(primary-*)만 참조하고, 의미 토큰이 램프(--ramp-*)를
  * 가리킨다. 팔레트 교체 = 램프 6줄 교체.
@@ -50,8 +128,7 @@
   --color-info-bg: #e4f5f6;
   --color-lock: #6b7280;
 
-  --font-sans: "Pretendard Variable", Pretendard, -apple-system,
-    "Noto Sans KR", sans-serif;
+  --font-sans: Pretendard, -apple-system, "Noto Sans KR", sans-serif;
   /* 포인트 폰트 — 미정(빈칸). 확정 시 아래 첫 자리에 이름만 추가한다.
      예: --font-display: "확정폰트명", var(--font-sans); */
   --font-display: var(--font-sans);
