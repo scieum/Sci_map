@@ -13,7 +13,7 @@
 | 개념 카드 | **30장** — 6개 소주제 전부 |
 | 관계 명제 | 89개 (그중 `invertible` 58개 → OX 오답의 원천) |
 | 오개념 | 60개 |
-| 교과서 그림 | 23장 크롭, 카드 28/30 에 부착 |
+| 교과서 그림 | 25장 크롭, 카드 **30/30** 에 부착 (수식 크롭 2장·화학Ⅱ 1장 포함) |
 | 파생 문항 풀 | 약 266문항 |
 | 파이프라인 단계 | **C7 완료 → C8 사람 게이트 대기** |
 
@@ -41,25 +41,27 @@ C8 은 사람(교사)이 관계 명제의 진위를 판정하는 자리다. **�
 
 ## 이 리포에 **없는** 것
 
-저작권상 공개 리포에 올리지 않은 것이 셋 있다. 클론해도 이것들은 따라오지 않는다.
+저작권상 공개 리포에 올리지 않은 것이 둘 있다. 클론해도 이것들은 따라오지 않는다.
 
 | 무엇 | 왜 |
 |---|---|
 | `/inbox/` 교과서·기출 PDF | 발행사 저작물. 공개 배포 대상이 아니다 |
 | `/output/source/` 교과서 원문 텍스트 | C4 원문 대조용 내부 자료 (CLAUDE.md §9.4) |
-| `/app/public/media/*.png` 그림 크롭 | 전부 `access_tier: restricted`. 공개 URL 노출 0건이 배포 차단 조건이다 |
+| — | (교과서 그림 크롭은 2026-09-06 결정으로 리포에 **포함**된다. `docs/rights_policy.md` §2.5) |
 
 **권리 대장(`/output/rights/ledger.jsonl`)은 올라와 있다.** 어떤 그림을 어디서
 어떤 근거로 가져왔는지는 기록으로 남아야 하고, 그 기록 자체에는 저작물이 없다.
 
-크롭을 되살리려면 교과서 PDF 를 `/inbox/textbook/` 에 넣고:
+크롭을 다시 만들려면 교과서 PDF 를 `/inbox/textbook/` 에 넣고:
 
 ```bash
 python .claude/skills/figure-cropper/scripts/crop.py --plan output/media/mate-1.plan.json
+python .claude/skills/figure-cropper/scripts/crop.py --plan output/media/mate-1.formula.crops.json
+python .claude/skills/figure-cropper/scripts/crop.py --plan output/media/mate-1.chem2.crops.json
 python app/scripts/build_concepts.py
 ```
 
-`plan.json` 에 쪽수와 bbox 가 그대로 있으므로 같은 크롭이 재현된다.
+계획 파일에 쪽수와 bbox 가 그대로 있으므로 같은 크롭이 재현된다.
 
 ## 저작권을 아키텍처로 다룬다
 

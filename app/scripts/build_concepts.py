@@ -111,12 +111,12 @@ def to_app(card: dict, subject, major, section_of, topic_of, media) -> dict:
     m = media.get(card["id"])
     if m:
         out["hasRestrictedMedia"] = m["access_tier"] == "restricted"
-        # 교과서 크롭은 그림 번호와 캡션이 있고, 직접 만든 그림은 없다.
-        # 후자는 표제어를 캡션으로 쓴다 — 그림 자리에 이름표가 없으면 허전하다.
+        # 번호가 붙은 교과서 삽화는 "그림 Ⅰ-9 …" 로, 번호가 없는 것(수식 크롭,
+        # 사이드 노트 박스)은 캡션만으로, 둘 다 없으면 표제어로 이름표를 만든다.
         if m.get("figure_no"):
             out["mediaCaption"] = f"{m['figure_no']} {m['caption']}"
         else:
-            out["mediaCaption"] = card["term"]
+            out["mediaCaption"] = m.get("caption") or card["term"]
         # public/media 아래 상대 경로를 그대로 살린다.
         # 파일명만 떼면 own/ 같은 하위 폴더가 사라져 404 가 난다.
         rel = Path(m["file"]).as_posix()
