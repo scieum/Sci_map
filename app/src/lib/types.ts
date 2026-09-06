@@ -42,6 +42,10 @@ export interface Concept {
   unit: string; // "물질의 세 가지 상태 > 액체와 고체의 성질"
   /** 소주제 — 중단원 아래 한 층 ("기체 법칙", "액체" …) */
   topic?: string;
+  /** 백로그 단원 id ("mate-1"). 목차 번호 Ⅰ. 의 근거 */
+  unitId?: string;
+  /** 백로그 소단원 id ("mate-1-1-01"). 목차 번호 1. / 01. 의 근거 */
+  topicId?: string;
   /**
    * 이 카드의 그림이 restricted 자산인가 (§0.4 — 카드가 아니라 그림만 잠근다).
    * **판단이 아니라 규칙이다** — rights.holder 가 교사 자신이 아니면 무조건 true.

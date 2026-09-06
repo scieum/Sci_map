@@ -43,3 +43,32 @@ export function byTopic(concepts: Concept[]): [string, Concept[]][] {
   return Array.from(out.entries());
 }
 
+/**
+ * 목차 번호 — 대단원 `Ⅰ.` · 중단원 `1.` · 소단원 `01.`
+ *
+ * 번호를 화면에서 세지 않는다. 세면 카드가 하나 빠지거나 정렬이 바뀌는 순간
+ * 교과서와 어긋나고, 어긋난 것을 알아챌 방법이 없다. 백로그 id 가 곧 교과서의
+ * 번호다 — `mate-1-1-01` = Ⅰ 단원 · 1 중단원 · 01 소단원.
+ *
+ * id 가 없는 카드(파이프라인을 아직 돌지 않은 통합과학1 시드)는 번호가 없다.
+ * 그 경우 빈 문자열을 돌려주고, 화면은 번호 없이 이름만 그린다.
+ */
+const ROMAN = ["", "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ"];
+
+/** "mate-1" → "Ⅰ" */
+export function majorNo(c: Concept): string {
+  const n = Number(c.unitId?.split("-").pop());
+  return n >= 1 && n < ROMAN.length ? ROMAN[n] : "";
+}
+
+/** "mate-1-1-01" → "1" */
+export function minorNo(c: Concept): string {
+  const parts = c.topicId?.split("-") ?? [];
+  return parts.length >= 4 ? String(Number(parts[parts.length - 2])) : "";
+}
+
+/** "mate-1-1-01" → "01" */
+export function topicNo(c: Concept): string {
+  const parts = c.topicId?.split("-") ?? [];
+  return parts.length >= 4 ? parts[parts.length - 1] : "";
+}

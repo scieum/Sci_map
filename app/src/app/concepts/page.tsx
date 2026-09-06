@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { buildTree, byTopic } from "@/data/concepts";
+import { buildTree, byTopic, majorNo, minorNo, topicNo } from "@/data/concepts";
 import type { Concept } from "@/lib/types";
 import { LevelDots, Screen, ScreenTitle } from "@/components/ui";
 import { useProgress } from "@/lib/store";
@@ -44,7 +44,11 @@ export default function ConceptsPage() {
           key={major}
           className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
         >
-          <h2 className="px-5 pb-1 pt-4 text-[16px] font-bold">{major}</h2>
+          {/* 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
+          <h2 className="px-5 pb-1 pt-4 text-[16px] font-bold">
+            <No value={majorNo(firstOf(minors))} />
+            {major}
+          </h2>
 
           {Array.from(minors.entries()).map(([minor, concepts]) => {
             const key = `${major}>${minor}`;
@@ -59,6 +63,7 @@ export default function ConceptsPage() {
                   aria-expanded={isOpen}
                 >
                   <span className="text-[15px] font-semibold text-ink-sub">
+                    <No value={minorNo(concepts[0])} />
                     {minor}
                   </span>
                   <Meta studied={studied} total={concepts.length} open={isOpen} />
@@ -80,6 +85,7 @@ export default function ConceptsPage() {
                           aria-expanded={tOpen}
                         >
                           <span className="text-[14px] font-medium text-ink">
+                            <No value={topicNo(list[0])} />
                             {topic || "개념"}
                           </span>
                           <Meta
@@ -124,6 +130,24 @@ export default function ConceptsPage() {
       ))}
     </Screen>
   );
+}
+
+/**
+ * 목차 번호 조각 — 번호가 없는 카드(시드)에서는 아무것도 그리지 않는다.
+ * 자리만 차지하는 빈 번호는 정렬을 흐트러뜨린다.
+ */
+function No({ value }: { value: string }) {
+  if (!value) return null;
+  return (
+    <span className="mr-1.5 font-bold text-primary-600 tabular-nums">
+      {value}.
+    </span>
+  );
+}
+
+/** 대단원 번호를 알려면 그 아래 아무 카드나 하나면 된다 */
+function firstOf(minors: Map<string, Concept[]>): Concept {
+  return minors.values().next().value![0];
 }
 
 function countStudied(
