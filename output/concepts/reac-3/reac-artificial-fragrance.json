@@ -1,0 +1,135 @@
+{
+  "id": "reac-artificial-fragrance",
+  "concept_key": "concept:artificial-fragrance",
+  "registry_status": "new",
+  "term": "인공 향",
+  "aliases": [
+    "합성 향료"
+  ],
+  "notation": {
+    "hanja": "人工 香",
+    "hanja_gloss": "人 사람 인 · 工 장인 공 · 香 향기 향",
+    "english": "artificial fragrance"
+  },
+  "definition": "자연에서 나는 향을 닮도록 화학 반응으로 만들어 낸 향 물질. 알코올과 카복실산을 반응시켜 얻는 것이 대표적이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fragrance-synthesis",
+      "text": "아이소아밀 알코올의 -OH 와 아세트산의 -COOH 를 반응시키면 물이 빠지면서 향을 지닌 새 물질이 생긴다",
+      "form": {
+        "condition": "인산을 넣고 40~50 도에서 물중탕할 때",
+        "type": "causal",
+        "scope": "인공 향 만들기 실험",
+        "antecedent": {
+          "quantity": "반응한 알코올과 카복실산의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 향 물질의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 경로를 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건이 달라진다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fragrance-natural-vs-artificial",
+      "text": "천연 향은 자연에서 뽑아내고 인공 향은 화학 반응으로 만들어 내므로, 같은 향이라도 얻는 방법이 다르다",
+      "form": {
+        "condition": "향 물질을 얻는 방법으로 가를 때",
+        "type": "classification",
+        "scope": "향수·향료로 쓰이는 물질",
+        "antecedent": {
+          "quantity": "얻는 방법",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "천연 향인지 인공 향인지",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fragrance-functional-group-change",
+      "text": "반응으로 작용기가 달라지면 냄새 같은 성질도 함께 달라진다",
+      "form": {
+        "condition": "작용기만 달라진 두 물질을 견줄 때",
+        "type": "causal",
+        "scope": "알코올·카복실산과 그 축합 반응 생성물",
+        "antecedent": {
+          "quantity": "작용기가 달라진 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "냄새의 차이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "냄새가 다르다고 반드시 작용기가 달라진 것은 아니어서 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인공 향은 천연 향을 그대로 뽑아내 농도만 진하게 만든 것이다",
+      "why_wrong": "인공 향은 화학 반응으로 새로 만든 물질이다. 자연에서 뽑아내는 것은 천연 향이다.",
+      "linked_relation": "rel-fragrance-natural-vs-artificial",
+      "source": "llm"
+    },
+    {
+      "text": "향이 나는 것은 분자의 탄소 골격이 길기 때문이고 작용기와는 상관이 없다",
+      "why_wrong": "알코올과 카복실산이 반응해 작용기가 바뀌면서 냄새가 달라진다. 향은 작용기와 깊이 관련된다.",
+      "linked_relation": "rel-fragrance-functional-group-change",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-ester"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-alcohol"
+    },
+    {
+      "type": "related",
+      "target": "reac-carboxylic-acid"
+    },
+    {
+      "type": "related",
+      "target": "reac-acetylsalicylic-acid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-02",
+    "12반응03-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-02",
+  "pages": [
+    112,
+    116
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

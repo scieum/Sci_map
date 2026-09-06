@@ -1,0 +1,155 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-acid-ionization-constant",
+  "concept_key": "concept:acid-ionization-constant",
+  "term": "산의 이온화 상수",
+  "aliases": [
+    "산 이온화 상수"
+  ],
+  "notation": {
+    "hanja": "酸의 이온化 常數",
+    "hanja_note": "이온은 ion 을 소리대로 옮긴 말이라 한자가 없다.",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 常 항상 상 · 數 셀 수",
+    "english": "acid ionization constant",
+    "symbol_display": "K_a",
+    "symbol_plain": "Ka"
+  },
+  "definition": "산이 물과 이루는 이온화 평형의 평형 상수에서, 거의 변하지 않는 용매의 농도를 덜어 낸 값.",
+  "relations": [
+    {
+      "id": "rel-ka-definition",
+      "text": "용매인 물의 농도가 거의 그대로이므로 평형 상수식에서 이를 덜어 낸 값을 산의 이온화 상수로 삼는다",
+      "form": {
+        "condition": "묽은 수용액에서 온도가 일정함",
+        "type": "conditional",
+        "scope": "용매가 물인 묽은 용액"
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 세우는 방식을 말한 문장이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ka-strength",
+      "text": "온도가 같을 때 이 상수가 큰 산일수록 이온화가 잘 되어 산의 세기가 강하다",
+      "form": {
+        "condition": "온도가 같음(대개 25 ℃)",
+        "type": "direct",
+        "scope": "용매가 물인 수용액",
+        "antecedent": {
+          "quantity": "산의 이온화 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "상수가 크다는 것이 곧 이온화가 많이 진행된다는 뜻이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 같을 때 산의 이온화 상수가 큰 산일수록 산의 세기가 약하다"
+    },
+    {
+      "id": "rel-ka-conjugate-weak",
+      "text": "이 상수가 큰 산일수록 그 짝염기가 양성자를 붙잡는 힘이 약해 짝염기의 세기가 작다",
+      "form": {
+        "condition": "온도가 같고 용매가 물임",
+        "type": "inverse",
+        "scope": "짝산·짝염기 쌍 안에서의 비교",
+        "antecedent": {
+          "quantity": "산의 이온화 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "짝염기의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양성자를 잘 내놓는 쪽의 짝은 도로 붙잡는 힘이 약하므로 함께 커진다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산의 이온화 상수가 큰 산일수록 그 짝염기의 세기도 함께 커진다"
+    },
+    {
+      "id": "rel-ka-with-initial-conc",
+      "text": "처음 농도와 이 상수를 알면 평형에 이르렀을 때의 이온 농도를 계산해 낼 수 있다",
+      "form": {
+        "condition": "온도가 일정하고 처음 농도를 알고 있음",
+        "type": "conditional",
+        "scope": "약산의 묽은 수용액"
+      },
+      "invertible": false,
+      "invertible_reason": "계산이 가능하다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산의 이온화 상수는 수용액을 진하게 만들면 커진다",
+      "why_wrong": "온도가 같으면 처음 농도와 관계없이 일정한 값이다. 농도가 바뀌면 이온화하는 비율이 바뀔 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-ka-with-initial-conc"
+    },
+    {
+      "text": "이온화 상수가 큰 산은 그 짝염기도 센 염기다",
+      "why_wrong": "이온화 상수가 큰 산일수록 짝염기는 양성자를 도로 붙잡지 못해 약한 염기가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-ka-conjugate-weak"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-ionization-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-conjugate-acid-base-pair"
+    },
+    {
+      "type": "next",
+      "target": "reac-ph-of-weak-acid-solution"
+    },
+    {
+      "type": "next",
+      "target": "reac-hydrolysis-of-salt"
+    },
+    {
+      "type": "related",
+      "target": "reac-base-ionization-constant"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    18,
+    19,
+    24
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

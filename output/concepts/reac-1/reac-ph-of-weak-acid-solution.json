@@ -1,0 +1,118 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-ph-of-weak-acid-solution",
+  "concept_key": "concept:ph-of-weak-acid-solution",
+  "term": "약산 수용액의 pH",
+  "notation": {
+    "hanja": "弱酸 水溶液의 pH",
+    "hanja_note": "뒤의 pH 는 기호라 한자가 없다.",
+    "hanja_gloss": "弱 약할 약 · 酸 실 산 · 水 물 수 · 溶 녹을 용 · 液 진 액",
+    "english": "pH of weak acid solution"
+  },
+  "definition": "처음 농도와 이온화 상수로 평형 농도를 먼저 구한 뒤, 얻은 하이드로늄 이온 농도로부터 계산해 내는 값.",
+  "relations": [
+    {
+      "id": "rel-wa-ph-unknown-x",
+      "text": "이온화한 농도를 x 로 두면 평형에서 하이드로늄 이온과 짝염기의 농도가 각각 x 가 된다",
+      "form": {
+        "condition": "약산 한 종류만 녹아 있고 온도가 일정함",
+        "type": "conditional",
+        "scope": "물의 자체 이온화를 무시할 수 있는 농도"
+      },
+      "invertible": false,
+      "invertible_reason": "계산에서 미지수를 잡는 방식이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wa-ph-approximation",
+      "text": "이온화한 양이 처음 농도에 견주어 아주 작으면 줄어든 분만큼을 무시하고 어림잡아 풀 수 있다",
+      "form": {
+        "condition": "이온화하는 정도가 매우 작음",
+        "type": "conditional",
+        "scope": "이온화 상수가 작고 처음 농도가 충분히 큰 약산"
+      },
+      "invertible": false,
+      "invertible_reason": "근사가 가능하다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wa-ph-vs-strong",
+      "text": "농도를 같게 맞추면 약산 수용액에서 얻는 pH 가 강산 수용액의 값보다 크다",
+      "form": {
+        "condition": "몰농도·가수·온도가 같음",
+        "type": "inverse",
+        "scope": "묽은 수용액끼리의 비교",
+        "antecedent": {
+          "quantity": "산의 이온화 정도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "계산된 pH",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이온화가 덜 될수록 하이드로늄 이온이 적어 pH 가 크므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도를 같게 맞추면 약산 수용액에서 얻는 pH 가 강산 수용액의 값보다 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "0.1 M 아세트산 수용액의 pH 는 1 이다",
+      "why_wrong": "0.1 M 이 모두 이온화한다고 본 값이다. 실제로는 일부만 이온화해 하이드로늄 이온 농도가 훨씬 작고 pH 는 약 2.9 다.",
+      "source": "llm",
+      "linked_relation": "rel-wa-ph-unknown-x"
+    },
+    {
+      "text": "어림 계산은 어떤 약산에서나 늘 써도 된다",
+      "why_wrong": "이온화하는 정도가 크면 무시한 양이 커져 어림값과 참값이 벌어진다. 이온화가 아주 적을 때만 쓸 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-wa-ph-approximation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-ph"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-weak-acid"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-acid-ionization-constant"
+    },
+    {
+      "type": "related",
+      "target": "reac-ph-of-weak-base-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-03",
+  "pages": [
+    20,
+    21,
+    24
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

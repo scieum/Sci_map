@@ -1,0 +1,125 @@
+{
+  "id": "reac-oxidation-of-aldehyde",
+  "concept_key": "concept:oxidation-of-aldehyde",
+  "registry_status": "new",
+  "term": "알데하이드의 산화",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'알데하이드'가 음차어라 낱말 전체에 대응하는 한자어가 없다. 뒤의 '산화'만 酸化에 해당한다.",
+    "english": "oxidation of aldehyde"
+  },
+  "definition": "알데하이드의 -CHO 가 -COOH 로 바뀌면서 카복실산이 생기는 반응. -CHO 의 탄소가 산소와 단일 결합을 하나 더 얻는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-aldehyde-oxidation-product",
+      "text": "알데하이드를 산화시키면 -CHO 가 -COOH 로 바뀌어 카복실산이 만들어진다",
+      "form": {
+        "condition": "산소나 산화제가 있는 조건",
+        "type": "causal",
+        "scope": "폼알데하이드·아세트알데하이드 같은 간단한 알데하이드",
+        "antecedent": {
+          "quantity": "산화된 알데하이드의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 카복실산의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "폼알데하이드에서 폼산으로 가는 쪽이 산화이므로 반대로 적으면 반드시 거짓이다",
+      "inverted_text": "폼산을 산화시키면 폼알데하이드가 생성된다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aldehyde-oxidation-bond-change",
+      "text": "-CHO 의 탄소는 산화되면서 산소와 단일 결합을 하나 더 만들어 산소 두 개와 이어진 상태가 된다",
+      "form": {
+        "condition": "알데하이드가 산화될 때",
+        "type": "conditional",
+        "scope": "알데하이드기가 카복실기로 바뀌는 과정"
+      },
+      "invertible": false,
+      "invertible_reason": "결합의 변화를 묘사한 문장이라 방향을 맞바꾸는 뒤집기가 성립하지 않는다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aldehyde-oxidation-fermentation",
+      "text": "포도주가 발사믹 식초로 변하는 발효도 알코올이 알데하이드를 거쳐 카복실산까지 산화된 결과다",
+      "form": {
+        "condition": "공기 중 산소와 미생물이 작용하는 발효 조건",
+        "type": "causal",
+        "scope": "에탄올이 아세트산으로 바뀌는 발효",
+        "antecedent": {
+          "quantity": "산화가 진행된 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 아세트산의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "발효라는 특정 사례를 설명한 문장이라 방향을 뒤집으면 성립 여부를 가릴 근거가 없다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "알데하이드가 산화되면 알코올로 되돌아간다",
+      "why_wrong": "산화는 산소를 얻는 쪽이라 알데하이드는 카복실산이 된다. 알코올로 돌아가는 것은 환원이다.",
+      "linked_relation": "rel-aldehyde-oxidation-product",
+      "source": "llm"
+    },
+    {
+      "text": "포도주가 시어지는 발효는 산화 반응과 관계없는 다른 변화다",
+      "why_wrong": "발효로 에탄올이 아세트산이 되는 과정 자체가 작용기가 산화되며 바뀌는 반응이다.",
+      "linked_relation": "rel-aldehyde-oxidation-fermentation",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-aldehyde"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-of-carbon-compound"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-carboxylic-acid"
+    },
+    {
+      "type": "next",
+      "target": "reac-silver-mirror-reaction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-02",
+  "pages": [
+    99,
+    102
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,126 @@
+{
+  "id": "reac-nylon",
+  "concept_key": "concept:nylon",
+  "registry_status": "new",
+  "term": "나일론",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 nylon 의 음차어로 대응하는 한자어 표기가 없다.",
+    "english": "nylon"
+  },
+  "definition": "-COOH 나 -COCl 을 지닌 단위체와 -NH2 를 지닌 단위체가 잇따라 축합 중합해 만들어진 합성 섬유.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nylon-condensation",
+      "text": "-COCl 을 지닌 염화 아디프산과 -NH2 를 지닌 헥사메틸렌다이아민이 잇따라 축합해 나일론 6,6 이 만들어진다",
+      "form": {
+        "condition": "두 단위체가 저마다 작용기를 두 개씩 지닐 때",
+        "type": "causal",
+        "scope": "나일론 6,6 의 합성",
+        "antecedent": {
+          "quantity": "축합이 되풀이된 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이어진 나일론 사슬의 길이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 경로를 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건이 달라진다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nylon-byproduct",
+      "text": "나일론이 만들어질 때는 이어지는 자리마다 염화 수소 같은 작은 분자가 빠져나온다",
+      "form": {
+        "condition": "염화 아디프산을 단위체로 쓰는 축합 중합",
+        "type": "conditional",
+        "scope": "나일론 6,6 을 만드는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "나일론은 축합 중합으로 만들어지므로 첨가 중합이라 적으면 반드시 거짓이다",
+      "inverted_text": "나일론은 첨가 중합으로 만들어지므로 빠져나오는 작은 분자가 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nylon-use",
+      "text": "나일론은 질기고 튼튼해 칫솔모와 스타킹부터 낙하산과 밧줄까지 두루 쓰였다",
+      "form": {
+        "condition": "질긴 섬유가 필요한 쓰임",
+        "type": "causal",
+        "scope": "나일론으로 만든 생활용품과 산업용품",
+        "antecedent": {
+          "quantity": "나일론의 질기고 튼튼한 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "쓰이는 분야의 넓이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임이 넓다고 반드시 그 성질 때문이라 단정할 수 없어 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "나일론은 첨가 중합 반응으로 만들어진다",
+      "why_wrong": "나일론은 -COCl 과 -NH2 사이에서 작은 분자가 빠지며 이어지는 축합 중합으로 만들어진다.",
+      "linked_relation": "rel-nylon-byproduct",
+      "source": "llm"
+    },
+    {
+      "text": "나일론은 자연에서 얻은 실을 가공해 만든 천연 섬유다",
+      "why_wrong": "나일론은 사람이 단위체를 반응시켜 만든 합성 고분자다.",
+      "linked_relation": "rel-nylon-condensation",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-condensation-polymerization"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-synthetic-polymer"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-carboxyl-group"
+    },
+    {
+      "type": "related",
+      "target": "reac-polymer"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03",
+    "12반응03-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-02",
+  "pages": [
+    114,
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

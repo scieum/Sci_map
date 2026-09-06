@@ -1,0 +1,115 @@
+{
+  "id": "reac-redox-equation",
+  "concept_key": "concept:redox-equation",
+  "registry_status": "new",
+  "term": "산화·환원 반응식",
+  "notation": {
+    "hanja": "酸化還元反應式",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 還 돌아올 환 · 元 으뜸 원 · 反 돌이킬 반 · 應 응할 응 · 式 법 식",
+    "english": "redox equation"
+  },
+  "definition": "산화된 원자와 환원된 원자의 산화수 변화량을 맞추고 원자 수와 전하량까지 맞춰 완성한 화학 반응식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rxe-sum",
+      "text": "한 반응에서 커진 산화수의 총합과 작아진 산화수의 총합은 서로 같다.",
+      "form": {
+        "condition": "계수를 모두 맞춘 반응식에서",
+        "type": "direct",
+        "scope": "산화수 변화를 셀 수 있는 산화·환원 반응",
+        "antecedent": {
+          "quantity": "커진 산화수의 총합",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "작아진 산화수의 총합",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 총합이 같다는 등식이므로 좌우를 바꿔도 같은 명제다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rxe-charge",
+      "text": "완성된 반응식에서는 반응 전 전하의 합과 반응 후 전하의 합이 같아야 한다.",
+      "form": {
+        "condition": "이온이 참여하는 반응식을 완성한 뒤 검산할 때",
+        "type": "conditional",
+        "scope": "수용액에서 이온이 오가는 산화·환원 반응식"
+      },
+      "invertible": false,
+      "invertible_reason": "보존 조건을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rxe-halfsum",
+      "text": "전자 수를 맞춘 두 반쪽 반응식을 더하면 전자가 사라진 전체 반응식이 만들어진다.",
+      "form": {
+        "condition": "반쪽 반응식을 이용해 전체 반응식을 세울 때",
+        "type": "causal",
+        "scope": "반쪽 반응식으로 나눌 수 있는 산화·환원 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "절차의 결과를 밝힌 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자 수만 좌우가 같으면 산화·환원 반응식이 완성된 것이다",
+      "why_wrong": "이온이 참여하는 반응식은 전하량까지 맞아야 한다. 전자 수를 맞추지 않으면 전하의 합이 어긋난다.",
+      "source": "llm",
+      "linked_relation": "rel-rxe-charge"
+    },
+    {
+      "text": "전체 반응식에도 오간 전자를 적어 주어야 한다",
+      "why_wrong": "잃은 전자와 얻은 전자의 수를 같게 맞춘 뒤 더하므로 전자는 양변에서 지워진다.",
+      "source": "llm",
+      "linked_relation": "rel-rxe-halfsum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-half-reaction-equation"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-number-rule"
+    },
+    {
+      "type": "related",
+      "target": "reac-oxidation-number"
+    },
+    {
+      "type": "related",
+      "target": "reac-redox-simultaneity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-02",
+  "pages": [
+    55,
+    87
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,117 @@
+{
+  "id": "reac-standard-cell-potential",
+  "concept_key": "concept:standard-cell-potential",
+  "registry_status": "new",
+  "term": "표준 전지 전위",
+  "aliases": [
+    "전지 전위",
+    "전위차"
+  ],
+  "notation": {
+    "hanja": "標準電池電位",
+    "hanja_gloss": "標 표할 표 · 準 준할 준 · 電 번개 전 · 池 못 지 · 電 번개 전 · 位 자리 위",
+    "english": "standard cell potential",
+    "symbol_display": "E°전지",
+    "symbol_plain": "E0cell"
+  },
+  "definition": "표준 상태의 두 반쪽 전지를 이었을 때 두 전극 사이에 생기는 전위차.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-scp-formula",
+      "text": "환원이 일어나는 쪽의 표준 환원 전위에서 산화가 일어나는 쪽의 값을 빼면 그 전지의 표준 전지 전위가 나온다.",
+      "form": {
+        "condition": "표준 상태에서 두 반쪽 전지의 전위 값을 알 때",
+        "type": "causal",
+        "scope": "표준 상태로 맞춘 두 반쪽 전지로 꾸민 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "빼는 순서를 바꾸면 부호가 반대가 되어 자발적으로 작동하는 전지의 값과 어긋난다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산화가 일어나는 쪽의 표준 환원 전위에서 환원이 일어나는 쪽의 값을 빼면 표준 전지 전위가 나온다."
+    },
+    {
+      "id": "rel-scp-sign",
+      "text": "표준 환원 전위가 더 큰 반쪽 전지가 환원 쪽이 되므로 계산한 표준 전지 전위는 양수가 된다.",
+      "form": {
+        "condition": "저절로 작동하는 전지를 꾸렸을 때",
+        "type": "causal",
+        "scope": "표준 상태의 두 반쪽 전지로 이룬 화학 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "부호가 정해지는 까닭을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-scp-coefficient",
+      "text": "반응식의 계수를 몇 배로 늘려도 전지 전위 값은 달라지지 않는다.",
+      "form": {
+        "condition": "같은 반응을 계수만 바꿔 적을 때",
+        "type": "classification",
+        "scope": "표준 상태에서 정의된 전지 전위"
+      },
+      "invertible": true,
+      "invertible_reason": "계수를 늘리면 전위도 늘어난다는 진술은 전위가 세기 성질이라는 점과 어긋난다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응식의 계수를 두 배로 늘리면 전지 전위 값도 두 배가 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 반쪽 전지의 표준 환원 전위를 더하면 전지 전위가 된다",
+      "why_wrong": "전지 전위는 두 값의 차이다. 환원 쪽 값에서 산화 쪽 값을 빼야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-scp-formula"
+    },
+    {
+      "text": "금속판을 더 크게 하거나 용액을 더 많이 부으면 전지 전위가 커진다",
+      "why_wrong": "전지 전위는 물질의 종류와 상태로 정해지는 값이라 전극의 크기나 용액의 양에는 영향을 받지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-scp-coefficient"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-standard-reduction-potential"
+    },
+    {
+      "type": "related",
+      "target": "reac-standard-hydrogen-electrode"
+    },
+    {
+      "type": "related",
+      "target": "reac-daniell-cell",
+      "note": "아연-구리 전지가 계산 예로 쓰인다"
+    },
+    {
+      "type": "related",
+      "target": "reac-chemical-cell"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    67,
+    77,
+    86
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,138 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-buffer-action-in-organism",
+  "concept_key": "concept:buffer-action-in-organism",
+  "term": "생체 내 완충 작용",
+  "aliases": [
+    "혈액의 완충 작용"
+  ],
+  "notation": {
+    "hanja": "生體 內 緩衝 作用",
+    "hanja_gloss": "生 날 생 · 體 몸 체 · 內 안 내 · 緩 느릴 완 · 衝 찌를 충 · 作 지을 작 · 用 쓸 용",
+    "english": "buffer action in organism"
+  },
+  "definition": "혈액처럼 생체의 액체가 탄산과 탄산수소 이온의 평형을 이용해 pH 를 좁은 범위에 붙잡아 두는 작용.",
+  "relations": [
+    {
+      "id": "rel-bio-blood-buffer",
+      "text": "혈액은 완충 용액으로 작용해 pH 가 7.4 부근에서 거의 일정하게 유지된다",
+      "form": {
+        "condition": "정상적인 생리 상태",
+        "type": "conditional",
+        "scope": "사람의 혈액"
+      },
+      "invertible": false,
+      "invertible_reason": "상태를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-absorb-acid",
+      "text": "혈액에 하이드로늄 이온이 늘면 탄산수소 이온이 이를 받아 탄산이 되므로 pH 가 크게 떨어지지 않는다",
+      "form": {
+        "condition": "완충 성분이 남아 있는 범위",
+        "type": "causal",
+        "scope": "탄산과 탄산수소 이온으로 이루어진 완충계",
+        "antecedent": {
+          "quantity": "혈액의 하이드로늄 이온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "혈액의 pH",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽이 늘어도 다른 쪽이 그대로라는 서술이라 맞바꾸면 방향이 서지 않는다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-absorb-base",
+      "text": "과호흡 등으로 수산화 이온이 늘면 탄산이 이를 중화해 혈액의 pH 가 크게 오르지 않는다",
+      "form": {
+        "condition": "완충 성분이 남아 있는 범위",
+        "type": "causal",
+        "scope": "탄산과 탄산수소 이온으로 이루어진 완충계",
+        "antecedent": {
+          "quantity": "혈액의 수산화 이온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "혈액의 pH",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽이 늘어도 다른 쪽이 그대로라는 서술이라 맞바꾸면 방향이 서지 않는다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-enzyme-needs-ph",
+      "text": "효소가 제 기능을 하려면 pH 가 일정해야 하므로 완충 작용은 생명 유지에 빠질 수 없다",
+      "form": {
+        "condition": "몸속에서 효소가 관여하는 반응이 일어남",
+        "type": "causal",
+        "scope": "생체 내부 환경"
+      },
+      "invertible": false,
+      "invertible_reason": "필요성을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산성 음료를 마시면 혈액이 곧바로 산성으로 변한다",
+      "why_wrong": "늘어난 하이드로늄 이온을 탄산수소 이온이 받아들이므로 혈액의 pH 는 거의 변하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-bio-absorb-acid"
+    },
+    {
+      "text": "혈액의 pH 는 7.0 으로 중성이다",
+      "why_wrong": "혈액의 pH 는 약 7.4 로 중성보다 조금 높은 값에서 유지된다.",
+      "source": "llm",
+      "linked_relation": "rel-bio-blood-buffer"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-buffer-solution"
+    },
+    {
+      "type": "related",
+      "target": "reac-ph"
+    },
+    {
+      "type": "related",
+      "target": "reac-conjugate-acid-base-pair"
+    }
+  ],
+  "curriculum": [
+    "12반응01-05"
+  ],
+  "topic_id": "reac-1-2-03",
+  "pages": [
+    38,
+    39,
+    40
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

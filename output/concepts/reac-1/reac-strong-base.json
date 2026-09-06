@@ -1,0 +1,116 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-strong-base",
+  "concept_key": "concept:strong-base",
+  "term": "강염기",
+  "notation": {
+    "hanja": "強鹽基",
+    "hanja_gloss": "強 강할 강 · 鹽 소금 염 · 基 터 기",
+    "english": "strong base"
+  },
+  "definition": "물에 녹으면 거의 모두 이온화하여 수산화 이온을 많이 내놓는 염기. 수산화 소듐과 수산화 포타슘이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-strong-base-almost-full",
+      "text": "묽은 수용액에서 거의 전부 이온화해 수산화 이온을 내놓는 염기를 강염기로 분류한다",
+      "form": {
+        "condition": "물을 용매로 하는 묽은 용액",
+        "type": "classification",
+        "scope": "수용액에서의 이온화 정도로 가릴 때"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-strong-base-higher-ph",
+      "text": "농도가 같다면 강염기 수용액의 pH 가 약염기 수용액보다 높다",
+      "form": {
+        "condition": "몰농도·가수·온도가 같음",
+        "type": "direct",
+        "scope": "묽은 수용액끼리의 비교",
+        "antecedent": {
+          "quantity": "염기의 이온화 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수용액의 pH",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수산화 이온이 많을수록 pH 가 크므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도가 같다면 강염기 수용액의 pH 가 약염기 수용액보다 낮다"
+    },
+    {
+      "id": "rel-strong-base-neutral-point",
+      "text": "강산을 강염기로 적정하면 남는 이온이 물과 반응하지 않아 중화점의 액성이 중성이다",
+      "form": {
+        "condition": "25 ℃에서 강산과 강염기로 적정함",
+        "type": "causal",
+        "scope": "가수 분해하지 않는 염이 생기는 조합"
+      },
+      "invertible": false,
+      "invertible_reason": "액성이 어떻게 되는지를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "강염기 수용액은 농도와 상관없이 pH 가 14 다",
+      "why_wrong": "pH 는 수산화 이온의 농도로 정해진다. 묽은 강염기 수용액의 pH 는 14 보다 훨씬 작다.",
+      "source": "llm",
+      "linked_relation": "rel-strong-base-higher-ph"
+    },
+    {
+      "text": "강염기 수용액은 약염기 수용액보다 항상 pH 가 높다",
+      "why_wrong": "농도까지 같을 때만 그렇다. 아주 묽은 강염기가 진한 약염기보다 pH 가 낮을 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-strong-base-higher-ph"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "related",
+      "target": "reac-weak-base"
+    },
+    {
+      "type": "related",
+      "target": "reac-strong-acid"
+    },
+    {
+      "type": "related",
+      "target": "reac-acidity-of-salt-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    17,
+    35
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

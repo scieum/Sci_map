@@ -1,0 +1,97 @@
+{
+  "id": "reac-primary-cell",
+  "concept_key": "concept:primary-cell",
+  "registry_status": "new",
+  "term": "일차 전지",
+  "notation": {
+    "hanja": "一次電池",
+    "hanja_gloss": "一 한 일 · 次 버금 차 · 電 번개 전 · 池 못 지",
+    "english": "primary cell"
+  },
+  "definition": "한 번 방전하고 나면 반응을 되돌릴 수 없어 충전해 다시 쓰지 못하는 실용 전지.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pri-nocharge",
+      "text": "일차 전지는 방전이 끝나면 충전해서 되살려 쓸 수 없다.",
+      "form": {
+        "condition": "정상적인 사용 조건에서",
+        "type": "classification",
+        "scope": "건전지·단추 전지 같은 일차 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "충전해 다시 쓸 수 있다면 그것은 정의상 이차 전지이므로 뒤집은 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일차 전지는 방전이 끝난 뒤 충전해서 여러 번 다시 쓸 수 있다."
+    },
+    {
+      "id": "rel-pri-alkaline",
+      "text": "염기성 전해질을 쓴 건전지는 산성 전해질을 쓴 건전지보다 아연 통의 부식이 덜해 오래가고 전압도 일정하게 유지된다.",
+      "form": {
+        "condition": "구조가 같은 건전지끼리 전해질만 달리해 견줄 때",
+        "type": "conditional",
+        "scope": "아연 통을 (-)극으로 쓰는 건전지",
+        "antecedent": {
+          "quantity": "전해질의 산성 정도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "전지의 수명",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "전해질 성질과 수명의 관계를 말한 명제라 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "다 쓴 건전지도 한동안 그냥 두면 저절로 충전되어 다시 쓸 수 있다",
+      "why_wrong": "일차 전지의 반응은 되돌릴 수 없다. 잠깐 전압이 회복된 것처럼 보이는 것은 전극 주변 물질의 농도가 다시 고르게 퍼졌기 때문이다.",
+      "source": "llm",
+      "linked_relation": "rel-pri-nocharge"
+    },
+    {
+      "text": "일차 전지는 이차 전지와 달리 전해질이 없다",
+      "why_wrong": "일차 전지도 (+)극, (-)극, 전해질을 갖춘다. 건전지의 전해질은 흐르지 않도록 반죽 형태로 들어 있을 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-pri-alkaline"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-chemical-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-secondary-cell",
+      "note": "충전 가능성으로 갈리는 짝"
+    },
+    {
+      "type": "related",
+      "target": "reac-electrolyte"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-01",
+  "pages": [
+    60
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

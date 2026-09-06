@@ -1,0 +1,109 @@
+{
+  "id": "reac-carbon-compound",
+  "concept_key": "concept:carbon-compound",
+  "registry_status": "new",
+  "term": "탄소 화합물",
+  "aliases": [],
+  "notation": {
+    "hanja": "炭素 化合物",
+    "hanja_gloss": "炭 숯 탄 · 素 본디 소 · 化 될 화 · 合 합할 합 · 物 물건 물",
+    "english": "carbon compound"
+  },
+  "definition": "탄소 원자를 뼈대로 삼고 수소·산소·질소 같은 비금속 원자가 붙어 이루어진 화합물. 뼈대 모양과 붙은 원자에 따라 성질이 갈린다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-carbon-compound-variety",
+      "text": "탄소끼리 이어지는 방식이 여럿이라 탄소 화합물의 가짓수는 다른 원소로 만든 화합물보다 훨씬 많다",
+      "form": {
+        "condition": "탄소 원자가 네 개의 결합 자리를 가진다는 전제",
+        "type": "causal",
+        "scope": "탄소를 골격으로 하는 비금속 화합물",
+        "antecedent": {
+          "quantity": "탄소 골격을 잇는 방식의 가짓수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "만들어질 수 있는 탄소 화합물의 종류",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "종류가 많다는 결과에서 원인을 거슬러 짚는 문장이 늘 거짓이 되지는 않는다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carbon-compound-property",
+      "text": "탄소 골격에 붙은 원자의 종류나 결합 형태가 달라지면 그 물질이 보이는 성질도 달라진다",
+      "form": {
+        "condition": "탄소 화합물끼리 견줄 때",
+        "type": "conditional",
+        "scope": "이 단원에서 다루는 작용기를 가진 탄소 화합물",
+        "antecedent": {
+          "quantity": "결합한 원자의 종류·결합 형태의 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "두 물질의 성질 차이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성질이 다르면 구조도 다르다는 역방향 진술이 반드시 거짓이라고 말할 수 없다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "탄소가 든 물질은 모두 생물에서만 얻을 수 있다",
+      "why_wrong": "아스피린·플라스틱·나일론처럼 사람이 화학 반응으로 만들어 낸 탄소 화합물이 아주 많다.",
+      "source": "llm"
+    },
+    {
+      "text": "탄소 화합물은 종류가 많아도 탄소가 들어 있으니 성질은 서로 비슷하다",
+      "why_wrong": "붙어 있는 원자와 결합 형태가 다르면 녹는점·용해성·반응성이 전혀 달라진다. 에탄올과 아세트산이 그 예다.",
+      "linked_relation": "rel-carbon-compound-property",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-carbon-atom-bonding"
+    },
+    {
+      "type": "next",
+      "target": "reac-functional-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-polymer"
+    },
+    {
+      "type": "related",
+      "target": "reac-structural-formula"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-01",
+  "pages": [
+    92,
+    93,
+    109
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

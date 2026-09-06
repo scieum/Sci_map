@@ -1,0 +1,134 @@
+{
+  "id": "reac-synthetic-polymer",
+  "concept_key": "concept:synthetic-polymer",
+  "registry_status": "new",
+  "term": "합성 고분자",
+  "aliases": [],
+  "notation": {
+    "hanja": "合成 高分子",
+    "hanja_gloss": "合 합할 합 · 成 이룰 성 · 高 높을 고 · 分 나눌 분 · 子 아들 자",
+    "english": "synthetic polymer"
+  },
+  "definition": "사람이 화학 반응을 이용해 인공적으로 만들어 낸 고분자. 플라스틱·합성 섬유·합성 고무가 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-synthetic-polymer-classification",
+      "text": "사람이 인공적으로 합성해 얻은 고분자를 합성 고분자라는 갈래로 묶는다",
+      "form": {
+        "condition": "만들어진 유래를 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "고분자 화합물의 분류",
+        "antecedent": {
+          "quantity": "사람이 합성했는지 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "합성 고분자 갈래에 드는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-synthetic-polymer-by-polymerization",
+      "text": "어떤 중합 반응으로 만들었느냐에 따라 폴리에틸렌 같은 첨가 중합 고분자와 나일론·PETE 같은 축합 중합 고분자로 갈린다",
+      "form": {
+        "condition": "중합 반응의 유형을 기준으로",
+        "type": "classification",
+        "scope": "이 단원이 예로 든 합성 고분자",
+        "antecedent": {
+          "quantity": "쓰인 중합 반응의 유형",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "나뉘는 합성 고분자 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-synthetic-polymer-use",
+      "text": "합성 고분자는 질기고 가벼우며 잘 상하지 않아 의류·포장재·배관·타이어 같은 쓰임을 얻었다",
+      "form": {
+        "condition": "성질에 맞는 용도를 고를 때",
+        "type": "causal",
+        "scope": "플라스틱·합성 섬유·합성 고무",
+        "antecedent": {
+          "quantity": "질기고 잘 상하지 않는 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생활과 산업에서의 쓰임",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임이 많다고 반드시 그 성질 때문이라 단정할 수 없어 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "합성 고분자는 모두 첨가 중합으로 만들어진다",
+      "why_wrong": "폴리에틸렌은 첨가 중합이지만 나일론과 PETE 는 축합 중합으로 만들어진다.",
+      "linked_relation": "rel-synthetic-polymer-by-polymerization",
+      "source": "llm"
+    },
+    {
+      "text": "합성 고분자는 사람이 만든 물질이라 천연 고분자와 달리 단위체가 없다",
+      "why_wrong": "합성 고분자도 에틸렌이나 염화 아디프산 같은 단위체가 이어져 만들어진다.",
+      "linked_relation": "rel-synthetic-polymer-classification",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-polymer"
+    },
+    {
+      "type": "next",
+      "target": "reac-nylon"
+    },
+    {
+      "type": "next",
+      "target": "reac-plastic"
+    },
+    {
+      "type": "related",
+      "target": "reac-natural-polymer"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03",
+    "12반응03-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    106,
+    107,
+    116
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,114 @@
+{
+  "id": "reac-secondary-cell",
+  "concept_key": "concept:secondary-cell",
+  "registry_status": "new",
+  "term": "이차 전지",
+  "aliases": [
+    "충전지"
+  ],
+  "notation": {
+    "hanja": "二次電池",
+    "hanja_gloss": "二 두 이 · 次 버금 차 · 電 번개 전 · 池 못 지",
+    "english": "secondary cell"
+  },
+  "definition": "방전으로 진행된 반응을 충전으로 되돌릴 수 있어 여러 번 되풀이해 쓰는 실용 전지.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sec-recharge",
+      "text": "이차 전지는 외부에서 전기 에너지를 넣어 방전 때 진행된 반응을 반대 방향으로 되돌릴 수 있다.",
+      "form": {
+        "condition": "충전기로 전기 에너지를 공급할 때",
+        "type": "causal",
+        "scope": "납축전지·리튬 이온 전지 같은 이차 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "되돌릴 수 있다는 가능성을 말한 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sec-li-move",
+      "text": "리튬 이온 전지가 방전할 때 리튬 이온은 (-)극에서 (+)극 쪽으로 이동한다.",
+      "form": {
+        "condition": "리튬 이온 전지가 방전되는 동안",
+        "type": "classification",
+        "scope": "리튬 이온을 오가게 하는 이차 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "그 방향은 충전할 때의 이동 방향이므로 방전 중이라는 조건에서는 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "리튬 이온 전지가 방전할 때 리튬 이온은 (+)극에서 (-)극 쪽으로 이동한다."
+    },
+    {
+      "id": "rel-sec-density",
+      "text": "리튬은 매우 가벼운 금속이라 같은 질량으로 저장할 수 있는 에너지가 커서 소형 기기와 전기 자동차에 두루 쓰인다.",
+      "form": {
+        "condition": "단위 질량당 저장 에너지를 견줄 때",
+        "type": "direct",
+        "scope": "리튬을 쓰는 이차 전지",
+        "antecedent": {
+          "quantity": "금속의 원자량",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "단위 질량당 저장 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "재료의 성질과 쓰임을 이은 명제라 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "충전할 때도 방전할 때와 같은 방향으로 반응이 진행된다",
+      "why_wrong": "충전은 방전 때 일어난 산화·환원 반응을 거꾸로 밀어 주는 과정이다. 이온과 전자의 이동 방향도 반대가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-sec-li-move"
+    },
+    {
+      "text": "납축전지는 전압이 낮아 자동차처럼 큰 전압이 필요한 곳에는 쓰지 못한다",
+      "why_wrong": "납축전지는 다른 이차 전지보다 용량이 크고 전압도 높아 자동차의 시동 전원으로 쓰인다.",
+      "source": "llm",
+      "linked_relation": "rel-sec-recharge"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-chemical-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-all-solid-state-battery"
+    },
+    {
+      "type": "related",
+      "target": "reac-primary-cell"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-01",
+  "pages": [
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

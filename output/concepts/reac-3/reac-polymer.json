@@ -1,0 +1,141 @@
+{
+  "id": "reac-polymer",
+  "concept_key": "concept:polymer",
+  "registry_status": "new",
+  "term": "고분자 화합물",
+  "aliases": [
+    "고분자",
+    "중합체"
+  ],
+  "notation": {
+    "hanja": "高分子 化合物",
+    "hanja_gloss": "高 높을 고 · 分 나눌 분 · 子 아들 자 · 化 될 화 · 合 합할 합 · 物 물건 물",
+    "english": "polymer"
+  },
+  "definition": "작은 분자인 단위체가 잇따라 화학 결합해 만들어진 아주 큰 분자. 자연에서 얻는 것과 사람이 합성한 것으로 나뉜다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-polymer-grows-with-monomer",
+      "text": "단위체가 더 많이 이어질수록 분자는 커져 고분자가 된다",
+      "form": {
+        "condition": "중합 반응이 이어질 때",
+        "type": "direct",
+        "scope": "중합 반응으로 만들어지는 고분자",
+        "antecedent": {
+          "quantity": "이어진 단위체의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분자의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "단위체가 붙을수록 분자가 커지는 것이므로 작아진다는 진술은 반드시 거짓이다",
+      "inverted_text": "단위체가 많이 이어질수록 분자는 오히려 작아진다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-polymer-natural-or-synthetic",
+      "text": "고분자는 자연에서 만들어졌는지 사람이 합성했는지에 따라 천연 고분자와 합성 고분자로 나뉜다",
+      "form": {
+        "condition": "만들어진 유래를 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "이 단원에서 다루는 고분자 화합물",
+        "antecedent": {
+          "quantity": "만들어진 유래",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "나뉘는 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-polymer-property-and-use",
+      "text": "같은 고분자라도 단위체와 이어지는 방식이 다르면 질기기나 견디는 온도가 달라져 쓰임새가 갈린다",
+      "form": {
+        "condition": "고분자끼리 견줄 때",
+        "type": "causal",
+        "scope": "플라스틱·합성 섬유·합성 고무",
+        "antecedent": {
+          "quantity": "단위체와 결합 방식의 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "성질과 쓰임새의 차이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임새가 다르다고 반드시 결합 방식이 다른 것은 아니어서 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고분자는 작은 분자들이 그저 섞여 뭉쳐 있는 덩어리다",
+      "why_wrong": "단위체가 화학 결합으로 이어져 하나의 큰 분자를 이룬 것이다. 단순히 섞인 혼합물이 아니다.",
+      "linked_relation": "rel-polymer-grows-with-monomer",
+      "source": "llm"
+    },
+    {
+      "text": "고분자는 사람이 만든 물질만 가리킨다",
+      "why_wrong": "단백질·녹말·핵산·천연고무처럼 자연에서 만들어진 천연 고분자도 있다.",
+      "linked_relation": "rel-polymer-natural-or-synthetic",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-monomer"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-carbon-compound"
+    },
+    {
+      "type": "next",
+      "target": "reac-polymerization"
+    },
+    {
+      "type": "next",
+      "target": "reac-natural-polymer"
+    },
+    {
+      "type": "next",
+      "target": "reac-synthetic-polymer"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    104,
+    116,
+    117
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

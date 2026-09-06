@@ -1,0 +1,143 @@
+{
+  "id": "reac-oxidation",
+  "concept_key": "concept:oxidation",
+  "registry_status": "new",
+  "term": "산화 반응",
+  "notation": {
+    "hanja": "酸化反應",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 反 돌이킬 반 · 應 응할 응",
+    "english": "oxidation"
+  },
+  "definition": "어떤 물질이 전자를 잃는 변화. 산소를 얻거나 산화수가 커지는 경우도 같은 변화를 서로 다른 기준으로 본 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ox-electron",
+      "text": "반응에서 전자를 내놓은 물질은 산화되었다고 판정한다.",
+      "form": {
+        "condition": "전자의 이동으로 반응을 읽을 때",
+        "type": "classification",
+        "scope": "전자를 주고받는 산화·환원 반응",
+        "antecedent": {
+          "quantity": "물질이 내놓은 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 내놓은 쪽을 환원으로 부르면 산화·환원의 정의 자체가 뒤바뀌므로 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응에서 전자를 내놓은 물질은 환원되었다고 판정한다."
+    },
+    {
+      "id": "rel-ox-oxygen",
+      "text": "산소와 결합하여 산소를 얻은 물질도 산화된 것으로 본다.",
+      "form": {
+        "condition": "산소가 관여하는 반응에서 산소의 이동을 볼 때",
+        "type": "classification",
+        "scope": "연소처럼 산소가 오가는 화학 반응",
+        "antecedent": {
+          "quantity": "물질이 얻은 산소",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 얻은 쪽을 환원이라 하면 산소 기준의 정의와 정면으로 어긋난다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산소와 결합하여 산소를 얻은 물질은 환원된 것으로 본다."
+    },
+    {
+      "id": "rel-ox-number",
+      "text": "반응 전후로 어떤 원자의 산화수가 커졌다면 그 원자를 품은 물질이 산화된 것이다.",
+      "form": {
+        "condition": "반응 전후의 산화수를 견주어 볼 때",
+        "type": "conditional",
+        "scope": "산화수를 매길 수 있는 모든 화학 반응",
+        "antecedent": {
+          "quantity": "원자의 산화수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산화수 증가를 환원으로 읽으면 산화수 기준의 판정이 통째로 뒤집힌다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 전후로 어떤 원자의 산화수가 커졌다면 그 원자를 품은 물질이 환원된 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산소가 오가지 않는 반응은 산화 반응이라고 할 수 없다",
+      "why_wrong": "산소는 산화를 알아보는 여러 기준 가운데 하나일 뿐이다. 아연을 구리 이온 용액에 넣는 반응처럼 산소 없이 전자만 오가는 반응도 산화 반응이다.",
+      "source": "llm",
+      "linked_relation": "rel-ox-electron"
+    },
+    {
+      "text": "전자를 잃으면 음전하가 줄어드는 것이므로 산화수도 함께 줄어든다",
+      "why_wrong": "전자를 잃으면 그만큼 양의 전하가 남으므로 산화수는 오히려 커진다. 아연이 전자 2개를 내놓으면 산화수는 0에서 +2가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-ox-number"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "reac-redox-simultaneity",
+      "note": "산화가 있으면 환원이 짝으로 따라온다"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-number",
+      "note": "전자가 완전히 옮겨 가지 않는 반응까지 다루려면 산화수가 필요하다"
+    },
+    {
+      "type": "next",
+      "target": "reac-half-reaction-equation"
+    },
+    {
+      "type": "next",
+      "target": "reac-ionization-tendency",
+      "note": "금속이 얼마나 쉽게 산화되는가로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "reac-reduction",
+      "note": "같은 반응을 반대쪽에서 본 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-01",
+  "pages": [
+    48,
+    49,
+    53
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

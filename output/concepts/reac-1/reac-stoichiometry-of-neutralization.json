@@ -1,0 +1,113 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-stoichiometry-of-neutralization",
+  "concept_key": "concept:stoichiometry-of-neutralization",
+  "term": "중화 반응의 양적 관계",
+  "notation": {
+    "hanja": "中和反應의 量的 關係",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 反 돌이킬 반 · 應 응할 응 · 量 헤아릴 량 · 的 과녁 적 · 關 빗장 관 · 係 맬 계",
+    "english": "stoichiometry of neutralization"
+  },
+  "definition": "완전히 중화될 때, 산 쪽의 가수·몰농도·부피를 곱한 값과 염기 쪽의 같은 곱이 서로 같아진다는 관계.",
+  "relations": [
+    {
+      "id": "rel-stoi-nmv",
+      "text": "산이 내놓을 수 있는 수소 이온의 양은 가수와 몰농도, 수용액의 부피를 차례로 곱해 얻는다",
+      "form": {
+        "condition": "산이 내놓을 수 있는 이온을 모두 센다고 볼 때",
+        "type": "conditional",
+        "scope": "수용액에서의 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "양을 세는 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-equality",
+      "text": "완전히 중화되면 산 쪽에서 얻은 곱과 염기 쪽에서 얻은 곱이 같은 값이 된다",
+      "form": {
+        "condition": "산과 염기가 남김없이 반응함",
+        "type": "conditional",
+        "scope": "중화점"
+      },
+      "invertible": false,
+      "invertible_reason": "두 값이 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-valence",
+      "text": "몰농도와 부피가 같다면 가수가 큰 산일수록 중화에 더 많은 염기가 든다",
+      "form": {
+        "condition": "산의 몰농도와 부피가 같음",
+        "type": "direct",
+        "scope": "완전히 중화시키는 경우",
+        "antecedent": {
+          "quantity": "산의 가수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "필요한 염기의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가수가 클수록 내놓는 수소 이온이 많으므로 염기가 덜 든다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몰농도와 부피가 같다면 가수가 큰 산일수록 중화에 드는 염기가 더 적다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "0.1 M 황산과 0.1 M 수산화 소듐 수용액은 같은 부피끼리 섞으면 완전히 중화된다",
+      "why_wrong": "황산은 가수가 2 라 같은 부피의 두 배에 해당하는 염기가 있어야 완전히 중화된다.",
+      "source": "llm",
+      "linked_relation": "rel-stoi-valence"
+    },
+    {
+      "text": "양적 관계식은 강산과 강염기 사이에서만 성립한다",
+      "why_wrong": "약산이나 약염기라도 완전히 중화되는 지점에서는 같은 관계식이 성립한다.",
+      "source": "llm",
+      "linked_relation": "rel-stoi-equality"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-neutralization-reaction"
+    },
+    {
+      "type": "next",
+      "target": "reac-acid-base-titration"
+    },
+    {
+      "type": "related",
+      "target": "reac-neutralization-point"
+    }
+  ],
+  "curriculum": [
+    "12반응01-03"
+  ],
+  "topic_id": "reac-1-2-01",
+  "pages": [
+    27,
+    40,
+    41
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

@@ -1,0 +1,124 @@
+{
+  "id": "reac-oxidation-of-alcohol",
+  "concept_key": "concept:oxidation-of-alcohol",
+  "registry_status": "new",
+  "term": "알코올의 산화",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'알코올'이 음차어라 낱말 전체에 대응하는 한자어가 없다. 뒤의 '산화'만 酸化에 해당한다.",
+    "english": "oxidation of alcohol"
+  },
+  "definition": "알코올의 -OH 가 -CHO 로 바뀌면서 알데하이드가 생기는 반응. -OH 가 붙어 있던 탄소가 산소와 이중 결합을 이루게 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-alcohol-oxidation-product",
+      "text": "알코올을 산화시키면 -OH 가 -CHO 로 바뀌어 알데하이드가 만들어진다",
+      "form": {
+        "condition": "다이크로뮴산 칼륨 같은 산화제가 있을 때",
+        "type": "causal",
+        "scope": "사슬 끝 탄소에 -OH 가 붙은 알코올",
+        "antecedent": {
+          "quantity": "산화된 알코올의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 알데하이드의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "알코올에서 알데하이드로 가는 쪽이 산소를 얻는 방향이므로 반대로 적으면 반드시 거짓이다",
+      "inverted_text": "알데하이드를 산화시키면 -CHO 가 -OH 로 바뀌어 알코올이 만들어진다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-alcohol-oxidation-bond-change",
+      "text": "-OH 가 붙어 있던 탄소는 수소를 잃고 산소와 이중 결합을 이루게 된다",
+      "form": {
+        "condition": "알코올이 산화될 때",
+        "type": "conditional",
+        "scope": "-OH 가 사슬 끝 탄소에 붙은 알코올의 산화"
+      },
+      "invertible": false,
+      "invertible_reason": "결합의 변화를 묘사한 문장이라 두 양의 방향을 맞바꾸는 뒤집기가 성립하지 않는다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-alcohol-oxidation-breathalyzer",
+      "text": "에탄올이 산화될 때 산화제 쪽은 환원되면서 색이 달라지므로, 이 색 변화로 알코올이 있는지 알아낼 수 있다",
+      "form": {
+        "condition": "다이크로뮴산 칼륨을 적신 실리카 젤에 에탄올 증기를 보낼 때",
+        "type": "causal",
+        "scope": "음주 측정기 원리를 확인하는 실험",
+        "antecedent": {
+          "quantity": "실리카 젤에 닿은 에탄올의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "색이 달라진 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "색이 달라졌다고 반드시 에탄올 때문이라 단정할 수 없어 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "알코올이 환원되면 알데하이드가 된다",
+      "why_wrong": "알코올에서 알데하이드로 가는 변화는 산소를 얻는 산화다. 환원은 그 반대 방향이다.",
+      "linked_relation": "rel-alcohol-oxidation-product",
+      "source": "llm"
+    },
+    {
+      "text": "알코올을 산화시키면 알데하이드를 거치지 않고 곧바로 카복실산만 생긴다",
+      "why_wrong": "먼저 -OH 가 -CHO 로 바뀌어 알데하이드가 되고, 산화가 더 진행되어야 -COOH 를 가진 카복실산이 된다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-alcohol"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-of-carbon-compound"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-aldehyde"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-of-aldehyde"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-02",
+  "pages": [
+    98,
+    102
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

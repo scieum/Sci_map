@@ -1,0 +1,123 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-base-ionization-constant",
+  "concept_key": "concept:base-ionization-constant",
+  "term": "염기의 이온화 상수",
+  "aliases": [
+    "염기 이온화 상수"
+  ],
+  "notation": {
+    "hanja": "鹽基의 이온化 常數",
+    "hanja_note": "이온은 ion 을 소리대로 옮긴 말이라 한자가 없다.",
+    "hanja_gloss": "鹽 소금 염 · 基 터 기 · 化 될 화 · 常 항상 상 · 數 셀 수",
+    "english": "base ionization constant",
+    "symbol_display": "K_b",
+    "symbol_plain": "Kb"
+  },
+  "definition": "염기가 물에서 양성자를 받아 이루는 평형에 대해 정의하는 평형 상수. 온도가 정해지면 염기마다 값이 일정하다.",
+  "relations": [
+    {
+      "id": "rel-kb-definition",
+      "text": "염기가 물에서 양성자를 받아 이루는 평형에 대해 용매의 농도를 덜어 내고 정의한 상수다",
+      "form": {
+        "condition": "묽은 수용액에서 온도가 일정함",
+        "type": "conditional",
+        "scope": "용매가 물인 묽은 용액"
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 세우는 방식을 말한 문장이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-kb-strength",
+      "text": "온도가 같을 때 이 상수가 큰 염기일수록 염기의 세기가 강하다",
+      "form": {
+        "condition": "온도가 같음(대개 25 ℃)",
+        "type": "direct",
+        "scope": "용매가 물인 수용액",
+        "antecedent": {
+          "quantity": "염기의 이온화 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "염기의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "상수가 크다는 것이 곧 양성자를 잘 받는다는 뜻이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 같을 때 염기의 이온화 상수가 큰 염기일수록 염기의 세기가 약하다"
+    },
+    {
+      "id": "rel-kb-pair-comparison",
+      "text": "짝산의 이온화 상수와 짝염기의 이온화 상수를 나란히 놓으면 두 물질의 상대적 세기를 가릴 수 있다",
+      "form": {
+        "condition": "같은 온도에서 같은 용매로 잰 값끼리 견줌",
+        "type": "conditional",
+        "scope": "짝산·짝염기 쌍"
+      },
+      "invertible": false,
+      "invertible_reason": "비교가 가능하다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염기의 이온화 상수가 크면 염기성이 약하다는 뜻이다",
+      "why_wrong": "상수가 클수록 양성자를 잘 받아들여 수산화 이온을 많이 내놓는다. 곧 센 염기다.",
+      "source": "llm",
+      "linked_relation": "rel-kb-strength"
+    },
+    {
+      "text": "암모니아처럼 수산화기가 없는 물질은 이온화 상수를 정의할 수 없다",
+      "why_wrong": "암모니아는 물에서 양성자를 받아 평형을 이루므로 그 평형에 대해 상수를 정의할 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-kb-definition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-ionization-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "next",
+      "target": "reac-ph-of-weak-base-solution"
+    },
+    {
+      "type": "related",
+      "target": "reac-acid-ionization-constant"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    18,
+    19,
+    24
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

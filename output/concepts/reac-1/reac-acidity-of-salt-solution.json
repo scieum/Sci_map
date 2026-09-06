@@ -1,0 +1,141 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-acidity-of-salt-solution",
+  "concept_key": "concept:acidity-of-salt-solution",
+  "term": "염 수용액의 액성",
+  "notation": {
+    "hanja": "鹽 水溶液의 液性",
+    "hanja_gloss": "鹽 소금 염 · 水 물 수 · 溶 녹을 용 · 液 진 액 · 液 진 액 · 性 성품 성",
+    "english": "acidity of salt solution"
+  },
+  "definition": "그 염을 만든 산과 염기의 세기에 따라 중성·산성·염기성으로 갈리는, 염 수용액이 띠는 성질.",
+  "relations": [
+    {
+      "id": "rel-acidity-strong-strong",
+      "text": "강산과 강염기에서 만들어진 염이 녹은 물은 두 이온 모두 물과 반응하지 않아 중성이다",
+      "form": {
+        "condition": "다른 용질 없이 25 ℃ 에서 녹임",
+        "type": "causal",
+        "scope": "두 이온 모두 가수 분해하지 않는 염"
+      },
+      "invertible": false,
+      "invertible_reason": "액성을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-acidity-strong-acid-weak-base",
+      "text": "강산과 약염기에서 만들어진 염이 녹은 물은 양이온의 가수 분해 때문에 산성을 띤다",
+      "form": {
+        "condition": "다른 용질 없이 25 ℃ 에서 녹임",
+        "type": "causal",
+        "scope": "양이온만 가수 분해하는 염",
+        "antecedent": {
+          "quantity": "가수 분해하는 양이온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수용액의 pH",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양이온이 양성자를 내놓는 쪽이므로 염기성이 된다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "강산과 약염기에서 만들어진 염이 녹은 물은 염기성을 띤다"
+    },
+    {
+      "id": "rel-acidity-weak-acid-strong-base",
+      "text": "약산과 강염기에서 만들어진 염이 녹은 물은 음이온의 가수 분해 때문에 염기성을 띤다",
+      "form": {
+        "condition": "다른 용질 없이 25 ℃ 에서 녹임",
+        "type": "causal",
+        "scope": "음이온만 가수 분해하는 염",
+        "antecedent": {
+          "quantity": "가수 분해하는 음이온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수용액의 pH",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "음이온이 양성자를 빼앗는 쪽이므로 산성이 된다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "약산과 강염기에서 만들어진 염이 녹은 물은 산성을 띤다"
+    },
+    {
+      "id": "rel-acidity-predict-by-k",
+      "text": "염을 이루는 이온의 짝산·짝염기 이온화 상수를 견주면 수용액의 액성을 미리 짐작할 수 있다",
+      "form": {
+        "condition": "각 이온의 이온화 상수를 알고 있음",
+        "type": "conditional",
+        "scope": "양쪽 이온이 모두 가수 분해하는 염까지 포함"
+      },
+      "invertible": false,
+      "invertible_reason": "예측이 가능하다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중화 반응으로 생긴 염이 녹은 물은 모두 중성이다",
+      "why_wrong": "강산과 강염기에서 온 염만 중성이다. 약산이나 약염기가 끼면 가수 분해로 산성이나 염기성이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-acidity-strong-strong"
+    },
+    {
+      "text": "산성 용액을 만들려면 반드시 산을 넣어야 한다",
+      "why_wrong": "염화 암모늄 같은 염만 물에 녹여도 양이온이 가수 분해해 산성이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-acidity-strong-acid-weak-base"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-hydrolysis-of-salt"
+    },
+    {
+      "type": "next",
+      "target": "reac-titration-curve"
+    },
+    {
+      "type": "related",
+      "target": "reac-salt"
+    },
+    {
+      "type": "related",
+      "target": "reac-strong-base"
+    }
+  ],
+  "curriculum": [
+    "12반응01-04"
+  ],
+  "topic_id": "reac-1-2-02",
+  "pages": [
+    32,
+    33,
+    35
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "reac-reduction",
+  "concept_key": "concept:reduction",
+  "registry_status": "new",
+  "term": "환원 반응",
+  "notation": {
+    "hanja": "還元反應",
+    "hanja_gloss": "還 돌아올 환 · 元 으뜸 원 · 反 돌이킬 반 · 應 응할 응",
+    "english": "reduction"
+  },
+  "definition": "어떤 물질이 전자를 받아들이는 변화. 산소를 잃거나 산화수가 작아지는 경우도 같은 변화를 다른 기준에서 본 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-red-electron",
+      "text": "반응에서 전자를 받아들인 물질은 환원되었다고 판정한다.",
+      "form": {
+        "condition": "전자의 이동으로 반응을 읽을 때",
+        "type": "classification",
+        "scope": "전자를 주고받는 산화·환원 반응",
+        "antecedent": {
+          "quantity": "물질이 받아들인 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "환원 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 받은 쪽을 산화로 부르면 전자 기준의 정의와 정반대가 된다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응에서 전자를 받아들인 물질은 산화되었다고 판정한다."
+    },
+    {
+      "id": "rel-red-oxygen",
+      "text": "결합하고 있던 산소를 떼어 낸 물질은 환원된 것으로 본다.",
+      "form": {
+        "condition": "산소가 관여하는 반응에서 산소의 이동을 볼 때",
+        "type": "classification",
+        "scope": "금속 산화물의 제련처럼 산소가 떨어져 나가는 반응",
+        "antecedent": {
+          "quantity": "물질이 지닌 산소",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "환원 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 잃은 쪽을 산화라 하면 산소 기준의 정의가 무너진다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합하고 있던 산소를 떼어 낸 물질은 산화된 것으로 본다."
+    },
+    {
+      "id": "rel-red-number",
+      "text": "반응 전후로 어떤 원자의 산화수가 작아졌다면 그 원자를 품은 물질이 환원된 것이다.",
+      "form": {
+        "condition": "반응 전후의 산화수를 견주어 볼 때",
+        "type": "conditional",
+        "scope": "산화수를 매길 수 있는 모든 화학 반응",
+        "antecedent": {
+          "quantity": "원자의 산화수",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "환원 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산화수 감소를 산화로 읽으면 산화수 기준의 판정이 통째로 뒤집힌다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 전후로 어떤 원자의 산화수가 작아졌다면 그 원자를 품은 물질이 산화된 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환원은 산소를 잃는 경우에만 쓰는 말이다",
+      "why_wrong": "환원의 더 넓은 기준은 전자를 얻는 것이다. 구리 이온이 전자를 받아 구리로 석출되는 변화처럼 산소가 전혀 없는 환원도 있다.",
+      "source": "llm",
+      "linked_relation": "rel-red-electron"
+    },
+    {
+      "text": "환원되면 물질의 양이 줄어든다",
+      "why_wrong": "'환원'은 양이 줄어든다는 뜻이 아니라 전자를 얻어 산화수가 작아진다는 뜻이다. 구리 이온이 환원되면 오히려 금속 구리가 새로 생겨 쌓인다.",
+      "source": "llm",
+      "linked_relation": "rel-red-number"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "reac-redox-simultaneity"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-number"
+    },
+    {
+      "type": "next",
+      "target": "reac-half-reaction-equation"
+    },
+    {
+      "type": "related",
+      "target": "reac-oxidation",
+      "note": "같은 반응을 반대쪽에서 본 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-01",
+  "pages": [
+    48,
+    49,
+    53
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

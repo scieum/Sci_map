@@ -1,0 +1,137 @@
+{
+  "id": "reac-ester",
+  "concept_key": "concept:ester",
+  "registry_status": "new",
+  "term": "에스터",
+  "aliases": [
+    "에스테르"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 ester 의 음차어로 대응하는 한자어 표기가 없다.",
+    "english": "ester",
+    "symbol_display": "-COO-",
+    "symbol_plain": "-COO-"
+  },
+  "definition": "-OH 와 -COOH 가 물 한 분자를 내놓으며 이어질 때 생기는 -COO- 결합. 또는 그 결합을 지닌 탄소 화합물.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ester-formation",
+      "text": "-OH 와 -COOH 가 반응하면 물 분자 하나가 빠져나가고 그 자리에 -COO- 가 만들어진다",
+      "form": {
+        "condition": "산 촉매를 넣고 데우는 조건",
+        "type": "causal",
+        "scope": "알코올과 카복실산 사이의 축합 반응",
+        "antecedent": {
+          "quantity": "반응한 -OH 와 -COOH 의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "만들어진 -COO- 결합의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "반대 방향은 물을 넣어 -COO- 를 끊는 다른 반응이라 조건이 달라 항상 거짓이라 단정할 수 없다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ester-fragrance",
+      "text": "탄소 수가 적은 알코올과 카복실산으로 만든 에스터는 과일 같은 향을 지니는 것이 많다",
+      "form": {
+        "condition": "탄소 수가 적은 반응물로 만들 때",
+        "type": "conditional",
+        "scope": "인공 향으로 쓰이는 에스터"
+      },
+      "invertible": false,
+      "invertible_reason": "향이 나는 물질이 모두 에스터인 것은 아니라 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ester-condensation-polymer",
+      "text": "단위체가 -OH 와 -COOH 를 두 개씩 지니면 -COO- 결합이 되풀이되며 PETE 같은 고분자가 된다",
+      "form": {
+        "condition": "두 작용기를 각각 두 개 이상 지닌 단위체",
+        "type": "causal",
+        "scope": "축합 중합으로 만드는 폴리에스터",
+        "antecedent": {
+          "quantity": "되풀이된 축합 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "사슬에 든 -COO- 결합의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 경로를 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건 자체가 달라진다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "-OH 와 -COOH 가 반응하면 두 분자가 그대로 붙기만 하고 빠져나가는 것은 없다",
+      "why_wrong": "이어지는 자리마다 물 분자가 하나씩 빠져나온다. 그래서 이 반응을 축합이라 부른다.",
+      "linked_relation": "rel-ester-formation",
+      "source": "llm"
+    },
+    {
+      "text": "에스터는 결합만 만들 뿐 냄새와는 관계가 없다",
+      "why_wrong": "간단한 에스터는 과일 향을 내는 것이 많아 인공 향의 재료로 쓰인다.",
+      "linked_relation": "rel-ester-fragrance",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-hydroxy-group"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-carboxyl-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-acetylsalicylic-acid"
+    },
+    {
+      "type": "next",
+      "target": "reac-artificial-fragrance"
+    },
+    {
+      "type": "next",
+      "target": "reac-condensation-polymerization"
+    },
+    {
+      "type": "related",
+      "target": "reac-carboxylic-acid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-02",
+  "pages": [
+    110,
+    112,
+    117
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

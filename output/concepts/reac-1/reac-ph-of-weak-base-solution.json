@@ -1,0 +1,118 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-ph-of-weak-base-solution",
+  "concept_key": "concept:ph-of-weak-base-solution",
+  "term": "약염기 수용액의 pH",
+  "notation": {
+    "hanja": "弱鹽基 水溶液의 pH",
+    "hanja_note": "뒤의 pH 는 기호라 한자가 없다.",
+    "hanja_gloss": "弱 약할 약 · 鹽 소금 염 · 基 터 기 · 水 물 수 · 溶 녹을 용 · 液 진 액",
+    "english": "pH of weak base solution"
+  },
+  "definition": "염기의 이온화 상수로 수산화 이온 농도를 먼저 구하고, pOH 를 거쳐 되돌려 얻는 값.",
+  "relations": [
+    {
+      "id": "rel-wb-ph-oh-first",
+      "text": "염기의 이온화 상수와 처음 농도로 평형에서의 수산화 이온 농도를 먼저 구한다",
+      "form": {
+        "condition": "약염기 한 종류만 녹아 있고 온도가 일정함",
+        "type": "conditional",
+        "scope": "물의 자체 이온화를 무시할 수 있는 농도"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 순서를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wb-ph-via-poh",
+      "text": "구한 수산화 이온 농도로 pOH 를 얻은 다음 25 ℃ 에서 14 에서 빼면 pH 가 나온다",
+      "form": {
+        "condition": "온도가 25 ℃ 임",
+        "type": "conditional",
+        "scope": "묽은 수용액"
+      },
+      "invertible": false,
+      "invertible_reason": "변환 경로를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wb-ph-vs-strong",
+      "text": "농도를 같게 맞추면 약염기 수용액에서 얻는 pH 가 강염기 수용액의 값보다 작다",
+      "form": {
+        "condition": "몰농도·가수·온도가 같음",
+        "type": "direct",
+        "scope": "묽은 수용액끼리의 비교",
+        "antecedent": {
+          "quantity": "염기의 이온화 정도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "계산된 pH",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이온화가 덜 될수록 수산화 이온이 적어 pH 가 낮으므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도를 같게 맞추면 약염기 수용액에서 얻는 pH 가 강염기 수용액의 값보다 크다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "0.1 M 암모니아 수용액의 pH 는 13 이다",
+      "why_wrong": "모두 이온화한다고 본 값이다. 실제로는 일부만 이온화해 pH 는 11 근처다.",
+      "source": "llm",
+      "linked_relation": "rel-wb-ph-oh-first"
+    },
+    {
+      "text": "염기 수용액에서는 pOH 만 구할 수 있고 pH 는 구할 수 없다",
+      "why_wrong": "물의 이온화 상수가 두 값을 이어 준다. pOH 를 얻으면 pH 로 바꿀 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-wb-ph-via-poh"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-weak-base"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-base-ionization-constant"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-ionization-constant-of-water"
+    },
+    {
+      "type": "related",
+      "target": "reac-ph-of-weak-acid-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-03",
+  "pages": [
+    21,
+    23,
+    25
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

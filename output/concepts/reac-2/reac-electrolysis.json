@@ -1,0 +1,130 @@
+{
+  "id": "reac-electrolysis",
+  "concept_key": "concept:electrolysis",
+  "registry_status": "new",
+  "term": "전기 분해",
+  "notation": {
+    "hanja": "電氣分解",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 分 나눌 분 · 解 풀 해",
+    "english": "electrolysis"
+  },
+  "definition": "저절로는 일어나지 않는 산화·환원 반응을 외부 전기 에너지로 밀어붙여 물질을 갈라내는 조작.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eld-drive",
+      "text": "전기 분해는 스스로 일어나지 않는 반응을 전원 장치가 밀어 주어 진행시킨다.",
+      "form": {
+        "condition": "전해질의 용융액이나 수용액에 전원을 이을 때",
+        "type": "causal",
+        "scope": "비자발적 산화·환원 반응을 일으키는 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "화학 전지와 견주는 대비 명제라 뒤집은 문장이 반드시 거짓이라고 단정하기 어렵다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eld-electrode",
+      "text": "전기 분해에서는 (+)극에서 산화가, (-)극에서 환원이 일어난다.",
+      "form": {
+        "condition": "전원 장치에 두 전극을 연결해 전류를 흘릴 때",
+        "type": "classification",
+        "scope": "전해질의 용융액·수용액을 분해하는 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "전원이 전자를 뽑아 가는 쪽이 (+)극이므로 극과 반응을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기 분해에서는 (+)극에서 환원이, (-)극에서 산화가 일어난다."
+    },
+    {
+      "id": "rel-eld-ionic",
+      "text": "녹은 이온 결합 물질을 전기 분해 하면 음이온은 (+)극에서 산화되고 양이온은 (-)극에서 환원된다.",
+      "form": {
+        "condition": "고온에서 녹인 이온 결합 물질에 직류 전원을 이을 때",
+        "type": "causal",
+        "scope": "염화 소듐 용융액 같은 이온 결합 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "반대 전하끼리 끌리므로 음이온이 (-)극으로 간다는 진술은 성립할 수 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "녹은 이온 결합 물질을 전기 분해 하면 음이온은 (-)극에서, 양이온은 (+)극에서 반응한다."
+    },
+    {
+      "id": "rel-eld-water",
+      "text": "전해질을 조금 녹인 물을 전기 분해 하면 (+)극에서 산소 기체가, (-)극에서 수소 기체가 발생한다.",
+      "form": {
+        "condition": "황산 소듐 같은 전해질을 소량 녹인 물에 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "물의 전기 분해"
+      },
+      "invertible": true,
+      "invertible_reason": "물이 산화되는 쪽에서 산소가 나오므로 두 기체를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전해질을 조금 녹인 물을 전기 분해 하면 (+)극에서 수소 기체가, (-)극에서 산소 기체가 발생한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기 분해에서도 화학 전지처럼 (-)극에서 산화 반응이 일어난다",
+      "why_wrong": "전극 이름을 붙이는 방식이 다르다. 전기 분해에서는 전원의 (+)극에 이은 전극에서 산화가, (-)극에 이은 전극에서 환원이 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-eld-electrode"
+    },
+    {
+      "text": "물을 전기 분해 하면 (+)극에서 수소 기체가 나온다",
+      "why_wrong": "(+)극은 산화가 일어나는 쪽이라 물이 산화되어 산소가 나온다. 수소는 환원이 일어나는 (-)극에서 발생한다.",
+      "source": "llm",
+      "linked_relation": "rel-eld-water"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-chemical-cell",
+      "note": "자발과 비자발의 대비로 읽는다"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-number"
+    },
+    {
+      "type": "next",
+      "target": "reac-smelting"
+    },
+    {
+      "type": "next",
+      "target": "reac-electrorefining"
+    },
+    {
+      "type": "next",
+      "target": "reac-electroplating"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-03",
+  "pages": [
+    71,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

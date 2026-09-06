@@ -1,0 +1,111 @@
+{
+  "id": "reac-volta-cell",
+  "concept_key": "concept:volta-cell",
+  "registry_status": "new",
+  "term": "볼타 전지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'볼타'는 인명(Volta)을 음차한 말이라 표제어 전체에 대응하는 한자어가 없다. '전지'만 電池에 해당한다.",
+    "english": "Volta cell"
+  },
+  "definition": "묽은 황산에 아연판과 구리판을 담그고 도선으로 이어, 아연의 산화와 수소 이온의 환원으로 전류를 얻는 전지.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-volta-zinc",
+      "text": "아연판에서는 아연이 전자를 내놓고 녹아 나오므로 아연판이 (-)극이 된다.",
+      "form": {
+        "condition": "두 금속판을 도선으로 이어 전류가 흐를 때",
+        "type": "causal",
+        "scope": "묽은 황산에 담근 아연-구리 볼타 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 내보내는 전극이 (+)극이 될 수는 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "아연판에서는 아연이 전자를 내놓고 녹아 나오므로 아연판이 (+)극이 된다."
+    },
+    {
+      "id": "rel-volta-copper",
+      "text": "구리판 표면에서는 용액 속 수소 이온이 전자를 받아 수소 기체가 되므로 구리판이 (+)극이 된다.",
+      "form": {
+        "condition": "두 금속판을 도선으로 이어 전류가 흐를 때",
+        "type": "causal",
+        "scope": "묽은 황산에 담근 아연-구리 볼타 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "구리판에서 구리가 녹아 나온다면 구리가 수소보다 이온화 경향이 작다는 사실과 어긋난다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구리판 표면에서는 구리가 전자를 잃고 녹아 나오므로 구리판이 (-)극이 된다."
+    },
+    {
+      "id": "rel-volta-electron",
+      "text": "전자는 전해질 속이 아니라 도선을 타고 아연판에서 구리판 쪽으로 흐른다.",
+      "form": {
+        "condition": "볼타 전지가 방전되며 작동할 때",
+        "type": "classification",
+        "scope": "아연-구리 볼타 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "전자가 만들어지는 곳이 아연판이므로 구리판에서 아연판으로 흐른다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자는 도선을 타고 구리판에서 아연판 쪽으로 흐른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "볼타 전지에서는 (+)극인 구리판이 녹아 점점 줄어든다",
+      "why_wrong": "녹아 나오는 것은 이온화 경향이 큰 아연판이다. 구리판에서는 수소 기체가 발생할 뿐 구리는 녹지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-volta-copper"
+    },
+    {
+      "text": "전자는 묽은 황산 속을 지나 반대편 금속판으로 건너간다",
+      "why_wrong": "전해질 속에서 움직이는 것은 이온이고, 전자는 도선을 통해서만 이동한다.",
+      "source": "llm",
+      "linked_relation": "rel-volta-electron"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-chemical-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-polarization"
+    },
+    {
+      "type": "related",
+      "target": "reac-daniell-cell",
+      "note": "분극 문제를 고쳐 만든 전지"
+    },
+    {
+      "type": "related",
+      "target": "reac-ionization-tendency"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    63,
+    76
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

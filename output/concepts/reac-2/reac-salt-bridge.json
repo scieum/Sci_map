@@ -1,0 +1,88 @@
+{
+  "id": "reac-salt-bridge",
+  "concept_key": "concept:salt-bridge",
+  "registry_status": "new",
+  "term": "염다리",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'염'은 鹽에 해당하지만 '다리'는 고유어라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "salt bridge"
+  },
+  "definition": "염의 진한 수용액을 채워 두 반쪽 전지를 잇는 통로. 이온을 옮겨 용액의 전하 균형을 지키고 회로를 완성한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sb-ion",
+      "text": "염다리 속 음이온은 산화가 일어나는 쪽으로, 양이온은 환원이 일어나는 쪽으로 옮겨 가 용액의 전하 균형을 맞춘다.",
+      "form": {
+        "condition": "두 반쪽 전지가 염다리로 이어져 전류가 흐를 때",
+        "type": "causal",
+        "scope": "염다리를 쓴 화학 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "산화 쪽에는 양이온이 쌓이므로 이온이 반대로 움직이면 전하 불균형이 더 커진다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "염다리 속 음이온은 환원이 일어나는 쪽으로, 양이온은 산화가 일어나는 쪽으로 옮겨 간다."
+    },
+    {
+      "id": "rel-sb-circuit",
+      "text": "염다리가 없으면 회로가 끊긴 것과 같아 도선 속 전자의 이동도 곧 멎는다.",
+      "form": {
+        "condition": "두 전해질 용액이 따로 담겨 있을 때",
+        "type": "causal",
+        "scope": "반쪽 전지를 나눠 꾸민 화학 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "필요조건을 말한 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염다리를 통해 전자가 한쪽 전극에서 다른 쪽 전극으로 건너간다",
+      "why_wrong": "염다리를 오가는 것은 이온이다. 전자는 두 전극을 잇는 도선으로만 흐른다.",
+      "source": "llm",
+      "linked_relation": "rel-sb-ion"
+    },
+    {
+      "text": "염다리는 두 용액을 골고루 섞어 주려고 놓은 관이다",
+      "why_wrong": "용액을 섞는 것이 목적이라면 두 반쪽 전지를 나눈 뜻이 없어진다. 염다리는 이온만 오가게 해 전하 균형을 맞추는 장치다.",
+      "source": "llm",
+      "linked_relation": "rel-sb-circuit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-half-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-daniell-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-polarization"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    63
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

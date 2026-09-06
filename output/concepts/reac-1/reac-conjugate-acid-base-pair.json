@@ -1,0 +1,139 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-conjugate-acid-base-pair",
+  "concept_key": "concept:conjugate-acid-base-pair",
+  "term": "짝산·짝염기",
+  "notation": {
+    "hanja": "짝酸·짝鹽基",
+    "hanja_note": "앞머리의 짝은 한자가 없는 고유어라 한글 그대로 두었다.",
+    "hanja_gloss": "酸 실 산 · 鹽 소금 염 · 基 터 기",
+    "english": "conjugate acid-base pair"
+  },
+  "definition": "양성자 하나를 주고받은 관계로 이어져, 한쪽에서 양성자를 떼면 다른 쪽이 되는 산과 염기의 한 쌍.",
+  "relations": [
+    {
+      "id": "rel-conj-one-proton-apart",
+      "text": "화학식이 양성자 하나만큼 차이 나는 두 물질은 서로 짝산·짝염기 관계다",
+      "form": {
+        "condition": "같은 반응에 함께 나타나는 두 물질을 견줌",
+        "type": "classification",
+        "scope": "양성자 이동으로 설명되는 산 염기 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 두 양을 맞바꾸는 형태가 아니다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-conj-forward-reverse",
+      "text": "정반응에서 산으로 작용한 물질은 양성자를 잃은 뒤 역반응에서 염기로 작용하는 짝을 남긴다",
+      "form": {
+        "condition": "가역 반응에서 두 방향을 함께 봄",
+        "type": "conditional",
+        "scope": "양성자 이동이 있는 가역 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "역할이 반응 방향에 따라 갈린다는 서술이라 맞바꾸어도 거짓임을 보장할 수 없다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-conj-strength-inverse",
+      "text": "산의 세기가 강할수록 그 짝염기가 갖는 염기의 세기는 약하다",
+      "form": {
+        "condition": "온도가 같고 용매가 물임",
+        "type": "inverse",
+        "scope": "짝산·짝염기 쌍 안에서의 상대 비교",
+        "antecedent": {
+          "quantity": "산의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "짝염기의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양성자를 잘 내놓을수록 도로 붙잡는 힘이 약하다는 뜻이므로 함께 세진다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산의 세기가 강할수록 그 짝염기의 염기 세기도 함께 강하다"
+    },
+    {
+      "id": "rel-conj-pair-equilibrium",
+      "text": "산과 염기가 반응하면 그 짝염기와 짝산 사이의 반응도 같이 일어나 동적 평형에 이른다",
+      "form": {
+        "condition": "닫힌 계에서 가역 반응이 진행됨",
+        "type": "conditional",
+        "scope": "역반응을 무시할 수 없는 약산·약염기 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "두 반응이 함께 일어난다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "강산의 짝염기는 강염기다",
+      "why_wrong": "양성자를 아주 잘 내놓는 산일수록 그 짝염기는 양성자를 도로 붙잡는 힘이 약하다. 강산의 짝염기는 매우 약한 염기다.",
+      "source": "llm",
+      "linked_relation": "rel-conj-strength-inverse"
+    },
+    {
+      "text": "아세트산의 짝염기는 수산화 이온이다",
+      "why_wrong": "짝염기는 그 산에서 양성자 하나를 뺀 아세트산 이온이다. 수산화 이온은 아세트산과 짝 관계가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-conj-one-proton-apart"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-bronsted-lowry-acid"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-bronsted-lowry-base"
+    },
+    {
+      "type": "next",
+      "target": "reac-acid-ionization-constant"
+    },
+    {
+      "type": "next",
+      "target": "reac-hydrolysis-of-salt"
+    },
+    {
+      "type": "next",
+      "target": "reac-buffer-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-01",
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-01",
+  "pages": [
+    14,
+    15,
+    19,
+    24
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

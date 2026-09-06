@@ -1,0 +1,125 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-bronsted-lowry-base",
+  "concept_key": "concept:bronsted-lowry-base",
+  "term": "브뢴스테드·라우리 염기",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "사람 이름 Brønsted 와 Lowry 를 소리대로 옮긴 말이 앞에 붙어 낱말 전체에 대응하는 한자어가 없다. 뒤의 염기만 鹽基에 해당한다.",
+    "english": "Bronsted-Lowry base"
+  },
+  "definition": "반응 상대가 내놓은 양성자를 받아들이는 쪽을 염기로 보는 정의. 분자 안에 수산화 이온이 없어도 염기가 된다.",
+  "relations": [
+    {
+      "id": "rel-bl-base-proton-acceptor",
+      "text": "한 반응에서 상대가 내놓은 양성자를 받아들인 쪽이 브뢴스테드·라우리 염기다",
+      "form": {
+        "condition": "양성자가 오가는 반응이 일어남",
+        "type": "classification",
+        "scope": "양성자를 주고받는 반응",
+        "antecedent": {
+          "quantity": "양성자를 받는 역할",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "염기로의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 두 양을 맞바꾸는 형태가 아니다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bl-base-no-oh-needed",
+      "text": "수산화 이온을 품고 있지 않은 물질이라도 양성자를 받으면 염기로 분류된다",
+      "form": {
+        "condition": "양성자가 오가는 반응이 일어남",
+        "type": "classification",
+        "scope": "브뢴스테드·라우리 정의를 쓸 때"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 넓히는 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bl-base-ammonia-water",
+      "text": "암모니아와 물이 만나면 암모니아 쪽이 양성자를 받아 암모늄 이온이 되므로 이 반응에서 염기다",
+      "form": {
+        "condition": "암모니아를 물에 녹였을 때",
+        "type": "causal",
+        "scope": "암모니아와 물 사이의 반응",
+        "antecedent": {
+          "quantity": "물이 내놓는 양성자",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "암모늄 이온의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 반응에서 양성자가 물에서 암모니아 쪽으로만 옮겨 가므로 두 역할을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "암모니아와 물이 만나면 암모니아가 양성자를 내놓고 물이 이를 받아 염기로 작용한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염기가 되려면 분자 안에 수산화기를 갖고 있어야 한다",
+      "why_wrong": "암모니아에는 수산화기가 없지만 물에서 양성자를 받아 염기로 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-bl-base-no-oh-needed"
+    },
+    {
+      "text": "물은 중성이므로 산으로도 염기로도 작용하지 않는다",
+      "why_wrong": "물은 상대에 따라 양성자를 내주기도 받기도 한다. 염화 수소와 만나면 염기로 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-bl-base-proton-acceptor"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-arrhenius-acid-base"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-bronsted-lowry-acid"
+    },
+    {
+      "type": "next",
+      "target": "reac-conjugate-acid-base-pair"
+    },
+    {
+      "type": "next",
+      "target": "reac-amphoteric-substance"
+    }
+  ],
+  "curriculum": [
+    "12반응01-01"
+  ],
+  "topic_id": "reac-1-1-01",
+  "pages": [
+    13,
+    14,
+    24
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

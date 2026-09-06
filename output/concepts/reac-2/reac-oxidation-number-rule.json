@@ -1,0 +1,104 @@
+{
+  "id": "reac-oxidation-number-rule",
+  "concept_key": "concept:oxidation-number-rule",
+  "registry_status": "new",
+  "term": "산화수 규칙",
+  "notation": {
+    "hanja": "酸化數規則",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 數 셈 수 · 規 법 규 · 則 법칙 칙",
+    "english": "rules for assigning oxidation numbers"
+  },
+  "definition": "원소·이온·화합물 속 각 원자의 산화수를 누가 매겨도 같은 값이 되도록 정해 둔 배정 기준의 묶음.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oxnr-element",
+      "text": "한 가지 원소만으로 이루어진 물질에서는 각 원자의 산화수를 0으로 놓는다.",
+      "form": {
+        "condition": "홑원소 물질에 산화수를 매길 때",
+        "type": "classification",
+        "scope": "화합물이 아닌 원소 상태의 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "값을 약속한 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxnr-sum",
+      "text": "전하가 없는 화합물은 구성 원자의 산화수를 모두 더하면 0이 되고, 다원자 이온은 그 이온의 전하와 같아진다.",
+      "form": {
+        "condition": "화학식이 주어져 미지의 산화수를 구할 때",
+        "type": "conditional",
+        "scope": "중성 화합물과 다원자 이온"
+      },
+      "invertible": false,
+      "invertible_reason": "총합을 규정한 등식이라 앞뒤를 바꿔도 같은 내용이다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxnr-exception",
+      "text": "수소는 대개 +1이지만 금속과 결합한 수소화물에서는 -1이 되고, 산소는 대개 -2이지만 과산화물에서는 -1이 된다.",
+      "form": {
+        "condition": "규칙을 적용하기 전에 결합 상대를 먼저 확인할 때",
+        "type": "conditional",
+        "scope": "금속 수소화물·과산화물 같은 예외 화합물"
+      },
+      "invertible": false,
+      "invertible_reason": "예외를 나열한 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수소의 산화수는 언제나 +1이고 산소는 언제나 -2이다",
+      "why_wrong": "'대부분'이라는 단서가 붙은 규칙이다. 금속 수소화물에서 수소는 -1이고, 과산화물에서 산소는 -1이다.",
+      "source": "llm",
+      "linked_relation": "rel-oxnr-exception"
+    },
+    {
+      "text": "화합물의 산화수 총합이 0이므로 그 안의 원자들도 모두 산화수가 0이다",
+      "why_wrong": "총합이 0이라는 뜻이지 각각이 0이라는 뜻이 아니다. 물에서 수소는 +1, 산소는 -2이고 합이 0이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-oxnr-sum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-number"
+    },
+    {
+      "type": "next",
+      "target": "reac-redox-equation",
+      "note": "산화수 증감의 균형이 계수를 맞추는 근거가 된다"
+    },
+    {
+      "type": "related",
+      "target": "reac-oxidizing-agent"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-02",
+  "pages": [
+    51,
+    56
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,143 @@
+{
+  "id": "reac-functional-group",
+  "concept_key": "concept:functional-group",
+  "registry_status": "new",
+  "term": "작용기",
+  "aliases": [
+    "기능기"
+  ],
+  "notation": {
+    "hanja": "作用基",
+    "hanja_gloss": "作 지을 작 · 用 쓸 용 · 基 터 기",
+    "english": "functional group"
+  },
+  "definition": "탄소 화합물 안에서 그 물질다운 성질과 반응을 도맡는 원자들의 묶음. 같은 묶음을 지닌 물질끼리는 비슷하게 행동한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-functional-group-classification",
+      "text": "일상에서 쓰는 탄소 화합물은 지닌 작용기를 기준으로 알코올·알데하이드·카복실산처럼 갈래를 나눌 수 있다",
+      "form": {
+        "condition": "작용기를 하나 이상 지닌 탄소 화합물",
+        "type": "classification",
+        "scope": "이 단원에서 다루는 -OH·-CHO·-COOH 세 갈래",
+        "antecedent": {
+          "quantity": "지닌 작용기의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "분류되는 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향 자체가 없다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-functional-group-reaction-site",
+      "text": "탄소 화합물이 반응할 때 달라지는 곳은 탄소와 수소로만 된 골격이 아니라 대개 작용기 쪽이다",
+      "form": {
+        "condition": "작용기를 지닌 탄소 화합물이 반응할 때",
+        "type": "causal",
+        "scope": "이 단원이 다루는 산화 반응과 축합 반응",
+        "antecedent": {
+          "quantity": "작용기가 반응에 참여하는 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "작용기 자리에서 일어나는 구조 변화",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 단원의 반응은 모두 작용기 자리에서 일어나므로 골격 쪽에서 주로 일어난다는 진술은 반드시 거짓이다",
+      "inverted_text": "탄소 화합물의 반응은 작용기가 아니라 탄소와 수소로 된 골격 부분에서 주로 일어난다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-functional-group-common-property",
+      "text": "탄소 골격의 길이가 서로 달라도 같은 작용기를 지녔다면 공통된 성질을 보인다",
+      "form": {
+        "condition": "작용기를 한 종류만 지닌 물질끼리 견줄 때",
+        "type": "conditional",
+        "scope": "메탄올·에탄올·뷰탄올처럼 같은 작용기를 가진 무리",
+        "antecedent": {
+          "quantity": "작용기가 같은 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공통으로 나타나는 성질",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "골격 길이에 따라 용해도처럼 달라지는 성질도 있어 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "탄소 화합물이 반응하면 분자 전체가 한꺼번에 다른 모양으로 바뀐다",
+      "why_wrong": "골격은 대체로 그대로 남고 작용기 자리만 달라진다. 그래서 반응을 작용기의 변화로 설명한다.",
+      "linked_relation": "rel-functional-group-reaction-site",
+      "source": "llm"
+    },
+    {
+      "text": "알코올의 작용기는 -OH 이므로 알코올 수용액은 염기성을 띤다",
+      "why_wrong": "분자에 묶인 -OH 는 물에서 떨어져 나오는 수산화 이온과 다르다. 알코올 수용액은 염기성을 나타내지 않는다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-carbon-compound"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-structural-formula"
+    },
+    {
+      "type": "next",
+      "target": "reac-hydroxy-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-aldehyde-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-carboxyl-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-of-carbon-compound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-01",
+  "pages": [
+    94,
+    98,
+    102
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,108 @@
+{
+  "id": "reac-photosynthesis",
+  "concept_key": "concept:photosynthesis",
+  "registry_status": "new",
+  "term": "광합성",
+  "notation": {
+    "hanja": "光合成",
+    "hanja_gloss": "光 빛 광 · 合 합할 합 · 成 이룰 성",
+    "english": "photosynthesis"
+  },
+  "definition": "식물이 빛에너지를 받아 이산화 탄소를 포도당으로 환원하고 물을 산소로 산화시키는 산화·환원 반응.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ps-co2",
+      "text": "광합성에서 이산화 탄소는 환원되므로 산화제 노릇을 한다.",
+      "form": {
+        "condition": "광합성 반응식에서 각 물질의 역할을 가릴 때",
+        "type": "classification",
+        "scope": "엽록체에서 일어나는 광합성 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "이산화 탄소가 포도당으로 바뀌는 것은 환원이므로 환원제라 부르면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성에서 이산화 탄소는 산화되므로 환원제 노릇을 한다."
+    },
+    {
+      "id": "rel-ps-h2o",
+      "text": "광합성에서 물은 산화되어 산소가 되므로 환원제 노릇을 한다.",
+      "form": {
+        "condition": "광합성 반응식에서 각 물질의 역할을 가릴 때",
+        "type": "classification",
+        "scope": "엽록체에서 일어나는 광합성 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "물이 전자를 내주고 산소가 되는 변화는 산화이므로 산화제라 부르면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성에서 물은 환원되어 산소가 되므로 산화제 노릇을 한다."
+    },
+    {
+      "id": "rel-ps-energy",
+      "text": "광합성은 빛에너지를 받아 진행되고, 그 에너지는 포도당의 화학 에너지로 저장된다.",
+      "form": {
+        "condition": "빛이 있는 조건에서",
+        "type": "causal",
+        "scope": "빛을 받는 식물 세포의 광합성"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지의 흐름을 밝힌 명제라 뒤집어도 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광합성에서 나오는 산소는 이산화 탄소가 쪼개져 생긴 것이다",
+      "why_wrong": "산소는 산화되는 물에서 나온다. 이산화 탄소는 오히려 전자를 받아 포도당으로 환원된다.",
+      "source": "llm",
+      "linked_relation": "rel-ps-h2o"
+    },
+    {
+      "text": "광합성은 물질을 만들기만 하므로 산화·환원 반응이 아니다",
+      "why_wrong": "광합성 과정에서 탄소와 산소의 산화수가 크게 달라진다. 이산화 탄소는 환원되고 물은 산화되는 전형적인 산화·환원 반응이다.",
+      "source": "llm",
+      "linked_relation": "rel-ps-co2"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidizing-agent"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-reducing-agent"
+    },
+    {
+      "type": "related",
+      "target": "reac-cellular-respiration",
+      "note": "반응물과 생성물이 서로 뒤바뀐 짝"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-05"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-3-01",
+  "pages": [
+    78,
+    79,
+    84,
+    85
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

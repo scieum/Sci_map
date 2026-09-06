@@ -1,0 +1,104 @@
+{
+  "id": "reac-all-solid-state-battery",
+  "concept_key": "concept:all-solid-state-battery",
+  "registry_status": "new",
+  "term": "전고체 전지",
+  "notation": {
+    "hanja": "全固體電池",
+    "hanja_gloss": "全 온전할 전 · 固 굳을 고 · 體 몸 체 · 電 번개 전 · 池 못 지",
+    "english": "all-solid-state battery"
+  },
+  "definition": "액체 대신 고체 전해질을 쓰고 분리막을 없앤 이차 전지. 폭발 위험이 낮고 대용량으로 만들기 쉽다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ss-safety",
+      "text": "전해질이 고체이고 불붙기 쉬운 물질이 없어 충격을 받아도 터질 위험이 낮다.",
+      "form": {
+        "condition": "액체 전해질을 쓴 전지와 견줄 때",
+        "type": "causal",
+        "scope": "고체 전해질을 쓰는 이차 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "안전한 까닭을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ss-stack",
+      "text": "분리막이 없어 두 극을 여러 겹으로 쌓을 수 있으므로 같은 크기에서 용량을 키우기 쉽다.",
+      "form": {
+        "condition": "전지를 여러 겹 구조로 만들 때",
+        "type": "causal",
+        "scope": "고체 전해질을 쓰는 이차 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 주는 이점을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ss-vs-li",
+      "text": "액체 전해질을 쓰는 리튬 이온 전지는 에너지 효율이 좋지만 수명이 짧고 열을 받으면 터질 위험이 있다.",
+      "form": {
+        "condition": "두 전지의 전해질 상태를 견줄 때",
+        "type": "classification",
+        "scope": "액체 전해질을 쓰는 리튬 이온 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "두 전지를 견준 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전고체 전지는 전해질이 고체라서 이온이 오갈 수 없다",
+      "why_wrong": "고체 전해질은 굳은 상태에서도 이온을 통과시키는 물질이다. 이온이 오가지 못하면 전지로 쓸 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-ss-safety"
+    },
+    {
+      "text": "전고체 전지는 전해질이 고체라 충전할 수 없다",
+      "why_wrong": "전고체 전지는 리튬 이온 전지를 대신하려는 이차 전지라 충전해 여러 번 쓸 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-ss-stack"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-secondary-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-hydrogen-fuel-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-electrolyte"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-05"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-3-02",
+  "pages": [
+    81,
+    84,
+    85
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

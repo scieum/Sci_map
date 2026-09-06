@@ -1,0 +1,121 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-bronsted-lowry-acid",
+  "concept_key": "concept:bronsted-lowry-acid",
+  "term": "브뢴스테드·라우리 산",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "사람 이름 Brønsted 와 Lowry 를 소리대로 옮긴 말이 앞에 붙어 낱말 전체에 대응하는 한자어가 없다. 뒤의 산만 酸에 해당한다.",
+    "english": "Bronsted-Lowry acid"
+  },
+  "definition": "어떤 반응에서 상대 물질에게 양성자를 건네준 쪽을 가리키는 산의 정의. 수용액인지 아닌지를 가리지 않는다.",
+  "relations": [
+    {
+      "id": "rel-bl-acid-proton-donor",
+      "text": "한 반응에서 양성자를 상대에게 넘겨준 쪽이 브뢴스테드·라우리 산이다",
+      "form": {
+        "condition": "양성자가 오가는 반응이 일어남",
+        "type": "classification",
+        "scope": "양성자를 주고받는 반응(전자쌍만 오가는 반응은 제외)",
+        "antecedent": {
+          "quantity": "양성자를 내놓는 역할",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "산으로의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 두 양을 맞바꾸는 형태가 아니다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bl-acid-wider-scope",
+      "text": "양성자 이동으로 산을 정하면 수용액 밖의 반응까지 다룰 수 있어 아레니우스 정의보다 적용 범위가 넓다",
+      "form": {
+        "condition": "두 정의를 적용 범위로 견줌",
+        "type": "conditional",
+        "scope": "양성자 이동이 있는 산 염기 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "한 정의가 다른 정의를 품는 포함 관계라 넓고 좁음을 맞바꾸면 반드시 거짓이 된다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양성자 이동으로 산을 정하면 아레니우스 정의보다 적용 범위가 오히려 좁아진다"
+    },
+    {
+      "id": "rel-bl-acid-role-by-reaction",
+      "text": "같은 물질이라도 정반응과 역반응에서 맡는 역할이 달라 산인지는 반응마다 새로 가린다",
+      "form": {
+        "condition": "가역 반응에서 정반응과 역반응을 함께 봄",
+        "type": "conditional",
+        "scope": "브뢴스테드·라우리 정의로 역할을 따질 때"
+      },
+      "invertible": false,
+      "invertible_reason": "역할이 반응에 달렸다는 서술이라 뒤집을 방향이 정해지지 않는다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염화 수소는 언제 어디서나 산이므로 물질만 보면 산인지 알 수 있다",
+      "why_wrong": "브뢴스테드·라우리 정의에서 산은 물질에 붙박인 성질이 아니라 그 반응에서 양성자를 내놓았는지로 정해진다.",
+      "source": "llm",
+      "linked_relation": "rel-bl-acid-role-by-reaction"
+    },
+    {
+      "text": "물은 양성자를 받기만 하므로 산이 될 수 없다",
+      "why_wrong": "물은 암모니아와 만나면 양성자를 내놓고 수산화 이온이 된다. 이때 물은 산으로 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-bl-acid-proton-donor"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-arrhenius-acid-base"
+    },
+    {
+      "type": "next",
+      "target": "reac-bronsted-lowry-base"
+    },
+    {
+      "type": "next",
+      "target": "reac-conjugate-acid-base-pair"
+    },
+    {
+      "type": "next",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "next",
+      "target": "reac-lewis-acid-base"
+    }
+  ],
+  "curriculum": [
+    "12반응01-01"
+  ],
+  "topic_id": "reac-1-1-01",
+  "pages": [
+    13,
+    14,
+    24
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

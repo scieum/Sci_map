@@ -1,0 +1,105 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-amphoteric-substance",
+  "concept_key": "concept:amphoteric-substance",
+  "term": "양쪽성 물질",
+  "notation": {
+    "hanja": "兩쪽性 物質",
+    "hanja_note": "가운데 쪽은 한자가 없는 고유어라 한글 그대로 두었다.",
+    "hanja_gloss": "兩 두 량 · 性 성품 성 · 物 물건 물 · 質 바탕 질",
+    "english": "amphoteric substance"
+  },
+  "definition": "반응 상대가 무엇이냐에 따라 양성자를 내주기도 하고 받기도 하여, 산으로도 염기로도 작용할 수 있는 물질.",
+  "relations": [
+    {
+      "id": "rel-amph-both-roles",
+      "text": "어떤 반응에서는 양성자를 내주고 다른 반응에서는 받아들이는 물질을 양쪽성 물질로 분류한다",
+      "form": {
+        "condition": "서로 다른 두 반응을 견주어 봄",
+        "type": "classification",
+        "scope": "브뢴스테드·라우리 정의로 역할을 가릴 때"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 두 양을 맞바꾸는 형태가 아니다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-amph-water-two-faces",
+      "text": "물은 염화 수소를 만나면 양성자를 받아 염기가 되고, 암모니아를 만나면 양성자를 내주어 산이 된다",
+      "form": {
+        "condition": "각 반응의 상대 물질이 정해져 있음",
+        "type": "conditional",
+        "scope": "물이 참여하는 양성자 이동 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "염화 수소는 물보다 양성자를 훨씬 잘 내놓고 암모니아는 잘 받으므로 두 역할을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물은 염화 수소를 만나면 산이 되고, 암모니아를 만나면 염기가 된다"
+    },
+    {
+      "id": "rel-amph-role-is-relative",
+      "text": "산인지 염기인지가 물질 자체가 아니라 상대와의 관계로 정해진다는 것을 양쪽성 물질이 보여 준다",
+      "form": {
+        "condition": "브뢴스테드·라우리 정의를 적용함",
+        "type": "conditional",
+        "scope": "양성자를 주고받는 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "정의의 성격을 말한 문장이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양쪽성 물질은 한 반응 안에서 산이면서 동시에 염기로 작용한다",
+      "why_wrong": "한 반응에서 맡는 역할은 하나로 정해진다. 상대가 달라질 때 역할이 바뀌는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-amph-both-roles"
+    },
+    {
+      "text": "물은 언제나 중성이므로 산이나 염기로 작용하지 않는다",
+      "why_wrong": "물은 염화 수소와는 염기로, 암모니아와는 산으로 작용한다. 중성이라는 말은 액성에 대한 것이지 역할에 대한 것이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-amph-water-two-faces"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-bronsted-lowry-acid"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-bronsted-lowry-base"
+    },
+    {
+      "type": "related",
+      "target": "reac-conjugate-acid-base-pair"
+    }
+  ],
+  "curriculum": [
+    "12반응01-01"
+  ],
+  "topic_id": "reac-1-1-01",
+  "pages": [
+    13,
+    42
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

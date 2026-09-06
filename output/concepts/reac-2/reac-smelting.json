@@ -1,0 +1,105 @@
+{
+  "id": "reac-smelting",
+  "concept_key": "concept:smelting",
+  "registry_status": "new",
+  "term": "제련",
+  "notation": {
+    "hanja": "製鍊",
+    "hanja_gloss": "製 지을 제 · 鍊 불릴 련",
+    "english": "smelting"
+  },
+  "definition": "광석 속 화합물 상태로 있는 금속을 홑원소 물질로 뽑아내는 과정. 산소와 세게 붙은 금속은 전기 분해로 얻는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sm-def",
+      "text": "제련은 자연에서 화합물로 묻혀 있는 금속을 금속 그 자체로 되돌리는 과정이다.",
+      "form": {
+        "condition": "광석을 원료로 금속을 얻을 때",
+        "type": "classification",
+        "scope": "금속 산화물 등 광석에서 금속을 뽑는 공정"
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 밝힌 분류 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sm-al",
+      "text": "알루미늄은 산소와 세게 결합해 있어 녹인 산화 알루미늄에 전류를 흘려 주는 방법으로 뽑아낸다.",
+      "form": {
+        "condition": "산소와의 결합이 강해 열만으로 떼기 어려운 금속일 때",
+        "type": "causal",
+        "scope": "알루미늄처럼 전기 분해로 제련하는 금속"
+      },
+      "invertible": false,
+      "invertible_reason": "제련 방법을 고르는 까닭을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sm-electrode",
+      "text": "알루미늄을 제련할 때 (-)극에는 액체 알루미늄이 모이고 (+)극에서는 이산화 탄소가 빠져나온다.",
+      "form": {
+        "condition": "산화 알루미늄과 빙정석을 녹여 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "탄소 전극을 쓰는 알루미늄 전기 분해로"
+      },
+      "invertible": true,
+      "invertible_reason": "알루미늄 이온은 전자를 받아야 금속이 되므로 두 극에서 나오는 물질을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "알루미늄을 제련할 때 (+)극에 액체 알루미늄이 모이고 (-)극에서 이산화 탄소가 빠져나온다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "알루미늄은 광석을 뜨겁게 데우기만 하면 얻을 수 있다",
+      "why_wrong": "알루미늄은 산소와의 결합이 매우 강해 가열만으로는 떨어지지 않는다. 그래서 전기 에너지를 써서 전기 분해로 뽑아낸다.",
+      "source": "llm",
+      "linked_relation": "rel-sm-al"
+    },
+    {
+      "text": "제련과 정련은 같은 말이다",
+      "why_wrong": "제련은 광석에서 금속을 처음 뽑아내는 과정이고, 정련은 이미 뽑아낸 금속의 순도를 높이는 과정이다.",
+      "source": "llm",
+      "linked_relation": "rel-sm-def"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-electrolysis"
+    },
+    {
+      "type": "related",
+      "target": "reac-electrorefining"
+    },
+    {
+      "type": "related",
+      "target": "reac-reduction",
+      "note": "금속 이온이 환원되어 금속이 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-03",
+  "pages": [
+    72,
+    76
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

@@ -1,0 +1,114 @@
+{
+  "id": "reac-hydrogen-fuel-cell",
+  "concept_key": "concept:hydrogen-fuel-cell",
+  "registry_status": "new",
+  "term": "수소 연료 전지",
+  "aliases": [
+    "연료 전지"
+  ],
+  "notation": {
+    "hanja": "水素燃料電池",
+    "hanja_gloss": "水 물 수 · 素 본디 소 · 燃 탈 연 · 料 헤아릴 료 · 電 번개 전 · 池 못 지",
+    "english": "hydrogen fuel cell"
+  },
+  "definition": "수소와 산소를 바깥에서 계속 대 주어 그 산화·환원 반응으로 전기를 얻고 물만 내놓는 전지.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fc-supply",
+      "text": "연료를 안에 담아 두는 보통 화학 전지와 달리, 연료를 밖에서 대 주는 동안 계속 전기를 만들어 낸다.",
+      "form": {
+        "condition": "수소와 산소가 끊이지 않고 공급될 때",
+        "type": "conditional",
+        "scope": "연료를 외부에서 받는 연료 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "구조의 차이를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fc-electrode",
+      "text": "(-)극에서는 수소가 수소 이온과 전자로 갈라지며 산화되고, (+)극에서는 산소가 전자를 받아 환원되어 물이 된다.",
+      "form": {
+        "condition": "수소 연료 전지가 작동하며 전류가 흐를 때",
+        "type": "causal",
+        "scope": "수소와 산소를 쓰는 연료 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 내놓는 쪽이 (-)극이므로 두 극의 반응을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "(+)극에서 수소가 산화되고, (-)극에서 산소가 환원되어 물이 된다."
+    },
+    {
+      "id": "rel-fc-product",
+      "text": "전기를 만드는 동안 생기는 것이 물뿐이라 이산화 탄소나 대기 오염 물질을 내보내지 않는다.",
+      "form": {
+        "condition": "수소를 연료로 써서 발전할 때",
+        "type": "causal",
+        "scope": "수소와 산소만으로 작동하는 연료 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수소 연료 전지도 다 쓰면 충전해서 다시 써야 한다",
+      "why_wrong": "연료 전지는 충전해 쓰는 장치가 아니라 수소를 계속 넣어 주는 동안 전기를 내는 장치다.",
+      "source": "llm",
+      "linked_relation": "rel-fc-supply"
+    },
+    {
+      "text": "수소 연료 전지는 수소를 태워 그 열로 전기를 만든다",
+      "why_wrong": "연소로 열을 얻는 것이 아니라 두 전극에서 산화와 환원을 나누어 일으켜 전자의 흐름을 직접 얻는다.",
+      "source": "llm",
+      "linked_relation": "rel-fc-electrode"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-chemical-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-all-solid-state-battery"
+    },
+    {
+      "type": "related",
+      "target": "reac-reducing-agent",
+      "note": "수소가 환원제 노릇을 한다"
+    },
+    {
+      "type": "related",
+      "target": "reac-electrolyte"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-05"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-3-02",
+  "pages": [
+    80,
+    81,
+    84,
+    87
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

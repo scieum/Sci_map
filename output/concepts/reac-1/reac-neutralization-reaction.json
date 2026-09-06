@@ -1,0 +1,119 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-neutralization-reaction",
+  "concept_key": "concept:neutralization-reaction",
+  "term": "중화 반응",
+  "notation": {
+    "hanja": "中和反應",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 反 돌이킬 반 · 應 응할 응",
+    "english": "neutralization reaction",
+    "symbol_display": "H⁺ + OH⁻ → H₂O",
+    "symbol_plain": "H+ + OH- = H2O"
+  },
+  "definition": "산에서 나온 수소 이온과 염기에서 나온 수산화 이온이 서로 짝을 지어 물을 만드는 반응.",
+  "relations": [
+    {
+      "id": "rel-neut-one-to-one",
+      "text": "수소 이온과 수산화 이온은 1 : 1 의 몰비로 만나 물 한 분자를 만든다",
+      "form": {
+        "condition": "산과 염기 수용액을 섞음",
+        "type": "conditional",
+        "scope": "수용액에서 일어나는 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "반응하는 몰비를 말한 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neut-leftover-ions",
+      "text": "반응에 끼지 않고 남은 이온끼리 결합하면 염이 만들어진다",
+      "form": {
+        "condition": "중화 반응이 끝난 용액에서 물을 날림",
+        "type": "causal",
+        "scope": "수용액에서 일어난 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물이 무엇인지 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neut-ph-rise",
+      "text": "산 수용액에 염기를 부어 갈수록 수소 이온이 줄어 pH 가 커진다",
+      "form": {
+        "condition": "산 수용액에 염기 수용액을 조금씩 더함",
+        "type": "direct",
+        "scope": "중화점에 이르기 전 구간",
+        "antecedent": {
+          "quantity": "가한 염기의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수용액의 pH",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "염기가 수소 이온을 없애므로 pH 가 낮아진다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산 수용액에 염기를 부어 갈수록 pH 가 오히려 작아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중화 반응이 끝나면 용액은 언제나 중성이다",
+      "why_wrong": "생성된 염이 가수 분해하면 용액이 산성이나 염기성이 된다. 중화가 끝난 것과 중성인 것은 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-neut-leftover-ions"
+    },
+    {
+      "text": "산과 염기를 같은 부피로 섞으면 중화된다",
+      "why_wrong": "가수와 몰농도까지 곱해야 이온의 양이 나온다. 부피만 같다고 두 양이 같아지지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-neut-one-to-one"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "reac-neutralization-point"
+    },
+    {
+      "type": "next",
+      "target": "reac-stoichiometry-of-neutralization"
+    },
+    {
+      "type": "next",
+      "target": "reac-salt"
+    },
+    {
+      "type": "related",
+      "target": "reac-acid-base-titration"
+    }
+  ],
+  "curriculum": [
+    "12반응01-03"
+  ],
+  "topic_id": "reac-1-2-01",
+  "pages": [
+    26,
+    32,
+    40
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

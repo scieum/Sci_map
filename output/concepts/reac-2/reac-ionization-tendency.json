@@ -1,0 +1,143 @@
+{
+  "id": "reac-ionization-tendency",
+  "concept_key": "concept:ionization-tendency",
+  "registry_status": "new",
+  "term": "금속의 이온화 경향",
+  "aliases": [
+    "금속의 반응성"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'이온'은 영어 ion 의 음차어라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "ionization tendency of metals"
+  },
+  "definition": "금속 원자가 전자를 내놓고 양이온이 되려 하는 성질의 크기. 금속마다 달라 서열로 견줄 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-it-oxidize",
+      "text": "이온화 경향이 큰 금속일수록 전자를 잘 내놓아 더 쉽게 산화된다.",
+      "form": {
+        "condition": "여러 금속을 같은 조건에서 견줄 때",
+        "type": "direct",
+        "scope": "수용액에서 반응하는 금속",
+        "antecedent": {
+          "quantity": "금속의 이온화 경향",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화되기 쉬운 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 잘 내놓는 성질이 크다는 말과 산화되기 어렵다는 말은 함께 설 수 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온화 경향이 큰 금속일수록 산화되기 어렵다."
+    },
+    {
+      "id": "rel-it-displace",
+      "text": "이온화 경향이 큰 금속을 이온화 경향이 작은 금속의 이온 용액에 넣으면 반응이 일어나지만, 순서를 반대로 하면 반응하지 않는다.",
+      "form": {
+        "condition": "금속판을 금속 이온 수용액에 담글 때",
+        "type": "conditional",
+        "scope": "수용액에서의 금속과 금속 이온의 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 덜 내놓으려는 금속이 더 내놓으려는 금속의 이온에게 전자를 줄 수는 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온화 경향이 작은 금속을 이온화 경향이 큰 금속의 이온 용액에 넣으면 반응이 일어난다."
+    },
+    {
+      "id": "rel-it-electrode",
+      "text": "전지를 꾸밀 때는 이온화 경향이 큰 금속을 (-)극으로, 작은 금속을 (+)극으로 쓴다.",
+      "form": {
+        "condition": "두 금속으로 전극을 고를 때",
+        "type": "classification",
+        "scope": "두 금속을 전극으로 쓰는 화학 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "산화되기 쉬운 금속이 전자를 내놓는 쪽이므로 극을 바꿔 잡으면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전지를 꾸밀 때는 이온화 경향이 큰 금속을 (+)극으로, 작은 금속을 (-)극으로 쓴다."
+    },
+    {
+      "id": "rel-it-acid",
+      "text": "수소보다 이온화 경향이 큰 금속만 묽은 산과 반응해 수소 기체를 낸다.",
+      "form": {
+        "condition": "묽은 황산 같은 산 수용액에 금속을 담글 때",
+        "type": "conditional",
+        "scope": "질산처럼 산화력이 큰 산을 뺀 묽은 산 수용액"
+      },
+      "invertible": true,
+      "invertible_reason": "수소보다 전자를 덜 내놓으려는 금속이 수소 이온을 환원시킬 수는 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소보다 이온화 경향이 작은 금속이 묽은 산과 반응해 수소 기체를 낸다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "구리를 아연 이온 수용액에 넣으면 아연이 석출된다",
+      "why_wrong": "구리는 아연보다 이온화 경향이 작아 전자를 내주지 못한다. 그래서 이 조합에서는 아무 반응도 일어나지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-it-displace"
+    },
+    {
+      "text": "이온화 경향이 큰 금속일수록 전지의 (+)극으로 쓰기에 알맞다",
+      "why_wrong": "이온화 경향이 큰 금속은 산화되어 전자를 내놓으므로 (-)극이 된다. (+)극에는 이온화 경향이 작은 금속을 쓴다.",
+      "source": "llm",
+      "linked_relation": "rel-it-electrode"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation"
+    },
+    {
+      "type": "next",
+      "target": "reac-chemical-cell",
+      "note": "극으로 쓸 금속을 고르는 근거"
+    },
+    {
+      "type": "next",
+      "target": "reac-standard-reduction-potential",
+      "note": "전위 서열의 정성적 예고"
+    },
+    {
+      "type": "next",
+      "target": "reac-electrorefining"
+    },
+    {
+      "type": "related",
+      "target": "reac-volta-cell"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    65,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

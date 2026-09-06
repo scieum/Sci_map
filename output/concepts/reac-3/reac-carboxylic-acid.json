@@ -1,0 +1,128 @@
+{
+  "id": "reac-carboxylic-acid",
+  "concept_key": "concept:carboxylic-acid",
+  "registry_status": "new",
+  "term": "카복실산",
+  "aliases": [
+    "카르복실산"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'카복실'은 영어 carboxyl 의 음차어라 대응하는 한자가 없다. 뒤의 '산'만 酸에 해당한다.",
+    "english": "carboxylic acid",
+    "symbol_display": "R-COOH",
+    "symbol_plain": "R-COOH"
+  },
+  "definition": "작용기로 -COOH 를 지닌 탄소 화합물 갈래. 식초의 아세트산, 개미와 벌의 독에 든 폼산이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-carboxylic-acid-classified",
+      "text": "작용기로 -COOH 를 지닌 탄소 화합물을 카복실산이라는 갈래로 묶는다",
+      "form": {
+        "condition": "작용기를 기준으로 갈래를 나눌 때",
+        "type": "classification",
+        "scope": "이 단원이 다루는 작용기 분류",
+        "antecedent": {
+          "quantity": "-COOH 의 유무",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "카복실산 갈래에 드는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carboxylic-acid-from-aldehyde",
+      "text": "알데하이드가 산화되면 카복실산이 되므로, 포도주가 식초로 바뀌는 것도 알코올이 카복실산까지 산화된 결과다",
+      "form": {
+        "condition": "산소나 산화제가 있는 조건",
+        "type": "causal",
+        "scope": "사슬 끝에 -CHO 를 지닌 알데하이드의 산화",
+        "antecedent": {
+          "quantity": "알데하이드가 산화된 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 카복실산의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "아세트알데하이드에서 아세트산으로 가는 쪽이 산화이므로 순서를 맞바꾼 문장은 반드시 거짓이다",
+      "inverted_text": "아세트산이 산화되면 아세트알데하이드가 된다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carboxylic-acid-sour",
+      "text": "카복실산 수용액은 약한 산성을 띠어 식초나 요구르트처럼 신맛을 낸다",
+      "form": {
+        "condition": "묽은 수용액 상태",
+        "type": "conditional",
+        "scope": "아세트산·폼산·락트산 같은 간단한 카복실산"
+      },
+      "invertible": false,
+      "invertible_reason": "신맛이 나는 물질이 모두 카복실산인 것은 아니라 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아세트산이 산화되면 아세트알데하이드가 된다",
+      "why_wrong": "산화는 산소를 얻는 방향이다. 아세트알데하이드가 산화되어 아세트산이 되는 것이 맞는 순서다.",
+      "linked_relation": "rel-carboxylic-acid-from-aldehyde",
+      "source": "llm"
+    },
+    {
+      "text": "식초에 아세트산이 들어 있으니 식초는 강산 수용액이다",
+      "why_wrong": "아세트산은 수소가 일부만 이온화되는 약한 산이고, 식초는 그 수용액을 4~6 % 로 묽게 만든 것이다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-carboxyl-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-of-aldehyde"
+    },
+    {
+      "type": "next",
+      "target": "reac-ester"
+    },
+    {
+      "type": "related",
+      "target": "reac-aldehyde"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-01",
+  "pages": [
+    97,
+    102
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

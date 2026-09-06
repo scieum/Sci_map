@@ -1,0 +1,132 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-acid-base-titration",
+  "concept_key": "concept:acid-base-titration",
+  "term": "중화 적정",
+  "notation": {
+    "hanja": "中和滴定",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 滴 물방울 적 · 定 정할 정",
+    "english": "acid-base titration"
+  },
+  "definition": "농도를 아는 용액을 조금씩 떨어뜨려 중화점까지의 부피를 재고, 그 양적 관계로 모르는 농도를 알아내는 방법.",
+  "relations": [
+    {
+      "id": "rel-titr-standard-solution",
+      "text": "농도를 정확히 아는 표준 용액을 써야 반응에 쓰인 이온의 양을 셀 수 있다",
+      "form": {
+        "condition": "표준 용액의 몰농도를 알고 있음",
+        "type": "conditional",
+        "scope": "중화 적정 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "전제 조건을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-titr-volume-to-conc",
+      "text": "중화점까지 떨어뜨린 부피를 재면 양적 관계로부터 시료의 몰농도를 계산해 낼 수 있다",
+      "form": {
+        "condition": "중화점을 정확히 찾았을 때",
+        "type": "causal",
+        "scope": "완전히 중화되는 산-염기 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 경로를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-titr-find-endpoint",
+      "text": "중화점은 지시약의 색 변화나 pH 변화 곡선을 보고 판단한다",
+      "form": {
+        "condition": "적정 과정을 관찰하고 있음",
+        "type": "conditional",
+        "scope": "급변 구간이 뚜렷한 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "판단 수단을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-titr-dilute-needs-more",
+      "text": "같은 시료를 적정할 때 표준 용액이 묽을수록 중화점까지 넣어야 하는 부피가 커진다",
+      "form": {
+        "condition": "시료의 양과 농도가 같음",
+        "type": "inverse",
+        "scope": "완전히 중화될 때까지 넣는 경우",
+        "antecedent": {
+          "quantity": "표준 용액의 몰농도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "중화점까지 넣은 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "필요한 이온의 양이 정해져 있어 묽을수록 적게 든다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 시료를 적정할 때 표준 용액이 묽을수록 중화점까지 넣어야 하는 부피가 작아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적정에서 산과 염기의 부피가 같아지는 때가 중화점이다",
+      "why_wrong": "부피가 아니라 가수·몰농도·부피를 곱한 이온의 양이 같아지는 때가 중화점이다.",
+      "source": "llm",
+      "linked_relation": "rel-titr-volume-to-conc"
+    },
+    {
+      "text": "색이 변하기만 하면 되므로 지시약은 아무것이나 써도 된다",
+      "why_wrong": "pH 가 급하게 변하는 구간 안에 변색 범위가 들어 있는 지시약이라야 중화점을 제대로 잡는다.",
+      "source": "llm",
+      "linked_relation": "rel-titr-find-endpoint"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-neutralization-point"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-stoichiometry-of-neutralization"
+    },
+    {
+      "type": "next",
+      "target": "reac-titration-curve"
+    },
+    {
+      "type": "related",
+      "target": "reac-indicator-color-change-range"
+    }
+  ],
+  "curriculum": [
+    "12반응01-03"
+  ],
+  "topic_id": "reac-1-2-01",
+  "pages": [
+    26,
+    31,
+    40
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

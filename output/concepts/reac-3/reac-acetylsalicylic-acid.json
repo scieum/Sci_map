@@ -1,0 +1,136 @@
+{
+  "id": "reac-acetylsalicylic-acid",
+  "concept_key": "concept:acetylsalicylic-acid",
+  "registry_status": "new",
+  "term": "아세틸살리실산",
+  "aliases": [
+    "아스피린"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아세틸살리실'은 영어 acetylsalicyl 의 음차어라 대응하는 한자가 없다. 뒤의 '산'만 酸에 해당한다.",
+    "english": "acetylsalicylic acid"
+  },
+  "definition": "살리실산의 -OH 와 아세트산의 -COOH 가 반응해 물이 빠지며 만들어진 해열제. 약효는 남기고 위장 부작용을 줄인 물질이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-aspirin-synthesis",
+      "text": "살리실산이 지닌 -OH 와 아세트산이 지닌 -COOH 사이에서 물 분자가 빠지며 아세틸살리실산이 생긴다",
+      "form": {
+        "condition": "인산을 촉매로 넣고 물중탕으로 데울 때",
+        "type": "causal",
+        "scope": "아스피린 합성 실험",
+        "antecedent": {
+          "quantity": "반응한 살리실산의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 아세틸살리실산의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 경로를 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건이 달라진다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aspirin-side-effect",
+      "text": "살리실산의 -OH 를 화학 반응으로 바꾸자 해열 작용은 남고 위장 장애는 줄어들었다",
+      "form": {
+        "condition": "같은 해열 성분을 화학 반응으로 바꾼 경우",
+        "type": "causal",
+        "scope": "살리실산과 아세틸살리실산의 비교",
+        "antecedent": {
+          "quantity": "작용기가 바뀐 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "위장 장애 부작용",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부작용을 줄이려고 만든 물질이므로 아세틸살리실산이 살리실산보다 위장 장애가 심하다는 진술은 반드시 거짓이다",
+      "inverted_text": "아세틸살리실산은 살리실산보다 위장 장애 부작용이 더 크다",
+      "curriculum": [
+        "12반응03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aspirin-society",
+      "text": "탄소 화합물의 반응으로 합성한 의약품은 사람의 수명을 늘리고 삶의 질을 높이는 데 이바지했다",
+      "form": {
+        "condition": "합성 의약품이 널리 보급된 상황",
+        "type": "causal",
+        "scope": "아스피린·페니실린·항암제 같은 합성 의약품",
+        "antecedent": {
+          "quantity": "합성 의약품의 보급",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수명 연장과 삶의 질",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사회적 영향에 관한 서술이라 방향을 뒤집은 문장의 참거짓을 단정할 수 없다",
+      "curriculum": [
+        "12반응03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아스피린은 버드나무 껍질에서 그대로 뽑아낸 천연 물질이다",
+      "why_wrong": "버드나무에서 얻은 살리실산을 아세트산과 반응시켜 만든 합성 물질이다.",
+      "linked_relation": "rel-aspirin-synthesis",
+      "source": "llm"
+    },
+    {
+      "text": "살리실산과 아세틸살리실산은 같은 물질을 다르게 부른 이름이다",
+      "why_wrong": "둘은 다른 물질이다. 살리실산의 -OH 자리가 반응해 바뀐 것이 아세틸살리실산이고 부작용도 다르다.",
+      "linked_relation": "rel-aspirin-side-effect",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-ester"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-hydroxy-group"
+    },
+    {
+      "type": "related",
+      "target": "reac-carboxyl-group"
+    },
+    {
+      "type": "related",
+      "target": "reac-artificial-fragrance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-02",
+    "12반응03-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-02",
+  "pages": [
+    110,
+    111
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

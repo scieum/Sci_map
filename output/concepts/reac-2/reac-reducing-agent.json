@@ -1,0 +1,128 @@
+{
+  "id": "reac-reducing-agent",
+  "concept_key": "concept:reducing-agent",
+  "registry_status": "new",
+  "term": "환원제",
+  "notation": {
+    "hanja": "還元劑",
+    "hanja_gloss": "還 돌아올 환 · 元 으뜸 원 · 劑 약제 제",
+    "english": "reducing agent"
+  },
+  "definition": "상대 물질에게 전자를 넘겨주어 그 물질을 환원시키고, 그 대가로 자신은 전자를 잃어 산화되는 물질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rda-self",
+      "text": "환원제로 작용한 물질은 그 반응에서 자신이 산화된다.",
+      "form": {
+        "condition": "하나의 산화·환원 반응 안에서 역할을 가릴 때",
+        "type": "classification",
+        "scope": "산화·환원 반응에 참여한 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "상대에게 전자를 넘겨야 환원시킬 수 있으므로 자신이 환원된다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-01",
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "환원제로 작용한 물질은 그 반응에서 자신도 함께 환원된다."
+    },
+    {
+      "id": "rel-rda-relative",
+      "text": "같은 물질이라도 전자를 더 잘 내놓는 상대를 만나면 환원제 대신 산화제 노릇을 하게 된다.",
+      "form": {
+        "condition": "반응 상대를 바꾸어 견줄 때",
+        "type": "conditional",
+        "scope": "이산화 황처럼 상대에 따라 역할이 갈리는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "상대적 세기에 따라 역할이 갈린다는 명제라 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12반응02-01",
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rda-strength",
+      "text": "표준 환원 전위가 작은 물질일수록 전자를 쉽게 내놓아 더 강한 환원제로 작용한다.",
+      "form": {
+        "condition": "표준 상태에서 표준 환원 전위 값을 견줄 때",
+        "type": "inverse",
+        "scope": "표준 환원 전위가 표로 주어진 반쪽 반응끼리 비교",
+        "antecedent": {
+          "quantity": "표준 환원 전위",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "환원제로서의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전위가 작을수록 전자를 잘 내놓는데 환원제로서 약해진다는 진술은 성립할 수 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표준 환원 전위가 작은 물질일수록 더 약한 환원제로 작용한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환원제는 반응에서 환원되는 물질이다",
+      "why_wrong": "이름과 반대다. 환원제는 상대를 환원시키는 물질이고, 자신은 전자를 잃어 산화된다.",
+      "source": "llm",
+      "linked_relation": "rel-rda-self"
+    },
+    {
+      "text": "환원제는 자신은 변하지 않고 상대만 바꿔 놓는다",
+      "why_wrong": "그것은 촉매의 성질이다. 환원제는 전자를 내주면서 자신의 산화수가 실제로 커진다.",
+      "source": "llm",
+      "linked_relation": "rel-rda-self"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-number"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-redox-simultaneity"
+    },
+    {
+      "type": "next",
+      "target": "reac-photosynthesis"
+    },
+    {
+      "type": "next",
+      "target": "reac-cellular-respiration"
+    },
+    {
+      "type": "related",
+      "target": "reac-oxidizing-agent"
+    },
+    {
+      "type": "related",
+      "target": "reac-standard-reduction-potential"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01",
+    "12반응02-05"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-02",
+  "pages": [
+    54,
+    56
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

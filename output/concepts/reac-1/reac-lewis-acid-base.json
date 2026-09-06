@@ -1,0 +1,104 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-lewis-acid-base",
+  "concept_key": "concept:lewis-acid-base",
+  "term": "루이스 산과 염기",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "사람 이름 Lewis 를 소리대로 옮긴 말이 앞에 붙어 낱말 전체에 대응하는 한자어가 없다.",
+    "english": "Lewis acid and base"
+  },
+  "definition": "비공유 전자쌍을 받아들이는 쪽을 산, 내어 주는 쪽을 염기로 보아 수소 이온이 오가지 않는 반응까지 넓힌 정의.",
+  "relations": [
+    {
+      "id": "rel-lewis-acid-accepts-pair",
+      "text": "결합이 만들어질 때 상대의 비공유 전자쌍을 받아들인 쪽이 루이스 산이다",
+      "form": {
+        "condition": "전자쌍이 오가며 결합이 만들어짐",
+        "type": "classification",
+        "scope": "루이스 정의로 역할을 가릴 때"
+      },
+      "invertible": true,
+      "invertible_reason": "주는 쪽과 받는 쪽의 이름이 정의로 못 박혀 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합이 만들어질 때 비공유 전자쌍을 내어 준 쪽이 루이스 산이다"
+    },
+    {
+      "id": "rel-lewis-base-donates-pair",
+      "text": "결합이 만들어질 때 자기 비공유 전자쌍을 내어 준 쪽이 루이스 염기다",
+      "form": {
+        "condition": "전자쌍이 오가며 결합이 만들어짐",
+        "type": "classification",
+        "scope": "루이스 정의로 역할을 가릴 때"
+      },
+      "invertible": true,
+      "invertible_reason": "주는 쪽과 받는 쪽의 이름이 정의로 못 박혀 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합이 만들어질 때 비공유 전자쌍을 받아들인 쪽이 루이스 염기다"
+    },
+    {
+      "id": "rel-lewis-extends-scope",
+      "text": "수소 이온이 전혀 오가지 않는 반응에서도 산과 염기를 가릴 수 있다",
+      "form": {
+        "condition": "전자쌍이 오가는 결합 형성 반응",
+        "type": "conditional",
+        "scope": "결합 형성이 전자쌍 주고받기로 설명되는 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 넓힌다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "루이스 염기는 비공유 전자쌍을 받는 물질이다",
+      "why_wrong": "받는 쪽이 산, 주는 쪽이 염기다. 염기가 전자쌍을 내주어야 새 결합이 생긴다.",
+      "source": "llm",
+      "linked_relation": "rel-lewis-base-donates-pair"
+    },
+    {
+      "text": "산이라면 반드시 수소 이온을 내놓아야 하므로 삼플루오린화 붕소는 산일 수 없다",
+      "why_wrong": "루이스 정의에서는 비공유 전자쌍을 받아들이면 산이다. 삼플루오린화 붕소는 암모니아의 전자쌍을 받아 루이스 산으로 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-lewis-acid-accepts-pair"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-bronsted-lowry-acid"
+    },
+    {
+      "type": "related",
+      "target": "reac-arrhenius-acid-base"
+    },
+    {
+      "type": "related",
+      "target": "reac-bronsted-lowry-base"
+    }
+  ],
+  "curriculum": [
+    "12반응01-01"
+  ],
+  "topic_id": "reac-1-1-01",
+  "pages": [
+    15
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "media": []
+}

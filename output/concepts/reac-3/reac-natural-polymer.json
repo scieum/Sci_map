@@ -1,0 +1,132 @@
+{
+  "id": "reac-natural-polymer",
+  "concept_key": "concept:natural-polymer",
+  "registry_status": "new",
+  "term": "천연 고분자",
+  "aliases": [],
+  "notation": {
+    "hanja": "天然 高分子",
+    "hanja_gloss": "天 하늘 천 · 然 그러할 연 · 高 높을 고 · 分 나눌 분 · 子 아들 자",
+    "english": "natural polymer"
+  },
+  "definition": "사람이 합성하지 않고 자연에서 만들어져 얻는 고분자. 단백질·녹말·핵산·천연고무가 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-natural-polymer-classification",
+      "text": "자연에서 만들어져 얻는 고분자를 천연 고분자라는 갈래로 묶는다",
+      "form": {
+        "condition": "만들어진 유래를 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "고분자 화합물의 분류",
+        "antecedent": {
+          "quantity": "자연에서 만들어졌는지 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "천연 고분자 갈래에 드는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-natural-polymer-monomers",
+      "text": "단백질은 여러 종류의 아미노산이, 녹말은 포도당이 이어져 만들어진다",
+      "form": {
+        "condition": "단위체를 기준으로 볼 때",
+        "type": "classification",
+        "scope": "단백질과 녹말",
+        "antecedent": {
+          "quantity": "이어진 단위체의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "만들어진 천연 고분자",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "단위체와 고분자를 짝지은 문장이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-natural-polymer-monomer-difference",
+      "text": "같은 천연 고분자라도 이어진 단위체가 다르면 몸에서 맡는 일과 성질이 달라진다",
+      "form": {
+        "condition": "단위체가 다른 천연 고분자끼리 견줄 때",
+        "type": "causal",
+        "scope": "단백질·녹말·핵산",
+        "antecedent": {
+          "quantity": "단위체 종류의 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "성질과 기능의 차이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성질이 다르다고 반드시 단위체가 다른 것은 아니어서 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "천연 고분자는 자연에서 얻으므로 중합 반응과는 상관없이 만들어진다",
+      "why_wrong": "단백질은 아미노산의 축합 중합으로, 녹말은 포도당이 이어지며 물이 빠지는 반응으로 만들어진다.",
+      "linked_relation": "rel-natural-polymer-monomers",
+      "source": "llm"
+    },
+    {
+      "text": "단백질과 녹말은 같은 단위체로 이루어져 있다",
+      "why_wrong": "단백질의 단위체는 아미노산이고 녹말의 단위체는 포도당이라 서로 다르다.",
+      "linked_relation": "rel-natural-polymer-monomers",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-polymer"
+    },
+    {
+      "type": "next",
+      "target": "reac-nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "reac-monomer"
+    },
+    {
+      "type": "related",
+      "target": "reac-synthetic-polymer"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    105,
+    116
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

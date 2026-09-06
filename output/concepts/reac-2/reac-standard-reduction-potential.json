@@ -1,0 +1,137 @@
+{
+  "id": "reac-standard-reduction-potential",
+  "concept_key": "concept:standard-reduction-potential",
+  "registry_status": "new",
+  "term": "표준 환원 전위",
+  "notation": {
+    "hanja": "標準還元電位",
+    "hanja_gloss": "標 표할 표 · 準 준할 준 · 還 돌아올 환 · 元 으뜸 원 · 電 번개 전 · 位 자리 위",
+    "english": "standard reduction potential",
+    "symbol_display": "E°",
+    "symbol_plain": "E0"
+  },
+  "definition": "표준 상태로 맞춘 반쪽 전지를 표준 수소 전극과 이어 잰 전지 전위를, 환원 방향으로 통일해 적은 값.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-srp-form",
+      "text": "표준 환원 전위는 모든 반쪽 반응을 환원이 일어나는 방향으로 통일해 적기로 한 약속을 따른다.",
+      "form": {
+        "condition": "표 값을 읽거나 적을 때",
+        "type": "classification",
+        "scope": "표에 실린 반쪽 반응의 전위 값"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 약속을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-srp-large",
+      "text": "두 반쪽 전지를 이으면 표준 환원 전위가 더 큰 쪽에서 환원이 일어난다.",
+      "form": {
+        "condition": "표준 상태의 두 반쪽 전지를 이어 전지를 꾸릴 때",
+        "type": "direct",
+        "scope": "표준 환원 전위가 주어진 두 반쪽 전지",
+        "antecedent": {
+          "quantity": "반쪽 전지의 표준 환원 전위",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "환원 전극이 될 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 더 잘 받아들이는 쪽이 오히려 전자를 내놓는다는 말이 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 반쪽 전지를 이으면 표준 환원 전위가 더 큰 쪽에서 산화가 일어난다."
+    },
+    {
+      "id": "rel-srp-agent",
+      "text": "표준 환원 전위가 클수록 그 물질은 강한 산화제로, 작을수록 강한 환원제로 작용한다.",
+      "form": {
+        "condition": "표준 상태에서 표 값을 견줄 때",
+        "type": "direct",
+        "scope": "표에 실린 반쪽 반응의 물질끼리 비교",
+        "antecedent": {
+          "quantity": "표준 환원 전위",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화제로서의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전위가 크다는 것은 전자를 잘 받는다는 뜻이므로 환원제로 강해진다는 진술과 어긋난다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표준 환원 전위가 클수록 그 물질은 강한 환원제로, 작을수록 강한 산화제로 작용한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반쪽 반응식의 계수를 두 배로 하면 표준 환원 전위 값도 두 배가 된다",
+      "why_wrong": "전위는 전하 하나가 가지는 에너지로 정해지는 값이라 반응식의 계수를 바꿔도 달라지지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-srp-form"
+    },
+    {
+      "text": "표준 환원 전위가 음수인 반쪽 전지에서는 환원 반응이 절대 일어나지 않는다",
+      "why_wrong": "부호는 표준 수소 전극과 견준 상대적인 값일 뿐이다. 더 작은 값을 가진 반쪽 전지와 이으면 그쪽이 산화되고 이쪽에서 환원이 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-srp-large"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-standard-hydrogen-electrode",
+      "note": "기준 전극이 있어야 값이 정의된다"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-half-cell"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-ionization-tendency"
+    },
+    {
+      "type": "next",
+      "target": "reac-standard-cell-potential"
+    },
+    {
+      "type": "related",
+      "target": "reac-oxidizing-agent"
+    },
+    {
+      "type": "related",
+      "target": "reac-reducing-agent"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    66,
+    76,
+    77
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

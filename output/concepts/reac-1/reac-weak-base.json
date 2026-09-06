@@ -1,0 +1,117 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-weak-base",
+  "concept_key": "concept:weak-base",
+  "term": "약염기",
+  "notation": {
+    "hanja": "弱鹽基",
+    "hanja_gloss": "弱 약할 약 · 鹽 소금 염 · 基 터 기",
+    "english": "weak base"
+  },
+  "definition": "물에 녹아도 일부만 이온화해 대부분 분자로 남으면서 수산화 이온을 조금 내놓는 염기. 암모니아가 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-weak-base-partial",
+      "text": "묽은 수용액에서 일부만 이온화하는 염기를 약염기로 분류한다",
+      "form": {
+        "condition": "물을 용매로 하는 묽은 용액",
+        "type": "classification",
+        "scope": "수용액에서의 이온화 정도로 가릴 때"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-weak-base-conjugate-acid",
+      "text": "약염기의 짝산인 양이온은 물에 양성자를 넘겨 수용액을 산성 쪽으로 끌고 간다",
+      "form": {
+        "condition": "그 짝산이 든 염만 물에 녹아 있음",
+        "type": "causal",
+        "scope": "약염기에서 온 짝산(강염기의 짝산은 해당하지 않는다)",
+        "antecedent": {
+          "quantity": "약염기의 짝산 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "하이드로늄 이온 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양성자를 내주는 쪽이므로 수산화 이온이 늘어 염기성이 된다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "약염기의 짝산인 양이온은 물에서 양성자를 받아 수용액을 염기성 쪽으로 끌고 간다"
+    },
+    {
+      "id": "rel-weak-base-acidic-endpoint",
+      "text": "강산을 약염기로 적정하면 중화점에서 수용액이 산성을 띤다",
+      "form": {
+        "condition": "25 ℃에서 강산과 약염기로 적정함",
+        "type": "causal",
+        "scope": "생성된 염의 양이온이 가수 분해하는 조합"
+      },
+      "invertible": false,
+      "invertible_reason": "액성이 어떻게 되는지를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암모니아는 수산화 이온을 갖고 있지 않으므로 염기성을 띠지 못한다",
+      "why_wrong": "암모니아는 물에서 양성자를 받아 수산화 이온을 만들어 낸다. 그래서 수용액이 염기성이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-weak-base-partial"
+    },
+    {
+      "text": "약염기로 중화하면 중화점은 언제나 중성이다",
+      "why_wrong": "강산을 약염기로 적정하면 생긴 염의 양이온이 가수 분해해 중화점이 산성이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-weak-base-acidic-endpoint"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "next",
+      "target": "reac-ph-of-weak-base-solution"
+    },
+    {
+      "type": "next",
+      "target": "reac-hydrolysis-of-salt"
+    },
+    {
+      "type": "related",
+      "target": "reac-weak-acid"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    17,
+    21,
+    35
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

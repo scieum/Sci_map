@@ -1,0 +1,110 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-neutralization-point",
+  "concept_key": "concept:neutralization-point",
+  "term": "중화점",
+  "notation": {
+    "hanja": "中和點",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 點 점 점",
+    "english": "neutralization point"
+  },
+  "definition": "넣어 준 산과 염기가 내놓은 이온이 남김없이 서로 반응해 중화가 마무리되는 지점.",
+  "relations": [
+    {
+      "id": "rel-np-equal-amounts",
+      "text": "산이 내놓은 수소 이온의 양과 염기가 내놓은 수산화 이온의 양이 같아지는 순간이 중화점이다",
+      "form": {
+        "condition": "한쪽 용액에 다른 쪽을 조금씩 더해 감",
+        "type": "classification",
+        "scope": "중화 반응이 완결되는 지점"
+      },
+      "invertible": false,
+      "invertible_reason": "지점을 정의하는 문장이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-np-curve-middle",
+      "text": "적정 곡선에서 pH 가 가파르게 치솟는 구간의 한가운데가 중화점에 해당한다",
+      "form": {
+        "condition": "적정 곡선을 그려 놓고 읽을 때",
+        "type": "conditional",
+        "scope": "급변 구간이 뚜렷하게 나타나는 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "곡선에서의 위치를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-np-acidity-varies",
+      "text": "중화점의 액성은 반응한 산과 염기의 세기에 따라 중성·산성·염기성으로 갈린다",
+      "form": {
+        "condition": "온도가 25 ℃ 임",
+        "type": "causal",
+        "scope": "생성된 염의 가수 분해 여부에 따라"
+      },
+      "invertible": false,
+      "invertible_reason": "세 갈래로 갈린다는 서술이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12반응01-03",
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중화점의 pH 는 언제나 7 이다",
+      "why_wrong": "강산과 강염기의 적정에서만 그렇다. 약산을 강염기로 적정하면 중화점이 7 보다 크다.",
+      "source": "llm",
+      "linked_relation": "rel-np-acidity-varies"
+    },
+    {
+      "text": "중화점에서는 용액에 이온이 하나도 남아 있지 않다",
+      "why_wrong": "반응에 끼지 않은 구경꾼 이온은 그대로 남아 있고, 물도 아주 조금 이온화해 있다.",
+      "source": "llm",
+      "linked_relation": "rel-np-equal-amounts"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-neutralization-reaction"
+    },
+    {
+      "type": "next",
+      "target": "reac-acid-base-titration"
+    },
+    {
+      "type": "related",
+      "target": "reac-titration-curve"
+    },
+    {
+      "type": "related",
+      "target": "reac-acidity-of-salt-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-03",
+    "12반응01-04"
+  ],
+  "topic_id": "reac-1-2-01",
+  "pages": [
+    26,
+    30,
+    40
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

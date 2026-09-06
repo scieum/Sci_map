@@ -1,0 +1,125 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-weak-acid",
+  "concept_key": "concept:weak-acid",
+  "term": "약산",
+  "notation": {
+    "hanja": "弱酸",
+    "hanja_gloss": "弱 약할 약 · 酸 실 산",
+    "english": "weak acid"
+  },
+  "definition": "물에 녹아도 일부만 이온으로 나뉘고 대부분 분자로 남아 이온화 평형을 이루는 산. 아세트산·탄산이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-weak-acid-partial",
+      "text": "묽은 수용액에서 일부만 이온화해 분자와 이온이 함께 남는 산을 약산으로 분류한다",
+      "form": {
+        "condition": "물을 용매로 하는 묽은 용액",
+        "type": "classification",
+        "scope": "수용액에서의 이온화 정도로 가릴 때"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-weak-acid-higher-ph",
+      "text": "농도가 같다면 약산 수용액의 pH 가 강산 수용액보다 크다",
+      "form": {
+        "condition": "몰농도·가수·온도가 같음",
+        "type": "inverse",
+        "scope": "묽은 수용액끼리의 비교",
+        "antecedent": {
+          "quantity": "산의 이온화 정도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "수용액의 pH",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수소 이온이 적을수록 pH 가 크므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도가 같다면 약산 수용액의 pH 가 강산 수용액보다 작다"
+    },
+    {
+      "id": "rel-weak-acid-conjugate-base",
+      "text": "약산의 짝염기는 물에서 양성자를 빼앗을 만큼 염기의 세기가 뚜렷하다",
+      "form": {
+        "condition": "그 짝염기가 든 염만 물에 녹아 있음",
+        "type": "causal",
+        "scope": "약산에서 온 짝염기(강산의 짝염기는 해당하지 않는다)"
+      },
+      "invertible": false,
+      "invertible_reason": "세기가 뚜렷하다는 서술이라 맞바꿀 두 양이 정해지지 않는다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "약산은 이온화하지 않는다",
+      "why_wrong": "일부는 반드시 이온화하여 평형을 이룬다. 이온화하는 비율이 작을 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-weak-acid-partial"
+    },
+    {
+      "text": "약산 수용액은 아무리 진해도 중성에 가깝다",
+      "why_wrong": "세기가 약해도 농도가 크면 수소 이온 농도가 커져 pH 가 충분히 낮아진다.",
+      "source": "llm",
+      "linked_relation": "rel-weak-acid-higher-ph"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "next",
+      "target": "reac-ionization-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "reac-ph-of-weak-acid-solution"
+    },
+    {
+      "type": "next",
+      "target": "reac-hydrolysis-of-salt"
+    },
+    {
+      "type": "next",
+      "target": "reac-buffer-solution"
+    },
+    {
+      "type": "related",
+      "target": "reac-strong-acid"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    17,
+    20,
+    30
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

@@ -1,0 +1,111 @@
+{
+  "id": "reac-polarization",
+  "concept_key": "concept:polarization",
+  "registry_status": "new",
+  "term": "분극 현상",
+  "notation": {
+    "hanja": "分極現象",
+    "hanja_gloss": "分 나눌 분 · 極 극진할 극 · 現 나타날 현 · 象 코끼리 상",
+    "english": "polarization"
+  },
+  "definition": "전극에 달라붙은 기체가 반응을 가로막아 전지의 전압이 오래 못 가 뚝 떨어지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pol-gas",
+      "text": "구리판에 달라붙은 수소 기체가 전극과 전해질이 맞닿는 넓이를 줄여 수소 이온이 전자를 받는 것을 방해한다.",
+      "form": {
+        "condition": "볼타 전지에 전류가 흐르기 시작한 뒤",
+        "type": "causal",
+        "scope": "(+)극에서 기체가 생기는 볼타 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "원인과 결과를 맞바꿔 읽어도 곧바로 거짓이라 단정하기 어렵다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pol-voltage",
+      "text": "전극 표면에 기체가 많이 쌓일수록 전지의 전압은 더 빠르게 떨어진다.",
+      "form": {
+        "condition": "전지가 방전되며 기체가 계속 발생할 때",
+        "type": "inverse",
+        "scope": "볼타 전지처럼 전극에 기체가 쌓이는 전지",
+        "antecedent": {
+          "quantity": "전극에 쌓인 기체의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전지의 전압",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응을 막는 기체가 늘어나는데 전압이 올라간다는 진술은 성립할 수 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전극 표면에 기체가 많이 쌓일수록 전지의 전압은 더 높아진다."
+    },
+    {
+      "id": "rel-pol-fix",
+      "text": "두 반쪽 전지를 따로 담고 염다리로 이으면 분극 때문에 생기는 전압 강하를 피할 수 있다.",
+      "form": {
+        "condition": "전지의 구조를 바꾸어 개선할 때",
+        "type": "causal",
+        "scope": "다니엘 전지처럼 반쪽 전지를 나눈 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "개선 방법을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분극은 전해질이 다 소모되어 나타나는 현상이다",
+      "why_wrong": "전해질이 떨어져서가 아니라 (+)극에 생긴 수소 기체가 전극을 덮어 환원 반응을 막기 때문에 전압이 떨어진다.",
+      "source": "llm",
+      "linked_relation": "rel-pol-gas"
+    },
+    {
+      "text": "분극이 일어나도 전지의 전압은 그대로 유지된다",
+      "why_wrong": "분극은 전류가 흐른 지 얼마 지나지 않아 전압이 급격히 낮아지는 현상 그 자체다.",
+      "source": "llm",
+      "linked_relation": "rel-pol-voltage"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-volta-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-daniell-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-salt-bridge"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    63
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,92 @@
+{
+  "id": "reac-structural-formula",
+  "concept_key": "concept:structural-formula",
+  "registry_status": "new",
+  "term": "구조식",
+  "aliases": [],
+  "notation": {
+    "hanja": "構造式",
+    "hanja_gloss": "構 얽을 구 · 造 지을 조 · 式 법 식",
+    "english": "structural formula"
+  },
+  "definition": "원자와 원자 사이의 결합을 선 하나하나로 그려, 분자 안에서 무엇이 무엇과 이어져 있는지까지 드러낸 화학식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-structural-formula-shows-connection",
+      "text": "결합을 선으로 그리기 때문에 분자식만으로는 알 수 없는 원자 사이의 연결 순서가 드러난다",
+      "form": {
+        "condition": "분자를 이루는 원자와 원자단이 정해져 있을 때",
+        "type": "conditional",
+        "scope": "공유 결합으로 이루어진 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "표현 방식에 관한 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-structural-formula-find-functional-group",
+      "text": "구조식에서 -OH·-CHO·-COOH 같은 원자 묶음을 찾아내면 그 물질이 어느 갈래인지 가려낼 수 있다",
+      "form": {
+        "condition": "작용기 표기를 알고 있을 때",
+        "type": "conditional",
+        "scope": "작용기를 지닌 탄소 화합물의 분류"
+      },
+      "invertible": false,
+      "invertible_reason": "읽는 절차를 말한 문장이라 방향을 뒤집는다는 것이 성립하지 않는다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자식이 같으면 구조식도 반드시 같다",
+      "why_wrong": "같은 원자를 같은 수로 가지고도 이어진 순서가 다를 수 있고, 그때는 성질도 달라진다.",
+      "linked_relation": "rel-structural-formula-shows-connection",
+      "source": "llm"
+    },
+    {
+      "text": "구조식의 결합선 하나는 원자 하나를 나타낸다",
+      "why_wrong": "결합선은 원자가 아니라 두 원자가 나누어 갖는 결합 하나를 나타낸다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-carbon-atom-bonding"
+    },
+    {
+      "type": "next",
+      "target": "reac-functional-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-alkyl-group"
+    },
+    {
+      "type": "related",
+      "target": "reac-carbon-compound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-01",
+  "pages": [
+    94,
+    95
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

@@ -1,0 +1,105 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-indicator-color-change-range",
+  "concept_key": "concept:indicator-color-change-range",
+  "term": "지시약의 변색 범위",
+  "aliases": [
+    "변색 범위"
+  ],
+  "notation": {
+    "hanja": "指示藥의 變色 範圍",
+    "hanja_gloss": "指 가리킬 지 · 示 보일 시 · 藥 약 약 · 變 변할 변 · 色 빛 색 · 範 법 범 · 圍 에워쌀 위",
+    "english": "color change range of indicator"
+  },
+  "definition": "지시약의 색이 한쪽 색에서 다른 색으로 바뀌는 동안에 걸쳐 있는 pH 구간.",
+  "relations": [
+    {
+      "id": "rel-ind-fixed-range",
+      "text": "변색 범위는 지시약마다 정해져 있어 어느 적정에서 쓰든 같은 pH 구간에서 색이 바뀐다",
+      "form": {
+        "condition": "온도가 일정함",
+        "type": "conditional",
+        "scope": "묽은 수용액에서 쓰는 산 염기 지시약"
+      },
+      "invertible": false,
+      "invertible_reason": "지시약마다 고정된 성질이라는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ind-choose-by-jump",
+      "text": "적정에 쓸 지시약은 pH 가 급하게 변하는 구간 안에 변색 범위가 들어오는 것으로 골라야 한다",
+      "form": {
+        "condition": "중화점을 색 변화로 판단하려 함",
+        "type": "conditional",
+        "scope": "중화 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "선택 기준을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ind-weak-acid-case",
+      "text": "약산을 강염기로 적정하면 급변 구간이 염기성 쪽에 치우쳐, 산성 쪽에서 변하는 지시약은 쓸 수 없다",
+      "form": {
+        "condition": "약산을 강염기로 적정함",
+        "type": "causal",
+        "scope": "중화점이 염기성인 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "쓸 수 있고 없음을 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어떤 지시약을 써도 중화점을 똑같이 찾을 수 있다",
+      "why_wrong": "급변 구간 밖에서 색이 변하는 지시약을 쓰면 중화점이 아닌 곳을 중화점으로 읽게 된다.",
+      "source": "llm",
+      "linked_relation": "rel-ind-choose-by-jump"
+    },
+    {
+      "text": "지시약의 색이 변하는 순간의 pH 는 늘 7 이다",
+      "why_wrong": "변색 범위는 지시약마다 다르다. 메틸 오렌지는 산성 쪽에서, 페놀프탈레인은 염기성 쪽에서 변한다.",
+      "source": "llm",
+      "linked_relation": "rel-ind-fixed-range"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-titration-curve"
+    },
+    {
+      "type": "related",
+      "target": "reac-acid-base-titration"
+    },
+    {
+      "type": "related",
+      "target": "reac-ph"
+    }
+  ],
+  "curriculum": [
+    "12반응01-03"
+  ],
+  "topic_id": "reac-1-2-01",
+  "pages": [
+    31
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "media": []
+}

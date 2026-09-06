@@ -1,0 +1,108 @@
+{
+  "id": "reac-half-reaction-equation",
+  "concept_key": "concept:half-reaction-equation",
+  "registry_status": "new",
+  "term": "반쪽 반응식",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'반쪽'은 한자 半과 고유어 '쪽'이 붙어 만들어진 말이라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "half-reaction equation"
+  },
+  "definition": "하나의 산화·환원 반응을 전자를 잃는 쪽과 얻는 쪽으로 갈라, 오간 전자를 식 안에 드러내 적은 두 개의 식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hre-show-electron",
+      "text": "반쪽 반응식에서는 전자를 반응물이나 생성물 자리에 직접 적어 오간 전자 수를 눈에 보이게 한다.",
+      "form": {
+        "condition": "산화·환원 반응을 두 갈래로 나누어 적을 때",
+        "type": "classification",
+        "scope": "전자의 이동으로 설명되는 산화·환원 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 약속을 밝힌 명제라 뒤집을 방향 자체가 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hre-balance",
+      "text": "두 반쪽 반응식을 더해 전체 반응식을 얻으려면 잃은 전자 수와 얻은 전자 수를 먼저 같게 맞춘다.",
+      "form": {
+        "condition": "반쪽 반응식으로 전체 반응식을 완성할 때",
+        "type": "conditional",
+        "scope": "전자 수가 서로 다른 두 반쪽 반응식을 합치는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "절차를 규정한 명제라 뒤집어 거짓을 만들 방향이 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hre-check",
+      "text": "각 반쪽 반응식은 화살표 좌우의 원자 수와 전하량이 모두 맞아야 완성된 것이다.",
+      "form": {
+        "condition": "반쪽 반응식의 계수를 맞출 때",
+        "type": "conditional",
+        "scope": "수용액에서 일어나는 산화·환원 반쪽 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "완성 조건을 밝힌 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반쪽 반응식은 실제로 따로따로 일어나는 두 반응을 적은 것이다",
+      "why_wrong": "산화와 환원은 함께 일어난다. 반쪽 반응식은 전자의 이동을 보기 쉽게 하려고 사람이 나누어 적은 표기일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-hre-show-electron"
+    },
+    {
+      "text": "두 반쪽 반응식을 더한 전체 반응식에도 전자를 그대로 남겨 둔다",
+      "why_wrong": "한쪽이 내놓은 전자를 다른 쪽이 모두 받으므로 더하는 순간 전자는 양변에서 지워진다.",
+      "source": "llm",
+      "linked_relation": "rel-hre-balance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-reduction"
+    },
+    {
+      "type": "next",
+      "target": "reac-redox-equation"
+    },
+    {
+      "type": "related",
+      "target": "reac-redox-simultaneity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-01",
+  "pages": [
+    49,
+    55,
+    56
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

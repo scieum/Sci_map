@@ -1,0 +1,108 @@
+{
+  "id": "reac-half-cell",
+  "concept_key": "concept:half-cell",
+  "registry_status": "new",
+  "term": "반쪽 전지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'반쪽'은 한자 半과 고유어 '쪽'이 결합한 말이라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "half-cell"
+  },
+  "definition": "금속판과 그 금속의 이온이 든 용액처럼, 산화나 환원 가운데 한쪽 반응만 맡는 전지의 절반 부분.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hc-classify",
+      "text": "산화가 일어나는 쪽을 산화 반쪽 전지, 환원이 일어나는 쪽을 환원 반쪽 전지로 나눠 부른다.",
+      "form": {
+        "condition": "전지를 두 부분으로 갈라 이름 붙일 때",
+        "type": "classification",
+        "scope": "두 부분으로 나눌 수 있는 화학 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "이름을 서로 바꿔 부르면 반쪽 전지 명명 규칙과 정면으로 어긋난다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산화가 일어나는 쪽을 환원 반쪽 전지, 환원이 일어나는 쪽을 산화 반쪽 전지로 나눠 부른다."
+    },
+    {
+      "id": "rel-hc-pair",
+      "text": "반쪽 전지 하나만으로는 전류가 흐르지 않고, 두 개를 이어야 전위차가 생겨 전자가 움직인다.",
+      "form": {
+        "condition": "반쪽 전지를 회로에 넣을 때",
+        "type": "conditional",
+        "scope": "화학 전지를 이루는 반쪽 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hc-measure",
+      "text": "반쪽 전지의 전위는 홀로 잴 수 없어 기준이 되는 전극과 짝지어 측정한다.",
+      "form": {
+        "condition": "반쪽 전지의 전위 값을 정할 때",
+        "type": "conditional",
+        "scope": "표준 상태에서 전위를 재는 반쪽 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "측정 방법을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반쪽 전지 하나만 따로 놓아도 그 전위를 바로 잴 수 있다",
+      "why_wrong": "전위차는 두 지점 사이에서만 정의된다. 그래서 표준 수소 전극처럼 기준이 되는 전극과 이어서 잰다.",
+      "source": "llm",
+      "linked_relation": "rel-hc-measure"
+    },
+    {
+      "text": "반쪽 전지 안에서 산화와 환원이 함께 일어난다",
+      "why_wrong": "반쪽 전지는 산화나 환원 가운데 한쪽만 맡는다. 두 반응이 짝을 이루는 것은 두 반쪽 전지를 이었을 때다.",
+      "source": "llm",
+      "linked_relation": "rel-hc-classify"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-chemical-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-daniell-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-standard-reduction-potential"
+    },
+    {
+      "type": "related",
+      "target": "reac-salt-bridge"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    63,
+    66
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

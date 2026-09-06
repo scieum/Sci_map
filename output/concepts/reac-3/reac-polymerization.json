@@ -1,0 +1,128 @@
+{
+  "id": "reac-polymerization",
+  "concept_key": "concept:polymerization",
+  "registry_status": "new",
+  "term": "중합 반응",
+  "aliases": [
+    "중합"
+  ],
+  "notation": {
+    "hanja": "重合 反應",
+    "hanja_gloss": "重 거듭 중 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응",
+    "english": "polymerization"
+  },
+  "definition": "단위체가 잇따라 결합해 고분자를 만드는 반응. 이어지는 방식에 따라 첨가 중합과 축합 중합으로 갈린다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-polymerization-makes-polymer",
+      "text": "단위체를 중합시키면 같은 단위가 되풀이해 이어진 고분자가 만들어진다",
+      "form": {
+        "condition": "단위체가 결합할 자리를 두 곳 이상 지닐 때",
+        "type": "causal",
+        "scope": "첨가 중합과 축합 중합",
+        "antecedent": {
+          "quantity": "중합이 진행된 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 고분자의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 경로를 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건이 달라진다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-polymerization-two-types",
+      "text": "중합 반응은 빠져나가는 분자가 없는 첨가 중합과 작용기 일부를 잃는 축합 중합으로 나뉜다",
+      "form": {
+        "condition": "결합할 때 빠져나가는 분자가 있는지를 기준으로",
+        "type": "classification",
+        "scope": "이 단원이 다루는 중합 반응",
+        "antecedent": {
+          "quantity": "빠져나가는 분자의 유무",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "나뉘는 중합 유형",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-polymerization-byproduct-difference",
+      "text": "축합 중합에서는 물이나 염화 수소 같은 작은 분자가 나오지만 첨가 중합에서는 그런 분자가 나오지 않는다",
+      "form": {
+        "condition": "같은 양의 단위체를 중합시킬 때",
+        "type": "conditional",
+        "scope": "첨가 중합과 축합 중합의 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "두 반응을 가르는 기준을 맞바꾼 문장이라 반드시 거짓이다",
+      "inverted_text": "첨가 중합에서는 작은 분자가 빠져나오고 축합 중합에서는 빠져나오지 않는다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "첨가 중합에서도 단위체끼리 결합하면서 작용기의 일부를 잃는다",
+      "why_wrong": "작용기 일부를 잃는 쪽은 축합 중합이다. 첨가 중합에서는 이중 결합이 풀리며 그대로 이어진다.",
+      "linked_relation": "rel-polymerization-byproduct-difference",
+      "source": "llm"
+    },
+    {
+      "text": "고분자를 만들 때는 단위체 두 개만 결합하면 된다",
+      "why_wrong": "중합은 결합이 잇따라 되풀이되는 반응이라, 아주 많은 단위체가 이어져야 고분자가 된다.",
+      "linked_relation": "rel-polymerization-makes-polymer",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-monomer"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-polymer"
+    },
+    {
+      "type": "next",
+      "target": "reac-addition-polymerization"
+    },
+    {
+      "type": "next",
+      "target": "reac-condensation-polymerization"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    105,
+    107,
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

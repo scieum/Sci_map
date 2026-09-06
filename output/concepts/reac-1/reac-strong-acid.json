@@ -1,0 +1,117 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-strong-acid",
+  "concept_key": "concept:strong-acid",
+  "term": "강산",
+  "notation": {
+    "hanja": "強酸",
+    "hanja_gloss": "強 강할 강 · 酸 실 산",
+    "english": "strong acid"
+  },
+  "definition": "물에 녹으면 거의 모두 이온으로 나뉘어 분자 상태로 남는 것이 거의 없는 산. 염산·황산·질산이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-strong-acid-almost-full",
+      "text": "묽은 수용액에서 거의 전부 이온화하는 산을 강산으로 분류한다",
+      "form": {
+        "condition": "물을 용매로 하는 묽은 용액",
+        "type": "classification",
+        "scope": "수용액에서의 이온화 정도로 가릴 때"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-strong-acid-more-h",
+      "text": "농도가 같다면 강산 수용액의 수소 이온 농도가 약산 수용액보다 크다",
+      "form": {
+        "condition": "몰농도·가수·온도가 같음",
+        "type": "direct",
+        "scope": "묽은 수용액끼리의 비교",
+        "antecedent": {
+          "quantity": "산의 이온화 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수용액의 수소 이온 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이온화한 만큼 수소 이온이 생기므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도가 같다면 강산 수용액의 수소 이온 농도가 약산 수용액보다 작다"
+    },
+    {
+      "id": "rel-strong-acid-neutral-point",
+      "text": "강산을 강염기로 적정하면 생긴 염이 가수 분해하지 않아 중화점에서 중성이 된다",
+      "form": {
+        "condition": "25 ℃에서 강산과 강염기로 적정함",
+        "type": "causal",
+        "scope": "가수 분해하지 않는 염이 생기는 조합"
+      },
+      "invertible": false,
+      "invertible_reason": "중화점의 액성을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "강산 수용액은 약산 수용액보다 항상 pH 가 낮다",
+      "why_wrong": "농도까지 같을 때만 그렇다. 아주 묽은 강산이 진한 약산보다 pH 가 높을 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-strong-acid-more-h"
+    },
+    {
+      "text": "강산도 묽히면 이온화가 덜 되어 약산이 된다",
+      "why_wrong": "묽혀도 강산은 거의 완전히 이온화한다. 세기는 농도로 바뀌지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-strong-acid-almost-full"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-acid-base-strength"
+    },
+    {
+      "type": "related",
+      "target": "reac-weak-acid"
+    },
+    {
+      "type": "related",
+      "target": "reac-strong-base"
+    },
+    {
+      "type": "related",
+      "target": "reac-titration-curve"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    17,
+    24,
+    30
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

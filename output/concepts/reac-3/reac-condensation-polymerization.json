@@ -1,0 +1,136 @@
+{
+  "id": "reac-condensation-polymerization",
+  "concept_key": "concept:condensation-polymerization",
+  "registry_status": "new",
+  "term": "축합 중합 반응",
+  "aliases": [
+    "축합 중합"
+  ],
+  "notation": {
+    "hanja": "縮合 重合 反應",
+    "hanja_gloss": "縮 줄일 축 · 合 합할 합 · 重 거듭 중 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응",
+    "english": "condensation polymerization"
+  },
+  "definition": "단위체가 이어질 때 작용기 일부를 물이나 염화 수소 같은 작은 분자로 내보내면서 고분자가 되는 반응.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-condensation-loses-part-of-group",
+      "text": "단위체가 이어지는 자리마다 작용기의 일부가 떨어져 나가면서 결합이 만들어진다",
+      "form": {
+        "condition": "작용기를 두 개 이상 지닌 단위체를 쓸 때",
+        "type": "causal",
+        "scope": "PETE·나일론·단백질이 만들어지는 축합 중합",
+        "antecedent": {
+          "quantity": "이어진 자리의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "떨어져 나간 작용기 조각의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 과정을 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건이 달라진다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-condensation-byproduct",
+      "text": "축합 중합이 이어질수록 물이나 염화 수소 같은 작은 분자가 그만큼 많이 생긴다",
+      "form": {
+        "condition": "축합 중합으로 고분자를 만들 때",
+        "type": "direct",
+        "scope": "PETE 와 나일론의 합성",
+        "antecedent": {
+          "quantity": "이어진 단위체의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "빠져나온 작은 분자의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "결합 한 자리마다 작은 분자가 하나씩 나오므로 결합이 늘수록 양이 준다는 진술은 반드시 거짓이다",
+      "inverted_text": "축합 중합에서 단위체가 많이 이어질수록 빠져나오는 작은 분자의 양은 줄어든다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-condensation-examples",
+      "text": "PETE·나일론·단백질은 축합 중합으로 이어져 만들어진 고분자다",
+      "form": {
+        "condition": "중합 유형으로 고분자를 가를 때",
+        "type": "classification",
+        "scope": "이 단원이 예로 든 고분자",
+        "antecedent": {
+          "quantity": "만들어진 중합 유형",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "축합 중합 고분자로 묶이는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "축합 중합에서는 단위체가 아무것도 잃지 않고 그대로 이어진다",
+      "why_wrong": "이어지는 자리마다 작용기 일부가 떨어져 나가 물이나 염화 수소로 빠져나온다.",
+      "linked_relation": "rel-condensation-loses-part-of-group",
+      "source": "llm"
+    },
+    {
+      "text": "PETE 는 첨가 중합으로 만들어진 고분자다",
+      "why_wrong": "PETE 는 카복실산과 알코올이 반응하면서 물이 빠지는 축합 중합으로 만들어진다.",
+      "linked_relation": "rel-condensation-examples",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-polymerization"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-ester"
+    },
+    {
+      "type": "next",
+      "target": "reac-nylon"
+    },
+    {
+      "type": "related",
+      "target": "reac-carboxyl-group"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    106,
+    114,
+    116
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

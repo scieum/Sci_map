@@ -1,0 +1,104 @@
+{
+  "id": "reac-standard-hydrogen-electrode",
+  "concept_key": "concept:standard-hydrogen-electrode",
+  "registry_status": "new",
+  "term": "표준 수소 전극",
+  "notation": {
+    "hanja": "標準水素電極",
+    "hanja_gloss": "標 표할 표 · 準 준할 준 · 水 물 수 · 素 본디 소 · 電 번개 전 · 極 극진할 극",
+    "english": "standard hydrogen electrode",
+    "symbol_display": "E° = 0.00 V",
+    "symbol_plain": "E0 = 0.00 V"
+  },
+  "definition": "25 ℃에서 1 M 수소 이온 용액과 1 atm 수소 기체를 백금판에 접촉시킨 전극. 모든 전위 값을 재는 기준으로 삼는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-she-zero",
+      "text": "표준 수소 전극의 표준 환원 전위는 재서 얻은 값이 아니라 0.00 V로 약속한 기준값이다.",
+      "form": {
+        "condition": "표준 상태(25 ℃, 1 M, 기체 1 atm)에서",
+        "type": "classification",
+        "scope": "전기 화학에서 쓰는 전위의 기준"
+      },
+      "invertible": false,
+      "invertible_reason": "약속한 기준을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-she-reference",
+      "text": "다른 반쪽 전지의 전위는 이 전극과 이어 잰 전지 전위 값으로 정한다.",
+      "form": {
+        "condition": "반쪽 전지의 전위를 측정할 때",
+        "type": "causal",
+        "scope": "표준 상태로 맞춘 반쪽 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "측정 절차를 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-she-condition",
+      "text": "농도나 압력이 표준 상태를 벗어나면 그때 잰 값은 표준 전위라 부르지 않는다.",
+      "form": {
+        "condition": "측정 조건이 표준 상태와 다를 때",
+        "type": "conditional",
+        "scope": "표준 상태를 전제로 정의된 전위 값"
+      },
+      "invertible": false,
+      "invertible_reason": "용어를 쓸 조건을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "표준 수소 전극의 0.00 V는 실제로 측정해서 얻은 값이다",
+      "why_wrong": "전위는 두 지점 사이에서만 잴 수 있으므로 어딘가를 0으로 정해야 한다. 0.00 V는 그렇게 정한 기준값이다.",
+      "source": "llm",
+      "linked_relation": "rel-she-zero"
+    },
+    {
+      "text": "표준 수소 전극은 어떤 반쪽 전지와 이어도 언제나 (+)극이 된다",
+      "why_wrong": "상대 반쪽 전지의 표준 환원 전위가 0.00 V보다 크면 그쪽이 환원 전극이 되고 표준 수소 전극은 산화 전극이 된다.",
+      "source": "llm",
+      "linked_relation": "rel-she-reference"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-half-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-standard-reduction-potential"
+    },
+    {
+      "type": "related",
+      "target": "reac-standard-cell-potential"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-02",
+  "pages": [
+    66
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

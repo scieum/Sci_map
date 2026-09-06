@@ -1,0 +1,98 @@
+{
+  "id": "reac-alkyl-group",
+  "concept_key": "concept:alkyl-group",
+  "registry_status": "new",
+  "term": "알킬기",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'알킬'은 영어 alkyl 의 음차어라 대응하는 한자가 없다. 뒤의 '기'만 基에 해당한다.",
+    "english": "alkyl group",
+    "symbol_display": "-R",
+    "symbol_plain": "-R"
+  },
+  "definition": "탄소와 수소로만 이루어져 작용기 옆에 붙어 있는 부분. 구조식에서는 R 로 줄여 쓰고, 서로 다른 것은 R1·R2 로 구분한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-alkyl-group-r-notation",
+      "text": "구조식에서 R 로 적은 자리는 탄소와 수소만 있는 부분이라, 그 자리가 무엇이든 작용기의 반응은 같은 방식으로 다룬다",
+      "form": {
+        "condition": "같은 작용기를 지닌 물질끼리 견줄 때",
+        "type": "conditional",
+        "scope": "알킬기가 반응에 직접 끼어들지 않는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 약속에 관한 서술이라 방향을 뒤집는다는 말이 성립하지 않는다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-alkyl-group-size-solubility",
+      "text": "알킬기 쪽 탄소 수가 늘어나면 -OH 를 지닌 알코올이라도 물에 덜 섞인다",
+      "form": {
+        "condition": "-OH 를 한 개 지닌 알코올끼리, 온도 일정",
+        "type": "inverse",
+        "scope": "사슬 모양 알코올",
+        "antecedent": {
+          "quantity": "알킬기의 탄소 원자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물에 대한 용해도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "탄소 수가 커질수록 물과 덜 섞인다는 관찰과 정반대여서 반드시 거짓이다",
+      "inverted_text": "알코올은 알킬기 쪽 탄소 수가 늘어날수록 물에 더 잘 섞인다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "구조식에 적힌 R 는 특정한 원소를 나타내는 기호다",
+      "why_wrong": "R 는 원소가 아니라 탄소와 수소로 이루어진 부분을 뭉뚱그려 적은 자리 표시다.",
+      "linked_relation": "rel-alkyl-group-r-notation",
+      "source": "llm"
+    },
+    {
+      "text": "알킬기도 작용기처럼 그 물질의 반응성을 정한다",
+      "why_wrong": "반응이 일어나는 자리는 작용기 쪽이고, 알킬기는 주로 용해도나 끓는점 같은 성질에 영향을 준다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-structural-formula"
+    },
+    {
+      "type": "related",
+      "target": "reac-functional-group"
+    },
+    {
+      "type": "related",
+      "target": "reac-alcohol"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    105
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

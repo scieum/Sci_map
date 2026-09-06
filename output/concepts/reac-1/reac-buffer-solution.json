@@ -1,0 +1,144 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-buffer-solution",
+  "concept_key": "concept:buffer-solution",
+  "term": "완충 용액",
+  "notation": {
+    "hanja": "緩衝溶液",
+    "hanja_gloss": "緩 느릴 완 · 衝 찌를 충 · 溶 녹을 용 · 液 진 액",
+    "english": "buffer solution"
+  },
+  "definition": "약산과 그 짝염기, 또는 약염기와 그 짝산을 함께 담아 산이나 염기를 조금 넣어도 pH 가 거의 흔들리지 않는 용액.",
+  "relations": [
+    {
+      "id": "rel-buffer-composition",
+      "text": "약산과 그 짝염기가 둘 다 넉넉히 들어 있는 용액을 완충 용액으로 분류한다",
+      "form": {
+        "condition": "두 성분이 모두 충분히 존재함",
+        "type": "classification",
+        "scope": "약산-짝염기 또는 약염기-짝산 혼합 용액"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-buffer-add-acid",
+      "text": "산을 조금 넣으면 늘어난 하이드로늄 이온을 짝염기가 붙잡아 pH 가 거의 그대로 유지된다",
+      "form": {
+        "condition": "넣은 산의 양이 짝염기의 양보다 적음",
+        "type": "causal",
+        "scope": "완충 용량을 넘지 않는 범위",
+        "antecedent": {
+          "quantity": "넣어 준 산의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액의 pH",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽이 변해도 다른 쪽이 그대로라는 서술이라 맞바꾸면 방향이 서지 않는다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-buffer-add-base",
+      "text": "염기를 조금 넣으면 수산화 이온이 약산과 반응해 없어지므로 pH 가 거의 그대로 유지된다",
+      "form": {
+        "condition": "넣은 염기의 양이 약산의 양보다 적음",
+        "type": "causal",
+        "scope": "완충 용량을 넘지 않는 범위",
+        "antecedent": {
+          "quantity": "넣어 준 염기의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액의 pH",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽이 변해도 다른 쪽이 그대로라는 서술이라 맞바꾸면 방향이 서지 않는다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-buffer-vs-water",
+      "text": "같은 양의 산을 떨어뜨려도 물의 pH 는 크게 뛰지만 완충 용액의 pH 는 거의 움직이지 않는다",
+      "form": {
+        "condition": "떨어뜨린 산의 양이 같음",
+        "type": "conditional",
+        "scope": "완충 용량을 넘지 않는 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "완충 성분이 이온을 흡수하므로 물이 덜 변한다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 양의 산을 떨어뜨리면 완충 용액의 pH 가 물보다 크게 뛴다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "완충 용액은 산이나 염기를 아무리 많이 넣어도 pH 가 변하지 않는다",
+      "why_wrong": "짝염기나 약산이 다 소모될 만큼 넣으면 완충 능력을 잃고 pH 가 크게 변한다.",
+      "source": "llm",
+      "linked_relation": "rel-buffer-vs-water"
+    },
+    {
+      "text": "완충 용액은 강산과 그 짝염기를 섞어 만든다",
+      "why_wrong": "강산의 짝염기는 양성자를 도로 붙잡지 못해 완충 작용을 하지 못한다. 약산과 그 짝염기라야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-buffer-composition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-weak-acid"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-conjugate-acid-base-pair"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-ionization-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-ph"
+    },
+    {
+      "type": "next",
+      "target": "reac-buffer-action-in-organism"
+    }
+  ],
+  "curriculum": [
+    "12반응01-05"
+  ],
+  "topic_id": "reac-1-2-03",
+  "pages": [
+    36,
+    37,
+    40
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

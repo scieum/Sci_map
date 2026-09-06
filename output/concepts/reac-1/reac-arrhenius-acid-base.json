@@ -1,0 +1,123 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-arrhenius-acid-base",
+  "concept_key": "concept:arrhenius-acid-base",
+  "term": "아레니우스 산과 염기",
+  "aliases": [
+    "아레니우스 정의"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "사람 이름 Arrhenius 를 소리대로 옮긴 말이 앞에 붙어 낱말 전체에 대응하는 한자어가 없다. 뒤의 산·염기만 각각 酸·鹽基에 해당한다.",
+    "english": "Arrhenius acid and base"
+  },
+  "definition": "물에 녹였을 때 수소 이온이 생기면 산, 수산화 이온이 생기면 염기로 보는 정의. 적용 무대가 수용액으로 한정된다.",
+  "relations": [
+    {
+      "id": "rel-arrhenius-acid-h",
+      "text": "물에 녹아 수소 이온을 내놓는 물질이라면 아레니우스 정의에서는 산으로 분류된다",
+      "form": {
+        "condition": "물에 녹인 상태",
+        "type": "classification",
+        "scope": "수용액 안에서 일어나는 반응",
+        "antecedent": {
+          "quantity": "수용액에 내놓는 수소 이온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산으로의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 서술한 문장이라 주어와 술어를 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-arrhenius-base-oh",
+      "text": "물에 녹아 수산화 이온을 내놓는 물질이라면 아레니우스 정의에서는 염기로 분류된다",
+      "form": {
+        "condition": "물에 녹인 상태",
+        "type": "classification",
+        "scope": "수용액 안에서 일어나는 반응",
+        "antecedent": {
+          "quantity": "수용액에 내놓는 수산화 이온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "염기로의 분류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-arrhenius-limit",
+      "text": "수용액이 아닌 곳에서 일어나는 반응은 이 정의로 가릴 수 없어 더 넓은 정의가 필요해진다",
+      "form": {
+        "condition": "반응 장소가 수용액이 아니거나 수소 이온·수산화 이온을 직접 내놓지 않는 물질이 참여함",
+        "type": "conditional",
+        "scope": "아레니우스 정의의 적용 한계를 따질 때"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 지적하는 서술이라 두 양의 자리를 바꾸는 형태가 아니다",
+      "curriculum": [
+        "12반응01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암모니아는 수산화 이온을 갖고 있지 않으므로 어떤 정의로도 염기가 될 수 없다",
+      "why_wrong": "아레니우스 정의로 설명되지 않을 뿐이다. 양성자를 받는 쪽을 염기로 보면 암모니아도 분명한 염기다.",
+      "source": "llm",
+      "linked_relation": "rel-arrhenius-limit"
+    },
+    {
+      "text": "산과 염기는 수용액에서만 정의할 수 있다",
+      "why_wrong": "수용액이라는 조건은 아레니우스 정의에만 붙어 있다. 양성자 이동으로 정의하면 기체끼리의 반응에서도 산과 염기를 가릴 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-arrhenius-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "reac-bronsted-lowry-acid"
+    },
+    {
+      "type": "next",
+      "target": "reac-bronsted-lowry-base"
+    },
+    {
+      "type": "related",
+      "target": "reac-lewis-acid-base",
+      "note": "정의가 넓어져 온 흐름의 마지막 자리"
+    }
+  ],
+  "curriculum": [
+    "12반응01-01"
+  ],
+  "topic_id": "reac-1-1-01",
+  "pages": [
+    12,
+    13
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

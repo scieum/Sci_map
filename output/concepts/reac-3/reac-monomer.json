@@ -1,0 +1,126 @@
+{
+  "id": "reac-monomer",
+  "concept_key": "concept:monomer",
+  "registry_status": "new",
+  "term": "단위체",
+  "aliases": [
+    "단량체"
+  ],
+  "notation": {
+    "hanja": "單位體",
+    "hanja_gloss": "單 홑 단 · 位 자리 위 · 體 몸 체",
+    "english": "monomer"
+  },
+  "definition": "고분자를 이룰 때 되풀이해 이어지는 작은 분자. 아미노산·포도당·에틸렌처럼 무엇을 쓰느냐에 따라 만들어지는 고분자가 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-monomer-repeats",
+      "text": "고분자 구조를 따라가 보면 같은 단위체에서 온 부분이 되풀이해 나타난다",
+      "form": {
+        "condition": "한 종류 또는 몇 종류의 단위체로 만든 고분자",
+        "type": "conditional",
+        "scope": "중합 반응으로 만들어진 고분자"
+      },
+      "invertible": false,
+      "invertible_reason": "구조의 특징을 밝힌 문장이라 두 양의 방향을 맞바꾸는 뒤집기가 성립하지 않는다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-monomer-decides-polymer",
+      "text": "어떤 단위체를 쓰느냐에 따라 만들어지는 고분자의 종류가 정해진다",
+      "form": {
+        "condition": "중합 반응의 유형이 같을 때",
+        "type": "causal",
+        "scope": "아미노산에서 단백질, 포도당에서 녹말, 에틸렌에서 폴리에틸렌이 되는 경우",
+        "antecedent": {
+          "quantity": "단위체의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생성되는 고분자의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "종류의 대응을 말한 문장이라 방향을 맞바꾸는 뒤집기가 성립하지 않는다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-monomer-functional-group",
+      "text": "단위체가 지닌 것이 이중 결합인지 -OH·-COOH·-NH2 같은 작용기인지에 따라 이어지는 방식이 갈린다",
+      "form": {
+        "condition": "단위체가 어떤 자리를 내어 주는지 볼 때",
+        "type": "classification",
+        "scope": "첨가 중합과 축합 중합",
+        "antecedent": {
+          "quantity": "단위체가 지닌 결합 자리의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "일어나는 중합 반응의 유형",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "단위체는 고분자를 잘게 부수어 얻은 조각이라 그 자체로는 물질이 아니다",
+      "why_wrong": "에틸렌·포도당·아미노산처럼 단위체는 그 자체로 하나의 분자이고 물질이다.",
+      "source": "llm"
+    },
+    {
+      "text": "한 고분자를 이루는 단위체는 반드시 한 종류뿐이다",
+      "why_wrong": "단백질은 여러 종류의 아미노산으로, 나일론은 서로 다른 두 단위체로 이루어진다.",
+      "linked_relation": "rel-monomer-decides-polymer",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "reac-polymer"
+    },
+    {
+      "type": "next",
+      "target": "reac-polymerization"
+    },
+    {
+      "type": "next",
+      "target": "reac-nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "reac-functional-group"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    104,
+    105,
+    117
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

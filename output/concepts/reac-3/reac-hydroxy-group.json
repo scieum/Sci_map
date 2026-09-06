@@ -1,0 +1,114 @@
+{
+  "id": "reac-hydroxy-group",
+  "concept_key": "concept:hydroxy-group",
+  "registry_status": "new",
+  "term": "하이드록시기",
+  "aliases": [
+    "수산기",
+    "하이드록실기"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'하이드록시'는 영어 hydroxy 의 음차어라 대응하는 한자가 없다. 뒤의 '기'만 基에 해당한다.",
+    "english": "hydroxy group",
+    "symbol_display": "-OH",
+    "symbol_plain": "-OH"
+  },
+  "definition": "산소 원자 하나에 수소 원자 하나가 이어져 탄소 골격에 붙은 작용기. 이것을 지니면 그 물질은 알코올로 분류된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hydroxy-hydrogen-bond",
+      "text": "-OH 를 지닌 분자는 이웃 분자의 -OH 와 수소 결합을 이루어, 분자량이 비슷한 다른 탄소 화합물보다 끓는점이 높다",
+      "form": {
+        "condition": "분자량이 비슷한 탄소 화합물끼리, 같은 압력",
+        "type": "causal",
+        "scope": "-OH 를 지닌 액체 상태 탄소 화합물",
+        "antecedent": {
+          "quantity": "분자 사이 수소 결합의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "끓는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수소 결합이 더해지면 분자를 떼어 놓는 데 더 큰 에너지가 드므로 끓는점이 낮아진다는 진술은 반드시 거짓이다",
+      "inverted_text": "-OH 를 지닌 탄소 화합물은 분자량이 비슷한 다른 탄소 화합물보다 끓는점이 낮다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hydroxy-meets-carboxyl",
+      "text": "-OH 는 -COOH 와 만나면 물 한 분자를 내놓으면서 서로 이어진다",
+      "form": {
+        "condition": "산 촉매를 넣고 데우는 조건",
+        "type": "causal",
+        "scope": "알코올과 카복실산 사이의 축합 반응",
+        "antecedent": {
+          "quantity": "반응에 참여한 -OH 와 -COOH 의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "빠져나온 물 분자의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "반대 방향은 물을 넣어 끊는 다른 반응이라 조건이 달라져 항상 거짓이라 단정하기 어렵다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "-OH 를 지닌 물질은 물에 녹아 염기성을 나타낸다",
+      "why_wrong": "분자에 묶여 있는 -OH 는 떨어져 나오는 수산화 이온과 다르다. 알코올 수용액은 염기성을 띠지 않는다.",
+      "source": "llm"
+    },
+    {
+      "text": "-OH 를 지닌 탄소 화합물은 크기와 상관없이 모두 물에 잘 녹는다",
+      "why_wrong": "탄소·수소로 된 부분이 길어질수록 물과 잘 섞이지 않는다. 헥산올은 물에 조금밖에 녹지 않는다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-functional-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-alcohol"
+    },
+    {
+      "type": "next",
+      "target": "reac-ester"
+    },
+    {
+      "type": "related",
+      "target": "reac-carboxyl-group"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-01",
+  "pages": [
+    95,
+    110,
+    112
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

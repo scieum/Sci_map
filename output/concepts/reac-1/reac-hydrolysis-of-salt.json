@@ -1,0 +1,149 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-hydrolysis-of-salt",
+  "concept_key": "concept:hydrolysis-of-salt",
+  "term": "염의 가수 분해",
+  "notation": {
+    "hanja": "鹽의 加水 分解",
+    "hanja_gloss": "鹽 소금 염 · 加 더할 가 · 水 물 수 · 分 나눌 분 · 解 풀 해",
+    "english": "hydrolysis of salt"
+  },
+  "definition": "물에 녹은 염의 이온이 물 분자와 반응해 하이드로늄 이온이나 수산화 이온을 내놓는 변화.",
+  "relations": [
+    {
+      "id": "rel-hyd-definition",
+      "text": "염에서 나온 이온이 물과 반응해 하이드로늄 이온이나 수산화 이온을 내놓으면 가수 분해로 본다",
+      "form": {
+        "condition": "염이 물에 녹아 이온으로 흩어져 있음",
+        "type": "classification",
+        "scope": "물과 반응하는 이온을 가진 염"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hyd-weak-acid-anion",
+      "text": "약산의 짝염기인 음이온은 물에서 양성자를 빼앗아 수산화 이온을 남기므로 용액이 염기성이 된다",
+      "form": {
+        "condition": "그 음이온을 가진 염이 물에 녹아 있음",
+        "type": "causal",
+        "scope": "약산에서 온 음이온(강산의 짝염기는 해당하지 않는다)",
+        "antecedent": {
+          "quantity": "약산의 짝염기 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수산화 이온 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양성자를 빼앗는 쪽이므로 하이드로늄 이온이 늘어 산성이 된다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "약산의 짝염기인 음이온은 물에 양성자를 내주어 하이드로늄 이온을 만들므로 용액이 산성이 된다"
+    },
+    {
+      "id": "rel-hyd-weak-base-cation",
+      "text": "약염기의 짝산인 양이온은 물에 양성자를 넘겨 하이드로늄 이온을 만들어 용액을 산성으로 만든다",
+      "form": {
+        "condition": "그 양이온을 가진 염이 물에 녹아 있음",
+        "type": "causal",
+        "scope": "약염기에서 온 양이온(강염기의 짝산은 해당하지 않는다)",
+        "antecedent": {
+          "quantity": "약염기의 짝산 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "하이드로늄 이온 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양성자를 내주는 쪽이므로 수산화 이온이 늘어 염기성이 된다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "약염기의 짝산인 양이온은 물에서 양성자를 받아 수산화 이온을 만들므로 용액이 염기성이 된다"
+    },
+    {
+      "id": "rel-hyd-strong-ions-inert",
+      "text": "강산에서 온 음이온과 강염기에서 온 양이온은 물과 거의 반응하지 않아 액성을 바꾸지 않는다",
+      "form": {
+        "condition": "그 이온들만 든 염 수용액",
+        "type": "conditional",
+        "scope": "강산·강염기에서 온 이온"
+      },
+      "invertible": false,
+      "invertible_reason": "반응하지 않는다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염화 소듐 수용액은 소듐 이온 때문에 염기성이다",
+      "why_wrong": "소듐 이온은 강염기에서 온 이온이라 물과 반응하지 않는다. 염화 소듐 수용액은 중성이다.",
+      "source": "llm",
+      "linked_relation": "rel-hyd-strong-ions-inert"
+    },
+    {
+      "text": "물에 녹는 염은 모두 가수 분해한다",
+      "why_wrong": "약산이나 약염기에서 온 이온만 물과 반응한다. 강산·강염기에서 온 이온은 그대로 남는다.",
+      "source": "llm",
+      "linked_relation": "rel-hyd-strong-ions-inert"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-salt"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-conjugate-acid-base-pair"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-acid-ionization-constant"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-weak-acid"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-weak-base"
+    },
+    {
+      "type": "next",
+      "target": "reac-acidity-of-salt-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-04"
+  ],
+  "topic_id": "reac-1-2-02",
+  "pages": [
+    34,
+    35,
+    40
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

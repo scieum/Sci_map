@@ -1,0 +1,117 @@
+{
+  "id": "reac-electrolyte",
+  "concept_key": "concept:electrolyte",
+  "registry_status": "new",
+  "term": "전해질",
+  "notation": {
+    "hanja": "電解質",
+    "hanja_gloss": "電 번개 전 · 解 풀 해 · 質 바탕 질",
+    "english": "electrolyte"
+  },
+  "definition": "물에 녹거나 녹아 액체가 되면 이온을 내놓아 전류가 흐르게 하는 물질. 전지에서는 두 전극을 잇는 이온의 길이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ely-path",
+      "text": "전해질이 이온이 오갈 길을 내주어야 두 전극에서 일어나는 반응이 서로 이어진다.",
+      "form": {
+        "condition": "전지가 방전되며 작동하는 동안",
+        "type": "causal",
+        "scope": "전해질을 갖춘 화학 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "역할을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ely-kind",
+      "text": "건전지의 전해질을 산성인 염화 암모늄 대신 염기성인 수산화 포타슘으로 바꾸면 아연 통이 덜 삭아 수명이 길고 전압이 고르게 유지된다.",
+      "form": {
+        "condition": "나머지 구조가 같은 건전지끼리 견줄 때",
+        "type": "conditional",
+        "scope": "아연 통을 (-)극으로 쓰는 건전지"
+      },
+      "invertible": false,
+      "invertible_reason": "전해질 종류에 따른 성능 차이를 말한 명제라 뒤집으면 참·거짓이 갈리지 않는다.",
+      "curriculum": [
+        "12반응02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ely-water",
+      "text": "순수한 물에는 전류가 거의 흐르지 않지만 전해질을 조금 녹이면 전기 분해가 일어난다.",
+      "form": {
+        "condition": "전원을 연결해 전류를 흘려 줄 때",
+        "type": "causal",
+        "scope": "물의 전기 분해",
+        "antecedent": {
+          "quantity": "녹아 있는 전해질의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전류가 흐르는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전해질을 녹인 물이 순수한 물보다 분해가 어렵다는 진술은 이온이 늘어난다는 사실과 어긋난다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전해질을 조금 녹인 물은 순수한 물보다 전기 분해가 더 어렵다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전해질은 전지 안에서 전자를 직접 실어 나른다",
+      "why_wrong": "전해질 속을 움직이는 것은 이온이다. 전자는 전해질이 아니라 도선을 따라 이동한다.",
+      "source": "llm",
+      "linked_relation": "rel-ely-path"
+    },
+    {
+      "text": "순수한 물도 전류가 잘 통하므로 그대로 전기 분해 할 수 있다",
+      "why_wrong": "순수한 물은 이온이 거의 없어 전류가 잘 흐르지 않는다. 황산 소듐 같은 전해질을 조금 녹여야 분해가 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-ely-water"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "reac-chemical-cell"
+    },
+    {
+      "type": "next",
+      "target": "reac-electrolysis"
+    },
+    {
+      "type": "related",
+      "target": "reac-primary-cell"
+    },
+    {
+      "type": "related",
+      "target": "reac-secondary-cell"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-01",
+  "pages": [
+    60,
+    61,
+    76
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

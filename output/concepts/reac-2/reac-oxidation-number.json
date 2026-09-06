@@ -1,0 +1,144 @@
+{
+  "id": "reac-oxidation-number",
+  "concept_key": "concept:oxidation-number",
+  "registry_status": "new",
+  "term": "산화수",
+  "aliases": [
+    "산화 상태"
+  ],
+  "notation": {
+    "hanja": "酸化數",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 數 셈 수",
+    "english": "oxidation number"
+  },
+  "definition": "결합에 쓰인 공유 전자쌍을 전기음성도가 더 큰 원자가 모두 가졌다고 가정했을 때 각 원자에 매겨지는 전하 값.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oxn-assign",
+      "text": "공유 전자쌍을 전기음성도가 큰 원자 쪽으로 몰아 준다고 가정하므로 그 원자는 음의 산화수를 갖는다.",
+      "form": {
+        "condition": "공유 결합 화합물에 산화수를 매길 때",
+        "type": "causal",
+        "scope": "공유 결합으로 이루어진 화합물",
+        "antecedent": {
+          "quantity": "원자의 전기음성도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "그 원자의 산화수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자쌍을 몰아 받은 원자가 양의 산화수를 갖는다는 진술은 배정 규칙과 정면으로 어긋난다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공유 전자쌍을 전기음성도가 큰 원자 쪽으로 몰아 준다고 가정하므로 그 원자는 양의 산화수를 갖는다."
+    },
+    {
+      "id": "rel-oxn-criterion",
+      "text": "반응 전후로 산화수가 달라진 원자가 하나라도 있으면 그 반응은 산화·환원 반응이다.",
+      "form": {
+        "condition": "반응식의 각 원자에 산화수를 매긴 뒤",
+        "type": "conditional",
+        "scope": "화학 반응식이 주어진 모든 반응",
+        "antecedent": {
+          "quantity": "산화수가 변한 원자",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화·환원 반응 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "산화·환원 반응이면 산화수가 변한 원자가 있다는 역방향도 참이라 뒤집어도 거짓이 되지 않는다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxn-relative",
+      "text": "같은 원소라도 어떤 원자와 결합했는지에 따라 산화수가 달라진다.",
+      "form": {
+        "condition": "결합 상대의 전기음성도가 서로 다를 때",
+        "type": "conditional",
+        "scope": "같은 원소가 여러 화합물에 들어 있는 경우",
+        "antecedent": {
+          "quantity": "결합 상대의 전기음성도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "그 원소의 산화수",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "상대성을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산화수는 그 원자가 실제로 띠고 있는 전하이다",
+      "why_wrong": "산화수는 전자쌍을 한쪽이 독차지한다고 가정해서 매긴 값이다. 실제로는 전자가 완전히 옮겨 가지 않는 경우가 많다.",
+      "source": "llm",
+      "linked_relation": "rel-oxn-assign"
+    },
+    {
+      "text": "탄소의 산화수는 어느 화합물에서나 같다",
+      "why_wrong": "산화수는 결합 상대에 따라 달라진다. 탄소는 이산화 탄소에서 +4, 메테인에서 -4로 정반대의 값을 갖는다.",
+      "source": "llm",
+      "linked_relation": "rel-oxn-relative"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-reduction"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-number-rule"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidizing-agent"
+    },
+    {
+      "type": "next",
+      "target": "reac-reducing-agent"
+    },
+    {
+      "type": "next",
+      "target": "reac-electrolysis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-02",
+  "pages": [
+    50,
+    51,
+    53
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

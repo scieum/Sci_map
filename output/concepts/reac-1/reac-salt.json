@@ -1,0 +1,112 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-salt",
+  "concept_key": "concept:salt",
+  "term": "염",
+  "notation": {
+    "hanja": "鹽",
+    "hanja_gloss": "鹽 소금 염",
+    "english": "salt"
+  },
+  "definition": "중화 반응에서 산 쪽의 음이온과 염기 쪽의 양이온이 짝을 이루어 만들어진 물질.",
+  "relations": [
+    {
+      "id": "rel-salt-composition",
+      "text": "산에서 온 음이온과 염기에서 온 양이온이 결합한 물질을 염으로 분류한다",
+      "form": {
+        "condition": "중화 반응이 일어난 뒤",
+        "type": "classification",
+        "scope": "수용액에서 일어난 중화 반응의 생성물"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-salt-from-neutralization",
+      "text": "중화가 끝난 용액에서 물을 날려 보내면 남는 고체가 그 반응에서 생긴 염이다",
+      "form": {
+        "condition": "중화 반응 뒤 물을 증발시킴",
+        "type": "causal",
+        "scope": "물에 잘 녹는 염이 생긴 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "얻는 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-salt-depends-on-pair",
+      "text": "반응에 쓰인 산과 염기가 달라지면 만들어지는 염의 종류도 달라진다",
+      "form": {
+        "condition": "중화 반응의 두 반응물이 정해짐",
+        "type": "causal",
+        "scope": "산과 염기의 조합",
+        "antecedent": {
+          "quantity": "반응한 산과 염기의 조합",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생성되는 염의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "종류가 달라진다는 서술이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12반응01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염이라는 말은 소금, 곧 염화 소듐만 가리킨다",
+      "why_wrong": "염화 소듐은 여러 염 가운데 하나일 뿐이다. 질산 포타슘이나 아세트산 소듐도 모두 염이다.",
+      "source": "llm",
+      "linked_relation": "rel-salt-composition"
+    },
+    {
+      "text": "염이 녹은 물은 언제나 중성이다",
+      "why_wrong": "염을 이루는 이온이 물과 반응하면 산성이나 염기성을 띤다.",
+      "source": "llm",
+      "linked_relation": "rel-salt-depends-on-pair"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-neutralization-reaction"
+    },
+    {
+      "type": "next",
+      "target": "reac-hydrolysis-of-salt"
+    },
+    {
+      "type": "related",
+      "target": "reac-acidity-of-salt-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-04"
+  ],
+  "topic_id": "reac-1-2-02",
+  "pages": [
+    32,
+    34,
+    40
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

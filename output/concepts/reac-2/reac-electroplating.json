@@ -1,0 +1,105 @@
+{
+  "id": "reac-electroplating",
+  "concept_key": "concept:electroplating",
+  "registry_status": "new",
+  "term": "도금",
+  "notation": {
+    "hanja": "鍍金",
+    "hanja_gloss": "鍍 도금할 도 · 金 쇠 금",
+    "english": "electroplating"
+  },
+  "definition": "금속 표면에 다른 금속을 얇게 입히는 조작. 입힐 금속의 이온이 든 용액에서 전기 분해로 석출시켜 만든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-plate-object",
+      "text": "도금할 물체를 (-)극에 걸어야 금속 이온이 그 표면에서 환원되어 쌓인다.",
+      "form": {
+        "condition": "도금액에 두 전극을 담그고 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "전기 분해를 이용한 금속 도금"
+      },
+      "invertible": true,
+      "invertible_reason": "(+)극에 걸면 그 물체가 오히려 산화되어 녹아 나가므로 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도금할 물체를 (+)극에 걸어야 금속 이온이 그 표면에서 환원되어 쌓인다."
+    },
+    {
+      "id": "rel-plate-anode",
+      "text": "(+)극에는 입히려는 금속을 걸어 두어 녹아 나온 이온이 도금액에서 줄어든 이온을 채우게 한다.",
+      "form": {
+        "condition": "도금이 진행되어 용액 속 금속 이온이 줄어들 때",
+        "type": "causal",
+        "scope": "같은 금속을 (+)극으로 쓰는 도금 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "장치를 그렇게 꾸미는 까닭을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-plate-solution",
+      "text": "도금액에는 입히려는 금속의 이온이 녹아 있어야 도금이 이루어진다.",
+      "form": {
+        "condition": "도금할 금속의 종류를 정할 때",
+        "type": "conditional",
+        "scope": "전기 분해를 이용한 금속 도금"
+      },
+      "invertible": false,
+      "invertible_reason": "필요조건을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "도금할 물체는 (+)극에 연결한다",
+      "why_wrong": "(+)극은 산화가 일어나는 쪽이라 물체가 녹아 나간다. 금속을 입히려면 환원이 일어나는 (-)극에 걸어야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-plate-object"
+    },
+    {
+      "text": "도금은 녹인 금속을 부어 굳히는 과정이라 전기가 필요 없다",
+      "why_wrong": "장신구나 금속 공예에 쓰는 도금은 도금액 속 금속 이온을 전기 분해로 환원시켜 표면에 입히는 방법이다.",
+      "source": "llm",
+      "linked_relation": "rel-plate-solution"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-electrolysis"
+    },
+    {
+      "type": "related",
+      "target": "reac-electrorefining"
+    },
+    {
+      "type": "related",
+      "target": "reac-ionization-tendency"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-03",
+  "pages": [
+    73,
+    76,
+    77
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,136 @@
+{
+  "id": "reac-redox-simultaneity",
+  "concept_key": "concept:redox-simultaneity",
+  "registry_status": "new",
+  "term": "산화·환원 반응의 동시성",
+  "notation": {
+    "hanja": "酸化還元反應同時性",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 還 돌아올 환 · 元 으뜸 원 · 反 돌이킬 반 · 應 응할 응 · 同 한가지 동 · 時 때 시 · 性 성품 성",
+    "hanja_note": "표제어의 조사 '의'는 한자로 옮기지 않았다.",
+    "english": "simultaneity of oxidation and reduction"
+  },
+  "definition": "전자를 내놓는 물질과 받는 물질이 반드시 짝을 이루므로, 한 반응 안에서 산화와 환원이 함께 일어나는 성질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sim-pair",
+      "text": "한 반응에서 전자를 잃은 물질이 있다면 그 전자를 받은 물질도 그 반응 안에 반드시 있다.",
+      "form": {
+        "condition": "하나의 화학 반응을 통째로 놓고 볼 때",
+        "type": "causal",
+        "scope": "전자가 오가는 산화·환원 반응",
+        "antecedent": {
+          "quantity": "전자를 잃은 물질",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전자를 얻은 물질",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "잃는 쪽과 얻는 쪽을 맞바꿔 말해도 여전히 참인 대칭 명제라 뒤집어도 거짓이 되지 않는다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sim-count",
+      "text": "산화된 물질이 내놓은 전자의 총수는 환원된 물질이 받아들인 전자의 총수와 같다.",
+      "form": {
+        "condition": "반응식의 계수를 모두 맞춘 상태에서",
+        "type": "direct",
+        "scope": "전자 수를 셀 수 있는 산화·환원 반응식",
+        "antecedent": {
+          "quantity": "잃은 전자의 총수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "얻은 전자의 총수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 양이 같다는 등식이므로 좌우를 바꿔도 같은 명제다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sim-agent",
+      "text": "동시성이 있기 때문에 산화제와 환원제는 언제나 짝을 이루어 등장한다.",
+      "form": {
+        "condition": "산화·환원 반응에서 각 물질의 역할을 나눌 때",
+        "type": "causal",
+        "scope": "산화·환원 반응에 참여한 물질들",
+        "antecedent": {
+          "quantity": "산화제의 존재",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "환원제의 존재",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "역할의 짝을 말하는 명제라 앞뒤를 바꿔도 여전히 참이다.",
+      "curriculum": [
+        "12반응02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어떤 반응에서는 산화만 일어나고 환원은 일어나지 않을 수 있다",
+      "why_wrong": "전자는 사라지지 않는다. 한쪽이 내놓은 전자는 반드시 다른 쪽이 받으므로 산화만 있는 반응은 없다.",
+      "source": "llm",
+      "linked_relation": "rel-sim-pair"
+    },
+    {
+      "text": "산화 반응이 먼저 끝난 다음에 환원 반응이 일어난다",
+      "why_wrong": "전자를 주고받는 일은 한 번에 일어난다. 순서가 있는 두 사건이 아니라 같은 사건을 두 쪽에서 부르는 이름이다.",
+      "source": "llm",
+      "linked_relation": "rel-sim-pair"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-reduction"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidizing-agent"
+    },
+    {
+      "type": "next",
+      "target": "reac-reducing-agent"
+    },
+    {
+      "type": "related",
+      "target": "reac-half-reaction-equation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-01",
+  "pages": [
+    49,
+    56
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

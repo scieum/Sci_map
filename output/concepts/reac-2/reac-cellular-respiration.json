@@ -1,0 +1,109 @@
+{
+  "id": "reac-cellular-respiration",
+  "concept_key": "concept:cellular-respiration",
+  "registry_status": "new",
+  "term": "세포 호흡",
+  "aliases": [
+    "호흡"
+  ],
+  "notation": {
+    "hanja": "細胞呼吸",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 呼 부를 호 · 吸 마실 흡",
+    "english": "cellular respiration"
+  },
+  "definition": "세포가 포도당을 산소로 산화시켜 이산화 탄소와 물로 바꾸며 살아가는 데 쓸 에너지를 얻는 산화·환원 반응.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cr-glucose",
+      "text": "세포 호흡에서 포도당은 산화되므로 환원제로 작용한다.",
+      "form": {
+        "condition": "세포 호흡 반응식에서 각 물질의 역할을 가릴 때",
+        "type": "classification",
+        "scope": "마이토콘드리아에서 일어나는 세포 호흡"
+      },
+      "invertible": true,
+      "invertible_reason": "포도당이 이산화 탄소로 바뀌는 변화는 산화이므로 산화제라 부르면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포 호흡에서 포도당은 환원되므로 산화제로 작용한다."
+    },
+    {
+      "id": "rel-cr-oxygen",
+      "text": "세포 호흡에서 산소는 환원되므로 산화제로 작용한다.",
+      "form": {
+        "condition": "세포 호흡 반응식에서 각 물질의 역할을 가릴 때",
+        "type": "classification",
+        "scope": "마이토콘드리아에서 일어나는 세포 호흡"
+      },
+      "invertible": true,
+      "invertible_reason": "산소가 물이 되는 변화는 전자를 받는 환원이므로 환원제라 부르면 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포 호흡에서 산소는 산화되므로 환원제로 작용한다."
+    },
+    {
+      "id": "rel-cr-vs-ps",
+      "text": "세포 호흡의 반응물과 생성물은 광합성과 서로 자리를 바꾼 관계에 있다.",
+      "form": {
+        "condition": "두 반응식을 나란히 놓고 견줄 때",
+        "type": "classification",
+        "scope": "광합성과 세포 호흡의 전체 반응식 비교"
+      },
+      "invertible": false,
+      "invertible_reason": "두 반응을 맞대어 견준 명제라 앞뒤를 바꿔도 같은 내용이다.",
+      "curriculum": [
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포 호흡은 광합성과 정반대이므로 에너지를 흡수하는 반응이다",
+      "why_wrong": "세포 호흡은 포도당에 저장된 화학 에너지를 꺼내 쓰는 과정이다. 에너지를 받아들여 저장하는 쪽이 광합성이다.",
+      "source": "llm",
+      "linked_relation": "rel-cr-vs-ps"
+    },
+    {
+      "text": "숨을 들이쉬고 내쉬는 것 자체가 세포 호흡이다",
+      "why_wrong": "세포 호흡은 세포 안에서 포도당이 산소와 반응해 에너지를 내놓는 화학 반응이다. 숨쉬기는 그 반응에 쓸 산소를 나르는 일이다.",
+      "source": "llm",
+      "linked_relation": "rel-cr-glucose"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidizing-agent"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-reducing-agent"
+    },
+    {
+      "type": "related",
+      "target": "reac-photosynthesis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-05"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-3-01",
+  "pages": [
+    79,
+    84,
+    85
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

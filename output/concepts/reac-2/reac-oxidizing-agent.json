@@ -1,0 +1,128 @@
+{
+  "id": "reac-oxidizing-agent",
+  "concept_key": "concept:oxidizing-agent",
+  "registry_status": "new",
+  "term": "산화제",
+  "notation": {
+    "hanja": "酸化劑",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 劑 약제 제",
+    "english": "oxidizing agent"
+  },
+  "definition": "반응 상대에게서 전자를 빼앗아 그 물질을 산화시키고, 그 대가로 자신은 전자를 받아 환원되는 물질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oxa-self",
+      "text": "산화제로 작용한 물질은 그 반응에서 자신이 환원된다.",
+      "form": {
+        "condition": "하나의 산화·환원 반응 안에서 역할을 가릴 때",
+        "type": "classification",
+        "scope": "산화·환원 반응에 참여한 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "상대를 산화시키려면 자신이 전자를 받아야 하므로 자신도 산화된다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12반응02-01",
+        "12반응02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산화제로 작용한 물질은 그 반응에서 자신도 함께 산화된다."
+    },
+    {
+      "id": "rel-oxa-relative",
+      "text": "같은 물질이라도 전자를 더 세게 빼앗는 상대를 만나면 산화제가 아니라 환원제로 작용한다.",
+      "form": {
+        "condition": "반응 상대를 바꾸어 견줄 때",
+        "type": "conditional",
+        "scope": "이산화 황처럼 상대에 따라 역할이 갈리는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "역할이 상대에 따라 갈린다는 명제라 뒤집어도 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12반응02-01",
+        "12반응02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxa-strength",
+      "text": "표준 환원 전위가 큰 물질일수록 전자를 잘 받아들여 더 강한 산화제로 작용한다.",
+      "form": {
+        "condition": "표준 상태에서 표준 환원 전위 값을 견줄 때",
+        "type": "direct",
+        "scope": "표준 환원 전위가 표로 주어진 반쪽 반응끼리 비교",
+        "antecedent": {
+          "quantity": "표준 환원 전위",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화제로서의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전위가 클수록 전자를 잘 받는데 산화제로서 약해진다는 진술은 정의상 성립할 수 없다.",
+      "curriculum": [
+        "12반응02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표준 환원 전위가 큰 물질일수록 더 약한 산화제로 작용한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산화제는 반응에서 산화되는 물질이다",
+      "why_wrong": "이름과 반대다. 산화제는 상대를 산화시키는 물질이고, 그 과정에서 자신은 전자를 받아 환원된다.",
+      "source": "llm",
+      "linked_relation": "rel-oxa-self"
+    },
+    {
+      "text": "산소를 품고 있는 물질만 산화제가 될 수 있다",
+      "why_wrong": "산화제인지 아닌지는 전자를 받아들이는지로 갈린다. 염소처럼 산소가 없는 물질도 강한 산화제로 작용한다.",
+      "source": "llm",
+      "linked_relation": "rel-oxa-relative"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-oxidation-number"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-redox-simultaneity"
+    },
+    {
+      "type": "next",
+      "target": "reac-photosynthesis"
+    },
+    {
+      "type": "next",
+      "target": "reac-cellular-respiration"
+    },
+    {
+      "type": "related",
+      "target": "reac-reducing-agent"
+    },
+    {
+      "type": "related",
+      "target": "reac-standard-reduction-potential"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-01",
+    "12반응02-05"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-1-02",
+  "pages": [
+    54,
+    56
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

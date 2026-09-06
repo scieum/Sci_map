@@ -1,0 +1,125 @@
+{
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅰ. 산 염기 평형",
+  "unit_id": "reac-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "id": "reac-ionization-equilibrium",
+  "concept_key": "concept:ionization-equilibrium",
+  "term": "이온화 평형",
+  "notation": {
+    "hanja": "이온化 平衡",
+    "hanja_note": "이온은 ion 을 소리대로 옮긴 말이라 한자가 없다.",
+    "hanja_gloss": "化 될 화 · 平 평평할 평 · 衡 저울대 형",
+    "english": "ionization equilibrium"
+  },
+  "definition": "이온으로 나뉘는 속도와 도로 결합하는 속도가 같아져, 분자와 이온의 농도가 더 이상 달라지지 않는 상태.",
+  "relations": [
+    {
+      "id": "rel-ioneq-partial-ionization",
+      "text": "일부만 이온화하는 약산·약염기 수용액에는 남은 분자와 생긴 이온이 함께 존재한다",
+      "form": {
+        "condition": "온도가 일정한 묽은 수용액",
+        "type": "conditional",
+        "scope": "약산·약염기(강산·강염기는 거의 다 이온화한다)"
+      },
+      "invertible": false,
+      "invertible_reason": "두 입자가 함께 있다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ioneq-constant-independent",
+      "text": "온도가 같으면 처음 농도를 달리해도 이 평형에서 정해지는 상수값은 달라지지 않는다",
+      "form": {
+        "condition": "온도 일정",
+        "type": "conditional",
+        "scope": "묽은 수용액",
+        "antecedent": {
+          "quantity": "용질의 초기 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이온화 상수",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽이 변해도 다른 쪽이 그대로라는 서술이라 맞바꾸면 방향이 서지 않는다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ioneq-degree-and-ion",
+      "text": "농도가 같을 때 이온화하는 정도가 클수록 평형에서 이온의 농도가 크다",
+      "form": {
+        "condition": "온도와 초기 농도가 같음",
+        "type": "direct",
+        "scope": "같은 조건으로 견주는 묽은 수용액",
+        "antecedent": {
+          "quantity": "이온화하는 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평형에서의 이온 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이온화한 만큼이 곧 이온의 양이므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12반응01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도가 같을 때 이온화하는 정도가 클수록 평형에서 이온의 농도는 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "약산 수용액에는 이온만 남아 있고 분자는 없다",
+      "why_wrong": "약산은 일부만 이온화하므로 대부분은 분자 상태로 남아 이온과 함께 존재한다.",
+      "source": "llm",
+      "linked_relation": "rel-ioneq-partial-ionization"
+    },
+    {
+      "text": "평형에 이르면 이온화 반응이 멈춘다",
+      "why_wrong": "겉보기에 농도가 그대로일 뿐, 이온화와 재결합이 같은 속도로 계속 일어나고 있다.",
+      "source": "llm",
+      "linked_relation": "rel-ioneq-partial-ionization"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-weak-acid"
+    },
+    {
+      "type": "next",
+      "target": "reac-acid-ionization-constant"
+    },
+    {
+      "type": "next",
+      "target": "reac-base-ionization-constant"
+    },
+    {
+      "type": "next",
+      "target": "reac-buffer-solution"
+    }
+  ],
+  "curriculum": [
+    "12반응01-02"
+  ],
+  "topic_id": "reac-1-1-02",
+  "pages": [
+    18,
+    20
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

@@ -1,0 +1,133 @@
+{
+  "id": "reac-oxidation-of-carbon-compound",
+  "concept_key": "concept:oxidation-of-carbon-compound",
+  "registry_status": "new",
+  "term": "탄소 화합물의 산화 반응",
+  "aliases": [],
+  "notation": {
+    "hanja": "炭素 化合物 酸化 反應",
+    "hanja_gloss": "炭 숯 탄 · 素 본디 소 · 化 될 화 · 合 합할 합 · 物 물건 물 · 酸 실 산 · 化 될 화 · 反 돌이킬 반 · 應 응할 응",
+    "english": "oxidation of carbon compound"
+  },
+  "definition": "탄소 화합물이 산소를 얻거나 수소를 잃으며 작용기가 다른 작용기로 바뀌는 반응. 골격은 그대로 두고 작용기 자리에서 일어난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oxidation-site-is-functional-group",
+      "text": "산화는 탄소와 수소로 된 골격이 아니라 작용기가 붙은 자리에서 일어나므로, 반응 전후를 작용기의 변화로 설명할 수 있다",
+      "form": {
+        "condition": "작용기를 지닌 탄소 화합물이 산화될 때",
+        "type": "causal",
+        "scope": "이 단원이 다루는 알코올과 알데하이드의 산화",
+        "antecedent": {
+          "quantity": "작용기가 산화에 참여하는 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "작용기 자리에서 일어나는 변화",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "반응이 일어나는 자리를 밝힌 문장이라 두 양의 방향을 맞바꾸는 뒤집기가 성립하지 않는다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxidation-order-of-groups",
+      "text": "산화가 단계적으로 진행되면 작용기는 -OH 에서 -CHO 로, 다시 -COOH 로 차례차례 바뀐다",
+      "form": {
+        "condition": "산화제가 넉넉히 있을 때",
+        "type": "conditional",
+        "scope": "사슬 끝 탄소에 -OH 가 붙은 알코올",
+        "antecedent": {
+          "quantity": "산화가 진행된 단계 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "작용기의 탄소에 이어진 산소 원자 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 얻는 쪽이 산화이므로 순서를 거꾸로 적으면 환원을 산화라 부르게 되어 반드시 거짓이다",
+      "inverted_text": "산화가 진행될수록 작용기는 -COOH 에서 -CHO 를 거쳐 -OH 로 바뀐다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxidation-makes-new-compound",
+      "text": "작용기가 바뀌면 성질도 함께 바뀌므로 산화가 끝난 자리에는 처음과 다른 탄소 화합물이 남는다",
+      "form": {
+        "condition": "작용기가 실제로 달라진 반응",
+        "type": "causal",
+        "scope": "탄소 화합물의 산화 반응",
+        "antecedent": {
+          "quantity": "작용기가 달라진 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성물과 반응물의 성질 차이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성질이 달라졌다고 반드시 작용기가 바뀐 것은 아니어서 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "탄소 화합물이 산화되면 탄소 골격이 끊어져 아예 다른 뼈대가 된다",
+      "why_wrong": "골격은 대체로 유지되고 작용기 자리만 달라진다. 에탄올이 아세트알데하이드가 될 때도 탄소 두 개는 그대로다.",
+      "linked_relation": "rel-oxidation-site-is-functional-group",
+      "source": "llm"
+    },
+    {
+      "text": "산화 반응은 산소 기체와 직접 만나야만 일어난다",
+      "why_wrong": "다이크로뮴산 칼륨 같은 산화제를 써도 산화가 일어난다. 산소를 얻거나 수소를 잃으면 산화다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-functional-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-of-alcohol"
+    },
+    {
+      "type": "next",
+      "target": "reac-oxidation-of-aldehyde"
+    },
+    {
+      "type": "related",
+      "target": "reac-carbon-compound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-02"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-02",
+  "pages": [
+    98,
+    99,
+    100
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

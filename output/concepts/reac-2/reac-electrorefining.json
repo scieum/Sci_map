@@ -1,0 +1,112 @@
+{
+  "id": "reac-electrorefining",
+  "concept_key": "concept:electrorefining",
+  "registry_status": "new",
+  "term": "정련",
+  "aliases": [
+    "전해 정련"
+  ],
+  "notation": {
+    "hanja": "精鍊",
+    "hanja_gloss": "精 정할 정 · 鍊 불릴 련",
+    "english": "electrorefining"
+  },
+  "definition": "불순물이 섞인 금속을 (+)극에, 순수한 금속을 (-)극에 걸고 전기 분해 해 금속의 순도를 높이는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ref-cathode",
+      "text": "(-)극에 건 순수한 구리판에는 구리 이온만 환원되어 붙으므로 순도가 높은 구리를 얻는다.",
+      "form": {
+        "condition": "황산 구리(Ⅱ) 수용액에 두 전극을 담그고 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "구리의 전해 정련"
+      },
+      "invertible": false,
+      "invertible_reason": "결과가 생기는 까닭을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ref-impurity",
+      "text": "구리보다 산화되기 쉬운 아연·철·니켈은 (+)극에서 이온이 되어 용액에 남고, 구리보다 산화되기 어려운 은·백금·금은 (+)극 아래로 가라앉는다.",
+      "form": {
+        "condition": "불순물을 품은 구리판을 (+)극에 걸고 전류를 흘릴 때",
+        "type": "conditional",
+        "scope": "구리의 전해 정련에 섞인 금속 불순물"
+      },
+      "invertible": true,
+      "invertible_reason": "이온화 경향의 크기와 거동을 맞바꾸면 산화되기 쉬운 정도의 순서와 어긋난다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구리보다 산화되기 어려운 은·백금·금이 이온이 되어 녹아 나오고, 산화되기 쉬운 아연·철·니켈이 가라앉는다."
+    },
+    {
+      "id": "rel-ref-tendency",
+      "text": "불순물이 녹아 나올지 가라앉을지는 구리와 견준 이온화 경향으로 갈린다.",
+      "form": {
+        "condition": "정련할 금속을 기준으로 불순물을 견줄 때",
+        "type": "causal",
+        "scope": "전해 정련에 들어 있는 금속 불순물"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 기준을 밝힌 명제라 앞뒤를 바꿀 방향이 없다.",
+      "curriculum": [
+        "12반응02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정련하면 (+)극 아래 가라앉았던 금과 은도 (-)극으로 옮겨 붙는다",
+      "why_wrong": "금과 은은 구리보다 산화되기 어려워 이온이 되지 못한다. 이온이 아니면 (-)극에서 환원될 수도 없다.",
+      "source": "llm",
+      "linked_relation": "rel-ref-impurity"
+    },
+    {
+      "text": "정련은 광석에서 금속을 처음 뽑아내는 과정이다",
+      "why_wrong": "그것은 제련이다. 정련은 이미 얻은 금속에 섞인 불순물을 걸러 순도를 높이는 과정이다.",
+      "source": "llm",
+      "linked_relation": "rel-ref-cathode"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-electrolysis"
+    },
+    {
+      "type": "prereq",
+      "target": "reac-ionization-tendency"
+    },
+    {
+      "type": "related",
+      "target": "reac-smelting"
+    },
+    {
+      "type": "related",
+      "target": "reac-electroplating"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응02-04"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅱ. 산화·환원 반응",
+  "unit_id": "reac-2",
+  "topic_id": "reac-2-2-03",
+  "pages": [
+    73,
+    76,
+    86
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

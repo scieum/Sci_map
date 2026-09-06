@@ -1,0 +1,141 @@
+{
+  "id": "reac-carboxyl-group",
+  "concept_key": "concept:carboxyl-group",
+  "registry_status": "new",
+  "term": "카복실기",
+  "aliases": [
+    "카르복실기"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'카복실'은 영어 carboxyl 의 음차어라 대응하는 한자가 없다. 뒤의 '기'만 基에 해당한다.",
+    "english": "carboxyl group",
+    "symbol_display": "-COOH",
+    "symbol_plain": "-COOH"
+  },
+  "definition": "탄소 하나에 산소가 이중 결합으로, 또 -OH 로 함께 붙은 작용기. 이 묶음을 지닌 물질은 물에서 약한 산성을 낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-carboxyl-weak-acid",
+      "text": "-COOH 의 수소는 물속에서 일부만 이온으로 떨어져 나오므로 이 작용기를 지닌 물질의 수용액은 약한 산성을 띤다",
+      "form": {
+        "condition": "묽은 수용액 상태",
+        "type": "causal",
+        "scope": "카복실기를 지닌 탄소 화합물의 수용액",
+        "antecedent": {
+          "quantity": "이온으로 떨어져 나온 수소 이온의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수용액의 산성 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수소가 일부만 이온화되기에 약한 산성이 나타나는 것이므로, 전부 이온화되어 강한 산성을 낸다는 진술은 반드시 거짓이다",
+      "inverted_text": "-COOH 의 수소는 물속에서 모두 이온으로 떨어져 나오므로 그 수용액은 강한 산성을 띤다",
+      "curriculum": [
+        "12반응03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carboxyl-with-hydroxy",
+      "text": "-COOH 는 -OH 와 만나면 물 한 분자를 내보내면서 이어져 새로운 결합을 만든다",
+      "form": {
+        "condition": "산 촉매를 넣고 데우는 조건",
+        "type": "causal",
+        "scope": "카복실산과 알코올 사이의 축합 반응",
+        "antecedent": {
+          "quantity": "반응한 -COOH 와 -OH 의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 결합과 빠져나온 물의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "반대 방향은 물을 넣어 결합을 끊는 다른 반응이라 항상 거짓이라 단정할 수 없다",
+      "curriculum": [
+        "12반응03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carboxyl-with-amine",
+      "text": "-COOH 나 -COCl 이 -NH2 와 잇따라 축합하면 나일론 같은 고분자가 만들어진다",
+      "form": {
+        "condition": "두 단위체가 저마다 작용기를 두 개씩 지닐 때",
+        "type": "causal",
+        "scope": "나일론 6,6 의 합성",
+        "antecedent": {
+          "quantity": "축합이 되풀이된 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이어진 사슬의 길이",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "합성 경로를 밝힌 문장이라 방향을 뒤집으면 분해 반응이 되어 조건 자체가 달라진다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "카복실산은 수소 이온을 내놓는 강한 산이다",
+      "why_wrong": "-COOH 의 수소는 일부만 이온화된다. 그래서 카복실산 수용액은 약한 산성을 띤다.",
+      "linked_relation": "rel-carboxyl-weak-acid",
+      "source": "llm"
+    },
+    {
+      "text": "-COOH 안에 -OH 가 들어 있으니 카복실산도 알코올에 든다",
+      "why_wrong": "작용기는 원자 묶음 전체로 보아야 한다. -COOH 는 -OH 와 다른 작용기이며 성질도 다르다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-functional-group"
+    },
+    {
+      "type": "next",
+      "target": "reac-carboxylic-acid"
+    },
+    {
+      "type": "next",
+      "target": "reac-ester"
+    },
+    {
+      "type": "next",
+      "target": "reac-nylon"
+    },
+    {
+      "type": "related",
+      "target": "reac-hydroxy-group"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-01"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-1-01",
+  "pages": [
+    97,
+    103,
+    114
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,127 @@
+{
+  "id": "reac-addition-polymerization",
+  "concept_key": "concept:addition-polymerization",
+  "registry_status": "new",
+  "term": "첨가 중합 반응",
+  "aliases": [
+    "첨가 중합"
+  ],
+  "notation": {
+    "hanja": "添加 重合 反應",
+    "hanja_gloss": "添 더할 첨 · 加 더할 가 · 重 거듭 중 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응",
+    "english": "addition polymerization"
+  },
+  "definition": "단위체의 이중 결합이 풀리면서 이웃 단위체와 잇따라 이어져 고분자가 되는 반응. 빠져나가는 분자가 없다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-addition-double-bond-opens",
+      "text": "단위체가 지닌 이중 결합 가운데 하나가 끊어지고, 그렇게 생긴 자리로 이웃 단위체와 이어진다",
+      "form": {
+        "condition": "이중 결합을 지닌 단위체를 쓸 때",
+        "type": "causal",
+        "scope": "에틸렌·프로필렌·스타이렌의 첨가 중합",
+        "antecedent": {
+          "quantity": "끊어진 이중 결합의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "새로 생긴 단위체 사이 결합의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "결합의 변화를 묘사한 문장이라 방향을 맞바꾸는 뒤집기가 성립하지 않는다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-addition-no-byproduct",
+      "text": "첨가 중합에서는 단위체가 통째로 이어지므로 물 같은 작은 분자가 빠져나오지 않는다",
+      "form": {
+        "condition": "첨가 중합으로 고분자를 만들 때",
+        "type": "conditional",
+        "scope": "폴리에틸렌·폴리스타이렌 같은 첨가 중합 고분자"
+      },
+      "invertible": true,
+      "invertible_reason": "빠져나가는 분자가 없다는 점이 첨가 중합을 가르는 기준이므로 물이 빠진다는 진술은 반드시 거짓이다",
+      "inverted_text": "첨가 중합에서는 단위체가 이어질 때마다 물 분자가 하나씩 빠져나온다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-addition-examples",
+      "text": "폴리에틸렌·폴리프로필렌·폴리스타이렌·폴리(염화 바이닐)은 모두 첨가 중합으로 만들어진 고분자다",
+      "form": {
+        "condition": "중합 유형으로 합성 고분자를 가를 때",
+        "type": "classification",
+        "scope": "이 단원이 예로 든 합성 고분자",
+        "antecedent": {
+          "quantity": "만들어진 중합 유형",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "첨가 중합 고분자로 묶이는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12반응03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "첨가 중합에서는 단위체가 작용기의 일부를 잃으며 결합한다",
+      "why_wrong": "작용기 일부를 잃는 쪽은 축합 중합이다. 첨가 중합은 이중 결합이 풀리며 그대로 이어진다.",
+      "linked_relation": "rel-addition-no-byproduct",
+      "source": "llm"
+    },
+    {
+      "text": "이중 결합이 없는 분자도 첨가 중합으로 고분자를 만들 수 있다",
+      "why_wrong": "첨가 중합은 이중 결합이 풀리면서 생긴 자리로 이어지는 반응이라 이중 결합이 있어야 한다.",
+      "linked_relation": "rel-addition-double-bond-opens",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "reac-polymerization"
+    },
+    {
+      "type": "next",
+      "target": "reac-plastic"
+    },
+    {
+      "type": "related",
+      "target": "reac-monomer"
+    },
+    {
+      "type": "related",
+      "target": "reac-carbon-atom-bonding"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12반응03-03"
+  ],
+  "subject": "화학 반응의 세계",
+  "unit": "Ⅲ. 탄소 화합물과 반응",
+  "unit_id": "reac-3",
+  "topic_id": "reac-3-2-01",
+  "pages": [
+    106,
+    116
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}
