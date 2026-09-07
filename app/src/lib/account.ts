@@ -121,12 +121,7 @@ export async function signUpWithId(input: SignUpInput): Promise<void> {
     email: authEmail(username),
     password: input.password,
   });
-  if (error) {
-    if (/already registered|already been registered|user already exists/i.test(error.message)) {
-      throw new Error("이미 쓰이고 있는 아이디예요. 다른 아이디로 해 주세요.");
-    }
-    throw new Error(error.message);
-  }
+  if (error) throw new Error(signUpMessage(error.message));
 
   const uid = data.user?.id;
   if (!uid) {
@@ -155,6 +150,39 @@ export async function signUpWithId(input: SignUpInput): Promise<void> {
     }
     throw new Error(pErr.message);
   }
+}
+
+/**
+ * 가입 실패 문구 — 서버가 주는 영어를 학생이 읽을 말로 바꾼다.
+ *
+ * ★ 아래 둘은 **운영자 설정** 문제다. 학생이 아무리 다시 눌러도 풀리지 않으므로
+ *   화면에 그렇게 적어야 한다. 둘 다 원인이 하나다 — Supabase 의 이메일 확인
+ *   (Confirm email)이 켜져 있으면 가입할 때마다 합성 주소로 확인 메일을 보내려
+ *   든다. 그 주소는 받을 수 없는 주소이고(400 invalid), 시도 자체가 기본 메일
+ *   발송 한도에 걸린다(429 rate limit).
+ */
+function signUpMessage(raw: string): string {
+  const m = raw.toLowerCase();
+  if (/already registered|already been registered|user already exists/.test(m)) {
+    return "이미 쓰이고 있는 아이디예요. 다른 아이디로 해 주세요.";
+  }
+  if (/rate limit/.test(m)) {
+    return (
+      "지금은 가입할 수 없어요. 선생님께 알려 주세요 — " +
+      "Supabase 의 이메일 확인(Confirm email)을 끄면 풀려요. " +
+      "(메일 발송 한도에 걸렸어요)"
+    );
+  }
+  if (/email address .* is invalid|email_address_invalid/.test(m)) {
+    return (
+      "지금은 가입할 수 없어요. 선생님께 알려 주세요 — " +
+      "Supabase 의 이메일 확인(Confirm email)을 끄면 풀려요. " +
+      "(로그인용 주소를 서버가 받지 않았어요)"
+    );
+  }
+  if (/password/.test(m)) return "비밀번호가 규칙에 맞지 않아요. 8자 이상, 영문과 숫자를 함께 넣어 주세요.";
+  if (/network|fetch/.test(m)) return "인터넷 연결을 확인하고 다시 눌러 주세요.";
+  return `가입하지 못했어요. ${raw}`;
 }
 
 /** 로그인 — 아이디를 합성 주소로 바꿔 넘긴다 */

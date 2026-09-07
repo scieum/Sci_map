@@ -119,8 +119,10 @@ export default function SchoolPicker({
       <div className="flex items-center justify-between rounded-[20px] bg-primary-50 px-4 py-3 ring-2 ring-primary-500">
         <span>
           <span className="block text-[15px] font-bold">{value.school_name}</span>
+          {/* 시군구를 못 뽑은 학교가 있다(직접 입력·세종 등). 빈 값을 그대로 끼우면
+              "강원 ·  · 고등학교" 처럼 가운뎃점이 겹친다 — 있는 것만 이어 붙인다 */}
           <span className="block text-[12px] text-ink-sub">
-            {value.sido} · {value.sigungu} · {value.school_kind}
+            {[value.sido, value.sigungu, value.school_kind].filter(Boolean).join(" · ")}
           </span>
         </span>
         <button
