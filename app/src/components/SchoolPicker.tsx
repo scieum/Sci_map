@@ -36,6 +36,15 @@ export interface SchoolValue {
 
 const cache = new Map<string, School[]>();
 
+/**
+ * 시군구가 없는 학교들의 자리.
+ *
+ * 두 경우가 있다. ① 세종특별자치시는 시군구 층이 아예 없다("세종특별자치시
+ * 마음안로 93"). ② 주소가 비어 있는 학교가 시도마다 한둘 있다(한국과학영재학교,
+ * 주촌중학교). 둘 다 걸러 버리면 그 학교 학생은 자기 학교를 영영 못 찾는다.
+ */
+const NO_SGG = "__none__";
+
 export default function SchoolPicker({
   value,
   onChange,
@@ -94,13 +103,20 @@ export default function SchoolPicker({
   }, [sidoCode]);
 
   const sigungus = useMemo(() => sigunguList(schools), [schools]);
+  const hasNoSgg = useMemo(() => schools.some((s) => !s.sigungu), [schools]);
+  /** 시군구 층이 아예 없는 시도(세종)는 그 단계를 건너뛴다 */
+  const skipSgg = schools.length > 0 && sigungus.length === 0;
+  const step2 = skipSgg ? NO_SGG : sigungu;
+
   const matches = useMemo(
     () =>
       schools
-        .filter((s) => (sigungu ? s.sigungu === sigungu : false))
+        .filter((s) =>
+          step2 === NO_SGG ? !s.sigungu : step2 ? s.sigungu === step2 : false,
+        )
         .filter((s) => (kind ? s.kind === kind : true))
         .sort((a, b) => a.name.localeCompare(b.name, "ko")),
-    [schools, sigungu, kind],
+    [schools, step2, kind],
   );
 
   function pick(s: School) {
@@ -190,7 +206,7 @@ export default function SchoolPicker({
         </Step>
       )}
 
-      {sidoCode && !manual && (
+      {sidoCode && !manual && !skipSgg && (
         <Step n={2} label="시·군·구">
           {busy ? (
             <p className="px-1 py-2 text-[13px] text-ink-faint">학교 목록을 불러오는 중…</p>
@@ -198,7 +214,12 @@ export default function SchoolPicker({
             <p className="px-1 py-2 text-[13px] text-danger">{error}</p>
           ) : (
             <Chips
-              items={sigungus.map((s) => ({ key: s, label: s }))}
+              items={[
+                ...sigungus.map((s) => ({ key: s, label: s })),
+                // 주소가 비어 있어 시군구를 못 뽑은 학교들의 자리. 한둘뿐이라도
+                // 그 학교 학생에게는 유일한 길이다
+                ...(hasNoSgg ? [{ key: NO_SGG, label: "기타" }] : []),
+              ]}
               on={sigungu}
               onPick={setSigungu}
             />
@@ -206,8 +227,8 @@ export default function SchoolPicker({
         </Step>
       )}
 
-      {sigungu && !manual && (
-        <Step n={3} label="학교급">
+      {step2 && !manual && (
+        <Step n={skipSgg ? 2 : 3} label="학교급">
           <Chips
             items={SCHOOL_KINDS.map((k) => ({ key: k, label: k }))}
             on={kind}
@@ -216,8 +237,8 @@ export default function SchoolPicker({
         </Step>
       )}
 
-      {sigungu && kind && !manual && (
-        <Step n={4} label="학교">
+      {step2 && kind && !manual && (
+        <Step n={skipSgg ? 3 : 4} label="학교">
           {matches.length === 0 ? (
             <p className="px-1 py-2 text-[13px] text-ink-faint">
               이 조건에 맞는 학교가 없어요. 위 단계를 다시 골라 주세요.
