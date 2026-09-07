@@ -82,7 +82,7 @@ def check_count(cands, res: Result) -> None:
     res.add("count", 10 <= n <= 30, "개념 " + str(n) + "개 (기준 10~30)")
 
 
-def check_duplicates(cands, res: Result) -> None:
+def check_duplicates(cands, res: Result, unit_id: str = "") -> None:
     """단원 안의 중복 + 이미 작성된 카드와의 표제어 중복."""
     seen: dict[str, list[str]] = {}
     for c in cands:
@@ -111,11 +111,18 @@ def check_duplicates(cands, res: Result) -> None:
     # 예전 글롭은 CONCEPTS_DIR 바로 아래만 훑어 그 폴더를 통째로 놓쳤다 —
     # mate-2 후보가 mate-1 카드 30장과 표제어가 겹쳐도 "기존 카드가 없다"로
     # 지나갔다. 하위 폴더를 함께 본다 (*.candidates.json 은 카드가 아니다).
+    #
+    # ★ **자기 단원의 카드는 빼고 본다.** 그러지 않으면 C2 를 마친 단원의 후보
+    #   파일이 그 뒤로 영영 fail 한다 — 그 카드들이 바로 이 후보에서 나온 것이라
+    #   표제어가 겹치는 게 당연하기 때문이다(mate-1 후보 30개가 mate-1 카드 30장과
+    #   전부 겹쳐 fail 했다). 이 검사가 잡으려는 것은 **다른 단원**의 카드와 겹치는데
+    #   same 후보 표시가 없는 경우다.
     existing: dict[str, str] = {}
     card_files = (sorted(CONCEPTS_DIR.glob("*.draft.json"))
                   + sorted(CONCEPTS_DIR.glob("*.card.json"))
                   + [q for q in sorted(CONCEPTS_DIR.glob("*/*.json"))
-                     if not q.name.endswith(".candidates.json")])
+                     if not q.name.endswith(".candidates.json")
+                     and q.parent.name != unit_id])
     for p in card_files:
         try:
             card = json.loads(p.read_text(encoding="utf-8"))
@@ -291,7 +298,7 @@ def main() -> int:
     res = Result()
     check_schema(doc, res)
     check_count(cands, res)
-    check_duplicates(cands, res)
+    check_duplicates(cands, res, doc.get("unit_id", ""))
     check_hierarchy(doc, cands, res)
     check_curriculum(cands, res)
     check_registry(cands, res)
