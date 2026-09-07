@@ -27,10 +27,19 @@ export default function TodayPage() {
   return (
     <Screen>
       <header className="mb-5 flex items-center justify-between">
-        <h1 className="text-[19px] font-extrabold text-ink">
-          {BRAND.name}
+        <h1 className="flex items-center gap-1.5 text-[19px] font-extrabold text-ink">
+          {/* 심벌이 이름 자리를 대신한다. 그림이 이름이므로 alt 에 이름을 남긴다 —
+              스크린 리더와 이미지가 막힌 환경에서 앱 이름이 사라지면 안 된다 */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/mark.png"
+            alt={BRAND.name}
+            width={53}
+            height={30}
+            className="h-[30px] w-auto object-contain"
+          />
           {BRAND.provisional && (
-            <span className="ml-1 align-middle text-[11px] font-medium text-ink-faint">
+            <span className="align-middle text-[11px] font-medium text-ink-faint">
               가칭
             </span>
           )}
@@ -86,6 +95,18 @@ export default function TodayPage() {
         </h3>
         <Grass doneDates={progress.doneDates} />
       </Card>
+
+      {/* 바닥 로고 줄 — 왼쪽 끝·오른쪽 끝. 이 앱이 어느 교재를 따라가는지
+          밝히는 자리다. BottomCta 는 화면에 고정돼 있으므로 그 높이만큼
+          띄워 두지 않으면 마지막 줄이 버튼 뒤로 숨는다 */}
+      <div className="mt-6 mb-24 flex items-center justify-between px-1 opacity-80">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/brand/selpa.png" alt="천재 셀파" width={89} height={20}
+             className="h-5 w-auto object-contain" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/brand/chunjae.png" alt="천재교육" width={159} height={20}
+             className="h-5 w-auto object-contain" />
+      </div>
 
       <BottomCta href="/today">
         {doneToday ? "한 번 더 풀어보기" : "오늘의 학습 시작하기"}
