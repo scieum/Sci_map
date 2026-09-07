@@ -13,7 +13,7 @@
   app/src/data/concepts.generated.json
 
 사용:
-    python app/scripts/build_concepts.py
+    python app/scripts/build_concepts.py            # 카드가 있는 단원 전부
     python app/scripts/build_concepts.py --units mate-1
 """
 from __future__ import annotations
@@ -49,6 +49,28 @@ def unit_titles(unit_id: str):
             topic_of[t["id"]] = t["title"]
             section_of[t["id"]] = sec["title"]
     return subject, unit["title"], section_of, topic_of
+
+
+def units_with_cards() -> list[str]:
+    """카드가 있는 단원을 백로그 순서대로 돌려준다.
+
+    ★ 목록을 손으로 적어 두지 않는다. 적어 두면 새 단원의 카드를 다 만들고도
+      앱에는 안 뜨고, 왜 안 뜨는지는 이 파일을 열어 봐야만 알 수 있다
+      (실제로 화학 반응의 세계가 그렇게 묻혔다). 백로그가 순서를 정하고,
+      /output/concepts/ 에 카드가 있느냐가 포함 여부를 정한다.
+    """
+    import yaml
+    with (REPO / "docs" / "unit_backlog.yaml").open(encoding="utf-8") as fh:
+        backlog = yaml.safe_load(fh)
+    out = []
+    for subj in _subjects(backlog):
+        for u in subj.get("units", []):
+            d = REPO / "output" / "concepts" / u["id"]
+            if d.is_dir() and any(
+                f for f in d.glob("*.json") if not f.name.endswith(".candidates.json")
+            ):
+                out.append(u["id"])
+    return out
 
 
 def _subjects(backlog: dict) -> list[dict]:
@@ -191,8 +213,11 @@ def write_catalog(unit_ids: list[str]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--units", nargs="*", default=["mate-1", "mate-2", "mate-3", "mate-4"])
+    ap.add_argument("--units", nargs="*", default=None,
+                    help="비우면 카드가 있는 단원 전부 (백로그 순서)")
     args = ap.parse_args()
+    if not args.units:
+        args.units = units_with_cards()
 
     cards: list[dict] = []
     for unit_id in args.units:
