@@ -5,7 +5,9 @@ import { Card, Screen, ScreenTitle } from "@/components/ui";
 import SchoolPicker, { type SchoolValue } from "@/components/SchoolPicker";
 import {
   emailProblem,
+  isNicknameTaken,
   isUsernameTaken,
+  nicknameProblem,
   normalizeUsername,
   passwordProblem,
   signInWithId,
@@ -131,18 +133,21 @@ function SignIn() {
 
 function SignUp({ onDone }: { onDone: () => void }) {
   const [id, setId] = useState("");
+  const [nick, setNick] = useState("");
   const [pw, setPw] = useState("");
   const [pw2, setPw2] = useState("");
   const [email, setEmail] = useState("");
   const [school, setSchool] = useState<SchoolValue | null>(null);
-  const [checking, setChecking] = useState(false);
+  const [checking, setChecking] = useState<"id" | "nick" | null>(null);
   /** null = 아직 확인 안 함 */
   const [taken, setTaken] = useState<boolean | null>(null);
+  const [nickTaken, setNickTaken] = useState<boolean | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
 
   const idProblem = id ? usernameProblem(id) : null;
+  const nickProblem = nick ? nicknameProblem(nick) : null;
 
   async function checkId() {
     const problem = usernameProblem(id);
@@ -150,14 +155,31 @@ function SignUp({ onDone }: { onDone: () => void }) {
       setError(problem);
       return;
     }
-    setChecking(true);
+    setChecking("id");
     setError(null);
     try {
       setTaken(await isUsernameTaken(id));
     } catch (e) {
       setError(`아이디를 확인하지 못했어요. ${(e as Error).message}`);
     } finally {
-      setChecking(false);
+      setChecking(null);
+    }
+  }
+
+  async function checkNick() {
+    const problem = nicknameProblem(nick);
+    if (problem) {
+      setError(problem);
+      return;
+    }
+    setChecking("nick");
+    setError(null);
+    try {
+      setNickTaken(await isNicknameTaken(nick));
+    } catch (e) {
+      setError(`닉네임을 확인하지 못했어요. ${(e as Error).message}`);
+    } finally {
+      setChecking(null);
     }
   }
 
@@ -165,6 +187,7 @@ function SignUp({ onDone }: { onDone: () => void }) {
     e.preventDefault();
     const problem =
       usernameProblem(id) ??
+      nicknameProblem(nick) ??
       passwordProblem(pw) ??
       (pw !== pw2 ? "비밀번호가 서로 달라요." : null) ??
       emailProblem(email);
@@ -175,7 +198,7 @@ function SignUp({ onDone }: { onDone: () => void }) {
     setBusy(true);
     setError(null);
     try {
-      await signUpWithId({ username: id, password: pw, email, school });
+      await signUpWithId({ username: id, nickname: nick, password: pw, email, school });
       setDone(true);
     } catch (err) {
       setError((err as Error).message);
@@ -221,15 +244,40 @@ function SignUp({ onDone }: { onDone: () => void }) {
             <button
               type="button"
               onClick={checkId}
-              disabled={!id.trim() || checking}
+              disabled={!id.trim() || checking !== null}
               className="h-11 shrink-0 rounded-full bg-bg-subtle px-4 text-[13px] font-bold text-ink-sub disabled:opacity-40"
             >
-              {checking ? "확인 중" : "중복 확인"}
+              {checking === "id" ? "확인 중" : "중복 확인"}
             </button>
           </div>
           {idProblem && <Note tone="bad">{idProblem}</Note>}
           {!idProblem && taken === true && <Note tone="bad">이미 쓰이고 있는 아이디예요.</Note>}
           {!idProblem && taken === false && <Note tone="good">쓸 수 있는 아이디예요.</Note>}
+        </Field>
+
+        <Field label="닉네임" hint="한글·영문·숫자 2~12자. 다른 학생과 겹칠 수 없어요">
+          <div className="flex gap-2">
+            <input
+              value={nick}
+              onChange={(e) => {
+                setNick(e.target.value);
+                setNickTaken(null);
+              }}
+              autoComplete="nickname"
+              className={INPUT}
+            />
+            <button
+              type="button"
+              onClick={checkNick}
+              disabled={!nick.trim() || checking !== null}
+              className="h-11 shrink-0 rounded-full bg-bg-subtle px-4 text-[13px] font-bold text-ink-sub disabled:opacity-40"
+            >
+              {checking === "nick" ? "확인 중" : "중복 확인"}
+            </button>
+          </div>
+          {nickProblem && <Note tone="bad">{nickProblem}</Note>}
+          {!nickProblem && nickTaken === true && <Note tone="bad">이미 쓰이고 있는 닉네임이에요.</Note>}
+          {!nickProblem && nickTaken === false && <Note tone="good">쓸 수 있는 닉네임이에요.</Note>}
         </Field>
 
         <Field label="비밀번호" hint="8자 이상, 영문과 숫자를 함께">

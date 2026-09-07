@@ -40,6 +40,22 @@ export function usernameProblem(raw: string): string | null {
   return null;
 }
 
+/**
+ * 닉네임 규칙 — 한글·영문·숫자, 2~12자.
+ *
+ * 아이디는 로그인용이고 닉네임은 서로 부르는 이름이다. 아이디와 달리 한글을
+ * 허용한다 — 학생이 실제로 쓸 이름이기 때문이다. 실명은 받지 않는다 (R13).
+ */
+export function nicknameProblem(raw: string): string | null {
+  const v = raw.trim();
+  if (!v) return "닉네임을 입력해 주세요.";
+  if (v.length < 2) return "닉네임은 2자 이상이어야 해요.";
+  if (v.length > 12) return "닉네임은 12자까지예요.";
+  if (!/^[가-힣a-zA-Z0-9]+$/.test(v))
+    return "닉네임에는 한글·영문·숫자만 쓸 수 있어요. 띄어쓰기와 기호는 빼 주세요.";
+  return null;
+}
+
 export function passwordProblem(pw: string): string | null {
   if (pw.length < MIN_PASSWORD) return `비밀번호는 ${MIN_PASSWORD}자 이상이어야 해요.`;
   if (!/[a-zA-Z]/.test(pw) || !/[0-9]/.test(pw))
@@ -66,8 +82,18 @@ export async function isUsernameTaken(username: string): Promise<boolean> {
   return Boolean(data);
 }
 
+/** 이 닉네임이 이미 쓰이는가. 대소문자를 구분하지 않는다 */
+export async function isNicknameTaken(nickname: string): Promise<boolean> {
+  const { data, error } = await supabase().rpc("nickname_taken", {
+    p_nickname: nickname.trim(),
+  });
+  if (error) throw new Error(error.message);
+  return Boolean(data);
+}
+
 export interface SignUpInput {
   username: string;
+  nickname: string;
   password: string;
   email: string;
   school: {
@@ -114,10 +140,16 @@ export async function signUpWithId(input: SignUpInput): Promise<void> {
   const { error: pErr } = await sb.from("profiles").upsert({
     id: uid,
     username,
+    nickname: input.nickname.trim(),
     recovery_email: input.email.trim(),
     ...(input.school ?? {}),
   });
   if (pErr) {
+    // 미리 물어본 뒤에도 여기서 걸릴 수 있다 — 같은 순간에 둘이 눌렀을 때다.
+    // 어느 쪽이 겹쳤는지 인덱스 이름으로 갈라 알려 준다
+    if (/profiles_nickname_key/i.test(pErr.message)) {
+      throw new Error("방금 다른 사람이 같은 닉네임을 만들었어요. 다른 닉네임으로 해 주세요.");
+    }
     if (/profiles_username_key|duplicate key/i.test(pErr.message)) {
       throw new Error("방금 다른 사람이 같은 아이디를 만들었어요. 다른 아이디로 해 주세요.");
     }

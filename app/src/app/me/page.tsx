@@ -14,7 +14,7 @@ import { loadProgress, saveProgress } from "@/lib/store";
  * 내 정보 — 노선 탭 자리에 임시로 (SciMetro 는 한참 뒤다. Design.md §4.6).
  *
  * 흐름: 연결 안 됨 안내 → 로그인(구글 · 이메일 링크, docs/login_design.md) → 개인정보 동의 → 프로필
- * (학번 별칭 · 학년 · 학기 · 수강 과목 · 초대 코드). 저장하면 스케줄러의 출제
+ * (닉네임 · 학교 · 이메일 · 학년 · 학기 · 수강 과목 · 초대 코드). 저장하면 스케줄러의 출제
  * 범위가 그 과목·학기로 잡힌다.
  *
  * 동의 문구의 원본은 docs/privacy_notice.md 다. 여기 문구를 고치면 그 파일과
@@ -133,9 +133,9 @@ function Consent({ onAgreed }: { onAgreed: (p: Profile) => void }) {
       </p>
       <Card className="text-[14px] leading-relaxed">
         <Row k="수집 항목">
-          아이디·비밀번호, 이메일 주소(비밀번호 찾기), 학교(지역·시군구·학교급·학교명),
-          학번 별칭, 학년·학기·수강 과목, 학습 기록(문항 응답, 개념별 기억 상태,
-          출석일), 초대 코드
+          아이디·비밀번호, 닉네임, 이메일 주소(비밀번호 찾기),
+          학교(지역·시군구·학교급·학교명), 학년·학기·수강 과목,
+          학습 기록(문항 응답, 개념별 기억 상태, 출석일), 초대 코드
         </Row>
         <Row k="수집·이용 목적">
           계정 식별과 로그인 · 비밀번호 재설정 · 학교 단위 학습 현황 확인 ·
@@ -257,7 +257,13 @@ function ProfileForm({
         setMsg("저장했어요. 오늘의 문항이 이 범위로 다시 뽑혀요.");
       }
     } catch (e) {
-      setMsg(`저장하지 못했어요: ${(e as Error).message}`);
+      const m = (e as Error).message;
+      // 유일 인덱스에 걸린 것이라 서버 문구가 영어다. 학생이 읽을 말로 바꾼다
+      if (/profiles_nickname_key/i.test(m)) {
+        setMsg("이미 쓰이고 있는 닉네임이에요. 다른 닉네임으로 해 주세요.");
+      } else {
+        setMsg(`저장하지 못했어요: ${m}`);
+      }
     } finally {
       setBusy(false);
     }
@@ -282,12 +288,12 @@ function ProfileForm({
         <p className="px-2 text-[16px] font-bold">{profile.username ?? "—"}</p>
       </Card>
 
-      <SectionLabel>학번 별칭</SectionLabel>
+      <SectionLabel>닉네임</SectionLabel>
       <Card className="!p-3">
         <input
           value={nickname}
           onChange={(e) => setNickname(e.target.value)}
-          placeholder="예: 20315"
+          placeholder="한글·영문·숫자 2~12자"
           className="h-11 w-full rounded-full bg-bg-subtle px-4 text-[16px] outline-none focus:ring-2 focus:ring-primary-300"
         />
       </Card>

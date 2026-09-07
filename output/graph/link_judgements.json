@@ -1,0 +1,2087 @@
+{
+ "generated_at": "2026-09-07T02:22:01Z",
+ "stage": "G2",
+ "input": "output/graph/link_candidates.json",
+ "cards_read": "output/concepts/<unit-id>/<card-id>.json (192장)",
+ "judgements": [
+  {
+   "candidate_id": "g1-0001",
+   "from": "mate-gas-pressure",
+   "to": "mate-collision-frequency",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "기체의 압력 쪽 '충돌 횟수'는 분자와 용기 벽의 충돌이고 충돌수 카드는 반응물 입자끼리의 충돌이라, 같은 낱말이 서로 다른 대상을 센다 — 뒤집으려면 기체의 압력 명제가 입자 간 충돌을 센다는 것을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0002",
+   "from": "mate-intermolecular-force",
+   "to": "reac-polymer",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'고분자'는 '외부 압력이 같고 분자성 물질끼리'의 '고 분자'가 공백을 지운 뒤 붙어 생긴 부분 문자열이고, 두 카드 어느 명제도 고분자를 다루지 않는다."
+  },
+  {
+   "candidate_id": "g1-0003",
+   "from": "mate-boiling-point-elevation",
+   "to": "mate-vapor-pressure",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "끓는점 오름의 정의가 '증기 압력이 낮아진 용액'으로 시작하므로 두 카드는 함께 읽어야 하지만, 방향 있는 선수는 증기 압력 내림을 거쳐 이미 이어져 있어 겹으로 걸지 않는다."
+  },
+  {
+   "candidate_id": "g1-0004",
+   "from": "mate-boiling-point-elevation",
+   "to": "mate-boiling-point",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "끓는점 오름은 '벌어진 끓는점의 차이'로 정의되므로 끓는점이 무엇인지 모르면 정의 자체를 읽을 수 없고, 반대로 끓는점은 용액 없이도 정의된다."
+  },
+  {
+   "candidate_id": "g1-0005",
+   "from": "mate-boiling-point-elevation",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 범위 절의 '비휘발성·비전해질' 안에서만 잡혔다 — 적용 대상에서 전해질을 빼겠다는 말이라 이을 근거가 아니라 가를 근거다."
+  },
+  {
+   "candidate_id": "g1-0006",
+   "from": "mate-cohesive-force",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'수소 결합을 하는 물은 응집력이 크다'가 관계 명제 본문에서 근거로 쓰였지만, 물에 한정된 선수는 이미 '물의 수소 결합'이 맡고 있어 일반 개념 쪽은 나란히 보는 관계로 둔다."
+  },
+  {
+   "candidate_id": "g1-0007",
+   "from": "mate-freezing-point-depression",
+   "to": "mate-crystalline-solid",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'결정'이 관계 명제가 아니라 파생 필드(inverted_text·invertible_reason)의 '얼음 결정'에만 나오고, 어는점 내림과 결정성 고체의 분류를 잇는 명제가 어느 카드에도 없다."
+  },
+  {
+   "candidate_id": "g1-0008",
+   "from": "mate-freezing-point-depression",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 조건·범위 절의 '비휘발성·비전해질'에서만 잡힌 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0009",
+   "from": "mate-freezing-point-depression",
+   "to": "mate-molecular-mass",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'녹인 질량이 같다면 분자량이 작은 용질을 쓴 용액일수록 어는점이 더 많이 내려간다'가 분자량을 선행량으로 쓰는 관계 명제다."
+  },
+  {
+   "candidate_id": "g1-0010",
+   "from": "mate-hydration",
+   "to": "mate-polar-molecule",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "수화의 정의가 '이온이나 극성 분자를 에워싼다'로 서술되어 극성 분자가 무엇인지 모르면 정의를 읽을 수 없고, '물 분자의 극성'만으로는 일반 극성 분자 개념이 채워지지 않는다."
+  },
+  {
+   "candidate_id": "g1-0011",
+   "from": "mate-hydration",
+   "to": "mate-crystalline-solid",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'결정'이 가리키는 것은 일반 결정성 고체가 아니라 이온 결정이며 그 연결은 g1-0012 가 이미 정확한 층위로 맡는다."
+  },
+  {
+   "candidate_id": "g1-0012",
+   "from": "mate-hydration",
+   "to": "mate-ionic-crystal",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'이온 결정을 물에 넣으면 물 분자가 표면의 이온을 에워싼다'가 수화의 첫 관계 명제라, 이온 결정을 모르면 수화가 무엇에 일어나는지 말할 수 없다."
+  },
+  {
+   "candidate_id": "g1-0013",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "물의 수소 결합은 일반 수소 결합의 물 한정 사례이고 정의·명제가 모두 '수소 결합'을 전제로 서술되므로, 일반 개념 쪽이 먼저다."
+  },
+  {
+   "candidate_id": "g1-0014",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-molecular-mass",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'메테인처럼 분자량이 비슷한 물질과 견주면'이 비교 조건으로 분자량을 관계 명제 안에서 쓴다."
+  },
+  {
+   "candidate_id": "g1-0015",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-boiling-point",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'물의 녹는점과 끓는점이 뚜렷하게 높은데 그 까닭이 수소 결합'이라는 명제의 결과량이 끓는점이다."
+  },
+  {
+   "candidate_id": "g1-0016",
+   "from": "mate-molal-boiling-point-elevation-constant",
+   "to": "mate-boiling-point",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "몰랄 오름 상수의 정의가 '끓는점이 오르는 폭'이지만 그 폭은 끓는점 오름 카드가 맡고 있어, 끓는점 자체와는 함께 읽는 관계로 둔다."
+  },
+  {
+   "candidate_id": "g1-0017",
+   "from": "mate-molal-boiling-point-elevation-constant",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 다섯 곳 모두 '비전해질'의 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0018",
+   "from": "mate-molal-freezing-point-depression-constant",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 세 곳 모두 '비전해질'의 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0019",
+   "from": "mate-molality",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 조건 절의 '비휘발성·비전해질'에서만 잡혔다."
+  },
+  {
+   "candidate_id": "g1-0020",
+   "from": "mate-nonvolatile-solute",
+   "to": "mate-boiling-point",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'끓는점'이 정의의 예시절('끓는점이 아주 높은 물질')에만 나오고 나머지는 '끓는점 오름'을 가리킨다."
+  },
+  {
+   "candidate_id": "g1-0021",
+   "from": "mate-nonvolatile-solute",
+   "to": "mate-vapor-pressure",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'비휘발성 용질을 많이 녹일수록 용액의 증기 압력은 순수한 용매보다 더 낮아진다'가 이 카드의 핵심 명제이고 결과량이 증기 압력이라, 증기 압력을 모르면 이 카드를 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0022",
+   "from": "mate-nonvolatile-solute",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 해설이 '물에서 이온으로 나뉘는 전해질은 입자 수가 늘어나 계산이 달라진다'며 적용 한계를 전해질 개념으로 못 박는다 — 부분 문자열이 아닌 실제 언급이다."
+  },
+  {
+   "candidate_id": "g1-0023",
+   "from": "mate-osmotic-pressure",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 범위 절의 '비휘발성·비전해질'에서만 잡혔다."
+  },
+  {
+   "candidate_id": "g1-0024",
+   "from": "mate-osmotic-pressure",
+   "to": "mate-absolute-temperature",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'몰농도가 같은 두 용액이라면 절대 온도가 높은 쪽의 삼투압이 더 크다'가 절대 온도를 선행량으로 쓰는 관계 명제다."
+  },
+  {
+   "candidate_id": "g1-0025",
+   "from": "mate-raoult-law",
+   "to": "mate-vapor-pressure",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "라울 법칙의 정의가 '용액의 증기 압력을 순수한 용매의 증기 압력에 몰분율을 곱한 값으로 본다'여서 증기 압력 없이는 법칙의 진술 자체가 성립하지 않는다."
+  },
+  {
+   "candidate_id": "g1-0026",
+   "from": "mate-raoult-law",
+   "to": "mate-mole-fraction",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "같은 정의가 '용매의 몰분율'을 곱셈 인자로 직접 쓰므로, 몰분율을 모르면 법칙의 식을 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0027",
+   "from": "mate-raoult-law",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'이 법칙은 비전해질일 때를 전제로 하므로 전해질 수용액에는 그대로 쓸 수 없다'가 관계 명제 본문이고 그 form 의 양이 '용질이 전해질인지 여부'다."
+  },
+  {
+   "candidate_id": "g1-0028",
+   "from": "mate-specific-heat",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'물의 비열이 큰 까닭은 물 분자 사이의 수소 결합을 끊는 데에도 에너지가 쓰이기 때문'이라는 명제가 근거로 삼지만, 물 한정 선수는 이미 '물의 수소 결합'이 맡는다."
+  },
+  {
+   "candidate_id": "g1-0029",
+   "from": "mate-surface-tension",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'물은 수소 결합 덕분에 표면 장력이 특히 크다'가 관계 명제 본문이며, 물 한정 선수는 이미 '물의 수소 결합'이 맡는다."
+  },
+  {
+   "candidate_id": "g1-0030",
+   "from": "mate-vant-hoff-law",
+   "to": "mate-absolute-temperature",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "판트호프 법칙의 정의가 '몰농도와 절대 온도의 곱에 비례한다'여서 절대 온도가 정의 층위에 들어 있고, 섭씨온도를 넣으면 안 된다는 오개념까지 붙어 있다."
+  },
+  {
+   "candidate_id": "g1-0031",
+   "from": "mate-vant-hoff-law",
+   "to": "mate-gas-constant",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "기체 상수는 정의가 아니라 관계 명제('몰농도에 기체 상수와 절대 온도를 곱한 값') 층위에만 나오므로 선수가 아니라 함께 보는 관계로 둔다."
+  },
+  {
+   "candidate_id": "g1-0032",
+   "from": "mate-vant-hoff-law",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 세 곳 모두 '비휘발성·비전해질' 안의 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0033",
+   "from": "mate-vant-hoff-law",
+   "to": "mate-molecular-mass",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'삼투압을 재면 그 용질의 분자량을 구할 수 있다'가 관계 명제 본문이다."
+  },
+  {
+   "candidate_id": "g1-0034",
+   "from": "mate-vapor-pressure-lowering",
+   "to": "mate-vapor-pressure",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "증기 압력 내림의 정의가 '순수한 용매보다 용액의 증기 압력이 작아지는 현상'이라 기준량인 증기 압력을 모르면 정의를 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0035",
+   "from": "mate-vapor-pressure-lowering",
+   "to": "mate-dynamic-equilibrium",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'동적 평형'이 조건 절 한 곳에만 나오고, 동적 평형은 증기 압력 카드가 이미 선수로 붙들고 있어 겹으로 걸 까닭이 없다."
+  },
+  {
+   "candidate_id": "g1-0036",
+   "from": "mate-vapor-pressure-lowering",
+   "to": "mate-mole-fraction",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'용질의 몰분율이 큰 용액일수록 증기 압력 내림이 크게 나타난다'의 선행량이 몰분율이고 링크 주석도 '몰분율로 계산하는 단계로 나아간다'고 적혀 있다."
+  },
+  {
+   "candidate_id": "g1-0037",
+   "from": "mate-vapor-pressure-lowering",
+   "to": "reac-electrolyte",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'전해질'이 두 곳 모두 '비휘발성·비전해질'의 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0038",
+   "from": "mate-water-density",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'얼 때 수소 결합이 육각형 배열을 이루면서 빈 공간이 생긴다'가 관계 명제 본문이며, 물 한정 선수는 이미 '물의 수소 결합'이 맡는다."
+  },
+  {
+   "candidate_id": "g1-0039",
+   "from": "mate-water-density",
+   "to": "mate-atmospheric-pressure",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'기압'이 조건 절의 압력 단위 표기 '1기압'에서 잡힌 부분 문자열이고, 대기압 개념을 부른 것이 아니다."
+  },
+  {
+   "candidate_id": "g1-0040",
+   "from": "mate-water-molecule-structure",
+   "to": "mate-intermolecular-force",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "범위 절이 '분자 사이의 힘은 제외한다'고 못 박고 있어, 이 언급은 두 개념을 잇는 근거가 아니라 가르는 근거다."
+  },
+  {
+   "candidate_id": "g1-0041",
+   "from": "mate-water-molecule-structure",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 '분자 안에서 산소와 수소를 붙잡고 있는 힘이 수소 결합이다'와 그 해설이 두 개념의 경계를 직접 그어 준다."
+  },
+  {
+   "candidate_id": "g1-0042",
+   "from": "mate-water-polarity",
+   "to": "mate-nonpolar-molecule",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'기름처럼 무극성인 물질은 물 분자의 부분 전하에 끌리지 않아 물과 잘 섞이지 않는다'가 무극성 분자를 대조항으로 쓰는 관계 명제다."
+  },
+  {
+   "candidate_id": "g1-0043",
+   "from": "mate-average-bond-energy",
+   "to": "reac-polymer",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'고분자'는 '같게 두고 분자만 바꾸어 볼 때'의 '고 분자'가 붙어 생긴 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0044",
+   "from": "mate-calorimeter",
+   "to": "mate-specific-heat",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'용액의 비열과 질량이 같다면 온도 변화가 클수록 열량도 크다'가 열량계의 계산 명제라, 비열을 모르면 열량계로 무엇을 재는지 계산할 수 없다."
+  },
+  {
+   "candidate_id": "g1-0045",
+   "from": "mate-combustion",
+   "to": "reac-oxidation",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "연소 반응의 정의가 '빛과 열을 내놓는 산화 반응'으로 산화 반응을 상위 갈래로 삼으므로, 산화 반응을 모르면 정의를 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0046",
+   "from": "mate-endothermic-reaction",
+   "to": "reac-photosynthesis",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'광합성이나 탄산수소 소듐의 열분해처럼 열을 받아들이며 진행되는 반응은 반응 엔탈피가 0보다 크다'가 광합성을 흡열 반응의 사례로 명제 안에 세운다."
+  },
+  {
+   "candidate_id": "g1-0047",
+   "from": "mate-enthalpy-of-combustion",
+   "to": "mate-molecular-mass",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'연소 엔탈피의 크기가 같다면 분자량이 큰 연료일수록 1 g 당 내놓는 열은 작아진다'의 선행량이 분자량이다."
+  },
+  {
+   "candidate_id": "g1-0048",
+   "from": "mate-fuel-efficiency",
+   "to": "mate-molecular-mass",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "연료 효율 비교의 조건과 오개념 해설('수소는 분자량이 2로 아주 작다')이 모두 분자량을 비교 축으로 쓴다."
+  },
+  {
+   "candidate_id": "g1-0049",
+   "from": "mate-hess-law",
+   "to": "mate-reaction-rate",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 '헤스 법칙에 따르면 반응 속도도 경로와 상관없이 같다'와 그 해설이 두 개념을 갈라 주는 대조 근거다."
+  },
+  {
+   "candidate_id": "g1-0050",
+   "from": "mate-reaction-spontaneity",
+   "to": "mate-reaction-rate",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'자발적이라는 말은 저절로 진행한다는 뜻일 뿐 빠르게 일어난다는 뜻이 아니다'가 관계 명제 본문에서 두 개념을 직접 대조한다."
+  },
+  {
+   "candidate_id": "g1-0051",
+   "from": "mate-activated-state",
+   "to": "mate-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "활성화 상태를 읽는 에너지 도표의 세로축이 엔탈피이므로 두 카드는 같은 그림을 공유한다 — 뒤집으려면 그 도표의 세로축이 엔탈피가 아님을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0052",
+   "from": "mate-activation-energy",
+   "to": "mate-reaction-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'정반응과 역반응의 활성화 에너지 차이가 반응 엔탈피이며, 활성화 에너지만으로 반응 엔탈피를 알 수는 없다'가 두 양의 관계이자 경계를 함께 말한다."
+  },
+  {
+   "candidate_id": "g1-0053",
+   "from": "mate-activation-energy",
+   "to": "mate-exothermic-reaction",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 '발열 반응이므로 활성화 에너지를 넘지 않아도 된다'가 두 개념을 잇는 대조 근거다."
+  },
+  {
+   "candidate_id": "g1-0054",
+   "from": "mate-catalyst",
+   "to": "mate-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'촉매를 넣어도 반응물과 생성물의 엔탈피는 그대로'가 관계 명제 본문이다."
+  },
+  {
+   "candidate_id": "g1-0055",
+   "from": "mate-catalyst",
+   "to": "mate-reaction-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "같은 명제가 '그래서 반응 엔탈피가 달라지지 않는다'로 이어져 반응 엔탈피를 결과량으로 못 박는다."
+  },
+  {
+   "candidate_id": "g1-0056",
+   "from": "mate-enzyme",
+   "to": "reac-oxidation-number",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'산화수'가 '과산화 수소수'의 부분 문자열로 잡혔다 — 효소 카드는 산화수를 다루지 않는다."
+  },
+  {
+   "candidate_id": "g1-0057",
+   "from": "mate-negative-catalyst",
+   "to": "mate-reaction-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 '부촉매를 넣으면 반응 엔탈피가 커진다'와 그 해설이 두 개념을 직접 잇는다."
+  },
+  {
+   "candidate_id": "g1-0058",
+   "from": "mate-negative-catalyst",
+   "to": "mate-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "같은 해설이 '반응물과 생성물의 엔탈피가 그대로이므로'라며 엔탈피 자체를 근거로 세운다."
+  },
+  {
+   "candidate_id": "g1-0059",
+   "from": "mate-positive-catalyst",
+   "to": "mate-enthalpy",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 해설이 '반응물과 생성물의 엔탈피가 그대로이므로 만들어지는 양이 늘지는 않는다'며 엔탈피를 근거로 든다."
+  },
+  {
+   "candidate_id": "g1-0060",
+   "from": "mate-rate-law",
+   "to": "mate-crystalline-solid",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'결정'이 '실험으로 얻은 자료에서 결정되며'의 결정(determine)이라 결정성 고체와는 뜻이 다르다."
+  },
+  {
+   "candidate_id": "g1-0061",
+   "from": "mate-reaction-rate",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "반응 속도의 정의가 '몰농도로 계산한다'여서 몰농도를 모르면 반응 속도를 정의대로 잴 수 없고, 반응 속도 카드에는 지금 선수 링크가 하나도 없다."
+  },
+  {
+   "candidate_id": "g1-0062",
+   "from": "mate-reaction-rate",
+   "to": "mate-partial-pressure",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'기체의 몰농도가 부분 압력에 비례하므로 압력 변화를 재어 반응 속도를 나타낼 수 있다'가 관계 명제 본문이다."
+  },
+  {
+   "candidate_id": "g1-0063",
+   "from": "reac-acid-base-strength",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 비교를 통제하는 조건 절('몰농도와 온도가 같음')에만 나오고 산 염기의 세기와 몰농도 사이의 관계를 말하는 명제가 없다."
+  },
+  {
+   "candidate_id": "g1-0064",
+   "from": "reac-acid-base-titration",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'중화점까지 떨어뜨린 부피를 재면 시료의 몰농도를 계산해 낼 수 있다'가 적정의 목적 자체이므로 몰농도를 모르면 적정이 무엇을 구하는지 말할 수 없다."
+  },
+  {
+   "candidate_id": "g1-0065",
+   "from": "reac-buffer-action-in-organism",
+   "to": "reac-cellular-respiration",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'호흡'이 '과호흡'의 부분 문자열로 잡혔고, 세포 호흡을 가리키지 않는다."
+  },
+  {
+   "candidate_id": "g1-0066",
+   "from": "reac-buffer-action-in-organism",
+   "to": "mate-enzyme",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'효소가 제 기능을 하려면 pH 가 일정해야 하므로 완충 작용은 생명 유지에 빠질 수 없다'가 효소를 근거로 세우는 관계 명제다."
+  },
+  {
+   "candidate_id": "g1-0067",
+   "from": "reac-conjugate-acid-base-pair",
+   "to": "mate-dynamic-equilibrium",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'짝염기와 짝산 사이의 반응도 같이 일어나 동적 평형에 이른다'가 관계 명제 본문이라, 동적 평형을 모르면 이 명제를 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0068",
+   "from": "reac-conjugate-acid-base-pair",
+   "to": "mate-closed-system",
+   "basis": "mention",
+   "verdict": "uncertain",
+   "reason": "'닫힌계'가 조건 절 한 곳에만 나오지만 그 절('닫힌계에서 가역 반응이 진행됨')은 평형이 성립하는 전제를 열역학 계 개념으로 정확히 부른 것이라 우연한 겹침이 아니다 — 열역학 계를 산 염기 평형의 선수로 걸지는 사람이 정할 일이다."
+  },
+  {
+   "candidate_id": "g1-0069",
+   "from": "reac-ionization-equilibrium",
+   "to": "reac-polymer",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'고분자'는 '이온만 남아 있고 분자는 없다'의 '고 분자'가 붙어 생긴 부분 문자열이다."
+  },
+  {
+   "candidate_id": "g1-0070",
+   "from": "reac-neutralization-reaction",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 오개념 해설 한 줄에만 나오고 그 몫은 '중화 반응의 양적 관계' 카드(g1-0074)가 이미 맡는다."
+  },
+  {
+   "candidate_id": "g1-0071",
+   "from": "reac-ph-of-weak-acid-solution",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 비교 조건 절('몰농도·가수·온도가 같음')에만 나온다."
+  },
+  {
+   "candidate_id": "g1-0072",
+   "from": "reac-ph-of-weak-base-solution",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 비교 조건 절('몰농도·가수·온도가 같음')에만 나온다."
+  },
+  {
+   "candidate_id": "g1-0073",
+   "from": "reac-ph",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "pH 는 정의에서 '하이드로늄 이온의 농도'를 쓸 뿐 몰농도는 비교 조건 절에만 나온다."
+  },
+  {
+   "candidate_id": "g1-0074",
+   "from": "reac-stoichiometry-of-neutralization",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "정의가 '산 쪽의 가수·몰농도·부피를 곱한 값'이라 몰농도가 계산식의 인자로 정의 층위에 박혀 있다."
+  },
+  {
+   "candidate_id": "g1-0075",
+   "from": "reac-strong-acid",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 비교 조건 절에만 나온다."
+  },
+  {
+   "candidate_id": "g1-0076",
+   "from": "reac-strong-base",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 비교 조건 절에만 나온다."
+  },
+  {
+   "candidate_id": "g1-0077",
+   "from": "reac-weak-acid",
+   "to": "mate-molarity",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'몰농도'가 비교 조건 절에만 나온다."
+  },
+  {
+   "candidate_id": "g1-0078",
+   "from": "reac-reducing-agent",
+   "to": "mate-catalyst",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 해설이 '그것은 촉매의 성질이다. 환원제는 전자를 내주면서 자신이 변한다'며 두 개념을 직접 갈라 준다."
+  },
+  {
+   "candidate_id": "g1-0079",
+   "from": "reac-acetylsalicylic-acid",
+   "to": "mate-catalyst",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'촉매'가 아스피린 합성 실험 조건('인산을 촉매로 넣고')에만 적혀 있고 촉매 개념과의 관계를 말하는 명제가 없다."
+  },
+  {
+   "candidate_id": "g1-0080",
+   "from": "reac-alcohol",
+   "to": "mate-complete-combustion",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'알코올은 산소가 넉넉한 곳에서 완전히 태우면 이산화 탄소와 물만 남는다'가 완전 연소 카드의 명제와 같은 내용을 서로에게서 확인해 준다."
+  },
+  {
+   "candidate_id": "g1-0081",
+   "from": "reac-aldehyde-group",
+   "to": "reac-oxidizing-agent",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'산화제'가 반응 조건 절에만 적혀 있고, 개념 층위의 연결은 '탄소 화합물의 산화 반응' 카드(g1-0097)가 맡는다."
+  },
+  {
+   "candidate_id": "g1-0082",
+   "from": "reac-aldehyde",
+   "to": "reac-oxidizing-agent",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'산화제'가 반응 조건 절에만 적혀 있고, 개념 층위의 연결은 g1-0097 이 맡는다."
+  },
+  {
+   "candidate_id": "g1-0083",
+   "from": "reac-alkyl-group",
+   "to": "mate-boiling-point",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 해설이 '알킬기는 주로 용해도나 끓는점 같은 성질에 영향을 준다'며 끓는점을 알킬기의 결과량으로 세운다."
+  },
+  {
+   "candidate_id": "g1-0084",
+   "from": "reac-carboxyl-group",
+   "to": "mate-catalyst",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'촉매'가 에스터화 실험 조건('산 촉매를 넣고 데우는 조건')에만 적혀 있다."
+  },
+  {
+   "candidate_id": "g1-0085",
+   "from": "reac-carboxylic-acid",
+   "to": "reac-oxidizing-agent",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'산화제'가 반응 조건 절에만 적혀 있고, 개념 층위의 연결은 g1-0097 이 맡는다."
+  },
+  {
+   "candidate_id": "g1-0086",
+   "from": "reac-carboxylic-acid",
+   "to": "reac-strong-acid",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 '식초는 강산 수용액이다'와 그 해설이 카복실산을 강산과 대조해 자리매김한다."
+  },
+  {
+   "candidate_id": "g1-0087",
+   "from": "reac-ester",
+   "to": "mate-catalyst",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'촉매'가 에스터화 실험 조건 절에만 적혀 있다."
+  },
+  {
+   "candidate_id": "g1-0088",
+   "from": "reac-functional-group",
+   "to": "reac-oxidation",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'산화 반응'이 단원 범위를 적은 scope 절에만 나오고, 작용기 카드는 이미 '탄소 화합물의 산화 반응'으로 next 를 뻗고 있다."
+  },
+  {
+   "candidate_id": "g1-0089",
+   "from": "reac-hydroxy-group",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'-OH 를 지닌 분자는 이웃 분자의 -OH 와 수소 결합을 이루어 끓는점이 높다'가 이 카드의 핵심 명제라, 수소 결합을 모르면 하이드록시기가 왜 그런 성질을 내는지 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0090",
+   "from": "reac-hydroxy-group",
+   "to": "mate-molecular-mass",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "같은 명제가 '분자량이 비슷한 다른 탄소 화합물보다'라며 분자량을 비교 조건으로 쓴다."
+  },
+  {
+   "candidate_id": "g1-0091",
+   "from": "reac-hydroxy-group",
+   "to": "mate-boiling-point",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "같은 명제의 결과량이 끓는점이다."
+  },
+  {
+   "candidate_id": "g1-0092",
+   "from": "reac-hydroxy-group",
+   "to": "mate-catalyst",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'촉매'가 에스터화 실험 조건 절에만 적혀 있다."
+  },
+  {
+   "candidate_id": "g1-0093",
+   "from": "reac-nucleotide",
+   "to": "mate-hydrogen-bond",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'가닥에 매달린 염기끼리 수소 결합을 이루면서 두 가닥이 이중 나선으로 감긴다'가 핵심 명제라, 수소 결합을 모르면 이중 나선이 왜 붙어 있는지 말할 수 없다."
+  },
+  {
+   "candidate_id": "g1-0094",
+   "from": "reac-oxidation-of-alcohol",
+   "to": "reac-oxidizing-agent",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "'에탄올이 산화될 때 산화제 쪽은 환원되면서 색이 달라진다'가 관계 명제 본문이라, 산화제를 모르면 이 반응이 무엇으로 일어나는지 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0095",
+   "from": "reac-oxidation-of-aldehyde",
+   "to": "reac-oxidizing-agent",
+   "basis": "mention",
+   "verdict": "invalid",
+   "reason": "'산화제'가 반응 조건 절에만 적혀 있고, 개념 층위의 연결은 상위 카드 g1-0097 이 맡는다."
+  },
+  {
+   "candidate_id": "g1-0096",
+   "from": "reac-oxidation-of-aldehyde",
+   "to": "reac-oxidation",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "오개념 '포도주가 시어지는 발효는 산화 반응과 관계없는 다른 변화다'와 그 해설이 이 반응을 산화 반응으로 못 박는다."
+  },
+  {
+   "candidate_id": "g1-0097",
+   "from": "reac-oxidation-of-carbon-compound",
+   "to": "reac-oxidizing-agent",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "오개념 해설이 '다이크로뮴산 칼륨 같은 산화제를 써도 산화가 일어난다'며 산화제를 이 반응이 일어나는 조건 개념으로 세우므로, 산화제를 모르면 이 카드의 오개념 교정을 읽을 수 없다."
+  },
+  {
+   "candidate_id": "g1-0098",
+   "from": "reac-oxidation-of-carbon-compound",
+   "to": "reac-oxidation",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "탄소 화합물의 산화 반응은 산화 반응의 특수 사례이고 오개념 해설도 '산소를 얻거나 수소를 잃는' 산화 반응의 정의를 그대로 끌어 쓴다."
+  },
+  {
+   "candidate_id": "g1-0099",
+   "from": "reac-silver-mirror-reaction",
+   "to": "reac-reducing-agent",
+   "basis": "mention",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "은거울 반응의 명제가 '-CHO 물질이 산화되는 사이 은 이온은 환원된다'는 산화·환원 짝을 그대로 서술하고 조건 절이 포도당을 환원제로 지목한다."
+  },
+  {
+   "candidate_id": "g1-0100",
+   "from": "mate-ideal-gas-law",
+   "to": "mate-absolute-temperature",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'절대 온도' 카드가 이미 '이상 기체 방정식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0101",
+   "from": "mate-boyle-law",
+   "to": "mate-atmospheric-pressure",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'대기압' 카드가 이미 '보일 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0102",
+   "from": "mate-partial-pressure",
+   "to": "mate-atmospheric-pressure",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'대기압' 카드가 이미 '부분 압력'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0103",
+   "from": "mate-charles-law",
+   "to": "mate-avogadro-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'아보가드로 법칙' 카드가 이미 '샤를 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0104",
+   "from": "mate-intermolecular-force",
+   "to": "mate-boiling-point",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'끓는점' 카드가 이미 '분자 간 상호 작용'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0105",
+   "from": "mate-gas-pressure",
+   "to": "mate-charles-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'샤를 법칙' 카드가 '기체의 압력'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0106",
+   "from": "mate-ideal-gas-law",
+   "to": "mate-dalton-law-of-partial-pressure",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'부분 압력 법칙' 카드가 이미 '이상 기체 방정식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0107",
+   "from": "mate-boiling-point",
+   "to": "mate-dipole-dipole-force",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "끓는점은 증기 압력으로 정의되고 쌍극자·쌍극자 힘 카드는 거꾸로 끓는점으로 그 세기를 견주므로 어느 쪽도 한 방향 선수가 아니며, 같은 카드에서 수소 결합·분산력이 이미 related 로 걸려 있어 세 힘의 층위도 그래야 맞는다."
+  },
+  {
+   "candidate_id": "g1-0108",
+   "from": "mate-boiling-point",
+   "to": "mate-dynamic-equilibrium",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'동적 평형' 카드가 이미 '끓는점'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0109",
+   "from": "mate-intermolecular-force",
+   "to": "mate-dynamic-equilibrium",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'동적 평형' 카드가 이미 '분자 간 상호 작용'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0110",
+   "from": "mate-avogadro-law",
+   "to": "mate-gas-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'기체 상수' 카드가 이미 '아보가드로 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0111",
+   "from": "mate-absolute-temperature",
+   "to": "mate-gas-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'기체 상수' 카드가 이미 '절대 온도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0112",
+   "from": "mate-dispersion-force",
+   "to": "mate-hydrogen-bond",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'수소 결합' 카드가 이미 '분산력'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0113",
+   "from": "mate-boyle-law",
+   "to": "mate-ideal-gas",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'이상 기체' 카드가 이미 '보일 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0114",
+   "from": "mate-charles-law",
+   "to": "mate-ideal-gas",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'이상 기체' 카드가 이미 '샤를 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0115",
+   "from": "mate-hydrogen-bond",
+   "to": "mate-intermolecular-force",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "수소 결합은 분자 간 상호 작용의 한 갈래이고 같은 카드의 형제인 쌍극자·쌍극자 힘·분산력이 모두 분자 간 상호 작용을 선수로 걸고 있어, 수소 결합만 비워 두면 층위가 어긋난다."
+  },
+  {
+   "candidate_id": "g1-0116",
+   "from": "mate-covalent-crystal",
+   "to": "mate-ionic-crystal",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'이온 결정' 카드가 이미 '공유 결정'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0117",
+   "from": "mate-ideal-gas-law",
+   "to": "mate-mole-fraction",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'몰분율' 카드가 '이상 기체 방정식'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0118",
+   "from": "mate-gas-constant",
+   "to": "mate-molecular-mass",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'분자량' 카드가 이미 '기체 상수'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0119",
+   "from": "mate-avogadro-law",
+   "to": "mate-molecular-mass",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'분자량' 카드가 이미 '아보가드로 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0120",
+   "from": "mate-intermolecular-force",
+   "to": "mate-nonpolar-molecule",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'무극성 분자' 카드가 이미 '분자 간 상호 작용'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0121",
+   "from": "mate-ideal-gas-law",
+   "to": "mate-partial-pressure",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'부분 압력' 카드가 이미 '이상 기체 방정식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0122",
+   "from": "mate-intermolecular-force",
+   "to": "mate-polar-molecule",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'극성 분자' 카드가 이미 '분자 간 상호 작용'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0123",
+   "from": "mate-vapor-pressure",
+   "to": "mate-standard-boiling-point",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'기준 끓는점' 카드가 이미 '증기 압력'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0124",
+   "from": "mate-intermolecular-force",
+   "to": "mate-standard-boiling-point",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'기준 끓는점' 카드가 이미 '분자 간 상호 작용'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0125",
+   "from": "mate-hydrogen-bond",
+   "to": "mate-vapor-pressure",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'증기 압력' 카드가 이미 '수소 결합'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0126",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-adhesive-force",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'부착력' 카드가 '물의 수소 결합'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0127",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-capillary-action",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'모세관 현상' 카드가 이미 '물의 수소 결합'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0128",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-heat-capacity",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'열용량' 카드가 이미 '물의 수소 결합'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0129",
+   "from": "mate-water-molecule-structure",
+   "to": "mate-hydration",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'수화' 카드가 이미 '물 분자의 구조'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0130",
+   "from": "mate-hydrogen-bond-in-water",
+   "to": "mate-hydration",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'수화' 카드가 이미 '물의 수소 결합'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0131",
+   "from": "mate-molality",
+   "to": "mate-molal-boiling-point-elevation-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'몰랄 오름 상수' 카드가 '몰랄 농도'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0132",
+   "from": "mate-molality",
+   "to": "mate-molal-freezing-point-depression-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'몰랄 내림 상수' 카드가 '몰랄 농도'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0133",
+   "from": "mate-boiling-point-elevation",
+   "to": "mate-raoult-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'라울 법칙' 카드가 이미 '끓는점 오름'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0134",
+   "from": "mate-freezing-point-depression",
+   "to": "mate-raoult-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'라울 법칙' 카드가 이미 '어는점 내림'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0135",
+   "from": "mate-molarity",
+   "to": "mate-semipermeable-membrane",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'반투막' 카드가 이미 '몰농도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0136",
+   "from": "mate-nonvolatile-solute",
+   "to": "mate-vant-hoff-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'판트호프 법칙' 카드가 '비휘발성 용질'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0137",
+   "from": "mate-osmosis",
+   "to": "mate-vant-hoff-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'판트호프 법칙' 카드가 이미 '삼투 현상'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0138",
+   "from": "mate-reaction-enthalpy",
+   "to": "mate-average-bond-energy",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'평균 결합 에너지' 카드가 이미 '반응 엔탈피'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0139",
+   "from": "mate-hess-law",
+   "to": "mate-average-bond-energy",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'평균 결합 에너지' 카드가 이미 '헤스 법칙'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0140",
+   "from": "mate-exothermic-reaction",
+   "to": "mate-calorimeter",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'열량계' 카드가 이미 '발열 반응'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0141",
+   "from": "mate-reaction-enthalpy",
+   "to": "mate-entropy-change-of-surroundings",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'주위의 엔트로피 변화' 카드가 '반응 엔탈피'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0142",
+   "from": "mate-reaction-spontaneity",
+   "to": "mate-entropy",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'엔트로피' 카드가 이미 '반응의 자발성'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0143",
+   "from": "mate-combustion",
+   "to": "mate-fuel-efficiency",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'연료의 효율성' 카드가 이미 '연소 반응'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0144",
+   "from": "mate-reaction-enthalpy",
+   "to": "mate-hess-law",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'헤스 법칙' 카드가 이미 '반응 엔탈피'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0145",
+   "from": "mate-surroundings",
+   "to": "mate-internal-energy",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'내부 에너지' 카드가 이미 '주위'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0146",
+   "from": "mate-entropy-change",
+   "to": "mate-reaction-spontaneity",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'반응의 자발성' 카드가 이미 '엔트로피 변화'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0147",
+   "from": "mate-entropy-change-of-surroundings",
+   "to": "mate-reaction-spontaneity",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'반응의 자발성' 카드가 이미 '주위의 엔트로피 변화'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0148",
+   "from": "mate-enthalpy-of-combustion",
+   "to": "mate-standard-enthalpy-of-formation",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'표준 생성 엔탈피' 카드가 이미 '연소 엔탈피'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0149",
+   "from": "mate-isolated-system",
+   "to": "mate-thermodynamic-system",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'계' 카드가 이미 '고립계'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0150",
+   "from": "mate-activation-energy",
+   "to": "mate-activated-complex",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'활성화물' 카드가 이미 '활성화 에너지'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0151",
+   "from": "mate-effective-collision",
+   "to": "mate-activated-complex",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'활성화물' 카드가 이미 '유효 충돌'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0152",
+   "from": "mate-effective-collision",
+   "to": "mate-activated-state",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'활성화 상태' 카드가 이미 '유효 충돌'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0153",
+   "from": "mate-initial-reaction-rate",
+   "to": "mate-average-reaction-rate",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'평균 반응 속도' 카드가 이미 '초기 반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0154",
+   "from": "mate-reaction-rate",
+   "to": "mate-catalyst",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'촉매' 카드가 이미 '반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0155",
+   "from": "mate-rate-law",
+   "to": "mate-effect-of-concentration-on-reaction-rate",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'농도와 반응 속도' 카드가 이미 '반응 속도식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0156",
+   "from": "mate-reaction-rate",
+   "to": "mate-effect-of-temperature-on-reaction-rate",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'온도와 반응 속도' 카드가 '반응 속도'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0157",
+   "from": "mate-activation-energy",
+   "to": "mate-effect-of-temperature-on-reaction-rate",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'온도와 반응 속도' 카드가 이미 '활성화 에너지'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0158",
+   "from": "mate-reaction-rate",
+   "to": "mate-effective-collision",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'유효 충돌' 카드가 이미 '반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0159",
+   "from": "mate-positive-catalyst",
+   "to": "mate-enzyme",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'효소' 카드가 이미 '정촉매'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0160",
+   "from": "mate-initial-reaction-rate",
+   "to": "mate-first-order-reaction",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'1차 반응' 카드가 이미 '초기 반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0161",
+   "from": "mate-rate-law",
+   "to": "mate-first-order-reaction",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'1차 반응' 카드가 이미 '반응 속도식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0162",
+   "from": "mate-reaction-rate",
+   "to": "mate-half-life",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'반감기' 카드가 이미 '반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0163",
+   "from": "mate-rate-law",
+   "to": "mate-half-life",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'반감기' 카드가 이미 '반응 속도식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0164",
+   "from": "mate-reaction-rate",
+   "to": "mate-instantaneous-reaction-rate",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'순간 반응 속도' 카드가 이미 '반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0165",
+   "from": "mate-activation-energy",
+   "to": "mate-negative-catalyst",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'부촉매' 카드가 이미 '활성화 에너지'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0166",
+   "from": "mate-rate-law",
+   "to": "mate-overall-reaction-order",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'전체 반응 차수' 카드가 이미 '반응 속도식'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0167",
+   "from": "mate-first-order-reaction",
+   "to": "mate-overall-reaction-order",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'전체 반응 차수' 카드가 이미 '1차 반응'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0168",
+   "from": "mate-activation-energy",
+   "to": "mate-positive-catalyst",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'정촉매' 카드가 이미 '활성화 에너지'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0169",
+   "from": "mate-effect-of-temperature-on-reaction-rate",
+   "to": "mate-rate-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'반응 속도 상수' 카드가 이미 '온도와 반응 속도'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0170",
+   "from": "reac-acid-base-strength",
+   "to": "reac-acid-ionization-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'산의 이온화 상수' 카드가 '산 염기의 세기'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0171",
+   "from": "reac-bronsted-lowry-acid",
+   "to": "reac-amphoteric-substance",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'양쪽성 물질' 카드가 '브뢴스테드·라우리 산'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0172",
+   "from": "reac-conjugate-acid-base-pair",
+   "to": "reac-amphoteric-substance",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'양쪽성 물질' 카드가 이미 '짝산·짝염기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0173",
+   "from": "reac-acid-base-strength",
+   "to": "reac-base-ionization-constant",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'염기의 이온화 상수' 카드가 '산 염기의 세기'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0174",
+   "from": "reac-ph",
+   "to": "reac-buffer-action-in-organism",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'생체 내 완충 작용' 카드가 이미 'pH'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0175",
+   "from": "reac-conjugate-acid-base-pair",
+   "to": "reac-buffer-action-in-organism",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'생체 내 완충 작용' 카드가 이미 '짝산·짝염기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0176",
+   "from": "reac-ph",
+   "to": "reac-indicator-color-change-range",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'지시약의 변색 범위' 카드가 이미 'pH'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0177",
+   "from": "reac-ph-of-weak-acid-solution",
+   "to": "reac-ionization-constant-of-water",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'물의 이온화 상수' 카드가 이미 '약산 수용액의 pH'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0178",
+   "from": "reac-bronsted-lowry-base",
+   "to": "reac-lewis-acid-base",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'루이스 산과 염기' 카드가 이미 '브뢴스테드·라우리 염기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0179",
+   "from": "reac-acidity-of-salt-solution",
+   "to": "reac-neutralization-point",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'중화점' 카드가 이미 '염 수용액의 액성'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0180",
+   "from": "reac-acid-base-titration",
+   "to": "reac-neutralization-reaction",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'중화 반응' 카드가 이미 '중화 적정'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0181",
+   "from": "reac-ph-of-weak-base-solution",
+   "to": "reac-ph",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'pH' 카드가 이미 '약염기 수용액의 pH'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0182",
+   "from": "reac-neutralization-point",
+   "to": "reac-stoichiometry-of-neutralization",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'중화 반응의 양적 관계' 카드가 이미 '중화점'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0183",
+   "from": "reac-titration-curve",
+   "to": "reac-strong-acid",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'강산' 카드가 이미 '중화 적정 곡선'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0184",
+   "from": "reac-weak-base",
+   "to": "reac-strong-base",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'강염기' 카드가 이미 '약염기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0185",
+   "from": "reac-weak-acid",
+   "to": "reac-weak-base",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'약염기' 카드가 이미 '약산'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0186",
+   "from": "reac-electrolyte",
+   "to": "reac-all-solid-state-battery",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'전고체 전지' 카드가 이미 '전해질'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0187",
+   "from": "reac-oxidation",
+   "to": "reac-chemical-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'화학 전지' 카드가 '산화 반응'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0188",
+   "from": "reac-reduction",
+   "to": "reac-chemical-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'화학 전지' 카드가 '환원 반응'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0189",
+   "from": "reac-chemical-cell",
+   "to": "reac-daniell-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'다니엘 전지' 카드가 '화학 전지'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0190",
+   "from": "reac-chemical-cell",
+   "to": "reac-electrolysis",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'전기 분해' 카드가 '화학 전지'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0191",
+   "from": "reac-electrolysis",
+   "to": "reac-electrolyte",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "전기 분해는 전해질이 이온의 길을 내주어야 일어나고 전해질 카드가 그 방향으로 next 를 뻗어 두었으므로 역방향은 선수이며, 전해질에서 전기 분해로 돌아오는 선수 경로가 없어 순환하지 않는다."
+  },
+  {
+   "candidate_id": "g1-0192",
+   "from": "reac-secondary-cell",
+   "to": "reac-electrolyte",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'전해질' 카드가 이미 '이차 전지'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0193",
+   "from": "reac-ionization-tendency",
+   "to": "reac-electroplating",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'도금' 카드가 이미 '금속의 이온화 경향'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0194",
+   "from": "reac-chemical-cell",
+   "to": "reac-half-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'반쪽 전지' 카드가 '화학 전지'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0195",
+   "from": "reac-chemical-cell",
+   "to": "reac-hydrogen-fuel-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'수소 연료 전지' 카드가 '화학 전지'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0196",
+   "from": "reac-reducing-agent",
+   "to": "reac-hydrogen-fuel-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'수소 연료 전지' 카드가 이미 '환원제'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0197",
+   "from": "reac-electrolyte",
+   "to": "reac-hydrogen-fuel-cell",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'수소 연료 전지' 카드가 이미 '전해질'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0198",
+   "from": "reac-chemical-cell",
+   "to": "reac-ionization-tendency",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "어느 금속이 (-)극이 되는지를 이온화 경향이 정하므로 화학 전지를 꾸미려면 이온화 경향이 먼저이고, 이온화 경향의 선수는 산화 반응뿐이라 화학 전지로 되돌아오는 순환이 생기지 않는다."
+  },
+  {
+   "candidate_id": "g1-0199",
+   "from": "reac-oxidizing-agent",
+   "to": "reac-oxidation-number-rule",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'산화수 규칙' 카드가 이미 '산화제'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0200",
+   "from": "reac-oxidation-number",
+   "to": "reac-redox-equation",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'산화·환원 반응식' 카드가 이미 '산화수'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0201",
+   "from": "reac-redox-simultaneity",
+   "to": "reac-redox-equation",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'산화·환원 반응식' 카드가 이미 '산화·환원 반응의 동시성'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0202",
+   "from": "reac-reduction",
+   "to": "reac-smelting",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'제련' 카드가 이미 '환원 반응'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0203",
+   "from": "reac-chemical-cell",
+   "to": "reac-standard-cell-potential",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'표준 전지 전위' 카드가 이미 '화학 전지'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0204",
+   "from": "reac-half-cell",
+   "to": "reac-standard-hydrogen-electrode",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'표준 수소 전극' 카드가 '반쪽 전지'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0205",
+   "from": "reac-hydroxy-group",
+   "to": "reac-acetylsalicylic-acid",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'아세틸살리실산' 카드가 '하이드록시기'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0206",
+   "from": "reac-carboxyl-group",
+   "to": "reac-acetylsalicylic-acid",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'아세틸살리실산' 카드가 이미 '카복실기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0207",
+   "from": "reac-monomer",
+   "to": "reac-addition-polymerization",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'첨가 중합 반응' 카드가 이미 '단위체'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0208",
+   "from": "reac-oxidation-of-aldehyde",
+   "to": "reac-aldehyde-group",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "알데하이드의 산화는 -CHO 가 -COOH 로 바뀌는 반응이라 알데하이드기를 모르면 무엇이 바뀌는지 말할 수 없고, 알데하이드기 쪽 선수는 작용기로만 뻗어 있어 순환이 없다."
+  },
+  {
+   "candidate_id": "g1-0209",
+   "from": "reac-carboxyl-group",
+   "to": "reac-aldehyde-group",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'알데하이드기' 카드가 이미 '카복실기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0210",
+   "from": "reac-functional-group",
+   "to": "reac-alkyl-group",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'알킬기' 카드가 이미 '작용기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0211",
+   "from": "reac-alcohol",
+   "to": "reac-artificial-fragrance",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'인공 향' 카드가 '알코올'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0212",
+   "from": "reac-carboxylic-acid",
+   "to": "reac-artificial-fragrance",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'인공 향' 카드가 이미 '카복실산'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0213",
+   "from": "reac-carboxyl-group",
+   "to": "reac-condensation-polymerization",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'축합 중합 반응' 카드가 이미 '카복실기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0214",
+   "from": "reac-functional-group",
+   "to": "reac-monomer",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'단위체' 카드가 이미 '작용기'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0215",
+   "from": "reac-monomer",
+   "to": "reac-natural-polymer",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'천연 고분자' 카드가 이미 '단위체'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0216",
+   "from": "reac-polymerization",
+   "to": "reac-nucleotide",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'뉴클레오타이드' 카드가 이미 '중합 반응'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0217",
+   "from": "reac-polymer",
+   "to": "reac-nylon",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'나일론' 카드가 이미 '고분자 화합물'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0218",
+   "from": "reac-aldehyde",
+   "to": "reac-oxidation-of-alcohol",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'알코올의 산화' 카드가 '알데하이드'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0219",
+   "from": "reac-oxidation-of-aldehyde",
+   "to": "reac-oxidation-of-alcohol",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "prereq",
+   "reason": "알코올의 산화로 생긴 알데하이드가 이 반응의 출발 물질이므로 앞 단계가 선수이고, 알코올의 산화에서 알데하이드의 산화로 돌아오는 선수 경로가 없어 순환하지 않는다."
+  },
+  {
+   "candidate_id": "g1-0220",
+   "from": "reac-carbon-compound",
+   "to": "reac-oxidation-of-carbon-compound",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'탄소 화합물의 산화 반응' 카드가 이미 '탄소 화합물'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0221",
+   "from": "reac-condensation-polymerization",
+   "to": "reac-plastic",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'플라스틱' 카드가 이미 '축합 중합 반응'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0222",
+   "from": "reac-polymer",
+   "to": "reac-plastic",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'플라스틱' 카드가 이미 '고분자 화합물'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  },
+  {
+   "candidate_id": "g1-0223",
+   "from": "reac-aldehyde-group",
+   "to": "reac-silver-mirror-reaction",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "next",
+   "reason": "'은거울 반응' 카드가 '알데하이드기'을(를) 선수로 걸어 두었으므로 역방향은 next 여야 하며, 여기에 prereq 를 되달면 두 카드 사이에 선수 순환이 생긴다."
+  },
+  {
+   "candidate_id": "g1-0224",
+   "from": "reac-aldehyde",
+   "to": "reac-silver-mirror-reaction",
+   "basis": "reverse_missing",
+   "verdict": "valid",
+   "type": "related",
+   "reason": "'은거울 반응' 카드가 이미 '알데하이드'을(를) related 로 걸어 두었고 두 카드가 같은 맥락을 서로 인용하므로, 방향 없는 관계를 한쪽만 비워 둘 까닭이 없다 — 뒤집으려면 그 기존 링크가 잘못 걸렸음을 보여야 한다."
+  }
+ ],
+ "registry_suggestions": [],
+ "homonym_proposals": [
+  {
+   "surface": "전해질",
+   "rule_hint": "whole_word_only",
+   "reason": "'비전해질'(전해질이 아님)이 '전해질'로 잡혀 용해도·총괄성 카드 8장이 전해질 카드와 이어질 뻔했다. 뜻이 정반대인 부정 접두사 '비-'가 붙은 낱말을 부분 문자열로 물어 오는 것을 막아야 한다.",
+   "rejected_candidates": [
+    "g1-0005",
+    "g1-0008",
+    "g1-0017",
+    "g1-0018",
+    "g1-0019",
+    "g1-0023",
+    "g1-0032",
+    "g1-0037"
+   ]
+  },
+  {
+   "surface": "결정",
+   "rule_hint": "homonym",
+   "reason": "'결정(結晶, crystal)'과 '결정하다(決定, determine)'가 표기가 같다. homonyms.yaml 의 금지쌍에 올릴 값어치가 있다.",
+   "rejected_candidates": [
+    "g1-0060"
+   ]
+  },
+  {
+   "surface": "고분자",
+   "rule_hint": "ignore_spacing + whole_word_only",
+   "reason": "'…같고 분자성…', '…두고 분자만…', '…있고 분자는…'에서 공백을 지우자 '고분자'가 만들어졌다. ignore_spacing 을 낱말 경계 없이 적용한 탓이다.",
+   "rejected_candidates": [
+    "g1-0002",
+    "g1-0043",
+    "g1-0069"
+   ]
+  },
+  {
+   "surface": "산화수",
+   "rule_hint": "ignore_spacing + whole_word_only",
+   "reason": "'과산화 수소수'에서 공백을 지우자 '산화수'가 잡혔다.",
+   "rejected_candidates": [
+    "g1-0056"
+   ]
+  },
+  {
+   "surface": "호흡",
+   "rule_hint": "whole_word_only",
+   "reason": "'과호흡'이 '호흡'으로 잡혀 세포 호흡 카드와 이어질 뻔했다.",
+   "rejected_candidates": [
+    "g1-0065"
+   ]
+  },
+  {
+   "surface": "기압",
+   "rule_hint": "whole_word_only",
+   "reason": "압력 단위 표기 '1기압'이 개념어 '대기압'의 표기로 잡혔다.",
+   "rejected_candidates": [
+    "g1-0039"
+   ]
+  },
+  {
+   "surface": "충돌 횟수",
+   "rule_hint": "homonym",
+   "reason": "기체 분자와 용기 벽의 충돌 횟수(기체의 압력)와 반응물 입자끼리의 충돌 횟수(충돌수)는 세는 대상이 다르다. 같은 표기로 이어지지 않도록 뜻 갈래를 적어 두는 편이 좋다.",
+   "rejected_candidates": [
+    "g1-0001"
+   ]
+  }
+ ],
+ "stats": {
+  "valid": 185,
+  "invalid": 38,
+  "uncertain": 1
+ },
+ "stats_by_type": {
+  "related": 137,
+  "prereq": 26,
+  "next": 22,
+  "same": 0
+ },
+ "stats_by_basis": {
+  "mention": {
+   "valid": 60,
+   "invalid": 38,
+   "uncertain": 1
+  },
+  "reverse_missing": {
+   "valid": 125,
+   "invalid": 0,
+   "uncertain": 0
+  }
+ },
+ "uncertain_ratio": 0.0045,
+ "prereq_cycle_check": {
+  "new_prereq_edges": 26,
+  "cycles_found": []
+ },
+ "notes": [
+  "same 링크는 0건이다. 카드 192장의 concept_key 와 표제어가 모두 서로 달라 key_exact·term_match 후보가 애초에 생기지 않았고, 같은 개념이 두 키로 갈라진 곳도 찾지 못했다 — 비슷해 보이는 쌍(수소 결합/물의 수소 결합, 산화 반응/탄소 화합물의 산화 반응, 동적 평형/이온화 평형, 비열/열용량, 충돌수/유효 충돌)은 모두 일반–특수 또는 서로 다른 양이라 same 이 아니라 prereq·related 로 이었다. 이 단계에서 same 이 0인 것은 정상이다.",
+  "동음이의(docs/homonyms.yaml)로 기각한 건은 0건이다 — homonym_surface 가 채워진 후보 자체가 없었다. 대신 표기 오검출로 기각한 건이 14건이고, 그 가운데 12건은 homonyms.yaml 의 matching_rules(whole_word_only)가 지켜졌다면 후보로 오르지 않았을 것들이다. homonym_proposals 에 적어 두었다 — 사람이 옮기기 전까지는 효력이 없다.",
+  "docs/concept_registry.yaml 과 docs/homonyms.yaml 은 읽기만 했고 고치지 않았다 (CLAUDE.md §9.3).",
+  "reverse_missing 125건은 전부 대상 카드에 그 방향 링크가 실제로 있고 역방향은 비어 있음을 스크립트로 확인했다. prereq 의 역방향은 모두 next 로 달아 순환을 만들지 않았다."
+ ]
+}

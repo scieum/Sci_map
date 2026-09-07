@@ -152,3 +152,23 @@ set search_path = public as $$
   );
 $$;
 grant execute on function public.username_taken(text) to anon, authenticated;
+
+-- ── 닉네임도 중복을 막는다 (2026-09-07 교사 결정) ────────────────────────────
+-- 아이디는 로그인용이고 닉네임은 학생끼리 서로 부르는 이름이다. 둘이 겹치면
+-- 화면에서 누가 누구인지 알 수 없게 되므로 닉네임도 유일해야 한다.
+-- 비어 있는 닉네임은 유일성 검사에서 뺀다 — 아직 안 지은 사람이 여럿일 수 있다.
+create unique index if not exists profiles_nickname_key
+  on public.profiles (lower(nickname))
+  where nickname is not null and nickname <> '';
+
+create or replace function public.nickname_taken(p_nickname text)
+returns boolean
+language sql security definer stable
+set search_path = public as $$
+  select exists (
+    select 1 from public.profiles
+     where lower(nickname) = lower(btrim(p_nickname))
+       and nickname is not null and nickname <> ''
+  );
+$$;
+grant execute on function public.nickname_taken(text) to anon, authenticated;

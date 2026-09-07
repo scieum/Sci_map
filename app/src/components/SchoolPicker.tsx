@@ -4,7 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   SCHOOL_KINDS,
   SIDO,
-  fetchSchools,
+  SchoolListMissing,
+  loadSchools,
   sigunguList,
   type School,
   type SchoolKind,
@@ -15,9 +16,13 @@ import {
  * 예: 강원 → 속초시 → 고등학교 → 속초고등학교
  *
  * 시군구 목록을 만들려면 학교 목록이 먼저 있어야 한다(NEIS 에 시군구 필드가
- * 없어 주소에서 뽑는다). 그래서 시도를 고르는 순간 그 시도의 중·고를 한 번에
- * 받아 두고, 그다음 단계는 전부 받아 둔 목록을 걸러 보여 준다 — 단계마다
- * 기다리게 하지 않으려는 것이다. 시도별로 캐시하므로 되돌아가도 다시 받지 않는다.
+ * 없어 주소에서 뽑는다). 그래서 시도를 고르는 순간 그 시도의 목록을 통째로
+ * 읽고, 그다음 단계는 그 목록을 걸러 보여 준다 — 단계마다 기다리게 하지
+ * 않으려는 것이다. 시도별로 캐시하므로 되돌아가도 다시 읽지 않는다.
+ *
+ * 목록 파일(`public/schools/<시도코드>.json`)이 아직 없으면 **직접 입력**으로
+ * 물러난다. 목록을 못 만든 것 때문에 가입이 막히면 안 된다 — 학교는 나중에
+ * 내 정보에서 고칠 수 있다. 파일을 만드는 법은 app/scripts/build_schools.py 에 있다.
  */
 
 export interface SchoolValue {
@@ -46,6 +51,10 @@ export default function SchoolPicker({
   const [schools, setSchools] = useState<School[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** 목록 파일이 없어 직접 입력으로 물러난 상태 */
+  const [manual, setManual] = useState(false);
+  const [manualName, setManualName] = useState("");
+  const [manualKind, setManualKind] = useState<SchoolKind | "">("");
   const abort = useRef<AbortController | null>(null);
 
   // 시도가 정해지면 그 시도의 중·고를 한 번에 받아 둔다
@@ -64,16 +73,17 @@ export default function SchoolPicker({
     abort.current = ac;
     setBusy(true);
     setError(null);
+    setManual(false);
     (async () => {
       try {
-        const lists = await Promise.all(
-          SCHOOL_KINDS.map((k) => fetchSchools(sidoCode, k, ac.signal)),
-        );
-        const all = lists.flat();
+        const all = await loadSchools(sidoCode, ac.signal);
         cache.set(sidoCode, all);
         if (!ac.signal.aborted) setSchools(all);
       } catch (e) {
-        if ((e as Error).name !== "AbortError") {
+        if ((e as Error).name === "AbortError") return;
+        if (e instanceof SchoolListMissing) {
+          setManual(true);
+        } else {
           setError("학교 목록을 불러오지 못했어요. 잠시 뒤 다시 눌러 주세요.");
         }
       } finally {
@@ -96,7 +106,7 @@ export default function SchoolPicker({
   function pick(s: School) {
     onChange({
       sido_code: sidoCode,
-      sido: s.sidoName || SIDO.find((x) => x.code === sidoCode)?.name || "",
+      sido: s.sido || SIDO.find((x) => x.code === sidoCode)?.name || "",
       sigungu: s.sigungu,
       school_kind: s.kind,
       school_code: s.code,
@@ -137,7 +147,48 @@ export default function SchoolPicker({
         />
       </Step>
 
-      {sidoCode && (
+      {sidoCode && manual && (
+        <Step n={2} label="학교 이름">
+          {/* 목록 파일이 아직 없다. 가입을 막는 대신 직접 적게 한다 —
+              school_code 는 비워 두고, 목록이 준비되면 내 정보에서 다시 고른다 */}
+          <div className="flex flex-col gap-2">
+            <Chips
+              items={SCHOOL_KINDS.map((k) => ({ key: k, label: k }))}
+              on={manualKind}
+              onPick={(k) => setManualKind(k as SchoolKind)}
+            />
+            <input
+              value={manualName}
+              onChange={(e) => setManualName(e.target.value)}
+              placeholder="예: 속초고등학교"
+              className="h-11 w-full rounded-full bg-bg-subtle px-4 text-[16px] outline-none focus:ring-2 focus:ring-primary-300"
+            />
+            <button
+              type="button"
+              disabled={!manualName.trim() || !manualKind}
+              onClick={() =>
+                onChange({
+                  sido_code: sidoCode,
+                  sido: SIDO.find((x) => x.code === sidoCode)?.name ?? "",
+                  sigungu: "",
+                  school_kind: manualKind,
+                  school_code: "",
+                  school_name: manualName.trim(),
+                })
+              }
+              className="h-10 rounded-full bg-primary-500 text-[14px] font-bold text-white disabled:opacity-40"
+            >
+              이 학교로 하기
+            </button>
+            <p className="px-1 text-[11px] leading-relaxed text-ink-faint">
+              학교 목록이 아직 준비되지 않아 이름을 직접 적어요. 나중에 내 정보에서
+              목록으로 다시 고를 수 있어요.
+            </p>
+          </div>
+        </Step>
+      )}
+
+      {sidoCode && !manual && (
         <Step n={2} label="시·군·구">
           {busy ? (
             <p className="px-1 py-2 text-[13px] text-ink-faint">학교 목록을 불러오는 중…</p>
@@ -153,7 +204,7 @@ export default function SchoolPicker({
         </Step>
       )}
 
-      {sigungu && (
+      {sigungu && !manual && (
         <Step n={3} label="학교급">
           <Chips
             items={SCHOOL_KINDS.map((k) => ({ key: k, label: k }))}
@@ -163,7 +214,7 @@ export default function SchoolPicker({
         </Step>
       )}
 
-      {sigungu && kind && (
+      {sigungu && kind && !manual && (
         <Step n={4} label="학교">
           {matches.length === 0 ? (
             <p className="px-1 py-2 text-[13px] text-ink-faint">

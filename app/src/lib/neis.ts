@@ -1,18 +1,16 @@
 "use client";
 
 /**
- * NEIS 학교 기본정보 — 시도(대분류) · 시군구(소분류) · 학교급으로 학교를 고른다.
+ * 학교 목록 — 빌드 때 만들어 둔 정적 파일을 읽는다.
  *
- * 공공데이터라 키 없이도 저용량 호출이 된다(scieum/polarity-timeattack 에서
- * 같은 방식으로 쓰고 있다). 키가 생기면 NEXT_PUBLIC_NEIS_KEY 에 넣으면 된다.
+ * NEIS 를 브라우저에서 직접 부르지 않는다. **인증키 없이는 시도당 5건만 오기
+ * 때문이다** — pIndex 를 올려도 같은 5건이 돌아온다(강원 중학교 160개 중 5개만
+ * 나오는 것을 확인했다). 키가 있어야 하는데, 키를 브라우저에 내보내면 아무나 그
+ * 할당량을 쓰게 된다. 그래서 목록은 `app/scripts/build_schools.py` 가 빌드하는
+ * 사람의 컴퓨터에서 한 번 만들어 `public/schools/<시도코드>.json` 에 둔다.
  *
- * ★ 시군구는 NEIS 에 전용 필드가 없다. 도로명주소(ORG_RDNMA)의 두 번째 토막이
- *   시군구라서 거기서 뽑는다 — "강원특별자치도 속초시 …" → "속초시".
- *   광역시의 구(區)도 같은 자리에 온다 — "서울특별시 종로구 …" → "종로구".
+ * 학교 목록은 거의 바뀌지 않으므로 이 편이 빠르기도 하다.
  */
-
-const ENDPOINT = "https://open.neis.go.kr/hub/schoolInfo";
-const KEY = process.env.NEXT_PUBLIC_NEIS_KEY ?? "";
 
 /** 학교급 — 중·고만 쓴다 (2026-09-07 교사 결정) */
 export const SCHOOL_KINDS = ["중학교", "고등학교"] as const;
@@ -40,78 +38,36 @@ export const SIDO = [
 ] as const;
 
 export interface School {
-  code: string;      // SD_SCHUL_CODE
-  name: string;      // SCHUL_NM
-  kind: string;      // SCHUL_KND_SC_NM
-  address: string;   // ORG_RDNMA
-  sidoName: string;  // LCTN_SC_NM (강원특별자치도)
-  sigungu: string;   // 주소에서 뽑은 시군구
+  code: string;
+  name: string;
+  kind: string;
+  sigungu: string;
+  sido: string;
+  address: string;
 }
 
-interface NeisRow {
-  SD_SCHUL_CODE?: string;
-  SCHUL_NM?: string;
-  SCHUL_KND_SC_NM?: string;
-  ORG_RDNMA?: string;
-  LCTN_SC_NM?: string;
+/** 목록 파일이 아직 없을 때 던진다 — 화면은 직접 입력으로 물러난다 */
+export class SchoolListMissing extends Error {
+  constructor(readonly sidoCode: string) {
+    super(`학교 목록 파일이 없어요 (${sidoCode})`);
+    this.name = "SchoolListMissing";
+  }
 }
 
-/** "강원특별자치도 속초시 청대로 100" → "속초시" */
-export function sigunguOf(address: string): string {
-  const parts = (address || "").trim().split(/\s+/);
-  if (parts.length < 2) return "";
-  const second = parts[1];
-  // 광역시의 "OO구", 도의 "OO시/OO군" 이 이 자리에 온다. 세종처럼 시군구가
-  // 없는 곳은 두 번째 토막이 도로명이라, 시·군·구로 끝날 때만 인정한다
-  return /[시군구]$/.test(second) ? second : "";
-}
+const cache = new Map<string, School[]>();
 
-/**
- * 한 시도·학교급의 학교를 모두 가져온다.
- *
- * NEIS 는 한 번에 최대 1000행을 준다. 시도 하나의 중학교·고등학교는 그 안에
- * 들어가지만, 경기처럼 큰 곳은 넘칠 수 있어 다음 쪽을 이어 받는다.
- */
-export async function fetchSchools(
+export async function loadSchools(
   sidoCode: string,
-  kind: SchoolKind,
   signal?: AbortSignal,
 ): Promise<School[]> {
-  const out: School[] = [];
-  for (let page = 1; page <= 5; page++) {
-    const url = new URL(ENDPOINT);
-    url.searchParams.set("Type", "json");
-    url.searchParams.set("pIndex", String(page));
-    url.searchParams.set("pSize", "1000");
-    url.searchParams.set("ATPT_OFCDC_SC_CODE", sidoCode);
-    url.searchParams.set("SCHUL_KND_SC_NM", kind);
-    if (KEY) url.searchParams.set("KEY", KEY);
-
-    const res = await fetch(url.toString(), { signal });
-    if (!res.ok) throw new Error(`학교 목록을 불러오지 못했어요 (${res.status})`);
-    const json = (await res.json()) as {
-      schoolInfo?: [unknown, { row?: NeisRow[] }];
-      RESULT?: { CODE?: string; MESSAGE?: string };
-    };
-
-    // 결과가 없을 때 NEIS 는 schoolInfo 대신 RESULT 만 준다 (INFO-200)
-    const rows = json.schoolInfo?.[1]?.row;
-    if (!rows || rows.length === 0) break;
-
-    for (const r of rows) {
-      const address = r.ORG_RDNMA ?? "";
-      out.push({
-        code: r.SD_SCHUL_CODE ?? "",
-        name: r.SCHUL_NM ?? "",
-        kind: r.SCHUL_KND_SC_NM ?? kind,
-        address,
-        sidoName: r.LCTN_SC_NM ?? "",
-        sigungu: sigunguOf(address),
-      });
-    }
-    if (rows.length < 1000) break;
-  }
-  return out;
+  const hit = cache.get(sidoCode);
+  if (hit) return hit;
+  const res = await fetch(`/schools/${sidoCode}.json`, { signal });
+  if (res.status === 404) throw new SchoolListMissing(sidoCode);
+  if (!res.ok) throw new Error(`학교 목록을 불러오지 못했어요 (${res.status})`);
+  const list = (await res.json()) as School[];
+  cache.set(sidoCode, list);
+  return list;
 }
 
 /** 목록에서 시군구만 추려 가나다순으로 — 소분류 선택지 */
