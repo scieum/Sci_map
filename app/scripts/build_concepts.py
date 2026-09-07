@@ -183,7 +183,7 @@ def _rel_media(path: str) -> str:
     return rel[rel.index(marker) + len(marker):] if marker in rel else Path(rel).name
 
 
-def write_catalog(unit_ids: list[str]) -> None:
+def write_catalog(unit_ids: list[str], card_counts: dict[str, int]) -> None:
     """과목 카탈로그 — 내 정보 화면의 수강 과목 목록과 스케줄러의 출제 범위 근거.
 
     백로그가 원본이다. 학년·학기는 교사가 백로그에 채우면 여기로 흘러온다.
@@ -197,12 +197,16 @@ def write_catalog(unit_ids: list[str]) -> None:
     for subj in _subjects(b):
         units = [
             {"id": u["id"], "title": u["title"], "semester": u.get("semester"),
-             "status": u.get("status"), "cards": u["id"] in unit_ids}
+             "status": u.get("status"), "cards": u["id"] in unit_ids,
+             "cardCount": card_counts.get(u["id"], 0)}
             for u in subj.get("units", [])
         ]
         catalog["subjects"].append({
             "code": subj["code"], "name": subj["name"], "courseType": subj.get("course_type"),
             "grade": subj.get("grade"), "units": units,
+            # 학생이 고를 때 보는 값은 "단원 몇 개" 가 아니라 "읽을 카드가 몇 장" 이다.
+            # 0 이면 아직 준비되지 않은 과목이라 화면에서 고를 수 없게 막는다
+            "cardCount": sum(card_counts.get(u["id"], 0) for u in subj.get("units", [])),
         })
     out = REPO / "app" / "src" / "data" / "catalog.generated.json"
     out.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n",
@@ -241,7 +245,12 @@ def main() -> int:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(cards, ensure_ascii=False, indent=2) + "\n",
                    encoding="utf-8", newline="\n")
-    write_catalog(args.units)
+    counts: dict[str, int] = {}
+    for c in cards:
+        uid = c.get("unitId")
+        if uid:
+            counts[uid] = counts.get(uid, 0) + 1
+    write_catalog(args.units, counts)
     withfig = sum(1 for c in cards if c.get("media"))
     total = sum(len(c.get("media") or []) for c in cards)
     print(f"=> {OUT.relative_to(REPO)} · 카드 {len(cards)}장 "

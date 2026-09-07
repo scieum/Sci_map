@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 import LoginPanel from "@/components/LoginPanel";
 import SchoolPicker, { type SchoolValue } from "@/components/SchoolPicker";
 import { BottomCta, Card, Screen, ScreenTitle, SectionLabel } from "@/components/ui";
-import { CATALOG } from "@/data/catalog";
+import { CATALOG, courseTypeLabel, groupByCourseType } from "@/data/catalog";
 import { isSupabaseConfigured, supabase, type Profile } from "@/lib/supabase";
+import { accentOfSubject } from "@/lib/brand";
 import { loadProfile, pullStudyStates, redeemInvite, saveProfile } from "@/lib/sync";
 import { loadProgress, saveProgress } from "@/lib/store";
 
@@ -310,34 +311,68 @@ function ProfileForm({
       </div>
 
       <SectionLabel>수강 과목</SectionLabel>
-      <p className="-mt-1 mb-2 text-[13px] text-ink-sub">
-        고른 과목에서만 오늘의 문항이 나와요. 학기를 고르면 그 학기 단원으로 좁혀져요.
+      <p className="-mt-1 mb-3 text-[13px] text-ink-sub">
+        고른 과목에서만 오늘의 문항이 나와요. 나중에 언제든 바꿀 수 있어요.
       </p>
-      <div className="flex flex-col gap-2">
-        {CATALOG.subjects.map((s) => {
-          const on = subjects.includes(s.code);
-          return (
-            <button
-              key={s.code}
-              onClick={() => toggle(s.code)}
-              className={`flex items-center justify-between rounded-[20px] px-5 py-4 text-left ${
-                on ? "bg-primary-50 ring-2 ring-primary-500" : "bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
-              }`}
-            >
-              <span>
-                <span className="block text-[15px] font-bold">{s.name}</span>
-                <span className="block text-[12px] text-ink-sub">
-                  {s.courseType ?? ""} · 단원 {s.units.length}개
-                  {s.units.length > 0 && s.units.every((u) => u.semester == null) && " · 학기 미지정"}
-                </span>
-              </span>
-              <span className={`text-[18px] ${on ? "text-primary-600" : "text-ink-faint"}`}>
-                {on ? "✓" : "＋"}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+
+      {/* 과목 구분(공통·일반 선택·진로 선택)으로 묶는다. 학생이 시간표를 짤 때
+          쓰는 말이 이것이라, 한 줄에 섞어 두면 구분이 눈에 들어오지 않는다.
+          카드가 없는 과목은 흐리게 두고 고르지 못하게 한다 — 골라 봐야 그 과목에서
+          나올 문항이 없어서, 고르고 나면 오늘의 학습이 비어 버린다 */}
+      {groupByCourseType(CATALOG.subjects).map(([type, list]) => (
+        <div key={type || "etc"} className="mb-4">
+          <p className="mb-2 px-1 text-[12px] font-bold text-ink-faint">
+            {courseTypeLabel(type)}
+          </p>
+          <div className="flex flex-col gap-2">
+            {list.map((s) => {
+              const on = subjects.includes(s.code);
+              const ready = s.cardCount > 0;
+              const accent = accentOfSubject(s.name);
+              return (
+                <button
+                  key={s.code}
+                  // 이미 골라 둔 과목은 준비 중이 되더라도 뺄 수 있어야 한다 —
+                  // 못 빼면 그 학생의 출제 범위에 빈 과목이 영영 남는다
+                  onClick={() => (ready || on) && toggle(s.code)}
+                  disabled={!ready && !on}
+                  aria-pressed={on}
+                  className={`flex items-center justify-between rounded-[20px] px-5 py-4 text-left transition-colors ${
+                    !ready
+                      ? "bg-surface/60 opacity-60"
+                      : on
+                        ? `${accent.tint} ring-2 ring-inset ring-current ${accent.text}`
+                        : "bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
+                  }`}
+                >
+                  <span className="min-w-0">
+                    <span className="block text-[15px] font-bold text-ink">{s.name}</span>
+                    <span className="mt-0.5 block text-[12px] text-ink-sub">
+                      {ready
+                        ? `개념 ${s.cardCount}장 · 단원 ${s.units.filter((u) => u.cards).length}개`
+                        : "아직 준비 중이에요"}
+                    </span>
+                  </span>
+                  {ready ? (
+                    <span
+                      aria-hidden
+                      className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[13px] font-bold ${
+                        on ? `${accent.solid} text-white` : "bg-bg-subtle text-ink-faint"
+                      }`}
+                    >
+                      {on ? "✓" : "＋"}
+                    </span>
+                  ) : (
+                    <span className="shrink-0 rounded-full bg-bg-subtle px-2.5 py-1 text-[11px] font-bold text-ink-faint">
+                      준비 중
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
 
       <SectionLabel>학교</SectionLabel>
       <Card className="!p-3">
