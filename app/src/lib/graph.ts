@@ -56,3 +56,28 @@ export function boundsOf(nodes: GraphNode[], pad = 60) {
     h: Math.max(...ys) - y + pad,
   };
 }
+
+/**
+ * 상자 비율에 맞춰 bounds 를 감싸는 viewBox 를 만든다.
+ *
+ * SVG 의 기본 동작(preserveAspectRatio)에 맡기면 여백이 생기고, 그 여백만큼
+ * "화면 1px = 좌표 몇" 이 어긋나 손가락과 그림이 따로 논다. 비율을 미리 맞춰
+ * 두면 그 계산이 정확해진다.
+ */
+export function fitTo(
+  b: { x: number; y: number; w: number; h: number },
+  box: { w: number; h: number },
+) {
+  if (!box.w || !box.h) return b;
+  const aspect = box.w / box.h;
+  let w = b.w;
+  let h = b.h;
+  if (w / h > aspect) h = w / aspect;
+  else w = h * aspect;
+  return {
+    x: b.x + (b.w - w) / 2,
+    y: b.y + (b.h - h) / 2,
+    w,
+    h,
+  };
+}

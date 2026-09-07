@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { EmptyState, Screen, ScreenTitle } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
 import { accentOfSubject } from "@/lib/brand";
-import { boundsOf, loadGraph, type ConceptGraph, type GraphNode } from "@/lib/graph";
+import { boundsOf, fitTo, loadGraph, type ConceptGraph, type GraphNode } from "@/lib/graph";
 import { useProgress } from "@/lib/store";
 import { loadUi } from "@/lib/ui-state";
 
@@ -81,6 +81,25 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
     [graph],
   );
 
+  // ── 화면 크기 ────────────────────────────────────────────────────────────
+  // viewBox 의 비율이 실제 그려지는 상자의 비율과 다르면 두 가지가 어긋난다.
+  // ① SVG 가 여백을 넣어(letterbox) 그림이 가운데로 몰리고 ② 1px 을 밀었을 때
+  // 좌표가 얼마나 움직이는지 계산이 틀려 손가락과 그림이 따로 논다.
+  // 그래서 상자를 재고 **그 비율로 viewBox 를 만든다**. 폰 세로, 태블릿 가로,
+  // 창 크기 변경까지 같은 코드로 맞는다.
+  const wrapRef = useRef<HTMLDivElement | null>(null);
+  const [box, setBox] = useState({ w: 0, h: 0 });
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      const { width, height } = entry.contentRect;
+      setBox({ w: Math.round(width), h: Math.round(height) });
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   /** 노드 id → 과목 이름. 렌더마다 192번 찾지 않도록 한 번만 만든다 */
   const subjects = useMemo(
     () => new Map(graph.nodes.map((n) => [n.id, conceptById(n.id)?.subject ?? ""])),
@@ -88,15 +107,47 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
   );
   const subjectOf = useCallback((n: GraphNode) => subjects.get(n.id) ?? "", [subjects]);
 
-  // 처음 볼 자리 — 개념 탭에서 보던 과목. 없으면 전체
+  // 처음 볼 자리 — **단원 하나**다 (§4.2 "현재 학습 중 단원 중심으로 줌인").
+  // 과목 전체를 담으면 폰에서 노드가 2px 밖에 안 돼 점 구름이 된다.
+  // 어느 단원인가: 본 적 있는 개념이 가장 많은 단원, 없으면 개념 탭에서 보던
+  // 과목의 첫 단원, 그것도 없으면 전체.
   const initial = useMemo(() => {
     const want = loadUi().conceptsSubject;
-    const mine = want ? graph.nodes.filter((n) => subjectOf(n) === want) : [];
-    return boundsOf(mine.length >= 3 ? mine : graph.nodes);
-  }, [graph, subjectOf]);
+    const inSubject = want
+      ? graph.nodes.filter((n) => subjectOf(n) === want)
+      : graph.nodes;
+    const pool = inSubject.length >= 3 ? inSubject : graph.nodes;
+
+    const seen = new Map<string, number>();
+    for (const n of pool) {
+      if (progress.concepts[n.id]) seen.set(n.unit, (seen.get(n.unit) ?? 0) + 1);
+    }
+    let unit = "";
+    let best = 0;
+    for (const [u, c] of seen) if (c > best) [unit, best] = [u, c];
+    if (!unit) unit = pool[0]?.unit ?? "";
+
+    const mine = pool.filter((n) => n.unit === unit);
+    return fitTo(boundsOf(mine.length >= 3 ? mine : pool), box);
+  }, [graph, subjectOf, box, progress]);
 
   const [view, setView] = useState(initial);
-  useEffect(() => setView(initial), [initial]);
+  /** 상자를 처음 잰 뒤 한 번만 맞춘다. 그 뒤에는 학생이 민 자리를 지킨다 */
+  const fitted = useRef(false);
+  useEffect(() => {
+    if (box.w === 0 || fitted.current) return;
+    fitted.current = true;
+    setView(initial);
+  }, [box, initial]);
+
+  /** 창 크기가 바뀌면 보던 가운데를 지킨 채 비율만 다시 맞춘다 */
+  useEffect(() => {
+    if (box.w === 0 || box.h === 0) return;
+    setView((v) => {
+      const h = v.w * (box.h / box.w);
+      return { ...v, y: v.y + (v.h - h) / 2, h };
+    });
+  }, [box]);
 
   const levelOf = useCallback(
     (id: string): Learned => {
@@ -115,10 +166,8 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
   const pinchDist = useRef<number | null>(null);
 
   function toView(dxPx: number, dyPx: number) {
-    const el = svgRef.current;
-    if (!el) return { dx: 0, dy: 0 };
-    const r = el.getBoundingClientRect();
-    return { dx: (dxPx / r.width) * view.w, dy: (dyPx / r.height) * view.h };
+    if (!box.w || !box.h) return { dx: 0, dy: 0 };
+    return { dx: (dxPx / box.w) * view.w, dy: (dyPx / box.h) * view.h };
   }
 
   function onPointerDown(e: React.PointerEvent<SVGSVGElement>) {
@@ -176,10 +225,69 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
     zoomBy(e.deltaY > 0 ? 1.12 : 0.89, e.clientX, e.clientY);
   }
 
+  /**
+   * 좌표 1픽셀이 몇 단위인가. 노드 크기·선 굵기·글자 크기를 전부 이 값으로
+   * 환산해 **화면에서 늘 같은 크기**로 보이게 한다.
+   *
+   * 그러지 않으면 멀리서는 점이 2px 이라 누를 수도 읽을 수도 없고, 가까이
+   * 가면 공처럼 커진다. 그래프 좌표계의 폭이 3000 이 넘어 특히 그렇다.
+   */
+  const u = box.w ? view.w / box.w : 1;
+  const rOf = (degree: number) => (5 + Math.min(degree, 24) / 3) * u;
+
+  const terms = useMemo(
+    () => new Map(graph.nodes.map((n) => [n.id, conceptById(n.id)?.term ?? ""])),
+    [graph],
+  );
+
+  /** 연결이 많은 것부터 — 밀 때마다 다시 정렬하지 않도록 한 번만 만든다 */
+  const byDegree = useMemo(
+    () => [...graph.nodes].sort((a, b) => b.degree - a.degree),
+    [graph],
+  );
+
+  /**
+   * 이름표 — **겹치면 버린다.**
+   *
+   * "연결 10개 이상만" 같은 기준으로 고르면 폰에서는 그마저 겹쳐 읽히지
+   * 않고(실제로 그랬다), 태블릿에서는 자리가 남는데도 이름이 안 나온다.
+   * 화면에 실제로 놓이는 자리를 계산해서, 이미 놓인 이름과 부딪히면 그 이름을
+   * 버린다. 연결이 많은 것부터 고르므로 폰에서는 허브만, 태블릿에서는 거의
+   * 전부가 살아남는다 — 기기 크기를 따로 나눌 필요가 없다.
+   */
+  const labels = useMemo(() => {
+    if (u >= 4) return [] as GraphNode[]; // 너무 멀면 아예 걸지 않는다
+    const font = 11 * u;
+    const taken: { x1: number; y1: number; x2: number; y2: number }[] = [];
+    const out: GraphNode[] = [];
+    for (const n of byDegree) {
+      // 화면 밖은 건너뛴다 — 안 보이는 자리를 차지하지 않게
+      if (n.x < view.x || n.x > view.x + view.w) continue;
+      if (n.y < view.y || n.y > view.y + view.h) continue;
+      const t = terms.get(n.id) ?? "";
+      if (!t) continue;
+      const w = t.length * font * 0.62;   // 한글 폭 어림값
+      const h = font * 1.25;
+      const cy = n.y - rOf(n.degree) - 4 * u;
+      const b = { x1: n.x - w / 2, y1: cy - h, x2: n.x + w / 2, y2: cy + h * 0.25 };
+      const hit = taken.some(
+        (o) => !(b.x2 < o.x1 || b.x1 > o.x2 || b.y2 < o.y1 || b.y1 > o.y2),
+      );
+      if (hit) continue;
+      taken.push(b);
+      out.push(n);
+    }
+    return out;
+  }, [byDegree, view, u, terms]);
   const pickedCard = picked ? conceptById(picked.id) : null;
 
   return (
-    <div className="relative h-[calc(100dvh-56px)] overflow-hidden bg-bg">
+    <div
+      ref={wrapRef}
+      /* 탭 바(56px)와 홈 인디케이터(safe-area)를 뺀 나머지가 캔버스다.
+         1024px 이상에서는 전체 폭 캔버스로 둔다 (Design.md §3.3) */
+      className="relative h-[calc(100dvh-56px-env(safe-area-inset-bottom))] w-full overflow-hidden bg-bg"
+    >
       <div className="pointer-events-none absolute left-0 right-0 top-0 z-10 px-5 pt-4">
         <h1 className="text-[22px] font-extrabold text-ink">지도</h1>
         <p className="mt-0.5 text-[12px] text-ink-faint">
@@ -190,6 +298,7 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
       <svg
         ref={svgRef}
         viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
+        preserveAspectRatio="xMidYMid slice"
         className="h-full w-full touch-none select-none"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -214,8 +323,8 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
                 x2={b.x}
                 y2={b.y}
                 stroke={same ? "var(--color-info)" : "var(--color-line)"}
-                strokeWidth={same ? 1.6 : l.type === "related" ? 0.7 : 1.1}
-                strokeDasharray={same ? "4 3" : undefined}
+                strokeWidth={(same ? 1.6 : l.type === "related" ? 0.7 : 1.1) * u}
+                strokeDasharray={same ? `${4 * u} ${3 * u}` : undefined}
                 opacity={l.type === "related" ? 0.7 : 1}
               />
             );
@@ -223,7 +332,7 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
         </g>
         <g>
           {graph.nodes.map((n) => {
-            const r = 4 + Math.min(n.degree, 24) / 3;
+            const r = rOf(n.degree);
             const learned = levelOf(n.id);
             const accent = accentOfSubject(subjectOf(n));
             const on = picked?.id === n.id;
@@ -232,7 +341,7 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
                 key={n.id}
                 cx={n.x}
                 cy={n.y}
-                r={on ? r + 3 : r}
+                r={on ? r + 3 * u : r}
                 className={
                   learned === "stable"
                     ? accent.fillSolid
@@ -241,7 +350,7 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
                       : "fill-bg-subtle"
                 }
                 stroke={on ? "var(--color-ink)" : "var(--color-surface)"}
-                strokeWidth={on ? 2 : 1}
+                strokeWidth={(on ? 2 : 1) * u}
                 onPointerUp={(e) => {
                   e.stopPropagation();
                   setPicked(n);
@@ -250,6 +359,24 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
               />
             );
           })}
+        </g>
+        {/* 이름표 — 겹치지 않는 것만 남는다 (labels) */}
+        <g pointerEvents="none">
+          {labels.map((n) => (
+            <text
+              key={n.id}
+              x={n.x}
+              y={n.y - rOf(n.degree) - 4 * u}
+              textAnchor="middle"
+              fontSize={11 * u}
+              className="fill-ink"
+              stroke="var(--color-bg)"
+              strokeWidth={3 * u}
+              paintOrder="stroke"
+            >
+              {terms.get(n.id)}
+            </text>
+          ))}
         </g>
       </svg>
 
