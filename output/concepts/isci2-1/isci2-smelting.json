@@ -1,0 +1,110 @@
+{
+  "id": "isci2-smelting",
+  "concept_key": "concept:smelting",
+  "registry_status": "reused",
+  "term": "제련",
+  "notation": {
+    "hanja": "製鍊",
+    "hanja_gloss": "製 지을 제 · 鍊 불릴 련",
+    "english": "smelting"
+  },
+  "definition": "광석에 든 금속 화합물에서 산소를 떼어 내 쓸 수 있는 금속을 얻어 내는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-sm-redox",
+      "text": "철의 제련에서 산화 철(Ⅲ)은 환원되어 철이 되고, 일산화 탄소는 산화되어 이산화 탄소가 된다.",
+      "form": {
+        "condition": "용광로에서 산화 철(Ⅲ)과 일산화 탄소가 반응할 때",
+        "type": "classification",
+        "scope": "철광석과 코크스를 쓰는 철의 제련"
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 잃은 쪽과 얻은 쪽을 맞바꾸면 순수한 철이 나오는 과정과 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "철의 제련에서 산화 철(Ⅲ)은 산화되어 철이 되고, 일산화 탄소는 환원되어 이산화 탄소가 된다."
+    },
+    {
+      "id": "rel-isci2-sm-need",
+      "text": "철은 자연에서 산소와 결합한 산화 철로 있기 때문에 제련을 거쳐야 쓸 수 있는 철이 된다.",
+      "form": {
+        "condition": "자연 상태의 철광석에서 철을 얻으려 할 때",
+        "type": "causal",
+        "scope": "자연에서 산화물로 존재하는 금속"
+      },
+      "invertible": false,
+      "invertible_reason": "제련이 필요한 까닭을 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-isci2-sm-civilization",
+      "text": "산화 철에서 산소를 떼어 내는 기술이 개발되면서 철을 널리 쓰는 철기 문명이 일어났다.",
+      "form": {
+        "condition": "인류가 제련 기술을 손에 넣은 뒤",
+        "type": "causal",
+        "scope": "인류 문명사에서 철의 이용"
+      },
+      "invertible": false,
+      "invertible_reason": "역사적 인과를 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "제련 과정에서 산화 철은 산소와 만나므로 산화된다",
+      "why_wrong": "제련은 산화 철에서 산소를 떼어 내는 과정이다. 산소를 잃으므로 산화 철은 환원되고, 그 산소를 받은 일산화 탄소가 산화된다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-sm-redox"
+    },
+    {
+      "text": "철은 자연에서 순수한 금속 덩어리로 많이 발견된다",
+      "why_wrong": "자연의 철은 대부분 산소와 결합한 산화 철 형태다. 그래서 그대로는 쓰기 어렵고 제련이 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-sm-need"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-smelting",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-redox-simultaneity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-reduction"
+    },
+    {
+      "type": "related",
+      "target": "isci2-combustion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-02",
+  "pages": [
+    39,
+    45,
+    65
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

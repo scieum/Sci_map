@@ -1,0 +1,114 @@
+{
+  "id": "isci2-basicity",
+  "concept_key": "concept:basicity",
+  "registry_status": "new",
+  "term": "염기성",
+  "aliases": [
+    "알칼리성"
+  ],
+  "notation": {
+    "hanja": "鹽基性",
+    "hanja_gloss": "鹽 소금 염 · 基 터 기 · 性 성품 성",
+    "english": "basicity"
+  },
+  "definition": "여러 염기가 수용액에서 함께 보이는 성질. 수산화 이온 때문에 나타나며 단백질을 녹이고 전류가 흐른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-base-cause",
+      "text": "염기의 종류가 달라도 같은 성질이 나타나는 까닭은 어느 염기든 수용액에서 수산화 이온을 내놓기 때문이다.",
+      "form": {
+        "condition": "여러 염기의 수용액을 나란히 놓고 견줄 때",
+        "type": "causal",
+        "scope": "수용액 상태의 염기"
+      },
+      "invertible": true,
+      "invertible_reason": "원인 이온을 수소 이온으로 바꾸면 산의 설명이 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "염기의 종류가 달라도 같은 성질이 나타나는 까닭은 어느 염기든 수용액에서 수소 이온을 내놓기 때문이다."
+    },
+    {
+      "id": "rel-isci2-base-protein",
+      "text": "염기 수용액은 단백질을 녹이지만 탄산 칼슘이나 마그네슘과는 반응하지 않는다.",
+      "form": {
+        "condition": "염기 수용액에 두부·탄산 칼슘·금속 조각을 넣었을 때",
+        "type": "classification",
+        "scope": "수용액 상태의 염기"
+      },
+      "invertible": true,
+      "invertible_reason": "반응하는 대상을 서로 바꾸면 산과 염기를 가르는 실험 결과가 뒤집히므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "염기 수용액은 단백질을 녹이지 못하지만 탄산 칼슘이나 마그네슘과는 잘 반응한다."
+    },
+    {
+      "id": "rel-isci2-base-current",
+      "text": "염기도 물에 녹아 이온으로 나뉘므로 그 수용액에서는 전류가 흐른다.",
+      "form": {
+        "condition": "염기가 물에 녹아 이온화된 상태일 때",
+        "type": "causal",
+        "scope": "수용액 상태의 염기"
+      },
+      "invertible": false,
+      "invertible_reason": "전류가 흐르는 까닭을 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염기 수용액에 마그네슘을 넣으면 수소 기체가 발생한다",
+      "why_wrong": "마그네슘과 반응해 수소 기체를 내는 것은 산 수용액이다. 염기 수용액은 마그네슘과 반응하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-base-protein"
+    },
+    {
+      "text": "염기 수용액에는 이온이 없어서 전류가 흐르지 않는다",
+      "why_wrong": "염기도 물에 녹으면 양이온과 수산화 이온으로 나뉜다. 이온이 전극 쪽으로 움직이므로 전류가 흐른다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-base-current"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-hydroxide-ion"
+    },
+    {
+      "type": "next",
+      "target": "isci2-neutralization-reaction"
+    },
+    {
+      "type": "next",
+      "target": "isci2-acid-base-indicator"
+    },
+    {
+      "type": "related",
+      "target": "isci2-acidity",
+      "note": "성질이 정반대인 짝"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-03",
+  "pages": [
+    49,
+    51,
+    53
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

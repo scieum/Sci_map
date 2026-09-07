@@ -1,0 +1,110 @@
+{
+  "id": "isci2-species-diversity",
+  "concept_key": "concept:species-diversity",
+  "registry_status": "new",
+  "term": "종다양성",
+  "aliases": [
+    "종 다양성"
+  ],
+  "notation": {
+    "hanja": "種多樣性",
+    "hanja_gloss": "種 씨 종 · 多 많을 다 · 樣 모양 양 · 性 성품 성",
+    "english": "species diversity"
+  },
+  "definition": "한 지역에 사는 생물종이 얼마나 다양한지를 뜻하는 말. 종의 수와 고르게 분포하는 정도를 함께 본다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sd-two-factors",
+      "text": "한 지역에 사는 종의 수가 많을수록, 또 여러 종이 고르게 분포할수록 종다양성이 높다고 본다.",
+      "form": {
+        "condition": "한 지역의 생물 무리 구성을 다른 지역과 견줄 때",
+        "type": "direct",
+        "scope": "넓이가 비슷한 지역끼리의 비교",
+        "antecedent": {
+          "quantity": "종의 수와 분포의 고름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "종다양성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "종 수와 고른 분포는 종다양성을 높이는 조건이므로 낮아진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 지역에 사는 종의 수가 많을수록, 또 여러 종이 고르게 분포할수록 종다양성은 낮다고 본다."
+    },
+    {
+      "id": "rel-sd-stability",
+      "text": "종다양성이 높은 생태계에서는 한두 종이 사라져도 그 자리를 대신할 종이 있어 안정적으로 유지될 확률이 높다.",
+      "form": {
+        "condition": "생태계에서 일부 생물종이 사라지는 교란이 일어났을 때",
+        "type": "direct",
+        "scope": "먹이 관계로 얽힌 생태계",
+        "antecedent": {
+          "quantity": "종다양성",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생태계가 안정적으로 유지될 확률",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "대신할 종이 많을수록 흔들림이 줄어드므로 무너질 확률이 높다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "종다양성이 높은 생태계에서는 한두 종이 사라지면 대신할 종이 없어 생태계가 무너질 확률이 높다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "종의 수만 많으면 한 종에 개체가 몰려 있어도 종다양성이 높다",
+      "why_wrong": "종다양성은 종의 수와 고른 분포를 함께 본다. 한 종이 대부분을 차지하면 종의 수가 많아도 종다양성이 높다고 하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-sd-two-factors"
+    },
+    {
+      "text": "종다양성이 높은 생태계일수록 한 종이 사라지면 쉽게 무너진다",
+      "why_wrong": "오히려 반대다. 대신할 종이 있으므로 한두 종이 사라져도 생태계가 유지될 확률이 높아진다.",
+      "source": "llm",
+      "linked_relation": "rel-sd-stability"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-biodiversity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-genetic-diversity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ecosystem-diversity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-03",
+  "pages": [
+    28,
+    29,
+    34
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

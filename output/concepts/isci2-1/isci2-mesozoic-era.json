@@ -1,0 +1,141 @@
+{
+  "id": "isci2-mesozoic-era",
+  "concept_key": "concept:mesozoic-era",
+  "registry_status": "new",
+  "term": "중생대",
+  "notation": {
+    "hanja": "中生代",
+    "hanja_gloss": "中 가운데 중 · 生 날 생 · 代 대신할 대",
+    "english": "Mesozoic era"
+  },
+  "definition": "고생대와 신생대 사이의 시대. 판게아가 갈라지고 전 기간에 걸쳐 온난한 기후가 이어진 때다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mes-pangaea",
+      "text": "판게아가 여러 대륙으로 갈라지며 대륙과 바다의 분포가 다양해졌고, 생물이 살아갈 환경도 그만큼 다양해졌다.",
+      "form": {
+        "condition": "중생대 초부터 판게아가 분리되기 시작한 뒤",
+        "type": "causal",
+        "scope": "중생대의 수륙 분포와 서식 환경",
+        "antecedent": {
+          "quantity": "대륙이 갈라진 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "서식 환경의 다양함",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "대륙이 하나로 모이면 서식 환경은 오히려 단조로워지므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "여러 대륙이 판게아 하나로 모이면서 생물이 살아갈 환경이 다양해졌다."
+    },
+    {
+      "id": "rel-mes-warm",
+      "text": "활발한 화산 활동으로 대기에 이산화 탄소가 쌓이면서 기온이 올라갔다.",
+      "form": {
+        "condition": "중생대 초 화산 활동이 활발하던 동안",
+        "type": "causal",
+        "scope": "중생대의 대기와 기온",
+        "antecedent": {
+          "quantity": "대기 중 이산화 탄소량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기온",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이산화 탄소가 쌓이면 기온이 올라가므로 내려간다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "활발한 화산 활동으로 대기에 이산화 탄소가 쌓이면서 기온이 내려갔다."
+    },
+    {
+      "id": "rel-mes-life",
+      "text": "이 시대에는 육지에서 대형 파충류인 공룡이, 바다에서 암모나이트가 번성하였다.",
+      "form": {
+        "condition": "시대마다 번성한 대표 생물을 갈라 볼 때",
+        "type": "classification",
+        "scope": "중생대의 대표 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "번성한 생물의 이름을 바꾸면 거짓이 되지만 방향을 뒤집는 형태의 명제가 아니다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mes-end",
+      "text": "중생대 말 지구 환경이 급격히 바뀌면서 공룡과 암모나이트를 비롯한 많은 생물종이 사라졌다.",
+      "form": {
+        "condition": "중생대 말 급격한 환경 변화가 일어났을 때",
+        "type": "causal",
+        "scope": "중생대 말에 일어난 대멸종"
+      },
+      "invertible": false,
+      "invertible_reason": "환경 변화가 완만했다면 멸종이 없었다고 단정할 수 없어 뒤집은 문장이 반드시 거짓은 아니다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중생대에는 빙하기가 되풀이되어 몹시 추웠다",
+      "why_wrong": "중생대는 전 기간 내내 온난한 기후가 이어졌다. 빙하기와 간빙기가 되풀이된 것은 신생대 말기다.",
+      "source": "llm",
+      "linked_relation": "rel-mes-warm"
+    },
+    {
+      "text": "공룡은 고생대에 번성했다가 중생대에 멸종했다",
+      "why_wrong": "공룡이 번성한 때는 중생대다. 고생대 바다에서 번성한 것은 삼엽충과 어류다.",
+      "source": "llm",
+      "linked_relation": "rel-mes-life"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-geologic-time"
+    },
+    {
+      "type": "next",
+      "target": "isci2-cenozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-paleozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-mass-extinction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-01",
+  "pages": [
+    15,
+    18,
+    20
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

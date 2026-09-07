@@ -1,0 +1,116 @@
+{
+  "id": "isci2-hydrogen-ion",
+  "concept_key": "concept:hydrogen-ion",
+  "registry_status": "new",
+  "term": "수소 이온",
+  "aliases": [
+    "H+"
+  ],
+  "notation": {
+    "hanja": "水素이온",
+    "hanja_note": "‘이온’은 영어 ion 의 음차어라 한자 표기가 없다. 앞의 水素만 한자어다.",
+    "hanja_gloss": "水 물 수 · 素 본디 소",
+    "english": "hydrogen ion",
+    "symbol_display": "H⁺",
+    "symbol_plain": "H+"
+  },
+  "definition": "산이 물에 녹아 이온화될 때 공통으로 생기는 양이온. 산성이 나타나는 원인이 되는 이온이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-hion-common",
+      "text": "산의 종류가 달라도 수용액에서 내놓는 양이온은 모두 수소 이온으로 같다.",
+      "form": {
+        "condition": "여러 산이 물에 녹아 이온화될 때",
+        "type": "classification",
+        "scope": "수용액 상태의 산"
+      },
+      "invertible": true,
+      "invertible_reason": "양이온이 산마다 다르다면 여러 산이 같은 성질을 보이는 까닭을 설명할 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산의 종류가 다르면 수용액에서 내놓는 양이온의 종류도 서로 다르다."
+    },
+    {
+      "id": "rel-isci2-hion-current",
+      "text": "수용액 속 수소 이온이 전극 쪽으로 움직이기 때문에 산 수용액에 전류가 흐른다.",
+      "form": {
+        "condition": "산 수용액에 전극을 넣고 전원 장치를 연결했을 때",
+        "type": "causal",
+        "scope": "이온이 움직일 수 있는 수용액"
+      },
+      "invertible": false,
+      "invertible_reason": "전류가 흐르는 까닭을 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-isci2-hion-ocean",
+      "text": "바닷물에 녹아드는 이산화 탄소가 많아질수록 해수 표면의 수소 이온 농도가 높아진다.",
+      "form": {
+        "condition": "대기 중 이산화 탄소 농도가 높아져 바다에 녹는 양이 늘 때",
+        "type": "direct",
+        "scope": "해수 표면",
+        "antecedent": {
+          "quantity": "바다에 녹아든 이산화 탄소량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해수 표면의 수소 이온 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이산화 탄소가 물에 녹아 산을 만드는 것이므로 수소 이온이 줄어든다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바닷물에 녹아드는 이산화 탄소가 많아질수록 해수 표면의 수소 이온 농도는 낮아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산마다 내놓는 양이온이 달라서 산의 성질도 제각각이다",
+      "why_wrong": "산이 내놓는 양이온은 모두 수소 이온이다. 종류에 따라 달라지는 것은 함께 생기는 음이온 쪽이고, 공통 성질은 수소 이온에서 온다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-hion-common"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-acidity"
+    },
+    {
+      "type": "next",
+      "target": "isci2-neutralization-reaction"
+    },
+    {
+      "type": "related",
+      "target": "isci2-hydroxide-ion",
+      "note": "만나면 물이 되는 짝"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-03",
+  "pages": [
+    50,
+    53,
+    54,
+    56
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

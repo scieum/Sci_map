@@ -1,0 +1,133 @@
+{
+  "id": "isci2-geologic-time",
+  "concept_key": "concept:geologic-time",
+  "registry_status": "new",
+  "term": "지질 시대",
+  "aliases": [
+    "지질시대"
+  ],
+  "notation": {
+    "hanja": "地質時代",
+    "hanja_gloss": "地 땅 지 · 質 바탕 질 · 時 때 시 · 代 대신할 대",
+    "english": "geologic time"
+  },
+  "definition": "지구가 만들어진 약 46억 년 전부터 지금까지 이어진 지구의 역사 전체를 가리키는 시간 구분의 틀.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-geo-boundary",
+      "text": "화석의 종류와 수가 갑자기 달라지는 지점을 지질 시대를 가르는 경계로 삼는다.",
+      "form": {
+        "condition": "지층에 남은 화석을 오래된 것부터 차례로 견줄 때",
+        "type": "conditional",
+        "scope": "화석이 충분히 남아 있는 지층 기록",
+        "antecedent": {
+          "quantity": "화석 종류와 수가 달라진 폭",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "시대 경계로 삼을 근거",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "화석이 드문 시기는 다른 근거로도 경계를 정하므로 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-geo-divide",
+      "text": "화석이 드문 긴 시기를 선캄브리아시대로 묶고, 화석이 풍부해진 뒤를 오래된 차례대로 고생대·중생대·신생대로 가른다.",
+      "form": {
+        "condition": "화석이 얼마나 나오는지를 기준으로 지질 시대를 크게 가를 때",
+        "type": "classification",
+        "scope": "이 교과서가 쓰는 네 시대 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "시대의 앞뒤 차례를 반대로 놓으면 화석 기록의 순서와 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화석이 풍부해진 뒤의 시기를 오래된 차례대로 신생대·중생대·고생대로 가른다."
+    },
+    {
+      "id": "rel-geo-env-biota",
+      "text": "지구 환경이 크게 달라지면 그 환경에 적응해 살아가는 생물종의 구성도 함께 달라진다.",
+      "form": {
+        "condition": "지각 변동이나 대규모 화산 분출처럼 지구 규모의 환경 변화가 일어났을 때",
+        "type": "causal",
+        "scope": "지질 시대 전 기간의 생물권",
+        "antecedent": {
+          "quantity": "지구 환경의 변화 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "서식 생물종 구성의 변화",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "환경이 바뀌어도 서식 생물이 그대로라면 화석 기록에 급격한 변화가 남을 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 환경이 크게 달라져도 그곳에 살아가는 생물종의 구성은 그대로 이어진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지질 시대는 네 시대가 비슷한 길이로 나뉘어 있다",
+      "why_wrong": "네 시대의 길이는 크게 다르다. 선캄브리아시대 하나가 전체의 8할이 넘고, 우리가 사는 신생대는 2 %도 되지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-geo-divide"
+    },
+    {
+      "text": "지질 시대는 지구에 생물이 나타난 때부터 세는 시간이다",
+      "why_wrong": "지질 시대는 생물이 나타난 시점이 아니라 지구가 생긴 약 46억 년 전부터 지금까지를 모두 아우른다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-precambrian"
+    },
+    {
+      "type": "next",
+      "target": "isci2-paleozoic-era"
+    },
+    {
+      "type": "next",
+      "target": "isci2-mesozoic-era"
+    },
+    {
+      "type": "next",
+      "target": "isci2-cenozoic-era"
+    },
+    {
+      "type": "next",
+      "target": "isci2-mass-extinction",
+      "note": "대멸종은 시대의 경계가 되는 사건이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-01",
+  "pages": [
+    15,
+    16,
+    20
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

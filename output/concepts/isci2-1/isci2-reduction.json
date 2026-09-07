@@ -1,0 +1,128 @@
+{
+  "id": "isci2-reduction",
+  "concept_key": "concept:reduction",
+  "registry_status": "reused",
+  "term": "환원",
+  "aliases": [
+    "환원 반응"
+  ],
+  "notation": {
+    "hanja": "還元",
+    "hanja_gloss": "還 돌아올 환 · 元 으뜸 원",
+    "english": "reduction"
+  },
+  "definition": "물질이 산소를 잃거나 전자를 얻는 변화. 산화와는 산소와 전자가 오가는 방향이 정반대다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-red-oxygen",
+      "text": "산소와 분리되어 산소를 잃은 물질은 환원되었다고 판정한다.",
+      "form": {
+        "condition": "산소가 오가는 반응을 산소의 이동으로 읽을 때",
+        "type": "classification",
+        "scope": "산소가 관여하는 화학 반응",
+        "antecedent": {
+          "quantity": "물질이 잃은 산소",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "환원 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 잃은 쪽을 산화라 하면 산소 기준의 정의와 정면으로 어긋난다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산소와 분리되어 산소를 잃은 물질은 산화되었다고 판정한다."
+    },
+    {
+      "id": "rel-isci2-red-electron",
+      "text": "전자를 받아 얻은 물질은 환원되었다고 판정한다.",
+      "form": {
+        "condition": "전자가 오가는 반응을 전자의 이동으로 읽을 때",
+        "type": "classification",
+        "scope": "전자를 주고받는 화학 반응",
+        "antecedent": {
+          "quantity": "물질이 받은 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "환원 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 얻은 쪽을 산화로 부르면 산화와 환원의 이름이 통째로 뒤바뀐다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자를 받아 얻은 물질은 산화되었다고 판정한다."
+    },
+    {
+      "id": "rel-isci2-red-cuo",
+      "text": "숯가루와 함께 가열한 산화 구리는 산소를 빼앗겨 구리로 바뀌고, 그 산소를 받은 탄소는 이산화 탄소가 된다.",
+      "form": {
+        "condition": "검은 산화 구리 가루와 숯가루를 섞어 가열할 때",
+        "type": "causal",
+        "scope": "산화 구리와 탄소 사이의 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "한 반응에서 무엇이 무엇으로 바뀌는지를 적은 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환원은 물질이 원래 상태로 되돌아가는 것을 뜻한다",
+      "why_wrong": "이름이 ‘되돌린다’는 뜻일 뿐이다. 환원은 산소를 잃거나 전자를 얻는 변화를 가리키며, 처음 상태로 돌아가는 것과는 다른 말이다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-red-oxygen"
+    },
+    {
+      "text": "전자를 얻었으니 무언가를 얻은 것이고, 따라서 산화다",
+      "why_wrong": "얻고 잃는 기준이 산소일 때와 전자일 때는 방향이 반대다. 전자를 얻으면 환원, 잃으면 산화다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-red-electron"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-reduction",
+      "note": "같은 개념을 선택 과목에서는 산화수까지 넓혀 다룬다",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "next",
+      "target": "isci2-redox-simultaneity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-oxidation",
+      "note": "같은 반응을 반대쪽에서 본 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-01",
+  "pages": [
+    41,
+    43,
+    65
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

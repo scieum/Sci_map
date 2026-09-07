@@ -1,0 +1,117 @@
+{
+  "id": "isci2-evolution",
+  "concept_key": "concept:evolution",
+  "registry_status": "new",
+  "term": "진화",
+  "notation": {
+    "hanja": "進化",
+    "hanja_gloss": "進 나아갈 진 · 化 될 화",
+    "english": "evolution"
+  },
+  "definition": "여러 세대를 거치며 생물 무리가 환경에 적응해 이전과 다른 모습으로 바뀌어 가는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-evo-accumulate",
+      "text": "자연선택이 여러 세대에 걸쳐 쌓이면 조상 생물과는 다른 새로운 생물종이 나타난다.",
+      "form": {
+        "condition": "조상 무리가 여러 환경으로 퍼져 오래 적응해 갈 때",
+        "type": "causal",
+        "scope": "여러 세대에 걸친 생물 무리의 변화",
+        "antecedent": {
+          "quantity": "누적된 자연선택의 세대 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "조상 종과의 차이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "선택이 쌓일수록 조상과 멀어지는 것이므로 점점 닮아 간다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자연선택이 여러 세대에 걸쳐 쌓일수록 생물은 조상 생물과 점점 닮아 간다."
+    },
+    {
+      "id": "rel-evo-isolation",
+      "text": "한 조상 무리가 협곡 같은 경계로 갈라져 각각 다른 환경에 적응하면 둘 이상의 종으로 나뉠 수 있다.",
+      "form": {
+        "condition": "한 무리가 지리적으로 갈라져 서로 오가지 못하게 될 때",
+        "type": "conditional",
+        "scope": "그랜드캐니언 다람쥐처럼 지리적으로 갈린 무리"
+      },
+      "invertible": false,
+      "invertible_reason": "갈라진다고 반드시 종이 나뉘는 것은 아니어서 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-evo-population",
+      "text": "진화는 한 개체가 살아가는 동안 겪는 변화가 아니라 여러 세대에 걸쳐 무리에서 일어나는 변화다.",
+      "form": {
+        "condition": "변화가 일어나는 단위와 시간 범위를 따질 때",
+        "type": "classification",
+        "scope": "생물 무리의 세대 간 변화"
+      },
+      "invertible": true,
+      "invertible_reason": "변화의 단위를 개체와 한 생애로 옮기면 진화의 정의가 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진화는 여러 세대에 걸친 무리의 변화가 아니라 한 개체가 살아가는 동안 겪는 변화다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진화는 한 생물이 살아가면서 점점 나은 몸으로 발전하는 것이다",
+      "why_wrong": "진화는 개체의 일생이 아니라 여러 세대에 걸친 무리의 변화다. 한 개체의 몸이 바뀌는 것은 진화가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-evo-population"
+    },
+    {
+      "text": "진화는 언제나 더 우수한 생물이 되는 방향으로 일어난다",
+      "why_wrong": "무엇이 유리한지는 환경마다 다르다. 어떤 환경에서 유리했던 형질이 환경이 바뀌면 불리해지기도 하므로 진화에 정해진 우열의 방향은 없다.",
+      "source": "llm",
+      "linked_relation": "rel-evo-accumulate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-natural-selection"
+    },
+    {
+      "type": "next",
+      "target": "isci2-biodiversity"
+    },
+    {
+      "type": "next",
+      "target": "isci2-theory-of-natural-selection"
+    },
+    {
+      "type": "related",
+      "target": "isci2-mass-extinction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-02",
+  "pages": [
+    25,
+    27
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

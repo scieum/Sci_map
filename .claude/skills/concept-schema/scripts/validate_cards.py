@@ -195,18 +195,49 @@ def check_originality(cards, unit_id, res: Result) -> None:
 
 
 # ══ C4 참조 무결성·순환 ════════════════════════════════════════════════════
+def all_cards_index() -> dict[str, str]:
+    """리포 안의 **모든** 카드 id → concept_key.
+
+    same 링크는 과목·학년을 가로지른다(§2.3). 그래서 참조가 실재하는지는 이 단원
+    폴더만 봐서는 알 수 없다 — isci2-1 의 same 10개가 reac·mate 카드를 가리키는데,
+    단원 폴더만 보면 전부 "실재하지 않는 대상" 이 된다.
+    """
+    out: dict[str, str] = {}
+    root = Path(__file__).resolve().parents[4] / "output" / "concepts"
+    if not root.is_dir():
+        return out
+    for f in root.glob("*/*.json"):
+        if f.name.endswith(".candidates.json"):
+            continue
+        try:
+            card = json.loads(f.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(card, dict) and card.get("id"):
+            out[card["id"]] = card.get("concept_key", "")
+    return out
+
+
 def check_links(cards, res: Result) -> None:
     ids = {c["id"] for c in cards}
-    broken, edges = [], []
+    outside = all_cards_index()          # 단원 밖 카드까지 아우른 색인
+    broken, edges, out_of_unit = [], [], []
     for c in cards:
         for l in c["links"]:
-            if l["target"] not in ids:
+            if l["target"] not in ids and l["target"] not in outside:
                 broken.append(f"{c['id']} -> {l['target']} ({l['type']})")
+            # same 이 아닌 링크는 이 단원 안에 머물러야 한다. 예전에는 link_refs 가
+            # 그 노릇을 겸했는데(단원 밖이면 무조건 broken), 이제 밖을 볼 수 있게
+            # 됐으므로 그 규칙을 따로 세운다 — 아니면 규칙이 조용히 사라진다
+            if l["target"] not in ids and l["type"] != "same":
+                out_of_unit.append(f"{c['id']} -> {l['target']} ({l['type']})")
             if l["type"] == "prereq":
                 edges.append((l["target"], c["id"]))   # target 을 알아야 c 를 이해한다
             elif l["type"] == "next":
                 edges.append((c["id"], l["target"]))
     res.add("link_refs", not broken, f"실재하지 않는 링크 대상 {len(broken)}건", broken)
+    res.add("link_scope", not out_of_unit,
+            f"same 이 아닌데 단원 밖을 가리키는 링크 {len(out_of_unit)}건", out_of_unit)
 
     adj: dict[str, list[str]] = {i: [] for i in ids}
     for a, b in edges:
@@ -235,8 +266,11 @@ def check_links(cards, res: Result) -> None:
     lonely = [c["id"] for c in cards if len(c["links"]) < 2]
     res.add("link_min", not lonely, f"링크 2개 미만(고립) {len(lonely)}건", lonely)
 
-    # same 링크는 concept_key 일치가 근거다 (R9) — 표기 일치로 걸면 안 된다
-    key_of = {c["id"]: c["concept_key"] for c in cards}
+    # same 링크는 concept_key 일치가 근거다 (R9) — 표기 일치로 걸면 안 된다.
+    # 단원 밖 대상도 색인에 있으므로 **가로지르는 same 도 실제로 검사된다.**
+    # 예전에는 대상이 폴더 밖이면 조용히 건너뛰어, 정작 검사가 필요한 링크가
+    # 검사되지 않았다
+    key_of = {**outside, **{c["id"]: c["concept_key"] for c in cards}}
     bad_same = [f"{c['id']} -> {l['target']}" for c in cards for l in c["links"]
                 if l["type"] == "same" and l["target"] in key_of
                 and key_of[l["target"]] != c["concept_key"]]

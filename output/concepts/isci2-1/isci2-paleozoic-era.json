@@ -1,0 +1,151 @@
+{
+  "id": "isci2-paleozoic-era",
+  "concept_key": "concept:paleozoic-era",
+  "registry_status": "new",
+  "term": "고생대",
+  "notation": {
+    "hanja": "古生代",
+    "hanja_gloss": "古 옛 고 · 生 날 생 · 代 대신할 대",
+    "english": "Paleozoic era"
+  },
+  "definition": "화석이 풍부해진 뒤 가장 먼저 오는 시대. 단단한 부분을 지닌 생물이 늘고 생물이 처음으로 육지에 올라선 때다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pal-ozone-land",
+      "text": "대기 산소가 늘며 만들어진 오존층이 자외선을 가려 준 덕분에 생물이 육지로 올라올 수 있었다.",
+      "form": {
+        "condition": "대기 중 산소 농도가 높아져 오존층이 형성된 뒤",
+        "type": "causal",
+        "scope": "고생대의 대기와 생물",
+        "antecedent": {
+          "quantity": "오존층의 자외선 차단",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "육상에서 살 수 있는 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "오존층이 자외선을 통과시킨다면 육상 진출을 도울 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오존층이 자외선을 그대로 통과시킨 덕분에 생물이 육지로 올라올 수 있었다."
+    },
+    {
+      "id": "rel-pal-hard-parts",
+      "text": "껍데기나 뼈처럼 단단한 부분을 갖춘 생물이 나타나 포식자로부터 몸을 지킬 수 있게 되었다.",
+      "form": {
+        "condition": "고생대가 시작될 무렵 생물의 종류와 수가 크게 늘던 때",
+        "type": "causal",
+        "scope": "고생대 바다에 살던 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "몸을 지키는 방법은 단단한 부분 말고도 있어 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pal-oxygen-size",
+      "text": "고생대 후기에는 대기 산소 농도가 오늘날보다 높아 몸집이 큰 곤충과 양서류가 번성하였다.",
+      "form": {
+        "condition": "고생대 후기에 산소 농도가 지금보다 높게 유지되던 동안",
+        "type": "direct",
+        "scope": "고생대 후기의 육상 동물",
+        "antecedent": {
+          "quantity": "대기 산소 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "번성한 동물의 몸집",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소 농도가 지금보다 낮았다면 몸집이 큰 곤충이 번성한 까닭을 설명할 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고생대 후기에는 대기 산소 농도가 오늘날보다 낮아 몸집이 큰 곤충과 양서류가 번성하였다."
+    },
+    {
+      "id": "rel-pal-end",
+      "text": "고생대 말 대륙이 하나로 모이면서 얕은 바다가 줄고 기후가 급변해 생물종 수가 크게 감소하였다.",
+      "form": {
+        "condition": "고생대 말 흩어져 있던 대륙이 이동해 합쳐졌을 때",
+        "type": "causal",
+        "scope": "고생대 말에 일어난 대멸종",
+        "antecedent": {
+          "quantity": "얕은 바다의 면적",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "생물종 수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "서식지가 줄고 기후가 급변한 결과가 생물종의 증가일 수는 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고생대 말 얕은 바다가 줄고 기후가 급변하면서 생물종 수가 크게 늘어났다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고생대에는 처음부터 생물이 육지에서 살고 있었다",
+      "why_wrong": "고생대 초의 생물은 바다에 살았다. 오존층이 만들어져 자외선이 가려진 뒤에야 육지로 올라올 수 있었다.",
+      "source": "llm",
+      "linked_relation": "rel-pal-ozone-land"
+    },
+    {
+      "text": "오존층은 대기의 산소가 줄어들면서 만들어졌다",
+      "why_wrong": "오존층은 대기 중 산소 농도가 높아지면서 그 산소로부터 만들어졌다. 산소가 줄면 오존층도 만들어질 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-pal-ozone-land"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-geologic-time"
+    },
+    {
+      "type": "next",
+      "target": "isci2-mesozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-precambrian"
+    },
+    {
+      "type": "related",
+      "target": "isci2-mass-extinction",
+      "note": "고생대 말에 가장 큰 대멸종이 있었다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-01",
+  "pages": [
+    15,
+    17,
+    20
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

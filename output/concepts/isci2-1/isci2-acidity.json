@@ -1,0 +1,111 @@
+{
+  "id": "isci2-acidity",
+  "concept_key": "concept:acidity",
+  "registry_status": "new",
+  "term": "산성",
+  "notation": {
+    "hanja": "酸性",
+    "hanja_gloss": "酸 실 산 · 性 성품 성",
+    "english": "acidity"
+  },
+  "definition": "여러 산이 수용액에서 함께 보이는 성질. 수소 이온 때문에 나타나며 금속·탄산 칼슘과 반응하고 전류가 흐른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-acid-cause",
+      "text": "산의 종류가 달라도 같은 성질이 나타나는 까닭은 어느 산이든 수용액에서 수소 이온을 내놓기 때문이다.",
+      "form": {
+        "condition": "여러 산의 수용액을 나란히 놓고 견줄 때",
+        "type": "causal",
+        "scope": "수용액 상태의 산"
+      },
+      "invertible": true,
+      "invertible_reason": "원인 이온을 수산화 이온으로 바꾸면 염기의 설명이 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산의 종류가 달라도 같은 성질이 나타나는 까닭은 어느 산이든 수용액에서 수산화 이온을 내놓기 때문이다."
+    },
+    {
+      "id": "rel-isci2-acid-reaction",
+      "text": "산 수용액은 마그네슘 같은 금속과 반응해 수소 기체를, 탄산 칼슘과 반응해 이산화 탄소 기체를 낸다.",
+      "form": {
+        "condition": "산 수용액에 금속 조각이나 탄산 칼슘을 넣었을 때",
+        "type": "classification",
+        "scope": "산과 반응하는 금속에 한함 — 구리·은·금·백금은 반응하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 반응에서 나오는 기체를 맞바꾸면 관찰 결과와 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산 수용액은 마그네슘 같은 금속과 반응해 이산화 탄소 기체를, 탄산 칼슘과 반응해 수소 기체를 낸다."
+    },
+    {
+      "id": "rel-isci2-acid-current",
+      "text": "산이 물에 녹아 이온으로 나뉘어 있으므로 그 수용액에 전극을 담그면 전류가 흐른다.",
+      "form": {
+        "condition": "산이 물에 녹아 이온화된 상태일 때",
+        "type": "causal",
+        "scope": "수용액 상태의 산"
+      },
+      "invertible": false,
+      "invertible_reason": "전류가 흐르는 까닭을 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모든 금속은 산과 반응해 수소 기체를 낸다",
+      "why_wrong": "구리, 은, 금, 백금 같은 금속은 산과 반응하지 않는다. 산과 반응해 수소 기체를 내는 금속은 일부다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-acid-reaction"
+    },
+    {
+      "text": "산성은 물에 녹지 않은 산에서도 그대로 나타나는 성질이다",
+      "why_wrong": "산성은 산이 물에 녹아 수소 이온을 내놓을 때 나타난다. 이온으로 나뉘지 않으면 공통 성질도 나타나지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-acid-cause"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-hydrogen-ion"
+    },
+    {
+      "type": "next",
+      "target": "isci2-neutralization-reaction"
+    },
+    {
+      "type": "next",
+      "target": "isci2-acid-base-indicator"
+    },
+    {
+      "type": "related",
+      "target": "isci2-basicity",
+      "note": "성질이 정반대인 짝"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-03",
+  "pages": [
+    49,
+    50,
+    53
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

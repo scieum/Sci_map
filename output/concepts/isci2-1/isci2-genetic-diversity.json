@@ -1,0 +1,103 @@
+{
+  "id": "isci2-genetic-diversity",
+  "concept_key": "concept:genetic-diversity",
+  "registry_status": "new",
+  "term": "유전적 다양성",
+  "notation": {
+    "hanja": "遺傳的多樣性",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 的 과녁 적 · 多 많을 다 · 樣 모양 양 · 性 성품 성",
+    "english": "genetic diversity"
+  },
+  "definition": "같은 종의 무리 안에서 개체마다 유전정보가 달라 변이가 얼마나 다양하게 나타나는지를 뜻하는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gd-extinction",
+      "text": "유전적 다양성이 높은 무리일수록 불리한 환경 변화에도 적응할 개체가 있어 멸종할 확률이 낮아진다.",
+      "form": {
+        "condition": "무리에 생존이 어려운 환경 변화가 닥쳤을 때",
+        "type": "inverse",
+        "scope": "같은 종으로 이루어진 생물 무리",
+        "antecedent": {
+          "quantity": "무리의 유전적 다양성",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "멸종할 확률",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변이가 다양할수록 적응할 개체가 남을 여지가 커지므로 멸종 확률이 높아진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유전적 다양성이 높은 무리일수록 환경이 불리하게 바뀌었을 때 멸종할 확률이 높아진다."
+    },
+    {
+      "id": "rel-gd-within-species",
+      "text": "유전적 다양성은 종과 종 사이가 아니라 같은 종의 무리 안에서 따지는 다양성이다.",
+      "form": {
+        "condition": "다양성을 재는 범위를 가릴 때",
+        "type": "classification",
+        "scope": "생물다양성 세 요소의 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "재는 범위를 종 사이로 옮기면 종다양성의 설명이 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유전적 다양성은 같은 종 안이 아니라 서로 다른 종 사이에서 따지는 다양성이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전적 다양성은 한 지역에 사는 종이 얼마나 많은지를 뜻한다",
+      "why_wrong": "그것은 종다양성의 설명이다. 유전적 다양성은 같은 종의 무리 안에서 개체끼리 얼마나 다른지를 본다.",
+      "source": "llm",
+      "linked_relation": "rel-gd-within-species"
+    },
+    {
+      "text": "유전적 다양성이 낮아도 개체 수만 많으면 멸종하지 않는다",
+      "why_wrong": "개체가 아무리 많아도 서로 비슷하면 같은 환경 변화에 다 같이 취약하다. 살아남을 개체가 남지 않으면 무리 전체가 사라질 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-gd-extinction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-biodiversity"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-variation",
+      "note": "변이가 나타나는 정도로 정의된다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-species-diversity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ecosystem-diversity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-03",
+  "pages": [
+    28,
+    29
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

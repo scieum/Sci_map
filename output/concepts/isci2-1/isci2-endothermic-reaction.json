@@ -1,0 +1,123 @@
+{
+  "id": "isci2-endothermic-reaction",
+  "concept_key": "concept:endothermic-reaction",
+  "registry_status": "reused",
+  "term": "에너지 흡수",
+  "aliases": [
+    "흡열 반응",
+    "흡열"
+  ],
+  "notation": {
+    "hanja": "에너지吸收",
+    "hanja_note": "‘에너지’는 영어 energy 의 음차어라 한자 표기가 없다. 뒤의 吸收만 한자어다.",
+    "hanja_gloss": "吸 마실 흡 · 收 거둘 수",
+    "english": "endothermic reaction"
+  },
+  "definition": "화학 반응이나 상태 변화가 일어나면서 주변에서 에너지를 빨아들이는 것. 그만큼 주변의 온도가 내려간다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-endo-temp",
+      "text": "에너지가 흡수되면 에너지를 빼앗긴 주변의 온도가 내려간다.",
+      "form": {
+        "condition": "변화가 일어나는 동안 주변과 에너지를 주고받을 때",
+        "type": "causal",
+        "scope": "에너지를 흡수하는 화학 반응과 상태 변화",
+        "antecedent": {
+          "quantity": "흡수된 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주변의 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주변에서 에너지를 가져갔으므로 주변이 더워진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에너지가 흡수되면 에너지를 빼앗긴 주변의 온도가 올라간다."
+    },
+    {
+      "id": "rel-isci2-endo-scope",
+      "text": "땀이 증발할 때, 드라이아이스가 승화할 때, 냉각 팩 속 물질이 반응할 때는 주변에서 에너지를 빨아들인다.",
+      "form": {
+        "condition": "변화가 일어나는 동안 에너지가 드나드는 방향을 볼 때",
+        "type": "classification",
+        "scope": "화학 반응과 상태 변화를 모두 포함"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-isci2-endo-fridge",
+      "text": "냉장고의 냉매는 기화하며 에너지를 흡수하고, 방열판에서 액화하며 에너지를 방출한다.",
+      "form": {
+        "condition": "냉매가 기화와 액화를 되풀이하며 순환할 때",
+        "type": "causal",
+        "scope": "냉매를 순환시키는 냉각 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "기화와 액화에서 에너지가 드나드는 방향을 맞바꾸면 냉장고가 안을 차게 만들 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "냉장고의 냉매는 기화하며 에너지를 방출하고, 방열판에서 액화하며 에너지를 흡수한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "냉각 팩이 차가운 것은 안에 차가운 물질이 들어 있기 때문이다",
+      "why_wrong": "처음부터 차가운 것이 아니다. 팩 안에서 일어나는 반응이 주변의 에너지를 빨아들이기 때문에 차가워진다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-endo-temp"
+    },
+    {
+      "text": "에너지를 흡수하는 변화가 일어나면 주변의 온도가 올라간다",
+      "why_wrong": "에너지를 가져간 쪽은 변화가 일어나는 물질이고, 빼앗긴 주변은 온도가 내려간다. 그래서 땀이 증발하면 시원해진다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-endo-temp"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mate-endothermic-reaction",
+      "note": "선택 과목에서는 화학 반응에 한정해 흡열 반응으로 다룬다",
+      "grade_from": "물질과 에너지"
+    },
+    {
+      "type": "related",
+      "target": "isci2-exothermic-reaction",
+      "note": "에너지가 오가는 방향이 반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "isci2-photosynthesis",
+      "note": "에너지를 흡수하는 반응의 사례"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-05",
+  "pages": [
+    62,
+    63,
+    66
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

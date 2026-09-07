@@ -1,0 +1,124 @@
+{
+  "id": "isci2-combustion",
+  "concept_key": "concept:combustion",
+  "registry_status": "reused",
+  "term": "연소",
+  "aliases": [
+    "연소 반응"
+  ],
+  "notation": {
+    "hanja": "燃燒",
+    "hanja_gloss": "燃 탈 연 · 燒 사를 소",
+    "english": "combustion"
+  },
+  "definition": "물질이 산소와 빠르게 반응하며 열과 빛을 내는 변화. 연료 쪽이 산화되는 산화환원 반응이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-comb-redox",
+      "text": "메테인이 완전 연소할 때 메테인에서는 산화가, 산소에서는 환원이 일어난다.",
+      "form": {
+        "condition": "메테인의 완전 연소 반응식을 산화와 환원으로 나누어 읽을 때",
+        "type": "classification",
+        "scope": "산소가 넉넉한 상태에서의 메테인 연소"
+      },
+      "invertible": true,
+      "invertible_reason": "연료와 산소의 산화·환원을 맞바꾸면 산소가 물이 되는 과정을 설명할 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "메테인이 완전 연소할 때 메테인에서는 환원이, 산소에서는 산화가 일어난다."
+    },
+    {
+      "id": "rel-isci2-comb-products",
+      "text": "탄소와 수소로 이루어진 연료가 완전 연소하면 이산화 탄소와 물이 생성된다.",
+      "form": {
+        "condition": "산소가 넉넉히 공급되어 완전 연소가 일어날 때",
+        "type": "conditional",
+        "scope": "탄소와 수소로 이루어진 연료의 완전 연소"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물을 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-isci2-comb-heat",
+      "text": "화석 연료가 산소와 반응해 산화될 때 많은 양의 열에너지가 방출되어 주변 온도가 올라간다.",
+      "form": {
+        "condition": "화석 연료가 공기 중에서 연소하는 동안",
+        "type": "causal",
+        "scope": "열을 얻으려고 연료를 태우는 경우",
+        "antecedent": {
+          "quantity": "연소한 연료의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "방출되는 열에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "연소는 열을 내놓는 변화이므로 주변의 열을 빨아들인다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화석 연료가 산소와 반응해 산화될 때 주변의 열을 빨아들여 주변 온도가 내려간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연소는 산소가 산화되는 반응이다",
+      "why_wrong": "산소는 상대에게서 전자를 받는 쪽이므로 환원된다. 산화되는 것은 산소와 결합하는 연료다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-comb-redox"
+    },
+    {
+      "text": "연소가 일어나면 주변의 열을 흡수해 시원해진다",
+      "why_wrong": "연소는 열을 내놓는 변화다. 그 열을 난방이나 조리에 쓰는 것이고, 주변 온도는 올라간다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-comb-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mate-combustion",
+      "grade_from": "물질과 에너지"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-redox-simultaneity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-exothermic-reaction"
+    },
+    {
+      "type": "related",
+      "target": "isci2-smelting",
+      "note": "인류 문명을 바꾼 또 하나의 산화환원 반응"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03",
+    "10통과2-01-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-02",
+  "pages": [
+    39,
+    45,
+    62
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,129 @@
+{
+  "id": "isci2-oxidation",
+  "concept_key": "concept:oxidation",
+  "registry_status": "reused",
+  "term": "산화",
+  "aliases": [
+    "산화 반응"
+  ],
+  "notation": {
+    "hanja": "酸化",
+    "hanja_gloss": "酸 실 산 · 化 될 화",
+    "english": "oxidation"
+  },
+  "definition": "물질이 산소를 얻거나 전자를 잃는 변화. 두 기준은 같은 반응을 산소 쪽과 전자 쪽에서 각각 본 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-ox-oxygen",
+      "text": "산소와 결합해 산소를 얻은 물질은 산화되었다고 판정한다.",
+      "form": {
+        "condition": "산소가 오가는 반응을 산소의 이동으로 읽을 때",
+        "type": "classification",
+        "scope": "산소가 관여하는 화학 반응",
+        "antecedent": {
+          "quantity": "물질이 얻은 산소",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 얻은 쪽을 환원이라 하면 산소 기준의 정의와 정면으로 어긋난다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산소와 결합해 산소를 얻은 물질은 환원되었다고 판정한다."
+    },
+    {
+      "id": "rel-isci2-ox-electron",
+      "text": "전자를 내놓아 잃은 물질은 산화되었다고 판정한다.",
+      "form": {
+        "condition": "전자가 오가는 반응을 전자의 이동으로 읽을 때",
+        "type": "classification",
+        "scope": "전자를 주고받는 화학 반응",
+        "antecedent": {
+          "quantity": "물질이 내놓은 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "산화 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 잃은 쪽을 환원으로 부르면 산화와 환원의 이름이 통째로 뒤바뀐다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자를 내놓아 잃은 물질은 환원되었다고 판정한다."
+    },
+    {
+      "id": "rel-isci2-ox-rust",
+      "text": "철을 공기 중에 오래 두면 산소와 천천히 산화되어 붉은 산화 철이 되고 본래의 성질을 잃는다.",
+      "form": {
+        "condition": "철이 공기 중 산소와 오랫동안 맞닿아 있을 때",
+        "type": "causal",
+        "scope": "공기 중에 놓인 철"
+      },
+      "invertible": false,
+      "invertible_reason": "산화 여부와 성질 변화의 관계라 방향을 뒤집는 형태의 명제가 아니다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산소가 오가지 않는 반응은 산화라고 할 수 없다",
+      "why_wrong": "산소는 산화를 알아보는 기준 가운데 하나일 뿐이다. 구리줄을 질산 은 수용액에 넣는 반응처럼 산소 없이 전자만 오가는 반응에서도 산화가 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-ox-electron"
+    },
+    {
+      "text": "산화는 물질이 타서 없어지는 것을 말한다",
+      "why_wrong": "산화는 산소를 얻거나 전자를 잃는 변화다. 철이 녹스는 것처럼 불꽃 없이 천천히 진행되는 산화도 있다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-ox-rust"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-oxidation",
+      "note": "같은 개념을 선택 과목에서는 산화수까지 넓혀 다룬다",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "next",
+      "target": "isci2-redox-simultaneity",
+      "note": "산화가 있으면 환원이 짝으로 따라온다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-reduction",
+      "note": "같은 반응을 반대쪽에서 본 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-01",
+  "pages": [
+    41,
+    43,
+    65
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,124 @@
+{
+  "id": "isci2-heat-of-neutralization",
+  "concept_key": "concept:heat-of-neutralization",
+  "registry_status": "new",
+  "term": "중화열",
+  "notation": {
+    "hanja": "中和熱",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 熱 더울 열",
+    "english": "heat of neutralization"
+  },
+  "definition": "산과 염기가 중화 반응을 하는 동안 함께 발생하는 열. 반응으로 생긴 물의 양이 많을수록 크다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-nheat-amount",
+      "text": "중화열의 크기는 반응으로 생성된 물 분자의 양에 비례한다.",
+      "form": {
+        "condition": "중화 반응이 일어나는 동안",
+        "type": "direct",
+        "scope": "산과 염기의 중화 반응",
+        "antecedent": {
+          "quantity": "생성된 물의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "발생한 중화열",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응이 많이 일어날수록 열도 많이 나므로 반비례한다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중화열의 크기는 반응으로 생성된 물 분자의 양에 반비례한다."
+    },
+    {
+      "id": "rel-isci2-nheat-maxtemp",
+      "text": "농도가 같은 산과 염기를 부피만 달리해 섞으면, 중화 반응이 가장 많이 일어난 혼합에서 최고 온도가 가장 높다.",
+      "form": {
+        "condition": "농도와 처음 온도가 같은 두 용액을 부피만 달리해 섞을 때",
+        "type": "direct",
+        "scope": "묽은 염산과 염기 수용액을 섞는 실험",
+        "antecedent": {
+          "quantity": "일어난 중화 반응의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "혼합 용액의 최고 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응이 가장 많이 일어난 곳에서 열이 가장 많이 나므로 온도가 가장 낮다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도가 같은 산과 염기를 부피만 달리해 섞으면, 중화 반응이 가장 많이 일어난 혼합에서 최고 온도가 가장 낮다."
+    },
+    {
+      "id": "rel-isci2-nheat-exothermic",
+      "text": "중화 반응은 열을 내놓는 변화이므로 반응이 일어나면 혼합 용액의 온도가 올라간다.",
+      "form": {
+        "condition": "산과 염기를 섞어 중화 반응이 일어나는 동안",
+        "type": "causal",
+        "scope": "에너지를 방출하는 중화 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "열을 내놓는 반응에서 용액이 차가워진다는 진술은 관찰 결과와 정면으로 어긋난다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중화 반응은 열을 빨아들이는 변화이므로 반응이 일어나면 혼합 용액의 온도가 내려간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산과 염기를 많이 넣을수록 최고 온도는 계속 올라간다",
+      "why_wrong": "온도를 올리는 것은 실제로 일어난 중화 반응의 양이다. 한쪽이 남기 시작하면 더 넣어도 반응량이 늘지 않아 온도는 오히려 내려간다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-nheat-maxtemp"
+    },
+    {
+      "text": "중화 반응이 일어나면 열을 흡수해 용액이 차가워진다",
+      "why_wrong": "중화 반응은 열을 내놓는다. 실험에서 두 용액을 섞으면 혼합 용액의 온도가 올라가는 것으로 확인할 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-nheat-exothermic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-neutralization-reaction"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-exothermic-reaction",
+      "note": "중화열은 에너지 방출의 한 경우다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-acidity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-04",
+    "10통과2-01-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-04",
+  "pages": [
+    55,
+    57
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,130 @@
+{
+  "id": "isci2-exothermic-reaction",
+  "concept_key": "concept:exothermic-reaction",
+  "registry_status": "reused",
+  "term": "에너지 방출",
+  "aliases": [
+    "발열 반응",
+    "발열"
+  ],
+  "notation": {
+    "hanja": "에너지放出",
+    "hanja_note": "‘에너지’는 영어 energy 의 음차어라 한자 표기가 없다. 뒤의 放出만 한자어다.",
+    "hanja_gloss": "放 놓을 방 · 出 날 출",
+    "english": "exothermic reaction"
+  },
+  "definition": "화학 반응이나 상태 변화가 일어나면서 에너지를 주변으로 내보내는 것. 그만큼 주변의 온도가 올라간다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-exo-temp",
+      "text": "에너지가 방출되면 그 에너지를 받은 주변의 온도가 올라간다.",
+      "form": {
+        "condition": "변화가 일어나는 동안 주변과 에너지를 주고받을 때",
+        "type": "causal",
+        "scope": "에너지를 방출하는 화학 반응과 상태 변화",
+        "antecedent": {
+          "quantity": "방출된 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주변의 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "내보낸 에너지가 주변으로 옮겨 가므로 주변이 차가워진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에너지가 방출되면 그 에너지를 받은 주변의 온도가 내려간다."
+    },
+    {
+      "id": "rel-isci2-exo-scope",
+      "text": "연소나 중화 반응 같은 화학 반응뿐 아니라 수증기가 액화되는 상태 변화에서도 에너지가 방출된다.",
+      "form": {
+        "condition": "변화가 일어나는 동안 에너지가 드나드는 방향을 볼 때",
+        "type": "classification",
+        "scope": "화학 반응과 상태 변화를 모두 포함"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-isci2-exo-use",
+      "text": "손난로나 발열 용기는 반응에서 나오는 열을 곧바로 쓰도록 만든 물건이다.",
+      "form": {
+        "condition": "생활 도구에 발열 현상을 이용할 때",
+        "type": "conditional",
+        "scope": "발열 현상을 이용한 생활 용품"
+      },
+      "invertible": false,
+      "invertible_reason": "이용 사례를 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에너지 방출은 화학 반응에서만 일어난다",
+      "why_wrong": "상태 변화에서도 일어난다. 수증기가 액화되거나 냉매가 방열판에서 액체가 될 때도 에너지가 방출된다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-exo-scope"
+    },
+    {
+      "text": "에너지가 방출되면 주변의 온도가 내려간다",
+      "why_wrong": "방출된 에너지는 주변으로 옮겨 간다. 그 에너지를 받은 주변은 오히려 온도가 올라간다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-exo-temp"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mate-exothermic-reaction",
+      "note": "선택 과목에서는 화학 반응에 한정해 발열 반응으로 다룬다",
+      "grade_from": "물질과 에너지"
+    },
+    {
+      "type": "next",
+      "target": "isci2-heat-of-neutralization"
+    },
+    {
+      "type": "related",
+      "target": "isci2-endothermic-reaction",
+      "note": "에너지가 오가는 방향이 반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "isci2-combustion"
+    },
+    {
+      "type": "related",
+      "target": "isci2-cellular-respiration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-05",
+  "pages": [
+    60,
+    62,
+    63,
+    66
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

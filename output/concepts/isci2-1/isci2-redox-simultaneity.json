@@ -1,0 +1,122 @@
+{
+  "id": "isci2-redox-simultaneity",
+  "concept_key": "concept:redox-simultaneity",
+  "registry_status": "reused",
+  "term": "산화·환원 반응의 동시성",
+  "aliases": [
+    "산화환원 반응"
+  ],
+  "notation": {
+    "hanja": "酸化還元反應同時性",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 還 돌아올 환 · 元 으뜸 원 · 反 돌이킬 반 · 應 응할 응 · 同 한가지 동 · 時 때 시 · 性 성품 성",
+    "english": "simultaneity of oxidation and reduction"
+  },
+  "definition": "한 반응에서 어떤 물질이 산소나 전자를 얻으면 다른 물질은 그만큼 잃는다는 성질. 산화와 환원은 늘 짝을 이룬다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-sim-oxygen",
+      "text": "산소를 얻어 산화되는 물질이 있으면 그 산소를 내준 물질이 함께 환원된다.",
+      "form": {
+        "condition": "산소의 이동으로 반응을 읽을 때",
+        "type": "conditional",
+        "scope": "산소가 오가는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "산소를 내준 쪽까지 산화되었다고 하면 산소가 어디서 왔는지 설명할 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산소를 얻어 산화되는 물질이 있으면 그 산소를 내준 물질도 함께 산화된다."
+    },
+    {
+      "id": "rel-isci2-sim-electron",
+      "text": "전자를 내놓는 물질과 그 전자를 받는 물질이 짝을 이루므로 산화와 환원은 같은 때에 일어난다.",
+      "form": {
+        "condition": "전자의 이동으로 반응을 읽을 때",
+        "type": "causal",
+        "scope": "전자를 주고받는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "받는 쪽이 없으면 전자를 내놓을 수 없으므로 두 변화가 다른 때에 일어난다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자를 내놓는 물질과 받는 물질이 짝을 이루지만 산화와 환원은 서로 다른 때에 일어난다."
+    },
+    {
+      "id": "rel-isci2-sim-cu-ag",
+      "text": "구리줄을 질산 은 수용액에 담그면 구리는 전자를 잃어 녹아들고 은 이온은 그 전자를 받아 금속으로 석출된다.",
+      "form": {
+        "condition": "구리줄을 질산 은 수용액에 넣어 둘 때",
+        "type": "causal",
+        "scope": "구리와 질산 은 수용액의 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 주고받는 방향을 서로 바꾸면 용액이 푸르게 변하고 은이 석출되는 관찰 결과와 어긋난다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구리줄을 질산 은 수용액에 담그면 구리가 전자를 받고 은 이온이 전자를 잃어 금속으로 석출된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어떤 반응은 산화만 일어나고 환원은 일어나지 않는다",
+      "why_wrong": "산소나 전자는 한쪽이 잃으면 다른 쪽이 얻는다. 산화만 있는 반응은 그 산소나 전자를 받은 물질이 없다는 뜻이라 성립하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-sim-electron"
+    },
+    {
+      "text": "산화가 먼저 일어난 다음에 환원이 뒤이어 일어난다",
+      "why_wrong": "전자를 내놓는 일과 받는 일은 한 사건의 양면이다. 순서를 두어 나눌 수 없고 같은 때에 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-sim-electron"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-redox-simultaneity",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-oxidation"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-reduction"
+    },
+    {
+      "type": "next",
+      "target": "isci2-photosynthesis"
+    },
+    {
+      "type": "next",
+      "target": "isci2-cellular-respiration"
+    },
+    {
+      "type": "next",
+      "target": "isci2-combustion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-01",
+  "pages": [
+    41,
+    43
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

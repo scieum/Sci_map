@@ -1,0 +1,88 @@
+{
+  "id": "isci2-acid-base-indicator",
+  "concept_key": "concept:acid-base-indicator",
+  "registry_status": "new",
+  "term": "지시약",
+  "aliases": [
+    "BTB 용액"
+  ],
+  "notation": {
+    "hanja": "指示藥",
+    "hanja_gloss": "指 가리킬 지 · 示 보일 시 · 藥 약 약",
+    "english": "acid-base indicator"
+  },
+  "definition": "용액의 액성에 따라 색이 달라지는 물질. BTB 용액은 산성에서 노란색, 중성에서 초록색, 염기성에서 파란색을 띤다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-ind-btb",
+      "text": "BTB 용액을 떨어뜨리면 산성 용액은 노란색, 중성 용액은 초록색, 염기성 용액은 파란색으로 보인다.",
+      "form": {
+        "condition": "용액에 BTB 용액을 두세 방울 떨어뜨렸을 때",
+        "type": "classification",
+        "scope": "지시약으로 BTB 용액을 쓴 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "산성과 염기성의 색을 맞바꾸면 실험에서 보는 색과 정면으로 어긋난다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "BTB 용액을 떨어뜨리면 산성 용액은 파란색, 염기성 용액은 노란색으로 보인다."
+    },
+    {
+      "id": "rel-isci2-ind-progress",
+      "text": "산에 염기를 더해 가며 색이 바뀌는 것을 보고 중화 반응이 어디까지 진행됐는지 판단한다.",
+      "form": {
+        "condition": "중화 반응이 진행되는 동안 색 변화를 지켜볼 때",
+        "type": "conditional",
+        "scope": "액성 변화를 색으로 읽는 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "관찰 방법을 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "BTB 용액은 산성 용액에서 파란색을 띤다",
+      "why_wrong": "BTB 용액이 파란색을 띠는 것은 염기성 용액에서다. 산성에서는 노란색, 중성에서는 초록색으로 보인다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-ind-btb"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-acidity"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-basicity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-neutralization-reaction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-04",
+  "pages": [
+    55,
+    56,
+    65,
+    66
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

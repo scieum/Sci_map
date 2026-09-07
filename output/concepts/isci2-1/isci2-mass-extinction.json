@@ -1,0 +1,137 @@
+{
+  "id": "isci2-mass-extinction",
+  "concept_key": "concept:mass-extinction",
+  "registry_status": "new",
+  "term": "대멸종",
+  "notation": {
+    "hanja": "大滅種",
+    "hanja_gloss": "大 큰 대 · 滅 멸할 멸 · 種 씨 종",
+    "english": "mass extinction"
+  },
+  "definition": "짧은 기간에 수많은 생물종이 한꺼번에 사라지는 사건. 지질 시대를 통틀어 여러 차례 되풀이되었다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mext-cause",
+      "text": "대규모 화산 분화나 운석 충돌처럼 환경이 급격히 바뀔 때 대멸종이 일어난 것으로 추정한다.",
+      "form": {
+        "condition": "환경 변화의 속도가 생물이 적응할 수 있는 정도를 넘어설 때",
+        "type": "causal",
+        "scope": "화석 기록으로 확인되는 대멸종 시기",
+        "antecedent": {
+          "quantity": "환경 변화의 급격함",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "한꺼번에 멸종하는 생물종 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "환경이 천천히 바뀌면 생물이 적응할 여유가 생기므로 대멸종의 원인이 될 수 없다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "환경이 천천히 바뀔수록 대멸종이 일어난 것으로 추정한다."
+    },
+    {
+      "id": "rel-mext-opportunity",
+      "text": "대멸종에서 살아남은 생물종에게는 비어 버린 서식지가 새로운 기회가 되었다.",
+      "form": {
+        "condition": "대멸종으로 많은 종이 사라진 직후",
+        "type": "causal",
+        "scope": "대멸종을 견뎌 낸 생물종"
+      },
+      "invertible": false,
+      "invertible_reason": "빈 서식지가 곧바로 번성을 보장하지는 않아 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mext-boundary",
+      "text": "화석 속 생물 과의 수가 급격히 줄어든 지점이 곧 고생대 말과 중생대 말의 경계와 맞물린다.",
+      "form": {
+        "condition": "지질 시대별 화석 기록의 생물 과 수를 이어 볼 때",
+        "type": "conditional",
+        "scope": "고생대 말과 중생대 말의 대멸종"
+      },
+      "invertible": false,
+      "invertible_reason": "경계와 대멸종의 대응은 순서를 뒤집는 형태의 명제가 아니다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mext-biodiversity",
+      "text": "여러 차례의 대멸종과 새로운 종의 등장이 되풀이된 끝에 오늘날의 생물다양성이 이루어졌다.",
+      "form": {
+        "condition": "46억 년의 지질 시대 전체를 놓고 볼 때",
+        "type": "causal",
+        "scope": "지구 생물다양성이 만들어진 과정"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 요약한 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대멸종이 일어나면 지구의 생물이 모두 사라진다",
+      "why_wrong": "대멸종은 많은 종이 한꺼번에 사라지는 사건이지 전멸이 아니다. 살아남은 종이 있었기에 그 뒤 새로운 생물이 퍼질 수 있었다.",
+      "source": "llm",
+      "linked_relation": "rel-mext-opportunity"
+    },
+    {
+      "text": "대멸종은 생물다양성을 줄이기만 한 사건이다",
+      "why_wrong": "당장은 종 수를 줄였지만, 비어 버린 자리를 살아남은 종이 채우며 다양한 종으로 갈라졌다. 오늘의 생물다양성은 그 되풀이의 결과다.",
+      "source": "llm",
+      "linked_relation": "rel-mext-biodiversity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-geologic-time"
+    },
+    {
+      "type": "next",
+      "target": "isci2-biodiversity",
+      "note": "멸종과 재적응의 되풀이가 오늘의 다양성을 만들었다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-paleozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-mesozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-evolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-01",
+  "pages": [
+    20,
+    21,
+    35
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

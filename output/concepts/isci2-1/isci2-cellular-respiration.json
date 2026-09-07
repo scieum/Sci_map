@@ -1,0 +1,97 @@
+{
+  "id": "isci2-cellular-respiration",
+  "concept_key": "concept:cellular-respiration",
+  "registry_status": "reused",
+  "term": "세포호흡",
+  "aliases": [
+    "세포 호흡",
+    "산소호흡"
+  ],
+  "notation": {
+    "hanja": "細胞呼吸",
+    "hanja_gloss": "細 가늘 세 · 胞 태보 포 · 呼 부를 호 · 吸 마실 흡",
+    "english": "cellular respiration"
+  },
+  "definition": "세포의 마이토콘드리아에서 포도당과 산소를 써서 이산화 탄소와 물을 만들고, 생명 활동에 쓸 에너지를 얻는 반응.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-cr-redox",
+      "text": "세포호흡이 진행될 때 포도당에서는 산화가, 산소에서는 환원이 일어난다.",
+      "form": {
+        "condition": "세포호흡 반응식을 산화와 환원으로 나누어 읽을 때",
+        "type": "classification",
+        "scope": "마이토콘드리아에서 일어나는 세포호흡"
+      },
+      "invertible": true,
+      "invertible_reason": "두 물질의 산화·환원을 맞바꾸면 산소가 물이 되는 과정을 설명할 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포호흡이 진행될 때 포도당에서는 환원이, 산소에서는 산화가 일어난다."
+    },
+    {
+      "id": "rel-isci2-cr-energy",
+      "text": "세포호흡은 에너지를 내놓는 반응이어서 생물은 그 에너지로 체온을 유지하고 몸을 움직인다.",
+      "form": {
+        "condition": "세포호흡이 일어나는 동안",
+        "type": "causal",
+        "scope": "세포호흡으로 에너지를 얻는 생물"
+      },
+      "invertible": true,
+      "invertible_reason": "주변에서 에너지를 빼앗는 반응이라면 그 에너지로 생명 활동을 할 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포호흡은 에너지를 빨아들이는 반응이어서 생물은 주변에서 에너지를 빼앗아 체온을 유지한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡에서 산소는 상대를 태우는 쪽이므로 산화된다",
+      "why_wrong": "산소는 전자를 받아 물이 되므로 환원된다. 산화되는 쪽은 이산화 탄소와 물로 분해되는 포도당이다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-cr-redox"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-cellular-respiration",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-redox-simultaneity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-photosynthesis",
+      "note": "물질과 에너지가 오가는 방향이 반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "isci2-exothermic-reaction",
+      "note": "에너지를 방출하는 반응의 사례"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03",
+    "10통과2-01-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-02",
+  "pages": [
+    38,
+    44,
+    63
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

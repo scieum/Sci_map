@@ -1,0 +1,139 @@
+{
+  "id": "isci2-natural-selection",
+  "concept_key": "concept:natural-selection",
+  "registry_status": "new",
+  "term": "자연선택",
+  "notation": {
+    "hanja": "自然選擇",
+    "hanja_gloss": "自 스스로 자 · 然 그럴 연 · 選 가릴 선 · 擇 가릴 택",
+    "english": "natural selection"
+  },
+  "definition": "생존에 유리한 변이를 지닌 개체가 더 많이 살아남아 자손을 남기고, 그 결과 무리의 구성이 한쪽으로 치우쳐 가는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ns-advantage",
+      "text": "생존에 유리한 변이를 지닌 개체는 그렇지 못한 개체보다 많이 살아남아 더 많은 자손을 남긴다.",
+      "form": {
+        "condition": "먹이와 포식자 같은 환경 조건이 일정하게 이어지는 동안",
+        "type": "direct",
+        "scope": "변이가 나타나는 같은 종의 생물 무리",
+        "antecedent": {
+          "quantity": "변이가 생존에 주는 이로움",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "남기는 자손의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "유리한 변이를 지닌 쪽이 자손을 적게 남긴다면 무리의 구성이 그쪽으로 치우칠 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생존에 유리한 변이를 지닌 개체일수록 적게 살아남아 자손을 적게 남긴다."
+    },
+    {
+      "id": "rel-ns-generations",
+      "text": "이 과정이 여러 세대 되풀이되면 유리한 변이를 지닌 개체의 비율이 높아지는 쪽으로 무리의 구성이 바뀐다.",
+      "form": {
+        "condition": "같은 환경 조건이 여러 세대에 걸쳐 이어질 때",
+        "type": "direct",
+        "scope": "자연선택이 일어나고 있는 생물 무리",
+        "antecedent": {
+          "quantity": "세대가 거듭된 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유리한 변이를 지닌 개체의 비율",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세대가 거듭될수록 유리한 형질의 비율이 낮아진다면 선택이 일어나지 않은 것이므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 과정이 여러 세대 되풀이되면 유리한 변이를 지닌 개체의 비율이 낮아지는 쪽으로 무리의 구성이 바뀐다."
+    },
+    {
+      "id": "rel-ns-needs-variation",
+      "text": "무리를 이루는 개체의 형질이 모두 같다면 고를 것이 없으므로 자연선택은 일어나지 않는다.",
+      "form": {
+        "condition": "무리 안에 변이가 전혀 없을 때",
+        "type": "conditional",
+        "scope": "자연선택이 일어나기 위한 전제"
+      },
+      "invertible": true,
+      "invertible_reason": "고를 형질이 없는데 선택이 일어난다는 말은 자연선택의 뜻과 정면으로 어긋난다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무리를 이루는 개체의 형질이 모두 같아도 자연선택은 그대로 일어난다."
+    },
+    {
+      "id": "rel-ns-environment",
+      "text": "어떤 변이가 유리한지는 환경에 달려 있어, 환경이 달라지면 선택되는 형질도 달라진다.",
+      "form": {
+        "condition": "무리가 놓인 환경 조건이 달라질 때",
+        "type": "conditional",
+        "scope": "환경에 따라 유불리가 갈리는 형질"
+      },
+      "invertible": true,
+      "invertible_reason": "유불리가 환경에 달린 형질이라면 환경이 바뀌어도 같은 형질이 선택된다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "어떤 변이가 유리한지는 환경과 상관없이 정해져 있어, 환경이 달라져도 선택되는 형질은 그대로다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환경이 바뀌면 개체가 살아남기 위해 스스로 형질을 알맞게 바꾼다",
+      "why_wrong": "개체가 형질을 바꾸는 것이 아니다. 이미 무리 안에 있던 여러 변이 가운데 그 환경에서 유리한 쪽이 더 많이 살아남는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-ns-needs-variation"
+    },
+    {
+      "text": "자연선택은 힘이 센 개체가 살아남는 것이다",
+      "why_wrong": "기준은 힘이 아니라 그 환경에서의 생존과 번식이다. 눈에 잘 띄지 않는 색처럼 힘과 무관한 형질이 선택되기도 한다.",
+      "source": "llm",
+      "linked_relation": "rel-ns-environment"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-variation"
+    },
+    {
+      "type": "next",
+      "target": "isci2-evolution"
+    },
+    {
+      "type": "next",
+      "target": "isci2-theory-of-natural-selection"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-02",
+  "pages": [
+    24,
+    26,
+    27
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

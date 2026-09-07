@@ -1,0 +1,128 @@
+{
+  "id": "isci2-photosynthesis",
+  "concept_key": "concept:photosynthesis",
+  "registry_status": "reused",
+  "term": "광합성",
+  "notation": {
+    "hanja": "光合成",
+    "hanja_gloss": "光 빛 광 · 合 합할 합 · 成 이룰 성",
+    "english": "photosynthesis"
+  },
+  "definition": "식물의 엽록체에서 빛에너지를 받아 이산화 탄소와 물로부터 포도당과 산소를 만들어 내는 반응.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-ps-redox",
+      "text": "광합성이 진행될 때 이산화 탄소에서는 환원이, 물에서는 산화가 일어난다.",
+      "form": {
+        "condition": "광합성 반응식을 산화와 환원으로 나누어 읽을 때",
+        "type": "classification",
+        "scope": "식물의 엽록체에서 일어나는 광합성"
+      },
+      "invertible": true,
+      "invertible_reason": "두 물질의 산화·환원을 맞바꾸면 산소가 어디서 나오는지 설명할 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성이 진행될 때 이산화 탄소에서는 산화가, 물에서는 환원이 일어난다."
+    },
+    {
+      "id": "rel-isci2-ps-oxygen",
+      "text": "광합성으로 만들어진 산소가 오랜 시간 쌓여 지구 대기의 성분이 되었다.",
+      "form": {
+        "condition": "바다에 광합성 생물이 나타난 뒤 오랜 시간이 흐르는 동안",
+        "type": "causal",
+        "scope": "지구 대기에 산소가 쌓인 과정",
+        "antecedent": {
+          "quantity": "광합성이 만들어 낸 산소",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "대기 중 산소량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "광합성이 산소를 내놓는 반응이므로 대기 산소가 줄어든다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성이 활발해질수록 지구 대기의 산소는 점점 줄어들었다."
+    },
+    {
+      "id": "rel-isci2-ps-energy",
+      "text": "광합성은 빛에너지를 흡수해 화학 에너지의 형태로 바꾸어 저장하는 반응이다.",
+      "form": {
+        "condition": "반응이 일어나는 동안 에너지가 드나드는 방향을 볼 때",
+        "type": "classification",
+        "scope": "빛을 받아 일어나는 광합성"
+      },
+      "invertible": true,
+      "invertible_reason": "빛을 받아야 진행되는 반응이므로 에너지를 내놓는다고 하면 반응이 일어나는 조건과 어긋난다.",
+      "curriculum": [
+        "10통과2-01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성은 화학 에너지를 빛에너지로 바꾸어 내보내는 반응이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광합성에서 이산화 탄소는 산소와 결합하므로 산화된다",
+      "why_wrong": "광합성에서 이산화 탄소는 오히려 산소를 잃고 포도당이 되므로 환원된다. 산화가 일어나는 쪽은 물이다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-ps-redox"
+    },
+    {
+      "text": "광합성은 에너지를 방출하는 반응이다",
+      "why_wrong": "광합성은 빛에너지를 흡수해야 진행된다. 에너지를 방출하는 쪽은 세포호흡이다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-ps-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-photosynthesis",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-redox-simultaneity"
+    },
+    {
+      "type": "related",
+      "target": "isci2-cellular-respiration",
+      "note": "물질과 에너지가 오가는 방향이 반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "isci2-endothermic-reaction",
+      "note": "에너지를 흡수하는 반응의 사례"
+    },
+    {
+      "type": "related",
+      "target": "isci2-precambrian",
+      "note": "대기에 산소를 쌓은 사건"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-02",
+  "pages": [
+    38,
+    39,
+    44,
+    63
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

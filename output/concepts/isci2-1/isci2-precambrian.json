@@ -1,0 +1,139 @@
+{
+  "id": "isci2-precambrian",
+  "concept_key": "concept:precambrian",
+  "registry_status": "new",
+  "term": "선캄브리아시대",
+  "notation": {
+    "hanja": "先캄브리아時代",
+    "hanja_note": "‘캄브리아’는 지명에서 온 음차어로 한자 표기가 없다. 앞뒤의 先·時代만 한자어다.",
+    "hanja_gloss": "先 먼저 선 · 時 때 시 · 代 대신할 대",
+    "english": "Precambrian"
+  },
+  "definition": "화석이 거의 나오지 않는 지질 시대의 첫 시기. 지구 탄생부터 고생대가 시작되기 전까지로, 네 시대 가운데 가장 길다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pre-longest",
+      "text": "선캄브리아시대는 지질 시대 전체 기간의 대부분을 차지해 네 시대 가운데 가장 길다.",
+      "form": {
+        "condition": "네 시대가 이어진 기간을 서로 견줄 때",
+        "type": "classification",
+        "scope": "지질 시대의 상대적 길이 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "전체의 8할을 넘게 차지하는 시기를 가장 짧다고 하면 길이 비교가 정면으로 뒤집힌다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "선캄브리아시대는 지질 시대 가운데 가장 짧은 기간을 차지한다."
+    },
+    {
+      "id": "rel-pre-fossil-scarce",
+      "text": "이 시기 생물은 껍데기나 뼈 같은 단단한 부분을 갖추지 못해 화석으로 남기 어려웠다.",
+      "form": {
+        "condition": "퇴적물에 묻힌 생물이 화석이 되는 과정을 볼 때",
+        "type": "causal",
+        "scope": "선캄브리아시대 바다에 살던 생물",
+        "antecedent": {
+          "quantity": "몸의 단단한 부분",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "화석으로 남을 가능성",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "단단한 부분이 없을수록 몸이 쉽게 분해되므로 화석이 잘 남는다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 시기 생물은 단단한 부분이 없었기 때문에 오히려 화석으로 잘 남았다."
+    },
+    {
+      "id": "rel-pre-oxygen",
+      "text": "남세균처럼 광합성을 하는 생물이 나타난 뒤부터 대기에 산소가 조금씩 쌓이기 시작하였다.",
+      "form": {
+        "condition": "선캄브리아시대에 광합성 생물이 바다에 등장한 뒤",
+        "type": "causal",
+        "scope": "선캄브리아시대의 대기",
+        "antecedent": {
+          "quantity": "광합성 생물의 활동",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "대기 중 산소량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "광합성은 산소를 내놓는 반응이므로 광합성 생물이 늘수록 대기 산소가 줄어든다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성을 하는 생물이 나타난 뒤부터 대기의 산소가 조금씩 줄어들기 시작하였다."
+    },
+    {
+      "id": "rel-pre-sea-only",
+      "text": "자외선을 막아 줄 것이 없던 시기여서 이 시대의 생물은 바닷속에서 살았다.",
+      "form": {
+        "condition": "대기에 오존층이 아직 만들어지지 않은 동안",
+        "type": "causal",
+        "scope": "선캄브리아시대 생물의 서식지"
+      },
+      "invertible": false,
+      "invertible_reason": "바다가 자외선을 막아 준다는 사실만으로는 뒤집은 문장이 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "선캄브리아시대에는 생물이 없었기 때문에 화석이 발견되지 않는다",
+      "why_wrong": "생물은 있었다. 다만 단단한 부분이 없어 화석으로 남기 어려웠을 뿐이고, 스트로마톨라이트와 에디아카라 생물군 화석이 그 증거다.",
+      "source": "llm",
+      "linked_relation": "rel-pre-fossil-scarce"
+    },
+    {
+      "text": "지구 대기에는 처음부터 산소가 지금처럼 풍부했다",
+      "why_wrong": "처음 대기에는 산소가 매우 희박했다. 광합성을 하는 생물이 나타난 뒤에야 산소가 쌓이기 시작했다.",
+      "source": "llm",
+      "linked_relation": "rel-pre-oxygen"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-geologic-time"
+    },
+    {
+      "type": "next",
+      "target": "isci2-paleozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-photosynthesis",
+      "note": "대기에 산소를 쌓은 반응이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-01",
+  "pages": [
+    15,
+    16
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

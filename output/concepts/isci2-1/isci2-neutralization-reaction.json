@@ -1,0 +1,142 @@
+{
+  "id": "isci2-neutralization-reaction",
+  "concept_key": "concept:neutralization-reaction",
+  "registry_status": "reused",
+  "term": "중화 반응",
+  "notation": {
+    "hanja": "中和反應",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 反 돌이킬 반 · 應 응할 응",
+    "english": "neutralization reaction"
+  },
+  "definition": "산의 수소 이온과 염기의 수산화 이온이 결합해 물이 생기는 반응. 진행되는 동안 열도 함께 난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-isci2-neu-water",
+      "text": "산과 염기를 섞으면 수소 이온과 수산화 이온이 1 대 1의 개수비로 결합해 물이 만들어진다.",
+      "form": {
+        "condition": "산 수용액과 염기 수용액을 섞을 때",
+        "type": "causal",
+        "scope": "수용액에서 일어나는 중화 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "결합하는 개수비를 바꾸면 남는 이온의 수와 액성 판단이 모두 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산과 염기를 섞으면 수소 이온과 수산화 이온이 2 대 1의 개수비로 결합해 물이 만들어진다."
+    },
+    {
+      "id": "rel-isci2-neu-liquidity",
+      "text": "섞기 전 수소 이온의 양이 수산화 이온보다 많으면 혼합 용액은 산성, 적으면 염기성, 같으면 중성이 된다.",
+      "form": {
+        "condition": "섞기 전 두 용액에 들어 있던 이온의 양을 견줄 때",
+        "type": "conditional",
+        "scope": "산과 염기를 섞은 혼합 용액"
+      },
+      "invertible": true,
+      "invertible_reason": "남는 이온과 액성의 대응을 맞바꾸면 지시약의 색 변화와 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "섞기 전 수소 이온의 양이 수산화 이온보다 많으면 혼합 용액은 염기성, 적으면 산성이 된다."
+    },
+    {
+      "id": "rel-isci2-neu-ion-count",
+      "text": "일정량의 산에 염기를 조금씩 더할수록 용액에 남은 수소 이온 수가 줄고, 모두 반응하면 중성이 된다.",
+      "form": {
+        "condition": "일정량의 산 수용액에 같은 농도의 염기 수용액을 조금씩 더할 때",
+        "type": "inverse",
+        "scope": "수소 이온과 수산화 이온이 1 대 1로 반응하는 경우",
+        "antecedent": {
+          "quantity": "더해 준 염기의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "남아 있는 수소 이온 수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "더한 수산화 이온이 수소 이온을 없애므로 남은 수소 이온이 늘어난다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일정량의 산에 염기를 조금씩 더할수록 용액에 남은 수소 이온 수는 오히려 늘어난다."
+    },
+    {
+      "id": "rel-isci2-neu-use",
+      "text": "위산으로 속이 쓰릴 때 염기성 제산제를 먹듯, 한쪽으로 치우친 액성을 중화 반응으로 누그러뜨려 쓴다.",
+      "form": {
+        "condition": "액성이 한쪽으로 치우쳐 문제가 생겼을 때",
+        "type": "conditional",
+        "scope": "생활에서 중화 반응을 이용하는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "이용 사례를 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "10통과2-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산과 염기를 섞으면 양에 상관없이 언제나 중성이 된다",
+      "why_wrong": "중성이 되는 것은 수소 이온과 수산화 이온의 양이 같을 때뿐이다. 어느 한쪽이 남으면 혼합 용액은 산성이나 염기성을 띤다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-neu-liquidity"
+    },
+    {
+      "text": "중화 반응에서는 수소 이온 두 개가 수산화 이온 한 개와 반응한다",
+      "why_wrong": "두 이온은 1 대 1의 개수비로 결합해 물이 된다. 개수비를 잘못 잡으면 남는 이온 수와 액성 판단이 모두 어긋난다.",
+      "source": "llm",
+      "linked_relation": "rel-isci2-neu-water"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "reac-neutralization-reaction",
+      "note": "선택 과목에서는 같은 개념을 양적 관계와 중화 적정까지 넓혀 다룬다",
+      "grade_from": "화학 반응의 세계"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-acidity"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-basicity"
+    },
+    {
+      "type": "next",
+      "target": "isci2-heat-of-neutralization"
+    },
+    {
+      "type": "related",
+      "target": "isci2-acid-base-indicator",
+      "note": "액성 변화를 색으로 읽는 도구"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-2-04",
+  "pages": [
+    56,
+    57,
+    58,
+    59
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "id": "isci2-cenozoic-era",
+  "concept_key": "concept:cenozoic-era",
+  "registry_status": "new",
+  "term": "신생대",
+  "notation": {
+    "hanja": "新生代",
+    "hanja_gloss": "新 새 신 · 生 날 생 · 代 대신할 대",
+    "english": "Cenozoic era"
+  },
+  "definition": "지질 시대의 마지막 시기이자 지금 우리가 살고 있는 시대. 포유류와 속씨식물이 번성하고 말기에 빙하기가 되풀이되었다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cen-mammal-temp",
+      "text": "체온을 일정하게 지킬 수 있었던 포유류는 기후가 급격히 오르내리는 동안에도 살아남았다.",
+      "form": {
+        "condition": "신생대 말기에 빙하기와 간빙기가 되풀이되던 동안",
+        "type": "causal",
+        "scope": "신생대의 포유류",
+        "antecedent": {
+          "quantity": "체온을 일정하게 지키는 능력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "급격한 기후 변화에서의 생존 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "체온을 지키지 못하는 쪽이 급격한 기후 변화에 더 잘 견딘다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체온을 일정하게 지키지 못한 무리일수록 기후가 급격히 오르내리는 동안 더 잘 살아남았다."
+    },
+    {
+      "id": "rel-cen-sea-level",
+      "text": "빙하기가 되어 해수면이 낮아지면 대륙 사이가 육지로 이어져 생물이 다른 대륙으로 퍼져 나갔다.",
+      "form": {
+        "condition": "빙하가 늘어 해수면이 낮아졌을 때",
+        "type": "causal",
+        "scope": "신생대 후기의 대륙 분포",
+        "antecedent": {
+          "quantity": "해수면의 높이",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "대륙 사이가 육지로 이어질 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "해수면이 높아지면 대륙 사이는 오히려 바다로 갈리므로 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "간빙기가 되어 해수면이 높아지면 대륙 사이가 육지로 이어져 생물이 다른 대륙으로 퍼져 나갔다."
+    },
+    {
+      "id": "rel-cen-mammal-rise",
+      "text": "공룡이 사라지고 비어 버린 자리를 차지하면서 포유류가 크게 번성하고 종류도 다양해졌다.",
+      "form": {
+        "condition": "중생대 말 대멸종으로 공룡이 사라진 뒤",
+        "type": "causal",
+        "scope": "신생대의 육상 동물"
+      },
+      "invertible": false,
+      "invertible_reason": "포유류의 번성에는 여러 요인이 겹쳐 있어 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "10통과2-01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신생대는 처음부터 끝까지 빙하기여서 추운 시대였다",
+      "why_wrong": "신생대는 대체로 온난했고, 말기에 이르러서야 빙하기와 간빙기가 되풀이되었다.",
+      "source": "llm",
+      "linked_relation": "rel-cen-sea-level"
+    },
+    {
+      "text": "포유류는 공룡이 멸종한 뒤에 처음 나타났다",
+      "why_wrong": "포유류는 이미 중생대 중기에 나타나 있었다. 공룡이 사라진 뒤에 크게 번성했을 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-cen-mammal-rise"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-geologic-time"
+    },
+    {
+      "type": "related",
+      "target": "isci2-mesozoic-era"
+    },
+    {
+      "type": "related",
+      "target": "isci2-mass-extinction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-01-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅰ. 변화와 다양성",
+  "unit_id": "isci2-1",
+  "topic_id": "isci2-1-1-01",
+  "pages": [
+    15,
+    19
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}
