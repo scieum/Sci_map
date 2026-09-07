@@ -105,6 +105,105 @@ def find_cycles(edges: list[tuple[str, str]]) -> list[list[str]]:
     return cycles
 
 
+def layout(cards: list[dict], edges: list[dict], by_id: dict[str, dict]
+           ) -> dict[str, tuple[float, float]]:
+    """힘 기반 배치 (Fruchterman-Reingold). 난수 없이 결정론적으로 돈다.
+
+    같은 카드·같은 링크면 늘 같은 그림이 나와야 한다 — 열 때마다 배치가 달라지면
+    "저번에 이 근처였는데" 라는 감각이 생기지 않는다. 그래서 초기 위치를 단원별
+    원 위에 규칙적으로 놓고 시작한다.
+
+    단원 응집력을 따로 준다. 그러지 않으면 단원을 가로지르는 링크 60개가 모든
+    단원을 한 덩어리로 끌어당겨, 어느 단원을 보고 있는지 알 수 없게 된다.
+    """
+    import math
+
+    ids = [c["id"] for c in cards]
+    unit_of = {c["id"]: c["_unit"] for c in cards}
+    units = sorted({u for u in unit_of.values()})
+    n = len(ids)
+
+    # 단원 중심 — 큰 원 위에 고르게
+    R = 420.0
+    ucenter = {
+        u: (R * math.cos(2 * math.pi * i / len(units)),
+            R * math.sin(2 * math.pi * i / len(units)))
+        for i, u in enumerate(units)
+    }
+    # 초기 위치 — 단원 중심 둘레의 작은 원 위에. topic_id 순서를 각도로 쓴다
+    pos: dict[str, list[float]] = {}
+    per: dict[str, list[str]] = {}
+    for c in sorted(cards, key=lambda c: (c.get("topic_id") or "~", c["id"])):
+        per.setdefault(c["_unit"], []).append(c["id"])
+    for u, group in per.items():
+        cx, cy = ucenter[u]
+        for i, cid in enumerate(group):
+            a = 2 * math.pi * i / max(len(group), 1)
+            pos[cid] = [cx + 130 * math.cos(a), cy + 130 * math.sin(a)]
+
+    adj = [(e["from"], e["to"]) for e in edges
+           if e["from"] in pos and e["to"] in pos]
+
+    area = 1400.0 * 1400.0
+    k = math.sqrt(area / max(n, 1))     # 이상적인 이웃 거리
+    temp = 220.0                        # 한 번에 움직일 수 있는 최대 거리
+    ITER = 320
+
+    for step in range(ITER):
+        disp = {i: [0.0, 0.0] for i in ids}
+
+        # 밀어내기 — 모든 쌍. 192개면 18000쌍 남짓이라 그냥 다 돈다
+        for a in range(n):
+            ia = ids[a]
+            xa, ya = pos[ia]
+            for b in range(a + 1, n):
+                ib = ids[b]
+                dx = xa - pos[ib][0]
+                dy = ya - pos[ib][1]
+                d2 = dx * dx + dy * dy
+                if d2 < 1e-6:
+                    # 완전히 겹치면 결정론적으로 살짝 떼어 놓는다 (난수 금지)
+                    dx, dy, d2 = (a - b) * 0.01 + 0.01, (b - a) * 0.01 + 0.01, 1e-4
+                d = math.sqrt(d2)
+                f = (k * k) / d
+                ux, uy = dx / d, dy / d
+                disp[ia][0] += ux * f
+                disp[ia][1] += uy * f
+                disp[ib][0] -= ux * f
+                disp[ib][1] -= uy * f
+
+        # 끌어당기기 — 이어진 것끼리
+        for u_, v_ in adj:
+            dx = pos[u_][0] - pos[v_][0]
+            dy = pos[u_][1] - pos[v_][1]
+            d = math.sqrt(dx * dx + dy * dy) or 1e-3
+            f = (d * d) / k
+            ux, uy = dx / d, dy / d
+            disp[u_][0] -= ux * f
+            disp[u_][1] -= uy * f
+            disp[v_][0] += ux * f
+            disp[v_][1] += uy * f
+
+        # 단원 응집 — 제 단원 중심으로 약하게 당긴다
+        for cid in ids:
+            cx, cy = ucenter[unit_of[cid]]
+            disp[cid][0] += (cx - pos[cid][0]) * 0.03
+            disp[cid][1] += (cy - pos[cid][1]) * 0.03
+
+        for cid in ids:
+            dx, dy = disp[cid]
+            d = math.sqrt(dx * dx + dy * dy) or 1e-9
+            m = min(d, temp)
+            pos[cid][0] += dx / d * m
+            pos[cid][1] += dy / d * m
+        temp *= 0.985  # 식힌다
+
+    # 좌표를 0부터 시작하도록 옮긴다 — 화면에서 다루기 쉽게
+    minx = min(p[0] for p in pos.values())
+    miny = min(p[1] for p in pos.values())
+    return {cid: (p[0] - minx + 40, p[1] - miny + 40) for cid, p in pos.items()}
+
+
 def main() -> int:
     if not JUDGE.exists():
         print(f"G2 판정본이 없다: {JUDGE}", file=sys.stderr)
@@ -157,28 +256,31 @@ def main() -> int:
     cross_unit = [e for e in edge_list
                   if by_id[e["from"]]["_unit"] != by_id[e["to"]]["_unit"]]
 
-    # ── 배치 좌표 초안 — 단원을 세로 띠로, 소주제 순서를 가로로 ──────────────
-    # 힘 기반 배치는 열 때마다 그림이 달라져 "어디쯤이었지" 가 안 생긴다.
-    # 단원·소주제 순서는 백로그가 정한 것이라 늘 같은 자리에 온다.
+    # ── 배치 좌표 — 힘 기반, 단, **난수를 쓰지 않는다** ────────────────────
+    # 설계서 §4.2·§7: 좌표는 파이프라인이 내고 클라이언트는 렌더·줌만 한다
+    # (모바일 성능). 격자로 늘어놓으면 좌표는 안정적이지만 연결이 보이지 않아
+    # 그래프라고 할 수 없어, 힘 기반으로 편다.
+    #
+    # 난수 대신 **단원별 원 배치**에서 출발한다. 같은 입력이면 늘 같은 그림이
+    # 나와야 "저번에 여기쯤이었지" 가 생긴다. 무작위 초기값을 쓰면 돌릴 때마다
+    # 그림이 달라져 그 감각이 안 생긴다.
+    nodes_xy = layout(cards, edge_list, by_id)
+
     units = sorted({c["_unit"] for c in cards})
-    row_of = {u: i for i, u in enumerate(units)}
-    per_unit: dict[str, list[dict]] = defaultdict(list)
-    for c in sorted(cards, key=lambda c: (c.get("topic_id") or "~", c["id"])):
-        per_unit[c["_unit"]].append(c)
     nodes = []
-    for u, group in per_unit.items():
-        for i, c in enumerate(group):
-            nodes.append({
-                "id": c["id"],
-                "term": c["term"],
-                "concept_key": c["concept_key"],
-                "unit": u,
-                "topic_id": c.get("topic_id"),
-                "role": c.get("role"),
-                "degree": degree[c["id"]],
-                "x": i * 120,
-                "y": row_of[u] * 220,
-            })
+    for c in cards:
+        x, y = nodes_xy[c["id"]]
+        nodes.append({
+            "id": c["id"],
+            "term": c["term"],
+            "concept_key": c["concept_key"],
+            "unit": c["_unit"],
+            "topic_id": c.get("topic_id"),
+            "role": c.get("role"),
+            "degree": degree[c["id"]],
+            "x": round(x, 1),
+            "y": round(y, 1),
+        })
 
     graph = {
         "generated_at": now(),

@@ -6,11 +6,13 @@
 
 읽는 것:
   output/concepts/<unit-id>/*.json   개념 카드 (C2~C6 산출)
+  output/graph/graph.json            개념 그래프 (G3 산출) — 있을 때만
   output/rights/ledger.jsonl         그림 자산과 access_tier (C7 산출)
   docs/unit_backlog.yaml             대단원·중단원·소주제 이름
 
 쓰는 것:
   app/src/data/concepts.generated.json
+  app/public/graph.json              지도 탭이 읽는 그래프 (좌표·간선만)
 
 사용:
     python app/scripts/build_concepts.py            # 카드가 있는 단원 전부
@@ -215,6 +217,41 @@ def write_catalog(unit_ids: list[str], card_counts: dict[str, int]) -> None:
           f"{sum(len(s['units']) for s in catalog['subjects'])}")
 
 
+def write_graph(unit_ids: list[str]) -> None:
+    """지도 탭이 읽을 그래프 — 좌표와 간선만 추린다.
+
+    표제어·정의는 concepts.generated.json 에 이미 있으므로 여기 넣지 않는다
+    (같은 값을 두 곳에 두면 갈라진다). 번들에 싣지 않고 public/ 에 두는 것은
+    지도 탭을 열 때만 받으면 되는 60KB 남짓이기 때문이다.
+
+    좌표는 파이프라인(G3)이 낸다 — 클라이언트는 렌더와 줌만 한다 (Design.md §7).
+    """
+    src = REPO / "output" / "graph" / "graph.json"
+    if not src.exists():
+        print("건너뜀 (그래프 없음): G3 를 먼저 돌린다", file=sys.stderr)
+        return
+    g = json.loads(src.read_text(encoding="utf-8"))
+    keep = set(unit_ids)
+    nodes = [
+        {"id": n["id"], "unit": n["unit"], "x": n["x"], "y": n["y"],
+         "degree": n["degree"]}
+        for n in g["nodes"] if n["unit"] in keep
+    ]
+    ids = {n["id"] for n in nodes}
+    links = [
+        {"from": l["from"], "to": l["to"], "type": l["type"]}
+        for l in g["links"] if l["from"] in ids and l["to"] in ids
+    ]
+    out = REPO / "app" / "public" / "graph.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({
+        "generatedAt": g["generatedAt"] if "generatedAt" in g else g.get("generated_at"),
+        "hubs": [h["id"] for h in g.get("hubs", [])[:12]],
+        "nodes": nodes, "links": links,
+    }, ensure_ascii=False), encoding="utf-8", newline="\n")
+    print(f"=> {out.relative_to(REPO)} · 노드 {len(nodes)} · 간선 {len(links)}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--units", nargs="*", default=None,
@@ -251,6 +288,7 @@ def main() -> int:
         if uid:
             counts[uid] = counts.get(uid, 0) + 1
     write_catalog(args.units, counts)
+    write_graph(args.units)
     withfig = sum(1 for c in cards if c.get("media"))
     total = sum(len(c.get("media") or []) for c in cards)
     print(f"=> {OUT.relative_to(REPO)} · 카드 {len(cards)}장 "

@@ -41,12 +41,26 @@ export const subjectAccent = (subject: string): string =>
  *
  * 사전에 없는 과목은 브랜드색으로 떨어진다. 없는 과목에 색을 지어내지 않는다.
  */
-export type Accent = { tint: string; text: string; solid: string };
+/**
+ * fillSolid·fillSoft 는 SVG 용이다. 지도 탭의 노드는 <circle> 이라 bg-* 가 듣지
+ * 않고 fill-* 를 써야 한다 — 같은 색을 두 벌로 적어 두는 대신 여기 한 곳에 둔다.
+ */
+export type Accent = {
+  tint: string;
+  text: string;
+  solid: string;
+  fillSolid: string;
+  fillSoft: string;
+};
 const ACCENT: Record<string, Accent> = {
-  indigo: { tint: "bg-primary-50", text: "text-primary-700", solid: "bg-primary-500" },
-  azure: { tint: "bg-azure-50", text: "text-azure-700", solid: "bg-azure-500" },
-  violet: { tint: "bg-violet-50", text: "text-violet-700", solid: "bg-violet-500" },
-  rose: { tint: "bg-rose-50", text: "text-rose-700", solid: "bg-rose-500" },
+  indigo: { tint: "bg-primary-50", text: "text-primary-700", solid: "bg-primary-500",
+            fillSolid: "fill-primary-500", fillSoft: "fill-primary-100" },
+  azure: { tint: "bg-azure-50", text: "text-azure-700", solid: "bg-azure-500",
+           fillSolid: "fill-azure-500", fillSoft: "fill-azure-50" },
+  violet: { tint: "bg-violet-50", text: "text-violet-700", solid: "bg-violet-500",
+            fillSolid: "fill-violet-500", fillSoft: "fill-violet-50" },
+  rose: { tint: "bg-rose-50", text: "text-rose-700", solid: "bg-rose-500",
+          fillSolid: "fill-rose-500", fillSoft: "fill-rose-50" },
 };
 /** 과목 이름 → 색 이름. 카드는 과목을 이름으로 갖는다 */
 const SUBJECT_HUE: Record<string, keyof typeof ACCENT> = {
