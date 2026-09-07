@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import LoginPanel from "@/components/LoginPanel";
-import { completeAuthFromUrl, hasAuthParams, type AuthCallback } from "@/lib/auth-callback";
+import SchoolPicker, { type SchoolValue } from "@/components/SchoolPicker";
 import { BottomCta, Card, Screen, ScreenTitle, SectionLabel } from "@/components/ui";
 import { CATALOG } from "@/data/catalog";
 import { isSupabaseConfigured, supabase, type Profile } from "@/lib/supabase";
@@ -21,7 +21,9 @@ import { loadProgress, saveProgress } from "@/lib/store";
  * CONSENT_VERSION 을 같이 올린다 — 버전이 다르면 다시 동의를 받는다.
  */
 
-const CONSENT_VERSION = "2026-09-06.v1";
+// 아이디·비밀번호 가입으로 바뀌면서 수집 항목이 달라졌다 → 버전을 올려
+// 다시 동의를 받는다 (원본 문구는 docs/privacy_notice.md)
+const CONSENT_VERSION = "2026-09-07.v2";
 
 export default function MePage() {
   if (!isSupabaseConfigured()) return <NotConfigured />;
@@ -52,19 +54,11 @@ function Account() {
   const [uid, setUid] = useState<string | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [busy, setBusy] = useState(true);
-  // 로그인 링크로 돌아온 경우의 결과. 실패를 삼키지 않는다 — 화면에 사유를 띄운다
-  const [cb, setCb] = useState<AuthCallback>({ kind: "none" });
 
   useEffect(() => {
     const sb = supabase();
     let alive = true;
     (async () => {
-      // 링크·구글에서 돌아왔으면 세션부터 만든다. 세션을 읽기 전에 해야 한다
-      if (hasAuthParams()) {
-        const r = await completeAuthFromUrl();
-        if (!alive) return;
-        if (r.kind === "fail") setCb(r);
-      }
       const { data } = await sb.auth.getSession();
       if (!alive) return;
       const id = data.session?.user.id ?? null;
@@ -104,7 +98,7 @@ function Account() {
 
   if (busy && !uid) return <Screen><ScreenTitle>내 정보</ScreenTitle></Screen>;
 
-  if (!uid) return <LoginPanel failure={cb.kind === "fail" ? cb : null} />;
+  if (!uid) return <LoginPanel />;
 
   if (!profile || profile.consent_version !== CONSENT_VERSION) {
     return <Consent onAgreed={setProfile} />;
@@ -139,12 +133,14 @@ function Consent({ onAgreed }: { onAgreed: (p: Profile) => void }) {
       </p>
       <Card className="text-[14px] leading-relaxed">
         <Row k="수집 항목">
-          이메일 주소(로그인), 학번 별칭, 학년·학기·수강 과목, 학습 기록(문항 응답,
-          개념별 기억 상태, 출석일), 초대 코드
+          아이디·비밀번호, 이메일 주소(비밀번호 찾기), 학교(지역·시군구·학교급·학교명),
+          학번 별칭, 학년·학기·수강 과목, 학습 기록(문항 응답, 개념별 기억 상태,
+          출석일), 초대 코드
         </Row>
         <Row k="수집·이용 목적">
-          계정 식별과 로그인 · 학습 범위 설정과 오늘의 문항 출제 · 복습 간격 계산 ·
-          수업 참여 학생 확인과 교과서 자료 열람 권한(학기 종료 시 만료)
+          계정 식별과 로그인 · 비밀번호 재설정 · 학교 단위 학습 현황 확인 ·
+          학습 범위 설정과 오늘의 문항 출제 · 복습 간격 계산 · 수업 참여 학생
+          확인과 교과서 자료 열람 권한(학기 종료 시 만료)
         </Row>
         <Row k="보유·이용 기간">
           회원 탈퇴 시까지, 또는 해당 학년도 종료 후 1년까지. 이후 지체 없이 파기해요.
@@ -204,6 +200,19 @@ function ProfileForm({
   const [semester, setSemester] = useState<1 | 2 | null>(profile.semester);
   const [subjects, setSubjects] = useState<string[]>(profile.subjects ?? []);
   const [invite, setInvite] = useState(profile.invite_code ?? "");
+  const [email, setEmail] = useState(profile.recovery_email ?? "");
+  const [school, setSchool] = useState<SchoolValue | null>(
+    profile.school_code
+      ? {
+          sido_code: profile.sido_code ?? "",
+          sido: profile.sido ?? "",
+          sigungu: profile.sigungu ?? "",
+          school_kind: profile.school_kind ?? "",
+          school_code: profile.school_code,
+          school_name: profile.school_name ?? "",
+        }
+      : null,
+  );
   const [msg, setMsg] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
@@ -212,6 +221,8 @@ function ProfileForm({
     grade !== profile.grade ||
     semester !== profile.semester ||
     subjects.join() !== (profile.subjects ?? []).join() ||
+    email !== (profile.recovery_email ?? "") ||
+    (school?.school_code ?? "") !== (profile.school_code ?? "") ||
     invite !== (profile.invite_code ?? "");
 
   async function save() {
@@ -232,6 +243,13 @@ function ProfileForm({
         grade,
         semester,
         subjects,
+        recovery_email: email.trim() || null,
+        sido_code: school?.sido_code ?? null,
+        sido: school?.sido ?? null,
+        sigungu: school?.sigungu ?? null,
+        school_kind: school?.school_kind ?? null,
+        school_code: school?.school_code ?? null,
+        school_name: school?.school_name ?? null,
         invite_code: inviteToSave,
       });
       if (p) {
@@ -256,6 +274,13 @@ function ProfileForm({
           로그아웃
         </button>
       </div>
+
+      <SectionLabel>아이디</SectionLabel>
+      <Card className="!p-3">
+        {/* 아이디는 계정을 가리키는 이름이라 바꾸지 않는다. 바꾸면 로그인에 쓰는
+            합성 주소도 함께 바뀌어야 하는데, 그건 계정을 새로 만드는 일과 같다 */}
+        <p className="px-2 text-[16px] font-bold">{profile.username ?? "—"}</p>
+      </Card>
 
       <SectionLabel>학번 별칭</SectionLabel>
       <Card className="!p-3">
@@ -307,6 +332,24 @@ function ProfileForm({
           );
         })}
       </div>
+
+      <SectionLabel>학교</SectionLabel>
+      <Card className="!p-3">
+        <SchoolPicker value={school} onChange={setSchool} />
+      </Card>
+
+      <SectionLabel>이메일</SectionLabel>
+      <Card className="!p-3">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="비밀번호를 잊었을 때 쓰는 주소"
+          autoComplete="email"
+          inputMode="email"
+          className="h-11 w-full rounded-full bg-bg-subtle px-4 text-[16px] outline-none focus:ring-2 focus:ring-primary-300"
+        />
+      </Card>
 
       <SectionLabel>초대 코드</SectionLabel>
       <Card className="!p-3">

@@ -117,3 +117,38 @@ create trigger profiles_touch before update on public.profiles
 drop trigger if exists study_states_touch on public.study_states;
 create trigger study_states_touch before update on public.study_states
   for each row execute function public.touch_updated_at();
+
+-- ── 아이디·비밀번호 가입 (2026-09-07 교사 결정) ───────────────────────────────
+-- 구글·메일 링크를 걷어내고 아이디와 비밀번호로 간다. 학생이 메일함을 열지
+-- 않아도 들어올 수 있어야 한다는 것이 이유다 (docs/login_design.md).
+--
+-- ★ Supabase Auth 의 email 자리에는 아이디로 만든 합성 주소를 넣는다
+--   (<아이디>@id.scisherpa.app). 진짜 메일 주소를 넣으면 아이디로 로그인할 때
+--   아이디 → 메일 주소를 찾아 주는 통로가 필요한데, 그 통로는 곧 "아이디만 알면
+--   그 학생 메일 주소를 알 수 있다"는 뜻이 된다. 합성 주소는 찾을 필요가 없다.
+--   진짜 메일 주소는 비밀번호 재설정 용도로만 recovery_email 에 따로 둔다.
+alter table public.profiles
+  add column if not exists username        text,
+  add column if not exists recovery_email  text,
+  add column if not exists sido_code       text,   -- NEIS ATPT_OFCDC_SC_CODE (강원 K10)
+  add column if not exists sido            text,   -- 대분류 (강원특별자치도)
+  add column if not exists sigungu         text,   -- 소분류 (속초시) — 학교 주소에서 뽑는다
+  add column if not exists school_kind     text,   -- 중학교 | 고등학교
+  add column if not exists school_code     text,   -- NEIS SD_SCHUL_CODE
+  add column if not exists school_name     text;
+
+-- 아이디 중복 방지 — 대소문자를 구분하지 않는다. Abc 와 abc 는 같은 아이디다
+create unique index if not exists profiles_username_key
+  on public.profiles (lower(username));
+
+-- 아이디가 이미 쓰이는지만 돌려준다. 프로필도 메일 주소도 내주지 않는다 —
+-- 가입 화면에서 중복을 미리 알려 주려면 이만큼은 열려 있어야 한다
+create or replace function public.username_taken(p_username text)
+returns boolean
+language sql security definer stable
+set search_path = public as $$
+  select exists (
+    select 1 from public.profiles where lower(username) = lower(p_username)
+  );
+$$;
+grant execute on function public.username_taken(text) to anon, authenticated;

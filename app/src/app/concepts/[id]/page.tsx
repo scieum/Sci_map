@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { Art } from "@/components/Art";
 import { ConceptLinks } from "@/components/ConceptLinks";
 import { conceptById } from "@/data/concepts";
+import { rememberSubject } from "@/lib/ui-state";
 import {
   BottomCta,
   Card,
@@ -23,6 +24,13 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
   const { id } = use(params);
   const c = conceptById(id);
   const [showGloss, setShowGloss] = useState(false);
+
+  // 이 카드의 과목을 개념 탭이 돌아갈 자리로 적어 둔다. 검색이나 오늘의 학습으로
+  // 곧장 들어온 경우에도 ← 를 누르면 이 카드가 있는 과목이 열린다
+  useEffect(() => {
+    if (c) rememberSubject(c.subject);
+  }, [c]);
+
   if (!c) notFound();
 
   const sameLinks = c.links.filter((l) => l.type === "same");

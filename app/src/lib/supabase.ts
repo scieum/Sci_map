@@ -26,12 +26,10 @@ export function supabase(): SupabaseClient {
       auth: {
         persistSession: true,
         autoRefreshToken: true,
-        // ★ URL 의 코드는 /me 가 직접 교환한다 (auth-callback.ts).
-        //   supabase-js 에 맡기면(detectSessionInUrl: true) 교환이 실패해도
-        //   콘솔에만 남고 화면에는 아무 말이 없다 — 학생은 링크를 눌렀는데
-        //   로그아웃 상태인 이유를 알 수 없다. 실제로 그 상태였다.
+        // 리디렉트로 돌아오는 로그인이 없다 — 아이디·비밀번호뿐이다
+        // (2026-09-07 교사 결정, docs/login_design.md). URL 에서 주울 코드가
+        // 없으므로 꺼 둔다
         detectSessionInUrl: false,
-        flowType: "pkce",
       },
     });
   }
@@ -41,6 +39,16 @@ export function supabase(): SupabaseClient {
 /** 프로필 행 (= 설계서 students). 실명은 받지 않는다 — 학번 별칭만 (R13) */
 export interface Profile {
   id: string;
+  /** 로그인 아이디. auth 의 메일 자리에는 이것으로 만든 합성 주소가 들어간다 */
+  username: string | null;
+  /** 비밀번호를 잊었을 때만 쓰는 진짜 메일 주소 (account.ts) */
+  recovery_email: string | null;
+  sido_code: string | null;
+  sido: string | null;
+  sigungu: string | null;
+  school_kind: string | null;
+  school_code: string | null;
+  school_name: string | null;
   nickname: string | null;
   grade: 1 | 2 | 3 | null;
   semester: 1 | 2 | null;

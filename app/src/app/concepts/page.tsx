@@ -1,20 +1,45 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { buildTree, byTopic, majorNo, minorNo, topicNo } from "@/data/concepts";
 import type { Concept } from "@/lib/types";
 import { LevelDots, Screen, ScreenTitle } from "@/components/ui";
 import { useProgress } from "@/lib/store";
+import { loadUi, saveUi } from "@/lib/ui-state";
 import { accentOfSubject, subjectAccent } from "@/lib/brand";
 
 /** 개념 탭 — 과목 알약 칩 → 대단원 카드 → 중단원 접기 → 소주제 → 개념 행 */
 export default function ConceptsPage() {
   const progress = useProgress();
   const tree = useMemo(() => buildTree(), []);
-  const subjects = Array.from(tree.keys());
+  const subjects = useMemo(() => Array.from(tree.keys()), [tree]);
+  // 서버 렌더와 첫 그림은 항상 같은 값이어야 하므로(hydration) 저장된 과목은
+  // 마운트 뒤에 읽는다. 읽은 값이 지금 카탈로그에 없으면(과목이 빠졌다면) 무시한다
   const [subject, setSubject] = useState(subjects[0]);
   const [open, setOpen] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const ui = loadUi();
+    if (ui.conceptsSubject && subjects.includes(ui.conceptsSubject)) {
+      setSubject(ui.conceptsSubject);
+    }
+    if (ui.conceptsOpen) setOpen(ui.conceptsOpen);
+  }, [subjects]);
+
+  /** 과목을 고르면 그 자리를 기억한다 — 카드에 들어갔다 나와도 여기로 돌아온다 */
+  function chooseSubject(s: string) {
+    setSubject(s);
+    saveUi({ conceptsSubject: s });
+  }
+
+  function toggleSection(key: string, isOpen: boolean) {
+    setOpen((o) => {
+      const next = { ...o, [key]: !isOpen };
+      saveUi({ conceptsOpen: next });
+      return next;
+    });
+  }
 
   const majors =
     tree.get(subject) ?? new Map<string, Map<string, Concept[]>>();
@@ -28,7 +53,7 @@ export default function ConceptsPage() {
         {subjects.map((s) => (
           <button
             key={s}
-            onClick={() => setSubject(s)}
+            onClick={() => chooseSubject(s)}
             className={`shrink-0 rounded-full px-4.5 py-2 text-[14px] font-bold transition-colors ${
               s === subject
                 ? `${subjectAccent(s)} text-white`
@@ -62,7 +87,7 @@ export default function ConceptsPage() {
             return (
               <div key={key}>
                 <button
-                  onClick={() => setOpen((o) => ({ ...o, [key]: !isOpen }))}
+                  onClick={() => toggleSection(key, isOpen)}
                   className="flex w-full items-center justify-between px-5 py-3 text-left"
                   aria-expanded={isOpen}
                 >

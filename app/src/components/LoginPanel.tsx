@@ -2,158 +2,312 @@
 
 import { useState } from "react";
 import { Card, Screen, ScreenTitle } from "@/components/ui";
-import { supabase } from "@/lib/supabase";
-import type { AuthCallback } from "@/lib/auth-callback";
+import SchoolPicker, { type SchoolValue } from "@/components/SchoolPicker";
+import {
+  emailProblem,
+  isUsernameTaken,
+  normalizeUsername,
+  passwordProblem,
+  signInWithId,
+  signUpWithId,
+  usernameProblem,
+} from "@/lib/account";
 
 /**
- * 로그인 패널 — docs/login_design.md 를 그대로 구현한다.
+ * 로그인 · 가입 — 아이디와 비밀번호 (docs/login_design.md).
  *
- * 비밀번호가 없다. 구글(주 행동) + 이메일 링크(부차) 둘뿐이고, 가입과 로그인을
- * 구분하지 않는다 — 학생에게 그 차이를 묻지 않는다. 로그인은 선택이라는 말을
- * 화면 안에 둔다 (D5): 안 해도 카드·문항은 그대로다.
+ * 구글과 메일 링크를 걷어냈다(2026-09-07 교사 결정). 학생이 메일함을 열지
+ * 않아도 들어올 수 있어야 한다는 것이 이유다. 대신 잊었을 때 되찾을 길을
+ * 남겨야 해서 가입할 때 이메일을 한 번 받아 둔다.
+ *
+ * 로그인은 여전히 선택이다 (D5) — 안 해도 카드와 오늘의 문항은 그대로 돈다.
  */
-export default function LoginPanel({
-  failure = null,
-}: {
-  /** 링크로 돌아왔으나 세션을 만들지 못한 경우 — 사유를 맨 위에 띄운다 */
-  failure?: Extract<AuthCallback, { kind: "fail" }> | null;
-}) {
-  const [email, setEmail] = useState("");
-  const [sent, setSent] = useState<string | null>(null);
-  const [busy, setBusy] = useState<"google" | "email" | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  async function google() {
-    setBusy("google");
-    setError(null);
-    const { error } = await supabase().auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: `${window.location.origin}/me` },
-    });
-    // 성공하면 페이지가 구글로 넘어가므로 여기 오지 않는다
-    if (error) {
-      setError(`구글 로그인을 시작하지 못했어요. ${error.message}`);
-      setBusy(null);
-    }
-  }
-
-  async function sendLink() {
-    const addr = email.trim();
-    if (!addr) return;
-    setBusy("email");
-    setError(null);
-    const { error } = await supabase().auth.signInWithOtp({
-      email: addr,
-      options: { emailRedirectTo: `${window.location.origin}/me` },
-    });
-    setBusy(null);
-    if (error) setError(`메일을 보내지 못했어요. ${error.message}`);
-    else setSent(addr);
-  }
+export default function LoginPanel() {
+  const [mode, setMode] = useState<"in" | "up">("in");
 
   return (
     <Screen>
       <ScreenTitle>내 정보</ScreenTitle>
-      <p className="-mt-3 mb-5 text-[14px] leading-relaxed text-ink-sub">
+      <p className="-mt-3 mb-4 text-[14px] leading-relaxed text-ink-sub">
         로그인하면 기록이 서버에 남고, 폰을 바꿔도 이어져요.
       </p>
 
-      {/* 링크를 눌렀는데 로그인이 안 된 경우 — 왜 안 됐는지 먼저 말한다.
-          말없이 로그인 화면만 다시 보여 주면 학생은 링크가 고장 났다고 여긴다 */}
-      {failure && (
-        <Card className="mb-3 !bg-danger-bg">
-          <p className="text-[15px] font-bold text-danger">{failure.message}</p>
-          <p className="mt-1.5 text-[13px] leading-relaxed text-ink-sub">{failure.hint}</p>
-          <details className="mt-2">
-            <summary className="cursor-pointer text-[12px] text-ink-faint">
-              선생님께 보여 줄 원문
-            </summary>
-            <code className="mt-1 block break-all text-[11px] text-ink-faint">
-              {failure.raw}
-            </code>
-          </details>
-        </Card>
-      )}
+      {/* 두 갈래를 한 자리에 둔다 — 학생에게 가입과 로그인의 차이를 묻지 않되,
+          이미 계정이 있는 사람이 가입 화면에서 헤매지 않도록 탭으로 나눈다 */}
+      <div className="mb-3 flex gap-1 rounded-full bg-bg-subtle p-1">
+        <Tab on={mode === "in"} onClick={() => setMode("in")}>로그인</Tab>
+        <Tab on={mode === "up"} onClick={() => setMode("up")}>가입하기</Tab>
+      </div>
 
-      {sent ? (
-        <Card>
-          <p className="text-[15px] font-bold">메일함을 확인해 주세요</p>
-          <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">
-            <b className="text-ink">{sent}</b> 로 로그인 링크를 보냈어요. 링크를 누르면
-            이 화면으로 돌아와요. 안 보이면 스팸함도 봐 주세요.
-          </p>
-          <button
-            onClick={() => setSent(null)}
-            className="mt-4 text-[13px] font-semibold text-primary-600"
-          >
-            다른 주소로 받기
-          </button>
-        </Card>
-      ) : (
-        <Card className="!p-4">
-          {/* 주 행동 — Google 브랜딩 규정: 흰 바탕, 회색 테두리, 표준 색 G 로고, 문구 동반 */}
-          <button
-            onClick={google}
-            disabled={busy !== null}
-            className="flex h-12 w-full items-center justify-center gap-3 rounded-full border border-[#747775] bg-white text-[14px] font-medium text-[#1f1f1f] active:bg-[#f2f2f2] disabled:opacity-60"
-          >
-            <GoogleG />
-            {busy === "google" ? "구글로 이동 중…" : "Google로 계속하기"}
-          </button>
-
-          <div className="my-4 flex items-center gap-3 text-[12px] text-ink-faint">
-            <span className="h-px flex-1 bg-line" />
-            또는
-            <span className="h-px flex-1 bg-line" />
-          </div>
-
-          {/* 부차 — 이메일 링크. 칸 바로 아래에 버튼을 둔다(키보드가 올라와도 보이게) */}
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              void sendLink();
-            }}
-            className="flex flex-col gap-2"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="학교 이메일"
-              autoComplete="email"
-              inputMode="email"
-              enterKeyHint="send"
-              className="h-12 w-full rounded-full bg-bg-subtle px-5 text-[16px] outline-none focus:ring-2 focus:ring-primary-300"
-            />
-            <button
-              type="submit"
-              disabled={!email.trim() || busy !== null}
-              className="h-11 rounded-full text-[14px] font-bold text-primary-600 active:bg-primary-50 disabled:opacity-40"
-            >
-              {busy === "email" ? "보내는 중…" : "이메일로 로그인 링크 받기"}
-            </button>
-          </form>
-
-          {error && <p className="mt-2 px-1 text-[13px] text-danger">{error}</p>}
-        </Card>
-      )}
+      {mode === "in" ? <SignIn /> : <SignUp onDone={() => setMode("in")} />}
 
       <p className="mt-4 px-1 text-[12px] leading-relaxed text-ink-faint">
         로그인은 선택이에요. 로그인 없이도 개념 카드와 오늘의 문항을 쓸 수 있고, 기록은
-        이 기기에만 남아요. 비밀번호는 없어요 — 구글 계정이나 메일로 온 링크로 들어와요.
+        이 기기에만 남아요.
       </p>
     </Screen>
   );
 }
 
-/** 표준 색상 G 로고 — 색·비율을 바꾸지 않는다 (branding-guidelines) */
-function GoogleG() {
+function Tab({
+  on,
+  onClick,
+  children,
+}: {
+  on: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
   return (
-    <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden>
-      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
-      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
-      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
-      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
-    </svg>
+    <button
+      onClick={onClick}
+      className={`h-9 flex-1 rounded-full text-[14px] font-bold ${
+        on ? "bg-surface text-ink shadow-[0_2px_8px_rgba(23,58,94,0.08)]" : "text-ink-faint"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function SignIn() {
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    try {
+      await signInWithId(id, pw);
+      // 성공하면 /me 의 onAuthStateChange 가 화면을 바꾼다
+    } catch (err) {
+      setError((err as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <Card className="!p-4">
+      <form onSubmit={submit} className="flex flex-col gap-2">
+        <Field label="아이디">
+          <input
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+            autoComplete="username"
+            autoCapitalize="none"
+            spellCheck={false}
+            placeholder="영문으로 시작하는 아이디"
+            className={INPUT}
+          />
+        </Field>
+        <Field label="비밀번호">
+          <input
+            type="password"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            autoComplete="current-password"
+            className={INPUT}
+          />
+        </Field>
+        <button
+          type="submit"
+          disabled={!id.trim() || !pw || busy}
+          className="mt-2 h-12 rounded-full bg-primary-500 text-[15px] font-bold text-white shadow-cta disabled:opacity-40"
+        >
+          {busy ? "확인하는 중…" : "로그인"}
+        </button>
+      </form>
+      {error && <p className="mt-2 px-1 text-[13px] text-danger">{error}</p>}
+      <p className="mt-3 px-1 text-[12px] leading-relaxed text-ink-faint">
+        비밀번호를 잊었다면 선생님께 말해 주세요. 가입할 때 적은 이메일로 되찾을 수 있어요.
+      </p>
+    </Card>
+  );
+}
+
+function SignUp({ onDone }: { onDone: () => void }) {
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
+  const [pw2, setPw2] = useState("");
+  const [email, setEmail] = useState("");
+  const [school, setSchool] = useState<SchoolValue | null>(null);
+  const [checking, setChecking] = useState(false);
+  /** null = 아직 확인 안 함 */
+  const [taken, setTaken] = useState<boolean | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+
+  const idProblem = id ? usernameProblem(id) : null;
+
+  async function checkId() {
+    const problem = usernameProblem(id);
+    if (problem) {
+      setError(problem);
+      return;
+    }
+    setChecking(true);
+    setError(null);
+    try {
+      setTaken(await isUsernameTaken(id));
+    } catch (e) {
+      setError(`아이디를 확인하지 못했어요. ${(e as Error).message}`);
+    } finally {
+      setChecking(false);
+    }
+  }
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    const problem =
+      usernameProblem(id) ??
+      passwordProblem(pw) ??
+      (pw !== pw2 ? "비밀번호가 서로 달라요." : null) ??
+      emailProblem(email);
+    if (problem) {
+      setError(problem);
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    try {
+      await signUpWithId({ username: id, password: pw, email, school });
+      setDone(true);
+    } catch (err) {
+      setError((err as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  if (done) {
+    return (
+      <Card>
+        <p className="text-[15px] font-bold">가입했어요</p>
+        <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">
+          아이디 <b className="text-ink">{normalizeUsername(id)}</b> 로 들어왔어요. 이제
+          기록이 서버에 남아요.
+        </p>
+        <button onClick={onDone} className="mt-4 text-[13px] font-semibold text-primary-600">
+          로그인 화면으로
+        </button>
+      </Card>
+    );
+  }
+
+  return (
+    <Card className="!p-4">
+      <form onSubmit={submit} className="flex flex-col gap-3">
+        <Field
+          label="아이디"
+          hint="영문 소문자·숫자·밑줄(_), 4~20자. 영문으로 시작해요"
+        >
+          <div className="flex gap-2">
+            <input
+              value={id}
+              onChange={(e) => {
+                setId(e.target.value);
+                setTaken(null);
+              }}
+              autoComplete="username"
+              autoCapitalize="none"
+              spellCheck={false}
+              className={INPUT}
+            />
+            <button
+              type="button"
+              onClick={checkId}
+              disabled={!id.trim() || checking}
+              className="h-11 shrink-0 rounded-full bg-bg-subtle px-4 text-[13px] font-bold text-ink-sub disabled:opacity-40"
+            >
+              {checking ? "확인 중" : "중복 확인"}
+            </button>
+          </div>
+          {idProblem && <Note tone="bad">{idProblem}</Note>}
+          {!idProblem && taken === true && <Note tone="bad">이미 쓰이고 있는 아이디예요.</Note>}
+          {!idProblem && taken === false && <Note tone="good">쓸 수 있는 아이디예요.</Note>}
+        </Field>
+
+        <Field label="비밀번호" hint="8자 이상, 영문과 숫자를 함께">
+          <input
+            type="password"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+            autoComplete="new-password"
+            className={INPUT}
+          />
+        </Field>
+
+        <Field label="비밀번호 확인">
+          <input
+            type="password"
+            value={pw2}
+            onChange={(e) => setPw2(e.target.value)}
+            autoComplete="new-password"
+            className={INPUT}
+          />
+          {pw2 && pw !== pw2 && <Note tone="bad">비밀번호가 서로 달라요.</Note>}
+        </Field>
+
+        <Field label="이메일" hint="비밀번호를 잊었을 때 되찾는 데만 써요">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
+            inputMode="email"
+            className={INPUT}
+          />
+        </Field>
+
+        <Field label="학교" hint="지역 → 시·군·구 → 학교급 순으로 골라요">
+          <SchoolPicker value={school} onChange={setSchool} />
+        </Field>
+
+        <button
+          type="submit"
+          disabled={busy}
+          className="mt-1 h-12 rounded-full bg-primary-500 text-[15px] font-bold text-white shadow-cta disabled:opacity-40"
+        >
+          {busy ? "만드는 중…" : "가입하기"}
+        </button>
+      </form>
+      {error && <p className="mt-2 px-1 text-[13px] text-danger">{error}</p>}
+    </Card>
+  );
+}
+
+const INPUT =
+  "h-11 w-full rounded-full bg-bg-subtle px-4 text-[16px] outline-none focus:ring-2 focus:ring-primary-300";
+
+function Field({
+  label,
+  hint,
+  children,
+}: {
+  label: string;
+  hint?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <label className="block">
+      <span className="mb-1 block px-1 text-[13px] font-bold text-ink-sub">{label}</span>
+      {hint && <span className="mb-1.5 block px-1 text-[11px] text-ink-faint">{hint}</span>}
+      {children}
+    </label>
+  );
+}
+
+function Note({ tone, children }: { tone: "good" | "bad"; children: React.ReactNode }) {
+  return (
+    <span
+      className={`mt-1 block px-1 text-[12px] ${tone === "good" ? "text-success" : "text-danger"}`}
+    >
+      {children}
+    </span>
   );
 }
