@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Card, Screen, ScreenTitle } from "@/components/ui";
 import { supabase } from "@/lib/supabase";
+import type { AuthCallback } from "@/lib/auth-callback";
 
 /**
  * 로그인 패널 — docs/login_design.md 를 그대로 구현한다.
@@ -11,7 +12,12 @@ import { supabase } from "@/lib/supabase";
  * 구분하지 않는다 — 학생에게 그 차이를 묻지 않는다. 로그인은 선택이라는 말을
  * 화면 안에 둔다 (D5): 안 해도 카드·문항은 그대로다.
  */
-export default function LoginPanel() {
+export default function LoginPanel({
+  failure = null,
+}: {
+  /** 링크로 돌아왔으나 세션을 만들지 못한 경우 — 사유를 맨 위에 띄운다 */
+  failure?: Extract<AuthCallback, { kind: "fail" }> | null;
+}) {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState<string | null>(null);
   const [busy, setBusy] = useState<"google" | "email" | null>(null);
@@ -51,6 +57,23 @@ export default function LoginPanel() {
       <p className="-mt-3 mb-5 text-[14px] leading-relaxed text-ink-sub">
         로그인하면 기록이 서버에 남고, 폰을 바꿔도 이어져요.
       </p>
+
+      {/* 링크를 눌렀는데 로그인이 안 된 경우 — 왜 안 됐는지 먼저 말한다.
+          말없이 로그인 화면만 다시 보여 주면 학생은 링크가 고장 났다고 여긴다 */}
+      {failure && (
+        <Card className="mb-3 !bg-danger-bg">
+          <p className="text-[15px] font-bold text-danger">{failure.message}</p>
+          <p className="mt-1.5 text-[13px] leading-relaxed text-ink-sub">{failure.hint}</p>
+          <details className="mt-2">
+            <summary className="cursor-pointer text-[12px] text-ink-faint">
+              선생님께 보여 줄 원문
+            </summary>
+            <code className="mt-1 block break-all text-[11px] text-ink-faint">
+              {failure.raw}
+            </code>
+          </details>
+        </Card>
+      )}
 
       {sent ? (
         <Card>

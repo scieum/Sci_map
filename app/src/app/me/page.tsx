@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import LoginPanel from "@/components/LoginPanel";
+import { completeAuthFromUrl, hasAuthParams, type AuthCallback } from "@/lib/auth-callback";
 import { BottomCta, Card, Screen, ScreenTitle, SectionLabel } from "@/components/ui";
 import { CATALOG } from "@/data/catalog";
 import { isSupabaseConfigured, supabase, type Profile } from "@/lib/supabase";
@@ -51,11 +52,19 @@ function Account() {
   const [uid, setUid] = useState<string | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [busy, setBusy] = useState(true);
+  // 로그인 링크로 돌아온 경우의 결과. 실패를 삼키지 않는다 — 화면에 사유를 띄운다
+  const [cb, setCb] = useState<AuthCallback>({ kind: "none" });
 
   useEffect(() => {
     const sb = supabase();
     let alive = true;
     (async () => {
+      // 링크·구글에서 돌아왔으면 세션부터 만든다. 세션을 읽기 전에 해야 한다
+      if (hasAuthParams()) {
+        const r = await completeAuthFromUrl();
+        if (!alive) return;
+        if (r.kind === "fail") setCb(r);
+      }
       const { data } = await sb.auth.getSession();
       if (!alive) return;
       const id = data.session?.user.id ?? null;
@@ -95,7 +104,7 @@ function Account() {
 
   if (busy && !uid) return <Screen><ScreenTitle>내 정보</ScreenTitle></Screen>;
 
-  if (!uid) return <LoginPanel />;
+  if (!uid) return <LoginPanel failure={cb.kind === "fail" ? cb : null} />;
 
   if (!profile || profile.consent_version !== CONSENT_VERSION) {
     return <Consent onAgreed={setProfile} />;

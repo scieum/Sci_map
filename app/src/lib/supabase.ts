@@ -26,8 +26,11 @@ export function supabase(): SupabaseClient {
       auth: {
         persistSession: true,
         autoRefreshToken: true,
-        // 매직 링크로 돌아온 URL 의 코드를 세션으로 바꾼다 (PKCE)
-        detectSessionInUrl: true,
+        // ★ URL 의 코드는 /me 가 직접 교환한다 (auth-callback.ts).
+        //   supabase-js 에 맡기면(detectSessionInUrl: true) 교환이 실패해도
+        //   콘솔에만 남고 화면에는 아무 말이 없다 — 학생은 링크를 눌렀는데
+        //   로그아웃 상태인 이유를 알 수 없다. 실제로 그 상태였다.
+        detectSessionInUrl: false,
         flowType: "pkce",
       },
     });
