@@ -1,0 +1,113 @@
+{
+  "id": "isci2-trophic-level",
+  "concept_key": "concept:trophic-level",
+  "registry_status": "new",
+  "term": "영양단계",
+  "notation": {
+    "hanja": "營養段階",
+    "hanja_gloss": "營 경영할 영 · 養 기를 양 · 段 층계 단 · 階 섬돌 계",
+    "english": "trophic level"
+  },
+  "definition": "먹고 먹히는 차례에 따라 생물이 놓이는 자리. 생산자를 맨 아래에 두고 1차 소비자, 2차 소비자가 그 위에 놓인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tl-order",
+      "text": "생산자가 맨 아래 자리를 차지하고 그 위에 1차 소비자, 다시 그 위에 2차 소비자가 놓인다.",
+      "form": {
+        "condition": "먹이 관계의 순서로 자리를 매길 때",
+        "type": "classification",
+        "scope": "생산자에서 시작하는 먹이 관계"
+      },
+      "invertible": true,
+      "invertible_reason": "아래에서 위로 가는 차례가 정해져 있어 순서를 거꾸로 놓으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "2차 소비자가 맨 아래 자리를 차지하고 그 위에 1차 소비자와 생산자가 놓인다."
+    },
+    {
+      "id": "rel-tl-loss",
+      "text": "한 단계의 생물이 가진 에너지 가운데 적은 양만 다음 단계로 넘어가므로 위로 갈수록 전체 에너지양이 크게 준다.",
+      "form": {
+        "condition": "먹고 먹히는 관계를 따라 에너지가 옮겨 갈 때",
+        "type": "inverse",
+        "scope": "생산자에서 시작하는 영양단계",
+        "antecedent": {
+          "quantity": "영양단계",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전체 에너지양",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "위로 갈수록 줄어드는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상위 영양단계로 갈수록 그 단계가 가진 전체 에너지양이 늘어난다."
+    },
+    {
+      "id": "rel-tl-use",
+      "text": "생산자가 광합성으로 만든 양분은 대부분 세포호흡과 생장에 쓰이고 일부만 1차 소비자에게 전달된다.",
+      "form": {
+        "condition": "생산자가 만든 양분의 쓰임을 나눠 볼 때",
+        "type": "classification",
+        "scope": "광합성으로 양분을 만드는 생산자"
+      },
+      "invertible": false,
+      "invertible_reason": "양분의 쓰임을 갈래별로 나눈 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생산자가 만든 양분은 거의 그대로 1차 소비자에게 전달된다",
+      "why_wrong": "대부분은 세포호흡과 생장에 쓰이고 낙엽으로도 빠져나가, 적은 양만 다음 단계로 넘어간다.",
+      "source": "llm",
+      "linked_relation": "rel-tl-use"
+    },
+    {
+      "text": "상위 영양단계일수록 몸집이 크므로 그 단계의 전체 에너지양도 많다",
+      "why_wrong": "각 단계에서 적은 양만 전달되므로 위로 갈수록 전체 에너지양은 오히려 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-tl-loss"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-food-web"
+    },
+    {
+      "type": "next",
+      "target": "isci2-ecological-pyramid"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ecosystem-equilibrium"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-02",
+  "pages": [
+    81,
+    83
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,134 @@
+{
+  "id": "isci2-new-and-renewable-energy",
+  "concept_key": "concept:new-and-renewable-energy",
+  "registry_status": "new",
+  "term": "신재생 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'신재생(新再生)'은 한자어지만 '에너지'가 음차어라 낱말 전체를 한자어로 적지 않는다.",
+    "english": "new and renewable energy"
+  },
+  "definition": "햇빛·바람·해양처럼 바닥나지 않는 자원을 변환해 쓰거나, 석탄을 액체·기체로 바꾸고 수소와 산소의 화학 반응에서 얻은 에너지를 아울러 이르는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nre-why",
+      "text": "화석 연료를 대신할 에너지원은 계속 쓸 수 있어야 하고 환경 문제를 적게 일으켜야 한다는 조건을 갖춰야 한다.",
+      "form": {
+        "condition": "화석 연료를 대체할 에너지원을 고를 때",
+        "type": "conditional",
+        "scope": "새로운 에너지원이 갖춰야 할 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "갖춰야 할 조건을 든 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nre-induction",
+      "text": "풍력과 조력 발전은 발전기를 돌려 전기를 얻지만, 태양광 발전은 태양 전지에서 빛을 곧바로 전기로 바꾼다.",
+      "form": {
+        "condition": "발전 방식마다 전기를 얻는 원리를 견줄 때",
+        "type": "classification",
+        "scope": "태양광·풍력·조력 발전"
+      },
+      "invertible": true,
+      "invertible_reason": "어느 쪽이 발전기를 쓰는지가 정해져 있어 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양광 발전은 발전기를 돌려 전기를 얻지만, 풍력과 조력 발전은 빛을 곧바로 전기로 바꾼다."
+    },
+    {
+      "id": "rel-nre-limit",
+      "text": "태양광은 일사량에, 풍력은 바람에 좌우되어 발전량을 미리 헤아리기 어렵다는 것이 공통된 한계다.",
+      "form": {
+        "condition": "자연 조건이 시시각각 달라질 때",
+        "type": "conditional",
+        "scope": "햇빛과 바람을 쓰는 발전"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nre-carbon",
+      "text": "신재생 에너지를 늘려 화석 연료 발전을 대신하면 이산화 탄소 배출을 줄일 수 있다.",
+      "form": {
+        "condition": "신재생 에너지가 화석 연료 발전을 대신할 때",
+        "type": "causal",
+        "scope": "탄소 중립을 위한 노력",
+        "antecedent": {
+          "quantity": "신재생 에너지 이용",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이산화 탄소 배출량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이용이 늘면 배출이 줄어드는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신재생 에너지를 늘릴수록 이산화 탄소 배출량도 함께 늘어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신재생 에너지는 자연에서 곧바로 얻는 재생 에너지만을 가리킨다",
+      "why_wrong": "석탄을 액체·기체로 바꾸거나 수소와 산소의 화학 반응에서 얻는 에너지처럼 새로 만든 에너지도 함께 아우른다.",
+      "source": "llm",
+      "linked_relation": "rel-nre-why"
+    },
+    {
+      "text": "신재생 에너지 발전소를 세우면 언제든 필요한 만큼 전기를 얻을 수 있다",
+      "why_wrong": "일사량이나 바람 같은 자연 조건에 발전량이 좌우되어 미리 헤아리기 어렵다.",
+      "source": "llm",
+      "linked_relation": "rel-nre-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-thermal-power-generation"
+    },
+    {
+      "type": "next",
+      "target": "isci2-hydrogen-fuel-cell"
+    },
+    {
+      "type": "related",
+      "target": "isci2-global-warming"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-efficiency"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-06"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-05",
+  "pages": [
+    118,
+    119,
+    120,
+    121
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

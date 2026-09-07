@@ -1,0 +1,123 @@
+{
+  "id": "isci2-nuclear-power-generation",
+  "concept_key": "concept:nuclear-power-generation",
+  "registry_status": "new",
+  "term": "핵발전",
+  "notation": {
+    "hanja": "核發電",
+    "hanja_gloss": "核 씨 핵 · 發 필 발 · 電 번개 전",
+    "english": "nuclear power generation"
+  },
+  "definition": "원자로에서 우라늄 원자핵을 쪼개 얻은 열로 증기를 만들고, 그 증기로 터빈을 돌려 전기를 얻는 발전 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-npg-chain",
+      "text": "핵에너지가 열에너지로, 열에너지가 증기와 터빈의 운동 에너지로, 다시 전기 에너지로 바뀐다.",
+      "form": {
+        "condition": "원자로에서 핵분열이 이어질 때",
+        "type": "causal",
+        "scope": "핵발전의 에너지 전환 과정"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤 단계가 화력 발전과 같아, 순서를 뒤집은 문장이 다른 장치의 서술로도 읽힐 수 있다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-npg-merit",
+      "text": "적은 양의 원료로 많은 전기 에너지를 얻을 수 있고 화력 발전보다 이산화 탄소 배출량이 적다.",
+      "form": {
+        "condition": "화력 발전과 견줄 때",
+        "type": "classification",
+        "scope": "핵발전의 장점"
+      },
+      "invertible": true,
+      "invertible_reason": "화력 발전과의 배출량 대소가 정해져 있어 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵발전은 화력 발전보다 이산화 탄소를 더 많이 내보내고 원료도 훨씬 많이 든다."
+    },
+    {
+      "id": "rel-npg-risk",
+      "text": "발전 과정과 핵폐기물 처리 과정에서 나오는 방사선과 핵폐기물이 인체와 환경을 위협한다.",
+      "form": {
+        "condition": "핵발전소를 운영하고 폐기물을 처리할 때",
+        "type": "causal",
+        "scope": "핵발전의 단점"
+      },
+      "invertible": false,
+      "invertible_reason": "위험 요소를 열거한 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-npg-common",
+      "text": "증기로 터빈을 돌려 발전기를 회전시키는 뒷부분은 화력 발전과 같고, 열을 얻는 방법만 다르다.",
+      "form": {
+        "condition": "두 발전 방식을 나란히 놓고 견줄 때",
+        "type": "classification",
+        "scope": "화력 발전과 핵발전의 공통점과 차이"
+      },
+      "invertible": false,
+      "invertible_reason": "공통점과 차이를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵발전은 우라늄을 태워서 얻은 열로 전기를 만든다",
+      "why_wrong": "연소가 아니라 원자핵이 쪼개지는 핵분열 반응에서 열이 나온다.",
+      "source": "llm",
+      "linked_relation": "rel-npg-chain"
+    },
+    {
+      "text": "핵발전은 이산화 탄소를 거의 내보내지 않으니 환경에 아무 부담이 없다",
+      "why_wrong": "이산화 탄소 배출은 적지만 방사선과 핵폐기물이라는 다른 위험이 남는다.",
+      "source": "llm",
+      "linked_relation": "rel-npg-risk"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-electric-generator"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-nuclear-fission"
+    },
+    {
+      "type": "related",
+      "target": "isci2-thermal-power-generation"
+    },
+    {
+      "type": "related",
+      "target": "isci2-new-and-renewable-energy"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-03",
+  "pages": [
+    108,
+    111
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

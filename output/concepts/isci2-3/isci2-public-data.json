@@ -1,0 +1,91 @@
+{
+  "id": "isci2-public-data",
+  "concept_key": "concept:public-data",
+  "registry_status": "new",
+  "term": "공공 데이터",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'공공(公共)'은 한자어이나 뒤의 '데이터'가 영어 음차어라 구 전체에 대응하는 한자가 없다.",
+    "english": "public data"
+  },
+  "definition": "국가나 공공 기관이 모아 모든 사람에게 열어 둔 데이터. 포털을 통해 누구나 내려받아 쓸 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pd-open",
+      "text": "기관이 모은 자료를 공개해 두면 관측 장비나 예산이 없는 사람도 빅데이터를 가져다 쓸 수 있다.",
+      "form": {
+        "condition": "기관이 수집한 자료를 공개했을 때",
+        "type": "causal",
+        "scope": "공개된 자료에 한함 — 공개되지 않은 자료까지 쓸 수 있다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "개방의 효과를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pd-obs",
+      "text": "기상청이 관측소와 인공위성으로 모은 날씨·기후 자료처럼, 관측 자료도 공공 데이터로 열려 있다.",
+      "form": {
+        "condition": "공공 기관이 관측 자료를 개방했을 때",
+        "type": "classification",
+        "scope": "교과서가 든 기상 자료 사례에 한함 — 모든 관측 자료가 공개된다는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "공개 주체와 자료의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "공공 데이터 해당 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 든 명제라 방향이 따로 없다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공공 데이터는 공무원이나 연구자만 쓸 수 있다",
+      "why_wrong": "누구나 이용할 수 있게 공개한 것이 공공 데이터다. 학생도 포털에서 내려받아 쓸 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-pd-open"
+    },
+    {
+      "text": "인터넷에 올라와 있는 자료는 모두 공공 데이터다",
+      "why_wrong": "공공 데이터는 국가나 공공 기관이 모아 공개한 것이다. 개인이나 기업이 올린 자료가 모두 여기에 드는 것은 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-pd-obs"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-big-data"
+    },
+    {
+      "type": "related",
+      "target": "isci2-dataset"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-02",
+  "pages": [
+    143
+  ],
+  "difficulty": 1,
+  "role": "context",
+  "version": 1
+}

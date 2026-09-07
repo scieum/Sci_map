@@ -1,0 +1,142 @@
+{
+  "id": "isci2-big-data",
+  "concept_key": "concept:big-data",
+  "registry_status": "new",
+  "term": "빅데이터",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 big data 를 소리 나는 대로 옮긴 외래어라 대응하는 한자가 없다.",
+    "english": "big data"
+  },
+  "definition": "한눈에 다루기 어려울 만큼 방대하고 복잡한 데이터의 집합. 수치뿐 아니라 글·영상·음성처럼 그 형태도 여러 가지다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bd-variety",
+      "text": "빅데이터를 가르는 기준은 양이 많다는 점만이 아니라 수치·글·영상·음성처럼 형태가 여러 가지라는 점에도 있다.",
+      "form": {
+        "condition": "보통의 데이터와 견줄 때",
+        "type": "classification",
+        "scope": "빅데이터를 가르는 기준에 한함 — 숫자 자료만 잔뜩 모은 것과는 다르다",
+        "antecedent": {
+          "quantity": "데이터의 양과 형태",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "빅데이터 해당 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수치만으로 이루어진다는 문장은 형태가 다양하다는 특징과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빅데이터는 수치 자료만을 모은 것이어서 글이나 영상, 음성은 빅데이터에 들지 않는다"
+    },
+    {
+      "id": "rel-bd-complex",
+      "text": "변수가 여럿 얽혀 하나씩 따져서는 풀기 어려운 문제도 빅데이터를 분석하면 빠르게 살펴볼 수 있다.",
+      "form": {
+        "condition": "변수가 여럿 얽힌 문제를 다룰 때",
+        "type": "conditional",
+        "scope": "적절히 골라낸 데이터를 쓸 때에 한함 — 치우친 데이터로는 오히려 잘못된 결론이 나온다"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bd-predict",
+      "text": "쌓인 데이터에서 가치 있는 정보를 뽑아내면 앞으로 일어날 변화를 미리 헤아려 정책이나 결정에 쓸 수 있다.",
+      "form": {
+        "condition": "대용량 데이터를 분석해 규칙을 찾아냈을 때",
+        "type": "causal",
+        "scope": "지금까지 쌓인 흐름이 앞으로도 비슷하게 이어질 때에 한함 — 예측이 반드시 들어맞는 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "예측의 근거를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bd-science",
+      "text": "빅데이터는 일상생활뿐 아니라 기상 관측, 유전체 분석, 신약 개발 같은 과학 분야에서도 쓰인다.",
+      "form": {
+        "condition": "대량의 관측·실험 자료를 얻을 수 있는 분야에서",
+        "type": "conditional",
+        "scope": "교과서가 든 과학 분야 활용 사례에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "과학 연구에서 쓰이지 않는다는 문장은 실제 활용 사례와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빅데이터는 일상생활에서만 쓰이고 과학 연구 분야에서는 쓰이지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빅데이터는 숫자로 된 자료를 아주 많이 모아 놓은 것이다",
+      "why_wrong": "글·영상·음성처럼 숫자가 아닌 자료도 함께 든다. 양뿐 아니라 형태가 여러 가지라는 점도 빅데이터의 특징이다.",
+      "source": "llm",
+      "linked_relation": "rel-bd-variety"
+    },
+    {
+      "text": "빅데이터로 분석하면 언제나 옳은 결론이 나온다",
+      "why_wrong": "치우치거나 믿기 어려운 데이터를 쓰면 양이 아무리 많아도 결론이 어긋난다. 그래서 데이터를 골라 쓰는 일이 중요하다.",
+      "source": "llm",
+      "linked_relation": "rel-bd-complex"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-data"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-digital-conversion",
+      "note": "디지털로 쌓여야 빅데이터가 된다"
+    },
+    {
+      "type": "next",
+      "target": "isci2-dataset"
+    },
+    {
+      "type": "next",
+      "target": "isci2-public-data"
+    },
+    {
+      "type": "next",
+      "target": "isci2-big-data-limitation"
+    },
+    {
+      "type": "next",
+      "target": "isci2-artificial-intelligence"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-02",
+  "pages": [
+    140,
+    141,
+    153
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

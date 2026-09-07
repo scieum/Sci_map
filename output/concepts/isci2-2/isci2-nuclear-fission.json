@@ -1,0 +1,103 @@
+{
+  "id": "isci2-nuclear-fission",
+  "concept_key": "concept:nuclear-fission",
+  "registry_status": "new",
+  "term": "핵분열 반응",
+  "notation": {
+    "hanja": "核分裂反應",
+    "hanja_gloss": "核 씨 핵 · 分 나눌 분 · 裂 찢을 렬 · 反 돌이킬 반 · 應 응할 응",
+    "english": "nuclear fission"
+  },
+  "definition": "질량이 큰 원자핵이 중성자와 부딪쳐 더 가벼운 원자핵들로 갈라지는 반응. 이때 줄어든 질량에 해당하는 에너지가 나온다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fis-mass",
+      "text": "원자핵이 갈라지면서 질량이 조금 줄고, 줄어든 질량에 해당하는 만큼의 에너지가 방출된다.",
+      "form": {
+        "condition": "무거운 원자핵이 쪼개질 때",
+        "type": "causal",
+        "scope": "핵분열 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "질량이 에너지로 바뀌는 과정을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fis-chain",
+      "text": "갈라질 때 함께 튀어나온 중성자가 다른 우라늄 원자핵과 잇달아 부딪치면서 막대한 열에너지가 생긴다.",
+      "form": {
+        "condition": "원자로 안에 우라늄이 충분히 있을 때",
+        "type": "causal",
+        "scope": "원자로에서 일어나는 연쇄 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "연쇄가 이어지는 과정을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fis-vs-fusion",
+      "text": "핵융합은 가벼운 원자핵이 합쳐지는 반응이고, 핵분열은 무거운 원자핵이 갈라지는 반응이다.",
+      "form": {
+        "condition": "두 핵반응을 나란히 놓고 견줄 때",
+        "type": "classification",
+        "scope": "핵융합과 핵분열"
+      },
+      "invertible": true,
+      "invertible_reason": "두 반응의 방향이 서로 반대라 이름을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵융합은 무거운 원자핵이 갈라지는 반응이고, 핵분열은 가벼운 원자핵이 합쳐지는 반응이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵분열과 핵융합은 원자핵이 변한다는 점에서 사실상 같은 반응이다",
+      "why_wrong": "하나는 무거운 원자핵이 갈라지고 다른 하나는 가벼운 원자핵이 합쳐지는, 방향이 반대인 반응이다.",
+      "source": "llm",
+      "linked_relation": "rel-fis-vs-fusion"
+    },
+    {
+      "text": "핵분열이 일어나도 물질의 질량은 그대로 남는다",
+      "why_wrong": "반응 뒤 질량이 조금 줄어들고 그만큼이 에너지로 방출된다.",
+      "source": "llm",
+      "linked_relation": "rel-fis-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-hydrogen-fusion"
+    },
+    {
+      "type": "next",
+      "target": "isci2-nuclear-power-generation"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-conversion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-03",
+  "pages": [
+    111
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

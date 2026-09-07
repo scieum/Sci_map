@@ -1,0 +1,110 @@
+{
+  "id": "isci2-information-communication-technology",
+  "concept_key": "concept:information-communication-technology",
+  "registry_status": "new",
+  "term": "정보 통신 기술",
+  "notation": {
+    "hanja": "情報通信技術",
+    "hanja_gloss": "情 뜻 정 · 報 갚을 보 · 通 통할 통 · 信 믿을 신 · 技 재주 기 · 術 재주 술",
+    "english": "information and communication technology"
+  },
+  "definition": "모은 정보를 멀리 떨어진 곳까지 실시간으로 주고받게 하는 기술. 사물을 인터넷에 잇는 바탕이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ict-realtime",
+      "text": "정보를 실시간으로 전할 수 있게 되면서 멀리서 일어난 일도 곧바로 알고 대응할 수 있게 되었다.",
+      "form": {
+        "condition": "정보를 모으는 곳과 쓰는 곳이 떨어져 있을 때",
+        "type": "causal",
+        "scope": "전달 속도에 한함 — 전해진 정보의 정확도까지 높아지는 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "전달 기술의 효과를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02",
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ict-iot",
+      "text": "통신 기능이 있어야 물건이 인터넷에 이어지므로, 이 기술은 사물 인터넷이 서는 조건이 된다.",
+      "form": {
+        "condition": "물건을 인터넷에 이으려 할 때",
+        "type": "conditional",
+        "scope": "사물 인터넷의 성립 조건에 한함 — 통신 기능만으로 되는 것은 아니고 센서도 함께 있어야 한다"
+      },
+      "invertible": false,
+      "invertible_reason": "조건을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ict-bigdata",
+      "text": "여러 곳의 데이터를 실시간으로 한데 모을 수 있게 된 것이 빅데이터가 나타난 배경 가운데 하나다.",
+      "form": {
+        "condition": "센서 개발과 통신 기술 발달이 겹친 상황에서",
+        "type": "causal",
+        "scope": "빅데이터가 등장한 배경에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "배경을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정보 통신 기술은 정보를 전달만 할 뿐 모으는 일과는 상관이 없다",
+      "why_wrong": "여러 곳에 흩어진 센서의 값을 실시간으로 한데 모으는 일 자체가 통신으로 이루어진다.",
+      "source": "llm",
+      "linked_relation": "rel-ict-bigdata"
+    },
+    {
+      "text": "인터넷에 연결되어 있으면 그것만으로 사물 인터넷이다",
+      "why_wrong": "상태를 감지하는 센서가 함께 있어야 물건이 스스로 정보를 모아 주고받을 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-ict-iot"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-big-data"
+    },
+    {
+      "type": "next",
+      "target": "isci2-internet-of-things"
+    },
+    {
+      "type": "related",
+      "target": "isci2-sensor"
+    },
+    {
+      "type": "related",
+      "target": "isci2-infection-route-tracing"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-02",
+    "10통과2-03-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-02",
+  "pages": [
+    135,
+    140,
+    144
+  ],
+  "difficulty": 1,
+  "role": "context",
+  "version": 1
+}

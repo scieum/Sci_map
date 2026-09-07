@@ -1,0 +1,119 @@
+{
+  "id": "isci2-infection-route-tracing",
+  "concept_key": "concept:infection-route-tracing",
+  "registry_status": "new",
+  "term": "감염 경로 추적",
+  "aliases": [
+    "역학 조사"
+  ],
+  "notation": {
+    "hanja": "感染經路追跡",
+    "hanja_gloss": "感 느낄 감 · 染 물들 염 · 經 지날 경 · 路 길 로 · 追 쫓을 추 · 跡 자취 적",
+    "english": "infection route tracing"
+  },
+  "definition": "환자가 어디를 다녔고 누구와 만났는지 확인해 어디에서 감염되었는지 밝히는 조사. 다음 감염을 끊는 데 쓰인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-trace-block",
+      "text": "환자의 이동 경로와 접촉자를 알아내면 그 사람들을 먼저 살펴 추가 감염을 끊을 수 있다.",
+      "form": {
+        "condition": "확산이 진행 중인 감염병에서 경로 정보를 얻었을 때",
+        "type": "causal",
+        "scope": "추가 전파를 줄이는 효과에 한함 — 이미 감염된 사람을 낫게 하는 일과는 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "대응 효과를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-trace-tech",
+      "text": "정보 통신 기술과 인공지능을 쓰면서 사람이 직접 다니며 조사하던 때보다 더 많은 자료를 더 빠르게 모으고 분석하게 되었다.",
+      "form": {
+        "condition": "역학 조사에 정보 통신 기술과 인공지능을 활용할 때",
+        "type": "direct",
+        "scope": "모으는 자료의 양과 분석 속도에 한함 — 조사 결과가 언제나 정확해진다는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "활용하는 정보 기술의 수준",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "모으고 분석하는 자료의 양과 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기술을 쓸수록 자료 처리가 느려진다는 문장은 도입한 까닭과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "역학 조사에 정보 통신 기술과 인공지능을 쓰면 자료를 모으고 분석하는 데 과거보다 시간이 더 오래 걸린다."
+    },
+    {
+      "id": "rel-trace-share",
+      "text": "모은 감염자 수와 분포를 빠르게 추려 시민에게 알리거나 해외에서 들어올 가능성을 미리 헤아리는 데에도 쓰인다.",
+      "form": {
+        "condition": "수집한 감염 자료를 인공지능으로 분석할 때",
+        "type": "conditional",
+        "scope": "코로나19 대응에서 실제로 쓰인 범위에 한함 — 예측이 언제나 들어맞는다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 열거한 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감염 경로 추적은 감염병을 치료하는 방법이다",
+      "why_wrong": "추적은 누가 어디에서 감염되었는지 밝혀 다음 감염을 막는 일이다. 환자를 낫게 하는 치료와는 하는 몫이 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-trace-block"
+    },
+    {
+      "text": "인공지능이 들어오면서 역학 조사에서 사람이 할 일은 없어졌다",
+      "why_wrong": "인공지능은 많은 자료를 빠르게 처리하도록 돕는다. 어떤 자료를 모을지, 결과를 어떻게 판단할지는 여전히 사람이 정한다.",
+      "source": "llm",
+      "linked_relation": "rel-trace-tech"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-infectious-disease"
+    },
+    {
+      "type": "next",
+      "target": "isci2-future-society-problem",
+      "note": "진단·추적 사례가 미래 문제 논의로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-artificial-intelligence"
+    },
+    {
+      "type": "related",
+      "target": "isci2-information-communication-technology"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    135
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

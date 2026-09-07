@@ -1,0 +1,120 @@
+{
+  "id": "isci2-artificial-intelligence",
+  "concept_key": "concept:artificial-intelligence",
+  "registry_status": "new",
+  "term": "인공지능",
+  "notation": {
+    "hanja": "人工知能",
+    "hanja_gloss": "人 사람 인 · 工 장인 공 · 知 알 지 · 能 능할 능",
+    "english": "artificial intelligence",
+    "symbol_display": "AI",
+    "symbol_plain": "AI"
+  },
+  "definition": "사람이 하는 추론이나 학습 같은 일을 컴퓨터에서 이루어지도록 만든 기술.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ai-nature",
+      "text": "이 기술이 컴퓨터에 옮겨 놓으려는 것은 빠른 계산이 아니라 사람의 추론하고 학습하는 능력이다.",
+      "form": {
+        "condition": "이 기술의 성격을 가릴 때",
+        "type": "classification",
+        "scope": "기술의 성격 구분에 한함 — 정해진 계산만 빠르게 하는 프로그램과는 다르다",
+        "antecedent": {
+          "quantity": "컴퓨터에 구현하려는 능력",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "인공지능 해당 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성격을 밝힌 명제라 방향이 따로 없다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ai-data",
+      "text": "사물 인터넷 등으로 모은 데이터를 분석해 문제를 푸는 데 쓰이므로, 분석할 데이터가 갖추어져야 힘을 낸다.",
+      "form": {
+        "condition": "분석할 데이터가 갖추어져 있을 때",
+        "type": "conditional",
+        "scope": "데이터를 분석해 문제를 푸는 쓰임에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임의 조건을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ai-tracing",
+      "text": "방대한 정보를 빠르게 처리하는 힘 덕분에 감염 경로 분석이나 해외 유입 예측 같은 일에도 쓰였다.",
+      "form": {
+        "condition": "처리할 정보가 사람이 다루기 어려울 만큼 많을 때",
+        "type": "conditional",
+        "scope": "코로나19 대응에서 쓰인 사례에 한함 — 분석 결과가 언제나 맞는다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 든 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인공지능은 로봇을 다르게 부르는 말이다",
+      "why_wrong": "인공지능은 추론과 학습을 컴퓨터에 구현한 기술이고, 로봇은 실제로 움직이는 기계다. 둘이 합쳐진 것이 인공지능 로봇이다.",
+      "source": "llm",
+      "linked_relation": "rel-ai-nature"
+    },
+    {
+      "text": "인공지능은 데이터가 없어도 스스로 답을 만들어 낸다",
+      "why_wrong": "분석할 데이터가 있어야 규칙을 찾고 판단할 수 있다. 데이터가 치우쳐 있으면 판단도 함께 치우친다.",
+      "source": "llm",
+      "linked_relation": "rel-ai-data"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-big-data",
+      "note": "분석할 대상이 있어야 쓰임이 보인다"
+    },
+    {
+      "type": "next",
+      "target": "isci2-ai-robot"
+    },
+    {
+      "type": "related",
+      "target": "isci2-internet-of-things"
+    },
+    {
+      "type": "related",
+      "target": "isci2-infection-route-tracing"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01",
+    "10통과2-03-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-03",
+  "pages": [
+    135,
+    145,
+    152
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

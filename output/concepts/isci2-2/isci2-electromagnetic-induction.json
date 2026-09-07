@@ -1,0 +1,105 @@
+{
+  "id": "isci2-electromagnetic-induction",
+  "concept_key": "concept:electromagnetic-induction",
+  "registry_status": "new",
+  "term": "전자기 유도",
+  "notation": {
+    "hanja": "電磁氣誘導",
+    "hanja_gloss": "電 번개 전 · 磁 자석 자 · 氣 기운 기 · 誘 꾈 유 · 導 이끌 도",
+    "english": "electromagnetic induction"
+  },
+  "definition": "코일을 지나는 자기장이 변할 때 코일에 전류가 흐르는 현상. 자석과 코일이 서로 움직여야 일어난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-emi-relative",
+      "text": "자석과 코일 가운데 어느 쪽을 움직이든 둘 사이에 상대 운동이 있으면 코일에 전류가 흐른다.",
+      "form": {
+        "condition": "자석과 코일 사이의 거리가 달라질 때",
+        "type": "conditional",
+        "scope": "코일과 자석으로 이루어진 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "어느 쪽을 움직여도 같다는 명제라 방향을 맞바꿔도 뜻이 같다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-emi-static",
+      "text": "센 자석을 놓아 두어도 코일과 자석이 서로 움직이지 않으면 전류는 흐르지 않는다.",
+      "form": {
+        "condition": "코일을 지나는 자기장이 변하지 않을 때",
+        "type": "conditional",
+        "scope": "자석과 코일이 서로 정지해 있는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "정지 상태에서는 전류가 흐르지 않으므로 흐른다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석이 충분히 세면 코일과 자석이 서로 정지해 있어도 유도 전류가 흐른다."
+    },
+    {
+      "id": "rel-emi-change",
+      "text": "전류가 흐르게 하는 원인은 자석의 세기 자체가 아니라 코일을 지나는 자기장의 변화다.",
+      "form": {
+        "condition": "유도 전류가 흐르는 까닭을 따질 때",
+        "type": "causal",
+        "scope": "전자기 유도 현상 전반"
+      },
+      "invertible": false,
+      "invertible_reason": "원인을 가려낸 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "코일 속에 자석을 넣어 두기만 해도 전류가 계속 흐른다",
+      "why_wrong": "자기장이 변해야 전류가 흐르므로 자석이 멈춰 있으면 유도 전류는 흐르지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-emi-static"
+    },
+    {
+      "text": "코일은 그대로 두고 자석을 움직여야만 전류가 흐른다",
+      "why_wrong": "자석을 두고 코일을 움직여도 상대 운동이 있으면 전류가 흐른다.",
+      "source": "llm",
+      "linked_relation": "rel-emi-relative"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-induced-current"
+    },
+    {
+      "type": "next",
+      "target": "isci2-electric-generator"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-conversion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-02",
+  "pages": [
+    104,
+    105,
+    107
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

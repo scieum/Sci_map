@@ -1,0 +1,106 @@
+{
+  "id": "isci2-food-web",
+  "concept_key": "concept:food-web",
+  "registry_status": "new",
+  "term": "먹이그물",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'먹이'와 '그물'이 모두 고유어라 대응하는 한자어 표기가 없다.",
+    "english": "food web"
+  },
+  "definition": "생산자에서 최종소비자까지 한 줄로 이어진 먹이사슬 여러 갈래가 그물처럼 얽힌 것. 실제 생태계의 먹이 관계가 이 모양이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-web-chain",
+      "text": "먹고 먹히는 관계가 한 줄로 이어진 것이 먹이사슬이고, 그런 사슬 여럿이 얽힌 것이 먹이그물이다.",
+      "form": {
+        "condition": "먹이 관계가 얽힌 정도로 두 낱말을 가를 때",
+        "type": "classification",
+        "scope": "생산자부터 최종소비자까지의 먹이 관계"
+      },
+      "invertible": true,
+      "invertible_reason": "사슬이 얽혀 그물이 되는 포함 방향이 정해져 있어 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "먹이그물 여러 개가 나란히 이어져 하나의 먹이사슬을 이룬다."
+    },
+    {
+      "id": "rel-web-why",
+      "text": "한 생물이 여러 생물의 먹이가 되는 동시에 여러 생물을 잡아먹기 때문에 먹이 관계가 그물 모양이 된다.",
+      "form": {
+        "condition": "여러 개체군이 한 군집에서 함께 살아갈 때",
+        "type": "causal",
+        "scope": "실제 생태계에서 관찰되는 먹이 관계"
+      },
+      "invertible": false,
+      "invertible_reason": "그물 모양이 나오는 까닭을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-web-energy",
+      "text": "먹고 먹히는 관계를 따라 하위 영양단계의 에너지가 상위 영양단계로 옮겨 가며 군집 전체가 유지된다.",
+      "form": {
+        "condition": "먹이 관계로 이어진 생물들이 서로 잡아먹을 때",
+        "type": "causal",
+        "scope": "먹이그물로 이어진 군집"
+      },
+      "invertible": true,
+      "invertible_reason": "에너지가 옮겨 가는 방향이 아래에서 위로 정해져 있어 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "먹이 관계를 따라 상위 영양단계의 에너지가 하위 영양단계로 옮겨 간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "먹이그물에서 한 생물은 오직 한 종류의 생물만 잡아먹는다",
+      "why_wrong": "한 생물이 여러 생물을 먹고 또 여러 생물의 먹이도 되기 때문에 관계가 그물처럼 얽힌다.",
+      "source": "llm",
+      "linked_relation": "rel-web-why"
+    },
+    {
+      "text": "먹이사슬과 먹이그물은 같은 말이다",
+      "why_wrong": "한 줄로 이어진 것이 먹이사슬이고, 그 사슬이 여러 갈래로 얽힌 것이 먹이그물이다.",
+      "source": "llm",
+      "linked_relation": "rel-web-chain"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-population"
+    },
+    {
+      "type": "next",
+      "target": "isci2-trophic-level"
+    },
+    {
+      "type": "next",
+      "target": "isci2-ecosystem-equilibrium",
+      "note": "먹이 관계의 연쇄가 평형 회복의 통로다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-02",
+  "pages": [
+    80,
+    81
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

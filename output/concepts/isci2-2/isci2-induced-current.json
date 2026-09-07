@@ -1,0 +1,114 @@
+{
+  "id": "isci2-induced-current",
+  "concept_key": "concept:induced-current",
+  "registry_status": "new",
+  "term": "유도 전류",
+  "notation": {
+    "hanja": "誘導電流",
+    "hanja_gloss": "誘 꾈 유 · 導 이끌 도 · 電 번개 전 · 流 흐를 류",
+    "english": "induced current"
+  },
+  "definition": "전자기 유도가 일어날 때 코일에 흐르는 전류. 세기와 방향은 자기장이 어떻게 변하느냐에 따라 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ic-strength",
+      "text": "자석을 빨리 움직이거나 더 센 자석을 쓰거나 코일을 여러 번 감으면 유도 전류가 세게 흐른다.",
+      "form": {
+        "condition": "코일과 자석이 상대 운동을 할 때",
+        "type": "direct",
+        "scope": "코일과 자석으로 만든 회로",
+        "antecedent": {
+          "quantity": "자석의 운동 속도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세 조건 모두 전류를 세게 하는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석을 천천히 움직이거나 코일을 적게 감을수록 유도 전류가 세게 흐른다."
+    },
+    {
+      "id": "rel-ic-direction",
+      "text": "코일에 자석의 N극을 넣을 때와 뺄 때, 유도 전류가 흐르는 방향은 서로 반대가 된다.",
+      "form": {
+        "condition": "자석의 운동 방향이 반대로 바뀔 때",
+        "type": "causal",
+        "scope": "같은 코일과 같은 자석을 쓰는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "두 경우의 방향이 반대라는 것이 핵심이라 같다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코일에 자석의 N극을 넣을 때와 뺄 때, 유도 전류가 흐르는 방향은 서로 같다."
+    },
+    {
+      "id": "rel-ic-field",
+      "text": "자석을 가까이 하면 코일을 지나는 자기장이 세지고 멀리 하면 약해지는데, 이 차이가 전류의 방향을 가른다.",
+      "form": {
+        "condition": "자석과 코일 사이 거리가 달라질 때",
+        "type": "causal",
+        "scope": "코일을 지나는 자기장의 변화"
+      },
+      "invertible": false,
+      "invertible_reason": "방향이 갈리는 까닭을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자석을 빨리 움직이든 천천히 움직이든 유도 전류의 세기는 같다",
+      "why_wrong": "코일을 지나는 자기장이 빠르게 변할수록 유도 전류가 세진다.",
+      "source": "llm",
+      "linked_relation": "rel-ic-strength"
+    },
+    {
+      "text": "자석을 넣을 때와 뺄 때 전류가 흐르는 방향은 늘 같다",
+      "why_wrong": "자기장이 세지는 경우와 약해지는 경우이므로 전류의 방향은 서로 반대가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-ic-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-electromagnetic-induction"
+    },
+    {
+      "type": "next",
+      "target": "isci2-electric-generator"
+    },
+    {
+      "type": "related",
+      "target": "isci2-new-and-renewable-energy",
+      "note": "풍력·조력 발전이 이 원리를 쓴다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-02",
+  "pages": [
+    105,
+    106
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

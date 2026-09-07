@@ -1,0 +1,98 @@
+{
+  "id": "isci2-data",
+  "concept_key": "concept:data",
+  "registry_status": "new",
+  "term": "데이터",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 data 를 소리 나는 대로 옮긴 외래어라 대응하는 한자가 없다.",
+    "english": "data"
+  },
+  "definition": "정보를 담고 있는 하나하나의 값. 시간대별 기온이나 하루 걸음 수처럼 그 자체로는 단순한 사실에 지나지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-data-to-info",
+      "text": "값 하나만으로는 알아낼 것이 없지만, 필요한 것을 골라 모아 분석하면 여러 가지를 알려 주는 정보가 된다.",
+      "form": {
+        "condition": "목적에 맞는 값을 골라 모아 분석했을 때",
+        "type": "causal",
+        "scope": "수집과 분석을 거친 경우에 한함 — 쌓아 두기만 한 값은 정보가 되지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "전환 과정을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-data-amount",
+      "text": "같은 대상을 같은 방법으로 잴 때, 모은 값이 많을수록 알아낼 수 있는 것의 범위가 넓어진다.",
+      "form": {
+        "condition": "같은 대상을 같은 방법으로 측정할 때",
+        "type": "direct",
+        "scope": "믿을 만한 방법으로 모은 값에 한함 — 치우친 값은 아무리 많아도 결론을 그르칠 수 있다",
+        "antecedent": {
+          "quantity": "모은 데이터의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "알아낼 수 있는 정보의 범위",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "많이 모을수록 알 수 있는 것이 줄어든다는 문장은 어떤 측정에서도 성립하지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 대상을 잴 때 데이터를 많이 모을수록 알아낼 수 있는 것은 오히려 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "데이터는 그 자체로 이미 정보이므로 모으기만 하면 문제가 풀린다",
+      "why_wrong": "값을 모으는 것과 그 값에서 뜻을 읽어 내는 것은 다른 일이다. 목적에 맞게 골라 분석해야 정보가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-data-to-info"
+    },
+    {
+      "text": "숫자로 된 것만 데이터다",
+      "why_wrong": "글이나 영상, 음성처럼 숫자가 아닌 것도 데이터다. 형태가 다양하다는 점이 오히려 요즘 데이터의 특징이다.",
+      "source": "llm",
+      "linked_relation": "rel-data-to-info"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-big-data"
+    },
+    {
+      "type": "related",
+      "target": "isci2-sensor",
+      "note": "값을 모으는 장치"
+    },
+    {
+      "type": "related",
+      "target": "isci2-dataset"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-02",
+  "pages": [
+    138,
+    139
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "version": 1
+}

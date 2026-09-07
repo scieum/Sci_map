@@ -1,0 +1,120 @@
+{
+  "id": "isci2-pathogen",
+  "concept_key": "concept:pathogen",
+  "registry_status": "new",
+  "term": "병원체",
+  "notation": {
+    "hanja": "病原體",
+    "hanja_gloss": "病 병 병 · 原 근원 원 · 體 몸 체",
+    "english": "pathogen"
+  },
+  "definition": "사람 몸에 들어가 질병을 일으키는 세균·바이러스 따위를 통틀어 이르는 말. 몸을 이루던 물질이 아니라 밖에서 들어온 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-path-kinds",
+      "text": "세균과 바이러스처럼 종류가 서로 다른 것들이 모두 병원체에 든다.",
+      "form": {
+        "condition": "병원체의 종류를 나눠 볼 때",
+        "type": "classification",
+        "scope": "감염병의 원인을 나누는 자리에 한함 — 종류가 다르면 치료 방법도 다르다",
+        "antecedent": {
+          "quantity": "병원체의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "감염병의 원인 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류를 밝힌 명제라 방향이 따로 없다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-path-antigen",
+      "text": "병원체가 지닌 특정 단백질은 진단에서 찾아내는 표적이 되며, 이 단백질을 항원이라 부른다.",
+      "form": {
+        "condition": "병원체가 몸 안에 들어왔을 때",
+        "type": "classification",
+        "scope": "감염병 진단에서 검출 대상으로 삼는 단백질에 한함 — 병원체 전체를 항원이라 부르는 것이 아니다",
+        "antecedent": {
+          "quantity": "병원체의 특정 단백질",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "항원이라는 이름",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 붙인 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-path-nucleic",
+      "text": "병원체는 저마다 고유한 유전물질을 지녀, 검체에서 그 핵산을 찾아내면 어떤 병원체가 들어왔는지 알 수 있다.",
+      "form": {
+        "condition": "검체에 병원체의 핵산이 남아 있을 때",
+        "type": "conditional",
+        "scope": "핵산을 찾아 하는 진단에 한함 — 언제 감염되었는지나 남에게 옮길 수 있는지까지 알려 주지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "검출 조건을 밝힌 명제라 뒤집어도 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "병원체는 모두 세균이다",
+      "why_wrong": "바이러스도 병원체다. 세균과 바이러스는 서로 다른 것이고 대응하는 방법도 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-path-kinds"
+    },
+    {
+      "text": "병원체와 항원은 같은 말이다",
+      "why_wrong": "항원은 병원체가 지닌 특정 단백질을 가리키는 말이고, 병원체는 그 단백질을 지닌 세균이나 바이러스 자체다.",
+      "source": "llm",
+      "linked_relation": "rel-path-antigen"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-infectious-disease"
+    },
+    {
+      "type": "next",
+      "target": "isci2-antigen"
+    },
+    {
+      "type": "next",
+      "target": "isci2-pcr-test",
+      "note": "증폭 대상이 병원체의 유전물질이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    134,
+    153
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

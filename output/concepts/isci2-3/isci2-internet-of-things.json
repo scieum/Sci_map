@@ -1,0 +1,118 @@
+{
+  "id": "isci2-internet-of-things",
+  "concept_key": "concept:internet-of-things",
+  "registry_status": "new",
+  "term": "사물 인터넷",
+  "aliases": [
+    "IoT"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'사물(事物)'은 한자어이나 뒤의 '인터넷'이 영어 음차어라 구 전체에 대응하는 한자가 없다.",
+    "english": "Internet of Things",
+    "symbol_display": "IoT",
+    "symbol_plain": "IoT"
+  },
+  "definition": "여러 물건에 센서와 통신 기능을 넣어 인터넷에 이어 놓은 기술. 이어진 물건들은 스스로 정보를 모으고 주고받는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-iot-condition",
+      "text": "어떤 물건이 여기에 들려면 상태를 감지하는 센서와 인터넷에 이어 주는 통신 기능을 함께 갖추어야 한다.",
+      "form": {
+        "condition": "어떤 물건이 사물 인터넷에 드는지 가릴 때",
+        "type": "conditional",
+        "scope": "성립 조건에 한함 — 둘 가운데 하나만 갖춘 물건은 여기에 들지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "둘 다 없어도 된다는 문장은 성립 조건과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "센서나 통신 기능이 없어도 전기로 움직이는 물건이면 사물 인터넷에 든다."
+    },
+    {
+      "id": "rel-iot-autonomy",
+      "text": "이어진 물건은 사람이 일일이 조작하지 않아도 스스로 정보를 모아 작동하거나, 멀리서 보내는 신호로 조절된다.",
+      "form": {
+        "condition": "물건이 인터넷에 이어져 정보를 주고받을 때",
+        "type": "causal",
+        "scope": "정보 수집과 작동·원격 조절에 한함 — 스스로 판단해 새 문제를 푸는 것은 인공지능의 몫이다"
+      },
+      "invertible": false,
+      "invertible_reason": "작동 방식을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-iot-home",
+      "text": "냉난방 장치나 조명처럼 집 안의 물건이 이 기술로 이어지면서 생활 환경을 자동으로 관리하는 일이 가능해졌다.",
+      "form": {
+        "condition": "생활 공간의 물건을 인터넷으로 이었을 때",
+        "type": "causal",
+        "scope": "교과서가 든 스마트 홈 사례에 한함 — 모든 집이 이렇게 된다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "사물 인터넷과 인공지능은 같은 말이다",
+      "why_wrong": "사물 인터넷은 물건을 인터넷에 이어 정보를 주고받게 하는 기술이고, 인공지능은 그렇게 모은 정보를 분석해 판단하는 기술이다.",
+      "source": "llm",
+      "linked_relation": "rel-iot-autonomy"
+    },
+    {
+      "text": "인터넷에 이어지기만 하면 물건이 스스로 판단해 문제를 해결한다",
+      "why_wrong": "이어졌다는 것만으로는 정보를 모아 주고받을 뿐이다. 스스로 판단하려면 인공지능 기술이 더해져야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-iot-autonomy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-sensor"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-information-communication-technology"
+    },
+    {
+      "type": "next",
+      "target": "isci2-usefulness-and-limitation-of-technology"
+    },
+    {
+      "type": "related",
+      "target": "isci2-artificial-intelligence"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ai-robot"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-03",
+  "pages": [
+    144,
+    145,
+    147
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

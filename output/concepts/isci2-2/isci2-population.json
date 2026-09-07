@@ -1,0 +1,101 @@
+{
+  "id": "isci2-population",
+  "concept_key": "concept:population",
+  "registry_status": "new",
+  "term": "개체군",
+  "notation": {
+    "hanja": "個體群",
+    "hanja_gloss": "個 낱 개 · 體 몸 체 · 群 무리 군",
+    "english": "population"
+  },
+  "definition": "한 지역에 함께 사는 같은 종 생물의 무리. 여러 종의 개체군이 한 서식지에 모이면 군집이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pop-community",
+      "text": "같은 종끼리 모인 무리가 개체군이고, 서로 다른 종의 개체군들이 한 서식지에 모인 것이 군집이다.",
+      "form": {
+        "condition": "생물요소를 무리 단위로 묶어 부를 때",
+        "type": "classification",
+        "scope": "한 서식지 안의 생물 조직 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "개체군이 군집보다 작은 단위이므로 포함 관계를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-01",
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "여러 군집이 모여 하나의 개체군을 이룬다."
+    },
+    {
+      "id": "rel-pop-size",
+      "text": "먹이 관계로 이어진 개체군들은 서로의 크기를 조절해, 잡아먹는 쪽이 늘면 잡아먹히는 쪽은 줄어든다.",
+      "form": {
+        "condition": "두 개체군이 먹고 먹히는 관계로 이어져 있을 때",
+        "type": "causal",
+        "scope": "각 영양단계의 생물이 남아 있는 생태계",
+        "antecedent": {
+          "quantity": "포식자 개체군의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "피식자 개체군의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "포식이 늘면 피식자가 줄어드는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "잡아먹는 개체군이 늘어나면 잡아먹히는 개체군도 함께 늘어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "한 연못에 사는 모든 생물을 통틀어 개체군이라고 한다",
+      "why_wrong": "개체군은 같은 종끼리의 무리이고, 여러 종을 통틀어 부르는 말은 군집이다.",
+      "source": "llm",
+      "linked_relation": "rel-pop-community"
+    },
+    {
+      "text": "잡아먹는 생물이 늘어나면 먹이가 되는 생물도 함께 늘어난다",
+      "why_wrong": "잡아먹히는 양이 늘어나므로 먹이가 되는 개체군의 수는 오히려 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-pop-size"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-biotic-factor"
+    },
+    {
+      "type": "next",
+      "target": "isci2-food-web"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ecosystem"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-01",
+    "10통과2-02-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-01",
+  "pages": [
+    75,
+    82,
+    83
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

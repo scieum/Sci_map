@@ -1,0 +1,135 @@
+{
+  "id": "isci2-science-ethics",
+  "concept_key": "concept:science-ethics",
+  "registry_status": "new",
+  "term": "과학 윤리",
+  "notation": {
+    "hanja": "科學倫理",
+    "hanja_gloss": "科 과목 과 · 學 배울 학 · 倫 인륜 륜 · 理 다스릴 리",
+    "english": "science ethics"
+  },
+  "definition": "과학을 연구하거나 과학기술을 쓸 때 지켜야 할 윤리적 원칙과 기준. 생명 존중·공정성·안전·환경적 책임 등이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-se-minimum",
+      "text": "이 원칙은 과학기술이 인류 전체에 이익이 되도록 하려고 두는 최소한의 기준이다.",
+      "form": {
+        "condition": "과학 윤리가 무엇을 위해 있는지 따질 때",
+        "type": "classification",
+        "scope": "원칙의 성격 규정에 한함 — 연구자 개인의 취향에 따라 달라지는 기준이 아니다",
+        "antecedent": {
+          "quantity": "원칙을 두는 목적",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "과학 윤리의 성격",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성격을 밝힌 명제라 방향이 따로 없다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-se-scope",
+      "text": "연구를 하는 자리에만 적용되는 것이 아니라 이미 개발된 기술을 쓰는 자리에도 함께 적용된다.",
+      "form": {
+        "condition": "이 원칙이 어디까지 미치는지 따질 때",
+        "type": "conditional",
+        "scope": "연구 수행과 기술 이용 두 자리 모두에 걸침 — 연구실 안의 규칙만이 아니다"
+      },
+      "invertible": true,
+      "invertible_reason": "연구자에게만 해당한다는 문장은 적용 범위를 절반으로 줄인 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "과학 윤리는 연구를 하는 과학자에게만 해당하고, 개발된 기술을 쓰는 사람과는 상관이 없다."
+    },
+    {
+      "id": "rel-se-elements",
+      "text": "생명 존중, 공정성, 안전, 환경적 책임처럼 서로 다른 영역의 기준이 그 안에 함께 들어 있다.",
+      "form": {
+        "condition": "어떤 기준이 여기에 드는지 나눠 볼 때",
+        "type": "classification",
+        "scope": "교과서가 든 네 가지 기준에 한함 — 이것이 전부라는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "기준의 영역",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "과학 윤리 해당 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "기준을 나열한 명제라 방향이 따로 없다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-se-for-ssi",
+      "text": "쟁점을 놓고 판단이 갈릴 때 이 원칙은 어느 선을 넘지 말아야 하는지 가늠하는 잣대가 된다.",
+      "form": {
+        "condition": "이해관계가 갈리는 과학 관련 사회적 쟁점에 대응할 때",
+        "type": "conditional",
+        "scope": "판단의 잣대로서 맡는 몫에 한함 — 윤리가 쟁점의 정답을 정해 주지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "맡는 몫을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "과학 윤리는 연구하는 과학자만 지키면 되는 규칙이다",
+      "why_wrong": "이미 만들어진 기술을 쓰는 사람에게도 함께 적용된다. 쓰는 방식에 따라 남에게 해가 갈 수 있기 때문이다.",
+      "source": "llm",
+      "linked_relation": "rel-se-scope"
+    },
+    {
+      "text": "과학 윤리를 지키면 과학 관련 사회적 쟁점은 저절로 해결된다",
+      "why_wrong": "윤리는 넘지 말아야 할 선을 알려 줄 뿐이다. 얽힌 이해관계를 맞추는 협의 과정은 따로 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-se-for-ssi"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-socioscientific-issue"
+    },
+    {
+      "type": "related",
+      "target": "isci2-usefulness-and-limitation-of-technology"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ai-robot"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-04",
+  "pages": [
+    149,
+    151
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

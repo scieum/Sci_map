@@ -1,0 +1,135 @@
+{
+  "id": "isci2-thermal-power-generation",
+  "concept_key": "concept:thermal-power-generation",
+  "registry_status": "new",
+  "term": "화력 발전",
+  "notation": {
+    "hanja": "火力發電",
+    "hanja_gloss": "火 불 화 · 力 힘 력 · 發 필 발 · 電 번개 전",
+    "english": "thermal power generation"
+  },
+  "definition": "석탄이나 석유 같은 화석 연료를 태워 얻은 열로 증기를 만들고, 그 증기로 터빈을 돌려 전기를 얻는 발전 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tpg-chain",
+      "text": "연료의 화학 에너지가 열에너지로, 열에너지가 터빈의 운동 에너지로, 다시 전기 에너지로 차례차례 바뀐다.",
+      "form": {
+        "condition": "보일러에서 화석 연료를 태워 발전할 때",
+        "type": "causal",
+        "scope": "화력 발전의 에너지 전환 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "전환 순서가 정해져 있어 차례를 거꾸로 놓으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기 에너지가 운동 에너지로, 운동 에너지가 열에너지로, 다시 화학 에너지로 차례차례 바뀐다."
+    },
+    {
+      "id": "rel-tpg-merit",
+      "text": "발전량을 조절하기 쉽고 비교적 좁은 터에도 발전소를 세울 수 있다는 것이 장점이다.",
+      "form": {
+        "condition": "다른 발전 방식과 견줄 때",
+        "type": "classification",
+        "scope": "화력 발전의 장점"
+      },
+      "invertible": false,
+      "invertible_reason": "장점을 열거한 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tpg-demerit",
+      "text": "화석 연료를 태울 때 이산화 탄소 같은 온실 기체와 미세 먼지 같은 대기 오염 물질이 많이 나온다.",
+      "form": {
+        "condition": "보일러에서 화석 연료를 연소시키는 동안",
+        "type": "causal",
+        "scope": "화석 연료를 태우는 발전",
+        "antecedent": {
+          "quantity": "화석 연료 연소량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "온실 기체 배출량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "연료를 태울수록 배출이 느는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화석 연료를 많이 태울수록 온실 기체와 대기 오염 물질의 배출량은 줄어든다."
+    },
+    {
+      "id": "rel-tpg-limit",
+      "text": "연료가 되는 화석 연료는 매장량에 한계가 있고 묻힌 지역도 한쪽으로 치우쳐 있다.",
+      "form": {
+        "condition": "연료를 구할 수 있는 조건을 따질 때",
+        "type": "classification",
+        "scope": "석탄·석유·천연가스 같은 화석 연료"
+      },
+      "invertible": false,
+      "invertible_reason": "자원의 성질을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화력 발전은 연료를 태운 열로 곧바로 전기를 만든다",
+      "why_wrong": "열로 증기를 만들어 터빈을 돌리고, 그 회전으로 발전기가 전기를 만드는 단계를 거친다.",
+      "source": "llm",
+      "linked_relation": "rel-tpg-chain"
+    },
+    {
+      "text": "화력 발전에서는 화석 연료의 에너지가 거의 전부 전기 에너지가 된다",
+      "why_wrong": "약 절반 정도만 전기 에너지가 되고 나머지는 다시 쓰기 어려운 열 등으로 버려진다.",
+      "source": "llm",
+      "linked_relation": "rel-tpg-chain"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-electric-generator"
+    },
+    {
+      "type": "next",
+      "target": "isci2-thermal-efficiency",
+      "note": "버려지는 열이 열효율 서술의 사례가 된다"
+    },
+    {
+      "type": "next",
+      "target": "isci2-new-and-renewable-energy",
+      "note": "화석 연료 발전의 한계가 대체 에너지의 출발점이다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-nuclear-power-generation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-03",
+  "pages": [
+    108,
+    110,
+    116
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

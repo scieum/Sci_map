@@ -1,0 +1,108 @@
+{
+  "id": "isci2-ecosystem-equilibrium",
+  "concept_key": "concept:ecosystem-equilibrium",
+  "registry_status": "new",
+  "term": "생태계평형",
+  "notation": {
+    "hanja": "生態系平衡",
+    "hanja_gloss": "生 날 생 · 態 모습 태 · 系 이어맬 계 · 平 평평할 평 · 衡 저울대 형",
+    "english": "ecosystem equilibrium"
+  },
+  "definition": "생물의 종류와 개체수, 물질의 양이 크게 흔들리지 않고 균형을 이루며 이어지는 생태계의 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eq-restore",
+      "text": "일시적인 환경 변화로 한 개체군의 수가 변해도 먹이로 이어진 다른 개체군이 잇달아 변하며 원래 상태로 되돌아간다.",
+      "form": {
+        "condition": "각 영양단계의 생물이 사라지지 않고 남아 있을 때",
+        "type": "causal",
+        "scope": "복원 한계 안에서 일어난 일시적 환경 변화"
+      },
+      "invertible": false,
+      "invertible_reason": "회복 과정을 서술한 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eq-limit",
+      "text": "생태계의 복원 한계를 넘어서는 환경 변화가 닥치면 평형이 깨지고 많은 생물종이 사라질 수 있다.",
+      "form": {
+        "condition": "환경 변화의 크기가 복원 한계를 넘을 때",
+        "type": "conditional",
+        "scope": "지진·화산 같은 자연적 변화와 인간 활동에 따른 변화 모두"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 넘은 경우만 말한 조건문이라 뒤집으면 참거짓이 갈리지 않는다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eq-recovery",
+      "text": "한 번 깨진 생태계평형은 다시 회복되기까지 아주 긴 시간이 걸린다.",
+      "form": {
+        "condition": "복원 한계를 넘어 평형이 파괴된 뒤",
+        "type": "conditional",
+        "scope": "평형이 파괴된 생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "회복에 드는 시간을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생태계평형은 생물의 수가 조금도 변하지 않는 상태를 뜻한다",
+      "why_wrong": "개체수는 늘고 줄기를 되풀이하며, 그 변동이 다시 원래 범위로 돌아오는 것이 평형이다.",
+      "source": "llm",
+      "linked_relation": "rel-eq-restore"
+    },
+    {
+      "text": "생태계는 어떤 변화를 겪어도 시간이 지나면 저절로 원래대로 돌아온다",
+      "why_wrong": "복원 한계를 넘어선 변화 앞에서는 평형이 깨지고 회복에 아주 긴 시간이 든다.",
+      "source": "llm",
+      "linked_relation": "rel-eq-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-ecological-pyramid"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-food-web"
+    },
+    {
+      "type": "related",
+      "target": "isci2-global-warming",
+      "note": "기후 변화가 평형을 흔드는 환경 변화의 한 갈래다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-population"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-02",
+  "pages": [
+    83,
+    85
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

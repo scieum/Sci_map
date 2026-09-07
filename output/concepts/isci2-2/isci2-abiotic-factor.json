@@ -1,0 +1,115 @@
+{
+  "id": "isci2-abiotic-factor",
+  "concept_key": "concept:abiotic-factor",
+  "registry_status": "new",
+  "term": "비생물요소",
+  "notation": {
+    "hanja": "非生物要素",
+    "hanja_gloss": "非 아닐 비 · 生 날 생 · 物 물건 물 · 要 구할 요 · 素 본디 소",
+    "english": "abiotic factor"
+  },
+  "definition": "생태계를 이루는 것 가운데 생물이 아닌 것. 곧 빛·온도·물·공기·토양처럼 생물을 둘러싼 환경 조건을 가리킨다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-abio-temperature",
+      "text": "추운 지역에 사는 정온동물일수록 피하 지방이 두껍고 몸집이 크며 귀 같은 말단부는 작아지는 경향을 보인다.",
+      "form": {
+        "condition": "체온을 일정하게 지키는 동물을 서식지 기온으로 견줄 때",
+        "type": "conditional",
+        "scope": "포유류처럼 체온을 일정하게 유지하는 동물",
+        "antecedent": {
+          "quantity": "서식지의 기온",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "말단부의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "북극여우와 사막여우처럼 방향이 정해진 경향이라 크기의 증감을 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "10통과2-02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "추운 지역에 사는 정온동물일수록 귀 같은 말단부가 커지고 몸집은 작아진다."
+    },
+    {
+      "id": "rel-abio-light",
+      "text": "식물은 종마다 잘 자라는 빛의 세기가 달라서, 소나무는 강한 빛에서, 보스턴고사리는 약한 빛에서도 잘 자란다.",
+      "form": {
+        "condition": "여러 식물 종을 같은 빛 조건에 놓고 견줄 때",
+        "type": "conditional",
+        "scope": "빛을 에너지원으로 광합성하는 식물"
+      },
+      "invertible": false,
+      "invertible_reason": "종에 따라 갈린다는 명제여서 한 방향으로 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abio-mutual",
+      "text": "비생물요소는 생물의 몸 형태와 생활 방식을 바꾸고, 생물의 생명활동은 다시 환경 조건을 바꾼다.",
+      "form": {
+        "condition": "두 요소가 한 생태계 안에서 맞물릴 때",
+        "type": "causal",
+        "scope": "생물요소와 비생물요소가 함께 있는 생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "영향이 양방향이라는 명제라 뒤집어도 같은 뜻이 된다.",
+      "curriculum": [
+        "10통과2-02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛이 셀수록 어떤 식물이든 더 잘 자란다",
+      "why_wrong": "종마다 생존에 유리한 빛의 세기가 달라 약한 빛에서 더 잘 자라는 식물도 있다.",
+      "source": "llm",
+      "linked_relation": "rel-abio-light"
+    },
+    {
+      "text": "비생물요소는 생물에게 일방적으로 영향을 줄 뿐이다",
+      "why_wrong": "생물의 호흡·광합성·분해 활동이 공기와 토양의 성분을 바꾸므로 영향은 양쪽으로 오간다.",
+      "source": "llm",
+      "linked_relation": "rel-abio-mutual"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-ecosystem"
+    },
+    {
+      "type": "next",
+      "target": "isci2-atmospheric-general-circulation",
+      "note": "위도별 환경 조건 차이가 대순환의 전제다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-biotic-factor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-01",
+  "pages": [
+    75,
+    77,
+    78,
+    79
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

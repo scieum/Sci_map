@@ -1,0 +1,113 @@
+{
+  "id": "isci2-antigen",
+  "concept_key": "concept:antigen",
+  "registry_status": "new",
+  "term": "항원",
+  "notation": {
+    "hanja": "抗原",
+    "hanja_gloss": "抗 겨룰 항 · 原 근원 원",
+    "english": "antigen"
+  },
+  "definition": "우리 몸이 바깥에서 들어온 것으로 알아보는 물질. 감염병 진단에서는 몸에 들어온 병원체가 지닌 특정 단백질을 가리킨다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ag-source",
+      "text": "진단에서 말하는 항원은 병원체 쪽에서 온 단백질이므로, 검체에서 항원이 잡히면 그 병원체가 몸에 들어왔다고 본다.",
+      "form": {
+        "condition": "검체에 병원체의 단백질이 남아 있을 때",
+        "type": "conditional",
+        "scope": "항원을 찾아 감염 여부를 가리는 자리에 한함 — 양이 적은 감염 초기에는 잡히지 않을 수 있다"
+      },
+      "invertible": false,
+      "invertible_reason": "검출되지 않았다고 감염이 아니라고 단정할 수 없어 뒤집은 문장이 반드시 거짓은 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ag-release",
+      "text": "검체를 용액에 풀면 병원체가 흩어지면서 그것을 이루던 단백질이 항원으로 용액에 나온다.",
+      "form": {
+        "condition": "검체를 용액에 풀어 병원체를 흩뜨렸을 때",
+        "type": "causal",
+        "scope": "신속 항원 검사 키트에서 검체를 다루는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "검출 과정을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ag-vs-antibody",
+      "text": "항원은 병원체 쪽에서 온 물질이고 항체는 우리 몸이 만들어 낸 단백질이어서, 둘은 서로 다른 것을 가리킨다.",
+      "form": {
+        "condition": "감염 진단에서 두 낱말을 견줄 때",
+        "type": "classification",
+        "scope": "어디에서 온 물질인지를 가르는 자리에 한함",
+        "antecedent": {
+          "quantity": "항원의 유래",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "항체의 유래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "유래를 서로 맞바꾼 문장은 어느 감염병에서도 성립하지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "항원은 우리 몸이 스스로 만들어 낸 단백질이고, 항체는 병원체가 지니고 있던 단백질이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항원은 우리 몸이 병원체와 싸우려고 만들어 내는 물질이다",
+      "why_wrong": "그것은 항체다. 항원은 몸이 만든 것이 아니라 병원체가 지니고 들어온 물질이다.",
+      "source": "llm",
+      "linked_relation": "rel-ag-vs-antibody"
+    },
+    {
+      "text": "항원은 병원체 전체를 가리키는 말이다",
+      "why_wrong": "항원은 병원체가 지닌 특정 단백질을 가리킨다. 진단에서 찾는 것도 병원체 전체가 아니라 이 단백질이다.",
+      "source": "llm",
+      "linked_relation": "rel-ag-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-pathogen",
+      "note": "항원은 병원체가 지닌 단백질이다"
+    },
+    {
+      "type": "next",
+      "target": "isci2-antibody"
+    },
+    {
+      "type": "next",
+      "target": "isci2-antigen-test"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    133,
+    134
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

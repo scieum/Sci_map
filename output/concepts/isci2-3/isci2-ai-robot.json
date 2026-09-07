@@ -1,0 +1,131 @@
+{
+  "id": "isci2-ai-robot",
+  "concept_key": "concept:ai-robot",
+  "registry_status": "new",
+  "term": "인공지능 로봇",
+  "aliases": [
+    "로봇"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'인공지능(人工知能)'은 한자어이나 뒤의 '로봇'이 영어 음차어라 구 전체에 대응하는 한자가 없다.",
+    "english": "AI robot"
+  },
+  "definition": "인공지능 기술을 로봇에 접목해, 둘레 환경을 인식하고 스스로 판단해 움직이도록 만든 기계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-air-vs-old",
+      "text": "예전의 로봇이 미리 정해진 동작만 되풀이한 것과 달리, 이것은 둘레 상황을 인식해 스스로 판단해 움직인다.",
+      "form": {
+        "condition": "예전의 로봇과 견줄 때",
+        "type": "classification",
+        "scope": "판단 방식의 차이에 한함 — 겉모습이나 크기로 갈리는 것이 아니다",
+        "antecedent": {
+          "quantity": "판단 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "로봇의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 로봇의 특징을 맞바꾼 문장은 어느 쪽에도 들어맞지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인공지능 로봇은 미리 입력된 동작만 되풀이하고, 예전의 로봇이 상황을 인식해 스스로 판단해 움직였다."
+    },
+    {
+      "id": "rel-air-spread",
+      "text": "언론·교통·물류·안전·환경 등 여러 분야로 퍼지면서 생활이 편리해지고 산업 생산성이 높아졌다.",
+      "form": {
+        "condition": "인공지능 로봇이 산업 현장에 도입된 경우",
+        "type": "direct",
+        "scope": "교과서가 든 도입 효과에 한함 — 같은 도입이 일자리 감소 같은 문제도 함께 낳는다",
+        "antecedent": {
+          "quantity": "도입되는 분야의 범위",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생활의 편의와 산업 생산성",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분야에 따라 생산성이 오르지 않는 경우가 있어 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-air-worry",
+      "text": "같은 확산이 일자리 감소나 로봇을 통제하지 못하는 문제 같은 걱정도 함께 불러왔다.",
+      "form": {
+        "condition": "인공지능 로봇이 사람의 일을 대신하게 된 상황에서",
+        "type": "causal",
+        "scope": "교과서가 든 우려에 한함 — 이런 일이 반드시 일어난다고 못 박은 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "우려를 든 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-03",
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인공지능 로봇이 널리 쓰이면 좋은 점만 늘어난다",
+      "why_wrong": "편리함과 생산성이 오르는 한편, 일자리 감소나 통제하기 어려운 문제 같은 걱정도 함께 커진다.",
+      "source": "llm",
+      "linked_relation": "rel-air-worry"
+    },
+    {
+      "text": "로봇은 모두 정해진 동작만 되풀이한다",
+      "why_wrong": "예전의 로봇은 그러했지만, 인공지능이 더해진 로봇은 둘레를 인식하고 스스로 판단해 움직인다.",
+      "source": "llm",
+      "linked_relation": "rel-air-vs-old"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-artificial-intelligence"
+    },
+    {
+      "type": "next",
+      "target": "isci2-usefulness-and-limitation-of-technology"
+    },
+    {
+      "type": "next",
+      "target": "isci2-socioscientific-issue",
+      "note": "교과서가 든 쟁점의 대표 사례다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-internet-of-things"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-03",
+    "10통과2-03-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-03",
+  "pages": [
+    145,
+    147,
+    148
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

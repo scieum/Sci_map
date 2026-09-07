@@ -1,0 +1,131 @@
+{
+  "id": "isci2-antigen-test",
+  "concept_key": "concept:antigen-test",
+  "registry_status": "new",
+  "term": "항원 검사",
+  "aliases": [
+    "신속 항원 검사"
+  ],
+  "notation": {
+    "hanja": "抗原檢査",
+    "hanja_gloss": "抗 겨룰 항 · 原 근원 원 · 檢 검사할 검 · 査 조사할 사",
+    "english": "antigen test"
+  },
+  "definition": "몸에 들어온 병원체의 단백질, 곧 항원이 검체에 있는지 찾아 감염 여부를 가리는 진단법. 결과가 10분 안쪽으로 나온다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-agt-target",
+      "text": "이 검사가 찾는 것은 병원체 전체가 아니라 병원체가 지닌 단백질이 검체에 있는지 여부다.",
+      "form": {
+        "condition": "검체에서 무엇을 검출하는지 따질 때",
+        "type": "classification",
+        "scope": "검출 대상을 가르는 자리에 한함 — 핵산을 늘려 확인하는 PCR 검사와 구별된다",
+        "antecedent": {
+          "quantity": "검출 대상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "검사 이름",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "검출 대상을 핵산으로 바꾼 문장은 이 검사의 원리와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "항원 검사는 병원체의 유전물질인 핵산을 증폭해 감염 여부를 확인한다."
+    },
+    {
+      "id": "rel-agt-tradeoff",
+      "text": "이 검사는 결과가 빨리 나오는 대신 정확도는 PCR 검사보다 낮다.",
+      "form": {
+        "condition": "같은 검체를 두 방법으로 검사해 견줄 때",
+        "type": "conditional",
+        "scope": "항원 검사와 PCR 검사를 견준 자리에 한함 — 항원 검사가 부정확하다는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "결과가 나오기까지의 시간",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "진단의 정확도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "시간도 길고 정확도도 더 높다는 문장은 두 검사의 관계를 통째로 뒤집은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "항원 검사는 PCR 검사보다 결과가 늦게 나오지만 정확도는 더 높다."
+    },
+    {
+      "id": "rel-agt-response",
+      "text": "감염 여부를 빨리 알수록 격리와 접촉자 확인을 일찍 시작할 수 있어 확산을 막는 데 보탬이 된다.",
+      "form": {
+        "condition": "확산이 진행 중인 감염병에 대응할 때",
+        "type": "causal",
+        "scope": "진단 속도가 대응 시점에 미치는 영향에 한함 — 진단만으로 감염병이 낫지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "대응 효과를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항원 검사에서 음성이 나오면 감염되지 않았다고 확신할 수 있다",
+      "why_wrong": "이 검사는 PCR 검사보다 정확도가 낮아 몸속 병원체가 적을 때는 놓칠 수 있다. 확실히 가리려면 PCR 검사가 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-agt-tradeoff"
+    },
+    {
+      "text": "항원 검사는 혈액을 뽑아서 한다",
+      "why_wrong": "혈액을 뽑아 항체가 생겼는지 보는 것은 항체 검사다. 항원 검사는 콧속 등에서 얻은 검체로 병원체의 단백질을 찾는다.",
+      "source": "llm",
+      "linked_relation": "rel-agt-target"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-antigen"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-infectious-disease"
+    },
+    {
+      "type": "related",
+      "target": "isci2-antibody",
+      "note": "키트 안에 든 것이 항체다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-pcr-test",
+      "note": "정확도와 시간을 견주는 짝"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    133,
+    134,
+    152
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

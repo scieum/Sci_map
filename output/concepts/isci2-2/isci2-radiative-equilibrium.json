@@ -1,0 +1,105 @@
+{
+  "id": "isci2-radiative-equilibrium",
+  "concept_key": "concept:radiative-equilibrium",
+  "registry_status": "new",
+  "term": "복사 평형",
+  "notation": {
+    "hanja": "輻射平衡",
+    "hanja_gloss": "輻 바퀴살 복 · 射 쏠 사 · 平 평평할 평 · 衡 저울대 형",
+    "english": "radiative equilibrium"
+  },
+  "definition": "흡수하는 복사 에너지양과 방출하는 복사 에너지양이 같아 들고 남이 서로 상쇄된 상태. 열수지가 0인 경우가 여기에 해당한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-req-temp",
+      "text": "복사 평형에 이른 천체는 태양 복사 에너지를 계속 받으면서도 평균 기온이 더 오르지 않고 일정하게 유지된다.",
+      "form": {
+        "condition": "흡수량과 방출량이 같은 상태가 이어질 때",
+        "type": "causal",
+        "scope": "복사로 에너지를 주고받는 지구와 달"
+      },
+      "invertible": false,
+      "invertible_reason": "평형이 유지되는 결과를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-req-earth30",
+      "text": "지구로 들어오는 태양 복사 에너지를 100으로 놓으면 약 30은 반사되어 우주로 돌아가고 약 70이 지표와 대기에 흡수된다.",
+      "form": {
+        "condition": "지구에 도달한 태양 복사 에너지를 100으로 놓고 나눌 때",
+        "type": "classification",
+        "scope": "복사 평형 상태의 지구 열수지"
+      },
+      "invertible": true,
+      "invertible_reason": "반사되는 몫과 흡수되는 몫의 크기 순서가 정해져 있어 두 값을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구로 들어오는 태양 복사 에너지 가운데 약 70이 반사되어 우주로 돌아가고 약 30만 흡수된다."
+    },
+    {
+      "id": "rel-req-atmosphere",
+      "text": "대기가 있는 지구는 대기가 없는 달보다 더 높은 온도에서 복사 평형에 이른다.",
+      "form": {
+        "condition": "태양과의 거리가 거의 같을 때",
+        "type": "conditional",
+        "scope": "대기가 있는 지구와 대기가 없는 달의 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "대기가 평균 기온을 올리는 방향이 정해져 있어 높낮이를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기가 있는 지구는 대기가 없는 달보다 더 낮은 온도에서 복사 평형에 이른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "복사 평형 상태에서는 지구가 에너지를 주고받지 않는다",
+      "why_wrong": "흡수와 방출이 쉬지 않고 일어나되 그 양이 같은 상태이지, 에너지 이동이 멈춘 상태가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-req-temp"
+    },
+    {
+      "text": "지구에 들어온 태양 복사 에너지는 모두 지표와 대기에 흡수된다",
+      "why_wrong": "약 30 %는 지표와 대기에서 반사되어 우주 공간으로 되돌아간다.",
+      "source": "llm",
+      "linked_relation": "rel-req-earth30"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-heat-budget"
+    },
+    {
+      "type": "next",
+      "target": "isci2-greenhouse-effect"
+    },
+    {
+      "type": "related",
+      "target": "isci2-global-warming"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-03",
+  "pages": [
+    86,
+    87
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

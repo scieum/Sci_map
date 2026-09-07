@@ -1,0 +1,111 @@
+{
+  "id": "isci2-biotic-factor",
+  "concept_key": "concept:biotic-factor",
+  "registry_status": "new",
+  "term": "생물요소",
+  "notation": {
+    "hanja": "生物要素",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 要 구할 요 · 素 본디 소",
+    "english": "biotic factor"
+  },
+  "definition": "생태계 안에 사는 모든 생물을 묶어 부르는 말. 양분을 얻는 방식에 따라 생산자·소비자·분해자로 갈라 본다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bio-three",
+      "text": "스스로 양분을 만드는 무리가 생산자, 다른 생물을 먹는 무리가 소비자, 사체와 배설물을 분해하는 무리가 분해자다.",
+      "form": {
+        "condition": "양분을 얻는 방식으로 생물을 가를 때",
+        "type": "classification",
+        "scope": "생태계 구성요소로서의 생물 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "세 갈래를 정의한 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-affects-abio",
+      "text": "지렁이나 두더지가 땅속에 굴을 파고 배설물을 남기면 토양의 통기성과 성분이 달라진다.",
+      "form": {
+        "condition": "생물이 땅속에서 생명활동을 이어 갈 때",
+        "type": "causal",
+        "scope": "토양에서 사는 땅속 생물",
+        "antecedent": {
+          "quantity": "땅속 생물의 생명활동",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "토양의 통기성",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "토양이 변한다고 해서 반드시 생물이 굴을 판 것은 아니므로 뒤집어도 항상 거짓은 아니다.",
+      "curriculum": [
+        "10통과2-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-decomposer",
+      "text": "분해자가 사체와 배설물을 분해한 결과 토양 성분이 바뀌고 물질이 생태계 안을 돌아 다시 쓰인다.",
+      "form": {
+        "condition": "토양 속 미생물이 사체와 배설물을 분해할 때",
+        "type": "causal",
+        "scope": "분해자가 있는 생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "분해의 결과를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "버섯과 곰팡이는 스스로 양분을 만들지 못하니 소비자다",
+      "why_wrong": "사체와 배설물을 분해해 양분을 얻는 생물은 소비자가 아니라 분해자로 가른다.",
+      "source": "llm",
+      "linked_relation": "rel-bio-three"
+    },
+    {
+      "text": "생물요소는 환경의 영향을 받기만 할 뿐 환경을 바꾸지는 못한다",
+      "why_wrong": "지렁이가 판 굴이 토양의 통기성을 바꾸듯 생물의 생명활동도 환경 조건을 바꾼다.",
+      "source": "llm",
+      "linked_relation": "rel-bio-affects-abio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-ecosystem"
+    },
+    {
+      "type": "next",
+      "target": "isci2-population"
+    },
+    {
+      "type": "related",
+      "target": "isci2-abiotic-factor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-01",
+  "pages": [
+    75,
+    76
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

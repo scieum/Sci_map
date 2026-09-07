@@ -1,0 +1,123 @@
+{
+  "id": "isci2-global-warming",
+  "concept_key": "concept:global-warming",
+  "registry_status": "new",
+  "term": "지구 온난화",
+  "notation": {
+    "hanja": "地球溫暖化",
+    "hanja_gloss": "地 땅 지 · 球 공 구 · 溫 따뜻할 온 · 暖 따뜻할 난 · 化 될 화",
+    "english": "global warming"
+  },
+  "definition": "인간 활동으로 온실 기체가 늘어 온실 효과가 강해지고, 그 결과 지구의 평균 기온이 올라가는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gw-process",
+      "text": "온실 기체가 늘면 지구 복사 에너지를 흡수해 지표로 되돌려 보내는 양이 많아져 평균 기온이 오른다.",
+      "form": {
+        "condition": "대기 중 온실 기체의 양이 늘어날 때",
+        "type": "causal",
+        "scope": "온실 효과가 강화된 지구",
+        "antecedent": {
+          "quantity": "지표로 재방출되는 복사 에너지양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지구의 평균 기온",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "되돌아오는 에너지가 늘면 기온이 오르는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온실 기체가 늘면 지표로 되돌아오는 복사 에너지양이 줄어 평균 기온이 내려간다."
+    },
+    {
+      "id": "rel-gw-newbalance",
+      "text": "시간이 흐르면 지구는 평균 기온이 더 높아진 상태에서 다시 복사 평형을 이루게 된다.",
+      "form": {
+        "condition": "온실 효과가 강화된 상태가 이어질 때",
+        "type": "conditional",
+        "scope": "충분히 긴 시간이 흐른 뒤의 지구"
+      },
+      "invertible": false,
+      "invertible_reason": "앞으로의 상태를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gw-impact",
+      "text": "지구 온난화는 해수면 상승과 기상 이변 같은 환경 변화를 불러 많은 생물의 생존을 위협한다.",
+      "form": {
+        "condition": "평균 기온이 오른 상태가 이어질 때",
+        "type": "causal",
+        "scope": "지구 규모의 환경 변화"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 열거한 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지구 온난화가 계속되면 지구는 영영 복사 평형을 이루지 못한다",
+      "why_wrong": "더 높아진 평균 기온에서 다시 복사 평형에 이르며, 문제는 그사이에 벌어지는 환경 변화다.",
+      "source": "llm",
+      "linked_relation": "rel-gw-newbalance"
+    },
+    {
+      "text": "지구 온난화는 태양이 내보내는 에너지가 많아져서 생긴다",
+      "why_wrong": "교과서는 인간 활동으로 늘어난 온실 기체가 온실 효과를 강화한 것을 원인으로 든다.",
+      "source": "llm",
+      "linked_relation": "rel-gw-process"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-greenhouse-effect"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-heat-budget"
+    },
+    {
+      "type": "next",
+      "target": "isci2-desertification",
+      "note": "기온 상승에 따른 증발량 증가가 사막화에 관여한다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-ecosystem-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "isci2-new-and-renewable-energy",
+      "note": "온실 기체 저감이 개발 동기다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-03",
+  "pages": [
+    89,
+    94,
+    95
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

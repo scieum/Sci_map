@@ -1,0 +1,106 @@
+{
+  "id": "isci2-antibody",
+  "concept_key": "concept:antibody",
+  "registry_status": "new",
+  "term": "항체",
+  "notation": {
+    "hanja": "抗體",
+    "hanja_gloss": "抗 겨룰 항 · 體 몸 체",
+    "english": "antibody"
+  },
+  "definition": "병원체가 몸에 들어왔을 때 그에 맞서려고 우리 몸이 새로 만들어 내는 단백질. 짝이 되는 항원에만 달라붙는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ab-after",
+      "text": "몸이 병원체에 감염된 뒤라야 그에 맞서는 항체가 만들어지고, 다 만들어지기까지는 얼마간 시간이 걸린다.",
+      "form": {
+        "condition": "병원체에 감염된 뒤 항체가 생기기까지",
+        "type": "causal",
+        "scope": "감염을 겪은 뒤 항체가 생기는 과정에 한함 — 예방 접종처럼 다른 경로로 생기는 경우는 여기서 다루지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "생성 과정을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ab-specific",
+      "text": "항체는 아무 물질에나 붙지 않고 자신과 짝이 되는 항원에만 반응한다.",
+      "form": {
+        "condition": "항체가 여러 항원과 만났을 때",
+        "type": "conditional",
+        "scope": "한 항체와 그 짝이 되는 항원 사이에 한함 — 다른 항원과는 반응하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "짝을 가리지 않고 반응한다는 문장은 항체의 특성과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "항체는 항원의 종류를 가리지 않고 어떤 항원과도 똑같이 반응한다."
+    },
+    {
+      "id": "rel-ab-tool",
+      "text": "짝을 가리는 이 성질 덕분에 항체를 키트에 넣어 두면 찾으려는 병원체의 단백질만 골라 붙잡을 수 있다.",
+      "form": {
+        "condition": "찾으려는 항원에 맞는 항체를 키트에 넣었을 때",
+        "type": "causal",
+        "scope": "항체를 검출 도구로 쓰는 진단 키트에 한함 — 맞지 않는 항체를 넣으면 잡히지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "도구로 쓰는 까닭을 밝힌 명제라 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감염되면 곧바로 항체가 생기므로 감염 직후에도 항체로 확인할 수 있다",
+      "why_wrong": "항체가 만들어지기까지는 시간이 걸린다. 그래서 감염된 지 얼마 안 된 사람은 항체가 아직 없을 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-ab-after"
+    },
+    {
+      "text": "항체가 한 번 생기면 어떤 감염병에도 걸리지 않는다",
+      "why_wrong": "항체는 짝이 되는 항원에만 반응한다. 한 병원체에 대한 항체가 다른 병원체까지 막아 주지는 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-ab-specific"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-antigen",
+      "note": "무엇에 반응하는지 알아야 항체가 읽힌다"
+    },
+    {
+      "type": "next",
+      "target": "isci2-antibody-test"
+    },
+    {
+      "type": "related",
+      "target": "isci2-antigen-test",
+      "note": "키트 안에 든 것이 항체다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    133,
+    134
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,132 @@
+{
+  "id": "isci2-socioscientific-issue",
+  "concept_key": "concept:socioscientific-issue",
+  "registry_status": "new",
+  "term": "과학 관련 사회적 쟁점",
+  "aliases": [
+    "SSI"
+  ],
+  "notation": {
+    "hanja": "科學關聯社會的爭點",
+    "hanja_gloss": "科 과목 과 · 學 배울 학 · 關 관계할 관 · 聯 잇달 련 · 社 모일 사 · 會 모일 회 · 的 과녁 적 · 爭 다툴 쟁 · 點 점 점",
+    "english": "socioscientific issue",
+    "symbol_display": "SSI",
+    "symbol_plain": "SSI"
+  },
+  "definition": "과학기술이 발전하면서 새로 생겨난, 과학과 얽힌 사회·문화적 다툼거리. 여러 입장의 이해관계가 함께 걸려 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ssi-new",
+      "text": "이전에는 없던 쟁점이 과학기술의 발전과 함께 새로 생겨나므로, 기술이 달라지면 다투는 문제도 달라진다.",
+      "form": {
+        "condition": "새로운 과학기술이 사회에 들어왔을 때",
+        "type": "causal",
+        "scope": "기술 발전으로 새로 생긴 쟁점에 한함 — 모든 사회 갈등이 과학에서 비롯한다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "생겨나는 과정을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ssi-stake",
+      "text": "하나의 쟁점에 입장이 다른 사람들의 이해관계가 얽혀 있어, 그대로 두면 사회적 갈등으로 번지기도 한다.",
+      "form": {
+        "condition": "쟁점을 두고 이해관계가 갈리는 상황에서",
+        "type": "causal",
+        "scope": "이해관계가 얽힌 쟁점에 한함 — 모든 쟁점이 반드시 갈등으로 이어지는 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "번질 수 있음을 말한 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ssi-decide",
+      "text": "쟁점을 풀려면 한쪽 입장만 내세우는 대신 여러 관점과 복잡한 사정을 함께 살펴 협의해 결정해야 한다.",
+      "form": {
+        "condition": "이해관계가 갈리는 쟁점을 다룰 때",
+        "type": "conditional",
+        "scope": "의사 결정 절차에 한함 — 협의하면 모두가 만족하는 답이 나온다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "절차를 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ssi-multi",
+      "text": "과학적 근거만으로는 답이 정해지지 않아, 사회·경제·환경 측면까지 아울러 따져야 논증이 선다.",
+      "form": {
+        "condition": "쟁점을 놓고 논증할 때",
+        "type": "conditional",
+        "scope": "쟁점 토론에서 살필 관점에 한함 — 과학적 근거가 필요 없다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "살필 관점을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "과학 관련 사회적 쟁점은 과학자들이 연구로 밝혀내면 답이 정해진다",
+      "why_wrong": "쟁점에는 여러 입장의 이해관계가 얽혀 있어 과학적 사실만으로 어느 쪽이 옳은지 정해지지 않는다. 사회·경제·환경 측면까지 함께 살펴 협의해야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-ssi-multi"
+    },
+    {
+      "text": "과학과 관련된 사회적 쟁점이 생겼을 때 과학자의 의견은 항상 옳다",
+      "why_wrong": "과학자는 과학적 근거를 내놓는 사람이다. 쟁점에는 그 밖의 판단도 함께 걸려 있어 한 사람의 의견이 언제나 옳다고 할 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-ssi-multi"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-ai-robot"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-big-data-limitation"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-usefulness-and-limitation-of-technology"
+    },
+    {
+      "type": "next",
+      "target": "isci2-science-ethics",
+      "note": "쟁점이 있어야 윤리가 왜 필요한지 읽힌다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-future-society-problem"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-04",
+  "pages": [
+    148,
+    149
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

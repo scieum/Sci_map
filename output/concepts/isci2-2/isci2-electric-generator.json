@@ -1,0 +1,135 @@
+{
+  "id": "isci2-electric-generator",
+  "concept_key": "concept:electric-generator",
+  "registry_status": "new",
+  "term": "발전기",
+  "notation": {
+    "hanja": "發電機",
+    "hanja_gloss": "發 필 발 · 電 번개 전 · 機 틀 기",
+    "english": "electric generator"
+  },
+  "definition": "바깥에 고정된 코일과 회전축에 매달린 자석으로 이루어져, 자석을 돌려 유도 전류를 얻어 내는 장치.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gen-structure",
+      "text": "발전소의 발전기는 바깥쪽에 코일이 고정되어 있고, 회전축에 이어진 자석이 그 안에서 돌아가도록 만들어져 있다.",
+      "form": {
+        "condition": "발전소 발전기의 짜임을 살펴볼 때",
+        "type": "classification",
+        "scope": "이 교과서가 다루는 발전소용 발전기"
+      },
+      "invertible": false,
+      "invertible_reason": "코일과 자석의 자리를 맞바꾼 구조도 실제로 있으므로 뒤집어도 항상 거짓은 아니다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gen-turbine",
+      "text": "물이나 증기로 터빈을 돌리면 회전축의 자석이 함께 돌아 코일을 지나는 자기장이 변하고 전기가 만들어진다.",
+      "form": {
+        "condition": "터빈이 회전축을 돌릴 때",
+        "type": "causal",
+        "scope": "터빈으로 자석을 돌리는 발전기"
+      },
+      "invertible": false,
+      "invertible_reason": "발전 과정을 순서대로 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gen-conversion",
+      "text": "발전기 안에서는 자석의 운동 에너지가 전기 에너지로 바뀌므로 그만큼 자석의 운동 에너지가 줄어든다.",
+      "form": {
+        "condition": "발전기가 전기 에너지를 만들어 내는 동안",
+        "type": "causal",
+        "scope": "운동 에너지로 돌아가는 발전기",
+        "antecedent": {
+          "quantity": "생산된 전기 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자석의 운동 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전기가 만들어지는 만큼 운동 에너지가 줄어드는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발전기에서 전기 에너지가 만들어질수록 자석의 운동 에너지도 함께 늘어난다."
+    },
+    {
+      "id": "rel-gen-continuous",
+      "text": "전기 에너지를 끊이지 않고 얻으려면 자석을 계속 돌려 주어야 한다.",
+      "form": {
+        "condition": "발전을 쉬지 않고 이어 가려 할 때",
+        "type": "conditional",
+        "scope": "발전소에서 쓰는 발전기"
+      },
+      "invertible": false,
+      "invertible_reason": "필요 조건을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발전기는 전기 에너지를 새로 만들어 내는 장치다",
+      "why_wrong": "없던 에너지를 만드는 것이 아니라 터빈에서 받은 운동 에너지를 전기 에너지로 바꾸는 장치다.",
+      "source": "llm",
+      "linked_relation": "rel-gen-conversion"
+    },
+    {
+      "text": "발전기는 한 번 돌려 놓으면 저절로 계속 전기를 만든다",
+      "why_wrong": "자석의 운동 에너지가 전기 에너지로 바뀌며 줄어들기 때문에 계속 돌려 주어야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-gen-continuous"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-induced-current"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-energy-conversion"
+    },
+    {
+      "type": "next",
+      "target": "isci2-thermal-power-generation"
+    },
+    {
+      "type": "next",
+      "target": "isci2-nuclear-power-generation"
+    },
+    {
+      "type": "related",
+      "target": "isci2-electromagnetic-induction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-05"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-02",
+  "pages": [
+    106,
+    107
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

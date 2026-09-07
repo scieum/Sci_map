@@ -1,0 +1,118 @@
+{
+  "id": "isci2-thermal-efficiency",
+  "concept_key": "concept:thermal-efficiency",
+  "registry_status": "new",
+  "term": "열효율",
+  "aliases": [
+    "열기관의 효율"
+  ],
+  "notation": {
+    "hanja": "熱效率",
+    "hanja_gloss": "熱 더울 열 · 效 본받을 효 · 率 비율 률",
+    "english": "thermal efficiency",
+    "symbol_display": "W / Q₁",
+    "symbol_plain": "W / Q1"
+  },
+  "definition": "열기관에 공급된 열 가운데 바깥에 한 일이 차지하는 비율. 열기관에 한정해 따지는 에너지 효율이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-te-engine",
+      "text": "열에너지를 역학적 일로 바꾸는 장치를 열기관이라 부르고, 그 열기관의 에너지 효율을 열효율이라 한다.",
+      "form": {
+        "condition": "열기관의 효율을 가리켜 부를 때",
+        "type": "classification",
+        "scope": "자동차 엔진 같은 열기관"
+      },
+      "invertible": false,
+      "invertible_reason": "용어를 정의한 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-te-heat-out",
+      "text": "흡수한 열량이 같다면 저열원으로 내보내는 열량이 클수록 바깥에 한 일이 적어져 열효율이 낮아진다.",
+      "form": {
+        "condition": "고열원에서 흡수한 열량이 일정할 때",
+        "type": "inverse",
+        "scope": "고열원과 저열원 사이에서 작동하는 열기관",
+        "antecedent": {
+          "quantity": "저열원으로 방출한 열량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "열효율",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "방출 열량과 열효율이 반대로 움직이므로 같은 방향으로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흡수한 열량이 같다면 저열원으로 내보내는 열량이 클수록 열효율이 높아진다."
+    },
+    {
+      "id": "rel-te-below-one",
+      "text": "공급한 열의 일부는 반드시 저열원으로 빠져나가므로 열효율은 1보다 작다.",
+      "form": {
+        "condition": "열기관이 작동하는 동안",
+        "type": "conditional",
+        "scope": "모든 열기관"
+      },
+      "invertible": true,
+      "invertible_reason": "일부가 반드시 방출되므로 전부 일로 바뀐다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "열기관은 공급받은 열을 남김없이 일로 바꿀 수 있어 열효율이 1이 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에너지가 보존되므로 열기관은 흡수한 열을 모두 일로 바꿀 수 있다",
+      "why_wrong": "흡수한 열은 한 일과 방출한 열의 합과 같아, 방출하는 몫이 있는 한 열효율은 1보다 작다.",
+      "source": "llm",
+      "linked_relation": "rel-te-below-one"
+    },
+    {
+      "text": "열효율은 연료 1 kg 이 낼 수 있는 열의 양을 뜻한다",
+      "why_wrong": "열효율은 열기관이 흡수한 열 가운데 일로 바뀐 비율이지 연료가 내는 열의 양이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-te-engine"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-energy-efficiency"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-thermal-power-generation"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-conservation-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-06"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-04",
+  "pages": [
+    115,
+    117
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

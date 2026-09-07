@@ -1,0 +1,105 @@
+{
+  "id": "isci2-hydrogen-fusion",
+  "concept_key": "concept:hydrogen-fusion",
+  "registry_status": "new",
+  "term": "수소 핵융합 반응",
+  "notation": {
+    "hanja": "水素核融合反應",
+    "hanja_gloss": "水 물 수 · 素 본디 소 · 核 씨 핵 · 融 녹을 융 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응",
+    "english": "hydrogen fusion"
+  },
+  "definition": "수소 원자핵 4개가 합쳐져 헬륨 원자핵 1개가 되는 반응. 태양 중심부의 초고온 상태에서 일어나 태양 에너지를 내놓는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fus-mass",
+      "text": "생겨난 헬륨 원자핵 1개의 질량은 재료가 된 수소 원자핵 4개의 질량 합보다 조금 작고, 그 차이만큼 에너지가 나온다.",
+      "form": {
+        "condition": "수소 원자핵이 융합해 헬륨 원자핵이 될 때",
+        "type": "causal",
+        "scope": "태양 중심부에서 일어나는 핵융합"
+      },
+      "invertible": true,
+      "invertible_reason": "융합 뒤 질량이 줄어드는 방향이 정해져 있어 크기를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생겨난 헬륨 원자핵 1개의 질량이 수소 원자핵 4개의 질량 합보다 커지면서 에너지가 방출된다."
+    },
+    {
+      "id": "rel-fus-condition",
+      "text": "이 반응은 약 1500만 K에 이르는 태양 중심부의 초고온 상태에서 일어난다.",
+      "form": {
+        "condition": "원자핵끼리 부딪쳐 합쳐질 만큼 온도가 높을 때",
+        "type": "conditional",
+        "scope": "태양 중심부"
+      },
+      "invertible": false,
+      "invertible_reason": "반응이 일어나는 조건을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fus-source",
+      "text": "태양이 쉬지 않고 내보내는 막대한 에너지의 근원이 바로 이 반응이다.",
+      "form": {
+        "condition": "태양이 복사 에너지를 방출하는 동안",
+        "type": "causal",
+        "scope": "태양 에너지의 근원"
+      },
+      "invertible": false,
+      "invertible_reason": "근원을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양은 표면에서 연료를 태우며 빛과 열을 낸다",
+      "why_wrong": "태양 에너지는 연소가 아니라 중심부에서 일어나는 수소 핵융합 반응에서 나온다.",
+      "source": "llm",
+      "linked_relation": "rel-fus-source"
+    },
+    {
+      "text": "핵융합에서는 물질이 그대로 남고 에너지만 새로 생겨난다",
+      "why_wrong": "융합 뒤 질량이 조금 줄어들고, 줄어든 질량에 해당하는 만큼이 에너지로 방출된다.",
+      "source": "llm",
+      "linked_relation": "rel-fus-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-solar-energy-conversion"
+    },
+    {
+      "type": "next",
+      "target": "isci2-nuclear-fission",
+      "note": "교과서가 핵융합에 빗대어 핵분열을 설명한다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-conversion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-01",
+  "pages": [
+    102,
+    103
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

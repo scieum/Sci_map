@@ -1,0 +1,128 @@
+{
+  "id": "isci2-desertification",
+  "concept_key": "concept:desertification",
+  "registry_status": "new",
+  "term": "사막화",
+  "notation": {
+    "hanja": "沙漠化",
+    "hanja_gloss": "沙 모래 사 · 漠 사막 막 · 化 될 화",
+    "english": "desertification"
+  },
+  "definition": "건조한 지역의 토양이 여러 까닭으로 황폐해지는 현상. 기후 변화와 인간 활동이 함께 원인이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-des-climate",
+      "text": "지구의 기온이 오르면 증발량이 늘어 토양 속 수분이 줄어들므로 사막화가 진행되기 쉬워진다.",
+      "form": {
+        "condition": "건조한 지역에서 물의 출입이 어긋날 때",
+        "type": "causal",
+        "scope": "기후 변화가 원인이 된 사막화",
+        "antecedent": {
+          "quantity": "기온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "토양 수분",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기온이 오르면 증발량이 느는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구의 기온이 오르면 증발량이 줄어 토양 속 수분이 늘어나므로 사막화가 누그러진다."
+    },
+    {
+      "id": "rel-des-human",
+      "text": "과잉 방목과 무분별한 농경지 확장, 산림 벌채는 토지를 황폐하게 만들어 사막화를 일으킨다.",
+      "form": {
+        "condition": "건조한 초원 지대에서 인간 활동이 늘어날 때",
+        "type": "causal",
+        "scope": "인간 활동이 원인이 된 사막화"
+      },
+      "invertible": false,
+      "invertible_reason": "원인을 열거한 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-des-impact",
+      "text": "사막화가 진행된 땅에서는 생물다양성과 농업 생산성이 떨어지고 물 부족과 모래 폭풍 피해가 커진다.",
+      "form": {
+        "condition": "사막화가 이미 진행된 지역에서",
+        "type": "causal",
+        "scope": "사막화 지역과 그 주변"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 열거한 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-des-response",
+      "text": "인공위성으로 꾸준히 감시하고 산림 훼손을 막으며 인공 조림을 하는 것이 대처 방안이다.",
+      "form": {
+        "condition": "사막화의 진행을 늦추려 할 때",
+        "type": "classification",
+        "scope": "인간 활동이 관여하는 사막화"
+      },
+      "invertible": false,
+      "invertible_reason": "대처 방안을 열거한 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "사막화는 자연적인 기후 변화 때문에만 일어난다",
+      "why_wrong": "과잉 방목·농경지 확장·산림 벌채 같은 인간 활동도 주요 원인이다.",
+      "source": "llm",
+      "linked_relation": "rel-des-human"
+    },
+    {
+      "text": "사막화는 이미 사막인 곳이 조금 넓어지는 일일 뿐 사람 사는 곳과는 상관없다",
+      "why_wrong": "물 부족과 농업 생산성 저하, 모래 폭풍 피해가 생겨 수많은 사람의 생활이 직접 영향을 받는다.",
+      "source": "llm",
+      "linked_relation": "rel-des-impact"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-atmospheric-general-circulation"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-global-warming"
+    },
+    {
+      "type": "related",
+      "target": "isci2-el-nino"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-04",
+  "pages": [
+    90,
+    91,
+    95
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

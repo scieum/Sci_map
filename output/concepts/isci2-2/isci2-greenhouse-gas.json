@@ -1,0 +1,113 @@
+{
+  "id": "isci2-greenhouse-gas",
+  "concept_key": "concept:greenhouse-gas",
+  "registry_status": "new",
+  "term": "온실 기체",
+  "notation": {
+    "hanja": "溫室氣體",
+    "hanja_gloss": "溫 따뜻할 온 · 室 집 실 · 氣 기운 기 · 體 몸 체",
+    "english": "greenhouse gas"
+  },
+  "definition": "지구가 내보내는 긴 파장의 복사 에너지를 잘 흡수하여 온실 효과를 일으키는 기체. 수증기와 이산화 탄소, 메테인이 대표적이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ghg-absorb",
+      "text": "온실 기체는 지구가 내보내는 긴 파장의 복사 에너지를 흡수했다가 그 일부를 지표 쪽으로 되돌려 보낸다.",
+      "form": {
+        "condition": "지표가 지구 복사 에너지를 방출할 때",
+        "type": "causal",
+        "scope": "수증기·이산화 탄소·메테인 같은 기체"
+      },
+      "invertible": false,
+      "invertible_reason": "기체가 하는 일을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ghg-fossil",
+      "text": "산업혁명 뒤 화석 연료를 쓰는 양이 늘면서 대기로 나가는 이산화 탄소의 양도 함께 늘었다.",
+      "form": {
+        "condition": "화석 연료를 태워 에너지를 얻을 때",
+        "type": "direct",
+        "scope": "산업혁명 이후의 대기",
+        "antecedent": {
+          "quantity": "화석 연료 사용량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이산화 탄소 배출량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "함께 커지는 관계이므로 한쪽만 줄어든다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화석 연료를 쓰는 양이 늘수록 대기로 나가는 이산화 탄소의 양은 줄어든다."
+    },
+    {
+      "id": "rel-ghg-constant",
+      "text": "지구의 온실 기체 양은 산업혁명 이전까지 아주 오랫동안 거의 일정하게 유지되었다.",
+      "form": {
+        "condition": "산업혁명 이전 시기를 놓고 볼 때",
+        "type": "conditional",
+        "scope": "인간 활동의 영향이 작던 시기의 대기"
+      },
+      "invertible": false,
+      "invertible_reason": "한 시기의 상태를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대기의 대부분을 차지하는 질소와 산소가 온실 효과를 일으키는 주된 기체다",
+      "why_wrong": "온실 효과를 일으키는 것은 수증기·이산화 탄소·메테인처럼 긴 파장의 복사 에너지를 잘 흡수하는 기체다.",
+      "source": "llm",
+      "linked_relation": "rel-ghg-absorb"
+    },
+    {
+      "text": "온실 기체는 산업혁명 이후에 처음 생긴 기체다",
+      "why_wrong": "이전에도 대기에 있었고 그 양이 오랫동안 일정하게 유지되다가 인간 활동으로 늘어난 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-ghg-constant"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-greenhouse-effect"
+    },
+    {
+      "type": "related",
+      "target": "isci2-heat-budget"
+    },
+    {
+      "type": "related",
+      "target": "isci2-global-warming"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-03",
+  "pages": [
+    87,
+    89,
+    95
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

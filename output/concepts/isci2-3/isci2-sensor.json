@@ -1,0 +1,111 @@
+{
+  "id": "isci2-sensor",
+  "concept_key": "concept:sensor",
+  "registry_status": "new",
+  "term": "센서",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 sensor 를 소리 나는 대로 옮긴 외래어라 대응하는 한자가 없다.",
+    "english": "sensor"
+  },
+  "definition": "온도·빛·기체 농도처럼 둘레의 상태를 감지해, 기기가 다룰 수 있는 디지털 신호로 바꾸어 주는 장치.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sensor-auto",
+      "text": "측정할 곳에 센서를 놓아두면 사람이 일일이 재지 않아도 여러 지점의 상태를 실시간으로 모을 수 있다.",
+      "form": {
+        "condition": "측정 대상이 있는 곳에 센서를 설치해 두었을 때",
+        "type": "causal",
+        "scope": "그 센서가 감지할 수 있는 물리량에 한함 — 감지 범위 밖의 것은 모으지 못한다"
+      },
+      "invertible": false,
+      "invertible_reason": "수집 방식을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02",
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sensor-iot",
+      "text": "물건에 센서와 통신 기능을 함께 넣으면 그 물건이 스스로 둘레 상태를 알아채고 인터넷으로 알릴 수 있게 된다.",
+      "form": {
+        "condition": "센서와 통신 기능을 함께 갖춘 물건일 때",
+        "type": "conditional",
+        "scope": "사물 인터넷이 성립하는 조건에 한함 — 센서만 있고 통신 기능이 없으면 이에 들지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과2-03-02",
+        "10통과2-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sensor-bigdata",
+      "text": "센서로 모은 값이 디지털 형태로 쌓이면서 빅데이터라 부를 만한 규모의 데이터가 만들어졌다.",
+      "form": {
+        "condition": "센서 개발과 통신 기술 발달이 겹친 상황에서",
+        "type": "causal",
+        "scope": "빅데이터가 나타난 배경에 한함 — 센서만 있으면 빅데이터가 된다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "배경을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "센서를 달아 두면 데이터가 저절로 분석까지 된다",
+      "why_wrong": "센서가 하는 일은 상태를 감지해 신호로 바꾸는 데까지다. 그 값을 모아 분석하는 일은 따로 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-sensor-auto"
+    },
+    {
+      "text": "센서만 붙이면 그 물건은 사물 인터넷이 된다",
+      "why_wrong": "인터넷에 이어 주는 통신 기능이 함께 있어야 한다. 감지만 하고 알리지 못하면 사물 인터넷이라 하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-sensor-iot"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-digital-conversion"
+    },
+    {
+      "type": "next",
+      "target": "isci2-big-data"
+    },
+    {
+      "type": "next",
+      "target": "isci2-internet-of-things"
+    },
+    {
+      "type": "related",
+      "target": "isci2-data"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-02",
+    "10통과2-03-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-02",
+  "pages": [
+    140,
+    144,
+    145
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

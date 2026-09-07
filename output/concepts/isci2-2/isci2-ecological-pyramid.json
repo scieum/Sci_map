@@ -1,0 +1,104 @@
+{
+  "id": "isci2-ecological-pyramid",
+  "concept_key": "concept:ecological-pyramid",
+  "registry_status": "new",
+  "term": "생태피라미드",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'생태(生態)'는 한자어지만 '피라미드'가 영어 pyramid 의 음차어라 낱말 전체를 한자어로 적지 않는다.",
+    "english": "ecological pyramid"
+  },
+  "definition": "각 영양단계의 개체수·생물량·에너지양을 상대적 크기로 아래부터 쌓아 나타낸 그림. 위로 갈수록 값이 줄어 위가 좁은 모양이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pyr-axes",
+      "text": "피라미드의 각 층은 그 영양단계에 속한 생물의 개체수, 생물량, 에너지양을 상대적인 크기로 나타낸다.",
+      "form": {
+        "condition": "피라미드의 층이 무엇을 뜻하는지 읽을 때",
+        "type": "classification",
+        "scope": "생태피라미드가 나타내는 세 가지 양"
+      },
+      "invertible": false,
+      "invertible_reason": "축이 무엇인지 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pyr-shape",
+      "text": "위로 갈수록 세 값이 모두 크게 줄어들기 때문에 아래가 넓고 위가 좁은 모양이 나온다.",
+      "form": {
+        "condition": "각 단계의 상대적인 양을 아래부터 쌓아 올릴 때",
+        "type": "causal",
+        "scope": "평형이 유지되는 안정된 생태계"
+      },
+      "invertible": true,
+      "invertible_reason": "위로 갈수록 줄어드는 방향이 정해져 있어 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위로 갈수록 세 값이 늘어나기 때문에 아래가 좁고 위가 넓은 모양이 나온다."
+    },
+    {
+      "id": "rel-pyr-broken",
+      "text": "잡아먹는 쪽이 줄어 1차 소비자가 급증하면 피라미드 모양이 일그러지고, 포식자가 돌아오면 다시 안정된 모양이 된다.",
+      "form": {
+        "condition": "한 영양단계의 개체수가 크게 흔들렸을 때",
+        "type": "causal",
+        "scope": "복원 한계 안에서 일어난 변화"
+      },
+      "invertible": false,
+      "invertible_reason": "회복 과정을 서술한 명제여서 뒤집은 문장이 늘 거짓이라고 단정하기 어렵다.",
+      "curriculum": [
+        "10통과2-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생태피라미드는 생물의 몸집이 큰 순서대로 쌓아 놓은 그림이다",
+      "why_wrong": "몸집이 아니라 영양단계별 개체수·생물량·에너지양의 상대적 크기를 쌓아 나타낸 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-pyr-axes"
+    },
+    {
+      "text": "1차 소비자가 갑자기 늘어나면 그만큼 생산자도 함께 늘어난다",
+      "why_wrong": "늘어난 1차 소비자가 생산자를 더 많이 먹으므로 생산자의 개체수는 오히려 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-pyr-broken"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-trophic-level"
+    },
+    {
+      "type": "next",
+      "target": "isci2-ecosystem-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "isci2-food-web"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-02"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-02",
+  "pages": [
+    81,
+    83
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

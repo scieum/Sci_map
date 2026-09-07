@@ -1,0 +1,141 @@
+{
+  "id": "isci2-energy-efficiency",
+  "concept_key": "concept:energy-efficiency",
+  "registry_status": "new",
+  "term": "에너지 효율",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'효율(效率)'은 한자어지만 '에너지'가 음차어라 낱말 전체를 한자어로 적지 않는다.",
+    "english": "energy efficiency"
+  },
+  "definition": "기기에 공급한 에너지 가운데 사용 목적에 맞게 쓰인 에너지가 차지하는 비율.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ee-ratio",
+      "text": "공급한 에너지 가운데 목적에 맞지 않는 형태로 버려지는 몫이 클수록 에너지 효율은 낮아진다.",
+      "form": {
+        "condition": "같은 양의 에너지를 공급했을 때",
+        "type": "inverse",
+        "scope": "에너지를 써서 일하는 기기",
+        "antecedent": {
+          "quantity": "버려지는 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "에너지 효율",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "버려지는 몫과 효율이 반대로 움직이므로 같은 방향으로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공급한 에너지 가운데 버려지는 몫이 클수록 에너지 효율은 높아진다."
+    },
+    {
+      "id": "rel-ee-car",
+      "text": "가솔린 자동차는 휘발유에 담긴 에너지의 약 20 %만 바퀴를 움직이는 데 쓰고 나머지는 열 등으로 버린다.",
+      "form": {
+        "condition": "가솔린 엔진으로 자동차가 달릴 때",
+        "type": "conditional",
+        "scope": "일반적인 가솔린 자동차"
+      },
+      "invertible": false,
+      "invertible_reason": "측정값을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ee-effort",
+      "text": "하이브리드 자동차나 열병합 발전처럼 버려지던 에너지를 되살려 쓰면 에너지 효율이 높아진다.",
+      "form": {
+        "condition": "버려지던 열이나 운동 에너지를 거두어 다시 쓸 때",
+        "type": "causal",
+        "scope": "효율을 높이려는 기술과 제도"
+      },
+      "invertible": false,
+      "invertible_reason": "효율을 높이는 방법을 든 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ee-environment",
+      "text": "에너지 효율을 높이면 같은 일을 하는 데 드는 연료가 줄어 온실 기체 배출량도 함께 줄어든다.",
+      "form": {
+        "condition": "같은 양의 일을 해내려 할 때",
+        "type": "causal",
+        "scope": "화석 연료를 쓰는 기기와 발전",
+        "antecedent": {
+          "quantity": "에너지 효율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "연료 사용량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "효율이 오르면 연료가 줄어드는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에너지 효율을 높이면 같은 일에 드는 연료가 늘어 온실 기체 배출량도 함께 늘어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에너지는 보존되므로 어떤 기기든 에너지 효율은 100 %다",
+      "why_wrong": "총량은 보존되지만 목적에 맞지 않는 형태로 버려지는 몫이 있어 효율은 100 %보다 작다.",
+      "source": "llm",
+      "linked_relation": "rel-ee-ratio"
+    },
+    {
+      "text": "효율이 높은 제품을 쓰는 것은 돈을 아끼는 일일 뿐 환경과는 상관없다",
+      "why_wrong": "같은 일에 드는 연료가 줄어들어 온실 기체 배출도 함께 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-ee-environment"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-energy-conservation-law"
+    },
+    {
+      "type": "next",
+      "target": "isci2-thermal-efficiency"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-conversion"
+    },
+    {
+      "type": "related",
+      "target": "isci2-new-and-renewable-energy"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-06"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-04",
+  "pages": [
+    115,
+    116,
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

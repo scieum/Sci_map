@@ -1,0 +1,106 @@
+{
+  "id": "isci2-atmospheric-general-circulation",
+  "concept_key": "concept:atmospheric-general-circulation",
+  "registry_status": "new",
+  "term": "대기 대순환",
+  "notation": {
+    "hanja": "大氣大循環",
+    "hanja_gloss": "大 큰 대 · 氣 기운 기 · 大 큰 대 · 循 돌 순 · 環 고리 환",
+    "english": "atmospheric general circulation"
+  },
+  "definition": "위도에 따라 흡수하는 태양 복사 에너지양이 달라 생기는 지구 규모의 대기 흐름. 위도별로 크게 세 개의 순환이 나타난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-agc-cause",
+      "text": "지구가 둥근 탓에 저위도가 고위도보다 단위 면적당 많은 태양 복사 에너지를 받고, 그 차이가 대순환을 일으킨다.",
+      "form": {
+        "condition": "지구가 구형이라 위도마다 햇빛이 드는 각도가 다를 때",
+        "type": "causal",
+        "scope": "지구 규모의 대기 흐름"
+      },
+      "invertible": true,
+      "invertible_reason": "저위도가 더 많이 받는 방향이 정해져 있어 두 위도를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고위도가 저위도보다 단위 면적당 많은 태양 복사 에너지를 받아 대순환이 일어난다."
+    },
+    {
+      "id": "rel-agc-desert",
+      "text": "위도 20°~30° 부근에는 하강 기류가 자리 잡아 구름이 잘 만들어지지 않으므로 큰 사막이 생긴다.",
+      "form": {
+        "condition": "대순환으로 그 위도에 하강 기류가 놓일 때",
+        "type": "causal",
+        "scope": "위도 20°~30° 부근의 건조 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "하강 기류는 구름을 만들지 못하게 하므로 상승 기류로 바꿔 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위도 20°~30° 부근에는 상승 기류가 자리 잡아 구름이 많이 생기므로 큰 사막이 만들어진다."
+    },
+    {
+      "id": "rel-agc-wind",
+      "text": "위도에 따라 방향이 정해진 바람이 대순환에서 생겨나고, 그 바람에 밀려 표층 해수도 함께 돈다.",
+      "form": {
+        "condition": "대기와 해양이 맞닿아 상호작용할 때",
+        "type": "causal",
+        "scope": "표층 해수의 순환"
+      },
+      "invertible": false,
+      "invertible_reason": "바람에서 해수로 이어지는 과정을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "사막은 비가 오지 않는 우연한 자리에 생긴다",
+      "why_wrong": "위도 20°~30° 부근처럼 대기 대순환의 하강 기류가 자리 잡은 곳에 큰 사막이 만들어진다.",
+      "source": "llm",
+      "linked_relation": "rel-agc-desert"
+    },
+    {
+      "text": "적도가 더운 것은 그곳이 태양에 더 가깝기 때문이다",
+      "why_wrong": "지구가 둥글어 저위도가 단위 면적당 더 많은 태양 복사 에너지를 받기 때문이다.",
+      "source": "llm",
+      "linked_relation": "rel-agc-cause"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-abiotic-factor"
+    },
+    {
+      "type": "next",
+      "target": "isci2-desertification"
+    },
+    {
+      "type": "next",
+      "target": "isci2-el-nino",
+      "note": "무역풍은 대기 대순환이 만든 바람이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-04",
+  "pages": [
+    90,
+    92
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

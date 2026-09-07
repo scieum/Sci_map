@@ -1,0 +1,119 @@
+{
+  "id": "isci2-solar-energy-conversion",
+  "concept_key": "concept:solar-energy-conversion",
+  "registry_status": "new",
+  "term": "태양 에너지 전환",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'태양(太陽)'과 '전환(轉換)'은 한자어지만 '에너지'가 음차어라 낱말 전체를 한자어로 적지 않는다.",
+    "english": "solar energy conversion"
+  },
+  "definition": "태양에서 온 에너지가 지구에서 위치·운동·화학 에너지 등 여러 형태로 바뀌며 자연 현상과 생명활동을 일으키는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sec-water",
+      "text": "지표와 대기가 흡수한 태양 에너지는 물을 증발시켜 구름을 만들고, 높이 오른 물은 위치 에너지를 갖는다.",
+      "form": {
+        "condition": "태양 에너지가 지표와 대기에 흡수될 때",
+        "type": "causal",
+        "scope": "물의 순환"
+      },
+      "invertible": false,
+      "invertible_reason": "전환의 갈래를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sec-motion",
+      "text": "태양 에너지는 해류와 바람을 일으키면서 운동 에너지로 바뀐다.",
+      "form": {
+        "condition": "위도별로 흡수하는 에너지양이 다를 때",
+        "type": "causal",
+        "scope": "대기와 해양의 흐름"
+      },
+      "invertible": false,
+      "invertible_reason": "전환의 갈래를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sec-photo",
+      "text": "광합성을 거쳐 화학 에너지로 바뀐 태양 에너지는 먹이그물을 따라 소비자 쪽으로 옮겨 간다.",
+      "form": {
+        "condition": "생산자가 빛을 받아 광합성할 때",
+        "type": "causal",
+        "scope": "생태계 안의 에너지 흐름"
+      },
+      "invertible": true,
+      "invertible_reason": "먹이그물에서 에너지가 옮겨 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화학 에너지는 먹이그물을 따라 상위 소비자에서 생산자 쪽으로 거슬러 옮겨 간다."
+    },
+    {
+      "id": "rel-sec-fossil",
+      "text": "인류가 쓰는 화석 연료에 담긴 에너지도 근원을 따지면 태양 에너지다.",
+      "form": {
+        "condition": "화석 연료의 에너지가 어디서 왔는지 따질 때",
+        "type": "causal",
+        "scope": "석탄·석유 같은 화석 연료"
+      },
+      "invertible": false,
+      "invertible_reason": "근원을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양 에너지는 빛과 열로만 쓰이고 다른 형태로는 바뀌지 않는다",
+      "why_wrong": "구름의 위치 에너지, 바람과 해류의 운동 에너지, 광합성 산물의 화학 에너지로 두루 전환된다.",
+      "source": "llm",
+      "linked_relation": "rel-sec-water"
+    },
+    {
+      "text": "석유와 석탄은 땅속에서 저절로 생긴 것이라 태양과는 관계가 없다",
+      "why_wrong": "화석 연료는 과거의 생물이 광합성으로 저장해 둔 태양 에너지에서 비롯되었다.",
+      "source": "llm",
+      "linked_relation": "rel-sec-fossil"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-hydrogen-fusion"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-energy-conversion"
+    },
+    {
+      "type": "related",
+      "target": "isci2-new-and-renewable-energy"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-04"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-01",
+  "pages": [
+    102,
+    103
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

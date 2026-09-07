@@ -1,0 +1,124 @@
+{
+  "id": "isci2-hydrogen-fuel-cell",
+  "concept_key": "concept:hydrogen-fuel-cell",
+  "registry_status": "reused",
+  "term": "연료 전지",
+  "aliases": [
+    "수소 연료 전지"
+  ],
+  "notation": {
+    "hanja": "燃料電池",
+    "hanja_gloss": "燃 탈 연 · 料 헤아릴 료 · 電 번개 전 · 池 못 지",
+    "english": "hydrogen fuel cell"
+  },
+  "definition": "수소와 산소에 담긴 화학 에너지를 화학 반응으로 곧바로 전기 에너지로 바꾸는 장치.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fc-direct",
+      "text": "연료를 태워 열을 얻고 터빈을 돌리는 단계를 거치지 않고 화학 에너지를 곧바로 전기 에너지로 바꾼다.",
+      "form": {
+        "condition": "수소와 산소가 공급되어 반응하는 동안",
+        "type": "causal",
+        "scope": "수소와 산소를 쓰는 연료 전지"
+      },
+      "invertible": false,
+      "invertible_reason": "전환 경로가 짧다는 사실을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fc-electron",
+      "text": "수소가 산화될 때 내놓은 전자가 회로를 따라 이동하면서 전류가 흐른다.",
+      "form": {
+        "condition": "연료 전지가 전기를 만들어 내는 동안",
+        "type": "causal",
+        "scope": "수소를 연료로 쓰는 연료 전지"
+      },
+      "invertible": true,
+      "invertible_reason": "수소가 전자를 내놓는 쪽이므로 전자를 얻는다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소가 환원되면서 전자를 얻고, 그 전자가 회로를 따라 이동해 전류가 흐른다."
+    },
+    {
+      "id": "rel-fc-merit",
+      "text": "환경오염을 거의 일으키지 않으면서도 에너지 효율이 높은 것이 장점이다.",
+      "form": {
+        "condition": "다른 발전 방식과 견줄 때",
+        "type": "classification",
+        "scope": "연료 전지의 장점"
+      },
+      "invertible": false,
+      "invertible_reason": "장점을 든 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fc-issue",
+      "text": "수소를 효율적으로 저장하는 기술과 안정성 확보가 아직 남은 과제다.",
+      "form": {
+        "condition": "연료 전지를 널리 쓰려 할 때",
+        "type": "classification",
+        "scope": "연료 전지의 한계"
+      },
+      "invertible": false,
+      "invertible_reason": "과제를 든 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연료 전지는 충전해서 되풀이해 쓰는 배터리다",
+      "why_wrong": "수소와 산소를 공급받는 동안 화학 반응으로 전기를 만드는 장치이지 충전해 쓰는 전지가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-fc-direct"
+    },
+    {
+      "text": "연료 전지는 수소를 태워 얻은 열로 터빈을 돌려 전기를 만든다",
+      "why_wrong": "연소 단계 없이 화학 반응으로 전자를 흐르게 해 전기를 곧바로 얻는다.",
+      "source": "llm",
+      "linked_relation": "rel-fc-electron"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-new-and-renewable-energy"
+    },
+    {
+      "type": "same",
+      "target": "reac-hydrogen-fuel-cell",
+      "note": "concept:hydrogen-fuel-cell 이 같다"
+    },
+    {
+      "type": "related",
+      "target": "isci2-energy-conversion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-06"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-2-05",
+  "pages": [
+    118,
+    119,
+    120
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

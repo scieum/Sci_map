@@ -1,0 +1,132 @@
+{
+  "id": "isci2-el-nino",
+  "concept_key": "concept:el-nino",
+  "registry_status": "new",
+  "term": "엘니뇨",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "에스파냐어 El Niño 의 음차어라 한자어 표기가 없다.",
+    "english": "El Niño",
+    "symbol_display": "El Niño",
+    "symbol_plain": "El Nino"
+  },
+  "definition": "무역풍이 약해져 태평양 적도 부근 동쪽 바다의 표층 수온이 평년보다 높아지는 현상. 대기와 해양의 상호작용으로 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-en-normal",
+      "text": "평소에는 무역풍이 따뜻한 표층 해수를 동에서 서로 밀어내고 그 빈자리를 심층의 찬물이 채워 동태평양 수온이 낮다.",
+      "form": {
+        "condition": "무역풍이 평년만큼 불 때",
+        "type": "causal",
+        "scope": "태평양 적도 부근 해역"
+      },
+      "invertible": true,
+      "invertible_reason": "표층 해수가 밀려가는 방향이 동에서 서로 정해져 있어 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평소에는 무역풍이 따뜻한 표층 해수를 서에서 동으로 밀어내어 동태평양의 표층 수온이 높다."
+    },
+    {
+      "id": "rel-en-weak",
+      "text": "무역풍이 약해지면 서쪽으로 가는 해수의 흐름과 심층에서 올라오는 찬물이 함께 줄어 동태평양 수온이 오른다.",
+      "form": {
+        "condition": "수년에 한 번씩 무역풍이 약해질 때",
+        "type": "causal",
+        "scope": "태평양 적도 부근 해역",
+        "antecedent": {
+          "quantity": "무역풍의 세기",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "동태평양 표층 수온",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "무역풍이 약해질 때 동태평양 수온이 오르는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무역풍이 약해지면 동태평양의 표층 수온이 평년보다 오히려 낮아진다."
+    },
+    {
+      "id": "rel-en-weather",
+      "text": "엘니뇨 때는 상승 기류의 중심이 동쪽으로 옮겨 가 동태평양에 홍수와 폭우가, 서태평양에 가뭄이 나타난다.",
+      "form": {
+        "condition": "동태평양의 표층 수온이 평년보다 높아졌을 때",
+        "type": "causal",
+        "scope": "적도 부근 태평양 연안"
+      },
+      "invertible": true,
+      "invertible_reason": "홍수와 가뭄이 나타나는 쪽이 정해져 있어 동서를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "엘니뇨 때는 동태평양에 가뭄이 들고 서태평양에 홍수와 폭우가 나타난다."
+    },
+    {
+      "id": "rel-en-remote",
+      "text": "규모가 큰 엘니뇨는 적도 부근을 넘어 지구 곳곳의 기상에까지 영향을 준다.",
+      "form": {
+        "condition": "엘니뇨의 규모가 클 때",
+        "type": "conditional",
+        "scope": "태평양 적도 밖 지역을 포함한 전 지구"
+      },
+      "invertible": false,
+      "invertible_reason": "영향 범위를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "엘니뇨는 바닷물이 데워지는 현상이므로 해양에서만 일어나는 변화다",
+      "why_wrong": "무역풍이라는 대기의 흐름이 약해져 시작되는, 대기와 해양의 상호작용으로 생기는 현상이다.",
+      "source": "llm",
+      "linked_relation": "rel-en-weak"
+    },
+    {
+      "text": "엘니뇨가 생기면 태평양 연안 전체에 비가 많이 온다",
+      "why_wrong": "동태평양에는 홍수와 폭우가 오지만 서태평양에는 오히려 가뭄이 나타난다.",
+      "source": "llm",
+      "linked_relation": "rel-en-weather"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-atmospheric-general-circulation"
+    },
+    {
+      "type": "related",
+      "target": "isci2-desertification"
+    },
+    {
+      "type": "related",
+      "target": "isci2-global-warming"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-04",
+  "pages": [
+    92,
+    93,
+    99
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

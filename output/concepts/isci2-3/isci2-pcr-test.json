@@ -1,0 +1,129 @@
+{
+  "id": "isci2-pcr-test",
+  "concept_key": "concept:pcr-test",
+  "registry_status": "new",
+  "term": "PCR 검사",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "PCR 은 영어 polymerase chain reaction 의 약자라 대응하는 한자가 없다. 뒤의 '검사(檢査)'만 한자어다.",
+    "english": "PCR test",
+    "symbol_display": "PCR",
+    "symbol_plain": "PCR"
+  },
+  "definition": "검체에 든 병원체의 핵산을 거듭 늘려 양을 키운 뒤 그 존재를 확인하는 진단법. 교과서가 든 세 진단법 가운데 가장 정확하다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pcr-amplify",
+      "text": "핵산이 아주 조금만 남아 있어도 증폭을 거치면 검출할 수 있을 만큼 양이 늘어난다.",
+      "form": {
+        "condition": "검체에 병원체의 핵산이 조금이라도 남아 있을 때",
+        "type": "causal",
+        "scope": "검출 가능한 양을 확보하는 과정에 한함 — 병원체 자체가 커지거나 늘어나는 것이 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "증폭 원리를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pcr-target",
+      "text": "이 검사가 찾는 것은 병원체의 단백질이 아니라 유전물질인 핵산이다.",
+      "form": {
+        "condition": "검출 대상이 무엇인지 따질 때",
+        "type": "classification",
+        "scope": "검출 대상을 가르는 자리에 한함 — 단백질을 찾는 항원 검사와 다르다",
+        "antecedent": {
+          "quantity": "검출 대상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "검사 이름",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "검출 대상을 단백질로 바꾼 문장은 이 검사의 원리와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "PCR 검사는 병원체의 특정 단백질을 검출해 감염 여부를 확인한다."
+    },
+    {
+      "id": "rel-pcr-tradeoff",
+      "text": "이 검사는 항원 검사나 항체 검사보다 결과가 늦게 나오지만 감염 여부를 가장 정확하게 알려 준다.",
+      "form": {
+        "condition": "교과서가 든 세 진단법을 견줄 때",
+        "type": "conditional",
+        "scope": "항원·항체·PCR 세 검사를 견준 자리에 한함",
+        "antecedent": {
+          "quantity": "결과가 나오기까지의 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "진단의 정확도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "시간과 정확도를 함께 맞바꾼 문장은 세 검사의 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "PCR 검사는 항원 검사보다 결과가 빨리 나오지만 정확도는 더 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "PCR 검사는 결과가 가장 빨리 나오는 검사다",
+      "why_wrong": "가장 정확한 대신 결과가 나오기까지는 항원 검사보다 오래 걸린다. 빠른 확인이 필요할 때는 항원 검사를 쓴다.",
+      "source": "llm",
+      "linked_relation": "rel-pcr-tradeoff"
+    },
+    {
+      "text": "PCR 검사는 병원체를 눈에 보일 만큼 크게 키워 확인하는 검사다",
+      "why_wrong": "늘리는 것은 병원체가 아니라 그 안에 든 핵산 조각이다. 크기를 키우는 것이 아니라 양을 늘려 검출이 되게 하는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-pcr-amplify"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-pathogen",
+      "note": "증폭 대상이 병원체의 유전물질이다"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-infectious-disease"
+    },
+    {
+      "type": "related",
+      "target": "isci2-antigen-test"
+    },
+    {
+      "type": "related",
+      "target": "isci2-antibody-test"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    132,
+    134,
+    152
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

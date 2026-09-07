@@ -1,0 +1,121 @@
+{
+  "id": "isci2-infectious-disease",
+  "concept_key": "concept:infectious-disease",
+  "registry_status": "new",
+  "term": "감염병",
+  "notation": {
+    "hanja": "感染病",
+    "hanja_gloss": "感 느낄 감 · 染 물들 염 · 病 병 병",
+    "english": "infectious disease"
+  },
+  "definition": "몸속으로 들어온 병원체 때문에 나타나는 질병 가운데, 사람에서 사람으로 빠르게 옮아가는 성질을 지닌 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-idis-pathogen",
+      "text": "세균이나 바이러스 같은 병원체가 몸 안에 들어와 자리 잡았을 때 이 질병이 나타난다.",
+      "form": {
+        "condition": "병원체가 사람의 몸에 침입했을 때",
+        "type": "causal",
+        "scope": "병원체 침입으로 생기는 질병에 한함 — 영양 결핍이나 유전으로 생기는 질병은 여기에 들지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "정의에서 곧바로 나오는 관계라 방향을 뒤집어도 참이 되어 오답 지문이 되지 않는다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-idis-spread",
+      "text": "교통수단이 발달해 사람들의 이동량이 늘고 이동 속도가 빨라질수록 감염병이 퍼지는 속도도 빨라진다.",
+      "form": {
+        "condition": "사람의 이동량과 이동 속도가 늘어난 사회에서",
+        "type": "direct",
+        "scope": "사람 사이에 옮는 감염병의 전파 속도에 한함 — 한 사람이 앓는 정도가 심해진다는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "사람의 이동량과 이동 속도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "감염병의 전파 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이동이 늘수록 전파가 느려진다는 문장은 어떤 감염병에도 들어맞지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교통수단이 발달해 사람들의 이동이 늘어날수록 감염병이 퍼지는 속도는 오히려 느려진다."
+    },
+    {
+      "id": "rel-idis-diagnose",
+      "text": "치료 약이 아직 없는 단계에서는 감염 여부를 빨리 가려내고 경로를 끊는 일이 확산을 늦추는 방법이 된다.",
+      "form": {
+        "condition": "치료 약이 개발되기 전 단계에서",
+        "type": "conditional",
+        "scope": "확산 속도를 늦추는 대응에 한함 — 이미 감염된 사람을 낫게 하는 효과를 말하는 것이 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "대응 방법을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과2-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감염병은 상한 음식을 먹었을 때 걸리는 병이다",
+      "why_wrong": "감염병을 가르는 기준은 병원체가 몸에 들어왔는가이다. 상한 음식을 먹어 생긴 탈도 그 안에 세균 같은 병원체가 있었다면 감염병이지만, 음식이 상했다는 사실만으로 감염병이 되는 것은 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-idis-pathogen"
+    },
+    {
+      "text": "환자가 갑자기 늘었다면 병원체가 더 치명적으로 바뀐 것이다",
+      "why_wrong": "환자 수는 사람들의 이동이 늘거나 밀집한 곳이 많아지는 것만으로도 늘 수 있다. 얼마나 빨리 퍼지는지와 얼마나 심하게 앓는지는 서로 다른 문제다.",
+      "source": "llm",
+      "linked_relation": "rel-idis-spread"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-pathogen",
+      "note": "무엇이 침입하는지 알아야 정의가 읽힌다"
+    },
+    {
+      "type": "next",
+      "target": "isci2-antigen-test"
+    },
+    {
+      "type": "next",
+      "target": "isci2-antibody-test"
+    },
+    {
+      "type": "next",
+      "target": "isci2-pcr-test"
+    },
+    {
+      "type": "next",
+      "target": "isci2-infection-route-tracing"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-03-01"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅲ. 과학과 미래 사회",
+  "unit_id": "isci2-3",
+  "topic_id": "isci2-3-1-01",
+  "pages": [
+    134,
+    152
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,113 @@
+{
+  "id": "isci2-heat-budget",
+  "concept_key": "concept:heat-budget",
+  "registry_status": "new",
+  "term": "열수지",
+  "notation": {
+    "hanja": "熱收支",
+    "hanja_gloss": "熱 더울 열 · 收 거둘 수 · 支 지탱할 지",
+    "english": "heat budget"
+  },
+  "definition": "지권과 대기, 우주 사이를 오가는 에너지에서 얻은 양과 잃은 양의 차이. 이 값이 0이면 복사 평형 상태다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hb-zero",
+      "text": "열수지가 0이라는 말은 얻은 에너지와 잃은 에너지가 같다는 뜻이므로 곧 복사 평형을 가리킨다.",
+      "form": {
+        "condition": "지권·대기·우주 사이의 에너지 출입을 견줄 때",
+        "type": "conditional",
+        "scope": "복사로 에너지를 주고받는 지구"
+      },
+      "invertible": false,
+      "invertible_reason": "두 표현이 같은 상태를 가리키는 동치 명제라 뒤집어도 뜻이 같다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hb-ghg",
+      "text": "온실 기체가 늘면 우주로 빠져나가는 지구 복사 에너지양이 줄어 얻는 쪽이 잃는 쪽보다 많아진다.",
+      "form": {
+        "condition": "들어오는 태양 복사 에너지양이 그대로일 때",
+        "type": "causal",
+        "scope": "온실 기체가 늘어난 21세기 초의 지구",
+        "antecedent": {
+          "quantity": "대기 중 온실 기체의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주로 방출되는 지구 복사 에너지양",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온실 기체가 늘 때 방출량이 줄어드는 방향이 정해져 있어 증감을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온실 기체가 늘면 우주로 빠져나가는 지구 복사 에너지양도 함께 늘어난다."
+    },
+    {
+      "id": "rel-hb-ice",
+      "text": "지구의 온도가 오르면 지표가 내보내는 복사 에너지양은 늘고, 빙하가 녹아 반사되는 태양 복사 에너지양은 줄어든다.",
+      "form": {
+        "condition": "지구 온난화가 진행되는 동안",
+        "type": "causal",
+        "scope": "빙하가 있는 지역까지 아우른 실제 지구"
+      },
+      "invertible": false,
+      "invertible_reason": "두 항목이 서로 다른 방향으로 변하는 서술이라 통째로 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "열수지가 0이면 지구가 에너지를 하나도 받지 않는 상태다",
+      "why_wrong": "받은 양과 내보낸 양이 같다는 뜻이지 주고받는 양이 0이라는 뜻이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-hb-zero"
+    },
+    {
+      "text": "온실 기체가 늘어도 지구가 우주로 내보내는 에너지양은 달라지지 않는다",
+      "why_wrong": "온실 기체가 지구 복사 에너지를 흡수하므로 우주로 나가는 양이 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-hb-ghg"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci2-radiative-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "isci2-global-warming"
+    },
+    {
+      "type": "related",
+      "target": "isci2-greenhouse-gas"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-03",
+  "pages": [
+    86,
+    88,
+    89
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

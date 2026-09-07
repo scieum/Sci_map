@@ -1,0 +1,113 @@
+{
+  "id": "isci2-greenhouse-effect",
+  "concept_key": "concept:greenhouse-effect",
+  "registry_status": "new",
+  "term": "온실 효과",
+  "notation": {
+    "hanja": "溫室效果",
+    "hanja_gloss": "溫 따뜻할 온 · 室 집 실 · 效 본받을 효 · 果 실과 과",
+    "english": "greenhouse effect"
+  },
+  "definition": "대기가 지구 복사 에너지를 흡수했다가 그 일부를 지표로 되돌려 보내는 덕분에, 대기가 없을 때보다 평균 기온이 높게 유지되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ghe-mechanism",
+      "text": "지표가 내보낸 지구 복사 에너지를 대기가 흡수한 뒤 그 일부를 다시 지표 쪽으로 내보내면서 일어난다.",
+      "form": {
+        "condition": "온실 기체를 품은 대기가 지구를 둘러싸고 있을 때",
+        "type": "causal",
+        "scope": "파장이 긴 지구 복사 에너지"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 과정을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ghe-water",
+      "text": "온실 효과 덕분에 지구는 액체 상태의 물이 있을 수 있는 온도가 되었고 생명이 살아갈 환경이 갖추어졌다.",
+      "form": {
+        "condition": "대기가 있어 평균 기온이 높게 유지될 때",
+        "type": "causal",
+        "scope": "자연적인 온실 효과가 작동하는 지구"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ghe-strength",
+      "text": "대기 중 온실 기체의 양이 늘면 온실 효과가 그만큼 강해진다.",
+      "form": {
+        "condition": "다른 조건이 그대로일 때",
+        "type": "direct",
+        "scope": "산업혁명 이후 온실 기체가 늘어난 대기",
+        "antecedent": {
+          "quantity": "대기 중 온실 기체의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "온실 효과의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 방향으로 함께 커지는 관계라 한쪽 방향만 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과2-02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기 중 온실 기체의 양이 늘면 온실 효과는 오히려 약해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온실 효과는 인간이 만들어 낸 현상이므로 없애야 한다",
+      "why_wrong": "대기가 있는 지구에는 본래 온실 효과가 있어 액체 상태의 물과 생명이 존재할 수 있었고, 문제가 되는 것은 인간 활동으로 강화된 쪽이다.",
+      "source": "llm",
+      "linked_relation": "rel-ghe-water"
+    },
+    {
+      "text": "온실 효과는 대기가 태양 복사 에너지를 가두어 두는 현상이다",
+      "why_wrong": "대기가 잘 흡수하는 것은 파장이 긴 지구 복사 에너지이고, 그 일부를 지표로 되돌려 보내는 것이 온실 효과다.",
+      "source": "llm",
+      "linked_relation": "rel-ghe-mechanism"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci2-radiative-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "isci2-greenhouse-gas"
+    },
+    {
+      "type": "next",
+      "target": "isci2-global-warming"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과2-02-03"
+  ],
+  "subject": "통합과학2",
+  "unit": "Ⅱ. 환경과 에너지",
+  "unit_id": "isci2-2",
+  "topic_id": "isci2-2-1-03",
+  "pages": [
+    87,
+    88,
+    89
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}
