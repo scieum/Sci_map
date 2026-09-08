@@ -1,0 +1,127 @@
+{
+  "id": "isci1-silicate-mineral",
+  "concept_key": "concept:silicate-mineral",
+  "registry_status": "new",
+  "term": "규산염 광물",
+  "notation": {
+    "hanja": "硅酸鹽鑛物",
+    "hanja_gloss": "硅 규소 규 · 酸 실 산 · 鹽 소금 염 · 鑛 쇳돌 광 · 物 물건 물",
+    "english": "silicate mineral"
+  },
+  "definition": "규산염 사면체가 산소를 나눠 가지며 이어져 만들어진 광물. 지각의 암석을 이루는 광물 대부분이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sm-structure",
+      "text": "사면체가 이어지는 방식에 따라 독립형·사슬형·판형·망상형 같은 구조가 생기고, 구조가 다르면 다른 광물이 된다.",
+      "form": {
+        "condition": "사면체끼리 산소를 나눠 가지며 이어질 때",
+        "type": "causal",
+        "scope": "규산염 광물의 종류를 가르는 데 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 종류로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sm-cleavage",
+      "text": "결합 구조는 쪼개짐과 깨짐에도 드러나, 얇은 판이 켜켜이 쌓인 흑운모는 그 결을 따라 얇게 쪼개진다.",
+      "form": {
+        "condition": "광물에 힘을 주어 깨뜨릴 때",
+        "type": "causal",
+        "scope": "규산염 광물의 쪼개짐과 깨짐에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 쪼개짐으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sm-weathering",
+      "text": "사면체가 입체적으로 촘촘히 이어질수록 광물은 풍화에 잘 견딘다. 석영이 강하고 감람석이 약한 까닭이다.",
+      "form": {
+        "condition": "같은 환경에 놓인 광물끼리 견줄 때",
+        "type": "direct",
+        "scope": "규산염 광물끼리 견줄 때에 한함",
+        "antecedent": {
+          "quantity": "사면체 결합의 촘촘함",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "풍화에 견디는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "결합의 촘촘함과 풍화에 견디는 정도가 같은 방향이라 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "사면체가 입체적으로 촘촘히 이어질수록 광물은 풍화에 더 약해진다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sm-other-element",
+      "text": "결합 구조가 같은 광물이라도 사면체 사이에 다른 원소가 이온 결합으로 끼어들면 색 같은 성질이 달라진다.",
+      "form": {
+        "condition": "사면체와 사면체 사이에 다른 원소가 들어올 때",
+        "type": "causal",
+        "scope": "같은 결합 구조를 가진 광물끼리 견줄 때에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "끼어든 원소에서 성질 차이로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광물의 종류가 다른 것은 사면체를 이루는 원소가 저마다 다르기 때문이다",
+      "why_wrong": "기본 단위체는 모두 규소와 산소로 같다. 그 사면체가 어떻게 이어지는지가 광물의 종류를 가른다.",
+      "source": "llm",
+      "linked_relation": "rel-sm-structure"
+    },
+    {
+      "text": "석영이 풍화에 강한 것은 단단한 원소로 되어 있기 때문이다",
+      "why_wrong": "석영도 규소와 산소로 되어 있다. 사면체가 입체적으로 촘촘히 이어져 있어 잘 버티는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-sm-weathering"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-silicate-tetrahedron"
+    },
+    {
+      "type": "related",
+      "target": "isci1-covalent-bond"
+    },
+    {
+      "type": "related",
+      "target": "isci1-ionic-bond"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-05"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-01",
+  "pages": [
+    78,
+    80
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

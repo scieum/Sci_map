@@ -1,0 +1,108 @@
+{
+  "id": "isci1-nucleic-acid",
+  "concept_key": "concept:nucleic-acid",
+  "registry_status": "new",
+  "term": "핵산",
+  "aliases": [
+    "DNA와 RNA"
+  ],
+  "notation": {
+    "hanja": "核酸",
+    "hanja_gloss": "核 씨 핵 · 酸 실 산",
+    "english": "nucleic acid"
+  },
+  "definition": "뉴클레오타이드가 길게 이어져 만들어진 물질로, 생명체의 유전정보를 저장하고 전달한다. DNA와 RNA가 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-na-info",
+      "text": "뉴클레오타이드가 어떤 순서로 얼마나 길게 이어졌는가에 생명체의 유전정보가 담긴다.",
+      "form": {
+        "condition": "폴리뉴클레오타이드의 배열을 읽을 때",
+        "type": "causal",
+        "scope": "핵산이 유전정보를 저장하는 방식에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "배열에서 정보로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-na-pairing",
+      "text": "DNA에서 아데닌은 언제나 타이민과, 사이토신은 언제나 구아닌과 짝지어 결합한다.",
+      "form": {
+        "condition": "두 가닥이 안쪽에서 염기끼리 결합할 때",
+        "type": "classification",
+        "scope": "DNA의 염기 짝짓기에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "짝이 되는 상대가 정해져 있어 서로 바꾸면 반드시 거짓이 된다.",
+      "inverted_text": "DNA에서 아데닌은 언제나 구아닌과, 사이토신은 언제나 타이민과 짝지어 결합한다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-na-strand",
+      "text": "DNA는 두 가닥이 꼬인 이중나선이고 RNA는 한 가닥이다.",
+      "form": {
+        "condition": "DNA와 RNA의 구조를 견줄 때",
+        "type": "classification",
+        "scope": "두 핵산의 가닥 수에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "가닥 수가 정해져 있어 둘을 서로 바꾸면 반드시 거짓이 된다.",
+      "inverted_text": "DNA는 한 가닥이고 RNA는 두 가닥이 꼬인 이중나선이다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA와 RNA는 모두 이중나선 구조다",
+      "why_wrong": "이중나선을 이루는 것은 DNA다. RNA는 단일 가닥으로 이루어진다.",
+      "source": "llm",
+      "linked_relation": "rel-na-strand"
+    },
+    {
+      "text": "유전정보는 뉴클레오타이드의 개수에만 담겨 있다",
+      "why_wrong": "개수뿐 아니라 어떤 순서로 이어졌는지가 정보를 담는다.",
+      "source": "llm",
+      "linked_relation": "rel-na-info"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "isci1-protein"
+    },
+    {
+      "type": "related",
+      "target": "isci1-carbon-compound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-05"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-01",
+  "pages": [
+    83,
+    84
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

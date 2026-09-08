@@ -1,0 +1,105 @@
+{
+  "id": "isci1-nucleotide",
+  "concept_key": "concept:nucleotide",
+  "registry_status": "reused",
+  "term": "뉴클레오타이드",
+  "aliases": [
+    "뉴클레오티드"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 nucleotide 의 음차어다. 대응하는 한자어 표기가 없다.",
+    "english": "nucleotide"
+  },
+  "definition": "인산과 당, 염기가 1 : 1 : 1로 결합해 이루어진 핵산의 단위체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nt-base",
+      "text": "인산과 당은 공통이고 염기가 무엇이냐에 따라 뉴클레오타이드의 종류가 갈린다.",
+      "form": {
+        "condition": "한 종류의 핵산을 이루는 단위체끼리 견줄 때",
+        "type": "causal",
+        "scope": "같은 핵산 안에서 견줄 때에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "종류가 갈리는 까닭을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-sugar",
+      "text": "DNA와 RNA는 단위체에 든 당의 종류가 다르고, 타이민 대신 유라실을 갖는 쪽이 RNA다.",
+      "form": {
+        "condition": "DNA와 RNA의 단위체를 견줄 때",
+        "type": "classification",
+        "scope": "DNA와 RNA를 가르는 기준에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 핵산을 가른 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-link",
+      "text": "한 뉴클레오타이드의 당과 다음 뉴클레오타이드의 인산이 공유 결합으로 이어져 폴리뉴클레오타이드가 된다.",
+      "form": {
+        "condition": "뉴클레오타이드가 여럿 이어질 때",
+        "type": "causal",
+        "scope": "폴리뉴클레오타이드가 만들어지는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 방식과 그 결과를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA와 RNA는 염기 하나만 다르고 나머지는 모두 같다",
+      "why_wrong": "염기 한 종류가 다를 뿐 아니라 단위체에 든 당의 종류도 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-nt-sugar"
+    },
+    {
+      "text": "뉴클레오타이드는 인산과 당, 염기가 아무 비율로나 붙어 만들어진다",
+      "why_wrong": "세 부분이 1 : 1 : 1로 결합한 것이 뉴클레오타이드다.",
+      "source": "llm",
+      "linked_relation": "rel-nt-base"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-carbon-compound"
+    },
+    {
+      "type": "next",
+      "target": "isci1-nucleic-acid"
+    },
+    {
+      "type": "related",
+      "target": "isci1-amino-acid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-05"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-01",
+  "pages": [
+    83
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

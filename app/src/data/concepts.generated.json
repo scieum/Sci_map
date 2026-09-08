@@ -1238,6 +1238,2730 @@
     "media": []
   },
   {
+    "id": "isci1-absorption-spectrum",
+    "term": "흡수 스펙트럼",
+    "aliases": [
+      "별빛의 흡수 스펙트럼"
+    ],
+    "hanja": null,
+    "english": "absorption spectrum",
+    "definition": "이어진 색 띠 위에 검은 선이 박혀 있는 스펙트럼. 빛이 자신보다 차가운 기체층을 지날 때 특정 파장이 빨려 나가 생긴다.",
+    "relations": [
+      {
+        "id": "rel-abs-formation",
+        "text": "별 중심부에서 나온 빛이 그보다 온도가 낮은 대기를 지나면 대기 속 원소가 특정 파장을 빨아들여 검은 선이 남는다.",
+        "condition": "빛이 자신보다 온도가 낮은 기체층을 지날 때",
+        "scope": "별처럼 광원 바깥에 기체층이 있는 경우에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-abs-match",
+        "text": "어떤 원소가 빛을 빨아들여 남긴 흡수선의 자리는 그 원소가 고온에서 내놓는 방출선의 자리와 겹친다.",
+        "condition": "같은 원소의 두 스펙트럼을 견줄 때",
+        "scope": "같은 원소끼리 견줄 때에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-abs-inference",
+        "text": "별빛의 흡수선을 원소의 방출선과 맞대어 보면 별 대기를 이루는 원소의 종류와 원소 사이의 질량비를 알아낼 수 있다.",
+        "condition": "별빛의 스펙트럼을 얻어 선의 자리를 잴 수 있을 때",
+        "scope": "별의 대기에 있는 원소에 한함 — 별 중심부의 조성을 곧바로 알려 주지는 않는다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "별빛의 스펙트럼에 생긴 검은 선은 그 원소가 별에 없다는 표시다",
+        "whyWrong": "검은 선은 별의 대기에 있는 원소가 그 파장을 빨아들인 자국이다. 오히려 그 원소가 있다는 증거다."
+      },
+      {
+        "text": "흡수선과 방출선은 서로 다른 원소에서 생기므로 자리도 다르다",
+        "whyWrong": "같은 원소라면 빛을 낼 때와 빨아들일 때의 파장이 같아 두 선이 겹친다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-spectrum"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-line-spectrum"
+      },
+      {
+        "type": "next",
+        "target": "isci1-elemental-composition-of-the-universe"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "별의 스펙트럼과 우주의 구성 원소",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-03.png",
+        "caption": "그림 Ⅱ-3 별빛의 흡수 스펙트럼",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-big-bang-nucleosynthesis",
+    "term": "빅뱅과 원소의 생성",
+    "aliases": [
+      "빅뱅 우주론",
+      "우주 초기 원소의 생성"
+    ],
+    "hanja": null,
+    "english": "big bang nucleosynthesis",
+    "definition": "약 138억 년 전 대폭발로 시작된 우주가 팽창하며 식는 동안 기본 입자에서 수소와 헬륨의 원자핵, 이어 중성 원자가 만들어진 과정.",
+    "relations": [
+      {
+        "id": "rel-bb-cooling",
+        "text": "우주는 팽창할수록 온도가 내려갔고, 온도가 충분히 낮아진 뒤로는 새로운 원자핵이 더 만들어지지 못했다.",
+        "condition": "빅뱅 뒤 우주가 계속 팽창하는 동안",
+        "scope": "우주 초기의 원자핵 합성 시기에 한함",
+        "invertible": true,
+        "invertedText": "우주는 팽창할수록 온도가 올라갔고, 그 덕분에 새로운 원자핵을 계속 만들어 낼 수 있었다."
+      },
+      {
+        "id": "rel-bb-ratio",
+        "text": "빅뱅 뒤 3분 무렵 양성자와 중성자가 결합해 헬륨 원자핵이 생겼고, 수소 원자핵과 헬륨 원자핵의 질량비는 약 3 : 1이 되었다.",
+        "condition": "우주 초기의 원자핵 합성이 끝난 시점에서",
+        "scope": "우주 초기에 만들어진 원자핵에 한함 — 별 내부에서 뒤에 만들어진 헬륨은 여기에 들어가지 않는다",
+        "invertible": false
+      },
+      {
+        "id": "rel-bb-atom",
+        "text": "빅뱅 뒤 약 38만 년이 지나 온도가 더 내려간 다음에야 전자가 원자핵에 붙들려 중성 원자가 만들어지기 시작했다.",
+        "condition": "우주의 온도가 전자를 붙잡을 만큼 낮아졌을 때",
+        "scope": "수소 원자와 헬륨 원자가 만들어지는 단계에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "빅뱅 때 오늘날 주기율표에 있는 원소가 모두 만들어졌다",
+        "whyWrong": "빅뱅 직후에 만들어진 것은 수소와 헬륨, 그리고 아주 적은 양의 리튬뿐이다. 더 무거운 원소는 별과 초신성이 만들었다."
+      },
+      {
+        "text": "빅뱅 직후에 이미 수소 원자가 완성되어 있었다",
+        "whyWrong": "먼저 생긴 것은 원자핵이다. 전자와 결합해 중성 원자가 된 것은 약 38만 년이 지난 뒤다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-elemental-composition-of-the-universe"
+      },
+      {
+        "type": "next",
+        "target": "isci1-star-formation"
+      },
+      {
+        "type": "related",
+        "target": "isci1-stellar-nuclear-fusion"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "별의 스펙트럼과 우주의 구성 원소",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-04.png",
+        "caption": "그림 Ⅱ-4 빅뱅과 원소의 생성",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-elemental-composition-of-the-universe",
+    "term": "우주의 구성 원소",
+    "aliases": [
+      "우주를 구성하는 원소의 비율"
+    ],
+    "hanja": "宇宙構成元素",
+    "english": "elemental composition of the universe",
+    "definition": "우주 전역의 스펙트럼 관측으로 밝혀진 원소의 존재 비율. 수소가 약 75 %, 헬륨이 약 23 %, 나머지 원소가 2 % 안팎이다.",
+    "relations": [
+      {
+        "id": "rel-comp-observation",
+        "text": "여러 천체의 스펙트럼에서 흡수선이 비슷한 자리에 나타난다는 관측 결과가 우주의 원소 비율을 추정하는 근거가 된다.",
+        "condition": "우주 전역에서 얻은 스펙트럼을 모아 견줄 때",
+        "scope": "관측할 수 있는 천체의 대기 조성에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-comp-ratio",
+        "text": "우주를 이루는 원소는 수소와 헬륨이 98 % 가까이를 차지하고, 나머지 원소는 모두 합해도 2 % 남짓이다.",
+        "condition": "우주 전체를 하나로 놓고 볼 때",
+        "scope": "우주 전체의 평균에 한함 — 지구 같은 천체 하나에 그대로 적용되지 않는다",
+        "invertible": false
+      },
+      {
+        "id": "rel-comp-earth-gap",
+        "text": "지구에 흔한 철과 규소는 우주 전체로 보면 매우 드물어, 천체마다 원소 구성이 크게 다를 수 있다.",
+        "condition": "우주 전체의 비율과 지구의 비율을 견줄 때",
+        "scope": "지구와 우주 전체를 견주는 데 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "우주에서 가장 흔한 원소는 지구에서도 가장 흔하다",
+        "whyWrong": "우주는 수소와 헬륨이 대부분이지만 지구의 지각에는 산소와 규소가 많다. 태양계가 만들어질 때 가벼운 기체가 안쪽에 남지 못했기 때문이다."
+      },
+      {
+        "text": "우주의 원소 비율은 별에서 물질을 가져와 분석한 값이다",
+        "whyWrong": "별에 직접 갈 수는 없다. 별빛의 스펙트럼에 남은 선을 분석해 알아낸 값이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-absorption-spectrum"
+      },
+      {
+        "type": "next",
+        "target": "isci1-big-bang-nucleosynthesis"
+      },
+      {
+        "type": "related",
+        "target": "isci1-solar-system-formation"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "별의 스펙트럼과 우주의 구성 원소",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-01",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "宇 집 우 · 宙 집 주 · 構 얽을 구 · 成 이룰 성 · 元 으뜸 원 · 素 본디 소",
+    "media": []
+  },
+  {
+    "id": "isci1-line-spectrum",
+    "term": "선 스펙트럼",
+    "aliases": [
+      "선스펙트럼",
+      "방출 스펙트럼"
+    ],
+    "hanja": null,
+    "english": "line spectrum",
+    "definition": "고온의 기체 원소가 내는 빛을 분광기로 나누었을 때 띄엄띄엄한 몇 가닥의 밝은 선만 드러나는 스펙트럼.",
+    "relations": [
+      {
+        "id": "rel-line-emission",
+        "text": "기체 방전관 속 원소를 높은 온도로 달구어 얻은 빛은 이어진 띠가 아니라 몇 개의 방출선으로 관측된다.",
+        "condition": "기체 상태의 원소가 높은 온도에서 스스로 빛을 낼 때",
+        "scope": "기체 상태의 원소에 한함 — 고온의 고체가 내는 빛은 연속된 색 띠로 보인다",
+        "invertible": false
+      },
+      {
+        "id": "rel-line-identity",
+        "text": "방출선이 놓이는 자리는 원소마다 정해져 있어, 선의 위치만 보고도 어떤 원소인지 가려낼 수 있다.",
+        "condition": "관측한 선의 파장을 이미 알려진 원소의 것과 견줄 수 있을 때",
+        "scope": "원소의 종류를 가려내는 데 한함 — 선의 위치로 원소의 양을 알 수는 없다",
+        "invertible": false
+      },
+      {
+        "id": "rel-line-vs-absorption",
+        "text": "같은 원소라면 높은 온도에서 내놓는 방출선과 빛을 빨아들일 때 생기는 흡수선이 같은 자리에 나타난다.",
+        "condition": "같은 원소의 두 스펙트럼을 견줄 때",
+        "scope": "같은 원소끼리 견줄 때에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "선 스펙트럼에 나타나는 선의 위치는 온도를 높이면 옮겨 간다",
+        "whyWrong": "선의 자리는 원소의 종류가 정한다. 온도는 선이 나타날 조건을 만들 뿐 자리를 옮기지 못한다."
+      },
+      {
+        "text": "모든 빛은 분광기로 보면 선 스펙트럼으로 보인다",
+        "whyWrong": "백열전구처럼 연속된 파장의 빛은 끊김 없는 색 띠로 보인다. 선 스펙트럼은 고온의 기체 원소가 낼 때 나타난다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-spectrum"
+      },
+      {
+        "type": "next",
+        "target": "isci1-absorption-spectrum"
+      },
+      {
+        "type": "related",
+        "target": "isci1-elemental-composition-of-the-universe"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "별의 스펙트럼과 우주의 구성 원소",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-02.png",
+        "caption": "그림 Ⅱ-2 연속 스펙트럼(위)과 수소의 선 스펙트럼(아래)",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-spectrum",
+    "term": "스펙트럼",
+    "aliases": [
+      "빛의 스펙트럼"
+    ],
+    "hanja": null,
+    "english": "spectrum",
+    "definition": "빛을 파장에 따라 갈라 놓았을 때 생기는 띠. 프리즘이나 분광기를 지난 빛이 파장별로 나뉘면서 나타난다.",
+    "relations": [
+      {
+        "id": "rel-spec-split",
+        "text": "빛을 파장에 따라 나누는 장치를 분광기라 하고, 그 장치를 지난 빛이 만들어 내는 띠가 스펙트럼이다.",
+        "condition": "빛이 프리즘이나 분광기를 지날 때",
+        "scope": "빛을 파장별로 분해해 관측하는 경우에 한함 — 가시광선뿐 아니라 적외선 같은 다른 파장에도 적용된다",
+        "invertible": false
+      },
+      {
+        "id": "rel-spec-source",
+        "text": "백열전구처럼 넓은 범위의 파장을 한꺼번에 내는 광원은 색 띠가 끊기지 않고 이어진 스펙트럼을 보인다.",
+        "condition": "광원이 연속된 파장의 빛을 낼 때",
+        "scope": "백열전구나 고온의 고체·별의 내부처럼 연속 파장을 내는 광원에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-spec-info",
+        "text": "광원의 종류에 따라 스펙트럼의 모습이 달라지므로, 스펙트럼을 분석하면 빛을 낸 물체의 구성 원소를 추론할 수 있다.",
+        "condition": "관측한 선의 자리를 이미 알려진 원소의 것과 견줄 수 있을 때",
+        "scope": "원소가 빛을 내거나 빨아들인 흔적이 스펙트럼에 남은 경우에 한함 — 원소의 양까지 곧바로 알려 주지는 않는다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "분광기로 보면 어떤 빛이든 무지개색 띠가 끊김 없이 이어져 보인다",
+        "whyWrong": "고온의 기체 원소가 내는 빛은 몇 가닥의 선으로만 보인다. 광원이 무엇이냐에 따라 스펙트럼의 모습이 달라진다."
+      },
+      {
+        "text": "스펙트럼은 빛의 밝기만 알려 줄 뿐 물질의 종류와는 관계가 없다",
+        "whyWrong": "선이 놓이는 자리가 원소마다 달라서, 스펙트럼은 물체를 이루는 원소를 알아내는 단서가 된다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "isci1-line-spectrum"
+      },
+      {
+        "type": "next",
+        "target": "isci1-absorption-spectrum"
+      },
+      {
+        "type": "related",
+        "target": "isci1-elemental-composition-of-the-universe"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "별의 스펙트럼과 우주의 구성 원소",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-01.png",
+        "caption": "그림 Ⅱ-1 별빛을 분광기로 관측하는 제임스 웹 우주 망원경",
+        "restricted": true,
+        "kind": "photo"
+      },
+      {
+        "file": "isci1-2-fig-02.png",
+        "caption": "그림 Ⅱ-2 연속 스펙트럼(위)과 수소의 선 스펙트럼(아래)",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-solar-system-formation",
+    "term": "태양계와 지구의 형성",
+    "aliases": [
+      "태양계의 형성"
+    ],
+    "hanja": "太陽系地球形成",
+    "english": "formation of the solar system",
+    "definition": "무거운 원소가 섞인 성운이 회전하며 수축해 중심에는 태양을, 원반에는 행성을 만든 과정. 지구와 생명체의 재료도 여기서 나왔다.",
+    "relations": [
+      {
+        "id": "rel-solar-disk",
+        "text": "성운이 식으며 다시 뭉칠 때 물질은 중심부와 원반으로 모이고, 중심에서는 별이, 원반에서는 행성이 만들어진다.",
+        "condition": "성운이 회전하면서 수축할 때",
+        "scope": "태양계가 만들어지는 과정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-solar-distance",
+        "text": "태양에 가까운 안쪽에는 철과 규소 같은 무거운 물질이 남아 암석 행성이, 먼 바깥쪽에는 가벼운 물질이 모여 기체 행성이 생겼다.",
+        "condition": "원반 안에서 태양으로부터의 거리가 서로 다를 때",
+        "scope": "태양계 행성이 만들어지는 과정에 한함",
+        "invertible": true,
+        "invertedText": "태양에서 멀어질수록 철과 규소 같은 무거운 물질이 모여 암석으로 이루어진 행성이 만들어졌다."
+      },
+      {
+        "id": "rel-solar-origin",
+        "text": "지구와 생명체를 이루는 원소는 빅뱅이 만든 수소·헬륨과 별의 진화가 만든 무거운 원소가 함께 모인 것이다.",
+        "condition": "지구와 생명체를 이루는 원소의 유래를 따질 때",
+        "scope": "원소의 유래를 설명하는 데 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "지구를 이루는 원소는 지구가 생길 때 새로 만들어졌다",
+        "whyWrong": "지구의 원소는 빅뱅과 별의 진화, 초신성 폭발로 이미 만들어져 있던 것이 모인 것이다."
+      },
+      {
+        "text": "바깥쪽 행성이 기체로 이루어진 것은 태양의 열에 암석이 녹았기 때문이다",
+        "whyWrong": "태양에서 먼 곳에는 수소·헬륨·메테인 같은 가벼운 물질이 남아 모였기 때문이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-supernova-nucleosynthesis"
+      },
+      {
+        "type": "related",
+        "target": "isci1-big-bang-nucleosynthesis"
+      },
+      {
+        "type": "related",
+        "target": "isci1-elemental-composition-of-the-universe"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "태양계와 생명체를 이루는 원소의 형성",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "太 클 태 · 陽 볕 양 · 系 이을 계 · 地 땅 지 · 球 공 구 · 形 모양 형 · 成 이룰 성",
+    "media": [
+      {
+        "file": "isci1-2-fig-08.png",
+        "caption": "그림 Ⅱ-8 태양계 형성 초기의 모습을 표현한 상상도",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-star-formation",
+    "term": "별의 탄생",
+    "aliases": [
+      "별의 생성"
+    ],
+    "hanja": null,
+    "english": "star formation",
+    "definition": "성운의 물질이 중력으로 뭉쳐 수축하다가 중심부가 수소 핵융합을 일으킬 만큼 뜨거워지면서 별이 생겨나는 과정.",
+    "relations": [
+      {
+        "id": "rel-star-density",
+        "text": "물질이 더 빽빽하게 모인 곳일수록 중력이 세게 작용해 둘레의 수소와 헬륨을 더 많이 끌어들인다.",
+        "condition": "우주에 물질이 고르지 않게 퍼져 있을 때",
+        "scope": "성운이 만들어지는 단계에 한함",
+        "invertible": true,
+        "invertedText": "물질이 더 빽빽하게 모인 곳일수록 중력은 약해져 둘레의 물질을 덜 끌어들인다."
+      },
+      {
+        "id": "rel-star-contraction",
+        "text": "성운이 중력으로 수축하면 중심부의 온도가 올라가고, 수소가 핵융합할 조건에 이르면 별이 태어난다.",
+        "condition": "성운의 물질이 중력 수축을 이어 갈 때",
+        "scope": "별이 태어나는 단계에 한함",
+        "invertible": true,
+        "invertedText": "성운이 중력으로 수축하면 중심부의 온도가 내려가고, 그 때문에 핵융합이 멎는다."
+      },
+      {
+        "id": "rel-star-equilibrium",
+        "text": "핵융합으로 생긴 내부 압력이 안쪽으로 당기는 중력과 맞서 균형을 이루는 동안 별의 크기는 거의 그대로 유지된다.",
+        "condition": "중심부에서 수소 핵융합이 이어지는 동안",
+        "scope": "수소 핵융합으로 안정된 상태를 유지하는 단계의 별에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "별은 성운이 식으면서 그대로 굳어져 생긴다",
+        "whyWrong": "별은 중력 수축으로 중심부가 뜨거워져 핵융합이 시작될 때 태어난다. 식어서 굳어지는 것이 아니다."
+      },
+      {
+        "text": "별의 크기가 변하지 않는 것은 별에 아무 힘도 작용하지 않기 때문이다",
+        "whyWrong": "안으로 당기는 중력과 밖으로 미는 내부 압력이 서로 맞서 균형을 이루기 때문이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-big-bang-nucleosynthesis"
+      },
+      {
+        "type": "next",
+        "target": "isci1-stellar-nuclear-fusion"
+      },
+      {
+        "type": "related",
+        "target": "isci1-solar-system-formation"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "태양계와 생명체를 이루는 원소의 형성",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-05.png",
+        "caption": "그림 Ⅱ-5 독수리성운에 있는 창조의 기둥",
+        "restricted": true,
+        "kind": "photo"
+      },
+      {
+        "file": "isci1-2-fig-06.png",
+        "caption": "그림 Ⅱ-6 별의 탄생",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-stellar-nuclear-fusion",
+    "term": "별 내부의 핵융합 반응",
+    "aliases": [
+      "수소 핵융합 반응",
+      "헬륨 핵융합 반응"
+    ],
+    "hanja": null,
+    "english": "nuclear fusion in stars",
+    "definition": "별 중심부에서 가벼운 원자핵들이 합쳐져 더 무거운 원자핵과 에너지를 내놓는 반응. 수소 핵융합에서 시작해 단계가 이어진다.",
+    "relations": [
+      {
+        "id": "rel-fusion-stage",
+        "text": "중심부의 연료를 다 쓰면 중심부가 수축해 온도가 더 올라가고, 그 온도에 이르러야 다음 단계의 핵융합이 시작된다.",
+        "condition": "앞 단계의 핵융합이 끝나 중심부가 수축할 때",
+        "scope": "별 중심부에서 일어나는 핵융합의 단계 전환에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-fusion-mass-limit",
+        "text": "별의 질량이 클수록 중심부에서 더 무거운 원소까지 만들 수 있으나, 별 내부 핵융합의 마지막 산물은 철이다.",
+        "condition": "별이 진화 과정을 밟아 가는 동안",
+        "scope": "별 내부의 핵융합에 한함 — 철보다 무거운 원소는 여기서 만들어지지 않는다",
+        "invertible": true,
+        "invertedText": "별의 질량이 클수록 중심부에서는 가벼운 원소까지만 만들어진다."
+      },
+      {
+        "id": "rel-fusion-sun",
+        "text": "태양 정도 질량의 별은 중심부에서 탄소를 만든 뒤 더 이상 핵융합을 이어 가지 못한다.",
+        "condition": "별의 질량이 태양과 비슷할 때",
+        "scope": "태양 정도 질량의 별에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "별 안에서는 핵융합으로 금이나 우라늄 같은 원소도 만들어진다",
+        "whyWrong": "별 내부 핵융합으로 만들어지는 것은 철까지다. 철보다 무거운 원소는 초신성 폭발의 엄청난 에너지로 만들어진다."
+      },
+      {
+        "text": "모든 별은 시간이 지나면 중심부에서 철까지 만든다",
+        "whyWrong": "태양 정도 질량의 별은 탄소를 만들고 핵융합을 마친다. 철까지 만들려면 태양보다 훨씬 큰 질량이 필요하다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-star-formation"
+      },
+      {
+        "type": "next",
+        "target": "isci1-supernova-nucleosynthesis"
+      },
+      {
+        "type": "related",
+        "target": "isci1-big-bang-nucleosynthesis"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "태양계와 생명체를 이루는 원소의 형성",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-07.png",
+        "caption": "그림 Ⅱ-7 별에서 다양한 원소가 생기는 과정",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-supernova-nucleosynthesis",
+    "term": "초신성 폭발과 무거운 원소의 생성",
+    "aliases": [
+      "초신성 폭발"
+    ],
+    "hanja": null,
+    "english": "supernova nucleosynthesis",
+    "definition": "질량이 큰 별이 핵융합을 마치며 터질 때 나오는 막대한 에너지로 철보다 무거운 원소가 만들어지고 우주로 흩어지는 일.",
+    "relations": [
+      {
+        "id": "rel-sn-heavy",
+        "text": "초신성이 터지는 몇 초 사이에 쏟아진 에너지가 구리·금·우라늄처럼 철보다 무거운 원소를 만들어 낸다.",
+        "condition": "질량이 큰 별이 핵융합을 끝내고 폭발할 때",
+        "scope": "철보다 무거운 원소가 만들어지는 경로에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-sn-mass",
+        "text": "별의 최후는 질량이 가른다. 태양 정도의 별은 외곽 물질을 흘려보내며 마치고, 훨씬 무거운 별은 초신성으로 터진다.",
+        "condition": "별이 핵융합을 마칠 때",
+        "scope": "별의 최후 단계에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-sn-seed",
+        "text": "별들이 일생을 마치며 뿜어낸 원소가 우주에 쌓였고, 그것이 뒤에 생겨난 태양계와 지구, 생명체의 재료가 되었다.",
+        "condition": "태양계가 만들어지기 전 우주에 이미 무거운 원소가 퍼져 있었을 때",
+        "scope": "태양계의 재료가 된 원소의 유래를 설명하는 데 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "초신성 폭발은 별이 사라지는 사건일 뿐 원소 생성과는 관계가 없다",
+        "whyWrong": "폭발할 때 나온 에너지가 철보다 무거운 원소를 만들고, 별이 품고 있던 원소를 우주로 퍼뜨린다."
+      },
+      {
+        "text": "모든 별은 마지막에 초신성 폭발을 일으킨다",
+        "whyWrong": "초신성 폭발은 질량이 아주 큰 별의 최후다. 태양 정도의 별은 외곽 물질을 우주로 내보내며 일생을 마친다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-stellar-nuclear-fusion"
+      },
+      {
+        "type": "next",
+        "target": "isci1-solar-system-formation"
+      },
+      {
+        "type": "related",
+        "target": "isci1-elemental-composition-of-the-universe"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 우주와 원소의 생성",
+    "topic": "태양계와 생명체를 이루는 원소의 형성",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-1-02",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "media": []
+  },
+  {
+    "id": "isci1-electron-shell",
+    "term": "전자 껍질",
+    "aliases": [],
+    "hanja": null,
+    "english": "electron shell",
+    "definition": "원자핵 둘레에서 전자가 자리할 수 있는, 특정한 에너지를 갖는 궤도. 안쪽 껍질부터 차례로 채워진다.",
+    "relations": [
+      {
+        "id": "rel-shell-order",
+        "text": "전자는 원자핵에 가까운 껍질부터 차례로 채워지며, 안쪽이 다 차야 그다음 껍질에 들어간다.",
+        "condition": "바닥상태 원자의 전자 배치를 볼 때",
+        "scope": "원자 번호 20까지의 원자에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-shell-capacity",
+        "text": "껍질마다 받아들일 수 있는 전자 수에 한계가 있어 첫 번째 껍질에는 2개, 두 번째 껍질에는 8개까지 들어간다.",
+        "condition": "원자 번호 20까지의 원자를 볼 때",
+        "scope": "첫 번째와 두 번째 전자 껍질에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-shell-period",
+        "text": "전자가 들어 있는 껍질이 몇 겹인가가 그 원소가 주기율표에서 놓이는 주기를 정한다.",
+        "condition": "바닥상태 원자의 전자 배치를 알 때",
+        "scope": "주기율표에서의 가로 위치를 정하는 데 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "전자는 원자핵에서 먼 껍질부터 채워진다",
+        "whyWrong": "전자는 에너지가 낮은 안쪽 껍질부터 차례로 채워진다."
+      },
+      {
+        "text": "전자 껍질에는 전자가 몇 개든 들어갈 수 있다",
+        "whyWrong": "껍질마다 최대 수용 전자 수가 정해져 있다. 첫 번째 껍질은 2개, 두 번째 껍질은 8개다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "isci1-periodic-table-period"
+      },
+      {
+        "type": "next",
+        "target": "isci1-valence-electron"
+      },
+      {
+        "type": "related",
+        "target": "isci1-periodic-table"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "원소의 규칙성과 주기율표",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-12.png",
+        "caption": "그림 Ⅱ-12 원자의 구조",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-periodic-table",
+    "term": "주기율표",
+    "aliases": [],
+    "hanja": "週期律表",
+    "english": "periodic table",
+    "definition": "원소를 원자 번호 순으로 늘어놓되 성질이 비슷한 원소가 같은 세로줄에 오도록 정리한 표.",
+    "relations": [
+      {
+        "id": "rel-pt-arrange",
+        "text": "현대의 주기율표는 양성자수인 원자 번호를 기준으로 원소를 늘어놓으면서 성질이 닮은 것끼리 세로로 모이게 한 것이다.",
+        "condition": "원소를 원자 번호 순으로 늘어놓을 때",
+        "scope": "현대의 주기율표에 한함 — 원자량 순으로 늘어놓던 초기의 표와는 기준이 다르다",
+        "invertible": false
+      },
+      {
+        "id": "rel-pt-rowcol",
+        "text": "주기율표에서 가로줄은 주기, 세로줄은 족이라고 부른다.",
+        "condition": "주기율표의 줄을 이름으로 가리킬 때",
+        "scope": "주기율표의 이름 규칙에 한함",
+        "invertible": true,
+        "invertedText": "주기율표에서 가로줄은 족, 세로줄은 주기라고 부른다."
+      },
+      {
+        "id": "rel-pt-metal-side",
+        "text": "금속 원소가 주로 자리하는 쪽은 주기율표의 왼쪽이고, 비금속 원소가 몰려 있는 쪽은 오른쪽이다.",
+        "condition": "주기율표에서 원소가 놓인 자리를 볼 때",
+        "scope": "대체적인 위치에 한함 — 수소는 왼쪽 끝에 있으나 비금속이다",
+        "invertible": true,
+        "invertedText": "금속 원소가 주로 자리하는 쪽은 주기율표의 오른쪽이고, 비금속 원소가 몰려 있는 쪽은 왼쪽이다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "주기율표는 원소를 가벼운 원자량 순서대로 늘어놓은 표다",
+        "whyWrong": "현대의 주기율표는 양성자수인 원자 번호 순으로 배열한다."
+      },
+      {
+        "text": "주기율표의 세로줄이 주기이고 가로줄이 족이다",
+        "whyWrong": "가로줄이 주기, 세로줄이 족이다. 성질이 비슷한 원소가 같은 세로줄에 모인다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "isci1-periodic-table-period"
+      },
+      {
+        "type": "next",
+        "target": "isci1-periodic-table-group"
+      },
+      {
+        "type": "next",
+        "target": "isci1-periodicity-of-element"
+      },
+      {
+        "type": "next",
+        "target": "isci1-metal-and-nonmetal-element"
+      },
+      {
+        "type": "related",
+        "target": "isci1-electron-shell"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "원소의 규칙성과 주기율표",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "週 돌 주 · 期 기약할 기 · 律 법칙 률 · 表 겉 표",
+    "media": [
+      {
+        "file": "isci1-2-fig-09.png",
+        "caption": "그림 Ⅱ-9 현대의 주기율표",
+        "restricted": true,
+        "kind": "table"
+      }
+    ]
+  },
+  {
+    "id": "isci1-periodic-table-group",
+    "term": "족",
+    "aliases": [
+      "주기율표의 세로줄"
+    ],
+    "hanja": "族",
+    "english": "group (periodic table)",
+    "definition": "주기율표의 세로줄. 같은 세로줄에 놓인 원소들은 원자가 전자 수가 같아 화학적 성질이 서로 비슷하다.",
+    "relations": [
+      {
+        "id": "rel-group-valence",
+        "text": "같은 족에 속한 원소들은 원자가 전자 수가 서로 같다. 1족은 1개, 17족은 7개다.",
+        "condition": "1·2족과 13~17족의 주족 원소를 볼 때",
+        "scope": "주족 원소에 한함 — 전이 원소에는 이 규칙을 그대로 적용하지 않는다",
+        "invertible": false
+      },
+      {
+        "id": "rel-group-property",
+        "text": "원자가 전자 수가 같기 때문에 같은 족 원소들은 화학적 성질이 서로 닮는다.",
+        "condition": "같은 족에 속한 원소끼리 견줄 때",
+        "scope": "주족 원소의 화학적 성질에 한함 — 녹는점 같은 물리적 성질까지 같아지지는 않는다",
+        "invertible": false
+      },
+      {
+        "id": "rel-group-example",
+        "text": "1족의 리튬·소듐·포타슘은 모두 무르고 반응성이 커서 실온에서도 물과 격렬하게 반응한다.",
+        "condition": "1족 금속 원소를 견줄 때",
+        "scope": "1족 금속 원소에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "같은 족 원소끼리 성질이 비슷한 것은 원자 번호가 이어져 있기 때문이다",
+        "whyWrong": "같은 족 원소는 원자 번호가 멀리 떨어져 있다. 성질이 닮는 까닭은 원자가 전자 수가 같아서다."
+      },
+      {
+        "text": "리튬·소듐·포타슘은 금속이므로 물에 넣어도 아무 변화가 없다",
+        "whyWrong": "1족 금속은 반응성이 매우 커서 실온의 물과도 격렬하게 반응한다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-periodic-table"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-valence-electron"
+      },
+      {
+        "type": "related",
+        "target": "isci1-periodic-table-period"
+      },
+      {
+        "type": "related",
+        "target": "isci1-periodicity-of-element"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "원소의 규칙성과 주기율표",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-01",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "族 겨레 족",
+    "media": []
+  },
+  {
+    "id": "isci1-periodic-table-period",
+    "term": "주기",
+    "aliases": [
+      "주기율표의 가로줄"
+    ],
+    "hanja": "週期",
+    "english": "period (periodic table)",
+    "definition": "주기율표의 가로줄. 같은 가로줄에 놓인 원소들은 전자가 채워진 전자 껍질 수가 서로 같다.",
+    "relations": [
+      {
+        "id": "rel-period-shell",
+        "text": "같은 주기에 속한 원소들은 전자가 들어 있는 전자 껍질 수가 같으며, 주기의 번호가 곧 그 껍질 수다.",
+        "condition": "바닥상태 원자의 전자 배치를 볼 때",
+        "scope": "원자 번호 20까지의 원소에 한함",
+        "invertible": true,
+        "invertedText": "같은 주기에 속한 원소들은 주기의 번호가 커질수록 전자 껍질 수가 줄어든다."
+      },
+      {
+        "id": "rel-period-vs-group",
+        "text": "같은 주기라도 원자가 전자 수는 원소마다 달라서 화학적 성질까지 비슷해지지는 않는다.",
+        "condition": "같은 가로줄에 놓인 원소들을 견줄 때",
+        "scope": "같은 주기 안에서 견줄 때에 한함 — 성질이 닮는 것은 같은 족이다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "주기는 진동이나 파동이 한 번 되풀이되는 데 걸리는 시간을 뜻한다",
+        "whyWrong": "그것은 물리에서 쓰는 다른 개념이다. 주기율표의 주기는 시간이 아니라 원소가 놓인 가로줄을 가리킨다. 표기만 같을 뿐 두 개념은 서로 관계가 없다."
+      },
+      {
+        "text": "같은 주기에 있는 원소들은 화학적 성질이 비슷하다",
+        "whyWrong": "성질이 닮는 것은 같은 족이다. 같은 주기는 전자 껍질 수만 같고 원자가 전자 수는 서로 다르다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-periodic-table"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-electron-shell"
+      },
+      {
+        "type": "related",
+        "target": "isci1-periodic-table-group",
+        "note": "'주기'는 물리의 진동 주기와 표기가 같은 동음이의어다 (homonyms.yaml). 링크는 concept_key 로만 걸고, 뜻이 갈리는 자리에서는 '주기율표의 가로줄'인지 확인한다."
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "원소의 규칙성과 주기율표",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-01",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "週 돌 주 · 期 기약할 기",
+    "media": []
+  },
+  {
+    "id": "isci1-periodicity-of-element",
+    "term": "원소의 주기성",
+    "aliases": [
+      "원소의 주기적 성질"
+    ],
+    "hanja": "元素週期性",
+    "english": "periodicity of elements",
+    "definition": "원소를 원자 번호 순으로 늘어놓았을 때 비슷한 성질이 일정한 간격을 두고 되풀이되어 나타나는 규칙성.",
+    "relations": [
+      {
+        "id": "rel-periodicity-cause",
+        "text": "성질이 되풀이되는 까닭은 원자 번호가 커질 때 가장 바깥 껍질의 전자 배치가 같은 꼴로 되돌아오기 때문이다.",
+        "condition": "원소를 원자 번호 순으로 늘어놓았을 때",
+        "scope": "전자 배치로 설명되는 화학적 성질에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-periodicity-table",
+        "text": "주기율표는 원소의 성질에서 먼저 찾아낸 주기성을 눈에 보이게 정리한 결과물이다.",
+        "condition": "발견된 주기성을 표로 옮길 때",
+        "scope": "주기율표가 만들어진 내력을 설명하는 데 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-periodicity-nature",
+        "text": "태양의 흑점 수나 달의 위상처럼 자연에는 되풀이되는 규칙성이 있으며, 원소의 주기성도 그런 규칙성의 하나다.",
+        "condition": "자연 현상에서 규칙성을 찾을 때",
+        "scope": "되풀이된다는 공통점에 한함 — 되풀이가 일어나는 원인까지 같다는 뜻은 아니다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "원소의 성질은 원자 번호가 커질수록 한 방향으로만 계속 변한다",
+        "whyWrong": "성질은 일정한 간격을 두고 비슷한 값으로 되돌아온다. 그래서 주기성이라고 부른다."
+      },
+      {
+        "text": "주기성은 사람이 표를 그렇게 만들어서 생긴 것이다",
+        "whyWrong": "주기성은 원소의 성질에서 먼저 발견된 규칙이고, 주기율표는 그 규칙을 정리한 결과다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-periodic-table"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-valence-electron"
+      },
+      {
+        "type": "related",
+        "target": "isci1-periodic-table-group"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "원소의 규칙성과 주기율표",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "元 으뜸 원 · 素 본디 소 · 週 돌 주 · 期 기약할 기 · 性 성품 성",
+    "media": [
+      {
+        "file": "isci1-2-fig-10.png",
+        "caption": "그림 Ⅱ-10 원소의 공통적인 성질",
+        "restricted": true,
+        "kind": "photo"
+      }
+    ]
+  },
+  {
+    "id": "isci1-valence-electron",
+    "term": "원자가 전자",
+    "aliases": [],
+    "hanja": "原子價電子",
+    "english": "valence electron",
+    "definition": "원자의 가장 바깥 전자 껍질에 놓여 화학 반응과 화학 결합에 직접 참여하는 전자.",
+    "relations": [
+      {
+        "id": "rel-valence-property",
+        "text": "원소의 화학적 성질을 가르는 것은 전자의 총수가 아니라 가장 바깥 껍질에 있는 원자가 전자의 수다.",
+        "condition": "주족 원소의 화학적 성질을 견줄 때",
+        "scope": "화학적 성질에 한함 — 녹는점 같은 물리적 성질까지 정해 주지는 않는다",
+        "invertible": false
+      },
+      {
+        "id": "rel-valence-group",
+        "text": "같은 족에 속한 원소는 원자가 전자 수가 같다. 17족인 플루오린과 염소는 둘 다 7개다.",
+        "condition": "주족 원소를 족별로 볼 때",
+        "scope": "주족 원소에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-valence-bond",
+        "text": "화학 결합에 실제로 관여하는 것은 안쪽 껍질의 전자가 아니라 가장 바깥 껍질의 원자가 전자다.",
+        "condition": "원자가 다른 원자와 결합을 이룰 때",
+        "scope": "화학 결합의 형성에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "원자가 전자는 원자가 가진 전자 전체를 뜻한다",
+        "whyWrong": "가장 바깥 전자 껍질에 있는 전자만 원자가 전자다. 염소는 전자가 17개지만 원자가 전자는 7개다."
+      },
+      {
+        "text": "같은 주기에 있는 원소끼리는 원자가 전자 수가 같다",
+        "whyWrong": "같은 주기는 전자 껍질 수가 같을 뿐이다. 원자가 전자 수가 같은 것은 같은 족이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-electron-shell"
+      },
+      {
+        "type": "next",
+        "target": "isci1-periodic-table-group"
+      },
+      {
+        "type": "next",
+        "target": "isci1-periodicity-of-element"
+      },
+      {
+        "type": "next",
+        "target": "isci1-stable-electron-configuration"
+      },
+      {
+        "type": "next",
+        "target": "isci1-carbon-atom-bonding"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "원소의 규칙성과 주기율표",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "原 근원 원 · 子 아들 자 · 價 값 가 · 電 번개 전 · 子 아들 자",
+    "media": [
+      {
+        "file": "isci1-2-fig-13.png",
+        "caption": "그림 Ⅱ-13 염소 원자의 원자 모형",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-chemical-bond",
+    "term": "화학 결합",
+    "aliases": [],
+    "hanja": "化學結合",
+    "english": "chemical bond",
+    "definition": "원자들이 안정한 전자 배치에 이르려고 전자를 주고받거나 함께 쓰면서 서로 이어지는 일. 물질이 만들어지는 바탕이다.",
+    "relations": [
+      {
+        "id": "rel-bond-why",
+        "text": "원자들이 결합을 이루는 까닭은 홀로 있을 때보다 안정한 전자 배치에 가까워지기 때문이다.",
+        "condition": "18족이 아닌 원자들이 서로 만날 때",
+        "scope": "고등학교에서 다루는 화학 결합 모형에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-bond-kind",
+        "text": "전자를 주고받으며 이어지면 이온 결합, 전자쌍을 함께 쓰며 이어지면 공유 결합이 된다.",
+        "condition": "결합을 이룰 때 전자를 다루는 방식에 따라",
+        "scope": "이온 결합과 공유 결합의 구분에 한함",
+        "invertible": true,
+        "invertedText": "전자를 주고받으며 이어지면 공유 결합, 전자쌍을 함께 쓰며 이어지면 이온 결합이 된다."
+      },
+      {
+        "id": "rel-bond-variety",
+        "text": "원소는 100여 종뿐이지만 결합하는 상대와 방식이 다양해 만들어지는 물질의 종류는 헤아리기 어려울 만큼 많다.",
+        "condition": "적은 수의 원소로 많은 물질이 생기는 까닭을 물을 때",
+        "scope": "물질의 다양성을 설명하는 데 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물질의 종류가 많은 것은 원소의 종류가 그만큼 많기 때문이다",
+        "whyWrong": "원소는 100여 종뿐이다. 같은 원소라도 결합하는 상대와 방식이 달라지면 다른 물질이 된다."
+      },
+      {
+        "text": "원자는 결합을 하면 오히려 불안정해진다",
+        "whyWrong": "결합은 안정한 전자 배치에 가까워지려고 일어난다. 결합한 상태가 더 안정하다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-stable-electron-configuration"
+      },
+      {
+        "type": "next",
+        "target": "isci1-ionic-bond"
+      },
+      {
+        "type": "next",
+        "target": "isci1-covalent-bond"
+      },
+      {
+        "type": "related",
+        "target": "isci1-metal-and-nonmetal-element"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합의 형성과 종류",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-02",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "化 될 화 · 學 배울 학 · 結 맺을 결 · 合 합할 합",
+    "media": []
+  },
+  {
+    "id": "isci1-covalent-bond",
+    "term": "공유 결합",
+    "aliases": [],
+    "hanja": "共有結合",
+    "english": "covalent bond",
+    "definition": "비금속 원자들이 전자를 하나씩 내놓아 만든 전자쌍을 함께 쓰면서 이루어지는 화학 결합.",
+    "relations": [
+      {
+        "id": "rel-cov-pair",
+        "text": "수소 원자 둘이 전자를 1개씩 내놓아 전자쌍 하나를 함께 쓰면 각 원자는 헬륨과 같은 전자 배치를 갖게 된다.",
+        "condition": "두 비금속 원자가 전자를 내놓아 짝을 지을 때",
+        "scope": "수소 분자가 만들어지는 과정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cov-count",
+        "text": "함께 쓰는 전자쌍의 수는 분자마다 다르다. 산소 분자는 전자쌍 2개를, 물 분자는 산소가 수소 각각과 1개씩을 공유한다.",
+        "condition": "분자를 이루는 원자들의 원자가 전자 수에 따라",
+        "scope": "산소 분자와 물 분자의 사례에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cov-partner",
+        "text": "공유 결합은 서로 전자를 얻으려는 비금속 원소들 사이에서 형성된다.",
+        "condition": "비금속 원자끼리 만날 때",
+        "scope": "공유 결합에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "공유 결합에서는 한쪽 원자가 전자를 완전히 내주고 다른 쪽이 가져간다",
+        "whyWrong": "공유 결합은 두 원자가 전자쌍을 함께 쓰는 결합이다. 전자를 완전히 넘기는 것은 이온 결합이다."
+      },
+      {
+        "text": "물 분자에서 산소는 수소와 전자쌍을 2개씩 공유한다",
+        "whyWrong": "산소는 수소 각각과 전자쌍을 1개씩 공유한다. 전자쌍을 2개 공유하는 것은 산소 분자다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-chemical-bond"
+      },
+      {
+        "type": "next",
+        "target": "isci1-property-of-covalent-compound"
+      },
+      {
+        "type": "next",
+        "target": "isci1-silicate-tetrahedron"
+      },
+      {
+        "type": "next",
+        "target": "isci1-carbon-atom-bonding"
+      },
+      {
+        "type": "next",
+        "target": "isci1-semiconductor"
+      },
+      {
+        "type": "related",
+        "target": "isci1-ionic-bond"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합의 형성과 종류",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 合 합할 합",
+    "media": [
+      {
+        "file": "isci1-2-fig-16.png",
+        "caption": "그림 Ⅱ-16 수소 분자의 공유 결합 형성",
+        "restricted": true,
+        "kind": "diagram"
+      },
+      {
+        "file": "isci1-2-fig-17.png",
+        "caption": "그림 Ⅱ-17 산소 분자의 공유 결합 형성",
+        "restricted": true,
+        "kind": "diagram"
+      },
+      {
+        "file": "isci1-2-fig-18.png",
+        "caption": "그림 Ⅱ-18 물 분자의 공유 결합 형성",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-ionic-bond",
+    "term": "이온 결합",
+    "aliases": [],
+    "hanja": null,
+    "english": "ionic bond",
+    "definition": "전자를 내준 양이온과 전자를 받은 음이온 사이에 작용하는 정전기적 인력으로 이루어지는 화학 결합.",
+    "relations": [
+      {
+        "id": "rel-ionic-transfer",
+        "text": "소듐 원자가 전자 1개를 내주고 염소 원자가 그 전자를 받으면 각각 양이온과 음이온이 되어 서로 끌어당긴다.",
+        "condition": "금속 원자와 비금속 원자가 만나 전자가 옮겨 갈 때",
+        "scope": "염화 소듐이 만들어지는 과정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-ionic-partner",
+        "text": "이온 결합은 전자를 내주는 금속 원소와 전자를 받는 비금속 원소 사이에서 형성된다.",
+        "condition": "두 원소가 결합을 이룰 때",
+        "scope": "이온 결합에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-ionic-ratio",
+        "text": "화합물은 전기적으로 중성이어야 하므로 양이온의 전하량이 클수록 짝지어지는 음이온의 개수가 늘어난다.",
+        "condition": "화합물 전체의 전하 합이 0이 되어야 할 때",
+        "scope": "음이온의 전하량이 같은 경우에 한함 — 양이온 하나를 기준으로 셀 때",
+        "invertible": true,
+        "invertedText": "양이온의 전하량이 클수록 짝지어지는 음이온의 개수는 줄어든다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "염화 소듐은 소듐과 염소가 전자쌍을 함께 쓰면서 만들어진다",
+        "whyWrong": "소듐은 전자를 잃고 염소는 전자를 얻어 이온이 된 뒤 정전기적 인력으로 결합한다. 전자쌍을 함께 쓰는 것은 공유 결합이다."
+      },
+      {
+        "text": "이온 결합 화합물에서 양이온과 음이온은 언제나 1 : 1로 결합한다",
+        "whyWrong": "전체 전하가 0이 되도록 개수비가 정해진다. 칼슘 이온과 염화 이온은 1 : 2로 결합한다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-chemical-bond"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-metal-and-nonmetal-element"
+      },
+      {
+        "type": "next",
+        "target": "isci1-property-of-ionic-compound"
+      },
+      {
+        "type": "related",
+        "target": "isci1-covalent-bond"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합의 형성과 종류",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-14.png",
+        "caption": "그림 Ⅱ-14 나트륨과 염소의 이온 결합 형성",
+        "restricted": true,
+        "kind": "diagram"
+      },
+      {
+        "file": "isci1-2-fig-15.png",
+        "caption": "그림 Ⅱ-15 칼슘과 염소의 이온 형성",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-metal-and-nonmetal-element",
+    "term": "금속 원소와 비금속 원소",
+    "aliases": [
+      "금속과 비금속"
+    ],
+    "hanja": "金屬元素非金屬元素",
+    "english": "metallic and nonmetallic elements",
+    "definition": "주기율표 왼쪽에 주로 놓여 전자를 잃기 쉬운 원소와, 오른쪽에 주로 놓여 전자를 얻기 쉬운 원소의 구분.",
+    "relations": [
+      {
+        "id": "rel-mn-position",
+        "text": "금속 원소는 주기율표의 왼쪽에, 비금속 원소는 오른쪽에 주로 자리하고 그 사이에 준금속이 놓인다.",
+        "condition": "주기율표에서 원소가 놓인 자리를 볼 때",
+        "scope": "대체적인 위치에 한함 — 수소는 왼쪽 끝에 있으나 비금속이다",
+        "invertible": false
+      },
+      {
+        "id": "rel-mn-ion",
+        "text": "양이온이 되기 쉬운 쪽은 전자를 내주는 금속 원자이고, 음이온이 되기 쉬운 쪽은 전자를 받아들이는 비금속 원자다.",
+        "condition": "원자가 안정한 전자 배치를 이루려 할 때",
+        "scope": "이온을 만드는 일반적인 경향에 한함",
+        "invertible": true,
+        "invertedText": "양이온이 되기 쉬운 쪽은 전자를 받아들이는 비금속 원자이고, 음이온이 되기 쉬운 쪽은 전자를 내주는 금속 원자다."
+      },
+      {
+        "id": "rel-mn-bondtype",
+        "text": "금속 원소와 비금속 원소가 만나면 이온 결합이, 비금속 원소끼리 만나면 공유 결합이 형성된다.",
+        "condition": "두 원소가 화학 결합을 이룰 때",
+        "scope": "이온 결합과 공유 결합을 견주는 범위에 한함 — 금속끼리 이루는 결합은 여기에 들어가지 않는다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "비금속 원소도 금속처럼 전자를 잃어 양이온이 되기 쉽다",
+        "whyWrong": "비금속 원자는 전자를 얻어 음이온이 되기 쉽다. 그래야 안정한 전자 배치에 가까워진다."
+      },
+      {
+        "text": "금속 원소끼리 만나면 이온 결합을 이룬다",
+        "whyWrong": "이온 결합은 전자를 내주는 금속과 받는 비금속 사이에서 생긴다. 금속끼리는 서로 전자를 주고받을 상대가 되지 못한다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-periodic-table"
+      },
+      {
+        "type": "next",
+        "target": "isci1-ionic-bond"
+      },
+      {
+        "type": "related",
+        "target": "isci1-valence-electron"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합의 형성과 종류",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "金 쇠 금 · 屬 무리 속 · 元 으뜸 원 · 素 본디 소 · 非 아닐 비 · 金 쇠 금 · 屬 무리 속 · 元 으뜸 원 · 素 본디 소",
+    "media": [
+      {
+        "file": "isci1-2-fig-11.png",
+        "caption": "그림 Ⅱ-11 염소와 나트륨의 반응",
+        "restricted": true,
+        "kind": "photo"
+      }
+    ]
+  },
+  {
+    "id": "isci1-stable-electron-configuration",
+    "term": "안정한 전자 배치",
+    "aliases": [
+      "18족 원소의 전자 배치"
+    ],
+    "hanja": null,
+    "english": "stable electron configuration",
+    "definition": "가장 바깥 전자 껍질이 전자로 꽉 찬 상태. 18족 원소가 이미 지닌 배치로, 다른 원소들이 이르려는 목표가 된다.",
+    "relations": [
+      {
+        "id": "rel-stable-18",
+        "text": "헬륨을 뺀 18족 원소는 가장 바깥 껍질에 전자 8개가 채워져 있어 다른 원소와 좀처럼 반응하지 않는다.",
+        "condition": "18족 원소의 전자 배치를 볼 때",
+        "scope": "18족 원소에 한함 — 헬륨은 첫 번째 껍질의 전자 2개만으로 이미 안정하다",
+        "invertible": false
+      },
+      {
+        "id": "rel-stable-goal",
+        "text": "18족이 아닌 원소들은 전자를 잃거나 얻거나 공유해 18족과 같은 전자 배치에 이르려 한다.",
+        "condition": "18족이 아닌 원자가 다른 원자와 만날 때",
+        "scope": "고등학교에서 다루는 화학 결합 모형에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-stable-reactivity",
+        "text": "가장 바깥 전자 껍질이 최대 전자 수로 완전히 채워진 원소는 화학적으로 안정해 거의 반응하지 않는다.",
+        "condition": "가장 바깥 껍질이 최대 전자 수로 채워졌을 때",
+        "scope": "완전히 채워진 배치에 한함 — 염소처럼 하나가 모자란 배치는 오히려 반응성이 크다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "가장 바깥 껍질에 전자가 많을수록 반응성이 작다",
+        "whyWrong": "완전히 채워졌을 때만 안정하다. 염소처럼 8개에서 하나 모자란 원소는 오히려 반응성이 매우 크다."
+      },
+      {
+        "text": "헬륨도 가장 바깥 껍질에 전자가 8개라서 안정하다",
+        "whyWrong": "헬륨은 첫 번째 껍질에 전자 2개만 들어가면 그 껍질이 다 차기 때문에 안정하다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-valence-electron"
+      },
+      {
+        "type": "next",
+        "target": "isci1-chemical-bond"
+      },
+      {
+        "type": "related",
+        "target": "isci1-periodic-table-group"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합의 형성과 종류",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-02",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "media": []
+  },
+  {
+    "id": "isci1-electrical-conductivity",
+    "term": "전기 전도성",
+    "aliases": [
+      "전기 전도도"
+    ],
+    "hanja": "電氣傳導性",
+    "english": "electrical conductivity",
+    "definition": "물질에 전류가 흐르는 성질. 전하를 띤 입자가 물질 안에서 움직일 수 있을 때 나타난다.",
+    "relations": [
+      {
+        "id": "rel-cond-carrier",
+        "text": "전류가 흐르려면 전하를 띤 입자가 있어야 하고, 그 입자가 물질 안에서 자유롭게 움직일 수 있어야 한다.",
+        "condition": "물질의 양 끝에 전압을 걸었을 때",
+        "scope": "전하를 나르는 입자가 전자든 이온이든 아우르는 조건에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cond-state",
+        "text": "같은 물질이라도 고체인지 수용액인지에 따라 전기 전도성이 달라질 수 있다.",
+        "condition": "물질의 상태가 바뀔 때",
+        "scope": "이온 결합 물질처럼 상태에 따라 이온의 이동이 갈리는 물질에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cond-bond",
+        "text": "화학 결합의 종류가 다르면 전기 전도성도 다르게 나타나므로, 전기 전도성은 결합의 종류를 가려내는 단서가 된다.",
+        "condition": "여러 물질에 간이 전기 전도계를 대어 볼 때",
+        "scope": "이온 결합 물질과 공유 결합 물질을 견주는 데 한함 — 금속은 따로 본다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "물에 녹기만 하면 어떤 물질이든 전류가 흐른다",
+        "whyWrong": "물에 녹아도 전하를 띤 이온으로 나뉘지 않으면 전류는 흐르지 않는다. 설탕물이 그렇다."
+      },
+      {
+        "text": "순수한 물은 전류를 잘 흘린다",
+        "whyWrong": "증류수에는 전하를 나를 이온이 거의 없어 전류가 거의 흐르지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "isci1-property-of-ionic-compound"
+      },
+      {
+        "type": "next",
+        "target": "isci1-property-of-covalent-compound"
+      },
+      {
+        "type": "next",
+        "target": "isci1-electrical-conductor"
+      },
+      {
+        "type": "next",
+        "target": "isci1-electrical-insulator"
+      },
+      {
+        "type": "related",
+        "target": "isci1-free-electron"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합에 따른 물질의 성질",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-03",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "電 번개 전 · 氣 기운 기 · 傳 전할 전 · 導 이끌 도 · 性 성품 성",
+    "media": [
+      {
+        "file": "isci1-2-fig-19.png",
+        "caption": "그림 Ⅱ-19 염화 나트륨의 전기 전도성",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-property-of-covalent-compound",
+    "term": "공유 결합 물질의 성질",
+    "aliases": [
+      "공유 결합 물질의 전기 전도성"
+    ],
+    "hanja": "共有結合物質性質",
+    "english": "properties of covalent compounds",
+    "definition": "원자들이 전자쌍을 함께 써서 만들어진 물질이 보이는 성질. 물에 녹아도 중성 분자로 있어 전류가 흐르지 않는다.",
+    "relations": [
+      {
+        "id": "rel-pcc-neutral",
+        "text": "설탕이나 포도당을 물에 녹이면 이온으로 나뉘지 않고 전기적으로 중성인 분자 그대로 흩어진다.",
+        "condition": "공유 결합 물질을 물에 녹였을 때",
+        "scope": "설탕·포도당처럼 물에서 이온화하지 않는 공유 결합 물질에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-pcc-nocurrent",
+        "text": "전하를 나를 이온이 없으므로 고체일 때나 수용액일 때나 전류가 흐르지 않는다.",
+        "condition": "공유 결합 물질에 전압을 걸었을 때",
+        "scope": "물에서 이온화하지 않는 공유 결합 물질에 한함 — 염화 수소처럼 물에서 이온으로 나뉘는 예외가 있다",
+        "invertible": false
+      },
+      {
+        "id": "rel-pcc-compare",
+        "text": "수용액에서 이온 결합 물질은 전류가 흐르고 공유 결합 물질은 흐르지 않는다는 점이 둘을 가른다.",
+        "condition": "두 물질을 같은 수용액 상태에서 견줄 때",
+        "scope": "간이 전기 전도계로 견주는 범위에 한함",
+        "invertible": true,
+        "invertedText": "수용액에서 이온 결합 물질은 전류가 흐르지 않고 공유 결합 물질은 전류가 흐른다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "설탕물에 전류가 흐르지 않는 것은 설탕이 물에 녹지 않기 때문이다",
+        "whyWrong": "설탕은 물에 잘 녹는다. 다만 이온이 아니라 중성 분자로 녹아 전하를 나를 입자가 생기지 않는다."
+      },
+      {
+        "text": "공유 결합 물질도 물에 녹으면 이온으로 나뉘어 전류가 흐른다",
+        "whyWrong": "설탕과 포도당은 녹아도 분자 그대로 있어 수용액에서도 전류가 흐르지 않는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-covalent-bond"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-electrical-conductivity"
+      },
+      {
+        "type": "related",
+        "target": "isci1-property-of-ionic-compound"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합에 따른 물질의 성질",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-03",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 合 합할 합 · 物 물건 물 · 質 바탕 질 · 性 성품 성 · 質 바탕 질",
+    "media": [
+      {
+        "file": "isci1-2-fig-20.png",
+        "caption": "그림 Ⅱ-20 설탕의 전기 전도성",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-property-of-ionic-compound",
+    "term": "이온 결합 물질의 성질",
+    "aliases": [
+      "이온 결합 물질의 전기 전도성"
+    ],
+    "hanja": null,
+    "english": "properties of ionic compounds",
+    "definition": "양이온과 음이온이 정전기적 인력으로 이어진 물질이 보이는 성질. 고체에서는 전류가 흐르지 않고 수용액에서는 흐른다.",
+    "relations": [
+      {
+        "id": "rel-pic-solid",
+        "text": "고체 상태에서는 이온들이 제자리에 붙들려 움직이지 못하므로 전류가 흐르지 않는다.",
+        "condition": "이온 결합 물질이 고체 상태일 때",
+        "scope": "고체 상태에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-pic-aqueous",
+        "text": "물에 녹으면 양이온과 음이온으로 나뉘어 자유롭게 움직일 수 있게 되므로 전류가 흐른다.",
+        "condition": "이온 결합 물질을 물에 녹였을 때",
+        "scope": "수용액 상태에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-pic-example",
+        "text": "염화 소듐과 염화 칼슘은 고체일 때는 전류가 흐르지 않지만 물에 녹이면 전류가 흐른다.",
+        "condition": "간이 전기 전도계로 상태를 바꾸어 견줄 때",
+        "scope": "염화 소듐·염화 칼슘 같은 이온 결합 물질에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "이온 결합 물질은 어떤 상태에서든 전류가 잘 흐른다",
+        "whyWrong": "고체일 때는 이온이 움직이지 못해 전류가 흐르지 않는다. 물에 녹아 이온이 흩어져야 흐른다."
+      },
+      {
+        "text": "염화 소듐 수용액에 전류가 흐르는 것은 물이 전기를 잘 통하기 때문이다",
+        "whyWrong": "증류수에는 전류가 거의 흐르지 않는다. 녹아 나온 소듐 이온과 염화 이온이 움직이기 때문에 흐른다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-ionic-bond"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-electrical-conductivity"
+      },
+      {
+        "type": "related",
+        "target": "isci1-property-of-covalent-compound"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 원소의 규칙성과 결합",
+    "topic": "화학 결합에 따른 물질의 성질",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-2-03",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-19.png",
+        "caption": "그림 Ⅱ-19 염화 나트륨의 전기 전도성",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-amino-acid",
+    "term": "아미노산",
+    "aliases": [],
+    "hanja": null,
+    "english": "amino acid",
+    "definition": "탄소를 중심으로 질소·수소·산소가 결합한 기본 구조를 갖는, 단백질의 단위체.",
+    "relations": [
+      {
+        "id": "rel-aa-kind",
+        "text": "기본 구조는 모두 같고 거기에 어떤 물질이 결합하는지에 따라 아미노산의 종류가 갈린다.",
+        "condition": "아미노산의 기본 구조가 같을 때",
+        "scope": "생명체에서 단백질을 이루는 20여 가지 아미노산에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-aa-peptide",
+        "text": "아미노산끼리는 공유 결합의 하나인 펩타이드 결합으로 이어져 긴 사슬인 폴리펩타이드를 이룬다.",
+        "condition": "아미노산이 여럿 이어질 때",
+        "scope": "단백질이 만들어지는 과정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-aa-combination",
+        "text": "단위체가 20여 가지뿐이어도 이어지는 순서와 개수가 달라지면 만들 수 있는 단백질의 수는 엄청나게 늘어난다.",
+        "condition": "같은 단위체를 여러 순서로 이어 붙일 때",
+        "scope": "단백질의 다양성을 설명하는 데 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "단백질의 종류가 많으려면 아미노산의 종류도 그만큼 많아야 한다",
+        "whyWrong": "아미노산은 20여 가지뿐이다. 이어지는 순서와 개수가 달라져 10만 가지가 넘는 단백질이 만들어진다."
+      },
+      {
+        "text": "아미노산은 기본 구조가 저마다 다른 물질들을 묶어 부르는 말이다",
+        "whyWrong": "기본 구조는 모두 같고, 거기에 붙는 부분이 달라 종류가 갈린다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-carbon-compound"
+      },
+      {
+        "type": "next",
+        "target": "isci1-protein"
+      },
+      {
+        "type": "related",
+        "target": "isci1-nucleotide"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-25.png",
+        "caption": "그림 Ⅱ-25 아미노산이 결합하여 이루어지는 단백질",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-carbon-atom-bonding",
+    "term": "탄소 원자의 결합",
+    "aliases": [
+      "탄소의 결합 수"
+    ],
+    "hanja": "炭素原子結合",
+    "english": "bonding of carbon atom",
+    "definition": "원자가 전자가 4개인 탄소가 최대 네 자리까지 공유 결합을 이루는 성질. 탄소끼리도 이어져 여러 골격을 만든다.",
+    "relations": [
+      {
+        "id": "rel-cab-four",
+        "text": "탄소는 원자가 전자가 4개여서 다른 원자와 최대 4개까지 공유 결합을 이룰 수 있다.",
+        "condition": "탄소가 안정한 전자 배치를 이루려 할 때",
+        "scope": "탄소 원자 하나가 이룰 수 있는 결합의 수에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cab-skeleton",
+        "text": "탄소는 탄소끼리도 이어질 수 있어 사슬 모양·고리 모양·가지 모양 같은 여러 골격을 만든다.",
+        "condition": "탄소 원자끼리 결합할 때",
+        "scope": "탄소 골격의 모양에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cab-silicon",
+        "text": "규소도 탄소와 같은 족이라 원자가 전자가 4개이고, 그래서 화학적 성질이 탄소와 비슷하다.",
+        "condition": "주기율표에서 탄소와 같은 족의 원소를 볼 때",
+        "scope": "원자가 전자 수에서 오는 유사성에 한함 — 지구 생명체의 중심 원소는 탄소다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "탄소는 원자가 전자가 4개이므로 서로 다른 4개의 원소하고만 결합한다",
+        "whyWrong": "결합할 자리가 최대 4개라는 뜻이다. 같은 원소와 여러 번 결합할 수도 있고 탄소끼리 이어질 수도 있다."
+      },
+      {
+        "text": "규소는 탄소와 성질이 비슷하니 지구 생명체의 중심 원소도 규소다",
+        "whyWrong": "원자가 전자 수는 같지만 지구 생명체를 이루는 물질의 중심 원소는 탄소다. 규소는 주로 지각의 광물을 이룬다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-valence-electron"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-covalent-bond"
+      },
+      {
+        "type": "next",
+        "target": "isci1-carbon-compound"
+      },
+      {
+        "type": "related",
+        "target": "isci1-silicate-tetrahedron"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "炭 숯 탄 · 素 본디 소 · 原 근원 원 · 子 아들 자 · 結 맺을 결 · 合 합할 합",
+    "media": [
+      {
+        "file": "isci1-2-fig-23.png",
+        "caption": "그림 Ⅱ-23 생명체를 이루는 주요 원소",
+        "restricted": true,
+        "kind": "graph"
+      }
+    ]
+  },
+  {
+    "id": "isci1-carbon-compound",
+    "term": "탄소 화합물",
+    "aliases": [],
+    "hanja": "炭素化合物",
+    "english": "carbon compound",
+    "definition": "탄소 골격에 수소·산소·질소 같은 원소가 결합해 만들어진 화합물. 생명체의 주요 구성 물질이 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-cc-variety",
+        "text": "골격이 같아도 어떤 원소가 어느 자리에 붙느냐에 따라 서로 다른 탄소 화합물이 된다.",
+        "condition": "탄소 골격에 다른 원소가 결합할 때",
+        "scope": "탄소 화합물의 다양성을 설명하는 데 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-cc-life",
+        "text": "단백질·지질·핵산처럼 생명체의 특성을 드러내는 주요 물질은 모두 탄소를 중심에 둔 화합물이다.",
+        "condition": "생명체의 주요 구성 물질을 살필 때",
+        "scope": "생명체의 주요 구성 물질에 한함 — 몸의 많은 부분을 차지하는 물은 여기에 들지 않는다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "생명체를 이루는 물질은 모두 탄소 화합물이다",
+        "whyWrong": "몸의 많은 부분을 차지하는 물에는 탄소가 들어 있지 않다. 탄소 화합물인 것은 단백질·지질·핵산 같은 물질이다."
+      },
+      {
+        "text": "탄소 화합물의 종류가 많은 것은 탄소의 종류가 여러 가지이기 때문이다",
+        "whyWrong": "탄소는 한 가지 원소다. 골격의 모양과 붙는 원소가 달라져 종류가 많아진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-carbon-atom-bonding"
+      },
+      {
+        "type": "next",
+        "target": "isci1-amino-acid"
+      },
+      {
+        "type": "next",
+        "target": "isci1-nucleotide"
+      },
+      {
+        "type": "related",
+        "target": "isci1-protein"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "炭 숯 탄 · 素 본디 소 · 化 될 화 · 合 합할 합 · 物 물건 물",
+    "media": [
+      {
+        "file": "isci1-2-fig-24.png",
+        "caption": "그림 Ⅱ-24 탄소 화합물의 여러 가지 결합 방식",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-nucleic-acid",
+    "term": "핵산",
+    "aliases": [
+      "DNA와 RNA"
+    ],
+    "hanja": "核酸",
+    "english": "nucleic acid",
+    "definition": "뉴클레오타이드가 길게 이어져 만들어진 물질로, 생명체의 유전정보를 저장하고 전달한다. DNA와 RNA가 있다.",
+    "relations": [
+      {
+        "id": "rel-na-info",
+        "text": "뉴클레오타이드가 어떤 순서로 얼마나 길게 이어졌는가에 생명체의 유전정보가 담긴다.",
+        "condition": "폴리뉴클레오타이드의 배열을 읽을 때",
+        "scope": "핵산이 유전정보를 저장하는 방식에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-na-pairing",
+        "text": "DNA에서 아데닌은 언제나 타이민과, 사이토신은 언제나 구아닌과 짝지어 결합한다.",
+        "condition": "두 가닥이 안쪽에서 염기끼리 결합할 때",
+        "scope": "DNA의 염기 짝짓기에 한함",
+        "invertible": true,
+        "invertedText": "DNA에서 아데닌은 언제나 구아닌과, 사이토신은 언제나 타이민과 짝지어 결합한다."
+      },
+      {
+        "id": "rel-na-strand",
+        "text": "DNA는 두 가닥이 꼬인 이중나선이고 RNA는 한 가닥이다.",
+        "condition": "DNA와 RNA의 구조를 견줄 때",
+        "scope": "두 핵산의 가닥 수에 한함",
+        "invertible": true,
+        "invertedText": "DNA는 한 가닥이고 RNA는 두 가닥이 꼬인 이중나선이다."
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "DNA와 RNA는 모두 이중나선 구조다",
+        "whyWrong": "이중나선을 이루는 것은 DNA다. RNA는 단일 가닥으로 이루어진다."
+      },
+      {
+        "text": "유전정보는 뉴클레오타이드의 개수에만 담겨 있다",
+        "whyWrong": "개수뿐 아니라 어떤 순서로 이어졌는지가 정보를 담는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-nucleotide"
+      },
+      {
+        "type": "related",
+        "target": "isci1-protein"
+      },
+      {
+        "type": "related",
+        "target": "isci1-carbon-compound"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "核 씨 핵 · 酸 실 산",
+    "media": [
+      {
+        "file": "isci1-2-fig-27.png",
+        "caption": "그림 Ⅱ-27 DNA와 RNA",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-nucleotide",
+    "term": "뉴클레오타이드",
+    "aliases": [
+      "뉴클레오티드"
+    ],
+    "hanja": null,
+    "english": "nucleotide",
+    "definition": "인산과 당, 염기가 1 : 1 : 1로 결합해 이루어진 핵산의 단위체.",
+    "relations": [
+      {
+        "id": "rel-nt-base",
+        "text": "인산과 당은 공통이고 염기가 무엇이냐에 따라 뉴클레오타이드의 종류가 갈린다.",
+        "condition": "한 종류의 핵산을 이루는 단위체끼리 견줄 때",
+        "scope": "같은 핵산 안에서 견줄 때에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-nt-sugar",
+        "text": "DNA와 RNA는 단위체에 든 당의 종류가 다르고, 타이민 대신 유라실을 갖는 쪽이 RNA다.",
+        "condition": "DNA와 RNA의 단위체를 견줄 때",
+        "scope": "DNA와 RNA를 가르는 기준에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-nt-link",
+        "text": "한 뉴클레오타이드의 당과 다음 뉴클레오타이드의 인산이 공유 결합으로 이어져 폴리뉴클레오타이드가 된다.",
+        "condition": "뉴클레오타이드가 여럿 이어질 때",
+        "scope": "폴리뉴클레오타이드가 만들어지는 과정에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "DNA와 RNA는 염기 하나만 다르고 나머지는 모두 같다",
+        "whyWrong": "염기 한 종류가 다를 뿐 아니라 단위체에 든 당의 종류도 다르다."
+      },
+      {
+        "text": "뉴클레오타이드는 인산과 당, 염기가 아무 비율로나 붙어 만들어진다",
+        "whyWrong": "세 부분이 1 : 1 : 1로 결합한 것이 뉴클레오타이드다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-carbon-compound"
+      },
+      {
+        "type": "next",
+        "target": "isci1-nucleic-acid"
+      },
+      {
+        "type": "related",
+        "target": "isci1-amino-acid"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "media": [
+      {
+        "file": "isci1-2-fig-26.png",
+        "caption": "그림 Ⅱ-26 폴리뉴클레오타이드",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-protein",
+    "term": "단백질",
+    "aliases": [],
+    "hanja": "蛋白質",
+    "english": "protein",
+    "definition": "아미노산이 펩타이드 결합으로 길게 이어진 뒤 접혀 특정한 입체 구조를 이룬 물질. 몸의 구성 성분이자 효소·호르몬의 주성분이다.",
+    "relations": [
+      {
+        "id": "rel-prot-sequence",
+        "text": "아미노산의 종류와 수, 이어진 순서가 다르면 사슬이 구부러지고 접히는 방법이 달라져 입체 구조도 달라진다.",
+        "condition": "폴리펩타이드가 접혀 구조를 갖출 때",
+        "scope": "단백질의 입체 구조가 정해지는 과정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-prot-function",
+        "text": "입체 구조가 서로 다른 단백질은 저마다 다른 기능을 맡는다.",
+        "condition": "단백질이 고유한 입체 구조를 갖췄을 때",
+        "scope": "단백질의 구조와 기능의 관계에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-prot-role",
+        "text": "단백질은 피부·근육 같은 몸의 구성 성분이면서 효소와 호르몬의 주성분으로 생명활동을 조절한다.",
+        "condition": "생명체 안에서 단백질이 맡는 일을 볼 때",
+        "scope": "단백질의 역할에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "아미노산이 길게 이어지기만 하면 곧바로 단백질이 된다",
+        "whyWrong": "길게 이어진 사슬이 구부러지고 접혀 특정한 입체 구조를 이루어야 단백질로서 기능한다."
+      },
+      {
+        "text": "아미노산의 종류와 개수만 같으면 같은 단백질이다",
+        "whyWrong": "이어진 순서가 다르면 접히는 방법이 달라져 다른 입체 구조와 다른 기능을 갖는다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-amino-acid"
+      },
+      {
+        "type": "related",
+        "target": "isci1-carbon-compound"
+      },
+      {
+        "type": "related",
+        "target": "isci1-nucleic-acid"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "蛋 새알 단 · 白 흰 백 · 質 바탕 질",
+    "media": [
+      {
+        "file": "isci1-2-fig-25.png",
+        "caption": "그림 Ⅱ-25 아미노산이 결합하여 이루어지는 단백질",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-silicate-mineral",
+    "term": "규산염 광물",
+    "aliases": [],
+    "hanja": "硅酸鹽鑛物",
+    "english": "silicate mineral",
+    "definition": "규산염 사면체가 산소를 나눠 가지며 이어져 만들어진 광물. 지각의 암석을 이루는 광물 대부분이 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-sm-structure",
+        "text": "사면체가 이어지는 방식에 따라 독립형·사슬형·판형·망상형 같은 구조가 생기고, 구조가 다르면 다른 광물이 된다.",
+        "condition": "사면체끼리 산소를 나눠 가지며 이어질 때",
+        "scope": "규산염 광물의 종류를 가르는 데 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-sm-cleavage",
+        "text": "결합 구조는 쪼개짐과 깨짐에도 드러나, 얇은 판이 켜켜이 쌓인 흑운모는 그 결을 따라 얇게 쪼개진다.",
+        "condition": "광물에 힘을 주어 깨뜨릴 때",
+        "scope": "규산염 광물의 쪼개짐과 깨짐에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-sm-weathering",
+        "text": "사면체가 입체적으로 촘촘히 이어질수록 광물은 풍화에 잘 견딘다. 석영이 강하고 감람석이 약한 까닭이다.",
+        "condition": "같은 환경에 놓인 광물끼리 견줄 때",
+        "scope": "규산염 광물끼리 견줄 때에 한함",
+        "invertible": true,
+        "invertedText": "사면체가 입체적으로 촘촘히 이어질수록 광물은 풍화에 더 약해진다."
+      },
+      {
+        "id": "rel-sm-other-element",
+        "text": "결합 구조가 같은 광물이라도 사면체 사이에 다른 원소가 이온 결합으로 끼어들면 색 같은 성질이 달라진다.",
+        "condition": "사면체와 사면체 사이에 다른 원소가 들어올 때",
+        "scope": "같은 결합 구조를 가진 광물끼리 견줄 때에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "광물의 종류가 다른 것은 사면체를 이루는 원소가 저마다 다르기 때문이다",
+        "whyWrong": "기본 단위체는 모두 규소와 산소로 같다. 그 사면체가 어떻게 이어지는지가 광물의 종류를 가른다."
+      },
+      {
+        "text": "석영이 풍화에 강한 것은 단단한 원소로 되어 있기 때문이다",
+        "whyWrong": "석영도 규소와 산소로 되어 있다. 사면체가 입체적으로 촘촘히 이어져 있어 잘 버티는 것이다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-silicate-tetrahedron"
+      },
+      {
+        "type": "related",
+        "target": "isci1-covalent-bond"
+      },
+      {
+        "type": "related",
+        "target": "isci1-ionic-bond"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "硅 규소 규 · 酸 실 산 · 鹽 소금 염 · 鑛 쇳돌 광 · 物 물건 물",
+    "media": [
+      {
+        "file": "isci1-2-fig-22.png",
+        "caption": "그림 Ⅱ-22 여러 가지 규산염 광물",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-silicate-tetrahedron",
+    "term": "규산염 사면체",
+    "aliases": [],
+    "hanja": "硅酸鹽四面體",
+    "english": "silicate tetrahedron",
+    "definition": "규소 원자 1개를 가운데 두고 산소 원자 4개가 공유 결합해 이루는 사면체 모양의 기본 단위체.",
+    "relations": [
+      {
+        "id": "rel-st-valence",
+        "text": "규소는 원자가 전자가 4개여서 산소 4개와 공유 결합할 수 있고, 그 결과 사면체 꼴이 만들어진다.",
+        "condition": "규소가 산소와 공유 결합할 때",
+        "scope": "규산염 사면체가 만들어지는 과정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-st-unit",
+        "text": "이 사면체 자체는 광물이 아니라, 여럿이 이어져 규산염 광물을 이루는 기본 단위체 노릇을 한다.",
+        "condition": "규산염 광물의 구조를 살필 때",
+        "scope": "규산염 광물의 기본 단위에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "규산염 사면체는 규소 4개와 산소 1개로 이루어진다",
+        "whyWrong": "가운데가 규소 1개이고 그 둘레를 산소 4개가 둘러싼다."
+      },
+      {
+        "text": "규산염 사면체 하나가 곧 하나의 광물이다",
+        "whyWrong": "사면체는 기본 단위체다. 여럿이 어떻게 이어지는지에 따라 여러 광물이 만들어진다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-covalent-bond"
+      },
+      {
+        "type": "next",
+        "target": "isci1-silicate-mineral"
+      },
+      {
+        "type": "related",
+        "target": "isci1-carbon-atom-bonding"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "지각과 생명체를 이루는 결합의 규칙",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-01",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "硅 규소 규 · 酸 실 산 · 鹽 소금 염 · 四 넉 사 · 面 낯 면 · 體 몸 체",
+    "media": [
+      {
+        "file": "isci1-2-fig-21.png",
+        "caption": "그림 Ⅱ-21 규산염 사면체의 구조",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-doping",
+    "term": "도핑",
+    "aliases": [
+      "불순물 반도체"
+    ],
+    "hanja": null,
+    "english": "doping",
+    "definition": "순수한 반도체에 불순물을 일부러 섞어 전기적 성질을 바꾸는 일. 전류가 더 잘 흐르게 만드는 것이 목적이다.",
+    "relations": [
+      {
+        "id": "rel-doping-effect",
+        "text": "순수한 반도체에 불순물을 넣으면 전기적 성질이 달라져 전류가 흐를 수 있게 된다.",
+        "condition": "순수한 반도체에 불순물을 첨가할 때",
+        "scope": "반도체의 전기 전도성을 조절하는 데 한함",
+        "invertible": true,
+        "invertedText": "순수한 반도체에 불순물을 넣으면 전류가 더욱 흐르지 않게 된다."
+      },
+      {
+        "id": "rel-doping-purpose",
+        "text": "도핑은 불순물이 잘못 섞여 든 사고가 아니라 원하는 성질을 얻으려고 일부러 하는 조작이다.",
+        "condition": "반도체 소자를 만들려 할 때",
+        "scope": "반도체를 만드는 공정에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-doping-device",
+        "text": "도핑으로 성질을 바꾼 반도체를 이용해 다이오드나 트랜지스터 같은 반도체 소자를 만든다.",
+        "condition": "반도체 소자를 만들 때",
+        "scope": "반도체 소자의 제작에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "도핑은 반도체에 불순물이 잘못 섞여 성능이 나빠지는 일이다",
+        "whyWrong": "전류가 잘 흐르도록 성질을 바꾸려고 일부러 넣는 과정이다."
+      },
+      {
+        "text": "도핑을 하면 반도체가 도체로 바뀐다",
+        "whyWrong": "전류가 흐르기 쉬워질 뿐, 조건에 따라 전류를 조절할 수 있는 반도체의 성질은 그대로다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-semiconductor"
+      },
+      {
+        "type": "next",
+        "target": "isci1-semiconductor-device"
+      },
+      {
+        "type": "related",
+        "target": "isci1-covalent-bond"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "물질의 전기적 성질과 첨단 기술의 활용",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-02",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "media": []
+  },
+  {
+    "id": "isci1-electrical-conductor",
+    "term": "도체",
+    "aliases": [],
+    "hanja": "導體",
+    "english": "electrical conductor",
+    "definition": "전기 저항이 작아 전류가 잘 흐르는 물질. 철·구리·알루미늄처럼 자유 전자를 많이 가진 물질이 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-conductor-freeelectron",
+        "text": "도체에 전류가 잘 흐르는 까닭은 물질 안에 자유 전자가 많기 때문이다.",
+        "condition": "도체의 양 끝에 전압을 걸었을 때",
+        "scope": "금속처럼 자유 전자가 전하를 나르는 고체 도체에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-conductor-resistance",
+        "text": "전기 저항이 작을수록 같은 전압에서 더 큰 전류가 흐른다.",
+        "condition": "같은 전압을 걸어 물질을 견줄 때",
+        "scope": "같은 조건에서 물질을 견줄 때에 한함",
+        "invertible": true,
+        "invertedText": "전기 저항이 작을수록 같은 전압에서 흐르는 전류가 줄어든다."
+      },
+      {
+        "id": "rel-conductor-example",
+        "text": "철·구리·알루미늄 같은 금속은 도체여서 전선의 속심으로 쓰인다.",
+        "condition": "물질을 전기적 성질에 따라 나눌 때",
+        "scope": "금속 도체의 사례에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "도체는 전기 저항이 전혀 없는 물질이다",
+        "whyWrong": "저항이 0이라는 뜻이 아니라, 저항이 작아 전류가 잘 흐른다는 뜻이다."
+      },
+      {
+        "text": "도체에 전류가 흐르는 것은 원자 전체가 이동하기 때문이다",
+        "whyWrong": "움직이는 것은 자유 전자다. 원자핵은 제자리를 지킨다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-free-electron"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-electrical-conductivity"
+      },
+      {
+        "type": "next",
+        "target": "isci1-semiconductor"
+      },
+      {
+        "type": "related",
+        "target": "isci1-electrical-insulator"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "물질의 전기적 성질과 첨단 기술의 활용",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "導 이끌 도 · 體 몸 체",
+    "media": [
+      {
+        "file": "isci1-2-fig-28.png",
+        "caption": "그림 Ⅱ-28 전류가 흐를 때와 전류가 흐르지 않을 때 자유 전자 모습",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-electrical-insulator",
+    "term": "부도체",
+    "aliases": [
+      "절연체"
+    ],
+    "hanja": "不導體",
+    "english": "electrical insulator",
+    "definition": "자유 전자가 거의 없어 전기 저항이 아주 크고, 그 탓에 전류를 좀처럼 통과시키지 못하는 물질. 고무·유리·나무가 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-insulator-noelectron",
+        "text": "부도체에 전류가 거의 흐르지 않는 까닭은 자유 전자가 없거나 매우 적기 때문이다.",
+        "condition": "부도체의 양 끝에 전압을 걸었을 때",
+        "scope": "고무·유리·나무 같은 부도체에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-insulator-compare",
+        "text": "같은 전압을 걸어도 부도체는 도체보다 전기 저항이 훨씬 커서 전류가 거의 흐르지 않는다.",
+        "condition": "도체와 같은 조건에서 견줄 때",
+        "scope": "도체와 부도체를 견주는 데 한함",
+        "invertible": true,
+        "invertedText": "같은 전압을 걸면 부도체는 도체보다 전기 저항이 작아 전류가 더 잘 흐른다."
+      },
+      {
+        "id": "rel-insulator-use",
+        "text": "부도체는 전류가 새어 나가면 안 되는 자리, 이를테면 전선의 겉을 싸는 데 쓰인다.",
+        "condition": "전기 기구를 안전하게 쓰려 할 때",
+        "scope": "부도체의 쓰임에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "부도체는 전자가 하나도 없는 물질이다",
+        "whyWrong": "전자는 있지만 원자에 매여 있어 물질 속을 자유롭게 돌아다니지 못한다."
+      },
+      {
+        "text": "부도체에는 어떤 조건에서도 전류가 절대 흐르지 않는다",
+        "whyWrong": "저항이 매우 커서 거의 흐르지 않는다는 뜻이다. 아주 높은 전압에서는 전류가 흐르기도 한다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-free-electron"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-electrical-conductivity"
+      },
+      {
+        "type": "next",
+        "target": "isci1-semiconductor"
+      },
+      {
+        "type": "related",
+        "target": "isci1-electrical-conductor"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "물질의 전기적 성질과 첨단 기술의 활용",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "不 아닐 부 · 導 이끌 도 · 體 몸 체",
+    "media": [
+      {
+        "file": "isci1-2-fig-28.png",
+        "caption": "그림 Ⅱ-28 전류가 흐를 때와 전류가 흐르지 않을 때 자유 전자 모습",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-free-electron",
+    "term": "자유 전자",
+    "aliases": [],
+    "hanja": "自由電子",
+    "english": "free electron",
+    "definition": "특정한 원자핵의 인력에서 벗어나 물질 속을 자유롭게 돌아다닐 수 있는 전자.",
+    "relations": [
+      {
+        "id": "rel-fe-amount",
+        "text": "자유 전자를 많이 가진 물질일수록 전류가 잘 흐른다.",
+        "condition": "물질의 양 끝에 전압을 걸었을 때",
+        "scope": "고체 물질의 전기 전도에 한함 — 수용액에서 전하를 나르는 것은 이온이다",
+        "invertible": true,
+        "invertedText": "자유 전자를 많이 가진 물질일수록 전류가 잘 흐르지 않는다."
+      },
+      {
+        "id": "rel-fe-direction",
+        "text": "전압을 걸기 전 자유 전자는 제멋대로 움직이지만, 전압을 걸면 일정한 방향으로 움직여 전류가 된다.",
+        "condition": "물질의 양 끝에 전압을 걸 때",
+        "scope": "도체 안 자유 전자의 운동에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-fe-classify",
+        "text": "자유 전자가 많은지 거의 없는지가 그 물질을 도체로 볼지 부도체로 볼지를 가른다.",
+        "condition": "물질을 전기적 성질에 따라 나눌 때",
+        "scope": "도체와 부도체의 구분에 한함 — 반도체는 조건에 따라 달라진다",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "전압을 걸기 전에는 도체 안의 전자가 멈춰 있다",
+        "whyWrong": "전압이 없어도 자유 전자는 제멋대로 돌아다닌다. 전압을 걸면 움직이는 방향이 한쪽으로 정해질 뿐이다."
+      },
+      {
+        "text": "자유 전자는 물질 밖으로 빠져나간 전자다",
+        "whyWrong": "물질 안에 남아 있으면서 특정한 원자핵에 매이지 않고 돌아다니는 전자다."
+      }
+    ],
+    "links": [
+      {
+        "type": "next",
+        "target": "isci1-electrical-conductor"
+      },
+      {
+        "type": "next",
+        "target": "isci1-electrical-insulator"
+      },
+      {
+        "type": "related",
+        "target": "isci1-electrical-conductivity"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "물질의 전기적 성질과 첨단 기술의 활용",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-02",
+    "quizReady": false,
+    "hasRestrictedMedia": true,
+    "hanjaGloss": "自 스스로 자 · 由 말미암을 유 · 電 번개 전 · 子 아들 자",
+    "media": [
+      {
+        "file": "isci1-2-fig-28.png",
+        "caption": "그림 Ⅱ-28 전류가 흐를 때와 전류가 흐르지 않을 때 자유 전자 모습",
+        "restricted": true,
+        "kind": "diagram"
+      }
+    ]
+  },
+  {
+    "id": "isci1-semiconductor",
+    "term": "반도체",
+    "aliases": [],
+    "hanja": "半導體",
+    "english": "semiconductor",
+    "definition": "도체와 부도체의 중간쯤 되는 전기적 성질을 갖는 물질. 주어진 조건에 따라 전류가 잘 흐르기도 하고 거의 흐르지 않기도 한다.",
+    "relations": [
+      {
+        "id": "rel-semi-middle",
+        "text": "반도체는 도체보다는 전류가 덜 흐르고 부도체보다는 잘 흘러 그 둘 사이에 놓인다.",
+        "condition": "물질을 전기 저항의 크기에 따라 늘어놓을 때",
+        "scope": "도체·부도체·반도체의 구분에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-semi-condition",
+        "text": "반도체의 전기 전도성은 늘 같은 값으로 정해져 있지 않고 주어진 조건에 따라 달라진다.",
+        "condition": "온도나 불순물 같은 조건이 바뀔 때",
+        "scope": "반도체의 전기적 성질에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-semi-pure",
+        "text": "순수한 규소는 원자끼리 원자가 전자 4개를 모두 공유 결합에 쓰고 있어 전류가 잘 흐르지 않는다.",
+        "condition": "규소에 불순물이 섞이지 않았을 때",
+        "scope": "순수한 상태의 반도체에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-semi-example",
+        "text": "규소와 저마늄이 대표적인 반도체이며, 반도체 소자를 만드는 재료로 쓰인다.",
+        "condition": "반도체 물질의 예를 들 때",
+        "scope": "대표적인 반도체 물질에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "반도체는 언제나 도체의 절반만큼 전류가 흐르는 물질이다",
+        "whyWrong": "정해진 절반이 아니라, 조건에 따라 전류가 잘 흐르기도 하고 거의 흐르지 않기도 하는 물질이다."
+      },
+      {
+        "text": "규소는 반도체이므로 순수한 상태에서도 전류가 잘 흐른다",
+        "whyWrong": "순수한 규소는 원자가 전자를 모두 공유 결합에 쓰고 있어 전류가 잘 흐르지 않는다. 불순물을 넣어야 잘 흐른다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-electrical-conductor"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-electrical-insulator"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-covalent-bond"
+      },
+      {
+        "type": "next",
+        "target": "isci1-doping"
+      },
+      {
+        "type": "next",
+        "target": "isci1-semiconductor-device"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "물질의 전기적 성질과 첨단 기술의 활용",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-02",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "半 반 반 · 導 이끌 도 · 體 몸 체",
+    "media": []
+  },
+  {
+    "id": "isci1-semiconductor-device",
+    "term": "반도체 소자",
+    "aliases": [
+      "다이오드",
+      "트랜지스터",
+      "집적 회로"
+    ],
+    "hanja": "半導體素子",
+    "english": "semiconductor device",
+    "definition": "반도체를 재료로 만든 전기 회로나 부품. 다이오드·트랜지스터·집적 회로가 여기에 든다.",
+    "relations": [
+      {
+        "id": "rel-device-diode",
+        "text": "한쪽 방향으로만 전류를 통과시키는 다이오드의 성질 덕분에 교류가 직류로 바뀌는 정류 작용이 일어난다.",
+        "condition": "다이오드에 전류를 흘릴 때",
+        "scope": "다이오드의 정류 작용에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-device-transistor",
+        "text": "트랜지스터는 회로에서 전류나 전압의 흐름을 조절하며, 아주 작게 만들 수 있고 소비 전력도 작다.",
+        "condition": "트랜지스터를 회로에 넣었을 때",
+        "scope": "트랜지스터의 기능과 이점에 한함",
+        "invertible": false
+      },
+      {
+        "id": "rel-device-ic",
+        "text": "집적 회로는 부품 사이의 거리가 짧아 신호를 빠르게 주고받고 에너지 소모도 줄일 수 있다.",
+        "condition": "여러 부품을 하나의 칩에 모아 만들 때",
+        "scope": "집적 회로가 갖는 이점에 한함",
+        "invertible": true,
+        "invertedText": "집적 회로는 부품 사이의 거리가 짧을수록 신호 전달이 느려지고 에너지 소모가 늘어난다."
+      },
+      {
+        "id": "rel-device-oled",
+        "text": "유기 발광 다이오드는 스스로 빛을 내어 얇고 가볍게 만들 수 있고 휘어지는 화면으로도 개발된다.",
+        "condition": "탄소 같은 유기 물질의 전기적 성질을 바꾸어 소재로 쓸 때",
+        "scope": "유기 발광 다이오드에 한함",
+        "invertible": false
+      }
+    ],
+    "misconceptions": [
+      {
+        "text": "다이오드는 전류를 양쪽 방향으로 똑같이 흘려보낸다",
+        "whyWrong": "다이오드는 한 방향으로만 전류를 흐르게 한다. 그래서 교류를 직류로 바꿀 수 있다."
+      },
+      {
+        "text": "집적 회로를 작게 만들면 부품이 빽빽해져 전력을 더 많이 쓴다",
+        "whyWrong": "회로 사이의 거리가 짧아져 신호 전달이 빨라지고 에너지 소모는 오히려 줄어든다."
+      }
+    ],
+    "links": [
+      {
+        "type": "prereq",
+        "target": "isci1-semiconductor"
+      },
+      {
+        "type": "prereq",
+        "target": "isci1-doping"
+      },
+      {
+        "type": "related",
+        "target": "isci1-free-electron"
+      }
+    ],
+    "subject": "통합과학1",
+    "unit": "물질과 규칙성 > 결합으로 이루어진 세상",
+    "topic": "물질의 전기적 성질과 첨단 기술의 활용",
+    "unitId": "isci1-2",
+    "topicId": "isci1-2-3-02",
+    "quizReady": false,
+    "hasRestrictedMedia": false,
+    "hanjaGloss": "半 반 반 · 導 이끌 도 · 體 몸 체 · 素 본디 소 · 子 아들 자",
+    "media": []
+  },
+  {
     "id": "isci2-cenozoic-era",
     "term": "신생대",
     "aliases": [],

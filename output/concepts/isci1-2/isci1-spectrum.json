@@ -1,0 +1,106 @@
+{
+  "id": "isci1-spectrum",
+  "concept_key": "concept:spectrum",
+  "registry_status": "new",
+  "term": "스펙트럼",
+  "aliases": [
+    "빛의 스펙트럼"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 spectrum 의 음차어다. 대응하는 한자어 표기가 없다.",
+    "english": "spectrum"
+  },
+  "definition": "빛을 파장에 따라 갈라 놓았을 때 생기는 띠. 프리즘이나 분광기를 지난 빛이 파장별로 나뉘면서 나타난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spec-split",
+      "text": "빛을 파장에 따라 나누는 장치를 분광기라 하고, 그 장치를 지난 빛이 만들어 내는 띠가 스펙트럼이다.",
+      "form": {
+        "condition": "빛이 프리즘이나 분광기를 지날 때",
+        "type": "classification",
+        "scope": "빛을 파장별로 분해해 관측하는 경우에 한함 — 가시광선뿐 아니라 적외선 같은 다른 파장에도 적용된다"
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 나누어 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spec-source",
+      "text": "백열전구처럼 넓은 범위의 파장을 한꺼번에 내는 광원은 색 띠가 끊기지 않고 이어진 스펙트럼을 보인다.",
+      "form": {
+        "condition": "광원이 연속된 파장의 빛을 낼 때",
+        "type": "conditional",
+        "scope": "백열전구나 고온의 고체·별의 내부처럼 연속 파장을 내는 광원에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "광원의 조건을 밝힌 명제라 뒤집어도 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spec-info",
+      "text": "광원의 종류에 따라 스펙트럼의 모습이 달라지므로, 스펙트럼을 분석하면 빛을 낸 물체의 구성 원소를 추론할 수 있다.",
+      "form": {
+        "condition": "관측한 선의 자리를 이미 알려진 원소의 것과 견줄 수 있을 때",
+        "type": "causal",
+        "scope": "원소가 빛을 내거나 빨아들인 흔적이 스펙트럼에 남은 경우에 한함 — 원소의 양까지 곧바로 알려 주지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "스펙트럼에서 원소로 가는 추론 절차를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분광기로 보면 어떤 빛이든 무지개색 띠가 끊김 없이 이어져 보인다",
+      "why_wrong": "고온의 기체 원소가 내는 빛은 몇 가닥의 선으로만 보인다. 광원이 무엇이냐에 따라 스펙트럼의 모습이 달라진다.",
+      "source": "llm",
+      "linked_relation": "rel-spec-source"
+    },
+    {
+      "text": "스펙트럼은 빛의 밝기만 알려 줄 뿐 물질의 종류와는 관계가 없다",
+      "why_wrong": "선이 놓이는 자리가 원소마다 달라서, 스펙트럼은 물체를 이루는 원소를 알아내는 단서가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-spec-info"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-line-spectrum"
+    },
+    {
+      "type": "next",
+      "target": "isci1-absorption-spectrum"
+    },
+    {
+      "type": "related",
+      "target": "isci1-elemental-composition-of-the-universe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-01",
+  "pages": [
+    40,
+    42
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

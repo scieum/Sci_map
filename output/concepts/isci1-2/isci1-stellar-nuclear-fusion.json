@@ -1,0 +1,116 @@
+{
+  "id": "isci1-stellar-nuclear-fusion",
+  "concept_key": "concept:stellar-nuclear-fusion",
+  "registry_status": "new",
+  "term": "별 내부의 핵융합 반응",
+  "aliases": [
+    "수소 핵융합 반응",
+    "헬륨 핵융합 반응"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'별'이 우리말 고유어라 낱말 전체에 대응하는 한자 표기가 없다. '내부의 핵융합 반응'만 한자어(內部核融合反應)다.",
+    "english": "nuclear fusion in stars"
+  },
+  "definition": "별 중심부에서 가벼운 원자핵들이 합쳐져 더 무거운 원자핵과 에너지를 내놓는 반응. 수소 핵융합에서 시작해 단계가 이어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fusion-stage",
+      "text": "중심부의 연료를 다 쓰면 중심부가 수축해 온도가 더 올라가고, 그 온도에 이르러야 다음 단계의 핵융합이 시작된다.",
+      "form": {
+        "condition": "앞 단계의 핵융합이 끝나 중심부가 수축할 때",
+        "type": "causal",
+        "scope": "별 중심부에서 일어나는 핵융합의 단계 전환에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "단계가 넘어가는 절차를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fusion-mass-limit",
+      "text": "별의 질량이 클수록 중심부에서 더 무거운 원소까지 만들 수 있으나, 별 내부 핵융합의 마지막 산물은 철이다.",
+      "form": {
+        "condition": "별이 진화 과정을 밟아 가는 동안",
+        "type": "direct",
+        "scope": "별 내부의 핵융합에 한함 — 철보다 무거운 원소는 여기서 만들어지지 않는다",
+        "antecedent": {
+          "quantity": "별의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "만들어지는 원소의 무거움",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량과 도달할 수 있는 핵융합 단계가 같은 방향이라 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "별의 질량이 클수록 중심부에서는 가벼운 원소까지만 만들어진다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fusion-sun",
+      "text": "태양 정도 질량의 별은 중심부에서 탄소를 만든 뒤 더 이상 핵융합을 이어 가지 못한다.",
+      "form": {
+        "condition": "별의 질량이 태양과 비슷할 때",
+        "type": "conditional",
+        "scope": "태양 정도 질량의 별에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "특정 질량의 별에 대한 조건형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "별 안에서는 핵융합으로 금이나 우라늄 같은 원소도 만들어진다",
+      "why_wrong": "별 내부 핵융합으로 만들어지는 것은 철까지다. 철보다 무거운 원소는 초신성 폭발의 엄청난 에너지로 만들어진다.",
+      "source": "llm",
+      "linked_relation": "rel-fusion-mass-limit"
+    },
+    {
+      "text": "모든 별은 시간이 지나면 중심부에서 철까지 만든다",
+      "why_wrong": "태양 정도 질량의 별은 탄소를 만들고 핵융합을 마친다. 철까지 만들려면 태양보다 훨씬 큰 질량이 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-fusion-sun"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-star-formation"
+    },
+    {
+      "type": "next",
+      "target": "isci1-supernova-nucleosynthesis"
+    },
+    {
+      "type": "related",
+      "target": "isci1-big-bang-nucleosynthesis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-02",
+  "pages": [
+    47,
+    48
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

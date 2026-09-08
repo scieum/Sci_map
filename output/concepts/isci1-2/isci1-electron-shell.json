@@ -1,0 +1,103 @@
+{
+  "id": "isci1-electron-shell",
+  "concept_key": "concept:electron-shell",
+  "registry_status": "new",
+  "term": "전자 껍질",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'껍질'이 우리말 고유어라 낱말 전체에 대응하는 한자 표기가 없다. 앞부분 '전자'만 한자어(電子)다.",
+    "english": "electron shell"
+  },
+  "definition": "원자핵 둘레에서 전자가 자리할 수 있는, 특정한 에너지를 갖는 궤도. 안쪽 껍질부터 차례로 채워진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-shell-order",
+      "text": "전자는 원자핵에 가까운 껍질부터 차례로 채워지며, 안쪽이 다 차야 그다음 껍질에 들어간다.",
+      "form": {
+        "condition": "바닥상태 원자의 전자 배치를 볼 때",
+        "type": "conditional",
+        "scope": "원자 번호 20까지의 원자에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "채워지는 순서를 밝힌 조건형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-shell-capacity",
+      "text": "껍질마다 받아들일 수 있는 전자 수에 한계가 있어 첫 번째 껍질에는 2개, 두 번째 껍질에는 8개까지 들어간다.",
+      "form": {
+        "condition": "원자 번호 20까지의 원자를 볼 때",
+        "type": "classification",
+        "scope": "첫 번째와 두 번째 전자 껍질에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "껍질별 최대 수용 전자 수를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-shell-period",
+      "text": "전자가 들어 있는 껍질이 몇 겹인가가 그 원소가 주기율표에서 놓이는 주기를 정한다.",
+      "form": {
+        "condition": "바닥상태 원자의 전자 배치를 알 때",
+        "type": "causal",
+        "scope": "주기율표에서의 가로 위치를 정하는 데 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "전자 배치에서 위치로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자는 원자핵에서 먼 껍질부터 채워진다",
+      "why_wrong": "전자는 에너지가 낮은 안쪽 껍질부터 차례로 채워진다.",
+      "source": "llm",
+      "linked_relation": "rel-shell-order"
+    },
+    {
+      "text": "전자 껍질에는 전자가 몇 개든 들어갈 수 있다",
+      "why_wrong": "껍질마다 최대 수용 전자 수가 정해져 있다. 첫 번째 껍질은 2개, 두 번째 껍질은 8개다.",
+      "source": "llm",
+      "linked_relation": "rel-shell-capacity"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-periodic-table-period"
+    },
+    {
+      "type": "next",
+      "target": "isci1-valence-electron"
+    },
+    {
+      "type": "related",
+      "target": "isci1-periodic-table"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-01",
+  "pages": [
+    62,
+    63
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

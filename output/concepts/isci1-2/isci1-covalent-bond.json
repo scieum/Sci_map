@@ -1,0 +1,114 @@
+{
+  "id": "isci1-covalent-bond",
+  "concept_key": "concept:covalent-bond",
+  "registry_status": "new",
+  "term": "공유 결합",
+  "notation": {
+    "hanja": "共有結合",
+    "hanja_gloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 合 합할 합",
+    "english": "covalent bond"
+  },
+  "definition": "비금속 원자들이 전자를 하나씩 내놓아 만든 전자쌍을 함께 쓰면서 이루어지는 화학 결합.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cov-pair",
+      "text": "수소 원자 둘이 전자를 1개씩 내놓아 전자쌍 하나를 함께 쓰면 각 원자는 헬륨과 같은 전자 배치를 갖게 된다.",
+      "form": {
+        "condition": "두 비금속 원자가 전자를 내놓아 짝을 지을 때",
+        "type": "causal",
+        "scope": "수소 분자가 만들어지는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 이루어지는 절차를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cov-count",
+      "text": "함께 쓰는 전자쌍의 수는 분자마다 다르다. 산소 분자는 전자쌍 2개를, 물 분자는 산소가 수소 각각과 1개씩을 공유한다.",
+      "form": {
+        "condition": "분자를 이루는 원자들의 원자가 전자 수에 따라",
+        "type": "classification",
+        "scope": "산소 분자와 물 분자의 사례에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "사례별 전자쌍 수를 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cov-partner",
+      "text": "공유 결합은 서로 전자를 얻으려는 비금속 원소들 사이에서 형성된다.",
+      "form": {
+        "condition": "비금속 원자끼리 만날 때",
+        "type": "classification",
+        "scope": "공유 결합에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 상대를 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공유 결합에서는 한쪽 원자가 전자를 완전히 내주고 다른 쪽이 가져간다",
+      "why_wrong": "공유 결합은 두 원자가 전자쌍을 함께 쓰는 결합이다. 전자를 완전히 넘기는 것은 이온 결합이다.",
+      "source": "llm",
+      "linked_relation": "rel-cov-pair"
+    },
+    {
+      "text": "물 분자에서 산소는 수소와 전자쌍을 2개씩 공유한다",
+      "why_wrong": "산소는 수소 각각과 전자쌍을 1개씩 공유한다. 전자쌍을 2개 공유하는 것은 산소 분자다.",
+      "source": "llm",
+      "linked_relation": "rel-cov-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-chemical-bond"
+    },
+    {
+      "type": "next",
+      "target": "isci1-property-of-covalent-compound"
+    },
+    {
+      "type": "next",
+      "target": "isci1-silicate-tetrahedron"
+    },
+    {
+      "type": "next",
+      "target": "isci1-carbon-atom-bonding"
+    },
+    {
+      "type": "next",
+      "target": "isci1-semiconductor"
+    },
+    {
+      "type": "related",
+      "target": "isci1-ionic-bond"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-02",
+  "pages": [
+    67
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,105 @@
+{
+  "id": "isci1-property-of-ionic-compound",
+  "concept_key": "concept:property-of-ionic-compound",
+  "registry_status": "new",
+  "term": "이온 결합 물질의 성질",
+  "aliases": [
+    "이온 결합 물질의 전기 전도성"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'이온'은 영어 ion 의 음차어라 한자 표기가 없다. 나머지 '결합 물질의 성질'만 한자어(結合物質性質)다.",
+    "english": "properties of ionic compounds"
+  },
+  "definition": "양이온과 음이온이 정전기적 인력으로 이어진 물질이 보이는 성질. 고체에서는 전류가 흐르지 않고 수용액에서는 흐른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pic-solid",
+      "text": "고체 상태에서는 이온들이 제자리에 붙들려 움직이지 못하므로 전류가 흐르지 않는다.",
+      "form": {
+        "condition": "이온 결합 물질이 고체 상태일 때",
+        "type": "causal",
+        "scope": "고체 상태에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "이온의 이동 여부에서 전류로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pic-aqueous",
+      "text": "물에 녹으면 양이온과 음이온으로 나뉘어 자유롭게 움직일 수 있게 되므로 전류가 흐른다.",
+      "form": {
+        "condition": "이온 결합 물질을 물에 녹였을 때",
+        "type": "causal",
+        "scope": "수용액 상태에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "이온의 이동 여부에서 전류로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pic-example",
+      "text": "염화 소듐과 염화 칼슘은 고체일 때는 전류가 흐르지 않지만 물에 녹이면 전류가 흐른다.",
+      "form": {
+        "condition": "간이 전기 전도계로 상태를 바꾸어 견줄 때",
+        "type": "classification",
+        "scope": "염화 소듐·염화 칼슘 같은 이온 결합 물질에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 상태의 실험 결과를 나눈 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이온 결합 물질은 어떤 상태에서든 전류가 잘 흐른다",
+      "why_wrong": "고체일 때는 이온이 움직이지 못해 전류가 흐르지 않는다. 물에 녹아 이온이 흩어져야 흐른다.",
+      "source": "llm",
+      "linked_relation": "rel-pic-solid"
+    },
+    {
+      "text": "염화 소듐 수용액에 전류가 흐르는 것은 물이 전기를 잘 통하기 때문이다",
+      "why_wrong": "증류수에는 전류가 거의 흐르지 않는다. 녹아 나온 소듐 이온과 염화 이온이 움직이기 때문에 흐른다.",
+      "source": "llm",
+      "linked_relation": "rel-pic-aqueous"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-ionic-bond"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-electrical-conductivity"
+    },
+    {
+      "type": "related",
+      "target": "isci1-property-of-covalent-compound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-03",
+  "pages": [
+    71
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

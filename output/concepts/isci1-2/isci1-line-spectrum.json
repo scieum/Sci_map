@@ -1,0 +1,106 @@
+{
+  "id": "isci1-line-spectrum",
+  "concept_key": "concept:line-spectrum",
+  "registry_status": "new",
+  "term": "선 스펙트럼",
+  "aliases": [
+    "선스펙트럼",
+    "방출 스펙트럼"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'선(線)'만 한자어이고 '스펙트럼'은 영어 spectrum 의 음차어다. 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "line spectrum"
+  },
+  "definition": "고온의 기체 원소가 내는 빛을 분광기로 나누었을 때 띄엄띄엄한 몇 가닥의 밝은 선만 드러나는 스펙트럼.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-line-emission",
+      "text": "기체 방전관 속 원소를 높은 온도로 달구어 얻은 빛은 이어진 띠가 아니라 몇 개의 방출선으로 관측된다.",
+      "form": {
+        "condition": "기체 상태의 원소가 높은 온도에서 스스로 빛을 낼 때",
+        "type": "conditional",
+        "scope": "기체 상태의 원소에 한함 — 고온의 고체가 내는 빛은 연속된 색 띠로 보인다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측 조건과 결과를 짝지은 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-line-identity",
+      "text": "방출선이 놓이는 자리는 원소마다 정해져 있어, 선의 위치만 보고도 어떤 원소인지 가려낼 수 있다.",
+      "form": {
+        "condition": "관측한 선의 파장을 이미 알려진 원소의 것과 견줄 수 있을 때",
+        "type": "causal",
+        "scope": "원소의 종류를 가려내는 데 한함 — 선의 위치로 원소의 양을 알 수는 없다"
+      },
+      "invertible": false,
+      "invertible_reason": "원소와 선 위치의 대응을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-line-vs-absorption",
+      "text": "같은 원소라면 높은 온도에서 내놓는 방출선과 빛을 빨아들일 때 생기는 흡수선이 같은 자리에 나타난다.",
+      "form": {
+        "condition": "같은 원소의 두 스펙트럼을 견줄 때",
+        "type": "direct",
+        "scope": "같은 원소끼리 견줄 때에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 선의 자리가 같다는 대응 관계라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "선 스펙트럼에 나타나는 선의 위치는 온도를 높이면 옮겨 간다",
+      "why_wrong": "선의 자리는 원소의 종류가 정한다. 온도는 선이 나타날 조건을 만들 뿐 자리를 옮기지 못한다.",
+      "source": "llm",
+      "linked_relation": "rel-line-identity"
+    },
+    {
+      "text": "모든 빛은 분광기로 보면 선 스펙트럼으로 보인다",
+      "why_wrong": "백열전구처럼 연속된 파장의 빛은 끊김 없는 색 띠로 보인다. 선 스펙트럼은 고온의 기체 원소가 낼 때 나타난다.",
+      "source": "llm",
+      "linked_relation": "rel-line-emission"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-spectrum"
+    },
+    {
+      "type": "next",
+      "target": "isci1-absorption-spectrum"
+    },
+    {
+      "type": "related",
+      "target": "isci1-elemental-composition-of-the-universe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-01",
+  "pages": [
+    42
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

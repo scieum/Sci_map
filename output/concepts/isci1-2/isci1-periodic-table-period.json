@@ -1,0 +1,101 @@
+{
+  "id": "isci1-periodic-table-period",
+  "concept_key": "concept:periodic-table-period",
+  "registry_status": "new",
+  "term": "주기",
+  "aliases": [
+    "주기율표의 가로줄"
+  ],
+  "notation": {
+    "hanja": "週期",
+    "hanja_gloss": "週 돌 주 · 期 기약할 기",
+    "english": "period (periodic table)"
+  },
+  "definition": "주기율표의 가로줄. 같은 가로줄에 놓인 원소들은 전자가 채워진 전자 껍질 수가 서로 같다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-period-shell",
+      "text": "같은 주기에 속한 원소들은 전자가 들어 있는 전자 껍질 수가 같으며, 주기의 번호가 곧 그 껍질 수다.",
+      "form": {
+        "condition": "바닥상태 원자의 전자 배치를 볼 때",
+        "type": "direct",
+        "scope": "원자 번호 20까지의 원소에 한함",
+        "antecedent": {
+          "quantity": "주기의 번호",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전자 껍질 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주기 번호와 전자 껍질 수가 같은 값이라 방향을 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "같은 주기에 속한 원소들은 주기의 번호가 커질수록 전자 껍질 수가 줄어든다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-period-vs-group",
+      "text": "같은 주기라도 원자가 전자 수는 원소마다 달라서 화학적 성질까지 비슷해지지는 않는다.",
+      "form": {
+        "condition": "같은 가로줄에 놓인 원소들을 견줄 때",
+        "type": "conditional",
+        "scope": "같은 주기 안에서 견줄 때에 한함 — 성질이 닮는 것은 같은 족이다"
+      },
+      "invertible": false,
+      "invertible_reason": "성질이 닮지 않는다는 부정형 조건이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주기는 진동이나 파동이 한 번 되풀이되는 데 걸리는 시간을 뜻한다",
+      "why_wrong": "그것은 물리에서 쓰는 다른 개념이다. 주기율표의 주기는 시간이 아니라 원소가 놓인 가로줄을 가리킨다. 표기만 같을 뿐 두 개념은 서로 관계가 없다.",
+      "source": "llm",
+      "linked_relation": "rel-period-shell"
+    },
+    {
+      "text": "같은 주기에 있는 원소들은 화학적 성질이 비슷하다",
+      "why_wrong": "성질이 닮는 것은 같은 족이다. 같은 주기는 전자 껍질 수만 같고 원자가 전자 수는 서로 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-period-vs-group"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-periodic-table"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-electron-shell"
+    },
+    {
+      "type": "related",
+      "target": "isci1-periodic-table-group",
+      "note": "'주기'는 물리의 진동 주기와 표기가 같은 동음이의어다 (homonyms.yaml). 링크는 concept_key 로만 걸고, 뜻이 갈리는 자리에서는 '주기율표의 가로줄'인지 확인한다."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-01",
+  "pages": [
+    61,
+    62
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

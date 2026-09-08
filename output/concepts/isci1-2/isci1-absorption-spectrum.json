@@ -1,0 +1,106 @@
+{
+  "id": "isci1-absorption-spectrum",
+  "concept_key": "concept:absorption-spectrum",
+  "registry_status": "new",
+  "term": "흡수 스펙트럼",
+  "aliases": [
+    "별빛의 흡수 스펙트럼"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'흡수(吸收)'만 한자어이고 '스펙트럼'은 영어 spectrum 의 음차어다. 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "absorption spectrum"
+  },
+  "definition": "이어진 색 띠 위에 검은 선이 박혀 있는 스펙트럼. 빛이 자신보다 차가운 기체층을 지날 때 특정 파장이 빨려 나가 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-abs-formation",
+      "text": "별 중심부에서 나온 빛이 그보다 온도가 낮은 대기를 지나면 대기 속 원소가 특정 파장을 빨아들여 검은 선이 남는다.",
+      "form": {
+        "condition": "빛이 자신보다 온도가 낮은 기체층을 지날 때",
+        "type": "causal",
+        "scope": "별처럼 광원 바깥에 기체층이 있는 경우에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "흡수선이 생기는 과정을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abs-match",
+      "text": "어떤 원소가 빛을 빨아들여 남긴 흡수선의 자리는 그 원소가 고온에서 내놓는 방출선의 자리와 겹친다.",
+      "form": {
+        "condition": "같은 원소의 두 스펙트럼을 견줄 때",
+        "type": "direct",
+        "scope": "같은 원소끼리 견줄 때에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 선의 자리가 같다는 대응 관계라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abs-inference",
+      "text": "별빛의 흡수선을 원소의 방출선과 맞대어 보면 별 대기를 이루는 원소의 종류와 원소 사이의 질량비를 알아낼 수 있다.",
+      "form": {
+        "condition": "별빛의 스펙트럼을 얻어 선의 자리를 잴 수 있을 때",
+        "type": "causal",
+        "scope": "별의 대기에 있는 원소에 한함 — 별 중심부의 조성을 곧바로 알려 주지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측에서 추론으로 가는 절차를 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "별빛의 스펙트럼에 생긴 검은 선은 그 원소가 별에 없다는 표시다",
+      "why_wrong": "검은 선은 별의 대기에 있는 원소가 그 파장을 빨아들인 자국이다. 오히려 그 원소가 있다는 증거다.",
+      "source": "llm",
+      "linked_relation": "rel-abs-formation"
+    },
+    {
+      "text": "흡수선과 방출선은 서로 다른 원소에서 생기므로 자리도 다르다",
+      "why_wrong": "같은 원소라면 빛을 낼 때와 빨아들일 때의 파장이 같아 두 선이 겹친다.",
+      "source": "llm",
+      "linked_relation": "rel-abs-match"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-spectrum"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-line-spectrum"
+    },
+    {
+      "type": "next",
+      "target": "isci1-elemental-composition-of-the-universe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-01",
+  "pages": [
+    42,
+    43
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "isci1-amino-acid",
+  "concept_key": "concept:amino-acid",
+  "registry_status": "new",
+  "term": "아미노산",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아미노'는 영어 amino 의 음차어라 한자 표기가 없다. 뒷글자 '산'만 한자어(酸)다.",
+    "english": "amino acid"
+  },
+  "definition": "탄소를 중심으로 질소·수소·산소가 결합한 기본 구조를 갖는, 단백질의 단위체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-aa-kind",
+      "text": "기본 구조는 모두 같고 거기에 어떤 물질이 결합하는지에 따라 아미노산의 종류가 갈린다.",
+      "form": {
+        "condition": "아미노산의 기본 구조가 같을 때",
+        "type": "causal",
+        "scope": "생명체에서 단백질을 이루는 20여 가지 아미노산에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "종류가 갈리는 까닭을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aa-peptide",
+      "text": "아미노산끼리는 공유 결합의 하나인 펩타이드 결합으로 이어져 긴 사슬인 폴리펩타이드를 이룬다.",
+      "form": {
+        "condition": "아미노산이 여럿 이어질 때",
+        "type": "causal",
+        "scope": "단백질이 만들어지는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 방식과 그 결과를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aa-combination",
+      "text": "단위체가 20여 가지뿐이어도 이어지는 순서와 개수가 달라지면 만들 수 있는 단백질의 수는 엄청나게 늘어난다.",
+      "form": {
+        "condition": "같은 단위체를 여러 순서로 이어 붙일 때",
+        "type": "causal",
+        "scope": "단백질의 다양성을 설명하는 데 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "다양성의 원인을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "단백질의 종류가 많으려면 아미노산의 종류도 그만큼 많아야 한다",
+      "why_wrong": "아미노산은 20여 가지뿐이다. 이어지는 순서와 개수가 달라져 10만 가지가 넘는 단백질이 만들어진다.",
+      "source": "llm",
+      "linked_relation": "rel-aa-combination"
+    },
+    {
+      "text": "아미노산은 기본 구조가 저마다 다른 물질들을 묶어 부르는 말이다",
+      "why_wrong": "기본 구조는 모두 같고, 거기에 붙는 부분이 달라 종류가 갈린다.",
+      "source": "llm",
+      "linked_relation": "rel-aa-kind"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-carbon-compound"
+    },
+    {
+      "type": "next",
+      "target": "isci1-protein"
+    },
+    {
+      "type": "related",
+      "target": "isci1-nucleotide"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-05"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-01",
+  "pages": [
+    82,
+    83
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,106 @@
+{
+  "id": "isci1-stable-electron-configuration",
+  "concept_key": "concept:stable-electron-configuration",
+  "registry_status": "new",
+  "term": "안정한 전자 배치",
+  "aliases": [
+    "18족 원소의 전자 배치"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'안정한'의 어미가 우리말이라 낱말 전체에 대응하는 한자 표기가 없다. '안정'과 '전자 배치'만 한자어(安定·電子配置)다.",
+    "english": "stable electron configuration"
+  },
+  "definition": "가장 바깥 전자 껍질이 전자로 꽉 찬 상태. 18족 원소가 이미 지닌 배치로, 다른 원소들이 이르려는 목표가 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-stable-18",
+      "text": "헬륨을 뺀 18족 원소는 가장 바깥 껍질에 전자 8개가 채워져 있어 다른 원소와 좀처럼 반응하지 않는다.",
+      "form": {
+        "condition": "18족 원소의 전자 배치를 볼 때",
+        "type": "causal",
+        "scope": "18족 원소에 한함 — 헬륨은 첫 번째 껍질의 전자 2개만으로 이미 안정하다"
+      },
+      "invertible": false,
+      "invertible_reason": "배치와 반응성의 까닭을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stable-goal",
+      "text": "18족이 아닌 원소들은 전자를 잃거나 얻거나 공유해 18족과 같은 전자 배치에 이르려 한다.",
+      "form": {
+        "condition": "18족이 아닌 원자가 다른 원자와 만날 때",
+        "type": "causal",
+        "scope": "고등학교에서 다루는 화학 결합 모형에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 일어나는 까닭을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stable-reactivity",
+      "text": "가장 바깥 전자 껍질이 최대 전자 수로 완전히 채워진 원소는 화학적으로 안정해 거의 반응하지 않는다.",
+      "form": {
+        "condition": "가장 바깥 껍질이 최대 전자 수로 채워졌을 때",
+        "type": "conditional",
+        "scope": "완전히 채워진 배치에 한함 — 염소처럼 하나가 모자란 배치는 오히려 반응성이 크다"
+      },
+      "invertible": false,
+      "invertible_reason": "완전히 채워진 경우만 다룬 조건형이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "가장 바깥 껍질에 전자가 많을수록 반응성이 작다",
+      "why_wrong": "완전히 채워졌을 때만 안정하다. 염소처럼 8개에서 하나 모자란 원소는 오히려 반응성이 매우 크다.",
+      "source": "llm",
+      "linked_relation": "rel-stable-reactivity"
+    },
+    {
+      "text": "헬륨도 가장 바깥 껍질에 전자가 8개라서 안정하다",
+      "why_wrong": "헬륨은 첫 번째 껍질에 전자 2개만 들어가면 그 껍질이 다 차기 때문에 안정하다.",
+      "source": "llm",
+      "linked_relation": "rel-stable-18"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-valence-electron"
+    },
+    {
+      "type": "next",
+      "target": "isci1-chemical-bond"
+    },
+    {
+      "type": "related",
+      "target": "isci1-periodic-table-group"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-02",
+  "pages": [
+    64,
+    65
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,119 @@
+{
+  "id": "isci1-big-bang-nucleosynthesis",
+  "concept_key": "concept:big-bang-nucleosynthesis",
+  "registry_status": "new",
+  "term": "빅뱅과 원소의 생성",
+  "aliases": [
+    "빅뱅 우주론",
+    "우주 초기 원소의 생성"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'빅뱅'은 영어 big bang 의 음차어라 한자 표기가 없다. 뒷부분 '원소의 생성'만 한자어(元素生成)다.",
+    "english": "big bang nucleosynthesis"
+  },
+  "definition": "약 138억 년 전 대폭발로 시작된 우주가 팽창하며 식는 동안 기본 입자에서 수소와 헬륨의 원자핵, 이어 중성 원자가 만들어진 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bb-cooling",
+      "text": "우주는 팽창할수록 온도가 내려갔고, 온도가 충분히 낮아진 뒤로는 새로운 원자핵이 더 만들어지지 못했다.",
+      "form": {
+        "condition": "빅뱅 뒤 우주가 계속 팽창하는 동안",
+        "type": "inverse",
+        "scope": "우주 초기의 원자핵 합성 시기에 한함",
+        "antecedent": {
+          "quantity": "우주의 팽창 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주의 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "팽창과 온도가 서로 반대 방향으로 묶여 있어 방향을 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "우주는 팽창할수록 온도가 올라갔고, 그 덕분에 새로운 원자핵을 계속 만들어 낼 수 있었다.",
+      "curriculum": [
+        "10통과1-02-01",
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bb-ratio",
+      "text": "빅뱅 뒤 3분 무렵 양성자와 중성자가 결합해 헬륨 원자핵이 생겼고, 수소 원자핵과 헬륨 원자핵의 질량비는 약 3 : 1이 되었다.",
+      "form": {
+        "condition": "우주 초기의 원자핵 합성이 끝난 시점에서",
+        "type": "classification",
+        "scope": "우주 초기에 만들어진 원자핵에 한함 — 별 내부에서 뒤에 만들어진 헬륨은 여기에 들어가지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "합성이 끝난 시점의 질량비를 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-01",
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bb-atom",
+      "text": "빅뱅 뒤 약 38만 년이 지나 온도가 더 내려간 다음에야 전자가 원자핵에 붙들려 중성 원자가 만들어지기 시작했다.",
+      "form": {
+        "condition": "우주의 온도가 전자를 붙잡을 만큼 낮아졌을 때",
+        "type": "causal",
+        "scope": "수소 원자와 헬륨 원자가 만들어지는 단계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "온도 조건과 원자 형성의 순서를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빅뱅 때 오늘날 주기율표에 있는 원소가 모두 만들어졌다",
+      "why_wrong": "빅뱅 직후에 만들어진 것은 수소와 헬륨, 그리고 아주 적은 양의 리튬뿐이다. 더 무거운 원소는 별과 초신성이 만들었다.",
+      "source": "llm",
+      "linked_relation": "rel-bb-ratio"
+    },
+    {
+      "text": "빅뱅 직후에 이미 수소 원자가 완성되어 있었다",
+      "why_wrong": "먼저 생긴 것은 원자핵이다. 전자와 결합해 중성 원자가 된 것은 약 38만 년이 지난 뒤다.",
+      "source": "llm",
+      "linked_relation": "rel-bb-atom"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-elemental-composition-of-the-universe"
+    },
+    {
+      "type": "next",
+      "target": "isci1-star-formation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-stellar-nuclear-fusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-01",
+    "10통과1-02-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-01",
+  "pages": [
+    44,
+    45
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

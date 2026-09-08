@@ -1,0 +1,111 @@
+{
+  "id": "isci1-free-electron",
+  "concept_key": "concept:free-electron",
+  "registry_status": "new",
+  "term": "자유 전자",
+  "notation": {
+    "hanja": "自由電子",
+    "hanja_gloss": "自 스스로 자 · 由 말미암을 유 · 電 번개 전 · 子 아들 자",
+    "english": "free electron"
+  },
+  "definition": "특정한 원자핵의 인력에서 벗어나 물질 속을 자유롭게 돌아다닐 수 있는 전자.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fe-amount",
+      "text": "자유 전자를 많이 가진 물질일수록 전류가 잘 흐른다.",
+      "form": {
+        "condition": "물질의 양 끝에 전압을 걸었을 때",
+        "type": "direct",
+        "scope": "고체 물질의 전기 전도에 한함 — 수용액에서 전하를 나르는 것은 이온이다",
+        "antecedent": {
+          "quantity": "자유 전자의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "흐르는 전류",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자유 전자의 수와 흐르는 전류가 같은 방향이라 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "자유 전자를 많이 가진 물질일수록 전류가 잘 흐르지 않는다.",
+      "curriculum": [
+        "10통과1-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fe-direction",
+      "text": "전압을 걸기 전 자유 전자는 제멋대로 움직이지만, 전압을 걸면 일정한 방향으로 움직여 전류가 된다.",
+      "form": {
+        "condition": "물질의 양 끝에 전압을 걸 때",
+        "type": "causal",
+        "scope": "도체 안 자유 전자의 운동에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "전압과 전자 운동의 변화를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fe-classify",
+      "text": "자유 전자가 많은지 거의 없는지가 그 물질을 도체로 볼지 부도체로 볼지를 가른다.",
+      "form": {
+        "condition": "물질을 전기적 성질에 따라 나눌 때",
+        "type": "classification",
+        "scope": "도체와 부도체의 구분에 한함 — 반도체는 조건에 따라 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준을 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전압을 걸기 전에는 도체 안의 전자가 멈춰 있다",
+      "why_wrong": "전압이 없어도 자유 전자는 제멋대로 돌아다닌다. 전압을 걸면 움직이는 방향이 한쪽으로 정해질 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-fe-direction"
+    },
+    {
+      "text": "자유 전자는 물질 밖으로 빠져나간 전자다",
+      "why_wrong": "물질 안에 남아 있으면서 특정한 원자핵에 매이지 않고 돌아다니는 전자다.",
+      "source": "llm",
+      "linked_relation": "rel-fe-classify"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-electrical-conductor"
+    },
+    {
+      "type": "next",
+      "target": "isci1-electrical-insulator"
+    },
+    {
+      "type": "related",
+      "target": "isci1-electrical-conductivity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-06"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-02",
+  "pages": [
+    87
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

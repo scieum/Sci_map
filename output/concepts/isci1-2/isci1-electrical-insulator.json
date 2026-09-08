@@ -1,0 +1,110 @@
+{
+  "id": "isci1-electrical-insulator",
+  "concept_key": "concept:electrical-insulator",
+  "registry_status": "new",
+  "term": "부도체",
+  "aliases": [
+    "절연체"
+  ],
+  "notation": {
+    "hanja": "不導體",
+    "hanja_gloss": "不 아닐 부 · 導 이끌 도 · 體 몸 체",
+    "english": "electrical insulator"
+  },
+  "definition": "자유 전자가 거의 없어 전기 저항이 아주 크고, 그 탓에 전류를 좀처럼 통과시키지 못하는 물질. 고무·유리·나무가 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-insulator-noelectron",
+      "text": "부도체에 전류가 거의 흐르지 않는 까닭은 자유 전자가 없거나 매우 적기 때문이다.",
+      "form": {
+        "condition": "부도체의 양 끝에 전압을 걸었을 때",
+        "type": "causal",
+        "scope": "고무·유리·나무 같은 부도체에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "전류가 흐르지 않는 까닭을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-insulator-compare",
+      "text": "같은 전압을 걸어도 부도체는 도체보다 전기 저항이 훨씬 커서 전류가 거의 흐르지 않는다.",
+      "form": {
+        "condition": "도체와 같은 조건에서 견줄 때",
+        "type": "inverse",
+        "scope": "도체와 부도체를 견주는 데 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "두 물질의 저항 크기 순서가 정해져 있어 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "같은 전압을 걸면 부도체는 도체보다 전기 저항이 작아 전류가 더 잘 흐른다.",
+      "curriculum": [
+        "10통과1-02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-insulator-use",
+      "text": "부도체는 전류가 새어 나가면 안 되는 자리, 이를테면 전선의 겉을 싸는 데 쓰인다.",
+      "form": {
+        "condition": "전기 기구를 안전하게 쓰려 할 때",
+        "type": "causal",
+        "scope": "부도체의 쓰임에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "성질에서 쓰임으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "부도체는 전자가 하나도 없는 물질이다",
+      "why_wrong": "전자는 있지만 원자에 매여 있어 물질 속을 자유롭게 돌아다니지 못한다.",
+      "source": "llm",
+      "linked_relation": "rel-insulator-noelectron"
+    },
+    {
+      "text": "부도체에는 어떤 조건에서도 전류가 절대 흐르지 않는다",
+      "why_wrong": "저항이 매우 커서 거의 흐르지 않는다는 뜻이다. 아주 높은 전압에서는 전류가 흐르기도 한다.",
+      "source": "llm",
+      "linked_relation": "rel-insulator-compare"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-free-electron"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-electrical-conductivity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-semiconductor"
+    },
+    {
+      "type": "related",
+      "target": "isci1-electrical-conductor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-06"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-02",
+  "pages": [
+    87
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

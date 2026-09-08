@@ -1,0 +1,91 @@
+{
+  "id": "isci1-carbon-compound",
+  "concept_key": "concept:carbon-compound",
+  "registry_status": "reused",
+  "term": "탄소 화합물",
+  "notation": {
+    "hanja": "炭素化合物",
+    "hanja_gloss": "炭 숯 탄 · 素 본디 소 · 化 될 화 · 合 합할 합 · 物 물건 물",
+    "english": "carbon compound"
+  },
+  "definition": "탄소 골격에 수소·산소·질소 같은 원소가 결합해 만들어진 화합물. 생명체의 주요 구성 물질이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cc-variety",
+      "text": "골격이 같아도 어떤 원소가 어느 자리에 붙느냐에 따라 서로 다른 탄소 화합물이 된다.",
+      "form": {
+        "condition": "탄소 골격에 다른 원소가 결합할 때",
+        "type": "causal",
+        "scope": "탄소 화합물의 다양성을 설명하는 데 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "다양성의 원인을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-life",
+      "text": "단백질·지질·핵산처럼 생명체의 특성을 드러내는 주요 물질은 모두 탄소를 중심에 둔 화합물이다.",
+      "form": {
+        "condition": "생명체의 주요 구성 물질을 살필 때",
+        "type": "classification",
+        "scope": "생명체의 주요 구성 물질에 한함 — 몸의 많은 부분을 차지하는 물은 여기에 들지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "물질을 한 갈래로 묶은 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생명체를 이루는 물질은 모두 탄소 화합물이다",
+      "why_wrong": "몸의 많은 부분을 차지하는 물에는 탄소가 들어 있지 않다. 탄소 화합물인 것은 단백질·지질·핵산 같은 물질이다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-life"
+    },
+    {
+      "text": "탄소 화합물의 종류가 많은 것은 탄소의 종류가 여러 가지이기 때문이다",
+      "why_wrong": "탄소는 한 가지 원소다. 골격의 모양과 붙는 원소가 달라져 종류가 많아진다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-variety"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-carbon-atom-bonding"
+    },
+    {
+      "type": "next",
+      "target": "isci1-amino-acid"
+    },
+    {
+      "type": "next",
+      "target": "isci1-nucleotide"
+    },
+    {
+      "type": "related",
+      "target": "isci1-protein"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-05"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-01",
+  "pages": [
+    81
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

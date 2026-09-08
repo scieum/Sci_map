@@ -1,0 +1,106 @@
+{
+  "id": "isci1-property-of-covalent-compound",
+  "concept_key": "concept:property-of-covalent-compound",
+  "registry_status": "new",
+  "term": "공유 결합 물질의 성질",
+  "aliases": [
+    "공유 결합 물질의 전기 전도성"
+  ],
+  "notation": {
+    "hanja": "共有結合物質性質",
+    "hanja_gloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 合 합할 합 · 物 물건 물 · 質 바탕 질 · 性 성품 성 · 質 바탕 질",
+    "english": "properties of covalent compounds"
+  },
+  "definition": "원자들이 전자쌍을 함께 써서 만들어진 물질이 보이는 성질. 물에 녹아도 중성 분자로 있어 전류가 흐르지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pcc-neutral",
+      "text": "설탕이나 포도당을 물에 녹이면 이온으로 나뉘지 않고 전기적으로 중성인 분자 그대로 흩어진다.",
+      "form": {
+        "condition": "공유 결합 물질을 물에 녹였을 때",
+        "type": "causal",
+        "scope": "설탕·포도당처럼 물에서 이온화하지 않는 공유 결합 물질에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "녹았을 때의 상태를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pcc-nocurrent",
+      "text": "전하를 나를 이온이 없으므로 고체일 때나 수용액일 때나 전류가 흐르지 않는다.",
+      "form": {
+        "condition": "공유 결합 물질에 전압을 걸었을 때",
+        "type": "causal",
+        "scope": "물에서 이온화하지 않는 공유 결합 물질에 한함 — 염화 수소처럼 물에서 이온으로 나뉘는 예외가 있다"
+      },
+      "invertible": false,
+      "invertible_reason": "전하를 나를 입자의 유무에서 전류로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pcc-compare",
+      "text": "수용액에서 이온 결합 물질은 전류가 흐르고 공유 결합 물질은 흐르지 않는다는 점이 둘을 가른다.",
+      "form": {
+        "condition": "두 물질을 같은 수용액 상태에서 견줄 때",
+        "type": "classification",
+        "scope": "간이 전기 전도계로 견주는 범위에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "전류가 흐르는 쪽이 정해져 있어 두 물질을 서로 바꾸면 반드시 거짓이 된다.",
+      "inverted_text": "수용액에서 이온 결합 물질은 전류가 흐르지 않고 공유 결합 물질은 전류가 흐른다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "설탕물에 전류가 흐르지 않는 것은 설탕이 물에 녹지 않기 때문이다",
+      "why_wrong": "설탕은 물에 잘 녹는다. 다만 이온이 아니라 중성 분자로 녹아 전하를 나를 입자가 생기지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-pcc-neutral"
+    },
+    {
+      "text": "공유 결합 물질도 물에 녹으면 이온으로 나뉘어 전류가 흐른다",
+      "why_wrong": "설탕과 포도당은 녹아도 분자 그대로 있어 수용액에서도 전류가 흐르지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-pcc-nocurrent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-covalent-bond"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-electrical-conductivity"
+    },
+    {
+      "type": "related",
+      "target": "isci1-property-of-ionic-compound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-03",
+  "pages": [
+    71
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

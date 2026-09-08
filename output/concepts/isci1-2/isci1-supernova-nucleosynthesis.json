@@ -1,0 +1,105 @@
+{
+  "id": "isci1-supernova-nucleosynthesis",
+  "concept_key": "concept:supernova-nucleosynthesis",
+  "registry_status": "new",
+  "term": "초신성 폭발과 무거운 원소의 생성",
+  "aliases": [
+    "초신성 폭발"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'무거운'이 우리말 고유어라 낱말 전체에 대응하는 한자 표기가 없다. '초신성 폭발'과 '원소의 생성'만 한자어(超新星爆發·元素生成)다.",
+    "english": "supernova nucleosynthesis"
+  },
+  "definition": "질량이 큰 별이 핵융합을 마치며 터질 때 나오는 막대한 에너지로 철보다 무거운 원소가 만들어지고 우주로 흩어지는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sn-heavy",
+      "text": "초신성이 터지는 몇 초 사이에 쏟아진 에너지가 구리·금·우라늄처럼 철보다 무거운 원소를 만들어 낸다.",
+      "form": {
+        "condition": "질량이 큰 별이 핵융합을 끝내고 폭발할 때",
+        "type": "causal",
+        "scope": "철보다 무거운 원소가 만들어지는 경로에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "폭발 에너지와 원소 생성의 인과를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sn-mass",
+      "text": "별의 최후는 질량이 가른다. 태양 정도의 별은 외곽 물질을 흘려보내며 마치고, 훨씬 무거운 별은 초신성으로 터진다.",
+      "form": {
+        "condition": "별이 핵융합을 마칠 때",
+        "type": "classification",
+        "scope": "별의 최후 단계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "질량에 따라 갈리는 두 경로를 나눈 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sn-seed",
+      "text": "별들이 일생을 마치며 뿜어낸 원소가 우주에 쌓였고, 그것이 뒤에 생겨난 태양계와 지구, 생명체의 재료가 되었다.",
+      "form": {
+        "condition": "태양계가 만들어지기 전 우주에 이미 무거운 원소가 퍼져 있었을 때",
+        "type": "causal",
+        "scope": "태양계의 재료가 된 원소의 유래를 설명하는 데 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "원소가 재료가 되기까지의 내력을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "초신성 폭발은 별이 사라지는 사건일 뿐 원소 생성과는 관계가 없다",
+      "why_wrong": "폭발할 때 나온 에너지가 철보다 무거운 원소를 만들고, 별이 품고 있던 원소를 우주로 퍼뜨린다.",
+      "source": "llm",
+      "linked_relation": "rel-sn-heavy"
+    },
+    {
+      "text": "모든 별은 마지막에 초신성 폭발을 일으킨다",
+      "why_wrong": "초신성 폭발은 질량이 아주 큰 별의 최후다. 태양 정도의 별은 외곽 물질을 우주로 내보내며 일생을 마친다.",
+      "source": "llm",
+      "linked_relation": "rel-sn-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-stellar-nuclear-fusion"
+    },
+    {
+      "type": "next",
+      "target": "isci1-solar-system-formation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-elemental-composition-of-the-universe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-02",
+  "pages": [
+    49
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

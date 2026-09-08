@@ -1,0 +1,110 @@
+{
+  "id": "isci1-metal-and-nonmetal-element",
+  "concept_key": "concept:metal-and-nonmetal-element",
+  "registry_status": "new",
+  "term": "금속 원소와 비금속 원소",
+  "aliases": [
+    "금속과 비금속"
+  ],
+  "notation": {
+    "hanja": "金屬元素非金屬元素",
+    "hanja_gloss": "金 쇠 금 · 屬 무리 속 · 元 으뜸 원 · 素 본디 소 · 非 아닐 비 · 金 쇠 금 · 屬 무리 속 · 元 으뜸 원 · 素 본디 소",
+    "english": "metallic and nonmetallic elements"
+  },
+  "definition": "주기율표 왼쪽에 주로 놓여 전자를 잃기 쉬운 원소와, 오른쪽에 주로 놓여 전자를 얻기 쉬운 원소의 구분.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mn-position",
+      "text": "금속 원소는 주기율표의 왼쪽에, 비금속 원소는 오른쪽에 주로 자리하고 그 사이에 준금속이 놓인다.",
+      "form": {
+        "condition": "주기율표에서 원소가 놓인 자리를 볼 때",
+        "type": "classification",
+        "scope": "대체적인 위치에 한함 — 수소는 왼쪽 끝에 있으나 비금속이다"
+      },
+      "invertible": false,
+      "invertible_reason": "위치에 따른 구분을 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mn-ion",
+      "text": "양이온이 되기 쉬운 쪽은 전자를 내주는 금속 원자이고, 음이온이 되기 쉬운 쪽은 전자를 받아들이는 비금속 원자다.",
+      "form": {
+        "condition": "원자가 안정한 전자 배치를 이루려 할 때",
+        "type": "causal",
+        "scope": "이온을 만드는 일반적인 경향에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "금속과 비금속이 전자를 주고받는 방향이 정해져 있어 서로 바꾸면 반드시 거짓이 된다.",
+      "inverted_text": "양이온이 되기 쉬운 쪽은 전자를 받아들이는 비금속 원자이고, 음이온이 되기 쉬운 쪽은 전자를 내주는 금속 원자다.",
+      "curriculum": [
+        "10통과1-02-03",
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mn-bondtype",
+      "text": "금속 원소와 비금속 원소가 만나면 이온 결합이, 비금속 원소끼리 만나면 공유 결합이 형성된다.",
+      "form": {
+        "condition": "두 원소가 화학 결합을 이룰 때",
+        "type": "classification",
+        "scope": "이온 결합과 공유 결합을 견주는 범위에 한함 — 금속끼리 이루는 결합은 여기에 들어가지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 상대에 따른 구분을 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비금속 원소도 금속처럼 전자를 잃어 양이온이 되기 쉽다",
+      "why_wrong": "비금속 원자는 전자를 얻어 음이온이 되기 쉽다. 그래야 안정한 전자 배치에 가까워진다.",
+      "source": "llm",
+      "linked_relation": "rel-mn-ion"
+    },
+    {
+      "text": "금속 원소끼리 만나면 이온 결합을 이룬다",
+      "why_wrong": "이온 결합은 전자를 내주는 금속과 받는 비금속 사이에서 생긴다. 금속끼리는 서로 전자를 주고받을 상대가 되지 못한다.",
+      "source": "llm",
+      "linked_relation": "rel-mn-bondtype"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-periodic-table"
+    },
+    {
+      "type": "next",
+      "target": "isci1-ionic-bond"
+    },
+    {
+      "type": "related",
+      "target": "isci1-valence-electron"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-03",
+    "10통과1-02-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-02",
+  "pages": [
+    60,
+    61,
+    66
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

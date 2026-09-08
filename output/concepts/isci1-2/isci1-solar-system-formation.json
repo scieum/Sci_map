@@ -1,0 +1,115 @@
+{
+  "id": "isci1-solar-system-formation",
+  "concept_key": "concept:solar-system-formation",
+  "registry_status": "new",
+  "term": "태양계와 지구의 형성",
+  "aliases": [
+    "태양계의 형성"
+  ],
+  "notation": {
+    "hanja": "太陽系地球形成",
+    "hanja_gloss": "太 클 태 · 陽 볕 양 · 系 이을 계 · 地 땅 지 · 球 공 구 · 形 모양 형 · 成 이룰 성",
+    "english": "formation of the solar system"
+  },
+  "definition": "무거운 원소가 섞인 성운이 회전하며 수축해 중심에는 태양을, 원반에는 행성을 만든 과정. 지구와 생명체의 재료도 여기서 나왔다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-solar-disk",
+      "text": "성운이 식으며 다시 뭉칠 때 물질은 중심부와 원반으로 모이고, 중심에서는 별이, 원반에서는 행성이 만들어진다.",
+      "form": {
+        "condition": "성운이 회전하면서 수축할 때",
+        "type": "causal",
+        "scope": "태양계가 만들어지는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정의 순서를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-solar-distance",
+      "text": "태양에 가까운 안쪽에는 철과 규소 같은 무거운 물질이 남아 암석 행성이, 먼 바깥쪽에는 가벼운 물질이 모여 기체 행성이 생겼다.",
+      "form": {
+        "condition": "원반 안에서 태양으로부터의 거리가 서로 다를 때",
+        "type": "inverse",
+        "scope": "태양계 행성이 만들어지는 과정에 한함",
+        "antecedent": {
+          "quantity": "태양으로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "모여든 물질의 무거움",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리와 모여든 물질의 무거움이 반대 방향이라 뒤집으면 반드시 거짓이 된다.",
+      "inverted_text": "태양에서 멀어질수록 철과 규소 같은 무거운 물질이 모여 암석으로 이루어진 행성이 만들어졌다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-solar-origin",
+      "text": "지구와 생명체를 이루는 원소는 빅뱅이 만든 수소·헬륨과 별의 진화가 만든 무거운 원소가 함께 모인 것이다.",
+      "form": {
+        "condition": "지구와 생명체를 이루는 원소의 유래를 따질 때",
+        "type": "causal",
+        "scope": "원소의 유래를 설명하는 데 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "원소의 내력을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지구를 이루는 원소는 지구가 생길 때 새로 만들어졌다",
+      "why_wrong": "지구의 원소는 빅뱅과 별의 진화, 초신성 폭발로 이미 만들어져 있던 것이 모인 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-solar-origin"
+    },
+    {
+      "text": "바깥쪽 행성이 기체로 이루어진 것은 태양의 열에 암석이 녹았기 때문이다",
+      "why_wrong": "태양에서 먼 곳에는 수소·헬륨·메테인 같은 가벼운 물질이 남아 모였기 때문이다.",
+      "source": "llm",
+      "linked_relation": "rel-solar-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-supernova-nucleosynthesis"
+    },
+    {
+      "type": "related",
+      "target": "isci1-big-bang-nucleosynthesis"
+    },
+    {
+      "type": "related",
+      "target": "isci1-elemental-composition-of-the-universe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-1-02",
+  "pages": [
+    50,
+    51
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

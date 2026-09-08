@@ -420,7 +420,9 @@ def main() -> int:
             errs.append(f"{c.get('id', '?')}/{where}: {e.message}")
     res.add("schema", not errs, f"{len(errs)}건 위반" if errs else f"카드 {len(cards)}장 통과", errs[:20])
 
-    res.warn("count", f"카드 {len(cards)}장 (기준 10~30)")
+    # 상한 40 — C1 후보 상한과 같이 맞춘다 (2026-09-08 교사 결정).
+    # 두 상한이 갈리면 C1 을 통과한 후보가 C2 에서 경고를 맞는다.
+    res.warn("count", f"카드 {len(cards)}장 (기준 10~40)")
     check_notation(cards, res)
     check_typeability(cards, res)
     check_answer_collision(cards, res)

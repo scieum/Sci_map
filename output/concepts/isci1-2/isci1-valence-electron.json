@@ -1,0 +1,110 @@
+{
+  "id": "isci1-valence-electron",
+  "concept_key": "concept:valence-electron",
+  "registry_status": "new",
+  "term": "원자가 전자",
+  "notation": {
+    "hanja": "原子價電子",
+    "hanja_gloss": "原 근원 원 · 子 아들 자 · 價 값 가 · 電 번개 전 · 子 아들 자",
+    "english": "valence electron"
+  },
+  "definition": "원자의 가장 바깥 전자 껍질에 놓여 화학 반응과 화학 결합에 직접 참여하는 전자.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-valence-property",
+      "text": "원소의 화학적 성질을 가르는 것은 전자의 총수가 아니라 가장 바깥 껍질에 있는 원자가 전자의 수다.",
+      "form": {
+        "condition": "주족 원소의 화학적 성질을 견줄 때",
+        "type": "causal",
+        "scope": "화학적 성질에 한함 — 녹는점 같은 물리적 성질까지 정해 주지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "성질을 정하는 요인을 짚은 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-valence-group",
+      "text": "같은 족에 속한 원소는 원자가 전자 수가 같다. 17족인 플루오린과 염소는 둘 다 7개다.",
+      "form": {
+        "condition": "주족 원소를 족별로 볼 때",
+        "type": "direct",
+        "scope": "주족 원소에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 값이 같다는 대응 관계라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-valence-bond",
+      "text": "화학 결합에 실제로 관여하는 것은 안쪽 껍질의 전자가 아니라 가장 바깥 껍질의 원자가 전자다.",
+      "form": {
+        "condition": "원자가 다른 원자와 결합을 이룰 때",
+        "type": "causal",
+        "scope": "화학 결합의 형성에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합에 참여하는 전자를 가려낸 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자가 전자는 원자가 가진 전자 전체를 뜻한다",
+      "why_wrong": "가장 바깥 전자 껍질에 있는 전자만 원자가 전자다. 염소는 전자가 17개지만 원자가 전자는 7개다.",
+      "source": "llm",
+      "linked_relation": "rel-valence-bond"
+    },
+    {
+      "text": "같은 주기에 있는 원소끼리는 원자가 전자 수가 같다",
+      "why_wrong": "같은 주기는 전자 껍질 수가 같을 뿐이다. 원자가 전자 수가 같은 것은 같은 족이다.",
+      "source": "llm",
+      "linked_relation": "rel-valence-group"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-electron-shell"
+    },
+    {
+      "type": "next",
+      "target": "isci1-periodic-table-group"
+    },
+    {
+      "type": "next",
+      "target": "isci1-periodicity-of-element"
+    },
+    {
+      "type": "next",
+      "target": "isci1-stable-electron-configuration"
+    },
+    {
+      "type": "next",
+      "target": "isci1-carbon-atom-bonding"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-01",
+  "pages": [
+    63
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

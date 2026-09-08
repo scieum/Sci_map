@@ -1,0 +1,110 @@
+{
+  "id": "isci1-periodic-table-group",
+  "concept_key": "concept:periodic-table-group",
+  "registry_status": "new",
+  "term": "족",
+  "aliases": [
+    "주기율표의 세로줄"
+  ],
+  "notation": {
+    "hanja": "族",
+    "hanja_gloss": "族 겨레 족",
+    "english": "group (periodic table)"
+  },
+  "definition": "주기율표의 세로줄. 같은 세로줄에 놓인 원소들은 원자가 전자 수가 같아 화학적 성질이 서로 비슷하다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-group-valence",
+      "text": "같은 족에 속한 원소들은 원자가 전자 수가 서로 같다. 1족은 1개, 17족은 7개다.",
+      "form": {
+        "condition": "1·2족과 13~17족의 주족 원소를 볼 때",
+        "type": "direct",
+        "scope": "주족 원소에 한함 — 전이 원소에는 이 규칙을 그대로 적용하지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "두 값이 같다는 대응 관계라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-group-property",
+      "text": "원자가 전자 수가 같기 때문에 같은 족 원소들은 화학적 성질이 서로 닮는다.",
+      "form": {
+        "condition": "같은 족에 속한 원소끼리 견줄 때",
+        "type": "causal",
+        "scope": "주족 원소의 화학적 성질에 한함 — 녹는점 같은 물리적 성질까지 같아지지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "성질이 닮는 까닭을 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-group-example",
+      "text": "1족의 리튬·소듐·포타슘은 모두 무르고 반응성이 커서 실온에서도 물과 격렬하게 반응한다.",
+      "form": {
+        "condition": "1족 금속 원소를 견줄 때",
+        "type": "conditional",
+        "scope": "1족 금속 원소에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "한 족의 사례를 든 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "같은 족 원소끼리 성질이 비슷한 것은 원자 번호가 이어져 있기 때문이다",
+      "why_wrong": "같은 족 원소는 원자 번호가 멀리 떨어져 있다. 성질이 닮는 까닭은 원자가 전자 수가 같아서다.",
+      "source": "llm",
+      "linked_relation": "rel-group-property"
+    },
+    {
+      "text": "리튬·소듐·포타슘은 금속이므로 물에 넣어도 아무 변화가 없다",
+      "why_wrong": "1족 금속은 반응성이 매우 커서 실온의 물과도 격렬하게 반응한다.",
+      "source": "llm",
+      "linked_relation": "rel-group-example"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-periodic-table"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-valence-electron"
+    },
+    {
+      "type": "related",
+      "target": "isci1-periodic-table-period"
+    },
+    {
+      "type": "related",
+      "target": "isci1-periodicity-of-element"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-2-01",
+  "pages": [
+    61,
+    63
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

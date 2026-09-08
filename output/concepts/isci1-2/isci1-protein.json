@@ -1,0 +1,103 @@
+{
+  "id": "isci1-protein",
+  "concept_key": "concept:protein",
+  "registry_status": "new",
+  "term": "단백질",
+  "notation": {
+    "hanja": "蛋白質",
+    "hanja_gloss": "蛋 새알 단 · 白 흰 백 · 質 바탕 질",
+    "english": "protein"
+  },
+  "definition": "아미노산이 펩타이드 결합으로 길게 이어진 뒤 접혀 특정한 입체 구조를 이룬 물질. 몸의 구성 성분이자 효소·호르몬의 주성분이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-prot-sequence",
+      "text": "아미노산의 종류와 수, 이어진 순서가 다르면 사슬이 구부러지고 접히는 방법이 달라져 입체 구조도 달라진다.",
+      "form": {
+        "condition": "폴리펩타이드가 접혀 구조를 갖출 때",
+        "type": "causal",
+        "scope": "단백질의 입체 구조가 정해지는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "배열에서 구조로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-prot-function",
+      "text": "입체 구조가 서로 다른 단백질은 저마다 다른 기능을 맡는다.",
+      "form": {
+        "condition": "단백질이 고유한 입체 구조를 갖췄을 때",
+        "type": "causal",
+        "scope": "단백질의 구조와 기능의 관계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "구조와 기능의 대응을 밝힌 명제라 뒤집어도 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-prot-role",
+      "text": "단백질은 피부·근육 같은 몸의 구성 성분이면서 효소와 호르몬의 주성분으로 생명활동을 조절한다.",
+      "form": {
+        "condition": "생명체 안에서 단백질이 맡는 일을 볼 때",
+        "type": "classification",
+        "scope": "단백질의 역할에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "역할을 나열한 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아미노산이 길게 이어지기만 하면 곧바로 단백질이 된다",
+      "why_wrong": "길게 이어진 사슬이 구부러지고 접혀 특정한 입체 구조를 이루어야 단백질로서 기능한다.",
+      "source": "llm",
+      "linked_relation": "rel-prot-sequence"
+    },
+    {
+      "text": "아미노산의 종류와 개수만 같으면 같은 단백질이다",
+      "why_wrong": "이어진 순서가 다르면 접히는 방법이 달라져 다른 입체 구조와 다른 기능을 갖는다.",
+      "source": "llm",
+      "linked_relation": "rel-prot-sequence"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-amino-acid"
+    },
+    {
+      "type": "related",
+      "target": "isci1-carbon-compound"
+    },
+    {
+      "type": "related",
+      "target": "isci1-nucleic-acid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-02-05"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅱ. 물질과 규칙성",
+  "unit_id": "isci1-2",
+  "topic_id": "isci1-2-3-01",
+  "pages": [
+    82,
+    83
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}
