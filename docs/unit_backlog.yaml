@@ -508,6 +508,241 @@ subjects:
       wrapup: 118
       project: 120
       career: 121
+- code: isci1
+  name: 통합과학1
+  course_type: 공통
+  grade: 1
+  curriculum: 2022 개정
+  # ★미확인 — 지도서에서 성취기준을 뽑아 확정할 것. 통합과학2가 [10통과2-01-01] 꼴이므로
+  #   통합과학1은 [10통과1-01-01] 꼴로 보이나 원문 대조 전이다.
+  standard_prefix: 10통과1
+  textbook:
+    file: inbox/textbook/고_통합과학1(신영준)_교과서_2쇄.pdf
+    publisher: 비상교육
+    author: 신영준 외
+    pages: 186
+    note: >-
+      인쇄 쪽수 == PDF 쪽수 (p10·11·38·98·162 러닝헤드로 확인). 앞부속(p1~9)·
+      부록(p162~186)은 본문이 아니다. 단원·중단원 경계는 짝수 쪽의 단원 러닝헤드와
+      홀수 쪽의 중단원 러닝헤드를 186쪽 전량 스캔해 확정했다.
+      추출률: Ⅰ 95.1% 통과 / Ⅱ 94.1% 미달 / Ⅲ 94.9% 미달. 텍스트 없는 쪽은 0쪽.
+      통합과학2(Ⅱ단원 94.7%)와 같은 원인 — 말풍선·손글씨체 디자인 텍스트가 많은
+      비상교육 판형이다.
+      ★이 판형에는 글리프 이중 조판 쪽이 있다 — 전면 사진·색면 쪽에서 글자가 두 번
+      찍혀 '40' 이 '4400', '지구시스템' 이 '지지구구시시스스템템' 으로 뽑힌다.
+      본문 152쪽 중 17쪽(11%)이 그렇다. split_unit 의 쪽번호·제목 대조가 이 때문에
+      Ⅱ에서 1건, Ⅲ에서 3건 불일치를 냈다(중복 제거하면 모두 일치).
+      ★2026-09-08 교사 결정: 이 에스컬레이션을 수용하고 넘어간다. 검출기를 고치지도,
+      경계를 자동 보정하지도 않는다 — 선언된 경계를 그대로 쓴다. 근거는 186쪽
+      러닝헤드 전량 스캔이고, 추출률 미달은 통합과학2 선례와 같은 판형 사유다.
+      나중에 이 판형을 다시 다룰 때는 _common.clean() 의 이중 글리프 처리부터 보라.
+  guide:
+    file: inbox/textbook/고_통합과학1(신영준)_지도서_2쇄.pdf
+    pages: null
+  units:
+  - id: isci1-1
+    numeral: Ⅰ
+    title: 과학의 기초
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 10
+    - 35
+    sections:
+    - id: isci1-1-1
+      numeral: 1
+      title: 과학의 기초
+      pages:
+      - 12
+      - 33
+      review: 30
+      topics:
+      - id: isci1-1-1-01
+        numeral: '01'
+        title: 자연을 나타내는 표준, 시간과 공간
+        pages:
+        - 14
+        - 19
+      - id: isci1-1-1-02
+        numeral: '02'
+        title: 세상의 기준, 기본량과 측정 표준
+        pages:
+        - 20
+        - 25
+      - id: isci1-1-1-03
+        numeral: '03'
+        title: 정보의 디지털 변환과 현대 문명
+        pages:
+        - 26
+        - 29
+    extras:
+      digital: 34
+  - id: isci1-2
+    numeral: Ⅱ
+    title: 물질과 규칙성
+    priority: 2
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 36
+    - 95
+    sections:
+    - id: isci1-2-1
+      numeral: 1
+      title: 우주와 원소의 생성
+      pages:
+      - 38
+      - 55
+      review: 52
+      topics:
+      - id: isci1-2-1-01
+        numeral: '01'
+        title: 별의 스펙트럼과 우주의 구성 원소
+        pages:
+        - 40
+        - 45
+      - id: isci1-2-1-02
+        numeral: '02'
+        title: 태양계와 생명체를 이루는 원소의 형성
+        pages:
+        - 46
+        - 51
+    - id: isci1-2-2
+      numeral: 2
+      title: 원소의 규칙성과 결합
+      pages:
+      - 56
+      - 75
+      review: 72
+      topics:
+      - id: isci1-2-2-01
+        numeral: '01'
+        title: 원소의 규칙성과 주기율표
+        pages:
+        - 58
+        - 63
+      - id: isci1-2-2-02
+        numeral: '02'
+        title: 화학 결합의 형성과 종류
+        pages:
+        - 64
+        - 69
+      - id: isci1-2-2-03
+        numeral: '03'
+        title: 화학 결합에 따른 물질의 성질
+        pages:
+        - 70
+        - 71
+    - id: isci1-2-3
+      numeral: 3
+      title: 결합으로 이루어진 세상
+      pages:
+      - 76
+      - 93
+      review: 90
+      topics:
+      - id: isci1-2-3-01
+        numeral: '01'
+        title: 지각과 생명체를 이루는 결합의 규칙
+        pages:
+        - 78
+        - 85
+      - id: isci1-2-3-02
+        numeral: '02'
+        title: 물질의 전기적 성질과 첨단 기술의 활용
+        pages:
+        - 86
+        - 89
+    extras:
+      practice: 94
+  - id: isci1-3
+    numeral: Ⅲ
+    title: 시스템과 상호작용
+    priority: 3
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 96
+    - 161
+    sections:
+    - id: isci1-3-1
+      numeral: 1
+      title: 지구시스템과 판 구조론
+      pages:
+      - 98
+      - 119
+      review: 116
+      topics:
+      - id: isci1-3-1-01
+        numeral: '01'
+        title: 지구시스템의 구성 요소
+        pages:
+        - 100
+        - 103
+      - id: isci1-3-1-02
+        numeral: '02'
+        title: 지구시스템의 물질 순환과 에너지 흐름
+        pages:
+        - 104
+        - 107
+      - id: isci1-3-1-03
+        numeral: '03'
+        title: 지권의 변화와 판 구조론
+        pages:
+        - 108
+        - 115
+    - id: isci1-3-2
+      numeral: 2
+      title: 역학 시스템과 중력의 작용
+      pages:
+      - 120
+      - 137
+      review: 134
+      topics:
+      - id: isci1-3-2-01
+        numeral: '01'
+        title: 중력의 작용과 다양한 운동
+        pages:
+        - 122
+        - 127
+      - id: isci1-3-2-02
+        numeral: '02'
+        title: 일상생활에서의 충돌과 안전장치
+        pages:
+        - 128
+        - 133
+    - id: isci1-3-3
+      numeral: 3
+      title: 생명 시스템과 정보의 흐름
+      pages:
+      - 138
+      - 159
+      review: 156
+      topics:
+      - id: isci1-3-3-01
+        numeral: '01'
+        title: 생명 시스템을 구성하는 세포
+        pages:
+        - 140
+        - 145
+      - id: isci1-3-3-02
+        numeral: '02'
+        title: 생명체에서 일어나는 화학 반응
+        pages:
+        - 146
+        - 151
+      - id: isci1-3-3-03
+        numeral: '03'
+        title: 세포 내 정보의 흐름과 단백질 생성
+        pages:
+        - 152
+        - 155
+    extras:
+      citizen: 160
 - code: isci2
   name: 통합과학2
   course_type: 공통

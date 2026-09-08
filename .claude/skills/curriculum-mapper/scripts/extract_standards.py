@@ -34,10 +34,18 @@ CROSSCHECK_PAGES = (146, 234)
 LAPARAMS = {"line_margin": 1.0, "char_margin": 1.2, "word_margin": 0.1, "boxes_flow": 0.5}
 
 # 코드 안에 조판용 공백이 끼어 있다: '[12물 에01 - 01]', '[ 12반응01-05]'
-CODE_RE = re.compile(r"\[\s*12\s*(물\s*에|화\s*학|반\s*응)\s*(\d{2})\s*-\s*(\d{2})\s*\]")
+# 진로선택(천재교과서)은 대괄호로 감싸지만, 공통 통합과학(비상교육)은 대괄호 없이
+# '10통과1-01-01 자연을 …' 처럼 문장 앞에 그대로 붙는다. 두 조판을 함께 받는다.
+CODE_RE = re.compile(
+    r"\[\s*12\s*(?:물\s*에|화\s*학|반\s*응)\s*\d{2}\s*-\s*\d{2}\s*\]"
+    r"|1\s*0\s*통\s*과\s*[12]\s*-\s*\d{2}\s*-\s*\d{2}")
 # 표의 행 이름 칸. 문장 사이에 끼어들므로 미리 걷어낸다.
 ROW_LABELS = {"핵심 아이디어", "성취기준", "탐구 활동", "내용 요소", "범주", "구분",
-              "교육과정 성취기준", "교육과정성취기준"}
+              "교육과정 성취기준", "교육과정성취기준",
+              # 비상교육 각론은 성취기준 문장 옆에 곁주 라벨을 같은 높이로 놓는다.
+              # 걷어내지 않으면 '…알고, 이러[단원 핵심 질문]한 정보를…' 로 끼어들어
+              # 총론과 대조할 때 없는 불일치가 생긴다.
+              "단원 핵심 질문", "단원핵심질문", "탐구활동"}
 ROW_TOL = 5.0
 # 성취기준은 '~ㄴ다.' 로 끝나는 한 문장이다. 문장 안에 '다.' 가 다시 나오지 않는다.
 SENTENCE_END = "다."
@@ -49,6 +57,14 @@ COURSES = {
     "12물에": {"name": "물질과 에너지", "type": "진로선택", "primary": (16, 19), "cross": (146, 234),
               "areas": {"01": "물질의 세 가지 상태", "02": "용액의 성질",
                         "03": "화학 변화의 자발성", "04": "반응 속도"}},
+    # 공통 통합과학은 비상교육 판형이다. 지도서 한 권이 1·2 두 과목을 함께 싣고 있어
+    # 총론 표의 자리가 과목마다 다르다 — 1은 p10~13, 2는 p15~17.
+    "10통과1": {"name": "통합과학1", "type": "공통", "primary": (10, 13), "cross": (44, 179),
+               "areas": {"01": "과학의 기초", "02": "물질과 규칙성",
+                         "03": "시스템과 상호작용"}},
+    "10통과2": {"name": "통합과학2", "type": "공통", "primary": (15, 17), "cross": (44, 179),
+               "areas": {"01": "변화와 다양성", "02": "환경과 에너지",
+                         "03": "과학과 미래 사회"}},
     "12반응": {"name": "화학 반응의 세계", "type": "진로선택", "primary": (17, 19), "cross": (146, 200),
               "areas": {"01": "산 염기 평형", "02": "산화·환원 반응", "03": "탄소 화합물과 반응"}},
 }
@@ -77,13 +93,24 @@ def page_stream(page) -> str:
                    for r in rows)
 
 
+def norm_for_compare(s: str) -> str:
+    """총론↔각론 대조용 정규화. 저장하는 문장은 총론 판본 그대로 두고, 비교할 때만 쓴다.
+
+    같은 문장을 두 조판이 서로 다른 가운뎃점으로 찍는다 — 총론은 '측정·분석'(U+00B7),
+    각론은 '측정ㆍ분석'(U+318D). 글자가 아니라 조판의 차이라서, 이것까지 불일치로
+    보면 사람이 NCIC 원문을 뒤져야 할 목록이 실제 이견 없는 것으로 채워진다.
+    """
+    return re.sub(r"[\s·ㆍ‧・･·]", "", s)
+
+
 def harvest(doc, first: int, last: int) -> dict[str, tuple[int, str]]:
     """쪽 범위에서 코드 → (쪽, 성취기준 문장) 을 모은다. 먼저 나온 것을 남긴다."""
     out: dict[str, tuple[int, str]] = {}
     for pno in range(first, min(last, len(doc.pages)) + 1):
         stream = page_stream(doc.pages[pno - 1])
         for m in CODE_RE.finditer(stream):
-            code = re.sub(r"\s", "", m.group(0))[1:-1]
+            # 대괄호 조판(진로선택)만 껍질을 벗긴다. 통합과학은 맨몸으로 온다.
+            code = re.sub(r"\s", "", m.group(0)).strip("[]")
             if code in out:
                 continue
             tail = stream[m.end():]
@@ -125,15 +152,16 @@ def main() -> int:
     records, problems = [], []
     for code in sorted(primary):
         pno, text = primary[code]
-        area, seq = code[len(args.course):].split("-")
+        # 진로선택은 '12물에01-01', 공통은 '10통과1-01-01' — 접두어 뒤 붙임표가 있고 없다
+        area, seq = code[len(args.course):].lstrip("-").split("-")
 
         if not (MIN_LEN <= len(text) <= MAX_LEN and text.endswith(SENTENCE_END)):
             problems.append(f"{code}: 문장 형태가 이상하다 ({len(text)}자) — {text[:60]}")
 
         agreement, note = "미대조", None
         if code in cross:
-            a = re.sub(r"\s", "", text)
-            b = re.sub(r"\s", "", cross[code][1])
+            a = norm_for_compare(text)
+            b = norm_for_compare(cross[code][1])
             if a == b:
                 agreement = "일치"
             else:
@@ -158,7 +186,8 @@ def main() -> int:
 # (총론 교육과정 내용 체계 표 / 각론 평가 자료) 을 대조해 만들었다.
 # 지도서 고유 해설(최소 성취 수준 등)은 천재교과서 저작물이라 옮기지 않았다.
 #
-# crosscheck: 일치   = 두 판본이 (공백 무시) 같다
+# crosscheck: 일치   = 두 판본이 (공백·가운뎃점 무시) 같다 — 같은 문장을 총론은 '·',
+#                      각론은 'ㆍ' 로 찍는 판형이 있어 조판 차이는 이견으로 보지 않는다
 #             불일치 = 판본이 갈린다. note 에 각론 판본을 적어 두었으니
 #                      **사람이 NCIC 원문으로 확정**해야 한다. 그 전에는 C5 태깅에 쓰지 마라.
 #             미대조 = 각론에서 짝을 못 찾았다
@@ -168,8 +197,11 @@ def main() -> int:
 """
     footer = """
 # ── 아직 수록하지 않은 과목 ──────────────────────────────────────────────────
-# 통합과학1·2, 화학의 성취기준은 지도서 전문이 없다. 착수 시 그 지도서로
+# 화학의 성취기준은 지도서 전문이 없다. 착수 시 그 지도서로
 # `extract_standards.py --course …` 를 돌려 여기에 병합한다.
+#
+# 통합과학1·2 는 지도서 한 권에 함께 실려 있다 (비상교육, 신영준 외).
+# 총론 표의 자리가 과목마다 다르다 — 1은 p10~13, 2는 p15~17. COURSES 참조.
 """
     # 병합 — 다른 과목의 항목은 그대로 두고 이 과목만 갈아끼운다.
     # 파일 전체를 다시 쓰면 먼저 넣은 과목이 사라진다.
@@ -179,13 +211,19 @@ def main() -> int:
             existing = (yaml.safe_load(OUT.read_text(encoding="utf-8")) or {}).get("courses", {}) or {}
         except Exception:
             existing = {}
-    existing[args.course] = {
+    # 과목 note 는 사람이 적은 판단 기록이다 (어느 코드를 왜 믿지 못하는가).
+    # 스크립트가 다시 돌 때 지워 버리면 그 판단이 소리 없이 사라지므로 이어받는다.
+    kept_note = (existing.get(args.course) or {}).get("note")
+    entry = {
         "name": course["name"],
         "type": course["type"],
         "source": f"지도서 {guide.name} 총론 {primary_pages[0]}~{primary_pages[1]}쪽 "
                   f"(대조 - 각론 {cross_pages[0]}~{cross_pages[1]}쪽)",
-        "standards": [{k: v for k, v in r.items() if v is not None} for r in records],
     }
+    if kept_note:
+        entry["note"] = kept_note
+    entry["standards"] = [{k: v for k, v in r.items() if v is not None} for r in records]
+    existing[args.course] = entry
     payload = {"courses": dict(sorted(existing.items()))}
     body = yaml.safe_dump(payload, allow_unicode=True, sort_keys=False,
                           default_flow_style=False, width=1000)
