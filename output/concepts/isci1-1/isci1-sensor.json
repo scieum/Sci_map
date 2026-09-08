@@ -1,0 +1,112 @@
+{
+  "id": "isci1-sensor",
+  "concept_key": "concept:sensor",
+  "registry_status": "new",
+  "term": "센서",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 sensor 를 소리 나는 대로 적은 외래어여서 대응하는 한자 표기가 없다.",
+    "english": "sensor"
+  },
+  "definition": "감지한 아날로그 신호를 전기 신호로 옮겨 기기가 다룰 디지털 정보로 만들어 주는 장치. 사람 감각기관이 놓치는 변화까지 잡아낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sensor-convert",
+      "text": "센서를 거치면 자연계의 아날로그 신호가 전기 신호를 지나 기기가 처리할 디지털 정보로 바뀐다.",
+      "form": {
+        "condition": "감지 대상이 그 센서의 측정 범위 안에 있을 때",
+        "type": "causal",
+        "scope": "그 센서가 감지하도록 만들어진 물리량에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "센서를 거치며 일어나는 변환 절차를 밝힌 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sensor-kinds",
+      "text": "무엇을 감지하도록 만들었느냐에 따라 온도 센서·압력 센서·가속도 센서·화학 센서로 갈린다.",
+      "form": {
+        "condition": "센서를 감지 대상에 따라 나눌 때",
+        "type": "classification",
+        "scope": "감지 대상에 따른 분류에 한함",
+        "antecedent": {
+          "quantity": "감지하도록 만든 물리량",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "센서의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "감지 대상에 따라 갈래 지은 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sensor-beyond",
+      "text": "사람의 감각기관이 알아채지 못하는 변화도 그에 맞는 센서를 갖추면 값으로 잡아낼 수 있다.",
+      "form": {
+        "condition": "감지하려는 물리량에 맞는 센서를 갖추었을 때",
+        "type": "conditional",
+        "scope": "그 센서가 대응하는 물리량에 한함 — 하나의 센서가 모든 변화를 잡는다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "센서를 갖추었을 때를 밝힌 조건형 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "센서는 어떤 신호든 다 감지할 수 있다",
+      "why_wrong": "센서마다 감지하도록 만들어진 물리량과 측정 범위가 정해져 있다. 그 밖의 신호는 잡지 못한다.",
+      "source": "llm",
+      "linked_relation": "rel-sensor-beyond"
+    },
+    {
+      "text": "센서가 신호를 감지하면 그 자리에서 정보 분석까지 끝난다",
+      "why_wrong": "센서가 맡은 일은 감지해 디지털 정보로 바꾸는 데까지다. 그 값을 풀이하는 일은 따로 필요하다.",
+      "source": "llm",
+      "linked_relation": "rel-sensor-convert"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-analog-signal"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-digital-signal"
+    },
+    {
+      "type": "next",
+      "target": "isci1-digital-conversion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-03",
+  "pages": [
+    27,
+    31,
+    33
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,100 @@
+{
+  "id": "isci1-digital-signal",
+  "concept_key": "concept:digital-signal",
+  "registry_status": "new",
+  "term": "디지털 신호",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'디지털'이 영어 digital 을 소리대로 적은 외래어라 구 전체에 대응하는 한자가 없다. 뒤의 '신호(信號)'만 한자어다.",
+    "english": "digital signal"
+  },
+  "definition": "값이 이어지지 않고 정해진 단계로 뚝뚝 끊겨 나타나는 신호. 점과 선으로 보내는 모스 부호, 숫자로 시각을 띄우는 시계가 이에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ds-discrete",
+      "text": "정해진 단계 사이의 중간 값을 담지 않는다는 점에서 아날로그 신호와 구별된다.",
+      "form": {
+        "condition": "신호의 값이 변하는 방식을 살필 때",
+        "type": "classification",
+        "scope": "두 신호를 가르는 기준에 한함",
+        "antecedent": {
+          "quantity": "값이 변하는 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "디지털 신호 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준을 밝힌 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ds-transmit",
+      "text": "압축이 되고 잡음이 거의 섞이지 않아 멀리 보내도 선명함을 지킬 수 있다는 것이 디지털 신호의 강점이다.",
+      "form": {
+        "condition": "신호를 저장하거나 먼 거리로 전송할 때",
+        "type": "causal",
+        "scope": "저장·전송의 이점에 한함 — 원래 현상을 더 촘촘히 담는다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "디지털 신호의 강점을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "디지털 신호는 아날로그 신호보다 원래 현상을 더 정확하게 담는다",
+      "why_wrong": "이어진 변화를 단계로 끊어 담기 때문에 세밀한 부분은 오히려 빠질 수 있다. 강점은 저장과 전송 쪽이다.",
+      "source": "llm",
+      "linked_relation": "rel-ds-transmit"
+    },
+    {
+      "text": "디지털 신호로 바꾸면 잡음이 완전히 사라진다",
+      "why_wrong": "잡음이 거의 없는 선명한 신호를 만들 수 있다는 것이지 잡음이 하나도 없다는 뜻은 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-ds-transmit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-signal"
+    },
+    {
+      "type": "next",
+      "target": "isci1-sensor"
+    },
+    {
+      "type": "next",
+      "target": "isci1-digital-conversion"
+    },
+    {
+      "type": "related",
+      "target": "isci1-analog-signal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-03",
+  "pages": [
+    27,
+    31
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

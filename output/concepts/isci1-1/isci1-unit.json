@@ -1,0 +1,88 @@
+{
+  "id": "isci1-unit",
+  "concept_key": "concept:unit",
+  "registry_status": "new",
+  "term": "단위",
+  "notation": {
+    "hanja": "單位",
+    "hanja_gloss": "單 홑 단 · 位 자리 위",
+    "english": "unit"
+  },
+  "definition": "물리량의 크기를 견줄 때 잣대로 삼기로 약속한 기준량. 수치 뒤에 붙어 그 숫자가 얼마만 한 양인지 알려 준다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-unit-meaning",
+      "text": "단위를 빼고 수치만 말하면 그 숫자가 어느 정도의 양인지 알아낼 길이 없다.",
+      "form": {
+        "condition": "잰 값을 남에게 전달할 때",
+        "type": "causal",
+        "scope": "값을 주고받는 상황에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "단위가 빠졌을 때 생기는 일을 밝힌 명제라 뒤집는 꼴이 성립하지 않는다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-unit-same-quantity",
+      "text": "같은 물리량이라도 어떤 단위로 재느냐에 따라 적히는 수치가 달라진다.",
+      "form": {
+        "condition": "하나의 대상을 서로 다른 단위로 잴 때",
+        "type": "causal",
+        "scope": "적히는 수치에 한함 — 대상이 지닌 실제 양이 달라지는 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "단위가 바뀌면 수치가 바뀐다는 것뿐이고 어느 쪽으로 바뀌는지는 단위에 따라 갈려, 반드시 거짓인 뒤집기를 만들 수 없다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "단위를 바꾸면 물체의 크기 자체가 달라진다",
+      "why_wrong": "달라지는 것은 종이에 적히는 수치뿐이다. 1 m로 적든 100 cm로 적든 길이는 그대로다.",
+      "source": "llm",
+      "linked_relation": "rel-unit-same-quantity"
+    },
+    {
+      "text": "수치가 큰 쪽이 언제나 더 큰 양이다",
+      "why_wrong": "단위가 다르면 수치만으로 견줄 수 없다. 3 km와 500 m 가운데 더 긴 쪽은 수치가 작은 3 km다.",
+      "source": "llm",
+      "linked_relation": "rel-unit-meaning"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-physical-quantity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-derived-quantity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-si-units"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-02",
+  "pages": [
+    20,
+    22
+  ],
+  "difficulty": 1,
+  "role": "core",
+  "version": 1
+}

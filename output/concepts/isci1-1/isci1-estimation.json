@@ -1,0 +1,105 @@
+{
+  "id": "isci1-estimation",
+  "concept_key": "concept:estimation",
+  "registry_status": "new",
+  "term": "어림",
+  "aliases": [
+    "어림하기"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'어림'은 우리말 고유어라 대응하는 한자 표기가 없다. 한자어로 옮기면 '槪算'에 가까우나 교육과정 표제어는 고유어 쪽이다.",
+    "english": "estimation"
+  },
+  "definition": "따져 볼 근거를 놓고 추론해 참값에 가까운 값을 잡아 보는 일. 하나하나 세거나 직접 재기 어려울 때 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-est-judge",
+      "text": "양이 어느 정도일지 미리 어림해 두면 재어서 얻은 값이 말이 되는 값인지 따져 볼 수 있다.",
+      "form": {
+        "condition": "측정에 앞서 대략의 크기를 짚어 두었을 때",
+        "type": "causal",
+        "scope": "측정값의 타당성을 판단하는 데 한함 — 어림값이 측정값을 대신하지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "어림이 주는 쓸모를 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-est-basis",
+      "text": "어림은 과학적인 사고 과정이나 이미 확보한 자료 위에서 이루어져야 하며, 근거 없이 찍는 일과 구별된다.",
+      "form": {
+        "condition": "어림값을 과학의 근거로 삼을 때",
+        "type": "conditional",
+        "scope": "과학에서 쓰는 어림에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "어림이 갖춰야 할 조건을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-est-unmeasurable",
+      "text": "공룡의 몸무게처럼 직접 잴 길이 없는 값도 알려진 관계를 이용하면 어림으로 구할 수 있다.",
+      "form": {
+        "condition": "대상을 직접 측정할 수 없을 때",
+        "type": "conditional",
+        "scope": "측정이 불가능한 대상에 한함 — 얻은 값에는 오차가 남는다"
+      },
+      "invertible": false,
+      "invertible_reason": "어림이 쓰이는 상황을 밝힌 조건형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어림은 그냥 대충 찍는 것이라 과학에서는 쓰지 않는다",
+      "why_wrong": "과학의 어림은 자료와 논리 위에서 이루어진다. 연구 결과를 미리 내다보거나 측정값을 검토할 때 쓰인다.",
+      "source": "llm",
+      "linked_relation": "rel-est-basis"
+    },
+    {
+      "text": "어림으로 얻은 값은 측정으로 얻은 값만큼 정확하다",
+      "why_wrong": "어림은 참값에 가까운 값을 잡아 보는 일이라 오차가 남는다. 정확한 값이 필요하면 재어야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-est-judge"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-measurement"
+    },
+    {
+      "type": "related",
+      "target": "isci1-measurement-standard"
+    },
+    {
+      "type": "related",
+      "target": "isci1-physical-quantity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-02",
+  "pages": [
+    25
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,111 @@
+{
+  "id": "isci1-digital-conversion",
+  "concept_key": "concept:digital-conversion",
+  "registry_status": "new",
+  "term": "정보의 디지털 변환",
+  "aliases": [
+    "정보의 디지털 전환"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'정보(情報)'와 '변환(變換)'은 한자어이지만 가운데 놓인 '디지털'이 영어 음차어라 구 전체에 대응하는 한자가 없다.",
+    "english": "digital conversion of information"
+  },
+  "definition": "이어져 변하는 아날로그 신호를 띄엄띄엄한 디지털 신호로 바꾸어, 담긴 정보를 다루기 쉬운 꼴로 만드는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dcv-loss",
+      "text": "바꾸는 과정에서 원래 신호가 지녔던 정보의 일부가 뒤틀리거나 빠져 버릴 수 있다.",
+      "form": {
+        "condition": "이어진 신호를 정해진 단계로 끊어 옮길 때",
+        "type": "causal",
+        "scope": "변환 과정 자체에 한함 — 전송 도중에 생기는 손상과는 다른 문제다"
+      },
+      "invertible": false,
+      "invertible_reason": "변환 과정에서 생길 수 있는 일을 밝힌 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dcv-benefit",
+      "text": "디지털로 바꾸어 두면 정보를 압축해 담고 되살리고 멀리 보내는 일이 모두 수월해진다.",
+      "form": {
+        "condition": "신호를 디지털 형태로 바꾸어 두었을 때",
+        "type": "causal",
+        "scope": "저장·재생·전송의 편의에 한함 — 정보의 정확도가 올라가는 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "디지털로 바꾸어 둘 때의 편의를 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dcv-phone",
+      "text": "스마트폰은 음성이라는 아날로그 신호를 디지털로 바꾸어 멀리 보내고, 받아들인 빛 신호를 디지털로 바꾸어 사진을 만든다.",
+      "form": {
+        "condition": "스마트폰으로 통화하거나 사진을 찍을 때",
+        "type": "causal",
+        "scope": "이 사례에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "한 가지 사례를 든 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아날로그 신호를 디지털로 바꾸면 정보가 더 정확해진다",
+      "why_wrong": "바꾸는 동안 오히려 일부가 뒤틀리거나 빠질 수 있다. 좋아지는 것은 정확도가 아니라 저장과 전송의 편의다.",
+      "source": "llm",
+      "linked_relation": "rel-dcv-loss"
+    },
+    {
+      "text": "디지털 변환은 정보를 하나도 잃지 않고 그대로 옮기는 일이다",
+      "why_wrong": "이어진 값을 정해진 단계로 끊어 담기 때문에 단계 사이의 값은 남지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-dcv-loss"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-sensor"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-digital-signal"
+    },
+    {
+      "type": "next",
+      "target": "isci1-information-communication-technology"
+    },
+    {
+      "type": "related",
+      "target": "isci1-analog-signal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-03",
+  "pages": [
+    26,
+    27,
+    28
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

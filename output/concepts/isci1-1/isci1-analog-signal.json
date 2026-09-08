@@ -1,0 +1,96 @@
+{
+  "id": "isci1-analog-signal",
+  "concept_key": "concept:analog-signal",
+  "registry_status": "new",
+  "term": "아날로그 신호",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아날로그'가 영어 analog 를 소리대로 적은 외래어라 구 전체에 대응하는 한자가 없다. 뒤의 '신호(信號)'만 한자어다.",
+    "english": "analog signal"
+  },
+  "definition": "물리량이 끊김 없이 이어지며 변하는 신호. 소리·빛·지진파·온도 변화처럼 자연에서 생기는 신호가 대개 이 꼴이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-as-continuous",
+      "text": "값이 정해진 칸으로 끊기지 않고 죽 이어져 변한다는 점이 아날로그 신호를 가려내는 기준이다.",
+      "form": {
+        "condition": "신호의 값이 변하는 방식을 살필 때",
+        "type": "classification",
+        "scope": "두 신호를 가르는 기준에 한함",
+        "antecedent": {
+          "quantity": "값이 변하는 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "아날로그 신호 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준을 밝힌 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-as-tradeoff",
+      "text": "실제 현상을 있는 그대로 담아내는 대신, 저장하거나 멀리 보낼 때 손상되기 쉽다는 약점이 따라붙는다.",
+      "form": {
+        "condition": "아날로그 신호를 그대로 저장하거나 전송할 때",
+        "type": "causal",
+        "scope": "저장·전송 과정에 한함 — 현상을 담는 정확성 자체가 낮다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "장점과 약점을 함께 든 명제라 앞뒤를 맞바꾸는 꼴이 성립하지 않는다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아날로그 신호는 낡은 방식이라 디지털 신호보다 부정확하다",
+      "why_wrong": "실제 현상을 더 촘촘히 담는 쪽은 오히려 아날로그 신호다. 약한 곳은 저장과 전송이다.",
+      "source": "llm",
+      "linked_relation": "rel-as-tradeoff"
+    },
+    {
+      "text": "자연에서 생기는 신호도 대부분 디지털 신호다",
+      "why_wrong": "소리·빛·지진파처럼 자연계의 신호는 대개 값이 이어져 변하는 아날로그 신호다.",
+      "source": "llm",
+      "linked_relation": "rel-as-continuous"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-signal"
+    },
+    {
+      "type": "next",
+      "target": "isci1-sensor"
+    },
+    {
+      "type": "related",
+      "target": "isci1-digital-signal"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-03",
+  "pages": [
+    27,
+    31
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

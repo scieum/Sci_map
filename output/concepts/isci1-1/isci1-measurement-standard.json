@@ -1,0 +1,107 @@
+{
+  "id": "isci1-measurement-standard",
+  "concept_key": "concept:measurement-standard",
+  "registry_status": "new",
+  "term": "측정 표준",
+  "notation": {
+    "hanja": "測定標準",
+    "hanja_gloss": "測 헤아릴 측 · 定 정할 정 · 標 표할 표 · 準 준할 준",
+    "english": "measurement standard"
+  },
+  "definition": "값을 재고 적는 방식을 사회가 함께 정해 둔 약속. 기준은 변하지 않는 것으로 삼고, 단위는 정해진 것을 어긋남 없이 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ms-consistency",
+      "text": "측정 표준이 서 있지 않으면 같은 물건을 재고도 재는 곳마다 값이 갈려 거래나 진단을 믿을 수 없게 된다.",
+      "form": {
+        "condition": "여러 곳에서 잰 값을 서로 주고받아야 할 때",
+        "type": "causal",
+        "scope": "기준과 단위가 통일되지 않은 상황에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "표준이 없을 때 생기는 일을 밝힌 인과라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ms-redefine",
+      "text": "실물로 만든 기준자는 세월이 가면 상하기 때문에, 1 m의 기준은 빛이 진공에서 나아간 거리로 다시 정해졌다.",
+      "form": {
+        "condition": "실물 기준을 보관해 쓰던 방식의 한계가 드러났을 때",
+        "type": "causal",
+        "scope": "길이 표준을 다시 정한 경위에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "표준을 다시 정한 경위를 밝힌 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ms-daily",
+      "text": "식품 성분 표시, 경기 기록, 혈압 측정처럼 판단이 걸린 자리마다 측정 표준이 바탕에 깔려 있다.",
+      "form": {
+        "condition": "측정값이 판단이나 거래의 근거가 되는 상황에서",
+        "type": "conditional",
+        "scope": "일상에서의 활용 사례에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "활용되는 자리를 든 조건형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "측정 표준은 한 번 정해지면 영원히 바뀌지 않는다",
+      "why_wrong": "더 변하지 않는 기준을 찾으면 정의를 다시 세운다. 1 m의 기준이 실물 자에서 빛의 이동 거리로 옮겨 간 것이 그 예다.",
+      "source": "llm",
+      "linked_relation": "rel-ms-redefine"
+    },
+    {
+      "text": "측정 표준은 과학 실험실 안에서나 필요한 것이다",
+      "why_wrong": "물건을 사고팔 때, 세금을 매길 때, 환자를 진단할 때에도 같은 표준이 쓰인다.",
+      "source": "llm",
+      "linked_relation": "rel-ms-daily"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-si-units"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-measurement"
+    },
+    {
+      "type": "related",
+      "target": "isci1-estimation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-unit"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-02",
+  "pages": [
+    23,
+    24
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

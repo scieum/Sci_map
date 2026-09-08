@@ -1,0 +1,98 @@
+{
+  "id": "isci1-derived-quantity",
+  "concept_key": "concept:derived-quantity",
+  "registry_status": "new",
+  "term": "유도량",
+  "aliases": [
+    "유도 물리량"
+  ],
+  "notation": {
+    "hanja": "誘導量",
+    "hanja_gloss": "誘 꾈 유 · 導 이끌 도 · 量 헤아릴 량",
+    "english": "derived quantity"
+  },
+  "definition": "둘 이상의 기본량을 엮어 정의한 물리량. 속력·부피·농도처럼 얽힌 현상을 간명하게 나타낼 때 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dq-unit",
+      "text": "유도량의 단위는 그 양을 정의할 때 쓴 기본량 단위들을 곱하거나 나눈 꼴로 적는다.",
+      "form": {
+        "condition": "유도량의 정의식이 정해져 있을 때",
+        "type": "conditional",
+        "scope": "국제단위계 표기에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "단위 표기 규칙을 밝힌 조건형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dq-example",
+      "text": "속력은 거리와 시간을, 부피는 세 방향의 길이를 엮어 만든 유도량이다.",
+      "form": {
+        "condition": "속력과 부피를 기본량으로 되짚어 볼 때",
+        "type": "classification",
+        "scope": "이 두 사례에 한함",
+        "antecedent": {
+          "quantity": "속력과 부피",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "엮인 기본량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 갈래 지은 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유도량은 계산으로만 얻을 수 있고 직접 잴 수는 없다",
+      "why_wrong": "속력계처럼 유도량을 바로 재어 주는 도구도 있다. 정의가 기본량의 조합이라는 뜻이지 측정이 불가능하다는 말이 아니다.",
+      "source": "llm"
+    },
+    {
+      "text": "유도량은 기본량보다 덜 중요한 물리량이다",
+      "why_wrong": "얽힌 자연 현상은 속력·농도 같은 유도량이라야 간명하게 설명된다. 중요도가 아니라 정의 방식이 갈리는 것이다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-base-quantity"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-unit",
+      "note": "유도량의 단위는 기본량 단위의 조합이다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-physical-quantity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-02",
+  "pages": [
+    21,
+    31
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

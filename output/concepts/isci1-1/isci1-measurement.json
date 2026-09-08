@@ -1,0 +1,114 @@
+{
+  "id": "isci1-measurement",
+  "concept_key": "concept:measurement",
+  "registry_status": "new",
+  "term": "측정",
+  "notation": {
+    "hanja": "測定",
+    "hanja_gloss": "測 헤아릴 측 · 定 정할 정",
+    "english": "measurement"
+  },
+  "definition": "기준으로 삼은 단위와 견주어 대상의 양을 수로 나타내는 일. 눈에 보이는 변화를 다룰 수 있는 자료로 바꾸는 첫걸음이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-meas-basis",
+      "text": "재는 사람마다 제각기 다른 기준을 잡으면 같은 대상을 재고도 서로 다른 값을 얻게 된다.",
+      "form": {
+        "condition": "하나의 대상을 여러 사람이 각자의 기준으로 잴 때",
+        "type": "causal",
+        "scope": "기준이 통일되지 않은 경우에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "기준의 어긋남이 값의 어긋남을 낳는다는 인과라 방향을 맞바꾸면 뜻이 통하지 않는다.",
+      "curriculum": [
+        "10통과1-01-01",
+        "10통과1-01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-meas-scale",
+      "text": "재려는 대상이 어느 규모에 놓이는가에 따라 쓸 수 있는 도구와 방법이 갈린다.",
+      "form": {
+        "condition": "측정 대상의 시간·공간 규모가 서로 다를 때",
+        "type": "causal",
+        "scope": "측정 방법을 고르는 문제에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "규모가 방법을 정한다는 인과라 반대로 놓을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-meas-data",
+      "text": "측정을 거치면 겉으로 본 변화가 서로 견주고 계산할 수 있는 수치 자료로 남는다.",
+      "form": {
+        "condition": "관측한 변화를 단위와 함께 값으로 적었을 때",
+        "type": "causal",
+        "scope": "정량화가 주는 이점에 한함 — 모든 현상이 수치만으로 설명된다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "측정이 남기는 결과를 밝힌 명제라 뒤집는 꼴이 성립하지 않는다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정밀한 도구로 재면 오차가 완전히 없어진다",
+      "why_wrong": "도구가 좋아지면 오차가 줄 뿐 사라지지는 않는다. 그래서 측정값은 늘 어느 정도의 범위를 안고 있다.",
+      "source": "llm"
+    },
+    {
+      "text": "숫자만 적어 두어도 측정한 값으로 충분하다",
+      "why_wrong": "무엇을 기준으로 잰 숫자인지가 함께 있어야 값이 된다. 단위 없는 숫자는 크기를 알려 주지 못한다.",
+      "source": "llm",
+      "linked_relation": "rel-meas-data"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-scale"
+    },
+    {
+      "type": "next",
+      "target": "isci1-physical-quantity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-measurement-standard"
+    },
+    {
+      "type": "next",
+      "target": "isci1-estimation"
+    },
+    {
+      "type": "next",
+      "target": "isci1-signal",
+      "note": "신호는 관측·측정의 대상이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-01",
+    "10통과1-01-03"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-01",
+  "pages": [
+    18,
+    19,
+    23
+  ],
+  "difficulty": 1,
+  "role": "core",
+  "version": 1
+}

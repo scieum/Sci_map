@@ -1,0 +1,107 @@
+{
+  "id": "isci1-signal",
+  "concept_key": "concept:signal",
+  "registry_status": "new",
+  "term": "신호",
+  "notation": {
+    "hanja": "信號",
+    "hanja_gloss": "信 믿을 신 · 號 이름 호",
+    "english": "signal"
+  },
+  "definition": "자연에 변화가 생길 때 밖으로 드러나는 빛·소리·열·힘·압력 같은 물리적 표시. 관측과 측정의 대상이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-signal-origin",
+      "text": "숨을 쉬거나 바람이 부는 것처럼 자연계에 변화가 일어나면 그에 딸려 여러 형태의 신호가 생긴다.",
+      "form": {
+        "condition": "자연계에 어떤 변화가 일어났을 때",
+        "type": "causal",
+        "scope": "신호가 생기는 계기에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "신호가 생기는 계기를 밝힌 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-signal-to-info",
+      "text": "모아 둔 신호는 그 자체로 정보가 아니고, 분석 과정을 거쳐야 문제 해결에 쓸 정보가 된다.",
+      "form": {
+        "condition": "관측·측정으로 신호를 수집한 뒤",
+        "type": "conditional",
+        "scope": "신호에서 정보로 가는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "신호가 정보가 되는 절차를 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-signal-echo",
+      "text": "돌고래는 자기가 낸 초음파가 사물에 부딪혀 돌아온 것을 받아 먹잇감이 어디 있는지 알아낸다.",
+      "form": {
+        "condition": "낸 신호가 되돌아오는 것을 받을 수 있을 때",
+        "type": "conditional",
+        "scope": "이 사례에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "한 가지 사례를 든 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "10통과1-01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신호를 많이 모으기만 하면 그것이 곧 정보다",
+      "why_wrong": "쌓인 신호는 아직 재료다. 무엇을 뜻하는지 분석해야 판단에 쓸 정보가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-signal-to-info"
+    },
+    {
+      "text": "신호는 사람이 만든 기계에서만 나온다",
+      "why_wrong": "자연계의 변화 자체가 빛·소리·지진파 같은 신호를 낳는다. 기계는 그것을 받아 다룰 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-signal-origin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-measurement"
+    },
+    {
+      "type": "next",
+      "target": "isci1-analog-signal"
+    },
+    {
+      "type": "next",
+      "target": "isci1-digital-signal"
+    },
+    {
+      "type": "related",
+      "target": "isci1-sensor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-04"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-03",
+  "pages": [
+    26,
+    33
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "version": 1
+}

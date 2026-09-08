@@ -1,0 +1,88 @@
+{
+  "id": "isci1-microscopic-world",
+  "concept_key": "concept:microscopic-world",
+  "registry_status": "new",
+  "term": "미시 세계",
+  "notation": {
+    "hanja": "微視世界",
+    "hanja_gloss": "微 작을 미 · 視 볼 시 · 世 인간 세 · 界 지경 계",
+    "english": "microscopic world"
+  },
+  "definition": "원자나 분자처럼 사람 눈으로 곧장 확인하기에는 너무 작은 대상들이 이루는 영역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-micro-tool",
+      "text": "원자만 한 크기를 알아내려면 표면을 훑어 상을 얻는 원자 힘 현미경 같은 장치를 거쳐야 한다.",
+      "form": {
+        "condition": "원자 수준의 크기를 재려 할 때",
+        "type": "causal",
+        "scope": "미시 규모의 길이 측정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "측정 수단을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-micro-indirect",
+      "text": "감각기관에 잡히지 않는 영역이라 미시 세계의 값은 장치가 내놓은 신호를 풀이해 얻는다.",
+      "form": {
+        "condition": "맨눈이나 맨손으로는 감지되지 않는 대상일 때",
+        "type": "conditional",
+        "scope": "관측 방법에 한함 — 그렇게 얻은 값을 믿을 수 없다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측 방법의 조건을 밝힌 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "현미경 배율만 계속 높이면 원자도 눈으로 본 모습 그대로 보인다",
+      "why_wrong": "원자 힘 현미경이 내놓는 상은 빛으로 비춘 모습이 아니라 탐침이 훑어 얻은 신호를 그림으로 바꾼 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-micro-indirect"
+    },
+    {
+      "text": "미시 세계는 너무 작아서 정확한 측정이 아예 불가능하다",
+      "why_wrong": "직접 대어 재지 못할 뿐, 알맞은 장치를 쓰면 원자 지름까지도 값으로 얻는다.",
+      "source": "llm",
+      "linked_relation": "rel-micro-tool"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-spatial-scale"
+    },
+    {
+      "type": "related",
+      "target": "isci1-macroscopic-world"
+    },
+    {
+      "type": "related",
+      "target": "isci1-measurement"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-01",
+  "pages": [
+    18,
+    19
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

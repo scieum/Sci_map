@@ -1,0 +1,108 @@
+{
+  "id": "isci1-temporal-scale",
+  "concept_key": "concept:temporal-scale",
+  "registry_status": "new",
+  "term": "시간 규모",
+  "notation": {
+    "hanja": "時間規模",
+    "hanja_gloss": "時 때 시 · 間 사이 간 · 規 법 규 · 模 본뜰 모",
+    "english": "temporal scale"
+  },
+  "definition": "현상이 이어지는 길이를 가르는 범위. 원자가 한 번 떠는 찰나부터 우주의 나이에 이르는 긴 시간까지를 아우른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tsc-range",
+      "text": "짧은 쪽 끝에는 원자에서 나온 빛의 한 번 떨림이, 긴 쪽 끝에는 138억 년인 우주의 나이가 놓인다.",
+      "form": {
+        "condition": "교과서가 든 시간 사례들을 한 축에 늘어놓았을 때",
+        "type": "classification",
+        "scope": "제시된 사례가 덮는 범위에 한함",
+        "antecedent": {
+          "quantity": "시간 규모 축의 양 끝",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "빛의 한 번 떨림과 우주의 나이",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "범위의 양 끝을 짚은 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tsc-device",
+      "text": "재려는 시간이 짧아질수록 맨눈이나 보통 시계로는 잡히지 않아 원자 시계 같은 특별한 장치가 있어야 한다.",
+      "form": {
+        "condition": "0.01초보다 짧은 시간을 재려 할 때",
+        "type": "causal",
+        "scope": "짧은 시간을 재는 경우에 한함 — 아주 긴 시간을 재는 데는 또 다른 방법이 필요하다",
+        "antecedent": {
+          "quantity": "재려는 시간의 길이",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "필요한 장치의 특수성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "측정의 어려움과 시간의 길이를 묶은 명제라 방향을 반대로 놓으면 반드시 거짓이 된다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "재려는 시간이 짧아질수록 오히려 더 간단한 장치로 손쉽게 잴 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "짧은 시간일수록 금방 지나가니까 재기도 쉽다",
+      "why_wrong": "짧을수록 사람의 감각과 보통 시계로는 구분되지 않는다. 원자 시계처럼 훨씬 정밀한 장치가 있어야 잴 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-tsc-device"
+    },
+    {
+      "text": "시간 규모는 사람이 느낄 수 있는 시간만 다룬다",
+      "why_wrong": "10⁻¹⁰초 수준의 떨림도, 138억 년인 우주의 나이도 시간 규모 안에 함께 놓인다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-scale"
+    },
+    {
+      "type": "related",
+      "target": "isci1-spatial-scale"
+    },
+    {
+      "type": "related",
+      "target": "isci1-measurement"
+    },
+    {
+      "type": "related",
+      "target": "isci1-microscopic-world"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-01",
+  "pages": [
+    16,
+    17
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

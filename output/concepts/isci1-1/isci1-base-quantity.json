@@ -1,0 +1,103 @@
+{
+  "id": "isci1-base-quantity",
+  "concept_key": "concept:base-quantity",
+  "registry_status": "new",
+  "term": "기본량",
+  "aliases": [
+    "기본 물리량"
+  ],
+  "notation": {
+    "hanja": "基本量",
+    "hanja_gloss": "基 터 기 · 本 근본 본 · 量 헤아릴 량",
+    "english": "base quantity"
+  },
+  "definition": "다른 물리량을 빌려서는 정의할 수 없는 가장 밑바탕의 물리량. 길이·시간·질량·온도·전류가 여기 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bq-irreducible",
+      "text": "다른 물리량을 끌어와 풀어 쓸 수 없다는 점이 기본량을 유도량과 갈라 놓는 기준이다.",
+      "form": {
+        "condition": "물리량을 정의하는 방식을 따져 볼 때",
+        "type": "classification",
+        "scope": "정의 방식에 따른 구분에 한함",
+        "antecedent": {
+          "quantity": "다른 물리량으로 풀어 쓸 수 있는가",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기본량 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준을 밝힌 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bq-si-unit",
+      "text": "기본량에는 저마다 국제단위계가 정한 단위가 하나씩 짝지어져 있다. 길이는 m, 시간은 s, 질량은 kg이다.",
+      "form": {
+        "condition": "국제단위계를 따라 값을 적을 때",
+        "type": "conditional",
+        "scope": "국제단위계 안에서만 성립 — 다른 단위계를 쓰면 짝지어지는 단위가 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "단위가 짝지어져 있다는 조건형 명제라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "속력은 자주 쓰는 양이니까 기본량이다",
+      "why_wrong": "속력은 거리와 시간이라는 두 기본량을 엮어 얻은 유도량이다. 자주 쓰는 것과 기본량인 것은 다른 문제다.",
+      "source": "llm",
+      "linked_relation": "rel-bq-irreducible"
+    },
+    {
+      "text": "부피는 길이와 다른 양이므로 기본량이다",
+      "why_wrong": "부피는 세 방향의 길이를 곱해 얻으므로 길이로 풀어 쓸 수 있다. 그래서 유도량이다.",
+      "source": "llm",
+      "linked_relation": "rel-bq-irreducible"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-physical-quantity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-derived-quantity"
+    },
+    {
+      "type": "related",
+      "target": "isci1-unit"
+    },
+    {
+      "type": "related",
+      "target": "isci1-si-units"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-02",
+  "pages": [
+    20,
+    31
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

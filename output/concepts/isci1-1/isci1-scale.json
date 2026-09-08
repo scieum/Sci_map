@@ -1,0 +1,105 @@
+{
+  "id": "isci1-scale",
+  "concept_key": "concept:scale",
+  "registry_status": "new",
+  "term": "규모",
+  "aliases": [
+    "크기 범위"
+  ],
+  "notation": {
+    "hanja": "規模",
+    "hanja_gloss": "規 법 규 · 模 본뜰 모",
+    "english": "scale"
+  },
+  "definition": "어떤 자연 현상이 걸쳐 있는 크기의 범위. 대상이 시간적·공간적으로 얼마만 한지를 가늠하게 해 주는 지표로 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-scale-method",
+      "text": "다루려는 대상의 규모가 달라지면 거기에 맞추어 골라 쓰는 측정 도구와 연구 방법도 함께 달라진다.",
+      "form": {
+        "condition": "같은 자연을 서로 다른 크기 범위에서 살필 때",
+        "type": "causal",
+        "scope": "연구·측정 방법을 고르는 문제에 한함 — 규모가 자연 법칙 자체를 바꾼다는 뜻은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "규모가 방법을 정한다는 인과일 뿐 양의 비례가 아니어서, 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-scale-cooling",
+      "text": "마그마가 굳는 데 걸린 시간의 규모가 길수록 그 속에서 자란 광물 결정은 크게 만들어진다.",
+      "form": {
+        "condition": "같은 조성의 마그마가 식어 암석이 될 때",
+        "type": "direct",
+        "scope": "마그마가 식어 굳는 경우에 한함 — 모든 결정의 크기가 시간만으로 정해지지는 않는다",
+        "antecedent": {
+          "quantity": "냉각에 걸린 시간의 규모",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광물 결정의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "냉각 시간과 결정 크기를 비례로 묶은 명제라 방향을 반대로 놓으면 반드시 거짓이 된다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마가 굳는 데 걸린 시간의 규모가 길수록 광물 결정은 오히려 잘게 만들어진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "규모는 지진의 세기를 가리키는 말이라 다른 현상에는 쓰지 않는다",
+      "why_wrong": "과학에서 규모는 어떤 현상이 걸쳐 있는 시간·공간의 크기 범위를 두루 가리킨다. 지진 규모는 그 쓰임 가운데 하나일 뿐이다.",
+      "source": "llm"
+    },
+    {
+      "text": "규모가 달라져도 도구만 바꾸면 되고 연구 방법은 그대로다",
+      "why_wrong": "규모가 달라지면 재는 방식 자체가 달라진다. 지구 둘레를 줄자로 두르는 방법은 아예 성립하지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-scale-method"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-time-and-space"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-measurement",
+      "note": "규모는 재어 보아야 가늠되는 지표다"
+    },
+    {
+      "type": "next",
+      "target": "isci1-spatial-scale"
+    },
+    {
+      "type": "next",
+      "target": "isci1-temporal-scale"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-01",
+  "pages": [
+    16,
+    17,
+    19
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

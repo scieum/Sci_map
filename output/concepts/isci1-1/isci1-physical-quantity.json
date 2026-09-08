@@ -1,0 +1,96 @@
+{
+  "id": "isci1-physical-quantity",
+  "concept_key": "concept:physical-quantity",
+  "registry_status": "new",
+  "term": "물리량",
+  "notation": {
+    "hanja": "物理量",
+    "hanja_gloss": "物 물건 물 · 理 다스릴 리 · 量 헤아릴 량",
+    "english": "physical quantity"
+  },
+  "definition": "재어서 숫자로 나타낼 수 있는 양. 시간·온도·거리·질량처럼 자연 현상을 수로 기술할 때 쓰는 단위 있는 양을 말한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pq-value",
+      "text": "물리량을 값으로 적을 때는 수치만으로 모자라고 어떤 단위로 잰 것인지가 함께 붙어야 한다.",
+      "form": {
+        "condition": "측정 결과를 남에게 전할 값으로 적을 때",
+        "type": "conditional",
+        "scope": "물리량을 표기하는 규칙에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 규칙을 밝힌 조건형 명제라 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pq-classify",
+      "text": "물리량은 다른 양으로 풀어 쓸 수 없는 기본량과, 기본량을 엮어 만든 유도량으로 나뉜다.",
+      "form": {
+        "condition": "물리량을 정의하는 방식에 따라 가를 때",
+        "type": "classification",
+        "scope": "정의 방식에 따른 분류에 한함",
+        "antecedent": {
+          "quantity": "물리량의 정의 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기본량과 유도량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "물리량을 둘로 가른 분류형 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "맛이나 아름다움처럼 정도를 말할 수 있으면 모두 물리량이다",
+      "why_wrong": "물리량은 정해진 단위로 재어 수치로 나타낼 수 있어야 한다. 느낌으로 견주는 것은 여기 들지 않는다.",
+      "source": "llm"
+    },
+    {
+      "text": "수치가 같으면 두 물리량의 크기도 같다",
+      "why_wrong": "붙은 단위가 다르면 같은 숫자라도 크기가 다르다. 3 km와 3 m는 수치가 같아도 천 배가 차이 난다.",
+      "source": "llm",
+      "linked_relation": "rel-pq-value"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-measurement"
+    },
+    {
+      "type": "next",
+      "target": "isci1-base-quantity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-unit"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-02"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-02",
+  "pages": [
+    20,
+    21,
+    32
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

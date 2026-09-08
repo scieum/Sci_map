@@ -1,0 +1,97 @@
+{
+  "id": "isci1-macroscopic-world",
+  "concept_key": "concept:macroscopic-world",
+  "registry_status": "new",
+  "term": "거시 세계",
+  "notation": {
+    "hanja": "巨視世界",
+    "hanja_gloss": "巨 클 거 · 視 볼 시 · 世 인간 세 · 界 지경 계",
+    "english": "macroscopic world"
+  },
+  "definition": "천체나 지구처럼 사람이 직접 대어 재기에는 너무 큰 대상들이 이루는 영역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-macro-laser",
+      "text": "지구에서 달까지처럼 먼 거리는 탐사선에 레이저를 쏘아 되돌아오기까지 걸린 시간으로 구한다.",
+      "form": {
+        "condition": "직접 대어 잴 수 없을 만큼 먼 거리를 잴 때",
+        "type": "causal",
+        "scope": "빛을 되쏘거나 반사할 수 있는 대상에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "측정 방법을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-macro-precision",
+      "text": "우주 망원경처럼 정밀한 관측 수단이 늘수록 천체의 나이와 거리를 더 정확하게 계산할 수 있게 된다.",
+      "form": {
+        "condition": "같은 대상을 더 정밀한 관측 수단으로 볼 때",
+        "type": "direct",
+        "scope": "측정값의 정확도에 한함 — 장비만 좋으면 어떤 값이든 얻는다는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "관측 수단의 정밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "천체의 나이·거리 값의 정확도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "관측 수단의 정밀도와 값의 정확도를 비례로 묶은 명제라 방향을 뒤집으면 반드시 거짓이 된다.",
+      "curriculum": [
+        "10통과1-01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관측 수단이 정밀해질수록 천체의 나이와 거리는 오히려 부정확하게 구해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "거시 세계의 거리는 사람이 직접 가서 재어 확인한 값이다",
+      "why_wrong": "달이나 은하까지 가서 잰 것이 아니라, 빛이 오간 시간과 관측한 각도로 계산해 얻은 값이다.",
+      "source": "llm",
+      "linked_relation": "rel-macro-laser"
+    },
+    {
+      "text": "우주의 나이와 크기는 예전부터 지금과 같은 값으로 알려져 있었다",
+      "why_wrong": "관측 기술이 좋아질 때마다 값이 더 정확해졌다. 지금의 값도 더 나은 관측이 나오면 다듬어진다.",
+      "source": "llm",
+      "linked_relation": "rel-macro-precision"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-spatial-scale"
+    },
+    {
+      "type": "related",
+      "target": "isci1-microscopic-world"
+    },
+    {
+      "type": "related",
+      "target": "isci1-measurement"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "10통과1-01-01"
+  ],
+  "subject": "통합과학1",
+  "unit": "Ⅰ. 과학의 기초",
+  "unit_id": "isci1-1",
+  "topic_id": "isci1-1-1-01",
+  "pages": [
+    18,
+    19
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}
