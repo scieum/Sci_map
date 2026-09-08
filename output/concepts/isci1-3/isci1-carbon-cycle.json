@@ -1,0 +1,131 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-carbon-cycle",
+  "concept_key": "concept:carbon-cycle",
+  "registry_status": "new",
+  "term": "탄소 순환",
+  "notation": {
+    "hanja": "炭素循環",
+    "hanja_gloss": "炭 숯 탄 · 素 바탕 소 · 循 돌 순 · 環 고리 환",
+    "english": "carbon cycle"
+  },
+  "definition": "탄소가 여러 형태로 모습을 바꾸며 기권·지권·수권·생물권을 오가는 흐름. 그 과정에서 에너지가 흡수되거나 방출된다.",
+  "relations": [
+    {
+      "id": "rel-cc-photo-resp",
+      "text": "기권의 이산화 탄소는 광합성으로 식물에 저장되고, 생물의 호흡으로 다시 기권에 배출된다.",
+      "form": {
+        "condition": "생물이 광합성과 호흡을 할 때",
+        "type": "classification",
+        "scope": "생물권과 기권 사이의 탄소 이동에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 방향의 경로를 함께 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-ocean",
+      "text": "해수에 녹아든 이산화 탄소가 탄산 이온으로 바뀌면, 해양 생물은 이를 재료로 삼아 탄산 칼슘 껍데기나 골격을 만든다.",
+      "form": {
+        "condition": "이산화 탄소가 해수에 녹아 있을 때",
+        "type": "causal",
+        "scope": "수권과 생물권 사이의 탄소 이동에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "용해에서 골격 형성으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-energy",
+      "text": "식물이 광합성을 할 때는 태양 에너지가 흡수되고, 화석 연료가 연소될 때는 에너지가 방출된다.",
+      "form": {
+        "condition": "탄소가 형태를 바꾸는 반응이 일어날 때",
+        "type": "classification",
+        "scope": "탄소 순환에 딸린 에너지 출입에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "흡수와 방출을 맞바꾸면 두 반응의 에너지 출입이 거꾸로가 되어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식물이 광합성을 할 때는 에너지가 방출되고, 화석 연료가 연소될 때는 태양 에너지가 흡수된다."
+    },
+    {
+      "id": "rel-cc-acidification",
+      "text": "대기 중 이산화 탄소 농도가 급격히 늘면 온실 효과가 강해지고 바다는 산성화된다.",
+      "form": {
+        "condition": "인류의 활동으로 배출량이 흡수량을 넘어설 때",
+        "type": "causal",
+        "scope": "이산화 탄소 농도 증가의 결과에 한함",
+        "antecedent": {
+          "quantity": "대기 중 이산화 탄소 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "온실 효과의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도의 증감 방향을 뒤집으면 결과의 방향도 거꾸로가 되어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기 중 이산화 탄소 농도가 줄어들면 온실 효과가 강해지고 바다는 산성화된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "탄소는 생물의 몸과 대기 사이에서만 오간다",
+      "why_wrong": "사체가 화석 연료로 지권에 저장되고 이산화 탄소가 해수에 녹아 껍데기가 되듯 지권과 수권도 탄소의 저장고다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-ocean"
+    },
+    {
+      "text": "대기 중 이산화 탄소가 늘어도 바다에는 아무 영향이 없다",
+      "why_wrong": "이산화 탄소가 바다에 더 많이 녹으면 해수가 산성화되어 해양 생태계가 위협받는다.",
+      "source": "llm",
+      "linked_relation": "rel-cc-acidification"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-biosphere"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-atmosphere"
+    },
+    {
+      "type": "related",
+      "target": "isci1-water-cycle"
+    },
+    {
+      "type": "related",
+      "target": "isci1-earth-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-01"
+  ],
+  "topic_id": "isci1-3-1-02",
+  "pages": [
+    106
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

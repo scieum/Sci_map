@@ -1,0 +1,99 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-activation-energy",
+  "concept_key": "concept:activation-energy",
+  "registry_status": "reused",
+  "term": "활성화에너지",
+  "aliases": [
+    "활성화 에너지"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'활성화'는 活性化이지만 '에너지'는 영어 energy 의 음차어여서 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "activation energy"
+  },
+  "definition": "화학 반응이 일어나는 데 필요한 최소한의 에너지. 반응 물질이 이 값 이상의 에너지를 가질 때 반응이 시작된다.",
+  "relations": [
+    {
+      "id": "rel-ae-threshold",
+      "text": "반응 물질이 활성화에너지 이상의 에너지를 가질 때 화학 반응이 일어난다.",
+      "form": {
+        "condition": "반응 물질에 에너지가 주어질 때",
+        "type": "conditional",
+        "scope": "화학 반응이 진행되는 조건에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "문턱값을 밝힌 조건 명제라 뒤집을 방향이 서지 않는다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ae-enzyme",
+      "text": "효소가 작용하면 활성화에너지가 낮아져 같은 반응이 더 쉽게 일어난다.",
+      "form": {
+        "condition": "효소가 그 반응에 작용할 때",
+        "type": "inverse",
+        "scope": "효소가 촉매로 작용하는 반응에 한함",
+        "antecedent": {
+          "quantity": "효소의 작용",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "활성화에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "효소는 활성화에너지를 낮추므로 높아진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "효소가 작용하면 활성화에너지가 높아져 같은 반응이 더 쉽게 일어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "활성화에너지가 큰 반응은 절대 일어나지 않는다",
+      "why_wrong": "활성화에너지 이상의 에너지가 주어지면 일어나며, 효소나 촉매가 그 값을 낮춰 주기도 한다.",
+      "source": "llm",
+      "linked_relation": "rel-ae-threshold"
+    },
+    {
+      "text": "효소는 반응에 에너지를 넣어 주어 반응을 일으킨다",
+      "why_wrong": "효소는 에너지를 공급하는 것이 아니라 넘어야 할 활성화에너지를 낮춰 반응을 쉽게 만든다.",
+      "source": "llm",
+      "linked_relation": "rel-ae-enzyme"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-enzyme"
+    },
+    {
+      "type": "related",
+      "target": "isci1-metabolism"
+    },
+    {
+      "type": "related",
+      "target": "isci1-living-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05"
+  ],
+  "topic_id": "isci1-3-3-02",
+  "pages": [
+    149
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

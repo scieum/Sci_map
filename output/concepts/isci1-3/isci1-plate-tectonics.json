@@ -1,0 +1,130 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-plate-tectonics",
+  "concept_key": "concept:plate-tectonics",
+  "registry_status": "new",
+  "term": "판 구조론",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'구조론'은 構造論이지만 '판'은 영어 plate 를 옮긴 말로 쓰여, 낱말 전체에 대응하는 한자 표기를 두지 않는다.",
+    "english": "plate tectonics"
+  },
+  "definition": "지권의 변화를 여러 판의 움직임으로 설명하는 이론. 여기서 판은 지각과 맨틀 상부의 일부를 아우른 단단한 암석층이다.",
+  "relations": [
+    {
+      "id": "rel-pt-mantle",
+      "text": "맨틀이 대류하면 그 위의 지구 표면이 여러 개의 판으로 갈라져 움직인다.",
+      "form": {
+        "condition": "맨틀 일부가 유동성을 가질 때",
+        "type": "causal",
+        "scope": "판이 움직이는 원인에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "대류에서 판의 운동으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pt-boundary",
+      "text": "판마다 움직이는 속도와 방향이 달라 맞닿은 두 판은 멀어지거나 부딪히거나 스쳐 지나간다.",
+      "form": {
+        "condition": "두 판이 서로 맞닿아 있을 때",
+        "type": "causal",
+        "scope": "판 경계의 종류가 갈리는 까닭에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "속도·방향 차이에서 경계 유형으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pt-continent",
+      "text": "판이 끊임없이 움직이므로 대륙은 오랜 시간에 걸쳐 갈라지기도 하고 합쳐지기도 한다.",
+      "form": {
+        "condition": "긴 지질 시간 동안 판이 운동할 때",
+        "type": "causal",
+        "scope": "판 운동과 대륙 배치의 변화에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "운동에서 대륙 배치 변화로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pt-plate-kind",
+      "text": "판은 어떤 지각을 얹고 있는지에 따라 해양판과 대륙판으로 구분된다.",
+      "form": {
+        "condition": "판의 구성을 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "판의 종류 구분에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "종류를 나눈 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "판은 지각만으로 이루어져 있다",
+      "why_wrong": "판에는 지각뿐 아니라 그 아래 맨틀 상부의 일부까지 들어가며, 두께는 100 km 정도다.",
+      "source": "llm",
+      "linked_relation": "rel-pt-plate-kind"
+    },
+    {
+      "text": "판은 모두 같은 방향으로 같은 속도로 움직인다",
+      "why_wrong": "판마다 속도와 방향이 달라서 경계에서 멀어지거나 부딪히거나 스쳐 지나가는 서로 다른 상황이 생긴다.",
+      "source": "llm",
+      "linked_relation": "rel-pt-boundary"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-geosphere"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-earth-system-energy-source"
+    },
+    {
+      "type": "next",
+      "target": "isci1-divergent-plate-boundary"
+    },
+    {
+      "type": "next",
+      "target": "isci1-convergent-plate-boundary"
+    },
+    {
+      "type": "next",
+      "target": "isci1-transform-plate-boundary"
+    },
+    {
+      "type": "next",
+      "target": "isci1-volcanic-activity",
+      "note": "분포를 설명하려면 판의 운동이 먼저다"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-02"
+  ],
+  "topic_id": "isci1-3-1-03",
+  "pages": [
+    110
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

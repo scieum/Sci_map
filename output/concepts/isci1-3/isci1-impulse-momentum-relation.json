@@ -1,0 +1,119 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-impulse-momentum-relation",
+  "concept_key": "concept:impulse-momentum-relation",
+  "registry_status": "new",
+  "term": "운동량과 충격량의 관계",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'운동량'은 運動量, '충격량'은 衝擊量, '관계'는 關係지만 조사가 섞인 구절이어서 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "impulse-momentum relation"
+  },
+  "definition": "물체가 받은 충격량이 그 물체의 운동량 변화량과 같다는 관계. 충돌 전후의 운동량 차이로 충격량을 알 수 있다.",
+  "relations": [
+    {
+      "id": "rel-imr-equal",
+      "text": "물체가 받은 충격량은 그 물체의 운동량이 변한 양과 같다.",
+      "form": {
+        "condition": "충돌하는 동안 물체가 힘을 받을 때",
+        "type": "direct",
+        "scope": "충돌하는 물체 하나에 한함",
+        "antecedent": {
+          "quantity": "받은 충격량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동량의 변화량",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 양이 같다는 등식이라 방향을 뒤집어도 참이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-imr-pair",
+      "text": "두 물체가 충돌할 때 각각이 받은 충격량의 크기는 서로 같다.",
+      "form": {
+        "condition": "두 물체가 서로 충돌할 때",
+        "type": "classification",
+        "scope": "충돌하는 두 물체의 비교에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "크기가 같음을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-imr-mass",
+      "text": "같은 크기의 충격량을 받아도 질량이 작은 물체의 속도 변화가 더 크다.",
+      "form": {
+        "condition": "두 물체가 같은 크기의 충격량을 받을 때",
+        "type": "inverse",
+        "scope": "충돌하는 두 물체의 비교에 한함",
+        "antecedent": {
+          "quantity": "물체의 질량",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "속도의 변화량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량과 속도 변화가 서로 반대로 움직이므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 크기의 충격량을 받아도 질량이 작은 물체의 속도 변화가 더 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "트럭과 승용차가 충돌하면 무거운 트럭이 승용차보다 더 큰 충격량을 받는다",
+      "why_wrong": "두 물체가 받은 충격량의 크기는 같고, 질량이 작은 승용차 쪽의 속도 변화가 더 클 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-imr-pair"
+    },
+    {
+      "text": "충돌해도 작용한 힘이 작으면 운동량은 변하지 않는다",
+      "why_wrong": "작은 힘이라도 작용한 시간만큼 곱해진 충격량을 받으면 그만큼 운동량이 변한다.",
+      "source": "llm",
+      "linked_relation": "rel-imr-equal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-momentum"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-impulse"
+    },
+    {
+      "type": "next",
+      "target": "isci1-collision-safety-device"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-04"
+  ],
+  "topic_id": "isci1-3-2-02",
+  "pages": [
+    130
+  ],
+  "difficulty": 4,
+  "role": "core"
+}

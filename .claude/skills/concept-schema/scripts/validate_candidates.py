@@ -243,7 +243,16 @@ def check_homonyms(cands, res: Result) -> None:
     if not hom:
         res.warn("homonyms", "homonyms.yaml 을 읽지 못했다 — 검사 건너뜀")
         return
-    surfaces = {norm(h["surface"]) for h in hom.get("homonyms", [])}
+    # ★2026-09-09 결함 수정. 여기서 `homonyms` / `surface` 를 읽고 있었는데
+    #   docs/homonyms.yaml 의 실제 키는 `watch_terms` / `term` 이다. 그래서 이 검사가
+    #   **늘 빈 집합으로 통과**했다 — R9(표기 일치로 개념을 잇지 않는다)를 지키는
+    #   검사가 침묵 실패한 것이다 (CLAUDE.md §12 침묵 실패 금지).
+    #   키가 또 바뀌면 조용히 통과하지 않고 warn 으로 드러나게 둔다.
+    terms = hom.get("watch_terms") or []
+    if not terms:
+        res.warn("homonyms", "homonyms.yaml 에 watch_terms 가 없다 — 검사가 무력하다. 파일 구조 확인 필요")
+        return
+    surfaces = {norm(h["term"]) for h in terms}
     missing = [c["id"] + " (" + c["term"] + ")" for c in cands
                if norm(c["term"]) in surfaces and not c.get("homonym_flag")]
     res.add("homonym_flagged", not missing,

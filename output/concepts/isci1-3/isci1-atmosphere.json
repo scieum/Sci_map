@@ -1,0 +1,106 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-atmosphere",
+  "concept_key": "concept:atmosphere",
+  "registry_status": "new",
+  "term": "기권",
+  "notation": {
+    "hanja": "氣圈",
+    "hanja_gloss": "氣 기운 기 · 圈 우리 권",
+    "english": "atmosphere"
+  },
+  "definition": "지구 표면을 감싼 공기의 층. 높이에 따른 기온 변화를 기준으로 대류권·성층권·중간권·열권으로 나뉜다.",
+  "relations": [
+    {
+      "id": "rel-atm-layers",
+      "text": "기권은 높이에 따라 기온이 오르내리는 모양이 갈리므로 네 개의 층으로 구분된다.",
+      "form": {
+        "condition": "높이에 따른 기온 분포를 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "기권의 층상구조에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "층을 나눈 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atm-shield",
+      "text": "기권이 우주에서 오는 유성체와 자외선을 걸러 주므로 지표의 생명체가 보호된다.",
+      "form": {
+        "condition": "기권이 지표를 덮고 있을 때",
+        "type": "causal",
+        "scope": "기권의 차단 작용에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "차단에서 보호로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atm-greenhouse",
+      "text": "기권이 온실 효과를 일으켜 지구 표면의 온도가 지나치게 낮아지지 않는다.",
+      "form": {
+        "condition": "대기에 온실 효과를 내는 기체가 들어 있을 때",
+        "type": "causal",
+        "scope": "기권이 지표 온도를 유지하는 작용에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "온도 유지의 원인을 밝힌 명제로 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "높이 올라갈수록 기온은 무조건 계속 낮아진다",
+      "why_wrong": "대류권과 중간권에서는 높이와 함께 기온이 낮아지지만 성층권과 열권에서는 오히려 높아진다.",
+      "source": "llm",
+      "linked_relation": "rel-atm-layers"
+    },
+    {
+      "text": "온실 효과는 언제나 해로운 현상이다",
+      "why_wrong": "온실 효과 자체는 지표 온도를 생명이 살 만한 범위로 유지하는 작용이고, 문제가 되는 것은 그것이 지나치게 강해질 때다.",
+      "source": "llm",
+      "linked_relation": "rel-atm-greenhouse"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-earth-system"
+    },
+    {
+      "type": "next",
+      "target": "isci1-water-cycle"
+    },
+    {
+      "type": "next",
+      "target": "isci1-carbon-cycle"
+    },
+    {
+      "type": "related",
+      "target": "isci1-hydrosphere"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-01"
+  ],
+  "topic_id": "isci1-3-1-01",
+  "pages": [
+    102
+  ],
+  "difficulty": 2,
+  "role": "supporting"
+}

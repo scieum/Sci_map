@@ -1,0 +1,108 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-translation",
+  "concept_key": "concept:translation",
+  "registry_status": "new",
+  "term": "번역",
+  "notation": {
+    "hanja": "飜譯",
+    "hanja_gloss": "飜 뒤집을 번 · 譯 번역할 역",
+    "english": "translation"
+  },
+  "definition": "RNA의 정보에 따라 라이보솜이 아미노산을 이어 단백질을 만드는 과정. 세포질에서 일어난다.",
+  "relations": [
+    {
+      "id": "rel-tl-ribosome",
+      "text": "세포질로 나온 RNA에 라이보솜이 결합하면 RNA의 정보에 따라 아미노산이 이어진다.",
+      "form": {
+        "condition": "RNA가 라이보솜과 결합할 때",
+        "type": "causal",
+        "scope": "번역 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "결합에서 합성으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tl-order",
+      "text": "RNA의 염기가 배열된 순서가 곧 이어지는 아미노산의 배열 순서를 정한다.",
+      "form": {
+        "condition": "코돈이 차례로 읽힐 때",
+        "type": "causal",
+        "scope": "RNA 정보와 아미노산 배열의 대응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "정보에서 배열로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tl-fold",
+      "text": "번역으로 이어진 폴리펩타이드는 접히고 휘어 고유한 입체 구조를 갖춘 뒤 단백질로 기능한다.",
+      "form": {
+        "condition": "번역이 끝난 뒤",
+        "type": "causal",
+        "scope": "폴리펩타이드가 단백질이 되는 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "접힘에서 기능으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "번역은 핵 안에서 일어난다",
+      "why_wrong": "번역은 RNA가 핵을 나와 세포질의 라이보솜과 결합한 뒤 세포질에서 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-tl-ribosome"
+    },
+    {
+      "text": "아미노산이 이어지기만 하면 곧바로 기능하는 단백질이 된다",
+      "why_wrong": "이어진 사슬이 접혀 고유한 입체 구조를 갖춰야 단백질로서 기능한다.",
+      "source": "llm",
+      "linked_relation": "rel-tl-fold"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-transcription"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-codon",
+      "note": "코돈이 지정하는 아미노산이 번역의 내용이다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-gene"
+    },
+    {
+      "type": "related",
+      "target": "isci1-living-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-06"
+  ],
+  "topic_id": "isci1-3-3-03",
+  "pages": [
+    153,
+    154
+  ],
+  "difficulty": 4,
+  "role": "core"
+}

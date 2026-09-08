@@ -1,0 +1,102 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-selective-permeability",
+  "concept_key": "concept:selective-permeability",
+  "registry_status": "new",
+  "term": "선택적 투과성",
+  "notation": {
+    "hanja": "選擇的透過性",
+    "hanja_gloss": "選 가릴 선 · 擇 가릴 택 · 的 과녁 적 · 透 사무칠 투 · 過 지날 과 · 性 성품 성",
+    "english": "selective permeability"
+  },
+  "definition": "물질의 종류와 크기, 성질에 따라 세포막을 지나는 방식이 달라지는 특성. 세포막의 구조에서 비롯한다.",
+  "relations": [
+    {
+      "id": "rel-sp-small-gas",
+      "text": "산소와 이산화 탄소처럼 작은 기체 분자는 인지질 2중층 자체를 곧바로 통과하며 확산한다.",
+      "form": {
+        "condition": "농도가 높은 쪽에서 낮은 쪽으로 이동할 때",
+        "type": "causal",
+        "scope": "크기가 작은 기체 분자에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "크기에서 경로로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sp-channel",
+      "text": "포도당처럼 크거나 이온처럼 전하를 띤 물질은 인지질 2중층을 직접 지나기 어려워 단백질 통로로 확산한다.",
+      "form": {
+        "condition": "농도 차이가 있어 확산이 일어날 때",
+        "type": "causal",
+        "scope": "크거나 전하를 띤 물질에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "성질에서 경로로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sp-regulation",
+      "text": "세포막이 선택적 투과성을 띠므로 세포는 생명활동에 필요한 물질의 출입을 조절할 수 있다.",
+      "form": {
+        "condition": "세포막의 구조가 유지될 때",
+        "type": "causal",
+        "scope": "세포의 물질 출입 조절에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "특성에서 조절 능력으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포막은 크기가 작은 물질이면 무엇이든 그냥 통과시킨다",
+      "why_wrong": "크기가 작아도 전하를 띤 이온은 인지질 2중층을 직접 지나기 어려워 단백질 통로를 거친다.",
+      "source": "llm",
+      "linked_relation": "rel-sp-channel"
+    },
+    {
+      "text": "선택적 투과성은 세포가 물질을 하나하나 골라 판단하는 능력이다",
+      "why_wrong": "판단이 아니라 인지질 2중층과 막단백질이라는 세포막의 구조에서 나오는 성질이다.",
+      "source": "llm",
+      "linked_relation": "rel-sp-regulation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-cell-membrane"
+    },
+    {
+      "type": "related",
+      "target": "isci1-osmosis"
+    },
+    {
+      "type": "related",
+      "target": "isci1-living-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05"
+  ],
+  "topic_id": "isci1-3-3-01",
+  "pages": [
+    145
+  ],
+  "difficulty": 4,
+  "role": "core"
+}

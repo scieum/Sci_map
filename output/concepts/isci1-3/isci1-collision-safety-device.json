@@ -1,0 +1,117 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-collision-safety-device",
+  "concept_key": "concept:collision-safety-device",
+  "registry_status": "new",
+  "term": "충돌과 안전장치",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'충돌'은 衝突, '안전장치'는 安全裝置지만 접속조사로 이어진 구절이어서 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "collision safety device"
+  },
+  "definition": "충돌에서 사람이 받는 힘을 줄이려고 만든 장치와 그 원리. 충돌 시간을 늘리는 방식과 관성으로 쏠리는 몸을 붙잡는 방식이 쓰인다.",
+  "relations": [
+    {
+      "id": "rel-safe-time",
+      "text": "같은 충격량을 받더라도 힘이 작용하는 시간을 길게 하면 받는 평균 힘이 작아진다.",
+      "form": {
+        "condition": "받는 충격량이 같을 때",
+        "type": "inverse",
+        "scope": "충격량이 같은 두 충돌의 비교에 한함",
+        "antecedent": {
+          "quantity": "힘이 작용한 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "받는 평균 힘",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "충격량이 같을 때 시간과 평균 힘은 서로 반대로 움직이므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 충격량을 받더라도 힘이 작용하는 시간을 길게 하면 받는 평균 힘이 커진다."
+    },
+    {
+      "id": "rel-safe-device",
+      "text": "에어백과 범퍼는 충돌 시간을 늘려 받는 힘을 줄이고, 안전띠와 안전 바는 관성으로 쏠리는 몸을 붙잡는다.",
+      "form": {
+        "condition": "충돌이나 급격한 속도 변화가 일어날 때",
+        "type": "classification",
+        "scope": "안전장치가 작동하는 두 방식의 구분에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "장치를 원리별로 나눈 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-safe-mean-force",
+      "text": "평균 힘은 충격량을 힘이 작용한 시간으로 나누어 구한다.",
+      "form": {
+        "condition": "충격량과 힘이 작용한 시간을 알 때",
+        "type": "classification",
+        "scope": "평균 힘의 계산에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 방법을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "방석 위에 떨어진 물풍선은 바닥에 떨어진 것보다 받는 충격량이 작아서 터지지 않는다",
+      "why_wrong": "두 경우 받는 충격량은 같고, 방석 위에서는 닿는 시간이 길어져 받는 평균 힘이 작아진 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-safe-time"
+    },
+    {
+      "text": "안전띠는 충돌 시간을 늘려 주는 장치다",
+      "why_wrong": "안전띠는 관성 때문에 몸이 앞으로 쏠려 부딪히는 것을 막는 쪽이고, 충돌 시간을 늘리는 것은 에어백이나 범퍼다.",
+      "source": "llm",
+      "linked_relation": "rel-safe-device"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-impulse-momentum-relation"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-inertia"
+    },
+    {
+      "type": "related",
+      "target": "isci1-impulse"
+    },
+    {
+      "type": "related",
+      "target": "isci1-momentum"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-04"
+  ],
+  "topic_id": "isci1-3-2-02",
+  "pages": [
+    131,
+    132,
+    133
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

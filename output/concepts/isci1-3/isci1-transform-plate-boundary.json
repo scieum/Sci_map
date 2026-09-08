@@ -1,0 +1,107 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-transform-plate-boundary",
+  "concept_key": "concept:transform-plate-boundary",
+  "registry_status": "new",
+  "term": "보존형 경계",
+  "notation": {
+    "hanja": "保存形境界",
+    "hanja_gloss": "保 지킬 보 · 存 있을 존 · 形 모양 형 · 境 지경 경 · 界 지경 계",
+    "english": "transform plate boundary"
+  },
+  "definition": "두 판이 멀어지거나 부딪히지 않고 서로 스쳐 지나가는 판의 경계. 판이 새로 생기거나 없어지지 않는다.",
+  "relations": [
+    {
+      "id": "rel-tf-no-magma",
+      "text": "마그마가 올라오지 않으므로 보존형 경계에서는 화산 활동이 거의 일어나지 않는다.",
+      "form": {
+        "condition": "경계 아래에서 마그마가 상승하지 않을 때",
+        "type": "causal",
+        "scope": "보존형 경계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "마그마 부재에서 화산 활동 부재로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-quake",
+      "text": "두 판이 스쳐 지나가며 땅이 어긋나므로 변환 단층이 생기고 그 주변에서 지진이 자주 발생한다.",
+      "form": {
+        "condition": "판이 서로 어긋나 미끄러질 때",
+        "type": "causal",
+        "scope": "보존형 경계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "어긋남에서 지진으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-conserve",
+      "text": "판이 생성되지도 소멸하지도 않는다는 점에서 보존형 경계는 발산형·수렴형 경계와 구분된다.",
+      "form": {
+        "condition": "판의 생성·소멸 여부를 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "판 경계 세 종류의 구분에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준을 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보존형 경계에서는 판이 부딪히지 않으니 지진도 일어나지 않는다",
+      "why_wrong": "두 판이 스쳐 지나가면서 땅이 어긋나기 때문에 오히려 지진이 잦다.",
+      "source": "llm",
+      "linked_relation": "rel-tf-quake"
+    },
+    {
+      "text": "판의 경계라면 어디든 화산 활동이 활발하다",
+      "why_wrong": "보존형 경계에는 마그마가 상승하지 않아 화산 활동이 거의 없다.",
+      "source": "llm",
+      "linked_relation": "rel-tf-no-magma"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-plate-tectonics"
+    },
+    {
+      "type": "related",
+      "target": "isci1-divergent-plate-boundary"
+    },
+    {
+      "type": "related",
+      "target": "isci1-convergent-plate-boundary"
+    },
+    {
+      "type": "related",
+      "target": "isci1-earthquake"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-02"
+  ],
+  "topic_id": "isci1-3-1-03",
+  "pages": [
+    111,
+    113
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

@@ -1,0 +1,107 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-horizontal-projectile-motion",
+  "concept_key": "concept:horizontal-projectile-motion",
+  "registry_status": "new",
+  "term": "수평으로 던진 물체의 운동",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'수평'은 水平, '물체'는 物體, '운동'은 運動이지만 '던진'이 고유어이고 조사가 섞인 구절이어서 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "horizontal projectile motion"
+  },
+  "definition": "수평 방향으로 던져진 물체가 중력을 받으며 비스듬히 떨어지는 운동. 수평 성분과 연직 성분으로 나누어 볼 수 있다.",
+  "relations": [
+    {
+      "id": "rel-hp-horizontal",
+      "text": "중력은 연직 방향으로만 작용하므로 수평 방향으로는 속도가 변하지 않는 등속 직선 운동을 한다.",
+      "form": {
+        "condition": "공기의 저항을 무시할 때",
+        "type": "causal",
+        "scope": "수평 성분의 운동에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "힘의 방향에서 수평 성분의 성질로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hp-vertical",
+      "text": "연직 방향으로는 중력을 받아 속도가 일정하게 커지므로 자유 낙하와 같은 운동을 한다.",
+      "form": {
+        "condition": "공기의 저항을 무시할 때",
+        "type": "direct",
+        "scope": "연직 성분의 운동에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 운동이 같음을 밝힌 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hp-same-time",
+      "text": "같은 높이에서 한 물체를 가만히 놓고 다른 물체를 수평으로 던지면 두 물체는 동시에 바닥에 닿는다.",
+      "form": {
+        "condition": "두 물체를 같은 순간, 같은 높이에서 출발시킬 때",
+        "type": "conditional",
+        "scope": "공기의 저항을 무시한 경우에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 낙하 시간이 같음을 밝힌 명제라 뒤집을 방향이 서지 않는다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수평으로 던진 물체는 가만히 놓은 물체보다 늦게 떨어진다",
+      "why_wrong": "연직 방향의 운동은 두 물체가 같으므로 같은 높이에서 동시에 출발하면 동시에 바닥에 닿는다.",
+      "source": "llm",
+      "linked_relation": "rel-hp-same-time"
+    },
+    {
+      "text": "수평으로 던진 물체는 앞으로 나아갈수록 수평 방향 속도도 줄어든다",
+      "why_wrong": "중력은 연직 방향으로만 작용해 수평 방향의 속도를 바꾸지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-hp-horizontal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-gravity"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-free-fall-motion"
+    },
+    {
+      "type": "next",
+      "target": "isci1-satellite-circular-motion",
+      "note": "뉴턴의 사고 실험이 둘을 잇는다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-gravitational-acceleration"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-03"
+  ],
+  "topic_id": "isci1-3-2-01",
+  "pages": [
+    124
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

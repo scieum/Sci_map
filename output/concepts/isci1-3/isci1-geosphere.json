@@ -1,0 +1,88 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-geosphere",
+  "concept_key": "concept:geosphere",
+  "registry_status": "new",
+  "term": "지권",
+  "notation": {
+    "hanja": "地圈",
+    "hanja_gloss": "地 땅 지 · 圈 우리 권",
+    "english": "geosphere"
+  },
+  "definition": "지구의 단단한 표면과 그 내부를 묶은 권역. 겉에서 안쪽으로 지각·맨틀·외핵·내핵의 층상구조를 이룬다.",
+  "relations": [
+    {
+      "id": "rel-geo-layers",
+      "text": "지권은 깊이에 따라 성질이 달라지므로 지각·맨틀·외핵·내핵으로 구분된다.",
+      "form": {
+        "condition": "지구 내부를 깊이 방향으로 나눌 때",
+        "type": "classification",
+        "scope": "지권의 층상구조에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "층을 나눈 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-geo-motion",
+      "text": "지각과 맨틀이 아주 느리게 움직이면 지형이 오랜 시간에 걸쳐 달라지고 화산 활동도 일어난다.",
+      "form": {
+        "condition": "맨틀과 지각이 맞닿아 함께 움직일 때",
+        "type": "causal",
+        "scope": "지권 내부의 느린 운동이 지표에 미치는 영향에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "운동에서 지형 변화로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지권은 지구의 겉껍질만 가리키고 지구 내부는 포함하지 않는다",
+      "why_wrong": "지표뿐 아니라 그 아래의 맨틀과 핵까지 모두 지권에 든다.",
+      "source": "llm",
+      "linked_relation": "rel-geo-layers"
+    },
+    {
+      "text": "지권은 단단한 암석이라 전혀 움직이지 않는다",
+      "why_wrong": "맨틀은 부분적으로 유동성이 있어 천천히 움직이고, 그 움직임이 지형을 바꾼다.",
+      "source": "llm",
+      "linked_relation": "rel-geo-motion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-earth-system"
+    },
+    {
+      "type": "next",
+      "target": "isci1-plate-tectonics",
+      "note": "지각·맨틀의 층상구조가 판의 전제다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-atmosphere"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-01"
+  ],
+  "topic_id": "isci1-3-1-01",
+  "pages": [
+    102
+  ],
+  "difficulty": 2,
+  "role": "supporting"
+}

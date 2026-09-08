@@ -1,0 +1,118 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-satellite-circular-motion",
+  "concept_key": "concept:satellite-circular-motion",
+  "registry_status": "new",
+  "term": "지구 주위를 도는 원운동",
+  "aliases": [
+    "인공위성의 원운동"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'지구'는 地球, '원운동'은 圓運動이지만 '도는'이 고유어이고 조사가 섞인 구절이어서 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "circular motion of a satellite"
+  },
+  "definition": "지구 중력을 받아 계속 떨어지면서도 지표에 닿지 않고 지구 주위를 도는 운동. 달과 인공위성의 운동이 그것이다.",
+  "relations": [
+    {
+      "id": "rel-cir-throw",
+      "text": "물체를 수평으로 빠르게 던질수록 더 멀리 날아가 떨어지고, 충분히 빠르면 땅에 닿지 않는다.",
+      "form": {
+        "condition": "공기의 저항을 무시한 사고 실험일 때",
+        "type": "direct",
+        "scope": "뉴턴의 사고 실험 상황에 한함",
+        "antecedent": {
+          "quantity": "던지는 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "떨어지는 지점까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "던지는 속력과 도달 거리가 함께 커지므로 한쪽 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체를 수평으로 빠르게 던질수록 더 가까운 곳에 떨어지고, 느리게 던질수록 멀리 날아간다."
+    },
+    {
+      "id": "rel-cir-falling",
+      "text": "원운동 하는 인공위성도 중력을 받아 지구 중심 방향으로 떨어지는 가속도 운동을 한다.",
+      "form": {
+        "condition": "지구 중력이 계속 작용할 때",
+        "type": "causal",
+        "scope": "지구 주위를 도는 물체에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "중력에서 가속도 운동으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cir-distance",
+      "text": "지구가 둥글기 때문에 인공위성은 계속 떨어지면서도 지구 중심과의 거리를 일정하게 유지한다.",
+      "form": {
+        "condition": "속력과 궤도가 알맞게 짝지어졌을 때",
+        "type": "causal",
+        "scope": "원 궤도를 도는 인공위성에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "지구의 모양에서 거리 유지로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인공위성은 중력이 미치지 않는 곳에 있어서 떨어지지 않는다",
+      "why_wrong": "인공위성도 지구 중력을 받아 지구 중심 방향으로 계속 떨어지고 있으며, 지구가 둥글어 지표에 닿지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-cir-falling"
+    },
+    {
+      "text": "달은 지구와 아무 힘도 주고받지 않기 때문에 같은 자리를 계속 돈다",
+      "why_wrong": "달과 지구 사이에도 중력이 작용하고, 그 중력이 달을 지구 중심 쪽으로 끌어당겨 원운동을 유지시킨다.",
+      "source": "llm",
+      "linked_relation": "rel-cir-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-gravity"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-horizontal-projectile-motion"
+    },
+    {
+      "type": "related",
+      "target": "isci1-free-fall-motion"
+    },
+    {
+      "type": "related",
+      "target": "isci1-mechanical-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-03"
+  ],
+  "topic_id": "isci1-3-2-01",
+  "pages": [
+    126
+  ],
+  "difficulty": 4,
+  "role": "supporting"
+}

@@ -1,0 +1,109 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-metabolism",
+  "concept_key": "concept:metabolism",
+  "registry_status": "new",
+  "term": "물질대사",
+  "notation": {
+    "hanja": "物質代謝",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 代 대신할 대 · 謝 사례할 사",
+    "english": "metabolism"
+  },
+  "definition": "생명체 안에서 물질을 새로 합성하거나 분해하는 화학 반응 전체. 효소가 그 반응들을 조절한다.",
+  "relations": [
+    {
+      "id": "rel-meta-temp",
+      "text": "효소가 반응을 조절하므로 물질대사는 체온 정도의 낮은 온도에서도 쉽게 일어난다.",
+      "form": {
+        "condition": "효소가 반응에 작용할 때",
+        "type": "causal",
+        "scope": "생명체 안에서 일어나는 화학 반응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "효소 작용에서 반응 조건으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-meta-vs-combustion",
+      "text": "같은 물질이 분해되어도 물질대사에서는 에너지가 단계적으로 나오고, 연소에서는 한꺼번에 방출된다.",
+      "form": {
+        "condition": "생명체 안과 밖의 분해 반응을 견줄 때",
+        "type": "classification",
+        "scope": "물질대사와 연소 반응의 비교에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "두 반응의 에너지 방출 방식이 정반대라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 물질이 분해되어도 물질대사에서는 에너지가 한꺼번에 나오고, 연소에서는 단계적으로 방출된다."
+    },
+    {
+      "id": "rel-meta-both",
+      "text": "물질대사에는 몸의 구성 성분을 만드는 합성 반응과 영양소에서 에너지를 얻는 분해 반응이 함께 든다.",
+      "form": {
+        "condition": "생명체 안의 화학 반응을 종류별로 나눌 때",
+        "type": "classification",
+        "scope": "물질대사의 분류에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "종류를 나눈 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질대사는 영양소를 분해하는 반응만 가리킨다",
+      "why_wrong": "근육이나 털처럼 몸의 구성 성분을 만드는 합성 반응도 물질대사다.",
+      "source": "llm",
+      "linked_relation": "rel-meta-both"
+    },
+    {
+      "text": "생명체 안의 화학 반응도 연소처럼 높은 온도가 있어야 일어난다",
+      "why_wrong": "효소가 반응을 쉽게 만들어 주므로 체온 범위의 낮은 온도에서도 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-meta-temp"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-enzyme",
+      "note": "효소의 역할은 물질대사 안에서 드러난다"
+    },
+    {
+      "type": "next",
+      "target": "isci1-living-system"
+    },
+    {
+      "type": "related",
+      "target": "isci1-cell"
+    },
+    {
+      "type": "related",
+      "target": "isci1-activation-energy"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05"
+  ],
+  "topic_id": "isci1-3-3-02",
+  "pages": [
+    146,
+    147
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

@@ -185,6 +185,81 @@ def _rel_media(path: str) -> str:
     return rel[rel.index(marker) + len(marker):] if marker in rel else Path(rel).name
 
 
+def logical_order(raw_cards: list[dict]) -> dict[str, int]:
+    """소주제 안에서 개념의 논리적 흐름 순서를 매긴다.
+
+    id 알파벳순으로 늘어놓으면 지질 시대 소주제가 이렇게 나온다:
+    신생대 · 지질 시대 · 대멸종 · 중생대 · 고생대 · 선캄브리아시대.
+    학생이 위에서 아래로 읽는 화면인데 순서가 뒤죽박죽이면 흐름을 못 잡는다.
+
+    카드에는 이미 흐름이 들어 있다 — `prereq`("이것을 알아야 이 개념을 이해한다")와
+    `next`("이 개념을 발판으로 나아간다")다. 그 둘로 소주제 안에 방향 그래프를 만들고
+    위상 정렬한다. 소주제를 넘는 간선은 쓰지 않는다 — 소주제 순서는 백로그가 정한다.
+
+    같은 자리에 여러 개가 놓이면 **`next` 목록에 먼저 적힌 것**을 먼저 둔다 — 작성자가
+    나열한 순서가 곧 의도다. 지구시스템 카드가 `next` 를 지권·기권·수권·생물권 순으로
+    적어 두었으면 그 순서다. 쪽수를 먼저 보면 안 된다: 생물권은 단원 도입면(101쪽)에도
+    이름이 올라 `pages` 최솟값이 101 이어서, 정작 정의가 실린 103쪽보다 앞서 버린다.
+    아무도 `next` 로 가리키지 않는 뿌리 개념끼리는 쪽수로 가른다.
+
+    순환이 있어 진행이 막히면 남은 것을 같은 기준으로 흘려보내고 멈추지 않는다.
+    화면 순서 때문에 빌드가 죽는 것이 더 나쁘다 — 순환 자체는 C4 가 fail 로 잡는다.
+    """
+    import heapq
+
+    groups: dict[tuple, list[dict]] = {}
+    for c in raw_cards:
+        groups.setdefault((c.get("unit_id") or "", c.get("topic_id") or "~"), []).append(c)
+
+    order: dict[str, int] = {}
+    for _key, group in groups.items():
+        ids = {c["id"] for c in group}
+        first_page = {c["id"]: min(c.get("pages") or [9999]) for c in group}
+        # `next` 에 적힌 자리 — 작성자가 나열한 순서를 동순위 판정에 쓴다
+        declared: dict[str, int] = {}
+        edges: dict[str, set[str]] = {i: set() for i in ids}
+        indeg: dict[str, int] = {i: 0 for i in ids}
+        for c in group:
+            for pos, link in enumerate(c.get("links") or []):
+                target = link.get("target")
+                if target not in ids or target == c["id"]:
+                    continue
+                if link.get("type") == "next":
+                    declared.setdefault(target, pos)
+                    src, dst = c["id"], target
+                elif link.get("type") == "prereq":
+                    src, dst = target, c["id"]
+                else:
+                    continue
+                if dst not in edges[src]:
+                    edges[src].add(dst)
+                    indeg[dst] += 1
+
+        def rank(i: str) -> tuple:
+            return (declared.get(i, 9999), first_page[i], i)
+
+        heap = [rank(i) for i in ids if indeg[i] == 0]
+        heapq.heapify(heap)
+        seen: set[str] = set()
+        n = 0
+        while heap:
+            i = heapq.heappop(heap)[-1]
+            if i in seen:
+                continue
+            seen.add(i)
+            order[i] = n
+            n += 1
+            for j in sorted(edges[i]):
+                indeg[j] -= 1
+                if indeg[j] == 0:
+                    heapq.heappush(heap, rank(j))
+        # 순환에 갇힌 것들 — 같은 기준으로 뒤에 붙인다
+        for i in sorted(ids - seen, key=rank):
+            order[i] = n
+            n += 1
+    return order
+
+
 def write_catalog(unit_ids: list[str], card_counts: dict[str, int]) -> None:
     """과목 카탈로그 — 내 정보 화면의 수강 과목 목록과 스케줄러의 출제 범위 근거.
 
@@ -261,6 +336,7 @@ def main() -> int:
         args.units = units_with_cards()
 
     cards: list[dict] = []
+    raw_cards: list[dict] = []
     for unit_id in args.units:
         d = REPO / "output" / "concepts" / unit_id
         if not d.is_dir():
@@ -270,14 +346,21 @@ def main() -> int:
         media = load_media(unit_id)
         files = sorted(f for f in d.glob("*.json") if not f.name.endswith(".candidates.json"))
         for f in files:
-            cards.append(to_app(json.loads(f.read_text(encoding="utf-8")),
-                                subject, major, section_of, topic_of, media))
+            raw = json.loads(f.read_text(encoding="utf-8"))
+            raw_cards.append(raw)   # 화면 순서 계산에 쓴다 — pages 는 앱 카드에 안 남는다
+            cards.append(to_app(raw, subject, major, section_of, topic_of, media))
         print(f"{unit_id}: 카드 {len(files)}장 · 그림 {len(media)}장")
 
     # 백로그 순서를 그대로 화면 순서로 쓴다. topic_id 가 곧 그 순서다
     # (mate-1-1-01 < mate-1-1-02 < mate-1-2-01). 소주제 **이름**으로 순서를
     # 매기면 단원이 둘 이상일 때 같은 이름끼리 자리를 덮어쓴다.
-    cards.sort(key=lambda c: (c.get("unitId") or "", c.get("topicId") or "~", c["id"]))
+    #
+    # 소주제 **안**의 순서는 id 알파벳순으로 두면 안 된다 — 그러면 지질 시대 소주제가
+    # '신생대 → 지질 시대 → 대멸종 → 중생대 → 고생대 → 선캄브리아시대' 로 나온다.
+    # 개념의 논리적 흐름을 따른다 (아래 logical_order).
+    order = logical_order(raw_cards)
+    cards.sort(key=lambda c: (c.get("unitId") or "", c.get("topicId") or "~",
+                              order.get(c["id"], 0), c["id"]))
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(cards, ensure_ascii=False, indent=2) + "\n",

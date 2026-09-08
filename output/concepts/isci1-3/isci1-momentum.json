@@ -1,0 +1,107 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-momentum",
+  "concept_key": "concept:momentum",
+  "registry_status": "new",
+  "term": "운동량",
+  "notation": {
+    "hanja": "運動量",
+    "hanja_gloss": "運 옮길 운 · 動 움직일 동 · 量 헤아릴 량",
+    "english": "momentum",
+    "symbol_display": "p = mv",
+    "symbol_plain": "p = mv"
+  },
+  "definition": "운동하는 물체가 지닌 운동의 정도를 나타내는 양. 물체의 질량과 속도를 곱해 구한다.",
+  "relations": [
+    {
+      "id": "rel-mom-mass",
+      "text": "속도가 같다면 질량이 큰 물체의 운동량이 더 크다.",
+      "form": {
+        "condition": "두 물체의 속도가 같을 때",
+        "type": "direct",
+        "scope": "같은 속도로 움직이는 물체들의 비교에 한함",
+        "antecedent": {
+          "quantity": "물체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량과 운동량이 함께 커지므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속도가 같다면 질량이 큰 물체의 운동량이 더 작다."
+    },
+    {
+      "id": "rel-mom-speed",
+      "text": "질량이 같다면 속도가 큰 물체의 운동량이 더 크다.",
+      "form": {
+        "condition": "두 물체의 질량이 같을 때",
+        "type": "direct",
+        "scope": "같은 질량의 물체들의 비교에 한함",
+        "antecedent": {
+          "quantity": "물체의 속도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속도와 운동량이 함께 커지므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 같다면 속도가 큰 물체의 운동량이 더 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빠르게 움직이는 물체는 질량과 상관없이 언제나 운동량이 크다",
+      "why_wrong": "운동량은 질량과 속도의 곱이므로 아주 가벼운 물체는 속도가 커도 운동량이 작을 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-mom-mass"
+    },
+    {
+      "text": "정지해 있는 물체도 질량이 있으니 운동량을 가진다",
+      "why_wrong": "속도가 0이면 질량이 아무리 커도 곱이 0이 되어 운동량은 0이다.",
+      "source": "llm",
+      "linked_relation": "rel-mom-speed"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-impulse-momentum-relation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-impulse"
+    },
+    {
+      "type": "related",
+      "target": "isci1-inertia"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-04"
+  ],
+  "topic_id": "isci1-3-2-02",
+  "pages": [
+    129
+  ],
+  "difficulty": 2,
+  "role": "supporting"
+}

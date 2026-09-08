@@ -1,0 +1,102 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-codon",
+  "concept_key": "concept:codon",
+  "registry_status": "new",
+  "term": "코돈",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 codon 의 음차어다. 한자어 표기가 존재하지 않는다.",
+    "english": "codon"
+  },
+  "definition": "RNA에서 하나의 아미노산을 지정하는, 연속한 세 개의 염기. DNA 쪽 3염기조합이 전사된 결과다.",
+  "relations": [
+    {
+      "id": "rel-cod-one-to-one",
+      "text": "코돈 한 개가 아미노산 한 개를 지정하므로 라이보솜은 코돈을 차례로 읽어 아미노산을 잇는다.",
+      "form": {
+        "condition": "번역이 진행될 때",
+        "type": "causal",
+        "scope": "코돈과 아미노산의 대응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "대응에서 합성 절차로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cod-why-three",
+      "text": "염기는 네 종류뿐이어서 한두 개로는 20여 종의 아미노산을 다 지정할 수 없고, 세 개가 모여야 지정할 수 있다.",
+      "form": {
+        "condition": "아미노산이 20여 종류일 때",
+        "type": "causal",
+        "scope": "염기 개수와 지정 가능한 아미노산 수의 관계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "종류 수에서 필요한 염기 개수로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cod-complementary",
+      "text": "DNA의 3염기조합이 전사되면 그에 짝이 맞는 RNA의 세 염기, 곧 코돈이 된다.",
+      "form": {
+        "condition": "전사가 일어날 때",
+        "type": "causal",
+        "scope": "DNA와 RNA의 세 염기 대응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "전사에서 코돈 형성으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "코돈은 DNA에 있는 연속한 세 염기를 가리킨다",
+      "why_wrong": "DNA 쪽의 연속한 세 염기는 3염기조합이고, 그것이 전사된 RNA 쪽의 세 염기가 코돈이다.",
+      "source": "llm",
+      "linked_relation": "rel-cod-complementary"
+    },
+    {
+      "text": "염기 하나가 아미노산 하나를 지정한다",
+      "why_wrong": "염기는 네 종류뿐이라 하나로는 20여 종의 아미노산을 지정할 수 없어, 연속한 세 염기가 하나를 지정한다.",
+      "source": "llm",
+      "linked_relation": "rel-cod-why-three"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-transcription"
+    },
+    {
+      "type": "next",
+      "target": "isci1-translation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-gene"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-06"
+  ],
+  "topic_id": "isci1-3-3-03",
+  "pages": [
+    154
+  ],
+  "difficulty": 4,
+  "role": "supporting"
+}

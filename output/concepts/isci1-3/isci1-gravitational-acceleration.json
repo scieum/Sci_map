@@ -1,0 +1,121 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-gravitational-acceleration",
+  "concept_key": "concept:gravitational-acceleration",
+  "registry_status": "new",
+  "term": "중력 가속도",
+  "notation": {
+    "hanja": "重力加速度",
+    "hanja_gloss": "重 무거울 중 · 力 힘 력 · 加 더할 가 · 速 빠를 속 · 度 법도 도",
+    "english": "gravitational acceleration",
+    "symbol_display": "9.8 m/s²",
+    "symbol_plain": "9.8 m/s^2"
+  },
+  "definition": "중력만 받는 물체의 가속도. 단위 시간당 속도 변화량을 뜻하며 지구 표면에서는 질량과 무관하게 약 9.8 m/s² 이다.",
+  "relations": [
+    {
+      "id": "rel-ga-mass",
+      "text": "지구 표면에서 중력 가속도의 크기는 물체의 질량과 관계없이 약 9.8 m/s² 로 같다.",
+      "form": {
+        "condition": "지구 표면 근처에서 공기의 저항을 무시할 때",
+        "type": "conditional",
+        "scope": "지구 표면 근처의 낙하 운동에 한함",
+        "antecedent": {
+          "quantity": "물체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "중력 가속도의 크기",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "질량과 무관함을 밝힌 명제라 뒤집을 방향이 서지 않는다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ga-definition",
+      "text": "속도가 변하는 운동을 가속도 운동이라 하고, 그때 단위 시간당 속도 변화량이 가속도다.",
+      "form": {
+        "condition": "물체의 속도가 시간에 따라 변할 때",
+        "type": "classification",
+        "scope": "가속도의 정의에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ga-body",
+      "text": "천체가 작용하는 중력이 작을수록 그 천체 표면에서 물체의 중력 가속도도 작다.",
+      "form": {
+        "condition": "같은 물체를 여러 천체의 표면에서 견줄 때",
+        "type": "direct",
+        "scope": "천체 표면 근처에 한함",
+        "antecedent": {
+          "quantity": "천체가 작용하는 중력의 크기",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "중력 가속도의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "중력과 가속도가 같은 방향으로 함께 변하므로 한쪽 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천체가 작용하는 중력이 작을수록 그 천체 표면에서 물체의 중력 가속도는 크다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 큰 물체는 중력 가속도도 크다",
+      "why_wrong": "질량이 클수록 받는 중력도 커지지만 가속도는 질량과 관계없이 같아, 지구 표면에서는 약 9.8 m/s² 다.",
+      "source": "llm",
+      "linked_relation": "rel-ga-mass"
+    },
+    {
+      "text": "속도가 크면 가속도도 크다",
+      "why_wrong": "가속도는 속도 자체가 아니라 단위 시간당 속도가 변한 양이므로, 속도가 커도 변화가 없으면 가속도는 0이다.",
+      "source": "llm",
+      "linked_relation": "rel-ga-definition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-free-fall-motion"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-gravity"
+    },
+    {
+      "type": "related",
+      "target": "isci1-horizontal-projectile-motion"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-03"
+  ],
+  "topic_id": "isci1-3-2-01",
+  "pages": [
+    125
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

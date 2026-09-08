@@ -1,0 +1,122 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-impulse",
+  "concept_key": "concept:impulse",
+  "registry_status": "new",
+  "term": "충격량",
+  "notation": {
+    "hanja": "衝擊量",
+    "hanja_gloss": "衝 찌를 충 · 擊 칠 격 · 量 헤아릴 량",
+    "english": "impulse",
+    "symbol_display": "FΔt",
+    "symbol_plain": "F delta t"
+  },
+  "definition": "충돌할 때 물체가 받은 충격의 정도를 나타내는 양. 작용한 힘과 힘이 작용한 시간을 곱해 구한다.",
+  "relations": [
+    {
+      "id": "rel-imp-force",
+      "text": "힘이 작용한 시간이 같다면 작용한 힘이 클수록 물체가 받는 충격량이 크다.",
+      "form": {
+        "condition": "힘이 작용한 시간이 같을 때",
+        "type": "direct",
+        "scope": "충돌에서 받는 충격량의 비교에 한함",
+        "antecedent": {
+          "quantity": "작용한 힘의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "충격량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "힘과 충격량이 함께 커지므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "힘이 작용한 시간이 같다면 작용한 힘이 클수록 물체가 받는 충격량이 작다."
+    },
+    {
+      "id": "rel-imp-time",
+      "text": "작용한 힘이 같다면 힘이 작용한 시간이 길수록 물체가 받는 충격량이 크다.",
+      "form": {
+        "condition": "작용한 힘의 크기가 같을 때",
+        "type": "direct",
+        "scope": "충돌에서 받는 충격량의 비교에 한함",
+        "antecedent": {
+          "quantity": "힘이 작용한 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "충격량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "작용 시간과 충격량이 함께 커지므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "작용한 힘이 같다면 힘이 작용한 시간이 길수록 물체가 받는 충격량이 작다."
+    },
+    {
+      "id": "rel-imp-graph",
+      "text": "힘의 크기가 시간에 따라 변해도 힘-시간 그래프가 시간 축과 이루는 넓이가 충격량이 된다.",
+      "form": {
+        "condition": "힘의 크기가 시간에 따라 달라질 때",
+        "type": "classification",
+        "scope": "힘-시간 그래프 해석에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 곧 충격량이라는 대응이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "충격량은 작용한 힘의 크기만으로 정해진다",
+      "why_wrong": "힘이 작용한 시간도 함께 곱해지므로 힘이 작아도 오래 작용하면 충격량은 클 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-imp-time"
+    },
+    {
+      "text": "힘이 시간에 따라 변하면 충격량을 구할 수 없다",
+      "why_wrong": "힘-시간 그래프가 시간 축과 만드는 넓이를 구하면 변하는 힘에서도 충격량을 알 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-imp-graph"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-impulse-momentum-relation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-momentum"
+    },
+    {
+      "type": "related",
+      "target": "isci1-collision-safety-device"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-04"
+  ],
+  "topic_id": "isci1-3-2-02",
+  "pages": [
+    129
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

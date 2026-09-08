@@ -358,7 +358,13 @@ def check_registry_and_homonyms(cards, res: Result) -> None:
             [f"{k}: {', '.join(v)}" for k, v in dup.items()])
 
     hom = load_yaml(HOMONYMS)
-    surfaces = {norm(h["surface"]) for h in (hom or {}).get("homonyms", [])}
+    # ★2026-09-09 결함 수정 — validate_candidates.py 와 같은 결함이었다.
+    #   `homonyms` / `surface` 를 읽었으나 실제 키는 `watch_terms` / `term` 이라
+    #   이 경고가 한 번도 뜬 적이 없다.
+    _watch = (hom or {}).get("watch_terms") or []
+    if not _watch:
+        res.warn("homonym_surface", "homonyms.yaml 에 watch_terms 가 없다 — 검사가 무력하다")
+    surfaces = {norm(h["term"]) for h in _watch}
     hits = [f"{c['id']} ({c['term']})" for c in cards if norm(c["term"]) in surfaces]
     if hits:
         res.warn("homonym_surface", f"동음이의 금지쌍 표기 {len(hits)}건 — 링크는 사람 확인", hits)

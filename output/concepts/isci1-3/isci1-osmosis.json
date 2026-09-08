@@ -1,0 +1,115 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-osmosis",
+  "concept_key": "concept:osmosis",
+  "registry_status": "reused",
+  "term": "삼투",
+  "aliases": [
+    "삼투 현상"
+  ],
+  "notation": {
+    "hanja": "滲透",
+    "hanja_gloss": "滲 스밀 삼 · 透 사무칠 투",
+    "english": "osmosis"
+  },
+  "definition": "세포막을 경계로 농도가 낮은 쪽에서 높은 쪽으로 물이 이동하는 현상.",
+  "relations": [
+    {
+      "id": "rel-osm-direction",
+      "text": "세포막을 경계로 농도가 다른 두 용액이 맞닿으면 물은 저농도 쪽에서 고농도 쪽으로 이동한다.",
+      "form": {
+        "condition": "막을 경계로 농도 차이가 있을 때",
+        "type": "causal",
+        "scope": "물이 지나갈 수 있는 막을 통한 이동에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "이동 방향이 정해져 있으므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포막을 경계로 농도가 다른 두 용액이 맞닿으면 물은 고농도 쪽에서 저농도 쪽으로 이동한다."
+    },
+    {
+      "id": "rel-osm-volume",
+      "text": "세포를 세포 내부보다 농도가 낮은 용액에 넣으면 물이 들어와 부피가 커진다.",
+      "form": {
+        "condition": "외부 용액이 세포 내부보다 저농도일 때",
+        "type": "causal",
+        "scope": "삼투로 물만 이동하는 경우에 한함",
+        "antecedent": {
+          "quantity": "외부 용액의 농도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "세포의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도 관계가 물의 이동 방향을 정하므로 부피 변화의 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포를 세포 내부보다 농도가 낮은 용액에 넣으면 물이 빠져나가 부피가 줄어든다."
+    },
+    {
+      "id": "rel-osm-wall",
+      "text": "고농도 용액에 넣으면 식물 세포는 세포막이 세포벽에서 떨어지고, 세포벽이 없는 적혈구는 쪼그라든다.",
+      "form": {
+        "condition": "외부 용액이 세포 내부보다 고농도일 때",
+        "type": "classification",
+        "scope": "세포벽의 유무에 따른 차이에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "두 경우를 견준 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "삼투에서는 물이 농도가 높은 쪽에서 낮은 쪽으로 이동한다",
+      "why_wrong": "물은 농도가 낮은 쪽에서 높은 쪽, 곧 용질이 많은 쪽으로 이동한다.",
+      "source": "llm",
+      "linked_relation": "rel-osm-direction"
+    },
+    {
+      "text": "세포를 어떤 용액에 넣어도 세포의 부피는 변하지 않는다",
+      "why_wrong": "세포 안팎의 농도가 다르면 삼투로 물이 한쪽으로 더 많이 이동해 부피가 커지거나 줄어든다.",
+      "source": "llm",
+      "linked_relation": "rel-osm-volume"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-cell-membrane"
+    },
+    {
+      "type": "related",
+      "target": "isci1-selective-permeability"
+    },
+    {
+      "type": "related",
+      "target": "isci1-cell"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05"
+  ],
+  "topic_id": "isci1-3-3-01",
+  "pages": [
+    144
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

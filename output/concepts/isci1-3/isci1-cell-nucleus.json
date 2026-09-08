@@ -1,0 +1,110 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-cell-nucleus",
+  "concept_key": "concept:cell-nucleus",
+  "registry_status": "new",
+  "term": "핵",
+  "aliases": [
+    "세포핵"
+  ],
+  "notation": {
+    "hanja": "核",
+    "hanja_gloss": "核 씨 핵",
+    "english": "cell nucleus"
+  },
+  "definition": "세포의 생명활동을 조절하는 세포소기관. 세포 안에서 유전정보를 저장한 DNA를 담고 있다.",
+  "relations": [
+    {
+      "id": "rel-nuc-dna",
+      "text": "세포의 핵 속 DNA에 유전정보가 저장되어 있어 그 정보가 다음 세대로 전달된다.",
+      "form": {
+        "condition": "세포가 온전한 핵을 가질 때",
+        "type": "causal",
+        "scope": "핵을 가진 세포에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "저장에서 전달로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05",
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nuc-rna",
+      "text": "핵 속 DNA에서 전사된 RNA는 핵을 빠져나와 세포질로 이동한다.",
+      "form": {
+        "condition": "전사가 끝난 뒤",
+        "type": "causal",
+        "scope": "전사와 번역의 장소가 나뉘어 있는 세포에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "핵에서 세포질로 향하는 이동이라 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "RNA는 세포질에서 만들어져 핵 안으로 이동한다."
+    },
+    {
+      "id": "rel-nuc-control",
+      "text": "세포의 생명활동 조절은 핵에 저장된 유전정보를 근거로 이루어진다.",
+      "form": {
+        "condition": "세포가 생명활동을 조절할 때",
+        "type": "causal",
+        "scope": "핵을 가진 세포에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "정보에서 조절로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵은 원자의 중심에 있는 부분을 뜻하므로 세포에는 핵이 없다",
+      "why_wrong": "표기가 같아도 가리키는 것이 다르다. 이 카드의 핵은 세포 안에서 DNA를 담고 생명활동을 조절하는 세포소기관이며, 양성자와 중성자로 이루어진 원자의 중심부(원자핵)나 수증기가 응결할 때 중심이 되는 입자(응결핵)와는 다른 개념이다.",
+      "source": "llm",
+      "linked_relation": "rel-nuc-dna"
+    },
+    {
+      "text": "핵 속 DNA가 그대로 세포질로 나가 단백질이 된다",
+      "why_wrong": "DNA는 핵에 남고, 필요한 부분이 RNA로 전사되어 세포질로 나간 뒤 그 정보에 따라 단백질이 만들어진다.",
+      "source": "llm",
+      "linked_relation": "rel-nuc-rna"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-cell"
+    },
+    {
+      "type": "next",
+      "target": "isci1-transcription",
+      "note": "전사는 핵 속에서 일어난다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-gene"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05",
+    "10통과1-03-06"
+  ],
+  "topic_id": "isci1-3-3-01",
+  "pages": [
+    140,
+    153
+  ],
+  "difficulty": 2,
+  "role": "supporting"
+}

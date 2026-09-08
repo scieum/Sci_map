@@ -1,0 +1,106 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-gene",
+  "concept_key": "concept:gene",
+  "registry_status": "new",
+  "term": "유전자",
+  "notation": {
+    "hanja": "遺傳子",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자",
+    "english": "gene"
+  },
+  "definition": "긴 DNA 가닥에서 유전정보를 담고 있는 부분. 이 정보에 따라 형질을 결정하는 단백질이 만들어진다.",
+  "relations": [
+    {
+      "id": "rel-gene-protein",
+      "text": "유전자에 담긴 정보에 따라 어떤 단백질이 만들어지는지가 정해진다.",
+      "form": {
+        "condition": "세포 안에서 유전정보가 발현될 때",
+        "type": "causal",
+        "scope": "유전자와 단백질의 대응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "정보에서 산물로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gene-trait",
+      "text": "만들어진 단백질에 따라 털 색처럼 생명체의 형질이 나타난다.",
+      "form": {
+        "condition": "단백질이 제 기능을 할 때",
+        "type": "causal",
+        "scope": "단백질과 형질의 관계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "단백질에서 형질로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gene-storage",
+      "text": "유전정보는 세포의 DNA에 저장되어 있고, 그 가운데 정보를 담은 부분이 유전자다.",
+      "form": {
+        "condition": "유전정보의 저장 위치를 볼 때",
+        "type": "classification",
+        "scope": "DNA와 유전자의 포함 관계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "포함 관계를 밝힌 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전자와 DNA는 완전히 같은 말이다",
+      "why_wrong": "DNA는 긴 가닥 전체를 가리키고, 유전자는 그 가운데 유전정보를 담은 부분을 가리킨다.",
+      "source": "llm",
+      "linked_relation": "rel-gene-storage"
+    },
+    {
+      "text": "형질은 유전자가 직접 만들어 낸다",
+      "why_wrong": "유전자의 정보에 따라 단백질이 만들어지고, 그 단백질이 작용해 형질이 나타난다.",
+      "source": "llm",
+      "linked_relation": "rel-gene-trait"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-transcription"
+    },
+    {
+      "type": "next",
+      "target": "isci1-translation"
+    },
+    {
+      "type": "related",
+      "target": "isci1-cell-nucleus"
+    },
+    {
+      "type": "related",
+      "target": "isci1-enzyme"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-06"
+  ],
+  "topic_id": "isci1-3-3-03",
+  "pages": [
+    152
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

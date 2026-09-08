@@ -1,0 +1,107 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-earthquake",
+  "concept_key": "concept:earthquake",
+  "registry_status": "new",
+  "term": "지진",
+  "notation": {
+    "hanja": "地震",
+    "hanja_gloss": "地 땅 지 · 震 벼락 진",
+    "english": "earthquake"
+  },
+  "definition": "지각의 일부가 끊어지면서 땅이 흔들리는 현상. 짧은 시간에 아주 많은 에너지가 방출된다.",
+  "relations": [
+    {
+      "id": "rel-eq-distribution",
+      "text": "지진은 판의 경계를 따라 띠 모양으로 모여 발생하며, 화산 활동이 활발한 지역과 대체로 겹친다.",
+      "form": {
+        "condition": "전 지구 규모로 분포를 견줄 때",
+        "type": "causal",
+        "scope": "지진의 지리적 분포에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "분포의 대응을 밝힌 명제라 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eq-tsunami",
+      "text": "지진이 해저에서 일어나면 바닷물이 밀려 올라가 지진 해일이 생긴다.",
+      "form": {
+        "condition": "진원이 바다 밑에 있을 때",
+        "type": "causal",
+        "scope": "해저에서 일어난 지진에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "지진에서 해일로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eq-biosphere",
+      "text": "지진으로 땅이 갈라지고 산사태가 나면 생물이 살던 터전이 파괴된다.",
+      "form": {
+        "condition": "지진의 규모가 커서 지표가 크게 변형될 때",
+        "type": "causal",
+        "scope": "지진이 생물권에 미치는 영향에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "지표 변형에서 서식지 파괴로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지진은 어디에서나 같은 확률로 일어난다",
+      "why_wrong": "지진은 판의 경계 부근에 집중해 발생하므로 지역에 따라 발생 빈도가 크게 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-eq-distribution"
+    },
+    {
+      "text": "지진 해일은 바다에서 태풍이 불어 생기는 큰 파도다",
+      "why_wrong": "지진 해일은 해저에서 지진이 일어나 바닷물이 밀려 올라갈 때 생긴다.",
+      "source": "llm",
+      "linked_relation": "rel-eq-tsunami"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-plate-tectonics"
+    },
+    {
+      "type": "related",
+      "target": "isci1-volcanic-activity"
+    },
+    {
+      "type": "related",
+      "target": "isci1-convergent-plate-boundary"
+    },
+    {
+      "type": "related",
+      "target": "isci1-transform-plate-boundary"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-02"
+  ],
+  "topic_id": "isci1-3-1-03",
+  "pages": [
+    108,
+    109
+  ],
+  "difficulty": 2,
+  "role": "core"
+}

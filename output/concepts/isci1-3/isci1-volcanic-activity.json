@@ -1,0 +1,116 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-volcanic-activity",
+  "concept_key": "concept:volcanic-activity",
+  "registry_status": "new",
+  "term": "화산 활동",
+  "notation": {
+    "hanja": "火山活動",
+    "hanja_gloss": "火 불 화 · 山 메 산 · 活 살 활 · 動 움직일 동",
+    "english": "volcanic activity"
+  },
+  "definition": "지하의 마그마가 지표로 분출하는 현상. 많은 용암과 화산재가 나오고 때로 지진을 함께 일으킨다.",
+  "relations": [
+    {
+      "id": "rel-volc-distribution",
+      "text": "화산은 전 세계에 고르게 있지 않고 판의 경계를 따라 띠 모양으로 모여 나타난다.",
+      "form": {
+        "condition": "전 지구 규모로 분포를 볼 때",
+        "type": "causal",
+        "scope": "화산의 지리적 분포에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "판 경계와 분포의 대응을 밝힌 명제라 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-volc-cooling",
+      "text": "대규모 분출로 뿜어진 화산재가 태양빛을 반사하면 지구의 기온이 일시적으로 떨어진다.",
+      "form": {
+        "condition": "분출 규모가 커서 화산재가 대기에 오래 머물 때",
+        "type": "causal",
+        "scope": "대규모 분출의 일시적 기후 영향에 한함",
+        "antecedent": {
+          "quantity": "대기 중 화산재의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지구의 평균 기온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "화산재가 태양빛을 반사하는 작용이므로 기온 변화의 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대규모 분출로 뿜어진 화산재가 태양빛을 반사하면 지구의 기온이 일시적으로 올라간다."
+    },
+    {
+      "id": "rel-volc-hydro",
+      "text": "해저 화산이 분출하면 지권의 물질과 에너지가 수권으로 옮겨져 해수의 성분이 달라진다.",
+      "form": {
+        "condition": "화산이 바다 밑에서 분출할 때",
+        "type": "causal",
+        "scope": "해저 화산이 수권에 미치는 영향에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "물질 이동에서 성분 변화로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화산 활동은 지구 어디에서나 비슷한 정도로 일어난다",
+      "why_wrong": "화산 활동은 판의 경계를 따라 특정 지역에 집중해 나타난다.",
+      "source": "llm",
+      "linked_relation": "rel-volc-distribution"
+    },
+    {
+      "text": "화산이 분출하면 뜨거운 물질이 나오니 지구의 기온이 올라간다",
+      "why_wrong": "대규모 분출에서는 화산재가 태양빛을 가려 반사하므로 오히려 기온이 일시적으로 내려간다.",
+      "source": "llm",
+      "linked_relation": "rel-volc-cooling"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-plate-tectonics"
+    },
+    {
+      "type": "related",
+      "target": "isci1-earthquake"
+    },
+    {
+      "type": "related",
+      "target": "isci1-divergent-plate-boundary"
+    },
+    {
+      "type": "related",
+      "target": "isci1-earth-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-02"
+  ],
+  "topic_id": "isci1-3-1-03",
+  "pages": [
+    108,
+    114
+  ],
+  "difficulty": 2,
+  "role": "core"
+}

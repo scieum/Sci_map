@@ -1,0 +1,127 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-free-fall-motion",
+  "concept_key": "concept:free-fall-motion",
+  "registry_status": "new",
+  "term": "자유 낙하 운동",
+  "aliases": [
+    "자유 낙하"
+  ],
+  "notation": {
+    "hanja": "自由落下運動",
+    "hanja_gloss": "自 스스로 자 · 由 말미암을 유 · 落 떨어질 락 · 下 아래 하 · 運 옮길 운 · 動 움직일 동",
+    "english": "free fall"
+  },
+  "definition": "높은 곳에서 가만히 놓은 물체가 중력만 받아 연직 아래로 떨어지는 운동. 속도가 일정한 비율로 커진다.",
+  "relations": [
+    {
+      "id": "rel-ff-speedup",
+      "text": "운동 방향과 중력의 방향이 같으므로 떨어지는 물체의 속도는 시간이 갈수록 일정하게 커진다.",
+      "form": {
+        "condition": "공기의 저항을 무시할 때",
+        "type": "direct",
+        "scope": "중력만 작용하는 낙하에 한함",
+        "antecedent": {
+          "quantity": "낙하한 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물체의 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "중력이 운동 방향으로 계속 작용하므로 속도 변화의 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "운동 방향과 중력의 방향이 같으므로 떨어지는 물체의 속도는 시간이 갈수록 일정하게 작아진다."
+    },
+    {
+      "id": "rel-ff-mass",
+      "text": "공기의 저항이 없다면 같은 높이에서 놓은 물체는 질량이 달라도 같은 시간에 바닥에 닿는다.",
+      "form": {
+        "condition": "공기의 저항을 무시할 때",
+        "type": "conditional",
+        "scope": "진공에 가까운 조건의 자유 낙하에 한함",
+        "antecedent": {
+          "quantity": "물체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "바닥에 닿는 데 걸린 시간",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "질량과 낙하 시간이 무관하다는 명제라 뒤집을 방향이 서지 않는다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ff-rate",
+      "text": "지구 표면 근처에서 자유 낙하 하는 물체의 속도는 1초마다 약 9.8 m/s 씩 커진다.",
+      "form": {
+        "condition": "지구 표면 근처에서 공기의 저항을 무시할 때",
+        "type": "direct",
+        "scope": "지구 표면 근처의 자유 낙하에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "속도 증가율의 값을 밝힌 명제라 뒤집을 대상이 되지 않는다.",
+      "curriculum": [
+        "10통과1-03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무거운 물체가 가벼운 물체보다 항상 빨리 떨어진다",
+      "why_wrong": "공기의 저항을 무시하면 속도 변화가 질량과 무관하므로 같은 높이에서 놓은 두 물체는 함께 바닥에 닿는다.",
+      "source": "llm",
+      "linked_relation": "rel-ff-mass"
+    },
+    {
+      "text": "자유 낙하 하는 물체는 일정한 속도로 떨어진다",
+      "why_wrong": "중력이 운동 방향으로 계속 작용하므로 속도가 일정하게 증가한다.",
+      "source": "llm",
+      "linked_relation": "rel-ff-speedup"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-gravity"
+    },
+    {
+      "type": "next",
+      "target": "isci1-horizontal-projectile-motion",
+      "note": "연직 성분이 자유 낙하와 같다"
+    },
+    {
+      "type": "next",
+      "target": "isci1-gravitational-acceleration"
+    },
+    {
+      "type": "related",
+      "target": "isci1-satellite-circular-motion"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-03"
+  ],
+  "topic_id": "isci1-3-2-01",
+  "pages": [
+    124
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

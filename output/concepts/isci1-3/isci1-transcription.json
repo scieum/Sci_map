@@ -1,0 +1,108 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-transcription",
+  "concept_key": "concept:transcription",
+  "registry_status": "new",
+  "term": "전사",
+  "notation": {
+    "hanja": "轉寫",
+    "hanja_gloss": "轉 구를 전 · 寫 베낄 사",
+    "english": "transcription"
+  },
+  "definition": "DNA에 저장된 유전정보 가운데 필요한 부분을 본떠 RNA를 합성하는 과정. 핵 속에서 일어난다.",
+  "relations": [
+    {
+      "id": "rel-tr-complementary",
+      "text": "DNA 한 가닥의 염기 순서에 짝이 맞는 염기를 가진 뉴클레오타이드가 이어져 RNA가 만들어진다.",
+      "form": {
+        "condition": "DNA가 주형으로 쓰일 때",
+        "type": "causal",
+        "scope": "전사 과정에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "주형에서 산물로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tr-uracil",
+      "text": "전사할 때 DNA의 타이민에 짝이 되는 자리에는 유라실이 들어간다.",
+      "form": {
+        "condition": "RNA가 합성될 때",
+        "type": "classification",
+        "scope": "DNA와 RNA의 염기 대응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "염기의 대응을 짝지은 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tr-move",
+      "text": "전사로 완성된 RNA는 핵을 나와 세포질로 이동한다.",
+      "form": {
+        "condition": "전사가 끝난 뒤",
+        "type": "causal",
+        "scope": "전사와 번역의 장소가 나뉘어 있는 세포에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "핵에서 세포질로 향하는 이동이라 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전사로 완성된 RNA는 세포질에서 핵 안으로 이동한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전사는 DNA가 그대로 단백질로 바뀌는 과정이다",
+      "why_wrong": "전사는 DNA의 정보를 RNA로 옮겨 적는 과정이고, 단백질은 그 뒤 번역에서 만들어진다.",
+      "source": "llm",
+      "linked_relation": "rel-tr-complementary"
+    },
+    {
+      "text": "RNA에도 DNA처럼 타이민이 들어간다",
+      "why_wrong": "RNA에서는 타이민 자리에 유라실이 들어간다.",
+      "source": "llm",
+      "linked_relation": "rel-tr-uracil"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-gene"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-cell-nucleus"
+    },
+    {
+      "type": "next",
+      "target": "isci1-codon"
+    },
+    {
+      "type": "next",
+      "target": "isci1-translation"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-06"
+  ],
+  "topic_id": "isci1-3-3-03",
+  "pages": [
+    153,
+    154
+  ],
+  "difficulty": 4,
+  "role": "core"
+}

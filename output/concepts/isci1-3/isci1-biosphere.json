@@ -1,0 +1,103 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-biosphere",
+  "concept_key": "concept:biosphere",
+  "registry_status": "new",
+  "term": "생물권",
+  "notation": {
+    "hanja": "生物圈",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 圈 우리 권",
+    "english": "biosphere"
+  },
+  "definition": "지구에 사는 모든 생물과 그 생물이 살아가는 생태계를 아우르는 권역. 지권·수권·기권에 걸쳐 분포한다.",
+  "relations": [
+    {
+      "id": "rel-bio-gas",
+      "text": "생물이 광합성과 호흡을 하면 기권을 이루는 기체의 조성이 달라진다.",
+      "form": {
+        "condition": "생물이 기체를 흡수하거나 내놓을 때",
+        "type": "causal",
+        "scope": "생물권이 기권에 미치는 영향에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "생물 활동에서 대기 조성 변화로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-weathering",
+      "text": "식물의 뿌리가 암석 틈으로 자라 들어가면 단단한 암석이 풍화된다.",
+      "form": {
+        "condition": "암석에 뿌리가 뻗을 틈이 있을 때",
+        "type": "causal",
+        "scope": "생물권이 지권에 미치는 영향에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "뿌리의 작용에서 풍화로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bio-adapt",
+      "text": "지구 환경이 달라지면 생물은 그에 반응해 적응하거나 도태된다.",
+      "form": {
+        "condition": "환경 변화가 생물의 생존 조건을 건드릴 때",
+        "type": "conditional",
+        "scope": "환경 변화에 대한 생물의 반응에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "환경에서 생물로 가는 방향을 뒤집으면 생물이 환경을 바꾸는 참인 명제가 되어 버린다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생물권은 지표 위에만 있어서 바다나 땅속은 해당하지 않는다",
+      "why_wrong": "생물은 지권·수권·기권에 걸쳐 분포하므로 생물권도 그 세 권역에 겹쳐 있다.",
+      "source": "llm"
+    },
+    {
+      "text": "생물은 환경의 영향을 받을 뿐 환경을 바꾸지는 못한다",
+      "why_wrong": "광합성과 호흡으로 대기 조성을 바꾸고 뿌리로 암석을 풍화시키듯 생물도 다른 권역을 바꾼다.",
+      "source": "llm",
+      "linked_relation": "rel-bio-gas"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-earth-system"
+    },
+    {
+      "type": "next",
+      "target": "isci1-carbon-cycle",
+      "note": "광합성·호흡이 탄소 이동의 경로다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-hydrosphere"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-01"
+  ],
+  "topic_id": "isci1-3-1-01",
+  "pages": [
+    101,
+    103
+  ],
+  "difficulty": 2,
+  "role": "supporting"
+}

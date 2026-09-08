@@ -1,0 +1,133 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-enzyme",
+  "concept_key": "concept:enzyme",
+  "registry_status": "reused",
+  "term": "효소",
+  "notation": {
+    "hanja": "酵素",
+    "hanja_gloss": "酵 삭힐 효 · 素 바탕 소",
+    "english": "enzyme"
+  },
+  "definition": "생명체 안에서 만들어져 화학 반응이 쉽게 일어나게 하는 물질. 주성분이 단백질인 생체촉매다.",
+  "relations": [
+    {
+      "id": "rel-enz-activation",
+      "text": "효소는 반응에 필요한 활성화에너지를 낮추어 화학 반응이 쉽게 일어나게 한다.",
+      "form": {
+        "condition": "효소가 반응 물질에 작용할 때",
+        "type": "inverse",
+        "scope": "효소가 촉매로 작용하는 반응에 한함",
+        "antecedent": {
+          "quantity": "효소의 작용",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "활성화에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "활성화에너지를 낮추는 작용이므로 높인다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "효소는 반응에 필요한 활성화에너지를 높여 화학 반응이 쉽게 일어나게 한다."
+    },
+    {
+      "id": "rel-enz-specificity",
+      "text": "효소마다 입체 구조가 달라서 자기 구조와 맞는 물질에만 작용한다.",
+      "form": {
+        "condition": "효소와 반응 물질이 만날 때",
+        "type": "causal",
+        "scope": "효소의 기질 특이성에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 작용 대상으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enz-steps",
+      "text": "생명체 안의 반응은 여러 단계를 거치고 단계마다 물질이 달라져, 작용하는 효소의 종류도 달라진다.",
+      "form": {
+        "condition": "반응이 여러 단계로 진행될 때",
+        "type": "causal",
+        "scope": "여러 단계를 거치는 물질대사 경로에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "단계별 물질 차이에서 효소 종류로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enz-outside",
+      "text": "효소는 생명체 밖에서도 작용하므로 발효 식품이나 세제처럼 일상생활에 널리 쓰인다.",
+      "form": {
+        "condition": "효소가 작용할 조건이 갖추어졌을 때",
+        "type": "causal",
+        "scope": "효소의 생명체 밖 활용에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "작용 가능성에서 활용으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소는 반응에 참여해 함께 없어진다",
+      "why_wrong": "효소는 촉매라서 자신은 변하지 않으면서 반응이 일어나는 속도를 조절한다.",
+      "source": "llm",
+      "linked_relation": "rel-enz-activation"
+    },
+    {
+      "text": "효소 한 종류가 몸속 모든 반응을 다 맡는다",
+      "why_wrong": "효소는 자기 입체 구조와 맞는 물질에만 작용하므로 단계마다 다른 효소가 필요하고, 그래서 종류가 수없이 많다.",
+      "source": "llm",
+      "linked_relation": "rel-enz-specificity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-metabolism"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-activation-energy",
+      "note": "활성화에너지를 알아야 효소 작용을 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-living-system"
+    },
+    {
+      "type": "related",
+      "target": "isci1-gene"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05"
+  ],
+  "topic_id": "isci1-3-3-02",
+  "pages": [
+    147,
+    149,
+    150
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

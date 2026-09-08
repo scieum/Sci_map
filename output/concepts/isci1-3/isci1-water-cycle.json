@@ -1,0 +1,107 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-water-cycle",
+  "concept_key": "concept:water-cycle",
+  "registry_status": "new",
+  "term": "물의 순환",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'순환'은 循環이지만 '물'은 고유어여서 낱말 전체에 대응하는 한자 표기가 없다.",
+    "english": "water cycle"
+  },
+  "definition": "물이 고체·액체·기체로 상태를 바꾸며 지구시스템의 여러 권역을 돌고 도는 흐름. 태양 에너지가 그 원동력이다.",
+  "relations": [
+    {
+      "id": "rel-wc-driver",
+      "text": "물이 태양 에너지를 흡수하면 증발해 기권으로 오르고, 에너지를 내놓으면 응결해 구름이 된다.",
+      "form": {
+        "condition": "물이 태양 에너지를 주고받을 때",
+        "type": "causal",
+        "scope": "물의 상태 변화와 권역 사이 이동에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "흡수와 방출을 맞바꾸면 상태 변화의 방향이 거꾸로가 되어 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물이 태양 에너지를 흡수하면 응결해 구름이 되고, 에너지를 내놓으면 증발해 기권으로 오른다."
+    },
+    {
+      "id": "rel-wc-erosion",
+      "text": "지표로 내린 물이 하천을 이루어 흐르면 지표가 풍화되고 깎여 나간다.",
+      "form": {
+        "condition": "강수가 지표를 따라 흐를 때",
+        "type": "causal",
+        "scope": "물의 순환이 지권에 미치는 영향에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "흐름에서 침식으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wc-biosphere",
+      "text": "생물은 물을 받아들여 생명활동에 쓰고, 식물은 증산으로 물을 다시 기권에 내보낸다.",
+      "form": {
+        "condition": "생물권이 물의 순환 경로에 들어 있을 때",
+        "type": "classification",
+        "scope": "물의 순환에서 생물권이 맡는 몫에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "경로를 나열한 분류형 명제라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "10통과1-03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물의 순환은 수권과 기권 사이에서만 일어난다",
+      "why_wrong": "지표를 흐르며 지권을 깎고 생물의 몸을 거쳐 증산으로 돌아가듯 지권과 생물권도 순환의 경로다.",
+      "source": "llm",
+      "linked_relation": "rel-wc-biosphere"
+    },
+    {
+      "text": "물이 순환하는 원동력은 지구 내부 에너지다",
+      "why_wrong": "물을 증발시키고 순환을 이끄는 것은 태양 에너지다.",
+      "source": "llm",
+      "linked_relation": "rel-wc-driver"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-earth-system-energy-source"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-hydrosphere"
+    },
+    {
+      "type": "prereq",
+      "target": "isci1-atmosphere"
+    },
+    {
+      "type": "related",
+      "target": "isci1-carbon-cycle"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-01"
+  ],
+  "topic_id": "isci1-3-1-02",
+  "pages": [
+    105
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

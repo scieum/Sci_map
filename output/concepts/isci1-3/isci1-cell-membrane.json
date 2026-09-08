@@ -1,0 +1,108 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-cell-membrane",
+  "concept_key": "concept:cell-membrane",
+  "registry_status": "new",
+  "term": "세포막",
+  "notation": {
+    "hanja": "細胞膜",
+    "hanja_gloss": "細 가늘 세 · 胞 태보 포 · 膜 꺼풀 막",
+    "english": "cell membrane"
+  },
+  "definition": "세포 바깥을 둘러싸 안과 밖을 나누는 얇은 막. 인지질이 2중으로 배열되고 그 사이에 단백질이 박힌 구조다.",
+  "relations": [
+    {
+      "id": "rel-cm-phospholipid",
+      "text": "인지질은 물과 잘 섞이는 머리와 잘 섞이지 않는 꼬리로 이루어져, 머리가 물 쪽을 향하도록 2중으로 배열된다.",
+      "form": {
+        "condition": "세포 안팎이 대부분 물로 채워져 있을 때",
+        "type": "causal",
+        "scope": "세포막의 인지질 배열에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "머리와 꼬리의 성질이 정반대라 향하는 쪽을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인지질은 물과 잘 섞이는 머리와 잘 섞이지 않는 꼬리로 이루어져, 꼬리가 물 쪽을 향하도록 2중으로 배열된다."
+    },
+    {
+      "id": "rel-cm-separate",
+      "text": "세포막이 안과 밖을 갈라 놓기 때문에 세포 내부에서 생명활동이 안정적으로 일어난다.",
+      "form": {
+        "condition": "세포막이 온전할 때",
+        "type": "causal",
+        "scope": "세포막의 경계 기능에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "경계 형성에서 안정적 생명활동으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cm-protein",
+      "text": "인지질 2중층 사이에 박힌 단백질의 일부는 물질이 지나가는 통로로 쓰인다.",
+      "form": {
+        "condition": "막단백질이 막을 관통해 있을 때",
+        "type": "causal",
+        "scope": "세포막을 통한 물질 이동 경로에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 기능으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포막은 단순한 껍질이라 물질을 아무 제약 없이 통과시킨다",
+      "why_wrong": "세포막은 물질의 종류와 크기, 성질에 따라 통과 방식을 달리하며 출입을 조절한다.",
+      "source": "llm",
+      "linked_relation": "rel-cm-protein"
+    },
+    {
+      "text": "인지질의 꼬리 부분이 물과 닿는 쪽을 향한다",
+      "why_wrong": "물과 잘 섞이는 머리가 세포 안팎의 물 쪽을 향하고, 잘 섞이지 않는 꼬리는 막 내부를 향한다.",
+      "source": "llm",
+      "linked_relation": "rel-cm-phospholipid"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-cell"
+    },
+    {
+      "type": "next",
+      "target": "isci1-selective-permeability"
+    },
+    {
+      "type": "next",
+      "target": "isci1-osmosis"
+    },
+    {
+      "type": "related",
+      "target": "isci1-living-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-05"
+  ],
+  "topic_id": "isci1-3-3-01",
+  "pages": [
+    141,
+    142
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

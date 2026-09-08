@@ -1,0 +1,108 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-convergent-plate-boundary",
+  "concept_key": "concept:convergent-plate-boundary",
+  "registry_status": "new",
+  "term": "수렴형 경계",
+  "notation": {
+    "hanja": "收斂形境界",
+    "hanja_gloss": "收 거둘 수 · 斂 거둘 렴 · 形 모양 형 · 境 지경 경 · 界 지경 계",
+    "english": "convergent plate boundary"
+  },
+  "definition": "두 판이 서로 가까워지는 판의 경계. 맨틀 대류가 하강하는 곳에 생기며 충돌형과 섭입형으로 나뉜다.",
+  "relations": [
+    {
+      "id": "rel-conv-density",
+      "text": "대륙판과 해양판이 만나는 곳에서는 밀도가 더 큰 해양판 쪽이 상대편 아래로 끌려 들어간다.",
+      "form": {
+        "condition": "두 판의 밀도가 서로 다를 때",
+        "type": "causal",
+        "scope": "섭입형 경계에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "밀도의 크기 관계를 뒤집으면 섭입하는 판이 바뀌어 반드시 거짓이 된다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대륙판과 해양판이 만나는 곳에서는 밀도가 더 작은 대륙판 쪽이 상대편 아래로 끌려 들어간다."
+    },
+    {
+      "id": "rel-conv-collision",
+      "text": "밀도가 비슷한 두 대륙판이 충돌하면 어느 쪽도 가라앉지 않고 솟아올라 습곡 산맥을 만든다.",
+      "form": {
+        "condition": "두 대륙판의 밀도가 비슷할 때",
+        "type": "causal",
+        "scope": "충돌형 경계에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "충돌에서 산맥 형성으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-conv-trench",
+      "text": "해양판이 대륙판 밑으로 섭입하면 경계에 깊은 해구가 생기고 화산이 줄지어 늘어선 호상열도가 만들어진다.",
+      "form": {
+        "condition": "섭입이 일어날 때",
+        "type": "causal",
+        "scope": "섭입형 경계의 지형에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "섭입에서 지형으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 판이 부딪히면 언제나 한쪽이 아래로 가라앉는다",
+      "why_wrong": "밀도가 비슷한 두 대륙판이 만나는 충돌형 경계에서는 어느 쪽도 섭입하지 않고 함께 솟아올라 산맥을 이룬다.",
+      "source": "llm",
+      "linked_relation": "rel-conv-collision"
+    },
+    {
+      "text": "해구는 바닷물이 오래 깎아서 만든 골짜기다",
+      "why_wrong": "해구는 해양판이 대륙판 아래로 섭입하면서 경계가 깊게 끌려 내려가 생긴 지형이다.",
+      "source": "llm",
+      "linked_relation": "rel-conv-trench"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "isci1-plate-tectonics"
+    },
+    {
+      "type": "related",
+      "target": "isci1-divergent-plate-boundary"
+    },
+    {
+      "type": "related",
+      "target": "isci1-transform-plate-boundary"
+    },
+    {
+      "type": "related",
+      "target": "isci1-earthquake"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-02"
+  ],
+  "topic_id": "isci1-3-1-03",
+  "pages": [
+    111,
+    112
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

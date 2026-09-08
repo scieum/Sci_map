@@ -1,0 +1,105 @@
+{
+  "definition_source": "restated",
+  "subject": "통합과학1",
+  "unit": "Ⅲ. 시스템과 상호작용",
+  "unit_id": "isci1-3",
+  "version": 1,
+  "media": [],
+  "id": "isci1-inertia",
+  "concept_key": "concept:inertia",
+  "registry_status": "new",
+  "term": "관성",
+  "notation": {
+    "hanja": "慣性",
+    "hanja_gloss": "慣 익숙할 관 · 性 성품 성",
+    "english": "inertia"
+  },
+  "definition": "상호작용하는 힘이 없을 때 물체가 현재의 운동 상태를 그대로 이어 가는 성질. 정지한 것은 정지하고 움직이는 것은 계속 움직인다.",
+  "relations": [
+    {
+      "id": "rel-in-noforce",
+      "text": "물체에 작용하는 힘이 없으면 물체는 운동 상태를 바꾸지 않고 등속 직선 운동을 한다.",
+      "form": {
+        "condition": "물체에 작용하는 힘이 없을 때",
+        "type": "conditional",
+        "scope": "힘이 작용하지 않는 물체에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집어 놓은 '등속 직선 운동이면 힘이 없다'도 참이어서 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-in-force",
+      "text": "운동하는 물체에 힘이 작용하면 운동 상태가 달라져 가속도 운동을 한다.",
+      "form": {
+        "condition": "물체에 작용하는 힘이 있을 때",
+        "type": "causal",
+        "scope": "힘을 받는 물체에 한함"
+      },
+      "invertible": false,
+      "invertible_reason": "힘에서 가속도 운동으로 가는 인과라 방향을 뒤집는 꼴이 아니다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-in-vehicle",
+      "text": "차가 갑자기 멈추면 탄 사람의 몸은 계속 나아가려는 관성 때문에 앞으로 쏠린다.",
+      "form": {
+        "condition": "차의 속도가 갑자기 줄어들 때",
+        "type": "causal",
+        "scope": "탈것 안에서 겪는 관성 현상에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "몸이 유지하려는 운동 방향이 앞이므로 쏠리는 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "10통과1-03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "차가 갑자기 멈추면 탄 사람의 몸은 관성 때문에 뒤로 쏠린다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "움직이는 물체는 계속 힘을 받고 있어야만 움직일 수 있다",
+      "why_wrong": "힘이 작용하지 않으면 물체는 운동 상태를 그대로 유지해 등속 직선 운동을 이어 간다.",
+      "source": "llm",
+      "linked_relation": "rel-in-noforce"
+    },
+    {
+      "text": "차가 급정거하면 뒤에서 무엇이 밀기 때문에 몸이 앞으로 쏠린다",
+      "why_wrong": "새로운 힘이 미는 것이 아니라 몸이 앞으로 나아가던 운동 상태를 유지하려 하기 때문이다.",
+      "source": "llm",
+      "linked_relation": "rel-in-vehicle"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "isci1-collision-safety-device",
+      "note": "안전띠·안전 바는 관성이 근거다"
+    },
+    {
+      "type": "related",
+      "target": "isci1-momentum"
+    },
+    {
+      "type": "related",
+      "target": "isci1-mechanical-system"
+    }
+  ],
+  "curriculum": [
+    "10통과1-03-04"
+  ],
+  "topic_id": "isci1-3-2-02",
+  "pages": [
+    128,
+    132
+  ],
+  "difficulty": 2,
+  "role": "core"
+}
