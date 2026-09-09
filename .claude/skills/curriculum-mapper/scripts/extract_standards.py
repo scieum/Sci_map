@@ -113,7 +113,10 @@ def norm_for_compare(s: str) -> str:
     # '교육과정' 이 문장에 남는다.
     for label in sorted(ROW_LABELS, key=len, reverse=True):
         s = s.replace(label, "")
-    return re.sub(r"[\s·ㆍ‧・･·]", "", s)
+    # 쉼표와 가운뎃점도 같은 부류다 — 총론 '물질의 물리적, 화학적 성질' 과
+    # 각론 '물질의 물리적·화학적 성질'(12화학02-04). 2026-09-09 교사가 두 판본을
+    # 같은 문장으로 확정했다. 그 판단을 규칙으로 옮긴 것이지 스크립트가 정한 것이 아니다.
+    return re.sub(r"[\s·ㆍ‧・･·,]", "", s)
 
 
 def harvest(doc, first: int, last: int) -> dict[str, tuple[int, str]]:
