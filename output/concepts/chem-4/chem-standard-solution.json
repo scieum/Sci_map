@@ -1,0 +1,114 @@
+{
+  "id": "chem-standard-solution",
+  "concept_key": "concept:standard-solution",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "표준 용액",
+  "notation": {
+    "hanja": "標準溶液",
+    "hanja_gloss": "標 표할 표 · 準 준할 준 · 溶 녹을 용 · 液 진 액",
+    "english": "standard solution"
+  },
+  "definition": "농도를 정확히 알고 만들어 둔 용액. 농도를 모르는 용액을 분석할 때 계산의 기준으로 삼는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-std-needed-for-analysis",
+      "text": "농도를 모르는 용액을 알아내려면 농도를 정확히 아는 용액이 먼저 마련되어 있어야 한다",
+      "form": {
+        "condition": "미지 농도의 용액을 분석하려 할 때",
+        "type": "conditional",
+        "scope": "양적 관계로 농도를 구하는 분석"
+      },
+      "invertible": false,
+      "invertible_reason": "전제 조건을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-std-mass-from-target",
+      "text": "목표한 몰농도와 부피를 곱해 용질의 양(mol)을 먼저 구하고, 거기에 몰질량을 곱해 달아 낼 질량을 정한다",
+      "form": {
+        "condition": "목표 몰농도와 목표 부피가 정해져 있음",
+        "type": "conditional",
+        "scope": "고체 용질을 녹여 만드는 표준 용액"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 순서를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-std-flask-mark",
+      "text": "용매를 따로 재지 않고 부피 플라스크의 표시선까지 채우는 것은 몰농도의 기준이 용액 전체의 부피이기 때문이다",
+      "form": {
+        "condition": "부피 플라스크로 표준 용액을 만들 때",
+        "type": "causal",
+        "scope": "몰농도로 나타내는 용액",
+        "antecedent": {
+          "quantity": "몰농도가 기준으로 삼는 부피",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "부피를 맞추는 방법",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그렇게 하는 까닭을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "부피 플라스크에 물을 표시선까지 먼저 채운 다음 용질을 넣으면 표준 용액이 된다",
+      "why_wrong": "용질이 녹으면 부피가 달라져 목표한 몰농도를 벗어난다. 용질을 녹인 뒤에 표시선까지 채워야 한다.",
+      "linked_relation": "rel-std-flask-mark",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "표준 용액은 농도를 대략만 알아도 쓸 수 있다",
+      "why_wrong": "이 용액의 농도가 계산의 기준이므로, 값이 어긋나면 구한 미지 농도도 그만큼 어긋난다.",
+      "linked_relation": "rel-std-needed-for-analysis",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-dilution-of-solution",
+      "note": "진한 표준 용액을 묽혀 다른 농도의 표준 용액을 만든다"
+    },
+    {
+      "type": "next",
+      "target": "chem-acid-base-titration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-02"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-02",
+  "pages": [
+    160
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

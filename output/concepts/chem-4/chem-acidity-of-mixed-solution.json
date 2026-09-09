@@ -1,0 +1,126 @@
+{
+  "id": "chem-acidity-of-mixed-solution",
+  "concept_key": "concept:acidity-of-mixed-solution",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "혼합 용액의 액성",
+  "notation": {
+    "hanja": "混合溶液의 液性",
+    "hanja_gloss": "混 섞을 혼 · 合 합할 합 · 溶 녹을 용 · 液 진 액 · 液 진 액 · 性 성품 성",
+    "english": "acidity of a mixed solution"
+  },
+  "definition": "산 수용액과 염기 수용액을 섞은 뒤 그 용액이 띠는 액성. 섞기 전 두 이온의 양(mol)을 견주어 판단한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mixed-equal-mol-neutral",
+      "text": "섞은 산의 수소 이온과 염기의 수산화 이온이 양(mol)으로 같으면 남는 것이 없어 중성이 된다",
+      "form": {
+        "condition": "산 수용액과 염기 수용액을 섞음",
+        "type": "conditional",
+        "scope": "수용액에서 일어나는 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "중성이 되는 조건을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mixed-leftover-decides",
+      "text": "섞은 뒤 수소 이온이 남으면 산성, 수산화 이온이 남으면 염기성을 띤다",
+      "form": {
+        "condition": "두 이온의 양(mol)이 서로 다름",
+        "type": "causal",
+        "scope": "산과 염기를 섞은 수용액",
+        "antecedent": {
+          "quantity": "남은 이온의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "혼합 용액의 액성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "남은 이온과 액성의 짝을 맞바꾸면 반드시 거짓이 된다",
+      "inverted_text": "섞은 뒤 수소 이온이 남으면 염기성, 수산화 이온이 남으면 산성을 띤다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mixed-spectator-count-kept",
+      "text": "물을 만들지 않는 이온은 섞기 앞뒤로 개수가 달라지지 않아 그대로 세면 된다",
+      "form": {
+        "condition": "산 수용액과 염기 수용액을 섞음",
+        "type": "conditional",
+        "scope": "물에 잘 녹는 염이 생기는 경우",
+        "antecedent": {
+          "quantity": "섞은 뒤 흐른 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응하지 않는 이온의 개수",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "개수가 유지된다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산과 염기를 같은 부피씩 섞으면 언제나 중성이 된다",
+      "why_wrong": "몰농도와 1 mol 이 내놓는 이온 수까지 곱해야 양(mol)이 나온다. 부피만 같다고 두 양이 같아지지 않는다.",
+      "linked_relation": "rel-mixed-equal-mol-neutral",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "혼합 용액이 산성이면 그 안에 수산화 이온은 하나도 없다",
+      "why_wrong": "남은 수소 이온이 더 많을 뿐이고, 물의 자동 이온화 때문에 수산화 이온도 아주 조금 들어 있다.",
+      "linked_relation": "rel-mixed-leftover-decides",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-neutralization-reaction"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-acidity-of-aqueous-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-stoichiometry-of-neutralization"
+    },
+    {
+      "type": "related",
+      "target": "chem-salt"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-03"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-01",
+  "pages": [
+    170
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

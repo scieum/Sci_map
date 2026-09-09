@@ -1,0 +1,139 @@
+{
+  "id": "chem-effect-of-temperature-on-equilibrium",
+  "concept_key": "concept:effect-of-temperature-on-equilibrium",
+  "registry_status": "new",
+  "term": "온도 변화와 평형 이동",
+  "notation": {
+    "hanja": "溫度 變化 平衡 移動",
+    "hanja_note": "표제어의 '와'는 우리말 조사라 대응하는 한자가 없다. 나머지 여덟 글자만 한자어다.",
+    "hanja_gloss": "溫 따뜻할 온 · 度 법도 도 · 變 변할 변 · 化 될 화 · 平 평평할 평 · 衡 저울대 형 · 移 옮길 이 · 動 움직일 동",
+    "english": "effect of temperature on equilibrium"
+  },
+  "definition": "온도를 올리거나 내리면 평형 상수 값 자체가 달라지면서, 열을 빨아들이거나 내놓는 쪽으로 평형이 옮겨 가는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tmp-up",
+      "text": "온도를 올리면 열을 빨아들이는 쪽 반응이 우세해져 그쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "농도와 부피는 그대로 두고 온도만 올릴 때",
+        "type": "causal",
+        "scope": "열의 출입이 뚜렷한 가역 반응",
+        "antecedent": {
+          "quantity": "계의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "흡열 쪽 물질의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "열을 내놓는 쪽으로 가면 온도가 더 올라가 변화를 키우게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도를 올리면 열을 내놓는 쪽 반응이 우세해져 그쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-tmp-down",
+      "text": "온도를 내리면 열을 내놓는 쪽 반응이 우세해져 그쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "농도와 부피는 그대로 두고 온도만 내릴 때",
+        "type": "causal",
+        "scope": "열의 출입이 뚜렷한 가역 반응",
+        "antecedent": {
+          "quantity": "계의 온도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "발열 쪽 물질의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "열을 빨아들이는 쪽으로 가면 온도가 더 내려가 변화를 키우게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도를 내리면 열을 빨아들이는 쪽 반응이 우세해져 그쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-tmp-k-changes",
+      "text": "농도나 압력을 바꿀 때와 달리, 온도를 바꾸면 평형 상수 값 자체가 달라진다.",
+      "form": {
+        "condition": "같은 반응을 서로 다른 온도에서 견줄 때",
+        "type": "conditional",
+        "scope": "온도만 달리한 두 평형 상태의 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "온도만이 평형 상수를 정하는 조건이므로 그대로라는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02",
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도나 압력을 바꿀 때와 마찬가지로, 온도를 바꾸어도 평형 상수 값은 그대로다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온도를 바꾸어도 평형 상수는 변하지 않는다",
+      "why_wrong": "평형 상수를 정하는 조건이 바로 온도다. 농도나 압력과 달리 온도를 바꾸면 K 값 자체가 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tmp-k-changes"
+    },
+    {
+      "text": "온도를 올리면 반응이 빨라지므로 언제나 정반응 쪽으로 평형이 이동한다",
+      "why_wrong": "온도를 올리면 두 방향 모두 빨라진다. 평형이 옮겨 가는 쪽은 열을 빨아들이는 쪽이고, 그 쪽이 역반응일 수도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tmp-up"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-equilibrium-shift"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-exothermic-reaction"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-endothermic-reaction"
+    },
+    {
+      "type": "next",
+      "target": "chem-le-chatelier-principle",
+      "note": "세 경우를 묶은 일반화로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-constant",
+      "note": "K가 달라지는 유일한 경우다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    130,
+    131,
+    133,
+    139
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

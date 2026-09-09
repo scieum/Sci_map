@@ -1,0 +1,132 @@
+{
+  "id": "chem-use-of-neutralization-reaction",
+  "concept_key": "concept:use-of-neutralization-reaction",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "중화 반응의 이용",
+  "notation": {
+    "hanja": "中和反應의 利用",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 反 돌이킬 반 · 應 응할 응 · 利 이로울 리 · 用 쓸 용",
+    "english": "applications of neutralization"
+  },
+  "definition": "지나친 산성이나 염기성 때문에 생긴 문제를 반대 성질의 물질로 누그러뜨리는 일. 요리·의약·토양 관리에 두루 쓰인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-use-opposite-property",
+      "text": "산성 때문에 생긴 문제는 염기성 물질로, 염기성 때문에 생긴 문제는 산성 물질로 다스린다",
+      "form": {
+        "condition": "액성 때문에 생긴 문제를 없애려 할 때",
+        "type": "conditional",
+        "scope": "두 물질 사이에 중화 반응이 일어나는 조합",
+        "antecedent": {
+          "quantity": "문제를 일으킨 물질의 액성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "넣어 주는 물질의 액성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 액성끼리는 중화가 일어나지 않으므로 짝을 맞바꾸면 반드시 거짓이 된다",
+      "inverted_text": "산성 때문에 생긴 문제는 산성 물질로, 염기성 때문에 생긴 문제는 염기성 물질로 다스린다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-use-ph-moves-to-seven",
+      "text": "중화가 일어난 만큼 용액의 pH 는 7 쪽으로 옮겨 간다",
+      "form": {
+        "condition": "산성이나 염기성 용액에 반대 성질의 물질을 넣음",
+        "type": "causal",
+        "scope": "중화가 완결되기 전까지",
+        "antecedent": {
+          "quantity": "중화된 이온의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "pH 와 7 사이의 차이",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "중화가 액성을 누그러뜨리므로 7 에서 멀어진다고 하면 반드시 거짓이다",
+      "inverted_text": "중화가 일어난 만큼 용액의 pH 는 7 에서 오히려 더 멀어진다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-use-acidified-soil",
+      "text": "산성화된 토양에 염기성인 석회 가루를 뿌리면 산성이 누그러져 생물이 살 만한 조건으로 돌아간다",
+      "form": {
+        "condition": "토양이 산성으로 기울어 있음",
+        "type": "causal",
+        "scope": "산성화된 토양",
+        "antecedent": {
+          "quantity": "뿌린 석회 가루의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "토양의 산성 정도",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임과 그 결과를 말한 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신 김치에 탄산수소 소듐을 넣으면 단맛이 더해져 신맛이 덜해진다",
+      "why_wrong": "맛을 더한 것이 아니라 염기성 물질이 산성 물질을 중화해 신맛의 원인 자체가 줄어든 것이다.",
+      "linked_relation": "rel-use-opposite-property",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "중화 반응을 이용하면 용액의 pH 가 언제나 정확히 7 이 된다",
+      "why_wrong": "넣어 준 양이 모자라거나 넘치면 7 에 가까워질 뿐이다. 두 이온의 양(mol)이 같아질 때에만 중성이 된다.",
+      "linked_relation": "rel-use-ph-moves-to-seven",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-neutralization-reaction"
+    },
+    {
+      "type": "related",
+      "target": "chem-ph"
+    },
+    {
+      "type": "related",
+      "target": "chem-acidity-of-mixed-solution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-03"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-01",
+  "pages": [
+    170,
+    171
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

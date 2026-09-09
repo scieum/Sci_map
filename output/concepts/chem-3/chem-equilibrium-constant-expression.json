@@ -1,0 +1,132 @@
+{
+  "id": "chem-equilibrium-constant-expression",
+  "concept_key": "concept:equilibrium-constant-expression",
+  "registry_status": "new",
+  "term": "평형 상수식",
+  "notation": {
+    "hanja": "平衡常數式",
+    "hanja_gloss": "平 평평할 평 · 衡 저울대 형 · 常 항상 상 · 數 셈 수 · 式 법 식",
+    "english": "equilibrium constant expression",
+    "symbol_display": "K = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ",
+    "symbol_plain": "K = (C^c)(D^d) / ((A^a)(B^b))"
+  },
+  "definition": "평형 상수를 각 물질의 평형 농도로 적어 놓은 식. 생성물 쪽 농도 곱이 분자에, 반응물 쪽 농도 곱이 분모에 온다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-kex-position",
+      "text": "평형 상수식에서 분자 자리에는 생성물의 농도 곱이, 분모 자리에는 반응물의 농도 곱이 온다.",
+      "form": {
+        "condition": "화학 반응식의 왼쪽을 반응물, 오른쪽을 생성물로 적었을 때",
+        "type": "conditional",
+        "scope": "평형 상수를 농도로 나타낸 식"
+      },
+      "invertible": true,
+      "invertible_reason": "위아래를 바꾸면 그 반응의 역반응에 대한 값이 되어 같은 K가 될 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형 상수식에서 분자 자리에는 반응물의 농도 곱이, 분모 자리에는 생성물의 농도 곱이 온다."
+    },
+    {
+      "id": "rel-kex-pure-phase",
+      "text": "순수한 고체나 용매로 쓰인 액체는 농도가 상수와 다름없어 평형 상수식에 적지 않는다.",
+      "form": {
+        "condition": "반응에 순수한 고체나 액체가 함께 들어 있을 때",
+        "type": "conditional",
+        "scope": "고체·액체가 함께 있는 가역 반응의 평형 상수식"
+      },
+      "invertible": true,
+      "invertible_reason": "이들을 농도로 적으면 온도가 같은데도 값이 달라져 상수가 되지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순수한 고체나 용매로 쓰인 액체도 평형 상수식에 농도로 적는다."
+    },
+    {
+      "id": "rel-kex-exponent",
+      "text": "각 농도의 지수 자리에는 그 물질의 화학 반응식 계수를 그대로 올린다.",
+      "form": {
+        "condition": "평형 상수식을 세울 때",
+        "type": "conditional",
+        "scope": "계수가 1이 아닌 물질이 들어 있는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "계수를 무시하고 모두 1로 두면 같은 자료에서도 값이 일정해지지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "각 농도의 지수 자리에는 계수와 상관없이 언제나 1을 올린다."
+    },
+    {
+      "id": "rel-kex-molarity",
+      "text": "이 식에는 물질의 양(mol)이 아니라 부피로 나눈 몰농도를 넣어야 한다.",
+      "form": {
+        "condition": "용기의 부피가 1 L가 아닐 때",
+        "type": "conditional",
+        "scope": "농도로 나타낸 평형 상수식의 계산"
+      },
+      "invertible": true,
+      "invertible_reason": "부피로 나누지 않으면 같은 평형인데도 용기 크기에 따라 값이 달라지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 식에는 몰농도가 아니라 물질의 양(mol)을 그대로 넣어야 한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평형 상수식에는 반응에 참여한 모든 물질을 빠짐없이 적어야 한다",
+      "why_wrong": "순수한 고체와 용매로 쓰인 액체는 빼고 적는다. 이들의 농도는 양이 달라져도 그대로여서 상수에 흡수되기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-kex-pure-phase"
+    },
+    {
+      "text": "평형 상수식에는 평형에서의 몰 수를 그대로 넣으면 된다",
+      "why_wrong": "넣어야 하는 것은 몰농도다. 용기의 부피가 1 L가 아니면 몰 수를 부피로 나눈 뒤에 대입해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-kex-molarity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-equilibrium-constant"
+    },
+    {
+      "type": "next",
+      "target": "chem-reaction-quotient",
+      "note": "같은 꼴의 식에 평형이 아닌 농도를 넣은 것이 Q다"
+    },
+    {
+      "type": "related",
+      "target": "chem-law-of-chemical-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-concentration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-02"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-02",
+  "pages": [
+    115,
+    127
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

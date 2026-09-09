@@ -1,0 +1,121 @@
+{
+  "id": "chem-neutralization-point",
+  "concept_key": "concept:neutralization-point",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "중화점",
+  "notation": {
+    "hanja": "中和點",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 點 점 점",
+    "english": "neutralization point"
+  },
+  "definition": "적정하는 동안 산이 내놓은 수소 이온과 염기가 내놓은 수산화 이온의 양(mol)이 꼭 같아지는 지점.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-np-equal-mol",
+      "text": "두 이온의 양(mol)이 같아져 어느 쪽도 남지 않게 되는 순간을 중화점이라고 부른다",
+      "form": {
+        "condition": "한쪽 용액에 다른 쪽을 조금씩 더해 갈 때",
+        "type": "classification",
+        "scope": "중화 반응이 완결되는 지점"
+      },
+      "invertible": false,
+      "invertible_reason": "지점을 정의하는 문장이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-np-gives-unknown-conc",
+      "text": "중화점까지 넣어 준 표준 용액의 부피를 알면 양적 관계식에서 시료의 몰농도가 나온다",
+      "form": {
+        "condition": "중화점을 정확히 잡았을 때",
+        "type": "causal",
+        "scope": "완전히 중화되는 산 염기 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 경로를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-np-one-drop-sensitivity",
+      "text": "중화점 가까이에서는 남은 이온이 매우 적어 한 방울만 더해도 그 지점을 지나쳐 버린다",
+      "form": {
+        "condition": "적정이 중화점 부근까지 진행됨",
+        "type": "inverse",
+        "scope": "중화점 부근 구간",
+        "antecedent": {
+          "quantity": "아직 반응하지 않고 남은 이온의 양",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "한 방울이 일으키는 변화",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "남은 이온이 적을수록 한 방울의 몫이 커지므로 변화가 없다고 하면 반드시 거짓이다",
+      "inverted_text": "중화점 가까이에서는 남은 이온이 매우 적어 한 방울을 더해도 거의 아무 변화가 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중화점에서는 넣어 준 산과 염기의 부피가 서로 같다",
+      "why_wrong": "같아지는 것은 부피가 아니라 두 이온의 양(mol)이다. 몰농도나 내놓는 이온 수가 다르면 부피도 다르다.",
+      "linked_relation": "rel-np-equal-mol",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "중화점을 지나 표준 용액을 더 넣어도 용액의 액성은 그대로다",
+      "why_wrong": "중화점을 지나면 넣어 준 쪽의 이온이 남기 시작해 액성이 그쪽으로 기운다.",
+      "linked_relation": "rel-np-one-drop-sensitivity",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-acid-base-titration",
+      "note": "이 교과서는 중화점을 적정 과정 안에서 정의한다"
+    },
+    {
+      "type": "next",
+      "target": "chem-end-point"
+    },
+    {
+      "type": "related",
+      "target": "chem-stoichiometry-of-neutralization"
+    },
+    {
+      "type": "same",
+      "target": "reac-neutralization-point",
+      "grade_from": "화학 반응의 세계 Ⅰ. 산 염기 평형"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-02",
+  "pages": [
+    178,
+    179
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

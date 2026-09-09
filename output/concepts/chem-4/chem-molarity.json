@@ -1,0 +1,162 @@
+{
+  "id": "chem-molarity",
+  "concept_key": "concept:molarity",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "몰농도",
+  "aliases": [
+    "몰 농도"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰'은 영어 mole 의 음차어라 한자 표기가 없다. 뒤의 '농도'만 濃度에 해당해 낱말 전체에 대응하는 한자어가 없다.",
+    "english": "molarity",
+    "symbol_display": "M = 용질의 양(mol) ÷ 용액의 부피(L)",
+    "symbol_plain": "M = n(mol) / V(L)"
+  },
+  "definition": "녹아 있는 용질의 입자 수를 용액의 부피로 견주어 나타낸 농도. 용질의 양(mol)을 용액 부피(L)로 나눈 값이며 단위는 M 이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-molarity-quotient",
+      "text": "부피가 같은 두 용액이라면 녹아 있는 용질의 양(mol)이 많은 쪽의 몰농도가 크다",
+      "form": {
+        "condition": "두 용액의 부피가 같음",
+        "type": "direct",
+        "scope": "용매와 용질을 가려낼 수 있는 용액",
+        "antecedent": {
+          "quantity": "녹아 있는 용질의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몰농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "나눗셈에서 분자가 커지면 몫도 커지므로 반대로 말하면 반드시 거짓이다",
+      "inverted_text": "부피가 같은 두 용액이라면 녹아 있는 용질의 양(mol)이 많은 쪽의 몰농도가 오히려 작다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-molarity-amount-needs-volume",
+      "text": "몰농도가 같은 두 용액이라도 부피가 큰 쪽에 용질 입자가 더 많이 들어 있다",
+      "form": {
+        "condition": "두 용액의 몰농도가 같음",
+        "type": "direct",
+        "scope": "같은 용질을 녹인 용액끼리 견줄 때",
+        "antecedent": {
+          "quantity": "용액의 부피",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "녹아 있는 용질의 양(mol)",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양(mol)이 몰농도와 부피의 곱이라 부피가 클수록 적다고 하면 반드시 거짓이다",
+      "inverted_text": "몰농도가 같은 두 용액이라면 부피가 큰 쪽에 오히려 용질 입자가 적게 들어 있다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-molarity-temperature",
+      "text": "온도가 오르면 용액의 부피가 늘어나므로 녹아 있는 용질의 양이 그대로여도 몰농도는 조금 작아진다",
+      "form": {
+        "condition": "용질과 용매의 양은 그대로 두고 온도만 올림",
+        "type": "inverse",
+        "scope": "온도가 오를 때 부피가 늘어나는 액체 용액",
+        "antecedent": {
+          "quantity": "용액의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몰농도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분모인 부피가 커지는데 몫이 커진다는 말은 반드시 거짓이다",
+      "inverted_text": "온도가 올라 용액의 부피가 늘어나도 몰농도는 오히려 커진다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-molarity-why-in-chemistry",
+      "text": "반응의 양적 관계는 입자 수로 따지므로 용액의 진하기도 입자 수를 담은 몰농도로 나타낸다",
+      "form": {
+        "condition": "용액에서 일어나는 반응의 양을 따질 때",
+        "type": "conditional",
+        "scope": "화학 반응의 양적 관계를 다루는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "이 농도를 쓰는 까닭을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몰농도는 용매 1 L 에 용질을 녹여 만든 농도다",
+      "why_wrong": "기준이 되는 것은 용매가 아니라 용액 전체의 부피 1 L 다. 용질이 녹으면 부피가 달라지므로 둘은 같지 않다.",
+      "linked_relation": "rel-molarity-quotient",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "몰농도가 같으면 두 용액에 녹아 있는 용질의 입자 수도 같다",
+      "why_wrong": "입자 수를 알려면 부피까지 곱해야 한다. 부피가 다르면 같은 몰농도라도 입자 수가 다르다.",
+      "linked_relation": "rel-molarity-amount-needs-volume",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-standard-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-dilution-of-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-stoichiometry-of-neutralization"
+    },
+    {
+      "type": "next",
+      "target": "chem-ionization-constant-of-water"
+    },
+    {
+      "type": "same",
+      "target": "mate-molarity",
+      "grade_from": "물질과 에너지 Ⅱ. 용액의 성질"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-02"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-02",
+  "pages": [
+    158,
+    159
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

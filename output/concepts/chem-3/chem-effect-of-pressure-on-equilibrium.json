@@ -1,0 +1,133 @@
+{
+  "id": "chem-effect-of-pressure-on-equilibrium",
+  "concept_key": "concept:effect-of-pressure-on-equilibrium",
+  "registry_status": "new",
+  "term": "압력 변화와 평형 이동",
+  "notation": {
+    "hanja": "壓力 變化 平衡 移動",
+    "hanja_note": "표제어의 '와'는 우리말 조사라 대응하는 한자가 없다. 나머지 여덟 글자만 한자어다.",
+    "hanja_gloss": "壓 누를 압 · 力 힘 력 · 變 변할 변 · 化 될 화 · 平 평평할 평 · 衡 저울대 형 · 移 옮길 이 · 動 움직일 동",
+    "english": "effect of pressure on equilibrium"
+  },
+  "definition": "기체가 든 계의 압력을 바꾸면 부피가 달라지면서 각 기체의 몰농도가 함께 바뀌고, 그 탓에 평형이 한쪽으로 옮겨 가는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-prs-increase",
+      "text": "압력을 높이면 기체 분자 수가 줄어드는 쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "온도를 그대로 두고 용기의 부피를 줄여 압력을 높일 때",
+        "type": "causal",
+        "scope": "반응식 양쪽의 기체 계수 합이 서로 다른 기체 반응",
+        "antecedent": {
+          "quantity": "계에 가한 압력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체 분자 수가 적은 쪽 물질의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분자 수가 늘어나는 쪽으로 가면 압력이 더 커져 변화를 키우게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "압력을 높이면 기체 분자 수가 늘어나는 쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-prs-decrease",
+      "text": "압력을 낮추면 기체 분자 수가 늘어나는 쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "온도를 그대로 두고 용기의 부피를 늘려 압력을 낮출 때",
+        "type": "causal",
+        "scope": "반응식 양쪽의 기체 계수 합이 서로 다른 기체 반응",
+        "antecedent": {
+          "quantity": "계에 가한 압력",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "기체 분자 수가 많은 쪽 물질의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분자 수가 줄어드는 쪽으로 가면 압력이 더 낮아져 변화를 키우게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "압력을 낮추면 기체 분자 수가 줄어드는 쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-prs-equal-coeff",
+      "text": "반응식 양쪽의 기체 계수 합이 같으면 압력을 바꾸어도 평형은 옮겨 가지 않는다.",
+      "form": {
+        "condition": "온도를 그대로 두고 압력만 바꿀 때",
+        "type": "conditional",
+        "scope": "반응물과 생성물의 기체 계수 합이 같은 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "계수 합이 같으면 분자와 분모가 같은 배수로 바뀌어 Q가 그대로이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응식 양쪽의 기체 계수 합이 같아도 압력을 높이면 정반응 쪽으로 평형이 옮겨 간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "압력을 높이면 어떤 반응이든 정반응 쪽으로 평형이 이동한다",
+      "why_wrong": "이동하는 쪽은 기체 분자 수가 적은 쪽이다. 그 쪽이 반응물이면 오히려 역반응 쪽으로 옮겨 간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prs-increase"
+    },
+    {
+      "text": "압력을 바꾸면 평형 상수도 함께 바뀐다",
+      "why_wrong": "온도가 그대로면 평형 상수는 그대로다. 압력이 바꾸는 것은 각 기체의 농도이고, 그 결과 반응 지수만 잠시 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prs-equal-coeff"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-equilibrium-shift"
+    },
+    {
+      "type": "next",
+      "target": "chem-le-chatelier-principle",
+      "note": "세 경우를 묶은 일반화로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "chem-reaction-quotient"
+    },
+    {
+      "type": "related",
+      "target": "chem-effect-of-temperature-on-equilibrium"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    128,
+    129,
+    133,
+    139
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

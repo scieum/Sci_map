@@ -1,0 +1,110 @@
+{
+  "id": "chem-irreversible-reaction",
+  "concept_key": "concept:irreversible-reaction",
+  "registry_status": "new",
+  "term": "비가역 반응",
+  "notation": {
+    "hanja": "非可逆反應",
+    "hanja_gloss": "非 아닐 비 · 可 옳을 가 · 逆 거스릴 역 · 反 돌이킬 반 · 應 응할 응",
+    "english": "irreversible reaction"
+  },
+  "definition": "역반응이 사실상 일어나지 않아 한 방향으로만 끝까지 나아가는 화학 반응. 메테인의 연소나 중화가 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-irv-oneway",
+      "text": "생성물을 다시 반응시켜도 처음 반응물이 거의 만들어지지 않는 반응을 비가역 반응으로 가른다.",
+      "form": {
+        "condition": "생성물만 모아 같은 조건에 두고 관찰할 때",
+        "type": "classification",
+        "scope": "역반응이 거의 관찰되지 않는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "생성물에서 반응물이 쉽게 되돌아 나오면 그것이 곧 가역 반응이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생성물을 다시 반응시켰을 때 처음 반응물이 쉽게 만들어지는 반응을 비가역 반응으로 가른다."
+    },
+    {
+      "id": "rel-irv-no-equilibrium",
+      "text": "비가역 반응은 되돌아오는 쪽이 없으므로 두 방향의 빠르기가 같아지는 동적 평형에 이르지 못한다.",
+      "form": {
+        "condition": "반응물이 다 쓰일 때까지 반응을 지켜볼 때",
+        "type": "causal",
+        "scope": "역반응이 거의 일어나지 않는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "되돌아오는 반응이 없으면 맞물릴 상대가 없어 평형이 성립할 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비가역 반응도 충분한 시간이 지나면 동적 평형에 이른다."
+    },
+    {
+      "id": "rel-irv-examples",
+      "text": "메테인이 산소와 타는 반응이나 산과 염기의 중화는 되돌아가는 쪽이 거의 없어 비가역으로 다룬다.",
+      "form": {
+        "condition": "보통의 실험실 조건에서 반응을 다룰 때",
+        "type": "classification",
+        "scope": "연소·중화처럼 한쪽으로 크게 치우친 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "보기를 들어 보인 명제라 방향을 뒤집어 반드시 거짓이 되는 문장을 만들 수 없다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비가역 반응은 역반응이 이론적으로도 절대 불가능한 반응이다",
+      "why_wrong": "역반응이 아주 조금이라도 일어날 수는 있다. 다만 그 정도가 무시할 만큼 작아서 한 방향 화살표로 적는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-irv-oneway"
+    },
+    {
+      "text": "비가역 반응도 반응물이 다 없어지면 그것이 평형 상태다",
+      "why_wrong": "반응물이 다 소모되어 변화가 멈춘 것은 반응이 끝난 것이지 평형이 아니다. 평형은 두 방향이 계속 일어나는 상태다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-irv-no-equilibrium"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-reversible-reaction"
+    },
+    {
+      "type": "related",
+      "target": "chem-dynamic-equilibrium",
+      "note": "평형에 이르지 못한다는 대비로 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "chem-exothermic-reaction",
+      "note": "연소가 대표 보기다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-01",
+  "pages": [
+    107,
+    120
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

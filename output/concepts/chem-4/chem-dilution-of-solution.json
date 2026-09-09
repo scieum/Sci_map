@@ -1,0 +1,133 @@
+{
+  "id": "chem-dilution-of-solution",
+  "concept_key": "concept:dilution",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "용액의 희석",
+  "aliases": [
+    "희석"
+  ],
+  "notation": {
+    "hanja": "溶液의 稀釋",
+    "hanja_gloss": "溶 녹을 용 · 液 진 액 · 稀 드물 희 · 釋 풀 석",
+    "english": "dilution of a solution",
+    "symbol_display": "M₁V₁ = M₂V₂",
+    "symbol_plain": "M1V1 = M2V2"
+  },
+  "definition": "진한 용액에 용매를 더해 몰농도를 낮추는 조작. 녹아 있는 용질의 양(mol)은 그대로 둔 채 부피만 늘린다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dilution-solute-conserved",
+      "text": "물을 더해도 이미 녹아 있던 용질의 양(mol)은 늘지도 줄지도 않는다",
+      "form": {
+        "condition": "용매만 더하고 용질을 더하지 않음",
+        "type": "conditional",
+        "scope": "용질이 따로 반응하지 않는 희석",
+        "antecedent": {
+          "quantity": "더해 준 용매의 부피",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용질의 양(mol)",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "양이 그대로라는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dilution-product-equal",
+      "text": "묽히기 전의 몰농도와 부피를 곱한 값은 묽힌 뒤의 몰농도와 부피를 곱한 값과 같다",
+      "form": {
+        "condition": "희석 앞뒤로 용질의 양(mol)이 보존됨",
+        "type": "conditional",
+        "scope": "용매만 더해 묽히는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "두 곱이 같다는 서술이라 자리를 바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dilution-volume-inverse",
+      "text": "전체 부피를 몇 배로 늘리면 몰농도는 그 배수의 역수만큼 작아진다",
+      "form": {
+        "condition": "용질을 더하지 않고 부피만 늘림",
+        "type": "inverse",
+        "scope": "용매만 더해 묽히는 조작",
+        "antecedent": {
+          "quantity": "희석한 뒤 용액의 부피",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "희석한 뒤의 몰농도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "곱이 일정하게 묶여 있어 부피와 농도가 함께 커진다고 하면 반드시 거짓이다",
+      "inverted_text": "전체 부피를 몇 배로 늘리면 몰농도도 그 배수만큼 함께 커진다",
+      "curriculum": [
+        "12화학04-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "용액을 물로 묽히면 녹아 있는 용질의 양(mol)도 함께 줄어든다",
+      "why_wrong": "줄어드는 것은 몰농도이지 용질의 양이 아니다. 물만 더했으므로 용질은 그대로 남아 있다.",
+      "linked_relation": "rel-dilution-solute-conserved",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "1 M 용액 100 mL 에 물 100 mL 를 더하면 0.1 M 이 된다",
+      "why_wrong": "전체 부피가 2 배가 되었으므로 몰농도는 10 분의 1 이 아니라 절반인 0.5 M 이다.",
+      "linked_relation": "rel-dilution-volume-inverse",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molarity"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-standard-solution"
+    },
+    {
+      "type": "related",
+      "target": "chem-acid-base-titration",
+      "note": "진한 시료를 정해진 배수로 묽힌 뒤 적정한다"
+    },
+    {
+      "type": "related",
+      "target": "chem-ph"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-02"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-02",
+  "pages": [
+    160,
+    161
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

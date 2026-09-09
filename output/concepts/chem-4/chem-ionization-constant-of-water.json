@@ -1,0 +1,166 @@
+{
+  "id": "chem-ionization-constant-of-water",
+  "concept_key": "concept:ionization-constant-of-water",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "물의 이온화 상수",
+  "aliases": [
+    "Kw"
+  ],
+  "notation": {
+    "hanja": "물의 이온化 常數",
+    "hanja_note": "'물'은 고유어, '이온'은 ion 의 음차어라 한자가 없다. 나머지 부분만 한자어에 해당한다.",
+    "hanja_gloss": "化 될 화 · 常 항상 상 · 數 셀 수",
+    "english": "ionization constant of water",
+    "symbol_display": "K_w = [H₃O⁺][OH⁻]",
+    "symbol_plain": "Kw"
+  },
+  "definition": "물이 자동 이온화해 평형을 이룰 때 두 이온의 몰농도를 곱해 얻는 값. 25 ℃ 에서는 1×10⁻¹⁴ 으로 정해져 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-kw-solute-independent",
+      "text": "온도만 그대로면 순수한 물이든 산이나 염기를 녹인 수용액이든 두 이온 몰농도의 곱은 같은 값을 지킨다",
+      "form": {
+        "condition": "온도가 일정하게 유지됨",
+        "type": "conditional",
+        "scope": "묽은 수용액",
+        "antecedent": {
+          "quantity": "녹인 용질의 종류와 양",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "두 이온 몰농도의 곱",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값이 유지된다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-kw-temperature-dependent",
+      "text": "이 상수를 바꾸는 것은 온도뿐이므로 값을 말할 때는 몇 도에서인지를 함께 밝혀야 한다",
+      "form": {
+        "condition": "서로 다른 온도의 물을 견줄 때",
+        "type": "causal",
+        "scope": "물과 묽은 수용액",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물의 이온화 상수",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값이 달라진다고만 했지 어느 쪽으로 가는지는 말하지 않아 뒤집을 방향이 없다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-kw-cross-calculation",
+      "text": "25 ℃ 에서 한쪽 이온의 몰농도를 알면 1×10⁻¹⁴ 을 그 값으로 나누어 다른 쪽 이온의 몰농도를 얻는다",
+      "form": {
+        "condition": "온도가 25 ℃ 이고 한쪽 이온의 몰농도를 알고 있음",
+        "type": "conditional",
+        "scope": "25 ℃ 의 묽은 수용액"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 절차를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-kw-seesaw",
+      "text": "한쪽 이온의 몰농도가 커지면 곱을 지키기 위해 다른 쪽 이온의 몰농도는 그만큼 작아진다",
+      "form": {
+        "condition": "온도가 일정하게 유지됨",
+        "type": "inverse",
+        "scope": "묽은 수용액",
+        "antecedent": {
+          "quantity": "하이드로늄 이온의 몰농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수산화 이온의 몰농도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "곱이 일정하게 묶여 있어 두 몰농도가 함께 커진다고 하면 반드시 거짓이다",
+      "inverted_text": "한쪽 이온의 몰농도가 커지면 다른 쪽 이온의 몰농도도 함께 커진다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산성 수용액에서는 물의 이온화 상수가 1×10⁻¹⁴ 보다 커진다",
+      "why_wrong": "이 상수를 바꾸는 것은 온도뿐이다. 25 ℃ 라면 액성과 관계없이 같은 값을 갖는다.",
+      "linked_relation": "rel-kw-solute-independent",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "수산화 이온의 몰농도가 0 인 수용액도 있다",
+      "why_wrong": "두 몰농도의 곱이 정해진 값으로 묶여 있으므로 아무리 작아져도 0 이 될 수 없다.",
+      "linked_relation": "rel-kw-seesaw",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-self-ionization-of-water"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molarity",
+      "note": "농도를 M 단위로 다룰 줄 알아야 곱을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "chem-acidity-of-aqueous-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-ph"
+    },
+    {
+      "type": "next",
+      "target": "chem-poh"
+    },
+    {
+      "type": "same",
+      "target": "reac-ionization-constant-of-water",
+      "grade_from": "화학 반응의 세계 Ⅰ. 산 염기 평형"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-01",
+  "pages": [
+    153,
+    154
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

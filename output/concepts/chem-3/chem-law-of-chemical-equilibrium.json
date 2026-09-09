@@ -1,0 +1,109 @@
+{
+  "id": "chem-law-of-chemical-equilibrium",
+  "concept_key": "concept:law-of-chemical-equilibrium",
+  "registry_status": "new",
+  "term": "화학 평형 법칙",
+  "notation": {
+    "hanja": "化學平衡法則",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 平 평평할 평 · 衡 저울대 형 · 法 법 법 · 則 법칙 칙",
+    "english": "law of chemical equilibrium"
+  },
+  "definition": "온도를 고정해 두면, 평형에서 생성물 쪽 농도 곱을 반응물 쪽 농도 곱으로 나눈 값이 늘 같은 값이 된다는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lce-constant-ratio",
+      "text": "온도를 고정하면 처음 조성을 어떻게 바꾸어도 평형 농도로 셈한 이 비의 값은 같게 나온다.",
+      "form": {
+        "condition": "같은 온도에서 초기 조성만 달리해 여러 번 되풀이할 때",
+        "type": "conditional",
+        "scope": "같은 온도에서 되풀이한 같은 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "이 비가 초기 조성에 따라 달라진다면 법칙이 말하는 규칙성 자체가 없어지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도를 고정해도 처음 조성을 바꾸면 평형 농도로 셈한 이 비의 값이 달라진다."
+    },
+    {
+      "id": "rel-lce-exponent",
+      "text": "이 비를 세울 때 각 물질의 농도에는 화학 반응식의 계수가 지수로 붙는다.",
+      "form": {
+        "condition": "평형 농도 사이의 관계를 식으로 세울 때",
+        "type": "conditional",
+        "scope": "계수가 1이 아닌 물질이 들어 있는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "계수는 지수 자리에 들어가므로 곱하는 수로 쓴다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 비를 세울 때 각 물질의 농도에는 화학 반응식의 계수가 곱해진다."
+    },
+    {
+      "id": "rel-lce-induction",
+      "text": "초기 조성을 달리한 여러 실험의 평형 농도를 견주면 오직 이 비만 같은 값으로 모인다.",
+      "form": {
+        "condition": "같은 온도에서 얻은 여러 실험 자료를 나란히 놓고 볼 때",
+        "type": "conditional",
+        "scope": "평형 농도 자료로 규칙성을 찾는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "실험 자료를 정리해 보인 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학 평형 법칙은 평형에 이르는 데 걸리는 시간도 일정하다는 법칙이다",
+      "why_wrong": "이 법칙이 말하는 것은 평형 농도 사이의 비뿐이다. 평형에 닿기까지 걸리는 시간은 반응 속도의 문제로 따로 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lce-constant-ratio"
+    },
+    {
+      "text": "평형 농도의 비가 일정하므로 각 물질의 평형 농도도 언제나 일정하다",
+      "why_wrong": "일정한 것은 비의 값이다. 처음 조성이 달라지면 각 물질의 평형 농도는 얼마든지 달라질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lce-constant-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-equilibrium-concentration"
+    },
+    {
+      "type": "next",
+      "target": "chem-equilibrium-constant",
+      "note": "법칙이 말하는 '일정한 값'이 평형 상수다"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-equilibrium"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-02"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-02",
+  "pages": [
+    114,
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

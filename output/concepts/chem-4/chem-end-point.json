@@ -1,0 +1,114 @@
+{
+  "id": "chem-end-point",
+  "concept_key": "concept:end-point",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "종말점",
+  "notation": {
+    "hanja": "終末點",
+    "hanja_gloss": "終 마칠 종 · 末 끝 말 · 點 점 점",
+    "english": "end point"
+  },
+  "definition": "적정을 실제로 멈추는 지점. 지시약의 색이 바뀌는 순간으로 정하며, 중화점에 가장 가까운 값으로 삼는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-end-defined-by-color",
+      "text": "지시약의 색이 바뀌는 것을 보고 적정을 멈춘 그 자리를 종말점이라고 한다",
+      "form": {
+        "condition": "지시약을 넣고 적정할 때",
+        "type": "classification",
+        "scope": "지시약으로 판단하는 중화 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "지점을 정의하는 문장이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-end-approximates-np",
+      "text": "실험으로 잡아내는 것은 중화점 자체가 아니라 그것에 가장 가까운 종말점이다",
+      "form": {
+        "condition": "지시약으로 중화점을 찾으려 할 때",
+        "type": "conditional",
+        "scope": "산 염기 지시약을 쓰는 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "두 지점의 관계를 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-end-drop-size",
+      "text": "한 번에 많은 양을 떨어뜨릴수록 종말점은 중화점에서 더 멀어진다",
+      "form": {
+        "condition": "중화점 부근에서 표준 용액을 더할 때",
+        "type": "direct",
+        "scope": "지시약으로 판단하는 적정",
+        "antecedent": {
+          "quantity": "한 번에 떨어뜨리는 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "종말점과 중화점의 어긋남",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "많이 부을수록 지나치는 폭이 커지므로 가까워진다고 하면 반드시 거짓이다",
+      "inverted_text": "한 번에 많은 양을 떨어뜨릴수록 종말점이 중화점에 더 가까워진다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "종말점과 중화점은 같은 지점을 가리키는 다른 이름이다",
+      "why_wrong": "종말점은 지시약의 색으로 사람이 판단한 지점이라 중화점에 가까울 뿐, 꼭 같지는 않다.",
+      "linked_relation": "rel-end-approximates-np",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "지시약의 색이 조금이라도 비치기 시작하면 그때가 종말점이다",
+      "why_wrong": "한 방울로 색이 뚜렷이 바뀌어 그대로 남는 순간을 종말점으로 잡는다. 저었을 때 사라지는 색은 아직 아니다.",
+      "linked_relation": "rel-end-defined-by-color",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-neutralization-point"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-acid-base-indicator"
+    },
+    {
+      "type": "related",
+      "target": "chem-acid-base-titration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-02",
+  "pages": [
+    179
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

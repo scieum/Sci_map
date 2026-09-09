@@ -1,0 +1,120 @@
+{
+  "id": "chem-le-chatelier-principle",
+  "concept_key": "concept:le-chatelier-principle",
+  "registry_status": "new",
+  "term": "르샤틀리에 원리",
+  "aliases": [
+    "평형 이동 법칙"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 Le Chatelier 의 음차 표기가 앞에 놓여 낱말 전체에 대응하는 한자어가 없다. 뒤의 '원리'만 原理에 해당한다.",
+    "english": "Le Chatelier's principle"
+  },
+  "definition": "평형에 있던 계에 바깥에서 변화를 주면 그 변화를 덜어 내는 쪽으로 평형이 옮겨 가 새 평형에 이른다는 일반 원리.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lcp-general",
+      "text": "농도든 압력이든 온도든 무엇을 바꾸어도 평형은 그 변화를 줄이는 쪽으로 옮겨 간다.",
+      "form": {
+        "condition": "평형에 있던 계에 바깥 조건 하나를 바꾸었을 때",
+        "type": "causal",
+        "scope": "농도·압력·온도 변화를 겪는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "변화를 키우는 쪽으로 옮겨 가면 계가 새 평형에 자리 잡을 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형은 바깥에서 준 변화를 키우는 쪽으로 옮겨 간다."
+    },
+    {
+      "id": "rel-lcp-covers",
+      "text": "농도·압력·온도 세 경우의 평형 이동은 모두 이 하나의 원리로 묶어 설명된다.",
+      "form": {
+        "condition": "세 조건의 이동 방향을 한자리에 정리할 때",
+        "type": "classification",
+        "scope": "고등학교 화학이 다루는 평형 이동"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lcp-not-cancel",
+      "text": "평형이 옮겨 가도 바깥에서 준 변화가 처음 상태로 온전히 되돌아가지는 않는다.",
+      "form": {
+        "condition": "새 평형에 이른 뒤 처음 평형과 견줄 때",
+        "type": "conditional",
+        "scope": "조건이 바뀐 뒤 새 평형에 이른 계"
+      },
+      "invertible": true,
+      "invertible_reason": "변화가 온전히 사라진다면 새 평형이 처음 평형과 같아져 이동했다고 할 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형이 옮겨 가면 바깥에서 준 변화가 온전히 사라져 처음 상태로 되돌아간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "르샤틀리에 원리대로 평형이 이동하면 넣어 준 물질의 농도가 넣기 전과 똑같아진다",
+      "why_wrong": "변화를 줄이는 쪽으로 갈 뿐 없애 주지는 않는다. 새 평형에서 그 물질의 농도는 넣기 전보다 여전히 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lcp-not-cancel"
+    },
+    {
+      "text": "르샤틀리에 원리로 설명되는 이동에서는 평형 상수가 언제나 그대로다",
+      "why_wrong": "농도와 압력을 바꾼 경우에는 그대로지만, 온도를 바꾼 경우에는 평형 상수 값 자체가 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lcp-covers"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-effect-of-concentration-on-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-effect-of-pressure-on-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-effect-of-temperature-on-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "chem-percent-yield",
+      "note": "수득률을 높이는 조건이 이 원리로 설명된다"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-shift"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    132,
+    133
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

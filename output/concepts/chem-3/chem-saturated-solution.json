@@ -1,0 +1,133 @@
+{
+  "id": "chem-saturated-solution",
+  "concept_key": "concept:saturated-solution",
+  "registry_status": "new",
+  "term": "포화 용액",
+  "aliases": [
+    "포화 수용액"
+  ],
+  "notation": {
+    "hanja": "飽和溶液",
+    "hanja_gloss": "飽 배부를 포 · 和 화할 화 · 溶 녹을 용 · 液 진 액",
+    "english": "saturated solution"
+  },
+  "definition": "용질이 녹아 들어가는 변화와 결정으로 빠져나오는 변화가 동적 평형을 이룬 용액. 겉보기에는 더 녹지 않는 것처럼 보인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sat-rate",
+      "text": "포화 용액에서는 용질이 녹아 들어가는 빠르기와 결정으로 빠져나오는 빠르기가 같다.",
+      "form": {
+        "condition": "온도가 일정하고 녹지 않은 고체가 함께 남아 있을 때",
+        "type": "conditional",
+        "scope": "고체 용질과 그 포화 용액이 맞닿아 있는 계",
+        "antecedent": {
+          "quantity": "용해 속도",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "석출 속도",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "한쪽이 더 빠르면 고체나 용액의 양이 계속 달라져 포화 상태일 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포화 용액에서는 용질이 녹아 들어가는 빠르기가 결정으로 빠져나오는 빠르기보다 크다."
+    },
+    {
+      "id": "rel-sat-conc",
+      "text": "온도가 같으면 포화 용액의 농도는 용액을 얼마나 많이 담았는지와 상관없이 같다.",
+      "form": {
+        "condition": "같은 용매와 용질로 만든 포화 용액을 같은 온도에서 견줄 때",
+        "type": "conditional",
+        "scope": "온도가 같은 여러 포화 용액의 비교",
+        "antecedent": {
+          "quantity": "용액의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "포화 용액의 농도",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "포화 농도는 양이 아니라 온도가 정하는 값이므로 양에 따라 커진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 같아도 포화 용액의 양이 많을수록 농도가 커진다."
+    },
+    {
+      "id": "rel-sat-still",
+      "text": "겉으로는 용해가 멈춘 듯 보여도 포화 용액 안에서는 용해와 석출이 끊임없이 이어진다.",
+      "form": {
+        "condition": "고체가 가라앉은 채 겉보기 변화가 사라진 뒤",
+        "type": "causal",
+        "scope": "동적 평형에 이른 포화 용액"
+      },
+      "invertible": true,
+      "invertible_reason": "둘 다 멈춘다면 표지한 동위 원소가 용액 쪽으로 옮겨 갈 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포화 용액에서는 용해와 석출이 모두 멈춘다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "포화 용액에 고체를 더 넣으면 그만큼 농도가 진해진다",
+      "why_wrong": "온도가 같으면 더 넣은 고체는 그대로 가라앉는다. 녹는 만큼 석출되므로 용액의 농도는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sat-conc"
+    },
+    {
+      "text": "포화 용액에서는 더 이상 용해가 일어나지 않는다",
+      "why_wrong": "용해는 계속 일어난다. 다만 같은 빠르기로 석출도 일어나 녹아 있는 양이 달라지지 않을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sat-still"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-dynamic-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-concentration"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-constant",
+      "note": "온도가 정하는 일정한 값이라는 점이 이어진다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-01",
+  "pages": [
+    111,
+    114
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

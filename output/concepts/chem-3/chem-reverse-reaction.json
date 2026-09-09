@@ -1,0 +1,122 @@
+{
+  "id": "chem-reverse-reaction",
+  "concept_key": "concept:reverse-reaction",
+  "registry_status": "new",
+  "term": "역반응",
+  "notation": {
+    "hanja": "逆反應",
+    "hanja_gloss": "逆 거스릴 역 · 反 돌이킬 반 · 應 응할 응",
+    "english": "reverse reaction"
+  },
+  "definition": "화학 반응식에서 생성물 쪽으로부터 반응물 쪽으로, 곧 왼쪽을 향해 되돌아가는 쪽의 반응. 정반응과 짝을 이룬다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rev-classify",
+      "text": "생성물이 다시 반응물로 되돌아가는 쪽으로 나아가는 반응을 역반응으로 가른다.",
+      "form": {
+        "condition": "화학 반응식의 왼쪽을 반응물, 오른쪽을 생성물로 적었을 때",
+        "type": "classification",
+        "scope": "정반응과 역반응을 함께 정의하는 가역 반응",
+        "antecedent": {
+          "quantity": "생성물의 양",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "반응물의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응물이 생성물로 바뀌는 쪽은 정반응의 규정이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응물이 생성물로 바뀌는 쪽으로 나아가는 반응을 역반응으로 가른다."
+    },
+    {
+      "id": "rel-rev-k-small",
+      "text": "같은 온도에서 평형 상수가 1보다 훨씬 작으면 역반응이 우세한 반응으로 읽는다.",
+      "form": {
+        "condition": "온도를 고정한 채 평형 상수의 크기를 볼 때",
+        "type": "conditional",
+        "scope": "평형 상수로 우세한 쪽을 가늠하는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "평형 상수가 1보다 훨씬 작다는 것은 반응물 쪽이 많다는 뜻이라 정반응 우세로 읽는 것은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01",
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 온도에서 평형 상수가 1보다 훨씬 작으면 정반응이 우세한 반응으로 읽는다."
+    },
+    {
+      "id": "rel-rev-heat-flip",
+      "text": "한 가역 반응에서 정반응이 열을 내놓는다면 그 역반응은 열을 빨아들인다.",
+      "form": {
+        "condition": "같은 가역 반응의 두 방향을 나란히 놓고 견줄 때",
+        "type": "conditional",
+        "scope": "열의 출입이 뚜렷한 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방향이 모두 열을 내놓으면 한 바퀴 돌 때마다 열이 생겨나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 가역 반응에서 정반응이 열을 내놓는다면 그 역반응도 열을 내놓는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "역반응은 정반응이 다 끝난 다음에야 시작된다",
+      "why_wrong": "가역 반응에서는 생성물이 조금이라도 생기는 순간부터 역반응이 함께 일어난다. 시간이 갈수록 두 빠르기가 가까워져 평형이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rev-classify"
+    },
+    {
+      "text": "평형 상수가 작은 반응은 아예 일어나지 않는 반응이다",
+      "why_wrong": "평형 상수가 작다는 것은 평형에서 반응물 쪽이 많다는 뜻일 뿐이다. 생성물이 조금이라도 있으면 반응은 일어난 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rev-k-small"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-reversible-reaction",
+      "note": "정반응과 함께 가역 반응을 규정한다"
+    },
+    {
+      "type": "related",
+      "target": "chem-forward-reaction",
+      "note": "방향이 정반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "chem-exothermic-reaction",
+      "note": "두 방향의 열 출입이 반대라는 명제가 여기서 이어진다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-01",
+  "pages": [
+    107,
+    113,
+    117
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

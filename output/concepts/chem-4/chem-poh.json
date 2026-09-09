@@ -1,0 +1,125 @@
+{
+  "id": "chem-poh",
+  "concept_key": "concept:poh",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "pOH",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "pH 를 본떠 만든 기호라 한자어에 대응하는 우리말 낱말이 따로 없다.",
+    "english": "pOH",
+    "symbol_display": "pOH = −log[OH⁻]",
+    "symbol_plain": "pOH = -log(OH-)"
+  },
+  "definition": "수산화 이온의 몰농도를 pH 와 같은 방식으로 나타낸 값. 그 몰농도의 상용로그에 음의 부호를 붙여 얻는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-poh-log-step",
+      "text": "수산화 이온의 몰농도가 10 배로 커지면 pOH 값은 1 만큼 작아진다",
+      "form": {
+        "condition": "온도가 일정하게 유지됨",
+        "type": "inverse",
+        "scope": "묽은 수용액",
+        "antecedent": {
+          "quantity": "수산화 이온의 몰농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "pOH",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "정의식에 음의 부호가 붙어 있어 함께 커진다고 하면 반드시 거짓이다",
+      "inverted_text": "수산화 이온의 몰농도가 10 배로 커지면 pOH 값도 1 만큼 커진다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-poh-sum-fourteen",
+      "text": "25 ℃ 라면 한 수용액에서 잰 pH 와 pOH 를 더한 값이 14.0 이 된다",
+      "form": {
+        "condition": "온도가 25 ℃ 임",
+        "type": "conditional",
+        "scope": "25 ℃ 의 묽은 수용액(온도가 달라지면 합도 달라진다)"
+      },
+      "invertible": false,
+      "invertible_reason": "두 값의 합을 말한 서술이라 자리를 바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-poh-opposite-direction",
+      "text": "같은 수용액에서 pH 가 커질수록 pOH 는 그만큼 작아져, 액성을 읽는 방향이 pH 와 반대다",
+      "form": {
+        "condition": "온도가 25 ℃ 로 고정됨",
+        "type": "inverse",
+        "scope": "25 ℃ 의 묽은 수용액",
+        "antecedent": {
+          "quantity": "pH",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "pOH",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 값의 합이 14.0 으로 묶여 있어 함께 커진다고 하면 반드시 거짓이다",
+      "inverted_text": "같은 수용액에서 pH 가 커질수록 pOH 도 함께 커진다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "pOH 가 큰 수용액일수록 염기성이 세다",
+      "why_wrong": "pOH 가 크다는 것은 수산화 이온이 적다는 뜻이므로 오히려 산성 쪽에 가깝다.",
+      "linked_relation": "rel-poh-log-step",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "온도와 상관없이 pH 와 pOH 를 더하면 언제나 14.0 이다",
+      "why_wrong": "이 합은 물의 이온화 상수에서 나오고 그 상수는 온도를 탄다. 14.0 이 되는 것은 25 ℃ 에서다.",
+      "linked_relation": "rel-poh-sum-fourteen",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-ph"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-ionization-constant-of-water"
+    },
+    {
+      "type": "related",
+      "target": "chem-acidity-of-aqueous-solution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-01",
+  "pages": [
+    155
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

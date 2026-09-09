@@ -1,0 +1,146 @@
+{
+  "id": "chem-neutralization-reaction",
+  "concept_key": "concept:neutralization-reaction",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "중화 반응",
+  "notation": {
+    "hanja": "中和反應",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 反 돌이킬 반 · 應 응할 응",
+    "english": "neutralization reaction",
+    "symbol_display": "H⁺ + OH⁻ → H₂O",
+    "symbol_plain": "H+ + OH- = H2O"
+  },
+  "definition": "물이 만들어지면서 산성과 염기성이 서로 상쇄되는 반응. 수소 이온과 수산화 이온이 짝을 지어 물이 되는 것이 그 알맹이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-neut-ions-become-water",
+      "text": "산성을 띠게 하던 수소 이온과 염기성을 띠게 하던 수산화 이온이 만나 중성인 물이 된다",
+      "form": {
+        "condition": "산 수용액과 염기 수용액을 섞음",
+        "type": "causal",
+        "scope": "수용액에서 일어나는 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 무엇으로 바뀌는지 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neut-leftover-ions-stay",
+      "text": "산과 염기가 내놓은 이온 가운데 물을 만들지 않는 이온은 반응하지 않고 수용액에 그대로 남는다",
+      "form": {
+        "condition": "산 수용액과 염기 수용액을 섞은 뒤",
+        "type": "conditional",
+        "scope": "물에 잘 녹는 염이 생기는 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 남는지 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neut-ph-rises",
+      "text": "산성 용액에 염기성 물질을 넣을수록 수소 이온이 물로 바뀌어 줄어들므로 pH 가 커진다",
+      "form": {
+        "condition": "산성 용액에 염기성 물질을 조금씩 넣음",
+        "type": "direct",
+        "scope": "중화가 완결되기 전 구간",
+        "antecedent": {
+          "quantity": "넣어 준 염기성 물질의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용액의 pH",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "염기가 수소 이온을 없애는 반응이라 pH 가 내려간다고 하면 반드시 거짓이다",
+      "inverted_text": "산성 용액에 염기성 물질을 넣을수록 수소 이온이 늘어나 pH 가 작아진다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neut-two-products",
+      "text": "산과 염기가 반응하면 생성물로 물과 염이 함께 나온다",
+      "form": {
+        "condition": "산과 염기가 반응함",
+        "type": "classification",
+        "scope": "산 염기 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물을 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중화 반응이 일어나면 용액은 반드시 중성이 된다",
+      "why_wrong": "두 이온의 양(mol)이 같아야 중성이다. 한쪽이 남으면 반응이 일어났어도 산성이나 염기성이다.",
+      "linked_relation": "rel-neut-ph-rises",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "중화 반응에서는 용액에 든 이온이 모두 반응해 사라진다",
+      "why_wrong": "물을 만드는 것은 수소 이온과 수산화 이온뿐이고, 나머지 이온은 반응에 끼지 않고 남는다.",
+      "linked_relation": "rel-neut-leftover-ions-stay",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-ph",
+      "note": "제산제로 위산의 pH 가 커지는 도입을 읽으려면 pH 를 알아야 한다"
+    },
+    {
+      "type": "next",
+      "target": "chem-salt"
+    },
+    {
+      "type": "next",
+      "target": "chem-acidity-of-mixed-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-stoichiometry-of-neutralization"
+    },
+    {
+      "type": "next",
+      "target": "chem-use-of-neutralization-reaction"
+    },
+    {
+      "type": "same",
+      "target": "reac-neutralization-reaction",
+      "grade_from": "화학 반응의 세계 Ⅰ. 산 염기 평형"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-03"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-01",
+  "pages": [
+    170,
+    171
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

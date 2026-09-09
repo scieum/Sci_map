@@ -1,0 +1,116 @@
+{
+  "id": "chem-equilibrium-concentration",
+  "concept_key": "concept:equilibrium-concentration",
+  "registry_status": "new",
+  "term": "평형 농도",
+  "notation": {
+    "hanja": "平衡濃度",
+    "hanja_gloss": "平 평평할 평 · 衡 저울대 형 · 濃 짙을 농 · 度 법도 도",
+    "english": "equilibrium concentration"
+  },
+  "definition": "화학 평형에 이른 계에서 반응물과 생성물이 저마다 나타내는, 더 이상 달라지지 않는 농도 값.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eqc-only-at-eq",
+      "text": "평형에 닿기 전 구간에서 잰 농도는 평형 농도로 쓸 수 없다.",
+      "form": {
+        "condition": "농도를 잰 시점이 평형 이전인지 이후인지 가릴 때",
+        "type": "conditional",
+        "scope": "평형에 도달한 가역 반응의 농도 자료"
+      },
+      "invertible": true,
+      "invertible_reason": "평형 농도는 정의상 평형 상태의 농도이므로 도중의 값도 쓸 수 있다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형에 닿기 전 구간에서 잰 농도도 평형 농도로 쓸 수 있다."
+    },
+    {
+      "id": "rel-eqc-initial",
+      "text": "온도가 같아도 처음 넣은 양이 다르면 평형에 이르렀을 때의 농도는 서로 다르게 나온다.",
+      "form": {
+        "condition": "온도와 용기 부피는 그대로 두고 초기 조성만 바꿀 때",
+        "type": "causal",
+        "scope": "초기 농도를 달리한 기체 사이의 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "초기 조성이 달라지면 평형에서 남는 양도 달라지므로 언제나 같다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 같으면 처음 넣은 양이 달라도 평형 농도는 언제나 같다."
+    },
+    {
+      "id": "rel-eqc-compare",
+      "text": "평형 농도를 견주어 생성물 쪽이 크면 정반응이, 반응물 쪽이 크면 역반응이 우세한 반응으로 읽는다.",
+      "form": {
+        "condition": "같은 온도의 평형 상태에서 두 쪽 농도를 견줄 때",
+        "type": "conditional",
+        "scope": "우세한 방향을 농도로 가늠하는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "농도가 큰 쪽이 우세한 반응 쪽이므로 반대로 읽는 것은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형 농도를 견주어 반응물 쪽이 크면 정반응이 우세한 반응으로 읽는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평형 농도는 처음 넣은 농도와 관계없이 반응마다 하나로 정해져 있다",
+      "why_wrong": "온도가 같아도 처음 조성이 달라지면 평형 농도는 달라진다. 조성이 달라져도 일정한 것은 평형 상수 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eqc-initial"
+    },
+    {
+      "text": "평형에 도달하면 각 물질의 농도가 처음 농도의 절반이 된다",
+      "why_wrong": "얼마나 줄고 늘지는 반응식의 계수와 평형 상수가 정한다. 절반이라는 규칙은 어디에도 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eqc-only-at-eq"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemical-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "chem-law-of-chemical-equilibrium",
+      "note": "평형 농도 사이의 규칙성이 법칙이 된다"
+    },
+    {
+      "type": "related",
+      "target": "chem-saturated-solution"
+    },
+    {
+      "type": "related",
+      "target": "chem-reaction-quotient",
+      "note": "평형 농도가 아닌 농도를 넣으면 반응 지수가 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-02"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-02",
+  "pages": [
+    112,
+    114,
+    116
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

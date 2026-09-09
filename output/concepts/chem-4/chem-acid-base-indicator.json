@@ -1,0 +1,121 @@
+{
+  "id": "chem-acid-base-indicator",
+  "concept_key": "concept:acid-base-indicator",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "산 염기 지시약",
+  "aliases": [
+    "지시약"
+  ],
+  "notation": {
+    "hanja": "酸 鹽基 指示藥",
+    "hanja_gloss": "酸 실 산 · 鹽 소금 염 · 基 터 기 · 指 가리킬 지 · 示 보일 시 · 藥 약 약",
+    "english": "acid-base indicator"
+  },
+  "definition": "용액의 액성에 따라 색이 달라지는 물질. 적정에서 반응이 끝났는지를 눈으로 알아채게 해 준다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ind-color-by-acidity",
+      "text": "같은 지시약이라도 떨어뜨린 용액이 산성이냐 염기성이냐에 따라 다른 색을 띤다",
+      "form": {
+        "condition": "지시약을 용액에 떨어뜨렸을 때",
+        "type": "causal",
+        "scope": "그 지시약의 색이 바뀌는 액성 구간",
+        "antecedent": {
+          "quantity": "용액의 액성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "지시약이 띠는 색",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "색이 달라진다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ind-signals-completion",
+      "text": "적정할 용액에 지시약을 미리 넣어 두면 색이 바뀌는 것으로 중화가 끝났음을 알아챌 수 있다",
+      "form": {
+        "condition": "적정을 시작하기 전에 지시약을 넣어 둠",
+        "type": "conditional",
+        "scope": "중화 적정 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ind-choice-matters",
+      "text": "지시약마다 색이 바뀌는 액성 구간이 달라, 그 적정의 중화점 근처에서 색이 바뀌는 것을 골라야 한다",
+      "form": {
+        "condition": "적정에 쓸 지시약을 고를 때",
+        "type": "conditional",
+        "scope": "산과 염기의 세기에 따라 중화점 부근 액성이 달라지는 적정"
+      },
+      "invertible": false,
+      "invertible_reason": "고르는 기준을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지시약을 넣으면 그것 때문에 용액의 액성이 달라진다",
+      "why_wrong": "지시약은 두세 방울만 넣어 액성을 사실상 바꾸지 않고 색으로 알려 주기만 한다.",
+      "linked_relation": "rel-ind-signals-completion",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "적정에 쓰는 지시약은 아무것이나 골라도 결과가 같다",
+      "why_wrong": "지시약마다 색이 바뀌는 액성 구간이 다르므로, 잘못 고르면 종말점이 중화점에서 멀어진다.",
+      "linked_relation": "rel-ind-choice-matters",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-acidity-of-aqueous-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-end-point"
+    },
+    {
+      "type": "related",
+      "target": "chem-acid-base-titration"
+    },
+    {
+      "type": "related",
+      "target": "chem-neutralization-point"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-02",
+  "pages": [
+    176,
+    178
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

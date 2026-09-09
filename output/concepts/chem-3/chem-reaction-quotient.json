@@ -1,0 +1,117 @@
+{
+  "id": "chem-reaction-quotient",
+  "concept_key": "concept:reaction-quotient",
+  "registry_status": "new",
+  "term": "반응 지수",
+  "notation": {
+    "hanja": "反應指數",
+    "hanja_gloss": "反 돌이킬 반 · 應 응할 응 · 指 가리킬 지 · 數 셈 수",
+    "english": "reaction quotient",
+    "symbol_display": "Q",
+    "symbol_plain": "Q"
+  },
+  "definition": "평형인지 아닌지를 따지지 않고, 어느 시점의 농도를 평형 상수식과 같은 꼴에 그대로 넣어 얻은 값. 기호는 Q다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-q-any-moment",
+      "text": "반응 지수는 평형에 이르지 않은 시점의 농도로도 셈할 수 있다는 점이 평형 상수와 다르다.",
+      "form": {
+        "condition": "반응이 진행되는 어느 한 시점의 농도를 알고 있을 때",
+        "type": "conditional",
+        "scope": "평형 상수식과 같은 꼴로 셈하는 값"
+      },
+      "invertible": true,
+      "invertible_reason": "평형 농도로만 셈할 수 있다면 평형 상수와 구별할 까닭이 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 지수는 평형에 도달한 시점의 농도로만 셈할 수 있다."
+    },
+    {
+      "id": "rel-q-equals-k",
+      "text": "반응 지수가 같은 온도의 평형 상수와 같은 값이 되면 그 계는 이미 평형 상태다.",
+      "form": {
+        "condition": "같은 온도에서 Q와 K를 견줄 때",
+        "type": "conditional",
+        "scope": "평형 상수를 알고 있는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 값이 같다는 것이 곧 평형의 조건이므로 아직 평형이 아니라는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 지수가 평형 상수와 같아도 그 계는 아직 평형 상태가 아니다."
+    },
+    {
+      "id": "rel-q-same-form",
+      "text": "반응 지수를 셈하는 식의 꼴은 평형 상수식과 같고, 넣는 농도가 평형 농도인지만 다르다.",
+      "form": {
+        "condition": "같은 화학 반응식에서 두 값을 나란히 세울 때",
+        "type": "conditional",
+        "scope": "평형 상수식과 반응 지수식의 비교"
+      },
+      "invertible": false,
+      "invertible_reason": "두 식을 견주어 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "12화학03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응 지수는 평형 상태에서만 구할 수 있는 값이다",
+      "why_wrong": "반응 지수는 어느 시점의 농도로도 구할 수 있다. 평형에서만 정해지는 값은 평형 상수 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-q-any-moment"
+    },
+    {
+      "text": "반응 지수와 평형 상수는 식이 다르므로 서로 견줄 수 없다",
+      "why_wrong": "두 값은 식의 꼴이 같다. 그래서 같은 온도라면 크기를 바로 견주어 반응이 어느 쪽으로 갈지 읽을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-q-same-form"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-equilibrium-constant-expression"
+    },
+    {
+      "type": "next",
+      "target": "chem-direction-of-reaction",
+      "note": "Q와 K의 대소가 방향을 정한다"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-constant"
+    },
+    {
+      "type": "related",
+      "target": "chem-equilibrium-shift",
+      "note": "조건을 바꾼 직후의 Q로 이동 방향을 읽는다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-03"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-01",
+  "pages": [
+    124,
+    125,
+    139
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

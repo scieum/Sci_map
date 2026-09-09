@@ -1,0 +1,123 @@
+{
+  "id": "chem-endothermic-reaction",
+  "concept_key": "concept:endothermic-reaction",
+  "registry_status": "reused",
+  "term": "흡열 반응",
+  "notation": {
+    "hanja": "吸熱反應",
+    "hanja_gloss": "吸 마실 흡 · 熱 더울 열 · 反 돌이킬 반 · 應 응할 응",
+    "english": "endothermic reaction"
+  },
+  "definition": "진행되는 동안 바깥의 열을 빨아들이는 반응. 평형을 다룰 때는 온도를 올렸을 때 우세해지는 쪽으로 읽는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cnd-heating",
+      "text": "정반응이 흡열인 가역 반응은 온도를 올리면 정반응 쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "농도와 부피는 그대로 두고 온도만 올릴 때",
+        "type": "causal",
+        "scope": "정반응이 열을 빨아들이는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "온도를 올렸는데 열을 내놓는 쪽으로 가면 온도가 더 올라가므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "정반응이 흡열인 가역 반응은 온도를 올리면 역반응 쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-cnd-pair",
+      "text": "한 가역 반응의 정반응이 흡열이면 그 역반응은 반드시 발열이다.",
+      "form": {
+        "condition": "같은 가역 반응의 두 방향을 나란히 놓고 볼 때",
+        "type": "conditional",
+        "scope": "열의 출입이 뚜렷한 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방향이 모두 열을 빨아들이면 한 바퀴 돌 때마다 열이 사라지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 가역 반응의 정반응이 흡열이면 그 역반응도 흡열이다."
+    },
+    {
+      "id": "rel-cnd-color",
+      "text": "정반응이 흡열인 코발트 수용액을 따뜻한 물에 담그면 생성물 쪽 이온이 많아져 색이 달라진다.",
+      "form": {
+        "condition": "농도는 그대로 두고 수용액의 온도만 올릴 때",
+        "type": "causal",
+        "scope": "정반응이 흡열인 수용액 평형"
+      },
+      "invertible": true,
+      "invertible_reason": "온도를 올리면 흡열 쪽이 우세해지므로 반응물 쪽이 많아진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "정반응이 흡열인 코발트 수용액을 따뜻한 물에 담그면 반응물 쪽 이온이 많아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흡열 반응은 주위에서 열을 얻으므로 주위의 온도가 올라간다",
+      "why_wrong": "열을 빼앗기는 쪽은 주위다. 그래서 흡열 반응이 일어나면 주위의 온도는 오히려 내려간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cnd-heating"
+    },
+    {
+      "text": "온도를 올리면 흡열 반응만 빨라지고 발열 반응은 느려진다",
+      "why_wrong": "온도를 올리면 두 방향 모두 빨라진다. 다만 흡열 쪽이 더 크게 빨라져 그쪽으로 평형이 옮겨 갈 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cnd-heating"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mate-endothermic-reaction",
+      "note": "그쪽은 엔탈피 부호로 규정한다",
+      "grade_from": "물질과 에너지"
+    },
+    {
+      "type": "same",
+      "target": "isci2-endothermic-reaction",
+      "note": "그쪽은 '에너지 흡수'를 표제어로 삼아 상태 변화까지 아우른다",
+      "grade_from": "통합과학2"
+    },
+    {
+      "type": "next",
+      "target": "chem-effect-of-temperature-on-equilibrium",
+      "note": "열의 출입 방향을 알아야 온도 효과를 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "chem-exothermic-reaction",
+      "note": "열의 방향이 정반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "chem-forward-reaction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    131,
+    133
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

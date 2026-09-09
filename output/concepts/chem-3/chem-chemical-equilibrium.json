@@ -1,0 +1,118 @@
+{
+  "id": "chem-chemical-equilibrium",
+  "concept_key": "concept:chemical-equilibrium",
+  "registry_status": "new",
+  "term": "화학 평형",
+  "aliases": [
+    "화학 평형 상태"
+  ],
+  "notation": {
+    "hanja": "化學平衡",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 平 평평할 평 · 衡 저울대 형",
+    "english": "chemical equilibrium"
+  },
+  "definition": "가역 반응이 동적 평형에 이르러, 반응물이든 생성물이든 어느 물질의 농도도 시간이 흘러도 더는 달라지지 않는 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ceq-why-constant",
+      "text": "화학 평형에서 농도가 그대로 유지되는 까닭은 두 방향의 반응 속도가 같아졌기 때문이다.",
+      "form": {
+        "condition": "닫힌 용기에서 온도가 일정하게 유지될 때",
+        "type": "causal",
+        "scope": "가역 반응이 도달한 화학 평형"
+      },
+      "invertible": true,
+      "invertible_reason": "두 반응이 모두 멈춘 상태라면 동적 평형이라는 규정과 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화학 평형에서 농도가 그대로 유지되는 까닭은 두 방향의 반응이 모두 멈추었기 때문이다."
+    },
+    {
+      "id": "rel-ceq-initial",
+      "text": "온도가 같다면 반응물만 넣고 시작하든 생성물만 넣고 시작하든 결국 화학 평형에 이른다.",
+      "form": {
+        "condition": "온도와 용기 부피는 같게 두고 처음 넣는 물질만 달리했을 때",
+        "type": "conditional",
+        "scope": "밀폐 용기에서 일어나는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "가역 반응은 어느 쪽에서 출발해도 두 방향이 함께 일어나므로 못 이른다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생성물만 넣고 시작한 가역 반응은 화학 평형에 이르지 못한다."
+    },
+    {
+      "id": "rel-ceq-before",
+      "text": "평형에 닿기 전 구간에서는 반응물과 생성물의 농도가 한쪽으로 계속 달라진다.",
+      "form": {
+        "condition": "반응을 시작한 순간부터 평형에 닿기 전까지",
+        "type": "causal",
+        "scope": "아직 평형에 이르지 않은 구간"
+      },
+      "invertible": false,
+      "invertible_reason": "평형 이전이라는 시간 구간까지 함께 뒤집어야 해서 방향만 바꾼 문장의 참·거짓이 정해지지 않는다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학 평형 상태에서는 반응물과 생성물의 농도가 서로 같다",
+      "why_wrong": "평형에서 같아지는 것은 농도가 아니라 정반응과 역반응의 속도다. 농도는 서로 달라도 각각 일정하기만 하면 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ceq-why-constant"
+    },
+    {
+      "text": "평형에 도달했다는 것은 반응이 다 끝났다는 뜻이다",
+      "why_wrong": "평형은 반응이 끝난 상태가 아니라 두 방향이 같은 빠르기로 계속되는 상태다. 겉보기 변화가 없을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ceq-why-constant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-dynamic-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "chem-equilibrium-concentration",
+      "note": "평형이라야 평형 농도가 정의된다"
+    },
+    {
+      "type": "next",
+      "target": "chem-equilibrium-shift",
+      "note": "이동할 평형이 먼저 있어야 한다"
+    },
+    {
+      "type": "related",
+      "target": "chem-reversible-reaction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-01",
+  "pages": [
+    112,
+    113,
+    119
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

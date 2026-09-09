@@ -1,0 +1,142 @@
+{
+  "id": "chem-acidity-of-aqueous-solution",
+  "concept_key": "concept:acidity-of-aqueous-solution",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "수용액의 액성",
+  "aliases": [
+    "액성"
+  ],
+  "notation": {
+    "hanja": "水溶液의 液性",
+    "hanja_gloss": "水 물 수 · 溶 녹을 용 · 液 진 액 · 液 진 액 · 性 성품 성",
+    "english": "acidity of an aqueous solution"
+  },
+  "definition": "수용액을 산성·중성·염기성으로 가르는 성질. 하이드로늄 이온과 수산화 이온 가운데 어느 쪽 몰농도가 큰지로 정해진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-acidity-compare-two-ions",
+      "text": "두 이온의 몰농도를 견주어 하이드로늄 이온 쪽이 크면 산성, 수산화 이온 쪽이 크면 염기성으로 가른다",
+      "form": {
+        "condition": "온도가 같은 수용액을 견줄 때",
+        "type": "classification",
+        "scope": "묽은 수용액",
+        "antecedent": {
+          "quantity": "두 이온 몰농도의 대소",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "수용액의 액성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산성과 염기성의 이름을 맞바꾸면 반드시 거짓이 된다",
+      "inverted_text": "두 이온의 몰농도를 견주어 하이드로늄 이온 쪽이 크면 염기성, 수산화 이온 쪽이 크면 산성으로 가른다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-acidity-neutral-means-equal",
+      "text": "두 이온의 몰농도가 서로 같은 수용액만 중성이라고 부른다",
+      "form": {
+        "condition": "온도가 일정하게 유지됨",
+        "type": "classification",
+        "scope": "묽은 수용액",
+        "antecedent": {
+          "quantity": "두 이온 몰농도의 차",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "중성 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "중성의 조건을 정하는 문장이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-acidity-dissolved-substance",
+      "text": "순수한 물에 산성 물질을 녹일수록 하이드로늄 이온 쪽이 많아져 수용액이 산성으로 기운다",
+      "form": {
+        "condition": "순수한 물에 산성 물질만 녹임",
+        "type": "direct",
+        "scope": "물에 녹아 이온화하는 산성 물질",
+        "antecedent": {
+          "quantity": "녹인 산성 물질의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "하이드로늄 이온의 몰농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "산성 물질이 내놓는 것이 하이드로늄 이온이라 줄어든다고 하면 반드시 거짓이다",
+      "inverted_text": "순수한 물에 산성 물질을 녹일수록 하이드로늄 이온 쪽이 오히려 줄어들어 염기성으로 기운다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중성인 수용액에는 하이드로늄 이온과 수산화 이온이 아예 들어 있지 않다",
+      "why_wrong": "중성은 두 이온이 없다는 뜻이 아니라 두 몰농도가 서로 같다는 뜻이다.",
+      "linked_relation": "rel-acidity-neutral-means-equal",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "액성은 용액에 녹아 있는 이온의 총 개수로 정해진다",
+      "why_wrong": "총 개수가 아니라 하이드로늄 이온과 수산화 이온의 몰농도 가운데 어느 쪽이 큰가가 액성을 정한다.",
+      "linked_relation": "rel-acidity-compare-two-ions",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-ionization-constant-of-water"
+    },
+    {
+      "type": "next",
+      "target": "chem-ph"
+    },
+    {
+      "type": "next",
+      "target": "chem-acidity-of-mixed-solution"
+    },
+    {
+      "type": "next",
+      "target": "chem-acid-base-indicator"
+    },
+    {
+      "type": "related",
+      "target": "chem-self-ionization-of-water"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-01",
+  "pages": [
+    154
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

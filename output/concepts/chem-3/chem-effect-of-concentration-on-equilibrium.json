@@ -1,0 +1,134 @@
+{
+  "id": "chem-effect-of-concentration-on-equilibrium",
+  "concept_key": "concept:effect-of-concentration-on-equilibrium",
+  "registry_status": "new",
+  "term": "농도 변화와 평형 이동",
+  "notation": {
+    "hanja": "濃度 變化 平衡 移動",
+    "hanja_note": "표제어의 '와'는 우리말 조사라 대응하는 한자가 없다. 나머지 여덟 글자만 한자어다.",
+    "hanja_gloss": "濃 짙을 농 · 度 법도 도 · 變 변할 변 · 化 될 화 · 平 평평할 평 · 衡 저울대 형 · 移 옮길 이 · 動 움직일 동",
+    "english": "effect of concentration on equilibrium"
+  },
+  "definition": "반응물이나 생성물의 농도를 건드리면 반응 지수가 평형 상수에서 어긋나고, 그 어긋남을 메우는 쪽으로 평형이 옮겨 가는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cnc-forward",
+      "text": "반응물을 더 넣거나 생성물을 덜어 내면 반응 지수가 작아져 정반응 쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "온도와 용기 부피는 그대로 두고 농도만 건드릴 때",
+        "type": "causal",
+        "scope": "평형에 있던 가역 반응",
+        "antecedent": {
+          "quantity": "반응물의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성물의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반응물이 늘면 분모가 커져 Q가 작아지므로 역반응 쪽이라는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응물을 더 넣거나 생성물을 덜어 내면 반응 지수가 커져 역반응 쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-cnc-reverse",
+      "text": "반응물을 덜어 내거나 생성물을 더 넣으면 반응 지수가 커져 역반응 쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "온도와 용기 부피는 그대로 두고 농도만 건드릴 때",
+        "type": "causal",
+        "scope": "평형에 있던 가역 반응",
+        "antecedent": {
+          "quantity": "생성물의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응물의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "생성물이 늘면 분자가 커져 Q가 커지므로 정반응 쪽이라는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응물을 덜어 내거나 생성물을 더 넣으면 반응 지수가 작아져 정반응 쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-cnc-k-fixed",
+      "text": "농도를 건드려 평형이 옮겨 가도 온도가 그대로라면 평형 상수 값은 변하지 않는다.",
+      "form": {
+        "condition": "온도를 일정하게 유지한 채 농도만 바꿀 때",
+        "type": "conditional",
+        "scope": "온도가 고정된 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "평형 상수를 정하는 것은 온도뿐이므로 농도 때문에 달라진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-02",
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "농도를 건드려 평형이 옮겨 가면 평형 상수 값도 함께 달라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응물을 더 넣으면 평형 상수가 커진다",
+      "why_wrong": "커지는 것은 반응 지수 쪽이다. 온도가 그대로면 K는 그대로이고, 새 평형에서 Q는 다시 K와 같아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cnc-k-fixed"
+    },
+    {
+      "text": "반응물을 더 넣으면 평형이 이동해 그 반응물의 농도가 넣기 전과 똑같아진다",
+      "why_wrong": "정반응 쪽으로 옮겨 가며 일부가 줄어들 뿐이다. 새 평형에서의 농도는 넣기 전보다 여전히 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cnc-forward"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-equilibrium-shift"
+    },
+    {
+      "type": "next",
+      "target": "chem-le-chatelier-principle",
+      "note": "세 경우를 묶은 일반화로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "chem-reaction-quotient"
+    },
+    {
+      "type": "related",
+      "target": "chem-effect-of-pressure-on-equilibrium"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    126,
+    127,
+    132,
+    139
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

@@ -1,0 +1,122 @@
+{
+  "id": "chem-salt",
+  "concept_key": "concept:salt",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "염",
+  "notation": {
+    "hanja": "鹽",
+    "hanja_gloss": "鹽 소금 염",
+    "english": "salt"
+  },
+  "definition": "산에서 떨어져 나온 음이온과 염기에서 떨어져 나온 양이온이 결합해 생긴 물질. 중화 반응에서 물과 함께 만들어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-salt-classification",
+      "text": "어떤 물질이 염인지 아닌지는 산 쪽 음이온과 염기 쪽 양이온이 결합한 것인지로 가른다",
+      "form": {
+        "condition": "중화 반응의 생성물을 가려낼 때",
+        "type": "classification",
+        "scope": "산과 염기의 중화 반응에서 생긴 물질",
+        "antecedent": {
+          "quantity": "결합한 두 이온의 출신",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "염인지 아닌지",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-salt-crystal-left",
+      "text": "완전히 중화된 용액을 가열해 물을 날려 보내면 흰색 결정 같은 고체로 염이 남는다",
+      "form": {
+        "condition": "중화된 용액을 가열해 물을 증발시킴",
+        "type": "causal",
+        "scope": "녹아 있던 염이 결정으로 석출되는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "염을 얻는 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-salt-kind-follows-pair",
+      "text": "어떤 산과 어떤 염기가 반응했느냐에 따라 만들어지는 염의 종류가 달라진다",
+      "form": {
+        "condition": "반응한 산과 염기가 정해짐",
+        "type": "causal",
+        "scope": "산과 염기의 조합",
+        "antecedent": {
+          "quantity": "반응한 산과 염기의 조합",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생성되는 염의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "종류가 달라진다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염이라는 말은 소금, 곧 염화 소듐만 가리킨다",
+      "why_wrong": "염화 소듐은 여러 염 가운데 하나일 뿐이다. 질산 포타슘처럼 짜지 않은 염도 많다.",
+      "linked_relation": "rel-salt-classification",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "중화 반응의 생성물은 물 하나뿐이다",
+      "why_wrong": "물과 함께, 반응에 끼지 않고 남은 이온들이 결합한 염도 생성물로 나온다.",
+      "linked_relation": "rel-salt-crystal-left",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-neutralization-reaction"
+    },
+    {
+      "type": "related",
+      "target": "chem-acidity-of-mixed-solution"
+    },
+    {
+      "type": "same",
+      "target": "reac-salt",
+      "grade_from": "화학 반응의 세계 Ⅰ. 산 염기 평형"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-03"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-01",
+  "pages": [
+    171
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

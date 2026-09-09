@@ -1,0 +1,124 @@
+{
+  "id": "chem-equilibrium-shift",
+  "concept_key": "concept:equilibrium-shift",
+  "registry_status": "new",
+  "term": "평형 이동",
+  "aliases": [
+    "화학 평형의 이동"
+  ],
+  "notation": {
+    "hanja": "平衡移動",
+    "hanja_gloss": "平 평평할 평 · 衡 저울대 형 · 移 옮길 이 · 動 움직일 동",
+    "english": "shift of equilibrium"
+  },
+  "definition": "평형에 있던 계의 조건이 바뀌어 한쪽 반응이 잠시 더 우세해졌다가, 처음과 다른 새 평형에 다시 자리 잡는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-shf-new-eq",
+      "text": "조건이 바뀌어 평형이 깨져도 계는 결국 처음과 다른 새로운 평형에 다시 자리 잡는다.",
+      "form": {
+        "condition": "농도·압력·온도 가운데 하나를 바꾸고 충분히 기다렸을 때",
+        "type": "causal",
+        "scope": "밀폐된 계에서 일어나는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "가역 반응은 두 방향이 함께 일어나므로 다시 평형에 못 이른다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조건이 바뀌어 평형이 깨지면 계는 다시 평형에 이르지 못한다."
+    },
+    {
+      "id": "rel-shf-q-k",
+      "text": "이동하는 쪽은 조건을 바꾼 직후의 반응 지수가 평형 상수보다 작은지 큰지로 읽어 낼 수 있다.",
+      "form": {
+        "condition": "조건을 바꾼 직후의 농도를 알고 있을 때",
+        "type": "conditional",
+        "scope": "평형 이동 방향의 판정"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 절차를 밝힌 명제라 방향을 뒤집는 형태가 아니다.",
+      "curriculum": [
+        "12화학03-03",
+        "12화학03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-shf-three",
+      "text": "평형을 움직이는 바깥 조건으로는 농도·압력·온도 세 가지를 다룬다.",
+      "form": {
+        "condition": "밀폐된 계에서 평형 이동을 정리할 때",
+        "type": "classification",
+        "scope": "고등학교 화학이 다루는 평형 이동 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "조건을 열거해 보인 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평형이 이동하면 반응이 한쪽으로만 진행되어 다른 쪽은 멈춘다",
+      "why_wrong": "한쪽이 잠시 더 우세할 뿐 두 방향은 계속 일어난다. 얼마 뒤 다시 빠르기가 같아져 새 평형이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-shf-new-eq"
+    },
+    {
+      "text": "촉매를 넣으면 평형이 생성물 쪽으로 이동한다",
+      "why_wrong": "촉매는 평형에 닿는 시간을 줄일 뿐 평형의 자리를 옮기지 않는다. 두 방향을 똑같이 빠르게 하기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-shf-three"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemical-equilibrium"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-direction-of-reaction"
+    },
+    {
+      "type": "next",
+      "target": "chem-effect-of-concentration-on-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "chem-effect-of-pressure-on-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "chem-effect-of-temperature-on-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-le-chatelier-principle",
+      "note": "세 경우를 하나로 묶은 일반화"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    126,
+    139
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

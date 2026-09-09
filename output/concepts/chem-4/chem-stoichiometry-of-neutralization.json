@@ -1,0 +1,139 @@
+{
+  "id": "chem-stoichiometry-of-neutralization",
+  "concept_key": "concept:stoichiometry-of-neutralization",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "중화 반응의 양적 관계",
+  "notation": {
+    "hanja": "中和反應의 量的 關係",
+    "hanja_gloss": "中 가운데 중 · 和 화할 화 · 反 돌이킬 반 · 應 응할 응 · 量 헤아릴 량 · 的 과녁 적 · 關 빗장 관 · 係 맬 계",
+    "english": "stoichiometry of neutralization"
+  },
+  "definition": "완전히 중화되는 지점을 계산으로 잡는 관계. 산이 내놓는 수소 이온의 양(mol)과 염기가 내놓는 수산화 이온의 양(mol)을 같다고 놓는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-stoi-one-to-one-molar-ratio",
+      "text": "수소 이온과 수산화 이온은 하나씩 짝을 지어 물이 되므로 두 이온의 반응 몰비는 1 : 1 이다",
+      "form": {
+        "condition": "산과 염기가 수용액에서 반응함",
+        "type": "conditional",
+        "scope": "수용액에서 일어나는 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "몰비를 말한 서술이라 자리를 바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-count-ions",
+      "text": "산이 내놓는 수소 이온의 양(mol)은 산 1 mol 이 내놓는 이온 수에 몰농도와 부피(L)를 차례로 곱해 얻는다",
+      "form": {
+        "condition": "산이 내놓을 수 있는 이온을 모두 센다고 볼 때",
+        "type": "conditional",
+        "scope": "수용액에서의 중화 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "양을 세는 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-equality-at-complete",
+      "text": "양쪽에서 그렇게 구한 이온의 양(mol)이 서로 같아질 때 산과 염기가 남김없이 반응한다",
+      "form": {
+        "condition": "산과 염기를 섞어 완전히 중화시킴",
+        "type": "conditional",
+        "scope": "완전 중화가 이루어지는 지점"
+      },
+      "invertible": false,
+      "invertible_reason": "두 양이 같다는 서술이라 자리를 바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-more-ions-more-base",
+      "text": "몰농도와 부피가 같다면 1 mol 이 이온을 더 많이 내놓는 산일수록 중화에 필요한 염기 수용액의 부피가 커진다",
+      "form": {
+        "condition": "산과 염기의 몰농도, 그리고 산의 부피가 같음",
+        "type": "direct",
+        "scope": "완전히 중화시키는 경우",
+        "antecedent": {
+          "quantity": "산 1 mol 이 내놓는 수소 이온 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "필요한 염기 수용액의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "내놓는 이온이 많을수록 없애야 할 양도 많으므로 부피가 줄어든다고 하면 반드시 거짓이다",
+      "inverted_text": "몰농도와 부피가 같다면 1 mol 이 이온을 더 많이 내놓는 산일수록 중화에 필요한 염기 수용액의 부피가 작아진다",
+      "curriculum": [
+        "12화학04-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "0.1 M 황산 수용액 20 mL 는 0.1 M 수산화 소듐 수용액 20 mL 로 완전히 중화된다",
+      "why_wrong": "황산 1 mol 은 수소 이온을 2 mol 내놓으므로 두 배인 40 mL 가 있어야 완전히 중화된다.",
+      "linked_relation": "rel-stoi-more-ions-more-base",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "산과 염기의 부피가 같으면 완전히 중화된 것이다",
+      "why_wrong": "부피만으로는 알 수 없다. 1 mol 이 내놓는 이온 수와 몰농도까지 곱한 값이 양쪽에서 같아야 한다.",
+      "linked_relation": "rel-stoi-equality-at-complete",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-neutralization-reaction"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-acid-base-titration"
+    },
+    {
+      "type": "related",
+      "target": "chem-neutralization-point"
+    },
+    {
+      "type": "same",
+      "target": "reac-stoichiometry-of-neutralization",
+      "grade_from": "화학 반응의 세계 Ⅰ. 산 염기 평형"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-03"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-2-01",
+  "pages": [
+    174,
+    175
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

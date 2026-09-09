@@ -1,0 +1,135 @@
+{
+  "id": "chem-self-ionization-of-water",
+  "concept_key": "concept:self-ionization-of-water",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "물의 자동 이온화",
+  "notation": {
+    "hanja": "물의 自動 이온化",
+    "hanja_note": "'물'은 고유어이고 '이온'은 영어 ion 의 음차어라 둘 다 한자 표기가 없다. 나머지 부분만 한자어에 해당한다.",
+    "hanja_gloss": "自 스스로 자 · 動 움직일 동 · 化 될 화",
+    "english": "self-ionization of water",
+    "symbol_display": "2H₂O(l) ⇌ H₃O⁺(aq) + OH⁻(aq)",
+    "symbol_plain": "2H2O(l) = H3O+(aq) + OH-(aq)"
+  },
+  "definition": "물 분자끼리 수소 이온을 주고받아 하이드로늄 이온과 수산화 이온으로 갈라지는 반응. 아주 적은 양만 일어나 평형에 머문다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-self-ion-conductivity",
+      "text": "자동 이온화로 생긴 이온이 많을수록 순수한 물의 전기 전도도가 커진다",
+      "form": {
+        "condition": "감도가 높은 장치로 전기 전도도를 잴 때",
+        "type": "direct",
+        "scope": "용질을 녹이지 않은 순수한 물",
+        "antecedent": {
+          "quantity": "자동 이온화로 생긴 이온의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물의 전기 전도도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류를 나르는 것이 이온이므로 이온이 많을수록 전도도가 작아진다고 하면 반드시 거짓이다",
+      "inverted_text": "자동 이온화로 생긴 이온이 많을수록 순수한 물의 전기 전도도는 오히려 작아진다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-self-ion-proton-transfer",
+      "text": "수소 이온을 내놓은 물 분자는 수산화 이온이 되고, 그것을 받아들인 물 분자는 하이드로늄 이온이 된다",
+      "form": {
+        "condition": "물 분자끼리 수소 이온을 주고받을 때",
+        "type": "classification",
+        "scope": "액체 상태의 물",
+        "antecedent": {
+          "quantity": "수소 이온을 주었는지 받았는지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "그 물 분자가 되는 이온",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "준 쪽과 받은 쪽의 이름을 맞바꾸면 전하가 어긋나 반드시 거짓이 된다",
+      "inverted_text": "수소 이온을 내놓은 물 분자는 하이드로늄 이온이 되고, 그것을 받아들인 물 분자는 수산화 이온이 된다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-self-ion-equilibrium",
+      "text": "자동 이온화가 동적 평형에 이르면 두 이온의 농도가 더 이상 변하지 않고 일정하게 머문다",
+      "form": {
+        "condition": "온도가 일정하게 유지됨",
+        "type": "conditional",
+        "scope": "자동 이온화가 평형에 이른 뒤의 물",
+        "antecedent": {
+          "quantity": "평형에 이른 뒤 흐른 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "두 이온의 농도",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "농도가 그대로 머문다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학04-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "순수한 물은 전기를 전혀 통하지 않는다",
+      "why_wrong": "자동 이온화로 생긴 이온이 아주 적게나마 들어 있어, 감도가 높은 장치로 재면 매우 약한 전류가 흐른다.",
+      "linked_relation": "rel-self-ion-conductivity",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "물이 자동 이온화하면 수소 이온이 물속에 홀로 떠다닌다",
+      "why_wrong": "내놓은 수소 이온은 곧바로 다른 물 분자에 붙어 하이드로늄 이온의 꼴로 존재한다.",
+      "linked_relation": "rel-self-ion-proton-transfer",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-ionization-constant-of-water",
+      "note": "이온화가 평형에 이르는 것을 알아야 농도의 곱이 왜 일정한지 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "chem-acidity-of-aqueous-solution"
+    },
+    {
+      "type": "related",
+      "target": "chem-ph"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학04-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅳ. 역동적인 화학 반응",
+  "unit_id": "chem-4",
+  "topic_id": "chem-4-1-01",
+  "pages": [
+    153
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

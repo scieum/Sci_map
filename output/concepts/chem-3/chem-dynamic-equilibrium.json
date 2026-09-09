@@ -1,0 +1,131 @@
+{
+  "id": "chem-dynamic-equilibrium",
+  "concept_key": "concept:dynamic-equilibrium",
+  "registry_status": "reused",
+  "term": "동적 평형",
+  "notation": {
+    "hanja": "動的平衡",
+    "hanja_gloss": "動 움직일 동 · 的 과녁 적 · 平 평평할 평 · 衡 저울대 형",
+    "english": "dynamic equilibrium"
+  },
+  "definition": "서로 반대인 두 방향의 빠르기가 같아져서, 반응은 계속되는데도 물질의 양은 더 이상 달라지지 않는 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cde-rate",
+      "text": "동적 평형에서는 정반응이 일어나는 빠르기와 역반응이 일어나는 빠르기가 서로 같다.",
+      "form": {
+        "condition": "닫힌 용기에서 온도가 일정하게 유지될 때",
+        "type": "conditional",
+        "scope": "가역 반응이 도달한 동적 평형",
+        "antecedent": {
+          "quantity": "정반응 속도",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "역반응 속도",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 빠르기가 한쪽으로 기울면 양이 계속 달라져 평형이 아니게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동적 평형에서는 정반응이 일어나는 빠르기가 역반응보다 크다."
+    },
+    {
+      "id": "rel-cde-tracer",
+      "text": "포화 수용액에 동위 원소로 표지한 용질을 더 넣으면 그 표지가 용액 쪽에서도 발견된다.",
+      "form": {
+        "condition": "겉보기 변화가 멈춘 포화 수용액에 표지한 물질을 넣고 기다릴 때",
+        "type": "causal",
+        "scope": "용해와 석출이 맞물린 수용액의 동적 평형"
+      },
+      "invertible": true,
+      "invertible_reason": "평형에서 반응이 멈춰 있다면 표지가 고체 쪽에만 남아야 하는데 실제로는 그렇지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포화 수용액에 동위 원소로 표지한 용질을 더 넣어도 그 표지는 고체 쪽에만 남는다."
+    },
+    {
+      "id": "rel-cde-macro",
+      "text": "동적 평형은 겉보기 변화가 없을 뿐, 입자 수준에서는 두 방향의 변화가 끊임없이 이어지는 상태다.",
+      "form": {
+        "condition": "평형에 이른 뒤 계를 건드리지 않고 그대로 둘 때",
+        "type": "conditional",
+        "scope": "화학 반응과 상태 변화 양쪽에서의 동적 평형"
+      },
+      "invertible": true,
+      "invertible_reason": "입자 수준에서까지 멈춘 상태는 '동적'이라는 규정과 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동적 평형에서는 입자 수준에서도 두 방향의 변화가 모두 멈춘다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "동적 평형에서는 반응물과 생성물의 양이 서로 같다",
+      "why_wrong": "같아지는 것은 양이 아니라 두 방향의 빠르기다. 어느 쪽이 얼마나 많은지는 반응과 온도에 따라 제각각이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cde-rate"
+    },
+    {
+      "text": "동적 평형에 이르면 정반응과 역반응이 둘 다 멈춘다",
+      "why_wrong": "두 반응은 계속 일어난다. 다만 같은 빠르기로 맞물려서 겉으로 보이는 양이 달라지지 않을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cde-macro"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mate-dynamic-equilibrium",
+      "note": "그쪽은 증발·응축 같은 상태 변화 맥락에서 다룬다",
+      "grade_from": "물질과 에너지"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-reversible-reaction"
+    },
+    {
+      "type": "next",
+      "target": "chem-chemical-equilibrium",
+      "note": "화학 반응에서의 동적 평형이 화학 평형이다"
+    },
+    {
+      "type": "next",
+      "target": "chem-saturated-solution",
+      "note": "용해와 석출이 맞물린 자리"
+    },
+    {
+      "type": "next",
+      "target": "chem-phase-equilibrium",
+      "note": "상 사이에서 맞물린 자리"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-01",
+  "pages": [
+    110,
+    111,
+    119
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "quiz_ready": false
+}

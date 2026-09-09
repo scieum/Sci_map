@@ -1,0 +1,124 @@
+{
+  "id": "chem-exothermic-reaction",
+  "concept_key": "concept:exothermic-reaction",
+  "registry_status": "reused",
+  "term": "발열 반응",
+  "notation": {
+    "hanja": "發熱反應",
+    "hanja_gloss": "發 필 발 · 熱 더울 열 · 反 돌이킬 반 · 應 응할 응",
+    "english": "exothermic reaction"
+  },
+  "definition": "진행되는 동안 열을 바깥으로 내놓는 반응. 평형을 다룰 때는 온도를 내렸을 때 우세해지는 쪽으로 읽는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cxo-cooling",
+      "text": "정반응이 발열인 가역 반응은 온도를 내리면 정반응 쪽으로 평형이 옮겨 간다.",
+      "form": {
+        "condition": "농도와 부피는 그대로 두고 온도만 내릴 때",
+        "type": "causal",
+        "scope": "정반응이 열을 내놓는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "온도를 내렸는데 열을 흡수하는 쪽으로 가면 온도가 더 내려가므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "정반응이 발열인 가역 반응은 온도를 내리면 역반응 쪽으로 평형이 옮겨 간다."
+    },
+    {
+      "id": "rel-cxo-pair",
+      "text": "한 가역 반응의 정반응이 발열이면 그 역반응은 반드시 흡열이다.",
+      "form": {
+        "condition": "같은 가역 반응의 두 방향을 나란히 놓고 볼 때",
+        "type": "conditional",
+        "scope": "열의 출입이 뚜렷한 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방향이 모두 열을 내놓으면 한 바퀴 돌 때마다 열이 생겨나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 가역 반응의 정반응이 발열이면 그 역반응도 발열이다."
+    },
+    {
+      "id": "rel-cxo-co2",
+      "text": "이산화 탄소가 물에 녹는 반응은 발열이라 음료를 차게 둘수록 더 많이 녹아 있다.",
+      "form": {
+        "condition": "압력은 그대로 두고 음료의 온도만 내릴 때",
+        "type": "causal",
+        "scope": "기체가 액체에 녹는 발열 용해 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "발열 쪽이 우세해지려면 온도를 내려야 하므로 데울수록 많이 녹는다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이산화 탄소가 물에 녹는 반응은 발열이라 음료를 데울수록 더 많이 녹아 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발열 반응은 온도를 올릴수록 더 잘 일어난다",
+      "why_wrong": "온도를 올리면 평형은 오히려 흡열 쪽으로 옮겨 간다. 발열 쪽을 우세하게 하려면 온도를 내려야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cxo-cooling"
+    },
+    {
+      "text": "정반응이 발열이면 역반응도 열을 내놓는다",
+      "why_wrong": "역반응은 정반응을 거꾸로 되짚는 변화라 열의 출입 방향도 반대다. 정반응이 발열이면 역반응은 흡열이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cxo-pair"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mate-exothermic-reaction",
+      "note": "그쪽은 엔탈피 부호로 규정한다",
+      "grade_from": "물질과 에너지"
+    },
+    {
+      "type": "same",
+      "target": "isci2-exothermic-reaction",
+      "note": "그쪽은 '에너지 방출'을 표제어로 삼아 상태 변화까지 아우른다",
+      "grade_from": "통합과학2"
+    },
+    {
+      "type": "next",
+      "target": "chem-effect-of-temperature-on-equilibrium",
+      "note": "열의 출입 방향을 알아야 온도 효과를 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "chem-endothermic-reaction",
+      "note": "열의 방향이 정반대인 짝"
+    },
+    {
+      "type": "related",
+      "target": "chem-reverse-reaction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-02",
+  "pages": [
+    131,
+    133,
+    135
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}

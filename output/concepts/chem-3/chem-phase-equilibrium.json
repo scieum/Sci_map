@@ -1,0 +1,117 @@
+{
+  "id": "chem-phase-equilibrium",
+  "concept_key": "concept:phase-equilibrium",
+  "registry_status": "new",
+  "term": "상평형",
+  "homonym_flag": true,
+  "notation": {
+    "hanja": "相平衡",
+    "hanja_gloss": "相 서로 상 · 平 평평할 평 · 衡 저울대 형",
+    "english": "phase equilibrium"
+  },
+  "definition": "고체·액체·기체 가운데 둘 이상의 상이 서로 오가면서도 각각의 양이 달라지지 않아 함께 머무는 평형 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-phq-exchange",
+      "text": "상평형에서는 한 상에서 다른 상으로 건너가는 입자 수와 되돌아오는 입자 수가 같다.",
+      "form": {
+        "condition": "온도와 압력이 일정하게 유지되는 밀폐된 계에서",
+        "type": "conditional",
+        "scope": "같은 물질의 두 상이 맞닿아 있는 계",
+        "antecedent": {
+          "quantity": "한 상에서 다른 상으로 건너가는 입자 수",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "되돌아오는 입자 수",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "건너가는 쪽이 더 많으면 한 상의 양이 계속 줄어 평형이 아니게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상평형에서는 한 상에서 다른 상으로 건너가는 입자 수가 되돌아오는 입자 수보다 많다."
+    },
+    {
+      "id": "rel-phq-is-dynamic",
+      "text": "상평형은 상태 변화에서 나타나는 동적 평형이라 겉보기 양이 일정해도 변화 자체는 이어진다.",
+      "form": {
+        "condition": "평형에 이른 뒤 계를 건드리지 않고 그대로 둘 때",
+        "type": "classification",
+        "scope": "물리적 변화에서 성립하는 동적 평형"
+      },
+      "invertible": true,
+      "invertible_reason": "상태 변화가 완전히 멈춘다면 동적 평형이라는 규정과 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상평형에 이르면 두 상 사이의 상태 변화가 완전히 멈춘다."
+    },
+    {
+      "id": "rel-phq-ice-vapor",
+      "text": "온도와 압력을 충분히 낮추면 얼음과 수증기가 액체를 거치지 않고 곧바로 오가며 평형을 이룬다.",
+      "form": {
+        "condition": "액체 상태가 나타나지 않을 만큼 압력을 낮추었을 때",
+        "type": "conditional",
+        "scope": "물의 승화가 일어나는 저온·저압 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 명제라 방향만 뒤집으면 참·거짓이 한 가지로 정해지지 않는다.",
+      "curriculum": [
+        "12화학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상평형은 두 상의 양이 정확히 반씩 될 때 이루어진다",
+      "why_wrong": "양의 비는 상관이 없다. 두 상 사이를 오가는 입자 수가 같기만 하면 어느 쪽이 많든 상평형이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phq-exchange"
+    },
+    {
+      "text": "얼음과 수증기가 함께 있는 상태에서는 승화가 멈춰 있다",
+      "why_wrong": "승화와 그 반대 변화가 같은 빠르기로 계속 일어난다. 그래서 겉보기 양만 그대로인 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phq-is-dynamic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-dynamic-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-equilibrium",
+      "note": "화학 반응 쪽 평형과 나란히 놓고 본다"
+    },
+    {
+      "type": "related",
+      "target": "chem-reversible-reaction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-01"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-1-02",
+  "pages": [
+    118
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "quiz_ready": false
+}

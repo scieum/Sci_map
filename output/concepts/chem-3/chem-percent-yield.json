@@ -1,0 +1,112 @@
+{
+  "id": "chem-percent-yield",
+  "concept_key": "concept:percent-yield",
+  "registry_status": "new",
+  "term": "수득률",
+  "notation": {
+    "hanja": "收得率",
+    "hanja_gloss": "收 거둘 수 · 得 얻을 득 · 率 비율 률",
+    "english": "percent yield"
+  },
+  "definition": "화학 반응식대로라면 얻어야 할 생성물의 양에 견주어, 실제로 거둔 생성물의 양이 차지하는 비율.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-yld-shift",
+      "text": "평형을 생성물 쪽으로 옮기는 조건을 골라 주면 같은 반응에서도 수득률을 높일 수 있다.",
+      "form": {
+        "condition": "가역 반응으로 생성물을 얻는 공정에서 조건을 고를 때",
+        "type": "causal",
+        "scope": "평형에 도달하는 가역 반응의 생산 공정"
+      },
+      "invertible": true,
+      "invertible_reason": "반응물 쪽으로 옮기면 생성물이 줄어드니 수득률이 높아진다는 진술은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형을 반응물 쪽으로 옮기는 조건을 골라 주면 수득률을 높일 수 있다."
+    },
+    {
+      "id": "rel-yld-ammonia",
+      "text": "암모니아 합성의 정반응은 기체 분자 수가 줄고 열이 나므로 압력을 높이고 온도를 낮출수록 평형에 유리하다.",
+      "form": {
+        "condition": "평형 이동만 놓고 공정 조건을 따질 때",
+        "type": "conditional",
+        "scope": "질소와 수소로 암모니아를 얻는 가역 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "분자 수가 줄고 열이 나는 정반응은 고압·저온에서 우세해지므로 반대로 말하는 것은 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "암모니아 합성은 압력을 낮추고 온도를 높일수록 평형에 유리하다."
+    },
+    {
+      "id": "rel-yld-cap",
+      "text": "수득률은 이론값에 대한 실제값의 비율이라 100 %를 넘을 수 없다.",
+      "form": {
+        "condition": "같은 화학 반응식으로 이론값을 셈했을 때",
+        "type": "conditional",
+        "scope": "수득률의 정의가 미치는 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "실제로 거둔 양이 이론상 최대량을 넘을 수는 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12화학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수득률은 조건을 잘 맞추면 100 %를 넘을 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "가역 반응에서도 조건만 잘 맞추면 수득률을 100 %까지 올릴 수 있다",
+      "why_wrong": "가역 반응은 평형에서 반응물이 얼마간 남는다. 평형을 생성물 쪽으로 크게 옮겨도 100 %에 닿지는 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-yld-cap"
+    },
+    {
+      "text": "암모니아 합성은 온도를 낮출수록 유리하므로 공장에서도 낮은 온도로 돌린다",
+      "why_wrong": "평형만 보면 그렇지만 온도가 너무 낮으면 반응이 느려 실제로 얻기 어렵다. 그래서 적당히 높은 온도를 골라 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-yld-ammonia"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-le-chatelier-principle"
+    },
+    {
+      "type": "related",
+      "target": "chem-effect-of-pressure-on-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-effect-of-temperature-on-equilibrium"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-equilibrium"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12화학03-04"
+  ],
+  "subject": "화학",
+  "unit": "Ⅲ. 화학 평형",
+  "unit_id": "chem-3",
+  "topic_id": "chem-3-2-03",
+  "pages": [
+    136
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "quiz_ready": false
+}
