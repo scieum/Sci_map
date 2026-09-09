@@ -128,7 +128,18 @@ def check_duplicates(cands, res: Result, unit_id: str = "") -> None:
     #   표제어가 겹치는 게 당연하기 때문이다(mate-1 후보 30개가 mate-1 카드 30장과
     #   전부 겹쳐 fail 했다). 이 검사가 잡으려는 것은 **다른 단원**의 카드와 겹치는데
     #   same 후보 표시가 없는 경우다.
+    #
+    # ★ **양방향으로 본다** (2026-09-09 교사 결정). 예전에는 후보에 same_candidate 가
+    #   있느냐만 물었는데, 그러면 **나중에 생긴 카드** 때문에 옛 후보 파일이 소급해서
+    #   fail 한다 — reac-3 후보(2026-09-07 작성)가 통합과학1 카드(2026-09-08 작성)와
+    #   표제어가 겹친다고 실패하는 식이다. 옛 파일의 작성자가 알 수 없던 일이다.
+    #
+    #   진짜 기준은 R9 다: **concept_key 가 같으면 이미 같은 개념으로 이어진 것**이고,
+    #   same_candidate 는 그 사실을 아직 키로 확정하기 전의 메모일 뿐이다. 그러니
+    #   키가 같으면 통과시키고(어느 쪽이 먼저 쓰였든 상관없다), 키가 **다른데 표기만
+    #   같은** 경우만 잡는다 — 그것이 동음이의이거나 재사용을 놓친 경우다.
     existing: dict[str, str] = {}
+    existing_key: dict[str, str] = {}
     card_files = (sorted(CONCEPTS_DIR.glob("*.draft.json"))
                   + sorted(CONCEPTS_DIR.glob("*.card.json"))
                   + [q for q in sorted(CONCEPTS_DIR.glob("*/*.json"))
@@ -141,14 +152,29 @@ def check_duplicates(cands, res: Result, unit_id: str = "") -> None:
             continue
         if isinstance(card, dict) and "term" in card:
             existing[norm(card["term"])] = card.get("id", p.stem)
+            existing_key[norm(card["term"])] = card.get("concept_key")
     if not existing:
         res.warn("term_vs_existing_cards", "기존 카드가 없다 — 1차 단원이면 정상")
     else:
-        bad = [c["term"] + " <-> " + existing[norm(c["term"])]
-               for c in cands
-               if norm(c["term"]) in existing and not c.get("same_candidate")]
+        bad, linked = [], []
+        for c in cands:
+            t = norm(c["term"])
+            if t not in existing:
+                continue
+            if c.get("concept_key") and c["concept_key"] == existing_key.get(t):
+                # 키가 같다 = 이미 같은 개념이다. 어느 쪽을 먼저 썼든 상관없다.
+                linked.append(c["term"] + " <-> " + existing[t] + " (" + c["concept_key"] + ")")
+            elif not c.get("same_candidate"):
+                bad.append(c["term"] + " <-> " + existing[t]
+                           + " (키가 다르다: " + str(c.get("concept_key"))
+                           + " vs " + str(existing_key.get(t)) + ")")
         res.add("term_vs_existing_cards", not bad,
-                "기존 카드와 표제어 중복인데 same_candidate 가 빈 것 " + str(len(bad)) + "건", bad)
+                "다른 단원 카드와 표제어가 같은데 concept_key 도 same_candidate 도 없는 것 "
+                + str(len(bad)) + "건", bad)
+        if linked:
+            res.warn("term_vs_existing_cards_linked",
+                     "표제어가 같고 concept_key 도 같다 — 이미 이어져 있다 "
+                     + str(len(linked)) + "건", linked)
 
 
 def check_hierarchy(doc, cands, res: Result) -> None:
