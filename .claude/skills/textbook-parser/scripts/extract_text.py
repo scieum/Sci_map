@@ -70,10 +70,18 @@ def page_roles(unit: dict) -> dict[int, dict]:
         (extras.get("project"), "project"),
         (extras.get("career"), "career"),
     ) if pno)
+    #
+    # ★ 중단원으로 선언된 쪽은 덮지 않는다. 이 표시들은 단원 끝에 모여 있는 것이
+    #   보통이지만(물질과 에너지·화학 반응의 세계), 화학 Ⅰ단원은 직업 탐구가 024쪽
+    #   — 중단원 1(014~027) **안**에 있다. 덮게 두면 다음 표시(단원 마무리 050) 직전인
+    #   049쪽까지가 통째로 career 가 되어 중단원 2 본문 전체가 활동 지면으로 잘못
+    #   표시된다. 카드 원천은 role=body 라서 그대로 두면 C1 이 본문을 못 읽는다.
+    in_section = {pno for sec in unit["sections"]
+                  for pno in range(sec["pages"][0], sec["pages"][1] + 1)}
     for i, (start, role) in enumerate(marks):
         end = marks[i + 1][0] - 1 if i + 1 < len(marks) else last
         for pno in range(start, end + 1):
-            if pno in roles:
+            if pno in roles and pno not in in_section:
                 roles[pno] = {"section_id": None, "topic_id": None, "role": role}
     return roles
 

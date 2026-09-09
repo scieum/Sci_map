@@ -1,0 +1,658 @@
+{
+  "unit_id": "chem-3",
+  "subject": "화학",
+  "unit_title": "Ⅲ. 화학 평형",
+  "generated_at": "2026-09-09T00:00:00+09:00",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/chem-3/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "chem-forward-reaction",
+      "term": "정반응",
+      "term_en": "forward reaction",
+      "concept_key": "concept:forward-reaction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [107, 113, 117],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "supporting",
+      "difficulty": 1,
+      "evidence": [
+        {"page": 107, "block_id": "p107-b15", "hint": "오른쪽으로 진행되는 반응의 이름"},
+        {"page": 113, "block_id": "p113-b3", "hint": "생성물이 생성되는 반응"},
+        {"page": 117, "block_id": "p117-b1", "hint": "정반응이 우세한 경우"}
+      ],
+      "relation_seeds": [
+        "화학 반응식에서 오른쪽 방향으로 진행되는 반응",
+        "정반응 속도와 역반응 속도가 같아지는 상태",
+        "K가 1보다 매우 클 때 정반응 우세"
+      ],
+      "note": "역반응과 짝을 이루는 방향 규정이다. 두 카드가 서로를 참조하도록 C2에서 조율하라."
+    },
+    {
+      "id": "chem-reverse-reaction",
+      "term": "역반응",
+      "term_en": "reverse reaction",
+      "concept_key": "concept:reverse-reaction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [107, 113, 117],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "supporting",
+      "difficulty": 1,
+      "evidence": [
+        {"page": 107, "block_id": "p107-b15", "hint": "왼쪽으로 진행되는 반응의 이름"},
+        {"page": 113, "block_id": "p113-b3", "hint": "생성물이 반응물로 변하는 반응"},
+        {"page": 117, "block_id": "p117-b1", "hint": "역반응이 우세한 경우"}
+      ],
+      "relation_seeds": [
+        "화학 반응식에서 왼쪽 방향으로 진행되는 반응",
+        "K가 1보다 매우 작을 때 역반응 우세",
+        "역반응 속도와 정반응 속도가 같아지는 상태"
+      ]
+    },
+    {
+      "id": "chem-reversible-reaction",
+      "term": "가역 반응",
+      "term_en": "reversible reaction",
+      "concept_key": "concept:reversible-reaction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [107, 109, 119],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 107, "block_id": "p107-b15", "hint": "정반응과 역반응이 모두 일어나는 반응"},
+        {"page": 109, "block_id": "p109-b1", "hint": "조건에 따라 양방향으로 진행"},
+        {"page": 119, "block_id": "p119-b5", "hint": "생각 그물 - 가역 반응 정의칸"}
+      ],
+      "relation_seeds": [
+        "정반응과 역반응이 모두 일어날 수 있는 반응",
+        "가역 반응과 화살표 기호 표기",
+        "충분한 시간이 지나면 가역 반응은 평형에 도달한다"
+      ],
+      "note": "이 단원 전체의 출발 개념이다. 교과서는 ⇄ 기호로 표기하는데 추출 텍스트에서 기호가 깨진다 — 표기는 C7 삽화로 보완할 것."
+    },
+    {
+      "id": "chem-irreversible-reaction",
+      "term": "비가역 반응",
+      "term_en": "irreversible reaction",
+      "concept_key": "concept:irreversible-reaction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [107, 120],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 107, "block_id": "p107-b8", "hint": "한쪽 방향으로만 진행되는 반응 예"},
+        {"page": 107, "block_id": "p107-b15", "hint": "비가역 반응의 정의 문장"},
+        {"page": 120, "block_id": "p120-b6", "hint": "가역·비가역 구분 문항"}
+      ],
+      "relation_seeds": [
+        "한쪽 방향으로만 진행되는 반응",
+        "비가역 반응과 평형 도달 여부",
+        "연소·중화처럼 역반응이 거의 일어나지 않는 반응"
+      ]
+    },
+    {
+      "id": "chem-dynamic-equilibrium",
+      "term": "동적 평형",
+      "term_en": "dynamic equilibrium",
+      "concept_key": "concept:dynamic-equilibrium",
+      "registry_status": "reused",
+      "same_candidate": ["mate-dynamic-equilibrium"],
+      "homonym_flag": false,
+      "pages": [110, 111, 119],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 110, "block_id": "p110-b1", "hint": "정반응·역반응 속도가 같은 상태"},
+        {"page": 111, "block_id": "p111-b10", "hint": "동위 원소 추적으로 확인"},
+        {"page": 119, "block_id": "p119-b10", "hint": "생각 그물 - 동적 평형 정의칸"}
+      ],
+      "relation_seeds": [
+        "정반응 속도와 역반응 속도가 같아 양적 변화가 없는 상태",
+        "겉보기 변화 없음과 반응의 계속 진행",
+        "밀폐 용기에서 증발 속도와 응축 속도"
+      ],
+      "note": "물질과 에너지 Ⅰ단원 카드(mate-dynamic-equilibrium)와 같은 키다. 그쪽은 상태 변화 맥락, 여기는 화학 반응 맥락이라 서술 범위가 넓다 — C2에서 그 카드를 먼저 읽고 겹치지 않게 쓰라."
+    },
+    {
+      "id": "chem-chemical-equilibrium",
+      "term": "화학 평형",
+      "term_en": "chemical equilibrium",
+      "aliases": ["화학 평형 상태"],
+      "concept_key": "concept:chemical-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [112, 113, 119],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 112, "block_id": "p112-b28", "hint": "농도가 일정하게 유지되는 상태"},
+        {"page": 113, "block_id": "p113-b12", "hint": "화학 평형의 특징 4가지"},
+        {"page": 119, "block_id": "p119-b15", "hint": "생각 그물 - 화학 평형 가지"}
+      ],
+      "relation_seeds": [
+        "반응물과 생성물의 농도가 시간에 따라 변하지 않는 상태",
+        "초기 농도가 달라도 같은 온도에서 평형에 도달한다",
+        "화학 평형은 정반응 속도와 역반응 속도가 같은 동적 평형이다"
+      ],
+      "note": "'평형'은 이 교과서 안에서만도 동적 평형·상평형·화학 평형으로 갈린다. homonyms.yaml 에 surface '평형'이 없어 flag 를 세우지 못했다 — notes 의 제안 참조."
+    },
+    {
+      "id": "chem-saturated-solution",
+      "term": "포화 용액",
+      "term_en": "saturated solution",
+      "aliases": ["포화 수용액"],
+      "concept_key": "concept:saturated-solution",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [111, 114],
+      "topic_id": "chem-3-1-01",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 111, "block_id": "p111-b11", "hint": "용해·석출이 동적 평형인 수용액"},
+        {"page": 111, "block_id": "p111-b10", "hint": "포화 수용액에서도 용해·석출 진행"},
+        {"page": 114, "block_id": "p114-b10", "hint": "포화 용액의 농도는 양에 무관"}
+      ],
+      "relation_seeds": [
+        "용해 반응과 석출 반응이 동적 평형에 도달한 용액",
+        "일정한 온도에서 포화 용액의 농도와 용액의 양",
+        "겉보기에 용해가 멈춘 것처럼 보이는 상태"
+      ],
+      "note": "이 단원에서 동적 평형을 눈으로 확인시키는 자리다(동위 원소 추적). 용해도 개념 자체는 이 단원 범위 밖이다."
+    },
+    {
+      "id": "chem-phase-equilibrium",
+      "term": "상평형",
+      "term_en": "phase equilibrium",
+      "concept_key": "concept:phase-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": true,
+      "pages": [118],
+      "topic_id": "chem-3-1-02",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-01"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 118, "block_id": "p118-b9", "hint": "두 가지 이상 상태가 공존하는 평형"},
+        {"page": 118, "block_id": "p118-b5", "hint": "얼음과 수증기 사이의 동적 평형"}
+      ],
+      "relation_seeds": [
+        "두 가지 이상의 상이 평형을 이루며 공존하는 상태",
+        "낮은 온도·압력에서 얼음과 수증기의 평형",
+        "상평형과 동적 평형의 포함 관계"
+      ],
+      "note": "'상'이 homonyms.yaml 의 watch_term(물질의 상 ↔ 광학의 상)이라 homonym_flag 를 세웠다. 여기서는 concept:phase-matter 쪽 뜻이다. 표제어 자체가 '상'은 아니므로 검사 스크립트는 이 flag 를 요구하지 않는다 — 링크 판정을 사람 게이트로 보내려고 일부러 세웠다."
+    },
+    {
+      "id": "chem-molarity",
+      "term": "몰농도",
+      "term_en": "molarity",
+      "concept_key": "concept:molarity",
+      "registry_status": "reused",
+      "same_candidate": ["mate-molarity"],
+      "homonym_flag": false,
+      "pages": [112, 116],
+      "topic_id": "chem-3-1-02",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-02"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 112, "block_id": "p112-b31", "hint": "용액 1 L 속 용질의 양(mol)"},
+        {"page": 116, "block_id": "p116-b13", "hint": "평형 상수식에 대입하는 값"}
+      ],
+      "relation_seeds": [
+        "용액 1 L에 들어 있는 용질의 양(mol)",
+        "평형 상수식에 대입하는 것은 양(mol)이 아니라 몰농도다",
+        "기체의 농도와 용기의 부피"
+      ],
+      "note": "교과서가 '자세히는 Ⅳ단원에서'라고 미룬 개념이다. 여기서는 평형 상수식을 읽기 위한 도구로만 쓰이므로 context 로 두었다. mate-molarity 와 같은 키다."
+    },
+    {
+      "id": "chem-equilibrium-concentration",
+      "term": "평형 농도",
+      "term_en": "equilibrium concentration",
+      "concept_key": "concept:equilibrium-concentration",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [112, 114, 116],
+      "topic_id": "chem-3-1-02",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-02"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 112, "block_id": "p112-b29", "hint": "평형 상태에서 각 물질의 농도"},
+        {"page": 114, "block_id": "p114-b13", "hint": "초기 농도와 평형 농도 표"},
+        {"page": 116, "block_id": "p116-b10", "hint": "초기·평형 농도 정리 단계"}
+      ],
+      "relation_seeds": [
+        "화학 평형 상태에서 각 물질이 갖는 농도",
+        "초기 농도가 달라지면 평형 농도도 달라진다",
+        "평형 농도와 반응물·생성물의 우세 판단"
+      ]
+    },
+    {
+      "id": "chem-law-of-chemical-equilibrium",
+      "term": "화학 평형 법칙",
+      "term_en": "law of chemical equilibrium",
+      "concept_key": "concept:law-of-chemical-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [114, 115],
+      "topic_id": "chem-3-1-02",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-02"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 115, "block_id": "p115-b2", "hint": "농도 곱의 비가 일정하다는 법칙"},
+        {"page": 115, "block_id": "p115-b4", "hint": "일반식 aA+bB ⇄ cC+dD"},
+        {"page": 114, "block_id": "p114-b13", "hint": "탐구 - 농도 조합별 값 비교"}
+      ],
+      "relation_seeds": [
+        "반응물의 농도 곱에 대한 생성물의 농도 곱의 비는 일정하다",
+        "반응 계수가 농도의 지수로 들어간다",
+        "온도가 일정할 때 초기 농도와 무관하게 성립한다"
+      ],
+      "note": "평형 상수(core)의 근거가 되는 법칙이라 위계에서 from 쪽이다. 탐구(114쪽)의 세 실험 자료가 이 법칙의 귀납 근거다."
+    },
+    {
+      "id": "chem-equilibrium-constant",
+      "term": "평형 상수",
+      "term_en": "equilibrium constant",
+      "concept_key": "concept:equilibrium-constant",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [115, 116, 117, 119],
+      "topic_id": "chem-3-1-02",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 115, "block_id": "p115-b6", "hint": "K의 이름과 온도 의존성"},
+        {"page": 116, "block_id": "p116-b36", "hint": "초기 농도가 달라도 K는 일정"},
+        {"page": 117, "block_id": "p117-b1", "hint": "K의 크기와 우세한 반응"},
+        {"page": 119, "block_id": "p119-b25", "hint": "생각 그물 - 평형 상수 가지"}
+      ],
+      "relation_seeds": [
+        "온도가 일정하면 평형 상수는 초기 농도·압력과 무관하게 일정하다",
+        "K가 1보다 매우 크면 정반응이 우세하다",
+        "온도가 변하면 평형 상수가 달라진다"
+      ],
+      "note": "기호 K. 성취기준 12화학03-02 의 중심 개념이다."
+    },
+    {
+      "id": "chem-equilibrium-constant-expression",
+      "term": "평형 상수식",
+      "term_en": "equilibrium constant expression",
+      "concept_key": "concept:equilibrium-constant-expression",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [115, 127],
+      "topic_id": "chem-3-1-02",
+      "section_id": "chem-3-1",
+      "curriculum": ["12화학03-02"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 115, "block_id": "p115-b6", "hint": "K를 농도로 나타낸 식"},
+        {"page": 115, "block_id": "p115-b28", "hint": "순수한 액체·고체는 상수와 같다"},
+        {"page": 127, "block_id": "p127-b8", "hint": "고체·액체는 식에 쓰지 않는다"}
+      ],
+      "relation_seeds": [
+        "생성물의 농도 곱을 반응물의 농도 곱으로 나눈 식",
+        "순수한 액체·고체는 평형 상수식에 나타내지 않는다",
+        "반응 계수가 각 농도의 지수가 된다"
+      ],
+      "note": "수식이 전용 글꼴이라 추출이 깨진다(115·116·127쪽). 식은 C7 삽화로 붙이고 카드 정의를 문자열 수식에 기대지 마라."
+    },
+    {
+      "id": "chem-reaction-quotient",
+      "term": "반응 지수",
+      "term_en": "reaction quotient",
+      "concept_key": "concept:reaction-quotient",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [124, 125, 139],
+      "topic_id": "chem-3-2-01",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-03"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 124, "block_id": "p124-b1", "hint": "농도를 평형 상수식에 대입한 값"},
+        {"page": 124, "block_id": "p124-b3", "hint": "Q의 일반식"},
+        {"page": 125, "block_id": "p125-b12", "hint": "예제 - Q 계산 단계"},
+        {"page": 139, "block_id": "p139-b21", "hint": "생각 그물 - K와 Q 가지"}
+      ],
+      "relation_seeds": [
+        "임의의 시점 농도를 평형 상수식에 대입해 얻은 값",
+        "Q는 평형 상태가 아닐 때에도 정의된다",
+        "Q와 K의 대소 비교"
+      ],
+      "note": "기호 Q. 평형 상수와 같은 꼴의 식이지만 '평형 농도가 아닌 농도'를 넣는다는 점이 갈림길이다 — C2에서 이 차이를 명제로 세워라."
+    },
+    {
+      "id": "chem-direction-of-reaction",
+      "term": "반응의 진행 방향",
+      "term_en": "direction of reaction",
+      "concept_key": "concept:direction-of-reaction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [123, 124, 125, 139],
+      "topic_id": "chem-3-2-01",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 124, "block_id": "p124-b5", "hint": "Q와 K로 방향을 예측한다"},
+        {"page": 125, "block_id": "p125-b1", "hint": "Q<K 정반응, Q>K 역반응"},
+        {"page": 123, "block_id": "p123-b6", "hint": "소주제 학습 목표 문장"},
+        {"page": 139, "block_id": "p139-b24", "hint": "생각 그물 - Q<K 가지"}
+      ],
+      "relation_seeds": [
+        "Q < K이면 정반응이 우세하게 진행된다",
+        "Q = K이면 평형 상태다",
+        "Q > K이면 역반응이 우세하게 진행된다"
+      ],
+      "note": "성취기준 12화학03-03 의 표제 문구다. 반응 지수 카드가 '양의 정의'를 맡고 이 카드가 '판정 규칙'을 맡도록 C2에서 분담하라 — 그러지 않으면 두 카드의 명제가 겹친다."
+    },
+    {
+      "id": "chem-equilibrium-shift",
+      "term": "평형 이동",
+      "term_en": "shift of equilibrium",
+      "aliases": ["화학 평형의 이동"],
+      "concept_key": "concept:equilibrium-shift",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [126, 139],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 126, "block_id": "p126-b8", "hint": "조건이 변해 새 평형에 도달하는 현상"},
+        {"page": 139, "block_id": "p139-b25", "hint": "생각 그물 - 화학 평형의 이동 중심"}
+      ],
+      "relation_seeds": [
+        "외부 조건이 변하면 한쪽 반응이 우세해져 새로운 평형에 도달한다",
+        "평형 이동과 반응 지수·평형 상수의 대소",
+        "농도·압력·온도가 평형을 이동시키는 조건이다"
+      ]
+    },
+    {
+      "id": "chem-effect-of-concentration-on-equilibrium",
+      "term": "농도 변화와 평형 이동",
+      "term_en": "effect of concentration on equilibrium",
+      "concept_key": "concept:effect-of-concentration-on-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [126, 127, 132, 139],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 127, "block_id": "p127-b14", "hint": "반응물 증가 시 정반응 쪽 이동"},
+        {"page": 127, "block_id": "p127-b15", "hint": "농도 변화와 Q·K 비교 정리"},
+        {"page": 132, "block_id": "p132-b11", "hint": "르샤틀리에 원리로 본 농도 변화"},
+        {"page": 139, "block_id": "p139-b22", "hint": "생각 그물 - 농도가 변할 때"}
+      ],
+      "relation_seeds": [
+        "반응물 농도 증가 또는 생성물 농도 감소와 정반응 쪽 이동",
+        "농도 변화와 반응 지수의 증감",
+        "농도가 변해도 온도가 같으면 평형 상수는 변하지 않는다"
+      ]
+    },
+    {
+      "id": "chem-effect-of-pressure-on-equilibrium",
+      "term": "압력 변화와 평형 이동",
+      "term_en": "effect of pressure on equilibrium",
+      "concept_key": "concept:effect-of-pressure-on-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [128, 129, 133, 139],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 128, "block_id": "p128-b1", "hint": "압력이 부피·농도를 바꾼다"},
+        {"page": 129, "block_id": "p129-b18", "hint": "반응 계수 합에 따른 이동 방향"},
+        {"page": 133, "block_id": "p133-b2", "hint": "기체 분자 수가 감소하는 쪽"},
+        {"page": 139, "block_id": "p139-b26", "hint": "생각 그물 - 압력이 변할 때"}
+      ],
+      "relation_seeds": [
+        "압력을 높이면 기체 분자 수가 감소하는 반응 쪽으로 이동한다",
+        "반응물과 생성물의 계수 합이 같으면 압력의 영향을 받지 않는다",
+        "부피 변화와 몰농도 변화, 그에 따른 반응 지수"
+      ],
+      "note": "'기체 분자 수'는 화학 반응식의 계수 합이다. 계수 개념 자체는 Ⅰ단원 몫이라 excluded 에 두었다."
+    },
+    {
+      "id": "chem-effect-of-temperature-on-equilibrium",
+      "term": "온도 변화와 평형 이동",
+      "term_en": "effect of temperature on equilibrium",
+      "concept_key": "concept:effect-of-temperature-on-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [130, 131, 133, 139],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 130, "block_id": "p130-b1", "hint": "온도가 변할 때의 평형 이동"},
+        {"page": 131, "block_id": "p131-b17", "hint": "온도가 변하면 평형 상수가 달라진다"},
+        {"page": 133, "block_id": "p133-b3", "hint": "온도를 높이면 흡열 반응 쪽"},
+        {"page": 139, "block_id": "p139-b27", "hint": "생각 그물 - 온도가 변할 때"}
+      ],
+      "relation_seeds": [
+        "온도를 높이면 흡열 반응 쪽으로 평형이 이동한다",
+        "온도를 낮추면 발열 반응 쪽으로 평형이 이동한다",
+        "온도 변화는 평형 상수 자체를 바꾼다"
+      ],
+      "note": "농도·압력 변화와 달리 평형 상수가 바뀐다는 점이 이 카드의 갈림길이다. C2에서 반드시 명제로 세울 것."
+    },
+    {
+      "id": "chem-exothermic-reaction",
+      "term": "발열 반응",
+      "term_en": "exothermic reaction",
+      "concept_key": "concept:exothermic-reaction",
+      "registry_status": "reused",
+      "same_candidate": ["mate-exothermic-reaction", "isci2-exothermic-reaction"],
+      "homonym_flag": false,
+      "pages": [131, 133, 135],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 131, "block_id": "p131-b7", "hint": "열을 방출하는 반응"},
+        {"page": 133, "block_id": "p133-b3", "hint": "온도를 낮추면 발열 쪽 이동"},
+        {"page": 135, "block_id": "p135-b4", "hint": "이산화 탄소 용해는 발열"}
+      ],
+      "relation_seeds": [
+        "열을 방출하는 반응",
+        "발열 반응 쪽 이동과 온도 낮춤",
+        "정반응이 발열이면 역반응은 흡열이다"
+      ],
+      "note": "mate-3·isci2-1 카드와 같은 키다. 이 단원에서는 온도에 따른 평형 이동을 읽기 위한 도구로만 쓰인다 — C2는 새 카드를 쓰지 말고 기존 카드에 이 단원 명제를 더할지 메인에 물어라."
+    },
+    {
+      "id": "chem-endothermic-reaction",
+      "term": "흡열 반응",
+      "term_en": "endothermic reaction",
+      "concept_key": "concept:endothermic-reaction",
+      "registry_status": "reused",
+      "same_candidate": ["mate-endothermic-reaction", "isci2-endothermic-reaction"],
+      "homonym_flag": false,
+      "pages": [131, 133],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 131, "block_id": "p131-b7", "hint": "열을 흡수하는 반응"},
+        {"page": 133, "block_id": "p133-b3", "hint": "온도를 높이면 흡열 쪽 이동"}
+      ],
+      "relation_seeds": [
+        "열을 흡수하는 반응",
+        "흡열 반응 쪽 이동과 온도 높임",
+        "정반응이 흡열이면 역반응은 발열이다"
+      ],
+      "note": "mate-3·isci2-1 카드와 같은 키다."
+    },
+    {
+      "id": "chem-le-chatelier-principle",
+      "term": "르샤틀리에 원리",
+      "term_en": "Le Chatelier's principle",
+      "aliases": ["평형 이동 법칙"],
+      "concept_key": "concept:le-chatelier-principle",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [132, 133],
+      "topic_id": "chem-3-2-02",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 132, "block_id": "p132-b3", "hint": "변화를 줄이는 방향으로 이동"},
+        {"page": 132, "block_id": "p132-b4", "hint": "원리 진술 상자"},
+        {"page": 133, "block_id": "p133-b2", "hint": "압력에 적용한 서술"}
+      ],
+      "relation_seeds": [
+        "외부 조건 변화로 평형이 깨지면 그 변화를 줄이는 방향으로 이동한다",
+        "농도·압력·온도 세 경우를 하나로 묶는 일반화",
+        "새로운 평형 상태의 도달"
+      ],
+      "note": "교과서는 '평형 이동 법칙'을 같은 뜻으로 쓴다(132쪽). 인물 르샤틀리에는 excluded."
+    },
+    {
+      "id": "chem-percent-yield",
+      "term": "수득률",
+      "term_en": "percent yield",
+      "concept_key": "concept:percent-yield",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [136],
+      "topic_id": "chem-3-2-03",
+      "section_id": "chem-3-2",
+      "curriculum": ["12화학03-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 136, "block_id": "p136-b12", "hint": "이론량 대비 실제량의 비율"},
+        {"page": 136, "block_id": "p136-b13", "hint": "암모니아 수득률과 평형 원리"}
+      ],
+      "relation_seeds": [
+        "이론상 얻을 수 있는 양에 대한 실제 얻은 양의 비율",
+        "평형을 생성물 쪽으로 이동시키면 수득률이 높아진다",
+        "산업 조건(온도·압력) 선택과 수득률"
+      ],
+      "note": "소주제 03(우리 주변의 화학 평형)에서 유일하게 정의된 개념이다. 나머지는 사례라 excluded 로 보냈다."
+    }
+  ],
+  "hierarchy": [
+    {"from": "chem-forward-reaction", "to": "chem-reversible-reaction", "note": "정반응·역반응의 뜻을 알아야 '둘 다 일어나는 반응'을 읽는다"},
+    {"from": "chem-reverse-reaction", "to": "chem-reversible-reaction", "note": "위와 같다"},
+    {"from": "chem-reversible-reaction", "to": "chem-irreversible-reaction", "note": "비가역은 가역의 부정으로 정의된다"},
+    {"from": "chem-reversible-reaction", "to": "chem-dynamic-equilibrium", "note": "동적 평형은 가역 반응에서만 성립한다"},
+    {"from": "chem-dynamic-equilibrium", "to": "chem-chemical-equilibrium", "note": "화학 평형은 화학 반응에서의 동적 평형이다"},
+    {"from": "chem-dynamic-equilibrium", "to": "chem-saturated-solution", "note": "포화 용액은 용해·석출의 동적 평형 상태다"},
+    {"from": "chem-dynamic-equilibrium", "to": "chem-phase-equilibrium", "note": "상평형은 상 사이의 동적 평형이다"},
+    {"from": "chem-chemical-equilibrium", "to": "chem-equilibrium-concentration", "note": "평형 상태라야 평형 농도가 정의된다"},
+    {"from": "chem-molarity", "to": "chem-equilibrium-concentration", "note": "농도의 단위 개념이 먼저다"},
+    {"from": "chem-equilibrium-concentration", "to": "chem-law-of-chemical-equilibrium", "note": "법칙은 평형 농도 사이의 규칙성이다"},
+    {"from": "chem-law-of-chemical-equilibrium", "to": "chem-equilibrium-constant", "note": "법칙이 말하는 '일정한 값'이 평형 상수다"},
+    {"from": "chem-equilibrium-constant", "to": "chem-equilibrium-constant-expression", "note": "K를 농도로 나타낸 식이 평형 상수식이다"},
+    {"from": "chem-equilibrium-constant-expression", "to": "chem-reaction-quotient", "note": "같은 식에 평형이 아닌 농도를 넣은 것이 Q다"},
+    {"from": "chem-equilibrium-constant", "to": "chem-direction-of-reaction", "note": "비교 기준이 K다"},
+    {"from": "chem-reaction-quotient", "to": "chem-direction-of-reaction", "note": "Q와 K의 대소가 방향을 정한다"},
+    {"from": "chem-chemical-equilibrium", "to": "chem-equilibrium-shift", "note": "이동할 평형이 먼저 있어야 한다"},
+    {"from": "chem-direction-of-reaction", "to": "chem-equilibrium-shift", "note": "평형 이동은 Q·K 비교로 설명된다"},
+    {"from": "chem-equilibrium-shift", "to": "chem-effect-of-concentration-on-equilibrium", "note": "평형 이동의 세 조건 중 하나"},
+    {"from": "chem-equilibrium-shift", "to": "chem-effect-of-pressure-on-equilibrium", "note": "평형 이동의 세 조건 중 하나"},
+    {"from": "chem-equilibrium-shift", "to": "chem-effect-of-temperature-on-equilibrium", "note": "평형 이동의 세 조건 중 하나"},
+    {"from": "chem-exothermic-reaction", "to": "chem-effect-of-temperature-on-equilibrium", "note": "열의 출입 방향을 알아야 온도 효과를 읽는다"},
+    {"from": "chem-endothermic-reaction", "to": "chem-effect-of-temperature-on-equilibrium", "note": "위와 같다"},
+    {"from": "chem-effect-of-concentration-on-equilibrium", "to": "chem-le-chatelier-principle", "note": "세 경우를 묶은 일반화가 원리다"},
+    {"from": "chem-effect-of-pressure-on-equilibrium", "to": "chem-le-chatelier-principle", "note": "위와 같다"},
+    {"from": "chem-effect-of-temperature-on-equilibrium", "to": "chem-le-chatelier-principle", "note": "위와 같다"},
+    {"from": "chem-le-chatelier-principle", "to": "chem-percent-yield", "note": "수득률을 높이는 조건은 원리로 설명된다"}
+  ],
+  "excluded": [
+    {"term": "색판 뒤집기", "reason": "활동", "note": "단원 열기의 모의 활동. 동적 평형의 비유일 뿐 개념이 아니다.", "pages": [104, 105]},
+    {"term": "가역 반응 관찰하기", "reason": "활동", "note": "황산 구리(II)·염화 코발트 종이 실험 절차.", "pages": [108]},
+    {"term": "화학 평형에서 평형 농도 사이의 규칙성 찾기", "reason": "활동", "note": "화학 평형 법칙의 귀납 근거가 되는 탐구 절차. 근거는 법칙 카드의 evidence 로 남겼다.", "pages": [114]},
+    {"term": "MSDS·폐수 처리 지침", "reason": "실험 유의사항", "note": "108·126·130쪽 유의할 점 상자.", "pages": [108, 126, 130]},
+    {"term": "메테인의 연소", "reason": "사례", "note": "비가역 반응의 예. 비가역 반응 카드의 명제에 흡수한다.", "pages": [107, 120]},
+    {"term": "물의 증발과 응축", "reason": "사례", "note": "가역 반응·동적 평형의 대표 예. 상태 변화 개념 자체는 물질과 에너지 Ⅰ단원 몫이다.", "pages": [107, 110, 120]},
+    {"term": "석회 동굴의 생성", "reason": "사례", "note": "가역 반응의 예.", "pages": [109]},
+    {"term": "수화물", "reason": "기타", "note": "109쪽 곁주 용어. 예시 반응식을 읽기 위한 보조어이고 이 단원에서 맺는 관계 명제가 없다.", "pages": [109]},
+    {"term": "동위 원소", "reason": "범위 밖", "note": "동적 평형을 확인하는 추적 수단으로만 쓰인다. 개념은 Ⅱ단원(물질의 구조와 성질) 이전 몫이다.", "pages": [110]},
+    {"term": "몰농도의 기호 M", "reason": "단위·기호", "note": "단위 표기. 개념(몰농도)은 카드로 만들었다.", "pages": [112]},
+    {"term": "동결 건조 식품", "reason": "사례", "note": "상평형 응용 읽기 자료.", "pages": [118]},
+    {"term": "다이크로뮴산 칼륨 수용액의 색 변화", "reason": "사례", "note": "농도 변화 평형 이동의 실험 사례.", "pages": [126, 127, 143]},
+    {"term": "염화 코발트(II) 수용액의 색 변화", "reason": "사례", "note": "온도 변화 평형 이동의 실험 사례.", "pages": [130, 131, 143, 145]},
+    {"term": "반응 계수", "reason": "범위 밖", "note": "압력 효과를 읽는 데 필요하지만 개념은 Ⅰ단원(화학 반응식) 몫이다. 압력 카드 note 에 적어 두었다.", "pages": [129, 133]},
+    {"term": "르샤틀리에", "reason": "인물", "note": "132쪽 인물 곁주. 원리는 카드로 만들었다.", "pages": [132]},
+    {"term": "하버", "reason": "인물", "note": "138쪽 인물 읽기 자료.", "pages": [138]},
+    {"term": "안토사이아닌", "reason": "사례", "note": "블루멜로 차·자색 당근의 색 변화. 물질 자체는 이 단원의 관계 명제를 갖지 않는다.", "pages": [134]},
+    {"term": "탄산음료 속 이산화 탄소의 용해", "reason": "사례", "note": "압력·온도에 따른 평형 이동의 생활 사례. 두 평형 이동 카드의 명제로 흡수한다.", "pages": [135]},
+    {"term": "달걀 껍데기의 두께", "reason": "사례", "note": "연속 평형의 읽기 자료.", "pages": [135]},
+    {"term": "헤모글로빈과 산소의 결합", "reason": "사례", "note": "탐구·수행 평가에만 나온다. 고압 산소 치료·고산병도 같은 자리다.", "pages": [134, 136, 145]},
+    {"term": "암모니아의 합성(하버법)", "reason": "사례", "note": "수득률 카드의 대표 사례로 쓰되 독립 카드로 만들지 않는다.", "pages": [136, 138, 145]},
+    {"term": "수국꽃의 색", "reason": "사례", "note": "단원 마무리 수행 평가 소재.", "pages": [145]},
+    {"term": "온도에 따라 색이 변하는 크레파스 만들기", "reason": "활동", "note": "단원 끝 프로젝트.", "pages": [146, 147]}
+  ],
+  "notes": [
+    "성취기준은 standards.yaml 의 12화학(지도서 총론 17~19쪽, 각론 168~214쪽 대조)에서 가져왔다. 이 단원이 쓰는 네 코드 03-01~03-04 는 모두 crosscheck 가 '일치' 라 그대로 썼다. 불일치·미대조 코드는 쓰지 않았다.",
+    "덮은 코드: 12화학03-01(8개), 03-02(5개), 03-03(2개), 03-04(8개). 이 단원 영역의 네 코드가 모두 덮였고 덮지 못한 코드는 없다.",
+    "★메인 확인 요망 두 가지. (1) 작업 도중 standards.yaml 을 처음 읽었을 때 courses 에 12화학이 없었고(10통과1·10통과2·12물에·12반응 넷), 잠시 뒤 다시 읽으니 12화학 15건이 들어 있었다. git 은 깨끗했고 커밋 5f9578b 에 이미 등록돼 있었다 — OneDrive 동기화가 늦어 낡은 사본을 읽은 것으로 보인다. 이 저장소에서 검사 스크립트가 공용 자산을 읽을 때 같은 일이 또 생기면 침묵 통과·침묵 실패가 난다. (2) curriculum-mapper/SKILL.md 의 수록 표는 아직 화학을 '미수록 — 5차 착수 시 NCIC 에서' 로 적고 있어 파일 내용과 어긋난다. 스킬 문서는 내 산출물이 아니라 손대지 않았다.",
+    "동음이의 점검: homonyms.yaml 의 watch_terms(주기·핵·전위·일·계·상) 중 이 단원 표제어와 전체가 겹치는 것은 없다. '계' 는 이 단원 본문에서 열역학의 계(system)로 쓰이지 않는다 — 등장하는 것은 '관계·계수' 같은 다른 낱말의 일부뿐이라 개념으로 잡지 않았다.",
+    "★homonyms.yaml 갱신 제안(사람 승인 대상, 나는 파일에 손대지 않았다): (1) '평형' — 동적 평형(concept:dynamic-equilibrium) / 화학 평형(concept:chemical-equilibrium) / 상평형(concept:phase-equilibrium) / 이온화 평형(concept:ionization-equilibrium) 이 이미 한 사전 안에 공존한다. 표기 '평형' 만으로 same 링크를 걸면 넷이 뭉개진다. (2) '반응' — 정반응·역반응·가역 반응·발열 반응처럼 접미사로 쓰이는 자리가 많아 부분 일치 링크가 위험하다. (3) '상' 은 이미 등재돼 있어 상평형에 homonym_flag 를 세워 두었다.",
+    "중단원 정리(119·139쪽 생각 그물)와 단원 마무리(142~145쪽)를 체크리스트로 훑었다. 생각 그물의 항목은 모두 후보 또는 excluded 에 들어 있다 — 119쪽: 가역 반응·화학 평형·동적 평형·용해와 석출(포화 용액)·평형 상수·K의 의미(정반응/역반응 카드). 139쪽: K와 Q·Q<K/=/>K(반응의 진행 방향)·농도/압력/온도 변화·기체 분자 수(압력 카드)·발열/흡열.",
+    "소주제별 분포: 3-1-01 7개, 3-1-02 6개, 3-2-01 2개, 3-2-02 7개, 3-2-03 1개. 03(우리 주변의 화학 평형)이 1개인 것은 본문(134~138쪽)이 사례·탐구·인물로 채워져 정의되는 개념이 수득률뿐이기 때문이다. 억지로 사례를 카드로 올리지 않았다 — 대신 그 사례들을 평형 이동 카드 세 장의 relation_seeds 로 넘겼다.",
+    "수식·화학 반응식은 전용 글꼴이라 추출이 깨진다(⇄ 기호가 '^jj&' 등으로 나온다). 특히 107·109·115·116·124·127·129쪽이 그렇다. C2는 카드 정의를 추출 문자열의 식에 기대지 말고, 식이 필요한 자리는 C7 삽화로 붙여라.",
+    "표기 점검: 이 교과서는 '염화 나트륨'·'칼륨' 같은 구표기를 쓰고 126쪽 곁주에서 포타슘을 병기한다. 해당 물질은 모두 사례라 카드 표제어로 올라오지 않았으므로 naming_policy 와 충돌하는 표제어는 없다.",
+    "신규 concept_key 19개는 전부 registry_status: new 다. concept_registry.yaml 은 손대지 않았다 — G3 사람 게이트 대상이다. 재사용 4개(dynamic-equilibrium·molarity·exothermic-reaction·endothermic-reaction)는 기존 카드와 키가 같아 same_candidate 를 달았다."
+  ]
+}
