@@ -1,0 +1,217 @@
+{
+  "unit_id": "chem-3",
+  "generated_at": "2026-09-09T17:03:59+09:00",
+  "mode_run": [
+    "relation"
+  ],
+  "relations": {
+    "checked": 67,
+    "cards_checked": 22,
+    "findings": [
+      {
+        "card_id": "chem-dynamic-equilibrium",
+        "relation_id": "rel-cde-macro",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 '반응은 계속되는데도 물질의 양은 더 이상 달라지지 않는 상태' 구절을 어순만 바꿔 되풀이한다 — 명제는 '겉보기 변화가 없을 뿐, 입자 수준에서는 두 방향의 변화가 끊임없이 이어지는 상태다'. 정의를 읽으면 그대로 나오는 말이라 명제로서 보태는 것이 없다.",
+        "suggest": "정의에 없는 내용을 담은 명제로 갈아 끼울지, 이 명제를 접을지 정한다. 이 명제는 두 번째 오개념의 linked_relation 이기도 하니 함께 본다."
+      },
+      {
+        "card_id": "chem-irreversible-reaction",
+        "relation_id": "rel-irv-no-equilibrium",
+        "verdict": "uncertain",
+        "checks": [
+          5
+        ],
+        "reason": "같은 카드의 오개념 '비가역 반응은 역반응이 이론적으로도 절대 불가능한 반응이다' 의 why_wrong 은 '역반응이 아주 조금이라도 일어날 수는 있다' 고 적는데, 이 명제는 '동적 평형에 이르지 못한다' 고 단정한다. 역반응이 조금이라도 일어난다면 닫힌 계에서는 크게 치우친 평형이 성립한다고 읽혀 두 문장이 서로 밀어낸다. inverted_text '비가역 반응도 충분한 시간이 지나면 동적 평형에 이른다' 가 그대로 OX 오답으로 나간다. 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "'사실상 일어나지 않는다' 를 어디까지 인정할지 form.scope 에서 못박을지, invertible 을 내릴지 사람이 정한다."
+      },
+      {
+        "card_id": "chem-phase-equilibrium",
+        "relation_id": "rel-phq-is-dynamic",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition '둘 이상의 상이 서로 오가면서도 각각의 양이 달라지지 않아 함께 머무는 평형 상태' 와 명제 '겉보기 양이 일정해도 변화 자체는 이어진다' 가 같은 말이다. 다만 '상평형은 동적 평형이다' 라는 갈래 매김은 정의에 없어 동어반복으로 볼지 판단이 갈린다. rel-cde-macro 와 같은 꼴이다.",
+        "suggest": "동적 평형 카드와 겹치지 않는 상평형만의 내용이 남는지 보고 정한다."
+      },
+      {
+        "card_id": "chem-law-of-chemical-equilibrium",
+        "relation_id": "rel-lce-induction",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "'오직 이 비만 같은 값으로 모인다' 의 '오직' 이 실제 범위를 넘는다 — 같은 자료에서 그 비의 역수나 거듭제곱도 일정한 값으로 모인다. form.scope '평형 농도 자료로 규칙성을 찾는 경우' 가 이를 걸러 내지 않는다. invertible: false 라 OX 지문으로 나가지는 않아 위험은 낮다.",
+        "suggest": "'오직' 을 그대로 둘지, scope 에 어떤 꼴의 식을 견주는지 경계를 넣을지 정한다."
+      },
+      {
+        "card_id": "chem-equilibrium-concentration",
+        "relation_id": "rel-eqc-only-at-eq",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '화학 평형에 이른 계에서 … 더 이상 달라지지 않는 농도 값' 에서 곧바로 따라 나온다. invertible_reason 이 스스로 '평형 농도는 정의상 평형 상태의 농도이므로' 라고 적어 동어반복임을 밝히고 있다.",
+        "suggest": "정의를 넘어서는 명제로 바꿀지 정한다."
+      },
+      {
+        "card_id": "chem-equilibrium-concentration",
+        "relation_id": "rel-eqc-only-at-eq",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "misconception": "평형에 도달하면 각 물질의 농도가 처음 농도의 절반이 된다",
+        "reason": "이 오개념은 평형에서 농도가 얼마나 변하는가에 관한 것이라 '평형 이전에 잰 농도는 평형 농도로 쓸 수 없다' 의 반대편에 서지 않는다. why_wrong 도 반응식 계수와 평형 상수를 근거로 들어 그 명제와 무관하다. 같은 카드에서 반대편에 서는 것은 rel-eqc-initial 쪽이다.",
+        "suggest": "linked_relation 을 카드 안에서 실제로 반대편에 서는 명제로 옮긴다."
+      },
+      {
+        "card_id": "chem-equilibrium-concentration",
+        "relation_id": "rel-eqc-compare",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "'평형 농도를 견주어 생성물 쪽이 크면 정반응이 우세' 는 반응식 양쪽 계수가 다르면 성립하지 않는다 — 같은 단원 rel-kex-exponent 가 농도에 계수를 지수로 올린다고 못박고 있어 농도의 대소만으로는 우세한 쪽을 가릴 수 없다. form.scope '우세한 방향을 농도로 가늠하는 가역 반응' 과 condition 어디에도 계수 조건이 없다. 같은 뜻을 K 로 적은 rel-k-magnitude·rel-fwd-k-large 는 K 로 경계를 걸고 있어 이 명제만 열려 있다. invertible: true 라 D1 로 나간다.",
+        "suggest": "scope·condition 에 계수 조건을 넣을지, 명제를 K 비교 쪽으로 접을지 정한다."
+      },
+      {
+        "card_id": "chem-le-chatelier-principle",
+        "relation_id": "rel-lcp-general",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "'농도든 압력이든 온도든 무엇을 바꾸어도' 가 적용 범위를 넘는다. 같은 단원 rel-prs-equal-coeff 는 '기체 계수 합이 같으면 압력을 바꾸어도 평형은 옮겨 가지 않는다' 고 적고, chem-equilibrium-shift 의 오개념 항목은 촉매가 평형을 옮기지 않는다고 적는다. 부피를 고정한 채 비활성 기체를 넣는 경우도 같다. form.scope '농도·압력·온도 변화를 겪는 가역 반응' 이 이 예외들을 걸러 내지 못한다. 성취기준 12화학03-04 도 '농도, 압력, 온도 변화' 로 범위를 좁혀 적고 있다. invertible: true 라 이 문장 자체가 D1 의 참 지문이 된다.",
+        "suggest": "scope·condition 에 이동이 일어나는 경계(양쪽 기체 계수 합이 다를 것, 부피 일정 비활성 기체·촉매 제외)를 넣을지 정한다."
+      },
+      {
+        "card_id": "chem-le-chatelier-principle",
+        "relation_id": "rel-lcp-covers",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "misconception": "르샤틀리에 원리로 설명되는 이동에서는 평형 상수가 언제나 그대로다",
+        "reason": "rel-lcp-covers 는 '세 경우가 하나의 원리로 묶인다' 는 적용 범위 명제라 평형 상수의 불변·가변과 반대편에 서지 않는다. 이 오개념의 반대편에 서는 명제는 이 카드에 없고 다른 카드(rel-k-temp-change·rel-tmp-k-changes)에 있다.",
+        "suggest": "linked_relation 을 옮길지, 이 카드에 K 를 다루는 명제를 둘지 메인이 정한다."
+      },
+      {
+        "card_id": "chem-effect-of-concentration-on-equilibrium",
+        "relation_id": "rel-cnc-forward",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "'반응물을 더 넣으면 … 정반응 쪽으로' 가 순수한 고체나 용매로 쓰인 액체를 더 넣는 경우를 걸러 내지 못한다 — 같은 단원 rel-kex-pure-phase 가 이들을 평형 상수식에 적지 않는다고 못박고 있어 그 경우 반응 지수가 달라지지 않는다. condition '농도만 건드릴 때' 가 이를 암묵적으로 막는다고 읽을 여지도 있어 결함인지 판단이 갈린다.",
+        "suggest": "scope 에 농도로 나타내는 성분이라는 경계를 넣을지 정한다."
+      },
+      {
+        "card_id": "chem-effect-of-concentration-on-equilibrium",
+        "relation_id": "rel-cnc-reverse",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "짝인 rel-cnc-forward 와 같은 꼴이다. 생성물을 순수한 고체로 더 넣는 경우가 scope 에서 걸러지지 않는다.",
+        "suggest": "rel-cnc-forward 와 함께 본다."
+      },
+      {
+        "card_id": "chem-effect-of-pressure-on-equilibrium",
+        "relation_id": "rel-prs-equal-coeff",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "misconception": "압력을 바꾸면 평형 상수도 함께 바뀐다",
+        "reason": "이 명제는 계수 합이 같을 때 이동이 없다는 말이라 평형 상수의 불변과 반대편에 서지 않는다. 명제 본문도 invertible_reason 도 K 를 다루지 않는다(반응 지수만 언급). 이 카드의 세 명제 어디에도 K 불변을 말하는 것이 없다.",
+        "suggest": "linked_relation 을 옮기거나 K 불변 명제가 이 카드에 필요한지 정한다."
+      },
+      {
+        "card_id": "chem-direction-of-reaction",
+        "relation_id": "rel-dir-q-eq-k",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "misconception": "Q와 K를 견주려면 먼저 평형에 도달해 있어야 한다",
+        "reason": "이 오개념의 반대편에 곧바로 서는 것은 평형이 아닌 시점의 Q 를 K 와 견주는 rel-dir-q-lt-k·rel-dir-q-gt-k 쪽이다. rel-dir-q-eq-k 는 두 값이 같을 때를 말해 겨눔이 빗나가 있으나, Q–K 비교라는 같은 틀 안이라 결함인지 판단이 갈린다.",
+        "suggest": "카드 안에서 더 곧바로 반대편에 서는 명제로 옮길지 정한다."
+      },
+      {
+        "card_id": "chem-endothermic-reaction",
+        "relation_id": "rel-cnd-heating",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "misconception": "흡열 반응은 주위에서 열을 얻으므로 주위의 온도가 올라간다",
+        "reason": "주위 온도가 오르내리는 이야기는 definition '바깥의 열을 빨아들이는 반응' 의 반대편이지 rel-cnd-heating('정반응이 흡열이면 온도를 올릴 때 정반응 쪽으로 옮겨 간다')의 반대편이 아니다. 이 카드의 세 명제 어느 것도 주위의 온도를 말하지 않는다.",
+        "suggest": "linked_relation 을 옮기거나 열의 출입과 주위 온도를 다루는 명제가 필요한지 정한다."
+      },
+      {
+        "card_id": "chem-percent-yield",
+        "relation_id": "rel-yld-cap",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "misconception": "가역 반응에서도 조건만 잘 맞추면 수득률을 100 %까지 올릴 수 있다",
+        "reason": "rel-yld-cap 은 '100 %를 넘을 수 없다' 는 상한 명제다. '100 %까지 올릴 수 있다' 는 오개념은 그 상한을 어기지 않으므로 반대편에 서지 않는다(넘지 못한다는 것과 닿지 못한다는 것은 다르다). why_wrong 이 드는 근거 '가역 반응은 평형에서 반응물이 얼마간 남는다' 를 말하는 명제가 이 카드에 없다.",
+        "suggest": "반대편에 실제로 서는 명제를 가리키게 하거나, 평형 때문에 100 %에 닿지 못한다는 명제가 필요한지 정한다."
+      },
+      {
+        "card_id": "chem-percent-yield",
+        "relation_id": "rel-yld-cap",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "'이론값에 대한 실제값의 비율이라' 는 definition 을 그대로 되풀이한 뒤 결론을 붙인 꼴이라 동어반복 경계에 있다. 또 실측에서는 불순물이나 건조 부족으로 100 %를 넘는 값이 나오기도 해 '넘을 수 없다' 의 참·거짓이 무엇을 재느냐에 달려 있다. 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "정의 되풀이 부분을 덜어 낼지, scope 를 이론값과 실제값을 같은 기준으로 잰 경우로 좁힐지 정한다."
+      }
+    ],
+    "stats": {
+      "ok": 53,
+      "defect": 8,
+      "uncertain": 6
+    },
+    "stats_basis": "stats 는 명제 67개를 하나씩 센 것이고, 한 명제에 지적이 둘이면 무거운 쪽(defect)으로 센다. 그래서 findings 항목 수(16)와 defect+uncertain 수(14)가 다르다.",
+    "notes": [
+      {
+        "topic": "카드 사이 중복 (검사 항목 5 를 카드 경계 밖으로 확장해 본 것)",
+        "why_not_finding": "검사 항목 5 는 같은 카드 안의 모순을 보는 것이라 findings 로 올리지 않았다. 다만 invertible: true 가 59/67 이라 아래 묶음은 D1 에서 거의 같은 OX 문항을 여러 벌 만들어 낸다.",
+        "groups": [
+          "K 대소로 우세한 쪽 읽기 — rel-k-magnitude 가 rel-fwd-k-large·rel-rev-k-small 를 그대로 품는다 (세 카드)",
+          "정반응이 발열이면 역반응은 흡열 — rel-rev-heat-flip = rel-cxo-pair = rel-cnd-pair (세 카드). 앞의 둘은 invertible_reason 문장까지 같다",
+          "온도와 이동 방향 — rel-tmp-up 이 rel-cnd-heating 을, rel-tmp-down 이 rel-cxo-cooling 을 품는다",
+          "K 를 정하는 것은 온도뿐 — rel-k-temp-fixed 가 rel-cnc-k-fixed 를, rel-k-temp-change 가 rel-tmp-k-changes 를 품는다",
+          "평형을 움직이는 조건 세 가지 열거 — rel-lcp-covers 와 rel-shf-three 가 사실상 같다",
+          "Q 와 K 가 같으면 평형 — rel-q-equals-k 와 rel-dir-q-eq-k 가 같다",
+          "계수를 지수로 올린다 — rel-lce-exponent 와 rel-kex-exponent 가 같다",
+          "초기 조성을 바꿔도 값이 같다 — rel-lce-constant-ratio 와 rel-k-temp-fixed 가 겹친다"
+        ]
+      },
+      {
+        "topic": "오개념 문장의 카드 사이 중복",
+        "detail": "chem-le-chatelier-principle 의 '넣어 준 물질의 농도가 넣기 전과 똑같아진다' 와 chem-effect-of-concentration-on-equilibrium 의 '반응물을 더 넣으면 … 넣기 전과 똑같아진다' 가 사실상 같은 문장이다."
+      },
+      {
+        "topic": "form.antecedent / form.consequent 가 명제의 주장을 담지 못한다",
+        "detail": "rel-cde-rate·rel-sat-rate·rel-phq-exchange 는 두 양의 direction 이 모두 '일정' 이라 '두 값이 서로 같다' 는 주장을 담지 못한다. concept.schema.json 의 direction 열거값에 '일정' 이 있어 스키마 위반은 아니므로 결함으로 올리지 않았다. D1 이 이 필드를 쓰면 문항이 흐려질 수 있다."
+      },
+      {
+        "topic": "대조하지 못한 것",
+        "detail": "docs/misconceptions.yaml 의 concepts 가 빈 배열이라 이 단원 오개념 44개는 모두 source: llm 이고 사전 대조를 하지 못했다. chem-facts 스킬도 없어(.claude/skills 에 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 만 있다) 화학 사실 대조는 건너뛰었다. 원문(output/source/chem-3/text.jsonl)은 이번 판정에 필요하지 않아 열지 않았다."
+      },
+      {
+        "topic": "동음이의",
+        "detail": "docs/homonyms.yaml 의 watch_terms 가운데 이 단원에 걸리는 것은 '상'(물질의 상 ↔ 광학의 상)뿐이고, chem-phase-equilibrium 에 homonym_flag: true 가 이미 붙어 있다. 명제 본문에서 '상' 을 홀로 쓴 곳은 없다."
+      }
+    ]
+  }
+}

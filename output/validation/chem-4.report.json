@@ -1,0 +1,160 @@
+{
+  "unit_id": "chem-4",
+  "generated_at": "2026-09-09T00:00:00+09:00",
+  "mode_run": [
+    "relation"
+  ],
+  "relations": {
+    "checked": 56,
+    "cards_checked": 17,
+    "invertible_true_checked": 22,
+    "findings": [
+      {
+        "card_id": "chem-acidity-of-mixed-solution",
+        "relation_id": "rel-mixed-equal-mol-neutral",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "form.scope 가 '수용액에서 일어나는 중화 반응' 으로 이 단원의 중화 반응 전체를 덮는데, 명제는 '남는 것이 없어 중성이 된다' 까지 단언한다. 같은 단원 chem-acid-base-indicator 의 rel-ind-choice-matters 는 scope 에서 '산과 염기의 세기에 따라 중화점 부근 액성이 달라지는 적정' 을 전제하고 있어, 두 명제의 적용 범위가 같은 단원 안에서 어긋난다. C2 가 일반선택 수준에 맞춰 뺐다고 보고한 명제(염의 가수 분해)가 빠진 자리를 이 명제의 scope 가 감당하지 못한다. 같은 누락을 chem-use-of-neutralization-reaction 의 rel-use-ph-moves-to-seven 은 'pH 가 7 쪽으로 옮겨 간다' 로 단언을 낮춰 감당하고 있어 대비된다.",
+        "suggest": "빠진 명제를 채우는 것이 아니라 form.scope 와 본문의 단언 범위를 이 카드가 실제로 다루는 조합으로 좁힌다. 좁힌 뒤에도 rel-ind-choice-matters 의 scope 와 어긋나지 않는지 함께 본다."
+      },
+      {
+        "card_id": "chem-acid-base-titration",
+        "relation_id": "rel-titr-repeat-and-average",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "본문은 '오차가 줄어든다' 로 오차를 한정 없이 쓰고 form.scope 도 '사람이 눈금을 읽어 재는 실험' 으로 넓은데, 정작 같은 명제의 invertible_reason 은 '우연 오차가 평균에서 서로 상쇄되므로' 라며 우연 오차로 한정한다. 명제 본문·scope 와 그 근거가 서로 다른 범위를 가리킨다. 되풀이 평균이 줄이지 못하는 종류의 오차(눈금 검정이나 지시약 선택에서 오는 치우침)가 scope 안에 함께 들어와 있다.",
+        "suggest": "본문 또는 form.scope 를 invertible_reason 이 이미 한정해 놓은 범위에 맞춘다. 둘 중 어느 쪽을 고칠지는 C2 가 정한다."
+      },
+      {
+        "card_id": "chem-use-of-neutralization-reaction",
+        "relation_id": "rel-use-acidified-soil",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "invertible_reason 이 '뒤집을 방향이 하나로 정해지지 않는다' 인데, 같은 명제의 form 은 antecedent '뿌린 석회 가루의 양: 증가' → consequent '토양의 산성 정도: 감소' 로 방향을 이미 하나로 정해 놓았다. 근거가 자기 form 과 어긋난다. 이 단원에서 invertible:false 에 같은 근거가 붙은 다른 명제들(rel-dilution-solute-conserved, rel-kw-solute-independent, rel-self-ion-equilibrium, rel-mixed-spectator-count-kept)은 모두 consequent 방향이 '일정' 이라 그 근거가 성립하는데, 이 명제만 방향이 '감소' 다. 같은 카드의 rel-use-ph-moves-to-seven 은 같은 구조(causal · 증가→감소)에서 invertible:true 를 받았다.",
+        "suggest": "판정을 되돌리라는 것이 아니라, 방향이 정해진 form 에 맞는 근거로 invertible_reason 을 다시 세우거나 판정 자체를 다시 본다. 어긋났을 때의 손실은 OX 지문 하나가 없어지는 쪽이지 오답 지문이 틀리는 쪽은 아니다."
+      },
+      {
+        "card_id": "chem-acid-base-indicator",
+        "relation_id": "rel-ind-color-by-acidity",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '용액의 액성에 따라 색이 달라지는 물질' 과 명제 '떨어뜨린 용액이 산성이냐 염기성이냐에 따라 다른 색을 띤다' 가 같은 내용이다. 명제가 더하는 것은 '액성' 을 '산성이냐 염기성이냐' 로 풀어 쓴 것뿐이라, 정의를 읽으면 그대로 나온다.",
+        "suggest": "정의에서 이 구절을 덜어 내 명제가 그것을 떠받치게 하거나, 정의가 말하지 않는 쪽으로 명제를 다시 세운다."
+      },
+      {
+        "card_id": "chem-end-point",
+        "relation_id": "rel-end-defined-by-color",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '적정을 실제로 멈추는 지점. 지시약의 색이 바뀌는 순간으로 정하며' 와 명제 '지시약의 색이 바뀌는 것을 보고 적정을 멈춘 그 자리를 종말점이라고 한다' 가 같은 문장이다. 정의 앞부분에 이름을 붙여 되풀이한 것에 그친다. 같은 카드의 rel-end-approximates-np 도 정의 뒷부분(중화점에 가장 가까운 값)과 겹치지만 '실험으로 잡아내는 것' 이라는 별도 주장을 담고 있어 이 항목에서는 걸리지 않는다.",
+        "suggest": "정의와 겹치지 않는 자리(색 변화를 종말점으로 삼을 때 무엇을 조건으로 두는지)로 명제를 다시 세운다."
+      },
+      {
+        "card_id": "chem-salt",
+        "relation_id": "rel-salt-classification",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '산에서 떨어져 나온 음이온과 염기에서 떨어져 나온 양이온이 결합해 생긴 물질' 과 명제 '어떤 물질이 염인지 아닌지는 산 쪽 음이온과 염기 쪽 양이온이 결합한 것인지로 가른다' 가 같은 내용이다. 정의를 분류 기준의 꼴로 옮겨 적은 것뿐이다.",
+        "suggest": "정의가 말하지 않는 쪽으로 명제를 다시 세운다."
+      },
+      {
+        "card_id": "chem-dilution-of-solution",
+        "relation_id": "rel-dilution-solute-conserved",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '녹아 있는 용질의 양(mol)은 그대로 둔 채 부피만 늘린다' 와 명제 '물을 더해도 이미 녹아 있던 용질의 양(mol)은 늘지도 줄지도 않는다' 가 같은 내용이다. 정의에 이미 들어 있는 보존 진술을 문장으로 옮겼다.",
+        "suggest": "정의에서 보존 구절을 덜어 내 명제가 그것을 떠받치게 하거나 명제를 다른 각도로 다시 세운다. 이 명제에 걸린 오개념(묽히면 용질의 양도 준다)이 붙을 자리는 어느 쪽으로 고치든 남겨 두어야 한다."
+      },
+      {
+        "card_id": "chem-neutralization-point",
+        "relation_id": "rel-np-equal-mol",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '산이 내놓은 수소 이온과 염기가 내놓은 수산화 이온의 양(mol)이 꼭 같아지는 지점' 과 명제 '두 이온의 양(mol)이 같아져 어느 쪽도 남지 않게 되는 순간을 중화점이라고 부른다' 가 같은 내용이다. 명제가 더하는 것은 '어느 쪽도 남지 않는다' 뿐인데 이는 두 양이 같다는 데서 곧바로 따라 나온다.",
+        "suggest": "정의와 겹치지 않는 자리로 명제를 다시 세운다."
+      },
+      {
+        "card_id": "chem-acid-base-indicator",
+        "relation_id": "rel-ind-signals-completion",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '지시약을 넣으면 그것 때문에 용액의 액성이 달라진다' 가 이 명제를 linked_relation 으로 가리키는데, 명제는 '지시약을 미리 넣어 두면 색 변화로 중화가 끝났음을 알아챌 수 있다' 로 지시약의 쓰임만 말한다. 오개념을 뒤집는 근거(why_wrong 이 드는 '두세 방울만 넣어 액성을 사실상 바꾸지 않는다')는 이 카드의 어느 명제에도 서 있지 않다. 명제의 반대편이 아니라 명제와 무관한 일반적 오해가 걸려 있다.",
+        "suggest": "오개념을 받칠 명제가 이 카드에 있는지 다시 보고, 없으면 오개념을 옮길지 명제를 세울지 C2 가 정한다."
+      },
+      {
+        "card_id": "chem-acid-base-titration",
+        "relation_id": "rel-titr-starts-from-standard",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '적정에서 산과 염기의 부피가 같아졌을 때의 값으로 농도를 계산한다' 가 이 명제를 가리키는데, 명제는 계산의 출발점이 표준 용액이라는 것만 말한다. 오개념을 뒤집는 진술(같아지는 것은 부피가 아니라 두 이온의 양(mol))은 이 카드가 아니라 chem-neutralization-point 의 rel-np-equal-mol 과 chem-stoichiometry-of-neutralization 쪽에 있다.",
+        "suggest": "linked_relation 을 이 카드 안에서 실제로 반대편에 서는 명제로 다시 잡거나, 오개념을 그 명제가 있는 카드로 옮긴다."
+      },
+      {
+        "card_id": "chem-molarity",
+        "relation_id": "rel-molarity-quotient",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '몰농도는 용매 1 L 에 용질을 녹여 만든 농도다' 가 이 명제를 가리키는데, 명제는 '부피가 같은 두 용액이라면 용질의 양(mol)이 많은 쪽의 몰농도가 크다' 로 용매와 용액을 가르는 대목이 없다. 오개념을 뒤집는 근거(기준이 용액 전체의 부피라는 것)는 이 카드의 definition 과 chem-standard-solution 의 rel-std-flask-mark 에만 있다.",
+        "suggest": "linked_relation 을 다시 잡거나, 용매의 부피와 용액의 부피를 가르는 명제가 이 카드에 필요한지 C2 가 본다."
+      },
+      {
+        "card_id": "chem-neutralization-point",
+        "relation_id": "rel-np-one-drop-sensitivity",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '중화점을 지나 표준 용액을 더 넣어도 용액의 액성은 그대로다' 가 이 명제를 가리키는데, 명제는 중화점 부근에서 한 방울이 그 지점을 지나치게 만든다는 민감도만 말하고 지나친 뒤의 액성은 말하지 않는다. why_wrong 이 드는 근거(넣어 준 쪽 이온이 남아 액성이 기운다)는 chem-acidity-of-mixed-solution 의 rel-mixed-leftover-decides 쪽 내용이다.",
+        "suggest": "linked_relation 을 다시 잡거나 오개념을 그 명제가 있는 카드로 옮긴다."
+      },
+      {
+        "card_id": "chem-acid-base-indicator",
+        "relation_id": "rel-ind-choice-matters",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "form.scope '산과 염기의 세기에 따라 중화점 부근 액성이 달라지는 적정' 은 범위를 좁히고 있어 과일반화는 아니다. 다만 그 좁힘의 근거가 되는 사실(산·염기의 세기에 따라 중화점 부근 액성이 달라진다)이 이 단원 17장 어디에도 명제로 서 있지 않다 — C2 가 일반선택 수준에 맞춰 뺐다고 보고한 대목이다. 그래서 학생이 '중화점 근처에서 색이 바뀌는 지시약을 골라야 한다' 는 기준을 쓸 근거를 단원 안에서 얻지 못한다. 이것을 결함으로 볼지 상급 과목으로 넘긴 의도된 여백으로 볼지는 진위와 범위 판단이 걸려 있어 사람 검토 항목으로 올린다.",
+        "suggest": "scope 를 이 단원이 실제로 받치는 범위로 다시 적을지 여백으로 둘지는 사람이 정한다. 빠진 명제를 채우는 것은 이 단계의 일이 아니다."
+      }
+    ],
+    "stats": {
+      "ok": 43,
+      "defect": 12,
+      "uncertain": 1
+    },
+    "notes": [
+      "invertible:true 22개를 하나씩 뒤집어 읽었다. inverted_text 가 참이 될 수 있는 명제(= D1 의 OX 오답 지문이 실제로는 참이 되는 경우)는 없었다. 22개 모두 뒤집으면 거짓이 되는 문장이었다.",
+      "구조 점검: 56개 모두 form.scope 가 채워져 있고, invertible:true 22개는 모두 inverted_text 를 갖고 있으며 invertible:false 34개에는 없다. misconceptions[].linked_relation 34건 모두 같은 카드 안의 실재하는 명제 id 를 가리킨다. 본문에 '항상·모든·반드시·언제나' 가 붙은 명제는 없다.",
+      "form.type 이 classification 또는 conditional 인데 invertible:true 인 명제가 4개다(rel-acidity-compare-two-ions, rel-ph-seven-boundary, rel-self-ion-proton-transfer, rel-use-opposite-property). 검사 항목 2 의 문구가 걸리는 자리지만 넷 모두 두 이름을 맞바꾸는 뒤집기여서 뒤집은 문장이 반드시 거짓이 된다. 결함으로 올리지 않았다 — 판단이 갈린 대목이라 적어 둔다.",
+      "invertible:false 에 '뒤집을 방향이 하나로 정해지지 않는다' 를 붙이는 관례는 consequent 방향이 '일정' 인 명제들에서 일관되게 지켜진다. 어긋나는 것은 rel-use-acidified-soil 하나뿐이며 결함으로 올렸다.",
+      "chem-acid-base-indicator 의 명제 3개가 모두 invertible:false 인 것 자체는 이 단원의 관례(절차·쓰임·고르는 기준을 말한 서술은 맞바꿀 두 양이 없어 false)와 어긋나지 않는다. 다만 rel-ind-color-by-acidity 에 붙은 근거('뒤집을 방향이 하나로 정해지지 않는다')는 성립하지 않는다 — '다른 색을 띤다' 는 범주 진술이라 그 부정이 하나로 정해진다. 이 명제가 OX 원천이 되지 못하는 진짜 이유는 뒤집기가 안 되어서가 아니라 정의를 되풀이한 문장이어서(검사 항목 3)이며 그렇게 결함으로 올렸다. C2 가 이 명제를 다시 세우면 invertible 판정도 함께 다시 봐야 한다.",
+      "docs/misconceptions.yaml 은 concepts 가 빈 목록이라 이 단원 오개념 34건은 모두 source:llm 이다. 교사 사전과 대조할 항목이 없었다.",
+      "chem-facts 스킬이 .claude/skills/ 에 없어 사실 대조는 건너뛰었다. 없는 스킬을 흉내 내지 않았다.",
+      "verified_by 필드는 명제 56개·오개념 34건 어디에도 손대지 않았다. 카드 파일과 사전 파일은 읽기만 했다.",
+      "이 파일에는 relation 절만 채웠다. curriculum 절은 C5 가 돌지 않아 비어 있으며, 나중에 병합한다."
+    ]
+  }
+}

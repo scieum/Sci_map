@@ -1,0 +1,254 @@
+{
+  "unit_id": "chem-2",
+  "generated_at": "2026-09-09T00:00:00+09:00",
+  "mode_run": ["relation"],
+  "relations": {
+    "checked": 108,
+    "cards_checked": 36,
+    "invertible_true_count": 56,
+    "findings": [
+      {
+        "card_id": "chem-periodic-trend-of-electronegativity",
+        "relation_id": "rel-pte-table-direction",
+        "verdict": "defect",
+        "checks": [1, 2],
+        "reason": "form.scope 가 스스로 '주기율표 전체의 대체적 경향' 이라고 적어 놓았는데 invertible 이 true 다. 단원 108개 명제 가운데 scope 나 invertible_reason 에 경향·예외를 명시한 것은 다섯이고(rel-ba-shape-value, rel-cb-nonmetals, rel-pc-to-moment, rel-ve-unpaired-bonds, 그리고 이 명제), 네 개는 모두 invertible: false 로 내려져 있다. 이 명제만 기준이 어긋난다. 게다가 같은 카드의 rel-pte-same-period 는 '같은 주기에서', rel-pte-same-group 은 '같은 족에서' 로 적용 범위를 묶어 두었는데, 이 명제만 그 제한을 떼고 주기율표 전체로 넓혀 놓았다 — scope 가 명제의 실제 적용 범위보다 넓다.",
+        "suggest": "같은 단원에서 이미 쓰고 있는 '경향 명제는 invertible: false' 기준을 이 명제에도 적용할지, 아니면 scope 에서 '대체적' 을 걷어내고 적용 범위를 rel-pte-same-period·rel-pte-same-group 수준으로 좁힐지 하나를 고른다. 둘 다 하지 않는 상태로 D1 에 넘기지 않는다."
+      },
+      {
+        "card_id": "chem-molecular-polarity-and-physical-property",
+        "relation_id": "rel-mpp-force-to-bp",
+        "verdict": "defect",
+        "checks": [1, 2],
+        "reason": "한 명제가 '녹는점과 끓는점' 두 물성을 함께 묶고 있는데 form.scope 는 '분자로 이루어진 물질' 로 제한이 없다. 두 물성은 분자 사이 인력 말고도 다른 요인을 받으므로 적용 범위가 서로 같지 않은데 한 문장에 묶여 있고, invertible: true 라 D1 이 두 물성을 한꺼번에 뒤집은 문장을 오답 지문으로 낸다. 어느 쪽이 실제로 예외를 갖는지는 진위 판단이라 C8 소관이지만, 범위가 다른 두 물성을 묶은 채 scope 를 열어 둔 것은 구조적 결함이다.",
+        "suggest": "녹는점과 끓는점을 한 명제에 묶어 둘지 나눌지 정하고, 묶어 둘 경우 form.scope 를 실제 적용 범위로 좁힌다. invertible 은 그 결정 뒤에 다시 본다."
+      },
+      {
+        "card_id": "chem-bent-molecular-geometry",
+        "relation_id": "rel-bmg-two-lone-pairs",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '전자쌍 자리 넷 가운데 둘이 비공유 전자쌍이어서, 결합한 두 원자가 일직선이 아니라 꺾여 놓인 모양' 이다. 명제는 '전자쌍 자리 넷 가운데 둘이 비공유 전자쌍이면 남은 두 결합이 꺾여 굽은 형이 된다' 로, 정의의 전제절과 귀결절을 어순만 바꿔 조건문으로 옮긴 것이다. 정의를 읽은 학생에게 새로 주는 명제가 없다.",
+        "suggest": "정의가 이미 담고 있는 내용이므로, 정의에서 인과절을 빼거나 이 명제를 다른 내용으로 갈음한다. 어느 쪽인지는 메인이 정한다."
+      },
+      {
+        "card_id": "chem-linear-molecular-geometry",
+        "relation_id": "rel-lmg-angle",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '…결합각이 180° 가 되는 분자 모양' 이고 명제는 '직선형 분자의 결합각은 180° 다' 다. 정의의 마지막 구절을 그대로 문장으로 만든 것이다. invertible: true 라 D1 이 이 동어반복에서 OX 문항을 만든다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 180° 를 말하도록 정리한다."
+      },
+      {
+        "card_id": "chem-tetrahedral-geometry",
+        "relation_id": "rel-tetra-angle",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '…결합각이 109.5° 가 되는 입체 모양' 이고 명제는 '정사면체 구조에서 이웃한 두 결합이 이루는 각은 109.5° 다' 다. 같은 카드의 rel-tetra-not-planar 는 평면 사각형과 견주어 까닭을 더하므로 학습 가치가 있으나, 이 명제는 정의의 수치를 되풀이할 뿐이다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 109.5° 를 말하도록 정리한다."
+      },
+      {
+        "card_id": "chem-trigonal-planar-geometry",
+        "relation_id": "rel-tpg-coplanar",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "definition 이 '…세 원자가 한 평면 위 삼각형의 꼭짓점 쪽에 놓여' 이고 명제는 '평면 삼각형 분자에서는 중심 원자와 결합한 세 원자가 모두 한 평면에 놓인다' 다. invertible_reason 스스로 '이름 자체가 한 평면에 놓였다는 뜻이라' 고 적어 동어반복임을 밝히고 있다. 더해서 이 명제에 걸린 오개념 '평면 삼각형 분자는 세 결합에 극성이 있으면 극성 분자다' 는 쌍극자 모멘트 상쇄를 다루는 것이라 '한 평면에 놓인다' 의 반대편이 아니다 — 그 오개념의 반증 근거('120° 로 고르게 놓이면 상쇄된다')는 같은 카드의 rel-tpg-three-sites 쪽에 있다.",
+        "suggest": "명제를 정의와 겹치지 않는 내용으로 갈음하고, 극성 상쇄 오개념의 linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "chem-trigonal-pyramidal-geometry",
+        "relation_id": "rel-tpy-one-lone-pair",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '전자쌍 자리는 넷이지만 그중 하나가 비공유 전자쌍이어서, 결합한 세 원자가 밑면을 이루는 뿔 모양' 이고 명제는 '전자쌍 자리 넷 가운데 하나가 비공유 전자쌍이면 남은 세 결합이 삼각뿔형을 이룬다' 다. 조건과 귀결이 정의와 같다. rel-bmg-two-lone-pairs 와 같은 유형의 결함이다.",
+        "suggest": "정의가 이미 담고 있는 내용이므로, 정의에서 인과절을 빼거나 이 명제를 다른 내용으로 갈음한다."
+      },
+      {
+        "card_id": "chem-polar-molecule",
+        "relation_id": "rel-pmol-classify",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '결합의 극성이 구조 때문에 상쇄되지 않고 남아, 분자 전체의 쌍극자 모멘트가 0 이 아니게 된 분자' 다. 명제는 '결합의 쌍극자 모멘트가 상쇄되지 않고 남은 분자를 극성 분자로 가른다' 로, 정의의 주절을 술어만 바꿔 되풀이한다. 같은 계열 카드의 rel-mdm-decides-polarity 는 '0 이 아니면 / 0 이면' 이라는 판정 기준값을 더해 정의를 넘어서는데, 이 명제에는 그런 보탬이 없다.",
+        "suggest": "정의를 넘어서는 내용(가르는 기준값이나 판정 절차)을 담도록 명제를 갈음한다."
+      },
+      {
+        "card_id": "chem-nonpolar-molecule",
+        "relation_id": "rel-npmol-cancel",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 둘째 문장이 '극성 결합이 있더라도 방향이 대칭이면 서로 상쇄되어 여기에 든다' 이고, 명제는 '결합의 쌍극자 모멘트가 모두 상쇄되면 극성 결합이 있어도 무극성 분자가 된다' 다. 두 문장의 명제 내용이 같다.",
+        "suggest": "정의 둘째 문장을 남길지 이 명제를 남길지 하나를 고르고, 남기지 않는 쪽을 다른 내용으로 갈음한다."
+      },
+      {
+        "card_id": "chem-bond-angle",
+        "relation_id": "rel-ba-shape-value",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념은 '결합각이 크다는 것은 결합 길이가 길다는 뜻이다' 인데, 명제는 '구조가 같으면 결합각도 대체로 같다' 로 결합 길이를 전혀 다루지 않는다. 오개념의 why_wrong('결합각은 두 결합이 벌어진 각도이고 결합 길이는 두 핵 사이의 거리다')이 반증 근거로 삼는 것은 명제가 아니라 카드의 definition 이다. 명제와 무관한 일반적 용어 혼동이다.",
+        "suggest": "이 오개념의 linked_relation 을 결합 길이를 실제로 다루는 명제로 옮기거나, 결합각과 결합 길이를 가르는 명제를 이 카드에 세운다."
+      },
+      {
+        "card_id": "chem-covalent-bond",
+        "relation_id": "rel-cb-forms-molecule",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "오개념 '공유 결합에서는 두 원자가 언제나 전자쌍을 똑같이 나누어 갖는다' 가 이 명제를 가리키는데, 명제('쌍을 이루지 못한 원자가 전자를 서로 내놓아 전자쌍을 만들면 두 원자가 한 분자로 묶인다')는 전자쌍이 고르게 나뉘는지를 말하지 않는다. why_wrong 이 드는 근거('전기음성도가 다르면 전자쌍이 치우쳐 극성 공유 결합이 된다')는 이 카드가 아니라 chem-polar-covalent-bond 소관이다. 명제의 반대편에 서 있지 않다.",
+        "suggest": "오개념을 이 카드에 둘 것이면 전자쌍의 치우침을 다루는 명제를 세워 그쪽에 걸고, 아니면 오개념을 옮긴다."
+      },
+      {
+        "card_id": "chem-electronegativity",
+        "relation_id": "rel-en-difference-shifts",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "오개념 '플루오린의 전기음성도 4.0 은 실험으로 잰 절대적인 크기다' 가 이 명제를 가리키는데, 명제('두 원자의 전기음성도 차이가 벌어질수록 전자쌍이 한쪽으로 더 많이 끌려간다')는 기준값을 어떻게 정했는지를 다루지 않는다. why_wrong 이 반증 근거로 삼는 '4.0 으로 잡고 견주어 매긴 상댓값' 은 카드의 definition 에 그대로 들어 있다.",
+        "suggest": "이 오개념의 linked_relation 을 다시 걸거나, 상댓값이라는 성격을 다루는 명제를 이 카드에 세운다."
+      },
+      {
+        "card_id": "chem-lone-pair",
+        "relation_id": "rel-lp-stronger-repulsion",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "오개념 '비공유 전자쌍도 두 원자 사이에 놓여 원자들을 이어 준다' 가 이 명제를 가리키는데, 명제는 반발력의 대소('비공유 전자쌍끼리 밀어내는 힘이 공유 전자쌍끼리 밀어내는 힘보다 크다')만 말한다. why_wrong('비공유 전자쌍은 한 원자에만 딸려 있어 두 원자를 잇지 않는다')은 카드 definition 의 문구를 그대로 되풀이한다 — 명제가 아니라 정의의 반대편이다.",
+        "suggest": "이 오개념의 linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "chem-nonpolar-covalent-bond",
+        "relation_id": "rel-ncb-zero-moment",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "오개념 '무극성 공유 결합은 극성 공유 결합보다 약한 결합이다' 가 이 명제를 가리키는데, 명제('무극성 공유 결합의 쌍극자 모멘트는 0 이다')도 이 카드의 나머지 두 명제도 결합의 세기를 다루지 않는다. why_wrong 이 드는 근거(질소 분자의 삼중 결합)는 이 카드 어느 명제와도 이어지지 않는다.",
+        "suggest": "결합의 세기와 극성을 가르는 명제가 이 카드에 없으므로, 오개념을 옮기거나 그 명제를 세운다."
+      },
+      {
+        "card_id": "chem-nonpolar-molecule",
+        "relation_id": "rel-npmol-diatomic",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "오개념 '무극성 분자도 물에 잘 녹는다' 가 이 명제를 가리키는데, 명제('같은 원소끼리 결합한 이원자 분자는 결합에 극성이 없어 무극성 분자다')는 용해를 다루지 않는다. why_wrong 이 드는 근거('무극성 물질은 무극성 용매에 잘 녹는다')는 chem-solubility-and-molecular-polarity 의 rel-samp-like-dissolves 소관이다.",
+        "suggest": "이 오개념을 용해를 다루는 카드로 옮기거나, linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "chem-shared-electron-pair",
+        "relation_id": "rel-sep-line-meaning",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 카드는 오개념 두 개가 모두 rel-sep-line-meaning 하나만 가리키고, rel-sep-pulled-by-nuclei 와 rel-sep-count-and-shape 에는 걸린 오개념이 없다. 단원 36개 카드 가운데 오개념 링크가 한 명제에 몰린 카드는 여기뿐이다. 더구나 두 오개념 중 '공유 전자쌍은 두 원자 가운데 한쪽 원자에만 속한다' 는, 반증 근거가 '두 원자가 함께 갖는 전자쌍' 이라는 카드 definition 이지 '결합선 하나가 전자쌍 하나를 뜻한다' 는 명제가 아니다. 다른 하나('결합선 하나는 전자 한 개를 뜻한다')만이 이 명제의 반대편에 선다.",
+        "suggest": "소속을 다루는 오개념의 linked_relation 을 다시 걸어 한 명제에 몰린 것을 푼다."
+      },
+      {
+        "card_id": "chem-electron-pair-repulsion-theory",
+        "relation_id": "rel-eprt-multiple-as-one",
+        "verdict": "uncertain",
+        "checks": [2],
+        "reason": "이 명제('다중 결합을 전자쌍 자리 하나로 세어야 이 이론으로 구조를 바르게 예측할 수 있다')와 chem-multiple-bond 의 rel-mb-counted-once('구조를 예측할 때는 이중 결합이든 삼중 결합이든 전자쌍 자리 하나로 센다')는 사실상 같은 규칙인데 invertible 이 각각 false 와 true 로 갈렸다. invertible_reason 도 한쪽은 '맞바꿀 두 양이 없다', 다른 쪽은 '자리를 여럿으로 세면 예측이 어긋나 반드시 거짓이다' 로 서로 다르다. 어느 쪽이 맞는지는 갈리지만 두 카드에서 같은 규칙이 다르게 판정된 것은 그대로 둘 수 없다.",
+        "suggest": "두 명제의 invertible 판정을 하나로 맞춘다. 낮춰 잡은 쪽(false)이 학생에게 위험하지는 않으므로 급하지는 않다."
+      },
+      {
+        "card_id": "chem-molecular-geometry",
+        "relation_id": "rel-mg-atoms-decide",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "definition 둘째 문장이 '전자쌍 배치에서 원자 자리만 뽑아 이름 붙인다' 이고 명제는 '분자의 구조는 전자쌍이 놓인 자리가 아니라 결합한 원자들이 놓인 자리로 정한다' 라, 형식만 보면 동어반복이다. 다만 이 구분은 단원 안에서 오개념이 가장 많이 걸리는 대목이고(rel-eprt-repel·rel-tpy-one-lone-pair 에 걸린 오개념 둘이 모두 이 구분의 실패다) 명제 쪽을 지우면 그 반증 근거가 사라진다. 명제를 고칠 일인지 정의를 고칠 일인지 갈린다.",
+        "suggest": "정의 둘째 문장을 덜어 낼지 명제를 갈음할지 메인이 정한다. 이 명제를 지우는 쪽은 권하지 않는다."
+      },
+      {
+        "card_id": "chem-solubility-and-molecular-polarity",
+        "relation_id": "rel-samp-ionic-in-polar",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "명제 본문은 '이온으로 이루어진 물질은' 으로 이온 화합물 전체를 가리키는데 form.scope 는 '염화 구리(II)·염화 소듐 같은 이온 결합 물질' 로 예시 둘을 가리킨다. D1 이 쓰는 것은 본문이므로 학생이 보는 적용 범위는 scope 보다 넓어진다. 극성 용매에 잘 녹지 않는 이온 화합물이 있는지는 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "본문의 적용 범위와 form.scope 를 같은 넓이로 맞춘다."
+      },
+      {
+        "card_id": "chem-molecular-polarity-and-physical-property",
+        "relation_id": "rel-mpp-polarity-force",
+        "verdict": "uncertain",
+        "checks": [1, 2],
+        "reason": "form.condition 이 '분자량이 비슷한 물질끼리 견줄 때' 로 좁은데 form.scope 는 '분자로 이루어진 물질' 로 넓다. 같은 카드의 rel-mpp-force-to-bp 와 scope 문구가 똑같아 두 명제의 적용 범위가 구별되지 않는다. 분자량이 비슷할 때 극성 쪽 인력이 늘 더 큰지는 진위 판단 필요 — C8 검토 항목이고, invertible: true 라 그 판단이 그대로 오답 지문이 된다.",
+        "suggest": "condition 에 이미 들어 있는 제한이 scope 에도 드러나도록 맞춘다."
+      },
+      {
+        "card_id": "chem-polar-covalent-bond",
+        "relation_id": "rel-pcb-shift-direction",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "명제 본문은 '서로 다른 종류의 원자가 결합하면' 인데 form.condition 은 '두 원자의 전기음성도가 다를 때' 다. 두 조건은 같지 않다 — 원소가 다르면서 전기음성도가 거의 같은 짝이 있는지가 갈림돌이고 이는 진위 판단 필요 — C8 검토 항목이다. 견주자면 같은 계열의 rel-ncb-same-atoms 는 본문 '같은 종류의 원자끼리' 가 condition '전기음성도가 같을 때' 를 벗어나지 않는 방향이라 문제가 없는데, 이 명제만 반대 방향으로 어긋난다.",
+        "suggest": "본문의 조건절과 form.condition 을 같은 것으로 맞춘다."
+      },
+      {
+        "card_id": "chem-polar-covalent-bond",
+        "relation_id": "rel-pcb-partial-charges",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '극성 공유 결합이 있는 분자는 모두 극성 분자다' 가 이 명제를 가리키는데, 명제는 결합 하나 안에서 부분 전하가 나뉘는 것만 말하고 분자 수준의 상쇄를 다루지 않는다. 다만 이 오개념은 명제의 적용 범위(결합 하나)를 분자로 넘겨 읽은 데서 나오므로 이어져 있다고 볼 여지도 있다.",
+        "suggest": "명제의 적용 범위를 넘겨 읽은 오개념을 그 명제에 걸어 두는 것을 단원 규칙으로 인정할지 메인이 정하고, 인정하지 않으면 linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "chem-bond-polarity",
+        "relation_id": "rel-bp-moment-scale",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '결합의 극성이 크면 그 분자의 극성도 반드시 크다' 가 이 명제를 가리키는데, 명제는 결합의 극성을 재는 척도만 말한다. why_wrong 의 근거(방향까지 더해 정한다)는 chem-molecular-dipole-moment 소관이다. rel-pcb-partial-charges 와 같은 유형이라 함께 판단해야 한다.",
+        "suggest": "rel-pcb-partial-charges 와 같은 기준으로 처리한다."
+      },
+      {
+        "card_id": "chem-dipole-moment",
+        "relation_id": "rel-dm-zero-in-nonpolar",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '결합의 쌍극자 모멘트가 0 보다 크면 그 분자의 쌍극자 모멘트도 0 보다 크다' 가 이 명제를 가리키는데, 명제는 결합 하나의 값이 0 이 되는 경우만 말한다. rel-bp-moment-scale·rel-pcb-partial-charges 와 같은 유형이다.",
+        "suggest": "위 두 건과 같은 기준으로 처리한다."
+      },
+      {
+        "card_id": "chem-electron-pair-repulsion-theory",
+        "relation_id": "rel-eprt-repel",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '전자쌍이 네 개면 그 분자는 언제나 정사면체 모양이다' 가 이 명제를 가리킨다. 이 오개념은 명제를 분자 구조로까지 넘겨 적용한 데서 나오므로 이어져 있다고 볼 수 있으나, why_wrong 의 반증 근거('분자의 구조는 원자가 놓인 자리로 정한다')는 chem-molecular-geometry 의 rel-mg-atoms-decide 소관이다. 판단이 갈린다.",
+        "suggest": "명제의 범위를 넘겨 읽은 오개념 처리 기준을 정한 뒤 함께 판단한다."
+      },
+      {
+        "card_id": "chem-valence-electron",
+        "relation_id": "rel-ve-dot-count",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '원자가 전자는 원자에 들어 있는 전자를 모두 센 것이다' 가 이 명제를 가리키는데, 명제는 점의 개수와 원자가 전자 수의 대응만 말한다. why_wrong('가장 바깥 껍질의 전자만 원자가 전자다')은 카드 definition 을 되풀이한다.",
+        "suggest": "linked_relation 을 다시 걸지, 정의를 반증 근거로 삼는 오개념을 허용할지 메인이 정한다."
+      },
+      {
+        "card_id": "chem-multiple-bond",
+        "relation_id": "rel-mb-order",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '이중 결합은 단일 결합보다 길다' 가 이 명제를 가리키는데, 명제는 전자쌍 수와 결합 차수의 대응만 말하고 결합 길이는 이 카드 어느 명제에도 없다. 다만 차수와 길이는 학생에게 한 덩어리로 다뤄지는 대목이라 무관하다고 잘라 말하기 어렵다.",
+        "suggest": "결합 길이를 다루는 명제를 세울지, 오개념을 옮길지 정한다."
+      },
+      {
+        "card_id": "chem-partial-charge",
+        "relation_id": "rel-pc-size",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '부분 전하가 있는 분자는 분자 전체가 전하를 띤다' 가 이 명제를 가리키는데, 명제는 전기음성도 차이와 부분 전하 크기의 대응만 말한다. why_wrong('모두 더하면 0')의 근거는 명제가 아니라 부분 전하의 정의 쪽에 있다.",
+        "suggest": "linked_relation 을 다시 걸지 판단한다. chem-dipole 의 rel-dp-distance 와 같은 유형이므로 함께 본다."
+      },
+      {
+        "card_id": "chem-dipole",
+        "relation_id": "rel-dp-distance",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '쌍극자를 가진 분자는 전체 전하가 0 이 아니다' 가 이 명제를 가리키는데, 명제는 거리와 쌍극자 크기의 대응만 말한다. 반증 근거('크기가 같아 모두 더하면 0')는 카드 definition 의 '크기가 같고 부호가 반대인 두 부분 전하' 에 이미 있다. rel-pc-size 와 같은 유형이다.",
+        "suggest": "rel-pc-size 와 같은 기준으로 처리한다."
+      }
+    ],
+    "stats": { "ok": 79, "defect": 16, "uncertain": 13 }
+  },
+  "notes": [
+    "verified_by 는 어느 명제에서도 읽기만 했다. 108개 모두 teacher 이고 이 보고서는 그 필드를 바꾸지 않는다. 카드 파일도 고치지 않았다.",
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 36개 카드 전체에 돌려 이상 없음. form.scope·form.condition 이 빈 명제 0건, misconceptions[].linked_relation 이 가리키는 명제가 실재하지 않는 경우 0건. 한 명제에 오개념이 둘 몰린 카드는 chem-shared-electron-pair 하나뿐이다.",
+    "경향 명제 판정의 일관성(요청 항목): 명제 본문·form.scope·invertible_reason 어디에라도 경향이나 예외를 적어 둔 명제는 다섯이다. rel-ba-shape-value·rel-cb-nonmetals·rel-pc-to-moment·rel-ve-unpaired-bonds 는 모두 invertible: false 이고, rel-pte-table-direction 만 scope 에 '대체적 경향' 을 적어 놓고 invertible: true 다. 기준이 네 번 지켜지고 한 번 어긋났다.",
+    "성취기준 태그 확인(요청 항목, 모드 밖): standards.yaml 의 12화학02-04 는 지금 crosscheck: 일치 이므로 태그로 쓸 수 있다. chem-molecular-polarity-and-physical-property 는 극성 여부를 녹는점·끓는점과 잇고, chem-molecular-structure-and-chemical-property 는 구조 차이를 소듐과의 반응성과 이으므로 둘 다 02-04('물질의 물리적, 화학적 성질을 분자의 구조와 연관 짓고') 의 내용과 맞는다. 되돌린 태그가 지금은 옳다. 다만 chem-molecular-polarity-and-physical-property 의 rel-mpp-polarity-force 는 극성이 분자 사이 인력을 가른다는 데서 멈춰 물성으로 잇지 않으므로 명제 단위로는 02-02 에 더 가깝다 — 카드 단위 태그를 바꿀 일은 아니고, C5 가 돌 때 다시 볼 항목으로 적어 둔다.",
+    "chem-facts 스킬은 이 리포지터리에 없다(.claude/skills 에 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 만 있다). 화학 사실 대조는 하지 않았고 흉내 내지도 않았다.",
+    "카드 내 모순(검사 5)은 36개 카드에서 발견하지 못했다. 카드 사이의 어긋남은 rel-eprt-multiple-as-one / rel-mb-counted-once 한 쌍이고 uncertain 으로 올렸다.",
+    "이 보고서는 relations 절만 채웠다. curriculum 절은 C5 가 돌 때 병합한다."
+  ]
+}

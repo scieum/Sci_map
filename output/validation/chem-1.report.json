@@ -1,0 +1,143 @@
+{
+  "unit_id": "chem-1",
+  "generated_at": "2026-09-09T17:00:22+09:00",
+  "mode_run": [
+    "relation"
+  ],
+  "relations": {
+    "checked": 82,
+    "cards_checked": 27,
+    "findings": [
+      {
+        "card_id": "chem-avogadro-law",
+        "relation_id": "rel-avl-species-free",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 \"온도와 압력이 같다면 부피가 같은 기체 속에는 종류를 가리지 않고 같은 수의 분자가 들어 있다\" 인데, 이 명제는 \"기체의 종류가 달라도 온도·압력·부피가 같으면 그 안에 담긴 분자 수는 같다\" 로 같은 명제의 어순만 바꾼 것이다. 조건(온도·압력·부피 같음)·결론(분자 수 같음)·단서(종류 무관) 세 요소가 모두 정의에 이미 들어 있어 정의를 읽으면 그대로 나온다.",
+        "suggest": "법칙 카드는 definition 과 법칙 진술이 겹치는 것이 구조상 불가피하다. 이 명제를 지울지, 정의에서 곧바로 나오지 않는 귀결로 자리를 바꿀지 카드 단위로 정한다. 이 명제에 오개념 1건(원자 수 오해)이 걸려 있으므로 손대면 연결도 함께 옮겨야 한다."
+      },
+      {
+        "card_id": "chem-chemical-equation",
+        "relation_id": "rel-ce-atom-balance",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 \"…원자 수가 맞도록 계수를 붙인 식\" 이다. 명제 \"계수를 맞춘 식에서는 반응 전과 반응 뒤의 원자의 종류와 개수가 서로 같다\" 는 그 정의의 목적절을 조건절(\"계수를 맞춘 식에서는\")로 옮기고 결론으로 되풀이한 문장이라 새로 배우는 것이 없다.",
+        "suggest": "원자 보존이라는 사실 자체는 chem-stoichiometric-coefficient 의 rel-coef-atom-conservation 이 근거의 자리에서 이미 다룬다. 이 카드에서는 명제를 지울지 정의에서 나오지 않는 내용으로 바꿀지 정한다."
+      },
+      {
+        "card_id": "chem-formula-mass",
+        "relation_id": "rel-fm-depends-on-formula",
+        "verdict": "defect",
+        "checks": [
+          3,
+          1
+        ],
+        "reason": "항목 3: definition 이 \"화학식에 적힌 원자들의 원자량을 모두 더해 얻는다\" 이므로 \"화학식에 담긴 원자의 종류와 수가 달라지면 화학식량도 달라진다\" 는 더하는 항이 바뀌면 합이 바뀐다는 말이고 정의에서 저절로 나온다. 항목 1: 그에 더해 form.scope 가 \"화학식으로 나타내는 물질\" 전체인데, 원자의 종류와 수가 달라도 화학식량이 같아지는 조합이 있어(CO 와 N₂ 는 둘 다 28.0) 명제가 실제 적용 범위보다 넓게 쓰였다. 항목 1 쪽은 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "정의에서 나오지 않는 내용으로 바꿀지 정하고, 남긴다면 form.scope 에 \"화학식량이 같아지는 예외가 있다\" 는 한계를 어디에 둘지 사람이 정한다."
+      },
+      {
+        "card_id": "chem-molar-mass",
+        "relation_id": "rel-molarm-mass-of-one-mole",
+        "verdict": "defect",
+        "checks": [
+          3,
+          2
+        ],
+        "reason": "항목 3: definition 이 \"물질 1 mol 을 저울에 달았을 때 나오는 질량\" 이므로 \"1 mol 로 맞추어 놓고 보면 몰질량이 큰 물질일수록 달아 나오는 질량이 크다\" 는 정의를 크기 비교 문장으로 옮긴 것이다. invertible_reason 스스로 \"1 mol 의 질량이 곧 몰질량이라\" 라며 정의를 근거로 든다. 항목 2: invertible: true 라 D1 이 이 문장을 OX 로 내보내는데, 학생이 재는 것은 두 양 사이의 관계가 아니라 몰질량의 정의뿐이다. 뒤집은 문장이 거짓인 것은 맞으나 문항으로서 인출 가치가 없다.",
+        "suggest": "이 카드에는 같은 유형이지만 정의에서 나오지 않는 rel-molarm-same-mass 가 이미 있다. 이 명제를 남길지, 남긴다면 invertible 을 내려 OX 대상에서 뺄지 정한다."
+      },
+      {
+        "card_id": "chem-molar-volume-of-gas",
+        "relation_id": "rel-mvg-standard-value",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 \"0 ℃ 와 1 atm 이라는 조건에서 기체 1 mol 이 차지하는 부피. 기체의 종류를 가리지 않고 22.4 L 이다\" 이고, 명제는 \"온도가 0 ℃ 이고 압력이 1 atm 이라면 어떤 기체든 1 mol 의 부피가 22.4 L 로 같아진다\" 다. 조건·값·종류 무관 셋이 모두 정의에 있어 같은 문장이다.",
+        "suggest": "이 카드의 오개념 2건이 모두 이 명제 하나에 걸려 있고 나머지 두 명제에는 하나도 걸려 있지 않다. 명제를 손대면 오개념 연결을 어디로 옮길지 함께 정해야 한다."
+      },
+      {
+        "card_id": "chem-mole",
+        "relation_id": "rel-mole-same-count",
+        "verdict": "defect",
+        "checks": [
+          3,
+          4
+        ],
+        "reason": "항목 3: definition 이 \"원자·분자·이온처럼 아주 작은 입자를 셀 때 쓰는 묶음 단위. 한 묶음에 약 6.02×10²³개가 들어간다\" 로 이미 종류를 가리지 않는 개수 묶음임을 말한다. 명제 \"1 mol 에 든 입자 수는 세는 대상이 무엇으로 바뀌어도 6.02×10²³개로 같다\" 는 그것을 한 문장으로 옮긴 것이다. 항목 4: 이 명제에 걸린 오개념 두 건(\"1 mol 은 어떤 물질이든 1 g 이다\", \"물 1 mol 과 산소 1 mol 은 질량이 같다\")이 모두 질량에 관한 말이라 \"입자 수가 종류와 무관하게 같다\" 의 반대편에 서 있지 않다. 이 명제의 반대편은 \"물질에 따라 1 mol 의 입자 수가 다르다\" 여야 한다.",
+        "suggest": "오개념 두 건의 linked_relation 을 질량을 다루는 명제 쪽으로 옮길지 정한다. 다만 chem-molar-mass 의 rel-molarm-mass-of-one-mole 에 이미 같은 내용(\"물질 1 mol 의 질량은 어떤 물질이든 같다\")이 걸려 있어 옮기면 중복이 된다. 이 카드에서 오개념 없이 남아 있는 rel-mole-proportional-count·rel-mole-atoms-in-molecule 쪽을 함께 볼 것."
+      },
+      {
+        "card_id": "chem-mole-ratio",
+        "relation_id": "rel-mr-equals-coefficient",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 \"화학 반응에 참여하는 물질들의 양(mol)이 서로 이루는 비. 반응식의 계수비와 같은 값이 된다\" 이고, 명제는 \"반응식의 계수비는 그대로 반응에 참여하는 물질들의 몰비가 된다\" 다. 주어와 술어의 자리만 맞바꾼 같은 문장이다. 같은 내용이 chem-stoichiometric-coefficient 의 rel-coef-equals-mole-ratio 에도 그대로 있다.",
+        "suggest": "두 카드 가운데 어느 쪽에서 이 사실을 명제로 세울지 정하고, 이 카드에서는 정의에서 나오지 않는 내용으로 바꿀지 판단한다."
+      },
+      {
+        "card_id": "chem-molar-volume-of-gas",
+        "relation_id": "rel-mvg-temperature",
+        "verdict": "defect",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "명제가 \"…온도만 올리면 기체 1 mol 의 부피는 22.4 L 보다 커진다\" 로 결론을 절대값 22.4 L 에 걸어 놓았는데, form.condition 은 \"압력을 1 atm 으로 고정하고 온도만 바꿈\" 뿐이고 출발 온도가 0 ℃ 라는 조건이 없다. −50 ℃ 에서 −20 ℃ 로 올리는 것도 이 condition 을 만족하지만 그때 부피는 22.4 L 보다 작다. 조건이 명제의 실제 적용 범위보다 넓다(항목 1). invertible: true 라 inverted_text 가 그대로 OX 오답 지문이 되는데, 조건이 빠진 채로는 학생이 정당한 반례를 들 수 있어 오답 지문이 흔들린다(항목 2).",
+        "suggest": "form.condition 에 출발 상태(0 ℃·1 atm)를 넣을지, 결론을 절대값 대신 증가·감소로 바꿀지 정한다. 조건이 채워지기 전에는 이 명제를 OX 대상에서 빼는 편이 안전하다."
+      },
+      {
+        "card_id": "chem-amount-of-substance",
+        "relation_id": "rel-aos-common-scale",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "명제는 \"단위가 서로 다른 측정값도 몰로 바꾸어 놓으면 하나의 잣대로 견줄 수 있다\" 인데 걸린 오개념은 \"몰수는 개수를 센 것이므로 소수로 나올 수 없다\" 다. 몰 값이 소수로 나오느냐는 몰이라는 단위의 성격에 관한 일반적 오해라서, 이 명제를 옳게 알아도 그 오해는 그대로 남는다. 이 명제의 반대편은 \"단위가 다르면 몰로 바꾸어도 견줄 수 없다\" 쪽이다.",
+        "suggest": "오개념을 이 명제의 반대편에 서는 것으로 바꿀지, 아니면 소수 오개념이 실제로 반대편에 서는 다른 명제로 linked_relation 을 옮길지 정한다."
+      },
+      {
+        "card_id": "chem-synthetic-medicine",
+        "relation_id": "rel-syn-med-history",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "명제는 \"합성 기술이 없던 시기에 인류가 쓰던 약은 천연 물질의 테두리를 벗어나지 못했다\" 로 시기와 약의 출처만 말하는데, 걸린 오개념은 \"천연 물질에서 얻은 약은 합성 의약품보다 언제나 안전하다\" 로 안전성을 말한다. 명제가 안전성을 한 마디도 말하지 않으므로 오개념이 그 반대편에 서 있지 않다. 이 카드의 세 명제(history·design·brand-vs-substance) 어디에도 안전성을 다루는 것이 없다.",
+        "suggest": "오개념을 이 명제의 반대편에 서는 것으로 바꿀지, 안전성을 다루는 명제를 이 카드에 세울지(그 경우 C2 보강) 정한다."
+      },
+      {
+        "card_id": "chem-atomic-mass",
+        "relation_id": "rel-am-tracks-real-mass",
+        "verdict": "uncertain",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "\"원자량이 큰 원자일수록 실제 질량도 크다\" 의 form.scope 가 \"원자량이 정의된 원자\" 인데, 여기서 원자량이 원자 하나의 상대적 질량인지 원소의 평균 원자량인지가 갈리지 않는다. 같은 단원의 chem-average-atomic-mass rel-avgam-is-default 가 \"주기율표나 문제에서 그냥 원자량이라 부르는 값은 대개 이 평균값을 가리킨다\" 라고 적어 두어, 학생이 평균 원자량으로 읽을 근거가 단원 안에 있다. 그렇게 읽으면 원소끼리 견줄 때 평균 원자량의 순서가 개별 원자 하나의 질량 순서와 어긋나는 경우가 생길 수 있다. invertible: true 라 이 읽기 차이가 그대로 OX 오답 지문에 실린다. 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "form.scope 를 원자 하나의 상대적 질량으로 좁혀 적을지, 평균 원자량과 갈라 쓸지 사람이 정한다. 두 카드의 원자량 용법이 한 단원 안에서 갈리는지가 먼저다."
+      },
+      {
+        "card_id": "chem-chemical-cell",
+        "relation_id": "rel-cell-components",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 \"화학 전지는 전기를 담아 두었다가 그대로 내보내는 그릇이다\" 는 카드의 definition(\"화학 반응을 전기 에너지로 바꾸어 꺼내 쓰도록 꾸민 장치\")의 반대편이지, \"두 극을 이루는 물질과 전해질이 함께 갖추어져야 한다\" 는 이 명제의 반대편이라고 보기 어렵다. 다만 전해질이 있어야 한다는 사실이 전지가 담아 두는 그릇이 아님을 보이는 근거이기도 해서 결함인지 판단이 갈린다.",
+        "suggest": "오개념의 linked_relation 을 그대로 둘지, 카드 안에서 반응이 일어난다는 것을 직접 말하는 명제 쪽으로 옮길지 정한다."
+      }
+    ],
+    "stats": {
+      "ok": 70,
+      "defect": 10,
+      "uncertain": 2
+    }
+  }
+}
