@@ -62,6 +62,25 @@ def title_on_page(title: str, page_text: str) -> bool:
     있는 쪽을 제목으로 오인하지 않는다.
     """
     flat = normalize_title(page_text)
+    return seq_match(title, flat) or seq_match(doubled(title), flat)
+
+
+def doubled(s: str) -> str:
+    """글자마다 두 벌로 겹쳐 찍힌 제목 — '화학의 언어' → '화화학학의의 언언어어'.
+
+    화학(임희준) 1단원 여는 쪽(010)이 그렇다. 장식 제목이 두 벌 겹쳐 조판돼
+    추출하면 글자가 두 번씩 나온다. 눈에는 멀쩡하고 쪽 번호·판면 아래 indd
+    파일명((0010-0055)…1단원)·차례가 모두 이 쪽을 가리키는데 제목 대조만 어긋난다.
+
+    쪽 텍스트를 접지 않고 **제목을 부풀려** 찾는다. 접는 쪽을 택하면 '각각'
+    처럼 원래 겹치는 낱말까지 접혀 엉뚱한 쪽을 제목으로 오인할 수 있는데,
+    부풀리는 쪽은 찾는 문자열이 길어질 뿐이라 그런 위험이 없다.
+    """
+    return "".join(ch * 2 if not ch.isspace() else ch for ch in s)
+
+
+def seq_match(title: str, flat: str) -> bool:
+    """제목 토막이 앞에서부터 순서대로 나오는가."""
     if normalize_title(title) in flat:
         return True
     at = 0
