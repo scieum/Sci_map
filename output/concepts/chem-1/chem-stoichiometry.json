@@ -1,0 +1,124 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-stoichiometry",
+  "concept_key": "concept:stoichiometry",
+  "term": "화학 반응에서의 양적 관계",
+  "notation": {
+    "hanja": "化學 反應에서의 量的 關係",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 反 돌이킬 반 · 應 응할 응 · 量 헤아릴 량 · 的 과녁 적 · 關 빗장 관 · 係 맬 계",
+    "english": "stoichiometry of chemical reaction"
+  },
+  "definition": "반응식의 몰비를 다리로 삼아, 한 물질의 질량이나 부피에서 다른 물질의 양을 알아내는 관계.",
+  "relations": [
+    {
+      "id": "rel-stoi-three-steps",
+      "text": "주어진 질량이나 부피를 먼저 몰로 바꾸고, 몰비로 건너간 뒤 원하는 단위로 되돌리는 순서로 푼다",
+      "form": {
+        "condition": "몰질량과 0 ℃·1 atm 의 기체 1 mol 부피를 알고 있음",
+        "type": "conditional",
+        "scope": "화학 반응의 양적 관계 계산"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 순서를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-gas-shortcut",
+      "text": "관계된 물질이 모두 기체라면 몰로 바꾸지 않고 계수비만으로 부피 관계를 곧장 구할 수 있다",
+      "form": {
+        "condition": "온도와 압력이 일정하고 관계된 물질이 모두 기체임",
+        "type": "conditional",
+        "scope": "기체끼리의 부피 관계"
+      },
+      "invertible": false,
+      "invertible_reason": "계산의 지름길을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stoi-limiting",
+      "text": "한쪽 반응물이 넉넉하다면 모자란 쪽 반응물의 양이 생성물의 양을 정한다",
+      "form": {
+        "condition": "반응물 가운데 한 쪽만 모자란 상태",
+        "type": "causal",
+        "scope": "반응물의 양이 계수비와 어긋나게 섞인 반응",
+        "antecedent": {
+          "quantity": "모자란 반응물의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성물의 양(mol)",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "모자란 쪽이 정하는 양이 계수비대로 늘어나므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한쪽 반응물이 넉넉할 때 모자란 쪽 반응물의 양을 늘리면 생성물의 양은 오히려 줄어든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응물의 질량비만 알면 생성물의 질량을 바로 구할 수 있다",
+      "why_wrong": "질량비는 계수비와 다르다. 몰로 바꾸어 몰비를 거친 뒤 다시 질량으로 되돌려야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stoi-three-steps"
+    },
+    {
+      "text": "반응물 두 가지를 아무 비율로 넣어도 넣은 만큼 모두 반응한다",
+      "why_wrong": "계수비에 맞지 않으면 한쪽이 남는다. 생성물의 양은 모자란 쪽이 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stoi-limiting"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-mole-ratio"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-amount-of-substance"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molar-mass"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molar-volume-of-gas"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-equation"
+    }
+  ],
+  "curriculum": [
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-02",
+  "pages": [
+    42,
+    43,
+    45
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

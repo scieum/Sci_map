@@ -1,0 +1,118 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-formula-mass",
+  "concept_key": "concept:formula-mass",
+  "term": "화학식량",
+  "notation": {
+    "hanja": "化學式量",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 式 법 식 · 量 헤아릴 량",
+    "english": "formula mass"
+  },
+  "definition": "독립된 분자를 이루지 않는 물질의 상대적 질량. 화학식에 적힌 원자들의 원자량을 모두 더해 얻는다.",
+  "relations": [
+    {
+      "id": "rel-fm-when-to-use",
+      "text": "염화 소듐처럼 이온이 규칙적으로 늘어선 물질은 분자량 대신 화학식량으로 상대적 질량을 나타낸다",
+      "form": {
+        "condition": "물질이 독립된 분자로 존재하지 않을 때",
+        "type": "classification",
+        "scope": "이온 결합 물질이나 금속처럼 분자가 없는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "어느 쪽 이름을 쓰는지를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fm-depends-on-formula",
+      "text": "화학식에 담긴 원자의 종류와 수가 달라지면 그에 따라 화학식량도 달라진다",
+      "form": {
+        "condition": "물질을 나타내는 화학식이 정해져 있음",
+        "type": "causal",
+        "scope": "화학식으로 나타내는 물질",
+        "antecedent": {
+          "quantity": "화학식에 든 원자의 종류와 수",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "화학식량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값이 달라진다는 서술이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fm-same-recipe",
+      "text": "구하는 절차는 분자량과 다르지 않아, 두 값 모두 원자량을 더해 얻는다",
+      "form": {
+        "condition": "상대적 질량을 원자량의 합으로 정의할 때",
+        "type": "conditional",
+        "scope": "분자성 물질과 비분자성 물질 모두"
+      },
+      "invertible": false,
+      "invertible_reason": "두 절차가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염화 소듐은 NaCl 이라는 분자로 되어 있으므로 분자량을 쓴다",
+      "why_wrong": "염화 소듐은 이온이 규칙적으로 배열된 물질이라 독립된 분자가 없다. 그래서 화학식량을 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fm-when-to-use"
+    },
+    {
+      "text": "화학식량은 분자량과 전혀 다른 방식으로 구한다",
+      "why_wrong": "둘 다 화학식에 든 원자들의 원자량을 더해 구한다. 부르는 이름만 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fm-same-recipe"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-atomic-mass"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-chemical-formula"
+    },
+    {
+      "type": "next",
+      "target": "chem-molar-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-molecular-mass"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    31,
+    47
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

@@ -1,0 +1,127 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-atomic-mass",
+  "concept_key": "concept:atomic-mass",
+  "term": "원자량",
+  "aliases": [
+    "상대적 원자 질량"
+  ],
+  "notation": {
+    "hanja": "原子量",
+    "hanja_gloss": "原 근원 원 · 子 아들 자 · 量 헤아릴 량",
+    "english": "atomic mass"
+  },
+  "definition": "질량수 12인 탄소 원자를 12 라는 기준값으로 삼고, 그것에 견주어 매긴 원자의 상대적 질량.",
+  "relations": [
+    {
+      "id": "rel-am-no-unit",
+      "text": "원자량은 기준 원자와 견준 비의 값이므로 g 같은 질량 단위가 붙지 않는다",
+      "form": {
+        "condition": "질량수 12인 탄소를 기준으로 삼았을 때",
+        "type": "conditional",
+        "scope": "원자량이라는 값의 표기"
+      },
+      "invertible": false,
+      "invertible_reason": "단위가 없다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-am-tracks-real-mass",
+      "text": "모든 원자를 하나의 기준으로 매겼으므로 원자량이 큰 원자일수록 실제 질량도 크다",
+      "form": {
+        "condition": "모든 원자를 같은 기준 원자에 견줌",
+        "type": "direct",
+        "scope": "원자량이 정의된 원자",
+        "antecedent": {
+          "quantity": "원자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원자 1개의 실제 질량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "상대적 질량은 실제 질량을 같은 값으로 나눈 비라서 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "모든 원자를 하나의 기준으로 매기면 원자량이 큰 원자일수록 실제 질량은 오히려 작다"
+    },
+    {
+      "id": "rel-am-why-relative",
+      "text": "원자 1개의 실제 질량은 너무 작아 그대로 쓰기 번거로우므로 상대적 질량으로 바꾸어 다룬다",
+      "form": {
+        "condition": "여러 종류의 원자 질량을 견주어 다룰 때",
+        "type": "conditional",
+        "scope": "원자 수준의 질량 비교"
+      },
+      "invertible": false,
+      "invertible_reason": "상대적 질량을 쓰는 까닭을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자량의 단위는 g이다",
+      "why_wrong": "원자량은 기준 원자와 견준 비의 값이라 단위가 붙지 않는다. 단위가 붙는 것은 몰질량이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-am-no-unit"
+    },
+    {
+      "text": "탄소의 원자량이 12인 까닭은 탄소 원자 1개의 질량이 12 g이기 때문이다",
+      "why_wrong": "탄소 원자 1개의 실제 질량은 약 2×10⁻²³ g 이고, 12 는 그 질량을 기준으로 정한 값일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-am-tracks-real-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-average-atomic-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-formula-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-molar-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-isotope"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    29,
+    30,
+    47
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

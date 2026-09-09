@@ -1,0 +1,109 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-avogadro-number",
+  "concept_key": "concept:avogadro-number",
+  "term": "아보가드로수",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아보가드로'는 사람 이름을 소리대로 옮긴 말이라 한자 표기가 없다. 뒤의 '수'만 한자어(數)다.",
+    "english": "Avogadro number",
+    "symbol_display": "N_A = 6.02×10²³",
+    "symbol_plain": "NA = 6.02x10^23"
+  },
+  "definition": "입자 1 mol 이 몇 개인지를 나타내는 값. 2019년부터 6.02214076×10²³ 으로 값이 고정되었다.",
+  "relations": [
+    {
+      "id": "rel-avn-conversion",
+      "text": "입자 수를 이 값으로 나누면 물질의 양(mol)이 되고, 거꾸로 곱하면 입자 수로 되돌아온다",
+      "form": {
+        "condition": "같은 종류의 입자를 셀 때",
+        "type": "conditional",
+        "scope": "입자 수와 물질의 양 사이의 환산"
+      },
+      "invertible": false,
+      "invertible_reason": "환산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-avn-defined-constant",
+      "text": "예전에는 실험으로 재어 얻던 값이었으나 2019년부터는 값이 정해진 상수로 쓰인다",
+      "form": {
+        "condition": "2019년 국제단위계 개정 이후",
+        "type": "conditional",
+        "scope": "몰의 정의와 아보가드로수"
+      },
+      "invertible": false,
+      "invertible_reason": "값의 지위가 바뀐 사실을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-avn-species-free",
+      "text": "물질의 양이 서로 같다면 종류가 달라도 들어 있는 입자 수는 이 값의 같은 배수만큼이다",
+      "form": {
+        "condition": "견주는 물질들의 양(mol)이 서로 같음",
+        "type": "conditional",
+        "scope": "입자로 이루어진 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아보가드로수는 원자에만 쓰고 분자나 이온에는 쓰지 않는다",
+      "why_wrong": "세는 대상이 원자든 분자든 이온이든 1 mol 이면 모두 같은 개수를 뜻한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-avn-species-free"
+    },
+    {
+      "text": "아보가드로수는 지금도 잴 때마다 값이 조금씩 바뀐다",
+      "why_wrong": "2019년부터는 값이 정해진 상수라 측정 결과에 따라 바뀌지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-avn-defined-constant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-mole"
+    },
+    {
+      "type": "next",
+      "target": "chem-amount-of-substance"
+    },
+    {
+      "type": "related",
+      "target": "chem-molar-mass"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    32,
+    46,
+    47
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

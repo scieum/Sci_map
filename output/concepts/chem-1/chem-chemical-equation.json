@@ -1,0 +1,121 @@
+{
+ "subject": "화학",
+ "unit": "Ⅰ. 화학의 언어",
+ "unit_id": "chem-1",
+ "version": 1,
+ "definition_source": "restated",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "id": "chem-chemical-equation",
+ "concept_key": "concept:chemical-equation",
+ "term": "화학 반응식",
+ "notation": {
+  "hanja": "化學 反應式",
+  "hanja_gloss": "化 될 화 · 學 배울 학 · 反 돌이킬 반 · 應 응할 응 · 式 법 식",
+  "english": "chemical equation",
+  "symbol_display": "2H₂(g) + O₂(g) → 2H₂O(l)",
+  "symbol_plain": "2H2(g) + O2(g) -> 2H2O(l)"
+ },
+ "definition": "반응 전 물질을 왼쪽에, 반응 뒤 물질을 오른쪽에 화학식으로 적고 화살표로 이은 다음, 원자 수가 맞도록 계수를 붙인 식.",
+ "relations": [
+  {
+   "id": "rel-ce-information",
+   "text": "계수가 맞추어진 식을 읽으면 참여한 물질의 종류와 상태, 그리고 계수비를 알 수 있다",
+   "form": {
+    "condition": "계수가 이미 맞추어진 반응식일 때",
+    "type": "conditional",
+    "scope": "완성된 화학 반응식"
+   },
+   "invertible": false,
+   "invertible_reason": "식이 담은 정보를 말한 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12화학01-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ce-atom-balance",
+   "text": "계수를 맞춘 식에서는 반응 전과 반응 뒤의 원자의 종류와 개수가 서로 같다",
+   "form": {
+    "condition": "원자가 없어지거나 새로 생기지 않는 화학 반응",
+    "type": "conditional",
+    "scope": "계수가 맞추어진 화학 반응식"
+   },
+   "invertible": false,
+   "invertible_reason": "같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+   "curriculum": [
+    "12화학01-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ce-no-rate-info",
+   "text": "반응식은 물질이 어떤 비로 반응하는지를 알려 줄 뿐, 반응이 얼마나 빨리 일어나는지는 알려 주지 않는다",
+   "form": {
+    "condition": "반응식만 보고 판단할 때",
+    "type": "conditional",
+    "scope": "화학 반응식이 담는 정보의 한계"
+   },
+   "invertible": false,
+   "invertible_reason": "정보의 한계를 말한 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12화학01-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "화학 반응식을 보면 그 반응이 얼마나 빨리 일어나는지도 알 수 있다",
+   "why_wrong": "반응식은 물질의 종류·상태·양적 관계를 담을 뿐, 반응 속도는 담지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ce-no-rate-info"
+  },
+  {
+   "text": "계수를 맞출 때 화학식 뒤의 작은 숫자를 고쳐도 된다",
+   "why_wrong": "작은 숫자를 고치면 물질 자체가 바뀐다. 맞출 수 있는 것은 화학식 앞의 계수뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ce-atom-balance"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "chem-chemical-formula"
+  },
+  {
+   "type": "prereq",
+   "target": "chem-reactant"
+  },
+  {
+   "type": "prereq",
+   "target": "chem-product"
+  },
+  {
+   "type": "next",
+   "target": "chem-stoichiometric-coefficient"
+  },
+  {
+   "type": "next",
+   "target": "chem-state-symbol"
+  },
+  {
+   "type": "related",
+   "target": "chem-mole-ratio"
+  }
+ ],
+ "curriculum": [
+  "12화학01-03"
+ ],
+ "topic_id": "chem-1-2-02",
+ "pages": [
+  38,
+  47,
+  49
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "media": []
+}

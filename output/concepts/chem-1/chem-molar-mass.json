@@ -1,0 +1,135 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-molar-mass",
+  "concept_key": "concept:molar-mass",
+  "term": "몰질량",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰'이 영어 mole 의 음차어라 낱말 전체를 한자로 적을 수 없다. 뒷부분 '질량'만 한자어(質量)다.",
+    "english": "molar mass",
+    "symbol_display": "M (g/mol)",
+    "symbol_plain": "M (g/mol)"
+  },
+  "definition": "물질 1 mol 을 저울에 달았을 때 나오는 질량. 수치는 그 물질의 원자량·분자량·화학식량과 같고 단위만 g/mol 이 붙는다.",
+  "relations": [
+    {
+      "id": "rel-molarm-conversion",
+      "text": "질량을 몰질량으로 나누면 물질의 양(mol)이, 그 양에 몰질량을 곱하면 다시 질량이 나온다",
+      "form": {
+        "condition": "그 물질의 몰질량을 알고 있음",
+        "type": "conditional",
+        "scope": "질량과 물질의 양 사이의 환산"
+      },
+      "invertible": false,
+      "invertible_reason": "환산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-molarm-mass-of-one-mole",
+      "text": "물질의 양을 1 mol 로 맞추어 놓고 보면 몰질량이 큰 물질일수록 달아 나오는 질량이 크다",
+      "form": {
+        "condition": "견주는 물질의 양을 1 mol 로 같게 맞춤",
+        "type": "direct",
+        "scope": "몰질량이 정해진 순물질",
+        "antecedent": {
+          "quantity": "몰질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "1 mol 의 질량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "1 mol 의 질량이 곧 몰질량이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물질의 양을 1 mol 로 맞추면 몰질량이 큰 물질일수록 달아 나오는 질량이 작다"
+    },
+    {
+      "id": "rel-molarm-same-mass",
+      "text": "질량을 같게 맞추어 견주면 몰질량이 큰 쪽의 물질의 양(mol)이 더 적다",
+      "form": {
+        "condition": "견주는 두 물질의 질량이 서로 같음",
+        "type": "inverse",
+        "scope": "몰질량이 정해진 순물질",
+        "antecedent": {
+          "quantity": "몰질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물질의 양(mol)",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량을 몰질량으로 나눈 값이 물질의 양이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량을 같게 맞추어 견주면 몰질량이 큰 쪽의 물질의 양(mol)이 더 많다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질 1 mol 의 질량은 어떤 물질이든 같다",
+      "why_wrong": "1 mol 은 입자 수를 맞춘 것이라 질량은 몰질량을 따라 달라진다. 물은 18.0 g, 염화 소듐은 58.5 g 이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-molarm-mass-of-one-mole"
+    },
+    {
+      "text": "물 20 g 과 에탄올 20 g 에는 분자가 같은 수만큼 들어 있다",
+      "why_wrong": "질량이 같아도 몰질량이 다르면 물질의 양이 다르다. 몰질량이 작은 물 쪽에 분자가 더 많다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-molarm-same-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-mole"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molecular-mass"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-formula-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-amount-of-substance"
+    },
+    {
+      "type": "related",
+      "target": "chem-molar-volume-of-gas"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    33,
+    47,
+    48
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

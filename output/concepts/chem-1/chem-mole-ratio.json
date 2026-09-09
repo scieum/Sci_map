@@ -1,0 +1,126 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-mole-ratio",
+  "concept_key": "concept:mole-ratio",
+  "term": "몰비",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'몰'이 영어 mole 의 음차어라 낱말 전체를 한자로 적을 수 없다. 뒷글자 '비'만 한자어(比)다.",
+    "english": "mole ratio"
+  },
+  "definition": "화학 반응에 참여하는 물질들의 양(mol)이 서로 이루는 비. 반응식의 계수비와 같은 값이 된다.",
+  "relations": [
+    {
+      "id": "rel-mr-equals-coefficient",
+      "text": "반응식의 계수비는 그대로 반응에 참여하는 물질들의 몰비가 된다",
+      "form": {
+        "condition": "반응이 반응식대로 진행됨",
+        "type": "direct",
+        "scope": "계수가 맞추어진 화학 반응식",
+        "antecedent": {
+          "quantity": "계수비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "몰비",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mr-volume-ratio",
+      "text": "관계된 물질이 모두 기체이고 온도와 압력이 일정하면 몰비가 곧 부피비가 된다",
+      "form": {
+        "condition": "온도와 압력이 일정하고 해당 물질이 기체 상태임",
+        "type": "direct",
+        "scope": "기체끼리 오가는 반응",
+        "antecedent": {
+          "quantity": "몰비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기체의 부피비",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mr-not-mass-ratio",
+      "text": "몰비는 질량비와 같지 않으며, 몰비에 각 물질의 몰질량을 곱해야 질량비가 나온다",
+      "form": {
+        "condition": "물질마다 몰질량이 서로 다름",
+        "type": "conditional",
+        "scope": "양적 관계 계산"
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 다르다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학 반응식의 계수비는 질량비와 같다",
+      "why_wrong": "계수비와 같아지는 것은 몰비다. 질량비는 몰비에 몰질량을 곱해야 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mr-not-mass-ratio"
+    },
+    {
+      "text": "몰비는 언제나 부피비와 같다",
+      "why_wrong": "부피비와 같아지는 것은 그 물질이 기체이고 온도와 압력이 일정할 때뿐이다. 고체나 액체에는 해당하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mr-volume-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-stoichiometric-coefficient"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-mole"
+    },
+    {
+      "type": "next",
+      "target": "chem-stoichiometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-amount-of-substance"
+    }
+  ],
+  "curriculum": [
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-02",
+  "pages": [
+    41,
+    47
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

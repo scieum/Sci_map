@@ -1,0 +1,124 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-mole",
+  "concept_key": "concept:mole",
+  "term": "몰",
+  "aliases": [
+    "mol"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 mole 의 음차어라 대응하는 한자 표기가 없다. 단위 기호로는 mol 을 쓴다.",
+    "english": "mole",
+    "symbol_display": "mol",
+    "symbol_plain": "mol"
+  },
+  "definition": "원자·분자·이온처럼 아주 작은 입자를 셀 때 쓰는 묶음 단위. 한 묶음에 약 6.02×10²³개가 들어간다.",
+  "relations": [
+    {
+      "id": "rel-mole-same-count",
+      "text": "1 mol 에 든 입자 수는 세는 대상이 무엇으로 바뀌어도 6.02×10²³개로 같다",
+      "form": {
+        "condition": "입자를 세는 묶음 단위로 몰을 쓸 때",
+        "type": "conditional",
+        "scope": "원자·분자·이온처럼 셀 수 있는 입자"
+      },
+      "invertible": false,
+      "invertible_reason": "종류와 무관하게 같다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mole-proportional-count",
+      "text": "같은 물질이라면 물질의 양(mol)이 커지는 만큼 그 안에 든 입자 수도 같은 비로 많아진다",
+      "form": {
+        "condition": "같은 종류의 입자를 셀 때",
+        "type": "direct",
+        "scope": "입자 수를 셀 수 있는 물질",
+        "antecedent": {
+          "quantity": "물질의 양(mol)",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "입자 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "입자 수는 몰에 아보가드로수를 곱한 값이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 물질이라면 물질의 양(mol)이 커질수록 그 안에 든 입자 수는 오히려 줄어든다"
+    },
+    {
+      "id": "rel-mole-atoms-in-molecule",
+      "text": "분자 1 mol 에 든 구성 원자의 양(mol)은 분자식에 적힌 원자 수만큼 곱해 얻는다",
+      "form": {
+        "condition": "분자식에 적힌 원자 수를 알고 있음",
+        "type": "conditional",
+        "scope": "분자로 이루어진 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "환산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "1 mol 은 어떤 물질이든 1 g 이다",
+      "why_wrong": "1 mol 은 입자 수를 세는 묶음이고, 그 묶음의 질량은 물질마다 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mole-same-count"
+    },
+    {
+      "text": "물 1 mol 과 산소 1 mol 은 질량이 같다",
+      "why_wrong": "입자 수는 같지만 몰질량이 달라 질량은 18.0 g 과 32.0 g 으로 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mole-same-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-avogadro-number"
+    },
+    {
+      "type": "next",
+      "target": "chem-molar-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-molar-volume-of-gas"
+    },
+    {
+      "type": "next",
+      "target": "chem-mole-ratio"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    32,
+    47
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

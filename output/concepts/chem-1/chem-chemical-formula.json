@@ -1,0 +1,107 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-chemical-formula",
+  "concept_key": "concept:chemical-formula",
+  "term": "화학식",
+  "notation": {
+    "hanja": "化學式",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 式 법 식",
+    "english": "chemical formula",
+    "symbol_display": "H₂O",
+    "symbol_plain": "H2O"
+  },
+  "definition": "어떤 원소가 몇 개씩 모여 그 물질을 이루는지를 원소 기호와 숫자로 적어 나타낸 표기.",
+  "relations": [
+    {
+      "id": "rel-cf-carries-count",
+      "text": "화학식은 어떤 원자가 몇 개 들어 있는지를 담고 있어 상대적 질량을 셀 근거가 된다",
+      "form": {
+        "condition": "원소 기호와 원자 수가 바르게 적혀 있음",
+        "type": "conditional",
+        "scope": "화학식으로 나타낼 수 있는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "화학식이 담은 정보를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cf-first-step",
+      "text": "반응식을 세우는 첫 단계는 반응물과 생성물을 각각 화학식으로 바꾸어 적는 일이다",
+      "form": {
+        "condition": "화학 반응식을 세우려 할 때",
+        "type": "conditional",
+        "scope": "화학 반응식을 세우는 절차"
+      },
+      "invertible": false,
+      "invertible_reason": "절차의 순서를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cf-case-matters",
+      "text": "원소 기호는 대문자와 소문자를 구별해 적어야 하며, Co 와 CO 는 서로 다른 물질을 가리킨다",
+      "form": {
+        "condition": "원소 기호를 적을 때",
+        "type": "classification",
+        "scope": "화학식 표기 규칙"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 규칙을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학식에서 대문자와 소문자는 구별하지 않아도 된다",
+      "why_wrong": "Co 는 코발트라는 원소이고 CO 는 탄소와 산소로 된 화합물이다. 구별하지 않으면 다른 물질이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cf-case-matters"
+    },
+    {
+      "text": "화학식 앞에 붙는 숫자와 원소 기호 뒤의 작은 숫자는 같은 뜻이다",
+      "why_wrong": "뒤의 작은 숫자는 입자 하나에 든 원자 수이고, 앞의 숫자는 그 입자가 몇 개인지를 나타내는 계수다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cf-carries-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-chemical-equation"
+    },
+    {
+      "type": "next",
+      "target": "chem-formula-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-state-symbol"
+    }
+  ],
+  "curriculum": [
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-02",
+  "pages": [
+    38
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "media": []
+}

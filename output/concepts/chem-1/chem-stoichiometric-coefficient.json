@@ -1,0 +1,136 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-stoichiometric-coefficient",
+  "concept_key": "concept:stoichiometric-coefficient",
+  "term": "화학 반응식의 계수",
+  "aliases": [
+    "반응 계수"
+  ],
+  "notation": {
+    "hanja": "化學 反應式의 係數",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 反 돌이킬 반 · 應 응할 응 · 式 법 식 · 係 맬 계 · 數 셈 수",
+    "english": "stoichiometric coefficient"
+  },
+  "definition": "반응 전후로 원자의 종류와 수가 어긋나지 않도록 화학식 앞에 붙이는 수. 가장 간단한 정수비로 적는다.",
+  "relations": [
+    {
+      "id": "rel-coef-simplest-integer",
+      "text": "계수는 가장 간단한 정수비가 되도록 적고, 1 일 때는 쓰지 않고 생략한다",
+      "form": {
+        "condition": "완성한 반응식을 적어 낼 때",
+        "type": "conditional",
+        "scope": "화학 반응식의 표기 규칙"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 규칙을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-coef-atom-conservation",
+      "text": "계수를 맞추는 근거는 반응이 일어나도 원자가 없어지거나 새로 생기지 않는다는 사실이다",
+      "form": {
+        "condition": "화학 반응에서 원자가 보존됨",
+        "type": "causal",
+        "scope": "계수 맞추기의 근거"
+      },
+      "invertible": false,
+      "invertible_reason": "근거를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-coef-equals-mole-ratio",
+      "text": "계수비는 반응에 참여하는 입자 수의 비이자 물질의 양(mol)의 비와 같다",
+      "form": {
+        "condition": "반응이 반응식대로 진행됨",
+        "type": "direct",
+        "scope": "계수가 맞추어진 화학 반응식",
+        "antecedent": {
+          "quantity": "계수비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "몰비",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-coef-not-subscript",
+      "text": "계수를 맞추려고 화학식 안의 아래 첨자를 고치면 아예 다른 물질이 되어 버린다",
+      "form": {
+        "condition": "계수를 맞추는 도중",
+        "type": "causal",
+        "scope": "화학식 표기와 계수 맞추기"
+      },
+      "invertible": false,
+      "invertible_reason": "고치면 어떻게 되는지를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "계수비는 반응물과 생성물의 질량비와 같다",
+      "why_wrong": "계수비는 몰비와 같다. 질량비를 얻으려면 몰비에 각 물질의 몰질량을 곱해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coef-equals-mole-ratio"
+    },
+    {
+      "text": "물의 계수를 맞추려면 2H₂O 대신 H₂O₂ 로 써도 된다",
+      "why_wrong": "아래 첨자를 고치면 물이 아니라 과산화 수소가 된다. 바꿀 수 있는 것은 앞의 계수뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coef-not-subscript"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemical-equation"
+    },
+    {
+      "type": "next",
+      "target": "chem-undetermined-coefficient-method"
+    },
+    {
+      "type": "next",
+      "target": "chem-mole-ratio"
+    },
+    {
+      "type": "related",
+      "target": "chem-state-symbol"
+    }
+  ],
+  "curriculum": [
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-02",
+  "pages": [
+    38,
+    41
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

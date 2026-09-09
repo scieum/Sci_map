@@ -1,0 +1,106 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-advanced-material",
+  "concept_key": "concept:advanced-material",
+  "term": "신소재",
+  "notation": {
+    "hanja": "新素材",
+    "hanja_gloss": "新 새 신 · 素 본디 소 · 材 재목 재",
+    "english": "advanced material"
+  },
+  "definition": "기존 재료가 갖지 못한 성질을 지니도록 화학 반응을 거쳐 새로 만들어 낸 재료.",
+  "relations": [
+    {
+      "id": "rel-adv-property-use",
+      "text": "전기가 잘 통하면서도 잘 휘는 탄소 나노 튜브나 그래핀은 그 성질 덕에 전자 기기 부품으로 쓰인다",
+      "form": {
+        "condition": "재료의 성질에 맞추어 쓰임새를 고를 때",
+        "type": "causal",
+        "scope": "전자 기기·스포츠용품 등 신소재 응용 분야"
+      },
+      "invertible": false,
+      "invertible_reason": "성질과 쓰임새를 이은 서술이라 방향을 맞바꾼 문장의 참·거짓을 단정할 수 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-adv-shape-memory",
+      "text": "형상 기억 합금은 모양이 찌그러진 뒤라도 정해진 온도에 이르면 처음 모양으로 되돌아간다",
+      "form": {
+        "condition": "합금마다 정해진 온도에 도달함",
+        "type": "conditional",
+        "scope": "형상 기억 합금"
+      },
+      "invertible": false,
+      "invertible_reason": "온도 조건이 붙은 성질을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-adv-needs-reaction",
+      "text": "자연에 없던 성질을 지닌 재료를 얻으려면 그 물질을 만들어 낼 화학 반응을 먼저 찾아야 한다",
+      "form": {
+        "condition": "재료를 새로 개발하려 할 때",
+        "type": "causal",
+        "scope": "합성으로 얻는 신소재"
+      },
+      "invertible": false,
+      "invertible_reason": "개발 순서를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신소재는 자연에서 캐낸 재료를 곱게 다듬어 만든 것이다",
+      "why_wrong": "신소재는 화학 반응으로 새로 합성해 얻는 경우가 많고, 그래서 자연에 없던 성질을 지닐 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-adv-needs-reaction"
+    },
+    {
+      "text": "형상 기억 합금은 힘을 주어 누르면 언제든 원래 모양으로 돌아온다",
+      "why_wrong": "모양이 되돌아가는 계기는 힘이 아니라 정해진 온도에 이르는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-adv-shape-memory"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemistry"
+    },
+    {
+      "type": "next",
+      "target": "chem-synthetic-fiber"
+    },
+    {
+      "type": "related",
+      "target": "chem-semiconductor"
+    }
+  ],
+  "curriculum": [
+    "12화학01-01"
+  ],
+  "topic_id": "chem-1-1-02",
+  "pages": [
+    20,
+    26
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": []
+}

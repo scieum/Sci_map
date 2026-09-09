@@ -1,0 +1,129 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "id": "chem-avogadro-law",
+  "concept_key": "concept:avogadro-law",
+  "term": "아보가드로 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아보가드로'는 사람 이름을 소리대로 옮긴 말이라 한자 표기가 없다. 뒷부분 '법칙'만 한자어(法則)다.",
+    "english": "Avogadro law"
+  },
+  "definition": "온도와 압력이 같다면 부피가 같은 기체 속에는 종류를 가리지 않고 같은 수의 분자가 들어 있다는 법칙.",
+  "relations": [
+    {
+      "id": "rel-avl-volume-count",
+      "text": "온도와 압력을 붙들어 두면 기체가 차지하는 부피는 그 안의 분자 수에 비례한다",
+      "form": {
+        "condition": "온도와 압력이 일정함",
+        "type": "direct",
+        "scope": "이상 기체로 볼 수 있는 기체",
+        "antecedent": {
+          "quantity": "기체의 분자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부피가 분자 수에 비례한다는 법칙이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도와 압력을 붙들어 두면 기체의 부피는 분자 수가 많을수록 오히려 작아진다"
+    },
+    {
+      "id": "rel-avl-species-free",
+      "text": "기체의 종류가 달라도 온도·압력·부피가 같으면 그 안에 담긴 분자 수는 같다",
+      "form": {
+        "condition": "온도와 압력, 부피가 서로 같음",
+        "type": "conditional",
+        "scope": "기체 상태의 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-avl-volume-ratio",
+      "text": "부피가 분자 수에 비례하므로 기체끼리는 부피의 비가 곧 물질의 양(mol)의 비가 된다",
+      "form": {
+        "condition": "견주는 기체들의 온도와 압력이 같음",
+        "type": "direct",
+        "scope": "같은 조건에 놓인 기체들",
+        "antecedent": {
+          "quantity": "기체의 부피비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "물질의 양(mol)의 비",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "같은 온도와 압력에서 부피가 같은 수소 기체와 암모니아 기체에는 원자도 같은 수만큼 들어 있다",
+      "why_wrong": "같아지는 것은 분자 수다. 수소는 원자 2개, 암모니아는 원자 4개로 된 분자라 원자 수는 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-avl-species-free"
+    },
+    {
+      "text": "무거운 기체일수록 같은 조건에서 부피를 더 많이 차지한다",
+      "why_wrong": "온도와 압력이 같다면 부피를 정하는 것은 분자 수이지 분자의 무게가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-avl-volume-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-molar-volume-of-gas"
+    },
+    {
+      "type": "next",
+      "target": "chem-gas-density-and-molecular-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-mole"
+    },
+    {
+      "type": "same",
+      "target": "mate-avogadro-law",
+      "note": "물질과 에너지에서는 기체의 상태 변화와 함께 다룬다",
+      "grade_from": "물질과 에너지"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    36,
+    50
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

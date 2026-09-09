@@ -1,0 +1,106 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-product",
+  "concept_key": "concept:product",
+  "term": "생성물",
+  "notation": {
+    "hanja": "生成物",
+    "hanja_gloss": "生 날 생 · 成 이룰 성 · 物 물건 물",
+    "english": "product"
+  },
+  "definition": "화학 반응이 끝난 뒤 새로 만들어져 있는 물질. 반응식에서는 화살표의 오른쪽 자리에 적는다.",
+  "relations": [
+    {
+      "id": "rel-prod-rearrangement",
+      "text": "생성물은 반응물에 있던 원자가 자리를 바꾸어 만들어지므로 원자의 종류와 수는 그대로 남는다",
+      "form": {
+        "condition": "물질이 드나들지 않는 닫힌 조건에서 반응함",
+        "type": "causal",
+        "scope": "원자가 보존되는 화학 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 보존되는지를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-prod-plus-sign",
+      "text": "생성물이 두 가지 이상이면 화학식 사이를 + 기호로 이어 적는다",
+      "form": {
+        "condition": "생성물이 둘 이상일 때",
+        "type": "conditional",
+        "scope": "화학 반응식 표기"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 규칙을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-prod-from-coefficient",
+      "text": "생성물의 양은 반응한 반응물의 양에서 계수비를 따라 계산해 낼 수 있다",
+      "form": {
+        "condition": "반응이 계수비대로 끝까지 진행됨",
+        "type": "conditional",
+        "scope": "양적 관계 계산"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반응이 일어나면 원자가 새로 생겨나므로 생성물의 원자 수가 반응물보다 많다",
+      "why_wrong": "화학 반응은 원자의 배열만 바꾼다. 원자의 종류와 수는 반응 전후로 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prod-rearrangement"
+    },
+    {
+      "text": "기체가 빠져나가는 반응에서는 원자가 사라진 것이다",
+      "why_wrong": "빠져나간 기체도 생성물이라 원자는 그대로 있고 용기 밖으로 나갔을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prod-rearrangement"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-chemical-equation"
+    },
+    {
+      "type": "related",
+      "target": "chem-reactant"
+    },
+    {
+      "type": "related",
+      "target": "chem-stoichiometry"
+    }
+  ],
+  "curriculum": [
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-02",
+  "pages": [
+    38,
+    42
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "media": []
+}

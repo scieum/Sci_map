@@ -1,0 +1,113 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-semiconductor",
+  "concept_key": "concept:semiconductor",
+  "term": "반도체",
+  "notation": {
+    "hanja": "半導體",
+    "hanja_gloss": "半 반 반 · 導 이끌 도 · 體 몸 체",
+    "english": "semiconductor"
+  },
+  "definition": "전기 전도도가 도체보다는 낮고 부도체보다는 높아, 그 둘 사이에 놓이는 물질.",
+  "relations": [
+    {
+      "id": "rel-semi-classification",
+      "text": "전기가 통하는 정도를 잣대로 삼으면 물질은 도체·반도체·부도체로 갈린다",
+      "form": {
+        "condition": "전기 전도도를 기준으로 물질을 나눌 때",
+        "type": "classification",
+        "scope": "고체 물질의 전기적 분류"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-semi-process",
+      "text": "반도체 소자는 여러 단계의 화학 공정을 거쳐야 비로소 만들어진다",
+      "form": {
+        "condition": "반도체 소자를 생산할 때",
+        "type": "causal",
+        "scope": "반도체 제조 공정"
+      },
+      "invertible": false,
+      "invertible_reason": "제조 과정을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-semi-display",
+      "text": "스마트 기기나 텔레비전의 디스플레이도 대부분 반도체를 바탕에 두고 작동한다",
+      "form": {
+        "condition": "오늘날 널리 쓰이는 디스플레이를 볼 때",
+        "type": "classification",
+        "scope": "전자 기기용 디스플레이"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇에 기반하는지를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반도체는 전기가 절반만 통하는 물질이다",
+      "why_wrong": "'반'은 절반이라는 뜻이 아니라 도체와 부도체의 중간쯤이라는 뜻이고, 조건에 따라 전도도가 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-semi-classification"
+    },
+    {
+      "text": "요즘 디스플레이는 반도체와 관련이 없다",
+      "why_wrong": "스마트 기기와 텔레비전의 디스플레이는 대부분 반도체 기술 위에서 움직인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-semi-display"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemistry"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-cell"
+    },
+    {
+      "type": "related",
+      "target": "chem-advanced-material"
+    },
+    {
+      "type": "same",
+      "target": "isci1-semiconductor",
+      "note": "통합과학1 에서는 도핑과 함께 다룬다",
+      "grade_from": "통합과학1"
+    }
+  ],
+  "curriculum": [
+    "12화학01-01"
+  ],
+  "topic_id": "chem-1-1-02",
+  "pages": [
+    23,
+    26,
+    27
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": []
+}

@@ -1,0 +1,125 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "id": "chem-molecular-mass",
+  "concept_key": "concept:molecular-mass",
+  "term": "분자량",
+  "notation": {
+    "hanja": "分子量",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 量 헤아릴 량",
+    "english": "molecular mass"
+  },
+  "definition": "분자 하나를 이루는 원자들의 원자량을 남김없이 더해 얻는, 그 분자의 상대적 질량.",
+  "relations": [
+    {
+      "id": "rel-mm-count-atoms",
+      "text": "같은 원자가 여러 개 들어 있으면 그 원자량에 개수를 곱해 더해야 분자량이 나온다",
+      "form": {
+        "condition": "분자식에 적힌 원자 수를 그대로 셀 때",
+        "type": "conditional",
+        "scope": "분자로 존재하는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mm-no-unit",
+      "text": "분자량도 원자량과 마찬가지로 기준에 견준 비의 값이라 단위가 따라붙지 않는다",
+      "form": {
+        "condition": "질량수 12인 탄소 기준의 상대적 질량으로 볼 때",
+        "type": "conditional",
+        "scope": "분자량이라는 값의 표기"
+      },
+      "invertible": false,
+      "invertible_reason": "단위가 없다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mm-density-same-volume",
+      "text": "온도·압력·부피를 모두 같게 맞추면 분자량이 큰 기체 쪽의 밀도가 크다",
+      "form": {
+        "condition": "온도와 압력, 부피가 서로 같음",
+        "type": "direct",
+        "scope": "이상 기체로 볼 수 있는 기체",
+        "antecedent": {
+          "quantity": "기체의 분자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부피가 같으면 분자 수가 같아 질량이 분자량에 비례하므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도·압력·부피를 모두 같게 맞추면 분자량이 큰 기체 쪽의 밀도가 오히려 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자량의 단위는 g이다",
+      "why_wrong": "분자량은 원자량을 더해 얻은 상대적 값이라 단위가 없다. g/mol 이 붙은 것은 몰질량이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mm-no-unit"
+    },
+    {
+      "text": "물의 분자량은 수소와 산소의 원자량을 한 번씩 더해 17.0이다",
+      "why_wrong": "물 분자에는 수소 원자가 2개 들어 있으므로 1.0×2 + 16.0 = 18.0 이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mm-count-atoms"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-atomic-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-molar-mass"
+    },
+    {
+      "type": "next",
+      "target": "chem-gas-density-and-molecular-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-formula-mass"
+    },
+    {
+      "type": "same",
+      "target": "mate-molecular-mass",
+      "note": "물질과 에너지에서는 용액의 성질과 이어 다룬다",
+      "grade_from": "물질과 에너지"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    30,
+    47
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": []
+}

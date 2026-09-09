@@ -1,0 +1,107 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-state-symbol",
+  "concept_key": "concept:state-symbol",
+  "term": "물질의 상태 표시",
+  "notation": {
+    "hanja": "物質의 狀態 表示",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 狀 형상 상 · 態 모습 태 · 表 겉 표 · 示 보일 시",
+    "english": "state symbol",
+    "symbol_display": "(s), (l), (g), (aq)",
+    "symbol_plain": "(s), (l), (g), (aq)"
+  },
+  "definition": "화학식 뒤 괄호 안에 기호를 넣어 그 물질이 어떤 상태로 반응에 참여하는지를 알리는 표기.",
+  "relations": [
+    {
+      "id": "rel-state-meaning",
+      "text": "s 는 고체, l 은 액체, g 는 기체, aq 는 물에 녹은 상태를 뜻한다",
+      "form": {
+        "condition": "반응식에 붙은 상태 기호를 읽을 때",
+        "type": "classification",
+        "scope": "화학 반응식의 상태 표시"
+      },
+      "invertible": false,
+      "invertible_reason": "기호와 상태를 짝지은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-state-depends-on-condition",
+      "text": "같은 물질이라도 반응이 일어나는 온도와 압력이 달라지면 붙는 상태 기호가 달라진다",
+      "form": {
+        "condition": "반응 조건인 온도나 압력이 바뀔 때",
+        "type": "causal",
+        "scope": "상태가 바뀔 수 있는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "조건에 따라 달라진다는 서술이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-state-aq-meaning",
+      "text": "aq 가 붙어 있으면 그 물질이 물에 녹아 흩어진 채로 반응에 참여한다는 뜻이다",
+      "form": {
+        "condition": "용매가 물인 반응",
+        "type": "conditional",
+        "scope": "수용액에서 일어나는 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "기호의 뜻을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "l 과 aq 는 둘 다 액체라는 뜻이라 바꿔 써도 된다",
+      "why_wrong": "l 은 그 물질 자체가 액체라는 뜻이고, aq 는 다른 물질이 물에 녹아 있다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-state-aq-meaning"
+    },
+    {
+      "text": "상태 기호는 꾸밈일 뿐이라 빼도 반응식의 뜻은 그대로다",
+      "why_wrong": "물이 액체인지 수증기인지에 따라 반응 조건과 열의 출입이 달라지므로 상태 표시도 정보의 일부다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-state-depends-on-condition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemical-equation"
+    },
+    {
+      "type": "related",
+      "target": "chem-chemical-formula"
+    },
+    {
+      "type": "related",
+      "target": "chem-stoichiometric-coefficient"
+    }
+  ],
+  "curriculum": [
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-02",
+  "pages": [
+    38
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "media": []
+}

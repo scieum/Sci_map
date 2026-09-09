@@ -1,0 +1,115 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-average-atomic-mass",
+  "concept_key": "concept:average-atomic-mass",
+  "term": "평균 원자량",
+  "notation": {
+    "hanja": "平均 原子量",
+    "hanja_gloss": "平 평평할 평 · 均 고를 균 · 原 근원 원 · 子 아들 자 · 量 헤아릴 량",
+    "english": "average atomic mass"
+  },
+  "definition": "한 원소에 딸린 동위 원소들의 원자량을, 저마다 자연에 존재하는 비율만큼 무게를 실어 평균 낸 값.",
+  "relations": [
+    {
+      "id": "rel-avgam-is-default",
+      "text": "주기율표나 문제에서 그냥 원자량이라 부르는 값은 대개 이 평균값을 가리킨다",
+      "form": {
+        "condition": "동위 원소가 섞여 있는 원소를 다룰 때",
+        "type": "classification",
+        "scope": "널리 쓰이는 원자량 값의 정체"
+      },
+      "invertible": false,
+      "invertible_reason": "어떤 값을 가리키는지를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-avgam-weighting",
+      "text": "존재 비율이 큰 동위 원소일수록 평균 원자량을 자기 쪽으로 더 세게 끌어당긴다",
+      "form": {
+        "condition": "각 동위 원소의 존재 비율이 알려져 있음",
+        "type": "direct",
+        "scope": "동위 원소가 둘 이상인 원소",
+        "antecedent": {
+          "quantity": "한 동위 원소의 존재 비율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평균 원자량이 그 쪽으로 치우치는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "비율을 곱해 더하는 가중 평균이라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "존재 비율이 큰 동위 원소일수록 평균 원자량은 그 동위 원소에서 오히려 멀어진다"
+    },
+    {
+      "id": "rel-avgam-noninteger",
+      "text": "염소의 원자량이 35.5 처럼 정수에서 벗어나는 것은 원자량이 다른 동위 원소가 섞여 있기 때문이다",
+      "form": {
+        "condition": "동위 원소가 일정한 비율로 섞여 있음",
+        "type": "causal",
+        "scope": "자연에서 얻은 원소 시료"
+      },
+      "invertible": false,
+      "invertible_reason": "값이 그렇게 나오는 까닭을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염소의 원자량이 35.5이므로 질량수가 35.5인 염소 원자가 있다",
+      "why_wrong": "35.5는 질량수 35와 37인 동위 원소를 존재 비율만큼 평균 낸 값이고, 그런 질량수의 원자는 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-avgam-noninteger"
+    },
+    {
+      "text": "평균 원자량은 동위 원소들의 원자량을 그냥 더해 종류 수로 나눈 값이다",
+      "why_wrong": "단순 평균이 아니라 존재 비율을 곱해 더하는 가중 평균이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-avgam-weighting"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-atomic-mass"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-isotope"
+    },
+    {
+      "type": "related",
+      "target": "chem-molecular-mass"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    30,
+    31
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

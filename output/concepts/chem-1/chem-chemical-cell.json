@@ -1,0 +1,116 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "id": "chem-chemical-cell",
+  "concept_key": "concept:chemical-cell",
+  "term": "화학 전지",
+  "notation": {
+    "hanja": "化學 電池",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 電 번개 전 · 池 못 지",
+    "english": "chemical cell"
+  },
+  "definition": "물질 사이에서 일어나는 화학 반응을 전기 에너지로 바꾸어 꺼내 쓰도록 꾸민 장치.",
+  "relations": [
+    {
+      "id": "rel-cell-components",
+      "text": "전지가 전기를 내놓으려면 두 극을 이루는 물질과 그 사이를 잇는 전해질이 함께 갖추어져야 한다",
+      "form": {
+        "condition": "전지가 전기를 내놓는 동안",
+        "type": "conditional",
+        "scope": "화학 전지 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "갖추어야 할 구성 요소를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cell-material-performance",
+      "text": "두 극을 이루는 물질을 무엇으로 고르느냐에 따라 전지의 성능과 안정성이 달라진다",
+      "form": {
+        "condition": "전지를 이루는 물질을 바꾸어 볼 때",
+        "type": "causal",
+        "scope": "화학 전지의 설계",
+        "antecedent": {
+          "quantity": "극을 이루는 물질의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "전지의 성능과 안정성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "종류가 달라진다는 서술이라 맞바꿀 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cell-ev-emission",
+      "text": "화석 연료를 태우는 자동차 대신 화학 전지로 달리는 자동차를 쓰면 달릴 때 나오는 오염 물질이 줄어든다",
+      "form": {
+        "condition": "같은 거리를 달린다고 놓고 견줄 때",
+        "type": "causal",
+        "scope": "자동차가 달리는 단계에서의 배출"
+      },
+      "invertible": false,
+      "invertible_reason": "전기를 만드는 과정까지 넣어 따지면 결론이 달라질 수 있어 반대 문장을 반드시 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학 전지는 전기를 담아 두었다가 그대로 내보내는 그릇이다",
+      "why_wrong": "전지는 전기를 담아 두는 것이 아니라 안에서 화학 반응을 일으켜 전기 에너지를 만들어 낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cell-components"
+    },
+    {
+      "text": "전기 자동차는 어느 단계에서도 환경오염 물질을 내놓지 않는다",
+      "why_wrong": "달릴 때 배출은 줄지만, 전기를 만들고 전지를 만들거나 버리는 과정에서는 오염 물질이 나올 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cell-ev-emission"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemistry"
+    },
+    {
+      "type": "related",
+      "target": "chem-semiconductor"
+    },
+    {
+      "type": "same",
+      "target": "reac-chemical-cell",
+      "note": "화학 반응의 세계에서는 산화·환원으로 전지의 작동을 다룬다",
+      "grade_from": "화학 반응의 세계"
+    }
+  ],
+  "curriculum": [
+    "12화학01-01"
+  ],
+  "topic_id": "chem-1-1-02",
+  "pages": [
+    22,
+    26
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": []
+}

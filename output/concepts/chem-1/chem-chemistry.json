@@ -1,0 +1,117 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-chemistry",
+  "concept_key": "concept:chemistry",
+  "term": "화학",
+  "notation": {
+    "hanja": "化學",
+    "hanja_gloss": "化 될 화 · 學 배울 학",
+    "english": "chemistry"
+  },
+  "definition": "물질이 어떤 성질을 지니고 어떻게 반응하는지를 밝혀내어, 그 앎을 삶에 쓸모 있게 옮기는 학문 분야.",
+  "relations": [
+    {
+      "id": "rel-chem-daily-material",
+      "text": "옷·먹거리·건물처럼 의식주를 이루는 물품은 대부분 화학이 다루는 물질로 만들어진다",
+      "form": {
+        "condition": "일상의 물품을 재료 쪽에서 바라볼 때",
+        "type": "classification",
+        "scope": "의식주에 쓰이는 생활 용품"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 어디에 속하는지를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-chem-new-substance",
+      "text": "새 물질을 얻는 연구가 쌓일수록 과학기술 분야가 골라 쓸 수 있는 재료의 폭이 넓어진다",
+      "form": {
+        "condition": "물질을 새로 만들어 내는 연구가 이어지는 동안",
+        "type": "causal",
+        "scope": "물질을 재료로 삼는 과학기술 분야",
+        "antecedent": {
+          "quantity": "새 물질 연구의 축적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "쓸 수 있는 재료의 종류",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "질적인 기여를 말한 서술이라 방향을 맞바꾼 문장이 반드시 거짓이라 단정하기 어렵다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-chem-scope",
+      "text": "천연 물질이든 사람이 만든 물질이든 성질과 반응을 따지는 한 모두 화학의 대상이 된다",
+      "form": {
+        "condition": "연구 대상을 무엇으로 삼을지 가를 때",
+        "type": "classification",
+        "scope": "물질 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "대상의 범위를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학은 실험실에서만 쓰이는 학문이라 일상생활과는 상관이 없다",
+      "why_wrong": "우리가 입는 옷, 먹는 음식, 사는 건물의 재료가 모두 화학이 다루는 물질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chem-daily-material"
+    },
+    {
+      "text": "천연 물질은 화학과 관계없고 사람이 만든 물질만 화학이 다룬다",
+      "why_wrong": "화학은 물질의 성질과 반응을 따지는 학문이라 천연이든 합성이든 모두 대상으로 삼는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chem-scope"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-advanced-material"
+    },
+    {
+      "type": "next",
+      "target": "chem-synthetic-medicine"
+    },
+    {
+      "type": "next",
+      "target": "chem-chemical-cell"
+    },
+    {
+      "type": "next",
+      "target": "chem-semiconductor"
+    }
+  ],
+  "curriculum": [
+    "12화학01-01"
+  ],
+  "topic_id": "chem-1-1-01",
+  "pages": [
+    15
+  ],
+  "difficulty": 1,
+  "role": "context",
+  "media": []
+}

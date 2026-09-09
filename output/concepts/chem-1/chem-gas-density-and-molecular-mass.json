@@ -1,0 +1,147 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-gas-density-and-molecular-mass",
+  "concept_key": "concept:gas-density-and-molecular-mass",
+  "term": "기체의 밀도와 분자량",
+  "notation": {
+    "hanja": "氣體의 密度와 分子量",
+    "hanja_gloss": "氣 기운 기 · 體 몸 체 · 密 빽빽할 밀 · 度 법도 도 · 分 나눌 분 · 子 아들 자 · 量 헤아릴 량",
+    "english": "gas density and molecular mass",
+    "symbol_display": "d₁/d₂ = M₁/M₂",
+    "symbol_plain": "d1/d2 = M1/M2"
+  },
+  "definition": "온도와 압력을 같게 맞춘 두 기체를 견줄 때, 밀도의 비가 분자량의 비와 같아지는 관계.",
+  "relations": [
+    {
+      "id": "rel-gdm-mass-ratio",
+      "text": "온도와 압력이 같고 부피까지 같다면 두 기체의 질량비는 분자량비와 같아진다",
+      "form": {
+        "condition": "온도와 압력, 부피가 서로 같음",
+        "type": "direct",
+        "scope": "이상 기체로 볼 수 있는 기체",
+        "antecedent": {
+          "quantity": "기체의 분자량비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기체의 질량비",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gdm-density-ratio",
+      "text": "부피를 따로 맞추지 않아도 온도와 압력만 같으면 두 기체의 밀도비가 분자량비와 같다",
+      "form": {
+        "condition": "견주는 두 기체의 온도와 압력이 같음",
+        "type": "direct",
+        "scope": "이상 기체로 볼 수 있는 기체",
+        "antecedent": {
+          "quantity": "기체의 분자량비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기체의 밀도비",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 비가 같다는 서술이라 자리를 맞바꾸어도 같은 문장이 된다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gdm-find-unknown",
+      "text": "분자량을 아는 기체를 옆에 두면 밀도를 견주어 다른 기체의 분자량을 알아낼 수 있다",
+      "form": {
+        "condition": "한쪽 기체의 분자량을 이미 알고 온도·압력이 같음",
+        "type": "conditional",
+        "scope": "밀도를 잴 수 있는 기체"
+      },
+      "invertible": false,
+      "invertible_reason": "알아내는 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gdm-heavier-denser",
+      "text": "온도와 압력이 같을 때 분자량이 큰 기체일수록 밀도가 크다",
+      "form": {
+        "condition": "견주는 두 기체의 온도와 압력이 같음",
+        "type": "direct",
+        "scope": "이상 기체로 볼 수 있는 기체",
+        "antecedent": {
+          "quantity": "기체의 분자량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체의 밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 조건이면 같은 부피에 같은 분자 수가 들어 밀도가 분자량에 비례하므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도와 압력이 같을 때 분자량이 큰 기체일수록 밀도가 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기체의 밀도는 온도와 압력에 상관없이 분자량만으로 정해진다",
+      "why_wrong": "밀도비가 분자량비와 같아지는 것은 두 기체의 온도와 압력이 같을 때뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gdm-density-ratio"
+    },
+    {
+      "text": "부피가 다른 두 기체라도 질량을 견주면 그대로 분자량비가 나온다",
+      "why_wrong": "질량비가 분자량비가 되려면 두 기체의 부피가 같아야 한다. 부피가 다르면 밀도로 견주어야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gdm-mass-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-avogadro-law"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molecular-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-molar-volume-of-gas"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    36
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": []
+}

@@ -1,0 +1,121 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-amount-of-substance",
+  "concept_key": "concept:amount-of-substance",
+  "term": "물질의 양(mol)",
+  "aliases": [
+    "몰수"
+  ],
+  "notation": {
+    "hanja": "物質의 量",
+    "hanja_note": "괄호 안의 mol 은 단위 기호라 한자어에 들어가지 않는다.",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 量 헤아릴 량",
+    "english": "amount of substance",
+    "symbol_display": "n (mol)",
+    "symbol_plain": "n (mol)"
+  },
+  "definition": "물질에 든 입자의 수를 몰이라는 묶음으로 세어 나타낸 양. 입자 수·질량·기체의 부피 어느 쪽에서 출발해도 환산해 얻는다.",
+  "relations": [
+    {
+      "id": "rel-aos-three-routes",
+      "text": "입자 수는 아보가드로수로, 질량은 몰질량으로, 0 ℃·1 atm 의 기체 부피는 22.4 L/mol 로 나누면 모두 같은 몰 값에 이른다",
+      "form": {
+        "condition": "0 ℃·1 atm 이고 그 물질의 몰질량을 알고 있음",
+        "type": "conditional",
+        "scope": "환산에 필요한 값이 주어진 순물질"
+      },
+      "invertible": false,
+      "invertible_reason": "세 갈래의 환산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aos-common-scale",
+      "text": "단위가 서로 다른 측정값도 몰로 바꾸어 놓으면 하나의 잣대로 견줄 수 있다",
+      "form": {
+        "condition": "입자 수·질량·부피 등 단위가 다른 값을 견줄 때",
+        "type": "conditional",
+        "scope": "몰로 환산할 수 있는 측정값"
+      },
+      "invertible": false,
+      "invertible_reason": "환산의 쓸모를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aos-for-stoichiometry",
+      "text": "화학 반응의 양적 관계를 따질 때는 질량이나 부피를 먼저 몰로 바꾸어 놓는 편이 간단하다",
+      "form": {
+        "condition": "반응식의 계수를 이용해 양을 계산할 때",
+        "type": "conditional",
+        "scope": "화학 반응의 양적 관계 계산"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 순서를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 큰 쪽이 물질의 양(mol)도 언제나 크다",
+      "why_wrong": "몰질량이 다르면 질량이 커도 물질의 양은 오히려 적을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-aos-three-routes"
+    },
+    {
+      "text": "몰수는 개수를 센 것이므로 소수로 나올 수 없다",
+      "why_wrong": "몰은 묶음 단위라 0.5 mol 처럼 소수로 나타낼 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-aos-common-scale"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molar-mass"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-avogadro-number"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molar-volume-of-gas"
+    },
+    {
+      "type": "next",
+      "target": "chem-stoichiometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-mole"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02",
+    "12화학01-03"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    37,
+    42
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

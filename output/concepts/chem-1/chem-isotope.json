@@ -1,0 +1,87 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-isotope",
+  "concept_key": "concept:isotope",
+  "term": "동위 원소",
+  "notation": {
+    "hanja": "同位 元素",
+    "hanja_gloss": "同 한가지 동 · 位 자리 위 · 元 으뜸 원 · 素 본디 소",
+    "english": "isotope"
+  },
+  "definition": "양성자 수가 같아 원자 번호는 같지만, 중성자 수가 달라 질량수가 갈리는 원소끼리의 관계.",
+  "relations": [
+    {
+      "id": "rel-iso-criterion",
+      "text": "동위 원소끼리는 양성자 수가 같아 화학적 성질이 닮았고, 중성자 수가 달라 무게에서 갈린다",
+      "form": {
+        "condition": "같은 원소에 속한 원자들을 견줄 때",
+        "type": "classification",
+        "scope": "동위 원소 관계"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 같고 무엇이 다른지를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-iso-natural-ratio",
+      "text": "자연에 있는 원소는 대개 동위 원소가 섞여 있고, 섞인 비율은 어디서 재도 거의 일정하다",
+      "form": {
+        "condition": "자연 상태에서 얻은 시료를 다룰 때",
+        "type": "conditional",
+        "scope": "자연계에 존재하는 원소"
+      },
+      "invertible": false,
+      "invertible_reason": "섞임의 사실을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "동위 원소는 원자 번호가 서로 다른 원소다",
+      "why_wrong": "원자 번호가 다르면 아예 다른 원소다. 동위 원소는 원자 번호가 같고 질량수만 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-iso-criterion"
+    },
+    {
+      "text": "동위 원소는 실험실에서 만든 것이라 자연에는 없다",
+      "why_wrong": "염소의 35Cl 과 37Cl 처럼 자연에도 거의 일정한 비율로 섞여 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-iso-natural-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-average-atomic-mass"
+    },
+    {
+      "type": "related",
+      "target": "chem-atomic-mass"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    30,
+    31
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "media": []
+}

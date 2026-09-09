@@ -124,11 +124,20 @@ def check_notation(cards, res: Result) -> None:
 
 
 def check_typeability(cards, res: Result) -> None:
-    """symbol_plain 이 실제로 타이핑 가능한가 (R8)."""
+    """symbol_plain 이 실제로 타이핑 가능한가 (R8).
+
+    허용 문자는 `docs/naming_policy.md` §5 의 변환 규칙이 실제로 만들어 내는 것이
+    기준이다. 그 표가 드는 예에는 `A -> B`(화살표 → ASCII)와 `[A]`(농도)가 있는데
+    예전 정규식이 `<`·`>`·`[`·`]` 를 막고 있었다. 정책대로 쓴 카드가 검사에서 떨어져
+    C2 가 기호 필드를 비우는 우회를 하게 만들던 자리다 — 화학 Ⅰ·Ⅲ단원에서 걸렸다.
+
+    넷 다 표준 자판에서 그대로 쳐지는 글자다. 이 검사가 막아야 할 것은 아래첨자·
+    위첨자·그리스 문자·유니코드 화살표이지 ASCII 기호가 아니다.
+    """
     bad = []
     for c in cards:
         sp = c["notation"].get("symbol_plain")
-        if sp and not re.fullmatch(r"[A-Za-z0-9 +\-=/().,^_]*", sp):
+        if sp and not re.fullmatch(r"[A-Za-z0-9 +\-=/().,^_<>\[\]]*", sp):
             bad.append(f"{c['id']}: {sp}")
     res.add("symbol_plain_typeable", not bad,
             f"평문이 아닌 symbol_plain {len(bad)}건", bad)

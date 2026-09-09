@@ -1,0 +1,121 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-molar-volume-of-gas",
+  "concept_key": "concept:molar-volume-of-gas",
+  "term": "기체 1 mol의 부피",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'부피'가 고유어이고 'mol'은 단위 기호라 낱말 전체를 한자로 적을 수 없다. '기체'만 한자어(氣體)다.",
+    "english": "molar volume of gas",
+    "symbol_display": "22.4 L/mol (0 ℃, 1 atm)",
+    "symbol_plain": "22.4 L/mol (0 C, 1 atm)"
+  },
+  "definition": "0 ℃ 와 1 atm 이라는 조건에서 기체 1 mol 이 차지하는 부피. 기체의 종류를 가리지 않고 22.4 L 이다.",
+  "relations": [
+    {
+      "id": "rel-mvg-standard-value",
+      "text": "온도가 0 ℃ 이고 압력이 1 atm 이라면 어떤 기체든 1 mol 의 부피가 22.4 L 로 같아진다",
+      "form": {
+        "condition": "온도 0 ℃, 압력 1 atm",
+        "type": "conditional",
+        "scope": "기체 상태의 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "종류와 무관하게 같다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mvg-temperature",
+      "text": "압력을 1 atm 에 붙들어 두고 온도만 올리면 기체 1 mol 의 부피는 22.4 L 보다 커진다",
+      "form": {
+        "condition": "압력을 1 atm 으로 고정하고 온도만 바꿈",
+        "type": "direct",
+        "scope": "이상 기체로 볼 수 있는 기체",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체 1 mol 의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "압력이 일정하면 부피는 온도를 따라 커지므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "압력을 1 atm 에 붙들어 두고 온도를 올리면 기체 1 mol 의 부피는 22.4 L 보다 작아진다"
+    },
+    {
+      "id": "rel-mvg-conversion",
+      "text": "0 ℃, 1 atm 에서 잰 기체의 부피를 22.4 L/mol 로 나누면 그 기체의 물질의 양(mol)이 나온다",
+      "form": {
+        "condition": "온도 0 ℃, 압력 1 atm",
+        "type": "conditional",
+        "scope": "기체의 부피와 물질의 양 사이의 환산"
+      },
+      "invertible": false,
+      "invertible_reason": "환산 방법을 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질 1 mol 의 부피는 언제나 22.4 L 이다",
+      "why_wrong": "22.4 L 는 0 ℃, 1 atm 인 기체에만 해당한다. 고체나 액체, 조건이 다른 기체는 그렇지 않다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mvg-standard-value"
+    },
+    {
+      "text": "기체 1 mol 의 부피는 기체의 종류에 따라 달라진다",
+      "why_wrong": "온도와 압력이 같으면 부피는 분자 수만으로 정해지므로 종류와 무관하게 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mvg-standard-value"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-avogadro-law"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-mole"
+    },
+    {
+      "type": "next",
+      "target": "chem-amount-of-substance"
+    },
+    {
+      "type": "related",
+      "target": "chem-molar-mass"
+    }
+  ],
+  "curriculum": [
+    "12화학01-02"
+  ],
+  "topic_id": "chem-1-2-01",
+  "pages": [
+    36,
+    47
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": []
+}

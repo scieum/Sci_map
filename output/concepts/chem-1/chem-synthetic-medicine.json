@@ -1,0 +1,114 @@
+{
+  "subject": "화학",
+  "unit": "Ⅰ. 화학의 언어",
+  "unit_id": "chem-1",
+  "version": 1,
+  "definition_source": "restated",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "id": "chem-synthetic-medicine",
+  "concept_key": "concept:synthetic-medicine",
+  "term": "합성 의약품",
+  "notation": {
+    "hanja": "合成 醫藥品",
+    "hanja_gloss": "合 합할 합 · 成 이룰 성 · 醫 의원 의 · 藥 약 약 · 品 물건 품",
+    "english": "synthetic medicine"
+  },
+  "definition": "자연에서 캐낸 물질에 기대지 않고, 화학 반응을 설계해 사람이 직접 만들어 낸 치료용 물질.",
+  "relations": [
+    {
+      "id": "rel-syn-med-history",
+      "text": "합성 기술이 없던 시기에 인류가 쓰던 약은 천연 물질의 테두리를 벗어나지 못했다",
+      "form": {
+        "condition": "화학 지식과 합성 기술이 갖추어지기 전",
+        "type": "conditional",
+        "scope": "의약품의 역사"
+      },
+      "invertible": false,
+      "invertible_reason": "시기를 조건으로 단 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-syn-med-design",
+      "text": "질병을 일으키는 물질의 구조가 밝혀질수록 그에 맞춘 의약품을 설계하기 쉬워진다",
+      "form": {
+        "condition": "질병의 원인 물질을 화학적으로 파악할 수 있을 때",
+        "type": "causal",
+        "scope": "신약 개발",
+        "antecedent": {
+          "quantity": "원인 물질에 대한 화학적 이해",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "맞춤 의약품 설계 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "개발 여건을 말한 서술이라 방향을 맞바꾼 문장이 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-syn-med-brand-vs-substance",
+      "text": "아스피린은 상표로 붙은 이름이고, 그 성분 물질의 이름은 아세틸 살리실산이다",
+      "form": {
+        "condition": "상표명과 물질명을 갈라 볼 때",
+        "type": "classification",
+        "scope": "의약품의 이름 붙이기"
+      },
+      "invertible": false,
+      "invertible_reason": "이름의 층위를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "천연 물질에서 얻은 약은 합성 의약품보다 언제나 안전하다",
+      "why_wrong": "안전한지 아닌지는 물질의 구조와 쓰는 양이 정하지, 천연인지 합성인지가 정하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-syn-med-history"
+    },
+    {
+      "text": "아스피린은 물질의 이름이다",
+      "why_wrong": "아스피린은 상표명이고, 물질명은 아세틸 살리실산이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-syn-med-brand-vs-substance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-chemistry"
+    },
+    {
+      "type": "related",
+      "target": "chem-advanced-material"
+    },
+    {
+      "type": "related",
+      "target": "chem-synthetic-fiber"
+    }
+  ],
+  "curriculum": [
+    "12화학01-01"
+  ],
+  "topic_id": "chem-1-1-02",
+  "pages": [
+    21,
+    27
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": []
+}
