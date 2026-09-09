@@ -1,0 +1,111 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-tetrahedral-geometry",
+  "concept_key": "concept:tetrahedral-geometry",
+  "registry_status": "new",
+  "term": "정사면체 구조",
+  "aliases": [
+    "정사면체형"
+  ],
+  "notation": {
+    "hanja": "正四面體 構造",
+    "hanja_gloss": "正 바를 정 · 四 넉 사 · 面 낯 면 · 體 몸 체 · 構 얽을 구 · 造 지을 조",
+    "english": "tetrahedral geometry"
+  },
+  "definition": "중심 원자에 결합한 네 원자가 정사면체의 꼭짓점 쪽으로 뻗어 결합각이 109.5° 가 되는 입체 모양.",
+  "relations": [
+    {
+      "id": "rel-tetra-not-planar",
+      "text": "전자쌍 자리가 넷이면 한 평면에 몰리지 않고 정사면체의 꼭짓점 쪽으로 뻗는다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 없을 때",
+        "type": "causal",
+        "scope": "메테인처럼 공유 전자쌍이 넷인 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "평면에 넷을 두면 90° 밖에 못 벌어져 반발이 더 커지므로 평면이라는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자쌍 자리가 넷이면 한 평면 위에 90° 씩 벌어진 정사각형으로 놓인다"
+    },
+    {
+      "id": "rel-tetra-angle",
+      "text": "정사면체 구조에서 이웃한 두 결합이 이루는 각은 109.5° 다",
+      "form": {
+        "condition": "중심 원자에 공유 전자쌍만 넷 있을 때",
+        "type": "conditional",
+        "scope": "정사면체 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "값을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tetra-symmetry",
+      "text": "네 방향이 고르게 벌어져 있어 네 결합이 같으면 쌍극자 모멘트가 서로 상쇄된다",
+      "form": {
+        "condition": "네 결합이 모두 같은 종류일 때",
+        "type": "causal",
+        "scope": "메테인·사염화 탄소 같은 대칭 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "상쇄되는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공유 전자쌍이 네 개면 90° 씩 벌어진 평면 사각형 구조가 된다",
+      "why_wrong": "한 평면에 넷을 두면 90° 까지밖에 못 벌어진다. 입체로 뻗으면 109.5° 까지 벌어져 반발이 더 작아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tetra-not-planar"
+    },
+    {
+      "text": "정사면체 분자는 결합에 극성이 있어도 언제나 무극성이다",
+      "why_wrong": "네 결합이 모두 같을 때만 상쇄된다. 한 자리가 다른 원자로 바뀐 클로로메테인은 극성 분자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tetra-symmetry"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-bond-angle"
+    },
+    {
+      "type": "related",
+      "target": "chem-trigonal-pyramidal-geometry"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    81,
+    82,
+    93
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

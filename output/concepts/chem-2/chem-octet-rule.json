@@ -1,0 +1,111 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-octet-rule",
+  "concept_key": "concept:octet-rule",
+  "registry_status": "new",
+  "term": "옥텟 규칙",
+  "aliases": [],
+  "notation": {
+    "hanja": "規則",
+    "hanja_gloss": "規 법 규 · 則 법칙 칙",
+    "hanja_note": "'옥텟'은 영어 octet 의 음차어라 한자 표기가 없다. 뒤의 規則만 한자어다.",
+    "english": "octet rule"
+  },
+  "definition": "원자가 결합을 통해 가장 바깥 껍질에 전자 여덟 개를 갖춘 18족 배치에 이르려 한다는 것을 정리한 규칙.",
+  "relations": [
+    {
+      "id": "rel-or-noble-gas-stable",
+      "text": "18족 원소는 가장 바깥 껍질이 이미 채워져 있어 다른 원소와 거의 반응하지 않는다",
+      "form": {
+        "condition": "보통의 온도와 압력에서",
+        "type": "causal",
+        "scope": "비활성 기체"
+      },
+      "invertible": false,
+      "invertible_reason": "안정한 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-or-share-to-fill",
+      "text": "원자는 전자를 함께 가지는 공유 결합으로 여덟 자리를 채워 안정한 상태에 이른다",
+      "form": {
+        "condition": "18족이 아닌 비금속 원소끼리 결합할 때",
+        "type": "causal",
+        "scope": "2주기 비금속 원소"
+      },
+      "invertible": false,
+      "invertible_reason": "결합의 까닭을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-or-hydrogen-duet",
+      "text": "수소는 전자 두 개만 갖추면 안정해지므로 여덟이 아니라 둘을 기준으로 삼는다",
+      "form": {
+        "condition": "수소가 공유 결합에 참여할 때",
+        "type": "conditional",
+        "scope": "수소 원자"
+      },
+      "invertible": true,
+      "invertible_reason": "수소는 껍질에 두 자리뿐이라 여덟을 채운다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소도 가장 바깥 껍질에 전자 여덟 개를 채워야 안정해진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모든 원자는 예외 없이 전자 여덟 개를 채운다",
+      "why_wrong": "수소는 두 개로 안정해지고, 베릴륨이나 붕소는 여덟 개에 못 미친 채로도 분자를 이룬다. 옥텟은 널리 들어맞는 경향이지 절대 법칙이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-or-hydrogen-duet"
+    },
+    {
+      "text": "옥텟 규칙을 만족한 원자는 더 이상 어떤 반응도 하지 않는다",
+      "why_wrong": "그 분자 안에서 안정하다는 뜻일 뿐이다. 조건이 달라지면 결합이 끊어지고 새 결합이 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-or-share-to-fill"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-valence-electron"
+    },
+    {
+      "type": "next",
+      "target": "chem-lewis-electron-dot-formula"
+    },
+    {
+      "type": "related",
+      "target": "chem-covalent-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    72,
+    78,
+    79,
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

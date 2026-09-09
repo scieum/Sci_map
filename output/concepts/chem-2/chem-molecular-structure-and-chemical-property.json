@@ -1,0 +1,109 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-molecular-structure-and-chemical-property",
+  "concept_key": "concept:molecular-structure-and-chemical-property",
+  "registry_status": "new",
+  "term": "분자의 구조와 화학적 성질",
+  "aliases": [],
+  "notation": {
+    "hanja": "分子의 構造와 化學的 性質",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 構 얽을 구 · 造 지을 조 · 化 될 화 · 學 배울 학 · 的 과녁 적 · 性 성품 성 · 質 바탕 질",
+    "hanja_note": "조사 '의'와 '와'는 한자가 없어 한글 그대로 두었다.",
+    "english": "molecular structure and chemical properties"
+  },
+  "definition": "분자식이 같아도 원자가 이어진 구조가 다르면 반응하는 방식까지 달라진다는, 구조와 화학적 성질 사이의 관계.",
+  "relations": [
+    {
+      "id": "rel-mscp-same-formula",
+      "text": "구성 원자의 종류와 수가 같아도 이어진 방식이 다르면 서로 다른 물질이 된다",
+      "form": {
+        "condition": "분자식이 같은 물질끼리 견줄 때",
+        "type": "causal",
+        "scope": "에탄올과 다이메틸 에터 같은 짝"
+      },
+      "invertible": false,
+      "invertible_reason": "달라진다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mscp-sodium-test",
+      "text": "에탄올은 금속 소듐과 서서히 반응해 수소를 내지만 다이메틸 에터는 반응하지 않는다",
+      "form": {
+        "condition": "같은 조건에서 금속 소듐을 넣었을 때",
+        "type": "causal",
+        "scope": "분자식이 C₂H₆O 인 두 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "반응하는 쪽이 정해져 있어 두 물질을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다이메틸 에터가 금속 소듐과 반응해 수소를 내고 에탄올은 반응하지 않는다"
+    },
+    {
+      "id": "rel-mscp-structure-to-property",
+      "text": "구조가 다르면 극성의 정도까지 달라져 녹는점과 끓는점도 함께 갈린다",
+      "form": {
+        "condition": "분자식이 같은 물질끼리 견줄 때",
+        "type": "causal",
+        "scope": "에탄올과 다이메틸 에터"
+      },
+      "invertible": false,
+      "invertible_reason": "갈린다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자식이 같으면 같은 물질이다",
+      "why_wrong": "에탄올과 다이메틸 에터는 분자식이 같지만 원자가 이어진 구조가 달라 끓는점도 반응성도 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mscp-same-formula"
+    },
+    {
+      "text": "물질의 화학적 성질은 분자량만으로 정해진다",
+      "why_wrong": "분자량이 같아도 구조가 다르면 반응하는 방식이 달라진다. 금속 소듐에 대한 두 물질의 반응이 그 예다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mscp-sodium-test"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molecular-dipole-moment"
+    },
+    {
+      "type": "related",
+      "target": "chem-molecular-polarity-and-physical-property",
+      "note": "이 개념에 정면으로 맞는 성취기준은 12화학02-04 이지만 standards.yaml 의 crosscheck 가 '불일치'라 태그로 쓸 수 없다. 분자 구조를 근거로 삼는 대목을 들어 12화학02-03 으로 달았다. 사람이 NCIC 원문으로 확정하면 재태깅한다."
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    91
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,117 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-lewis-structure",
+  "concept_key": "concept:lewis-structure",
+  "registry_status": "new",
+  "term": "루이스 구조",
+  "aliases": [],
+  "notation": {
+    "hanja": "루이스 構造",
+    "hanja_gloss": "構 얽을 구 · 造 지을 조",
+    "hanja_note": "'루이스'는 사람 이름을 소리대로 옮긴 말이라 한자 표기가 없다. 뒤의 構造만 한자어다.",
+    "english": "Lewis structure"
+  },
+  "definition": "전자점식에서 공유 전자쌍만 결합선으로 바꿔 그려, 어느 원자끼리 이어졌는지가 먼저 보이게 만든 그림.",
+  "relations": [
+    {
+      "id": "rel-ls-line-for-pair",
+      "text": "공유 전자쌍 하나를 결합선 하나로 바꿔 그으면 전자점식이 루이스 구조가 된다",
+      "form": {
+        "condition": "전자점식을 이미 그려 두었을 때",
+        "type": "conditional",
+        "scope": "분자를 나타내는 표기"
+      },
+      "invertible": false,
+      "invertible_reason": "표기를 바꾸는 절차를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ls-lone-pairs-stay",
+      "text": "비공유 전자쌍은 선으로 바꾸지 않고 점으로 남겨 두어 옥텟을 확인할 수 있게 한다",
+      "form": {
+        "condition": "분자를 루이스 구조로 나타낼 때",
+        "type": "conditional",
+        "scope": "비공유 전자쌍이 있는 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "선으로 바꾸는 것은 공유 전자쌍뿐이라고 정해 두었으므로 반대 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비공유 전자쌍도 결합선으로 바꾸어 그린다"
+    },
+    {
+      "id": "rel-ls-bond-order-lines",
+      "text": "두 원자 사이의 공유 전자쌍이 많을수록 그 사이에 긋는 결합선의 수도 늘어난다",
+      "form": {
+        "condition": "단일·이중·삼중 결합을 구별해 그릴 때",
+        "type": "direct",
+        "scope": "루이스 구조 표기",
+        "antecedent": {
+          "quantity": "공유 전자쌍 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합선의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "선 하나가 전자쌍 하나를 뜻하므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 원자 사이의 공유 전자쌍이 많을수록 긋는 결합선의 수는 줄어든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "루이스 구조에서 선으로 나타내지 않은 전자쌍은 없는 것이다",
+      "why_wrong": "선으로 바꾼 것은 공유 전자쌍뿐이고, 비공유 전자쌍은 점으로 그대로 남아 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ls-lone-pairs-stay"
+    },
+    {
+      "text": "루이스 구조는 분자의 실제 모양을 그린 그림이다",
+      "why_wrong": "결합 관계를 평면에 적어 둔 표기일 뿐이다. 실제 3차원 모양은 전자쌍 반발 이론으로 따로 예측해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ls-line-for-pair"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-lewis-electron-dot-formula"
+    },
+    {
+      "type": "related",
+      "target": "chem-shared-electron-pair"
+    },
+    {
+      "type": "related",
+      "target": "chem-lone-pair"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    78
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

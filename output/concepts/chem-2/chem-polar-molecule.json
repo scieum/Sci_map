@@ -1,0 +1,127 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-polar-molecule",
+  "concept_key": "concept:polar-molecule",
+  "registry_status": "reused",
+  "term": "극성 분자",
+  "aliases": [],
+  "notation": {
+    "hanja": "極性分子",
+    "hanja_gloss": "極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
+    "english": "polar molecule"
+  },
+  "definition": "결합의 극성이 구조 때문에 상쇄되지 않고 남아, 분자 전체의 쌍극자 모멘트가 0 이 아니게 된 분자.",
+  "relations": [
+    {
+      "id": "rel-pmol-classify",
+      "text": "결합의 쌍극자 모멘트가 상쇄되지 않고 남은 분자를 극성 분자로 가른다",
+      "form": {
+        "condition": "분자의 쌍극자 모멘트를 구한 뒤",
+        "type": "classification",
+        "scope": "분자"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pmol-shape",
+      "text": "굽은 형인 물이나 삼각뿔형인 암모니아는 대칭이 어긋나 극성 분자가 된다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 있을 때",
+        "type": "causal",
+        "scope": "물·암모니아 같은 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "예를 들어 설명한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pmol-charged-rod",
+      "text": "극성 분자로 이루어진 액체 줄기는 대전체를 가까이 대면 그쪽으로 휘어진다",
+      "form": {
+        "condition": "대전체를 액체 줄기 가까이 댈 때",
+        "type": "causal",
+        "scope": "가늘게 흐르는 극성 액체"
+      },
+      "invertible": true,
+      "invertible_reason": "부분 전하가 대전체와 반대 부호로 돌아서서 끌리므로 밀려난다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "극성 분자로 이루어진 액체 줄기는 대전체를 가까이 대면 반대쪽으로 밀려난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "극성 분자는 분자 전체가 양전하나 음전하를 띤다",
+      "why_wrong": "생기는 것은 부분 전하뿐이라 모두 더하면 0 이다. 그래서 대전체 쪽으로 휠 뿐 끌려가 달라붙지는 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmol-charged-rod"
+    },
+    {
+      "text": "극성 결합이 있으면 그 분자는 극성 분자다",
+      "why_wrong": "결합의 쌍극자 모멘트가 대칭으로 놓여 상쇄되면 무극성이 된다. 이산화 탄소가 그런 경우다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmol-classify"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-dipole-moment"
+    },
+    {
+      "type": "next",
+      "target": "chem-electrical-property-of-molecular-polarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-solubility-and-molecular-polarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-polarity-and-physical-property"
+    },
+    {
+      "type": "same",
+      "target": "mate-polar-molecule",
+      "note": "물질과 에너지 카드와 concept_key 가 같다 (R9)"
+    },
+    {
+      "type": "related",
+      "target": "chem-nonpolar-molecule",
+      "note": "분자의 쌍극자 모멘트가 0 인지로 갈리는 짝이다"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02",
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    86,
+    87,
+    93
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

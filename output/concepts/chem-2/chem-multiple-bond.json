@@ -1,0 +1,121 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-multiple-bond",
+  "concept_key": "concept:multiple-bond",
+  "registry_status": "new",
+  "term": "다중 결합",
+  "aliases": [
+    "이중 결합",
+    "삼중 결합"
+  ],
+  "notation": {
+    "hanja": "多重結合",
+    "hanja_gloss": "多 많을 다 · 重 무거울 중 · 結 맺을 결 · 合 합할 합",
+    "english": "multiple bond"
+  },
+  "definition": "두 원자 사이에 공유 전자쌍이 둘 이상 놓인 결합. 전자쌍이 둘이면 이중, 셋이면 삼중 결합이라 부른다.",
+  "relations": [
+    {
+      "id": "rel-mb-order",
+      "text": "두 원자 사이의 공유 전자쌍이 늘어날수록 그 결합의 차수가 높아진다",
+      "form": {
+        "condition": "같은 두 원자 사이를 견줄 때",
+        "type": "direct",
+        "scope": "공유 결합",
+        "antecedent": {
+          "quantity": "두 원자 사이의 공유 전자쌍 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합의 차수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자쌍 수로 차수를 정하도록 약속했으므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 원자 사이의 공유 전자쌍이 늘어날수록 결합의 차수는 낮아진다"
+    },
+    {
+      "id": "rel-mb-counted-once",
+      "text": "구조를 예측할 때는 이중 결합이든 삼중 결합이든 전자쌍 자리 하나로 센다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍 자리를 셀 때",
+        "type": "conditional",
+        "scope": "다중 결합을 가진 분자의 구조 예측"
+      },
+      "invertible": true,
+      "invertible_reason": "한 방향에 몰린 전자쌍이라 자리를 여럿으로 세면 예측이 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구조를 예측할 때 이중 결합은 전자쌍 자리 두 개로 센다"
+    },
+    {
+      "id": "rel-mb-co2-linear",
+      "text": "이산화 탄소는 이중 결합 둘이 반대 방향에 놓여 직선형 구조가 된다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 없을 때",
+        "type": "causal",
+        "scope": "다중 결합을 가진 삼원자 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "한 물질의 구조를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이산화 탄소는 중심 탄소 둘레에 공유 전자쌍이 네 개이므로 정사면체 구조다",
+      "why_wrong": "이중 결합은 자리 하나로 세므로 탄소 둘레의 자리는 둘이다. 그래서 직선형이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mb-counted-once"
+    },
+    {
+      "text": "이중 결합은 단일 결합보다 길다",
+      "why_wrong": "전자쌍이 늘면 두 원자를 더 세게 당기므로 결합 길이는 오히려 짧아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mb-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-shared-electron-pair"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-linear-molecular-geometry"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    78,
+    81,
+    85
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

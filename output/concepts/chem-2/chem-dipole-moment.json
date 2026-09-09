@@ -1,0 +1,122 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-dipole-moment",
+  "concept_key": "concept:dipole-moment",
+  "registry_status": "new",
+  "term": "쌍극자 모멘트",
+  "aliases": [],
+  "notation": {
+    "hanja": "雙極子모멘트",
+    "hanja_gloss": "雙 두 쌍 · 極 다할 극 · 子 아들 자",
+    "hanja_note": "'모멘트'는 영어 moment 의 음차어라 한자 표기가 없다. 앞의 雙極子만 한자어다.",
+    "english": "dipole moment",
+    "symbol_display": "μ = q × r",
+    "symbol_plain": "mu = q r"
+  },
+  "definition": "전하량과 두 전하 사이의 거리를 곱해 정한 양. 극성이 얼마나 큰지와 어느 쪽으로 쏠렸는지를 함께 알려 준다.",
+  "relations": [
+    {
+      "id": "rel-dm-magnitude",
+      "text": "전하량이 크거나 두 전하 사이가 멀수록 쌍극자 모멘트가 커진다",
+      "form": {
+        "condition": "전하량과 거리 가운데 하나만 달라질 때",
+        "type": "direct",
+        "scope": "쌍극자",
+        "antecedent": {
+          "quantity": "전하량과 전하 사이 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "쌍극자 모멘트",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 값의 곱으로 정의되므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하량이 크거나 두 전하 사이가 멀수록 쌍극자 모멘트가 작아진다"
+    },
+    {
+      "id": "rel-dm-arrow-direction",
+      "text": "화살표는 전기음성도가 작은 원자에서 큰 원자 쪽을 향하도록 그린다",
+      "form": {
+        "condition": "결합의 극성을 화살표로 나타낼 때",
+        "type": "conditional",
+        "scope": "극성 공유 결합"
+      },
+      "invertible": true,
+      "invertible_reason": "전자가 몰리는 쪽이 화살촉이라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화살표는 전기음성도가 큰 원자에서 작은 원자 쪽을 향하도록 그린다"
+    },
+    {
+      "id": "rel-dm-zero-in-nonpolar",
+      "text": "부분 전하가 생기지 않는 무극성 공유 결합에서는 이 값이 0 이 된다",
+      "form": {
+        "condition": "결합한 두 원자의 전기음성도가 같을 때",
+        "type": "conditional",
+        "scope": "결합 하나"
+      },
+      "invertible": true,
+      "invertible_reason": "전하가 갈리지 않으면 값이 생길 수 없어 반대 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무극성 공유 결합에서도 결합의 쌍극자 모멘트는 0 이 아니다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "쌍극자 모멘트는 크기만 있는 값이라 방향은 따지지 않아도 된다",
+      "why_wrong": "크기와 방향을 함께 가진 값이다. 방향을 따지지 않으면 이산화 탄소처럼 상쇄되는 분자를 설명할 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dm-arrow-direction"
+    },
+    {
+      "text": "결합의 쌍극자 모멘트가 0 보다 크면 그 분자의 쌍극자 모멘트도 0 보다 크다",
+      "why_wrong": "결합의 쌍극자 모멘트들이 크기가 같고 방향이 반대로 놓이면 합이 0 이 되어 분자는 무극성이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dm-zero-in-nonpolar"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-dipole"
+    },
+    {
+      "type": "next",
+      "target": "chem-bond-polarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-dipole-moment"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-1-02",
+  "pages": [
+    70,
+    71,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

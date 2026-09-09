@@ -1,0 +1,128 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-partial-charge",
+  "concept_key": "concept:partial-charge",
+  "registry_status": "new",
+  "term": "부분 전하",
+  "aliases": [],
+  "notation": {
+    "hanja": "部分電荷",
+    "hanja_gloss": "部 떼 부 · 分 나눌 분 · 電 번개 전 · 荷 멜 하",
+    "english": "partial charge",
+    "symbol_display": "δ⁺, δ⁻",
+    "symbol_plain": "delta+, delta-"
+  },
+  "definition": "전자쌍이 한쪽으로 치우친 탓에 각 원자가 띠게 되는, 전자 한 개분에 못 미치는 작은 전하.",
+  "relations": [
+    {
+      "id": "rel-pc-which-side",
+      "text": "전기음성도가 큰 원자 쪽이 부분적인 음전하를, 작은 원자 쪽이 부분적인 양전하를 띤다",
+      "form": {
+        "condition": "극성 공유 결합이 만들어졌을 때",
+        "type": "causal",
+        "scope": "극성 공유 결합을 이룬 두 원자"
+      },
+      "invertible": true,
+      "invertible_reason": "전자가 몰린 쪽이 음전하를 띠므로 부호를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기음성도가 큰 원자 쪽이 부분적인 양전하를 띤다"
+    },
+    {
+      "id": "rel-pc-size",
+      "text": "두 원자의 전기음성도 차이가 벌어질수록 각 원자가 띠는 부분 전하도 커진다",
+      "form": {
+        "condition": "결합 길이가 비슷한 결합끼리 견줄 때",
+        "type": "direct",
+        "scope": "극성 공유 결합",
+        "antecedent": {
+          "quantity": "두 원자의 전기음성도 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "부분 전하의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "치우침이 클수록 전하가 갈리므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 원자의 전기음성도 차이가 벌어질수록 부분 전하는 작아진다"
+    },
+    {
+      "id": "rel-pc-to-moment",
+      "text": "부분 전하가 커지면 그 결합의 쌍극자 모멘트도 대체로 함께 커진다",
+      "form": {
+        "condition": "두 전하 사이의 거리가 비슷할 때",
+        "type": "direct",
+        "scope": "극성 공유 결합",
+        "antecedent": {
+          "quantity": "부분 전하의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합의 쌍극자 모멘트",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "'대체로'라는 경향을 말한 서술이라 뒤집어도 항상 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "부분 전하를 띤 원자는 이온이다",
+      "why_wrong": "이온은 전자를 통째로 잃거나 얻어 +1, -1 처럼 정수 전하를 띤다. 부분 전하는 전자쌍이 치우쳐 생긴 그보다 작은 전하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pc-which-side"
+    },
+    {
+      "text": "부분 전하가 있는 분자는 분자 전체가 전하를 띤다",
+      "why_wrong": "부분 양전하와 부분 음전하를 모두 더하면 0 이라 분자 전체는 전기적으로 중성이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pc-size"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-polar-covalent-bond"
+    },
+    {
+      "type": "next",
+      "target": "chem-dipole"
+    },
+    {
+      "type": "next",
+      "target": "chem-bond-polarity"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-1-02",
+  "pages": [
+    69,
+    70,
+    74
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

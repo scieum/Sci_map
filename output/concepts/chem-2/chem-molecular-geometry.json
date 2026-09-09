@@ -1,0 +1,124 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-molecular-geometry",
+  "concept_key": "concept:molecular-geometry",
+  "registry_status": "new",
+  "term": "분자의 구조",
+  "aliases": [
+    "분자의 모양"
+  ],
+  "notation": {
+    "hanja": "分子의 構造",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 構 얽을 구 · 造 지을 조",
+    "hanja_note": "조사 '의'는 한자가 없어 한글 그대로 두었다.",
+    "english": "molecular geometry"
+  },
+  "definition": "분자를 이루는 원자들이 3차원 공간에서 어디에 놓였는지로 정해지는 모양. 전자쌍 배치에서 원자 자리만 뽑아 이름 붙인다.",
+  "relations": [
+    {
+      "id": "rel-mg-atoms-decide",
+      "text": "분자의 구조는 전자쌍이 놓인 자리가 아니라 결합한 원자들이 놓인 자리로 정한다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 있을 때",
+        "type": "conditional",
+        "scope": "중심 원자가 하나인 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "이름을 붙이는 기준이 원자 위치라고 정해져 있어 기준을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자의 구조는 비공유 전자쌍이 놓인 자리까지 넣어 정한다"
+    },
+    {
+      "id": "rel-mg-from-arrangement",
+      "text": "중심 원자 둘레의 전자쌍 배치가 정해지면 그 분자의 3차원 모양도 따라서 정해진다",
+      "form": {
+        "condition": "전자쌍 반발 이론을 적용할 때",
+        "type": "causal",
+        "scope": "중심 원자가 하나인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "배치가 모양을 정한다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mg-same-count-differs",
+      "text": "원자 수가 같아도 중심 원자의 비공유 전자쌍 수가 다르면 구조가 달라진다",
+      "form": {
+        "condition": "원자 수가 같은 분자끼리 견줄 때",
+        "type": "causal",
+        "scope": "삼원자 이상의 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "달라진다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자 수가 같은 분자는 구조도 같다",
+      "why_wrong": "이산화 탄소와 물은 둘 다 원자가 셋이지만 하나는 직선형, 다른 하나는 굽은 형이다. 비공유 전자쌍 수가 다르기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mg-same-count-differs"
+    },
+    {
+      "text": "분자의 구조는 루이스 구조를 그린 평면 모양 그대로다",
+      "why_wrong": "루이스 구조는 결합 관계를 평면에 적은 표기다. 실제 분자는 전자쌍 반발에 따라 입체로 뻗는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mg-from-arrangement"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-electron-pair-repulsion-theory"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-bond-angle"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-multiple-bond"
+    },
+    {
+      "type": "next",
+      "target": "chem-linear-molecular-geometry"
+    },
+    {
+      "type": "next",
+      "target": "chem-trigonal-planar-geometry"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-dipole-moment"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    81,
+    83,
+    93
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

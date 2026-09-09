@@ -1,0 +1,112 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-ionic-bond",
+  "concept_key": "concept:ionic-bond",
+  "registry_status": "new",
+  "term": "이온 결합",
+  "aliases": [],
+  "notation": {
+    "hanja": "이온結合",
+    "hanja_gloss": "結 맺을 결 · 合 합할 합",
+    "hanja_note": "'이온'은 영어 ion 의 음차어라 한자 표기가 없다. 뒤의 結合만 한자어다.",
+    "english": "ionic bond"
+  },
+  "definition": "전자를 잃은 양이온과 전자를 얻은 음이온이 서로 반대 전하 사이의 정전기적 인력에 붙들려 이루어진 결합.",
+  "relations": [
+    {
+      "id": "rel-ib-electron-transfer",
+      "text": "금속 원소가 전자를 내놓고 비금속 원소가 그 전자를 받아 양이온과 음이온이 만들어진다",
+      "form": {
+        "condition": "금속 원소와 비금속 원소가 만날 때",
+        "type": "causal",
+        "scope": "전형 금속과 전형 비금속 사이의 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "전기음성도가 작은 쪽이 전자를 내주므로 주고받는 쪽을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속 원소가 전자를 얻고 비금속 원소가 전자를 내놓아 이온이 만들어진다"
+    },
+    {
+      "id": "rel-ib-electrostatic",
+      "text": "전하의 부호가 서로 반대인 두 이온 사이에 정전기적 인력이 작용해 이온 결합이 생긴다",
+      "form": {
+        "condition": "두 이온이 서로 가까이 있을 때",
+        "type": "conditional",
+        "scope": "양이온과 음이온으로 이루어진 화합물"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 부호끼리는 밀어내므로 부호를 맞바꾼 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하의 부호가 서로 같은 두 이온 사이에 인력이 작용해 이온 결합이 생긴다"
+    },
+    {
+      "id": "rel-ib-octet-result",
+      "text": "전자가 옮겨 간 덕분에 두 이온은 모두 18족과 같은 전자 배치에 이르러 안정해진다",
+      "form": {
+        "condition": "전형 원소끼리 결합할 때",
+        "type": "causal",
+        "scope": "2·3주기 전형 원소로 된 이온 화합물"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이온 결합에서도 두 원자가 전자를 함께 나누어 갖는다",
+      "why_wrong": "함께 갖는 것은 공유 결합이다. 이온 결합은 전자가 한쪽에서 다른 쪽으로 아예 옮겨 가 이온이 된 뒤에 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ib-electron-transfer"
+    },
+    {
+      "text": "염화 소듐에서는 Na⁺ 하나와 Cl⁻ 하나가 짝을 지어 분자를 이룬다",
+      "why_wrong": "이온 결합 물질은 수많은 이온이 규칙적으로 이어진 결정이라 떼어 낼 수 있는 분자 단위가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ib-electrostatic"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-electrical-nature-of-chemical-bond"
+    },
+    {
+      "type": "same",
+      "target": "isci1-ionic-bond",
+      "note": "통합과학1 카드와 concept_key 가 같다 (R9)"
+    },
+    {
+      "type": "related",
+      "target": "chem-covalent-bond",
+      "note": "전자를 옮기느냐 함께 가지느냐로 갈리는 짝이다"
+    }
+  ],
+  "curriculum": [
+    "12화학02-01"
+  ],
+  "topic_id": "chem-2-1-01",
+  "pages": [
+    58,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

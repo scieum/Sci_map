@@ -1,0 +1,128 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-lone-pair",
+  "concept_key": "concept:lone-pair",
+  "registry_status": "new",
+  "term": "비공유 전자쌍",
+  "aliases": [
+    "고립 전자쌍"
+  ],
+  "notation": {
+    "hanja": "非共有 電子雙",
+    "hanja_gloss": "非 아닐 비 · 共 함께 공 · 有 있을 유 · 電 번개 전 · 子 아들 자 · 雙 두 쌍",
+    "english": "lone pair"
+  },
+  "definition": "결합에 쓰이지 않고 한 원자에만 딸린 채 남은 전자쌍. 자리를 넓게 차지해 분자 모양을 바꾼다.",
+  "relations": [
+    {
+      "id": "rel-lp-counts-in-vsepr",
+      "text": "결합에 쓰이지 않아도 중심 원자 둘레의 자리를 차지하므로 전자쌍을 셀 때 함께 센다",
+      "form": {
+        "condition": "전자쌍 반발 이론으로 구조를 예측할 때",
+        "type": "conditional",
+        "scope": "중심 원자에 비공유 전자쌍이 있는 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "자리를 차지한다는 전제가 이 이론의 출발점이라 빼고 센다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비공유 전자쌍은 결합에 쓰이지 않으므로 전자쌍을 셀 때 빼고 센다"
+    },
+    {
+      "id": "rel-lp-stronger-repulsion",
+      "text": "비공유 전자쌍끼리 밀어내는 힘이 공유 전자쌍끼리 밀어내는 힘보다 크다",
+      "form": {
+        "condition": "같은 중심 원자 둘레에서 견줄 때",
+        "type": "direct",
+        "scope": "전자쌍 반발 이론"
+      },
+      "invertible": true,
+      "invertible_reason": "반발력의 대소가 정해져 있어 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비공유 전자쌍끼리 밀어내는 힘이 공유 전자쌍끼리 밀어내는 힘보다 작다"
+    },
+    {
+      "id": "rel-lp-narrows-angle",
+      "text": "중심 원자의 비공유 전자쌍이 늘어날수록 결합각이 좁아진다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍이 모두 네 개일 때",
+        "type": "inverse",
+        "scope": "메테인·암모니아·물처럼 전자쌍이 네 개인 분자",
+        "antecedent": {
+          "quantity": "비공유 전자쌍 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합각",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "더 센 반발이 결합을 밀어붙이므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심 원자의 비공유 전자쌍이 늘어날수록 결합각이 넓어진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비공유 전자쌍은 결합에 쓰이지 않으므로 분자 모양에도 영향을 주지 않는다",
+      "why_wrong": "자리를 차지하고 더 세게 밀어내 결합각을 좁힌다. 물이 굽은 형인 까닭이 바로 그것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lp-counts-in-vsepr"
+    },
+    {
+      "text": "비공유 전자쌍도 두 원자 사이에 놓여 원자들을 이어 준다",
+      "why_wrong": "비공유 전자쌍은 한 원자에만 딸려 있어 두 원자를 잇지 않는다. 잇는 것은 공유 전자쌍이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lp-stronger-repulsion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-lewis-electron-dot-formula"
+    },
+    {
+      "type": "next",
+      "target": "chem-electron-pair-repulsion-theory"
+    },
+    {
+      "type": "next",
+      "target": "chem-trigonal-pyramidal-geometry"
+    },
+    {
+      "type": "next",
+      "target": "chem-bent-molecular-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-shared-electron-pair"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    78,
+    83
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,112 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-trigonal-planar-geometry",
+  "concept_key": "concept:trigonal-planar-geometry",
+  "registry_status": "new",
+  "term": "평면 삼각형 구조",
+  "aliases": [
+    "평면 삼각형"
+  ],
+  "notation": {
+    "hanja": "平面 三角形 構造",
+    "hanja_gloss": "平 평평할 평 · 面 낯 면 · 三 석 삼 · 角 뿔 각 · 形 모양 형 · 構 얽을 구 · 造 지을 조",
+    "english": "trigonal planar geometry"
+  },
+  "definition": "중심 원자와 결합한 세 원자가 한 평면 위 삼각형의 꼭짓점 쪽에 놓여 결합각이 120° 가 되는 모양.",
+  "relations": [
+    {
+      "id": "rel-tpg-three-sites",
+      "text": "중심 원자 둘레의 전자쌍 자리가 셋이면 한 평면에서 120° 씩 고르게 벌어진다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 없을 때",
+        "type": "causal",
+        "scope": "삼플루오린화 붕소처럼 전자쌍 자리가 셋인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 정해지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tpg-coplanar",
+      "text": "평면 삼각형 분자에서는 중심 원자와 결합한 세 원자가 모두 한 평면에 놓인다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍 자리가 셋일 때",
+        "type": "conditional",
+        "scope": "평면 삼각형 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "이름 자체가 한 평면에 놓였다는 뜻이라 반대 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평면 삼각형 분자의 원자들은 한 평면에 놓이지 않고 입체로 뻗는다"
+    },
+    {
+      "id": "rel-tpg-formaldehyde",
+      "text": "폼알데하이드는 이중 결합을 자리 하나로 세면 자리가 셋이 되어 평면 삼각형이 된다",
+      "form": {
+        "condition": "다중 결합을 자리 하나로 셀 때",
+        "type": "causal",
+        "scope": "중심 탄소에 이중 결합이 하나 있는 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "예를 들어 설명한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평면 삼각형 분자는 세 결합에 극성이 있으면 극성 분자다",
+      "why_wrong": "세 결합이 120° 로 고르게 놓이면 쌍극자 모멘트가 서로 상쇄되어 분자 전체는 무극성이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tpg-coplanar"
+    },
+    {
+      "text": "중심 원자에 결합한 원자가 셋이면 삼각뿔형이다",
+      "why_wrong": "비공유 전자쌍이 없으면 평면 삼각형이고, 하나 있으면 삼각뿔형이다. 비공유 전자쌍을 먼저 세야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tpg-three-sites"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry",
+      "note": "예시 물질 이름은 대한화학회 수 접두어로 통일했다 — BF₃ 는 '삼플루오린화 붕소'. 교과서는 082·084쪽에서 '트라이플루오린화 붕소', 087쪽에서 BCl₃ 를 '삼염화 붕소'로 적어 한 책 안에서 갈린다."
+    },
+    {
+      "type": "related",
+      "target": "chem-linear-molecular-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-tetrahedral-geometry"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    81,
+    82,
+    93
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

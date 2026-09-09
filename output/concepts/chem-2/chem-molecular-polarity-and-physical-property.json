@@ -1,0 +1,127 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-molecular-polarity-and-physical-property",
+  "concept_key": "concept:molecular-polarity-and-physical-property",
+  "registry_status": "new",
+  "term": "분자의 극성과 물리적 성질",
+  "aliases": [],
+  "notation": {
+    "hanja": "分子의 極性과 物理的 性質",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 極 다할 극 · 性 성품 성 · 物 물건 물 · 理 다스릴 리 · 的 과녁 적 · 性 성품 성 · 質 바탕 질",
+    "hanja_note": "조사 '의'와 '과'는 한자가 없어 한글 그대로 두었다.",
+    "english": "molecular polarity and physical properties"
+  },
+  "definition": "분자량이 비슷할 때 극성 여부가 분자 사이 인력을 갈라, 녹는점과 끓는점 같은 물리적 성질을 다르게 만드는 관계.",
+  "relations": [
+    {
+      "id": "rel-mpp-polarity-force",
+      "text": "분자량이 비슷하다면 극성 분자 쪽이 분자 사이에 작용하는 인력이 더 크다",
+      "form": {
+        "condition": "분자량이 비슷한 물질끼리 견줄 때",
+        "type": "direct",
+        "scope": "분자로 이루어진 물질",
+        "antecedent": {
+          "quantity": "분자의 극성",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분자 사이 인력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부분 전하 사이의 인력이 더해지므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자량이 비슷하다면 극성 분자 쪽이 분자 사이 인력이 더 작다"
+    },
+    {
+      "id": "rel-mpp-force-to-bp",
+      "text": "분자 사이 인력이 클수록 그 물질의 녹는점과 끓는점이 높다",
+      "form": {
+        "condition": "압력을 1 atm 으로 같게 두었을 때",
+        "type": "direct",
+        "scope": "분자로 이루어진 물질",
+        "antecedent": {
+          "quantity": "분자 사이 인력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "녹는점과 끓는점",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "떼어 놓는 데 더 많은 열이 드므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 사이 인력이 클수록 그 물질의 녹는점과 끓는점이 낮다"
+    },
+    {
+      "id": "rel-mpp-methane-water",
+      "text": "분자량이 비슷한데도 상온에서 메테인이 기체이고 물이 액체인 것은 극성 차이 때문이다",
+      "form": {
+        "condition": "1 atm 상온에서 견줄 때",
+        "type": "causal",
+        "scope": "메테인과 물"
+      },
+      "invertible": false,
+      "invertible_reason": "두 물질을 견준 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분자량이 클수록 끓는점이 높으므로 극성은 따질 필요가 없다",
+      "why_wrong": "분자량이 16 과 18 로 비슷한 메테인과 물도 끓는점이 261 ℃ 나 차이 난다. 극성이 만든 분자 사이 인력 차이 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mpp-methane-water"
+    },
+    {
+      "text": "물이 끓을 때는 물 분자 안의 공유 결합이 끊어진다",
+      "why_wrong": "끓는 동안 끊어지는 것은 분자 사이의 인력이고, 분자 안의 공유 결합은 그대로 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mpp-force-to-bp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-polar-molecule"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-nonpolar-molecule"
+    },
+    {
+      "type": "related",
+      "target": "chem-molecular-structure-and-chemical-property",
+      "note": "이 개념에 정면으로 맞는 성취기준은 12화학02-04 이지만 standards.yaml 의 crosscheck 가 '불일치'라 태그로 쓸 수 없다. 분자 구조를 근거로 삼는 대목을 들어 12화학02-03 으로 달았다. 사람이 NCIC 원문으로 확정하면 재태깅한다."
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    91,
+    93
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

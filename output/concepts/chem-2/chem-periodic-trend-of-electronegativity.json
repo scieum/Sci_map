@@ -1,0 +1,130 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-periodic-trend-of-electronegativity",
+  "concept_key": "concept:periodic-trend-of-electronegativity",
+  "registry_status": "new",
+  "term": "전기음성도의 주기적 성질",
+  "aliases": [
+    "전기음성도의 주기적 변화"
+  ],
+  "notation": {
+    "hanja": "電氣陰性度의 週期的 性質",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 陰 그늘 음 · 性 성품 성 · 度 법도 도 · 週 돌 주 · 期 기약할 기 · 的 과녁 적 · 性 성품 성 · 質 바탕 질",
+    "hanja_note": "조사 '의'는 한자가 없어 한글 그대로 두었다.",
+    "english": "periodic trend of electronegativity"
+  },
+  "definition": "주기율표에서 자리를 옮겨 갈 때 전기음성도가 커지고 작아지기를 일정한 규칙으로 되풀이하는 성질.",
+  "relations": [
+    {
+      "id": "rel-pte-same-period",
+      "text": "같은 주기에서 원자 번호가 커지면 핵전하가 늘어나 전기음성도가 커진다",
+      "form": {
+        "condition": "같은 주기의 전형 원소끼리 견줄 때",
+        "type": "direct",
+        "scope": "비활성 기체를 뺀 전형 원소",
+        "antecedent": {
+          "quantity": "같은 주기에서의 원자 번호",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기음성도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "핵전하가 늘면 전자를 더 세게 당기므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 주기에서 원자 번호가 커지면 전기음성도가 작아진다"
+    },
+    {
+      "id": "rel-pte-same-group",
+      "text": "같은 족에서 전자 껍질이 늘면 핵과 전자 사이가 멀어져 전기음성도가 작아진다",
+      "form": {
+        "condition": "같은 족의 전형 원소끼리 견줄 때",
+        "type": "inverse",
+        "scope": "비활성 기체를 뺀 전형 원소",
+        "antecedent": {
+          "quantity": "전자 껍질 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기음성도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리가 멀어지면 인력이 약해지므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 족에서 전자 껍질이 늘수록 전기음성도가 커진다"
+    },
+    {
+      "id": "rel-pte-table-direction",
+      "text": "주기율표에서 오른쪽으로 갈수록, 그리고 위쪽으로 갈수록 전기음성도가 큰 원소가 놓인다",
+      "form": {
+        "condition": "비활성 기체를 뺀 전형 원소를 견줄 때",
+        "type": "conditional",
+        "scope": "주기율표 전체의 대체적 경향"
+      },
+      "invertible": true,
+      "invertible_reason": "경향의 방향이 정해져 있어 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주기율표에서 왼쪽으로 갈수록, 아래쪽으로 갈수록 전기음성도가 큰 원소가 놓인다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "18족 원소는 가장 바깥 껍질이 꽉 차 있으므로 전기음성도가 가장 크다",
+      "why_wrong": "비활성 기체는 다른 원자와 공유 결합을 거의 하지 않아 보통 전기음성도를 매기지 않는다. 2주기에서 가장 큰 원소는 플루오린이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pte-table-direction"
+    },
+    {
+      "text": "원자 번호가 클수록 전기음성도도 크다",
+      "why_wrong": "같은 주기 안에서만 그렇다. 같은 족에서는 원자 번호가 커질수록 오히려 작아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pte-same-group"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-electronegativity"
+    },
+    {
+      "type": "related",
+      "target": "chem-polar-covalent-bond"
+    },
+    {
+      "type": "related",
+      "target": "chem-nonpolar-covalent-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-1-02",
+  "pages": [
+    65,
+    66,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,127 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-nonpolar-molecule",
+  "concept_key": "concept:nonpolar-molecule",
+  "registry_status": "reused",
+  "term": "무극성 분자",
+  "aliases": [],
+  "notation": {
+    "hanja": "無極性分子",
+    "hanja_gloss": "無 없을 무 · 極 다할 극 · 性 성품 성 · 分 나눌 분 · 子 아들 자",
+    "english": "nonpolar molecule"
+  },
+  "definition": "분자 전체의 쌍극자 모멘트가 0 인 분자. 극성 결합이 있더라도 방향이 대칭이면 서로 상쇄되어 여기에 든다.",
+  "relations": [
+    {
+      "id": "rel-npmol-cancel",
+      "text": "결합의 쌍극자 모멘트가 모두 상쇄되면 극성 결합이 있어도 무극성 분자가 된다",
+      "form": {
+        "condition": "결합들이 대칭으로 놓였을 때",
+        "type": "causal",
+        "scope": "이산화 탄소·삼염화 붕소처럼 대칭인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-npmol-diatomic",
+      "text": "같은 원소끼리 결합한 이원자 분자는 결합에 극성이 없어 무극성 분자다",
+      "form": {
+        "condition": "두 원자의 전기음성도가 같을 때",
+        "type": "classification",
+        "scope": "산소·플루오린 같은 이원자 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-npmol-charged-rod",
+      "text": "무극성 분자로 이루어진 액체 줄기는 대전체를 가까이 대도 거의 휘지 않는다",
+      "form": {
+        "condition": "대전체를 액체 줄기 가까이 댈 때",
+        "type": "causal",
+        "scope": "헥세인처럼 무극성인 액체"
+      },
+      "invertible": true,
+      "invertible_reason": "돌려 세울 영구 쌍극자가 없어 크게 끌린다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무극성 분자로 이루어진 액체 줄기도 대전체 쪽으로 뚜렷하게 휘어진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무극성 분자에는 극성 결합이 하나도 없다",
+      "why_wrong": "이산화 탄소는 극성 결합을 둘 가지고도 방향이 반대여서 합이 0 이 된다. 결합의 극성과 분자의 극성은 층위가 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-npmol-cancel"
+    },
+    {
+      "text": "무극성 분자도 물에 잘 녹는다",
+      "why_wrong": "무극성 물질은 무극성 용매에 잘 녹는다. 헥세인이 물과 섞이지 않고 층이 갈리는 것이 그 예다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-npmol-diatomic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-dipole-moment"
+    },
+    {
+      "type": "next",
+      "target": "chem-electrical-property-of-molecular-polarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-solubility-and-molecular-polarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-polarity-and-physical-property"
+    },
+    {
+      "type": "same",
+      "target": "mate-nonpolar-molecule",
+      "note": "물질과 에너지 카드와 concept_key 가 같다 (R9)"
+    },
+    {
+      "type": "related",
+      "target": "chem-polar-molecule",
+      "note": "분자의 쌍극자 모멘트가 0 인지로 갈리는 짝이다"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02",
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    86,
+    87,
+    93
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

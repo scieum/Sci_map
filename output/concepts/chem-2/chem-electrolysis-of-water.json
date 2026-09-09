@@ -1,0 +1,126 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-electrolysis-of-water",
+  "concept_key": "concept:electrolysis-of-water",
+  "registry_status": "new",
+  "term": "물의 전기 분해",
+  "aliases": [],
+  "notation": {
+    "hanja": "물의 電氣分解",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 分 나눌 분 · 解 풀 해",
+    "hanja_note": "'물'은 한자가 없는 고유어라 한글 그대로 두었다. 조사 '의'도 마찬가지다.",
+    "english": "electrolysis of water",
+    "symbol_display": "2H₂O → 2H₂ + O₂",
+    "symbol_plain": "2H2O = 2H2 + O2"
+  },
+  "definition": "전해질을 조금 녹인 물에 전류를 흘려, 물 분자 속 공유 결합을 끊고 수소와 산소를 얻는 반응.",
+  "relations": [
+    {
+      "id": "rel-eow-which-electrode",
+      "text": "수소 기체는 (-)극 쪽에, 산소 기체는 (+)극 쪽에 모인다",
+      "form": {
+        "condition": "직류 전원을 이어 물을 전기 분해할 때",
+        "type": "conditional",
+        "scope": "물의 전기 분해 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "두 극에서 나오는 기체는 정해져 있어 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 기체는 (+)극 쪽에, 산소 기체는 (-)극 쪽에 모인다"
+    },
+    {
+      "id": "rel-eow-volume-ratio",
+      "text": "같은 시간 동안 모인 수소와 산소의 부피비는 2 대 1 이다",
+      "form": {
+        "condition": "온도와 압력이 같을 때",
+        "type": "direct",
+        "scope": "물만 분해되는 경우",
+        "antecedent": {
+          "quantity": "생성된 수소의 부피",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생성된 산소의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "화학 반응식의 계수비가 정해져 있어 두 기체의 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 시간 동안 모인 수소와 산소의 부피비는 1 대 2 이다"
+    },
+    {
+      "id": "rel-eow-breaks-covalent",
+      "text": "전기 에너지가 H 와 O 를 잇던 전자쌍을 떼어 놓아 물이 두 기체로 나뉜다",
+      "form": {
+        "condition": "충분한 전압을 걸어 줄 때",
+        "type": "causal",
+        "scope": "액체 상태의 물"
+      },
+      "invertible": false,
+      "invertible_reason": "끊어지는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물을 전기 분해하면 (+)극에서 수소 기체가 나온다",
+      "why_wrong": "수소는 (-)극에서 나온다. 두 극 가운데 기체가 두 배로 많이 모이는 쪽이 수소다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eow-which-electrode"
+    },
+    {
+      "text": "수소와 산소의 부피비가 2 대 1 이므로 질량비도 2 대 1 이다",
+      "why_wrong": "2 대 1 은 같은 온도·압력에서의 부피비, 곧 분자 수의 비다. 질량으로 견주면 산소 쪽이 훨씬 무겁다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eow-volume-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-electrolysis"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-electrolyte"
+    },
+    {
+      "type": "next",
+      "target": "chem-electrical-nature-of-chemical-bond"
+    },
+    {
+      "type": "related",
+      "target": "chem-covalent-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-01"
+  ],
+  "topic_id": "chem-2-1-01",
+  "pages": [
+    60,
+    63,
+    73,
+    96
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

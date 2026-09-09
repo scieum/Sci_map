@@ -1,0 +1,132 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-electronegativity",
+  "concept_key": "concept:electronegativity",
+  "registry_status": "new",
+  "term": "전기음성도",
+  "aliases": [],
+  "notation": {
+    "hanja": "電氣陰性度",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 陰 그늘 음 · 性 성품 성 · 度 법도 도",
+    "english": "electronegativity"
+  },
+  "definition": "공유 결합을 한 원자가 전자쌍을 제 쪽으로 당기는 힘의 세기를, 플루오린을 4.0 으로 잡고 원소끼리 견주어 매긴 상댓값.",
+  "relations": [
+    {
+      "id": "rel-en-nucleus-attraction",
+      "text": "원자핵과 전자 사이에 작용하는 인력이 셀수록 그 원자의 전기음성도가 크다",
+      "form": {
+        "condition": "같은 기준으로 매긴 상댓값끼리 견줄 때",
+        "type": "direct",
+        "scope": "비활성 기체를 뺀 전형 원소",
+        "antecedent": {
+          "quantity": "원자핵과 전자 사이의 인력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기음성도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "인력이 곧 당기는 힘이라 반대로 말하면 정의와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자핵과 전자 사이의 인력이 셀수록 그 원자의 전기음성도는 작아진다"
+    },
+    {
+      "id": "rel-en-difference-shifts",
+      "text": "결합한 두 원자의 전기음성도 차이가 벌어질수록 전자쌍이 한쪽으로 더 많이 끌려간다",
+      "form": {
+        "condition": "두 원자가 공유 결합을 이룰 때",
+        "type": "direct",
+        "scope": "공유 결합 하나",
+        "antecedent": {
+          "quantity": "두 원자의 전기음성도 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전자쌍이 치우치는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "차이가 곧 치우침의 원인이므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 원자의 전기음성도 차이가 벌어질수록 전자쌍은 덜 치우친다"
+    },
+    {
+      "id": "rel-en-metal-nonmetal",
+      "text": "전자를 내놓기 쉬운 금속 원소는 전기음성도가 작고 전자를 받기 쉬운 비금속 원소는 크다",
+      "form": {
+        "condition": "주기율표 안에서 서로 견줄 때",
+        "type": "classification",
+        "scope": "전형 원소"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 내놓는 성질과 당기는 힘은 반대로 움직여 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속 원소는 전기음성도가 크고 비금속 원소는 전기음성도가 작다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기음성도는 원자가 실제로 잃거나 얻는 전자의 개수를 나타낸 값이다",
+      "why_wrong": "개수가 아니라, 공유 전자쌍을 당기는 힘을 다른 원소와 견주어 매긴 상댓값이다. 그래서 단위가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-en-nucleus-attraction"
+    },
+    {
+      "text": "플루오린의 전기음성도 4.0 은 실험으로 잰 절대적인 크기다",
+      "why_wrong": "가장 크게 당기는 F 을 4.0 으로 정해 두고 나머지를 거기에 견주어 매긴 기준값이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-en-difference-shifts"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-shared-electron-pair"
+    },
+    {
+      "type": "next",
+      "target": "chem-periodic-trend-of-electronegativity"
+    },
+    {
+      "type": "next",
+      "target": "chem-nonpolar-covalent-bond"
+    },
+    {
+      "type": "next",
+      "target": "chem-polar-covalent-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-1-02",
+  "pages": [
+    64,
+    66,
+    68,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

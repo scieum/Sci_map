@@ -1,0 +1,111 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-solubility-and-molecular-polarity",
+  "concept_key": "concept:solubility-and-molecular-polarity",
+  "registry_status": "new",
+  "term": "분자의 극성과 용해",
+  "aliases": [],
+  "notation": {
+    "hanja": "分子의 極性과 溶解",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 極 다할 극 · 性 성품 성 · 溶 녹을 용 · 解 풀 해",
+    "hanja_note": "조사 '의'와 '과'는 한자가 없어 한글 그대로 두었다.",
+    "english": "solubility and molecular polarity"
+  },
+  "definition": "용질과 용매의 극성이 서로 닮았을 때 잘 섞이고 어긋나면 층이 갈리는, 용해 여부를 가르는 규칙.",
+  "relations": [
+    {
+      "id": "rel-samp-like-dissolves",
+      "text": "용질과 용매의 극성이 서로 닮았을수록 두 물질이 잘 섞인다",
+      "form": {
+        "condition": "온도가 같을 때",
+        "type": "conditional",
+        "scope": "분자로 이루어진 용질과 용매"
+      },
+      "invertible": true,
+      "invertible_reason": "닮은 것끼리 녹는다는 규칙이라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용질과 용매의 극성이 서로 어긋날수록 두 물질이 잘 섞인다"
+    },
+    {
+      "id": "rel-samp-water-ethanol",
+      "text": "물과 에탄올은 둘 다 극성이라 층이 갈리지 않지만 무극성인 헥세인은 물과 층이 갈린다",
+      "form": {
+        "condition": "같은 부피씩 넣고 흔든 뒤 가만히 두었을 때",
+        "type": "causal",
+        "scope": "물·에탄올·헥세인"
+      },
+      "invertible": false,
+      "invertible_reason": "예를 들어 설명한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-samp-ionic-in-polar",
+      "text": "이온으로 이루어진 물질은 극성 용매에 잘 녹고 무극성 용매에는 거의 녹지 않는다",
+      "form": {
+        "condition": "상온에서 녹여 볼 때",
+        "type": "conditional",
+        "scope": "염화 구리(II)·염화 소듐 같은 이온 결합 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "이온을 둘러쌀 수 있는 것은 극성 용매뿐이라 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온으로 이루어진 물질은 무극성 용매에 잘 녹고 극성 용매에는 녹지 않는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물은 어떤 물질이든 녹이는 만능 용매다",
+      "why_wrong": "물은 극성 용매라 극성 물질과 이온 물질을 잘 녹인다. 무극성인 식용유나 헥세인과는 섞이지 않고 층이 갈린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-samp-like-dissolves"
+    },
+    {
+      "text": "기름과 물이 섞이지 않는 것은 밀도가 다르기 때문이다",
+      "why_wrong": "위아래 층의 순서는 밀도가 정하지만, 섞이지 않는 까닭은 두 물질의 극성이 서로 어긋나기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-samp-water-ethanol"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-polar-molecule"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-nonpolar-molecule"
+    },
+    {
+      "type": "related",
+      "target": "chem-electrical-property-of-molecular-polarity"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    89,
+    90,
+    93
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

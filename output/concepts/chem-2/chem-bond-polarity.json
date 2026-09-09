@@ -1,0 +1,128 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-bond-polarity",
+  "concept_key": "concept:bond-polarity",
+  "registry_status": "new",
+  "term": "결합의 극성",
+  "aliases": [],
+  "notation": {
+    "hanja": "結合의 極性",
+    "hanja_gloss": "結 맺을 결 · 合 합할 합 · 極 다할 극 · 性 성품 성",
+    "hanja_note": "조사 '의'는 한자가 없어 한글 그대로 두었다.",
+    "english": "bond polarity"
+  },
+  "definition": "공유 결합 하나를 놓고 볼 때 전자쌍이 한쪽으로 치우쳐 두 원자가 서로 다른 부호의 전하를 띠게 된 성질.",
+  "relations": [
+    {
+      "id": "rel-bp-classification",
+      "text": "전자쌍이 치우친 결합은 극성을 띠고, 치우치지 않은 결합은 극성을 띠지 않는다",
+      "form": {
+        "condition": "공유 결합 하나를 따로 볼 때",
+        "type": "classification",
+        "scope": "공유 결합"
+      },
+      "invertible": true,
+      "invertible_reason": "치우침이 곧 극성의 정의라 두 경우를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자쌍이 치우친 결합은 극성을 띠지 않고, 치우치지 않은 결합이 극성을 띤다"
+    },
+    {
+      "id": "rel-bp-moment-scale",
+      "text": "결합의 쌍극자 모멘트 값이 클수록 그 결합의 극성이 크다고 판단한다",
+      "form": {
+        "condition": "여러 결합의 쌍극자 모멘트를 견줄 때",
+        "type": "direct",
+        "scope": "공유 결합",
+        "antecedent": {
+          "quantity": "결합의 쌍극자 모멘트",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합의 극성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "모멘트가 극성을 재는 척도이므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합의 쌍극자 모멘트 값이 클수록 그 결합의 극성은 작다"
+    },
+    {
+      "id": "rel-bp-zero-difference",
+      "text": "전기음성도 차이가 0 인 결합은 극성을 띠지 않는다",
+      "form": {
+        "condition": "같은 원소의 원자끼리 결합할 때",
+        "type": "conditional",
+        "scope": "이원자 사이의 공유 결합"
+      },
+      "invertible": true,
+      "invertible_reason": "차이가 없으면 치우칠 까닭이 없어 반대 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기음성도 차이가 0 인 결합도 극성을 띤다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "결합의 극성이 크면 그 분자의 극성도 반드시 크다",
+      "why_wrong": "분자의 극성은 결합의 쌍극자 모멘트를 방향까지 더해 정한다. 극성 결합이 대칭으로 놓이면 서로 상쇄된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bp-moment-scale"
+    },
+    {
+      "text": "쌍극자 모멘트가 0 인 결합은 결합이 없는 것과 같다",
+      "why_wrong": "0 이라는 것은 전자쌍이 치우치지 않았다는 뜻일 뿐이고, 두 원자를 잇는 결합 자체는 그대로 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bp-zero-difference"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-partial-charge"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-nonpolar-covalent-bond"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-polar-covalent-bond"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-dipole-moment"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-dipole-moment"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-1-02",
+  "pages": [
+    69,
+    71,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

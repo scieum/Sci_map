@@ -1,0 +1,125 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-bond-angle",
+  "concept_key": "concept:bond-angle",
+  "registry_status": "new",
+  "term": "결합각",
+  "aliases": [],
+  "notation": {
+    "hanja": "結合角",
+    "hanja_gloss": "結 맺을 결 · 合 합할 합 · 角 뿔 각",
+    "english": "bond angle"
+  },
+  "definition": "중심 원자의 핵에서 이웃한 두 원자의 핵으로 선을 그었을 때 그 두 선이 벌어진 각.",
+  "relations": [
+    {
+      "id": "rel-ba-pair-count",
+      "text": "공유 전자쌍만 둘, 셋, 넷으로 늘어나면 결합각은 180°, 120°, 109.5° 로 좁아진다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 없을 때",
+        "type": "inverse",
+        "scope": "공유 전자쌍만 가진 분자",
+        "antecedent": {
+          "quantity": "공유 전자쌍 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합각",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자리를 나눠 가질수록 각이 줄어들므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공유 전자쌍이 늘어날수록 결합각은 넓어진다"
+    },
+    {
+      "id": "rel-ba-lone-pair-effect",
+      "text": "전자쌍이 모두 네 개라도 그중 비공유 전자쌍이 늘면 결합각이 109.5° 보다 작아진다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍이 네 개일 때",
+        "type": "inverse",
+        "scope": "메테인·암모니아·물",
+        "antecedent": {
+          "quantity": "비공유 전자쌍 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합각",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "비공유 전자쌍이 더 세게 밀어내므로 반대 방향 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비공유 전자쌍이 늘어도 결합각은 109.5° 보다 커진다"
+    },
+    {
+      "id": "rel-ba-shape-value",
+      "text": "결합각은 분자의 구조를 수로 옮긴 값이라 구조가 같으면 결합각도 대체로 같다",
+      "form": {
+        "condition": "같은 유형의 분자끼리 견줄 때",
+        "type": "conditional",
+        "scope": "중심 원자가 하나인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "'대체로'라는 경향을 말한 서술이라 뒤집어도 항상 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물과 암모니아는 전자쌍이 네 개로 같으므로 결합각도 109.5° 로 같다",
+      "why_wrong": "비공유 전자쌍이 더 세게 밀어내 각이 좁아진다. 암모니아는 107°, 물은 104.5° 다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ba-lone-pair-effect"
+    },
+    {
+      "text": "결합각이 크다는 것은 결합 길이가 길다는 뜻이다",
+      "why_wrong": "결합각은 두 결합이 벌어진 각도이고 결합 길이는 두 핵 사이의 거리다. 서로 다른 양이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ba-shape-value"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-electron-pair-repulsion-theory"
+    },
+    {
+      "type": "related",
+      "target": "chem-lone-pair"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    81,
+    83
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

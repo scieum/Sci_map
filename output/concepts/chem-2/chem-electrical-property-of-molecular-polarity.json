@@ -1,0 +1,111 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-electrical-property-of-molecular-polarity",
+  "concept_key": "concept:electrical-property-of-molecular-polarity",
+  "registry_status": "new",
+  "term": "분자의 극성과 전기적 성질",
+  "aliases": [],
+  "notation": {
+    "hanja": "分子의 極性과 電氣的 性質",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 極 다할 극 · 性 성품 성 · 電 번개 전 · 氣 기운 기 · 的 과녁 적 · 性 성품 성 · 質 바탕 질",
+    "hanja_note": "조사 '의'와 '과'는 한자가 없어 한글 그대로 두었다.",
+    "english": "electrical property and molecular polarity"
+  },
+  "definition": "분자가 극성을 띠는지에 따라 대전체에 끌리는 정도가 달라지는 성질. 흐르는 물줄기를 휘게 해 확인한다.",
+  "relations": [
+    {
+      "id": "rel-epmp-attracted",
+      "text": "대전체를 가까이 대면 극성 분자가 반대 부호의 부분 전하 쪽을 돌려 대전체에 끌린다",
+      "form": {
+        "condition": "대전체가 액체 줄기 가까이 있을 때",
+        "type": "causal",
+        "scope": "극성 분자로 이루어진 액체"
+      },
+      "invertible": false,
+      "invertible_reason": "끌리는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-epmp-nonpolar-flat",
+      "text": "무극성 분자로 된 액체는 대전체를 대어도 흐름이 거의 바뀌지 않는다",
+      "form": {
+        "condition": "같은 세기의 대전체를 같은 거리에 댈 때",
+        "type": "causal",
+        "scope": "헥세인 같은 무극성 액체"
+      },
+      "invertible": true,
+      "invertible_reason": "돌려 세울 영구 쌍극자가 없어 뚜렷이 휜다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무극성 분자로 된 액체도 대전체 쪽으로 뚜렷하게 휘어진다"
+    },
+    {
+      "id": "rel-epmp-sign-independent",
+      "text": "대전체가 (+)로 대전되었든 (-)로 대전되었든 극성 액체의 줄기는 대전체 쪽으로 휜다",
+      "form": {
+        "condition": "극성 분자가 자유롭게 방향을 바꿀 수 있을 때",
+        "type": "conditional",
+        "scope": "흐르는 극성 액체"
+      },
+      "invertible": true,
+      "invertible_reason": "분자가 방향을 돌려 늘 반대 부호를 마주 대므로 밀려난다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대전체의 전하 부호가 바뀌면 극성 액체의 줄기는 반대쪽으로 밀려난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물줄기가 휘는 것은 물이 전기를 띠고 있기 때문이다",
+      "why_wrong": "물 분자 전체의 전하는 0 이다. 부분 전하를 가진 분자가 방향을 돌려 대전체 쪽으로 끌리는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-epmp-attracted"
+    },
+    {
+      "text": "(+)로 대전된 물체를 대면 물줄기는 반대쪽으로 밀려난다",
+      "why_wrong": "물 분자가 방향을 돌려 부분적인 음전하 쪽을 대전체로 향한다. 그래서 부호와 상관없이 대전체 쪽으로 휜다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-epmp-sign-independent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-polar-molecule"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-nonpolar-molecule"
+    },
+    {
+      "type": "related",
+      "target": "chem-solubility-and-molecular-polarity"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    88,
+    90,
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

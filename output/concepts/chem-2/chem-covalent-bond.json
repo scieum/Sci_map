@@ -1,0 +1,114 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-covalent-bond",
+  "concept_key": "concept:covalent-bond",
+  "registry_status": "new",
+  "term": "공유 결합",
+  "aliases": [],
+  "notation": {
+    "hanja": "共有結合",
+    "hanja_gloss": "共 함께 공 · 有 있을 유 · 結 맺을 결 · 合 합할 합",
+    "english": "covalent bond"
+  },
+  "definition": "두 원자가 하나씩 내놓은 전자를 함께 가지고, 두 원자핵이 그 전자쌍을 동시에 끌어당겨 이루어진 결합.",
+  "relations": [
+    {
+      "id": "rel-cb-nonmetals",
+      "text": "전자를 끌어당기는 힘이 둘 다 큰 비금속 원소끼리는 전자를 옮기는 대신 전자쌍을 함께 가진다",
+      "form": {
+        "condition": "결합하는 두 원자가 모두 비금속일 때",
+        "type": "classification",
+        "scope": "비금속 원소 사이의 결합"
+      },
+      "invertible": false,
+      "invertible_reason": "금속과 비금속 사이에도 공유성이 섞이는 경우가 있어 역방향이 늘 거짓은 아니다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cb-forms-molecule",
+      "text": "쌍을 이루지 못한 원자가 전자를 서로 내놓아 전자쌍을 만들면 두 원자가 한 분자로 묶인다",
+      "form": {
+        "condition": "원자에 쌍을 이루지 않은 전자가 남아 있을 때",
+        "type": "causal",
+        "scope": "분자를 이루는 비금속 원소"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cb-broken-by-electricity",
+      "text": "물에 전기 에너지를 걸어 주면 수소와 산소를 잇던 공유 결합이 끊어진다",
+      "form": {
+        "condition": "전해질을 녹인 물에 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "물의 전기 분해"
+      },
+      "invertible": false,
+      "invertible_reason": "끊어지는 조건을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공유 결합에는 전기적인 힘이 작용하지 않는다",
+      "why_wrong": "두 원자핵이 공유 전자쌍을 끌어당기는 정전기적 인력이 곧 공유 결합이다. 전기 분해로 이 결합이 끊어지는 것이 그 증거다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cb-broken-by-electricity"
+    },
+    {
+      "text": "공유 결합에서는 두 원자가 언제나 전자쌍을 똑같이 나누어 갖는다",
+      "why_wrong": "두 원자의 전기음성도가 다르면 전자쌍이 한쪽으로 치우쳐 극성 공유 결합이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cb-forms-molecule"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-electrical-nature-of-chemical-bond"
+    },
+    {
+      "type": "next",
+      "target": "chem-shared-electron-pair"
+    },
+    {
+      "type": "same",
+      "target": "isci1-covalent-bond",
+      "note": "통합과학1 카드와 concept_key 가 같다 (R9)"
+    },
+    {
+      "type": "related",
+      "target": "chem-ionic-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-01"
+  ],
+  "topic_id": "chem-2-1-01",
+  "pages": [
+    58,
+    61,
+    63,
+    77
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

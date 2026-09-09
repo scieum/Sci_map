@@ -1,0 +1,109 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-electrolysis",
+  "concept_key": "concept:electrolysis",
+  "registry_status": "reused",
+  "term": "전기 분해",
+  "aliases": [],
+  "notation": {
+    "hanja": "電氣分解",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 分 나눌 분 · 解 풀 해",
+    "english": "electrolysis"
+  },
+  "definition": "전기 에너지를 걸어 화합물 속 화학 결합을 끊음으로써 그 화합물을 성분 물질로 나누는 조작.",
+  "relations": [
+    {
+      "id": "rel-el-energy-input",
+      "text": "전기 에너지를 넣어 주면 저절로는 일어나지 않던 분해 반응이 진행된다",
+      "form": {
+        "condition": "직류 전원을 이어 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "전해질이 녹아 있거나 녹은 상태의 화합물"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지를 주는 쪽과 반응이 일어나는 쪽을 맞바꿀 수 없는 서술이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-el-no-current-no-reaction",
+      "text": "회로가 끊겨 전류가 흐르지 않으면 전기 분해는 일어나지 않는다",
+      "form": {
+        "condition": "전기 분해 장치를 꾸며 놓았을 때",
+        "type": "conditional",
+        "scope": "전기 분해 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "전기 에너지가 반응을 일으키는 원천이므로 전류 없이 일어난다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류가 흐르지 않아도 전기 분해는 그대로 일어난다"
+    },
+    {
+      "id": "rel-el-gives-components",
+      "text": "전기 분해를 끝까지 진행하면 그 화합물을 이루던 성분 물질을 따로 얻을 수 있다",
+      "form": {
+        "condition": "충분한 시간 동안 전류를 흘렸을 때",
+        "type": "causal",
+        "scope": "전기 분해가 되는 화합물"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기 분해는 전기가 물질을 녹여 없애는 현상이다",
+      "why_wrong": "녹는 것은 상태만 바뀌는 물리 변화다. 전기 분해는 화학 결합이 끊어져 다른 물질이 생기는 화학 변화다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-el-energy-input"
+    },
+    {
+      "text": "물을 전기 분해하면 물 분자가 수소 이온과 산소 이온으로 갈라진다",
+      "why_wrong": "얻어지는 것은 이온이 아니라 수소 기체와 산소 기체다. 공유 결합이 끊어진 뒤 원자들이 새로 짝지어 기체 분자가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-el-gives-components"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-electrolysis-of-water"
+    },
+    {
+      "type": "same",
+      "target": "reac-electrolysis",
+      "note": "화학 반응의 세계 카드와 concept_key 가 같다 (R9)"
+    },
+    {
+      "type": "related",
+      "target": "chem-electrolyte"
+    }
+  ],
+  "curriculum": [
+    "12화학02-01"
+  ],
+  "topic_id": "chem-2-1-01",
+  "pages": [
+    61,
+    63
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

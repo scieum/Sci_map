@@ -1,0 +1,115 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-dipole",
+  "concept_key": "concept:dipole",
+  "registry_status": "new",
+  "term": "쌍극자",
+  "aliases": [],
+  "notation": {
+    "hanja": "雙極子",
+    "hanja_gloss": "雙 두 쌍 · 極 다할 극 · 子 아들 자",
+    "english": "dipole"
+  },
+  "definition": "크기가 같고 부호가 반대인 두 부분 전하가 조금 떨어진 채 마주 놓여, 한쪽은 양 한쪽은 음을 띠게 된 상태.",
+  "relations": [
+    {
+      "id": "rel-dp-from-partial-charge",
+      "text": "극성 공유 결합으로 두 원자가 반대 부호의 부분 전하를 띠면 그 결합이 쌍극자가 된다",
+      "form": {
+        "condition": "전기음성도가 다른 두 원자가 결합할 때",
+        "type": "causal",
+        "scope": "극성 공유 결합"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dp-has-direction",
+      "text": "쌍극자는 크기와 함께 어느 쪽으로 치우쳤는지도 지녀 화살표로 나타낸다",
+      "form": {
+        "condition": "전하의 분리를 그림으로 나타낼 때",
+        "type": "conditional",
+        "scope": "쌍극자를 가진 결합과 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "성질을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dp-distance",
+      "text": "전하량이 같다면 두 전하가 떨어진 거리가 멀수록 쌍극자의 크기가 커진다",
+      "form": {
+        "condition": "두 전하의 전하량이 같을 때",
+        "type": "direct",
+        "scope": "쌍극자",
+        "antecedent": {
+          "quantity": "두 전하 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "쌍극자의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "크기가 전하량과 거리의 곱이라 거리에 대해 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하량이 같다면 두 전하가 떨어진 거리가 멀수록 쌍극자의 크기가 작아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "쌍극자는 분자가 두 조각으로 갈라진 것을 뜻한다",
+      "why_wrong": "갈라지는 것은 전하의 중심일 뿐 분자는 그대로 하나다. 양전하 쪽과 음전하 쪽이 나뉘어 있다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dp-from-partial-charge"
+    },
+    {
+      "text": "쌍극자를 가진 분자는 전체 전하가 0 이 아니다",
+      "why_wrong": "부분 양전하와 부분 음전하의 크기가 같아 모두 더하면 0 이 된다. 위치가 갈렸을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dp-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-partial-charge"
+    },
+    {
+      "type": "next",
+      "target": "chem-dipole-moment"
+    },
+    {
+      "type": "related",
+      "target": "chem-polar-covalent-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02"
+  ],
+  "topic_id": "chem-2-1-02",
+  "pages": [
+    70
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

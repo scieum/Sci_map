@@ -1,0 +1,129 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-valence-electron",
+  "concept_key": "concept:valence-electron",
+  "registry_status": "new",
+  "term": "원자가 전자",
+  "aliases": [],
+  "notation": {
+    "hanja": "原子價 電子",
+    "hanja_gloss": "原 근원 원 · 子 아들 자 · 價 값 가 · 電 번개 전 · 子 아들 자",
+    "english": "valence electron"
+  },
+  "definition": "다른 원자와 결합할 때 실제로 쓰이는 전자로, 원자에서 가장 바깥쪽 껍질에 자리한 것들을 가리킨다.",
+  "relations": [
+    {
+      "id": "rel-ve-dot-count",
+      "text": "원자가 전자가 많은 원소일수록 전자점식에서 원소 기호 둘레에 찍는 점의 수도 많다",
+      "form": {
+        "condition": "원자를 루이스 전자점식으로 나타낼 때",
+        "type": "direct",
+        "scope": "비활성 기체를 뺀 전형 원소",
+        "antecedent": {
+          "quantity": "원자가 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "찍는 점의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "점 하나가 원자가 전자 하나를 뜻하도록 정한 표기라 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자가 전자가 많은 원소일수록 찍는 점의 수는 적어진다"
+    },
+    {
+      "id": "rel-ve-unpaired-bonds",
+      "text": "원자가 전자 가운데 짝을 짓지 못한 전자의 수만큼 그 원자는 공유 결합을 만든다",
+      "form": {
+        "condition": "옥텟 규칙을 지키며 결합할 때",
+        "type": "direct",
+        "scope": "2주기 비금속 원소",
+        "antecedent": {
+          "quantity": "짝을 짓지 못한 원자가 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "만드는 공유 결합 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "확장 옥텟이나 붕소처럼 예외가 있어 뒤집어도 항상 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ve-center-atom",
+      "text": "중심 원자의 원자가 전자 수가 달라지면 그 둘레에 생기는 공유 전자쌍 수도 달라진다",
+      "form": {
+        "condition": "중심 원자가 옥텟을 채우며 결합할 때",
+        "type": "causal",
+        "scope": "2주기 원소를 중심 원자로 하는 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "달라진다는 서술이라 뒤집을 방향이 하나로 정해지지 않는다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자가 전자는 원자에 들어 있는 전자를 모두 센 것이다",
+      "why_wrong": "가장 바깥 껍질의 전자만 원자가 전자다. 안쪽 껍질의 전자는 결합에 거의 참여하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ve-dot-count"
+    },
+    {
+      "text": "18족 원소는 원자가 전자가 8개이므로 결합을 가장 많이 한다",
+      "why_wrong": "가장 바깥 껍질이 이미 채워져 안정하므로 오히려 결합을 거의 하지 않는다. 그래서 원자가 전자를 0 으로 센다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ve-unpaired-bonds"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "chem-lewis-electron-dot-formula"
+    },
+    {
+      "type": "next",
+      "target": "chem-octet-rule"
+    },
+    {
+      "type": "same",
+      "target": "isci1-valence-electron",
+      "note": "통합과학1 카드와 concept_key 가 같다 (R9)"
+    },
+    {
+      "type": "related",
+      "target": "chem-covalent-bond"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    77,
+    82
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

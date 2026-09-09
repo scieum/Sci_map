@@ -1,0 +1,111 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-bent-molecular-geometry",
+  "concept_key": "concept:bent-molecular-geometry",
+  "registry_status": "new",
+  "term": "굽은 형 구조",
+  "aliases": [
+    "굽은 형"
+  ],
+  "notation": {
+    "hanja": "굽은 形 構造",
+    "hanja_gloss": "形 모양 형 · 構 얽을 구 · 造 지을 조",
+    "hanja_note": "'굽은'은 한자가 없는 고유어라 한글 그대로 두었다.",
+    "english": "bent molecular geometry"
+  },
+  "definition": "전자쌍 자리 넷 가운데 둘이 비공유 전자쌍이어서, 결합한 두 원자가 일직선이 아니라 꺾여 놓인 모양.",
+  "relations": [
+    {
+      "id": "rel-bmg-two-lone-pairs",
+      "text": "전자쌍 자리 넷 가운데 둘이 비공유 전자쌍이면 남은 두 결합이 꺾여 굽은 형이 된다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍이 네 개일 때",
+        "type": "causal",
+        "scope": "물 같은 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 정해지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bmg-angle-1045",
+      "text": "비공유 전자쌍 두 개가 밀어붙여 물의 결합각은 109.5° 보다 작은 104.5° 가 된다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 둘 있을 때",
+        "type": "causal",
+        "scope": "물 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "반발이 더 셀수록 각이 좁아지므로 넓어진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비공유 전자쌍이 둘이면 결합각이 109.5° 보다 넓어진다"
+    },
+    {
+      "id": "rel-bmg-polar",
+      "text": "두 결합이 꺾여 있어 각각의 쌍극자 모멘트가 상쇄되지 않고 분자에 극성이 남는다",
+      "form": {
+        "condition": "두 결합이 모두 같은 종류일 때",
+        "type": "causal",
+        "scope": "물처럼 굽은 형인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "남는 까닭을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물은 원자가 셋이므로 이산화 탄소처럼 직선형이다",
+      "why_wrong": "산소에 비공유 전자쌍이 둘 있어 두 결합이 꺾인다. 그래서 결합각이 104.5° 인 굽은 형이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bmg-two-lone-pairs"
+    },
+    {
+      "text": "물의 결합각이 104.5° 인 것은 수소 원자가 작기 때문이다",
+      "why_wrong": "원자의 크기가 아니라 비공유 전자쌍 두 개의 반발이 결합을 밀어붙인 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bmg-angle-1045"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-lone-pair"
+    },
+    {
+      "type": "related",
+      "target": "chem-trigonal-pyramidal-geometry"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    83,
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

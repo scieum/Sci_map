@@ -1,0 +1,126 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-molecular-dipole-moment",
+  "concept_key": "concept:molecular-dipole-moment",
+  "registry_status": "new",
+  "term": "분자의 쌍극자 모멘트",
+  "aliases": [],
+  "notation": {
+    "hanja": "分子의 雙極子 모멘트",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자 · 雙 두 쌍 · 極 다할 극 · 子 아들 자",
+    "hanja_note": "'모멘트'는 영어 moment 의 음차어라 한자 표기가 없다. 조사 '의'도 한글 그대로 두었다.",
+    "english": "molecular dipole moment"
+  },
+  "definition": "분자 안 모든 결합의 쌍극자 모멘트를 크기와 방향까지 함께 더해 얻은 값. 분자 전체가 극성인지를 가른다.",
+  "relations": [
+    {
+      "id": "rel-mdm-cancel",
+      "text": "결합의 쌍극자 모멘트들이 크기가 같고 방향이 반대로 놓이면 더한 값이 0 이 된다",
+      "form": {
+        "condition": "분자에 극성 결합이 둘 이상 있을 때",
+        "type": "causal",
+        "scope": "대칭 구조를 가진 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "합이 0 이 되는 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mdm-decides-polarity",
+      "text": "이 값이 0 이 아니면 극성 분자로, 0 이면 무극성 분자로 가른다",
+      "form": {
+        "condition": "분자 전체의 쌍극자 모멘트를 구한 뒤",
+        "type": "classification",
+        "scope": "분자"
+      },
+      "invertible": true,
+      "invertible_reason": "가르는 기준이 정해져 있어 두 경우를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 값이 0 인 분자를 극성 분자로, 0 이 아닌 분자를 무극성 분자로 가른다"
+    },
+    {
+      "id": "rel-mdm-shape-matters",
+      "text": "같은 직선형이라도 양쪽 결합이 서로 다르면 상쇄되지 않아 분자가 극성을 띤다",
+      "form": {
+        "condition": "중심 원자 양쪽 결합의 종류가 다를 때",
+        "type": "causal",
+        "scope": "이산화 탄소와 사이안화 수소 같은 직선형 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "예를 들어 설명한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-02",
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "극성 결합이 두 개 있으면 분자의 쌍극자 모멘트는 그 두 배가 된다",
+      "why_wrong": "쌍극자 모멘트는 방향을 가진 양이라 그냥 더하지 않는다. 방향이 반대면 오히려 0 이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mdm-cancel"
+    },
+    {
+      "text": "분자 구조를 몰라도 결합의 극성만 보면 분자의 극성을 알 수 있다",
+      "why_wrong": "같은 결합이라도 놓인 방향에 따라 상쇄될 수도, 남을 수도 있다. 구조를 먼저 정해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mdm-shape-matters"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-dipole-moment"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-bond-polarity"
+    },
+    {
+      "type": "next",
+      "target": "chem-polar-molecule"
+    },
+    {
+      "type": "next",
+      "target": "chem-nonpolar-molecule"
+    },
+    {
+      "type": "next",
+      "target": "chem-molecular-structure-and-chemical-property"
+    }
+  ],
+  "curriculum": [
+    "12화학02-02",
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-02",
+  "pages": [
+    86,
+    87,
+    93
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

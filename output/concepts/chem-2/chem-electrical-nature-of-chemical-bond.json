@@ -1,0 +1,124 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-electrical-nature-of-chemical-bond",
+  "concept_key": "concept:electrical-nature-of-chemical-bond",
+  "registry_status": "new",
+  "term": "화학 결합의 전기적 성질",
+  "aliases": [
+    "화학 결합과 전자"
+  ],
+  "notation": {
+    "hanja": "化學結合의 電氣的 性質",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 結 맺을 결 · 合 합할 합 · 電 번개 전 · 氣 기운 기 · 的 과녁 적 · 性 성품 성 · 質 바탕 질",
+    "hanja_note": "조사 '의'는 한자가 없어 한글 그대로 두었다.",
+    "english": "electrical nature of chemical bonding"
+  },
+  "definition": "결합을 만들고 끊는 일에 언제나 전자가 끼어든다는 성질. 전기 에너지로 결합을 끊을 수 있다는 사실이 그 증거다.",
+  "relations": [
+    {
+      "id": "rel-ecb-electron-involved",
+      "text": "이온 결합이든 공유 결합이든 그 결합을 만든 것은 전자이므로 화학 결합은 전기적 성질을 띤다",
+      "form": {
+        "condition": "18족이 아닌 원소끼리 결합할 때",
+        "type": "causal",
+        "scope": "이온 결합과 공유 결합"
+      },
+      "invertible": false,
+      "invertible_reason": "전기적 성질을 띠면 화학 결합이라는 역방향은 정전기 현상 일반에도 해당해 늘 거짓이라 할 수 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ecb-energy-breaks-bond",
+      "text": "화학 결합에 전기 에너지를 크게 걸어 줄수록 결합이 끊어져 성분 물질로 나뉘기 쉬워진다",
+      "form": {
+        "condition": "직류 전원을 연결해 전류를 흘릴 때",
+        "type": "direct",
+        "scope": "전기 분해가 되는 화합물",
+        "antecedent": {
+          "quantity": "걸어 준 전기 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "결합이 끊어지는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전기 에너지가 결합을 끊는 쪽으로 작용하므로 반대로 말하면 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화학 결합에 전기 에너지를 크게 걸어 줄수록 결합은 오히려 더 단단히 유지된다"
+    },
+    {
+      "id": "rel-ecb-water-shows-covalent",
+      "text": "물에 전류를 흘려 수소와 산소로 나뉘는 것은 공유 결합에도 전자가 관여한다는 증거가 된다",
+      "form": {
+        "condition": "전해질을 녹인 물에 전류를 흘릴 때",
+        "type": "causal",
+        "scope": "물의 전기 분해 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "증거로 삼는 관계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학 결합에 관여하는 입자는 원자핵 속 양성자다",
+      "why_wrong": "결합을 만들고 끊는 일을 맡는 것은 원자핵 바깥의 전자다. 양성자 수가 달라지면 결합이 아니라 원소 자체가 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecb-electron-involved"
+    },
+    {
+      "text": "이온 결합만 전기적 성질을 띠고 공유 결합은 전기와 관계가 없다",
+      "why_wrong": "물에 전류를 흘리면 수소와 산소 사이의 공유 결합이 끊어진다. 공유 결합도 전자가 만든 결합이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecb-water-shows-covalent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-ionic-bond"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-covalent-bond"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-electrolysis-of-water"
+    },
+    {
+      "type": "related",
+      "target": "chem-electrolysis"
+    }
+  ],
+  "curriculum": [
+    "12화학02-01"
+  ],
+  "topic_id": "chem-2-1-01",
+  "pages": [
+    61,
+    63,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

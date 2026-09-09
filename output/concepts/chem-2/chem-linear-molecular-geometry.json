@@ -1,0 +1,111 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-linear-molecular-geometry",
+  "concept_key": "concept:linear-molecular-geometry",
+  "registry_status": "new",
+  "term": "직선형 구조",
+  "aliases": [
+    "직선형"
+  ],
+  "notation": {
+    "hanja": "直線形 構造",
+    "hanja_gloss": "直 곧을 직 · 線 줄 선 · 形 모양 형 · 構 얽을 구 · 造 지을 조",
+    "english": "linear molecular geometry"
+  },
+  "definition": "중심 원자를 사이에 두고 결합한 원자들이 정반대 방향에 놓여 결합각이 180° 가 되는 분자 모양.",
+  "relations": [
+    {
+      "id": "rel-lmg-two-sites",
+      "text": "중심 원자 둘레의 전자쌍 자리가 둘뿐이면 두 결합이 반대편으로 벌어져 직선형이 된다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 없을 때",
+        "type": "causal",
+        "scope": "염화 베릴륨처럼 전자쌍 자리가 둘인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 정해지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lmg-angle",
+      "text": "직선형 분자의 결합각은 180° 다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍 자리가 둘일 때",
+        "type": "conditional",
+        "scope": "직선형 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "일직선으로 놓였다는 것이 곧 180° 라서 그보다 작다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "직선형 분자의 결합각은 180° 보다 작다"
+    },
+    {
+      "id": "rel-lmg-co2",
+      "text": "이산화 탄소는 이중 결합 둘을 각각 자리 하나로 세므로 염화 베릴륨과 같은 직선형이 된다",
+      "form": {
+        "condition": "다중 결합을 자리 하나로 셀 때",
+        "type": "causal",
+        "scope": "다중 결합을 가진 삼원자 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "예를 들어 설명한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자가 셋인 분자는 모두 직선형이다",
+      "why_wrong": "중심 원자에 비공유 전자쌍이 있으면 결합이 꺾여 굽은 형이 된다. 물이 그런 경우다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lmg-two-sites"
+    },
+    {
+      "text": "직선형 분자는 언제나 무극성 분자다",
+      "why_wrong": "사이안화 수소는 직선형이지만 양쪽 결합이 서로 달라 쌍극자 모멘트가 상쇄되지 않는다. 그래서 극성 분자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lmg-co2"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-multiple-bond"
+    },
+    {
+      "type": "related",
+      "target": "chem-trigonal-planar-geometry"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    81,
+    82,
+    93
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

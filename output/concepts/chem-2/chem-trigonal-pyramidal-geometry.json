@@ -1,0 +1,115 @@
+{
+  "subject": "화학",
+  "unit": "Ⅱ. 물질의 구조와 성질",
+  "unit_id": "chem-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "chem-trigonal-pyramidal-geometry",
+  "concept_key": "concept:trigonal-pyramidal-geometry",
+  "registry_status": "new",
+  "term": "삼각뿔형 구조",
+  "aliases": [
+    "삼각뿔형"
+  ],
+  "notation": {
+    "hanja": "三角뿔形 構造",
+    "hanja_gloss": "三 석 삼 · 角 뿔 각 · 形 모양 형 · 構 얽을 구 · 造 지을 조",
+    "hanja_note": "'뿔'은 한자가 없는 고유어라 한글 그대로 두었다.",
+    "english": "trigonal pyramidal geometry"
+  },
+  "definition": "전자쌍 자리는 넷이지만 그중 하나가 비공유 전자쌍이어서, 결합한 세 원자가 밑면을 이루는 뿔 모양.",
+  "relations": [
+    {
+      "id": "rel-tpy-one-lone-pair",
+      "text": "전자쌍 자리 넷 가운데 하나가 비공유 전자쌍이면 남은 세 결합이 삼각뿔형을 이룬다",
+      "form": {
+        "condition": "중심 원자 둘레의 전자쌍이 네 개일 때",
+        "type": "causal",
+        "scope": "암모니아 같은 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 정해지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tpy-angle-107",
+      "text": "비공유 전자쌍이 공유 전자쌍을 더 세게 밀어 결합각이 109.5° 보다 작은 107° 가 된다",
+      "form": {
+        "condition": "중심 원자에 비공유 전자쌍이 하나 있을 때",
+        "type": "causal",
+        "scope": "암모니아 분자"
+      },
+      "invertible": true,
+      "invertible_reason": "더 센 반발은 결합을 좁히므로 넓어진다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비공유 전자쌍 때문에 결합각이 109.5° 보다 넓은 값이 된다"
+    },
+    {
+      "id": "rel-tpy-polar",
+      "text": "비공유 전자쌍이 한쪽에 몰려 있어 세 결합의 극성이 상쇄되지 않고 남는다",
+      "form": {
+        "condition": "세 결합이 모두 같은 종류일 때",
+        "type": "causal",
+        "scope": "암모니아처럼 비공유 전자쌍이 하나인 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "남는 까닭을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12화학02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암모니아는 전자쌍이 네 개이므로 정사면체 구조다",
+      "why_wrong": "전자쌍은 사면체로 놓이지만 구조는 원자가 놓인 자리로 정한다. 원자는 네 방향 중 셋에만 있어 삼각뿔형이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tpy-one-lone-pair"
+    },
+    {
+      "text": "암모니아의 결합각은 109.5° 다",
+      "why_wrong": "비공유 전자쌍의 반발이 더 커서 107° 로 좁아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tpy-angle-107"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "chem-molecular-geometry"
+    },
+    {
+      "type": "prereq",
+      "target": "chem-lone-pair"
+    },
+    {
+      "type": "related",
+      "target": "chem-tetrahedral-geometry"
+    },
+    {
+      "type": "related",
+      "target": "chem-bent-molecular-geometry"
+    }
+  ],
+  "curriculum": [
+    "12화학02-03"
+  ],
+  "topic_id": "chem-2-2-01",
+  "pages": [
+    83,
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}
