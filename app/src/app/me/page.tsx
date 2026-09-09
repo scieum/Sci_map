@@ -300,14 +300,21 @@ function ProfileForm({
       </Card>
 
       <SectionLabel>학년 · 학기</SectionLabel>
-      <div className="flex gap-2">
-        {([1, 2, 3] as const).map((g) => (
-          <Pill key={g} on={grade === g} onClick={() => setGrade(g)}>{g}학년</Pill>
-        ))}
-        <span className="w-2" />
-        {([1, 2] as const).map((s) => (
-          <Pill key={s} on={semester === s} onClick={() => setSemester(s)}>{s}학기</Pill>
-        ))}
+      {/* 학년과 학기를 한 줄에 놓으면 좁은 화면에서 칩 다섯 개가 접히면서
+          학년 칩만 두 줄로 흘러내린다. 접히는 자리가 화면 폭에 따라 달라져
+          어디까지가 학년이고 어디부터가 학기인지 읽히지 않는다.
+          줄을 나눠 두면 폭과 무관하게 같은 모양으로 보인다. */}
+      <div className="flex flex-col gap-2">
+        <div className="flex gap-2">
+          {([1, 2, 3] as const).map((g) => (
+            <Pill key={g} on={grade === g} onClick={() => setGrade(g)}>{g}학년</Pill>
+          ))}
+        </div>
+        <div className="flex gap-2">
+          {([1, 2] as const).map((s) => (
+            <Pill key={s} on={semester === s} onClick={() => setSemester(s)}>{s}학기</Pill>
+          ))}
+        </div>
       </div>
 
       <SectionLabel>수강 과목</SectionLabel>
