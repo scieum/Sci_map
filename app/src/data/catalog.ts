@@ -5,7 +5,6 @@ import generated from "./catalog.generated.json";
  *
  * `catalog.generated.json` 은 `docs/unit_backlog.yaml` 에서 만들어진다
  * (`python app/scripts/build_concepts.py`). 손으로 고치지 마라.
- * 통합과학1 은 아직 파이프라인을 돌지 않아 시드 항목으로 붙여 둔다.
  */
 export interface CatalogUnit {
   id: string;
@@ -26,10 +25,6 @@ export interface CatalogSubject {
   /** 과목 전체 카드 수. 0 이면 아직 고를 수 없는 과목이다 */
   cardCount: number;
 }
-
-const SEED: CatalogSubject[] = [
-  { code: "isci1", name: "통합과학1", courseType: "공통", grade: 1, units: [], cardCount: 0 },
-];
 
 /**
  * 과목 구분 — 2022 개정 교육과정의 과목 성격이다.
@@ -60,9 +55,8 @@ export function groupByCourseType(subjects: CatalogSubject[]) {
   );
 }
 
-export const CATALOG: { subjects: CatalogSubject[] } = {
-  subjects: [...(generated as { subjects: CatalogSubject[] }).subjects, ...SEED],
-};
+export const CATALOG: { subjects: CatalogSubject[] } =
+  generated as { subjects: CatalogSubject[] };
 
 export const subjectByCode = (code: string) =>
   CATALOG.subjects.find((s) => s.code === code);

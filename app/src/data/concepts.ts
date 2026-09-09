@@ -1,6 +1,5 @@
 import type { Concept } from "@/lib/types";
 import generated from "./concepts.generated.json";
-import { SEED_ISCI1 } from "./seed-isci1";
 
 /**
  * 개념 카드 — **손으로 고치지 마라.**
@@ -9,10 +8,8 @@ import { SEED_ISCI1 } from "./seed-isci1";
  *     python app/scripts/build_concepts.py
  * 원본은 `output/concepts/<unit-id>/*.json` 과 `output/rights/ledger.jsonl` 이다.
  * 여기서 고치면 파이프라인과 앱이 갈라지고, 갈라지면 어느 쪽이 맞는지 알 수 없게 된다.
- *
- * SEED_ISCI1 만 예외 — 통합과학1이 아직 파이프라인을 돌지 않아 남겨 둔 시드다.
  */
-export const CONCEPTS: Concept[] = [...(generated as Concept[]), ...SEED_ISCI1];
+export const CONCEPTS: Concept[] = generated as Concept[];
 
 export const conceptById = (id: string) => CONCEPTS.find((c) => c.id === id);
 
@@ -50,7 +47,7 @@ export function byTopic(concepts: Concept[]): [string, Concept[]][] {
  * 교과서와 어긋나고, 어긋난 것을 알아챌 방법이 없다. 백로그 id 가 곧 교과서의
  * 번호다 — `mate-1-1-01` = Ⅰ 단원 · 1 중단원 · 01 소단원.
  *
- * id 가 없는 카드(파이프라인을 아직 돌지 않은 통합과학1 시드)는 번호가 없다.
+ * 백로그 id 가 없는 카드는 번호가 없다.
  * 그 경우 빈 문자열을 돌려주고, 화면은 번호 없이 이름만 그린다.
  */
 const ROMAN = ["", "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ", "Ⅸ", "Ⅹ"];
