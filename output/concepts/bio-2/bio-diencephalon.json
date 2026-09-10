@@ -1,0 +1,140 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-diencephalon",
+  "concept_key": "concept:diencephalon",
+  "registry_status": "new",
+  "term": "사이뇌",
+  "aliases": [
+    "간뇌"
+  ],
+  "notation": {
+    "hanja": "사이腦",
+    "hanja_note": "'사이'는 고유어다. 옛 표기 '간뇌(間腦)'가 한자어이며 지금은 표제어로 쓰지 않는다",
+    "hanja_gloss": "腦 골 뇌",
+    "english": "diencephalon"
+  },
+  "definition": "대뇌 아래 안쪽에 자리 잡은 시상·시상하부·뇌하수체를 아우르는 부분. 감각신호를 중계하고 항상성 조절의 중심이 된다.",
+  "relations": [
+    {
+      "id": "rel-di-parts",
+      "text": "사이뇌는 시상·시상하부·뇌하수체로 이루어진다",
+      "form": {
+        "condition": "사이뇌의 범위를 따질 때",
+        "type": "classification",
+        "scope": "사이뇌"
+      },
+      "invertible": false,
+      "invertible_reason": "범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-di-thalamus",
+      "text": "시상은 몸에서 올라온 대부분의 감각신호를 받아 대뇌겉질의 알맞은 자리로 넘긴다",
+      "form": {
+        "condition": "감각신호가 대뇌로 올라갈 때",
+        "type": "causal",
+        "scope": "시상"
+      },
+      "invertible": false,
+      "invertible_reason": "중계 구실을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-di-hypothalamus",
+      "text": "시상하부는 체온·갈증·호르몬 분비를 조절해 몸 안의 상태를 일정한 범위에 붙들어 둔다",
+      "form": {
+        "condition": "몸 안의 상태가 흔들릴 때",
+        "type": "causal",
+        "scope": "시상하부"
+      },
+      "invertible": false,
+      "invertible_reason": "맡은 구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-di-pituitary",
+      "text": "뇌하수체는 시상하부의 조절을 받아 호르몬을 내보내며 다른 내분비샘의 분비를 조절한다",
+      "form": {
+        "condition": "호르몬 분비가 조절될 때",
+        "type": "causal",
+        "scope": "시상하부와 뇌하수체"
+      },
+      "invertible": true,
+      "invertible_reason": "조절하는 쪽과 조절받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "시상하부는 뇌하수체의 조절을 받아 호르몬을 내보내며 다른 내분비샘의 분비를 조절한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "호르몬 분비를 총괄하는 가장 위쪽 중추는 뇌하수체다",
+      "why_wrong": "가장 위쪽 조절 중추는 시상하부이고, 뇌하수체는 그 조절을 받는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-di-pituitary"
+    },
+    {
+      "text": "사이뇌는 대뇌가 내린 명령을 그대로 전달하기만 한다",
+      "why_wrong": "사이뇌는 스스로 체온·갈증·호르몬 분비를 조절하는 항상성의 중추다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-di-hypothalamus"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-central-nervous-system"
+    },
+    {
+      "type": "next",
+      "target": "bio-hormone",
+      "note": "호르몬 분비를 조절하는 자리가 여기서 이어진다"
+    },
+    {
+      "type": "next",
+      "target": "bio-thermoregulation",
+      "note": "체온을 감지하고 조절하는 중추가 여기 있다"
+    },
+    {
+      "type": "next",
+      "target": "bio-osmotic-pressure-regulation",
+      "note": "갈증과 물 조절도 여기서 시작된다"
+    },
+    {
+      "type": "related",
+      "target": "bio-human-endocrine-gland-and-hormone",
+      "note": "시상하부·뇌하수체가 어떤 호르몬을 내는지 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03",
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    84,
+    85,
+    89
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

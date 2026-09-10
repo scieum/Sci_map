@@ -1,0 +1,138 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-brainstem",
+  "concept_key": "concept:brainstem",
+  "registry_status": "new",
+  "term": "뇌줄기",
+  "aliases": [
+    "뇌간",
+    "중간뇌",
+    "다리뇌",
+    "숨골"
+  ],
+  "notation": {
+    "hanja": "腦줄기",
+    "hanja_note": "'줄기'는 고유어다. 옛 표기 '뇌간(腦幹)'은 표제어로 쓰지 않는다",
+    "hanja_gloss": "腦 골 뇌",
+    "english": "brainstem"
+  },
+  "definition": "중간뇌·다리뇌·숨골을 묶어 부르는 이름. 뇌와 척수를 잇는 길이면서 호흡과 심장 운동처럼 생명 유지에 꼭 필요한 일을 조절한다.",
+  "relations": [
+    {
+      "id": "rel-bs-parts",
+      "text": "뇌줄기는 중간뇌·다리뇌·숨골 세 부분을 합쳐 부르는 이름이다",
+      "form": {
+        "condition": "뇌줄기의 범위를 따질 때",
+        "type": "classification",
+        "scope": "사람의 뇌 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bs-roles",
+      "text": "중간뇌는 안구와 홍채의 운동을, 숨골은 심장과 혈관의 작용을 조절한다",
+      "form": {
+        "condition": "뇌줄기의 각 부분이 맡은 일을 볼 때",
+        "type": "classification",
+        "scope": "중간뇌와 숨골"
+      },
+      "invertible": true,
+      "invertible_reason": "부분과 맡은 일이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중간뇌는 심장과 혈관의 작용을, 숨골은 안구와 홍채의 운동을 조절한다"
+    },
+    {
+      "id": "rel-bs-breath",
+      "text": "호흡운동을 일으키고 조절하는 중추는 다리뇌와 숨골에 놓여 있다",
+      "form": {
+        "condition": "숨을 쉬는 동안",
+        "type": "classification",
+        "scope": "뇌줄기의 호흡중추"
+      },
+      "invertible": false,
+      "invertible_reason": "자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bs-vital",
+      "text": "생명 유지에 꼭 필요한 조절을 맡고 있어 뇌줄기가 상하면 생명이 위태로워진다",
+      "form": {
+        "condition": "뇌줄기가 손상되었을 때",
+        "type": "causal",
+        "scope": "뇌줄기"
+      },
+      "invertible": false,
+      "invertible_reason": "맡은 일에서 비롯한 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소뇌도 뇌줄기를 이루는 한 부분이다",
+      "why_wrong": "뇌줄기는 중간뇌·다리뇌·숨골 셋뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bs-parts"
+    },
+    {
+      "text": "호흡은 대뇌가 마음먹은 대로만 조절한다",
+      "why_wrong": "호흡중추는 다리뇌와 숨골에 있어 우리가 의식하지 않아도 숨이 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bs-breath"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-central-nervous-system"
+    },
+    {
+      "type": "related",
+      "target": "bio-cerebellum",
+      "note": "자리는 가깝지만 맡은 일이 다르다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cerebrum",
+      "note": "감각·운동 신경이 좌우로 엇갈리는 자리가 숨골이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-autonomic-nervous-system",
+      "note": "내장을 조절하는 신경이 여기서도 뻗어 나온다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    84,
+    85,
+    89,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-antidiuretic-hormone",
+  "concept_key": "concept:antidiuretic-hormone",
+  "registry_status": "new",
+  "term": "항이뇨호르몬",
+  "aliases": [
+    "ADH",
+    "바소프레신"
+  ],
+  "notation": {
+    "hanja": "抗利尿호르몬",
+    "hanja_note": "'호르몬'은 영어 hormone 의 음차어라 그 부분에는 대응하는 한자가 없다",
+    "hanja_gloss": "抗 겨룰 항 · 利 이로울 리 · 尿 오줌 뇨",
+    "english": "antidiuretic hormone",
+    "symbol_display": "ADH",
+    "symbol_plain": "ADH"
+  },
+  "definition": "뇌하수체후엽에서 나와 콩팥에서 물의 재흡수를 촉진하는 호르몬. 그 결과 오줌양이 줄고 체액의 삼투압이 낮아진다.",
+  "relations": [
+    {
+      "id": "rel-adh-source",
+      "text": "항이뇨호르몬은 뇌하수체후엽에서 분비되어 혈액을 타고 콩팥에 이른다",
+      "form": {
+        "condition": "삼투압이 높아져 분비가 자극될 때",
+        "type": "causal",
+        "scope": "항이뇨호르몬의 분비"
+      },
+      "invertible": false,
+      "invertible_reason": "나오는 자리와 닿는 자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-adh-reabsorb",
+      "text": "항이뇨호르몬이 콩팥에 작용하면 물의 재흡수가 늘어 오줌양이 줄어든다",
+      "form": {
+        "condition": "항이뇨호르몬이 콩팥에 닿았을 때",
+        "antecedent": {
+          "quantity": "ADH 분비량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "오줌양",
+          "direction": "감소"
+        },
+        "type": "causal",
+        "scope": "콩팥에서의 물 재흡수"
+      },
+      "invertible": true,
+      "invertible_reason": "재흡수량이 늘 때 오줌양이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "항이뇨호르몬이 콩팥에 작용하면 물의 재흡수가 줄어 오줌양이 늘어난다"
+    },
+    {
+      "id": "rel-adh-osmotic",
+      "text": "체액의 삼투압이 높아지면 분비량이 늘고, 삼투압이 낮아지면 분비량이 줄어든다",
+      "form": {
+        "condition": "체액의 삼투압이 달라질 때",
+        "antecedent": {
+          "quantity": "체액의 삼투압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "ADH 분비량",
+          "direction": "증가"
+        },
+        "type": "direct",
+        "scope": "항이뇨호르몬의 분비량"
+      },
+      "invertible": true,
+      "invertible_reason": "삼투압과 분비량이 같은 쪽으로 움직이므로 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체액의 삼투압이 높아지면 분비량이 줄고, 삼투압이 낮아지면 분비량이 늘어난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항이뇨호르몬이 늘면 오줌양도 함께 늘어난다",
+      "why_wrong": "물을 더 많이 되돌려 받으므로 오줌양은 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-adh-reabsorb"
+    },
+    {
+      "text": "항이뇨호르몬은 콩팥에서 만들어져 콩팥에 작용한다",
+      "why_wrong": "만들어지는 곳은 뇌하수체후엽이고, 콩팥은 이 호르몬이 작용하는 곳이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-adh-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-human-endocrine-gland-and-hormone"
+    },
+    {
+      "type": "next",
+      "target": "bio-osmotic-pressure-regulation",
+      "note": "이 호르몬이 들어 있는 조절 회로를 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-diencephalon",
+      "note": "분비를 자극하는 중추가 여기 있다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-3",
+  "pages": [
+    91,
+    95,
+    97,
+    123
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

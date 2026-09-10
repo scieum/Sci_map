@@ -1,0 +1,129 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-antibody",
+  "concept_key": "concept:antibody",
+  "registry_status": "new",
+  "term": "항체",
+  "notation": {
+    "hanja": "抗體",
+    "hanja_gloss": "抗 겨룰 항 · 體 몸 체",
+    "english": "antibody"
+  },
+  "definition": "항원에 맞서 만들어져 그 항원과 결합하는 Y자 모양의 단백질. 항원과 결합하는 자리가 두 곳 있다.",
+  "relations": [
+    {
+      "id": "rel-ab-shape",
+      "text": "항체는 Y자 모양의 단백질이며 항원과 결합하는 자리를 두 곳 가지고 있다",
+      "form": {
+        "condition": "항체의 생김새를 볼 때",
+        "type": "classification",
+        "scope": "항체"
+      },
+      "invertible": false,
+      "invertible_reason": "생김새를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ab-source",
+      "text": "항체를 만들어 내보내는 세포는 B림프구가 분화한 형질세포다",
+      "form": {
+        "condition": "체액성면역이 일어날 때",
+        "type": "classification",
+        "scope": "항체를 만드는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "만드는 세포를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ab-action",
+      "text": "항체가 달라붙은 항원은 제 구실을 하지 못하게 되고, 백혈구는 그 덩어리를 더 쉽게 삼킨다",
+      "form": {
+        "condition": "항체가 항원과 만났을 때",
+        "type": "causal",
+        "scope": "항체의 작용"
+      },
+      "invertible": false,
+      "invertible_reason": "작용을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ab-blood",
+      "text": "적혈구 세포막의 응집원은 항원으로, 혈장의 응집소는 항체로 작용한다",
+      "form": {
+        "condition": "혈액을 항원항체반응으로 설명할 때",
+        "type": "classification",
+        "scope": "ABO식 혈액형"
+      },
+      "invertible": true,
+      "invertible_reason": "무엇이 항원이고 무엇이 항체인지 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적혈구 세포막의 응집원은 항체로, 혈장의 응집소는 항원으로 작용한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "한 종류의 항체는 어떤 항원과도 결합할 수 있다",
+      "why_wrong": "항체는 결합 부위의 구조에 들어맞는 특정 항원하고만 결합한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ab-shape"
+    },
+    {
+      "text": "항체는 항원을 직접 분해해 없앤다",
+      "why_wrong": "항체는 항원에 결합해 힘을 잃게 하거나 백혈구가 삼키도록 돕는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ab-action"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-antigen"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-humoral-immunity"
+    },
+    {
+      "type": "next",
+      "target": "bio-antigen-antibody-specificity",
+      "note": "결합이 왜 아무하고나 일어나지 않는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-phagocytosis",
+      "note": "항체가 이 작용을 돕는다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-06"
+  ],
+  "topic_id": "bio-2-5-1",
+  "pages": [
+    105,
+    108,
+    113
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

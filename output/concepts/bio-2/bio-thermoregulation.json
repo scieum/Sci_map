@@ -1,0 +1,153 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-thermoregulation",
+  "concept_key": "concept:thermoregulation",
+  "registry_status": "new",
+  "term": "체온의 조절",
+  "aliases": [
+    "체온 조절"
+  ],
+  "notation": {
+    "hanja": "體溫의 調節",
+    "hanja_gloss": "體 몸 체 · 溫 따뜻할 온 · 調 고를 조 · 節 마디 절",
+    "english": "thermoregulation"
+  },
+  "definition": "시상하부가 체온을 감지해 몸속에서 나는 열의 양과 몸 표면으로 빠져나가는 열의 양을 조절함으로써 체온을 36.5 °C 안팎으로 지키는 작용.",
+  "relations": [
+    {
+      "id": "rel-tr-balance",
+      "text": "체온은 몸속에서 생기는 열의 양과 몸 표면에서 빠져나가는 열의 양이 맞아떨어질 때 일정하게 유지된다",
+      "form": {
+        "condition": "열의 발생량과 발산량을 견줄 때",
+        "type": "conditional",
+        "scope": "사람의 체온"
+      },
+      "invertible": false,
+      "invertible_reason": "균형 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tr-cold",
+      "text": "추울 때는 몸 떨림과 물질대사가 늘어 열 발생량이 커지고, 피부 혈관이 좁아져 열 발산량이 줄어든다",
+      "form": {
+        "condition": "체온이 정상보다 내려갔을 때",
+        "antecedent": {
+          "quantity": "바깥 온도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "열 발산량",
+          "direction": "감소"
+        },
+        "type": "causal",
+        "scope": "추위에 대한 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "발생량과 발산량이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "추울 때는 몸 떨림과 물질대사가 줄어 열 발생량이 작아지고, 피부 혈관이 넓어져 열 발산량이 늘어난다"
+    },
+    {
+      "id": "rel-tr-hot",
+      "text": "더울 때는 피부 혈관이 넓어지고 땀 분비가 늘어 몸 표면으로 빠져나가는 열이 많아진다",
+      "form": {
+        "condition": "체온이 정상보다 올라갔을 때",
+        "antecedent": {
+          "quantity": "바깥 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "열 발산량",
+          "direction": "증가"
+        },
+        "type": "causal",
+        "scope": "더위에 대한 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "혈관의 굵기와 열 발산량이 맞물려 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "더울 때는 피부 혈관이 좁아지고 땀 분비가 줄어 몸 표면으로 빠져나가는 열이 적어진다"
+    },
+    {
+      "id": "rel-tr-center",
+      "text": "체온 변화를 감지하고 열의 발생과 발산을 조절하는 중추는 사이뇌의 시상하부다",
+      "form": {
+        "condition": "체온이 정상 범위를 벗어났을 때",
+        "type": "classification",
+        "scope": "체온 조절의 중추"
+      },
+      "invertible": false,
+      "invertible_reason": "중추의 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "추울 때는 피부 혈관이 넓어져 몸을 데운다",
+      "why_wrong": "추울 때는 혈관이 좁아져 피부로 가는 혈액이 줄고, 그만큼 열이 덜 빠져나간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-cold"
+    },
+    {
+      "text": "땀이 나면 몸에서 열이 더 많이 만들어진다",
+      "why_wrong": "땀은 증발하면서 몸의 열을 가져간다. 열 발산량을 늘리는 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-hot"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homeostasis"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-diencephalon"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-thyroxine"
+    },
+    {
+      "type": "related",
+      "target": "bio-autonomic-nervous-system",
+      "note": "혈관과 땀샘을 움직이는 신경을 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-negative-feedback",
+      "note": "값이 되돌아오는 방식을 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-3",
+  "pages": [
+    93,
+    97,
+    123
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

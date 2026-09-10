@@ -1,0 +1,130 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-spinal-reflex",
+  "concept_key": "concept:spinal-reflex",
+  "registry_status": "new",
+  "term": "척수반사와 무조건반사",
+  "aliases": [
+    "척수반사",
+    "무조건반사",
+    "회피반사",
+    "무릎반사",
+    "배뇨반사"
+  ],
+  "notation": {
+    "hanja": "脊髓反射와 無條件反射",
+    "hanja_gloss": "脊 등마루 척 · 髓 골수 수 · 反 돌이킬 반 · 射 쏠 사 · 無 없을 무 · 條 가지 조 · 件 물건 건 · 反 돌이킬 반 · 射 쏠 사",
+    "english": "spinal reflex and unconditioned reflex"
+  },
+  "definition": "감각신호가 대뇌에 닿기 전에 척수가 명령을 내려 일어나는 반응. 대뇌의 판단 없이 저절로 일어나는 반응을 무조건반사라 한다.",
+  "relations": [
+    {
+      "id": "rel-sr-path",
+      "text": "척수반사에서는 감각신호가 대뇌까지 올라가기 전에 척수에서 곧바로 명령이 나간다",
+      "form": {
+        "condition": "자극이 몸에 주어진 뒤",
+        "type": "conditional",
+        "scope": "척수가 중추가 되는 반사"
+      },
+      "invertible": false,
+      "invertible_reason": "경로를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sr-fast",
+      "text": "대뇌를 거치지 않아 경로가 짧으므로 무조건반사는 의식적인 반응보다 빠르게 일어난다",
+      "form": {
+        "condition": "같은 자극에 대한 두 반응을 견줄 때",
+        "type": "causal",
+        "scope": "무조건반사와 의식적 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "경로 길이와 빠르기가 맞물려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대뇌를 거치지 않아 경로가 짧지만 무조건반사는 의식적인 반응보다 느리게 일어난다"
+    },
+    {
+      "id": "rel-sr-examples",
+      "text": "회피반사·무릎반사·배뇨반사는 척수를 중추로 하는 반사에 든다",
+      "form": {
+        "condition": "반사의 중추가 어디인지 따질 때",
+        "type": "classification",
+        "scope": "사람의 무조건반사"
+      },
+      "invertible": false,
+      "invertible_reason": "보기를 든 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sr-protect",
+      "text": "빠르게 일어나는 무조건반사 덕분에 뜨겁거나 날카로운 것에서 몸을 더 적게 다친다",
+      "form": {
+        "condition": "위험한 자극이 갑자기 닿았을 때",
+        "type": "causal",
+        "scope": "몸을 지키는 반사"
+      },
+      "invertible": false,
+      "invertible_reason": "쓸모를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무릎반사가 일어날 때는 대뇌가 먼저 판단해 명령을 내린다",
+      "why_wrong": "감각신호가 대뇌에 닿기 전에 척수가 명령을 내린다. 그래서 반응이 빠르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sr-path"
+    },
+    {
+      "text": "무조건반사가 일어나면 그 자극을 아예 느끼지 못한다",
+      "why_wrong": "반응이 먼저 일어나고 감각 정보는 뒤이어 대뇌로 올라가므로 나중에 느끼게 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sr-path"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-spinal-cord"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-neuron-classification-by-function"
+    },
+    {
+      "type": "related",
+      "target": "bio-central-nervous-system",
+      "note": "대뇌를 거치는 반응과 견주어 보면 좋다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    86,
+    89
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

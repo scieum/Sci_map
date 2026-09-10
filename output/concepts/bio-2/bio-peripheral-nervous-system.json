@@ -1,0 +1,114 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-peripheral-nervous-system",
+  "concept_key": "concept:peripheral-nervous-system",
+  "registry_status": "new",
+  "term": "말초신경계",
+  "notation": {
+    "hanja": "末梢神經系",
+    "hanja_gloss": "末 끝 말 · 梢 나뭇가지끝 초 · 神 귀신 신 · 經 지날 경 · 系 이어맬 계",
+    "english": "peripheral nervous system"
+  },
+  "definition": "중추신경계와 몸의 각 부분을 잇는 신경계. 뇌신경과 척수신경으로 이루어져 감각 정보를 들여보내고 명령을 내보낸다.",
+  "relations": [
+    {
+      "id": "rel-pns-parts",
+      "text": "말초신경계는 뇌에서 뻗어 나온 뇌신경과 척수에서 뻗어 나온 척수신경으로 이루어진다",
+      "form": {
+        "condition": "말초신경계의 범위를 따질 때",
+        "type": "classification",
+        "scope": "사람의 말초신경계"
+      },
+      "invertible": false,
+      "invertible_reason": "범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pns-direction",
+      "text": "감각기관의 정보는 구심성신경세포가 중추로 들이고, 중추의 명령은 원심성신경세포가 반응기관으로 내보낸다",
+      "form": {
+        "condition": "신호가 오가는 방향을 볼 때",
+        "type": "classification",
+        "scope": "말초신경계"
+      },
+      "invertible": true,
+      "invertible_reason": "들어가는 쪽과 나가는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감각기관의 정보는 원심성신경세포가 중추로 들이고, 중추의 명령은 구심성신경세포가 반응기관으로 내보낸다"
+    },
+    {
+      "id": "rel-pns-efferent-split",
+      "text": "원심성신경세포로 이루어진 부분은 다시 체성신경계와 자율신경계로 갈린다",
+      "form": {
+        "condition": "중추에서 나가는 경로를 나눌 때",
+        "type": "classification",
+        "scope": "말초신경계"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "체성신경계와 자율신경계는 중추신경계에 속한다",
+      "why_wrong": "둘 다 말초신경계에서 중추의 명령을 내보내는 쪽이 갈라진 갈래다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pns-efferent-split"
+    },
+    {
+      "text": "말초신경계는 몸 밖에서 온 자극만 중추로 전한다",
+      "why_wrong": "내장이나 혈관처럼 몸 안에서 생긴 정보도 중추로 전한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pns-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organization-of-nervous-system"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-neuron-classification-by-function"
+    },
+    {
+      "type": "next",
+      "target": "bio-somatic-nervous-system",
+      "note": "마음먹고 움직이는 쪽을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-autonomic-nervous-system",
+      "note": "저절로 조절되는 쪽을 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-3",
+  "pages": [
+    82,
+    87,
+    89
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

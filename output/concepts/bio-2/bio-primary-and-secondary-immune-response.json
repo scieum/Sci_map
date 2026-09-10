@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-primary-and-secondary-immune-response",
+  "concept_key": "concept:primary-and-secondary-immune-response",
+  "registry_status": "new",
+  "term": "1차 면역반응과 2차 면역반응",
+  "aliases": [
+    "1차 면역반응",
+    "2차 면역반응",
+    "기억세포"
+  ],
+  "notation": {
+    "hanja": "1次 免疫反應과 2次 免疫反應",
+    "hanja_gloss": "次 버금 차 · 免 면할 면 · 疫 전염병 역 · 反 돌이킬 반 · 應 응할 응 · 次 버금 차 · 免 면할 면 · 疫 전염병 역 · 反 돌이킬 반 · 應 응할 응",
+    "english": "primary and secondary immune responses"
+  },
+  "definition": "항원이 처음 들어왔을 때 일어나는 반응과, 같은 항원이 다시 들어왔을 때 기억세포 덕분에 더 빠르고 세게 일어나는 반응.",
+  "relations": [
+    {
+      "id": "rel-ps-first",
+      "text": "1차 면역반응에서는 항원을 알아본 B림프구가 형질세포로 분화해 항체를 만들기까지 시간이 걸린다",
+      "form": {
+        "condition": "항원이 처음 들어왔을 때",
+        "type": "causal",
+        "scope": "1차 면역반응"
+      },
+      "invertible": false,
+      "invertible_reason": "시간이 걸리는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ps-memory",
+      "text": "1차 면역반응이 일어나는 동안 항원의 특성을 기억하는 기억세포도 함께 만들어진다",
+      "form": {
+        "condition": "1차 면역반응이 일어날 때",
+        "type": "causal",
+        "scope": "기억세포의 생성"
+      },
+      "invertible": false,
+      "invertible_reason": "함께 생기는 것을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ps-second",
+      "text": "같은 항원이 다시 들어오면 기억세포가 빠르게 형질세포로 분화해 항체가 더 많이, 더 빨리 만들어진다",
+      "form": {
+        "condition": "같은 항원이 다시 침입했을 때",
+        "type": "causal",
+        "scope": "2차 면역반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 번째 반응이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 항원이 다시 들어오면 기억세포가 천천히 형질세포로 분화해 항체가 더 적게, 더 느리게 만들어진다"
+    },
+    {
+      "id": "rel-ps-graph",
+      "text": "그래프에서 2차 반응의 항체 농도는 1차 반응보다 빨리 올라가 더 높은 값에서 오래 이어진다",
+      "form": {
+        "condition": "두 반응의 항체 농도 곡선을 견줄 때",
+        "type": "conditional",
+        "scope": "항체 농도 그래프"
+      },
+      "invertible": true,
+      "invertible_reason": "높고 빠른 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "그래프에서 1차 반응의 항체 농도는 2차 반응보다 빨리 올라가 더 높은 값에서 오래 이어진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "1차 면역반응에서는 기억세포가 만들어지지 않는다",
+      "why_wrong": "1차 반응 때 기억세포가 함께 만들어지고, 그 덕분에 2차 반응이 빨라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ps-memory"
+    },
+    {
+      "text": "2차 면역반응에서도 항체가 나오기까지 처음과 같은 시간이 걸린다",
+      "why_wrong": "기억세포가 이미 있어 형질세포로 빠르게 분화하므로 항체가 훨씬 빨리 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ps-second"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-humoral-immunity"
+    },
+    {
+      "type": "next",
+      "target": "bio-vaccine-principle",
+      "note": "이 차이를 이용한 예방법을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antibody",
+      "note": "그래프에 그려지는 물질이 무엇인지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-lymphocyte",
+      "note": "기억세포가 어디서 나온 세포인지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-07"
+  ],
+  "topic_id": "bio-2-6-2",
+  "pages": [
+    115,
+    121
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

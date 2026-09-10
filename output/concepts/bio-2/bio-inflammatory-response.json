@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-inflammatory-response",
+  "concept_key": "concept:inflammatory-response",
+  "registry_status": "new",
+  "term": "염증반응",
+  "notation": {
+    "hanja": "炎症反應",
+    "hanja_gloss": "炎 불꽃 염 · 症 증세 증 · 反 돌이킬 반 · 應 응할 응",
+    "english": "inflammatory response"
+  },
+  "definition": "상처로 병원체가 들어왔을 때 손상된 세포와 면역세포가 낸 화학 신호로 혈관이 달라지고 백혈구가 모여드는 방어 반응.",
+  "relations": [
+    {
+      "id": "rel-inf-signal",
+      "text": "상처 부위의 손상된 세포와 면역세포가 화학 신호 물질을 내놓으면서 염증반응이 시작된다",
+      "form": {
+        "condition": "병원체가 상처로 들어왔을 때",
+        "type": "causal",
+        "scope": "염증반응"
+      },
+      "invertible": false,
+      "invertible_reason": "시작되는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inf-vessel",
+      "text": "화학 신호 물질에 모세혈관이 넓어져 혈류량과 투과성이 늘고 백혈구가 상처 부위로 모인다",
+      "form": {
+        "condition": "화학 신호 물질이 퍼진 뒤",
+        "antecedent": {
+          "quantity": "모세혈관의 혈류량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "상처 부위에 모인 백혈구",
+          "direction": "증가"
+        },
+        "type": "causal",
+        "scope": "상처 부위의 모세혈관"
+      },
+      "invertible": true,
+      "invertible_reason": "혈관의 굵기와 백혈구가 모이는 방향이 맞물려 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화학 신호 물질에 모세혈관이 좁아져 혈류량과 투과성이 줄고 백혈구가 상처 부위에서 빠져나간다"
+    },
+    {
+      "id": "rel-inf-signs",
+      "text": "이 과정에서 상처 자리가 붉어지고 열이 나며 부어오르고 아픈 증상이 나타난다",
+      "form": {
+        "condition": "염증반응이 일어나는 동안",
+        "type": "causal",
+        "scope": "상처 부위"
+      },
+      "invertible": false,
+      "invertible_reason": "겉으로 드러나는 증상을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inf-excess",
+      "text": "정상적인 방어 반응이지만 지나치면 조직 손상이나 호흡 곤란 같은 문제를 일으킨다",
+      "form": {
+        "condition": "반응이 정도를 넘어설 때",
+        "type": "conditional",
+        "scope": "염증반응"
+      },
+      "invertible": false,
+      "invertible_reason": "지나칠 때의 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염증반응은 특정 병원체에 대해서만 선택적으로 일어난다",
+      "why_wrong": "염증반응은 병원체를 가리지 않고 일어나는 선천적 면역이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inf-signal"
+    },
+    {
+      "text": "상처가 붉어지고 부어오르는 것은 방어와 상관없는 나쁜 신호일 뿐이다",
+      "why_wrong": "혈관이 넓어져 백혈구가 모여드는 과정에서 나타나는 정상적인 방어 반응이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inf-vessel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-innate-immunity"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-phagocytosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-physical-barrier-of-skin-and-mucosa",
+      "note": "방어벽이 뚫린 자리에서 이어지는 반응이다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    103,
+    123
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cerebellum",
+  "concept_key": "concept:cerebellum",
+  "registry_status": "new",
+  "term": "소뇌",
+  "notation": {
+    "hanja": "小腦",
+    "hanja_gloss": "小 작을 소 · 腦 골 뇌",
+    "english": "cerebellum"
+  },
+  "definition": "대뇌의 뒤쪽 아래에 자리한 부분. 대뇌와 함께 수의운동을 조절하고 평형감각 정보로 몸의 자세와 균형을 지킨다.",
+  "relations": [
+    {
+      "id": "rel-cb-balance",
+      "text": "평형감각에서 온 정보를 받아 몸의 자세와 균형을 잡아 주는 일은 소뇌가 맡는다",
+      "form": {
+        "condition": "몸이 기울거나 흔들릴 때",
+        "type": "causal",
+        "scope": "소뇌"
+      },
+      "invertible": false,
+      "invertible_reason": "맡은 구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cb-roles",
+      "text": "몸의 균형을 지키는 일은 소뇌가, 언어·기억 같은 정신 활동은 대뇌가 맡는다",
+      "form": {
+        "condition": "두 부분이 맡은 일을 견줄 때",
+        "type": "classification",
+        "scope": "대뇌와 소뇌"
+      },
+      "invertible": true,
+      "invertible_reason": "맡은 일이 서로 다르게 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몸의 균형을 지키는 일은 대뇌가, 언어·기억 같은 정신 활동은 소뇌가 맡는다"
+    },
+    {
+      "id": "rel-cb-skill",
+      "text": "자전거 타기처럼 되풀이해 몸에 익히는 동작 기술의 습득에도 소뇌가 관여한다",
+      "form": {
+        "condition": "같은 동작을 거듭 익힐 때",
+        "type": "causal",
+        "scope": "동작 기술의 습득"
+      },
+      "invertible": false,
+      "invertible_reason": "관여하는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cb-not-brainstem",
+      "text": "뇌줄기는 중간뇌·다리뇌·숨골을 묶은 이름이므로 소뇌는 뇌줄기에 들지 않는다",
+      "form": {
+        "condition": "뇌줄기의 범위를 따질 때",
+        "type": "classification",
+        "scope": "사람의 뇌 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소뇌는 뇌줄기에 속한다",
+      "why_wrong": "뇌줄기는 중간뇌·다리뇌·숨골 셋을 묶은 이름이고 소뇌는 여기에 들지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cb-not-brainstem"
+    },
+    {
+      "text": "몸의 균형을 잡는 일은 대뇌가 혼자 맡는다",
+      "why_wrong": "평형감각 정보로 자세와 균형을 지키는 쪽은 소뇌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cb-roles"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-central-nervous-system"
+    },
+    {
+      "type": "related",
+      "target": "bio-cerebrum",
+      "note": "수의운동을 함께 조절하는 상대다"
+    },
+    {
+      "type": "related",
+      "target": "bio-brainstem",
+      "note": "자리는 가깝지만 맡은 일이 다르다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    84,
+    85,
+    89
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

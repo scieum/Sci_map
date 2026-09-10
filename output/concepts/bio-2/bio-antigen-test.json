@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-antigen-test",
+  "concept_key": "concept:antigen-test",
+  "registry_status": "new",
+  "term": "항원 검사",
+  "aliases": [
+    "자가진단 키트"
+  ],
+  "notation": {
+    "hanja": "抗原 檢査",
+    "hanja_gloss": "抗 겨룰 항 · 原 근원 원 · 檢 검사할 검 · 査 조사할 사",
+    "english": "antigen test"
+  },
+  "definition": "항체가 특정 항원하고만 결합하는 성질을 이용해 시료 안에 그 항원이 있는지 확인하는 검사.",
+  "relations": [
+    {
+      "id": "rel-atest-principle",
+      "text": "시료에 찾으려는 항원이 있으면 검사선에서 항체와 결합해 표시가 나타난다",
+      "form": {
+        "condition": "시료를 넣고 이동시킬 때",
+        "type": "conditional",
+        "scope": "자가진단 키트"
+      },
+      "invertible": false,
+      "invertible_reason": "표시가 생기는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atest-read",
+      "text": "검사선에 표시가 나타나면 시료에 항원이 있다는 뜻이고, 나타나지 않으면 없다는 뜻이다",
+      "form": {
+        "condition": "검사 결과를 읽을 때",
+        "type": "conditional",
+        "scope": "자가진단 키트의 검사선"
+      },
+      "invertible": true,
+      "invertible_reason": "표시의 유무와 판정이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "검사선에 표시가 나타나면 시료에 항원이 없다는 뜻이고, 나타나지 않으면 있다는 뜻이다"
+    },
+    {
+      "id": "rel-atest-control",
+      "text": "대조선에서는 항원이 있든 없든 항체가 대조군 항체와 결합해 표시가 나타난다",
+      "form": {
+        "condition": "검사가 제대로 진행되었는지 확인할 때",
+        "type": "conditional",
+        "scope": "자가진단 키트의 대조선"
+      },
+      "invertible": false,
+      "invertible_reason": "대조선의 구실을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atest-specific",
+      "text": "쓰인 항체가 다른 병원체에는 결합하지 않으므로 무엇에 감염되었는지 가려낼 수 있다",
+      "form": {
+        "condition": "특이성이 높은 항체를 쓸 때",
+        "type": "causal",
+        "scope": "항원 검사의 정확성"
+      },
+      "invertible": false,
+      "invertible_reason": "믿을 수 있는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대조선에 표시가 나오면 항원이 있다는 뜻이다",
+      "why_wrong": "대조선은 검사가 제대로 되었는지 알려 주는 자리다. 항원의 유무는 검사선으로 판단한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atest-control"
+    },
+    {
+      "text": "자가진단 키트 하나로 어떤 병원체든 가리지 않고 찾아낼 수 있다",
+      "why_wrong": "키트에 든 항체가 결합하는 항원만 찾아낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atest-specific"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-antigen-antibody-specificity"
+    },
+    {
+      "type": "related",
+      "target": "bio-antibody",
+      "note": "검사에 쓰이는 것이 바로 이 단백질이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antigen",
+      "note": "무엇을 찾는 검사인지 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-06"
+  ],
+  "topic_id": "bio-2-5-2",
+  "pages": [
+    108,
+    109,
+    111
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

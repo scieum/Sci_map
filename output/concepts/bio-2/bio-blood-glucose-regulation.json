@@ -1,0 +1,154 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-blood-glucose-regulation",
+  "concept_key": "concept:blood-glucose-regulation",
+  "registry_status": "new",
+  "term": "혈당량 조절",
+  "aliases": [
+    "혈당 조절"
+  ],
+  "notation": {
+    "hanja": "血糖量 調節",
+    "hanja_gloss": "血 피 혈 · 糖 엿 당 · 量 헤아릴 량 · 調 고를 조 · 節 마디 절",
+    "english": "regulation of blood glucose level"
+  },
+  "definition": "혈액 속 포도당 농도가 정상 범위를 벗어나면 이자에서 나온 호르몬과 자율신경이 함께 작용해 그 범위로 되돌리는 조절.",
+  "relations": [
+    {
+      "id": "rel-bg-insulin",
+      "text": "혈당량이 높아지면 인슐린이 나와 체세포의 포도당 흡수와 간의 글라이코젠 합성을 촉진해 혈당량을 낮춘다",
+      "form": {
+        "condition": "식사 뒤 혈당량이 올라갔을 때",
+        "antecedent": {
+          "quantity": "혈당량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "인슐린 분비량",
+          "direction": "증가"
+        },
+        "type": "causal",
+        "scope": "정상인의 혈당량 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "높아진 값을 되돌리는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혈당량이 낮아지면 인슐린이 나와 체세포의 포도당 흡수와 간의 글라이코젠 합성을 촉진해 혈당량을 높인다"
+    },
+    {
+      "id": "rel-bg-glucagon",
+      "text": "혈당량이 낮아지면 글루카곤이 나와 간의 글라이코젠을 포도당으로 바꿔 혈액으로 내보낸다",
+      "form": {
+        "condition": "공복이나 운동으로 혈당량이 내려갔을 때",
+        "antecedent": {
+          "quantity": "혈당량",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "글루카곤 분비량",
+          "direction": "증가"
+        },
+        "type": "causal",
+        "scope": "정상인의 혈당량 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "낮아진 값을 되돌리는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혈당량이 높아지면 글루카곤이 나와 간의 글라이코젠을 포도당으로 바꿔 혈액으로 내보낸다"
+    },
+    {
+      "id": "rel-bg-autonomic",
+      "text": "식사 중에는 부교감신경이 이자를 자극해 인슐린 분비를 늘리고, 긴장하거나 운동할 때는 교감신경이 글루카곤 분비를 늘린다",
+      "form": {
+        "condition": "자율신경이 이자에 작용할 때",
+        "type": "classification",
+        "scope": "이자의 호르몬 분비 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "두 신경과 두 호르몬의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식사 중에는 교감신경이 이자를 자극해 글루카곤 분비를 늘리고, 긴장하거나 운동할 때는 부교감신경이 인슐린 분비를 늘린다"
+    },
+    {
+      "id": "rel-bg-epinephrine",
+      "text": "교감신경이 활성화되면 부신속질에서 에피네프린이 나와 간의 글라이코젠 분해를 촉진해 혈당량을 올린다",
+      "form": {
+        "condition": "긴장이나 스트레스 상황에서",
+        "type": "causal",
+        "scope": "혈당량을 올리는 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 경로를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인슐린과 글루카곤은 모두 혈당량을 낮춘다",
+      "why_wrong": "혈당량을 낮추는 쪽은 인슐린이고, 글루카곤은 반대로 올린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bg-insulin"
+    },
+    {
+      "text": "혈당량은 먹은 양에 따라 오르내릴 뿐 몸이 따로 조절하지는 않는다",
+      "why_wrong": "호르몬과 자율신경이 함께 작용해 먹고 움직이는 것과 상관없이 정상 범위로 되돌린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bg-autonomic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homeostasis"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-insulin-and-glucagon"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-negative-feedback"
+    },
+    {
+      "type": "related",
+      "target": "bio-antagonism",
+      "note": "반대로 작용하는 두 호르몬의 본보기다"
+    },
+    {
+      "type": "related",
+      "target": "bio-autonomic-nervous-system",
+      "note": "이자를 자극하는 신경을 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-3",
+  "pages": [
+    94,
+    97,
+    124
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

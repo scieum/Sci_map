@@ -1,0 +1,117 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-herd-immunity",
+  "concept_key": "concept:herd-immunity",
+  "registry_status": "new",
+  "term": "집단 면역",
+  "notation": {
+    "hanja": "集團 免疫",
+    "hanja_gloss": "集 모을 집 · 團 둥글 단 · 免 면할 면 · 疫 전염병 역",
+    "english": "herd immunity"
+  },
+  "definition": "집단의 대부분이 면역을 갖춰 감염병의 확산이 줄고, 면역이 없는 사람이 감염될 확률까지 낮아진 상태.",
+  "relations": [
+    {
+      "id": "rel-herd-ratio",
+      "text": "집단에서 면역을 가진 사람의 비율이 높아질수록 감염병이 퍼져 나가기 어려워진다",
+      "form": {
+        "condition": "같은 집단에서 접종률이 달라질 때",
+        "antecedent": {
+          "quantity": "면역을 가진 사람의 비율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "감염병의 확산",
+          "direction": "감소"
+        },
+        "type": "inverse",
+        "scope": "감염병의 확산"
+      },
+      "invertible": true,
+      "invertible_reason": "비율이 오를 때 확산이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "집단에서 면역을 가진 사람의 비율이 높아질수록 감염병이 더 쉽게 퍼져 나간다"
+    },
+    {
+      "id": "rel-herd-protect",
+      "text": "집단 면역이 이루어지면 면역이 약하거나 백신을 맞지 못한 사람도 감염될 확률이 낮아진다",
+      "form": {
+        "condition": "집단 면역이 이루어진 상태에서",
+        "type": "causal",
+        "scope": "접종하지 못한 사람"
+      },
+      "invertible": false,
+      "invertible_reason": "얻는 효과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-herd-need",
+      "text": "그래서 백신 접종은 자기 자신을 지키는 일이면서 집단의 방어 수준을 높이는 일이기도 하다",
+      "form": {
+        "condition": "예방 접종의 뜻을 따질 때",
+        "type": "causal",
+        "scope": "질병 예방에서 백신의 필요성"
+      },
+      "invertible": false,
+      "invertible_reason": "두 가지 뜻을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "백신 접종은 맞은 사람 자신에게만 도움이 된다",
+      "why_wrong": "접종한 사람이 늘면 확산이 줄어 맞지 못한 사람까지 보호를 받는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-herd-protect"
+    },
+    {
+      "text": "집단 면역이 이루어지면 그 감염병은 완전히 사라진다",
+      "why_wrong": "확산이 줄고 감염 확률이 낮아지는 것이지 환자가 아예 없어진다는 뜻은 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-herd-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-vaccine-principle"
+    },
+    {
+      "type": "related",
+      "target": "bio-infection-route",
+      "note": "확산을 줄이는 또 다른 방법을 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-infectious-and-noninfectious-disease",
+      "note": "백신으로 막을 수 있는 병이 어느 쪽인지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-07"
+  ],
+  "topic_id": "bio-2-6-2",
+  "pages": [
+    116,
+    117
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

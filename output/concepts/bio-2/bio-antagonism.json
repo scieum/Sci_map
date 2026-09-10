@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-antagonism",
+  "concept_key": "concept:antagonism",
+  "registry_status": "new",
+  "term": "길항작용",
+  "notation": {
+    "hanja": "拮抗作用",
+    "hanja_gloss": "拮 일할 길 · 抗 겨룰 항 · 作 지을 작 · 用 쓸 용",
+    "english": "antagonism"
+  },
+  "definition": "같은 대상에 대해 한쪽은 촉진하고 다른 쪽은 억제하도록 서로 반대 효과를 내는 두 작용.",
+  "relations": [
+    {
+      "id": "rel-at-why",
+      "text": "촉진하는 작용과 억제하는 작용을 함께 갖추면 한 방향으로만 조절할 때보다 값을 정확히 맞출 수 있다",
+      "form": {
+        "condition": "조절 대상이 정상 범위를 넘나들 때",
+        "type": "causal",
+        "scope": "길항적으로 조절되는 항상성 요인"
+      },
+      "invertible": false,
+      "invertible_reason": "쓸모를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-at-heart",
+      "text": "심장박동은 교감신경이 빠르게, 부교감신경이 느리게 조절한다",
+      "form": {
+        "condition": "두 신경이 함께 분포하는 심장에서",
+        "type": "classification",
+        "scope": "심장박동의 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "빠르게 하는 쪽과 느리게 하는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "심장박동은 교감신경이 느리게, 부교감신경이 빠르게 조절한다"
+    },
+    {
+      "id": "rel-at-glucose",
+      "text": "혈당량은 인슐린이 낮추고 글루카곤이 높이는 두 작용으로 일정한 수준에 머문다",
+      "form": {
+        "condition": "혈당량이 정상 범위를 벗어날 때",
+        "type": "classification",
+        "scope": "혈당량 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "낮추는 쪽과 높이는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혈당량은 인슐린이 높이고 글루카곤이 낮추는 두 작용으로 일정한 수준에 머문다"
+    },
+    {
+      "id": "rel-at-limit",
+      "text": "혈관의 수축과 이완, 땀 분비처럼 교감신경만 분포하는 곳에서는 길항작용이 나타나지 않는다",
+      "form": {
+        "condition": "한쪽 신경만 분포하는 기관에서",
+        "type": "conditional",
+        "scope": "자율신경의 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "예외를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인슐린과 글루카곤은 둘 다 혈당량을 낮춘다",
+      "why_wrong": "인슐린은 낮추고 글루카곤은 높인다. 두 호르몬이 반대로 작용해 혈당량이 일정해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-at-glucose"
+    },
+    {
+      "text": "자율신경이 분포하는 모든 기관에서 길항작용이 일어난다",
+      "why_wrong": "혈관 수축이나 땀 분비처럼 교감신경만 조절하는 곳도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-at-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-autonomic-nervous-system"
+    },
+    {
+      "type": "next",
+      "target": "bio-homeostasis",
+      "note": "이 방식이 몸 상태를 지키는 데 어떻게 쓰이는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-insulin-and-glucagon",
+      "note": "반대로 작용하는 두 호르몬을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-negative-feedback",
+      "note": "항상성을 지키는 나머지 한 원리다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03",
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-2",
+  "pages": [
+    88,
+    92
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

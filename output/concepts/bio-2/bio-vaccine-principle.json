@@ -1,0 +1,134 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-vaccine-principle",
+  "concept_key": "concept:vaccine-principle",
+  "registry_status": "new",
+  "term": "백신의 원리",
+  "aliases": [
+    "백신"
+  ],
+  "notation": {
+    "hanja": "백신의 原理",
+    "hanja_note": "'백신'은 영어 vaccine 의 음차어라 그 부분에는 대응하는 한자가 없다",
+    "hanja_gloss": "原 근원 원 · 理 다스릴 리",
+    "english": "principle of vaccination"
+  },
+  "definition": "약하게 만들거나 죽인 병원체, 또는 그 일부를 항원으로 넣어 기억세포를 미리 만들어 두는 예방 방법.",
+  "relations": [
+    {
+      "id": "rel-vp-content",
+      "text": "백신에는 독성을 약하게 만들거나 죽인 병원체, 또는 병원체의 일부가 항원으로 들어 있다",
+      "form": {
+        "condition": "백신에 무엇이 담기는지 볼 때",
+        "type": "classification",
+        "scope": "백신"
+      },
+      "invertible": false,
+      "invertible_reason": "담기는 것을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-vp-order",
+      "text": "백신을 맞을 때는 1차 면역반응이 일어나고, 나중에 진짜 병원체가 들어오면 2차 면역반응이 일어난다",
+      "form": {
+        "condition": "접종한 뒤 실제로 감염되었을 때",
+        "type": "conditional",
+        "scope": "백신의 작용"
+      },
+      "invertible": true,
+      "invertible_reason": "접종 때와 감염 때 일어나는 반응이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "백신을 맞을 때는 2차 면역반응이 일어나고, 나중에 진짜 병원체가 들어오면 1차 면역반응이 일어난다"
+    },
+    {
+      "id": "rel-vp-memory",
+      "text": "접종으로 만들어진 기억세포가 남아 있어 같은 병원체가 들어왔을 때 빠르게 대응할 수 있다",
+      "form": {
+        "condition": "접종 뒤 시간이 지난 상태에서",
+        "type": "causal",
+        "scope": "백신 접종의 효과"
+      },
+      "invertible": false,
+      "invertible_reason": "효과가 이어지는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-vp-limit",
+      "text": "바이러스의 항원 구조가 빠르게 바뀌면 만들어 둔 기억세포가 잘 듣지 않아 백신 개발이 어려워진다",
+      "form": {
+        "condition": "항원 구조가 자주 달라지는 병원체에서",
+        "type": "causal",
+        "scope": "백신 개발의 한계"
+      },
+      "invertible": false,
+      "invertible_reason": "어려운 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "백신은 이미 걸린 병을 낫게 하는 약이다",
+      "why_wrong": "백신은 미리 기억세포를 만들어 두는 예방 수단이다. 낫게 하는 것은 치료제다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vp-memory"
+    },
+    {
+      "text": "백신을 한 번 맞으면 모든 감염성질환을 막을 수 있다",
+      "why_wrong": "백신은 그 백신에 든 항원에 대해서만 기억세포를 만든다. 독감처럼 해마다 맞아야 하는 것도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vp-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-primary-and-secondary-immune-response"
+    },
+    {
+      "type": "next",
+      "target": "bio-vaccine-type",
+      "note": "만드는 방법에 따른 갈래를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-herd-immunity",
+      "note": "접종이 집단에 미치는 영향을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-virus",
+      "note": "백신을 만들기 어려운 병원체를 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-07"
+  ],
+  "topic_id": "bio-2-6-2",
+  "pages": [
+    115,
+    117,
+    121
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

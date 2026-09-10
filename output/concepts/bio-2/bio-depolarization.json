@@ -1,0 +1,121 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-depolarization",
+  "concept_key": "concept:depolarization",
+  "registry_status": "new",
+  "term": "탈분극",
+  "notation": {
+    "hanja": "脫分極",
+    "hanja_gloss": "脫 벗을 탈 · 分 나눌 분 · 極 다할 극",
+    "english": "depolarization"
+  },
+  "definition": "닫혀 있던 Na⁺ 통로가 열려 Na⁺이 세포 안으로 들어오면서 막전위가 휴지전위보다 위로 올라가는 변화.",
+  "relations": [
+    {
+      "id": "rel-dep-na-in",
+      "text": "Na⁺ 통로가 열려 Na⁺이 세포 안으로 들어오면 막 안쪽이 양(+)전하 쪽으로 기울어 막전위가 올라간다",
+      "form": {
+        "condition": "탈분극을 일으키는 요인이 주어졌을 때",
+        "type": "causal",
+        "scope": "축삭돌기의 세포막"
+      },
+      "invertible": true,
+      "invertible_reason": "이온이 드나드는 방향과 막전위가 오르내리는 방향이 맞물려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "Na⁺ 통로가 열려 Na⁺이 세포 밖으로 나가면 막 안쪽이 음(-)전하 쪽으로 기울어 막전위가 내려간다"
+    },
+    {
+      "id": "rel-dep-threshold",
+      "text": "탈분극으로 막전위가 역치전위에 닿으면 그 자리에서 활동전위가 이어서 일어난다",
+      "form": {
+        "condition": "탈분극이 이어지는 동안",
+        "type": "conditional",
+        "scope": "신경세포의 축삭돌기"
+      },
+      "invertible": false,
+      "invertible_reason": "조건이 갖춰졌을 때 이어지는 일을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dep-spread",
+      "text": "세포 안으로 들어온 Na⁺이 옆으로 퍼지면서 이웃한 막 부위에도 탈분극을 일으킨다",
+      "form": {
+        "condition": "한 지점에서 활동전위가 생긴 뒤",
+        "type": "causal",
+        "scope": "축삭돌기를 따라 이어진 막"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 과정을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "탈분극은 K⁺이 세포 밖으로 나가면서 일어난다",
+      "why_wrong": "탈분극은 Na⁺이 세포 안으로 들어오면서 일어난다. K⁺이 나가는 것은 그다음 단계인 재분극이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dep-na-in"
+    },
+    {
+      "text": "탈분극이 일어나는 동안에도 막 안쪽은 계속 음(-)전하를 띤다",
+      "why_wrong": "막전위가 약 +35 mV까지 오르는 동안 안쪽 전위는 바깥쪽보다 높아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dep-na-in"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-resting-potential"
+    },
+    {
+      "type": "next",
+      "target": "bio-repolarization-and-hyperpolarization",
+      "note": "올라간 막전위가 어떻게 돌아오는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-action-potential",
+      "note": "네 단계를 이어 붙이면 그래프가 된다"
+    },
+    {
+      "type": "next",
+      "target": "bio-nerve-impulse-conduction",
+      "note": "이웃 부위로 번지면 신호가 옮겨 간다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ion-channel",
+      "note": "어느 통로가 열리는지 함께 보면 좋다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    75,
+    76,
+    81,
+    123
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

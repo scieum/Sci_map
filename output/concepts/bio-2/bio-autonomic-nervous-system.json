@@ -1,0 +1,145 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-autonomic-nervous-system",
+  "concept_key": "concept:autonomic-nervous-system",
+  "registry_status": "new",
+  "term": "자율신경계",
+  "aliases": [
+    "교감신경",
+    "부교감신경"
+  ],
+  "notation": {
+    "hanja": "自律神經系",
+    "hanja_gloss": "自 스스로 자 · 律 법 률 · 神 귀신 신 · 經 지날 경 · 系 이어맬 계",
+    "english": "autonomic nervous system"
+  },
+  "definition": "대뇌의 직접 지배를 받지 않고 뇌줄기와 척수의 조절을 받아 내장·혈관·분비샘의 기능을 맡는 말초신경계의 한 갈래.",
+  "relations": [
+    {
+      "id": "rel-ans-situation",
+      "text": "교감신경은 몸을 긴장시켜 위기에 맞서게 하고, 부교감신경은 긴장을 풀어 안정 상태로 되돌린다",
+      "form": {
+        "condition": "몸이 놓인 상황에 따라 볼 때",
+        "type": "classification",
+        "scope": "자율신경계"
+      },
+      "invertible": true,
+      "invertible_reason": "두 신경이 맡은 상황이 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교감신경은 긴장을 풀어 안정 상태로 되돌리고, 부교감신경은 몸을 긴장시켜 위기에 맞서게 한다"
+    },
+    {
+      "id": "rel-ans-antagonism",
+      "text": "한 기관에 두 신경이 함께 뻗어 있어 한쪽이 작용을 촉진하면 다른 쪽은 억제한다",
+      "form": {
+        "condition": "교감신경과 부교감신경이 함께 분포하는 기관에서",
+        "type": "causal",
+        "scope": "자율신경이 함께 분포하는 대부분의 기관"
+      },
+      "invertible": false,
+      "invertible_reason": "함께 작용하는 방식을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ans-ganglion",
+      "text": "교감신경의 신경절은 척수 가까이에 있고, 부교감신경의 신경절은 표적기관 가까이에 있다",
+      "form": {
+        "condition": "신경절의 자리를 견줄 때",
+        "type": "classification",
+        "scope": "자율신경의 두 갈래"
+      },
+      "invertible": true,
+      "invertible_reason": "신경절이 놓이는 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교감신경의 신경절은 표적기관 가까이에 있고, 부교감신경의 신경절은 척수 가까이에 있다"
+    },
+    {
+      "id": "rel-ans-not-voluntary",
+      "text": "자율신경계는 대뇌의 직접 지배를 받지 않아 마음먹은 대로 조절하기 어렵다",
+      "form": {
+        "condition": "의식적으로 조절하려 할 때",
+        "type": "conditional",
+        "scope": "내장·혈관·분비샘의 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "조절되지 않는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "심장박동은 마음먹기에 따라 대뇌가 곧바로 멈출 수 있다",
+      "why_wrong": "심장은 자율신경계가 조절하므로 대뇌의 직접 지배를 받지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ans-not-voluntary"
+    },
+    {
+      "text": "교감신경과 부교감신경은 모든 기관에서 짝을 이뤄 반대로 작용한다",
+      "why_wrong": "혈관의 수축과 이완, 땀 분비처럼 교감신경만 조절하는 곳도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ans-antagonism"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-peripheral-nervous-system"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-synaptic-transmission"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-neurotransmitter"
+    },
+    {
+      "type": "next",
+      "target": "bio-antagonism",
+      "note": "서로 반대로 작용하는 조절 방식을 이어서 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-homeostasis",
+      "note": "이 조절이 몸 상태를 일정하게 지키는 데 쓰인다"
+    },
+    {
+      "type": "related",
+      "target": "bio-brainstem",
+      "note": "이 신경을 조절하는 중추가 여기 있다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03",
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-2-3",
+  "pages": [
+    87,
+    88,
+    89,
+    124
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

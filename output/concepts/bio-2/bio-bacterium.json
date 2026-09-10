@@ -1,0 +1,127 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-bacterium",
+  "concept_key": "concept:bacterium",
+  "registry_status": "new",
+  "term": "세균",
+  "aliases": [
+    "박테리아"
+  ],
+  "notation": {
+    "hanja": "細菌",
+    "hanja_gloss": "細 가늘 세 · 菌 버섯 균",
+    "english": "bacterium"
+  },
+  "definition": "핵막과 막으로 둘러싸인 세포소기관이 없는 단세포생물. 빠르게 분열해 늘어나며 독소를 내어 병을 일으키기도 한다.",
+  "relations": [
+    {
+      "id": "rel-bac-structure",
+      "text": "세균은 핵막도 막성 세포소기관도 없는 단세포생물이다",
+      "form": {
+        "condition": "세균의 세포 구조를 볼 때",
+        "type": "classification",
+        "scope": "세균"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bac-multiply",
+      "text": "대부분 분열법으로 빠르게 늘어나며, 일부는 몸속에서 증식하거나 독소를 내어 질병을 일으킨다",
+      "form": {
+        "condition": "세균이 몸속에 들어갔을 때",
+        "type": "causal",
+        "scope": "세균성 질병"
+      },
+      "invertible": false,
+      "invertible_reason": "증식과 발병을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bac-antibiotic",
+      "text": "세균을 죽이거나 자라지 못하게 하는 항생제가 세균성 질병의 치료에 쓰인다",
+      "form": {
+        "condition": "원인이 세균으로 밝혀졌을 때",
+        "type": "causal",
+        "scope": "세균성 질병의 치료"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bac-vs-virus",
+      "text": "세균은 세포로 되어 있어 스스로 물질대사를 하지만, 바이러스는 세포 구조가 없어 숙주세포가 있어야 한다",
+      "form": {
+        "condition": "두 병원체의 구조를 견줄 때",
+        "type": "classification",
+        "scope": "세균과 바이러스"
+      },
+      "invertible": true,
+      "invertible_reason": "세포 구조를 갖춘 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바이러스는 세포로 되어 있어 스스로 물질대사를 하지만, 세균은 세포 구조가 없어 숙주세포가 있어야 한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세균도 바이러스처럼 숙주세포 안에서만 늘어난다",
+      "why_wrong": "세균은 스스로 물질대사를 하며 분열로 늘어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bac-vs-virus"
+    },
+    {
+      "text": "결핵과 독감은 모두 세균이 일으킨다",
+      "why_wrong": "결핵은 세균이, 독감은 바이러스가 일으킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bac-structure"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-pathogen"
+    },
+    {
+      "type": "related",
+      "target": "bio-virus",
+      "note": "구조와 증식 방식을 나란히 놓고 견준다"
+    },
+    {
+      "type": "related",
+      "target": "bio-protist",
+      "note": "핵막이 있는 병원체와 견주어 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-2",
+  "pages": [
+    100,
+    107
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

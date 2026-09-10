@@ -1,0 +1,134 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-action-potential",
+  "concept_key": "concept:action-potential",
+  "registry_status": "new",
+  "term": "활동전위",
+  "notation": {
+    "hanja": "活動電位",
+    "hanja_gloss": "活 살 활 · 動 움직일 동 · 電 번개 전 · 位 자리 위",
+    "english": "action potential"
+  },
+  "definition": "역치전위에 이른 신경세포에서 막전위가 빠르게 올랐다가 내려가는 한 차례의 변화. 탈분극·재분극·과분극을 거쳐 휴지전위로 돌아온다.",
+  "relations": [
+    {
+      "id": "rel-ap-threshold",
+      "text": "막전위가 역치전위까지 올라야 활동전위가 생기고, 거기에 못 미치면 생기지 않는다",
+      "form": {
+        "condition": "자극의 세기를 바꿔 가며 볼 때",
+        "type": "conditional",
+        "scope": "신경세포의 축삭돌기 막"
+      },
+      "invertible": true,
+      "invertible_reason": "생기는 쪽과 생기지 않는 쪽의 조건이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "막전위가 역치전위에 못 미쳐야 활동전위가 생기고, 역치전위까지 올라가면 생기지 않는다"
+    },
+    {
+      "id": "rel-ap-order",
+      "text": "활동전위에서 막전위는 탈분극으로 올랐다가 재분극으로 내려가고 과분극을 거쳐 휴지전위로 돌아온다",
+      "form": {
+        "condition": "활동전위가 한 차례 일어나는 동안",
+        "type": "conditional",
+        "scope": "막전위 변화의 시간 순서"
+      },
+      "invertible": true,
+      "invertible_reason": "네 단계의 차례가 정해져 있어 거꾸로 놓으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "활동전위에서 막전위는 과분극으로 내려갔다가 재분극으로 올라가고 탈분극을 거쳐 휴지전위로 돌아온다"
+    },
+    {
+      "id": "rel-ap-channels",
+      "text": "활동전위를 만드는 것은 막전위에 따라 열리고 닫히는 Na⁺ 통로와 K⁺ 통로다",
+      "form": {
+        "condition": "활동전위가 생기는 까닭을 따질 때",
+        "type": "causal",
+        "scope": "축삭돌기의 세포막"
+      },
+      "invertible": false,
+      "invertible_reason": "원인이 되는 구조를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ap-peak",
+      "text": "탈분극으로 막전위는 약 +35 mV까지 올라갔다가 Na⁺ 통로가 닫히면서 내려가기 시작한다",
+      "form": {
+        "condition": "역치전위를 넘긴 뒤",
+        "type": "causal",
+        "scope": "신경세포의 활동전위"
+      },
+      "invertible": false,
+      "invertible_reason": "값과 시점을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자극이 아무리 약해도 오래 주기만 하면 활동전위가 생긴다",
+      "why_wrong": "막전위가 역치전위에 이르지 못하면 활동전위는 생기지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ap-threshold"
+    },
+    {
+      "text": "재분극은 들어왔던 Na⁺이 도로 밖으로 나가면서 일어난다",
+      "why_wrong": "재분극은 K⁺ 통로가 열려 K⁺이 밖으로 나가면서 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ap-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-resting-potential"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-depolarization"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-repolarization-and-hyperpolarization"
+    },
+    {
+      "type": "next",
+      "target": "bio-nerve-impulse-conduction",
+      "note": "이 변화가 축삭돌기를 따라 옮겨 가는 모습을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ion-channel",
+      "note": "어떤 통로가 언제 열리는지 함께 보면 그래프가 읽힌다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    75,
+    81,
+    124
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": true
+}

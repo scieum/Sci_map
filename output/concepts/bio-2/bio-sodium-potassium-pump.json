@@ -1,0 +1,117 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-sodium-potassium-pump",
+  "concept_key": "concept:active-transport",
+  "registry_status": "new",
+  "term": "Na⁺-K⁺ 펌프",
+  "aliases": [
+    "소듐-포타슘 펌프",
+    "나트륨 칼륨 펌프",
+    "Na-K 펌프"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "원소 기호와 영어 pump 로 이루어진 말이라 대응하는 한자어가 없다",
+    "english": "sodium-potassium pump",
+    "symbol_display": "Na⁺-K⁺ 펌프",
+    "symbol_plain": "Na+-K+"
+  },
+  "definition": "ATP의 에너지를 써서 Na⁺은 세포 밖으로, K⁺은 세포 안으로 늘 같은 방향으로 옮기는 세포막의 운반 장치.",
+  "relations": [
+    {
+      "id": "rel-pump-direction",
+      "text": "이 펌프는 Na⁺을 세포 밖으로 퍼내고 K⁺을 세포 안으로 들여온다",
+      "form": {
+        "condition": "펌프가 ATP를 쓰며 작동할 때",
+        "type": "conditional",
+        "scope": "신경세포의 세포막"
+      },
+      "invertible": true,
+      "invertible_reason": "두 이온이 옮겨지는 방향이 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 펌프는 Na⁺을 세포 안으로 들여오고 K⁺을 세포 밖으로 퍼낸다"
+    },
+    {
+      "id": "rel-pump-energy",
+      "text": "이온 통로와 달리 펌프는 ATP를 쓰기 때문에 농도 기울기와 상관없이 정해진 방향으로만 이온을 옮긴다",
+      "form": {
+        "condition": "두 이동 방식을 견줄 때",
+        "type": "conditional",
+        "scope": "세포막을 통한 이온 이동"
+      },
+      "invertible": false,
+      "invertible_reason": "차이점을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pump-maintain",
+      "text": "펌프가 쉬지 않고 작동하는 덕분에 이온이 통로로 오가도 안팎의 불균등한 이온 분포가 유지된다",
+      "form": {
+        "condition": "휴지 상태가 이어지는 동안",
+        "type": "causal",
+        "scope": "신경세포의 이온 분포"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "Na⁺-K⁺ 펌프는 농도가 높은 쪽에서 낮은 쪽으로 이온을 흘려보낸다",
+      "why_wrong": "펌프는 ATP를 써서 농도 기울기와 상관없이 정해진 방향으로 옮긴다. 기울기를 따라 흐르는 쪽은 통로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pump-energy"
+    },
+    {
+      "text": "이온 통로와 펌프는 둘 다 에너지를 쓴다",
+      "why_wrong": "에너지를 쓰는 쪽은 펌프뿐이다. 두 구조가 갈리는 자리가 바로 여기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pump-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-resting-potential",
+      "note": "이 펌프가 만든 이온 분포 위에서 휴지전위가 생긴다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ion-channel",
+      "note": "에너지를 쓰지 않는 이동과 견주어 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-membrane-potential",
+      "note": "안팎의 이온 분포가 전압 차이의 바탕이다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    74,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

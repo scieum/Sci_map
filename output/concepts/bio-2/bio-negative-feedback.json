@@ -1,0 +1,140 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-negative-feedback",
+  "concept_key": "concept:negative-feedback",
+  "registry_status": "new",
+  "term": "음성피드백",
+  "aliases": [
+    "음성 되먹임"
+  ],
+  "notation": {
+    "hanja": "陰性피드백",
+    "hanja_note": "'피드백'은 영어 feedback 의 음차어라 그 부분에는 대응하는 한자가 없다",
+    "hanja_gloss": "陰 그늘 음 · 性 성품 성",
+    "english": "negative feedback"
+  },
+  "definition": "어떤 반응의 결과가 도리어 그 반응을 억눌러, 몸 안의 값이 한쪽으로 계속 치우치지 않게 하는 조절 방식.",
+  "relations": [
+    {
+      "id": "rel-nf-loop",
+      "text": "반응의 결과물이 늘어나면 그 결과물이 처음 반응을 억눌러 더는 늘지 않게 한다",
+      "form": {
+        "condition": "결과물의 양이 정상 범위를 넘어설 때",
+        "antecedent": {
+          "quantity": "결과물의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "그 반응의 세기",
+          "direction": "감소"
+        },
+        "type": "causal",
+        "scope": "음성피드백으로 조절되는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "결과가 되돌리는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응의 결과물이 늘어나면 그 결과물이 처음 반응을 더 북돋워 계속 늘어나게 한다"
+    },
+    {
+      "id": "rel-nf-thyroxine",
+      "text": "혈액 속 타이록신이 많아지면 시상하부와 뇌하수체가 억제되어 TRH와 TSH 분비량이 줄어든다",
+      "form": {
+        "condition": "혈중 타이록신 농도가 높아졌을 때",
+        "antecedent": {
+          "quantity": "혈중 타이록신 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "TRH·TSH 분비량",
+          "direction": "감소"
+        },
+        "type": "causal",
+        "scope": "타이록신 분비 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "농도가 오를 때 분비량이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혈액 속 타이록신이 많아지면 시상하부와 뇌하수체가 활발해져 TRH와 TSH 분비량이 늘어난다"
+    },
+    {
+      "id": "rel-nf-steady",
+      "text": "이 되먹임이 작동하기 때문에 호르몬 분비량과 체액 성분이 일정한 범위에서 유지된다",
+      "form": {
+        "condition": "조절이 되풀이되는 동안",
+        "type": "causal",
+        "scope": "체액 성분과 호르몬 분비량"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "음성피드백은 호르몬 분비를 계속 늘려 반응을 키우는 방식이다",
+      "why_wrong": "결과가 도리어 그 반응을 억눌러 더 늘지 않게 하는 방식이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nf-loop"
+    },
+    {
+      "text": "혈액 속 타이록신이 많아지면 TSH 분비도 함께 늘어난다",
+      "why_wrong": "타이록신이 많아지면 시상하부와 뇌하수체가 억제되어 TSH는 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nf-thyroxine"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-hormone"
+    },
+    {
+      "type": "next",
+      "target": "bio-thyroxine",
+      "note": "교과서가 드는 대표 사례를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-blood-glucose-regulation",
+      "note": "혈당량 조절에서도 같은 되먹임이 쓰인다"
+    },
+    {
+      "type": "related",
+      "target": "bio-homeostasis",
+      "note": "항상성을 지키는 두 원리 가운데 하나다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antagonism",
+      "note": "나머지 한 원리와 견주어 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-2",
+  "pages": [
+    92,
+    97
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

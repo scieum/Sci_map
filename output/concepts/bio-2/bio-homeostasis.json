@@ -1,0 +1,146 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-homeostasis",
+  "concept_key": "concept:homeostasis",
+  "registry_status": "new",
+  "term": "항상성",
+  "notation": {
+    "hanja": "恒常性",
+    "hanja_gloss": "恒 항상 항 · 常 항상 상 · 性 성품 성",
+    "english": "homeostasis"
+  },
+  "definition": "바깥 환경이 달라져도 체온·혈당량·삼투압처럼 몸 안의 상태를 일정한 범위 안에 붙들어 두는 성질.",
+  "relations": [
+    {
+      "id": "rel-hm-external",
+      "text": "바깥 온도가 크게 오르내려도 몸 안의 체온은 좁은 범위에 머문다",
+      "form": {
+        "condition": "바깥 환경이 달라질 때",
+        "antecedent": {
+          "quantity": "바깥 환경의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "몸 안의 체온",
+          "direction": "일정"
+        },
+        "type": "conditional",
+        "scope": "사람의 체온"
+      },
+      "invertible": true,
+      "invertible_reason": "변하는 쪽과 일정하게 지켜지는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몸 안의 체온이 크게 오르내려도 바깥 온도는 좁은 범위에 머문다"
+    },
+    {
+      "id": "rel-hm-range",
+      "text": "항상성은 값을 한 점에 붙박아 두는 것이 아니라 정상 범위 안에서 오르내리게 하는 것이다",
+      "form": {
+        "condition": "몸 안의 상태를 시간에 따라 지켜볼 때",
+        "type": "conditional",
+        "scope": "체온·혈당량·삼투압"
+      },
+      "invertible": false,
+      "invertible_reason": "뜻을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hm-two-systems",
+      "text": "몸 안의 상태가 흔들리면 자율신경계와 내분비계가 함께 여러 기관의 반응을 조절해 되돌린다",
+      "form": {
+        "condition": "정상 범위를 벗어났을 때",
+        "type": "causal",
+        "scope": "사람의 항상성 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "조절을 맡는 쪽을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hm-principles",
+      "text": "항상성 유지에는 결과가 원인을 되눌러 주는 음성피드백과 서로 반대로 작용하는 길항작용이 함께 쓰인다",
+      "form": {
+        "condition": "항상성 조절의 방식을 나눌 때",
+        "type": "classification",
+        "scope": "항상성 유지의 원리"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰이는 원리를 나열한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항상성이 유지된다는 것은 몸 안의 값이 조금도 변하지 않는다는 뜻이다",
+      "why_wrong": "값은 정상 범위 안에서 오르내린다. 그 범위를 벗어나지 않게 되돌리는 것이 항상성이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hm-range"
+    },
+    {
+      "text": "항상성은 호르몬만으로 유지된다",
+      "why_wrong": "자율신경계도 함께 작용한다. 체온·혈당량 조절에는 두 체계가 모두 관여한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hm-two-systems"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-hormone"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-autonomic-nervous-system"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-antagonism"
+    },
+    {
+      "type": "next",
+      "target": "bio-thermoregulation",
+      "note": "체온에서 이 성질이 어떻게 나타나는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-blood-glucose-regulation",
+      "note": "혈당량에서 어떻게 나타나는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-osmotic-pressure-regulation",
+      "note": "체액의 농도에서 어떻게 나타나는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-2",
+  "pages": [
+    89,
+    92,
+    122
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

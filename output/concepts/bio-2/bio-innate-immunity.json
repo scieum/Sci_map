@@ -1,0 +1,139 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-innate-immunity",
+  "concept_key": "concept:innate-immunity",
+  "registry_status": "new",
+  "term": "선천적 면역",
+  "aliases": [
+    "선천성면역",
+    "비특이적 면역"
+  ],
+  "notation": {
+    "hanja": "先天的 免疫",
+    "hanja_gloss": "先 먼저 선 · 天 하늘 천 · 的 과녁 적 · 免 면할 면 · 疫 전염병 역",
+    "english": "innate immunity"
+  },
+  "definition": "병원체의 종류를 가리지 않고 빠르게 일어나는 방어작용. 교과서의 '선천성면역'과 같은 말이고, 비특이적 면역이라고도 한다.",
+  "relations": [
+    {
+      "id": "rel-ii-nonspecific",
+      "text": "어떤 병원체가 들어오든 같은 방식으로 일어나기 때문에 비특이적 면역이라고도 부른다",
+      "form": {
+        "condition": "병원체의 종류를 바꿔 가며 볼 때",
+        "type": "conditional",
+        "scope": "선천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "이름이 붙은 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ii-vs-adaptive",
+      "text": "선천적 면역은 병원체를 가리지 않고 빠르게 일어나고, 후천적 면역은 특정 항원에 대해 시간이 걸려 발달한다",
+      "form": {
+        "condition": "두 방어작용을 견줄 때",
+        "type": "classification",
+        "scope": "우리 몸의 방어작용"
+      },
+      "invertible": true,
+      "invertible_reason": "가리지 않는 쪽과 가리는 쪽, 빠른 쪽과 느린 쪽이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "선천적 면역은 특정 항원에 대해 시간이 걸려 발달하고, 후천적 면역은 병원체를 가리지 않고 빠르게 일어난다"
+    },
+    {
+      "id": "rel-ii-parts",
+      "text": "피부와 점막이 이루는 표면 방어벽, 몸 안에서 일어나는 식세포작용과 염증반응이 여기에 든다",
+      "form": {
+        "condition": "선천적 면역의 범위를 따질 때",
+        "type": "classification",
+        "scope": "선천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "범위를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ii-mutual",
+      "text": "선천적 면역은 후천적 면역을 북돋우고 후천적 면역은 선천적 면역의 효과를 키워, 둘은 따로 놀지 않는다",
+      "form": {
+        "condition": "두 방어작용이 함께 일어날 때",
+        "type": "causal",
+        "scope": "우리 몸의 방어작용"
+      },
+      "invertible": false,
+      "invertible_reason": "주고받는 관계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "선천적 면역도 병원체의 종류를 알아본 뒤 그에 맞춰 일어난다",
+      "why_wrong": "종류를 가리지 않고 같은 방식으로 일어난다. 가려서 일어나는 쪽은 후천적 면역이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ii-nonspecific"
+    },
+    {
+      "text": "선천적 면역과 후천적 면역은 서로 상관없이 따로 일어난다",
+      "why_wrong": "선천적 면역이 후천적 면역을 북돋우고, 후천적 면역은 선천적 면역의 효과를 키운다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ii-mutual"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-pathogen"
+    },
+    {
+      "type": "next",
+      "target": "bio-physical-barrier-of-skin-and-mucosa",
+      "note": "몸 표면에서 막는 첫 단계를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-phagocytosis",
+      "note": "몸 안에서 병원체를 먹어 없애는 작용을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-inflammatory-response",
+      "note": "상처 자리에서 일어나는 반응을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-adaptive-immunity",
+      "note": "시간이 걸려 발달하는 방어를 이어서 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    102,
+    103,
+    107
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-synaptic-transmission",
+  "concept_key": "concept:synaptic-transmission",
+  "registry_status": "new",
+  "term": "시냅스를 통한 신경신호의 전달",
+  "aliases": [
+    "시냅스전달",
+    "시냅스"
+  ],
+  "notation": {
+    "hanja": "시냅스를 통한 神經信號의 傳達",
+    "hanja_note": "'시냅스'는 영어 synapse 의 음차어라 그 부분에는 대응하는 한자가 없다",
+    "hanja_gloss": "神 귀신 신 · 經 지날 경 · 信 믿을 신 · 號 이름 호 · 傳 전할 전 · 達 통달할 달",
+    "english": "synaptic transmission"
+  },
+  "definition": "축삭돌기 말단까지 온 신호가 신경전달물질의 모습으로 시냅스틈을 건너 다음 세포의 막전위를 바꾸는 과정.",
+  "relations": [
+    {
+      "id": "rel-syn-release",
+      "text": "활동전위가 축삭돌기 말단에 닿으면 시냅스소포가 세포막과 합쳐지며 신경전달물질이 시냅스틈으로 나온다",
+      "form": {
+        "condition": "신호가 말단까지 전도되었을 때",
+        "type": "causal",
+        "scope": "시냅스전신경세포의 축삭돌기 말단"
+      },
+      "invertible": false,
+      "invertible_reason": "차례로 일어나는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-syn-cross",
+      "text": "시냅스틈으로 퍼진 신경전달물질이 다음 세포의 막에 닿으면 그 막에서 탈분극이 일어난다",
+      "form": {
+        "condition": "신경전달물질이 방출된 뒤",
+        "type": "causal",
+        "scope": "시냅스후신경세포의 세포막"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-syn-oneway",
+      "text": "신경전달물질은 축삭돌기 말단 쪽에만 들어 있고 수용체는 그 건너편 막에 있어 전달은 한 방향으로 일어난다",
+      "form": {
+        "condition": "시냅스를 사이에 둔 두 세포를 볼 때",
+        "type": "causal",
+        "scope": "시냅스전달의 방향"
+      },
+      "invertible": true,
+      "invertible_reason": "물질이 있는 쪽과 수용체가 있는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신경전달물질은 가지돌기 쪽에만 들어 있고 수용체는 축삭돌기 말단에 있어 전달은 한 방향으로 일어난다"
+    },
+    {
+      "id": "rel-syn-site",
+      "text": "시냅스는 주로 한 세포의 축삭돌기와 다른 세포의 가지돌기 또는 신경세포체 사이에 만들어진다",
+      "form": {
+        "condition": "두 신경세포가 맞닿는 자리를 볼 때",
+        "type": "classification",
+        "scope": "신경세포 사이의 접합 부위"
+      },
+      "invertible": false,
+      "invertible_reason": "자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "시냅스에서는 두 세포의 세포막이 맞붙어 전기 신호가 그대로 건너간다",
+      "why_wrong": "두 막 사이에는 시냅스틈이 있고, 그 틈은 화학 물질이 건넌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-syn-cross"
+    },
+    {
+      "text": "시냅스전달은 두 세포 사이에서 어느 쪽으로든 일어날 수 있다",
+      "why_wrong": "물질을 내놓는 쪽과 받는 쪽이 정해져 있어 한 방향으로만 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-syn-oneway"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-nerve-impulse-conduction"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-neurotransmitter"
+    },
+    {
+      "type": "next",
+      "target": "bio-drug-and-synaptic-transmission",
+      "note": "이 자리에 약물이 끼어들면 어떻게 되는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-autonomic-nervous-system",
+      "note": "신경절에서도 같은 방식으로 신호가 넘어간다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-02"
+  ],
+  "topic_id": "bio-2-1-4",
+  "pages": [
+    78,
+    79,
+    80,
+    124
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

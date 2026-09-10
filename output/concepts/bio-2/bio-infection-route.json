@@ -1,0 +1,134 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-infection-route",
+  "concept_key": "concept:infection-route",
+  "registry_status": "new",
+  "term": "병원체의 감염 경로",
+  "aliases": [
+    "감염 경로"
+  ],
+  "notation": {
+    "hanja": "病原體의 感染 經路",
+    "hanja_gloss": "病 병 병 · 原 근원 원 · 體 몸 체 · 感 느낄 감 · 染 물들일 염 · 經 지날 경 · 路 길 로",
+    "english": "route of infection"
+  },
+  "definition": "병원체가 사람 몸으로 들어오는 길. 호흡기, 피부의 상처, 오염된 물과 음식, 매개 곤충 등이 있다.",
+  "relations": [
+    {
+      "id": "rel-rt-kinds",
+      "text": "독감은 호흡기로, 파상풍은 피부 상처로, 콜레라는 오염된 물이나 음식으로 들어온다",
+      "form": {
+        "condition": "질병마다 들어오는 길을 따질 때",
+        "type": "classification",
+        "scope": "감염성질환의 감염 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "짝을 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rt-vector",
+      "text": "말라리아처럼 모기 같은 매개 곤충에 물려 옮는 질병도 있다",
+      "form": {
+        "condition": "매개 곤충이 있는 지역에서",
+        "type": "classification",
+        "scope": "매개 곤충으로 옮는 질병"
+      },
+      "invertible": false,
+      "invertible_reason": "보기를 든 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rt-rules",
+      "text": "물을 끓여 마시면 오염된 물로 옮는 병을, 마스크를 쓰면 호흡기로 옮는 병을 막는 데 도움이 된다",
+      "form": {
+        "condition": "감염 경로에 맞는 방역 수칙을 고를 때",
+        "type": "classification",
+        "scope": "감염성질환의 예방"
+      },
+      "invertible": true,
+      "invertible_reason": "경로와 수칙의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물을 끓여 마시면 호흡기로 옮는 병을, 마스크를 쓰면 오염된 물로 옮는 병을 막는 데 도움이 된다"
+    },
+    {
+      "id": "rel-rt-block",
+      "text": "감염 경로를 알면 그 길을 끊어 감염성질환이 퍼지는 것을 줄일 수 있다",
+      "form": {
+        "condition": "감염병이 돌 때",
+        "type": "causal",
+        "scope": "감염성질환의 예방"
+      },
+      "invertible": false,
+      "invertible_reason": "예방의 원리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감염성질환은 모두 공기를 통해 옮는다",
+      "why_wrong": "물·음식·상처·매개 곤충 등 병원체마다 들어오는 길이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rt-kinds"
+    },
+    {
+      "text": "병원체는 눈에 보이지 않으니 우리가 자주 만지는 물건에는 없다",
+      "why_wrong": "공기 중이나 물건 표면에도 병원체가 있을 수 있어 손 씻기가 필요하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rt-rules"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-pathogen"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-infectious-and-noninfectious-disease"
+    },
+    {
+      "type": "related",
+      "target": "bio-vaccine-principle",
+      "note": "길을 끊는 예방과 면역을 만드는 예방을 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-protist",
+      "note": "매개 곤충으로 옮는 병원체를 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05",
+    "12생과02-07"
+  ],
+  "topic_id": "bio-2-6-1",
+  "pages": [
+    98,
+    114,
+    116,
+    119
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-hormone",
+  "concept_key": "concept:hormone",
+  "registry_status": "new",
+  "term": "호르몬",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 hormone 을 소리대로 옮긴 말이라 대응하는 한자어가 없다",
+    "english": "hormone"
+  },
+  "definition": "내분비샘에서 만들어져 혈액을 타고 온몸을 돌다가 정해진 세포에서만 작용해 그 기능을 조절하는 화학 물질.",
+  "relations": [
+    {
+      "id": "rel-hor-transport",
+      "text": "호르몬은 혈액을 타고 온몸으로 퍼지지만 반응은 그 호르몬의 표적세포에서만 나타난다",
+      "form": {
+        "condition": "호르몬이 분비되어 운반될 때",
+        "type": "conditional",
+        "scope": "내분비계의 신호 전달"
+      },
+      "invertible": true,
+      "invertible_reason": "퍼지는 범위와 반응이 나타나는 범위가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "호르몬은 표적세포에만 퍼지지만 반응은 혈액이 닿는 온몸에서 나타난다"
+    },
+    {
+      "id": "rel-hor-amount",
+      "text": "표적세포는 아주 적은 양의 호르몬에도 반응하므로 분비량이 조금만 어긋나도 몸이 흔들린다",
+      "form": {
+        "condition": "혈액 속 호르몬의 양이 달라질 때",
+        "type": "causal",
+        "scope": "호르몬의 작용"
+      },
+      "invertible": false,
+      "invertible_reason": "민감함에서 비롯한 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hor-excess",
+      "text": "특정 호르몬이 지나치게 많으면 과다증이, 모자라면 결핍증이 나타난다",
+      "form": {
+        "condition": "호르몬 분비량이 정상 범위를 벗어났을 때",
+        "type": "classification",
+        "scope": "사람의 내분비계"
+      },
+      "invertible": true,
+      "invertible_reason": "많고 적음과 증상의 이름이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "특정 호르몬이 지나치게 많으면 결핍증이, 모자라면 과다증이 나타난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "호르몬은 분비된 곳 가까이에 있는 세포에만 작용한다",
+      "why_wrong": "호르몬은 혈액을 타고 온몸을 돈다. 다만 반응은 표적세포에서만 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hor-transport"
+    },
+    {
+      "text": "호르몬은 많이 분비될수록 몸에 이롭다",
+      "why_wrong": "너무 많으면 과다증이, 너무 적으면 결핍증이 나타난다. 알맞은 범위가 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hor-excess"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-endocrine-and-exocrine-gland"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-diencephalon"
+    },
+    {
+      "type": "next",
+      "target": "bio-target-cell",
+      "note": "호르몬이 작용하는 상대를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-human-endocrine-gland-and-hormone",
+      "note": "어느 샘에서 어떤 호르몬이 나오는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-negative-feedback",
+      "note": "분비량이 어떻게 조절되는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-comparison-of-nervous-and-endocrine-system",
+      "note": "신경을 통한 조절과 견주어 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-1",
+  "pages": [
+    90,
+    91,
+    97
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

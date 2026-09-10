@@ -1,0 +1,142 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-pathogen",
+  "concept_key": "concept:pathogen",
+  "registry_status": "new",
+  "term": "병원체",
+  "notation": {
+    "hanja": "病原體",
+    "hanja_gloss": "病 병 병 · 原 근원 원 · 體 몸 체",
+    "english": "pathogen"
+  },
+  "definition": "몸에 들어와 질병을 일으키는 생물이나 입자. 바이러스·세균·원생생물·곰팡이로 나뉜다.",
+  "relations": [
+    {
+      "id": "rel-pat-kinds",
+      "text": "병원체는 바이러스·세균·원생생물·곰팡이 등으로 나뉜다",
+      "form": {
+        "condition": "질병을 일으키는 것들을 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "사람에게 병을 일으키는 병원체"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pat-drug",
+      "text": "세균성 질병에는 항생제가, 바이러스성 질병에는 항바이러스제가, 곰팡이 질병에는 항진균제가 쓰인다",
+      "form": {
+        "condition": "병원체의 종류에 맞춰 치료제를 고를 때",
+        "type": "classification",
+        "scope": "감염성질환의 치료"
+      },
+      "invertible": true,
+      "invertible_reason": "병원체와 치료제의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세균성 질병에는 항바이러스제가, 바이러스성 질병에는 항생제가, 곰팡이 질병에는 항진균제가 쓰인다"
+    },
+    {
+      "id": "rel-pat-match",
+      "text": "병원체의 종류가 다르면 듣는 치료제도 다르므로 원인 병원체를 먼저 가려내야 한다",
+      "form": {
+        "condition": "감염성질환을 치료하려 할 때",
+        "type": "causal",
+        "scope": "감염성질환의 치료"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pat-not-all",
+      "text": "우리 둘레의 세균과 곰팡이가 모두 병원체는 아니며 그 가운데 일부만 몸에 들어와 병을 일으킨다",
+      "form": {
+        "condition": "주변의 미생물을 병원체와 견줄 때",
+        "type": "conditional",
+        "scope": "사람 둘레의 미생물"
+      },
+      "invertible": false,
+      "invertible_reason": "범위를 좁힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감기에 항생제를 먹으면 더 빨리 낫는다",
+      "why_wrong": "감기는 바이러스가 일으키므로 세균을 죽이는 항생제는 듣지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pat-drug"
+    },
+    {
+      "text": "우리 주변에 있는 세균과 곰팡이는 모두 병원체다",
+      "why_wrong": "그 가운데 일부만 몸에 들어와 병을 일으킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pat-not-all"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-infectious-and-noninfectious-disease"
+    },
+    {
+      "type": "next",
+      "target": "bio-virus",
+      "note": "세포 구조가 없는 병원체를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-bacterium",
+      "note": "핵막이 없는 단세포 병원체를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-protist",
+      "note": "핵막이 있는 단세포 병원체를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-fungus",
+      "note": "포자로 번지는 병원체를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-innate-immunity",
+      "note": "이들이 들어왔을 때 몸이 먼저 하는 일을 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-2",
+  "pages": [
+    98,
+    100,
+    101,
+    107,
+    114
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

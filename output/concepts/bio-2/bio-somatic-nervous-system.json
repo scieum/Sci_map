@@ -1,0 +1,129 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-somatic-nervous-system",
+  "concept_key": "concept:somatic-nervous-system",
+  "registry_status": "new",
+  "term": "체성신경계",
+  "notation": {
+    "hanja": "體性神經系",
+    "hanja_gloss": "體 몸 체 · 性 성품 성 · 神 귀신 신 · 經 지날 경 · 系 이어맬 계",
+    "english": "somatic nervous system"
+  },
+  "definition": "대뇌의 명령을 받아 골격근을 움직이는 의식적인 운동을 맡는 말초신경계의 한 갈래.",
+  "relations": [
+    {
+      "id": "rel-sns-voluntary",
+      "text": "체성신경계는 대뇌의 명령을 받아 골격근을 움직이므로 마음먹은 대로 조절할 수 있다",
+      "form": {
+        "condition": "의식해서 몸을 움직일 때",
+        "type": "conditional",
+        "scope": "골격근의 운동"
+      },
+      "invertible": false,
+      "invertible_reason": "조절되는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sns-vs-ans",
+      "text": "체성신경계는 골격근을, 자율신경계는 내장근·심장근·분비샘을 조절한다",
+      "form": {
+        "condition": "두 신경계가 맡는 기관을 견줄 때",
+        "type": "classification",
+        "scope": "원심성 말초신경계"
+      },
+      "invertible": true,
+      "invertible_reason": "맡는 기관이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체성신경계는 내장근·심장근·분비샘을, 자율신경계는 골격근을 조절한다"
+    },
+    {
+      "id": "rel-sns-no-ganglion",
+      "text": "체성신경계의 운동신경은 신경절을 거치지 않고 중추에서 골격근까지 곧장 이어진다",
+      "form": {
+        "condition": "자율신경계의 구조와 견줄 때",
+        "type": "classification",
+        "scope": "중추에서 나가는 경로의 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "구조의 차이를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sns-ach",
+      "text": "운동신경의 말단에서는 아세틸콜린이 나와 골격근을 수축시킨다",
+      "form": {
+        "condition": "운동 명령이 근육에 닿았을 때",
+        "type": "causal",
+        "scope": "운동신경과 골격근 사이"
+      },
+      "invertible": false,
+      "invertible_reason": "분비되는 물질과 그 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "골격근의 움직임은 자율신경계가 조절한다",
+      "why_wrong": "골격근의 의식적인 운동은 체성신경계가 맡는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sns-vs-ans"
+    },
+    {
+      "text": "체성신경계도 자율신경계처럼 신경절에서 신경세포가 한 번 바뀐다",
+      "why_wrong": "체성신경계는 신경절 없이 중추에서 근육까지 하나의 신경세포로 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sns-no-ganglion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-peripheral-nervous-system"
+    },
+    {
+      "type": "related",
+      "target": "bio-autonomic-nervous-system",
+      "note": "짝을 이루는 다른 갈래와 견주어 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-neurotransmitter",
+      "note": "말단에서 나오는 물질을 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cerebral-cortex",
+      "note": "명령이 시작되는 자리가 여기다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-3",
+  "pages": [
+    87,
+    124
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

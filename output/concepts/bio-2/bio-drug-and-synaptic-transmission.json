@@ -1,0 +1,124 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-drug-and-synaptic-transmission",
+  "concept_key": "concept:drug-and-synaptic-transmission",
+  "registry_status": "new",
+  "term": "약물과 시냅스전달",
+  "aliases": [
+    "각성제",
+    "진정제",
+    "환각제"
+  ],
+  "notation": {
+    "hanja": "藥物과 시냅스傳達",
+    "hanja_gloss": "藥 약 약 · 物 물건 물 · 傳 전할 전 · 達 통달할 달",
+    "english": "drugs and synaptic transmission"
+  },
+  "definition": "약물이 시냅스에서 오가는 신호에 끼어들어 신경의 흥분을 북돋우거나 눌러 몸의 상태를 바꾸는 작용.",
+  "relations": [
+    {
+      "id": "rel-drug-two-ways",
+      "text": "각성제는 신경의 흥분을 북돋워 긴장 상태를 이어 가게 하고, 진정제는 흥분을 눌러 긴장과 통증을 누그러뜨린다",
+      "form": {
+        "condition": "약물이 시냅스전달에 작용할 때",
+        "type": "classification",
+        "scope": "신경계에 작용하는 약물"
+      },
+      "invertible": true,
+      "invertible_reason": "북돋우는 쪽과 누르는 쪽의 이름이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "각성제는 신경의 흥분을 눌러 긴장과 통증을 누그러뜨리고, 진정제는 흥분을 북돋워 긴장 상태를 이어 가게 한다"
+    },
+    {
+      "id": "rel-drug-treat",
+      "text": "시냅스전달을 바꾸는 성질 덕분에 이런 약물이 우울증·통증·불면증의 치료에 쓰인다",
+      "form": {
+        "condition": "의료진의 판단에 따라 쓸 때",
+        "type": "causal",
+        "scope": "치료에 쓰이는 약물"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-drug-side",
+      "text": "실제로 없는 감각을 일으키는 약물처럼, 시냅스전달을 어지럽히는 약물은 심각한 부작용을 남긴다",
+      "form": {
+        "condition": "약물이 정상적인 전달을 흐트러뜨릴 때",
+        "type": "causal",
+        "scope": "환각을 일으키는 약물"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-drug-toxin",
+      "text": "아세틸콜린이 나오지 못하게 막는 독소가 들어오면 근육이 신호를 받지 못해 마비가 온다",
+      "form": {
+        "condition": "신경전달물질의 분비가 막혔을 때",
+        "type": "causal",
+        "scope": "운동신경과 근육 사이의 시냅스"
+      },
+      "invertible": false,
+      "invertible_reason": "막힘이 부른 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "약물은 신경세포 안의 전도 속도만 바꿀 뿐 시냅스와는 상관이 없다",
+      "why_wrong": "신경계에 작용하는 약물의 상당수는 시냅스에서 일어나는 전달에 끼어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-drug-treat"
+    },
+    {
+      "text": "치료에 쓰이는 약물은 부작용이 없다",
+      "why_wrong": "같은 약물이 어지러움 같은 부작용을 함께 일으킬 수 있어 용량과 복용법을 지켜야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-drug-side"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-synaptic-transmission"
+    },
+    {
+      "type": "related",
+      "target": "bio-neurotransmitter",
+      "note": "약물이 건드리는 것이 바로 이 물질이 오가는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-02"
+  ],
+  "topic_id": "bio-2-1-4",
+  "pages": [
+    79,
+    81
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

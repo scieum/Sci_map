@@ -1,0 +1,136 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cell-mediated-immunity",
+  "concept_key": "concept:cell-mediated-immunity",
+  "registry_status": "new",
+  "term": "세포성면역",
+  "aliases": [
+    "세포 매개 면역"
+  ],
+  "notation": {
+    "hanja": "細胞性免疫",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 性 성품 성 · 免 면할 면 · 疫 전염병 역",
+    "english": "cell-mediated immunity"
+  },
+  "definition": "제시된 항원에 반응하는 T림프구가 골라 늘어난 뒤, 세포독성 T림프구가 감염된 세포를 직접 없애는 방어작용.",
+  "relations": [
+    {
+      "id": "rel-cmi-present",
+      "text": "대식세포 같은 항원제시세포가 병원체를 분해해 그 조각을 제 표면에 내걸어야 T림프구가 알아본다",
+      "form": {
+        "condition": "세포성면역이 시작되기 전에",
+        "type": "causal",
+        "scope": "항원제시와 T림프구"
+      },
+      "invertible": false,
+      "invertible_reason": "앞서 일어나야 할 일을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cmi-select",
+      "text": "내걸린 항원에 반응하는 보조 T림프구와 세포독성 T림프구만 골라서 늘어나며 활성화된다",
+      "form": {
+        "condition": "항원이 제시된 뒤",
+        "type": "conditional",
+        "scope": "T림프구의 선택적 증식"
+      },
+      "invertible": false,
+      "invertible_reason": "골라서 늘어난다는 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cmi-kill",
+      "text": "활성화된 세포독성 T림프구가 감염된 세포에 붙어 화학 물질을 내어 그 세포를 없앤다",
+      "form": {
+        "condition": "세포독성 T림프구가 활성화된 뒤",
+        "type": "causal",
+        "scope": "감염된 세포의 제거"
+      },
+      "invertible": false,
+      "invertible_reason": "차례로 일어나는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cmi-vs-humoral",
+      "text": "세포성면역은 감염된 세포를 직접 없애고, 체액성면역은 분비된 항체가 항원을 처리한다",
+      "form": {
+        "condition": "두 갈래의 작용 방식을 견줄 때",
+        "type": "classification",
+        "scope": "후천적 면역의 두 갈래"
+      },
+      "invertible": true,
+      "invertible_reason": "직접 없애는 쪽과 항체로 처리하는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포성면역은 분비된 항체가 항원을 처리하고, 체액성면역은 감염된 세포를 직접 없앤다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포독성 T림프구는 항체를 만들어 내보낸다",
+      "why_wrong": "항체를 만드는 쪽은 B림프구가 분화한 형질세포다. 세포독성 T림프구는 감염된 세포를 직접 없앤다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmi-vs-humoral"
+    },
+    {
+      "text": "T림프구는 떠다니는 항원을 직접 알아본다",
+      "why_wrong": "T림프구는 항원제시세포가 표면에 내건 항원 조각을 알아본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmi-present"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-adaptive-immunity"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-lymphocyte"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-phagocytosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-humoral-immunity",
+      "note": "같은 항원에 대한 다른 쪽 대응을 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antigen",
+      "note": "무엇에 반응하는지 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    104,
+    105,
+    123
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

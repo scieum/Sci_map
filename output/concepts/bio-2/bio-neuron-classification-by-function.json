@@ -1,0 +1,127 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-neuron-classification-by-function",
+  "concept_key": "concept:neuron-classification-by-function",
+  "registry_status": "new",
+  "term": "기능에 따른 신경세포의 종류",
+  "aliases": [
+    "구심성신경세포",
+    "원심성신경세포",
+    "연합신경세포"
+  ],
+  "notation": {
+    "hanja": "機能에 따른 神經細胞의 種類",
+    "hanja_gloss": "機 틀 기 · 能 능할 능 · 神 귀신 신 · 經 지날 경 · 細 가늘 세 · 胞 세포 포 · 種 씨 종 · 類 무리 류",
+    "english": "classification of neurons by function"
+  },
+  "definition": "신호를 중추로 들여보내는가, 중추에서 내보내는가, 중추 안에서 통합하는가에 따라 갈라 놓은 신경세포의 세 갈래.",
+  "relations": [
+    {
+      "id": "rel-ncf-direction",
+      "text": "감각기관 쪽 신호를 중추로 나르는 것이 구심성신경세포, 중추의 명령을 반응기관으로 나르는 것이 원심성신경세포다",
+      "form": {
+        "condition": "신호가 중추를 기준으로 어느 쪽으로 가는지 볼 때",
+        "type": "classification",
+        "scope": "말초에 놓인 신경세포"
+      },
+      "invertible": true,
+      "invertible_reason": "들어가는 방향과 나가는 방향이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감각기관 쪽 신호를 중추로 나르는 것이 원심성신경세포, 중추의 명령을 반응기관으로 나르는 것이 구심성신경세포다"
+    },
+    {
+      "id": "rel-ncf-inter",
+      "text": "연합신경세포는 뇌와 척수를 이루면서 들어온 정보를 통합해 어떤 반응을 할지 정한다",
+      "form": {
+        "condition": "중추 안에서 정보가 처리될 때",
+        "type": "causal",
+        "scope": "중추신경계의 신경세포"
+      },
+      "invertible": false,
+      "invertible_reason": "자리와 구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ncf-order",
+      "text": "자극에서 반응까지 신호는 구심성신경세포에서 연합신경세포를 거쳐 원심성신경세포로 지나간다",
+      "form": {
+        "condition": "중추를 거치는 반응 경로를 따라갈 때",
+        "type": "conditional",
+        "scope": "자극에서 반응까지의 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "지나는 차례가 정해져 있어 거꾸로 놓으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자극에서 반응까지 신호는 원심성신경세포에서 연합신경세포를 거쳐 구심성신경세포로 지나간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감각기관에서 생긴 신호는 원심성신경세포를 타고 중추로 들어간다",
+      "why_wrong": "중추로 들어가는 쪽이 구심성신경세포다. 원심성신경세포는 중추에서 나가는 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ncf-direction"
+    },
+    {
+      "text": "연합신경세포는 팔다리의 근육 속에 퍼져 있다",
+      "why_wrong": "연합신경세포는 뇌와 척수, 곧 중추신경계를 이룬다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ncf-inter"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-neuron"
+    },
+    {
+      "type": "next",
+      "target": "bio-organization-of-nervous-system",
+      "note": "이 세 갈래가 어디에 놓이는지 신경계 전체에서 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-central-nervous-system",
+      "note": "통합을 맡는 자리를 이어서 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-peripheral-nervous-system",
+      "note": "들고 나는 신호를 나르는 자리를 이어서 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-spinal-reflex",
+      "note": "이 경로가 짧아지면 어떤 반응이 되는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01",
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-1-1",
+  "pages": [
+    73,
+    87,
+    123
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

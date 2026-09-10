@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-spinal-cord",
+  "concept_key": "concept:spinal-cord",
+  "registry_status": "new",
+  "term": "척수",
+  "notation": {
+    "hanja": "脊髓",
+    "hanja_gloss": "脊 등마루 척 · 髓 골수 수",
+    "english": "spinal cord"
+  },
+  "definition": "숨골에서 이어져 척추 속을 따라 내려간 중추. 뇌와 말초신경 사이에서 정보를 나르는 통로이면서 척수반사를 맡는다.",
+  "relations": [
+    {
+      "id": "rel-sc-layers",
+      "text": "척수는 겉질이 백색질이고 속질이 회색질이어서 대뇌와 반대로 배치되어 있다",
+      "form": {
+        "condition": "대뇌의 단면과 견줄 때",
+        "type": "classification",
+        "scope": "척수의 단면"
+      },
+      "invertible": true,
+      "invertible_reason": "바깥층과 안층의 색이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "척수는 겉질이 회색질이고 속질이 백색질이어서 대뇌와 같게 배치되어 있다"
+    },
+    {
+      "id": "rel-sc-roots",
+      "text": "등 쪽 후근에는 감각신경 다발이, 배 쪽 전근에는 운동신경 다발이 지나간다",
+      "form": {
+        "condition": "척수신경이 드나드는 자리를 볼 때",
+        "type": "classification",
+        "scope": "척수신경"
+      },
+      "invertible": true,
+      "invertible_reason": "드나드는 자리와 신경의 종류가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등 쪽 후근에는 운동신경 다발이, 배 쪽 전근에는 감각신경 다발이 지나간다"
+    },
+    {
+      "id": "rel-sc-path",
+      "text": "몸에서 올라온 감각 정보도, 뇌에서 내려가는 명령도 모두 척수를 지나간다",
+      "form": {
+        "condition": "뇌와 몸 사이에서 신호가 오갈 때",
+        "type": "conditional",
+        "scope": "척수"
+      },
+      "invertible": false,
+      "invertible_reason": "지나는 길을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "척수도 대뇌처럼 겉질이 회색질이다",
+      "why_wrong": "척수는 겉질이 백색질, 속질이 회색질로 대뇌와 반대다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-layers"
+    },
+    {
+      "text": "감각신경과 운동신경은 모두 후근으로 드나든다",
+      "why_wrong": "감각신경은 후근으로, 운동신경은 전근으로 드나든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-roots"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-central-nervous-system"
+    },
+    {
+      "type": "next",
+      "target": "bio-spinal-reflex",
+      "note": "이곳이 중추가 되는 반응을 이어서 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cerebrum",
+      "note": "겉질과 속질의 배치가 서로 반대다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    86,
+    89,
+    123
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

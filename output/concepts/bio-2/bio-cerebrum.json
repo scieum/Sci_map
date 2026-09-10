@@ -1,0 +1,112 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cerebrum",
+  "concept_key": "concept:cerebrum",
+  "registry_status": "new",
+  "term": "대뇌",
+  "notation": {
+    "hanja": "大腦",
+    "hanja_gloss": "大 큰 대 · 腦 골 뇌",
+    "english": "cerebrum"
+  },
+  "definition": "뇌에서 가장 넓은 자리를 차지하며 좌우 두 반구로 이루어진 부분. 감각을 종합하고 운동을 일으키며 언어·기억·사고를 맡는다.",
+  "relations": [
+    {
+      "id": "rel-cer-layers",
+      "text": "대뇌는 신경세포체가 많아 회색을 띠는 겉질과 축삭돌기가 빽빽해 백색을 띠는 속질로 이루어진다",
+      "form": {
+        "condition": "대뇌의 단면을 볼 때",
+        "type": "classification",
+        "scope": "대뇌"
+      },
+      "invertible": true,
+      "invertible_reason": "바깥층과 안층이 띠는 색이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대뇌는 축삭돌기가 빽빽해 백색을 띠는 겉질과 신경세포체가 많아 회색을 띠는 속질로 이루어진다"
+    },
+    {
+      "id": "rel-cer-cross",
+      "text": "감각신경과 운동신경이 숨골에서 좌우로 엇갈리므로 몸의 오른쪽은 좌반구가, 왼쪽은 우반구가 맡는다",
+      "form": {
+        "condition": "반구와 몸의 좌우를 짝지어 볼 때",
+        "type": "causal",
+        "scope": "대뇌와 몸의 좌우 대응"
+      },
+      "invertible": true,
+      "invertible_reason": "반구와 몸의 좌우가 엇갈리게 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감각신경과 운동신경이 숨골에서 좌우로 엇갈리므로 몸의 오른쪽은 우반구가, 왼쪽은 좌반구가 맡는다"
+    },
+    {
+      "id": "rel-cer-mind",
+      "text": "언어·기억·사고·추리처럼 높은 수준의 정신 활동이 일어나는 곳은 대뇌다",
+      "form": {
+        "condition": "정신 활동이 일어나는 자리를 찾을 때",
+        "type": "classification",
+        "scope": "사람의 뇌"
+      },
+      "invertible": false,
+      "invertible_reason": "자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대뇌의 겉질은 축삭돌기가 모여 있어 백색을 띤다",
+      "why_wrong": "겉질은 신경세포체가 많아 회색을 띤다. 축삭돌기가 많아 백색을 띠는 쪽은 속질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cer-layers"
+    },
+    {
+      "text": "왼쪽 대뇌가 다치면 몸의 왼쪽이 마비된다",
+      "why_wrong": "신경이 숨골에서 좌우로 엇갈리므로 왼쪽 대뇌는 몸의 오른쪽을 맡는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cer-cross"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-central-nervous-system"
+    },
+    {
+      "type": "next",
+      "target": "bio-cerebral-cortex",
+      "note": "표면을 자리와 하는 일로 나눠 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-brainstem",
+      "note": "좌우가 엇갈리는 자리인 숨골이 여기 들어 있다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    84,
+    85,
+    89,
+    124
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

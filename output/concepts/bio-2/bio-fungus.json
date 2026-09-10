@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-fungus",
+  "concept_key": "concept:fungus",
+  "registry_status": "new",
+  "term": "곰팡이",
+  "aliases": [
+    "진균",
+    "균류"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "고유어다. 한자어로는 '진균(眞菌)'·'균류(菌類)'라 하지만 표제어로 쓰지 않는다",
+    "english": "fungus"
+  },
+  "definition": "실 모양의 균사와 세포벽을 가진 진핵생물로 포자로 번식하는 병원체. 호흡기관으로 들어오거나 피부·점막에 번져 염증을 일으킨다.",
+  "relations": [
+    {
+      "id": "rel-fun-structure",
+      "text": "곰팡이는 실 모양의 균사와 세포벽을 가진 진핵생물이며 포자를 만들어 번식한다",
+      "form": {
+        "condition": "곰팡이의 짜임과 번식을 볼 때",
+        "type": "classification",
+        "scope": "곰팡이"
+      },
+      "invertible": false,
+      "invertible_reason": "짜임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fun-route",
+      "text": "공기 속 포자가 호흡기관으로 들어오면 폐 질환을, 피부나 점막에 번지면 염증을 일으킨다",
+      "form": {
+        "condition": "포자가 몸에 닿았을 때",
+        "type": "causal",
+        "scope": "곰팡이 감염"
+      },
+      "invertible": false,
+      "invertible_reason": "들어온 자리에 따른 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fun-treat",
+      "text": "곰팡이가 일으킨 질병의 치료에는 항진균제가 쓰인다",
+      "form": {
+        "condition": "원인이 곰팡이로 밝혀졌을 때",
+        "type": "causal",
+        "scope": "곰팡이 질병의 치료"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fun-vs-bacterium",
+      "text": "곰팡이는 균사와 세포벽을 갖춘 진핵생물이지만 세균은 핵막조차 없는 단세포생물이다",
+      "form": {
+        "condition": "두 병원체를 견줄 때",
+        "type": "classification",
+        "scope": "곰팡이와 세균"
+      },
+      "invertible": true,
+      "invertible_reason": "핵막이 있는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세균은 균사와 세포벽을 갖춘 진핵생물이지만 곰팡이는 핵막조차 없는 단세포생물이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무좀은 세균이 일으키는 병이다",
+      "why_wrong": "무좀은 곰팡이가 피부에 번져 생긴다. 세균이 일으키는 결핵과는 병원체의 무리가 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fun-vs-bacterium"
+    },
+    {
+      "text": "곰팡이는 축축한 곳에만 있어서 호흡기로는 들어오지 못한다",
+      "why_wrong": "공기 속 포자가 호흡기관을 통해 들어와 폐 질환을 일으킬 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fun-route"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-pathogen"
+    },
+    {
+      "type": "related",
+      "target": "bio-bacterium",
+      "note": "세포 구조와 치료제를 견주어 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-physical-barrier-of-skin-and-mucosa",
+      "note": "피부와 점막이 어떻게 막는지 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-2",
+  "pages": [
+    101,
+    107
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

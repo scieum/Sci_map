@@ -1,0 +1,130 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-antigen",
+  "concept_key": "concept:antigen",
+  "registry_status": "new",
+  "term": "항원",
+  "notation": {
+    "hanja": "抗原",
+    "hanja_gloss": "抗 겨룰 항 · 原 근원 원",
+    "english": "antigen"
+  },
+  "definition": "몸에 들어와 면역반응을 일으키는 물질. 후천적 면역은 어떤 항원이 들어왔느냐에 따라 골라서 일어난다.",
+  "relations": [
+    {
+      "id": "rel-ag-trigger",
+      "text": "항원이 몸에 들어오면 그에 맞서는 항체가 만들어지는 면역반응이 일어난다",
+      "form": {
+        "condition": "외부 물질이 몸 안으로 들어왔을 때",
+        "type": "causal",
+        "scope": "후천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 일을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ag-vs-antibody",
+      "text": "몸에 들어와 반응을 일으키는 쪽이 항원이고, 그에 맞서 몸이 만들어 내는 단백질이 항체다",
+      "form": {
+        "condition": "두 이름을 가려 쓸 때",
+        "type": "classification",
+        "scope": "항원항체반응"
+      },
+      "invertible": true,
+      "invertible_reason": "들어오는 쪽과 만들어지는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "몸에 들어와 반응을 일으키는 쪽이 항체이고, 그에 맞서 몸이 만들어 내는 단백질이 항원이다"
+    },
+    {
+      "id": "rel-ag-selective",
+      "text": "후천적 면역은 들어온 항원의 종류에 맞춰 그 항원에만 선택적으로 일어난다",
+      "form": {
+        "condition": "여러 항원 가운데 하나가 들어왔을 때",
+        "type": "conditional",
+        "scope": "후천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "선택성을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ag-agglutinogen",
+      "text": "적혈구 세포막에 있는 응집원도 다른 사람의 몸에서는 항원으로 작용한다",
+      "form": {
+        "condition": "혈액형이 다른 피가 섞였을 때",
+        "type": "conditional",
+        "scope": "ABO식 혈액형"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 항원이 되는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항원은 몸이 스스로 만들어 내는 단백질이다",
+      "why_wrong": "몸이 만드는 쪽은 항체다. 항원은 몸 밖에서 들어와 면역반응을 일으키는 물질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ag-vs-antibody"
+    },
+    {
+      "text": "항원은 반드시 살아 있는 병원체여야 한다",
+      "why_wrong": "죽은 병원체나 그 일부도 항원으로 작용한다. 백신이 그 성질을 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ag-trigger"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-adaptive-immunity"
+    },
+    {
+      "type": "next",
+      "target": "bio-antibody",
+      "note": "이 물질에 맞서 만들어지는 단백질을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-antigen-antibody-specificity",
+      "note": "둘이 결합하는 방식을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-lymphocyte",
+      "note": "항원을 알아보는 세포를 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-06"
+  ],
+  "topic_id": "bio-2-5-1",
+  "pages": [
+    104,
+    108,
+    113
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

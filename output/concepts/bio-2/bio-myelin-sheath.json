@@ -1,0 +1,113 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-myelin-sheath",
+  "concept_key": "concept:myelin-sheath",
+  "registry_status": "new",
+  "term": "말이집",
+  "aliases": [
+    "수초"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "고유어다. 옛 표기 '수초(髓鞘)'가 한자어이며 지금은 표제어로 쓰지 않는다",
+    "english": "myelin sheath"
+  },
+  "definition": "슈반세포의 세포막이 축삭돌기를 여러 겹으로 감아 만든 껍질. 전기 신호가 막 밖으로 새지 않게 막는 절연체 구실을 한다.",
+  "relations": [
+    {
+      "id": "rel-mye-schwann",
+      "text": "말이집을 만드는 것은 슈반세포이고, 슈반세포의 세포막이 축삭돌기를 여러 겹 감는다",
+      "form": {
+        "condition": "말초신경에서 말이집이 만들어질 때",
+        "type": "causal",
+        "scope": "슈반세포와 축삭돌기"
+      },
+      "invertible": true,
+      "invertible_reason": "감는 쪽과 감기는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "말이집을 만드는 것은 축삭돌기이고, 축삭돌기의 세포막이 슈반세포를 여러 겹 감는다"
+    },
+    {
+      "id": "rel-mye-insulate",
+      "text": "말이집이 절연체 노릇을 해 축삭돌기 막에서 전기 신호가 새어 나가지 못하게 막는다",
+      "form": {
+        "condition": "말이집이 축삭돌기를 덮고 있을 때",
+        "type": "causal",
+        "scope": "말이집신경의 축삭돌기"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 맡은 구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mye-node",
+      "text": "말이집과 말이집 사이에 말이집이 덮이지 않은 자리를 랑비에결절이라고 한다",
+      "form": {
+        "condition": "말이집신경의 축삭돌기를 따라갈 때",
+        "type": "classification",
+        "scope": "말이집신경의 축삭돌기"
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 붙인 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "말이집은 축삭돌기를 처음부터 끝까지 빈틈없이 덮고 있다",
+      "why_wrong": "말이집 사이에는 덮이지 않은 랑비에결절이 규칙적으로 놓여 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mye-node"
+    },
+    {
+      "text": "말이집이 신호를 만들어 축삭돌기 끝까지 실어 나른다",
+      "why_wrong": "말이집은 신호가 새지 않게 막아 주는 껍질이고, 신호 자체는 축삭돌기의 세포막에서 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mye-insulate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-neuron"
+    },
+    {
+      "type": "next",
+      "target": "bio-myelinated-and-unmyelinated-nerve",
+      "note": "이 껍질의 유무로 신경을 두 갈래로 나눈다"
+    },
+    {
+      "type": "next",
+      "target": "bio-saltatory-conduction",
+      "note": "껍질이 있으면 신호가 건너뛰며 간다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-1",
+  "pages": [
+    72,
+    73,
+    81
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

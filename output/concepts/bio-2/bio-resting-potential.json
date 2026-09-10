@@ -1,0 +1,136 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-resting-potential",
+  "concept_key": "concept:resting-potential",
+  "registry_status": "new",
+  "term": "휴지전위",
+  "notation": {
+    "hanja": "休止電位",
+    "hanja_gloss": "休 쉴 휴 · 止 그칠 지 · 電 번개 전 · 位 자리 위",
+    "english": "resting potential"
+  },
+  "definition": "자극을 받지 않은 신경세포에서 막 안쪽이 음전하, 바깥쪽이 양전하로 갈린 분극 상태일 때 재어지는 막전위. 약 -70 mV다.",
+  "relations": [
+    {
+      "id": "rel-rp-polarized",
+      "text": "자극을 받지 않은 신경세포는 막 안쪽이 음(-)전하를, 바깥쪽이 양(+)전하를 띠는 분극 상태에 있다",
+      "form": {
+        "condition": "자극이 주어지지 않았을 때",
+        "type": "conditional",
+        "scope": "신경세포의 세포막"
+      },
+      "invertible": true,
+      "invertible_reason": "안쪽과 바깥쪽이 띠는 전하가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자극을 받지 않은 신경세포는 막 안쪽이 양(+)전하를, 바깥쪽이 음(-)전하를 띠는 분극 상태에 있다"
+    },
+    {
+      "id": "rel-rp-k",
+      "text": "휴지 상태에서는 늘 열려 있는 통로가 K⁺ 쪽에 더 많아 K⁺이 빠져나가는 것이 막전위를 주로 정한다",
+      "form": {
+        "condition": "이온 통로가 늘 열려 있는 상태에서",
+        "type": "causal",
+        "scope": "신경세포의 세포막"
+      },
+      "invertible": true,
+      "invertible_reason": "통로가 많은 이온과 적은 이온이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "휴지 상태에서는 늘 열려 있는 통로가 Na⁺ 쪽에 더 많아 Na⁺이 들어오는 것이 막전위를 주로 정한다"
+    },
+    {
+      "id": "rel-rp-pump",
+      "text": "Na⁺-K⁺ 펌프가 계속 작동하므로 이온이 오가도 막 안팎의 이온 분포는 크게 흐트러지지 않는다",
+      "form": {
+        "condition": "휴지 상태가 이어지는 동안",
+        "type": "causal",
+        "scope": "신경세포의 이온 분포"
+      },
+      "invertible": false,
+      "invertible_reason": "유지되는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rp-value",
+      "text": "신경세포의 휴지전위는 약 -70 mV이며, 이는 안쪽 전위가 바깥쪽보다 낮다는 뜻이다",
+      "form": {
+        "condition": "자극이 없을 때 전압계로 잴 때",
+        "type": "conditional",
+        "scope": "사람의 신경세포"
+      },
+      "invertible": true,
+      "invertible_reason": "부호와 높낮이가 맞물려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신경세포의 휴지전위는 약 +70 mV이며, 이는 안쪽 전위가 바깥쪽보다 높다는 뜻이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분극 상태에서 세포 안쪽은 양(+)전하를, 바깥쪽은 음(-)전하를 띤다",
+      "why_wrong": "안쪽이 음(-)전하, 바깥쪽이 양(+)전하다. 그래서 휴지전위가 음의 값으로 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rp-polarized"
+    },
+    {
+      "text": "휴지전위 상태에서는 이온이 막을 전혀 지나가지 않는다",
+      "why_wrong": "이온은 늘 열린 통로로 계속 오간다. 펌프가 그만큼 되돌려 놓아 분포가 유지될 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rp-pump"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-membrane-potential"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-ion-channel"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-sodium-potassium-pump"
+    },
+    {
+      "type": "next",
+      "target": "bio-depolarization",
+      "note": "이 상태가 무너지는 첫 단계를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-action-potential",
+      "note": "여기서부터 시작되는 전위 변화를 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    74,
+    75,
+    81,
+    123
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": true
+}

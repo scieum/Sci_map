@@ -1,0 +1,124 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-protist",
+  "concept_key": "concept:protist",
+  "registry_status": "new",
+  "term": "원생생물",
+  "notation": {
+    "hanja": "原生生物",
+    "hanja_gloss": "原 근원 원 · 生 날 생 · 生 날 생 · 物 물건 물",
+    "english": "protist"
+  },
+  "definition": "핵막을 갖춘 진핵생물 가운데 질병을 일으키는 무리. 대개 단세포이며 음식물·오염된 물·매개 곤충을 거쳐 몸에 들어온다.",
+  "relations": [
+    {
+      "id": "rel-pro-eukaryote",
+      "text": "질병을 일으키는 원생생물은 핵막이 있는 진핵생물이며 대개 단세포다",
+      "form": {
+        "condition": "원생생물의 세포 구조를 볼 때",
+        "type": "classification",
+        "scope": "질병을 일으키는 원생생물"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pro-route",
+      "text": "원생생물은 음식물이나 오염된 물, 모기·파리 같은 매개 곤충을 거쳐 몸에 들어온다",
+      "form": {
+        "condition": "감염 경로를 따질 때",
+        "type": "classification",
+        "scope": "원생생물의 감염"
+      },
+      "invertible": false,
+      "invertible_reason": "경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pro-malaria",
+      "text": "말라리아원충이 모기를 매개로 사람에게 옮겨 가 말라리아를 일으킨다",
+      "form": {
+        "condition": "매개 곤충에 물렸을 때",
+        "type": "causal",
+        "scope": "말라리아"
+      },
+      "invertible": false,
+      "invertible_reason": "옮는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pro-vs-bacterium",
+      "text": "원생생물은 핵막이 있는 진핵생물이고 세균은 핵막이 없어, 둘은 세포 구조부터 다르다",
+      "form": {
+        "condition": "두 병원체의 세포 구조를 견줄 때",
+        "type": "classification",
+        "scope": "원생생물과 세균"
+      },
+      "invertible": true,
+      "invertible_reason": "핵막이 있는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원생생물은 핵막이 없고 세균은 핵막이 있는 진핵생물이어서, 둘은 세포 구조부터 다르다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "말라리아는 모기의 침 자체가 일으키는 병이다",
+      "why_wrong": "병을 일으키는 것은 모기가 옮긴 말라리아원충이다. 모기는 옮기는 구실을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pro-malaria"
+    },
+    {
+      "text": "원생생물은 세균과 같은 무리다",
+      "why_wrong": "원생생물은 핵막이 있는 진핵생물이고 세균은 핵막이 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pro-vs-bacterium"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-pathogen"
+    },
+    {
+      "type": "related",
+      "target": "bio-bacterium",
+      "note": "세포 구조를 견주어 보면 갈래가 또렷해진다"
+    },
+    {
+      "type": "related",
+      "target": "bio-infection-route",
+      "note": "매개 곤충으로 옮는 길을 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-2",
+  "pages": [
+    101,
+    107
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

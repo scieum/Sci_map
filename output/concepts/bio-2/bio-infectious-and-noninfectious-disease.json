@@ -1,0 +1,129 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-infectious-and-noninfectious-disease",
+  "concept_key": "concept:infectious-and-noninfectious-disease",
+  "registry_status": "new",
+  "term": "감염성질환과 비감염성질환",
+  "aliases": [
+    "감염성 질환",
+    "비감염성 질환"
+  ],
+  "notation": {
+    "hanja": "感染性疾患과 非感染性疾患",
+    "hanja_gloss": "感 느낄 감 · 染 물들일 염 · 性 성품 성 · 疾 병 질 · 患 근심 환 · 非 아닐 비 · 感 느낄 감 · 染 물들일 염 · 性 성품 성 · 疾 병 질 · 患 근심 환",
+    "english": "infectious and noninfectious disease"
+  },
+  "definition": "병원체에 옮아 생기는 질병과, 병원체와 상관없이 유전·생활 방식·환경요인이 겹쳐 생기는 질병으로 갈라 놓은 질병의 두 갈래.",
+  "relations": [
+    {
+      "id": "rel-idn-split",
+      "text": "병원체에 감염되어 생기면 감염성질환이고, 감염 없이 여러 원인이 겹쳐 생기면 비감염성질환이다",
+      "form": {
+        "condition": "발병의 원인이 병원체인지 따질 때",
+        "type": "classification",
+        "scope": "사람의 질병"
+      },
+      "invertible": true,
+      "invertible_reason": "원인과 이름이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "병원체에 감염되어 생기면 비감염성질환이고, 감염 없이 여러 원인이 겹쳐 생기면 감염성질환이다"
+    },
+    {
+      "id": "rel-idn-causes",
+      "text": "고혈압이나 당뇨병처럼 유전·운동 부족·비만·흡연이 겹쳐 생기는 병은 비감염성질환에 든다",
+      "form": {
+        "condition": "발병 원인을 여럿 따질 때",
+        "type": "classification",
+        "scope": "비감염성질환"
+      },
+      "invertible": false,
+      "invertible_reason": "보기를 든 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-idn-spread",
+      "text": "감염성질환은 공기·체액·접촉 같은 경로로 병원체가 옮겨 가므로 다른 사람에게 퍼질 수 있다",
+      "form": {
+        "condition": "병원체가 몸 밖으로 나갈 수 있을 때",
+        "type": "causal",
+        "scope": "감염성질환"
+      },
+      "invertible": false,
+      "invertible_reason": "퍼지는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-idn-vaccine",
+      "text": "백신은 병원체에 맞선 면역을 만들어 주는 것이므로 병원체가 원인이 아닌 병은 백신으로 막기 어렵다",
+      "form": {
+        "condition": "백신으로 예방할 수 있는 병을 가릴 때",
+        "type": "causal",
+        "scope": "질병의 예방"
+      },
+      "invertible": false,
+      "invertible_reason": "예방이 되는 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "당뇨병도 가까이 지내면 다른 사람에게 옮을 수 있다",
+      "why_wrong": "당뇨병은 병원체가 원인이 아닌 비감염성질환이라 옮지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-idn-split"
+    },
+    {
+      "text": "모든 질병은 백신으로 예방할 수 있다",
+      "why_wrong": "병원체가 원인이 아닌 비감염성질환은 백신으로 막기 어렵다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-idn-vaccine"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-pathogen",
+      "note": "감염성질환을 일으키는 것이 무엇인지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-infection-route",
+      "note": "병원체가 어떤 길로 들어오는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-vaccine-principle",
+      "note": "백신으로 막을 수 있는 쪽이 어느 쪽인지 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-1",
+  "pages": [
+    98,
+    117
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

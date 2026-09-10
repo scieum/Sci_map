@@ -1,0 +1,138 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-lymphocyte",
+  "concept_key": "concept:lymphocyte",
+  "registry_status": "new",
+  "term": "림프구",
+  "aliases": [
+    "T림프구",
+    "B림프구",
+    "가슴샘"
+  ],
+  "notation": {
+    "hanja": "림프球",
+    "hanja_note": "'림프'는 영어 lymph 의 음차어라 그 부분에는 대응하는 한자가 없다",
+    "hanja_gloss": "球 공 구",
+    "english": "lymphocyte"
+  },
+  "definition": "골수에서 만들어져 후천적 면역의 중심이 되는 백혈구. 가슴샘으로 옮겨 가면 T림프구, 골수에 남으면 B림프구가 된다.",
+  "relations": [
+    {
+      "id": "rel-lym-origin",
+      "text": "림프구는 백혈구의 한 종류로 골수에서 미성숙한 상태로 만들어진다",
+      "form": {
+        "condition": "림프구가 생겨나는 자리를 볼 때",
+        "type": "classification",
+        "scope": "사람의 면역세포"
+      },
+      "invertible": false,
+      "invertible_reason": "생겨나는 자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lym-differentiate",
+      "text": "미성숙 림프구 가운데 일부는 가슴샘으로 옮겨 T림프구가 되고, 나머지는 골수에 남아 B림프구가 된다",
+      "form": {
+        "condition": "미성숙 림프구가 성숙해 갈 때",
+        "type": "classification",
+        "scope": "림프구의 분화"
+      },
+      "invertible": true,
+      "invertible_reason": "옮겨 가는 쪽과 남는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미성숙 림프구 가운데 일부는 가슴샘으로 옮겨 B림프구가 되고, 나머지는 골수에 남아 T림프구가 된다"
+    },
+    {
+      "id": "rel-lym-recognize",
+      "text": "T림프구는 항원제시세포가 내건 항원을 알아보고, B림프구는 항원을 직접 알아본다",
+      "form": {
+        "condition": "두 림프구가 항원을 알아보는 방식을 견줄 때",
+        "type": "classification",
+        "scope": "T림프구와 B림프구"
+      },
+      "invertible": true,
+      "invertible_reason": "알아보는 방식이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "T림프구는 항원을 직접 알아보고, B림프구는 항원제시세포가 내건 항원을 알아본다"
+    },
+    {
+      "id": "rel-lym-t-kinds",
+      "text": "T림프구에는 다른 면역세포를 돕는 보조 T림프구와 감염된 세포를 없애는 세포독성 T림프구가 있다",
+      "form": {
+        "condition": "T림프구를 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "T림프구"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "T림프구는 가슴샘에서 새로 만들어진다",
+      "why_wrong": "골수에서 만들어진 림프구가 가슴샘으로 옮겨 가 T림프구로 분화한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lym-differentiate"
+    },
+    {
+      "text": "B림프구도 항원제시세포를 거쳐야만 항원을 알아본다",
+      "why_wrong": "B림프구는 항원을 직접 알아본다. 제시가 필요한 쪽은 T림프구다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lym-recognize"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-adaptive-immunity"
+    },
+    {
+      "type": "next",
+      "target": "bio-cell-mediated-immunity",
+      "note": "T림프구가 맡는 쪽을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-humoral-immunity",
+      "note": "B림프구가 맡는 쪽을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antigen",
+      "note": "이 세포들이 알아보는 상대를 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    104,
+    105,
+    107,
+    125
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

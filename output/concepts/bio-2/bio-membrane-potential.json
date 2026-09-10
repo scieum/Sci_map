@@ -1,0 +1,116 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-membrane-potential",
+  "concept_key": "concept:membrane-potential",
+  "registry_status": "new",
+  "term": "막전위",
+  "notation": {
+    "hanja": "膜電位",
+    "hanja_gloss": "膜 꺼풀 막 · 電 번개 전 · 位 자리 위",
+    "english": "membrane potential"
+  },
+  "definition": "세포막을 사이에 두고 안쪽과 바깥쪽 사이에 생기는 전위차. 이온이 안팎에 고르지 않게 놓이고 이온마다 투과도가 달라 나타난다.",
+  "relations": [
+    {
+      "id": "rel-mp-cause",
+      "text": "이온이 막 안팎에 고르지 않게 놓이고 이온마다 막을 지나는 정도가 달라서 전위차가 생긴다",
+      "form": {
+        "condition": "세포막을 사이에 두고 이온이 나뉘어 있을 때",
+        "type": "causal",
+        "scope": "살아 있는 세포의 세포막"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mp-perm",
+      "text": "어떤 이온의 통로가 많이 열려 있을수록 그 이온이 막을 지나는 정도가 커진다",
+      "form": {
+        "condition": "같은 종류의 이온 통로를 셀 때",
+        "antecedent": {
+          "quantity": "열려 있는 이온 통로의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "그 이온의 막 투과도",
+          "direction": "증가"
+        },
+        "type": "direct",
+        "scope": "세포막의 이온 통로"
+      },
+      "invertible": true,
+      "invertible_reason": "열린 통로의 수가 늘 때 투과도가 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "어떤 이온의 통로가 많이 열려 있을수록 그 이온이 막을 지나는 정도가 작아진다"
+    },
+    {
+      "id": "rel-mp-lipid",
+      "text": "전하를 띤 이온은 인지질 이중층을 그대로 통과하지 못해 이온 통로를 거쳐야 막을 넘는다",
+      "form": {
+        "condition": "이온이 세포막을 넘으려 할 때",
+        "type": "conditional",
+        "scope": "전하를 띤 입자"
+      },
+      "invertible": false,
+      "invertible_reason": "통과 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "막전위는 세포 안쪽이 가진 전압 그 자체를 뜻한다",
+      "why_wrong": "막전위는 안쪽과 바깥쪽의 차이다. 어느 한쪽만 재서 얻는 값이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mp-cause"
+    },
+    {
+      "text": "이온은 세포막의 인지질 이중층을 자유롭게 드나든다",
+      "why_wrong": "전하를 띤 이온은 인지질 이중층을 통과하지 못하고 이온 통로로만 지나간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mp-lipid"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-neuron"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-ion-channel"
+    },
+    {
+      "type": "next",
+      "target": "bio-resting-potential",
+      "note": "자극이 없을 때의 값을 이어서 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    74,
+    81
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": true
+}

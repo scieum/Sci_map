@@ -1,0 +1,110 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-organization-of-nervous-system",
+  "concept_key": "concept:organization-of-nervous-system",
+  "registry_status": "new",
+  "term": "신경계의 구성",
+  "notation": {
+    "hanja": "神經系의 構成",
+    "hanja_gloss": "神 귀신 신 · 經 지날 경 · 系 이어맬 계 · 構 얽을 구 · 成 이룰 성",
+    "english": "organization of the nervous system"
+  },
+  "definition": "감각기관에서 정보를 받아 판단하고 반응기관에 명령을 보내는 몸의 신호 체계. 사람의 것은 중추신경계와 말초신경계로 짜여 있다.",
+  "relations": [
+    {
+      "id": "rel-ons-two",
+      "text": "사람의 신경계는 판단을 맡는 중추신경계와 몸 곳곳을 잇는 말초신경계로 나뉜다",
+      "form": {
+        "condition": "사람의 신경계를 크게 가를 때",
+        "type": "classification",
+        "scope": "사람의 신경계"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ons-roles",
+      "text": "중추신경계는 받아들인 정보를 통합해 명령을 내리고, 말초신경계는 그 정보와 명령을 실어 나른다",
+      "form": {
+        "condition": "두 갈래가 맡은 일을 견줄 때",
+        "type": "classification",
+        "scope": "사람의 신경계"
+      },
+      "invertible": true,
+      "invertible_reason": "판단하는 쪽과 실어 나르는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "말초신경계는 받아들인 정보를 통합해 명령을 내리고, 중추신경계는 그 정보와 명령을 실어 나른다"
+    },
+    {
+      "id": "rel-ons-loop",
+      "text": "감각기관에서 중추를 거쳐 반응기관에 이르는 한 바퀴를 지나야 자극이 반응으로 이어진다",
+      "form": {
+        "condition": "몸이 자극에 반응할 때",
+        "type": "conditional",
+        "scope": "중추를 거치는 반응 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어떤 반응을 할지 판단해 명령을 내리는 것은 말초신경계다",
+      "why_wrong": "판단과 명령은 중추신경계가 맡고, 말초신경계는 그 신호를 나르는 길이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ons-roles"
+    },
+    {
+      "text": "신경계는 몸 밖에서 온 자극만 다룬다",
+      "why_wrong": "체온이나 혈당량처럼 몸 안에서 생긴 변화도 신경계가 받아들여 조절한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ons-loop"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-neuron-classification-by-function"
+    },
+    {
+      "type": "next",
+      "target": "bio-central-nervous-system",
+      "note": "판단을 맡는 쪽을 자세히 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-peripheral-nervous-system",
+      "note": "신호를 실어 나르는 쪽을 자세히 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-1",
+  "pages": [
+    82,
+    87,
+    123
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

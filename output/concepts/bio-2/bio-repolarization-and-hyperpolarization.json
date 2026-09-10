@@ -1,0 +1,119 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-repolarization-and-hyperpolarization",
+  "concept_key": "concept:repolarization-and-hyperpolarization",
+  "registry_status": "new",
+  "term": "재분극과 과분극",
+  "aliases": [
+    "재분극",
+    "과분극"
+  ],
+  "notation": {
+    "hanja": "再分極과 過分極",
+    "hanja_gloss": "再 두 재 · 分 나눌 분 · 極 다할 극 · 過 지날 과 · 分 나눌 분 · 極 다할 극",
+    "english": "repolarization and hyperpolarization"
+  },
+  "definition": "Na⁺ 통로가 닫히고 K⁺ 통로가 열려 막전위가 내려가는 재분극과, K⁺ 통로가 늦게 닫혀 휴지전위 아래까지 내려가는 과분극.",
+  "relations": [
+    {
+      "id": "rel-rh-repol",
+      "text": "K⁺ 통로가 열려 K⁺이 세포 밖으로 나가면서 막전위가 내려가는 것을 재분극이라고 한다",
+      "form": {
+        "condition": "활동전위의 꼭대기를 지난 뒤",
+        "type": "causal",
+        "scope": "축삭돌기의 세포막"
+      },
+      "invertible": true,
+      "invertible_reason": "이온이 나가는 방향과 막전위가 내려가는 방향이 맞물려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "K⁺ 통로가 열려 K⁺이 세포 안으로 들어오면서 막전위가 올라가는 것을 재분극이라고 한다"
+    },
+    {
+      "id": "rel-rh-hyper",
+      "text": "열려 있던 K⁺ 통로가 천천히 닫히는 바람에 막전위가 휴지전위보다 더 내려가는 과분극이 나타난다",
+      "form": {
+        "condition": "재분극이 끝나 갈 무렵",
+        "type": "causal",
+        "scope": "활동전위의 마지막 단계"
+      },
+      "invertible": false,
+      "invertible_reason": "늦게 닫히는 데서 비롯한 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rh-refractory",
+      "text": "재분극이 일어나는 동안 그 부위에서는 새 활동전위가 생기지 않아 신호가 되돌아오지 못한다",
+      "form": {
+        "condition": "앞서 활동전위가 지나간 부위에서",
+        "type": "causal",
+        "scope": "축삭돌기의 전도"
+      },
+      "invertible": false,
+      "invertible_reason": "그 자리에서 일어나지 않는 일을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "과분극은 Na⁺이 세포 밖으로 빠져나가 일어난다",
+      "why_wrong": "과분극은 K⁺ 통로가 늦게 닫혀 K⁺이 더 빠져나가는 동안 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rh-hyper"
+    },
+    {
+      "text": "재분극이 끝나면 막전위가 곧바로 휴지전위에 멈춘다",
+      "why_wrong": "K⁺ 통로가 천천히 닫히므로 휴지전위보다 잠깐 더 내려갔다가 되돌아온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rh-hyper"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-depolarization"
+    },
+    {
+      "type": "next",
+      "target": "bio-action-potential",
+      "note": "올랐다 내려가는 그래프의 뒷부분이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ion-channel",
+      "note": "K⁺ 통로가 언제 열리고 닫히는지 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-nerve-impulse-conduction",
+      "note": "신호가 한 방향으로만 가는 까닭이 여기 있다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    75,
+    81,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

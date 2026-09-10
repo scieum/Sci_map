@@ -1,0 +1,428 @@
+{
+  "unit_id": "bio-3",
+  "generated_at": "2026-09-10T00:00:00+09:00",
+  "mode_run": ["curriculum", "relation"],
+  "curriculum": {
+    "checked": 56,
+    "standards_in_scope": [
+      { "code": "12생과03-01", "text": "염색체의 구조를 이해하고, DNA, 유전자의 관계를 설명할 수 있다.", "crosscheck": "일치" },
+      { "code": "12생과03-02", "text": "생식세포 형성과정을 체세포분열 과정과 비교하고, 생식세포 형성의 중요성을 생명의 연속성 및 다양성과 관련지어 추론할 수 있다.", "crosscheck": "일치" },
+      { "code": "12생과03-03", "text": "생물 진화의 원리를 이해하고, 생물 진화 연구의 다양한 사례를 조사하여 협력적으로 소통할 수 있다.", "crosscheck": "일치" },
+      { "code": "12생과03-04", "text": "생물의 분류 체계를 바탕으로 각 분류군의 차이를 이해하고 생물군을 분류 체계에 따라 설명할 수 있다.", "crosscheck": "일치" },
+      { "code": "12생과03-05", "text": "동물과 식물 분류군의 특징을 문 수준에서 이해하고, 생물의 유연관계를 계통수로 나타낼 수 있다.", "crosscheck": "일치" }
+    ],
+    "findings": [
+      {
+        "card_id": "bio-plant-kingdom",
+        "verdict": "retag",
+        "current": ["12생과03-05"],
+        "suggested": ["12생과03-04", "12생과03-05"],
+        "reason": "12생과03-05 전문은 '동물과 식물 분류군의 특징을 문 수준에서 이해하고' 로 층위를 문으로 못 박아 놓았는데, 이 카드는 계 수준의 카드다. 명제 넷 가운데 둘(rel-plk-autotroph 엽록체·독립영양, rel-plk-cell-wall 셀룰로스 세포벽 대 균계의 키틴질)은 계와 계를 가르는 특징이고, 근거도 교과서 163쪽 6계 표('셀룰로스 성분의 세포벽을 가지는 다세포 진핵생물로, 광합성을 하는 독립영양생물이다')다. 그 쪽은 중단원 04(생물의 분류체계)에 속하고 그 중단원 머리(158쪽)의 학습 목표는 '생물분류체계의 변화 과정을 설명할 수 있다 / 계와 역 수준에서 분류군의 차이점을 비교할 수 있다' 로 12생과03-04('생물의 분류 체계를 바탕으로 각 분류군의 차이를 이해하고')를 그대로 받는다. 나머지 둘(rel-plk-land 육상 적응, rel-plk-cuticle 큐티클층과 기공)은 167쪽 중단원 05 첫머리라 03-05 쪽이다. 곧 이 카드는 두 성취기준에 걸쳐 있는데 03-04 만 빠져 있다. 03-05 를 떼자는 것이 아니라 03-04 를 더하자는 것이다 — 카드가 pages 에 163 을 이미 적어 두고 있다.",
+        "prerequisites": ["concept:photosynthesis"]
+      },
+      {
+        "card_id": "bio-animal-kingdom",
+        "verdict": "retag",
+        "current": ["12생과03-05"],
+        "suggested": ["12생과03-04", "12생과03-05"],
+        "reason": "bio-plant-kingdom 과 한 묶음이다. rel-ank-heterotroph(종속영양)와 rel-ank-no-wall(세포벽 없음으로 식물·균류와 구별)은 계 수준의 대비이고 근거는 같은 163쪽 6계 표('세포벽이 없는 다세포 진핵생물로, 종속영양생물이다')다. rel-ank-nerve-muscle 도 같은 쪽이다. 문 수준으로 내려가는 것은 rel-ank-criteria(배엽 수·대칭성·원구의 운명·탈피 여부·체절과 척삭) 하나뿐이고 그것이 170쪽에서 온다. 03-05 만 붙어 있으면 이 카드가 왜 '계' 카드인지가 태그에서 지워진다. pages 에 163 이 이미 적혀 있다.",
+        "prerequisites": []
+      }
+    ],
+    "prerequisites_outside_unit": [
+      { "card_id": "bio-plant-kingdom", "keys": ["concept:photosynthesis"], "note": "rel-plk-autotroph 가 '엽록체에서 스스로 양분을 만들어 내므로' 로 광합성 개념 위에 선다. 카드에 아직 same 링크가 없다 — G 파이프라인에서 concept_key 로 걸 자리다." },
+      { "card_id": "bio-animal-kingdom", "keys": ["concept:photosynthesis"], "note": "rel-ank-heterotroph 의 '스스로 양분을 만들지 못해' 가 같은 개념의 부정 위에 선다." }
+    ],
+    "stats": { "ok": 54, "retag": 2, "out_of_scope": 0, "uncertain": 0 }
+  },
+  "relations": {
+    "checked": 194,
+    "cards_checked": 56,
+    "invertible_true_count": 52,
+    "misconceptions_checked": 112,
+    "findings": [
+      {
+        "card_id": "bio-chromosome",
+        "relation_id": "rel-chr-species-number",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제 본문이 '염색체 수는 종마다 정해져 있어 같은 종의 체세포끼리는 언제나 같은 수를 가진다' 로 '언제나' 를 달아 예외를 삼킨다. 예외를 막는 단서는 form.condition('정상 개체의 체세포를 볼 때')에만 있고 명제 문장에는 없는데, D1 이 쓰는 것은 명제 본문이다. 같은 단원의 bio-karyotype 이 rel-kar-detect 로 '핵형을 분석하면 염색체의 수나 모양이 어긋난 염색체이상과 성별을 알아낼 수 있다' 를 세워 두었으므로, 이 단원은 같은 종 안에서 체세포의 염색체 수가 어긋나는 경우가 있다는 것을 스스로 말하고 있다. 이 명제가 그대로 나가면 학생은 '같은 종이면 예외 없이 같은 수' 로 읽고 rel-kar-detect 와 충돌한다.",
+        "suggest": "form.condition 에만 있는 '정상 개체' 라는 한정을 명제 본문이 담도록 고친다. 문장은 C2 가 쓴다."
+      },
+      {
+        "card_id": "bio-allele",
+        "relation_id": "rel-all-homologous-vs-chromatid",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제 뒷절이 '두 염색분체 사이에서는 언제나 같다' 로 단정하는데 이 명제에는 단서가 본문에도 form.condition('복제를 마친 염색체를 볼 때')에도 form.scope('핵상이 2n인 체세포')에도 없다. 같은 사실을 말하는 짝 명제 bio-chromatid 의 rel-cht-identical 은 form.condition 에 '복제 과정에 오류가 없을 때' 라는 단서를 달아 두었다 — 한 단원 안에서 같은 주장에 단서를 다는 기준이 흔들린다. 더구나 같은 단원 bio-genetic-diversity 의 rel-gdv-combination 은 form.condition 에 '교차를 생각하지 않을 때' 를 적어 교차라는 변수를 따로 떼어 두고 있는데, 이 명제의 '언제나' 는 그 변수까지 삼킨다. invertible: true 라 '언제나' 가 붙은 이 문장이 그대로 OX 지문이 된다. 교차가 있을 때 두 염색분체가 실제로 어떻게 되는지는 진위 판단이라 여기서 확정하지 않는다 — 지적하는 것은 단서가 빠졌고 짝 명제와 기준이 어긋난다는 구조다.",
+        "suggest": "rel-cht-identical 과 같은 단서를 이 명제에도 달지, 단서를 명제 본문으로 올릴지 정한다. 정한 뒤에 invertible 을 다시 본다."
+      },
+      {
+        "card_id": "bio-animal-kingdom",
+        "relation_id": "rel-ank-nerve-muscle",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제 본문이 '신경과 근육이 발달해 환경이 바뀌면 능동적으로 움직여 대응한다' 로 동물 전체를 무제한으로 말하는데, 한정은 form.scope('대부분의 동물')에만 있다. 교과서도 이 자리에 한정을 달아 두었다 — 175쪽 단원 정리는 '대부분 조직과 기관이 잘 발달해 있고, 신경과 근육이 발달했다' 다. 더 무거운 것은 같은 카드가 스스로 반례를 들고 있다는 점이다. rel-ank-heterotroph 에 걸린 오개념의 why_wrong 이 '한자리에 붙어 사는 동물도 있다' 이고, 같은 단원 bio-porifera 의 정의는 해면동물을 '진정한 조직이 없는' 무리로 세운다. 카드 안에서 명제와 why_wrong 이 어긋난다.",
+        "suggest": "form.scope 에만 있는 '대부분' 을 명제 본문이 담도록 고친다."
+      },
+      {
+        "card_id": "bio-vestigial-organ",
+        "relation_id": "rel-ves-past-function",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "메인이 넘긴 항목 (3) 이다. definition 이 '조상에서는 제구실을 하였으나 지금은 퇴화해 자취만 남은 기관' 이고 명제는 '흔적기관은 지금은 제구실을 하지 않지만 조상에서는 기능하던 기관이 줄어든 것이다' 다. 앞뒤 차례만 바꾼 같은 문장이고 보탠 것이 없다. 원천은 교과서 152쪽 한 문장('또 사람의 꼬리뼈와 같이 과거에는 기능을 하였으나 현재에는 퇴화한 흔적기관도 진화의 증거이다')인데, 그 문장에서 나올 수 있는 명제는 '…도 진화의 증거이다' 하나이고 그것은 rel-ves-evidence 가 이미 맡았다. 곧 한 문장에서 명제 둘을 세운 것이 무리다 — 둘째 명제가 정의를 되풀이하는 자리로 밀려났다. 덧붙여 rel-ves-evidence 에 걸린 오개념('사람에게는 흔적기관이 없다')의 근거인 꼬리뼈도 명제가 아니라 definition 에만 있다.",
+        "suggest": "정의에서 '조상에서는 제구실을 하였으나' 를 빼고 명제가 맡게 하든지, 명제 하나를 지우고 카드를 명제 하나로 둘지 메인이 정한다. 꼬리뼈를 어느 층(정의/명제)이 맡을지도 함께 본다."
+      },
+      {
+        "card_id": "bio-six-kingdom-system",
+        "relation_id": "rel-six-members",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '생물 전체를 동물계·식물계·균계·원생생물계·고균계·세균계의 여섯 무리로 묶는 분류체계' 이고 명제는 '6계는 동물계·식물계·균계·원생생물계·고균계·세균계의 여섯을 이른다' 다. 여섯의 이름도 차례도 같고 보탠 것이 하나도 없다. 같은 카드의 나머지 셋(rel-six-criteria 가르는 근거, rel-six-history 2계에서 6계까지, rel-six-protist 원생생물계가 묶인 방식)은 모두 정의에 없는 것을 보탠다.",
+        "suggest": "이 명제를 지우거나 정의가 담지 않은 내용으로 갈음한다."
+      },
+      {
+        "card_id": "bio-genetic-drift",
+        "relation_id": "rel-drf-chance",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '적응의 유불리와 상관없이 우연한 사건 때문에 개체군의 대립유전자빈도가 달라지는 일' 이고 명제는 '유전적 부동은 형질의 유불리와 상관없이 우연이 개체군의 대립유전자빈도를 바꾸는 경우다' 다. '적응의 유불리' 를 '형질의 유불리' 로 바꾼 동의어 치환일 뿐 구조가 같다. 같은 카드의 rel-drf-small-population(개체군 크기와 영향의 크기)과 rel-drf-cases(자연재해·창시자 상황)는 정의에 없는 것을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 '적응의 유불리와 상관없이' 를 빼고 명제가 맡게 하든지, 명제를 갈음한다. 이 명제에 오개념 1건이 걸려 있으므로 손대면 연결도 함께 본다."
+      },
+      {
+        "card_id": "bio-mutation",
+        "relation_id": "rel-mut-new-allele",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 의 둘째 문장 '개체군에 없던 새로운 대립유전자가 여기에서 나온다' 와 명제 '돌연변이가 일어나면 그전에는 개체군에 없던 새로운 대립유전자가 나타난다' 가 같은 말이다. 보탠 것은 '그전에는' 이라는 부사뿐이다. [4] 이 명제에 걸린 오개념 '돌연변이는 모두 해롭다' 는 돌연변이의 유불리를 다투는데, 명제는 새 대립유전자가 생긴다는 것만 말하고 해로움도 이로움도 말하지 않는다. why_wrong 이 드는 근거('중립이거나 환경에 따라 유리한 것도 있다')는 이 카드의 어느 명제에도 없고, 그것을 받치는 명제는 bio-variation 의 rel-var-environment('같은 변이라도 환경이 달라지면 유리해지기도 하고 불리해지기도 한다')에 있다.",
+        "suggest": "정의에서 새 대립유전자의 발생을 빼고 명제가 맡게 하든지 명제를 갈음한다. 오개념은 rel-var-environment 쪽으로 옮길지, 돌연변이의 유불리를 다루는 명제를 이 카드에 세울지 정한다."
+      },
+      {
+        "card_id": "bio-mitosis",
+        "relation_id": "rel-mit-two-identical",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '모세포 하나가 나뉘어 유전정보가 같은 딸세포 둘을 만드는 분열' 이고 명제는 '체세포분열은 모세포 하나에서 유전정보가 같은 딸세포 두 개를 만든다' 다. 낱말까지 같고 보탠 것이 없다. 같은 카드의 rel-mit-anaphase 는 '갈라지는 것이 상동염색체가 아니라 염색분체' 라는 까닭을 보태 같은 결론을 말하면서도 이 지적을 받지 않는다 — 둘 가운데 학습 가치는 그쪽에 있다.",
+        "suggest": "정의에서 딸세포 수와 유전정보 동일을 빼고 명제가 맡게 하든지, 명제를 지운다."
+      },
+      {
+        "card_id": "bio-ploidy",
+        "relation_id": "rel-plo-notation",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '한 세포가 상동염색체를 쌍으로 가지는지 하나씩만 가지는지를 나타내는 표시. 각각 2n과 n으로 적는다' 이고 명제는 '상동염색체가 쌍으로 있으면 핵상을 2n으로, 하나씩만 있으면 n으로 적는다' 다. 정의의 두 문장을 한 문장으로 이어 붙였을 뿐 보탠 것이 없다. invertible: true 라 정의를 되풀이한 문장이 그대로 OX 로 나간다. 같은 카드의 rel-plo-vs-number('2n과 n은 상대적인 수를 가리키는 표시일 뿐 실제 개수까지 알려 주지는 않는다')는 정의에 없는 것을 보태 학습 가치가 그쪽에 있다.",
+        "suggest": "정의에서 2n·n 표기를 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-homologous-chromosome",
+        "relation_id": "rel-hom-parent-origin",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 의 둘째 문장 '한쪽은 아버지에게서, 다른 한쪽은 어머니에게서 온 것이다' 와 명제 '한 쌍의 상동염색체는 아버지에게서 하나, 어머니에게서 하나를 받아 짝이 된 것이다' 가 같은 말이다. 보탠 것이 없다. [4] 이 명제에 걸린 오개념 '핵상이 n인 생식세포에도 상동염색체가 쌍으로 들어 있다' 는 생식세포에 무엇이 들어가는가를 다투는데, 명제는 체세포에서 짝이 어디서 왔는가만 말한다. why_wrong 이 드는 근거('감수 1분열에서 상동염색체가 갈라지므로 생식세포에는 쌍 가운데 하나만 들어간다')는 이 카드의 어느 명제에도 없고 bio-meiosis 의 rel-mei-first-division 과 bio-ploidy 의 rel-plo-meiosis 에 있다.",
+        "suggest": "정의에서 부모 유래를 빼고 명제가 맡게 하든지 명제를 갈음한다. 오개념은 rel-mei-first-division 이나 rel-plo-meiosis 쪽으로 옮길지 정한다."
+      },
+      {
+        "card_id": "bio-gamete-formation-and-continuity-of-life",
+        "relation_id": "rel-gam-halved",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '염색체 수가 절반인 생식세포를 만들고 그 둘이 수정하기에, 세대가 바뀌어도 염색체 수가 그대로 이어지는 일' 이고 명제는 '생식세포의 염색체 수가 체세포의 절반이라야 수정으로 태어난 자손이 부모와 같은 수를 가진다' 다. 절반이라는 값도, 수정이라는 조건도, 수가 이어진다는 귀결도 셋 다 정의에 그대로 있다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-gam-constant('세대를 거듭해도 염색체 수가 일정한 까닭은 감수분열과 수정이 짝을 이루기 때문')도 같은 내용을 한 번 더 말하고 있어, 이 카드는 명제 셋 가운데 둘이 정의에서 나온다 — 명제를 고치는 것이 아니라 definition 을 줄이는 쪽이 답일 수 있으므로 카드 단위로 볼 자리다.",
+        "suggest": "정의를 줄이고 두 명제 가운데 어느 쪽이 이 내용을 맡을지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-overproduction-and-struggle-for-existence",
+        "relation_id": "rel-ovp-struggle",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '살아남을 수 있는 수보다 많은 자손이 태어나고, 자원이 모자라 그 사이에 경쟁이 벌어지는 일' 이고 명제는 '태어난 수가 살아남을 수 있는 수를 넘어서므로 개체들 사이에 생존을 위한 경쟁이 일어난다' 다. 두 절의 순서만 인과로 이어 붙였을 뿐 보탠 것이 없다. 같은 카드의 rel-ovp-potential(기하급수적 증가)·rel-ovp-limited(자원의 한정과 개체군 크기)·rel-ovp-before-selection(자연선택과의 앞뒤 차례)은 모두 정의에 없는 것을 보탠다.",
+        "suggest": "정의에서 경쟁의 발생을 빼고 명제가 맡게 하든지, 명제를 지운다. 이 명제에 오개념 2건이 걸려 있으므로 손대면 연결을 함께 본다."
+      },
+      {
+        "card_id": "bio-echinodermata",
+        "relation_id": "rel-ech-symmetry-shift",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '유생은 좌우 대칭이지만 성체는 방사 대칭이 되는 3배엽성 후구동물 무리' 이고 명제는 '유생일 때는 좌우 대칭이던 몸이 성체가 되면 방사 대칭으로 바뀐다' 다. 시기도 대칭도 방향도 같고 보탠 것이 없다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-ech-water-vascular(수관계가 호흡과 순환을 겸함)와 rel-ech-deuterostome(방사 대칭이어도 원구가 항문이 되므로 후구동물)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의에서 대칭의 전환을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-cnidaria",
+        "relation_id": "rel-cni-two-layers",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 첫 문장 '배엽 두 장으로 몸을 만들고 방사 대칭을 이루는 동물 무리' 와 명제 '자포동물은 배엽을 두 장만 만드는 2배엽성이고 몸이 방사 대칭이다' 가 같은 말이다. 보탠 것은 '2배엽성' 이라는 이름뿐인데 그것은 '배엽 두 장' 의 다른 이름이라 동의어 치환이다. 같은 카드의 rel-cni-cnidocyte(자세포가 먹이를 찔러 마취)와 rel-cni-lifestyle(해파리와 말미잘·히드라가 한 문 안에)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의에서 배엽 수와 대칭 가운데 한쪽을 빼고 명제가 맡게 하든지, 명제를 갈음한다. 이 명제에 오개념 1건이 걸려 있으므로 연결도 함께 본다."
+      },
+      {
+        "card_id": "bio-gymnosperm",
+        "relation_id": "rel-gym-no-ovary",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '씨방이 없어 밑씨가 겉으로 드러난 채 종자를 맺는 종자식물 무리' 이고 명제는 '씨방이 없으므로 밑씨가 감싸이지 않고 겉으로 드러나 있다' 다. 원인(씨방 없음)도 결과(밑씨가 드러남)도 정의에 그대로 있고, 보탠 것은 '감싸이지 않고' 라는 되풀이뿐이다. 교과서 168쪽도 한 문장('겉씨식물은 씨방이 없어 밑씨가 겉으로 드러나 있다')이라 정의와 명제가 같은 문장을 나눠 가진 꼴이다.",
+        "suggest": "정의에서 밑씨가 드러난다는 대목을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-angiosperm",
+        "relation_id": "rel-ang-ovary",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '밑씨가 씨방 속에 싸여 보호받는 종자식물 무리' 이고 명제는 '밑씨가 씨방 속에 들어 있어 바깥의 자극으로부터 보호를 받는다' 다. 보탠 것은 '바깥의 자극으로부터' 뿐인데 그것은 '보호받는' 에 이미 들어 있다. 짝이 되는 bio-gymnosperm 의 rel-gym-no-ovary 와 나란히 같은 지적을 받는다 — 두 카드가 마주 보는 만큼 기준을 맞출 자리다. 덧붙여 이 카드의 rel-ang-most-species('육상식물 가운데 종 수가 가장 많아 진화적으로 성공한 무리로 꼽힌다')도 definition 둘째 문장에 '진화적으로 성공한' 만 보탠 것이라 명제 셋 가운데 둘이 정의에서 나온다.",
+        "suggest": "정의를 줄이고 명제가 내용을 맡게 할지 명제를 갈음할지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-mollusca",
+        "relation_id": "rel-mol-three-parts",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '근육으로 된 발과 외투막, 내장낭으로 몸이 짜인 3배엽성 선구동물 무리' 이고 명제는 '연체동물의 몸은 근육으로 된 발, 몸을 감싸는 외투막, 기관이 들어 있는 내장낭으로 나뉜다' 다. 세 부분의 이름도 차례도 같고, 보탠 '몸을 감싸는'·'기관이 들어 있는' 은 외투막과 내장낭이라는 이름의 뜻풀이라 정의에 없는 것을 보탠 것이 아니다. 같은 카드의 rel-mol-gill(아가미·순환계·소화계)과 rel-mol-open-circulation(개방혈관계)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의에서 세 부분을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-allele-frequency",
+        "relation_id": "rel-afr-ratio",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 의 첫 문장 '개체군의 유전자풀에서 어떤 대립유전자가 차지하는 비율' 과 명제 '대립유전자빈도는 개체의 수가 아니라 유전자풀에서 그 대립유전자가 차지하는 비율로 센다' 가 같은 말이다. 보탠 '개체의 수가 아니라' 는 같은 주장의 부정형이라 정의를 읽으면 저절로 나온다. [4] 이 명제에 걸린 오개념 '대립유전자빈도가 높은 형질은 반드시 우성이다' 는 빈도와 우열의 관계를 다투는데, 명제는 세는 방법만 말한다. why_wrong 이 드는 근거('우성인지 열성인지와는 다른 문제다')를 받쳐 줄 명제가 이 카드에도 이 단원 56장 어디에도 없다 — '우성'·'열성' 이라는 낱말이 bio-3 의 명제에 한 번도 나오지 않는다.",
+        "suggest": "정의를 줄이고 명제가 맡게 할지 명제를 갈음할지 정한다. 우열이 이 단원의 명제로 서지 않는 이상 이 오개념은 걸 자리가 없다 — 지울지 다른 단원으로 넘길지 메인이 정한다."
+      },
+      {
+        "card_id": "bio-allele-frequency",
+        "relation_id": "rel-afr-evolution",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 둘째 문장 '진화는 이 값이 달라지는 것으로 나타난다' 와 명제 '개체군이 진화했는지는 세대를 거치며 대립유전자빈도가 달라졌는가로 확인한다' 가 같은 말이다. 보탠 것은 '세대를 거치며' 뿐이다. 더해서 같은 내용이 bio-gene-pool 의 rel-gpl-evolution('진화는 개체 하나가 바뀌는 일이 아니라 개체군의 유전자풀이 바뀌는 일로 정의한다')에도 한 번 더 서 있다.",
+        "suggest": "정의에서 진화의 판정 기준을 빼고 명제가 맡게 하든지, 진화의 정의를 어느 카드가 맡을지 bio-gene-pool 과 함께 정한다."
+      },
+      {
+        "card_id": "bio-gene-pool",
+        "relation_id": "rel-gpl-population-unit",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '한 개체군에 속한 모든 개체가 지닌 대립유전자를 통틀어 이르는 말' 이고 명제는 '유전자풀은 개체 하나가 아니라 개체군 전체를 단위로 삼아 모은 것이다' 다. '개체군 전체를 단위로 삼아 모은 것' 과 '한 개체군에 속한 모든 개체가 지닌 … 통틀어' 가 같은 말이고, 앞에 붙은 '개체 하나가 아니라' 는 그 주장의 부정형이라 정의를 읽으면 저절로 나온다. 이 단원에는 같은 꼴이 셋 더 있다 — rel-var-within-population·rel-all-same-locus·rel-hao-criterion. notes 에 따로 적었다.",
+        "suggest": "정의를 줄이고 명제가 맡게 할지, 명제를 정의가 담지 않은 내용으로 갈음할지 정한다."
+      },
+      {
+        "card_id": "bio-variation",
+        "relation_id": "rel-var-within-population",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '같은 개체군에 속한 개체들 사이에 나타나는 형질의 차이' 이고 명제는 '변이는 종과 종 사이의 차이가 아니라 한 개체군 안 개체들 사이의 차이를 가리킨다' 다. 뒷절이 정의 그대로이고 앞절은 그 부정형이다. 더해서 이 명제는 통합과학2 isci2-1 의 isci2-variation 에 있는 rel-var-within-species('변이는 서로 다른 종 사이의 차이가 아니라 같은 종 안에서 개체끼리 갈리는 차이를 가리킨다')와 사실상 같은 문장이고 두 카드는 같은 concept_key(concept:variation)를 쓴다 — 그쪽은 invertible: true 라 이미 OX 로 나가고 있다.",
+        "suggest": "정의를 줄이고 명제가 맡게 할지 명제를 갈음할지 정한다. isci2-variation 과의 겹침은 카드 경계의 문제이므로 메인이 어느 쪽이 맡을지 정한다."
+      },
+      {
+        "card_id": "bio-allele",
+        "relation_id": "rel-all-same-locus",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '상동염색체의 같은 자리를 차지하면서 한 형질을 같게도 다르게도 나타나게 하는 유전자들' 이고 명제는 '대립유전자는 서로 다른 형질을 맡은 유전자가 아니라 한 형질을 두고 같은 자리에 놓인 유전자다' 다. 뒷절('한 형질을 두고 같은 자리에')이 정의 그대로이고 앞절은 그 부정형이다. 이 명제에 걸린 오개념('대립유전자는 서로 다른 형질을 결정하는 두 유전자다')도 명제의 앞절을 그대로 뒤집은 것이라, 명제·정의·오개념 셋이 한 문장에서 나온 꼴이다.",
+        "suggest": "정의를 줄이고 명제가 맡게 할지 명제를 갈음할지 정한다. 오개념은 제자리이므로 명제를 고치면 연결을 다시 본다."
+      },
+      {
+        "card_id": "bio-homologous-and-analogous-organ",
+        "relation_id": "rel-hao-criterion",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '하는 일이 달라도 해부학적 기본 구조가 같은 기관이 상동기관이고, 구조는 달라도 하는 일이 같은 기관이 상사기관이다' 이고 명제는 '두 기관을 가르는 잣대는 하는 일이 무엇인가가 아니라 해부학적 기본 구조가 같은가이다' 다. 정의에서 잣대만 뽑아 부정형으로 다시 쓴 것이라 보탠 것이 없다. 같은 카드의 rel-hao-evidence(어느 쪽이 무엇의 증거인가)와 rel-hao-bat-dolphin(박쥐의 날개와 돌고래의 가슴지느러미)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의를 줄이고 명제가 잣대를 맡게 할지 명제를 갈음할지 정한다."
+      },
+      {
+        "card_id": "bio-animal-kingdom",
+        "relation_id": "rel-ank-no-wall",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '모든 동물은 조직과 기관이 잘 발달해 있다' 는 동물의 조직·기관 발달 정도를 다투는데, 명제는 '동물의 세포에는 세포벽이 없어 식물이나 균류와 세포 수준에서 구별된다' 로 세포벽만 말한다. 이 카드의 나머지 세 명제도 조직·기관의 발달을 말하지 않는다. why_wrong 이 드는 근거('해면동물처럼 진정한 조직이 발달하지 않은 무리도 있다')는 bio-porifera 의 rel-por-no-germ-layer('무배엽성이라 진정한 의미의 조직이 발달하지 않았다')에 있다.",
+        "suggest": "linked_relation 을 rel-por-no-germ-layer 쪽으로 옮기든지, 동물의 조직·기관 발달 정도를 다루는 명제를 이 카드에 세우든지 정한다."
+      },
+      {
+        "card_id": "bio-autosome-and-sex-chromosome",
+        "relation_id": "rel-asc-role",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '성염색체에는 성을 결정하는 유전자만 들어 있다' 는 성염색체에 무엇이 실려 있는가를 다투는데, 명제는 '상염색체는 남녀가 공통으로 가지므로 성별을 가리는 근거가 되지 못한다' 로 상염색체 쪽만 말한다. 주어가 다르다. why_wrong 이 드는 근거('성염색체에도 성 결정과 상관없는 형질의 유전자가 함께 놓여 있다')는 이 카드의 어느 명제에도 없고 이 단원 어디에도 없다 — bio-gene 의 rel-gene-locus('염색체 하나에도 수많은 유전자가 놓인다')가 가장 가깝지만 성염색체를 말하지 않는다.",
+        "suggest": "성염색체에 무엇이 실리는지 다루는 명제를 세워 거기에 걸든지, 오개념을 옮기든지 정한다."
+      },
+      {
+        "card_id": "bio-genetic-diversity",
+        "relation_id": "rel-gdv-combination",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '유전적 다양성은 한 개체 안에서 유전자가 얼마나 다양한지를 뜻한다' 는 다양성을 재는 단위(개체냐 종이냐)를 다투는데, 명제는 '상동염색체 쌍이 n개면 생식세포가 가질 수 있는 염색체 조합은 2의 n제곱 가지가 된다' 로 조합의 수만 셈한다. why_wrong 이 드는 근거('한 종을 이루는 개체들 사이에 유전자 구성이 얼마나 다른가를 뜻한다')는 이 카드의 definition 이지 명제가 아니다. 같은 계열의 오개념이 통합과학2 isci2-genetic-diversity 의 rel-gd-within-species('유전적 다양성은 종과 종 사이가 아니라 같은 종의 무리 안에서 따지는 다양성이다')에는 받쳐 줄 명제가 있다.",
+        "suggest": "다양성을 재는 단위를 다루는 명제를 이 카드에 세워 거기에 걸든지, 오개념을 옮기든지 정한다."
+      },
+      {
+        "card_id": "bio-mitotic-phase",
+        "relation_id": "rel-mtp-order",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 오개념 2건이 함께 걸려 있는데 한쪽이 어긋난다. '분열기에 DNA가 복제된다' 는 복제가 언제 일어나는가를 다투는데, 명제는 '분열기에서는 핵이 먼저 나뉘고 이어서 세포질이 나뉘어 딸세포 두 개가 완성된다' 로 나뉘는 차례만 말하고 복제를 말하지 않는다. why_wrong 이 드는 근거('복제는 앞선 간기의 S기에 끝난다')는 bio-interphase 의 rel-int-s-replication('DNA 복제는 간기의 S기에 끝나므로 이 시기를 지난 염색체는 두 염색분체를 갖게 된다')에 있고, 거의 같은 오개념('DNA 복제는 분열기에 일어난다')이 그쪽에 제자리로 걸려 있다. 다른 한쪽('핵이 둘로 나뉘면 그것으로 세포가 두 개가 된 것이다')은 이 명제의 반대편에 제대로 서 있다.",
+        "suggest": "두 카드에 흩어진 같은 계열 오개념을 rel-int-s-replication 한 자리로 모을지 메인이 정한다."
+      },
+      {
+        "card_id": "bio-interphase",
+        "relation_id": "rel-int-s-replication",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 카드는 오개념 2건을 모두 이 한 명제에 걸어 두었고 나머지 두 명제(rel-int-three-stages·rel-int-loose)에는 하나도 걸지 않았다. 둘 가운데 '간기는 세포가 아무 일도 하지 않고 쉬는 시기다' 는 간기 전체가 무엇을 하는가를 다투는데, 명제는 'DNA 복제는 간기의 S기에 끝나므로 …' 로 S기의 복제만 말한다. why_wrong 이 드는 근거의 앞절('간기에 세포는 자라고 물질을 만들며')은 명제가 아니라 definition('세포가 자라며 물질과 세포소기관을 만드는 시기')에 있다. 다른 한쪽('DNA 복제는 분열기에 일어난다')은 제자리다.",
+        "suggest": "'쉬는 시기' 오개념을 rel-int-loose 쪽으로 옮기든지, 간기에 세포가 하는 일을 다루는 명제를 세우든지 정한다."
+      },
+      {
+        "card_id": "bio-angiosperm",
+        "relation_id": "rel-ang-diversity",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '속씨식물은 모두 떡잎이 두 장이다' 는 떡잎의 수를 다투는데, 명제는 '꽃과 열매의 구조와 생식 과정이 매우 다양하고 동물이나 균류와 함께 사는 종이 많다' 로 떡잎을 말하지 않는다. why_wrong 이 드는 근거('벼나 밀처럼 떡잎이 한 장인 것도 속씨식물이다')는 이 카드의 어느 명제에도 이 단원 어디에도 없다 — '떡잎' 이라는 낱말이 bio-3 의 명제 194개에 한 번도 나오지 않는다. 교과서 168쪽에는 있으나(‘떡잎이 한 장인 벼, 밀, 강아지풀 등과 떡잎이 두 장인 콩, 무궁화, 민들레 등이 속한다’) 카드가 그것을 명제로 세우지 않았다.",
+        "suggest": "떡잎 수를 다루는 명제를 세워 거기에 걸든지, 오개념을 지우든지 정한다. 문 수준 아래(외떡잎·쌍떡잎)로 내려가는 것이 12생과03-05 의 '문 수준' 을 넘는지도 함께 본다."
+      },
+      {
+        "card_id": "bio-classification-criteria-of-plant",
+        "relation_id": "rel-cpl-first",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '관다발이 없는 식물도 뿌리·줄기·잎이 뚜렷하게 나뉜다' 는 기관의 분화를 다투는데, 명제는 '첫 갈래는 관다발의 유무여서 관다발이 없는 무리가 비관다발식물로 묶인다' 로 가르는 잣대만 말한다. why_wrong 이 드는 근거('비관다발식물은 기관이 분화되지 않아 뿌리 대신 헛뿌리를 가진다')는 bio-nonvascular-plant 의 rel-nvp-rhizoid('헛뿌리는 몸을 바닥에 붙드는 구실을 할 뿐 물을 빨아올리는 뿌리가 아니다')와 bio-seedless-vascular-plant 의 rel-svp-vascular('관다발을 갖추어 뿌리·줄기·잎의 구별이 뚜렷하고')에 있고, 거의 같은 오개념이 그쪽 rel-nvp-rhizoid 에 제자리로 걸려 있다.",
+        "suggest": "linked_relation 을 rel-nvp-rhizoid 쪽으로 옮기든지, 오개념을 지우든지 정한다."
+      },
+      {
+        "card_id": "bio-classification-criteria-of-animal",
+        "relation_id": "rel-can-molecular",
+        "verdict": "defect",
+        "checks": [5],
+        "reason": "이 카드의 definition 이 '동물을 가르는 잣대. 배엽이 몇 장 만들어지는가, 몸이 어떤 대칭인가, 원구가 무엇이 되는가를 차례로 묻는다' 로 잣대를 셋으로 닫아 놓았는데('차례로 묻는다'), 정작 카드 안에 넷째 잣대를 말하는 rel-can-molecular('최근에는 겉모습만이 아니라 DNA 염기서열을 근거로 동물의 계통을 밝힌다')가 서 있다. 카드가 자기 정의와 어긋난다. 더 무거운 것은 같은 단원 bio-animal-kingdom 의 rel-ank-criteria 가 잣대를 다섯으로 세어 놓았다는 점이다 — '동물은 배엽 수, 몸의 대칭성, 원구의 운명, 탈피 여부, 체절과 척삭의 유무로 나눈다'. '동물의 분류 기준' 이라는 표제를 단 카드가 셋만 담고, 표제가 '동물계' 인 카드가 다섯을 담는다. 근거인 교과서 170쪽은 여섯을 든다 — '배엽 수, 몸의 대칭성, 원구의 발달과 분화 정도, 탈피 여부, 체절의 유무, 척삭의 유무 등으로 분류할 수 있다. 최근에는 DNA 염기서열을 근거로 계통을 밝히고 있다'. 셋·다섯·여섯이 한 단원 안에 함께 있으면 학생이 어느 것을 외워야 하는지 갈린다.",
+        "suggest": "잣대의 목록을 어느 카드가 맡을지 정하고 정의와 명제의 수를 맞춘다. 탈피·체절·척삭이 뒤쪽 카드(rel-pdt-split·rel-ann-segments·rel-nem-molting·rel-cho-deuterostome-segment)에서 실제로 쓰이므로 잣대 카드가 그것을 빠뜨린 쪽이 문제다."
+      },
+      {
+        "card_id": "bio-seed-plant",
+        "relation_id": "rel-sdp-xylem",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "메인이 넘긴 항목 (1) 이고 concept-writer 가 스스로 진위 확인이 필요하다고 표시한 명제다. 명제는 '종자식물의 관다발은 체관과 물관으로 이루어져 헛물관을 가진 비종자 관다발식물과 구별된다' 이고 form.scope 는 '관다발의 구성' 이다. 교과서 서술은 168쪽 '종자식물은 체관과 물관으로 이루어진 관다발을 가지는 식물로' 와 167쪽 '비종자 관다발식물(양치식물문) 체관과 헛물관으로 이루어진 관다발을 가지는 식물로' 다 — 두 곳 모두 각 무리를 따로 서술할 뿐 물관과 헛물관을 **가르는 잣대로 세우지 않는다**. 카드가 교과서의 나란한 두 서술을 하나의 구별 명제로 묶으면서 교과서에 없는 '구별된다' 를 보탰고, 그 결과 form.scope 가 '관다발의 구성' 으로 넓어져 종자식물 전체(겉씨식물문 포함)를 덮는다. 겉씨식물이 실제로 무엇을 가지는지는 진위 판단이라 여기서 확정하지 않는다 — **진위 판단 필요, C8 검토 항목**이다. 구조로 지적할 수 있는 것은 둘이다: (가) 교과서에 없는 구별 관계를 명제가 세웠고, (나) scope 가 명제가 실제로 받칠 수 있는 범위(교과서가 서술한 두 무리의 대비)보다 넓다. 또 이 명제는 이 카드에서 유일하게 오개념이 걸리지 않은 명제다.",
+        "suggest": "명제를 구별 관계로 둘지 각 무리의 서술로 되돌릴지, scope 를 교과서 서술이 덮는 데까지 좁힐지 정한다. 겉씨식물의 물관부 구성은 C8 사람 게이트에서 확인할 항목으로 올린다."
+      },
+      {
+        "card_id": "bio-genetic-diversity",
+        "relation_id": "rel-gdv-adaptation",
+        "verdict": "uncertain",
+        "checks": [2],
+        "reason": "메인이 넘긴 항목 (2) 다. 검사 2 의 기준(뒤집은 문장이 반드시 거짓이 되는가)만 놓고 보면 invertible: true 는 서 있다 — 이 단원의 다른 정도 관계 다섯(rel-flw-difference·rel-drf-small-population·rel-rnk-scope·rel-evd-molecular·rel-afr-adaptive-rise)이 모두 같은 꼴로 true 이고, 통합과학2 isci2-genetic-diversity 의 rel-gd-extinction('유전적 다양성이 높은 무리일수록 … 멸종할 확률이 낮아진다')도 true 다. 기준을 이 명제에만 달리 적용할 근거는 없다. 걸리는 것은 판정이 아니라 뒤집은 문장의 생김새다. 명제 본문에 '살아남는 개체가 있어' 라는 기제 절이 들어 있는데 이 절은 다양성이 높다는 것에서 나온 것이라, 앞머리만 '낮은 종일수록' 으로 바꾼 inverted_text 는 '다양성이 낮은 종일수록 … 살아남는 개체가 있어 … 멸종하지 않는다' 가 되어 반대 주장이 아니라 앞뒤가 맞지 않는 문장이 된다. OX 로 나갔을 때 학생이 거짓이라고 고를 수는 있어도 무엇 때문에 거짓인지는 흐려진다. 교과서 145쪽은 이 기제 절 없이 '유전적 다양성이 높은 종은 급격한 환경 변화에도 잘 적응하므로 쉽게 멸종하지 않는다' 로만 적는다 — 기제 절은 카드가 보탠 것이다.",
+        "suggest": "invertible 은 그대로 두고, 뒤집었을 때 함께 뒤집혀야 할 기제 절을 명제 본문에 남길지 정한다. isci2-genetic-diversity 의 rel-gd-extinction 과 같은 사실이 두 과목에서 각각 OX 로 나가는 겹침도 함께 본다."
+      },
+      {
+        "card_id": "bio-annelida",
+        "relation_id": "rel-ann-closed-vs-open",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "명제가 '같은 선구동물이라도 환형동물은 폐쇄혈관계를, 연체동물과 절지동물은 개방혈관계를 가진다' 로 세 문을 통째로 묶고 form.scope 도 '선구동물의 순환계' 로 넓다. 교과서 172~173쪽은 각 문을 따로 서술하며 '연체동물문 … 개방혈관계를 갖는다' 로 적으므로 카드는 교과서를 따랐다. 다만 같은 단원 bio-mollusca 가 오개념 '껍데기가 없는 오징어와 문어는 연체동물이 아니다' 로 두족류를 카드 안에 끌어들여 놓았고, 두족류의 순환계가 이 일반화의 예외인지는 진위 문제다 — **진위 판단 필요, C8 검토 항목**이다. invertible: true 라 이 일반화가 그대로 OX 지문이 되므로 사람이 한 번 보는 편이 낫다고 판단해 올린다. 결함으로 확정하지 않는 까닭은 교과서 서술을 그대로 따랐고 단서를 숨긴 것이 아니기 때문이다.",
+        "suggest": "두족류를 예외로 다룰지 교과서 서술대로 둘지는 C8 에서 사람이 정한다. 예외로 둔다면 scope 를 좁힐 자리다."
+      },
+      {
+        "card_id": "bio-karyotype",
+        "relation_id": "rel-kar-species-sex",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "명제가 '핵형은 종이 다르면 다르고, 같은 종에서는 성별이 같으면 같다' 로 두 방향을 모두 단정한다. 뒷절의 단서('정상 개체')는 form.condition 에만 있고 본문에 없어 rel-chr-species-number 와 같은 구조인데, 이쪽은 앞절이 더 걸린다 — '종이 다르면 핵형도 다르다' 가 어느 범위까지 서는지는 진위 문제라 여기서 확정하지 않는다(**진위 판단 필요, C8 검토 항목**). 같은 카드의 rel-kar-detect 가 '염색체이상' 을 알아낼 수 있다고 말하므로 뒷절의 예외는 카드 안에 이미 있다.",
+        "suggest": "뒷절의 '정상 개체' 단서를 본문으로 올릴지 정하고, 앞절은 C8 검토 항목으로 올린다."
+      },
+      {
+        "card_id": "bio-natural-selection",
+        "relation_id": "rel-nat-frequency",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('적응에 유리한 형질을 나타내는 대립유전자는 세대를 거듭할수록 개체군에서 빈도가 높아진다')와 bio-allele-frequency 의 rel-afr-adaptive-rise('환경 적응에 유리한 형질의 대립유전자는 세대를 거듭할수록 빈도가 높아진다')는 낱말까지 사실상 같은 문장이고, 둘 다 invertible: true 이며 form.condition('그 환경이 이어질 때')과 form.scope('자연선택이 작용하는 개체군')까지 똑같다. inverted_text 도 '높아진다' 를 '낮아진다' 로 바꾼 같은 문장이라 D1 이 구별되지 않는 OX 를 둘 만든다. 원천도 한 문장이다 — 교과서 155쪽 자연선택 상자의 '그 결과 세대가 거듭될수록 해당 형질에 대한 대립유전자빈도가 높아진다'. 어느 카드가 맡을지는 카드 경계의 문제라 어느 한쪽을 결함으로 확정하지 않는다.",
+        "suggest": "이 사실을 어느 카드가 맡을지 정하고 다른 쪽에서는 명제를 갈음하거나 invertible 을 내린다."
+      },
+      {
+        "card_id": "bio-ploidy",
+        "relation_id": "rel-plo-meiosis",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('감수 1분열에서 상동염색체가 갈라지므로 핵상이 2n에서 n으로 줄어든다')와 bio-meiosis 의 rel-mei-first-division('감수 1분열에서는 접합했던 상동염색체가 갈라져 핵상이 2n에서 n으로 줄어든다')은 같은 문장이고 둘 다 invertible: true 이며 inverted_text 도 같은 주장이 된다. 여기에 bio-comparison-of-mitosis-and-meiosis 의 rel-cmp-ploidy('핵상은 체세포분열에서 2n 그대로지만 감수분열에서는 2n에서 n으로 바뀐다', invertible: true)까지 더하면 같은 사실이 이 단원에 세 번, 모두 OX 로 나갈 채비를 갖추고 서 있다. 어느 한 명제만 놓고 보면 결함이 아니고 어느 카드가 맡을지는 카드 경계의 문제라 uncertain 으로 올린다.",
+        "suggest": "핵상이 언제 절반이 되는지를 어느 카드가 맡을지 정하고, 나머지 카드에서는 invertible 을 내리든 명제를 갈음하든 한쪽으로 맞춘다."
+      },
+      {
+        "card_id": "bio-comparison-of-mitosis-and-meiosis",
+        "relation_id": "rel-cmp-bivalent",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('2가 염색체는 감수분열에서만 만들어지므로 두 분열을 가르는 표지가 된다')와 bio-bivalent 의 rel-biv-marker('2가 염색체가 보이면 그 분열은 감수분열이고, 체세포분열에서는 나타나지 않는다')는 같은 사실을 말한다. 뒤엣것은 invertible: true 라 OX 로 나가고 앞엣것은 false 라 나가지 않으므로 문항이 겹치지는 않지만, 같은 사실이 두 카드에서 따로 학습 항목이 된다. bio-mitosis 의 오개념('체세포분열에서도 상동염색체가 접합해 2가 염색체를 만든다')까지 세 카드가 같은 사실을 둘러싸고 있다. 비교 카드는 성격상 다른 카드의 내용을 모아 오는 것이 정상이라 결함으로 잘라 말하기 어렵다.",
+        "suggest": "비교 카드가 어디까지 모아 올지 기준을 정한다 — rel-cmp-count·rel-cmp-ploidy·rel-cmp-dna 도 같은 물음 아래 있다."
+      },
+      {
+        "card_id": "bio-evidence-of-evolution",
+        "relation_id": "rel-evd-molecular",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('진화적으로 가까운 종일수록 DNA 염기서열과 단백질의 아미노산서열 차이가 적다')와 bio-phylogenetic-relationship 의 rel-phr-sequence('같은 유전자나 단백질을 견주었을 때 서열이 닮을수록 두 종의 유연관계가 가깝다고 본다')는 같은 관계를 방향만 바꿔 말한 것이고 둘 다 invertible: true 다. 두 명제의 inverted_text 도 서로 같은 주장이 되어 D1 이 사실상 같은 OX 를 둘 만든다. 두 카드에 걸린 오개념도 같은 계열이다 — '아미노산서열의 차이가 큰 종일수록 유연관계가 가깝다' 와 '생김새가 비슷한 생물은 언제나 유연관계가 가깝다'. 어느 카드가 맡을지는 카드 경계의 문제라 uncertain 으로 올린다.",
+        "suggest": "서열과 유연관계의 맞물림을 어느 카드가 맡을지 정하고 다른 쪽을 갈음한다."
+      },
+      {
+        "card_id": "bio-seed-plant",
+        "relation_id": "rel-sdp-ovary",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('종자식물은 밑씨가 씨방에 싸여 있는가에 따라 속씨식물문과 겉씨식물문으로 갈린다')는 bio-classification-criteria-of-plant 의 rel-cpl-third('종자식물은 씨방이 있는가에 따라 속씨식물문과 겉씨식물문으로 갈린다')와 같은 문장이고, bio-gymnosperm 의 rel-gym-vs-angio('겉씨식물문과 속씨식물문을 가르는 자리는 꽃의 생김새가 아니라 씨방의 유무다')까지 더하면 같은 잣대가 세 카드에 서 있다. 셋 다 invertible: false 라 OX 로 나가지는 않으나 학습 항목은 셋이 된다. 잣대 카드와 대상 카드가 같은 잣대를 되풀이하는 것은 이 단원의 설계상 불가피한 면이 있어 결함으로 확정하지 않는다.",
+        "suggest": "잣대를 잣대 카드(bio-classification-criteria-of-plant)에 모을지, 각 무리 카드가 저마다 되풀이할지 기준을 정한다. 식물 쪽 다섯 카드(rel-cpl-first/second/third·rel-sdp-ovary·rel-gym-vs-angio) 전체에 같은 기준을 적용할 자리다."
+      },
+      {
+        "card_id": "bio-seedless-vascular-plant",
+        "relation_id": "rel-svp-spore-water",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('종자를 맺지 않고 포자로 번식하며 수정에 물이 있어야 해서 그늘지고 축축한 곳에 산다')와 bio-nonvascular-plant 의 rel-nvp-water-fertilize('포자로 번식하며 수정에 물이 있어야 해서 그늘지고 축축한 곳에 산다')는 앞머리 한 구절을 뺀 나머지가 글자까지 같다. 원천도 교과서의 나란한 두 문단(167쪽 '배우자의 수정에 물이 필요하다' / '배우자의 수정에 물이 필요하므로 그늘지고 습한 곳에 서식한다')이라 두 무리가 실제로 같은 성질을 가진다. 문제는 두 카드가 그 공통점을 각자 되풀이하면서 서로 다른 점을 앞세우지 않았다는 데 있다 — 두 카드의 links 는 이미 '포자로 번식하는 점은 같고 관다발에서 갈린다' 로 적어 두었으므로 명제 쪽에서도 그 갈림을 말할 수 있다.",
+        "suggest": "두 카드 가운데 한쪽이 공통점을 맡고 다른 쪽은 갈리는 점을 맡도록 정한다."
+      },
+      {
+        "card_id": "bio-classification-criteria-of-animal",
+        "relation_id": "rel-can-blastopore",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('3배엽성동물은 원구가 입이 되면 선구동물, 항문이 되면 후구동물로 갈린다')는 bio-protostome-and-deuterostome 의 definition('3배엽성동물 가운데 원구가 입이 되는 무리가 선구동물, 원구가 항문이 되는 무리가 후구동물이다')과 같은 문장이고, 그 카드의 rel-pdt-criterion('두 무리를 가르는 잣대는 발생 때 원구가 무엇으로 되는가 하나다')도 같은 내용을 다시 말한다. 이쪽은 invertible: true 라 OX 로 나가고 저쪽 둘은 false 다. 잣대 카드와 대상 카드가 같은 잣대를 나눠 갖는 꼴이라 rel-sdp-ovary 와 같은 물음이다.",
+        "suggest": "원구의 운명을 어느 카드가 맡을지 정한다. 식물 쪽 잣대 겹침과 같은 기준으로 처리한다."
+      },
+      {
+        "card_id": "bio-allele-frequency",
+        "relation_id": "rel-afr-four-factors",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('자연선택·돌연변이·유전적 부동·유전자흐름은 모두 대립유전자빈도를 바꾸는 요인이다')와 bio-gene-pool 의 rel-gpl-factors('유전자풀은 자연선택뿐 아니라 돌연변이·유전적 부동·유전자흐름에 의해서도 달라진다')는 같은 네 요인을 같은 차례로 늘어놓는다. 두 명제에 걸린 오개념도 같은 계열이다 — '무작위 교배만 일어나도 대립유전자빈도가 달라진다' 와 '유전자풀을 바꾸는 것은 자연선택뿐이다'. 원천은 교과서 155쪽 한 문장('유전자풀의 변화는 자연선택뿐만 아니라 … 돌연변이, 유전적 부동, 유전자흐름에 의해서도 일어난다')이다. 유전자풀과 대립유전자빈도가 다른 개념이라 완전한 되풀이는 아니어서 uncertain 으로 올린다.",
+        "suggest": "네 요인의 목록을 어느 카드가 맡을지 정하고 다른 쪽을 갈음한다."
+      }
+    ],
+    "stats": { "ok": 151, "defect": 31, "uncertain": 12 }
+  },
+  "notes": [
+    "verified_by 는 어느 명제·오개념에서도 읽기만 했다. 명제 194개와 오개념 112개 모두 pending 이고 이 보고서는 그 필드를 바꾸지 않는다. 카드 파일도 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 고치지 않았다.",
+
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 56장 전체에 --unit bio-3 로 돌렸다. 결과는 {\"cards\": 56, \"problems\": [], \"ok\": true} 로 지적이 한 건도 없다 — 태그 0개도, 실재하지 않는 코드도, 영역 불일치도, crosscheck 미확정 코드도 없다. 12생과03-01~03-05 다섯은 모두 crosscheck: 일치이고 영역 01·02 코드는 어느 카드에도 붙어 있지 않다. 이 보고서는 스크립트가 원리적으로 못 잡는 것만 다룬다.",
+
+    "★메인이 물은 동물 문 카드의 범위: 아홉 문 모두 12생과03-05 안에 든다. 성취기준 전문이 '동물과 식물 분류군의 특징을 **문 수준에서** 이해하고, 생물의 유연관계를 계통수로 나타낼 수 있다' 로 층위를 문으로 못 박아 놓았고, 교과서 166쪽 중단원 05 머리의 학습 목표도 '식물과 동물 분류군의 특징을 문 수준에서 설명할 수 있다 / 문 수준에서 동식물의 특징을 이용하여 계통수를 만들 수 있다' 로 같은 문장을 빌려 쓴다. 아홉 문(해면·자포·편형·연체·환형·선형·절지·극피·척삭)은 교과서 172~173쪽에서 문 단위로 서술되고 175쪽 단원 정리가 그 아홉을 그대로 다시 늘어놓는다. 이탈이 아니다. 층위가 걸리는 것은 오히려 문보다 **아래**로 내려간 자리들이다 — bio-chordata 의 rel-cho-notochord-timing(미삭·두삭·척추동물)과 bio-seedless-vascular-plant 의 rel-svp-groups(석송류·고사리류), bio-nonvascular-plant 의 rel-nvp-three-phyla(세 문). 앞의 둘은 문 아래이지만 교과서 본문(173쪽·167쪽)에 그대로 있고 03-05 가 요구하는 '분류군의 특징' 을 받치므로 이탈로 올리지 않았다. bio-angiosperm 의 오개념이 드는 떡잎 수(외떡잎·쌍떡잎)는 명제가 아니라 오개념에만 있어 findings 의 rel-ang-diversity 항목에서 따로 지적했다.",
+
+    "★메인이 물은 동물 아홉 문 카드의 되풀이 대조: **되풀이가 아니다.** 아홉 장을 나란히 놓고 명제 30개를 축별로 갈라 보았다. 해면=배엽 없음·조직 없음/여과섭식/유생과 성체의 생활, 자포=2배엽과 방사대칭/자세포/한 문 안의 두 생활형, 편형=입구 하나뿐인 소화관/소화관이 순환을 겸함/납작한 몸과 체표면 기체교환, 연체=발·외투막·내장낭/아가미와 기관 발달/개방혈관계, 환형=체절/피부 호흡과 서식지/폐쇄와 개방의 대비, 선형=체절 없는 원통형/큐티클과 탈피/호흡기·순환기 미발달, 절지=마디 다리와 외골격/탈피/호흡과 순환/종 수, 극피=대칭의 전환/수관계와 관족/후구동물, 척삭=배아기 세 특징/척삭이 남는 시기/후구와 체절/사람. 아홉 장 모두 각자의 교과서 문단(172~173쪽)에서 나왔고 서로 베낀 문장은 없다. 눈여겨볼 것은 교과서 쪽이다 — 교과서는 다섯 문단이 '3배엽성 선구동물로, 몸은 좌우 대칭이다' 로 똑같이 시작하는데, 카드는 그 상투구를 명제로 올리지 않고 definition 에 넣어 두었다. 되풀이를 피한 자리다. 축이 겹치는 대목은 셋인데 모두 교과서가 세 문단에서 각각 말하는 것이고 카드마다 다른 까닭을 달았다: (가) 체표면·피부 호흡 — 편형(몸이 납작해 어느 세포든 표면에 가깝다)·환형(축축한 피부, 서식지로 이어짐)·선형(호흡기와 순환기가 발달하지 않았다), (나) 탈피 — 선형(큐티클층)·절지(외골격), (다) 개방혈관계 — 연체·절지가 각각 말하고 환형이 그 둘을 폐쇄와 대비한다. 이 가운데 (다)의 대비 명제 rel-ann-closed-vs-open 만 uncertain 으로 올렸고 그 사유는 되풀이가 아니라 scope 다.",
+
+    "C5 판정 기준(cell-3 과 같게 유지): 카드가 붙인 코드의 성취기준 전문에 그 카드의 명제들이 말하는 대상이 들어 있으면 ok, 대상은 맞는데 코드가 다르거나 모자라면 retag, 어느 전문에도 대상이 없으면 이탈 후보로 보았다. **이탈(out_of_scope) 은 0건이다** — 설계서 §4.3 C5 의 C1 복귀 조건(2건 초과)에 걸리지 않는다. 억지로 태그를 맞춘 것이 아니라 이 단원은 교과서 중단원 다섯(01 염색체의 구조 → 03-01, 02 유전정보의 전달 → 03-02, 03 진화의 원리와 사례 → 03-03, 04 생물의 분류체계 → 03-04, 05 식물과 동물의 분류 → 03-05)이 성취기준 다섯과 거의 일대일로 맞물려 있어서다. 각 중단원 머리의 학습 목표가 성취기준 전문을 거의 그대로 빌려 쓴다(134·140·148·158·166쪽에서 확인). cell-3 에서 문제가 됐던 '교과서 본문에는 있는데 성취기준 전문에는 자리가 없는 중단원' 이 이 단원에는 없다.",
+
+    "C5 에서 살펴보고 범위 안으로 둔 것: (1) bio-karyotype·bio-autosome-and-sex-chromosome 은 핵형분석·염색체이상·성 결정을 다뤄 03-01 전문('염색체의 구조를 이해하고, DNA, 유전자의 관계를 설명할 수 있다')을 넘어 보일 수 있으나, 교과서 134쪽 중단원 01 머리의 두 번째 학습 목표가 '염색체의 종류, 대립유전자, 핵형을 설명할 수 있다' 이고 핵형이 '염색체의 수, 모양, 크기 등 염색체의 외형적인 특징'(136쪽)으로 정의되므로 '염색체의 구조' 안에 든다고 보았다. (2) bio-cell-cycle·bio-interphase·bio-mitotic-phase 는 세포주기 카드라 03-02 의 '생식세포 형성과정을 체세포분열 과정과 비교' 보다 앞자리에 있으나, 교과서 140쪽이 중단원 02 의 첫 소주제로 세포주기를 두고 같은 쪽에 03-02 의 문장을 학습 목표로 달아 두어 범위 안으로 두었다. (3) bio-nucleosome(role: context)은 뉴클레오솜·히스톤을 다루는데 134~135쪽 '염색체의 구조' 소주제 본문이고 03-01 정면이다. (4) bio-gene-pool·bio-allele-frequency·bio-genetic-drift·bio-gene-flow 는 집단유전 쪽으로 깊어 보이나 03-03('생물 진화의 원리를 이해하고')이 요구하는 내용이고 교과서 154~156쪽 중단원 03 의 세 번째 소주제다. 상위 과목 몫으로 넘어간 대목은 찾지 못했다.",
+
+    "C6 판정 기준(cell-1·cell-3 과 같게 유지) — 검사 3: 명제가 definition 의 구절을 되풀이하되 정의에 없는 귀결·수치·이름·기제를 보태면 ok, 보탬이 없거나 보탠 것이 같은 말의 다른 이름(동의어 치환)이면 defect 로 보았다. 이 기준으로 배엽이 만들어지는 자리(낭배)를 보탠 rel-por-no-germ-layer, 물을 빨아들이는 기제를 보탠 rel-por-filter, 관다발이 없어 생기는 제약을 보탠 rel-nvp-no-vascular, 갈라져 나오는 무리의 이름을 보탠 rel-cpl-first/second/third, 두 시기의 구실을 보탠 rel-ccy-two-parts, 세 시기의 구실과 차례를 보탠 rel-int-three-stages, 해부학적 세부를 보탠 rel-cho-three-traits, 균계라는 견줄 대상을 보탠 rel-plk-cell-wall, 다른 문과 가르는 자리라는 분류상의 구실을 보탠 rel-art-jointed-legs·rel-ann-segments 는 ok 로 두었다. 마지막 둘은 판단이 갈렸던 대목이다 — 정의가 이미 말한 특징을 '이것이 이 문을 가르는 자리다' 로 되받는 것을 보탬으로 볼지 아닐지가 문제였고, 문 수준 분류를 다루는 단원에서는 '어느 형질이 잣대가 되는가' 가 따로 배울 것이라고 보아 ok 로 두었다. 같은 이유로 rel-pdt-criterion 도 ok 다.",
+
+    "★C6 검사 3 에서 되풀이해 나온 꼴 — **'X는 A가 아니라 B다' 형**. rel-gpl-population-unit·rel-var-within-population·rel-all-same-locus·rel-hao-criterion·rel-afr-ratio 다섯이 모두 같은 틀이고, 다섯 다 B 자리에 definition 이 그대로 들어가 있고 A 자리는 그 부정형이다. 오개념이 A 를 그대로 받아 적은 경우도 있다(rel-all-same-locus 의 '대립유전자는 서로 다른 형질을 결정하는 두 유전자다'). 대비 자체는 학습에 쓸모가 있으므로 이 틀을 버리라는 뜻이 아니라, 대비의 B 자리에 정의가 아니라 정의에 없는 것을 놓아야 한다는 뜻이다. C2 가 한 자리에서 함께 볼 대목이라 묶어 적는다.",
+
+    "C6 검사 2(invertible): invertible: true 인 명제 52개를 하나씩 뒤집어 읽었다. **뒤집은 문장이 반드시 거짓이 되지 않는 것으로 확정한 명제는 없다.** form.type 이 classification 인데 invertible: true 인 명제는 rel-ann-closed-vs-open·rel-rep-basis·rel-rep-speed·rel-rep-variation·rel-asc-human-count·rel-asc-xy·rel-can-symmetry·rel-can-blastopore·rel-cmp-count·rel-cmp-ploidy·rel-pdt-lophotrochozoa·rel-plk-cell-wall·rel-plo-notation·rel-rnk-domain-top·rel-spe-usage·rel-thr-mapping 열여섯인데, 열여섯 모두 두 이름과 두 속성을 맞바꾸는 꼴이라 뒤집으면 반드시 거짓이 된다 — type 만 보면 오판정처럼 보이나 뒤집어 읽으면 ok 다. conditional 인데 true 인 것(rel-chr-condense·rel-biv-marker·rel-kar-metaphase·rel-int-three-stages·rel-mit-stages·rel-mtp-order·rel-mut-germline·rel-cpl-order·rel-nam-binomial·rel-nam-case·rel-phy-parsimony·rel-por-larva-adult·rel-ech-symmetry-shift·rel-ovp-before-selection·rel-rnk-order)도 마찬가지로 시기·차례·표기를 맞바꾸는 꼴이라 모두 ok 다. 가장 오래 붙들었던 것은 rel-evd-biogeography 다 — inverted_text 가 원인과 결과의 자리를 맞바꾼 문장('지역마다 분포하는 생물이 다르기 때문에 생물이 지리적으로 갈라져 따로 진화하게 되었다')이라 '반드시 거짓' 이 아니라 '앞뒤가 뒤집혀 말이 되지 않는다' 에 가깝다. 교과서 152쪽이 인과를 한 방향으로 못 박아 두었고('이는 생물이 지리적으로 격리된 이후 … 분화했기 때문이다') 이 단원의 다른 인과 뒤집기와 같은 기준이므로 ok 로 두었다. 반대 방향(뒤집으면 거짓인데 invertible 을 false 로 내린 것)은 cell-1·cell-3 과 같은 기준으로 결함으로 올리지 않았다 — 문항이 하나 줄어들 뿐 학생에게 오개념을 심지 않는다. 그런 자리는 rel-cmp-bivalent·rel-gym-vs-angio·rel-sdp-ovary·rel-mei-second-division 등 여럿이다. 진짜로 걸린 것은 invertible 판정 자체가 아니라 뒤집을 문장의 성격이다 — rel-plo-notation·rel-gam-halved·rel-ech-symmetry-shift 는 정의를 되풀이한 문장이 그대로 OX 로 나가고, rel-all-homologous-vs-chromatid·rel-chr-species-number 는 단서가 빠진 '언제나' 를 실은 채로 나간다.",
+
+    "★메인이 넘긴 항목 (2) rel-gdv-adaptation 의 invertible: true. findings 에 uncertain[2] 로 올렸다. 요약하면 판정은 그대로 두어도 된다 — 같은 단원의 정도 관계 다섯과 통합과학2 의 짝 명제가 모두 true 이므로 이 명제만 달리 볼 근거가 없다. 걸리는 것은 판정이 아니라 명제 본문에 들어간 기제 절('살아남는 개체가 있어')이 뒤집히지 않고 남아 inverted_text 를 반대 주장이 아니라 앞뒤가 맞지 않는 문장으로 만든다는 점이다. 그 절은 교과서 145쪽에 없고 카드가 보탠 것이다. '애매하면 false' 규칙의 경계라기보다 문장 짜임의 문제였다.",
+
+    "C6 검사 4 에서 되풀이해 나온 꼴은 cell-1·cell-3·chem 계열과 같다 — 반증 근거가 이 명제가 아니라 다른 카드의 명제나 교과서 본문, 심하면 이 단원 어디에도 없는 경우다(rel-ank-no-wall·rel-asc-role·rel-gdv-combination·rel-mtp-order·rel-int-s-replication·rel-ang-diversity·rel-cpl-first·rel-afr-ratio·rel-mut-new-allele·rel-hom-parent-origin). 그 가운데 rel-afr-ratio 와 rel-ang-diversity 는 무거운 쪽이다 — 반증에 쓰인 낱말('우성'·'열성', '떡잎')이 이 단원의 명제 194개에 **한 번도** 나오지 않아 오개념을 받쳐 줄 명제를 세울 자리부터 없다. 같은 오개념이 여러 카드에 흩어진 자리도 있다: 'DNA 복제는 분열기에' 계열이 bio-interphase(제자리)와 bio-mitotic-phase(어긋남)에, '기관이 분화되지 않는다' 계열이 bio-nonvascular-plant(제자리)와 bio-classification-criteria-of-plant(어긋남)에 있다. 두 카드에 사실상 같은 오개념이 각각 제자리로 걸린 자리도 있다 — bio-porifera 의 '해면은 움직이지 않으므로 식물이다' 와 bio-animal-kingdom 의 '해면이나 산호처럼 움직이지 않는 생물은 식물이다'. 둘 다 제자리라 결함으로 올리지 않았으나 D1 이 거의 같은 오답 지문을 둘 만든다.",
+
+    "C6 검사 5(카드 내 모순)로 확정한 결함은 한 건이다 — bio-classification-criteria-of-animal 의 definition 이 잣대를 셋으로 닫아 놓고 카드 안에 넷째 잣대를 말하는 명제를 두었고, 같은 단원 bio-animal-kingdom 은 다섯을 세며, 교과서 170쪽은 여섯을 든다. 가장 가까웠던 다른 자리는 bio-animal-kingdom 인데, rel-ank-nerve-muscle 이 동물이 능동적으로 움직인다고 무제한으로 말하는 한편 같은 카드 오개념의 why_wrong 은 '한자리에 붙어 사는 동물도 있다' 라고 적어 서로 어긋난다. 어긋나는 짝이 명제와 명제가 아니라 명제와 why_wrong 이고 원인이 scope 누락이라 검사 1 로 올렸다.",
+
+    "오개념 112개는 전부 source: llm 이다 — docs/misconceptions.yaml 이 concepts: [] 로 비어 있어 사전과 대조할 것이 없었다. 검사 4 는 명제와 오개념이 맞물리는지만 보았고, 오개념 자체가 실제로 학생에게 흔한 것인지는 대조하지 못했다. 그 대조를 했다고 적지 않는다. 112개 전부 C8 게이트에서 우선 검토 대상이다(misconceptions.yaml 머리말).",
+
+    "★단원 밖 겹침(G 파이프라인 소관, 이 보고서는 판단하지 않는다): bio-3 의 concept_key 넷이 통합과학 단원과 겹친다 — concept:gene(bio-gene ↔ isci1-3/isci1-gene), concept:genetic-diversity(bio-genetic-diversity ↔ isci2-1/isci2-genetic-diversity), concept:natural-selection(bio-natural-selection ↔ isci2-1/isci2-natural-selection), concept:variation(bio-variation ↔ isci2-1/isci2-variation). bio-3 카드 56장의 links 는 모두 단원 안을 가리키고 있어 이 넷에 same 링크가 걸려 있지 않다. 명제 층위에서 실제로 겹치는 것은 둘이다 — rel-var-within-population ↔ isci2 의 rel-var-within-species(사실상 같은 문장), rel-gdv-adaptation ↔ isci2 의 rel-gd-extinction(같은 사실, 둘 다 invertible: true). 앞엣것은 findings 의 rel-var-within-population 항목에, 뒤엣것은 rel-gdv-adaptation 항목에 적어 두었다. 어느 과목이 어느 층으로 맡을지는 G2·G3 와 메인이 정할 일이다.",
+
+    "★사전 관련 관찰(고치지 않았다, 제안만 적는다): 이 단원은 '계' 를 분류 단계(동물계·식물계·균계·6계)로 쓰는데, docs/homonyms.yaml 의 '계' 항목에는 열역학의 계 한 sense 만 등록돼 있고 reason 이 '태양계·생태계 등의 접미사. 접미사로 쓰인 것을 개념으로 잡지 않는다' 로 적혀 있다. 분류 단계의 계는 접미사가 아니라 그 자체가 개념이고(bio-taxonomic-rank 의 definition 이 '종·속·과·목·강·문·계로 이어지고'), 같은 단원 안에서 순환계·소화계·수관계 같은 접미사 용법과 섞여 나온다. 세 번째 sense 가 사전에 없다. 카드 56장은 모두 homonym_flag: false 이고 표제어로 '계' 를 쓴 카드는 없어 지금 당장 링크가 잘못 걸릴 자리는 없으나, G2 가 문자열로 후보를 모을 때 걸릴 자리다. 등록은 사람이 하는 일이므로 G3 사람 게이트로 올린다(CLAUDE.md §9-3).",
+
+    "선수 개념(curriculum.prerequisites_outside_unit)에 적은 concept_key 는 docs/concept_registry.yaml 에 이미 있는 키만 골랐다 — 이 단원이 기대는 개념 가운데 사전에 키가 있는 것은 concept:photosynthesis 하나뿐이다. DNA·뉴클레오타이드·히스톤 단백질·단백질·아미노산서열·세포벽·셀룰로스·키틴질·진핵세포·원핵세포·개체군·독립영양·종속영양·수정·발생·낭배·조직·기관은 사전에 키가 없어 적지 않았다. 새 키를 만드는 것은 G3 사람 게이트의 일이다. bio-3 카드 56장은 모두 registry_status: new 다.",
+
+    "<track>-facts 스킬 대조는 하지 못했다. .claude/skills 에 있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯이고 bio-facts 가 없다. 대조하지 못하고 넘어간 항목은 특히 이 셋이다 — (가) 겉씨식물의 물관부 구성(rel-sdp-xylem), (나) 두족류의 순환계(rel-ann-closed-vs-open), (다) 비관다발식물 세 문의 이름과 범위(rel-nvp-three-phyla). 셋 다 진위가 걸린 자리라 findings 에서 uncertain 으로 올리거나 손대지 않았고, 흉내 내지 않았다. 이 보고서가 교과서 원문(output/source/bio-3/text.jsonl)을 인용한 대목은 명제가 근거를 가졌는지 보기 위한 것이지 진위를 확정하기 위한 것이 아니다.",
+
+    "이 보고서는 curriculum 절과 relations 절을 함께 채웠다. output/validation/bio-3.report.json 에는 앞선 절이 없었으므로 병합할 것이 없었다."
+  ]
+}

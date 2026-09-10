@@ -1,0 +1,138 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-adaptive-immunity",
+  "concept_key": "concept:adaptive-immunity",
+  "registry_status": "new",
+  "term": "후천적 면역",
+  "aliases": [
+    "후천성면역",
+    "특이적 면역"
+  ],
+  "notation": {
+    "hanja": "後天的 免疫",
+    "hanja_gloss": "後 뒤 후 · 天 하늘 천 · 的 과녁 적 · 免 면할 면 · 疫 전염병 역",
+    "english": "adaptive immunity"
+  },
+  "definition": "특정 항원에 노출된 뒤에야 발달해 그 항원에만 듣는 방어작용. 특이적 면역이라고도 하며, 교과서 표기 '후천성면역'이 이 말이다.",
+  "relations": [
+    {
+      "id": "rel-ai-specific",
+      "text": "노출된 적이 있는 항원에만 듣기 때문에 특이적 면역이라는 다른 이름으로도 불린다",
+      "form": {
+        "condition": "여러 항원 가운데 어느 것에 반응하는지 볼 때",
+        "type": "conditional",
+        "scope": "후천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "이름이 붙은 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ai-time",
+      "text": "병원체에 노출된 뒤에야 발달하므로 처음 침입했을 때는 효과가 나타나기까지 시간이 걸린다",
+      "form": {
+        "condition": "항원이 처음 들어왔을 때",
+        "type": "causal",
+        "scope": "후천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "시간이 걸리는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ai-lymphocyte",
+      "text": "후천적 면역에서 중심 노릇을 하는 세포는 백혈구의 한 종류인 림프구다",
+      "form": {
+        "condition": "후천적 면역을 맡는 세포를 찾을 때",
+        "type": "classification",
+        "scope": "후천적 면역"
+      },
+      "invertible": false,
+      "invertible_reason": "맡는 세포를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ai-two",
+      "text": "후천적 면역은 T림프구가 감염된 세포를 없애는 세포성면역과 항체가 관여하는 체액성면역으로 나뉜다",
+      "form": {
+        "condition": "무엇이 항원을 처리하는지로 나눌 때",
+        "type": "classification",
+        "scope": "후천적 면역의 두 갈래"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "후천적 면역은 태어날 때부터 모든 병원체에 대해 갖춰져 있다",
+      "why_wrong": "병원체에 노출된 뒤에 그 항원에 맞춰 발달한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ai-time"
+    },
+    {
+      "text": "후천적 면역은 어떤 병원체가 들어오든 같은 방식으로 일어난다",
+      "why_wrong": "특정 항원에 대해서만 선택적으로 일어난다. 가리지 않는 쪽은 선천적 면역이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ai-specific"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-innate-immunity"
+    },
+    {
+      "type": "next",
+      "target": "bio-lymphocyte",
+      "note": "이 방어를 맡는 세포를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-cell-mediated-immunity",
+      "note": "감염된 세포를 없애는 쪽을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-humoral-immunity",
+      "note": "항체를 만들어 내는 쪽을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-antigen",
+      "note": "반응을 일으키는 상대가 무엇인지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    102,
+    104,
+    107
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

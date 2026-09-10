@@ -1,0 +1,112 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-neurotransmitter",
+  "concept_key": "concept:neurotransmitter",
+  "registry_status": "new",
+  "term": "신경전달물질",
+  "notation": {
+    "hanja": "神經傳達物質",
+    "hanja_gloss": "神 귀신 신 · 經 지날 경 · 傳 전할 전 · 達 통달할 달 · 物 물건 물 · 質 바탕 질",
+    "english": "neurotransmitter"
+  },
+  "definition": "축삭돌기 말단에서 시냅스틈으로 나와 이웃 세포에 신호를 넘기는 화학 물질. 아세틸콜린·노르에피네프린 등이 있다.",
+  "relations": [
+    {
+      "id": "rel-nt-chemical",
+      "text": "전기 신호는 시냅스틈을 건너지 못하므로 말단에서 화학 물질로 바뀌어 넘어간다",
+      "form": {
+        "condition": "신호가 세포와 세포 사이를 건널 때",
+        "type": "causal",
+        "scope": "신경세포 사이의 신호 전달"
+      },
+      "invertible": false,
+      "invertible_reason": "화학 물질이 필요한 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-receptor",
+      "text": "신경전달물질이 다음 세포의 수용체에 붙으면 그 세포의 막전위가 바뀐다",
+      "form": {
+        "condition": "신경전달물질이 방출된 뒤",
+        "type": "causal",
+        "scope": "시냅스후신경세포"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 일으키는 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-autonomic",
+      "text": "교감신경의 신경절이후 신경세포는 노르에피네프린을, 부교감신경의 신경절이후 신경세포는 아세틸콜린을 낸다",
+      "form": {
+        "condition": "자율신경 말단에서 나오는 물질을 견줄 때",
+        "type": "classification",
+        "scope": "자율신경계"
+      },
+      "invertible": true,
+      "invertible_reason": "두 신경과 물질의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교감신경의 신경절이후 신경세포는 아세틸콜린을, 부교감신경의 신경절이후 신경세포는 노르에피네프린을 낸다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신경전달물질은 혈액을 타고 온몸으로 퍼져 신호를 전한다",
+      "why_wrong": "혈액을 타고 도는 것은 호르몬이다. 신경전달물질은 좁은 시냅스틈만 건넌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nt-chemical"
+    },
+    {
+      "text": "모든 신경의 말단에서는 같은 신경전달물질이 나온다",
+      "why_wrong": "아세틸콜린·노르에피네프린처럼 여러 가지가 있고, 어느 신경인지에 따라 나오는 물질이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nt-autonomic"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-synaptic-transmission",
+      "note": "이 물질이 건너가는 과정을 이어서 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-autonomic-nervous-system",
+      "note": "교감·부교감이 내는 물질이 다르다"
+    },
+    {
+      "type": "related",
+      "target": "bio-drug-and-synaptic-transmission",
+      "note": "약물은 이 물질이 오가는 자리를 건드린다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-02"
+  ],
+  "topic_id": "bio-2-1-4",
+  "pages": [
+    78,
+    81,
+    87,
+    124
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

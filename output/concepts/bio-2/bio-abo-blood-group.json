@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-abo-blood-group",
+  "concept_key": "concept:abo-blood-group",
+  "registry_status": "new",
+  "term": "ABO식 혈액형",
+  "aliases": [
+    "응집원",
+    "응집소"
+  ],
+  "notation": {
+    "hanja": "ABO式 血液型",
+    "hanja_note": "'ABO'는 응집원의 이름을 딴 알파벳이라 한자로 옮기지 않는다",
+    "hanja_gloss": "式 법 식 · 血 피 혈 · 液 진 액 · 型 모형 형",
+    "english": "ABO blood group"
+  },
+  "definition": "적혈구 세포막의 응집원 A·B와 혈장의 응집소 α·β를 가지고 있는지에 따라 네 가지로 나눈 혈액형.",
+  "relations": [
+    {
+      "id": "rel-abo-where",
+      "text": "응집원은 적혈구의 세포막에 있고, 응집소는 혈장에 들어 있다",
+      "form": {
+        "condition": "두 물질이 있는 자리를 짚을 때",
+        "type": "classification",
+        "scope": "사람의 혈액"
+      },
+      "invertible": true,
+      "invertible_reason": "있는 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "응집원은 혈장에 들어 있고, 응집소는 적혈구의 세포막에 있다"
+    },
+    {
+      "id": "rel-abo-roles",
+      "text": "응집원은 항원 노릇을, 응집소는 항체 노릇을 한다",
+      "form": {
+        "condition": "혈액형을 항원항체반응으로 설명할 때",
+        "type": "classification",
+        "scope": "ABO식 혈액형"
+      },
+      "invertible": true,
+      "invertible_reason": "맡는 구실이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "응집원은 항체 노릇을, 응집소는 항원 노릇을 한다"
+    },
+    {
+      "id": "rel-abo-four",
+      "text": "응집원 A·B의 유무와 응집소 α·β의 유무를 짝지어 A형·B형·AB형·O형으로 가른다",
+      "form": {
+        "condition": "혈액형을 판정할 때",
+        "type": "classification",
+        "scope": "ABO식 혈액형"
+      },
+      "invertible": false,
+      "invertible_reason": "가르는 기준을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abo-pairs",
+      "text": "A형은 응집원 A와 응집소 β를, B형은 응집원 B와 응집소 α를 가진다",
+      "form": {
+        "condition": "한 사람의 혈액 안을 들여다볼 때",
+        "type": "classification",
+        "scope": "A형과 B형의 혈액"
+      },
+      "invertible": true,
+      "invertible_reason": "응집원과 응집소의 짝이 엇갈리게 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "A형은 응집원 A와 응집소 α를, B형은 응집원 B와 응집소 β를 가진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "A형인 사람의 혈장에는 응집소 α가 들어 있다",
+      "why_wrong": "A형은 응집원 A를 가지므로 응집소는 β를 가진다. 같은 짝은 함께 있을 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abo-pairs"
+    },
+    {
+      "text": "AB형은 응집소 α와 β를 모두 가지고 있다",
+      "why_wrong": "AB형은 응집원을 둘 다 가지는 대신 응집소는 갖지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abo-four"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-antigen-antibody-specificity"
+    },
+    {
+      "type": "next",
+      "target": "bio-blood-agglutination-and-typing",
+      "note": "이 짝이 만나면 무슨 일이 생기는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antigen",
+      "note": "응집원이 왜 항원인지 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-06"
+  ],
+  "topic_id": "bio-2-5-2",
+  "pages": [
+    109,
+    113
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

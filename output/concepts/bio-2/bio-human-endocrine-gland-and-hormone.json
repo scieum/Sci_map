@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-human-endocrine-gland-and-hormone",
+  "concept_key": "concept:human-endocrine-gland-and-hormone",
+  "registry_status": "new",
+  "term": "사람의 내분비샘과 호르몬",
+  "aliases": [
+    "뇌하수체",
+    "갑상샘",
+    "부신",
+    "이자"
+  ],
+  "notation": {
+    "hanja": "사람의 內分泌샘과 호르몬",
+    "hanja_gloss": "內 안 내 · 分 나눌 분 · 泌 분비할 비",
+    "english": "human endocrine glands and their hormones"
+  },
+  "definition": "시상하부·뇌하수체·갑상샘·부신·이자·생식샘처럼 사람 몸에 있는 내분비샘과 그 샘이 내보내는 호르몬을 짝지어 놓은 정리.",
+  "relations": [
+    {
+      "id": "rel-heg-top",
+      "text": "호르몬 분비를 조절하는 가장 위쪽 중추는 시상하부이며, 시상하부는 뇌하수체를 거쳐 다른 내분비샘을 움직인다",
+      "form": {
+        "condition": "호르몬 분비가 조절될 때",
+        "type": "causal",
+        "scope": "사람의 내분비계"
+      },
+      "invertible": false,
+      "invertible_reason": "위아래 관계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-heg-pairs",
+      "text": "타이록신은 갑상샘에서, 인슐린과 글루카곤은 이자에서, 에피네프린은 부신에서 나온다",
+      "form": {
+        "condition": "호르몬과 그것을 내는 샘을 짝지을 때",
+        "type": "classification",
+        "scope": "사람의 내분비샘"
+      },
+      "invertible": false,
+      "invertible_reason": "여러 짝을 늘어놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-heg-tsh",
+      "text": "뇌하수체에서 나온 갑상샘자극호르몬(TSH)이 갑상샘을 자극해 타이록신 분비를 늘린다",
+      "form": {
+        "condition": "TSH가 혈액으로 나왔을 때",
+        "type": "causal",
+        "scope": "뇌하수체와 갑상샘"
+      },
+      "invertible": true,
+      "invertible_reason": "자극하는 쪽과 자극받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "갑상샘에서 나온 타이록신이 뇌하수체를 자극해 갑상샘자극호르몬(TSH) 분비를 늘린다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "호르몬 분비를 총괄하는 가장 위쪽 중추는 대뇌다",
+      "why_wrong": "가장 위쪽 조절 중추는 사이뇌의 시상하부다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-heg-top"
+    },
+    {
+      "text": "인슐린은 간에서 만들어져 분비된다",
+      "why_wrong": "인슐린은 이자에서 분비된다. 간은 인슐린이 작용하는 곳이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-heg-pairs"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-hormone"
+    },
+    {
+      "type": "next",
+      "target": "bio-thyroxine",
+      "note": "갑상샘에서 나오는 호르몬을 자세히 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-insulin-and-glucagon",
+      "note": "이자에서 나오는 두 호르몬을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-antidiuretic-hormone",
+      "note": "뇌하수체에서 나오는 호르몬을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-diencephalon",
+      "note": "시상하부와 뇌하수체가 있는 자리를 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-1",
+  "pages": [
+    91,
+    97
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

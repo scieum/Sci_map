@@ -1,0 +1,148 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-osmotic-pressure-regulation",
+  "concept_key": "concept:osmotic-pressure-regulation",
+  "registry_status": "new",
+  "term": "체액의 삼투압 조절",
+  "aliases": [
+    "삼투압 조절"
+  ],
+  "notation": {
+    "hanja": "體液의 滲透壓 調節",
+    "hanja_gloss": "體 몸 체 · 液 진 액 · 滲 스밀 삼 · 透 사무칠 투 · 壓 누를 압 · 調 고를 조 · 節 마디 절",
+    "english": "regulation of body fluid osmotic pressure"
+  },
+  "definition": "체액 속 물과 무기염류의 양이 달라져 삼투압이 흔들릴 때, 갈증과 항이뇨호르몬으로 물의 섭취량과 배설량을 조절해 되돌리는 작용.",
+  "relations": [
+    {
+      "id": "rel-op-determined",
+      "text": "체액의 삼투압은 몸 안의 수분량과 무기염류의 양으로 정해진다",
+      "form": {
+        "condition": "체액의 상태를 따질 때",
+        "type": "conditional",
+        "scope": "사람의 체액"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 값을 정하는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-op-high",
+      "text": "짜게 먹거나 땀을 많이 흘려 삼투압이 높아지면 시상하부가 이를 감지해 갈증을 일으키고 ADH 분비를 늘린다",
+      "form": {
+        "condition": "체액의 삼투압이 정상보다 높아졌을 때",
+        "antecedent": {
+          "quantity": "체액의 삼투압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "ADH 분비량",
+          "direction": "증가"
+        },
+        "type": "causal",
+        "scope": "삼투압 조절"
+      },
+      "invertible": true,
+      "invertible_reason": "삼투압이 오를 때 분비량이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "짜게 먹거나 땀을 많이 흘려 삼투압이 낮아지면 시상하부가 이를 감지해 갈증을 일으키고 ADH 분비를 늘린다"
+    },
+    {
+      "id": "rel-op-urine",
+      "text": "ADH가 늘면 콩팥에서 물이 더 많이 재흡수되어 오줌양이 줄고 체액의 삼투압이 낮아진다",
+      "form": {
+        "condition": "ADH가 콩팥에 작용할 때",
+        "antecedent": {
+          "quantity": "물의 재흡수량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "오줌양",
+          "direction": "감소"
+        },
+        "type": "causal",
+        "scope": "콩팥에서의 물 재흡수"
+      },
+      "invertible": true,
+      "invertible_reason": "재흡수량과 오줌양이 서로 반대로 움직이므로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "ADH가 늘면 콩팥에서 물이 더 적게 재흡수되어 오줌양이 늘고 체액의 삼투압이 높아진다"
+    },
+    {
+      "id": "rel-op-low",
+      "text": "물을 많이 마셔 삼투압이 낮아지면 ADH 분비가 줄어 오줌으로 물이 더 많이 나간다",
+      "form": {
+        "condition": "체액의 삼투압이 정상보다 낮아졌을 때",
+        "type": "causal",
+        "scope": "삼투압 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "되돌리는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물을 많이 마시면 ADH가 늘어 오줌양이 줄어든다",
+      "why_wrong": "물을 많이 마시면 삼투압이 낮아져 ADH가 줄고, 오줌양은 늘어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-op-low"
+    },
+    {
+      "text": "콩팥에서 물의 재흡수량이 늘면 오줌양도 함께 늘어난다",
+      "why_wrong": "재흡수한 물은 몸으로 되돌아가므로 오줌양은 도리어 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-op-urine"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homeostasis"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-diencephalon"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-antidiuretic-hormone"
+    },
+    {
+      "type": "related",
+      "target": "bio-hormone",
+      "note": "호르몬이 온몸을 돌다 콩팥에 작용하는 본보기다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-3",
+  "pages": [
+    95,
+    97,
+    123
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

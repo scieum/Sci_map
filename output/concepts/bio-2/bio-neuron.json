@@ -1,0 +1,118 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-neuron",
+  "concept_key": "concept:neuron",
+  "registry_status": "new",
+  "term": "신경세포(뉴런)",
+  "aliases": [
+    "뉴런",
+    "신경 세포",
+    "신경세포"
+  ],
+  "notation": {
+    "hanja": "神經細胞",
+    "hanja_note": "'뉴런'은 영어 neuron 을 소리대로 옮긴 말이라 대응하는 한자가 없다",
+    "hanja_gloss": "神 귀신 신 · 經 지날 경 · 細 가늘 세 · 胞 세포 포",
+    "english": "neuron"
+  },
+  "definition": "몸 안팎의 자극을 받아 처리하고 명령을 내보내는 신경계를 이루는 세포. 신경세포체·가지돌기·축삭돌기 세 부위로 나뉜다.",
+  "relations": [
+    {
+      "id": "rel-neu-parts",
+      "text": "신호를 받아들이는 쪽은 가지돌기이고 다른 세포로 내보내는 쪽은 축삭돌기다",
+      "form": {
+        "condition": "한 신경세포 안에서 신호가 지나는 자리를 따질 때",
+        "type": "classification",
+        "scope": "신경세포의 세 부위"
+      },
+      "invertible": true,
+      "invertible_reason": "받는 쪽과 내보내는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신호를 받아들이는 쪽은 축삭돌기이고 다른 세포로 내보내는 쪽은 가지돌기다"
+    },
+    {
+      "id": "rel-neu-soma",
+      "text": "핵과 세포소기관이 모여 있는 신경세포체에서 세포호흡·단백질합성 같은 생명활동이 일어난다",
+      "form": {
+        "condition": "신경세포가 살아 있는 동안",
+        "type": "causal",
+        "scope": "신경세포체"
+      },
+      "invertible": false,
+      "invertible_reason": "부위가 맡은 일을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neu-branch",
+      "text": "가지돌기가 여럿이고 축삭돌기 끝이 갈라져 있어 신경세포 하나가 여러 세포와 신호를 주고받는다",
+      "form": {
+        "condition": "신경세포의 생김새를 신호의 수와 이어 볼 때",
+        "type": "causal",
+        "scope": "신경세포 하나"
+      },
+      "invertible": false,
+      "invertible_reason": "생김새에서 비롯한 성질을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신경세포는 축삭돌기로 신호를 받아들이고 가지돌기로 내보낸다",
+      "why_wrong": "받아들이는 쪽이 가지돌기, 내보내는 쪽이 축삭돌기다. 두 이름이 바뀌면 신호가 흐르는 방향도 뒤집힌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neu-parts"
+    },
+    {
+      "text": "신경세포 하나는 다른 신경세포 하나하고만 신호를 주고받는다",
+      "why_wrong": "가지돌기가 여러 개이고 축삭돌기 끝도 갈라져 있어 여러 세포와 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neu-branch"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-myelin-sheath",
+      "note": "축삭돌기를 감싸고 있는 것이 무엇인지 이어서 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-neuron-classification-by-function",
+      "note": "맡은 일에 따라 이 세포를 세 갈래로 나눠 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-membrane-potential",
+      "note": "이 세포의 막에서 전압 차이가 어떻게 생기는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-1",
+  "pages": [
+    72,
+    73,
+    81,
+    123
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

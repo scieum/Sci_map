@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-antigen-antibody-specificity",
+  "concept_key": "concept:antigen-antibody-specificity",
+  "registry_status": "new",
+  "term": "항원항체반응의 특이성",
+  "aliases": [
+    "항원항체반응"
+  ],
+  "notation": {
+    "hanja": "抗原抗體反應의 特異性",
+    "hanja_gloss": "抗 겨룰 항 · 原 근원 원 · 抗 겨룰 항 · 體 몸 체 · 反 돌이킬 반 · 應 응할 응 · 特 특별할 특 · 異 다를 이 · 性 성품 성",
+    "english": "specificity of the antigen-antibody reaction"
+  },
+  "definition": "항체가 제 결합 부위와 구조가 들어맞는 특정 항원하고만 결합하는 성질.",
+  "relations": [
+    {
+      "id": "rel-spec-structure",
+      "text": "항체는 종류마다 항원 결합 부위의 구조가 달라서 저마다 다른 항원과 짝을 이룬다",
+      "form": {
+        "condition": "여러 항체를 견줄 때",
+        "type": "causal",
+        "scope": "항체의 결합 부위"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 비롯한 성질을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spec-fit",
+      "text": "결합 부위의 구조가 들어맞아야 결합이 일어나고, 맞지 않으면 결합하지 않는다",
+      "form": {
+        "condition": "항체와 항원이 만났을 때",
+        "type": "conditional",
+        "scope": "항원항체반응"
+      },
+      "invertible": true,
+      "invertible_reason": "결합이 일어나는 조건이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합 부위의 구조가 맞지 않아야 결합이 일어나고, 들어맞으면 결합하지 않는다"
+    },
+    {
+      "id": "rel-spec-cross",
+      "text": "코로나바이러스에 결합하는 항체가 천연두바이러스에는 결합하지 않는 것이 이 성질 때문이다",
+      "form": {
+        "condition": "서로 다른 병원체를 같은 항체로 시험할 때",
+        "type": "conditional",
+        "scope": "항원항체반응의 특이성"
+      },
+      "invertible": false,
+      "invertible_reason": "보기를 든 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spec-use",
+      "text": "이 성질이 뚜렷해서 항체로 항원이 있는지 확인하거나 질병을 진단·치료하는 데 쓸 수 있다",
+      "form": {
+        "condition": "항체를 진단이나 치료에 쓸 때",
+        "type": "causal",
+        "scope": "항원항체반응의 활용"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항체는 여러 종류의 항원과 두루 결합한다",
+      "why_wrong": "결합 부위의 구조에 들어맞는 항원하고만 결합한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spec-fit"
+    },
+    {
+      "text": "항체가 어떤 항원과 결합하지 못하는 것은 그 항원이 너무 작기 때문이다",
+      "why_wrong": "크기가 아니라 결합 부위의 구조가 들어맞지 않기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spec-structure"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-antigen"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-antibody"
+    },
+    {
+      "type": "next",
+      "target": "bio-abo-blood-group",
+      "note": "이 성질이 혈액에서 어떻게 나타나는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-antigen-test",
+      "note": "이 성질을 쓰는 검사를 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-06"
+  ],
+  "topic_id": "bio-2-5-1",
+  "pages": [
+    108,
+    113
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

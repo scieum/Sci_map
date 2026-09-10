@@ -1,0 +1,137 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-humoral-immunity",
+  "concept_key": "concept:humoral-immunity",
+  "registry_status": "new",
+  "term": "체액성면역",
+  "aliases": [
+    "체액 면역"
+  ],
+  "notation": {
+    "hanja": "體液性免疫",
+    "hanja_gloss": "體 몸 체 · 液 진 액 · 性 성품 성 · 免 면할 면 · 疫 전염병 역",
+    "english": "humoral immunity"
+  },
+  "definition": "항원을 알아본 B림프구가 형질세포와 기억세포로 분화하고, 형질세포가 내놓은 항체가 항원을 처리하는 방어작용.",
+  "relations": [
+    {
+      "id": "rel-hi-differentiate",
+      "text": "특정 항원을 알아본 B림프구는 보조 T림프구의 도움을 받아 늘어나면서 형질세포와 기억세포로 분화한다",
+      "form": {
+        "condition": "항원을 알아본 뒤",
+        "type": "causal",
+        "scope": "체액성면역"
+      },
+      "invertible": false,
+      "invertible_reason": "분화 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hi-plasma-vs-memory",
+      "text": "항체를 만들어 내보내는 쪽은 형질세포이고, 항원의 특성을 기억해 두는 쪽은 기억세포다",
+      "form": {
+        "condition": "분화한 두 세포가 맡은 일을 견줄 때",
+        "type": "classification",
+        "scope": "B림프구가 분화한 세포"
+      },
+      "invertible": true,
+      "invertible_reason": "맡은 일이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "항체를 만들어 내보내는 쪽은 기억세포이고, 항원의 특성을 기억해 두는 쪽은 형질세포다"
+    },
+    {
+      "id": "rel-hi-antibody",
+      "text": "분비된 항체는 항원과 결합해 그 힘을 잃게 하거나 백혈구의 식세포작용을 북돋운다",
+      "form": {
+        "condition": "항체가 항원과 만났을 때",
+        "type": "causal",
+        "scope": "항체의 작용"
+      },
+      "invertible": false,
+      "invertible_reason": "작용을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hi-memory",
+      "text": "기억세포가 남아 있어 같은 항원을 다시 만나면 처음보다 훨씬 강한 체액성면역반응이 일어난다",
+      "form": {
+        "condition": "같은 항원이 다시 침입했을 때",
+        "type": "causal",
+        "scope": "체액성면역의 재반응"
+      },
+      "invertible": false,
+      "invertible_reason": "다시 만났을 때의 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기억세포가 항체를 직접 만들어 내보낸다",
+      "why_wrong": "항체를 만드는 쪽은 형질세포다. 기억세포는 항원을 기억해 두었다가 다음에 빠르게 분화한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hi-plasma-vs-memory"
+    },
+    {
+      "text": "B림프구도 항원제시세포가 내건 항원만 알아볼 수 있다",
+      "why_wrong": "B림프구는 항원을 직접 알아본다. 제시된 항원을 알아보는 쪽은 T림프구다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hi-differentiate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-adaptive-immunity"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-lymphocyte"
+    },
+    {
+      "type": "next",
+      "target": "bio-antibody",
+      "note": "형질세포가 만들어 내는 물질을 자세히 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-primary-and-secondary-immune-response",
+      "note": "처음과 두 번째 반응의 차이를 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cell-mediated-immunity",
+      "note": "같은 항원에 대한 다른 쪽 대응이다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    105,
+    106,
+    107
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

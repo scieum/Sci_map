@@ -1,0 +1,123 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ion-channel",
+  "concept_key": "concept:ion-channel",
+  "registry_status": "new",
+  "term": "이온 통로",
+  "aliases": [
+    "이온 채널",
+    "Na⁺ 통로",
+    "K⁺ 통로"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'이온'은 영어 ion 의 음차어라 표제어 전체에 대응하는 한자어가 없다. '통로(通路)'만 한자어다",
+    "english": "ion channel",
+    "symbol_display": "Na⁺ 통로 · K⁺ 통로",
+    "symbol_plain": "Na+ K+"
+  },
+  "definition": "세포막을 가로질러 놓여 정해진 이온만 지나가게 하는 막단백질 통로. 늘 열려 있는 것과 여닫힘이 조절되는 것이 있다.",
+  "relations": [
+    {
+      "id": "rel-ic-selective",
+      "text": "이온 통로는 아무 이온이나 지나가게 하지 않고 정해진 이온만 골라 통과시킨다",
+      "form": {
+        "condition": "이온이 통로를 지날 때",
+        "type": "conditional",
+        "scope": "세포막의 이온 통로"
+      },
+      "invertible": false,
+      "invertible_reason": "선택성을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ic-gated",
+      "text": "이온 통로에는 늘 열려 있는 것도 있고 막전위에 따라 열리고 닫히는 것도 있다",
+      "form": {
+        "condition": "여닫힘을 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "세포막의 이온 통로"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ic-passive",
+      "text": "통로를 지나는 이동에는 에너지가 들지 않으므로 이온은 농도가 높은 쪽에서 낮은 쪽으로 간다",
+      "form": {
+        "condition": "통로가 열려 있을 때",
+        "type": "conditional",
+        "scope": "이온 통로를 통한 이동"
+      },
+      "invertible": true,
+      "invertible_reason": "이동 방향이 농도 기울기를 따르도록 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "통로를 지나는 이동에는 에너지가 들지 않으므로 이온은 농도가 낮은 쪽에서 높은 쪽으로 간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이온 통로는 ATP를 써서 이온을 옮긴다",
+      "why_wrong": "에너지를 쓰는 쪽은 펌프다. 통로로 지나는 이동에는 에너지가 들지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ic-passive"
+    },
+    {
+      "text": "이온 통로 하나가 여러 종류의 이온을 모두 통과시킨다",
+      "why_wrong": "통로마다 지나가게 하는 이온이 정해져 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ic-selective"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-membrane-potential",
+      "note": "열린 통로의 수가 전압 차이를 정한다"
+    },
+    {
+      "type": "next",
+      "target": "bio-resting-potential",
+      "note": "자극이 없을 때 어떤 통로가 열려 있는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-sodium-potassium-pump",
+      "note": "에너지를 쓰는 쪽과 견주어 보면 차이가 또렷하다"
+    },
+    {
+      "type": "related",
+      "target": "bio-action-potential",
+      "note": "여닫히는 통로가 만드는 전위 변화를 함께 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-2",
+  "pages": [
+    74,
+    75,
+    81
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

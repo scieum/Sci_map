@@ -1,0 +1,133 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cerebral-cortex",
+  "concept_key": "concept:cerebral-cortex",
+  "registry_status": "new",
+  "term": "대뇌겉질",
+  "aliases": [
+    "대뇌 겉질",
+    "이마엽",
+    "마루엽",
+    "관자엽",
+    "뒤통수엽"
+  ],
+  "notation": {
+    "hanja": "大腦겉質",
+    "hanja_note": "'겉'은 고유어다. 옛 표기 '대뇌피질(大腦皮質)'은 표제어로 쓰지 않는다",
+    "hanja_gloss": "大 큰 대 · 腦 골 뇌 · 質 바탕 질",
+    "english": "cerebral cortex"
+  },
+  "definition": "대뇌 표면을 이루는 회색질 층. 자리에 따라 이마엽·마루엽·관자엽·뒤통수엽으로, 하는 일에 따라 감각·운동·연합 영역으로 갈린다.",
+  "relations": [
+    {
+      "id": "rel-cc-lobes",
+      "text": "대뇌겉질은 자리에 따라 이마엽·마루엽·관자엽·뒤통수엽으로 나뉜다",
+      "form": {
+        "condition": "겉질을 위치로 나눌 때",
+        "type": "classification",
+        "scope": "대뇌겉질"
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-areas",
+      "text": "감각 영역은 들어온 정보를 받고, 운동 영역은 골격근의 수의운동을 조절하며, 연합 영역은 판단과 기억을 맡는다",
+      "form": {
+        "condition": "겉질을 하는 일로 나눌 때",
+        "type": "classification",
+        "scope": "대뇌겉질의 기능 영역"
+      },
+      "invertible": false,
+      "invertible_reason": "각 영역이 맡은 일을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-gray",
+      "text": "신경세포체가 많이 모여 있어 겉질은 회색을 띠고, 축삭돌기가 많은 속질은 백색을 띤다",
+      "form": {
+        "condition": "색이 갈리는 까닭을 따질 때",
+        "type": "causal",
+        "scope": "대뇌의 겉질과 속질"
+      },
+      "invertible": true,
+      "invertible_reason": "무엇이 많은지와 무슨 색을 띠는지가 맞물려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "축삭돌기가 많이 모여 있어 겉질은 백색을 띠고, 신경세포체가 많은 속질은 회색을 띤다"
+    },
+    {
+      "id": "rel-cc-fmri",
+      "text": "어떤 일을 하는 동안 기능적 자기공명 영상에서 밝게 보이는 자리가 그 일을 맡는 겉질 부위다",
+      "form": {
+        "condition": "혈류가 활발한 곳을 영상으로 확인할 때",
+        "type": "conditional",
+        "scope": "기능적 자기공명 영상"
+      },
+      "invertible": false,
+      "invertible_reason": "읽는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "말하기나 읽기 같은 일은 대뇌 전체가 고르게 나눠 맡는다",
+      "why_wrong": "겉질에는 일을 나눠 맡는 영역이 있고, 무엇을 하느냐에 따라 활발해지는 자리가 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cc-fmri"
+    },
+    {
+      "text": "대뇌겉질이 백색으로 보이는 것은 신경세포체가 많기 때문이다",
+      "why_wrong": "신경세포체가 많은 겉질은 회색으로 보인다. 백색은 축삭돌기가 많은 속질 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cc-gray"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cerebrum"
+    },
+    {
+      "type": "related",
+      "target": "bio-somatic-nervous-system",
+      "note": "운동 영역이 내린 명령이 이 길을 따라 근육에 닿는다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cerebellum",
+      "note": "수의운동을 함께 다듬는 상대다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-03"
+  ],
+  "topic_id": "bio-2-2-2",
+  "pages": [
+    84,
+    85,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

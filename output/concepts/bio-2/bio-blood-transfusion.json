@@ -1,0 +1,124 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-blood-transfusion",
+  "concept_key": "concept:blood-transfusion",
+  "registry_status": "new",
+  "term": "수혈",
+  "notation": {
+    "hanja": "輸血",
+    "hanja_gloss": "輸 보낼 수 · 血 피 혈",
+    "english": "blood transfusion"
+  },
+  "definition": "환자에게 다른 사람의 혈액을 넣어 주는 일. 혈액형에 맞는 피를 써야 적혈구가 엉기는 일이 생기지 않는다.",
+  "relations": [
+    {
+      "id": "rel-tf-match",
+      "text": "같은 혈액형끼리 수혈하면 응집반응이 일어나지 않지만, 다른 혈액형끼리는 일어날 수 있다",
+      "form": {
+        "condition": "수혈할 혈액을 고를 때",
+        "type": "conditional",
+        "scope": "ABO식 혈액형을 고려한 수혈"
+      },
+      "invertible": true,
+      "invertible_reason": "안전한 쪽과 위험한 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다른 혈액형끼리 수혈하면 응집반응이 일어나지 않지만, 같은 혈액형끼리는 일어날 수 있다"
+    },
+    {
+      "id": "rel-tf-risk",
+      "text": "수혈한 혈액에서 응집반응이 일어나면 엉긴 적혈구가 혈관을 막아 환자의 생명이 위험해질 수 있다",
+      "form": {
+        "condition": "혈액형이 맞지 않는 피를 넣었을 때",
+        "type": "causal",
+        "scope": "수혈"
+      },
+      "invertible": false,
+      "invertible_reason": "위험이 생기는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-check",
+      "text": "그래서 수혈에 앞서 혈액형을 판정하는 일이 반드시 필요하다",
+      "form": {
+        "condition": "수혈을 준비할 때",
+        "type": "causal",
+        "scope": "수혈 전 검사"
+      },
+      "invertible": false,
+      "invertible_reason": "필요한 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-emergency",
+      "text": "출혈이 심한 응급 상황에서는 혈액형 검사 결과가 나오기 전에 O형 혈액을 소량 수혈하기도 한다",
+      "form": {
+        "condition": "검사 결과를 기다릴 수 없을 때",
+        "type": "conditional",
+        "scope": "응급 상황의 수혈"
+      },
+      "invertible": false,
+      "invertible_reason": "예외를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양만 적으면 어떤 혈액형이든 서로 수혈할 수 있다",
+      "why_wrong": "응집원과 응집소가 짝을 이루면 엉김이 일어난다. 그래서 혈액형을 맞춰야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tf-match"
+    },
+    {
+      "text": "수혈에서 문제가 되는 것은 넣어 주는 혈액의 양뿐이다",
+      "why_wrong": "양뿐 아니라 응집원과 응집소의 짝, 곧 혈액형이 맞는지가 중요하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tf-risk"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-blood-agglutination-and-typing"
+    },
+    {
+      "type": "related",
+      "target": "bio-abo-blood-group",
+      "note": "어떤 짝이 위험한지 표로 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antigen-antibody-specificity",
+      "note": "엉김의 바탕이 되는 성질이다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-06"
+  ],
+  "topic_id": "bio-2-5-2",
+  "pages": [
+    109,
+    110
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

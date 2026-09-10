@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-physical-barrier-of-skin-and-mucosa",
+  "concept_key": "concept:physical-barrier-of-skin-and-mucosa",
+  "registry_status": "new",
+  "term": "피부와 점막의 방어벽",
+  "aliases": [
+    "표면 방어벽",
+    "라이소자임"
+  ],
+  "notation": {
+    "hanja": "皮膚와 粘膜의 防禦壁",
+    "hanja_gloss": "皮 가죽 피 · 膚 살갗 부 · 粘 붙을 점 · 膜 꺼풀 막 · 防 막을 방 · 禦 막을 어 · 壁 벽 벽",
+    "english": "physical barrier of skin and mucosa"
+  },
+  "definition": "병원체가 몸 안으로 들어오지 못하게 막는 몸 표면의 첫 방어. 피부의 각질층, 점막의 점액, 점액 속 라이소자임이 맡는다.",
+  "relations": [
+    {
+      "id": "rel-bar-skin-vs-mucosa",
+      "text": "피부는 각질층으로 덮인 표면이고, 눈·입안·소화관처럼 각질층이 없는 표면은 점막이다",
+      "form": {
+        "condition": "몸 표면을 두 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "몸의 바깥 표면과 안쪽 표면"
+      },
+      "invertible": true,
+      "invertible_reason": "각질층이 있는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "피부는 각질층이 없는 표면이고, 눈·입안·소화관처럼 각질층으로 덮인 표면은 점막이다"
+    },
+    {
+      "id": "rel-bar-keratin",
+      "text": "피부의 각질층은 병원체가 뚫고 지나가기 어려운 짜임이어서 물리적인 벽이 된다",
+      "form": {
+        "condition": "병원체가 몸 표면에 닿았을 때",
+        "type": "causal",
+        "scope": "피부의 표면 방어"
+      },
+      "invertible": false,
+      "invertible_reason": "막는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bar-lysozyme",
+      "text": "침·눈물·콧물의 점액에 든 라이소자임은 세균의 세포벽을 분해해 침입을 막는 데 보탬이 된다",
+      "form": {
+        "condition": "점액이 병원체와 닿을 때",
+        "type": "causal",
+        "scope": "점막의 표면 방어"
+      },
+      "invertible": false,
+      "invertible_reason": "작용을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bar-wound",
+      "text": "피부에 상처가 나면 그 자리로 병원체가 들어올 수 있어 표면 방어가 뚫린다",
+      "form": {
+        "condition": "피부가 손상되었을 때",
+        "type": "conditional",
+        "scope": "피부의 표면 방어"
+      },
+      "invertible": false,
+      "invertible_reason": "뚫리는 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "점막에도 각질층이 있어 피부보다 튼튼하다",
+      "why_wrong": "점막에는 각질층이 없다. 대신 점액과 라이소자임이 병원체를 막는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bar-skin-vs-mucosa"
+    },
+    {
+      "text": "피부는 병원체의 종류를 알아보고 그에 맞춰 막는다",
+      "why_wrong": "피부는 종류를 가리지 않고 막는 선천적 면역의 방어벽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bar-keratin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-innate-immunity"
+    },
+    {
+      "type": "related",
+      "target": "bio-phagocytosis",
+      "note": "방어벽이 뚫린 뒤 몸 안에서 일어나는 일을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-inflammatory-response",
+      "note": "상처 자리에서 이어지는 반응을 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    102,
+    106
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

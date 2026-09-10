@@ -1,0 +1,108 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-target-cell",
+  "concept_key": "concept:target-cell",
+  "registry_status": "new",
+  "term": "표적세포",
+  "notation": {
+    "hanja": "標的細胞",
+    "hanja_gloss": "標 표할 표 · 的 과녁 적 · 細 가늘 세 · 胞 세포 포",
+    "english": "target cell"
+  },
+  "definition": "어떤 호르몬에 반응을 나타내는 세포. 혈액을 타고 온몸을 돌던 호르몬이 이 세포에서만 작용을 일으킨다.",
+  "relations": [
+    {
+      "id": "rel-tc-selective",
+      "text": "호르몬은 온몸을 돌아도 그 호르몬의 표적세포에서만 반응을 일으킨다",
+      "form": {
+        "condition": "호르몬이 혈액을 따라 운반될 때",
+        "type": "conditional",
+        "scope": "호르몬의 작용"
+      },
+      "invertible": true,
+      "invertible_reason": "퍼지는 범위와 반응하는 범위가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "호르몬은 표적세포에만 운반되지만 반응은 온몸의 세포에서 일어난다"
+    },
+    {
+      "id": "rel-tc-different",
+      "text": "호르몬의 종류가 다르면 그에 반응하는 표적세포도 다르다",
+      "form": {
+        "condition": "여러 호르몬이 함께 혈액을 돌 때",
+        "type": "conditional",
+        "scope": "사람의 내분비계"
+      },
+      "invertible": false,
+      "invertible_reason": "짝이 달라진다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tc-sensitive",
+      "text": "혈액 속 농도가 매우 낮아도 표적세포에서는 반응이 나타난다",
+      "form": {
+        "condition": "호르몬이 표적세포에 닿았을 때",
+        "type": "conditional",
+        "scope": "표적세포"
+      },
+      "invertible": false,
+      "invertible_reason": "민감함을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혈액이 닿는 모든 세포가 호르몬에 반응한다",
+      "why_wrong": "반응은 그 호르몬의 표적세포에서만 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tc-selective"
+    },
+    {
+      "text": "표적세포는 호르몬의 종류와 상관없이 늘 같은 세포다",
+      "why_wrong": "호르몬마다 표적세포가 다르다. 그래서 호르몬마다 조절하는 기관이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tc-different"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-hormone"
+    },
+    {
+      "type": "related",
+      "target": "bio-endocrine-and-exocrine-gland",
+      "note": "호르몬이 어디에서 나오는지 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-human-endocrine-gland-and-hormone",
+      "note": "호르몬마다 어디에 작용하는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-1",
+  "pages": [
+    90
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,117 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-myelinated-and-unmyelinated-nerve",
+  "concept_key": "concept:myelinated-and-unmyelinated-nerve",
+  "registry_status": "new",
+  "term": "말이집신경과 민말이집신경",
+  "aliases": [
+    "말이집신경",
+    "민말이집신경",
+    "유수신경",
+    "무수신경"
+  ],
+  "notation": {
+    "hanja": "말이집神經과 민말이집神經",
+    "hanja_gloss": "神 귀신 신 · 經 지날 경 · 神 귀신 신 · 經 지날 경",
+    "english": "myelinated and unmyelinated nerves"
+  },
+  "definition": "축삭돌기가 말이집에 싸여 있는지 아닌지를 기준으로 갈라 놓은 신경세포의 두 갈래.",
+  "relations": [
+    {
+      "id": "rel-mun-split",
+      "text": "축삭돌기가 말이집에 싸여 있으면 말이집신경, 싸여 있지 않으면 민말이집신경이다",
+      "form": {
+        "condition": "말이집의 유무를 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "신경세포의 축삭돌기"
+      },
+      "invertible": true,
+      "invertible_reason": "덮인 쪽과 덮이지 않은 쪽의 이름이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "축삭돌기가 말이집에 싸여 있으면 민말이집신경, 싸여 있지 않으면 말이집신경이다"
+    },
+    {
+      "id": "rel-mun-where",
+      "text": "민말이집신경에서는 활동전위가 막을 따라 이어서 생기고, 말이집신경에서는 랑비에결절에서만 건너뛰어 생긴다",
+      "form": {
+        "condition": "활동전위가 생기는 자리를 견줄 때",
+        "type": "classification",
+        "scope": "두 신경의 전도 방식"
+      },
+      "invertible": true,
+      "invertible_reason": "이어서 생기는 쪽과 건너뛰는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "민말이집신경에서는 활동전위가 랑비에결절에서만 건너뛰어 생기고, 말이집신경에서는 막을 따라 이어서 생긴다"
+    },
+    {
+      "id": "rel-mun-speed",
+      "text": "굵기가 비슷하다면 말이집신경 쪽이 민말이집신경보다 신호가 더 빨리 전도된다",
+      "form": {
+        "condition": "두 신경의 전도 속도를 견줄 때",
+        "type": "conditional",
+        "scope": "말이집 유무만 다른 두 축삭돌기"
+      },
+      "invertible": true,
+      "invertible_reason": "빠른 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "굵기가 비슷하다면 민말이집신경 쪽이 말이집신경보다 신호가 더 빨리 전도된다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "민말이집신경에는 축삭돌기가 없다",
+      "why_wrong": "축삭돌기는 둘 다 있다. 그 축삭돌기를 말이집이 감싸고 있는지가 다를 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mun-split"
+    },
+    {
+      "text": "말이집신경이 빠른 것은 말이집 자체가 신호를 실어 나르기 때문이다",
+      "why_wrong": "말이집이 덮인 자리에서는 활동전위가 생기지 않고 결절에서만 생겨 건너뛰기 때문에 빠르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mun-where"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-myelin-sheath"
+    },
+    {
+      "type": "next",
+      "target": "bio-saltatory-conduction",
+      "note": "말이집이 있는 쪽에서만 일어나는 전도 방식을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-nerve-impulse-conduction",
+      "note": "신호가 축삭돌기를 따라 가는 방식과 함께 보면 좋다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-01"
+  ],
+  "topic_id": "bio-2-1-1",
+  "pages": [
+    72,
+    76
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

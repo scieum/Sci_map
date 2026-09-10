@@ -1,0 +1,132 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-phagocytosis",
+  "concept_key": "concept:phagocytosis",
+  "registry_status": "new",
+  "term": "식세포작용",
+  "aliases": [
+    "식균작용"
+  ],
+  "notation": {
+    "hanja": "食細胞作用",
+    "hanja_gloss": "食 먹을 식 · 細 가늘 세 · 胞 세포 포 · 作 지을 작 · 用 쓸 용",
+    "english": "phagocytosis"
+  },
+  "definition": "백혈구가 손상된 세포나 병원체를 세포 안으로 들여와 효소로 분해해 없애는 작용. 식균작용이라고도 한다.",
+  "relations": [
+    {
+      "id": "rel-pha-process",
+      "text": "백혈구가 병원체를 세포 안으로 들여온 뒤 효소로 분해해 없앤다",
+      "form": {
+        "condition": "백혈구가 병원체와 만났을 때",
+        "type": "causal",
+        "scope": "식세포작용"
+      },
+      "invertible": false,
+      "invertible_reason": "차례로 일어나는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pha-nonspecific",
+      "text": "식세포작용은 병원체의 종류를 가리지 않고 일어나므로 선천적 면역에 든다",
+      "form": {
+        "condition": "어떤 병원체가 들어왔는지 바꿔 볼 때",
+        "type": "conditional",
+        "scope": "우리 몸의 방어작용"
+      },
+      "invertible": true,
+      "invertible_reason": "가리지 않는 방어와 가리는 방어의 이름이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식세포작용은 특정 병원체에 대해서만 선택적으로 일어나므로 후천적 면역에 든다"
+    },
+    {
+      "id": "rel-pha-macrophage",
+      "text": "대식세포처럼 일부 백혈구는 병원체를 없애는 동시에 후천적 면역이 일어나도록 북돋운다",
+      "form": {
+        "condition": "대식세포가 병원체를 분해한 뒤",
+        "type": "causal",
+        "scope": "항원제시세포가 되는 백혈구"
+      },
+      "invertible": false,
+      "invertible_reason": "겸하는 구실을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pha-antibody",
+      "text": "항원에 결합한 항체는 백혈구가 그 항원을 더 잘 붙잡아 삼키도록 돕는다",
+      "form": {
+        "condition": "항체가 항원과 결합한 뒤",
+        "type": "causal",
+        "scope": "항체가 관여하는 식세포작용"
+      },
+      "invertible": false,
+      "invertible_reason": "돕는 방향을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "식세포작용은 특정 병원체에 대해서만 일어난다",
+      "why_wrong": "종류를 가리지 않고 일어난다. 가려서 일어나는 것은 후천적 면역이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pha-nonspecific"
+    },
+    {
+      "text": "식세포작용을 하는 백혈구가 항체를 만들어 병원체를 없앤다",
+      "why_wrong": "항체는 형질세포가 만든다. 백혈구는 병원체를 삼켜 효소로 분해한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pha-process"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-innate-immunity"
+    },
+    {
+      "type": "next",
+      "target": "bio-inflammatory-response",
+      "note": "이 작용이 마무리를 맡는 반응을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-cell-mediated-immunity",
+      "note": "삼킨 뒤 항원을 내거는 자리로 이어진다"
+    },
+    {
+      "type": "related",
+      "target": "bio-antibody",
+      "note": "항체가 이 작용을 어떻게 돕는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-05"
+  ],
+  "topic_id": "bio-2-4-3",
+  "pages": [
+    103,
+    107
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

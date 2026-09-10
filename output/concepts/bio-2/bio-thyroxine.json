@@ -1,0 +1,142 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅱ. 항상성과 몸의 조절",
+  "unit_id": "bio-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-thyroxine",
+  "concept_key": "concept:thyroxine",
+  "registry_status": "new",
+  "term": "타이록신",
+  "aliases": [
+    "갑상샘호르몬",
+    "티록신"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 thyroxine 을 소리대로 옮긴 말이라 대응하는 한자어가 없다",
+    "english": "thyroxine"
+  },
+  "definition": "갑상샘에서 나와 세포의 물질대사를 촉진하는 호르몬. 분비량은 시상하부와 뇌하수체를 거치는 되먹임으로 조절된다.",
+  "relations": [
+    {
+      "id": "rel-thy-metabolism",
+      "text": "타이록신은 세포의 물질대사를 촉진해 몸에서 나는 열의 양을 늘린다",
+      "form": {
+        "condition": "혈액 속 타이록신이 세포에 닿을 때",
+        "antecedent": {
+          "quantity": "혈중 타이록신 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "세포의 대사량",
+          "direction": "증가"
+        },
+        "type": "causal",
+        "scope": "사람의 물질대사"
+      },
+      "invertible": true,
+      "invertible_reason": "촉진과 억제의 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "타이록신은 세포의 물질대사를 억제해 몸에서 나는 열의 양을 줄인다"
+    },
+    {
+      "id": "rel-thy-axis",
+      "text": "시상하부의 TRH가 뇌하수체에서 TSH를 내게 하고, 그 TSH가 갑상샘에서 타이록신을 내게 한다",
+      "form": {
+        "condition": "타이록신이 분비되기까지의 차례를 볼 때",
+        "type": "causal",
+        "scope": "시상하부–뇌하수체–갑상샘"
+      },
+      "invertible": true,
+      "invertible_reason": "자극이 내려가는 차례가 정해져 있어 거꾸로 놓으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "갑상샘의 타이록신이 뇌하수체에서 TSH를 내게 하고, 그 TSH가 시상하부에서 TRH를 내게 한다"
+    },
+    {
+      "id": "rel-thy-steady",
+      "text": "혈액 속 타이록신이 많아지면 위쪽 두 기관이 억제되므로 분비량이 한 수준 언저리에 머문다",
+      "form": {
+        "condition": "되먹임이 되풀이되는 동안",
+        "type": "causal",
+        "scope": "타이록신 분비량"
+      },
+      "invertible": false,
+      "invertible_reason": "유지되는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-thy-slow",
+      "text": "성인에서는 바깥 온도가 바뀌어도 타이록신 분비량이 빠르게 달라지지 않아 체온 조절에 다른 방법이 함께 필요하다",
+      "form": {
+        "condition": "바깥 온도가 갑자기 달라졌을 때",
+        "type": "conditional",
+        "scope": "성인의 체온 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "타이록신은 뇌하수체에서 분비된다",
+      "why_wrong": "타이록신은 갑상샘에서 나온다. 뇌하수체는 그 분비를 자극하는 TSH를 내는 곳이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-thy-axis"
+    },
+    {
+      "text": "타이록신이 많아지면 TSH 분비도 함께 많아진다",
+      "why_wrong": "많아진 타이록신이 시상하부와 뇌하수체를 억제하므로 TSH는 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-thy-steady"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-human-endocrine-gland-and-hormone"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-negative-feedback"
+    },
+    {
+      "type": "next",
+      "target": "bio-thermoregulation",
+      "note": "이 호르몬이 체온 조절에서 하는 몫을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-homeostasis",
+      "note": "되먹임으로 값이 지켜지는 본보기다"
+    }
+  ],
+  "curriculum": [
+    "12생과02-04"
+  ],
+  "topic_id": "bio-2-3-2",
+  "pages": [
+    92,
+    93,
+    97
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}
