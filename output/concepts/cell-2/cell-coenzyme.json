@@ -1,0 +1,126 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-coenzyme",
+  "concept_key": "concept:coenzyme",
+  "registry_status": "new",
+  "term": "조효소",
+  "notation": {
+    "hanja": "助酵素",
+    "hanja_gloss": "助 도울 조 · 酵 삭힐 효 · 素 본디 소",
+    "english": "coenzyme",
+    "symbol_display": "NAD⁺, FAD, NADP⁺",
+    "symbol_plain": "NAD+, FAD, NADP+"
+  },
+  "definition": "보조인자 가운데 금속 이온이 아닌 유기물 쪽. 바이타민에서 온 것이 많고 반응에서 전자를 옮기는 일을 맡는다.",
+  "relations": [
+    {
+      "id": "rel-coen-vs-metal",
+      "text": "보조인자는 금속 이온 쪽과 조효소 쪽으로 갈리며 조효소는 유기물이다",
+      "form": {
+        "condition": "보조인자를 성분에 따라 가를 때",
+        "type": "classification",
+        "scope": "보조인자",
+        "antecedent": {
+          "quantity": "보조인자",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "금속 이온과 조효소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-coen-electron",
+      "text": "NAD⁺와 FAD는 세포호흡에서, NADP⁺는 광합성에서 전자를 옮기는 조효소로 작용한다",
+      "form": {
+        "condition": "세포호흡과 광합성에서 전자가 오갈 때",
+        "type": "classification",
+        "scope": "세포호흡과 광합성",
+        "antecedent": {
+          "quantity": "조효소의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "작용하는 과정",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "각 조효소가 맡는 자리가 정해져 있어 서로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "NAD⁺와 FAD는 광합성에서, NADP⁺는 세포호흡에서 전자를 옮기는 조효소로 작용한다"
+    },
+    {
+      "id": "rel-coen-with-apo",
+      "text": "조효소가 주효소에 결합해야 그 효소는 온전한 기능을 낸다",
+      "form": {
+        "condition": "조효소를 필요로 하는 효소일 때",
+        "type": "causal",
+        "scope": "전효소를 이루는 효소"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조효소는 효소를 도와주는 또 다른 효소다",
+      "why_wrong": "조효소는 단백질이 아닌 작은 유기물이다. 이름에 '효소'가 들어가 있을 뿐 효소가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coen-vs-metal"
+    },
+    {
+      "text": "NADP⁺는 세포호흡에서 전자를 옮긴다",
+      "why_wrong": "세포호흡에서 전자를 옮기는 조효소는 NAD⁺와 FAD다. NADP⁺가 일하는 곳은 광합성 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coen-electron"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cofactor"
+    },
+    {
+      "type": "related",
+      "target": "cell-apoenzyme-and-holoenzyme",
+      "note": "조효소가 붙어야 전효소가 된다"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme",
+      "note": "조효소는 효소가 아니라 효소를 돕는 물질이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-2",
+  "pages": [
+    67
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

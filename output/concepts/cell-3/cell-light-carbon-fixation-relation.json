@@ -1,0 +1,106 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-light-carbon-fixation-relation",
+  "concept_key": "concept:light-reaction-carbon-fixation-relation",
+  "registry_status": "new",
+  "term": "명반응과 탄소 고정 반응의 관계",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "표제어가 조사로 이어진 구(句)라 한 덩어리로 대응하는 한자어 표기가 없다.",
+    "english": "relation between light reaction and carbon fixation"
+  },
+  "definition": "탄소 고정은 빛으로 곧바로 일어나지 않고 명반응이 만든 물질이 있어야 진행된다는 두 반응의 이음새.",
+  "relations": [
+    {
+      "id": "rel-lcf-supply",
+      "text": "명반응이 만든 ATP와 NADPH가 공급되어야 스트로마에서 탄소가 고정된다",
+      "form": {
+        "condition": "이산화 탄소가 넉넉히 있을 때",
+        "type": "causal",
+        "scope": "엽록체의 광합성"
+      },
+      "invertible": true,
+      "invertible_reason": "공급하는 쪽과 받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탄소 고정 반응이 만든 ATP와 NADPH가 공급되어야 타이라코이드 막에서 명반응이 일어난다"
+    },
+    {
+      "id": "rel-lcf-afterglow",
+      "text": "빛을 끈 뒤에도 탄소 고정이 그 자리에서 멎지 않고 잠시 이어진다",
+      "form": {
+        "condition": "빛을 비추다 갑자기 껐을 때",
+        "type": "causal",
+        "scope": "벤슨의 실험 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "남은 산물 때문에 이어진다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06",
+        "12세포03-08"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lcf-continuous",
+      "text": "빛이 계속 들어와야 명반응 산물이 채워져 탄소 고정이 오래 이어질 수 있다",
+      "form": {
+        "condition": "긴 시간 광합성을 이어 갈 때",
+        "type": "causal",
+        "scope": "식물의 광합성"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이산화 탄소는 빛을 받아 곧바로 고정된다",
+      "why_wrong": "빛이 만든 ATP와 NADPH를 거쳐야 고정된다. 빛이 이산화 탄소에 바로 작용하는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lcf-supply"
+    },
+    {
+      "text": "빛을 끄면 탄소 고정도 그 순간 멈춘다",
+      "why_wrong": "남아 있던 명반응 산물이 다 쓰일 때까지는 잠시 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lcf-afterglow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-light-reaction"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-carbon-fixation-reaction"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06",
+    "12세포03-08"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    107,
+    108,
+    121
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

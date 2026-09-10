@@ -1,0 +1,107 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-photolysis-of-water",
+  "concept_key": "concept:photolysis-of-water",
+  "registry_status": "new",
+  "term": "물의 광분해",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'물' 이 고유어라 표제어 전체에 대응하는 한자어 표기가 없다. 뒤의 '광분해' 만 한자어(光分解)다.",
+    "english": "photolysis of water",
+    "symbol_display": "2H₂O → 4H⁺ + 4e⁻ + O₂",
+    "symbol_plain": "2H2O -> 4H+ + 4e- + O2"
+  },
+  "definition": "빛을 받은 광계 Ⅱ 쪽에서 물이 쪼개져 전자와 수소 이온, 산소를 내놓는 반응.",
+  "relations": [
+    {
+      "id": "rel-photolysis-refill",
+      "text": "물에서 떨어져 나온 전자가 전자를 잃은 P680의 빈자리를 메운다",
+      "form": {
+        "condition": "광계 Ⅱ가 빛을 받아 전자를 내보냈을 때",
+        "type": "causal",
+        "scope": "비순환적 전자흐름"
+      },
+      "invertible": true,
+      "invertible_reason": "전자가 옮겨 가는 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "P680에서 나온 전자가 물로 옮겨 가 물의 빈자리를 메운다"
+    },
+    {
+      "id": "rel-photolysis-products",
+      "text": "물이 쪼개질 때 수소 이온은 타이라코이드 안쪽에 쌓이고 산소는 밖으로 빠져나간다",
+      "form": {
+        "condition": "물의 광분해가 일어날 때",
+        "type": "causal",
+        "scope": "타이라코이드"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물이 어디로 가는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-photolysis-o2-origin",
+      "text": "광합성으로 나오는 산소는 이 반응에서 물이 쪼개져 생긴 것이다",
+      "form": {
+        "condition": "산소의 출처를 물을 때",
+        "type": "causal",
+        "scope": "식물의 광합성"
+      },
+      "invertible": false,
+      "invertible_reason": "출처를 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물의 광분해는 스트로마에서 일어난다",
+      "why_wrong": "광계 Ⅱ가 박힌 타이라코이드 막 쪽에서 일어나고, 나온 수소 이온은 타이라코이드 안쪽에 쌓인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photolysis-products"
+    },
+    {
+      "text": "광합성의 산소는 이산화 탄소에서 떨어져 나온 것이다",
+      "why_wrong": "산소의 출처는 물이다. 이산화 탄소의 산소는 포도당과 물 쪽으로 간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photolysis-o2-origin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosystem"
+    },
+    {
+      "type": "related",
+      "target": "cell-noncyclic-electron-flow",
+      "note": "여기서 나온 전자가 타고 가는 길이다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    110,
+    111,
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

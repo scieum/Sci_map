@@ -1,0 +1,104 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-action-spectrum",
+  "concept_key": "concept:action-spectrum",
+  "registry_status": "new",
+  "term": "작용스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'스펙트럼' 이 음차어라 표제어 전체에 대응하는 한자어 표기가 없다. 앞의 '작용' 만 한자어(作用)다.",
+    "english": "action spectrum"
+  },
+  "definition": "빛의 파장을 바꿔 가며 잰 광합성속도를 그린 그래프. 어느 빛에서 광합성이 잘 되는지 보여 준다.",
+  "relations": [
+    {
+      "id": "rel-act-axes",
+      "text": "잎에 파장이 다른 빛을 차례로 비추며 잰 광합성속도를 곡선으로 나타낸 것이다",
+      "form": {
+        "condition": "파장 말고 다른 조건을 같게 두었을 때",
+        "type": "conditional",
+        "scope": "작용스펙트럼"
+      },
+      "invertible": false,
+      "invertible_reason": "그래프를 얻는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-act-match-absorption",
+      "text": "작용스펙트럼이 엽록소의 흡수스펙트럼과 거의 겹친다는 것은 흡수된 빛이 광합성에 쓰인다는 뜻이다",
+      "form": {
+        "condition": "두 그래프를 겹쳐 놓고 볼 때",
+        "type": "causal",
+        "scope": "엽록소를 가진 식물"
+      },
+      "invertible": false,
+      "invertible_reason": "겹침이 뜻하는 바를 풀이한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06",
+        "12세포03-08"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-act-engelmann",
+      "text": "엥겔만의 실험에서 산소세균은 청자색광과 적색광이 닿은 자리에 주로 몰려들었다",
+      "form": {
+        "condition": "프리즘으로 나눈 빛을 사상 조류에 비췄을 때",
+        "type": "causal",
+        "scope": "엥겔만의 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "몰린 자리가 정해져 있어 녹색광 쪽으로 바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-08"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "엥겔만의 실험에서 산소세균은 녹색광이 닿은 자리에 주로 몰려들었다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "작용스펙트럼과 흡수스펙트럼의 모양이 닮은 것은 우연이다",
+      "why_wrong": "색소가 흡수한 빛이 곧 광합성에 쓰이기 때문에 두 곡선의 모양이 닮는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-act-match-absorption"
+    },
+    {
+      "text": "엥겔만은 산소의 양을 직접 재어 광합성속도를 알아냈다",
+      "why_wrong": "산소를 좋아하는 세균이 어디에 모이는지를 보고 산소가 많이 나온 자리를 가늠했다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-act-engelmann"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-absorption-spectrum"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-photosynthesis"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06",
+    "12세포03-08"
+  ],
+  "topic_id": "cell-3-4-1",
+  "pages": [
+    105
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

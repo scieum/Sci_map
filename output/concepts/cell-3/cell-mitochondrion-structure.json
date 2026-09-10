@@ -1,0 +1,129 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-mitochondrion-structure",
+  "concept_key": "concept:mitochondrion",
+  "registry_status": "new",
+  "term": "마이토콘드리아의 구조",
+  "aliases": [
+    "미토콘드리아의 구조",
+    "미토콘드리아"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'마이토콘드리아' 가 영어 mitochondrion 의 음차어라 표제어에 대응하는 한자어 표기가 없다.",
+    "english": "structure of mitochondrion"
+  },
+  "definition": "이중막에 싸인 세포소기관의 짜임. 내막이 주름져 있고 그 막에 ATP를 만드는 막단백질이 늘어서 있다.",
+  "relations": [
+    {
+      "id": "rel-mito-str-inner-protein",
+      "text": "내막에는 전자전달효소와 ATP 합성효소 같은 막단백질이 박혀 있어 이 자리에서 ATP가 만들어진다",
+      "form": {
+        "condition": "산화적 인산화가 일어날 때",
+        "type": "causal",
+        "scope": "마이토콘드리아 내막"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 어디에 놓였는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mito-str-crista-area",
+      "text": "내막이 안쪽으로 더 많이 주름질수록 막단백질이 놓일 표면적이 넓어져 에너지 생산성이 높아진다",
+      "form": {
+        "condition": "세포마다 내막이 주름진 정도가 다를 때",
+        "type": "direct",
+        "scope": "마이토콘드리아",
+        "antecedent": {
+          "quantity": "내막이 주름진 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "에너지 생산성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주름진 정도와 생산성이 같은 쪽으로 움직이므로 방향을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "내막이 안쪽으로 더 많이 주름질수록 막단백질이 놓일 표면적이 좁아져 에너지 생산성이 낮아진다"
+    },
+    {
+      "id": "rel-mito-str-intermembrane",
+      "text": "외막과 내막 사이의 좁은 막사이공간은 퍼 올려진 수소 이온이 쌓이는 자리가 된다",
+      "form": {
+        "condition": "전자전달계가 수소 이온을 퍼 올릴 때",
+        "type": "causal",
+        "scope": "마이토콘드리아"
+      },
+      "invertible": false,
+      "invertible_reason": "쌓이는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "ATP는 마이토콘드리아 기질의 효소가 직접 만들어 내보낸다",
+      "why_wrong": "산화적 인산화의 ATP는 내막에 박힌 ATP 합성효소를 수소 이온이 지날 때 만들어진다. 기질의 효소는 유기물을 분해하는 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mito-str-inner-protein"
+    },
+    {
+      "text": "크리스타는 마이토콘드리아 속을 여러 방으로 나누는 칸막이다",
+      "why_wrong": "크리스타는 내막이 접혀 생긴 주름이다. 칸을 나누는 것이 아니라 막단백질이 놓일 넓이를 벌어 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mito-str-crista-area"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "cell-mitochondrion",
+      "note": "Ⅰ단원에서 세포소기관을 훑을 때 처음 만난 카드다"
+    },
+    {
+      "type": "next",
+      "target": "cell-crista",
+      "note": "주름진 내막에 붙은 이름을 본다"
+    },
+    {
+      "type": "next",
+      "target": "cell-endosymbiotic-theory",
+      "note": "이 구조가 어디서 왔는지로 이어진다"
+    },
+    {
+      "type": "next",
+      "target": "cell-cellular-respiration",
+      "note": "이 안에서 무슨 일이 벌어지는지로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-01"
+  ],
+  "topic_id": "cell-3-1-2",
+  "pages": [
+    85,
+    89,
+    116,
+    120
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

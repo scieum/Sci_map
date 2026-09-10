@@ -1,0 +1,112 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-respiratory-substrate-pathway",
+  "concept_key": "concept:respiratory-substrate",
+  "registry_status": "new",
+  "term": "호흡기질의 이용 경로",
+  "aliases": [
+    "호흡기질"
+  ],
+  "notation": {
+    "hanja": "呼吸基質",
+    "hanja_gloss": "呼 부를 호 · 吸 마실 흡 · 基 터 기 · 質 바탕 질",
+    "english": "utilization pathway of respiratory substrates"
+  },
+  "definition": "세포호흡에 쓰이는 유기물이 어느 단계로 끼어드는지 나타낸 경로. 포도당 말고 지방과 아미노산도 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-resp-path-kinds",
+      "text": "탄수화물뿐 아니라 지방과 단백질이 분해된 산물도 세포호흡의 재료로 쓰인다",
+      "form": {
+        "condition": "여러 영양소가 세포로 들어왔을 때",
+        "type": "conditional",
+        "scope": "사람의 세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰일 수 있는 범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-resp-path-fat",
+      "text": "지방산은 아세틸조효소 A가 되어 TCA 회로에 합류하고, 글리세롤 쪽은 해당 과정의 중간 산물 자리로 끼어든다",
+      "form": {
+        "condition": "지방이 호흡기질로 쓰일 때",
+        "type": "conditional",
+        "scope": "지방의 분해 산물"
+      },
+      "invertible": true,
+      "invertible_reason": "둘이 끼어드는 자리가 서로 달라 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "글리세롤은 아세틸조효소 A가 되어 TCA 회로에 합류하고, 지방산 쪽은 해당 과정의 중간 산물 자리로 끼어든다"
+    },
+    {
+      "id": "rel-resp-path-amino",
+      "text": "아미노산은 아미노기를 떼어 낸 뒤에야 피루브산이나 회로의 중간 산물로 바뀌어 산화된다",
+      "form": {
+        "condition": "단백질이 호흡기질로 쓰일 때",
+        "type": "conditional",
+        "scope": "아미노산의 분해"
+      },
+      "invertible": false,
+      "invertible_reason": "거쳐야 할 절차를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지방과 단백질은 세포호흡에 쓰이지 못하고 몸에 쌓이기만 한다",
+      "why_wrong": "지방산·글리세롤·아미노산은 저마다 제 자리에서 호흡 경로에 끼어들어 산화된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resp-path-kinds"
+    },
+    {
+      "text": "아미노산은 아미노기를 단 채로 그대로 TCA 회로에 들어간다",
+      "why_wrong": "아미노기를 떼어 낸 뒤 피루브산이나 회로의 중간 산물로 바뀌어야 들어갈 수 있다. 떨어져 나온 아미노기는 암모니아가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resp-path-amino"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cellular-respiration"
+    },
+    {
+      "type": "same",
+      "target": "cell-respiratory-substrate",
+      "note": "Ⅱ단원에서 호흡기질이 무엇인지 먼저 다룬 카드다"
+    },
+    {
+      "type": "related",
+      "target": "cell-acetyl-coa",
+      "note": "지방산과 아미노산이 합류하는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    90,
+    97
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

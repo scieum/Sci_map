@@ -1,0 +1,128 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-photosystem",
+  "concept_key": "concept:photosystem",
+  "registry_status": "new",
+  "term": "광계",
+  "notation": {
+    "hanja": "光系",
+    "hanja_gloss": "光 빛 광 · 系 이어맬 계",
+    "english": "photosystem",
+    "symbol_display": "P680 · P700",
+    "symbol_plain": "P680, P700"
+  },
+  "definition": "타이라코이드 막에서 색소와 전자수용체가 모여 빛을 흡수하는 단백질 복합체.",
+  "relations": [
+    {
+      "id": "rel-ps-structure",
+      "text": "광계는 반응 중심 색소와 전자수용체로 된 반응 중심 복합체를 집광 복합체가 둘러싼 꼴이다",
+      "form": {
+        "condition": "광계의 짜임을 들여다볼 때",
+        "type": "conditional",
+        "scope": "타이라코이드 막의 광계"
+      },
+      "invertible": false,
+      "invertible_reason": "짜임을 묘사한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ps-two-kinds",
+      "text": "반응 중심 색소가 가장 잘 흡수하는 파장에 따라 P700을 가진 광계 Ⅰ과 P680을 가진 광계 Ⅱ로 나뉜다",
+      "form": {
+        "condition": "광계를 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "엽록체의 광계",
+        "antecedent": {
+          "quantity": "반응 중심 색소의 흡수 파장",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "광계 Ⅰ과 광계 Ⅱ",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "번호와 색소가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 중심 색소가 가장 잘 흡수하는 파장에 따라 P680을 가진 광계 Ⅰ과 P700을 가진 광계 Ⅱ로 나뉜다"
+    },
+    {
+      "id": "rel-ps-funnel",
+      "text": "집광 복합체가 모은 빛에너지가 반응 중심 색소에 이르면 그 색소가 고에너지 전자를 내놓는다",
+      "form": {
+        "condition": "빛이 광계에 닿을 때",
+        "type": "causal",
+        "scope": "명반응"
+      },
+      "invertible": true,
+      "invertible_reason": "모으는 쪽과 내놓는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 중심 색소가 모은 빛에너지가 집광 복합체에 이르면 집광 복합체가 고에너지 전자를 내놓는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광계 Ⅰ이 광계 Ⅱ보다 먼저 전자를 내보낸다",
+      "why_wrong": "번호는 발견된 차례를 따른 것이다. 비순환적 전자흐름에서 전자는 광계 Ⅱ에서 먼저 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ps-two-kinds"
+    },
+    {
+      "text": "집광 복합체의 색소가 직접 전자를 내보낸다",
+      "why_wrong": "집광 복합체는 빛에너지를 모아 넘겨주는 몫이고, 전자를 내놓는 것은 반응 중심 색소다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ps-funnel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosynthetic-pigment"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-light-reaction"
+    },
+    {
+      "type": "next",
+      "target": "cell-photolysis-of-water"
+    },
+    {
+      "type": "next",
+      "target": "cell-noncyclic-electron-flow"
+    },
+    {
+      "type": "next",
+      "target": "cell-cyclic-electron-flow"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    109,
+    110,
+    115,
+    121
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

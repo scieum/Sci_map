@@ -1,0 +1,156 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-enzyme-classification",
+  "concept_key": "concept:enzyme-classification",
+  "registry_status": "new",
+  "term": "효소의 종류",
+  "aliases": [
+    "효소의 분류"
+  ],
+  "notation": {
+    "hanja": "酵素의 種類",
+    "hanja_gloss": "酵 삭힐 효 · 素 본디 소 · 種 씨 종 · 類 무리 류",
+    "english": "classification of enzymes"
+  },
+  "definition": "어떤 반응을 촉매하는지를 기준으로 효소를 가른 여섯 갈래. 산화환원·전이·가수분해·제거·이성질화·연결효소로 나눈다.",
+  "relations": [
+    {
+      "id": "rel-encls-six",
+      "text": "효소를 가르는 기준은 그 효소가 맡는 반응의 종류이며 모두 여섯 갈래가 된다",
+      "form": {
+        "condition": "분류 기준을 반응의 종류로 잡을 때",
+        "type": "classification",
+        "scope": "효소 전체",
+        "antecedent": {
+          "quantity": "맡는 반응의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "여섯 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "기준과 갈래 수를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-encls-hydrolase",
+      "text": "가수분해효소는 물 분자를 더해 기질을 쪼개는 반응을 맡는다",
+      "form": {
+        "condition": "물이 더해지며 기질이 갈라지는 반응일 때",
+        "type": "classification",
+        "scope": "가수분해효소",
+        "antecedent": {
+          "quantity": "물을 더해 쪼개는 반응",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "가수분해효소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래와 하는 일을 짝지은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-encls-isomerase",
+      "text": "이성질화효소는 원자의 배열을 바꿔 분자식은 같고 성질이 다른 물질을 만든다",
+      "form": {
+        "condition": "분자식은 그대로인 채 배열만 달라지는 반응일 때",
+        "type": "classification",
+        "scope": "이성질화효소",
+        "antecedent": {
+          "quantity": "원자 배열이 바뀌는 반응",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "이성질화효소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래와 하는 일을 짝지은 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-encls-ligase",
+      "text": "연결효소는 에너지를 써서 두 분자를 이어 붙인다",
+      "form": {
+        "condition": "두 분자를 하나로 결합시키는 반응일 때",
+        "type": "classification",
+        "scope": "연결효소",
+        "antecedent": {
+          "quantity": "두 분자를 잇는 반응",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "연결효소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래와 하는 일을 짝지은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소는 기질의 종류에 따라 여섯 갈래로 나눈다",
+      "why_wrong": "여섯 갈래를 가르는 기준은 촉매하는 반응의 종류다. 기질은 효소마다 제각각이라 기준이 되지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-encls-six"
+    },
+    {
+      "text": "가수분해효소는 물을 만들어 내는 효소다",
+      "why_wrong": "물 분자를 더해 기질을 쪼개는 효소다. 물을 만드는 쪽이 아니라 쓰는 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-encls-hydrolase"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-substrate-specificity"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme-substrate-complex",
+      "note": "어느 갈래든 기질과 결합해 반응을 이끄는 것은 같다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-2",
+  "pages": [
+    67
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

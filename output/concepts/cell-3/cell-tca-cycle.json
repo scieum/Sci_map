@@ -1,0 +1,130 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-tca-cycle",
+  "concept_key": "concept:tca-cycle",
+  "registry_status": "new",
+  "term": "TCA 회로",
+  "aliases": [
+    "시트르산 회로",
+    "크레브스 회로"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'TCA' 가 영어 이름의 약자라 표제어 전체에 대응하는 한자어 표기가 없다. 뒤의 '회로' 만 한자어(回路)다.",
+    "english": "TCA cycle",
+    "symbol_display": "TCA",
+    "symbol_plain": "TCA"
+  },
+  "definition": "마이토콘드리아 기질에서 아세틸조효소 A가 이산화 탄소로 잘게 분해되며 도는 회로 모양의 반응.",
+  "relations": [
+    {
+      "id": "rel-tca-carbon-count",
+      "text": "2탄소인 아세틸조효소 A가 4탄소 화합물과 만나 6탄소가 되었다가 이산화 탄소를 내놓으며 다시 4탄소로 돌아온다",
+      "form": {
+        "condition": "회로가 한 바퀴 돌 때",
+        "type": "conditional",
+        "scope": "TCA 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "탄소 수가 오가는 차례를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tca-regeneration",
+      "text": "옥살아세트산이 되살아나 새 아세틸조효소 A를 맞이하므로 회로가 끊이지 않고 되풀이된다",
+      "form": {
+        "condition": "아세틸조효소 A가 계속 공급될 때",
+        "type": "causal",
+        "scope": "TCA 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "회로가 이어지는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tca-yield",
+      "text": "피루브산 한 분자가 산화되어 회로까지 거치면 NADH 4분자, FADH₂ 1분자, ATP 1분자가 생긴다",
+      "form": {
+        "condition": "산소가 넉넉해 회로가 끝까지 돌 때",
+        "type": "causal",
+        "scope": "피루브산의 산화와 TCA 회로를 합친 수지"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물의 수를 셈한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tca-co2-source",
+      "text": "세포호흡에서 몸 밖으로 나가는 이산화 탄소는 이 회로와 피루브산의 산화에서 떨어져 나온 것이다",
+      "form": {
+        "condition": "이산화 탄소의 출처를 따질 때",
+        "type": "causal",
+        "scope": "산소호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "출처를 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "TCA 회로에서는 ATP가 전혀 만들어지지 않는다",
+      "why_wrong": "회로 한 바퀴마다 기질수준인산화로 ATP가 하나 만들어진다. 다만 ATP의 대부분은 뒤의 산화적 인산화에서 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tca-yield"
+    },
+    {
+      "text": "TCA 회로가 돌아가려면 산소가 직접 쓰여야 한다",
+      "why_wrong": "회로 자체는 산소를 쓰지 않는다. 다만 NADH·FADH₂를 되돌려 줄 전자전달계가 멎으면 회로도 곧 멈춘다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tca-regeneration"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-acetyl-coa"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-dehydrogenase"
+    },
+    {
+      "type": "next",
+      "target": "cell-electron-transport-chain",
+      "note": "회로가 넘긴 전자가 흘러가는 곳이다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    92,
+    93,
+    97,
+    120
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

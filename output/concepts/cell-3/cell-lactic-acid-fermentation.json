@@ -1,0 +1,118 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-lactic-acid-fermentation",
+  "concept_key": "concept:lactic-acid-fermentation",
+  "registry_status": "new",
+  "term": "젖산발효",
+  "aliases": [
+    "유산발효"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'젖' 이 고유어라 표제어 전체에 대응하는 한자어 표기가 없다. 한자어로 바꿔 쓴 말이 유산발효(乳酸醱酵)다.",
+    "english": "lactic acid fermentation",
+    "symbol_display": "C₆H₁₂O₆ → 2C₃H₆O₃",
+    "symbol_plain": "C6H12O6 -> 2C3H6O3"
+  },
+  "definition": "포도당에서 생긴 피루브산이 곧바로 젖산으로 환원되는 발효. 알코올발효와 달리 이산화 탄소가 나오지 않는다.",
+  "relations": [
+    {
+      "id": "rel-lac-reduce",
+      "text": "피루브산이 NADH에게서 수소 이온과 전자를 받아 젖산으로 환원된다",
+      "form": {
+        "condition": "산소가 없는 환경에서",
+        "type": "causal",
+        "scope": "젖산발효"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 주는 쪽과 받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "젖산이 NADH에게서 수소 이온과 전자를 받아 피루브산으로 환원된다"
+    },
+    {
+      "id": "rel-lac-nad-recycle",
+      "text": "이때 NAD⁺가 되살아나므로 해당 과정이 멎지 않고 이어져 ATP를 계속 얻을 수 있다",
+      "form": {
+        "condition": "전자전달계를 쓸 수 없을 때",
+        "type": "causal",
+        "scope": "젖산발효"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lac-no-co2",
+      "text": "알코올발효와 달리 젖산발효에서는 이산화 탄소가 나오지 않는다",
+      "form": {
+        "condition": "두 발효의 산물을 견줄 때",
+        "type": "classification",
+        "scope": "좁은 의미의 발효",
+        "antecedent": {
+          "quantity": "젖산발효",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "이산화 탄소가 나오지 않음",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "산물의 차이를 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "젖산발효는 세균만 하고 사람의 세포는 하지 않는다",
+      "why_wrong": "격하게 운동할 때 사람의 근육세포도 젖산발효로 ATP를 빠르게 얻는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lac-nad-recycle"
+    },
+    {
+      "text": "젖산발효에서도 포도당이 이산화 탄소와 물까지 분해된다",
+      "why_wrong": "포도당은 젖산까지만 분해된다. 그래서 얻는 ATP도 적다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lac-no-co2"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-fermentation"
+    },
+    {
+      "type": "related",
+      "target": "cell-alcohol-fermentation",
+      "note": "같은 발효인데 남는 산물이 다르다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-04"
+  ],
+  "topic_id": "cell-3-3-1",
+  "pages": [
+    99,
+    103,
+    121
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

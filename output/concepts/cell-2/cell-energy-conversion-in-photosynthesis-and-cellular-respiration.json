@@ -1,0 +1,127 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-energy-conversion-in-photosynthesis-and-cellular-respiration",
+  "concept_key": "concept:energy-conversion-in-photosynthesis-and-cellular-respiration",
+  "registry_status": "new",
+  "term": "광합성과 세포호흡에서의 에너지전환",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지' 가 음차어라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "energy conversion in photosynthesis and cellular respiration"
+  },
+  "definition": "빛에너지가 광합성으로 포도당의 화학 에너지가 되고, 세포호흡을 거치며 그 일부가 ATP에, 나머지가 열에너지로 옮겨 가는 흐름.",
+  "relations": [
+    {
+      "id": "rel-econv-light-to-glucose",
+      "text": "광합성 생물은 빛에너지를 흡수해 포도당을 만들고 그 에너지를 포도당에 화학 에너지로 담는다",
+      "form": {
+        "condition": "빛이 있어 광합성이 일어날 때",
+        "type": "causal",
+        "scope": "광합성 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "생물발광처럼 화학 에너지가 빛으로 바뀌는 경우도 있어 맞바꾼 문장이 늘 거짓이라고 하기 어렵다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-econv-glucose-split",
+      "text": "세포호흡으로 포도당이 분해될 때 그 에너지는 ATP에 담기는 몫과 열로 빠지는 몫으로 나뉜다",
+      "form": {
+        "condition": "포도당이 세포호흡으로 분해될 때",
+        "type": "causal",
+        "scope": "세포호흡을 하는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "두 몫으로 나뉜다는 서술이라 어느 쪽이 크다고 못 박지 않아 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-econv-heat",
+      "text": "열에너지는 물질대사에 곧바로 쓰이지 못하지만 체온을 유지하는 데 쓰이기도 한다",
+      "form": {
+        "condition": "방출된 열에너지의 쓰임을 따질 때",
+        "type": "conditional",
+        "scope": "체온을 유지하는 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임의 한계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-econv-source",
+      "text": "포도당이 광합성으로 만들어지므로 생명활동에 쓰이는 에너지의 근원은 빛에너지로 본다",
+      "form": {
+        "condition": "에너지가 어디에서 왔는지 거슬러 올라갈 때",
+        "type": "causal",
+        "scope": "광합성에 기대는 생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "근원을 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡에서 나온 열에너지도 물질대사에 그대로 쓰인다",
+      "why_wrong": "물질대사에 곧바로 쓰이는 형태는 ATP다. 열에너지는 그렇게 쓰이지 못하고 체온 유지에 쓰이는 정도다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-econv-heat"
+    },
+    {
+      "text": "동물은 광합성을 하지 않으므로 동물의 생명활동은 빛에너지와 관계가 없다",
+      "why_wrong": "동물은 먹이에서 포도당을 얻고 그 포도당은 광합성으로 만들어진 것이다. 거슬러 올라가면 빛에너지에 닿는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-econv-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-anabolism"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-catabolism"
+    },
+    {
+      "type": "next",
+      "target": "cell-atp",
+      "note": "이 흐름의 끝에서 세포가 손에 쥐는 형태다"
+    },
+    {
+      "type": "next",
+      "target": "cell-stepwise-energy-release-in-cellular-respiration",
+      "note": "에너지가 나오는 방식을 더 들여다본다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-02"
+  ],
+  "topic_id": "cell-2-1-1",
+  "pages": [
+    58,
+    63
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

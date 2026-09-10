@@ -1,0 +1,149 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-metabolism",
+  "concept_key": "concept:metabolism",
+  "registry_status": "new",
+  "term": "물질대사",
+  "notation": {
+    "hanja": "物質代謝",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 代 대신할 대 · 謝 사례할 사",
+    "english": "metabolism"
+  },
+  "definition": "생명을 이어 가려고 생물의 몸 안에서 일어나는 화학 반응 전체를 묶어 부르는 말. 반응마다 효소가 붙고 에너지 출입이 따른다.",
+  "relations": [
+    {
+      "id": "rel-meta-life-activity",
+      "text": "성장·세포분열·자극에 대한 반응 같은 생명활동에 드는 에너지를 세포는 물질대사에서 얻는다",
+      "form": {
+        "condition": "생명활동에 에너지가 필요할 때",
+        "type": "causal",
+        "scope": "생물의 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지를 얻는 통로를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-meta-enzyme",
+      "text": "물질대사를 이루는 반응은 대체로 저마다 특정한 효소가 있어야 진행된다",
+      "form": {
+        "condition": "세포 안에서 화학 반응이 일어날 때",
+        "type": "conditional",
+        "scope": "생물 내에서 일어나는 화학 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-meta-energy",
+      "text": "물질대사에서는 반응의 종류에 따라 에너지가 흡수되기도 하고 방출되기도 한다",
+      "form": {
+        "condition": "반응의 종류를 가려 볼 때",
+        "type": "conditional",
+        "scope": "물질대사 전반"
+      },
+      "invertible": false,
+      "invertible_reason": "흡수와 방출이 모두 나타나므로 방향을 맞바꾸어도 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-meta-two-kinds",
+      "text": "물질대사는 합성이 일어나는 동화작용과 분해가 일어나는 이화작용으로 갈린다",
+      "form": {
+        "condition": "물질을 만드는 쪽과 쪼개는 쪽으로 가를 때",
+        "type": "classification",
+        "scope": "물질대사",
+        "antecedent": {
+          "quantity": "물질대사",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "동화작용과 이화작용",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질대사는 소화처럼 몸속에서 물질을 분해하는 과정만 가리킨다",
+      "why_wrong": "분해하는 이화작용뿐 아니라 크고 복잡한 물질을 만드는 동화작용도 물질대사다. 광합성이나 단백질 합성도 여기에 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-meta-two-kinds"
+    },
+    {
+      "text": "물질대사는 시험관에서 일어나는 화학 반응과 다를 것이 없다",
+      "why_wrong": "물질대사는 생물의 몸 안에서 효소의 도움을 받아 일어나는 화학 반응을 가리킨다. 효소 없이 저절로 일어나는 반응은 물질대사라고 부르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-meta-enzyme"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "cell-anabolism",
+      "note": "물질대사를 만드는 쪽으로 갈라 본 것이다"
+    },
+    {
+      "type": "next",
+      "target": "cell-catabolism",
+      "note": "물질대사를 쪼개는 쪽으로 갈라 본 것이다"
+    },
+    {
+      "type": "next",
+      "target": "cell-metabolic-pathway",
+      "note": "여러 반응이 이어져 한 줄기 경로를 이룬다"
+    },
+    {
+      "type": "next",
+      "target": "cell-enzyme",
+      "note": "물질대사의 각 반응에는 효소가 붙는다"
+    },
+    {
+      "type": "next",
+      "target": "cell-basal-metabolic-rate",
+      "note": "물질대사를 사람 몸의 에너지양으로 재 본 값이다"
+    },
+    {
+      "type": "next",
+      "target": "cell-activity-metabolic-rate",
+      "note": "활동에 쓰인 몫을 따로 재 본 값이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-01"
+  ],
+  "topic_id": "cell-2-1-1",
+  "pages": [
+    56,
+    57,
+    63,
+    74
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,110 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-noncyclic-electron-flow",
+  "concept_key": "concept:noncyclic-electron-flow",
+  "registry_status": "new",
+  "term": "비순환적 전자흐름",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'흐름' 이 고유어라 표제어 전체에 대응하는 한자어 표기가 없다. 앞부분만 한자어(非循環的 電子)다.",
+    "english": "noncyclic electron flow"
+  },
+  "definition": "광계 Ⅱ에서 나온 전자가 전자전달계와 광계 Ⅰ을 지나 NADP⁺까지 흘러 되돌아오지 않는 경로.",
+  "relations": [
+    {
+      "id": "rel-noncyc-path",
+      "text": "전자는 광계 Ⅱ에서 떠나 전자전달계와 광계 Ⅰ을 거쳐 NADP⁺에 이른다",
+      "form": {
+        "condition": "빛이 두 광계에 함께 닿을 때",
+        "type": "conditional",
+        "scope": "비순환적 전자흐름"
+      },
+      "invertible": true,
+      "invertible_reason": "출발점과 종착점이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자는 NADP⁺에서 떠나 광계 Ⅰ과 전자전달계를 거쳐 광계 Ⅱ에 이른다"
+    },
+    {
+      "id": "rel-noncyc-products",
+      "text": "이 경로에서는 NADPH와 ATP가 함께 만들어진다",
+      "form": {
+        "condition": "비순환적 전자흐름이 이어질 때",
+        "type": "causal",
+        "scope": "명반응"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 생기는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-noncyc-refill",
+      "text": "떠난 전자가 남긴 빈자리는 물이 쪼개지며 내놓은 전자가 메운다",
+      "form": {
+        "condition": "광계 Ⅱ가 전자를 잃었을 때",
+        "type": "causal",
+        "scope": "비순환적 전자흐름"
+      },
+      "invertible": false,
+      "invertible_reason": "빈자리를 메우는 쪽을 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06",
+        "12세포03-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비순환적 전자흐름에서도 전자는 결국 P680으로 되돌아온다",
+      "why_wrong": "전자는 NADP⁺로 건너가 NADPH가 된다. 빈자리는 물에서 온 전자가 메운다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-noncyc-refill"
+    },
+    {
+      "text": "비순환적 전자흐름에서는 NADPH만 생기고 ATP는 생기지 않는다",
+      "why_wrong": "전자가 전자전달계를 지날 때 수소 이온 농도 기울기가 생겨 ATP도 함께 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-noncyc-products"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosystem"
+    },
+    {
+      "type": "next",
+      "target": "cell-photophosphorylation"
+    },
+    {
+      "type": "next",
+      "target": "cell-comparison-of-electron-transport-chain"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06",
+    "12세포03-07"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    110,
+    115,
+    121
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

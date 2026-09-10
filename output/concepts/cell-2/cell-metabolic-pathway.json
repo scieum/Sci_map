@@ -1,0 +1,107 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-metabolic-pathway",
+  "concept_key": "concept:metabolic-pathway",
+  "registry_status": "new",
+  "term": "물질대사 경로",
+  "notation": {
+    "hanja": "物質代謝經路",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 代 대신할 대 · 謝 사례할 사 · 經 지날 경 · 路 길 로",
+    "english": "metabolic pathway"
+  },
+  "definition": "반응물이 중간생성물을 여러 차례 거쳐 최종생성물에 이르기까지, 잇달아 일어나는 반응들이 이루는 한 줄기 흐름.",
+  "relations": [
+    {
+      "id": "rel-path-steps",
+      "text": "물질대사 경로에서 반응물은 한 번에 바뀌지 않고 중간생성물을 거치며 최종생성물이 된다",
+      "form": {
+        "condition": "여러 반응이 이어진 경로를 볼 때",
+        "type": "conditional",
+        "scope": "여러 단계로 이루어진 물질대사 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "진행 방식을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-path-enzyme",
+      "text": "경로의 단계마다 그 단계에 맞는 효소가 따로 작용한다",
+      "form": {
+        "condition": "경로의 단계를 하나씩 짚어 볼 때",
+        "type": "conditional",
+        "scope": "효소가 관여하는 물질대사 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "각 단계의 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-path-order",
+      "text": "앞 단계의 생성물이 다음 단계의 반응물이 되므로 경로에는 정해진 차례가 있다",
+      "form": {
+        "condition": "단계와 단계가 이어지는 방식을 볼 때",
+        "type": "causal",
+        "scope": "직선으로 이어지는 물질대사 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 까닭을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소 하나가 반응물을 최종생성물까지 한꺼번에 바꾼다",
+      "why_wrong": "경로의 단계마다 서로 다른 효소가 차례로 붙는다. 한 효소가 맡는 것은 한 단계다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-path-enzyme"
+    },
+    {
+      "text": "중간생성물은 경로에 끼어든 쓸모없는 물질이다",
+      "why_wrong": "중간생성물은 앞 단계의 생성물이면서 다음 단계의 반응물이다. 경로를 잇는 자리라 없으면 다음 반응이 시작되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-path-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-metabolism"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme",
+      "note": "단계마다 다른 효소가 붙는다"
+    },
+    {
+      "type": "related",
+      "target": "cell-substrate",
+      "note": "각 단계에서 효소가 붙잡는 물질이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-01"
+  ],
+  "topic_id": "cell-2-1-1",
+  "pages": [
+    56
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

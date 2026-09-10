@@ -1,0 +1,114 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-cyclic-electron-flow",
+  "concept_key": "concept:cyclic-electron-flow",
+  "registry_status": "new",
+  "term": "순환적 전자흐름",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'흐름' 이 고유어라 표제어 전체에 대응하는 한자어 표기가 없다. 앞부분만 한자어(循環的 電子)다.",
+    "english": "cyclic electron flow"
+  },
+  "definition": "광계 Ⅰ의 P700에서 나온 전자가 전자전달계를 돌아 제자리로 되돌아오는 경로.",
+  "relations": [
+    {
+      "id": "rel-cyc-path",
+      "text": "P700에서 나온 전자는 NADP⁺로 가지 않고 전자전달계를 돈 뒤 다시 P700으로 돌아온다",
+      "form": {
+        "condition": "광계 Ⅰ만 작동할 때",
+        "type": "conditional",
+        "scope": "순환적 전자흐름"
+      },
+      "invertible": false,
+      "invertible_reason": "돌아오는 길을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cyc-only-ps1",
+      "text": "이 경로에는 광계 Ⅰ만 관여하고 광계 Ⅱ는 끼어들지 않는다",
+      "form": {
+        "condition": "두 전자흐름을 견줄 때",
+        "type": "classification",
+        "scope": "명반응의 전자흐름",
+        "antecedent": {
+          "quantity": "순환적 전자흐름",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "광계 Ⅰ만 관여",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "관여하는 광계가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 경로에는 광계 Ⅱ만 관여하고 광계 Ⅰ은 끼어들지 않는다"
+    },
+    {
+      "id": "rel-cyc-products",
+      "text": "순환적 전자흐름에서는 ATP만 만들어지고 NADPH와 산소는 생기지 않는다",
+      "form": {
+        "condition": "순환적 전자흐름만 일어날 때",
+        "type": "causal",
+        "scope": "명반응"
+      },
+      "invertible": true,
+      "invertible_reason": "생기는 것과 생기지 않는 것이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06",
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순환적 전자흐름에서는 NADPH와 산소만 만들어지고 ATP는 생기지 않는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "순환적 전자흐름에서도 물이 쪼개져 산소가 나온다",
+      "why_wrong": "물의 광분해는 광계 Ⅱ 쪽에서 일어난다. 이 경로에는 광계 Ⅱ가 끼지 않아 산소가 나오지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cyc-only-ps1"
+    },
+    {
+      "text": "전자가 제자리로 돌아오므로 이 경로에서는 얻는 것이 없다",
+      "why_wrong": "전자가 전자전달계를 지나며 내놓은 에너지로 수소 이온 기울기가 생겨 ATP를 얻는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cyc-products"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosystem"
+    },
+    {
+      "type": "next",
+      "target": "cell-comparison-of-electron-transport-chain"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06",
+    "12세포03-07"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    110,
+    121
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

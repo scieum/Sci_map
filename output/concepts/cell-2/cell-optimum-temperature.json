@@ -1,0 +1,134 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-optimum-temperature",
+  "concept_key": "concept:optimum-temperature",
+  "registry_status": "new",
+  "term": "최적온도",
+  "notation": {
+    "hanja": "最適溫度",
+    "hanja_gloss": "最 가장 최 · 適 맞을 적 · 溫 따뜻할 온 · 度 법도 도",
+    "english": "optimum temperature"
+  },
+  "definition": "어떤 효소의 반응 속도가 가장 크게 나타나는 온도. 효소의 종류에 따라 그 값이 다를 수 있다.",
+  "relations": [
+    {
+      "id": "rel-opt-temp-max",
+      "text": "효소 반응의 속도가 가장 클 때의 온도를 그 효소의 최적온도라고 한다",
+      "form": {
+        "condition": "온도만 바꾸어 가며 반응 속도를 잴 때",
+        "type": "conditional",
+        "scope": "효소 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "뜻을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-opt-temp-below",
+      "text": "최적온도에 이르기 전 구간에서는 온도가 오를수록 반응 속도가 빨라진다",
+      "form": {
+        "condition": "최적온도보다 낮은 온도 구간일 때",
+        "type": "direct",
+        "scope": "효소 반응의 저온 구간",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 증감 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "최적온도에 이르기 전 구간에서는 온도가 오를수록 반응 속도가 느려진다"
+    },
+    {
+      "id": "rel-opt-temp-above",
+      "text": "최적온도를 넘어 온도가 더 오르면 단백질의 입체 구조가 변해 효소의 활성이 떨어진다",
+      "form": {
+        "condition": "최적온도보다 높은 온도로 올릴 때",
+        "type": "causal",
+        "scope": "단백질로 이루어진 효소"
+      },
+      "invertible": true,
+      "invertible_reason": "최적온도 위쪽에서 활성이 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "최적온도를 넘어 온도가 더 오르면 단백질의 입체 구조가 단단해져 효소의 활성이 높아진다"
+    },
+    {
+      "id": "rel-opt-temp-differs",
+      "text": "최적온도는 효소의 종류에 따라 서로 다를 수 있다",
+      "form": {
+        "condition": "여러 효소를 나란히 견줄 때",
+        "type": "conditional",
+        "scope": "효소 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "다를 수 있다고만 한 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온도가 높을수록 효소 반응은 언제나 빨라진다",
+      "why_wrong": "최적온도까지는 그렇지만 그보다 높아지면 효소 단백질의 구조가 변해 활성이 오히려 떨어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-opt-temp-above"
+    },
+    {
+      "text": "모든 효소의 최적온도는 사람의 체온과 같다",
+      "why_wrong": "효소의 종류에 따라 최적온도가 다를 수 있다. 훨씬 높은 온도에서 잘 작용하는 효소도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-opt-temp-differs"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme-substrate-complex"
+    },
+    {
+      "type": "next",
+      "target": "cell-application-of-enzyme",
+      "note": "세포 밖에서 쓰려면 이 조건을 맞춰 주어야 한다"
+    },
+    {
+      "type": "related",
+      "target": "cell-optimum-ph",
+      "note": "같은 까닭으로 나타나는 또 하나의 요인이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-3",
+  "pages": [
+    68,
+    69,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,136 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-cellular-respiration",
+  "concept_key": "concept:cellular-respiration",
+  "registry_status": "reused",
+  "term": "세포호흡",
+  "notation": {
+    "hanja": "細胞呼吸",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 呼 부를 호 · 吸 마실 흡",
+    "english": "cellular respiration",
+    "symbol_display": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O",
+    "symbol_plain": "C6H12O6 + 6O2 -> 6CO2 + 6H2O"
+  },
+  "definition": "유기물을 산화시켜 거기 담긴 화학 에너지를 ATP로 옮겨 담는 이화작용. 세 단계로 나뉘어 진행된다.",
+  "relations": [
+    {
+      "id": "rel-resp-catabolism",
+      "text": "세포호흡은 유기물을 잘게 헐면서 그 안의 화학 에너지를 ATP에 옮겨 담는 이화작용이다",
+      "form": {
+        "condition": "세포가 에너지를 꺼내 쓸 때",
+        "type": "causal",
+        "scope": "살아 있는 세포"
+      },
+      "invertible": true,
+      "invertible_reason": "헐리는 쪽과 채워지는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포호흡은 ATP를 헐면서 그 에너지로 유기물을 조립하는 동화작용이다"
+    },
+    {
+      "id": "rel-resp-three-stages",
+      "text": "세포호흡은 해당 과정, 피루브산의 산화와 TCA 회로, 산화적 인산화의 차례로 이어진다",
+      "form": {
+        "condition": "산소가 넉넉한 세포에서",
+        "type": "conditional",
+        "scope": "산소호흡을 하는 진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "단계를 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-resp-place",
+      "text": "해당 과정은 세포질에서 일어나고 나머지 두 단계는 마이토콘드리아 안에서 일어난다",
+      "form": {
+        "condition": "단계마다 벌어지는 자리를 물을 때",
+        "type": "classification",
+        "scope": "진핵세포",
+        "antecedent": {
+          "quantity": "세포호흡의 단계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "일어나는 장소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "단계와 자리가 짝지어져 있어 두 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해당 과정은 마이토콘드리아 안에서 일어나고 나머지 두 단계는 세포질에서 일어난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡은 숨을 들이쉬고 내쉬는 일을 가리킨다",
+      "why_wrong": "숨쉬기는 기체를 드나들게 하는 일이고, 세포호흡은 세포 안에서 유기물을 산화시켜 ATP를 얻는 반응이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resp-catabolism"
+    },
+    {
+      "text": "세포호흡은 모두 마이토콘드리아 안에서 일어난다",
+      "why_wrong": "첫 단계인 해당 과정은 세포질에서 일어난다. 마이토콘드리아가 없는 세포도 해당 과정은 할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resp-place"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-mitochondrion-structure"
+    },
+    {
+      "type": "next",
+      "target": "cell-respiratory-substrate-pathway",
+      "note": "무엇을 재료로 쓰는지로 이어진다"
+    },
+    {
+      "type": "next",
+      "target": "cell-glycolysis",
+      "note": "첫 단계로 들어간다"
+    },
+    {
+      "type": "next",
+      "target": "cell-comparison-of-respiration-and-photosynthesis",
+      "note": "광합성과 나란히 놓고 견준다"
+    },
+    {
+      "type": "same",
+      "target": "isci2-cellular-respiration",
+      "note": "통합과학2에서 같은 개념을 더 짧게 다룬다"
+    },
+    {
+      "type": "same",
+      "target": "reac-cellular-respiration",
+      "note": "화학반응의 세계에서 같은 개념을 산화환원 쪽으로 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    90,
+    97,
+    116
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

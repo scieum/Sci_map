@@ -1,0 +1,144 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-enzyme-substrate-complex",
+  "concept_key": "concept:enzyme-substrate-complex",
+  "registry_status": "new",
+  "term": "효소기질복합체",
+  "notation": {
+    "hanja": "酵素基質複合體",
+    "hanja_gloss": "酵 삭힐 효 · 素 본디 소 · 基 터 기 · 質 바탕 질 · 複 겹칠 복 · 合 합할 합 · 體 몸 체",
+    "english": "enzyme-substrate complex"
+  },
+  "definition": "효소의 활성부위에 기질이 끼워져 잠시 하나처럼 붙어 있는 상태. 생성물이 만들어지기 바로 앞의 중간 단계다.",
+  "relations": [
+    {
+      "id": "rel-esc-form",
+      "text": "효소와 기질이 활성부위에서 맞물리면 효소기질복합체가 만들어진다",
+      "form": {
+        "condition": "효소와 기질이 만나 결합할 때",
+        "type": "causal",
+        "scope": "효소의 촉매 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "만들어지는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-esc-product",
+      "text": "효소기질복합체에서 기질이 변해 생성물이 되고 나면 생성물과 효소는 서로 떨어진다",
+      "form": {
+        "condition": "복합체가 반응을 마칠 때",
+        "type": "causal",
+        "scope": "효소의 촉매 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "이어지는 과정을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-esc-rate",
+      "text": "효소기질복합체가 많이 만들어질수록 그 효소 반응의 속도는 빨라진다",
+      "form": {
+        "condition": "효소의 양이 일정할 때",
+        "type": "direct",
+        "scope": "기질이 아직 포화되지 않은 구간",
+        "antecedent": {
+          "quantity": "효소기질복합체의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 증감 방향이 같게 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "효소기질복합체가 많이 만들어질수록 그 효소 반응의 속도는 느려진다"
+    },
+    {
+      "id": "rel-esc-structure-change",
+      "text": "효소의 입체 구조가 변형되면 복합체가 잘 만들어지지 않아 반응 속도가 떨어진다",
+      "form": {
+        "condition": "온도나 pH가 효소 단백질의 구조를 바꿀 때",
+        "type": "causal",
+        "scope": "단백질로 이루어진 효소"
+      },
+      "invertible": false,
+      "invertible_reason": "구조 변화가 부른 결과를 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소기질복합체는 반응이 끝난 뒤에도 그대로 남아 있다",
+      "why_wrong": "생성물이 만들어지면 효소와 생성물은 떨어진다. 효소는 곧 다른 기질과 다시 결합한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-esc-product"
+    },
+    {
+      "text": "효소기질복합체는 효소와 기질이 영구히 붙어 만들어진 새로운 물질이다",
+      "why_wrong": "이 결합은 일시적이다. 반응이 끝나면 풀린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-esc-form"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-substrate"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-active-site"
+    },
+    {
+      "type": "next",
+      "target": "cell-optimum-temperature",
+      "note": "이 복합체가 잘 만들어지는 온도가 있다"
+    },
+    {
+      "type": "next",
+      "target": "cell-optimum-ph",
+      "note": "이 복합체가 잘 만들어지는 pH가 있다"
+    },
+    {
+      "type": "next",
+      "target": "cell-effect-of-substrate-concentration-on-enzyme-reaction",
+      "note": "복합체의 양이 반응 속도를 가른다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03",
+    "12세포02-04"
+  ],
+  "topic_id": "cell-2-2-1",
+  "pages": [
+    66,
+    67,
+    68,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

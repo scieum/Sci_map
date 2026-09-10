@@ -1,0 +1,123 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-effect-of-substrate-concentration-on-enzyme-reaction",
+  "concept_key": "concept:effect-of-substrate-concentration-on-enzyme-reaction",
+  "registry_status": "new",
+  "term": "기질 농도와 효소의 반응 속도",
+  "notation": {
+    "hanja": "基質濃度와 酵素의 反應速度",
+    "hanja_gloss": "基 터 기 · 質 바탕 질 · 濃 짙을 농 · 度 법도 도 · 酵 삭힐 효 · 素 본디 소 · 反 돌이킬 반 · 應 응할 응 · 速 빠를 속 · 度 법도 도",
+    "english": "effect of substrate concentration on enzyme reaction rate"
+  },
+  "definition": "효소의 양을 고정한 채 기질을 늘려 갈 때 반응 속도가 어떻게 달라지는가 하는 관계. 어느 지점을 넘으면 더 빨라지지 않는다.",
+  "relations": [
+    {
+      "id": "rel-subconc-increase",
+      "text": "아직 남는 효소가 있는 동안에는 기질 농도가 높아질수록 반응 속도가 커진다",
+      "form": {
+        "condition": "효소의 농도가 일정하고 기질과 결합하지 않은 효소가 남아 있을 때",
+        "type": "direct",
+        "scope": "포화에 이르기 전의 구간",
+        "antecedent": {
+          "quantity": "기질 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 증감 방향이 같게 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "아직 남는 효소가 있는 동안에는 기질 농도가 높아질수록 반응 속도가 작아진다"
+    },
+    {
+      "id": "rel-subconc-saturation",
+      "text": "기질 농도가 어느 정도를 넘어서면 모든 효소가 기질과 결합해 반응 속도가 더 오르지 않는다",
+      "form": {
+        "condition": "효소가 모두 기질과 결합한 뒤",
+        "type": "causal",
+        "scope": "포화 구간"
+      },
+      "invertible": false,
+      "invertible_reason": "속도가 멈춘 까닭을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-subconc-add-enzyme",
+      "text": "포화 구간에서 반응 속도를 더 올리려면 기질이 아니라 효소를 더 넣어야 한다",
+      "form": {
+        "condition": "기질이 이미 넉넉한 상태일 때",
+        "type": "conditional",
+        "scope": "포화 구간"
+      },
+      "invertible": true,
+      "invertible_reason": "더 넣어야 할 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포화 구간에서 반응 속도를 더 올리려면 효소가 아니라 기질을 더 넣어야 한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기질을 계속 넣어 주면 반응 속도도 끝없이 빨라진다",
+      "why_wrong": "효소가 모두 기질과 결합하고 나면 더 넣어도 속도가 오르지 않는다. 그때는 효소를 늘려야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-subconc-saturation"
+    },
+    {
+      "text": "반응 속도가 일정해진 구간에서는 반응이 멈춘 것이다",
+      "why_wrong": "속도가 더 오르지 않을 뿐 반응은 가장 빠른 속도로 계속 일어나고 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-subconc-saturation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme-substrate-complex"
+    },
+    {
+      "type": "next",
+      "target": "cell-competitive-inhibitor",
+      "note": "이 그래프 위에서 억제 효과를 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "cell-noncompetitive-inhibitor",
+      "note": "이 그래프 위에서 억제 효과를 읽는다"
+    },
+    {
+      "type": "related",
+      "target": "cell-substrate",
+      "note": "농도를 바꾸어 가며 살피는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-3",
+  "pages": [
+    68,
+    73
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

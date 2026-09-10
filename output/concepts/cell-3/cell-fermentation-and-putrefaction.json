@@ -1,0 +1,124 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-fermentation-and-putrefaction",
+  "concept_key": "concept:fermentation-and-putrefaction",
+  "registry_status": "new",
+  "term": "발효와 부패",
+  "notation": {
+    "hanja": "醱酵腐敗",
+    "hanja_gloss": "醱 술 괼 발 · 酵 삭힐 효 · 腐 썩을 부 · 敗 패할 패",
+    "english": "fermentation and putrefaction"
+  },
+  "definition": "미생물이 유기물을 분해한 결과가 사람에게 쓸모 있으면 발효, 해로우면 부패로 갈라 부르는 구분.",
+  "relations": [
+    {
+      "id": "rel-fp-criterion",
+      "text": "같은 분해라도 산물이 사람에게 쓸모 있으면 발효, 해로우면 부패라고 부른다",
+      "form": {
+        "condition": "넓은 의미로 발효를 볼 때",
+        "type": "classification",
+        "scope": "미생물의 유기물 분해",
+        "antecedent": {
+          "quantity": "분해 산물의 쓸모",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "발효인지 부패인지",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "쓸모와 이름이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 분해라도 산물이 사람에게 해로우면 발효, 쓸모 있으면 부패라고 부른다"
+    },
+    {
+      "id": "rel-fp-broad-narrow",
+      "text": "넓은 의미의 발효는 미생물의 유기물 분해 전반을 가리키고, 좁은 의미의 발효는 산소 없이 에너지를 얻는 과정만 가리킨다",
+      "form": {
+        "condition": "'발효' 라는 말의 쓰임을 가를 때",
+        "type": "classification",
+        "scope": "발효라는 용어",
+        "antecedent": {
+          "quantity": "발효라는 말의 범위",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "넓은 뜻과 좁은 뜻",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "말의 범위를 갈라 놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fp-use",
+      "text": "사람은 오래전부터 발효를 이용해 식품을 비롯한 여러 산물을 얻어 왔다",
+      "form": {
+        "condition": "실생활의 쓰임을 볼 때",
+        "type": "conditional",
+        "scope": "넓은 의미의 발효"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 덧붙인 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발효와 부패는 서로 다른 미생물이 서로 다른 반응을 하는 것이다",
+      "why_wrong": "분해하는 과정 자체는 비슷하다. 산물이 사람에게 쓸모 있는가로 이름을 갈라 부르는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fp-criterion"
+    },
+    {
+      "text": "발효는 언제나 산소가 없는 곳에서만 일어난다",
+      "why_wrong": "산소가 없어야 한다는 것은 좁은 의미의 발효다. 넓은 의미의 발효에는 산소가 있는 곳에서 일어나는 것도 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fp-broad-narrow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-fermentation"
+    },
+    {
+      "type": "related",
+      "target": "cell-alcohol-fermentation",
+      "note": "막걸리와 빵이 여기서 나온다"
+    },
+    {
+      "type": "related",
+      "target": "cell-lactic-acid-fermentation",
+      "note": "치즈와 김치가 여기서 나온다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-04"
+  ],
+  "topic_id": "cell-3-3-2",
+  "pages": [
+    102
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

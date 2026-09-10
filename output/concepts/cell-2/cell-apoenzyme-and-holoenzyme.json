@@ -1,0 +1,117 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-apoenzyme-and-holoenzyme",
+  "concept_key": "concept:apoenzyme-and-holoenzyme",
+  "registry_status": "new",
+  "term": "주효소와 전효소",
+  "notation": {
+    "hanja": "主酵素와 全酵素",
+    "hanja_gloss": "主 주인 주 · 酵 삭힐 효 · 素 본디 소 · 全 온전할 전 · 酵 삭힐 효 · 素 본디 소",
+    "english": "apoenzyme and holoenzyme"
+  },
+  "definition": "효소에서 단백질로 된 부분이 주효소이고, 여기에 보조인자가 붙어 온전한 기능을 갖춘 것이 전효소다.",
+  "relations": [
+    {
+      "id": "rel-apo-protein",
+      "text": "효소에서 단백질로 이루어진 부분을 주효소라고 부른다",
+      "form": {
+        "condition": "보조인자가 필요한 효소의 부분에 이름을 붙일 때",
+        "type": "classification",
+        "scope": "보조인자를 필요로 하는 효소",
+        "antecedent": {
+          "quantity": "효소의 단백질 부분",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "주효소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 정한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-holo-complete",
+      "text": "주효소에 보조인자가 결합해야 전효소가 되어 온전한 기능을 낸다",
+      "form": {
+        "condition": "보조인자가 있어야 활성을 내는 효소일 때",
+        "type": "causal",
+        "scope": "전효소를 이루는 효소"
+      },
+      "invertible": true,
+      "invertible_reason": "결합 전과 후에 붙는 이름이 정해져 있어 서로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전효소에 보조인자가 결합해야 주효소가 되어 온전한 기능을 낸다"
+    },
+    {
+      "id": "rel-apo-alone-inactive",
+      "text": "보조인자를 필요로 하는 효소는 주효소만 있을 때 제 기능을 내지 못한다",
+      "form": {
+        "condition": "주효소에서 보조인자를 떼어 놓았을 때",
+        "type": "causal",
+        "scope": "보조인자를 필요로 하는 효소"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전효소는 주효소보다 작은 효소다",
+      "why_wrong": "전효소는 주효소에 보조인자가 더해진 것이다. '전'은 크기가 아니라 기능이 온전하다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-holo-complete"
+    },
+    {
+      "text": "모든 효소는 주효소와 전효소로 나누어 볼 수 있다",
+      "why_wrong": "이 구분은 보조인자가 필요한 효소에서만 뜻이 있다. 단백질만으로 활성을 내는 효소에는 해당하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-apo-protein"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cofactor"
+    },
+    {
+      "type": "related",
+      "target": "cell-coenzyme",
+      "note": "보조인자 자리에 들어가는 유기물이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme",
+      "note": "효소를 단백질 부분과 그 밖의 부분으로 갈라 본 것이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-2",
+  "pages": [
+    67,
+    74
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

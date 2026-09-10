@@ -1,0 +1,118 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-enzyme-inhibitor",
+  "concept_key": "concept:enzyme-inhibitor",
+  "registry_status": "new",
+  "term": "억제제",
+  "notation": {
+    "hanja": "抑制劑",
+    "hanja_gloss": "抑 누를 억 · 制 절제할 제 · 劑 약제 제",
+    "english": "enzyme inhibitor"
+  },
+  "definition": "효소에 결합해 효소기질복합체가 만들어지는 것을 가로막음으로써 반응을 더디게 하거나 멈추게 하는 물질.",
+  "relations": [
+    {
+      "id": "rel-inhib-block",
+      "text": "억제제가 효소에 결합하면 효소기질복합체가 잘 만들어지지 못해 반응이 방해된다",
+      "form": {
+        "condition": "억제제가 효소에 결합했을 때",
+        "type": "causal",
+        "scope": "억제제가 함께 있는 효소 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "방해가 일어나는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inhib-kinds",
+      "text": "억제제는 효소의 어느 자리에 결합하는지에 따라 경쟁적 억제제와 비경쟁적 억제제로 갈린다",
+      "form": {
+        "condition": "결합하는 자리를 기준으로 가를 때",
+        "type": "classification",
+        "scope": "효소 억제제",
+        "antecedent": {
+          "quantity": "결합하는 자리",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "억제제의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inhib-not-substrate",
+      "text": "억제제는 기질이 아니면서도 효소와 결합해 효소의 활성에 영향을 주는 물질이다",
+      "form": {
+        "condition": "기질과 갈라 볼 때",
+        "type": "conditional",
+        "scope": "효소의 활성에 영향을 주는 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "기질과의 차이를 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "억제제는 효소를 아예 없애 버린다",
+      "why_wrong": "억제제는 효소에 결합해 작용을 막을 뿐 효소를 분해하지는 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inhib-block"
+    },
+    {
+      "text": "억제제는 언제나 활성부위에 붙는다",
+      "why_wrong": "활성부위에 붙는 것은 경쟁적 억제제다. 비경쟁적 억제제는 다른 자리에 붙는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inhib-kinds"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme"
+    },
+    {
+      "type": "next",
+      "target": "cell-competitive-inhibitor"
+    },
+    {
+      "type": "next",
+      "target": "cell-noncompetitive-inhibitor"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme-substrate-complex",
+      "note": "억제제가 막는 것이 바로 이 복합체의 형성이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-3",
+  "pages": [
+    70
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

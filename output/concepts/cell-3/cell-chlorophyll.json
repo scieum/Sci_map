@@ -1,0 +1,106 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-chlorophyll",
+  "concept_key": "concept:chlorophyll",
+  "registry_status": "new",
+  "term": "엽록소",
+  "notation": {
+    "hanja": "葉綠素",
+    "hanja_gloss": "葉 잎 엽 · 綠 푸를 록 · 素 본디 소",
+    "english": "chlorophyll"
+  },
+  "definition": "광합성색소 가운데 가장 대표적인 색소. 청자색광과 적색광을 주로 흡수하고 녹색광은 되돌려 보낸다.",
+  "relations": [
+    {
+      "id": "rel-chlorophyll-a-center",
+      "text": "엽록소 a는 광합성에서 중심 역할을 맡아 광합성을 하는 생물에 두루 들어 있다",
+      "form": {
+        "condition": "색소의 역할을 견줄 때",
+        "type": "conditional",
+        "scope": "광합성을 하는 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "역할과 분포를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-chlorophyll-absorb",
+      "text": "엽록소는 청자색광과 적색광을 잘 흡수하고 녹색광은 거의 흡수하지 않는다",
+      "form": {
+        "condition": "가시광선을 고루 비출 때",
+        "type": "conditional",
+        "scope": "엽록소"
+      },
+      "invertible": true,
+      "invertible_reason": "잘 흡수하는 파장과 그렇지 않은 파장이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "엽록소는 녹색광을 잘 흡수하고 청자색광과 적색광은 거의 흡수하지 않는다"
+    },
+    {
+      "id": "rel-chlorophyll-green-look",
+      "text": "흡수되지 않은 녹색광이 반사되거나 잎을 통과하기 때문에 잎이 녹색으로 보인다",
+      "form": {
+        "condition": "잎에 흰빛이 비칠 때",
+        "type": "causal",
+        "scope": "엽록소를 가진 잎"
+      },
+      "invertible": true,
+      "invertible_reason": "흡수한 빛이 아니라 남은 빛이 눈에 들어오므로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "녹색광이 잎에 가장 잘 흡수되기 때문에 잎이 녹색으로 보인다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "잎이 녹색인 것은 엽록소가 녹색광을 가장 잘 흡수하기 때문이다",
+      "why_wrong": "녹색광은 거의 흡수되지 않고 되돌아 나온다. 그 되돌아 나온 빛이 우리 눈에 들어온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chlorophyll-green-look"
+    },
+    {
+      "text": "녹색광만 비춰도 광합성이 가장 잘 일어난다",
+      "why_wrong": "엽록소가 잘 흡수하는 것은 청자색광과 적색광이라 그 파장에서 광합성이 잘 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chlorophyll-absorb"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosynthetic-pigment"
+    },
+    {
+      "type": "next",
+      "target": "cell-absorption-spectrum",
+      "note": "흡수하는 파장을 그래프로 읽는다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-05"
+  ],
+  "topic_id": "cell-3-4-1",
+  "pages": [
+    104,
+    105,
+    115
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

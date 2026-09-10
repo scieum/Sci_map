@@ -1,0 +1,139 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-catabolism",
+  "concept_key": "concept:catabolism",
+  "registry_status": "new",
+  "term": "이화작용",
+  "notation": {
+    "hanja": "異化作用",
+    "hanja_gloss": "異 다를 이 · 化 될 화 · 作 지을 작 · 用 쓸 용",
+    "english": "catabolism"
+  },
+  "definition": "크고 복잡한 물질을 잘게 쪼개어 작고 단순한 물질로 만드는 쪽의 물질대사. 쪼개지는 동안 에너지가 방출된다.",
+  "relations": [
+    {
+      "id": "rel-cata-size",
+      "text": "이화작용에서 물질은 크고 복잡한 쪽에서 작고 단순한 쪽으로 바뀐다",
+      "form": {
+        "condition": "반응 전후 물질의 크기를 견줄 때",
+        "type": "conditional",
+        "scope": "이화작용"
+      },
+      "invertible": true,
+      "invertible_reason": "바뀌는 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이화작용에서 물질은 작고 단순한 쪽에서 크고 복잡한 쪽으로 바뀐다"
+    },
+    {
+      "id": "rel-cata-energy",
+      "text": "이화작용이 일어나는 동안 물질에 담겨 있던 에너지가 방출된다",
+      "form": {
+        "condition": "반응물과 생성물이 가진 에너지를 견줄 때",
+        "type": "causal",
+        "scope": "이화작용"
+      },
+      "invertible": true,
+      "invertible_reason": "에너지가 드나드는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이화작용이 일어나는 동안 물질은 주위에서 에너지를 흡수한다"
+    },
+    {
+      "id": "rel-cata-respiration",
+      "text": "세포호흡은 포도당을 물과 이산화 탄소로 쪼개는 반응이라 이화작용에 든다",
+      "form": {
+        "condition": "물질대사를 동화작용과 이화작용으로 가를 때",
+        "type": "classification",
+        "scope": "세포호흡",
+        "antecedent": {
+          "quantity": "세포호흡",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "이화작용",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 정한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cata-atp",
+      "text": "이화작용에서 방출된 에너지 가운데 일부는 ATP에 담기고 나머지는 열로 흩어진다",
+      "form": {
+        "condition": "세포호흡처럼 효소가 조절하는 이화작용일 때",
+        "type": "causal",
+        "scope": "세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "나뉘는 몫을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이화작용에서는 에너지가 흡수된다",
+      "why_wrong": "큰 물질이 쪼개질 때는 그 안에 담겨 있던 에너지가 나온다. 에너지를 흡수하는 쪽은 동화작용이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cata-energy"
+    },
+    {
+      "text": "이화작용으로 나온 에너지는 모두 ATP에 저장된다",
+      "why_wrong": "일부만 ATP에 담기고 나머지는 열에너지로 빠져나간다. 열은 체온을 유지하는 데 쓰이기도 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cata-atp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-metabolism"
+    },
+    {
+      "type": "next",
+      "target": "cell-energy-conversion-in-photosynthesis-and-cellular-respiration"
+    },
+    {
+      "type": "next",
+      "target": "cell-respiratory-substrate",
+      "note": "세포호흡에서 쪼개지는 쪽의 물질이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-anabolism",
+      "note": "물질이 바뀌는 방향과 에너지 출입이 서로 반대다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-01"
+  ],
+  "topic_id": "cell-2-1-1",
+  "pages": [
+    56,
+    57,
+    63,
+    74
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

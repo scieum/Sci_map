@@ -1,0 +1,140 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-fermentation",
+  "concept_key": "concept:fermentation",
+  "registry_status": "new",
+  "term": "발효",
+  "notation": {
+    "hanja": "醱酵",
+    "hanja_gloss": "醱 술 괼 발 · 酵 삭힐 효",
+    "english": "fermentation"
+  },
+  "definition": "산소 없이 해당 과정만으로 ATP를 얻고, 남은 피루브산을 다른 물질로 바꾸어 조효소를 되살리는 방식.",
+  "relations": [
+    {
+      "id": "rel-ferm-no-etc",
+      "text": "발효는 전자전달계를 거치지 않고 해당 과정에서만 ATP를 얻는다",
+      "form": {
+        "condition": "산소가 없는 환경에서",
+        "type": "conditional",
+        "scope": "효모·젖산균 같은 미생물"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 거치지 않는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ferm-less-atp",
+      "text": "포도당이 끝까지 분해되지 않으므로 같은 포도당에서 얻는 ATP 수가 산소호흡보다 적다",
+      "form": {
+        "condition": "같은 양의 포도당을 쓸 때",
+        "type": "causal",
+        "scope": "산소호흡과 발효를 견줄 때"
+      },
+      "invertible": true,
+      "invertible_reason": "많고 적음이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포도당이 끝까지 분해되지 않으므로 같은 포도당에서 얻는 ATP 수가 산소호흡보다 많다"
+    },
+    {
+      "id": "rel-ferm-classify",
+      "text": "발효는 마지막에 남는 산물이 무엇이냐에 따라 알코올발효와 젖산발효 등으로 나뉜다",
+      "form": {
+        "condition": "발효의 갈래를 가를 때",
+        "type": "classification",
+        "scope": "좁은 의미의 발효",
+        "antecedent": {
+          "quantity": "최종 산물의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "발효의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "가르는 기준을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ferm-common-with-aerobic",
+      "text": "발효와 산소호흡은 모두 해당 과정을 거쳐 ATP를 얻는다는 점이 같다",
+      "form": {
+        "condition": "두 방식의 공통점을 찾을 때",
+        "type": "conditional",
+        "scope": "포도당을 쓰는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "공통점을 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발효에서는 ATP가 전혀 만들어지지 않는다",
+      "why_wrong": "해당 과정에서 포도당 한 분자당 ATP 두 분자가 만들어진다. 산소호흡보다 적을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ferm-less-atp"
+    },
+    {
+      "text": "발효는 산소가 있어도 그대로 일어난다",
+      "why_wrong": "좁은 의미의 발효는 산소가 없는 환경에서 일어난다. 효모도 산소가 있으면 산소호흡을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ferm-no-etc"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-glycolysis"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-aerobic-respiration"
+    },
+    {
+      "type": "next",
+      "target": "cell-alcohol-fermentation"
+    },
+    {
+      "type": "next",
+      "target": "cell-lactic-acid-fermentation"
+    },
+    {
+      "type": "next",
+      "target": "cell-fermentation-and-putrefaction",
+      "note": "낱말의 넓은 뜻으로 넓혀 본다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-04"
+  ],
+  "topic_id": "cell-3-3-1",
+  "pages": [
+    98,
+    102,
+    103
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

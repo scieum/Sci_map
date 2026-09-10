@@ -1,0 +1,112 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-photophosphorylation",
+  "concept_key": "concept:photophosphorylation",
+  "registry_status": "new",
+  "term": "광인산화",
+  "notation": {
+    "hanja": "光燐酸化",
+    "hanja_gloss": "光 빛 광 · 燐 도깨비불 인 · 酸 실 산 · 化 될 화",
+    "english": "photophosphorylation"
+  },
+  "definition": "빛으로 밀려난 전자가 만든 수소 이온 기울기를 써서 타이라코이드 막에서 ATP를 얻는 과정.",
+  "relations": [
+    {
+      "id": "rel-photophos-pump",
+      "text": "전자가 전자전달계를 지날 때 수소 이온이 스트로마에서 타이라코이드 안쪽으로 퍼 올려진다",
+      "form": {
+        "condition": "빛을 받아 전자가 이동할 때",
+        "type": "causal",
+        "scope": "타이라코이드 막"
+      },
+      "invertible": true,
+      "invertible_reason": "퍼 올려지는 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자가 전자전달계를 지날 때 수소 이온이 타이라코이드 안쪽에서 스트로마로 퍼 올려진다"
+    },
+    {
+      "id": "rel-photophos-chemiosmosis",
+      "text": "쌓인 수소 이온이 ATP 합성효소를 지나 스트로마로 되돌아올 때 ATP가 만들어진다",
+      "form": {
+        "condition": "타이라코이드 안팎에 농도 차가 생겼을 때",
+        "type": "causal",
+        "scope": "광인산화"
+      },
+      "invertible": false,
+      "invertible_reason": "언제 ATP가 생기는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-photophos-vs-oxphos",
+      "text": "광인산화와 산화적 인산화는 화학삼투라는 원리가 같고 전자에 에너지를 실어 주는 방식이 다르다",
+      "form": {
+        "condition": "두 인산화를 견줄 때",
+        "type": "classification",
+        "scope": "진핵세포의 ATP 합성",
+        "antecedent": {
+          "quantity": "에너지의 출처",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "광인산화와 산화적 인산화",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "닮은 곳과 다른 곳을 가른 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광인산화는 빛이 ADP에 인산기를 직접 붙이는 반응이다",
+      "why_wrong": "빛은 전자에 에너지를 실어 줄 뿐이고, 인산기는 수소 이온이 ATP 합성효소를 지날 때 붙는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photophos-chemiosmosis"
+    },
+    {
+      "text": "광인산화에서 수소 이온은 산화적 인산화와 같은 방향으로 흐른다",
+      "why_wrong": "마이토콘드리아에서는 막사이공간에서 기질로, 엽록체에서는 타이라코이드 안쪽에서 스트로마로 흐른다. 막을 기준으로 보면 방향이 반대다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photophos-pump"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-chemiosmosis"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-noncyclic-electron-flow"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    111,
+    115,
+    121
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

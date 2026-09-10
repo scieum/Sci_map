@@ -1,0 +1,107 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-acetyl-coa",
+  "concept_key": "concept:acetyl-coa",
+  "registry_status": "new",
+  "term": "아세틸조효소 A",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아세틸' 이 음차어이고 'A' 는 영문자라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "acetyl-CoA",
+    "symbol_display": "아세틸-CoA",
+    "symbol_plain": "acetyl-CoA"
+  },
+  "definition": "피루브산이 산화되어 남은 2탄소 조각이 조효소 A와 결합한 물질. TCA 회로로 들어가는 입구가 된다.",
+  "relations": [
+    {
+      "id": "rel-acoa-two-carbon",
+      "text": "아세틸조효소 A는 탄소를 둘 가진 화합물로서 TCA 회로에 들어가는 입구 노릇을 한다",
+      "form": {
+        "condition": "TCA 회로가 돌아갈 때",
+        "type": "conditional",
+        "scope": "마이토콘드리아 기질"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇인지와 어디로 가는지를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-acoa-citrate",
+      "text": "아세틸조효소 A가 4탄소 화합물인 옥살아세트산과 붙으면 6탄소 화합물인 시트르산이 만들어진다",
+      "form": {
+        "condition": "TCA 회로의 첫 반응에서",
+        "type": "causal",
+        "scope": "TCA 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "재료와 생성물이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "시트르산이 옥살아세트산과 붙으면 아세틸조효소 A가 만들어진다"
+    },
+    {
+      "id": "rel-acoa-converge",
+      "text": "지방산과 일부 아미노산도 아세틸조효소 A로 바뀐 뒤에야 TCA 회로에 합류한다",
+      "form": {
+        "condition": "포도당 말고 다른 호흡기질을 쓸 때",
+        "type": "conditional",
+        "scope": "지방산과 아미노산의 산화"
+      },
+      "invertible": false,
+      "invertible_reason": "거쳐야 할 길목을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "아세틸조효소 A는 탄소를 셋 가진 물질이다",
+      "why_wrong": "피루브산이 이산화 탄소 하나를 잃고 남은 2탄소 조각이 조효소 A와 붙은 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-acoa-two-carbon"
+    },
+    {
+      "text": "TCA 회로에 들어갈 수 있는 것은 포도당이 쪼개진 산물뿐이다",
+      "why_wrong": "지방산과 아미노산도 아세틸조효소 A나 회로의 중간 산물로 바뀌어 합류한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-acoa-converge"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-pyruvate-oxidation"
+    },
+    {
+      "type": "next",
+      "target": "cell-tca-cycle"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    92,
+    93,
+    97,
+    120
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

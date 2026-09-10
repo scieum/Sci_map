@@ -1,0 +1,126 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-activation-energy",
+  "concept_key": "concept:activation-energy",
+  "registry_status": "reused",
+  "term": "활성화에너지",
+  "aliases": [
+    "활성화 에너지"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지' 가 음차어라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "activation energy",
+    "symbol_display": "Eₐ",
+    "symbol_plain": "Ea"
+  },
+  "definition": "화학 반응이 시작되려면 반드시 넘어야 하는 문턱 에너지. 반응물이 갖추어야 할 가장 적은 에너지를 말한다.",
+  "relations": [
+    {
+      "id": "rel-ae-rate",
+      "text": "다른 조건이 같다면 활성화에너지가 낮은 반응일수록 더 빠르게 일어난다",
+      "form": {
+        "condition": "온도와 농도 같은 다른 조건이 같을 때",
+        "type": "inverse",
+        "scope": "같은 반응물을 두고 견주는 화학 반응",
+        "antecedent": {
+          "quantity": "활성화에너지",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "반응 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 증감 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다른 조건이 같다면 활성화에너지가 낮은 반응일수록 더 느리게 일어난다"
+    },
+    {
+      "id": "rel-ae-enzyme-curve",
+      "text": "같은 반응이라도 효소가 있을 때 넘어야 할 활성화에너지는 없을 때보다 작다",
+      "form": {
+        "condition": "효소가 있을 때와 없을 때를 같은 반응에서 견줄 때",
+        "type": "conditional",
+        "scope": "효소가 작용하는 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "두 경우의 크기 관계가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 반응이라도 효소가 있을 때 넘어야 할 활성화에너지는 없을 때보다 크다"
+    },
+    {
+      "id": "rel-ae-not-energy-change",
+      "text": "활성화에너지가 달라져도 반응물과 생성물이 가진 에너지의 차이는 달라지지 않는다",
+      "form": {
+        "condition": "에너지 그래프에서 문턱의 높이와 양쪽 끝의 높이를 갈라 볼 때",
+        "type": "conditional",
+        "scope": "반응물과 생성물이 같은 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "두 값이 서로 무관함을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "활성화에너지는 반응물이 이미 가지고 있는 에너지의 총량이다",
+      "why_wrong": "활성화에너지는 반응이 시작되려면 넘어야 하는 문턱의 높이다. 반응물이 지닌 에너지와는 다른 값이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ae-not-energy-change"
+    },
+    {
+      "text": "효소가 활성화에너지를 낮추면 생성물이 가진 에너지도 낮아진다",
+      "why_wrong": "효소가 바꾸는 것은 넘어야 할 문턱뿐이다. 반응물과 생성물의 에너지는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ae-not-energy-change"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "cell-enzyme",
+      "note": "이 문턱을 낮추는 것이 효소가 하는 일이다"
+    },
+    {
+      "type": "same",
+      "target": "mate-activation-energy",
+      "note": "물질과 에너지에서 반응 속도를 다룰 때 만난 개념이다"
+    },
+    {
+      "type": "same",
+      "target": "isci1-activation-energy",
+      "note": "통합과학에서 만난 같은 개념이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-04"
+  ],
+  "topic_id": "cell-2-2-1",
+  "pages": [
+    64,
+    73,
+    74,
+    77
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

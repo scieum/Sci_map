@@ -1,0 +1,135 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-glycolysis",
+  "concept_key": "concept:glycolysis",
+  "registry_status": "new",
+  "term": "해당 과정",
+  "notation": {
+    "hanja": "解糖過程",
+    "hanja_gloss": "解 풀 해 · 糖 엿 당 · 過 지날 과 · 程 한도 정",
+    "english": "glycolysis"
+  },
+  "definition": "세포질에서 6탄소 화합물인 포도당이 3탄소 화합물인 피루브산 둘로 쪼개지는 단계. 산소 없이도 진행된다.",
+  "relations": [
+    {
+      "id": "rel-gly-place-product",
+      "text": "해당 과정은 마이토콘드리아 밖 세포질에서 진행되어 포도당 한 분자를 피루브산 두 분자로 만든다",
+      "form": {
+        "condition": "포도당이 세포질로 들어왔을 때",
+        "type": "causal",
+        "scope": "해당 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "헐리는 쪽과 생기는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해당 과정은 마이토콘드리아 밖 세포질에서 진행되어 피루브산 두 분자를 포도당 한 분자로 만든다"
+    },
+    {
+      "id": "rel-gly-atp-balance",
+      "text": "ATP 두 분자를 먼저 써서 포도당을 활성화하고 네 분자를 만들므로 남는 것은 두 분자다",
+      "form": {
+        "condition": "포도당 한 분자가 분해될 때",
+        "type": "causal",
+        "scope": "해당 과정의 ATP 수지"
+      },
+      "invertible": false,
+      "invertible_reason": "수지를 셈한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gly-nadh",
+      "text": "쪼개지는 동안 탈수소효소가 떼어 낸 수소 이온과 전자를 NAD⁺가 받아 NADH 두 분자가 생긴다",
+      "form": {
+        "condition": "해당 과정이 진행될 때",
+        "type": "causal",
+        "scope": "포도당 한 분자당"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물의 수를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gly-no-oxygen",
+      "text": "해당 과정은 산소가 없어도 진행되므로 발효를 하는 세포에서도 그대로 일어난다",
+      "form": {
+        "condition": "세포에 산소가 없을 때",
+        "type": "conditional",
+        "scope": "해당 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "산소가 있어야만 한다고 뒤집으면 발효가 설명되지 않아 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해당 과정은 산소가 있어야만 진행되므로 발효를 하는 세포에서는 일어나지 않는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해당 과정에는 산소가 있어야 한다",
+      "why_wrong": "해당 과정은 산소가 없어도 진행된다. 산소가 필요한 곳은 마지막 산화적 인산화다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gly-no-oxygen"
+    },
+    {
+      "text": "해당 과정에서 ATP 네 분자가 그대로 세포에 남는다",
+      "why_wrong": "먼저 두 분자를 써서 포도당을 활성화하므로 실제로 남는 것은 두 분자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gly-atp-balance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cellular-respiration"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-dehydrogenase",
+      "note": "NADH가 어떻게 생기는지 알아야 산물이 읽힌다"
+    },
+    {
+      "type": "next",
+      "target": "cell-substrate-level-phosphorylation"
+    },
+    {
+      "type": "next",
+      "target": "cell-pyruvate-oxidation"
+    },
+    {
+      "type": "next",
+      "target": "cell-fermentation",
+      "note": "산소가 없을 때 갈라지는 길이다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    91,
+    96,
+    97,
+    120
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

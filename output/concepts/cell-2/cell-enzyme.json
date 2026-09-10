@@ -1,0 +1,152 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-enzyme",
+  "concept_key": "concept:enzyme",
+  "registry_status": "reused",
+  "term": "효소",
+  "aliases": [
+    "생체촉매"
+  ],
+  "notation": {
+    "hanja": "酵素",
+    "hanja_gloss": "酵 삭힐 효 · 素 본디 소",
+    "english": "enzyme"
+  },
+  "definition": "생물의 몸 안에서 만들어져 화학 반응의 활성화에너지를 낮춰 반응을 빠르게 하는 촉매. 주된 성분은 단백질이다.",
+  "relations": [
+    {
+      "id": "rel-enz-lower-ea",
+      "text": "효소는 반응에 드는 활성화에너지를 낮춰 화학 반응이 더 빨리 일어나게 한다",
+      "form": {
+        "condition": "효소가 제 기질에 작용할 때",
+        "type": "causal",
+        "scope": "효소가 관여하는 화학 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "낮춘다는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "효소는 반응에 드는 활성화에너지를 높여 화학 반응이 더 빨리 일어나게 한다"
+    },
+    {
+      "id": "rel-enz-not-consumed",
+      "text": "효소는 반응에서 소모되거나 변형되지 않아 생성물이 떨어져 나간 뒤 다시 쓰인다",
+      "form": {
+        "condition": "반응이 끝난 뒤 효소의 상태를 볼 때",
+        "type": "conditional",
+        "scope": "효소의 촉매 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "반응 뒤의 상태를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enz-small-amount",
+      "text": "되풀이해 쓰이기 때문에 효소는 적은 양으로도 많은 기질을 바꿀 수 있다",
+      "form": {
+        "condition": "같은 효소가 거듭 반응에 참여할 때",
+        "type": "causal",
+        "scope": "효소의 촉매 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enz-protein",
+      "text": "효소를 이루는 주된 물질이 단백질이어서 효소는 온도와 pH의 영향을 받는다",
+      "form": {
+        "condition": "효소의 구성 성분을 따질 때",
+        "type": "causal",
+        "scope": "효소 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "성분에서 비롯한 성질을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소는 반응에 참여하면서 함께 소모된다",
+      "why_wrong": "효소는 생성물을 내놓은 뒤 본디 모습으로 떨어져 나와 다시 쓰인다. 그래서 적은 양으로도 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-enz-not-consumed"
+    },
+    {
+      "text": "효소는 활성화에너지를 높여 반응을 빠르게 한다",
+      "why_wrong": "활성화에너지는 반응이 일어나려면 넘어야 할 문턱이다. 효소는 그 문턱을 낮춰 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-enz-lower-ea"
+    },
+    {
+      "text": "효소가 붙으면 반응물과 생성물의 에너지 차이도 달라진다",
+      "why_wrong": "효소가 바꾸는 것은 넘어야 할 문턱뿐이다. 반응물과 생성물이 가진 에너지는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-enz-lower-ea"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-metabolism"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-activation-energy"
+    },
+    {
+      "type": "next",
+      "target": "cell-substrate",
+      "note": "효소가 붙잡는 상대를 본다"
+    },
+    {
+      "type": "next",
+      "target": "cell-enzyme-classification",
+      "note": "어떤 반응을 맡는지에 따라 갈래를 나눈다"
+    },
+    {
+      "type": "same",
+      "target": "mate-enzyme",
+      "note": "물질과 에너지에서 촉매의 한 갈래로 만난 개념이다"
+    },
+    {
+      "type": "same",
+      "target": "isci1-enzyme",
+      "note": "통합과학에서 만난 같은 개념이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03",
+    "12세포02-04"
+  ],
+  "topic_id": "cell-2-2-1",
+  "pages": [
+    56,
+    64,
+    65,
+    66,
+    73
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

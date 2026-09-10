@@ -1,0 +1,128 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-oxidative-phosphorylation",
+  "concept_key": "concept:oxidative-phosphorylation",
+  "registry_status": "new",
+  "term": "산화적 인산화",
+  "notation": {
+    "hanja": "酸化的燐酸化",
+    "hanja_gloss": "酸 실 산 · 化 될 화 · 的 과녁 적 · 燐 도깨비불 인 · 酸 실 산 · 化 될 화",
+    "english": "oxidative phosphorylation"
+  },
+  "definition": "전자전달계와 화학삼투를 잇달아 거쳐 ATP를 얻는 과정. 세포호흡에서 ATP가 가장 많이 나오는 자리다.",
+  "relations": [
+    {
+      "id": "rel-oxphos-two-parts",
+      "text": "산화적 인산화는 전자전달계가 에너지를 내리는 몫과 화학삼투가 ATP를 만드는 몫으로 이루어진다",
+      "form": {
+        "condition": "산화적 인산화를 나눠 볼 때",
+        "type": "conditional",
+        "scope": "마이토콘드리아 내막"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇으로 이루어졌는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxphos-yield",
+      "text": "NADH 한 분자는 약 2.5분자, FADH₂ 한 분자는 약 1.5분자의 ATP를 만들어 낸다",
+      "form": {
+        "condition": "산화적 인산화를 끝까지 거칠 때",
+        "type": "direct",
+        "scope": "마이토콘드리아의 산화적 인산화",
+        "antecedent": {
+          "quantity": "NADH·FADH₂의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "합성되는 ATP 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "'약' 이 붙은 어림값이라 맞바꾼 문장이 반드시 거짓이라고 못 박기 어렵다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oxphos-needs-membrane",
+      "text": "기질수준인산화와 달리 산화적 인산화는 막에 놓인 전자전달계와 ATP 합성효소가 있어야 한다",
+      "form": {
+        "condition": "두 인산화 방식을 견줄 때",
+        "type": "classification",
+        "scope": "세포호흡의 ATP 합성",
+        "antecedent": {
+          "quantity": "산화적 인산화",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "막과 전자전달계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 있어야 하는지 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산화적 인산화는 산소가 ADP에 인산기를 직접 붙이는 반응이다",
+      "why_wrong": "산소는 전자를 마지막에 받는 쪽이다. 인산기는 수소 이온이 ATP 합성효소를 지날 때 붙는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oxphos-two-parts"
+    },
+    {
+      "text": "세포호흡에서 만들어지는 ATP는 산화적 인산화에서만 나온다",
+      "why_wrong": "해당 과정과 TCA 회로에서도 기질수준인산화로 ATP가 나온다. 다만 그 양이 훨씬 적다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oxphos-needs-membrane"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-electron-transport-chain"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-chemiosmosis"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-substrate-level-phosphorylation"
+    },
+    {
+      "type": "next",
+      "target": "cell-aerobic-respiration"
+    }
+  ],
+  "curriculum": [
+    "12세포03-03"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    94,
+    95,
+    97,
+    117
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

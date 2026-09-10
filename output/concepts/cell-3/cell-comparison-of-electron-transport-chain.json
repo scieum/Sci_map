@@ -1,0 +1,153 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-comparison-of-electron-transport-chain",
+  "concept_key": "concept:comparison-of-electron-transport-chain",
+  "registry_status": "new",
+  "term": "세포호흡과 광합성의 전자전달계 비교",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "표제어가 조사로 이어진 구(句)라 한 덩어리로 대응하는 한자어 표기가 없다.",
+    "english": "comparison of electron transport chains"
+  },
+  "definition": "마이토콘드리아 내막과 타이라코이드 막의 전자 흐름을 나란히 놓고 닮은 곳과 다른 곳을 갈라 보는 정리.",
+  "relations": [
+    {
+      "id": "rel-cmpetc-common",
+      "text": "두 막 모두 전자전달계와 ATP 합성효소를 갖추고 화학삼투로 ATP를 만든다",
+      "form": {
+        "condition": "두 막의 공통점을 볼 때",
+        "type": "conditional",
+        "scope": "마이토콘드리아 내막과 타이라코이드 막"
+      },
+      "invertible": false,
+      "invertible_reason": "공통점을 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cmpetc-donor-acceptor",
+      "text": "전자를 내놓는 쪽이 세포호흡에서는 NADH·FADH₂, 광합성에서는 물이고 마지막에 받는 쪽은 산소와 NADP⁺로 다르다",
+      "form": {
+        "condition": "전자의 출발점과 종착점을 견줄 때",
+        "type": "classification",
+        "scope": "두 전자전달계",
+        "antecedent": {
+          "quantity": "전자공여체와 최종 전자수용체",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "세포호흡과 광합성의 차이",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "과정과 전자공여체·수용체가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자를 내놓는 쪽이 세포호흡에서는 물, 광합성에서는 NADH·FADH₂이고 마지막에 받는 쪽은 NADP⁺와 산소로 다르다"
+    },
+    {
+      "id": "rel-cmpetc-flow",
+      "text": "마이토콘드리아에서는 전자가 산소까지 한 방향으로 흐르지만 엽록체에서는 순환하는 길도 있다",
+      "form": {
+        "condition": "전자의 흐름 모양을 견줄 때",
+        "type": "classification",
+        "scope": "두 전자전달계",
+        "antecedent": {
+          "quantity": "전자흐름의 모양",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "한 방향과 순환",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "어느 쪽이 순환하는지 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마이토콘드리아에서는 전자가 순환하는 길도 있지만 엽록체에서는 한 방향으로만 흐른다"
+    },
+    {
+      "id": "rel-cmpetc-h-direction",
+      "text": "수소 이온이 쌓이는 곳은 마이토콘드리아에서는 막사이공간, 엽록체에서는 타이라코이드 안쪽이다",
+      "form": {
+        "condition": "화학삼투가 일어날 때",
+        "type": "classification",
+        "scope": "두 막의 화학삼투",
+        "antecedent": {
+          "quantity": "수소 이온이 쌓이는 곳",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "막사이공간과 타이라코이드 안쪽",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "쌓이는 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 이온이 쌓이는 곳은 마이토콘드리아에서는 기질, 엽록체에서는 스트로마다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "엽록체의 전자전달계에서도 최종 전자수용체는 산소다",
+      "why_wrong": "광합성에서 전자를 마지막에 받는 것은 NADP⁺다. 산소는 오히려 물이 쪼개지며 나오는 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmpetc-donor-acceptor"
+    },
+    {
+      "text": "두 소기관의 전자전달계는 이름만 같을 뿐 서로 아무 관련이 없다",
+      "why_wrong": "구성하는 단백질과 ATP 합성효소가 매우 닮았고 화학삼투로 ATP를 얻는 방식도 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmpetc-common"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-electron-transport-chain"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-noncyclic-electron-flow"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-cyclic-electron-flow"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-atp-synthase"
+    }
+  ],
+  "curriculum": [
+    "12세포03-07"
+  ],
+  "topic_id": "cell-3-5-1",
+  "pages": [
+    117,
+    118,
+    119
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

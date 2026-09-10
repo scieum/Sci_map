@@ -1,0 +1,103 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-pyruvate-oxidation",
+  "concept_key": "concept:pyruvate-oxidation",
+  "registry_status": "new",
+  "term": "피루브산의 산화",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'피루브산' 의 앞부분이 영어 pyruvate 의 음차어라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "pyruvate oxidation"
+  },
+  "definition": "마이토콘드리아 기질로 들어간 피루브산이 이산화 탄소를 잃고 조효소 A와 붙어 아세틸조효소 A가 되는 단계.",
+  "relations": [
+    {
+      "id": "rel-pyr-entry",
+      "text": "피루브산은 세포의 산소 농도가 높을 때 마이토콘드리아 막을 지나 기질로 들어간다",
+      "form": {
+        "condition": "세포에 산소가 넉넉할 때",
+        "type": "conditional",
+        "scope": "진핵세포의 피루브산"
+      },
+      "invertible": false,
+      "invertible_reason": "들어가는 조건을 밝힌 서술이고 산소가 적을 때의 길은 발효 쪽이 따로 다룬다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pyr-decarboxylation",
+      "text": "기질에서 피루브산은 이산화 탄소와 수소 이온·전자를 잃고 남은 2탄소 조각이 조효소 A와 결합한다",
+      "form": {
+        "condition": "피루브산이 마이토콘드리아 기질에 들어왔을 때",
+        "type": "causal",
+        "scope": "피루브산의 산화"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 잃고 무엇과 붙는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pyr-nadh",
+      "text": "이 단계에서 떨어져 나온 수소 이온과 전자를 NAD⁺가 받아 피루브산 한 분자당 NADH 한 분자가 생긴다",
+      "form": {
+        "condition": "피루브산이 산화될 때",
+        "type": "causal",
+        "scope": "피루브산 한 분자당"
+      },
+      "invertible": false,
+      "invertible_reason": "생성물의 수를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "피루브산의 산화는 해당 과정처럼 세포질에서 일어난다",
+      "why_wrong": "피루브산은 마이토콘드리아 기질로 들어간 뒤에 산화된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pyr-entry"
+    },
+    {
+      "text": "피루브산의 산화에서 ATP가 만들어진다",
+      "why_wrong": "이 단계에서 얻는 것은 NADH와 아세틸조효소 A다. ATP는 뒤이은 TCA 회로와 산화적 인산화에서 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pyr-nadh"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-glycolysis"
+    },
+    {
+      "type": "next",
+      "target": "cell-acetyl-coa"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    92,
+    93,
+    97
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

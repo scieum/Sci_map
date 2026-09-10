@@ -1,0 +1,126 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-optimum-ph",
+  "concept_key": "concept:optimum-ph",
+  "registry_status": "new",
+  "term": "최적 pH",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'최적' 은 最適 이지만 'pH' 는 기호라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "optimum pH",
+    "symbol_display": "pH",
+    "symbol_plain": "pH"
+  },
+  "definition": "어떤 효소의 반응 속도가 가장 크게 나타나는 pH. 그 효소가 일하는 자리의 환경에 따라 값이 다르다.",
+  "relations": [
+    {
+      "id": "rel-opt-ph-max",
+      "text": "효소 반응의 속도가 가장 클 때의 pH를 그 효소의 최적 pH라고 한다",
+      "form": {
+        "condition": "pH만 바꾸어 가며 반응 속도를 잴 때",
+        "type": "conditional",
+        "scope": "효소 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "뜻을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-opt-ph-structure",
+      "text": "최적 pH에서 벗어나면 효소 단백질의 입체 구조가 변해 활성이 떨어진다",
+      "form": {
+        "condition": "최적 pH보다 산성이나 염기성 쪽으로 치우칠 때",
+        "type": "causal",
+        "scope": "단백질로 이루어진 효소"
+      },
+      "invertible": false,
+      "invertible_reason": "벗어났을 때의 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-opt-ph-pepsin",
+      "text": "펩신은 강한 산성에서, 트립신은 약한 염기성에서 반응 속도가 가장 크다",
+      "form": {
+        "condition": "위와 소장의 pH 환경을 견줄 때",
+        "type": "conditional",
+        "scope": "펩신과 트립신"
+      },
+      "invertible": true,
+      "invertible_reason": "두 효소에 붙는 pH 범위가 정해져 있어 서로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "펩신은 약한 염기성에서, 트립신은 강한 산성에서 반응 속도가 가장 크다"
+    },
+    {
+      "id": "rel-opt-ph-differs",
+      "text": "최적 pH는 효소의 종류에 따라 서로 다를 수 있다",
+      "form": {
+        "condition": "여러 효소를 나란히 견줄 때",
+        "type": "conditional",
+        "scope": "효소 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "다를 수 있다고만 한 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모든 효소는 중성인 pH 7에서 가장 잘 작용한다",
+      "why_wrong": "펩신처럼 강한 산성에서 활성이 가장 큰 효소도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-opt-ph-differs"
+    },
+    {
+      "text": "펩신을 소장으로 옮겨 놓아도 위에서처럼 잘 작용한다",
+      "why_wrong": "소장은 위보다 pH가 높다. 그 환경에서 펩신의 활성은 크게 떨어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-opt-ph-pepsin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme-substrate-complex"
+    },
+    {
+      "type": "related",
+      "target": "cell-optimum-temperature",
+      "note": "같은 까닭으로 나타나는 또 하나의 요인이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme",
+      "note": "효소가 단백질이라는 점에서 비롯한 성질이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-3",
+  "pages": [
+    68,
+    73
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

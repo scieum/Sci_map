@@ -1,0 +1,119 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-competitive-inhibitor",
+  "concept_key": "concept:competitive-inhibitor",
+  "registry_status": "new",
+  "term": "경쟁적 억제제",
+  "notation": {
+    "hanja": "競爭的抑制劑",
+    "hanja_gloss": "競 다툴 경 · 爭 다툴 쟁 · 的 과녁 적 · 抑 누를 억 · 制 절제할 제 · 劑 약제 제",
+    "english": "competitive inhibitor"
+  },
+  "definition": "효소의 활성부위에 대신 들어앉아, 기질이 붙을 자리를 두고 기질과 다투는 억제제.",
+  "relations": [
+    {
+      "id": "rel-comp-active-site",
+      "text": "경쟁적 억제제는 효소의 활성부위에 결합해 기질이 그 자리에 붙지 못하게 한다",
+      "form": {
+        "condition": "억제제가 활성부위에 먼저 결합했을 때",
+        "type": "causal",
+        "scope": "경쟁적 억제가 일어나는 효소 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 자리와 그 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-comp-high-substrate",
+      "text": "억제제의 양이 그대로일 때 기질 농도가 높아질수록 경쟁적 억제제의 억제 효과는 작아진다",
+      "form": {
+        "condition": "억제제의 양이 일정할 때",
+        "type": "inverse",
+        "scope": "경쟁적 억제가 일어나는 효소 반응",
+        "antecedent": {
+          "quantity": "기질 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "억제 효과",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 증감 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "억제제의 양이 그대로일 때 기질 농도가 높아질수록 경쟁적 억제제의 억제 효과는 커진다"
+    },
+    {
+      "id": "rel-comp-max-rate",
+      "text": "기질을 넉넉히 넣어 주면 경쟁적 억제제가 있어도 최대 반응 속도에 이를 수 있다",
+      "form": {
+        "condition": "기질 농도를 충분히 높였을 때",
+        "type": "conditional",
+        "scope": "경쟁적 억제가 일어나는 효소 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "도달 가능성을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "경쟁적 억제제가 있으면 기질을 아무리 넣어도 반응 속도가 회복되지 않는다",
+      "why_wrong": "두 물질이 같은 자리를 두고 다투므로 기질을 늘리면 억제 효과가 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-comp-high-substrate"
+    },
+    {
+      "text": "경쟁적 억제제는 활성부위가 아닌 자리에 붙는다",
+      "why_wrong": "활성부위에 붙어 기질과 자리를 다투는 쪽이 경쟁적 억제제다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-comp-active-site"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme-inhibitor"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-active-site"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-effect-of-substrate-concentration-on-enzyme-reaction"
+    },
+    {
+      "type": "related",
+      "target": "cell-noncompetitive-inhibitor",
+      "note": "기질을 늘렸을 때의 결과가 서로 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03"
+  ],
+  "topic_id": "cell-2-2-3",
+  "pages": [
+    70
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

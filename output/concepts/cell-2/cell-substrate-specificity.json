@@ -1,0 +1,129 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-substrate-specificity",
+  "concept_key": "concept:substrate-specificity",
+  "registry_status": "new",
+  "term": "기질특이성",
+  "notation": {
+    "hanja": "基質特異性",
+    "hanja_gloss": "基 터 기 · 質 바탕 질 · 特 특별할 특 · 異 다를 이 · 性 성품 성",
+    "english": "substrate specificity"
+  },
+  "definition": "하나의 효소가 아무 물질에나 붙지 않고 활성부위에 꼭 들어맞는 특정 기질하고만 결합해 작용하는 성질.",
+  "relations": [
+    {
+      "id": "rel-ss-fit",
+      "text": "효소는 여러 물질 가운데 활성부위와 입체 구조가 맞물리는 것에만 작용한다",
+      "form": {
+        "condition": "여러 물질이 함께 있는 자리에 효소를 두었을 때",
+        "type": "conditional",
+        "scope": "효소 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "작용 범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ss-protein",
+      "text": "기질특이성은 효소의 주성분인 단백질이 저마다 고유한 입체 구조를 갖기 때문에 나타난다",
+      "form": {
+        "condition": "기질특이성이 나타나는 까닭을 물을 때",
+        "type": "causal",
+        "scope": "단백질로 이루어진 효소"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ss-many-enzymes",
+      "text": "물질대사의 반응마다 기질이 다르므로 생물에는 여러 종류의 효소가 있어야 한다",
+      "form": {
+        "condition": "물질대사 전체가 원활히 돌아가야 할 때",
+        "type": "causal",
+        "scope": "생물의 물질대사"
+      },
+      "invertible": false,
+      "invertible_reason": "필요성을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ss-amylase",
+      "text": "아밀레이스는 녹말과 결합해 엿당으로 분해하지만 다른 영양소에는 작용하지 않는다",
+      "form": {
+        "condition": "아밀레이스에 여러 영양소를 함께 주었을 때",
+        "type": "conditional",
+        "scope": "아밀레이스"
+      },
+      "invertible": false,
+      "invertible_reason": "한 효소의 작용 범위를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "효소 하나가 몸속의 여러 반응을 두루 촉매할 수 있다",
+      "why_wrong": "효소는 정해진 기질에만 작용한다. 그래서 반응의 가짓수만큼 여러 효소가 필요하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ss-many-enzymes"
+    },
+    {
+      "text": "아밀레이스는 소화 효소이므로 단백질도 분해한다",
+      "why_wrong": "아밀레이스의 기질은 녹말이다. 단백질을 분해하는 효소는 따로 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ss-amylase"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-substrate"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-active-site"
+    },
+    {
+      "type": "next",
+      "target": "cell-enzyme-classification",
+      "note": "맡는 반응이 달라 갈래가 나뉜다"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme-substrate-complex",
+      "note": "들어맞는 기질일 때만 이 복합체가 생긴다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-03",
+    "12세포02-04"
+  ],
+  "topic_id": "cell-2-2-1",
+  "pages": [
+    66,
+    73,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

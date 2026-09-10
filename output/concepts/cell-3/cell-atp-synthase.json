@@ -1,0 +1,118 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-atp-synthase",
+  "concept_key": "concept:atp-synthase",
+  "registry_status": "new",
+  "term": "ATP 합성효소",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'ATP' 가 영어 이름의 약자라 표제어 전체에 대응하는 한자어 표기가 없다. 뒤의 '합성효소' 만 한자어(合成酵素)다.",
+    "english": "ATP synthase",
+    "symbol_display": "ATP",
+    "symbol_plain": "ATP"
+  },
+  "definition": "수소 이온이 지나는 통로이면서 그 흐름을 밑천 삼아 ADP에 인산기를 붙이는 막단백질.",
+  "relations": [
+    {
+      "id": "rel-atpsyn-channel",
+      "text": "수소 이온이 이 효소를 통과해 흐를 때 ADP에 인산기가 붙어 ATP가 된다",
+      "form": {
+        "condition": "막을 사이에 둔 수소 이온 농도 기울기가 있을 때",
+        "type": "causal",
+        "scope": "ATP 합성효소가 박힌 막"
+      },
+      "invertible": false,
+      "invertible_reason": "언제 ATP가 생기는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atpsyn-both-membranes",
+      "text": "이 효소는 마이토콘드리아 내막과 엽록체의 타이라코이드 막에 함께 자리 잡고 있다",
+      "form": {
+        "condition": "두 소기관의 막을 견줄 때",
+        "type": "classification",
+        "scope": "진핵세포",
+        "antecedent": {
+          "quantity": "ATP 합성효소가 있는 막",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "마이토콘드리아 내막과 타이라코이드 막",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "어디에 있는지 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-03",
+        "12세포03-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atpsyn-direction",
+      "text": "수소 이온은 마이토콘드리아에서는 막사이공간에서 기질로, 엽록체에서는 타이라코이드 안에서 스트로마로 흐른다",
+      "form": {
+        "condition": "ATP가 합성되는 순간",
+        "type": "conditional",
+        "scope": "두 소기관의 화학삼투"
+      },
+      "invertible": true,
+      "invertible_reason": "두 막에서 흐르는 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 이온은 마이토콘드리아에서는 기질에서 막사이공간으로, 엽록체에서는 스트로마에서 타이라코이드 안으로 흐른다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "ATP 합성효소는 마이토콘드리아에만 있다",
+      "why_wrong": "엽록체의 타이라코이드 막에도 같은 일을 하는 ATP 합성효소가 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atpsyn-both-membranes"
+    },
+    {
+      "text": "ATP 합성효소가 수소 이온을 퍼 올려 농도 기울기를 만든다",
+      "why_wrong": "퍼 올리는 일은 전자전달효소 복합체가 한다. ATP 합성효소는 되돌아 흐르는 이온에서 일을 얻는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atpsyn-channel"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "cell-chemiosmosis"
+    },
+    {
+      "type": "next",
+      "target": "cell-comparison-of-electron-transport-chain"
+    }
+  ],
+  "curriculum": [
+    "12세포03-03",
+    "12세포03-07"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    85,
+    86,
+    95,
+    111,
+    118
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

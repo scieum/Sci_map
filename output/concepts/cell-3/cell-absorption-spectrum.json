@@ -1,0 +1,103 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-absorption-spectrum",
+  "concept_key": "concept:absorption-spectrum-of-pigment",
+  "registry_status": "new",
+  "term": "흡수스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'스펙트럼' 이 음차어라 표제어 전체에 대응하는 한자어 표기가 없다. 앞의 '흡수' 만 한자어(吸收)다.",
+    "english": "absorption spectrum of photosynthetic pigment"
+  },
+  "definition": "색소가 파장마다 빛을 얼마나 흡수하는지 그린 그래프. 그 색소가 어느 빛을 쓰는지 읽어 낼 수 있다.",
+  "relations": [
+    {
+      "id": "rel-abs-axes",
+      "text": "가로축에 빛의 파장, 세로축에 흡수율을 두어 색소가 어느 파장을 잘 흡수하는지 나타낸다",
+      "form": {
+        "condition": "색소에 여러 파장의 빛을 차례로 비출 때",
+        "type": "conditional",
+        "scope": "광합성색소의 흡수스펙트럼"
+      },
+      "invertible": false,
+      "invertible_reason": "그래프를 읽는 법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abs-peaks",
+      "text": "엽록소의 흡수스펙트럼은 청자색광과 적색광 자리에서 봉우리를 이루고 녹색광 자리에서는 골이 진다",
+      "form": {
+        "condition": "엽록소로 흡수스펙트럼을 그렸을 때",
+        "type": "conditional",
+        "scope": "엽록소"
+      },
+      "invertible": true,
+      "invertible_reason": "봉우리와 골의 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "엽록소의 흡수스펙트럼은 녹색광 자리에서 봉우리를 이루고 청자색광과 적색광 자리에서는 골이 진다"
+    },
+    {
+      "id": "rel-abs-a-and-b",
+      "text": "엽록소 a와 엽록소 b는 잘 흡수하는 파장이 조금 어긋나 있어 곡선의 봉우리 자리가 서로 다르다",
+      "form": {
+        "condition": "두 엽록소의 흡수스펙트럼을 겹쳐 볼 때",
+        "type": "conditional",
+        "scope": "엽록소 a와 엽록소 b"
+      },
+      "invertible": false,
+      "invertible_reason": "두 곡선이 다르다는 것을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흡수스펙트럼에서 값이 높은 파장이 색소가 반사하는 빛이다",
+      "why_wrong": "세로축은 흡수한 몫이다. 값이 낮은 파장이 반사되거나 잎을 통과하는 빛이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abs-axes"
+    },
+    {
+      "text": "흡수스펙트럼은 곧 광합성속도를 나타낸 그래프다",
+      "why_wrong": "흡수스펙트럼은 빛을 얼마나 흡수했는지를, 작용스펙트럼은 광합성이 얼마나 일어났는지를 보여 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abs-axes"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-chlorophyll"
+    },
+    {
+      "type": "next",
+      "target": "cell-action-spectrum",
+      "note": "흡수한 빛이 실제로 쓰이는지 견준다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-1",
+  "pages": [
+    105
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": true
+}

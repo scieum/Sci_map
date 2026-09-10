@@ -1,0 +1,145 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-comparison-of-respiration-and-photosynthesis",
+  "concept_key": "concept:comparison-of-cellular-respiration-and-photosynthesis",
+  "registry_status": "new",
+  "term": "세포호흡과 광합성의 비교",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "표제어가 조사로 이어진 구(句)라 한 덩어리로 대응하는 한자어 표기가 없다.",
+    "english": "comparison of cellular respiration and photosynthesis"
+  },
+  "definition": "유기물을 헐어 ATP를 얻는 쪽과 빛으로 유기물을 짓는 쪽을 나란히 놓고 견주어 보는 정리.",
+  "relations": [
+    {
+      "id": "rel-cmp-metabolism",
+      "text": "세포호흡은 유기물을 헐어 ATP를 얻는 이화작용이고 광합성은 빛에너지로 유기물을 짓는 동화작용이다",
+      "form": {
+        "condition": "물질대사의 갈래로 가를 때",
+        "type": "classification",
+        "scope": "식물 세포",
+        "antecedent": {
+          "quantity": "세포호흡과 광합성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "이화작용과 동화작용",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 과정과 갈래가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포호흡은 빛에너지로 유기물을 짓는 동화작용이고 광합성은 유기물을 헐어 ATP를 얻는 이화작용이다"
+    },
+    {
+      "id": "rel-cmp-place",
+      "text": "세포호흡은 세포질과 마이토콘드리아에서, 광합성은 엽록체에서 일어난다",
+      "form": {
+        "condition": "일어나는 자리를 견줄 때",
+        "type": "classification",
+        "scope": "식물 세포",
+        "antecedent": {
+          "quantity": "세포호흡과 광합성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "일어나는 장소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "과정과 자리가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포호흡은 엽록체에서, 광합성은 세포질과 마이토콘드리아에서 일어난다"
+    },
+    {
+      "id": "rel-cmp-coenzyme",
+      "text": "고에너지 전자를 받는 조효소가 세포호흡에서는 NAD⁺·FAD, 광합성에서는 NADP⁺로 서로 다르다",
+      "form": {
+        "condition": "전자를 나르는 조효소를 견줄 때",
+        "type": "classification",
+        "scope": "두 물질대사",
+        "antecedent": {
+          "quantity": "세포호흡과 광합성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "쓰이는 조효소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "과정과 조효소가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고에너지 전자를 받는 조효소가 세포호흡에서는 NADP⁺, 광합성에서는 NAD⁺·FAD로 서로 다르다"
+    },
+    {
+      "id": "rel-cmp-common",
+      "text": "두 과정 모두 효소가 반응을 이끌고 회로를 도는 동안 탄소 수가 달라진다는 점이 같다",
+      "form": {
+        "condition": "공통점을 찾을 때",
+        "type": "conditional",
+        "scope": "세포호흡과 광합성"
+      },
+      "invertible": false,
+      "invertible_reason": "공통점을 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광합성은 세포호흡을 거꾸로 되감은 반응이다",
+      "why_wrong": "드나드는 물질은 뒤집힌 듯 보이지만, 거치는 단계와 쓰이는 효소·조효소가 서로 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmp-coenzyme"
+    },
+    {
+      "text": "식물은 광합성만 하고 동물은 세포호흡만 한다",
+      "why_wrong": "식물도 세포호흡을 한다. 잎에서는 두 과정이 함께 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmp-place"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cellular-respiration"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-photosynthesis"
+    }
+  ],
+  "curriculum": [
+    "12세포03-07"
+  ],
+  "topic_id": "cell-3-5-1",
+  "pages": [
+    116,
+    117,
+    119
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

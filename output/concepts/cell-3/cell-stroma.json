@@ -1,0 +1,115 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-stroma",
+  "concept_key": "concept:stroma",
+  "registry_status": "new",
+  "term": "스트로마",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "그리스어에서 온 stroma 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "stroma"
+  },
+  "definition": "엽록체 안에서 그라나 바깥을 채우는 액상 부분. 탄소 고정 반응에 쓰이는 효소들이 여기 녹아 있다.",
+  "relations": [
+    {
+      "id": "rel-stroma-place",
+      "text": "스트로마는 엽록체 내막 안쪽에서 타이라코이드가 잠겨 있는 액상 부분을 가리킨다",
+      "form": {
+        "condition": "엽록체 내부의 자리를 나눌 때",
+        "type": "classification",
+        "scope": "엽록체 내부",
+        "antecedent": {
+          "quantity": "그라나 바깥의 액상 부분",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "스트로마",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름과 자리를 맞춘 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stroma-carbon-fixation",
+      "text": "이산화 탄소를 포도당으로 바꾸는 탄소 고정 반응은 스트로마에서 진행된다",
+      "form": {
+        "condition": "명반응 산물이 공급될 때",
+        "type": "conditional",
+        "scope": "엽록체"
+      },
+      "invertible": true,
+      "invertible_reason": "반응이 벌어지는 자리가 정해져 있어 타이라코이드 막으로 바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이산화 탄소를 포도당으로 바꾸는 탄소 고정 반응은 타이라코이드 막에서 진행된다"
+    },
+    {
+      "id": "rel-stroma-low-h",
+      "text": "명반응이 진행되는 동안 스트로마의 수소 이온 농도는 타이라코이드 내부보다 낮아진다",
+      "form": {
+        "condition": "빛을 받아 전자가 전달될 때",
+        "type": "causal",
+        "scope": "엽록체"
+      },
+      "invertible": true,
+      "invertible_reason": "어느 쪽이 낮아지는지 정해져 있어 안팎을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "명반응이 진행되는 동안 스트로마의 수소 이온 농도는 타이라코이드 내부보다 높아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "스트로마는 마이토콘드리아의 기질을 부르는 다른 이름이다",
+      "why_wrong": "스트로마는 엽록체 안, 기질은 마이토콘드리아 안이다. 서로 다른 소기관의 서로 다른 공간이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stroma-place"
+    },
+    {
+      "text": "스트로마에서는 빛이 없어도 탄소 고정이 끝없이 이어진다",
+      "why_wrong": "탄소 고정에는 명반응이 만든 ATP와 NADPH가 있어야 한다. 빛이 끊기면 그 공급이 떨어져 곧 멎는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stroma-carbon-fixation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-chloroplast-structure"
+    },
+    {
+      "type": "next",
+      "target": "cell-carbon-fixation-reaction",
+      "note": "이 공간에서 벌어지는 반응으로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-05",
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-1-3",
+  "pages": [
+    86,
+    89,
+    112
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

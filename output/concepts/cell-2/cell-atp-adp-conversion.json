@@ -1,0 +1,115 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-atp-adp-conversion",
+  "concept_key": "concept:atp-adp-conversion",
+  "registry_status": "new",
+  "term": "ATP와 ADP의 전환",
+  "aliases": [
+    "ATP와 ADP의 상호 전환"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "ATP·ADP 가 영어 이름을 줄인 약자라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "interconversion of ATP and ADP",
+    "symbol_display": "ATP ⇌ ADP + Pi",
+    "symbol_plain": "ATP <-> ADP + Pi"
+  },
+  "definition": "ATP 끝의 인산 결합이 끊어져 ADP와 무기 인산이 되면서 에너지를 내놓고, 거꾸로 에너지를 받아 다시 ATP가 되는 되돌이 반응.",
+  "relations": [
+    {
+      "id": "rel-atpadp-break",
+      "text": "ATP 끝쪽 인산 사이의 결합이 끊어지면 ADP와 무기 인산이 생기면서 에너지가 방출된다",
+      "form": {
+        "condition": "끝쪽 인산 결합이 끊어질 때",
+        "type": "causal",
+        "scope": "ATP의 분해"
+      },
+      "invertible": true,
+      "invertible_reason": "에너지가 드나드는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "ATP 끝쪽 인산 사이의 결합이 끊어지면 ADP와 무기 인산이 생기면서 에너지가 흡수된다"
+    },
+    {
+      "id": "rel-atpadp-use",
+      "text": "ATP가 분해되며 나온 에너지는 물질 합성·근육 운동·혈액 순환 같은 생명활동에 쓰인다",
+      "form": {
+        "condition": "세포가 에너지를 꺼내 쓸 때",
+        "type": "causal",
+        "scope": "생명활동 전반"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atpadp-resynth",
+      "text": "ADP와 무기 인산은 세포호흡에서 얻은 에너지를 받아 다시 ATP로 합성된다",
+      "form": {
+        "condition": "세포호흡으로 에너지가 공급될 때",
+        "type": "causal",
+        "scope": "살아 있는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "되돌아가는 과정을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "ADP는 한 번 만들어지면 다시 ATP가 되지 못한다",
+      "why_wrong": "ADP는 무기 인산과 다시 결합해 ATP로 돌아간다. 세포는 이 되돌이를 되풀이하며 에너지를 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atpadp-resynth"
+    },
+    {
+      "text": "ATP는 몸에 쌓아 두었다가 필요할 때 꺼내 쓰는 장기 저장 물질이다",
+      "why_wrong": "ATP는 만들어지는 대로 곧 쓰이고 다시 ADP로 돌아간다. 오래 쌓아 두는 쪽은 글라이코젠이나 지방이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atpadp-resynth"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-atp"
+    },
+    {
+      "type": "related",
+      "target": "cell-stepwise-energy-release-in-cellular-respiration",
+      "note": "ATP를 채워 넣는 쪽의 이야기다"
+    },
+    {
+      "type": "related",
+      "target": "cell-energy-conversion-in-photosynthesis-and-cellular-respiration",
+      "note": "에너지 흐름 전체에서 이 되돌이가 놓인 자리를 볼 수 있다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-02"
+  ],
+  "topic_id": "cell-2-1-2",
+  "pages": [
+    60,
+    63,
+    74
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

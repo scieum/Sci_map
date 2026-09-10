@@ -1,0 +1,113 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-substrate-level-phosphorylation",
+  "concept_key": "concept:substrate-level-phosphorylation",
+  "registry_status": "new",
+  "term": "기질수준인산화",
+  "notation": {
+    "hanja": "基質水準燐酸化",
+    "hanja_gloss": "基 터 기 · 質 바탕 질 · 水 물 수 · 準 준할 준 · 燐 도깨비불 인 · 酸 실 산 · 化 될 화",
+    "english": "substrate-level phosphorylation"
+  },
+  "definition": "기질에 붙어 있던 인산기가 효소의 작용으로 ADP에 옮겨 붙어 ATP가 되는 인산화 방식.",
+  "relations": [
+    {
+      "id": "rel-slp-transfer",
+      "text": "효소가 기질에 붙은 인산기를 떼어 ADP에 넘겨주면 그 자리에서 ATP가 만들어진다",
+      "form": {
+        "condition": "인산기를 지닌 기질이 있을 때",
+        "type": "causal",
+        "scope": "기질수준인산화"
+      },
+      "invertible": true,
+      "invertible_reason": "인산기를 내주는 쪽과 받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "효소가 ADP에 붙은 인산기를 떼어 기질에 넘겨주면 그 자리에서 ATP가 만들어진다"
+    },
+    {
+      "id": "rel-slp-where",
+      "text": "세포호흡에서 기질수준인산화가 일어나는 곳은 해당 과정과 TCA 회로다",
+      "form": {
+        "condition": "세포호흡의 단계를 나눠 볼 때",
+        "type": "classification",
+        "scope": "세포호흡",
+        "antecedent": {
+          "quantity": "기질수준인산화가 일어나는 단계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "해당 과정과 TCA 회로",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "어느 단계인지 짚은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-slp-no-membrane",
+      "text": "이 방식은 막에 놓인 전자전달계를 거치지 않으므로 산소가 없어도 ATP를 만들 수 있다",
+      "form": {
+        "condition": "산소가 없는 조건에서",
+        "type": "conditional",
+        "scope": "기질수준인산화"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇 없이 일어나는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡에서 만들어지는 ATP는 모두 ATP 합성효소를 지나며 생긴다",
+      "why_wrong": "해당 과정과 TCA 회로에서는 기질의 인산기가 ADP로 곧바로 옮겨 가 ATP가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-slp-where"
+    },
+    {
+      "text": "기질수준인산화는 마이토콘드리아 내막에서 일어난다",
+      "why_wrong": "내막에서 일어나는 것은 산화적 인산화다. 기질수준인산화는 세포질과 마이토콘드리아 기질에서 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-slp-where"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-glycolysis"
+    },
+    {
+      "type": "next",
+      "target": "cell-oxidative-phosphorylation",
+      "note": "두 인산화를 갈라 보는 것이 이 대목의 목표다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-03"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    91,
+    97,
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

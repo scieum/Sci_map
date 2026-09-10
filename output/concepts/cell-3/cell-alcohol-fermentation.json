@@ -1,0 +1,106 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-alcohol-fermentation",
+  "concept_key": "concept:alcohol-fermentation",
+  "registry_status": "new",
+  "term": "알코올발효",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'알코올' 이 음차어라 표제어 전체에 대응하는 한자어 표기가 없다. 뒤의 '발효' 만 한자어(醱酵)다.",
+    "english": "alcohol fermentation",
+    "symbol_display": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
+    "symbol_plain": "C6H12O6 -> 2C2H5OH + 2CO2"
+  },
+  "definition": "효모가 산소 없이 포도당을 분해해 에탄올과 이산화 탄소를 남기는 발효. 포도당 하나에서 ATP 둘을 얻는다.",
+  "relations": [
+    {
+      "id": "rel-alc-steps",
+      "text": "피루브산이 이산화 탄소를 잃고 아세트알데하이드가 된 다음 에탄올로 환원된다",
+      "form": {
+        "condition": "효모가 산소 없는 곳에 있을 때",
+        "type": "causal",
+        "scope": "알코올발효"
+      },
+      "invertible": true,
+      "invertible_reason": "거쳐 가는 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에탄올이 이산화 탄소를 잃고 아세트알데하이드가 된 다음 피루브산으로 환원된다"
+    },
+    {
+      "id": "rel-alc-nad-recycle",
+      "text": "아세트알데하이드가 에탄올로 환원될 때 NAD⁺가 되살아나 해당 과정이 계속 돌아간다",
+      "form": {
+        "condition": "산소가 없어 전자전달계를 쓸 수 없을 때",
+        "type": "causal",
+        "scope": "알코올발효"
+      },
+      "invertible": false,
+      "invertible_reason": "되살아나는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-alc-yield",
+      "text": "알코올발효에서 포도당 한 분자로 얻는 ATP는 두 분자다",
+      "form": {
+        "condition": "포도당 한 분자가 발효될 때",
+        "type": "causal",
+        "scope": "알코올발효"
+      },
+      "invertible": false,
+      "invertible_reason": "생성량을 셈한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "알코올발효에서 나오는 이산화 탄소는 TCA 회로에서 나온 것이다",
+      "why_wrong": "발효에서는 TCA 회로가 돌지 않는다. 이산화 탄소는 피루브산이 아세트알데하이드로 바뀔 때 떨어져 나온 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-alc-steps"
+    },
+    {
+      "text": "효모는 언제나 알코올발효만 한다",
+      "why_wrong": "산소가 있으면 효모도 산소호흡으로 에너지를 얻는다. 알코올발효는 산소가 없을 때의 길이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-alc-nad-recycle"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-fermentation"
+    },
+    {
+      "type": "related",
+      "target": "cell-lactic-acid-fermentation",
+      "note": "같은 발효인데 남는 산물이 다르다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-04"
+  ],
+  "topic_id": "cell-3-3-1",
+  "pages": [
+    99,
+    103
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

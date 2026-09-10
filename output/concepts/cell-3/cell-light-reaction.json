@@ -1,0 +1,114 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-light-reaction",
+  "concept_key": "concept:light-reaction",
+  "registry_status": "new",
+  "term": "명반응",
+  "notation": {
+    "hanja": "明反應",
+    "hanja_gloss": "明 밝을 명 · 反 돌이킬 반 · 應 응할 응",
+    "english": "light reaction"
+  },
+  "definition": "타이라코이드 막에서 빛에너지를 받아 ATP와 NADPH의 화학 에너지로 바꾸는 반응. 물이 쪼개져 산소가 난다.",
+  "relations": [
+    {
+      "id": "rel-light-site",
+      "text": "명반응은 광계가 박혀 있는 타이라코이드 막에서 진행된다",
+      "form": {
+        "condition": "빛이 엽록체에 닿을 때",
+        "type": "conditional",
+        "scope": "엽록체"
+      },
+      "invertible": false,
+      "invertible_reason": "벌어지는 자리를 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-light-products",
+      "text": "빛에너지는 ATP와 NADPH라는 두 물질에 화학 에너지로 담겨 스트로마 쪽으로 넘어간다",
+      "form": {
+        "condition": "명반응이 진행될 때",
+        "type": "causal",
+        "scope": "명반응의 산물"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 생기는지 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-light-needs-light",
+      "text": "빛이 끊기면 명반응이 멎어 ATP와 NADPH의 공급도 곧 끊긴다",
+      "form": {
+        "condition": "빛을 가렸을 때",
+        "type": "causal",
+        "scope": "명반응"
+      },
+      "invertible": true,
+      "invertible_reason": "빛과 산물이 같은 쪽으로 움직이므로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빛이 끊기면 명반응이 더 빨라져 ATP와 NADPH가 더 많이 공급된다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "명반응에서 포도당이 만들어진다",
+      "why_wrong": "명반응이 만드는 것은 ATP와 NADPH다. 포도당은 스트로마의 탄소 고정 반응에서 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-light-products"
+    },
+    {
+      "text": "명반응은 낮에만, 탄소 고정 반응은 밤에만 일어난다",
+      "why_wrong": "탄소 고정 반응도 명반응 산물이 있어야 돌아가므로 빛이 있을 때 함께 진행된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-light-needs-light"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosynthesis"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-thylakoid"
+    },
+    {
+      "type": "next",
+      "target": "cell-photosystem",
+      "note": "빛을 받는 장치를 자세히 본다"
+    },
+    {
+      "type": "next",
+      "target": "cell-light-carbon-fixation-relation",
+      "note": "뒤 반응과 어떻게 이어지는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    108,
+    111,
+    115
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

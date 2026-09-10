@@ -1,0 +1,111 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-carotenoid",
+  "concept_key": "concept:carotenoid",
+  "registry_status": "new",
+  "term": "카로티노이드",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 carotenoid 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "carotenoid"
+  },
+  "definition": "빛을 흡수해 엽록소에 넘겨주는 보조색소. 카로틴과 잔토필 등이 있어 빨강·주황·노랑을 띤다.",
+  "relations": [
+    {
+      "id": "rel-caro-accessory",
+      "text": "카로티노이드는 스스로 흡수한 빛에너지를 엽록소에 넘겨주는 보조색소다",
+      "form": {
+        "condition": "빛이 색소에 닿을 때",
+        "type": "causal",
+        "scope": "광합성색소"
+      },
+      "invertible": true,
+      "invertible_reason": "넘겨주는 쪽과 받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "카로티노이드는 엽록소가 흡수한 빛에너지를 넘겨받아 쓰는 중심 색소다"
+    },
+    {
+      "id": "rel-caro-protect",
+      "text": "빛이 지나치게 강할 때 카로티노이드는 엽록소가 상하는 것을 막아 준다",
+      "form": {
+        "condition": "과도한 빛을 받을 때",
+        "type": "causal",
+        "scope": "엽록체의 색소"
+      },
+      "invertible": false,
+      "invertible_reason": "구실을 덧붙인 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-caro-kinds",
+      "text": "카로티노이드는 카로틴·잔토필처럼 종류에 따라 빨간색·주황색·노란색으로 달리 보인다",
+      "form": {
+        "condition": "색소의 종류를 나눌 때",
+        "type": "classification",
+        "scope": "카로티노이드",
+        "antecedent": {
+          "quantity": "카로티노이드의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "드러나는 색",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "종류와 색을 짝지은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "카로티노이드는 광합성과 상관없는 색소다",
+      "why_wrong": "흡수한 빛에너지를 엽록소에 넘겨주고 강한 빛에서 엽록소를 지켜 광합성을 돕는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-caro-accessory"
+    },
+    {
+      "text": "카로티노이드는 가을이 되어야 새로 만들어지는 색소다",
+      "why_wrong": "잎에 늘 함께 들어 있다. 엽록소가 줄어들면서 가려져 있던 색이 드러나는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-caro-kinds"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-photosynthetic-pigment"
+    },
+    {
+      "type": "related",
+      "target": "cell-chlorophyll",
+      "note": "모은 빛을 넘겨받는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-05"
+  ],
+  "topic_id": "cell-3-4-1",
+  "pages": [
+    104
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

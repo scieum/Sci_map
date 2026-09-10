@@ -1,0 +1,130 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-chloroplast-structure",
+  "concept_key": "concept:chloroplast",
+  "registry_status": "new",
+  "term": "엽록체의 구조",
+  "aliases": [
+    "엽록체"
+  ],
+  "notation": {
+    "hanja": "葉綠體",
+    "hanja_gloss": "葉 잎 엽 · 綠 푸를 록 · 體 몸 체",
+    "english": "structure of chloroplast"
+  },
+  "definition": "이중막에 싸인 세포소기관의 짜임. 안에 타이라코이드가 쌓여 있고 그 막에서 빛에너지를 화학 에너지로 바꾼다.",
+  "relations": [
+    {
+      "id": "rel-chl-str-thylakoid-protein",
+      "text": "타이라코이드 막에는 엽록소를 품은 광계와 전자전달효소, ATP 합성효소가 나란히 박혀 있다",
+      "form": {
+        "condition": "명반응이 일어나는 자리를 볼 때",
+        "type": "conditional",
+        "scope": "엽록체의 타이라코이드 막"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 어디에 놓였는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-chl-str-grana-area",
+      "text": "타이라코이드가 겹겹이 포개져 그라나를 이룰수록 효소가 놓일 막 표면적이 넓어져 광합성 효율이 오른다",
+      "form": {
+        "condition": "그라나가 발달한 정도를 견줄 때",
+        "type": "direct",
+        "scope": "엽록체",
+        "antecedent": {
+          "quantity": "그라나의 발달 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광합성 효율",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "발달 정도와 효율이 같은 쪽으로 움직이므로 방향을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "타이라코이드가 겹겹이 포개져 그라나를 이룰수록 효소가 놓일 막 표면적이 좁아져 광합성 효율이 떨어진다"
+    },
+    {
+      "id": "rel-chl-str-stroma-enzyme",
+      "text": "그라나 바깥의 스트로마에는 이산화 탄소를 포도당으로 바꾸는 데 관여하는 효소들이 녹아 있다",
+      "form": {
+        "condition": "탄소 고정 반응이 일어나는 자리를 볼 때",
+        "type": "conditional",
+        "scope": "엽록체 스트로마"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 어디에 있는지 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "엽록체는 식물의 모든 세포에 들어 있다",
+      "why_wrong": "빛이 닿는 잎의 조직 등에 주로 있다. 뿌리처럼 빛이 들지 않는 곳의 세포에는 엽록체가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chl-str-thylakoid-protein"
+    },
+    {
+      "text": "빛에너지를 화학 에너지로 바꾸는 일은 스트로마에서 일어난다",
+      "why_wrong": "빛을 받아 화학 에너지로 바꾸는 것은 타이라코이드 막의 광계다. 스트로마는 그 산물을 받아 탄소를 고정하는 자리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chl-str-stroma-enzyme"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "cell-chloroplast",
+      "note": "Ⅰ단원에서 세포소기관을 훑을 때 처음 만난 카드다"
+    },
+    {
+      "type": "next",
+      "target": "cell-endosymbiotic-theory",
+      "note": "이 구조가 어디서 왔는지로 이어진다"
+    },
+    {
+      "type": "next",
+      "target": "cell-thylakoid"
+    },
+    {
+      "type": "next",
+      "target": "cell-stroma"
+    },
+    {
+      "type": "next",
+      "target": "cell-photosynthesis",
+      "note": "이 안에서 무슨 일이 벌어지는지로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-05"
+  ],
+  "topic_id": "cell-3-1-3",
+  "pages": [
+    86,
+    89,
+    116
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

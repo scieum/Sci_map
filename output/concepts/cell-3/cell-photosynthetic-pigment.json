@@ -1,0 +1,120 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-photosynthetic-pigment",
+  "concept_key": "concept:photosynthetic-pigment",
+  "registry_status": "new",
+  "term": "광합성색소",
+  "notation": {
+    "hanja": "光合成色素",
+    "hanja_gloss": "光 빛 광 · 合 합할 합 · 成 이룰 성 · 色 빛 색 · 素 본디 소",
+    "english": "photosynthetic pigment"
+  },
+  "definition": "타이라코이드 막에 박혀 빛을 흡수하는 색소를 통틀어 이르는 말. 엽록소와 카로티노이드가 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-pigment-place",
+      "text": "광합성색소는 그라나를 이루는 타이라코이드 막에 자리 잡고 있다",
+      "form": {
+        "condition": "색소가 있는 자리를 물을 때",
+        "type": "conditional",
+        "scope": "엽록체"
+      },
+      "invertible": false,
+      "invertible_reason": "자리를 짚은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pigment-kinds",
+      "text": "광합성색소는 크게 엽록소와 카로티노이드로 나뉘며 그 가운데 엽록소 a가 중심 역할을 맡는다",
+      "form": {
+        "condition": "색소를 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "식물의 잎",
+        "antecedent": {
+          "quantity": "광합성색소",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "엽록소와 카로티노이드",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pigment-wavelength",
+      "text": "색소마다 가장 잘 흡수하는 파장대가 달라 같은 빛에서도 흡수하는 몫이 서로 다르다",
+      "form": {
+        "condition": "여러 파장의 빛을 함께 비출 때",
+        "type": "conditional",
+        "scope": "광합성색소"
+      },
+      "invertible": false,
+      "invertible_reason": "종류마다 다르다는 것을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광합성색소는 잎 세포의 세포질 전체에 흩어져 있다",
+      "why_wrong": "엽록체 안 타이라코이드 막에 자리 잡고 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pigment-place"
+    },
+    {
+      "text": "광합성에 관여하는 색소는 엽록소 한 가지뿐이다",
+      "why_wrong": "카로티노이드처럼 빛을 모아 엽록소에 넘겨주는 보조색소도 함께 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pigment-kinds"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-thylakoid"
+    },
+    {
+      "type": "next",
+      "target": "cell-chlorophyll"
+    },
+    {
+      "type": "next",
+      "target": "cell-carotenoid"
+    },
+    {
+      "type": "next",
+      "target": "cell-photosystem",
+      "note": "색소가 모여 이룬 복합체로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-05",
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-1",
+  "pages": [
+    104,
+    115
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

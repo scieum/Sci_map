@@ -1,0 +1,115 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-chemiosmosis",
+  "concept_key": "concept:chemiosmosis",
+  "registry_status": "new",
+  "term": "화학삼투",
+  "notation": {
+    "hanja": "化學滲透",
+    "hanja_gloss": "化 될 화 · 學 배울 학 · 滲 스밀 삼 · 透 사무칠 투",
+    "english": "chemiosmosis"
+  },
+  "definition": "막을 사이에 둔 수소 이온 농도 기울기에 에너지를 담아 두었다가, 이온이 되돌아 흐를 때 ATP를 얻는 방식.",
+  "relations": [
+    {
+      "id": "rel-chemi-store-gradient",
+      "text": "전자가 이동하며 내놓은 에너지는 막 안팎의 수소 이온 농도 차라는 꼴로 저장된다",
+      "form": {
+        "condition": "전자전달계가 작동할 때",
+        "type": "causal",
+        "scope": "마이토콘드리아 내막과 타이라코이드 막"
+      },
+      "invertible": true,
+      "invertible_reason": "에너지를 내주는 쪽과 담는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 이온 농도 차에 저장된 에너지가 전자를 전자전달계 위쪽으로 되밀어 올린다"
+    },
+    {
+      "id": "rel-chemi-mito-gradient",
+      "text": "마이토콘드리아에서는 막사이공간의 수소 이온 농도가 기질보다 높아진다",
+      "form": {
+        "condition": "산화적 인산화가 일어날 때",
+        "type": "causal",
+        "scope": "마이토콘드리아"
+      },
+      "invertible": true,
+      "invertible_reason": "높아지는 쪽이 정해져 있어 두 공간을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마이토콘드리아에서는 기질의 수소 이온 농도가 막사이공간보다 높아진다"
+    },
+    {
+      "id": "rel-chemi-atp",
+      "text": "쌓인 수소 이온이 농도가 낮은 쪽으로 되돌아 흐를 때 그 통로에서 ATP가 만들어진다",
+      "form": {
+        "condition": "막을 사이에 둔 농도 기울기가 만들어져 있을 때",
+        "type": "causal",
+        "scope": "화학삼투로 ATP를 얻는 막"
+      },
+      "invertible": false,
+      "invertible_reason": "언제 ATP가 생기는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화학삼투는 물이 막을 건너는 삼투 현상이다",
+      "why_wrong": "여기서 막을 건너는 것은 물이 아니라 수소 이온이고, 그 흐름에서 ATP를 얻는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chemi-atp"
+    },
+    {
+      "text": "수소 이온은 스스로 농도가 높은 쪽으로 모여든다",
+      "why_wrong": "전자전달효소 복합체가 에너지를 써서 퍼 올린 결과다. 저절로 모이는 것이 아니라 능동수송으로 쌓인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chemi-store-gradient"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-atp-synthase"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-electron-transport-chain"
+    },
+    {
+      "type": "next",
+      "target": "cell-oxidative-phosphorylation"
+    },
+    {
+      "type": "next",
+      "target": "cell-photophosphorylation",
+      "note": "엽록체에서도 같은 원리가 되풀이된다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-03"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    95,
+    97,
+    117,
+    122
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

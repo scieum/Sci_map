@@ -1,0 +1,98 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-crista",
+  "concept_key": "concept:crista",
+  "registry_status": "new",
+  "term": "크리스타",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "라틴어 crista 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "crista"
+  },
+  "definition": "마이토콘드리아 내막이 안쪽으로 주름져 이룬 구조. 막단백질이 자리 잡을 내막의 표면적을 넓혀 준다.",
+  "relations": [
+    {
+      "id": "rel-crista-inner-fold",
+      "text": "크리스타는 내막이 기질 쪽으로 접혀 들어가 생긴 주름이며 외막에는 이런 주름이 없다",
+      "form": {
+        "condition": "외막과 내막의 생김새를 견줄 때",
+        "type": "conditional",
+        "scope": "마이토콘드리아"
+      },
+      "invertible": true,
+      "invertible_reason": "접히는 막이 어느 쪽인지 정해져 있어 두 막을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크리스타는 외막이 접혀 생긴 주름이며 내막에는 이런 주름이 없다"
+    },
+    {
+      "id": "rel-crista-protein-count",
+      "text": "크리스타가 잘 발달한 세포일수록 내막에 놓이는 전자전달효소와 ATP 합성효소의 수가 많다",
+      "form": {
+        "condition": "세포마다 크리스타 발달 정도가 다를 때",
+        "type": "direct",
+        "scope": "진핵세포의 마이토콘드리아",
+        "antecedent": {
+          "quantity": "크리스타의 발달 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내막의 막단백질 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "발달 정도와 막단백질 수가 같은 쪽으로 움직이므로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크리스타가 잘 발달한 세포일수록 내막에 놓이는 전자전달효소와 ATP 합성효소의 수가 적다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "크리스타는 마이토콘드리아의 바깥막이 울퉁불퉁한 것이다",
+      "why_wrong": "주름지는 것은 안쪽 막이다. 외막은 매끈하게 소기관을 감싼다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-crista-inner-fold"
+    },
+    {
+      "text": "크리스타에서 포도당이 피루브산으로 쪼개진다",
+      "why_wrong": "포도당이 쪼개지는 해당 과정은 세포질에서 일어난다. 크리스타가 있는 내막은 전자 전달과 ATP 합성이 일어나는 자리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-crista-protein-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-mitochondrion-structure"
+    },
+    {
+      "type": "next",
+      "target": "cell-electron-transport-chain",
+      "note": "전자전달계가 놓이는 자리가 이 막이다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-01"
+  ],
+  "topic_id": "cell-3-1-2",
+  "pages": [
+    85,
+    89
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

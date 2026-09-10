@@ -1,0 +1,110 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-respiratory-substrate",
+  "concept_key": "concept:respiratory-substrate",
+  "registry_status": "new",
+  "term": "호흡기질",
+  "notation": {
+    "hanja": "呼吸基質",
+    "hanja_gloss": "呼 부를 호 · 吸 마실 흡 · 基 터 기 · 質 바탕 질",
+    "english": "respiratory substrate"
+  },
+  "definition": "세포호흡의 재료가 되어 분해되는 유기물. 탄수화물·지방·단백질의 소화 산물이 여기에 들며 주로 포도당이 쓰인다.",
+  "relations": [
+    {
+      "id": "rel-resp-sub-kinds",
+      "text": "탄수화물과 지방, 단백질이 소화되어 생긴 물질은 모두 세포호흡의 재료가 될 수 있다",
+      "form": {
+        "condition": "소화 산물이 세포로 들어왔을 때",
+        "type": "conditional",
+        "scope": "사람이 섭취하는 3대 영양소"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰일 수 있는 범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-resp-sub-glucose",
+      "text": "여러 호흡기질 가운데 세포호흡에 주로 쓰이는 것은 포도당이다",
+      "form": {
+        "condition": "호흡기질끼리 쓰이는 정도를 견줄 때",
+        "type": "classification",
+        "scope": "사람의 세포호흡",
+        "antecedent": {
+          "quantity": "호흡기질",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "포도당",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "어느 쪽이 주로 쓰이는지를 정한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-resp-sub-atp",
+      "text": "호흡기질이 세포호흡으로 분해되면 그 안에 담겨 있던 에너지의 일부가 ATP로 옮겨 간다",
+      "form": {
+        "condition": "세포호흡이 일어날 때",
+        "type": "causal",
+        "scope": "호흡기질의 분해"
+      },
+      "invertible": false,
+      "invertible_reason": "옮겨 가는 몫을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡의 재료가 될 수 있는 것은 포도당뿐이다",
+      "why_wrong": "주로 쓰이는 것이 포도당일 뿐, 지방과 단백질의 소화 산물도 세포호흡에 쓰일 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resp-sub-kinds"
+    },
+    {
+      "text": "호흡기질은 우리가 숨으로 들이마시는 산소를 가리킨다",
+      "why_wrong": "호흡기질은 분해되는 쪽인 유기물이다. 산소는 그 분해에 함께 쓰이는 기체이지 기질이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resp-sub-kinds"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-catabolism"
+    },
+    {
+      "type": "next",
+      "target": "cell-atp",
+      "note": "쪼개진 에너지가 담기는 곳이다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-02"
+  ],
+  "topic_id": "cell-2-1-2",
+  "pages": [
+    60
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

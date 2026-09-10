@@ -1,0 +1,123 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-thylakoid",
+  "concept_key": "concept:thylakoid",
+  "registry_status": "new",
+  "term": "타이라코이드",
+  "aliases": [
+    "틸라코이드"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 thylakoid 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "thylakoid"
+  },
+  "definition": "엽록체 속에 놓인 납작한 주머니 모양의 막 구조. 여러 장이 동전처럼 포개진 더미를 그라나라고 한다.",
+  "relations": [
+    {
+      "id": "rel-thy-grana-name",
+      "text": "타이라코이드가 여러 장 포개진 더미를 그라나라 하고, 그 바깥을 채운 액상 부분이 스트로마다",
+      "form": {
+        "condition": "엽록체 내부를 나눠 부를 때",
+        "type": "classification",
+        "scope": "엽록체 내부 구조",
+        "antecedent": {
+          "quantity": "타이라코이드가 포개진 더미",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "그라나",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 붙인 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-thy-light-reaction-site",
+      "text": "명반응은 타이라코이드 막에서 일어나고 스트로마에서는 일어나지 않는다",
+      "form": {
+        "condition": "빛이 엽록체에 닿을 때",
+        "type": "conditional",
+        "scope": "엽록체"
+      },
+      "invertible": true,
+      "invertible_reason": "반응이 벌어지는 자리가 정해져 있어 두 자리를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "명반응은 스트로마에서 일어나고 타이라코이드 막에서는 일어나지 않는다"
+    },
+    {
+      "id": "rel-thy-inner-space",
+      "text": "타이라코이드 막이 감싼 안쪽 공간은 수소 이온이 몰려 농도가 높아지는 자리다",
+      "form": {
+        "condition": "명반응에서 전자가 전달될 때",
+        "type": "causal",
+        "scope": "엽록체의 타이라코이드"
+      },
+      "invertible": true,
+      "invertible_reason": "이온이 몰리는 쪽이 정해져 있어 안팎을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "타이라코이드 막 바깥의 스트로마가 수소 이온이 몰려 농도가 높아지는 자리다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "그라나와 타이라코이드는 서로 다른 막 구조다",
+      "why_wrong": "그라나는 타이라코이드가 여러 장 포개진 더미를 가리키는 이름이다. 다른 막이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-thy-grana-name"
+    },
+    {
+      "text": "타이라코이드 안쪽 공간과 스트로마는 트여 있어 수소 이온 농도가 늘 같다",
+      "why_wrong": "타이라코이드 막이 둘을 갈라놓아 농도 차가 생기고, 그 차이가 ATP를 만드는 밑천이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-thy-inner-space"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-chloroplast-structure"
+    },
+    {
+      "type": "next",
+      "target": "cell-photosynthetic-pigment",
+      "note": "이 막에 박힌 색소로 이어진다"
+    },
+    {
+      "type": "next",
+      "target": "cell-light-reaction",
+      "note": "이 막에서 벌어지는 반응으로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-05"
+  ],
+  "topic_id": "cell-3-1-3",
+  "pages": [
+    86,
+    89,
+    108,
+    111
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

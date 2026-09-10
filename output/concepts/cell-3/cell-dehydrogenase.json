@@ -1,0 +1,109 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-dehydrogenase",
+  "concept_key": "concept:dehydrogenase",
+  "registry_status": "new",
+  "term": "탈수소효소",
+  "notation": {
+    "hanja": "脫水素酵素",
+    "hanja_gloss": "脫 벗을 탈 · 水 물 수 · 素 본디 소 · 酵 삭힐 효 · 素 본디 소",
+    "english": "dehydrogenase",
+    "symbol_display": "NAD⁺, FAD",
+    "symbol_plain": "NAD+, FAD"
+  },
+  "definition": "기질에서 수소 이온과 고에너지 전자를 떼어 내 산화시키는 효소. 떨어진 것은 조효소가 받아 나른다.",
+  "relations": [
+    {
+      "id": "rel-dehydro-oxidize",
+      "text": "탈수소효소가 기질에서 수소 이온과 전자를 떼어 내면 그 기질은 산화된다",
+      "form": {
+        "condition": "탈수소효소가 기질에 작용할 때",
+        "type": "causal",
+        "scope": "세포호흡의 산화 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "떼어 내는 쪽과 붙이는 쪽이 반대 결과를 내므로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탈수소효소가 기질에 수소 이온과 전자를 붙여 주면 그 기질은 산화된다"
+    },
+    {
+      "id": "rel-dehydro-coenzyme",
+      "text": "떨어져 나온 수소 이온과 전자는 조효소인 NAD⁺나 FAD가 받아 NADH와 FADH₂가 된다",
+      "form": {
+        "condition": "탈수소효소가 기질을 산화시킬 때",
+        "type": "causal",
+        "scope": "세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "받는 쪽과 그 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dehydro-carrier",
+      "text": "NADH와 FADH₂는 받아 든 고에너지 전자를 마이토콘드리아 내막의 전자전달계로 실어 나른다",
+      "form": {
+        "condition": "산소가 있어 산화적 인산화가 이어질 때",
+        "type": "causal",
+        "scope": "산소호흡"
+      },
+      "invertible": true,
+      "invertible_reason": "싣는 쪽과 내리는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자전달계가 고에너지 전자를 NADH와 FADH₂로 실어 보낸다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "NAD⁺와 FAD는 효소이므로 스스로 기질에서 수소를 떼어 낸다",
+      "why_wrong": "떼어 내는 일은 탈수소효소가 한다. NAD⁺와 FAD는 그 효소를 돕는 조효소로 전자를 받아 나를 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dehydro-coenzyme"
+    },
+    {
+      "text": "NADH는 그 자체로 세포가 바로 쓰는 에너지 화폐다",
+      "why_wrong": "NADH는 전자를 실어 나르는 운반체다. 세포가 곧바로 쓰는 형태는 ATP이고, NADH는 전자전달계를 거쳐 ATP로 바뀐다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dehydro-carrier"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "cell-glycolysis",
+      "note": "이 효소가 작용해 NADH가 생기는 첫 자리다"
+    },
+    {
+      "type": "next",
+      "target": "cell-tca-cycle",
+      "note": "회로 안에서도 같은 일이 되풀이된다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-02"
+  ],
+  "topic_id": "cell-3-2-1",
+  "pages": [
+    91,
+    92,
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

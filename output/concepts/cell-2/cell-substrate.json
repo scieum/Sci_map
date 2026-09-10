@@ -1,0 +1,122 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-substrate",
+  "concept_key": "concept:substrate",
+  "registry_status": "new",
+  "term": "기질",
+  "notation": {
+    "hanja": "基質",
+    "hanja_gloss": "基 터 기 · 質 바탕 질",
+    "english": "substrate"
+  },
+  "definition": "효소와 잠시 결합했다가 생성물로 바뀌는 쪽의 반응물. 효소마다 붙잡을 수 있는 기질이 정해져 있다.",
+  "relations": [
+    {
+      "id": "rel-sub-is-reactant",
+      "text": "효소와 결합하는 쪽의 반응물을 가리켜 기질이라고 부른다",
+      "form": {
+        "condition": "효소 반응에서 물질마다 이름을 붙일 때",
+        "type": "classification",
+        "scope": "효소가 촉매하는 반응",
+        "antecedent": {
+          "quantity": "효소와 결합하는 반응물",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기질",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 정한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sub-binds-active-site",
+      "text": "기질은 효소의 활성부위에 끼워져 효소기질복합체를 이룬다",
+      "form": {
+        "condition": "효소와 기질이 만나 결합할 때",
+        "type": "causal",
+        "scope": "효소의 촉매 반응"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 일어나는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sub-to-product",
+      "text": "결합한 기질은 변화를 거쳐 생성물이 되고 효소에서 떨어져 나간다",
+      "form": {
+        "condition": "촉매 반응이 마무리될 때",
+        "type": "causal",
+        "scope": "효소의 촉매 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "바뀌는 쪽과 남는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결합한 생성물은 변화를 거쳐 기질이 되고 효소에서 떨어져 나간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기질은 효소가 만들어 낸 물질이다",
+      "why_wrong": "기질은 효소가 작용하기 전의 반응물이다. 효소가 만들어 내는 쪽은 생성물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sub-is-reactant"
+    },
+    {
+      "text": "어떤 기질이든 아무 효소에나 붙을 수 있다",
+      "why_wrong": "효소는 활성부위에 입체 구조가 들어맞는 기질하고만 결합한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sub-binds-active-site"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-enzyme"
+    },
+    {
+      "type": "next",
+      "target": "cell-enzyme-substrate-complex"
+    },
+    {
+      "type": "next",
+      "target": "cell-substrate-specificity"
+    },
+    {
+      "type": "related",
+      "target": "cell-active-site",
+      "note": "기질이 끼워지는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-04"
+  ],
+  "topic_id": "cell-2-2-1",
+  "pages": [
+    66,
+    68,
+    70,
+    73
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

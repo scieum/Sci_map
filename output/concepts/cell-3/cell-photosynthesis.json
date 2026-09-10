@@ -1,0 +1,140 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-photosynthesis",
+  "concept_key": "concept:photosynthesis",
+  "registry_status": "reused",
+  "term": "광합성",
+  "notation": {
+    "hanja": "光合成",
+    "hanja_gloss": "光 빛 광 · 合 합할 합 · 成 이룰 성",
+    "english": "photosynthesis",
+    "symbol_display": "6CO₂ + 12H₂O → C₆H₁₂O₆ + 6O₂ + 6H₂O",
+    "symbol_plain": "6CO2 + 12H2O -> C6H12O6 + 6O2 + 6H2O"
+  },
+  "definition": "빛에너지를 밑천 삼아 이산화 탄소와 물로 포도당을 지어내는 동화작용. 산소가 부산물로 나온다.",
+  "relations": [
+    {
+      "id": "rel-photo-anabolism",
+      "text": "광합성은 빛에너지를 화학 에너지로 바꾸며 작은 분자를 큰 유기물로 조립하는 동화작용이다",
+      "form": {
+        "condition": "물질대사의 갈래를 나눌 때",
+        "type": "classification",
+        "scope": "빛을 쓰는 생물",
+        "antecedent": {
+          "quantity": "광합성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "동화작용",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "어느 갈래인지 정한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-photo-o2-source",
+      "text": "광합성에서 나오는 산소는 이산화 탄소가 아니라 물이 분해되어 생긴 것이다",
+      "form": {
+        "condition": "산소의 출처를 따질 때",
+        "type": "causal",
+        "scope": "식물의 광합성"
+      },
+      "invertible": true,
+      "invertible_reason": "산소가 나오는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성에서 나오는 산소는 물이 아니라 이산화 탄소가 분해되어 생긴 것이다"
+    },
+    {
+      "id": "rel-photo-two-stages",
+      "text": "광합성은 빛에너지를 화학 에너지로 바꾸는 명반응과 그 에너지로 탄소를 고정하는 반응으로 나뉜다",
+      "form": {
+        "condition": "광합성을 단계로 가를 때",
+        "type": "classification",
+        "scope": "엽록체의 광합성",
+        "antecedent": {
+          "quantity": "광합성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "명반응과 탄소 고정 반응",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "단계를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "식물은 낮에는 광합성만 하고 세포호흡은 하지 않는다",
+      "why_wrong": "식물도 살아 있는 세포마다 세포호흡을 한다. 낮에는 두 가지가 함께 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photo-anabolism"
+    },
+    {
+      "text": "광합성에서 나오는 산소는 이산화 탄소가 쪼개져 나온 것이다",
+      "why_wrong": "쪼개지는 것은 물이다. 이산화 탄소의 탄소는 포도당 쪽으로 간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photo-o2-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-chloroplast-structure"
+    },
+    {
+      "type": "next",
+      "target": "cell-light-reaction"
+    },
+    {
+      "type": "next",
+      "target": "cell-carbon-fixation-reaction"
+    },
+    {
+      "type": "next",
+      "target": "cell-action-spectrum",
+      "note": "어느 빛으로 하는지를 그래프로 확인한다"
+    },
+    {
+      "type": "same",
+      "target": "isci2-photosynthesis",
+      "note": "통합과학2에서 같은 개념을 더 짧게 다룬다"
+    },
+    {
+      "type": "same",
+      "target": "reac-photosynthesis",
+      "note": "화학반응의 세계에서 같은 개념을 산화환원 쪽으로 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-06"
+  ],
+  "topic_id": "cell-3-4-2",
+  "pages": [
+    107,
+    116
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

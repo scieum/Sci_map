@@ -1,0 +1,107 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅱ. 물질대사와 에너지",
+  "unit_id": "cell-2",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-stepwise-energy-release-in-cellular-respiration",
+  "concept_key": "concept:stepwise-energy-release-in-cellular-respiration",
+  "registry_status": "new",
+  "term": "세포호흡의 단계적 에너지 방출",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지' 가 음차어라 표제어 전체에 대응하는 한자어 표기가 없다.",
+    "english": "stepwise energy release in cellular respiration"
+  },
+  "definition": "세포호흡이 포도당의 에너지를 한꺼번에 쏟지 않고 여러 반응으로 나누어 조금씩 내놓아 ATP에 담는 방식.",
+  "relations": [
+    {
+      "id": "rel-step-atp",
+      "text": "에너지를 여러 단계로 나누어 조금씩 내놓기 때문에 세포는 그것을 ATP에 담을 수 있다",
+      "form": {
+        "condition": "효소가 조절하는 여러 반응을 차례로 거칠 때",
+        "type": "causal",
+        "scope": "세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-step-vs-combustion",
+      "text": "연소는 에너지를 한꺼번에 내놓아 대부분 빛과 열이 되지만 세포호흡은 나누어 내놓아 ATP에 저장한다",
+      "form": {
+        "condition": "같은 포도당이 분해되는 두 방식을 견줄 때",
+        "type": "conditional",
+        "scope": "포도당의 연소와 세포호흡"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방식에 붙는 성질이 정해져 있어 서로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포호흡은 에너지를 한꺼번에 내놓아 대부분 빛과 열이 되지만 연소는 나누어 내놓아 ATP에 저장한다"
+    },
+    {
+      "id": "rel-step-rate",
+      "text": "세포호흡은 효소가 조절하는 반응들로 이어져 있어 세포의 상황에 따라 속도가 조절될 수 있다",
+      "form": {
+        "condition": "세포의 필요에 따라 반응량이 달라질 때",
+        "type": "causal",
+        "scope": "세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "조절이 가능한 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡과 연소는 포도당이 분해되는 같은 반응이라 차이가 없다",
+      "why_wrong": "생성물은 비슷해도 에너지가 나오는 방식이 다르다. 세포호흡은 효소가 조절하는 여러 단계를 거쳐 천천히 나누어 내놓는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-step-vs-combustion"
+    },
+    {
+      "text": "세포호흡에서 나오는 에너지는 모두 ATP가 된다",
+      "why_wrong": "단계마다 나오는 에너지 가운데 일부만 ATP에 저장되고 나머지는 열로 흩어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-step-atp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-energy-conversion-in-photosynthesis-and-cellular-respiration"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-atp"
+    },
+    {
+      "type": "related",
+      "target": "cell-enzyme",
+      "note": "단계마다 효소가 붙어 속도를 조절한다"
+    }
+  ],
+  "curriculum": [
+    "12세포02-02"
+  ],
+  "topic_id": "cell-2-1-1",
+  "pages": [
+    58
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

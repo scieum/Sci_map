@@ -1,0 +1,107 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅲ. 세포호흡과 광합성",
+  "unit_id": "cell-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-endosymbiotic-theory",
+  "concept_key": "concept:endosymbiotic-theory",
+  "registry_status": "new",
+  "term": "세포내공생설",
+  "notation": {
+    "hanja": "細胞內共生說",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 內 안 내 · 共 함께 공 · 生 날 생 · 說 말씀 설",
+    "english": "endosymbiotic theory"
+  },
+  "definition": "숙주세포 안으로 들어간 원핵세포가 함께 살아남아 마이토콘드리아와 엽록체가 되었다고 보는 기원 가설.",
+  "relations": [
+    {
+      "id": "rel-endo-prokaryote-trace",
+      "text": "두 소기관이 원형 DNA와 라이보솜을 지녔다는 점이 원핵세포에서 비롯했다는 근거로 쓰인다",
+      "form": {
+        "condition": "두 소기관의 기원을 따질 때",
+        "type": "causal",
+        "scope": "마이토콘드리아와 엽록체"
+      },
+      "invertible": false,
+      "invertible_reason": "근거로 삼는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-endo-order",
+      "text": "산소를 쓰던 원핵세포가 먼저 들어와 마이토콘드리아가 되었고, 광합성 원핵세포는 그 뒤에 들어와 엽록체가 되었다",
+      "form": {
+        "condition": "세포내공생설이 그리는 차례를 볼 때",
+        "type": "conditional",
+        "scope": "초기 진핵세포의 진화"
+      },
+      "invertible": true,
+      "invertible_reason": "들어온 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포03-01",
+        "12세포03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광합성 원핵세포가 먼저 들어와 엽록체가 되었고, 산소를 쓰던 원핵세포는 그 뒤에 들어와 마이토콘드리아가 되었다"
+    },
+    {
+      "id": "rel-endo-double-membrane",
+      "text": "잡아들일 때 숙주의 막이 한 겹 더 덧씌워졌다고 보아 두 소기관이 이중막인 까닭을 설명한다",
+      "form": {
+        "condition": "이중막의 유래를 물을 때",
+        "type": "causal",
+        "scope": "마이토콘드리아와 엽록체"
+      },
+      "invertible": false,
+      "invertible_reason": "유래를 설명한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마이토콘드리아는 세포가 필요할 때 핵의 DNA만 가지고 새로 찍어 낸다",
+      "why_wrong": "마이토콘드리아는 자체 DNA와 라이보솜을 가지고 스스로 나뉘어 늘어난다. 이 점이 공생설의 근거가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-endo-prokaryote-trace"
+    },
+    {
+      "text": "세포내공생설은 모든 세포소기관의 기원을 설명한다",
+      "why_wrong": "이중막과 자체 DNA를 갖춘 마이토콘드리아·엽록체를 설명하는 가설이다. 소포체나 골지체까지 같은 방식으로 설명하지는 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-endo-double-membrane"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-mitochondrion-structure",
+      "note": "이중막과 자체 DNA를 먼저 알아야 근거가 읽힌다"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-chloroplast-structure",
+      "note": "엽록체 쪽 근거도 같은 자리에서 나온다"
+    }
+  ],
+  "curriculum": [
+    "12세포03-01",
+    "12세포03-05"
+  ],
+  "topic_id": "cell-3-1-1",
+  "pages": [
+    84,
+    89
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}
