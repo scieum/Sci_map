@@ -196,7 +196,10 @@ def main() -> int:
                 agreement = "일치"
             else:
                 agreement = "불일치"
-                note = f"각론 {cross[code][0]}쪽 판본: {cross[code][1]}"
+                # 라벨을 굳히면 1·2차가 뒤바뀐 과목(12세포)에서 출처가 거꾸로 적힌다.
+                # source 문자열과 같은 이유다.
+                note = (f"{course.get('cross_label', '각론')} "
+                        f"{cross[code][0]}쪽 판본: {cross[code][1]}")
                 problems.append(f"{code}: 총론·각론 판본 불일치 — 사람이 NCIC 원문으로 확정해야 한다")
 
         records.append({"code": code, "area": area, "seq": seq,
