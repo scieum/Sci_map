@@ -77,20 +77,39 @@ def check_schema(doc, res: Result) -> None:
             items)
 
 
-def check_count(cands, res: Result) -> None:
-    """상한 40 — 2026-09-08 교사 결정으로 30 에서 올렸다.
+def topic_count(unit_id: str) -> int:
+    """이 단원의 소주제 수. 백로그를 못 읽으면 0."""
+    backlog = load_yaml(REPO / "docs" / "unit_backlog.yaml")
+    if not backlog:
+        return 0
+    subjects = backlog.get("subjects") or [{"units": backlog.get("units", [])}]
+    unit = next((u for s in subjects for u in s.get("units", []) if u["id"] == unit_id), None)
+    if not unit:
+        return 0
+    return sum(len(sec.get("topics", [])) for sec in unit.get("sections", []))
 
-    30 은 소주제 6개짜리 단원(mate-1)을 기준으로 잡힌 수였다. 통합과학1 Ⅱ단원은
-    소주제가 7개, Ⅲ단원은 8개라 30 에 맞추면 소주제당 2~3개로 얇아지고 성취기준
-    표제 문구('원소의 주기성')조차 독립 카드를 못 받는다.
 
-    비례식(소주제 × 5)도 검토했으나 소주제 3개짜리 Ⅰ단원(후보 20개)이 소급해
-    실패한다. 실제 분포가 소주제당 3.75~6.7 로 흩어져 있어 비례식이 맞지 않는다.
-    '잘게 쪼개지 마라' 는 상한의 목적은 40 에서도 지켜지고(소주제 8개 기준 5개),
-    소주제당 3~5개라는 실질 통제는 textbook-analyst 지침이 한다.
+def check_count(cands, res: Result, unit_id: str = "") -> None:
+    """상한은 소주제 수에 비례한다 — max(40, 소주제 × 5). 2026-09-10 교사 결정.
+
+    처음에는 30, 2026-09-08 에 40 이 되었다. 둘 다 **소주제 8개 안팎**의 단원을
+    기준으로 잡힌 고정 수였다. 생명과학이 그 가정을 깼다 — 단원당 소주제가
+    14·17·12 개라 40 에 맞추면 소주제당 2.4~2.9 개로, 이 함수가 스스로 인용하던
+    '소주제당 3~5 개' 아래로 떨어진다. 실제로 세 단원 모두 상한에 걸렸고
+    성취기준이 직접 요구하는 것까지 밀려났다(12생과03-05 의 동물 문 수준 분류).
+
+    2026-09-08 에 비례식을 물리쳤던 이유는 소주제 3개짜리 단원(후보 20개)이 소급해
+    실패한다는 것이었다. **바닥을 40 으로 두면 그 문제가 없다** — 지금까지의 단원은
+    전부 소주제 × 5 아래라 상한이 40 에서 올라가기만 하고 내려가지 않는다.
+
+    하한 10 은 그대로다. 잘게 쪼개지 말라는 실질 통제는 textbook-analyst 지침이 한다.
     """
     n = len(cands)
-    res.add("count", 10 <= n <= 40, "개념 " + str(n) + "개 (기준 10~40)")
+    topics = topic_count(unit_id)
+    cap = max(40, topics * 5)
+    res.add("count", 10 <= n <= cap,
+            "개념 " + str(n) + "개 (기준 10~" + str(cap) +
+            (", 소주제 " + str(topics) + "개 × 5" if cap > 40 else "") + ")")
 
 
 def check_duplicates(cands, res: Result, unit_id: str = "") -> None:
@@ -343,7 +362,7 @@ def main() -> int:
 
     res = Result()
     check_schema(doc, res)
-    check_count(cands, res)
+    check_count(cands, res, doc.get("unit_id", ""))
     check_duplicates(cands, res, doc.get("unit_id", ""))
     check_hierarchy(doc, cands, res)
     check_curriculum(cands, res)

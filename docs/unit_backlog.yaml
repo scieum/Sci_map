@@ -1548,3 +1548,474 @@ subjects:
     extras:
       wrapup: 120
       project: 124
+- code: bio
+  name: 생명과학
+  course_type: 일반선택
+  grade: null
+  curriculum: 2022 개정
+  standard_prefix: 12생과
+  textbook:
+    file: inbox/textbook/고_생명과학(이준규)_교과서_2쇄.pdf
+    publisher: 천재교과서
+    author: 이준규 외
+    pages: 226
+    note: '★publisher 는 2026-09-10 교사가 천재교과서로 확정했다. 이 책도 판권 쪽이 이미지라 발행처가 텍스트로 뽑히지 않아 에이전트는 짐작하지 않고 물었다.
+      같은 저자(이준규)·같은 판형인 「세포와 물질대사」와 같은 발행처다. rights/ledger.jsonl 의 holder 가 이 값에서 온다.
+
+
+      ★2026-09-10 교사 결정: 세 단원 추출률 94.4~94.7%(기준 95%) 미달을 수용하고 넘어간다. 「세포와 물질대사」(94.8%)와 같은 사유 — 손실이 고르게
+      퍼져 있고 장식 제목 이중 조판이 원인이다. 다만 bio-3 의 184쪽은 텍스트가 0자다(생태 시민 면). 그 쪽은 role=project 라 카드 원천이 아니다.
+
+
+      인쇄 쪽수 == PDF 쪽수. 앞부속 p1~9, 부록 p186~226 은 본문이 아니다.
+
+
+      ★mediabox 원점이 (36.8499, -36.8499) 다 — 「물질과 에너지」와 같고 「세포와 물질대사」(29.5039)와는 다르다. crop.py 는 이 보정을 하지
+      않으므로 C7 plan 의 bbox 를 렌더 좌표로 옮겨 넣어야 한다.
+
+
+      ★위계는 대단원 > 중단원(01~) > 소주제(1~) 로 「세포와 물질대사」와 같다. 중단원 17개마다 개념 정리 쪽이 하나씩 있고(''정답 ➊'' 가 표지다) 전량 스캔해
+      17쪽을 확정했다 — 중단원 수와 정확히 일치한다.
+
+
+      ★소주제 마지막 쪽과 정리 쪽 사이가 벌어지는 중단원은 없다. 「세포와 물질대사」에 있던 읽기 면 끼어들기가 이 책에는 나타나지 않는다.'
+  guide:
+    file: inbox/textbook/고_생명과학(이준규)_지도서_2쇄.pdf
+    pages: 456
+  units:
+  - id: bio-1
+    numeral: Ⅰ
+    title: 생명 시스템의 구성
+    priority: 1
+    status: in_progress
+    semester: null
+    stage: null
+    pages:
+    - 10
+    - 67
+    sections:
+    - id: bio-1-1
+      numeral: '01'
+      title: 생물과 생명과학의 특성
+      pages:
+      - 14
+      - 21
+      review: 21
+      topics:
+      - id: bio-1-1-1
+        numeral: '1'
+        title: 생물과 비생물
+        pages:
+        - 14
+        - 17
+      - id: bio-1-1-2
+        numeral: '2'
+        title: 생명과학의 특성과 성과
+        pages:
+        - 18
+        - 20
+    - id: bio-1-2
+      numeral: '02'
+      title: 생명 시스템의 구성
+      pages:
+      - 22
+      - 25
+      review: 25
+      topics:
+      - id: bio-1-2-1
+        numeral: '1'
+        title: 생명 시스템의 구성 단계
+        pages:
+        - 22
+        - 24
+    - id: bio-1-3
+      numeral: '03'
+      title: 생명활동과 에너지
+      pages:
+      - 26
+      - 33
+      review: 33
+      topics:
+      - id: bio-1-3-1
+        numeral: '1'
+        title: 물질대사
+        pages:
+        - 26
+        - 26
+      - id: bio-1-3-2
+        numeral: '2'
+        title: ATP 생성과 이용
+        pages:
+        - 27
+        - 28
+      - id: bio-1-3-3
+        numeral: '3'
+        title: 대사성 질환
+        pages:
+        - 29
+        - 32
+    - id: bio-1-4
+      numeral: '04'
+      title: 기관계의 통합적 작용
+      pages:
+      - 34
+      - 41
+      review: 41
+      topics:
+      - id: bio-1-4-1
+        numeral: '1'
+        title: 사람의 기관계
+        pages:
+        - 34
+        - 38
+      - id: bio-1-4-2
+        numeral: '2'
+        title: 기관계의 통합적 작용
+        pages:
+        - 39
+        - 40
+    - id: bio-1-5
+      numeral: '05'
+      title: 생태계의 구조와 기능
+      pages:
+      - 42
+      - 49
+      review: 49
+      topics:
+      - id: bio-1-5-1
+        numeral: '1'
+        title: 생태계의 구조
+        pages:
+        - 42
+        - 42
+      - id: bio-1-5-2
+        numeral: '2'
+        title: 물질 순환과 에너지흐름
+        pages:
+        - 43
+        - 46
+      - id: bio-1-5-3
+        numeral: '3'
+        title: 생태계평형
+        pages:
+        - 47
+        - 48
+    - id: bio-1-6
+      numeral: '06'
+      title: 개체군과 군집의 특성
+      pages:
+      - 50
+      - 59
+      review: 59
+      topics:
+      - id: bio-1-6-1
+        numeral: '1'
+        title: 개체군의 특성
+        pages:
+        - 50
+        - 51
+      - id: bio-1-6-2
+        numeral: '2'
+        title: 군집의 특성
+        pages:
+        - 52
+        - 55
+      - id: bio-1-6-3
+        numeral: '3'
+        title: 개체군과 군집 내 상호작용
+        pages:
+        - 56
+        - 58
+    extras:
+      wrapup: 60
+      project: 66
+  - id: bio-2
+    numeral: Ⅱ
+    title: 항상성과 몸의 조절
+    priority: 2
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 68
+    - 129
+    sections:
+    - id: bio-2-1
+      numeral: '01'
+      title: 신경신호의 전달
+      pages:
+      - 72
+      - 81
+      review: 81
+      topics:
+      - id: bio-2-1-1
+        numeral: '1'
+        title: 신경세포(뉴런)의 구조와 기능
+        pages:
+        - 72
+        - 73
+      - id: bio-2-1-2
+        numeral: '2'
+        title: 신경신호의 발생 원리
+        pages:
+        - 74
+        - 75
+      - id: bio-2-1-3
+        numeral: '3'
+        title: 신경신호의 전도
+        pages:
+        - 76
+        - 77
+      - id: bio-2-1-4
+        numeral: '4'
+        title: 시냅스를 통한 신경신호의 전달
+        pages:
+        - 78
+        - 80
+    - id: bio-2-2
+      numeral: '02'
+      title: 사람의 신경계
+      pages:
+      - 82
+      - 89
+      review: 89
+      topics:
+      - id: bio-2-2-1
+        numeral: '1'
+        title: 신경계의 구성
+        pages:
+        - 82
+        - 82
+      - id: bio-2-2-2
+        numeral: '2'
+        title: 중추신경계
+        pages:
+        - 83
+        - 86
+      - id: bio-2-2-3
+        numeral: '3'
+        title: 말초신경계
+        pages:
+        - 87
+        - 88
+    - id: bio-2-3
+      numeral: '03'
+      title: 내분비계와 항상성 유지
+      pages:
+      - 90
+      - 97
+      review: 97
+      topics:
+      - id: bio-2-3-1
+        numeral: '1'
+        title: 내분비계와 호르몬
+        pages:
+        - 90
+        - 91
+      - id: bio-2-3-2
+        numeral: '2'
+        title: 항상성 유지의 원리
+        pages:
+        - 92
+        - 92
+      - id: bio-2-3-3
+        numeral: '3'
+        title: 우리 몸의 항상성조절 작용
+        pages:
+        - 93
+        - 96
+    - id: bio-2-4
+      numeral: '04'
+      title: 우리 몸의 방어작용
+      pages:
+      - 98
+      - 107
+      review: 107
+      topics:
+      - id: bio-2-4-1
+        numeral: '1'
+        title: 감염성질환과 비감염성질환
+        pages:
+        - 98
+        - 99
+      - id: bio-2-4-2
+        numeral: '2'
+        title: 병원체의 종류
+        pages:
+        - 100
+        - 101
+      - id: bio-2-4-3
+        numeral: '3'
+        title: 우리 몸의 방어작용
+        pages:
+        - 102
+        - 106
+    - id: bio-2-5
+      numeral: '05'
+      title: 항원항체반응
+      pages:
+      - 108
+      - 113
+      review: 113
+      topics:
+      - id: bio-2-5-1
+        numeral: '1'
+        title: 항원항체반응의 특이성
+        pages:
+        - 108
+        - 108
+      - id: bio-2-5-2
+        numeral: '2'
+        title: 항원항체반응의 활용
+        pages:
+        - 109
+        - 112
+    - id: bio-2-6
+      numeral: '06'
+      title: 감염성질환의 예방
+      pages:
+      - 114
+      - 121
+      review: 121
+      topics:
+      - id: bio-2-6-1
+        numeral: '1'
+        title: 병원체의 감염 경로
+        pages:
+        - 114
+        - 114
+      - id: bio-2-6-2
+        numeral: '2'
+        title: 백신을 통한 감염성질환의 예방
+        pages:
+        - 115
+        - 120
+    extras:
+      wrapup: 122
+      project: 128
+  - id: bio-3
+    numeral: Ⅲ
+    title: 생명의 연속성과 다양성
+    priority: 2
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 130
+    - 185
+    sections:
+    - id: bio-3-1
+      numeral: '01'
+      title: 염색체의 구조
+      pages:
+      - 134
+      - 139
+      review: 139
+      topics:
+      - id: bio-3-1-1
+        numeral: '1'
+        title: 염색체의 구조
+        pages:
+        - 134
+        - 135
+      - id: bio-3-1-2
+        numeral: '2'
+        title: 사람의 염색체
+        pages:
+        - 136
+        - 138
+    - id: bio-3-2
+      numeral: '02'
+      title: 유전정보의 전달
+      pages:
+      - 140
+      - 147
+      review: 147
+      topics:
+      - id: bio-3-2-1
+        numeral: '1'
+        title: 세포주기
+        pages:
+        - 140
+        - 140
+      - id: bio-3-2-2
+        numeral: '2'
+        title: 체세포분열과 감수분열
+        pages:
+        - 141
+        - 143
+      - id: bio-3-2-3
+        numeral: '3'
+        title: 생식세포 형성의 중요성
+        pages:
+        - 144
+        - 146
+    - id: bio-3-3
+      numeral: '03'
+      title: 진화의 원리와 사례
+      pages:
+      - 148
+      - 157
+      review: 157
+      topics:
+      - id: bio-3-3-1
+        numeral: '1'
+        title: 다윈의 진화론
+        pages:
+        - 148
+        - 150
+      - id: bio-3-3-2
+        numeral: '2'
+        title: 진화의 연구 사례
+        pages:
+        - 151
+        - 153
+      - id: bio-3-3-3
+        numeral: '3'
+        title: 유전자풀의 변화 요인
+        pages:
+        - 154
+        - 156
+    - id: bio-3-4
+      numeral: '04'
+      title: 생물의 분류체계
+      pages:
+      - 158
+      - 165
+      review: 165
+      topics:
+      - id: bio-3-4-1
+        numeral: '1'
+        title: 생물의 분류
+        pages:
+        - 158
+        - 160
+      - id: bio-3-4-2
+        numeral: '2'
+        title: 생물의 분류체계
+        pages:
+        - 161
+        - 164
+    - id: bio-3-5
+      numeral: '05'
+      title: 식물과 동물의 분류
+      pages:
+      - 166
+      - 175
+      review: 175
+      topics:
+      - id: bio-3-5-1
+        numeral: '1'
+        title: 식물계
+        pages:
+        - 166
+        - 169
+      - id: bio-3-5-2
+        numeral: '2'
+        title: 동물계
+        pages:
+        - 170
+        - 174
+    extras:
+      wrapup: 176
+      project: 182
