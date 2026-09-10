@@ -17,8 +17,14 @@ const TABS = [
 
 export default function TabBar() {
   const pathname = usePathname();
-  // 퀴즈·인출 모드 중에는 탭 바 숨김 (집중 모드 — Design.md §4.4, §5.2)
-  if (pathname.startsWith("/today/run") || pathname.endsWith("/recall"))
+  // 퀴즈·인출 모드 중에는 탭 바 숨김 (집중 모드 — Design.md §4.4, §5.2).
+  // 개념 야구의 경기 화면도 같다 — 한 타석이 8~24초라 탭을 잘못 눌러 나가면
+  // 그 판이 통째로 날아간다
+  if (
+    pathname.startsWith("/today/run") ||
+    pathname.startsWith("/map/arcade/play") ||
+    pathname.endsWith("/recall")
+  )
     return null;
 
   return (

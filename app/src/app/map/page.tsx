@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { EmptyState, Screen, ScreenTitle } from "@/components/ui";
+import HubTabs from "@/components/HubTabs";
+import { Badge, HubAppBar } from "@/components/hub";
+import { EmptyState, Screen } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
 import { accentOfSubject } from "@/lib/brand";
 import { boundsOf, fitTo, loadGraph, type ConceptGraph, type GraphNode } from "@/lib/graph";
@@ -39,32 +41,49 @@ export default function MapPage() {
 
   if (failed) {
     return (
-      <Screen>
-        <ScreenTitle>지도</ScreenTitle>
-        <EmptyState
-          art="empty-map"
-          title="개념 그래프를 불러오지 못했어요. 잠시 뒤 다시 열어 주세요."
-          action={
-            <Link
-              href="/concepts"
-              className="rounded-full bg-primary-50 px-5 py-2.5 text-[14px] font-bold text-primary-600"
-            >
-              개념 트리 둘러보기
-            </Link>
-          }
-        />
-      </Screen>
+      <>
+        <Bar />
+        <HubTabs />
+        <Screen>
+          <EmptyState
+            art="empty-map"
+            title="개념 그래프를 불러오지 못했어요. 잠시 뒤 다시 열어 주세요."
+            action={
+              <Link
+                href="/concepts"
+                className="rounded-full bg-primary-50 px-5 py-2.5 text-[14px] font-bold text-primary-600"
+              >
+                개념 트리 둘러보기
+              </Link>
+            }
+          />
+        </Screen>
+      </>
     );
   }
   if (!graph) {
     return (
-      <Screen>
-        <ScreenTitle>지도</ScreenTitle>
-        <p className="text-[14px] text-ink-faint">개념 지도를 그리는 중…</p>
-      </Screen>
+      <>
+        <Bar />
+        <HubTabs />
+        <Screen>
+          <p className="text-[14px] text-ink-faint">개념 지도를 그리는 중…</p>
+        </Screen>
+      </>
     );
   }
-  return <GraphCanvas graph={graph} />;
+  return (
+    <>
+      <Bar />
+      <HubTabs />
+      <GraphCanvas graph={graph} />
+    </>
+  );
+}
+
+/** 허브 세 화면이 같은 줄로 시작하게 한다 (components/hub.tsx) */
+function Bar() {
+  return <HubAppBar title="개념 지도" right={<Badge tone="primary">전체 지도</Badge>} />;
 }
 
 /** 학습 상태 세 단계 — Design.md §4.2 의 노드 채움 */
@@ -286,11 +305,13 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
       ref={wrapRef}
       /* 탭 바(56px)와 홈 인디케이터(safe-area)를 뺀 나머지가 캔버스다.
          1024px 이상에서는 전체 폭 캔버스로 둔다 (Design.md §3.3) */
-      className="relative h-[calc(100dvh-56px-env(safe-area-inset-bottom))] w-full overflow-hidden bg-bg"
+      className="relative h-[calc(100dvh-56px-76px-48px-env(safe-area-inset-bottom))] w-full overflow-hidden bg-bg"
     >
-      <div className="pointer-events-none absolute left-0 right-0 top-0 z-10 px-5 pt-4">
-        <h1 className="text-[22px] font-extrabold text-ink">지도</h1>
-        <p className="mt-0.5 text-[12px] text-ink-faint">
+      {/* 화면 이름은 위의 앱바가 맡는다. 여기서 한 번 더 "지도"라고 쓰면 같은
+          말이 두 줄 겹치고, 그만큼 캔버스가 줄어든다. 이 자리는 지금 무엇이
+          그려져 있는지만 적는다 */}
+      <div className="pointer-events-none absolute left-0 right-0 top-0 z-10 px-5 pt-2.5">
+        <p className="text-[12px] font-semibold text-ink-faint">
           개념 {graph.nodes.length}개 · 연결 {graph.links.length}개 · 손가락으로 밀고 오므려요
         </p>
       </div>

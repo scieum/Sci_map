@@ -19,6 +19,18 @@ export interface UiState {
   conceptsSubject?: string;
   /** 개념 탭 중단원 접기 상태 — `${major}>${minor}` → 펼침 여부 */
   conceptsOpen?: Record<string, boolean>;
+  /**
+   * 개념 야구 경기 설정 — 난이도·이닝·출제 범위(과목 이름).
+   *
+   * 주소줄에 싰지 않고 여기 둔다. 과목 이름은 한글이라 쿼리에 실으면
+   * 주소가 수십 자로 늘어나고, 그렇게 늘어난 주소를 학생이 서로 보낼 일도 없다
+   * (경기 화면은 혼자 하는 자리다). 방 주소와 다른 점이다.
+   */
+  arcade?: {
+    level?: string;
+    innings?: number;
+    subjects?: string[];
+  };
 }
 
 export function loadUi(): UiState {

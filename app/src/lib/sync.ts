@@ -94,7 +94,16 @@ export function pushDailyPlan(plan: { dateKey: string; review: string[]; fresh: 
 export async function loadProfile(): Promise<Profile | null> {
   const uid = await userId();
   if (!uid) return null;
-  const { data } = await supabase().from("profiles").select("*").eq("id", uid).maybeSingle();
+  const { data, error } = await supabase()
+    .from("profiles")
+    .select("*")
+    .eq("id", uid)
+    .maybeSingle();
+  // ★ 실패를 null 로 뭉개지 않는다. 호출하는 쪽은 null 을 "프로필이 아직 없다"
+  //   = "동의를 받아야 한다" 로 읽는데, 네트워크가 한 번 튀었을 뿐인데도 그렇게
+  //   읽히면 이미 동의한 학생 앞에 동의 화면이 다시 뜬다 (2026-09-11 버그).
+  //   없는 것과 못 읽은 것은 다른 일이므로 다르게 알린다.
+  if (error) throw new Error(error.message);
   return (data as Profile | null) ?? null;
 }
 

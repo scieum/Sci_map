@@ -128,7 +128,7 @@ export function LockedMedia({ caption }: { caption?: string }) {
         href="/me"
         className="mt-1 rounded-full bg-primary-50 px-4 py-2 text-[13px] font-bold text-primary-600"
       >
-        로그인하고 초대 코드 넣기
+        로그인하러 가기
       </Link>
     </div>
   );
