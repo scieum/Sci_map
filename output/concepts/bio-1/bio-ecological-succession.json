@@ -1,0 +1,142 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ecological-succession",
+  "concept_key": "concept:ecological-succession",
+  "registry_status": "new",
+  "term": "천이",
+  "aliases": [],
+  "notation": {
+    "hanja": "遷移",
+    "hanja_gloss": "遷 옮길 천 · 移 옮길 이",
+    "english": "ecological succession"
+  },
+  "definition": "시간이 흐르는 동안 한 지역의 군집 짜임과 특성이 차례로 바뀌어 가는 과정. 마지막 단계에서 극상을 이룬다.",
+  "relations": [
+    {
+      "id": "rel-succ-order",
+      "text": "토양이 거의 없는 맨땅에는 지의류가 먼저 자리 잡고 초원과 관목림을 거쳐 양수림·혼합림·음수림으로 이어진다",
+      "form": {
+        "condition": "토양이 거의 없는 곳에서 천이가 시작될 때",
+        "type": "conditional",
+        "scope": "육상 군집의 천이"
+      },
+      "invertible": false,
+      "invertible_reason": "진행되는 차례를 밝힌 서술이라 한 방향으로 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-succ-light",
+      "text": "숲이 우거지면서 하층에 닿는 빛이 크게 줄면 양수의 묘목은 자라기 어렵고 음수의 묘목이 번성한다",
+      "form": {
+        "condition": "숲이 우거져 하층의 빛이 줄었을 때",
+        "type": "causal",
+        "scope": "천이가 진행 중인 숲",
+        "antecedent": {
+          "quantity": "하층에 닿는 빛의 양",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "음수 묘목의 번성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "빛이 줄 때 유리해지는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "숲이 우거지면서 하층에 닿는 빛이 크게 줄면 음수의 묘목은 자라기 어렵고 양수의 묘목이 번성한다"
+    },
+    {
+      "id": "rel-succ-climax",
+      "text": "온대 지역에서는 음수림이 천이의 마지막 단계가 되어 물질 순환과 에너지흐름이 안정한 극상을 이룬다",
+      "form": {
+        "condition": "온대 지역에서 천이가 끝까지 진행됐을 때",
+        "type": "conditional",
+        "scope": "온대 지역의 육상 군집"
+      },
+      "invertible": false,
+      "invertible_reason": "마지막 단계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-succ-soil",
+      "text": "천이가 진행될수록 토양의 깊이와 수분량, 유기물의 함량이 점점 늘어난다",
+      "form": {
+        "condition": "천이가 진행되는 동안",
+        "type": "direct",
+        "scope": "육상 군집의 천이",
+        "antecedent": {
+          "quantity": "천이의 진행",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "토양의 깊이와 유기물 함량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천이가 진행될수록 토양의 깊이와 수분량, 유기물의 함량이 점점 줄어든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혼합림에서는 양수가 음수보다 경쟁에 유리하다",
+      "why_wrong": "혼합림의 하층은 빛이 적어 빛 요구량이 많은 양수의 묘목이 잘 자라지 못한다. 그래서 혼합림은 점차 음수림으로 넘어간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-succ-light"
+    },
+    {
+      "text": "극상에 이르면 그 군집 안에서는 아무 변화도 일어나지 않는다",
+      "why_wrong": "극상은 물질 순환과 에너지흐름이 안정하게 이어지는 상태를 가리킨다. 개체가 나고 죽는 변화까지 멈춘다는 뜻이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-succ-climax"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "무엇이 바뀌어 가는지 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-distribution-of-community",
+      "note": "같은 시점에 지역마다 갈리는 쪽이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-abiotic-factor",
+      "note": "빛과 토양이 진행을 좌우한다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    55
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,120 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-tissue",
+  "concept_key": "concept:tissue",
+  "registry_status": "new",
+  "term": "조직",
+  "aliases": [],
+  "notation": {
+    "hanja": "組織",
+    "hanja_gloss": "組 짤 조 · 織 짤 직",
+    "english": "tissue"
+  },
+  "definition": "기능이 서로 이어진 세포들이 모여 특정한 일을 맡게 된 단계. 구성 단계에서 세포 바로 위, 기관 바로 아래에 놓인다.",
+  "relations": [
+    {
+      "id": "rel-tissue-what-gathers",
+      "text": "조직은 아무 세포나 모인 것이 아니라 기능이 서로 이어진 세포들이 협업하며 이루어진다",
+      "form": {
+        "condition": "조직이 만들어지는 방식을 물을 때",
+        "type": "conditional",
+        "scope": "다세포생물"
+      },
+      "invertible": false,
+      "invertible_reason": "만들어지는 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tissue-vs-organ",
+      "text": "세포가 모여 이루어진 것이 조직이고, 기능이 서로 다른 조직들이 모여 이루어진 것이 기관이다",
+      "form": {
+        "condition": "조직과 기관을 갈라 볼 때",
+        "type": "classification",
+        "scope": "다세포생물의 구성 단계",
+        "antecedent": {
+          "quantity": "모이는 것",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "조직과 기관",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "모이는 쪽과 만들어지는 쪽이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기관이 모여 이루어진 것이 조직이고, 조직이 모여 이루어진 것이 세포이다"
+    },
+    {
+      "id": "rel-tissue-plant-system",
+      "text": "식물에서는 통도조직처럼 같은 종류의 조직이 식물체 전체에 이어져 조직계를 이룬다",
+      "form": {
+        "condition": "식물의 몸을 볼 때",
+        "type": "conditional",
+        "scope": "식물"
+      },
+      "invertible": false,
+      "invertible_reason": "식물에서만 나타나는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포가 많이 모이기만 하면 조직이 된다",
+      "why_wrong": "수가 아니라 하는 일이 기준이다. 기능이 서로 이어진 세포들이 특정한 일을 함께 맡을 때 조직이라 부른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tissue-what-gathers"
+    },
+    {
+      "text": "작은창자를 이루는 근육조직과 상피조직은 하는 일이 서로 같다",
+      "why_wrong": "근육조직은 수축과 이완으로 꿈틀운동을 일으키고 상피조직은 융털로 영양소를 흡수한다. 이렇게 하는 일이 다른 조직들이 모여 기관이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tissue-vs-organ"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cell",
+      "note": "조직을 이루는 재료다"
+    },
+    {
+      "type": "next",
+      "target": "bio-organ",
+      "note": "조직이 모여 오르는 다음 칸이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-organizational-level-of-living-system",
+      "note": "이 칸이 사다리의 어디쯤인지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-02"
+  ],
+  "topic_id": "bio-1-2-1",
+  "pages": [
+    22,
+    23,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

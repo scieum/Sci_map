@@ -1,0 +1,134 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-environmental-resistance",
+  "concept_key": "concept:environmental-resistance",
+  "registry_status": "new",
+  "term": "환경저항",
+  "aliases": [
+    "환경 저항"
+  ],
+  "notation": {
+    "hanja": "環境抵抗",
+    "hanja_gloss": "環 고리 환 · 境 지경 경 · 抵 막을 저 · 抗 겨룰 항",
+    "english": "environmental resistance"
+  },
+  "definition": "먹이 부족·노폐물 축적·전염병 확산처럼 개체군이 계속 늘어나는 것을 가로막는 요인들을 묶어 부르는 말.",
+  "relations": [
+    {
+      "id": "rel-envres-what",
+      "text": "먹이 부족, 노폐물 축적, 전염병 확산처럼 개체군의 성장을 가로막는 요인을 환경저항이라 한다",
+      "form": {
+        "condition": "성장을 가로막는 요인을 한데 묶을 때",
+        "type": "classification",
+        "scope": "개체군의 성장",
+        "antecedent": {
+          "quantity": "성장을 가로막는 요인",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "환경저항",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 여기 드는지 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-envres-grow",
+      "text": "개체 수가 늘수록 자원을 두고 벌이는 경쟁이 심해지고 노폐물이 쌓여 환경저항이 커진다",
+      "form": {
+        "condition": "한 서식지에서 개체 수가 늘어날 때",
+        "type": "direct",
+        "scope": "한 서식지의 개체군",
+        "antecedent": {
+          "quantity": "개체 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "환경저항",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개체 수가 늘수록 자원을 두고 벌이는 경쟁이 누그러지고 노폐물이 줄어 환경저항이 작아진다"
+    },
+    {
+      "id": "rel-envres-curve",
+      "text": "환경저항이 세게 작용하면 개체 수가 계속 늘지 못하고 성장곡선이 S자형으로 휜다",
+      "form": {
+        "condition": "환경저항이 세게 작용할 때",
+        "type": "causal",
+        "scope": "개체군의 성장곡선"
+      },
+      "invertible": false,
+      "invertible_reason": "곡선이 휘는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환경저항은 가뭄이나 산불처럼 밖에서 닥치는 재해를 가리킨다",
+      "why_wrong": "먹이 부족, 노폐물 축적, 전염병 확산처럼 개체군이 늘어나면서 스스로 만들어 내는 요인이 환경저항의 중심이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-envres-what"
+    },
+    {
+      "text": "환경저항은 개체 수와 상관없이 늘 같은 크기로 작용한다",
+      "why_wrong": "개체 수가 늘수록 먹이와 서식 공간을 두고 벌이는 경쟁이 심해지고 노폐물도 쌓인다. 환경저항은 개체 수를 따라 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-envres-grow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-population",
+      "note": "무엇의 성장을 막는지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-carrying-capacity",
+      "note": "이 요인들이 정하는 한계값이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-population-growth-curve",
+      "note": "곡선의 모양을 가르는 자리다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-density",
+      "note": "밀도가 높아지면 함께 세진다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-1",
+  "pages": [
+    51,
+    59
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

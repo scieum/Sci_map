@@ -1,0 +1,146 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-biotic-factor",
+  "concept_key": "concept:biotic-factor",
+  "registry_status": "new",
+  "term": "생물요소",
+  "aliases": [],
+  "notation": {
+    "hanja": "生物要素",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 要 요긴할 요 · 素 본디 소",
+    "english": "biotic factor"
+  },
+  "definition": "생태계 안에서 살아가는 모든 생물. 어떤 종류인가가 아니라 생태계에서 맡은 역할에 따라 생산자·소비자·분해자로 나뉜다.",
+  "relations": [
+    {
+      "id": "rel-biotic-three",
+      "text": "생물요소는 생김새나 분류군이 아니라 생태계에서 맡은 역할에 따라 세 갈래로 나뉜다",
+      "form": {
+        "condition": "역할을 기준으로 가를 때",
+        "type": "classification",
+        "scope": "생태계의 생물요소",
+        "antecedent": {
+          "quantity": "생물요소",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생산자·소비자·분해자",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "가르는 기준을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-biotic-direction",
+      "text": "생산자는 무기물을 유기물로 만들고 분해자는 유기물을 무기물로 되돌려 방향이 서로 반대다",
+      "form": {
+        "condition": "물질을 바꾸는 방향으로 견줄 때",
+        "type": "classification",
+        "scope": "생산자와 분해자",
+        "antecedent": {
+          "quantity": "생산자와 분해자",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "물질을 바꾸는 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 역할에 방향이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생산자는 유기물을 무기물로 되돌리고 분해자는 무기물을 유기물로 만든다"
+    },
+    {
+      "id": "rel-biotic-vs-abiotic",
+      "text": "생물요소는 살아 있는 것들이고 비생물요소는 그 생물을 둘러싼 환경이다",
+      "form": {
+        "condition": "생태계의 구성 요소를 둘로 가를 때",
+        "type": "classification",
+        "scope": "생태계",
+        "antecedent": {
+          "quantity": "생태계의 구성 요소",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생물요소와 비생물요소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "둘로 가른 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "버섯은 땅에 뿌리내리고 자라니 생산자다",
+      "why_wrong": "버섯은 스스로 유기물을 만들지 못한다. 사체나 배설물 속 유기물을 무기물로 분해해 살아가는 분해자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-biotic-three"
+    },
+    {
+      "text": "낙엽이나 사체는 이미 죽은 것이라 생태계의 물질 흐름과 상관이 없다",
+      "why_wrong": "그 안의 유기물을 분해자가 무기물로 되돌려 비생물환경으로 내보낸다. 그 무기물을 생산자가 다시 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-biotic-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-ecosystem",
+      "note": "이 요소가 놓인 자리를 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-producer",
+      "note": "유기물을 만드는 역할이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-consumer",
+      "note": "유기물을 먹는 역할이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-decomposer",
+      "note": "유기물을 되돌리는 역할이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-abiotic-factor",
+      "note": "생태계의 나머지 절반이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-1",
+  "pages": [
+    42,
+    49,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

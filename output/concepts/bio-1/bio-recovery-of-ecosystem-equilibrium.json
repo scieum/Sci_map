@@ -1,0 +1,110 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-recovery-of-ecosystem-equilibrium",
+  "concept_key": "concept:recovery-of-ecosystem-equilibrium",
+  "registry_status": "new",
+  "term": "생태계평형의 회복",
+  "aliases": [],
+  "notation": {
+    "hanja": "生態系平衡回復",
+    "hanja_gloss": "生 날 생 · 態 모습 태 · 系 이어맬 계 · 平 평평할 평 · 衡 저울대 형 · 回 돌아올 회 · 復 회복할 복",
+    "english": "recovery of ecosystem equilibrium"
+  },
+  "definition": "일시적으로 깨진 평형이 먹이 관계를 타고 원래 상태로 되돌아가는 경로. 생태계의 조절 능력이 미치는 범위 안에서만 일어난다.",
+  "relations": [
+    {
+      "id": "rel-recov-order",
+      "text": "1차 소비자가 일시적으로 늘면 생산자가 줄고 2차 소비자가 늘어, 그 결과 1차 소비자가 다시 줄어든다",
+      "form": {
+        "condition": "한 영양단계의 개체 수가 일시적으로 늘었을 때",
+        "type": "causal",
+        "scope": "안정한 먹이그물을 가진 생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "증감이 이어지는 차례를 밝힌 서술이라 한쪽으로 맞바꿀 수 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-recov-condition",
+      "text": "회복은 복잡하고 안정한 먹이그물이 있을 때 일어나고, 조절 능력의 한계를 넘으면 일어나지 않는다",
+      "form": {
+        "condition": "교란의 크기를 조절 능력과 견줄 때",
+        "type": "conditional",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "성립하는 범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-recov-extinction",
+      "text": "한 생물종이 아주 사라지면 먹이사슬로 이어진 다른 종과 물질 순환·에너지흐름까지 흔들릴 수 있다",
+      "form": {
+        "condition": "한 종이 멸종했을 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "영향이 번지는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "1차 소비자가 늘기 시작하면 그 뒤로도 계속 늘어난다",
+      "why_wrong": "1차 소비자가 늘면 먹이인 생산자가 줄고 이를 먹는 2차 소비자가 늘어난다. 그래서 1차 소비자는 다시 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-recov-order"
+    },
+    {
+      "text": "한 종이 사라져도 그 종만 없어질 뿐 나머지는 그대로다",
+      "why_wrong": "먹이사슬로 이어진 종들이 함께 흔들리고, 그 종과 물질을 주고받던 비생물환경까지 영향을 받는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-recov-extinction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-ecosystem-equilibrium",
+      "note": "되돌아가야 할 상태다"
+    },
+    {
+      "type": "next",
+      "target": "bio-ecosystem-conservation",
+      "note": "사람이 거드는 쪽을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-food-chain",
+      "note": "되돌아가는 길이 놓이는 얼개다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-3",
+  "pages": [
+    48,
+    49
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

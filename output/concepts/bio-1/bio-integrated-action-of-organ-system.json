@@ -1,0 +1,149 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-integrated-action-of-organ-system",
+  "concept_key": "concept:integrated-action-of-organ-system",
+  "registry_status": "new",
+  "term": "기관계의 통합적 작용",
+  "aliases": [],
+  "notation": {
+    "hanja": "器官系統合的作用",
+    "hanja_gloss": "器 그릇 기 · 官 벼슬 관 · 系 이어맬 계 · 統 거느릴 통 · 合 합할 합 · 的 과녁 적 · 作 지을 작 · 用 쓸 용",
+    "english": "integrated action of organ systems"
+  },
+  "definition": "소화계·호흡계·배설계가 순환계를 가운데 두고 맞물려 한 가지 일처럼 돌아가는 것. 어느 하나가 멈추면 몸이 생명활동을 이어 가지 못한다.",
+  "relations": [
+    {
+      "id": "rel-integ-roles",
+      "text": "소화계는 영양소를, 호흡계는 산소를 들이고, 호흡계와 배설계가 노폐물을 내보내며, 순환계가 이를 실어 나른다",
+      "form": {
+        "condition": "네 기관계가 맡은 몫을 나누어 볼 때",
+        "type": "classification",
+        "scope": "사람의 기관계",
+        "antecedent": {
+          "quantity": "기관계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "맡은 몫",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "기관계마다 몫을 짝지은 서술이라 한 방향으로 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-integ-purpose",
+      "text": "네 기관계가 함께 돌아가는 까닭은 세포가 세포호흡으로 에너지를 얻고 노폐물을 치우게 하기 위해서다",
+      "form": {
+        "condition": "통합적 작용의 목적을 물을 때",
+        "type": "causal",
+        "scope": "사람의 몸"
+      },
+      "invertible": false,
+      "invertible_reason": "목적을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-integ-failure",
+      "text": "네 기관계 가운데 하나라도 제 기능을 하지 못하면 몸은 정상적인 생명활동을 이어 갈 수 없다",
+      "form": {
+        "condition": "한 기관계가 기능을 잃었을 때",
+        "type": "causal",
+        "scope": "사람의 몸"
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽의 고장이 전체로 번지는 경로를 밝힌 것이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-integ-not-separate",
+      "text": "기관계는 저마다 따로 제 일만 하는 것이 아니라 맞물린 톱니바퀴처럼 함께 돌아간다",
+      "form": {
+        "condition": "기관계를 하나씩 떼어 볼 때와 함께 볼 때를 견줄 때",
+        "type": "conditional",
+        "scope": "사람의 기관계"
+      },
+      "invertible": false,
+      "invertible_reason": "맞물림의 성격을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기관계는 각자 제 일만 하면 되므로 하나가 멈춰도 나머지는 그대로 돌아간다",
+      "why_wrong": "호흡계가 멈추면 순환계가 실어 나를 산소가 없고, 순환계가 멈추면 소화계가 흡수한 영양소가 세포에 닿지 못한다. 하나가 멈추면 나머지도 제 일을 할 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-integ-failure"
+    },
+    {
+      "text": "세포호흡은 몸 전체가 알아서 하는 일이라 기관계와는 상관이 없다",
+      "why_wrong": "세포호흡에 쓸 영양소와 산소를 들여오는 것도, 그 결과로 생긴 노폐물을 치우는 것도 기관계가 나누어 맡은 일이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-integ-purpose"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-digestive-system",
+      "note": "영양소를 맡은 갈래다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-respiratory-system",
+      "note": "기체를 맡은 갈래다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-circulatory-system",
+      "note": "가운데에서 실어 나르는 갈래다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-excretory-system",
+      "note": "노폐물을 맡은 갈래다"
+    },
+    {
+      "type": "next",
+      "target": "bio-physiological-change-in-exercise",
+      "note": "맞물림이 실제로 드러나는 상황을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-gas-exchange",
+      "note": "두 기관계가 만나는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-2",
+  "pages": [
+    39,
+    40,
+    41
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,120 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-development-and-growth",
+  "concept_key": "concept:development-and-growth",
+  "registry_status": "new",
+  "term": "발생과 성장",
+  "aliases": [],
+  "notation": {
+    "hanja": "發生成長",
+    "hanja_gloss": "發 필 발 · 生 날 생 · 成 이룰 성 · 長 길 장",
+    "english": "development and growth"
+  },
+  "definition": "한 개의 수정란이 세포분열을 거듭해 조직과 기관을 갖춘 개체가 되기까지가 발생이고, 그렇게 만들어진 개체가 세포분열로 몸집을 키워 가는 것이 성장이다.",
+  "relations": [
+    {
+      "id": "rel-devgro-what-differs",
+      "text": "발생은 세포의 종류가 갈려 몸의 짜임이 갖추어지는 것이고, 성장은 갖춘 몸이 커지는 것이다",
+      "form": {
+        "condition": "두 과정을 갈라 볼 때",
+        "type": "classification",
+        "scope": "다세포생물",
+        "antecedent": {
+          "quantity": "세포분열이 낳은 변화",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "발생과 성장",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 변화가 두 이름에 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발생은 갖춘 몸이 커지는 것이고, 성장은 세포의 종류가 갈려 몸의 짜임이 갖추어지는 것이다"
+    },
+    {
+      "id": "rel-devgro-from-zygote",
+      "text": "다세포생물의 몸은 수정란 하나에서 시작해 세포분열로 세포 수가 늘면서 만들어진다",
+      "form": {
+        "condition": "암수의 생식세포가 수정한 뒤",
+        "type": "causal",
+        "scope": "유성생식을 하는 다세포생물"
+      },
+      "invertible": false,
+      "invertible_reason": "몸이 만들어지는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-devgro-differentiation",
+      "text": "발생이 진행되는 동안 세포는 수만 느는 것이 아니라 종류와 기능이 갈려 조직과 기관을 이룬다",
+      "form": {
+        "condition": "발생이 진행되는 동안",
+        "type": "causal",
+        "scope": "다세포생물의 수정란"
+      },
+      "invertible": false,
+      "invertible_reason": "한 과정 안에서 일어나는 일을 밝힌 것이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발생은 세포 수가 늘어 몸이 커지는 과정이다",
+      "why_wrong": "몸이 커지는 쪽은 성장이다. 발생은 세포의 종류와 기능이 갈려 조직과 기관이 만들어지는 쪽을 가리킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-devgro-what-differs"
+    },
+    {
+      "text": "발생은 알에서 깨어나면 끝나고 그 뒤로는 성장만 남는다",
+      "why_wrong": "개구리알에서 나온 올챙이가 다리와 허파를 갖춘 개구리가 되듯, 태어난 뒤에도 몸의 짜임이 새로 갖추어지는 발생이 이어질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-devgro-differentiation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-characteristic-of-organism",
+      "note": "이 과정이 놓인 목록을 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cell",
+      "note": "세포분열이 이 과정을 밀고 간다"
+    },
+    {
+      "type": "related",
+      "target": "bio-reproduction-and-heredity",
+      "note": "수정란이 어디서 오는지는 이쪽이 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-01"
+  ],
+  "topic_id": "bio-1-1-1",
+  "pages": [
+    17,
+    21,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

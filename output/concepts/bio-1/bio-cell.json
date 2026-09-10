@@ -1,0 +1,124 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cell",
+  "concept_key": "concept:cell",
+  "registry_status": "new",
+  "term": "세포",
+  "aliases": [],
+  "notation": {
+    "hanja": "細胞",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포",
+    "english": "cell"
+  },
+  "definition": "생물의 몸을 이루는 구조의 단위이면서 기능의 단위. 안쪽의 여러 구성 요소가 맞물려 생명 현상을 나타내는 하나의 시스템이기도 하다.",
+  "relations": [
+    {
+      "id": "rel-cell-unit",
+      "text": "크기와 생김새가 아무리 달라도 지구의 생물은 모두 세포를 단위로 삼아 몸을 이룬다",
+      "form": {
+        "condition": "생물의 몸이 무엇으로 이루어졌는지 물을 때",
+        "type": "conditional",
+        "scope": "지구에 사는 모든 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "모든 생물에 두루 통하는 성질이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cell-uni-multi",
+      "text": "대장균처럼 세포 하나로 사는 단세포생물과 사람처럼 여러 세포로 이루어진 다세포생물로 갈린다",
+      "form": {
+        "condition": "몸을 이루는 세포의 수로 가를 때",
+        "type": "classification",
+        "scope": "생물",
+        "antecedent": {
+          "quantity": "생물",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "단세포생물과 다세포생물",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cell-system",
+      "text": "세포 안의 여러 구성 요소가 유기적으로 맞물려야 세포가 생명 현상을 나타낸다",
+      "form": {
+        "condition": "세포 하나를 시스템으로 놓고 볼 때",
+        "type": "causal",
+        "scope": "세포"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포는 몸을 쌓아 올리는 벽돌일 뿐 그 안에서 따로 하는 일은 없다",
+      "why_wrong": "세포는 구조의 단위이면서 동시에 기능의 단위다. 세포 안에서도 여러 구성 요소가 맞물려 생명 현상이 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cell-system"
+    },
+    {
+      "text": "단세포생물은 세포가 하나뿐이라 생명활동을 온전히 하지 못한다",
+      "why_wrong": "그 한 세포가 하나의 개체로서 물질대사와 생식을 비롯한 생명활동을 다 해낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cell-uni-multi"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-tissue",
+      "note": "세포가 모여 오르는 다음 칸이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-organizational-level-of-living-system",
+      "note": "이 단위에서 시작하는 사다리 전체를 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-metabolism",
+      "note": "생명활동에 드는 에너지가 여기서 만들어진다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cellular-respiration",
+      "note": "세포 안에서 일어나는 대표적인 반응이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-02"
+  ],
+  "topic_id": "bio-1-2-1",
+  "pages": [
+    16,
+    22,
+    25
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

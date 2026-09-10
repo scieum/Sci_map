@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-distinction-between-living-and-nonliving",
+  "concept_key": "concept:distinction-between-living-and-nonliving",
+  "registry_status": "new",
+  "term": "생물과 비생물의 구분",
+  "aliases": [],
+  "notation": {
+    "hanja": "生物非生物區分",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 非 아닐 비 · 生 날 생 · 物 물건 물 · 區 나눌 구 · 分 나눌 분",
+    "english": "distinction between living and nonliving things"
+  },
+  "definition": "어떤 대상이 생물인지 아닌지를 생물의 특성이라는 잣대에 대어 판정하는 일. 겉모습이나 움직임이 아니라 세포로 이루어졌는지와 물질대사를 하는지가 기준이 된다.",
+  "relations": [
+    {
+      "id": "rel-distliv-criterion",
+      "text": "생물과 비생물을 가르는 잣대는 겉모습이나 움직임이 아니라 생물의 특성을 갖추었는가이다",
+      "form": {
+        "condition": "어떤 대상이 생물인지 판정할 때",
+        "type": "classification",
+        "scope": "생물과 사람이 만든 물체",
+        "antecedent": {
+          "quantity": "판정 대상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생물과 비생물",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "판정 기준을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-distliv-virus-partial",
+      "text": "바이러스는 유전물질로 핵산을 갖지만 세포라는 짜임이 없어 생물의 특성을 다 갖추지는 못한다",
+      "form": {
+        "condition": "바이러스를 생물의 특성 목록에 대어 볼 때",
+        "type": "conditional",
+        "scope": "바이러스"
+      },
+      "invertible": false,
+      "invertible_reason": "갖춘 것과 갖추지 못한 것을 함께 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-distliv-virus-host",
+      "text": "바이러스는 숙주 세포 안에서는 증식하지만 숙주 밖에서는 증식하지 못한다",
+      "form": {
+        "condition": "바이러스가 놓인 자리를 안팎으로 갈라 볼 때",
+        "type": "conditional",
+        "scope": "바이러스"
+      },
+      "invertible": true,
+      "invertible_reason": "안과 밖에 증식 여부가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바이러스는 숙주 세포 밖에서는 증식하지만 숙주 안에서는 증식하지 못한다"
+    },
+    {
+      "id": "rel-distliv-robot",
+      "text": "강아지 로봇은 소리에 반응하고 움직여도 세포로 되어 있지 않고 물질대사도 하지 않아 생물이 아니다",
+      "form": {
+        "condition": "사람이 만든 기계를 판정할 때",
+        "type": "causal",
+        "scope": "로봇·인형·모형"
+      },
+      "invertible": false,
+      "invertible_reason": "판정의 근거를 든 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바이러스는 스스로 수를 늘리니까 생물이다",
+      "why_wrong": "수가 느는 것은 숙주 세포 안에서만 벌어지는 일이다. 바이러스에는 세포라는 짜임이 없고 숙주 밖에서는 물질대사를 하지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-distliv-virus-host"
+    },
+    {
+      "text": "휴머노이드는 사람처럼 판단하고 움직이니 생물에 가깝다",
+      "why_wrong": "판단과 움직임은 프로그램이 시킨 것이다. 세포도 물질대사도 없으므로 생물의 특성 목록 어느 자리에도 들지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-distliv-robot"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-characteristic-of-organism",
+      "note": "무엇이 생물의 특성인지 알아야 가릴 수 있다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cell",
+      "note": "생물이라면 반드시 갖는 짜임이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-metabolism",
+      "note": "겉모습으로는 흉내 낼 수 없는 항목이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-01"
+  ],
+  "topic_id": "bio-1-1-1",
+  "pages": [
+    14,
+    15,
+    21
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

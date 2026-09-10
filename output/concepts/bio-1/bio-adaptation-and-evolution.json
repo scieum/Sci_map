@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-adaptation-and-evolution",
+  "concept_key": "concept:adaptation-and-evolution",
+  "registry_status": "new",
+  "term": "적응과 진화",
+  "aliases": [],
+  "notation": {
+    "hanja": "適應進化",
+    "hanja_gloss": "適 맞을 적 · 應 응할 응 · 進 나아갈 진 · 化 될 화",
+    "english": "adaptation and evolution"
+  },
+  "definition": "사는 곳에 알맞은 형태·습성·생리적 특성을 갖추게 된 것이 적응이고, 그렇게 개체군의 유전적 구성이 달라져 가는 과정이 진화다.",
+  "relations": [
+    {
+      "id": "rel-adapevo-generations",
+      "text": "적응은 환경에 알맞은 형질을 지닌 개체가 살아남아 그 유전형질을 여러 세대에 걸쳐 물려준 결과다",
+      "form": {
+        "condition": "여러 세대를 이어서 볼 때",
+        "type": "causal",
+        "scope": "자연 상태의 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "결과가 쌓이는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-adapevo-unit",
+      "text": "진화가 일어나는 자리는 한 개체의 몸이 아니라 개체군이며, 달라지는 것은 그 개체군의 유전적 구성이다",
+      "form": {
+        "condition": "진화가 일어나는 단위를 물을 때",
+        "type": "conditional",
+        "scope": "개체군"
+      },
+      "invertible": true,
+      "invertible_reason": "개체와 개체군 가운데 어느 쪽인지가 갈려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진화가 일어나는 자리는 개체군이 아니라 한 개체의 몸이며, 살아 있는 동안 그 몸이 달라지는 것이다"
+    },
+    {
+      "id": "rel-adapevo-finch",
+      "text": "섬마다 먹이의 종류가 다르면 그 먹이를 먹기 알맞은 부리를 지닌 핀치가 살아남아 부리 모양이 갈린다",
+      "form": {
+        "condition": "섬마다 먹이의 종류가 다를 때",
+        "type": "causal",
+        "scope": "갈라파고스 제도에 사는 핀치"
+      },
+      "invertible": false,
+      "invertible_reason": "사례에서 원인과 결과를 짚은 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기린은 높은 잎을 먹으려고 목을 늘렸고 그 늘어난 목이 자손에게 전해졌다",
+      "why_wrong": "살아 있는 동안 많이 써서 늘어난 것이 자손에게 건너가지는 않는다. 목이 긴 형질을 이미 지닌 개체가 살아남아 그 유전형질을 물려준 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-adapevo-generations"
+    },
+    {
+      "text": "적응은 한 개체가 환경에 맞추어 스스로 몸을 바꾸는 일이다",
+      "why_wrong": "적응은 한 세대 안에서 끝나지 않는다. 알맞은 형질을 지닌 개체가 살아남는 일이 여러 세대에 걸쳐 쌓인 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-adapevo-unit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-characteristic-of-organism",
+      "note": "이 항목이 놓인 목록을 먼저 본다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-reproduction-and-heredity",
+      "note": "형질이 자손에게 전해지는 방식을 알아야 한다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population",
+      "note": "진화가 일어나는 자리가 바로 이 단위다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-01"
+  ],
+  "topic_id": "bio-1-1-1",
+  "pages": [
+    17,
+    21
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

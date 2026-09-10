@@ -1,0 +1,139 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cellular-respiration",
+  "concept_key": "concept:cellular-respiration",
+  "registry_status": "reused",
+  "term": "세포호흡",
+  "aliases": [
+    "세포 호흡"
+  ],
+  "notation": {
+    "hanja": "細胞呼吸",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 呼 부를 호 · 吸 마실 흡",
+    "english": "cellular respiration"
+  },
+  "definition": "세포가 영양소를 쪼개 생명활동에 쓸 에너지를 얻어 내는 과정. 세포질과 마이토콘드리아에서 여러 단계에 걸쳐 일어나며 단계마다 효소가 붙는다.",
+  "relations": [
+    {
+      "id": "rel-bcellresp-place",
+      "text": "세포호흡이 일어나는 자리는 세포질과 마이토콘드리아이지 폐나 소화기관이 아니다",
+      "form": {
+        "condition": "세포호흡이 일어나는 자리를 물을 때",
+        "type": "conditional",
+        "scope": "사람의 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bcellresp-split",
+      "text": "포도당은 산소가 있는 조건에서 이산화 탄소와 물로 쪼개진다",
+      "form": {
+        "condition": "산소가 충분히 공급될 때",
+        "type": "conditional",
+        "scope": "포도당을 쓰는 세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "조건과 산물을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bcellresp-energy-split",
+      "text": "포도당에 담겨 있던 에너지는 일부가 열에너지로 빠져나가고 나머지가 ATP에 화학 에너지로 담긴다",
+      "form": {
+        "condition": "세포호흡으로 포도당이 쪼개질 때",
+        "type": "causal",
+        "scope": "세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지가 갈라지는 몫을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bcellresp-enzyme",
+      "text": "세포호흡은 한 번의 반응이 아니라 여러 단계의 화학 반응이며 단계마다 효소가 조절한다",
+      "form": {
+        "condition": "세포호흡의 진행을 들여다볼 때",
+        "type": "conditional",
+        "scope": "세포호흡"
+      },
+      "invertible": false,
+      "invertible_reason": "진행 방식을 밝힌 서술이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포호흡이란 폐로 숨을 들이쉬고 내쉬는 일이다",
+      "why_wrong": "숨쉬기는 호흡계가 기체를 들이고 내보내는 일이다. 세포호흡은 세포 안에서 영양소를 쪼개 에너지를 얻는 과정이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bcellresp-place"
+    },
+    {
+      "text": "포도당이 쪼개지며 나온 에너지는 남김없이 ATP에 저장된다",
+      "why_wrong": "일부는 열에너지로 빠져나간다. ATP에 담기는 것은 그 나머지다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bcellresp-energy-split"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-catabolism",
+      "note": "이 반응이 속한 갈래다"
+    },
+    {
+      "type": "next",
+      "target": "bio-atp",
+      "note": "여기서 얻은 에너지를 담는 물질이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-formation-and-excretion-of-waste",
+      "note": "이 반응이 남긴 것이 노폐물이 된다"
+    },
+    {
+      "type": "same",
+      "target": "cell-cellular-respiration",
+      "note": "‘세포와 물질대사’ 과목에서 같은 개념을 더 깊이 다룬다"
+    },
+    {
+      "type": "same",
+      "target": "reac-cellular-respiration",
+      "note": "화학 반응 쪽에서 같은 개념을 만난다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-03"
+  ],
+  "topic_id": "bio-1-3-2",
+  "pages": [
+    27,
+    33,
+    38,
+    61
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

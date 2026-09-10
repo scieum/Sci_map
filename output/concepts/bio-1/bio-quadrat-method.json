@@ -1,0 +1,126 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-quadrat-method",
+  "concept_key": "concept:quadrat-method",
+  "registry_status": "new",
+  "term": "방형구법",
+  "aliases": [],
+  "notation": {
+    "hanja": "方形區法",
+    "hanja_gloss": "方 모 방 · 形 모양 형 · 區 구역 구 · 法 법 법",
+    "english": "quadrat method"
+  },
+  "definition": "조사할 군집에 여러 개의 방형구를 놓고 종마다 밀도·빈도·피도를 재어 우점종을 가려내는 식물군집 조사 방법.",
+  "relations": [
+    {
+      "id": "rel-quad-measures",
+      "text": "방형구법에서는 종마다 밀도와 빈도, 피도를 재고 이를 다시 상대값으로 고쳐 쓴다",
+      "form": {
+        "condition": "식물군집을 방형구로 조사할 때",
+        "type": "conditional",
+        "scope": "식물군집 조사"
+      },
+      "invertible": false,
+      "invertible_reason": "절차를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-quad-importance",
+      "text": "상대밀도·상대빈도·상대피도를 모두 더한 값이 중요치이고, 중요치가 가장 큰 종이 우점종이다",
+      "form": {
+        "condition": "세 상대값을 모두 구했을 때",
+        "type": "conditional",
+        "scope": "식물군집"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 절차와 판정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-quad-frequency",
+      "text": "빈도는 그 종이 나타난 방형구의 수를 전체 방형구의 수로 나눈 값이다",
+      "form": {
+        "condition": "빈도를 구할 때",
+        "type": "conditional",
+        "scope": "방형구법"
+      },
+      "invertible": true,
+      "invertible_reason": "분자와 분모 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빈도는 전체 방형구의 수를 그 종이 나타난 방형구의 수로 나눈 값이다"
+    },
+    {
+      "id": "rel-quad-sampling",
+      "text": "방형구를 여러 개 놓는 까닭은 한 자리만 보아서는 군집 전체를 대표하지 못하기 때문이다",
+      "form": {
+        "condition": "군집 전체의 성질을 어림하려 할 때",
+        "type": "causal",
+        "scope": "방형구법"
+      },
+      "invertible": false,
+      "invertible_reason": "여럿을 놓는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중요치는 밀도·빈도·피도를 그대로 더한 값이다",
+      "why_wrong": "세 값은 단위가 서로 달라 그대로 더할 수 없다. 각각을 모든 종의 합으로 나눈 상대값으로 고친 뒤 더한 것이 중요치다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-quad-importance"
+    },
+    {
+      "text": "방형구 하나만 잘 골라 놓으면 우점종을 알 수 있다",
+      "why_wrong": "그 한 자리에 우연히 많이 모여 있던 종이 우점종처럼 보인다. 여러 방형구의 결과를 합쳐야 군집 전체를 대표한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-quad-sampling"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-dominant-species",
+      "note": "이 방법으로 가려내려는 종이다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "조사 대상이 되는 단계다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-density",
+      "note": "여기서 재는 밀도와 같은 값이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    52,
+    53
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

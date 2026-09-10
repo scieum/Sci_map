@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-living-system",
+  "concept_key": "concept:living-system",
+  "registry_status": "new",
+  "term": "생명 시스템",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'생명(生命)'은 한자어이나 '시스템'은 영어 system 의 음차어여서 낱말 전체를 한자로 적을 수 없다.",
+    "english": "living system"
+  },
+  "definition": "구성 요소들이 서로 주고받는 작용으로 유지되는 생명의 짜임. 세포부터 생태계까지 어느 단계를 집어도 그 칸이 그대로 하나의 시스템이 된다.",
+  "relations": [
+    {
+      "id": "rel-livsys-emergence",
+      "text": "구성 요소들이 주고받는 작용의 결과로 요소 하나하나에서는 볼 수 없던 새로운 특성이 나타난다",
+      "form": {
+        "condition": "구성 요소 사이에 상호작용이 일어날 때",
+        "type": "causal",
+        "scope": "생명 시스템의 각 단계"
+      },
+      "invertible": false,
+      "invertible_reason": "상호작용이 낳는 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-livsys-balance",
+      "text": "구성 요소 하나가 사라지거나 제 기능을 못 하면 시스템 전체의 균형이 깨질 수 있다",
+      "form": {
+        "condition": "한 구성 요소에 이상이 생겼을 때",
+        "type": "causal",
+        "scope": "생명 시스템"
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽의 이상이 전체로 번지는 경로를 밝힌 것이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-livsys-every-level",
+      "text": "세포든 개체든 생태계든 어느 칸을 집어도 그 칸이 그대로 하나의 생명 시스템으로 기능한다",
+      "form": {
+        "condition": "구성 단계 가운데 한 칸을 떼어 볼 때",
+        "type": "conditional",
+        "scope": "세포부터 생태계까지의 구성 단계"
+      },
+      "invertible": false,
+      "invertible_reason": "모든 칸에 두루 통하는 성질이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생명 시스템이라는 말은 생물 한 마리, 곧 개체를 가리킨다",
+      "why_wrong": "세포 하나도, 생태계 전체도 각각 하나의 생명 시스템이다. 개체는 그 사다리의 한 칸일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-livsys-every-level"
+    },
+    {
+      "text": "한 단계의 특성은 그 단계를 이루는 요소들의 특성을 더한 것과 같다",
+      "why_wrong": "요소들이 주고받는 작용 때문에 요소 하나하나에서는 볼 수 없던 특성이 새로 나타난다. 더하기로는 설명되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-livsys-emergence"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-organizational-level-of-living-system",
+      "note": "이 짜임을 세포부터 생태계까지 사다리로 늘어놓는다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cell",
+      "note": "가장 아래 칸도 그 자체로 시스템이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ecosystem",
+      "note": "가장 위 칸도 그 자체로 시스템이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-02"
+  ],
+  "topic_id": "bio-1-2-1",
+  "pages": [
+    22,
+    23,
+    25
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

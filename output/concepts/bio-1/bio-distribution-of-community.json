@@ -1,0 +1,127 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-distribution-of-community",
+  "concept_key": "concept:distribution-of-community",
+  "registry_status": "new",
+  "term": "군집의 분포",
+  "aliases": [],
+  "notation": {
+    "hanja": "群集分布",
+    "hanja_gloss": "群 무리 군 · 集 모을 집 · 分 나눌 분 · 布 베 포",
+    "english": "distribution of community"
+  },
+  "definition": "기온과 강수량 같은 환경 조건에 따라 지역마다 서로 다른 군집이 자리 잡는 모습. 위도로 갈리면 수평분포, 고도로 갈리면 수직분포다.",
+  "relations": [
+    {
+      "id": "rel-distc-climate",
+      "text": "기온과 강수량이 그 지역에 삼림·초원·사막 가운데 어떤 군집이 자리 잡을지를 정한다",
+      "form": {
+        "condition": "지역마다 기후 조건이 다를 때",
+        "type": "causal",
+        "scope": "육상 군집"
+      },
+      "invertible": false,
+      "invertible_reason": "환경이 원인 쪽에 놓인 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-distc-rain",
+      "text": "강수량이 많고 온도가 알맞은 곳에는 삼림이, 강수량이 적은 곳에는 초원이 형성된다",
+      "form": {
+        "condition": "강수량을 기준으로 지역을 견줄 때",
+        "type": "classification",
+        "scope": "육상 군집",
+        "antecedent": {
+          "quantity": "강수량",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "형성되는 군집",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "강수량과 군집이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "강수량이 많고 온도가 알맞은 곳에는 초원이, 강수량이 적은 곳에는 삼림이 형성된다"
+    },
+    {
+      "id": "rel-distc-two-kinds",
+      "text": "위도에 따라 군집이 갈리는 것이 수평분포이고, 한 지역 안에서 고도에 따라 갈리는 것이 수직분포다",
+      "form": {
+        "condition": "무엇을 따라 갈리는지로 나눌 때",
+        "type": "classification",
+        "scope": "군집의 분포",
+        "antecedent": {
+          "quantity": "갈리는 기준",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "수평분포와 수직분포",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "위도와 고도가 두 이름에 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고도에 따라 군집이 갈리는 것이 수평분포이고, 한 지역 안에서 위도에 따라 갈리는 것이 수직분포다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수직분포란 땅속 깊이에 따라 군집이 달라지는 것이다",
+      "why_wrong": "한 지역 안에서도 고도가 높아지면 기온이 낮아져 서로 다른 군집이 나타나는 것을 수직분포라 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-distc-two-kinds"
+    },
+    {
+      "text": "군집의 종류는 그곳에 어떤 생물이 들어오느냐로 정해진다",
+      "why_wrong": "기온과 강수량 같은 비생물요소가 먼저 그 지역에 자리 잡을 수 있는 군집의 종류를 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-distc-climate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "무엇이 갈리는지 먼저 본다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-abiotic-factor",
+      "note": "갈라 놓는 요인이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ecological-succession",
+      "note": "같은 자리에서 시간에 따라 갈리는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    54
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

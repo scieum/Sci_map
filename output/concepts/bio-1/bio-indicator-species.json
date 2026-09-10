@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-indicator-species",
+  "concept_key": "concept:indicator-species",
+  "registry_status": "new",
+  "term": "지표종",
+  "aliases": [],
+  "notation": {
+    "hanja": "指標種",
+    "hanja_gloss": "指 가리킬 지 · 標 표할 표 · 種 씨 종",
+    "english": "indicator species"
+  },
+  "definition": "특정한 환경 조건을 갖춘 군집에서만 발견되어 그곳 환경이 어떠한지를 읽게 해 주는 종.",
+  "relations": [
+    {
+      "id": "rel-indsp-only-there",
+      "text": "지표종은 특정 군집에서만 발견되어 그 군집의 특성을 잘 드러내는 종이다",
+      "form": {
+        "condition": "그 종이 발견되는 범위를 살필 때",
+        "type": "conditional",
+        "scope": "군집"
+      },
+      "invertible": false,
+      "invertible_reason": "가리는 잣대를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-indsp-lichen",
+      "text": "지의류는 이산화 황의 농도가 낮은 곳에 살므로 지의류가 잘 자라면 그곳 대기가 깨끗하다고 읽는다",
+      "form": {
+        "condition": "지의류의 분포를 관찰했을 때",
+        "type": "inverse",
+        "scope": "육상 군집의 대기 오염",
+        "antecedent": {
+          "quantity": "이산화 황의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지의류의 분포",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 반대 방향으로 움직이므로 같은 방향으로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지의류는 이산화 황의 농도가 높은 곳에 살므로 지의류가 잘 자라면 그곳 대기가 오염되었다고 읽는다"
+    },
+    {
+      "id": "rel-indsp-vs-dominant",
+      "text": "지표종은 어디에서 발견되는가로 정해지고, 우점종은 그 군집에서 얼마나 큰 자리를 차지하는가로 정해진다",
+      "form": {
+        "condition": "두 종을 갈라 볼 때",
+        "type": "classification",
+        "scope": "군집 안의 종",
+        "antecedent": {
+          "quantity": "가리는 잣대",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "지표종과 우점종",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 이름에 잣대가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지표종은 그 군집에서 얼마나 큰 자리를 차지하는가로 정해지고, 우점종은 어디에서 발견되는가로 정해진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지표종은 그 군집에서 개체 수가 가장 많은 종이다",
+      "why_wrong": "개체 수가 가장 많은 종은 우점종이다. 지표종은 특정 환경에서만 나타나 그곳 환경을 읽게 해 주는 종이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-indsp-vs-dominant"
+    },
+    {
+      "text": "지의류가 많이 보이면 그 지역 대기가 오염된 것이다",
+      "why_wrong": "지의류는 이산화 황의 농도가 낮은 곳에서 자란다. 잘 자라고 있다면 오히려 대기가 깨끗한 쪽으로 읽는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-indsp-lichen"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "어느 군집에서 찾는 종인지 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-dominant-species",
+      "note": "가리는 잣대가 갈리는 상대다"
+    },
+    {
+      "type": "related",
+      "target": "bio-abiotic-factor",
+      "note": "이 종으로 읽어 내려는 대상이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    52,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

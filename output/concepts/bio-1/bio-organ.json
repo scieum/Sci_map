@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-organ",
+  "concept_key": "concept:organ",
+  "registry_status": "new",
+  "term": "기관",
+  "aliases": [],
+  "notation": {
+    "hanja": "器官",
+    "hanja_gloss": "器 그릇 기 · 官 벼슬 관",
+    "english": "organ"
+  },
+  "definition": "하는 일이 서로 다른 여러 조직이 모여 하나의 기능을 맡게 된 단계. 위·작은창자·큰창자처럼 몸속에서 뚜렷한 구실을 하는 덩어리다.",
+  "relations": [
+    {
+      "id": "rel-organ-from-tissues",
+      "text": "기관은 같은 조직이 불어나서가 아니라 하는 일이 서로 다른 조직들이 모여 이루어진다",
+      "form": {
+        "condition": "기관이 만들어지는 방식을 물을 때",
+        "type": "conditional",
+        "scope": "다세포생물"
+      },
+      "invertible": false,
+      "invertible_reason": "만들어지는 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-organ-to-system",
+      "text": "동물에서는 기능이 서로 이어진 여러 기관이 다시 모여 기관계를 이룬다",
+      "form": {
+        "condition": "동물의 몸을 볼 때",
+        "type": "conditional",
+        "scope": "동물"
+      },
+      "invertible": false,
+      "invertible_reason": "위 칸으로 오르는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-organ-not-animal-only",
+      "text": "기관 단계는 동물만의 것이 아니어서 식물에도 잎·줄기·뿌리 같은 기관이 있다",
+      "form": {
+        "condition": "동물과 식물을 함께 놓고 볼 때",
+        "type": "conditional",
+        "scope": "다세포생물"
+      },
+      "invertible": false,
+      "invertible_reason": "양쪽에 다 있음을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조직이 아주 많이 모이면 기관이 된다",
+      "why_wrong": "수가 아니라 종류가 기준이다. 하는 일이 서로 다른 조직들이 모여야 하나의 기관이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-organ-from-tissues"
+    },
+    {
+      "text": "기관과 기관계는 같은 말이다",
+      "why_wrong": "위 하나는 기관이고, 위·작은창자·큰창자가 함께 이루는 소화계가 기관계다. 기관이 여러 개 모여야 기관계가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-organ-to-system"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-tissue",
+      "note": "기관을 이루는 재료다"
+    },
+    {
+      "type": "next",
+      "target": "bio-organ-system",
+      "note": "동물에서 기관이 모여 오르는 칸이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-individual-organism",
+      "note": "기관들이 통합되어 이루는 칸이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-02"
+  ],
+  "topic_id": "bio-1-2-1",
+  "pages": [
+    22,
+    23,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

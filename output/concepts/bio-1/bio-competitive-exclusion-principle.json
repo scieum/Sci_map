@@ -1,0 +1,136 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-competitive-exclusion-principle",
+  "concept_key": "concept:competitive-exclusion-principle",
+  "registry_status": "new",
+  "term": "경쟁배타원리",
+  "aliases": [
+    "경쟁 배타 원리"
+  ],
+  "notation": {
+    "hanja": "競爭排他原理",
+    "hanja_gloss": "競 다툴 경 · 爭 다툴 쟁 · 排 밀칠 배 · 他 다를 타 · 原 근원 원 · 理 다스릴 리",
+    "english": "competitive exclusion principle"
+  },
+  "definition": "생태적 지위가 비슷한 두 개체군이 한자리에서 같은 자원을 두고 겨룰 때, 이긴 종이 남고 진 종이 그 자리에서 사라진다는 원리.",
+  "relations": [
+    {
+      "id": "rel-cep-condition",
+      "text": "경쟁배타는 두 개체군의 생태적 지위가 비슷해 같은 자원을 두고 겨룰 때 일어난다",
+      "form": {
+        "condition": "생태적 지위가 비슷한 두 개체군이 함께 있을 때",
+        "type": "conditional",
+        "scope": "군집 안의 종간경쟁"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cep-result",
+      "text": "종간경쟁이 끝까지 이어지면 이긴 종이 살아남고 진 종은 그 지역에서 사라진다",
+      "form": {
+        "condition": "경쟁이 끝까지 이어졌을 때",
+        "type": "causal",
+        "scope": "생태적 지위가 겹치는 두 개체군",
+        "antecedent": {
+          "quantity": "경쟁의 승패",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "그 지역에 남는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이긴 쪽과 진 쪽에 결말이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "종간경쟁이 끝까지 이어지면 진 종이 살아남고 이긴 종이 그 지역에서 사라진다"
+    },
+    {
+      "id": "rel-cep-avoided",
+      "text": "분서가 일어나 서식지나 먹이, 활동 시간이 갈리면 경쟁배타가 일어나지 않고 두 종이 함께 산다",
+      "form": {
+        "condition": "두 종이 자원을 쓰는 방식을 달리할 때",
+        "type": "conditional",
+        "scope": "군집 안의 두 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "예외가 되는 경우를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cep-paramecium",
+      "text": "짚신벌레 두 종을 따로 기르면 둘 다 늘지만 함께 기르면 한 종이 줄어들다 사라진다",
+      "form": {
+        "condition": "단독 배양과 혼합 배양을 나란히 견줄 때",
+        "type": "conditional",
+        "scope": "생태적 지위가 같은 짚신벌레 두 종"
+      },
+      "invertible": false,
+      "invertible_reason": "두 배양 조건의 결과를 함께 밝힌 서술이라 한쪽으로 맞바꿀 수 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생태적 지위가 비슷한 두 종은 자연에서 언제나 한쪽이 사라진다",
+      "why_wrong": "분서가 일어나 서식지·먹이의 종류·활동 시간이 갈리면 경쟁을 피하며 함께 살아갈 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cep-avoided"
+    },
+    {
+      "text": "경쟁에서 진 종은 이긴 종에게 잡아먹혀 사라진다",
+      "why_wrong": "잡아먹혀서가 아니라 자원을 충분히 얻지 못해 그 지역에서 밀려나는 것이다. 먹고 먹히는 쪽은 포식과 피식이라는 다른 상호작용이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cep-result"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-interspecific-interaction",
+      "note": "이 원리가 속한 갈래다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-ecological-niche",
+      "note": "겹침의 정도가 결과를 가른다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-growth-curve",
+      "note": "짚신벌레의 개체 수 변화를 그래프로 읽는다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-3",
+  "pages": [
+    57,
+    59
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

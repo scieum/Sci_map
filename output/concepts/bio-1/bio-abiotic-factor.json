@@ -1,0 +1,119 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-abiotic-factor",
+  "concept_key": "concept:abiotic-factor",
+  "registry_status": "new",
+  "term": "비생물요소",
+  "aliases": [],
+  "notation": {
+    "hanja": "非生物要素",
+    "hanja_gloss": "非 아닐 비 · 生 날 생 · 物 물건 물 · 要 요긴할 요 · 素 본디 소",
+    "english": "abiotic factor"
+  },
+  "definition": "빛·온도·물·공기·토양처럼 생물을 둘러싼 살아 있지 않은 환경 전체. 생물에 영향을 주기도 하고 생물에게서 영향을 받기도 한다.",
+  "relations": [
+    {
+      "id": "rel-abiotic-list",
+      "text": "빛·온도·물·공기·토양처럼 생물을 둘러싼 모든 환경이 비생물요소에 든다",
+      "form": {
+        "condition": "무엇이 비생물요소인지 가릴 때",
+        "type": "classification",
+        "scope": "생태계",
+        "antecedent": {
+          "quantity": "생물을 둘러싼 환경",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "비생물요소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 드는지 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abiotic-to-bio",
+      "text": "기온과 강수량 같은 비생물요소가 그 지역에 어떤 군집이 자리 잡을지를 좌우한다",
+      "form": {
+        "condition": "지역마다 환경 조건이 다를 때",
+        "type": "causal",
+        "scope": "육상 군집"
+      },
+      "invertible": false,
+      "invertible_reason": "환경이 원인 쪽에 놓인 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abiotic-from-bio",
+      "text": "영향은 한쪽으로만 가지 않아, 생물이 내놓은 물질이 대기와 토양을 바꾸어 놓기도 한다",
+      "form": {
+        "condition": "생물이 물질을 환경으로 내놓을 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "되돌아오는 영향을 밝힌 서술이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비생물요소는 생물에 영향을 주기만 하고 영향을 받지는 않는다",
+      "why_wrong": "분해자가 유기물을 무기물로 되돌려 토양을 바꾸고, 생물의 호흡이 대기의 이산화 탄소를 늘린다. 영향은 양쪽으로 오간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abiotic-from-bio"
+    },
+    {
+      "text": "생태계에서 중요한 것은 생물이고 비생물요소는 배경일 뿐이다",
+      "why_wrong": "강수량이 많으면 삼림이, 적으면 초원이나 사막이 형성되듯 비생물요소가 그곳 군집의 종류를 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abiotic-to-bio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-ecosystem",
+      "note": "이 요소가 놓인 자리를 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-biotic-factor",
+      "note": "생태계의 나머지 절반이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-distribution-of-community",
+      "note": "기온과 강수량이 군집을 갈라 놓는 모습을 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-1",
+  "pages": [
+    25,
+    42,
+    61
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

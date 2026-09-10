@@ -1,0 +1,141 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-carbon-cycle",
+  "concept_key": "concept:carbon-cycle",
+  "registry_status": "new",
+  "term": "탄소순환",
+  "aliases": [
+    "탄소 순환"
+  ],
+  "notation": {
+    "hanja": "炭素循環",
+    "hanja_gloss": "炭 숯 탄 · 素 본디 소 · 循 돌 순 · 環 고리 환",
+    "english": "carbon cycle"
+  },
+  "definition": "대기의 이산화 탄소가 광합성으로 유기물 안에 담겼다가 호흡·분해·연소를 거쳐 다시 이산화 탄소로 되돌아오는 되풀이.",
+  "relations": [
+    {
+      "id": "rel-carbon-in",
+      "text": "대기의 이산화 탄소는 생산자의 광합성을 거쳐 포도당 같은 유기물 속 탄소로 들어간다",
+      "form": {
+        "condition": "생산자가 광합성을 할 때",
+        "type": "causal",
+        "scope": "탄소순환",
+        "antecedent": {
+          "quantity": "대기 중 이산화 탄소",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "유기물 속 탄소",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "광합성이 탄소를 옮기는 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유기물 속 탄소는 생산자의 광합성을 거쳐 대기의 이산화 탄소로 빠져나간다"
+    },
+    {
+      "id": "rel-carbon-out",
+      "text": "유기물 속 탄소는 생물의 세포호흡과 분해자의 분해를 거쳐 이산화 탄소로 대기에 돌아온다",
+      "form": {
+        "condition": "생물이 세포호흡을 하거나 사체가 분해될 때",
+        "type": "causal",
+        "scope": "탄소순환"
+      },
+      "invertible": false,
+      "invertible_reason": "되돌아오는 두 경로를 함께 밝힌 서술이라 한쪽으로 맞바꿀 수 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carbon-chain",
+      "text": "유기물에 담긴 탄소는 먹이사슬을 따라 생산자에서 소비자로 옮겨 간다",
+      "form": {
+        "condition": "먹이 관계를 따라갈 때",
+        "type": "conditional",
+        "scope": "생태계의 탄소"
+      },
+      "invertible": false,
+      "invertible_reason": "옮겨 가는 통로를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carbon-fossil",
+      "text": "오래 묻힌 사체 속 탄소는 화석연료에 갇혀 있다가 연소될 때 이산화 탄소로 대기에 나온다",
+      "form": {
+        "condition": "화석연료가 연소될 때",
+        "type": "causal",
+        "scope": "탄소순환의 긴 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "갇혔다 풀리는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "탄소는 생물 몸속으로 들어가면 그대로 갇혀 다시 나오지 않는다",
+      "why_wrong": "세포호흡으로, 또 사체와 배설물이 분해되면서 이산화 탄소가 되어 대기로 돌아온다. 그래서 순환이라 부른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-carbon-out"
+    },
+    {
+      "text": "대기 중 이산화 탄소가 느는 것은 생물의 호흡 때문이다",
+      "why_wrong": "호흡도 한몫하지만, 오래 갇혀 있던 화석연료 속 탄소가 연소로 한꺼번에 나오는 몫이 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-carbon-fossil"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-food-chain",
+      "note": "탄소가 옮겨 다니는 통로다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-decomposer",
+      "note": "탄소를 대기로 되돌리는 역할이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cellular-respiration",
+      "note": "탄소를 되돌리는 또 하나의 반응이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-nitrogen-cycle",
+      "note": "같은 방식으로 도는 다른 원소를 견준다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-2",
+  "pages": [
+    44,
+    49
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-individual-organism",
+  "concept_key": "concept:individual-organism",
+  "registry_status": "new",
+  "term": "개체",
+  "aliases": [],
+  "notation": {
+    "hanja": "個體",
+    "hanja_gloss": "個 낱 개 · 體 몸 체",
+    "english": "individual organism"
+  },
+  "definition": "여러 종류의 기관이 서로 맞물려 통합적으로 기능하는 하나의 생명 시스템. 단세포생물에서는 세포 하나가 그대로 이 자리에 놓인다.",
+  "relations": [
+    {
+      "id": "rel-indiv-integration",
+      "text": "개체는 기관을 늘어놓은 더미가 아니라 여러 기관이 맞물려 통합적으로 기능하는 시스템이다",
+      "form": {
+        "condition": "개체를 하나의 시스템으로 놓고 볼 때",
+        "type": "conditional",
+        "scope": "다세포생물의 개체"
+      },
+      "invertible": false,
+      "invertible_reason": "성격을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-indiv-unicellular",
+      "text": "단세포생물에서는 세포 하나가 곧 개체여서 세포 칸과 개체 칸이 한자리에 겹친다",
+      "form": {
+        "condition": "단세포생물을 구성 단계에 놓을 때",
+        "type": "conditional",
+        "scope": "효모·아메바 같은 단세포생물"
+      },
+      "invertible": false,
+      "invertible_reason": "겹치는 경우를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-indiv-to-population",
+      "text": "같은 종의 개체가 한 지역에 모여 함께 살아가면 그 무리가 개체군이 된다",
+      "form": {
+        "condition": "같은 종의 개체가 한 지역에 모였을 때",
+        "type": "conditional",
+        "scope": "생태계 안의 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "위 칸으로 오르는 조건을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "개체란 기관들을 한데 모아 놓은 것이다",
+      "why_wrong": "모아 놓기만 해서는 개체가 되지 않는다. 기관들이 서로 맞물려 통합적으로 작용할 때 하나의 개체로 기능한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-indiv-integration"
+    },
+    {
+      "text": "아메바는 세포일 뿐 개체는 아니다",
+      "why_wrong": "아메바는 세포 하나가 그대로 하나의 개체로서 생명활동을 한다. 세포 칸과 개체 칸이 겹치는 경우다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-indiv-unicellular"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organ",
+      "note": "개체를 이루는 재료다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-organizational-level-of-living-system",
+      "note": "이 칸이 사다리의 어디쯤인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-population",
+      "note": "개체가 모여 오르는 다음 칸이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-02"
+  ],
+  "topic_id": "bio-1-2-1",
+  "pages": [
+    22,
+    23,
+    25
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,121 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ecosystem-conservation",
+  "concept_key": "concept:ecosystem-conservation",
+  "registry_status": "new",
+  "term": "생태계보전",
+  "aliases": [
+    "생태계 보전"
+  ],
+  "notation": {
+    "hanja": "生態系保全",
+    "hanja_gloss": "生 날 생 · 態 모습 태 · 系 이어맬 계 · 保 지킬 보 · 全 온전할 전",
+    "english": "ecosystem conservation"
+  },
+  "definition": "깨진 생태계평형을 되돌리고 더는 깨지지 않게 지키려는 노력. 훼손된 서식지 복원과 상위 포식자 보호 같은 활동이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-consv-habitat",
+      "text": "훼손된 서식지를 복원하는 일은 그곳에 살던 생물이 돌아올 자리를 되찾아 주는 보전 활동이다",
+      "form": {
+        "condition": "서식지가 훼손되었을 때",
+        "type": "causal",
+        "scope": "생태계보전"
+      },
+      "invertible": false,
+      "invertible_reason": "활동의 목적을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-consv-predator",
+      "text": "멸종 위기에 놓인 상위 포식자를 보호하면 초식동물의 개체 수가 지나치게 늘지 않도록 조절된다",
+      "form": {
+        "condition": "상위 포식자가 줄어든 생태계일 때",
+        "type": "inverse",
+        "scope": "먹이사슬이 이어진 생태계",
+        "antecedent": {
+          "quantity": "상위 포식자의 개체 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "초식동물의 개체 수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "포식자가 늘 때 피식자가 함께 늘어난다는 방향은 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "멸종 위기에 놓인 상위 포식자를 보호하면 초식동물의 개체 수가 더 크게 늘어난다"
+    },
+    {
+      "id": "rel-consv-climate",
+      "text": "기후 변화가 생태계평형에 미치는 영향이 보고되면서 이에 대응하려는 시민 활동도 늘고 있다",
+      "form": {
+        "condition": "기후 변화의 영향이 드러날 때",
+        "type": "conditional",
+        "scope": "생태계보전 활동"
+      },
+      "invertible": false,
+      "invertible_reason": "활동이 늘어난 배경을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보전이란 사람이 손대지 않고 그대로 두는 것이다",
+      "why_wrong": "훼손된 서식지를 복원하고 멸종 위기종을 되살리는 것처럼 사람이 나서서 하는 활동도 보전에 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-consv-habitat"
+    },
+    {
+      "text": "포식자는 다른 생물을 잡아먹으니 줄어드는 편이 생태계에 이롭다",
+      "why_wrong": "상위 포식자가 사라지면 초식동물이 지나치게 늘어 생산자가 줄고 평형이 깨진다. 포식자도 평형을 지키는 자리에 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-consv-predator"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-recovery-of-ecosystem-equilibrium",
+      "note": "무엇을 거들려는 것인지 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ecosystem-equilibrium",
+      "note": "지키려는 상태다"
+    },
+    {
+      "type": "related",
+      "target": "bio-keystone-species",
+      "note": "우선 지켜야 할 종을 가려내는 데 쓰인다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-3",
+  "pages": [
+    47,
+    48
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

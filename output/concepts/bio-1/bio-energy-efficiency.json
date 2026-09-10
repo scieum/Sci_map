@@ -1,0 +1,123 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-energy-efficiency",
+  "concept_key": "concept:energy-efficiency",
+  "registry_status": "new",
+  "term": "에너지효율",
+  "aliases": [
+    "에너지 효율"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'효율(效率)'은 한자어이나 '에너지'는 영어 energy 의 음차어여서 낱말 전체를 한자로 적을 수 없다.",
+    "english": "energy efficiency",
+    "symbol_display": "에너지효율(%) = 현 영양단계의 에너지양 ÷ 전 영양단계의 에너지양 × 100",
+    "symbol_plain": "(E_now / E_prev) x 100"
+  },
+  "definition": "바로 아래 영양단계가 지녔던 에너지양에 대해 그 단계가 넘겨받은 에너지양의 비를 백분율로 나타낸 값. 대체로 10 % 안팎이다.",
+  "relations": [
+    {
+      "id": "rel-eeff-formula",
+      "text": "에너지효율은 현 영양단계의 에너지양을 전 영양단계의 에너지양으로 나눈 뒤 백분율로 나타낸 값이다",
+      "form": {
+        "condition": "이웃한 두 영양단계의 에너지양을 알고 있을 때",
+        "type": "conditional",
+        "scope": "생태계의 영양단계 사이"
+      },
+      "invertible": true,
+      "invertible_reason": "분자와 분모 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에너지효율은 전 영양단계의 에너지양을 현 영양단계의 에너지양으로 나눈 뒤 백분율로 나타낸 값이다"
+    },
+    {
+      "id": "rel-eeff-value",
+      "text": "에너지효율은 대체로 10 % 안팎이며 생태계에 따라 5 %에서 20 % 사이에 놓인다",
+      "form": {
+        "condition": "일반적인 생태계를 두고 볼 때",
+        "type": "conditional",
+        "scope": "생태계의 영양단계 사이"
+      },
+      "invertible": false,
+      "invertible_reason": "값의 범위를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eeff-population",
+      "text": "생산량이 같다면 사람이 낮은 영양단계에서 먹을수록 더 많은 사람을 먹여 살릴 수 있다",
+      "form": {
+        "condition": "생산자의 에너지 생산량이 일정할 때",
+        "type": "inverse",
+        "scope": "사람이 든 먹이사슬",
+        "antecedent": {
+          "quantity": "사람이 놓인 영양단계",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "부양할 수 있는 인구",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "단계가 높아질수록 부양 인구가 늘어난다는 방향은 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생산량이 같다면 사람이 높은 영양단계에서 먹을수록 더 많은 사람을 먹여 살릴 수 있다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에너지효율은 전 영양단계의 에너지양을 현 영양단계의 에너지양으로 나눈 값이다",
+      "why_wrong": "분자에 오는 것이 현 영양단계, 분모에 오는 것이 전 영양단계다. 뒤집으면 값이 10 %가 아니라 10배쯤으로 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eeff-formula"
+    },
+    {
+      "text": "에너지효율이 10 %라면 나머지 90 %는 사라져 버린다",
+      "why_wrong": "그 몫은 각 단계의 생물이 호흡으로 쓰거나 열에너지로 내보낸 것이다. 없어진 것이 아니라 다른 형태로 빠져나간 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eeff-value"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-energy-flow-in-ecosystem",
+      "note": "이 값이 재는 대상이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-food-chain",
+      "note": "값을 재는 두 단계가 놓인 줄이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-consumer",
+      "note": "사람이 어느 단계에서 먹느냐와 맞닿는다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-2",
+  "pages": [
+    46
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

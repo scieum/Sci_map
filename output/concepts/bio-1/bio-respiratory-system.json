@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-respiratory-system",
+  "concept_key": "concept:respiratory-system",
+  "registry_status": "new",
+  "term": "호흡계",
+  "aliases": [],
+  "notation": {
+    "hanja": "呼吸系",
+    "hanja_gloss": "呼 부를 호 · 吸 마실 흡 · 系 이어맬 계",
+    "english": "respiratory system"
+  },
+  "definition": "세포호흡에 쓸 산소를 몸 안으로 들이고 그 결과로 생긴 이산화 탄소를 몸 밖으로 내보내는 기관계. 코에서 숨관·숨관가지를 거쳐 폐로 이어진다.",
+  "relations": [
+    {
+      "id": "rel-respsys-path",
+      "text": "숨을 들이마시면 바깥 공기가 코와 숨관, 숨관가지를 지나 폐로 들어간다",
+      "form": {
+        "condition": "숨을 들이마실 때",
+        "type": "conditional",
+        "scope": "사람의 호흡계"
+      },
+      "invertible": false,
+      "invertible_reason": "공기가 지나는 길을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-respsys-alveoli",
+      "text": "폐는 속이 빈 주머니가 아니라 수많은 허파꽈리로 이루어져 있고 허파꽈리마다 모세혈관이 감싸고 있다",
+      "form": {
+        "condition": "폐의 안쪽 짜임을 들여다볼 때",
+        "type": "conditional",
+        "scope": "사람의 폐"
+      },
+      "invertible": false,
+      "invertible_reason": "짜임을 밝힌 서술이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-respsys-two-jobs",
+      "text": "호흡계는 산소를 들여오는 일과 이산화 탄소를 내보내는 일을 함께 맡는다",
+      "form": {
+        "condition": "호흡계가 맡은 일을 셀 때",
+        "type": "conditional",
+        "scope": "사람의 호흡계"
+      },
+      "invertible": false,
+      "invertible_reason": "두 방향의 일을 함께 밝힌 서술이라 한쪽으로 맞바꿀 수 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-respsys-needs-blood",
+      "text": "호흡계로 들어온 산소가 온몸의 세포까지 가려면 순환계가 실어 날라 주어야 한다",
+      "form": {
+        "condition": "산소를 온몸의 세포로 보낼 때",
+        "type": "causal",
+        "scope": "사람의 몸"
+      },
+      "invertible": false,
+      "invertible_reason": "필요한 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "호흡계는 산소를 들여오기만 하고 내보내는 일은 배설계가 한다",
+      "why_wrong": "세포호흡으로 생긴 이산화 탄소를 몸 밖으로 내보내는 것도 호흡계의 일이다. 배설계가 맡는 것은 질소 노폐물과 여분의 물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-respsys-two-jobs"
+    },
+    {
+      "text": "폐는 속이 텅 빈 주머니여서 들이마신 공기가 그대로 담긴다",
+      "why_wrong": "폐는 수많은 허파꽈리로 채워져 있고, 그 하나하나를 모세혈관이 감싸고 있어 기체가 오갈 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-respsys-alveoli"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organ-system",
+      "note": "기관계가 무엇인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-gas-exchange",
+      "note": "허파꽈리에서 실제로 벌어지는 일이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "다른 기관계와 어떻게 맞물리는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-circulatory-system",
+      "note": "들여온 산소를 넘겨받는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-1",
+  "pages": [
+    34,
+    40,
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

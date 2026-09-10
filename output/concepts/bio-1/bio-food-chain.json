@@ -1,0 +1,136 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-food-chain",
+  "concept_key": "concept:food-chain",
+  "registry_status": "new",
+  "term": "먹이사슬",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'먹이'와 '사슬'이 모두 고유어여서 낱말 전체를 한자로 적을 수 없다.",
+    "english": "food chain"
+  },
+  "definition": "생산자에서 소비자로 먹고 먹히며 유기물과 그 안의 에너지가 옮겨 가는 한 줄기의 차례. 여러 줄기가 얽히면 먹이그물이 된다.",
+  "relations": [
+    {
+      "id": "rel-food-transfer",
+      "text": "생산자가 만든 유기물과 그 안의 에너지는 먹고 먹히는 차례를 따라 소비자 쪽으로 옮겨 간다",
+      "form": {
+        "condition": "한 생물이 다른 생물을 먹을 때",
+        "type": "causal",
+        "scope": "생태계의 먹이 관계"
+      },
+      "invertible": false,
+      "invertible_reason": "옮겨 가는 통로를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-food-limit",
+      "text": "단계를 오를수록 그 단계의 생물이 쓸 수 있는 에너지양이 줄어 영양단계는 4~5단계에서 멈춘다",
+      "form": {
+        "condition": "에너지가 단계를 따라 옮겨 갈 때",
+        "type": "causal",
+        "scope": "생태계의 먹이사슬"
+      },
+      "invertible": false,
+      "invertible_reason": "단계 수가 제한되는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-food-web",
+      "text": "한 단계를 이루는 종이 다양할수록 먹이사슬이 복잡하게 얽혀 먹이그물이 촘촘해진다",
+      "form": {
+        "condition": "한 영양단계를 이루는 종의 수를 견줄 때",
+        "type": "direct",
+        "scope": "군집의 먹이 관계",
+        "antecedent": {
+          "quantity": "각 단계를 이루는 종의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "먹이그물의 복잡한 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 단계를 이루는 종이 다양할수록 먹이사슬이 단순해져 먹이그물이 성기어진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "먹이사슬의 단계는 먹이만 넉넉하면 얼마든지 길어질 수 있다",
+      "why_wrong": "단계를 오를 때마다 쓸 수 있는 에너지양이 줄어든다. 그래서 영양단계는 대개 4~5단계에서 더 늘지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-food-limit"
+    },
+    {
+      "text": "먹이사슬이 단순할수록 군집이 안정하다",
+      "why_wrong": "종이 다양해 먹이그물이 복잡할수록 한 종이 줄어도 다른 길로 이어져 군집이 덜 흔들린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-food-web"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-producer",
+      "note": "줄의 출발점이 되는 역할이다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-consumer",
+      "note": "줄을 따라 이어지는 역할이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-carbon-cycle",
+      "note": "탄소가 이 줄을 타고 옮겨 간다"
+    },
+    {
+      "type": "next",
+      "target": "bio-nitrogen-cycle",
+      "note": "질소 화합물도 이 줄을 타고 옮겨 간다"
+    },
+    {
+      "type": "next",
+      "target": "bio-energy-flow-in-ecosystem",
+      "note": "에너지도 이 줄을 타고 옮겨 간다"
+    },
+    {
+      "type": "next",
+      "target": "bio-ecosystem-equilibrium",
+      "note": "이 줄의 얽힘이 안정을 좌우한다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-2",
+  "pages": [
+    43,
+    46,
+    48,
+    52
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

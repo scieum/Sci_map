@@ -1,0 +1,148 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-digestive-system",
+  "concept_key": "concept:digestive-system",
+  "registry_status": "new",
+  "term": "소화계",
+  "aliases": [],
+  "notation": {
+    "hanja": "消化系",
+    "hanja_gloss": "消 사라질 소 · 化 될 화 · 系 이어맬 계",
+    "english": "digestive system"
+  },
+  "definition": "음식물 속의 큰 영양소를 세포가 흡수할 만한 크기로 쪼개어 몸속으로 들여보내는 기관계. 위·작은창자·큰창자가 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-digsys-why-break",
+      "text": "탄수화물·지방·단백질은 분자가 커서 세포막을 그대로 지날 수 없으므로 작게 쪼개야 흡수된다",
+      "form": {
+        "condition": "영양소를 세포 안으로 들여보내야 할 때",
+        "type": "causal",
+        "scope": "사람이 섭취한 영양소"
+      },
+      "invertible": false,
+      "invertible_reason": "쪼개야 하는 까닭을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-digsys-products",
+      "text": "탄수화물은 포도당으로, 지방은 지방산과 모노글리세리드로, 단백질은 아미노산으로 쪼개진다",
+      "form": {
+        "condition": "음식물이 소화기관을 지나는 동안",
+        "type": "classification",
+        "scope": "사람의 소화 과정",
+        "antecedent": {
+          "quantity": "영양소의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "분해 산물",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "영양소마다 산물을 짝지은 서술이라 한 방향으로 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-digsys-villi",
+      "text": "작은창자 안쪽에 융털과 주름이 많을수록 영양소와 닿는 면적이 넓어져 흡수가 잘 일어난다",
+      "form": {
+        "condition": "작은창자에서 영양소를 흡수할 때",
+        "type": "direct",
+        "scope": "사람의 작은창자",
+        "antecedent": {
+          "quantity": "영양소와 닿는 면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "흡수되는 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "면적이 넓을수록 흡수가 잘 된다는 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "작은창자 안쪽에 융털과 주름이 많을수록 영양소와 닿는 면적이 좁아져 흡수가 어려워진다"
+    },
+    {
+      "id": "rel-digsys-handoff",
+      "text": "작은창자에서 흡수된 영양소는 소화계에 머물지 않고 혈액을 타고 온몸의 세포로 옮겨 간다",
+      "form": {
+        "condition": "흡수가 끝난 뒤",
+        "type": "conditional",
+        "scope": "사람의 몸"
+      },
+      "invertible": false,
+      "invertible_reason": "흡수 뒤의 경로를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소화는 위에서 다 끝난다",
+      "why_wrong": "위를 지나 작은창자까지 소화가 이어지고, 쪼개진 영양소가 실제로 흡수되는 자리도 대부분 작은창자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-digsys-products"
+    },
+    {
+      "text": "소화계가 흡수한 영양소는 소화계 안에서 그대로 쓰인다",
+      "why_wrong": "흡수된 영양소는 혈액을 타고 온몸의 세포로 간다. 그 영양소를 실제로 쓰는 곳은 세포다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-digsys-handoff"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organ-system",
+      "note": "기관계가 무엇인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "다른 기관계와 어떻게 맞물리는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-circulatory-system",
+      "note": "흡수한 영양소를 넘겨받는 쪽이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cellular-respiration",
+      "note": "쪼갠 영양소가 마지막에 쓰이는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-1",
+  "pages": [
+    35,
+    40,
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

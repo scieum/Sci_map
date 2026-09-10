@@ -1,0 +1,143 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-metabolic-disease",
+  "concept_key": "concept:metabolic-disease",
+  "registry_status": "new",
+  "term": "대사성 질환",
+  "aliases": [],
+  "notation": {
+    "hanja": "代謝性疾患",
+    "hanja_gloss": "代 대신할 대 · 謝 사례할 사 · 性 성품 성 · 疾 병 질 · 患 근심 환",
+    "english": "metabolic disease"
+  },
+  "definition": "몸의 물질대사에 이상이 생겨 나타나는 질환. 당뇨병·고혈압·고지혈증·지방간이 여기 들며, 유전적 요인과 환경요인이 겹쳐 나타나기도 한다.",
+  "relations": [
+    {
+      "id": "rel-metdis-two-causes",
+      "text": "물질대사 관련 유전자의 결함 같은 유전적 요인과 비만·운동 부족 같은 환경요인이 겹쳐 나타나기도 한다",
+      "form": {
+        "condition": "질환의 원인을 따져 볼 때",
+        "type": "causal",
+        "scope": "대사성 질환"
+      },
+      "invertible": false,
+      "invertible_reason": "두 요인이 함께 작용함을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-metdis-kinds",
+      "text": "당뇨병·고혈압·고지혈증·지방간이 대사성 질환이라는 한 이름 아래 묶인다",
+      "form": {
+        "condition": "대사성 질환의 종류를 나눌 때",
+        "type": "classification",
+        "scope": "사람에게 나타나는 대사성 질환",
+        "antecedent": {
+          "quantity": "대사성 질환",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "질환의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 이 갈래에 드는지 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-metdis-diabetes",
+      "text": "인슐린 분비가 모자라거나 인슐린이 제대로 작용하지 못하면 혈액의 포도당 농도가 비정상적으로 높아진다",
+      "form": {
+        "condition": "혈당 조절이 제대로 되지 않을 때",
+        "type": "causal",
+        "scope": "당뇨병",
+        "antecedent": {
+          "quantity": "인슐린의 분비와 작용",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "혈액의 포도당 농도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "인슐린이 모자랄 때 혈당이 낮아진다는 방향은 조절의 뜻과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인슐린 분비가 모자라거나 제대로 작용하지 못하면 혈액의 포도당 농도가 비정상적으로 낮아진다"
+    },
+    {
+      "id": "rel-metdis-hyperlipidemia",
+      "text": "혈중 콜레스테롤이나 중성지방이 높은 상태가 이어지면 동맥경화 같은 심혈관계 질환으로 이어질 수 있다",
+      "form": {
+        "condition": "고지혈증이 오래 이어질 때",
+        "type": "causal",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "한 상태가 다른 질환으로 번지는 경로를 밝힌 것이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대사성 질환은 잘못된 생활 습관 탓으로만 생긴다",
+      "why_wrong": "물질대사에 관여하는 유전자의 결함 같은 유전적 요인도 함께 작용한다. 두 요인이 겹쳐 나타나기도 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-metdis-two-causes"
+    },
+    {
+      "text": "당뇨병은 단것을 많이 먹어 혈액에 당이 그대로 쌓인 병이다",
+      "why_wrong": "먹은 양보다 조절이 문제다. 혈당을 낮추는 인슐린의 분비나 작용에 이상이 생겨 포도당 농도가 높은 채로 남는 질환이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-metdis-diabetes"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-metabolism",
+      "note": "무엇에 이상이 생긴 것인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-prevention-of-metabolic-disease",
+      "note": "막는 쪽을 이어서 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-energy-conversion-in-metabolism",
+      "note": "섭취한 에너지가 어디로 가는지와 맞닿는다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-05"
+  ],
+  "topic_id": "bio-1-3-3",
+  "pages": [
+    29,
+    30,
+    33
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

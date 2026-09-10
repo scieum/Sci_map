@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-gas-exchange",
+  "concept_key": "concept:gas-exchange",
+  "registry_status": "new",
+  "term": "기체 교환",
+  "aliases": [],
+  "notation": {
+    "hanja": "氣體交換",
+    "hanja_gloss": "氣 기운 기 · 體 몸 체 · 交 사귈 교 · 換 바꿀 환",
+    "english": "gas exchange"
+  },
+  "definition": "허파꽈리와 그것을 감싼 모세혈관 사이에서 산소와 이산화 탄소가 서로 반대 방향으로 건너가는 일. 호흡계와 순환계가 맞물리는 자리다.",
+  "relations": [
+    {
+      "id": "rel-gasex-place",
+      "text": "기체 교환이 일어나는 자리는 폐 전체가 아니라 허파꽈리와 그것을 감싼 모세혈관 사이다",
+      "form": {
+        "condition": "기체가 오가는 자리를 물을 때",
+        "type": "conditional",
+        "scope": "사람의 폐"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gasex-directions",
+      "text": "산소는 허파꽈리에서 모세혈관으로 건너가고, 이산화 탄소는 모세혈관에서 허파꽈리로 건너간다",
+      "form": {
+        "condition": "두 기체가 오가는 방향을 볼 때",
+        "type": "classification",
+        "scope": "허파꽈리와 모세혈관 사이",
+        "antecedent": {
+          "quantity": "기체의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "건너가는 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 기체에 방향이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "산소는 모세혈관에서 허파꽈리로 건너가고, 이산화 탄소는 허파꽈리에서 모세혈관으로 건너간다"
+    },
+    {
+      "id": "rel-gasex-to-cell",
+      "text": "모세혈관으로 넘어온 산소는 혈액을 따라 온몸의 세포로 옮겨져 세포호흡에 쓰인다",
+      "form": {
+        "condition": "기체 교환이 끝난 뒤",
+        "type": "causal",
+        "scope": "사람의 몸"
+      },
+      "invertible": false,
+      "invertible_reason": "그 뒤의 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산소와 이산화 탄소는 같은 방향으로 나란히 움직인다",
+      "why_wrong": "허파꽈리에서는 산소가 혈액 쪽으로, 이산화 탄소가 공기 쪽으로 간다. 두 기체가 서로 반대 방향으로 건너간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gasex-directions"
+    },
+    {
+      "text": "기체 교환은 폐라는 큰 주머니가 통째로 하는 일이다",
+      "why_wrong": "폐를 이루는 허파꽈리 하나하나와 그것을 감싼 모세혈관 사이에서 일어난다. 허파꽈리가 많을수록 닿는 면적이 넓어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gasex-place"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-respiratory-system",
+      "note": "기체가 드나드는 길을 먼저 본다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-circulatory-system",
+      "note": "건너간 기체를 실어 나르는 쪽이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "두 기관계가 맞물리는 대표 자리다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cellular-respiration",
+      "note": "건너간 산소가 쓰이는 곳이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-1",
+  "pages": [
+    34,
+    35,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,160 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-metabolism",
+  "concept_key": "concept:metabolism",
+  "registry_status": "new",
+  "term": "물질대사",
+  "aliases": [],
+  "notation": {
+    "hanja": "物質代謝",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 代 대신할 대 · 謝 사례할 사",
+    "english": "metabolism"
+  },
+  "definition": "생명활동을 이어 가려고 생물의 몸에서 쉬지 않고 벌어지는 화학 반응. 물질을 묶는 쪽과 쪼개는 쪽으로 갈리며 그때마다 에너지가 드나든다.",
+  "relations": [
+    {
+      "id": "rel-bmeta-two-directions",
+      "text": "에너지를 흡수하며 물질을 묶는 쪽이 동화작용이고, 에너지를 방출하며 물질을 쪼개는 쪽이 이화작용이다",
+      "form": {
+        "condition": "에너지가 드나드는 방향으로 가를 때",
+        "type": "classification",
+        "scope": "생물 안에서 일어나는 물질대사",
+        "antecedent": {
+          "quantity": "에너지의 출입 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "동화작용과 이화작용",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "흡수와 방출이 두 이름에 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에너지를 방출하며 물질을 쪼개는 쪽이 동화작용이고, 에너지를 흡수하며 물질을 묶는 쪽이 이화작용이다"
+    },
+    {
+      "id": "rel-bmeta-plant-animal",
+      "text": "식물은 광합성과 세포호흡으로, 동물은 세포호흡으로 생명활동에 쓸 에너지를 마련한다",
+      "form": {
+        "condition": "생명활동에 쓸 에너지를 마련할 때",
+        "type": "conditional",
+        "scope": "식물과 동물"
+      },
+      "invertible": true,
+      "invertible_reason": "식물과 동물에 반응의 가짓수가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식물은 세포호흡으로, 동물은 광합성과 세포호흡으로 생명활동에 쓸 에너지를 마련한다"
+    },
+    {
+      "id": "rel-bmeta-nonstop",
+      "text": "물질대사는 필요할 때만 켜지는 것이 아니라 생물이 살아 있는 동안 끊임없이 이어진다",
+      "form": {
+        "condition": "생물이 살아 있는 동안",
+        "type": "conditional",
+        "scope": "모든 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "지속되는 성질을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bmeta-all-in",
+      "text": "물질을 만드는 광합성도, 물질을 쪼개는 세포호흡도 모두 물질대사에 든다",
+      "form": {
+        "condition": "어떤 반응이 물질대사에 드는지 가릴 때",
+        "type": "classification",
+        "scope": "생물 안에서 일어나는 화학 반응",
+        "antecedent": {
+          "quantity": "생물 안의 화학 반응",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "물질대사",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 목록에 드는지 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광합성은 물질을 만드는 과정이니 물질대사가 아니다",
+      "why_wrong": "물질대사는 쪼개는 반응만 가리키지 않는다. 빛에너지로 포도당을 묶어 내는 광합성도 동화작용으로서 물질대사에 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bmeta-all-in"
+    },
+    {
+      "text": "물질대사는 밥을 먹거나 운동할 때처럼 필요할 때만 일어난다",
+      "why_wrong": "잠든 동안에도 체온을 지키고 세포를 고치는 반응이 이어진다. 물질대사는 살아 있는 내내 멈추지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bmeta-nonstop"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-characteristic-of-organism",
+      "note": "이 반응이 생물의 특성 가운데 하나로 놓인다"
+    },
+    {
+      "type": "next",
+      "target": "bio-anabolism",
+      "note": "물질을 묶는 쪽으로 갈라 본 것이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-catabolism",
+      "note": "물질을 쪼개는 쪽으로 갈라 본 것이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-energy-conversion-in-metabolism",
+      "note": "이 반응을 에너지 쪽에서 다시 본 것이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-metabolic-disease",
+      "note": "이 반응에 이상이 생겼을 때를 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-basal-metabolic-rate",
+      "note": "이 반응을 사람 몸의 에너지양으로 재 본 값이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-03"
+  ],
+  "topic_id": "bio-1-3-1",
+  "pages": [
+    16,
+    26,
+    33,
+    61
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

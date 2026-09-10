@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-organ-system",
+  "concept_key": "concept:organ-system",
+  "registry_status": "new",
+  "term": "기관계",
+  "aliases": [],
+  "notation": {
+    "hanja": "器官系",
+    "hanja_gloss": "器 그릇 기 · 官 벼슬 관 · 系 이어맬 계",
+    "english": "organ system"
+  },
+  "definition": "기능이 서로 맞물린 여러 기관이 모여 한 갈래의 일을 함께 맡는 단계. 소화계·순환계·호흡계·배설계처럼 동물에서 나타난다.",
+  "relations": [
+    {
+      "id": "rel-orgsys-animal-only",
+      "text": "기관계는 동물에서 나타나고, 식물에서는 그 자리에 조직계가 놓인다",
+      "form": {
+        "condition": "동물과 식물의 몸을 견줄 때",
+        "type": "classification",
+        "scope": "다세포생물",
+        "antecedent": {
+          "quantity": "동물과 식물",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기관계와 조직계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "동물과 식물에 두 단계가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기관계는 식물에서 나타나고, 동물에서는 그 자리에 조직계가 놓인다"
+    },
+    {
+      "id": "rel-orgsys-example",
+      "text": "소화를 맡은 위·작은창자·큰창자가 함께 묶여 소화계라는 하나의 기관계를 이룬다",
+      "form": {
+        "condition": "기관계의 예를 들어 볼 때",
+        "type": "conditional",
+        "scope": "사람의 소화 기관"
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 든 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-orgsys-to-individual",
+      "text": "여러 기관계가 서로 맞물려 통합적으로 기능해야 개체가 정상적인 생명활동을 이어 간다",
+      "form": {
+        "condition": "여러 기관계를 한 몸 안에서 함께 볼 때",
+        "type": "causal",
+        "scope": "동물 개체"
+      },
+      "invertible": false,
+      "invertible_reason": "유지 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "식물에도 소화계나 순환계 같은 기관계가 있다",
+      "why_wrong": "식물이 갖는 것은 조직계다. 물과 양분을 나르는 통도조직이 이어져 관다발조직계를 이루는 식이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-orgsys-animal-only"
+    },
+    {
+      "text": "폐는 순환계에 속한다",
+      "why_wrong": "폐는 호흡계의 기관이다. 순환계는 심장·혈관·혈액으로 이루어져 물질을 나르는 기관계다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-orgsys-example"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organ",
+      "note": "기관계를 이루는 재료다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-organizational-level-of-living-system",
+      "note": "이 칸이 사다리의 어디쯤인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-digestive-system",
+      "note": "영양소를 맡은 갈래다"
+    },
+    {
+      "type": "next",
+      "target": "bio-circulatory-system",
+      "note": "물질을 나르는 갈래다"
+    },
+    {
+      "type": "next",
+      "target": "bio-respiratory-system",
+      "note": "기체를 맡은 갈래다"
+    },
+    {
+      "type": "next",
+      "target": "bio-excretory-system",
+      "note": "노폐물을 맡은 갈래다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-02"
+  ],
+  "topic_id": "bio-1-2-1",
+  "pages": [
+    23,
+    39,
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

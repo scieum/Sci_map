@@ -1,0 +1,118 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-carrying-capacity",
+  "concept_key": "concept:carrying-capacity",
+  "registry_status": "new",
+  "term": "환경수용력",
+  "aliases": [],
+  "notation": {
+    "hanja": "環境收容力",
+    "hanja_gloss": "環 고리 환 · 境 지경 경 · 收 거둘 수 · 容 얼굴 용 · 力 힘 력",
+    "english": "carrying capacity"
+  },
+  "definition": "한 서식지에서 개체군이 안정적으로 살아갈 수 있는 개체 수의 최댓값. 개체 수가 이 값에 이르면 더 늘지 않고 그 언저리에서 일정해진다.",
+  "relations": [
+    {
+      "id": "rel-carcap-max",
+      "text": "환경수용력은 한 서식지가 안정적으로 떠받칠 수 있는 개체 수의 최댓값이다",
+      "form": {
+        "condition": "서식지의 자원이 정해져 있을 때",
+        "type": "conditional",
+        "scope": "한 서식지의 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "값이 무엇을 뜻하는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carcap-plateau",
+      "text": "개체 수가 환경수용력에 다다르면 더 늘지 않고 그 언저리에서 일정해진다",
+      "form": {
+        "condition": "개체 수가 환경수용력에 다다랐을 때",
+        "type": "causal",
+        "scope": "S자형 성장을 보이는 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "다다른 뒤의 모습을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-carcap-resistance",
+      "text": "환경저항이 커질수록 그 서식지가 떠받칠 수 있는 환경수용력은 작아진다",
+      "form": {
+        "condition": "서식지의 조건이 나빠질 때",
+        "type": "inverse",
+        "scope": "한 서식지의 개체군",
+        "antecedent": {
+          "quantity": "환경저항",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "환경수용력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 반대 방향으로 움직이므로 같은 방향으로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "환경저항이 커질수록 그 서식지가 떠받칠 수 있는 환경수용력은 커진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환경수용력은 서식지의 넓이만으로 정해진다",
+      "why_wrong": "먹이의 양, 서식 공간, 쌓이는 노폐물처럼 환경저항으로 작용하는 것들이 함께 정한다. 넓이는 그 가운데 하나일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-carcap-resistance"
+    },
+    {
+      "text": "개체 수가 환경수용력을 넘으면 그 개체군은 곧바로 사라진다",
+      "why_wrong": "넘어서면 환경저항이 세져 개체 수가 다시 줄어든다. 대개는 환경수용력 언저리에서 오르내린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-carcap-plateau"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-environmental-resistance",
+      "note": "이 값을 정하는 요인들이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-population-growth-curve",
+      "note": "곡선이 평평해지는 높이가 이 값이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-density",
+      "note": "이 값에 이르면 밀도도 일정해진다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-1",
+  "pages": [
+    51
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

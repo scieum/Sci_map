@@ -1,0 +1,136 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-community",
+  "concept_key": "concept:community",
+  "registry_status": "new",
+  "term": "군집",
+  "aliases": [],
+  "notation": {
+    "hanja": "群集",
+    "hanja_gloss": "群 무리 군 · 集 모을 집",
+    "english": "community"
+  },
+  "definition": "한 지역에 사는 여러 개체군이 함께 이룬 집단. 개체군을 더해 놓은 것이 아니라 개체군 사이의 상호작용에서 새 특성이 나타나는 시스템이다.",
+  "relations": [
+    {
+      "id": "rel-comm-not-sum",
+      "text": "군집은 개체군을 더해 놓은 것이 아니라 개체군 사이의 상호작용에서 새 특성이 나타나는 시스템이다",
+      "form": {
+        "condition": "군집을 하나의 시스템으로 놓고 볼 때",
+        "type": "conditional",
+        "scope": "군집"
+      },
+      "invertible": false,
+      "invertible_reason": "성격을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-comm-read",
+      "text": "군집의 구조와 분포, 그리고 그 안의 상호작용을 보면 그 군집이 어떤 군집인지 읽어 낼 수 있다",
+      "form": {
+        "condition": "군집의 특성을 알아보려 할 때",
+        "type": "conditional",
+        "scope": "군집"
+      },
+      "invertible": false,
+      "invertible_reason": "읽어 내는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-comm-stability",
+      "text": "각 영양단계를 이루는 종이 다양할수록 먹이그물이 복잡해져 군집이 안정해진다",
+      "form": {
+        "condition": "군집을 이루는 종의 다양한 정도를 견줄 때",
+        "type": "direct",
+        "scope": "군집의 안정한 정도",
+        "antecedent": {
+          "quantity": "각 단계를 이루는 종의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "군집의 안정한 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "각 영양단계를 이루는 종이 다양할수록 먹이그물이 단순해져 군집이 불안정해진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "군집의 특성은 그 안 개체군들의 특성을 모두 더한 것과 같다",
+      "why_wrong": "개체군끼리 경쟁하고 공생하는 과정에서 개체군 하나만 보아서는 알 수 없던 특성이 새로 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-comm-not-sum"
+    },
+    {
+      "text": "종의 수가 적고 먹이사슬이 단순한 군집일수록 안정하다",
+      "why_wrong": "종이 다양해 먹이그물이 복잡할수록 한 종이 줄어도 다른 길로 이어져 군집이 덜 흔들린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-comm-stability"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-population",
+      "note": "군집을 이루는 재료다"
+    },
+    {
+      "type": "next",
+      "target": "bio-ecosystem",
+      "note": "여기에 환경이 더해지면 다음 칸이 된다"
+    },
+    {
+      "type": "next",
+      "target": "bio-dominant-species",
+      "note": "군집에서 가장 큰 자리를 차지하는 종이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-keystone-species",
+      "note": "수가 적어도 짜임을 떠받치는 종이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-indicator-species",
+      "note": "그 군집의 환경을 알려 주는 종이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-distribution-of-community",
+      "note": "군집이 지역마다 갈리는 모습을 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    23,
+    25,
+    52,
+    61
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-dominant-species",
+  "concept_key": "concept:dominant-species",
+  "registry_status": "new",
+  "term": "우점종",
+  "aliases": [],
+  "notation": {
+    "hanja": "優占種",
+    "hanja_gloss": "優 넉넉할 우 · 占 점령할 점 · 種 씨 종",
+    "english": "dominant species"
+  },
+  "definition": "개체 수가 많거나 점유 면적이 넓어 군집 안에서 영향력이 큰 종. 식물군집에서는 중요치가 가장 큰 종이 여기 해당한다.",
+  "relations": [
+    {
+      "id": "rel-domsp-criterion",
+      "text": "우점종을 가리는 잣대는 개체 수와 점유 면적으로 드러나는 군집 안에서의 영향력이다",
+      "form": {
+        "condition": "군집에서 우점종을 가릴 때",
+        "type": "conditional",
+        "scope": "군집"
+      },
+      "invertible": false,
+      "invertible_reason": "가리는 잣대를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-domsp-importance",
+      "text": "식물군집에서는 상대밀도·상대빈도·상대피도를 모두 더한 중요치가 가장 큰 종이 우점종이 된다",
+      "form": {
+        "condition": "방형구법으로 식물군집을 조사했을 때",
+        "type": "conditional",
+        "scope": "식물군집"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 절차를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-domsp-vs-keystone",
+      "text": "우점종은 수와 면적으로 영향력이 큰 종이고, 핵심종은 수가 적어도 군집의 짜임을 떠받치는 종이다",
+      "form": {
+        "condition": "두 종을 갈라 볼 때",
+        "type": "classification",
+        "scope": "군집 안의 종",
+        "antecedent": {
+          "quantity": "영향력의 근거",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "우점종과 핵심종",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 이름에 근거가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우점종은 수가 적어도 군집의 짜임을 떠받치는 종이고, 핵심종은 수와 면적으로 영향력이 큰 종이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "군집에서 가장 큰 영향을 주는 종은 언제나 우점종이다",
+      "why_wrong": "비버처럼 개체 수가 적어도 서식 환경을 통째로 바꾸어 놓는 핵심종이 있다. 영향력의 근거가 서로 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-domsp-vs-keystone"
+    },
+    {
+      "text": "개체 수가 가장 많은 종이 곧 우점종이다",
+      "why_wrong": "식물군집에서는 개체 수뿐 아니라 얼마나 여러 방형구에 나타나는지와 얼마나 넓은 면적을 차지하는지를 함께 계산한 중요치로 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-domsp-importance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "어디에서 가리는 종인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-quadrat-method",
+      "note": "이 종을 실제로 가려내는 방법이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-keystone-species",
+      "note": "영향력의 근거가 갈리는 상대다"
+    },
+    {
+      "type": "related",
+      "target": "bio-indicator-species",
+      "note": "가리는 잣대가 다른 또 하나의 종이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    52,
+    53,
+    61
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

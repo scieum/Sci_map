@@ -1,0 +1,145 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-circulatory-system",
+  "concept_key": "concept:circulatory-system",
+  "registry_status": "new",
+  "term": "순환계",
+  "aliases": [],
+  "notation": {
+    "hanja": "循環系",
+    "hanja_gloss": "循 돌 순 · 環 고리 환 · 系 이어맬 계",
+    "english": "circulatory system"
+  },
+  "definition": "심장·혈관·혈액으로 이루어져 영양소와 산소를 세포로 보내고 이산화 탄소와 노폐물을 호흡계·배설계로 실어 나르는 기관계.",
+  "relations": [
+    {
+      "id": "rel-cirsys-parts",
+      "text": "순환계는 심장과 혈관, 그리고 그 안을 흐르는 혈액이 함께 이룬다",
+      "form": {
+        "condition": "순환계의 구성을 물을 때",
+        "type": "conditional",
+        "scope": "사람의 순환계"
+      },
+      "invertible": false,
+      "invertible_reason": "구성을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cirsys-two-directions",
+      "text": "순환계는 세포 쪽으로 영양소와 산소를 보내고, 세포에서 나온 이산화 탄소와 노폐물을 거두어 온다",
+      "form": {
+        "condition": "실어 나르는 방향으로 갈라 볼 때",
+        "type": "classification",
+        "scope": "사람의 순환계",
+        "antecedent": {
+          "quantity": "운반 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "실어 나르는 물질",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가는 쪽과 오는 쪽에 물질이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순환계는 세포 쪽으로 이산화 탄소와 노폐물을 보내고, 세포에서 나온 영양소와 산소를 거두어 온다"
+    },
+    {
+      "id": "rel-cirsys-lung-loop",
+      "text": "이산화 탄소를 실은 혈액은 심장을 거쳐 폐로 가 산소를 받고 이산화 탄소를 내려놓은 뒤 심장으로 돌아온다",
+      "form": {
+        "condition": "혈액이 폐를 지나는 동안",
+        "type": "conditional",
+        "scope": "사람의 혈액 순환"
+      },
+      "invertible": false,
+      "invertible_reason": "혈액이 도는 차례를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cirsys-hub",
+      "text": "소화계·호흡계·배설계가 주고받는 물질은 모두 혈액을 거치므로 순환계가 그 가운데에 놓인다",
+      "form": {
+        "condition": "네 기관계를 한자리에 놓고 볼 때",
+        "type": "conditional",
+        "scope": "사람의 기관계"
+      },
+      "invertible": false,
+      "invertible_reason": "놓인 자리를 밝힌 서술이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혈액은 산소만 나르고 영양소는 따로 다른 길로 간다",
+      "why_wrong": "작은창자 융털에서 흡수된 영양소도 혈액을 타고 온몸의 세포로 간다. 순환계는 산소와 영양소를 함께 나른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cirsys-two-directions"
+    },
+    {
+      "text": "순환계란 심장을 가리키는 말이고 혈관과 혈액은 여기에 들지 않는다",
+      "why_wrong": "심장이 밀어 보낸 혈액이 혈관을 따라 흘러야 물질이 옮겨진다. 셋이 함께 하나의 기관계를 이룬다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cirsys-parts"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organ-system",
+      "note": "기관계가 무엇인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-gas-exchange",
+      "note": "혈액이 폐에서 기체를 주고받는 자리다"
+    },
+    {
+      "type": "next",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "가운데 톱니바퀴 노릇을 하는 자리를 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-digestive-system",
+      "note": "영양소를 건네주는 쪽이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-excretory-system",
+      "note": "노폐물을 건네받는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-1",
+  "pages": [
+    38,
+    40,
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

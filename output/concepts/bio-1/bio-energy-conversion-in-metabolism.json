@@ -1,0 +1,150 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-energy-conversion-in-metabolism",
+  "concept_key": "concept:energy-conversion-in-metabolism",
+  "registry_status": "new",
+  "term": "물질대사에서의 에너지전환",
+  "aliases": [
+    "에너지 전환"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'물질대사(物質代謝)'와 '전환(轉換)'은 한자어이나 '에너지'는 영어 energy 의 음차어여서 낱말 전체를 한자로 적을 수 없다.",
+    "english": "energy conversion in metabolism"
+  },
+  "definition": "물질대사가 이어지는 동안 에너지가 형태를 갈아입는 일. 영양소의 화학 에너지가 ATP를 거쳐 기계적·열·소리 에너지로 갈라져 쓰인다.",
+  "relations": [
+    {
+      "id": "rel-encon-two-ways",
+      "text": "동화작용에서는 에너지가 물질 안으로 들어가 저장되고, 이화작용에서는 물질에 담겼던 에너지가 풀린다",
+      "form": {
+        "condition": "에너지가 드나드는 방향으로 가를 때",
+        "type": "classification",
+        "scope": "물질대사",
+        "antecedent": {
+          "quantity": "동화작용과 이화작용",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "에너지가 옮겨 가는 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "저장과 방출이 두 작용에 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동화작용에서는 물질에 담겼던 에너지가 풀리고, 이화작용에서는 에너지가 물질 안으로 들어가 저장된다"
+    },
+    {
+      "id": "rel-encon-path",
+      "text": "음식물 속 영양소의 화학 에너지는 세포호흡을 거쳐 ATP의 화학 에너지로 옮겨진 뒤 쓰인다",
+      "form": {
+        "condition": "사람이 음식물로 에너지를 얻을 때",
+        "type": "causal",
+        "scope": "사람의 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지가 거쳐 가는 차례를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-encon-forms",
+      "text": "ATP에서 풀린 에너지는 물질 합성·근육 운동·체온 유지·보고 듣기처럼 서로 다른 일로 갈라져 쓰인다",
+      "form": {
+        "condition": "ATP의 에너지가 실제로 쓰일 때",
+        "type": "classification",
+        "scope": "사람의 생명활동",
+        "antecedent": {
+          "quantity": "ATP에서 풀린 에너지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생명활동의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "쓰이는 자리를 늘어놓은 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-encon-firefly",
+      "text": "반딧불이는 효소의 작용으로 루시페린을 산화시키며 ATP를 써서 화학 에너지를 빛에너지로 바꾼다",
+      "form": {
+        "condition": "반딧불이가 빛을 낼 때",
+        "type": "causal",
+        "scope": "겐지반딧불이"
+      },
+      "invertible": false,
+      "invertible_reason": "사례에서 전환의 방향을 짚은 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질대사가 일어날 때 에너지는 새로 만들어지거나 사라진다",
+      "why_wrong": "에너지는 형태를 바꾸며 옮겨 갈 뿐이다. 세포호흡에서도 포도당의 화학 에너지가 ATP의 화학 에너지와 열에너지로 갈릴 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-encon-path"
+    },
+    {
+      "text": "에너지전환은 물질을 쪼개는 이화작용에서만 일어난다",
+      "why_wrong": "광합성처럼 물질을 묶는 동화작용에서도 빛에너지가 화학 에너지로 바뀌어 물질 안에 저장되는 전환이 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-encon-two-ways"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-metabolism",
+      "note": "이 반응 전체를 먼저 본다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-atp-adp-conversion",
+      "note": "에너지가 오가는 통로를 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-anabolism",
+      "note": "에너지가 들어가는 쪽이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-catabolism",
+      "note": "에너지가 나오는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-03"
+  ],
+  "topic_id": "bio-1-3-2",
+  "pages": [
+    26,
+    27,
+    28
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,121 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-atp-adp-conversion",
+  "concept_key": "concept:atp-adp-conversion",
+  "registry_status": "new",
+  "term": "ATP와 ADP의 전환",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'전환(轉換)'은 한자어이나 ATP·ADP 는 영어 약어여서 낱말 전체를 한자로 적을 수 없다.",
+    "english": "conversion between ATP and ADP",
+    "symbol_display": "ATP ⇄ ADP + Pi",
+    "symbol_plain": "ATP <-> ADP + Pi"
+  },
+  "definition": "ATP 끝의 인산기 결합이 끊어져 ADP와 무기인산으로 갈라지고, 그 ADP가 에너지를 받아 다시 ATP로 되돌아가는 되풀이.",
+  "relations": [
+    {
+      "id": "rel-atpadp-break",
+      "text": "ATP 끝에 있는 인산기 사이의 결합이 끊어지면 ADP와 무기인산으로 갈라지며 에너지가 방출된다",
+      "form": {
+        "condition": "ATP의 인산기 결합이 끊어질 때",
+        "type": "causal",
+        "scope": "세포 안",
+        "antecedent": {
+          "quantity": "ATP의 분해",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "세포로 나오는 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "분해 쪽에 방출이 짝지어져 있어 흡수로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "ATP 끝의 인산기 결합이 끊어지면 ADP와 무기인산으로 갈라지며 에너지가 흡수된다"
+    },
+    {
+      "id": "rel-atpadp-build",
+      "text": "ADP가 에너지를 공급받아 인산과 결합하면 다시 ATP가 만들어진다",
+      "form": {
+        "condition": "세포호흡에서 얻은 에너지가 공급될 때",
+        "type": "causal",
+        "scope": "세포 안"
+      },
+      "invertible": false,
+      "invertible_reason": "합성이 일어나는 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-atpadp-cycle",
+      "text": "세포는 ATP를 합성해 에너지를 저장하고 ATP를 분해해 에너지를 꺼내므로 두 방향이 번갈아 이어진다",
+      "form": {
+        "condition": "에너지를 저장할 때와 꺼내 쓸 때를 함께 볼 때",
+        "type": "conditional",
+        "scope": "살아 있는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "두 방향이 모두 일어나므로 맞바꾸어도 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "ADP는 쓸모를 다한 찌꺼기여서 몸 밖으로 버려진다",
+      "why_wrong": "ADP는 에너지를 공급받아 인산과 결합하면 다시 ATP가 된다. 버려지는 물질이 아니라 되쓰이는 물질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atpadp-build"
+    },
+    {
+      "text": "ATP가 만들어질 때 에너지가 나오고 ATP가 쪼개질 때 에너지가 들어간다",
+      "why_wrong": "방향이 반대다. 만들 때는 에너지를 공급받아야 하고, 쪼갤 때 에너지가 방출된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-atpadp-break"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-atp",
+      "note": "이 물질의 짜임을 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-energy-conversion-in-metabolism",
+      "note": "에너지가 실제로 옮겨 가는 통로가 여기다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cellular-respiration",
+      "note": "합성에 쓰일 에너지가 여기서 온다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-03"
+  ],
+  "topic_id": "bio-1-3-2",
+  "pages": [
+    28,
+    61
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

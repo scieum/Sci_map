@@ -1,0 +1,139 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-population-growth-curve",
+  "concept_key": "concept:population-growth-curve",
+  "registry_status": "new",
+  "term": "성장곡선",
+  "aliases": [],
+  "notation": {
+    "hanja": "成長曲線",
+    "hanja_gloss": "成 이룰 성 · 長 길 장 · 曲 굽을 곡 · 線 줄 선",
+    "english": "population growth curve"
+  },
+  "definition": "개체군의 개체 수가 시간에 따라 어떻게 달라지는지를 그린 그래프. 자원과 환경저항의 조건에 따라 J자형과 S자형으로 갈린다.",
+  "relations": [
+    {
+      "id": "rel-growc-j",
+      "text": "먹이와 서식 공간이 넉넉해 큰 제약 없이 번식하면 개체 수가 기하급수적으로 늘어 J자형이 된다",
+      "form": {
+        "condition": "자원이 넉넉하고 환경저항이 거의 없을 때",
+        "type": "causal",
+        "scope": "개체군의 성장"
+      },
+      "invertible": false,
+      "invertible_reason": "곡선이 그렇게 그려지는 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-growc-s",
+      "text": "개체 수가 늘어 환경저항이 세지면 증가가 더뎌지다 환경수용력 언저리에서 일정해져 S자형이 된다",
+      "form": {
+        "condition": "환경저항이 작용할 때",
+        "type": "causal",
+        "scope": "개체군의 성장"
+      },
+      "invertible": false,
+      "invertible_reason": "곡선이 휘는 차례를 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-growc-which",
+      "text": "제약이 거의 없는 이상적인 조건에서는 J자형이, 실제 자연에서는 대개 S자형이 나타난다",
+      "form": {
+        "condition": "조건에 따라 두 곡선을 가를 때",
+        "type": "classification",
+        "scope": "개체군의 성장곡선",
+        "antecedent": {
+          "quantity": "서식 조건",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "곡선의 모양",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "조건과 곡선 모양이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "제약이 거의 없는 이상적인 조건에서는 S자형이, 실제 자연에서는 대개 J자형이 나타난다"
+    },
+    {
+      "id": "rel-growc-use",
+      "text": "S자형 곡선은 멸종을 막기 위한 최소한의 개체 수를 어림하는 데 쓰인다",
+      "form": {
+        "condition": "멸종 위기 야생동물을 복원할 때",
+        "type": "conditional",
+        "scope": "보전 계획"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이상적인 조건에서 개체군은 S자형 성장곡선을 나타낸다",
+      "why_wrong": "제약이 거의 없는 조건에서는 개체 수가 기하급수적으로 늘어 J자형이 된다. S자형은 환경저항이 작용할 때의 모양이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-growc-which"
+    },
+    {
+      "text": "J자형 곡선은 이론일 뿐 자연에서는 볼 수 없다",
+      "why_wrong": "새로운 환경으로 옮겨 간 개체군이나 자연재해로 수가 급격히 줄었다가 회복하는 개체군에서 실제로 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-growc-j"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-population-density",
+      "note": "곡선이 그리는 값이 무엇인지 본다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-environmental-resistance",
+      "note": "곡선을 휘게 하는 것들이다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-carrying-capacity",
+      "note": "곡선이 평평해지는 높이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-survivorship-curve",
+      "note": "개체군을 읽는 또 하나의 그래프다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-1",
+  "pages": [
+    51,
+    59
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

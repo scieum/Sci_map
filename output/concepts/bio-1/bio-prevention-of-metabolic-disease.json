@@ -1,0 +1,114 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-prevention-of-metabolic-disease",
+  "concept_key": "concept:prevention-of-metabolic-disease",
+  "registry_status": "new",
+  "term": "대사성 질환의 예방",
+  "aliases": [],
+  "notation": {
+    "hanja": "代謝性疾患豫防",
+    "hanja_gloss": "代 대신할 대 · 謝 사례할 사 · 性 성품 성 · 疾 병 질 · 患 근심 환 · 豫 미리 예 · 防 막을 방",
+    "english": "prevention of metabolic disease"
+  },
+  "definition": "균형 잡힌 식단과 규칙적인 운동처럼 물질대사를 정상 범위에 붙잡아 두는 생활 습관을 길러 대사성 질환이 생기지 않도록 막는 일.",
+  "relations": [
+    {
+      "id": "rel-prevmd-habit",
+      "text": "균형 잡힌 식단과 규칙적인 운동을 꾸준히 이어 가면 대사성 질환이 생길 위험을 낮출 수 있다",
+      "form": {
+        "condition": "생활 습관을 꾸준히 이어 갈 때",
+        "type": "causal",
+        "scope": "대사성 질환의 예방"
+      },
+      "invertible": false,
+      "invertible_reason": "위험을 낮추는 경로를 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-prevmd-muscle",
+      "text": "유산소 운동과 근육량을 늘리는 운동을 함께 꾸준히 하면 기초대사량이 늘어 지방 소비가 커진다",
+      "form": {
+        "condition": "두 종류의 운동을 함께 꾸준히 할 때",
+        "type": "causal",
+        "scope": "사람",
+        "antecedent": {
+          "quantity": "꾸준한 운동",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기초대사량과 지방 소비",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "운동을 늘릴 때 기초대사량이 줄어든다는 방향은 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유산소 운동과 근육량을 늘리는 운동을 함께 꾸준히 하면 기초대사량이 줄어 지방 소비가 작아진다"
+    },
+    {
+      "id": "rel-prevmd-daily",
+      "text": "걷기나 계단 오르기처럼 일상에서 늘린 움직임도 따로 하는 운동과 비슷한 효과를 낼 수 있다",
+      "form": {
+        "condition": "따로 운동할 시간을 내기 어려울 때",
+        "type": "conditional",
+        "scope": "일상생활의 신체 활동"
+      },
+      "invertible": false,
+      "invertible_reason": "대신할 수 있음을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "운동은 하는 동안에만 열량을 쓰므로 운동을 멈추면 예방 효과도 끝난다",
+      "why_wrong": "근육량이 늘면 기초대사량이 올라가 쉬는 동안 쓰는 에너지도 함께 늘어난다. 효과가 운동하는 시간에만 머물지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prevmd-muscle"
+    },
+    {
+      "text": "체육관에서 하는 운동이 아니면 예방에는 도움이 되지 않는다",
+      "why_wrong": "걷기나 계단 오르기 같은 일상의 움직임을 늘리는 것으로도 비슷한 효과를 얻을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prevmd-daily"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-metabolic-disease",
+      "note": "무엇을 막으려는 것인지 먼저 본다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-basal-metabolic-rate",
+      "note": "운동이 왜 도움이 되는지의 근거다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-05"
+  ],
+  "topic_id": "bio-1-3-3",
+  "pages": [
+    31,
+    61
+  ],
+  "difficulty": 1,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

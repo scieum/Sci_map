@@ -1,0 +1,152 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-intraspecific-interaction",
+  "concept_key": "concept:intraspecific-interaction",
+  "registry_status": "new",
+  "term": "개체군 내 상호작용",
+  "aliases": [],
+  "notation": {
+    "hanja": "個體群內相互作用",
+    "hanja_gloss": "個 낱 개 · 體 몸 체 · 群 무리 군 · 內 안 내 · 相 서로 상 · 互 서로 호 · 作 지을 작 · 用 쓸 용",
+    "english": "intraspecific interaction"
+  },
+  "definition": "같은 개체군에 속한 개체들 사이에서 벌어지는 작용. 텃세·순위제·리더제·사회생활·가족생활이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-intra-competition",
+      "text": "개체군의 밀도가 높아지면 먹이·서식지·배우자를 차지하려는 구성원 사이의 경쟁이 심해진다",
+      "form": {
+        "condition": "개체군의 밀도가 높아질 때",
+        "type": "direct",
+        "scope": "한 개체군 안",
+        "antecedent": {
+          "quantity": "개체군의 밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "구성원 사이의 경쟁",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개체군의 밀도가 높아지면 먹이·서식지·배우자를 차지하려는 구성원 사이의 경쟁이 누그러진다"
+    },
+    {
+      "id": "rel-intra-order",
+      "text": "텃세·순위제·리더제 같은 상호작용은 지나친 경쟁을 막아 개체군을 안정하게 지킨다",
+      "form": {
+        "condition": "경쟁이 지나치게 심해질 수 있을 때",
+        "type": "causal",
+        "scope": "일부 생물종의 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "상호작용이 하는 구실을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-intra-kinds",
+      "text": "세력권을 지키는 텃세, 힘의 서열로 순서를 매기는 순위제, 리더가 무리를 이끄는 리더제로 갈린다",
+      "form": {
+        "condition": "질서를 세우는 방식으로 가를 때",
+        "type": "classification",
+        "scope": "개체군 내 상호작용",
+        "antecedent": {
+          "quantity": "질서를 세우는 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "텃세·순위제·리더제",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-intra-social-family",
+      "text": "여러 개체가 역할을 나누어 맡는 것이 사회생활이고, 혈연관계의 개체들이 함께 사는 것이 가족생활이다",
+      "form": {
+        "condition": "누가 어떻게 모이는지로 가를 때",
+        "type": "classification",
+        "scope": "개체군 내 상호작용",
+        "antecedent": {
+          "quantity": "모이는 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "사회생활과 가족생활",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 이름에 모이는 방식이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혈연관계의 개체들이 함께 사는 것이 사회생활이고, 여러 개체가 역할을 나누어 맡는 것이 가족생활이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "순위제와 리더제는 결국 같은 말이다",
+      "why_wrong": "순위제는 힘의 서열에 따라 먹이를 먹는 순서 같은 것이 정해지는 것이고, 리더제는 한 개체가 이동 방향과 행동을 지휘하는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-intra-kinds"
+    },
+    {
+      "text": "개체군 안의 상호작용은 모두 경쟁을 더 심하게 만든다",
+      "why_wrong": "텃세·순위제·리더제는 오히려 지나친 경쟁을 막고 무리의 질서를 지켜 개체군을 안정하게 유지하는 쪽으로 작용한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-intra-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-population",
+      "note": "어느 무리 안의 일인지 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-density",
+      "note": "이 값이 높아지면 경쟁이 시작된다"
+    },
+    {
+      "type": "related",
+      "target": "bio-interspecific-interaction",
+      "note": "다른 종 사이에서 벌어지는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-3",
+  "pages": [
+    56,
+    58,
+    59
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

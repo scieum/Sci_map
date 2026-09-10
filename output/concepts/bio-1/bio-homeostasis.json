@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-homeostasis",
+  "concept_key": "concept:homeostasis",
+  "registry_status": "new",
+  "term": "항상성",
+  "aliases": [],
+  "notation": {
+    "hanja": "恒常性",
+    "hanja_gloss": "恒 항상 항 · 常 항상 상 · 性 성품 성",
+    "english": "homeostasis"
+  },
+  "definition": "바깥 환경이 달라져도 몸속 상태를 일정한 범위 안에 붙잡아 두려는 성질. 생물이 공통으로 갖는 특성 가운데 하나로, 자극에 대한 반응과 한 항목으로 묶인다.",
+  "relations": [
+    {
+      "id": "rel-homeo-sweat",
+      "text": "체온이 정상 범위 위로 오르면 땀 분비가 늘어 체온을 다시 정상 범위로 끌어내린다",
+      "form": {
+        "condition": "체온이 정상 범위를 벗어나 올라갔을 때",
+        "type": "causal",
+        "scope": "사람",
+        "antecedent": {
+          "quantity": "체온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "땀 분비량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "체온이 오를 때 땀이 줄어든다는 방향은 조절의 뜻과 정면으로 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체온이 정상 범위 위로 오르면 땀 분비가 줄어 체온이 더 올라간다"
+    },
+    {
+      "id": "rel-homeo-vs-response",
+      "text": "출발 신호를 듣고 달려 나가는 것은 자극에 대한 반응이고, 체온을 되돌리는 것은 항상성이다",
+      "form": {
+        "condition": "두 항목을 갈라 볼 때",
+        "type": "classification",
+        "scope": "생물의 특성 목록 안의 두 항목",
+        "antecedent": {
+          "quantity": "몸에 나타난 변화",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "자극에 대한 반응과 항상성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 예가 두 항목에 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "출발 신호를 듣고 달려 나가는 것이 항상성이고, 체온을 되돌리는 것이 자극에 대한 반응이다"
+    },
+    {
+      "id": "rel-homeo-range",
+      "text": "항상성은 몸속 상태를 한 값에 못 박는 것이 아니라 일정한 범위 안에서 오르내리게 붙잡는 것이다",
+      "form": {
+        "condition": "몸속 상태가 흔들릴 때",
+        "type": "conditional",
+        "scope": "항상성을 갖는 생물의 체내 상태"
+      },
+      "invertible": false,
+      "invertible_reason": "조절의 성격을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "항상성이 있으니 사람의 체온은 조금도 변하지 않는다",
+      "why_wrong": "체온은 하루 동안에도 오르내린다. 항상성은 그 오르내림을 정상 범위 안에 붙잡아 두는 것이지 값을 고정하는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-homeo-range"
+    },
+    {
+      "text": "더울 때 땀이 나는 것은 자극에 반응한 것일 뿐 항상성과는 상관이 없다",
+      "why_wrong": "땀은 올라간 체온을 정상 범위로 되돌리는 쪽으로 작용한다. 몸속 상태를 지키는 조절이므로 항상성의 예다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-homeo-vs-response"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-characteristic-of-organism",
+      "note": "이 성질이 놓인 목록을 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "몸속 상태를 지키는 일은 여러 기관계가 함께 한다"
+    },
+    {
+      "type": "related",
+      "target": "bio-metabolism",
+      "note": "체온을 지키는 데도 에너지가 든다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-01"
+  ],
+  "topic_id": "bio-1-1-1",
+  "pages": [
+    16,
+    21
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

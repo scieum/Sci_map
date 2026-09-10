@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-decomposer",
+  "concept_key": "concept:decomposer",
+  "registry_status": "new",
+  "term": "분해자",
+  "aliases": [],
+  "notation": {
+    "hanja": "分解者",
+    "hanja_gloss": "分 나눌 분 · 解 풀 해 · 者 놈 자",
+    "english": "decomposer"
+  },
+  "definition": "사체나 배설물에 남은 유기물을 무기물로 되돌려 비생물환경으로 내보내는 생물. 버섯·곰팡이·세균이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-dec-direction",
+      "text": "분해자는 사체와 배설물 속 유기물을 무기물로 되돌려 비생물환경으로 내보낸다",
+      "form": {
+        "condition": "사체나 배설물이 생겼을 때",
+        "type": "conditional",
+        "scope": "생태계의 분해자",
+        "antecedent": {
+          "quantity": "유기물",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "무기물",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "물질이 바뀌는 방향이 한쪽으로 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분해자는 비생물환경의 무기물을 유기물로 바꾸어 생물에게 내보낸다"
+    },
+    {
+      "id": "rel-dec-closes",
+      "text": "분해자가 있어야 생물 안으로 들어갔던 물질이 환경으로 돌아와 물질 순환의 고리가 닫힌다",
+      "form": {
+        "condition": "물질이 생물과 환경 사이를 돌 때",
+        "type": "causal",
+        "scope": "생태계의 물질 순환"
+      },
+      "invertible": false,
+      "invertible_reason": "고리를 닫는 역할을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dec-absent",
+      "text": "분해자가 사라지면 사체와 배설물이 쌓이고 생산자가 쓸 무기물이 모자라게 된다",
+      "form": {
+        "condition": "분해자가 없어졌을 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "빠졌을 때 벌어지는 일을 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분해자는 생태계를 청소할 뿐 물질 순환과는 상관이 없다",
+      "why_wrong": "분해자가 유기물을 무기물로 되돌려야 생산자가 그 무기물을 다시 쓸 수 있다. 순환의 고리를 닫는 자리가 분해자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dec-closes"
+    },
+    {
+      "text": "분해자는 죽은 것을 먹으므로 소비자의 한 갈래다",
+      "why_wrong": "소비자는 먹은 유기물로 제 몸을 이루지만, 분해자는 유기물을 무기물로 되돌려 환경에 내놓는다. 역할을 가르는 기준이 바로 이 방향이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dec-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-biotic-factor",
+      "note": "역할로 가른 세 갈래 가운데 하나다"
+    },
+    {
+      "type": "next",
+      "target": "bio-carbon-cycle",
+      "note": "탄소를 대기로 되돌리는 자리다"
+    },
+    {
+      "type": "next",
+      "target": "bio-nitrogen-cycle",
+      "note": "질소를 토양으로 되돌리는 자리다"
+    },
+    {
+      "type": "related",
+      "target": "bio-consumer",
+      "note": "유기물을 다루는 방식이 갈리는 상대다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-1",
+  "pages": [
+    42,
+    43,
+    49
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

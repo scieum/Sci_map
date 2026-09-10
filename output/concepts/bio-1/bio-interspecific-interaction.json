@@ -1,0 +1,156 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-interspecific-interaction",
+  "concept_key": "concept:interspecific-interaction",
+  "registry_status": "new",
+  "term": "군집 내 상호작용",
+  "aliases": [],
+  "notation": {
+    "hanja": "群集內相互作用",
+    "hanja_gloss": "群 무리 군 · 集 모을 집 · 內 안 내 · 相 서로 상 · 互 서로 호 · 作 지을 작 · 用 쓸 용",
+    "english": "interspecific interaction"
+  },
+  "definition": "군집을 이루는 서로 다른 개체군 사이에서 벌어지는 작용. 종간경쟁·분서·상리공생·편리공생·기생·포식과 피식이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-inter-list",
+      "text": "종간경쟁·분서·상리공생·편리공생·기생·포식과 피식이 군집 내 상호작용으로 함께 묶인다",
+      "form": {
+        "condition": "서로 다른 종 사이의 작용을 나눌 때",
+        "type": "classification",
+        "scope": "군집",
+        "antecedent": {
+          "quantity": "종 사이의 작용",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "여섯 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 여기 드는지 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inter-symbiosis",
+      "text": "상리공생은 두 종이 모두 이득을 얻고, 편리공생은 한 종만 이득을 얻고 다른 종은 영향을 받지 않는다",
+      "form": {
+        "condition": "두 종이 각각 무엇을 얻는지로 가를 때",
+        "type": "classification",
+        "scope": "공생 관계",
+        "antecedent": {
+          "quantity": "두 종이 얻는 것",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "상리공생과 편리공생",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 이름에 얻는 몫이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상리공생은 한 종만 이득을 얻고 다른 종은 영향을 받지 않으며, 편리공생은 두 종이 모두 이득을 얻는다"
+    },
+    {
+      "id": "rel-inter-parasitism",
+      "text": "한 종이 상대 종에게 해를 입히면서 그 종에게서 먹이와 살 자리를 얻어 내는 것이 기생이다",
+      "form": {
+        "condition": "한 종이 다른 종에게 해를 끼칠 때",
+        "type": "conditional",
+        "scope": "군집 내 상호작용"
+      },
+      "invertible": false,
+      "invertible_reason": "관계의 성격을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inter-predation",
+      "text": "포식과 피식은 먹고 먹히는 관계로, 잡아먹는 쪽이 포식자이고 먹이가 되는 쪽이 피식자다",
+      "form": {
+        "condition": "먹고 먹히는 관계에 이름을 붙일 때",
+        "type": "classification",
+        "scope": "개체군 사이의 먹이 관계",
+        "antecedent": {
+          "quantity": "먹는 쪽과 먹히는 쪽",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "포식자와 피식자",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 이름에 자리가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포식과 피식은 먹고 먹히는 관계로, 잡아먹는 쪽이 피식자이고 먹이가 되는 쪽이 포식자다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공생이라고 하면 두 종이 모두 이득을 보는 관계를 뜻한다",
+      "why_wrong": "두 종이 다 이득을 보면 상리공생이고, 한 종만 이득을 보고 다른 종은 영향을 받지 않으면 편리공생이다. 공생은 이 둘을 아우르는 말이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inter-symbiosis"
+    },
+    {
+      "text": "기생도 두 종이 함께 사는 것이니 서로 이득을 나누는 관계다",
+      "why_wrong": "기생에서는 한 종이 상대에게 피해를 주면서 먹이와 서식지를 얻는다. 실새삼이 숙주 식물에서 물과 양분을 빨아들이는 것이 그 예다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inter-parasitism"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "이 작용이 벌어지는 자리다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-ecological-niche",
+      "note": "겹치면 경쟁이 되는 그 자리다"
+    },
+    {
+      "type": "next",
+      "target": "bio-competitive-exclusion-principle",
+      "note": "종간경쟁이 끝까지 갔을 때의 결말이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-intraspecific-interaction",
+      "note": "같은 종 안에서 벌어지는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-3",
+  "pages": [
+    57,
+    59
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

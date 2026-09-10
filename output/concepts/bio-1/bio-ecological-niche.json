@@ -1,0 +1,119 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ecological-niche",
+  "concept_key": "concept:ecological-niche",
+  "registry_status": "new",
+  "term": "생태적 지위",
+  "aliases": [],
+  "notation": {
+    "hanja": "生態的地位",
+    "hanja_gloss": "生 날 생 · 態 모습 태 · 的 과녁 적 · 地 땅 지 · 位 자리 위",
+    "english": "ecological niche"
+  },
+  "definition": "한 개체군이 군집 안에서 차지하는 자리와 역할. 서식 공간, 먹이그물에서의 위치, 다른 생물·환경과의 관계가 함께 정한다.",
+  "relations": [
+    {
+      "id": "rel-niche-what",
+      "text": "생태적 지위는 서식 공간과 먹이그물에서의 위치, 생물·비생물요소와의 관계가 함께 정한다",
+      "form": {
+        "condition": "한 개체군의 지위를 따져 볼 때",
+        "type": "conditional",
+        "scope": "군집 안의 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇으로 정해지는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-niche-overlap",
+      "text": "두 개체군의 생태적 지위가 많이 겹칠수록 같은 자원을 두고 벌이는 경쟁이 세진다",
+      "form": {
+        "condition": "두 개체군이 한 지역에 함께 살 때",
+        "type": "direct",
+        "scope": "군집 안의 두 개체군",
+        "antecedent": {
+          "quantity": "생태적 지위가 겹치는 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "종간경쟁의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 개체군의 생태적 지위가 많이 겹칠수록 같은 자원을 두고 벌이는 경쟁이 약해진다"
+    },
+    {
+      "id": "rel-niche-partition",
+      "text": "서식지·먹이의 종류·활동 시간을 달리해 지위를 어긋나게 하면 경쟁을 피할 수 있다",
+      "form": {
+        "condition": "필요한 자원이 비슷한 개체군이 함께 살 때",
+        "type": "causal",
+        "scope": "군집 안의 두 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "경쟁을 피하는 방법을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생태적 지위란 그 생물이 사는 장소를 가리키는 말이다",
+      "why_wrong": "사는 자리만이 아니라 무엇을 먹는지, 먹이그물의 어디에 놓이는지, 다른 생물·환경과 어떤 관계를 맺는지까지 아우른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-niche-what"
+    },
+    {
+      "text": "생태적 지위가 비슷한 두 종은 함께 살 수 없다",
+      "why_wrong": "서식지나 먹이의 종류, 활동 시간을 달리해 지위를 어긋나게 하면 경쟁을 피하며 함께 살아갈 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-niche-partition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "지위가 놓이는 자리다"
+    },
+    {
+      "type": "next",
+      "target": "bio-interspecific-interaction",
+      "note": "지위가 겹칠 때 벌어지는 일들이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-competitive-exclusion-principle",
+      "note": "지위가 겹친 채 겨룰 때의 결말이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-3",
+  "pages": [
+    57,
+    59
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

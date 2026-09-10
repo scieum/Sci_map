@@ -1,0 +1,110 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-keystone-species",
+  "concept_key": "concept:keystone-species",
+  "registry_status": "new",
+  "term": "핵심종",
+  "aliases": [],
+  "notation": {
+    "hanja": "核心種",
+    "hanja_gloss": "核 씨 핵 · 心 마음 심 · 種 씨 종",
+    "english": "keystone species"
+  },
+  "definition": "개체 수나 점유 면적이 크지 않아도 군집의 짜임을 지탱하는 데 큰 몫을 하는 종. 사라지면 그곳 생물의 구성이 크게 달라진다.",
+  "relations": [
+    {
+      "id": "rel-keysp-small-big",
+      "text": "핵심종은 개체 수나 점유 면적이 적어도 군집의 구조를 유지하는 데 큰 역할을 한다",
+      "form": {
+        "condition": "개체 수와 맡은 역할을 나란히 견줄 때",
+        "type": "conditional",
+        "scope": "군집 안의 종"
+      },
+      "invertible": false,
+      "invertible_reason": "적은 수와 큰 역할이 함께 놓인 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-keysp-change",
+      "text": "비버가 강에 댐을 쌓아 숲을 습지로 바꾸듯, 핵심종은 그곳 생물의 구성을 크게 바꾸어 놓는다",
+      "form": {
+        "condition": "핵심종이 들어오거나 사라질 때",
+        "type": "causal",
+        "scope": "그 종이 든 군집"
+      },
+      "invertible": false,
+      "invertible_reason": "바꾸어 놓는 방향을 밝힌 서술이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-keysp-irreplaceable",
+      "text": "역할을 대신할 생물이 없는 종이 사라지면 먹이사슬과 물질 순환, 에너지흐름이 함께 흔들린다",
+      "form": {
+        "condition": "그 역할을 대신할 종이 없을 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "영향이 번지는 경로를 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵심종은 그 군집에서 개체 수가 가장 많은 종이다",
+      "why_wrong": "수가 적어도 군집의 짜임을 떠받치면 핵심종이다. 수와 면적으로 가리는 쪽은 우점종이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-keysp-small-big"
+    },
+    {
+      "text": "개체 수가 적은 종은 사라져도 생태계에 별 영향이 없다",
+      "why_wrong": "비버처럼 적은 수로 서식 환경을 통째로 바꾸는 종이 있다. 그런 종이 사라지면 그곳 생물의 구성이 함께 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-keysp-change"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "어떤 짜임을 떠받치는지 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-dominant-species",
+      "note": "영향력의 근거가 갈리는 상대다"
+    },
+    {
+      "type": "related",
+      "target": "bio-ecosystem-equilibrium",
+      "note": "이 종이 사라지면 흔들리는 상태다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-2",
+  "pages": [
+    47,
+    52
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

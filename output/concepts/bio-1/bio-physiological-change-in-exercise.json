@@ -1,0 +1,119 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-physiological-change-in-exercise",
+  "concept_key": "concept:physiological-change-in-exercise",
+  "registry_status": "new",
+  "term": "운동 시 신체의 생리적 변화",
+  "aliases": [],
+  "notation": {
+    "hanja": "運動時身體生理的變化",
+    "hanja_gloss": "運 옮길 운 · 動 움직일 동 · 時 때 시 · 身 몸 신 · 體 몸 체 · 生 날 생 · 理 다스릴 리 · 的 과녁 적 · 變 변할 변 · 化 될 화",
+    "english": "physiological change during exercise"
+  },
+  "definition": "운동으로 근육이 에너지를 더 쓰게 되면서 호흡·심장박동·땀·갈증에 나타나는 변화. 기관계가 맞물려 돌아간 결과로 읽는다.",
+  "relations": [
+    {
+      "id": "rel-exer-observed",
+      "text": "격렬한 운동을 하는 동안 호흡이 빨라지고 심장박동 수가 늘며 땀이 나고 갈증을 느낀다",
+      "form": {
+        "condition": "격렬한 운동을 하는 동안",
+        "type": "conditional",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "함께 나타나는 변화를 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-exer-oxygen",
+      "text": "근육 세포가 세포호흡을 더 많이 하면 들여올 산소와 내보낼 이산화 탄소가 함께 늘어난다",
+      "form": {
+        "condition": "운동으로 근육의 에너지 소비가 커질 때",
+        "type": "causal",
+        "scope": "사람의 근육 세포",
+        "antecedent": {
+          "quantity": "근육 세포의 세포호흡량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "필요한 산소와 내보낼 이산화 탄소",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세포호흡이 늘 때 산소 요구량이 줄어든다는 방향은 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "근육 세포가 세포호흡을 더 많이 하면 들여올 산소와 내보낼 이산화 탄소가 함께 줄어든다"
+    },
+    {
+      "id": "rel-exer-spread",
+      "text": "한 기관계에서 시작된 변화는 그 기관계에 머물지 않고 맞물린 다른 기관계의 변화로 번진다",
+      "form": {
+        "condition": "운동처럼 몸 전체가 달라지는 상황일 때",
+        "type": "causal",
+        "scope": "사람의 기관계"
+      },
+      "invertible": false,
+      "invertible_reason": "번지는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "운동할 때 숨이 차는 것은 폐가 지쳐서다",
+      "why_wrong": "근육 세포가 세포호흡을 더 많이 하면서 산소가 더 필요해지고 이산화 탄소도 더 많이 생긴다. 호흡이 빨라지는 것은 그 요구를 따라가는 변화다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-exer-oxygen"
+    },
+    {
+      "text": "운동 중에 나타나는 변화는 근육에만 생긴다",
+      "why_wrong": "호흡이 빨라지고 심장박동 수가 늘며 땀과 갈증이 나타나듯, 변화는 호흡계·순환계·배설계에 걸쳐 함께 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-exer-spread"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "기관계가 맞물려 돌아가는 방식을 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cellular-respiration",
+      "note": "변화의 출발점이 되는 반응이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-homeostasis",
+      "note": "몸이 상태를 되돌리려는 성질과 맞닿는다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-2",
+  "pages": [
+    34,
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,158 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-characteristic-of-organism",
+  "concept_key": "concept:characteristic-of-organism",
+  "registry_status": "new",
+  "term": "생물의 특성",
+  "aliases": [],
+  "notation": {
+    "hanja": "生物特性",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 特 특별할 특 · 性 성품 성",
+    "english": "characteristic of organism"
+  },
+  "definition": "지구에 사는 생물이 종류를 가리지 않고 함께 지니는 성질의 묶음. 세포 구성, 물질대사, 자극에 대한 반응과 항상성, 발생과 성장, 생식과 유전, 적응과 진화 여섯 항목이 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-charorg-six-items",
+      "text": "세포 구성·물질대사·자극에 대한 반응과 항상성·발생과 성장·생식과 유전·적응과 진화가 한 목록에 함께 놓인다",
+      "form": {
+        "condition": "생물이 공통으로 갖는 성질을 목록으로 묶을 때",
+        "type": "classification",
+        "scope": "지구에 사는 모든 생물",
+        "antecedent": {
+          "quantity": "생물의 특성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "여섯 항목",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "목록에 무엇이 드는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-charorg-all-cells",
+      "text": "몸이 세포 하나로 되었든 여럿으로 되었든 생물이라면 예외 없이 세포로 이루어져 있다",
+      "form": {
+        "condition": "어떤 대상이 생물인지 가릴 때",
+        "type": "conditional",
+        "scope": "단세포생물과 다세포생물 모두"
+      },
+      "invertible": false,
+      "invertible_reason": "모든 생물이 갖춘 조건을 밝힌 것이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-charorg-partial-not-enough",
+      "text": "비생물도 생물의 특성 가운데 일부를 보일 수 있어 한두 가지만으로는 생물이라 하지 못한다",
+      "form": {
+        "condition": "특성 가운데 일부만 관찰될 때",
+        "type": "conditional",
+        "scope": "로봇·인형·모형처럼 사람이 만든 물체"
+      },
+      "invertible": false,
+      "invertible_reason": "판정의 한계를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-charorg-structure-function",
+      "text": "생물의 특성은 핵산·세포처럼 짜임을 보는 쪽과 호흡·번식처럼 하는 일을 보는 쪽으로 갈라 견줄 수 있다",
+      "form": {
+        "condition": "특성을 짜임 쪽과 하는 일 쪽으로 나눌 때",
+        "type": "classification",
+        "scope": "생물과 비생물을 견주는 자리",
+        "antecedent": {
+          "quantity": "생물의 특성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "구조적 특성과 기능적 특성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "스스로 움직이고 자극에 반응하면 생물이다",
+      "why_wrong": "서빙 로봇과 공룡 모형도 움직이고 반응한다. 움직임과 반응은 여섯 항목 가운데 하나일 뿐이어서, 세포로 이루어졌는지와 물질대사를 하는지까지 보아야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-charorg-partial-not-enough"
+    },
+    {
+      "text": "생물의 특성은 사람이나 개구리처럼 몸집이 큰 생물에만 해당한다",
+      "why_wrong": "세포 하나로 사는 대장균도 물질대사를 하고 자손을 만들며 환경에 적응한다. 몸집의 크기는 이 목록과 상관이 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-charorg-all-cells"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-distinction-between-living-and-nonliving",
+      "note": "이 목록을 잣대로 삼아 생물이 아닌 것을 가려낸다"
+    },
+    {
+      "type": "next",
+      "target": "bio-metabolism",
+      "note": "목록의 한 항목을 따로 펼친 것이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-homeostasis",
+      "note": "자극에 대한 반응과 짝을 이루는 항목이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-development-and-growth",
+      "note": "한 개체가 만들어지고 자라는 쪽 항목이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-reproduction-and-heredity",
+      "note": "자손으로 이어지는 쪽 항목이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-adaptation-and-evolution",
+      "note": "여러 세대에 걸쳐 쌓이는 쪽 항목이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-01"
+  ],
+  "topic_id": "bio-1-1-1",
+  "pages": [
+    16,
+    17,
+    21,
+    61
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

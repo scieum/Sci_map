@@ -1,0 +1,142 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ecosystem-equilibrium",
+  "concept_key": "concept:ecosystem-equilibrium",
+  "registry_status": "new",
+  "term": "생태계평형",
+  "aliases": [
+    "생태계 평형"
+  ],
+  "notation": {
+    "hanja": "生態系平衡",
+    "hanja_gloss": "生 날 생 · 態 모습 태 · 系 이어맬 계 · 平 평평할 평 · 衡 저울대 형",
+    "english": "ecosystem equilibrium"
+  },
+  "definition": "생물군집의 짜임과 물질 순환, 에너지흐름이 크게 흔들리지 않고 이어지는 상태. 먹이 관계와 비생물요소가 함께 작용해 유지된다.",
+  "relations": [
+    {
+      "id": "rel-eqm-not-frozen",
+      "text": "생태계평형은 개체 수가 한 값에 멈춘 상태가 아니라 흔들리더라도 원래 범위로 되돌아오는 상태다",
+      "form": {
+        "condition": "개체 수가 오르내릴 때",
+        "type": "conditional",
+        "scope": "안정한 생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "상태의 성격을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eqm-complexity",
+      "text": "먹이그물이 복잡하고 안정할수록 일시적으로 평형이 깨져도 원래 상태로 되돌아가기 쉽다",
+      "form": {
+        "condition": "생태계마다 먹이그물의 복잡한 정도를 견줄 때",
+        "type": "direct",
+        "scope": "생태계",
+        "antecedent": {
+          "quantity": "먹이그물의 복잡한 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평형을 되찾는 힘",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 움직이므로 반대로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "먹이그물이 복잡하고 안정할수록 일시적으로 평형이 깨졌을 때 원래 상태로 되돌아가기 어렵다"
+    },
+    {
+      "id": "rel-eqm-disturb",
+      "text": "기후 변화, 외래종의 유입, 남획 같은 외부 요인이 작용하면 생태계평형이 깨질 수 있다",
+      "form": {
+        "condition": "밖에서 온 요인이 작용할 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "깨뜨리는 요인을 든 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eqm-limit",
+      "text": "생태계의 조절 능력의 한계를 넘는 영향이 들어오면 원래의 평형으로 되돌아가기 어렵다",
+      "form": {
+        "condition": "교란의 크기가 조절 능력의 한계를 넘었을 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 넘었을 때를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생태계평형이란 생물의 개체 수가 조금도 변하지 않는 상태다",
+      "why_wrong": "개체 수는 늘 오르내린다. 평형은 그 오르내림이 원래 범위로 되돌아오는 상태를 가리킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eqm-not-frozen"
+    },
+    {
+      "text": "생태계는 어떤 충격을 받아도 시간이 지나면 스스로 회복한다",
+      "why_wrong": "조절 능력의 한계를 넘는 영향이 들어오면 되돌아가지 못하고, 그것이 생물다양성의 감소로 이어질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eqm-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-food-chain",
+      "note": "안정을 떠받치는 얼개다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-energy-flow-in-ecosystem",
+      "note": "안정하게 이어져야 할 흐름이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-recovery-of-ecosystem-equilibrium",
+      "note": "깨진 평형이 되돌아오는 길을 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-keystone-species",
+      "note": "적은 수로도 평형을 좌우하는 종이 있다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-3",
+  "pages": [
+    47,
+    48,
+    49
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

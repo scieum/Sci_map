@@ -1,0 +1,122 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-atp",
+  "concept_key": "concept:atp",
+  "registry_status": "new",
+  "term": "ATP",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 adenosine triphosphate 의 머리글자를 딴 말이라 한자어 표기가 없다.",
+    "english": "adenosine triphosphate",
+    "symbol_display": "ATP",
+    "symbol_plain": "ATP"
+  },
+  "definition": "아데닌이 붙은 라이보스 당에 인산기 세 개가 이어진 화합물. 세포호흡으로 얻은 에너지를 담아 두었다가 생명활동이 필요할 때 내주는 에너지원이다.",
+  "relations": [
+    {
+      "id": "rel-batp-structure",
+      "text": "ATP는 아데닌이 결합한 라이보스 당에 인산기 세 개가 차례로 이어진 짜임이다",
+      "form": {
+        "condition": "ATP의 짜임을 물을 때",
+        "type": "conditional",
+        "scope": "ATP 분자"
+      },
+      "invertible": false,
+      "invertible_reason": "짜임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-batp-carrier",
+      "text": "세포호흡으로 얻은 에너지는 곧바로 쓰이지 않고 ATP에 담겼다가 필요한 자리에서 풀린다",
+      "form": {
+        "condition": "세포호흡으로 에너지를 얻은 뒤",
+        "type": "causal",
+        "scope": "세포 안의 에너지 이용"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지가 거쳐 가는 경로를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-batp-forms",
+      "text": "ATP에 담긴 에너지는 화학 에너지·기계적 에너지·열에너지·소리 에너지로 바뀌어 쓰인다",
+      "form": {
+        "condition": "ATP가 쪼개져 에너지가 쓰일 때",
+        "type": "classification",
+        "scope": "사람의 생명활동",
+        "antecedent": {
+          "quantity": "ATP에 담긴 에너지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "전환된 에너지의 형태",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈라지는 형태를 늘어놓은 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "ATP는 세포가 에너지를 얻으려고 쪼개는 영양소다",
+      "why_wrong": "영양소는 포도당처럼 음식물에서 온 물질이다. ATP는 그 영양소를 쪼개 얻은 에너지를 담아 두는 물질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-batp-carrier"
+    },
+    {
+      "text": "ATP에 저장된 에너지는 근육 운동 같은 기계적 에너지로만 바뀐다",
+      "why_wrong": "물질을 합성할 때는 화학 에너지로, 체온을 지킬 때는 열에너지로, 소리를 낼 때는 소리 에너지로 바뀐다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-batp-forms"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cellular-respiration",
+      "note": "이 물질이 만들어지는 자리다"
+    },
+    {
+      "type": "next",
+      "target": "bio-atp-adp-conversion",
+      "note": "이 물질이 오가는 두 방향을 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-energy-conversion-in-metabolism",
+      "note": "담긴 에너지가 어떤 형태로 갈라지는지 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-03"
+  ],
+  "topic_id": "bio-1-3-2",
+  "pages": [
+    27,
+    28,
+    33,
+    61
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

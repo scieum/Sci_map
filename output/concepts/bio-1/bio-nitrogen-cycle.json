@@ -1,0 +1,141 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-nitrogen-cycle",
+  "concept_key": "concept:nitrogen-cycle",
+  "registry_status": "new",
+  "term": "질소순환",
+  "aliases": [
+    "질소 순환"
+  ],
+  "notation": {
+    "hanja": "窒素循環",
+    "hanja_gloss": "窒 막을 질 · 素 본디 소 · 循 돌 순 · 環 고리 환",
+    "english": "nitrogen cycle"
+  },
+  "definition": "대기의 질소 기체가 세균의 작용을 거쳐 식물이 쓸 수 있는 이온으로 바뀌었다가 다시 질소 기체로 돌아가는 되풀이.",
+  "relations": [
+    {
+      "id": "rel-nitro-why",
+      "text": "질소 기체는 매우 안정해 대기에 넉넉히 있는데도 대부분의 생물이 그대로 이용하지 못한다",
+      "form": {
+        "condition": "생물이 질소를 얻으려 할 때",
+        "type": "causal",
+        "scope": "대기 중의 질소 기체"
+      },
+      "invertible": false,
+      "invertible_reason": "이용하지 못하는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nitro-bacteria",
+      "text": "질소고정 세균이 질소 기체를 암모늄 이온으로 바꾸고, 질산화세균이 그 암모늄 이온을 질산 이온으로 바꾼다",
+      "form": {
+        "condition": "토양과 뿌리에서 세균이 작용할 때",
+        "type": "classification",
+        "scope": "질소순환",
+        "antecedent": {
+          "quantity": "세균의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "바꾸어 놓는 물질",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세균마다 맡은 전환이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질산화세균이 질소 기체를 암모늄 이온으로 바꾸고, 질소고정 세균이 그 암모늄 이온을 질산 이온으로 바꾼다"
+    },
+    {
+      "id": "rel-nitro-plant",
+      "text": "암모늄 이온과 질산 이온은 식물의 뿌리로 흡수되어 단백질과 핵산을 만드는 데 쓰인다",
+      "form": {
+        "condition": "토양에 이 이온들이 있을 때",
+        "type": "causal",
+        "scope": "식물"
+      },
+      "invertible": false,
+      "invertible_reason": "흡수 뒤 쓰이는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nitro-denitrify",
+      "text": "질산 이온은 탈질산화세균의 작용으로 질소 기체가 되어 대기로 돌아간다",
+      "form": {
+        "condition": "탈질산화세균이 작용할 때",
+        "type": "causal",
+        "scope": "질소순환"
+      },
+      "invertible": false,
+      "invertible_reason": "되돌아가는 경로를 밝힌 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공기의 대부분이 질소이니 식물은 잎으로 질소를 받아들이면 된다",
+      "why_wrong": "질소 기체는 매우 안정해 식물이 그대로 쓸 수 없다. 세균이 암모늄 이온이나 질산 이온으로 바꾸어 준 것을 뿌리로 흡수한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nitro-why"
+    },
+    {
+      "text": "질소고정 세균과 탈질산화세균은 하는 일이 같다",
+      "why_wrong": "질소고정 세균은 질소 기체를 생물이 쓸 형태로 바꾸고, 탈질산화세균은 질산 이온을 질소 기체로 되돌린다. 방향이 정반대다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nitro-denitrify"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-food-chain",
+      "note": "질소 화합물이 옮겨 다니는 통로다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-decomposer",
+      "note": "질소를 토양으로 되돌리는 역할이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-carbon-cycle",
+      "note": "같은 방식으로 도는 다른 원소를 견준다"
+    },
+    {
+      "type": "related",
+      "target": "bio-producer",
+      "note": "흡수한 이온으로 물질을 만드는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-2",
+  "pages": [
+    45,
+    49
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

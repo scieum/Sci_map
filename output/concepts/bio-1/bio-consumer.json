@@ -1,0 +1,134 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-consumer",
+  "concept_key": "concept:consumer",
+  "registry_status": "new",
+  "term": "소비자",
+  "aliases": [],
+  "notation": {
+    "hanja": "消費者",
+    "hanja_gloss": "消 사라질 소 · 費 쓸 비 · 者 놈 자",
+    "english": "consumer"
+  },
+  "definition": "스스로 유기물을 만들지 못해 다른 생물을 먹어 유기물을 얻는 생물. 무엇을 먹느냐에 따라 1차 소비자와 2차 소비자로 갈린다.",
+  "relations": [
+    {
+      "id": "rel-cons-depend",
+      "text": "소비자는 유기물을 스스로 만들지 못해 결국 생산자가 만든 유기물에 기대어 살아간다",
+      "form": {
+        "condition": "유기물이 어디서 왔는지 거슬러 따져 볼 때",
+        "type": "causal",
+        "scope": "생태계의 소비자"
+      },
+      "invertible": false,
+      "invertible_reason": "기대는 방향이 한쪽뿐이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cons-order",
+      "text": "생산자를 먹는 초식동물이 1차 소비자이고, 그 1차 소비자를 먹는 육식동물이 2차 소비자다",
+      "form": {
+        "condition": "무엇을 먹는지로 차례를 매길 때",
+        "type": "classification",
+        "scope": "먹이사슬",
+        "antecedent": {
+          "quantity": "먹는 대상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "소비자의 차례",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "먹는 대상과 차례가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생산자를 먹는 초식동물이 2차 소비자이고, 그 초식동물을 먹는 육식동물이 1차 소비자다"
+    },
+    {
+      "id": "rel-cons-not-decomposer",
+      "text": "소비자는 유기물을 섭취해 제 몸에 쓰고, 분해자는 사체와 배설물의 유기물을 무기물로 되돌린다",
+      "form": {
+        "condition": "소비자와 분해자를 갈라 볼 때",
+        "type": "classification",
+        "scope": "생태계의 생물요소",
+        "antecedent": {
+          "quantity": "소비자와 분해자",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "유기물을 다루는 방식",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 역할에 하는 일이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소비자는 사체와 배설물의 유기물을 무기물로 되돌리고, 분해자는 유기물을 섭취해 제 몸에 쓴다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "육식동물은 식물을 먹지 않으니 생산자와는 상관이 없다",
+      "why_wrong": "육식동물이 먹는 초식동물이 생산자가 만든 유기물로 자란다. 거슬러 올라가면 어느 소비자든 생산자에 기댄다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cons-depend"
+    },
+    {
+      "text": "소비자와 분해자는 둘 다 남이 만든 유기물에 기대니 같은 갈래다",
+      "why_wrong": "소비자는 먹은 유기물로 제 몸을 이루고, 분해자는 유기물을 무기물로 되돌려 비생물환경에 내놓는다. 물질이 가는 방향이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cons-not-decomposer"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-biotic-factor",
+      "note": "역할로 가른 세 갈래 가운데 하나다"
+    },
+    {
+      "type": "next",
+      "target": "bio-food-chain",
+      "note": "먹고 먹히는 줄에서 가운데 자리다"
+    },
+    {
+      "type": "related",
+      "target": "bio-producer",
+      "note": "유기물이 처음 만들어지는 쪽이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-decomposer",
+      "note": "유기물이 되돌아가는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-1",
+  "pages": [
+    42,
+    43,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

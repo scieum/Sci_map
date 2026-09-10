@@ -1,0 +1,139 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-formation-and-excretion-of-waste",
+  "concept_key": "concept:formation-and-excretion-of-waste",
+  "registry_status": "new",
+  "term": "노폐물의 생성과 배설",
+  "aliases": [],
+  "notation": {
+    "hanja": "老廢物生成排泄",
+    "hanja_gloss": "老 늙을 로 · 廢 폐할 폐 · 物 물건 물 · 生 날 생 · 成 이룰 성 · 排 밀칠 배 · 泄 샐 설",
+    "english": "formation and excretion of metabolic waste"
+  },
+  "definition": "세포호흡이 남긴 이산화 탄소·물·암모니아가 생겨나 몸 밖으로 나가기까지의 경로. 노폐물의 종류에 따라 나가는 길이 갈린다.",
+  "relations": [
+    {
+      "id": "rel-waste-common",
+      "text": "어떤 영양소가 세포호흡에 쓰이든 이산화 탄소와 물은 공통으로 생긴다",
+      "form": {
+        "condition": "영양소가 세포호흡에 쓰일 때",
+        "type": "conditional",
+        "scope": "탄수화물·지방·단백질"
+      },
+      "invertible": false,
+      "invertible_reason": "공통으로 생기는 것을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-waste-ammonia",
+      "text": "암모니아는 단백질이 세포호흡에 쓰일 때만 생기고 탄수화물이나 지방에서는 생기지 않는다",
+      "form": {
+        "condition": "세포호흡에 쓰인 영양소의 종류를 가릴 때",
+        "type": "conditional",
+        "scope": "사람의 세포호흡"
+      },
+      "invertible": true,
+      "invertible_reason": "영양소의 종류에 생성 여부가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "암모니아는 탄수화물이나 지방이 세포호흡에 쓰일 때 생기고 단백질에서는 생기지 않는다"
+    },
+    {
+      "id": "rel-waste-urea",
+      "text": "암모니아는 독성이 강해 간으로 옮겨져 독성이 약한 요소로 바뀐 뒤 콩팥에서 오줌으로 나간다",
+      "form": {
+        "condition": "암모니아가 몸에 쌓이면 해로울 때",
+        "type": "causal",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "처리되는 차례를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-waste-routes",
+      "text": "이산화 탄소는 호흡계로만 나가고, 물은 호흡계와 배설계 양쪽으로 나간다",
+      "form": {
+        "condition": "노폐물이 몸을 떠나는 길을 가를 때",
+        "type": "classification",
+        "scope": "사람이 내보내는 노폐물",
+        "antecedent": {
+          "quantity": "노폐물의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "나가는 길",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "물질마다 길을 짝지은 서술이라 한 방향으로 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무엇을 먹든 세포호흡을 하면 암모니아가 생긴다",
+      "why_wrong": "암모니아는 단백질이 세포호흡에 쓰일 때 생긴다. 탄수화물이나 지방만 쓰였다면 이산화 탄소와 물만 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-waste-ammonia"
+    },
+    {
+      "text": "암모니아는 생긴 그대로 오줌에 실려 나간다",
+      "why_wrong": "암모니아는 독성이 강해 몸에 쌓이면 해롭다. 간에서 독성이 약한 요소로 바뀐 뒤에야 콩팥에서 걸러진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-waste-urea"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cellular-respiration",
+      "note": "노폐물이 생겨나는 반응이다"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-excretory-system",
+      "note": "노폐물이 나가는 길을 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "여러 기관계가 나누어 맡는 일이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-respiratory-system",
+      "note": "이산화 탄소가 나가는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-1",
+  "pages": [
+    38,
+    61
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

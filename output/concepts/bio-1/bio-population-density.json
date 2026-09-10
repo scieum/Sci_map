@@ -1,0 +1,119 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-population-density",
+  "concept_key": "concept:population-density",
+  "registry_status": "new",
+  "term": "개체군의 밀도",
+  "aliases": [],
+  "notation": {
+    "hanja": "個體群密度",
+    "hanja_gloss": "個 낱 개 · 體 몸 체 · 群 무리 군 · 密 빽빽할 밀 · 度 법도 도",
+    "english": "population density"
+  },
+  "definition": "일정 지역에 사는 개체의 수를 단위 면적이나 단위 부피로 나누어 나타낸 값. 출생과 이입으로 커지고 사망과 이출로 작아진다.",
+  "relations": [
+    {
+      "id": "rel-popden-what",
+      "text": "개체군의 밀도는 개체 수를 그대로 센 값이 아니라 단위 면적이나 단위 부피당 개체 수다",
+      "form": {
+        "condition": "넓이가 다른 지역을 서로 견줄 때",
+        "type": "conditional",
+        "scope": "개체군의 밀도"
+      },
+      "invertible": false,
+      "invertible_reason": "값이 무엇을 재는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-popden-up-down",
+      "text": "출생과 이입은 개체군의 밀도를 높이고, 사망과 이출은 개체군의 밀도를 낮춘다",
+      "form": {
+        "condition": "개체가 태어나고 죽거나 드나들 때",
+        "type": "classification",
+        "scope": "개체군의 밀도",
+        "antecedent": {
+          "quantity": "개체의 출입과 생사",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "밀도가 움직이는 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "네 요인에 방향이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "출생과 이입은 개체군의 밀도를 낮추고, 사망과 이출은 개체군의 밀도를 높인다"
+    },
+    {
+      "id": "rel-popden-env",
+      "text": "먹이의 양·기후·질병·천적 같은 환경요인도 개체군의 밀도를 바꾸어 놓는다",
+      "form": {
+        "condition": "서식지의 환경 조건이 달라질 때",
+        "type": "causal",
+        "scope": "자연 상태의 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "밀도를 움직이는 요인을 든 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "개체 수가 많으면 밀도도 반드시 높다",
+      "why_wrong": "밀도는 넓이로 나눈 값이다. 아주 넓은 지역에 흩어져 살면 개체 수가 많아도 밀도는 낮을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-popden-what"
+    },
+    {
+      "text": "밀도를 바꾸는 것은 태어나고 죽는 일뿐이다",
+      "why_wrong": "다른 지역에서 들어오는 이입과 빠져나가는 이출도 밀도를 바꾸고, 먹이·기후·질병·천적 같은 환경요인도 함께 작용한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-popden-up-down"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-population",
+      "note": "무엇의 밀도인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-population-growth-curve",
+      "note": "밀도가 시간에 따라 달라지는 모습이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-environmental-resistance",
+      "note": "밀도가 높아질수록 세지는 것들이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-1",
+  "pages": [
+    50,
+    59
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

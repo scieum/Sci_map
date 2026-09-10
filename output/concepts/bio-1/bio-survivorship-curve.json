@@ -1,0 +1,134 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-survivorship-curve",
+  "concept_key": "concept:survivorship-curve",
+  "registry_status": "new",
+  "term": "생존곡선",
+  "aliases": [],
+  "notation": {
+    "hanja": "生存曲線",
+    "hanja_gloss": "生 날 생 · 存 있을 존 · 曲 굽을 곡 · 線 줄 선",
+    "english": "survivorship curve"
+  },
+  "definition": "같은 시기에 태어난 개체들이 시간이 흐르는 동안 얼마나 남는지를 그린 그래프. 종의 성질에 따라 Ⅰ형·Ⅱ형·Ⅲ형으로 갈린다.",
+  "relations": [
+    {
+      "id": "rel-survc-type1",
+      "text": "Ⅰ형에 드는 종은 어린 개체가 부모의 돌봄을 받아 초기 사망률이 낮으며 오래 살고 자손을 적게 낳는다",
+      "form": {
+        "condition": "Ⅰ형 곡선을 보이는 종일 때",
+        "type": "conditional",
+        "scope": "사람·코끼리 같은 대형 포유류"
+      },
+      "invertible": false,
+      "invertible_reason": "한 유형의 특징을 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-survc-type2",
+      "text": "Ⅱ형에 드는 종은 나이대에 관계없이 사망률이 대체로 일정하다",
+      "form": {
+        "condition": "Ⅱ형 곡선을 보이는 종일 때",
+        "type": "conditional",
+        "scope": "다람쥐 같은 설치류와 참새 같은 조류"
+      },
+      "invertible": false,
+      "invertible_reason": "한 유형의 특징을 밝힌 서술이라 뒤집을 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-survc-type3",
+      "text": "Ⅲ형에 드는 종은 자손을 아주 많이 낳지만 어린 개체의 사망률이 매우 높다",
+      "form": {
+        "condition": "Ⅲ형 곡선을 보이는 종일 때",
+        "type": "conditional",
+        "scope": "고등어·굴 같은 어패류"
+      },
+      "invertible": false,
+      "invertible_reason": "한 유형의 특징을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-survc-tradeoff",
+      "text": "자손을 적게 낳는 종일수록 초기 사망률이 낮고, 많이 낳는 종일수록 초기 사망률이 높은 쪽으로 갈린다",
+      "form": {
+        "condition": "종마다 자손 수와 초기 사망률을 나란히 견줄 때",
+        "type": "inverse",
+        "scope": "Ⅰ형과 Ⅲ형 생존곡선을 보이는 종",
+        "antecedent": {
+          "quantity": "자손의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "어린 개체의 생존률",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 반대 방향으로 움직이므로 같은 방향으로 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자손을 적게 낳는 종일수록 초기 사망률이 높고, 많이 낳는 종일수록 초기 사망률이 낮은 쪽으로 갈린다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "Ⅲ형 생존곡선을 보이는 종은 자손을 적게 낳는다",
+      "why_wrong": "Ⅲ형은 자손을 아주 많이 낳되 어린 개체가 많이 죽는 유형이다. 자손을 적게 낳는 쪽은 Ⅰ형이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-survc-type3"
+    },
+    {
+      "text": "생존곡선은 그 종이 몇 살까지 사는지만 알려 준다",
+      "why_wrong": "자손을 몇이나 낳고 어린 시기를 어떻게 넘기는지, 곧 그 종의 생존 전략을 보여 준다. 멸종 위기종의 보전 전략을 세울 때도 쓰인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-survc-tradeoff"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-population",
+      "note": "무엇을 관찰한 그래프인지 먼저 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-growth-curve",
+      "note": "개체군을 읽는 또 하나의 그래프다"
+    },
+    {
+      "type": "related",
+      "target": "bio-population-density",
+      "note": "개체군의 크기를 좌우하는 값과 맞닿는다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-07"
+  ],
+  "topic_id": "bio-1-6-1",
+  "pages": [
+    51,
+    59
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

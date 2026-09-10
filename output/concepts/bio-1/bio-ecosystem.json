@@ -1,0 +1,124 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ecosystem",
+  "concept_key": "concept:ecosystem",
+  "registry_status": "new",
+  "term": "생태계",
+  "aliases": [],
+  "notation": {
+    "hanja": "生態系",
+    "hanja_gloss": "生 날 생 · 態 모습 태 · 系 이어맬 계",
+    "english": "ecosystem"
+  },
+  "definition": "한 지역의 생물요소와 비생물요소가 서로 영향을 주고받으며 물질 순환과 에너지흐름을 이루어 내는 하나의 시스템.",
+  "relations": [
+    {
+      "id": "rel-ecosys-two-parts",
+      "text": "생태계는 살아 있는 생물요소와 빛·온도·물 같은 비생물요소가 함께 이룬다",
+      "form": {
+        "condition": "생태계의 구성 요소를 가를 때",
+        "type": "classification",
+        "scope": "생태계",
+        "antecedent": {
+          "quantity": "생태계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생물요소와 비생물요소",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "구성 요소를 나눈 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ecosys-interaction",
+      "text": "두 요소가 주고받는 작용 덕분에 생태계에서 물질 순환과 에너지흐름이 끊임없이 일어난다",
+      "form": {
+        "condition": "생물요소와 비생물요소가 맞닿아 있을 때",
+        "type": "causal",
+        "scope": "생태계"
+      },
+      "invertible": false,
+      "invertible_reason": "상호작용이 낳는 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ecosys-vs-community",
+      "text": "군집만으로는 생태계가 되지 않고 거기에 비생물환경이 더해져야 생태계가 된다",
+      "form": {
+        "condition": "군집과 생태계를 갈라 볼 때",
+        "type": "conditional",
+        "scope": "생명 시스템의 구성 단계"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생태계란 한 지역에 사는 생물을 모두 합쳐 부르는 말이다",
+      "why_wrong": "생물만 모은 것은 군집이다. 빛·온도·물·공기·토양 같은 비생물요소까지 아울러야 생태계가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecosys-vs-community"
+    },
+    {
+      "text": "생태계에서 비생물요소는 배경일 뿐 생물과 주고받는 것이 없다",
+      "why_wrong": "빛과 온도가 어떤 생물이 살지를 좌우하고, 생물이 내놓은 물질이 다시 대기와 토양을 바꾼다. 두 요소는 서로 영향을 주고받는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecosys-interaction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-community",
+      "note": "생태계의 생물 쪽을 이루는 칸이다"
+    },
+    {
+      "type": "next",
+      "target": "bio-biotic-factor",
+      "note": "살아 있는 쪽을 갈라 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-abiotic-factor",
+      "note": "환경 쪽을 갈라 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-living-system",
+      "note": "이 단계도 그 자체로 하나의 시스템이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-1",
+  "pages": [
+    23,
+    42,
+    61
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

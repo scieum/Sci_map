@@ -1,0 +1,148 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-excretory-system",
+  "concept_key": "concept:excretory-system",
+  "registry_status": "new",
+  "term": "배설계",
+  "aliases": [],
+  "notation": {
+    "hanja": "排泄系",
+    "hanja_gloss": "排 밀칠 배 · 泄 샐 설 · 系 이어맬 계",
+    "english": "excretory system"
+  },
+  "definition": "세포호흡이 남긴 질소 노폐물과 몸에 남아도는 물을 오줌으로 만들어 몸 밖으로 내보내는 기관계. 콩팥이 그 중심에 놓인다.",
+  "relations": [
+    {
+      "id": "rel-excsys-what",
+      "text": "배설계가 몸 밖으로 내보내는 것은 세포호흡이 남긴 질소 노폐물과 몸에 남아도는 물이다",
+      "form": {
+        "condition": "배설계가 무엇을 내보내는지 물을 때",
+        "type": "conditional",
+        "scope": "사람의 배설계"
+      },
+      "invertible": false,
+      "invertible_reason": "맡은 물질을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-excsys-kidney",
+      "text": "혈액을 타고 콩팥에 이른 요소는 걸러져 오줌에 실려 몸 밖으로 나간다",
+      "form": {
+        "condition": "요소를 실은 혈액이 콩팥을 지날 때",
+        "type": "conditional",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "나가는 길을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-excsys-blood",
+      "text": "콩팥을 지나고 난 혈액은 지나기 전보다 단위 부피당 요소의 양이 적다",
+      "form": {
+        "condition": "혈액이 콩팥을 한 번 지날 때",
+        "type": "conditional",
+        "scope": "건강한 사람의 혈액",
+        "antecedent": {
+          "quantity": "콩팥을 지나기 전후",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "단위 부피당 요소의 양",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거르는 기관을 지난 뒤 요소가 늘어난다는 방향은 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "콩팥을 지나고 난 혈액은 지나기 전보다 단위 부피당 요소의 양이 많다"
+    },
+    {
+      "id": "rel-excsys-water-two-ways",
+      "text": "물은 배설계로는 오줌으로, 호흡계로는 날숨으로 나가 두 길을 함께 쓴다",
+      "form": {
+        "condition": "물이 몸을 떠나는 길을 셀 때",
+        "type": "classification",
+        "scope": "사람의 몸에서 나가는 물",
+        "antecedent": {
+          "quantity": "물",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "배설계와 호흡계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 길을 모두 쓰므로 한쪽으로 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이산화 탄소도 노폐물이니 배설계로 나간다",
+      "why_wrong": "이산화 탄소는 혈액을 타고 폐로 가 날숨으로 나간다. 배설계가 맡는 것은 질소 노폐물과 여분의 물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-excsys-what"
+    },
+    {
+      "text": "콩팥을 지나고 난 혈액에는 요소가 더 많다",
+      "why_wrong": "콩팥이 요소를 걸러 오줌으로 내보내므로, 지나고 난 혈액 쪽이 단위 부피당 요소가 더 적다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-excsys-blood"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-organ-system",
+      "note": "기관계가 무엇인지 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-formation-and-excretion-of-waste",
+      "note": "무엇이 어디서 생겨 이리로 오는지 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-integrated-action-of-organ-system",
+      "note": "다른 기관계와 어떻게 맞물리는지 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-circulatory-system",
+      "note": "노폐물을 실어다 주는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-04"
+  ],
+  "topic_id": "bio-1-4-1",
+  "pages": [
+    38,
+    40,
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

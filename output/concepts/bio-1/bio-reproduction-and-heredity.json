@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-reproduction-and-heredity",
+  "concept_key": "concept:reproduction-and-heredity",
+  "registry_status": "new",
+  "term": "생식과 유전",
+  "aliases": [],
+  "notation": {
+    "hanja": "生殖遺傳",
+    "hanja_gloss": "生 날 생 · 殖 불릴 식 · 遺 남길 유 · 傳 전할 전",
+    "english": "reproduction and heredity"
+  },
+  "definition": "자기와 닮은 자손을 만들어 내는 현상이 생식이고, 그 과정을 타고 부모의 형질이 자손에게 건너가는 현상이 유전이다. 두 현상은 함께 일어나되 가리키는 것이 다르다.",
+  "relations": [
+    {
+      "id": "rel-reprher-two-things",
+      "text": "자손을 만드는 일 자체를 가리키는 말이 생식이고, 그때 형질이 건너가는 일을 가리키는 말이 유전이다",
+      "form": {
+        "condition": "두 현상을 갈라 볼 때",
+        "type": "classification",
+        "scope": "생식을 하는 생물",
+        "antecedent": {
+          "quantity": "생식 과정에서 일어나는 일",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생식과 유전",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 일이 두 이름에 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "형질이 건너가는 일을 가리키는 말이 생식이고, 자손을 만드는 일 자체를 가리키는 말이 유전이다"
+    },
+    {
+      "id": "rel-reprher-asexual-sexual",
+      "text": "히드라의 출아법처럼 암수 없이 자손을 만드는 무성생식과 펭귄처럼 암수가 관여하는 유성생식으로 갈린다",
+      "form": {
+        "condition": "암수가 관여하는지로 가를 때",
+        "type": "classification",
+        "scope": "생식을 하는 생물",
+        "antecedent": {
+          "quantity": "생식 방법",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "무성생식과 유성생식",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 나눈 서술이라 맞바꿀 방향이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-reprher-resemble",
+      "text": "자손이 부모를 닮는 까닭은 생식 과정을 타고 부모의 형질이 자손에게 전달되기 때문이다",
+      "form": {
+        "condition": "자손이 왜 부모를 닮는지 물을 때",
+        "type": "causal",
+        "scope": "생식으로 태어난 자손"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무성생식으로 태어난 자손은 부모의 형질을 물려받지 않는다",
+      "why_wrong": "히드라의 출아법은 모체의 세포 일부가 갈라져 나와 자란 것이다. 암수가 없을 뿐 형질은 그대로 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-reprher-asexual-sexual"
+    },
+    {
+      "text": "생식과 유전은 결국 같은 말이다",
+      "why_wrong": "생식은 자손을 만드는 현상을 가리키고, 유전은 그 과정에서 형질이 전해지는 현상을 가리킨다. 함께 일어나지만 같은 말이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-reprher-two-things"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-characteristic-of-organism",
+      "note": "이 현상이 놓인 목록을 먼저 본다"
+    },
+    {
+      "type": "next",
+      "target": "bio-adaptation-and-evolution",
+      "note": "형질이 자손에게 건너가야 적응이 쌓인다"
+    },
+    {
+      "type": "related",
+      "target": "bio-development-and-growth",
+      "note": "생식으로 생긴 수정란이 개체가 되는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-01"
+  ],
+  "topic_id": "bio-1-1-1",
+  "pages": [
+    17,
+    21,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

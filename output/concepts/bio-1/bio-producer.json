@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅰ. 생명 시스템의 구성",
+  "unit_id": "bio-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-producer",
+  "concept_key": "concept:producer",
+  "registry_status": "new",
+  "term": "생산자",
+  "aliases": [],
+  "notation": {
+    "hanja": "生産者",
+    "hanja_gloss": "生 날 생 · 産 낳을 산 · 者 놈 자",
+    "english": "producer"
+  },
+  "definition": "빛에너지를 써서 무기물로부터 유기물을 만들어 내는 생물. 식물과 조류가 여기 들며 먹이사슬의 첫 영양단계에 놓인다.",
+  "relations": [
+    {
+      "id": "rel-prod-synthesis",
+      "text": "생산자는 다른 생물에 기대지 않고 무기물에서 유기물을 스스로 만들어 낸다",
+      "form": {
+        "condition": "유기물을 어디서 얻는지 물을 때",
+        "type": "conditional",
+        "scope": "식물·조류 같은 광합성 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "유기물을 얻는 통로를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-prod-energy",
+      "text": "생산자가 광합성을 하는 동안 빛에너지가 화학 에너지로 바뀌어 유기물 안에 담긴다",
+      "form": {
+        "condition": "생산자가 광합성을 할 때",
+        "type": "causal",
+        "scope": "생태계로 에너지가 들어오는 길",
+        "antecedent": {
+          "quantity": "빛에너지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "유기물 속 화학 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전환의 방향이 한쪽으로 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생산자가 광합성을 하는 동안 유기물 속 화학 에너지가 빛에너지로 바뀌어 밖으로 나간다"
+    },
+    {
+      "id": "rel-prod-first",
+      "text": "생태계로 들어오는 에너지는 생산자를 거쳐야 다른 생물에게 갈 수 있어 생산자가 첫 영양단계가 된다",
+      "form": {
+        "condition": "에너지가 생태계로 들어올 때",
+        "type": "causal",
+        "scope": "먹이사슬"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지가 들어오는 관문을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생산자도 다른 생물처럼 먹이를 먹어야 산다",
+      "why_wrong": "생산자는 빛에너지와 무기물만으로 유기물을 만들어 낸다. 다른 생물을 먹지 않아도 살아갈 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prod-synthesis"
+    },
+    {
+      "text": "생산자는 광합성만 하고 세포호흡은 하지 않는다",
+      "why_wrong": "생산자도 자기가 만든 유기물을 세포호흡으로 분해해 생명활동에 쓴다. 그 과정에서 열에너지도 내보낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-prod-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-biotic-factor",
+      "note": "역할로 가른 세 갈래 가운데 하나다"
+    },
+    {
+      "type": "next",
+      "target": "bio-food-chain",
+      "note": "먹고 먹히는 줄의 출발점이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-consumer",
+      "note": "이 유기물에 기대는 쪽이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-decomposer",
+      "note": "물질을 되돌려 주는 쪽이다"
+    }
+  ],
+  "curriculum": [
+    "12생과01-06"
+  ],
+  "topic_id": "bio-1-5-1",
+  "pages": [
+    42,
+    43,
+    49
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}
