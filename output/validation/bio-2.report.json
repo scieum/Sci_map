@@ -1,0 +1,670 @@
+{
+  "unit_id": "bio-2",
+  "generated_at": "2026-09-10T00:00:00+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 68,
+    "standards_in_scope": [
+      {
+        "code": "12생과02-01",
+        "text": "신경 세포의 구조와 기능을 이해하고, 신경 세포에서의 전도 과정을 모식도로 표현할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "bio-2-1 신경신호의 전달 (72~81쪽)"
+      },
+      {
+        "code": "12생과02-02",
+        "text": "시냅스를 통한 신경 신호의 전달 과정을 이해하고, 약물이 시냅스 전달에 영향을 미치는 사례를 조사하여 발표할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "bio-2-1 신경신호의 전달 (78~80쪽)"
+      },
+      {
+        "code": "12생과02-03",
+        "text": "사람 신경계의 구조와 기능을 이해하고 중추 신경계와 말초 신경계의 특징을 설명할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "bio-2-2 사람의 신경계 (82~89쪽)"
+      },
+      {
+        "code": "12생과02-04",
+        "text": "내분비계와 신경계 작용 원리와 상호작용의 이해를 바탕으로 우리 몸의 항상성이 유지되는 과정을 추론할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "bio-2-3 내분비계와 항상성 유지 (90~97쪽)"
+      },
+      {
+        "code": "12생과02-05",
+        "text": "병원체의 종류와 특징을 이해하고 우리 몸의 방어 작용을 선천적 면역과 후천적 면역으로 구분하여 설명할 수 있다.",
+        "crosscheck": "교사 확정",
+        "textbook_section": "bio-2-4 우리 몸의 방어작용 (98~107쪽)"
+      },
+      {
+        "code": "12생과02-06",
+        "text": "항원 항체 반응의 특이성을 이해하고, 혈액의 응집 반응 원리를 이용하여 혈액형을 판정할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "bio-2-5 항원항체반응 (108~113쪽)"
+      },
+      {
+        "code": "12생과02-07",
+        "text": "백신의 종류와 작용 원리를 조사하고 질병의 예방 측면에서 백신의 필요성을 인식하여 협력적으로 소통할 수 있다.",
+        "crosscheck": "교사 확정",
+        "textbook_section": "bio-2-6 감염성질환의 예방 (114~121쪽)"
+      }
+    ],
+    "findings": [
+      {
+        "card_id": "bio-antibody",
+        "verdict": "retag",
+        "current": [
+          "12생과02-06"
+        ],
+        "suggested": [
+          "12생과02-05",
+          "12생과02-06"
+        ],
+        "reason": "카드 태그가 제 명제의 태그를 담지 못한다. 명제 넷 가운데 rel-ab-source('항체를 만들어 내보내는 세포는 B림프구가 분화한 형질세포다')는 relation.curriculum 에 '12생과02-05' 를 달고 있는데 카드 층의 curriculum 에는 02-06 뿐이다. 형질세포가 항체를 만든다는 것은 후천적 면역(체액성면역)의 기제이고 교과서도 106쪽 중단원 04 안에서 말한다 — 02-05 전문의 '우리 몸의 방어 작용을 선천적 면역과 후천적 면역으로 구분하여' 쪽이다. 카드 pages 에 105 가 이미 적혀 있다. 02-06 을 떼자는 것이 아니라 02-05 를 더하자는 것이다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "bio-antigen",
+        "verdict": "retag",
+        "current": [
+          "12생과02-06"
+        ],
+        "suggested": [
+          "12생과02-05",
+          "12생과02-06"
+        ],
+        "reason": "bio-antibody 와 같은 꼴이다. rel-ag-selective('후천적 면역은 들어온 항원의 종류에 맞춰 그 항원에만 선택적으로 일어난다')가 relation.curriculum 에 '12생과02-05' 를 달고 있으나 카드 태그에는 없다. 이 명제의 근거는 교과서 104쪽('후천성면역은 병원체에 노출된 뒤 발달하며, 침입한 특정 병원체에 대해서만 선택적으로 작용한다')이고 그 쪽은 중단원 04 다. 카드 pages 에 104 가 있다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "bio-nerve-impulse-conduction",
+        "verdict": "retag",
+        "current": [
+          "12생과02-01"
+        ],
+        "suggested": [
+          "12생과02-01",
+          "12생과02-02"
+        ],
+        "reason": "rel-cond-end('전도는 축삭돌기 말단까지 이어지고, 그 뒤로 신호를 넘기는 일은 시냅스가 맡는다')가 relation.curriculum 에 '12생과02-02' 를 달았는데 카드 태그에는 02-01 뿐이다. 이 명제는 전도와 전달의 경계를 긋는 자리라 02-02 전문('시냅스를 통한 신경 신호의 전달 과정을 이해하고')을 함께 받친다. 교과서에서도 78쪽 소주제 4(시냅스를 통한 신경신호의 전달)로 넘어가는 첫 문단이 이 내용이다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "bio-neurotransmitter",
+        "verdict": "retag",
+        "current": [
+          "12생과02-02"
+        ],
+        "suggested": [
+          "12생과02-02",
+          "12생과02-03"
+        ],
+        "reason": "rel-nt-autonomic('교감신경의 신경절이후 신경세포는 노르에피네프린을, 부교감신경의 신경절이후 신경세포는 아세틸콜린을 낸다')가 relation.curriculum 에 '12생과02-03' 을 달았는데 카드 태그에는 없다. 근거 지면이 87쪽('신경절이전 신경세포는 아세틸콜린을, 신경절이후 신경세포는 노르에피네프린을 분비한다')으로 중단원 02 말초신경계이고, 카드 pages 에 87 이 이미 적혀 있다. 이 명제는 invertible: true 라 D1 이 자율신경 두 갈래를 묻는 OX 를 만든다 — 그 문항이 02-03 아래에 서야 한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "bio-autonomic-nervous-system",
+        "verdict": "retag",
+        "current": [
+          "12생과02-03",
+          "12생과02-04"
+        ],
+        "suggested": [
+          "12생과02-03"
+        ],
+        "reason": "앞의 넷과 반대 방향이다. 카드 태그에 '12생과02-04' 가 있는데 명제 넷(rel-ans-situation·rel-ans-antagonism·rel-ans-ganglion·rel-ans-not-voluntary)은 모두 02-03 만 달고 있어 02-04 를 받치는 명제가 카드 안에 없다. 근거 지면 87~88쪽도 중단원 02(사람의 신경계)다. 견줄 자리는 bio-antagonism 인데 그 카드는 카드 태그 [02-03, 02-04] 를 명제 층에서 실제로 나눠 달고 있다(rel-at-heart→02-03, rel-at-glucose·rel-at-why→02-04). 02-04 를 떼든지, 자율신경이 항상성 조절에서 하는 몫을 말하는 명제를 세워 그 명제에 02-04 를 달든지 둘 중 하나다 — 어느 쪽인지는 메인이 정한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "bio-infectious-and-noninfectious-disease",
+        "verdict": "uncertain",
+        "current": [
+          "12생과02-05"
+        ],
+        "suggested": [],
+        "reason": "명제 넷 가운데 rel-idn-causes('고혈압이나 당뇨병처럼 유전·운동 부족·비만·흡연이 겹쳐 생기는 병은 비감염성질환에 든다')가 영역 02 의 일곱 전문 어디에도 걸리지 않는다. 02-05 전문은 '병원체의 종류와 특징을 이해하고 우리 몸의 방어 작용을…' 이라 병원체가 원인이 아닌 질병을 담지 않는다. 이 내용이 실제로 걸리는 성취기준은 12생과01-05('물질대사 관련 질병 조사를 위한 방법을 고안하여 수행하고 대사성 질환을 예방하기 위한 올바른 생활 습관에 대해 토의하며')이고 그것은 Ⅰ단원 몫이라 이 단원의 태그로 쓸 수 없다. 실제로 bio-1 에 같은 내용의 카드가 이미 있다 — bio-metabolic-disease(12생과01-05, 29~31쪽)의 rel-metdis-two-causes('유전적 요인과 비만·운동 부족 같은 환경요인이 겹쳐')와 rel-metdis-kinds('당뇨병·고혈압·고지혈증·지방간')가 이 명제와 겹친다. 다만 카드 전체를 이탈로 올리지는 않았다 — 나머지 셋(rel-idn-split·rel-idn-spread·rel-idn-vaccine)은 감염성질환 쪽이라 02-05 안이고, 교과서도 98쪽 중단원 04 의 첫 소주제(감염성질환과 비감염성질환)로 이 대비를 본문에 두고 있다. 비감염성질환을 감염성질환의 대비항으로만 남길지, 명제 하나를 덜어 Ⅰ단원 카드에 맡길지는 사람이 정할 자리다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "bio-infection-route",
+        "verdict": "uncertain",
+        "current": [
+          "12생과02-05",
+          "12생과02-07"
+        ],
+        "suggested": [],
+        "reason": "이 카드는 두 성취기준 사이에 끼어 있고 어느 쪽 전문에도 정면으로 걸리지 않는다. 명제 넷 가운데 rel-rt-kinds·rel-rt-vector(독감은 호흡기로, 파상풍은 상처로, 콜레라는 오염된 물로, 말라리아는 매개 곤충으로)는 02-05 를 달았는데 02-05 전문이 말하는 것은 '병원체의 종류와 특징' 이지 감염 경로가 아니다. rel-rt-rules·rel-rt-block(물 끓이기·마스크·경로 차단)은 02-07 을 달았는데 02-07 전문의 대상은 '백신' 이고 방역 수칙이 아니다 — 걸리는 낱말은 '질병의 예방 측면에서' 뿐이고, 그 구절은 2026-09-10 교사가 총론 판본으로 확정하면서 살아난 자리다(각론 판본에는 통째로 빠져 있다). 지면 근거는 뚜렷하다 — 교과서 114쪽은 중단원 06(감염성질환의 예방)의 첫 소주제 '병원체의 감염 경로1' 이고 그 중단원 머리의 학습 목표가 '감염성질환의 예방 방법을 이해하고, 백신의 필요성을 설명할 수 있다' 다. 곧 교과서는 감염 경로를 '예방 방법' 의 앞자리로 두는데, 성취기준 02-07 은 예방 방법 가운데 백신만 이름으로 든다. 태그를 바꾸자는 것이 아니라(달 만한 다른 코드가 영역 02 에 없다) 이 자리가 성취기준과 교과서가 어긋나는 자리임을 C8 로 올린다.",
+        "prerequisites": []
+      }
+    ],
+    "prerequisites_outside_unit": [
+      {
+        "card_id": "bio-osmotic-pressure-regulation",
+        "keys": [
+          "concept:osmotic-pressure"
+        ],
+        "note": "rel-op-determined('체액의 삼투압은 몸 안의 수분량과 무기염류의 양으로 정해진다')가 삼투압 개념 위에 선다. docs/concept_registry.yaml 에 concept:osmotic-pressure(삼투압, 카드 mate-osmotic-pressure)가 이미 있다 — 이 단원 카드에는 same 링크가 없다. G 파이프라인에서 concept_key 로 걸 자리다."
+      },
+      {
+        "card_id": "bio-antidiuretic-hormone",
+        "keys": [
+          "concept:osmotic-pressure"
+        ],
+        "note": "rel-adh-osmotic('체액의 삼투압이 높아지면 분비량이 늘고…')이 같은 개념 위에 선다."
+      },
+      {
+        "card_id": "bio-phagocytosis",
+        "keys": [
+          "concept:enzyme"
+        ],
+        "note": "rel-pha-process('효소로 분해해 없앤다')가 효소 개념 위에 선다. 사전에 concept:enzyme(효소, 카드 mate-enzyme)이 있다."
+      },
+      {
+        "card_id": "bio-physical-barrier-of-skin-and-mucosa",
+        "keys": [
+          "concept:enzyme"
+        ],
+        "note": "rel-bar-lysozyme 의 라이소자임이 교과서 102쪽 곁주에서 '점액에 들어있는 효소' 로 정의된다 — 명제는 '효소' 라는 말을 쓰지 않지만 개념은 그 위에 선다."
+      }
+    ],
+    "stats": {
+      "ok": 61,
+      "retag": 5,
+      "out_of_scope": 0,
+      "uncertain": 2
+    }
+  },
+  "relations": {
+    "checked": 248,
+    "cards_checked": 68,
+    "invertible_true_count": 95,
+    "misconceptions_checked": 136,
+    "findings": [
+      {
+        "card_id": "bio-central-nervous-system",
+        "relation_id": "rel-cns-brain-vs-cord",
+        "verdict": "defect",
+        "checks": [
+          1,
+          4,
+          5
+        ],
+        "reason": "이 단원에서 가장 무거운 자리다. 명제는 '뇌는 정보를 처리해 명령을 내보내고, 척수는 그 정보와 명령이 오르내리는 통로 노릇을 한다' 로 척수를 통로로만 규정하는데, 같은 카드에 걸린 오개념이 바로 그 규정이다 — M[rel-cns-brain-vs-cord] = '척수는 뇌의 명령을 받아 전하기만 할 뿐 스스로 반응을 일으키지 못한다', why_wrong = '척수는 무릎반사처럼 대뇌를 거치지 않는 반사에서 스스로 중추가 된다'. 곧 명제를 그대로 외운 학생이 오개념 지문을 참으로 고르게 되어 있다. 오개념이 명제의 반대편이 아니라 명제와 같은 편에 서 있으므로 검사 4 이고, 명제와 why_wrong 이 한 카드 안에서 어긋나므로 검사 5 이며, 그 원인은 명제에 '척수반사는 빼고' 에 해당하는 단서가 없다는 것이라 검사 1 이다. 같은 단원의 다른 카드들은 이 자리를 조심해서 다룬다 — bio-spinal-cord 의 definition 은 '통로이면서 척수반사를 맡는다' 로 둘을 함께 적었고, bio-central-nervous-system 자신의 다른 오개념(M[rel-cns-parts])의 why_wrong 도 '척수는 통로 노릇에 더해 척수반사도 맡는다' 라고 적었다. 교과서 83쪽도 '척수는 뇌와 말초신경계 사이에서 정보를 전달' 에 이어 86쪽에서 척수반사를 따로 세운다. 더구나 이 명제는 invertible: true 라 inverted_text('척수는 정보를 처리해 명령을 내보내고, 뇌는 그 정보와 명령이 오르내리는 통로 노릇을 한다')가 OX 오답 지문이 되는데, 그 앞절은 척수반사에서는 실제로 일어나는 일이다 — 뒤집힌 문장 전체는 뒷절 때문에 거짓이 되지만, 오답 지문의 절반이 참인 문장이 만들어진다.",
+        "suggest": "명제 본문이 척수의 두 몫(통로·반사 중추)을 함께 담도록 고칠지, 오개념을 다른 명제로 옮길지 정한다. invertible 은 본문을 고친 뒤에 다시 본다."
+      },
+      {
+        "card_id": "bio-antigen",
+        "relation_id": "rel-ag-trigger",
+        "verdict": "defect",
+        "checks": [
+          1,
+          4
+        ],
+        "reason": "[1] 명제가 '항원이 몸에 들어오면 그에 맞서는 항체가 만들어지는 면역반응이 일어난다' 로 항체 생성을 무조건으로 말하는데, form.scope 는 '후천적 면역' 이다. 후천적 면역에는 항체를 만들지 않는 갈래가 있다고 이 단원이 스스로 말한다 — bio-adaptive-immunity 의 rel-ai-two('후천적 면역은 T림프구가 감염된 세포를 없애는 세포성면역과 항체가 관여하는 체액성면역으로 나뉜다')와 bio-cell-mediated-immunity 의 rel-cmi-vs-humoral('세포성면역은 감염된 세포를 직접 없애고, 체액성면역은 분비된 항체가 항원을 처리한다')이 그것이다. 곧 scope 가 명제의 실제 적용 범위(체액성면역)보다 넓다. 교과서 108쪽도 이 문장을 항원항체반응 단원 첫머리에서 말하지 후천적 면역 전체를 두고 말하지 않는다. [4] 이 명제에 걸린 오개념 '항원은 반드시 살아 있는 병원체여야 한다'(why_wrong: '죽은 병원체나 그 일부도 항원으로 작용한다. 백신이 그 성질을 쓴다')는 항원의 자격을 다투는데 명제는 항원이 들어온 뒤에 무슨 일이 생기는지만 말한다. 반증 근거는 이 카드가 아니라 bio-vaccine-principle 의 rel-vp-content('백신에는 독성을 약하게 만들거나 죽인 병원체, 또는 병원체의 일부가 항원으로 들어 있다')에 있다.",
+        "suggest": "scope 를 체액성면역 쪽으로 좁힐지 명제 본문에 단서를 넣을지 정한다. 오개념은 rel-vp-content 쪽으로 옮길지 항원의 자격을 다루는 명제를 이 카드에 세울지 함께 본다."
+      },
+      {
+        "card_id": "bio-synaptic-transmission",
+        "relation_id": "rel-syn-cross",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "명제가 '시냅스틈으로 퍼진 신경전달물질이 다음 세포의 막에 닿으면 그 막에서 탈분극이 일어난다' 로 결과를 탈분극 하나로 닫아 놓았고 form.condition·form.scope 어디에도 단서가 없다. 같은 단원이 같은 사실을 두 가지 넓이로 말하고 있다 — bio-neurotransmitter 의 rel-nt-receptor 는 '신경전달물질이 다음 세포의 수용체에 붙으면 그 세포의 막전위가 바뀐다' 로 방향을 열어 두었고, bio-drug-and-synaptic-transmission 의 rel-drug-two-ways 는 '진정제는 흥분을 눌러 긴장과 통증을 누그러뜨린다' 로 흥분을 누르는 전달을 카드로 세워 두었다. 한 단원 안에서 같은 주장에 단서를 다는 기준이 흔들린다. 교과서 78쪽도 이 자리를 '신경전달물질이 시냅스후신경세포의 수용체에 결합하면 시냅스후신경세포에서 활동전위가 발생한다' 로 적어 흥분성 시냅스를 전제로 서술한다 — 그 전제가 명제에는 남아 있지 않다. 억제성 전달이 실제로 어떻게 되는지는 진위 판단이라 여기서 확정하지 않는다. 지적하는 것은 단서가 빠졌고 짝 명제와 기준이 어긋난다는 구조다.",
+        "suggest": "form.condition 에 흥분성 전달이라는 전제를 적을지, 명제 본문을 rel-nt-receptor 처럼 열어 둘지 정한다."
+      },
+      {
+        "card_id": "bio-saltatory-conduction",
+        "relation_id": "rel-salt-speed",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "명제 본문이 '결절을 건너뛰며 활동전위가 생기기 때문에 말이집신경의 전도 속도가 민말이집신경보다 빠르다' 인데, 이 비교를 가능하게 하는 단서('굵기가 비슷하다면')가 form.condition('굵기가 비슷한 두 축삭돌기를 견줄 때')에만 있고 명제 문장에는 없다. D1 이 쓰는 것은 명제 본문이고 이 명제는 invertible: true 다. 같은 단원의 짝 명제는 그 단서를 본문에 담았다 — bio-myelinated-and-unmyelinated-nerve 의 rel-mun-speed 는 '굵기가 비슷하다면 말이집신경 쪽이 민말이집신경보다 신호가 더 빨리 전도된다' 로 시작한다. 한 단원 안에서 같은 주장에 단서를 다는 기준이 흔들리는 자리이고, bio-3 의 rel-chr-species-number 와 같은 꼴이다. 덧붙여 이 두 명제는 사실상 같은 주장을 둘 다 invertible: true 로 세워 두어 D1 이 거의 같은 OX 를 둘 만든다.",
+        "suggest": "form.condition 에만 있는 굵기 단서를 명제 본문이 담도록 고친다. rel-mun-speed 와 둘 가운데 어느 쪽이 이 주장을 맡을지도 함께 정한다."
+      },
+      {
+        "card_id": "bio-autonomic-nervous-system",
+        "relation_id": "rel-ans-antagonism",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "이 명제에 걸린 오개념 '교감신경과 부교감신경은 모든 기관에서 짝을 이뤄 반대로 작용한다' 의 why_wrong 이 '혈관의 수축과 이완, 땀 분비처럼 교감신경만 조절하는 곳도 있다' 인데, 그 반증 근거가 이 카드의 어느 명제에도 없다. 명제는 '한 기관에 두 신경이 함께 뻗어 있어 한쪽이 작용을 촉진하면 다른 쪽은 억제한다' 로 두 신경이 함께 분포하는 경우만 말하고, 함께 분포하지 않는 기관이 있다는 말은 하지 않는다. 그 말을 하는 명제는 bio-antagonism 의 rel-at-limit('혈관의 수축과 이완, 땀 분비처럼 교감신경만 분포하는 곳에서는 길항작용이 나타나지 않는다')이고, 거기에는 같은 오개념이 '자율신경이 분포하는 모든 기관에서 길항작용이 일어난다' 라는 문장으로 이미 제자리에 걸려 있다. 곧 사실상 같은 오개념이 두 카드에 있는데 한쪽만 받쳐 주는 명제를 가졌다. 교과서 88쪽이 이 단서를 따로 묻는 자리를 두고 있다('교감신경과 부교감신경의 길항작용은 자율신경계의 모든 작용에서 볼 수 있을까? 혈관의 수축과 이완, 땀 분비, 털세움근의 수축은 교감신경의 작용으로만 조절된다').",
+        "suggest": "이 오개념을 rel-at-limit 쪽으로 몰지, 예외를 말하는 명제를 이 카드에도 세울지 정한다. 둘을 그대로 두면 D1 이 거의 같은 오답 지문을 둘 만든다."
+      },
+      {
+        "card_id": "bio-fungus",
+        "relation_id": "rel-fun-vs-bacterium",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "이 명제에 걸린 오개념 '무좀은 세균이 일으키는 병이다' 의 why_wrong 이 '무좀은 곰팡이가 피부에 번져 생긴다. 세균이 일으키는 결핵과는 병원체의 무리가 다르다' 인데, 무좀도 결핵도 이 카드의 어느 명제에도 나오지 않는다. 명제가 말하는 것은 세포 구조의 대비('곰팡이는 균사와 세포벽을 갖춘 진핵생물이지만 세균은 핵막조차 없는 단세포생물이다')뿐이다. 병 이름으로 두 무리를 가르는 오개념을 받치려면 어느 병이 어느 병원체에서 오는지를 말하는 명제가 있어야 하는데 이 카드에는 없다(rel-fun-route 는 '폐 질환' 과 '염증' 이라고만 한다). 같은 꼴이 bio-bacterium 에도 있다 — 오개념 '결핵과 독감은 모두 세균이 일으킨다' 가 구조 명제인 rel-bac-structure 에 걸려 있다. 교과서 107쪽 중단원 정리가 병원체별 질병 이름을 늘어놓고 있으므로 근거 지면은 있다.",
+        "suggest": "병원체와 질병 이름을 짝짓는 명제를 세워 오개념을 그쪽에 걸지, 오개념을 구조 대비에 맞게 갈음할지 정한다."
+      },
+      {
+        "card_id": "bio-abo-blood-group",
+        "relation_id": "rel-abo-where",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '적혈구 세포막의 응집원 A·B와 혈장의 응집소 α·β를 가지고 있는지에 따라 네 가지로 나눈 혈액형' 이고 명제는 '응집원은 적혈구의 세포막에 있고, 응집소는 혈장에 들어 있다' 다. 정의가 관형절로 붙여 놓은 두 자리를 문장으로 편 것뿐이고 보탠 것이 없다. invertible: true 라 정의를 되풀이한 문장이 그대로 OX 로 나간다. 같은 카드의 rel-abo-pairs('A형은 응집원 A와 응집소 β를, B형은 응집원 B와 응집소 α를 가진다')는 정의에 없는 엇갈린 짝을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 두 물질이 있는 자리를 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-action-potential",
+        "relation_id": "rel-ap-order",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '막전위가 빠르게 올랐다가 내려가는 한 차례의 변화. 탈분극·재분극·과분극을 거쳐 휴지전위로 돌아온다' 로 두 문장이고, 명제는 '활동전위에서 막전위는 탈분극으로 올랐다가 재분극으로 내려가고 과분극을 거쳐 휴지전위로 돌아온다' 로 그 두 문장을 하나로 이어 붙인 것이다. 오르내림도 세 단계의 차례도 정의에 이미 있다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다(bio-3 의 rel-plo-notation 과 같은 꼴). 같은 카드의 rel-ap-peak 는 값(약 +35 mV)과 시점을, rel-ap-channels 는 통로라는 기제를 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 단계의 차례를 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-adaptive-immunity",
+        "relation_id": "rel-ai-specific",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '특정 항원에 노출된 뒤에야 발달해 그 항원에만 듣는 방어작용. 특이적 면역이라고도 하며…' 이고 명제는 '노출된 적이 있는 항원에만 듣기 때문에 특이적 면역이라는 다른 이름으로도 불린다' 다. 듣는 범위도 다른 이름도 정의에 그대로 있고, 명제가 보탠 것은 둘을 '때문에' 로 이은 것뿐이다. 짝이 되는 bio-innate-immunity 의 rel-ii-nonspecific 도 같은 꼴이라 두 카드가 나란히 걸린다. ★이 카드의 definition 은 교과서 표기 대응('교과서 표기 후천성면역이 이 말이다')을 담은 유일한 자리이므로, 정의를 손댈 때 그 구절이 지워지지 않게 해야 한다.",
+        "suggest": "정의에서 '특이적 면역이라고도 하며' 를 빼고 명제가 맡게 하든지 명제를 갈음한다. 교과서 표기 대응 구절은 정의에 남긴다."
+      },
+      {
+        "card_id": "bio-antibody",
+        "relation_id": "rel-ab-shape",
+        "verdict": "defect",
+        "checks": [
+          3,
+          4
+        ],
+        "reason": "[3] definition 이 '항원에 맞서 만들어져 그 항원과 결합하는 Y자 모양의 단백질. 항원과 결합하는 자리가 두 곳 있다' 이고 명제는 '항체는 Y자 모양의 단백질이며 항원과 결합하는 자리를 두 곳 가지고 있다' 다. 정의의 두 문장을 한 문장으로 합친 것뿐이고 낱말까지 같다. [4] 이 명제에 걸린 오개념 '한 종류의 항체는 어떤 항원과도 결합할 수 있다' 의 why_wrong 은 '항체는 결합 부위의 구조에 들어맞는 특정 항원하고만 결합한다' 인데, 특이성은 이 명제가 말하지 않는다(생김새와 결합 부위의 수만 말한다). 그것을 말하는 명제는 bio-antigen-antibody-specificity 의 rel-spec-structure·rel-spec-fit 에 있고, 거기에는 사실상 같은 오개념('항체는 여러 종류의 항원과 두루 결합한다')이 이미 걸려 있다.",
+        "suggest": "정의에서 Y자 모양과 결합 부위 수를 빼고 명제가 맡게 하든지 명제를 갈음한다. 오개념은 rel-spec-fit 쪽 것과 겹치므로 한쪽을 덜지 함께 본다."
+      },
+      {
+        "card_id": "bio-antidiuretic-hormone",
+        "relation_id": "rel-adh-reabsorb",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '뇌하수체후엽에서 나와 콩팥에서 물의 재흡수를 촉진하는 호르몬. 그 결과 오줌양이 줄고 체액의 삼투압이 낮아진다' 이고 명제는 '항이뇨호르몬이 콩팥에 작용하면 물의 재흡수가 늘어 오줌양이 줄어든다' 다. 재흡수 촉진도 오줌양 감소도 정의에 그대로 있고 보탠 것이 없다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 게다가 이 명제는 bio-osmotic-pressure-regulation 의 rel-op-urine('ADH가 늘면 콩팥에서 물이 더 많이 재흡수되어 오줌양이 줄고 체액의 삼투압이 낮아진다')과 사실상 같고 둘 다 invertible: true 이며, 거기 걸린 오개념까지 서로 닮았다('항이뇨호르몬이 늘면 오줌양도 함께 늘어난다' ↔ '콩팥에서 물의 재흡수량이 늘면 오줌양도 함께 늘어난다'). 메인이 넘긴 얇은 카드 다섯 가운데 하나인데, 이 카드에서는 얇음이 명제 수가 아니라 이 겹침으로 드러난다.",
+        "suggest": "정의를 줄여 명제가 맡게 할지, 이 사실을 rel-op-urine 에 맡기고 이 카드는 분비 조절 쪽(rel-adh-source·rel-adh-osmotic)만 남길지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-antigen-antibody-specificity",
+        "relation_id": "rel-spec-fit",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '항체가 제 결합 부위와 구조가 들어맞는 특정 항원하고만 결합하는 성질' 이고 명제는 '결합 부위의 구조가 들어맞아야 결합이 일어나고, 맞지 않으면 결합하지 않는다' 다. '…하고만' 이 이미 두 갈래를 다 담고 있어 명제는 그 함의를 풀어 쓴 것뿐이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-spec-structure('항체는 종류마다 항원 결합 부위의 구조가 달라서 저마다 다른 항원과 짝을 이룬다')는 종류마다 구조가 다르다는 것을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의를 줄여 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-antigen",
+        "relation_id": "rel-ag-selective",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 '후천적 면역은 어떤 항원이 들어왔느냐에 따라 골라서 일어난다' 와 명제 '후천적 면역은 들어온 항원의 종류에 맞춰 그 항원에만 선택적으로 일어난다' 가 같은 말이다. '골라서' 를 '선택적으로' 로 바꾼 동의어 치환일 뿐이다. 게다가 이 명제는 bio-adaptive-immunity 의 rel-ai-specific 과도 겹친다 — 후천적 면역의 선택성을 네 자리(두 카드의 정의와 두 명제)가 되풀이한다.",
+        "suggest": "정의의 둘째 문장을 덜지, 명제를 갈음할지 정한다. bio-adaptive-immunity 와 어느 카드가 이 사실을 맡을지도 함께 본다."
+      },
+      {
+        "card_id": "bio-bacterium",
+        "relation_id": "rel-bac-structure",
+        "verdict": "defect",
+        "checks": [
+          3,
+          4
+        ],
+        "reason": "[3] definition 이 '핵막과 막으로 둘러싸인 세포소기관이 없는 단세포생물' 이고 명제는 '세균은 핵막도 막성 세포소기관도 없는 단세포생물이다' 다. 낱말까지 같고 보탠 것이 없다. [4] 이 명제에 걸린 오개념 '결핵과 독감은 모두 세균이 일으킨다'(why_wrong: '결핵은 세균이, 독감은 바이러스가 일으킨다')는 병 이름과 병원체를 짝짓는 오해인데, 명제는 세포 구조만 말하고 병 이름은 이 카드 어느 명제에도 없다. bio-fungus 의 rel-fun-vs-bacterium 에 걸린 '무좀은 세균이 일으키는 병이다' 와 같은 꼴이다.",
+        "suggest": "정의에서 구조를 빼고 명제가 맡게 하든지 명제를 갈음한다. 오개념은 병원체와 질병을 짝짓는 명제를 세워 그쪽으로 옮길지 정한다."
+      },
+      {
+        "card_id": "bio-brainstem",
+        "relation_id": "rel-bs-parts",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '중간뇌·다리뇌·숨골을 묶어 부르는 이름' 이고 명제는 '뇌줄기는 중간뇌·다리뇌·숨골 세 부분을 합쳐 부르는 이름이다' 다. 셋의 이름도 차례도 같고 '묶어' 를 '합쳐' 로 바꾼 것뿐이다(bio-3 의 rel-six-members 와 같은 꼴). 같은 단원의 bio-cerebellum 은 같은 사실을 rel-cb-not-brainstem('…이므로 소뇌는 뇌줄기에 들지 않는다')으로 세워 정의에 없는 배제를 보탰다 — 같은 내용을 두고 한쪽만 보탬이 있다.",
+        "suggest": "정의에서 세 부분의 이름을 빼고 명제가 맡게 하든지, 명제를 갈음한다. bio-cerebellum 과 겹치는 자리도 함께 본다."
+      },
+      {
+        "card_id": "bio-central-nervous-system",
+        "relation_id": "rel-cns-parts",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '뇌와 척수가 이루는 신경계' 이고 명제는 '중추신경계를 이루는 기관은 뇌와 척수 둘이다' 다. 보탠 것은 '둘' 이라는 수뿐인데 그 수는 이름 둘을 든 순간 이미 정해진다. 같은 카드의 rel-cns-integrate·rel-cns-brain-vs-cord 는 정의에 없는 처리 과정과 역할 대비를 보탠다.",
+        "suggest": "정의에서 구성 기관을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-cerebral-cortex",
+        "relation_id": "rel-cc-lobes",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '자리에 따라 이마엽·마루엽·관자엽·뒤통수엽으로, 하는 일에 따라 감각·운동·연합 영역으로 갈린다' 이고 명제는 '대뇌겉질은 자리에 따라 이마엽·마루엽·관자엽·뒤통수엽으로 나뉜다' 다. 정의의 앞절을 그대로 옮겼고 네 이름의 차례까지 같다 — 연속 20자가 겹쳐 이 단원에서 가장 긴 축에 든다. 같은 카드의 rel-cc-areas 는 세 영역이 맡은 일을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 네 엽의 이름을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-diencephalon",
+        "relation_id": "rel-di-parts",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '시상·시상하부·뇌하수체를 아우르는 부분' 이고 명제는 '사이뇌는 시상·시상하부·뇌하수체로 이루어진다' 다. 셋의 이름도 차례도 같고 보탠 것이 없다. 같은 카드의 rel-di-thalamus·rel-di-hypothalamus·rel-di-pituitary 는 세 부분이 맡은 일을 각각 보탠다.",
+        "suggest": "정의에서 세 부분의 이름을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-fungus",
+        "relation_id": "rel-fun-structure",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '실 모양의 균사와 세포벽을 가진 진핵생물로 포자로 번식하는 병원체' 이고 명제는 '곰팡이는 실 모양의 균사와 세포벽을 가진 진핵생물이며 포자를 만들어 번식한다' 다. 연속 17자가 그대로 겹치고 보탠 것이 없다.",
+        "suggest": "정의에서 짜임과 번식을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-herd-immunity",
+        "relation_id": "rel-herd-protect",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '집단의 대부분이 면역을 갖춰 감염병의 확산이 줄고, 면역이 없는 사람이 감염될 확률까지 낮아진 상태' 이고 명제는 '집단 면역이 이루어지면 면역이 약하거나 백신을 맞지 못한 사람도 감염될 확률이 낮아진다' 다. 정의의 뒷절과 같은 말이고 보탠 것은 '면역이 약하거나 백신을 맞지 못한' 이라는 예시뿐이다. 메인이 넘긴 얇은 카드 다섯 가운데 하나인데, 원천이 얇다기보다 정의와 명제가 같은 지면을 두 번 받은 것이 원인이다 — 정의는 교과서 117쪽 곁주('집단에서 대부분의 개체가 면역력을 가져 감염병의 확산이 감소하고 면역력이 없는 개체의 감염 확률이 낮아진 상태이다')를, 명제는 같은 쪽 본문('집단 면역이 형성되면 면역 능력이 약하거나 다른 이유로 백신을 접종하지 못하는 사람도 감염성질환에 대해 예방 효과를 갖게 된다')을 각각 받았다. 나머지 둘(rel-herd-ratio 정도 관계, rel-herd-need 백신 접종의 두 가지 뜻)은 성하다.",
+        "suggest": "곁주에서 온 정의를 줄여 명제와 겹치지 않게 한다. 명제를 고치는 것보다 정의를 줄이는 쪽이 먼저 볼 자리다."
+      },
+      {
+        "card_id": "bio-homeostasis",
+        "relation_id": "rel-hm-range",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '바깥 환경이 달라져도 체온·혈당량·삼투압처럼 몸 안의 상태를 일정한 범위 안에 붙들어 두는 성질' 이고 명제는 '항상성은 값을 한 점에 붙박아 두는 것이 아니라 정상 범위 안에서 오르내리게 하는 것이다' 다. bio-3 이 적어 둔 'X는 A가 아니라 B다' 형인데 B 자리에 정의가 그대로 들어가 있고 A 자리는 그 부정형이다. 대비 자체는 학습에 쓸모가 있으나 B 가 정의여서 보탬이 없다. 덧붙여 이 명제는 단원 밖과도 겹친다 — bio-1 의 bio-homeostasis(같은 concept_key, 12생과01-01)에 rel-homeo-range('항상성은 몸속 상태를 한 값에 못 박는 것이 아니라 일정한 범위 안에서 오르내리게 붙잡는 것이다')가 사실상 같은 문장으로 이미 있다.",
+        "suggest": "정의에서 '일정한 범위' 를 빼고 명제가 맡게 하든지, 대비의 B 자리에 정의에 없는 것을 놓는다. bio-1 과 어느 쪽이 이 명제를 맡을지는 G 파이프라인과 메인이 정할 자리다."
+      },
+      {
+        "card_id": "bio-hormone",
+        "relation_id": "rel-hor-transport",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '내분비샘에서 만들어져 혈액을 타고 온몸을 돌다가 정해진 세포에서만 작용해 그 기능을 조절하는 화학 물질' 이고 명제는 '호르몬은 혈액을 타고 온몸으로 퍼지지만 반응은 그 호르몬의 표적세포에서만 나타난다' 다. '정해진 세포' 를 '표적세포' 로 바꾼 동의어 치환일 뿐 구조가 같다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나가고, 더 무거운 것은 bio-target-cell 의 rel-tc-selective('호르몬은 온몸을 돌아도 그 호르몬의 표적세포에서만 반응을 일으킨다')와 사실상 같은 명제라는 점이다 — 둘 다 invertible: true 이고 inverted_text 까지 닮았다.",
+        "suggest": "정의를 줄여 명제가 맡게 할지, 이 사실을 bio-hormone 과 bio-target-cell 가운데 어느 카드가 맡을지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-innate-immunity",
+        "relation_id": "rel-ii-nonspecific",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '병원체의 종류를 가리지 않고 빠르게 일어나는 방어작용. …비특이적 면역이라고도 한다' 이고 명제는 '어떤 병원체가 들어오든 같은 방식으로 일어나기 때문에 비특이적 면역이라고도 부른다' 다. 가리지 않는다는 것도 다른 이름도 정의에 있고, 명제가 보탠 것은 둘을 '때문에' 로 이은 것뿐이다. bio-adaptive-immunity 의 rel-ai-specific 과 한 묶음이다. ★이 카드의 definition 은 교과서 표기 대응('교과서의 선천성면역과 같은 말이고')을 담은 유일한 자리이므로 정의를 손댈 때 그 구절을 지우면 안 된다.",
+        "suggest": "정의에서 '비특이적 면역이라고도 한다' 를 빼고 명제가 맡게 하든지 명제를 갈음한다. 교과서 표기 대응 구절은 정의에 남긴다."
+      },
+      {
+        "card_id": "bio-insulin-and-glucagon",
+        "relation_id": "rel-ig-source",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 'β 세포에서 인슐린이, α 세포에서 글루카곤이 나온다' 와 명제 '인슐린은 이자의 β 세포에서, 글루카곤은 이자의 α 세포에서 분비된다' 가 같은 말이다. 보탠 것은 '이자의' 라는 관형어뿐인데 그것도 정의의 첫 문장('이자에서 나와')에 있다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-ig-liver(간에서 일어나는 두 방향의 반응)는 정의에 없는 것을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의의 둘째 문장을 덜고 명제가 맡게 한다."
+      },
+      {
+        "card_id": "bio-ion-channel",
+        "relation_id": "rel-ic-selective",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '정해진 이온만 지나가게 하는 막단백질 통로' 이고 명제는 '이온 통로는 아무 이온이나 지나가게 하지 않고 정해진 이온만 골라 통과시킨다' 다. 'X는 A가 아니라 B다' 형인데 B 자리가 정의 그대로다. 같은 카드의 rel-ic-passive(에너지가 들지 않아 농도 기울기를 따른다)는 정의에 없는 기제를 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 선택성을 빼고 명제가 맡게 하든지, 대비의 B 자리에 정의에 없는 것을 놓는다."
+      },
+      {
+        "card_id": "bio-lymphocyte",
+        "relation_id": "rel-lym-differentiate",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 '가슴샘으로 옮겨 가면 T림프구, 골수에 남으면 B림프구가 된다' 와 명제 '미성숙 림프구 가운데 일부는 가슴샘으로 옮겨 T림프구가 되고, 나머지는 골수에 남아 B림프구가 된다' 가 같은 말이다. 보탠 것은 '일부/나머지' 라는 수량어뿐이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-lym-recognize(두 림프구가 항원을 알아보는 방식)는 정의에 없는 것을 보탠다.",
+        "suggest": "정의의 둘째 문장을 덜고 명제가 맡게 한다."
+      },
+      {
+        "card_id": "bio-membrane-potential",
+        "relation_id": "rel-mp-cause",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '이온이 안팎에 고르지 않게 놓이고 이온마다 투과도가 달라 나타난다' 이고 명제는 '이온이 막 안팎에 고르지 않게 놓이고 이온마다 막을 지나는 정도가 달라서 전위차가 생긴다' 다. '투과도' 를 '막을 지나는 정도' 로 풀어 쓴 동의어 치환일 뿐 구조가 같다(bio-3 의 rel-drf-chance 와 같은 꼴). 같은 카드의 rel-mp-perm(열린 통로 수와 투과도의 정도 관계)과 rel-mp-lipid(인지질 이중층을 넘지 못한다)는 정의에 없는 것을 보탠다.",
+        "suggest": "정의에서 두 원인을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-myelin-sheath",
+        "relation_id": "rel-mye-schwann",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '슈반세포의 세포막이 축삭돌기를 여러 겹으로 감아 만든 껍질' 이고 명제는 '말이집을 만드는 것은 슈반세포이고, 슈반세포의 세포막이 축삭돌기를 여러 겹 감는다' 다. 연속 17자가 그대로 겹친다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-mye-insulate('말이집이 절연체 노릇을 해 축삭돌기 막에서 전기 신호가 새어 나가지 못하게 막는다')도 정의의 둘째 문장('전기 신호가 막 밖으로 새지 않게 막는 절연체 구실을 한다')과 같은 말이라 같은 자리에 있다 — 명제 셋 가운데 둘이 정의에서 나온다.",
+        "suggest": "정의를 줄여 두 명제가 맡게 할지 카드 단위로 정한다. 명제를 하나씩 고치는 것보다 정의를 줄이는 쪽이 먼저 볼 자리다."
+      },
+      {
+        "card_id": "bio-negative-feedback",
+        "relation_id": "rel-nf-loop",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '어떤 반응의 결과가 도리어 그 반응을 억눌러, 몸 안의 값이 한쪽으로 계속 치우치지 않게 하는 조절 방식' 이고 명제는 '반응의 결과물이 늘어나면 그 결과물이 처음 반응을 억눌러 더는 늘지 않게 한다' 다. '결과' 를 '결과물' 로, '한쪽으로 치우치지 않게' 를 '더는 늘지 않게' 로 바꾼 동의어 치환이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-nf-thyroxine(타이록신-TRH-TSH 라는 실제 회로)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의를 줄여 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-organization-of-nervous-system",
+        "relation_id": "rel-ons-two",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 '사람의 것은 중추신경계와 말초신경계로 짜여 있다' 와 명제 '사람의 신경계는 판단을 맡는 중추신경계와 몸 곳곳을 잇는 말초신경계로 나뉜다' 가 같은 말이다. 보탠 것은 '판단을 맡는'·'몸 곳곳을 잇는' 두 관형절인데, 그 내용은 같은 카드의 rel-ons-roles('중추신경계는 받아들인 정보를 통합해 명령을 내리고, 말초신경계는 그 정보와 명령을 실어 나른다')가 따로 맡는다. 곧 정의와 겹치고 남는 부분은 옆 명제와 겹친다. 메인이 넘긴 얇은 카드 다섯 가운데 하나인데, 명제 셋 가운데 하나가 이렇게 접히면 실제로 남는 것은 둘이다.",
+        "suggest": "이 명제를 지우고 rel-ons-roles 에 맡길지, 정의의 둘째 문장을 덜고 이 명제를 살릴지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-pathogen",
+        "relation_id": "rel-pat-kinds",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 '바이러스·세균·원생생물·곰팡이로 나뉜다' 와 명제 '병원체는 바이러스·세균·원생생물·곰팡이 등으로 나뉜다' 가 같은 말이다. 넷의 이름도 차례도 같고 보탠 것은 '등' 한 글자다(bio-3 의 rel-six-members 와 같은 꼴). 같은 카드의 rel-pat-drug(병원체와 치료제의 짝)·rel-pat-not-all(둘레의 미생물이 모두 병원체는 아니다)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의의 둘째 문장을 덜고 명제가 맡게 한다."
+      },
+      {
+        "card_id": "bio-phagocytosis",
+        "relation_id": "rel-pha-process",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '백혈구가 손상된 세포나 병원체를 세포 안으로 들여와 효소로 분해해 없애는 작용' 이고 명제는 '백혈구가 병원체를 세포 안으로 들여온 뒤 효소로 분해해 없앤다' 다. 이 단원에서 정의와 명제가 가장 많이 겹치는 자리로, 명제 글자의 85%가 정의에 그대로 있다. 보탠 것이 없을 뿐 아니라 정의보다 좁다('손상된 세포' 가 빠졌다). 같은 카드의 rel-pha-macrophage(대식세포가 후천적 면역을 북돋운다)·rel-pha-antibody(항체가 식세포작용을 돕는다)는 정의에 없는 것을 보탠다.",
+        "suggest": "정의를 줄여 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-protist",
+        "relation_id": "rel-pro-eukaryote",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '핵막을 갖춘 진핵생물 가운데 질병을 일으키는 무리. 대개 단세포이며…' 이고 명제는 '질병을 일으키는 원생생물은 핵막이 있는 진핵생물이며 대개 단세포다' 다. 정의의 두 조각을 한 문장으로 합친 것뿐이다. 같은 카드의 rel-pro-malaria(말라리아원충과 모기)와 rel-pro-vs-bacterium(세균과의 대비)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의를 줄여 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-repolarization-and-hyperpolarization",
+        "relation_id": "rel-rh-repol",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 'Na⁺ 통로가 닫히고 K⁺ 통로가 열려 막전위가 내려가는 재분극과, K⁺ 통로가 늦게 닫혀 휴지전위 아래까지 내려가는 과분극' 이고 명제는 'K⁺ 통로가 열려 K⁺이 세포 밖으로 나가면서 막전위가 내려가는 것을 재분극이라고 한다' 다. 정의의 앞절과 같은 말이고 보탠 것은 K⁺이 어느 쪽으로 가는지뿐이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-rh-hyper 도 정의의 뒷절과 같은 말이라 명제 셋 가운데 둘이 정의에서 나온다 — 정의가 두 개념을 다 담아 버린 것이 원인이다.",
+        "suggest": "정의를 두 이름을 드는 데까지 줄이고 두 명제가 기제를 맡게 할지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-resting-potential",
+        "relation_id": "rel-rp-polarized",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '자극을 받지 않은 신경세포에서 막 안쪽이 음전하, 바깥쪽이 양전하로 갈린 분극 상태일 때 재어지는 막전위' 이고 명제는 '자극을 받지 않은 신경세포는 막 안쪽이 음(-)전하를, 바깥쪽이 양(+)전하를 띠는 분극 상태에 있다' 다. 명제 글자의 78%가 정의에 그대로 있고 보탠 것이 없다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-rp-k(늘 열린 통로가 K⁺ 쪽에 많다)와 rel-rp-pump(펌프가 분포를 지킨다)는 정의에 없는 기제를 보탠다.",
+        "suggest": "정의에서 분극 상태의 서술을 빼고 명제가 맡게 한다."
+      },
+      {
+        "card_id": "bio-saltatory-conduction",
+        "relation_id": "rel-salt-node",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '말이집에 덮이지 않은 랑비에결절에서만 활동전위가 생겨 신호가 결절에서 결절로 건너뛰며 옮겨 가는 전도 방식' 이고 명제는 '말이집이 덮인 자리에서는 활동전위가 생기지 않고 랑비에결절에서만 생긴다' 다. 정의의 앞절을 부정형으로 되받은 것뿐이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나가고, bio-myelinated-and-unmyelinated-nerve 의 rel-mun-where('민말이집신경에서는 활동전위가 막을 따라 이어서 생기고, 말이집신경에서는 랑비에결절에서만 건너뛰어 생긴다')와도 겹친다 — 이 단원에서 카드를 건너뛰어 가장 많이 겹치는 명제 짝이다.",
+        "suggest": "정의를 줄여 명제가 맡게 할지, 이 사실을 rel-mun-where 에 맡길지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "bio-sodium-potassium-pump",
+        "relation_id": "rel-pump-direction",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 'ATP의 에너지를 써서 Na⁺은 세포 밖으로, K⁺은 세포 안으로 늘 같은 방향으로 옮기는 세포막의 운반 장치' 이고 명제는 '이 펌프는 Na⁺을 세포 밖으로 퍼내고 K⁺을 세포 안으로 들여온다' 다. 두 이온이 가는 방향이 정의에 그대로 있고 보탠 것이 없다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-pump-energy(통로와 달리 농도 기울기와 상관없다)는 정의에 없는 대비를 보탠다.",
+        "suggest": "정의에서 두 이온의 방향을 빼고 명제가 맡게 한다."
+      },
+      {
+        "card_id": "bio-spinal-reflex",
+        "relation_id": "rel-sr-path",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '감각신호가 대뇌에 닿기 전에 척수가 명령을 내려 일어나는 반응' 이고 명제는 '척수반사에서는 감각신호가 대뇌까지 올라가기 전에 척수에서 곧바로 명령이 나간다' 다. 보탠 것은 '곧바로' 라는 부사뿐이다. 같은 카드의 rel-sr-fast(경로가 짧아 빠르다)·rel-sr-protect(몸을 덜 다친다)는 정의에 없는 귀결을 보탠다.",
+        "suggest": "정의를 줄여 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-target-cell",
+        "relation_id": "rel-tc-selective",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 '혈액을 타고 온몸을 돌던 호르몬이 이 세포에서만 작용을 일으킨다' 와 명제 '호르몬은 온몸을 돌아도 그 호르몬의 표적세포에서만 반응을 일으킨다' 가 같은 말이다. 더 무거운 것은 bio-hormone 의 rel-hor-transport 와도 사실상 같은 명제라는 점이다 — 둘 다 invertible: true 이고 inverted_text 도 '표적세포에만 퍼지지만 반응은 온몸에서' 로 닮았다. 메인이 넘긴 얇은 카드 다섯 가운데 하나인데, 이 카드는 명제 수보다 겹침이 문제다. 나머지 둘도 bio-hormone 과 나란히 선다(rel-tc-sensitive '혈액 속 농도가 매우 낮아도 표적세포에서는 반응이 나타난다' ↔ rel-hor-amount '표적세포는 아주 적은 양의 호르몬에도 반응하므로…'). 세 명제가 모두 교과서 90쪽 한 문단에서 나왔고 그 문단은 bio-hormone 도 함께 쓴다.",
+        "suggest": "이 카드를 bio-hormone 에 합칠지 따로 둘지 카드 단위로 먼저 정한다. 따로 둔다면 bio-hormone 과 겹치지 않는 내용을 명제로 세워야 한다."
+      },
+      {
+        "card_id": "bio-vaccine-principle",
+        "relation_id": "rel-vp-content",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '약하게 만들거나 죽인 병원체, 또는 그 일부를 항원으로 넣어 기억세포를 미리 만들어 두는 예방 방법' 이고 명제는 '백신에는 독성을 약하게 만들거나 죽인 병원체, 또는 병원체의 일부가 항원으로 들어 있다' 다. 정의의 앞절과 같은 말이고 보탠 것은 '독성을' 뿐이다. 같은 카드의 rel-vp-order(접종 때 1차, 감염 때 2차)와 rel-vp-limit(항원 구조가 바뀌면 어렵다)은 정의에 없는 것을 보탠다.",
+        "suggest": "정의에서 백신에 담기는 것을 빼고 명제가 맡게 한다."
+      },
+      {
+        "card_id": "bio-virus",
+        "relation_id": "rel-vir-structure",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '핵산을 단백질 껍질이 감싼 모습으로만 존재하는 병원체. 세포의 짜임을 갖추지 못해…' 이고 명제는 '바이러스는 세포의 구조 없이 핵산과 그 겉을 싼 단백질 껍질로만 이루어져 있다' 다. 정의의 두 조각을 한 문장으로 합친 것뿐이다. 같은 카드의 rel-vir-damage(숙주세포를 부수어 병을 일으킨다)·rel-vir-prevent(항바이러스제의 한계)는 정의에 없는 것을 보탠다.",
+        "suggest": "정의를 줄여 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "bio-action-potential",
+        "relation_id": "rel-ap-peak",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "★메인이 넘긴 항목 (2) 가운데 활동전위 쪽이다. 이 명제('탈분극으로 막전위는 약 +35 mV까지 올라갔다가 Na⁺ 통로가 닫히면서 내려가기 시작한다')는 invertible: false 이고 invertible_reason 이 '값과 시점을 밝힌 서술이라 뒤집을 방향이 없다' 인데, 같은 단원의 같은 꼴 명제는 반대로 판정돼 있다 — bio-resting-potential 의 rel-rp-value('신경세포의 휴지전위는 약 -70 mV이며, 이는 안쪽 전위가 바깥쪽보다 낮다는 뜻이다')는 invertible: true 이고 inverted_text 가 '약 +70 mV이며 … 높다는 뜻이다' 다. 값을 밝힌 서술도 뒤집을 방향이 있다는 것을 같은 단원이 스스로 보이고 있으므로 이 명제의 invertible_reason 은 그대로 두기 어렵다. 판정 자체(false)는 결함으로 올리지 않았다 — bio-3·cell 계열과 같은 기준으로, 뒤집으면 거짓인데 false 로 내린 자리는 문항이 하나 줄어들 뿐 학생에게 오개념을 심지 않는다. 걸리는 것은 두 카드의 기준이 어긋난다는 점이고, 어느 쪽으로 맞출지는 판단이 갈려 C8 로 올린다. 덧붙여 메인이 말한 '활동전위의 실무율' 은 이 단원 카드 68장의 명제 248개·오개념 136개 어디에도 '실무율' 이라는 말로 나타나지 않고 교과서 원문(68~129쪽)에도 없다 — 실무율에 가장 가까운 rel-ap-threshold('막전위가 역치전위까지 올라야 활동전위가 생기고, 거기에 못 미치면 생기지 않는다')는 오히려 invertible: true 이고, 뒤집으면 반드시 거짓이 되므로 그 판정은 옳다.",
+        "suggest": "값을 밝힌 명제의 invertible 기준을 rel-rp-value 쪽으로 맞출지 이쪽으로 맞출지 한 번에 정한다. 판정을 바꾸지 않더라도 invertible_reason 의 문구는 짝 명제와 어긋나지 않게 손본다."
+      },
+      {
+        "card_id": "bio-adaptive-immunity",
+        "relation_id": "rel-ai-two",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "★메인이 넘긴 항목 (3) 이다. 명제는 '후천적 면역은 T림프구가 감염된 세포를 없애는 세포성면역과 항체가 관여하는 체액성면역으로 나뉜다' 이고 invertible: false, invertible_reason 은 '갈래를 나눈 서술이라 맞바꿀 두 양이 없다' 다. 판정(false)은 그대로 두어도 된다고 본다 — 뒤집는다면 bio-cell-mediated-immunity 의 rel-cmi-vs-humoral('세포성면역은 감염된 세포를 직접 없애고, 체액성면역은 분비된 항체가 항원을 처리한다', invertible: true)의 inverted_text 와 거의 같은 OX 가 하나 더 생긴다. 겹침을 피해 낮춘 판단은 옳다. 걸리는 것은 사유다 — 이 문장에는 맞바꿀 두 양이 분명히 있다(T림프구가 세포를 없애는 쪽 ↔ 항체가 관여하는 쪽). 그러므로 '맞바꿀 두 양이 없다' 는 사실과 다르고, 적어야 할 것은 '같은 대비를 rel-cmi-vs-humoral 이 이미 맡아 OX 가 겹친다' 다. invertible_reason 은 D1 이 읽는 필드가 아니라 사람이 읽는 필드이므로 학생에게 곧바로 해가 가지는 않으나, 이 사유가 그대로 남으면 뒤에 같은 꼴을 만났을 때 기준이 흔들린다. 판정을 바꿀 일인지 사유만 고칠 일인지는 갈려서 C8 로 올린다.",
+        "suggest": "판정은 두고 invertible_reason 을 겹침 때문이라고 고칠지, 두 카드 가운데 어느 쪽이 이 대비를 맡을지부터 정할지 메인이 고른다."
+      },
+      {
+        "card_id": "bio-blood-transfusion",
+        "relation_id": "rel-tf-emergency",
+        "verdict": "uncertain",
+        "checks": [
+          5
+        ],
+        "reason": "★메인이 넘긴 항목 (2) 가운데 수혈 쪽이다. invertible: false 판정은 옳다 — '출혈이 심한 응급 상황에서는 혈액형 검사 결과가 나오기 전에 O형 혈액을 소량 수혈하기도 한다' 는 예외를 드는 서술이라 맞바꿀 두 양이 없고, 근거도 교과서 110쪽 탐구 물음('응급실에서는 … 우선 O형의 혈액을 소량 수혈하기도 한다')에 그대로 있다. 걸리는 것은 다른 자리다. 같은 카드의 오개념이 '양만 적으면 어떤 혈액형이든 서로 수혈할 수 있다' 이고 why_wrong 이 '응집원과 응집소가 짝을 이루면 엉김이 일어난다. 그래서 혈액형을 맞춰야 한다' 인데, 이 카드는 바로 옆에서 O형만은 소량이면 된다고 말한다. 두 문장은 논리적으로 어긋나지 않지만('어떤 혈액형이든' 과 'O형만' 은 다르다) 학생이 읽으면 같은 낱말('소량')을 두고 반대 방향을 가리키는 것으로 보인다. 둘을 갈라 주는 까닭 — O형 적혈구에는 응집원이 없다 — 이 이 카드의 어느 명제에도 없다. 그 사실을 말하는 명제는 옆 카드에 있다(bio-blood-agglutination-and-typing 의 rel-agg-both '어느 쪽에서도 엉기지 않으면 O형이다'와 그 오개념의 why_wrong '응집원이 없는 O형이면'). 교과서는 이 자리를 물음으로 남겨 두었고(110쪽 '이처럼 다른 혈액형인 사람에게 O형의 혈액을 소량 수혈이 가능한 이유를 이야기해 보자') 카드가 그 답을 담지 않았다. 결함으로 확정할지는 갈려서 C8 로 올린다.",
+        "suggest": "O형에 응집원이 없다는 까닭을 이 카드가 명제로 담을지, 오개념 쪽 문구를 손볼지 정한다. 둘 다 하지 않는다면 두 문장이 나란히 나가는 것을 감수할지 사람이 정한다."
+      },
+      {
+        "card_id": "bio-comparison-of-nervous-and-endocrine-system",
+        "relation_id": "rel-ne-together",
+        "verdict": "uncertain",
+        "checks": [
+          5
+        ],
+        "reason": "★메인이 넘긴 항목 (1) 가운데 이 카드의 답이다. 명제 셋 자체에는 결함을 찾지 못했다 — rel-ne-speed·rel-ne-range 는 두 체계의 속도·지속 시간·범위를 맞바꾸는 꼴이라 invertible: true 가 옳고, 근거도 교과서 91쪽('신호의 전달 방식과 효과의 지속 시간은 매우 다르다')에 있다. 걸리는 것은 정의와 명제 집합이 어긋난다는 점이다. definition 이 '신호를 나르는 길·속도·미치는 범위·효과가 남는 시간이라는 네 축으로 두 조절 체계를 갈라 보는 정리' 로 축을 넷이라고 못 박아 놓았는데, 명제는 속도와 지속 시간(rel-ne-speed), 범위(rel-ne-range) 두 축만 받고 첫째 축인 '신호를 나르는 길'(신경 대 혈액)을 따로 받는 명제가 없다. 그 자리에 들어와 있는 것이 rel-ne-together('두 체계가 함께 작용해야 몸 안의 상태가 일정한 범위에서 지켜진다')인데 이것은 대비가 아니라 협동을 말하는 명제라 정의가 내건 틀 밖에 있다. 곧 카드가 스스로 약속한 네 축 가운데 하나가 비고, 대신 약속에 없던 것이 하나 들어왔다. 명제를 더 세울 지면이 없다는 것(근거가 91쪽 한 쪽뿐)이 원인이므로 정의를 명제가 실제로 받는 만큼으로 줄이는 쪽이 답일 수 있다 — 그 판단은 C2 와 메인의 몫이라 여기서 확정하지 않는다.",
+        "suggest": "정의의 '네 축' 을 명제가 실제로 받는 만큼으로 줄일지, '신호를 나르는 길' 축을 받는 명제를 세울지 카드 단위로 정한다. rel-ne-together 를 남길지도 함께 본다."
+      }
+    ],
+    "stats": {
+      "ok": 203,
+      "defect": 41,
+      "uncertain": 4
+    }
+  },
+  "notes": [
+    "verified_by 는 어느 명제·오개념에서도 읽기만 했다. 명제 248개와 오개념 136개 모두 pending 이고 이 보고서는 그 필드를 바꾸지 않는다. 카드 파일도 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 고치지 않았다.",
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 68장 전체에 --unit bio-2 로 돌렸다. 지적 20건이 나왔는데 **전부 같은 사유**다 — \"'12생과02-05'(또는 02-07)는 판본 대조가 끝나지 않았다(교사 확정)\". 스크립트의 CONFIRMED 상수가 '일치' 하나뿐이라 2026-09-10 교사가 총론 판본으로 확정하며 붙인 crosscheck: '교사 확정' 을 미확정으로 읽는다. standards.yaml 의 note 가 '★불일치였던 2건(02-05·02-07)을 2026-09-10 교사가 총론 판본으로 확정했다' 라고 적어 두었고 메인의 지시도 같으므로 이 20건은 카드 결함이 아니다. 나머지 세 검사(태그 0개·실재하지 않는 코드·영역 불일치)는 지적이 한 건도 없다 — 68장이 모두 영역 02 코드만 달고 있고 영역 01·03 코드는 어느 카드에도 없다. 스크립트를 고치는 것은 이 에이전트의 일이 아니다(공용 자산). 다만 이 상태로 두면 bio-2 는 앞으로도 매번 20건을 흘리므로 CONFIRMED 를 {'일치','교사 확정'} 로 넓힐지는 메인이 판단할 자리다.",
+    "C5 판정 기준(bio-3·cell-3 과 같게 유지): 카드가 붙인 코드의 성취기준 전문에 그 카드의 명제들이 말하는 대상이 들어 있으면 ok, 대상은 맞는데 코드가 다르거나 모자라면 retag, 어느 전문에도 대상이 없으면 이탈 후보로 보았다. **이탈(out_of_scope) 은 0건이다** — 설계서 §4.3 C5 의 C1 복귀 조건(2건 초과)에 걸리지 않는다. 이 단원은 교과서 중단원 여섯과 성취기준 일곱이 거의 일대일로 맞물려서다. 각 중단원 머리의 학습 목표가 성취기준 전문을 그대로 빌려 쓴다: 01 신경신호의 전달(72쪽) '축삭돌기를 통한 신경신호의 전도 과정을 모식도로 표현할 수 있다 / 시냅스를 통한 신경신호의 전달 과정을 이해하고, 약물이 시냅스전달에 영향을 미치는 사례를 조사하여 발표할 수 있다' → 02-01·02-02 둘, 02 사람의 신경계(82쪽) '사람 신경계의 구조와 기능 / 중추신경계와 말초신경계의 특징' → 02-03, 03 내분비계와 항상성 유지(90쪽) '내분비계와 호르몬의 기능 / 내분비계와 신경계의 작용으로 우리 몸의 항상성이 유지되는 과정을 추론' → 02-04, 04 우리 몸의 방어작용(98쪽) '병원체의 종류와 특징 / 우리 몸의 방어작용을 선천성면역과 후천성면역으로 구분하여 설명' → 02-05, 05 항원항체 반응(108쪽) '항원항체반응의 특이성 / 혈액의 응집반응의 원리를 이용하여 혈액형을 판정' → 02-06, 06 감염성질환의 예방(114쪽) '감염성질환의 예방 방법을 이해하고, 백신의 필요성을 설명 / 다양한 종류의 백신을 조사하고, 백신의 특징과 작용 원리를 설명' → 02-07. 카드 68장의 topic_id 도 이 여섯 중단원 안에 모두 든다.",
+    "★C5 retag 5건이 어디서 생겼는지: 카드 68장의 **카드 층 curriculum 은 C1 후보(bio-2.candidates.json)의 값과 68장 모두 한 글자도 다르지 않다.** 어긋남은 명제 층에서 생겼다 — C2 가 명제마다 relation.curriculum 을 새로 달면서 카드 층에 없는 코드를 쓴 자리가 넷(bio-antibody·bio-antigen·bio-nerve-impulse-conduction·bio-neurotransmitter), 카드 층에만 있고 어느 명제도 받지 않는 코드가 하나(bio-autonomic-nervous-system 의 12생과02-04)다. 곧 C2 의 명제 층 태깅이 C1 의 카드 층 태깅보다 촘촘한데 카드 층이 따라 올라가지 않았다. 다섯 자리 모두 명제 쪽 판단이 맞다고 보아 카드 층을 명제 층에 맞추자고 적었다(bio-autonomic-nervous-system 만 방향이 반대다). 이것은 카드 내용의 결함이 아니라 두 층의 태그를 맞추는 일이라, C1 복귀가 아니라 C2 의 손질로 끝날 자리다.",
+    "★메인이 물은 '활동전위의 이온 기작' 은 이탈이 아니다. bio-membrane-potential·bio-resting-potential·bio-depolarization·bio-repolarization-and-hyperpolarization·bio-action-potential·bio-ion-channel·bio-sodium-potassium-pump 일곱 장은 모두 교과서 74~75쪽 소주제 2 '신경신호의 발생 원리' 본문에서 나왔고, 그 쪽이 속한 중단원 01 의 학습 목표가 곧 02-01 전문이다. 성취기준 전문의 '신경 세포의 구조와 기능을 이해하고' 가 이온 통로·펌프·막전위를 받고, '전도 과정을 모식도로 표현할 수 있다' 가 그 위에 선다. 값도 교과서에 그대로 있다 — 휴지전위 약 -70 mV(74·75·81쪽), 활동전위 꼭대기 약 +35 mV(75·81쪽). 단원 정리 문항(124쪽)도 활동전위 그래프의 네 구간을 묻는다. 상위 과목(세포와 물질대사) 몫으로 넘어간 대목은 찾지 못했다 — 다만 concept_key 하나가 그 과목 카드와 부딪친다(아래 concept_key 항목).",
+    "★메인이 물은 '혈액형 판정' 도 이탈이 아니다. 02-06 전문이 '혈액의 응집 반응 원리를 이용하여 혈액형을 판정할 수 있다' 로 판정을 이름으로 요구한다. bio-abo-blood-group·bio-blood-agglutination-and-typing·bio-blood-transfusion·bio-antigen-test 넷은 109~112쪽(소주제 2 '항원항체반응의 활용')에서 나왔고 그 안에 혈액형 판정 탐구(110쪽)와 자가진단 키트(111쪽)가 있다. 응급 상황의 O형 소량 수혈(rel-tf-emergency)도 110쪽 탐구 물음에 그대로 있다. 유전(ABO 대립유전자·혈액형 유전)까지 내려간 카드는 없다 — 그 자리가 이 단원에서 상위 과목이나 Ⅲ단원으로 넘어갈 수 있는 자리였는데 넘어가지 않았다.",
+    "★C5 uncertain 2건의 뜻: bio-infectious-and-noninfectious-disease 는 명제 하나(rel-idn-causes)가 영역 02 어느 전문에도 걸리지 않고 그 내용의 성취기준 자리가 Ⅰ단원의 12생과01-05 라서, bio-infection-route 는 카드 전체가 02-05 와 02-07 사이에 끼어 어느 전문에도 정면으로 걸리지 않아서다. 둘 다 교과서 본문(98쪽·114쪽)에 있고 이 단원 카드로 둘 만하므로 out_of_scope 로 올리지 않았다. 억지로 태그를 맞춰 이탈 수를 줄인 것이 아니라, 두 자리 모두 '태그를 무엇으로 바꿔야 하는지' 가 아니라 '성취기준과 교과서가 어긋나는 자리' 여서 uncertain 이 맞는 판정이라고 보았다. 두 건을 out_of_scope 로 세더라도 2건이라 C1 복귀 조건(2건 초과)에는 걸리지 않는다.",
+    "★교과서 표기 대응(메인이 특히 보라고 한 항목) — 실측 결과. 교과서는 68~129쪽에서 '선천성면역' 을 12회, '후천성면역' 을 15회 쓰고 '선천적/후천적' 은 한 번도 쓰지 않는다. 카드 68장은 반대로 표제어와 본문에서 '선천적 면역'·'후천적 면역' 만 쓴다. 교과서 표기가 카드에 나타나는 자리는 **딱 두 곳**이다 — bio-innate-immunity 의 definition('교과서의 선천성면역과 같은 말이고, 비특이적 면역이라고도 한다')과 aliases['선천성면역','비특이적 면역'], bio-adaptive-immunity 의 definition('특이적 면역이라고도 하며, 교과서 표기 후천성면역이 이 말이다')과 aliases['후천성면역','특이적 면역']. concept-writer 가 말한 대로 대응이 실제로 카드에 있다. **다만 그 대응은 두 장에만 있다.** 두 말을 쓰는 카드는 여덟 장인데(bio-phagocytosis rel-pha-nonspecific '선천적 면역에 든다', bio-inflammatory-response 오개념 '선천적 면역이다', bio-physical-barrier-of-skin-and-mucosa 오개념 '선천적 면역의 방어벽', bio-antigen definition, bio-lymphocyte definition, bio-cell-mediated-immunity·bio-humoral-immunity 의 상위 개념 표기, bio-innate-immunity rel-ii-vs-adaptive) 나머지 여섯 장에는 대응이 없다. 학생이 D1 문항이나 링크를 타고 bio-phagocytosis 만 보면 '선천적 면역' 만 만나고, 교과서 103쪽에서는 '선천성면역' 만 만난다. 두 낱말이 한 화면에 함께 놓이는 것은 bio-innate-immunity·bio-adaptive-immunity 두 장을 열었을 때뿐이다. 이것을 카드 결함으로 올리지는 않았다 — 표기 정책(docs/naming_policy.md)이 요구하는 것은 표제어를 현행 교육과정 표기로 두고 구표기를 aliases 로 검색만 허용하는 것이고, 두 카드가 그대로 하고 있다. 남은 위험은 표시 층에 있다: aliases 가 화면에 보이지 않으면 대응도 보이지 않는다. 앱이 alias 를 어떻게 보여 줄지(Design.md)와 D1 이 지문에 어느 표기를 쓸지는 이 보고서 밖의 결정이라 메인에 넘긴다. 참고로 '비특이적 면역/특이적 면역' 은 교과서도 102쪽에서 두 이름을 나란히 놓아(비특이적 2회, 특이적 3회) 카드와 어긋나지 않는다.",
+    "C6 검사 2(invertible): invertible: true 인 명제 **95개를 하나씩 뒤집어 읽었다. 뒤집은 문장이 반드시 거짓이 되지 않는 것으로 확정한 명제는 없다.** form.type 이 classification 인데 true 인 것이 이 단원에 가장 많은데(rel-abo-where·rel-abo-roles·rel-abo-pairs·rel-at-heart·rel-at-glucose·rel-ab-blood·rel-ag-vs-antibody·rel-ans-situation·rel-ans-ganglion·rel-bac-vs-virus·rel-bs-roles·rel-cmi-vs-humoral·rel-cns-brain-vs-cord·rel-cb-roles·rel-cc-gray·rel-cer-layers·rel-ne-speed·rel-ne-range·rel-gl-where·rel-fun-vs-bacterium·rel-hor-excess·rel-hi-plasma-vs-memory·rel-idn-split·rel-ii-vs-adaptive·rel-ig-source·rel-ig-effect·rel-ig-liver·rel-lym-differentiate·rel-lym-recognize·rel-cond-na-k·rel-ncf-direction·rel-neu-parts·rel-nt-autonomic·rel-ons-roles·rel-pat-drug·rel-pns-direction·rel-bar-skin-vs-mucosa·rel-pro-vs-bacterium·rel-sns-vs-ans·rel-sc-layers·rel-sc-roots·rel-vt-live-killed·rel-vir-vs-bacterium 등), 모두 두 이름과 두 속성을 맞바꾸는 꼴이라 뒤집으면 반드시 거짓이 된다 — type 만 보면 오판정처럼 보이나 뒤집어 읽으면 ok 다. conditional 인데 true 인 것(rel-ap-threshold·rel-ap-order·rel-spec-fit·rel-atest-read·rel-agg-pair·rel-agg-test·rel-agg-both·rel-tf-match·rel-hm-external·rel-hor-transport·rel-rt-rules·rel-ic-passive·rel-mun-split·rel-mun-where·rel-mun-speed·rel-ncf-order·rel-rp-polarized·rel-rp-value·rel-salt-node·rel-pump-direction·rel-syn-oneway·rel-tc-selective·rel-ps-graph·rel-vp-order)도 조건과 귀결을 맞바꾸는 꼴이라 모두 ok 다. 가장 오래 붙들었던 것은 셋이다. (가) rel-hm-external — inverted_text 가 '몸 안의 체온이 크게 오르내려도 바깥 온도는 좁은 범위에 머문다' 로 변하는 쪽과 지켜지는 쪽을 통째로 맞바꾼 문장이라 '반드시 거짓' 이라기보다 '앞뒤가 뒤바뀌어 말이 되지 않는다' 에 가깝다. bio-3 의 rel-evd-biogeography 를 ok 로 둔 것과 같은 기준으로 ok 로 두었다. (나) rel-dep-na-in — inverted_text('Na⁺ 통로가 열려 Na⁺이 세포 밖으로 나가면 막 안쪽이 음전하 쪽으로 기울어 막전위가 내려간다')가 이온이 가는 방향과 막전위가 가는 방향을 함께 뒤집어서 문장 안의 인과는 그대로 성립하고 전제만 거짓이다. OX 지문으로는 거짓으로 판정되므로 ok 로 두었으나, 뒤집을 때 한 축만 뒤집는 것과 두 축을 함께 뒤집는 것이 다른 문장을 만든다는 것은 D1 이 알아야 할 자리다. (다) rel-cns-brain-vs-cord — findings 에 defect 로 올렸다. 뒤집은 문장 전체는 거짓이지만 그 앞절('척수는 정보를 처리해 명령을 내보내고')은 척수반사에서 실제로 일어나는 일이라, 오답 지문의 절반이 참인 문장이 만들어진다. 반대 방향(뒤집으면 거짓인데 invertible 을 false 로 내린 것)은 bio-3 과 같은 기준으로 결함으로 올리지 않았다 — rel-abo-four·rel-ai-two·rel-cc-areas·rel-vt-recombinant·rel-sns-no-ganglion 등 여럿이다.",
+    "★메인이 넘긴 항목 (2) '일부러 접은 invertible' 셋에 대한 답: (가) 활동전위의 실무율 — 그런 명제가 없다. 카드 68장 어디에도 '실무율' 이라는 말이 없고 교과서 원문에도 없다. 활동전위 카드에서 invertible 을 false 로 접은 것은 rel-ap-channels 와 rel-ap-peak 이고, 실무율에 가장 가까운 rel-ap-threshold 는 true 이며 그 판정은 옳다. rel-ap-peak 는 findings 에 uncertain 으로 올렸다(같은 꼴의 rel-rp-value 가 true 라 기준이 어긋난다). (나) 수혈의 O형 소량 수혈 — 접은 것이 옳다. 예외를 드는 서술이라 맞바꿀 두 양이 없다. 다만 다른 것이 걸려 uncertain 으로 올렸다(오개념과 나란히 놓았을 때 까닭이 비어 있다). (다) 뇌 부위별 기능 나열 — 접은 것이 옳다. 이 단원은 두 항이면 맞바꿔 뒤집고(rel-bs-roles 중간뇌↔숨골, rel-cb-roles 소뇌↔대뇌, rel-cer-layers 겉질↔속질) 셋 이상이면 접는(rel-cc-areas 감각·운동·연합 영역, rel-lym-t-kinds, rel-cc-lobes 네 엽) 기준을 일관되게 지키고 있다. 셋 이상을 맞바꾸면 어느 짝이 틀렸는지가 흐려져 OX 로 쓰기 어려우므로 이 기준은 타당하다.",
+    "★메인이 넘긴 항목 (1) '명제 3개에 그친 카드 다섯' 에 대한 답 — 다섯 장을 갈라 보면 셋으로 나뉜다. (가) **명제 자체에 결함이 있는 것**: bio-target-cell(rel-tc-selective 가 정의 되풀이이자 bio-hormone 의 rel-hor-transport 와 같은 명제. 나머지 둘도 bio-hormone 과 나란히 서서 카드가 사실상 bio-hormone 의 부분집합이다), bio-antidiuretic-hormone(rel-adh-reabsorb 가 정의 되풀이이자 bio-osmotic-pressure-regulation 의 rel-op-urine 과 겹치고 오개념까지 닮았다), bio-herd-immunity(rel-herd-protect 가 정의 되풀이 — 정의는 117쪽 곁주를, 명제는 같은 쪽 본문을 받아 같은 말이 두 번 들어왔다). (나) **정의가 명제보다 넓게 내걸린 것**: bio-comparison-of-nervous-and-endocrine-system(정의가 네 축이라고 못 박았는데 명제는 두 축만 받는다 — findings 에 uncertain 으로 올렸다). (다) **명제 하나가 옆 명제와 겹쳐 실제로는 둘인 것**: bio-organization-of-nervous-system(rel-ons-two 가 정의와 겹치고 남는 부분은 rel-ons-roles 와 겹친다). 다섯 장 모두 '원천이 얇은 것뿐' 은 아니었다 — 지면이 좁을수록 정의가 그 지면을 통째로 삼키고 명제가 정의를 되받는 꼴이 나타났다. 근거 지면은 실제로 좁다(bio-target-cell 90쪽 한 쪽, bio-comparison 91쪽 한 쪽, bio-herd-immunity 117쪽 곁주와 본문 여섯 줄, bio-organization 82쪽 한 쪽, bio-antidiuretic-hormone 은 91·95쪽에 흩어져 있다).",
+    "C6 검사 3 판정 기준(bio-3·cell 계열과 같게 유지): 명제가 definition 의 구절을 되풀이하되 정의에 없는 귀결·수치·이름·기제를 보태면 ok, 보탬이 없거나 보탠 것이 같은 말의 다른 이름(동의어 치환)이면 defect 로 보았다. 이 기준으로 ok 로 둔 경계선 자리들: rel-dep-na-in(막 안쪽 전하가 기우는 기제를 보탠다), rel-ic-gated('막전위에 따라' 를 보탠다), rel-gl-where(호르몬·침·소화액이라는 분비물 이름을 보탠다), rel-fun-route(폐 질환이라는 귀결을 보탠다), rel-pro-route(모기·파리라는 이름을 보탠다), rel-cmi-select(보조·세포독성 두 T림프구를 보탠다), rel-hi-differentiate(보조 T림프구의 도움을 보탠다), rel-tr-balance(발생량과 발산량이 맞아떨어진다는 조건을 보탠다), rel-rp-value(-70 mV 가 안쪽이 낮다는 뜻이라는 해석을 보탠다), rel-lym-origin('미성숙 상태로' 를 보탠다), rel-pns-parts(뇌·척수에서 뻗어 나온다는 것을 보탠다), rel-sns-voluntary(대뇌 지배에서 마음대로 조절된다는 귀결을 끌어낸다), rel-mun-split(두 이름을 각 쪽에 묶는다). 판단이 갈렸던 것은 rel-sns-voluntary 와 rel-mun-split 이다 — 정의가 이미 말한 기준을 이름에 묶어 주는 것을 보탬으로 볼지가 문제였고, bio-3 에서 rel-art-jointed-legs·rel-ann-segments 를 ok 로 둔 것과 같은 기준으로 ok 로 두었다.",
+    "★C6 검사 3 의 결과가 이 단원의 가장 큰 무늬다 — **defect 41건 가운데 35건이 검사 3 이고, 35건 모두 같은 꼴이다: definition 이 두 문장이고 그 둘째 문장(또는 관형절)을 명제 하나가 통째로 되받는다.** 카드 68장의 definition 을 보면 55장이 두 문장 이상이다. C2 가 정의에 '한 줄 더' 를 적을 때마다 명제 하나가 갈 자리가 사라졌다. 그러므로 이 35건은 명제를 하나씩 고쳐서 될 일이 아니라 **정의를 어디까지 적을 것인가 하는 규칙의 문제**다. 고칠 방향은 두 가지인데 카드마다 다르다 — (가) 정의를 표제어를 가르는 최소한으로 줄이고 나머지를 명제로 내리는 쪽(bio-pathogen·bio-brainstem·bio-diencephalon·bio-cerebral-cortex 처럼 정의가 목록을 안고 있는 자리), (나) 명제를 갈음하는 쪽(bio-phagocytosis·bio-resting-potential 처럼 정의가 개념 자체를 이루어 줄이기 어려운 자리). 어느 쪽인지는 C2 와 메인이 정한다. 이 보고서는 고쳐 쓴 문장을 적지 않았다.",
+    "C6 검사 4 에서 되풀이해 나온 꼴은 bio-3·cell 계열과 같다 — 반증 근거가 이 명제가 아니라 다른 카드의 명제나 교과서 본문에 있는 경우다. findings 에 올린 것 말고도 다음 자리가 그렇다(무겁지 않아 findings 로 올리지 않았다): bio-depolarization 의 오개념 '탈분극이 일어나는 동안에도 막 안쪽은 계속 음전하를 띤다' 의 why_wrong 이 드는 '약 +35 mV' 는 이 카드에 없고 bio-action-potential 의 rel-ap-peak 에 있다. bio-humoral-immunity 의 'B림프구도 항원제시세포가 내건 항원만 알아볼 수 있다' 의 반증은 bio-lymphocyte 의 rel-lym-recognize 에 있다. bio-phagocytosis 의 '식세포작용을 하는 백혈구가 항체를 만들어 병원체를 없앤다' 의 반증(형질세포가 항체를 만든다)은 bio-humoral-immunity·bio-antibody 에 있다. bio-spinal-reflex 의 '무조건반사가 일어나면 그 자극을 아예 느끼지 못한다' 의 반증(감각 정보가 뒤이어 대뇌로 올라간다)은 이 단원 어느 명제에도 없다 — 교과서 86쪽에만 있다. bio-cerebral-cortex 의 '말하기나 읽기 같은 일은 대뇌 전체가 고르게 나눠 맡는다' 는 rel-cc-fmri 에 걸렸는데 rel-cc-areas 가 더 제자리다.",
+    "★D1 이 거의 같은 문항을 둘 만들 자리(중복). 명제 층: rel-hor-transport ↔ rel-tc-selective(둘 다 invertible: true, inverted_text 까지 닮았다), rel-salt-node ↔ rel-mun-where, rel-salt-speed ↔ rel-mun-speed(둘 다 true), rel-adh-reabsorb ↔ rel-op-urine(둘 다 true), rel-bac-vs-virus ↔ rel-vir-vs-bacterium(둘 다 true, 서로 거울상이다), rel-abo-roles ↔ rel-ab-blood(둘 다 true), rel-di-pituitary ↔ rel-heg-top, rel-nf-thyroxine ↔ rel-thy-steady, rel-ig-effect ↔ rel-at-glucose(둘 다 true). 오개념 층에서 사실상 같은 문장이 두 카드에 있는 자리: '인슐린과 글루카곤은 둘 다/모두 혈당량을 낮춘다'(bio-antagonism ← rel-at-glucose, bio-blood-glucose-regulation ← rel-bg-insulin), '타이록신이 많아지면 TSH 분비도 함께 늘어난다/많아진다'(bio-negative-feedback ← rel-nf-thyroxine, bio-thyroxine ← rel-thy-steady), '호르몬 분비를 총괄하는 가장 위쪽 중추는 뇌하수체다/대뇌다'(bio-diencephalon, bio-human-endocrine-gland-and-hormone), '소뇌도 뇌줄기를 이루는 한 부분이다 / 소뇌는 뇌줄기에 속한다'(bio-brainstem, bio-cerebellum), '교감신경과 부교감신경은 모든 기관에서 짝을 이뤄 반대로 작용한다 / 자율신경이 분포하는 모든 기관에서 길항작용이 일어난다'(bio-autonomic-nervous-system, bio-antagonism), '신경계는 몸 밖에서 온 자극만 다룬다 / 말초신경계는 몸 밖에서 온 자극만 중추로 전한다'(bio-organization-of-nervous-system, bio-peripheral-nervous-system), '염증반응/식세포작용은 특정 병원체에 대해서만 선택적으로 일어난다'(bio-inflammatory-response, bio-phagocytosis). 이 가운데 결함으로 올린 것은 받쳐 주는 명제가 한쪽에만 있는 자리 하나(rel-ans-antagonism)뿐이고, 나머지는 둘 다 제자리라 결함이 아니다. 그러나 D1·D2 가 폐기 기준을 세울 때 볼 목록이다.",
+    "★concept_key 겹침(G2·G3 소관, 이 보고서는 판단하지 않는다). bio-2 의 키 68개 가운데 여섯이 다른 단원 카드와 겹친다. 다섯은 **이미 알고 걸어 둔 것**이다 — output/concepts/bio-2.candidates.json 의 notes 가 'Na⁺-K⁺ 펌프는 메인 지시대로 concept:active-transport 를 재사용하고 cell-active-transport 를 same_candidate 로 달았다. 다만 표제어가 능동수송이 아니라 그 구체적 장치라서, 한 개념으로 볼지 별도 키(concept:sodium-potassium-pump)로 갈라 세울지는 G3 에서 사람이 확정해야 한다' 라고 적어 두었고, concept:pathogen·concept:antigen·concept:antibody·concept:antigen-test(isci2-3 과 겹침)도 같은 방식으로 same_candidate 가 달려 있다. C5·C6 이 여기에 보탤 판단은 없다. 다만 두 가지를 적어 둔다. (가) **여섯째 겹침 concept:homeostasis 는 아무 데도 적혀 있지 않다** — bio-1 의 bio-homeostasis(12생과01-01)와 bio-2 의 bio-homeostasis(12생과02-04)가 카드 id 까지 같은데 candidates 의 same_candidate 에 없다. 두 카드의 rel-homeo-range 와 rel-hm-range 는 사실상 같은 문장이라 D1 이 같은 OX 를 두 번 만든다(findings 의 rel-hm-range 항목 참조). (가) 쪽이 G3 에 올라가야 할 새 항목이다. (나) **same_candidate 는 카드 파일로 넘어오지 않았다** — 후보 다섯에 달려 있던 이 필드가 output/concepts/bio-2/ 의 카드 68장에는 하나도 없다(카드의 links 는 모두 단원 안을 가리키고 깨진 링크는 없다). G2 가 단원 밖 겹침을 찾을 때 카드가 아니라 candidates 를 함께 읽어야 한다는 뜻이다. 문자열이 아니라 concept_key 로 거는 규칙(CLAUDE.md §9-5)은 그대로 지켜져 있다.",
+    "★사전 관련 관찰(고치지 않았다, 제안만 적는다): docs/homonyms.yaml 의 '전위' 항목에는 sense 가 둘뿐이다 — concept:electric-potential(물리학)과 concept:dislocation(화학). 이 단원은 '전위' 를 막전위·휴지전위·활동전위·역치전위로 쓰고 카드 셋이 homonym_flag: true 로 표시돼 있다(bio-action-potential·bio-membrane-potential·bio-resting-potential). 생명과학의 막전위 계열이 세 번째 sense 인데 사전에 없다. 표제어가 '전위' 인 카드는 없어 지금 당장 링크가 잘못 걸릴 자리는 없으나, G2 가 문자열로 후보를 모을 때 걸릴 자리다. bio-3 이 '계' 에서 같은 것을 보고했다. 등록은 사람이 하는 일이므로 G3 사람 게이트로 올린다(CLAUDE.md §9-3).",
+    "선수 개념(curriculum.prerequisites_outside_unit)에 적은 concept_key 는 docs/concept_registry.yaml 에 이미 있는 키만 골랐다 — 이 단원이 기대는 개념 가운데 사전에 키가 있는 것은 concept:osmotic-pressure 와 concept:enzyme 둘뿐이다. ATP·세포막·인지질 이중층·확산·농도 기울기·능동수송·백혈구·적혈구·혈장·물질대사·단백질·핵산·포도당·글라이코젠은 사전에 키가 없어 적지 않았다. 새 키를 만드는 것은 G3 사람 게이트의 일이다. bio-2 카드 68장은 모두 registry_status: new 이고, 68개 키 가운데 사전에 등록된 것은 하나도 없다.",
+    "오개념 136개는 전부 source: llm 이다 — docs/misconceptions.yaml 이 concepts: [] 로 비어 있어 사전과 대조할 것이 없었다. 검사 4 는 명제와 오개념이 맞물리는지만 보았고, 오개념 자체가 실제로 학생에게 흔한 것인지는 대조하지 못했다. 그 대조를 했다고 적지 않는다. 136개 전부 C8 게이트에서 우선 검토 대상이다(misconceptions.yaml 머리말).",
+    "<track>-facts 스킬 대조는 하지 못했다. .claude/skills 에 있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯이고 bio-facts 가 없다. 대조하지 못하고 넘어간 항목은 특히 이 넷이다 — (가) 시냅스전달이 언제나 탈분극을 일으키는가(rel-syn-cross, findings 에 구조 문제로만 올렸다), (나) 활동전위 꼭대기 값 약 +35 mV 와 휴지전위 약 -70 mV(rel-ap-peak·rel-rp-value, 교과서 75·74쪽에 그대로 있어 원문 대조만 했다), (다) 라이소자임이 세균의 세포벽을 분해한다(rel-bar-lysozyme, 교과서 102쪽 곁주에 있다), (라) 자가진단 키트 대조선의 작동(rel-atest-control, 교과서 111쪽에 있다). 넷 다 진위가 걸린 자리라 손대지 않았고 흉내 내지 않았다. 이 보고서가 교과서 원문(output/source/bio-2/text.jsonl, 62쪽)을 인용한 대목은 명제가 근거를 가졌는지 보기 위한 것이지 진위를 확정하기 위한 것이 아니다. 진위는 C8 에서 사람이 본다(CLAUDE.md §9-7).",
+    "이 보고서는 curriculum 절과 relations 절을 함께 채웠다. output/validation/bio-2.report.json 에는 앞선 절이 없었으므로(파일이 없었다) 병합할 것이 없었다."
+  ]
+}

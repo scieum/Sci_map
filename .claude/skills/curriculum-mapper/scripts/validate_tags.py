@@ -23,7 +23,13 @@ from _common import ROOT, find_unit, load_backlog  # noqa: E402
 
 STANDARDS = Path(__file__).resolve().parents[1] / "references" / "standards.yaml"
 # 단원 번호(mate-1) → 성취기준 영역 번호(01). 백로그 순서와 교육과정 영역 순서가 같다.
-CONFIRMED = "일치"
+# 쓸 수 있는 crosscheck 값 두 가지.
+#   일치      — 스크립트가 두 판본을 대조해 같다고 본 것
+#   교사 확정 — 판본이 갈렸고 **사람이 어느 쪽인지 정한** 것 (2026-09-10 부터)
+# 하나만 두었더니 사람이 이미 확정한 코드를 미확정으로 읽어 bio-2 에서 20건,
+# cell 계열에서 수십 건을 헛되이 지적했다. 확정의 근거가 스크립트냐 사람이냐가
+# 다를 뿐 둘 다 "써도 되는" 코드다.
+CONFIRMED = {"일치", "교사 확정"}
 
 
 def load_standards() -> dict[str, dict]:
@@ -54,7 +60,7 @@ def check_card(card: dict, standards: dict, unit_id: str | None) -> list[str]:
         if std is None:
             problems.append(f"{card_id}: '{code}' 는 references/standards.yaml 에 없는 코드다")
             continue
-        if std.get("crosscheck") != CONFIRMED:
+        if std.get("crosscheck") not in CONFIRMED:
             problems.append(
                 f"{card_id}: '{code}' 는 판본 대조가 끝나지 않았다"
                 f"({std.get('crosscheck')}). 사람이 NCIC 원문으로 확정하기 전에는 쓰지 않는다")
