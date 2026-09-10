@@ -1,0 +1,108 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-gamete-formation-and-continuity-of-life",
+  "concept_key": "concept:gamete-formation-and-continuity-of-life",
+  "registry_status": "new",
+  "term": "생식세포 형성과 생명의 연속성",
+  "notation": {
+    "hanja": "生殖細胞 形成과 生命의 連續性",
+    "hanja_gloss": "生 날 생 · 殖 불릴 식 · 細 가늘 세 · 胞 세포 포 · 形 모양 형 · 成 이룰 성 · 生 날 생 · 命 목숨 명 · 連 이을 련 · 續 이을 속 · 性 성품 성",
+    "english": "gamete formation and continuity of life"
+  },
+  "definition": "염색체 수가 절반인 생식세포를 만들고 그 둘이 수정하기에, 세대가 바뀌어도 염색체 수가 그대로 이어지는 일.",
+  "relations": [
+    {
+      "id": "rel-gam-halved",
+      "text": "생식세포의 염색체 수가 체세포의 절반이라야 수정으로 태어난 자손이 부모와 같은 수를 가진다",
+      "form": {
+        "condition": "유성생식으로 자손을 만들 때",
+        "type": "causal",
+        "scope": "유성생식을 하는 생물"
+      },
+      "invertible": true,
+      "invertible_reason": "절반이라는 조건이 정해져 있어 바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생식세포의 염색체 수가 체세포와 같아야 수정으로 태어난 자손이 부모와 같은 수를 가진다"
+    },
+    {
+      "id": "rel-gam-constant",
+      "text": "세대를 거듭해도 그 종의 염색체 수가 일정하게 유지되는 까닭은 감수분열과 수정이 짝을 이루기 때문이다",
+      "form": {
+        "condition": "세대를 이어 볼 때",
+        "type": "causal",
+        "scope": "유성생식을 하는 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gam-half-from-each",
+      "text": "자손은 부모에게서 유전물질을 절반씩 받으므로 어느 한쪽의 DNA도 사라지지 않는다",
+      "form": {
+        "condition": "수정으로 자손이 만들어질 때",
+        "type": "causal",
+        "scope": "유성생식"
+      },
+      "invertible": false,
+      "invertible_reason": "받는 몫을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수정을 하면 자손의 염색체 수가 부모보다 두 배로 늘어난다",
+      "why_wrong": "생식세포가 이미 절반이라 둘이 합쳐져야 부모와 같은 수가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gam-halved"
+    },
+    {
+      "text": "자손은 어머니 쪽 유전물질을 더 많이 물려받는다",
+      "why_wrong": "핵 속 염색체는 부모에게서 한 벌씩, 곧 절반씩 온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gam-half-from-each"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-meiosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-genetic-diversity",
+      "note": "이어지는 것과 달라지는 것을 함께 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-asexual-and-sexual-reproduction"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-3",
+  "pages": [
+    144,
+    147
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

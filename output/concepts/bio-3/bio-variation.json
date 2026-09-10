@@ -1,0 +1,107 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-variation",
+  "concept_key": "concept:variation",
+  "registry_status": "new",
+  "term": "변이",
+  "notation": {
+    "hanja": "變異",
+    "hanja_gloss": "變 변할 변 · 異 다를 이",
+    "english": "variation"
+  },
+  "definition": "같은 개체군에 속한 개체들 사이에 나타나는 형질의 차이. 유전되는 것과 유전되지 않는 것이 있다.",
+  "relations": [
+    {
+      "id": "rel-var-within-population",
+      "text": "변이는 종과 종 사이의 차이가 아니라 한 개체군 안 개체들 사이의 차이를 가리킨다",
+      "form": {
+        "condition": "개체군 안을 들여다볼 때",
+        "type": "classification",
+        "scope": "한 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 변이라 부르는지 가른 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-var-heritable",
+      "text": "자연선택의 재료가 되는 것은 자손에게 유전되는 변이뿐이다",
+      "form": {
+        "condition": "여러 세대에 걸쳐 볼 때",
+        "type": "conditional",
+        "scope": "유전되는 변이"
+      },
+      "invertible": false,
+      "invertible_reason": "조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-var-environment",
+      "text": "같은 변이라도 환경이 달라지면 유리해지기도 하고 불리해지기도 한다",
+      "form": {
+        "condition": "환경 조건이 바뀔 때",
+        "type": "conditional",
+        "scope": "변이의 유불리"
+      },
+      "invertible": false,
+      "invertible_reason": "환경에 따라 달라진다는 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "운동으로 굵어진 근육처럼 살면서 얻은 형질도 자손에게 그대로 전해진다",
+      "why_wrong": "유전되는 변이는 유전물질의 차이에서 온다. 살아가는 동안 몸에 생긴 변화는 자손에게 전해지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-var-heritable"
+    },
+    {
+      "text": "변이는 종과 종 사이의 차이를 뜻한다",
+      "why_wrong": "한 개체군 안 개체들 사이의 차이가 변이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-var-within-population"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-natural-selection"
+    },
+    {
+      "type": "next",
+      "target": "bio-overproduction-and-struggle-for-existence"
+    },
+    {
+      "type": "related",
+      "target": "bio-mutation",
+      "note": "새로운 변이가 어디서 오는지는 여기서 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-1",
+  "pages": [
+    150,
+    157
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,109 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-nematoda",
+  "concept_key": "concept:nematoda",
+  "registry_status": "new",
+  "term": "선형동물문",
+  "notation": {
+    "hanja": "線形動物門",
+    "hanja_gloss": "線 줄 선 · 形 모양 형 · 動 움직일 동 · 物 물건 물 · 門 문 문",
+    "english": "Nematoda"
+  },
+  "definition": "몸이 원통형이고 체절이 없는 3배엽성 선구동물 무리. 큐티클층에 덮여 자라며 탈피한다.",
+  "relations": [
+    {
+      "id": "rel-nem-no-segment",
+      "text": "몸이 원통형이면서 체절로 나뉘지 않아 체절이 뚜렷한 환형동물과 구별된다",
+      "form": {
+        "condition": "몸의 구조를 견줄 때",
+        "type": "classification",
+        "scope": "선형동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "구별되는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nem-molting",
+      "text": "몸을 덮은 큐티클층이 늘어나지 않으므로 자라려면 주기적으로 탈피를 해야 한다",
+      "form": {
+        "condition": "몸이 자랄 때",
+        "type": "causal",
+        "scope": "탈피동물"
+      },
+      "invertible": false,
+      "invertible_reason": "탈피를 하는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nem-no-organs",
+      "text": "호흡기와 순환기가 발달하지 않아 기체를 체표면으로 주고받는다",
+      "form": {
+        "condition": "기관의 발달 정도를 볼 때",
+        "type": "causal",
+        "scope": "선형동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "대신하는 방식을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몸이 길쭉하고 마디가 보이지 않으면 모두 환형동물이다",
+      "why_wrong": "환형동물은 고리 모양 체절이 뚜렷하다. 체절이 없는 원통형은 선형동물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nem-no-segment"
+    },
+    {
+      "text": "탈피는 절지동물만 하는 일이다",
+      "why_wrong": "선형동물도 큐티클층을 벗으며 자란다. 둘을 묶어 탈피동물이라고 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nem-molting"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-protostome-and-deuterostome"
+    },
+    {
+      "type": "related",
+      "target": "bio-arthropoda",
+      "note": "탈피동물로 함께 묶인다"
+    },
+    {
+      "type": "related",
+      "target": "bio-annelida",
+      "note": "체절이 있는가에서 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-2",
+  "pages": [
+    171,
+    173,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

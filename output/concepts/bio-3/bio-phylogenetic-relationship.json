@@ -1,0 +1,109 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-phylogenetic-relationship",
+  "concept_key": "concept:phylogenetic-relationship",
+  "registry_status": "new",
+  "term": "유연관계",
+  "notation": {
+    "hanja": "類緣關係",
+    "hanja_gloss": "類 무리 유 · 緣 인연 연 · 關 빗장 관 · 係 맬 계",
+    "english": "phylogenetic relationship"
+  },
+  "definition": "생물종 사이가 진화적으로 얼마나 가깝고 먼가를 나타내는 관계.",
+  "relations": [
+    {
+      "id": "rel-phr-sequence",
+      "text": "같은 유전자나 단백질을 견주었을 때 서열이 닮을수록 두 종의 유연관계가 가깝다고 본다",
+      "form": {
+        "condition": "같은 유전자·단백질끼리 견줄 때",
+        "type": "direct",
+        "scope": "분자 자료로 따진 유연관계"
+      },
+      "invertible": true,
+      "invertible_reason": "닮은 정도와 가까운 정도의 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 유전자나 단백질을 견주었을 때 서열이 다를수록 두 종의 유연관계가 가깝다고 본다"
+    },
+    {
+      "id": "rel-phr-tree",
+      "text": "계통수에서는 갈라져 나온 분기점이 가까운 생물끼리 유연관계도 가깝다",
+      "form": {
+        "condition": "계통수를 읽을 때",
+        "type": "causal",
+        "scope": "계통수"
+      },
+      "invertible": false,
+      "invertible_reason": "읽는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-phr-not-appearance",
+      "text": "겉모습이 닮았다고 유연관계가 가까운 것은 아니므로 형질이 어디서 왔는지 함께 따져야 한다",
+      "form": {
+        "condition": "겉모습만으로 판단하려 할 때",
+        "type": "conditional",
+        "scope": "유연관계 판단"
+      },
+      "invertible": false,
+      "invertible_reason": "판단의 한계를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생김새가 비슷한 생물은 언제나 유연관계가 가깝다",
+      "why_wrong": "비슷한 환경에 따로 적응해 닮아진 경우도 있다. 구조의 유래와 서열을 함께 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phr-not-appearance"
+    },
+    {
+      "text": "계통수에서 가지 끝이 나란히 붙어 있으면 가장 가까운 사이다",
+      "why_wrong": "가까운 정도는 분기점의 자리로 읽는다. 나란히 그려졌다고 가까운 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phr-tree"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-evidence-of-evolution"
+    },
+    {
+      "type": "next",
+      "target": "bio-phylogeny-and-phylogenetic-tree"
+    },
+    {
+      "type": "related",
+      "target": "bio-homologous-and-analogous-organ"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03",
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-3-2",
+  "pages": [
+    153,
+    161,
+    165
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

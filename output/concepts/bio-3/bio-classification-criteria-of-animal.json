@@ -1,0 +1,127 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-classification-criteria-of-animal",
+  "concept_key": "concept:classification-criteria-of-animal",
+  "registry_status": "new",
+  "term": "동물의 분류 기준",
+  "notation": {
+    "hanja": "動物 分類 基準",
+    "hanja_gloss": "動 움직일 동 · 物 물건 물 · 分 나눌 분 · 類 무리 류 · 基 터 기 · 準 준할 준",
+    "english": "classification criteria of animal"
+  },
+  "definition": "동물을 가르는 잣대. 배엽이 몇 장 만들어지는가, 몸이 어떤 대칭인가, 원구가 무엇이 되는가를 차례로 묻는다.",
+  "relations": [
+    {
+      "id": "rel-can-germ-layers",
+      "text": "배엽이 만들어지지 않으면 무배엽성, 두 장만 생기면 2배엽성, 세 장이 모두 생기면 3배엽성이다",
+      "form": {
+        "condition": "낭배가 만들어지는 과정을 볼 때",
+        "type": "classification",
+        "scope": "배엽 수에 따른 분류"
+      },
+      "invertible": false,
+      "invertible_reason": "가르는 잣대를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-can-symmetry",
+      "text": "방사 대칭 동물은 자극을 모든 방향에서 받고, 좌우 대칭 동물은 앞뒤가 생겨 감각이 한쪽에 모인다",
+      "form": {
+        "condition": "몸의 대칭성을 견줄 때",
+        "type": "classification",
+        "scope": "몸의 대칭성"
+      },
+      "invertible": true,
+      "invertible_reason": "두 대칭에 딸린 특징이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "방사 대칭 동물은 앞뒤가 생겨 감각이 한쪽에 모이고, 좌우 대칭 동물은 자극을 모든 방향에서 받는다"
+    },
+    {
+      "id": "rel-can-blastopore",
+      "text": "3배엽성동물은 원구가 입이 되면 선구동물, 항문이 되면 후구동물로 갈린다",
+      "form": {
+        "condition": "3배엽성동물의 발생을 볼 때",
+        "type": "classification",
+        "scope": "3배엽성동물"
+      },
+      "invertible": true,
+      "invertible_reason": "원구의 운명과 무리의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "3배엽성동물은 원구가 항문이 되면 선구동물, 입이 되면 후구동물로 갈린다"
+    },
+    {
+      "id": "rel-can-molecular",
+      "text": "최근에는 겉모습만이 아니라 DNA 염기서열을 근거로 동물의 계통을 밝힌다",
+      "form": {
+        "condition": "계통을 다시 따져 볼 때",
+        "type": "causal",
+        "scope": "동물 계통 연구"
+      },
+      "invertible": false,
+      "invertible_reason": "연구 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모든 동물은 세 장의 배엽을 만든다",
+      "why_wrong": "해면동물은 배엽을 만들지 않고, 자포동물은 두 장만 만든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-can-germ-layers"
+    },
+    {
+      "text": "발생 과정에서 생긴 원구는 언제나 입이 된다",
+      "why_wrong": "선구동물에서는 입이 되지만 후구동물에서는 항문이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-can-blastopore"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-animal-kingdom"
+    },
+    {
+      "type": "next",
+      "target": "bio-protostome-and-deuterostome"
+    },
+    {
+      "type": "next",
+      "target": "bio-porifera"
+    },
+    {
+      "type": "next",
+      "target": "bio-cnidaria"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-2",
+  "pages": [
+    170,
+    175
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

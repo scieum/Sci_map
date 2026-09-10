@@ -1,0 +1,130 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-evidence-of-evolution",
+  "concept_key": "concept:evidence-of-evolution",
+  "registry_status": "new",
+  "term": "진화의 증거",
+  "aliases": [
+    "진화의 연구 방법"
+  ],
+  "notation": {
+    "hanja": "進化의 證據",
+    "hanja_gloss": "進 나아갈 진 · 化 될 화 · 證 증거 증 · 據 근거 거",
+    "english": "evidence of evolution"
+  },
+  "definition": "진화를 직접 볼 수 없으므로 화석·분포·해부 구조·발생 과정·분자 서열에서 그 자취를 찾아 모은 근거.",
+  "relations": [
+    {
+      "id": "rel-evd-indirect",
+      "text": "진화는 아주 긴 시간에 걸쳐 일어나 직접 볼 수 없으므로 남은 흔적과 현존 생물의 특성으로 확인한다",
+      "form": {
+        "condition": "사람이 관찰할 수 있는 기간을 놓고 볼 때",
+        "type": "causal",
+        "scope": "진화 연구 방법"
+      },
+      "invertible": false,
+      "invertible_reason": "간접적으로 확인하는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-evd-fossil",
+      "text": "화석을 지층의 퇴적 연대순으로 늘어놓으면 생물이 변해 온 차례를 읽을 수 있다",
+      "form": {
+        "condition": "지층의 연대를 추정할 수 있을 때",
+        "type": "causal",
+        "scope": "화석 연구"
+      },
+      "invertible": false,
+      "invertible_reason": "읽을 수 있는 것을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-evd-biogeography",
+      "text": "생물이 지리적으로 갈라진 뒤 따로 진화했기 때문에 지역마다 분포하는 생물이 다르게 나타난다",
+      "form": {
+        "condition": "지리적 격리가 오래 이어졌을 때",
+        "type": "causal",
+        "scope": "생물지리학적 연구"
+      },
+      "invertible": true,
+      "invertible_reason": "원인과 결과의 자리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지역마다 분포하는 생물이 다르기 때문에 생물이 지리적으로 갈라져 따로 진화하게 되었다"
+    },
+    {
+      "id": "rel-evd-molecular",
+      "text": "진화적으로 가까운 종일수록 DNA 염기서열과 단백질의 아미노산서열 차이가 적다",
+      "form": {
+        "condition": "같은 유전자나 단백질끼리 견줄 때",
+        "type": "inverse",
+        "scope": "분자진화학적 연구"
+      },
+      "invertible": true,
+      "invertible_reason": "가까울수록 차이가 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진화적으로 가까운 종일수록 DNA 염기서열과 단백질의 아미노산서열 차이가 크다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진화는 아무도 직접 본 적이 없으므로 근거가 없는 이야기다",
+      "why_wrong": "화석·지리적 분포·해부 구조·발생 과정·분자 서열이 서로 어긋나지 않는 근거를 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-evd-indirect"
+    },
+    {
+      "text": "아미노산서열의 차이가 큰 종일수록 유연관계가 가깝다",
+      "why_wrong": "차이가 적을수록 가깝다. 사람과 침팬지의 사이토크롬 c는 차이가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-evd-molecular"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-natural-selection"
+    },
+    {
+      "type": "next",
+      "target": "bio-homologous-and-analogous-organ"
+    },
+    {
+      "type": "next",
+      "target": "bio-vestigial-organ"
+    },
+    {
+      "type": "next",
+      "target": "bio-phylogenetic-relationship"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-2",
+  "pages": [
+    152,
+    153
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

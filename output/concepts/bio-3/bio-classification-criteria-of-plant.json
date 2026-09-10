@@ -1,0 +1,126 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-classification-criteria-of-plant",
+  "concept_key": "concept:classification-criteria-of-plant",
+  "registry_status": "new",
+  "term": "식물의 분류 기준",
+  "notation": {
+    "hanja": "植物 分類 基準",
+    "hanja_gloss": "植 심을 식 · 物 물건 물 · 分 나눌 분 · 類 무리 류 · 基 터 기 · 準 준할 준",
+    "english": "classification criteria of plant"
+  },
+  "definition": "식물을 세 번 갈라 나가는 잣대. 관다발이 있는가, 종자를 맺는가, 씨방이 있는가를 차례로 묻는다.",
+  "relations": [
+    {
+      "id": "rel-cpl-first",
+      "text": "첫 갈래는 관다발의 유무여서 관다발이 없는 무리가 비관다발식물로 묶인다",
+      "form": {
+        "condition": "식물 전체를 처음 가를 때",
+        "type": "classification",
+        "scope": "식물 분류의 첫 기준"
+      },
+      "invertible": false,
+      "invertible_reason": "잣대를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cpl-second",
+      "text": "관다발식물은 종자를 맺는가에 따라 비종자 관다발식물과 종자식물로 갈린다",
+      "form": {
+        "condition": "관다발식물 안에서 다시 가를 때",
+        "type": "classification",
+        "scope": "식물 분류의 둘째 기준"
+      },
+      "invertible": false,
+      "invertible_reason": "잣대를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cpl-third",
+      "text": "종자식물은 씨방이 있는가에 따라 속씨식물문과 겉씨식물문으로 갈린다",
+      "form": {
+        "condition": "종자식물 안에서 다시 가를 때",
+        "type": "classification",
+        "scope": "식물 분류의 셋째 기준"
+      },
+      "invertible": false,
+      "invertible_reason": "잣대를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cpl-order",
+      "text": "세 잣대는 관다발·종자·씨방의 차례로 쓰여서 뒤 잣대는 앞 잣대를 통과한 무리 안에서만 쓰인다",
+      "form": {
+        "condition": "잣대를 차례로 적용할 때",
+        "type": "conditional",
+        "scope": "식물 분류의 순서"
+      },
+      "invertible": true,
+      "invertible_reason": "적용하는 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세 잣대는 씨방·종자·관다발의 차례로 쓰여서 앞 잣대는 뒤 잣대를 통과한 무리 안에서만 쓰인다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "씨방이 없는 식물은 종자도 맺지 못한다",
+      "why_wrong": "겉씨식물은 씨방이 없어도 종자를 맺는다. 밑씨가 겉으로 드러나 있을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cpl-third"
+    },
+    {
+      "text": "관다발이 없는 식물도 뿌리·줄기·잎이 뚜렷하게 나뉜다",
+      "why_wrong": "비관다발식물은 기관이 분화되지 않아 뿌리 대신 헛뿌리를 가진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cpl-first"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-plant-kingdom"
+    },
+    {
+      "type": "next",
+      "target": "bio-nonvascular-plant"
+    },
+    {
+      "type": "next",
+      "target": "bio-seedless-vascular-plant"
+    },
+    {
+      "type": "next",
+      "target": "bio-seed-plant"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-1",
+  "pages": [
+    167,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

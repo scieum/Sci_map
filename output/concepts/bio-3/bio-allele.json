@@ -1,0 +1,115 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-allele",
+  "concept_key": "concept:allele",
+  "registry_status": "new",
+  "term": "대립유전자",
+  "notation": {
+    "hanja": "對立遺傳子",
+    "hanja_gloss": "對 대할 대 · 立 설 립 · 遺 남길 유 · 傳 전할 전 · 子 아들 자",
+    "english": "allele"
+  },
+  "definition": "상동염색체의 같은 자리를 차지하면서 한 형질을 같게도 다르게도 나타나게 하는 유전자들.",
+  "relations": [
+    {
+      "id": "rel-all-same-locus",
+      "text": "대립유전자는 서로 다른 형질을 맡은 유전자가 아니라 한 형질을 두고 같은 자리에 놓인 유전자다",
+      "form": {
+        "condition": "한 유전자 자리를 볼 때",
+        "type": "classification",
+        "scope": "상동염색체의 같은 자리"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 대립유전자라 부르는지 가른 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-all-homologous-vs-chromatid",
+      "text": "상동염색체 사이에서는 대립유전자가 다를 수 있지만 두 염색분체 사이에서는 언제나 같다",
+      "form": {
+        "condition": "복제를 마친 염색체를 볼 때",
+        "type": "conditional",
+        "scope": "핵상이 2n인 체세포"
+      },
+      "invertible": true,
+      "invertible_reason": "다를 수 있는 쪽과 같은 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상동염색체 사이에서는 대립유전자가 언제나 같지만 두 염색분체 사이에서는 다를 수 있다"
+    },
+    {
+      "id": "rel-all-origin",
+      "text": "상동염색체를 부모에게서 하나씩 받으므로 한 자리의 두 대립유전자도 아버지와 어머니에게서 각각 온다",
+      "form": {
+        "condition": "유성생식으로 만들어진 체세포에서",
+        "type": "causal",
+        "scope": "상염색체 위의 유전자 자리"
+      },
+      "invertible": false,
+      "invertible_reason": "유래를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대립유전자는 서로 다른 형질을 결정하는 두 유전자다",
+      "why_wrong": "같은 형질을 두고 같은 자리에 놓인 유전자들이다. 형질이 다르면 유전자 자리도 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-all-same-locus"
+    },
+    {
+      "text": "두 염색분체에 있는 대립유전자는 서로 다르다",
+      "why_wrong": "염색분체는 복제로 생긴 같은 가닥이라 구성이 같다. 다를 수 있는 쪽은 상동염색체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-all-homologous-vs-chromatid"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homologous-chromosome"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-gene"
+    },
+    {
+      "type": "next",
+      "target": "bio-genetic-diversity"
+    },
+    {
+      "type": "next",
+      "target": "bio-gene-pool"
+    },
+    {
+      "type": "next",
+      "target": "bio-allele-frequency"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-2",
+  "pages": [
+    138,
+    139
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

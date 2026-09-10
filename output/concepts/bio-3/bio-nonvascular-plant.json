@@ -1,0 +1,121 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-nonvascular-plant",
+  "concept_key": "concept:nonvascular-plant",
+  "registry_status": "new",
+  "term": "비관다발식물",
+  "aliases": [
+    "선태식물"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'관다발'이 고유어여서 낱말 전체에 들어맞는 한자어가 없다. 앞의 비(非)와 뒤의 식물(植物)만 한자다",
+    "english": "nonvascular plant"
+  },
+  "definition": "관다발이 없어 기관이 나뉘지 않고 헛뿌리로 몸을 붙이는 식물 무리. 포자로 번식한다.",
+  "relations": [
+    {
+      "id": "rel-nvp-no-vascular",
+      "text": "관다발이 없어 물과 양분을 멀리 나르지 못하므로 몸이 크게 자라지 못한다",
+      "form": {
+        "condition": "관다발이 없을 때",
+        "type": "causal",
+        "scope": "비관다발식물"
+      },
+      "invertible": false,
+      "invertible_reason": "제약의 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nvp-rhizoid",
+      "text": "헛뿌리는 몸을 바닥에 붙드는 구실을 할 뿐 물을 빨아올리는 뿌리가 아니다",
+      "form": {
+        "condition": "헛뿌리의 구실을 볼 때",
+        "type": "classification",
+        "scope": "비관다발식물의 헛뿌리"
+      },
+      "invertible": false,
+      "invertible_reason": "구실을 가른 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nvp-water-fertilize",
+      "text": "포자로 번식하며 수정에 물이 있어야 해서 그늘지고 축축한 곳에 산다",
+      "form": {
+        "condition": "번식이 이루어질 때",
+        "type": "causal",
+        "scope": "비관다발식물의 서식지"
+      },
+      "invertible": false,
+      "invertible_reason": "서식지가 정해지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nvp-three-phyla",
+      "text": "비관다발식물은 선태식물문·태류식물문·각태류식물문의 세 문으로 나뉜다",
+      "form": {
+        "condition": "문 수준에서 나눌 때",
+        "type": "classification",
+        "scope": "비관다발식물"
+      },
+      "invertible": false,
+      "invertible_reason": "속한 문을 늘어놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이끼의 헛뿌리는 뿌리와 같은 일을 한다",
+      "why_wrong": "헛뿌리는 몸을 붙드는 구실만 한다. 관다발이 없어 물을 끌어올리지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nvp-rhizoid"
+    },
+    {
+      "text": "비관다발식물도 종자로 번식한다",
+      "why_wrong": "포자로 번식한다. 종자를 맺는 것은 관다발식물 가운데 종자식물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nvp-water-fertilize"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-classification-criteria-of-plant"
+    },
+    {
+      "type": "related",
+      "target": "bio-seedless-vascular-plant",
+      "note": "포자로 번식하는 점은 같고 관다발에서 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-1",
+  "pages": [
+    167,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

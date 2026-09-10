@@ -1,0 +1,112 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-chromatid",
+  "concept_key": "concept:chromatid",
+  "registry_status": "new",
+  "term": "염색분체",
+  "notation": {
+    "hanja": "染色分體",
+    "hanja_gloss": "染 물들 염 · 色 빛 색 · 分 나눌 분 · 體 몸 체",
+    "english": "chromatid"
+  },
+  "definition": "복제를 마친 염색체를 이루는 두 가닥 각각. 중심절에서 서로 붙어 있다가 분열 때 갈라진다.",
+  "relations": [
+    {
+      "id": "rel-cht-from-replication",
+      "text": "분열기의 염색체가 두 가닥으로 보이는 까닭은 분열에 앞서 DNA가 이미 복제되었기 때문이다",
+      "form": {
+        "condition": "분열기의 염색체를 관찰할 때",
+        "type": "causal",
+        "scope": "복제를 마친 염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cht-identical",
+      "text": "한 염색체의 두 염색분체는 복제로 생긴 것이라 대립유전자 구성이 서로 같다",
+      "form": {
+        "condition": "복제 과정에 오류가 없을 때",
+        "type": "classification",
+        "scope": "한 염색체 안의 두 염색분체"
+      },
+      "invertible": false,
+      "invertible_reason": "같다는 사실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cht-separate",
+      "text": "체세포분열 후기에 두 염색분체가 갈라져 양극으로 가므로 딸세포는 모세포와 같은 유전정보를 받는다",
+      "form": {
+        "condition": "체세포분열 후기에",
+        "type": "causal",
+        "scope": "체세포분열"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "한 염색체의 두 염색분체는 하나는 아버지, 하나는 어머니에게서 온 것이다",
+      "why_wrong": "부모에게서 하나씩 온 것은 상동염색체다. 두 염색분체는 한 염색체가 복제되어 생긴 같은 가닥이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cht-identical"
+    },
+    {
+      "text": "염색분체는 대립유전자 구성이 서로 달라서 갈라지면 딸세포의 유전정보가 달라진다",
+      "why_wrong": "복제로 생긴 두 염색분체는 구성이 같다. 그래서 갈라져도 두 딸세포의 유전정보가 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cht-separate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-homologous-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-mitosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-interphase",
+      "note": "복제가 언제 일어나는지는 간기에서 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-1",
+  "pages": [
+    135,
+    137,
+    139
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

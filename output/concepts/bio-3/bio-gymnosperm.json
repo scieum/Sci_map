@@ -1,0 +1,103 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-gymnosperm",
+  "concept_key": "concept:gymnosperm",
+  "registry_status": "new",
+  "term": "겉씨식물문",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'겉씨'가 고유어여서 낱말 전체에 들어맞는 한자어가 없다. 뒤의 식물문(植物門)만 한자다",
+    "english": "Gymnospermae"
+  },
+  "definition": "씨방이 없어 밑씨가 겉으로 드러난 채 종자를 맺는 종자식물 무리. 은행나무와 소나무가 여기 든다.",
+  "relations": [
+    {
+      "id": "rel-gym-no-ovary",
+      "text": "씨방이 없으므로 밑씨가 감싸이지 않고 겉으로 드러나 있다",
+      "form": {
+        "condition": "밑씨가 놓인 자리를 볼 때",
+        "type": "causal",
+        "scope": "겉씨식물문"
+      },
+      "invertible": false,
+      "invertible_reason": "드러나는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gym-seed",
+      "text": "씨방이 없어도 종자를 맺으므로 관다발과 종자를 갖춘 종자식물로 묶인다",
+      "form": {
+        "condition": "종자를 맺는가로 가를 때",
+        "type": "classification",
+        "scope": "겉씨식물문"
+      },
+      "invertible": false,
+      "invertible_reason": "묶이는 근거를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gym-vs-angio",
+      "text": "겉씨식물문과 속씨식물문을 가르는 자리는 꽃의 생김새가 아니라 씨방의 유무다",
+      "form": {
+        "condition": "두 문을 견줄 때",
+        "type": "classification",
+        "scope": "종자식물의 두 문"
+      },
+      "invertible": false,
+      "invertible_reason": "잣대를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "겉씨식물은 종자를 맺지 않는다",
+      "why_wrong": "종자를 맺는다. 다만 씨방이 없어 밑씨가 겉으로 드러나 있을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gym-seed"
+    },
+    {
+      "text": "소나무는 솔방울이라는 열매를 맺으므로 속씨식물이다",
+      "why_wrong": "솔방울은 씨방이 자라 만들어진 열매가 아니다. 소나무는 씨방이 없는 겉씨식물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gym-no-ovary"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-seed-plant"
+    },
+    {
+      "type": "related",
+      "target": "bio-angiosperm",
+      "note": "씨방이 있는가 없는가에서 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-1",
+  "pages": [
+    168,
+    175
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

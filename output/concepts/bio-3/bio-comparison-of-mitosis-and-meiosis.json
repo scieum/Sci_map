@@ -1,0 +1,127 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-comparison-of-mitosis-and-meiosis",
+  "concept_key": "concept:comparison-of-mitosis-and-meiosis",
+  "registry_status": "new",
+  "term": "체세포분열과 감수분열의 비교",
+  "notation": {
+    "hanja": "體細胞分裂과 減數分裂의 比較",
+    "hanja_gloss": "體 몸 체 · 細 가늘 세 · 胞 세포 포 · 分 나눌 분 · 裂 찢을 렬 · 減 덜 감 · 數 셈 수 · 分 나눌 분 · 裂 찢을 렬 · 比 견줄 비 · 較 견줄 교",
+    "english": "comparison of mitosis and meiosis"
+  },
+  "definition": "두 분열을 분열 횟수·2가 염색체 형성·딸세포 수·핵상 변화라는 네 축으로 견주어 갈라 보는 정리.",
+  "relations": [
+    {
+      "id": "rel-cmp-count",
+      "text": "체세포분열은 한 번 나뉘어 딸세포 둘을, 감수분열은 두 번 나뉘어 딸세포 넷을 만든다",
+      "form": {
+        "condition": "모세포 하나에서 시작할 때",
+        "type": "classification",
+        "scope": "두 분열의 결과"
+      },
+      "invertible": true,
+      "invertible_reason": "횟수와 딸세포 수의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체세포분열은 두 번 나뉘어 딸세포 넷을, 감수분열은 한 번 나뉘어 딸세포 둘을 만든다"
+    },
+    {
+      "id": "rel-cmp-bivalent",
+      "text": "2가 염색체는 감수분열에서만 만들어지므로 두 분열을 가르는 표지가 된다",
+      "form": {
+        "condition": "분열 과정을 견줄 때",
+        "type": "classification",
+        "scope": "2가 염색체 형성 여부"
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽에만 있다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cmp-ploidy",
+      "text": "핵상은 체세포분열에서 2n 그대로지만 감수분열에서는 2n에서 n으로 바뀐다",
+      "form": {
+        "condition": "모세포와 딸세포를 견줄 때",
+        "type": "classification",
+        "scope": "두 분열의 핵상 변화"
+      },
+      "invertible": true,
+      "invertible_reason": "변하는 쪽과 변하지 않는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵상은 체세포분열에서 2n에서 n으로 바뀌지만 감수분열에서는 2n 그대로다"
+    },
+    {
+      "id": "rel-cmp-dna",
+      "text": "두 분열 모두 복제는 한 번뿐이라 핵 하나당 DNA 상대량이 늘어나는 자리는 S기 한 곳이다",
+      "form": {
+        "condition": "핵 하나당 DNA 상대량을 따라갈 때",
+        "type": "classification",
+        "scope": "두 분열의 DNA 상대량 변화"
+      },
+      "invertible": false,
+      "invertible_reason": "같은 점을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감수분열은 DNA를 두 번 복제하기 때문에 딸세포가 넷 생긴다",
+      "why_wrong": "복제는 한 번이고 분열이 두 번이어서 넷이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmp-count"
+    },
+    {
+      "text": "두 분열 모두 딸세포의 염색체 수가 모세포와 같다",
+      "why_wrong": "같은 쪽은 체세포분열이다. 감수분열에서는 절반이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmp-ploidy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-mitosis"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-meiosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-bivalent"
+    },
+    {
+      "type": "related",
+      "target": "bio-ploidy"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-2",
+  "pages": [
+    143,
+    147
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

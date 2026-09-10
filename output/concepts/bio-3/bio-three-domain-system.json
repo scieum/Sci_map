@@ -1,0 +1,123 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-three-domain-system",
+  "concept_key": "concept:three-domain-system",
+  "registry_status": "new",
+  "term": "3역 분류체계",
+  "notation": {
+    "hanja": "三域 分類體系",
+    "hanja_gloss": "三 석 삼 · 域 지경 역 · 分 나눌 분 · 類 무리 류 · 體 몸 체 · 系 이어맬 계",
+    "english": "three-domain system"
+  },
+  "definition": "생물을 세균역·고균역·진핵생물역의 셋으로 묶는 분류체계. 분자 자료로 밝힌 계통을 근거로 삼는다.",
+  "relations": [
+    {
+      "id": "rel-thr-members",
+      "text": "3역은 세균역·고균역·진핵생물역을 이르며 계보다 위 단계에서 묶은 것이다",
+      "form": {
+        "condition": "3역 체계를 볼 때",
+        "type": "classification",
+        "scope": "3역 분류체계"
+      },
+      "invertible": false,
+      "invertible_reason": "셋을 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-thr-mapping",
+      "text": "세균역과 고균역은 6계의 세균계·고균계와 같은 무리이고, 진핵생물역이 나머지 네 계를 안는다",
+      "form": {
+        "condition": "3역과 6계를 견줄 때",
+        "type": "classification",
+        "scope": "3역과 6계의 대응"
+      },
+      "invertible": true,
+      "invertible_reason": "어느 역이 어느 계를 안는지 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진핵생물역이 6계의 세균계·고균계와 같은 무리이고, 세균역과 고균역이 나머지 네 계를 안는다"
+    },
+    {
+      "id": "rel-thr-molecular",
+      "text": "우즈가 겉모습 대신 분자생물학적 계통을 근거로 삼았기에 고균이 세균과 갈라져 따로 묶였다",
+      "form": {
+        "condition": "분자 자료로 계통을 볼 때",
+        "type": "causal",
+        "scope": "3역 체계의 근거"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-thr-eukarya",
+      "text": "진핵생물역의 생물은 히스톤과 결합한 DNA와 선형 염색체를 가지고, 세포벽이 있어도 펩티도글리칸은 없다",
+      "form": {
+        "condition": "진핵생물역의 특징을 볼 때",
+        "type": "classification",
+        "scope": "진핵생물역"
+      },
+      "invertible": false,
+      "invertible_reason": "특징을 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고균은 세균의 한 종류다",
+      "why_wrong": "3역 체계에서 고균역은 세균역과 따로 묶인다. 세포벽 성분과 유전정보 발현 방식이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-thr-molecular"
+    },
+    {
+      "text": "3역 체계가 나오면서 계라는 분류 단계는 사라졌다",
+      "why_wrong": "역은 계보다 위에 더해진 단계다. 진핵생물역 안에 네 계가 그대로 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-thr-mapping"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-six-kingdom-system"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-phylogeny-and-phylogenetic-tree"
+    },
+    {
+      "type": "related",
+      "target": "bio-taxonomic-rank"
+    }
+  ],
+  "curriculum": [
+    "12생과03-04"
+  ],
+  "topic_id": "bio-3-4-2",
+  "pages": [
+    161,
+    164,
+    165
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

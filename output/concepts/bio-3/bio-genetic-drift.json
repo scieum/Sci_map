@@ -1,0 +1,108 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-genetic-drift",
+  "concept_key": "concept:genetic-drift",
+  "registry_status": "new",
+  "term": "유전적 부동",
+  "notation": {
+    "hanja": "遺傳的 浮動",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 的 과녁 적 · 浮 뜰 부 · 動 움직일 동",
+    "english": "genetic drift"
+  },
+  "definition": "적응의 유불리와 상관없이 우연한 사건 때문에 개체군의 대립유전자빈도가 달라지는 일.",
+  "relations": [
+    {
+      "id": "rel-drf-chance",
+      "text": "유전적 부동은 형질의 유불리와 상관없이 우연이 개체군의 대립유전자빈도를 바꾸는 경우다",
+      "form": {
+        "condition": "우연한 사건이 일어났을 때",
+        "type": "causal",
+        "scope": "개체군의 유전자풀"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 바꾸는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-drf-small-population",
+      "text": "개체군의 크기가 작을수록 우연 하나가 대립유전자빈도에 미치는 영향이 커진다",
+      "form": {
+        "condition": "개체군의 크기를 견줄 때",
+        "type": "inverse",
+        "scope": "유전적 부동의 크기"
+      },
+      "invertible": true,
+      "invertible_reason": "크기와 영향의 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개체군의 크기가 클수록 우연 하나가 대립유전자빈도에 미치는 영향이 커진다"
+    },
+    {
+      "id": "rel-drf-cases",
+      "text": "자연재해나 질병으로 개체 수가 크게 줄 때, 또는 소수가 갈라져 나가 자리 잡을 때 두드러진다",
+      "form": {
+        "condition": "개체군이 급격히 줄거나 갈라질 때",
+        "type": "conditional",
+        "scope": "유전적 부동이 일어나는 상황"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 상황을 늘어놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전적 부동으로 남는 대립유전자는 환경에 가장 잘 적응한 것이다",
+      "why_wrong": "유전적 부동은 적응과 상관없이 우연으로 갈린다. 적응이 가르는 쪽은 자연선택이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-drf-chance"
+    },
+    {
+      "text": "개체군이 클수록 우연한 사건의 영향을 크게 받는다",
+      "why_wrong": "작은 개체군일수록 우연 하나가 빈도를 크게 흔든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-drf-small-population"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-gene-pool"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-allele-frequency"
+    },
+    {
+      "type": "related",
+      "target": "bio-natural-selection",
+      "note": "우연이 가르는가 적응이 가르는가에서 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-3",
+  "pages": [
+    155,
+    157
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

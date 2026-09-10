@@ -1,0 +1,122 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-scientific-name",
+  "concept_key": "concept:scientific-name",
+  "registry_status": "new",
+  "term": "학명",
+  "aliases": [
+    "이명법"
+  ],
+  "notation": {
+    "hanja": "學名",
+    "hanja_gloss": "學 배울 학 · 名 이름 명",
+    "english": "scientific name"
+  },
+  "definition": "나라마다 다른 이름 대신 국제적으로 함께 쓰기로 한 분류군의 이름. 종은 이명법으로 적는다.",
+  "relations": [
+    {
+      "id": "rel-nam-binomial",
+      "text": "종의 학명은 속명을 앞에, 종소명을 뒤에 적고 그 뒤에 명명자를 붙여 쓴다",
+      "form": {
+        "condition": "이명법으로 적을 때",
+        "type": "conditional",
+        "scope": "종의 학명"
+      },
+      "invertible": true,
+      "invertible_reason": "적는 차례가 약속으로 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "종의 학명은 종소명을 앞에, 속명을 뒤에 적고 그 뒤에 명명자를 붙여 쓴다"
+    },
+    {
+      "id": "rel-nam-case",
+      "text": "속명은 첫 글자를 대문자로, 종소명은 첫 글자를 소문자로 적기로 약속되어 있다",
+      "form": {
+        "condition": "학명을 표기할 때",
+        "type": "conditional",
+        "scope": "이명법 표기 규약"
+      },
+      "invertible": true,
+      "invertible_reason": "대소문자의 짝이 약속으로 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속명은 첫 글자를 소문자로, 종소명은 첫 글자를 대문자로 적기로 약속되어 있다"
+    },
+    {
+      "id": "rel-nam-italic",
+      "text": "속명과 종소명은 이탤릭체로 쓰거나 밑줄을 그어 다른 글자와 구분한다",
+      "form": {
+        "condition": "학명을 표기할 때",
+        "type": "conditional",
+        "scope": "이명법 표기 규약"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 약속을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nam-latin",
+      "text": "학명은 라틴어나 라틴어로 다듬은 낱말로 적어 어느 나라에서나 같은 이름이 되게 한다",
+      "form": {
+        "condition": "국제적으로 함께 쓸 때",
+        "type": "causal",
+        "scope": "학명"
+      },
+      "invertible": false,
+      "invertible_reason": "약속의 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "학명은 그 생물이 처음 발견된 나라의 말로 짓는다",
+      "why_wrong": "라틴어나 라틴어로 다듬은 말로 적는다. 그래야 나라가 달라도 같은 이름이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nam-latin"
+    },
+    {
+      "text": "학명에서 앞에 오는 것이 종소명이다",
+      "why_wrong": "앞이 속명이고 뒤가 종소명이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nam-binomial"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-taxonomic-rank"
+    },
+    {
+      "type": "related",
+      "target": "bio-species",
+      "note": "이름을 붙이는 대상이 종이다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-04"
+  ],
+  "topic_id": "bio-3-4-1",
+  "pages": [
+    159
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

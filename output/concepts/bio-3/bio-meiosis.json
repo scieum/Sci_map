@@ -1,0 +1,138 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-meiosis",
+  "concept_key": "concept:meiosis",
+  "registry_status": "new",
+  "term": "감수분열",
+  "aliases": [
+    "생식세포분열"
+  ],
+  "notation": {
+    "hanja": "減數分裂",
+    "hanja_gloss": "減 덜 감 · 數 셈 수 · 分 나눌 분 · 裂 찢을 렬",
+    "english": "meiosis"
+  },
+  "definition": "생식세포를 만드는 분열. 복제는 한 번인데 분열이 잇달아 두 번 일어나 염색체 수가 절반인 딸세포 넷이 생긴다.",
+  "relations": [
+    {
+      "id": "rel-mei-one-copy-two-div",
+      "text": "복제는 한 번, 분열은 두 번 일어나므로 딸세포 넷의 염색체 수와 DNA 양은 모세포의 절반이 된다",
+      "form": {
+        "condition": "감수분열 전 과정을 볼 때",
+        "type": "causal",
+        "scope": "감수분열"
+      },
+      "invertible": true,
+      "invertible_reason": "복제와 분열의 횟수가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "복제는 두 번, 분열은 한 번 일어나므로 딸세포의 염색체 수와 DNA 양은 모세포의 두 배가 된다"
+    },
+    {
+      "id": "rel-mei-first-division",
+      "text": "감수 1분열에서는 접합했던 상동염색체가 갈라져 핵상이 2n에서 n으로 줄어든다",
+      "form": {
+        "condition": "감수 1분열이 끝났을 때",
+        "type": "causal",
+        "scope": "감수 1분열"
+      },
+      "invertible": true,
+      "invertible_reason": "핵상이 바뀌는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감수 1분열에서는 접합했던 상동염색체가 갈라져 핵상이 n에서 2n으로 늘어난다"
+    },
+    {
+      "id": "rel-mei-second-division",
+      "text": "감수 2분열에서는 염색분체가 갈라지므로 염색체 수도 핵상도 그대로 남는다",
+      "form": {
+        "condition": "감수 2분열이 진행될 때",
+        "type": "causal",
+        "scope": "감수 2분열"
+      },
+      "invertible": false,
+      "invertible_reason": "달라지지 않는다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mei-no-interphase",
+      "text": "감수 1분열과 2분열 사이에는 DNA 복제가 없어 곧바로 두 번째 분열이 이어진다",
+      "form": {
+        "condition": "1분열이 끝난 뒤",
+        "type": "conditional",
+        "scope": "감수분열"
+      },
+      "invertible": false,
+      "invertible_reason": "없다는 사실을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감수분열에서는 DNA 복제가 두 번 일어난다",
+      "why_wrong": "복제는 처음 간기에 한 번뿐이다. 그 뒤로 분열만 두 번 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mei-no-interphase"
+    },
+    {
+      "text": "감수 2분열에서도 염색체 수가 절반으로 줄어든다",
+      "why_wrong": "수가 절반이 되는 것은 상동염색체가 갈라지는 1분열이다. 2분열은 염색분체가 갈라질 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mei-second-division"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-mitosis"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-bivalent"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-ploidy"
+    },
+    {
+      "type": "next",
+      "target": "bio-gamete-formation-and-continuity-of-life"
+    },
+    {
+      "type": "next",
+      "target": "bio-genetic-diversity"
+    },
+    {
+      "type": "next",
+      "target": "bio-comparison-of-mitosis-and-meiosis"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-2",
+  "pages": [
+    142,
+    147
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

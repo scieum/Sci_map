@@ -1,0 +1,110 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-ploidy",
+  "concept_key": "concept:ploidy",
+  "registry_status": "new",
+  "term": "핵상",
+  "notation": {
+    "hanja": "核相",
+    "hanja_gloss": "核 씨 핵 · 相 모양 상",
+    "english": "ploidy"
+  },
+  "definition": "한 세포가 상동염색체를 쌍으로 가지는지 하나씩만 가지는지를 나타내는 표시. 각각 2n과 n으로 적는다.",
+  "relations": [
+    {
+      "id": "rel-plo-notation",
+      "text": "상동염색체가 쌍으로 있으면 핵상을 2n으로, 하나씩만 있으면 n으로 적는다",
+      "form": {
+        "condition": "한 세포의 염색체 구성을 볼 때",
+        "type": "classification",
+        "scope": "핵상 표기"
+      },
+      "invertible": true,
+      "invertible_reason": "표기와 상태의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상동염색체가 쌍으로 있으면 핵상을 n으로, 하나씩만 있으면 2n으로 적는다"
+    },
+    {
+      "id": "rel-plo-vs-number",
+      "text": "2n과 n은 염색체의 상대적인 수를 가리키는 표시일 뿐이어서 실제 염색체 개수까지 알려 주지는 않는다",
+      "form": {
+        "condition": "핵상 표기를 읽을 때",
+        "type": "classification",
+        "scope": "핵상과 염색체 수의 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "표기가 무엇을 뜻하는지 가른 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-plo-meiosis",
+      "text": "감수 1분열에서 상동염색체가 갈라지므로 핵상이 2n에서 n으로 줄어든다",
+      "form": {
+        "condition": "감수 1분열이 끝났을 때",
+        "type": "causal",
+        "scope": "감수분열"
+      },
+      "invertible": true,
+      "invertible_reason": "줄어드는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감수 1분열에서 상동염색체가 갈라지므로 핵상이 n에서 2n으로 늘어난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵상이 2n이라는 것은 염색체가 두 개라는 뜻이다",
+      "why_wrong": "2n은 상동염색체가 쌍으로 있다는 표시다. 사람은 핵상이 2n이면서 염색체가 46개다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plo-vs-number"
+    },
+    {
+      "text": "감수 2분열에서도 핵상이 절반으로 줄어든다",
+      "why_wrong": "감수 2분열은 염색분체가 갈라지는 분열이라 핵상은 n 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plo-meiosis"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homologous-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-meiosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-comparison-of-mitosis-and-meiosis",
+      "note": "두 분열의 핵상 변화를 견주는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01",
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-1-2",
+  "pages": [
+    138,
+    147
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

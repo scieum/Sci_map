@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-seed-plant",
+  "concept_key": "concept:seed-plant",
+  "registry_status": "new",
+  "term": "종자식물",
+  "notation": {
+    "hanja": "種子植物",
+    "hanja_gloss": "種 씨 종 · 子 아들 자 · 植 심을 식 · 物 물건 물",
+    "english": "seed plant"
+  },
+  "definition": "체관과 물관으로 된 관다발을 갖추고 종자를 맺어 번식하는 식물 무리.",
+  "relations": [
+    {
+      "id": "rel-sdp-no-water",
+      "text": "종자로 번식해 수정에 물이 필요하지 않으므로 건조한 곳에서도 살아갈 수 있다",
+      "form": {
+        "condition": "번식이 이루어질 때",
+        "type": "causal",
+        "scope": "종자식물"
+      },
+      "invertible": false,
+      "invertible_reason": "물이 필요 없어 생기는 이점을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sdp-seed-protection",
+      "text": "종자는 단단한 껍질에 싸이고 발아에 쓸 양분을 품고 있어 건조하고 추운 환경을 견딘다",
+      "form": {
+        "condition": "종자 상태로 있을 때",
+        "type": "causal",
+        "scope": "종자식물의 종자"
+      },
+      "invertible": false,
+      "invertible_reason": "견디는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sdp-xylem",
+      "text": "종자식물의 관다발은 체관과 물관으로 이루어져 헛물관을 가진 비종자 관다발식물과 구별된다",
+      "form": {
+        "condition": "관다발의 구성을 견줄 때",
+        "type": "classification",
+        "scope": "관다발의 구성"
+      },
+      "invertible": false,
+      "invertible_reason": "구성을 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sdp-ovary",
+      "text": "종자식물은 밑씨가 씨방에 싸여 있는가에 따라 속씨식물문과 겉씨식물문으로 갈린다",
+      "form": {
+        "condition": "씨방의 유무로 가를 때",
+        "type": "classification",
+        "scope": "종자식물"
+      },
+      "invertible": false,
+      "invertible_reason": "잣대를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "종자식물도 수정할 때 물이 있어야 한다",
+      "why_wrong": "종자식물은 수정에 물이 필요하지 않다. 물이 필요한 쪽은 포자로 번식하는 무리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sdp-no-water"
+    },
+    {
+      "text": "종자와 포자는 같은 것이다",
+      "why_wrong": "종자는 껍질과 양분을 갖춘 구조이고, 포자는 그런 준비 없이 흩어지는 번식 단위다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sdp-seed-protection"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-classification-criteria-of-plant"
+    },
+    {
+      "type": "next",
+      "target": "bio-gymnosperm"
+    },
+    {
+      "type": "next",
+      "target": "bio-angiosperm"
+    },
+    {
+      "type": "related",
+      "target": "bio-seedless-vascular-plant"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-1",
+  "pages": [
+    168,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-natural-selection",
+  "concept_key": "concept:natural-selection",
+  "registry_status": "new",
+  "term": "자연선택",
+  "notation": {
+    "hanja": "自然選擇",
+    "hanja_gloss": "自 스스로 자 · 然 그러할 연 · 選 가릴 선 · 擇 가릴 택",
+    "english": "natural selection"
+  },
+  "definition": "환경에 더 잘 맞는 변이를 지닌 개체가 살아남아 더 많은 자손을 남기는 현상.",
+  "relations": [
+    {
+      "id": "rel-nat-differential",
+      "text": "한 개체군 안에서도 생존과 번식 능력이 갈리므로 환경에 맞는 변이를 가진 개체가 더 많이 살아남는다",
+      "form": {
+        "condition": "환경 조건이 일정할 때",
+        "type": "causal",
+        "scope": "유전되는 변이"
+      },
+      "invertible": false,
+      "invertible_reason": "가려지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nat-heritable-required",
+      "text": "자연선택이 진화로 이어지려면 선택된 변이가 자손에게 유전되어야 한다",
+      "form": {
+        "condition": "여러 세대에 걸쳐 볼 때",
+        "type": "conditional",
+        "scope": "유전되는 변이"
+      },
+      "invertible": false,
+      "invertible_reason": "조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nat-frequency",
+      "text": "적응에 유리한 형질을 나타내는 대립유전자는 세대를 거듭할수록 개체군에서 빈도가 높아진다",
+      "form": {
+        "condition": "그 환경이 이어질 때",
+        "type": "direct",
+        "scope": "자연선택이 작용하는 개체군"
+      },
+      "invertible": true,
+      "invertible_reason": "빈도가 움직이는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적응에 유리한 형질을 나타내는 대립유전자는 세대를 거듭할수록 개체군에서 빈도가 낮아진다"
+    },
+    {
+      "id": "rel-nat-speciation",
+      "text": "여러 세대에 걸쳐 적응과 선택이 쌓이면 새로운 종이 나타날 수 있다",
+      "form": {
+        "condition": "오랜 세대가 지날 때",
+        "type": "causal",
+        "scope": "종 분화"
+      },
+      "invertible": false,
+      "invertible_reason": "쌓인 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "환경이 필요로 하는 형질을 개체가 스스로 만들어 낸다",
+      "why_wrong": "변이는 환경과 상관없이 미리 있고, 환경은 그중 유리한 것을 남길 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nat-differential"
+    },
+    {
+      "text": "자연선택은 한 개체가 살아 있는 동안 그 개체를 바꾸는 일이다",
+      "why_wrong": "개체군 안에서 어떤 개체가 더 많은 자손을 남기는가의 문제다. 개체 하나가 바뀌는 일이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nat-frequency"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-variation"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-overproduction-and-struggle-for-existence"
+    },
+    {
+      "type": "next",
+      "target": "bio-evidence-of-evolution"
+    },
+    {
+      "type": "next",
+      "target": "bio-gene-pool"
+    },
+    {
+      "type": "related",
+      "target": "bio-allele-frequency",
+      "note": "선택의 결과가 이 값의 변화로 나타난다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-1",
+  "pages": [
+    150,
+    157
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

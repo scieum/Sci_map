@@ -1,0 +1,90 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-nucleosome",
+  "concept_key": "concept:nucleosome",
+  "registry_status": "new",
+  "term": "뉴클레오솜",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 nucleosome 을 소리대로 옮긴 말이라 대응하는 한자어가 없다",
+    "english": "nucleosome"
+  },
+  "definition": "DNA 가닥이 히스톤 단백질 뭉치를 감아 만든 구슬 모양의 단위. 염색체가 접히는 첫 단계에 해당한다.",
+  "relations": [
+    {
+      "id": "rel-nuc-wrap",
+      "text": "히스톤 단백질을 DNA가 감아 뉴클레오솜이 되면 실에 구슬이 꿰인 모양의 가닥이 나타난다",
+      "form": {
+        "condition": "핵 안에서 DNA가 히스톤과 결합할 때",
+        "type": "causal",
+        "scope": "진핵세포의 DNA"
+      },
+      "invertible": true,
+      "invertible_reason": "감는 쪽과 감기는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA 가닥을 히스톤 단백질이 감아 뉴클레오솜이 되면 실에 구슬이 꿰인 모양의 가닥이 나타난다"
+    },
+    {
+      "id": "rel-nuc-coil",
+      "text": "구슬이 꿰인 가닥이 더 규칙적으로 꼬일수록 염색체 가닥은 짧고 두꺼워진다",
+      "form": {
+        "condition": "염색체가 응축해 갈 때",
+        "type": "direct",
+        "scope": "염색체의 구조 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "꼬임이 늘 때 두께가 가는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구슬이 꿰인 가닥이 더 규칙적으로 꼬일수록 염색체 가닥은 길고 가늘어진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "뉴클레오솜은 DNA를 이루는 기본 단위다",
+      "why_wrong": "DNA의 기본 단위는 뉴클레오타이드다. 뉴클레오솜은 그 DNA가 히스톤을 감아 만든 포장 단위다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nuc-wrap"
+    },
+    {
+      "text": "히스톤 단백질에도 유전정보가 저장되어 있다",
+      "why_wrong": "유전정보는 DNA 염기가 늘어선 순서에 저장된다. 히스톤은 그 DNA를 감아 접는 구실을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nuc-wrap"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "bio-gene",
+      "note": "감긴 DNA의 어느 자리가 유전자인지 함께 보면 좋다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-1",
+  "pages": [
+    135,
+    139
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

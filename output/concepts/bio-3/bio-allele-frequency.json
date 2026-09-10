@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-allele-frequency",
+  "concept_key": "concept:allele-frequency",
+  "registry_status": "new",
+  "term": "대립유전자빈도",
+  "notation": {
+    "hanja": "對立遺傳子頻度",
+    "hanja_gloss": "對 대할 대 · 立 설 립 · 遺 남길 유 · 傳 전할 전 · 子 아들 자 · 頻 자주 빈 · 度 법도 도",
+    "english": "allele frequency"
+  },
+  "definition": "개체군의 유전자풀에서 어떤 대립유전자가 차지하는 비율. 진화는 이 값이 달라지는 것으로 나타난다.",
+  "relations": [
+    {
+      "id": "rel-afr-ratio",
+      "text": "대립유전자빈도는 개체의 수가 아니라 유전자풀에서 그 대립유전자가 차지하는 비율로 센다",
+      "form": {
+        "condition": "개체군의 유전자풀을 셀 때",
+        "type": "classification",
+        "scope": "대립유전자빈도"
+      },
+      "invertible": false,
+      "invertible_reason": "세는 방법을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-afr-evolution",
+      "text": "개체군이 진화했는지는 세대를 거치며 대립유전자빈도가 달라졌는가로 확인한다",
+      "form": {
+        "condition": "여러 세대를 견줄 때",
+        "type": "causal",
+        "scope": "개체군의 진화"
+      },
+      "invertible": false,
+      "invertible_reason": "확인하는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-afr-four-factors",
+      "text": "자연선택·돌연변이·유전적 부동·유전자흐름은 모두 대립유전자빈도를 바꾸는 요인이다",
+      "form": {
+        "condition": "개체군에 이 요인들이 작용할 때",
+        "type": "causal",
+        "scope": "유전자풀의 변화 요인"
+      },
+      "invertible": false,
+      "invertible_reason": "요인을 늘어놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-afr-adaptive-rise",
+      "text": "환경 적응에 유리한 형질의 대립유전자는 세대를 거듭할수록 빈도가 높아진다",
+      "form": {
+        "condition": "그 환경이 이어질 때",
+        "type": "direct",
+        "scope": "자연선택이 작용하는 개체군"
+      },
+      "invertible": true,
+      "invertible_reason": "빈도가 움직이는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "환경 적응에 유리한 형질의 대립유전자는 세대를 거듭할수록 빈도가 낮아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대립유전자빈도가 높은 형질은 반드시 우성이다",
+      "why_wrong": "빈도는 개체군에 얼마나 흔한가를 나타낼 뿐이고, 우성인지 열성인지와는 다른 문제다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-afr-ratio"
+    },
+    {
+      "text": "개체군 안에서 무작위 교배만 일어나도 대립유전자빈도가 달라진다",
+      "why_wrong": "무작위 교배만으로는 빈도가 달라지지 않는다. 빈도를 바꾸는 것은 네 가지 요인이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-afr-four-factors"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-allele"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-gene-pool"
+    },
+    {
+      "type": "next",
+      "target": "bio-genetic-drift"
+    },
+    {
+      "type": "next",
+      "target": "bio-gene-flow"
+    },
+    {
+      "type": "related",
+      "target": "bio-natural-selection"
+    },
+    {
+      "type": "related",
+      "target": "bio-mutation"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-3",
+  "pages": [
+    154,
+    155,
+    157
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,122 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-cell-cycle",
+  "concept_key": "concept:cell-cycle",
+  "registry_status": "new",
+  "term": "세포주기",
+  "notation": {
+    "hanja": "細胞週期",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 週 돌 주 · 期 기약할 기",
+    "english": "cell cycle"
+  },
+  "definition": "딸세포가 자라 다시 분열하기까지 되풀이되는 한 바퀴. 간기와 분열기의 두 시기로 나눈다.",
+  "relations": [
+    {
+      "id": "rel-ccy-two-parts",
+      "text": "세포주기는 물질을 만들며 자라는 간기와 핵·세포질이 나뉘는 분열기로 나뉜다",
+      "form": {
+        "condition": "분열하는 세포를 볼 때",
+        "type": "classification",
+        "scope": "분열하는 진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "두 시기로 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ccy-interphase-long",
+      "text": "간기가 세포주기의 대부분을 차지하므로 표본을 관찰하면 대개 간기의 세포가 보인다",
+      "form": {
+        "condition": "세포 집단을 무작위로 관찰할 때",
+        "type": "causal",
+        "scope": "분열하는 세포"
+      },
+      "invertible": true,
+      "invertible_reason": "길이가 긴 쪽이 정해져 있어 두 시기를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분열기가 세포주기의 대부분을 차지하므로 표본을 관찰하면 대개 분열 중인 세포가 보인다"
+    },
+    {
+      "id": "rel-ccy-ratio",
+      "text": "G1기·S기·G2기가 차지하는 비율은 세포의 종류에 따라 달라진다",
+      "form": {
+        "condition": "세포의 종류를 바꿔 견줄 때",
+        "type": "conditional",
+        "scope": "간기의 세부 시기"
+      },
+      "invertible": false,
+      "invertible_reason": "달라진다는 사실을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ccy-nondividing",
+      "text": "성숙한 신경세포나 근육세포처럼 분열을 하지 않는 세포는 세포주기에 들어가지 않는다",
+      "form": {
+        "condition": "분열을 멈춘 세포에서",
+        "type": "conditional",
+        "scope": "분열하지 않는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "예외를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "몸을 이루는 모든 세포는 세포주기를 돌며 계속 분열한다",
+      "why_wrong": "성숙한 신경세포처럼 세포주기에 아예 들어가지 않는 세포도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ccy-nondividing"
+    },
+    {
+      "text": "세포주기에서 가장 긴 시기는 분열기다",
+      "why_wrong": "대부분을 차지하는 것은 간기다. 분열기는 그에 비하면 짧다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ccy-interphase-long"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-interphase"
+    },
+    {
+      "type": "next",
+      "target": "bio-mitotic-phase"
+    },
+    {
+      "type": "next",
+      "target": "bio-mitosis"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-1",
+  "pages": [
+    140,
+    147
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

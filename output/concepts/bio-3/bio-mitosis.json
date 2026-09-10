@@ -1,0 +1,136 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-mitosis",
+  "concept_key": "concept:mitosis",
+  "registry_status": "new",
+  "term": "체세포분열",
+  "notation": {
+    "hanja": "體細胞分裂",
+    "hanja_gloss": "體 몸 체 · 細 가늘 세 · 胞 세포 포 · 分 나눌 분 · 裂 찢을 렬",
+    "english": "mitosis"
+  },
+  "definition": "모세포 하나가 나뉘어 유전정보가 같은 딸세포 둘을 만드는 분열. 발생·성장·재생에서 일어난다.",
+  "relations": [
+    {
+      "id": "rel-mit-two-identical",
+      "text": "체세포분열은 모세포 하나에서 유전정보가 같은 딸세포 두 개를 만든다",
+      "form": {
+        "condition": "복제와 분배에 오류가 없을 때",
+        "type": "causal",
+        "scope": "체세포분열"
+      },
+      "invertible": false,
+      "invertible_reason": "결과의 수를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mit-stages",
+      "text": "핵분열은 전기·중기·후기·말기의 차례로 이어지고 세포질분열은 말기 뒤쪽에서 시작한다",
+      "form": {
+        "condition": "체세포분열이 진행될 때",
+        "type": "conditional",
+        "scope": "진핵생물의 체세포분열"
+      },
+      "invertible": true,
+      "invertible_reason": "단계의 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵분열은 말기·후기·중기·전기의 차례로 이어지고 세포질분열은 전기 앞쪽에서 시작한다"
+    },
+    {
+      "id": "rel-mit-anaphase",
+      "text": "후기에 갈라지는 것이 상동염색체가 아니라 염색분체이므로 딸세포의 염색체 수가 모세포와 같다",
+      "form": {
+        "condition": "체세포분열 후기에",
+        "type": "causal",
+        "scope": "체세포분열"
+      },
+      "invertible": true,
+      "invertible_reason": "갈라지는 대상이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "후기에 갈라지는 것이 염색분체가 아니라 상동염색체이므로 딸세포의 염색체 수가 모세포의 절반이 된다"
+    },
+    {
+      "id": "rel-mit-clone",
+      "text": "체세포분열이 거듭될수록 유전적으로 같은 세포의 수가 늘어난다",
+      "form": {
+        "condition": "분열이 되풀이될 때",
+        "type": "direct",
+        "scope": "체세포분열로 늘어난 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "늘어나는 것을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "체세포분열로 만들어진 딸세포는 염색체 수가 모세포의 절반이다",
+      "why_wrong": "절반이 되는 쪽은 감수분열이다. 체세포분열에서는 염색분체가 갈라져 수가 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mit-anaphase"
+    },
+    {
+      "text": "체세포분열에서도 상동염색체가 접합해 2가 염색체를 만든다",
+      "why_wrong": "2가 염색체는 감수 1분열에서만 만들어진다. 체세포분열에서 상동염색체는 따로 행동한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mit-anaphase"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cell-cycle"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-mitotic-phase"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-chromatid"
+    },
+    {
+      "type": "next",
+      "target": "bio-meiosis",
+      "note": "한 번 나뉘는 분열을 알아야 두 번 나뉘는 분열이 읽힌다"
+    },
+    {
+      "type": "next",
+      "target": "bio-comparison-of-mitosis-and-meiosis"
+    },
+    {
+      "type": "next",
+      "target": "bio-asexual-and-sexual-reproduction"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-2",
+  "pages": [
+    141,
+    147
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

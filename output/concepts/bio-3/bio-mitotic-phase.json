@@ -1,0 +1,131 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-mitotic-phase",
+  "concept_key": "concept:mitotic-phase",
+  "registry_status": "new",
+  "term": "분열기",
+  "aliases": [
+    "M기"
+  ],
+  "notation": {
+    "hanja": "分裂期",
+    "hanja_gloss": "分 나눌 분 · 裂 찢을 렬 · 期 기약할 기",
+    "english": "mitotic phase"
+  },
+  "definition": "핵분열과 세포질분열이 일어나 딸세포가 만들어지는 시기. 응축한 염색체를 관찰할 수 있다.",
+  "relations": [
+    {
+      "id": "rel-mtp-observable",
+      "text": "분열기에는 염색체가 응축해 있어 광학 현미경으로도 수와 모양을 가려낼 수 있다",
+      "form": {
+        "condition": "광학 현미경으로 관찰할 때",
+        "type": "causal",
+        "scope": "분열기의 염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "관찰이 되는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mtp-order",
+      "text": "분열기에서는 핵이 먼저 나뉘고 이어서 세포질이 나뉘어 딸세포 두 개가 완성된다",
+      "form": {
+        "condition": "분열기가 진행될 때",
+        "type": "conditional",
+        "scope": "진핵세포의 분열기"
+      },
+      "invertible": true,
+      "invertible_reason": "나뉘는 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분열기에서는 세포질이 먼저 나뉘고 이어서 핵이 나뉘어 딸세포 두 개가 완성된다"
+    },
+    {
+      "id": "rel-mtp-short",
+      "text": "분열기는 세포주기에서 간기보다 짧게 차지하므로 표본에서 분열 중인 세포는 드물게 보인다",
+      "form": {
+        "condition": "세포 집단을 관찰할 때",
+        "type": "causal",
+        "scope": "분열하는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "차지하는 길이를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mtp-karyotype",
+      "text": "핵형을 분열기 중기에 확인하는 까닭은 이때 염색체의 응축이 가장 심하기 때문이다",
+      "form": {
+        "condition": "핵형을 확인할 때",
+        "type": "causal",
+        "scope": "체세포분열 중기"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분열기에 DNA가 복제된다",
+      "why_wrong": "복제는 앞선 간기의 S기에 끝난다. 분열기에는 복제된 염색체가 갈라져 나뉜다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mtp-order"
+    },
+    {
+      "text": "핵이 둘로 나뉘면 그것으로 세포가 두 개가 된 것이다",
+      "why_wrong": "핵분열 뒤에 세포질분열까지 끝나야 완전한 딸세포 두 개가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mtp-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cell-cycle"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-interphase",
+      "note": "간기를 알아야 짝이 되는 시기가 읽힌다"
+    },
+    {
+      "type": "next",
+      "target": "bio-mitosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-karyotype",
+      "note": "핵형을 보는 때가 이 시기의 중기다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-1",
+  "pages": [
+    140,
+    147
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

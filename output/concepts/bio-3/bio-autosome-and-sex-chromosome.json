@@ -1,0 +1,105 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-autosome-and-sex-chromosome",
+  "concept_key": "concept:autosome-and-sex-chromosome",
+  "registry_status": "new",
+  "term": "상염색체와 성염색체",
+  "notation": {
+    "hanja": "常染色體·性染色體",
+    "hanja_gloss": "常 항상 상 · 染 물들 염 · 色 빛 색 · 體 몸 체 · 性 성품 성 · 染 물들 염 · 色 빛 색 · 體 몸 체",
+    "english": "autosome and sex chromosome"
+  },
+  "definition": "남녀가 함께 가지는 염색체가 상염색체이고, 성을 결정하는 데 관여하는 나머지 한 쌍이 성염색체다.",
+  "relations": [
+    {
+      "id": "rel-asc-human-count",
+      "text": "사람 체세포의 23쌍 가운데 22쌍이 상염색체이고 나머지 한 쌍이 성염색체다",
+      "form": {
+        "condition": "사람의 체세포를 볼 때",
+        "type": "classification",
+        "scope": "사람의 핵형"
+      },
+      "invertible": true,
+      "invertible_reason": "두 종류에 붙는 쌍의 수가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "사람 체세포의 23쌍 가운데 22쌍이 성염색체이고 나머지 한 쌍이 상염색체다"
+    },
+    {
+      "id": "rel-asc-xy",
+      "text": "사람에서 성염색체가 XY이면 남자, XX이면 여자다",
+      "form": {
+        "condition": "사람의 성염색체 조합을 읽을 때",
+        "type": "classification",
+        "scope": "사람"
+      },
+      "invertible": true,
+      "invertible_reason": "조합과 성별의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "사람에서 성염색체가 XY이면 여자, XX이면 남자다"
+    },
+    {
+      "id": "rel-asc-role",
+      "text": "상염색체는 남녀가 공통으로 가지므로 성별을 가리는 근거가 되지 못한다",
+      "form": {
+        "condition": "핵형으로 성별을 가릴 때",
+        "type": "causal",
+        "scope": "상염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "쓸 수 없는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "여자에게는 성염색체가 없다",
+      "why_wrong": "여자의 성염색체는 XX다. 없는 것이 아니라 X염색체 둘이 짝을 이룬 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-asc-xy"
+    },
+    {
+      "text": "성염색체에는 성을 결정하는 유전자만 들어 있다",
+      "why_wrong": "성염색체에도 성 결정과 상관없는 형질의 유전자가 함께 놓여 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-asc-role"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homologous-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "bio-karyotype",
+      "note": "사람의 핵형 그림에서 두 종류가 갈라져 보인다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-2",
+  "pages": [
+    137,
+    139
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

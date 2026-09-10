@@ -1,0 +1,108 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-gene",
+  "concept_key": "concept:gene",
+  "registry_status": "new",
+  "term": "유전자",
+  "notation": {
+    "hanja": "遺傳子",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자",
+    "english": "gene"
+  },
+  "definition": "생물의 형질을 정하는 정보가 적혀 있는 DNA의 특정 구간. 정보는 염기가 늘어선 순서로 적힌다.",
+  "relations": [
+    {
+      "id": "rel-gene-locus",
+      "text": "유전자는 DNA 전체가 아니라 형질 정보를 담은 일부 구간이므로, 염색체 하나에도 수많은 유전자가 놓인다",
+      "form": {
+        "condition": "염색체 하나를 이루는 DNA를 볼 때",
+        "type": "classification",
+        "scope": "염색체 하나"
+      },
+      "invertible": false,
+      "invertible_reason": "부분과 전체의 관계를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gene-sequence",
+      "text": "염기가 늘어선 순서가 정보를 담고, 그 순서가 대개 만들어질 단백질의 아미노산서열을 정한다",
+      "form": {
+        "condition": "유전자가 발현될 때",
+        "type": "causal",
+        "scope": "단백질 정보를 담은 유전자"
+      },
+      "invertible": true,
+      "invertible_reason": "정보를 주는 쪽과 받는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "단백질의 아미노산서열이 먼저 정해지고, 그에 맞추어 DNA 염기가 늘어선 순서가 정해진다"
+    },
+    {
+      "id": "rel-gene-together",
+      "text": "같은 염색체에 놓인 유전자들은 세포가 나뉠 때 그 염색체를 따라 함께 옮겨 간다",
+      "form": {
+        "condition": "세포가 분열할 때",
+        "type": "conditional",
+        "scope": "같은 염색체 위의 유전자"
+      },
+      "invertible": false,
+      "invertible_reason": "함께 움직인다는 사실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA의 모든 구간이 유전자다",
+      "why_wrong": "형질 정보를 담은 특정 구간만 유전자다. 나머지도 DNA이지만 유전자라고 부르지는 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gene-locus"
+    },
+    {
+      "text": "모든 유전자는 단백질의 아미노산서열 정보를 담고 있다",
+      "why_wrong": "단백질로 번역되지 않고 그대로 기능하는 RNA의 정보를 담은 유전자도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gene-sequence"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-allele"
+    },
+    {
+      "type": "next",
+      "target": "bio-mutation",
+      "note": "염기 순서가 바뀌면 무엇이 달라지는지로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-1",
+  "pages": [
+    135,
+    139
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

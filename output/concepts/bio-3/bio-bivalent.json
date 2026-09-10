@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-bivalent",
+  "concept_key": "concept:bivalent",
+  "registry_status": "new",
+  "term": "2가 염색체",
+  "aliases": [
+    "4분 염색체"
+  ],
+  "notation": {
+    "hanja": "二價染色體",
+    "hanja_gloss": "二 두 이 · 價 값 가 · 染 물들 염 · 色 빛 색 · 體 몸 체",
+    "english": "bivalent"
+  },
+  "definition": "감수 1분열에서 상동염색체 둘이 접합해 만들어진 덩어리. 염색분체 넷으로 이루어져 4분 염색체라고도 한다.",
+  "relations": [
+    {
+      "id": "rel-biv-four-chromatids",
+      "text": "복제된 상동염색체 두 개가 접합해 만들어지므로 2가 염색체는 염색분체 네 개로 이루어진다",
+      "form": {
+        "condition": "감수 1분열 전기에",
+        "type": "causal",
+        "scope": "2가 염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "이루어진 수를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-biv-marker",
+      "text": "2가 염색체가 보이면 그 분열은 감수분열이고, 체세포분열에서는 나타나지 않는다",
+      "form": {
+        "condition": "분열 중인 세포를 관찰할 때",
+        "type": "conditional",
+        "scope": "감수 1분열"
+      },
+      "invertible": true,
+      "invertible_reason": "나타나는 분열이 정해져 있어 두 분열을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "2가 염색체가 보이면 그 분열은 체세포분열이고, 감수분열에서는 나타나지 않는다"
+    },
+    {
+      "id": "rel-biv-sex-chromosome",
+      "text": "X염색체와 Y염색체는 모양과 크기가 달라도 서로 접합해 2가 염색체를 만든다",
+      "form": {
+        "condition": "남자의 감수 1분열에서",
+        "type": "conditional",
+        "scope": "사람의 성염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "예외처럼 보이는 경우를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모양과 크기가 다른 X염색체와 Y염색체는 2가 염색체를 만들지 못한다",
+      "why_wrong": "둘은 모양이 달라도 짝을 이루어 접합한다. 그래서 정자에는 X나 Y 가운데 하나만 들어간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-biv-sex-chromosome"
+    },
+    {
+      "text": "2가 염색체는 염색분체가 두 개인 염색체를 가리킨다",
+      "why_wrong": "상동염색체 둘이 붙은 것이라 염색분체가 넷이다. 그래서 4분 염색체라고도 부른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-biv-four-chromatids"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-homologous-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-meiosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-comparison-of-mitosis-and-meiosis",
+      "note": "두 분열을 가르는 표지로 쓰인다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-2",
+  "pages": [
+    142,
+    143
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

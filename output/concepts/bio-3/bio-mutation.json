@@ -1,0 +1,111 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-mutation",
+  "concept_key": "concept:mutation",
+  "registry_status": "new",
+  "term": "돌연변이",
+  "notation": {
+    "hanja": "突然變異",
+    "hanja_gloss": "突 갑자기 돌 · 然 그러할 연 · 變 변할 변 · 異 다를 이",
+    "english": "mutation"
+  },
+  "definition": "DNA의 염기서열이 바뀌는 일. 개체군에 없던 새로운 대립유전자가 여기에서 나온다.",
+  "relations": [
+    {
+      "id": "rel-mut-new-allele",
+      "text": "돌연변이가 일어나면 그전에는 개체군에 없던 새로운 대립유전자가 나타난다",
+      "form": {
+        "condition": "염기서열에 변화가 생겼을 때",
+        "type": "causal",
+        "scope": "개체군의 유전자풀"
+      },
+      "invertible": false,
+      "invertible_reason": "생겨나는 것을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mut-germline",
+      "text": "생식세포에 생긴 돌연변이라야 자손에게 전해져 개체군의 유전자풀을 바꿀 수 있다",
+      "form": {
+        "condition": "다음 세대를 볼 때",
+        "type": "conditional",
+        "scope": "생식세포 돌연변이"
+      },
+      "invertible": true,
+      "invertible_reason": "전해지는 쪽 세포가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체세포에 생긴 돌연변이라야 자손에게 전해져 개체군의 유전자풀을 바꿀 수 있다"
+    },
+    {
+      "id": "rel-mut-somatic",
+      "text": "대부분의 돌연변이는 체세포에서 생겨 그 개체에서 그치고 자손에게 남지 않는다",
+      "form": {
+        "condition": "체세포에서 일어났을 때",
+        "type": "causal",
+        "scope": "체세포 돌연변이"
+      },
+      "invertible": false,
+      "invertible_reason": "그치는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "돌연변이는 모두 해롭다",
+      "why_wrong": "해로운 것이 많지만 중립이거나 환경에 따라 유리한 것도 있다. 그런 변이가 자연선택의 재료가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mut-new-allele"
+    },
+    {
+      "text": "몸의 세포에 생긴 돌연변이도 자손에게 그대로 유전된다",
+      "why_wrong": "자손에게 전해지는 것은 생식세포에 생긴 돌연변이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mut-germline"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-gene-pool"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-gene"
+    },
+    {
+      "type": "related",
+      "target": "bio-variation"
+    },
+    {
+      "type": "related",
+      "target": "bio-allele-frequency"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-3",
+  "pages": [
+    155,
+    157
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

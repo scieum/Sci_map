@@ -1,0 +1,109 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-mollusca",
+  "concept_key": "concept:mollusca",
+  "registry_status": "new",
+  "term": "연체동물문",
+  "notation": {
+    "hanja": "軟體動物門",
+    "hanja_gloss": "軟 연할 연 · 體 몸 체 · 動 움직일 동 · 物 물건 물 · 門 문 문",
+    "english": "Mollusca"
+  },
+  "definition": "근육으로 된 발과 외투막, 내장낭으로 몸이 짜인 3배엽성 선구동물 무리.",
+  "relations": [
+    {
+      "id": "rel-mol-three-parts",
+      "text": "연체동물의 몸은 근육으로 된 발, 몸을 감싸는 외투막, 기관이 들어 있는 내장낭으로 나뉜다",
+      "form": {
+        "condition": "몸의 구조를 볼 때",
+        "type": "classification",
+        "scope": "연체동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 나눈 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mol-gill",
+      "text": "아가미로 기체를 주고받으며 순환계와 소화계가 잘 발달해 있다",
+      "form": {
+        "condition": "기관의 발달 정도를 견줄 때",
+        "type": "classification",
+        "scope": "연체동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "발달한 기관을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mol-open-circulation",
+      "text": "개방혈관계를 가져 혈액이 혈관을 벗어나 조직 사이로 직접 흘러든다",
+      "form": {
+        "condition": "혈액이 도는 길을 따라갈 때",
+        "type": "causal",
+        "scope": "연체동물문의 순환계"
+      },
+      "invertible": false,
+      "invertible_reason": "흐르는 방식을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "껍데기가 없는 오징어와 문어는 연체동물이 아니다",
+      "why_wrong": "패각이 있는가가 아니라 발·외투막·내장낭의 구조로 묶인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mol-three-parts"
+    },
+    {
+      "text": "개방혈관계는 혈관이 아예 없는 순환계다",
+      "why_wrong": "혈관은 있으나 모세혈관의 끝이 열려 있어 혈액이 조직으로 직접 들어간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mol-open-circulation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-protostome-and-deuterostome"
+    },
+    {
+      "type": "related",
+      "target": "bio-annelida",
+      "note": "순환계가 열렸는가 닫혔는가에서 갈린다"
+    },
+    {
+      "type": "related",
+      "target": "bio-arthropoda",
+      "note": "개방혈관계를 함께 가진다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-2",
+  "pages": [
+    171,
+    172,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

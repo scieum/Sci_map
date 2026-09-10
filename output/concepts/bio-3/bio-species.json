@@ -1,0 +1,122 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-species",
+  "concept_key": "concept:species",
+  "registry_status": "new",
+  "term": "종",
+  "notation": {
+    "hanja": "種",
+    "hanja_gloss": "種 씨 종",
+    "english": "species"
+  },
+  "definition": "생물분류의 기본 단위. 형태와 구조로 가르기도 하고, 교배해 생식 능력 있는 자손을 남기는가로 가르기도 한다.",
+  "relations": [
+    {
+      "id": "rel-spe-basic-unit",
+      "text": "종은 생물분류에서 가장 아래에 놓이는 기본 단위이고, 이것을 모아 위 단계를 만든다",
+      "form": {
+        "condition": "분류 단계를 세울 때",
+        "type": "classification",
+        "scope": "생물분류 체계"
+      },
+      "invertible": false,
+      "invertible_reason": "단위의 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spe-morphological",
+      "text": "형태학적 종은 겉모습과 구조가 다른 무리와 구별되는가만으로 가른 종이다",
+      "form": {
+        "condition": "형태 자료로 가를 때",
+        "type": "classification",
+        "scope": "형태학적 종"
+      },
+      "invertible": false,
+      "invertible_reason": "가르는 잣대를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spe-biological",
+      "text": "생물학적 종은 서로 교배해 생식 능력이 있는 자손을 낳을 수 있는가로 가른 종이다",
+      "form": {
+        "condition": "교배 가능성을 따질 때",
+        "type": "classification",
+        "scope": "생물학적 종"
+      },
+      "invertible": false,
+      "invertible_reason": "가르는 잣대를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spe-usage",
+      "text": "형태학적 종은 주로 균류와 식물에, 생물학적 종은 주로 동물의 분류에 쓴다",
+      "form": {
+        "condition": "어느 무리를 분류하는가에 따라",
+        "type": "classification",
+        "scope": "두 종 개념의 쓰임"
+      },
+      "invertible": true,
+      "invertible_reason": "쓰이는 무리가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "형태학적 종은 주로 동물에, 생물학적 종은 주로 균류와 식물의 분류에 쓴다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "겉모습이 닮은 두 무리는 언제나 같은 종이다",
+      "why_wrong": "고양이와 삵처럼 닮았어도 생식 능력 있는 자손을 남기지 못하면 다른 종이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spe-biological"
+    },
+    {
+      "text": "교배해서 자손만 낳으면 같은 종이다",
+      "why_wrong": "그 자손이 다시 번식할 수 있어야 한다. 생식 능력이 없는 자손이면 같은 종으로 보지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spe-biological"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "bio-taxonomic-rank"
+    },
+    {
+      "type": "related",
+      "target": "bio-scientific-name",
+      "note": "종에 붙이는 이름이 학명이다"
+    },
+    {
+      "type": "related",
+      "target": "bio-phylogeny-and-phylogenetic-tree"
+    }
+  ],
+  "curriculum": [
+    "12생과03-04"
+  ],
+  "topic_id": "bio-3-4-1",
+  "pages": [
+    158
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

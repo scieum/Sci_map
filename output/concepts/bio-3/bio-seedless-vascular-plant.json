@@ -1,0 +1,125 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-seedless-vascular-plant",
+  "concept_key": "concept:seedless-vascular-plant",
+  "registry_status": "new",
+  "term": "비종자 관다발식물",
+  "aliases": [
+    "양치식물"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'관다발'이 고유어여서 낱말 전체에 들어맞는 한자어가 없다. 비종자(非種子)와 식물(植物)만 한자다",
+    "english": "seedless vascular plant"
+  },
+  "definition": "체관과 헛물관으로 된 관다발을 갖추었으나 종자 대신 포자로 번식하는 식물 무리.",
+  "relations": [
+    {
+      "id": "rel-svp-vascular",
+      "text": "관다발을 갖추어 뿌리·줄기·잎의 구별이 뚜렷하고 비관다발식물보다 크게 자란다",
+      "form": {
+        "condition": "관다발이 있을 때",
+        "type": "causal",
+        "scope": "비종자 관다발식물"
+      },
+      "invertible": false,
+      "invertible_reason": "관다발이 있어 생기는 차이를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-svp-spore-water",
+      "text": "종자를 맺지 않고 포자로 번식하며 수정에 물이 있어야 해서 그늘지고 축축한 곳에 산다",
+      "form": {
+        "condition": "번식이 이루어질 때",
+        "type": "causal",
+        "scope": "비종자 관다발식물의 서식지"
+      },
+      "invertible": false,
+      "invertible_reason": "서식지가 정해지는 까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-svp-no-cambium",
+      "text": "형성층이 없어 줄기가 굵어지는 부피 성장이 일어나지 않는다",
+      "form": {
+        "condition": "형성층이 없을 때",
+        "type": "causal",
+        "scope": "비종자 관다발식물의 줄기"
+      },
+      "invertible": false,
+      "invertible_reason": "없어서 생기는 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-svp-groups",
+      "text": "석송류와 고사리류가 이 무리에 들며, 고사리류의 잎과 줄기는 종자식물과 비슷하다",
+      "form": {
+        "condition": "무리 안을 다시 나눌 때",
+        "type": "classification",
+        "scope": "양치식물문"
+      },
+      "invertible": false,
+      "invertible_reason": "속한 무리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고사리는 씨앗으로 번식한다",
+      "why_wrong": "포자로 번식한다. 잎 뒷면의 포자주머니에서 포자가 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-svp-spore-water"
+    },
+    {
+      "text": "관다발이 있는 식물은 모두 종자를 맺는다",
+      "why_wrong": "관다발이 있어도 포자로 번식하는 무리가 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-svp-vascular"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-classification-criteria-of-plant"
+    },
+    {
+      "type": "related",
+      "target": "bio-nonvascular-plant"
+    },
+    {
+      "type": "related",
+      "target": "bio-seed-plant",
+      "note": "관다발은 같고 번식하는 방법에서 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-1",
+  "pages": [
+    167,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

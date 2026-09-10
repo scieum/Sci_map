@@ -1,0 +1,113 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-interphase",
+  "concept_key": "concept:interphase",
+  "registry_status": "new",
+  "term": "간기",
+  "notation": {
+    "hanja": "間期",
+    "hanja_gloss": "間 사이 간 · 期 기약할 기",
+    "english": "interphase"
+  },
+  "definition": "세포가 자라며 물질과 세포소기관을 만드는 시기. G1기·S기·G2기로 나뉘고 염색체는 풀어져 있다.",
+  "relations": [
+    {
+      "id": "rel-int-three-stages",
+      "text": "간기는 복제를 준비하는 G1기, DNA를 복제하는 S기, 분열을 준비하는 G2기의 차례로 지나간다",
+      "form": {
+        "condition": "간기가 진행될 때",
+        "type": "conditional",
+        "scope": "간기의 세부 시기"
+      },
+      "invertible": true,
+      "invertible_reason": "지나가는 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "간기는 분열을 준비하는 G2기, DNA를 복제하는 S기, 복제를 준비하는 G1기의 차례로 지나간다"
+    },
+    {
+      "id": "rel-int-s-replication",
+      "text": "DNA 복제는 간기의 S기에 끝나므로 이 시기를 지난 염색체는 두 염색분체를 갖게 된다",
+      "form": {
+        "condition": "S기를 지났을 때",
+        "type": "causal",
+        "scope": "분열하는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "복제가 일어나는 자리를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-int-loose",
+      "text": "간기에는 염색체가 풀어져 있어 유전정보를 쓰기에는 좋지만 광학 현미경으로는 모양을 가려낼 수 없다",
+      "form": {
+        "condition": "간기의 핵을 관찰할 때",
+        "type": "causal",
+        "scope": "간기의 염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "한 상태의 두 면을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "간기는 세포가 아무 일도 하지 않고 쉬는 시기다",
+      "why_wrong": "간기에 세포는 자라고 물질을 만들며 DNA까지 복제한다. 오히려 가장 바쁜 시기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-int-s-replication"
+    },
+    {
+      "text": "DNA 복제는 분열기에 일어난다",
+      "why_wrong": "복제는 앞선 간기의 S기에 끝난다. 분열기에는 이미 복제된 염색체가 나뉠 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-int-s-replication"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-cell-cycle"
+    },
+    {
+      "type": "next",
+      "target": "bio-mitotic-phase"
+    },
+    {
+      "type": "next",
+      "target": "bio-mitosis"
+    },
+    {
+      "type": "related",
+      "target": "bio-chromatid",
+      "note": "복제가 두 가닥을 만든다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-1",
+  "pages": [
+    140,
+    141,
+    147
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

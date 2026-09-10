@@ -1,0 +1,120 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-homologous-chromosome",
+  "concept_key": "concept:homologous-chromosome",
+  "registry_status": "new",
+  "term": "상동염색체",
+  "notation": {
+    "hanja": "相同染色體",
+    "hanja_gloss": "相 서로 상 · 同 같을 동 · 染 물들 염 · 色 빛 색 · 體 몸 체",
+    "english": "homologous chromosome"
+  },
+  "definition": "모양과 크기가 같아 짝을 이루는 두 염색체. 한쪽은 아버지에게서, 다른 한쪽은 어머니에게서 온 것이다.",
+  "relations": [
+    {
+      "id": "rel-hom-parent-origin",
+      "text": "한 쌍의 상동염색체는 아버지에게서 하나, 어머니에게서 하나를 받아 짝이 된 것이다",
+      "form": {
+        "condition": "유성생식으로 만들어진 체세포에서",
+        "type": "classification",
+        "scope": "핵상이 2n인 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "유래를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hom-vs-chromatid",
+      "text": "상동염색체는 유래가 다른 두 염색체이고 염색분체는 한 염색체가 복제된 두 가닥이라 서로 다른 말이다",
+      "form": {
+        "condition": "분열기의 염색체를 견줄 때",
+        "type": "classification",
+        "scope": "복제를 마친 2n 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "두 용어를 가른 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hom-allele-may-differ",
+      "text": "상동염색체의 같은 자리에 놓인 두 대립유전자는 서로 같기도 하고 다르기도 하다",
+      "form": {
+        "condition": "한 쌍의 상동염색체를 볼 때",
+        "type": "conditional",
+        "scope": "상동염색체의 같은 유전자 자리"
+      },
+      "invertible": false,
+      "invertible_reason": "두 경우가 모두 가능하다는 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상동염색체는 유전자 구성이 완전히 같다",
+      "why_wrong": "유전자 자리는 같지만 그 자리에 놓인 대립유전자는 다를 수 있다. 완전히 같은 쪽은 두 염색분체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hom-allele-may-differ"
+    },
+    {
+      "text": "핵상이 n인 생식세포에도 상동염색체가 쌍으로 들어 있다",
+      "why_wrong": "감수 1분열에서 상동염색체가 갈라지므로 생식세포에는 쌍 가운데 하나만 들어간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hom-parent-origin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-chromatid"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-karyotype",
+      "note": "핵형을 늘어놓는 자리에서 짝이 눈에 들어온다"
+    },
+    {
+      "type": "next",
+      "target": "bio-autosome-and-sex-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-allele"
+    },
+    {
+      "type": "next",
+      "target": "bio-ploidy"
+    },
+    {
+      "type": "next",
+      "target": "bio-bivalent"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-2",
+  "pages": [
+    137,
+    138,
+    139
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

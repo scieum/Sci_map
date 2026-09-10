@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-genetic-diversity",
+  "concept_key": "concept:genetic-diversity",
+  "registry_status": "new",
+  "term": "유전적 다양성",
+  "notation": {
+    "hanja": "遺傳的 多樣性",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 的 과녁 적 · 多 많을 다 · 樣 모양 양 · 性 성품 성",
+    "english": "genetic diversity"
+  },
+  "definition": "한 종 안에서 개체마다 유전자 구성이 다른 정도. 상동염색체의 무작위 분리와 무작위 수정이 이를 높인다.",
+  "relations": [
+    {
+      "id": "rel-gdv-random-arrangement",
+      "text": "감수 1분열 중기에 상동염색체 쌍이 무작위로 늘어서므로 생식세포마다 염색체 조합이 달라진다",
+      "form": {
+        "condition": "감수 1분열 중기에",
+        "type": "causal",
+        "scope": "유성생식을 하는 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "달라지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gdv-combination",
+      "text": "상동염색체 쌍이 n개면 생식세포가 가질 수 있는 염색체 조합은 2의 n제곱 가지가 된다",
+      "form": {
+        "condition": "교차를 생각하지 않을 때",
+        "type": "direct",
+        "scope": "상동염색체 쌍의 수와 조합 수"
+      },
+      "invertible": false,
+      "invertible_reason": "셈한 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gdv-random-fertilization",
+      "text": "다양한 생식세포가 무작위로 수정하므로 자손의 다양성은 생식세포의 다양성보다 커진다",
+      "form": {
+        "condition": "수정이 무작위로 일어날 때",
+        "type": "causal",
+        "scope": "유성생식으로 태어난 자손"
+      },
+      "invertible": true,
+      "invertible_reason": "커지는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다양한 생식세포가 무작위로 수정하므로 자손의 다양성은 생식세포의 다양성보다 작아진다"
+    },
+    {
+      "id": "rel-gdv-adaptation",
+      "text": "유전적 다양성이 높은 종일수록 환경이 급격히 바뀌어도 살아남는 개체가 있어 쉽게 멸종하지 않는다",
+      "form": {
+        "condition": "환경이 급격히 바뀔 때",
+        "type": "direct",
+        "scope": "종의 존속"
+      },
+      "invertible": true,
+      "invertible_reason": "다양성이 높을 때 유리해지는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유전적 다양성이 낮은 종일수록 환경이 급격히 바뀌어도 살아남는 개체가 있어 쉽게 멸종하지 않는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "감수분열로 만들어진 생식세포는 모두 유전적으로 같다",
+      "why_wrong": "상동염색체가 무작위로 갈라져 조합이 달라지므로 생식세포마다 유전자 구성이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gdv-random-arrangement"
+    },
+    {
+      "text": "유전적 다양성은 한 개체 안에서 유전자가 얼마나 다양한지를 뜻한다",
+      "why_wrong": "한 종을 이루는 개체들 사이에 유전자 구성이 얼마나 다른가를 뜻한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gdv-combination"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-meiosis"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-allele"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-asexual-and-sexual-reproduction",
+      "note": "유성생식이라야 다양성을 물을 수 있다"
+    },
+    {
+      "type": "related",
+      "target": "bio-gamete-formation-and-continuity-of-life"
+    }
+  ],
+  "curriculum": [
+    "12생과03-02"
+  ],
+  "topic_id": "bio-3-2-3",
+  "pages": [
+    145,
+    147
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

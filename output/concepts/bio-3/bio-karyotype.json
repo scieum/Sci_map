@@ -1,0 +1,117 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-karyotype",
+  "concept_key": "concept:karyotype",
+  "registry_status": "new",
+  "term": "핵형",
+  "aliases": [
+    "핵형분석"
+  ],
+  "notation": {
+    "hanja": "核型",
+    "hanja_gloss": "核 씨 핵 · 型 모형 형",
+    "english": "karyotype"
+  },
+  "definition": "한 세포에 든 염색체의 수·모양·크기 같은 겉모습의 특징. 이것을 조사하는 일이 핵형분석이다.",
+  "relations": [
+    {
+      "id": "rel-kar-metaphase",
+      "text": "염색체가 가장 많이 응축하는 체세포분열 중기라야 핵형을 광학 현미경으로 확인할 수 있다",
+      "form": {
+        "condition": "광학 현미경으로 관찰할 때",
+        "type": "conditional",
+        "scope": "체세포분열 중기의 세포"
+      },
+      "invertible": true,
+      "invertible_reason": "관찰이 되는 시기가 정해져 있어 시기를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "염색체가 풀어져 있는 간기라야 핵형을 광학 현미경으로 확인할 수 있다"
+    },
+    {
+      "id": "rel-kar-species-sex",
+      "text": "핵형은 종이 다르면 다르고, 같은 종에서는 성별이 같으면 같다",
+      "form": {
+        "condition": "정상 개체끼리 견줄 때",
+        "type": "classification",
+        "scope": "같은 종의 같은 성별"
+      },
+      "invertible": false,
+      "invertible_reason": "같고 다름을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-kar-detect",
+      "text": "핵형을 분석하면 염색체의 수나 모양이 어긋난 염색체이상과 성별을 알아낼 수 있다",
+      "form": {
+        "condition": "핵형분석을 했을 때",
+        "type": "causal",
+        "scope": "염색체 수준의 이상"
+      },
+      "invertible": false,
+      "invertible_reason": "알아낼 수 있는 것을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵형분석을 하면 그 사람이 어떤 대립유전자를 가졌는지 알 수 있다",
+      "why_wrong": "핵형은 염색체의 겉모습만 보여 준다. 유전자 하나하나의 차이는 현미경으로 보이지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-kar-detect"
+    },
+    {
+      "text": "간기의 세포로도 핵형을 분석할 수 있다",
+      "why_wrong": "간기에는 염색체가 풀어져 있어 수와 모양을 셀 수 없다. 응축이 가장 심한 분열기 중기에 관찰한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-kar-metaphase"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "bio-homologous-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "bio-mitotic-phase",
+      "note": "관찰하기 좋은 때가 언제인지 여기서 본다"
+    },
+    {
+      "type": "related",
+      "target": "bio-autosome-and-sex-chromosome",
+      "note": "사람의 핵형은 두 종류의 염색체로 나뉜다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-2",
+  "pages": [
+    136,
+    137,
+    139
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

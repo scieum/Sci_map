@@ -1,0 +1,110 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-echinodermata",
+  "concept_key": "concept:echinodermata",
+  "registry_status": "new",
+  "term": "극피동물문",
+  "notation": {
+    "hanja": "棘皮動物門",
+    "hanja_gloss": "棘 가시 극 · 皮 가죽 피 · 動 움직일 동 · 物 물건 물 · 門 문 문",
+    "english": "Echinodermata"
+  },
+  "definition": "유생은 좌우 대칭이지만 성체는 방사 대칭이 되는 3배엽성 후구동물 무리.",
+  "relations": [
+    {
+      "id": "rel-ech-symmetry-shift",
+      "text": "유생일 때는 좌우 대칭이던 몸이 성체가 되면 방사 대칭으로 바뀐다",
+      "form": {
+        "condition": "생활 시기를 견줄 때",
+        "type": "conditional",
+        "scope": "극피동물문의 생활사"
+      },
+      "invertible": true,
+      "invertible_reason": "시기와 대칭의 짝이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유생일 때는 방사 대칭이던 몸이 성체가 되면 좌우 대칭으로 바뀐다"
+    },
+    {
+      "id": "rel-ech-water-vascular",
+      "text": "수관계가 호흡기와 순환기 노릇을 겸하고 그 끝의 관족으로 움직이며 먹이를 잡는다",
+      "form": {
+        "condition": "몸을 움직이거나 기체를 주고받을 때",
+        "type": "causal",
+        "scope": "극피동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "겸하는 구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ech-deuterostome",
+      "text": "성체가 방사 대칭이어도 발생에서 원구가 항문이 되므로 후구동물로 묶인다",
+      "form": {
+        "condition": "계통을 따질 때",
+        "type": "causal",
+        "scope": "극피동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "묶이는 근거를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "불가사리는 방사 대칭이므로 자포동물처럼 2배엽성이다",
+      "why_wrong": "극피동물은 3배엽성 후구동물이다. 방사 대칭인 것은 성체의 겉모습이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ech-deuterostome"
+    },
+    {
+      "text": "관족은 먹이를 잡는 데에만 쓰인다",
+      "why_wrong": "이동에도 쓰이며, 관족이 달린 수관계는 호흡과 순환까지 맡는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ech-water-vascular"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-protostome-and-deuterostome"
+    },
+    {
+      "type": "related",
+      "target": "bio-chordata",
+      "note": "같은 후구동물로 묶인다"
+    },
+    {
+      "type": "related",
+      "target": "bio-cnidaria",
+      "note": "방사 대칭이라는 점만 닮았다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-2",
+  "pages": [
+    171,
+    173,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

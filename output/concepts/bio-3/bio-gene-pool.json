@@ -1,0 +1,135 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-gene-pool",
+  "concept_key": "concept:gene-pool",
+  "registry_status": "new",
+  "term": "유전자풀",
+  "notation": {
+    "hanja": "遺傳子",
+    "hanja_note": "'풀'은 영어 pool 을 옮긴 말이라 대응하는 한자가 없다. 앞의 유전자만 한자어다",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자",
+    "english": "gene pool"
+  },
+  "definition": "한 개체군에 속한 모든 개체가 지닌 대립유전자를 통틀어 이르는 말.",
+  "relations": [
+    {
+      "id": "rel-gpl-population-unit",
+      "text": "유전자풀은 개체 하나가 아니라 개체군 전체를 단위로 삼아 모은 것이다",
+      "form": {
+        "condition": "진화를 개체군 수준에서 볼 때",
+        "type": "classification",
+        "scope": "한 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "단위를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gpl-shared",
+      "text": "같은 개체군의 개체들은 서로 교배할 수 있는 사이여서 하나의 유전자풀을 함께 나눈다",
+      "form": {
+        "condition": "교배가 가능한 무리일 때",
+        "type": "causal",
+        "scope": "한 개체군"
+      },
+      "invertible": false,
+      "invertible_reason": "함께 나누는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gpl-evolution",
+      "text": "진화는 개체 하나가 바뀌는 일이 아니라 개체군의 유전자풀이 바뀌는 일로 정의한다",
+      "form": {
+        "condition": "현대 진화학의 관점에서 볼 때",
+        "type": "classification",
+        "scope": "진화의 정의"
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gpl-factors",
+      "text": "유전자풀은 자연선택뿐 아니라 돌연변이·유전적 부동·유전자흐름에 의해서도 달라진다",
+      "form": {
+        "condition": "개체군을 여러 세대에 걸쳐 볼 때",
+        "type": "causal",
+        "scope": "유전자풀의 변화 요인"
+      },
+      "invertible": false,
+      "invertible_reason": "요인을 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "개체 하나도 자기만의 유전자풀을 가진다",
+      "why_wrong": "유전자풀은 개체군 전체가 가진 대립유전자를 모두 모은 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gpl-population-unit"
+    },
+    {
+      "text": "유전자풀을 바꾸는 것은 자연선택뿐이다",
+      "why_wrong": "돌연변이·유전적 부동·유전자흐름도 유전자풀을 바꾼다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gpl-factors"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-allele"
+    },
+    {
+      "type": "prereq",
+      "target": "bio-natural-selection"
+    },
+    {
+      "type": "next",
+      "target": "bio-allele-frequency",
+      "note": "무엇이 있는가 다음에 얼마나 있는가를 센다"
+    },
+    {
+      "type": "next",
+      "target": "bio-mutation"
+    },
+    {
+      "type": "next",
+      "target": "bio-genetic-drift"
+    },
+    {
+      "type": "next",
+      "target": "bio-gene-flow"
+    }
+  ],
+  "curriculum": [
+    "12생과03-03"
+  ],
+  "topic_id": "bio-3-3-3",
+  "pages": [
+    154,
+    155
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

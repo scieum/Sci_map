@@ -1,0 +1,124 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-plant-kingdom",
+  "concept_key": "concept:plant-kingdom",
+  "registry_status": "new",
+  "term": "식물계",
+  "notation": {
+    "hanja": "植物界",
+    "hanja_gloss": "植 심을 식 · 物 물건 물 · 界 지경 계",
+    "english": "Plantae"
+  },
+  "definition": "셀룰로스로 된 세포벽을 갖추고 엽록체에서 광합성을 하는 다세포 진핵생물의 무리.",
+  "relations": [
+    {
+      "id": "rel-plk-autotroph",
+      "text": "엽록체에서 스스로 양분을 만들어 내므로 식물은 독립영양생물로 묶인다",
+      "form": {
+        "condition": "영양방식으로 가를 때",
+        "type": "causal",
+        "scope": "식물계"
+      },
+      "invertible": false,
+      "invertible_reason": "묶이는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-plk-cell-wall",
+      "text": "식물의 세포벽은 셀룰로스로 이루어져 주로 키틴질 세포벽을 가지는 균계와 구별된다",
+      "form": {
+        "condition": "세포벽 성분을 견줄 때",
+        "type": "classification",
+        "scope": "식물계와 균계"
+      },
+      "invertible": true,
+      "invertible_reason": "두 계의 세포벽 성분이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식물의 세포벽은 키틴질로 이루어져 주로 셀룰로스 세포벽을 가지는 균계와 구별된다"
+    },
+    {
+      "id": "rel-plk-land",
+      "text": "물속 조류가 뭍으로 올라오는 동안 몸이 뿌리·줄기·잎으로 나뉘고 관다발이 발달하였다",
+      "form": {
+        "condition": "육상 환경에 적응해 가는 동안",
+        "type": "causal",
+        "scope": "육상식물의 진화"
+      },
+      "invertible": false,
+      "invertible_reason": "적응의 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-plk-cuticle",
+      "text": "잎의 큐티클층과 기공은 물을 덜 잃으면서 기체를 주고받게 해 주어 건조한 뭍에서 살게 한다",
+      "form": {
+        "condition": "건조한 육상 환경에서",
+        "type": "causal",
+        "scope": "육상식물의 잎"
+      },
+      "invertible": false,
+      "invertible_reason": "구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광합성을 하는 생물은 모두 식물계에 속한다",
+      "why_wrong": "남세균이나 다시마처럼 광합성을 해도 식물계가 아닌 생물이 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plk-autotroph"
+    },
+    {
+      "text": "식물의 세포벽도 균류처럼 키틴질로 되어 있다",
+      "why_wrong": "식물은 셀룰로스, 균류는 주로 키틴질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plk-cell-wall"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-six-kingdom-system"
+    },
+    {
+      "type": "next",
+      "target": "bio-classification-criteria-of-plant"
+    },
+    {
+      "type": "related",
+      "target": "bio-animal-kingdom",
+      "note": "두 계가 무엇으로 갈리는지 견주어 본다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-1",
+  "pages": [
+    163,
+    167,
+    175
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

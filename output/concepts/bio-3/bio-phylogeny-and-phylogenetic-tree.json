@@ -1,0 +1,129 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-phylogeny-and-phylogenetic-tree",
+  "concept_key": "concept:phylogeny-and-phylogenetic-tree",
+  "registry_status": "new",
+  "term": "계통과 계통수",
+  "notation": {
+    "hanja": "系統·系統樹",
+    "hanja_gloss": "系 이어맬 계 · 統 거느릴 통 · 系 이어맬 계 · 統 거느릴 통 · 樹 나무 수",
+    "english": "phylogeny and phylogenetic tree"
+  },
+  "definition": "생물이 진화해 온 내력이 계통이고, 그 내력을 나뭇가지 모양으로 그려 낸 그림이 계통수다.",
+  "relations": [
+    {
+      "id": "rel-phy-indirect",
+      "text": "계통은 직접 볼 수 없으므로 형질의 공통점과 차이점을 견주어 간접적으로 밝힌다",
+      "form": {
+        "condition": "계통분류를 할 때",
+        "type": "causal",
+        "scope": "계통분류"
+      },
+      "invertible": false,
+      "invertible_reason": "밝히는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-phy-branch-point",
+      "text": "계통수에서 가지가 갈라지는 분기점은 두 무리의 진화 경로가 달라진 자리를 뜻한다",
+      "form": {
+        "condition": "계통수를 읽을 때",
+        "type": "classification",
+        "scope": "계통수의 분기점"
+      },
+      "invertible": false,
+      "invertible_reason": "읽는 방법을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-phy-parsimony",
+      "text": "계통수를 그릴 때는 형질의 변화가 가장 적게 일어나는 경로를 골라 가정한다",
+      "form": {
+        "condition": "여러 경로가 가능할 때",
+        "type": "conditional",
+        "scope": "계통수 작성"
+      },
+      "invertible": true,
+      "invertible_reason": "고르는 경로가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "계통수를 그릴 때는 형질의 변화가 가장 많이 일어나는 경로를 골라 가정한다"
+    },
+    {
+      "id": "rel-phy-trait-choice",
+      "text": "계통분류에 쓰는 형질은 계절이나 환경에 따라 변하지 않으면서 관찰하기 쉬운 것이라야 한다",
+      "form": {
+        "condition": "형질을 고를 때",
+        "type": "conditional",
+        "scope": "계통분류에 쓰는 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "갖추어야 할 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "계통수에서 가지 끝에 있는 생물은 가지 아래쪽 생물에서 곧바로 진화한 것이다",
+      "why_wrong": "가지 끝은 지금 살아 있는 무리다. 둘은 분기점의 공통조상에서 갈라져 나온 사이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phy-branch-point"
+    },
+    {
+      "text": "계통수는 형질 변화가 가장 많이 일어난 경로를 그린 것이다",
+      "why_wrong": "변화가 가장 적게 일어나는 경로를 가정해 그린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phy-parsimony"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-phylogenetic-relationship"
+    },
+    {
+      "type": "next",
+      "target": "bio-three-domain-system"
+    },
+    {
+      "type": "next",
+      "target": "bio-protostome-and-deuterostome",
+      "note": "동물의 계통수를 읽어야 선구·후구의 자리가 보인다"
+    },
+    {
+      "type": "related",
+      "target": "bio-taxonomic-rank"
+    }
+  ],
+  "curriculum": [
+    "12생과03-04",
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-4-2",
+  "pages": [
+    159,
+    161,
+    165
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

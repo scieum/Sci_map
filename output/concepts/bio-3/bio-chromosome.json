@@ -1,0 +1,128 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-chromosome",
+  "concept_key": "concept:chromosome",
+  "registry_status": "new",
+  "term": "염색체",
+  "notation": {
+    "hanja": "染色體",
+    "hanja_gloss": "染 물들 염 · 色 빛 색 · 體 몸 체",
+    "english": "chromosome"
+  },
+  "definition": "아주 긴 DNA가 히스톤 단백질과 함께 접혀 만들어진 유전물질 덩어리. 분열하는 시기에는 응축해 막대 모양으로 보인다.",
+  "relations": [
+    {
+      "id": "rel-chr-dna-histone",
+      "text": "염색체는 DNA만이 아니라 히스톤 단백질까지 함께 짜인 구조라, 단백질을 빼고는 그 모양이 만들어지지 않는다",
+      "form": {
+        "condition": "진핵세포의 핵 안을 볼 때",
+        "type": "classification",
+        "scope": "진핵생물의 염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "구성 요소를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-chr-condense",
+      "text": "분열하지 않는 시기에는 풀어져 있고 분열하는 시기에는 응축하므로, 광학 현미경에는 분열기에만 모양이 잡힌다",
+      "form": {
+        "condition": "세포주기의 시기가 달라질 때",
+        "type": "conditional",
+        "scope": "광학 현미경 관찰"
+      },
+      "invertible": true,
+      "invertible_reason": "풀어지는 때와 응축하는 때가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분열하지 않는 시기에는 응축해 있고 분열하는 시기에는 풀어지므로, 광학 현미경에는 간기에만 모양이 잡힌다"
+    },
+    {
+      "id": "rel-chr-species-number",
+      "text": "염색체 수는 종마다 정해져 있어 같은 종의 체세포끼리는 언제나 같은 수를 가진다",
+      "form": {
+        "condition": "정상 개체의 체세포를 볼 때",
+        "type": "classification",
+        "scope": "같은 종의 체세포"
+      },
+      "invertible": false,
+      "invertible_reason": "종마다 정해진 수를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-chr-transfer",
+      "text": "분열에 앞서 DNA가 복제되고 염색체가 응축해 옮겨지므로 많은 유전정보가 두 딸세포에 똑같이 나뉜다",
+      "form": {
+        "condition": "세포가 분열할 때",
+        "type": "causal",
+        "scope": "체세포분열"
+      },
+      "invertible": false,
+      "invertible_reason": "전달되는 과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염색체는 세포 안에 늘 막대 모양으로 들어 있다",
+      "why_wrong": "막대 모양은 분열기에 응축했을 때의 모습이다. 분열하지 않을 때는 풀어져 핵 안에 퍼져 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chr-condense"
+    },
+    {
+      "text": "염색체 수가 많은 생물일수록 더 복잡하고 발달한 생물이다",
+      "why_wrong": "염색체 수는 종마다 정해진 값일 뿐이고 생물이 복잡한 정도를 나타내지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-chr-species-number"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-nucleosome",
+      "note": "구슬처럼 감긴 단위를 먼저 알아야 응축이 보인다"
+    },
+    {
+      "type": "next",
+      "target": "bio-gene"
+    },
+    {
+      "type": "next",
+      "target": "bio-chromatid"
+    },
+    {
+      "type": "next",
+      "target": "bio-karyotype"
+    }
+  ],
+  "curriculum": [
+    "12생과03-01"
+  ],
+  "topic_id": "bio-3-1-1",
+  "pages": [
+    134,
+    135,
+    139
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

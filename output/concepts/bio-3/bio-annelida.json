@@ -1,0 +1,109 @@
+{
+  "subject": "생명과학",
+  "unit": "Ⅲ. 생명의 연속성과 다양성",
+  "unit_id": "bio-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "bio-annelida",
+  "concept_key": "concept:annelida",
+  "registry_status": "new",
+  "term": "환형동물문",
+  "notation": {
+    "hanja": "環形動物門",
+    "hanja_gloss": "環 고리 환 · 形 모양 형 · 動 움직일 동 · 物 물건 물 · 門 문 문",
+    "english": "Annelida"
+  },
+  "definition": "고리 모양의 체절이 되풀이되는 몸을 가진 3배엽성 선구동물 무리.",
+  "relations": [
+    {
+      "id": "rel-ann-segments",
+      "text": "몸이 고리 모양 체절의 되풀이로 이루어져 체절의 유무를 묻는 자리에서 갈린다",
+      "form": {
+        "condition": "몸의 구조를 볼 때",
+        "type": "classification",
+        "scope": "환형동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ann-skin-breath",
+      "text": "따로 호흡기관을 두지 않고 축축한 피부로 기체를 주고받아 습기 많은 흙 속에 산다",
+      "form": {
+        "condition": "습기가 많은 곳에서 살 때",
+        "type": "causal",
+        "scope": "환형동물문"
+      },
+      "invertible": false,
+      "invertible_reason": "서식지가 정해지는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ann-closed-vs-open",
+      "text": "같은 선구동물이라도 환형동물은 폐쇄혈관계를, 연체동물과 절지동물은 개방혈관계를 가진다",
+      "form": {
+        "condition": "선구동물의 순환계를 견줄 때",
+        "type": "classification",
+        "scope": "선구동물의 순환계"
+      },
+      "invertible": true,
+      "invertible_reason": "어느 문이 어느 혈관계를 갖는지 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12생과03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 선구동물이라도 환형동물은 개방혈관계를, 연체동물과 절지동물은 폐쇄혈관계를 가진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지렁이는 몸에 마디가 있으니 절지동물이다",
+      "why_wrong": "마디로 된 다리와 외골격을 가진 쪽이 절지동물이다. 지렁이는 체절만 있는 환형동물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ann-segments"
+    },
+    {
+      "text": "지렁이도 폐로 호흡한다",
+      "why_wrong": "축축한 피부로 기체를 주고받는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ann-skin-breath"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "bio-protostome-and-deuterostome"
+    },
+    {
+      "type": "related",
+      "target": "bio-mollusca"
+    },
+    {
+      "type": "related",
+      "target": "bio-arthropoda",
+      "note": "체절이 있다는 점은 같고 외골격에서 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12생과03-05"
+  ],
+  "topic_id": "bio-3-5-2",
+  "pages": [
+    171,
+    172,
+    175
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

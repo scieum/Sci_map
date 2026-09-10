@@ -400,6 +400,26 @@ def check_media(cards, res: Result) -> None:
             f"access_tier 가 대장과 다른 자산 {len(mismatch)}건", mismatch)
 
 
+def card_cap(unit_id: str) -> int:
+    """이 단원 카드 수의 상한 — 소주제 수에 비례한다.
+
+    판정 자리는 validate_candidates.py 의 check_count 하나이고 여기는 그것을 따라
+    문구만 맞춘다(여기서는 경고일 뿐 fail 이 아니다). 백로그를 못 읽으면 40 이다.
+    """
+    try:
+        import yaml
+        with (REPO / "docs" / "unit_backlog.yaml").open(encoding="utf-8") as fh:
+            backlog = yaml.safe_load(fh)
+    except Exception:
+        return 40
+    subjects = backlog.get("subjects") or [{"units": backlog.get("units", [])}]
+    unit = next((u for s in subjects for u in s.get("units", []) if u["id"] == unit_id), None)
+    if not unit:
+        return 40
+    topics = sum(len(sec.get("topics", [])) for sec in unit.get("sections", []))
+    return max(40, topics * 5)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("path", help="카드 디렉터리 또는 단일 JSON")
@@ -435,9 +455,11 @@ def main() -> int:
             errs.append(f"{c.get('id', '?')}/{where}: {e.message}")
     res.add("schema", not errs, f"{len(errs)}건 위반" if errs else f"카드 {len(cards)}장 통과", errs[:20])
 
-    # 상한 40 — C1 후보 상한과 같이 맞춘다 (2026-09-08 교사 결정).
-    # 두 상한이 갈리면 C1 을 통과한 후보가 C2 에서 경고를 맞는다.
-    res.warn("count", f"카드 {len(cards)}장 (기준 10~40)")
+    # 상한은 C1 후보 상한과 같이 맞춘다 — max(40, 소주제 × 5), 2026-09-10 교사 결정.
+    # 두 상한이 갈리면 C1 을 통과한 후보가 C2 에서 경고를 맞는다. 실제로 갈렸었다:
+    # validate_candidates 만 고치고 여기를 두어, 생명과학 카드 56장이 "기준 10~40"
+    # 이라는 틀린 문구로 경고를 맞았다.
+    res.warn("count", f"카드 {len(cards)}장 (기준 10~{card_cap(args.unit)})")
     check_notation(cards, res)
     check_typeability(cards, res)
     check_answer_collision(cards, res)
