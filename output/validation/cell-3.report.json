@@ -1,0 +1,344 @@
+{
+  "unit_id": "cell-3",
+  "generated_at": "2026-09-10T00:00:00+09:00",
+  "mode_run": ["curriculum", "relation"],
+  "curriculum": {
+    "checked": 39,
+    "standards_in_scope": [
+      { "code": "12세포03-01", "text": "마이토콘드리아의 구조를 이해하고 생명체 내에서의 마이토콘드리아의 기능을 추론할 수 있다.", "crosscheck": "교사 확정" },
+      { "code": "12세포03-02", "text": "세포호흡 과정의 단계별 특징을 다양한 매체를 활용하여 협력적으로 소통할 수 있다.", "crosscheck": "일치" },
+      { "code": "12세포03-03", "text": "세포호흡 과정에서의 인산화 과정을 기질 수준의 인산화와 산화적 인산화 과정으로 구분할 수 있다.", "crosscheck": "일치" },
+      { "code": "12세포03-04", "text": "산소호흡과 발효의 공통점과 차이점을 이해하고, 실생활에서 발효를 이용한 사례 조사 계획을 세워 조사할 수 있다.", "crosscheck": "일치" },
+      { "code": "12세포03-05", "text": "엽록체의 구조를 이해하고 기능과 관련지어 설명할 수 있다.", "crosscheck": "일치" },
+      { "code": "12세포03-06", "text": "광합성의 명반응과 탄소 고정 반응을 단계별로 구분하여 특징을 이해하고 두 반응의 상호 관계를 추론할 수 있다.", "crosscheck": "일치" },
+      { "code": "12세포03-07", "text": "광합성과 세포호흡의 전자전달계를 비교하여 공통점과 차이점을 다양한 매체를 활용하여 설명할 수 있다.", "crosscheck": "교사 확정" },
+      { "code": "12세포03-08", "text": "광합성 관련 과학사적 연구 결과를 조사하여 시각화 자료를 창의적으로 제작하여 협력적으로 소통할 수 있다.", "crosscheck": "교사 확정" }
+    ],
+    "findings": [
+      {
+        "card_id": "cell-absorption-spectrum",
+        "verdict": "retag",
+        "current": ["12세포03-06"],
+        "suggested": ["12세포03-05"],
+        "reason": "12세포03-06 전문은 '광합성의 명반응과 탄소 고정 반응을 단계별로 구분하여 특징을 이해하고 두 반응의 상호 관계를 추론할 수 있다' 이고, 색소·흡수·파장·스펙트럼이라는 낱말이 한 번도 나오지 않는다. 이 카드의 세 명제(rel-abs-axes 축 배치, rel-abs-peaks 봉우리와 골의 자리, rel-abs-a-and-b 엽록소 a와 b의 어긋남)는 어느 것도 명반응이나 탄소 고정 반응의 단계를 말하지 않고 두 반응의 상호 관계도 말하지 않는다. 게다가 rel-abs-peaks('청자색광과 적색광 자리에서 봉우리를 이루고 녹색광 자리에서는 골이 진다')는 같은 단원 cell-chlorophyll 의 rel-chlorophyll-absorb 와 내용이 같은데 그쪽은 12세포03-05 로 태그돼 있다 — 교과서 105쪽의 같은 문장('엽록소의 흡수스펙트럼을 분석해 보면 청자색광과 적색광을 주로 흡수하고, 녹색광은 거의 흡수하지 않으며')에서 나온 두 명제에 서로 다른 코드가 붙어 있다. 단원 안의 기준을 03-05 쪽으로 맞추는 것이 옳다. 03-05('엽록체의 구조를 이해하고 기능과 관련지어 설명할 수 있다')에 걸리는 통로는 광합성색소가 엽록체 타이라코이드 막의 구성물이라는 점이다(교과서 104쪽).",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-action-spectrum",
+        "verdict": "retag",
+        "current": ["12세포03-06", "12세포03-08"],
+        "suggested": ["12세포03-05", "12세포03-08"],
+        "reason": "03-08 은 제자리다 — rel-act-engelmann(엥겔만의 실험)이 '광합성 관련 과학사적 연구 결과' 를 정면으로 받친다. 떼어야 할 것은 03-06 이다. rel-act-axes 는 그래프를 얻는 방법이고 rel-act-match-absorption 은 흡수와 광합성의 맞물림이라, 03-06 이 요구하는 '명반응과 탄소 고정 반응을 단계별로 구분' 에도 '두 반응의 상호 관계' 에도 닿지 않는다. 03-06 이 말하는 '두 반응' 은 명반응과 탄소 고정 반응이지 흡수스펙트럼과 작용스펙트럼이 아니다. cell-absorption-spectrum 과 한 묶음으로 처리한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-comparison-of-respiration-and-photosynthesis",
+        "verdict": "uncertain",
+        "current": ["12세포03-07"],
+        "suggested": [],
+        "reason": "12세포03-07 전문은 '광합성과 세포호흡의 전자전달계를 비교하여 공통점과 차이점을 다양한 매체를 활용하여 설명할 수 있다' 로 비교 대상을 전자전달계로 못 박아 놓았다. 그런데 이 카드의 명제 넷 가운데 전자전달계를 말하는 것이 하나도 없다 — rel-cmp-metabolism(이화작용과 동화작용), rel-cmp-place(세포질·마이토콘드리아 대 엽록체), rel-cmp-coenzyme(NAD⁺·FAD 대 NADP⁺), rel-cmp-common(효소와 회로의 탄소 수)은 모두 두 과정 전체의 비교다. 근거는 교과서 116쪽 표 Ⅲ-1('세포호흡과 광합성 비교')이고, 전자전달계 비교는 117~118쪽의 다른 표이며 그쪽은 cell-comparison-of-electron-transport-chain 이 따로 맡고 있다. 더구나 교과서 116쪽 중단원 05 머리의 학습 목표는 '세포호흡과 광합성 과정의 공통점과 차이점을 설명할 수 있다' 와 '마이토콘드리아와 엽록체의 전자전달계를 비교하여 공통점과 차이점을 설명할 수 있다' 둘로 갈라져 있는데, 앞엣것은 영역 03 성취기준 여덟 어디에도 대응이 없다. 가장 가까운 것은 12세포02-02('생명활동에 필요한 에너지를 공급하는 과정에서 광합성과 세포호흡 그리고 ATP의 역할을 설명할 수 있다')인데 그것은 영역 02 라 Ⅱ단원 몫이고, 붙이면 validate_tags.py 가 영역 불일치로 잡는다. 곧 이 카드는 교과서 본문에는 있고 이 단원의 성취기준 전문에는 자리가 없다. 성취기준 전문만 보면 이탈이고 교과서 중단원 05 가 이 단원 안에 있다는 것만 보면 범위 안이다 — 판단이 갈리므로 out_of_scope 로 확정하지 않는다. 사람이 이탈로 판정하면 이 단원의 이탈은 2건이 된다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-endosymbiotic-theory",
+        "verdict": "uncertain",
+        "current": ["12세포03-01", "12세포03-05"],
+        "suggested": [],
+        "reason": "12세포03-01 은 '마이토콘드리아의 구조를 이해하고 생명체 내에서의 마이토콘드리아의 기능을 추론할 수 있다', 03-05 는 '엽록체의 구조를 이해하고 기능과 관련지어 설명할 수 있다' 로 둘 다 구조와 기능만 요구한다. 이 카드가 다루는 것은 기원이다 — rel-endo-prokaryote-trace(원형 DNA와 라이보솜이 원핵 기원의 근거), rel-endo-order(들어온 차례), rel-endo-double-membrane(이중막의 유래). 영역 03 의 여덟 성취기준 어디에도 진화·기원·공생을 요구하는 구절이 없다. 걸릴 여지가 있는 것은 rel-endo-double-membrane 하나뿐인데, 그것이 '이중막' 이라는 구조를 설명하는 명제이기 때문이다. 한편 교과서 84쪽 중단원 01 머리의 학습 목표는 '마이토콘드리아의 구조를 이해하고, 생물 내에서의 기능을 추론할 수 있다 / 엽록체의 구조를 이해하고, 기능과 관련지어 설명할 수 있다' 로 03-01·03-05 의 문장을 그대로 빌려 쓰고 있고, '마이토콘드리아와 엽록체의 진화적 기원' 은 그 중단원의 소주제 1 이다 — 발행처는 기원을 구조·기능 설명의 도입으로 붙여 놓았다. cell-1 의 중단원 02(세포의 연구 방법) 네 장과 같은 꼴이라 같은 기준으로 uncertain 에 둔다. 사람이 이탈로 판정하면 이 단원의 이탈은 2건이 된다.",
+        "prerequisites": []
+      }
+    ],
+    "prerequisites_outside_unit": [
+      { "card_id": "cell-dehydrogenase", "keys": ["concept:oxidation", "concept:reduction", "concept:redox-simultaneity"], "note": "rel-dehydro-oxidize 가 '수소 이온과 전자를 떼어 내면 산화된다' 로 산화의 정의에 곧바로 기댄다. 교과서 94쪽도 전자전달계를 '산화환원반응' 으로 적는다. 산화와 환원이 함께 일어난다는 얼개가 화학 쪽에서 먼저 선다." },
+      { "card_id": "cell-electron-transport-chain", "keys": ["concept:oxidation", "concept:reduction", "concept:redox-simultaneity"], "note": "rel-etc-affinity-order 의 '전자와의 친화력' 과 rel-etc-final-acceptor 의 최종 전자수용체가 산화환원 개념 위에 선다." },
+      { "card_id": "cell-substrate-level-phosphorylation", "keys": ["concept:enzyme"], "note": "rel-slp-transfer 가 '효소가 기질에 붙은 인산기를 떼어' 로 효소와 기질의 관계를 전제한다. 효소는 이 과목 영역 02(Ⅱ단원) 몫이다." },
+      { "card_id": "cell-carbon-fixation-reaction", "keys": ["concept:enzyme"], "note": "rel-cfr-rubisco 의 루비스코가 효소 개념을 전제한다." },
+      { "card_id": "cell-chemiosmosis", "keys": ["concept:osmosis"], "note": "'화학삼투' 라는 이름이 삼투에 기대는데 건너는 것은 물이 아니라 수소 이온이다. 카드가 그 어긋남을 이미 오개념으로 세워 두었다(rel-chemi-atp). G 파이프라인에서 문자열이 아니라 concept_key 로 링크를 걸어야 할 자리다." },
+      { "card_id": "cell-cellular-respiration", "keys": ["concept:cellular-respiration"], "note": "카드가 이미 same 링크로 isci2-cellular-respiration·reac-cellular-respiration 을 걸어 두었다." },
+      { "card_id": "cell-photosynthesis", "keys": ["concept:photosynthesis"], "note": "카드가 이미 same 링크로 isci2-photosynthesis·reac-photosynthesis 를 걸어 두었다." }
+    ],
+    "stats": { "ok": 35, "retag": 2, "out_of_scope": 0, "uncertain": 2 }
+  },
+  "relations": {
+    "checked": 123,
+    "cards_checked": 39,
+    "invertible_true_count": 50,
+    "misconceptions_checked": 78,
+    "findings": [
+      {
+        "card_id": "cell-acetyl-coa",
+        "relation_id": "rel-acoa-two-carbon",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '피루브산이 산화되어 남은 2탄소 조각이 조효소 A와 결합한 물질. TCA 회로로 들어가는 입구가 된다' 이고 명제는 '아세틸조효소 A는 탄소를 둘 가진 화합물로서 TCA 회로에 들어가는 입구 노릇을 한다' 다. 정의의 두 요소('2탄소', 'TCA 회로로 들어가는 입구')를 차례만 바꿔 한 문장으로 이어 붙였고 보탠 것이 없다.",
+        "suggest": "정의에서 탄소 수나 입구 노릇 가운데 한쪽을 빼고 명제가 맡게 하든지, 명제를 정의가 담지 않은 내용으로 갈음한다. 이 명제에 오개념 1건('탄소를 셋 가진 물질이다')이 걸려 있으므로 손대면 연결도 함께 본다."
+      },
+      {
+        "card_id": "cell-action-spectrum",
+        "relation_id": "rel-act-axes",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '빛의 파장을 바꿔 가며 잰 광합성속도를 그린 그래프' 이고 명제는 '잎에 파장이 다른 빛을 차례로 비추며 잰 광합성속도를 곡선으로 나타낸 것이다' 다. 보탠 것은 '잎에' 하나뿐이다. 짝을 이루는 cell-absorption-spectrum 의 rel-abs-axes 는 가로축과 세로축이라는 정의에 없는 정보를 보태 이 지적을 받지 않는다 — 두 카드가 나란히 서는 만큼 기준을 맞출 자리다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 측정 방법을 말하도록 정리한다."
+      },
+      {
+        "card_id": "cell-aerobic-respiration",
+        "relation_id": "rel-aerobic-complete",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '산소호흡과 발효는 첫 단계부터 서로 다른 길을 간다' 는 두 길이 어디서 갈라지는지를 다투는데, 명제는 '산소호흡에서는 포도당이 이산화 탄소와 물까지 남김없이 분해된다' 로 분해의 끝만 말하고 발효도 해당 과정도 말하지 않는다. why_wrong 이 드는 근거('둘 다 해당 과정으로 시작한다. 길이 갈라지는 곳은 피루브산 다음이다')는 이 카드가 아니라 cell-fermentation 의 rel-ferm-common-with-aerobic('발효와 산소호흡은 모두 해당 과정을 거쳐 ATP를 얻는다는 점이 같다')에 그대로 있다.",
+        "suggest": "linked_relation 을 rel-ferm-common-with-aerobic 쪽으로 옮기든지, 두 길이 갈라지는 자리를 다루는 명제를 이 카드에 세우든지 정한다."
+      },
+      {
+        "card_id": "cell-alcohol-fermentation",
+        "relation_id": "rel-alc-yield",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 둘째 문장 '포도당 하나에서 ATP 둘을 얻는다' 와 명제 '알코올발효에서 포도당 한 분자로 얻는 ATP는 두 분자다' 가 같은 말이다. 수도 단위도 같고 보탠 것이 없다.",
+        "suggest": "정의에서 ATP 수지를 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "cell-alcohol-fermentation",
+        "relation_id": "rel-alc-nad-recycle",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '효모는 언제나 알코올발효만 한다' 는 산소가 있을 때 효모가 무엇을 하는지를 다투는데, 명제는 '아세트알데하이드가 에탄올로 환원될 때 NAD⁺가 되살아나 해당 과정이 계속 돌아간다' 로 산소가 없을 때의 조효소 재생만 말한다(form.condition 도 '산소가 없어 전자전달계를 쓸 수 없을 때'). why_wrong 이 드는 근거('산소가 있으면 효모도 산소호흡으로 에너지를 얻는다')는 교과서 99쪽 첫 문장에 있으나 이 카드의 어느 명제에도 없고, 거의 같은 오개념('발효는 산소가 있어도 그대로 일어난다')이 cell-fermentation 의 rel-ferm-no-etc 에 제자리로 걸려 있다.",
+        "suggest": "두 카드에 흩어진 같은 계열 오개념을 cell-fermentation 한 자리로 모을지, 산소가 있을 때 효모가 무엇을 하는지 다루는 명제를 이 카드에 세울지 메인이 정한다."
+      },
+      {
+        "card_id": "cell-atp-synthase",
+        "relation_id": "rel-atpsyn-channel",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '수소 이온이 지나는 통로이면서 그 흐름을 밑천 삼아 ADP에 인산기를 붙이는 막단백질' 이고 명제는 '수소 이온이 이 효소를 통과해 흐를 때 ADP에 인산기가 붙어 ATP가 된다' 다. '지나는 통로'와 '통과해 흐를 때', 'ADP에 인산기를 붙이는'과 'ADP에 인산기가 붙어' 가 각각 같은 말이다. 보탠 것은 'ATP가 된다' 뿐인데 그것은 효소 이름에 이미 들어 있다.",
+        "suggest": "정의에서 인산기 부착을 빼거나 명제를 정의가 담지 않은 내용으로 갈음한다."
+      },
+      {
+        "card_id": "cell-carbon-fixation-reaction",
+        "relation_id": "rel-cfr-site-input",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '스트로마에서 명반응이 건넨 ATP와 NADPH로 이산화 탄소를 포도당까지 환원하는 회로 모양의 반응' 이고 명제는 '탄소 고정 반응은 스트로마에서 명반응 산물인 ATP와 NADPH를 밑천 삼아 진행된다' 다. 자리(스트로마)도 재료(ATP·NADPH)도 출처(명반응)도 정의에 그대로 있고 보탠 것이 없다. 더해서 같은 내용이 이 단원에 네 번 서 있다 — cell-stroma 의 rel-stroma-carbon-fixation, cell-light-carbon-fixation-relation 의 rel-lcf-supply, cell-chloroplast-structure 의 rel-chl-str-stroma-enzyme.",
+        "suggest": "정의에서 자리와 재료를 빼고 명제가 맡게 할지 이 명제를 갈음할지 카드 단위로 정한다. 네 카드에 걸친 겹침을 어디에 남길지도 함께 정한다."
+      },
+      {
+        "card_id": "cell-carotenoid",
+        "relation_id": "rel-caro-accessory",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 첫 문장 '빛을 흡수해 엽록소에 넘겨주는 보조색소' 와 명제 '카로티노이드는 스스로 흡수한 빛에너지를 엽록소에 넘겨주는 보조색소다' 가 같은 문장이다. 보탠 것은 '스스로' 라는 부사뿐이다. invertible: true 라 D1 이 정의를 되풀이한 문장에서 OX 를 만든다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 보조색소의 구실을 말하도록 정리한다. 이 명제에 오개념 1건이 걸려 있으므로 연결도 함께 본다."
+      },
+      {
+        "card_id": "cell-carotenoid",
+        "relation_id": "rel-caro-kinds",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 의 둘째 문장 '카로틴과 잔토필 등이 있어 빨강·주황·노랑을 띤다' 와 명제 '카로티노이드는 카로틴·잔토필처럼 종류에 따라 빨간색·주황색·노란색으로 달리 보인다' 가 같다. rel-caro-accessory 와 합쳐 이 카드는 명제 셋 가운데 둘이 정의에서 그대로 나온다 — 카드 단위로 다시 볼 자리다. [4] 이 명제에 걸린 오개념 '카로티노이드는 가을이 되어야 새로 만들어지는 색소다' 는 색소가 언제 생기는지를 다투는데 명제는 종류와 색만 말한다. why_wrong 이 드는 근거('잎에 늘 함께 들어 있다. 엽록소가 줄어들면서 가려져 있던 색이 드러나는 것이다')는 이 카드의 어느 명제에도 없고 교과서 104쪽 본문에도 없다.",
+        "suggest": "정의를 줄여 명제가 내용을 맡게 하고, 가을 오개념은 받쳐 줄 명제를 세워 걸든지 옮기든지 정한다."
+      },
+      {
+        "card_id": "cell-cellular-respiration",
+        "relation_id": "rel-resp-catabolism",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '유기물을 산화시켜 거기 담긴 화학 에너지를 ATP로 옮겨 담는 이화작용' 이고 명제는 '세포호흡은 유기물을 잘게 헐면서 그 안의 화학 에너지를 ATP에 옮겨 담는 이화작용이다' 다. '산화시켜' 를 '잘게 헐면서' 로 바꾼 동의어 치환일 뿐 구조가 같다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나가고, 같은 내용이 cell-comparison-of-respiration-and-photosynthesis 의 rel-cmp-metabolism 에도 invertible: true 로 한 번 더 서 있다.",
+        "suggest": "정의에서 이화작용 규정을 빼거나 명제를 갈음한다. 두 카드 가운데 어느 쪽이 이 내용을 맡을지도 함께 정한다."
+      },
+      {
+        "card_id": "cell-chemiosmosis",
+        "relation_id": "rel-chemi-atp",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '막을 사이에 둔 수소 이온 농도 기울기에 에너지를 담아 두었다가, 이온이 되돌아 흐를 때 ATP를 얻는 방식' 이고 명제는 '쌓인 수소 이온이 농도가 낮은 쪽으로 되돌아 흐를 때 그 통로에서 ATP가 만들어진다' 다. '되돌아 흐를 때 ATP를 얻는다' 가 두 곳에 똑같이 있고, 보탠 것은 '농도가 낮은 쪽으로'(되돌아 흐른다는 말에 이미 들어 있다)와 '그 통로에서' 뿐이다.",
+        "suggest": "정의에서 ATP 생성 시점을 빼고 명제가 맡게 하든지, 통로가 무엇인지처럼 정의에 없는 내용으로 명제를 갈음한다. 이 명제에 오개념 1건('화학삼투는 물이 막을 건너는 삼투 현상이다')이 걸려 있으므로 연결도 함께 본다."
+      },
+      {
+        "card_id": "cell-chlorophyll",
+        "relation_id": "rel-chlorophyll-absorb",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 둘째 문장 '청자색광과 적색광을 주로 흡수하고 녹색광은 되돌려 보낸다' 와 명제 '엽록소는 청자색광과 적색광을 잘 흡수하고 녹색광은 거의 흡수하지 않는다' 가 같은 말이다 — '되돌려 보낸다' 와 '거의 흡수하지 않는다' 는 교과서 105쪽에서 한 문장으로 이어진 같은 사실이다. invertible: true 이고, 같은 내용이 cell-absorption-spectrum 의 rel-abs-peaks 에도 invertible: true 로 서 있어 D1 이 사실상 같은 OX 를 둘 만든다.",
+        "suggest": "정의에서 흡수 파장을 빼고 명제가 맡게 하든지, 두 카드 가운데 어느 쪽이 이 내용을 맡을지 정하고 다른 쪽을 갈음한다."
+      },
+      {
+        "card_id": "cell-chloroplast-structure",
+        "relation_id": "rel-chl-str-thylakoid-protein",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '엽록체는 식물의 모든 세포에 들어 있다' 는 엽록체가 어느 세포에 있는지를 다투는데, 명제는 '타이라코이드 막에는 엽록소를 품은 광계와 전자전달효소, ATP 합성효소가 나란히 박혀 있다' 로 막에 무엇이 박혀 있는지만 말한다. 이 카드의 나머지 두 명제(rel-chl-str-grana-area·rel-chl-str-stroma-enzyme)도 분포를 말하지 않는다. why_wrong 이 드는 근거('뿌리처럼 빛이 들지 않는 곳의 세포에는 엽록체가 없다')는 이 단원의 어느 명제에도 없다.",
+        "suggest": "엽록체의 분포를 다루는 명제를 세워 거기에 걸든지, 오개념을 옮기든지 정한다."
+      },
+      {
+        "card_id": "cell-crista",
+        "relation_id": "rel-crista-protein-count",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '크리스타에서 포도당이 피루브산으로 쪼개진다' 는 해당 과정이 어디서 일어나는지를 다투는데, 명제는 '크리스타가 잘 발달한 세포일수록 내막에 놓이는 전자전달효소와 ATP 합성효소의 수가 많다' 로 막단백질의 수만 말한다. why_wrong 의 앞절('해당 과정은 세포질에서 일어난다')이 기대는 근거는 cell-cellular-respiration 의 rel-resp-place 와 cell-glycolysis 의 rel-gly-place-product 에 있고, 거의 같은 오개념('세포호흡은 모두 마이토콘드리아 안에서 일어난다')이 rel-resp-place 에 제자리로 걸려 있다.",
+        "suggest": "linked_relation 을 rel-resp-place 쪽으로 옮기든지, 크리스타에서 무엇이 일어나고 무엇이 일어나지 않는지 가르는 명제를 이 카드에 세우든지 정한다."
+      },
+      {
+        "card_id": "cell-dehydrogenase",
+        "relation_id": "rel-dehydro-oxidize",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '기질에서 수소 이온과 고에너지 전자를 떼어 내 산화시키는 효소' 이고 명제는 '탈수소효소가 기질에서 수소 이온과 전자를 떼어 내면 그 기질은 산화된다' 다. 떼어 내는 것(수소 이온·전자), 떼어 내는 자리(기질), 그 결과(산화)가 셋 다 정의에 그대로 있다. 정의를 조건절과 귀결절로 늘어놓았을 뿐이다. invertible: true 라 D1 이 이 동어반복에서 OX 를 만든다.",
+        "suggest": "정의에서 '산화시키는' 을 빼고 명제가 산화라는 귀결을 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "cell-electron-transport-chain",
+        "relation_id": "rel-etc-no-oxygen",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제 본문이 '산소가 없으면 전자가 흘러갈 곳이 없어 전자 흐름이 멎고 ATP도 만들어지지 않는다' 로 ATP 생성 전체를 부정한다. 산화적 인산화로 한정하는 단서는 form.scope('마이토콘드리아의 산화적 인산화')에만 있고 명제 문장에는 없는데, D1 이 쓰는 것은 명제 본문이다. 이 문장을 그대로 읽으면 같은 단원의 rel-gly-no-oxygen('해당 과정은 산소가 없어도 진행된다'), rel-slp-no-membrane('산소가 없어도 ATP를 만들 수 있다'), rel-ferm-less-atp(발효도 ATP를 얻는다)와 어긋난다. 더구나 cell-fermentation 이 '발효에서는 ATP가 전혀 만들어지지 않는다' 를, cell-oxidative-phosphorylation 이 '세포호흡에서 만들어지는 ATP는 산화적 인산화에서만 나온다' 를 각각 오개념으로 세워 두었다 — 이 명제가 그대로 나가면 다른 카드가 바로잡는 오개념을 카드가 스스로 심는다. cell-1 의 rel-sd-no-protein 과 같은 자리다.",
+        "suggest": "form.scope 에만 있는 한정을 명제 본문이 담도록 고친다. 문장은 C2 가 쓴다."
+      },
+      {
+        "card_id": "cell-endosymbiotic-theory",
+        "relation_id": "rel-endo-order",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제 본문이 '산소를 쓰던 원핵세포가 먼저 들어와 마이토콘드리아가 되었고, 광합성 원핵세포는 그 뒤에 들어와 엽록체가 되었다' 로 일어난 일을 단정한다. 가설이라는 단서는 form.condition('세포내공생설이 그리는 차례를 볼 때')에만 있고 명제 문장에는 없다. 같은 카드의 나머지 두 명제는 그 단서를 본문에 담고 있다 — rel-endo-prokaryote-trace 는 '…근거로 쓰인다', rel-endo-double-membrane 은 '…라고 보아 … 설명한다'. 카드 안에서 단서를 다는 기준이 흔들린다. invertible: true 라 이 단정문이 그대로 OX 지문이 되는데, 뒤집힌 지문이 거짓인 근거도 결국 가설의 서술이지 관찰된 사실이 아니다. 차례 자체가 실제로 그러한지는 진위 판단이라 여기서 확정하지 않는다 — 지적하는 것은 단서가 빠졌다는 구조다.",
+        "suggest": "가설이라는 단서를 명제 본문에 담을지 정하고, 담은 뒤에 invertible 을 다시 본다."
+      },
+      {
+        "card_id": "cell-fermentation-and-putrefaction",
+        "relation_id": "rel-fp-criterion",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '미생물이 유기물을 분해한 결과가 사람에게 쓸모 있으면 발효, 해로우면 부패로 갈라 부르는 구분' 이고 명제는 '같은 분해라도 산물이 사람에게 쓸모 있으면 발효, 해로우면 부패라고 부른다' 다. 갈래도 기준도 낱말까지 같다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다. 같은 카드의 rel-fp-broad-narrow 는 넓은 뜻과 좁은 뜻을 갈라 정의에 없는 것을 보태므로 학습 가치는 그쪽에 있다.",
+        "suggest": "정의에서 갈라 부르는 기준을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "cell-lactic-acid-fermentation",
+        "relation_id": "rel-lac-nad-recycle",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '젖산발효는 세균만 하고 사람의 세포는 하지 않는다' 는 어느 생물이 젖산발효를 하는지를 다투는데, 명제는 '이때 NAD⁺가 되살아나므로 해당 과정이 멎지 않고 이어져 ATP를 계속 얻을 수 있다' 로 조효소 재생만 말한다. 이 카드의 나머지 두 명제(rel-lac-reduce·rel-lac-no-co2)도 어느 생물이 하는지를 말하지 않는다. why_wrong 이 드는 근거('격하게 운동할 때 사람의 근육세포도 젖산발효로 ATP를 빠르게 얻는다')는 교과서 99쪽 끝에 있으나 이 단원의 어느 명제에도 없다.",
+        "suggest": "젖산발효를 하는 생물을 다루는 명제를 세워 거기에 걸든지, 오개념을 옮기든지 정한다."
+      },
+      {
+        "card_id": "cell-light-reaction",
+        "relation_id": "rel-light-needs-light",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '명반응은 낮에만, 탄소 고정 반응은 밤에만 일어난다' 는 두 반응이 언제 일어나는지를 함께 다투는데, 명제는 '빛이 끊기면 명반응이 멎어 ATP와 NADPH의 공급도 곧 끊긴다' 로 명반응 쪽만 말한다. why_wrong 이 드는 근거('탄소 고정 반응도 명반응 산물이 있어야 돌아가므로 빛이 있을 때 함께 진행된다')는 cell-carbon-fixation-reaction 의 rel-cfr-dark-name 과 cell-light-carbon-fixation-relation 의 rel-lcf-supply 에 있고, 거의 같은 오개념('탄소 고정 반응은 어두워야 일어나므로 밤에만 진행된다')이 rel-cfr-dark-name 에 제자리로 걸려 있다.",
+        "suggest": "두 카드에 흩어진 같은 계열 오개념을 rel-cfr-dark-name 한 자리로 모을지 정한다."
+      },
+      {
+        "card_id": "cell-photolysis-of-water",
+        "relation_id": "rel-photolysis-o2-origin",
+        "verdict": "uncertain",
+        "checks": [3, 4],
+        "reason": "[3] 이 명제('광합성으로 나오는 산소는 이 반응에서 물이 쪼개져 생긴 것이다')는 cell-photosynthesis 의 rel-photo-o2-source('광합성에서 나오는 산소는 이산화 탄소가 아니라 물이 분해되어 생긴 것이다')와 같은 사실을 말한다. 뒤엣것은 invertible: true 라 OX 로 나가고 앞엣것은 false 라 나가지 않으므로 문항이 겹치지는 않지만, 같은 사실이 두 카드에서 따로 학습 항목이 된다. [4] 두 명제에 걸린 오개념도 사실상 같은 문장이다 — 이 카드의 '광합성의 산소는 이산화 탄소에서 떨어져 나온 것이다' 와 cell-photosynthesis 의 '광합성에서 나오는 산소는 이산화 탄소가 쪼개져 나온 것이다'. 둘 다 제자리에 걸려 있어 결함이라고 잘라 말하기 어렵고 어느 카드가 맡을지는 카드 경계의 문제라 uncertain 으로 올린다.",
+        "suggest": "산소의 출처를 어느 카드가 맡을지 정하고 다른 쪽의 명제와 오개념을 갈음한다."
+      },
+      {
+        "card_id": "cell-photosynthesis",
+        "relation_id": "rel-photo-anabolism",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 이 '빛에너지를 밑천 삼아 이산화 탄소와 물로 포도당을 지어내는 동화작용' 이고 명제는 '광합성은 빛에너지를 화학 에너지로 바꾸며 작은 분자를 큰 유기물로 조립하는 동화작용이다' 다. '빛에너지를 밑천 삼아' 와 '빛에너지를 화학 에너지로 바꾸며', '이산화 탄소와 물로 포도당을 지어내는' 과 '작은 분자를 큰 유기물로 조립하는' 이 각각 같은 말이고, 뒤엣것은 동화작용이라는 낱말의 뜻풀이라 정의에 없는 것을 보탠 것이 아니다. [4] 이 명제에 걸린 오개념 '식물은 낮에는 광합성만 하고 세포호흡은 하지 않는다' 는 식물이 세포호흡을 하는지를 다투는데 명제는 세포호흡을 말하지 않는다. why_wrong 의 근거는 cell-comparison-of-respiration-and-photosynthesis 의 rel-cmp-place 에 있고, 거의 같은 오개념('식물은 광합성만 하고 동물은 세포호흡만 한다')이 거기 제자리로 걸려 있다.",
+        "suggest": "정의를 줄이고 명제가 내용을 맡을지, 명제를 갈음할지 카드 단위로 정한다. 오개념은 rel-cmp-place 쪽으로 모을지 함께 본다."
+      },
+      {
+        "card_id": "cell-photosystem",
+        "relation_id": "rel-ps-two-kinds",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '광계 Ⅰ이 광계 Ⅱ보다 먼저 전자를 내보낸다' 는 전자가 나오는 차례를 다투는데, 명제는 '반응 중심 색소가 가장 잘 흡수하는 파장에 따라 P700을 가진 광계 Ⅰ과 P680을 가진 광계 Ⅱ로 나뉜다' 로 갈래를 가르는 기준만 말한다. 차례를 말하는 근거('비순환적 전자흐름에서 전자는 광계 Ⅱ에서 먼저 나온다')는 cell-noncyclic-electron-flow 의 rel-noncyc-path 에 있다. 더 걸리는 것은 why_wrong 의 앞절이다 — '번호는 발견된 차례를 따른 것이다' 는 명제가 세운 기준(흡수 파장)과 어긋나고, 교과서 109쪽('광계는 반응 중심 색소가 흡수하는 빛의 파장에 따라 광계 Ⅰ과 광계 Ⅱ로 구분된다')에도 그런 서술이 없다. 오개념이 명제의 반대편이 아니라 명제와 다른 기준 위에 서 있다.",
+        "suggest": "linked_relation 을 rel-noncyc-path 쪽으로 옮기든지, why_wrong 의 앞절을 명제가 받쳐 줄 수 있는 근거로 바꿀지 정한다. 번호의 유래가 실제로 무엇인지는 진위 판단이라 C8 검토 항목이다."
+      },
+      {
+        "card_id": "cell-respiratory-substrate-pathway",
+        "relation_id": "rel-resp-path-kinds",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 둘째 문장 '포도당 말고 지방과 아미노산도 여기 든다' 와 명제 '탄수화물뿐 아니라 지방과 단백질이 분해된 산물도 세포호흡의 재료로 쓰인다' 가 같은 말이다. 더해서 이 명제는 cell-2 의 cell-respiratory-substrate 에 있는 rel-resp-sub-kinds('탄수화물과 지방, 단백질이 소화되어 생긴 물질은 모두 세포호흡의 재료가 될 수 있다')와도 거의 같은 문장이고, 이 명제에 걸린 오개념('지방과 단백질은 세포호흡에 쓰이지 못하고 몸에 쌓이기만 한다')도 cell-2 의 오개념('세포호흡의 재료가 될 수 있는 것은 포도당뿐이다')과 같은 계열이다. 두 카드 사이에서 겹치는 것은 이 명제 하나이고 나머지 둘(rel-resp-path-fat·rel-resp-path-amino)은 cell-2 에 없는 '어느 단계로 끼어드는가' 를 다룬다.",
+        "suggest": "이 명제를 지우거나 갈음해 cell-2 와의 겹침을 없앤다. 두 카드를 합칠 근거로는 쓰지 않는 편이 낫다 — notes 에 사유를 적었다."
+      },
+      {
+        "card_id": "cell-substrate-level-phosphorylation",
+        "relation_id": "rel-slp-transfer",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '기질에 붙어 있던 인산기가 효소의 작용으로 ADP에 옮겨 붙어 ATP가 되는 인산화 방식' 이고 명제는 '효소가 기질에 붙은 인산기를 떼어 ADP에 넘겨주면 그 자리에서 ATP가 만들어진다' 다. 주어를 인산기에서 효소로 바꾼 것 말고는 같은 문장이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다.",
+        "suggest": "정의에서 인산기의 이동을 빼고 명제가 맡게 하든지, 명제를 갈음한다."
+      },
+      {
+        "card_id": "cell-substrate-level-phosphorylation",
+        "relation_id": "rel-slp-where",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "이 카드는 '기질' 을 두 뜻으로 쓴다. definition 과 rel-slp-transfer 의 '기질' 은 효소가 작용하는 물질(substrate)이고, 이 명제에 걸린 오개념의 why_wrong '기질수준인산화는 세포질과 마이토콘드리아 기질에서 일어난다' 의 뒤쪽 '기질' 은 마이토콘드리아 안의 공간(matrix)이다. 한 카드 안에서, 그것도 한 문장 안에서 같은 낱말이 두 뜻으로 쓰여 주어가 흐려진다. 같은 단원의 cell-acetyl-coa(form.scope '마이토콘드리아 기질')·cell-tca-cycle·cell-chemiosmosis 는 공간 쪽 뜻으로만 쓰고 cell-dehydrogenase 는 물질 쪽 뜻으로만 써서, 단원 전체가 두 뜻을 섞어 쓰고 있다. docs/homonyms.yaml 에 '기질' 이 없어(등록된 것은 주기·핵·전위·일·계) 사전으로 갈라 줄 수도 없다. 사전을 고치는 것은 이 에이전트의 일이 아니므로 uncertain 으로 올린다.",
+        "suggest": "'기질' 두 뜻을 카드 표기에서 어떻게 가를지 메인이 정한다. 사전(homonyms.yaml) 등록이 필요하면 G3 사람 게이트로 올린다."
+      },
+      {
+        "card_id": "cell-oxidative-phosphorylation",
+        "relation_id": "rel-oxphos-yield",
+        "verdict": "uncertain",
+        "checks": [2],
+        "reason": "concept-writer 가 스스로 넘긴 항목이다. 명제는 'NADH 한 분자는 약 2.5분자, FADH₂ 한 분자는 약 1.5분자의 ATP를 만들어 낸다' 이고 invertible_reason 은 \"'약' 이 붙은 어림값이라 맞바꾼 문장이 반드시 거짓이라고 못 박기 어렵다\" 다. 이 사유는 판정 근거로 서지 않는다 — 어림값이어도 2.5 와 1.5 는 뚜렷이 갈리므로 두 값을 맞바꾼 문장('NADH 약 1.5, FADH₂ 약 2.5')은 반드시 거짓이 된다. 검사 2 의 기준(뒤집은 문장이 반드시 거짓이 되는가)만 보면 invertible: true 로 올릴 수 있다. 다만 뒤집으면 거짓인데 invertible 을 false 로 내린 것은 문항이 하나 줄어들 뿐 학생에게 오개념을 심지 않으므로 이 보고서는 결함으로 확정하지 않는다(cell-1 과 같은 기준). 수치 2.5·1.5 자체는 교과서 97쪽 단원 정리에 그대로 실려 있으나 판본에 따라 3·2 로 적히기도 하는 대목이라 그 진위는 C8 소관이다.",
+        "suggest": "invertible 을 그대로 둘 것이면 invertible_reason 을 어림값 말고 다른 사유로 고친다. true 로 올릴지는 메인이 정한다."
+      },
+      {
+        "card_id": "cell-stroma",
+        "relation_id": "rel-stroma-low-h",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('명반응이 진행되는 동안 스트로마의 수소 이온 농도는 타이라코이드 내부보다 낮아진다')와 cell-thylakoid 의 rel-thy-inner-space('타이라코이드 막이 감싼 안쪽 공간은 수소 이온이 몰려 농도가 높아지는 자리다')는 같은 사실을 안팎만 바꿔 말한 것이고 둘 다 invertible: true 다 — 두 명제의 inverted_text 도 서로 같은 주장이 되어 D1 이 사실상 같은 OX 를 둘 만든다. 같은 사실이 이 단원에 셋 더 있다: cell-photophosphorylation 의 rel-photophos-pump(스트로마에서 타이라코이드 안쪽으로 퍼 올림, invertible: true), cell-comparison-of-electron-transport-chain 의 rel-cmpetc-h-direction(쌓이는 곳, invertible: true), cell-atp-synthase 의 rel-atpsyn-direction(흐르는 방향, invertible: true). 마이토콘드리아 쪽도 같은 꼴이다 — cell-chemiosmosis 의 rel-chemi-mito-gradient(invertible: true)와 cell-mitochondrion-structure 의 rel-mito-str-intermembrane. 어느 한 명제만 놓고 보면 결함이 아니고 어느 카드가 맡을지는 카드 경계의 문제라 uncertain 으로 올린다.",
+        "suggest": "수소 이온이 어느 쪽에 쌓이는지를 어느 카드가 맡을지 정하고, 나머지 카드에서는 invertible 을 내리든 명제를 갈음하든 한쪽으로 맞춘다."
+      },
+      {
+        "card_id": "cell-mitochondrion-structure",
+        "relation_id": "rel-mito-str-crista-area",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "이 명제('내막이 안쪽으로 더 많이 주름질수록 막단백질이 놓일 표면적이 넓어져 에너지 생산성이 높아진다')와 cell-crista 의 rel-crista-protein-count('크리스타가 잘 발달한 세포일수록 내막에 놓이는 전자전달효소와 ATP 합성효소의 수가 많다')는 같은 정도 관계를 말하고 둘 다 invertible: true 다. 근거도 같은 문장이다 — 교과서 89쪽 '내막 안쪽으로 주름진 크리스타 구조는 내막의 표면적을 넓혀 생산성을 높인다'. 더해서 cell-crista 의 definition 자체가 '막단백질이 자리 잡을 내막의 표면적을 넓혀 준다' 라 그 카드에서는 정의와도 겹친다. 다만 이 명제는 '생산성', 저쪽은 '막단백질의 수' 로 말끝이 달라 완전한 되풀이는 아니다. 카드 경계의 문제라 uncertain 으로 올린다. 같은 꼴이 엽록체 쪽에도 있다 — cell-chloroplast-structure 의 rel-chl-str-grana-area(그라나가 발달할수록 광합성 효율이 오른다, invertible: true, 교과서 86쪽 근거).",
+        "suggest": "표면적과 생산성의 맞물림을 어느 카드가 맡을지 정하고 다른 쪽을 갈음한다."
+      },
+      {
+        "card_id": "cell-tca-cycle",
+        "relation_id": "rel-tca-yield",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "명제가 '피루브산 한 분자가 산화되어 회로까지 거치면 NADH 4분자, FADH₂ 1분자, ATP 1분자가 생긴다' 로 카드 표제어(TCA 회로)를 넘어 피루브산의 산화까지 묶은 합산 수지를 말한다. form.scope 도 '피루브산의 산화와 TCA 회로를 합친 수지' 라 그 사실을 밝혀 두었으므로 숨긴 것은 아니다. 걸리는 것은 같은 단원 cell-pyruvate-oxidation 의 rel-pyr-nadh 가 '피루브산 한 분자당 NADH 한 분자가 생긴다' 를 따로 말한다는 점이다 — 두 명제를 나란히 읽은 학생이 NADH 를 한 번 더 더하게 될 자리가 생기고, TCA 회로만의 수지를 묻는 물음에 4로 답하게 된다. 결함으로 잘라 말하기 어려워 uncertain 으로 올린다.",
+        "suggest": "이 카드가 TCA 회로만의 수지를 말할지 합산 수지를 말할지 정하고, cell-pyruvate-oxidation 과 겹치지 않도록 한쪽에서만 세도록 맞춘다."
+      }
+    ],
+    "stats": { "ok": 93, "defect": 24, "uncertain": 6 }
+  },
+  "notes": [
+    "verified_by 는 어느 명제·오개념에서도 읽기만 했다. 명제 123개와 오개념 78개 모두 pending 이고 이 보고서는 그 필드를 바꾸지 않는다. 카드 파일도 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 고치지 않았다.",
+
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 39장 전체에 --unit cell-3 로 돌렸다. 지적 11건이 나왔으나 전부 '판본 대조가 끝나지 않았다(교사 확정)' 한 종류다 — 12세포03-01(cell-crista·cell-endosymbiotic-theory·cell-mitochondrion-structure), 03-07(cell-atp-synthase·cell-comparison-of-electron-transport-chain·cell-comparison-of-respiration-and-photosynthesis·cell-cyclic-electron-flow·cell-electron-transport-chain·cell-noncyclic-electron-flow), 03-08(cell-action-spectrum·cell-light-carbon-fixation-relation). 이 셋은 2026-09-10 교사가 각론 판본으로 확정해 태깅에 써도 된다고 메인이 알려 준 코드이므로 지적으로 세지 않았다. 스크립트는 crosscheck 값이 '일치' 인지만 보고 '교사 확정' 을 모른다 — unit_backlog.yaml 의 12세포 note 에 그 사실과 '스크립트를 다시 돌리면 불일치로 되돌아간다' 는 경고가 적혀 있다. 그 밖에 태그 0개·실재하지 않는 코드·영역 불일치는 한 건도 없다. 영역 01·02 코드는 어느 카드에도 붙어 있지 않다. 이 보고서는 스크립트가 원리적으로 못 잡는 것만 다룬다.",
+
+    "C5 판정 기준(cell-1 과 같게 유지): 카드가 붙인 코드의 성취기준 전문에 그 카드의 명제들이 말하는 대상이 들어 있으면 ok, 대상은 맞는데 코드가 다르면 retag, 어느 전문에도 대상이 없으면 이탈 후보로 보았다.",
+
+    "★C5 에서 가장 무거운 대목은 광합성색소 다섯 장이다. 교과서 104쪽 중단원 04 머리의 학습 목표는 '광합성색소의 종류와 특징을 설명할 수 있다' 인데, 영역 03 성취기준 여덟 어디에도 색소·흡수·파장을 요구하는 구절이 없다. 그런데도 이 다섯 장(cell-photosynthetic-pigment·cell-chlorophyll·cell-carotenoid·cell-absorption-spectrum·cell-action-spectrum)에 03-05 와 03-06 이 섞여 붙어 있어 기준이 흔들린다. 셋(색소·엽록소·카로티노이드)은 03-05('엽록체의 구조를 이해하고 기능과 관련지어 설명할 수 있다')에 걸리는 통로가 있다 — 교과서 104쪽이 '광합성색소는 엽록체에 들어 있는 그라나의 타이라코이드 막에 존재하며' 로 시작해 색소를 엽록체의 구성물로 세운다. 그 통로를 인정하면 스펙트럼 두 장도 03-05 쪽이지 03-06 쪽이 아니다. 그래서 이 둘만 retag 로 올렸고 셋은 ok 로 두었다. 03-05 통로를 인정하지 않으면 다섯 장이 한꺼번에 이탈이 되어 설계서 §4.3 C5 의 C1 복귀 조건(2건 초과)에 걸린다 — 사람이 NCIC 성취기준 해설로 확인할 항목이다. 억지로 태그를 맞춰 이탈 수를 줄인 것이 아니라, 확정할 근거가 사람의 확인에 달려 있어서다.",
+
+    "C5 에서 살펴보고 범위 안으로 둔 것: (1) 산화적 인산화의 ATP 수지(rel-oxphos-yield, NADH 약 2.5·FADH₂ 약 1.5)는 03-03 의 요구('기질 수준의 인산화와 산화적 인산화 과정으로 구분')를 넘는 정량으로 보일 수 있으나, 교과서 97쪽 단원 정리에 같은 수치가 그대로 실려 있어 이탈로 올리지 않았다. (2) 광계의 내부 짜임(집광 복합체·반응 중심 복합체, P680·P700)은 교과서 109쪽 본문이고 03-06 의 '명반응 … 단계별로 구분하여 특징을 이해' 안에 든다. (3) cell-dehydrogenase 는 효소 카드지만 효소 일반을 가르치지 않고 세포호흡의 산화 단계만 다루므로 03-02 범위 안이다 — 효소 자체의 성취기준(02-03·02-04)은 Ⅱ단원 몫이다. (4) 해당 과정·TCA 회로·전자전달계는 03-02·03-03 이 정면으로 요구하는 내용이라 깊이가 있어도 이탈이 아니다. 상위 과목 몫으로 넘어간 대목은 찾지 못했다.",
+
+    "C6 판정 기준(cell-1 과 같게 유지) — 검사 3: 명제가 definition 의 구절을 되풀이하되 정의에 없는 귀결·수치·이름을 보태면 ok, 보탬이 없으면 defect 로 보았다. 이 기준으로 '아세트알데하이드' 를 보탠 rel-alc-steps, 가로축·세로축을 보탠 rel-abs-axes, 'NADP⁺로 가지 않고' 를 보탠 rel-cyc-path, ATP·NADPH·스트로마를 보탠 rel-lcf-supply, '그라나를 이루는' 을 보탠 rel-pigment-place, 단계 이름을 보탠 rel-cfr-three-steps·rel-resp-three-stages, 조효소 이름을 보탠 rel-dehydro-coenzyme 는 ok 로 두었다. 검사 3 결함 15건 가운데 cell-carotenoid 는 명제 셋 중 둘이 한꺼번에 걸렸다 — 명제를 고치는 것이 아니라 definition 을 줄이는 쪽이 답일 수 있으므로 카드 단위로 함께 볼 것을 제안했다.",
+
+    "C6 검사 2(invertible): invertible: true 인 명제 50개를 하나씩 뒤집어 읽었다. 뒤집은 문장이 반드시 거짓이 되지 않는 것으로 확정한 명제는 없다. form.type 이 classification 인데 invertible: true 인 명제는 rel-cmpetc-donor-acceptor·rel-cmpetc-flow·rel-cmpetc-h-direction·rel-cmp-metabolism·rel-cmp-place·rel-cmp-coenzyme·rel-cyc-only-ps1·rel-fp-criterion·rel-ps-two-kinds 아홉인데, 아홉 모두 두 이름과 두 속성을 맞바꾸는 꼴이라 뒤집으면 반드시 거짓이 된다 — type 만 보면 오판정처럼 보이나 뒤집어 읽으면 ok 다. 반대 방향(뒤집으면 거짓인데 invertible 을 false 로 내린 것)은 cell-1 과 같은 기준으로 결함으로 올리지 않았고, 메인이 물은 rel-oxphos-yield 만 사유가 서지 않는다는 점 때문에 uncertain 으로 올렸다. 진짜로 걸린 것은 invertible 판정 자체가 아니라 뒤집을 문장의 성격이다 — rel-endo-order 는 가설의 서술을 사실처럼 단정한 채 OX 로 나가고, rel-caro-accessory·rel-resp-catabolism·rel-chlorophyll-absorb·rel-dehydro-oxidize·rel-fp-criterion·rel-slp-transfer 는 정의를 되풀이한 문장이 그대로 OX 로 나간다.",
+
+    "C6 검사 4 에서 되풀이해 나온 꼴은 cell-1·chem 계열과 같다 — 반증 근거가 이 명제가 아니라 다른 카드의 명제나 교과서 본문에 있는 경우다(rel-aerobic-complete·rel-alc-nad-recycle·rel-caro-kinds·rel-chl-str-thylakoid-protein·rel-crista-protein-count·rel-lac-nad-recycle·rel-light-needs-light·rel-photo-anabolism·rel-ps-two-kinds). 같은 오개념이 여러 카드에 흩어진 자리도 있다: '발효는 산소가 있어도 일어난다' 계열이 cell-fermentation(제자리)과 cell-alcohol-fermentation(어긋남)에, '탄소 고정 반응은 밤에만' 계열이 cell-carbon-fixation-reaction(제자리)과 cell-light-reaction(어긋남)에, '식물은 광합성만 한다' 계열이 cell-comparison-of-respiration-and-photosynthesis(제자리)와 cell-photosynthesis(어긋남)에, '광합성의 산소는 이산화 탄소에서' 가 cell-photolysis-of-water 와 cell-photosynthesis 둘 다에 제자리로(겹침) 있다.",
+
+    "C6 검사 5(카드 내 모순)로 확정한 결함은 없다. 가장 가까웠던 것은 cell-photosystem 인데, rel-ps-two-kinds 가 광계를 가르는 기준을 '반응 중심 색소가 가장 잘 흡수하는 파장' 으로 세워 놓고 같은 카드 오개념의 why_wrong 은 '번호는 발견된 차례를 따른 것' 이라고 적어 서로 어긋난다. 어긋나는 짝이 명제와 명제가 아니라 명제와 why_wrong 이라 검사 4 로 올렸다.",
+
+    "오개념 78개는 전부 source: llm 이다 — docs/misconceptions.yaml 이 비어 있어 사전과 대조할 것이 없었다. 검사 4 는 명제와 오개념이 맞물리는지만 보았고, 오개념 자체가 실제로 학생에게 흔한 것인지는 대조하지 못했다. 그 대조를 했다고 적지 않는다.",
+
+    "★메인이 넘긴 항목 (1) 중복 카드 대조. cell-mitochondrion-structure 의 명제 셋(rel-mito-str-inner-protein 내막의 막단백질, rel-mito-str-crista-area 표면적과 생산성, rel-mito-str-intermembrane 막사이공간의 수소 이온)은 Ⅰ단원 cell-mitochondrion 의 명제 셋(rel-mito-membrane 이중막과 크리스타, rel-mito-atp 세포호흡으로 ATP 합성, rel-mito-own-dna 자체 DNA와 라이보솜) 어느 것과도 겹치지 않는다. cell-chloroplast-structure 의 셋(rel-chl-str-thylakoid-protein·rel-chl-str-grana-area·rel-chl-str-stroma-enzyme)도 Ⅰ단원 cell-chloroplast 의 셋(rel-chl-structure·rel-chl-photosynthesis·rel-chl-own-dna)과 겹치지 않는다. 되풀이가 아니다 — Ⅰ단원은 '무엇으로 되어 있고 무슨 일을 하는가', Ⅲ단원은 '그 구조가 왜 그렇게 생겼고 그 자리에서 무엇이 일어나는가' 로 층이 갈린다. 겹치는 것은 명제가 아니라 definition 층위다(양쪽 다 '이중막'). 한 가지 더: Ⅰ단원의 rel-mito-own-dna·rel-chl-own-dna('자체 DNA와 라이보솜을 가지고 있어 스스로 복제하고 증식할 수 있다')와 Ⅲ단원 cell-endosymbiotic-theory 의 rel-endo-prokaryote-trace('두 소기관이 원형 DNA와 라이보솜을 지녔다는 점이 원핵세포에서 비롯했다는 근거로 쓰인다')가 같은 사실을 쓰는데, 뒤엣것은 '기원의 근거로 쓰인다' 는 다른 결론을 달고 있어 되풀이로 보지 않았다. 다만 두 카드가 같은 concept_key 를 쓰면서 links 에 서로를 same 으로 걸어 둔 것(cell-mitochondrion-structure → cell-mitochondrion, cell-chloroplast-structure → cell-chloroplast)은 G2 에서 자기 자신을 가리키는 링크가 될 수 있다 — 이 보고서의 소관이 아니라 그래프 계열에 넘긴다.",
+
+    "★메인이 넘긴 항목 (2) cell-respiratory-substrate-pathway 와 cell-2 의 cell-respiratory-substrate. 내용이 갈린다 — 합칠 근거가 되지 않는다. cell-2 쪽은 '무엇이 호흡기질인가'(3대 영양소의 소화 산물, 주로 포도당, 담긴 에너지가 ATP로 옮겨 감)를 다루고 12세포02-02 를 단다. cell-3 쪽은 '그 기질이 세포호흡의 어느 단계로 끼어드는가'(지방산 → 아세틸조효소 A → TCA 회로, 글리세롤 → 해당 과정의 중간 산물, 아미노산 → 아미노기 제거 후 피루브산이나 회로 중간 산물)를 다루고 12세포03-02 를 단다. 근거 쪽수도 60쪽과 90쪽으로 다르고, 뒤엣것은 교과서 90쪽 그림 Ⅲ-4('여러 가지 호흡기질이 세포호흡에 이용되는 경로')에 곧바로 기댄다. 겹치는 것은 명제 하나(rel-resp-path-kinds ↔ rel-resp-sub-kinds)와 그 명제에 걸린 오개념 하나뿐이고 그 명제는 위에 defect[3] 로 올렸다. 그 하나를 걷어내면 두 카드는 서로 다른 것을 말한다.",
+
+    "★메인이 넘긴 항목 (3) rel-oxphos-yield 의 invertible: false. findings 에 uncertain[2] 로 올렸다. 요약하면, 판정 자체는 그대로 두어도 되지만 invertible_reason 에 적힌 사유(어림값이라서)는 검사 2 의 기준 위에서 서지 않는다 — 어림값이어도 2.5 와 1.5 는 뚜렷이 갈리므로 맞바꾼 문장은 반드시 거짓이 된다. 사유를 고치거나 true 로 올리거나 둘 중 하나다.",
+
+    "<track>-facts 스킬 대조는 하지 못했다. .claude/skills 에 있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯이고 bio-facts 도 cell-facts 도 없다. 세포호흡·광합성 관련 사실 대조(ATP 수지의 정확한 값, 전자전달효소 복합체의 구성, 광계 번호의 유래, 세포내공생설이 드는 근거의 목록 등)는 건너뛰었고 흉내 내지 않았다. 이 보고서가 교과서 원문(output/source/cell-3/text.jsonl)을 인용한 대목은 명제가 근거를 가졌는지 보기 위한 것이지 진위를 확정하기 위한 것이 아니다.",
+
+    "선수 개념(curriculum.prerequisites_outside_unit)에 적은 concept_key 는 모두 docs/concept_registry.yaml 에 이미 있는 키만 골랐다. 이 단원이 기대는 개념 가운데 ATP·물질대사·동화작용·이화작용·능동수송·확산·농도 기울기·가시광선·파장은 사전에 키가 없어 적지 않았다 — 새 키를 만드는 것은 G3 사람 게이트의 일이다. cell-3 카드 39장은 모두 registry_status: new 다.",
+
+    "이 보고서는 curriculum 절과 relations 절을 함께 채웠다. output/validation/cell-3.report.json 에는 앞선 절이 없었으므로 병합할 것이 없었다."
+  ]
+}
