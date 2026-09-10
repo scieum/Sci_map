@@ -23,10 +23,10 @@
       }
     },
 
+    "_comment_candidates": "상한은 여기서 정하지 않는다 — 소주제 수에 달려 있어(max(40, 소주제 x 5), 2026-09-10 교사 결정) JSON Schema 로는 쓸 수 없다. validate_candidates.py 의 check_count 가 유일한 판정 자리다. 2026-09-10 에 실제로 이 두 곳이 어긋나 count 는 통과하는데 schema 가 같은 배열을 떨구는 일이 있었다 — 상한을 두 곳에 두지 않는 것이 그 재발을 막는다.",
     "candidates": {
       "type": "array",
       "minItems": 10,
-      "maxItems": 40,
       "items": { "$ref": "#/$defs/candidate" }
     },
 
