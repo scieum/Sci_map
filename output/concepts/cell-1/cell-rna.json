@@ -1,0 +1,115 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-rna",
+  "concept_key": "concept:rna",
+  "registry_status": "new",
+  "term": "RNA",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 ribonucleic acid 의 머리글자를 딴 말이라 한자어 표기가 없다.",
+    "english": "ribonucleic acid"
+  },
+  "definition": "유전정보가 발현될 때 일하는 핵산. 가닥이 하나이며 5탄당으로 라이보스를, 염기로 타이민 대신 유라실을 쓴다.",
+  "relations": [
+    {
+      "id": "rel-rna-single",
+      "text": "RNA는 가닥이 하나인 단일 가닥 구조다",
+      "form": {
+        "condition": "RNA의 구조를 볼 때",
+        "type": "conditional",
+        "scope": "일반적인 RNA"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rna-transfer",
+      "text": "RNA는 DNA에 저장된 유전정보를 라이보솜으로 옮기고 아미노산을 날라 단백질합성을 돕는다",
+      "form": {
+        "condition": "유전정보가 발현될 때",
+        "type": "causal",
+        "scope": "단백질합성 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "정보가 흘러가는 방향이 정해져 있어 출발점과 도착점을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "RNA는 라이보솜에 있는 정보를 DNA로 옮겨 저장한다"
+    },
+    {
+      "id": "rel-rna-sugar-base",
+      "text": "RNA는 5탄당으로 라이보스를 쓰고 염기로는 유라실을 갖는다",
+      "form": {
+        "condition": "RNA의 단위 구성을 볼 때",
+        "type": "conditional",
+        "scope": "RNA"
+      },
+      "invertible": false,
+      "invertible_reason": "구성 성분을 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "RNA는 유전정보를 저장하지 못한다",
+      "why_wrong": "대부분의 생물은 DNA에 저장하지만 일부 바이러스는 RNA에 유전정보를 저장한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rna-transfer"
+    },
+    {
+      "text": "RNA에도 타이민이 들어 있다",
+      "why_wrong": "RNA의 염기는 아데닌·구아닌·사이토신·유라실이다. 타이민은 DNA 쪽 염기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rna-sugar-base"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-nucleotide"
+    },
+    {
+      "type": "next",
+      "target": "cell-ribosome"
+    },
+    {
+      "type": "related",
+      "target": "cell-dna",
+      "note": "유전정보를 저장하는 쪽과 전달하는 쪽으로 갈린다"
+    },
+    {
+      "type": "related",
+      "target": "cell-protein",
+      "note": "RNA가 옮긴 정보대로 만들어지는 것이 단백질이다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-02"
+  ],
+  "topic_id": "cell-1-1-3",
+  "pages": [
+    16,
+    21,
+    32
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

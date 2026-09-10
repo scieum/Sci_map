@@ -1,0 +1,95 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-monosaccharide",
+  "concept_key": "concept:monosaccharide",
+  "registry_status": "new",
+  "term": "단당류",
+  "aliases": [],
+  "notation": {
+    "hanja": "單糖類",
+    "hanja_gloss": "單 홑 단 · 糖 엿 당 · 類 무리 류",
+    "english": "monosaccharide"
+  },
+  "definition": "당 한 개로 이루어진 탄수화물. 포도당·과당·갈락토스가 여기 속하며 다른 탄수화물을 만드는 구성 단위가 된다.",
+  "relations": [
+    {
+      "id": "rel-mono-unit",
+      "text": "단당류는 탄수화물의 구성 단위여서 여럿이 결합하면 이당류나 다당류가 된다",
+      "form": {
+        "condition": "당이 결합해 더 큰 분자를 이룰 때",
+        "type": "causal",
+        "scope": "탄수화물의 구성"
+      },
+      "invertible": true,
+      "invertible_reason": "작은 단위가 모여 큰 분자가 되는 방향이라 결합의 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다당류가 여럿 결합하면 단당류 한 개가 된다"
+    },
+    {
+      "id": "rel-mono-examples",
+      "text": "포도당·과당·갈락토스는 당 한 개로 이루어져 단당류로 분류된다",
+      "form": {
+        "condition": "탄수화물의 예를 갈래에 넣을 때",
+        "type": "classification",
+        "scope": "교과서가 든 단당류의 예"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 결과를 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "포도당 두 개가 붙은 엿당도 단당류다",
+      "why_wrong": "당 두 개가 결합한 것은 이당류다. 단당류는 당 한 개로 이루어진 것만을 가리킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mono-examples"
+    },
+    {
+      "text": "단당류는 크기가 작아 세포막을 그냥 통과한다",
+      "why_wrong": "포도당처럼 크기가 큰 분자는 인지질 이중층을 직접 지나지 못하고 수송단백질을 거쳐야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mono-unit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-carbohydrate"
+    },
+    {
+      "type": "next",
+      "target": "cell-polysaccharide"
+    },
+    {
+      "type": "related",
+      "target": "cell-facilitated-diffusion",
+      "note": "포도당이 세포막을 지나는 방식을 여기서 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-01"
+  ],
+  "topic_id": "cell-1-1-2",
+  "pages": [
+    13,
+    21,
+    46
+  ],
+  "difficulty": 1,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

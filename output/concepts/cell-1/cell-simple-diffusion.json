@@ -1,0 +1,138 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-simple-diffusion",
+  "concept_key": "concept:simple-diffusion",
+  "registry_status": "new",
+  "term": "단순확산",
+  "aliases": [],
+  "notation": {
+    "hanja": "單純擴散",
+    "hanja_gloss": "單 홑 단 · 純 순수할 순 · 擴 넓힐 확 · 散 흩을 산",
+    "english": "simple diffusion"
+  },
+  "definition": "물질이 농도가 높은 쪽에서 낮은 쪽으로 퍼지는 확산 가운데, 수송단백질을 거치지 않고 세포막을 직접 지나며 일어나는 것.",
+  "relations": [
+    {
+      "id": "rel-sd-gradient",
+      "text": "단순확산에서 물질은 농도 기울기를 따라 높은 쪽에서 낮은 쪽으로 이동한다",
+      "form": {
+        "condition": "막 안팎에 농도 차가 있을 때",
+        "type": "conditional",
+        "scope": "세포막을 직접 통과하는 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "이동 방향이 농도 기울기로 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "단순확산에서 물질은 농도가 낮은 쪽에서 높은 쪽으로 이동한다"
+    },
+    {
+      "id": "rel-sd-no-protein",
+      "text": "산소나 이산화 탄소처럼 작은 분자는 수송단백질의 도움 없이 세포막을 곧바로 지난다",
+      "form": {
+        "condition": "작고 소수성인 물질이 이동할 때",
+        "type": "conditional",
+        "scope": "단순확산"
+      },
+      "invertible": false,
+      "invertible_reason": "통과 방식을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sd-rate",
+      "text": "다른 조건이 같다면 농도 차가 클수록 단순확산의 속도가 빨라진다",
+      "form": {
+        "condition": "온도 등 다른 조건이 같을 때",
+        "type": "direct",
+        "scope": "단순확산",
+        "antecedent": {
+          "quantity": "막 안팎의 농도 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "확산 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도 차와 속도가 같은 방향으로 맞물려 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다른 조건이 같다면 농도 차가 클수록 단순확산의 속도가 느려진다"
+    },
+    {
+      "id": "rel-sd-example",
+      "text": "폐포와 모세혈관 사이에서 산소와 이산화 탄소가 오가는 것은 단순확산으로 일어난다",
+      "form": {
+        "condition": "기체가 교환될 때",
+        "type": "conditional",
+        "scope": "사람의 기체 교환"
+      },
+      "invertible": false,
+      "invertible_reason": "사례를 든 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "확산이 일어나려면 세포가 에너지를 써야 한다",
+      "why_wrong": "단순확산은 농도 기울기를 따라 저절로 일어나므로 에너지가 들지 않는다. 에너지를 쓰는 것은 능동수송이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sd-gradient"
+    },
+    {
+      "text": "농도 차가 아무리 커도 확산 속도는 늘 일정하다",
+      "why_wrong": "농도 차가 클수록 확산 속도는 빨라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sd-rate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-selective-permeability"
+    },
+    {
+      "type": "next",
+      "target": "cell-osmosis"
+    },
+    {
+      "type": "next",
+      "target": "cell-facilitated-diffusion"
+    },
+    {
+      "type": "related",
+      "target": "cell-active-transport",
+      "note": "에너지를 쓰느냐 쓰지 않느냐로 갈리는 짝이다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    39,
+    45,
+    47
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

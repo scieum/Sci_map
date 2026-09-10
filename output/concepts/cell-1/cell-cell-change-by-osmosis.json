@@ -1,0 +1,129 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-cell-change-by-osmosis",
+  "concept_key": "concept:cell-change-by-osmosis",
+  "registry_status": "new",
+  "term": "삼투에 의한 세포의 변화",
+  "aliases": [],
+  "notation": {
+    "hanja": "滲透에 의한 細胞의 變化",
+    "hanja_gloss": "滲 스밀 삼 · 透 통할 투 · 細 가늘 세 · 胞 세포 포 · 變 변할 변 · 化 될 화",
+    "english": "cell change by osmosis"
+  },
+  "definition": "세포를 둘러싼 용액의 농도에 따라 세포가 부풀거나 쭈그러드는 변화. 세포벽이 있고 없음에 따라 동물 세포와 식물 세포의 모습이 달라진다.",
+  "relations": [
+    {
+      "id": "rel-cbo-tonicity",
+      "text": "비투과성 용질의 농도가 세포질보다 낮으면 저장액, 같으면 등장액, 높으면 고장액이다",
+      "form": {
+        "condition": "세포를 둘러싼 수용액과 세포질을 견줄 때",
+        "type": "classification",
+        "scope": "살아 있는 세포를 담근 수용액"
+      },
+      "invertible": true,
+      "invertible_reason": "농도의 높낮이와 이름이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비투과성 용질의 농도가 세포질보다 높으면 저장액, 낮으면 고장액이다"
+    },
+    {
+      "id": "rel-cbo-rbc",
+      "text": "적혈구를 저장액에 넣으면 물이 들어와 터지고 고장액에 넣으면 물이 빠져 쭈그러든다",
+      "form": {
+        "condition": "동물 세포를 농도가 다른 용액에 담글 때",
+        "type": "causal",
+        "scope": "적혈구 등 세포벽이 없는 동물 세포"
+      },
+      "invertible": true,
+      "invertible_reason": "용액의 종류와 세포의 변화가 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적혈구를 저장액에 넣으면 쭈그러들고 고장액에 넣으면 물이 들어와 터진다"
+    },
+    {
+      "id": "rel-cbo-plant",
+      "text": "식물 세포는 저장액에서도 세포벽 때문에 어느 부피 이상 커지지 못하고 세포벽에 팽압이 걸린다",
+      "form": {
+        "condition": "식물 세포를 저장액에 담글 때",
+        "type": "causal",
+        "scope": "세포벽을 가진 식물 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 일을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cbo-plasmolysis",
+      "text": "식물 세포를 고장액에 넣으면 물이 빠져나가 세포막이 세포벽에서 떨어지는 원형질분리가 일어난다",
+      "form": {
+        "condition": "식물 세포를 고장액에 담글 때",
+        "type": "causal",
+        "scope": "식물 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 일을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "식물 세포도 저장액에 넣으면 적혈구처럼 터진다",
+      "why_wrong": "식물 세포에는 단단한 세포벽이 있어 일정 부피가 되면 더 커지지 않는다. 터지는 쪽은 세포벽이 없는 동물 세포다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cbo-plant"
+    },
+    {
+      "text": "삼투압과 팽압이 같아지면 물이 가장 빠르게 흡수된다",
+      "why_wrong": "그때 흡수력이 0이 되어 물을 더 흡수하지 않는다. 이 상태를 최대 팽윤상태라고 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cbo-plant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-osmosis"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-osmotic-pressure"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-cell-wall"
+    },
+    {
+      "type": "related",
+      "target": "cell-vacuole",
+      "note": "식물 세포가 머금은 물의 상당 부분이 여기 들어 있다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    40,
+    42
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

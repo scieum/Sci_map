@@ -1,0 +1,133 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-active-transport",
+  "concept_key": "concept:active-transport",
+  "registry_status": "new",
+  "term": "능동수송",
+  "aliases": [],
+  "notation": {
+    "hanja": "能動輸送",
+    "hanja_gloss": "能 능할 능 · 動 움직일 동 · 輸 보낼 수 · 送 보낼 송",
+    "english": "active transport",
+    "symbol_display": "Na⁺-K⁺",
+    "symbol_plain": "Na+-K+"
+  },
+  "definition": "세포막의 운반체단백질이 에너지를 써서 농도 기울기를 거슬러 물질을 한 방향으로 옮기는 수송 방식.",
+  "relations": [
+    {
+      "id": "rel-at-energy",
+      "text": "능동수송은 에너지를 써서 농도가 낮은 쪽에서 높은 쪽으로 물질을 옮긴다",
+      "form": {
+        "condition": "농도 기울기를 거슬러 물질을 옮길 때",
+        "type": "conditional",
+        "scope": "능동수송"
+      },
+      "invertible": true,
+      "invertible_reason": "이동 방향이 농도 기울기를 거스르는 쪽으로 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "능동수송은 에너지를 써서 농도가 높은 쪽에서 낮은 쪽으로 물질을 옮긴다"
+    },
+    {
+      "id": "rel-at-carrier",
+      "text": "운반체단백질은 인산화되면서 구조가 바뀌었다가 인산기가 떨어지면 본래 구조로 돌아온다",
+      "form": {
+        "condition": "펌프가 물질을 옮기는 동안",
+        "type": "causal",
+        "scope": "Na⁺-K⁺ 펌프 같은 운반체단백질"
+      },
+      "invertible": false,
+      "invertible_reason": "과정을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-at-neuron",
+      "text": "신경세포에서 Na⁺은 세포 밖이, K⁺은 세포 안이 농도가 높게 유지된다",
+      "form": {
+        "condition": "능동수송이 이어질 때",
+        "type": "conditional",
+        "scope": "신경세포의 세포막"
+      },
+      "invertible": true,
+      "invertible_reason": "두 이온의 농도가 높은 쪽이 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신경세포에서 Na⁺은 세포 안이, K⁺은 세포 밖이 농도가 높게 유지된다"
+    },
+    {
+      "id": "rel-at-vs-fd",
+      "text": "촉진확산과 능동수송은 모두 막단백질을 거치지만 에너지를 쓰는 쪽은 능동수송뿐이다",
+      "form": {
+        "condition": "두 수송 방식을 견줄 때",
+        "type": "conditional",
+        "scope": "세포막을 통한 물질 수송"
+      },
+      "invertible": false,
+      "invertible_reason": "공통점과 차이점을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "능동수송은 농도가 높은 쪽에서 낮은 쪽으로 물질을 더 빨리 옮기는 방식이다",
+      "why_wrong": "능동수송은 농도 기울기를 거슬러 낮은 쪽에서 높은 쪽으로 옮기는 방식이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-at-energy"
+    },
+    {
+      "text": "Na⁺-K⁺ 펌프는 에너지 없이 이온을 옮긴다",
+      "why_wrong": "ATP의 에너지로 운반체단백질이 인산화되고 그때 구조가 바뀌면서 이온이 옮겨진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-at-carrier"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-selective-permeability"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-facilitated-diffusion"
+    },
+    {
+      "type": "related",
+      "target": "cell-simple-diffusion",
+      "note": "에너지를 쓰지 않는 이동과 견주어 보면 좋다"
+    },
+    {
+      "type": "related",
+      "target": "cell-cell-membrane",
+      "note": "이 수송을 맡는 운반체단백질이 막에 박혀 있다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    43,
+    45,
+    47
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

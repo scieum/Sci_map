@@ -7,7 +7,7 @@
   "required": ["unit_id", "subject", "generated_at", "source", "candidates", "hierarchy"],
   "additionalProperties": false,
   "properties": {
-    "unit_id":      { "type": "string", "pattern": "^(isci1|isci2|chem|mate|reac)-[0-9]+$" },
+    "unit_id":      { "type": "string", "pattern": "^(isci1|isci2|chem|mate|reac|cell)-[0-9]+$" },
     "subject":      { "type": "string" },
     "unit_title":   { "type": "string" },
     "generated_at": { "type": "string" },
@@ -73,7 +73,7 @@
         "id": {
           "description": "카드 id 후보. 접두어 뒤 첫 글자는 영문자 — 단원 id 와 구별하기 위한 규칙이다 (concept_registry.yaml id_format).",
           "type": "string",
-          "pattern": "^(isci1|isci2|chem|mate|reac)-[a-z][a-z0-9]*(-[a-z0-9]+)*$"
+          "pattern": "^(isci1|isci2|chem|mate|reac|cell)-[a-z][a-z0-9]*(-[a-z0-9]+)*$"
         },
         "term":    { "type": "string", "minLength": 1 },
         "aliases": { "type": "array", "items": { "type": "string" } },

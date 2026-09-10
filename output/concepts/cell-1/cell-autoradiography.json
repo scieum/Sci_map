@@ -1,0 +1,112 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-autoradiography",
+  "concept_key": "concept:autoradiography",
+  "registry_status": "new",
+  "term": "자기방사법",
+  "aliases": [],
+  "notation": {
+    "hanja": "自己放射法",
+    "hanja_gloss": "自 스스로 자 · 己 몸 기 · 放 놓을 방 · 射 쏠 사 · 法 법 법",
+    "english": "autoradiography"
+  },
+  "definition": "방사성 동위원소로 표지한 물질이 내놓는 방사선을 필름에 감광시켜, 그 물질이 어디 있는지 영상으로 확인하는 연구 방법.",
+  "relations": [
+    {
+      "id": "rel-ar-principle",
+      "text": "표지된 물질이 내놓은 방사선이 필름을 감광시켜 검은 점으로 드러난다",
+      "form": {
+        "condition": "표지한 시료에 필름을 맞대어 둘 때",
+        "type": "causal",
+        "scope": "자기방사법"
+      },
+      "invertible": false,
+      "invertible_reason": "원리를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ar-tracking",
+      "text": "시간 간격을 두고 표지 물질을 확인하면 세포 안에서 물질이 생성·변화·이동한 경로를 알 수 있다",
+      "form": {
+        "condition": "표지 화합물을 세포에 넣고 여러 번 관찰할 때",
+        "type": "causal",
+        "scope": "세포 안 물질 추적 연구"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 알 수 있는지 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ar-isotope-choice",
+      "text": "단백질의 이동을 보려면 황을 표지한 아미노산을, 광합성 산물을 보려면 탄소를 표지한 이산화 탄소를 쓴다",
+      "form": {
+        "condition": "연구 대상에 맞춰 표지 물질을 고를 때",
+        "type": "conditional",
+        "scope": "방사성 동위원소를 쓰는 추적 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "연구 대상과 표지 물질이 짝지어져 있어 짝을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "단백질의 이동을 보려면 탄소를 표지한 이산화 탄소를, 광합성 산물을 보려면 황을 표지한 아미노산을 쓴다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기방사법으로는 물질이 지금 어디 있는지만 알 수 있고 이동 경로는 알 수 없다",
+      "why_wrong": "시간 간격을 두고 여러 번 확인하면 표지된 물질이 어느 세포소기관을 거쳐 가는지 경로를 읽어 낼 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ar-tracking"
+    },
+    {
+      "text": "자기방사법은 방사선을 현미경으로 직접 들여다보는 방법이다",
+      "why_wrong": "방사선은 눈으로 볼 수 없다. 필름에 감광시켜 생긴 검은 점으로 위치를 확인한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ar-principle"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "cell-protein-secretory-pathway",
+      "note": "이 방법으로 밝혀진 경로를 다음에 다룬다"
+    },
+    {
+      "type": "related",
+      "target": "cell-cell-fractionation",
+      "note": "세포 안을 들여다보는 또 하나의 연구 방법이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-electron-microscope",
+      "note": "관찰과 추적을 함께 쓰면 세포를 더 자세히 알 수 있다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-2-1",
+  "pages": [
+    24,
+    25,
+    27
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

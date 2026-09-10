@@ -1,0 +1,113 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-electron-microscope",
+  "concept_key": "concept:electron-microscope",
+  "registry_status": "new",
+  "term": "전자 현미경",
+  "aliases": [],
+  "notation": {
+    "hanja": "電子 顯微鏡",
+    "hanja_gloss": "電 번개 전 · 子 아들 자 · 顯 나타날 현 · 微 작을 미 · 鏡 거울 경",
+    "english": "electron microscope"
+  },
+  "definition": "빛 대신 전자선을 써서 수십만 배까지 확대하는 현미경. 광학 현미경으로는 닿지 않는 세포의 미세구조를 관찰한다.",
+  "relations": [
+    {
+      "id": "rel-em-light-source",
+      "text": "전자 현미경은 광원으로 가시광선이 아니라 전자선을 쓴다",
+      "form": {
+        "condition": "두 현미경의 광원을 견줄 때",
+        "type": "conditional",
+        "scope": "전자 현미경"
+      },
+      "invertible": true,
+      "invertible_reason": "광원이 둘 중 하나로 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자 현미경은 전자선이 아니라 가시광선을 광원으로 쓴다"
+    },
+    {
+      "id": "rel-em-magnification",
+      "text": "전자 현미경이 낼 수 있는 최대 배율은 광학 현미경보다 훨씬 높다",
+      "form": {
+        "condition": "두 현미경의 배율을 견줄 때",
+        "type": "conditional",
+        "scope": "광학 현미경과 전자 현미경"
+      },
+      "invertible": true,
+      "invertible_reason": "높고 낮음을 견준 서술이라 크기 관계를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광학 현미경이 낼 수 있는 최대 배율은 전자 현미경보다 훨씬 높다"
+    },
+    {
+      "id": "rel-em-tem-sem",
+      "text": "투과 전자 현미경은 세포의 내부 구조를, 주사 전자 현미경은 세포의 표면과 겉모양을 보는 데 쓴다",
+      "form": {
+        "condition": "두 전자 현미경의 쓰임을 견줄 때",
+        "type": "classification",
+        "scope": "투과 전자 현미경과 주사 전자 현미경"
+      },
+      "invertible": true,
+      "invertible_reason": "두 장치에 쓰임이 짝지어져 있어 짝을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "투과 전자 현미경은 세포의 표면을, 주사 전자 현미경은 세포의 내부 구조를 보는 데 쓴다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "투과 전자 현미경은 광원으로 가시광선을 이용한다",
+      "why_wrong": "전자 현미경은 가시광선이 아니라 전자선을 쓴다. 가시광선을 쓰는 것은 광학 현미경이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-em-light-source"
+    },
+    {
+      "text": "주사 전자 현미경으로 세포 속 세포소기관의 단면을 관찰한다",
+      "why_wrong": "단면을 보는 쪽은 투과 전자 현미경이다. 주사 전자 현미경은 시료 표면에서 나온 전자로 겉모양을 보여 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-em-tem-sem"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-light-microscope"
+    },
+    {
+      "type": "related",
+      "target": "cell-organelle",
+      "note": "미세구조를 보게 되면서 알려진 것들이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-mitochondrion",
+      "note": "교과서가 이 소기관의 사진으로 두 전자 현미경을 견준다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-2-1",
+  "pages": [
+    24,
+    27,
+    46
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

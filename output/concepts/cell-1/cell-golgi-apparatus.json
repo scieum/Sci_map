@@ -1,0 +1,130 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-golgi-apparatus",
+  "concept_key": "concept:golgi-apparatus",
+  "registry_status": "new",
+  "term": "골지체",
+  "aliases": [],
+  "notation": {
+    "hanja": "골지體",
+    "hanja_gloss": "體 몸 체",
+    "hanja_note": "'골지'는 이 구조를 발견한 사람의 이름을 옮긴 말이라 한자 표기가 없고 뒤의 體만 한자어다.",
+    "english": "Golgi apparatus"
+  },
+  "definition": "막으로 된 납작한 주머니인 시스터나가 층층이 쌓인 세포소기관. 소포체가 보낸 단백질과 지질을 다듬어 다른 곳으로 보내거나 세포 밖으로 내보낸다.",
+  "relations": [
+    {
+      "id": "rel-golgi-structure",
+      "text": "골지체의 시스터나는 층층이 쌓여 있으나 내부가 서로 이어져 있지는 않다",
+      "form": {
+        "condition": "골지체의 구조를 소포체와 견줄 때",
+        "type": "conditional",
+        "scope": "골지체"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 묘사한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-golgi-processing",
+      "text": "골지체는 소포체에서 온 단백질과 지질을 가공한 뒤 운반 소낭에 담아 내보낸다",
+      "form": {
+        "condition": "물질이 소포체를 거쳐 올 때",
+        "type": "causal",
+        "scope": "단백질·지질의 수송 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "물질이 흐르는 방향이 정해져 있어 보내는 쪽과 받는 쪽을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "골지체는 세포막에서 온 단백질을 가공한 뒤 소포체로 돌려보낸다"
+    },
+    {
+      "id": "rel-golgi-secretory-cell",
+      "text": "분비 작용이 활발한 세포일수록 골지체와 소포체가 발달해 있다",
+      "form": {
+        "condition": "세포의 종류에 따라 견줄 때",
+        "type": "direct",
+        "scope": "소화샘·내분비샘 세포 등",
+        "antecedent": {
+          "quantity": "세포의 분비 작용이 활발한 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "골지체와 소포체의 발달 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양이 같은 방향으로 맞물려 있어 한쪽 방향만 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분비 작용이 활발한 세포일수록 골지체와 소포체가 덜 발달해 있다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "골지체가 단백질을 직접 합성한다",
+      "why_wrong": "단백질을 만드는 곳은 라이보솜이다. 골지체는 만들어진 단백질을 가공해 보내는 일을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-golgi-processing"
+    },
+    {
+      "text": "골지체 안은 소포체처럼 하나로 뚫려 있다",
+      "why_wrong": "골지체는 시스터나가 쌓여 있을 뿐 내부가 서로 이어져 있지 않다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-golgi-structure"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-endoplasmic-reticulum"
+    },
+    {
+      "type": "next",
+      "target": "cell-protein-secretory-pathway"
+    },
+    {
+      "type": "related",
+      "target": "cell-lysosome",
+      "note": "여기서 나온 소낭이 분해를 맡는 주머니가 된다"
+    },
+    {
+      "type": "related",
+      "target": "cell-vacuole",
+      "note": "액포도 소포체와 골지체로부터 만들어진다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-3-2",
+  "pages": [
+    31,
+    33,
+    37,
+    47
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

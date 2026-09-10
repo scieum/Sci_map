@@ -1,0 +1,121 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-nucleotide",
+  "concept_key": "concept:nucleotide",
+  "registry_status": "reused",
+  "term": "뉴클레오타이드",
+  "aliases": [
+    "뉴클레오티드"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 nucleotide 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "nucleotide"
+  },
+  "definition": "핵산을 이루는 기본 단위. 인산 하나와 5탄당 하나와 염기 하나가 1:1:1로 이어져 한 덩이를 이룬 것이다.",
+  "relations": [
+    {
+      "id": "rel-nt-composition",
+      "text": "뉴클레오타이드 한 개에는 인산과 5탄당과 염기가 하나씩 들어 있다",
+      "form": {
+        "condition": "한 단위의 구성을 셀 때",
+        "type": "conditional",
+        "scope": "DNA와 RNA의 뉴클레오타이드"
+      },
+      "invertible": false,
+      "invertible_reason": "구성 성분의 개수를 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-chain",
+      "text": "앞 뉴클레오타이드의 인산이 뒤 뉴클레오타이드의 당에 이어지면서 사슬이 길어진다",
+      "form": {
+        "condition": "뉴클레오타이드가 잇따라 연결될 때",
+        "type": "causal",
+        "scope": "폴리뉴클레오타이드 사슬"
+      },
+      "invertible": false,
+      "invertible_reason": "연결되는 자리를 밝힌 서술이라 방향을 맞바꾸면 다른 말이 되어 버린다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-dna-rna-diff",
+      "text": "DNA의 뉴클레오타이드는 디옥시라이보스와 타이민을, RNA의 뉴클레오타이드는 라이보스와 유라실을 갖는다",
+      "form": {
+        "condition": "두 핵산의 단위를 견줄 때",
+        "type": "classification",
+        "scope": "DNA와 RNA"
+      },
+      "invertible": true,
+      "invertible_reason": "두 핵산에 당과 염기가 각각 짝지어져 있어 짝을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA의 뉴클레오타이드는 라이보스와 유라실을, RNA의 뉴클레오타이드는 디옥시라이보스와 타이민을 갖는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "뉴클레오타이드는 당과 염기만으로 이루어진다",
+      "why_wrong": "인산까지 세 부분이 1:1:1로 결합해야 뉴클레오타이드 한 단위가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nt-composition"
+    },
+    {
+      "text": "DNA와 RNA의 뉴클레오타이드는 염기만 다르고 당은 같다",
+      "why_wrong": "염기가 타이민과 유라실로 다를 뿐 아니라 5탄당도 디옥시라이보스와 라이보스로 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nt-dna-rna-diff"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-nucleic-acid"
+    },
+    {
+      "type": "next",
+      "target": "cell-dna"
+    },
+    {
+      "type": "next",
+      "target": "cell-rna"
+    },
+    {
+      "type": "same",
+      "target": "isci1-nucleotide",
+      "note": "통합과학에서 만난 같은 개념이다"
+    },
+    {
+      "type": "same",
+      "target": "reac-nucleotide",
+      "note": "화학 반응의 세계에서는 고분자를 이루는 단위체로 다시 나온다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-02"
+  ],
+  "topic_id": "cell-1-1-3",
+  "pages": [
+    16,
+    21,
+    46
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

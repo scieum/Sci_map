@@ -1,0 +1,119 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-lysosome",
+  "concept_key": "concept:lysosome",
+  "registry_status": "new",
+  "term": "라이소솜",
+  "aliases": [
+    "리소좀",
+    "리소솜"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 lysosome 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "lysosome"
+  },
+  "definition": "가수분해효소가 들어 있는 주머니 모양의 세포소기관. 세포 안으로 들어온 물질이나 망가진 세포소기관을 분해한다.",
+  "relations": [
+    {
+      "id": "rel-lys-enzyme",
+      "text": "라이소솜 안에는 탄수화물·단백질·지질·핵산을 분해하는 여러 가수분해효소가 들어 있다",
+      "form": {
+        "condition": "라이소솜의 내용물을 볼 때",
+        "type": "conditional",
+        "scope": "라이소솜"
+      },
+      "invertible": false,
+      "invertible_reason": "내용물을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lys-digestion",
+      "text": "라이소솜은 세포 안으로 들어온 물질과 손상된 세포소기관을 분해하는 세포내소화를 맡는다",
+      "form": {
+        "condition": "세포 안에서 분해가 필요할 때",
+        "type": "causal",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lys-absence",
+      "text": "라이소솜이 없으면 분해되지 못한 물질과 망가진 세포소기관이 세포 안에 쌓인다",
+      "form": {
+        "condition": "라이소솜의 기능이 사라졌을 때",
+        "type": "causal",
+        "scope": "세포내소화가 필요한 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "라이소솜의 효소는 세포 자신도 늘 분해하므로 세포에 해롭다",
+      "why_wrong": "효소가 막에 싸인 라이소솜 안에 갇혀 있어, 분해해야 할 대상이 들어왔을 때만 작용한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lys-enzyme"
+    },
+    {
+      "text": "라이소솜은 물질을 저장하는 창고다",
+      "why_wrong": "저장은 액포가 맡는 일이다. 라이소솜은 가수분해효소로 물질을 분해한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lys-digestion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "related",
+      "target": "cell-golgi-apparatus",
+      "note": "이 소기관에서 만들어져 나온다"
+    },
+    {
+      "type": "related",
+      "target": "cell-endocytosis-and-exocytosis",
+      "note": "식세포작용으로 들어온 물질이 여기서 분해된다"
+    },
+    {
+      "type": "related",
+      "target": "cell-vacuole",
+      "note": "둘 다 막으로 둘러싸인 주머니이지만 하는 일이 다르다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-3-2",
+  "pages": [
+    30,
+    35,
+    37,
+    47
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

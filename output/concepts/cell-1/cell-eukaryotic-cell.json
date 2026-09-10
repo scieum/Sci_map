@@ -1,0 +1,114 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-eukaryotic-cell",
+  "concept_key": "concept:eukaryotic-cell",
+  "registry_status": "new",
+  "term": "진핵세포",
+  "aliases": [],
+  "notation": {
+    "hanja": "眞核細胞",
+    "hanja_gloss": "眞 참 진 · 核 씨 핵 · 細 가늘 세 · 胞 세포 포",
+    "english": "eukaryotic cell"
+  },
+  "definition": "막으로 둘러싸인 핵을 갖춘 세포. 핵 말고도 여러 세포소기관을 지니며 핵 속 DNA는 선형으로 뉴클레오솜을 이룬다.",
+  "relations": [
+    {
+      "id": "rel-euk-nucleus",
+      "text": "진핵세포는 막으로 둘러싸인 핵을 가져 유전물질이 세포질과 나뉘어 있다",
+      "form": {
+        "condition": "핵막의 유무를 기준으로 볼 때",
+        "type": "conditional",
+        "scope": "동물·식물·균류 등의 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "구조의 특징을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-euk-organelles",
+      "text": "진핵세포의 세포질에는 막으로 둘러싸인 여러 세포소기관이 자리 잡고 있다",
+      "form": {
+        "condition": "세포 내부 구조를 볼 때",
+        "type": "conditional",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 묘사한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-euk-dna",
+      "text": "진핵세포의 핵 속 DNA는 선형이며 히스톤 단백질과 결합해 뉴클레오솜을 이룬다",
+      "form": {
+        "condition": "핵 속 DNA의 상태를 볼 때",
+        "type": "conditional",
+        "scope": "진핵세포의 핵"
+      },
+      "invertible": false,
+      "invertible_reason": "상태를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진핵세포에는 세포벽이 없다",
+      "why_wrong": "식물 세포도 진핵세포인데 셀룰로스로 된 세포벽이 있다. 세포벽의 유무는 원핵과 진핵을 가르는 기준이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-euk-nucleus"
+    },
+    {
+      "text": "핵막이 있으면 원핵세포다",
+      "why_wrong": "핵막이 있는 쪽이 진핵세포이고 핵막이 없는 쪽이 원핵세포다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-euk-nucleus"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-dna"
+    },
+    {
+      "type": "next",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "related",
+      "target": "cell-prokaryotic-cell",
+      "note": "핵막이 있느냐 없느냐로 갈리는 짝이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-cell-nucleus",
+      "note": "이 세포를 진핵이라 부르게 한 구조다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-04"
+  ],
+  "topic_id": "cell-1-3-1",
+  "pages": [
+    28,
+    29,
+    37
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

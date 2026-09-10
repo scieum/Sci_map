@@ -1,0 +1,118 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-endoplasmic-reticulum",
+  "concept_key": "concept:endoplasmic-reticulum",
+  "registry_status": "new",
+  "term": "소포체",
+  "aliases": [],
+  "notation": {
+    "hanja": "小胞體",
+    "hanja_gloss": "小 작을 소 · 胞 세포 포 · 體 몸 체",
+    "english": "endoplasmic reticulum"
+  },
+  "definition": "납작한 주머니와 관이 얽힌 모양의 세포소기관. 핵막 외막과 이어져 있고 라이보솜이 붙은 쪽과 붙지 않은 쪽으로 나뉜다.",
+  "relations": [
+    {
+      "id": "rel-er-two-kinds",
+      "text": "표면에 라이보솜이 붙어 있는 쪽이 거친면소포체이고 붙어 있지 않은 쪽이 매끈면소포체다",
+      "form": {
+        "condition": "소포체의 표면을 볼 때",
+        "type": "classification",
+        "scope": "진핵세포의 소포체"
+      },
+      "invertible": true,
+      "invertible_reason": "라이보솜의 유무와 이름이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면에 라이보솜이 붙어 있는 쪽이 매끈면소포체이고 붙어 있지 않은 쪽이 거친면소포체다"
+    },
+    {
+      "id": "rel-er-rough",
+      "text": "거친면소포체는 라이보솜에서 만들어져 들어온 단백질을 변형하고 옮기는 일을 맡는다",
+      "form": {
+        "condition": "합성된 단백질이 들어올 때",
+        "type": "causal",
+        "scope": "거친면소포체"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-er-smooth",
+      "text": "매끈면소포체는 인지질과 스테로이드를 만들고 독성 물질을 해독하며 칼슘 이온을 저장한다",
+      "form": {
+        "condition": "매끈면소포체의 기능을 볼 때",
+        "type": "conditional",
+        "scope": "매끈면소포체"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 늘어놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "매끈면소포체에도 라이보솜이 붙어 있다",
+      "why_wrong": "라이보솜이 붙어 있지 않아서 매끈면소포체다. 붙어 있는 쪽이 거친면소포체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-er-two-kinds"
+    },
+    {
+      "text": "소포체는 핵과 완전히 떨어진 별개의 구조다",
+      "why_wrong": "소포체의 막은 핵막의 외막과 이어져 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-er-rough"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-ribosome"
+    },
+    {
+      "type": "next",
+      "target": "cell-golgi-apparatus"
+    },
+    {
+      "type": "next",
+      "target": "cell-protein-secretory-pathway"
+    },
+    {
+      "type": "related",
+      "target": "cell-cell-nucleus",
+      "note": "핵막의 바깥막과 이어져 있다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-3-2",
+  "pages": [
+    30,
+    33,
+    37
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

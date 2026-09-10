@@ -1,0 +1,433 @@
+{
+  "unit_id": "cell-1",
+  "generated_at": "2026-09-10T00:00:00+09:00",
+  "mode_run": ["curriculum", "relation"],
+  "curriculum": {
+    "checked": 40,
+    "standards_in_scope": [
+      { "code": "12세포01-01", "text": "탄수화물과 지질의 종류와 주요 기능을 이해하고 생물체에 들어 있는 탄수화물과 지질을 관찰할 수 있다." },
+      { "code": "12세포01-02", "text": "핵산과 단백질의 기본 구조와 세포에서의 주요 기능을 조사하여 설명할 수 있다." },
+      { "code": "12세포01-03", "text": "동물 세포와 식물 세포를 구성하는 세포소기관의 구조와 기능을 이해하고, 세포소기관들의 유기적 관계를 추론하여 협력적으로 소통할 수 있다." },
+      { "code": "12세포01-04", "text": "원핵세포와 진핵세포의 공통점과 차이점을 설명할 수 있다." },
+      { "code": "12세포01-05", "text": "세포막의 구조와 특성을 이해하고, 세포막을 통한 물질 수송 과정을 추론할 수 있다." }
+    ],
+    "findings": [
+      {
+        "card_id": "cell-light-microscope",
+        "verdict": "uncertain",
+        "current": ["12세포01-03"],
+        "suggested": [],
+        "reason": "성취기준 12세포01-03 전문은 '동물 세포와 식물 세포를 구성하는 세포소기관의 구조와 기능을 이해하고, 세포소기관들의 유기적 관계를 추론하여 협력적으로 소통할 수 있다' 이고, 영역 01 의 나머지 넷(01-01·01-02·01-04·01-05) 어디에도 관찰 도구가 없다. 01-01 의 '관찰할 수 있다' 는 '생물체에 들어 있는 탄수화물과 지질을' 이 목적어라 현미경을 받쳐 주지 않는다. 이 카드의 세 명제(rel-lm-principle 렌즈의 굴절, rel-lm-living 살아 있는 세포 관찰, rel-lm-staining 염색)는 모두 장치의 원리·쓰임이고 세포소기관의 구조나 기능을 말하지 않는다. 다만 교과서 22쪽 중단원 02 머리에 학습 목표가 '세포소기관의 구조와 기능을 알아낼 수 있는 연구 방법을 설명할 수 있다' 로 찍혀 있어, 발행처는 이 중단원을 01-03 에 잇대어 놓았다. 성취기준 전문만 보면 걸리지 않고 교과서 학습 목표를 보면 걸린다 — 판단이 갈리므로 out_of_scope 로 확정하지 않는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-electron-microscope",
+        "verdict": "uncertain",
+        "current": ["12세포01-03"],
+        "suggested": [],
+        "reason": "cell-light-microscope 와 같은 사유다. 세 명제(rel-em-light-source 광원, rel-em-magnification 최대 배율, rel-em-tem-sem TEM·SEM 의 쓰임)가 모두 장치의 속성이고, 12세포01-03 이 요구하는 '세포소기관의 구조와 기능' 을 직접 말하는 명제가 없다. 이 카드가 01-03 에 닿는 통로는 교과서 22쪽 학습 목표뿐이다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-cell-fractionation",
+        "verdict": "uncertain",
+        "current": ["12세포01-03"],
+        "suggested": [],
+        "reason": "현미경 두 장보다는 01-03 에 가깝다 — rel-cf-animal-order 가 핵·마이토콘드리아·막 조각·라이보솜의 크기와 밀도 차이를 말하므로 명제의 대상이 세포소기관 자체다. 그래도 카드의 주어는 방법(원심분리 절차·속도·시간)이고 01-03 의 '구조와 기능' 은 아니다. 중단원 02 네 장을 한 덩어리로 사람이 확정해야 한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-autoradiography",
+        "verdict": "uncertain",
+        "current": ["12세포01-03"],
+        "suggested": [],
+        "reason": "01-03 의 뒷절 '세포소기관들의 유기적 관계를 추론하여' 에 닿을 여지가 가장 큰 카드다 — 표지 물질이 라이보솜→소포체→골지체를 거치는 경로를 드러내는 것이 cell-protein-secretory-pathway 의 근거가 된다(교과서 25쪽). 다만 세 명제(원리·추적·동위원소 선택)는 기법의 서술이고, 유기적 관계를 말하는 명제는 이 카드가 아니라 cell-protein-secretory-pathway 에 있다. 중단원 02 네 장과 같은 항목으로 올린다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-cell-membrane",
+        "verdict": "retag",
+        "current": ["12세포01-03", "12세포01-05"],
+        "suggested": ["12세포01-05"],
+        "reason": "12세포01-05 전문이 '세포막의 구조와 특성을 이해하고, 세포막을 통한 물질 수송 과정을 추론할 수 있다' 로 이 카드의 표제어를 그대로 담고 있다. 12세포01-03 은 '세포소기관의 구조와 기능' 이고 세포막은 세포소기관이 아니며, 이 카드의 topic_id 도 cell-1-4-1(중단원 04 세포막의 구조와 특성)이지 중단원 03 이 아니다. 명제 단위로도 01-03 이 붙은 것은 rel-cm-boundary 하나뿐인데, 그 내용('세포막은 세포의 형태를 지키고 세포 안과 밖의 환경을 갈라 놓는다')은 01-05 의 '세포막의 … 특성' 쪽이다. 01-03 을 떼면 rel-cm-boundary 의 relations[].curriculum 도 함께 옮겨야 한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-constituent-substance-of-organism",
+        "verdict": "retag",
+        "current": ["12세포01-01"],
+        "suggested": ["12세포01-01", "12세포01-02"],
+        "reason": "카드의 definition 이 '단백질·핵산·탄수화물·지질 같은 큰 분자와 물, 이온' 을 한꺼번에 세우고, rel-cs-role 은 '유전정보 전달' 까지 말한다. 12세포01-01 은 탄수화물과 지질만, 12세포01-02 는 핵산과 단백질만 받치므로 01-01 하나로는 카드의 절반이 태그 없이 남는다. 이 카드는 links 로도 cell-nucleic-acid·cell-protein 을 next 로 걸고 있다. 한편 rel-cs-water-share('물은 생물을 이루는 성분 가운데 차지하는 비율이 가장 높고 체액의 주성분이 된다')는 01-01·01-02 어느 쪽에도 직접 걸리지 않는 도입 서술이다 — 교과서 12쪽 단원 여는 면의 내용이라 이탈로 올리지는 않되 C8 검토 항목으로 남긴다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-active-transport",
+        "verdict": "uncertain",
+        "current": ["12세포01-05"],
+        "suggested": [],
+        "reason": "12세포01-05 의 '세포막을 통한 물질 수송 과정을 추론할 수 있다' 는 능동수송 자체를 받친다(rel-at-energy·rel-at-vs-fd 는 범위 안이다). 갈리는 것은 두 명제다. rel-at-carrier 는 '운반체단백질은 인산화되면서 구조가 바뀌었다가 인산기가 떨어지면 본래 구조로 돌아온다' 로 펌프의 분자 기작을 다루고, rel-at-neuron 은 신경세포의 Na⁺·K⁺ 농도 유지를 다룬다. 둘 다 교과서 43쪽 본문에 있으나 성취기준이 요구하는 것은 '수송 과정의 추론' 까지이고, 인산화·탈인산화 기작과 막 안팎 이온 농도 유지는 영역 03 이나 상위 과목 몫으로 볼 여지가 있다. 진위가 아니라 요구 수준의 문제라 사람이 정한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "cell-osmotic-pressure",
+        "verdict": "uncertain",
+        "current": ["12세포01-05"],
+        "suggested": [],
+        "reason": "삼투압 자체는 01-05 의 물질 수송 추론을 받치지만, rel-op-temperature('온도가 높을수록 삼투압이 커진다')는 세포막이나 물질 수송이 아니라 용액의 성질이라 영역 01 성취기준 다섯 어디에도 걸리는 구절이 없다. rel-op-absorb('식물 세포가 물을 빨아들이는 힘인 흡수력은 삼투압에서 팽압을 뺀 값이다')도 정량 관계라 '추론할 수 있다' 가 요구하는 수준을 넘는지 갈린다. 두 명제 모두 교과서 42쪽 본문이다.",
+        "prerequisites": ["concept:osmotic-pressure", "concept:vant-hoff-law", "concept:absolute-temperature", "concept:semipermeable-membrane"]
+      }
+    ],
+    "prerequisites_outside_unit": [
+      { "card_id": "cell-osmosis", "keys": ["concept:osmosis", "concept:semipermeable-membrane"], "note": "카드가 이미 same 링크로 isci1-osmosis·mate-osmosis 를 걸어 두었다. 반투과성막 개념이 화학·통합과학 쪽에서 먼저 선다." },
+      { "card_id": "cell-osmotic-pressure", "keys": ["concept:osmotic-pressure", "concept:vant-hoff-law", "concept:absolute-temperature"], "note": "rel-op-temperature 의 온도 의존성은 화학 쪽에 근거가 있다. 이 단원은 결과만 쓴다." },
+      { "card_id": "cell-phospholipid-bilayer", "keys": ["concept:polar-molecule", "concept:nonpolar-molecule", "concept:water-polarity", "concept:intermolecular-force"], "note": "친수성·소수성을 극성으로 풀어 주려면 화학의 분자 극성이 먼저 필요하다." },
+      { "card_id": "cell-selective-permeability", "keys": ["concept:solubility-and-molecular-polarity", "concept:polar-molecule"], "note": "'물에 대한 친화도가 통과의 갈림길' 이라는 정의가 용해성과 극성의 관계에 기댄다." },
+      { "card_id": "cell-lipid", "keys": ["concept:solubility-and-molecular-polarity"], "note": "rel-lipid-solubility 의 물·유기 용매 대비가 그것이다." },
+      { "card_id": "cell-amino-acid", "keys": ["concept:hydrogen-bond", "concept:functional-group", "concept:carboxyl-group"], "note": "rel-aa-interaction 이 수소결합을 쓴다. 아미노기·카복실기는 작용기 개념이 앞선다." },
+      { "card_id": "cell-protein", "keys": ["concept:hydrogen-bond"], "note": "rel-protein-folding 의 '아미노산 사이의 상호작용' 이 수소결합 등을 가리킨다." },
+      { "card_id": "cell-peptide-bond", "keys": ["concept:condensation-polymerization", "concept:monomer", "concept:polymer"], "note": "물 한 분자가 빠지며 이어지는 것은 화학의 축합 중합과 같은 얼개다." },
+      { "card_id": "cell-nucleotide", "keys": ["concept:nucleotide"], "note": "카드가 이미 same 링크로 isci1-nucleotide·reac-nucleotide 를 걸어 두었다." },
+      { "card_id": "cell-mitochondrion", "keys": ["concept:cellular-respiration"], "note": "같은 과목 단원 Ⅲ(영역 03)의 내용을 결과만 빌려 쓴다. G 파이프라인에서 링크 방향을 정할 자리." },
+      { "card_id": "cell-chloroplast", "keys": ["concept:photosynthesis"], "note": "cell-mitochondrion 과 같다." }
+    ],
+    "stats": { "ok": 32, "retag": 2, "out_of_scope": 0, "uncertain": 6 }
+  },
+  "relations": {
+    "checked": 130,
+    "cards_checked": 40,
+    "invertible_true_count": 44,
+    "misconceptions_checked": 80,
+    "findings": [
+      {
+        "card_id": "cell-active-transport",
+        "relation_id": "rel-at-energy",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '세포막의 운반체단백질이 에너지를 써서 농도 기울기를 거슬러 물질을 한 방향으로 옮기는 수송 방식' 이고 명제는 '능동수송은 에너지를 써서 농도가 낮은 쪽에서 높은 쪽으로 물질을 옮긴다' 다. '농도 기울기를 거슬러' 와 '낮은 쪽에서 높은 쪽으로' 는 같은 말이고 '에너지를 써서' 는 두 곳에 똑같이 있다. 더해서 form.condition 이 '농도 기울기를 거슬러 물질을 옮길 때' 라 조건절이 결론을 미리 말해 버린다 — 그 조건 아래에서 이 명제는 참일 수밖에 없다.",
+        "suggest": "정의에서 이동 방향을 빼거나 명제를 정의가 담지 않은 내용으로 갈음한다. 어느 쪽을 고르든 form.condition 이 결론을 되풀이하지 않도록 함께 고친다. 이 명제에 오개념 1건이 걸려 있으므로 손대면 연결도 옮긴다."
+      },
+      {
+        "card_id": "cell-active-transport",
+        "relation_id": "rel-at-carrier",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제의 주어는 '운반체단백질' 로 제한이 없는데 form.scope 는 'Na⁺-K⁺ 펌프 같은 운반체단백질' 로 좁혀 놓았다 — 명제가 말하는 범위와 scope 가 어긋난다. 같은 단원 cell-facilitated-diffusion 의 rel-fd-two-proteins 가 '운반체단백질' 을 '물질과 결합해 구조가 바뀌는' 수송단백질 일반으로 세워 두었으므로, 이 명제를 그대로 읽으면 촉진확산의 운반체단백질도 인산화된다는 말이 된다. 같은 카드의 rel-at-vs-fd 가 '에너지를 쓰는 쪽은 능동수송뿐' 이라고 못 박은 것과도 어긋난다.",
+        "suggest": "명제의 주어를 scope 만큼 좁히든지 scope 를 명제만큼 넓히든지 한쪽으로 맞춘다. 어느 쪽이 옳은지는 카드가 다룰 범위의 문제이므로 메인이 정한다."
+      },
+      {
+        "card_id": "cell-amino-acid",
+        "relation_id": "rel-aa-structure",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '탄소 원자 하나에 아미노기와 카복실기, 수소, 곁사슬이 붙은 꼴' 이고 명제는 '아미노산은 중심 탄소 하나에 아미노기·카복실기·수소·곁사슬이 붙은 구조다' 다. 늘어놓은 차례까지 같다. 이 명제에 오개념이 둘 걸려 있는데, 그중 '아미노산에는 질소가 들어 있지 않다' 의 반증 근거('아미노기(-NH₂)에 질소가 들어 있다')는 명제에도 정의에도 없는 별개의 사실이다 — 정의를 고칠 때 이 오개념이 설 자리도 함께 본다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 구조를 늘어놓도록 정리한다."
+      },
+      {
+        "card_id": "cell-carbohydrate",
+        "relation_id": "rel-carb-elements",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '탄소·수소·산소 세 원소로만 이루어져' 다. '~로만' 이 이미 다른 원소를 배제하므로 명제의 뒷절 '질소는 들어 있지 않다' 는 정의를 읽으면 저절로 나온다. 앞절 '탄수화물을 이루는 원소는 탄소·수소·산소 세 가지' 는 정의 그대로다.",
+        "suggest": "정의에서 '만' 을 걷어내고 명제가 배제를 맡게 하든지, 명제를 다른 내용으로 갈음한다."
+      },
+      {
+        "card_id": "cell-carbohydrate",
+        "relation_id": "rel-carb-classification",
+        "verdict": "uncertain",
+        "checks": [4],
+        "reason": "오개념 '단맛이 나야 탄수화물이다' 가 이 명제를 가리키는데, 명제는 결합한 당의 개수로 갈래를 나누는 것만 말한다. why_wrong 이 드는 근거 둘 가운데 '당의 결합 방식' 은 이 명제에 있으나 '구성 원소' 는 rel-carb-elements 쪽이고, 오개념이 다투는 것은 갈래가 아니라 무엇이 탄수화물인가라는 정의 쪽이다. 반쯤 걸려 있어 결함으로 잘라 말하기 어렵다.",
+        "suggest": "오개념을 rel-carb-elements 로 옮길지 이 자리에 둘지 정한다."
+      },
+      {
+        "card_id": "cell-cell-change-by-osmosis",
+        "relation_id": "rel-cbo-plant",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 오개념 둘이 걸려 있는데 그중 '삼투압과 팽압이 같아지면 물이 가장 빠르게 흡수된다' 가 명제의 반대편이 아니다. 명제는 '식물 세포는 저장액에서도 세포벽 때문에 어느 부피 이상 커지지 못하고 세포벽에 팽압이 걸린다' 로 흡수력을 말하지 않는다. why_wrong 이 드는 '그때 흡수력이 0이 된다' 의 근거는 다른 카드 cell-osmotic-pressure 의 rel-op-absorb('흡수력은 삼투압에서 팽압을 뺀 값이다')에 있다. 나머지 하나('식물 세포도 저장액에 넣으면 적혈구처럼 터진다')는 제자리에 걸려 있다.",
+        "suggest": "최대 팽윤 오개념을 rel-op-absorb 쪽으로 옮기든지, 흡수력과 팽압의 맞물림을 다루는 명제를 이 카드에 세우든지 하나를 고른다."
+      },
+      {
+        "card_id": "cell-cell-change-by-osmosis",
+        "relation_id": "rel-cbo-rbc",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "'적혈구를 저장액에 넣으면 물이 들어와 터지고' 가 정도를 가리지 않는 무조건문이다. 저장액이라는 이름은 세포질보다 비투과성 용질의 농도가 낮다는 뜻일 뿐이라(같은 카드 rel-cbo-tonicity), 농도 차가 작으면 부풀기만 하고 터지지 않는 경우가 있는지가 걸린다. 그것이 실제로 반례인지는 진위 판단이라 여기서 확정하지 않는다 — C8 검토 항목.",
+        "suggest": "저장액의 정도를 form.condition·form.scope 에 담을지, 명제 본문의 단정을 낮출지 사람이 정한 뒤 C2 가 고친다."
+      },
+      {
+        "card_id": "cell-cell-fractionation",
+        "relation_id": "rel-cf-procedure",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '세포를 균질기로 부순 뒤 회전 속도와 시간을 달리해 원심분리함으로써' 이고 명제는 '균질기에 갈아 얻은 파쇄액을 원심분리기에 넣고, 돌리는 속도와 시간을 단계마다 달리한다' 다. 정의의 앞절을 절차문으로 옮긴 것뿐이고 보탠 것이 없다. 같은 카드의 rel-cf-speed-size 가 속도·시간과 가라앉는 소기관 크기의 맞물림을 더하므로 학습 가치는 그쪽에 있다.",
+        "suggest": "정의가 이미 절차를 담고 있으므로 이 명제를 지울지, 정의에서 절차를 빼고 명제로 옮길지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "cell-cell-wall",
+        "relation_id": "rel-cw-cellulose",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 이 '식물에서는 셀룰로스가 주성분이며' 이고 명제는 '식물 세포의 세포벽은 셀룰로스를 주성분으로 한다' 다. 같은 문장이다. [4] 이 명제에 걸린 오개념 '세포벽은 식물 세포에만 있다' 는 세포벽이 어느 생물에 있는지를 다투는데 명제는 식물 세포벽의 성분만 말한다. why_wrong 이 드는 근거('세균 같은 원핵세포에도 세포벽이 있다. 다만 주성분이 펩티도글리칸으로 다르다')는 이 카드가 아니라 cell-prokaryotic-cell 의 rel-pro-wall 에 그대로 있다. 명제의 반대편에 서 있지 않다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 셀룰로스를 말하도록 정리하고, '식물 세포에만 있다' 오개념의 linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "cell-chloroplast",
+        "relation_id": "rel-chl-photosynthesis",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '엽록체가 있는 식물 세포에는 마이토콘드리아가 필요 없다' 는 마이토콘드리아의 유무를 다투는데, 명제('엽록체는 광합성색소로 빛에너지를 흡수해 포도당 같은 화학에너지로 바꾼다')도 이 카드의 나머지 두 명제도 마이토콘드리아를 말하지 않는다. why_wrong 이 드는 근거는 cell-organelle 의 rel-org-common 에 있고, 실제로 거의 같은 오개념('식물 세포에는 엽록체가 있으니 마이토콘드리아는 없다')이 그 명제에 제대로 걸려 있다. 같은 오개념이 세 카드에 흩어져 있다 — cell-mitochondrion 의 rel-mito-atp 에 걸린 '마이토콘드리아는 동물 세포에만 있다' 도 같은 계열이다.",
+        "suggest": "세 카드에 흩어진 같은 계열 오개념을 rel-org-common 한 자리로 모을지, 카드마다 받쳐 줄 명제를 세울지 메인이 정한다."
+      },
+      {
+        "card_id": "cell-dna",
+        "relation_id": "rel-dna-double-helix",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '유전정보를 저장하는 핵산. 두 가닥의 폴리뉴클레오타이드가 서로 꼬여 이중나선구조를 이루며' 이고 명제는 'DNA는 두 가닥이 나선으로 감긴 이중나선구조를 이루어 유전정보를 저장한다' 다. 정의의 두 문장을 한 문장으로 이어 붙인 것이다.",
+        "suggest": "정의에서 이중나선을 빼거나 명제를 정의가 담지 않은 내용으로 갈음한다."
+      },
+      {
+        "card_id": "cell-electron-microscope",
+        "relation_id": "rel-em-light-source",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '빛 대신 전자선을 써서' 이고 명제는 '전자 현미경은 광원으로 가시광선이 아니라 전자선을 쓴다' 다. '빛 대신' 과 '가시광선이 아니라' 가 같은 말이다. invertible: true 라 D1 이 이 동어반복에서 OX 문항을 만든다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 광원을 말하도록 정리한다."
+      },
+      {
+        "card_id": "cell-endocytosis-and-exocytosis",
+        "relation_id": "rel-ee-surface",
+        "verdict": "uncertain",
+        "checks": [1, 2],
+        "reason": "'세포외배출이 이어지면 소낭의 막이 더해져 세포막의 표면적이 넓어진다' 가 세포외배출만 홀로 일어나는 것을 전제한다. 같은 카드가 세포내섭취를 함께 다루고 있으므로(rel-ee-vesicle·rel-ee-two-kinds) 두 방향이 같이 일어날 때 표면적이 실제로 넓어지는지가 명제 안에서 가려지지 않는다. form.condition 은 '세포외배출이 계속 일어날 때' 로 세포내섭취를 배제하지 않는다. invertible: true 이므로 inverted_text('표면적이 좁아진다')가 반드시 거짓인지도 그 판단에 딸려 간다. 진위가 걸려 있어 uncertain 으로 올린다.",
+        "suggest": "세포내섭취를 배제하는 조건을 form.condition 에 담을지 정한 뒤 invertible 을 다시 본다."
+      },
+      {
+        "card_id": "cell-endoplasmic-reticulum",
+        "relation_id": "rel-er-rough",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '소포체는 핵과 완전히 떨어진 별개의 구조다' 가 명제의 반대편이 아니다. 명제는 '거친면소포체는 라이보솜에서 만들어져 들어온 단백질을 변형하고 옮기는 일을 맡는다' 로 핵을 말하지 않는다. why_wrong('소포체의 막은 핵막의 외막과 이어져 있다')은 이 카드 definition 의 문구이자 cell-cell-nucleus 의 rel-nuc-envelope 내용이다 — 명제가 아니라 정의의 반대편에 서 있다.",
+        "suggest": "linked_relation 을 rel-nuc-envelope 쪽으로 옮기든지, 핵막과의 연결을 다루는 명제를 이 카드에 세우든지 정한다."
+      },
+      {
+        "card_id": "cell-light-microscope",
+        "relation_id": "rel-lm-staining",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '위상차 현미경도 관찰하려면 반드시 염색해야 한다' 는 위상차 현미경을 다투는데, 이 카드의 세 명제 어디에도 위상차 현미경이 없다. 명제는 '시료의 특정 부분을 염색하면 그 부분이 더 뚜렷하게 구분되어 보인다' 이고 form.scope 도 '일반 광학 현미경' 으로 못 박혀 있다. why_wrong 이 드는 근거('물질에 따른 빛의 굴절률 차이를 명암으로 보여 준다')는 교과서 22쪽 그림 설명에 있을 뿐 이 카드의 어느 명제와도 이어지지 않는다.",
+        "suggest": "위상차 현미경을 다루는 명제를 세워 거기에 걸든지, 오개념을 옮기든지 정한다."
+      },
+      {
+        "card_id": "cell-light-microscope",
+        "relation_id": "rel-lm-living",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "definition 이 '살아 있는 세포와 비교적 큰 세포소기관을 보는 데 쓴다' 이고 명제는 '살아 있는 세포를 그대로 두고 모양과 길이를 관찰할 수 있다는 것이 광학 현미경의 강점이다' 다. 보탠 것은 '모양과 길이' 와 '강점' 이라는 평가어뿐이라 동어반복에 가깝다. 다만 concept-writer 가 이 대목을 스스로 넘긴 항목으로 적어 두었고, 교과서 22쪽 본문에는 '광학 현미경을 이용하면 살아 있는 세포의 모양과 길이뿐만 아니라 핵, 소포체, 엽록체 등과 같은 세포소기관을 관찰할 수 있다' 가 있다 — 근거는 서 있으나 명제가 정의를 넘어서지 못한다는 점이 남는다.",
+        "suggest": "정의와 명제 가운데 어느 쪽이 '살아 있는 세포' 를 맡을지 정한다. 교과서 근거 유무는 C8 에서 사람이 확인한다."
+      },
+      {
+        "card_id": "cell-lipid",
+        "relation_id": "rel-lipid-solubility",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '물에는 잘 녹지 않으면서 유기 용매에는 녹는 물질' 이고 명제는 '지질은 물에는 잘 녹지 않지만 알코올이나 에터 같은 유기 용매에는 잘 녹는다' 다. 보탠 것은 용매의 보기(알코올·에터)뿐이다. invertible: true 라 정의를 되풀이한 문장이 OX 로 나간다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 용해성을 말하도록 정리한다."
+      },
+      {
+        "card_id": "cell-lipid",
+        "relation_id": "rel-lipid-classification",
+        "verdict": "defect",
+        "checks": [5],
+        "reason": "definition 이 '탄소·수소·산소로 이루어지고 물에는 잘 녹지 않으면서 … 중성지방·인지질·스테로이드가 여기 속한다' 인데, 이 명제는 그 셋을 '구성 원소와 화학 구조를 기준으로' 나눈다고 말한다. 그런데 같은 단원 cell-phospholipid 의 rel-pl-structure 는 인지질에 인산 한 분자가 붙는다고 하고, 이 카드의 오개념 why_wrong 도 '인은 인지질처럼 인산이 붙은 갈래에만 들어 있다' 고 적어 예외를 인정한다. 곧 정의는 지질을 세 원소로 못 박아 놓고, 명제와 오개념은 그 안에 네 번째 원소를 가진 갈래가 있다고 말한다 — 카드 안에서 어긋난다.",
+        "suggest": "definition 의 구성 원소 서술을 예외가 들어갈 수 있게 고칠지, 이 명제가 드는 분류 기준에서 '구성 원소' 를 뺄지 정한다."
+      },
+      {
+        "card_id": "cell-mitochondrion",
+        "relation_id": "rel-mito-atp",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '마이토콘드리아는 동물 세포에만 있다' 는 어느 세포에 있는지를 다투는데, 명제('마이토콘드리아는 세포호흡으로 포도당 같은 영양소를 분해해 ATP를 합성한다')는 하는 일만 말한다. why_wrong('식물 세포도 세포호흡을 하므로 마이토콘드리아를 갖는다')이 기대는 근거는 cell-organelle 의 rel-org-common 이다. 같은 명제에 걸린 다른 오개념('에너지를 새로 만들어 낸다')은 제자리다. cell-chloroplast 의 rel-chl-photosynthesis 와 같은 유형이므로 함께 본다.",
+        "suggest": "rel-chl-photosynthesis 와 같은 기준으로 처리한다."
+      },
+      {
+        "card_id": "cell-monosaccharide",
+        "relation_id": "rel-mono-unit",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 이 '당 한 개로 이루어진 탄수화물. … 다른 탄수화물을 만드는 구성 단위가 된다' 이고 명제는 '단당류는 탄수화물의 구성 단위여서 여럿이 결합하면 이당류나 다당류가 된다' 다. 앞절이 정의 그대로이고 뒷절은 cell-polysaccharide 의 rel-poly-composition('단당류가 여러 개 결합하면 다당류가 된다')과 겹친다. [4] 이 명제에 걸린 오개념 '단당류는 크기가 작아 세포막을 그냥 통과한다' 는 막 통과를 다투는데 명제는 결합을 말한다. why_wrong('포도당처럼 크기가 큰 분자는 인지질 이중층을 직접 지나지 못하고 수송단백질을 거쳐야 한다')의 근거는 cell-selective-permeability 의 rel-sp-need-protein 에 있다.",
+        "suggest": "두 카드에 걸친 겹침(rel-mono-unit / rel-poly-composition)을 어느 쪽에 남길지 정하고, 막 통과 오개념의 linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "cell-monosaccharide",
+        "relation_id": "rel-mono-examples",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '당 한 개로 이루어진 탄수화물. 포도당·과당·갈락토스가 여기 속하며' 이고 명제는 '포도당·과당·갈락토스는 당 한 개로 이루어져 단당류로 분류된다' 다. 정의의 두 요소를 차례만 바꿔 놓았다. rel-mono-unit 과 함께 이 카드는 명제 둘이 모두 정의에서 나온다 — 카드 단위로 다시 볼 자리다.",
+        "suggest": "정의에서 예를 빼든지 명제를 갈음하든지 하나를 고른다. 카드에 남는 명제가 0개가 되지 않도록 함께 본다."
+      },
+      {
+        "card_id": "cell-nucleic-acid",
+        "relation_id": "rel-na-function",
+        "verdict": "defect",
+        "checks": [3, 4],
+        "reason": "[3] definition 이 '유전정보를 간직하거나 옮기는 일을 맡은 물질' 이고 명제는 '핵산이 맡은 일은 유전정보를 저장하는 것과 전달하는 것이다' 다. 동의어로 바꿨을 뿐 구조가 같다. [4] 이 명제에 오개념 둘이 몰려 있는데 그중 '핵산은 핵 속에만 있다' 는 있는 자리를 다투고 명제는 하는 일을 말한다. why_wrong('RNA는 세포질의 라이보솜에서 일하고, 마이토콘드리아와 엽록체도 자체 DNA를 가진다')이 기대는 근거는 이 카드가 아니라 cell-ribosome·cell-mitochondrion·cell-chloroplast 쪽이다.",
+        "suggest": "명제를 정의와 겹치지 않는 내용으로 갈음하고, '핵 속에만 있다' 오개념의 linked_relation 을 다시 건다."
+      },
+      {
+        "card_id": "cell-nucleotide",
+        "relation_id": "rel-nt-composition",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '인산 하나와 5탄당 하나와 염기 하나가 1:1:1로 이어져 한 덩이를 이룬 것' 이고 명제는 '뉴클레오타이드 한 개에는 인산과 5탄당과 염기가 하나씩 들어 있다' 다. '1:1:1' 과 '하나씩' 이 같은 말이다.",
+        "suggest": "정의에서 개수를 빼거나 명제를 갈음한다. 이 명제에 오개념 1건이 걸려 있으므로 연결도 함께 본다."
+      },
+      {
+        "card_id": "cell-organelle",
+        "relation_id": "rel-org-common",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "'핵·마이토콘드리아·라이보솜·소포체는 동물 세포와 식물 세포 모두에 있다' 가 '모두' 로 단정하는데 form.scope 는 '동물 세포와 식물 세포' 로 제한이 없다. 같은 단원의 cell-cell-change-by-osmosis 가 적혈구를 동물 세포의 본보기로 삼고 있어(rel-cbo-rbc, form.scope '적혈구 등 세포벽이 없는 동물 세포') 학생이 핵을 두고 곧바로 걸릴 자리가 생긴다. 예외가 실제로 성립하는지는 진위 판단이라 확정하지 않는다 — C8 검토 항목이다. 이 명제에는 오개념도 걸려 있어 손대면 연결도 함께 본다.",
+        "suggest": "'모두' 를 그대로 둘지 form.scope 에 예외가 들어갈 자리를 만들지 사람이 정한다."
+      },
+      {
+        "card_id": "cell-osmosis",
+        "relation_id": "rel-osm-direction",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '물은 지나가고 용질은 지나가지 못하는 막을 사이에 두었을 때, 용질이 묽은 쪽의 물이 진한 쪽으로 옮겨 가는 현상' 이고 명제는 '물 분자는 용질이 묽은 쪽에서 진한 쪽으로 삼투에 의해 옮겨 간다' 다. 정의의 주절 그대로다. 현상·법칙 카드는 정의와 진술이 겹치는 것이 구조상 불가피한 자리이므로(chem-1 의 rel-avl-species-free 와 같은 유형) 지우는 것만이 답은 아니다. 다만 invertible: true 라 D1 이 정의를 되풀이한 문장에서 OX 를 만든다는 점은 남는다.",
+        "suggest": "정의에서 이동 방향을 빼고 명제가 그것을 맡게 할지, 명제를 정의에서 곧바로 나오지 않는 귀결(rel-osm-water-level 처럼 관찰되는 결과)로 옮길지 카드 단위로 정한다."
+      },
+      {
+        "card_id": "cell-osmosis",
+        "relation_id": "rel-osm-membrane",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 앞절 '물은 지나가고 용질은 지나가지 못하는 막을 사이에 두었을 때' 와 명제 '삼투는 물은 통과시키고 용질은 통과시키지 않는 반투과성막이 있어야 일어난다' 가 같은 내용이다. 보탠 것은 '반투과성막' 이라는 이름뿐이다. rel-osm-direction 과 합치면 이 카드는 정의의 앞절과 주절이 각각 명제 하나씩으로 다시 쓰여 있다.",
+        "suggest": "정의를 짧게 줄이고 성립 조건과 이동 방향을 명제 쪽으로 넘기든지, 두 명제 가운데 하나를 갈음하든지 카드 단위로 한 번에 정한다."
+      },
+      {
+        "card_id": "cell-osmotic-pressure",
+        "relation_id": "rel-op-concentration",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '두 용액의 농도 차가 클수록, 온도가 높을수록 커진다' 이고 명제는 '두 용액의 농도 차가 클수록 삼투압이 커진다' 다. 정의의 앞쪽 절을 그대로 떼어 낸 것이다.",
+        "suggest": "정의에서 두 의존 관계를 빼고 명제 둘이 맡게 한다. 그러면 정의에는 '삼투가 일어나는 동안 반투과성막이 받게 되는 압력' 만 남는다."
+      },
+      {
+        "card_id": "cell-osmotic-pressure",
+        "relation_id": "rel-op-temperature",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "rel-op-concentration 과 같다. definition 의 '온도가 높을수록 커진다' 를 그대로 떼어 낸 명제다. 두 명제 모두 invertible: true 라 정의를 되풀이한 문장 둘이 OX 로 나간다.",
+        "suggest": "rel-op-concentration 과 같은 기준으로 한 번에 처리한다."
+      },
+      {
+        "card_id": "cell-peptide-bond",
+        "relation_id": "rel-pb-formation",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '아미노산과 아미노산이 이어질 때 물 한 분자가 빠져나오며 생기는 결합' 이고 명제는 '두 아미노산이 결합할 때 물 한 분자가 빠져나오면서 펩타이드결합이 생긴다' 다. 같은 문장이다.",
+        "suggest": "정의에서 탈수를 빼거나 명제를 갈음한다. 이 명제에 오개념 1건('펩타이드결합이 생기려면 물이 필요하다')이 걸려 있으므로 연결도 함께 본다."
+      },
+      {
+        "card_id": "cell-peptide-bond",
+        "relation_id": "rel-pb-polypeptide",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 의 둘째 문장 '이 결합으로 죽 이어진 사슬이 폴리펩타이드다' 와 명제 '여러 아미노산이 펩타이드결합으로 이어진 것을 폴리펩타이드라고 한다' 가 같다. rel-pb-formation 과 합쳐 이 카드도 명제 셋 가운데 둘이 정의에서 나온다.",
+        "suggest": "정의 둘째 문장을 남길지 이 명제를 남길지 하나를 고른다."
+      },
+      {
+        "card_id": "cell-phospholipid-bilayer",
+        "relation_id": "rel-pb2-permeability",
+        "verdict": "uncertain",
+        "checks": [1, 4],
+        "reason": "[1] 명제가 '작거나 소수성인 물질' 과 '이온이나 큰 친수성 분자' 두 무리로 가르는데, 물처럼 작으면서 친수성인 분자가 어느 쪽인지 이 가름으로는 정해지지 않는다. [4] 이 명제에 걸린 오개념 '인지질 이중층은 물이 전혀 통과하지 못하는 막이다' 의 why_wrong('물 분자는 크기가 작아 어느 정도 지나간다')이 바로 그 정해지지 않은 자리를 근거로 삼는다 — 명제가 반증 근거를 대 주지 못한다. concept-writer 가 스스로 넘긴 세 항목 가운데 하나이고, 물의 투과 여부는 진위 판단이라 여기서 확정하지 않는다.",
+        "suggest": "물을 두 무리 가운데 어디에 둘지 명제가 가리도록 할지, 물의 투과를 다루는 명제를 따로 세울지 정한다. 진위는 C8 에서 사람이 본다."
+      },
+      {
+        "card_id": "cell-polysaccharide",
+        "relation_id": "rel-poly-composition",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '단당류가 여러 개 이어져 만들어진 탄수화물' 이고 명제는 '단당류가 여러 개 결합하면 다당류가 된다' 다. 같은 말이고, 더해서 cell-monosaccharide 의 rel-mono-unit 뒷절과도 겹친다 — 같은 내용이 두 카드에서 각각 invertible: true 로 서 있어 D1 이 사실상 같은 OX 를 둘 만든다.",
+        "suggest": "두 카드 가운데 어느 쪽이 이 내용을 맡을지 정하고 다른 쪽을 갈음한다."
+      },
+      {
+        "card_id": "cell-prokaryotic-cell",
+        "relation_id": "rel-pro-dna-shape",
+        "verdict": "defect",
+        "checks": [1, 2],
+        "reason": "[1] 한 명제가 서로 독립인 두 사실('원핵세포의 DNA는 원형이다', '라이보솜은 진핵세포의 것보다 작다')을 묶고 있는데, 앞절의 주어는 원핵세포의 DNA 이고 뒷절은 두 세포의 라이보솜 크기 비교라 적용 범위가 다르다. form.scope 는 '원핵세포' 한 가지로만 적혀 있어 뒷절의 비교 대상을 담지 못한다. [2] invertible: true 라 inverted_text 가 두 사실을 한꺼번에 뒤집는다('선형이고 … 크다'). 뒤집은 문장이 거짓인 것은 맞지만, 학생이 한쪽만 알아도 맞히고 한쪽만 틀려도 틀리게 되어 이 문항이 무엇을 재는지 흐려진다.",
+        "suggest": "두 사실을 명제 둘로 가르고 각각의 scope 를 따로 적는다. invertible 은 가른 뒤에 다시 본다."
+      },
+      {
+        "card_id": "cell-ribosome",
+        "relation_id": "rel-rib-no-membrane",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 '라이보솜은 진핵세포에만 있다' 는 원핵세포를 다투는데, 명제는 '라이보솜은 막으로 둘러싸여 있지 않고 소포체에 붙어 있거나 세포질에 흩어져 있다' 이고 form.scope 가 아예 '진핵세포의 라이보솜' 이다. why_wrong('원핵세포에도 라이보솜이 있다. 진핵세포의 것보다 크기가 작을 뿐이다')의 근거는 cell-prokaryotic-cell 의 rel-pro-common·rel-pro-dna-shape 에 있고, 거기에 거의 같은 오개념('원핵세포에는 라이보솜도 없다')이 이미 제대로 걸려 있다.",
+        "suggest": "linked_relation 을 다시 걸거나, 이 카드에서 원핵·진핵의 라이보솜을 가르는 명제를 세운다."
+      },
+      {
+        "card_id": "cell-rna",
+        "relation_id": "rel-rna-single",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '가닥이 하나이며' 이고 명제는 'RNA는 가닥이 하나인 단일 가닥 구조다' 다. 정의를 되풀이할 뿐 아니라 명제 자체가 '가닥이 하나인' 과 '단일 가닥' 으로 같은 말을 두 번 한다.",
+        "suggest": "정의와 명제 가운데 한쪽에서만 가닥 수를 말하도록 정리한다."
+      },
+      {
+        "card_id": "cell-rna",
+        "relation_id": "rel-rna-sugar-base",
+        "verdict": "defect",
+        "checks": [3],
+        "reason": "definition 이 '5탄당으로 라이보스를, 염기로 타이민 대신 유라실을 쓴다' 이고 명제는 'RNA는 5탄당으로 라이보스를 쓰고 염기로는 유라실을 갖는다' 다. 같은 문장이다. rel-rna-single 과 합쳐 이 카드는 명제 셋 가운데 둘이 정의에서 나오고, 남은 rel-rna-transfer 는 아래의 [4] 지적을 받는다 — 명제 셋이 모두 걸리는 카드는 이 단원에서 이 카드뿐이다.",
+        "suggest": "카드 단위로 다시 본다. 정의를 짧게 줄이고 명제가 내용을 맡는 쪽이 이 카드에는 맞을 수 있다."
+      },
+      {
+        "card_id": "cell-rna",
+        "relation_id": "rel-rna-transfer",
+        "verdict": "defect",
+        "checks": [4],
+        "reason": "이 명제에 걸린 오개념 'RNA는 유전정보를 저장하지 못한다' 는 저장을 다투는데, 명제는 'RNA는 DNA에 저장된 유전정보를 라이보솜으로 옮기고 아미노산을 날라 단백질합성을 돕는다' 로 전달만 말한다. 오히려 명제는 저장하는 쪽이 DNA 라고 전제하므로 오개념의 반대편이 아니라 같은 편에 가깝다. why_wrong 이 드는 근거('일부 바이러스는 RNA에 유전정보를 저장한다')는 이 카드 어느 명제에도 없다 — 그 진술의 진위는 C8 소관이고, 여기서 지적하는 것은 명제와 오개념이 맞물리지 않는다는 구조다.",
+        "suggest": "오개념을 유지할 것이면 RNA가 유전물질이 되는 경우를 다루는 명제를 세워 거기에 걸고, 아니면 오개념을 옮긴다."
+      },
+      {
+        "card_id": "cell-selective-permeability",
+        "relation_id": "rel-sp-small-hydrophobic",
+        "verdict": "defect",
+        "checks": [1, 5],
+        "reason": "[1] 명제가 '산소나 이산화 탄소처럼 작은 분자와 소수성 물질' 을 '와' 로 이어 두 무리로 세운다. definition 은 '분자의 크기와 물에 대한 친화도가 통과의 갈림길이 된다' 며 두 기준을 함께 걸었는데, 명제는 둘을 따로 떼어 크기만으로도 통과가 정해지는 것처럼 읽히게 만든다. [5] 같은 카드의 오개념 '크기가 작은 물질이면 무엇이든 세포막을 그대로 통과한다' 가 why_wrong 에서 '이온은 크기가 작아도 친수성이라 인지질 이중층을 그대로 지나기 어렵고 통로단백질을 거쳐야 한다' 고 그 읽기를 틀렸다고 못 박는다 — 명제가 허용하는 추론을 같은 카드의 오개념이 부정하고 있다.",
+        "suggest": "두 기준을 '와' 로 잇지 말고 명제 안에서 어떻게 맞물리는지 드러나게 고친다. 문장은 C2 가 쓴다."
+      },
+      {
+        "card_id": "cell-simple-diffusion",
+        "relation_id": "rel-sd-no-protein",
+        "verdict": "defect",
+        "checks": [1],
+        "reason": "명제 본문이 '산소나 이산화 탄소처럼 작은 분자는 수송단백질의 도움 없이 세포막을 곧바로 지난다' 로 크기만을 조건으로 내건다. 소수성이라는 단서는 form.condition('작고 소수성인 물질이 이동할 때')에만 있고 명제 문장에는 없는데, D1 이 쓰는 것은 명제 본문이다. cell-selective-permeability 가 바로 그 읽기('작으면 무엇이든 통과한다')를 오개념으로 세워 두었으므로, 이 문장이 그대로 나가면 학생에게 그 오개념을 심는다. rel-sp-small-hydrophobic 과 같은 자리다.",
+        "suggest": "form.condition 에만 있는 단서를 명제 본문이 담도록 고친다. rel-sp-small-hydrophobic 과 함께 처리한다."
+      }
+    ],
+    "stats": { "ok": 91, "defect": 33, "uncertain": 6 }
+  },
+  "notes": [
+    "verified_by 는 어느 명제·오개념에서도 읽기만 했다. 명제 130개와 오개념 80개 모두 pending 이고 이 보고서는 그 필드를 바꾸지 않는다. 카드 파일도 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 고치지 않았다.",
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 40장 전체에 --unit cell-1 로 돌려 '통과'. 태그 0개·실재하지 않는 코드·판본 미확정 코드(crosscheck 불일치)·영역 불일치가 한 건도 없다. 12세포 영역 02·03 코드는 어느 카드에도 붙어 있지 않다. 이 보고서는 그 스크립트가 원리적으로 못 잡는 것만 다룬다.",
+    "★C5 의 가장 무거운 대목: 중단원 02 '세포의 연구 방법'(topic cell-1-2-1) 네 장(cell-light-microscope·cell-electron-microscope·cell-cell-fractionation·cell-autoradiography)이 모두 12세포01-03 을 달고 있는데, 영역 01 성취기준 다섯 어디에도 연구 방법·관찰 도구를 요구하는 구절이 없다. 다만 교과서 22쪽 중단원 머리의 학습 목표가 '세포소기관의 구조와 기능을 알아낼 수 있는 연구 방법을 설명할 수 있다' 로 01-03 의 낱말을 그대로 빌려 쓰고 있어, 성취기준 전문만 보면 이탈이고 교과서 학습 목표를 보면 범위 안이다. 판단이 갈리므로 out_of_scope 로 확정하지 않고 네 장을 uncertain 으로 올린다 — 억지로 태그를 맞춰 이탈 수를 줄인 것이 아니라, 확정할 근거가 사람의 NCIC 원문(성취기준 해설·교수학습 방법) 확인에 달려 있어서다. 사람이 이탈로 판정하면 4건이 되어 설계서 §4.3 C5 의 C1 복귀 조건(2건 초과)에 걸린다.",
+    "C5 판정 기준(일관성): 카드가 붙인 코드의 성취기준 전문에 그 카드의 명제들이 말하는 대상이 들어 있으면 ok, 대상은 맞는데 코드가 다르면 retag, 어느 전문에도 대상이 없으면 이탈 후보로 보았다. 이 기준으로 12세포01-05('세포막의 구조와 특성')가 cell-cell-membrane 을 정면으로 받치므로 그 카드에 붙은 12세포01-03 을 뗄 것을 제안했다.",
+    "C5 에서 살펴보고 범위 안으로 둔 것: cell-chloroplast 와 cell-mitochondrion 은 12세포03-05·03-01 과 소재가 겹치지만, 이 카드들이 다루는 것은 소기관의 구조와 기능까지이고 명반응·전자전달계 같은 영역 03 의 내용으로는 들어가지 않는다. 12세포03-01 은 crosscheck 불일치이기도 해서 어차피 태그로 쓸 수 없다. cell-eukaryotic-cell 의 rel-euk-dna(히스톤·뉴클레오솜)는 12세포01-04 의 '공통점과 차이점' 안에 들고 교과서 29쪽 비교표에 있다. 단원 전체에서 전자전달계를 다루는 카드나 명제는 없다.",
+    "C6 판정 기준(일관성) — 검사 3: 명제가 definition 의 구절을 되풀이하되 정의에 없는 귀결·수치·이름을 보태면 ok, 보탬이 없으면 defect 로 보았다. 이 기준으로 '포도당 같은' 을 보탠 rel-chl-photosynthesis·rel-mito-atp, '그라나' 를 보탠 rel-chl-structure, '크리스타' 를 보탠 rel-mito-membrane, 기질 목록을 보탠 rel-lys-enzyme, 이름을 보탠 rel-er-two-kinds 는 ok 로 두었다. 정의가 개념의 모든 요소를 한 문장에 담아 놓은 카드(cell-monosaccharide·cell-peptide-bond·cell-rna·cell-osmosis·cell-osmotic-pressure)에서는 명제 셋 가운데 둘이 한꺼번에 걸린다 — 명제를 고치는 것이 아니라 definition 을 줄이는 쪽이 답일 수 있으므로 카드 단위로 함께 볼 것을 제안했다. 검사 3 결함 21건 가운데 15건이 이 다섯 카드와 같은 꼴이다.",
+    "C6 검사 2(invertible): invertible: true 인 명제 44개를 하나씩 뒤집어 읽었다. 뒤집은 문장이 반드시 거짓이 되지 않는 것으로 확정한 명제는 없다. 갈린 것은 rel-ee-surface 하나이고(세포내섭취가 함께 일어날 때) uncertain 으로 올렸다. rel-pro-dna-shape 는 뒤집은 문장 자체는 거짓이지만 독립인 두 사실을 한꺼번에 뒤집으므로 [1] 과 함께 지적했다. form.type 이 classification 인데 invertible: true 인 명제는 rel-cbo-tonicity·rel-ee-two-kinds·rel-er-two-kinds·rel-nt-dna-rna-diff·rel-poly-storage·rel-em-tem-sem 여섯인데, 여섯 모두 두 이름과 두 속성을 맞바꾸는 꼴이라 뒤집으면 반드시 거짓이 된다 — type 만 보면 오판정처럼 보이나 뒤집어 읽으면 ok 다.",
+    "C6 검사 2 의 반대 방향(뒤집으면 거짓인데 invertible 을 false 로 내린 것)은 결함으로 올리지 않았다. 문항이 하나 줄어들 뿐 학생에게 오개념을 심지 않아서다. 다만 기준이 단원 안에서 흔들리는 자리는 있다 — 분류 명제 가운데 rel-carb-classification·rel-fd-two-proteins·rel-lipid-classification·rel-org-membrane-or-not·rel-mono-examples·rel-pb-polypeptide 는 false 이고 위의 여섯은 true 다. '정도' 명제(rel-op-concentration·rel-op-temperature·rel-sd-rate·rel-sp-size·rel-vac-mature·rel-golgi-secretory-cell)는 여섯 다 true 로 한결같다. chem-2 에서 확인한 '경향 명제는 invertible: false' 기준은 이 단원에는 적용돼 있지 않다 — 단원 사이의 기준 차이라 메인이 볼 항목이다.",
+    "오개념 80개는 전부 source: llm 이다 — docs/misconceptions.yaml 이 비어 있어 사전과 대조할 것이 없었다. 검사 4 는 명제와 오개념이 맞물리는지만 보았고, 오개념 자체가 실제로 학생에게 흔한 것인지는 대조하지 못했다. 그 대조를 했다고 적지 않는다.",
+    "검사 4 에서 되풀이해 나온 꼴: 반증 근거가 명제가 아니라 카드의 definition 이나 다른 카드에 있는 경우다(rel-cw-cellulose·rel-er-rough·rel-na-function·rel-rib-no-membrane·rel-mono-unit·rel-cbo-plant·rel-lm-staining). chem-1·chem-2 에서도 같은 꼴이 가장 많았다. 오개념을 걸 때 '무엇의 반대편인가' 를 정의가 아니라 명제에서 찾게 하는 것이 C2 쪽 공통 과제로 보인다.",
+    "같은 오개념이 여러 카드에 흩어진 자리: '식물 세포에는 마이토콘드리아가 없다' 계열이 cell-chloroplast(rel-chl-photosynthesis)·cell-mitochondrion(rel-mito-atp)·cell-organelle(rel-org-common) 셋에 있고 제자리에 걸린 것은 셋째뿐이다. '원핵세포에는 라이보솜이 없다' 계열은 cell-ribosome(rel-rib-no-membrane)·cell-prokaryotic-cell(rel-pro-common) 둘에 있고 제자리는 둘째다. 같은 내용의 명제가 두 카드에 겹친 자리도 있다 — rel-mono-unit 뒷절과 rel-poly-composition, rel-mito-own-dna 와 rel-chl-own-dna(뒤엣것은 scope 도 '엽록체' 와 '마이토콘드리아와 엽록체' 로 서로 다르다).",
+    "concept-writer 가 스스로 넘긴 세 항목의 처리: (1) '전자 현미경 카드의 살아 있는 세포 관찰' — cell-electron-microscope 에는 그런 명제가 없고 해당 서술은 cell-light-microscope 의 rel-lm-living 이다. 교과서 22쪽 본문에 근거가 있으나 명제가 definition 을 넘어서지 못해 uncertain[3] 으로 올렸다. (2) 엽록체 카드의 '빛에너지를 그대로 저장' — 이것은 명제가 아니라 rel-chl-photosynthesis 에 걸린 오개념 본문이고, why_wrong 은 그 명제와 제대로 맞물린다. 검사 다섯 어디에도 걸리지 않아 따로 올리지 않았다. 교과서 근거 유무는 C8 에서 사람이 본다. (3) 인지질 이중층 카드의 '물이 전혀 통과 못 한다' — rel-pb2-permeability 에 uncertain[1,4] 로 올렸다. 셋 다 진위가 걸려 있어 이 보고서는 결함으로 확정하지 않는다.",
+    "<track>-facts 스킬 대조는 하지 못했다. .claude/skills 에 있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯이고 bio-facts 도 cell-facts 도 없다. 세포 관련 사실 대조(세포소기관의 기능, 원핵·진핵의 차이, 삼투압의 온도 의존성 등)는 건너뛰었고 흉내 내지 않았다.",
+    "선수 개념(curriculum.prerequisites_outside_unit)에 적은 concept_key 는 모두 docs/concept_registry.yaml 에 이미 있는 키만 골랐다. 새 키를 만들지 않았고 사전을 고치지도 않았다. 링크를 실제로 거는 것은 G 파이프라인의 일이다.",
+    "이 보고서는 curriculum 절과 relations 절을 함께 채웠다. 이 파일에는 앞선 절이 없었으므로 병합할 것이 없었다."
+  ]
+}

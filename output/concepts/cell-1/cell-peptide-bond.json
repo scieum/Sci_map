@@ -1,0 +1,110 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-peptide-bond",
+  "concept_key": "concept:peptide-bond",
+  "registry_status": "new",
+  "term": "펩타이드결합",
+  "aliases": [],
+  "notation": {
+    "hanja": "펩타이드結合",
+    "hanja_gloss": "結 맺을 결 · 合 합할 합",
+    "hanja_note": "'펩타이드'는 영어 peptide 의 음차어라 한자 표기가 없고 뒤의 結合만 한자어다.",
+    "english": "peptide bond"
+  },
+  "definition": "아미노산과 아미노산이 이어질 때 물 한 분자가 빠져나오며 생기는 결합. 이 결합으로 죽 이어진 사슬이 폴리펩타이드다.",
+  "relations": [
+    {
+      "id": "rel-pb-formation",
+      "text": "두 아미노산이 결합할 때 물 한 분자가 빠져나오면서 펩타이드결합이 생긴다",
+      "form": {
+        "condition": "아미노산끼리 이어질 때",
+        "type": "causal",
+        "scope": "단백질이 만들어지는 과정"
+      },
+      "invertible": false,
+      "invertible_reason": "생성 과정을 밝힌 서술이라 방향을 맞바꾸면 분해를 말하게 된다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pb-polypeptide",
+      "text": "여러 아미노산이 펩타이드결합으로 이어진 것을 폴리펩타이드라고 한다",
+      "form": {
+        "condition": "아미노산이 여럿 연결됐을 때",
+        "type": "classification",
+        "scope": "단백질의 사슬 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 붙인 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pb-not-in-starch",
+      "text": "녹말은 단당류가 이어진 다당류라 펩타이드결합을 갖지 않는다",
+      "form": {
+        "condition": "탄수화물과 단백질의 결합을 견줄 때",
+        "type": "conditional",
+        "scope": "녹말 등 다당류"
+      },
+      "invertible": false,
+      "invertible_reason": "없다는 사실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "녹말에도 펩타이드결합이 있다",
+      "why_wrong": "펩타이드결합은 아미노산 사이의 결합이다. 녹말은 단당류가 이어진 것이라 이 결합이 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pb-not-in-starch"
+    },
+    {
+      "text": "펩타이드결합이 생기려면 물이 필요하다",
+      "why_wrong": "물이 들어가는 것이 아니라 물 한 분자가 빠져나오면서 결합이 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pb-formation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-amino-acid"
+    },
+    {
+      "type": "next",
+      "target": "cell-protein"
+    },
+    {
+      "type": "related",
+      "target": "cell-polysaccharide",
+      "note": "작은 단위가 이어져 큰 분자를 이룬다는 점이 닮았다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-02"
+  ],
+  "topic_id": "cell-1-1-3",
+  "pages": [
+    17,
+    21,
+    46
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

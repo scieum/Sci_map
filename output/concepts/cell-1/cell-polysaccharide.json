@@ -1,0 +1,111 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-polysaccharide",
+  "concept_key": "concept:polysaccharide",
+  "registry_status": "new",
+  "term": "다당류",
+  "aliases": [],
+  "notation": {
+    "hanja": "多糖類",
+    "hanja_gloss": "多 많을 다 · 糖 엿 당 · 類 무리 류",
+    "english": "polysaccharide"
+  },
+  "definition": "단당류가 여러 개 이어져 만들어진 탄수화물. 셀룰로스처럼 몸을 이루는 성분이 되기도 하고 녹말·글라이코젠처럼 에너지를 저장하기도 한다.",
+  "relations": [
+    {
+      "id": "rel-poly-composition",
+      "text": "단당류가 여러 개 결합하면 다당류가 된다",
+      "form": {
+        "condition": "단당류가 잇따라 결합할 때",
+        "type": "causal",
+        "scope": "탄수화물"
+      },
+      "invertible": true,
+      "invertible_reason": "단위가 모여 큰 분자가 되는 방향이라 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "다당류가 여러 개 결합하면 단당류가 된다"
+    },
+    {
+      "id": "rel-poly-cellulose",
+      "text": "셀룰로스는 다당류이면서 식물 세포벽을 이루어 세포의 형태를 지탱한다",
+      "form": {
+        "condition": "식물 세포의 구조를 볼 때",
+        "type": "conditional",
+        "scope": "식물 세포벽"
+      },
+      "invertible": false,
+      "invertible_reason": "구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-poly-storage",
+      "text": "녹말은 식물이, 글라이코젠은 동물이 쓰는 에너지 저장 물질이다",
+      "form": {
+        "condition": "저장 물질을 생물 무리별로 견줄 때",
+        "type": "classification",
+        "scope": "식물과 동물의 에너지 저장 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "두 물질과 두 무리가 짝지어져 있어 짝을 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "녹말은 동물이, 글라이코젠은 식물이 쓰는 에너지 저장 물질이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "글라이코젠은 식물의 에너지 저장 물질이다",
+      "why_wrong": "글라이코젠은 동물의 저장 물질이고, 식물의 저장 물질은 녹말이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-poly-storage"
+    },
+    {
+      "text": "셀룰로스도 다당류이니 사람의 에너지 저장 물질로 쓰인다",
+      "why_wrong": "셀룰로스는 식물 세포벽을 이루는 구조 물질이다. 동물이 저장 물질로 쓰는 다당류는 글라이코젠이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-poly-cellulose"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-carbohydrate"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-monosaccharide"
+    },
+    {
+      "type": "next",
+      "target": "cell-cell-wall",
+      "note": "셀룰로스가 식물 세포벽의 주성분이다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-01"
+  ],
+  "topic_id": "cell-1-1-2",
+  "pages": [
+    13,
+    21,
+    46
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

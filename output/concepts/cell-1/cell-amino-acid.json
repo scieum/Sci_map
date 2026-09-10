@@ -1,0 +1,113 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-amino-acid",
+  "concept_key": "concept:amino-acid",
+  "registry_status": "new",
+  "term": "아미노산",
+  "aliases": [],
+  "notation": {
+    "hanja": "아미노酸",
+    "hanja_gloss": "酸 실 산",
+    "hanja_note": "'아미노'는 영어 amino 의 음차어라 한자 표기가 없고 뒤의 酸만 한자어다.",
+    "english": "amino acid",
+    "symbol_display": "-NH₂, -COOH",
+    "symbol_plain": "-NH2, -COOH"
+  },
+  "definition": "단백질의 기본 단위. 탄소 원자 하나에 아미노기와 카복실기, 수소, 곁사슬이 붙은 꼴이며 곁사슬에 따라 20가지로 갈린다.",
+  "relations": [
+    {
+      "id": "rel-aa-structure",
+      "text": "아미노산은 중심 탄소 하나에 아미노기·카복실기·수소·곁사슬이 붙은 구조다",
+      "form": {
+        "condition": "아미노산 한 분자의 구조를 볼 때",
+        "type": "conditional",
+        "scope": "단백질을 이루는 아미노산"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 묘사한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aa-variety",
+      "text": "아미노산의 종류를 가르는 것은 곁사슬이고, 곁사슬에 따라 크기와 화학적 성질이 달라진다",
+      "form": {
+        "condition": "아미노산끼리 견줄 때",
+        "type": "causal",
+        "scope": "단백질을 이루는 20가지 아미노산"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 차이를 만드는지 밝힌 서술이라 뒤집을 방향이 애매하다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-aa-interaction",
+      "text": "비극성 곁사슬은 안쪽에 모이고 극성 곁사슬은 물과 수소결합을 이룬다",
+      "form": {
+        "condition": "수용액 속에서 폴리펩타이드가 접힐 때",
+        "type": "conditional",
+        "scope": "물에 둘러싸인 단백질"
+      },
+      "invertible": true,
+      "invertible_reason": "두 곁사슬에 행동이 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비극성 곁사슬이 물과 수소결합을 이루고 극성 곁사슬은 안쪽에 모인다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "20가지 아미노산은 구조가 저마다 전혀 다르다",
+      "why_wrong": "아미노기·카복실기·수소가 붙은 뼈대는 모두 같고 곁사슬만 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-aa-structure"
+    },
+    {
+      "text": "아미노산에는 질소가 들어 있지 않다",
+      "why_wrong": "아미노기(-NH₂)에 질소가 들어 있다. 단백질이 탄수화물·지질과 달리 질소를 갖는 까닭이 여기 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-aa-structure"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "cell-peptide-bond"
+    },
+    {
+      "type": "next",
+      "target": "cell-protein"
+    },
+    {
+      "type": "related",
+      "target": "cell-rna",
+      "note": "RNA가 아미노산을 라이보솜으로 날라 준다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-02"
+  ],
+  "topic_id": "cell-1-1-3",
+  "pages": [
+    17,
+    19,
+    21
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

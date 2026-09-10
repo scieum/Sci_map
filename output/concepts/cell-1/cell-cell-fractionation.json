@@ -1,0 +1,120 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-cell-fractionation",
+  "concept_key": "concept:cell-fractionation",
+  "registry_status": "new",
+  "term": "세포분획법",
+  "aliases": [],
+  "notation": {
+    "hanja": "細胞分劃法",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 分 나눌 분 · 劃 그을 획 · 法 법 법",
+    "english": "cell fractionation"
+  },
+  "definition": "세포를 균질기로 부순 뒤 회전 속도와 시간을 달리해 원심분리함으로써, 크기와 밀도가 다른 세포소기관을 차례로 갈라내는 방법.",
+  "relations": [
+    {
+      "id": "rel-cf-procedure",
+      "text": "균질기에 갈아 얻은 파쇄액을 원심분리기에 넣고, 돌리는 속도와 시간을 단계마다 달리한다",
+      "form": {
+        "condition": "세포소기관을 갈라내려 할 때",
+        "type": "conditional",
+        "scope": "세포분획법의 절차"
+      },
+      "invertible": false,
+      "invertible_reason": "절차를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cf-speed-size",
+      "text": "회전이 느리고 시간이 짧을 때는 크고 무거운 것이, 회전이 빨라지고 시간이 길어질수록 작고 가벼운 것이 가라앉는다",
+      "form": {
+        "condition": "같은 시료를 단계적으로 원심분리할 때",
+        "type": "inverse",
+        "scope": "세포분획법",
+        "antecedent": {
+          "quantity": "원심분리의 회전 속도와 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "그때 가라앉는 세포소기관의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속도·시간과 가라앉는 소기관의 크기가 반대로 맞물려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "회전이 느리고 시간이 짧을 때 작고 가벼운 것이, 빨라지고 길어질수록 크고 무거운 것이 가라앉는다"
+    },
+    {
+      "id": "rel-cf-animal-order",
+      "text": "동물 세포를 분획하면 핵, 마이토콘드리아, 막 조각, 라이보솜의 차례로 가라앉는다",
+      "form": {
+        "condition": "간세포 같은 동물 세포를 분획할 때",
+        "type": "conditional",
+        "scope": "동물 세포의 세포분획"
+      },
+      "invertible": true,
+      "invertible_reason": "가라앉는 차례가 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동물 세포를 분획하면 라이보솜, 막 조각, 마이토콘드리아, 핵의 차례로 가라앉는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포분획법은 약품으로 세포소기관을 녹여 갈라내는 방법이다",
+      "why_wrong": "약품으로 녹이는 것이 아니라 크기와 밀도 차이를 이용해 원심분리로 차례차례 가라앉히는 방법이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cf-procedure"
+    },
+    {
+      "text": "원심분리를 빠르게 할수록 크고 무거운 세포소기관이 먼저 가라앉는다",
+      "why_wrong": "크고 무거운 것은 느린 속도에서도 먼저 가라앉는다. 속도를 높이는 까닭은 작고 가벼운 것까지 가라앉히기 위해서다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cf-speed-size"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "related",
+      "target": "cell-autoradiography",
+      "note": "세포를 연구하는 또 다른 방법이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-mitochondrion",
+      "note": "동물 세포 분획에서 핵 다음으로 가라앉는 소기관이다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-2-1",
+  "pages": [
+    25,
+    27,
+    46
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

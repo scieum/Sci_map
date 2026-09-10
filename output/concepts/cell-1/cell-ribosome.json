@@ -1,0 +1,119 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-ribosome",
+  "concept_key": "concept:ribosome",
+  "registry_status": "new",
+  "term": "라이보솜",
+  "aliases": [
+    "리보솜"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 ribosome 의 음차어라 대응하는 한자어 표기가 없다.",
+    "english": "ribosome"
+  },
+  "definition": "rRNA와 단백질이 모여 대단위체와 소단위체를 이룬 구조물. 막이 없으며 mRNA의 유전정보를 읽어 단백질을 만든다.",
+  "relations": [
+    {
+      "id": "rel-rib-no-membrane",
+      "text": "라이보솜은 막으로 둘러싸여 있지 않고 소포체에 붙어 있거나 세포질에 흩어져 있다",
+      "form": {
+        "condition": "라이보솜의 겉모습과 자리를 볼 때",
+        "type": "conditional",
+        "scope": "진핵세포의 라이보솜"
+      },
+      "invertible": false,
+      "invertible_reason": "구조와 위치를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rib-composition",
+      "text": "라이보솜은 rRNA와 단백질로 이루어지고 대단위체와 소단위체로 나뉜다",
+      "form": {
+        "condition": "라이보솜의 구성을 볼 때",
+        "type": "conditional",
+        "scope": "라이보솜"
+      },
+      "invertible": false,
+      "invertible_reason": "구성을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rib-synthesis",
+      "text": "라이보솜은 mRNA에 담긴 유전정보를 읽어 그대로 단백질을 합성한다",
+      "form": {
+        "condition": "유전정보가 발현될 때",
+        "type": "causal",
+        "scope": "단백질합성"
+      },
+      "invertible": true,
+      "invertible_reason": "읽는 쪽과 만들어지는 쪽이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "라이보솜은 단백질에 담긴 정보를 읽어 mRNA를 합성한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "라이보솜은 진핵세포에만 있다",
+      "why_wrong": "원핵세포에도 라이보솜이 있다. 진핵세포의 것보다 크기가 작을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rib-no-membrane"
+    },
+    {
+      "text": "소포체에 붙어 있는 라이보솜만 단백질을 만든다",
+      "why_wrong": "세포질에 흩어져 있는 라이보솜도 단백질을 만든다. 붙어 있는 것이 만든 단백질이 소포체 안으로 들어갈 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rib-synthesis"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-rna"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-protein"
+    },
+    {
+      "type": "next",
+      "target": "cell-endoplasmic-reticulum"
+    },
+    {
+      "type": "next",
+      "target": "cell-protein-secretory-pathway"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03"
+  ],
+  "topic_id": "cell-1-3-2",
+  "pages": [
+    30,
+    32,
+    37
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

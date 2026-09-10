@@ -1,0 +1,113 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-facilitated-diffusion",
+  "concept_key": "concept:facilitated-diffusion",
+  "registry_status": "new",
+  "term": "촉진확산",
+  "aliases": [],
+  "notation": {
+    "hanja": "促進擴散",
+    "hanja_gloss": "促 재촉할 촉 · 進 나아갈 진 · 擴 넓힐 확 · 散 흩을 산",
+    "english": "facilitated diffusion"
+  },
+  "definition": "막에 있는 수송단백질을 거쳐 농도가 높은 쪽에서 낮은 쪽으로 물질이 옮겨 가는 확산. 에너지는 따로 들지 않는다.",
+  "relations": [
+    {
+      "id": "rel-fd-protein",
+      "text": "크기가 크거나 친수성인 분자는 수송단백질을 거쳐 농도 기울기를 따라 이동한다",
+      "form": {
+        "condition": "인지질 이중층을 직접 지나지 못하는 물질일 때",
+        "type": "conditional",
+        "scope": "촉진확산"
+      },
+      "invertible": false,
+      "invertible_reason": "이동 방식을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fd-two-proteins",
+      "text": "수송단백질에는 통로 노릇을 하는 통로단백질과 물질과 결합해 구조가 바뀌는 운반체단백질이 있다",
+      "form": {
+        "condition": "수송단백질을 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "세포막의 수송단백질"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 결과를 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fd-vs-simple",
+      "text": "촉진확산도 단순확산처럼 농도 기울기를 따라가지만 수송단백질을 거친다는 점이 다르다",
+      "form": {
+        "condition": "두 확산을 견줄 때",
+        "type": "conditional",
+        "scope": "단순확산과 촉진확산"
+      },
+      "invertible": false,
+      "invertible_reason": "공통점과 차이점을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "촉진확산은 단백질의 도움을 받으므로 에너지가 필요하다",
+      "why_wrong": "농도 기울기를 따라가는 이동이라 에너지가 들지 않는다. 에너지를 쓰는 것은 능동수송이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fd-vs-simple"
+    },
+    {
+      "text": "촉진확산으로 농도가 낮은 쪽에서 높은 쪽으로도 물질을 옮길 수 있다",
+      "why_wrong": "촉진확산은 확산이므로 농도가 높은 쪽에서 낮은 쪽으로만 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fd-protein"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-selective-permeability"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-simple-diffusion"
+    },
+    {
+      "type": "next",
+      "target": "cell-active-transport"
+    },
+    {
+      "type": "related",
+      "target": "cell-monosaccharide",
+      "note": "포도당이 세포막을 지나는 방식이 이것이다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    43,
+    45,
+    47
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

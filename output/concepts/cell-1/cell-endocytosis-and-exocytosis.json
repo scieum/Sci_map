@@ -1,0 +1,138 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-endocytosis-and-exocytosis",
+  "concept_key": "concept:endocytosis-and-exocytosis",
+  "registry_status": "new",
+  "term": "세포내섭취와 세포외배출",
+  "aliases": [],
+  "notation": {
+    "hanja": "細胞內攝取와 細胞外排出",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 內 안 내 · 攝 다스릴 섭 · 取 가질 취 · 細 가늘 세 · 胞 세포 포 · 外 바깥 외 · 排 밀칠 배 · 出 날 출",
+    "english": "endocytosis and exocytosis"
+  },
+  "definition": "큰 분자나 많은 양의 물질을 막으로 감싼 소낭에 담아 세포 안으로 들이거나 밖으로 내보내는 수송 방식.",
+  "relations": [
+    {
+      "id": "rel-ee-vesicle",
+      "text": "세포내섭취와 세포외배출은 에너지를 써서 소낭 단위로 물질을 옮긴다",
+      "form": {
+        "condition": "큰 분자나 많은 양의 물질을 옮길 때",
+        "type": "conditional",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "방식을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ee-two-kinds",
+      "text": "고형 물질을 들이는 것이 식세포작용이고 액체 상태의 물질을 들이는 것이 음세포작용이다",
+      "form": {
+        "condition": "세포내섭취를 갈래로 나눌 때",
+        "type": "classification",
+        "scope": "세포내섭취"
+      },
+      "invertible": true,
+      "invertible_reason": "들이는 물질의 상태와 이름이 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고형 물질을 들이는 것이 음세포작용이고 액체 상태의 물질을 들이는 것이 식세포작용이다"
+    },
+    {
+      "id": "rel-ee-exocytosis",
+      "text": "세포외배출에서는 소낭이 세포막과 융합하면서 속에 든 물질이 세포 밖으로 나간다",
+      "form": {
+        "condition": "세포 안의 소낭이 세포막에 닿을 때",
+        "type": "causal",
+        "scope": "인슐린 분비·신경전달물질 방출 등"
+      },
+      "invertible": false,
+      "invertible_reason": "과정을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ee-surface",
+      "text": "세포외배출이 이어지면 소낭의 막이 더해져 세포막의 표면적이 넓어진다",
+      "form": {
+        "condition": "세포외배출이 계속 일어날 때",
+        "type": "direct",
+        "scope": "분비가 활발한 세포",
+        "antecedent": {
+          "quantity": "세포외배출의 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "세포막의 표면적",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "표면적이 변하는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포외배출이 이어지면 세포막의 표면적이 좁아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포외배출은 농도 기울기를 따라 일어나므로 에너지가 들지 않는다",
+      "why_wrong": "소낭을 만들고 세포막과 융합시키는 데 에너지가 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ee-vesicle"
+    },
+    {
+      "text": "큰 분자도 통로단백질을 지나 그대로 세포를 드나든다",
+      "why_wrong": "통로단백질을 지나는 것은 이온이나 작은 분자다. 큰 분자나 많은 양의 물질은 소낭에 담겨 오간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ee-vesicle"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cell-membrane"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-protein-secretory-pathway"
+    },
+    {
+      "type": "related",
+      "target": "cell-lysosome",
+      "note": "식세포작용으로 들어온 물질을 분해하는 곳이다"
+    },
+    {
+      "type": "related",
+      "target": "cell-active-transport",
+      "note": "둘 다 에너지를 쓰는 수송이라는 점이 같다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    44,
+    45
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "media": [],
+  "homonym_flag": false
+}

@@ -1,0 +1,127 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-selective-permeability",
+  "concept_key": "concept:selective-permeability",
+  "registry_status": "new",
+  "term": "세포막의 선택적 투과성",
+  "aliases": [
+    "선택적 투과성"
+  ],
+  "notation": {
+    "hanja": "細胞膜의 選擇的 透過性",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 膜 꺼풀 막 · 選 가릴 선 · 擇 가릴 택 · 的 과녁 적 · 透 통할 투 · 過 지날 과 · 性 성품 성",
+    "english": "selective permeability"
+  },
+  "definition": "물질의 종류에 따라 세포막을 지나는 정도가 달라지는 성질. 분자의 크기와 물에 대한 친화도가 통과의 갈림길이 된다.",
+  "relations": [
+    {
+      "id": "rel-sp-small-hydrophobic",
+      "text": "산소나 이산화 탄소처럼 작은 분자와 소수성 물질은 인지질 이중층을 쉽게 지난다",
+      "form": {
+        "condition": "물질이 세포막을 만날 때",
+        "type": "conditional",
+        "scope": "인지질 이중층을 통한 통과"
+      },
+      "invertible": false,
+      "invertible_reason": "어떤 물질이 잘 지나는지 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sp-need-protein",
+      "text": "포도당·아미노산처럼 큰 분자와 이온 같은 친수성 물질은 막단백질의 도움을 받아야 세포막을 지난다",
+      "form": {
+        "condition": "친수성이거나 큰 물질이 막을 지날 때",
+        "type": "conditional",
+        "scope": "세포막을 통한 물질 수송"
+      },
+      "invertible": true,
+      "invertible_reason": "도움이 필요한 쪽과 필요 없는 쪽이 갈려 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포도당·아미노산처럼 큰 분자와 이온은 막단백질 없이도 인지질 이중층을 그대로 지난다"
+    },
+    {
+      "id": "rel-sp-size",
+      "text": "소수성 정도가 비슷하다면 분자의 크기가 클수록 인지질 이중층을 지나기 어렵다",
+      "form": {
+        "condition": "물질의 소수성 정도가 비슷할 때",
+        "type": "inverse",
+        "scope": "인지질 이중층 통과",
+        "antecedent": {
+          "quantity": "분자의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "인지질 이중층을 지나는 정도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "크기와 통과하기 쉬운 정도가 반대로 맞물려 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소수성 정도가 비슷하다면 분자의 크기가 클수록 인지질 이중층을 쉽게 지난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소수성 물질은 친수성 물질보다 세포막을 통과하기 어렵다",
+      "why_wrong": "세포막 속은 소수성 꼬리가 모여 있는 자리라 소수성 물질이 오히려 쉽게 지난다. 도움이 필요한 쪽은 친수성 물질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sp-small-hydrophobic"
+    },
+    {
+      "text": "크기가 작은 물질이면 무엇이든 세포막을 그대로 통과한다",
+      "why_wrong": "이온은 크기가 작아도 친수성이라 인지질 이중층을 그대로 지나기 어렵고 통로단백질을 거쳐야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sp-need-protein"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-cell-membrane"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-phospholipid-bilayer"
+    },
+    {
+      "type": "next",
+      "target": "cell-simple-diffusion"
+    },
+    {
+      "type": "next",
+      "target": "cell-facilitated-diffusion"
+    },
+    {
+      "type": "next",
+      "target": "cell-active-transport"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    39,
+    45
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

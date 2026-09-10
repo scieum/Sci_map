@@ -1,0 +1,117 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-dna",
+  "concept_key": "concept:dna",
+  "registry_status": "new",
+  "term": "DNA",
+  "aliases": [],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 deoxyribonucleic acid 의 머리글자를 딴 말이라 한자어 표기가 없다.",
+    "english": "deoxyribonucleic acid"
+  },
+  "definition": "유전정보를 저장하는 핵산. 두 가닥의 폴리뉴클레오타이드가 서로 꼬여 이중나선구조를 이루며 5탄당으로 디옥시라이보스를 쓴다.",
+  "relations": [
+    {
+      "id": "rel-dna-double-helix",
+      "text": "DNA는 두 가닥이 나선으로 감긴 이중나선구조를 이루어 유전정보를 저장한다",
+      "form": {
+        "condition": "DNA의 구조를 볼 때",
+        "type": "conditional",
+        "scope": "대부분의 생물이 가진 DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 묘사한 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dna-bases",
+      "text": "DNA의 염기는 아데닌·구아닌·사이토신·타이민 네 가지이고 유라실은 들어 있지 않다",
+      "form": {
+        "condition": "DNA의 염기 종류를 셀 때",
+        "type": "conditional",
+        "scope": "DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "종류를 늘어놓은 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dna-hydrogen-bond",
+      "text": "두 가닥을 마주 붙들고 있는 것은 염기와 염기 사이의 수소결합이다",
+      "form": {
+        "condition": "이중나선이 유지될 때",
+        "type": "causal",
+        "scope": "DNA 이중나선"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 붙들고 있는지를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA와 RNA는 모두 이중나선구조다",
+      "why_wrong": "이중나선은 DNA의 구조다. RNA는 단일 가닥이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dna-double-helix"
+    },
+    {
+      "text": "DNA에는 타이민 대신 유라실이 들어 있다",
+      "why_wrong": "유라실은 RNA의 염기다. DNA의 염기는 아데닌·구아닌·사이토신·타이민 네 가지다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dna-bases"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-nucleotide"
+    },
+    {
+      "type": "next",
+      "target": "cell-cell-nucleus"
+    },
+    {
+      "type": "next",
+      "target": "cell-prokaryotic-cell"
+    },
+    {
+      "type": "next",
+      "target": "cell-eukaryotic-cell"
+    },
+    {
+      "type": "related",
+      "target": "cell-rna",
+      "note": "같은 핵산이면서 가닥 수와 당·염기가 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-02"
+  ],
+  "topic_id": "cell-1-1-3",
+  "pages": [
+    16,
+    21,
+    32
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

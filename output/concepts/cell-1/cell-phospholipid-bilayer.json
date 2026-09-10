@@ -1,0 +1,110 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-phospholipid-bilayer",
+  "concept_key": "concept:phospholipid-bilayer",
+  "registry_status": "new",
+  "term": "인지질 이중층",
+  "aliases": [],
+  "notation": {
+    "hanja": "燐脂質 二重層",
+    "hanja_gloss": "燐 도깨비불 인 · 脂 기름 지 · 質 바탕 질 · 二 두 이 · 重 무거울 중 · 層 층 층",
+    "english": "phospholipid bilayer"
+  },
+  "definition": "인지질이 두 층으로 마주 놓여 만들어진 막 구조. 친수성 머리는 바깥의 물을 향하고 소수성 꼬리는 안쪽에서 서로 마주 본다.",
+  "relations": [
+    {
+      "id": "rel-pb2-arrangement",
+      "text": "친수성 머리는 세포 안팎의 물을 향하고 소수성 꼬리는 서로 마주 보며 두 층을 이룬다",
+      "form": {
+        "condition": "인지질이 수용성 환경에 놓일 때",
+        "type": "causal",
+        "scope": "세포막을 비롯한 생체막"
+      },
+      "invertible": true,
+      "invertible_reason": "머리와 꼬리가 향하는 쪽이 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소수성 꼬리가 세포 안팎의 물을 향하고 친수성 머리가 서로 마주 보며 두 층을 이룬다"
+    },
+    {
+      "id": "rel-pb2-why",
+      "text": "세포 안과 밖이 모두 수용성 환경이기 때문에 인지질이 저절로 두 층으로 배열된다",
+      "form": {
+        "condition": "물이 있는 환경에 인지질을 놓을 때",
+        "type": "causal",
+        "scope": "수용액 속의 인지질"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pb2-permeability",
+      "text": "작거나 소수성인 물질은 인지질 이중층을 쉽게 지나지만 이온이나 큰 친수성 분자는 그렇지 못하다",
+      "form": {
+        "condition": "물질이 막을 통과하려 할 때",
+        "type": "conditional",
+        "scope": "인지질 이중층"
+      },
+      "invertible": true,
+      "invertible_reason": "두 무리에 통과 여부가 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이온이나 큰 친수성 분자는 인지질 이중층을 쉽게 지나지만 작거나 소수성인 물질은 그렇지 못하다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인지질 이중층은 소수성 꼬리가 바깥쪽 물을 향하고 있다",
+      "why_wrong": "물을 향하는 쪽은 친수성 머리다. 꼬리는 막 안쪽에서 서로 마주 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pb2-arrangement"
+    },
+    {
+      "text": "인지질 이중층은 물이 전혀 통과하지 못하는 막이다",
+      "why_wrong": "물 분자는 크기가 작아 어느 정도 지나간다. 세포에서 삼투가 일어나는 것도 그 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pb2-permeability"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-phospholipid"
+    },
+    {
+      "type": "next",
+      "target": "cell-cell-membrane"
+    },
+    {
+      "type": "next",
+      "target": "cell-selective-permeability"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-1",
+  "pages": [
+    38,
+    39,
+    48
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

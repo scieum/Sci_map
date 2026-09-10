@@ -1,0 +1,126 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-lipid",
+  "concept_key": "concept:lipid",
+  "registry_status": "new",
+  "term": "지질",
+  "aliases": [],
+  "notation": {
+    "hanja": "脂質",
+    "hanja_gloss": "脂 기름 지 · 質 바탕 질",
+    "english": "lipid"
+  },
+  "definition": "탄소·수소·산소로 이루어지고 물에는 잘 녹지 않으면서 유기 용매에는 녹는 물질. 중성지방·인지질·스테로이드가 여기 속한다.",
+  "relations": [
+    {
+      "id": "rel-lipid-solubility",
+      "text": "지질은 물에는 잘 녹지 않지만 알코올이나 에터 같은 유기 용매에는 잘 녹는다",
+      "form": {
+        "condition": "용매에 녹는 정도를 견줄 때",
+        "type": "conditional",
+        "scope": "지질 일반"
+      },
+      "invertible": true,
+      "invertible_reason": "두 용매에 대한 성질이 반대로 짝지어져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지질은 물에는 잘 녹지만 알코올이나 에터 같은 유기 용매에는 녹지 않는다"
+    },
+    {
+      "id": "rel-lipid-classification",
+      "text": "지질은 구성 원소와 화학 구조를 기준으로 중성지방·인지질·스테로이드로 나뉜다",
+      "form": {
+        "condition": "지질을 갈래로 가를 때",
+        "type": "classification",
+        "scope": "교과서가 다루는 지질의 갈래"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lipid-fat-energy",
+      "text": "중성지방은 1 g당 저장하는 에너지양이 탄수화물이나 단백질보다 많다",
+      "form": {
+        "condition": "같은 질량으로 견줄 때",
+        "type": "conditional",
+        "scope": "중성지방·탄수화물·단백질"
+      },
+      "invertible": true,
+      "invertible_reason": "많고 적음을 견준 서술이라 크기 관계를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중성지방은 1 g당 저장하는 에너지양이 탄수화물이나 단백질보다 적다"
+    },
+    {
+      "id": "rel-lipid-steroid",
+      "text": "스테로이드에 속하는 콜레스테롤은 동물 세포막의 구성 성분이 된다",
+      "form": {
+        "condition": "동물 세포막의 성분을 볼 때",
+        "type": "conditional",
+        "scope": "동물 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "구성 성분을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지질에는 질소나 인이 반드시 들어 있다",
+      "why_wrong": "지질의 기본 구성 원소는 탄소·수소·산소다. 인은 인지질처럼 인산이 붙은 갈래에만 들어 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lipid-classification"
+    },
+    {
+      "text": "지질은 물에 녹지 않으니 물이 많은 세포 안에서는 쓰일 수 없다",
+      "why_wrong": "물에 녹지 않는 성질 덕분에 오히려 물을 경계로 막을 이룬다. 인지질이 이중층을 만들어 세포막이 되는 것이 그 예다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lipid-solubility"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-constituent-substance-of-organism"
+    },
+    {
+      "type": "next",
+      "target": "cell-phospholipid"
+    },
+    {
+      "type": "related",
+      "target": "cell-carbohydrate",
+      "note": "구성 원소는 같지만 물에 녹는 성질이 갈린다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-01"
+  ],
+  "topic_id": "cell-1-1-2",
+  "pages": [
+    14,
+    21,
+    46
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}

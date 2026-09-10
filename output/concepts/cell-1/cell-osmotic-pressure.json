@@ -1,0 +1,127 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-osmotic-pressure",
+  "concept_key": "concept:osmotic-pressure",
+  "registry_status": "reused",
+  "term": "삼투압",
+  "aliases": [],
+  "notation": {
+    "hanja": "滲透壓",
+    "hanja_gloss": "滲 스밀 삼 · 透 통할 투 · 壓 누를 압",
+    "english": "osmotic pressure"
+  },
+  "definition": "삼투가 일어나는 동안 반투과성막이 받게 되는 압력. 두 용액의 농도 차가 클수록, 온도가 높을수록 커진다.",
+  "relations": [
+    {
+      "id": "rel-op-concentration",
+      "text": "두 용액의 농도 차가 클수록 삼투압이 커진다",
+      "form": {
+        "condition": "온도가 일정할 때",
+        "type": "direct",
+        "scope": "반투과성막으로 나뉜 두 용액",
+        "antecedent": {
+          "quantity": "두 용액의 농도 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "삼투압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "농도 차와 삼투압이 같은 방향으로 맞물려 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 용액의 농도 차가 클수록 삼투압이 작아진다"
+    },
+    {
+      "id": "rel-op-temperature",
+      "text": "온도가 높을수록 삼투압이 커진다",
+      "form": {
+        "condition": "용액의 농도 차가 일정할 때",
+        "type": "direct",
+        "scope": "반투과성막으로 나뉜 두 용액",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "삼투압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도와 삼투압이 같은 방향으로 맞물려 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 높을수록 삼투압이 작아진다"
+    },
+    {
+      "id": "rel-op-absorb",
+      "text": "식물 세포가 물을 빨아들이는 힘인 흡수력은 삼투압에서 팽압을 뺀 값이다",
+      "form": {
+        "condition": "식물 세포가 물을 흡수할 때",
+        "type": "conditional",
+        "scope": "세포벽을 가진 식물 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "값을 구하는 관계를 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "삼투압은 농도만으로 정해지므로 온도와는 관계가 없다",
+      "why_wrong": "농도 차뿐 아니라 온도도 삼투압의 크기에 영향을 준다. 온도가 높을수록 삼투압은 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-op-temperature"
+    },
+    {
+      "text": "삼투압이 크면 세포는 그만큼 물을 많이 흡수한다",
+      "why_wrong": "식물 세포의 흡수력은 삼투압에서 팽압을 뺀 값이다. 팽압이 커지면 삼투압이 커도 흡수력은 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-op-absorb"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-osmosis"
+    },
+    {
+      "type": "next",
+      "target": "cell-cell-change-by-osmosis"
+    },
+    {
+      "type": "same",
+      "target": "mate-osmotic-pressure",
+      "note": "물질과 에너지에서 용액의 성질로 다룬 같은 개념이다"
+    }
+  ],
+  "curriculum": [
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-2",
+  "pages": [
+    40,
+    45,
+    49
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": [],
+  "homonym_flag": false
+}

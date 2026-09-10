@@ -1,0 +1,137 @@
+{
+  "subject": "세포와 물질대사",
+  "unit": "Ⅰ. 세포",
+  "unit_id": "cell-1",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "cell-cell-membrane",
+  "concept_key": "concept:cell-membrane",
+  "registry_status": "new",
+  "term": "세포막",
+  "aliases": [],
+  "notation": {
+    "hanja": "細胞膜",
+    "hanja_gloss": "細 가늘 세 · 胞 세포 포 · 膜 꺼풀 막",
+    "english": "cell membrane"
+  },
+  "definition": "세포를 둘러싸 안과 밖을 가르는 막. 인지질 이중층에 단백질이 박힌 구조이며 물질의 출입을 조절한다.",
+  "relations": [
+    {
+      "id": "rel-cm-components",
+      "text": "세포막을 이루는 주요 성분은 인지질과 단백질이다",
+      "form": {
+        "condition": "세포막의 성분을 볼 때",
+        "type": "conditional",
+        "scope": "세포막"
+      },
+      "invertible": false,
+      "invertible_reason": "성분을 밝힌 서술이라 방향을 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cm-boundary",
+      "text": "세포막은 세포의 형태를 지키고 세포 안과 밖의 환경을 갈라 놓는다",
+      "form": {
+        "condition": "세포막의 기능을 볼 때",
+        "type": "conditional",
+        "scope": "모든 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12세포01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cm-transport-control",
+      "text": "세포막은 드나드는 물질을 조절해 세포 안의 환경을 일정하게 지킨다",
+      "form": {
+        "condition": "물질이 세포막을 지날 때",
+        "type": "causal",
+        "scope": "살아 있는 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cm-protein-function",
+      "text": "막단백질은 세포막을 관통하거나 표면에 붙어 물질 수송·효소·신호 수용 같은 일을 한다",
+      "form": {
+        "condition": "막단백질의 기능을 볼 때",
+        "type": "conditional",
+        "scope": "세포막의 단백질"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 늘어놓은 서술이라 방향이 없다",
+      "curriculum": [
+        "12세포01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포막은 인지질로만 되어 있다",
+      "why_wrong": "인지질 이중층에 단백질이 박혀 있고 동물 세포막에는 콜레스테롤도 들어 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cm-components"
+    },
+    {
+      "text": "세포막은 모든 물질을 다 막아 준다",
+      "why_wrong": "산소나 이산화 탄소처럼 작고 소수성인 물질은 쉽게 지나간다. 세포막은 물질에 따라 통과 정도가 다른 선택적 투과성을 가진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cm-transport-control"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "cell-organelle"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-phospholipid-bilayer"
+    },
+    {
+      "type": "prereq",
+      "target": "cell-protein"
+    },
+    {
+      "type": "next",
+      "target": "cell-selective-permeability"
+    },
+    {
+      "type": "next",
+      "target": "cell-protein-secretory-pathway"
+    },
+    {
+      "type": "next",
+      "target": "cell-endocytosis-and-exocytosis"
+    }
+  ],
+  "curriculum": [
+    "12세포01-03",
+    "12세포01-05"
+  ],
+  "topic_id": "cell-1-4-1",
+  "pages": [
+    30,
+    38,
+    45,
+    47
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "media": [],
+  "homonym_flag": false
+}
