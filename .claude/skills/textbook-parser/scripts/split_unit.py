@@ -122,6 +122,7 @@ def page_folios(page) -> list[int]:
 def check_unit(unit: dict, pdf_path: Path) -> dict:
     first, last = unit["pages"]
     problems: list[str] = []
+    gaps: list[str] = []       # 소단원에 속하지 않는 쪽 — 실패는 아니지만 사람이 볼 것
     offset_pages: dict[int, int] = {}   # offset -> 그 offset 이 나온 쪽 수
     pages_with_folio = 0
     page_titles: dict[int, str] = {}
@@ -191,15 +192,32 @@ def check_unit(unit: dict, pdf_path: Path) -> dict:
             if t_last < t_first:
                 problems.append(f"{topic['id']}: 범위가 뒤집혔다 {topic['pages']}")
             cursor = t_last + 1
-        if cursor != sec["review"]:
+        # 마지막 소단원과 정리 쪽 사이 — 천재 판형은 붙어 있지만 모든 판형이 그렇지는
+        # 않다. 세포와 물질대사(이준규)는 중단원 11개 중 4개에서 그 사이에 '세로처럼
+        # 깊게 가로처럼 넓게' 읽기 면이 한두 쪽 낀다. 중단원 앞머리의 도입면을
+        # lead 로 허용한 것과 같은 이유로 **뒤로만** 벌어지는 것을 허용하되,
+        # 읽기 면 크기(2쪽)를 넘으면 소단원 하나를 통째로 빠뜨린 것으로 보고 잡는다.
+        # 벌어진 쪽은 건너뛰는 것이 아니다 — extract_text 가 role=body 로 남긴다.
+        trail = sec["review"] - cursor
+        if trail < 0:
             problems.append(
-                f"{sec['id']}: 마지막 소단원 끝 다음({cursor})이 중단원 정리하기 쪽({sec['review']})과 다르다")
+                f"{sec['id']}: 중단원 정리하기 쪽({sec['review']})이 마지막 소단원 끝({cursor - 1})보다 앞선다")
+        elif trail > 2:
+            problems.append(
+                f"{sec['id']}: 마지막 소단원 끝 다음({cursor})과 중단원 정리하기 쪽({sec['review']}) "
+                f"사이가 {trail}쪽이다 — 읽기 면치고 너무 넓다")
+        elif trail > 0:
+            gaps.append(f"{sec['id']}: p{cursor}~{sec['review'] - 1} 은 소단원에 속하지 않는다 (읽기 면)")
+        if sec["review"] > sec["pages"][1]:
+            problems.append(
+                f"{sec['id']}: 중단원 정리하기 쪽({sec['review']})이 중단원 범위 {sec['pages']} 밖이다")
 
     return {
         "unit_id": unit["id"],
         "pages": [first, last],
         "folio_offset": sorted(offsets) if offsets else None,
         "problems": problems,
+        "gaps": gaps,
         "ok": not problems,
     }
 
@@ -222,6 +240,8 @@ def main() -> int:
         print(f"  쪽번호 offset : {result['folio_offset']}")
         if result["ok"]:
             print("  단원 경계     : 확정")
+            for g in result["gaps"]:
+                print("    · " + g)
         else:
             print(f"  단원 경계     : 불일치 {len(result['problems'])}건")
             for p in result["problems"]:
