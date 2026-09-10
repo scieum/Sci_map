@@ -12,7 +12,7 @@
 | 개념 카드 | 40장 |
 | 관계 명제 | **130개** (그중 `invertible` 44개) |
 | 오개념 | 80개 (LLM 출처 80개) |
-| 교과서 그림 | 0장 → 카드 0/40 |
+| 교과서 그림 | 31장 → 카드 39/40 |
 | 신규 `concept_key` | 37개 (G3 대상) |
 | 성취기준 커버리지 | 12세포01-01(6), 12세포01-02(7), 12세포01-03(16), 12세포01-04(2), 12세포01-05(11) |
 
@@ -20,46 +20,46 @@
 
 | 표제어 | 한자 | 영어 | 명제 | 오개념 | 링크 | 난이도 | 그림 |
 |---|---|---|---:|---:|---:|---|---|
-| 능동수송 | 能動輸送 | active transport | 4 | 2 | 4 | 4 | — |
-| 아미노산 | 아미노酸 | amino acid | 3 | 2 | 3 | 2 | — |
-| 자기방사법 | 自己放射法 | autoradiography | 3 | 2 | 3 | 3 | — |
-| 탄수화물 | 炭水化物 | carbohydrate | 3 | 2 | 4 | 1 | — |
-| 삼투에 의한 세포의 변화 | 滲透에 의한 細胞의 變化 | cell change by osmosis | 4 | 2 | 4 | 4 | — |
-| 세포분획법 | 細胞分劃法 | cell fractionation | 3 | 2 | 3 | 3 | — |
-| 세포막 | 細胞膜 | cell membrane | 4 | 2 | 6 | 2 | — |
-| 핵 | 核 | cell nucleus | 4 | 2 | 3 | 2 | — |
-| 세포벽 | 細胞壁 | cell wall | 3 | 2 | 4 | 2 | — |
-| 엽록체 | 葉綠體 | chloroplast | 3 | 2 | 3 | 3 | — |
-| 생물의 구성 물질 | 生物의 構成 物質 | constituent substance of organism | 3 | 2 | 4 | 1 | — |
-| DNA | 해당 없음 | deoxyribonucleic acid | 3 | 2 | 5 | 2 | — |
-| 전자 현미경 | 電子 顯微鏡 | electron microscope | 3 | 2 | 3 | 2 | — |
-| 세포내섭취와 세포외배출 | 細胞內攝取와 細胞外排出 | endocytosis and exocytosis | 4 | 2 | 4 | 3 | — |
-| 소포체 | 小胞體 | endoplasmic reticulum | 3 | 2 | 5 | 3 | — |
-| 진핵세포 | 眞核細胞 | eukaryotic cell | 3 | 2 | 4 | 2 | — |
-| 촉진확산 | 促進擴散 | facilitated diffusion | 3 | 2 | 4 | 3 | — |
-| 골지체 | 골지體 | Golgi apparatus | 3 | 2 | 5 | 2 | — |
-| 광학 현미경 | 光學 顯微鏡 | light microscope | 3 | 2 | 3 | 1 | — |
-| 지질 | 脂質 | lipid | 4 | 2 | 3 | 2 | — |
-| 라이소솜 | 해당 없음 | lysosome | 3 | 2 | 4 | 2 | — |
-| 마이토콘드리아 | 해당 없음 | mitochondrion | 3 | 2 | 3 | 3 | — |
-| 단당류 | 單糖類 | monosaccharide | 2 | 2 | 3 | 1 | — |
-| 핵산 | 核酸 | nucleic acid | 3 | 2 | 4 | 2 | — |
-| 뉴클레오타이드 | 해당 없음 | nucleotide | 3 | 2 | 5 | 2 | — |
-| 세포소기관 | 細胞小器官 | organelle | 4 | 2 | 5 | 2 | — |
-| 삼투 | 滲透 | osmosis | 4 | 2 | 5 | 3 | — |
-| 삼투압 | 滲透壓 | osmotic pressure | 3 | 2 | 3 | 3 | — |
-| 펩타이드결합 | 펩타이드結合 | peptide bond | 3 | 2 | 3 | 2 | — |
-| 인지질 이중층 | 燐脂質 二重層 | phospholipid bilayer | 3 | 2 | 3 | 3 | — |
-| 인지질 | 燐脂質 | phospholipid | 3 | 2 | 3 | 3 | — |
-| 다당류 | 多糖類 | polysaccharide | 3 | 2 | 3 | 2 | — |
-| 원핵세포 | 原核細胞 | prokaryotic cell | 4 | 2 | 4 | 2 | — |
+| 능동수송 | 能動輸送 | active transport | 4 | 2 | 4 | 4 | ○ |
+| 아미노산 | 아미노酸 | amino acid | 3 | 2 | 3 | 2 | ○ |
+| 자기방사법 | 自己放射法 | autoradiography | 3 | 2 | 3 | 3 | ○ |
+| 탄수화물 | 炭水化物 | carbohydrate | 3 | 2 | 4 | 1 | ○ |
+| 삼투에 의한 세포의 변화 | 滲透에 의한 細胞의 變化 | cell change by osmosis | 4 | 2 | 4 | 4 | ○ |
+| 세포분획법 | 細胞分劃法 | cell fractionation | 3 | 2 | 3 | 3 | ○ |
+| 세포막 | 細胞膜 | cell membrane | 4 | 2 | 6 | 2 | ○ |
+| 핵 | 核 | cell nucleus | 4 | 2 | 3 | 2 | ○ |
+| 세포벽 | 細胞壁 | cell wall | 3 | 2 | 4 | 2 | ○ |
+| 엽록체 | 葉綠體 | chloroplast | 3 | 2 | 3 | 3 | ○ |
+| 생물의 구성 물질 | 生物의 構成 物質 | constituent substance of organism | 3 | 2 | 4 | 1 | ○ |
+| DNA | 해당 없음 | deoxyribonucleic acid | 3 | 2 | 5 | 2 | ○ |
+| 전자 현미경 | 電子 顯微鏡 | electron microscope | 3 | 2 | 3 | 2 | ○ |
+| 세포내섭취와 세포외배출 | 細胞內攝取와 細胞外排出 | endocytosis and exocytosis | 4 | 2 | 4 | 3 | ○ |
+| 소포체 | 小胞體 | endoplasmic reticulum | 3 | 2 | 5 | 3 | ○ |
+| 진핵세포 | 眞核細胞 | eukaryotic cell | 3 | 2 | 4 | 2 | ○ |
+| 촉진확산 | 促進擴散 | facilitated diffusion | 3 | 2 | 4 | 3 | ○ |
+| 골지체 | 골지體 | Golgi apparatus | 3 | 2 | 5 | 2 | ○ |
+| 광학 현미경 | 光學 顯微鏡 | light microscope | 3 | 2 | 3 | 1 | ○ |
+| 지질 | 脂質 | lipid | 4 | 2 | 3 | 2 | ○ |
+| 라이소솜 | 해당 없음 | lysosome | 3 | 2 | 4 | 2 | ○ |
+| 마이토콘드리아 | 해당 없음 | mitochondrion | 3 | 2 | 3 | 3 | ○ |
+| 단당류 | 單糖類 | monosaccharide | 2 | 2 | 3 | 1 | ○ |
+| 핵산 | 核酸 | nucleic acid | 3 | 2 | 4 | 2 | ○ |
+| 뉴클레오타이드 | 해당 없음 | nucleotide | 3 | 2 | 5 | 2 | ○ |
+| 세포소기관 | 細胞小器官 | organelle | 4 | 2 | 5 | 2 | ○ |
+| 삼투 | 滲透 | osmosis | 4 | 2 | 5 | 3 | ○ |
+| 삼투압 | 滲透壓 | osmotic pressure | 3 | 2 | 3 | 3 | ○ |
+| 펩타이드결합 | 펩타이드結合 | peptide bond | 3 | 2 | 3 | 2 | ○ |
+| 인지질 이중층 | 燐脂質 二重層 | phospholipid bilayer | 3 | 2 | 3 | 3 | ○ |
+| 인지질 | 燐脂質 | phospholipid | 3 | 2 | 3 | 3 | ○ |
+| 다당류 | 多糖類 | polysaccharide | 3 | 2 | 3 | 2 | ○ |
+| 원핵세포 | 原核細胞 | prokaryotic cell | 4 | 2 | 4 | 2 | ○ |
 | 단백질의 합성과 분비 경로 | 蛋白質의 合成과 分泌 經路 | protein secretory pathway | 3 | 2 | 6 | 4 | — |
-| 단백질 | 蛋白質 | protein | 4 | 2 | 5 | 2 | — |
-| 라이보솜 | 해당 없음 | ribosome | 3 | 2 | 5 | 2 | — |
-| RNA | 해당 없음 | ribonucleic acid | 3 | 2 | 4 | 2 | — |
-| 세포막의 선택적 투과성 | 細胞膜의 選擇的 透過性 | selective permeability | 3 | 2 | 5 | 3 | — |
-| 단순확산 | 單純擴散 | simple diffusion | 4 | 2 | 4 | 2 | — |
-| 액포 | 液胞 | vacuole | 3 | 2 | 3 | 2 | — |
+| 단백질 | 蛋白質 | protein | 4 | 2 | 5 | 2 | ○ |
+| 라이보솜 | 해당 없음 | ribosome | 3 | 2 | 5 | 2 | ○ |
+| RNA | 해당 없음 | ribonucleic acid | 3 | 2 | 4 | 2 | ○ |
+| 세포막의 선택적 투과성 | 細胞膜의 選擇的 透過性 | selective permeability | 3 | 2 | 5 | 3 | ○ |
+| 단순확산 | 單純擴散 | simple diffusion | 4 | 2 | 4 | 2 | ○ |
+| 액포 | 液胞 | vacuole | 3 | 2 | 3 | 2 | ○ |
 
 ## 3. ★관계 명제 전문 — 검토의 중심
 
