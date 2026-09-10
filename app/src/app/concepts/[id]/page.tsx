@@ -33,8 +33,6 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
 
   if (!c) notFound();
 
-  const sameLinks = c.links.filter((l) => l.type === "same");
-
   return (
     <Screen>
       {/* 브레드크럼 — 위치 감각 */}
@@ -70,21 +68,6 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
           {c.hanjaGloss}
         </p>
       )}
-      {sameLinks.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {sameLinks.map((l) => {
-            const t = conceptById(l.target);
-            return (
-              <Link key={l.target} href={`/concepts/${l.target}`}>
-                <Chip tone="info">
-                  ↔ {l.note ?? "연계"} · {t?.term}
-                </Chip>
-              </Link>
-            );
-          })}
-        </div>
-      )}
-
       <SectionLabel>정의</SectionLabel>
       <Card>
         <p className="text-[16px] leading-relaxed">{c.definition}</p>
@@ -144,7 +127,11 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         <Art name="section-links" className="mr-1.5 align-[-2px]" />
         연결된 개념
       </SectionLabel>
-      <ConceptLinks links={c.links.filter((l) => l.type !== "same")} />
+      {/* 연계(same)도 여기 함께 쌓는다. 예전에는 표제어 바로 밑에 칩으로 따로
+          띄웠는데, 그 자리에 파이프라인 메모가 그대로 나왔다 — "통합과학1 카드와
+          concept_key 가 같다 (R9)" 는 학생이 읽을 말이 아니다. 링크 목록 안으로
+          들어오면 '연계' 배지가 종류를 말해 주므로 칩이 하던 일이 없어진다. */}
+      <ConceptLinks links={c.links} />
 
       <BottomCta href={`/concepts/${c.id}/recall`}>
         가리고 떠올려보기
