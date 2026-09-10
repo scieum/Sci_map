@@ -240,13 +240,15 @@ function SubjectSelect({
   }
 
   return (
-    <div ref={box} className="relative mb-5">
+    // 폭은 과목 이름만큼만. 한 줄을 가로지르는 단추는 "여기서 무엇이든 고른다" 는
+    // 신호가 너무 커서, 정작 아래 목차보다 눈에 먼저 든다
+    <div ref={box} className="relative mb-5 w-fit max-w-full">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className={`flex h-12 w-full items-center justify-between gap-3 rounded-full px-5 ${subjectAccent(value)}`}
+        className={`flex h-12 max-w-full items-center gap-2 rounded-full pl-5 pr-4 ${subjectAccent(value)}`}
       >
         {label}
         <span
@@ -257,11 +259,13 @@ function SubjectSelect({
         </span>
       </button>
 
+      {/* 목록은 단추보다 넓어도 된다 — 가장 긴 과목 이름에 맞춘다. 다만 화면
+          밖으로는 나가지 않게 좌우 여백만큼 뺀 폭을 상한으로 둔다 */}
       {open && (
         <ul
           role="listbox"
           aria-label="과목"
-          className="absolute inset-x-0 top-[calc(100%+8px)] z-30 overflow-hidden rounded-[20px] bg-surface p-1.5 shadow-[0_10px_30px_rgba(23,58,94,0.18)]"
+          className="absolute left-0 top-[calc(100%+8px)] z-30 w-max min-w-full max-w-[calc(100vw-2.5rem)] overflow-hidden rounded-[20px] bg-surface p-1.5 shadow-[0_10px_30px_rgba(23,58,94,0.18)]"
         >
           {subjects.map((s) => {
             const on = s === value;
