@@ -12,7 +12,7 @@
 | 개념 카드 | 68장 |
 | 관계 명제 | **248개** (그중 `invertible` 95개) |
 | 오개념 | 136개 (LLM 출처 136개) |
-| 교과서 그림 | 0장 → 카드 0/68 |
+| 교과서 그림 | 45장 → 카드 67/68 |
 | 신규 `concept_key` | 68개 (G3 대상) |
 | 성취기준 커버리지 | 12생과02-01(13), 12생과02-02(3), 12생과02-03(14), 12생과02-04(16), 12생과02-05(15), 12생과02-06(7), 12생과02-07(5) |
 
@@ -20,74 +20,74 @@
 
 | 표제어 | 한자 | 영어 | 명제 | 오개념 | 링크 | 난이도 | 그림 |
 |---|---|---|---:|---:|---:|---|---|
-| ABO식 혈액형 | ABO式 血液型 | ABO blood group | 4 | 2 | 3 | 3 | — |
-| 활동전위 | 活動電位 | action potential | 4 | 2 | 5 | 4 | — |
-| 후천적 면역 | 後天的 免疫 | adaptive immunity | 4 | 2 | 5 | 4 | — |
-| 길항작용 | 拮抗作用 | antagonism | 4 | 2 | 4 | 3 | — |
-| 항체 | 抗體 | antibody | 4 | 2 | 4 | 2 | — |
-| 항이뇨호르몬 | 抗利尿호르몬 | antidiuretic hormone | 3 | 2 | 3 | 3 | — |
-| 항원항체반응의 특이성 | 抗原抗體反應의 特異性 | specificity of the antigen-antibody reaction | 4 | 2 | 4 | 3 | — |
+| ABO식 혈액형 | ABO式 血液型 | ABO blood group | 4 | 2 | 3 | 3 | ○ |
+| 활동전위 | 活動電位 | action potential | 4 | 2 | 5 | 4 | ○ |
+| 후천적 면역 | 後天的 免疫 | adaptive immunity | 4 | 2 | 5 | 4 | ○ |
+| 길항작용 | 拮抗作用 | antagonism | 4 | 2 | 4 | 3 | ○ |
+| 항체 | 抗體 | antibody | 4 | 2 | 4 | 2 | ○ |
+| 항이뇨호르몬 | 抗利尿호르몬 | antidiuretic hormone | 3 | 2 | 3 | 3 | ○ |
+| 항원항체반응의 특이성 | 抗原抗體反應의 特異性 | specificity of the antigen-antibody reaction | 4 | 2 | 4 | 3 | ○ |
 | 항원 검사 | 抗原 檢査 | antigen test | 4 | 2 | 3 | 2 | — |
-| 항원 | 抗原 | antigen | 4 | 2 | 4 | 2 | — |
-| 자율신경계 | 自律神經系 | autonomic nervous system | 4 | 2 | 6 | 4 | — |
-| 세균 | 細菌 | bacterium | 4 | 2 | 3 | 3 | — |
-| 혈액의 응집반응과 혈액형 판정 | 血液의 凝集反應과 血液型 判定 | blood agglutination and blood typing | 4 | 2 | 3 | 4 | — |
-| 혈당량 조절 | 血糖量 調節 | regulation of blood glucose level | 4 | 2 | 5 | 4 | — |
-| 수혈 | 輸血 | blood transfusion | 4 | 2 | 3 | 3 | — |
-| 뇌줄기 | 腦줄기 | brainstem | 4 | 2 | 4 | 3 | — |
-| 세포성면역 | 細胞性免疫 | cell-mediated immunity | 4 | 2 | 5 | 4 | — |
-| 중추신경계 | 中樞神經系 | central nervous system | 3 | 2 | 6 | 2 | — |
-| 소뇌 | 小腦 | cerebellum | 4 | 2 | 3 | 2 | — |
-| 대뇌겉질 | 大腦겉質 | cerebral cortex | 4 | 2 | 3 | 3 | — |
-| 대뇌 | 大腦 | cerebrum | 3 | 2 | 3 | 3 | — |
-| 신경계와 내분비계의 비교 | 神經系와 內分泌系의 比較 | comparison of the nervous and endocrine systems | 3 | 2 | 3 | 3 | — |
-| 탈분극 | 脫分極 | depolarization | 3 | 2 | 5 | 3 | — |
-| 사이뇌 | 사이腦 | diencephalon | 4 | 2 | 5 | 3 | — |
-| 약물과 시냅스전달 | 藥物과 시냅스傳達 | drugs and synaptic transmission | 4 | 2 | 2 | 2 | — |
-| 내분비샘과 외분비샘 | 內分泌샘과 外分泌샘 | endocrine and exocrine glands | 3 | 2 | 3 | 2 | — |
-| 곰팡이 | 해당 없음 | fungus | 4 | 2 | 3 | 2 | — |
-| 집단 면역 | 集團 免疫 | herd immunity | 3 | 2 | 3 | 2 | — |
-| 항상성 | 恒常性 | homeostasis | 4 | 2 | 6 | 3 | — |
-| 호르몬 | 해당 없음 | hormone | 3 | 2 | 6 | 2 | — |
-| 사람의 내분비샘과 호르몬 | 사람의 內分泌샘과 호르몬 | human endocrine glands and their hormones | 3 | 2 | 5 | 3 | — |
-| 체액성면역 | 體液性免疫 | humoral immunity | 4 | 2 | 5 | 4 | — |
-| 병원체의 감염 경로 | 病原體의 感染 經路 | route of infection | 4 | 2 | 4 | 2 | — |
-| 감염성질환과 비감염성질환 | 感染性疾患과 非感染性疾患 | infectious and noninfectious disease | 4 | 2 | 3 | 2 | — |
-| 염증반응 | 炎症反應 | inflammatory response | 4 | 2 | 3 | 3 | — |
-| 선천적 면역 | 先天的 免疫 | innate immunity | 4 | 2 | 5 | 3 | — |
-| 인슐린과 글루카곤 | 해당 없음 | insulin and glucagon | 4 | 2 | 4 | 3 | — |
-| 이온 통로 | 해당 없음 | ion channel | 3 | 2 | 4 | 3 | — |
-| 림프구 | 림프球 | lymphocyte | 4 | 2 | 4 | 3 | — |
-| 막전위 | 膜電位 | membrane potential | 3 | 2 | 3 | 3 | — |
-| 말이집 | 해당 없음 | myelin sheath | 3 | 2 | 3 | 2 | — |
-| 말이집신경과 민말이집신경 | 말이집神經과 민말이집神經 | myelinated and unmyelinated nerves | 3 | 2 | 3 | 2 | — |
-| 음성피드백 | 陰性피드백 | negative feedback | 3 | 2 | 5 | 3 | — |
-| 신경신호의 전도 | 神經信號의 傳導 | conduction of nerve impulse | 4 | 2 | 5 | 4 | — |
-| 기능에 따른 신경세포의 종류 | 機能에 따른 神經細胞의 種類 | classification of neurons by function | 3 | 2 | 5 | 2 | — |
-| 신경세포(뉴런) | 神經細胞 | neuron | 3 | 2 | 3 | 2 | — |
-| 신경전달물질 | 神經傳達物質 | neurotransmitter | 3 | 2 | 3 | 2 | — |
-| 신경계의 구성 | 神經系의 構成 | organization of the nervous system | 3 | 2 | 3 | 2 | — |
-| 체액의 삼투압 조절 | 體液의 滲透壓 調節 | regulation of body fluid osmotic pressure | 4 | 2 | 4 | 4 | — |
-| 병원체 | 病原體 | pathogen | 4 | 2 | 6 | 2 | — |
-| 말초신경계 | 末梢神經系 | peripheral nervous system | 3 | 2 | 4 | 3 | — |
-| 식세포작용 | 食細胞作用 | phagocytosis | 4 | 2 | 4 | 3 | — |
-| 피부와 점막의 방어벽 | 皮膚와 粘膜의 防禦壁 | physical barrier of skin and mucosa | 4 | 2 | 3 | 2 | — |
-| 1차 면역반응과 2차 면역반응 | 1次 免疫反應과 2次 免疫反應 | primary and secondary immune responses | 4 | 2 | 4 | 4 | — |
-| 원생생물 | 原生生物 | protist | 4 | 2 | 3 | 2 | — |
-| 재분극과 과분극 | 再分極과 過分極 | repolarization and hyperpolarization | 3 | 2 | 4 | 3 | — |
-| 휴지전위 | 休止電位 | resting potential | 4 | 2 | 5 | 3 | — |
-| 도약전도 | 跳躍傳導 | saltatory conduction | 3 | 2 | 3 | 3 | — |
-| Na⁺-K⁺ 펌프 | 해당 없음 | sodium-potassium pump | 3 | 2 | 3 | 3 | — |
-| 체성신경계 | 體性神經系 | somatic nervous system | 4 | 2 | 4 | 2 | — |
-| 척수 | 脊髓 | spinal cord | 3 | 2 | 3 | 3 | — |
-| 척수반사와 무조건반사 | 脊髓反射와 無條件反射 | spinal reflex and unconditioned reflex | 4 | 2 | 3 | 3 | — |
-| 시냅스를 통한 신경신호의 전달 | 시냅스를 통한 神經信號의 傳達 | synaptic transmission | 4 | 2 | 4 | 4 | — |
-| 표적세포 | 標的細胞 | target cell | 3 | 2 | 3 | 2 | — |
-| 체온의 조절 | 體溫의 調節 | thermoregulation | 4 | 2 | 5 | 4 | — |
-| 타이록신 | 해당 없음 | thyroxine | 4 | 2 | 4 | 3 | — |
-| 백신의 원리 | 백신의 原理 | principle of vaccination | 4 | 2 | 4 | 3 | — |
-| 백신의 종류 | 백신의 種類 | types of vaccine | 4 | 2 | 3 | 3 | — |
-| 바이러스 | 해당 없음 | virus | 4 | 2 | 3 | 3 | — |
+| 항원 | 抗原 | antigen | 4 | 2 | 4 | 2 | ○ |
+| 자율신경계 | 自律神經系 | autonomic nervous system | 4 | 2 | 6 | 4 | ○ |
+| 세균 | 細菌 | bacterium | 4 | 2 | 3 | 3 | ○ |
+| 혈액의 응집반응과 혈액형 판정 | 血液의 凝集反應과 血液型 判定 | blood agglutination and blood typing | 4 | 2 | 3 | 4 | ○ |
+| 혈당량 조절 | 血糖量 調節 | regulation of blood glucose level | 4 | 2 | 5 | 4 | ○ |
+| 수혈 | 輸血 | blood transfusion | 4 | 2 | 3 | 3 | ○ |
+| 뇌줄기 | 腦줄기 | brainstem | 4 | 2 | 4 | 3 | ○ |
+| 세포성면역 | 細胞性免疫 | cell-mediated immunity | 4 | 2 | 5 | 4 | ○ |
+| 중추신경계 | 中樞神經系 | central nervous system | 3 | 2 | 6 | 2 | ○ |
+| 소뇌 | 小腦 | cerebellum | 4 | 2 | 3 | 2 | ○ |
+| 대뇌겉질 | 大腦겉質 | cerebral cortex | 4 | 2 | 3 | 3 | ○ |
+| 대뇌 | 大腦 | cerebrum | 3 | 2 | 3 | 3 | ○ |
+| 신경계와 내분비계의 비교 | 神經系와 內分泌系의 比較 | comparison of the nervous and endocrine systems | 3 | 2 | 3 | 3 | ○ |
+| 탈분극 | 脫分極 | depolarization | 3 | 2 | 5 | 3 | ○ |
+| 사이뇌 | 사이腦 | diencephalon | 4 | 2 | 5 | 3 | ○ |
+| 약물과 시냅스전달 | 藥物과 시냅스傳達 | drugs and synaptic transmission | 4 | 2 | 2 | 2 | ○ |
+| 내분비샘과 외분비샘 | 內分泌샘과 外分泌샘 | endocrine and exocrine glands | 3 | 2 | 3 | 2 | ○ |
+| 곰팡이 | 해당 없음 | fungus | 4 | 2 | 3 | 2 | ○ |
+| 집단 면역 | 集團 免疫 | herd immunity | 3 | 2 | 3 | 2 | ○ |
+| 항상성 | 恒常性 | homeostasis | 4 | 2 | 6 | 3 | ○ |
+| 호르몬 | 해당 없음 | hormone | 3 | 2 | 6 | 2 | ○ |
+| 사람의 내분비샘과 호르몬 | 사람의 內分泌샘과 호르몬 | human endocrine glands and their hormones | 3 | 2 | 5 | 3 | ○ |
+| 체액성면역 | 體液性免疫 | humoral immunity | 4 | 2 | 5 | 4 | ○ |
+| 병원체의 감염 경로 | 病原體의 感染 經路 | route of infection | 4 | 2 | 4 | 2 | ○ |
+| 감염성질환과 비감염성질환 | 感染性疾患과 非感染性疾患 | infectious and noninfectious disease | 4 | 2 | 3 | 2 | ○ |
+| 염증반응 | 炎症反應 | inflammatory response | 4 | 2 | 3 | 3 | ○ |
+| 선천적 면역 | 先天的 免疫 | innate immunity | 4 | 2 | 5 | 3 | ○ |
+| 인슐린과 글루카곤 | 해당 없음 | insulin and glucagon | 4 | 2 | 4 | 3 | ○ |
+| 이온 통로 | 해당 없음 | ion channel | 3 | 2 | 4 | 3 | ○ |
+| 림프구 | 림프球 | lymphocyte | 4 | 2 | 4 | 3 | ○ |
+| 막전위 | 膜電位 | membrane potential | 3 | 2 | 3 | 3 | ○ |
+| 말이집 | 해당 없음 | myelin sheath | 3 | 2 | 3 | 2 | ○ |
+| 말이집신경과 민말이집신경 | 말이집神經과 민말이집神經 | myelinated and unmyelinated nerves | 3 | 2 | 3 | 2 | ○ |
+| 음성피드백 | 陰性피드백 | negative feedback | 3 | 2 | 5 | 3 | ○ |
+| 신경신호의 전도 | 神經信號의 傳導 | conduction of nerve impulse | 4 | 2 | 5 | 4 | ○ |
+| 기능에 따른 신경세포의 종류 | 機能에 따른 神經細胞의 種類 | classification of neurons by function | 3 | 2 | 5 | 2 | ○ |
+| 신경세포(뉴런) | 神經細胞 | neuron | 3 | 2 | 3 | 2 | ○ |
+| 신경전달물질 | 神經傳達物質 | neurotransmitter | 3 | 2 | 3 | 2 | ○ |
+| 신경계의 구성 | 神經系의 構成 | organization of the nervous system | 3 | 2 | 3 | 2 | ○ |
+| 체액의 삼투압 조절 | 體液의 滲透壓 調節 | regulation of body fluid osmotic pressure | 4 | 2 | 4 | 4 | ○ |
+| 병원체 | 病原體 | pathogen | 4 | 2 | 6 | 2 | ○ |
+| 말초신경계 | 末梢神經系 | peripheral nervous system | 3 | 2 | 4 | 3 | ○ |
+| 식세포작용 | 食細胞作用 | phagocytosis | 4 | 2 | 4 | 3 | ○ |
+| 피부와 점막의 방어벽 | 皮膚와 粘膜의 防禦壁 | physical barrier of skin and mucosa | 4 | 2 | 3 | 2 | ○ |
+| 1차 면역반응과 2차 면역반응 | 1次 免疫反應과 2次 免疫反應 | primary and secondary immune responses | 4 | 2 | 4 | 4 | ○ |
+| 원생생물 | 原生生物 | protist | 4 | 2 | 3 | 2 | ○ |
+| 재분극과 과분극 | 再分極과 過分極 | repolarization and hyperpolarization | 3 | 2 | 4 | 3 | ○ |
+| 휴지전위 | 休止電位 | resting potential | 4 | 2 | 5 | 3 | ○ |
+| 도약전도 | 跳躍傳導 | saltatory conduction | 3 | 2 | 3 | 3 | ○ |
+| Na⁺-K⁺ 펌프 | 해당 없음 | sodium-potassium pump | 3 | 2 | 3 | 3 | ○ |
+| 체성신경계 | 體性神經系 | somatic nervous system | 4 | 2 | 4 | 2 | ○ |
+| 척수 | 脊髓 | spinal cord | 3 | 2 | 3 | 3 | ○ |
+| 척수반사와 무조건반사 | 脊髓反射와 無條件反射 | spinal reflex and unconditioned reflex | 4 | 2 | 3 | 3 | ○ |
+| 시냅스를 통한 신경신호의 전달 | 시냅스를 통한 神經信號의 傳達 | synaptic transmission | 4 | 2 | 4 | 4 | ○ |
+| 표적세포 | 標的細胞 | target cell | 3 | 2 | 3 | 2 | ○ |
+| 체온의 조절 | 體溫의 調節 | thermoregulation | 4 | 2 | 5 | 4 | ○ |
+| 타이록신 | 해당 없음 | thyroxine | 4 | 2 | 4 | 3 | ○ |
+| 백신의 원리 | 백신의 原理 | principle of vaccination | 4 | 2 | 4 | 3 | ○ |
+| 백신의 종류 | 백신의 種類 | types of vaccine | 4 | 2 | 3 | 3 | ○ |
+| 바이러스 | 해당 없음 | virus | 4 | 2 | 3 | 3 | ○ |
 
 ## 3. ★관계 명제 전문 — 검토의 중심
 

@@ -12,7 +12,7 @@
 | 개념 카드 | 65장 |
 | 관계 명제 | **219개** (그중 `invertible` 63개) |
 | 오개념 | 130개 (LLM 출처 130개) |
-| 교과서 그림 | 0장 → 카드 0/65 |
+| 교과서 그림 | 34장 → 카드 60/65 |
 | 신규 `concept_key` | 64개 (G3 대상) |
 | 성취기준 커버리지 | 12생과01-01(9), 12생과01-02(7), 12생과01-03(7), 12생과01-04(8), 12생과01-05(3), 12생과01-06(14), 12생과01-07(17) |
 
@@ -20,71 +20,71 @@
 
 | 표제어 | 한자 | 영어 | 명제 | 오개념 | 링크 | 난이도 | 그림 |
 |---|---|---|---:|---:|---:|---|---|
-| 비생물요소 | 非生物要素 | abiotic factor | 3 | 2 | 3 | 1 | — |
-| 생명과학의 연구 성과 | 生命科學硏究成果 | achievement of life science | 3 | 2 | 2 | 2 | — |
-| 적응과 진화 | 適應進化 | adaptation and evolution | 3 | 2 | 3 | 3 | — |
-| 동화작용 | 同化作用 | anabolism | 3 | 2 | 3 | 2 | — |
-| ATP와 ADP의 전환 | 해당 없음 | conversion between ATP and ADP | 3 | 2 | 3 | 3 | — |
-| ATP | 해당 없음 | adenosine triphosphate | 3 | 2 | 3 | 3 | — |
-| 기초대사량 | 基礎代謝量 | basal metabolic rate | 3 | 2 | 3 | 2 | — |
-| 생물요소 | 生物要素 | biotic factor | 3 | 2 | 5 | 2 | — |
-| 탄소순환 | 炭素循環 | carbon cycle | 4 | 2 | 4 | 3 | — |
-| 환경수용력 | 環境收容力 | carrying capacity | 3 | 2 | 3 | 2 | — |
-| 이화작용 | 異化作用 | catabolism | 3 | 2 | 4 | 2 | — |
-| 세포 | 細胞 | cell | 3 | 2 | 4 | 1 | — |
-| 세포호흡 | 細胞呼吸 | cellular respiration | 4 | 2 | 5 | 3 | — |
-| 생명과학의 특성 | 生命科學特性 | characteristic of life science | 3 | 2 | 3 | 2 | — |
-| 생물의 특성 | 生物特性 | characteristic of organism | 4 | 2 | 6 | 2 | — |
-| 순환계 | 循環系 | circulatory system | 4 | 2 | 5 | 2 | — |
-| 군집 | 群集 | community | 3 | 2 | 6 | 2 | — |
+| 비생물요소 | 非生物要素 | abiotic factor | 3 | 2 | 3 | 1 | ○ |
+| 생명과학의 연구 성과 | 生命科學硏究成果 | achievement of life science | 3 | 2 | 2 | 2 | ○ |
+| 적응과 진화 | 適應進化 | adaptation and evolution | 3 | 2 | 3 | 3 | ○ |
+| 동화작용 | 同化作用 | anabolism | 3 | 2 | 3 | 2 | ○ |
+| ATP와 ADP의 전환 | 해당 없음 | conversion between ATP and ADP | 3 | 2 | 3 | 3 | ○ |
+| ATP | 해당 없음 | adenosine triphosphate | 3 | 2 | 3 | 3 | ○ |
+| 기초대사량 | 基礎代謝量 | basal metabolic rate | 3 | 2 | 3 | 2 | ○ |
+| 생물요소 | 生物要素 | biotic factor | 3 | 2 | 5 | 2 | ○ |
+| 탄소순환 | 炭素循環 | carbon cycle | 4 | 2 | 4 | 3 | ○ |
+| 환경수용력 | 環境收容力 | carrying capacity | 3 | 2 | 3 | 2 | ○ |
+| 이화작용 | 異化作用 | catabolism | 3 | 2 | 4 | 2 | ○ |
+| 세포 | 細胞 | cell | 3 | 2 | 4 | 1 | ○ |
+| 세포호흡 | 細胞呼吸 | cellular respiration | 4 | 2 | 5 | 3 | ○ |
+| 생명과학의 특성 | 生命科學特性 | characteristic of life science | 3 | 2 | 3 | 2 | ○ |
+| 생물의 특성 | 生物特性 | characteristic of organism | 4 | 2 | 6 | 2 | ○ |
+| 순환계 | 循環系 | circulatory system | 4 | 2 | 5 | 2 | ○ |
+| 군집 | 群集 | community | 3 | 2 | 6 | 2 | ○ |
 | 경쟁배타원리 | 競爭排他原理 | competitive exclusion principle | 4 | 2 | 3 | 3 | — |
-| 소비자 | 消費者 | consumer | 3 | 2 | 4 | 2 | — |
-| 분해자 | 分解者 | decomposer | 3 | 2 | 4 | 2 | — |
-| 발생과 성장 | 發生成長 | development and growth | 3 | 2 | 3 | 2 | — |
-| 소화계 | 消化系 | digestive system | 4 | 2 | 4 | 2 | — |
-| 생물과 비생물의 구분 | 生物非生物區分 | distinction between living and nonliving things | 4 | 2 | 3 | 2 | — |
-| 군집의 분포 | 群集分布 | distribution of community | 3 | 2 | 3 | 2 | — |
-| 우점종 | 優占種 | dominant species | 3 | 2 | 4 | 3 | — |
+| 소비자 | 消費者 | consumer | 3 | 2 | 4 | 2 | ○ |
+| 분해자 | 分解者 | decomposer | 3 | 2 | 4 | 2 | ○ |
+| 발생과 성장 | 發生成長 | development and growth | 3 | 2 | 3 | 2 | ○ |
+| 소화계 | 消化系 | digestive system | 4 | 2 | 4 | 2 | ○ |
+| 생물과 비생물의 구분 | 生物非生物區分 | distinction between living and nonliving things | 4 | 2 | 3 | 2 | ○ |
+| 군집의 분포 | 群集分布 | distribution of community | 3 | 2 | 3 | 2 | ○ |
+| 우점종 | 優占種 | dominant species | 3 | 2 | 4 | 3 | ○ |
 | 생태적 지위 | 生態的地位 | ecological niche | 3 | 2 | 3 | 3 | — |
-| 천이 | 遷移 | ecological succession | 4 | 2 | 3 | 3 | — |
-| 생태계보전 | 生態系保全 | ecosystem conservation | 3 | 2 | 3 | 2 | — |
-| 생태계평형 | 生態系平衡 | ecosystem equilibrium | 4 | 2 | 4 | 3 | — |
-| 생태계 | 生態系 | ecosystem | 3 | 2 | 4 | 2 | — |
-| 물질대사에서의 에너지전환 | 해당 없음 | energy conversion in metabolism | 4 | 2 | 4 | 3 | — |
-| 에너지효율 | 해당 없음 | energy efficiency | 3 | 2 | 3 | 3 | — |
-| 에너지흐름 | 해당 없음 | energy flow in ecosystem | 4 | 2 | 4 | 3 | — |
-| 환경저항 | 環境抵抗 | environmental resistance | 3 | 2 | 4 | 2 | — |
-| 배설계 | 排泄系 | excretory system | 4 | 2 | 4 | 2 | — |
-| 먹이사슬 | 해당 없음 | food chain | 3 | 2 | 6 | 2 | — |
-| 노폐물의 생성과 배설 | 老廢物生成排泄 | formation and excretion of metabolic waste | 4 | 2 | 4 | 3 | — |
-| 기체 교환 | 氣體交換 | gas exchange | 3 | 2 | 4 | 2 | — |
-| 항상성 | 恒常性 | homeostasis | 3 | 2 | 3 | 2 | — |
-| 지표종 | 指標種 | indicator species | 3 | 2 | 3 | 2 | — |
-| 개체 | 個體 | individual organism | 3 | 2 | 3 | 2 | — |
-| 기관계의 통합적 작용 | 器官系統合的作用 | integrated action of organ systems | 4 | 2 | 6 | 3 | — |
-| 생명과학의 통합적 발전 | 生命科學統合的發展 | interdisciplinary development of life science | 3 | 2 | 2 | 3 | — |
+| 천이 | 遷移 | ecological succession | 4 | 2 | 3 | 3 | ○ |
+| 생태계보전 | 生態系保全 | ecosystem conservation | 3 | 2 | 3 | 2 | ○ |
+| 생태계평형 | 生態系平衡 | ecosystem equilibrium | 4 | 2 | 4 | 3 | ○ |
+| 생태계 | 生態系 | ecosystem | 3 | 2 | 4 | 2 | ○ |
+| 물질대사에서의 에너지전환 | 해당 없음 | energy conversion in metabolism | 4 | 2 | 4 | 3 | ○ |
+| 에너지효율 | 해당 없음 | energy efficiency | 3 | 2 | 3 | 3 | ○ |
+| 에너지흐름 | 해당 없음 | energy flow in ecosystem | 4 | 2 | 4 | 3 | ○ |
+| 환경저항 | 環境抵抗 | environmental resistance | 3 | 2 | 4 | 2 | ○ |
+| 배설계 | 排泄系 | excretory system | 4 | 2 | 4 | 2 | ○ |
+| 먹이사슬 | 해당 없음 | food chain | 3 | 2 | 6 | 2 | ○ |
+| 노폐물의 생성과 배설 | 老廢物生成排泄 | formation and excretion of metabolic waste | 4 | 2 | 4 | 3 | ○ |
+| 기체 교환 | 氣體交換 | gas exchange | 3 | 2 | 4 | 2 | ○ |
+| 항상성 | 恒常性 | homeostasis | 3 | 2 | 3 | 2 | ○ |
+| 지표종 | 指標種 | indicator species | 3 | 2 | 3 | 2 | ○ |
+| 개체 | 個體 | individual organism | 3 | 2 | 3 | 2 | ○ |
+| 기관계의 통합적 작용 | 器官系統合的作用 | integrated action of organ systems | 4 | 2 | 6 | 3 | ○ |
+| 생명과학의 통합적 발전 | 生命科學統合的發展 | interdisciplinary development of life science | 3 | 2 | 2 | 3 | ○ |
 | 군집 내 상호작용 | 群集內相互作用 | interspecific interaction | 4 | 2 | 4 | 3 | — |
 | 개체군 내 상호작용 | 個體群內相互作用 | intraspecific interaction | 4 | 2 | 3 | 3 | — |
-| 핵심종 | 核心種 | keystone species | 3 | 2 | 3 | 3 | — |
-| 생명 시스템 | 해당 없음 | living system | 3 | 2 | 3 | 2 | — |
-| 대사성 질환 | 代謝性疾患 | metabolic disease | 4 | 2 | 3 | 2 | — |
-| 물질대사 | 物質代謝 | metabolism | 4 | 2 | 6 | 2 | — |
-| 질소순환 | 窒素循環 | nitrogen cycle | 4 | 2 | 4 | 3 | — |
-| 기관계 | 器官系 | organ system | 3 | 2 | 6 | 2 | — |
-| 기관 | 器官 | organ | 3 | 2 | 3 | 2 | — |
-| 생명 시스템의 구성 단계 | 해당 없음 | organizational level of living system | 4 | 2 | 4 | 2 | — |
-| 운동 시 신체의 생리적 변화 | 運動時身體生理的變化 | physiological change during exercise | 3 | 2 | 3 | 3 | — |
-| 개체군의 밀도 | 個體群密度 | population density | 3 | 2 | 3 | 2 | — |
-| 성장곡선 | 成長曲線 | population growth curve | 4 | 2 | 4 | 3 | — |
-| 개체군 | 個體群 | population | 3 | 2 | 6 | 2 | — |
-| 대사성 질환의 예방 | 代謝性疾患豫防 | prevention of metabolic disease | 3 | 2 | 2 | 1 | — |
-| 생산자 | 生産者 | producer | 3 | 2 | 4 | 2 | — |
+| 핵심종 | 核心種 | keystone species | 3 | 2 | 3 | 3 | ○ |
+| 생명 시스템 | 해당 없음 | living system | 3 | 2 | 3 | 2 | ○ |
+| 대사성 질환 | 代謝性疾患 | metabolic disease | 4 | 2 | 3 | 2 | ○ |
+| 물질대사 | 物質代謝 | metabolism | 4 | 2 | 6 | 2 | ○ |
+| 질소순환 | 窒素循環 | nitrogen cycle | 4 | 2 | 4 | 3 | ○ |
+| 기관계 | 器官系 | organ system | 3 | 2 | 6 | 2 | ○ |
+| 기관 | 器官 | organ | 3 | 2 | 3 | 2 | ○ |
+| 생명 시스템의 구성 단계 | 해당 없음 | organizational level of living system | 4 | 2 | 4 | 2 | ○ |
+| 운동 시 신체의 생리적 변화 | 運動時身體生理的變化 | physiological change during exercise | 3 | 2 | 3 | 3 | ○ |
+| 개체군의 밀도 | 個體群密度 | population density | 3 | 2 | 3 | 2 | ○ |
+| 성장곡선 | 成長曲線 | population growth curve | 4 | 2 | 4 | 3 | ○ |
+| 개체군 | 個體群 | population | 3 | 2 | 6 | 2 | ○ |
+| 대사성 질환의 예방 | 代謝性疾患豫防 | prevention of metabolic disease | 3 | 2 | 2 | 1 | ○ |
+| 생산자 | 生産者 | producer | 3 | 2 | 4 | 2 | ○ |
 | 방형구법 | 方形區法 | quadrat method | 4 | 2 | 3 | 3 | — |
-| 생태계평형의 회복 | 生態系平衡回復 | recovery of ecosystem equilibrium | 3 | 2 | 3 | 3 | — |
-| 생식과 유전 | 生殖遺傳 | reproduction and heredity | 3 | 2 | 3 | 2 | — |
-| 호흡계 | 呼吸系 | respiratory system | 4 | 2 | 4 | 2 | — |
-| 생존곡선 | 生存曲線 | survivorship curve | 4 | 2 | 3 | 3 | — |
-| 조직 | 組織 | tissue | 3 | 2 | 3 | 2 | — |
+| 생태계평형의 회복 | 生態系平衡回復 | recovery of ecosystem equilibrium | 3 | 2 | 3 | 3 | ○ |
+| 생식과 유전 | 生殖遺傳 | reproduction and heredity | 3 | 2 | 3 | 2 | ○ |
+| 호흡계 | 呼吸系 | respiratory system | 4 | 2 | 4 | 2 | ○ |
+| 생존곡선 | 生存曲線 | survivorship curve | 4 | 2 | 3 | 3 | ○ |
+| 조직 | 組織 | tissue | 3 | 2 | 3 | 2 | ○ |
 
 ## 3. ★관계 명제 전문 — 검토의 중심
 

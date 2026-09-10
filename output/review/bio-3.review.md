@@ -12,7 +12,7 @@
 | 개념 카드 | 56장 |
 | 관계 명제 | **194개** (그중 `invertible` 52개) |
 | 오개념 | 112개 (LLM 출처 112개) |
-| 교과서 그림 | 0장 → 카드 0/56 |
+| 교과서 그림 | 27장 → 카드 47/56 |
 | 신규 `concept_key` | 56개 (G3 대상) |
 | 성취기준 커버리지 | 12생과03-01(9), 12생과03-02(11), 12생과03-03(12), 12생과03-04(6), 12생과03-05(21) |
 
@@ -20,62 +20,62 @@
 
 | 표제어 | 한자 | 영어 | 명제 | 오개념 | 링크 | 난이도 | 그림 |
 |---|---|---|---:|---:|---:|---|---|
-| 대립유전자빈도 | 對立遺傳子頻度 | allele frequency | 4 | 2 | 6 | 4 | — |
-| 대립유전자 | 對立遺傳子 | allele | 3 | 2 | 5 | 3 | — |
-| 속씨식물문 | 해당 없음 | Angiospermae | 3 | 2 | 2 | 2 | — |
-| 동물계 | 動物界 | Animalia | 4 | 2 | 3 | 2 | — |
+| 대립유전자빈도 | 對立遺傳子頻度 | allele frequency | 4 | 2 | 6 | 4 | ○ |
+| 대립유전자 | 對立遺傳子 | allele | 3 | 2 | 5 | 3 | ○ |
+| 속씨식물문 | 해당 없음 | Angiospermae | 3 | 2 | 2 | 2 | ○ |
+| 동물계 | 動物界 | Animalia | 4 | 2 | 3 | 2 | ○ |
 | 환형동물문 | 環形動物門 | Annelida | 3 | 2 | 3 | 3 | — |
 | 절지동물문 | 節肢動物門 | Arthropoda | 4 | 2 | 3 | 3 | — |
-| 무성생식과 유성생식 | 無性生殖·有性生殖 | asexual and sexual reproduction | 3 | 2 | 3 | 2 | — |
-| 상염색체와 성염색체 | 常染色體·性染色體 | autosome and sex chromosome | 3 | 2 | 2 | 2 | — |
-| 2가 염색체 | 二價染色體 | bivalent | 3 | 2 | 3 | 3 | — |
-| 세포주기 | 細胞週期 | cell cycle | 4 | 2 | 3 | 2 | — |
+| 무성생식과 유성생식 | 無性生殖·有性生殖 | asexual and sexual reproduction | 3 | 2 | 3 | 2 | ○ |
+| 상염색체와 성염색체 | 常染色體·性染色體 | autosome and sex chromosome | 3 | 2 | 2 | 2 | ○ |
+| 2가 염색체 | 二價染色體 | bivalent | 3 | 2 | 3 | 3 | ○ |
+| 세포주기 | 細胞週期 | cell cycle | 4 | 2 | 3 | 2 | ○ |
 | 척삭동물문 | 脊索動物門 | Chordata | 4 | 2 | 3 | 3 | — |
-| 염색분체 | 染色分體 | chromatid | 3 | 2 | 4 | 2 | — |
-| 염색체 | 染色體 | chromosome | 4 | 2 | 4 | 2 | — |
-| 동물의 분류 기준 | 動物 分類 基準 | classification criteria of animal | 4 | 2 | 4 | 4 | — |
-| 식물의 분류 기준 | 植物 分類 基準 | classification criteria of plant | 4 | 2 | 4 | 3 | — |
+| 염색분체 | 染色分體 | chromatid | 3 | 2 | 4 | 2 | ○ |
+| 염색체 | 染色體 | chromosome | 4 | 2 | 4 | 2 | ○ |
+| 동물의 분류 기준 | 動物 分類 基準 | classification criteria of animal | 4 | 2 | 4 | 4 | ○ |
+| 식물의 분류 기준 | 植物 分類 基準 | classification criteria of plant | 4 | 2 | 4 | 3 | ○ |
 | 자포동물문 | 刺胞動物門 | Cnidaria | 3 | 2 | 3 | 2 | — |
-| 체세포분열과 감수분열의 비교 | 體細胞分裂과 減數分裂의 比較 | comparison of mitosis and meiosis | 4 | 2 | 4 | 4 | — |
+| 체세포분열과 감수분열의 비교 | 體細胞分裂과 減數分裂의 比較 | comparison of mitosis and meiosis | 4 | 2 | 4 | 4 | ○ |
 | 극피동물문 | 棘皮動物門 | Echinodermata | 3 | 2 | 3 | 3 | — |
-| 진화의 증거 | 進化의 證據 | evidence of evolution | 4 | 2 | 4 | 3 | — |
-| 생식세포 형성과 생명의 연속성 | 生殖細胞 形成과 生命의 連續性 | gamete formation and continuity of life | 3 | 2 | 3 | 3 | — |
-| 유전자흐름 | 遺傳子 | gene flow | 3 | 2 | 3 | 3 | — |
-| 유전자풀 | 遺傳子 | gene pool | 4 | 2 | 6 | 4 | — |
-| 유전자 | 遺傳子 | gene | 3 | 2 | 3 | 2 | — |
-| 유전적 다양성 | 遺傳的 多樣性 | genetic diversity | 4 | 2 | 4 | 4 | — |
-| 유전적 부동 | 遺傳的 浮動 | genetic drift | 3 | 2 | 3 | 4 | — |
-| 겉씨식물문 | 해당 없음 | Gymnospermae | 3 | 2 | 2 | 2 | — |
-| 상동기관과 상사기관 | 相同器官·相似器官 | homologous and analogous organ | 3 | 2 | 3 | 3 | — |
-| 상동염색체 | 相同染色體 | homologous chromosome | 3 | 2 | 6 | 2 | — |
-| 간기 | 間期 | interphase | 3 | 2 | 4 | 2 | — |
-| 핵형 | 核型 | karyotype | 3 | 2 | 4 | 2 | — |
-| 감수분열 | 減數分裂 | meiosis | 4 | 2 | 6 | 4 | — |
-| 체세포분열 | 體細胞分裂 | mitosis | 4 | 2 | 6 | 3 | — |
-| 분열기 | 分裂期 | mitotic phase | 4 | 2 | 4 | 2 | — |
+| 진화의 증거 | 進化의 證據 | evidence of evolution | 4 | 2 | 4 | 3 | ○ |
+| 생식세포 형성과 생명의 연속성 | 生殖細胞 形成과 生命의 連續性 | gamete formation and continuity of life | 3 | 2 | 3 | 3 | ○ |
+| 유전자흐름 | 遺傳子 | gene flow | 3 | 2 | 3 | 3 | ○ |
+| 유전자풀 | 遺傳子 | gene pool | 4 | 2 | 6 | 4 | ○ |
+| 유전자 | 遺傳子 | gene | 3 | 2 | 3 | 2 | ○ |
+| 유전적 다양성 | 遺傳的 多樣性 | genetic diversity | 4 | 2 | 4 | 4 | ○ |
+| 유전적 부동 | 遺傳的 浮動 | genetic drift | 3 | 2 | 3 | 4 | ○ |
+| 겉씨식물문 | 해당 없음 | Gymnospermae | 3 | 2 | 2 | 2 | ○ |
+| 상동기관과 상사기관 | 相同器官·相似器官 | homologous and analogous organ | 3 | 2 | 3 | 3 | ○ |
+| 상동염색체 | 相同染色體 | homologous chromosome | 3 | 2 | 6 | 2 | ○ |
+| 간기 | 間期 | interphase | 3 | 2 | 4 | 2 | ○ |
+| 핵형 | 核型 | karyotype | 3 | 2 | 4 | 2 | ○ |
+| 감수분열 | 減數分裂 | meiosis | 4 | 2 | 6 | 4 | ○ |
+| 체세포분열 | 體細胞分裂 | mitosis | 4 | 2 | 6 | 3 | ○ |
+| 분열기 | 分裂期 | mitotic phase | 4 | 2 | 4 | 2 | ○ |
 | 연체동물문 | 軟體動物門 | Mollusca | 3 | 2 | 3 | 3 | — |
-| 돌연변이 | 突然變異 | mutation | 3 | 2 | 4 | 3 | — |
-| 자연선택 | 自然選擇 | natural selection | 4 | 2 | 5 | 3 | — |
+| 돌연변이 | 突然變異 | mutation | 3 | 2 | 4 | 3 | ○ |
+| 자연선택 | 自然選擇 | natural selection | 4 | 2 | 5 | 3 | ○ |
 | 선형동물문 | 線形動物門 | Nematoda | 3 | 2 | 3 | 3 | — |
-| 비관다발식물 | 해당 없음 | nonvascular plant | 4 | 2 | 2 | 3 | — |
-| 뉴클레오솜 | 해당 없음 | nucleosome | 2 | 2 | 2 | 3 | — |
-| 과잉생산과 생존경쟁 | 過剩生産·生存競爭 | overproduction and struggle for existence | 4 | 2 | 2 | 3 | — |
-| 유연관계 | 類緣關係 | phylogenetic relationship | 3 | 2 | 3 | 3 | — |
-| 계통과 계통수 | 系統·系統樹 | phylogeny and phylogenetic tree | 4 | 2 | 4 | 3 | — |
-| 식물계 | 植物界 | Plantae | 4 | 2 | 3 | 2 | — |
+| 비관다발식물 | 해당 없음 | nonvascular plant | 4 | 2 | 2 | 3 | ○ |
+| 뉴클레오솜 | 해당 없음 | nucleosome | 2 | 2 | 2 | 3 | ○ |
+| 과잉생산과 생존경쟁 | 過剩生産·生存競爭 | overproduction and struggle for existence | 4 | 2 | 2 | 3 | ○ |
+| 유연관계 | 類緣關係 | phylogenetic relationship | 3 | 2 | 3 | 3 | ○ |
+| 계통과 계통수 | 系統·系統樹 | phylogeny and phylogenetic tree | 4 | 2 | 4 | 3 | ○ |
+| 식물계 | 植物界 | Plantae | 4 | 2 | 3 | 2 | ○ |
 | 편형동물문 | 扁形動物門 | Platyhelminthes | 3 | 2 | 3 | 3 | — |
-| 핵상 | 核相 | ploidy | 3 | 2 | 3 | 3 | — |
+| 핵상 | 核相 | ploidy | 3 | 2 | 3 | 3 | ○ |
 | 해면동물문 | 海綿動物門 | Porifera | 3 | 2 | 2 | 2 | — |
-| 선구동물과 후구동물 | 先口動物·後口動物 | protostome and deuterostome | 4 | 2 | 6 | 4 | — |
-| 학명 | 學名 | scientific name | 4 | 2 | 2 | 2 | — |
-| 종자식물 | 種子植物 | seed plant | 4 | 2 | 4 | 3 | — |
-| 비종자 관다발식물 | 해당 없음 | seedless vascular plant | 4 | 2 | 3 | 3 | — |
-| 6계 분류체계 | 六界 分類體系 | six-kingdom system | 4 | 2 | 4 | 3 | — |
-| 종 | 種 | species | 4 | 2 | 3 | 3 | — |
-| 분류 단계 | 分類 段階 | taxonomic rank | 4 | 2 | 3 | 2 | — |
-| 3역 분류체계 | 三域 分類體系 | three-domain system | 4 | 2 | 3 | 3 | — |
-| 변이 | 變異 | variation | 3 | 2 | 3 | 2 | — |
-| 흔적기관 | 痕跡器官 | vestigial organ | 2 | 2 | 2 | 2 | — |
+| 선구동물과 후구동물 | 先口動物·後口動物 | protostome and deuterostome | 4 | 2 | 6 | 4 | ○ |
+| 학명 | 學名 | scientific name | 4 | 2 | 2 | 2 | ○ |
+| 종자식물 | 種子植物 | seed plant | 4 | 2 | 4 | 3 | ○ |
+| 비종자 관다발식물 | 해당 없음 | seedless vascular plant | 4 | 2 | 3 | 3 | ○ |
+| 6계 분류체계 | 六界 分類體系 | six-kingdom system | 4 | 2 | 4 | 3 | ○ |
+| 종 | 種 | species | 4 | 2 | 3 | 3 | ○ |
+| 분류 단계 | 分類 段階 | taxonomic rank | 4 | 2 | 3 | 2 | ○ |
+| 3역 분류체계 | 三域 分類體系 | three-domain system | 4 | 2 | 3 | 3 | ○ |
+| 변이 | 變異 | variation | 3 | 2 | 3 | 2 | ○ |
+| 흔적기관 | 痕跡器官 | vestigial organ | 2 | 2 | 2 | 2 | ○ |
 
 ## 3. ★관계 명제 전문 — 검토의 중심
 
