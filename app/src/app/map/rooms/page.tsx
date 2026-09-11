@@ -34,10 +34,14 @@ import { isSupabaseConfigured, supabase } from "@/lib/supabase";
  * 돌지만(D5), 서로의 학습량을 보는 일은 서로가 누구인지 서버가 알아야
  * 가능하다. 그래서 여기서만 로그인을 요구하고, 요구하는 이유를 화면에 적는다.
  */
+/** 이 화면에서 지금 하는 일 — 셋 중 하나다 */
+type RoomsView = "mine" | "join" | "create";
+
 export default function RoomsPage() {
   const [uid, setUid] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
   const [rooms, setRooms] = useState<Room[]>([]);
+  const [view, setView] = useState<RoomsView>("mine");
 
   useEffect(() => {
     if (!isSupabaseConfigured()) {
@@ -49,7 +53,11 @@ export default function RoomsPage() {
     const read = async (id: string | null) => {
       if (!alive) return;
       setUid(id);
-      setRooms(id ? await myRooms() : []);
+      const mine = id ? await myRooms() : [];
+      setRooms(mine);
+      // 들어간 방이 없으면 '내 방'을 펼쳐 봐야 빈 카드뿐이다. 처음 온 학생이
+      // 실제로 할 일은 코드를 넣는 쪽이므로 거기서 시작한다
+      if (id && mine.length === 0) setView("join");
       if (alive) setReady(true);
     };
     void sb.auth.getSession().then(({ data }) => read(data.session?.user.id ?? null));
@@ -115,11 +123,26 @@ export default function RoomsPage() {
 
   return (
     <Shell>
-      <JoinBox onJoined={refresh} />
+      {/* ── 이 화면이 필요로 하는 선택 ────────────────────────────────────
+          예전에는 참여 칸·내 방 목록·만들기 폼이 한 화면에 전부 쌓여 있었다.
+          셋은 **동시에 하는 일이 아니다** — 들어갈 방을 찾거나, 코드를 넣거나,
+          새로 만들거나 셋 중 하나다. 한 번에 하나만 보여 주면 화면이 짧아지고
+          지금 무엇을 하는 중인지도 또렷해진다. */}
+      <ChipRow>
+        <Chip on={view === "mine"} onClick={() => setView("mine")}>
+          내 방
+          <span className="ml-1.5 font-semibold opacity-60">{rooms.length}</span>
+        </Chip>
+        <Chip on={view === "join"} onClick={() => setView("join")}>
+          코드로 참여
+        </Chip>
+        <Chip on={view === "create"} onClick={() => setView("create")}>
+          새로 만들기
+        </Chip>
+      </ChipRow>
 
-      {rooms.length > 0 && (
-        <>
-          <SectionHead title="내 스터디룸" action={`${rooms.length}개`} />
+      {view === "mine" &&
+        (rooms.length > 0 ? (
           <div className="flex flex-col gap-2">
             {rooms.map((r) => (
               <ListCard
@@ -132,10 +155,19 @@ export default function RoomsPage() {
               />
             ))}
           </div>
-        </>
-      )}
+        ) : (
+          <Card>
+            <p className="text-[15px] font-bold">아직 들어간 방이 없어요</p>
+            <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">
+              친구에게 코드를 받았다면 <b className="text-ink">코드로 참여</b>를, 내가 방을
+              열려면 <b className="text-ink">새로 만들기</b>를 눌러 주세요.
+            </p>
+          </Card>
+        ))}
 
-      <CreateBox onCreated={refresh} />
+      {view === "join" && <JoinBox onJoined={() => { void refresh(); setView("mine"); }} />}
+
+      {view === "create" && <CreateBox onCreated={refresh} />}
 
       <p className="mt-8 px-1 text-[12px] leading-relaxed text-ink-faint">
         방 안에서는 서로의 <b className="text-ink-sub">닉네임 · 오늘 푼 문항 수 · 최근 7일
@@ -211,7 +243,6 @@ function JoinBox({ onJoined }: { onJoined: () => void }) {
 /* ────────────────────────────── 만들기 ────────────────────────────── */
 
 function CreateBox({ onCreated }: { onCreated: () => void }) {
-  const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [goal, setGoal] = useState(10);
   const [subjects, setSubjects] = useState<string[]>([]);
@@ -272,28 +303,10 @@ function CreateBox({ onCreated }: { onCreated: () => void }) {
     );
   }
 
-  if (!open) {
-    return (
-      <button
-        onClick={() => setOpen(true)}
-        className="mt-6 flex h-14 w-full items-center justify-center rounded-full bg-surface text-[16px] font-bold text-primary-600 shadow-[0_2px_14px_rgba(23,58,94,0.08)]"
-      >
-        ＋ 새 스터디룸 만들기
-      </button>
-    );
-  }
-
+  // 펼치고 접는 버튼은 없다 — 위의 칩이 그 일을 한다. 같은 일을 두 곳에서
+  // 하게 두면 칩으로 연 폼을 안쪽 버튼으로 닫는 어긋난 상태가 생긴다
   return (
-    <>
-      <SectionHead
-        title="새 스터디룸"
-        action={
-          <button onClick={() => setOpen(false)} className="font-semibold text-ink-faint">
-            그만두기
-          </button>
-        }
-      />
-      <Card className="!p-4">
+    <Card className="!p-4">
         <label className="block">
           <span className="mb-1.5 block px-1 text-[13px] font-bold text-ink-sub">방 이름</span>
           <input
@@ -342,7 +355,6 @@ function CreateBox({ onCreated }: { onCreated: () => void }) {
         >
           {busy ? "만드는 중…" : "만들기"}
         </button>
-      </Card>
-    </>
+    </Card>
   );
 }

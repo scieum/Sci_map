@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import HubTabs from "@/components/HubTabs";
 import {
@@ -94,38 +93,16 @@ export default function ArcadePage() {
       <HubAppBar title="개념 야구" right={<Badge tone="primary">타자 게임</Badge>} />
       <HubTabs />
       <Screen>
-        <HubHeading overline={`${lv.label} · ${innings}이닝 · 개념 ${inScope}장`}>
+        <HubHeading overline={`개념 ${inScope}장이 준비돼 있어요`}>
           정의를 치면,
           <br />
           타자가 걸어 나가요.
         </HubHeading>
 
-        {/* 이어서 할 일 하나 — 지난 설정 그대로 바로 시작한다 */}
-        <DarkHero
-          eyebrow={played ? "CONTINUE" : "FIRST PITCH"}
-          title={played ? `${lv.label} ${innings}이닝, 이어서 한 판` : "첫 타석에 서 볼까요"}
-          meta={
-            played
-              ? `지금까지 ${record!.plays}판 · 최고 ${record!.bestScore}점`
-              : "정의가 날아오면 표제어를 치면 돼요"
-          }
-          cta={played ? "이어서 하기" : "경기 시작하기"}
-          href="/map/arcade/play"
-        />
-
-        <SectionHead
-          title="내 기록"
-          action={played ? `최근 ${record!.recent.length}판` : "아직 없음"}
-        />
-        <StatTiles
-          items={[
-            { label: "최고 점수", value: record?.bestScore ?? 0 },
-            { label: "최고 타속", value: record?.bestKpm ?? 0, unit: "타/분" },
-            { label: "최고 콤보", value: record?.bestCombo ?? 0, unit: "연속" },
-          ]}
-        />
-
-        <SectionHead title="경기 설정" action="자동 저장돼요" />
+        {/* ── 이 화면이 필요로 하는 선택 ────────────────────────────────────
+            설정을 화면 가운데 두었더니 한 판 치기까지 스크롤을 두 번 해야 했다.
+            무엇으로 칠지 먼저 고르고 그다음 시작하는 순서가 맞다 —
+            아래 히어로의 문구와 CTA 가 여기서 고른 것을 그대로 받는다. */}
         <ChipRow label="난이도">
           {LEVEL_ORDER.map((k) => (
             <Chip key={k} on={level === k} onClick={() => pick({ level: k })}>
@@ -140,7 +117,8 @@ export default function ArcadePage() {
             </Chip>
           ))}
         </ChipRow>
-        <ChipRow label="출제 범위">
+        {/* 과목이 일곱이라 줄바꿈하면 세 줄을 먹는다. 가로로 흘린다 */}
+        <ChipRow label="출제 범위" scroll>
           {pool.map(({ subject, count }) => (
             <Chip
               key={subject}
@@ -155,20 +133,38 @@ export default function ArcadePage() {
             </Chip>
           ))}
         </ChipRow>
-        <p className="px-1 text-[12px] leading-relaxed text-ink-faint">
+        <p className="mb-5 px-1 text-[12px] leading-relaxed text-ink-faint">
           {lv.note} · 한 타석 {lv.seconds}초, {lv.targetKpm}타/분을 넘기면 타구가 한 단계 더
-          뻗어요. 범위를 하나도 고르지 않으면 준비된 과목 전부에서 나와요.
+          뻗어요. 범위를 하나도 고르지 않으면 준비된 과목 전부에서 나와요. 고른 것은
+          그대로 기억해 둬요.
         </p>
 
-        {/* CTA 는 설정이 끝나는 자리에 둔다. 순위표·최근 경기 뒤로 밀면 한 판
-            치려고 목록 둘을 지나쳐야 한다. 화면 바닥 고정(BottomCta)으로 두지
-            않은 이유도 같다 — 스크롤이 길어 고정 CTA 가 순위표를 끝까지 가린다 */}
-        <Link
+        {/* 고른 것으로 바로 시작 — 이 화면의 CTA 는 이것 하나다 (D2).
+            따로 시작 버튼을 하나 더 두면 둘 중 뭐가 다른지 학생이 확인하러
+            눌러 보게 된다 */}
+        <DarkHero
+          eyebrow={played ? "CONTINUE" : "FIRST PITCH"}
+          title={played ? `${lv.label} ${innings}이닝, 한 판 더` : "첫 타석에 서 볼까요"}
+          meta={
+            played
+              ? `지금까지 ${record!.plays}판 · 최고 ${record!.bestScore}점`
+              : "정의가 날아오면 표제어를 치면 돼요"
+          }
+          cta={`${lv.label} ${innings}이닝 시작하기`}
           href="/map/arcade/play"
-          className="mt-6 flex h-14 w-full items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta active:bg-primary-600"
-        >
-          {lv.label} {innings}이닝 시작하기
-        </Link>
+        />
+
+        <SectionHead
+          title="내 기록"
+          action={played ? `최근 ${record!.recent.length}판` : "아직 없음"}
+        />
+        <StatTiles
+          items={[
+            { label: "최고 점수", value: record?.bestScore ?? 0 },
+            { label: "최고 타속", value: record?.bestKpm ?? 0, unit: "타/분" },
+            { label: "최고 콤보", value: record?.bestCombo ?? 0, unit: "연속" },
+          ]}
+        />
 
         {/* 규칙 — 접어 둔다. 두 번째 판부터는 읽을 일이 없다 */}
         <SectionHead

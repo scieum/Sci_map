@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import HubTabs from "@/components/HubTabs";
-import { Badge, HubAppBar } from "@/components/hub";
+import { Badge, Chip, ChipRow, HubAppBar } from "@/components/hub";
 import { EmptyState, Screen } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
 import { accentOfSubject } from "@/lib/brand";
 import { boundsOf, fitTo, loadGraph, type ConceptGraph, type GraphNode } from "@/lib/graph";
 import { useProgress } from "@/lib/store";
-import { loadUi } from "@/lib/ui-state";
+import { loadUi, saveUi } from "@/lib/ui-state";
 
 /**
  * 개념 지도 — 탐험 탭의 첫 갈래 (Design.md §4.2).
@@ -94,11 +94,11 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
   const [picked, setPicked] = useState<GraphNode | null>(null);
   const [legendOpen, setLegendOpen] = useState(false);
   const svgRef = useRef<SVGSVGElement | null>(null);
+  /** 걸러 보는 과목. 빈 문자열이면 전체다 */
+  const [subject, setSubject] = useState<string>(() => loadUi().mapSubject ?? "");
 
-  const nodeById = useMemo(
-    () => new Map(graph.nodes.map((n) => [n.id, n])),
-    [graph],
-  );
+  /** 선을 그릴 때 양 끝 좌표를 찾는 자리. 걸러 내기 전 전체로 만든다 */
+  const nodeById = useMemo(() => new Map(graph.nodes.map((n) => [n.id, n])), [graph]);
 
   // ── 화면 크기 ────────────────────────────────────────────────────────────
   // viewBox 의 비율이 실제 그려지는 상자의 비율과 다르면 두 가지가 어긋난다.
@@ -126,12 +126,43 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
   );
   const subjectOf = useCallback((n: GraphNode) => subjects.get(n.id) ?? "", [subjects]);
 
+  /**
+   * 과목 칩에 쓸 목록 — **그래프에 실제로 있는 과목만.**
+   * 카탈로그에서 가져오면 노드가 하나도 없는 과목이 칩으로 서고,
+   * 누르면 빈 화면이 된다.
+   */
+  const subjectList = useMemo(() => {
+    const n = new Map<string, number>();
+    for (const node of graph.nodes) {
+      const s = subjects.get(node.id) ?? "";
+      if (s) n.set(s, (n.get(s) ?? 0) + 1);
+    }
+    return Array.from(n.entries()).sort((a, b) => b[1] - a[1]);
+  }, [graph, subjects]);
+
+  // 과목을 고르면 그 과목의 노드만 남기고, 양쪽 끝이 다 남은 선만 그린다.
+  // 한쪽 끝이 없는 선을 그리면 허공으로 뻗은 선이 되어, 없는 연결이 있는 것처럼
+  // 보인다. 과목 간 연결은 전체 보기에서만 보여 준다.
+  const shownNodes = useMemo(
+    () => (subject ? graph.nodes.filter((n) => subjectOf(n) === subject) : graph.nodes),
+    [graph, subject, subjectOf],
+  );
+  const shownIds = useMemo(() => new Set(shownNodes.map((n) => n.id)), [shownNodes]);
+  const shownLinks = useMemo(
+    () =>
+      subject
+        ? graph.links.filter((l) => shownIds.has(l.from) && shownIds.has(l.to))
+        : graph.links,
+    [graph, subject, shownIds],
+  );
+
   // 처음 볼 자리 — **단원 하나**다 (§4.2 "현재 학습 중 단원 중심으로 줌인").
   // 과목 전체를 담으면 폰에서 노드가 2px 밖에 안 돼 점 구름이 된다.
   // 어느 단원인가: 본 적 있는 개념이 가장 많은 단원, 없으면 개념 탭에서 보던
   // 과목의 첫 단원, 그것도 없으면 전체.
   const initial = useMemo(() => {
-    const want = loadUi().conceptsSubject;
+    const ui = loadUi();
+    const want = ui.mapSubject ?? ui.conceptsSubject;
     const inSubject = want
       ? graph.nodes.filter((n) => subjectOf(n) === want)
       : graph.nodes;
@@ -167,6 +198,25 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
       return { ...v, y: v.y + (v.h - h) / 2, h };
     });
   }, [box]);
+
+  /**
+   * 과목을 고른다 — 고르는 즉시 **그 과목에 맞춰 다시 잡는다.**
+   *
+   * 걸러 놓기만 하고 보던 자리를 그대로 두면, 지금 보던 화면에 그 과목 노드가
+   * 하나도 없을 때 빈 캔버스가 뜬다. 학생 눈에는 "눌렀더니 아무것도 없다"이고,
+   * 밀어서 찾을 단서도 없다.
+   *
+   * 효과(useEffect)가 아니라 여기서 바로 하는 이유: 무엇이 이 변화를 일으켰는지
+   * 한 자리에 남기기 위해서다. 효과로 옮기면 subject 가 바뀌는 모든 경로가
+   * 뷰까지 건드리게 되고, 나중에 "왜 여기서 화면이 튀지"를 되짚어야 한다.
+   */
+  function pickSubject(next: string) {
+    setSubject(next);
+    saveUi({ mapSubject: next });
+    setPicked(null); // 걸러 낸 뒤에도 남아 있던 시트가 떠 있으면 어색하다
+    const pool = next ? graph.nodes.filter((n) => subjectOf(n) === next) : graph.nodes;
+    if (pool.length > 0 && box.w > 0) setView(fitTo(boundsOf(pool), box));
+  }
 
   const levelOf = useCallback(
     (id: string): Learned => {
@@ -261,8 +311,8 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
 
   /** 연결이 많은 것부터 — 밀 때마다 다시 정렬하지 않도록 한 번만 만든다 */
   const byDegree = useMemo(
-    () => [...graph.nodes].sort((a, b) => b.degree - a.degree),
-    [graph],
+    () => [...shownNodes].sort((a, b) => b.degree - a.degree),
+    [shownNodes],
   );
 
   /**
@@ -275,7 +325,12 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
    * 전부가 살아남는다 — 기기 크기를 따로 나눌 필요가 없다.
    */
   const labels = useMemo(() => {
-    if (u >= 4) return [] as GraphNode[]; // 너무 멀면 아예 걸지 않는다
+    // 아주 멀리서도 **허브 이름 몇 개는 남긴다.** 예전 기준(u ≥ 4)은 과목 하나를
+    // 통째로 맞추면 바로 걸려서, 과목 칩을 누른 순간 이름 없는 동그라미 무더기가
+    // 됐다. 글자 크기는 u 에 비례해 커지므로 화면에서는 늘 11px 이고, 겹치면
+    // 버리는 규칙이 아래에 이미 있다 — 멀수록 적게 살아남을 뿐 못 읽게 되지는
+    // 않는다. 정말 아무 의미 없는 배율에서만 손을 뗀다.
+    if (u >= 14) return [] as GraphNode[];
     const font = 11 * u;
     const taken: { x1: number; y1: number; x2: number; y2: number }[] = [];
     const out: GraphNode[] = [];
@@ -301,20 +356,42 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
   const pickedCard = picked ? conceptById(picked.id) : null;
 
   return (
-    <div
-      ref={wrapRef}
-      /* 탭 바(56px)와 홈 인디케이터(safe-area)를 뺀 나머지가 캔버스다.
-         1024px 이상에서는 전체 폭 캔버스로 둔다 (Design.md §3.3) */
-      className="relative h-[calc(100dvh-56px-76px-48px-env(safe-area-inset-bottom))] w-full overflow-hidden bg-bg"
-    >
-      {/* 화면 이름은 위의 앱바가 맡는다. 여기서 한 번 더 "지도"라고 쓰면 같은
-          말이 두 줄 겹치고, 그만큼 캔버스가 줄어든다. 이 자리는 지금 무엇이
-          그려져 있는지만 적는다 */}
-      <div className="pointer-events-none absolute left-0 right-0 top-0 z-10 px-5 pt-2.5">
-        <p className="text-[12px] font-semibold text-ink-faint">
-          개념 {graph.nodes.length}개 · 연결 {graph.links.length}개 · 손가락으로 밀고 오므려요
-        </p>
+    <>
+      {/* 이 화면이 필요로 하는 선택 — 어느 과목을 펼쳐 볼 것인가.
+          275개를 통으로 넣으면 폰에서는 점 구름이고, 손가락으로 밀어 찾을 수도
+          없다. 과목을 고르면 그 과목에 맞춰 다시 잡아 준다 */}
+      <div className="mx-auto w-full max-w-xl px-5 md:px-8">
+        <ChipRow scroll>
+          <Chip on={subject === ""} onClick={() => pickSubject("")}>
+            전체
+            <span className="ml-1.5 font-semibold opacity-60">{graph.nodes.length}</span>
+          </Chip>
+          {subjectList.map(([name, count]) => (
+            <Chip key={name} on={subject === name} onClick={() => pickSubject(name)}>
+              {name}
+              <span className="ml-1.5 font-semibold opacity-60">{count}</span>
+            </Chip>
+          ))}
+        </ChipRow>
       </div>
+
+      <div
+        ref={wrapRef}
+        /* 탭 바(56px)·허브 세그먼트(76px)·앱바(48px)·과목 칩 줄(48px)과 홈
+           인디케이터(safe-area)를 뺀 나머지가 캔버스다. 위에 뭐가 늘면 여기도
+           같이 늘린다 — 어긋나면 그만큼 캔버스가 화면 밖으로 밀려 세로
+           스크롤이 생긴다.
+           1024px 이상에서는 전체 폭 캔버스로 둔다 (Design.md §3.3) */
+        className="relative h-[calc(100dvh-56px-76px-48px-48px-env(safe-area-inset-bottom))] w-full overflow-hidden bg-bg"
+      >
+        {/* 화면 이름은 위의 앱바가 맡는다. 여기서 한 번 더 "지도"라고 쓰면 같은
+            말이 두 줄 겹치고, 그만큼 캔버스가 줄어든다. 이 자리는 지금 무엇이
+            그려져 있는지만 적는다 */}
+        <div className="pointer-events-none absolute left-0 right-0 top-0 z-10 px-5 pt-2.5">
+          <p className="text-[12px] font-semibold text-ink-faint">
+            개념 {shownNodes.length}개 · 연결 {shownLinks.length}개 · 손가락으로 밀고 오므려요
+          </p>
+        </div>
 
       <svg
         ref={svgRef}
@@ -327,11 +404,11 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
         onPointerCancel={onPointerUp}
         onWheel={onWheel}
         role="img"
-        aria-label={`개념 지도 — 개념 ${graph.nodes.length}개와 연결 ${graph.links.length}개`}
+        aria-label={`개념 지도 — ${subject || "전체 과목"} · 개념 ${shownNodes.length}개와 연결 ${shownLinks.length}개`}
       >
         {/* 간선 먼저 — 노드가 위에 와야 누르기 쉽다 */}
         <g>
-          {graph.links.map((l, i) => {
+          {shownLinks.map((l, i) => {
             const a = nodeById.get(l.from);
             const b = nodeById.get(l.to);
             if (!a || !b) return null;
@@ -352,7 +429,7 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
           })}
         </g>
         <g>
-          {graph.nodes.map((n) => {
+          {shownNodes.map((n) => {
             const r = rOf(n.degree);
             const learned = levelOf(n.id);
             const accent = accentOfSubject(subjectOf(n));
@@ -456,6 +533,7 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
           </Link>
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }

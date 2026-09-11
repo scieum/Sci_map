@@ -91,12 +91,35 @@ export function HubHeading({
 
 /* ────────────────────────────── 필터 칩 ────────────────────────────── */
 
-/** 칩 한 줄. 넘치면 가로로 흐르되 스크롤바는 감춘다 */
-export function ChipRow({ label, children }: { label?: string; children: ReactNode }) {
+/**
+ * 칩 한 줄.
+ *
+ * `scroll` 을 켜면 줄을 바꾸지 않고 가로로 흐른다. 칩이 예닐곱 개를 넘으면
+ * 줄바꿈은 화면 높이를 두세 줄씩 먹는데, 칩 줄 위에 놓인 것이 지도 캔버스나
+ * 히어로처럼 높이가 곧 쓸모인 물건이면 그 손해가 크다. 스크롤바는 감춘다 —
+ * 잘린 칩이 이미 "옆에 더 있다"고 말한다.
+ */
+export function ChipRow({
+  label,
+  scroll,
+  children,
+}: {
+  label?: string;
+  scroll?: boolean;
+  children: ReactNode;
+}) {
   return (
     <div className="mb-3">
       {label && <p className="mb-2 text-[12px] font-bold text-ink-faint">{label}</p>}
-      <div className="flex flex-wrap gap-2">{children}</div>
+      <div
+        className={
+          scroll
+            ? "flex gap-2 overflow-x-auto pb-0.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            : "flex flex-wrap gap-2"
+        }
+      >
+        {children}
+      </div>
     </div>
   );
 }
