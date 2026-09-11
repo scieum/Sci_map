@@ -5,7 +5,17 @@ import { usePathname } from "next/navigation";
 
 const TABS = [
   { href: "/concepts", label: "개념", icon: IconCards },
-  { href: "/map", label: "지도", icon: IconGraph },
+  // 라벨은 "탐험" — 이 칸이 지도 하나가 아니라 **지도·야구·스터디룸 셋을 품는
+  // 자리**가 됐기 때문이다 (교사 결정 2026-09-11). "지도"로 두면 바깥 이름이
+  // 안의 세그먼트 하나와 같은 말이라, 야구를 하다 지도 탭을 누르면 어디로 가는
+  // 것인지 알 수 없다.
+  //
+  // 셋이 공유하는 성질은 "한 단원에 매이지 않고 둘러본다"는 것이다 —
+  // 개념 탭이 한 단원을 파고들고 홈이 오늘 할 일을 보여 주는 것과 갈린다.
+  // 아이콘도 노드 그래프(=지도)에서 나침반으로 바꿨다. 아이콘이 안의 화면
+  // 하나를 그리고 있으면 라벨만 바꿔 봐야 같은 오해가 남는다.
+  // 라우트(/map)와 §7.5 의 5탭 계약은 그대로다.
+  { href: "/map", label: "탐험", icon: IconCompass },
   // 라벨은 "홈" — 이 자리가 앱을 열면 닿는 곳이다 (교사 결정 2026-09-07).
   // 화면 자체는 여전히 데일리 인출이다 (Design.md §4.4).
   { href: "/", label: "홈", icon: IconHome },
@@ -63,13 +73,12 @@ function IconCards() {
     </svg>
   );
 }
-function IconGraph() {
+/** 탐험 — 나침반. 지도·야구·스터디룸 어느 하나로 읽히지 않는 그림이라야 한다 */
+function IconCompass() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden>
-      <circle cx="6" cy="6" r="2.5" />
-      <circle cx="18" cy="8" r="2.5" />
-      <circle cx="10" cy="18" r="2.5" />
-      <path d="M8 7.2 15.6 8M7.2 8.2l2 7.2M16.2 10.1l-4.7 6" />
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.4 8.6-2.1 4.7-4.7 2.1 2.1-4.7z" />
     </svg>
   );
 }

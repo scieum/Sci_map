@@ -42,7 +42,7 @@ export const subjectAccent = (subject: string): string =>
  * 사전에 없는 과목은 브랜드색으로 떨어진다. 없는 과목에 색을 지어내지 않는다.
  */
 /**
- * fillSolid·fillSoft 는 SVG 용이다. 지도 탭의 노드는 <circle> 이라 bg-* 가 듣지
+ * fillSolid·fillSoft 는 SVG 용이다. 개념 지도의 노드는 <circle> 이라 bg-* 가 듣지
  * 않고 fill-* 를 써야 한다 — 같은 색을 두 벌로 적어 두는 대신 여기 한 곳에 둔다.
  */
 export type Accent = {

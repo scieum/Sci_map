@@ -12,7 +12,7 @@ import { useProgress } from "@/lib/store";
 import { loadUi } from "@/lib/ui-state";
 
 /**
- * 지도 탭 — 개념 그래프 (Design.md §4.2).
+ * 개념 지도 — 탐험 탭의 첫 갈래 (Design.md §4.2).
  *
  * 캔버스형 화면. 노드 = 개념 카드, 엣지 = 링크 4종.
  *   노드 크기  링크 수 (허브가 커진다)
