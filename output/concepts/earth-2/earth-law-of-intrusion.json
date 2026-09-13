@@ -12,20 +12,20 @@
   "definition_source": "restated",
   "relations": [
     {
-      "id": "rel-lint-order",
-      "text": "뚫고 들어간 암석은 뚫린 암석보다 나중에 생긴 것으로 판단한다.",
+      "id": "rel-lint-extrusive",
+      "text": "용암이 분출해 굳은 뒤 그 위에 지층이 쌓인 경우라면 화성암이 위 지층보다 먼저 만들어진 것이다.",
       "form": {
-        "condition": "관입 관계가 분명하게 관찰될 때",
+        "condition": "화성암이 관입한 것인지 분출한 것인지를 먼저 가릴 때",
         "type": "conditional",
-        "scope": "관입암과 관입당한 암석"
+        "scope": "관입이 아니라 분출로 만들어진 화성암과 그 위의 지층"
       },
       "invertible": true,
-      "invertible_reason": "뚫릴 암석이 먼저 있어야 뚫고 들어갈 수 있으므로 차례를 바꾸면 반드시 거짓이다.",
+      "invertible_reason": "이미 굳은 암석 위에 퇴적물이 쌓인 것이므로 차례를 바꾼 문장은 반드시 거짓이다.",
       "curriculum": [
         "12지구02-01"
       ],
       "verified_by": "pending",
-      "inverted_text": "뚫고 들어간 암석은 뚫린 암석보다 먼저 생긴 것으로 판단한다."
+      "inverted_text": "용암이 분출해 굳은 뒤 그 위에 지층이 쌓였더라도 화성암이 위 지층보다 나중에 만들어진 것이다."
     },
     {
       "id": "rel-lint-evidence",
@@ -36,7 +36,7 @@
         "scope": "관입 접촉부에 남은 흔적"
       },
       "invertible": false,
-      "invertible_reason": "판단 근거를 밝힌 진술이라 뒤집을 방향이 없다.",
+      "invertible_reason": "근거와 결론을 맞바꾼 문장('관입 관계이면 경계가 뚜렷하고 변성 자국이 있다')도 참이라 반드시 거짓이 아니다.",
       "curriculum": [
         "12지구02-01"
       ],
@@ -49,7 +49,7 @@
       "why_wrong": "관입한 화성암이라면 그렇지만, 용암이 분출해 굳은 뒤 그 위에 지층이 쌓였다면 화성암이 더 오래되었다.",
       "source": "llm",
       "verified_by": "pending",
-      "linked_relation": "rel-lint-order"
+      "linked_relation": "rel-lint-extrusive"
     }
   ],
   "links": [
@@ -76,5 +76,8 @@
   ],
   "difficulty": 2,
   "role": "supporting",
-  "version": 1
+  "version": 1,
+  "notes": [
+    "고치기 전의 rel-lint-order('뚫고 들어간 암석은 뚫린 암석보다 나중')는 definition 을 되풀이했고 earth-intrusion 의 rel-int-order 와도 같은 말이었다. 법칙 문장은 definition 과 rel-int-order 에 두고, 이 자리는 법칙을 쓸 때 걸리는 단서(분출암과의 구별)로 갈음했다."
+  ]
 }

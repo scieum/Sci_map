@@ -12,28 +12,19 @@
   "definition_source": "restated",
   "relations": [
     {
-      "id": "rel-rel-order",
-      "text": "지층이 뒤집히지 않았다면 아래에 놓인 지층일수록 먼저 쌓인 것으로 본다.",
+      "id": "rel-rel-events",
+      "text": "한 단면에 남은 퇴적·관입·부정합의 차례는 지사학의 법칙을 여럿 겹쳐 적용해야 세울 수 있다.",
       "form": {
-        "condition": "지층의 역전이 없다고 확인되었을 때",
+        "condition": "한 지역의 지층 단면으로 지질학적 사건을 재구성할 때",
         "type": "conditional",
-        "scope": "정상 층서를 이루는 퇴적 지층",
-        "antecedent": {
-          "quantity": "지층이 놓인 깊이",
-          "direction": "증가"
-        },
-        "consequent": {
-          "quantity": "그 지층의 나이",
-          "direction": "증가"
-        }
+        "scope": "여러 종류의 사건이 함께 남은 지층 단면"
       },
-      "invertible": true,
-      "invertible_reason": "퇴적물이 위로 얹혀 쌓이므로 아래가 나중이라는 문장은 반드시 거짓이다.",
+      "invertible": false,
+      "invertible_reason": "법칙 하나만으로 차례가 서는 단면도 있어 뒤집은 문장이 반드시 거짓이 되지는 않는다.",
       "curriculum": [
         "12지구02-01"
       ],
-      "verified_by": "pending",
-      "inverted_text": "지층이 뒤집히지 않았다면 아래에 놓인 지층일수록 나중에 쌓인 것으로 본다."
+      "verified_by": "pending"
     },
     {
       "id": "rel-rel-gap",
@@ -105,5 +96,8 @@
   ],
   "difficulty": 3,
   "role": "core",
-  "version": 1
+  "version": 1,
+  "notes": [
+    "고치기 전의 rel-rel-order 는 earth-law-of-superposition 의 definition·rel-sup-order 와 같은 문장이었다. 지층 누중의 문장은 그 카드 한 곳에 두고, 이 카드는 여러 법칙을 묶어 사건 차례를 세우는 일(원문 90쪽 탐구)을 맡는다."
+  ]
 }

@@ -20,7 +20,7 @@
         "scope": "우리나라 국가지질공원 제도"
       },
       "invertible": false,
-      "invertible_reason": "지정 기준을 밝힌 진술이라 뒤집을 방향이 없다.",
+      "invertible_reason": "지정 기준을 든 문장이라 맞바꿀 짝이 없어 뒤집은 문장이 정해지지 않는다.",
       "curriculum": [
         "12지구02-05"
       ],
@@ -51,26 +51,27 @@
         "scope": "지질공원 제도가 내건 목표"
       },
       "invertible": false,
-      "invertible_reason": "제도의 취지를 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "invertible_reason": "활용과 보전의 차례를 맞바꾼 문장('보전에 힘쓰면 주민이 혜택을 얻는다')도 참일 수 있어 반드시 거짓이 아니다.",
       "curriculum": [
         "12지구02-05"
       ],
       "verified_by": "pending"
     },
     {
-      "id": "rel-geopark-rocks",
-      "text": "우리나라의 지질 명소는 화성암·퇴적암·변성암과 그 암석들이 만든 지형으로 이루어져 있다.",
+      "id": "rel-geopark-sites",
+      "text": "두무진은 변성암, 채석강은 퇴적암, 서낭바위는 화성암을 대표하는 우리나라의 지질 명소다.",
       "form": {
-        "condition": "명소를 이루는 암석을 가릴 때",
+        "condition": "명소를 이루는 암석의 갈래로 짝지을 때",
         "type": "classification",
-        "scope": "한반도의 지질 명소"
+        "scope": "원문 137쪽이 함께 묶는 세 명소"
       },
-      "invertible": false,
-      "invertible_reason": "구성 요소를 든 분류형 진술이라 뒤집을 방향이 없다.",
+      "invertible": true,
+      "invertible_reason": "명소와 암석 갈래의 짝을 맞바꾼 문장은 반드시 거짓이 된다.",
       "curriculum": [
         "12지구02-05"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "두무진은 퇴적암, 채석강은 화성암, 서낭바위는 변성암을 대표하는 지질 명소다."
     }
   ],
   "misconceptions": [
@@ -126,5 +127,8 @@
   ],
   "difficulty": 2,
   "role": "core",
-  "version": 1
+  "version": 1,
+  "notes": [
+    "rel-geopark-rocks('명소는 화성암·퇴적암·변성암으로 이루어져 있다')는 거짓이 될 수 있는 경우가 없어 D1 에서 쓸 수 없다고 C6 이 짚었다. 원문 137쪽이 실제로 묶는 세 짝(두무진·채석강·서낭바위)으로 갈아 rel-geopark-sites 로 바꿨다 — 이 카드의 links 가 이미 세 카드를 가리키고 있다."
+  ]
 }

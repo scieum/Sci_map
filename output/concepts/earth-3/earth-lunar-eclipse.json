@@ -70,6 +70,21 @@
       ],
       "verified_by": "pending",
       "inverted_text": "개기일식이 지속되는 시간은 개기월식보다 길다."
+    },
+    {
+      "id": "rel-lunar-eclipse-red",
+      "text": "햇빛 가운데 파장이 긴 붉은빛이 지구 대기에서 꺾여 달까지 닿으므로, 본그림자에 완전히 잠긴 달도 검붉게 보인다.",
+      "form": {
+        "condition": "달이 지구의 본그림자 안에 완전히 들어가 있을 때",
+        "type": "causal",
+        "scope": "대기를 가진 지구가 만드는 본그림자 속의 개기월식"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 설명 문장이라 무엇을 맞바꾸어야 반드시 거짓이 되는지 하나로 정해지지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
     }
   ],
   "misconceptions": [
@@ -77,13 +92,15 @@
       "text": "개기월식 때 달은 완전히 보이지 않는다",
       "why_wrong": "지구 대기를 지나며 굴절된 붉은빛이 달에 닿기 때문에 달은 사라지지 않고 검붉게 보인다.",
       "source": "llm",
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "linked_relation": "rel-lunar-eclipse-red"
     },
     {
       "text": "월식은 달의 위상이 변해서 생기는 현상이다",
       "why_wrong": "위상 변화는 달이 햇빛을 받는 면이 달리 보이는 것이고, 월식은 지구 그림자가 달을 가리는 별개의 현상이다.",
       "source": "llm",
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "linked_relation": "rel-lunar-eclipse-kind"
     }
   ],
   "links": [

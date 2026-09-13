@@ -4,9 +4,9 @@
     "curriculum",
     "relation"
   ],
-  "generated_at": "2026-09-13T17:20:00+09:00",
+  "generated_at": "2026-09-13T17:00:26+09:00",
   "curriculum": {
-    "checked": 45,
+    "checked": 50,
     "standards_in_scope": [
       {
         "code": "12지구02-01",
@@ -42,7 +42,7 @@
     "script_precheck": {
       "tool": ".claude/skills/curriculum-mapper/scripts/validate_tags.py",
       "command": "validate_tags.py output/concepts/earth-2/ --unit earth-2",
-      "result": "카드 45장 검사 · 통과",
+      "result": "1차 45장 통과 · 2차 50장 통과 (2026-09-13 재실행)",
       "note": "태그 0개·실재하지 않는 코드·crosscheck 미확정 코드·다른 영역 코드는 스크립트가 이미 걸렀으므로 다시 보지 않았다. 이 단원이 쓰는 다섯 코드(12지구02-01~05)는 모두 crosscheck: 일치다. 아래 findings 는 '코드는 실재하지만 이 카드의 내용과 맞지 않는' 것만 담는다."
     },
     "findings": [
@@ -57,7 +57,10 @@
           "12지구02-01"
         ],
         "reason": "카드가 받치는 성취기준이 둘인데 하나만 붙었다. rel-int-order('어떤 지층 속에 관입암이 들어 있다면 그 지층이 관입암보다 먼저 만들어진 것이다')는 관입의 법칙 자체이고, 이것은 12지구02-01 전문의 '지층 형성의 선후 관계를 결정짓는 법칙들을 활용하여' 에 그대로 걸린다. 같은 단원의 earth-stratigraphic-law 가 rel-strat-five 에서 관입을 다섯 법칙의 하나로 세고 earth-intrusion 을 prereq 로 걸고 있는데, 정작 earth-intrusion 에는 02-01 이 없다. 02-03 을 떼자는 것이 아니라 02-01 을 더하자는 것이다.",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "resolved",
+        "resolved_note": "2차 재검(카드 50장)에서 제안한 코드가 그대로 반영된 것을 확인했다. 현재 판정은 ok 다 — findings[pass 2] 의 같은 card_id 항목을 보라."
       },
       {
         "card_id": "earth-xenolith",
@@ -70,7 +73,10 @@
           "12지구02-01"
         ],
         "reason": "rel-xen-order('포획암은 그것을 둘러싼 화성암보다 먼저 만들어진 암석이다')는 화성암의 조성·생성(12지구02-03)이 아니라 선후 관계 판단이다. 12지구02-03 전문에는 선후를 가리는 말이 없고, 선후는 12지구02-01 이 맡는다. 나머지 명제(rel-xen-form)는 02-03 쪽이므로 두 코드가 함께 붙어야 한다.",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "resolved",
+        "resolved_note": "2차 재검(카드 50장)에서 제안한 코드가 그대로 반영된 것을 확인했다. 현재 판정은 ok 다 — findings[pass 2] 의 같은 card_id 항목을 보라."
       },
       {
         "card_id": "earth-sedimentary-structure",
@@ -83,7 +89,10 @@
           "12지구02-01"
         ],
         "reason": "rel-struct-graded('점이 층리는 위로 갈수록 입자가 잘아지므로 지층의 위아래와 역전 여부를 가리는 데 쓴다')는 환경 해석(02-02)이 아니라 지층 누중의 법칙을 쓸 수 있는지 가리는 판단이다. 같은 단원의 earth-law-of-superposition 이 rel-sup-premise 에서 '퇴적 구조로 상하를 먼저 가려야 이 법칙을 쓸 수 있다' 고 이 카드에 명시적으로 기대고 있는데, 기대는 쪽만 02-01 을 달고 받치는 쪽은 달지 않았다. rel-struct-crossbed·rel-struct-shallow 는 02-02 가 맞다.",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "resolved",
+        "resolved_note": "2차 재검(카드 50장)에서 제안한 코드가 그대로 반영된 것을 확인했다. 현재 판정은 ok 다 — findings[pass 2] 의 같은 card_id 항목을 보라."
       },
       {
         "card_id": "earth-sedimentary-rock",
@@ -96,7 +105,10 @@
           "12지구02-04"
         ],
         "reason": "명제 셋(rel-sed-diagenesis 속성 작용, rel-sed-compaction 다짐, rel-sed-class 기원별 분류) 가운데 12지구02-02 전문의 '지층과 화석을 통해 지질 시대의 생물과 환경 변화를 해석' 에 걸리는 것이 하나도 없다. 퇴적물이 눌리고 교결되어 암석이 되는 과정이 걸리는 자리는 12지구02-04 의 '지구시스템에서 암석이 순환함을 추론' 이다 — 이 단원의 earth-rock-cycle(02-04)이 이 카드를 prereq 로 걸고 있는 것과도 맞는다. 교과서 96~97쪽 본문이라 범위 이탈은 아니고 태그가 모자란 것이다.",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "resolved",
+        "resolved_note": "2차 재검(카드 50장)에서 제안한 코드가 그대로 반영된 것을 확인했다. 현재 판정은 ok 다 — findings[pass 2] 의 같은 card_id 항목을 보라."
       },
       {
         "card_id": "earth-stratigraphic-correlation",
@@ -109,7 +121,10 @@
           "12지구02-02"
         ],
         "reason": "rel-cor-fossil-distance('화석에 의한 대비는 … 아주 멀리 떨어진 지층에도 쓸 수 있다')가 서는 근거는 화석인데, 12지구02-01 전문에는 화석이 한 번도 나오지 않는다(법칙·상대연령·방사성 동위원소뿐). 화석을 근거로 지층을 읽는 일은 12지구02-02 의 '지층과 화석을 통해' 가 맡는다. rel-cor-lithology·rel-cor-limit 는 02-01 이 맞으므로 두 코드가 함께 붙는 카드다.",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "resolved",
+        "resolved_note": "2차 재검(카드 50장)에서 제안한 코드가 그대로 반영된 것을 확인했다. 현재 판정은 ok 다 — findings[pass 2] 의 같은 card_id 항목을 보라."
       },
       {
         "card_id": "earth-paleoclimate",
@@ -119,7 +134,9 @@
         ],
         "suggested": [],
         "reason": "판단이 갈린다. 12지구02-02 는 해석의 근거를 '지층과 화석' 으로 한정해 적었는데, 이 카드의 rel-pal-proxy 는 빙하 코어와 석순을, rel-pal-oxygen 은 유공충 껍데기의 산소 동위원소비 분석을 든다. 빙하 코어·석순은 지층도 화석도 아니고, 산소 동위원소비는 성취기준 문면에 없는 분석 기법이다. 한편 교과서 102~103쪽 본문 소주제(earth-2-02-4 '지질 시대의 환경을 알려주는 고기후 연구')이고 카드가 말하는 결론은 02-02 가 요구하는 '환경 변화 해석' 그 자체다. 성취기준 문면을 좁게 읽으면 이탈, 단원 의도로 읽으면 범위 안 — C8 에서 사람이 가를 항목으로 올린다. 태그를 바꾸자는 제안은 하지 않는다(02-02 말고 걸릴 코드가 이 영역에 없다).",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "open"
       },
       {
         "card_id": "earth-joint",
@@ -129,7 +146,9 @@
         ],
         "suggested": [],
         "reason": "주상 절리·판상 절리는 교과서 배치상 03-6 '화성암의 구조'(119쪽)라 12지구02-03 이 자연스럽지만, 12지구02-03 전문이 요구하는 것은 '변동대에서 마그마가 생성되고, 그 조성에 따라 다양한 화성암이 생성됨' 까지다 — 굳은 뒤에 생기는 틈은 조성에 따른 생성이 아니다. 반대로 12지구02-04 는 '지각 변동에 따른 구조' 를 갖고 있고 rel-joint-vs-fault 는 절리를 단층(02-04 카드)과 견준다. 다만 판상 절리는 지각 변동이 아니라 하중 제거로 생기므로 02-04 로 옮기는 것도 깔끔하지 않다. 어느 쪽도 완전히 맞지 않아 uncertain 으로 올린다.",
-        "prerequisites": []
+        "prerequisites": [],
+        "pass": 1,
+        "status": "open"
       },
       {
         "card_id": "earth-national-geopark",
@@ -139,6 +158,133 @@
         ],
         "suggested": [],
         "reason": "태그 자체는 맞다(12지구02-05). 다만 이 카드 한 장이 12지구02-05 전체를 덮지는 못한다 — 상세는 coverage_gaps[0]. 명제 넷 가운데 rel-geopark-sustain 이 성취기준 뒷부분('지역사회와 함께하는 … 지속가능한 발전 방안을 제안')을 받고, 앞부분('우리나라의 대표적인 지질공원의 지질학적 형성 과정을 추론')을 받는 명제는 rel-geopark-rocks('우리나라의 지질 명소는 화성암·퇴적암·변성암과 그 암석들이 만든 지형으로 이루어져 있다') 하나인데 이것은 구성 암석의 분류일 뿐 어느 명소가 어떤 과정을 거쳐 만들어졌는지를 말하지 않는다. 이탈이 아니라 미달이므로 verdict 는 ok 로 두고 C1 복귀 판단은 메인에 넘긴다.",
+        "prerequisites": [],
+        "pass": 1,
+        "status": "superseded",
+        "resolved_note": "coverage_gaps[0] 이 2차에서 닫혔다. 이 카드 한 장이 12지구02-05 전체를 덮지 못한다는 지적은 명소 카드 3장이 생기면서 해소됐다."
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-intrusion",
+        "verdict": "ok",
+        "current": [
+          "12지구02-03",
+          "12지구02-01"
+        ],
+        "suggested": [],
+        "reason": "1차 지적대로 02-01 이 더해졌고, 명제 층도 갈렸다 — rel-int-order 만 02-01 을, rel-int-sill-dike·rel-int-contact 는 02-03 을 단다. 카드 층 코드 둘이 각각 그것을 지는 명제를 갖게 되어 내부 정합이 맞는다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-xenolith",
+        "verdict": "ok",
+        "current": [
+          "12지구02-03",
+          "12지구02-01"
+        ],
+        "suggested": [],
+        "reason": "rel-xen-order 가 02-01, rel-xen-form 이 02-03 을 진다. 1차 지적이 그대로 반영됐다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-sedimentary-structure",
+        "verdict": "ok",
+        "current": [
+          "12지구02-02",
+          "12지구02-01"
+        ],
+        "suggested": [],
+        "reason": "rel-struct-graded(지층 역전 판정)만 02-01 로, rel-struct-crossbed·rel-struct-shallow 는 02-02 로 갈렸다. earth-law-of-superposition 의 rel-sup-premise 가 기대는 자리가 이제 같은 코드로 맞물린다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-sedimentary-rock",
+        "verdict": "ok",
+        "current": [
+          "12지구02-02",
+          "12지구02-04"
+        ],
+        "suggested": [],
+        "reason": "rel-sed-class 에 02-02 를 남긴 처리는 맞다고 본다. 남긴 근거는 얇지만(쇄설성·화학적·유기적 가운데 유기적 퇴적암 한 갈래만이 생물·화석과 맞닿는다) 떼면 카드 층의 02-02 를 지는 명제가 하나도 없어져, 내가 1차에서 지적한 바로 그 상태 — 카드 태그를 명제가 받치지 못하는 상태 — 가 된다. 02-04 는 rel-sed-diagenesis·rel-sed-compaction 이 확실히 진다. 다만 C8 에서 rel-sed-class 의 02-02 를 떼기로 한다면 카드 층 02-02 도 함께 떼야 정합이 유지된다는 점을 적어 둔다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-stratigraphic-correlation",
+        "verdict": "ok",
+        "current": [
+          "12지구02-01",
+          "12지구02-02"
+        ],
+        "suggested": [],
+        "reason": "rel-cor-fossil-distance 만 02-02 로, rel-cor-lithology·rel-cor-limit 는 02-01 로 갈렸다. 1차 지적이 반영됐다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-dumujin",
+        "verdict": "ok",
+        "current": [
+          "12지구02-05",
+          "12지구02-04"
+        ],
+        "suggested": [],
+        "reason": "주 코드 12지구02-05 가 맞다 — rel-dumu-protolith(모래→사암→고온·고압→규암)와 rel-dumu-shape(융기 뒤 단층면·절리면을 따라 깎임)가 성취기준 앞 절이 요구하는 '지질학적 형성 과정' 을 시간 순서로 세운다. 부차 코드 02-04 도 타당하다: 사암이 지하 깊은 곳에서 고온·고압을 받아 규암이 되는 것은 02-04 전문의 '변성 작용의 종류' 에 정면으로 걸리고, rel-dumu-relict(변성 뒤에도 퇴적 구조가 남는다)도 변성 작용이 원암을 어디까지 지우는가의 문제다. 원문 132쪽과 137쪽 정리의 ➊번 자리와 맞는다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-chaeseokgang",
+        "verdict": "ok",
+        "current": [
+          "12지구02-05",
+          "12지구02-02"
+        ],
+        "suggested": [],
+        "reason": "02-05 가 맞고, rel-chae-uplift(백악기 호수 퇴적 → 신생대 융기 → 해수면 변동에 따른 침식)가 원문 133쪽 그림 37 의 형성 과정 세 단계를 그대로 짚는다. 부차 코드 02-02 도 타당하다: rel-chae-lake 는 역암·사암·이암 교대층과 화산회라는 '지층' 을 근거로 '과거 이곳이 깊은 호수였다' 는 환경을 되짚는 추론이라, 02-02 전문의 '지층과 화석을 통해 … 환경 변화를 해석' 그 자체다. 이 코드는 카드 층과 명제 층 모두에 달려 있어 받치는 명제도 있다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-seonangbawi",
+        "verdict": "retag",
+        "current": [
+          "12지구02-05",
+          "12지구02-03"
+        ],
+        "suggested": [
+          "12지구02-05",
+          "12지구02-03",
+          "12지구02-01"
+        ],
+        "reason": "02-05 는 맞고 02-03 도 틀리지 않다(화강암·규장암이라는 화성암의 종류와 관입이라는 산출 방식). 다만 이 카드의 핵심 명제 rel-seonang-intrude 는 '쥐라기에 관입해 굳은 화강암을 백악기 후기의 또 다른 마그마가 다시 뚫고 들어가' 라는 두 관입의 **선후**다. 이것은 내가 1차에서 earth-intrusion·earth-xenolith 에 대해 똑같이 지적한 자리 — 선후는 12지구02-03 이 아니라 12지구02-01('지층 형성의 선후 관계를 결정짓는 법칙들을 활용하여')이 맡는다. 카드가 단 오개념 '암맥이 화강암 사이에 끼어 있으므로 암맥이 화강암보다 오래되었다' 도 관입의 법칙 오개념이지 마그마 생성 오개념이 아니다. 같은 단원의 earth-law-of-intrusion(02-01)과 이어지는 자리라 02-01 을 더해야 앞의 두 카드와 처리가 같아진다. 02-03 을 떼자는 것이 아니다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-igneous-landform-korea",
+        "verdict": "ok",
+        "current": [
+          "12지구02-03",
+          "12지구02-05"
+        ],
+        "suggested": [],
+        "reason": "주 코드 02-03 이 맞다 — 원문 117쪽이 그림 20(조성 × 냉각 속도)의 바로 다음에 놓인 적용 대목이고, rel-iglandform-depth(굳은 깊이가 얕을수록 결정이 작아진다)는 02-03 전문의 화성암 생성 그 자체다. 부차 코드 02-05 도 타당하다: rel-iglandform-basalt 가 드는 제주도·한탄강·울릉도·독도는 모두 원문 131쪽 지도에 실린 국가지질공원이라, 이 명제가 명소의 암석이 어떻게 만들어졌는지를 대는 근거가 된다. 두 코드 모두 그것을 지는 명제를 갖고 있다.",
+        "prerequisites": []
+      },
+      {
+        "pass": 2,
+        "card_id": "earth-metamorphic-landform-korea",
+        "verdict": "uncertain",
+        "current": [
+          "12지구02-04",
+          "12지구02-05"
+        ],
+        "suggested": [],
+        "reason": "02-04 는 확실히 맞다(rel-metalandform-quartzite 는 사암이 깊이 묻혀 변성된 뒤 다시 횡압력을 받은 과정, rel-metalandform-history 는 지각 변동과 변성의 되풀이). 갈리는 것은 세 명제에 모두 달린 02-05 다. 12지구02-05 는 대상을 '우리나라의 대표적인 **지질공원**' 으로 한정하는데, rel-metalandform-quartzite 의 백령도 장촌 해안은 백령·대청 국가지질공원 안이라 걸리지만, rel-metalandform-oldest 가 드는 인천 앞바다 대이작도는 원문(126쪽)이 지질공원이라고 말하지 않는다 — '인천 앞바다에 있는 대이작도' 라고만 적혀 있고 131쪽 지도에서도 확인되지 않는다. 게다가 이 명제는 '약 25억 년 전 … 한반도에서 가장 오래된 암석' 이라는 연대 사실이지 형성 과정의 추론이 아니다. 대이작도가 지질공원 구역인가는 내가 확정할 사안이 아니어서(사실 확인) uncertain 으로 올린다. 아니라면 rel-metalandform-oldest 에서 02-05 를 떼는 쪽이고, 그때도 카드 층 02-05 는 rel-metalandform-quartzite 가 계속 받친다.",
         "prerequisites": []
       }
     ],
@@ -151,7 +297,9 @@
         ],
         "severity": "high",
         "detail": "성취기준의 앞 절('우리나라의 대표적인 지질공원의 지질학적 형성 과정을 추론')을 받는 카드가 없다. 원문(output/source/earth-2/text.jsonl)은 명소 셋을 각각 한 쪽씩 형성 과정까지 서술한다 — 132쪽 두무진(백령·대청: 선캄브리아시대 후기 모래 → 사암 → 고온·고압 변성 → 규암, 퇴적 구조를 간직한 해식 기둥·절벽), 133쪽 채석강(전북서해안권: 중생대 백악기 호수 퇴적 환경 + 화산 활동, 격포리 퇴적층의 역암·사암·이암 교대층, 단층·습곡·관입 구조·파식대), 137쪽 단원 정리에 함께 묶인 서낭바위(화강암체에 발달한 단층과 규장암의 풍화·침식). 137쪽 정리 문항이 이 셋의 이름을 직접 묻는다. 현재 카드에는 이 셋의 이름도 형성 과정도 한 번도 나오지 않는다. 134~135쪽 탐구(지속가능한 발전 방안 토의)는 rel-geopark-sustain 이 얇게나마 받는다.",
-        "suggest": "변성암 명소(두무진)·퇴적암 명소(채석강)·화성암 명소(서낭바위) 세 갈래를 C1 후보로 되살릴지 메인이 정한다. 이 보고서는 카드를 만들지 않는다."
+        "suggest": "변성암 명소(두무진)·퇴적암 명소(채석강)·화성암 명소(서낭바위) 세 갈래를 C1 후보로 되살릴지 메인이 정한다. 이 보고서는 카드를 만들지 않는다.",
+        "status": "closed",
+        "closed_note": "2차에서 명소 카드 3장(earth-dumujin 변성암 · earth-chaeseokgang 퇴적암 · earth-seonangbawi 화성암)이 생겨 12지구02-05 의 앞 절('지질학적 형성 과정을 추론')이 덮였다고 본다. 셋의 갈래가 원문 137쪽 단원 정리의 ➊➋➌ (변성암 / 퇴적암 / 화성암 명소)과 일대일로 맞고, 세 카드 모두 형성 과정을 시간 순서로 세운 명제를 갖고 있다 — rel-dumu-protolith→rel-dumu-shape, rel-chae-lake→rel-chae-uplift, rel-seonang-intrude→rel-seonang-differential. '대표적인' 이라는 성취기준의 한정을 세 곳으로 채운 것으로 본다. 남는 것은 131쪽 지도의 나머지 국가지질공원 (한탄강·단양·청송·무등산권 등)인데, 교과서 본문이 이름만 싣고 형성 과정을 쓰지 않으므로 카드가 없다고 미달이 되지는 않는다. 뒷 절(지속가능한 발전 방안)은 1차와 같이 earth-national-geopark 의 rel-geopark-sustain 이 받는다."
       },
       {
         "standard": "12지구02-02",
@@ -161,7 +309,9 @@
         ],
         "severity": "medium",
         "detail": "성취기준이 '지질 시대를 기(紀) 수준에서 구분' 이라고 층위를 못 박았는데, 기 단위를 정면으로 다루는 카드가 없다. earth-geologic-time 의 rel-gt-unit 은 누대>대>기 의 포함 관계만 말하고, 기 이름은 고생대(캄브리아기·석탄기·페름기)·중생대(트라이아스기·쥐라기)·신생대(고진기·신진기·제4기) 카드 안에 흩어져 나온다. 기 수준의 차례 자체를 묻는 자리가 비어 있다 — D1 에서 '기' 를 묻는 문항을 만들 원천이 없다는 뜻이기도 하다.",
-        "suggest": "빈자리를 메울지는 메인이 C1 과 정한다."
+        "suggest": "빈자리를 메울지는 메인이 C1 과 정한다.",
+        "status": "open",
+        "recheck_note": "2차에서도 닫히지 않았다. 새 카드 다섯 장이 기(紀) 이름을 쓰기는 한다(중생대 백악기·쥐라기, 신생대) 그러나 모두 명소의 연대를 대는 쓰임이고, 기 수준의 차례 자체를 다루는 카드는 여전히 없다. 12지구02-02 의 '기(紀) 수준에서 구분' 은 그대로 비어 있다."
       },
       {
         "standard": "12지구02-03 / 12지구02-04",
@@ -169,7 +319,9 @@
         "cards_present": [],
         "severity": "low",
         "detail": "topic_id 를 이 두 소주제로 단 카드가 0장이다. 쪽수로는 earth-igneous-rock·earth-plutonic-rock·earth-volcanic-rock 이 117쪽을, earth-metamorphic-rock 이 126쪽을 pages 에 넣어 두었으나, 명제 어디에도 우리나라의 구체적 지형이 나오지 않는다(rel-plu-uplift 는 '지하에서 굳은 심성암은 융기하고 위의 암석이 깎여 나가야 지표에 드러난다' 라는 일반 진술이다). 이 자리는 12지구02-05 의 명소 형성 과정과 맞물리는 대목이라 위 첫째 공백과 함께 본다.",
-        "suggest": "12지구02-05 공백을 메우는 결정을 할 때 같이 본다."
+        "suggest": "12지구02-05 공백을 메우는 결정을 할 때 같이 본다.",
+        "status": "closed",
+        "closed_note": "earth-igneous-landform-korea(topic earth-2-03-5, 117쪽)와 earth-metamorphic-landform-korea(topic earth-2-04-4, 126쪽)가 생겨 카드 0장이던 두 소주제가 채워졌다. 두 카드 모두 우리나라의 구체적 지형을 명제 안에 담는다 (제주도·한탄강·울릉도·독도·북한산·관악산·설악산 / 백령도 장촌 해안·대이작도)."
       }
     ],
     "prerequisites_outside_unit": [
@@ -241,7 +393,9 @@
         "verdict_scope": "범위 판정과는 무관하다 — earth-half-life 는 12지구02-01 전문의 '방사성 동위원소를 이용한 … 절대연령' 안에 분명히 있다. 아래는 G3 에 넘길 근거일 뿐이다.",
         "ground_for_splitting": "두 카드가 같은 키를 쓰면 서로 어긋나는 명제가 한 개념에 묶인다. earth-half-life 의 rel-half-constant 는 '반감기의 길이는 동위원소마다 정해져 있어 암석이 겪은 환경에 따라 달라지지 않는다' 고 못 박는다. 이것은 핵붕괴에서는 성립하지만, mate-half-life 가 다루는 1차 반응의 반감기(t½=ln2/k)는 온도가 달라지면 k 가 달라져 함께 달라진다. 즉 한 키 아래에서 '환경에 따라 달라지지 않는다' 와 '온도에 따라 달라진다' 가 동시에 참이 되는 자리다. D1 이 이 키로 OX 지문을 뽑거나 G 가 same 링크를 걸면 학생에게 곧바로 오개념이 된다. 재는 대상도 다르다 — 한쪽은 방사성 원자핵의 수, 다른 쪽은 반응물의 농도다.",
         "ground_for_keeping": "수학적 형식은 같다(둘 다 1차 감쇠). mate-half-life 의 rel-halflife-dating('반감기를 알고 남아 있는 반응물의 비율을 재면 … 흐른 시간을 추정') 은 이미 연대 측정 쪽으로 손을 뻗고 있어, 화학 쪽이 지구과학 쪽을 사례로 품는 구조로 읽을 수도 있다.",
-        "suggest": "G3 사람 게이트에서 가른다. 가른다면 docs/homonyms.yaml 의 watch_terms 에 '반감기' 를 올리고 두 키(핵붕괴 / 1차 반응)로 나누는 쪽이고, 합친다면 concept:half-life 에 gloss 를 달아 어느 쪽 뜻인지 못 박고 rel-half-constant 의 scope 를 좁히도록 C2 에 되돌리는 쪽이다. 이 보고서는 사전을 고치지 않는다(CLAUDE.md §9.3)."
+        "suggest": "G3 사람 게이트에서 가른다. 가른다면 docs/homonyms.yaml 의 watch_terms 에 '반감기' 를 올리고 두 키(핵붕괴 / 1차 반응)로 나누는 쪽이고, 합친다면 concept:half-life 에 gloss 를 달아 어느 쪽 뜻인지 못 박고 rel-half-constant 의 scope 를 좁히도록 C2 에 되돌리는 쪽이다. 이 보고서는 사전을 고치지 않는다(CLAUDE.md §9.3).",
+        "status": "split_applied",
+        "resolution": "2차에서 earth-half-life 의 concept_key 가 concept:half-life → concept:radioactive-half-life 로 바뀌었다. **범위 판정에는 영향이 없다** — 이 카드의 curriculum 은 12지구02-01 그대로이고, 정의·명제 셋(rel-half-count·rel-half-ratio·rel-half-constant)도 그대로라 '방사성 동위원소를 이용한 … 절대연령' 안에 그대로 있다. 단원 안의 참조도 끊기지 않는다: earth-absolute-age·earth-radioactive-isotope 가 이 카드를 가리키는 링크는 concept_key 가 아니라 카드 id(earth-half-life)로 걸려 있어 그대로 산다. 다만 concept:radioactive-half-life 는 docs/concept_registry.yaml 에 아직 없는 키다 — registry_status: new 로 G3 사람 게이트의 신규 등록 대상이다. 사전은 이 보고서가 건드리지 않았다(CLAUDE.md §9.3). 동음이의 경고('반감기' 를 docs/homonyms.yaml 의 watch_terms 에 올릴지)도 사람이 정할 자리로 남는다 — 이제 두 키가 갈렸으므로 표기가 같은 두 개념을 파이프라인이 만났을 때 멈추게 하는 장치는 그 파일뿐이다."
       },
       {
         "key": "concept:geologic-time / concept:precambrian / concept:paleozoic-era / concept:mesozoic-era / concept:cenozoic-era",
@@ -254,25 +408,40 @@
         "depth_difference": "통합과학2 쪽은 difficulty 2, 대(代) 수준, 생물 다양성이 축이다(isci2-geologic-time rel-geo-divide 는 선캄브리아·고생대·중생대·신생대 네 덩이까지만 간다; isci2-cenozoic-era 는 포유류의 번성과 해수면). 지구과학 쪽은 difficulty 3, 기(紀) 수준이고 축이 지각 변동·기후다(earth-mesozoic-era rel-meso-breakup 트라이아스기 말 판게아 분리·쥐라기 대서양 개방, earth-cenozoic-era rel-ceno-himalaya 히말라야 조산·rel-ceno-cooling 고진기~제4기 기후, earth-precambrian rel-pre-oxygen 호상철광층, earth-paleozoic-era rel-paleo-pangaea 조산 운동). 지구과학 쪽 다섯 장은 통합과학2 다섯 장의 위에 얹히는 심화다.",
         "granularity_caution": "하나만 어긋난다. isci2-precambrian 은 선캄브리아시대를 '네 시대 가운데 가장 길다' 로 시대(代) 하나처럼 세는데, earth-precambrian 은 '명왕누대·시생누대·원생누대를 아우르는' 누대 묶음으로 잡는다. 같은 키 아래 두 층위가 섞이므로, 한 키를 유지하더라도 G 가 두 카드를 same 으로 묶어 한 지문에 섞지 않도록 깊이 표시가 필요하다.",
         "suggest": "키는 그대로 두고 통합과학2 카드를 선수로 세우는 방향을 G3 에 올린다. 결정은 사람이 한다."
+      },
+      {
+        "key": "concept:dumujin / concept:chaeseokgang / concept:seonangbawi / concept:igneous-landform-korea / concept:metamorphic-landform-korea",
+        "cards": [
+          "earth-dumujin",
+          "earth-chaeseokgang",
+          "earth-seonangbawi",
+          "earth-igneous-landform-korea",
+          "earth-metamorphic-landform-korea"
+        ],
+        "registry": "다섯 다 docs/concept_registry.yaml 에 없는 새 키다(registry_status: new). G3 신규 등록 대상 5건이 늘었다.",
+        "scope_verdict": "범위 판정과는 무관하다. 다섯 카드의 성취기준 태그는 위 findings 에서 따로 봤다.",
+        "caution": "앞의 셋은 지명(두무진·채석강·서낭바위)을 개념 키로 잡은 것이다. 개념 사전이 고유 지명을 개념으로 담는가는 이 단원이 처음 부딪히는 자리다(기존 276개 키에 지명은 없다). 담는다면 다른 과목의 지명 카드도 같은 규칙을 따라야 하고, 담지 않는다면 세 카드는 다른 키 체계를 써야 한다. 판단은 G3 에서 사람이 한다 — 이 보고서는 짚기만 한다.",
+        "suggest": "G3 에 다섯 건을 신규 등록 후보로 올린다."
       }
     ],
     "stats": {
-      "ok": 38,
-      "retag": 5,
+      "ok": 46,
+      "retag": 1,
       "out_of_scope": 0,
-      "uncertain": 2
+      "uncertain": 3
     },
     "escalation": {
       "out_of_scope_over_2": false,
       "uncertain_over_20pct": false,
-      "uncertain_ratio": "2/45 = 4.4%",
-      "other": "coverage_gaps[0] (12지구02-05 앞 절 미커버)은 이탈도 uncertain 도 아니지만 C1 복귀 여부를 메인이 판단할 항목이다."
+      "uncertain_ratio": "3/50 = 6.0%",
+      "other": "coverage_gaps[0](12지구02-05 앞 절)과 coverage_gaps[2](우리나라 화성암·변성암 지형)는 닫혔다. coverage_gaps[1](12지구02-02 의 기 수준 구분)만 열려 있다 — 이탈도 uncertain 도 아니지만 C1 으로 돌릴지는 메인이 정한다."
     },
     "skipped": [
       "<track>-facts 스킬 대조를 건너뛰었다. .claude/skills/ 에 earth-facts 를 비롯한 <track>-facts 스킬이 하나도 없다(concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯 뿐). 없는 스킬을 흉내 내지 않았다.",
       "카드의 과학적 진위는 보지 않았다 — C8 사람 게이트의 몫이다 (CLAUDE.md §9.7).",
       "관계 명제의 구조적 결함(invertible·scope·동어반복 등)은 이번 모드 밖이다. 126개 명제는 relation 모드에서 따로 본다."
-    ]
+    ],
+    "stats_note": "50장 기준의 현재 판정이다. 1차(45장)의 retag 5건은 반영이 확인되어 ok 로 내려갔고, 2차에서 새로 나온 지적은 retag 1건(earth-seonangbawi)과 uncertain 1건(earth-metamorphic-landform-korea)이다. 1차의 uncertain 2건(earth-paleoclimate·earth-joint)은 손대지 않았으므로 그대로 열려 있다. 1차 수치는 {ok:38, retag:5, out_of_scope:0, uncertain:2}/45 였다."
   },
   "relations": {
     "checked": 141,
@@ -543,5 +712,8 @@
       "C5 절은 카드 45장 기준이고 이 절은 50장 기준이다. 새 5장과 재태깅 5장에 대한 C5 판정이 아직 없다는 뜻이므로 메인이 확인할 자리다. earth-half-life 의 concept_key 가 concept:radioactive-half-life 로 갈린 것도 이 모드의 대상이 아니다(G3 사람 게이트).",
       "카드 파일·사전 파일은 하나도 고치지 않았다. verified_by 는 141건 전부 pending 그대로다."
     ]
-  }
+  },
+  "notes": [
+    "curriculum 절은 2회 돌았다 — 1차 45장(카드 생성 전), 2차 50장(신규 5장 + 재태깅 5장 재검). findings 의 pass 필드로 갈린다."
+  ]
 }

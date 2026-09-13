@@ -23,27 +23,29 @@
         "type": "causal",
         "scope": "궤도면이 기울어 있는 실제 지구·달 계"
       },
-      "invertible": false,
-      "invertible_reason": "기울기가 없다면 매달 식이 일어난다는 역이 참이라 뒤집어도 거짓이 아니다.",
+      "invertible": true,
+      "invertible_reason": "기울기를 그대로 둔 채 귀결만 맞바꾸면 반드시 거짓이다.",
       "curriculum": [
         "12지구03-01"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "달의 공전 궤도면이 지구의 궤도면과 약 5° 기울어 있어 삭과 망마다 빠짐없이 식이 일어난다."
     },
     {
       "id": "rel-eclipse-node",
-      "text": "두 궤도면이 만나는 교선 위에서 세 천체가 일직선을 이룰 때에만 일식이나 월식이 나타난다.",
+      "text": "두 궤도면이 만나는 교선 부근에서 세 천체가 일직선을 이룰 때에만 일식이나 월식이 나타난다.",
       "form": {
         "condition": "세 천체가 나란히 놓일 때",
         "type": "conditional",
         "scope": "일식과 월식 모두"
       },
-      "invertible": false,
-      "invertible_reason": "식이 일어났다면 교선 부근이었다는 역도 참이다.",
+      "invertible": true,
+      "invertible_reason": "교선 부근이라는 자리를 교선에서 가장 먼 자리로 맞바꾸면 반드시 거짓이다.",
       "curriculum": [
         "12지구03-01"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "두 궤도면이 만나는 교선에서 가장 멀리 떨어진 자리에서 세 천체가 일직선을 이룰 때에만 식이 나타난다."
     },
     {
       "id": "rel-eclipse-phase",

@@ -25,12 +25,13 @@
         "type": "conditional",
         "scope": "태양·달·지구가 두 궤도면의 교선 부근에서 일직선을 이룰 때"
       },
-      "invertible": false,
-      "invertible_reason": "일식이 일어났다면 달은 반드시 삭의 위치이므로 뒤집어도 참이다.",
+      "invertible": true,
+      "invertible_reason": "삭과 망을 맞바꾸면 달이 지구 그림자 쪽에 놓여 태양을 가릴 수 없으므로 반드시 거짓이다.",
       "curriculum": [
         "12지구03-01"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "달이 망의 자리에서 태양과 지구를 잇는 직선 위에 들어오면 일식이 일어날 수 있다."
     },
     {
       "id": "rel-solar-eclipse-shadow",
@@ -84,7 +85,8 @@
       "text": "삭이 될 때마다 일식이 일어난다",
       "why_wrong": "달의 공전 궤도면이 지구 공전 궤도면과 약 5° 기울어 있어 대부분의 삭에서는 달의 그림자가 지구를 비껴간다.",
       "source": "llm",
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "linked_relation": "rel-solar-eclipse-syzygy"
     }
   ],
   "links": [

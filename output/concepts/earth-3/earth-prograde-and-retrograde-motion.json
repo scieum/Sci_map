@@ -22,12 +22,13 @@
         "type": "conditional",
         "scope": "수성·금성처럼 지구 궤도 안쪽을 도는 행성"
       },
-      "invertible": false,
-      "invertible_reason": "내행성이 역행하면 내합 부근이라는 역도 참이라 뒤집어도 거짓이 아니다.",
+      "invertible": true,
+      "invertible_reason": "내합과 외합을 맞바꾸면 지구를 앞지르는 구간이 아니게 되어 반드시 거짓이다.",
       "curriculum": [
         "12지구03-01"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "내행성은 지구보다 빠르게 공전하므로 외합을 앞뒤로 낀 구간에서 역행한다."
     },
     {
       "id": "rel-retrograde-superior",
@@ -37,12 +38,13 @@
         "type": "conditional",
         "scope": "화성·목성처럼 지구 궤도 바깥을 도는 행성"
       },
-      "invertible": false,
-      "invertible_reason": "외행성이 역행하면 충 부근이라는 역도 참이라 뒤집어도 거짓이 아니다.",
+      "invertible": true,
+      "invertible_reason": "충과 합을 맞바꾸면 지구가 안쪽에서 앞지르는 구간이 아니게 되어 반드시 거짓이다.",
       "curriculum": [
         "12지구03-01"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "외행성은 지구가 안쪽에서 앞질러 가는 합 무렵에 역행한다."
     },
     {
       "id": "rel-stationary-point",
@@ -53,7 +55,7 @@
         "scope": "지구에서 본 행성의 겉보기 운동"
       },
       "invertible": false,
-      "invertible_reason": "유가 보이면 방향이 바뀌는 중이라는 역도 참이다.",
+      "invertible_reason": "방향이 바뀌는 길목이라는 자리 말고 맞바꿀 방향이 없어, 반드시 거짓이 되는 뒤집음을 세울 수 없다.",
       "curriculum": [
         "12지구03-01"
       ],
@@ -72,7 +74,8 @@
       "text": "행성은 언제나 순행만 한다",
       "why_wrong": "내행성은 내합 앞뒤로, 외행성은 충 앞뒤로 역행하는 구간이 나타난다.",
       "source": "llm",
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "linked_relation": "rel-retrograde-superior"
     }
   ],
   "links": [

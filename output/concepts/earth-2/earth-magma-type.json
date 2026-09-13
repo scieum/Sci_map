@@ -15,24 +15,25 @@
   "relations": [
     {
       "id": "rel-type-silica",
-      "text": "SiO2 함량이 52 % 이하이면 현무암질, 63 % 이상이면 유문암질 마그마로 가른다.",
+      "text": "SiO2 함량이 52 % 이하이면 염기성암을 만드는 현무암질, 63 % 이상이면 산성암을 만드는 유문암질 마그마다.",
       "form": {
         "condition": "마그마의 화학 조성을 기준으로 나눌 때",
         "type": "classification",
         "scope": "이 교과서가 드는 세 가지 구분"
       },
-      "invertible": false,
-      "invertible_reason": "기준값을 든 분류형 진술이라 뒤집을 방향이 없다.",
+      "invertible": true,
+      "invertible_reason": "기준값과 마그마 종류의 짝을 맞바꾼 문장은 반드시 거짓이 된다.",
       "curriculum": [
         "12지구02-03"
       ],
-      "verified_by": "pending"
+      "verified_by": "pending",
+      "inverted_text": "SiO2 함량이 52 % 이하이면 유문암질, 63 % 이상이면 현무암질 마그마다."
     },
     {
       "id": "rel-type-viscosity",
       "text": "SiO2 함량이 많은 마그마일수록 점성이 커서 잘 흐르지 못한다.",
       "form": {
-        "condition": "마그마의 온도 차이를 함께 볼 때",
+        "condition": "온도는 같다고 두고 조성만 달리 견줄 때",
         "type": "direct",
         "scope": "현무암질에서 유문암질에 이르는 조성 범위",
         "antecedent": {
@@ -102,5 +103,8 @@
   ],
   "difficulty": 3,
   "role": "core",
-  "version": 1
+  "version": 1,
+  "notes": [
+    "rel-type-viscosity 의 condition 이 '마그마의 온도 차이를 함께 볼 때' 여서 명제가 실제로 통제하는 것(조성만 달리 둠)과 어긋났다. 온도는 rel-type-temp 가 맡으므로 이 명제에서는 고정 조건으로 돌렸다."
+  ]
 }
