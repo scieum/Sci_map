@@ -1,0 +1,109 @@
+{
+  "id": "earth-sedimentary-rock",
+  "concept_key": "concept:sedimentary-rock",
+  "registry_status": "new",
+  "term": "퇴적암",
+  "notation": {
+    "hanja": "堆積岩",
+    "english": "sedimentary rock",
+    "hanja_gloss": "堆 쌓을 퇴 · 積 쌓을 적 · 岩 바위 암"
+  },
+  "definition": "풍화·침식으로 생긴 퇴적물이 낮은 곳에 쌓인 뒤 다져지고 굳어져 만들어진 암석.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sed-diagenesis",
+      "text": "쌓인 퇴적물은 눌려 다져지고 틈이 교결 물질로 메워지는 속성 작용을 거쳐 단단해진다.",
+      "form": {
+        "condition": "퇴적물이 계속 쌓여 묻혔을 때",
+        "type": "causal",
+        "scope": "저지대에 두껍게 쌓인 퇴적층"
+      },
+      "invertible": false,
+      "invertible_reason": "굳어지는 과정을 차례로 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sed-compaction",
+      "text": "위에 쌓인 퇴적물이 두꺼울수록 아래 입자들이 눌려 입자 사이의 틈이 좁아진다.",
+      "form": {
+        "condition": "퇴적물이 물속이나 저지대에 계속 쌓일 때",
+        "type": "inverse",
+        "scope": "다짐 작용이 일어나는 깊이",
+        "antecedent": {
+          "quantity": "덮인 퇴적물의 두께",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "입자 사이의 틈",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "무게가 클수록 눌리는 것이므로 틈이 넓어진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위에 쌓인 퇴적물이 두꺼울수록 아래 입자 사이의 틈이 넓어진다."
+    },
+    {
+      "id": "rel-sed-class",
+      "text": "퇴적물이 어디서 왔는지에 따라 쇄설성·화학적·유기적 퇴적암으로 나눈다.",
+      "form": {
+        "condition": "퇴적물의 기원을 기준으로 가를 때",
+        "type": "classification",
+        "scope": "이 교과서의 세 가지 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "기원별 분류라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-02",
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "퇴적물이 쌓이기만 하면 곧바로 퇴적암이 된다",
+      "why_wrong": "쌓인 것만으로는 퇴적물일 뿐이다. 다짐과 교결이라는 속성 작용을 거쳐야 단단한 암석이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sed-diagenesis"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-sedimentary-structure"
+    },
+    {
+      "type": "next",
+      "target": "earth-rock-cycle"
+    },
+    {
+      "type": "next",
+      "target": "earth-national-geopark"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-02",
+    "12지구02-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-02-1",
+  "pages": [
+    96,
+    97
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,97 @@
+{
+  "id": "earth-sedimentary-structure",
+  "concept_key": "concept:sedimentary-structure",
+  "registry_status": "new",
+  "term": "퇴적 구조",
+  "notation": {
+    "hanja": "堆積構造",
+    "english": "sedimentary structure",
+    "hanja_gloss": "堆 쌓을 퇴 · 積 쌓을 적 · 構 얽을 구 · 造 지을 조"
+  },
+  "definition": "퇴적물이 쌓일 당시의 환경이 암석 속에 남긴 층리·점이 층리·사층리·연흔·건열 같은 특징적인 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-struct-graded",
+      "text": "점이 층리는 위로 갈수록 입자가 잘아지므로 지층의 위아래와 역전 여부를 가리는 데 쓴다.",
+      "form": {
+        "condition": "한 지층 안에서 입자 크기의 변화를 살필 때",
+        "type": "conditional",
+        "scope": "점이 층리가 뚜렷하게 남은 지층"
+      },
+      "invertible": true,
+      "invertible_reason": "굵은 입자가 먼저 가라앉으므로 위로 갈수록 굵어진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "점이 층리는 위로 갈수록 입자가 굵어지므로 지층의 위아래를 가리는 데 쓴다."
+    },
+    {
+      "id": "rel-struct-crossbed",
+      "text": "사층리는 물이나 바람의 방향이 자주 바뀌는 곳에서 생겨 당시 흐름의 방향을 알려 준다.",
+      "form": {
+        "condition": "퇴적 당시 흐름의 방향이 자주 바뀌었을 때",
+        "type": "causal",
+        "scope": "사막·하천·삼각주처럼 흐름이 있는 환경"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-struct-shallow",
+      "text": "연흔은 얕은 물 밑에서, 건열은 얕은 곳의 점토질 퇴적물이 물 밖에 드러나 마를 때 생긴다.",
+      "form": {
+        "condition": "퇴적물이 수심이 얕은 곳에 쌓였을 때",
+        "type": "causal",
+        "scope": "얕은 물과 그 둘레의 건조한 대기 환경"
+      },
+      "invertible": false,
+      "invertible_reason": "두 구조의 형성 조건을 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연흔이 나타나는 지층은 깊은 바다에서 쌓인 것이다",
+      "why_wrong": "연흔은 물결이 바닥에 닿을 만큼 얕은 곳에서 만들어진다. 깊은 곳에 쌓였음을 알려 주는 것은 오히려 점이 층리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-struct-shallow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-sedimentary-rock"
+    },
+    {
+      "type": "next",
+      "target": "earth-depositional-environment"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-02",
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-02-2",
+  "pages": [
+    98,
+    99,
+    111
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

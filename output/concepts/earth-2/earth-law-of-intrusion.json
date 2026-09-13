@@ -1,0 +1,80 @@
+{
+  "id": "earth-law-of-intrusion",
+  "concept_key": "concept:law-of-intrusion",
+  "registry_status": "new",
+  "term": "관입의 법칙",
+  "notation": {
+    "hanja": "貫入의 法則",
+    "english": "law of intrusion",
+    "hanja_gloss": "貫 꿸 관 · 入 들 입 · 法 법 법 · 則 법칙 칙"
+  },
+  "definition": "다른 암석을 뚫고 들어가 굳은 암석이 그 암석보다 나중에 만들어졌다고 보는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lint-order",
+      "text": "뚫고 들어간 암석은 뚫린 암석보다 나중에 생긴 것으로 판단한다.",
+      "form": {
+        "condition": "관입 관계가 분명하게 관찰될 때",
+        "type": "conditional",
+        "scope": "관입암과 관입당한 암석"
+      },
+      "invertible": true,
+      "invertible_reason": "뚫릴 암석이 먼저 있어야 뚫고 들어갈 수 있으므로 차례를 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "뚫고 들어간 암석은 뚫린 암석보다 먼저 생긴 것으로 판단한다."
+    },
+    {
+      "id": "rel-lint-evidence",
+      "text": "경계가 뚜렷하고 둘레 암석에 열로 변성된 자국이 있으면 관입 관계로 읽는다.",
+      "form": {
+        "condition": "두 암석의 접촉부를 살필 때",
+        "type": "conditional",
+        "scope": "관입 접촉부에 남은 흔적"
+      },
+      "invertible": false,
+      "invertible_reason": "판단 근거를 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화성암은 주변 지층보다 언제나 나중에 생긴 암석이다",
+      "why_wrong": "관입한 화성암이라면 그렇지만, 용암이 분출해 굳은 뒤 그 위에 지층이 쌓였다면 화성암이 더 오래되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lint-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-stratigraphic-law"
+    },
+    {
+      "type": "related",
+      "target": "earth-intrusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-01-1",
+  "pages": [
+    89,
+    95
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

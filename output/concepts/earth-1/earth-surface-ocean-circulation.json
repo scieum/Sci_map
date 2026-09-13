@@ -1,0 +1,103 @@
+{
+  "id": "earth-surface-ocean-circulation",
+  "concept_key": "concept:surface-ocean-circulation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "표층 순환",
+  "notation": {
+    "hanja": "表層循環",
+    "hanja_gloss": "表 겉 표 · 層 층 층 · 循 돌 순 · 環 고리 환",
+    "english": "surface ocean circulation"
+  },
+  "definition": "해양의 표층에서 대양마다 커다란 고리를 그리며 되풀이되는 해수의 큰 흐름이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sc-wind",
+      "text": "표층 순환을 밀고 가는 것은 대기 대순환의 바람이고, 심층 순환을 밀고 가는 것은 해수의 밀도 차이다",
+      "form": {
+        "condition": "표층 순환과 심층 순환의 원동력을 견줄 때",
+        "type": "classification",
+        "scope": "두 순환의 원동력 구분 — 두 순환이 서로 이어져 있다는 사실과는 별개다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 순환의 원동력을 맞바꾼 문장은 구분 기준과 정면으로 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표층 순환은 해수의 밀도 차가 밀고 가고, 심층 순환은 대기 대순환의 바람이 밀고 간다"
+    },
+    {
+      "id": "rel-sc-shape",
+      "text": "같은 바람이 불어도 지구 자전의 영향과 대양의 생김새에 따라 표층 순환의 방향과 세기가 달라진다",
+      "form": {
+        "condition": "여러 대양의 표층 순환을 견줄 때",
+        "type": "conditional",
+        "scope": "육지로 둘러싸인 각 대양의 표층 순환"
+      },
+      "invertible": false,
+      "invertible_reason": "양의 증감을 말한 명제가 아니어서 뒤집을 방향 자체가 없다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sc-heat",
+      "text": "표층 순환의 난류와 한류는 저위도의 열을 고위도로 날라 기후에 영향을 준다",
+      "form": {
+        "condition": "난류와 한류가 뚜렷이 갈리는 해역",
+        "type": "causal",
+        "scope": "표층 해류가 나르는 열 — 심층 순환의 열 수송과는 규모와 시간이 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "열이 기후를 바꾸는 경로가 여럿이라 뒤집은 문장을 언제나 거짓이라 할 수 없다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "표층 해류도 결국 밀도 차 때문에 생긴다",
+      "why_wrong": "표층 순환을 일으키는 것은 바람이다. 밀도 차로 생기는 것은 심층 순환이다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-wind"
+    },
+    {
+      "text": "바람이 부는 방향과 표층 해류가 흐르는 방향은 언제나 같다",
+      "why_wrong": "지구 자전에 따른 전향력과 대양의 형태 때문에 해류는 바람 방향과 어긋나 흐른다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-shape"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-ocean-circulation-and-climate-change"
+    },
+    {
+      "type": "next",
+      "target": "earth-upwelling-and-downwelling",
+      "note": "바람이 표층 해수를 움직인다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-02-1",
+  "pages": [
+    26,
+    31
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

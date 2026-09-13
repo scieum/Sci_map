@@ -1,0 +1,103 @@
+{
+  "id": "earth-radioactive-isotope",
+  "concept_key": "concept:radioactive-isotope",
+  "registry_status": "new",
+  "term": "방사성 동위원소",
+  "notation": {
+    "hanja": "放射性同位元素",
+    "english": "radioactive isotope",
+    "hanja_gloss": "放 놓을 방 · 射 쏠 사 · 性 성품 성 · 同 한가지 동 · 位 자리 위 · 元 으뜸 원 · 素 본디 소"
+  },
+  "definition": "같은 원소의 동위원소 가운데 원자핵이 불안정해 스스로 붕괴하여 안정한 다른 원소로 바뀌는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-iso-decay",
+      "text": "모원소가 붕괴한 만큼 자원소가 늘어나므로 두 원소의 비율이 시간에 따라 달라진다.",
+      "form": {
+        "condition": "광물이 닫힌 상태로 유지될 때",
+        "type": "causal",
+        "scope": "붕괴가 일어나는 광물 안",
+        "antecedent": {
+          "quantity": "남은 모원소의 양",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "쌓인 자원소의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "붕괴는 모원소에서 자원소로만 진행되므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자원소가 붕괴하여 모원소의 양이 시간에 따라 늘어난다."
+    },
+    {
+      "id": "rel-iso-condition",
+      "text": "붕괴하는 비율은 바깥의 온도나 압력이 달라져도 바뀌지 않고 늘 일정하다.",
+      "form": {
+        "condition": "암석이 겪는 온도·압력이 달라질 때",
+        "type": "conditional",
+        "scope": "방사성 붕괴"
+      },
+      "invertible": true,
+      "invertible_reason": "붕괴 속도가 외부 조건과 무관하다는 것이 연대 측정의 전제이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 높아지고 압력이 커지면 방사성 동위원소가 더 빨리 붕괴한다."
+    },
+    {
+      "id": "rel-iso-varies",
+      "text": "동위원소마다 반감기가 크게 달라, 알아내려는 시간 규모에 맞는 원소를 골라 쓴다.",
+      "form": {
+        "condition": "측정 대상의 나이 범위를 정했을 때",
+        "type": "classification",
+        "scope": "연대 측정에 쓰는 여러 동위원소"
+      },
+      "invertible": false,
+      "invertible_reason": "선택 방법을 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고온·고압 상태에 놓인 암석은 방사성 붕괴가 더 빨리 일어난다",
+      "why_wrong": "방사성 붕괴는 원자핵에서 일어나는 변화라 바깥의 온도나 압력에 영향을 받지 않는다. 그래서 연대 측정의 기준이 될 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-iso-condition"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-half-life"
+    },
+    {
+      "type": "related",
+      "target": "earth-absolute-age"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-01-3",
+  "pages": [
+    93
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

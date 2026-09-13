@@ -1,0 +1,96 @@
+{
+  "id": "earth-white-dwarf",
+  "concept_key": "concept:white-dwarf",
+  "registry_status": "new",
+  "term": "백색왜성",
+  "notation": {
+    "hanja": "白色矮星",
+    "english": "white dwarf",
+    "hanja_gloss": "白 흰 백 · 色 빛 색 · 矮 난쟁이 왜 · 星 별 성"
+  },
+  "definition": "표면 온도는 높지만 반지름이 지구만큼 작아 광도가 작은 별. H-R도에서는 왼쪽 아래에 놓인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wd-small-radius",
+      "text": "표면 온도가 높은데도 광도가 작은 것은 반지름이 지구 정도로 매우 작기 때문이다.",
+      "form": {
+        "condition": "표면 온도가 높은 별끼리 견줄 때",
+        "type": "causal",
+        "scope": "H-R도 왼쪽 아래의 백색왜성"
+      },
+      "invertible": false,
+      "invertible_reason": "광도가 작다고 반드시 반지름이 작은 것은 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wd-density",
+      "text": "질량은 태양과 비슷한데 크기가 지구만 하므로 평균 밀도가 태양의 백만 배에 이른다.",
+      "form": {
+        "condition": "질량과 부피를 함께 볼 때",
+        "type": "causal",
+        "scope": "백색왜성"
+      },
+      "invertible": false,
+      "invertible_reason": "밀도가 크다는 사실만으로 백색왜성이라 되짚을 수는 없다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wd-origin",
+      "text": "중심핵의 질량이 태양 질량의 1.4배 이하인 별은 진화의 끝에서 백색왜성으로 남는다.",
+      "form": {
+        "condition": "적색거성 단계를 마친 뒤",
+        "type": "conditional",
+        "scope": "중심핵 질량이 태양의 1.4배 이하인 별"
+      },
+      "invertible": false,
+      "invertible_reason": "백색왜성이면 중심핵 질량이 그 아래라는 역도 참이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "백색왜성은 표면 온도가 낮아서 어둡게 보인다",
+      "why_wrong": "백색왜성은 표면 온도가 오히려 높다. 반지름이 매우 작아 광도가 작은 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wd-small-radius"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hertzsprung-russell-diagram"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-planetary-nebula",
+      "note": "행성상 성운을 남기고 중심핵이 백색왜성이 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-04-1",
+  "pages": [
+    174,
+    177,
+    184
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

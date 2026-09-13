@@ -1,0 +1,81 @@
+{
+  "id": "earth-volcanic-rock",
+  "concept_key": "concept:volcanic-rock",
+  "registry_status": "new",
+  "term": "화산암",
+  "notation": {
+    "hanja": "火山岩",
+    "english": "volcanic rock",
+    "hanja_gloss": "火 불 화 · 山 메 산 · 岩 바위 암"
+  },
+  "definition": "마그마가 지표로 나오거나 지표 가까이에서 빠르게 식어 굳은 화성암.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-vol-texture",
+      "text": "빠르게 식어 결정이 자라지 못하므로 세립질이나 유리질 조직을 가진다.",
+      "form": {
+        "condition": "마그마가 지표 부근에서 굳을 때",
+        "type": "causal",
+        "scope": "화산암의 조직"
+      },
+      "invertible": true,
+      "invertible_reason": "빠른 냉각에서 큰 결정이 자랄 수 없으므로 조립질이라는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빠르게 식은 화산암은 결정이 충분히 자라 조립질 조직을 가진다."
+    },
+    {
+      "id": "rel-vol-members",
+      "text": "조성에 따라 현무암·안산암·유문암이 화산암에 든다.",
+      "form": {
+        "condition": "냉각 위치가 같고 조성만 다를 때",
+        "type": "classification",
+        "scope": "이 교과서의 화성암 분류표"
+      },
+      "invertible": false,
+      "invertible_reason": "속하는 암석을 든 분류형 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "현무암은 결정이 굵어 구성 광물을 눈으로 쉽게 가려낼 수 있다",
+      "why_wrong": "현무암은 지표 부근에서 빨리 식어 결정이 잘다. 눈으로 광물을 가려내기 쉬운 것은 심성암인 화강암 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vol-texture"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-igneous-rock"
+    },
+    {
+      "type": "related",
+      "target": "earth-plutonic-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-4",
+  "pages": [
+    116,
+    117,
+    121
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

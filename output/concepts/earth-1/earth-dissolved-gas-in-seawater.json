@@ -1,0 +1,145 @@
+{
+  "id": "earth-dissolved-gas-in-seawater",
+  "concept_key": "concept:dissolved-gas-in-seawater",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "해수의 용존기체",
+  "notation": {
+    "hanja": "海水溶存氣體",
+    "hanja_gloss": "海 바다 해 · 水 물 수 · 溶 녹을 용 · 存 있을 존 · 氣 기운 기 · 體 몸 체",
+    "english": "dissolved gas in seawater"
+  },
+  "definition": "해수에 녹아 있는 산소와 이산화 탄소 같은 기체로, 수온과 수압이 용해도를 정하고 생물의 광합성·호흡이 그 양을 바꾼다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gas-solubility",
+      "text": "수온이 낮고 수압이 높을수록 해수에 녹는 기체의 양은 많아진다",
+      "form": {
+        "condition": "같은 기체를 다른 수온·수압에서 견줄 때",
+        "type": "inverse",
+        "scope": "해수에 녹는 산소·이산화 탄소 같은 기체의 용해도",
+        "antecedent": {
+          "quantity": "수온",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "기체 용해도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수온이 낮을수록 덜 녹는다고 하면 기체 용해도의 성질과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수온이 높고 수압이 낮을수록 해수에 녹는 기체의 양이 많아진다"
+    },
+    {
+      "id": "rel-do-profile",
+      "text": "용존산소량은 대기와 닿고 광합성이 일어나는 표층에서 가장 많고, 깊어질수록 호흡에 쓰여 급격히 줄어든다",
+      "form": {
+        "condition": "표층에서 중층까지 연직으로 볼 때",
+        "type": "causal",
+        "scope": "표층과 중층 — 극 지역 해수가 들어오는 심층에서는 다시 늘어난다"
+      },
+      "invertible": false,
+      "invertible_reason": "심층에서 다시 늘어나는 구간이 있어 뒤집은 문장이 언제나 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-co2-profile",
+      "text": "용존 이산화 탄소량은 광합성이 이를 써 버리는 표층에서 적고, 호흡과 극 지역 해수 유입으로 깊어질수록 많아진다",
+      "form": {
+        "condition": "수심에 따른 연직 분포를 볼 때",
+        "type": "causal",
+        "scope": "용존 이산화 탄소 — 용존산소와는 연직 분포의 방향이 반대다",
+        "antecedent": {
+          "quantity": "수심",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용존 이산화 탄소량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "표층은 광합성이 소비하는 쪽이므로 표층에서 가장 많다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용존 이산화 탄소량은 표층에서 가장 많고 깊어질수록 줄어든다"
+    },
+    {
+      "id": "rel-do-warming",
+      "text": "수온이 오르면 산소의 용해도가 떨어져 표층의 용존산소량이 줄어든다",
+      "form": {
+        "condition": "지구 온난화로 표층 수온이 오를 때",
+        "type": "causal",
+        "scope": "용해도 변화가 주된 원인인 표층 — 부영양화 같은 다른 원인은 따로 본다",
+        "antecedent": {
+          "quantity": "표층 수온",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "용존산소량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "수온 상승은 용해도를 낮추므로 용존산소가 늘어난다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수온이 오르면 표층의 용존산소량이 늘어난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "깊을수록 압력이 커지니 용존산소량도 깊어질수록 계속 늘어난다",
+      "why_wrong": "용해도만 보면 그렇지만 실제 용존산소량은 생물의 호흡이 함께 작용해 중층에서 가장 적다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-do-profile"
+    },
+    {
+      "text": "용존 이산화 탄소량은 광합성이 활발한 표층에서 가장 많다",
+      "why_wrong": "표층에서는 광합성이 이산화 탄소를 써 버려 오히려 적고, 심층으로 갈수록 호흡과 극 지역 해수 유입으로 많아진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-co2-profile"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-sea-temperature-distribution"
+    },
+    {
+      "type": "related",
+      "target": "earth-deep-ocean-circulation",
+      "note": "심층 산소 공급의 통로"
+    }
+  ],
+  "curriculum": [
+    "12지구01-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-01-5",
+  "pages": [
+    21,
+    25,
+    80
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

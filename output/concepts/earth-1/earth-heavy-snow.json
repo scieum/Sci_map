@@ -1,0 +1,119 @@
+{
+  "id": "earth-heavy-snow",
+  "concept_key": "concept:heavy-snow",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "폭설",
+  "notation": {
+    "hanja": "暴雪",
+    "hanja_gloss": "暴 사나울 폭 · 雪 눈 설",
+    "english": "heavy snow"
+  },
+  "definition": "짧은 기간에 많은 눈이 쌓여 교통과 시설에 피해를 주는 겨울철 악기상으로, 눈구름이 서는 길은 여럿이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hs-sea",
+      "text": "차가운 시베리아 기단이 따뜻한 황해를 건너며 열과 수증기를 공급받으면 눈구름이 생겨 폭설이 내린다",
+      "form": {
+        "condition": "겨울철에 찬 기단이 더 따뜻한 바다 위를 지날 때",
+        "type": "causal",
+        "scope": "우리나라 서해안과 제주 산간의 겨울철 폭설"
+      },
+      "invertible": true,
+      "invertible_reason": "바다가 더 따뜻하므로 열과 수증기를 빼앗긴다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "찬 기단이 따뜻한 바다를 건너면 열과 수증기를 빼앗겨 눈구름이 사라진다"
+    },
+    {
+      "id": "rel-hs-terrain",
+      "text": "수증기를 머금은 공기가 산을 타고 오르면 눈구름이 자라 산악 지역에 눈이 많이 쌓인다",
+      "form": {
+        "condition": "공기가 산맥을 넘을 때",
+        "type": "causal",
+        "scope": "강원 영동·호남 서해안·제주 산간처럼 지형의 영향이 큰 곳"
+      },
+      "invertible": true,
+      "invertible_reason": "강제 상승은 구름을 키우므로 흩어진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수증기를 머금은 공기가 산을 타고 오르면 눈구름이 흩어져 눈이 적게 내린다"
+    },
+    {
+      "id": "rel-hs-warning",
+      "text": "24시간 동안 쌓인 눈이 20 cm를 넘을 것으로 보이면 대설 경보를 낸다",
+      "form": {
+        "condition": "기상청의 경보 기준에 따를 때",
+        "type": "conditional",
+        "scope": "우리나라의 대설 경보 기준 — 주의보 기준과는 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "행정 기준을 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hs-cyclone",
+      "text": "중위도 저기압이 우리나라를 지날 때에도 눈구름이 만들어져 폭설이 내린다",
+      "form": {
+        "condition": "겨울철 중위도 저기압이 한반도를 지날 때",
+        "type": "causal",
+        "scope": "폭설의 원인 가운데 하나 — 해기 차나 지형으로 생기는 폭설과는 기제가 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "원인 하나를 더 드는 존재 진술이라 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기온이 낮을수록 눈이 많이 온다",
+      "why_wrong": "눈이 많이 오려면 수증기가 넉넉해야 한다. 찬 기단이 따뜻한 바다를 건너며 수증기를 받을 때 폭설이 잦다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hs-sea"
+    },
+    {
+      "text": "폭설은 중위도 저기압과는 상관이 없다",
+      "why_wrong": "중위도 저기압의 영향으로도 폭설이 내린다. 바다를 건너며 받는 열과 지형만이 원인은 아니다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hs-cyclone"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-anticyclone-and-weather"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-mesoscale-cyclone"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-05-4",
+  "pages": [
+    51,
+    55,
+    79
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

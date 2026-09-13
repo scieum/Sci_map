@@ -1,0 +1,99 @@
+{
+  "id": "earth-spiral-galaxy",
+  "concept_key": "concept:spiral-galaxy",
+  "registry_status": "new",
+  "term": "나선 은하",
+  "aliases": [
+    "정상나선 은하",
+    "막대나선 은하"
+  ],
+  "notation": {
+    "hanja": "螺旋銀河",
+    "english": "spiral galaxy",
+    "hanja_gloss": "螺 소라 라 · 旋 돌 선 · 銀 은 은 · 河 물 하"
+  },
+  "definition": "팽대부와 원반, 나선팔을 갖춘 은하. 팽대부에 막대 모양 구조가 있으면 막대나선 은하로 따로 표시한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spiral-subclass",
+      "text": "정상나선 은하는 Sa에서 Sc로 갈수록 팽대부가 작아지고 나선팔이 느슨하게 감긴다.",
+      "form": {
+        "condition": "정상나선 은하를 세분할 때",
+        "type": "classification",
+        "scope": "Sa·Sb·Sc 로 나눈 정상나선 은하"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spiral-bar",
+      "text": "팽대부를 가로지르는 막대 구조가 있으면 SBa·SBb·SBc 처럼 막대나선 은하로 분류한다.",
+      "form": {
+        "condition": "팽대부의 모양을 볼 때",
+        "type": "classification",
+        "scope": "나선 은하"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spiral-starbirth",
+      "text": "나선팔과 원반에 성간 물질이 풍부해 나선 은하에서는 지금도 별이 활발히 태어난다.",
+      "form": {
+        "condition": "성간 물질이 풍부할 때",
+        "type": "causal",
+        "scope": "나선 은하의 나선팔과 원반"
+      },
+      "invertible": false,
+      "invertible_reason": "별이 태어나는 은하가 모두 나선 은하는 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우리은하는 나선팔만 있는 정상나선 은하다",
+      "why_wrong": "우리은하는 팽대부에 막대 구조가 있는 막대나선 은하로 보며 SBc형에 해당한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spiral-bar"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hubble-galaxy-classification"
+    },
+    {
+      "type": "related",
+      "target": "earth-elliptical-galaxy",
+      "note": "성간 물질의 양과 별의 나이가 맞대어 보인다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-06-1",
+  "pages": [
+    189,
+    195
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

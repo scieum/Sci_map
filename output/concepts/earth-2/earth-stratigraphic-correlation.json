@@ -1,0 +1,102 @@
+{
+  "id": "earth-stratigraphic-correlation",
+  "concept_key": "concept:stratigraphic-correlation",
+  "registry_status": "new",
+  "term": "지층 대비",
+  "notation": {
+    "hanja": "地層對比",
+    "english": "stratigraphic correlation",
+    "hanja_gloss": "地 땅 지 · 層 층 층 · 對 대할 대 · 比 견줄 비"
+  },
+  "definition": "멀리 떨어진 지역의 지층들이 같은 시기에 쌓인 것인지 암석의 특징이나 화석으로 견주어 가리는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cor-lithology",
+      "text": "암상에 의한 대비는 암석의 종류·성분·조직·색과 지질 구조를 견주어 같은 시기의 지층인지 가린다.",
+      "form": {
+        "condition": "비교적 가까운 거리의 지층을 견줄 때",
+        "type": "classification",
+        "scope": "같은 암상이 이어질 만한 범위"
+      },
+      "invertible": false,
+      "invertible_reason": "방법을 규정한 분류형 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cor-fossil-distance",
+      "text": "화석에 의한 대비는 가까운 지층뿐 아니라 아주 멀리 떨어진 지층에도 쓸 수 있다.",
+      "form": {
+        "condition": "두 지역에서 같은 종류의 표준 화석이 나올 때",
+        "type": "conditional",
+        "scope": "특정 시기에만 전 지구에 번성한 생물의 화석"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 시기 전 지구에 퍼진 생물의 화석이 근거이므로 거리를 제한하는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화석에 의한 대비는 가까운 거리의 지층에만 쓸 수 있고 멀리 떨어진 지층에는 쓸 수 없다."
+    },
+    {
+      "id": "rel-cor-limit",
+      "text": "지층 대비로 얻는 것도 상대연령이어서 대비된 지층의 생성 시기가 연수로 정해지지는 않는다.",
+      "form": {
+        "condition": "대비 결과만으로 판단할 때",
+        "type": "conditional",
+        "scope": "상대연령의 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "차례를 맞추는 작업에서 연수가 나올 수는 없으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지층 대비를 하면 대비된 지층이 몇 년 전에 쌓였는지 연수로 정해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암석의 종류가 같은 지층이면 아무리 멀리 떨어져 있어도 같은 시기에 쌓인 것이다",
+      "why_wrong": "같은 종류의 암석은 여러 시기에 걸쳐 만들어질 수 있다. 그래서 암상에 의한 대비는 비교적 가까운 거리에서만 믿을 만하고, 먼 거리는 화석으로 견준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cor-lithology"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-relative-age"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-fossil"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-key-bed"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-01",
+    "12지구02-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-01-2",
+  "pages": [
+    91,
+    92,
+    95
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

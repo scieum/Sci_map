@@ -1,0 +1,115 @@
+{
+  "id": "earth-salinity",
+  "concept_key": "concept:salinity",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "염분",
+  "notation": {
+    "hanja": "鹽分",
+    "hanja_gloss": "鹽 소금 염 · 分 나눌 분",
+    "english": "salinity",
+    "symbol_display": "psu, ‰",
+    "symbol_plain": "psu"
+  },
+  "definition": "해수 1 kg에 녹아 있는 염류를 g 수로 나타낸 값으로, 증발과 강수, 결빙과 해빙, 담수 유입이 그 값을 바꾼다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-salinity-evap",
+      "text": "증발량에서 강수량을 뺀 값이 클수록 표층 염분이 높다",
+      "form": {
+        "condition": "결빙과 담수 유입의 영향이 작은 외양",
+        "type": "direct",
+        "scope": "위도별 표층 염분의 큰 흐름 — 연안에서는 담수 유입이 더 크게 작용한다",
+        "antecedent": {
+          "quantity": "증발량 - 강수량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "표층 염분",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "그 차가 클수록 염분이 낮아진다고 하면 염류가 남고 물만 빠져나가는 증발의 효과와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "증발량에서 강수량을 뺀 값이 클수록 표층 염분은 낮아진다"
+    },
+    {
+      "id": "rel-salinity-freeze",
+      "text": "해수가 얼어붙는 해역에서는 염분이 높아지고 빙하가 녹는 해역에서는 낮아진다",
+      "form": {
+        "condition": "결빙과 해빙이 일어나는 극 지역",
+        "type": "causal",
+        "scope": "염류가 얼음에 거의 들어가지 않는 해수의 결빙"
+      },
+      "invertible": true,
+      "invertible_reason": "염류가 얼음 쪽으로 빠져나가지 않으므로 방향을 뒤집으면 반드시 거짓이 된다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해수가 얼어붙는 해역에서는 염분이 낮아지고 빙하가 녹는 해역에서는 높아진다"
+    },
+    {
+      "id": "rel-salinity-freshwater",
+      "text": "강물이 흘러드는 연안은 같은 위도의 외양보다 염분이 낮다",
+      "form": {
+        "condition": "담수 유입량이 많은 연안",
+        "type": "causal",
+        "scope": "하천이 닿는 연안 해역"
+      },
+      "invertible": false,
+      "invertible_reason": "고염분 해류가 들어오는 연안처럼 예외가 있어 뒤집은 문장을 언제나 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적도는 늘 뜨거워 증발이 많으니 염분도 가장 높다",
+      "why_wrong": "적도는 강수량이 증발량보다 많아 오히려 염분이 낮다. 염분을 정하는 것은 증발량과 강수량의 차다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-salinity-evap"
+    },
+    {
+      "text": "바닷물이 얼면 소금도 얼음에 들어가므로 남은 바닷물의 염분은 낮아진다",
+      "why_wrong": "결빙 때 염류는 대부분 남은 해수 쪽에 남는다. 그래서 결빙 해역의 염분은 오히려 높아진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-salinity-freeze"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-seawater-density"
+    },
+    {
+      "type": "related",
+      "target": "earth-deep-ocean-circulation",
+      "note": "염분이 침강을 좌우한다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-01-3",
+  "pages": [
+    17,
+    18,
+    25
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

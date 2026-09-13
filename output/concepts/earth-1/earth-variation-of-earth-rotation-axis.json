@@ -1,0 +1,114 @@
+{
+  "id": "earth-variation-of-earth-rotation-axis",
+  "concept_key": "concept:variation-of-earth-rotation-axis",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "지구 자전축의 변화",
+  "notation": {
+    "hanja": "地球自轉軸變化",
+    "hanja_gloss": "地 땅 지 · 球 공 구 · 自 스스로 자 · 轉 구를 전 · 軸 굴대 축 · 變 변할 변 · 化 될 화",
+    "english": "variation of Earth's rotation axis"
+  },
+  "definition": "자전축이 약 41000년을 주기로 기울기를 바꾸고 약 26000년을 주기로 경사 방향을 도는 변화로, 계절별 일사량을 달라지게 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ax-tilt",
+      "text": "자전축 기울기가 지금보다 커지면 중위도와 고위도에서 여름은 더 덥고 겨울은 더 추워져 연교차가 커진다",
+      "form": {
+        "condition": "다른 조건은 그대로일 때",
+        "type": "direct",
+        "scope": "중위도와 고위도 — 적도 부근에서는 변화가 작다",
+        "antecedent": {
+          "quantity": "자전축 기울기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기온의 연교차",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기울기가 커지면 계절별 일사량 차가 벌어지므로 연교차가 작아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자전축 기울기가 커지면 중위도와 고위도의 기온 연교차가 작아진다"
+    },
+    {
+      "id": "rel-ax-precession",
+      "text": "세차 운동으로 자전축 경사 방향이 지금과 반대가 되면 북반구는 근일점 부근에서 여름을 맞아 연교차가 커진다",
+      "form": {
+        "condition": "공전 궤도의 모양이 지금과 같을 때",
+        "type": "causal",
+        "scope": "북반구 — 남반구에서는 거꾸로 나타난다"
+      },
+      "invertible": true,
+      "invertible_reason": "근일점에서 여름을 맞으면 여름이 더 더워지므로 연교차가 작아진다는 말은 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세차 운동으로 경사 방향이 반대가 되면 북반구의 기온 연교차는 작아진다"
+    },
+    {
+      "id": "rel-ax-hemisphere",
+      "text": "세차 운동이 가져오는 계절과 기온의 변화는 북반구와 남반구에 서로 반대로 나타난다",
+      "form": {
+        "condition": "같은 시기의 두 반구를 견줄 때",
+        "type": "classification",
+        "scope": "세차 운동에 따른 계절 변화"
+      },
+      "invertible": false,
+      "invertible_reason": "두 반구가 서로 맞바뀌는 관계라 뒤집어도 같은 뜻이 되어 거짓이 되지 않는다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자전축 기울기가 커지면 지구 전체가 더워진다",
+      "why_wrong": "한 해 전체로 받는 양이 크게 달라지는 것이 아니라 여름과 겨울의 차이가 커진다. 곧 연교차가 커진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ax-tilt"
+    },
+    {
+      "text": "세차 운동이 일어나면 여름과 겨울의 달이 서로 바뀌어 달력이 달라진다",
+      "why_wrong": "달력이 바뀌는 것이 아니라, 지구가 근일점·원일점에 있을 때 맞는 계절이 바뀌어 기온의 폭이 달라진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ax-precession"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-natural-factor-of-climate-change"
+    },
+    {
+      "type": "related",
+      "target": "earth-variation-of-orbital-eccentricity",
+      "note": "함께 보아야 연교차 변화가 읽힌다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-06"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-07-2",
+  "pages": [
+    68,
+    69,
+    75,
+    79
+  ],
+  "difficulty": 5,
+  "role": "supporting",
+  "version": 1
+}

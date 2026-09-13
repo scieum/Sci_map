@@ -1,0 +1,114 @@
+{
+  "id": "earth-cold-front",
+  "concept_key": "concept:cold-front",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "한랭 전선",
+  "notation": {
+    "hanja": "寒冷前線",
+    "hanja_gloss": "寒 찰 한 · 冷 찰 랭 · 前 앞 전 · 線 줄 선",
+    "english": "cold front"
+  },
+  "definition": "찬 공기가 따뜻한 공기 아래로 파고들며 밀어 올려 만들어지는 전선으로, 중위도 저기압 중심의 남서쪽에 자리한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cf-cloud",
+      "text": "한랭 전선에서는 공기가 가파르게 밀려 올라가 적운형 구름이 서고 좁은 지역에 강한 비가 내린다",
+      "form": {
+        "condition": "찬 공기가 따뜻한 공기를 밀어 올릴 때",
+        "type": "causal",
+        "scope": "한랭 전선의 뒤쪽 — 층운형 구름이 퍼지는 온난 전선과는 반대다"
+      },
+      "invertible": true,
+      "invertible_reason": "가파른 상승은 적운형 구름을 만들므로 층운형이 선다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한랭 전선에서는 층운형 구름이 발달해 넓은 지역에 약한 비가 내린다"
+    },
+    {
+      "id": "rel-cf-after",
+      "text": "한랭 전선이 지나간 뒤에는 찬 공기가 들어와 기온이 내려가고 기압은 올라간다",
+      "form": {
+        "condition": "전선이 관측 지점을 통과한 직후",
+        "type": "causal",
+        "scope": "북반구 중위도에서 한랭 전선이 지날 때",
+        "antecedent": {
+          "quantity": "한랭 전선의 통과",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전선 뒤쪽이 찬 공기이므로 기온이 올라간다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한랭 전선이 지나간 뒤에는 기온이 올라가고 기압이 내려간다"
+    },
+    {
+      "id": "rel-cf-wind",
+      "text": "한랭 전선이 지날 때 풍향은 남서풍 계열에서 북서풍 계열로 바뀐다",
+      "form": {
+        "condition": "북반구에서 관측할 때",
+        "type": "causal",
+        "scope": "북반구 중위도 저기압에 딸린 한랭 전선"
+      },
+      "invertible": false,
+      "invertible_reason": "남반구에서는 바뀌는 차례가 달라 뒤집은 문장을 언제나 거짓이라 할 수 없다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "한랭 전선이 지나가면 따뜻한 공기가 들어와 기온이 올라간다",
+      "why_wrong": "한랭 전선 뒤쪽에는 찬 공기가 자리 잡으므로 통과 후 기온은 내려간다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cf-after"
+    },
+    {
+      "text": "한랭 전선에서는 비가 넓은 지역에 오래 내린다",
+      "why_wrong": "가파른 상승으로 적운형 구름이 서기 때문에 좁은 지역에 짧고 강하게 내린다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cf-cloud"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-midlatitude-cyclone"
+    },
+    {
+      "type": "related",
+      "target": "earth-warm-front",
+      "note": "짝으로 견주어야 차이가 산다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-03-2",
+  "pages": [
+    33,
+    34,
+    35,
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

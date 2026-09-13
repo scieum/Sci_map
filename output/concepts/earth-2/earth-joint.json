@@ -1,0 +1,95 @@
+{
+  "id": "earth-joint",
+  "concept_key": "concept:joint",
+  "registry_status": "new",
+  "term": "절리",
+  "notation": {
+    "hanja": "節理",
+    "english": "joint",
+    "hanja_gloss": "節 마디 절 · 理 다스릴 리"
+  },
+  "definition": "암석이 힘을 받거나 온도·압력이 달라져 부피가 변하면서 갈라져 생긴 틈.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-joint-column",
+      "text": "지표로 흘러나온 용암이 빠르게 식으며 수축하면 다각형 기둥 모양의 주상 절리가 생긴다.",
+      "form": {
+        "condition": "용암이 지표에서 급히 냉각될 때",
+        "type": "causal",
+        "scope": "화산암에 발달하는 절리"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-joint-sheet",
+      "text": "심성암이 융기해 위의 지층이 깎여 나가면 압력이 줄어 부피가 늘면서 판상 절리가 생긴다.",
+      "form": {
+        "condition": "심성암 위를 덮던 암석이 제거될 때",
+        "type": "causal",
+        "scope": "지표에 드러난 심성암"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-joint-vs-fault",
+      "text": "절리는 틈을 사이에 두고 양쪽 암석이 어긋나 이동하지 않는다는 점에서 단층과 다르다.",
+      "form": {
+        "condition": "갈라진 틈의 양쪽을 견줄 때",
+        "type": "classification",
+        "scope": "절리와 단층을 가르는 기준"
+      },
+      "invertible": true,
+      "invertible_reason": "어긋남의 유무가 둘을 가르는 기준이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "절리도 단층처럼 틈을 사이에 두고 양쪽 암석이 어긋나 이동한 구조다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주상 절리와 판상 절리는 둘 다 용암이 식으면서 만들어진다",
+      "why_wrong": "주상 절리는 용암의 급격한 냉각과 수축으로 생기지만, 판상 절리는 심성암이 융기해 압력이 줄어 팽창하면서 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-joint-sheet"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-igneous-rock"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-plutonic-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-6",
+  "pages": [
+    119,
+    121
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "earth-luminosity",
+  "concept_key": "concept:luminosity",
+  "registry_status": "new",
+  "term": "광도",
+  "aliases": [
+    "별의 실제 밝기"
+  ],
+  "notation": {
+    "hanja": "光度",
+    "english": "luminosity",
+    "hanja_gloss": "光 빛 광 · 度 법도 도",
+    "symbol_display": "L",
+    "symbol_plain": "L"
+  },
+  "definition": "별이 단위 시간 동안 내보내는 에너지의 총량으로 나타낸 실제 밝기. 거리와 상관없이 별 자체의 밝기를 견주는 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-luminosity-abs-mag",
+      "text": "광도가 큰 별일수록 절대 등급의 값은 작아진다.",
+      "form": {
+        "condition": "같은 기준 거리에서 견줄 때",
+        "type": "inverse",
+        "scope": "절대 등급으로 나타낸 별의 밝기",
+        "antecedent": {
+          "quantity": "광도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "절대 등급",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "밝을수록 등급 값이 작아지는 약속이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 큰 별일수록 절대 등급의 값이 커진다."
+    },
+    {
+      "id": "rel-luminosity-from-abs",
+      "text": "별의 절대 등급을 태양과 견주면 태양을 기준으로 한 그 별의 광도를 구할 수 있다.",
+      "form": {
+        "condition": "태양의 광도와 절대 등급을 알고 있을 때",
+        "type": "conditional",
+        "scope": "절대 등급이 알려진 별"
+      },
+      "invertible": false,
+      "invertible_reason": "광도에서 절대 등급을 구하는 역도 성립해 뒤집어도 참이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "밤하늘에서 밝게 보이는 별일수록 광도가 크다",
+      "why_wrong": "보이는 밝기는 거리에 따라 달라진다. 가까이 있으면 광도가 작은 별도 밝게 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-luminosity-abs-mag"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-apparent-magnitude-and-absolute-magnitude"
+    },
+    {
+      "type": "next",
+      "target": "earth-stellar-radius"
+    },
+    {
+      "type": "next",
+      "target": "earth-hertzsprung-russell-diagram"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-3",
+  "pages": [
+    168,
+    169,
+    171
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

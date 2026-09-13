@@ -1,0 +1,107 @@
+{
+  "id": "earth-quasar",
+  "concept_key": "concept:quasar",
+  "registry_status": "new",
+  "term": "퀘이사",
+  "aliases": [
+    "준항성체"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "quasar",
+    "hanja_note": "영어 quasar(quasi-stellar object)의 음차어라 한자어 표기가 존재하지 않는다."
+  },
+  "definition": "아주 멀리 있으면서도 극도로 밝아 별처럼 점으로 보이는 활동 은하핵. 큰 적색 편이를 보인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-quasar-pointlike",
+      "text": "매우 멀리 떨어진 은하의 중심부에서 엄청난 에너지가 나오기 때문에 은하가 아니라 별처럼 보인다.",
+      "form": {
+        "condition": "망원경으로 퀘이사를 관측할 때",
+        "type": "causal",
+        "scope": "퀘이사"
+      },
+      "invertible": false,
+      "invertible_reason": "점으로 보인다고 모두 퀘이사는 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-quasar-redshift",
+      "text": "퀘이사는 대부분 매우 멀리 있어 스펙트럼선이 긴 파장 쪽으로 크게 밀린 적색 편이를 보인다.",
+      "form": {
+        "condition": "퀘이사의 스펙트럼을 관측할 때",
+        "type": "direct",
+        "scope": "우주 팽창 속에 있는 외부 은하",
+        "antecedent": {
+          "quantity": "퀘이사까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "적색 편이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리와 적색 편이가 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "퀘이사는 매우 멀리 있을수록 적색 편이가 작게 나타난다."
+    },
+    {
+      "id": "rel-quasar-early-universe",
+      "text": "빛이 오는 데 오랜 시간이 걸리므로 먼 퀘이사를 보는 것은 초기 우주를 보는 일이 된다.",
+      "form": {
+        "condition": "빛의 속도가 유한하다는 것을 생각할 때",
+        "type": "causal",
+        "scope": "먼 거리의 천체 관측"
+      },
+      "invertible": false,
+      "invertible_reason": "먼 천체는 모두 과거를 보여 주므로 퀘이사만의 성질이 아니다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "퀘이사는 매우 밝은 별이다",
+      "why_wrong": "별처럼 점으로 보일 뿐, 실제로는 은하 중심의 활동 영역에서 나오는 빛이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-quasar-pointlike"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-peculiar-galaxy"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-redshift",
+      "note": "퀘이사의 거리 판단이 적색 편이에 기댄다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-06-2",
+  "pages": [
+    194,
+    195
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

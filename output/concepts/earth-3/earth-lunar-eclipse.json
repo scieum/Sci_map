@@ -1,0 +1,115 @@
+{
+  "id": "earth-lunar-eclipse",
+  "concept_key": "concept:lunar-eclipse",
+  "registry_status": "new",
+  "term": "월식",
+  "aliases": [
+    "개기월식",
+    "부분월식",
+    "반영식"
+  ],
+  "notation": {
+    "hanja": "月蝕",
+    "english": "lunar eclipse",
+    "hanja_gloss": "月 달 월 · 蝕 좀먹을 식"
+  },
+  "definition": "달이 지구의 그림자 속으로 들어가 전부 또는 일부가 어두워지는 식 현상. 태양·지구·달 차례로 늘어서는 망일 때 일어날 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lunar-eclipse-kind",
+      "text": "달 전체가 지구의 본그림자에 들어가면 개기월식, 일부만 들어가면 부분월식, 반그림자만 지나면 반영식이다.",
+      "form": {
+        "condition": "달이 망의 위치에서 지구 그림자를 지날 때",
+        "type": "classification",
+        "scope": "지구 그림자 안을 달이 통과하는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lunar-eclipse-region",
+      "text": "월식은 밤이 된 지역이면 어디서나 볼 수 있어 개기일식보다 관측 범위가 훨씬 넓다.",
+      "form": {
+        "condition": "월식이 진행되는 동안",
+        "type": "conditional",
+        "scope": "지구에서 달이 지평선 위에 떠 있는 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "개기일식은 달의 좁은 본그림자 안에서만 보이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개기일식은 밤이 된 지역이면 어디서나 볼 수 있어 월식보다 관측 범위가 넓다."
+    },
+    {
+      "id": "rel-lunar-eclipse-duration",
+      "text": "가리는 그림자가 클수록 식이 오래 이어지므로 개기월식은 개기일식보다 오래 지속된다.",
+      "form": {
+        "condition": "개기식이 이어지는 시간을 견줄 때",
+        "type": "causal",
+        "scope": "지구 그림자를 지나는 달과 달 그림자가 스치는 지구의 비교",
+        "antecedent": {
+          "quantity": "가리는 그림자의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "식이 지속되는 시간",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "지구 그림자가 달보다 크므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개기일식이 지속되는 시간은 개기월식보다 길다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "개기월식 때 달은 완전히 보이지 않는다",
+      "why_wrong": "지구 대기를 지나며 굴절된 붉은빛이 달에 닿기 때문에 달은 사라지지 않고 검붉게 보인다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "월식은 달의 위상이 변해서 생기는 현상이다",
+      "why_wrong": "위상 변화는 달이 햇빛을 받는 면이 달리 보이는 것이고, 월식은 지구 그림자가 달을 가리는 별개의 현상이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-umbra-and-penumbra"
+    },
+    {
+      "type": "next",
+      "target": "earth-condition-for-eclipse"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-01-2",
+  "pages": [
+    154,
+    155,
+    156
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,108 @@
+{
+  "id": "earth-regional-metamorphism",
+  "concept_key": "concept:regional-metamorphism",
+  "registry_status": "new",
+  "term": "광역 변성 작용",
+  "notation": {
+    "hanja": "廣域變成作用",
+    "english": "regional metamorphism",
+    "hanja_gloss": "廣 넓을 광 · 域 지경 역 · 變 변할 변 · 成 이룰 성 · 作 지을 작 · 用 쓸 용"
+  },
+  "definition": "판이 섭입하거나 충돌하는 곳에서 온도와 압력이 함께 올라 넓은 지역의 암석이 변성되는 작용.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-reg-foliation",
+      "text": "한 방향으로 강한 압력이 작용하므로 광물이 나란히 배열되어 엽리가 만들어진다.",
+      "form": {
+        "condition": "방향성 있는 압력이 오래 작용할 때",
+        "type": "causal",
+        "scope": "광역 변성을 받은 암석"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-reg-series",
+      "text": "셰일이 광역 변성을 받으면 변성 정도가 커질수록 점판암, 천매암, 편암, 편마암의 차례로 바뀐다.",
+      "form": {
+        "condition": "같은 원암이 점점 강한 변성을 받을 때",
+        "type": "direct",
+        "scope": "셰일을 원암으로 하는 변성 계열",
+        "antecedent": {
+          "quantity": "변성 작용의 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "변성암 계열에서의 자리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변성이 진행되는 방향이 정해져 있으므로 차례를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "셰일이 광역 변성을 받으면 변성 정도가 커질수록 편마암, 편암, 천매암, 점판암의 차례로 바뀐다."
+    },
+    {
+      "id": "rel-reg-site",
+      "text": "광역 변성 작용은 변동대인 섭입대나 대륙 충돌대에서 주로 일어난다.",
+      "form": {
+        "condition": "판이 서로 모여드는 경계에서",
+        "type": "classification",
+        "scope": "판 경계와 관련된 변성 작용"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 자리를 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광역 변성암은 마그마의 열 때문에 만들어진 암석이다",
+      "why_wrong": "마그마의 열로 좁은 범위에서 만들어지는 것은 접촉 변성암이다. 광역 변성암은 판의 섭입·충돌로 온도와 압력이 함께 올라 넓은 지역에서 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-reg-site"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-metamorphism"
+    },
+    {
+      "type": "next",
+      "target": "earth-foliation"
+    },
+    {
+      "type": "next",
+      "target": "earth-metamorphic-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-04-1",
+  "pages": [
+    122,
+    123,
+    129
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

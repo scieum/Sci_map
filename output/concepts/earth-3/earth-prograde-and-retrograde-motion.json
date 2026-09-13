@@ -1,0 +1,110 @@
+{
+  "id": "earth-prograde-and-retrograde-motion",
+  "concept_key": "concept:prograde-and-retrograde-motion",
+  "registry_status": "new",
+  "term": "순행과 역행",
+  "aliases": [
+    "유"
+  ],
+  "notation": {
+    "hanja": "順行逆行",
+    "english": "prograde and retrograde motion",
+    "hanja_gloss": "順 순할 순 · 行 다닐 행 · 逆 거스를 역 · 行 다닐 행"
+  },
+  "definition": "지구에서 볼 때 행성이 별자리를 기준으로 서에서 동으로 옮겨 가면 순행, 동에서 서로 옮겨 가면 역행이며, 방향이 바뀌는 때가 유다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-retrograde-inferior",
+      "text": "내행성은 지구보다 빠르게 공전하므로 내합을 앞뒤로 낀 구간에서 역행한다.",
+      "form": {
+        "condition": "내행성을 여러 달 관측할 때",
+        "type": "conditional",
+        "scope": "수성·금성처럼 지구 궤도 안쪽을 도는 행성"
+      },
+      "invertible": false,
+      "invertible_reason": "내행성이 역행하면 내합 부근이라는 역도 참이라 뒤집어도 거짓이 아니다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-retrograde-superior",
+      "text": "외행성은 지구가 안쪽에서 앞질러 가는 충 무렵에 역행한다.",
+      "form": {
+        "condition": "외행성을 여러 달 관측할 때",
+        "type": "conditional",
+        "scope": "화성·목성처럼 지구 궤도 바깥을 도는 행성"
+      },
+      "invertible": false,
+      "invertible_reason": "외행성이 역행하면 충 부근이라는 역도 참이라 뒤집어도 거짓이 아니다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-stationary-point",
+      "text": "순행에서 역행으로, 역행에서 순행으로 넘어가는 사이에 행성이 잠시 멈춘 듯 보이는 유가 나타난다.",
+      "form": {
+        "condition": "겉보기 이동 방향이 바뀔 때",
+        "type": "conditional",
+        "scope": "지구에서 본 행성의 겉보기 운동"
+      },
+      "invertible": false,
+      "invertible_reason": "유가 보이면 방향이 바뀌는 중이라는 역도 참이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "순행은 행성이 동쪽에서 서쪽으로 옮겨 가 보이는 것이다",
+      "why_wrong": "순행은 별자리를 기준으로 서에서 동으로 옮겨 가 보이는 것이고, 동에서 서로 가는 쪽이 역행이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-retrograde-inferior"
+    },
+    {
+      "text": "행성은 언제나 순행만 한다",
+      "why_wrong": "내행성은 내합 앞뒤로, 외행성은 충 앞뒤로 역행하는 구간이 나타난다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-apparent-motion-of-planet"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-inferior-planet-configuration",
+      "note": "내합·충 전후에 역행이 일어난다"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-superior-planet-configuration",
+      "note": "충 전후에 역행이 일어난다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-02-1",
+  "pages": [
+    158,
+    160,
+    163
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

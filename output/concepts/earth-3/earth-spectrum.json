@@ -1,0 +1,94 @@
+{
+  "id": "earth-spectrum",
+  "concept_key": "concept:spectrum",
+  "registry_status": "new",
+  "term": "스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "spectrum",
+    "hanja_note": "라틴어 spectrum 을 그대로 옮긴 음차어라 한자어 표기가 존재하지 않는다."
+  },
+  "definition": "빛을 파장에 따라 갈라 늘어놓은 띠. 광원과 그 빛이 지나온 기체의 상태에 따라 연속·흡수·방출 스펙트럼으로 나뉜다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spectrum-kinds",
+      "text": "뜨거운 광원의 빛이 그대로 오면 연속 스펙트럼, 저온 기체를 지나면 흡수 스펙트럼, 고온 기체가 스스로 내면 방출 스펙트럼이다.",
+      "form": {
+        "condition": "빛을 분광기로 갈라 볼 때",
+        "type": "classification",
+        "scope": "광원과 기체의 온도 관계에 따른 분류"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-absorption-line-origin",
+      "text": "저온의 기체가 특정 파장의 빛을 골라 흡수하기 때문에 연속 스펙트럼 위에 어두운 선이 남는다.",
+      "form": {
+        "condition": "연속 스펙트럼을 내는 광원 앞에 저온 기체가 있을 때",
+        "type": "causal",
+        "scope": "광원보다 기체의 온도가 낮은 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "어두운 선만으로 기체의 온도 관계를 되짚으려면 조건이 더 필요하다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-star-absorption",
+      "text": "별의 스펙트럼이 흡수 스펙트럼으로 나타나는 것은 표면에서 나온 빛이 그보다 차가운 대기를 지나오기 때문이다.",
+      "form": {
+        "condition": "별빛을 분광 관측할 때",
+        "type": "causal",
+        "scope": "대기가 표면보다 온도가 낮은 보통의 별"
+      },
+      "invertible": false,
+      "invertible_reason": "다른 천체에서는 방출 스펙트럼이 나타나기도 하여 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흡수선은 별의 대기에 없는 원소 때문에 생긴다",
+      "why_wrong": "흡수선은 별의 대기에 있는 원소가 자기 고유의 파장을 흡수하고 남긴 자국이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-star-absorption"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-spectral-type"
+    },
+    {
+      "type": "next",
+      "target": "earth-redshift"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-2",
+  "pages": [
+    165,
+    166
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

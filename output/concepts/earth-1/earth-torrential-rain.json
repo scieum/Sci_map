@@ -1,0 +1,107 @@
+{
+  "id": "earth-torrential-rain",
+  "concept_key": "concept:torrential-rain",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "집중 호우",
+  "notation": {
+    "hanja": "集中豪雨",
+    "hanja_gloss": "集 모을 집 · 中 가운데 중 · 豪 호걸 호 · 雨 비 우",
+    "english": "torrential rain"
+  },
+  "definition": "짧은 시간에 좁은 지역으로 많은 비가 쏟아지는 현상으로, 전선이나 저기압·태풍을 따라 적란운이 잇따라 자랄 때 일어난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tr-causes",
+      "text": "집중 호우는 태풍, 중규모 저기압, 중위도 저기압, 장마철의 정체 전선을 따라 일어난다",
+      "form": {
+        "condition": "적란운이 잇따라 자랄 수 있는 기상 조건",
+        "type": "classification",
+        "scope": "우리나라에서 관측되는 집중 호우의 주된 원인"
+      },
+      "invertible": false,
+      "invertible_reason": "원인을 나열한 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tr-cb",
+      "text": "한자리에서 적란운이 잇따라 생겨나면 좁은 지역에 짧은 시간 동안 폭우가 쏟아진다",
+      "form": {
+        "condition": "수증기가 계속 흘러들 때",
+        "type": "causal",
+        "scope": "적란운이 이어져 발달하는 좁은 구역"
+      },
+      "invertible": true,
+      "invertible_reason": "적란운은 좁고 강한 비를 뿌리므로 넓고 약한 비가 된다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적란운이 한자리에서 잇따라 생겨나면 넓은 지역에 약한 비가 길게 내린다"
+    },
+    {
+      "id": "rel-tr-warning",
+      "text": "3시간 강우량이 90 mm를 넘거나 12시간 강우량이 180 mm를 넘을 것으로 보이면 호우 경보를 낸다",
+      "form": {
+        "condition": "기상청의 경보 기준에 따를 때",
+        "type": "conditional",
+        "scope": "우리나라의 호우 경보 기준 — 주의보 기준과는 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "행정 기준을 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "집중 호우는 태풍이 올 때만 생긴다",
+      "why_wrong": "장마철 정체 전선이나 중위도·중규모 저기압에서도 집중 호우가 일어난다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-causes"
+    },
+    {
+      "text": "비가 많이 오면 모두 집중 호우다",
+      "why_wrong": "짧은 시간에 좁은 지역으로 쏟아지는 것을 집중 호우라 한다. 넓은 지역에 길게 내리는 비와는 다르다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-cb"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-midlatitude-cyclone"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-typhoon"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-thunderstorm"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-05-3",
+  "pages": [
+    50,
+    55,
+    79
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

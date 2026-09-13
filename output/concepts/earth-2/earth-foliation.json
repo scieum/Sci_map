@@ -1,0 +1,89 @@
+{
+  "id": "earth-foliation",
+  "concept_key": "concept:foliation",
+  "registry_status": "new",
+  "term": "엽리",
+  "notation": {
+    "hanja": "葉理",
+    "english": "foliation",
+    "hanja_gloss": "葉 잎 엽 · 理 다스릴 리"
+  },
+  "definition": "광역 변성 작용에서 압력에 직각인 방향으로 광물이 나란히 배열되어 생긴 줄무늬 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fol-direction",
+      "text": "광물은 압력이 작용한 방향과 직각을 이루며 나란히 배열된다.",
+      "form": {
+        "condition": "한 방향으로 미는 압력이 작용할 때",
+        "type": "causal",
+        "scope": "광역 변성을 받은 암석"
+      },
+      "invertible": true,
+      "invertible_reason": "배열 방향이 압력 방향과 직각이라는 것이 엽리의 정의이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광물은 압력이 작용한 방향과 나란한 방향으로 배열된다."
+    },
+    {
+      "id": "rel-fol-degree",
+      "text": "변성이 더 진행될수록 줄무늬가 두꺼워져 편리에서 편마 구조로 바뀐다.",
+      "form": {
+        "condition": "같은 암석이 점점 강한 변성을 받을 때",
+        "type": "direct",
+        "scope": "엽리를 가진 광역 변성암",
+        "antecedent": {
+          "quantity": "변성 작용의 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "줄무늬의 두께",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변성이 진행될수록 줄무늬가 두꺼워지므로 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변성이 더 진행될수록 줄무늬가 얇아져 편마 구조에서 편리로 바뀐다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "엽리는 퇴적암의 층리와 같은 것이다",
+      "why_wrong": "층리는 퇴적물이 차례로 쌓여 생긴 줄무늬이고, 엽리는 압력을 받아 광물이 나란히 배열되어 생긴 줄무늬다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fol-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-regional-metamorphism"
+    },
+    {
+      "type": "related",
+      "target": "earth-metamorphic-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-04-2",
+  "pages": [
+    123,
+    129
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

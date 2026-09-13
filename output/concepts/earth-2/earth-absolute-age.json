@@ -1,0 +1,104 @@
+{
+  "id": "earth-absolute-age",
+  "concept_key": "concept:absolute-age",
+  "registry_status": "new",
+  "term": "절대연령",
+  "notation": {
+    "hanja": "絶對年齡",
+    "english": "absolute age",
+    "hanja_gloss": "絶 끊을 절 · 對 대할 대 · 年 해 년 · 齡 나이 령"
+  },
+  "definition": "방사성 동위원소의 붕괴 속도를 이용해 지층이나 암석이 만들어진 시기를 연수로 나타낸 나이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-abs-ratio",
+      "text": "광물에 남은 모원소와 자원소의 비율을 반감기와 견주면 암석이 굳은 시기를 연수로 구할 수 있다.",
+      "form": {
+        "condition": "광물이 만들어진 뒤 원소의 드나듦이 없었을 때",
+        "type": "causal",
+        "scope": "방사성 동위원소를 품은 광물"
+      },
+      "invertible": false,
+      "invertible_reason": "측정 절차를 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-abs-rocktype",
+      "text": "화성암의 절대연령은 마그마에서 광물이 굳은 때를, 변성암의 절대연령은 변성을 받은 때를 가리킨다.",
+      "form": {
+        "condition": "측정한 암석의 종류를 나눌 때",
+        "type": "classification",
+        "scope": "화성암과 변성암"
+      },
+      "invertible": true,
+      "invertible_reason": "두 암석이 가리키는 시점을 맞바꾸면 측정의 뜻과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화성암의 절대연령은 변성을 받은 때를, 변성암의 절대연령은 마그마에서 광물이 굳은 때를 가리킨다."
+    },
+    {
+      "id": "rel-abs-sediment",
+      "text": "퇴적암은 여러 시기에 만들어진 입자가 섞여 있어 절대연령을 곧바로 재기 어렵다.",
+      "form": {
+        "condition": "퇴적물 입자를 그대로 측정할 때",
+        "type": "conditional",
+        "scope": "쇄설성 퇴적암"
+      },
+      "invertible": true,
+      "invertible_reason": "입자마다 나이가 다른 암석에서 하나의 퇴적 시기가 정확히 나올 수는 없으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "퇴적암은 입자가 한 시기에 만들어져 절대연령을 가장 정확히 잴 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "퇴적암에서 절대연령을 재면 그 지층이 쌓인 시기가 바로 나온다",
+      "why_wrong": "재어지는 것은 입자가 된 원래 암석의 나이다. 퇴적 시기는 둘레의 화성암·변성암 연령과 생성 순서를 견주어 간접으로 좁힌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-abs-sediment"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-half-life"
+    },
+    {
+      "type": "related",
+      "target": "earth-relative-age"
+    },
+    {
+      "type": "related",
+      "target": "earth-radioactive-isotope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-01-3",
+  "pages": [
+    93,
+    94,
+    95
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "방사성 연대"
+  ]
+}

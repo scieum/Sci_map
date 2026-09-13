@@ -1,0 +1,112 @@
+{
+  "id": "earth-red-giant-and-supergiant",
+  "concept_key": "concept:red-giant-and-supergiant",
+  "registry_status": "new",
+  "term": "적색거성과 초거성",
+  "aliases": [
+    "적색거성",
+    "초거성"
+  ],
+  "notation": {
+    "hanja": "赤色巨星超巨星",
+    "english": "red giant and supergiant",
+    "hanja_gloss": "赤 붉을 적 · 色 빛 색 · 巨 클 거 · 星 별 성 · 超 뛰어넘을 초 · 巨 클 거 · 星 별 성"
+  },
+  "definition": "H-R도의 오른쪽 위에 놓이는, 표면 온도는 낮지만 반지름이 커서 광도가 큰 별. 그중 반지름이 태양의 수백 배에 이르는 것이 초거성이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-giant-low-t-high-l",
+      "text": "표면 온도가 낮은데도 광도가 큰 까닭은 반지름이 태양보다 수십 배 이상 크기 때문이다.",
+      "form": {
+        "condition": "표면 온도가 태양보다 낮은 별을 볼 때",
+        "type": "causal",
+        "scope": "H-R도 오른쪽 위에 놓인 거성·초거성"
+      },
+      "invertible": false,
+      "invertible_reason": "광도가 크다고 반드시 반지름이 큰 것은 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-giant-density",
+      "text": "질량이 비슷해도 반지름이 매우 크므로 거성과 초거성의 평균 밀도는 주계열성보다 훨씬 작다.",
+      "form": {
+        "condition": "질량이 비슷한 별끼리 견줄 때",
+        "type": "inverse",
+        "scope": "적색거성·초거성과 주계열성의 비교",
+        "antecedent": {
+          "quantity": "반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평균 밀도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부피가 커진 만큼 밀도가 작아지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반지름이 매우 큰 적색거성과 초거성은 평균 밀도도 주계열성보다 크다."
+    },
+    {
+      "id": "rel-giant-hr-position",
+      "text": "표면 온도가 낮고 광도가 크므로 이 별들은 H-R도에서 주계열의 오른쪽 위에 분포한다.",
+      "form": {
+        "condition": "H-R도 위에 자리를 잡을 때",
+        "type": "classification",
+        "scope": "적색거성과 초거성"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적색거성은 붉게 보이므로 표면 온도가 높다",
+      "why_wrong": "붉은색은 최대 복사 파장이 긴 쪽이므로 표면 온도가 낮다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-giant-low-t-high-l"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hertzsprung-russell-diagram"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-stellar-radius",
+      "note": "반지름과 광도의 관계로 분포를 설명한다"
+    },
+    {
+      "type": "next",
+      "target": "earth-post-main-sequence-evolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-04-1",
+  "pages": [
+    174,
+    176
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

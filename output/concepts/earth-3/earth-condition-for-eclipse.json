@@ -1,0 +1,99 @@
+{
+  "id": "earth-condition-for-eclipse",
+  "concept_key": "concept:condition-for-eclipse",
+  "registry_status": "new",
+  "term": "식 현상이 일어나는 조건",
+  "aliases": [
+    "삭",
+    "망"
+  ],
+  "notation": {
+    "hanja": "蝕現象條件",
+    "english": "condition for eclipse",
+    "hanja_gloss": "蝕 좀먹을 식 · 現 나타날 현 · 象 코끼리 상 · 條 가지 조 · 件 사건 건"
+  },
+  "definition": "삭이나 망이면서 동시에 달이 두 공전 궤도면이 만나는 교선 가까이에 놓여야 식이 일어난다는 조건.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eclipse-tilt",
+      "text": "달의 공전 궤도면이 지구의 궤도면과 약 5° 기울어 있어 삭이나 망마다 식이 일어나지는 않는다.",
+      "form": {
+        "condition": "달이 삭이나 망의 위치에 있을 때",
+        "type": "causal",
+        "scope": "궤도면이 기울어 있는 실제 지구·달 계"
+      },
+      "invertible": false,
+      "invertible_reason": "기울기가 없다면 매달 식이 일어난다는 역이 참이라 뒤집어도 거짓이 아니다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eclipse-node",
+      "text": "두 궤도면이 만나는 교선 위에서 세 천체가 일직선을 이룰 때에만 일식이나 월식이 나타난다.",
+      "form": {
+        "condition": "세 천체가 나란히 놓일 때",
+        "type": "conditional",
+        "scope": "일식과 월식 모두"
+      },
+      "invertible": false,
+      "invertible_reason": "식이 일어났다면 교선 부근이었다는 역도 참이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eclipse-phase",
+      "text": "일식은 삭에서만, 월식은 망에서만 일어날 수 있다.",
+      "form": {
+        "condition": "달의 위상이 삭 또는 망일 때",
+        "type": "classification",
+        "scope": "지구에서 관측하는 식 현상"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보름달이 뜰 때마다 월식이 일어난다",
+      "why_wrong": "망이어도 지구 그림자가 달의 위나 아래로 비껴가는 때가 많다. 교선 가까이에서 망이 될 때만 월식이 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eclipse-tilt"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-solar-eclipse",
+      "note": "식을 알아야 왜 매달 일어나지 않는지 묻게 된다"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-lunar-eclipse"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-01-2",
+  "pages": [
+    156,
+    157
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

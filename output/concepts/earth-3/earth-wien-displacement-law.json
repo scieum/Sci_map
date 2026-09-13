@@ -1,0 +1,109 @@
+{
+  "id": "earth-wien-displacement-law",
+  "concept_key": "concept:wien-displacement-law",
+  "registry_status": "new",
+  "term": "빈의 변위 법칙",
+  "notation": {
+    "hanja": "變位法則",
+    "english": "Wien's displacement law",
+    "hanja_note": "'빈'은 사람 이름 Wien 의 음차라 한자가 없다.",
+    "hanja_gloss": "變 변할 변 · 位 자리 위 · 法 법 법 · 則 법칙 칙",
+    "symbol_display": "λ_max = a / T",
+    "symbol_plain": "lambda_max = a / T"
+  },
+  "definition": "흑체가 복사 에너지를 가장 많이 내보내는 파장이 표면 온도에 반비례한다는 법칙. 온도가 높을수록 최대 복사 파장이 짧아진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wien-inverse",
+      "text": "표면 온도가 높은 별일수록 복사 에너지를 최대로 내보내는 파장이 짧다.",
+      "form": {
+        "condition": "별을 흑체로 볼 때",
+        "type": "inverse",
+        "scope": "흑체 복사를 하는 별",
+        "antecedent": {
+          "quantity": "표면 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "최대 복사 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도와 최대 복사 파장은 반비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 온도가 높은 별일수록 복사 에너지를 최대로 내보내는 파장이 길다."
+    },
+    {
+      "id": "rel-wien-color",
+      "text": "최대 복사 파장이 짧은 별은 파란색으로, 긴 별은 붉은색으로 보인다.",
+      "form": {
+        "condition": "별빛을 눈이나 사진으로 볼 때",
+        "type": "conditional",
+        "scope": "최대 복사 파장이 가시광선 영역에 놓이는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 짧은 쪽이 파란빛이므로 색을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "최대 복사 파장이 짧은 별은 붉은색으로, 긴 별은 파란색으로 보인다."
+    },
+    {
+      "id": "rel-wien-measure",
+      "text": "관측한 파장별 복사 세기 분포에서 봉우리의 파장을 읽으면 별의 표면 온도를 어림할 수 있다.",
+      "form": {
+        "condition": "별의 복사 에너지 분포를 관측했을 때",
+        "type": "conditional",
+        "scope": "흑체로 근사할 수 있는 별"
+      },
+      "invertible": false,
+      "invertible_reason": "온도에서 최대 파장을 구하는 역도 성립해 뒤집어도 참이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "붉게 보이는 별이 푸르게 보이는 별보다 뜨겁다",
+      "why_wrong": "붉은색은 최대 복사 파장이 긴 쪽, 곧 표면 온도가 낮은 별의 색이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wien-color"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-blackbody-radiation"
+    },
+    {
+      "type": "next",
+      "target": "earth-spectral-type",
+      "note": "표면 온도를 알아야 분광형의 뜻이 선다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-1",
+  "pages": [
+    164,
+    165,
+    171
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

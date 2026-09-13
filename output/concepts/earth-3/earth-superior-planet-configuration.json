@@ -1,0 +1,102 @@
+{
+  "id": "earth-superior-planet-configuration",
+  "concept_key": "concept:superior-planet-configuration",
+  "registry_status": "new",
+  "term": "외행성의 위치 관계",
+  "aliases": [
+    "합",
+    "충",
+    "동구",
+    "서구"
+  ],
+  "notation": {
+    "hanja": "外行星位置關係",
+    "english": "configuration of superior planet",
+    "hanja_gloss": "外 바깥 외 · 行 다닐 행 · 星 별 성 · 位 자리 위 · 置 둘 치 · 關 빗장 관 · 係 맬 계"
+  },
+  "definition": "지구 바깥 궤도를 도는 행성이 태양·지구와 이루는 자리 구분. 태양 뒤쪽이 합, 태양 반대쪽이 충, 직각 방향이 동구와 서구다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-superior-opposition",
+      "text": "충에 놓인 외행성은 지구에 가장 가까워 시지름이 가장 크고 가장 밝으며 밤새 관측할 수 있다.",
+      "form": {
+        "condition": "외행성이 태양 반대쪽에 놓일 때",
+        "type": "conditional",
+        "scope": "지구 궤도 바깥을 도는 행성"
+      },
+      "invertible": true,
+      "invertible_reason": "충에서 거리가 가장 가까우므로 멀다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "충에 놓인 외행성은 지구에서 가장 멀어 시지름이 가장 작고 어둡게 보인다."
+    },
+    {
+      "id": "rel-superior-conjunction",
+      "text": "합에 놓인 외행성은 태양과 같은 방향에 있어 태양과 함께 뜨고 져서 관측하기 어렵다.",
+      "form": {
+        "condition": "외행성이 태양 뒤쪽에 놓일 때",
+        "type": "conditional",
+        "scope": "지구 궤도 바깥을 도는 행성"
+      },
+      "invertible": false,
+      "invertible_reason": "관측이 어려운 자리가 합만은 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-superior-quadrature",
+      "text": "동구와 서구에서는 외행성이 지구에서 볼 때 태양과 직각 방향에 놓인다.",
+      "form": {
+        "condition": "외행성이 태양과 90° 방향에 있을 때",
+        "type": "classification",
+        "scope": "동구·서구에 놓인 외행성"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "외행성이 충에 있으면 태양에 가려 보이지 않는다",
+      "why_wrong": "충은 태양의 반대쪽이므로 한밤중에 가장 잘 보인다. 보이지 않는 쪽은 태양 뒤편인 합이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-superior-opposition"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-apparent-motion-of-planet"
+    },
+    {
+      "type": "next",
+      "target": "earth-prograde-and-retrograde-motion",
+      "note": "충 전후에 역행이 일어난다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-02-3",
+  "pages": [
+    160,
+    163
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

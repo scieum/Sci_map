@@ -1,0 +1,97 @@
+{
+  "id": "earth-hydrostatic-equilibrium",
+  "concept_key": "concept:hydrostatic-equilibrium",
+  "registry_status": "new",
+  "term": "정역학 평형",
+  "notation": {
+    "hanja": "靜力學平衡",
+    "english": "hydrostatic equilibrium",
+    "hanja_gloss": "靜 고요할 정 · 力 힘 력 · 學 배울 학 · 平 평평할 평 · 衡 저울대 형"
+  },
+  "definition": "안으로 당기는 중력과 밖으로 밀어내는 기체 압력 차에 의한 힘이 맞서 별의 크기가 달라지지 않는 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-he-balance",
+      "text": "두 힘의 크기가 같아지면 별은 수축하지도 팽창하지도 않는다.",
+      "form": {
+        "condition": "별 내부의 중력과 압력 차에 의한 힘을 견줄 때",
+        "type": "conditional",
+        "scope": "주계열 단계의 별"
+      },
+      "invertible": false,
+      "invertible_reason": "크기가 일정하면 두 힘이 맞선 것이라는 역도 참이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-he-fusion",
+      "text": "중심부의 핵융합이 내부 온도와 기체 압력을 떠받쳐 주므로 평형이 오래 이어진다.",
+      "form": {
+        "condition": "중심부에서 핵융합이 이어지는 동안",
+        "type": "causal",
+        "scope": "주계열 단계의 별"
+      },
+      "invertible": false,
+      "invertible_reason": "평형의 까닭이 핵융합 하나뿐이라 되짚을 수는 없다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-he-broken",
+      "text": "핵융합이 멎어 기체 압력이 줄면 중력이 이겨 중심핵이 수축한다.",
+      "form": {
+        "condition": "중심부의 핵융합이 끝났을 때",
+        "type": "causal",
+        "scope": "주계열을 벗어나는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "압력이 줄면 중력 쪽이 이기므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵융합이 멎어 기체 압력이 줄면 압력이 중력을 이겨 중심핵이 팽창한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정역학 평형 상태에서는 별 내부에서 아무 일도 일어나지 않는다",
+      "why_wrong": "중심부에서는 핵융합이 활발히 일어나고 있고, 그 에너지가 압력을 떠받쳐 평형이 유지된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-he-fusion"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-main-sequence-star"
+    },
+    {
+      "type": "next",
+      "target": "earth-post-main-sequence-evolution",
+      "note": "평형이 깨지면서 수축·팽창이 일어난다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-2",
+  "pages": [
+    180,
+    183,
+    187
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

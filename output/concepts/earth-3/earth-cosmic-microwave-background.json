@@ -1,0 +1,113 @@
+{
+  "id": "earth-cosmic-microwave-background",
+  "concept_key": "concept:cosmic-microwave-background",
+  "registry_status": "new",
+  "term": "우주 배경 복사",
+  "notation": {
+    "hanja": "宇宙背景輻射",
+    "english": "cosmic microwave background",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 背 등 배 · 景 볕 경 · 輻 바큇살 복 · 射 쏠 사"
+  },
+  "definition": "우주 나이 약 38만 년에 자유로워진 빛이 팽창으로 파장이 늘어나, 지금은 약 2.73 K 의 흑체 복사로 하늘 모든 방향에서 오는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cmb-decoupling",
+      "text": "온도가 약 3000 K 으로 내려가 전자가 원자핵과 결합하자 빛이 전자에 부딪히지 않고 곧장 나아가게 되었다.",
+      "form": {
+        "condition": "우주 나이가 약 38만 년이 되었을 때",
+        "type": "causal",
+        "scope": "초기 우주가 식어 가는 과정"
+      },
+      "invertible": false,
+      "invertible_reason": "빛이 자유로워진 사건에서 온도를 되짚는 것도 참이라 뒤집어도 거짓이 아니다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cmb-wavelength",
+      "text": "우주가 팽창하는 동안 이 빛의 파장은 길어지고 온도는 낮아져 지금은 마이크로파로 관측된다.",
+      "form": {
+        "condition": "우주가 계속 팽창하는 동안",
+        "type": "inverse",
+        "scope": "우주 배경 복사",
+        "antecedent": {
+          "quantity": "우주의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "배경 복사의 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "팽창이 파장을 늘이므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주가 팽창하는 동안 우주 배경 복사의 파장은 짧아지고 온도는 높아진다."
+    },
+    {
+      "id": "rel-cmb-isotropy",
+      "text": "하늘 모든 방향에서 거의 같은 세기로 관측된다는 점이 뜨거운 대폭발로 우주가 시작되었다는 주장을 받쳐 준다.",
+      "form": {
+        "condition": "하늘 전 방향을 관측할 때",
+        "type": "causal",
+        "scope": "빅뱅 우주론의 결정적 증거"
+      },
+      "invertible": false,
+      "invertible_reason": "증거와 이론의 관계라 방향을 뒤집는 판단이 서지 않는다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 배경 복사는 우주의 특정한 방향에서만 온다",
+      "why_wrong": "하늘의 모든 방향에서 거의 같은 세기로 오며, 방향에 따른 차이는 10만분의 1 수준의 미세한 요동뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmb-isotropy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-big-bang-cosmology"
+    },
+    {
+      "type": "next",
+      "target": "earth-inflationary-cosmology"
+    },
+    {
+      "type": "next",
+      "target": "earth-steady-state-cosmology",
+      "note": "논쟁의 결말이 된 관측이다"
+    },
+    {
+      "type": "next",
+      "target": "earth-flatness-and-horizon-problem",
+      "note": "지평선 문제가 배경 복사의 온도 요동에서 나온다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-05"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-07-4",
+  "pages": [
+    202,
+    203
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

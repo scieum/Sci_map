@@ -1,0 +1,106 @@
+{
+  "id": "earth-umbra-and-penumbra",
+  "concept_key": "concept:umbra-and-penumbra",
+  "registry_status": "new",
+  "term": "본그림자와 반그림자",
+  "notation": {
+    "hanja": "本半",
+    "english": "umbra and penumbra",
+    "hanja_note": "'그림자'는 고유어라 한자가 없고, 한자에서 온 '본'과 '반'만 적었다.",
+    "hanja_gloss": "本 근본 본 · 半 반 반"
+  },
+  "definition": "빛이 아주 닿지 못해 짙게 지는 그림자가 본그림자, 빛의 일부만 가려져 옅게 드리우는 그림자가 반그림자다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-umbra-total-solar",
+      "text": "달의 본그림자가 닿는 지역에서는 개기일식이, 반그림자가 닿는 지역에서는 부분일식이 보인다.",
+      "form": {
+        "condition": "일식이 일어나는 동안",
+        "type": "classification",
+        "scope": "지구 표면의 관측 지역"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-umbra-lunar",
+      "text": "달이 지구의 본그림자에 온전히 들어가면 개기월식, 반그림자만 지나면 반영식이 된다.",
+      "form": {
+        "condition": "월식이 일어나는 동안",
+        "type": "classification",
+        "scope": "지구 그림자를 지나는 달"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-umbra-size",
+      "text": "지구에 드리우는 달의 본그림자가 매우 좁아 개기일식을 볼 수 있는 지역은 개기월식보다 훨씬 제한된다.",
+      "form": {
+        "condition": "두 식의 관측 지역을 견줄 때",
+        "type": "causal",
+        "scope": "개기일식과 개기월식의 비교",
+        "antecedent": {
+          "quantity": "본그림자의 크기",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "관측 가능 지역의 넓이",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "달의 본그림자가 지구보다 훨씬 좁으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구에 드리우는 달의 본그림자가 넓어 개기일식을 볼 수 있는 지역이 개기월식보다 넓다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반그림자 지역에서도 태양이 완전히 가려진다",
+      "why_wrong": "반그림자에서는 태양의 일부만 가려져 부분일식으로 보인다. 완전히 가려지는 곳은 본그림자 지역이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-umbra-total-solar"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-solar-eclipse",
+      "note": "그림자의 두 부분을 알아야 개기·부분일식이 갈린다"
+    },
+    {
+      "type": "next",
+      "target": "earth-lunar-eclipse"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-01-1",
+  "pages": [
+    152,
+    155,
+    157
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,85 @@
+{
+  "id": "earth-nebula",
+  "concept_key": "concept:nebula",
+  "registry_status": "new",
+  "term": "성운",
+  "aliases": [
+    "성간 물질"
+  ],
+  "notation": {
+    "hanja": "星雲",
+    "english": "nebula",
+    "hanja_gloss": "星 별 성 · 雲 구름 운"
+  },
+  "definition": "우주 공간의 기체와 티끌 같은 성간 물질이 모여 구름처럼 보이는 천체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nebula-birth",
+      "text": "온도가 낮고 밀도가 높은 성운에서는 중력이 기체의 압력 차에 의한 힘을 이겨 물질이 뭉치므로 별이 태어난다.",
+      "form": {
+        "condition": "성운의 온도가 낮고 밀도가 높을 때",
+        "type": "causal",
+        "scope": "별이 태어나는 성운"
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 높으면 압력 차에 의한 힘이 커져 뭉치지 못하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 높고 밀도가 낮은 성운일수록 물질이 잘 뭉쳐 별이 활발히 태어난다."
+    },
+    {
+      "id": "rel-nebula-cycle",
+      "text": "별이 마지막 단계에서 내놓은 물질이 성간 물질이 되고, 그것이 다시 모여 새 별의 재료가 된다.",
+      "form": {
+        "condition": "별의 일생이 되풀이될 때",
+        "type": "causal",
+        "scope": "은하 안의 물질 순환"
+      },
+      "invertible": false,
+      "invertible_reason": "성간 물질이 모두 죽은 별에서 온 것은 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성운은 온도가 높을수록 별을 잘 만든다",
+      "why_wrong": "온도가 높으면 기체의 압력 차에 의한 힘이 중력보다 커서 물질이 중심으로 모이지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nebula-birth"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-protostar"
+    },
+    {
+      "type": "related",
+      "target": "earth-supernova",
+      "note": "폭발로 흩어진 물질이 다시 성간 물질이 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-1",
+  "pages": [
+    178,
+    179,
+    185
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

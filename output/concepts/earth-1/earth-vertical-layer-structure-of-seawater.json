@@ -1,0 +1,112 @@
+{
+  "id": "earth-vertical-layer-structure-of-seawater",
+  "concept_key": "concept:vertical-layer-structure-of-seawater",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "해수의 층상 구조",
+  "notation": {
+    "hanja": "海水層狀構造",
+    "hanja_gloss": "海 바다 해 · 水 물 수 · 層 층 층 · 狀 형상 상 · 構 얽을 구 · 造 지을 조",
+    "english": "vertical layer structure of seawater"
+  },
+  "definition": "깊이에 따른 수온 변화를 기준으로 해양을 위에서부터 혼합층·수온 약층·심해층 셋으로 가른 연직 구분이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-layer-wind",
+      "text": "바람이 세게 불수록 혼합층은 두껍게 발달한다",
+      "form": {
+        "condition": "표층 가열 조건이 비슷할 때",
+        "type": "direct",
+        "scope": "바람에 의한 연직 혼합이 층 두께를 정하는 중위도·저위도 해역",
+        "antecedent": {
+          "quantity": "바람의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "혼합층의 두께",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "바람이 셀수록 얇아진다고 하면 혼합층이 만들어지는 원리와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바람이 세게 불수록 혼합층은 얇게 형성된다"
+    },
+    {
+      "id": "rel-layer-thermocline",
+      "text": "수온 약층은 아래로 갈수록 수온이 급격히 낮아져 안정하므로 위아래 층의 물질·에너지 교환을 가로막는다",
+      "form": {
+        "condition": "깊이에 따라 수온이 급변하는 구간",
+        "type": "causal",
+        "scope": "표층과 심층의 수온 차가 큰 저위도·중위도 해역"
+      },
+      "invertible": false,
+      "invertible_reason": "안정도와 교환 억제는 한 현상의 두 얼굴이라 방향을 뒤집어도 반드시 거짓인 문장이 되지 않는다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-layer-highlat",
+      "text": "고위도 해양은 표층과 심층의 수온 차가 작아 뚜렷한 층상 구조가 나타나지 않는다",
+      "form": {
+        "condition": "연중 표층이 차가운 극 쪽 해역",
+        "type": "conditional",
+        "scope": "수온을 기준으로 한 층 구분 — 염분을 기준으로 한 구분은 별개다"
+      },
+      "invertible": false,
+      "invertible_reason": "저위도 용승 해역에서도 층이 흐려지는 경우가 있어 뒤집은 문장이 언제나 거짓은 아니다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혼합층은 수온이 높아 생기는 층이니 표층이 뜨거울수록 두꺼워진다",
+      "why_wrong": "혼합층의 두께를 정하는 것은 주로 바람에 의한 혼합이다. 표층 가열이 심하면 오히려 성층이 강해져 혼합층이 얇아진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-layer-wind"
+    },
+    {
+      "text": "수온 약층은 수온이 가장 낮은 층이다",
+      "why_wrong": "수온이 가장 낮은 곳은 심해층이다. 수온 약층은 깊이에 따른 수온 변화가 가장 급한 층을 가리킨다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-layer-thermocline"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-sea-temperature-distribution"
+    },
+    {
+      "type": "related",
+      "target": "earth-upwelling-and-downwelling",
+      "note": "용승 해역은 수온 약층이 얕아진다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-01-2",
+  "pages": [
+    16,
+    17,
+    25
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,105 @@
+{
+  "id": "earth-temperature-salinity-diagram",
+  "concept_key": "concept:temperature-salinity-diagram",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "수온 염분도",
+  "notation": {
+    "hanja": "水溫鹽分圖",
+    "hanja_gloss": "水 물 수 · 溫 따뜻할 온 · 鹽 소금 염 · 分 나눌 분 · 圖 그림 도",
+    "english": "temperature-salinity diagram",
+    "symbol_display": "T-S도",
+    "symbol_plain": "T-S"
+  },
+  "definition": "가로축에 염분, 세로축에 수온을 놓고 등밀도선을 함께 그려 해수의 밀도와 성질을 한눈에 읽게 만든 그래프다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tsd-read",
+      "text": "수온 염분도에서 오른쪽 아래로 갈수록 밀도가 큰 해수를 나타낸다",
+      "form": {
+        "condition": "가로축이 염분, 세로축이 수온인 통상적인 축 배치",
+        "type": "conditional",
+        "scope": "수온과 염분만으로 밀도를 따지는 경우 — 수압의 몫은 빼고 본다"
+      },
+      "invertible": true,
+      "invertible_reason": "오른쪽 아래는 염분이 높고 수온이 낮은 자리이므로 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수온 염분도에서 오른쪽 아래로 갈수록 밀도가 작은 해수를 나타낸다"
+    },
+    {
+      "id": "rel-tsd-isopycnal",
+      "text": "같은 등밀도선 위에 놓인 두 해수는 수온과 염분이 서로 달라도 밀도는 같다",
+      "form": {
+        "condition": "한 등밀도선 위의 두 점을 견줄 때",
+        "type": "classification",
+        "scope": "수온 염분도에 그려진 등밀도선"
+      },
+      "invertible": false,
+      "invertible_reason": "밀도가 같은 해수가 같은 등밀도선에 놓인다는 문장도 참이라 뒤집어도 거짓이 되지 않는다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tsd-watermass",
+      "text": "수심별 해수의 수온과 염분을 찍어 보면 그 해수가 어느 수괴에서 왔는지 가려낼 수 있다",
+      "form": {
+        "condition": "수괴마다 수온·염분이 다르게 유지될 때",
+        "type": "conditional",
+        "scope": "성질이 오래 유지되는 심층 수괴 — 표층수에는 잘 들어맞지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "수괴를 가리는 방법이 이것 하나가 아니어서 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수온 염분도에서 수온이 같으면 밀도도 같다",
+      "why_wrong": "밀도는 수온과 염분이 함께 정한다. 수온이 같아도 염분이 다르면 다른 등밀도선 위에 놓인다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tsd-isopycnal"
+    },
+    {
+      "text": "등밀도선은 수온이 같은 지점을 이은 선이다",
+      "why_wrong": "등밀도선은 밀도가 같은 지점을 이은 선이다. 그 선 위에서 수온과 염분은 서로 다르다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tsd-isopycnal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-seawater-density"
+    },
+    {
+      "type": "next",
+      "target": "earth-water-mass"
+    }
+  ],
+  "curriculum": [
+    "12지구01-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-01-4",
+  "pages": [
+    20,
+    29,
+    78
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

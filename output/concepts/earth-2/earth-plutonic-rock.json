@@ -1,0 +1,96 @@
+{
+  "id": "earth-plutonic-rock",
+  "concept_key": "concept:plutonic-rock",
+  "registry_status": "new",
+  "term": "심성암",
+  "notation": {
+    "hanja": "深成岩",
+    "english": "plutonic rock",
+    "hanja_gloss": "深 깊을 심 · 成 이룰 성 · 岩 바위 암"
+  },
+  "definition": "마그마가 지표에 이르지 못하고 지하 깊은 곳에서 천천히 식어 굳은 화성암.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-plu-texture",
+      "text": "천천히 식어 결정이 충분히 자라므로 결정이 큰 조립질 조직을 가진다.",
+      "form": {
+        "condition": "마그마가 지하 깊은 곳에서 굳을 때",
+        "type": "causal",
+        "scope": "심성암의 조직"
+      },
+      "invertible": true,
+      "invertible_reason": "느린 냉각에서는 결정이 커지므로 잘아진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천천히 식은 심성암은 결정이 자라지 못해 세립질 조직을 가진다."
+    },
+    {
+      "id": "rel-plu-members",
+      "text": "조성에 따라 반려암·섬록암·화강암이 심성암에 든다.",
+      "form": {
+        "condition": "냉각 위치가 같고 조성만 다를 때",
+        "type": "classification",
+        "scope": "이 교과서의 화성암 분류표"
+      },
+      "invertible": false,
+      "invertible_reason": "속하는 암석을 든 분류형 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-plu-uplift",
+      "text": "지하에서 굳은 심성암은 융기하고 위의 암석이 깎여 나가야 지표에 드러난다.",
+      "form": {
+        "condition": "융기와 풍화·침식이 함께 일어날 때",
+        "type": "causal",
+        "scope": "지표에 드러난 심성암 지형"
+      },
+      "invertible": false,
+      "invertible_reason": "드러나는 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화강암은 지표로 흘러나온 용암이 식어 굳은 암석이다",
+      "why_wrong": "화강암은 지하 깊은 곳에서 천천히 굳은 심성암이다. 뒤에 융기와 침식으로 지표에 드러난 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plu-uplift"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-igneous-rock"
+    },
+    {
+      "type": "next",
+      "target": "earth-joint"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-4",
+  "pages": [
+    116,
+    117,
+    121
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

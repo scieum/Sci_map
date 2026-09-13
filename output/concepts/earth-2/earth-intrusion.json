@@ -1,0 +1,101 @@
+{
+  "id": "earth-intrusion",
+  "concept_key": "concept:intrusion",
+  "registry_status": "new",
+  "term": "관입",
+  "notation": {
+    "hanja": "貫入",
+    "english": "intrusion",
+    "hanja_gloss": "貫 꿸 관 · 入 들 입"
+  },
+  "definition": "마그마가 둘레의 암석이나 지층의 틈으로 파고들어 굳어 화성암이 되는 일, 또는 그렇게 만들어진 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-int-order",
+      "text": "어떤 지층 속에 관입암이 들어 있다면 그 지층이 관입암보다 먼저 만들어진 것이다.",
+      "form": {
+        "condition": "관입 관계가 분명하게 관찰될 때",
+        "type": "conditional",
+        "scope": "관입암과 관입당한 지층"
+      },
+      "invertible": true,
+      "invertible_reason": "뚫릴 지층이 먼저 있어야 하므로 차례를 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "어떤 지층 속에 관입암이 들어 있다면 그 지층이 관입암보다 나중에 만들어진 것이다."
+    },
+    {
+      "id": "rel-int-sill-dike",
+      "text": "층상 구조와 나란하게 굳은 것이 암상이고, 층상 구조를 가로질러 굳은 것이 암맥이다.",
+      "form": {
+        "condition": "관입체가 둘레 지층과 이루는 방향을 볼 때",
+        "type": "classification",
+        "scope": "비교적 작은 규모의 관입 구조"
+      },
+      "invertible": true,
+      "invertible_reason": "방향으로 정의가 갈리므로 둘을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "층상 구조와 나란하게 굳은 것이 암맥이고, 가로질러 굳은 것이 암상이다."
+    },
+    {
+      "id": "rel-int-contact",
+      "text": "관입한 마그마의 열로 둘레 암석이 변성되어 접촉부에 변성된 띠가 나타나기도 한다.",
+      "form": {
+        "condition": "마그마와 둘레 암석의 온도 차가 클 때",
+        "type": "causal",
+        "scope": "관입 접촉부"
+      },
+      "invertible": false,
+      "invertible_reason": "경향을 말한 진술이라 뒤집어도 항상 거짓이 되지는 않는다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암상과 암맥은 관입체의 크기로 구분한다",
+      "why_wrong": "둘을 가르는 기준은 크기가 아니라 방향이다. 둘레 지층과 나란하면 암상, 가로지르면 암맥이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-int-sill-dike"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-igneous-rock"
+    },
+    {
+      "type": "next",
+      "target": "earth-stratigraphic-law"
+    },
+    {
+      "type": "next",
+      "target": "earth-xenolith"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03",
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-6",
+  "pages": [
+    118,
+    121
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,113 @@
+{
+  "id": "earth-inferior-planet-configuration",
+  "concept_key": "concept:inferior-planet-configuration",
+  "registry_status": "new",
+  "term": "내행성의 위치 관계",
+  "aliases": [
+    "내합",
+    "외합",
+    "동방 최대 이각",
+    "서방 최대 이각",
+    "이각"
+  ],
+  "notation": {
+    "hanja": "內行星位置關係",
+    "english": "configuration of inferior planet",
+    "hanja_gloss": "內 안 내 · 行 다닐 행 · 星 별 성 · 位 자리 위 · 置 둘 치 · 關 빗장 관 · 係 맬 계"
+  },
+  "definition": "지구 안쪽 궤도를 도는 행성이 태양과 이루는 각거리로 정리한 자리 구분. 태양과 나란한 자리가 내합·외합, 가장 벌어진 자리가 최대 이각이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-inferior-elongation-time",
+      "text": "내행성이 태양의 동쪽에 있으면 해 진 뒤 서쪽 하늘에서, 서쪽에 있으면 해 뜨기 전 동쪽 하늘에서 보인다.",
+      "form": {
+        "condition": "내행성의 이각이 0이 아닐 때",
+        "type": "conditional",
+        "scope": "수성·금성"
+      },
+      "invertible": true,
+      "invertible_reason": "동서를 맞바꾸면 뜨고 지는 차례가 반대가 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "내행성이 태양의 동쪽에 있으면 새벽 동쪽 하늘에서, 서쪽에 있으면 저녁 서쪽 하늘에서 보인다."
+    },
+    {
+      "id": "rel-inferior-conjunction-obs",
+      "text": "내합과 외합에서는 내행성이 태양과 거의 같은 방향에 놓여 관측하기 어렵다.",
+      "form": {
+        "condition": "내행성이 태양과 나란히 놓일 때",
+        "type": "conditional",
+        "scope": "지구에서 하는 내행성 관측"
+      },
+      "invertible": false,
+      "invertible_reason": "관측이 어려운 경우가 합만은 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-max-elongation-orbit",
+      "text": "최대 이각이 큰 내행성일수록 공전 궤도의 반지름이 크다.",
+      "form": {
+        "condition": "내행성의 궤도를 원으로 볼 때",
+        "type": "direct",
+        "scope": "지구 궤도 안쪽을 도는 행성",
+        "antecedent": {
+          "quantity": "최대 이각",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공전 궤도 반지름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "궤도가 클수록 태양에서 더 벌어져 보이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "최대 이각이 큰 내행성일수록 공전 궤도의 반지름이 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "금성은 한밤중에도 남쪽 하늘에서 볼 수 있다",
+      "why_wrong": "금성의 최대 이각은 약 48°이므로 태양에서 그 이상 벌어지지 못한다. 해 진 뒤 서쪽이나 해 뜨기 전 동쪽에서만 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inferior-elongation-time"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-apparent-motion-of-planet",
+      "note": "지구에 대한 행성의 위치를 알아야 겉보기 운동을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "earth-prograde-and-retrograde-motion",
+      "note": "내합·충 전후에 역행이 일어난다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-02-2",
+  "pages": [
+    159,
+    163
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,84 @@
+{
+  "id": "earth-xenolith",
+  "concept_key": "concept:xenolith",
+  "registry_status": "new",
+  "term": "포획암",
+  "notation": {
+    "hanja": "捕獲岩",
+    "english": "xenolith",
+    "hanja_gloss": "捕 잡을 포 · 獲 얻을 획 · 岩 바위 암"
+  },
+  "definition": "마그마가 뚫고 오를 때 녹지 않고 마그마 속에 갇혀 화성암 안에 남은 기반암 조각.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-xen-order",
+      "text": "포획암은 그것을 둘러싼 화성암보다 먼저 만들어진 암석이다.",
+      "form": {
+        "condition": "포획 관계가 분명하게 관찰될 때",
+        "type": "conditional",
+        "scope": "관입암 속의 포획암"
+      },
+      "invertible": true,
+      "invertible_reason": "이미 있던 암석이 뜯겨 들어간 것이므로 차례를 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "포획암은 그것을 둘러싼 화성암보다 나중에 만들어진 암석이다."
+    },
+    {
+      "id": "rel-xen-form",
+      "text": "마그마가 기반암을 뚫고 오르는 동안 다 녹이지 못한 조각이 안으로 들어가 포획 구조가 된다.",
+      "form": {
+        "condition": "기반암 조각이 마그마에 완전히 녹지 않았을 때",
+        "type": "causal",
+        "scope": "관입하는 마그마와 기반암의 경계"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "포획암은 화성암이 다 굳은 뒤에 그 속으로 들어간 암석 조각이다",
+      "why_wrong": "이미 굳은 암석 속으로 다른 암석이 끼어들 수는 없다. 포획암은 마그마가 오르는 동안 뜯겨 들어간 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-xen-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-intrusion"
+    },
+    {
+      "type": "related",
+      "target": "earth-igneous-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03",
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-6",
+  "pages": [
+    118,
+    121
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "포획"
+  ]
+}

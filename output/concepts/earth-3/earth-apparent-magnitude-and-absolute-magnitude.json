@@ -1,0 +1,116 @@
+{
+  "id": "earth-apparent-magnitude-and-absolute-magnitude",
+  "concept_key": "concept:apparent-magnitude-and-absolute-magnitude",
+  "registry_status": "new",
+  "term": "겉보기 등급과 절대 등급",
+  "notation": {
+    "hanja": "等級絕對等級",
+    "english": "apparent magnitude and absolute magnitude",
+    "hanja_note": "'겉보기'는 고유어라 한자가 없고, 한자어인 '등급'과 '절대 등급'만 적었다.",
+    "hanja_gloss": "等 무리 등 · 級 등급 급 · 絕 끊을 절 · 對 대할 대 · 等 무리 등 · 級 등급 급",
+    "symbol_display": "m, M",
+    "symbol_plain": "m, M"
+  },
+  "definition": "눈에 보이는 밝기를 그대로 나타낸 것이 겉보기 등급, 모든 별을 10 pc 거리에 옮겨 놓았다고 보고 나타낸 것이 절대 등급이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-app-abs-distance",
+      "text": "같은 별이라도 거리가 멀어지면 겉보기 등급의 값은 커지지만 절대 등급은 달라지지 않는다.",
+      "form": {
+        "condition": "별의 광도가 일정할 때",
+        "type": "causal",
+        "scope": "거리만 다른 같은 별",
+        "antecedent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "겉보기 등급",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀어지면 어두워져 등급 값이 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 별이라도 거리가 멀어지면 겉보기 등급의 값은 작아진다."
+    },
+    {
+      "id": "rel-app-abs-10pc",
+      "text": "겉보기 등급과 절대 등급이 같은 별은 우리에게서 10 pc 떨어져 있는 별이다.",
+      "form": {
+        "condition": "10 pc 을 기준 거리로 삼을 때",
+        "type": "conditional",
+        "scope": "별의 등급 체계"
+      },
+      "invertible": false,
+      "invertible_reason": "두 진술이 서로를 뜻하므로 뒤집어도 참이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-magnitude-scale",
+      "text": "등급의 값이 5만큼 작아지면 밝기는 100배 커진다.",
+      "form": {
+        "condition": "같은 종류의 등급끼리 견줄 때",
+        "type": "inverse",
+        "scope": "겉보기 등급과 절대 등급 모두",
+        "antecedent": {
+          "quantity": "등급",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "밝기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "등급이 작을수록 밝다는 약속이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등급의 값이 5만큼 작아지면 밝기는 100분의 1이 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "등급의 수가 클수록 밝은 별이다",
+      "why_wrong": "등급은 값이 작을수록 밝은 별이다. 1등급 별은 6등급 별보다 100배 밝다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-magnitude-scale"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-luminosity"
+    },
+    {
+      "type": "related",
+      "target": "earth-hertzsprung-russell-diagram",
+      "note": "절대 등급이 H-R도의 세로축이 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-3",
+  "pages": [
+    168,
+    171
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

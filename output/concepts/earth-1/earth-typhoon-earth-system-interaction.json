@@ -1,0 +1,137 @@
+{
+  "id": "earth-typhoon-earth-system-interaction",
+  "concept_key": "concept:typhoon-earth-system-interaction",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "태풍과 지구시스템의 상호작용",
+  "notation": {
+    "hanja": "颱風地球相互作用",
+    "hanja_note": "'시스템'은 영어 system 을 소리대로 옮긴 말이라 대응하는 한자가 없다",
+    "hanja_gloss": "颱 태풍 태 · 風 바람 풍 · 地 땅 지 · 球 공 구 · 相 서로 상 · 互 서로 호 · 作 지을 작 · 用 쓸 용",
+    "english": "typhoon and earth system interaction"
+  },
+  "definition": "태풍이 지나가는 동안 기권과 수권·지권·생물권이 서로 주고받는 영향으로, 그 결과 태풍의 세력과 진로까지 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ti-warm",
+      "text": "따뜻한 해수 위를 지나는 동안 태풍은 수증기를 더 공급받아 세력이 강해진다",
+      "form": {
+        "condition": "해수면 온도가 높은 해역을 지날 때",
+        "type": "direct",
+        "scope": "바다 위를 지나는 동안 — 상륙한 뒤에는 해당하지 않는다",
+        "antecedent": {
+          "quantity": "해수면 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "태풍의 세력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "따뜻한 바다는 수증기를 더 대 주므로 약해진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "따뜻한 해수 위를 지나는 동안 태풍의 세력은 약해진다"
+    },
+    {
+      "id": "rel-ti-mixing",
+      "text": "태풍의 강한 바람이 표층 해수를 뒤섞고 심층의 찬물을 끌어 올려 해수면 온도를 낮춘다",
+      "form": {
+        "condition": "태풍이 해양 위를 지날 때",
+        "type": "causal",
+        "scope": "태풍이 지나간 해역의 표층",
+        "antecedent": {
+          "quantity": "태풍의 바람",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해수면 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "끌려 올라오는 물이 차가우므로 수온이 높아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태풍의 강한 바람은 표층 해수를 뒤섞어 해수면 온도를 높인다"
+    },
+    {
+      "id": "rel-ti-feedback",
+      "text": "태풍이 스스로 식혀 놓은 해수는 뒤이은 태풍의 발달을 가로막기도 한다",
+      "form": {
+        "condition": "앞선 태풍이 해수면을 냉각시킨 뒤",
+        "type": "causal",
+        "scope": "같은 해역을 잇달아 지나는 태풍"
+      },
+      "invertible": false,
+      "invertible_reason": "'가로막기도 한다'는 그런 경우가 있다는 존재 진술이라, 반대로 말한 문장이 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ti-benefit",
+      "text": "태풍은 피해만 주지 않고 가뭄을 풀고 저위도의 열을 고위도로 옮겨 지구의 열 균형을 돕는다",
+      "form": {
+        "condition": "지구시스템 전체로 볼 때",
+        "type": "causal",
+        "scope": "지구 규모의 열 수송 — 지역의 피해와는 따로 본다"
+      },
+      "invertible": false,
+      "invertible_reason": "이로운 구실을 나열한 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태풍이 지나가면 바닷물이 뒤섞여 수온이 올라간다",
+      "why_wrong": "심층의 찬물이 올라와 섞이므로 해수면 온도는 오히려 내려간다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ti-mixing"
+    },
+    {
+      "text": "태풍은 피해만 줄 뿐 쓸모가 없다",
+      "why_wrong": "가뭄 해소, 바다 생태계 활성화, 저위도 열의 고위도 수송 같은 구실도 한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ti-benefit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-typhoon"
+    },
+    {
+      "type": "related",
+      "target": "earth-sea-temperature-distribution",
+      "note": "해수면 온도가 세력을 좌우한다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-04-2",
+  "pages": [
+    45,
+    46,
+    47
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

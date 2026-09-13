@@ -1,0 +1,114 @@
+{
+  "id": "earth-aerosol",
+  "concept_key": "concept:aerosol",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "에어로졸",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 aerosol 을 소리대로 옮긴 말이라 대응하는 한자가 없다",
+    "english": "aerosol"
+  },
+  "definition": "공기 중에 떠 있는 0.001~100 μm 크기의 작은 고체나 액체 입자로, 햇빛을 되돌리거나 구름을 만들어 기후를 바꾼다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ae-source",
+      "text": "에어로졸은 황사·화산재·해염처럼 자연에서도 생기고 산업 시설·소각·자동차처럼 인간 활동에서도 생긴다",
+      "form": {
+        "condition": "발생원을 기준으로 가를 때",
+        "type": "classification",
+        "scope": "자연적 발생원과 인위적 발생원"
+      },
+      "invertible": false,
+      "invertible_reason": "발생원을 나눈 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ae-cooling",
+      "text": "에어로졸은 태양 빛을 우주로 되돌리고 구름 생성을 도와 지표에 닿는 복사 에너지를 줄인다",
+      "form": {
+        "condition": "빛을 반사하는 밝은 에어로졸이 많이 떠 있을 때",
+        "type": "causal",
+        "scope": "밝은 에어로졸 — 빛을 흡수하는 어두운 에어로졸은 거꾸로 작용한다",
+        "antecedent": {
+          "quantity": "에어로졸의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지표에 닿는 태양 복사 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반사와 구름 생성은 지표에 닿는 에너지를 줄이므로 늘어난다는 말은 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에어로졸이 늘어나면 지표에 닿는 태양 복사 에너지가 늘어난다"
+    },
+    {
+      "id": "rel-ae-vs-gg",
+      "text": "온실 기체가 지구를 덥히는 쪽으로 작용하는 데 견주어 에어로졸은 대체로 식히는 쪽으로 작용한다",
+      "form": {
+        "condition": "두 인위적 요인을 견줄 때",
+        "type": "classification",
+        "scope": "전 지구 평균 — 종류와 지역에 따라 방향이 달라질 수 있다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 요인의 작용 방향을 맞바꾼 문장은 관측과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에어로졸은 지구를 덥히고 온실 기체는 식히는 쪽으로 작용한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에어로졸은 모두 사람이 만들어 낸 오염 물질이다",
+      "why_wrong": "황사와 화산재, 바다에서 나온 해염처럼 자연에서 생기는 에어로졸도 많다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ae-source"
+    },
+    {
+      "text": "에어로졸을 줄이면 기후 변화 문제도 그만큼 줄어든다",
+      "why_wrong": "에어로졸은 대체로 지구를 식히는 쪽이라 줄이면 온난화가 더 뚜렷해질 수 있다. 대기질과 기후를 함께 따져야 한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ae-cooling"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-climate-change"
+    },
+    {
+      "type": "related",
+      "target": "earth-greenhouse-gas",
+      "note": "반대 방향으로 작용하는 짝"
+    }
+  ],
+  "curriculum": [
+    "12지구01-06"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-07-3",
+  "pages": [
+    70,
+    71,
+    72,
+    75
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "version": 1
+}

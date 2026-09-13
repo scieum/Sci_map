@@ -1,0 +1,113 @@
+{
+  "id": "earth-dangerous-and-navigable-semicircle",
+  "concept_key": "concept:dangerous-and-navigable-semicircle",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "위험 반원과 가항 반원",
+  "notation": {
+    "hanja": "危險半圓可航半圓",
+    "hanja_gloss": "危 위태할 위 · 險 험할 험 · 半 반 반 · 圓 둥글 원 · 可 옳을 가 · 航 배 항 · 半 반 반 · 圓 둥글 원",
+    "english": "dangerous and navigable semicircle"
+  },
+  "definition": "북반구에서 태풍이 나아가는 방향을 기준으로, 바람이 합쳐져 거세지는 오른쪽 영역과 서로 깎여 약해지는 왼쪽 영역을 가른 이름이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ds-right",
+      "text": "북반구에서 태풍 진행 방향의 오른쪽은 저기압성 바람에 이동 속도가 더해져 바람이 더 세다",
+      "form": {
+        "condition": "북반구에서 태풍이 나아갈 때",
+        "type": "causal",
+        "scope": "북반구 — 남반구에서는 좌우가 뒤바뀐다"
+      },
+      "invertible": true,
+      "invertible_reason": "회전 방향과 이동 방향이 같은 쪽이라 서로 깎인다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "북반구에서 태풍 진행 방향의 오른쪽은 바람이 서로 깎여 더 약하다"
+    },
+    {
+      "id": "rel-ds-left",
+      "text": "진행 방향 왼쪽은 태풍의 회전 방향과 이동 방향이 반대라 바람이 서로 깎여 약하게 분다",
+      "form": {
+        "condition": "북반구에서 태풍이 나아갈 때",
+        "type": "causal",
+        "scope": "가항 반원 — 약하다는 뜻이지 피해가 없다는 뜻은 아니다"
+      },
+      "invertible": true,
+      "invertible_reason": "왼쪽은 두 방향이 반대이므로 같다고 하면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진행 방향 왼쪽은 회전 방향과 이동 방향이 같아 바람이 더 세게 분다"
+    },
+    {
+      "id": "rel-ds-isobar",
+      "text": "위험 반원에서는 등압선 간격이 조밀해 같은 거리라도 기압 차가 크고 바람이 세다",
+      "form": {
+        "condition": "지상 일기도에서 등압선 간격을 견줄 때",
+        "type": "inverse",
+        "scope": "태풍 주변의 지상 일기도",
+        "antecedent": {
+          "quantity": "등압선 간격",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "풍속",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "간격이 좁을수록 기압 차가 커져 바람이 세므로, 조밀한데 바람이 약하다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위험 반원에서는 등압선 간격이 조밀할수록 같은 거리의 기압 차가 작아 바람이 약해진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "가항 반원은 바람이 없어서 안전하다",
+      "why_wrong": "가항 반원도 태풍의 바람이 부는 구역이다. 위험 반원보다 약할 뿐 피해가 없는 것은 아니다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ds-left"
+    },
+    {
+      "text": "태풍 진행 방향의 왼쪽이 위험 반원이다",
+      "why_wrong": "북반구에서는 오른쪽이 위험 반원이다. 회전 방향과 이동 방향이 같은 쪽에서 바람이 합쳐지기 때문이다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ds-right"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-typhoon"
+    },
+    {
+      "type": "related",
+      "target": "earth-typhoon-track",
+      "note": "진행 방향을 알아야 좌우가 정해진다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-04-1",
+  "pages": [
+    44,
+    47
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

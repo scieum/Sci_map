@@ -1,0 +1,140 @@
+{
+  "id": "earth-el-nino-southern-oscillation",
+  "concept_key": "concept:el-nino-southern-oscillation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "엘니뇨 남방진동",
+  "notation": {
+    "hanja": "南方振動",
+    "hanja_note": "'엘니뇨'는 에스파냐어를 소리대로 옮긴 말이라 대응하는 한자가 없다",
+    "hanja_gloss": "南 남녘 남 · 方 모 방 · 振 떨칠 진 · 動 움직일 동",
+    "english": "El Niño-Southern Oscillation",
+    "symbol_display": "ENSO",
+    "symbol_plain": "ENSO"
+  },
+  "definition": "열대 태평양의 수온 변화인 엘니뇨·라니냐와, 동-서 기압이 시소처럼 오르내리는 남방진동을 한데 묶어 이르는 말이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-enso-normal",
+      "text": "평상시에는 서태평양에 상승 기류와 저기압이, 동태평양에 하강 기류와 고기압이 자리 잡는다",
+      "form": {
+        "condition": "무역풍이 평상시 세기로 불 때",
+        "type": "classification",
+        "scope": "열대 태평양의 동-서 방향 대기 순환"
+      },
+      "invertible": true,
+      "invertible_reason": "수온이 높은 쪽에서 공기가 오르므로 동서를 맞바꾼 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평상시에는 서태평양에 하강 기류와 고기압이, 동태평양에 상승 기류와 저기압이 자리 잡는다"
+    },
+    {
+      "id": "rel-enso-seesaw",
+      "text": "열대 태평양의 동-서 기압은 한쪽이 높아지면 다른 쪽이 낮아지는 시소처럼 진동한다",
+      "form": {
+        "condition": "열대 태평양의 동쪽과 서쪽을 함께 볼 때",
+        "type": "inverse",
+        "scope": "남방진동 — 다른 대양의 기압 진동과는 구분한다",
+        "antecedent": {
+          "quantity": "서태평양의 기압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "동태평양의 기압",
+          "direction": "감소"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "양쪽이 서로 맞바뀌는 관계라 뒤집어도 같은 뜻이 되어 거짓이 되지 않는다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enso-coupling",
+      "text": "해수면 온도 편차가 기압 분포를 바꾸고 달라진 바람이 다시 수온을 바꾸므로 해양과 대기는 맞물려 움직인다",
+      "form": {
+        "condition": "열대 태평양에 수온 편차가 생겼을 때",
+        "type": "causal",
+        "scope": "해양과 대기의 상호작용 — 한쪽만 떼어 설명할 수 없다"
+      },
+      "invertible": false,
+      "invertible_reason": "서로 되먹임하는 관계라 어느 쪽을 앞에 두어도 거짓이 되지 않는다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-enso-elnino",
+      "text": "엘니뇨 시기에는 수온이 오른 중·동태평양의 기압이 낮아지고 서태평양에서는 하강 기류가 발달한다",
+      "form": {
+        "condition": "엘니뇨가 이어지는 동안",
+        "type": "causal",
+        "scope": "열대 태평양 — 라니냐 시기에는 거꾸로 나타난다"
+      },
+      "invertible": true,
+      "invertible_reason": "수온이 오른 쪽의 기압이 낮아지므로 동서를 맞바꾼 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "엘니뇨 시기에는 중·동태평양의 기압이 높아지고 서태평양에 상승 기류가 발달한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "남방진동은 바닷물의 수온이 오르내리는 현상이다",
+      "why_wrong": "남방진동은 대기의 기압이 동서로 시소처럼 오르내리는 현상이다. 수온 쪽을 가리키는 이름이 엘니뇨와 라니냐다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-enso-seesaw"
+    },
+    {
+      "text": "엘니뇨와 남방진동은 서로 관계없는 별개의 현상이다",
+      "why_wrong": "해양의 수온 변화와 대기의 기압 변화가 맞물려 일어나기 때문에 둘을 묶어 엔소라고 부른다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-enso-coupling"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-el-nino"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-la-nina"
+    },
+    {
+      "type": "next",
+      "target": "earth-enso-impact"
+    }
+  ],
+  "curriculum": [
+    "12지구01-05"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-06-3",
+  "pages": [
+    60,
+    61,
+    64,
+    65,
+    77
+  ],
+  "difficulty": 5,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "엔소",
+    "ENSO"
+  ]
+}

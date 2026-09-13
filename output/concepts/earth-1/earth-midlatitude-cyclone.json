@@ -1,0 +1,147 @@
+{
+  "id": "earth-midlatitude-cyclone",
+  "concept_key": "concept:midlatitude-cyclone",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "중위도 저기압",
+  "notation": {
+    "hanja": "中緯度低氣壓",
+    "hanja_gloss": "中 가운데 중 · 緯 씨 위 · 度 법도 도 · 低 낮을 저 · 氣 기운 기 · 壓 누를 압",
+    "english": "midlatitude cyclone"
+  },
+  "definition": "중위도에서 찬 공기와 따뜻한 공기가 맞부딪혀 전선을 거느린 채 생기는 저기압으로, 생성·발달·소멸을 거치며 동쪽으로 옮겨 간다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mc-birth",
+      "text": "찬 기단과 따뜻한 기단이 만나 생긴 정체 전선에서 저기압성 회전이 자라면 한랭 전선과 온난 전선이 갈라져 나온다",
+      "form": {
+        "condition": "중위도에서 성질이 다른 두 기단이 맞닿을 때",
+        "type": "causal",
+        "scope": "전선을 거느린 종관 규모 저기압의 생성 단계"
+      },
+      "invertible": false,
+      "invertible_reason": "생성 과정을 차례로 따라간 서술이라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mc-occlusion",
+      "text": "이동이 빠른 한랭 전선이 온난 전선을 따라잡아 폐색 전선이 만들어질 무렵 저기압의 세력이 가장 크다",
+      "form": {
+        "condition": "폐색이 시작되는 단계",
+        "type": "causal",
+        "scope": "중위도 저기압의 일생 가운데 최성기"
+      },
+      "invertible": true,
+      "invertible_reason": "폐색이 시작될 때가 최성기이므로 가장 약하다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "폐색 전선이 만들어질 무렵 중위도 저기압의 세력이 가장 약하다"
+    },
+    {
+      "id": "rel-mc-westerly",
+      "text": "중위도 저기압은 편서풍을 타고 서쪽에서 동쪽으로 옮겨 간다",
+      "form": {
+        "condition": "편서풍대에 놓여 있을 때",
+        "type": "causal",
+        "scope": "중위도 편서풍대 — 저위도에서 생긴 태풍의 초기 진로와는 다르다"
+      },
+      "invertible": true,
+      "invertible_reason": "편서풍은 서에서 동으로 부는 바람이라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중위도 저기압은 편서풍을 타고 동쪽에서 서쪽으로 옮겨 간다"
+    },
+    {
+      "id": "rel-mc-pressure",
+      "text": "중위도 저기압의 중심에 가까워질수록 기압이 낮아지고, 전선이 지날 때 풍향이 급하게 바뀐다",
+      "form": {
+        "condition": "저기압이 관측 지점을 지나갈 때",
+        "type": "inverse",
+        "scope": "전선을 거느린 중위도 저기압의 주변",
+        "antecedent": {
+          "quantity": "중심까지의 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "기압",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "중심이 가장 기압이 낮은 자리이므로 가까울수록 높아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중위도 저기압의 중심에 가까워질수록 기압이 높아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중위도 저기압은 편서풍 때문에 동쪽에서 서쪽으로 이동한다",
+      "why_wrong": "편서풍은 서쪽에서 동쪽으로 부는 바람이므로 저기압도 서쪽에서 동쪽으로 옮겨 간다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mc-westerly"
+    },
+    {
+      "text": "폐색 전선이 생기면 저기압이 곧바로 사라진다",
+      "why_wrong": "폐색이 시작될 때가 오히려 세력이 가장 큰 때이고, 폐색 전선 양쪽이 모두 찬 공기로 채워진 다음에야 약해진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mc-occlusion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-cold-front"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-warm-front"
+    },
+    {
+      "type": "next",
+      "target": "earth-weather-satellite-and-radar-image"
+    },
+    {
+      "type": "next",
+      "target": "earth-mesoscale-cyclone",
+      "note": "규모를 견주어야 뜻이 선다"
+    },
+    {
+      "type": "next",
+      "target": "earth-torrential-rain"
+    },
+    {
+      "type": "next",
+      "target": "earth-strong-wind"
+    }
+  ],
+  "curriculum": [
+    "12지구01-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-03-1",
+  "pages": [
+    32,
+    33,
+    34,
+    35,
+    41
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

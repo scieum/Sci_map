@@ -1,0 +1,110 @@
+{
+  "id": "earth-climate-change",
+  "concept_key": "concept:climate-change",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "기후 변화",
+  "notation": {
+    "hanja": "氣候變化",
+    "hanja_gloss": "氣 기운 기 · 候 기후 후 · 變 변할 변 · 化 될 화",
+    "english": "climate change"
+  },
+  "definition": "오랜 기간에 걸쳐 지구의 평균 기온과 강수 같은 기후 요소가 달라지는 일로, 자연적 요인과 인위적 요인이 함께 작용한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cc-repeat",
+      "text": "지구의 기온은 지질 시대 내내 상승과 하강을 되풀이했고 그에 따라 기후도 달라져 왔다",
+      "form": {
+        "condition": "수십만 년 규모로 되돌아볼 때",
+        "type": "classification",
+        "scope": "지질 시대 규모의 기온 변화 — 최근 수십 년의 변화와는 규모가 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "사실을 서술한 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-proxy",
+      "text": "빙하 속에 갇힌 옛 공기를 분석하면 그 시절의 기온과 대기 조성을 알아낼 수 있다",
+      "form": {
+        "condition": "빙하 코어를 얻을 수 있는 지역",
+        "type": "causal",
+        "scope": "고기후 복원 — 빙하가 남지 않은 시대에는 다른 방법을 쓴다"
+      },
+      "invertible": false,
+      "invertible_reason": "복원 방법을 밝힌 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cc-factors",
+      "text": "기후 변화의 원인은 인류 활동과 무관한 자연적 요인과 인간 활동에서 비롯한 인위적 요인으로 나뉜다",
+      "form": {
+        "condition": "원인을 사람의 활동 여부로 가를 때",
+        "type": "classification",
+        "scope": "기후 변화 원인을 나누는 틀"
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준을 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기후 변화는 산업혁명 뒤에 처음 생긴 일이다",
+      "why_wrong": "지질 시대 내내 기온은 오르내렸다. 다만 최근 수십 년의 빠른 상승은 인위적 요인으로 설명된다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cc-repeat"
+    },
+    {
+      "text": "지금의 지구 온난화도 자연적인 변동일 뿐 인간 활동과는 상관이 없다",
+      "why_wrong": "기후 변화의 원인은 자연적 요인과 인위적 요인으로 나뉜다. 최근의 빠른 기온 상승은 인위적으로 늘어난 온실 기체로 설명된다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cc-factors"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-ocean-circulation-and-climate-change"
+    },
+    {
+      "type": "next",
+      "target": "earth-natural-factor-of-climate-change"
+    },
+    {
+      "type": "next",
+      "target": "earth-greenhouse-gas"
+    },
+    {
+      "type": "next",
+      "target": "earth-aerosol"
+    }
+  ],
+  "curriculum": [
+    "12지구01-06"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-07-1",
+  "pages": [
+    66,
+    67,
+    75
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

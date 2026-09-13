@@ -1,0 +1,90 @@
+{
+  "id": "earth-elliptical-galaxy",
+  "concept_key": "concept:elliptical-galaxy",
+  "registry_status": "new",
+  "term": "타원 은하",
+  "notation": {
+    "hanja": "楕圓銀河",
+    "english": "elliptical galaxy",
+    "hanja_gloss": "楕 길고둥글 타 · 圓 둥글 원 · 銀 은 은 · 河 물 하"
+  },
+  "definition": "성간 물질이 적고 늙은 별이 주로 모여 둥글거나 납작한 공 모양으로 보이는 은하. 찌그러진 정도에 따라 E0부터 E7까지 나눈다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-elliptical-old",
+      "text": "성간 물질이 적어 새 별이 거의 태어나지 않으므로 늙고 붉은 별의 비율이 높다.",
+      "form": {
+        "condition": "은하 안의 성간 물질이 적을 때",
+        "type": "causal",
+        "scope": "타원 은하",
+        "antecedent": {
+          "quantity": "성간 물질의 양",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "새로 태어나는 별의 수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "재료가 적으면 별 탄생도 적으므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성간 물질이 적은 타원 은하일수록 새 별이 활발히 태어나 젊고 푸른 별이 많다."
+    },
+    {
+      "id": "rel-elliptical-class",
+      "text": "E 뒤에 붙는 숫자가 클수록 더 납작하게 찌그러져 보이는 타원 은하다.",
+      "form": {
+        "condition": "겉보기 모양으로 세분할 때",
+        "type": "direct",
+        "scope": "E0부터 E7까지 나눈 타원 은하"
+      },
+      "invertible": true,
+      "invertible_reason": "E0이 원 모양이고 E7이 가장 납작하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "E 뒤에 붙는 숫자가 클수록 더 둥글게 보이는 타원 은하다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "타원 은하는 나선 은하보다 작고 어두운 은하다",
+      "why_wrong": "왜소 타원 은하부터 거대 타원 은하까지 규모가 매우 다양해 크기로 갈리지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-elliptical-class"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hubble-galaxy-classification"
+    },
+    {
+      "type": "related",
+      "target": "earth-spiral-galaxy",
+      "note": "성간 물질의 양과 별의 나이가 맞대어 보인다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-06-1",
+  "pages": [
+    189,
+    195
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,138 @@
+{
+  "id": "earth-asian-dust",
+  "concept_key": "concept:asian-dust",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "황사",
+  "notation": {
+    "hanja": "黃砂",
+    "hanja_gloss": "黃 누를 황 · 砂 모래 사",
+    "english": "asian dust"
+  },
+  "definition": "중국과 몽골의 사막·황토 지대에서 떠오른 모래 먼지가 편서풍을 타고 우리나라까지 날아와 내려앉는 현상이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ad-rise",
+      "text": "발원지를 지나는 저기압의 강한 상승 기류가 모래 먼지를 공중으로 띄워 올리면서 황사가 시작된다",
+      "form": {
+        "condition": "건조한 지표 위로 저기압이 지날 때",
+        "type": "causal",
+        "scope": "고비 사막·내몽골 고원 같은 발원지"
+      },
+      "invertible": true,
+      "invertible_reason": "먼지를 띄우는 것은 상승 기류이므로 하강 기류가 띄운다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발원지의 강한 하강 기류가 모래 먼지를 띄워 올려 황사가 시작된다"
+    },
+    {
+      "id": "rel-ad-westerly",
+      "text": "떠오른 황사 입자는 편서풍을 타고 동쪽으로 옮겨 와 우리나라에 영향을 준다",
+      "form": {
+        "condition": "중위도 편서풍대를 지날 때",
+        "type": "causal",
+        "scope": "발원지에서 한반도까지의 이동 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "편서풍은 서에서 동으로 부는 바람이라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "황사 입자는 편서풍을 타고 서쪽으로 옮겨 간다"
+    },
+    {
+      "id": "rel-ad-dry",
+      "text": "지표가 건조할수록 모래 먼지가 잘 일어나므로 우리나라는 주로 봄철에 황사의 영향을 받는다",
+      "form": {
+        "condition": "발원지의 지표가 마르고 눈에 덮이지 않았을 때",
+        "type": "direct",
+        "scope": "우리나라가 받는 황사의 계절별 분포",
+        "antecedent": {
+          "quantity": "지표의 건조도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "황사 발생",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "마른 지표일수록 먼지가 잘 떠오르므로 줄어든다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지표가 건조할수록 모래 먼지가 덜 일어나 황사가 줄어든다"
+    },
+    {
+      "id": "rel-ad-desert",
+      "text": "발원지의 사막화가 진행될수록 그 지역에서 시작되는 황사가 잦아진다",
+      "form": {
+        "condition": "기후 변화나 방목으로 사막이 넓어질 때",
+        "type": "direct",
+        "scope": "중국 북동 지역의 발원지",
+        "antecedent": {
+          "quantity": "사막화 면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "황사 발생",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "모래를 내어놓는 땅이 넓어지는 것이므로 줄어든다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발원지의 사막화가 진행될수록 황사가 줄어든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "황사는 공장 매연이 바람을 타고 날아오는 것이다",
+      "why_wrong": "황사는 사막과 황토 지대에서 날아온 자연 상태의 모래 먼지다. 다만 이동하는 동안 오염 물질이 섞이기도 한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ad-rise"
+    },
+    {
+      "text": "바람만 세게 불면 황사는 언제든 온다",
+      "why_wrong": "발원지의 지표가 건조해 먼지가 떠오를 수 있어야 하고, 그 먼지를 실어 올 편서풍도 있어야 한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ad-westerly"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-midlatitude-cyclone"
+    },
+    {
+      "type": "related",
+      "target": "earth-aerosol",
+      "note": "자연에서 생기는 에어로졸의 한 갈래"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-05-6",
+  "pages": [
+    52,
+    55,
+    79
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

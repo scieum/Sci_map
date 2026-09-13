@@ -1,0 +1,140 @@
+{
+  "id": "earth-natural-factor-of-climate-change",
+  "concept_key": "concept:natural-factor-of-climate-change",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "기후 변화의 자연적 요인",
+  "notation": {
+    "hanja": "氣候變化自然的要因",
+    "hanja_gloss": "氣 기운 기 · 候 기후 후 · 變 변할 변 · 化 될 화 · 自 스스로 자 · 然 그럴 연 · 的 과녁 적 · 要 요긴할 요 · 因 인할 인",
+    "english": "natural factor of climate change"
+  },
+  "definition": "인류 활동과 무관하게 기후를 바꾸는 요인으로, 태양과 지구의 운동에서 비롯한 외적 요인과 지구 안에서 생기는 내적 요인으로 나뉜다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nf-sunspot",
+      "text": "태양 흑점이 적은 시기에는 태양 활동이 약해 복사 에너지량이 줄어들고 지구의 기온이 내려간다",
+      "form": {
+        "condition": "태양 활동이 약해지는 시기",
+        "type": "direct",
+        "scope": "태양 활동이 기후에 미치는 몫 — 최근의 빠른 온난화까지 설명하지는 못한다",
+        "antecedent": {
+          "quantity": "흑점 수",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "지구의 기온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "흑점이 적을수록 복사 에너지량이 줄어드는 관계라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 흑점이 적은 시기에는 복사 에너지량이 늘어 지구의 기온이 올라간다"
+    },
+    {
+      "id": "rel-nf-volcano",
+      "text": "대규모 분출에서 나온 화산재는 반사율을 높여 기온을 낮추지만 화산 가스는 온실효과를 키워 기온을 높인다",
+      "form": {
+        "condition": "대규모 화산 분출이 일어났을 때",
+        "type": "causal",
+        "scope": "분출물의 종류에 따라 작용 방향이 갈린다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 분출물의 구실을 맞바꾼 문장은 각각의 성질과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산재는 온실효과를 키워 기온을 높이고 화산 가스는 반사율을 높여 기온을 낮춘다"
+    },
+    {
+      "id": "rel-nf-albedo",
+      "text": "빙하 면적이 넓어지면 지표의 반사율이 커져 지구가 흡수하는 태양 복사 에너지량이 줄고 기온이 내려간다",
+      "form": {
+        "condition": "지표를 덮은 빙하의 면적이 달라질 때",
+        "type": "inverse",
+        "scope": "지표 반사율이 기온을 좌우하는 되먹임",
+        "antecedent": {
+          "quantity": "빙하 면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지구의 기온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "흰 얼음이 넓어질수록 반사율이 커지므로 작아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빙하 면적이 넓어지면 지표의 반사율이 작아져 지구의 기온이 올라간다"
+    },
+    {
+      "id": "rel-nf-landsea",
+      "text": "대륙과 해양의 분포가 달라지면 비열과 반사율 차이, 해류의 방향이 함께 바뀌어 기후가 달라진다",
+      "form": {
+        "condition": "수륙 분포가 바뀔 만큼 긴 시간 규모",
+        "type": "causal",
+        "scope": "판의 이동이 뚜렷이 드러나는 지질 시대 규모"
+      },
+      "invertible": false,
+      "invertible_reason": "긴 시간 규모의 원인을 든 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화산이 터지면 온실 기체가 나오니 지구는 무조건 더워진다",
+      "why_wrong": "화산재는 햇빛을 되돌려 보내 기온을 낮추기도 한다. 두 효과가 반대 방향으로 작용한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nf-volcano"
+    },
+    {
+      "text": "빙하가 녹으면 흰 얼음이 줄어드니 지구는 더 천천히 더워진다",
+      "why_wrong": "얼음이 줄면 반사율이 낮아져 흡수하는 태양 에너지가 늘고 온난화는 오히려 빨라진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nf-albedo"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-climate-change"
+    },
+    {
+      "type": "next",
+      "target": "earth-variation-of-earth-rotation-axis"
+    },
+    {
+      "type": "next",
+      "target": "earth-variation-of-orbital-eccentricity"
+    }
+  ],
+  "curriculum": [
+    "12지구01-06"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-07-2",
+  "pages": [
+    68,
+    69,
+    75
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

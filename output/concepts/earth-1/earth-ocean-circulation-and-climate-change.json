@@ -1,0 +1,133 @@
+{
+  "id": "earth-ocean-circulation-and-climate-change",
+  "concept_key": "concept:ocean-circulation-and-climate-change",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "해수 순환과 기후 변화",
+  "notation": {
+    "hanja": "海水循環氣候變化",
+    "hanja_gloss": "海 바다 해 · 水 물 수 · 循 돌 순 · 環 고리 환 · 氣 기운 기 · 候 기후 후 · 變 변할 변 · 化 될 화",
+    "english": "ocean circulation and climate change"
+  },
+  "definition": "표층 순환과 심층 순환이 하나의 벨트처럼 이어져 저위도의 열을 고위도로 옮기며 지구 기후를 좌우하는 얼개다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-occ-conveyor",
+      "text": "심층 해류는 극 지역에서 저층을 따라 적도 쪽으로, 표층 해류는 적도에서 극 쪽으로 흘러 방향이 서로 반대다",
+      "form": {
+        "condition": "두 순환이 나르는 해수의 흐름 방향을 견줄 때",
+        "type": "classification",
+        "scope": "벨트로 이어진 전 지구 해수 순환의 큰 방향 — 지역의 해류 하나하나에 그대로 적용하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "침강이 극 지역에서 일어나므로 두 흐름의 방향을 맞바꾼 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "심층 해류는 적도에서 극 쪽으로, 표층 해류는 극 지역에서 적도 쪽으로 흐른다"
+    },
+    {
+      "id": "rel-occ-sinking",
+      "text": "극 지역에서 가라앉는 해수의 양이 줄면 고위도로 끌려가는 표층 해류가 약해진다",
+      "form": {
+        "condition": "침강량이 줄어드는 경우",
+        "type": "causal",
+        "scope": "침강 해역과 이어진 표층 해류",
+        "antecedent": {
+          "quantity": "침강량",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "표층 해류의 유속",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "침강이 표층 해류를 당기는 구실을 하므로 빨라진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "극 지역에서 가라앉는 해수의 양이 줄면 고위도로 향하는 표층 해류가 빨라진다"
+    },
+    {
+      "id": "rel-occ-heat",
+      "text": "표층 해류가 약해지면 저위도의 열이 고위도로 제대로 전달되지 못해 기후가 달라진다",
+      "form": {
+        "condition": "열을 나르는 표층 해류가 약해질 때",
+        "type": "causal",
+        "scope": "해양이 나르는 열의 몫 — 대기의 열 수송은 따로 본다"
+      },
+      "invertible": true,
+      "invertible_reason": "해류가 약해지면 나르는 열도 줄므로 더 잘 전달된다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표층 해류가 약해지면 저위도의 열이 고위도로 더 잘 전달된다"
+    },
+    {
+      "id": "rel-occ-time",
+      "text": "표층에서 가라앉은 물이 심층을 돌아 처음의 표층으로 되돌아오는 데에는 천 년이 넘게 걸린다",
+      "form": {
+        "condition": "전 지구 해수 순환 한 바퀴를 잴 때",
+        "type": "classification",
+        "scope": "전 지구 규모의 해수 순환 주기"
+      },
+      "invertible": false,
+      "invertible_reason": "시간 규모를 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "심층 순환이 멈춰도 표층 해류는 그대로 흐른다",
+      "why_wrong": "침강이 표층 해류를 고위도로 끌어당기는 구실을 하므로 침강이 줄면 표층 해류도 느려진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-occ-sinking"
+    },
+    {
+      "text": "빙하가 녹아 바다가 차가워지면 침강이 더 잘 일어난다",
+      "why_wrong": "녹은 담수가 들어오면 표층 염분이 낮아져 밀도가 작아지므로 침강은 오히려 약해진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-occ-sinking"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-surface-ocean-circulation"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-deep-ocean-circulation"
+    },
+    {
+      "type": "next",
+      "target": "earth-climate-change",
+      "note": "해양 순환이 기후를 바꾸는 한 길"
+    }
+  ],
+  "curriculum": [
+    "12지구01-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-02-3",
+  "pages": [
+    29,
+    30,
+    31
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

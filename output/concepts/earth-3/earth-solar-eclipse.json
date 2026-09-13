@@ -1,0 +1,118 @@
+{
+  "id": "earth-solar-eclipse",
+  "concept_key": "concept:solar-eclipse",
+  "registry_status": "new",
+  "term": "일식",
+  "aliases": [
+    "개기일식",
+    "부분일식",
+    "금환일식",
+    "혼성일식"
+  ],
+  "notation": {
+    "hanja": "日蝕",
+    "english": "solar eclipse",
+    "hanja_gloss": "日 날 일 · 蝕 좀먹을 식"
+  },
+  "definition": "지구에서 볼 때 달이 태양 앞을 지나가 태양 원반의 전부 또는 일부가 가려지는 식 현상. 달이 삭의 자리에 놓일 때에만 일어날 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-solar-eclipse-syzygy",
+      "text": "달이 삭의 자리에서 태양과 지구를 잇는 직선 위에 들어오면 일식이 일어날 수 있다.",
+      "form": {
+        "condition": "달이 삭의 위치에 있을 때",
+        "type": "conditional",
+        "scope": "태양·달·지구가 두 궤도면의 교선 부근에서 일직선을 이룰 때"
+      },
+      "invertible": false,
+      "invertible_reason": "일식이 일어났다면 달은 반드시 삭의 위치이므로 뒤집어도 참이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-solar-eclipse-shadow",
+      "text": "달의 본그림자가 닿는 지역에서는 개기일식이, 반그림자가 닿는 지역에서는 부분일식이 관측된다.",
+      "form": {
+        "condition": "일식이 진행되는 동안",
+        "type": "classification",
+        "scope": "달의 그림자가 지구 표면에 닿는 지역"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-solar-eclipse-annular",
+      "text": "달이 궤도에서 지구로부터 멀어져 있으면 시지름이 태양보다 작아져 금환일식이 된다.",
+      "form": {
+        "condition": "달이 삭이면서 지구에서 먼 쪽 궤도에 있을 때",
+        "type": "causal",
+        "scope": "달의 궤도가 타원이어서 거리가 달라지는 경우",
+        "antecedent": {
+          "quantity": "달까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "달의 시지름",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리가 가까울수록 시지름이 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "달이 지구에 가까이 있을수록 시지름이 작아져 금환일식이 일어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "일식은 달이 지구의 그림자에 가려지는 현상이다",
+      "why_wrong": "지구 그림자에 달이 가려지는 것은 월식이다. 일식은 달의 그림자가 지구에 드리워 태양이 가려지는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-solar-eclipse-shadow"
+    },
+    {
+      "text": "삭이 될 때마다 일식이 일어난다",
+      "why_wrong": "달의 공전 궤도면이 지구 공전 궤도면과 약 5° 기울어 있어 대부분의 삭에서는 달의 그림자가 지구를 비껴간다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-umbra-and-penumbra",
+      "note": "그림자의 두 부분을 알아야 개기·부분일식이 갈린다"
+    },
+    {
+      "type": "next",
+      "target": "earth-condition-for-eclipse",
+      "note": "식을 알아야 왜 매달 일어나지 않는지 묻게 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-01-1",
+  "pages": [
+    150,
+    152,
+    153
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

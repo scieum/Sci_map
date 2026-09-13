@@ -1,0 +1,103 @@
+{
+  "id": "earth-spectral-type",
+  "concept_key": "concept:spectral-type",
+  "registry_status": "new",
+  "term": "분광형",
+  "aliases": [
+    "스펙트럼형"
+  ],
+  "notation": {
+    "hanja": "分光型",
+    "english": "spectral type",
+    "hanja_gloss": "分 나눌 분 · 光 빛 광 · 型 모형 형"
+  },
+  "definition": "별의 대기가 만든 흡수선의 종류와 세기를 기준으로 별을 O·B·A·F·G·K·M 으로 갈라 놓은 분류. 이 차례대로 표면 온도가 낮아진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spectral-order-temp",
+      "text": "분광형을 O에서 M 쪽으로 읽어 갈수록 별의 표면 온도는 낮아진다.",
+      "form": {
+        "condition": "분광형 차례대로 별을 늘어놓을 때",
+        "type": "conditional",
+        "scope": "O·B·A·F·G·K·M 으로 분류한 별"
+      },
+      "invertible": true,
+      "invertible_reason": "분광형 차례가 곧 온도가 낮아지는 차례이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분광형을 O에서 M 쪽으로 읽어 갈수록 별의 표면 온도는 높아진다."
+    },
+    {
+      "id": "rel-spectral-lines",
+      "text": "표면 온도가 아주 높은 O형에서는 이온화된 헬륨의 흡수선이, A형에서는 중성 수소의 흡수선이 가장 강하다.",
+      "form": {
+        "condition": "별의 대기 조성이 비슷할 때",
+        "type": "classification",
+        "scope": "흡수 스펙트럼을 보이는 별"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spectral-ionization",
+      "text": "같은 원소라도 표면 온도에 따라 이온화 정도와 들뜬 상태의 비율이 달라져 흡수선의 세기가 바뀐다.",
+      "form": {
+        "condition": "별의 표면 온도가 달라질 때",
+        "type": "causal",
+        "scope": "별의 대기를 이루는 원소"
+      },
+      "invertible": false,
+      "invertible_reason": "흡수선 세기에서 온도를 되짚는 것도 참이라 뒤집어도 거짓이 아니다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수소 흡수선이 가장 강한 A형 별이 수소를 가장 많이 가지고 있다",
+      "why_wrong": "흡수선의 세기는 원소의 양보다 표면 온도에 따른 이온화·들뜸 상태로 정해진다. A형에서 중성 수소의 선이 가장 강할 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spectral-ionization"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-spectrum"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-wien-displacement-law",
+      "note": "표면 온도를 알아야 분광형의 뜻이 선다"
+    },
+    {
+      "type": "next",
+      "target": "earth-hertzsprung-russell-diagram"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-2",
+  "pages": [
+    166,
+    167
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

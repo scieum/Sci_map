@@ -1,0 +1,135 @@
+{
+  "id": "earth-deep-ocean-circulation",
+  "concept_key": "concept:deep-ocean-circulation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "심층 순환",
+  "notation": {
+    "hanja": "深層循環",
+    "hanja_gloss": "深 깊을 심 · 層 층 층 · 循 돌 순 · 環 고리 환",
+    "english": "deep ocean circulation"
+  },
+  "definition": "표층수 아래부터 해저까지 밀도 차로 일어나는 해수의 흐름으로, 그 밀도를 정하는 것이 수온과 염분이라 열염 순환이라고도 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dc-density",
+      "text": "표층 해수가 냉각되거나 결빙으로 염분이 높아져 밀도가 커지면 가라앉으면서 심층 순환이 시작된다",
+      "form": {
+        "condition": "고위도 표층에서 냉각·결빙이 일어날 때",
+        "type": "causal",
+        "scope": "그린란드 주변과 웨들해처럼 침강이 일어나는 고위도 해역",
+        "antecedent": {
+          "quantity": "표층 해수의 밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "침강량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "밀도가 작아질수록 가라앉는다고 하면 부력과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표층 해수의 밀도가 작아질수록 잘 가라앉아 심층 순환이 시작된다"
+    },
+    {
+      "id": "rel-dc-path",
+      "text": "고위도에서 가라앉은 해수는 심층을 따라 저위도로 흐르다가 아주 느리게 솟아올라 표층으로 되돌아간다",
+      "form": {
+        "condition": "침강 해역에서 출발한 심층수를 따라갈 때",
+        "type": "causal",
+        "scope": "전 지구 규모의 심층 순환 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "경로를 따라간 서술이라 방향을 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dc-antarctic",
+      "text": "남극 대륙 주변에서 만들어진 남극 저층수는 밀도가 가장 커서 해저를 따라 북반구까지 흘러간다",
+      "form": {
+        "condition": "대서양의 심층 수괴들을 견줄 때",
+        "type": "classification",
+        "scope": "대서양의 남극 저층수·북대서양 심층수·남극 중층수"
+      },
+      "invertible": true,
+      "invertible_reason": "밀도가 가장 큰 수괴가 가장 깊은 자리를 차지하므로 위쪽을 흐른다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "남극 저층수는 밀도가 작아 북대서양 심층수보다 위쪽을 흐른다"
+    },
+    {
+      "id": "rel-dc-slow",
+      "text": "심층 순환은 유속이 매우 느려 직접 재기 어려우므로 수온·염분·용존산소·방사성 동위원소로 흐름을 짐작한다",
+      "form": {
+        "condition": "직접 관측이 어려운 심층",
+        "type": "causal",
+        "scope": "심층 해류의 흐름과 기원 추정"
+      },
+      "invertible": false,
+      "invertible_reason": "관측 방법을 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "심층 순환도 바람이 일으킨다",
+      "why_wrong": "심층 순환을 일으키는 것은 수온과 염분이 만든 밀도 차다. 바람이 일으키는 것은 표층 순환이다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dc-density"
+    },
+    {
+      "text": "바닷물이 얼면 염분이 낮아져 가벼워지므로 가라앉지 않는다",
+      "why_wrong": "결빙 때 염류는 남은 해수에 남아 염분이 높아지고, 그만큼 밀도가 커져 가라앉는다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dc-density"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-seawater-density"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-water-mass"
+    },
+    {
+      "type": "next",
+      "target": "earth-ocean-circulation-and-climate-change"
+    }
+  ],
+  "curriculum": [
+    "12지구01-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-02-2",
+  "pages": [
+    28,
+    29,
+    31,
+    78
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "열염 순환"
+  ]
+}

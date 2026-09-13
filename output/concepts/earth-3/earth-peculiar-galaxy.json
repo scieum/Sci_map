@@ -1,0 +1,109 @@
+{
+  "id": "earth-peculiar-galaxy",
+  "concept_key": "concept:peculiar-galaxy",
+  "registry_status": "new",
+  "term": "특이 은하",
+  "aliases": [
+    "전파 은하",
+    "세이퍼트 은하"
+  ],
+  "notation": {
+    "hanja": "特異銀河",
+    "english": "peculiar galaxy",
+    "hanja_gloss": "特 특별할 특 · 異 다를 이 · 銀 은 은 · 河 물 하"
+  },
+  "definition": "허블의 형태 분류로는 묶이지 않고, 전파나 X선 같은 다른 파장으로 보면 보통 은하와 크게 다른 모습을 보이는 은하.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-peculiar-wavelength",
+      "text": "가시광선으로는 평범해 보이던 은하도 전파나 X선으로 보면 강한 방출 영역이 드러나기도 한다.",
+      "form": {
+        "condition": "여러 파장으로 같은 은하를 관측할 때",
+        "type": "conditional",
+        "scope": "특이 은하"
+      },
+      "invertible": false,
+      "invertible_reason": "가시광선에서 평범한 은하가 모두 특이 은하는 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-peculiar-blackhole",
+      "text": "중심부의 거대 질량 블랙홀 둘레에서 뜨거운 가스가 빠르게 움직이므로 막대한 에너지가 나오고 넓은 방출선이 생긴다.",
+      "form": {
+        "condition": "중심에 거대 질량 블랙홀이 있을 때",
+        "type": "causal",
+        "scope": "전파 은하·세이퍼트 은하·퀘이사"
+      },
+      "invertible": false,
+      "invertible_reason": "넓은 방출선의 까닭을 하나로 되짚을 수는 없다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-radio-vs-seyfert",
+      "text": "전파 은하는 대부분 타원 은하로, 세이퍼트 은하는 대부분 나선 은하로 관측된다.",
+      "form": {
+        "condition": "가시광선으로 본 형태를 견줄 때",
+        "type": "classification",
+        "scope": "특이 은하의 두 갈래"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "특이 은하는 모양이 이상해서 허블 분류에 들어가지 못한 은하다",
+      "why_wrong": "형태가 아니라 다른 파장에서 드러나는 활동성이 기준이다. 전파 은하 중에는 겉모습이 평범한 타원 은하도 많다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-peculiar-wavelength"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hubble-galaxy-classification"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-neutron-star-and-black-hole",
+      "note": "중심부 거대 질량 블랙홀이 특이 은하 설명의 바탕이다"
+    },
+    {
+      "type": "next",
+      "target": "earth-quasar"
+    },
+    {
+      "type": "next",
+      "target": "earth-colliding-galaxy",
+      "note": "허블 분류 밖의 은하라는 자리를 알아야 충돌 은하가 읽힌다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-06-2",
+  "pages": [
+    192,
+    193,
+    195
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,114 @@
+{
+  "id": "earth-warm-front",
+  "concept_key": "concept:warm-front",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "온난 전선",
+  "notation": {
+    "hanja": "溫暖前線",
+    "hanja_gloss": "溫 따뜻할 온 · 暖 따뜻할 난 · 前 앞 전 · 線 줄 선",
+    "english": "warm front"
+  },
+  "definition": "따뜻한 공기가 찬 공기 위를 완만하게 타고 오르며 만들어지는 전선으로, 중위도 저기압 중심의 남동쪽에 자리한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wf-cloud",
+      "text": "온난 전선에서는 완만한 상승으로 층운형 구름이 넓게 퍼져 약한 비가 오래 내린다",
+      "form": {
+        "condition": "따뜻한 공기가 전선면을 타고 오를 때",
+        "type": "causal",
+        "scope": "온난 전선의 앞쪽 — 적운형 구름이 서는 한랭 전선과는 반대다"
+      },
+      "invertible": true,
+      "invertible_reason": "완만한 상승은 층운형 구름을 만들므로 적운형이 선다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온난 전선에서는 적운형 구름이 발달해 좁은 지역에 강한 비가 내린다"
+    },
+    {
+      "id": "rel-wf-after",
+      "text": "온난 전선이 지나간 뒤에는 따뜻한 공기가 들어와 기온이 올라간다",
+      "form": {
+        "condition": "전선이 관측 지점을 통과한 직후",
+        "type": "causal",
+        "scope": "북반구 중위도의 온난 전선",
+        "antecedent": {
+          "quantity": "온난 전선의 통과",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기온",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전선 뒤쪽이 따뜻한 공기이므로 기온이 내려간다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온난 전선이 지나간 뒤에는 기온이 내려간다"
+    },
+    {
+      "id": "rel-wf-position",
+      "text": "북반구 중위도 저기압에서 온난 전선은 중심의 남동쪽에, 한랭 전선은 남서쪽에 놓인다",
+      "form": {
+        "condition": "북반구의 중위도 저기압을 위에서 볼 때",
+        "type": "classification",
+        "scope": "북반구 — 남반구에서는 좌우가 뒤바뀐다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 전선의 자리를 맞바꾼 문장은 북반구에서 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온난 전선은 저기압 중심의 남서쪽에, 한랭 전선은 남동쪽에 놓인다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온난 전선은 따뜻한 공기가 들어오는 것이니 비를 뿌리지 않는다",
+      "why_wrong": "층운형 구름이 넓게 발달해 약한 비가 넓은 지역에 오래 내린다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wf-cloud"
+    },
+    {
+      "text": "전선면의 기울기는 한랭 전선이든 온난 전선이든 같다",
+      "why_wrong": "온난 전선면은 완만하고 한랭 전선면은 가파르다. 그 차이가 구름과 강수의 모습을 가른다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wf-cloud"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-midlatitude-cyclone"
+    },
+    {
+      "type": "related",
+      "target": "earth-cold-front",
+      "note": "짝으로 견주어야 차이가 산다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-03-2",
+  "pages": [
+    34,
+    35,
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

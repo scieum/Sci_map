@@ -1,0 +1,101 @@
+{
+  "id": "earth-pp-chain-and-cno-cycle",
+  "concept_key": "concept:pp-chain-and-cno-cycle",
+  "registry_status": "new",
+  "term": "p-p 연쇄 반응과 CNO 순환 반응",
+  "aliases": [
+    "양성자·양성자 연쇄 반응",
+    "탄소·질소·산소 순환 반응"
+  ],
+  "notation": {
+    "hanja": "連鎖反應循環反應",
+    "english": "p-p chain and CNO cycle",
+    "hanja_note": "'p-p' 와 'CNO' 는 원소 기호에서 온 표기라 한자가 없다.",
+    "hanja_gloss": "連 이을 련 · 鎖 쇠사슬 쇄 · 反 돌이킬 반 · 應 응할 응 · 循 돌 순 · 環 고리 환 · 反 돌이킬 반 · 應 응할 응",
+    "symbol_display": "p - p, CNO",
+    "symbol_plain": "p-p, CNO"
+  },
+  "definition": "주계열성의 중심부에서 수소를 헬륨으로 바꾸는 두 가지 경로. 앞의 것은 수소 원자핵끼리 차례로 붙고, 뒤의 것은 탄소·질소·산소가 촉매 노릇을 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ppcno-temp",
+      "text": "중심부 온도가 약 1800만 K보다 높으면 CNO 순환 반응이, 그보다 낮으면 p-p 연쇄 반응이 우세하다.",
+      "form": {
+        "condition": "주계열성의 중심부에서",
+        "type": "conditional",
+        "scope": "수소 핵융합을 하는 주계열성"
+      },
+      "invertible": true,
+      "invertible_reason": "두 반응의 우세 구간을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심부 온도가 약 1800만 K보다 높으면 p-p 연쇄 반응이, 그보다 낮으면 CNO 순환 반응이 우세하다."
+    },
+    {
+      "id": "rel-ppcno-mass",
+      "text": "질량이 태양의 1.5배보다 큰 별에서는 CNO 순환 반응이, 태양과 비슷하거나 작은 별에서는 p-p 연쇄 반응이 우세하다.",
+      "form": {
+        "condition": "주계열 단계에 있을 때",
+        "type": "classification",
+        "scope": "주계열성"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ppcno-catalyst",
+      "text": "CNO 순환 반응에서 탄소·질소·산소는 반응을 돕고 되돌아오므로 결국 수소 4개가 헬륨 1개가 된다.",
+      "form": {
+        "condition": "CNO 순환 반응이 한 바퀴 돌 때",
+        "type": "conditional",
+        "scope": "탄소·질소·산소가 있는 별의 중심부"
+      },
+      "invertible": false,
+      "invertible_reason": "촉매의 뜻을 풀어 쓴 문장이라 방향을 뒤집는 판단이 서지 않는다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "CNO 순환 반응에서는 탄소가 소모되어 없어진다",
+      "why_wrong": "탄소·질소·산소는 촉매로 쓰였다가 되돌아오므로 양이 줄지 않는다. 실제로 소모되는 것은 수소다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ppcno-catalyst"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hydrogen-fusion"
+    },
+    {
+      "type": "next",
+      "target": "earth-stellar-internal-structure"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-3",
+  "pages": [
+    181
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

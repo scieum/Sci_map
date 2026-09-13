@@ -1,0 +1,112 @@
+{
+  "id": "earth-half-life",
+  "concept_key": "concept:radioactive-half-life",
+  "registry_status": "new",
+  "term": "반감기",
+  "notation": {
+    "hanja": "半減期",
+    "english": "half-life",
+    "hanja_gloss": "半 반 반 · 減 덜 감 · 期 기약할 기"
+  },
+  "definition": "방사성 동위원소의 양이 처음의 절반으로 줄어드는 데 걸리는, 원소마다 고유한 시간.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-half-count",
+      "text": "반감기가 한 번 지날 때마다 남아 있는 모원소의 양은 직전의 절반으로 줄어든다.",
+      "form": {
+        "condition": "광물 밖으로 원소가 드나들지 않을 때",
+        "type": "inverse",
+        "scope": "닫힌 계에서 일어나는 방사성 붕괴",
+        "antecedent": {
+          "quantity": "지난 반감기 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "남은 모원소의 양",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "절반으로 주는 변화이므로 늘어난다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반감기가 한 번 지날 때마다 남아 있는 모원소의 양은 직전의 두 배로 늘어난다."
+    },
+    {
+      "id": "rel-half-ratio",
+      "text": "반감기가 1회 지나면 모원소와 자원소의 비는 1 : 1이 되고, 2회 지나면 1 : 3이 된다.",
+      "form": {
+        "condition": "처음에 자원소가 들어 있지 않았을 때",
+        "type": "conditional",
+        "scope": "모원소가 모두 한 종류의 자원소로 바뀌는 붕괴"
+      },
+      "invertible": true,
+      "invertible_reason": "남은 모원소가 더 적어지는 쪽으로만 변하므로 비를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반감기가 2회 지나면 모원소와 자원소의 비는 3 : 1이 된다."
+    },
+    {
+      "id": "rel-half-constant",
+      "text": "반감기의 길이는 동위원소마다 정해져 있어 암석이 겪은 환경에 따라 달라지지 않는다.",
+      "form": {
+        "condition": "같은 종류의 동위원소를 견줄 때",
+        "type": "conditional",
+        "scope": "방사성 붕괴의 성질"
+      },
+      "invertible": true,
+      "invertible_reason": "붕괴 속도가 외부 조건과 무관하므로 환경에 따라 달라진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반감기의 길이는 암석이 놓인 온도와 압력에 따라 달라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반감기가 두 번 지나면 방사성 동위원소가 모두 사라진다",
+      "why_wrong": "두 번째 반감기에도 남은 양의 절반만 줄어든다. 처음 양의 4분의 1은 그대로 남아 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-half-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-radioactive-isotope"
+    },
+    {
+      "type": "next",
+      "target": "earth-absolute-age"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-01-3",
+  "pages": [
+    93,
+    94,
+    95
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "concept_key 를 concept:half-life 에서 concept:radioactive-half-life 로 갈랐다(C2 재작업, 2026-09-13). 같은 키를 쓰던 mate-half-life(화학 1차 반응)와 한 개념으로 묶이면 서로 어긋나는 명제가 한 키 아래 놓인다 — 이 카드의 rel-half-constant 는 '환경에 따라 달라지지 않는다' 이지만, 1차 반응의 반감기(t½=ln2/k)는 온도가 바뀌면 함께 달라진다.",
+    "재는 대상도 다르다. 이쪽은 방사성 원자핵의 수이고, 화학 쪽은 반응물의 농도다. 수학적 형식(1차 감쇠)만 같다.",
+    "한 키로 두면 D1 이 이 키로 OX 지문을 뽑거나 G 가 same 링크를 걸 때 그대로 오개념이 된다.",
+    "registry_status 는 new 그대로다. G3 사람 게이트에서 concept:radioactive-half-life 와 concept:half-life 를 **따로 등록**해야 하며, docs/homonyms.yaml 의 watch_terms 에 '반감기' 를 올릴지도 그 자리에서 정한다. 사전 파일은 C2 가 고치지 않았다(CLAUDE.md §9.3)."
+  ]
+}

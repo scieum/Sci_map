@@ -1,0 +1,108 @@
+{
+  "id": "earth-protostar",
+  "concept_key": "concept:protostar",
+  "registry_status": "new",
+  "term": "원시별",
+  "aliases": [
+    "전주계열성"
+  ],
+  "notation": {
+    "hanja": "原始",
+    "english": "protostar",
+    "hanja_note": "'별'은 고유어라 한자가 없고, 한자어인 '원시'만 적었다.",
+    "hanja_gloss": "原 근원 원 · 始 처음 시"
+  },
+  "definition": "성운 속 물질이 중력으로 뭉쳐 중심에 밀집했으나 아직 수소 핵융합을 시작하지 못한 단계의 천체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-protostar-collapse",
+      "text": "중력이 기체의 압력 차에 의한 힘보다 크면 성운의 물질이 수축하여 원시별이 만들어진다.",
+      "form": {
+        "condition": "성운의 온도가 낮고 밀도가 높을 때",
+        "type": "conditional",
+        "scope": "밀도가 높고 온도가 낮은 성운"
+      },
+      "invertible": true,
+      "invertible_reason": "두 힘의 크기를 맞바꾸면 수축이 일어나지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기체의 압력 차에 의한 힘이 중력보다 클 때 성운의 물질이 수축하여 원시별이 만들어진다."
+    },
+    {
+      "id": "rel-protostar-heating",
+      "text": "중심으로 떨어지는 물질의 위치 에너지가 열에너지로 바뀌면서 원시별의 내부 온도가 올라간다.",
+      "form": {
+        "condition": "원시별이 중력 수축을 이어 가는 동안",
+        "type": "causal",
+        "scope": "전주계열 단계의 원시별"
+      },
+      "invertible": false,
+      "invertible_reason": "온도가 오르는 까닭이 하나만은 아니어서 뒤집은 문장이 반드시 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-protostar-mass-path",
+      "text": "질량이 큰 원시별일수록 빠르게 수축해 주계열에 일찍 닿고 주계열의 더 왼쪽 위에 자리 잡는다.",
+      "form": {
+        "condition": "전주계열 단계를 지나는 동안",
+        "type": "inverse",
+        "scope": "전주계열 단계의 별",
+        "antecedent": {
+          "quantity": "질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주계열 도달 시간",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량이 클수록 수축이 빨라 도달 시간이 짧으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 큰 원시별일수록 천천히 수축해 주계열에 늦게 닿는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원시별도 중심부의 수소 핵융합 반응으로 빛난다",
+      "why_wrong": "원시별의 빛은 중력 수축으로 생긴 열에서 나온다. 중심부가 약 1000만 K에 이르러 핵융합이 시작되면 그때부터 주계열성이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-protostar-heating"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-nebula"
+    },
+    {
+      "type": "next",
+      "target": "earth-main-sequence-star"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-1",
+  "pages": [
+    178,
+    179
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

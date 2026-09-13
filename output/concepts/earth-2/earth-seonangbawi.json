@@ -1,0 +1,123 @@
+{
+  "definition_source": "restated",
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "version": 1,
+  "media": [],
+  "id": "earth-seonangbawi",
+  "concept_key": "concept:seonangbawi",
+  "registry_status": "new",
+  "term": "서낭바위",
+  "aliases": [
+    "고성 서낭바위"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "서낭은 성황(城隍)이 바뀐 말이고 바위는 고유어라 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "Seonangbawi"
+  },
+  "definition": "강원 고성 송지호 해변 남쪽 화강암 지대에 발달한 암석 해안으로, 화강암과 이를 가른 규장암 암맥이 서로 다르게 깎여 만들어진 지형이다.",
+  "relations": [
+    {
+      "id": "rel-seonang-intrude",
+      "text": "쥐라기에 관입해 굳은 화강암을 백악기 후기의 또 다른 마그마가 다시 뚫고 들어가 규장암 암맥을 남겼다.",
+      "form": {
+        "condition": "관입 관계로 선후를 가릴 때",
+        "type": "causal",
+        "scope": "서낭바위 일대의 화강암체와 암맥"
+      },
+      "invertible": true,
+      "invertible_reason": "뚫고 들어간 쪽이 뒤에 생긴 것이므로 차례를 뒤집은 문장은 반드시 거짓이다.",
+      "inverted_text": "서낭바위에서는 규장암 암맥이 먼저 생기고 그것을 화강암이 뚫고 들어와 굳었다.",
+      "curriculum": [
+        "12지구02-05",
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-seonang-differential",
+      "text": "단단하기가 다른 두 암석이 나란히 드러나 있으면 깎이는 속도가 달라져 모난 모양의 지형이 남는다.",
+      "form": {
+        "condition": "바닷가에서 풍화와 침식을 오래 받을 때",
+        "type": "causal",
+        "scope": "화강암과 규장암이 함께 드러난 암석 해안",
+        "antecedent": {
+          "quantity": "두 암석의 풍화 저항 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지형의 요철",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "저항 차이가 없어도 다른 요인으로 요철이 생길 수 있어 뒤집은 문장이 늘 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "12지구02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-seonang-fault",
+      "text": "화강암체에 발달한 단층은 물과 파도가 파고드는 통로가 되어 그 자리부터 깎여 나간다.",
+      "form": {
+        "condition": "해수면이 오르내리며 파도가 닿을 때",
+        "type": "causal",
+        "scope": "서낭바위의 풍화미지형"
+      },
+      "invertible": false,
+      "invertible_reason": "틈을 따라 깎인다는 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "서낭바위의 기묘한 모양은 파도가 한 종류의 바위를 고르게 깎아 만든 것이다",
+      "why_wrong": "화강암과 나중에 관입한 규장암은 단단하기가 달라 깎이는 정도가 서로 다르다. 그 차이와 단층이 겹쳐 독특한 모양이 만들어졌다.",
+      "linked_relation": "rel-seonang-differential",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "암맥이 화강암 사이에 끼어 있으므로 암맥이 화강암보다 오래되었다",
+      "why_wrong": "관입의 법칙에 따라 뚫고 들어간 암석이 나중에 생긴 것이다. 서낭바위의 규장암 암맥이 화강암보다 젊다.",
+      "linked_relation": "rel-seonang-intrude",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-intrusion"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-plutonic-rock"
+    },
+    {
+      "type": "related",
+      "target": "earth-igneous-landform-korea"
+    },
+    {
+      "type": "related",
+      "target": "earth-national-geopark"
+    }
+  ],
+  "curriculum": [
+    "12지구02-05",
+    "12지구02-03"
+  ],
+  "topic_id": "earth-2-05-1",
+  "pages": [
+    133,
+    137
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

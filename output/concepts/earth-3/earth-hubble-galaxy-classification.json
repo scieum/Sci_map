@@ -1,0 +1,103 @@
+{
+  "id": "earth-hubble-galaxy-classification",
+  "concept_key": "concept:hubble-galaxy-classification",
+  "registry_status": "new",
+  "term": "허블의 은하 분류",
+  "aliases": [
+    "허블의 형태학적 은하 분류",
+    "불규칙 은하"
+  ],
+  "notation": {
+    "hanja": "銀河分類",
+    "english": "Hubble galaxy classification",
+    "hanja_note": "'허블'은 사람 이름의 음차라 한자가 없다.",
+    "hanja_gloss": "銀 은 은 · 河 물 하 · 分 나눌 분 · 類 무리 류"
+  },
+  "definition": "타원·나선·불규칙이라는 세 가지 겉모습으로 외부 은하를 갈라 놓은 체계. 타원과 나선 사이에는 렌즈형(S0) 은하가 들어간다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hubble-shape-only",
+      "text": "가시광선으로 본 겉모습만을 기준으로 삼았으므로 나이나 질량 같은 성질은 이 분류에 담겨 있지 않다.",
+      "form": {
+        "condition": "가시광선 영상으로 은하를 볼 때",
+        "type": "classification",
+        "scope": "허블의 형태 분류 체계"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hubble-s0",
+      "text": "렌즈형(S0) 은하는 원반은 있으나 나선팔이 없어 타원 은하와 나선 은하 사이에 놓인다.",
+      "form": {
+        "condition": "형태에 따라 은하를 늘어놓을 때",
+        "type": "classification",
+        "scope": "허블 분류 체계"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hubble-irregular",
+      "text": "불규칙 은하는 일정한 모양이 없고 성간 물질이 매우 풍부해 젊은 별이 많다.",
+      "form": {
+        "condition": "모양을 규정할 수 없는 은하일 때",
+        "type": "conditional",
+        "scope": "불규칙 은하"
+      },
+      "invertible": false,
+      "invertible_reason": "젊은 별이 많다고 모두 불규칙 은하는 아니어서 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "허블의 분류 순서는 은하가 타원에서 나선으로 진화해 가는 차례를 뜻한다",
+      "why_wrong": "겉보기 형태에 따라 늘어놓은 것일 뿐 진화의 차례가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hubble-shape-only"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-elliptical-galaxy"
+    },
+    {
+      "type": "next",
+      "target": "earth-spiral-galaxy"
+    },
+    {
+      "type": "next",
+      "target": "earth-peculiar-galaxy"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-06-1",
+  "pages": [
+    188,
+    189
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

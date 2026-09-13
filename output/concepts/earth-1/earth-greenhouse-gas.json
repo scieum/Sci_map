@@ -1,0 +1,118 @@
+{
+  "id": "earth-greenhouse-gas",
+  "concept_key": "concept:greenhouse-gas",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "온실 기체",
+  "notation": {
+    "hanja": "溫室氣體",
+    "hanja_gloss": "溫 따뜻할 온 · 室 집 실 · 氣 기운 기 · 體 몸 체",
+    "english": "greenhouse gas"
+  },
+  "definition": "파장이 짧은 태양 복사는 대부분 통과시키고 지구가 내보내는 긴 파장의 복사는 흡수해 지표로 되돌려 기온을 높이는 기체다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gg-radiation",
+      "text": "온실 기체는 단파 복사는 대부분 통과시키고 장파 복사는 흡수해 지표로 되돌려 보낸다",
+      "form": {
+        "condition": "대기 중에 온실 기체가 있을 때",
+        "type": "causal",
+        "scope": "수증기·이산화 탄소·메테인·산화 이질소 같은 온실 기체"
+      },
+      "invertible": true,
+      "invertible_reason": "흡수하는 파장 영역이 정해져 있어 둘을 맞바꾼 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온실 기체는 장파 복사를 통과시키고 단파 복사를 흡수한다"
+    },
+    {
+      "id": "rel-gg-temperature",
+      "text": "대기 중 온실 기체의 농도가 높아질수록 온실효과가 강해져 지표의 평균 기온이 올라간다",
+      "form": {
+        "condition": "다른 조건이 그대로일 때",
+        "type": "direct",
+        "scope": "온실효과가 앞서는 경우 — 에어로졸의 냉각 효과는 따로 본다",
+        "antecedent": {
+          "quantity": "온실 기체의 농도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지표의 평균 기온",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "되돌려 보내는 장파 복사가 늘어나는 것이므로 기온이 내려간다는 말은 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온실 기체의 농도가 높아질수록 지표의 평균 기온이 내려간다"
+    },
+    {
+      "id": "rel-gg-human",
+      "text": "이산화 탄소·메테인·산화 이질소는 산업혁명 뒤 화석 연료 사용과 함께 농도가 빠르게 늘었다",
+      "form": {
+        "condition": "산업혁명 이후의 관측 기간",
+        "type": "classification",
+        "scope": "인간 활동의 영향을 크게 받는 온실 기체 — 수증기는 거의 영향을 받지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측된 사실을 든 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온실 기체는 모두 사람이 만들어 낸 것이다",
+      "why_wrong": "수증기처럼 자연적인 온실효과를 일으키는 기체도 있다. 사람의 활동이 크게 늘린 것은 이산화 탄소·메테인·산화 이질소다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gg-human"
+    },
+    {
+      "text": "온실 기체는 들어오는 태양 에너지를 막아 지구를 덥힌다",
+      "why_wrong": "온실 기체는 들어오는 태양 복사는 대부분 통과시키고, 나가는 지구 복사를 붙잡아 되돌린다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gg-radiation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-climate-change"
+    },
+    {
+      "type": "next",
+      "target": "earth-climate-change-mitigation-and-adaptation"
+    },
+    {
+      "type": "related",
+      "target": "earth-aerosol",
+      "note": "반대 방향으로 작용하는 짝"
+    }
+  ],
+  "curriculum": [
+    "12지구01-06"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-07-3",
+  "pages": [
+    70,
+    72,
+    75,
+    77
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

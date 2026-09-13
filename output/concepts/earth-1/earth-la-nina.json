@@ -1,0 +1,117 @@
+{
+  "id": "earth-la-nina",
+  "concept_key": "concept:la-nina",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "라니냐",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "에스파냐어 La Niña 를 소리대로 옮긴 말이라 대응하는 한자가 없다",
+    "english": "La Niña"
+  },
+  "definition": "무역풍이 평상시보다 강해져 동태평양과 적도 중앙 태평양의 용승이 활발해지고 수온이 평년보다 낮아지는 현상이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ln-wind",
+      "text": "무역풍이 강해지면 동·중태평양의 용승이 활발해져 수온이 평년보다 낮아진다",
+      "form": {
+        "condition": "무역풍이 평상시보다 강해진 동안",
+        "type": "causal",
+        "scope": "열대 태평양의 동쪽과 중앙부",
+        "antecedent": {
+          "quantity": "무역풍의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "동태평양의 표층 수온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "용승이 활발해지면 찬물이 올라오므로 수온이 높아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무역풍이 강해지면 동·중태평양의 수온이 평년보다 높아진다"
+    },
+    {
+      "id": "rel-ln-slope",
+      "text": "라니냐 시기에는 동태평양의 수온 약층이 얕아지고 동-서 태평양의 해수면 경사가 더 급해진다",
+      "form": {
+        "condition": "동태평양의 용승이 강해진 동안",
+        "type": "causal",
+        "scope": "열대 태평양의 동서 방향 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "무역풍이 물을 서쪽으로 더 밀어 주므로 경사가 완만해진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "라니냐 시기에는 동태평양의 수온 약층이 깊어지고 해수면 경사가 완만해진다"
+    },
+    {
+      "id": "rel-ln-cycle",
+      "text": "엘니뇨와 라니냐는 2년에서 5년쯤을 주기로 번갈아 되풀이된다",
+      "form": {
+        "condition": "여러 해에 걸쳐 볼 때",
+        "type": "classification",
+        "scope": "관측된 평균 주기 — 주기와 세기는 해마다 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "주기를 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "라니냐는 엘니뇨가 끝난 뒤 바다가 평년 상태로 돌아간 것이다",
+      "why_wrong": "라니냐는 평년 상태가 아니라 평년보다 수온이 더 낮아진 상태다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ln-wind"
+    },
+    {
+      "text": "라니냐 때는 동태평양의 용승이 약해진다",
+      "why_wrong": "무역풍이 강해져 용승이 오히려 활발해지고, 그래서 수온이 더 내려간다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ln-wind"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-upwelling-and-downwelling"
+    },
+    {
+      "type": "next",
+      "target": "earth-el-nino-southern-oscillation"
+    },
+    {
+      "type": "related",
+      "target": "earth-el-nino",
+      "note": "반대쪽 국면으로 견준다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-05"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-06-2",
+  "pages": [
+    59,
+    65,
+    77
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

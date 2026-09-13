@@ -1,0 +1,104 @@
+{
+  "id": "earth-mesoscale-cyclone",
+  "concept_key": "concept:mesoscale-cyclone",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "중규모 저기압",
+  "notation": {
+    "hanja": "中規模低氣壓",
+    "hanja_gloss": "中 가운데 중 · 規 법 규 · 模 본뜰 모 · 低 낮을 저 · 氣 기운 기 · 壓 누를 압",
+    "english": "mesoscale cyclone"
+  },
+  "definition": "저기압을 수평 규모로 가를 때 종관 규모보다 작은 쪽에 드는 저기압으로, 좁은 지역에 짧고 사나운 날씨를 몰고 온다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-meso-scale",
+      "text": "수평 규모가 1000 km를 넘는 종관 규모 저기압과 달리 중규모 저기압은 수십~백 km 남짓이다",
+      "form": {
+        "condition": "수평 규모를 기준으로 가를 때",
+        "type": "classification",
+        "scope": "저기압의 규모 구분 — 중위도 저기압이 종관 규모에 든다"
+      },
+      "invertible": true,
+      "invertible_reason": "규모를 맞바꾼 문장은 구분 기준과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중규모 저기압의 수평 규모가 종관 규모 저기압보다 크다"
+    },
+    {
+      "id": "rel-meso-nofront",
+      "text": "중규모 저기압은 대부분 전선을 거느리지 않는다",
+      "form": {
+        "condition": "전선의 유무로 두 저기압을 견줄 때",
+        "type": "classification",
+        "scope": "중규모 저기압 일반 — 전선을 거느리는 쪽이 중위도 저기압이다"
+      },
+      "invertible": true,
+      "invertible_reason": "전선을 거느리는 것이 종관 규모의 특징이므로 맞바꾼 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중규모 저기압은 대부분 전선을 거느린다"
+    },
+    {
+      "id": "rel-meso-weather",
+      "text": "중규모 저기압에서도 중심으로 바람이 모여 상승 운동이 자라므로 소나기·폭설·뇌우 같은 날씨 변화가 생긴다",
+      "form": {
+        "condition": "하층에서 바람이 수렴할 때",
+        "type": "causal",
+        "scope": "대기가 불안정하거나 지형의 영향을 받는 곳"
+      },
+      "invertible": false,
+      "invertible_reason": "상승 운동이 날씨를 바꾸는 길이 여럿이라 뒤집은 문장을 언제나 거짓이라 할 수 없다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전선이 없으면 저기압이라고 할 수 없다",
+      "why_wrong": "전선을 거느리는 것은 중위도 저기압의 특징이다. 중규모 저기압은 전선 없이도 저기압으로 발달한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-meso-nofront"
+    },
+    {
+      "text": "규모가 작으니 피해도 작다",
+      "why_wrong": "좁은 지역에 짧은 시간 동안 집중되기 때문에 오히려 큰 피해를 남기기도 한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-meso-weather"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-midlatitude-cyclone"
+    },
+    {
+      "type": "next",
+      "target": "earth-heavy-snow"
+    }
+  ],
+  "curriculum": [
+    "12지구01-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-03-4",
+  "pages": [
+    38,
+    41,
+    50
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

@@ -1,0 +1,101 @@
+{
+  "id": "earth-apparent-motion-of-planet",
+  "concept_key": "concept:apparent-motion-of-planet",
+  "registry_status": "new",
+  "term": "행성의 겉보기 운동",
+  "notation": {
+    "hanja": "行星運動",
+    "english": "apparent motion of planet",
+    "hanja_note": "'겉보기'는 고유어라 한자 표기가 없고, 한자어인 '행성 운동'만 적었다.",
+    "hanja_gloss": "行 다닐 행 · 星 별 성 · 運 옮길 운 · 動 움직일 동"
+  },
+  "definition": "지구에서 관측할 때 행성이 배경의 별들 사이를 옮겨 다니는 것처럼 보이는 운동. 지구와 행성의 공전 속도가 달라 나타난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-apparent-motion-cause",
+      "text": "지구와 행성의 공전 속도가 달라서 행성이 별들 사이를 되돌아가는 것처럼 보이는 구간이 생긴다.",
+      "form": {
+        "condition": "여러 달에 걸쳐 같은 행성을 관측할 때",
+        "type": "causal",
+        "scope": "지구에서 본 태양계 행성"
+      },
+      "invertible": false,
+      "invertible_reason": "속도 차가 없으면 역행도 없다는 역이 참이어서 뒤집은 문장이 반드시 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-apparent-motion-path",
+      "text": "겉보기 경로가 S자나 고리 모양으로 갈리는 것은 행성의 공전 궤도면이 지구의 궤도면과 나란하지 않기 때문이다.",
+      "form": {
+        "condition": "행성의 겉보기 경로를 그려 볼 때",
+        "type": "causal",
+        "scope": "내행성과 외행성 모두"
+      },
+      "invertible": false,
+      "invertible_reason": "경로 모양이 내행성·외행성으로 정해지지 않아 뒤집은 문장의 참 거짓을 가릴 수 없다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-apparent-motion-vs-real",
+      "text": "실제 공전은 늘 서에서 동으로 한 방향이지만, 겉보기 운동에는 순행과 역행이 번갈아 나타난다.",
+      "form": {
+        "condition": "태양계 행성을 지구에서 관측할 때",
+        "type": "conditional",
+        "scope": "태양계의 여덟 행성"
+      },
+      "invertible": true,
+      "invertible_reason": "실제 공전 방향은 바뀌지 않으므로 둘을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성은 실제로 공전 방향을 바꾸어 가며 돌고, 지구에서 본 겉보기 운동은 늘 한 방향이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "역행할 때 행성은 실제로 공전 방향을 반대로 바꾼다",
+      "why_wrong": "행성의 공전 방향은 늘 서에서 동이다. 역행은 더 빠르게 도는 쪽이 다른 쪽을 앞지르며 생기는 상대 운동의 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-apparent-motion-vs-real"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-inferior-planet-configuration",
+      "note": "지구에 대한 행성의 위치를 알아야 겉보기 운동을 읽는다"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-superior-planet-configuration"
+    },
+    {
+      "type": "next",
+      "target": "earth-prograde-and-retrograde-motion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-02-1",
+  "pages": [
+    158,
+    162
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

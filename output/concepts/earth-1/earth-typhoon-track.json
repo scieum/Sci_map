@@ -1,0 +1,103 @@
+{
+  "id": "earth-typhoon-track",
+  "concept_key": "concept:typhoon-track",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "태풍의 이동 경로",
+  "notation": {
+    "hanja": "颱風移動經路",
+    "hanja_gloss": "颱 태풍 태 · 風 바람 풍 · 移 옮길 이 · 動 움직일 동 · 經 지날 경 · 路 길 로",
+    "english": "typhoon track"
+  },
+  "definition": "태풍이 발생지에서 소멸까지 그리는 길로, 저위도에서는 고기압 둘레의 바람을, 중위도에서는 편서풍을 타고 휘어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tt-parabola",
+      "text": "태풍은 처음에 북서쪽으로 나아가다 북위 25°~30° 부근에서 편서풍을 만나 북동쪽으로 방향을 튼다",
+      "form": {
+        "condition": "북반구 서태평양에서 생긴 태풍을 따라갈 때",
+        "type": "causal",
+        "scope": "우리나라를 지나는 태풍의 통상적인 진로 — 해마다 어긋나기도 한다"
+      },
+      "invertible": true,
+      "invertible_reason": "저위도와 중위도에서 타는 바람의 방향이 정해져 있어 앞뒤를 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태풍은 처음에 북동쪽으로 나아가다 북위 25°~30° 부근에서 북서쪽으로 방향을 튼다"
+    },
+    {
+      "id": "rel-tt-highpressure",
+      "text": "태풍은 북태평양 고기압의 가장자리를 따라 흐르므로 고기압의 세력에 따라 진로가 달라진다",
+      "form": {
+        "condition": "북태평양 고기압이 자리 잡고 있을 때",
+        "type": "causal",
+        "scope": "우리나라 주변을 지나는 태풍 — 고기압 배치가 다르면 진로도 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "진로를 정하는 요인이 고기압 하나만은 아니어서 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tt-season",
+      "text": "9월에는 북태평양 고기압의 세력이 약해져 태풍이 7·8월보다 더 동쪽으로 치우쳐 지나간다",
+      "form": {
+        "condition": "계절에 따라 고기압의 세력이 바뀔 때",
+        "type": "causal",
+        "scope": "우리나라 주변을 지나는 시기별 평균 진로"
+      },
+      "invertible": false,
+      "invertible_reason": "시기별 평균 진로를 말한 명제라 해마다 어긋나는 해가 있어 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태풍은 바람이 부는 대로 아무렇게나 움직인다",
+      "why_wrong": "저위도에서는 고기압 둘레의 바람을, 중위도에서는 편서풍을 타므로 대체로 포물선을 그린다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tt-parabola"
+    },
+    {
+      "text": "태풍은 해마다 같은 길로 우리나라에 온다",
+      "why_wrong": "북태평양 고기압의 세력과 위치가 달라지면 방향을 트는 자리와 진로도 함께 달라진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tt-highpressure"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-typhoon"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-anticyclone-and-weather"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-04-1",
+  "pages": [
+    43,
+    44,
+    47
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

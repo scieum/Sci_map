@@ -1,0 +1,88 @@
+{
+  "id": "earth-blackbody-radiation",
+  "concept_key": "concept:blackbody-radiation",
+  "registry_status": "new",
+  "term": "흑체 복사",
+  "notation": {
+    "hanja": "黑體輻射",
+    "english": "blackbody radiation",
+    "hanja_gloss": "黑 검을 흑 · 體 몸 체 · 輻 바큇살 복 · 射 쏠 사"
+  },
+  "definition": "받은 복사 에너지를 남김없이 흡수하고 그만큼을 다시 내보내는 이상적인 물체가 하는 복사. 별은 이 흑체에 가까운 성질을 보인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-blackbody-curve",
+      "text": "흑체의 온도가 높을수록 모든 파장에서 내보내는 복사 에너지의 세기가 커진다.",
+      "form": {
+        "condition": "흑체의 표면 온도만 달라질 때",
+        "type": "direct",
+        "scope": "이상적인 흑체",
+        "antecedent": {
+          "quantity": "표면 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "각 파장의 복사 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 높은 흑체의 곡선이 모든 파장에서 위에 놓이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흑체의 온도가 높을수록 모든 파장에서 내보내는 복사 에너지의 세기가 작아진다."
+    },
+    {
+      "id": "rel-blackbody-color",
+      "text": "별의 색이 저마다 다른 것은 표면 온도가 달라 복사 에너지가 가장 많이 나오는 파장이 다르기 때문이다.",
+      "form": {
+        "condition": "별을 흑체로 볼 때",
+        "type": "causal",
+        "scope": "흑체에 가까운 성질을 띠는 별"
+      },
+      "invertible": false,
+      "invertible_reason": "색에서 온도를 되짚는 것도 참이라 뒤집어도 거짓이 아니다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흑체는 빛을 전혀 내지 않는 검은 물체다",
+      "why_wrong": "흑체는 들어온 에너지를 모두 흡수하는 물체일 뿐, 흡수한 만큼을 복사로 다시 내보낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-blackbody-curve"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-wien-displacement-law"
+    },
+    {
+      "type": "next",
+      "target": "earth-stefan-boltzmann-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-1",
+  "pages": [
+    164,
+    165
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

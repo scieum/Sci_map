@@ -1,0 +1,126 @@
+{
+  "id": "earth-sea-temperature-distribution",
+  "concept_key": "concept:sea-temperature-distribution",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "해수의 온도 분포",
+  "notation": {
+    "hanja": "海水溫度分布",
+    "hanja_gloss": "海 바다 해 · 水 물 수 · 溫 따뜻할 온 · 度 법도 도 · 分 나눌 분 · 布 펼 포",
+    "english": "distribution of seawater temperature"
+  },
+  "definition": "위도와 깊이에 따라 갈리는 해수의 수온 배치로, 해면에 닿는 태양 복사 에너지의 세기와 해류가 그 모습을 좌우한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sst-latitude",
+      "text": "저위도에서 고위도로 갈수록 해수면 수온은 대체로 낮아진다",
+      "form": {
+        "condition": "같은 계절, 같은 깊이의 해수면끼리 견줄 때",
+        "type": "inverse",
+        "scope": "전 세계 해양의 평균 분포 — 같은 위도라도 해류와 기후에 따라 어긋난다",
+        "antecedent": {
+          "quantity": "위도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해수면 수온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "위도가 높아질수록 수온이 높아진다고 하면 태양 복사의 위도별 세기와 어긋나 반드시 거짓이 된다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고위도로 갈수록 해수면 수온은 대체로 높아진다"
+    },
+    {
+      "id": "rel-sst-current",
+      "text": "같은 위도라도 난류가 지나는 해역의 수온이 한류 해역보다 높다",
+      "form": {
+        "condition": "위도가 같은 두 해역을 견줄 때",
+        "type": "causal",
+        "scope": "해류의 영향이 뚜렷한 해역 — 등온선이 위도선과 나란하지 않은 곳"
+      },
+      "invertible": true,
+      "invertible_reason": "난류는 주위보다 따뜻한 해류를 가리키므로 방향을 뒤집으면 정의와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 위도에서 한류가 지나는 해역의 수온이 난류 해역보다 높다"
+    },
+    {
+      "id": "rel-sst-depth",
+      "text": "태양 복사가 표층에서 거의 다 흡수되므로 깊이가 깊어질수록 수온은 낮아진다",
+      "form": {
+        "condition": "표층에서 심해층까지 연직으로 견줄 때",
+        "type": "inverse",
+        "scope": "저위도와 중위도 해양 — 표층과 심층의 수온 차가 작은 고위도는 예외다",
+        "antecedent": {
+          "quantity": "깊이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "깊어질수록 수온이 높아진다고 하면 태양 복사의 흡수 깊이와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "깊이가 깊어질수록 해수의 수온은 높아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해수면 수온은 위도가 정하는 것이니 같은 위도면 어디나 수온이 같다",
+      "why_wrong": "같은 위도라도 난류가 지나는 곳은 높고 한류가 지나는 곳은 낮다. 등온선이 위도선과 나란하지 않은 해역이 그 증거다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sst-current"
+    },
+    {
+      "text": "수온은 깊이에 비례해 일정한 비율로 낮아진다",
+      "why_wrong": "표층 100 m 안에서 태양 복사가 거의 다 흡수되므로, 혼합층에서는 거의 일정하다가 수온 약층에서 급격히 낮아지고 심해층에서는 거의 변하지 않는다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sst-depth"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-vertical-layer-structure-of-seawater"
+    },
+    {
+      "type": "next",
+      "target": "earth-seawater-density"
+    },
+    {
+      "type": "next",
+      "target": "earth-dissolved-gas-in-seawater",
+      "note": "기체 용해도가 수온에 걸린다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-01-2",
+  "pages": [
+    16,
+    19,
+    25
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

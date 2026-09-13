@@ -1,0 +1,120 @@
+{
+  "id": "earth-hubble-lemaitre-law",
+  "concept_key": "concept:hubble-lemaitre-law",
+  "registry_status": "new",
+  "term": "허블-르메트르 법칙",
+  "notation": {
+    "hanja": "法則",
+    "english": "Hubble-Lemaitre law",
+    "hanja_note": "'허블'과 '르메트르'는 사람 이름의 음차라 한자가 없다.",
+    "hanja_gloss": "法 법 법 · 則 법칙 칙",
+    "symbol_display": "v = H·r",
+    "symbol_plain": "v = Hr"
+  },
+  "definition": "외부 은하의 후퇴 속도가 은하까지의 거리에 비례한다는 법칙. 이때의 비례 상수가 허블 상수다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hl-proportional",
+      "text": "은하까지의 거리가 2배가 되면 후퇴 속도도 약 2배가 된다.",
+      "form": {
+        "condition": "허블 상수가 일정하다고 볼 때",
+        "type": "direct",
+        "scope": "우주 팽창이 두드러지게 보이는 먼 외부 은하",
+        "antecedent": {
+          "quantity": "은하까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "후퇴 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리와 속도가 비례하므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하까지의 거리가 2배가 되면 후퇴 속도는 절반이 된다."
+    },
+    {
+      "id": "rel-hl-age",
+      "text": "허블 상수의 역수는 은하가 멀어지기 시작한 뒤 지난 시간, 곧 우주의 나이를 어림한 값이 된다.",
+      "form": {
+        "condition": "팽창 속도가 달라지지 않았다고 볼 때",
+        "type": "inverse",
+        "scope": "등속 팽창으로 근사한 우주",
+        "antecedent": {
+          "quantity": "허블 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주의 나이",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "역수 관계이므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "허블 상수가 클수록 어림한 우주의 나이는 많아진다."
+    },
+    {
+      "id": "rel-hl-no-center",
+      "text": "모든 은하가 서로 멀어지는 것은 공간 자체가 팽창하기 때문이며, 팽창의 중심이 되는 특별한 자리는 없다.",
+      "form": {
+        "condition": "우주 안의 어느 은하에서 보더라도",
+        "type": "causal",
+        "scope": "우주 전체의 팽창"
+      },
+      "invertible": false,
+      "invertible_reason": "중심이 없다는 진술이라 방향을 바꾸어 말할 대상이 없다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모든 은하가 우리에게서 멀어지므로 우리은하가 우주의 중심이다",
+      "why_wrong": "어느 은하에서 보아도 나머지 은하가 멀어지는 것으로 보인다. 공간 자체가 부풀기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hl-no-center"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-redshift"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-static-and-expanding-cosmology",
+      "note": "두 모형의 대립이 허블의 관측으로 판가름난다"
+    },
+    {
+      "type": "next",
+      "target": "earth-big-bang-cosmology"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-05"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-07-2",
+  "pages": [
+    199,
+    200
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

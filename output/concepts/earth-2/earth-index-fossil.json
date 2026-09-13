@@ -1,0 +1,103 @@
+{
+  "id": "earth-index-fossil",
+  "concept_key": "concept:index-fossil",
+  "registry_status": "new",
+  "term": "표준 화석",
+  "notation": {
+    "hanja": "標準化石",
+    "english": "index fossil",
+    "hanja_gloss": "標 표할 표 · 準 준할 준 · 化 될 화 · 石 돌 석"
+  },
+  "definition": "특정 시기에만 나타나 짧게 번성한 생물의 화석으로, 지질 시대 결정과 지층 대비에 쓰인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-idx-cond",
+      "text": "생존 기간이 짧을수록, 그리고 분포가 넓고 개체 수가 많을수록 표준 화석으로 알맞다.",
+      "form": {
+        "condition": "표준 화석으로 쓸 만한지 가릴 때",
+        "type": "inverse",
+        "scope": "지질 시대 결정에 쓰는 화석",
+        "antecedent": {
+          "quantity": "생물의 생존 기간",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "표준 화석으로서의 쓸모",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "생존 기간이 길면 여러 시대에 걸쳐 나와 시대를 좁히지 못하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생존 기간이 길수록 표준 화석으로 알맞다."
+    },
+    {
+      "id": "rel-idx-use",
+      "text": "멀리 떨어진 두 지층에서 같은 표준 화석이 나오면 두 지층을 같은 시기의 것으로 본다.",
+      "form": {
+        "condition": "두 지역에서 같은 종의 화석이 확인될 때",
+        "type": "conditional",
+        "scope": "전 지구에 퍼져 살던 생물의 화석"
+      },
+      "invertible": false,
+      "invertible_reason": "판단 방법을 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-idx-example",
+      "text": "삼엽충과 방추충은 고생대, 암모나이트와 공룡은 중생대, 화폐석과 매머드는 신생대의 표준 화석이다.",
+      "form": {
+        "condition": "시대별 대표 화석을 짝지을 때",
+        "type": "classification",
+        "scope": "이 교과서가 드는 대표 사례"
+      },
+      "invertible": false,
+      "invertible_reason": "짝을 든 분류형 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "오래 살아남아 여러 시대에서 발견되는 생물일수록 표준 화석으로 좋다",
+      "why_wrong": "여러 시대에 걸쳐 나오는 화석은 시대를 좁혀 주지 못한다. 표준 화석은 짧은 기간에만 번성한 생물이어야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-idx-cond"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-fossil"
+    },
+    {
+      "type": "next",
+      "target": "earth-paleozoic-era"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-02-3",
+  "pages": [
+    101,
+    111
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

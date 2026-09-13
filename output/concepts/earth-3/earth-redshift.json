@@ -1,0 +1,123 @@
+{
+  "id": "earth-redshift",
+  "concept_key": "concept:redshift",
+  "registry_status": "new",
+  "term": "적색 편이",
+  "aliases": [
+    "후퇴 속도"
+  ],
+  "notation": {
+    "hanja": "赤色偏移",
+    "english": "redshift",
+    "hanja_gloss": "赤 붉을 적 · 色 빛 색 · 偏 치우칠 편 · 移 옮길 이",
+    "symbol_display": "λ - λ₀",
+    "symbol_plain": "lambda - lambda0"
+  },
+  "definition": "빛을 내는 천체가 관측자에게서 멀어질 때 스펙트럼선이 파장이 긴 붉은 쪽으로 밀려 나타나는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-redshift-direction",
+      "text": "천체가 멀어지면 적색 편이가, 가까워지면 청색 편이가 나타난다.",
+      "form": {
+        "condition": "천체가 시선 방향으로 움직일 때",
+        "type": "conditional",
+        "scope": "도플러 효과가 나타나는 빛"
+      },
+      "invertible": true,
+      "invertible_reason": "멀어짐과 가까워짐을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천체가 멀어지면 청색 편이가, 가까워지면 적색 편이가 나타난다."
+    },
+    {
+      "id": "rel-redshift-velocity",
+      "text": "스펙트럼선의 파장 변화량을 고유 파장으로 나눈 값에 빛의 속도를 곱하면 후퇴 속도를 구할 수 있다.",
+      "form": {
+        "condition": "스펙트럼선의 고유 파장을 알고 있을 때",
+        "type": "direct",
+        "scope": "후퇴 속도가 빛의 속도에 비해 충분히 작은 경우",
+        "antecedent": {
+          "quantity": "파장 변화량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "후퇴 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장 변화량과 후퇴 속도가 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장 변화량이 클수록 천체의 후퇴 속도는 느리다."
+    },
+    {
+      "id": "rel-redshift-distance",
+      "text": "멀리 있는 은하일수록 적색 편이가 크게 나타난다.",
+      "form": {
+        "condition": "우주가 팽창하고 있을 때",
+        "type": "direct",
+        "scope": "외부 은하",
+        "antecedent": {
+          "quantity": "은하까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "적색 편이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리와 적색 편이가 비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "멀리 있는 은하일수록 적색 편이가 작게 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적색 편이는 은하가 붉은색으로 보인다는 뜻이다",
+      "why_wrong": "은하의 색이 붉어지는 것이 아니라 스펙트럼선의 위치가 긴 파장 쪽으로 밀린다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-redshift-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-spectrum"
+    },
+    {
+      "type": "next",
+      "target": "earth-hubble-lemaitre-law"
+    },
+    {
+      "type": "next",
+      "target": "earth-quasar",
+      "note": "퀘이사의 거리 판단이 적색 편이에 기댄다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-05"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-07-2",
+  "pages": [
+    194,
+    198
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,113 @@
+{
+  "id": "earth-fault",
+  "concept_key": "concept:fault",
+  "registry_status": "new",
+  "term": "단층",
+  "notation": {
+    "hanja": "斷層",
+    "english": "fault",
+    "hanja_gloss": "斷 끊을 단 · 層 층 층"
+  },
+  "definition": "지표 가까이의 암석층이 힘을 받아 끊어진 뒤 양쪽이 서로 어긋나 이동한 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fault-normal",
+      "text": "양쪽으로 잡아당기는 장력이 작용하면 상반이 아래로 내려간 정단층이 만들어진다.",
+      "form": {
+        "condition": "지표 부근의 암석이 끊어질 만큼 힘을 받을 때",
+        "type": "causal",
+        "scope": "장력이 작용하는 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "장력과 횡압력이 만드는 단층이 서로 다르므로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양쪽으로 잡아당기는 장력이 작용하면 상반이 위로 올라간 역단층이 만들어진다."
+    },
+    {
+      "id": "rel-fault-reverse",
+      "text": "양쪽에서 미는 횡압력이 작용하면 상반이 위로 올라간 역단층이 만들어진다.",
+      "form": {
+        "condition": "지표 부근의 암석이 끊어질 만큼 힘을 받을 때",
+        "type": "causal",
+        "scope": "횡압력이 작용하는 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "횡압력에서 상반이 내려갈 수는 없으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양쪽에서 미는 횡압력이 작용하면 상반이 아래로 내려간 정단층이 만들어진다."
+    },
+    {
+      "id": "rel-fault-strike",
+      "text": "수평 방향으로 어긋나게 하는 힘이 작용하면 두 암반이 옆으로 미끄러지는 주향이동 단층이 된다.",
+      "form": {
+        "condition": "힘이 수평으로 서로 반대 방향에 작용할 때",
+        "type": "causal",
+        "scope": "보존형 경계와 그 둘레"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fault-boundary",
+      "text": "발산형 경계에서는 정단층이, 보존형 경계에서는 변환 단층 같은 주향이동 단층이 발달한다.",
+      "form": {
+        "condition": "판 경계의 종류를 기준으로 가를 때",
+        "type": "classification",
+        "scope": "판 경계에 나타나는 변형 구조"
+      },
+      "invertible": true,
+      "invertible_reason": "경계마다 작용하는 힘이 달라 둘을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "발산형 경계에서는 주향이동 단층이, 보존형 경계에서는 정단층이 발달한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정단층은 양쪽에서 미는 횡압력을 받아 만들어진다",
+      "why_wrong": "횡압력이 만드는 것은 역단층이다. 정단층은 양쪽으로 잡아당기는 장력이 작용할 때 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fault-normal"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-national-geopark"
+    },
+    {
+      "type": "related",
+      "target": "earth-fold"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-04-3",
+  "pages": [
+    124,
+    125,
+    129
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

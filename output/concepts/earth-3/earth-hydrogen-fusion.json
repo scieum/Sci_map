@@ -1,0 +1,93 @@
+{
+  "id": "earth-hydrogen-fusion",
+  "concept_key": "concept:hydrogen-fusion",
+  "registry_status": "new",
+  "term": "수소 핵융합 반응",
+  "notation": {
+    "hanja": "水素核融合反應",
+    "english": "hydrogen fusion",
+    "hanja_gloss": "水 물 수 · 素 본디 소 · 核 씨 핵 · 融 녹을 융 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응"
+  },
+  "definition": "수소 원자핵 4개가 헬륨 원자핵 1개로 합쳐지면서 줄어든 질량만큼을 에너지로 내놓는 반응. 주계열성의 중심부에서 일어난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fusion-mass-defect",
+      "text": "헬륨 원자핵의 질량은 수소 원자핵 4개의 합보다 약 0.7 % 작고, 이 질량 결손이 에너지로 바뀐다.",
+      "form": {
+        "condition": "수소 4개가 헬륨 1개로 융합될 때",
+        "type": "causal",
+        "scope": "별 중심부의 수소 핵융합"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지가 나온다고 모두 질량 결손 때문이라 되짚을 수는 없다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fusion-equilibrium",
+      "text": "핵융합으로 내부 온도가 높아져 기체 압력이 커지므로 중력과 맞서는 정역학 평형이 유지된다.",
+      "form": {
+        "condition": "중심부에서 수소 핵융합이 이어지는 동안",
+        "type": "causal",
+        "scope": "주계열 단계의 별"
+      },
+      "invertible": false,
+      "invertible_reason": "핵융합 없이 평형이 유지되는 단계도 있어 뒤집은 문장이 언제나 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fusion-exhaust",
+      "text": "중심부의 수소가 바닥나면 수소 핵융합이 멎고 별은 주계열을 벗어난다.",
+      "form": {
+        "condition": "중심부 수소가 소진되었을 때",
+        "type": "conditional",
+        "scope": "주계열성"
+      },
+      "invertible": false,
+      "invertible_reason": "주계열을 벗어났다면 중심부 수소가 소진된 것이라는 역도 참이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수소 핵융합 반응에서는 질량이 그대로 보존되고 에너지만 새로 생긴다",
+      "why_wrong": "줄어든 질량이 질량-에너지 등가 원리에 따라 에너지로 바뀐 것이다. 반응 뒤 헬륨 원자핵의 질량은 수소 4개의 합보다 작다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fusion-mass-defect"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-main-sequence-star"
+    },
+    {
+      "type": "next",
+      "target": "earth-pp-chain-and-cno-cycle"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-2",
+  "pages": [
+    180
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

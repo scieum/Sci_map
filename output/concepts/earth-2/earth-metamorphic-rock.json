@@ -1,0 +1,92 @@
+{
+  "id": "earth-metamorphic-rock",
+  "concept_key": "concept:metamorphic-rock",
+  "registry_status": "new",
+  "term": "변성암",
+  "notation": {
+    "hanja": "變成岩",
+    "english": "metamorphic rock",
+    "hanja_gloss": "變 변할 변 · 成 이룰 성 · 岩 바위 암"
+  },
+  "definition": "본디 있던 암석이 변성 작용을 받아 광물의 조성이나 조직이 달라진 암석.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mr-parent",
+      "text": "어떤 변성암이 되는지는 원암의 종류와 받은 변성 작용의 종류에 따라 정해진다.",
+      "form": {
+        "condition": "변성암의 이름을 가릴 때",
+        "type": "causal",
+        "scope": "원암을 알 수 있는 변성암"
+      },
+      "invertible": false,
+      "invertible_reason": "결정 요인을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mr-texture",
+      "text": "엽리가 있으면 광역 변성을, 엽리 없이 치밀하면 접촉 변성을 받은 것으로 읽는다.",
+      "form": {
+        "condition": "변성암의 조직을 관찰할 때",
+        "type": "classification",
+        "scope": "엽리의 유무로 가릴 수 있는 변성암"
+      },
+      "invertible": true,
+      "invertible_reason": "엽리는 방향성 있는 압력의 흔적이므로 둘을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "엽리가 있으면 접촉 변성을, 엽리 없이 치밀하면 광역 변성을 받은 것으로 읽는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "변성암은 모두 줄무늬 모양의 엽리를 가진다",
+      "why_wrong": "엽리는 광역 변성암에서 나타난다. 혼펠스나 대리암 같은 접촉 변성암에는 엽리가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mr-texture"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-regional-metamorphism"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-contact-metamorphism"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-recrystallization"
+    },
+    {
+      "type": "next",
+      "target": "earth-rock-cycle"
+    },
+    {
+      "type": "next",
+      "target": "earth-national-geopark"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-04-2",
+  "pages": [
+    123,
+    126
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

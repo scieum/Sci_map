@@ -1,0 +1,112 @@
+{
+  "id": "earth-hail",
+  "concept_key": "concept:hail",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "우박",
+  "notation": {
+    "hanja": "雨雹",
+    "hanja_gloss": "雨 비 우 · 雹 우박 박",
+    "english": "hail"
+  },
+  "definition": "지름 5 mm를 넘는 얼음덩어리가 비처럼 떨어지는 현상으로, 구름 속 얼음 핵에 물방울이 얼어붙어 자란 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hl-growth",
+      "text": "구름 속 얼음 핵 둘레에 차가운 물방울이 얼어붙기를 되풀이하면서 우박이 자란다",
+      "form": {
+        "condition": "0 ℃보다 차가운 구름 속",
+        "type": "causal",
+        "scope": "적란운 속에서 일어나는 우박의 성장"
+      },
+      "invertible": false,
+      "invertible_reason": "성장 과정을 밝힌 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hl-updraft",
+      "text": "상승 기류가 셀수록 우박이 구름 속에서 오르내리기를 오래 되풀이해 더 크게 자란다",
+      "form": {
+        "condition": "적란운 안에서 오르내림이 이어질 때",
+        "type": "direct",
+        "scope": "구름 속에서 자라는 동안 — 떨어지며 녹는 몫은 따로 본다",
+        "antecedent": {
+          "quantity": "상승 기류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우박의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "오래 머물수록 얼음 막이 더 쌓이므로 작아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상승 기류가 셀수록 우박은 더 작게 자란다"
+    },
+    {
+      "id": "rel-hl-season",
+      "text": "한겨울에는 대기가 건조하고 한여름에는 기온이 높아 녹아 버리므로 우박은 봄·가을에 더 자주 내린다",
+      "form": {
+        "condition": "우리나라의 계절별 발생 빈도를 견줄 때",
+        "type": "classification",
+        "scope": "우리나라 — 지역과 해에 따라 사정이 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측된 계절별 빈도에 기댄 명제라 뒤집은 문장이 논리적으로 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우박은 겨울에 가장 많이 내린다",
+      "why_wrong": "한겨울에는 대기가 건조해 우박이 잘 생기지 않는다. 우리나라에서는 봄과 가을에 더 자주 내린다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hl-season"
+    },
+    {
+      "text": "우박은 빗방울이 떨어지다가 얼어서 생긴다",
+      "why_wrong": "우박은 구름 속 얼음 핵에 과냉각 물방울이 층층이 얼어붙어 자란 것이다. 단면의 여러 겹이 그 자취다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hl-growth"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-thunderstorm"
+    },
+    {
+      "type": "related",
+      "target": "earth-torrential-rain",
+      "note": "같은 적란운에서 함께 온다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-05-2",
+  "pages": [
+    49,
+    55,
+    79
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

@@ -1,0 +1,114 @@
+{
+  "definition_source": "restated",
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "version": 1,
+  "media": [],
+  "id": "earth-igneous-landform-korea",
+  "concept_key": "concept:igneous-landform-korea",
+  "registry_status": "new",
+  "term": "우리나라의 화성암 지형",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "우리나라가 고유어라 표제어 전체를 한자로 옮길 수 없다. 火成岩·地形은 각 개념 카드의 표기를 따른다.",
+    "english": "igneous landforms of Korea"
+  },
+  "definition": "화산암이나 심성암이 넓게 드러나 경관을 이루는 한반도의 지형으로, 마그마가 굳은 깊이에 따라 현무암 지대와 화강암 지대로 갈린다.",
+  "relations": [
+    {
+      "id": "rel-iglandform-basalt",
+      "text": "제주도·한탄강·울릉도·독도처럼 어두운 세립질 현무암이 덮인 곳은 용암이 지표 가까이에서 빨리 식은 자리이다.",
+      "form": {
+        "condition": "암석의 조직과 색으로 굳은 자리를 되짚을 때",
+        "type": "causal",
+        "scope": "우리나라의 화산암 지형"
+      },
+      "invertible": false,
+      "invertible_reason": "지형의 예를 근거로 생성 자리를 읽는 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-03",
+        "12지구02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-iglandform-granite",
+      "text": "북한산·관악산·설악산처럼 밝은 조립질 화강암이 드러난 곳은 깊은 곳에서 천천히 굳은 암체가 융기해 위가 깎여 나온 자리이다.",
+      "form": {
+        "condition": "심성암이 지표에 드러나기까지의 과정을 볼 때",
+        "type": "causal",
+        "scope": "우리나라의 심성암 지형"
+      },
+      "invertible": true,
+      "invertible_reason": "조립질 조직은 천천히 식었다는 증거이므로 지표에서 빨리 식었다는 문장은 반드시 거짓이다.",
+      "inverted_text": "설악산과 북한산의 화강암은 지표로 흘러나온 마그마가 빠르게 식어 만들어진 것이다.",
+      "curriculum": [
+        "12지구02-03",
+        "12지구02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-iglandform-depth",
+      "text": "조성이 같은 마그마라도 굳은 깊이가 얕을수록 결정이 작아져 지형을 이루는 암석의 겉모습이 달라진다.",
+      "form": {
+        "condition": "조성을 같게 두고 굳은 깊이만 달리 볼 때",
+        "type": "direct",
+        "scope": "마그마가 식어 만들어진 암석",
+        "antecedent": {
+          "quantity": "마그마가 굳은 깊이",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "광물 결정의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "얕을수록 빨리 식어 결정이 작아지므로 커진다는 문장은 반드시 거짓이다.",
+      "inverted_text": "마그마가 얕은 곳에서 굳을수록 광물 결정은 더 크게 자란다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우리나라의 화강암 산은 화산이 분출해 만들어진 지형이다",
+      "why_wrong": "화강암은 지하 깊은 곳에서 굳은 심성암이다. 산이 된 것은 분출 때문이 아니라 융기와 침식으로 지표에 드러났기 때문이다.",
+      "linked_relation": "rel-iglandform-granite",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-volcanic-rock"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-plutonic-rock"
+    },
+    {
+      "type": "related",
+      "target": "earth-joint"
+    },
+    {
+      "type": "next",
+      "target": "earth-national-geopark"
+    }
+  ],
+  "curriculum": [
+    "12지구02-03",
+    "12지구02-05"
+  ],
+  "topic_id": "earth-2-03-5",
+  "pages": [
+    117
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

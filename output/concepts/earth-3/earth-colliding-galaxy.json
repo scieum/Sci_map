@@ -1,0 +1,90 @@
+{
+  "id": "earth-colliding-galaxy",
+  "concept_key": "concept:colliding-galaxy",
+  "registry_status": "new",
+  "term": "충돌 은하",
+  "notation": {
+    "hanja": "衝突銀河",
+    "english": "colliding galaxy",
+    "hanja_gloss": "衝 찌를 충 · 突 갑자기 돌 · 銀 은 은 · 河 물 하"
+  },
+  "definition": "서로의 중력에 이끌려 상호작용하다가 모양이 일그러지거나 하나로 합쳐지는 은하.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-collide-starburst",
+      "text": "충돌로 성간 가스가 압축되면 그 자리에서 별이 한꺼번에 많이 태어난다.",
+      "form": {
+        "condition": "두 은하가 충돌하거나 병합할 때",
+        "type": "causal",
+        "scope": "성간 물질이 있는 은하의 충돌",
+        "antecedent": {
+          "quantity": "성간 가스의 압축",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "새로 태어나는 별의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가스가 압축되면 별 탄생이 촉발되므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "충돌로 성간 가스가 압축되면 그 자리에서 별의 탄생이 오히려 멎는다."
+    },
+    {
+      "id": "rel-collide-radiation",
+      "text": "충돌로 태어난 젊은 별이 초신성으로 폭발하면서 고에너지 복사가 방출된다.",
+      "form": {
+        "condition": "충돌 뒤 젊은 별이 일생을 마칠 때",
+        "type": "causal",
+        "scope": "충돌 은하"
+      },
+      "invertible": false,
+      "invertible_reason": "고에너지 복사의 까닭을 하나로 되짚을 수는 없다.",
+      "curriculum": [
+        "12지구03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "은하가 충돌하면 두 은하는 부서져 사라진다",
+      "why_wrong": "두 은하는 중력으로 상호작용하며 모양이 변형되거나 하나로 병합된다. 우리은하와 안드로메다은하도 먼 뒷날 병합할 것으로 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-collide-starburst"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-peculiar-galaxy",
+      "note": "허블 분류 밖의 은하라는 자리를 알아야 충돌 은하가 읽힌다"
+    },
+    {
+      "type": "related",
+      "target": "earth-elliptical-galaxy",
+      "note": "충돌·병합의 끝에 거대 타원 은하가 생긴다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-06-2",
+  "pages": [
+    194,
+    195
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

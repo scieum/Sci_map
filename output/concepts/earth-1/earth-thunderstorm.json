@@ -1,0 +1,124 @@
+{
+  "id": "earth-thunderstorm",
+  "concept_key": "concept:thunderstorm",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "뇌우",
+  "notation": {
+    "hanja": "雷雨",
+    "hanja_gloss": "雷 우레 뇌 · 雨 비 우",
+    "english": "thunderstorm"
+  },
+  "definition": "번개와 천둥을 거느린 국지성 폭풍우로, 대기가 불안정할 때 솟아오른 공기가 적란운을 이루면서 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ts-instability",
+      "text": "대기가 불안정하고 수증기가 넉넉할 때 공기가 세차게 솟아올라 적란운이 서면서 뇌우가 생긴다",
+      "form": {
+        "condition": "하층이 따뜻하고 상층이 찰 때",
+        "type": "causal",
+        "scope": "적란운에서 생기는 국지성 폭풍우"
+      },
+      "invertible": false,
+      "invertible_reason": "발생 조건을 든 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ts-stages",
+      "text": "뇌우는 상승 기류만 있는 적운 단계, 상승과 하강 기류가 함께 있는 성숙 단계, 하강 기류만 남는 소멸 단계를 거친다",
+      "form": {
+        "condition": "뇌우 한 세포의 일생을 따라갈 때",
+        "type": "classification",
+        "scope": "뇌우 한 세포 — 여러 세포가 이어진 뇌우는 단계가 겹쳐 나타난다"
+      },
+      "invertible": false,
+      "invertible_reason": "차례를 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ts-gustfront",
+      "text": "성숙 단계의 하강 기류가 지면에 닿아 퍼지며 만든 돌풍 전선이 둘레의 습한 공기를 밀어 올려 새 뇌우를 만든다",
+      "form": {
+        "condition": "하강 기류가 지면에 닿아 사방으로 퍼질 때",
+        "type": "causal",
+        "scope": "여러 뇌우가 잇따라 생기는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "돌풍 전선은 공기를 밀어 올리는 구실을 하므로 끌어내린다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "돌풍 전선은 둘레의 공기를 끌어내려 새 뇌우가 생기지 못하게 막는다"
+    },
+    {
+      "id": "rel-ts-shear",
+      "text": "상층으로 갈수록 바람이 강해지는 상태에서는 한 뇌우가 사라져도 새 뇌우가 이어져 피해가 길어진다",
+      "form": {
+        "condition": "연직 방향의 바람 차이가 클 때",
+        "type": "conditional",
+        "scope": "여러 세포가 이어진 뇌우 — 세포 하나짜리 뇌우는 30분 남짓에 끝난다"
+      },
+      "invertible": false,
+      "invertible_reason": "지속 시간을 좌우하는 조건이 여럿이라 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "뇌우의 성숙 단계에는 상승 기류만 나타난다",
+      "why_wrong": "성숙 단계에는 상승 기류와 하강 기류가 함께 나타난다. 상승 기류만 있는 때는 적운 단계다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ts-stages"
+    },
+    {
+      "text": "뇌우 하나는 길어야 30분이니 뇌우 피해는 늘 짧게 끝난다",
+      "why_wrong": "여러 뇌우가 이어지며 새로 생기면 넓은 지역에 오랫동안 피해를 준다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ts-shear"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-hail"
+    },
+    {
+      "type": "next",
+      "target": "earth-torrential-rain"
+    },
+    {
+      "type": "related",
+      "target": "earth-mesoscale-cyclone",
+      "note": "중규모 저기압이 뇌우를 부른다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-05-1",
+  "pages": [
+    48,
+    49,
+    55,
+    79
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

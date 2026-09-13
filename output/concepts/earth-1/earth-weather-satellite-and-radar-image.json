@@ -1,0 +1,139 @@
+{
+  "id": "earth-weather-satellite-and-radar-image",
+  "concept_key": "concept:weather-satellite-and-radar-image",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "위성 영상과 레이더 영상",
+  "notation": {
+    "hanja": "衛星映像",
+    "hanja_note": "'레이더'는 영어 radar 를 소리대로 옮긴 말이라 대응하는 한자가 없다",
+    "hanja_gloss": "衛 지킬 위 · 星 별 성 · 映 비칠 영 · 像 모양 상",
+    "english": "satellite and radar image"
+  },
+  "definition": "기상 위성이 반사광과 적외선으로 찍은 영상과 되돌아온 전파로 강수를 잡아낸 레이더 영상을 아울러, 날씨를 읽는 데 쓰는 자료다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-img-visible",
+      "text": "가시 영상은 햇빛의 반사 강도를 나타내므로 두꺼운 적운형 구름이 얇은 층운형 구름보다 밝게 보인다",
+      "form": {
+        "condition": "햇빛이 있는 낮에 관측할 때",
+        "type": "direct",
+        "scope": "가시 영상 — 태양 복사가 없는 밤에는 쓸 수 없다",
+        "antecedent": {
+          "quantity": "구름의 두께",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "영상의 밝기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반사가 많을수록 밝게 나오므로 얇은 구름이 더 밝다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가시 영상에서는 얇은 층운형 구름이 두꺼운 적운형 구름보다 밝게 보인다"
+    },
+    {
+      "id": "rel-img-infrared",
+      "text": "적외 영상은 물체가 내보내는 적외선을 잡으므로 온도가 낮은 상층운이 온도가 높은 하층운보다 밝게 나타난다",
+      "form": {
+        "condition": "구름 꼭대기의 온도를 견줄 때",
+        "type": "inverse",
+        "scope": "적외 영상 — 구름의 높이를 읽는 데 쓴다",
+        "antecedent": {
+          "quantity": "구름 꼭대기의 온도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "영상의 밝기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "적외 영상은 저온을 밝게 그리므로 하층운이 더 밝다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적외 영상에서는 온도가 높은 하층운이 상층운보다 밝게 나타난다"
+    },
+    {
+      "id": "rel-img-night",
+      "text": "적외 영상은 물체가 스스로 내보내는 적외선을 재므로 햇빛이 없는 밤에도 관측할 수 있다",
+      "form": {
+        "condition": "태양 복사가 없는 시간대",
+        "type": "causal",
+        "scope": "적외 영상과 수증기 영상 — 가시 영상에는 해당하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "스스로 내보내는 에너지를 재므로 햇빛이 있어야 한다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적외 영상은 햇빛이 있어야만 관측할 수 있다"
+    },
+    {
+      "id": "rel-img-radar",
+      "text": "레이더 영상은 비나 눈에 부딪혀 되돌아온 전파의 세기로 강수의 세기와 강수대의 분포를 보여 준다",
+      "form": {
+        "condition": "강수 입자가 있는 구역",
+        "type": "causal",
+        "scope": "강수 관측 — 구름이 있어도 비가 내리지 않으면 잡히지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측 원리를 밝힌 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적외 영상에서 밝게 보이는 구름은 온도가 높은 구름이다",
+      "why_wrong": "적외 영상은 온도가 낮을수록 밝게 나타내므로 밝은 구름은 높고 차가운 구름이다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-img-infrared"
+    },
+    {
+      "text": "위성 영상에 하얗게 보이면 그곳에는 반드시 비가 내리고 있다",
+      "why_wrong": "구름이 있어도 비가 오지 않을 수 있다. 실제 강수는 레이더 영상으로 확인해야 한다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-img-radar"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-midlatitude-cyclone"
+    },
+    {
+      "type": "related",
+      "target": "earth-typhoon",
+      "note": "영상으로 태풍의 눈을 읽는다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-03-3",
+  "pages": [
+    36,
+    37,
+    40,
+    77
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

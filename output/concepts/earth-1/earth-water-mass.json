@@ -1,0 +1,87 @@
+{
+  "id": "earth-water-mass",
+  "concept_key": "concept:water-mass",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "수괴",
+  "notation": {
+    "hanja": "水塊",
+    "hanja_gloss": "水 물 수 · 塊 덩어리 괴",
+    "english": "water mass"
+  },
+  "definition": "성질이 서로 비슷한 해수끼리 하나로 묶어 다루는 덩어리로, 심층 순환의 흐름과 기원을 더듬는 단위가 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wm-mix",
+      "text": "성질이 다른 수괴끼리는 잘 섞이지 않아 수온과 염분이 오랫동안 그대로 유지된다",
+      "form": {
+        "condition": "밀도가 다른 두 수괴가 맞닿을 때",
+        "type": "causal",
+        "scope": "심층의 큰 수괴 — 표층에서는 바람 혼합으로 성질이 쉽게 바뀐다"
+      },
+      "invertible": true,
+      "invertible_reason": "밀도가 다른 물은 층을 이루므로 곧바로 섞인다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성질이 다른 수괴끼리는 곧바로 섞여 수온과 염분이 금세 같아진다"
+    },
+    {
+      "id": "rel-wm-identify",
+      "text": "수괴마다 수온과 염분이 다르므로 수온 염분도 위의 자리를 보고 어느 수괴인지 가려낸다",
+      "form": {
+        "condition": "수온·염분이 오래 유지되는 심층 수괴",
+        "type": "classification",
+        "scope": "남극 중층수·북대서양 심층수·남극 저층수처럼 성질이 뚜렷한 수괴"
+      },
+      "invertible": false,
+      "invertible_reason": "판별 수단을 밝힌 명제라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12지구01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바닷물은 다 같은 물이니 만나면 금방 하나로 섞인다",
+      "why_wrong": "밀도가 다른 수괴는 쉽게 섞이지 않고 층을 이루어 나란히 흐른다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wm-mix"
+    },
+    {
+      "text": "수온만 같으면 같은 수괴다",
+      "why_wrong": "수괴는 수온과 염분을 함께 보아 가른다. 수온이 같아도 염분이 다르면 다른 수괴다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wm-identify"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-temperature-salinity-diagram"
+    },
+    {
+      "type": "next",
+      "target": "earth-deep-ocean-circulation"
+    }
+  ],
+  "curriculum": [
+    "12지구01-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-02-2",
+  "pages": [
+    29,
+    31
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "version": 1
+}

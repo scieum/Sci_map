@@ -1,0 +1,154 @@
+{
+  "id": "earth-seawater-density",
+  "concept_key": "concept:seawater-density",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "해수의 밀도",
+  "notation": {
+    "hanja": "海水密度",
+    "hanja_gloss": "海 바다 해 · 水 물 수 · 密 빽빽할 밀 · 度 법도 도",
+    "english": "density of seawater",
+    "symbol_display": "ρ (g/cm³)",
+    "symbol_plain": "rho (g/cm^3)"
+  },
+  "definition": "단위 부피의 해수가 가지는 질량으로, 주로 수온과 염분이 정하며 차고 짤수록 커진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-density-temp",
+      "text": "염분이 같다면 수온이 낮은 해수일수록 밀도가 크다",
+      "form": {
+        "condition": "염분이 같은 두 해수를 견줄 때",
+        "type": "inverse",
+        "scope": "해수가 실제로 놓이는 수온 범위",
+        "antecedent": {
+          "quantity": "수온",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가열되면 부피가 팽창해 밀도가 작아지므로 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "염분이 같다면 수온이 낮은 해수일수록 밀도가 작다"
+    },
+    {
+      "id": "rel-density-salinity",
+      "text": "수온이 같다면 염분이 높은 해수일수록 밀도가 크다",
+      "form": {
+        "condition": "수온이 같은 두 해수를 견줄 때",
+        "type": "direct",
+        "scope": "해수가 실제로 놓이는 염분 범위",
+        "antecedent": {
+          "quantity": "염분",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "녹아 있는 염류가 많을수록 같은 부피의 질량이 커지므로 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수온이 같다면 염분이 높은 해수일수록 밀도가 작다"
+    },
+    {
+      "id": "rel-density-latitude",
+      "text": "해수면 밀도는 수온이 높은 적도에서 낮고 고위도로 갈수록 대체로 커진다",
+      "form": {
+        "condition": "해수면에서 위도별로 견줄 때",
+        "type": "direct",
+        "scope": "해수면의 평균 분포 — 담수가 많이 드는 북극해처럼 어긋나는 해역이 있다",
+        "antecedent": {
+          "quantity": "위도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해수면 밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "북극해처럼 고위도인데 밀도가 낮은 해역이 있어 뒤집은 문장을 언제나 거짓이라 할 수 없다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-density-overturn",
+      "text": "같은 수심에서 밀도가 다른 두 해수가 만나면 밀도가 큰 쪽이 아래로 내려가 자리바꿈이 일어난다",
+      "form": {
+        "condition": "두 해수가 같은 수심에서 맞닿을 때",
+        "type": "causal",
+        "scope": "밀도 차가 뚜렷한 해수끼리 — 차가 아주 작으면 섞여 버린다"
+      },
+      "invertible": true,
+      "invertible_reason": "밀도가 큰 물이 위로 떠오른다고 하면 부력과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 수심에서 두 해수가 만나면 밀도가 큰 쪽이 위로 올라간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수온이 올라가면 물 분자의 움직임이 커져 질량이 늘고 밀도도 커진다",
+      "why_wrong": "가열되면 부피가 팽창하지만 질량은 그대로다. 그래서 밀도는 오히려 작아진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-density-temp"
+    },
+    {
+      "text": "고위도 바다는 차가우니 어디서나 밀도가 가장 크다",
+      "why_wrong": "북극해처럼 담수가 많이 흘러들어 염분이 낮은 곳은 수온이 낮아도 밀도가 낮다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-density-latitude"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-sea-temperature-distribution"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-salinity"
+    },
+    {
+      "type": "next",
+      "target": "earth-temperature-salinity-diagram"
+    },
+    {
+      "type": "next",
+      "target": "earth-deep-ocean-circulation"
+    }
+  ],
+  "curriculum": [
+    "12지구01-01"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-01-4",
+  "pages": [
+    19,
+    20,
+    25
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

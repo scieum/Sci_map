@@ -1,0 +1,124 @@
+{
+  "id": "earth-variation-of-orbital-eccentricity",
+  "concept_key": "concept:variation-of-orbital-eccentricity",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "지구 공전 궤도 이심률 변화",
+  "notation": {
+    "hanja": "地球公轉軌道離心率變化",
+    "hanja_gloss": "地 땅 지 · 球 공 구 · 公 공평할 공 · 轉 구를 전 · 軌 바퀴자국 궤 · 道 길 도 · 離 떠날 리 · 心 마음 심 · 率 비율 률 · 變 변할 변 · 化 될 화",
+    "english": "variation of Earth's orbital eccentricity",
+    "symbol_display": "e",
+    "symbol_plain": "e"
+  },
+  "definition": "지구의 공전 궤도가 약 10만 년을 주기로 원에 가까운 모양과 납작한 타원 사이를 오가는 변화로, 계절별 일사량을 달라지게 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ec-distance",
+      "text": "공전 궤도가 납작해질수록 근일점은 태양에 더 가까워지고 원일점은 더 멀어진다",
+      "form": {
+        "condition": "궤도의 긴반지름이 그대로일 때",
+        "type": "direct",
+        "scope": "타원 궤도의 기하 — 계절의 길이 변화는 따로 본다",
+        "antecedent": {
+          "quantity": "이심률",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "근일점과 원일점의 거리 차",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이심률이 커지면 두 점의 거리 차가 벌어지므로 좁아진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공전 궤도가 납작해질수록 근일점과 원일점의 거리 차가 작아진다"
+    },
+    {
+      "id": "rel-ec-insolation",
+      "text": "궤도가 납작해지면 근일점에서 받는 태양 복사 에너지량은 늘고 원일점에서 받는 양은 줄어든다",
+      "form": {
+        "condition": "자전축 기울기와 경사 방향이 그대로일 때",
+        "type": "causal",
+        "scope": "근일점과 원일점에서 받는 태양 복사 에너지량"
+      },
+      "invertible": true,
+      "invertible_reason": "거리가 가까워진 쪽이 더 많이 받으므로 맞바꾼 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "궤도가 납작해지면 근일점 일사량이 줄고 원일점 일사량이 늘어난다"
+    },
+    {
+      "id": "rel-ec-range",
+      "text": "지금처럼 북반구가 근일점에서 겨울을 맞는다면 궤도가 납작해질수록 북반구 중위도의 연교차는 작아진다",
+      "form": {
+        "condition": "자전축 경사 방향이 지금과 같을 때",
+        "type": "inverse",
+        "scope": "북반구 중위도 — 경사 방향이 바뀌면 결과도 뒤바뀐다",
+        "antecedent": {
+          "quantity": "이심률",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "북반구 중위도의 연교차",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "겨울이 덜 춥고 여름이 덜 더워지는 쪽이라 연교차가 커진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "궤도가 납작해질수록 북반구 중위도의 기온 연교차가 커진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지구가 태양에 가장 가까운 근일점에 있을 때가 여름이다",
+      "why_wrong": "지금 북반구는 근일점 부근에서 겨울이다. 계절을 정하는 것은 거리가 아니라 자전축의 기울기다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ec-range"
+    },
+    {
+      "text": "이심률이 커지면 지구가 받는 태양 에너지의 총량이 크게 늘어난다",
+      "why_wrong": "한 해 전체로는 큰 차이가 없고, 근일점과 원일점에서 받는 양의 차이가 벌어진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ec-insolation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-natural-factor-of-climate-change"
+    },
+    {
+      "type": "related",
+      "target": "earth-variation-of-earth-rotation-axis",
+      "note": "함께 보아야 연교차 변화가 읽힌다"
+    }
+  ],
+  "curriculum": [
+    "12지구01-06"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-07-2",
+  "pages": [
+    67,
+    69,
+    75
+  ],
+  "difficulty": 5,
+  "role": "supporting",
+  "version": 1
+}

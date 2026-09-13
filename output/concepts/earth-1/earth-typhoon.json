@@ -1,0 +1,149 @@
+{
+  "id": "earth-typhoon",
+  "concept_key": "concept:typhoon",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "태풍",
+  "notation": {
+    "hanja": "颱風",
+    "hanja_gloss": "颱 태풍 태 · 風 바람 풍",
+    "english": "typhoon"
+  },
+  "definition": "수온이 26.5 ℃를 넘는 열대 바다에서 생겨 순간 최대 풍속 17 m/s 이상으로 자란 열대 저기압이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ty-birth",
+      "text": "열대 바다의 수온이 높고 대기가 불안정하며 전향력이 작용하는 위도라야 태풍이 만들어진다",
+      "form": {
+        "condition": "적도에서 5°쯤 넘게 떨어진 열대 해상",
+        "type": "conditional",
+        "scope": "태풍의 발생 조건 — 전향력이 없는 적도 바로 위에서는 생기지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "발생 조건을 여럿 나열한 명제라 앞뒤를 맞바꿀 짝이 없다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ty-energy",
+      "text": "수증기가 응결하며 내놓는 숨은열이 태풍을 키우는 에너지원이다",
+      "form": {
+        "condition": "많은 수증기가 응결할 때",
+        "type": "causal",
+        "scope": "따뜻한 바다에서 수증기를 공급받는 동안",
+        "antecedent": {
+          "quantity": "응결량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "태풍의 세력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "태풍이 내놓은 열이 수증기를 응결시킨다고 하면 원인과 결과가 뒤바뀌어 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태풍이 내놓는 열이 수증기를 응결시켜 에너지원이 된다"
+    },
+    {
+      "id": "rel-ty-eye",
+      "text": "태풍의 눈에서는 하강 기류로 바람이 약하고 맑지만, 둘레의 눈 벽에서는 상승 기류로 적란운이 두껍게 선다",
+      "form": {
+        "condition": "태풍의 중심부를 가로질러 볼 때",
+        "type": "classification",
+        "scope": "발달한 태풍의 눈과 눈 벽 — 쇠약기에는 눈이 흐려진다"
+      },
+      "invertible": true,
+      "invertible_reason": "눈과 눈 벽의 기류를 맞바꾼 문장은 태풍의 구조와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태풍의 눈에서는 상승 기류로 비가 가장 많이 내리고 눈 벽은 맑다"
+    },
+    {
+      "id": "rel-ty-decay",
+      "text": "태풍이 찬 바다를 지나거나 육지에 오르면 수증기와 열을 공급받지 못해 세력이 약해진다",
+      "form": {
+        "condition": "수증기 공급이 끊길 때",
+        "type": "causal",
+        "scope": "태풍의 쇠약기와 소멸 과정",
+        "antecedent": {
+          "quantity": "수증기 공급",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "태풍의 세력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "육지에서는 수증기 공급이 끊기므로 세력이 강해진다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태풍이 육지에 오르면 수증기를 더 공급받아 세력이 강해진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태풍의 눈에서는 바람이 가장 세다",
+      "why_wrong": "풍속이 가장 센 곳은 눈을 둘러싼 눈 벽이다. 눈 안쪽은 하강 기류라 바람이 약하다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ty-eye"
+    },
+    {
+      "text": "태풍은 육지에 올라오면 마찰 때문에 더 사나워진다",
+      "why_wrong": "육지에서는 수증기 공급이 끊기고 마찰까지 더해져 세력이 빠르게 약해진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ty-decay"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-typhoon-track"
+    },
+    {
+      "type": "next",
+      "target": "earth-dangerous-and-navigable-semicircle"
+    },
+    {
+      "type": "next",
+      "target": "earth-typhoon-earth-system-interaction"
+    },
+    {
+      "type": "next",
+      "target": "earth-torrential-rain"
+    },
+    {
+      "type": "next",
+      "target": "earth-strong-wind"
+    }
+  ],
+  "curriculum": [
+    "12지구01-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-04-1",
+  "pages": [
+    42,
+    43,
+    44,
+    47
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

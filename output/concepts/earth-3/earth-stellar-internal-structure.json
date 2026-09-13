@@ -1,0 +1,95 @@
+{
+  "id": "earth-stellar-internal-structure",
+  "concept_key": "concept:stellar-internal-structure",
+  "registry_status": "new",
+  "term": "별의 내부 구조",
+  "notation": {
+    "hanja": "內部構造",
+    "english": "stellar internal structure",
+    "hanja_note": "'별'은 고유어라 한자가 없고, 한자어인 '내부 구조'만 적었다.",
+    "hanja_gloss": "內 안 내 · 部 떼 부 · 構 얽을 구 · 造 지을 조"
+  },
+  "definition": "중심부의 핵융합 영역을 둘러싼 복사층과 대류층의 배치. 어느 층이 안쪽에 오는지는 별의 질량에 따라 갈린다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-structure-solar-mass",
+      "text": "질량이 태양 정도인 별은 핵 바깥에 복사층이, 그 바깥에 대류층이 놓인다.",
+      "form": {
+        "condition": "질량이 태양의 약 0.26~1.5배일 때",
+        "type": "classification",
+        "scope": "주계열 단계의 별"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-structure-massive",
+      "text": "질량이 태양의 1.5배보다 큰 별은 중심부에서 대류가, 바깥층에서 복사가 에너지를 나른다.",
+      "form": {
+        "condition": "중심부에서 CNO 순환 반응이 우세할 때",
+        "type": "classification",
+        "scope": "주계열 단계의 무거운 별"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-structure-conduction",
+      "text": "별의 물질은 밀도가 매우 낮아 전도로는 에너지가 거의 전달되지 않는다.",
+      "form": {
+        "condition": "별 내부에서 에너지가 전달될 때",
+        "type": "causal",
+        "scope": "별의 내부"
+      },
+      "invertible": false,
+      "invertible_reason": "밀도가 낮다고 언제나 전도가 무시되는 것은 아니어서 뒤집은 문장이 반드시 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 크든 작든 별의 내부 구조는 모두 같다",
+      "why_wrong": "에너지를 만드는 방식이 달라 복사층과 대류층의 차례가 질량에 따라 뒤바뀐다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-structure-massive"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-pp-chain-and-cno-cycle"
+    },
+    {
+      "type": "related",
+      "target": "earth-main-sequence-star",
+      "note": "주계열성의 내부를 들여다본 것이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-4",
+  "pages": [
+    182
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

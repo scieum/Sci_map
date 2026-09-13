@@ -1,0 +1,114 @@
+{
+  "id": "earth-igneous-rock",
+  "concept_key": "concept:igneous-rock",
+  "registry_status": "new",
+  "term": "화성암",
+  "notation": {
+    "hanja": "火成岩",
+    "english": "igneous rock",
+    "hanja_gloss": "火 불 화 · 成 이룰 성 · 岩 바위 암",
+    "symbol_display": "SiO₂",
+    "symbol_plain": "SiO2"
+  },
+  "definition": "마그마가 식어 굳어 만들어진 암석으로, 화학 조성과 냉각 속도에 따른 조직으로 나눈다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ig-color",
+      "text": "SiO2가 적은 염기성암은 유색 광물이 많아 어둡고, SiO2가 많은 산성암은 무색 광물이 많아 밝다.",
+      "form": {
+        "condition": "화학 조성이 다른 화성암의 색을 견줄 때",
+        "type": "classification",
+        "scope": "염기성암에서 산성암에 이르는 조성 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "조성과 광물 구성이 색을 정하므로 둘을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "SiO2가 적은 염기성암은 무색 광물이 많아 밝고, SiO2가 많은 산성암은 어둡다."
+    },
+    {
+      "id": "rel-ig-cooling",
+      "text": "마그마가 빨리 식을수록 광물 결정이 자랄 틈이 없어 결정의 크기가 작아진다.",
+      "form": {
+        "condition": "굳어지는 자리의 깊이가 다를 때",
+        "type": "inverse",
+        "scope": "화성암의 조직",
+        "antecedent": {
+          "quantity": "마그마가 식는 속도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광물 결정의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "결정은 자랄 시간이 있어야 커지므로 빨리 식을수록 커진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마가 빨리 식을수록 광물 결정의 크기가 커진다."
+    },
+    {
+      "id": "rel-ig-classify",
+      "text": "화성암은 SiO2 함량으로 염기성암·중성암·산성암으로, 굳은 자리로 화산암·심성암으로 나눈다.",
+      "form": {
+        "condition": "두 가지 기준으로 화성암을 가를 때",
+        "type": "classification",
+        "scope": "이 교과서의 화성암 분류표"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 든 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화성암의 색이 밝을수록 더 빨리 식어 굳은 것이다",
+      "why_wrong": "색을 정하는 것은 화학 조성이고, 식는 속도가 정하는 것은 결정의 크기다. 두 기준은 서로 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ig-color"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-magma-type"
+    },
+    {
+      "type": "next",
+      "target": "earth-intrusion"
+    },
+    {
+      "type": "next",
+      "target": "earth-joint"
+    },
+    {
+      "type": "next",
+      "target": "earth-rock-cycle"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-4",
+  "pages": [
+    116,
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

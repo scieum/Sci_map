@@ -1,0 +1,136 @@
+{
+  "id": "earth-anticyclone-and-weather",
+  "concept_key": "concept:anticyclone-and-weather",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "고기압과 날씨",
+  "notation": {
+    "hanja": "高氣壓",
+    "hanja_note": "'날씨'는 고유어라 대응하는 한자가 없다",
+    "hanja_gloss": "高 높을 고 · 氣 기운 기 · 壓 누를 압",
+    "english": "anticyclone and weather"
+  },
+  "definition": "주위보다 기압이 높아 하강 기류가 자리 잡은 곳에서 나타나는 날씨로, 대체로 맑고 바람이 약해 기단의 발원지가 되기도 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hp-subsidence",
+      "text": "고기압이 자리 잡은 곳은 하강 기류 때문에 구름이 잘 생기지 않아 날씨가 맑다",
+      "form": {
+        "condition": "고기압 중심부에 들 때",
+        "type": "causal",
+        "scope": "고기압의 중심부 — 가장자리에서는 비가 내리기도 한다"
+      },
+      "invertible": true,
+      "invertible_reason": "고기압에서는 공기가 내려오므로 상승 기류로 흐리다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고기압이 자리 잡은 곳은 상승 기류 때문에 구름이 많고 날씨가 흐리다"
+    },
+    {
+      "id": "rel-hp-stationary",
+      "text": "정체성 고기압은 한곳에 오래 머물러 그 아래 공기가 지표의 성질을 닮으므로 기단의 발원지가 된다",
+      "form": {
+        "condition": "고기압이 오랫동안 같은 자리에 머무를 때",
+        "type": "causal",
+        "scope": "시베리아·북태평양·오호츠크해 고기압 같은 정체성 고기압"
+      },
+      "invertible": false,
+      "invertible_reason": "기단이 만들어지는 조건을 하나로 단정할 수 없어 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hp-migratory",
+      "text": "이동성 고기압은 편서풍을 타고 동쪽으로 옮겨 가 봄·가을에 맑은 날과 흐린 날을 번갈아 만든다",
+      "form": {
+        "condition": "중위도 편서풍대에 놓일 때",
+        "type": "causal",
+        "scope": "우리나라의 봄철·가을철 날씨"
+      },
+      "invertible": true,
+      "invertible_reason": "편서풍은 서에서 동으로 부는 바람이라 서쪽으로 옮겨 간다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이동성 고기압은 편서풍을 타고 서쪽으로 옮겨 간다"
+    },
+    {
+      "id": "rel-hp-siberian",
+      "text": "겨울철 시베리아 고기압이 남동쪽으로 세력을 넓히면 차고 건조한 북풍 계열 바람이 불어 한파가 나타난다",
+      "form": {
+        "condition": "겨울철 시베리아 고기압이 확장할 때",
+        "type": "causal",
+        "scope": "우리나라의 겨울철 — 여름철 북태평양 고기압은 거꾸로 폭염을 부른다",
+        "antecedent": {
+          "quantity": "시베리아 고기압의 세력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기온",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "차고 건조한 공기가 들어오므로 기온이 올라간다는 말은 반드시 거짓이다",
+      "curriculum": [
+        "12지구01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겨울철 시베리아 고기압이 세력을 넓히면 우리나라의 기온이 올라간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고기압의 영향을 받으면 어디서나 비가 오지 않는다",
+      "why_wrong": "고기압 중심은 맑지만 북태평양 고기압의 가장자리처럼 강수가 집중되는 자리도 있다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hp-subsidence"
+    },
+    {
+      "text": "고기압은 공기가 위로 올라가서 기압이 높은 것이다",
+      "why_wrong": "고기압에서는 공기가 내려온다. 하강하는 공기는 데워지면서 구름이 흩어져 날씨가 맑아진다",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hp-subsidence"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "earth-strong-wind"
+    },
+    {
+      "type": "next",
+      "target": "earth-typhoon-track",
+      "note": "북태평양 고기압 가장자리"
+    },
+    {
+      "type": "next",
+      "target": "earth-heavy-snow",
+      "note": "시베리아 기단의 남하"
+    }
+  ],
+  "curriculum": [
+    "12지구01-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅰ. 대기와 해양의 상호작용",
+  "unit_id": "earth-1",
+  "topic_id": "earth-1-03-5",
+  "pages": [
+    38,
+    39,
+    41,
+    78
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

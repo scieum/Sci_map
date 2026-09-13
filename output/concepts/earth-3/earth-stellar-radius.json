@@ -1,0 +1,104 @@
+{
+  "id": "earth-stellar-radius",
+  "concept_key": "concept:stellar-radius",
+  "registry_status": "new",
+  "term": "별의 반지름",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "stellar radius",
+    "hanja_note": "'별'과 '반지름'이 모두 고유어라 한자어 표기가 없다.",
+    "symbol_display": "R",
+    "symbol_plain": "R"
+  },
+  "definition": "광도와 표면 온도를 알면 계산으로 구해 낼 수 있는 별의 크기. 광도가 표면적과 단위 면적당 방출 에너지의 곱이라는 관계에서 얻는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-radius-same-luminosity",
+      "text": "광도가 같은 두 별이라면 표면 온도가 낮은 쪽이 반지름이 크다.",
+      "form": {
+        "condition": "광도가 일정할 때",
+        "type": "inverse",
+        "scope": "흑체로 근사한 별",
+        "antecedent": {
+          "quantity": "표면 온도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "반지름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 낮은 만큼 표면적이 커야 같은 광도가 되므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 같은 두 별이라면 표면 온도가 낮은 쪽이 반지름도 작다."
+    },
+    {
+      "id": "rel-radius-same-temperature",
+      "text": "표면 온도가 같은 두 별이라면 광도가 큰 쪽이 반지름도 크다.",
+      "form": {
+        "condition": "표면 온도가 같을 때",
+        "type": "direct",
+        "scope": "흑체로 근사한 별",
+        "antecedent": {
+          "quantity": "광도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반지름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 같으면 광도는 표면적에만 달려 있으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 온도가 같은 두 별이라면 광도가 큰 쪽이 반지름은 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "별의 반지름은 망원경으로 크기를 재어 구한다",
+      "why_wrong": "대부분의 별은 점으로만 보인다. 스펙트럼에서 얻은 표면 온도와 절대 등급에서 얻은 광도로 계산해 구한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-radius-same-temperature"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-stefan-boltzmann-law"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-luminosity"
+    },
+    {
+      "type": "next",
+      "target": "earth-red-giant-and-supergiant",
+      "note": "반지름과 광도의 관계로 분포를 설명한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-03-4",
+  "pages": [
+    169,
+    171
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

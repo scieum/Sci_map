@@ -187,13 +187,20 @@ def check_unit(unit: dict, pdf_path: Path) -> dict:
                 f"{sec['id']}: 중단원 시작({sec['pages'][0]})과 첫 소단원({sec['topics'][0]['pages'][0]}) "
                 f"사이가 {lead}쪽이다 — 도입면치고 너무 넓다")
         cursor = sec["topics"][0]["pages"][0] if sec["topics"] else sec["pages"][0]
+        prev_last = None
         for topic in sec["topics"]:
             t_first, t_last = topic["pages"]
-            if t_first != cursor:
+            # 짧은 소주제 둘이 **한 쪽을 나눠 쓰는** 판형이 있다 — 지구과학(오필석)은
+            # 38쪽에 「중규모 저기압과 날씨」와 「고기압과 날씨」를, 51쪽에 「폭설」과
+            # 「강풍」을 나란히 놓는다. 그 자리에서는 다음 소주제가 직전 소주제의
+            # **같은 쪽**에서 시작하는 것이 사실이다. 한 쪽 겹침까지만 받아들이고,
+            # 그보다 벌어지거나 되돌아가면 그대로 문제로 올린다.
+            if t_first != cursor and not (prev_last is not None and t_first == prev_last):
                 problems.append(
                     f"{sec['id']}: {topic['id']} 시작 {t_first} 이 직전 소단원 끝 다음({cursor})과 다르다")
             if t_last < t_first:
                 problems.append(f"{topic['id']}: 범위가 뒤집혔다 {topic['pages']}")
+            prev_last = t_last
             cursor = t_last + 1
         # 마지막 소단원과 정리 쪽 사이 — 천재 판형은 붙어 있지만 모든 판형이 그렇지는
         # 않다. 세포와 물질대사(이준규)는 중단원 11개 중 4개에서 그 사이에 '세로처럼

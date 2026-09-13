@@ -1,0 +1,128 @@
+{
+  "id": "earth-post-main-sequence-evolution",
+  "concept_key": "concept:post-main-sequence-evolution",
+  "registry_status": "new",
+  "term": "후주계열 진화",
+  "aliases": [
+    "적색거성 단계",
+    "초거성 단계"
+  ],
+  "notation": {
+    "hanja": "後主系列進化",
+    "english": "post-main-sequence evolution",
+    "hanja_gloss": "後 뒤 후 · 主 주인 주 · 系 이어맬 계 · 列 벌일 렬 · 進 나아갈 진 · 化 될 화"
+  },
+  "definition": "중심부의 수소가 바닥난 뒤 중심핵은 수축하고 바깥층은 부풀어 거성이나 초거성으로 커지는 단계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-post-ms-expand",
+      "text": "중심핵이 수축하며 내놓은 열이 바깥 수소층을 데워 그곳에서 핵융합이 일어나면 별의 바깥 부분이 부풀어 오른다.",
+      "form": {
+        "condition": "중심부 수소가 소진된 뒤",
+        "type": "causal",
+        "scope": "주계열을 갓 벗어난 별"
+      },
+      "invertible": false,
+      "invertible_reason": "팽창의 까닭이 이것 하나뿐이라 되짚을 수는 없다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-post-ms-he-fusion",
+      "text": "중심부 온도가 약 1억 K에 이르면 헬륨 핵융합이 시작되어 탄소와 산소로 된 핵이 만들어진다.",
+      "form": {
+        "condition": "적색거성의 중심부가 충분히 수축했을 때",
+        "type": "conditional",
+        "scope": "헬륨 핵융합에 이를 만큼 질량이 있는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 높아져야 시작되는 반응이므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심부 온도가 약 1억 K보다 낮아지면 헬륨 핵융합이 시작되어 탄소와 산소로 된 핵이 만들어진다."
+    },
+    {
+      "id": "rel-post-ms-mass-limit",
+      "text": "질량이 아주 큰 별만 중심부 온도가 30억 K을 넘어 철까지 만들고 양파 껍질 같은 층 구조를 갖는다.",
+      "form": {
+        "condition": "중심부에서 핵융합이 차례로 이어질 때",
+        "type": "conditional",
+        "scope": "태양보다 질량이 훨씬 큰 별"
+      },
+      "invertible": true,
+      "invertible_reason": "질량이 클수록 중심부 온도가 높아지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 작은 별일수록 중심부 온도가 높아 철까지 만들 수 있다."
+    },
+    {
+      "id": "rel-post-ms-path",
+      "text": "주계열을 벗어난 뒤의 진화 경로는 별의 질량에 따라 H-R도 위에 서로 다르게 그려진다.",
+      "form": {
+        "condition": "주계열 이후 단계에서",
+        "type": "causal",
+        "scope": "질량이 서로 다른 별들"
+      },
+      "invertible": false,
+      "invertible_reason": "경로가 다르면 질량이 다르다는 역도 대체로 참이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "별의 중심핵이 수축하면 별 전체도 함께 작아진다",
+      "why_wrong": "중심핵이 수축하는 동안 바깥층은 오히려 팽창한다. 그래서 별은 크고 붉은 거성이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-post-ms-expand"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-main-sequence-star"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-red-giant-and-supergiant"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-hydrostatic-equilibrium",
+      "note": "평형이 깨지면서 수축·팽창이 일어난다"
+    },
+    {
+      "type": "next",
+      "target": "earth-planetary-nebula"
+    },
+    {
+      "type": "next",
+      "target": "earth-supernova"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-05-5",
+  "pages": [
+    183,
+    186
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,79 @@
+{
+  "id": "earth-facies-fossil",
+  "concept_key": "concept:facies-fossil",
+  "registry_status": "new",
+  "term": "시상 화석",
+  "notation": {
+    "hanja": "示相化石",
+    "english": "facies fossil",
+    "hanja_gloss": "示 보일 시 · 相 서로 상 · 化 될 화 · 石 돌 석"
+  },
+  "definition": "특정한 환경에서만 살던 생물의 화석으로, 지층이 쌓일 당시의 환경을 알려 준다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fac-cond",
+      "text": "생존 기간이 길고 분포 범위가 좁으며 환경 변화에 민감한 생물일수록 시상 화석으로 알맞다.",
+      "form": {
+        "condition": "시상 화석으로 쓸 만한지 가릴 때",
+        "type": "conditional",
+        "scope": "환경 추정에 쓰는 화석"
+      },
+      "invertible": true,
+      "invertible_reason": "짧게 살고 널리 퍼진 생물은 표준 화석의 조건이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생존 기간이 짧고 분포 범위가 넓은 생물일수록 시상 화석으로 알맞다."
+    },
+    {
+      "id": "rel-fac-coral",
+      "text": "산호 화석이 나오면 그 지층이 쌓일 무렵 그곳이 따뜻하고 얕은 바다였다고 추정한다.",
+      "form": {
+        "condition": "현생 산호와 서식 조건이 같았다고 볼 때",
+        "type": "conditional",
+        "scope": "산호처럼 서식 조건이 뚜렷한 생물의 화석"
+      },
+      "invertible": false,
+      "invertible_reason": "추정의 근거를 밝힌 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "시상 화석을 보면 그 지층이 어느 지질 시대에 쌓였는지 알 수 있다",
+      "why_wrong": "시상 화석은 오랜 기간 살아 시대를 좁히지 못한다. 시대를 알려 주는 것은 표준 화석이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fac-cond"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-fossil"
+    },
+    {
+      "type": "related",
+      "target": "earth-index-fossil"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-02-3",
+  "pages": [
+    101
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

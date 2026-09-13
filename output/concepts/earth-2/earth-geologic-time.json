@@ -1,0 +1,103 @@
+{
+  "id": "earth-geologic-time",
+  "concept_key": "concept:geologic-time",
+  "registry_status": "new",
+  "term": "지질 시대",
+  "notation": {
+    "hanja": "地質時代",
+    "english": "geologic time",
+    "hanja_gloss": "地 땅 지 · 質 바탕 질 · 時 때 시 · 代 대신할 대"
+  },
+  "definition": "지구가 생긴 약 46억 년 전부터 현재까지를 누대·대·기로 나누어 다루는 지구 역사의 시간 틀.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gt-unit",
+      "text": "누대가 가장 큰 시간 단위이고, 누대를 대로 나누며 대를 다시 기로 잘게 나눈다.",
+      "form": {
+        "condition": "지질 시대의 시간 단위를 견줄 때",
+        "type": "classification",
+        "scope": "누대·대·기의 위계"
+      },
+      "invertible": true,
+      "invertible_reason": "포함 관계가 정해져 있으므로 큰 단위와 작은 단위를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기가 가장 큰 시간 단위이고, 기를 나누어 대와 누대로 삼는다."
+    },
+    {
+      "id": "rel-gt-boundary",
+      "text": "지질 시대의 경계는 생물계의 큰 변화나 지각 변동, 기후 변화를 기준으로 그어진다.",
+      "form": {
+        "condition": "시대를 가르는 기준을 정할 때",
+        "type": "causal",
+        "scope": "지구 규모의 변화가 기록으로 남은 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "기준을 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gt-fossil",
+      "text": "선캄브리아시대는 화석이 거의 나오지 않지만 현생누대는 화석이 비교적 많이 나온다.",
+      "form": {
+        "condition": "누대별 화석 산출량을 견줄 때",
+        "type": "conditional",
+        "scope": "지층에 남은 화석 기록"
+      },
+      "invertible": true,
+      "invertible_reason": "두 누대의 화석 산출량을 맞바꾸면 화석 기록과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "선캄브리아시대는 화석이 많이 나오지만 현생누대는 화석이 거의 나오지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지질 시대는 네 시대를 비슷한 길이로 나눈 것이다",
+      "why_wrong": "구분의 기준은 길이가 아니라 생물계와 환경의 큰 변화다. 선캄브리아시대 하나가 전체의 8할이 넘는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gt-boundary"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-fossil"
+    },
+    {
+      "type": "next",
+      "target": "earth-paleozoic-era"
+    },
+    {
+      "type": "next",
+      "target": "earth-mesozoic-era"
+    },
+    {
+      "type": "next",
+      "target": "earth-cenozoic-era"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-02"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-02-3",
+  "pages": [
+    100
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

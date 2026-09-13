@@ -1,0 +1,116 @@
+{
+  "id": "earth-big-bang-cosmology",
+  "concept_key": "concept:big-bang-cosmology",
+  "registry_status": "new",
+  "term": "빅뱅 우주론",
+  "aliases": [
+    "대폭발 우주론"
+  ],
+  "notation": {
+    "hanja": "宇宙論",
+    "english": "Big Bang cosmology",
+    "hanja_note": "'빅뱅'은 영어 Big Bang 의 음차라 한자가 없다.",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 論 논할 론"
+  },
+  "definition": "우주가 고온·고밀도의 한 점에서 시작해 팽창해 왔다고 보는 우주론. 팽창하는 동안 물질의 총량은 그대로라고 본다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bb-density-temp",
+      "text": "물질의 총량이 일정한 채로 우주가 팽창하므로 밀도와 온도는 함께 낮아진다.",
+      "form": {
+        "condition": "물질의 총량이 달라지지 않는다고 볼 때",
+        "type": "inverse",
+        "scope": "빅뱅 우주론이 그리는 우주",
+        "antecedent": {
+          "quantity": "우주의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주의 밀도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부피가 커지면 밀도가 작아지므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주가 팽창하는 동안 우주의 밀도와 온도는 함께 높아진다."
+    },
+    {
+      "id": "rel-bb-vs-steady",
+      "text": "물질이 계속 생겨 밀도가 그대로라고 본 정상 우주론과 달리, 빅뱅 우주론은 총량이 일정하고 밀도가 낮아진다고 본다.",
+      "form": {
+        "condition": "두 우주론의 주장을 견줄 때",
+        "type": "classification",
+        "scope": "20세기 중반에 맞선 두 우주론"
+      },
+      "invertible": false,
+      "invertible_reason": "분류형 명제라 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bb-he-ratio",
+      "text": "초기 우주에서 만들어진 수소와 헬륨 원자핵의 질량비 약 3:1 이 관측값과 들어맞아 이 우주론을 받쳐 준다.",
+      "form": {
+        "condition": "우주 나이 약 3분 무렵의 핵합성을 볼 때",
+        "type": "causal",
+        "scope": "빅뱅 우주론의 관측적 증거"
+      },
+      "invertible": false,
+      "invertible_reason": "증거와 이론의 관계라 방향을 뒤집는 판단이 서지 않는다.",
+      "curriculum": [
+        "12지구03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빅뱅은 이미 있던 우주 공간의 한 지점에서 일어난 폭발이다",
+      "why_wrong": "빅뱅은 공간 안에서 터진 폭발이 아니라 공간 자체가 부풀기 시작한 사건이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bb-density-temp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hubble-lemaitre-law"
+    },
+    {
+      "type": "next",
+      "target": "earth-cosmic-microwave-background"
+    },
+    {
+      "type": "next",
+      "target": "earth-inflationary-cosmology"
+    },
+    {
+      "type": "next",
+      "target": "earth-accelerating-universe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-05"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-07-3",
+  "pages": [
+    197,
+    201,
+    202
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

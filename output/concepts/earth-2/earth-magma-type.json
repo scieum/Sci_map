@@ -1,0 +1,106 @@
+{
+  "id": "earth-magma-type",
+  "concept_key": "concept:magma-type",
+  "registry_status": "new",
+  "term": "마그마의 종류",
+  "notation": {
+    "hanja": "種類",
+    "english": "type of magma",
+    "hanja_gloss": "種 씨 종 · 類 무리 류",
+    "symbol_display": "SiO₂",
+    "symbol_plain": "SiO2"
+  },
+  "definition": "SiO2 함량을 기준으로 현무암질·안산암질·유문암질로 가르는 마그마의 구분.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-type-silica",
+      "text": "SiO2 함량이 52 % 이하이면 현무암질, 63 % 이상이면 유문암질 마그마로 가른다.",
+      "form": {
+        "condition": "마그마의 화학 조성을 기준으로 나눌 때",
+        "type": "classification",
+        "scope": "이 교과서가 드는 세 가지 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "기준값을 든 분류형 진술이라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-type-viscosity",
+      "text": "SiO2 함량이 많은 마그마일수록 점성이 커서 잘 흐르지 못한다.",
+      "form": {
+        "condition": "마그마의 온도 차이를 함께 볼 때",
+        "type": "direct",
+        "scope": "현무암질에서 유문암질에 이르는 조성 범위",
+        "antecedent": {
+          "quantity": "SiO2 함량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "마그마의 점성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "규산염이 사슬을 이루어 점성을 키우므로 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "SiO2 함량이 많은 마그마일수록 점성이 작아 잘 흐른다."
+    },
+    {
+      "id": "rel-type-temp",
+      "text": "맨틀에서 기원한 현무암질 마그마의 온도가 가장 높고, 대륙 지각에서 기원한 유문암질이 가장 낮다.",
+      "form": {
+        "condition": "세 종류의 마그마를 온도로 견줄 때",
+        "type": "conditional",
+        "scope": "기원 물질이 다른 세 마그마"
+      },
+      "invertible": true,
+      "invertible_reason": "기원 물질의 녹는 온도가 정해져 있으므로 높낮이를 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대륙 지각에서 기원한 유문암질 마그마의 온도가 가장 높고 현무암질이 가장 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "SiO2 함량이 많은 마그마일수록 온도가 높다",
+      "why_wrong": "SiO2 함량이 많은 유문암질 마그마는 대륙 지각에서 기원해 온도가 가장 낮다. 온도가 가장 높은 것은 현무암질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-type-temp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-magma-generation-site"
+    },
+    {
+      "type": "next",
+      "target": "earth-igneous-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-03-3",
+  "pages": [
+    115,
+    121
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

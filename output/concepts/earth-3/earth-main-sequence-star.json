@@ -1,0 +1,113 @@
+{
+  "id": "earth-main-sequence-star",
+  "concept_key": "concept:main-sequence-star",
+  "registry_status": "new",
+  "term": "주계열성",
+  "notation": {
+    "hanja": "主系列星",
+    "english": "main-sequence star",
+    "hanja_gloss": "主 주인 주 · 系 이어맬 계 · 列 벌일 렬 · 星 별 성"
+  },
+  "definition": "H-R도에서 왼쪽 위부터 오른쪽 아래로 이어지는 띠에 놓이는 별. 중심부에서 수소 핵융합이 이어지는 안정한 단계에 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ms-position",
+      "text": "주계열 안에서 왼쪽 위에 놓인 별일수록 표면 온도·광도·반지름·질량이 모두 크다.",
+      "form": {
+        "condition": "주계열에 놓인 별끼리 견줄 때",
+        "type": "direct",
+        "scope": "주계열 단계의 별"
+      },
+      "invertible": true,
+      "invertible_reason": "띠를 따라 네 물리량이 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주계열 안에서 왼쪽 위에 놓인 별일수록 표면 온도와 질량이 작다."
+    },
+    {
+      "id": "rel-ms-lifetime",
+      "text": "질량이 큰 주계열성일수록 수소를 빠르게 소모하여 주계열에 머무는 시간이 짧다.",
+      "form": {
+        "condition": "주계열 단계에 있는 동안",
+        "type": "inverse",
+        "scope": "주계열성",
+        "antecedent": {
+          "quantity": "질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주계열 단계의 수명",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량이 크면 광도가 커져 연료 소모가 빨라지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 큰 주계열성일수록 주계열에 머무는 시간이 길다."
+    },
+    {
+      "id": "rel-ms-stable",
+      "text": "중력과 기체 압력 차에 의한 힘이 맞서 있어 주계열 단계에서는 별의 크기가 거의 달라지지 않는다.",
+      "form": {
+        "condition": "중심부에서 수소 핵융합이 이어지는 동안",
+        "type": "causal",
+        "scope": "주계열 단계의 별"
+      },
+      "invertible": false,
+      "invertible_reason": "크기가 일정한 다른 상태도 있어 뒤집은 문장이 반드시 거짓은 아니다.",
+      "curriculum": [
+        "12지구03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 큰 별일수록 연료가 많으니 더 오래 산다",
+      "why_wrong": "질량이 크면 광도가 커서 수소를 훨씬 빠르게 태운다. 그래서 오히려 수명이 짧다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ms-lifetime"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-hertzsprung-russell-diagram"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-protostar"
+    },
+    {
+      "type": "prereq",
+      "target": "earth-hydrogen-fusion"
+    },
+    {
+      "type": "next",
+      "target": "earth-post-main-sequence-evolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구03-03"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅲ. 태양계 천체와 별과 우주의 진화",
+  "unit_id": "earth-3",
+  "topic_id": "earth-3-04-1",
+  "pages": [
+    174,
+    177,
+    180
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

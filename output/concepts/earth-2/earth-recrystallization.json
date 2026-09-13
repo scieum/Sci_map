@@ -1,0 +1,88 @@
+{
+  "id": "earth-recrystallization",
+  "concept_key": "concept:recrystallization",
+  "registry_status": "new",
+  "term": "재결정 작용",
+  "notation": {
+    "hanja": "再結晶作用",
+    "english": "recrystallization",
+    "hanja_gloss": "再 두 재 · 結 맺을 결 · 晶 맑을 정 · 作 지을 작 · 用 쓸 용"
+  },
+  "definition": "고온·고압이 오래 이어질 때 새 조건에 맞는 변성 광물이 생기거나 광물 입자가 굵어지는 변화.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rec-grow",
+      "text": "고온·고압 상태가 오래 이어질수록 광물의 입자가 점점 굵어진다.",
+      "form": {
+        "condition": "암석이 녹지 않는 범위에서 열과 압력을 오래 받을 때",
+        "type": "direct",
+        "scope": "변성 작용을 받는 고체 암석",
+        "antecedent": {
+          "quantity": "고온·고압이 이어진 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광물 입자의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "재결정은 입자를 키우는 변화이므로 잘아진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고온·고압 상태가 오래 이어질수록 광물의 입자가 점점 잘아진다."
+    },
+    {
+      "id": "rel-rec-texture",
+      "text": "재결정 작용을 받은 암석은 입자 사이의 빈틈이 줄어 조직이 치밀하고 단단해진다.",
+      "form": {
+        "condition": "재결정이 충분히 진행되었을 때",
+        "type": "causal",
+        "scope": "접촉 변성을 받은 암석"
+      },
+      "invertible": false,
+      "invertible_reason": "조직 변화를 밝힌 진술이라 뒤집을 양의 방향이 없다.",
+      "curriculum": [
+        "12지구02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "재결정 작용은 암석이 녹았다가 다시 결정이 생기는 과정이다",
+      "why_wrong": "재결정은 고체 상태에서 광물이 다시 배열되고 자라는 변화다. 녹는 일은 일어나지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rec-grow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "earth-metamorphism"
+    },
+    {
+      "type": "next",
+      "target": "earth-metamorphic-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지구02-04"
+  ],
+  "subject": "지구과학",
+  "unit": "Ⅱ. 지구의 역사와 한반도의 암석",
+  "unit_id": "earth-2",
+  "topic_id": "earth-2-04-2",
+  "pages": [
+    123,
+    129
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}
