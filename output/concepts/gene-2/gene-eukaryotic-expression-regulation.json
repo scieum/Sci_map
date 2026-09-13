@@ -1,0 +1,114 @@
+{
+  "id": "gene-eukaryotic-expression-regulation",
+  "concept_key": "concept:eukaryotic-gene-expression-regulation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "진핵생물의 유전자발현 조절",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "regulation of gene expression in eukaryotes",
+    "hanja_note": "여러 낱말이 이어진 설명형 표제어라 한 낱말의 한자 표기로 대응시킬 수 없다."
+  },
+  "definition": "염색체 구조가 풀리는 단계부터 번역 뒤 단백질의 활성까지 여러 단계에서 발현을 조정하는 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-euk-all-stages",
+      "text": "진핵생물에서는 전사 전 염색체 구조 변화부터 번역 뒤 단백질 활성까지 모든 단계에서 조절이 일어난다",
+      "form": {
+        "condition": "조절이 일어나는 단계를 훑을 때",
+        "type": "conditional",
+        "scope": "진핵생물"
+      },
+      "invertible": false,
+      "invertible_reason": "단계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-euk-own-promoter",
+      "text": "진핵생물의 유전자는 저마다 제 프로모터를 지녀 하나씩 따로 전사가 조절된다",
+      "form": {
+        "condition": "원핵생물의 오페론과 견줄 때",
+        "type": "conditional",
+        "scope": "진핵생물의 유전자 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-euk-chromatin",
+      "text": "응축돼 있던 염색체 구조가 풀려야 그 부위에서 전사가 일어날 수 있다",
+      "form": {
+        "condition": "전사가 시작되기 전",
+        "type": "causal",
+        "scope": "진핵생물의 염색체"
+      },
+      "invertible": true,
+      "invertible_reason": "구조가 풀리는 일이 앞서고 전사가 뒤따르는 차례라 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전사가 먼저 일어나야 응축된 염색체 구조가 풀린다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진핵생물에서도 여러 유전자가 하나의 프로모터에 묶여 함께 전사된다",
+      "why_wrong": "그런 묶음은 원핵생물의 오페론이다. 진핵생물은 유전자마다 프로모터를 따로 가진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-euk-own-promoter"
+    },
+    {
+      "text": "진핵생물의 유전자발현 조절은 전사 단계에서만 일어난다",
+      "why_wrong": "전사 전 조절, 전사 후 가공 조절, 번역과 번역 뒤 조절까지 여러 자리에서 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-euk-all-stages"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene-expression-regulation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-transcription-factor"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-rna-processing"
+    },
+    {
+      "type": "next",
+      "target": "gene-prokaryote-eukaryote-regulation-comparison"
+    },
+    {
+      "type": "next",
+      "target": "gene-cell-differentiation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-3",
+  "pages": [
+    73
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

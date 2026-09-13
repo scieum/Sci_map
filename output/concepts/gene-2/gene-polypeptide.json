@@ -1,0 +1,80 @@
+{
+  "id": "gene-polypeptide",
+  "concept_key": "concept:polypeptide",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "폴리펩타이드",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "polypeptide",
+    "hanja_note": "영어 polypeptide 의 음차어라 대응하는 한자어 표기가 없다."
+  },
+  "definition": "아미노산이 펩타이드결합으로 길게 이어진 사슬로, 접힌 뒤에 단백질로서 기능한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pp-folding",
+      "text": "합성이 끝난 폴리펩타이드는 접혀서 고유한 입체 구조를 갖춘 뒤에 제 몫을 한다",
+      "form": {
+        "condition": "번역이 끝난 뒤",
+        "type": "causal",
+        "scope": "기능을 갖춘 단백질"
+      },
+      "invertible": false,
+      "invertible_reason": "접힘이 앞서고 기능이 뒤따르는 관계라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pp-function",
+      "text": "어떤 입체 구조로 접히느냐에 따라 효소·수송체·구조단백질처럼 서로 다른 기능이 나타난다",
+      "form": {
+        "condition": "단백질의 기능을 따질 때",
+        "type": "causal",
+        "scope": "세포 안의 단백질"
+      },
+      "invertible": false,
+      "invertible_reason": "구조와 기능이 서로 얽혀 있어 뒤집은 문장이 늘 거짓이라고 하기 어렵다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "번역으로 사슬이 만들어지면 그대로 기능하는 단백질이 된다",
+      "why_wrong": "사슬이 접혀 고유한 입체 구조를 갖추어야 효소나 수송체 같은 기능을 할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pp-folding"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-translation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-peptide-bond"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-4",
+  "pages": [
+    65,
+    68
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

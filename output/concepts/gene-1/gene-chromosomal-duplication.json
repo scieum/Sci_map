@@ -1,0 +1,82 @@
+{
+  "id": "gene-chromosomal-duplication",
+  "concept_key": "concept:chromosomal-duplication",
+  "registry_status": "new",
+  "term": "중복",
+  "notation": {
+    "hanja": "重複",
+    "english": "duplication",
+    "hanja_gloss": "重 거듭 중 · 複 겹칠 복"
+  },
+  "definition": "염색체에서 같은 부위가 두 번 이상 거듭 나타나게 된 구조이상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-du-more",
+      "text": "중복이 일어나면 그 부위의 유전자가 두 벌 이상이 되어 유전자 수가 늘어난다",
+      "form": {
+        "condition": "같은 부위가 되풀이되어 이어질 때",
+        "type": "causal",
+        "scope": "염색체구조이상"
+      },
+      "invertible": false,
+      "invertible_reason": "유전자 수가 늘었다고 해서 원인이 반드시 중복인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-du-vs-de",
+      "text": "중복은 유전자를 잃지 않는다는 점에서 결실과 정반대다",
+      "form": {
+        "condition": "결실과 중복을 나란히 놓고 견줄 때",
+        "type": "classification",
+        "scope": "구조이상의 유형 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "중복에서 유전자가 사라진다고 뒤집으면 결실의 설명이 되어 버려 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중복이 일어나면 그 부위의 유전자가 사라진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중복은 염색체의 개수가 늘어나는 것이다",
+      "why_wrong": "늘어나는 것은 한 염색체 안의 특정 부위다. 염색체 개수가 달라지는 쪽은 염색체수이상이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-du-more"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-chromosome-structure-abnormality"
+    },
+    {
+      "type": "related",
+      "target": "gene-chromosomal-deletion"
+    },
+    {
+      "type": "related",
+      "target": "gene-gene"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    33
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

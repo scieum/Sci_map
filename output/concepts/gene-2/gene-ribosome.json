@@ -1,0 +1,107 @@
+{
+  "id": "gene-ribosome",
+  "concept_key": "concept:ribosome",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "라이보솜",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "ribosome",
+    "hanja_note": "영어 ribosome 의 음차어라 대응하는 한자어 표기가 없다."
+  },
+  "definition": "rRNA와 단백질로 된 대단위체와 소단위체가 합쳐져 번역이 벌어지는 자리를 이루는 구조물.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rib-assembly",
+      "text": "번역이 시작될 때 소단위체가 mRNA와 개시 tRNA에 먼저 붙고 그 뒤에 대단위체가 결합한다",
+      "form": {
+        "condition": "번역의 개시 단계",
+        "type": "conditional",
+        "scope": "원핵생물의 번역 개시"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 차례를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rib-site",
+      "text": "tRNA가 데려온 아미노산들은 라이보솜 안에서 이어져 폴리펩타이드가 된다",
+      "form": {
+        "condition": "번역의 신장 단계",
+        "type": "causal",
+        "scope": "단백질합성이 일어나는 자리"
+      },
+      "invertible": false,
+      "invertible_reason": "일이 벌어지는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rib-reuse",
+      "text": "번역이 끝나 갈라진 두 단위체와 tRNA는 다음 단백질합성에 다시 쓰인다",
+      "form": {
+        "condition": "번역이 종결된 뒤",
+        "type": "conditional",
+        "scope": "세포 안의 단백질합성"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "번역이 시작될 때 라이보솜의 두 단위체는 이미 합쳐진 채로 mRNA에 결합한다",
+      "why_wrong": "소단위체가 mRNA·개시 tRNA와 먼저 결합한 뒤에 대단위체가 붙어 완전한 라이보솜이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rib-assembly"
+    },
+    {
+      "text": "라이보솜은 번역이 끝나면 분해되어 없어진다",
+      "why_wrong": "번역이 끝나면 두 단위체로 갈라질 뿐이고, 갈라진 단위체는 다시 쓰인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rib-reuse"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "cell-ribosome",
+      "note": "concept_key 가 같다 (R9). 표기 일치로 건 것이 아니다."
+    },
+    {
+      "type": "prereq",
+      "target": "gene-ribosomal-rna"
+    },
+    {
+      "type": "next",
+      "target": "gene-translation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-4",
+  "pages": [
+    64,
+    65
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

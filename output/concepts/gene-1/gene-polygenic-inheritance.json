@@ -1,0 +1,93 @@
+{
+  "id": "gene-polygenic-inheritance",
+  "concept_key": "concept:polygenic-inheritance",
+  "registry_status": "new",
+  "term": "다유전자유전",
+  "notation": {
+    "hanja": "多遺傳子遺傳",
+    "english": "polygenic inheritance",
+    "hanja_gloss": "多 많을 다 · 遺 남길 유 · 傳 전할 전 · 子 아들 자 · 遺 남길 유 · 傳 전할 전"
+  },
+  "definition": "여러 쌍의 대립유전자가 함께 작용해 하나의 형질을 결정하는 유전 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pg-count",
+      "text": "형질에 관여하는 대립유전자 쌍이 많을수록 나타날 수 있는 표현형의 가짓수가 늘어난다",
+      "form": {
+        "condition": "대립유전자마다 형질에 조금씩 보탤 때",
+        "type": "direct",
+        "scope": "효과가 쌓이는 다유전자 형질",
+        "antecedent": {
+          "quantity": "관여하는 대립유전자 쌍의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "표현형의 가짓수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "표현형이 다양하다고 해서 원인이 반드시 유전자 수인 것은 아니다",
+      "curriculum": [
+        "12유전01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pg-normal",
+      "text": "다유전자 형질은 표현형별 사람 수를 조사하면 대체로 정규분포에 가까운 모양이 된다",
+      "form": {
+        "condition": "충분히 많은 사람을 조사할 때",
+        "type": "conditional",
+        "scope": "키·피부색 등 사람의 다유전자 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "분포가 종 모양이라고 해서 반드시 다유전자유전이라 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "피부색은 대립유전자 한 쌍으로 정해진다",
+      "why_wrong": "피부색에는 여러 유전자가 함께 관여한다. 그래서 검은색과 흰색 둘로 갈리지 않고 중간 단계가 촘촘히 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pg-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-single-gene-inheritance"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-allele"
+    },
+    {
+      "type": "next",
+      "target": "gene-continuous-variation"
+    },
+    {
+      "type": "related",
+      "target": "gene-effect-of-environment-on-phenotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-5",
+  "pages": [
+    26
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

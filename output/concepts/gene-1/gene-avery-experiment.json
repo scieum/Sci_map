@@ -1,0 +1,81 @@
+{
+  "id": "gene-avery-experiment",
+  "concept_key": "concept:avery-experiment",
+  "registry_status": "new",
+  "term": "에이버리의 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Avery's experiment",
+    "hanja_note": "에이버리가 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(실험은 實驗)."
+  },
+  "definition": "폐렴균 추출액을 성분별로 나누고 분해효소를 처리해, 형질전환을 일으키는 물질이 DNA 임을 가려낸 실험.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-av-only",
+      "text": "성분을 나누어 각각 시험했을 때 DNA 추출액에서만 형질전환 능력이 나타났다",
+      "form": {
+        "condition": "추출액을 성분별로 분리해 견줄 때",
+        "type": "conditional",
+        "scope": "에이버리와 동료들이 한 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "능력이 나타났다고 해서 그것만으로 성분이 하나로 좁혀지는 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-av-slow",
+      "text": "결과가 나온 뒤에도 단백질이 유전물질이라는 믿음 때문에 곧바로 받아들여지지 않았다",
+      "form": {
+        "condition": "1944년 당시 학계에서",
+        "type": "causal",
+        "scope": "과학사적 맥락"
+      },
+      "invertible": false,
+      "invertible_reason": "과학사적 사실이라 방향을 뒤집는 진술 자체가 성립하지 않는다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에이버리의 실험이 발표되자 DNA 가 유전물질이라는 사실이 곧바로 정설이 되었다",
+      "why_wrong": "당시에는 단백질이 유력하다는 생각이 강해 받아들여지지 않았다. 허시와 체이스의 실험 뒤에야 논란이 가라앉았다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-av-slow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-griffith-transformation-experiment"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-transformation"
+    },
+    {
+      "type": "next",
+      "target": "gene-hershey-chase-experiment"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

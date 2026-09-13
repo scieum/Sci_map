@@ -1,0 +1,82 @@
+{
+  "id": "gene-hershey-chase-experiment",
+  "concept_key": "concept:hershey-chase-experiment",
+  "registry_status": "new",
+  "term": "허시와 체이스의 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Hershey-Chase experiment",
+    "hanja_note": "허시와 체이스가 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(실험은 實驗)."
+  },
+  "definition": "박테리오파지가 대장균을 감염시킬 때 무엇이 세균 안으로 들어가는지 추적해, 파지의 유전물질이 DNA 임을 보인 실험.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hc-enter",
+      "text": "박테리오파지가 대장균을 감염시킬 때 단백질 껍질은 밖에 남고 DNA 만 세균 안으로 들어간다",
+      "form": {
+        "condition": "파지가 세균에 붙어 감염을 시작할 때",
+        "type": "causal",
+        "scope": "박테리오파지"
+      },
+      "invertible": true,
+      "invertible_reason": "들어가는 쪽과 남는 쪽을 맞바꾸면 실험 결과와 정면으로 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감염할 때 단백질 껍질이 세균 안으로 들어가고 DNA 는 밖에 남는다"
+    },
+    {
+      "id": "rel-hc-infer",
+      "text": "DNA 만 들어간 세균에서 새 파지가 만들어졌다는 것은 파지의 유전정보가 DNA 에 있음을 뜻한다",
+      "form": {
+        "condition": "실험 결과를 해석할 때",
+        "type": "causal",
+        "scope": "박테리오파지의 증식"
+      },
+      "invertible": false,
+      "invertible_reason": "새 파지가 생겼다고 해서 다른 해석이 모두 막히는 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "박테리오파지는 단백질과 DNA 를 모두 세균 안으로 넣는다",
+      "why_wrong": "단백질 껍질은 세균 바깥에 붙은 채 남는다. 세균 안으로 들어가는 것은 DNA 다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hc-enter"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-avery-experiment"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-genetic-material"
+    },
+    {
+      "type": "related",
+      "target": "gene-griffith-transformation-experiment"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

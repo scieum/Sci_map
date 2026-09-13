@@ -1,0 +1,113 @@
+{
+  "id": "gene-transcription-factor",
+  "concept_key": "concept:transcription-factor",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "전사 인자",
+  "notation": {
+    "hanja": "轉寫因子",
+    "english": "transcription factor",
+    "hanja_gloss": "轉 구를 전 · 寫 베낄 사 · 因 인할 인 · 子 아들 자"
+  },
+  "definition": "DNA의 조절 부위에 결합해 전사가 시작되는 것을 촉진하거나 억제하는 단백질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tf-bind",
+      "text": "전사 인자가 조절 부위에 붙으면 RNA 중합효소의 결합이나 활성이 달라져 전사 개시가 조절된다",
+      "form": {
+        "condition": "전사의 개시 단계",
+        "type": "causal",
+        "scope": "진핵생물의 전사 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 원인이고 조절이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-need-all",
+      "text": "필요한 전사 인자를 모두 갖춘 세포에서만 그 유전자가 제대로 발현된다",
+      "form": {
+        "condition": "세포마다 지닌 전사 인자가 다를 때",
+        "type": "conditional",
+        "scope": "진핵생물의 유전자발현"
+      },
+      "invertible": false,
+      "invertible_reason": "조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-limited-set",
+      "text": "종류가 한정된 전사 인자라도 조합을 달리하면 수많은 유전자의 발현 수준을 다르게 만들 수 있다",
+      "form": {
+        "condition": "전사 인자를 조합해 쓸 때",
+        "type": "conditional",
+        "scope": "진핵생물의 발현 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "가능성을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포마다 조절 부위가 달라서 발현되는 유전자가 달라진다",
+      "why_wrong": "조절 부위는 DNA에 있어 세포마다 같다. 세포에 따라 달라지는 쪽은 가지고 있는 전사 인자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tf-need-all"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-regulatory-region"
+    },
+    {
+      "type": "next",
+      "target": "gene-eukaryotic-expression-regulation"
+    },
+    {
+      "type": "next",
+      "target": "gene-cell-differentiation"
+    },
+    {
+      "type": "next",
+      "target": "gene-transcription-factor-combination"
+    },
+    {
+      "type": "next",
+      "target": "gene-homeotic-gene"
+    },
+    {
+      "type": "next",
+      "target": "gene-induced-pluripotent-stem-cell-reprogramming"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03",
+    "12유전02-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-3",
+  "pages": [
+    73,
+    74,
+    80
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

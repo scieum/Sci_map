@@ -1,0 +1,89 @@
+{
+  "id": "gene-model-organism",
+  "concept_key": "concept:model-organism",
+  "registry_status": "new",
+  "term": "모델 생물",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "model organism",
+    "hanja_note": "모델이 외래어라 표제어 전체에 대응하는 한자어가 없다(생물은 生物)."
+  },
+  "definition": "유전 연구에서 표준 재료로 삼아 여러 실험실이 되풀이해 쓰는 생물. 효모·초파리·예쁜꼬마선충·생쥐가 대표적이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mo-cycle",
+      "text": "세대 주기가 짧고 다루기 쉬울수록 유전 연구의 재료로 삼기에 유리하다",
+      "form": {
+        "condition": "실험에 쓸 생물을 고를 때",
+        "type": "inverse",
+        "scope": "유전학 실험용 생물의 선택",
+        "antecedent": {
+          "quantity": "세대 주기의 길이",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "연구 재료로서의 유용성",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "연구에 널리 쓰인다고 해서 반드시 세대 주기가 짧은 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mo-human",
+      "text": "모델 생물에서 쌓인 유전 정보는 사람의 유전자 기능을 밝히는 데 쓰인다",
+      "form": {
+        "condition": "사람과 비슷한 기능을 하는 유전자가 있을 때",
+        "type": "causal",
+        "scope": "두 생물에 함께 보존된 유전자에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "사람 연구에 쓰였다고 해서 그 자료가 반드시 모델 생물에서 온 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "모델 생물에서 얻은 결과는 사람에게 그대로 적용된다",
+      "why_wrong": "기능이 비슷한 유전자에 한해 참고가 될 뿐이다. 종이 다르면 같은 유전자라도 작용이 달라질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mo-human"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-difficulty-of-human-genetics-research"
+    },
+    {
+      "type": "related",
+      "target": "gene-twin-study"
+    },
+    {
+      "type": "related",
+      "target": "gene-single-gene-inheritance"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-1",
+  "pages": [
+    20
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

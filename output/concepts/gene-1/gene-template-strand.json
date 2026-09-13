@@ -1,0 +1,81 @@
+{
+  "id": "gene-template-strand",
+  "concept_key": "concept:template-strand",
+  "registry_status": "new",
+  "term": "주형 가닥",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "template strand",
+    "hanja_note": "가닥이 고유어라 표제어 전체에 대응하는 한자어가 없다(주형은 鑄型)."
+  },
+  "definition": "새 가닥을 만들 때 염기 짝짓기의 본이 되어 주는 쪽 가닥.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ts-comp",
+      "text": "새 가닥은 주형 가닥의 염기와 상보적인 뉴클레오타이드가 차례로 붙어 만들어진다",
+      "form": {
+        "condition": "DNA 중합효소가 합성을 이어 갈 때",
+        "type": "causal",
+        "scope": "DNA 복제"
+      },
+      "invertible": false,
+      "invertible_reason": "상보적으로 붙는다고 해서 주형이 언제나 DNA 가닥인 것은 아니다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ts-fixed",
+      "text": "주형 가닥의 염기서열이 정해져 있으므로 새로 만들어질 가닥의 서열도 하나로 정해진다",
+      "form": {
+        "condition": "상보결합 규칙이 지켜질 때",
+        "type": "causal",
+        "scope": "복제 오류가 없을 때"
+      },
+      "invertible": false,
+      "invertible_reason": "서열이 정해진다고 해서 그 까닭이 주형 하나뿐이라 할 수는 없다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주형 가닥은 복제가 끝나면 분해된다",
+      "why_wrong": "주형 가닥은 새로 만들어진 가닥과 짝을 이룬 채 남는다. 그래서 복제된 DNA 마다 옛 가닥이 하나씩 들어 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ts-comp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-semiconservative-replication"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-complementary-base-pairing"
+    },
+    {
+      "type": "next",
+      "target": "gene-dna-polymerase"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-2",
+  "pages": [
+    47
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

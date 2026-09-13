@@ -1,0 +1,129 @@
+{
+  "id": "gene-translation",
+  "concept_key": "concept:translation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "번역",
+  "notation": {
+    "hanja": "飜譯",
+    "english": "translation",
+    "hanja_gloss": "飜 뒤칠 번 · 譯 통변할 역"
+  },
+  "definition": "라이보솜에서 mRNA의 코돈을 차례로 읽어 아미노산을 이어 폴리펩타이드를 만드는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tl-reading",
+      "text": "라이보솜은 mRNA를 5′ 말단 쪽에서 3′ 말단 쪽으로 코돈 하나씩 옮겨 가며 읽어 나간다",
+      "form": {
+        "condition": "번역의 신장 단계",
+        "type": "conditional",
+        "scope": "원핵생물의 번역"
+      },
+      "invertible": true,
+      "invertible_reason": "라이보솜이 읽어 가는 방향이 하나로 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "라이보솜은 mRNA를 3′ 말단 쪽에서 5′ 말단 쪽으로 코돈 하나씩 옮겨 가며 읽어 나간다"
+    },
+    {
+      "id": "rel-tl-stages",
+      "text": "번역은 개시·신장·종결의 세 단계를 거쳐 진행된다",
+      "form": {
+        "condition": "번역을 단계로 나눌 때",
+        "type": "classification",
+        "scope": "원핵생물의 번역"
+      },
+      "invertible": false,
+      "invertible_reason": "단계를 갈라 놓은 분류형 서술이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tl-polysome",
+      "text": "한 가닥의 mRNA에 라이보솜이 여럿 붙을수록 같은 시간에 얻는 폴리펩타이드의 양이 늘어난다",
+      "form": {
+        "condition": "여러 라이보솜이 같은 mRNA에 결합할 때",
+        "type": "direct",
+        "scope": "단백질합성의 속도",
+        "antecedent": {
+          "quantity": "한 mRNA에 결합한 라이보솜 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "같은 시간에 합성되는 폴리펩타이드 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "양이 함께 늘어나는 관계라 뒤집어도 거짓이라고 단정하기 어렵다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "라이보솜은 mRNA를 염기 하나씩 옮겨 가며 읽어 아미노산을 잇는다",
+      "why_wrong": "라이보솜은 코돈, 곧 염기 세 개만큼씩 옮겨 간다. 한 염기씩 옮기면 읽기 틀이 어긋나 다른 서열이 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tl-reading"
+    },
+    {
+      "text": "mRNA 한 가닥에는 라이보솜이 하나만 붙을 수 있다",
+      "why_wrong": "한 mRNA에 여러 라이보솜이 함께 붙어 짧은 시간에 많은 폴리펩타이드를 만들 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tl-polysome"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "isci1-translation",
+      "note": "concept_key 가 같다 (R9). 표기 일치로 건 것이 아니다."
+    },
+    {
+      "type": "prereq",
+      "target": "gene-messenger-rna"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-transfer-rna"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-ribosome"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-anticodon"
+    },
+    {
+      "type": "next",
+      "target": "gene-polypeptide"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-4",
+  "pages": [
+    64,
+    65,
+    68
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

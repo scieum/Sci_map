@@ -1,0 +1,86 @@
+{
+  "id": "gene-genetic-disease",
+  "concept_key": "concept:genetic-disease",
+  "registry_status": "new",
+  "term": "유전병",
+  "notation": {
+    "hanja": "遺傳病",
+    "english": "genetic disease",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 病 병 병"
+  },
+  "definition": "유전자나 염색체에 생긴 돌연변이가 원인이 되어 나타나는 질병.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gd-noninfect",
+      "text": "유전병은 병원체가 옮기는 감염병과 달리 사람과 사람 사이에 옮지 않는다",
+      "form": {
+        "condition": "발병 원인이 몸 안의 돌연변이일 때",
+        "type": "classification",
+        "scope": "돌연변이가 원인인 질병에 한정"
+      },
+      "invertible": true,
+      "invertible_reason": "유전병이 옮는다고 뒤집으면 원인이 몸 안의 돌연변이라는 점과 어긋나 반드시 거짓이 된다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유전병도 환자와 가까이 지내면 옮을 수 있다"
+    },
+    {
+      "id": "rel-gd-inherit",
+      "text": "돌연변이가 생식세포에 실려 전해지면 자손에게도 같은 유전병이 나타날 수 있다",
+      "form": {
+        "condition": "변화가 생식세포에 들어갔을 때",
+        "type": "causal",
+        "scope": "자손에게 전해지는 유전병"
+      },
+      "invertible": false,
+      "invertible_reason": "유전병을 가진 사람의 부모가 반드시 같은 유전병을 가진 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전병은 반드시 부모에게서 물려받은 것이다",
+      "why_wrong": "생식세포를 만드는 과정에서 새로 생긴 돌연변이나 염색체 비분리로도 유전병이 나타난다. 부모가 정상이어도 생길 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gd-inherit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-mutation"
+    },
+    {
+      "type": "next",
+      "target": "gene-chromosomal-abnormality"
+    },
+    {
+      "type": "next",
+      "target": "gene-gene-mutation"
+    },
+    {
+      "type": "related",
+      "target": "gene-pedigree-analysis"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-1",
+  "pages": [
+    30
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

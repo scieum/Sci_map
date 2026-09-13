@@ -1,0 +1,86 @@
+{
+  "id": "gene-homologous-chromosome",
+  "concept_key": "concept:homologous-chromosome",
+  "registry_status": "new",
+  "term": "상동염색체",
+  "notation": {
+    "hanja": "相同染色體",
+    "english": "homologous chromosome",
+    "hanja_gloss": "相 서로 상 · 同 같을 동 · 染 물들 염 · 色 빛 색 · 體 몸 체"
+  },
+  "definition": "크기와 모양이 같고 같은 형질의 유전자를 같은 자리에 지닌, 부모에게서 하나씩 받아 쌍을 이룬 염색체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hc-locus",
+      "text": "한 형질의 대립유전자들은 상동염색체에서 서로 같은 위치에 자리한다",
+      "form": {
+        "condition": "이배체 체세포에서 염색체가 쌍을 이룰 때",
+        "type": "conditional",
+        "scope": "대응 부위가 있는 상염색체와 성염색체"
+      },
+      "invertible": false,
+      "invertible_reason": "같은 위치에 있다고 해서 모두 한 형질의 대립유전자인 것은 아니므로 뒤집으면 단정할 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hc-meiosis",
+      "text": "감수분열에서 상동염색체가 나뉘므로 생식세포에는 한 쌍 가운데 하나만 들어간다",
+      "form": {
+        "condition": "감수 1분열이 정상으로 일어날 때",
+        "type": "causal",
+        "scope": "비분리가 일어나지 않은 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "생식세포에 상동염색체가 쌍으로 들어간다고 하면 수정 뒤 염색체 수가 배로 늘어 세대를 이어갈 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생식세포에는 상동염색체가 쌍을 이룬 채로 함께 들어간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상동염색체는 유전정보가 완전히 똑같다",
+      "why_wrong": "유전정보가 같은 것은 복제로 생긴 두 염색분체다. 상동염색체는 같은 자리에 서로 다른 대립유전자를 가질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hc-locus"
+    }
+  ],
+  "links": [
+    {
+      "type": "related",
+      "target": "gene-allele"
+    },
+    {
+      "type": "related",
+      "target": "gene-autosome-and-sex-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "gene-chromosome-nondisjunction"
+    },
+    {
+      "type": "next",
+      "target": "gene-karyotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-1",
+  "pages": [
+    13
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

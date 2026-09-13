@@ -1,0 +1,81 @@
+{
+  "id": "gene-carrier",
+  "concept_key": "concept:carrier-of-recessive-allele",
+  "registry_status": "new",
+  "term": "보인자",
+  "notation": {
+    "hanja": "保因子",
+    "english": "carrier",
+    "hanja_gloss": "保 지킬 보 · 因 인할 인 · 子 아들 자"
+  },
+  "definition": "열성 대립유전자를 하나 지니고 있지만 표현형은 정상으로 나타나는 사람.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ca-hidden",
+      "text": "보인자는 겉으로 정상이면서도 열성 대립유전자를 자손에게 물려줄 수 있다",
+      "form": {
+        "condition": "그 형질에 대해 이형접합성일 때",
+        "type": "causal",
+        "scope": "열성으로 유전되는 질병"
+      },
+      "invertible": false,
+      "invertible_reason": "자손에게 열성 대립유전자를 준 사람이 반드시 보인자인 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ca-quarter",
+      "text": "부모가 모두 보인자이면 자녀에게 그 열성형질이 나타날 확률은 4분의 1이다",
+      "form": {
+        "condition": "상염색체 열성형질일 때",
+        "type": "conditional",
+        "scope": "한 쌍의 대립유전자가 결정하는 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "확률이 4분의 1로 나온다고 해서 부모가 반드시 보인자라고 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보인자는 증상이 가볍게 나타난다",
+      "why_wrong": "보인자의 표현형은 정상이다. 우성 대립유전자가 하나 있으면 정상 형질이 그대로 드러나기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ca-hidden"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dominance-and-recessiveness"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-homozygosity-and-heterozygosity"
+    },
+    {
+      "type": "related",
+      "target": "gene-pedigree-analysis"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-4",
+  "pages": [
+    25
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,89 @@
+{
+  "id": "gene-multiple-allele-inheritance",
+  "concept_key": "concept:multiple-allele-inheritance",
+  "registry_status": "new",
+  "term": "복대립유전",
+  "notation": {
+    "hanja": "複對立遺傳",
+    "english": "multiple allele inheritance",
+    "hanja_gloss": "複 겹칠 복 · 對 대할 대 · 立 설 립 · 遺 남길 유 · 傳 전할 전"
+  },
+  "definition": "한 형질을 두고 대립유전자가 셋 이상 있는 유전. 다만 한 개체가 지니는 것은 그 가운데 두 개다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ma-count",
+      "text": "대립유전자의 종류가 늘면 집단에서 나올 수 있는 유전자형의 가짓수도 함께 늘어난다",
+      "form": {
+        "condition": "한 자리에 두 개씩 짝을 지을 때",
+        "type": "direct",
+        "scope": "이배체 생물의 한 유전자 자리",
+        "antecedent": {
+          "quantity": "대립유전자의 종류 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유전자형의 가짓수",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "유전자형이 많다고 해서 반드시 복대립유전인 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ma-mendel",
+      "text": "복대립유전에서도 한 쌍의 대립유전자가 생식세포로 갈라지는 점은 멘델 원리 그대로다",
+      "form": {
+        "condition": "감수분열이 정상으로 일어날 때",
+        "type": "conditional",
+        "scope": "한 유전자 자리에 대한 유전"
+      },
+      "invertible": false,
+      "invertible_reason": "멘델 원리를 따른다고 해서 반드시 복대립유전인 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "복대립유전은 한 사람이 대립유전자를 셋 이상 가지는 유전이다",
+      "why_wrong": "셋 이상인 것은 집단에 있는 대립유전자의 종류다. 한 사람은 상동염색체 한 쌍에 두 개만 지닌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ma-mendel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-allele"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-single-gene-inheritance"
+    },
+    {
+      "type": "related",
+      "target": "gene-abo-blood-group"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-3",
+  "pages": [
+    24
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

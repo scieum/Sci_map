@@ -1,0 +1,81 @@
+{
+  "id": "gene-chargaff-rule",
+  "concept_key": "concept:chargaff-rule",
+  "registry_status": "new",
+  "term": "샤가프의 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Chargaff's rule",
+    "hanja_note": "샤가프가 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(법칙은 法則)."
+  },
+  "definition": "여러 생물의 DNA 에서 염기 조성을 재어 보니 아데닌과 타이민의 양이, 구아닌과 사이토신의 양이 각각 서로 같더라는 규칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cg-equal",
+      "text": "종에 따라 염기 구성이 달라도 A 와 T 의 양, G 와 C 의 양은 각각 같게 나온다",
+      "form": {
+        "condition": "이중나선 DNA 를 추출해 염기 조성을 분석할 때",
+        "type": "conditional",
+        "scope": "이중나선을 이루는 DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "양이 같게 나왔다고 해서 그것만으로 다른 성질까지 정해지지는 않는다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cg-why",
+      "text": "염기의 양이 짝을 이루어 같은 까닭은 뒤에 밝혀진 상보결합으로 설명된다",
+      "form": {
+        "condition": "이중나선 구조를 알고 난 뒤 돌이켜 볼 때",
+        "type": "causal",
+        "scope": "A-T, G-C 의 짝짓기"
+      },
+      "invertible": false,
+      "invertible_reason": "상보결합이 있다고 해서 이 규칙만으로 구조가 증명되는 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 에서는 A 와 G 의 양이 서로 같다",
+      "why_wrong": "같은 양으로 들어 있는 짝은 A 와 T, G 와 C 다. 짝을 이루어 결합하는 쌍이 그렇기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cg-equal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dna-base"
+    },
+    {
+      "type": "next",
+      "target": "gene-complementary-base-pairing"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-double-helix"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

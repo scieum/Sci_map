@@ -1,0 +1,79 @@
+{
+  "id": "gene-lactose-inducer",
+  "concept_key": "concept:lactose-inducer",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "젖당 유도체",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "lactose inducer",
+    "hanja_note": "'젖당'과 한자어 '유도체(誘導體)'가 섞인 말이라 표제어 전체를 한자로 적지 않는다."
+  },
+  "definition": "세포 안에 젖당이 있을 때 효소 반응으로 만들어져 억제단백질에 결합하는 물질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ind-bind",
+      "text": "젖당 유도체가 억제단백질에 결합하면 그 단백질의 구조가 달라진다",
+      "form": {
+        "condition": "세포 안으로 젖당이 들어왔을 때",
+        "type": "causal",
+        "scope": "대장균"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 원인이고 구조 변화가 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ind-switch-on",
+      "text": "젖당 유도체가 만들어지면 작동부위가 비게 되어 젖당오페론의 전사가 시작된다",
+      "form": {
+        "condition": "젖당이 있는 환경",
+        "type": "causal",
+        "scope": "젖당오페론의 전사 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "여러 단계를 이은 서술이라 뒤집어도 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "젖당 유도체는 작동부위에 직접 결합해 전사를 켠다",
+      "why_wrong": "젖당 유도체가 결합하는 상대는 억제단백질이다. 작동부위 쪽은 그 결과로 비게 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ind-switch-on"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-lac-operon"
+    },
+    {
+      "type": "related",
+      "target": "gene-repressor-protein"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-2",
+  "pages": [
+    72
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "version": 1
+}

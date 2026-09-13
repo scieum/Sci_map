@@ -1,0 +1,88 @@
+{
+  "id": "gene-directionality-of-dna-strand",
+  "concept_key": "concept:directionality-of-dna-strand",
+  "registry_status": "new",
+  "term": "DNA 가닥의 방향성",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "directionality of DNA strand",
+    "hanja_note": "DNA 가 로마자 약어이고 가닥이 고유어라 표제어 전체에 대응하는 한자어가 없다(방향성은 方向性).",
+    "symbol_display": "5′ 말단 · 3′ 말단",
+    "symbol_plain": "5-prime end, 3-prime end"
+  },
+  "definition": "폴리뉴클레오타이드 사슬의 두 끝이 서로 달라 한쪽은 5′ 말단이 되고 다른 쪽은 3′ 말단이 되는 성질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dd-carbon",
+      "text": "사슬의 방향은 디옥시라이보스의 몇 번 탄소가 끝에 드러나는지로 정해진다",
+      "form": {
+        "condition": "뉴클레오타이드가 인산과 당의 결합으로 이어질 때",
+        "type": "causal",
+        "scope": "폴리뉴클레오타이드"
+      },
+      "invertible": false,
+      "invertible_reason": "방향이 정해졌다고 해서 그 기준이 탄소 번호 하나뿐인 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dd-synthesis",
+      "text": "DNA 중합효소가 3′ 말단에만 뉴클레오타이드를 붙이므로 새 가닥은 5′ 에서 3′ 쪽으로만 자란다",
+      "form": {
+        "condition": "DNA 가 복제될 때",
+        "type": "causal",
+        "scope": "DNA 중합효소가 맡는 합성"
+      },
+      "invertible": true,
+      "invertible_reason": "반대 방향으로 신장한다고 뒤집으면 중합효소가 하는 일과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA 중합효소는 새 가닥을 3′ 에서 5′ 쪽으로 신장시킨다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 가닥은 어느 쪽 끝에서든 뉴클레오타이드를 붙여 늘릴 수 있다",
+      "why_wrong": "중합효소는 3′ 말단에만 붙인다. 그래서 두 가닥의 합성 방식이 갈리고 지연 가닥이 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dd-synthesis"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-polynucleotide"
+    },
+    {
+      "type": "next",
+      "target": "gene-antiparallel-structure"
+    },
+    {
+      "type": "next",
+      "target": "gene-dna-polymerase"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    41
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "5′ 말단",
+    "3′ 말단"
+  ]
+}

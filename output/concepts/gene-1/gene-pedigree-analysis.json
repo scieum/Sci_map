@@ -1,0 +1,102 @@
+{
+  "id": "gene-pedigree-analysis",
+  "concept_key": "concept:pedigree-analysis",
+  "registry_status": "new",
+  "term": "가계도 조사",
+  "notation": {
+    "hanja": "家系圖調査",
+    "english": "pedigree analysis",
+    "hanja_gloss": "家 집 가 · 系 이어맬 계 · 圖 그림 도 · 調 고를 조 · 査 조사할 사"
+  },
+  "definition": "한 집안에서 여러 세대에 걸쳐 특정 형질이 나타난 내력을 그림으로 정리해 유전 방식을 따져 보는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pa-recessive",
+      "text": "부모에게 나타나지 않은 형질이 자손에게 나타나면 그 형질은 열성이다",
+      "form": {
+        "condition": "한 쌍의 대립유전자가 결정하는 형질일 때",
+        "type": "conditional",
+        "scope": "새로운 돌연변이가 끼어들지 않은 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "우성 형질이라면 부모 가운데 한쪽에는 반드시 나타나 있어야 하므로 뒤집은 문장은 거짓이다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부모에게 나타나지 않은 형질이 자손에게 나타나면 그 형질은 우성이다"
+    },
+    {
+      "id": "rel-pa-xlinked",
+      "text": "열성형질을 지닌 딸의 아버지가 정상이면 그 형질의 유전자는 X염색체에 있지 않다",
+      "form": {
+        "condition": "가계도에서 우열 관계가 이미 정해졌을 때",
+        "type": "conditional",
+        "scope": "X염색체 열성 유전 여부를 가릴 때"
+      },
+      "invertible": false,
+      "invertible_reason": "유전자가 상염색체에 있다고 해서 이런 가계 구성이 반드시 나타나는 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pa-prob",
+      "text": "구성원의 유전자형을 좁히고 나면 앞으로 태어날 자손에서 형질이 나타날 확률을 셈할 수 있다",
+      "form": {
+        "condition": "유전 방식이 이미 밝혀졌을 때",
+        "type": "causal",
+        "scope": "단일유전자 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "확률을 셈할 수 있다고 해서 반드시 가계도를 그린 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "가계도에서 형질을 가진 사람이 많으면 그 형질은 우성이다",
+      "why_wrong": "사람 수는 근거가 되지 못한다. 우열은 부모에게 없던 형질이 자손에게 나타나는지 같은 세대 사이의 관계로 판단한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pa-recessive"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-difficulty-of-human-genetics-research"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dominance-and-recessiveness"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-sex-linked-inheritance"
+    },
+    {
+      "type": "related",
+      "target": "gene-carrier"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-2",
+  "pages": [
+    22,
+    23
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

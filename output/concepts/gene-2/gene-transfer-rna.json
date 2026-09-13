@@ -1,0 +1,90 @@
+{
+  "id": "gene-transfer-rna",
+  "concept_key": "concept:transfer-rna",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "운반 RNA",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "transfer RNA",
+    "hanja_note": "한자어 '운반(運搬)'과 약칭 RNA가 결합한 말이라 표제어 전체를 한자로 적지 않는다.",
+    "symbol_display": "tRNA",
+    "symbol_plain": "tRNA"
+  },
+  "definition": "아미노산을 라이보솜까지 실어 나르고 안티코돈으로 코돈과 짝을 맺는 RNA.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-trna-carry",
+      "text": "tRNA가 아미노산을 라이보솜으로 데려와야 폴리펩타이드 사슬이 이어질 수 있다",
+      "form": {
+        "condition": "번역의 신장 단계",
+        "type": "causal",
+        "scope": "단백질합성"
+      },
+      "invertible": false,
+      "invertible_reason": "운반이 원인이고 신장이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-trna-match",
+      "text": "한 tRNA가 실어 나르는 아미노산의 종류는 그 tRNA가 지닌 안티코돈에 따라 정해진다",
+      "form": {
+        "condition": "tRNA에 아미노산이 실릴 때",
+        "type": "causal",
+        "scope": "안티코돈이 여럿인 아미노산 — 메싸이오닌·트립토판처럼 부호가 하나뿐인 것은 제외"
+      },
+      "invertible": true,
+      "invertible_reason": "안티코돈이 아미노산을 정하는 쪽이고 부호가 하나뿐인 아미노산을 scope 에서 뺐으므로 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "tRNA에 실린 아미노산의 종류가 그 tRNA의 안티코돈을 정한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "tRNA 하나는 아미노산이라면 어떤 것이든 실어 나를 수 있다",
+      "why_wrong": "tRNA는 자기 안티코돈에 맞는 아미노산과 결합한다. 아무 아미노산이나 붙는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-trna-match"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-transcription"
+    },
+    {
+      "type": "next",
+      "target": "gene-translation"
+    },
+    {
+      "type": "next",
+      "target": "gene-anticodon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-3",
+  "pages": [
+    63,
+    65
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "tRNA"
+  ]
+}

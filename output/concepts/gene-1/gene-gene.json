@@ -1,0 +1,86 @@
+{
+  "id": "gene-gene",
+  "concept_key": "concept:gene",
+  "registry_status": "new",
+  "term": "유전자",
+  "notation": {
+    "hanja": "遺傳子",
+    "english": "gene",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자"
+  },
+  "definition": "DNA 에 적힌 유전정보의 기능 단위. 대개 단백질 하나의 아미노산 순서가 염기 배열로 암호화되어 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gene-seq",
+      "text": "같은 유전자라도 개체마다 염기서열이 조금씩 달라 단백질 기능이 바뀌면 표현형에 차이가 생긴다",
+      "form": {
+        "condition": "염기서열 차이가 단백질 기능에 영향을 줄 때",
+        "type": "causal",
+        "scope": "단백질을 암호화하는 유전자"
+      },
+      "invertible": false,
+      "invertible_reason": "표현형 차이가 늘 염기서열 차이에서 오는 것은 아니어서 뒤집으면 항상 거짓이라 할 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gene-part",
+      "text": "유전자는 DNA 전체가 아니라 그 가운데 정보를 담은 일부 구간이다",
+      "form": {
+        "condition": "유전체와 유전자의 범위를 견줄 때",
+        "type": "classification",
+        "scope": "유전자 사이에 빈 부분이 있는 생물"
+      },
+      "invertible": true,
+      "invertible_reason": "DNA 전체가 유전자라고 뒤집으면 유전자 사이의 빈 부분과 인트론을 설명할 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA 는 전체가 유전자로 이루어져 있다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전자와 DNA 는 같은 말이다",
+      "why_wrong": "DNA 는 유전정보를 적어 두는 물질이고, 유전자는 그 위에서 형질 정보를 담은 구간이다. 물질과 구간은 층위가 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gene-part"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genetic-trait"
+    },
+    {
+      "type": "next",
+      "target": "gene-allele"
+    },
+    {
+      "type": "next",
+      "target": "gene-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-base"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-1",
+  "pages": [
+    13
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

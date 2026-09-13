@@ -1,0 +1,95 @@
+{
+  "id": "gene-central-dogma",
+  "concept_key": "concept:central-dogma",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "중심원리",
+  "notation": {
+    "hanja": "中心原理",
+    "english": "central dogma",
+    "hanja_gloss": "中 가운데 중 · 心 마음 심 · 原 근원 원 · 理 다스릴 리"
+  },
+  "definition": "유전정보가 DNA에서 RNA로, 다시 단백질로 한 방향으로 전달된다고 보는 분자생물학의 원리.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cd-direction",
+      "text": "세포 안의 유전정보는 DNA에서 RNA를 거쳐 폴리펩타이드 쪽으로 전달된다",
+      "form": {
+        "condition": "정보가 전달되는 방향을 볼 때",
+        "type": "conditional",
+        "scope": "세포 안의 유전정보 흐름"
+      },
+      "invertible": true,
+      "invertible_reason": "정보가 지나가는 차례가 정해져 있어 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포 안의 유전정보는 단백질에서 RNA를 거쳐 DNA 쪽으로 전달된다"
+    },
+    {
+      "id": "rel-cd-place-of-steps",
+      "text": "복제는 DNA에서 DNA로, 전사는 DNA에서 RNA로, 번역은 RNA에서 단백질로 가는 자리에 놓인다",
+      "form": {
+        "condition": "세 과정을 중심원리 도식 위에 놓을 때",
+        "type": "classification",
+        "scope": "중심원리 도식"
+      },
+      "invertible": false,
+      "invertible_reason": "세 과정의 자리를 갈라 놓은 분류형 서술이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA가 라이보솜을 거치지 않고 아미노산을 직접 이어 단백질을 만든다",
+      "why_wrong": "DNA는 단백질을 직접 조립하지 않는다. 정보를 RNA로 넘기고, 아미노산은 라이보솜에서 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cd-direction"
+    },
+    {
+      "text": "복제와 전사는 같은 과정을 다르게 부른 이름이다",
+      "why_wrong": "복제는 DNA를 본떠 DNA를 얻는 과정이고 전사는 DNA를 주형으로 RNA를 얻는 과정이라 산물이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cd-place-of-steps"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene-expression"
+    },
+    {
+      "type": "next",
+      "target": "gene-transcription"
+    },
+    {
+      "type": "next",
+      "target": "gene-translation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-1",
+  "pages": [
+    60,
+    69
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "중심 원리"
+  ]
+}

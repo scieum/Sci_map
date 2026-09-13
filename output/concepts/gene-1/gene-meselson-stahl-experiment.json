@@ -1,0 +1,81 @@
+{
+  "id": "gene-meselson-stahl-experiment",
+  "concept_key": "concept:meselson-stahl-experiment",
+  "registry_status": "new",
+  "term": "메셀슨과 스탈의 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Meselson-Stahl experiment",
+    "hanja_note": "메셀슨과 스탈이 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(실험은 實驗)."
+  },
+  "definition": "질소 동위원소로 무겁게 표지한 대장균의 DNA 가 복제될 때마다 밀도가 어떻게 달라지는지 추적한 실험.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ms-first",
+      "text": "무거운 질소로 키운 대장균을 가벼운 질소 배양액에서 한 번 복제시키면 중간 무게의 띠만 나타난다",
+      "form": {
+        "condition": "복제가 한 번 일어난 시점에서",
+        "type": "conditional",
+        "scope": "메셀슨과 스탈이 잡은 실험 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "중간 무게 띠만 나왔다고 해서 그 한 번의 결과로 모델이 하나로 좁혀지지는 않는다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ms-second",
+      "text": "2회 복제 뒤 가벼운 띠와 중간 무게 띠가 함께 나타난 것은 반보존적 복제를 가리킨다",
+      "form": {
+        "condition": "실험 결과를 세 모델의 예측과 맞대어 볼 때",
+        "type": "causal",
+        "scope": "대장균의 DNA 복제"
+      },
+      "invertible": false,
+      "invertible_reason": "결과가 한 모델을 가리킨다고 해서 그 역까지 곧바로 성립하지는 않는다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이 실험에서는 2회 복제 뒤에도 무거운 DNA 띠가 남는다",
+      "why_wrong": "옛 가닥은 나뉘어 들어가므로 두 번 복제하면 무거운 띠는 사라지고 중간 무게 띠와 가벼운 띠만 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ms-second"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dna-replication-model"
+    },
+    {
+      "type": "next",
+      "target": "gene-semiconservative-replication"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-double-helix"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-1",
+  "pages": [
+    46
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

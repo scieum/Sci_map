@@ -1,0 +1,86 @@
+{
+  "id": "gene-dna-polymerase",
+  "concept_key": "concept:dna-polymerase",
+  "registry_status": "new",
+  "term": "DNA 중합효소",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "DNA polymerase",
+    "hanja_note": "DNA 가 로마자 약어라 표제어 전체에 대응하는 한자어가 없다(중합효소는 重合酵素)."
+  },
+  "definition": "주형 가닥에 맞는 뉴클레오타이드를 하나씩 이어 붙여 새 DNA 가닥을 늘려 가는 효소.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dp-3end",
+      "text": "DNA 중합효소는 이미 있는 가닥의 3′ 말단에만 뉴클레오타이드를 붙인다",
+      "form": {
+        "condition": "새 가닥이 신장될 때",
+        "type": "classification",
+        "scope": "DNA 복제"
+      },
+      "invertible": true,
+      "invertible_reason": "5′ 말단에 붙인다고 뒤집으면 프라이머가 필요한 까닭도 지연 가닥도 설명할 수 없다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA 중합효소는 가닥의 5′ 말단에 뉴클레오타이드를 붙여 신장시킨다"
+    },
+    {
+      "id": "rel-dp-dir",
+      "text": "3′ 말단만 쓰기 때문에 새 가닥은 5′ 에서 3′ 쪽으로만 자라난다",
+      "form": {
+        "condition": "복제가 일어날 때",
+        "type": "causal",
+        "scope": "DNA 중합효소가 맡는 합성"
+      },
+      "invertible": false,
+      "invertible_reason": "한 방향으로만 자란다고 해서 그 까닭이 이것 하나뿐이라 할 수는 없다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 중합효소는 아무것도 붙지 않은 주형에서 곧바로 합성을 시작할 수 있다",
+      "why_wrong": "붙일 자리가 될 3′ 말단이 먼저 있어야 한다. 그래서 프라이머가 붙은 뒤에야 합성이 시작된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dp-3end"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-template-strand"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-directionality-of-dna-strand"
+    },
+    {
+      "type": "next",
+      "target": "gene-primer"
+    },
+    {
+      "type": "next",
+      "target": "gene-leading-and-lagging-strand"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-2",
+  "pages": [
+    47
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,88 @@
+{
+  "id": "gene-single-nucleotide-polymorphism",
+  "concept_key": "concept:single-nucleotide-polymorphism",
+  "registry_status": "new",
+  "term": "단일염기다형성",
+  "notation": {
+    "hanja": "單一鹽基多形性",
+    "english": "single-nucleotide polymorphism",
+    "hanja_gloss": "單 홑 단 · 一 한 일 · 鹽 소금 염 · 基 터 기 · 多 많을 다 · 形 모양 형 · 性 성질 성"
+  },
+  "definition": "사람들 사이에서 뉴클레오타이드 쌍 하나만 다른, 집단 안에서 비교적 흔하게 발견되는 유전적 차이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-snp-marker",
+      "text": "질병 유전자 가까이 있는 자리는 그 유전자와 함께 전달되므로 질병 유전자의 유무를 가리키는 표지가 된다",
+      "form": {
+        "condition": "해당 자리와 질병 유전자가 가까이 놓여 있을 때",
+        "type": "causal",
+        "scope": "함께 유전될 만큼 가까운 경우에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "표지가 된다고 해서 그 자리가 반드시 질병의 원인인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-snp-id",
+      "text": "이런 자리는 수가 많고 유전체 곳곳에 흩어져 있어 여러 자리를 함께 보면 개인을 식별할 수 있다",
+      "form": {
+        "condition": "여러 자리를 동시에 분석할 때",
+        "type": "causal",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "개인 식별이 된다고 해서 반드시 이 방법을 쓴 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "SNP 가 있으면 그 질병에 걸린다",
+      "why_wrong": "SNP 는 질병 유전자와 함께 전달되는 표지일 뿐 그 자체가 병을 일으키는 것은 아니다. 발병 가능성에 대한 정보를 줄 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-snp-marker"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-mutation"
+    },
+    {
+      "type": "related",
+      "target": "gene-population-survey"
+    },
+    {
+      "type": "related",
+      "target": "gene-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-base"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-3",
+  "pages": [
+    36
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "version": 1,
+  "aliases": [
+    "SNP"
+  ]
+}

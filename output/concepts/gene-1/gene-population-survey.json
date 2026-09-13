@@ -1,0 +1,89 @@
+{
+  "id": "gene-population-survey",
+  "concept_key": "concept:population-survey",
+  "registry_status": "new",
+  "term": "집단 조사",
+  "notation": {
+    "hanja": "集團調査",
+    "english": "population survey",
+    "hanja_gloss": "集 모을 집 · 團 둥글 단 · 調 고를 조 · 査 조사할 사"
+  },
+  "definition": "여러 가계를 아우르는 큰 무리에서 자료를 모아 통계로 다루어 유전 현상을 살피는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ps-size",
+      "text": "한 가계에서 얻을 자료가 적을 때는 조사 집단을 키워 통계의 신뢰도를 높인다",
+      "form": {
+        "condition": "형질을 지닌 사람이 드물 때",
+        "type": "direct",
+        "scope": "집단 조사로 다룰 수 있는 형질",
+        "antecedent": {
+          "quantity": "조사 대상 집단의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "통계 결과의 신뢰도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "집단이 크다고 해서 언제나 믿을 만한 결론이 나오는 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ps-freq",
+      "text": "집단마다 유전병 발생 빈도가 다른 것은 유전적 차이와 환경 요인이 함께 작용한 결과다",
+      "form": {
+        "condition": "여러 집단의 발생 빈도를 나란히 견줄 때",
+        "type": "causal",
+        "scope": "페닐케톤뇨증처럼 집단별 빈도가 알려진 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "빈도가 같다고 해서 두 집단의 유전적 배경까지 같다고 할 수는 없다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어떤 질병의 빈도가 집단마다 다르면 그 질병은 유전병이 아니다",
+      "why_wrong": "집단마다 대립유전자 빈도가 다르면 유전병이라도 발생 빈도가 갈린다. 빈도 차이는 오히려 유전적 요인을 찾는 실마리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ps-freq"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-difficulty-of-human-genetics-research"
+    },
+    {
+      "type": "related",
+      "target": "gene-pedigree-analysis"
+    },
+    {
+      "type": "related",
+      "target": "gene-twin-study"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-2",
+  "pages": [
+    22
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

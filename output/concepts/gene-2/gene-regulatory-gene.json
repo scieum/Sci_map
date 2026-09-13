@@ -1,0 +1,83 @@
+{
+  "id": "gene-regulatory-gene",
+  "concept_key": "concept:regulatory-gene",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "조절유전자",
+  "notation": {
+    "hanja": "調節遺傳子",
+    "english": "regulatory gene",
+    "hanja_gloss": "調 고를 조 · 節 마디 절 · 遺 남길 유 · 傳 전할 전 · 子 아들 자"
+  },
+  "definition": "그 산물이 다른 유전자의 발현을 조절하는 단백질인 유전자.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rg-repressor",
+      "text": "젖당오페론의 억제단백질은 조절유전자가 발현되어 만들어진다",
+      "form": {
+        "condition": "억제단백질이 어디서 오는지 따질 때",
+        "type": "causal",
+        "scope": "대장균의 젖당오페론"
+      },
+      "invertible": false,
+      "invertible_reason": "출처를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rg-outside",
+      "text": "조절유전자는 오페론 앞쪽의 다른 부위에 놓여 오페론과 함께 전사되지 않는다",
+      "form": {
+        "condition": "오페론과의 위치 관계를 볼 때",
+        "type": "conditional",
+        "scope": "원핵생물의 유전자 배치"
+      },
+      "invertible": false,
+      "invertible_reason": "위치를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조절유전자는 젖당이 있을 때에만 발현된다",
+      "why_wrong": "조절유전자는 젖당의 유무와 상관없이 발현되어 억제단백질을 늘 만들어 낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rg-repressor"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-repressor-protein"
+    },
+    {
+      "type": "related",
+      "target": "gene-operon"
+    },
+    {
+      "type": "related",
+      "target": "gene-structural-gene"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-2",
+  "pages": [
+    71
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

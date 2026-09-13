@@ -1,0 +1,94 @@
+{
+  "id": "gene-rna-processing",
+  "concept_key": "concept:rna-processing",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "RNA 가공",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "RNA processing",
+    "hanja_note": "약칭 RNA와 한자어 '가공(加工)'이 결합한 말이라 표제어 전체를 한자로 적지 않는다."
+  },
+  "definition": "처음 전사된 RNA에서 인트론을 잘라 내 엑손을 잇고 양 말단을 바꾸는 과정을 통틀어 이르는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-proc-intron",
+      "text": "전사되어 처음 만들어진 RNA에서 인트론이 잘려 나가고 남은 엑손끼리 이어진다",
+      "form": {
+        "condition": "핵 안에서 가공이 이루어질 때",
+        "type": "conditional",
+        "scope": "진핵생물"
+      },
+      "invertible": false,
+      "invertible_reason": "과정을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-proc-ends",
+      "text": "5′ 말단과 3′ 말단이 변형되는 것도 가공에 든다",
+      "form": {
+        "condition": "전사된 RNA가 성숙한 mRNA가 될 때",
+        "type": "conditional",
+        "scope": "진핵생물의 mRNA"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 가공에 드는지 밝힌 서술이라 방향이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-proc-regulation",
+      "text": "가공 과정 자체가 조절되므로 이 자리에서도 유전자발현이 조절된다",
+      "form": {
+        "condition": "전사 후 조절 단계",
+        "type": "causal",
+        "scope": "진핵생물의 발현 조절"
+      },
+      "invertible": false,
+      "invertible_reason": "조절 지점을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "RNA 가공은 원핵생물과 진핵생물에서 똑같이 일어난다",
+      "why_wrong": "인트론을 잘라 내고 말단을 바꾸는 이 과정은 핵을 가진 진핵생물의 특징으로 다룬다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-proc-intron"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-transcription"
+    },
+    {
+      "type": "next",
+      "target": "gene-eukaryotic-expression-regulation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-3",
+  "pages": [
+    73
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

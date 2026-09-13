@@ -1,0 +1,107 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-monoclonal-antibody",
+  "concept_key": "concept:monoclonal-antibody",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "단클론항체",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'클론'이 외래어를 소리대로 적은 말이라 표제어 전체를 한자로 적을 수 없다. 單 과 抗體 만 한자어다.",
+    "english": "monoclonal antibody"
+  },
+  "definition": "하나의 B림프구에서 만들어져 한 종류의 항원에만 결합하는, 성질이 똑같은 항체.",
+  "relations": [
+    {
+      "id": "rel-mab-specific",
+      "text": "한 가지 항원에만 결합하므로 여러 물질이 섞인 시료에서도 그 항원만 골라 검출할 수 있다",
+      "form": {
+        "condition": "표적 항원이 시료에 들어 있을 때",
+        "type": "causal",
+        "scope": "진단 검사에서의 이용"
+      },
+      "invertible": false,
+      "invertible_reason": "특이성에서 따라 나오는 결과를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mab-hybrid",
+      "text": "잡종세포는 종양세포에서 계속 분열하는 성질을, B림프구에서 항체를 만드는 성질을 함께 얻는다",
+      "form": {
+        "condition": "두 세포를 융합했을 때",
+        "type": "classification",
+        "scope": "단클론항체 생산용 잡종세포"
+      },
+      "invertible": true,
+      "invertible_reason": "어느 세포가 어떤 성질을 주는지가 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "잡종세포는 종양세포에서 항체를 만드는 성질을, B림프구에서 계속 분열하는 성질을 함께 얻는다"
+    },
+    {
+      "id": "rel-mab-serum",
+      "text": "동물의 혈청에서 바로 얻은 항체는 여러 종류가 섞여 있어 한 항원만 겨냥하는 검사에 쓰기 어렵다",
+      "form": {
+        "condition": "혈청에서 항체를 직접 얻을 때",
+        "type": "conditional",
+        "scope": "여러 항체가 섞인 시료"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "단클론항체는 여러 종류의 항원에 두루 결합하기 때문에 진단에 유용하다",
+      "why_wrong": "여러 항원에 붙는 것은 혈청에서 얻은 항체이고, 단클론항체의 쓸모는 한 항원에만 붙는 데서 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mab-specific"
+    },
+    {
+      "text": "잡종세포를 만들지 않고 B림프구만 배양해도 단클론항체를 쉽게 대량으로 얻을 수 있다",
+      "why_wrong": "B림프구는 몸 밖에서 기르기 어려워, 계속 분열하는 세포와 융합시켜 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mab-hybrid"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-cell-fusion"
+    },
+    {
+      "type": "related",
+      "target": "gene-gene-therapy"
+    },
+    {
+      "type": "related",
+      "target": "gene-stem-cell"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    104,
+    105
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

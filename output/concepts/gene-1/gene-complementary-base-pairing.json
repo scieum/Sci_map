@@ -1,0 +1,88 @@
+{
+  "id": "gene-complementary-base-pairing",
+  "concept_key": "concept:complementary-base-pairing",
+  "registry_status": "new",
+  "term": "상보결합",
+  "notation": {
+    "hanja": "相補結合",
+    "english": "complementary base pairing",
+    "hanja_gloss": "相 서로 상 · 補 기울 보 · 結 맺을 결 · 合 합할 합"
+  },
+  "definition": "이중나선 안에서 아데닌은 타이민과, 구아닌은 사이토신과 짝을 지어 수소결합하는 규칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cb-hbond",
+      "text": "A 와 T 는 수소결합 두 개로, G 와 C 는 수소결합 세 개로 이어진다",
+      "form": {
+        "condition": "이중나선의 염기쌍을 볼 때",
+        "type": "classification",
+        "scope": "DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "수소결합 수를 맞바꾸어 적는 것은 방향을 뒤집는 일이 아니라 값을 틀리게 적는 일이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cb-template",
+      "text": "짝이 정해져 있으므로 한 가닥을 본으로 삼아 나머지 한 가닥을 어김없이 만들 수 있다",
+      "form": {
+        "condition": "DNA 가 복제될 때",
+        "type": "causal",
+        "scope": "주형을 이용한 합성"
+      },
+      "invertible": false,
+      "invertible_reason": "정확히 만들어졌다고 해서 그 까닭이 상보결합뿐이라 할 수는 없다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "A 는 G 와, T 는 C 와 결합한다",
+      "why_wrong": "고리가 두 개인 A·G 끼리 짝지으면 지름이 일정할 수 없다. A 는 T 와, G 는 C 와 짝을 짓는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cb-hbond"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dna-base"
+    },
+    {
+      "type": "related",
+      "target": "gene-chargaff-rule"
+    },
+    {
+      "type": "next",
+      "target": "gene-semiconservative-replication"
+    },
+    {
+      "type": "next",
+      "target": "gene-template-strand"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    42
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "상보적 염기쌍"
+  ]
+}

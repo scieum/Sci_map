@@ -1,0 +1,88 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-bioinformatics",
+  "concept_key": "concept:bioinformatics",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "생물정보학",
+  "notation": {
+    "hanja": "生物情報學",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 情 뜻 정 · 報 갚을 보 · 學 배울 학",
+    "english": "bioinformatics"
+  },
+  "definition": "유전정보처럼 양이 방대한 생물학 자료를 전산과 통계의 방법으로 다루고 해석하는 학문 분야.",
+  "relations": [
+    {
+      "id": "rel-bi-need",
+      "text": "다룰 자료의 양이 많아질수록 사람 손으로는 감당하기 어려워 전산 분석에 기대는 정도가 커진다",
+      "form": {
+        "condition": "분석할 자료가 쌓일 때",
+        "type": "direct",
+        "scope": "유전정보의 분석",
+        "antecedent": {
+          "quantity": "분석할 자료의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전산 분석에 기대는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "관찰된 흐름이라 뒤집은 문장이 논리에서 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bi-cross",
+      "text": "생물정보학은 생물학만이 아니라 전산학·수학·통계학의 방법을 함께 써야 성립한다",
+      "form": {
+        "condition": "이 학문의 구성을 볼 때",
+        "type": "classification",
+        "scope": "융합 학문으로서의 성격"
+      },
+      "invertible": false,
+      "invertible_reason": "구성 요소를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생물정보학은 컴퓨터만 잘 다루면 되는 분야라 생물학 지식은 필요하지 않다",
+      "why_wrong": "자료가 무엇을 뜻하는지 읽으려면 유전자와 단백질에 대한 생물학 지식이 함께 있어야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bi-cross"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-human-genome-project"
+    },
+    {
+      "type": "related",
+      "target": "gene-interdisciplinary-field-of-biotechnology"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-2",
+  "pages": [
+    99,
+    109
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

@@ -1,0 +1,120 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-bioethics-review-system",
+  "concept_key": "concept:bioethics-review-system",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "생명윤리 심의 제도",
+  "notation": {
+    "hanja": "生命倫理審議制度",
+    "hanja_gloss": "生 날 생 · 命 목숨 명 · 倫 인륜 륜 · 理 다스릴 리 · 審 살필 심 · 議 의논할 의 · 制 마를 제 · 度 법도 도",
+    "english": "bioethics review system"
+  },
+  "definition": "생명을 대상으로 하는 연구를 미리 살펴 허용 범위를 정해 두는 법과 기구의 장치.",
+  "relations": [
+    {
+      "id": "rel-brs-prior",
+      "text": "사람이나 인체 유래물을 대상으로 하는 연구는 시작하기 전에 심의를 받도록 정해져 있다",
+      "form": {
+        "condition": "사람을 대상으로 하는 연구일 때",
+        "type": "conditional",
+        "scope": "생명윤리 및 안전에 관한 법률"
+      },
+      "invertible": false,
+      "invertible_reason": "의무를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-brs-embryo",
+      "text": "인간 배아를 새로 만드는 일은 불임 치료를 목적으로 할 때만 열려 있고, 이미 남은 배아를 연구에 쓰는 것은 기한을 두어 허용한다",
+      "form": {
+        "condition": "인간 배아를 만들거나 연구에 쓰려 할 때",
+        "type": "conditional",
+        "scope": "인간 배아의 생성과 연구에 관한 조항"
+      },
+      "invertible": false,
+      "invertible_reason": "허용 범위를 그은 서술이라 뒤집어 반드시 거짓이 되는 두 양이 없다",
+      "curriculum": [
+        "12유전03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-brs-clone",
+      "text": "사람을 복제하는 행위는 목적을 가리지 않고 금지되며, 체세포를 복제한 배아도 난치병 치료 연구 밖에서는 허용되지 않는다",
+      "form": {
+        "condition": "인간 복제나 체세포복제 배아를 다룰 때",
+        "type": "classification",
+        "scope": "인간 복제에 관한 금지 조항"
+      },
+      "invertible": false,
+      "invertible_reason": "금지 항목을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-brs-layer",
+      "text": "심의는 대통령 직속의 국가 위원회와 연구 기관에 두는 위원회, 두 층으로 이루어진다",
+      "form": {
+        "condition": "심의 기구의 구성을 볼 때",
+        "type": "classification",
+        "scope": "국내 심의 체계"
+      },
+      "invertible": false,
+      "invertible_reason": "구성을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연구자의 양심에 맡기면 되므로 따로 심의를 받을 필요는 없다",
+      "why_wrong": "법으로 사전 심의를 의무화해, 연구의 윤리적·과학적 타당성을 기관이 확인하도록 정해 두었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-brs-prior"
+    },
+    {
+      "text": "연구에 필요하다면 인간 배아를 새로 만들어 써도 된다",
+      "why_wrong": "배아를 새로 만드는 것은 불임 치료를 목적으로 할 때로 한정된다. 연구에는 그러고 남은 배아를 기한 안에서만 쓸 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-brs-embryo"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-bioethics"
+    },
+    {
+      "type": "related",
+      "target": "gene-embryonic-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-gene-therapy"
+    }
+  ],
+  "curriculum": [
+    "12유전03-05"
+  ],
+  "topic_id": "gene-3-3-3",
+  "pages": [
+    119
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "media": []
+}

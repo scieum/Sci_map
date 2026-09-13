@@ -1,0 +1,81 @@
+{
+  "id": "gene-dna-replication-model",
+  "concept_key": "concept:dna-replication-model",
+  "registry_status": "new",
+  "term": "DNA 복제모델",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "DNA replication model",
+    "hanja_note": "DNA 가 로마자 약어이고 모델이 외래어라 표제어 전체에 대응하는 한자어가 없다(복제는 複製)."
+  },
+  "definition": "복제된 DNA 에 옛 가닥이 어떻게 나뉘어 들어가는지를 설명하는 세 가지 가설. 보존적·반보존적·분산적 모델이 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rm-predict",
+      "text": "세 모델은 복제 뒤 DNA 의 밀도 분포를 서로 다르게 내다보므로 실험으로 가려낼 수 있다",
+      "form": {
+        "condition": "복제 뒤 DNA 의 밀도를 구분할 수 있을 때",
+        "type": "causal",
+        "scope": "질소 동위원소로 표지한 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "실험으로 가려냈다고 해서 근거가 밀도 차이뿐이라 할 수는 없다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rm-conserve",
+      "text": "보존적 모델이 옳다면 1회 복제 뒤 무거운 DNA 와 가벼운 DNA 만 나오고 중간 무게 띠는 생기지 않는다",
+      "form": {
+        "condition": "무거운 질소로 키운 대장균을 가벼운 질소 배양액으로 옮겼을 때",
+        "type": "conditional",
+        "scope": "보존적 복제모델이 내놓는 예측"
+      },
+      "invertible": false,
+      "invertible_reason": "예측이 어긋났다고 해서 남은 두 모델 가운데 어느 쪽인지까지 이 사실만으로 정해지지는 않는다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 복제 방식은 구조만 보고 정해진 것이라 실험이 필요 없었다",
+      "why_wrong": "이중나선 구조는 반보존적 복제를 짐작하게 했을 뿐이다. 실제로 가려낸 것은 메셀슨과 스탈의 실험이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rm-predict"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dna-double-helix"
+    },
+    {
+      "type": "next",
+      "target": "gene-meselson-stahl-experiment"
+    },
+    {
+      "type": "next",
+      "target": "gene-semiconservative-replication"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-1",
+  "pages": [
+    46
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

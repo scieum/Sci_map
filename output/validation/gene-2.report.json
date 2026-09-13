@@ -1,0 +1,587 @@
+{
+  "unit_id": "gene-2",
+  "generated_at": "2026-09-13T12:23:07+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 41,
+    "script_precheck": {
+      "tool": ".claude/skills/curriculum-mapper/scripts/validate_tags.py output/concepts/gene-2 --unit gene-2",
+      "result": "통과 (카드 41장)",
+      "note": "실재하지 않는 코드·미확정 코드·태그 0개·영역 불일치는 이 스크립트가 이미 걸렀다. 아래 findings 는 코드는 실재하지만 카드 내용과 맞지 않는 경우만 담는다."
+    },
+    "standards_in_scope": [
+      {
+        "code": "12유전02-01",
+        "text": "전사와 번역 과정을 거쳐 유전자가 발현되는 중심원리를 이해하고, 모형을 이용하여 유전자발현 과정을 설명할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-2-1 중심원리와 유전정보의 해독 (60·63~69쪽)",
+        "cards": 16
+      },
+      {
+        "code": "12유전02-02",
+        "text": "유전부호를 이해하고, 유전부호 표를 사용하여 유전정보를 해독할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-2-1-2 유전부호와 유전정보의 해독 (61~62쪽)",
+        "cards": 6
+      },
+      {
+        "code": "12유전02-03",
+        "text": "원핵생물과 진핵생물의 유전자발현 조절 과정을 비교하기 위한 설명 자료를 다양한 매체를 활용하여 제작할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-2-2 유전자발현 조절 (70~77쪽)",
+        "cards": 15
+      },
+      {
+        "code": "12유전02-04",
+        "text": "생물의 발생 과정에서 세포분화가 유전자발현 조절 과정을 통해 일어남을 추론할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-2-3 세포분화와 발생 (78~81·85쪽)",
+        "cards": 8
+      },
+      {
+        "code": "12유전02-05",
+        "text": "생물의 유전자발현 조절 및 발생에 대한 연구가 인류 복지에 기여한 사례를 조사하여 협력적으로 소통할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-2-3-2 안의 탐구·읽기 자료 (82~83·85쪽)",
+        "cards": 3
+      }
+    ],
+    "coverage": {
+      "standards_with_cards": [
+        "12유전02-01",
+        "12유전02-02",
+        "12유전02-03",
+        "12유전02-04",
+        "12유전02-05"
+      ],
+      "standards_without_cards": [],
+      "note": "영역 02 의 성취기준 5건이 모두 카드로 덮였다. 태그 없는 카드도 없다. 카드층 curriculum 과 명제층 relation.curriculum 은 41장 전부 집합이 일치한다(불일치 0건)."
+    },
+    "findings": [
+      {
+        "card_id": "gene-anticodon",
+        "verdict": "retag",
+        "current": [
+          "12유전02-02"
+        ],
+        "suggested": [
+          "12유전02-01"
+        ],
+        "reason": "이 카드는 유전부호 표로 정보를 해독하는 카드가 아니라 번역 기제를 설명하는 카드다. 근거 셋. (1) 카드의 topic_id 가 gene-2-1-4('번역 - 단백질합성 과정', 64~68쪽)이고 pages 는 65 하나뿐이다 — 02-02 가 대응하는 61~62쪽(gene-2-1-2)을 카드가 한 쪽도 물고 있지 않다. 02-02 를 단 나머지 다섯 장(gene-codon·gene-genetic-code·gene-genetic-information-decoding·gene-start-codon·gene-stop-codon)은 전부 61~62쪽을 pages 에 담고 있어 이 카드만 어긋난다. (2) 두 명제 rel-anti-pairing·rel-anti-decides 는 'tRNA가 상보적인 코돈 자리에 들어가 결합한다', '안티코돈이 정해지면 3′ 말단 아미노산도 정해진다' 로, 02-02 전문의 '유전부호 표를 사용하여 유전정보를 해독' 과 걸리는 대목이 없다. 안티코돈은 코돈표에 실리는 항목이 아니다. (3) 같은 65쪽 그림 Ⅱ-6(tRNA의 입체 구조)에서 갈라져 나온 형제 카드 gene-transfer-rna 는 02-01 을 달고 있다 — 한 그림에서 나온 두 카드의 태그가 서로 다르다.",
+        "prerequisites": [
+          "concept:rna",
+          "concept:amino-acid"
+        ]
+      },
+      {
+        "card_id": "gene-expression-site-difference",
+        "verdict": "retag",
+        "current": [
+          "12유전02-01",
+          "12유전02-03"
+        ],
+        "suggested": [
+          "12유전02-01"
+        ],
+        "reason": "02-03 을 떼자는 것이다. 02-03 은 '원핵생물과 진핵생물의 유전자발현 **조절** 과정을 비교' 이고 교과서에서 그 자리는 73~76쪽(gene-2-2-3)인데, 이 카드의 pages 는 65·68·69 로 셋 다 중단원 01 안이다. 65쪽 본문('핵이 없는 원핵세포에서는 … 곧바로 번역이 시작된다')과 68쪽 그림 Ⅱ-7(진핵생물의 유전자발현의 전 과정)은 조절이 아니라 발현 **과정과 장소**를 말한다. 02-03 을 달고 있는 명제 rel-site-cause('핵막이 있는지 없는지가 전사와 번역이 이어지는 시점의 차이를 만든다')도 조절 기제가 아니라 장소 차이의 원인이다. 조절 비교 쪽 내용은 이미 gene-prokaryote-eukaryote-regulation-comparison(pages 73·75·77)의 rel-cmp-stages 가 '핵막에 따른 장소 구분' 으로 02-03 아래 담고 있어 중복이기도 하다.",
+        "prerequisites": [
+          "concept:cell-nucleus"
+        ]
+      },
+      {
+        "card_id": "gene-rna-polymerase",
+        "verdict": "uncertain",
+        "current": [
+          "12유전02-01"
+        ],
+        "suggested": [],
+        "reason": "02-01 자체는 맞다. 갈리는 곳은 pages 에 72 가 들어 있는데 02-03 이 없다는 점이다. 72쪽은 젖당오페론(중단원 02, 02-03)이고, 사정이 같은 gene-promoter 는 pages 63·71 에 02-01·02-03 을 함께 달아 두었다. 두 카드가 같은 규칙으로 다뤄지지 않았다. 다만 이 카드의 두 명제(rel-pol-promoter·rel-pol-direction)는 조절을 한마디도 말하지 않으므로 02-03 을 더하는 것이 옳은지 판단이 갈린다 — 태그를 더할 일인지, 근거 없는 72쪽을 pages 에서 뺄 일인지는 사람이 정할 대목이다.",
+        "prerequisites": [
+          "concept:dna",
+          "concept:nucleotide"
+        ]
+      },
+      {
+        "card_id": "gene-stop-codon",
+        "verdict": "uncertain",
+        "current": [
+          "12유전02-02"
+        ],
+        "suggested": [],
+        "reason": "카드 본체(UAA·UAG·UGA, 아미노산을 지정하지 않음)는 02-02 가 맞다. 갈리는 것은 명제 rel-stc-release('라이보솜이 종결코돈에 이르면 폴리펩타이드가 풀려나고 라이보솜과 tRNA도 mRNA에서 떨어진다')로, 이것은 코돈표 해독이 아니라 번역 종결 단계(65쪽, 02-01)의 서술이다. 카드 pages 에 65 가 이미 들어 있다. 02-01 을 더할 일인지 이 명제가 gene-translation 쪽 자리인지 판단이 갈린다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "gene-pluripotency",
+        "verdict": "uncertain",
+        "current": [
+          "12유전02-05"
+        ],
+        "suggested": [],
+        "reason": "범위 밖은 아니다 — 82쪽 곁주('다형성능(다분화능, 다능성) 한 세포가 여러 종류의 세포로 분화할 수 있는 능력으로, 배아줄기세포는 다형성능을 가지고 있다')가 출처이고 82~83쪽은 02-05 의 탐구·읽기 자료 면이다. 다만 02-05 는 '연구가 인류 복지에 기여한 사례를 조사하여 소통' 이라는 수행 성취기준인데 이 카드는 사례가 아니라 능력의 정의다. 내용만 보면 분화 능력이라 02-04 쪽에 가깝고, 놓인 자리로 보면 02-05 다. 어디에 두는지(또는 둘 다 다는지) 판단이 갈린다.",
+        "prerequisites": [
+          "concept:cell-differentiation"
+        ]
+      }
+    ],
+    "out_of_scope_count": 0,
+    "prerequisites_summary": [
+      {
+        "card_ids": [
+          "gene-peptide-bond",
+          "gene-polypeptide",
+          "gene-ribosome",
+          "gene-ribosomal-rna"
+        ],
+        "prerequisites": [
+          "concept:amino-acid",
+          "concept:protein",
+          "concept:peptide-bond",
+          "concept:ribosome"
+        ],
+        "source_course": "세포와 물질대사 (cell-1)",
+        "note": "concept:peptide-bond·concept:ribosome 은 cell-1 에 이미 카드가 있다 — 같은 키를 두 과목이 쓴다."
+      },
+      {
+        "card_ids": [
+          "gene-transcription",
+          "gene-rna-polymerase",
+          "gene-messenger-rna",
+          "gene-transfer-rna"
+        ],
+        "prerequisites": [
+          "concept:dna",
+          "concept:rna",
+          "concept:nucleotide"
+        ],
+        "source_course": "세포와 물질대사 (cell-1) · 생물의 유전 Ⅰ (gene-1, 12유전01-05·01-07)",
+        "note": "DNA 이중나선·상보적 염기쌍·5′→3′ 방향은 이 단원이 다시 설명하지 않고 그대로 쓴다."
+      },
+      {
+        "card_ids": [
+          "gene-eukaryotic-expression-regulation",
+          "gene-rna-processing"
+        ],
+        "prerequisites": [
+          "concept:chromosome",
+          "concept:nucleosome",
+          "concept:cell-nucleus"
+        ],
+        "source_course": "생명과학 (bio-3) · 생물의 유전 Ⅰ (gene-1, 12유전01-06)",
+        "note": "'응축된 염색체 구조가 풀려야 전사가 일어난다'(73쪽)와 인트론·엑손 유전자 구조가 여기에 기댄다."
+      },
+      {
+        "card_ids": [
+          "gene-cell-differentiation",
+          "gene-animal-development"
+        ],
+        "prerequisites": [
+          "concept:mitosis",
+          "concept:gene"
+        ],
+        "source_course": "생명과학 (bio-3) · 통합과학1 (isci1-3)",
+        "note": "수정란에서 비롯한 세포들이 같은 유전체를 가진다는 전제가 체세포분열 이해를 먼저 요구한다."
+      },
+      {
+        "card_ids": [
+          "gene-embryonic-stem-cell",
+          "gene-induced-pluripotent-stem-cell",
+          "gene-pluripotency"
+        ],
+        "prerequisites": [
+          "concept:stem-cell"
+        ],
+        "source_course": "생물의 유전 Ⅲ (gene-3)",
+        "note": "선수가 아니라 후행 단원이다 — 아래 overlaps 를 볼 것."
+      }
+    ],
+    "overlaps": [
+      {
+        "kind": "same_course_duplicate",
+        "concept_keys": [
+          "concept:embryonic-stem-cell",
+          "concept:induced-pluripotent-stem-cell"
+        ],
+        "units": [
+          "gene-2",
+          "gene-3"
+        ],
+        "detail": "카드 id 까지 같다(gene-embryonic-stem-cell·gene-induced-pluripotent-stem-cell). gene-2 판은 82~83쪽·12유전02-05, gene-3 판은 106·115쪽·12유전03-02 다. 내용도 갈린다 — gene-2 판은 '전사 인자 4개를 넣어 다형성능을 되살린다'(발현 조절 쪽), gene-3 판은 핵치환·역분화의 위험과 쟁점(생명공학기술 쪽). 두 단원 모두 제 성취기준 안이라 어느 쪽도 out_of_scope 가 아니지만, concept_key 가 같으므로 G1 그래프와 G3 사전 등록에서 한 키에 카드 둘이 매달린다. 어느 쪽을 대표로 둘지는 사람이 정할 일이다.",
+        "verdict_effect": "없음 (두 카드 모두 gene-2 안에서는 ok)"
+      },
+      {
+        "kind": "prior_course_overlap",
+        "concept_keys": [
+          "concept:codon",
+          "concept:transcription",
+          "concept:translation"
+        ],
+        "units": [
+          "gene-2",
+          "isci1-3"
+        ],
+        "detail": "통합과학1 Ⅲ단원에 같은 키의 카드가 있다(isci1-codon·isci1-transcription·isci1-translation). 선수 과목에서 이미 다룬 개념을 진로선택에서 깊이 다시 다루는 자리다 — 이 과목 범위 밖이라는 뜻이 아니라 학생이 이미 만난 개념이라는 표시다.",
+        "verdict_effect": "없음"
+      },
+      {
+        "kind": "prior_course_overlap",
+        "concept_keys": [
+          "concept:peptide-bond",
+          "concept:ribosome"
+        ],
+        "units": [
+          "gene-2",
+          "cell-1"
+        ],
+        "detail": "「세포와 물질대사」 Ⅰ단원에 같은 키의 카드가 있다(cell-peptide-bond·cell-ribosome). 이 단원에서는 단백질합성이 벌어지는 자리로만 쓰이므로 범위 이탈은 아니다. 다만 라이보솜의 구조(대·소단위체, rRNA 구성)는 cell-1 쪽이 원 자리이므로 gene-ribosome·gene-ribosomal-rna 는 선수 카드로 이어 두는 것이 맞다.",
+        "verdict_effect": "없음"
+      }
+    ],
+    "stats": {
+      "ok": 36,
+      "retag": 2,
+      "out_of_scope": 0,
+      "uncertain": 3
+    }
+  },
+  "notes": [
+    "C5 curriculum 절만 채웠다. relations 절(C6)은 아직 돌지 않았다 — 이 파일에 없는 것은 '검사해서 깨끗했다'가 아니라 '검사하지 않았다'는 뜻이다.",
+    "references/report.schema.json 이 0바이트(빈 파일)라 스키마 대조를 하지 못했다. 형식은 앞서 나온 output/validation/bio-2.report.json 을 따랐다.",
+    "bio 계열 <track>-facts 스킬이 없어 사실 대조는 건너뛰었다. C5 는 어차피 진위를 보지 않는다.",
+    "에스컬레이션 조건 둘 다 미달: 범위 이탈 0건(기준 2건 초과), uncertain 3/41 = 7.3%(기준 20% 초과).",
+    "C6 relation 절을 이번에 채웠다. curriculum 절(C5)은 앞서 돈 결과를 그대로 두고 병합했다.",
+    "bio 계열 <track>-facts 스킬이 없어 사실 대조는 건너뛰었다. 대신 output/source/gene-2/text.jsonl 원문(70·72·73·74쪽)으로 서술 근거만 확인했다 — 진위는 확정하지 않았다.",
+    "invertible: true 15건 가운데 form.type 이 classification 인 것은 없었고, conditional 인 셋(rel-cd-direction·rel-gc-64-vs-20·rel-pol-direction)은 뒤집은 문장이 반드시 거짓이 되어 ok 로 두었다. inverted_text 가 빠진 true 도, true 가 아닌데 inverted_text 가 붙은 것도 없다.",
+    "gene-operator 의 rel-opr-blocked('RNA 중합효소가 프로모터에 붙지 못해 전사가 멈춘다')는 다른 세 카드보다 기제를 자세히 적어 한때 카드 간 모순을 의심했으나, 원문 72쪽에 같은 기제가 그대로 적혀 있어 ok 로 두었다.",
+    "id 가 바뀐 줄기세포 카드 두 장의 links 는 gene-3 의 gene-embryonic-stem-cell·gene-induced-pluripotent-stem-cell 을 가리키는 단원 밖 same 링크로 끊긴 링크가 아니다. 두 카드의 명제 5개와 오개념 2개에서는 결함을 찾지 못했다.",
+    "에스컬레이션 조건 미달: uncertain 13/101 = 12.9% (기준 20% 초과)."
+  ],
+  "relations": {
+    "checked": 101,
+    "cards_checked": 41,
+    "misconceptions_checked": 55,
+    "invertible_true_reviewed": 15,
+    "method": "명제 101개를 다섯 항목(scope 과일반화 / invertible 오판정 / 동어반복 / 오개념 정합성 / 모순)으로 보았다. invertible: true 15건은 하나씩 뒤집어 읽어 '뒤집은 문장이 반드시 거짓이 되는가' 만 기준으로 판정했다. 진위가 걸린 것은 모두 uncertain 으로 올렸다.",
+    "findings": [
+      {
+        "card_id": "gene-codon",
+        "relation_id": "rel-cod-three-to-one",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '이웃한 염기 세 개가 이루는 한 묶음으로, 아미노산 한 개를 지정하는 유전부호의 단위' 인데 명제는 'mRNA의 염기 셋이 한 묶음을 이루어 아미노산 한 개를 지정한다' 다. 정의의 두 구절('세 개가 이루는 한 묶음', '아미노산 한 개를 지정')을 어순만 바꿔 옮겼고 정의를 넘어선 정보가 없다.",
+        "suggest": "정의에서 도출되지 않는 내용으로 바꿀지, 명제를 빼고 rel-cod-no-overlap·rel-cod-aug 만 남길지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-promoter",
+        "relation_id": "rel-prm-site",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 'RNA 중합효소가 달라붙어 전사가 시작되도록 하는 조절 부위' 인데 명제는 '프로모터는 RNA 중합효소가 결합하는 자리여서 전사가 시작되는 지점을 정한다' 다. '결합' 과 '전사 시작' 두 구절이 정의와 그대로 겹친다.",
+        "suggest": "정의에 없는 내용으로 바꿀지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-pluripotency",
+        "relation_id": "rel-plu-definition",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '한 갈래에 묶이지 않고 여러 갈래의 세포로 분화해 갈 수 있는 능력' 과 명제 '다형성능을 가진 세포는 한 종류에 머무르지 않고 여러 종류의 세포로 분화할 수 있다' 가 낱말만 바꾼 같은 문장이다. relation_id 자체가 rel-plu-definition 이라 정의를 명제 자리에 옮겨 놓은 것이 드러난다.",
+        "suggest": "정의에서 저절로 나오지 않는 명제로 바꿀지, rel-plu-stem-cells 하나만 남길지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-repressor-protein",
+        "relation_id": "rel-rep-block",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '작동부위에 결합함으로써 전사를 가로막는 단백질' 과 명제 '억제단백질이 작동부위를 차지하고 있는 동안에는 오페론의 전사가 일어나지 않는다' 가 같은 내용이다. 같은 카드의 rel-rep-shape·rel-rep-always 는 정의를 넘어서는데 이 명제만 정의 안에 머문다.",
+        "suggest": "정의를 넘어서는 내용(원문 72쪽의 'RNA 중합효소가 프로모터에 결합하는 것을 방해' 라는 기제 등)을 넣을지, 명제를 뺄지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-ribosomal-rna",
+        "relation_id": "rel-rrna-role",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 '단백질합성을 촉진하는 RNA' 와 명제 '단백질합성 반응을 촉진하는 몫을 맡는다' 가 같은 구절이다. '라이보솜 안에서' 만 더 붙었는데 그것도 정의 앞부분('라이보솜의 두 단위체를 이루는')에서 나온다.",
+        "suggest": "정의에 없는 내용으로 바꿀지 명제를 뺄지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-operator",
+        "relation_id": "rel-opr-switch",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '전사를 켜고 끄는 스위치 노릇을 하는 오페론 안의 부위' 와 명제 '…이 부위는 전사의 스위치 구실을 한다' 가 '스위치' 라는 낱말까지 겹친다. 앞절('작동부위가 비어 있을 때 전사가 진행되므로')은 같은 카드 rel-opr-blocked 를 뒤집은 것이라 새로운 것이 아니다.",
+        "suggest": "정의·rel-opr-blocked 어느 쪽에서도 나오지 않는 내용으로 바꿀지 명제를 뺄지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-genetic-information-decoding",
+        "relation_id": "rel-dec-codon-table",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '코돈표를 써서 mRNA의 염기서열을 아미노산서열로 옮겨 읽어 내는 일' 과 명제 '코돈표에서 찾으면 mRNA의 서열로부터 아미노산서열을 알아낼 수 있다' 가 같다. 게다가 명제가 해독 절차를 그대로 적은 것이라 지문으로 뽑아도 물을 것이 없다.",
+        "suggest": "절차 서술 대신 절차가 성립하는 근거 쪽으로 옮길지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-peptide-bond",
+        "relation_id": "rel-pb-growth",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '앞서 이어진 사슬과 새로 온 아미노산 사이에 만들어져 둘을 잇는 결합' 이므로 '결합이 하나씩 더 만들어질수록 아미노산 수가 늘어난다' 는 정의에서 셈만 하면 나오는 말이다. form.type 이 direct 이지만 두 양이 같이 늘어나는 관계일 뿐이다.",
+        "suggest": "결합이 만들어지는 조건이나 자리처럼 정의에서 나오지 않는 내용으로 바꿀지, rel-pb-in-ribosome 만 남길지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-structural-gene",
+        "relation_id": "rel-sg-classify",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '발현을 조절하는 기능 말고 다른 기능을 하는 단백질이나 RNA의 정보를 담은 유전자' 를 읽으면 '유전자는 산물이 발현을 조절하느냐 그 밖의 일을 하느냐에 따라 두 갈래로 나뉜다' 가 저절로 나온다. 정의의 대조 기준을 그대로 분류 문장으로 옮긴 것이다.",
+        "suggest": "분류 기준 대신 그 분류에서 따라 나오지 않는 내용으로 옮길지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-expression-site-difference",
+        "relation_id": "rel-site-prokaryote",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "linked_relation 이 rel-site-prokaryote('핵막이 없는 원핵세포에서는 전사 도중에 번역이 함께 시작될 수 있다') 인데 오개념은 '원핵세포에서는 rRNA와 tRNA가 만들어지지 않는다' 다. 이 명제는 전사와 번역이 이어지는 시점만 말하고 rRNA·tRNA 를 한 번도 언급하지 않아, 오개념이 이 명제의 반대편에 서 있지 않다. 명제와 무관한 일반적 오해다.",
+        "suggest": "이 오개념을 rRNA·tRNA 를 실제로 다루는 카드로 옮길지, 이 카드에서 뺄지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-homeotic-gene",
+        "relation_id": "rel-hom-segment",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '호미오유전자의 산물은 DNA에 결합하지 못한다' 가 반박하는 것은 definition 의 '산물이 전사 인자인 유전자' 이지 linked_relation 인 rel-hom-segment('체절마다 서로 다른 호미오유전자가 발현되어 체절별로 다른 구조가 만들어진다') 가 아니다. rel-hom-segment 는 DNA 결합을 말하지 않는다.",
+        "suggest": "DNA 결합을 말하는 명제가 이 카드에 없다는 점을 C2 가 판단해 연결 대상을 다시 고르게 한다"
+      },
+      {
+        "card_id": "gene-messenger-rna",
+        "relation_id": "rel-mrna-carry",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '단백질합성에 쓰이는 RNA는 mRNA 하나뿐이다' 는 rel-mrna-carry('mRNA가 라이보솜에 결합해야 거기 적힌 정보대로 단백질이 만들어진다') 와 어긋나지 않는다. 이 명제의 반대편은 'mRNA 없이도 단백질이 만들어진다' 여야 한다. why_wrong 이 드는 tRNA·rRNA 는 이 카드 어느 명제에도 없다.",
+        "suggest": "이 오개념이 걸릴 명제가 이 카드에 없다는 점을 두고 C2 가 옮길지 명제를 보탤지 정한다"
+      },
+      {
+        "card_id": "gene-myod-gene",
+        "relation_id": "rel-myod-tf",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '마이오디 유전자는 근육세포에만 들어 있다' 의 반대편 명제는 gene-cell-differentiation 의 rel-dif-same-genome('유전체가 달라져서가 아니라 발현되는 유전자가 달라져서') 이다. linked_relation 인 rel-myod-tf 는 '전구세포에서 발현되면 산물이 전사 인자로 작용한다' 라 유전자를 어느 세포가 지니는지를 말하지 않는다.",
+        "suggest": "이 카드 안에 반대편에 설 명제가 없다는 점을 C2 가 판단하게 한다"
+      },
+      {
+        "card_id": "gene-ribosome",
+        "relation_id": "rel-rib-site",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '펩타이드결합을 만드는 반응은 라이보솜의 소단위체에서 일어난다' 를 반박하려면 대단위체·소단위체의 구실을 가른 명제가 있어야 하는데, linked_relation 인 rel-rib-site 는 '라이보솜 안에서 이어져' 라고만 해 단위체를 가르지 않는다. why_wrong 이 내세우는 '대단위체 쪽' 은 이 카드 어느 명제에도 근거가 없다.",
+        "suggest": "단위체별 구실을 다루는 명제가 없는 채로 오개념만 서 있다는 점을 C2 가 판단하게 한다. '대단위체' 라는 사실 자체는 진위 판단 필요 — C8 검토 항목"
+      },
+      {
+        "card_id": "gene-rna-polymerase",
+        "relation_id": "rel-pol-promoter",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "이 카드는 오개념 둘을 모두 rel-pol-promoter 에 걸었는데, 그중 'RNA 중합효소는 DNA를 복제할 때도 같은 일을 하는 효소다' 는 rel-pol-promoter('프로모터에 붙어야 전사가 시작된다') 의 반대편이 아니다. 복제와 전사를 가르는 명제는 이 카드가 아니라 gene-central-dogma 의 rel-cd-place-of-steps 에 있다. 둘째 오개념('DNA 어디에나 붙어 전사를 시작할 수 있다')만 이 명제의 반대편에 선다.",
+        "suggest": "첫째 오개념의 연결을 어떻게 할지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-translation",
+        "relation_id": "rel-tl-stages",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '진핵세포에서 번역은 핵 안에서 일어난다' 는 번역이 벌어지는 장소에 관한 것인데 linked_relation 인 rel-tl-stages 는 개시·신장·종결 세 단계와 라이보솜의 이동만 말한다. 장소를 다루는 명제는 gene-expression-site-difference 의 rel-site-eukaryote 다. 게다가 rel-tl-stages 의 scope 는 '원핵생물의 번역' 이라 진핵세포를 말하는 오개념과 범위도 어긋난다.",
+        "suggest": "연결 대상을 다시 고를지 오개념을 옮길지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-master-regulatory-gene",
+        "relation_id": "rel-mrg-top",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '핵심 조절유전자 하나만 발현되면 분화가 끝까지 저절로 완성된다' 가 linked_relation 인 rel-mrg-top('핵심 조절유전자가 발현되면 아래쪽 전사 인자 유전자들이 잇따라 발현되어 분화가 이어진다') 의 반대편에 서지 않는다. 오히려 명제를 그대로 읽으면 오개념 쪽이 따라 나온다. why_wrong 이 내세우는 '방아쇠를 당길 뿐' 이라는 단서가 명제에는 없다.",
+        "suggest": "명제와 오개념 중 어느 쪽을 손볼지 C2 가 판단한다. 핵심 조절유전자 하나로 분화가 완성되는지 자체는 진위 판단 필요 — C8 검토 항목"
+      },
+      {
+        "card_id": "gene-cell-differentiation",
+        "relation_id": "rel-dif-tf",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '완전히 분화한 세포는 더 이상 유전자발현을 조절할 필요가 없다' 를 rel-dif-tf(scope '분화가 일어나는 동안') 에 걸었는데, 분화가 끝난 뒤를 말하는 오개념과 범위가 어긋난다. why_wrong('분화를 마친 세포도 … 단백질을 만들려면')이 실제로 기대는 것은 같은 카드의 rel-dif-protein 이다.",
+        "suggest": "연결 대상을 rel-dif-protein 쪽으로 볼지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-eukaryotic-expression-regulation",
+        "relation_id": "rel-euk-all-stages",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "'모든 단계에서 조절이 일어난다' 는 원문 73쪽('응축된 염색체 구조가 풀리는 단계부터 … 유전자발현의 모든 단계에서 조절이 일어난다')을 그대로 옮긴 것이라 서술 근거는 있다. 다만 scope 가 '진핵생물' 뿐이라 이 문장이 지문으로 나가면 '한 유전자가 늘 모든 단계에서 조절된다' 로 읽힐 여지가 있다. 조절이 '일어날 수 있는 자리' 를 말한 것인지 '늘 일어난다' 를 말한 것인지는 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "scope 를 조절이 일어날 수 있는 단계로 좁혀 적을지, 원문 표현을 그대로 둘지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-gene-expression-regulation",
+        "relation_id": "rel-reg-all-stages",
+        "verdict": "uncertain",
+        "checks": [
+          1,
+          4
+        ],
+        "reason": "명제의 scope 가 '원핵생물과 진핵생물' 인데(원문 70쪽 서술과 맞는다), 여기 걸린 오개념의 why_wrong 은 '전사 전 단계부터 번역 뒤 단백질의 활성까지' 라 진핵생물 쪽 단계 목록을 원핵생물까지 늘려 놓았다. 같은 단원 rel-cmp-stages('염색체 구조의 변화와 핵막에 따른 장소 구분이 더해져 진핵생물의 조절 단계가 더 많다')·rel-euk-all-stages 는 그 단계들을 진핵생물의 것으로 가른다. 어느 단계까지 원핵생물에 해당하는지는 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "명제의 scope 와 오개념 why_wrong 의 범위를 맞출지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-operon",
+        "relation_id": "rel-op-not-in-eukaryote",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "'진핵생물에는 … 구조가 없다' 는 무조건 부정이고 scope 도 '진핵생물의 유전자 구조' 로 전체를 덮는다. 원문 73쪽이 '경우가 없으며' 라고 적은 그대로라 서술 근거는 있으나, 같은 단원의 rel-gc-universal 은 같은 성격의 진술에 '거의 모든 생물(예외가 알려져 있다)' 로 단서를 달았다. 한 단원 안에서 단서 다는 방식이 갈린다. 예외의 존재 여부는 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "두 명제의 단서 다는 방식을 맞출지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-anticodon",
+        "relation_id": "rel-anti-decides",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "뒤집은 문장('붙은 아미노산의 종류가 그 tRNA의 안티코돈을 정한다')이 일반 진술로는 거짓이 되므로 invertible: true 판정 자체는 선다. 다만 gene-transfer-rna 의 rel-trna-match 가 같은 내용의 명제이고 inverted_text 도 사실상 같은 문장이라 D1 에서 거의 같은 OX 오답 지문이 두 번 나온다. 또 부호가 하나뿐인 아미노산(메싸이오닌·트립토판)에서는 뒤집은 문장이 거짓이 되지 않는데 그 단서가 scope 에 없다. 예외 범위의 확정은 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "두 카드 가운데 어느 쪽에 이 명제를 둘지, 예외를 scope 에 적을지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-transfer-rna",
+        "relation_id": "rel-trna-match",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "rel-anti-decides 와 짝을 이루는 중복이다. 뒤집으면 거짓이라는 판정은 서지만 두 카드의 inverted_text 가 겹쳐 같은 오답 지문이 두 번 나온다.",
+        "suggest": "중복을 어느 쪽으로 정리할지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-messenger-rna",
+        "relation_id": "rel-mrna-codon",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "뒤집은 문장('아미노산이 놓인 차례가 mRNA의 염기서열을 정한다')은 거짓이라 invertible: true 는 선다. 다만 gene-translation 의 rel-tl-order 가 같은 방향 관계를 같은 말로 적고 inverted_text 도 거의 같아 두 카드가 같은 지문을 만들어 낸다. invertible_reason 도 '뒤집으면 거짓' 이라는 말 없이 방향만 적혀 있어 다른 14건과 서술 수준이 다르다.",
+        "suggest": "중복을 어느 카드로 몰지, invertible_reason 을 다른 명제와 같은 수준으로 맞출지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-translation",
+        "relation_id": "rel-tl-order",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "rel-mrna-codon 과 짝을 이루는 중복이다. 판정 근거는 위와 같다.",
+        "suggest": "중복을 어느 쪽으로 정리할지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-gene-expression",
+        "relation_id": "rel-ge-two-steps",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 'DNA의 정보가 RNA를 거쳐 단백질로 이어지는 과정 전체' 라, '유전자발현은 RNA를 만드는 단계와 그 RNA로 단백질을 만드는 단계로 나뉜다' 는 정의를 두 토막으로 끊어 읽은 것에 가깝다. 다만 두 단계로 가르는 구획이 전사·번역 카드로 이어지는 발판이라 동어반복으로 잘라 말하기 어렵다.",
+        "suggest": "정의와 겹치는 정도를 C2 가 다시 보게 한다"
+      },
+      {
+        "card_id": "gene-regulatory-region",
+        "relation_id": "rel-rr-binding",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 '전사 인자가 결합하는 DNA 부위' 와 명제 앞절 '전사 인자가 붙는 자리여서' 가 겹친다. 뒷절('그 유전자가 얼마나 전사될지를 좌우한다')은 정의에 없는 내용이라 전부를 동어반복이라 하기는 어렵다.",
+        "suggest": "앞절을 덜어 낼지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-transcription-factor-combination",
+        "relation_id": "rel-tfc-variety",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '종류가 한정된 전사 인자를 여러 방식으로 짝지어 다양한 세포를 만들어 내는 원리' 인데 명제는 '전사 인자의 조합이 달라지면 … 서로 다른 종류의 세포가 생긴다' 다. '같은 유전체에서도' 라는 단서만 정의 밖이다. 또 gene-transcription-factor 의 rel-tf-limited-set 이 같은 내용을 발현 수준 쪽에서 한 번 더 적는다.",
+        "suggest": "정의 밖의 내용을 얼마나 남길지, 두 카드의 중복을 어떻게 할지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-genetic-information-decoding",
+        "relation_id": "rel-dec-frame",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "여기 걸린 오개념의 텍스트는 '코돈표만 있으면 DNA 서열을 어느 자리에서 읽어도 같은 단백질을 얻는다' 인데, 명제(rel-dec-frame)와 why_wrong 은 모두 mRNA 해독을 말한다. 오개념만 DNA 를 가리켜 층위가 어긋나고, 지문으로 나가면 학생이 DNA 를 직접 해독한다고 읽을 여지가 있다.",
+        "suggest": "오개념 텍스트의 층위를 명제와 맞출지 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-regulatory-gene",
+        "relation_id": "rel-rg-repressor",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '조절유전자는 젖당이 있을 때에만 발현된다' 의 반대편에 서는 명제는 gene-repressor-protein 의 rel-rep-always('젖당이 있든 없든 늘 만들어진다', 원문 72쪽)이고, linked_relation 인 rel-rg-repressor 는 억제단백질의 출처만 말한다. 다만 같은 카드의 rel-rg-outside(오페론과 함께 전사되지 않는다)가 간접 근거가 되어 어긋남이라 잘라 말하기 어렵다.",
+        "suggest": "연결 대상을 다시 볼지 여부를 C2 가 정한다"
+      },
+      {
+        "card_id": "gene-anticodon",
+        "relation_id": "rel-anti-pairing",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '안티코돈은 mRNA에 있다' 를 곧바로 반박하는 것은 definition('tRNA 한쪽에 있는 세 염기')이다. linked_relation 인 rel-anti-pairing 은 'tRNA는 제 안티코돈과' 라고 적어 위치를 전제로만 깔 뿐 위치를 주장하지 않는다.",
+        "suggest": "연결 대상을 다시 볼지 여부를 C2 가 정한다"
+      }
+    ],
+    "stats": {
+      "ok": 70,
+      "defect": 18,
+      "uncertain": 13
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "gene-polynucleotide",
+  "concept_key": "concept:polynucleotide",
+  "registry_status": "new",
+  "term": "폴리뉴클레오타이드",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "polynucleotide",
+    "hanja_note": "폴리뉴클레오타이드가 음차어라 대응하는 한자어가 없다."
+  },
+  "definition": "여러 뉴클레오타이드가 죽 이어져 만들어진 사슬 모양의 핵산 중합체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pn-bond",
+      "text": "앞 뉴클레오타이드 당의 3번 탄소와 뒤 뉴클레오타이드의 인산 사이에 공유결합이 생겨 사슬이 이어진다",
+      "form": {
+        "condition": "이미 이어진 사슬 끝에 새 뉴클레오타이드가 붙을 때",
+        "type": "causal",
+        "scope": "핵산 사슬의 형성"
+      },
+      "invertible": false,
+      "invertible_reason": "사슬이 길어졌다고 해서 결합의 종류가 이것 하나로 정해지는 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pn-strand",
+      "text": "이중나선 DNA 의 한 가닥이 곧 하나의 폴리뉴클레오타이드다",
+      "form": {
+        "condition": "이중나선을 가닥 단위로 볼 때",
+        "type": "classification",
+        "scope": "DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "폴리뉴클레오타이드라고 해서 모두 DNA 가닥인 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "폴리뉴클레오타이드는 염기끼리 결합해 이어진 것이다",
+      "why_wrong": "사슬을 잇는 것은 인산과 당 사이의 공유결합이다. 염기 사이의 결합은 두 가닥을 마주 붙이는 수소결합이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pn-bond"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-nucleotide"
+    },
+    {
+      "type": "next",
+      "target": "gene-directionality-of-dna-strand"
+    },
+    {
+      "type": "next",
+      "target": "gene-dna-double-helix"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

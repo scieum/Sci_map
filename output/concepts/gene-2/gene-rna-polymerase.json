@@ -1,0 +1,87 @@
+{
+  "id": "gene-rna-polymerase",
+  "concept_key": "concept:rna-polymerase",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "RNA 중합효소",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "RNA polymerase",
+    "hanja_note": "약칭 RNA와 한자어 '중합효소(重合酵素)'가 결합한 말이라 표제어 전체를 한자로 적지 않는다.",
+    "symbol_display": "RNA 중합효소",
+    "symbol_plain": "RNA"
+  },
+  "definition": "프로모터에 결합해 이중나선을 풀고 주형에 상보적인 뉴클레오타이드를 이어 RNA를 만드는 효소.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pol-promoter",
+      "text": "RNA 중합효소가 프로모터에 붙어야 그 자리에서 전사가 시작된다",
+      "form": {
+        "condition": "전사의 개시 단계",
+        "type": "causal",
+        "scope": "전사가 일어나는 유전자"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 원인이고 개시가 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pol-direction",
+      "text": "RNA 중합효소는 새로 만드는 가닥을 5′ 말단 쪽에서 3′ 말단 쪽으로 늘려 간다",
+      "form": {
+        "condition": "RNA가 신장될 때",
+        "type": "conditional",
+        "scope": "RNA 합성의 방향"
+      },
+      "invertible": true,
+      "invertible_reason": "합성 방향이 하나로 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "RNA 중합효소는 새로 만드는 가닥을 3′ 말단 쪽에서 5′ 말단 쪽으로 늘려 간다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "RNA 중합효소는 DNA 어디에나 붙어 전사를 시작할 수 있다",
+      "why_wrong": "프로모터라는 정해진 조절 부위에 결합했을 때 전사가 시작된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pol-promoter"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-transcription"
+    },
+    {
+      "type": "related",
+      "target": "gene-promoter"
+    },
+    {
+      "type": "related",
+      "target": "gene-operator"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-3",
+  "pages": [
+    63,
+    72
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

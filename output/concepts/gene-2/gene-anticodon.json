@@ -1,0 +1,83 @@
+{
+  "id": "gene-anticodon",
+  "concept_key": "concept:anticodon",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "안티코돈",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "anticodon",
+    "hanja_note": "음차어 '안티'와 '코돈'이 결합한 말이라 대응하는 한자어 표기가 없다."
+  },
+  "definition": "tRNA 한쪽에 있는 세 염기로, mRNA의 코돈과 상보적인 염기쌍을 이루는 부분.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-anti-pairing",
+      "text": "tRNA는 제 안티코돈과 상보적인 코돈이 놓인 자리에만 들어가 결합한다",
+      "form": {
+        "condition": "번역에서 tRNA가 라이보솜으로 들어올 때",
+        "type": "conditional",
+        "scope": "코돈과 안티코돈의 결합"
+      },
+      "invertible": false,
+      "invertible_reason": "결합 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-anti-start",
+      "text": "개시 tRNA의 안티코돈이 mRNA의 개시코돈과 짝지으면서 번역을 시작할 읽기 틀이 정해진다",
+      "form": {
+        "condition": "번역의 개시 단계",
+        "type": "causal",
+        "scope": "원핵생물의 번역 개시"
+      },
+      "invertible": false,
+      "invertible_reason": "짝짓기가 원인이고 읽기 틀이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "안티코돈은 mRNA에 있다",
+      "why_wrong": "안티코돈은 tRNA 쪽에 있다. mRNA 위의 세 염기 묶음은 코돈이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-anti-pairing"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-transfer-rna"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-codon"
+    },
+    {
+      "type": "next",
+      "target": "gene-translation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-4",
+  "pages": [
+    65
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

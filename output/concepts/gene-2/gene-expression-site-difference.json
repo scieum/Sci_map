@@ -1,0 +1,115 @@
+{
+  "id": "gene-expression-site-difference",
+  "concept_key": "concept:prokaryote-eukaryote-expression-site",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "원핵세포와 진핵세포의 유전자발현 장소",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "site of gene expression in prokaryotes and eukaryotes",
+    "hanja_note": "여러 낱말이 이어진 설명형 표제어라 한 낱말의 한자 표기로 대응시킬 수 없다."
+  },
+  "definition": "핵막이 있는지에 따라 전사와 번역이 벌어지는 자리와 이어지는 시점이 달라지는 점을 견주는 내용.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-site-prokaryote",
+      "text": "핵막이 없는 원핵세포에서는 전사가 진행되는 도중에 번역이 함께 시작될 수 있다",
+      "form": {
+        "condition": "핵막이 전사와 번역을 갈라놓지 않을 때",
+        "type": "causal",
+        "scope": "원핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 원인이고 시점이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-site-eukaryote",
+      "text": "진핵세포에서는 핵에서 전사가 이루어진 mRNA가 세포질로 나간 뒤에야 번역이 일어난다",
+      "form": {
+        "condition": "핵막이 두 과정을 갈라놓을 때",
+        "type": "causal",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 원인이고 시점이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-site-cause",
+      "text": "핵막이 있는지 없는지가 전사와 번역이 이어지는 시점의 차이를 만든다",
+      "form": {
+        "condition": "두 종류의 세포를 견줄 때",
+        "type": "causal",
+        "scope": "원핵세포와 진핵세포"
+      },
+      "invertible": true,
+      "invertible_reason": "세포 구조가 원인이고 시점 차이가 결과라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전사와 번역이 이어지는 시점의 차이가 핵막의 유무를 만든다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원핵세포에서도 전사가 모두 끝난 뒤에야 번역이 시작된다",
+      "why_wrong": "원핵세포에는 핵막이 없어 RNA 가닥이 생기기 시작하면 그 자리에서 곧 번역이 시작될 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-site-prokaryote"
+    },
+    {
+      "text": "진핵세포에서도 전사가 끝나기 전에 같은 자리에서 번역이 시작된다",
+      "why_wrong": "진핵세포는 전사가 핵에서, 번역이 세포질에서 일어나므로 두 과정이 곧바로 이어지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-site-eukaryote"
+    },
+    {
+      "text": "진핵세포에서 번역은 핵 안에서 일어난다",
+      "why_wrong": "진핵세포의 번역은 mRNA가 핵공을 지나 세포질로 나온 뒤 라이보솜에서 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-site-eukaryote"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-transcription"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-translation"
+    },
+    {
+      "type": "next",
+      "target": "gene-prokaryote-eukaryote-regulation-comparison"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-4",
+  "pages": [
+    65,
+    68,
+    69
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

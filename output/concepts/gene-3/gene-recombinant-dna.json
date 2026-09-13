@@ -1,0 +1,104 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-recombinant-dna",
+  "concept_key": "concept:recombinant-dna",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "재조합 DNA",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'DNA'가 로마자 약어여서 표제어 전체를 한자로 적을 수 없다. 앞부분만 再組合 이다.",
+    "english": "recombinant DNA",
+    "symbol_display": "DNA",
+    "symbol_plain": "DNA"
+  },
+  "definition": "서로 다른 DNA 조각이 이어 붙어, 본래 생물에는 없던 유전자 조합을 갖게 된 DNA.",
+  "relations": [
+    {
+      "id": "rel-rdna-made",
+      "text": "제한효소로 자른 목적 유전자와 운반체를 연결효소로 이으면 재조합 DNA가 된다",
+      "form": {
+        "condition": "실험실에서 만들 때",
+        "type": "conditional",
+        "scope": "재조합 DNA의 제작 절차"
+      },
+      "invertible": false,
+      "invertible_reason": "만드는 차례를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rdna-host",
+      "text": "재조합 DNA를 증식이 빠른 숙주 세포에 넣으면 세포가 분열하면서 그 DNA도 함께 늘어난다",
+      "form": {
+        "condition": "숙주 안에서 복제가 일어날 때",
+        "type": "causal",
+        "scope": "형질 전환체의 증식"
+      },
+      "invertible": false,
+      "invertible_reason": "결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rdna-new",
+      "text": "재조합 DNA에 든 유전자 하나하나는 본래 생물의 것이고, 새로운 것은 유전자들이 모인 조합이다",
+      "form": {
+        "condition": "무엇이 새로운지 가를 때",
+        "type": "classification",
+        "scope": "재조합 DNA의 성질"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 새로운지를 가른 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "재조합 DNA는 자연에 없던 염기로 이루어진 인공 물질이다",
+      "why_wrong": "염기의 종류는 본래의 DNA와 같고, 달라진 것은 이어 붙인 조합이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rdna-new"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-restriction-enzyme"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dna-ligase-recombinant"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-plasmid"
+    },
+    {
+      "type": "next",
+      "target": "gene-recombinant-dna-technology"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

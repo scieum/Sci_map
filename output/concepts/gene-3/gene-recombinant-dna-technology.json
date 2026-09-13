@@ -1,0 +1,119 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-recombinant-dna-technology",
+  "concept_key": "concept:recombinant-dna-technology",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "DNA 재조합기술",
+  "aliases": [
+    "유전자재조합기술"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'DNA'가 로마자 약어여서 표제어 전체를 한자로 적을 수 없다. 뒷부분만 再組合技術 이다.",
+    "english": "recombinant DNA technology",
+    "symbol_display": "DNA",
+    "symbol_plain": "DNA"
+  },
+  "definition": "서로 다른 출처의 DNA를 사람이 잘라 이어 붙여, 자연에 없던 유전자 조합을 지닌 DNA를 만들어 내는 기술.",
+  "relations": [
+    {
+      "id": "rel-rdt-tools",
+      "text": "제한효소와 DNA 연결효소, 그리고 플라스미드 같은 운반체가 갖춰져야 재조합 DNA를 만들 수 있다",
+      "form": {
+        "condition": "실험실에서 재조합 DNA를 제작할 때",
+        "type": "conditional",
+        "scope": "DNA 재조합 실험의 준비물"
+      },
+      "invertible": false,
+      "invertible_reason": "필요 조건을 늘어놓은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rdt-mass",
+      "text": "재조합 DNA를 증식이 빠른 대장균에 넣어 기르면 목적 유전자의 산물인 단백질을 대량으로 얻는다",
+      "form": {
+        "condition": "숙주 안에서 목적 유전자가 발현될 때",
+        "type": "causal",
+        "scope": "유용한 단백질의 생산"
+      },
+      "invertible": false,
+      "invertible_reason": "생산 과정의 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rdt-speed",
+      "text": "제한효소를 쓰는 재조합기술은 전통적인 육종보다 품종을 개량하는 데 걸리는 시간을 줄였다",
+      "form": {
+        "condition": "같은 품종 개량을 목표로 삼을 때",
+        "type": "conditional",
+        "scope": "농업·축산 분야의 품종 개량"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방법의 빠르기 순서가 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "제한효소를 쓰는 재조합기술은 전통적인 육종보다 품종을 개량하는 데 더 오랜 시간이 걸린다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "재조합 DNA를 만들기만 하면 곧바로 단백질을 대량으로 얻을 수 있다",
+      "why_wrong": "숙주 세포에 넣어 증식시키고 그 안에서 유전자가 발현되어야 단백질이 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rdt-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-recombinant-dna"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-genetic-engineering"
+    },
+    {
+      "type": "next",
+      "target": "gene-living-modified-organism"
+    },
+    {
+      "type": "next",
+      "target": "gene-gene-therapy"
+    },
+    {
+      "type": "related",
+      "target": "gene-restriction-enzyme"
+    },
+    {
+      "type": "related",
+      "target": "gene-plasmid"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03",
+    "12유전03-04"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    102,
+    103,
+    115
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

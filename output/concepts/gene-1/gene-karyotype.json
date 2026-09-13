@@ -1,0 +1,81 @@
+{
+  "id": "gene-karyotype",
+  "concept_key": "concept:karyotype",
+  "registry_status": "new",
+  "term": "핵형",
+  "notation": {
+    "hanja": "核型",
+    "english": "karyotype",
+    "hanja_gloss": "核 씨 핵 · 型 거푸집 형"
+  },
+  "definition": "한 생물의 체세포가 지닌 염색체의 수와 모양, 크기를 통틀어 이르는 특성.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ky-diagnose",
+      "text": "핵형을 분석하면 염색체의 수나 구조에 생긴 이상을 눈으로 확인할 수 있다",
+      "form": {
+        "condition": "분열 중기의 체세포 염색체를 관찰할 때",
+        "type": "causal",
+        "scope": "염색체 수준의 이상에 한정되며 염기 하나의 변화는 보이지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "이상을 확인했다고 해서 반드시 핵형분석으로만 알아낸 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ky-sex",
+      "text": "핵형에는 성염색체 구성이 드러나므로 성별과 성염색체 수이상을 가려낼 수 있다",
+      "form": {
+        "condition": "성염색체를 구분할 수 있을 때",
+        "type": "causal",
+        "scope": "사람의 핵형분석"
+      },
+      "invertible": false,
+      "invertible_reason": "성별을 알 수 있다고 해서 반드시 핵형을 분석한 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵형분석으로 유전자이상에 따른 유전병도 알아낼 수 있다",
+      "why_wrong": "핵형분석은 염색체의 수와 모양을 보는 방법이다. 염기 하나가 바뀐 유전자이상은 현미경으로 보이지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ky-diagnose"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-autosome-and-sex-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "gene-chromosome-number-abnormality"
+    },
+    {
+      "type": "related",
+      "target": "gene-down-syndrome"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    31
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

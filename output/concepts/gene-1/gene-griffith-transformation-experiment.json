@@ -1,0 +1,81 @@
+{
+  "id": "gene-griffith-transformation-experiment",
+  "concept_key": "concept:griffith-transformation-experiment",
+  "registry_status": "new",
+  "term": "그리피스의 형질전환 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Griffith's transformation experiment",
+    "hanja_note": "그리피스가 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(형질전환 실험은 形質轉換 實驗)."
+  },
+  "definition": "폐렴균과 생쥐를 써서, 죽은 병원성 균에 남은 어떤 물질이 비병원성 균을 병원성으로 바꾼다는 것을 보인 실험.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gr-four",
+      "text": "열처리한 S형균만 넣은 생쥐는 살지만 거기에 살아 있는 R형균을 함께 넣으면 생쥐가 죽는다",
+      "form": {
+        "condition": "네 가지 주입 조건의 결과를 나란히 견줄 때",
+        "type": "conditional",
+        "scope": "그리피스가 폐렴균으로 한 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "생쥐가 죽었다고 해서 조건이 하나로 정해지지는 않는다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gr-infer",
+      "text": "죽은 생쥐에서 살아 있는 S형균이 나온 것은 형질을 바꾼 물질이 있었음을 가리킨다",
+      "form": {
+        "condition": "실험 결과를 해석할 때",
+        "type": "causal",
+        "scope": "형질전환 물질의 정체까지는 밝히지 못했다"
+      },
+      "invertible": false,
+      "invertible_reason": "물질의 존재를 가리킨다고 해서 그 물질이 무엇인지까지 이 결과로 정해지지는 않는다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "그리피스는 유전물질이 DNA 임을 밝혔다",
+      "why_wrong": "그리피스는 형질을 바꾸는 물질이 있다는 데까지만 다다랐다. 그 물질이 DNA 임을 가려낸 것은 에이버리와 동료들이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gr-infer"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-transformation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-genetic-material"
+    },
+    {
+      "type": "next",
+      "target": "gene-avery-experiment"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

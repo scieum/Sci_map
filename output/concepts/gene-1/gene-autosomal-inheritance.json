@@ -1,0 +1,85 @@
+{
+  "id": "gene-autosomal-inheritance",
+  "concept_key": "concept:autosomal-inheritance",
+  "registry_status": "new",
+  "term": "상염색체 유전",
+  "notation": {
+    "hanja": "常染色體遺傳",
+    "english": "autosomal inheritance",
+    "hanja_gloss": "常 항상 상 · 染 물들 염 · 色 빛 색 · 體 몸 체 · 遺 남길 유 · 傳 전할 전"
+  },
+  "definition": "형질을 결정하는 유전자가 상염색체에 놓여 있어 성별과 상관없이 같은 방식으로 전해지는 유전.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ai-freq",
+      "text": "상염색체에 유전자가 있는 형질은 이론상 남녀에서 같은 빈도로 나타난다",
+      "form": {
+        "condition": "집단에서 대립유전자 빈도가 남녀에 같을 때",
+        "type": "conditional",
+        "scope": "상염색체에 놓인 형질에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "빈도가 같다고 해서 반드시 상염색체 유전이라 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ai-pair",
+      "text": "암수 모두 한 쌍의 대립유전자를 지니므로 멘델의 유전 원리를 그대로 적용할 수 있다",
+      "form": {
+        "condition": "이배체 생물에서",
+        "type": "causal",
+        "scope": "단일유전자 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "멘델 원리가 적용된다고 해서 모두 상염색체 유전인 것은 아니다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상염색체 유전병은 남자에게 더 많이 나타난다",
+      "why_wrong": "남녀가 상염색체를 똑같이 가지므로 빈도는 이론상 같다. 성별에 따라 빈도가 갈리는 쪽은 성염색체 유전이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ai-freq"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-autosome-and-sex-chromosome"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-mendelian-inheritance"
+    },
+    {
+      "type": "related",
+      "target": "gene-sex-linked-inheritance"
+    },
+    {
+      "type": "next",
+      "target": "gene-abo-blood-group"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-3",
+  "pages": [
+    16
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,104 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-bioenergy",
+  "concept_key": "concept:bioenergy",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "바이오에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "외래어를 소리대로 적은 말이라 대응하는 한자가 없다.",
+    "english": "bioenergy"
+  },
+  "definition": "생명공학기술로 생물 자원을 발효·가공해 얻어 내는 에탄올·디젤·가스 형태의 연료 에너지.",
+  "relations": [
+    {
+      "id": "rel-be-source",
+      "text": "살아 있는 생물만이 아니라 폐식용유나 음식물 쓰레기 같은 유기 폐기물도 바이오에너지의 원료가 된다",
+      "form": {
+        "condition": "원료로 삼을 수 있는 것을 가릴 때",
+        "type": "classification",
+        "scope": "바이오에너지 원료의 범위"
+      },
+      "invertible": false,
+      "invertible_reason": "원료의 범위를 넓혀 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-be-fossil",
+      "text": "원료를 다시 길러 낼 수 있다는 점에서 바이오에너지는 고갈되어 가는 화석연료를 대신할 후보가 된다",
+      "form": {
+        "condition": "원료를 계속 확보할 수 있을 때",
+        "type": "causal",
+        "scope": "화석연료의 대체"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-be-land",
+      "text": "원료 식물을 많이 재배할수록 넓은 땅이 필요해져 생태계가 훼손될 위험도 커진다",
+      "form": {
+        "condition": "작물을 원료로 대량 생산할 때",
+        "type": "direct",
+        "scope": "바이오에너지의 한계",
+        "antecedent": {
+          "quantity": "원료 작물의 재배 면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "생태계 훼손 위험",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "필요한 면적과 위험이 움직이는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원료 식물을 많이 재배할수록 필요한 땅이 줄어 생태계가 훼손될 위험도 작아진다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바이오에너지는 친환경적이라서 아무리 많이 생산해도 환경에 해가 없다",
+      "why_wrong": "원료가 되는 작물을 기르는 데 넓은 땅이 필요해, 지나치면 오히려 생태계가 파괴될 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-be-land"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-biotechnology"
+    },
+    {
+      "type": "related",
+      "target": "gene-bioremediation"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-3",
+  "pages": [
+    113,
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

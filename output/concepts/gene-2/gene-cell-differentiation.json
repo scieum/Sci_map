@@ -1,0 +1,120 @@
+{
+  "id": "gene-cell-differentiation",
+  "concept_key": "concept:cell-differentiation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "세포분화",
+  "notation": {
+    "hanja": "細胞分化",
+    "english": "cell differentiation",
+    "hanja_gloss": "細 가늘 세 · 胞 태보 포 · 分 나눌 분 · 化 될 화"
+  },
+  "definition": "하나의 수정란에서 비롯한 세포들이 저마다 다른 구조와 기능을 갖추어 가는 변화.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dif-same-genome",
+      "text": "세포분화는 유전체가 달라져서가 아니라 발현되는 유전자가 달라져서 일어난다",
+      "form": {
+        "condition": "분화한 세포들의 유전체를 견줄 때",
+        "type": "causal",
+        "scope": "다세포생물의 체세포"
+      },
+      "invertible": true,
+      "invertible_reason": "발현의 변화가 원인이고 유전체 변화는 원인이 아니라는 점이 뚜렷해 뒤집으면 거짓이다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세포분화는 발현이 아니라 유전체 자체가 달라져서 일어난다"
+    },
+    {
+      "id": "rel-dif-protein",
+      "text": "분화를 마친 세포는 제 구조와 기능에 맞는 단백질을 만들어 고유한 특성을 드러낸다",
+      "form": {
+        "condition": "분화가 끝난 세포를 볼 때",
+        "type": "causal",
+        "scope": "근육세포·혈구·상피세포 등"
+      },
+      "invertible": false,
+      "invertible_reason": "만들어진 단백질과 특성이 서로 얽혀 있어 뒤집은 문장이 늘 거짓이라고 하기 어렵다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dif-tf",
+      "text": "여러 전사 인자가 차례로 작용하며 발현을 조절해 분화가 진행된다",
+      "form": {
+        "condition": "분화가 일어나는 동안",
+        "type": "causal",
+        "scope": "진핵생물의 세포분화"
+      },
+      "invertible": false,
+      "invertible_reason": "조절이 원인이고 분화가 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "분화한 세포는 분화하기 전 세포와 유전자 구성이 다르다",
+      "why_wrong": "한 개체의 세포들은 같은 유전체를 지닌다. 달라지는 것은 어떤 유전자를 발현하느냐다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dif-same-genome"
+    },
+    {
+      "text": "완전히 분화한 세포는 더 이상 유전자발현을 조절할 필요가 없다",
+      "why_wrong": "분화를 마친 세포도 제 기능에 맞는 단백질을 만들려면 발현을 계속 조절해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dif-protein"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-eukaryotic-expression-regulation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-transcription-factor"
+    },
+    {
+      "type": "next",
+      "target": "gene-master-regulatory-gene"
+    },
+    {
+      "type": "next",
+      "target": "gene-transcription-factor-combination"
+    },
+    {
+      "type": "next",
+      "target": "gene-animal-development"
+    },
+    {
+      "type": "next",
+      "target": "gene-embryonic-stem-cell-differentiation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-1",
+  "pages": [
+    78,
+    80,
+    85
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

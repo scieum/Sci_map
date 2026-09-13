@@ -1,0 +1,82 @@
+{
+  "id": "gene-huntington-disease",
+  "concept_key": "concept:huntington-disease",
+  "registry_status": "new",
+  "term": "헌팅턴무도병",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Huntington's disease",
+    "hanja_note": "헌팅턴이 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(무도병은 舞蹈病)."
+  },
+  "definition": "우성 대립유전자에 의해 나타나는 퇴행성 뇌질환. 대개 중년에 이르러서야 증세가 드러난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hd-late",
+      "text": "증세가 생식 시기보다 늦게 나타나므로 발병 전에 이미 대립유전자가 자손에게 건너가는 일이 많다",
+      "form": {
+        "condition": "발병 시기가 자녀를 낳는 시기보다 늦을 때",
+        "type": "causal",
+        "scope": "헌팅턴무도병"
+      },
+      "invertible": false,
+      "invertible_reason": "자손에게 전달되었다고 해서 원인이 반드시 늦은 발병 시기인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hd-dominant",
+      "text": "우성 대립유전자에 의한 유전병이므로 그것을 하나만 지녀도 발병한다",
+      "form": {
+        "condition": "우성 대립유전자를 하나 이상 지녔을 때",
+        "type": "conditional",
+        "scope": "우성으로 유전되는 유전병"
+      },
+      "invertible": true,
+      "invertible_reason": "둘을 모두 지녀야 한다고 뒤집으면 우성 유전병을 열성처럼 다루게 되어 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "헌팅턴무도병은 대립유전자를 둘 다 지녀야 발병한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전병은 모두 열성이므로 부모가 정상이면 자녀도 정상이다",
+      "why_wrong": "헌팅턴무도병처럼 우성 대립유전자로 나타나는 유전병도 있다. 게다가 새로 생긴 돌연변이로 발병하는 경우도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hd-dominant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene-mutation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dominance-and-recessiveness"
+    },
+    {
+      "type": "related",
+      "target": "gene-pedigree-analysis"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-3",
+  "pages": [
+    35
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

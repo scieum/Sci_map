@@ -1,0 +1,116 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-polymerase-chain-reaction",
+  "concept_key": "concept:polymerase-chain-reaction",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "중합효소연쇄반응(PCR)",
+  "aliases": [
+    "PCR",
+    "DNA 중합효소연쇄반응"
+  ],
+  "notation": {
+    "hanja": "重合酵素連鎖反應",
+    "hanja_gloss": "重 무거울 중 · 合 합할 합 · 酵 삭힐 효 · 素 흴 소 · 連 이을 련 · 鎖 쇠사슬 쇄 · 反 돌이킬 반 · 應 응할 응",
+    "english": "polymerase chain reaction",
+    "symbol_display": "PCR",
+    "symbol_plain": "PCR"
+  },
+  "definition": "DNA 중합효소를 이용해 원하는 DNA 부위를 짧은 시간 안에 여러 배로 늘리는 증폭 기술.",
+  "relations": [
+    {
+      "id": "rel-pcr-amplify",
+      "text": "시료에 든 DNA가 극소량이어도 증폭을 거치면 분석에 쓸 만한 양까지 늘어난다",
+      "form": {
+        "condition": "표적 부위에 맞는 시발체가 있을 때",
+        "type": "causal",
+        "scope": "극소량 DNA 시료"
+      },
+      "invertible": false,
+      "invertible_reason": "증폭이라는 조작의 결과를 말한 서술이라 뒤집은 문장이 늘 거짓이라 하기 어렵다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pcr-cycle",
+      "text": "반응 횟수가 늘수록 표적 부위의 DNA 양은 많아진다",
+      "form": {
+        "condition": "반응 조건이 유지될 때",
+        "type": "direct",
+        "scope": "표적으로 삼은 DNA 구간",
+        "antecedent": {
+          "quantity": "반응 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "표적 DNA의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양이 움직이는 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반응 횟수가 늘수록 표적 부위의 DNA 양은 줄어든다"
+    },
+    {
+      "id": "rel-pcr-forensic",
+      "text": "범죄 현장의 적은 혈흔으로 신원을 가릴 수 있는 것은 DNA를 먼저 증폭해 두기 때문이다",
+      "form": {
+        "condition": "증거물에서 DNA를 얻을 수 있을 때",
+        "type": "causal",
+        "scope": "법의학 감식"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "PCR는 DNA의 염기서열을 읽어 주는 기술이다",
+      "why_wrong": "PCR가 하는 일은 양을 늘리는 것이고, 차례를 읽는 일은 염기순서분석법이 맡는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pcr-amplify"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-dna-fingerprinting"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-sequencing"
+    },
+    {
+      "type": "related",
+      "target": "gene-recombinant-dna-technology"
+    }
+  ],
+  "curriculum": [
+    "12유전03-01",
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-1-1",
+  "pages": [
+    99,
+    101,
+    112
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

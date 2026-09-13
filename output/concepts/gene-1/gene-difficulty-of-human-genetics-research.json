@@ -1,0 +1,85 @@
+{
+  "id": "gene-difficulty-of-human-genetics-research",
+  "concept_key": "concept:difficulty-of-human-genetics-research",
+  "registry_status": "new",
+  "term": "사람 유전 연구의 어려움",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "difficulty of human genetics research",
+    "hanja_note": "사람이 고유어라 표제어 전체에 대응하는 한자어가 없다(유전 연구는 遺傳 硏究)."
+  },
+  "definition": "한 세대가 길고 자손 수가 적으며 교배를 계획할 수 없어, 사람의 유전을 직접 실험으로 다루기 어렵다는 사정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dh-stat",
+      "text": "모을 수 있는 자료가 적으면 형질의 우열을 가리거나 유전 확률을 셈해 내기 어려워진다",
+      "form": {
+        "condition": "가계 하나에서 얻은 자료만 손에 있을 때",
+        "type": "causal",
+        "scope": "통계적 추론에 기대는 사람 유전 연구"
+      },
+      "invertible": false,
+      "invertible_reason": "우열을 가리기 어렵다고 해서 원인이 반드시 자료 부족인 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dh-indirect",
+      "text": "직접 실험이 막혀 있으므로 사람의 유전은 가계도·쌍둥이·집단 자료 같은 간접 방법으로 연구한다",
+      "form": {
+        "condition": "직접 교배가 불가능할 때",
+        "type": "causal",
+        "scope": "사람 유전 연구의 방법 선택"
+      },
+      "invertible": false,
+      "invertible_reason": "간접 방법을 쓴다고 해서 대상이 반드시 사람인 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "사람은 실험이 불가능하므로 유전 연구를 할 수 없다",
+      "why_wrong": "직접 교배가 어려울 뿐이다. 쌍둥이 연구·집단 조사·가계도 조사, 최근에는 염기서열 분석까지 여러 길이 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dh-indirect"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-model-organism"
+    },
+    {
+      "type": "next",
+      "target": "gene-twin-study"
+    },
+    {
+      "type": "next",
+      "target": "gene-population-survey"
+    },
+    {
+      "type": "next",
+      "target": "gene-pedigree-analysis"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-1",
+  "pages": [
+    20
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

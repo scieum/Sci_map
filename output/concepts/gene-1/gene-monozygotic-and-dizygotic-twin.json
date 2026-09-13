@@ -1,0 +1,82 @@
+{
+  "id": "gene-monozygotic-and-dizygotic-twin",
+  "concept_key": "concept:monozygotic-and-dizygotic-twin",
+  "registry_status": "new",
+  "term": "일란성쌍둥이와 이란성쌍둥이",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "monozygotic and dizygotic twin",
+    "hanja_note": "쌍둥이가 고유어라 표제어 전체에 대응하는 한자어가 없다(일란성·이란성은 一卵性·二卵性)."
+  },
+  "definition": "하나의 수정란이 둘로 갈라져 생긴 쌍둥이가 일란성, 서로 다른 두 난자가 각각 수정해 생긴 쌍둥이가 이란성이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-md-same",
+      "text": "일란성쌍둥이는 한 수정란에서 갈라져 나왔으므로 성별이나 혈액형처럼 유전자만으로 정해지는 형질이 서로 같다",
+      "form": {
+        "condition": "수정 뒤 발생 초기에 둘로 나뉘었을 때",
+        "type": "causal",
+        "scope": "새로운 돌연변이를 셈에 넣지 않을 때"
+      },
+      "invertible": true,
+      "invertible_reason": "한 수정란에서 갈라져 나온 두 사람이 유전자만으로 정해지는 형질에서 갈린다는 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일란성쌍둥이도 성별이나 혈액형이 서로 다를 수 있다"
+    },
+    {
+      "id": "rel-md-di",
+      "text": "이란성쌍둥이가 유전적으로 닮은 정도는 보통의 형제자매와 다르지 않다",
+      "form": {
+        "condition": "서로 다른 두 수정란에서 발생했을 때",
+        "type": "classification",
+        "scope": "같은 부모에게서 난 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "형제자매만큼 닮았다고 해서 반드시 이란성쌍둥이인 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이란성쌍둥이도 유전자가 서로 같다",
+      "why_wrong": "이란성은 난자와 정자가 각각 따로 수정한 것이라 형제자매만큼만 닮는다. 유전자가 같은 쪽은 일란성이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-md-di"
+    }
+  ],
+  "links": [
+    {
+      "type": "related",
+      "target": "gene-twin-study"
+    },
+    {
+      "type": "next",
+      "target": "gene-effect-of-environment-on-phenotype"
+    },
+    {
+      "type": "related",
+      "target": "gene-epigenetic-regulation"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-2",
+  "pages": [
+    21
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

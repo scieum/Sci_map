@@ -1,0 +1,82 @@
+{
+  "id": "gene-dna-ligase",
+  "concept_key": "concept:dna-ligase",
+  "registry_status": "new",
+  "term": "DNA 연결효소",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "DNA ligase",
+    "hanja_note": "DNA 가 로마자 약어라 표제어 전체에 대응하는 한자어가 없다(연결효소는 連結酵素)."
+  },
+  "definition": "따로 만들어진 DNA 조각의 끝을 이어 하나의 연속된 가닥으로 만드는 효소.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lg-join",
+      "text": "지연 가닥의 짧은 조각들은 연결효소가 이어야 비로소 하나의 가닥이 된다",
+      "form": {
+        "condition": "불연속 합성이 끝난 뒤",
+        "type": "causal",
+        "scope": "지연 가닥"
+      },
+      "invertible": false,
+      "invertible_reason": "조각이 이어졌다고 해서 그 일을 맡은 것이 언제나 연결효소인 것은 아니다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lg-order",
+      "text": "복제는 이중나선이 풀리고 프라이머가 붙은 뒤 중합효소가 늘리고 마지막에 연결효소가 잇는 차례로 진행된다",
+      "form": {
+        "condition": "한 복제 분기점에서 일어나는 일을 차례로 볼 때",
+        "type": "conditional",
+        "scope": "DNA 복제 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "연결효소가 먼저 일하고 중합효소가 나중에 온다고 뒤집으면 이을 조각이 아직 없어 성립하지 않는다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "복제에서는 연결효소가 먼저 조각을 이은 뒤에 중합효소가 가닥을 늘린다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 연결효소는 뉴클레오타이드를 하나씩 붙여 가닥을 늘린다",
+      "why_wrong": "뉴클레오타이드를 붙여 늘리는 일은 중합효소가 한다. 연결효소는 이미 만들어진 조각의 끝과 끝을 잇는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lg-join"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-leading-and-lagging-strand"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dna-polymerase"
+    },
+    {
+      "type": "related",
+      "target": "gene-primer"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-2",
+  "pages": [
+    47
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,85 @@
+{
+  "id": "gene-myod-gene",
+  "concept_key": "concept:myod-gene",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "마이오디 유전자",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "MyoD gene",
+    "hanja_note": "고유명 MyoD 를 음차한 표기라 대응하는 한자어가 없다.",
+    "symbol_display": "MyoD",
+    "symbol_plain": "MyoD"
+  },
+  "definition": "근육세포로 가는 분화를 가장 위에서 이끄는 핵심 조절유전자.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-myod-tf",
+      "text": "전구세포에서 마이오디 유전자가 발현되면 그 산물인 마이오디 단백질이 전사 인자로 작용한다",
+      "form": {
+        "condition": "근육세포로 분화가 시작될 때",
+        "type": "causal",
+        "scope": "근육세포의 분화"
+      },
+      "invertible": false,
+      "invertible_reason": "발현이 앞서고 작용이 뒤따르는 관계라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-myod-muscle",
+      "text": "마이오디 단백질은 다른 전사 인자의 발현을 이끌어 액틴·마이오신 같은 근육 단백질이 만들어지게 한다",
+      "form": {
+        "condition": "근육세포로 분화하는 동안",
+        "type": "causal",
+        "scope": "근육세포 분화 경로"
+      },
+      "invertible": false,
+      "invertible_reason": "여러 단계를 이은 서술이라 뒤집어도 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마이오디 유전자의 산물은 근육을 이루는 구조 단백질이다",
+      "why_wrong": "마이오디 단백질은 전사 인자다. 액틴·마이오신 같은 근육 단백질은 그 뒤에 발현되는 유전자의 산물이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-myod-tf"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-master-regulatory-gene"
+    },
+    {
+      "type": "related",
+      "target": "gene-cell-differentiation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-1",
+  "pages": [
+    80,
+    85
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "MyoD 유전자"
+  ]
+}

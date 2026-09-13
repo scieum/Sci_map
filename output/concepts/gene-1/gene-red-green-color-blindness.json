@@ -1,0 +1,83 @@
+{
+  "id": "gene-red-green-color-blindness",
+  "concept_key": "concept:red-green-color-blindness",
+  "registry_status": "new",
+  "term": "적록색맹",
+  "notation": {
+    "hanja": "赤綠色盲",
+    "english": "red-green color blindness",
+    "hanja_gloss": "赤 붉을 적 · 綠 푸를 록 · 色 빛 색 · 盲 눈멀 맹"
+  },
+  "definition": "붉은색과 녹색을 가려보지 못하는 형질. 관련 유전자가 X염색체에 놓인 열성형질이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rg-freq",
+      "text": "적록색맹은 여자보다 남자에게서 더 높은 빈도로 나타난다",
+      "form": {
+        "condition": "남자는 X염색체를 하나만 지니므로",
+        "type": "causal",
+        "scope": "X염색체 열성형질인 사람의 적록색맹"
+      },
+      "invertible": true,
+      "invertible_reason": "여자에게 더 흔하다고 뒤집으면 X염색체 열성형질의 성별 빈도와 정면으로 어긋난다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적록색맹은 남자보다 여자에게서 더 높은 빈도로 나타난다"
+    },
+    {
+      "id": "rel-rg-prob",
+      "text": "어머니가 보인자이고 아버지가 정상이면 아들이 적록색맹일 확률은 2분의 1이다",
+      "form": {
+        "condition": "태어날 자녀가 아들일 때",
+        "type": "conditional",
+        "scope": "X염색체 열성 유전"
+      },
+      "invertible": false,
+      "invertible_reason": "확률이 2분의 1이라고 해서 부모의 유전자형이 하나로 정해지는 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적록색맹인 여자는 태어날 수 없다",
+      "why_wrong": "양쪽 X염색체에 모두 적록색맹 대립유전자가 있으면 여자도 적록색맹이 된다. 여아가 태어나기 어려운 쪽은 혈우병이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rg-freq"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-sex-linked-inheritance"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-carrier"
+    },
+    {
+      "type": "related",
+      "target": "gene-pedigree-analysis"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-4",
+  "pages": [
+    23,
+    25
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

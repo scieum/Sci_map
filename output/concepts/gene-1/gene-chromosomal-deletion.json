@@ -1,0 +1,81 @@
+{
+  "id": "gene-chromosomal-deletion",
+  "concept_key": "concept:chromosomal-deletion",
+  "registry_status": "new",
+  "term": "결실",
+  "notation": {
+    "hanja": "缺失",
+    "english": "deletion",
+    "hanja_gloss": "缺 이지러질 결 · 失 잃을 실"
+  },
+  "definition": "염색체를 이루는 부위 가운데 일부가 떨어져 나가 되돌아오지 못하게 된 구조이상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-de-loss",
+      "text": "결실이 일어나면 없어진 부위에 있던 유전자가 사라져 그 기능을 잃는다",
+      "form": {
+        "condition": "유전자가 놓인 부위가 떨어져 나갔을 때",
+        "type": "causal",
+        "scope": "염색체구조이상"
+      },
+      "invertible": false,
+      "invertible_reason": "유전자의 기능을 잃었다고 해서 원인이 반드시 결실인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-de-cri",
+      "text": "사람에서 5번 염색체의 특정 부위가 결실되면 고양이울음증후군이 나타난다",
+      "form": {
+        "condition": "그 부위가 떨어져 나간 채 태어났을 때",
+        "type": "causal",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "고양이울음증후군의 증상만으로 결실 부위를 확정할 수는 없다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "결실이 일어나도 염색체에 실린 유전자 수는 그대로다",
+      "why_wrong": "떨어져 나간 부분에 있던 유전자가 함께 사라진다. 그래서 그 유전자가 만들던 단백질도 만들어지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-de-loss"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-chromosome-structure-abnormality"
+    },
+    {
+      "type": "related",
+      "target": "gene-chromosomal-duplication"
+    },
+    {
+      "type": "related",
+      "target": "gene-genetic-disease"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    33
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

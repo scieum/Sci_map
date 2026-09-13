@@ -1,0 +1,91 @@
+{
+  "id": "gene-induced-pluripotent-stem-cell-reprogramming",
+  "concept_key": "concept:induced-pluripotent-stem-cell",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "유도 만능 줄기세포",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "induced pluripotent stem cell",
+    "hanja_note": "한자어와 음차어가 섞인 설명형 표제어라 전체에 대응하는 한자어 표기가 없다.",
+    "symbol_display": "iPS 세포",
+    "symbol_plain": "iPS"
+  },
+  "definition": "분화를 마친 체세포에 특정 전사 인자 유전자를 넣어 다형성능을 갖추게 만든 줄기세포.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ips-reprogram",
+      "text": "분화를 마친 체세포에 배아줄기세포의 특성을 좌우하는 전사 인자 유전자를 넣으면 다형성능이 되살아난다",
+      "form": {
+        "condition": "체세포에 전사 인자 유전자를 도입할 때",
+        "type": "causal",
+        "scope": "유도 만능 줄기세포를 만드는 과정"
+      },
+      "invertible": false,
+      "invertible_reason": "도입이 원인이고 역분화가 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ips-advantage",
+      "text": "환자 자신의 체세포로 만들 수 있어 배아를 쓰는 데 따르는 윤리 문제와 면역 거부반응을 피한다",
+      "form": {
+        "condition": "환자의 체세포를 이용할 때",
+        "type": "causal",
+        "scope": "유도 만능 줄기세포를 이용한 치료"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭과 이점을 이은 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유도 만능 줄기세포도 배아에서 얻는다",
+      "why_wrong": "이 세포는 이미 분화한 체세포에서 만든다. 배아를 쓰지 않는다는 점이 배아줄기세포와 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ips-reprogram"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-embryonic-stem-cell-differentiation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-transcription-factor"
+    },
+    {
+      "type": "same",
+      "target": "gene-induced-pluripotent-stem-cell",
+      "note": "같은 concept_key 의 III 단원 카드 (줄기세포 활용 맥락)"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-2",
+  "pages": [
+    82,
+    83,
+    85
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "iPS 세포"
+  ]
+}

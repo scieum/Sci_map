@@ -1,0 +1,83 @@
+{
+  "id": "gene-genotype-and-phenotype",
+  "concept_key": "concept:genotype-and-phenotype",
+  "registry_status": "new",
+  "term": "유전자형과 표현형",
+  "notation": {
+    "hanja": "遺傳子型 · 表現型",
+    "english": "genotype and phenotype",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자 · 型 거푸집 형 · 表 겉 표 · 現 나타날 현 · 型 거푸집 형"
+  },
+  "definition": "개체가 지닌 대립유전자의 조합을 유전자형이라 하고, 그 조합의 결과로 겉에 드러난 형질을 표현형이라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gp-same",
+      "text": "유전자형이 서로 달라도 표현형은 같게 나타날 수 있다",
+      "form": {
+        "condition": "우열 관계가 뚜렷한 형질에서",
+        "type": "conditional",
+        "scope": "AA 와 Aa 처럼 우성 대립유전자를 지닌 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "AA 와 Aa 가 같은 표현형을 내므로 표현형이 같으면 유전자형도 같다는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표현형이 같은 두 개체는 유전자형도 같다"
+    },
+    {
+      "id": "rel-gp-env",
+      "text": "표현형은 유전자형만으로 정해지지 않고 환경요인의 영향도 함께 받는다",
+      "form": {
+        "condition": "환경 조건이 다른 개체를 견줄 때",
+        "type": "causal",
+        "scope": "키·피부색처럼 환경에 민감한 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "환경이 달라도 표현형이 그대로인 형질이 있어 뒤집은 문장이 항상 거짓은 아니다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "표현형이 같으면 유전자형도 같다",
+      "why_wrong": "우성 대립유전자를 하나만 가진 개체와 둘 다 가진 개체는 겉모습이 같다. 표현형만으로는 유전자형을 하나로 좁힐 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gp-same"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-allele"
+    },
+    {
+      "type": "next",
+      "target": "gene-homozygosity-and-heterozygosity"
+    },
+    {
+      "type": "related",
+      "target": "gene-effect-of-environment-on-phenotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-2",
+  "pages": [
+    13,
+    15
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

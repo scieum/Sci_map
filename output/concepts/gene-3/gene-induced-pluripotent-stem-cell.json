@@ -1,0 +1,89 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-induced-pluripotent-stem-cell",
+  "concept_key": "concept:induced-pluripotent-stem-cell",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "유도 만능 줄기세포",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'줄기'가 고유어여서 표제어 전체를 한자로 적지 않는다. 誘導 와 萬能 만 한자어다.",
+    "english": "induced pluripotent stem cell",
+    "symbol_display": "iPS",
+    "symbol_plain": "iPS"
+  },
+  "definition": "성체의 체세포에 유전자를 넣어 미분화 상태로 되돌려 얻는 줄기세포.",
+  "relations": [
+    {
+      "id": "rel-ipsc-self",
+      "text": "환자 자신의 체세포에서 얻으므로 난자를 쓰지 않고 면역 거부반응 걱정도 덜 수 있다",
+      "form": {
+        "condition": "환자 본인의 세포를 재료로 쓸 때",
+        "type": "causal",
+        "scope": "유도 만능 줄기세포"
+      },
+      "invertible": false,
+      "invertible_reason": "재료에서 따라 나오는 결과를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ipsc-risk",
+      "text": "체세포를 미분화 상태로 되돌리는 과정에서 유전자 변이가 생길 수 있다는 문제가 남아 있다",
+      "form": {
+        "condition": "역분화를 유도하는 과정에서",
+        "type": "conditional",
+        "scope": "유도 만능 줄기세포의 한계"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유도 만능 줄기세포도 난자를 이용해서 만든다",
+      "why_wrong": "체세포를 되돌려 얻으므로 난자가 필요하지 않다. 난자를 쓰는 쪽은 핵치환으로 만든 배아줄기세포다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ipsc-self"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-stem-cell"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dedifferentiation"
+    },
+    {
+      "type": "related",
+      "target": "gene-embryonic-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-adult-stem-cell"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    106
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": []
+}

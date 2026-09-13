@@ -1,0 +1,82 @@
+{
+  "id": "gene-nucleosome",
+  "concept_key": "concept:nucleosome",
+  "registry_status": "new",
+  "term": "뉴클레오솜",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "nucleosome",
+    "hanja_note": "뉴클레오솜이 음차어라 대응하는 한자어가 없다."
+  },
+  "definition": "DNA 가 히스톤 단백질을 감아 이룬, 진핵세포 염색체의 기본 구조 단위.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nc-condense",
+      "text": "DNA 가 히스톤을 감아 뉴클레오솜을 이루면서 긴 DNA 가 핵 안에 들어갈 만큼 응축된다",
+      "form": {
+        "condition": "진핵세포의 핵 안에서",
+        "type": "causal",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "응축되었다고 해서 그 방식이 뉴클레오솜 하나로만 설명되는 것은 아니다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nc-divide",
+      "text": "뉴클레오솜 구조가 있는지 없는지는 진핵세포와 원핵세포를 가르는 특징 가운데 하나다",
+      "form": {
+        "condition": "두 세포의 유전체 구성을 견줄 때",
+        "type": "classification",
+        "scope": "원핵세포와 진핵세포의 비교"
+      },
+      "invertible": false,
+      "invertible_reason": "구분 기준이 된다고 해서 그것 하나로 두 세포가 갈리는 것은 아니다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "뉴클레오솜은 원핵세포와 진핵세포 모두에 있다",
+      "why_wrong": "히스톤에 감긴 뉴클레오솜은 진핵세포의 특징이다. 원핵세포의 DNA 는 응축되더라도 이런 구조를 이루지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nc-divide"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-eukaryotic-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-double-helix"
+    },
+    {
+      "type": "related",
+      "target": "gene-epigenetic-regulation"
+    }
+  ],
+  "curriculum": [
+    "12유전01-06"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-2",
+  "pages": [
+    28,
+    44
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

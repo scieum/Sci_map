@@ -1,0 +1,82 @@
+{
+  "id": "gene-effect-of-environment-on-phenotype",
+  "concept_key": "concept:effect-of-environment-on-phenotype",
+  "registry_status": "new",
+  "term": "환경요인과 표현형",
+  "notation": {
+    "hanja": "環境要因 · 表現型",
+    "english": "effect of environment on phenotype",
+    "hanja_gloss": "環 고리 환 · 境 지경 경 · 要 구할 요 · 因 인할 인 · 表 겉 표 · 現 나타날 현 · 型 거푸집 형"
+  },
+  "definition": "같은 유전자형을 지녀도 자라 온 환경에 따라 겉으로 드러나는 형질이 달라질 수 있다는 점.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ee-diff",
+      "text": "유전자형이 같아도 환경 조건이 다르면 표현형이 다르게 나타날 수 있다",
+      "form": {
+        "condition": "환경에 민감한 형질을 볼 때",
+        "type": "causal",
+        "scope": "일란성쌍둥이나 같은 돌연변이를 지닌 사람"
+      },
+      "invertible": false,
+      "invertible_reason": "표현형이 다르다고 해서 원인이 반드시 환경인 것은 아니다",
+      "curriculum": [
+        "12유전01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ee-penetrance",
+      "text": "같은 돌연변이 유전자를 지녀도 증상이 드러나는 정도는 사람마다 다를 수 있다",
+      "form": {
+        "condition": "다지증이나 페닐케톤뇨증처럼 발현이 일정하지 않은 형질에서",
+        "type": "conditional",
+        "scope": "환경과 다른 유전자의 영향을 함께 받는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "증상 차이가 있다고 해서 반드시 같은 돌연변이를 지닌 것은 아니다",
+      "curriculum": [
+        "12유전01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전자형만 알면 표현형을 정확히 알아낼 수 있다",
+      "why_wrong": "환경요인과 다른 유전자의 작용이 겹치므로 같은 유전자형에서도 표현형이 갈릴 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ee-diff"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genotype-and-phenotype"
+    },
+    {
+      "type": "related",
+      "target": "gene-polygenic-inheritance"
+    },
+    {
+      "type": "next",
+      "target": "gene-epigenetic-regulation"
+    }
+  ],
+  "curriculum": [
+    "12유전01-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-5",
+  "pages": [
+    26,
+    27
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

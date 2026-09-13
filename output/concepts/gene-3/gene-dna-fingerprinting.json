@@ -1,0 +1,81 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-dna-fingerprinting",
+  "concept_key": "concept:dna-fingerprinting",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "DNA 지문 검사",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'DNA'가 로마자 약어여서 표제어 전체를 한자로 적을 수 없다. 뒷부분만 指紋檢査 이다.",
+    "english": "DNA fingerprinting",
+    "symbol_display": "DNA",
+    "symbol_plain": "DNA"
+  },
+  "definition": "사람마다 다르게 나타나는 DNA의 특정 부분을 견주어, 시료가 누구의 것인지 가려내는 검사.",
+  "relations": [
+    {
+      "id": "rel-dfp-individual",
+      "text": "DNA에는 사람마다 다른 부분이 있어 이를 견주면 시료를 남긴 사람을 가려낼 수 있다",
+      "form": {
+        "condition": "견줄 시료와 대조할 시료가 함께 있을 때",
+        "type": "causal",
+        "scope": "개인 식별"
+      },
+      "invertible": false,
+      "invertible_reason": "근거와 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dfp-pcr",
+      "text": "증거물에 남은 DNA가 적을 때는 먼저 증폭을 거쳐야 지문 검사를 할 수 있다",
+      "form": {
+        "condition": "시료의 DNA 양이 적을 때",
+        "type": "conditional",
+        "scope": "법의학 감식의 절차"
+      },
+      "invertible": false,
+      "invertible_reason": "절차의 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 지문 검사는 손가락 지문을 분석해서 DNA를 알아내는 검사다",
+      "why_wrong": "손가락 지문과는 상관이 없다. 사람마다 다른 DNA 부위를 견주는 검사다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dfp-individual"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-polymerase-chain-reaction"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-sequencing"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-3",
+  "pages": [
+    112
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

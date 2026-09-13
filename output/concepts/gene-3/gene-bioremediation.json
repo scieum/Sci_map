@@ -1,0 +1,85 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-bioremediation",
+  "concept_key": "concept:bioremediation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "생물 정화",
+  "notation": {
+    "hanja": "生物淨化",
+    "hanja_gloss": "生 날 생 · 物 물건 물 · 淨 깨끗할 정 · 化 될 화",
+    "english": "bioremediation"
+  },
+  "definition": "미생물을 비롯한 생물이 지닌 분해 능력을 빌려 오염 물질을 없애는 환경 정화 방식.",
+  "relations": [
+    {
+      "id": "rel-br-microbe",
+      "text": "미생물은 여러 갈래의 생화학적 경로를 지녀 쓰레기나 유출된 기름 같은 물질을 분해할 수 있다",
+      "form": {
+        "condition": "그 물질을 분해하는 경로를 지닌 미생물일 때",
+        "type": "causal",
+        "scope": "미생물의 분해 능력"
+      },
+      "invertible": false,
+      "invertible_reason": "능력의 근거를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-br-enhance",
+      "text": "생명공학기술로 생물의 정화 능력을 키우면 다룰 수 있는 오염 물질의 범위가 넓어진다",
+      "form": {
+        "condition": "형질전환으로 능력을 강화했을 때",
+        "type": "causal",
+        "scope": "환경 정화에의 응용"
+      },
+      "invertible": false,
+      "invertible_reason": "조작의 결과를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생물 정화는 오염된 곳에 미생물만 뿌리면 어떤 물질이든 없앨 수 있는 방법이다",
+      "why_wrong": "미생물마다 분해할 수 있는 물질이 정해져 있어, 오염 물질에 맞는 생물을 골라야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-br-microbe"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-biotechnology"
+    },
+    {
+      "type": "related",
+      "target": "gene-bioenergy"
+    },
+    {
+      "type": "related",
+      "target": "gene-living-modified-organism"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-3",
+  "pages": [
+    109,
+    113,
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

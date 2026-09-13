@@ -1,0 +1,87 @@
+{
+  "id": "gene-mutation",
+  "concept_key": "concept:mutation",
+  "registry_status": "new",
+  "term": "돌연변이",
+  "notation": {
+    "hanja": "突然變異",
+    "english": "mutation",
+    "hanja_gloss": "突 갑자기 돌 · 然 그럴 연 · 變 변할 변 · 異 다를 이"
+  },
+  "definition": "DNA 염기서열이나 염색체에 변화가 생겨 형질이 달라지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mu-germline",
+      "text": "돌연변이가 생식세포를 만드는 과정에서 일어나면 그 변화가 자손에게 건너갈 수 있다",
+      "form": {
+        "condition": "변화가 생식세포에 들어갔을 때",
+        "type": "causal",
+        "scope": "체세포에서 일어난 변화는 자손에게 전해지지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "체세포 돌연변이는 생식세포에 실리지 않으므로 뒤집은 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체세포에서 일어난 돌연변이도 자손에게 그대로 유전된다"
+    },
+    {
+      "id": "rel-mu-allele",
+      "text": "같은 자리의 대립유전자들이 염기서열에서 갈리는 것은 돌연변이를 거쳐 생긴 결과다",
+      "form": {
+        "condition": "한 유전자 자리의 여러 대립유전자를 견줄 때",
+        "type": "causal",
+        "scope": "새로운 대립유전자의 기원"
+      },
+      "invertible": false,
+      "invertible_reason": "돌연변이가 일어났다고 해서 모두 새 대립유전자로 남는 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대립유전자의 차이는 처음부터 정해져 있던 것이라 돌연변이와는 관계없다",
+      "why_wrong": "같은 자리의 대립유전자들이 염기서열에서 갈리게 된 것은 언젠가 일어난 돌연변이가 남은 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mu-allele"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene"
+    },
+    {
+      "type": "next",
+      "target": "gene-genetic-disease"
+    },
+    {
+      "type": "related",
+      "target": "gene-allele"
+    },
+    {
+      "type": "related",
+      "target": "gene-gene-mutation"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-1",
+  "pages": [
+    13,
+    30
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

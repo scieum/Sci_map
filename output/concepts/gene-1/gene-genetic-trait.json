@@ -1,0 +1,83 @@
+{
+  "id": "gene-genetic-trait",
+  "concept_key": "concept:genetic-trait",
+  "registry_status": "new",
+  "term": "유전형질",
+  "notation": {
+    "hanja": "遺傳形質",
+    "english": "genetic trait",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 形 모양 형 · 質 바탕 질"
+  },
+  "definition": "생물이 지닌 형질 가운데 유전자를 매개로 부모에게서 자손에게 물려지는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gt-transfer",
+      "text": "부모의 형질이 자손에게 다시 나타나려면 그 형질을 결정하는 유전자가 생식세포를 거쳐 건너가야 한다",
+      "form": {
+        "condition": "유성생식으로 자손이 생길 때",
+        "type": "causal",
+        "scope": "유전자가 결정하는 형질에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "유전자가 건너가지 않아도 같은 환경에서 자라 닮아 보일 수 있어 뒤집은 문장이 늘 거짓은 아니다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gt-class",
+      "text": "환경 속에서 얻어진 특징은 유전형질로 치지 않는다",
+      "form": {
+        "condition": "형질을 유전형질과 그 밖의 형질로 나눌 때",
+        "type": "classification",
+        "scope": "획득형질의 유전을 다루지 않는 학교 과정의 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "얻어진 특징도 유전형질이라고 뒤집으면 유전형질의 정의와 어긋나 반드시 거짓이 된다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "살아가며 얻어진 특징도 유전자를 통해 자손에게 전달되므로 유전형질이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "부모를 닮은 특징은 모두 유전형질이다",
+      "why_wrong": "말투나 식습관처럼 함께 지내며 닮은 것은 유전자를 통해 건너간 것이 아니다. 유전형질은 유전자가 결정하는 형질만 가리킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gt-class"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-gene"
+    },
+    {
+      "type": "related",
+      "target": "gene-contrasting-trait"
+    },
+    {
+      "type": "next",
+      "target": "gene-single-gene-inheritance"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-1",
+  "pages": [
+    12,
+    13
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,101 @@
+{
+  "id": "gene-dna-double-helix",
+  "concept_key": "concept:dna-double-helix",
+  "registry_status": "new",
+  "term": "DNA 이중나선구조",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "DNA double helix",
+    "hanja_note": "DNA 가 로마자 약어라 표제어 전체에 대응하는 한자어가 없다(이중나선구조는 二重螺旋構造)."
+  },
+  "definition": "두 가닥의 폴리뉴클레오타이드가 마주 보며 꼬여 있는 DNA 의 입체 구조. 골격은 바깥쪽, 염기는 안쪽에 놓인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dh-layout",
+      "text": "당-인산 골격이 나선의 바깥쪽에, 염기가 안쪽에 자리하고 두 가닥의 염기가 수소결합으로 이어진다",
+      "form": {
+        "condition": "이중나선 DNA 의 구조를 볼 때",
+        "type": "classification",
+        "scope": "이중나선을 이루는 DNA"
+      },
+      "invertible": true,
+      "invertible_reason": "골격과 염기의 자리를 맞바꾸면 물에 닿는 바깥쪽 구조와 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "염기가 나선의 바깥쪽에 있고 당-인산 골격이 안쪽에 있다"
+    },
+    {
+      "id": "rel-dh-width",
+      "text": "고리 두 개짜리 염기가 고리 한 개짜리 염기와 짝지으므로 나선의 지름이 일정하게 유지된다",
+      "form": {
+        "condition": "염기쌍이 상보적으로 결합할 때",
+        "type": "causal",
+        "scope": "이중나선 DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "지름이 일정하다고 해서 그 까닭이 고리 수 하나로 정해지는 것은 아니다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dh-predict",
+      "text": "한 가닥의 염기서열을 알면 맞은편 가닥의 염기서열을 그대로 짚어 낼 수 있다",
+      "form": {
+        "condition": "상보결합 규칙이 지켜질 때",
+        "type": "conditional",
+        "scope": "이중나선 DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "서열을 예측할 수 있다고 해서 반드시 이중나선이라 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이중나선의 두 가닥은 염기서열이 서로 같다",
+      "why_wrong": "두 가닥은 같은 것이 아니라 서로 상보적이다. 한쪽이 A 이면 맞은편은 T 다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dh-predict"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-polynucleotide"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-complementary-base-pairing"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-x-ray-diffraction-study"
+    },
+    {
+      "type": "next",
+      "target": "gene-antiparallel-structure"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    42
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

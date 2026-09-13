@@ -1,0 +1,98 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-restriction-enzyme",
+  "concept_key": "concept:restriction-enzyme",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "제한효소",
+  "notation": {
+    "hanja": "制限酵素",
+    "hanja_gloss": "制 마를 제 · 限 한할 한 · 酵 삭힐 효 · 素 흴 소",
+    "english": "restriction enzyme"
+  },
+  "definition": "정해진 염기서열을 알아보고 그 자리에서 DNA 가닥을 끊는 효소.",
+  "relations": [
+    {
+      "id": "rel-re-recognition",
+      "text": "제한효소마다 알아보는 염기서열이 달라서, 효소를 골라 쓰면 자를 자리를 정할 수 있다",
+      "form": {
+        "condition": "표적 부위의 염기서열을 알고 있을 때",
+        "type": "causal",
+        "scope": "제한효소의 절단 자리"
+      },
+      "invertible": false,
+      "invertible_reason": "고르는 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-re-same-ends",
+      "text": "서로 다른 DNA라도 같은 제한효소로 자르면 잘린 끝의 단일 가닥 서열이 상보적이어서 맞붙을 수 있다",
+      "form": {
+        "condition": "두 DNA를 같은 제한효소로 자를 때",
+        "type": "conditional",
+        "scope": "제한효소로 자른 말단"
+      },
+      "invertible": false,
+      "invertible_reason": "다른 제한효소로도 같은 말단이 생기는 경우가 있어 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-re-origin",
+      "text": "제한효소는 본래 세균이 자기 안으로 들어온 외부 DNA를 잘라 없애는 데 쓰던 효소다",
+      "form": {
+        "condition": "효소의 본래 기능을 볼 때",
+        "type": "classification",
+        "scope": "세균의 방어 기작"
+      },
+      "invertible": false,
+      "invertible_reason": "유래를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "제한효소는 DNA라면 어느 자리든 무작위로 자른다",
+      "why_wrong": "효소마다 정해진 염기서열을 알아보고 그 자리만 끊는다. 그래서 자를 자리를 고를 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-re-recognition"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-recombinant-dna"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-ligase-recombinant"
+    },
+    {
+      "type": "related",
+      "target": "gene-recombinant-dna-technology"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "media": []
+}

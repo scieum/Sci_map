@@ -1,0 +1,85 @@
+{
+  "id": "gene-allele",
+  "concept_key": "concept:allele",
+  "registry_status": "new",
+  "term": "대립유전자",
+  "notation": {
+    "hanja": "對立遺傳子",
+    "english": "allele",
+    "hanja_gloss": "對 대할 대 · 立 설 립 · 遺 남길 유 · 傳 전할 전 · 子 아들 자"
+  },
+  "definition": "상동염색체의 같은 자리에 놓여 한 유전형질의 대립형질을 나타내는 유전자들.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-al-position",
+      "text": "상동염색체의 같은 자리에 놓인 두 대립유전자는 서로 같을 수도 있고 다를 수도 있다",
+      "form": {
+        "condition": "체세포에서 상동염색체가 쌍을 이룰 때",
+        "type": "conditional",
+        "scope": "이배체 생물의 체세포"
+      },
+      "invertible": false,
+      "invertible_reason": "쌍이 같은 경우와 다른 경우가 모두 실제로 있어 어느 쪽으로 뒤집어도 항상 거짓이 되지는 않는다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-al-origin",
+      "text": "염기서열이 다른 대립유전자는 돌연변이를 거쳐 새로 생겨난 것이다",
+      "form": {
+        "condition": "같은 자리의 서로 다른 대립유전자가 어디서 왔는지 물을 때",
+        "type": "causal",
+        "scope": "새로운 대립유전자의 기원"
+      },
+      "invertible": false,
+      "invertible_reason": "돌연변이가 일어난다고 해서 모두 새 대립유전자로 남지는 않아 뒤집은 문장이 반드시 거짓은 아니다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대립유전자는 언제나 서로 다른 형질을 나타낸다",
+      "why_wrong": "AA 처럼 같은 대립유전자를 둘 가질 수도 있다. 대립유전자는 같은 자리에 놓인 유전자를 뜻하지 서로 다른 유전자를 뜻하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-al-position"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-contrasting-trait"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-homologous-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "gene-homozygosity-and-heterozygosity"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-1",
+  "pages": [
+    13
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "gene-embryonic-stem-cell-differentiation",
+  "concept_key": "concept:embryonic-stem-cell",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "배아줄기세포",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "embryonic stem cell",
+    "hanja_note": "한자어 '배아(胚芽)'와 '줄기세포'가 결합한 말이라 표제어 전체를 한자로 적지 않는다."
+  },
+  "definition": "발생 초기 배아 안쪽의 세포 덩어리에서 얻는, 여러 종류의 세포로 분화할 수 있는 세포.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-esc-source",
+      "text": "배아줄기세포는 발생 초기 배아 안쪽의 내부 세포괴에서 얻는다",
+      "form": {
+        "condition": "배아줄기세포를 얻을 때",
+        "type": "conditional",
+        "scope": "배아줄기세포"
+      },
+      "invertible": false,
+      "invertible_reason": "출처를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-esc-pluripotent",
+      "text": "다형성능을 지녀 원하는 세포로 분화시키면 손상된 조직이나 기관을 되살리는 데 쓸 수 있다",
+      "form": {
+        "condition": "치료에 활용할 때",
+        "type": "conditional",
+        "scope": "배아줄기세포를 이용한 치료"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-esc-limits",
+      "text": "배아를 써야 하므로 윤리 논란을 피하기 어렵고 남의 세포를 쓰면 면역 거부반응도 따른다",
+      "form": {
+        "condition": "배아줄기세포를 치료에 쓸 때",
+        "type": "causal",
+        "scope": "배아줄기세포 치료의 한계"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "배아줄기세포는 이미 분화를 마친 세포라 다른 세포로 바뀌지 못한다",
+      "why_wrong": "배아줄기세포는 분화하기 전 세포로, 여러 종류의 세포로 분화할 수 있는 다형성능을 지닌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-esc-pluripotent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-cell-differentiation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-pluripotency"
+    },
+    {
+      "type": "next",
+      "target": "gene-induced-pluripotent-stem-cell-reprogramming"
+    },
+    {
+      "type": "same",
+      "target": "gene-embryonic-stem-cell",
+      "note": "같은 concept_key 의 III 단원 카드 (줄기세포 활용 맥락)"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-2",
+  "pages": [
+    83
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

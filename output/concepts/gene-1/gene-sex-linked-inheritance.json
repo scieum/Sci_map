@@ -1,0 +1,91 @@
+{
+  "id": "gene-sex-linked-inheritance",
+  "concept_key": "concept:sex-linked-inheritance",
+  "registry_status": "new",
+  "term": "성염색체 유전",
+  "notation": {
+    "hanja": "性染色體遺傳",
+    "english": "sex-linked inheritance",
+    "hanja_gloss": "性 성품 성 · 染 물들 염 · 色 빛 색 · 體 몸 체 · 遺 남길 유 · 傳 전할 전"
+  },
+  "definition": "형질을 결정하는 유전자가 성염색체에 놓여 있어 형질이 나타나는 빈도가 성별에 따라 달라지는 유전.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sl-freq",
+      "text": "유전자가 X염색체에만 있으면 그 형질이 나타나는 빈도가 남녀에서 달라진다",
+      "form": {
+        "condition": "XY형으로 성이 결정되는 종에서",
+        "type": "causal",
+        "scope": "X염색체에 있고 Y염색체에는 대응 부위가 없는 유전자"
+      },
+      "invertible": false,
+      "invertible_reason": "빈도가 다르다고 해서 원인이 반드시 성염색체 유전인 것은 아니다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sl-male",
+      "text": "남자는 X염색체가 하나뿐이어서 X염색체 열성 대립유전자를 하나만 가져도 그 형질이 드러난다",
+      "form": {
+        "condition": "X염색체에 있는 열성형질일 때",
+        "type": "causal",
+        "scope": "사람의 남자(XY)"
+      },
+      "invertible": true,
+      "invertible_reason": "남자에게 둘을 요구하는 진술은 X염색체가 하나뿐이라는 사실과 어긋나 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "남자도 X염색체 열성 대립유전자를 둘 지녀야 그 형질이 나타난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반성유전 형질은 남자에게만 나타난다",
+      "why_wrong": "빈도가 낮을 뿐 여자도 열성 대립유전자를 둘 지니면 형질이 나타난다. 남자에게만이 아니라 남자에게 더 자주가 맞다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sl-male"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-autosome-and-sex-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "gene-autosomal-inheritance"
+    },
+    {
+      "type": "next",
+      "target": "gene-red-green-color-blindness"
+    },
+    {
+      "type": "next",
+      "target": "gene-chromosome-theory-of-inheritance"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-3",
+  "pages": [
+    16,
+    19,
+    25
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "반성유전"
+  ]
+}

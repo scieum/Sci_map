@@ -1,0 +1,89 @@
+{
+  "id": "gene-sex-chromosome-number-disorder",
+  "concept_key": "concept:sex-chromosome-number-disorder",
+  "registry_status": "new",
+  "term": "성염색체수이상에 따른 유전병",
+  "notation": {
+    "hanja": "性染色體數異常遺傳病",
+    "english": "sex chromosome aneuploidy disorder",
+    "hanja_gloss": "性 성품 성 · 染 물들 염 · 色 빛 색 · 體 몸 체 · 數 셈 수 · 異 다를 이 · 常 항상 상 · 遺 남길 유 · 傳 전할 전 · 病 병 병"
+  },
+  "definition": "성염색체의 수가 정상과 달라져 생기는 유전병. 터너증후군과 클라인펠터증후군이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sc-config",
+      "text": "터너증후군인 사람은 성염색체로 X 하나만 지니고, 클라인펠터증후군인 사람은 X 둘과 Y 를 지닌다",
+      "form": {
+        "condition": "성염색체 비분리로 생긴 생식세포가 수정했을 때",
+        "type": "classification",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "두 증후군의 성염색체 구성을 맞바꾸는 것은 방향을 뒤집는 일이 아니라 값을 틀리게 적는 일이다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sc-infertile",
+      "text": "성염색체 수가 정상과 다르면 생식기관이 제대로 발달하지 못해 불임이 되기 쉽다",
+      "form": {
+        "condition": "터너증후군이나 클라인펠터증후군에서",
+        "type": "causal",
+        "scope": "성염색체 수이상"
+      },
+      "invertible": false,
+      "invertible_reason": "불임이라고 해서 원인이 반드시 성염색체 수이상인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "클라인펠터증후군인 사람은 Y염색체가 없어 겉모습이 여자다",
+      "why_wrong": "클라인펠터증후군은 X 둘에 Y 를 함께 지닌 경우라 겉모습은 남자다. Y 가 없는 쪽은 터너증후군이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-config"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-chromosome-number-abnormality"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-autosome-and-sex-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "gene-chromosome-nondisjunction"
+    },
+    {
+      "type": "related",
+      "target": "gene-karyotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    32
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "터너증후군",
+    "클라인펠터증후군"
+  ]
+}

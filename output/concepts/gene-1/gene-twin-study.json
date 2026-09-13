@@ -1,0 +1,89 @@
+{
+  "id": "gene-twin-study",
+  "concept_key": "concept:twin-study",
+  "registry_status": "new",
+  "term": "쌍둥이 연구",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "twin study",
+    "hanja_note": "쌍둥이는 고유어로 굳어진 말이라 표제어 전체에 대응하는 한자어를 두지 않는다(연구는 硏究)."
+  },
+  "definition": "일란성과 이란성 쌍둥이에서 같은 형질이 얼마나 일치하는지 견주어 유전과 환경의 몫을 가늠하는 연구 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tw-gap",
+      "text": "두 쌍둥이 집단 사이의 일치도 차이가 클수록 그 형질에 유전적 요인이 크게 작용한다고 본다",
+      "form": {
+        "condition": "두 집단이 비슷한 환경에서 자랐을 때",
+        "type": "direct",
+        "scope": "일치도를 견줄 수 있는 형질",
+        "antecedent": {
+          "quantity": "일란성과 이란성의 일치도 차이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유전적 요인의 비중",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "유전적 요인이 큰 형질이라고 해서 자료에서 늘 큰 차이가 드러나지는 않는다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tw-env",
+      "text": "일란성쌍둥이의 일치도가 100 %에 못 미치는 데에는 환경요인이 형질에 작용한 몫이 있다",
+      "form": {
+        "condition": "유전적으로 같은 두 사람을 견줄 때",
+        "type": "causal",
+        "scope": "환경의 영향을 받는 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "환경의 영향이 있다고 해서 일치도가 반드시 낮아지는 것은 아니다",
+      "curriculum": [
+        "12유전01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "일란성쌍둥이는 유전정보가 같으므로 모든 형질이 똑같다",
+      "why_wrong": "염기서열이 같아도 자란 환경이 달라 형질이 갈릴 수 있다. 일치도가 100 %인 형질은 드물다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tw-env"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-difficulty-of-human-genetics-research"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-monozygotic-and-dizygotic-twin"
+    },
+    {
+      "type": "related",
+      "target": "gene-population-survey"
+    }
+  ],
+  "curriculum": [
+    "12유전01-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-2",
+  "pages": [
+    21
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

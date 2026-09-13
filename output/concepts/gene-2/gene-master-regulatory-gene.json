@@ -1,0 +1,80 @@
+{
+  "id": "gene-master-regulatory-gene",
+  "concept_key": "concept:master-regulatory-gene",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "핵심 조절유전자",
+  "notation": {
+    "hanja": "核心調節遺傳子",
+    "english": "master regulatory gene",
+    "hanja_gloss": "核 씨 핵 · 心 마음 심 · 調 고를 조 · 節 마디 절 · 遺 남길 유 · 傳 전할 전 · 子 아들 자"
+  },
+  "definition": "분화 과정의 가장 위쪽에서 다른 전사 인자들의 발현을 이끌어 분화를 유도하는 유전자.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mrg-top",
+      "text": "핵심 조절유전자가 발현되면 아래쪽 전사 인자 유전자들이 잇따라 발현되며, 그 연쇄가 다 일어나야 분화가 완성된다",
+      "form": {
+        "condition": "분화가 시작될 때",
+        "type": "causal",
+        "scope": "근육세포의 분화와 같은 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "위에서 아래로 이어지는 차례가 정해져 있어 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "아래쪽 전사 인자들이 먼저 발현되어 핵심 조절유전자를 발현시킨다"
+    },
+    {
+      "id": "rel-mrg-product",
+      "text": "핵심 조절유전자의 산물은 전사 인자로 작용해 다른 유전자의 발현을 조절한다",
+      "form": {
+        "condition": "유전자 산물의 기능을 볼 때",
+        "type": "conditional",
+        "scope": "분화를 유도하는 조절유전자"
+      },
+      "invertible": false,
+      "invertible_reason": "기능을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵심 조절유전자 하나만 발현되면 분화가 끝까지 저절로 완성된다",
+      "why_wrong": "핵심 조절유전자는 맨 위에서 방아쇠를 당길 뿐이고, 이어지는 여러 전사 인자의 작용이 있어야 분화가 이루어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mrg-top"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-cell-differentiation"
+    },
+    {
+      "type": "next",
+      "target": "gene-myod-gene"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-1",
+  "pages": [
+    80
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

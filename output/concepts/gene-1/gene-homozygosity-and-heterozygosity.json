@@ -1,0 +1,82 @@
+{
+  "id": "gene-homozygosity-and-heterozygosity",
+  "concept_key": "concept:homozygosity-and-heterozygosity",
+  "registry_status": "new",
+  "term": "동형접합성과 이형접합성",
+  "notation": {
+    "hanja": "同型接合性 · 異型接合性",
+    "english": "homozygosity and heterozygosity",
+    "hanja_gloss": "同 같을 동 · 型 거푸집 형 · 接 이을 접 · 合 합할 합 · 性 성질 성 · 異 다를 이 · 型 거푸집 형 · 接 이을 접 · 合 합할 합 · 性 성질 성"
+  },
+  "definition": "한 형질을 맡은 두 대립유전자가 서로 같으면 동형접합성, 서로 다르면 이형접합성이라 부른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hz-dominant",
+      "text": "이형접합성인 개체에서는 두 대립유전자 가운데 우성 쪽 형질만 겉으로 드러난다",
+      "form": {
+        "condition": "우열이 뚜렷한 단일유전자 형질에서",
+        "type": "conditional",
+        "scope": "우열이 분명하지 않은 경우는 제외"
+      },
+      "invertible": true,
+      "invertible_reason": "AA 인 개체도 우성형질을 내므로 우성형질이 보이면 이형접합성이라는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겉으로 우성형질이 나타나는 개체는 모두 이형접합성이다"
+    },
+    {
+      "id": "rel-hz-gamete",
+      "text": "동형접합성인 개체는 그 형질에 대해 한 종류의 생식세포만 만든다",
+      "form": {
+        "condition": "감수분열이 정상으로 일어날 때",
+        "type": "causal",
+        "scope": "해당 형질의 대립유전자에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "한 종류의 생식세포만 만든다고 해서 모든 형질이 동형접합성인 것은 아니어서 뒤집으면 단정할 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "Aa 는 두 형질이 섞여 중간 형질로 나타난다",
+      "why_wrong": "우열이 뚜렷한 형질에서 Aa 는 우성 쪽 형질을 그대로 낸다. 섞인 중간 형질이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hz-dominant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-allele"
+    },
+    {
+      "type": "next",
+      "target": "gene-dominance-and-recessiveness"
+    },
+    {
+      "type": "related",
+      "target": "gene-genotype-and-phenotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-2",
+  "pages": [
+    15
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

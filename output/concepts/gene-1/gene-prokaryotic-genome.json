@@ -1,0 +1,82 @@
+{
+  "id": "gene-prokaryotic-genome",
+  "concept_key": "concept:prokaryotic-genome",
+  "registry_status": "new",
+  "term": "원핵세포의 유전체",
+  "notation": {
+    "hanja": "原核細胞遺傳體",
+    "english": "prokaryotic genome",
+    "hanja_gloss": "原 근원 원 · 核 씨 핵 · 細 가늘 세 · 胞 세포 포 · 遺 남길 유 · 傳 전할 전 · 體 몸 체"
+  },
+  "definition": "핵이 없는 세포가 지닌 유전체. 대개 원형 염색체 하나로 이루어지며 진핵세포의 것보다 크기가 작다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pk-nonucleosome",
+      "text": "원핵세포의 염색체 DNA 는 응축되어 있지만 히스톤과 이루는 뉴클레오솜 구조를 갖지 않는다",
+      "form": {
+        "condition": "원핵세포와 진핵세포의 유전체 구성을 견줄 때",
+        "type": "classification",
+        "scope": "원핵세포"
+      },
+      "invertible": true,
+      "invertible_reason": "원핵세포에도 뉴클레오솜이 있다고 뒤집으면 두 세포를 가르는 특징이 사라진다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원핵세포의 염색체 DNA 도 히스톤에 감겨 뉴클레오솜을 이룬다"
+    },
+    {
+      "id": "rel-pk-dense",
+      "text": "원핵세포의 유전체는 크기가 작고 유전자 사이 빈 부분이 적어 유전자가 빽빽하게 들어 있다",
+      "form": {
+        "condition": "진핵세포의 유전체와 견줄 때",
+        "type": "conditional",
+        "scope": "원핵생물"
+      },
+      "invertible": false,
+      "invertible_reason": "유전자가 빽빽하다고 해서 반드시 원핵생물이라 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원핵세포의 염색체도 히스톤 단백질에 감겨 있다",
+      "why_wrong": "히스톤에 감겨 뉴클레오솜을 이루는 것은 진핵세포의 염색체 DNA 다. 원핵세포에는 그런 구조가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pk-nonucleosome"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-eukaryotic-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-exon-and-intron"
+    }
+  ],
+  "curriculum": [
+    "12유전01-06"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-2",
+  "pages": [
+    44
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

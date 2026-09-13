@@ -1,0 +1,104 @@
+{
+  "id": "gene-codon",
+  "concept_key": "concept:codon",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "코돈",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "codon",
+    "hanja_note": "영어 codon 의 음차어라 대응하는 한자어 표기가 없다."
+  },
+  "definition": "mRNA에서 이웃한 염기 세 개가 이루는 한 묶음으로, 아미노산 한 개를 지정하는 유전부호의 단위.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cod-no-overlap",
+      "text": "코돈은 서로 겹치지 않고 사이에 빈칸도 없어 읽기 시작한 위치가 달라지면 결과가 달라진다",
+      "form": {
+        "condition": "같은 염기서열을 다른 위치에서 읽을 때",
+        "type": "causal",
+        "scope": "mRNA의 번역"
+      },
+      "invertible": false,
+      "invertible_reason": "읽기 틀과 결과가 함께 움직여 뒤집은 문장이 늘 거짓이라고 하기 어렵다",
+      "curriculum": [
+        "12유전02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cod-aug",
+      "text": "AUG는 메싸이오닌을 지정하면서 단백질합성을 시작하는 신호로도 쓰인다",
+      "form": {
+        "condition": "표준 코돈표를 볼 때",
+        "type": "conditional",
+        "scope": "개시코돈 AUG"
+      },
+      "invertible": false,
+      "invertible_reason": "한 부호의 두 구실을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "AUG는 단백질합성을 시작하라는 신호일 뿐 아미노산을 지정하지는 않는다",
+      "why_wrong": "AUG는 개시 신호이면서 메싸이오닌을 지정하는 코돈이기도 하다. 아미노산을 지정하지 않는 것은 종결코돈 셋이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cod-aug"
+    },
+    {
+      "text": "코돈 사이에 구분 표시가 있어 어디서부터 읽어도 같은 단백질이 만들어진다",
+      "why_wrong": "코돈 사이에는 빈칸이 없다. 읽기 시작하는 자리가 어긋나면 전혀 다른 아미노산서열이 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cod-no-overlap"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "isci1-codon",
+      "note": "concept_key 가 같다 (R9). 표기 일치로 건 것이 아니다."
+    },
+    {
+      "type": "prereq",
+      "target": "gene-genetic-code"
+    },
+    {
+      "type": "next",
+      "target": "gene-start-codon"
+    },
+    {
+      "type": "next",
+      "target": "gene-stop-codon"
+    },
+    {
+      "type": "next",
+      "target": "gene-genetic-information-decoding"
+    },
+    {
+      "type": "next",
+      "target": "gene-anticodon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-2",
+  "pages": [
+    61,
+    62
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,104 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-embryonic-stem-cell",
+  "concept_key": "concept:embryonic-stem-cell",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "배아줄기세포",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'줄기'가 고유어여서 표제어 전체를 한자로 적지 않는다. 胚芽 와 細胞 만 한자어다.",
+    "english": "embryonic stem cell"
+  },
+  "definition": "초기 배아에서 뽑아내는 줄기세포로, 몸을 이루는 어떤 세포로도 갈 수 있는 분화 능력을 지닌다.",
+  "relations": [
+    {
+      "id": "rel-esc-potency",
+      "text": "배아줄기세포는 몸의 어떤 세포로든 분화할 수 있어 성체줄기세포보다 분화 범위가 넓다",
+      "form": {
+        "condition": "두 줄기세포의 분화 범위를 견줄 때",
+        "type": "classification",
+        "scope": "배아줄기세포와 성체줄기세포의 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "두 세포의 분화 범위 순서가 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성체줄기세포는 배아줄기세포보다 분화할 수 있는 범위가 넓다"
+    },
+    {
+      "id": "rel-esc-nt",
+      "text": "환자의 체세포 핵을 핵 없는 난자에 넣어 만든 배아에서 얻으면 면역 거부반응이 없는 줄기세포가 된다",
+      "form": {
+        "condition": "핵치환으로 배아를 만들었을 때",
+        "type": "causal",
+        "scope": "체세포복제 배아줄기세포"
+      },
+      "invertible": false,
+      "invertible_reason": "만드는 방식에서 따라 나오는 결과를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-esc-issue",
+      "text": "하나의 생명체가 될 수 있는 배아를 쓰고 난자도 많이 필요하다는 점이 이 방법의 쟁점이 된다",
+      "form": {
+        "condition": "배아와 난자를 이용해 줄기세포를 얻을 때",
+        "type": "conditional",
+        "scope": "배아줄기세포 연구의 쟁점"
+      },
+      "invertible": false,
+      "invertible_reason": "쟁점이 서는 자리를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "배아줄기세포는 분화 능력이 뛰어나니 윤리적으로 문제될 것도 없다",
+      "why_wrong": "분화 능력과 윤리 쟁점은 다른 문제다. 배아와 난자를 쓴다는 점에서 쟁점이 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-esc-issue"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-stem-cell"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-nuclear-transfer"
+    },
+    {
+      "type": "related",
+      "target": "gene-adult-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-induced-pluripotent-stem-cell"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    106,
+    115
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": []
+}

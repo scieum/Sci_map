@@ -1,0 +1,107 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-human-genome-project",
+  "concept_key": "concept:human-genome-project",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "사람유전체사업",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'사람'이 고유어여서 표제어 전체를 한자로 적지 않는다. 뒷부분만 遺傳體事業 이다.",
+    "english": "human genome project"
+  },
+  "definition": "사람 유전체 전체의 염기서열을 밝히려고 1990년에 시작해 2003년에 서열 결정을 마친 국제 연구 사업.",
+  "relations": [
+    {
+      "id": "rel-hgp-output",
+      "text": "이 사업이 내놓은 결과물은 사람 유전체의 염기서열이지 유전자마다의 기능 목록이 아니다",
+      "form": {
+        "condition": "사업의 결과물을 가릴 때",
+        "type": "classification",
+        "scope": "사람유전체사업"
+      },
+      "invertible": true,
+      "invertible_reason": "결과물로 든 두 가지를 맞바꾼 문장이 되어 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 사업이 내놓은 결과물은 유전자마다의 기능 목록이지 사람 유전체의 염기서열이 아니다"
+    },
+    {
+      "id": "rel-hgp-use",
+      "text": "서열 정보가 공개된 뒤에야 질병 유전자 탐색과 종 사이 비교 연구가 본격적으로 이루어졌다",
+      "form": {
+        "condition": "서열 정보가 공개된 뒤",
+        "type": "causal",
+        "scope": "유전체에 기반한 후속 연구"
+      },
+      "invertible": false,
+      "invertible_reason": "선후와 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hgp-data",
+      "text": "다루어야 할 유전정보가 늘수록 이를 처리할 전산 기반 분석의 필요도 커졌다",
+      "form": {
+        "condition": "유전체 자료가 쌓이는 상황에서",
+        "type": "direct",
+        "scope": "생물정보학이 생겨난 배경",
+        "antecedent": {
+          "quantity": "다룰 유전정보의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전산 분석의 필요",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "관찰된 흐름이라 뒤집은 문장이 논리에서 반드시 거짓이 되지는 않는다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "사람유전체사업으로 사람 유전자의 기능까지 모두 밝혀졌다",
+      "why_wrong": "밝혀진 것은 염기가 놓인 차례이고, 각 부분이 무슨 일을 하는지는 뒤이은 연구의 몫으로 남았다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hgp-output"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dna-sequencing"
+    },
+    {
+      "type": "next",
+      "target": "gene-bioinformatics"
+    },
+    {
+      "type": "related",
+      "target": "gene-gene-therapy"
+    }
+  ],
+  "curriculum": [
+    "12유전03-01"
+  ],
+  "topic_id": "gene-3-1-1",
+  "pages": [
+    99
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

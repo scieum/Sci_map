@@ -1,0 +1,103 @@
+{
+  "id": "gene-genetic-code",
+  "concept_key": "concept:genetic-code",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "유전부호",
+  "notation": {
+    "hanja": "遺傳符號",
+    "english": "genetic code",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 符 부호 부 · 號 이름 호"
+  },
+  "definition": "네 종류의 염기를 세 개씩 묶어 아미노산 한 종류씩을 지정하도록 정해 놓은 대응 체계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gc-three-bases",
+      "text": "염기를 하나나 둘씩 묶으면 경우의 수가 모자라 스무 종류의 아미노산을 모두 지정할 수 없다",
+      "form": {
+        "condition": "네 종류 염기로 스무 종류 아미노산을 지정해야 할 때",
+        "type": "conditional",
+        "scope": "표준 유전부호"
+      },
+      "invertible": false,
+      "invertible_reason": "경우의 수를 따진 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gc-64-vs-20",
+      "text": "부호는 64가지인데 지정되는 아미노산은 20종류뿐이라 한 아미노산에 여러 부호가 대응한다",
+      "form": {
+        "condition": "부호의 수와 아미노산의 수를 견줄 때",
+        "type": "conditional",
+        "scope": "표준 유전부호표"
+      },
+      "invertible": true,
+      "invertible_reason": "대응이 여럿에서 하나로 가는 쪽으로 정해져 있어 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부호 하나가 여러 종류의 아미노산을 지정한다"
+    },
+    {
+      "id": "rel-gc-universal",
+      "text": "유전부호는 거의 모든 생물에서 공통이라 코돈표 한 장으로 여러 생물의 정보를 읽어 낼 수 있다",
+      "form": {
+        "condition": "여러 생물의 mRNA를 해독할 때",
+        "type": "conditional",
+        "scope": "거의 모든 생물(예외가 알려져 있다)"
+      },
+      "invertible": false,
+      "invertible_reason": "공통성을 말한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "코돈이 64가지이므로 아미노산도 64종류가 지정된다",
+      "why_wrong": "61개가 아미노산을 지정하고 나머지 셋은 종결 신호이며, 지정되는 아미노산은 20종류다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc-64-vs-20"
+    },
+    {
+      "text": "생물마다 유전부호가 달라 종마다 다른 코돈표를 써야 한다",
+      "why_wrong": "유전부호는 거의 모든 생물에서 같아서 한 코돈표로 여러 생물의 유전정보를 해독할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc-universal"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-codon"
+    },
+    {
+      "type": "next",
+      "target": "gene-genetic-information-decoding"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-02"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-2",
+  "pages": [
+    61,
+    62
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

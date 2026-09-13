@@ -1,0 +1,85 @@
+{
+  "id": "gene-leading-and-lagging-strand",
+  "concept_key": "concept:leading-and-lagging-strand",
+  "registry_status": "new",
+  "term": "선도 가닥과 지연 가닥",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "leading and lagging strand",
+    "hanja_note": "가닥이 고유어라 표제어 전체에 대응하는 한자어가 없다(선도·지연은 先導·遲延)."
+  },
+  "definition": "복제 분기점에서 풀리는 쪽으로 이어 만들어지는 가닥이 선도 가닥이고, 반대 방향으로 조각조각 만들어지는 가닥이 지연 가닥이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ll-anti",
+      "text": "두 주형 가닥의 방향이 반대여서 한쪽은 연속으로, 다른 한쪽은 불연속으로 합성된다",
+      "form": {
+        "condition": "복제 분기점에서 두 가닥이 함께 복제될 때",
+        "type": "causal",
+        "scope": "역평행으로 놓인 이중나선"
+      },
+      "invertible": false,
+      "invertible_reason": "합성 방식이 갈린다고 해서 그 까닭이 방향 하나뿐이라 할 수는 없다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ll-join",
+      "text": "지연 가닥에서 만들어진 짧은 조각들은 연결효소가 이어 붙여야 하나의 가닥이 된다",
+      "form": {
+        "condition": "조각의 합성이 끝난 뒤",
+        "type": "causal",
+        "scope": "지연 가닥"
+      },
+      "invertible": false,
+      "invertible_reason": "조각을 잇는다고 해서 그 대상이 반드시 지연 가닥인 것은 아니다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지연 가닥도 선도 가닥처럼 끊김 없이 한 번에 합성된다",
+      "why_wrong": "지연 가닥의 주형은 방향이 반대라 풀리는 쪽으로 이어 갈 수 없다. 짧은 조각을 여러 번 만들어 나중에 잇는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ll-anti"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-antiparallel-structure"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dna-polymerase"
+    },
+    {
+      "type": "next",
+      "target": "gene-dna-ligase"
+    },
+    {
+      "type": "related",
+      "target": "gene-primer"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-2",
+  "pages": [
+    47
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

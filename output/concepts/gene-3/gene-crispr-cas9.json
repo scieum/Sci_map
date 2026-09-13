@@ -1,0 +1,107 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-crispr-cas9",
+  "concept_key": "concept:crispr-cas9",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "크리스퍼-캐스9 유전자 가위",
+  "aliases": [
+    "유전자 가위",
+    "CRISPR-Cas9"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'크리스퍼-캐스9'는 외래어를 소리대로 적은 말이고 '가위'는 고유어다. 遺傳子 만 한자어다.",
+    "english": "CRISPR-Cas9",
+    "symbol_display": "CRISPR-Cas9",
+    "symbol_plain": "CRISPR-Cas9"
+  },
+  "definition": "가이드 RNA와 Cas9 단백질이 짝을 이뤄 표적 DNA를 찾아가 끊는 단백질 복합체.",
+  "relations": [
+    {
+      "id": "rel-crispr-parts",
+      "text": "가이드 RNA가 표적 DNA와 상보적으로 결합해 자리를 찾고, Cas9 단백질이 그 자리를 끊는다",
+      "form": {
+        "condition": "두 구성 요소가 함께 작용할 때",
+        "type": "classification",
+        "scope": "크리스퍼-캐스9의 작동"
+      },
+      "invertible": true,
+      "invertible_reason": "두 구성 요소가 맡은 일이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "Cas9 단백질이 표적 DNA와 상보적으로 결합해 자리를 찾고, 가이드 RNA가 그 자리를 끊는다"
+    },
+    {
+      "id": "rel-crispr-origin",
+      "text": "이 유전자 가위는 세균이 침입한 바이러스의 핵산을 막던 방어 체계에서 찾아낸 것이다",
+      "form": {
+        "condition": "기술의 유래를 볼 때",
+        "type": "classification",
+        "scope": "크리스퍼 체계의 기원"
+      },
+      "invertible": false,
+      "invertible_reason": "유래를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-crispr-target",
+      "text": "표적을 정하는 것은 가이드 RNA의 염기서열이므로, 이 서열을 바꾸면 자를 자리도 바뀐다",
+      "form": {
+        "condition": "가이드 RNA를 설계할 때",
+        "type": "causal",
+        "scope": "표적 부위의 지정"
+      },
+      "invertible": true,
+      "invertible_reason": "무엇이 표적을 정하는지가 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표적을 정하는 것은 Cas9 단백질의 모양이므로, 가이드 RNA를 바꾸어도 자를 자리는 그대로다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "크리스퍼-캐스9는 제한효소처럼 정해진 염기서열만 자를 수 있다",
+      "why_wrong": "가이드 RNA의 서열을 바꾸면 자를 자리를 원하는 대로 정할 수 있다는 점이 제한효소와 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-crispr-target"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene-editing"
+    },
+    {
+      "type": "related",
+      "target": "gene-restriction-enzyme"
+    },
+    {
+      "type": "related",
+      "target": "gene-gene-therapy"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    99,
+    107
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

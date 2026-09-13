@@ -1,0 +1,82 @@
+{
+  "id": "gene-down-syndrome",
+  "concept_key": "concept:down-syndrome",
+  "registry_status": "new",
+  "term": "다운증후군",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Down syndrome",
+    "hanja_note": "다운이 사람 이름을 음차한 것이라 표제어 전체에 대응하는 한자어가 없다(증후군은 症候群)."
+  },
+  "definition": "21번 염색체를 두 개가 아니라 세 개 지닌 채 태어나 여러 증상이 함께 나타나는 염색체수이상 유전병.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ds-47",
+      "text": "21번 염색체를 셋 지니면 체세포의 염색체 수는 모두 47개가 된다",
+      "form": {
+        "condition": "나머지 염색체의 수는 정상일 때",
+        "type": "conditional",
+        "scope": "사람"
+      },
+      "invertible": false,
+      "invertible_reason": "염색체가 47개라고 해서 반드시 21번이 셋인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ds-auto",
+      "text": "21번은 상염색체이므로 다운증후군은 남녀 모두에게 나타난다",
+      "form": {
+        "condition": "상염색체의 수가 달라졌을 때",
+        "type": "causal",
+        "scope": "상염색체 수이상으로 생기는 유전병"
+      },
+      "invertible": false,
+      "invertible_reason": "남녀 모두에게 나타난다고 해서 반드시 상염색체 이상인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "다운증후군은 21번 염색체가 하나 없어서 생긴다",
+      "why_wrong": "다운증후군은 21번 염색체를 셋 지닌 경우다. 모자란 것이 아니라 하나 더 많아 체세포의 염색체가 47개가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ds-47"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-chromosome-number-abnormality"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-chromosome-nondisjunction"
+    },
+    {
+      "type": "related",
+      "target": "gene-karyotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    31,
+    32
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

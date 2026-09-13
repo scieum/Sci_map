@@ -1,0 +1,618 @@
+{
+  "unit_id": "gene-1",
+  "generated_at": "2026-09-13T00:00:00+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 74,
+    "script_precheck": {
+      "tool": ".claude/skills/curriculum-mapper/scripts/validate_tags.py output/concepts/gene-1 --unit gene-1",
+      "result": "통과 (카드 74장)",
+      "note": "실재하지 않는 코드·판본 미확정 코드(crosscheck)·태그 0개·영역 불일치는 이 스크립트가 이미 걸렀다. 12유전 영역 01 의 성취기준 7건은 모두 crosscheck: 일치다. 아래 findings 는 코드는 실재하지만 카드 내용과 맞는지가 걸리는 경우만 담는다."
+    },
+    "standards_in_scope": [
+      {
+        "code": "12유전01-01",
+        "text": "유전형질이 유전자를 통해 자손에게 유전됨을 이해하고, 상염색체 유전과 성염색체 유전 양상의 차이를 설명할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-1 유전의 기본 원리 (12~19쪽)",
+        "cards": 16
+      },
+      {
+        "code": "12유전01-02",
+        "text": "사람 유전 연구 방법의 어려움을 이해하고, 사람의 유전 현상 분석을 근거로 유전형질의 유전적 특성을 추론할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-2-1~4 사람의 유전 (20~25쪽)",
+        "cards": 10
+      },
+      {
+        "code": "12유전01-03",
+        "text": "사람의 다유전자유전에 대해 이해하고, 유전 현상의 다양성 사례를 조사하여 과학적 근거를 활용하여 협력적으로 소통할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-2-5 다유전자유전 (26~28쪽)",
+        "cards": 4
+      },
+      {
+        "code": "12유전01-04",
+        "text": "염색체와 유전자이상에 대해 이해하고, 사람의 유전병을 발병 원인별 조사 계획을 세워 조사할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-3 사람의 유전병 (30~37쪽)",
+        "cards": 17
+      },
+      {
+        "code": "12유전01-05",
+        "text": "DNA의 구조와 유전물질 규명 관련 과학사적 연구 결과를 설명하기 위한 발표 자료를 창의적으로 제작할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-4-1 유전물질과 DNA의 구조 (38~43쪽)",
+        "cards": 14
+      },
+      {
+        "code": "12유전01-06",
+        "text": "원핵세포와 진핵세포의 유전자 구조와 유전체 구성을 이해하고, 공통점과 차이점을 비교하여 설명할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-4-2 유전체와 유전자 구조 (44쪽)",
+        "cards": 5
+      },
+      {
+        "code": "12유전01-07",
+        "text": "반보존적 DNA 복제 과정을 이해하고 그 의미를 추론하여 협력적으로 소통할 수 있다.",
+        "crosscheck": "일치",
+        "textbook_section": "gene-1-5 DNA 복제 (46~49쪽)",
+        "cards": 8
+      }
+    ],
+    "coverage": {
+      "standards_with_cards": [
+        "12유전01-01",
+        "12유전01-02",
+        "12유전01-03",
+        "12유전01-04",
+        "12유전01-05",
+        "12유전01-06",
+        "12유전01-07"
+      ],
+      "standards_without_cards": [],
+      "note": "영역 01 의 성취기준 7건이 모두 카드로 덮였다. 태그 없는 카드도 없고, 74장 전부가 코드 한 개씩만 달고 있다. 카드층 curriculum 과 명제층 relation.curriculum 은 명제 151개 전부에서 집합이 일치한다(불일치 0건). 카드의 topic_id → 중단원 → 성취기준 대응도 74장 모두 어긋남이 없다(gene-1-1-* → 01-01, gene-1-2-1~4 → 01-02, gene-1-2-5 → 01-03, gene-1-3-* → 01-04, gene-1-4-1 → 01-05, gene-1-4-2 → 01-06, gene-1-5-* → 01-07)."
+    },
+    "findings": [
+      {
+        "card_id": "gene-sex-linked-inheritance",
+        "verdict": "uncertain",
+        "current": [
+          "12유전01-01"
+        ],
+        "suggested": [],
+        "reason": "01-01 자체는 맞다 — 01-01 전문이 '상염색체 유전과 성염색체 유전 양상의 차이' 를 직접 요구하고, 두 명제(rel-sl-freq '유전자가 X염색체에만 있으면 그 형질이 나타나는 빈도가 남녀에서 달라진다', rel-sl-male)가 그 자리에 그대로 선다. 갈리는 곳은 pages 다. topic_id 는 gene-1-1-3(16~18쪽)인데 pages 에 25 가 들어 있고, 25쪽은 중단원 02 의 '사람의 성염색체 유전'(gene-1-2-4, 01-02)면이다. 19쪽도 중단원 마무리 면이라 본문 근거가 아니다. 사정이 같은 이웃 카드들은 반대로 처리돼 있다 — gene-red-green-color-blindness(pages 23·25)와 gene-carrier(p25)는 01-02 만 달았다. 25쪽 근거를 카드가 쓰고 있으므로 01-02 를 더할 일인지, 25쪽을 pages 에서 뺄 일인지는 갈린다. 성취기준 두 개에 걸치는 것 자체는 이상하지 않으나 한쪽 규칙으로 통일돼 있지 않은 것이 걸린다.",
+        "prerequisites": [
+          "concept:meiosis",
+          "concept:chromosome"
+        ]
+      },
+      {
+        "card_id": "gene-nucleosome",
+        "verdict": "uncertain",
+        "current": [
+          "12유전01-06"
+        ],
+        "suggested": [],
+        "reason": "두 명제(rel-nc-condense '히스톤을 감아 뉴클레오솜을 이루면서 DNA 가 핵 안에 들어갈 만큼 응축된다', rel-nc-divide '뉴클레오솜 구조의 유무가 진핵세포와 원핵세포를 가르는 특징')는 01-06('원핵세포와 진핵세포의 … 유전체 구성 … 공통점과 차이점을 비교')에 정확히 걸린다. 갈리는 곳은 pages 에 28 이 들어 있다는 점이다. 28쪽은 중단원 02 의 읽기 자료('일란성쌍둥이는 왜 똑같지 않을까', gene-1-2-5, 01-03)이고 뉴클레오솜은 거기서 후성적 조절을 설명하는 곁재료로만 나온다. topic_id 는 gene-1-4-2(44쪽)다. 01-03 을 더할 근거는 명제 어디에도 없으므로 태그를 더할 일은 아닌 듯하나, 28쪽을 pages 에 남길지는 판단이 갈린다 — 남기면 이 카드가 01-03 면의 유일한 근거 없는 교차 인용이 된다.",
+        "prerequisites": [
+          "concept:dna",
+          "concept:protein"
+        ]
+      },
+      {
+        "card_id": "gene-epigenetic-regulation",
+        "verdict": "uncertain",
+        "current": [
+          "12유전01-03"
+        ],
+        "suggested": [],
+        "reason": "범위 밖은 아니다 — 출처가 28쪽 읽기 자료이고 role 이 context 라 곁주·읽기 자료로 다뤄지고 있어 '성취기준 어디에도 걸리지 않는데 본문 개념처럼 서술된 것' 에 해당하지 않는다. 갈리는 것은 내용과 코드의 어긋남이다. 01-03 전문은 '사람의 다유전자유전' 과 '유전 현상의 다양성 사례' 인데, 이 카드의 두 명제는 rel-ep-methyl('DNA 메틸화나 히스톤 변형이 일어나면 염색체가 더 응축되어 유전자발현이 억제된다')과 rel-ep-twin 으로 둘 다 유전자발현 조절 기제다. 이 기제는 영역 02(12유전02-03 '유전자발현 조절 과정', 12유전02-04)가 정면으로 다루는 대목이고, 영역 01 의 어느 성취기준도 유전자발현 조절을 요구하지 않는다. 놓인 자리(28쪽, 다유전자유전 절 끝)로 보면 01-03 이고 내용으로 보면 영역 02 다. 단원을 넘는 태그를 이 카드에 다는 것이 맞는지, 01-03 을 그대로 두고 gene-2 쪽 카드와 링크로만 이을지는 사람이 정할 대목이다.",
+        "prerequisites": [
+          "concept:nucleosome"
+        ]
+      },
+      {
+        "card_id": "gene-abo-blood-group",
+        "verdict": "ok",
+        "current": [
+          "12유전01-02"
+        ],
+        "suggested": [],
+        "reason": "태그는 맞다. 출처가 24쪽 '사람의 단일유전자유전'(gene-1-2-3)이고 두 명제(rel-abo-dominance 우열 관계, rel-abo-two '한 사람이 지니는 대립유전자는 둘뿐')가 01-02 의 '사람의 유전 현상 분석을 근거로 유전형질의 유전적 특성을 추론' 아래 선다. 다만 concept_key 가 bio-2 의 bio-abo-blood-group(12생과02-06)과 같다 — 아래 cross_subject_overlap 의 판단을 함께 보라. 관점은 갈라져 있고 카드 내용은 겹치지 않는다.",
+        "prerequisites": [
+          "concept:allele",
+          "concept:homologous-chromosome"
+        ]
+      }
+    ],
+    "cross_subject_overlap": {
+      "note": "메인이 지시한 대로, 「생명과학」 bio-3(생명의 연속성과 다양성)·bio-2·cell-1 과 concept_key 가 겹치는 카드를 표시한다. 겹친다는 것만으로 이 과목 범위 밖은 아니다 — 아래 9장 모두 「생물의 유전」 교과서 본문(12~47쪽) 안에 있고 영역 01 성취기준에 걸린다. 선수 과목 표시(prerequisite)로 다룰 일이지 out_of_scope 로 뺄 일이 아니다. 링크를 실제로 거는 것은 G 파이프라인의 일이고, concept_key 등록 조정은 G3 사람 게이트의 일이다.",
+      "cards": [
+        {
+          "card_id": "gene-gene",
+          "concept_key": "concept:gene",
+          "also_in": [
+            "bio-3/bio-gene (12생과03-01)",
+            "isci1-3/isci1-gene (10통과1-03-06)"
+          ],
+          "verdict": "ok",
+          "reason": "선수 개념이지만 이 과목에서 다시 세운다. gene-1 은 '형질 정보를 담은 DNA 구간 + 단백질 아미노산 순서의 암호화' 로 유전자발현 쪽을 예고하고, bio-3 은 '염색체 하나에 여러 유전자' 로 감수분열·연관 쪽을 향한다. 관점이 갈라져 있다."
+        },
+        {
+          "card_id": "gene-allele",
+          "concept_key": "concept:allele",
+          "also_in": [
+            "bio-3/bio-allele (12생과03-01)"
+          ],
+          "verdict": "ok",
+          "reason": "정의가 거의 같다(상동염색체 같은 자리). 겹침이 가장 큰 쌍이다. 범위 밖은 아니나 G3 에서 카드 하나로 합칠지 과목별로 둘지 정해야 한다."
+        },
+        {
+          "card_id": "gene-homologous-chromosome",
+          "concept_key": "concept:homologous-chromosome",
+          "also_in": [
+            "bio-3/bio-homologous-chromosome (12생과03-01)"
+          ],
+          "verdict": "ok",
+          "reason": "gene-1 에서 role 이 context 라 이미 선수 개념으로 다뤄지고 있다. 표시만 하면 된다."
+        },
+        {
+          "card_id": "gene-autosome-and-sex-chromosome",
+          "concept_key": "concept:autosome-and-sex-chromosome",
+          "also_in": [
+            "bio-3/bio-autosome-and-sex-chromosome (12생과03-01)"
+          ],
+          "verdict": "ok",
+          "reason": "bio-3 은 '23쌍 가운데 22쌍' 구성 사실, gene-1 은 유전 양상의 차이를 세우기 위한 발판(01-01)이다. 관점이 다르다."
+        },
+        {
+          "card_id": "gene-karyotype",
+          "concept_key": "concept:karyotype",
+          "also_in": [
+            "bio-3/bio-karyotype (12생과03-01)"
+          ],
+          "verdict": "ok",
+          "reason": "gene-1 은 염색체이상 진단(01-04)의 도구로 쓴다. bio-3 은 핵형분석 자체를 다룬다."
+        },
+        {
+          "card_id": "gene-nucleosome",
+          "concept_key": "concept:nucleosome",
+          "also_in": [
+            "bio-3/bio-nucleosome (12생과03-01)"
+          ],
+          "verdict": "ok",
+          "reason": "bio-3 은 염색체 응축 단계, gene-1 은 진핵 유전체 구성(01-06)이다. 위 findings 의 pages 건과는 별개다."
+        },
+        {
+          "card_id": "gene-mutation",
+          "concept_key": "concept:mutation",
+          "also_in": [
+            "bio-3/bio-mutation (12생과03-03)"
+          ],
+          "verdict": "ok",
+          "reason": "bio-3 은 진화(유전자풀의 변이 공급) 쪽, gene-1 은 유전병의 원인(01-04) 쪽이다. 관점이 뚜렷이 다르다."
+        },
+        {
+          "card_id": "gene-nucleotide",
+          "concept_key": "concept:nucleotide",
+          "also_in": [
+            "cell-1/cell-nucleotide (12세포01-02)",
+            "isci1-2/isci1-nucleotide",
+            "reac-3/reac-nucleotide"
+          ],
+          "verdict": "ok",
+          "reason": "이 카드만 registry_status 가 reused 로 제대로 잡혀 있다. 나머지 겹침 카드는 new 다 — registry_status 참고 항목을 보라."
+        },
+        {
+          "card_id": "gene-abo-blood-group",
+          "concept_key": "concept:abo-blood-group",
+          "also_in": [
+            "bio-2/bio-abo-blood-group (12생과02-06)"
+          ],
+          "verdict": "ok",
+          "reason": "메인이 물은 건이다. 두 카드는 같은 대상을 다른 층에서 본다. bio-2 는 적혈구 세포막의 응집원 A·B 와 혈장의 응집소 α·β, 곧 항원-항체 반응(면역)의 층이고 명제 넷이 모두 응집원·응집소다. gene-1 은 대립유전자 셋 가운데 둘을 상동염색체에서 받는 유전의 층이고 명제 둘이 모두 우열과 대립유전자 수다. 두 카드 사이에 같은 말이 겹치는 명제는 없고, 어느 한쪽이 다른 쪽 범위를 침범하지도 않는다. 동음이의(homonyms.yaml 의 금지쌍)가 아니라 한 대상의 두 국면이므로 concept_key 를 같게 둔 것 자체는 어긋나지 않는다. 다만 앱에서 한 개념 키에 카드가 둘 붙으면 어느 것을 보일지의 문제가 남는다 — 키를 나눌 일인지(예: 혈액형의 유전 / 혈액형과 응집 반응) 한 키 아래 두 면으로 둘 일인지는 G3 사람 게이트에서 정할 대목이다. C5 의 태그 판정으로는 양쪽 모두 ok 다."
+        }
+      ]
+    },
+    "registry_status_note": "C5 의 판정 대상은 아니지만 G3 에서 걸릴 것이라 남긴다. 위 9장 가운데 registry_status 가 reused 인 것은 gene-nucleotide 하나뿐이고, 나머지 여덟(concept:gene·allele·homologous-chromosome·autosome-and-sex-chromosome·karyotype·nucleosome·mutation·abo-blood-group)은 이미 다른 단원 카드가 쓰고 있는 키인데도 new 로 적혀 있다. 사전 갱신은 사람 승인 사항이므로(CLAUDE.md §9.3) 여기서는 지적만 한다.",
+    "stats": {
+      "ok": 71,
+      "retag": 0,
+      "out_of_scope": 0,
+      "uncertain": 3
+    }
+  },
+  "notes": [
+    "C5 curriculum 절은 앞선 실행분을 그대로 두고 relations 절(C6)만 새로 채웠다. curriculum 절의 checked·findings·stats·standards_in_scope 는 손대지 않았다.",
+    "카드를 고치지 않았다. 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 읽기만 했다. verified_by 는 74장 전부 pending 그대로 두었다.",
+    "bio 계열 <track>-facts 스킬이 없어 사실 대조는 건너뛰었다. C5 는 어차피 진위를 보지 않는다.",
+    "references/report.schema.json 이 빈 파일이라 스키마 대조를 하지 못했다. 형식은 output/validation/gene-2.report.json 을 따랐다.",
+    "에스컬레이션 조건 둘 다 미달: 범위 이탈 0건(기준 2건 초과), uncertain 3/74 = 4.1%(기준 20% 초과).",
+    "판정 기준(bio-1·bio-2 와 같게 유지): ② invertible 은 form.type 을 보지 않고 명제를 하나하나 뒤집어 읽어 판정했다. ③ 동어반복은 definition 의 어느 구절과 명제의 어느 구절이 겹치는지 짚을 수 있을 때만 defect 로 올리고, 겹치되 명제가 정의 밖의 것을 하나라도 지니면 uncertain 이나 ok 로 두었다. ④ 오개념은 그 오개념이 부정하는 문장이 linked_relation 이 가리키는 명제 안에 실제로 들어 있는지만 보았다 — definition 에만 있고 명제에 없으면 걸린 것으로 보았다.",
+    "② invertible 오판정은 한 건도 나오지 않았다. invertible: true 31건을 모두 뒤집어 읽었고 31건 모두 뒤집은 문장이 반드시 거짓이 된다. classification 에 true 가 붙은 11건(rel-abo-two·rel-du-vs-de·rel-ct-notall·rel-dh-layout·rel-dp-3end·rel-dr-notfreq·rel-gene-part·rel-gt-class·rel-gn-include·rel-pk-nonucleosome·rel-sr-half)도 두 이름을 맞바꾸거나 포함 관계를 뒤집으면 반드시 거짓이 되는 쪽이라 type 만 보고 내리지 않았다. conditional 에 true 가 붙은 9건도 converse 가 거짓임을 확인했다 — rel-dr-recessive·rel-hz-dominant·rel-gp-same 은 보인자와 AA 라는 반례가 뒤집은 문장을 반드시 거짓으로 만든다. 다만 rel-md-same 하나는 뒤집은 문장이 거짓이 되는 까닭이 명제가 아니라 정의에 있어 uncertain 으로 올렸다.",
+    "invertible: false 120건 가운데 잘못 내린 것도 찾지 못했다. 값을 맞바꾸는 것은 뒤집기가 아니라는 판단(rel-as-human·rel-cb-hbond·rel-db-ring·rel-nu-sugar·rel-sc-config)과 과학사적 사실은 방향을 뒤집을 수 없다는 판단(rel-av-slow·rel-mi-history·rel-gmat-protein)은 모두 옳게 서 있다. type 이 direct 인 5건(rel-cv-dose·rel-ma-count·rel-pg-count·rel-ps-size·rel-tw-gap)도 converse 가 참일 수 있어 false 가 맞다.",
+    "⑤ 한 카드 안 두 명제가 서로 어긋나는 경우는 찾지 못했다. 다만 명제와 같은 카드 오개념 해설이 어긋나는 것이 하나 있어(gene-twin-study rel-tw-env) 이를 [1,4] 로 올렸다.",
+    "과학사 카드 다섯(그리피스·에이버리·허시와 체이스·샤가프·메셀슨과 스탈)의 명제는 실험 결과를 넘어선 주장을 하지 않는다. rel-gr-infer 는 scope 에 '형질전환 물질의 정체까지는 밝히지 못했다' 를, rel-hc-infer 는 '박테리오파지의 증식' 을, rel-ms-second 는 '대장균의 DNA 복제' 를, rel-av-only 는 '에이버리와 동료들이 한 실험' 을 적어 결론을 실험 대상 안에 묶어 두었다. 넘침은 명제가 아니라 definition 쪽에 있다 — gene-hershey-chase-experiment 의 정의 'DNA 가 유전물질임을 확인한 실험' 은 파지 밖으로, gene-chargaff-rule 의 정의 '어느 생물의 DNA 에서든' 은 단일가닥 DNA 쪽으로 번진다(해당 명제 rel-cg-equal 은 scope 를 '이중나선을 이루는 DNA' 로 제대로 좁혀 두었다). 정의는 C6 의 검사 대상이 아니라 여기 적어만 둔다.",
+    "유전병 카드 열셋(gene-genetic-disease·gene-chromosomal-abnormality·gene-chromosome-number-abnormality·gene-chromosome-structure-abnormality·결실/중복/역위/전좌 넷·gene-down-syndrome·gene-sex-chromosome-number-disorder·gene-gene-mutation·gene-huntington-disease·gene-sickle-cell-anemia) 사이에 서로 어긋나는 명제는 없다. 열성이 대부분이라는 rel-gm-recessive 는 scope 에 헌팅턴무도병을 예외로 적어 gene-huntington-disease 와 맞물리고, 핵형으로 유전자이상을 볼 수 없다는 점도 rel-ky-diagnose 의 scope 와 같은 방향이다. 이 무리의 문제는 어긋남이 아니라 오개념이 명제 대신 정의에 걸려 있다는 것이다 — [4] 지적 11건 가운데 6건이 이 무리에서 나왔다.",
+    "findings 에 올리지 않았으나 메인이 알아야 할 겹침. ㉠ 한 명제가 두 카드에 나뉘어 있다: rel-lg-join 과 rel-ll-join(지연 가닥 조각을 연결효소가 잇는다), rel-ap-replication 과 rel-ll-anti(두 가닥의 방향이 반대여서 합성 방식이 갈린다), rel-dd-synthesis 와 rel-dp-3end(중합효소는 3′ 말단에만 붙인다), rel-al-origin 과 rel-mu-allele(대립유전자는 돌연변이에서 왔다), rel-nc-condense 와 rel-ek-histone(히스톤에 감겨 응축된다), rel-nc-divide 와 rel-pk-nonucleosome(뉴클레오솜 유무가 원핵과 진핵을 가른다). ㉡ 한 카드 안에서 겹친다: gene-dna-polymerase 의 rel-dp-3end 에서 rel-dp-dir 가 곧바로 나온다. ㉢ 오개념 문장이 다른 명제의 inverted_text 와 사실상 같다: gene-chromosomal-inversion 의 오개념('역위가 일어나면 그 부위의 유전자가 사라진다')은 rel-in-order 의 inverted_text 와, gene-genotype-and-phenotype 의 오개념('표현형이 같으면 유전자형도 같다')은 rel-gp-same 의 inverted_text 와 같은 말이라 D1 이 같은 OX 오답을 두 군데서 뽑게 된다. 어디를 고칠지는 메인이 정한다.",
+    "오개념 74개는 모두 source: llm 이고 verified_by 는 전부 pending 이다. 이 보고서는 그 필드를 읽기만 했고 misconceptions.yaml 도 읽기만 했다. 오개념 내용이 참인지 그른지는 판정하지 않았다 — 걸린 명제와 맞물리는지만 보았다.",
+    "bio/gene 계열 <track>-facts 스킬이 없어(.claude/skills 에 있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯뿐) 사실 대조는 한 건도 하지 못했다. 대조가 있었다면 갈렸을 자리는 rel-ep-methyl(히스톤 변형의 방향), rel-gm-recessive('대부분 열성'), rel-nd-first(감수 1분열 비분리에서 생식세포 넷이 모두 비정상인가), rel-rg-freq(적록색맹의 남녀 빈도) 넷이다. 넷 다 진위가 걸린 자리이므로 확정하지 않는다 — 진위 판단 필요 — C8 검토 항목.",
+    "카드 74장을 고치지 않았다. 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 읽기만 했고, verified_by 는 명제 151개·오개념 74개 모두 pending 그대로 두었다.",
+    "에스컬레이션 조건: uncertain 7/151 = 4.6 % 로 기준(20 % 초과) 미달. 배포 실패·순환 참조·재시도 한도에 걸린 것도 없다. 다만 defect 28건 가운데 동어반복 13건과 오개념 오연결 11건이 supporting·core 카드에 고루 퍼져 있어 C2 부분 재생성의 폭이 작지 않다.",
+    "references/report.schema.json 이 빈 파일이라 스키마 대조를 하지 못했다. 형식은 output/validation/bio-1.report.json 의 relations 절을 따랐다."
+  ],
+  "relations": {
+    "checked": 151,
+    "cards_checked": 74,
+    "invertible_true_count": 31,
+    "misconceptions_checked": 74,
+    "script_precheck": {
+      "tool": "자체 점검 스크립트(보고서 산출용, 카드 파일은 읽기만 했다)",
+      "result": "관계 id 중복 0건, form.condition·form.scope 빈 값 0건, form.type 은 전부 스키마 enum 안(causal 77·conditional 40·classification 28·direct 5·inverse 1), verified_by 는 명제 151개·오개념 74개 모두 pending.",
+      "note": "형식은 concept-schema 가 잡는 자리다. 아래 findings 는 형식이 아니라 명제의 구조적 결함만 다룬다."
+    },
+    "findings": [
+      {
+        "card_id": "gene-nucleotide",
+        "relation_id": "rel-nu-three",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '당과 인산과 염기가 하나씩 이어져 만들어진, 핵산을 이루는 기본 단위' 이고 명제는 '뉴클레오타이드는 당·인산·염기의 세 부분으로 이루어진다' 다. 정의가 이미 세 성분을 하나씩 나열했으므로 명제가 보탠 것은 '세 부분' 이라는 셈뿐이다. 정의를 읽은 학생은 이 명제에서 따로 배울 것이 없다.",
+        "suggest": "명제를 정의가 담지 않은 내용으로 갈음한다 — 이를테면 세 부분 가운데 어느 것이 사슬을 잇고 어느 것이 정보를 지니는가 같은, 성분 나열에서 곧바로 나오지 않는 것."
+      },
+      {
+        "card_id": "gene-semiconservative-replication",
+        "relation_id": "rel-sr-half",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '새로 생긴 DNA 가 옛 가닥 하나와 새 가닥 하나로 이루어지는 복제 방식' 이고 명제 rel-sr-half 는 '복제로 생긴 두 DNA 는 저마다 주형이던 옛 가닥 하나와 새로 만들어진 가닥 하나를 지닌다' 다. 주어를 '두 DNA' 로 바꾼 것 말고 같은 말이다. invertible: true 판정 자체는 맞지만(뒤집으면 보존적 모델이 되어 반드시 거짓) OX 지문이 정의 되뇌기가 된다.",
+        "suggest": "정의에서 가닥 구성 서술을 빼 명제가 맡게 하든지, 명제를 정의에 없는 내용(옛 가닥이 분해되지 않고 남는다는 점 등)으로 갈음한다."
+      },
+      {
+        "card_id": "gene-genetic-trait",
+        "relation_id": "rel-gt-class",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 둘째 문장이 '살아가며 얻은 특징은 여기에 들지 않는다' 이고 명제 rel-gt-class 는 '환경 속에서 얻어진 특징은 유전형질로 치지 않는다' 다. '살아가며'→'환경 속에서', '들지 않는다'→'치지 않는다' 로 낱말만 바꾼 같은 문장이다. inverted_text 도 이 정의를 그대로 부정한 것이라 OX 지문이 낱말 뜻 확인에 그친다.",
+        "suggest": "정의에서 배제 규정을 빼고 명제가 맡게 하든지, 명제를 정의가 담지 않은 내용으로 바꾼다."
+      },
+      {
+        "card_id": "gene-chromosomal-deletion",
+        "relation_id": "rel-de-loss",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 둘째 문장 '사라진 부위에 있던 유전자도 함께 없어진다' 와 명제 '결실이 일어나면 없어진 부위에 있던 유전자가 사라져 그 기능을 잃는다' 가 겹친다. 명제가 보탠 것은 '그 기능을 잃는다' 한 구절뿐이고, 유전자가 없어지면 그 기능이 없어진다는 것은 정의에서 곧바로 나온다.",
+        "suggest": "정의 둘째 문장을 줄이고 명제가 맡게 하든지, 명제를 정의에서 바로 나오지 않는 결과(같은 쌍의 다른 염색체만으로는 메워지지 않는다는 점 등)로 옮긴다."
+      },
+      {
+        "card_id": "gene-chromosomal-duplication",
+        "relation_id": "rel-du-more",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '같은 부위가 거듭 나타나 그 자리의 유전자가 겹쳐 늘어나는 구조이상' 이고 명제는 '중복이 일어나면 그 부위의 유전자가 두 벌 이상이 되어 유전자 수가 늘어난다' 다. '겹쳐 늘어나는' 을 '두 벌 이상이 되어 늘어난다' 로 풀어 쓴 것이다. 같은 카드의 rel-du-vs-de 는 결실과의 대비를 보태 이 지적을 받지 않는다.",
+        "suggest": "rel-du-more 를 지우거나, 정의에서 '유전자가 겹쳐 늘어나는' 을 빼 명제가 맡게 한다."
+      },
+      {
+        "card_id": "gene-chromosomal-abnormality",
+        "relation_id": "rel-cab-two",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '염색체의 수가 달라지거나 구조가 바뀌어 생기는 돌연변이' 로 이미 두 갈래를 적었고, 명제 rel-cab-two 는 '염색체이상은 수가 달라진 경우와 구조가 바뀐 경우의 두 갈래로 나뉜다' 다. 정의의 '또는' 을 '두 갈래' 로 세어 준 것뿐이다.",
+        "suggest": "명제를 두 갈래의 나열이 아니라 두 갈래를 가르는 기준(핵형에서 드러나는가 아닌가 등)으로 옮긴다."
+      },
+      {
+        "card_id": "gene-genetic-disease",
+        "relation_id": "rel-gd-class",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '유전자나 염색체에 생긴 돌연변이가 원인이 되어 나타나는 질병' 이고 명제 rel-gd-class 는 '유전병은 원인에 따라 염색체이상에 의한 것과 유전자이상에 의한 것으로 나뉜다' 다. 정의가 든 두 원인을 그대로 두 갈래로 되읽었다.",
+        "suggest": "명제를 분류 나열이 아니라 두 갈래를 가려내는 방법이나 증상의 차이로 옮긴다. 같은 카드 rel-gd-inherit 는 정의에 없는 것을 보태 이 지적을 받지 않는다."
+      },
+      {
+        "card_id": "gene-down-syndrome",
+        "relation_id": "rel-ds-47",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '21번 염색체를 세 개 지녀 체세포의 염색체가 47개가 되는 염색체수이상 유전병' 이고 명제 rel-ds-47 은 '21번 염색체를 셋 지니면 체세포의 염색체 수는 모두 47개가 된다' 다. 정의의 앞뒤를 조건문으로 이어 붙인 것 말고 다른 것이 없다.",
+        "suggest": "정의에서 '체세포의 염색체가 47개' 를 빼 명제가 맡게 하든지, 명제를 정의에 없는 내용으로 갈음한다."
+      },
+      {
+        "card_id": "gene-nucleosome",
+        "relation_id": "rel-nc-condense",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 'DNA 가 히스톤 단백질을 감아 이룬 구조 단위. 이것이 거듭 꼬이고 응축되어 염색체가 된다' 이고 명제는 'DNA 가 히스톤을 감아 뉴클레오솜을 이루면서 긴 DNA 가 핵 안에 들어갈 만큼 응축된다' 다. 정의 두 문장을 한 문장으로 붙인 것이다.",
+        "suggest": "명제를 정의에 없는 내용(응축 정도가 세포주기에 따라 달라진다는 점 등)으로 옮기거나 지운다."
+      },
+      {
+        "card_id": "gene-model-organism",
+        "relation_id": "rel-mo-cycle",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '세대가 짧고 기르거나 다루기 쉬워 유전 연구의 표준 재료로 쓰이는 생물' 이고 명제 rel-mo-cycle 은 '세대 주기가 짧고 다루기 쉬울수록 유전 연구의 재료로 삼기에 유리하다' 다. 정의가 든 선택 이유를 정도 표현으로 바꾼 것뿐이다. form.type 이 이 단원에서 유일하게 inverse 인 것도 이 되풀이를 정도 관계처럼 보이게 하려다 생긴 것으로 보인다.",
+        "suggest": "명제를 지우거나, 모델 생물마다 쓰임새가 갈리는 까닭처럼 정의에서 곧바로 나오지 않는 내용으로 바꾼다."
+      },
+      {
+        "card_id": "gene-difficulty-of-human-genetics-research",
+        "relation_id": "rel-dh-stat",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '한 세대가 길고 자손 수가 적으며 교배를 계획할 수 없어, 사람의 유전을 직접 실험으로 다루기 어렵다는 사정' 이고 명제 rel-dh-stat 는 '교배 실험을 할 수 없고 자손 수도 적어 통계로 뒷받침할 만한 자료를 모으기 어렵다' 다. 정의가 든 세 제약 가운데 둘을 그대로 다시 적었다. 같은 카드 rel-dh-indirect 는 간접 방법이라는 새 내용을 보태 이 지적을 받지 않는다.",
+        "suggest": "rel-dh-stat 를 지우거나, 자료가 모자랄 때 실제로 무엇이 막히는지(우열 판정·확률 계산 등)로 옮긴다."
+      },
+      {
+        "card_id": "gene-polynucleotide",
+        "relation_id": "rel-pn-bond",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '여러 뉴클레오타이드가 인산과 당 사이의 공유결합으로 죽 이어져 만들어진 사슬 모양 중합체' 이고 명제 rel-pn-bond 는 '한 뉴클레오타이드의 인산과 다음 뉴클레오타이드의 당이 공유결합해 사슬이 길어진다' 다. 정의의 '인산과 당 사이의 공유결합으로 죽 이어져' 를 풀어 쓴 것이다. 탄소 번호는 form.condition 에만 있고 명제 본문에는 없어 명제가 정의를 넘어서지 못한다.",
+        "suggest": "탄소 번호를 명제 본문으로 올려 정의가 담지 않은 것을 명제가 지게 하든지, 정의에서 결합 서술을 줄인다."
+      },
+      {
+        "card_id": "gene-gene",
+        "relation_id": "rel-gene-part",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '형질을 결정하는 정보가 적혀 있는 DNA 의 특정 구간' 이고 명제 rel-gene-part 는 '유전자는 DNA 전체가 아니라 그 가운데 정보를 담은 일부 구간이다' 다. 정의의 '특정 구간' 을 '전체가 아니라 일부 구간' 으로 바꾼 같은 말이다. 게다가 gene-genome 의 rel-gn-include 가 같은 포함 관계를 다시 말해 두 카드가 한 명제를 나눠 가진다.",
+        "suggest": "두 카드 가운데 어느 쪽이 포함 관계를 맡을지 정하고 남은 쪽은 다른 내용으로 바꾼다. 유전자 카드에 남긴다면 정의에서 '특정 구간' 을 줄인다."
+      },
+      {
+        "card_id": "gene-mendelian-inheritance",
+        "relation_id": "rel-mi-ratio",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "form.scope 가 '한 형질은 3 : 1, 두 형질은 9 : 3 : 3 : 1' 이다. 이것은 적용 범위가 아니라 명제가 말하는 결과값이다. 명제 '멘델 원리를 따르는 형질에서는 잡종 2대의 표현형 비를 미리 셈해 둘 수 있다' 의 실제 경계(자가수분으로 얻은 잡종 2대일 것, 개체수가 충분할 것, 두 유전자가 연관되지 않았을 것)는 어디에도 적혀 있지 않고 form.condition 의 '우열이 뚜렷하고 두 유전자가 따로 분리될 때' 가 경계 노릇을 혼자 하고 있다. 이 단원에서 scope 자리에 범위가 아닌 것이 들어간 유일한 명제다 — rel-gm-recessive·rel-mu-germline·rel-sg-discrete·rel-ky-diagnose 등은 예외를 적어 경계 노릇을 한다.",
+        "suggest": "scope 에 비율값이 아니라 이 예측이 깨지는 자리를 적는다. 비율값을 남기려면 명제 본문으로 올린다."
+      },
+      {
+        "card_id": "gene-epigenetic-regulation",
+        "relation_id": "rel-ep-methyl",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "명제가 'DNA 메틸화나 히스톤 변형이 일어나면 염색체가 더 응축되어 유전자발현이 억제된다' 로 '히스톤 변형' 전체를 억제 쪽에 묶었다. 히스톤 변형은 응축을 푸는 쪽으로도 일어나므로 '히스톤 변형' 이라는 낱말이 덮는 범위가 '억제된다' 는 결론이 성립하는 범위보다 넓다. form.scope 는 '진핵세포' 로 세포 종류만 적어 이 경계를 전혀 좁히지 못한다.",
+        "suggest": "명제 본문에서 히스톤 변형을 응축을 늘리는 쪽으로 한정하든지, scope 에 그 한정을 적는다. 어느 변형이 어느 쪽인가는 진위가 걸린 문제이므로 C8 에서 함께 본다 — 진위 판단 필요 — C8 검토 항목."
+      },
+      {
+        "card_id": "gene-epigenetic-regulation",
+        "relation_id": "rel-ep-twin",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "명제가 '일란성쌍둥이가 서로 달라지는 까닭은 염기서열이 아니라 유전자발현의 차이로 설명된다' 로 '염기서열이 아니라' 라며 다른 원인을 배타적으로 잘라 냈다. 같은 단원 gene-monozygotic-and-dizygotic-twin 의 rel-md-same 은 같은 사안에 '새로운 돌연변이를 셈에 넣지 않을 때' 라는 단서를 달아 두었는데 이 명제에는 그 단서가 없다. scope '후성적 조절을 받는 형질' 은 형질을 고른 것이지 원인을 하나로 좁히는 근거가 되지 못한다.",
+        "suggest": "'염기서열이 아니라' 라는 배타 표현을 걷어 내든지, rel-md-same 과 같은 단서를 scope 에 넣어 두 명제의 경계를 맞춘다."
+      },
+      {
+        "card_id": "gene-twin-study",
+        "relation_id": "rel-tw-env",
+        "verdict": "defect",
+        "checks": [
+          1,
+          4
+        ],
+        "reason": "명제가 '일란성쌍둥이의 일치도가 100 %에 못 미치는 것은 환경요인이 형질에 작용하기 때문이다' 로 원인을 환경 하나로 단정한다. 그런데 이 명제에 걸린 같은 카드의 오개념 해설은 '자란 환경과 유전자발현 조절이 달라 형질이 갈릴 수 있다' 로 원인을 둘 든다 — 명제가 잘라 낸 것을 그 명제에 걸린 오개념 해설이 다시 들여놓았다. form.scope '환경의 영향을 받는 형질' 도 원인을 하나로 좁히는 근거가 되지 못한다.",
+        "suggest": "명제에서 '때문이다' 를 원인 하나로 닫지 않게 고치든지, 오개념 해설의 두 원인 가운데 명제가 맡을 것을 정해 양쪽을 맞춘다."
+      },
+      {
+        "card_id": "gene-abo-blood-group",
+        "relation_id": "rel-abo-two",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 'AB형인 부모에게서 O형 자녀가 태어날 수 있다' 가 rel-abo-two('대립유전자가 세 가지여도 한 사람이 지니는 것은 두 개뿐이다') 에 걸려 있다. 이 오개념의 반대편에 서는 것은 AB형이 i 를 생식세포에 넣지 못한다는 것, 곧 rel-abo-dominance 가 말하는 우열 관계다. rel-abo-two 는 한 사람이 지니는 대립유전자의 개수만 말할 뿐 어느 것을 물려주는지는 말하지 않는다.",
+        "suggest": "linked_relation 을 rel-abo-dominance 로 옮기든지, AB형 부모가 넣을 수 있는 생식세포를 말하는 명제를 카드에 세운다."
+      },
+      {
+        "card_id": "gene-autosome-and-sex-chromosome",
+        "relation_id": "rel-as-sex",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '성염색체에는 성을 결정하는 유전자만 있다' 가 rel-as-sex('성염색체 구성이 XX 이면 여자로, XY 이면 남자로 발생한다') 에 걸려 있다. rel-as-sex 는 성염색체 구성과 성별의 대응만 말하고 성염색체에 다른 형질의 유전자가 함께 있는지는 말하지 않는다. 같은 카드의 rel-as-human 은 개수만 말한다. 이 카드 어느 명제의 반대편도 아니다.",
+        "suggest": "이 오개념이 걸릴 명제를 카드에 세우든지(성염색체에도 다른 형질의 유전자가 놓인다는 명제), 이 오개념을 gene-sex-linked-inheritance 쪽으로 옮긴다."
+      },
+      {
+        "card_id": "gene-chromosomal-translocation",
+        "relation_id": "rel-tl-fusion",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '전좌는 한 염색체 안에서 자리가 바뀌는 것이다' 가 rel-tl-fusion('전좌로 두 유전자가 이어 붙으면 원래 없던 기능을 지닌 단백질이 만들어질 수 있다') 에 걸려 있다. 이 오개념이 맞서는 것은 카드의 definition('다른 염색체에 가서 붙는') 이지 융합 유전자를 말하는 rel-tl-fusion 이 아니다. 같은 카드의 rel-tl-cml 도 9번·22번을 들 뿐 역위와 가르지 않는다.",
+        "suggest": "전좌가 염색체 사이의 이동임을 말하는 명제를 세워 그쪽에 걸든지, 이 오개념을 gene-chromosome-structure-abnormality 로 옮긴다."
+      },
+      {
+        "card_id": "gene-chromosome-nondisjunction",
+        "relation_id": "rel-nd-second",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '비분리가 일어나면 자손의 염색체 수는 반드시 많아진다' 가 rel-nd-second('감수 2분열에서 비분리가 일어나면 정상인 생식세포와 비정상인 생식세포가 1 : 1 로 생긴다') 에 걸려 있다. rel-nd-second 는 정상과 비정상의 비만 말할 뿐 비정상 쪽이 많아진 것인지 적어진 것인지는 말하지 않는다. 해설이 드는 '많아진 생식세포와 적어진 생식세포가 함께 생긴다' 는 이 카드의 두 명제 어디에도 없다.",
+        "suggest": "많아진 쪽과 적어진 쪽이 짝으로 생긴다는 것을 명제로 세워 그쪽에 걸든지, 오개념을 명제가 실제로 받치는 것으로 갈음한다."
+      },
+      {
+        "card_id": "gene-chromosome-number-abnormality",
+        "relation_id": "rel-cn-cause",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '다운증후군은 21번 염색체가 하나 없어서 생긴다' 가 rel-cn-cause('감수분열에서 염색체가 갈라지지 않으면 염색체 수가 정상과 다른 생식세포가 만들어진다') 에 걸려 있다. rel-cn-cause 는 비분리와 생식세포만 말하고 다운증후군의 염색체 구성은 말하지 않는다. 이 오개념의 반대편은 다른 카드의 rel-ds-47 이다.",
+        "suggest": "이 오개념을 gene-down-syndrome 로 옮겨 rel-ds-47 에 걸든지, 이 카드에 맞는 오개념(수가 다른 생식세포가 정상 생식세포와 수정하면 어떻게 되는가)으로 갈음한다."
+      },
+      {
+        "card_id": "gene-chromosome-structure-abnormality",
+        "relation_id": "rel-cs-four",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '염색체구조이상은 핵형에서 염색체 수를 세면 바로 알 수 있다' 가 rel-cs-four('염색체구조이상에는 결실·중복·역위·전좌의 네 가지가 있다') 에 걸려 있다. rel-cs-four 는 유형을 세는 명제라 핵형에서 무엇이 드러나는가와 맞물리지 않는다. 해설이 드는 '구조이상에서는 염색체 수가 그대로인 경우가 많다' 는 이 카드의 두 명제 어디에도 없다.",
+        "suggest": "구조이상에서 염색체 수가 그대로일 수 있다는 것을 명제로 세워 그쪽에 걸든지, 이 오개념을 gene-karyotype 로 옮긴다."
+      },
+      {
+        "card_id": "gene-dna-base",
+        "relation_id": "rel-db-ring",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 'DNA 에는 유라실이 들어 있다' 가 rel-db-ring('아데닌과 구아닌은 고리가 두 개이고, 타이민과 사이토신은 고리가 한 개다') 에 걸려 있다. rel-db-ring 은 고리 수만 말하고 어떤 염기가 DNA 에 드는지는 말하지 않는다. 이 오개념이 맞서는 것은 카드의 definition('아데닌·구아닌·타이민·사이토신을 가리킨다') 이다.",
+        "suggest": "네 염기의 구성원을 말하는 명제를 세워 그쪽에 걸든지, 고리 수를 다루는 오개념으로 갈음한다."
+      },
+      {
+        "card_id": "gene-down-syndrome",
+        "relation_id": "rel-ds-auto",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '다운증후군은 부모에게서 물려받는 유전병이다' 가 rel-ds-auto('21번은 상염색체이므로 다운증후군은 남녀 모두에게 나타난다') 에 걸려 있다. rel-ds-auto 는 성별 분포를 말할 뿐 발생이 새로 생긴 비분리에서 오는지 부모에게서 오는지는 말하지 않는다. 해설이 드는 '대개 생식세포를 만들 때 갈라지지 못해 새로 생긴다' 는 이 카드에 명제로 서 있지 않다.",
+        "suggest": "이 카드에 새 비분리로 생긴다는 명제를 세워 그쪽에 걸든지, 오개념을 옮긴다. gene-genetic-disease 의 오개념('유전병은 반드시 부모에게서 물려받은 것이다')과 사실상 같은 것이므로 둘을 함께 정리한다."
+      },
+      {
+        "card_id": "gene-gene-mutation",
+        "relation_id": "rel-gm-protein",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '유전자이상은 핵형분석으로 확인할 수 있다' 가 rel-gm-protein('염기서열이 달라져 아미노산 순서가 바뀌면 단백질의 기능도 달라질 수 있다') 에 걸려 있다. rel-gm-protein 은 염기서열과 단백질을 잇는 명제이고 확인 방법은 말하지 않는다. 같은 카드의 rel-gm-recessive 도 우열만 말한다. 게다가 이 오개념은 gene-karyotype 의 오개념('핵형분석으로 유전자이상에 따른 유전병도 알아낼 수 있다')과 사실상 같은 것을 두 카드에서 되풀이하는데, 그쪽은 rel-ky-diagnose 의 scope('염기 하나의 변화는 보이지 않는다')가 받치고 있어 정합성이 맞는다.",
+        "suggest": "이 카드에서는 오개념을 지우고 gene-karyotype 쪽 하나로 모으든지, 유전자이상의 규모(염기 수준)를 말하는 명제를 세워 그쪽에 건다."
+      },
+      {
+        "card_id": "gene-multiple-allele-inheritance",
+        "relation_id": "rel-ma-count",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '복대립유전은 한 사람이 대립유전자를 셋 이상 가지는 유전이다' 가 rel-ma-count('대립유전자의 종류가 늘면 집단에서 나올 수 있는 유전자형의 가짓수도 함께 늘어난다') 에 걸려 있다. rel-ma-count 는 가짓수의 증가만 말하고 한 개체가 몇 개를 지니는지는 말하지 않는다 — 그 말은 definition 둘째 문장('한 개체가 지니는 것은 그 가운데 두 개다')에만 있고 명제로 서 있지 않다. 이 오개념의 반대편에 실제로 서는 명제는 다른 카드의 rel-abo-two 다.",
+        "suggest": "한 개체가 두 개만 지닌다는 것을 이 카드의 명제로 올려 그쪽에 걸든지, linked_relation 을 옮긴다."
+      },
+      {
+        "card_id": "gene-mutation",
+        "relation_id": "rel-mu-allele",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '돌연변이는 모두 해롭다' 가 rel-mu-allele('같은 자리의 대립유전자들이 염기서열에서 갈리는 것은 돌연변이를 거쳐 생긴 결과다') 에 걸려 있다. rel-mu-allele 은 대립유전자의 기원만 말하고 이로움·해로움은 말하지 않는다. 같은 카드의 rel-mu-germline 도 전달 여부만 말한다. 해설이 드는 '조건에 따라 유리한 것도 있다' 는 gene-sickle-cell-anemia 의 rel-sk-malaria 가 받치는 내용이다.",
+        "suggest": "이 카드에 돌연변이의 효과가 한쪽으로 정해지지 않는다는 명제를 세워 그쪽에 걸든지, 오개념을 옮긴다 — 다만 gene-sickle-cell-anemia 에 '돌연변이는 언제나 생존에 불리하다' 라는 사실상 같은 오개념이 이미 있어 둘 가운데 하나를 정리해야 한다."
+      },
+      {
+        "card_id": "gene-exon-and-intron",
+        "relation_id": "rel-ei-split",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '진핵생물의 한 유전자 안에서 단백질 정보를 담은 부분이 엑손이고, 그 사이에 끼어 정보를 담지 않은 부분이 인트론이다' 이고 명제 rel-ei-split 은 '진핵생물의 유전자는 단백질 정보가 여러 엑손으로 나뉘고 그 사이에 인트론이 끼어 있는 경우가 많다' 다. 겹치는 폭이 넓지만 명제가 '여러 엑손으로 나뉜다' 와 '경우가 많다' 를 보태 정의에서 곧바로 나오지 않는 것을 지닌다. 되풀이로 볼지 보탬으로 볼지 갈린다.",
+        "suggest": "되풀이로 본다면 정의에서 배치 서술을 줄이고 명제가 맡게 한다. 남긴다면 '여러 엑손으로 나뉜다' 가 명제의 무게중심이 되도록 문장 구조를 바꾼다."
+      },
+      {
+        "card_id": "gene-template-strand",
+        "relation_id": "rel-ts-comp",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '새 가닥을 만들 때 염기 짝짓기의 본이 되어 주는 쪽 가닥' 이고 명제 rel-ts-comp 는 '새 가닥은 주형 가닥의 염기와 상보적인 뉴클레오타이드가 차례로 붙어 만들어진다' 다. '본이 되어 주는' 을 풀어 쓴 것뿐이라고 볼 수도 있고 '차례로' 라는 순차성을 보탰다고 볼 수도 있다. 같은 카드의 rel-ts-fixed 도 상보결합에서 곧바로 나오는 말이라 카드 전체가 정의 언저리에 머문다.",
+        "suggest": "명제 둘 가운데 하나는 정의 밖으로 내보낸다 — 주형 가닥이 복제 뒤에도 남는다는 점처럼 오개념 해설이 이미 들고 있으나 명제로는 서 있지 않은 내용이 자리가 된다."
+      },
+      {
+        "card_id": "gene-population-survey",
+        "relation_id": "rel-ps-size",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '여러 가계를 아우르는 큰 무리에서 자료를 모아 통계로 다루어 유전 현상을 살피는 방법' 이고 명제 rel-ps-size 는 '한 가계에서 얻을 자료가 적을 때는 조사 집단을 키워 통계의 신뢰도를 높인다' 다. 정의가 이미 '큰 무리' 와 '통계' 를 담고 있어 그 까닭을 되읽은 것으로 보이지만 인과를 보탰다고 볼 여지도 있다. 게다가 이것은 관계 명제라기보다 연구 절차 서술이다.",
+        "suggest": "절차 서술이 아니라 집단 크기와 추정의 신뢰도 사이의 관계로 문장 구조를 바꾸든지, 정의에서 '통계로 다루어' 를 줄인다."
+      },
+      {
+        "card_id": "gene-genome",
+        "relation_id": "rel-gn-include",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "명제 '유전자는 유전체의 일부이므로 유전체가 유전자보다 넓은 범위를 가리킨다' 는 gene-gene 의 rel-gene-part('유전자는 DNA 전체가 아니라 그 가운데 정보를 담은 일부 구간이다')와 같은 포함 관계를 말한다. 두 카드가 한 명제를 나눠 가진 것으로 볼지, 유전체 쪽에서 다시 말할 값어치가 있다고 볼지 갈린다. 이 카드는 rel-gn-size 가 정의에 없는 내용을 지니고 있어 rel-gene-part 만큼 무겁지는 않다.",
+        "suggest": "rel-gene-part 지적과 묶어 어느 카드가 포함 관계를 맡을지 한 번에 정한다."
+      },
+      {
+        "card_id": "gene-homologous-chromosome",
+        "relation_id": "rel-hc-locus",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '상동염색체는 유전정보가 완전히 똑같다' 가 rel-hc-locus('한 형질의 대립유전자들은 상동염색체에서 서로 같은 위치에 자리한다') 에 걸려 있다. rel-hc-locus 는 자리가 같다고만 말하고 그 자리의 대립유전자가 다를 수 있다고는 말하지 않는다 — 해설이 드는 '같은 자리에 서로 다른 대립유전자를 가질 수 있다' 는 gene-allele 의 rel-al-position 에 있다. 다만 자리가 같다는 말과 정보가 같다는 말이 학생이 헷갈리는 바로 그 지점에서 맞물려 있어 엉뚱한 연결이라고 잘라 말하기 어렵다.",
+        "suggest": "이 카드에 대립유전자가 다를 수 있다는 명제를 세워 그쪽에 걸든지, 연결을 그대로 두고 rel-hc-locus 의 scope 에 그 점을 적는다."
+      },
+      {
+        "card_id": "gene-primer",
+        "relation_id": "rel-pr-start",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '프라이머는 효소이므로 단백질로 되어 있다' 가 rel-pr-start('중합효소가 3′ 말단을 필요로 하므로 복제를 시작하려면 프라이머가 먼저 붙어야 한다') 에 걸려 있다. 이 오개념이 맞서는 것은 프라이머의 재질이고 그것은 definition('짧은 RNA 나 DNA 조각') 에만 있다. 다만 rel-pr-start 가 프라이머의 구실(3′ 말단을 내어 주는 것)을 말하므로 '효소가 아니다' 라는 쪽과 반쯤 맞물린다.",
+        "suggest": "프라이머가 핵산이라는 것을 명제로 올려 그쪽에 걸든지, 오개념을 프라이머의 구실 쪽으로 고쳐 rel-pr-start 와 맞춘다."
+      },
+      {
+        "card_id": "gene-monozygotic-and-dizygotic-twin",
+        "relation_id": "rel-md-same",
+        "verdict": "uncertain",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "invertible: true 이고 inverted_text 는 '일란성쌍둥이는 서로 다른 수정란에서 나와 유전정보가 다르다' 다. 뒤집은 문장이 반드시 거짓이 되는 것은 맞지만, 그것이 거짓인 까닭은 명제가 주장하는 바(유전정보가 같다)가 뒤집혀서가 아니라 카드 definition('하나의 수정란이 둘로 갈라져 생긴 쌍둥이가 일란성')이 부정되었기 때문이다. OX 지문이 유전 내용이 아니라 낱말 뜻 확인이 된다. 게다가 inverted_text 가 두 가지(수정란의 수, 유전정보의 같고 다름)를 한꺼번에 뒤집어 학생이 어느 쪽 때문에 틀렸는지 가려낼 수 없다.",
+        "suggest": "inverted_text 를 정의 부분은 그대로 두고 주장 부분만 뒤집은 한 문장으로 다시 잡는다. 그렇게 해서 반드시 거짓이 되지 않으면 invertible 을 내린다."
+      }
+    ],
+    "stats": {
+      "ok": 116,
+      "defect": 28,
+      "uncertain": 7
+    }
+  }
+}

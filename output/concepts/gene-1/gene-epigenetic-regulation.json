@@ -1,0 +1,84 @@
+{
+  "id": "gene-epigenetic-regulation",
+  "concept_key": "concept:epigenetic-regulation",
+  "registry_status": "new",
+  "term": "후성적 조절",
+  "notation": {
+    "hanja": "後成的調節",
+    "english": "epigenetic regulation",
+    "hanja_gloss": "後 뒤 후 · 成 이룰 성 · 的 과녁 적 · 調 고를 조 · 節 마디 절"
+  },
+  "definition": "DNA 염기서열은 그대로 둔 채 유전자나 염색체의 구조를 바꾸어 유전자가 발현되는 정도를 조절하는 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ep-methyl",
+      "text": "DNA 메틸화나 히스톤 변형이 일어나면 염색체가 더 응축되어 유전자발현이 억제된다",
+      "form": {
+        "condition": "발현에 필요한 단백질이 DNA 에 접근해야 할 때",
+        "type": "causal",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "발현이 억제되었다고 해서 원인이 반드시 메틸화나 히스톤 변형인 것은 아니다",
+      "curriculum": [
+        "12유전01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ep-twin",
+      "text": "일란성쌍둥이가 서로 달라지는 까닭은 염기서열이 아니라 유전자발현의 차이로 설명된다",
+      "form": {
+        "condition": "유전체가 같은 두 사람을 견줄 때",
+        "type": "causal",
+        "scope": "후성적 조절을 받는 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "발현 차이가 있다고 해서 반드시 일란성쌍둥이의 사례인 것은 아니다",
+      "curriculum": [
+        "12유전01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "후성적 조절은 DNA 염기서열을 바꾸어 형질을 바꾼다",
+      "why_wrong": "염기서열은 그대로 둔 채 발현되는 정도만 달라진다. 염기서열 자체가 바뀌는 것은 돌연변이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ep-methyl"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-nucleosome"
+    },
+    {
+      "type": "related",
+      "target": "gene-monozygotic-and-dizygotic-twin"
+    },
+    {
+      "type": "related",
+      "target": "gene-effect-of-environment-on-phenotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-2-5",
+  "pages": [
+    28
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "version": 1,
+  "aliases": [
+    "후성유전학"
+  ]
+}

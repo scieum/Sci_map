@@ -1,0 +1,80 @@
+{
+  "id": "gene-animal-development",
+  "concept_key": "concept:animal-development",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "동물의 발생",
+  "notation": {
+    "hanja": "動物發生",
+    "english": "animal development",
+    "hanja_gloss": "動 움직일 동 · 物 만물 물 · 發 필 발 · 生 날 생"
+  },
+  "definition": "분열과 분화를 거쳐 생긴 세포들이 조직과 기관으로 짜여 한 개체를 이루어 가는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dev-organization",
+      "text": "발생에서는 세포가 분열하고 분화한 뒤 조직과 기관으로 체계를 갖추어 개체가 만들어진다",
+      "form": {
+        "condition": "다세포생물이 개체를 이룰 때",
+        "type": "conditional",
+        "scope": "다세포생물의 발생"
+      },
+      "invertible": false,
+      "invertible_reason": "차례를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dev-regulation",
+      "text": "동물의 발생은 여러 전사 인자가 잇따라 작용하는 유전자발현 조절로 진행된다",
+      "form": {
+        "condition": "초기 발생 과정",
+        "type": "causal",
+        "scope": "동물의 발생"
+      },
+      "invertible": true,
+      "invertible_reason": "조절이 원인이고 발생이 결과인 방향이라 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동물의 발생이 먼저 진행되어 전사 인자의 유전자발현 조절을 만들어 낸다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발생은 세포 수가 늘어나는 일일 뿐 유전자발현 조절과는 상관이 없다",
+      "why_wrong": "발생에서는 분열뿐 아니라 분화가 함께 일어나며, 그 분화는 전사 인자에 따른 발현 조절로 이루어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dev-regulation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-cell-differentiation"
+    },
+    {
+      "type": "next",
+      "target": "gene-homeotic-gene"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-2",
+  "pages": [
+    81
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

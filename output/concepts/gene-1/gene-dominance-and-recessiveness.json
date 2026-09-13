@@ -1,0 +1,88 @@
+{
+  "id": "gene-dominance-and-recessiveness",
+  "concept_key": "concept:dominance-and-recessiveness",
+  "registry_status": "new",
+  "term": "우성과 열성",
+  "notation": {
+    "hanja": "優性 · 劣性",
+    "english": "dominance and recessiveness",
+    "hanja_gloss": "優 뛰어날 우 · 性 성질 성 · 劣 못할 렬 · 性 성질 성"
+  },
+  "definition": "대립유전자가 서로 다를 때 겉으로 드러나는 쪽 형질이 우성이고, 가려져 드러나지 않는 쪽이 열성이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dr-recessive",
+      "text": "열성형질은 열성 대립유전자를 둘 다 지닌 개체에서만 겉으로 나타난다",
+      "form": {
+        "condition": "우열이 뚜렷한 상염색체 형질에서",
+        "type": "conditional",
+        "scope": "남자의 X염색체 유전형질은 하나만 있어도 나타나므로 제외"
+      },
+      "invertible": true,
+      "invertible_reason": "보인자는 열성 대립유전자를 하나 가지고도 표현형이 정상이므로 뒤집은 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "열성 대립유전자를 가진 개체는 모두 열성형질을 나타낸다"
+    },
+    {
+      "id": "rel-dr-notfreq",
+      "text": "우성이라는 말은 형질이 더 흔하다거나 더 낫다는 뜻이 아니다",
+      "form": {
+        "condition": "집단 안의 빈도와 우열 관계를 나란히 놓을 때",
+        "type": "classification",
+        "scope": "우열은 대립유전자 사이의 표현 관계에 한정"
+      },
+      "invertible": true,
+      "invertible_reason": "다지증처럼 우성이면서도 드문 형질이 있어 흔한 쪽이 우성이라는 진술은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "집단에서 더 흔하게 나타나는 형질이 우성이다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우성형질은 열성형질보다 집단에 더 많이 나타난다",
+      "why_wrong": "우열은 한 개체 안에서 어느 쪽이 드러나는지를 말할 뿐 집단의 빈도와는 상관이 없다. 다지증은 우성이지만 드물다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dr-notfreq"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-homozygosity-and-heterozygosity"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-mendelian-inheritance"
+    },
+    {
+      "type": "next",
+      "target": "gene-carrier"
+    },
+    {
+      "type": "related",
+      "target": "gene-pedigree-analysis"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-2",
+  "pages": [
+    14,
+    15
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

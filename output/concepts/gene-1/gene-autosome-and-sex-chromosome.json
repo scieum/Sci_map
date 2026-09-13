@@ -1,0 +1,102 @@
+{
+  "id": "gene-autosome-and-sex-chromosome",
+  "concept_key": "concept:autosome-and-sex-chromosome",
+  "registry_status": "new",
+  "term": "상염색체와 성염색체",
+  "notation": {
+    "hanja": "常染色體 · 性染色體",
+    "english": "autosome and sex chromosome",
+    "hanja_gloss": "常 항상 상 · 染 물들 염 · 色 빛 색 · 體 몸 체 · 性 성품 성 · 染 물들 염 · 色 빛 색 · 體 몸 체"
+  },
+  "definition": "암수가 함께 지니는 염색체가 상염색체이고, 성에 따라 구성이 달라져 성 결정에 관여하는 염색체가 성염색체다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-as-human",
+      "text": "사람의 체세포에는 상염색체 22쌍과 성염색체 1쌍이 들어 있다",
+      "form": {
+        "condition": "핵형이 정상인 사람의 체세포에서",
+        "type": "classification",
+        "scope": "사람에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "수를 바꾸어 적는 것은 방향을 뒤집는 일이 아니라 값을 틀리게 적는 일이다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-as-sex",
+      "text": "성염색체 구성이 XX 이면 여자로, XY 이면 남자로 발생한다",
+      "form": {
+        "condition": "사람과 초파리처럼 XY형으로 성이 결정되는 종에서",
+        "type": "conditional",
+        "scope": "성염색체 수이상은 제외"
+      },
+      "invertible": true,
+      "invertible_reason": "XX 를 남자, XY 를 여자로 뒤집으면 사람의 성 결정과 정면으로 어긋난다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성염색체 구성이 XX 이면 남자로, XY 이면 여자로 발생한다"
+    },
+    {
+      "id": "rel-as-other",
+      "text": "성염색체에는 성을 결정하는 유전자뿐 아니라 적록색맹처럼 성과 무관한 형질의 유전자도 함께 놓여 있다",
+      "form": {
+        "condition": "성염색체에 실린 유전자를 살필 때",
+        "type": "classification",
+        "scope": "사람의 X염색체에서 뚜렷하게 확인된다"
+      },
+      "invertible": false,
+      "invertible_reason": "성 결정 유전자만 있다고 뒤집은 문장은 이 카드의 오개념 지문과 같아, OX 원천을 명제와 오개념 두 군데에 두지 않는다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성염색체에는 성을 결정하는 유전자만 있다",
+      "why_wrong": "성염색체에는 성 결정 유전자 말고도 적록색맹처럼 다른 형질을 결정하는 유전자가 함께 놓여 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-as-other"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-homologous-chromosome"
+    },
+    {
+      "type": "next",
+      "target": "gene-autosomal-inheritance"
+    },
+    {
+      "type": "next",
+      "target": "gene-sex-linked-inheritance"
+    },
+    {
+      "type": "related",
+      "target": "gene-karyotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-3",
+  "pages": [
+    16,
+    25
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

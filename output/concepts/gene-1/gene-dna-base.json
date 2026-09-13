@@ -1,0 +1,90 @@
+{
+  "id": "gene-dna-base",
+  "concept_key": "concept:dna-base",
+  "registry_status": "new",
+  "term": "DNA 염기",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "DNA base",
+    "hanja_note": "DNA 가 로마자 약어라 표제어 전체에 대응하는 한자어가 없다(염기는 鹽基).",
+    "symbol_display": "A, G, T, C",
+    "symbol_plain": "A, G, T, C"
+  },
+  "definition": "DNA 를 이루는 네 가지 고리 모양 화합물. 아데닌·구아닌·타이민·사이토신을 가리킨다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-db-ring",
+      "text": "아데닌과 구아닌은 고리가 두 개이고, 타이민과 사이토신은 고리가 한 개다",
+      "form": {
+        "condition": "고리 수를 기준으로 염기를 나눌 때",
+        "type": "classification",
+        "scope": "DNA 를 이루는 네 가지 염기"
+      },
+      "invertible": false,
+      "invertible_reason": "고리 수를 맞바꾸어 적는 것은 방향을 뒤집는 일이 아니라 값을 틀리게 적는 일이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-db-pair",
+      "text": "고리가 두 개인 염기는 언제나 고리가 한 개인 염기와 짝을 짓는다",
+      "form": {
+        "condition": "이중나선 안에서 염기가 마주 볼 때",
+        "type": "conditional",
+        "scope": "이중나선 DNA"
+      },
+      "invertible": true,
+      "invertible_reason": "고리 두 개끼리 짝지으면 나선의 지름이 일정할 수 없어 뒤집은 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고리가 두 개인 염기끼리도 서로 짝을 지어 결합한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 의 네 염기는 모두 같은 크기의 고리 구조다",
+      "why_wrong": "아데닌과 구아닌은 고리가 두 개라 크고, 타이민과 사이토신은 고리가 한 개라 작다. 크기가 다르기 때문에 큰 것과 작은 것이 짝을 짓는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-db-ring"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-nucleotide"
+    },
+    {
+      "type": "next",
+      "target": "gene-complementary-base-pairing"
+    },
+    {
+      "type": "next",
+      "target": "gene-chargaff-rule"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "아데닌",
+    "구아닌",
+    "타이민",
+    "사이토신"
+  ]
+}

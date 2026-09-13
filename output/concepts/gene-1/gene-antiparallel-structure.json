@@ -1,0 +1,82 @@
+{
+  "id": "gene-antiparallel-structure",
+  "concept_key": "concept:antiparallel-structure",
+  "registry_status": "new",
+  "term": "역평행 구조",
+  "notation": {
+    "hanja": "逆平行構造",
+    "english": "antiparallel structure",
+    "hanja_gloss": "逆 거스를 역 · 平 평평할 평 · 行 다닐 행 · 構 얽을 구 · 造 지을 조"
+  },
+  "definition": "이중나선을 이루는 두 가닥의 방향이 서로 거꾸로 놓인 구조. 같은 쪽 끝을 보면 한 가닥은 5′ 말단, 맞은편 가닥은 3′ 말단이 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ap-ends",
+      "text": "이중나선의 같은 쪽 끝에서 한 가닥이 5′ 말단이면 맞은편 가닥은 3′ 말단이다",
+      "form": {
+        "condition": "역평행으로 놓인 두 가닥을 볼 때",
+        "type": "conditional",
+        "scope": "이중나선 DNA"
+      },
+      "invertible": true,
+      "invertible_reason": "두 가닥이 같은 쪽 끝에서 모두 5′ 말단이라면 역평행 구조 자체가 성립하지 않는다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이중나선의 같은 쪽 끝에서 두 가닥은 모두 5′ 말단이다"
+    },
+    {
+      "id": "rel-ap-replication",
+      "text": "두 가닥의 방향이 반대여서 복제 때 한 가닥만 풀리는 쪽으로 이어 붙여 나갈 수 있다",
+      "form": {
+        "condition": "복제 분기점에서 두 가닥이 함께 주형이 될 때",
+        "type": "causal",
+        "scope": "DNA 복제"
+      },
+      "invertible": false,
+      "invertible_reason": "한쪽만 연속으로 합성된다고 해서 그 까닭이 역평행 구조뿐이라 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이중나선의 두 가닥은 같은 방향으로 나란히 놓여 있다",
+      "why_wrong": "두 가닥은 방향이 서로 반대다. 그래서 복제할 때 한쪽은 연속으로, 다른 쪽은 조각내어 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ap-ends"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-directionality-of-dna-strand"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-dna-double-helix"
+    },
+    {
+      "type": "next",
+      "target": "gene-leading-and-lagging-strand"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    42
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

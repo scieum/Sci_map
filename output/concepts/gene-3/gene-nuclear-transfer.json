@@ -1,0 +1,79 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-nuclear-transfer",
+  "concept_key": "concept:nuclear-transfer",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "핵치환",
+  "notation": {
+    "hanja": "核置換",
+    "hanja_gloss": "核 씨 핵 · 置 둘 치 · 換 바꿀 환",
+    "english": "nuclear transfer"
+  },
+  "definition": "핵을 없앤 세포에 다른 세포의 핵을 옮겨 넣어, 그 핵의 유전정보를 지닌 세포를 만드는 기술.",
+  "relations": [
+    {
+      "id": "rel-nt-identity",
+      "text": "핵치환으로 만든 세포의 핵 유전정보는 핵을 내어 준 체세포의 것과 같다",
+      "form": {
+        "condition": "핵 없는 난자에 체세포 핵을 넣었을 때",
+        "type": "causal",
+        "scope": "체세포복제"
+      },
+      "invertible": false,
+      "invertible_reason": "조작의 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nt-immune",
+      "text": "환자의 핵을 쓴 배아에서 줄기세포를 얻으면 그 환자에게 이식할 때 면역 거부반응이 문제되지 않는다",
+      "form": {
+        "condition": "핵을 준 사람과 이식받는 사람이 같을 때",
+        "type": "causal",
+        "scope": "맞춤형 줄기세포"
+      },
+      "invertible": false,
+      "invertible_reason": "조건에서 따라 나오는 결과를 말한 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵치환은 난자의 핵과 체세포의 핵을 서로 맞바꾸는 조작이다",
+      "why_wrong": "난자의 핵은 빼내어 버리고 체세포의 핵만 넣는 한 방향의 조작이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nt-identity"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-embryonic-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-dedifferentiation"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    106
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": []
+}

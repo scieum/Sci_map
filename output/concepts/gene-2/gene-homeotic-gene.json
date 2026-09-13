@@ -1,0 +1,99 @@
+{
+  "id": "gene-homeotic-gene",
+  "concept_key": "concept:homeotic-gene",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "호미오유전자",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "homeotic gene",
+    "hanja_note": "음차어 '호미오'와 한자어 '유전자(遺傳子)'가 결합한 말이라 표제어 전체를 한자로 적지 않는다."
+  },
+  "definition": "배아의 체절마다 어떤 구조가 만들어질지를 결정하는, 산물이 전사 인자인 유전자.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hom-segment",
+      "text": "초기 배아의 체절마다 서로 다른 호미오유전자가 발현되어 체절별로 다른 구조가 만들어진다",
+      "form": {
+        "condition": "배아가 체절로 나뉜 뒤",
+        "type": "causal",
+        "scope": "동물의 초기 발생"
+      },
+      "invertible": true,
+      "invertible_reason": "발현 양상이 원인이고 구조 형성이 결과라 방향을 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "체절에 먼저 생긴 구조가 그 체절에서 발현될 호미오유전자를 정한다"
+    },
+    {
+      "id": "rel-hom-mutation",
+      "text": "호미오유전자에 돌연변이가 생기면 더듬이 자리에 다리가 돋는 것처럼 비정상 구조가 나타난다",
+      "form": {
+        "condition": "특정 호미오유전자의 기능이 달라질 때",
+        "type": "causal",
+        "scope": "초파리 돌연변이체"
+      },
+      "invertible": false,
+      "invertible_reason": "돌연변이가 원인이고 형태 이상이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-hom-conserved",
+      "text": "호미오유전자는 초파리뿐 아니라 포유류를 비롯한 여러 생물의 발생에서도 핵심 노릇을 한다",
+      "form": {
+        "condition": "여러 생물을 견줄 때",
+        "type": "conditional",
+        "scope": "동물 전반"
+      },
+      "invertible": false,
+      "invertible_reason": "공통성을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "호미오유전자는 초파리에만 있는 유전자다",
+      "why_wrong": "포유류를 비롯한 여러 동물의 발생에서도 같은 무리의 유전자가 체절별 구조 형성에 작용한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hom-conserved"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-animal-development"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-transcription-factor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-3-2",
+  "pages": [
+    81,
+    85
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "혹스유전자"
+  ]
+}

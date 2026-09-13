@@ -1,0 +1,89 @@
+{
+  "id": "gene-nucleotide",
+  "concept_key": "concept:nucleotide",
+  "registry_status": "reused",
+  "term": "뉴클레오타이드",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "nucleotide",
+    "hanja_note": "뉴클레오타이드가 음차어라 대응하는 한자어가 없다."
+  },
+  "definition": "당과 인산과 염기가 하나씩 이어져 만들어진, 핵산을 이루는 기본 단위.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nu-role",
+      "text": "사슬을 이어 주는 것은 당과 인산이고, 유전정보를 담는 것은 염기다",
+      "form": {
+        "condition": "세 부분이 맡은 구실을 가를 때",
+        "type": "classification",
+        "scope": "핵산을 이루는 뉴클레오타이드"
+      },
+      "invertible": false,
+      "invertible_reason": "구실을 맞바꾸어 적는 것은 방향을 뒤집는 일이 아니라 값을 틀리게 적는 일이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nu-sugar",
+      "text": "DNA 를 이루는 뉴클레오타이드의 당은 디옥시라이보스다",
+      "form": {
+        "condition": "DNA 와 RNA 의 당을 견줄 때",
+        "type": "classification",
+        "scope": "DNA"
+      },
+      "invertible": false,
+      "invertible_reason": "당의 종류를 바꾸어 적는 것은 방향을 뒤집는 일이 아니라 값을 틀리게 적는 일이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "뉴클레오타이드는 염기만으로 이루어져 있다",
+      "why_wrong": "염기는 정보를 담는 부분일 뿐이다. 당과 인산이 함께 있어야 다음 뉴클레오타이드와 이어져 사슬이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nu-role"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genetic-material"
+    },
+    {
+      "type": "next",
+      "target": "gene-polynucleotide"
+    },
+    {
+      "type": "next",
+      "target": "gene-dna-base"
+    },
+    {
+      "type": "same",
+      "target": "cell-nucleotide"
+    },
+    {
+      "type": "same",
+      "target": "reac-nucleotide"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    41
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

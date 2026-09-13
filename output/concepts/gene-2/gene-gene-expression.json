@@ -1,0 +1,102 @@
+{
+  "id": "gene-gene-expression",
+  "concept_key": "concept:gene-expression",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "유전자발현",
+  "notation": {
+    "hanja": "遺傳子發現",
+    "english": "gene expression",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자 · 發 필 발 · 現 나타날 현"
+  },
+  "definition": "유전자에 적힌 아미노산 배열 정보를 바탕으로 단백질이 만들어지는 일. DNA의 정보가 RNA를 거쳐 단백질로 이어지는 과정 전체를 가리킨다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ge-info-to-protein",
+      "text": "유전자에 저장된 염기서열 정보가 있어야 그에 해당하는 단백질이 만들어진다",
+      "form": {
+        "condition": "세포가 단백질을 합성할 때",
+        "type": "causal",
+        "scope": "유전자발현 과정 전체"
+      },
+      "invertible": true,
+      "invertible_reason": "정보가 원인이고 단백질이 결과인 방향이 정해져 있어 맞바꾸면 반드시 거짓이다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "합성된 단백질이 유전자의 염기서열 정보를 새로 만들어 낸다"
+    },
+    {
+      "id": "rel-ge-two-steps",
+      "text": "유전자발현은 RNA를 만드는 단계와 그 RNA로 단백질을 만드는 단계로 나뉜다",
+      "form": {
+        "condition": "발현 과정을 단계로 나눌 때",
+        "type": "classification",
+        "scope": "DNA를 유전물질로 쓰는 생물"
+      },
+      "invertible": false,
+      "invertible_reason": "단계를 갈라 놓은 분류형 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ge-cell-character",
+      "text": "세포가 어떤 유전자를 발현하느냐에 따라 그 세포가 갖추는 단백질과 특성이 달라진다",
+      "form": {
+        "condition": "같은 유전체를 가진 세포들을 견줄 때",
+        "type": "causal",
+        "scope": "다세포생물의 분화한 세포"
+      },
+      "invertible": false,
+      "invertible_reason": "발현 양상과 특성이 서로 얽혀 있어 뒤집은 문장이 늘 거짓이라고 하기 어렵다",
+      "curriculum": [
+        "12유전02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세포는 가지고 있는 유전자를 모두 늘 발현한다",
+      "why_wrong": "필요한 유전자만 시기와 조건에 맞춰 발현된다. 쓰지 않을 산물까지 만들면 에너지가 헛되이 쓰인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ge-cell-character"
+    },
+    {
+      "text": "유전자발현은 DNA에서 곧바로 단백질이 만들어지는 과정이다",
+      "why_wrong": "DNA의 정보는 먼저 RNA로 옮겨지고, 그 RNA의 염기서열이 단백질합성에 쓰인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ge-two-steps"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-central-dogma"
+    },
+    {
+      "type": "next",
+      "target": "gene-gene-expression-regulation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-1-1",
+  "pages": [
+    60
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

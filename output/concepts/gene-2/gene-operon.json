@@ -1,0 +1,98 @@
+{
+  "id": "gene-operon",
+  "concept_key": "concept:operon",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "오페론",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "operon",
+    "hanja_note": "영어 operon 의 음차어라 대응하는 한자어 표기가 없다."
+  },
+  "definition": "원핵생물에서 하나의 프로모터 아래 모여 한 단위로 전사가 조절되는 유전자 집단.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-op-one-unit",
+      "text": "오페론에 속한 구조유전자들은 한꺼번에 전사되어 발현이 함께 조절된다",
+      "form": {
+        "condition": "하나의 프로모터가 여러 구조유전자를 거느릴 때",
+        "type": "conditional",
+        "scope": "원핵생물의 오페론"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 낳는 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-op-parts",
+      "text": "오페론은 프로모터와 작동부위, 그리고 여러 개의 구조유전자로 이루어진다",
+      "form": {
+        "condition": "오페론의 구성을 볼 때",
+        "type": "classification",
+        "scope": "젖당오페론 같은 원핵생물의 오페론"
+      },
+      "invertible": false,
+      "invertible_reason": "구성을 밝힌 분류형 서술이다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-op-not-in-eukaryote",
+      "text": "진핵생물에는 여러 유전자가 한 프로모터에 묶여 함께 전사되는 구조가 없다",
+      "form": {
+        "condition": "원핵생물과 견줄 때",
+        "type": "conditional",
+        "scope": "진핵생물의 유전자 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "없음을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조절유전자도 오페론 안에 들어 있다",
+      "why_wrong": "조절유전자는 오페론 앞쪽의 다른 부위에 있어 오페론과 함께 전사되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-op-parts"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene-expression-regulation"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-promoter"
+    },
+    {
+      "type": "next",
+      "target": "gene-lac-operon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-2",
+  "pages": [
+    71
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

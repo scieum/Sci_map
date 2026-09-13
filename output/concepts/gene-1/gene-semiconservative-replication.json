@@ -1,0 +1,87 @@
+{
+  "id": "gene-semiconservative-replication",
+  "concept_key": "concept:semiconservative-replication",
+  "registry_status": "new",
+  "term": "반보존적 복제",
+  "notation": {
+    "hanja": "半保存的複製",
+    "english": "semiconservative replication",
+    "hanja_gloss": "半 반 반 · 保 지킬 보 · 存 있을 존 · 的 과녁 적 · 複 겹칠 복 · 製 지을 제"
+  },
+  "definition": "이중나선이 풀린 뒤 두 가닥이 저마다 주형 노릇을 하여 같은 DNA 두 개가 만들어지는 복제 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sr-half",
+      "text": "복제로 생긴 두 DNA 는 저마다 주형이던 옛 가닥 하나와 새로 만들어진 가닥 하나를 지닌다",
+      "form": {
+        "condition": "풀린 두 가닥이 각각 주형으로 쓰일 때",
+        "type": "classification",
+        "scope": "반보존적 복제"
+      },
+      "invertible": true,
+      "invertible_reason": "옛 가닥끼리, 새 가닥끼리 모인다고 뒤집으면 보존적 모델이 되어 실험 결과와 어긋난다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "복제로 생긴 두 DNA 가운데 하나는 옛 가닥 둘로, 다른 하나는 새 가닥 둘로 이루어진다"
+    },
+    {
+      "id": "rel-sr-keep",
+      "text": "옛 가닥을 본으로 삼기 때문에 복제를 거듭해도 유전정보가 그대로 이어진다",
+      "form": {
+        "condition": "상보결합 규칙이 지켜질 때",
+        "type": "causal",
+        "scope": "오류가 교정되는 정상적인 복제"
+      },
+      "invertible": false,
+      "invertible_reason": "정보가 보존된다고 해서 그 까닭이 반보존적 방식뿐이라 할 수는 없다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "복제된 DNA 두 개 가운데 하나는 옛 가닥만으로, 다른 하나는 새 가닥만으로 이루어진다",
+      "why_wrong": "그것은 보존적 모델의 예상이다. 실제로는 두 DNA 모두가 옛 가닥 하나와 새 가닥 하나를 지닌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sr-half"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-meselson-stahl-experiment"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-complementary-base-pairing"
+    },
+    {
+      "type": "next",
+      "target": "gene-template-strand"
+    },
+    {
+      "type": "next",
+      "target": "gene-dna-polymerase"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-2",
+  "pages": [
+    46,
+    47
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

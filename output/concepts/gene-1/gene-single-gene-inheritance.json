@@ -1,0 +1,86 @@
+{
+  "id": "gene-single-gene-inheritance",
+  "concept_key": "concept:single-gene-inheritance",
+  "registry_status": "new",
+  "term": "단일유전자유전",
+  "notation": {
+    "hanja": "單一遺傳子遺傳",
+    "english": "single-gene inheritance",
+    "hanja_gloss": "單 홑 단 · 一 한 일 · 遺 남길 유 · 傳 전할 전 · 子 아들 자 · 遺 남길 유 · 傳 전할 전"
+  },
+  "definition": "한 쌍의 대립유전자가 형질을 결정하는 유전 현상. 관여하는 유전자 수로 유전을 나눌 때 다유전자유전과 짝을 이룬다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sg-mendel",
+      "text": "한 쌍의 대립유전자가 결정하는 형질은 멘델이 찾아낸 유전 원리를 따라 전달된다",
+      "form": {
+        "condition": "대립유전자 한 쌍이 형질을 결정할 때",
+        "type": "conditional",
+        "scope": "연관과 환경의 영향이 작은 형질"
+      },
+      "invertible": false,
+      "invertible_reason": "멘델 원리를 따르는 것처럼 보인다고 반드시 단일유전자유전인 것은 아니어서 뒤집으면 단정할 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sg-discrete",
+      "text": "관여하는 대립유전자가 한 쌍이면 표현형이 몇 가지로 뚜렷이 갈린다",
+      "form": {
+        "condition": "우열이 분명한 형질에서",
+        "type": "conditional",
+        "scope": "복대립유전에서는 표현형 가짓수가 늘어난다"
+      },
+      "invertible": false,
+      "invertible_reason": "표현형이 뚜렷이 갈린다고 해서 반드시 한 쌍의 대립유전자 때문만은 아니다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "사람의 형질은 대부분 단일유전자유전이다",
+      "why_wrong": "사람에서는 단일유전자유전이 오히려 드물다. 키·피부색처럼 여러 유전자와 환경이 함께 작용하는 형질이 훨씬 많다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sg-discrete"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-allele"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-genotype-and-phenotype"
+    },
+    {
+      "type": "next",
+      "target": "gene-mendelian-inheritance"
+    },
+    {
+      "type": "related",
+      "target": "gene-polygenic-inheritance"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-2",
+  "pages": [
+    14,
+    15
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

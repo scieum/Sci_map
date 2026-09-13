@@ -1,0 +1,85 @@
+{
+  "id": "gene-eukaryotic-genome",
+  "concept_key": "concept:eukaryotic-genome",
+  "registry_status": "new",
+  "term": "진핵세포의 유전체",
+  "notation": {
+    "hanja": "眞核細胞遺傳體",
+    "english": "eukaryotic genome",
+    "hanja_gloss": "眞 참 진 · 核 씨 핵 · 細 가늘 세 · 胞 세포 포 · 遺 남길 유 · 傳 전할 전 · 體 몸 체"
+  },
+  "definition": "핵 속에 든 여러 개의 선형 염색체로 이루어진 유전체. 원핵세포의 것보다 크고 유전자 수도 많다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ek-histone",
+      "text": "진핵세포의 염색체 DNA 는 히스톤 단백질과 결합해 뉴클레오솜을 이루고 응축되어 염색질이 된다",
+      "form": {
+        "condition": "핵 안에서 긴 DNA 가 정리될 때",
+        "type": "causal",
+        "scope": "진핵세포"
+      },
+      "invertible": false,
+      "invertible_reason": "염색질을 이룬다고 해서 그 과정이 이 한 가지로만 설명되는 것은 아니다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ek-empty",
+      "text": "진핵생물의 유전체에는 유전정보를 담지 않은 부분이 넓게 자리한다",
+      "form": {
+        "condition": "원핵생물의 유전체와 견줄 때",
+        "type": "classification",
+        "scope": "진핵생물"
+      },
+      "invertible": false,
+      "invertible_reason": "빈 부분이 있다고 해서 반드시 진핵생물이라 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전체가 크면 그만큼 복잡하고 고등한 생물이다",
+      "why_wrong": "유전체 크기는 유전자 사이 빈 부분의 양에 크게 좌우된다. 크기와 유전자 수, 생물의 복잡함이 나란히 가지는 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ek-empty"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-prokaryotic-genome"
+    },
+    {
+      "type": "next",
+      "target": "gene-nucleosome"
+    },
+    {
+      "type": "next",
+      "target": "gene-exon-and-intron"
+    }
+  ],
+  "curriculum": [
+    "12유전01-06"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-2",
+  "pages": [
+    44
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,614 @@
+{
+  "unit_id": "gene-3",
+  "generated_at": "2026-09-13T15:40:00+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 31,
+    "script_precheck": {
+      "tool": ".claude/skills/curriculum-mapper/scripts/validate_tags.py",
+      "result": "통과",
+      "note": "실재하지 않는 코드·과목 접두어 불일치·태그 0개·미확정(crosscheck) 코드 사용 없음. 영역 03 코드 17건은 모두 crosscheck 일치다."
+    },
+    "standards_in_scope": [
+      {
+        "code": "12유전03-01",
+        "text": "생명공학기술 발달 과정에서의 주요 사건을 조사하고 다양한 매체를 활용하여 발표할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12유전03-02",
+        "text": "단일클론항체, 줄기세포, 유전자 편집 기술이 난치병 치료에 활용된 사례를 조사하고, 이러한 치료법의 전망에 대해 협력적으로 소통할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12유전03-03",
+        "text": "생명공학기술 관련 학문 분야를 이해하고 우리 생활과 산업에 활용 사례를 조사하여 창의적으로 설명 자료를 제작할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12유전03-04",
+        "text": "유전자 변형 생물체(LMO)의 특징을 이해하고 인간과 생태계에 미치는 영향을 추론할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12유전03-05",
+        "text": "생명공학기술의 활용 과정에서 나타나는 문제점과 이에 대한 사회적 책임을 인식하고 생명윤리 쟁점에 대해 의사 결정할 수 있다.",
+        "crosscheck": "일치"
+      }
+    ],
+    "findings": [
+      {
+        "card_id": "gene-recombinant-dna-technology",
+        "verdict": "retag",
+        "current": [
+          "12유전03-02",
+          "12유전03-04"
+        ],
+        "suggested": [
+          "12유전03-03",
+          "12유전03-04"
+        ],
+        "reason": "12유전03-02 전문은 '단일클론항체, 줄기세포, 유전자 편집 기술이 난치병 치료에 활용된 사례'로 세 기술을 이름으로 못 박아 놓았고, DNA 재조합기술은 그 셋에 들지 않는다. 교과서가 이 기술에 붙여 놓은 활용은 103쪽의 의약품 생산(인슐린)과 112쪽의 품종 개량이고, 중단원 정리(115쪽)의 '농업, 축산업 분야 (➊)의 발달로 …' 빈칸 정답이 '유전자재조합기술'이다. 이는 중단원 02 머리(102쪽)에 나란히 걸린 다른 성취기준, 곧 12유전03-03의 '우리 생활과 산업에 활용 사례'를 그대로 받는다. 98쪽 연표의 '1973 최초의 DNA 재조합 실험'을 근거로 12유전03-01을 함께 다는 것도 가능하나, 카드 명제 셋(도구 구성·대장균 대량 생산·육종 대비)이 모두 활용 쪽이라 03-03이 먼저다. rel-rdt-speed에 붙은 12유전03-04는 출처가 112쪽(농업 활용)인지 118쪽 탐구(LMO)인지에 따라 갈리므로 그대로 두었다.",
+        "prerequisites": [
+          "concept:dna",
+          "concept:protein"
+        ]
+      },
+      {
+        "card_id": "gene-recombinant-dna",
+        "verdict": "retag",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-03"
+        ],
+        "reason": "103쪽 본문('제한효소 … DNA 연결효소로 연결하면 재조합 DNA를 만들 수 있다')에서 나온 카드다. 명제 셋이 모두 재조합 DNA를 만들고 숙주에서 늘리는 절차이고, 난치병 치료 사례가 아니다. 이 카드는 DNA 재조합기술 카드(gene-recombinant-dna-technology)의 구성 요소이므로 상위 카드와 같은 성취기준을 따라야 하고, 12유전03-02가 이름으로 든 세 기술 어디에도 걸리지 않는다.",
+        "prerequisites": [
+          "concept:dna"
+        ]
+      },
+      {
+        "card_id": "gene-restriction-enzyme",
+        "verdict": "retag",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-03"
+        ],
+        "reason": "103쪽 '제한효소는 특정한 염기서열 부위의 DNA 가닥을 자른다'에서 나온 도구 카드다. 명제 셋(인식 서열·상보적 말단·세균의 방어 기원)은 난치병 치료와 무관하다. 이 카드는 DNA 재조합기술 카드(gene-recombinant-dna-technology)의 구성 요소이므로 상위 카드와 같은 성취기준을 따라야 하고, 12유전03-02가 이름으로 든 세 기술 어디에도 걸리지 않는다.",
+        "prerequisites": [
+          "concept:dna",
+          "concept:enzyme"
+        ]
+      },
+      {
+        "card_id": "gene-dna-ligase",
+        "verdict": "retag",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-03"
+        ],
+        "reason": "103쪽 그림 Ⅲ-2의 '목적 유전자 조각과 DNA 운반체 연결(재조합)' 단계에서 나온 도구 카드다. 명제 둘이 모두 잇는 일의 조건과 역할 구분이다. 이 카드는 DNA 재조합기술 카드(gene-recombinant-dna-technology)의 구성 요소이므로 상위 카드와 같은 성취기준을 따라야 하고, 12유전03-02가 이름으로 든 세 기술 어디에도 걸리지 않는다.",
+        "prerequisites": [
+          "concept:dna",
+          "concept:enzyme"
+        ]
+      },
+      {
+        "card_id": "gene-plasmid",
+        "verdict": "retag",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-03"
+        ],
+        "reason": "103쪽 그림 Ⅲ-2의 'DNA 운반체(플라스미드) 분리'에서 나온 운반체 카드다. 명제 둘(독립 복제·운반체로 쓰는 까닭)은 재조합기술의 준비물 설명이다. 이 카드는 DNA 재조합기술 카드(gene-recombinant-dna-technology)의 구성 요소이므로 상위 카드와 같은 성취기준을 따라야 하고, 12유전03-02가 이름으로 든 세 기술 어디에도 걸리지 않는다.",
+        "prerequisites": [
+          "concept:dna"
+        ]
+      },
+      {
+        "card_id": "gene-monoclonal-antibody",
+        "verdict": "uncertain",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-02",
+          "12유전03-03"
+        ],
+        "reason": "12유전03-02가 '단일클론항체'를 이름으로 들고 있으므로 현재 태그는 틀리지 않다. 다만 105쪽 본문의 절반이 난치병 치료가 아니라 임신 진단 키트·코로나 자가진단 키트·말라리아 진단 키트 같은 생활 속 진단 활용이고, 카드의 rel-mab-specific('여러 물질이 섞인 시료에서도 그 항원만 골라 검출할 수 있다')이 바로 그 대목 위에 선다. 12유전03-03을 더할 것인지 03-02 하나로 둘 것인지에서 판단이 갈려 올린다. 진위가 걸린 문제는 아니고 태그 범위의 문제다.",
+        "prerequisites": [
+          "concept:antibody",
+          "concept:antigen",
+          "concept:lymphocyte"
+        ]
+      },
+      {
+        "card_id": "gene-embryonic-stem-cell",
+        "verdict": "uncertain",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-02"
+        ],
+        "reason": "태그 자체는 106쪽 '줄기세포' 본문과 12유전03-02에 맞는다. 갈리는 것은 카드의 소속이다. output/concepts/gene-2/gene-embryonic-stem-cell.json 에 id 도 concept_key(concept:embryonic-stem-cell) 도 같은 카드가 이미 있고 그쪽은 12유전02-05(발생·유전자발현 조절 연구의 기여) 태그다. 두 카드가 살아 있으면 concept_key 하나에 카드가 둘이 되어 G 파이프라인의 링크 기준이 흔들린다. 어느 단원에 둘지(또는 둘을 합칠지)는 사람·메인이 정할 일이라 uncertain 으로 올린다.",
+        "prerequisites": [
+          "concept:cell-differentiation",
+          "concept:pluripotency"
+        ]
+      },
+      {
+        "card_id": "gene-induced-pluripotent-stem-cell",
+        "verdict": "uncertain",
+        "current": [
+          "12유전03-02"
+        ],
+        "suggested": [
+          "12유전03-02"
+        ],
+        "reason": "위와 같은 중복이다. output/concepts/gene-2/gene-induced-pluripotent-stem-cell.json 이 같은 id·같은 concept_key(concept:induced-pluripotent-stem-cell)로 12유전02-05에 붙어 있다. gene-3 판은 106쪽(줄기세포 종류), gene-2 판은 82~85쪽(발생 연구)에서 왔다. 범위 이탈은 아니고 소속 결정이 필요하다.",
+        "prerequisites": [
+          "concept:cell-differentiation",
+          "concept:pluripotency"
+        ]
+      }
+    ],
+    "prerequisites_outside_unit": [
+      {
+        "card_id": "gene-monoclonal-antibody",
+        "keys": [
+          "concept:antibody",
+          "concept:antigen",
+          "concept:lymphocyte"
+        ],
+        "note": "rel-mab-hybrid 와 rel-mab-serum 이 B림프구·항원항체반응·혈청 개념 위에 선다. 이 개념들은 다른 과목(생명과학1, bio-2)의 카드로 이미 있다. G 파이프라인에서 concept_key 로 걸 자리다."
+      },
+      {
+        "card_id": "gene-stem-cell",
+        "keys": [
+          "concept:cell-differentiation"
+        ],
+        "note": "'미분화 세포'·'분화할 수 있는 능력'이 같은 과목 앞 영역(12유전02-04, gene-2/gene-cell-differentiation) 위에 선다."
+      },
+      {
+        "card_id": "gene-dedifferentiation",
+        "keys": [
+          "concept:cell-differentiation",
+          "concept:gene-expression"
+        ],
+        "note": "rel-dd-gene('역분화를 일으키는 유전자를 세포 안에 넣어야 한다')은 유전자발현 개념(12유전02-01) 위에 선다."
+      },
+      {
+        "card_id": "gene-embryonic-stem-cell",
+        "keys": [
+          "concept:cell-differentiation",
+          "concept:pluripotency"
+        ],
+        "note": "gene-2 에 같은 개념의 카드가 있어 선수 표시와 중복 정리가 함께 걸린다."
+      },
+      {
+        "card_id": "gene-induced-pluripotent-stem-cell",
+        "keys": [
+          "concept:cell-differentiation",
+          "concept:pluripotency"
+        ],
+        "note": "위와 같다."
+      },
+      {
+        "card_id": "gene-restriction-enzyme",
+        "keys": [
+          "concept:dna",
+          "concept:enzyme"
+        ],
+        "note": "rel-re-same-ends 의 '단일 가닥 서열이 상보적'은 DNA 이중나선과 상보적 염기쌍(12유전01-05·01-06) 위에 선다. 그 영역의 카드(gene-1)는 아직 output/concepts 에 없어 지금은 cell-1/cell-2 의 concept:dna·concept:enzyme 이 가장 가까운 키다."
+      },
+      {
+        "card_id": "gene-dna-ligase",
+        "keys": [
+          "concept:dna",
+          "concept:enzyme"
+        ],
+        "note": "rel-lig-join 의 '상보적으로 맞붙은 상태'가 같은 선수 개념 위에 선다."
+      },
+      {
+        "card_id": "gene-recombinant-dna",
+        "keys": [
+          "concept:dna"
+        ],
+        "note": "재조합 DNA 의 정의 자체가 DNA 개념을 전제한다."
+      },
+      {
+        "card_id": "gene-plasmid",
+        "keys": [
+          "concept:dna",
+          "concept:chromosome"
+        ],
+        "note": "'주 염색체와 따로 존재하는 원형 DNA'라 염색체 개념을 전제한다. concept:chromosome 은 사전에 등록된 키가 아니어서 G3 에서 확인이 필요하다 — 지금 단계에서 새 키를 만들지는 않았다."
+      },
+      {
+        "card_id": "gene-crispr-cas9",
+        "keys": [
+          "concept:dna",
+          "concept:gene-expression"
+        ],
+        "note": "rel-crispr-parts 의 '가이드 RNA가 표적 DNA와 상보적으로 결합'이 상보적 염기쌍과 RNA 개념(12유전01-05, 02-01) 위에 선다."
+      },
+      {
+        "card_id": "gene-polymerase-chain-reaction",
+        "keys": [
+          "concept:dna"
+        ],
+        "note": "증폭은 DNA 복제(12유전01-07) 위에 선다. 그 영역의 카드가 아직 없어 concept:dna 로만 적는다."
+      },
+      {
+        "card_id": "gene-gene-therapy",
+        "keys": [
+          "concept:gene-expression"
+        ],
+        "note": "rel-gt-normal('넣어 준 정상 유전자가 환자의 세포에서 발현되어야')이 12유전02-01 의 유전자발현 위에 선다."
+      },
+      {
+        "card_id": "gene-gene-editing",
+        "keys": [
+          "concept:gene-expression",
+          "concept:protein"
+        ],
+        "note": "rel-edit-repair 의 '정상 단백질이 만들어져'가 유전자발현과 단백질 개념 위에 선다."
+      },
+      {
+        "card_id": "gene-living-modified-organism",
+        "keys": [
+          "concept:ecosystem"
+        ],
+        "note": "rel-lmo-eco 의 생태계 교란이 다른 과목(bio-1/isci2-2)의 concept:ecosystem 위에 선다."
+      },
+      {
+        "card_id": "gene-superweed",
+        "keys": [
+          "concept:ecosystem"
+        ],
+        "note": "rel-sw-transfer·rel-sw-unpredict 가 같은 개념 위에 선다."
+      },
+      {
+        "card_id": "gene-bioremediation",
+        "keys": [
+          "concept:ecosystem",
+          "concept:enzyme"
+        ],
+        "note": "'생화학적 경로로 분해'가 효소 개념 위에 선다."
+      }
+    ],
+    "notes": [
+      "범위 이탈(out_of_scope) 0건이다. 31장이 모두 96~121쪽의 body·section_review 쪽에서 왔고, 단원 정리(122~125쪽)나 프로젝트(126~127쪽)만을 근거로 삼은 카드는 없다.",
+      "곁주에서 온 카드 셋(gene-cell-fusion 104쪽, gene-nuclear-transfer·gene-dedifferentiation 106쪽)은 각각 단클론항체·줄기세포 본문을 받치므로 12유전03-02 안이다. 곁주라는 이유로 이탈로 보지 않았다.",
+      "<track>-facts 스킬 대조는 하지 않았다 — bio-facts 계열 스킬이 이 저장소에 없다. C5 는 태그 적합성만 보므로 대조가 필요한 항목도 없었다.",
+      "id·concept_key 중복 2건(gene-embryonic-stem-cell, gene-induced-pluripotent-stem-cell)이 gene-2 와 겹친다. 태그 문제가 아니라 카드 소속 문제여서 findings 에 uncertain 으로 올리고 메인에 따로 보고한다."
+    ],
+    "stats": {
+      "ok": 23,
+      "retag": 5,
+      "out_of_scope": 0,
+      "uncertain": 3
+    }
+  },
+  "relations": {
+    "checked": 81,
+    "cards_checked": 31,
+    "invertible_true_checked": 15,
+    "misconceptions_checked": 38,
+    "stats": {
+      "ok": 55,
+      "defect": 15,
+      "uncertain": 11
+    },
+    "misconception_only_findings": 2,
+    "findings": [
+      {
+        "card_id": "gene-gene-therapy",
+        "relation_id": "rel-gt-normal",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[0] '유전자치료를 받으면 고쳐진 유전자가 자손에게도 그대로 전해진다' 가 rel-gt-normal('넣어 준 정상 유전자가 환자의 세포에서 발현되어야 치료 효과가 나타난다') 을 가리킨다. 이 명제는 발현 여부를 치료 효과의 필요조건으로 말할 뿐 유전자가 다음 세대로 가는지 아닌지는 한 마디도 하지 않는다. 오개념의 반대편에 서려면 '치료 대상은 환자의 체세포다'(체세포/생식세포 구분) 라는 명제가 있어야 하는데 이 카드 명제 3개(rel-gt-normal·rel-gt-inout·rel-gt-vector) 어디에도 없다. why_wrong 이 '치료의 대상이 되는 것은 환자의 몸을 이루는 세포이므로' 라고 명제가 아닌 새 내용을 근거로 끌어다 쓴 것이 그 증거다. output/source/gene-3/text.jsonl 전문에서 '생식세포' 는 94쪽 선수 개념 안내(고등학교 생명과학 · 생식세포 형성 과정)에만 나오고 '자손' 은 한 번도 나오지 않는다 — 교과서가 다루지 않는 내용을 오개념으로 세운 자리다.",
+        "suggest": "이 오개념을 지울지, 체세포 대상임을 말하는 명제를 세우고 거기에 걸지 정한다. 명제를 새로 세우는 쪽은 교과서 본문에 근거가 없으므로 범위 판단(C5)이 먼저다. 진위 자체는 확정하지 않았다."
+      },
+      {
+        "card_id": "gene-dna-sequencing",
+        "relation_id": "rel-seq-basis",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[0] 'DNA 염기순서분석법은 염기가 몇 개인지 세는 방법이다' 가 rel-seq-basis('유전체 전체의 서열을 결정하는 연구는 염기의 차례를 읽는 방법이 마련된 뒤에야 시작될 수 있었다') 를 가리킨다. rel-seq-basis 는 방법과 유전체 연구의 선후를 말한 명제라, '개수냐 차례냐' 라는 오해를 바로 맞받지 않는다. why_wrong 이 대는 근거('개수가 아니라 염기가 놓인 차례를 읽는 방법이며') 는 명제가 아니라 definition('DNA 가닥에 늘어선 염기의 차례를 읽어 내는 실험 방법') 에서 온 것이다. 정의를 반대편으로 삼은 오개념은 걸 명제가 없다는 뜻이다.",
+        "suggest": "오개념을 지울지, 이 카드에서 '무엇을 읽는가' 를 말하는 명제를 따로 세워 거기 걸지 정한다."
+      },
+      {
+        "card_id": "gene-bioethics",
+        "relation_id": "rel-eth-axis",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[0] '생명윤리는 과학과 상관없는 문제라 연구자는 신경 쓰지 않아도 된다' 가 rel-eth-axis('생명윤리 쟁점은 기술이 주는 이익과 생명의 존엄·안전 가운데 무엇을 앞세울지에서 갈린다') 를 가리킨다. rel-eth-axis 는 쟁점이 갈리는 축을 말한 명제이고, 오개념은 연구자의 책임 유무를 말한다 — 같은 축 위에 있지 않다. why_wrong 이 드는 근거('실험동물 이용이나 임상 시험처럼 연구 과정 자체에서 생기는 문제') 는 이 카드 명제 3개 어디에도 없고 119쪽 본문('실험동물을 이용하거나 환자에게 임상 시험을 진행하므로 이 과정에서 윤리적 문제가 발생한다') 에서 바로 온 것이다. 명제를 거치지 않고 본문에서 바로 끌어온 오개념이다.",
+        "suggest": "연구 과정 자체에서 윤리 문제가 생긴다는 내용을 명제로 세울지, 오개념을 지울지 정한다."
+      },
+      {
+        "card_id": "gene-recombinant-dna-technology",
+        "relation_id": "rel-rdt-tools",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[0] 'DNA 재조합기술은 세상에 없던 유전자를 새로 만들어 내는 기술이다' 가 rel-rdt-tools('제한효소와 DNA 연결효소, 그리고 플라스미드 같은 운반체가 갖춰져야 재조합 DNA를 만들 수 있다') 를 가리킨다. rel-rdt-tools 는 준비물을 늘어놓은 명제라 '유전자를 창조하느냐 조합을 바꾸느냐' 라는 오해와 맞물리지 않는다. 이 오개념의 반대편에 정확히 서 있는 명제는 다른 카드 gene-recombinant-dna 의 rel-rdna-new('유전자 하나하나는 본래 생물의 것이고, 새로운 것은 유전자들이 모인 조합이다') 다. 같은 카드 안에 맞는 명제가 없는데 억지로 건 자리다.",
+        "suggest": "이 카드에서 오개념을 지우고 gene-recombinant-dna 쪽 오개념과 중복인지 보든지, 이 카드에 조합/창조를 가르는 명제를 세우든지 정한다."
+      },
+      {
+        "card_id": "gene-biotechnology",
+        "relation_id": null,
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[1] '생명공학기술은 실험실에서만 쓰는 기술이라 일상 제품과는 관계가 없다' 에 linked_relation 이 아예 없다. 이 단원 오개념 38건 가운데 링크가 빠진 것은 이것과 gene-polymerase-chain-reaction 의 것 둘뿐이다. why_wrong 이 드는 '자가진단 키트, 혈당측정기' 는 이 카드 명제 3개(rel-biotech-scope·rel-biotech-scale·rel-biotech-rdna) 어디에도 없다 — 링크가 빠진 것이 아니라 걸 명제가 없다.",
+        "suggest": "걸 명제를 세울지 오개념을 지울지 정한다. 빈 linked_relation 을 가까운 명제로 메우는 것은 답이 아니다.",
+        "misconception_index": 1
+      },
+      {
+        "card_id": "gene-polymerase-chain-reaction",
+        "relation_id": null,
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[1] 'PCR로 늘린 DNA는 원래 DNA와 염기서열이 달라진다' 에 linked_relation 이 없다. why_wrong 이 대는 근거('주형을 본떠 복제하는 반응이므로') 는 이 카드 명제 3개(rel-pcr-amplify·rel-pcr-cycle·rel-pcr-forensic) 어디에도 없다. 세 명제는 증폭의 양만 말하고 복제의 충실도는 말하지 않는다.",
+        "suggest": "복제 충실도를 말하는 명제를 세울지, 오개념을 지울지 정한다.",
+        "misconception_index": 1
+      },
+      {
+        "card_id": "gene-bioethics-review-system",
+        "relation_id": "rel-brs-embryo",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "명제 '인간 복제와 불임 치료 밖의 목적으로 하는 배아 생산은 금지되고, 남은 배아의 이용만 한시적으로 허용된다' 는 '인간 복제' 를 '불임 치료' 와 나란히 묶어 금지의 예외 자리에 세워 놓았다. 그대로 읽으면 인간 복제를 목적으로 한 배아 생산은 금지 대상이 아니라는 말이 된다. 119쪽 표 Ⅲ-1 은 '불임 치료 목적 이외 인간 배아 생산 금지' 와 '인간 복제의 금지' 를 **서로 다른 항목**으로 나란히 적었다 — 인간 복제는 예외가 아니라 그 자체로 금지 항목이다. form.scope 가 '배아 관련 규정' 으로 넓은 탓에 이 오독이 그대로 규정 전체의 서술이 된다.",
+        "suggest": "두 금지 항목이 한 문장에서 예외 관계로 묶이지 않도록 명제를 가른다. 법령 조문이 걸린 문장이므로 어느 항목을 이 카드가 맡을지는 메인이 정한다."
+      },
+      {
+        "card_id": "gene-stem-cell",
+        "relation_id": "rel-sc-undiff",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '아직 어떤 세포가 될지 정해지지 않은 채, 근육세포·신경세포·혈구 등으로 갈라져 나갈 능력을 지닌 미분화 세포' 다. 명제 '분화가 끝나지 않은 상태이기 때문에 여러 종류의 세포로 갈라져 나갈 수 있다' 는 그 정의의 앞절('정해지지 않은 채')을 원인절로, 뒷절('갈라져 나갈 능력')을 결과절로 옮겨 놓은 것뿐이다. 정의를 읽은 학생이 이 명제에서 새로 얻는 것이 없다.",
+        "suggest": "같은 카드의 rel-sc-therapy·rel-sc-classify 는 정의에 없는 것을 보태 이 지적을 받지 않는다. 이 명제를 지울지 정의에서 나오지 않는 내용으로 갈음할지 정한다."
+      },
+      {
+        "card_id": "gene-cell-fusion",
+        "relation_id": "rel-cf-hybrid",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '종류가 다른 두 세포를 하나로 합쳐, 양쪽의 형질을 함께 지닌 잡종세포를 얻어 내는 기술' 이다. 명제 '융합으로 생긴 잡종세포는 재료가 된 두 세포의 형질을 함께 나타낸다' 는 정의의 '양쪽의 형질을 함께 지닌 잡종세포' 를 주어·술어로 풀어 쓴 문장이다. 이 카드는 명제가 2개뿐인데 그중 하나가 정의의 되풀이다.",
+        "suggest": "정의에서 '양쪽의 형질을 함께 지닌' 을 빼고 명제가 맡게 하든지 명제를 갈음한다. 이 명제에 오개념 1건이 걸려 있으므로 손대면 연결도 함께 옮긴다."
+      },
+      {
+        "card_id": "gene-restriction-enzyme",
+        "relation_id": "rel-re-origin",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 둘째 문장이 '세균이 침입한 외부 DNA를 없앨 때 쓰던 것이다' 이고, 명제 rel-re-origin 은 '제한효소는 본래 세균이 자기 안으로 들어온 외부 DNA를 잘라 없애는 데 쓰던 효소다' 다. 보탠 것은 '자기 안으로 들어온'·'잘라' 두 마디뿐이고 나머지는 같은 말이다.",
+        "suggest": "정의에서 유래 문장을 빼고 명제가 맡게 하든지, 명제를 지운다."
+      },
+      {
+        "card_id": "gene-dedifferentiation",
+        "relation_id": "rel-dd-gene",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '분화가 끝난 세포에 특정 유전자를 넣어 미분화 상태로 되돌리는 과정' 이다. 명제 '역분화를 일으키려면 그 과정을 유도하는 유전자를 세포 안에 넣어야 한다' 는 정의의 수단절('특정 유전자를 넣어')을 필요조건으로 어미만 바꾼 문장이다. 이 카드는 명제가 2개뿐이고 나머지 하나(rel-dd-direction)도 정의와 겹치는 정도가 커 uncertain 으로 따로 올렸다 — 카드 전체가 정의 되풀이로 서 있다.",
+        "suggest": "정의에서 수단을 빼고 명제가 맡게 하든지, 카드 단위로 명제 구성을 다시 세운다. 이 명제에 오개념 1건이 걸려 있다."
+      },
+      {
+        "card_id": "gene-genetic-engineering",
+        "relation_id": "rel-geng-criterion",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '생물의 유전물질을 인위적으로 조작해 바꾸는 기술 분야' 다. 명제 'DNA 재조합처럼 유전물질을 직접 건드리는 조작이 있어야 유전공학으로 분류된다' 는 그 정의를 분류 기준의 문장으로 바꿔 쓴 것이다. 'DNA 재조합처럼' 이라는 예시 말고는 정의에 없던 것이 없다.",
+        "suggest": "정의에서 나오지 않는 내용(예: 발효처럼 유전물질을 건드리지 않는 기술과의 경계)으로 갈음할지 지울지 정한다. 다만 그 경계는 같은 카드의 rel-geng-subset 과 오개념 1건이 이미 맡고 있으므로 중복이 되지 않게 본다."
+      },
+      {
+        "card_id": "gene-selective-breeding",
+        "relation_id": "rel-sb-choose",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '원하는 특성을 지닌 개체끼리 사람이 짝지어 교배시켜 그 특성을 물려받은 자손을 얻는 품종 개량 방법' 이다. 명제 '선택적 육종은 이미 있는 변이 가운데 사람이 원하는 것을 골라 대를 잇게 하는 방식이다' 에서 정의에 없는 것은 '이미 있는 변이 가운데' 한 마디뿐이고, 그 한 마디가 뜻하는 바(새 유전자를 넣지 않는다)는 같은 카드의 rel-sb-nogene 이 따로 맡고 있다. 정의와 옆 명제 사이에 남는 자리가 없다.",
+        "suggest": "이 명제를 지울지, rel-sb-nogene 과 역할을 나눠 다시 세울지 정한다."
+      },
+      {
+        "card_id": "gene-bioenergy",
+        "relation_id": "rel-be-source",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '생물이나 유기 폐기물을 원료로 삼아 얻어 내는 에탄올·디젤·가스 형태의 에너지' 다. 명제 '미생물이나 동식물, 음식물 쓰레기 같은 유기 폐기물이 바이오에너지의 원료가 된다' 는 정의의 '생물이나 유기 폐기물을 원료로 삼아' 를 예시로 늘어놓은 문장이다. 예시를 보탠 것은 정의를 다시 말하지 않는 것과 다르다.",
+        "suggest": "정의에서 원료를 빼고 명제가 맡게 하든지, 명제를 지운다."
+      },
+      {
+        "card_id": "gene-gene-therapy",
+        "relation_id": "rel-gt-vector",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "명제 '운반체로 쓰는 바이러스가 환자 몸에서 부작용을 일으키지 않아야 안전한 치료법이 될 수 있다' 는 '부작용을 일으키지 않음' 을 '안전' 의 조건으로 내세우는데, 그 둘은 같은 말이다 — '안전하다' 는 곧 '부작용을 일으키지 않는다' 이므로 조건절이 결론을 미리 말해 버린다. 정의와 겹치는 것은 아니지만 검사 항목 3 이 말하는 '읽으면 저절로 나오는 말' 의 자리다. 참고로 이 명제의 자리에 있어야 할 학습 내용(운반체 바이러스가 실제로 어떤 문제를 일으키는가)은 카드 어디에도 없고, 오개념 misconceptions[1] 의 why_wrong 이 그것을 대신 말하고 있다.",
+        "suggest": "조건절과 결론이 같은 말이 되지 않도록 세운다. 무엇을 명제로 삼을지는 교과서가 다루는 범위 안에서 C2 가 정한다."
+      },
+      {
+        "card_id": "gene-human-genome-project",
+        "relation_id": "rel-hgp-output",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "invertible:false 이고 근거는 '결과물의 범위를 그은 서술이라 뒤집을 방향이 없다' 인데, 이 명제는 '결과물은 A(염기서열)이지 B(기능 목록)가 아니다' 라는 두 이름을 맞바꿀 수 있는 꼴이다. 뒤집으면 '이 사업이 내놓은 결과물은 유전자마다의 기능 목록이지 염기서열이 아니다' 가 되고 이 문장은 반드시 거짓이다. 판정 기준은 form.type 이 아니라 뒤집은 문장이 반드시 거짓이 되는가인데, 여기서는 거짓이 된다. 같은 단원에서 같은 꼴인 rel-lig-role·rel-mab-hybrid·rel-crispr-parts 는 모두 true 로 올라가 있어 판정이 엇갈린다. 이 카드의 오개념('기능까지 모두 밝혀졌다')도 바로 이 맞바꿈 위에 서 있다.",
+        "suggest": "invertible 을 다시 판정하고, true 로 올릴 경우 inverted_text 를 채운다. 학생에게 해로운 쪽(참인 지문이 오답으로 나가는 쪽)의 잘못은 아니지만 D1 이 쓸 수 있는 OX 원천 하나를 버리고 있다."
+      },
+      {
+        "card_id": "gene-selective-breeding",
+        "relation_id": "rel-sb-nogene",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "invertible:false 이고 근거는 '방법의 경계를 그은 서술이라 맞바꿀 두 양이 없다' 인데, 명제 '선택적 육종은 교배로 이루어지므로 다른 종의 유전자를 새로 집어넣지는 않는다' 를 뒤집은 '선택적 육종은 다른 종의 유전자를 새로 집어넣는다' 는 반드시 거짓이다. 이 명제에 걸린 오개념('선택적 육종으로 개량한 작물도 LMO에 해당한다')이 바로 그 뒤집은 문장을 전제로 성립하므로, 뒤집기가 성립한다는 것을 카드 스스로 보이고 있다.",
+        "suggest": "invertible 을 다시 판정한다. true 로 올리면 inverted_text 를 채우고, 같은 카드 rel-sb-time 의 OX 와 지문이 겹치지 않는지 본다."
+      },
+      {
+        "card_id": "gene-superweed",
+        "relation_id": "rel-sw-unpredict",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "명제 '조작된 유전자가 생태계로 흘러들었을 때의 결과는 미리 알기 어려워 지속적인 관찰이 필요하다' 의 뒷절 '지속적인 관찰이 필요하다' 는 참·거짓을 물을 수 있는 서술이 아니라 당위다. form.scope('LMO가 생태계에 주는 영향') 는 앞절만 덮고 뒷절은 덮지 못한다. 다만 117쪽 본문이 'LMO가 생태계에 어떤 영향을 주는지 지속적인 관찰과 연구가 필요하다' 로 똑같이 쓰고 있어, C2 가 교과서 문장을 그대로 옮긴 것인지 가치 판단으로 흘러간 것인지 판단이 갈린다. 결함으로 확정하지 않고 올린다.",
+        "suggest": "당위절을 명제에 남길지 가를지 정한다. 남긴다면 그 명제는 OX 원천이 될 수 없다는 점을 함께 본다."
+      },
+      {
+        "card_id": "gene-superweed",
+        "relation_id": "rel-sw-transfer",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[0] 의 why_wrong 이 '교과서는 그 지역에 없던 다른 종의 유전자가 식물로 옮겨 간 결과로 보고 있다' 인데, 117쪽 본문은 '…옮겨져서 생긴 것으로 **추정**하고 있다' 로 적었다. 교과서가 추정으로 남긴 것을 오개념 해설이 '스스로 돌연변이를 일으킨 것' 을 틀린 설명으로 못 박는 근거로 쓰고 있다. 어느 쪽 설명이 옳은지는 진위 판단 필요 — C8 검토 항목이다. 구조만 보면 오개념은 rel-sw-transfer 의 반대편에 바로 서 있어 링크 자체는 어긋나지 않는다.",
+        "suggest": "why_wrong 이 교과서의 추정을 확정으로 옮겨 적은 자리인지 사람이 본다. 명제 본문은 '생길 수 있다' 로 단정을 피하고 있어 그대로 두어도 된다."
+      },
+      {
+        "card_id": "gene-bioinformatics",
+        "relation_id": "rel-bi-need",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "invertible:true 이고 inverted_text 는 '자료의 양이 많아질수록 전산 분석에 기대는 정도는 작아진다' 다. 양이 늘면 기대는 정도가 는다는 것은 논리로 정해진 관계가 아니라 관찰된 흐름이라, 뒤집은 문장이 반드시 거짓인지 판단이 갈린다. 더 걸리는 것은 같은 단원 gene-interdisciplinary-field-of-biotechnology 의 rel-ifb-product 가 똑같이 form.type:direct 인 '늘수록 넓어진다' 꼴인데 invertible:false 이고 그 근거가 '응용 범위는 다른 요인에도 좌우되므로 뒤집은 말이 반드시 거짓은 아니다' 라는 점이다. 같은 꼴에 판정이 둘로 갈려 있다.",
+        "suggest": "이 단원의 흐름 서술형(direct) 명제에 어떤 판정을 붙일지 기준을 하나로 맞춘다. rel-bi-need·rel-hgp-data·rel-biotech-scale·rel-ifb-product 를 한자리에 놓고 본다."
+      },
+      {
+        "card_id": "gene-human-genome-project",
+        "relation_id": "rel-hgp-data",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "rel-bi-need 와 같은 사안이다. 명제 '다루어야 할 유전정보가 늘수록 이를 처리할 전산 기반 분석의 필요도 커졌다' 는 rel-bi-need('다룰 자료의 양이 많아질수록 … 전산 분석에 기대는 정도가 커진다')와 사실상 같은 명제이고 둘 다 invertible:true 다. 판정의 타당성 자체도 갈리지만, 두 카드가 같은 문장으로 OX 지문 두 개를 만들어 낸다는 점이 함께 걸린다.",
+        "suggest": "두 명제 가운데 어느 카드가 이 내용을 맡을지 정하고 나머지의 invertible 을 다시 본다."
+      },
+      {
+        "card_id": "gene-biotechnology",
+        "relation_id": "rel-biotech-scale",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "invertible:true 이고 inverted_text 는 '…다루는 대상은 세포·분자에서 개체 수준으로 좁아졌다' 다. 20세기 후반의 역사적 흐름을 서술한 문장이라 '반드시 거짓' 이 논리에서 나오지 않고 사실에서 나온다. OX 지문으로 쓰면 학생이 판단해야 하는 것은 관계가 아니라 역사적 사실이 된다. 결함인지 판단이 갈려 올린다.",
+        "suggest": "흐름 서술형 명제를 OX 원천으로 쓸지 단원 차원에서 정한다."
+      },
+      {
+        "card_id": "gene-living-modified-organism",
+        "relation_id": "rel-lmo-made",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '유전자재조합기술을 거쳐 새로운 조합의 유전물질을 갖게 된, 살아 있는 생물체' 이고 명제는 'LMO인지 가르는 기준은 교배가 아니라 유전자재조합기술로 유전물질의 조합이 바뀌었는가이다' 다. '유전자재조합기술로 조합이 바뀜' 은 정의 그대로고, 보탠 것은 '교배가 아니라' 라는 배제 한 마디다. 그 한 마디가 학습 가치를 만든다고 볼지(선택적 육종과의 경계) 정의의 되풀이로 볼지 갈린다. 배제 쪽 내용은 gene-selective-breeding 의 rel-sb-nogene 과 그 오개념이 이미 맡고 있다.",
+        "suggest": "정의와 명제 가운데 어느 쪽이 요건을 맡을지 정한다."
+      },
+      {
+        "card_id": "gene-recombinant-dna",
+        "relation_id": "rel-rdna-new",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '서로 다른 DNA 조각이 이어 붙어, 본래 생물에는 없던 유전자 조합을 갖게 된 DNA' 이고 명제는 '유전자 하나하나는 본래 생물의 것이고, 새로운 것은 유전자들이 모인 조합이다' 다. 정의를 꼼꼼히 읽으면 나오는 말이지만, '새로운 것이 조합이지 유전자가 아니다' 를 앞뒤로 갈라 말한 점에서 정의가 흘려 둔 것을 붙잡는다고 볼 여지가 있다. 걸린 오개념도 이 구분 위에 정확히 서 있다. 결함으로 확정하지 않는다.",
+        "suggest": "지적이 서면 정의 쪽을 줄이는 것이 낫다 — 명제와 오개념이 짝으로 서 있어 명제를 지우면 오개념도 잃는다."
+      },
+      {
+        "card_id": "gene-dedifferentiation",
+        "relation_id": "rel-dd-direction",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '분화가 끝난 세포에 특정 유전자를 넣어 미분화 상태로 되돌리는 과정' 이고 명제는 '분화의 방향을 거꾸로 돌리는 과정이어서, 이미 분화한 세포도 다시 여러 세포로 갈 능력을 얻는다' 다. 앞절은 정의의 되풀이이고, 뒷절('여러 세포로 갈 능력을 얻는다')은 정의에 글자로는 없으나 gene-stem-cell 의 미분화 규정을 거치면 따라 나온다. 한 다리를 건너야 나오는 것을 되풀이로 볼지 갈린다. 같은 카드의 rel-dd-gene 은 결함으로 올렸다.",
+        "suggest": "rel-dd-gene 을 손볼 때 이 명제와 함께 카드 단위로 본다."
+      },
+      {
+        "card_id": "gene-adult-stem-cell",
+        "relation_id": "rel-asc-source",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '탯줄 혈액이나 성체의 골수처럼 이미 자란 조직에서 뽑아내는 줄기세포' 다. 명제 '배아 대신 다 자란 조직에서 얻기 때문에 배아를 쓰는 데서 오는 쟁점은 생기지 않는다' 의 앞절은 정의 그대로이고, 뒷절은 '배아를 안 쓰면 배아 쟁점이 없다' 라는 동어에 가깝다. 다만 배아줄기세포 쟁점(gene-embryonic-stem-cell 의 rel-esc-issue)과 짝을 이뤄 두 카드를 잇는 자리라 학습 가치를 따로 볼 여지가 있다. 결함으로 확정하지 않는다.",
+        "suggest": "쟁점 대비를 이 명제가 맡을지, gene-embryonic-stem-cell 쪽에 맡길지 정한다."
+      },
+      {
+        "card_id": "gene-recombinant-dna-technology",
+        "relation_id": "rel-rdt-speed",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "이 명제('제한효소를 쓰는 재조합기술은 전통적인 육종보다 품종을 개량하는 데 걸리는 시간을 줄였다', invertible:true)와 gene-selective-breeding 의 rel-sb-time('선택적 육종은 … 유전자재조합기술보다 오래 걸린다', invertible:true)은 같은 비교를 방향만 바꿔 말한 한 명제다. 둘 다 invertible:true 라 D1 에서 사실상 같은 OX 지문이 두 번 나온다. 각각으로 보면 뒤집은 문장이 거짓이 되므로 항목 2 의 오판정은 아니지만, 두 카드에 같은 명제가 서 있는 것을 결함으로 볼지 갈린다. 카드 내 모순(항목 5)은 아니다.",
+        "suggest": "어느 카드가 이 비교를 맡을지 정하고 다른 쪽은 지우거나 invertible 을 내린다."
+      },
+      {
+        "card_id": "gene-nuclear-transfer",
+        "relation_id": "rel-nt-immune",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "명제 '환자의 핵을 쓴 배아에서 줄기세포를 얻으면 그 환자에게 이식할 때 면역 거부반응이 문제되지 않는다' 는 '문제되지 않는다' 로 예외를 두지 않는다. form.condition 이 '핵을 준 사람과 이식받는 사람이 같을 때' 로 조건을 달아 두었으나, 핵 말고 난자 쪽에서 오는 부분까지 이 단언이 덮는지는 카드가 말하지 않는다. 같은 내용을 gene-embryonic-stem-cell 의 rel-esc-nt 는 '면역 거부반응이 없는 줄기세포가 된다' 로 역시 단언한다. 어느 범위까지 참인지는 진위 판단 필요 — C8 검토 항목이다.",
+        "suggest": "단언의 범위를 좁힐지 그대로 둘지는 사람이 본다. 같은 내용을 말하는 rel-esc-nt 와 함께 본다."
+      }
+    ],
+    "notes": [
+      "명제 81개(카드 31장)를 모두 읽었다. 메인이 전달받은 수(79)와 다르다 — 파일에서 센 값은 81이다.",
+      "invertible:true 15개를 하나씩 뒤집어 읽었다. inverted_text 가 참이 될 수 있는 명제, 곧 D1 의 OX 오답 지문이 실제로는 참이 되는 경우는 없었다. 15개 모두 뒤집으면 거짓이 되는 문장이었다. 항목 2 로 올린 두 건(rel-hgp-output·rel-sb-nogene)은 반대 방향의 잘못 — 뒤집으면 반드시 거짓이 되는데 false 로 내려 둔 과소 판정이며, 학생에게 해로운 쪽은 아니다.",
+      "form.type 이 classification·conditional 인데 invertible:true 인 명제가 7개다(rel-asc-limit·rel-crispr-parts·rel-lig-role·rel-esc-potency·rel-geng-subset·rel-mab-hybrid·rel-rdt-speed). 모두 두 이름이나 두 방법을 맞바꾸는 뒤집기여서 뒤집은 문장이 반드시 거짓이 된다 — 결함으로 올리지 않았다. rel-rdt-speed 만 다른 사유(다른 카드와의 중복)로 uncertain 에 있다.",
+      "구조 점검: 명제 81개 모두 form.scope 가 채워져 있다. invertible:true 15개는 모두 inverted_text 를 갖고 있고 false 66개에는 없다. misconceptions 38건 가운데 36건의 linked_relation 은 같은 카드 안의 실재하는 명제 id 를 가리킨다(끊어진 참조 없음). 나머지 2건은 linked_relation 자체가 없고 둘 다 결함으로 올렸다.",
+      "가치 판단 점검: 명제 본문에 '해야 한다' 가 붙은 것은 없다. '필요하다' 가 든 명제는 둘인데, rel-esc-issue 의 '난자도 많이 필요하다' 는 필요량을 말한 서술이라 걸리지 않고, rel-sw-unpredict 의 '지속적인 관찰이 필요하다' 만 당위라 uncertain 으로 올렸다. rel-eth-consensus 는 117~119쪽 본문의 '사회적 합의가 필요하다' 를 '사회적 합의로 다룬다' 라는 서술로 바꿔 놓아 당위를 피했다 — 결함 아님.",
+      "사회적 흐름 명제의 invertible: 이 단원은 form.type:direct 로 흐름을 말한 명제가 5개다(rel-be-land·rel-bi-need·rel-biotech-scale·rel-hgp-data·rel-ifb-product). 이 가운데 rel-ifb-product 만 false 이고 나머지 넷은 true 다. rel-be-land 는 '많이 재배할수록 땅이 줄어든다' 라는 뒤집기가 말 자체로 거짓이라 true 가 맞지만, 나머지 셋은 관찰된 흐름이어서 판정이 갈린다 — 셋 모두 uncertain 으로 올렸다. 사회적 흐름을 원인·결과로 말한 causal 명제들(rel-eth-accel·rel-edit-debate)은 invertible:false 로 내려 두었고 그 근거('사회적 흐름을 서술한 문장이라 뒤집은 말이 언제나 거짓이라고 할 수 없다')도 타당하다.",
+      "오개념 38건은 모두 source:llm 이다. docs/misconceptions.yaml 은 concepts 가 빈 목록이라 교사 사전과 대조할 항목이 없었다. 38건 가운데 6건을 결함으로 올렸고(연결이 엉뚱한 것 4건, 연결이 없는 것 2건) 1건을 uncertain 으로 올렸다. 나머지 31건은 걸린 명제의 반대편에 서 있다.",
+      "메인이 지목한 gene-gene-therapy 의 '고쳐진 유전자가 자손에게 전해진다' 는 확인했다 — 카드 명제 어디에도 체세포/생식세포 구분이 없고, output/source/gene-3/text.jsonl 전문에서 '자손' 은 한 번도 나오지 않으며 '생식세포' 는 94쪽 선수 개념 안내에만 나온다. 교과서가 다루지 않는 내용을 오개념으로 세운 자리다. 이 명제가 참인지 거짓인지는 판정하지 않았다.",
+      "정의 되풀이(항목 3)가 이 단원에서 가장 많다 — 결함 8건, uncertain 4건. 기술 카드의 definition 이 '무엇을 하는 기술인가' 를 이미 다 말해 버려, 명제가 그 뒤에 설 자리를 남기지 않은 것이 공통된 원인이다. 개별 명제를 고치기보다 definition 과 명제의 분담을 카드 단위로 다시 보는 편이 나을 수 있다 — 판단은 메인이 한다.",
+      "bio-facts 계열 스킬이 .claude/skills/ 에 없어(있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check) 사실 대조는 건너뛰었다. 없는 스킬을 흉내 내지 않았다.",
+      "진위가 걸린 자리는 전부 uncertain 으로 두었다 — C8 검토 항목이다. verified_by 는 명제 81개·오개념 38건 어디에도 손대지 않았다(전부 pending 그대로). 카드 파일과 사전 파일은 읽기만 했다.",
+      "이 파일의 curriculum 절은 C5 가 채운 것을 그대로 두고 relations 절만 더했다. C5 가 재태깅을 제안한 카드(gene-recombinant-dna-technology 등)의 명제도 태그와 무관하게 같은 기준으로 읽었다."
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-dedifferentiation",
+  "concept_key": "concept:dedifferentiation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "역분화",
+  "notation": {
+    "hanja": "逆分化",
+    "hanja_gloss": "逆 거스를 역 · 分 나눌 분 · 化 될 화",
+    "english": "dedifferentiation"
+  },
+  "definition": "분화가 끝난 세포를 다시 미분화 상태로 되돌리는 과정.",
+  "relations": [
+    {
+      "id": "rel-dd-direction",
+      "text": "분화의 방향을 거꾸로 돌리는 과정이어서, 이미 분화한 세포도 다시 여러 세포로 갈 능력을 얻는다",
+      "form": {
+        "condition": "역분화 유전자가 세포에 도입됐을 때",
+        "type": "causal",
+        "scope": "체세포의 역분화"
+      },
+      "invertible": false,
+      "invertible_reason": "과정의 결과를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dd-gene",
+      "text": "역분화를 일으키려면 그 과정을 유도하는 유전자를 세포 안에 넣어야 한다",
+      "form": {
+        "condition": "체세포를 미분화 상태로 되돌리려 할 때",
+        "type": "conditional",
+        "scope": "유도 만능 줄기세포의 제작"
+      },
+      "invertible": false,
+      "invertible_reason": "필요 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "역분화는 세포가 나이를 먹으면 저절로 일어나는 현상이다",
+      "why_wrong": "저절로 일어나지 않는다. 역분화를 일으키는 유전자를 넣는 인위적인 조작이 필요하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dd-gene"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-induced-pluripotent-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-nuclear-transfer"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    106
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": []
+}

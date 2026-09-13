@@ -1,0 +1,82 @@
+{
+  "id": "gene-primer",
+  "concept_key": "concept:primer",
+  "registry_status": "new",
+  "term": "프라이머",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "primer",
+    "hanja_note": "프라이머가 음차어라 대응하는 한자어가 없다."
+  },
+  "definition": "합성이 시작될 수 있도록 주형 가닥에 붙어 3′ 말단을 내어 주는 짧은 RNA 나 DNA 조각.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pr-start",
+      "text": "중합효소가 3′ 말단을 필요로 하므로 복제를 시작하려면 프라이머가 먼저 붙어야 한다",
+      "form": {
+        "condition": "새 가닥의 합성을 시작할 때",
+        "type": "causal",
+        "scope": "DNA 복제"
+      },
+      "invertible": false,
+      "invertible_reason": "프라이머가 붙었다고 해서 곧바로 합성이 시작되는 것은 아니다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pr-count",
+      "text": "지연 가닥은 조각마다 합성을 새로 시작하므로 선도 가닥보다 프라이머가 많이 든다",
+      "form": {
+        "condition": "한 복제 분기점에서 두 가닥을 견줄 때",
+        "type": "conditional",
+        "scope": "지연 가닥의 불연속 합성"
+      },
+      "invertible": true,
+      "invertible_reason": "선도 가닥 쪽에 프라이머가 더 든다고 뒤집으면 연속 합성이라는 성질과 어긋난다",
+      "curriculum": [
+        "12유전01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "선도 가닥이 지연 가닥보다 더 많은 프라이머를 필요로 한다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "프라이머는 효소이므로 단백질로 되어 있다",
+      "why_wrong": "프라이머는 짧은 RNA 나 DNA 조각이다. 효소가 붙을 3′ 말단을 내어 줄 뿐 스스로 반응을 돕는 단백질이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pr-start"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-dna-polymerase"
+    },
+    {
+      "type": "next",
+      "target": "gene-leading-and-lagging-strand"
+    },
+    {
+      "type": "related",
+      "target": "gene-template-strand"
+    }
+  ],
+  "curriculum": [
+    "12유전01-07"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-5-2",
+  "pages": [
+    47
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

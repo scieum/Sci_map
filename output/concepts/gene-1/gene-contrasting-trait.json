@@ -1,0 +1,82 @@
+{
+  "id": "gene-contrasting-trait",
+  "concept_key": "concept:contrasting-trait",
+  "registry_status": "new",
+  "term": "대립형질",
+  "notation": {
+    "hanja": "對立形質",
+    "english": "contrasting trait",
+    "hanja_gloss": "對 대할 대 · 立 설 립 · 形 모양 형 · 質 바탕 질"
+  },
+  "definition": "완두 꽃의 보라색과 흰색처럼, 한 유전형질에서 서로 맞서며 뚜렷이 갈리는 표현형들을 이르는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ct-allele",
+      "text": "대립형질이 뚜렷하게 갈리는 형질에서는 그것을 나타내는 대립유전자도 서로 구분된다",
+      "form": {
+        "condition": "한 쌍의 대립유전자가 형질을 결정할 때",
+        "type": "conditional",
+        "scope": "단일유전자 유전형질"
+      },
+      "invertible": false,
+      "invertible_reason": "대립유전자가 구분된다고 해서 표현형이 늘 뚜렷하게 갈리지는 않아 뒤집으면 거짓이라 단정할 수 없다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ct-notall",
+      "text": "모든 유전형질이 둘로 딱 갈리는 대립형질을 갖는 것은 아니다",
+      "form": {
+        "condition": "여러 유전형질을 나란히 견줄 때",
+        "type": "classification",
+        "scope": "키·피부색처럼 표현형이 이어져 나타나는 형질을 포함"
+      },
+      "invertible": true,
+      "invertible_reason": "모든 유전형질이 뚜렷한 두 대립형질로 나타난다는 진술은 다유전자 형질 앞에서 곧바로 무너진다",
+      "curriculum": [
+        "12유전01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "모든 유전형질은 뚜렷하게 구분되는 두 대립형질로 나타난다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대립형질은 언제나 두 가지뿐이다",
+      "why_wrong": "ABO식 혈액형처럼 대립유전자가 셋 이상인 형질에서는 표현형이 둘을 넘는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ct-notall"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genetic-trait"
+    },
+    {
+      "type": "next",
+      "target": "gene-allele"
+    },
+    {
+      "type": "related",
+      "target": "gene-continuous-variation"
+    }
+  ],
+  "curriculum": [
+    "12유전01-01"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-1-1",
+  "pages": [
+    13
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,86 @@
+{
+  "id": "gene-chromosome-number-abnormality",
+  "concept_key": "concept:chromosome-number-abnormality",
+  "registry_status": "new",
+  "term": "염색체수이상",
+  "notation": {
+    "hanja": "染色體數異常",
+    "english": "chromosome number abnormality",
+    "hanja_gloss": "染 물들 염 · 色 빛 색 · 體 몸 체 · 數 셈 수 · 異 다를 이 · 常 항상 상"
+  },
+  "definition": "체세포의 염색체 수가 정상과 달라진 상태. 대개 생식세포를 만들 때의 비분리에서 비롯한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cn-cause",
+      "text": "감수분열에서 염색체가 갈라지지 않으면 염색체 수가 정상과 다른 생식세포가 만들어진다",
+      "form": {
+        "condition": "감수 1분열이나 2분열에서 분리가 일어나지 않을 때",
+        "type": "causal",
+        "scope": "생식세포를 만드는 분열"
+      },
+      "invertible": false,
+      "invertible_reason": "염색체 수가 다른 생식세포가 반드시 비분리 때문에만 생기는 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cn-severe",
+      "text": "염색체 수가 달라지면 거기 실린 여러 유전자의 양이 함께 달라져 증상이 심하게 나타나기 쉽다",
+      "form": {
+        "condition": "상염색체의 수가 달라졌을 때",
+        "type": "causal",
+        "scope": "성염색체 수이상은 증상이 상대적으로 가볍다"
+      },
+      "invertible": false,
+      "invertible_reason": "증상이 심하다고 해서 원인이 반드시 염색체 수이상인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염색체 수가 하나 달라지는 정도로는 유전자가 다치지 않아 별 증상이 없다",
+      "why_wrong": "염색체 하나에는 유전자가 수없이 실려 있다. 수가 하나만 달라져도 그 유전자들의 양이 함께 달라져 여러 증상이 한꺼번에 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cn-severe"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-chromosomal-abnormality"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-chromosome-nondisjunction"
+    },
+    {
+      "type": "next",
+      "target": "gene-down-syndrome"
+    },
+    {
+      "type": "next",
+      "target": "gene-sex-chromosome-number-disorder"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    31,
+    32
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

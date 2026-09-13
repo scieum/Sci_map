@@ -1,0 +1,82 @@
+{
+  "id": "gene-transformation",
+  "concept_key": "concept:transformation",
+  "registry_status": "new",
+  "term": "형질전환",
+  "notation": {
+    "hanja": "形質轉換",
+    "english": "transformation",
+    "hanja_gloss": "形 모양 형 · 質 바탕 질 · 轉 구를 전 · 換 바꿀 환"
+  },
+  "definition": "밖에서 들어온 유전물질을 받아들여 세균의 형질이 다른 형질로 바뀌는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tf-pneumo",
+      "text": "죽은 S형균에 남아 있던 어떤 물질이 R형균으로 들어가 그것을 S형균으로 바꾼다",
+      "form": {
+        "condition": "열처리한 S형균과 살아 있는 R형균을 함께 두었을 때",
+        "type": "causal",
+        "scope": "폐렴균을 쓴 실험"
+      },
+      "invertible": false,
+      "invertible_reason": "형질이 바뀌었다고 해서 원인 물질이 무엇인지는 이 사실만으로 정해지지 않는다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-tf-dnase",
+      "text": "추출액에 DNA 분해효소를 처리하면 형질전환을 일으키는 능력이 사라진다",
+      "form": {
+        "condition": "S형균 추출액을 성분별로 시험할 때",
+        "type": "causal",
+        "scope": "에이버리가 쓴 실험 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "형질전환을 맡은 물질이 DNA 이므로 그것을 분해하고도 능력이 남는다는 문장은 반드시 거짓이다",
+      "curriculum": [
+        "12유전01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA 분해효소를 처리해도 추출액의 형질전환 능력은 그대로 남는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "형질전환은 세균이 스스로 돌연변이를 일으켜 형질이 바뀌는 것이다",
+      "why_wrong": "형질전환은 밖에 있던 유전물질이 세균 안으로 들어와 일어난다. 스스로 염기서열이 바뀌는 돌연변이와는 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tf-pneumo"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genetic-material"
+    },
+    {
+      "type": "related",
+      "target": "gene-griffith-transformation-experiment"
+    },
+    {
+      "type": "related",
+      "target": "gene-avery-experiment"
+    }
+  ],
+  "curriculum": [
+    "12유전01-05"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

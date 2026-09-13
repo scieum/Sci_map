@@ -1,0 +1,86 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-dna-ligase-recombinant",
+  "concept_key": "concept:dna-ligase",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "DNA 연결효소",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'DNA'가 로마자 약어여서 표제어 전체를 한자로 적을 수 없다. 뒷부분만 連結酵素 이다.",
+    "english": "DNA ligase",
+    "symbol_display": "DNA",
+    "symbol_plain": "DNA"
+  },
+  "definition": "끊어진 DNA 가닥의 끝과 끝을 이어 붙여 하나의 분자로 만들어 주는 효소.",
+  "relations": [
+    {
+      "id": "rel-lig-join",
+      "text": "잘린 말단끼리 상보적으로 맞붙은 상태에서 연결효소가 작용해야 하나로 이어진 재조합 DNA가 된다",
+      "form": {
+        "condition": "잘린 말단끼리 염기쌍을 이룬 뒤",
+        "type": "conditional",
+        "scope": "재조합 DNA의 제작"
+      },
+      "invertible": false,
+      "invertible_reason": "차례를 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lig-role",
+      "text": "DNA 연결효소는 가닥을 잇는 일을 맡고, 가닥을 자르는 일은 맡지 않는다",
+      "form": {
+        "condition": "두 효소의 역할을 가를 때",
+        "type": "classification",
+        "scope": "제한효소와의 대비"
+      },
+      "invertible": true,
+      "invertible_reason": "두 효소가 맡은 일이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "DNA 연결효소는 가닥을 자르는 일을 맡고, 가닥을 잇는 일은 맡지 않는다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 연결효소만 있으면 재조합 DNA를 만들 수 있다",
+      "why_wrong": "먼저 제한효소로 잘라 상보적인 말단을 만들어야 연결효소가 이을 자리가 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lig-join"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-recombinant-dna"
+    },
+    {
+      "type": "related",
+      "target": "gene-restriction-enzyme"
+    },
+    {
+      "type": "same",
+      "target": "gene-dna-ligase"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

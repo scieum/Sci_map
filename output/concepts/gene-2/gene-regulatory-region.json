@@ -1,0 +1,83 @@
+{
+  "id": "gene-regulatory-region",
+  "concept_key": "concept:regulatory-region",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "조절 부위",
+  "notation": {
+    "hanja": "調節部位",
+    "english": "regulatory region",
+    "hanja_gloss": "調 고를 조 · 節 마디 절 · 部 떼 부 · 位 자리 위"
+  },
+  "definition": "전사 인자가 결합하는 DNA 부위로, 프로모터 가까이 있기도 하고 멀리 떨어져 있기도 하다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rr-binding",
+      "text": "조절 부위는 전사 인자가 붙는 자리여서 그 유전자가 얼마나 전사될지를 좌우한다",
+      "form": {
+        "condition": "전사 인자가 결합할 때",
+        "type": "causal",
+        "scope": "진핵생물 유전자의 조절 부위"
+      },
+      "invertible": false,
+      "invertible_reason": "자리와 구실을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rr-multiple",
+      "text": "진핵생물 유전자의 프로모터 위쪽에는 조절 부위가 여러 개 놓여 있다",
+      "form": {
+        "condition": "원핵생물의 유전자와 견줄 때",
+        "type": "conditional",
+        "scope": "진핵생물의 유전자 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "배치를 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조절 부위는 프로모터에 붙어 있어야만 구실을 한다",
+      "why_wrong": "프로모터에서 멀리 떨어진 조절 부위에 전사 인자가 붙어도 전사가 조절된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rr-multiple"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-transcription-factor"
+    },
+    {
+      "type": "related",
+      "target": "gene-promoter"
+    },
+    {
+      "type": "related",
+      "target": "gene-eukaryotic-expression-regulation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-3",
+  "pages": [
+    74
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

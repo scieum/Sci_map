@@ -1,0 +1,119 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-gene-therapy",
+  "concept_key": "concept:gene-therapy",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "유전자치료",
+  "notation": {
+    "hanja": "遺傳子治療",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자 · 治 다스릴 치 · 療 병 고칠 료",
+    "english": "gene therapy"
+  },
+  "definition": "유전자에 결함이 있는 환자의 세포에 정상 유전자를 넣어 병을 고치려는 치료 방법.",
+  "relations": [
+    {
+      "id": "rel-gt-normal",
+      "text": "넣어 준 정상 유전자가 환자의 세포에서 발현되어야 치료 효과가 나타난다",
+      "form": {
+        "condition": "정상 유전자가 표적 세포에 전달됐을 때",
+        "type": "conditional",
+        "scope": "유전자치료의 성립 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "필요 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gt-inout",
+      "text": "유전자치료는 유전자를 몸속에 바로 넣는 방식과, 세포를 꺼내어 고친 뒤 되돌려 넣는 방식으로 나뉜다",
+      "form": {
+        "condition": "유전자를 전달하는 자리를 기준으로 삼을 때",
+        "type": "classification",
+        "scope": "유전자치료의 구분"
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-gt-vector",
+      "text": "유전자를 나르는 데 바이러스를 쓰기 때문에, 환자 몸에서 생기는 부작용이 아직 풀리지 않은 기술적 과제로 남아 있다",
+      "form": {
+        "condition": "바이러스를 운반체로 쓸 때",
+        "type": "causal",
+        "scope": "현재 유전자치료가 안고 있는 기술적 과제"
+      },
+      "invertible": false,
+      "invertible_reason": "남은 과제를 지목한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전자치료를 하려면 반드시 환자 몸에서 세포를 꺼내어 고친 뒤 되돌려 넣어야 한다",
+      "why_wrong": "유전자를 몸속에 바로 넣는 방식도 쓰인다. 세포를 꺼내어 고치는 방식은 그 가운데 하나다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gt-inout"
+    },
+    {
+      "text": "유전자치료는 이미 완성된 치료법이라 어떤 유전병에도 바로 쓸 수 있다",
+      "why_wrong": "운반체로 쓰는 바이러스의 부작용을 비롯해 해결해야 할 기술적 과제가 남아 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gt-vector"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-recombinant-dna-technology"
+    },
+    {
+      "type": "prereq",
+      "target": "gene-gene-editing"
+    },
+    {
+      "type": "related",
+      "target": "gene-human-genome-project"
+    },
+    {
+      "type": "related",
+      "target": "gene-monoclonal-antibody"
+    },
+    {
+      "type": "related",
+      "target": "gene-crispr-cas9"
+    },
+    {
+      "type": "related",
+      "target": "gene-interdisciplinary-field-of-biotechnology"
+    }
+  ],
+  "curriculum": [
+    "12유전03-03",
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-3",
+  "pages": [
+    109,
+    110
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

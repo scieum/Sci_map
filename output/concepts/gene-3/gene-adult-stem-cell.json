@@ -1,0 +1,84 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-adult-stem-cell",
+  "concept_key": "concept:adult-stem-cell",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "성체줄기세포",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'줄기'가 고유어여서 표제어 전체를 한자로 적지 않는다. 成體 와 細胞 만 한자어다.",
+    "english": "adult stem cell"
+  },
+  "definition": "탯줄 혈액이나 성체의 골수처럼 이미 자란 조직에서 뽑아내는 줄기세포.",
+  "relations": [
+    {
+      "id": "rel-asc-source",
+      "text": "배아 대신 다 자란 조직에서 얻기 때문에 배아를 쓰는 데서 오는 쟁점은 생기지 않는다",
+      "form": {
+        "condition": "성체의 조직에서 줄기세포를 얻을 때",
+        "type": "causal",
+        "scope": "줄기세포를 얻는 방식"
+      },
+      "invertible": false,
+      "invertible_reason": "얻는 자리에서 따라 나오는 결과를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-asc-limit",
+      "text": "성체줄기세포는 늘리기가 어렵고 몸의 모든 세포와 조직으로 분화하지는 못한다",
+      "form": {
+        "condition": "분화 능력과 증식 능력을 볼 때",
+        "type": "classification",
+        "scope": "성체줄기세포의 한계"
+      },
+      "invertible": true,
+      "invertible_reason": "능력의 있고 없음이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성체줄기세포는 늘리기가 쉽고 몸의 모든 세포와 조직으로 분화할 수 있다"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성체줄기세포도 몸의 모든 세포로 분화할 수 있다",
+      "why_wrong": "분화할 수 있는 범위가 제한되어 있어, 모든 조직으로 갈 수 있는 것은 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-asc-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-embryonic-stem-cell"
+    },
+    {
+      "type": "related",
+      "target": "gene-induced-pluripotent-stem-cell"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    106
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

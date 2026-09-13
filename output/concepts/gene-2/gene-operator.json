@@ -1,0 +1,80 @@
+{
+  "id": "gene-operator",
+  "concept_key": "concept:operator",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "작동부위",
+  "notation": {
+    "hanja": "作動部位",
+    "english": "operator",
+    "hanja_gloss": "作 지을 작 · 動 움직일 동 · 部 떼 부 · 位 자리 위"
+  },
+  "definition": "오페론 안에서 프로모터와 구조유전자 사이에 놓인, 억제단백질이 결합하는 부위.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-opr-blocked",
+      "text": "작동부위가 억제단백질에 막히면 RNA 중합효소가 프로모터에 붙지 못해 전사가 멈춘다",
+      "form": {
+        "condition": "억제단백질이 결합해 있을 때",
+        "type": "causal",
+        "scope": "원핵생물의 오페론"
+      },
+      "invertible": false,
+      "invertible_reason": "결합이 원인이고 전사 차단이 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-opr-switch",
+      "text": "작동부위에 억제단백질이 붙느냐 떨어지느냐가 젖당의 유무에 따라 갈리면서 오페론의 전사가 켜지고 꺼진다",
+      "form": {
+        "condition": "환경에 젖당이 있는지에 따라",
+        "type": "causal",
+        "scope": "대장균의 젖당오페론"
+      },
+      "invertible": false,
+      "invertible_reason": "환경 변화가 원인이고 전사 여부가 결과라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "작동부위는 RNA 중합효소가 결합하는 자리다",
+      "why_wrong": "RNA 중합효소가 붙는 자리는 프로모터다. 작동부위에 붙는 것은 억제단백질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-opr-blocked"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-repressor-protein"
+    },
+    {
+      "type": "next",
+      "target": "gene-lac-operon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12유전02-03"
+  ],
+  "subject": "생물의 유전",
+  "unit": "II. 유전자의 발현",
+  "unit_id": "gene-2",
+  "topic_id": "gene-2-2-2",
+  "pages": [
+    71,
+    72
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

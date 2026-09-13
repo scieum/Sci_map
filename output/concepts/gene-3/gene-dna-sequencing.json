@@ -1,0 +1,94 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-dna-sequencing",
+  "concept_key": "concept:dna-sequencing",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "DNA 염기순서분석법",
+  "aliases": [
+    "DNA 염기서열 분석법"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'DNA'가 로마자 약어여서 표제어 전체를 한자로 옮길 수 없다. 뒷부분만 鹽基順序分析法 이다.",
+    "english": "DNA sequencing",
+    "symbol_display": "DNA",
+    "symbol_plain": "DNA"
+  },
+  "definition": "DNA 가닥에 늘어선 염기의 차례를 읽어 내는 실험 방법. 서로 다른 방식이 1970년대에 나란히 개발되었다.",
+  "relations": [
+    {
+      "id": "rel-seq-auto",
+      "text": "형광물질과 자동화된 기계가 쓰이면서 같은 시간에 읽어 낼 수 있는 염기의 양이 크게 늘었다",
+      "form": {
+        "condition": "분석 장비가 자동화된 뒤",
+        "type": "direct",
+        "scope": "염기순서분석의 효율",
+        "antecedent": {
+          "quantity": "분석의 자동화 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "같은 시간에 읽는 염기의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "효율이 움직인 방향이 정해져 있어 뒤집으면 반드시 거짓이다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "형광물질과 자동화된 기계가 쓰이면서 같은 시간에 읽어 낼 수 있는 염기의 양은 오히려 줄었다"
+    },
+    {
+      "id": "rel-seq-basis",
+      "text": "유전체 전체의 서열을 결정하는 연구는 염기의 차례를 읽는 방법이 마련된 뒤에야 시작될 수 있었다",
+      "form": {
+        "condition": "유전체 단위의 연구를 하려 할 때",
+        "type": "conditional",
+        "scope": "대규모 유전체 연구의 전제"
+      },
+      "invertible": false,
+      "invertible_reason": "선후를 밝힌 서술이라 뒤집어도 반드시 거짓이 되는 두 양이 없다",
+      "curriculum": [
+        "12유전03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "DNA 염기순서분석법은 1970년대에 나온 뒤로 한 번에 읽어 낼 수 있는 양이 그대로다",
+      "why_wrong": "형광물질과 자동화된 장비가 들어오면서 같은 시간에 읽는 염기의 양이 크게 늘었고, 그래서 유전체 단위의 연구가 가능해졌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-seq-auto"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-human-genome-project"
+    },
+    {
+      "type": "related",
+      "target": "gene-polymerase-chain-reaction"
+    }
+  ],
+  "curriculum": [
+    "12유전03-01"
+  ],
+  "topic_id": "gene-3-1-1",
+  "pages": [
+    98,
+    99
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "media": []
+}

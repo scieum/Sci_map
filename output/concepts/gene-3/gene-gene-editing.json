@@ -1,0 +1,106 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-gene-editing",
+  "concept_key": "concept:gene-editing",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "유전자 편집 기술",
+  "aliases": [
+    "유전체 편집 기술"
+  ],
+  "notation": {
+    "hanja": "遺傳子編輯技術",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 子 아들 자 · 編 엮을 편 · 輯 모을 집 · 技 재주 기 · 術 재주 술",
+    "english": "gene editing"
+  },
+  "definition": "세포 안에서 이상이 생긴 유전자의 특정 DNA 부위를 골라 잘라 내거나 고쳐 쓰는 기술.",
+  "relations": [
+    {
+      "id": "rel-edit-repair",
+      "text": "이상이 생긴 유전자를 정상으로 고치면 정상 단백질이 만들어져 질병을 치료할 길이 열린다",
+      "form": {
+        "condition": "질병의 원인이 그 유전자에 있을 때",
+        "type": "causal",
+        "scope": "유전질환의 치료"
+      },
+      "invertible": false,
+      "invertible_reason": "원인과 결과를 지목한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-edit-precision",
+      "text": "표적 부위를 특이적으로 자르는 효소가 있어야 원하는 자리만 골라 고칠 수 있다",
+      "form": {
+        "condition": "표적 DNA의 염기서열을 알고 있을 때",
+        "type": "conditional",
+        "scope": "유전자 가위를 쓰는 편집"
+      },
+      "invertible": false,
+      "invertible_reason": "필요 조건을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-edit-debate",
+      "text": "편집에 드는 시간과 비용이 줄면서 유전자 조작을 어디까지 허용할지에 대한 논쟁이 함께 커졌다",
+      "form": {
+        "condition": "기술을 쓰기 쉬워지면서",
+        "type": "causal",
+        "scope": "생명윤리 논쟁의 배경"
+      },
+      "invertible": false,
+      "invertible_reason": "사회적 흐름을 서술한 문장이라 뒤집은 말이 언제나 거짓이라고 할 수 없다",
+      "curriculum": [
+        "12유전03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전자 편집 기술을 쓰면 어떤 유전병이든 지금 바로 완치할 수 있다",
+      "why_wrong": "표적이 아닌 자리가 함께 바뀔 수 있는 등 기술적 과제가 남아 있고, 어디까지 쓸지에 대한 합의도 아직 진행 중이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-edit-precision"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "gene-crispr-cas9"
+    },
+    {
+      "type": "next",
+      "target": "gene-gene-therapy"
+    },
+    {
+      "type": "next",
+      "target": "gene-bioethics"
+    },
+    {
+      "type": "related",
+      "target": "gene-recombinant-dna-technology"
+    }
+  ],
+  "curriculum": [
+    "12유전03-02"
+  ],
+  "topic_id": "gene-3-2-1",
+  "pages": [
+    107,
+    110
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "media": []
+}

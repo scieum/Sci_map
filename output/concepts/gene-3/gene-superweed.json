@@ -1,0 +1,79 @@
+{
+  "subject": "생물의 유전",
+  "unit": "Ⅲ. 생명공학기술",
+  "unit_id": "gene-3",
+  "version": 1,
+  "definition_source": "restated",
+  "id": "gene-superweed",
+  "concept_key": "concept:superweed",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "슈퍼 잡초",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'슈퍼'가 외래어를 소리대로 적은 말이라 표제어 전체를 한자로 적을 수 없다. 뒷부분만 雜草 이다.",
+    "english": "superweed"
+  },
+  "definition": "제초제를 뿌려도 죽지 않는 저항성을 갖게 되어 농장에 퍼진 잡초.",
+  "relations": [
+    {
+      "id": "rel-sw-transfer",
+      "text": "제초제 저항성 유전자가 다른 종의 식물로 옮겨 가면 제초제가 듣지 않는 잡초가 생길 수 있다",
+      "form": {
+        "condition": "저항성 LMO를 넓은 면적에 재배할 때",
+        "type": "causal",
+        "scope": "LMO 농장과 그 주변"
+      },
+      "invertible": false,
+      "invertible_reason": "일어날 수 있는 결과를 말한 서술이라 맞바꿀 두 양이 없다",
+      "curriculum": [
+        "12유전03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sw-unpredict",
+      "text": "조작된 유전자가 생태계로 흘러들었을 때의 결과는 미리 알기 어려워 지속적인 관찰이 필요하다",
+      "form": {
+        "condition": "외래 유전자가 야생으로 퍼졌을 때",
+        "type": "conditional",
+        "scope": "LMO가 생태계에 주는 영향"
+      },
+      "invertible": false,
+      "invertible_reason": "불확실성을 밝힌 서술이라 뒤집을 방향이 없다",
+      "curriculum": [
+        "12유전03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "슈퍼 잡초는 제초제를 많이 뿌려서 잡초가 스스로 돌연변이를 일으킨 것이다",
+      "why_wrong": "교과서는 그 지역에 없던 다른 종의 유전자가 식물로 옮겨 간 결과로 보고 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sw-transfer"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-living-modified-organism"
+    },
+    {
+      "type": "related",
+      "target": "gene-bioethics"
+    }
+  ],
+  "curriculum": [
+    "12유전03-04"
+  ],
+  "topic_id": "gene-3-3-2",
+  "pages": [
+    117
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "media": []
+}

@@ -1,0 +1,96 @@
+{
+  "id": "gene-chromosomal-abnormality",
+  "concept_key": "concept:chromosomal-abnormality",
+  "registry_status": "new",
+  "term": "염색체이상",
+  "notation": {
+    "hanja": "染色體異常",
+    "english": "chromosomal abnormality",
+    "hanja_gloss": "染 물들 염 · 色 빛 색 · 體 몸 체 · 異 다를 이 · 常 항상 상"
+  },
+  "definition": "염색체의 수가 달라지거나 구조가 바뀌어 생기는 돌연변이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cab-two",
+      "text": "수가 달라진 쪽은 핵형에서 염색체를 세어 가려내지만, 구조가 바뀐 쪽은 수가 그대로여서 모양과 띠 무늬를 살펴야 한다",
+      "form": {
+        "condition": "핵형분석으로 두 갈래를 가려낼 때",
+        "type": "classification",
+        "scope": "현미경으로 분간할 만한 크기의 변화에 한정"
+      },
+      "invertible": false,
+      "invertible_reason": "가려내는 방법을 맞바꾼 문장은 이 카드의 오개념 지문과 같아, OX 원천을 명제와 오개념 두 군데에 두지 않는다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cab-many",
+      "text": "염색체 하나에 유전자가 많이 실려 있어 염색체가 달라지면 여러 형질에 한꺼번에 영향이 미친다",
+      "form": {
+        "condition": "변화가 염색체 단위로 일어날 때",
+        "type": "causal",
+        "scope": "유전자이상과 견줄 때"
+      },
+      "invertible": false,
+      "invertible_reason": "여러 형질에 영향이 간다고 해서 원인이 반드시 염색체이상인 것은 아니다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "염색체이상은 염색체 수가 달라지는 것만을 뜻한다",
+      "why_wrong": "수가 달라지는 경우 말고도 결실·중복·역위·전좌처럼 구조가 바뀌는 경우가 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cab-two"
+    },
+    {
+      "text": "염색체구조이상은 핵형에서 염색체 수를 세면 바로 알 수 있다",
+      "why_wrong": "구조이상에서는 염색체 수가 그대로인 경우가 많다. 수를 세는 것만으로는 드러나지 않고 모양과 띠 무늬를 살펴야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cab-two"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-genetic-disease"
+    },
+    {
+      "type": "next",
+      "target": "gene-chromosome-number-abnormality"
+    },
+    {
+      "type": "next",
+      "target": "gene-chromosome-structure-abnormality"
+    },
+    {
+      "type": "related",
+      "target": "gene-karyotype"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    31,
+    33
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "염색체돌연변이"
+  ]
+}

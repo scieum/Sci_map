@@ -1,0 +1,97 @@
+{
+  "id": "gene-chromosome-nondisjunction",
+  "concept_key": "concept:chromosome-nondisjunction",
+  "registry_status": "new",
+  "term": "염색체 비분리",
+  "notation": {
+    "hanja": "染色體非分離",
+    "english": "chromosome nondisjunction",
+    "hanja_gloss": "染 물들 염 · 色 빛 색 · 體 몸 체 · 非 아닐 비 · 分 나눌 분 · 離 떠날 리"
+  },
+  "definition": "감수분열에서 상동염색체나 염색분체가 갈라지지 않고 한쪽 세포로 함께 들어가 버리는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nd-first",
+      "text": "감수 1분열에서 비분리가 일어나면 만들어진 생식세포 넷이 모두 염색체 수가 비정상이다",
+      "form": {
+        "condition": "한 쌍에서만 비분리가 일어났을 때",
+        "type": "conditional",
+        "scope": "감수 1분열에서의 비분리"
+      },
+      "invertible": true,
+      "invertible_reason": "1분열에서 갈라지지 못한 염색체는 모든 딸세포로 이어지므로 절반이 정상이라는 문장은 거짓이다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감수 1분열에서 비분리가 일어나도 생식세포의 절반은 염색체 수가 정상이다"
+    },
+    {
+      "id": "rel-nd-second",
+      "text": "감수 2분열에서 비분리가 일어나면 정상인 생식세포와 비정상인 생식세포가 1 : 1 로 생긴다",
+      "form": {
+        "condition": "네 세포 가운데 한쪽에서만 비분리가 일어났을 때",
+        "type": "conditional",
+        "scope": "감수 2분열에서의 비분리"
+      },
+      "invertible": false,
+      "invertible_reason": "1 : 1 이 나왔다고 해서 반드시 2분열 비분리라고 단정할 수는 없다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-nd-pair",
+      "text": "비분리가 일어나면 염색체가 하나 많은 생식세포와 하나 적은 생식세포가 짝을 이루어 함께 만들어진다",
+      "form": {
+        "condition": "한 쌍의 염색체가 갈라지지 못한 채 분열이 끝났을 때",
+        "type": "causal",
+        "scope": "감수분열에서 일어난 비분리"
+      },
+      "invertible": false,
+      "invertible_reason": "많은 쪽과 적은 쪽이 함께 생긴다는 말을 뒤집은 문장은 이 카드의 오개념 지문과 같아, OX 원천을 두 군데에 두지 않는다",
+      "curriculum": [
+        "12유전01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비분리가 일어나면 자손의 염색체 수는 반드시 많아진다",
+      "why_wrong": "한쪽 세포에는 염색체가 더 들어가지만 다른 쪽에는 덜 들어간다. 많아진 생식세포와 적어진 생식세포가 함께 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nd-pair"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-homologous-chromosome"
+    },
+    {
+      "type": "related",
+      "target": "gene-law-of-segregation"
+    },
+    {
+      "type": "related",
+      "target": "gene-down-syndrome"
+    }
+  ],
+  "curriculum": [
+    "12유전01-04"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-3-2",
+  "pages": [
+    31
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

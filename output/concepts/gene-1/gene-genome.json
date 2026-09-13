@@ -1,0 +1,70 @@
+{
+  "id": "gene-genome",
+  "concept_key": "concept:genome",
+  "registry_status": "new",
+  "term": "유전체",
+  "notation": {
+    "hanja": "遺傳體",
+    "english": "genome",
+    "hanja_gloss": "遺 남길 유 · 傳 전할 전 · 體 몸 체"
+  },
+  "definition": "한 생물이 지닌 유전정보 전체가 저장된 DNA 를 통틀어 이르는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gn-size",
+      "text": "유전체가 크다고 해서 유전자 수가 그만큼 많은 것은 아니다",
+      "form": {
+        "condition": "여러 생물의 유전체를 나란히 견줄 때",
+        "type": "conditional",
+        "scope": "유전자 사이 빈 부분이 넓은 진핵생물"
+      },
+      "invertible": false,
+      "invertible_reason": "유전자 수가 많다고 해서 유전체가 반드시 크다고도 작다고도 할 수 없다",
+      "curriculum": [
+        "12유전01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유전체는 유전자만으로 이루어져 있다",
+      "why_wrong": "특히 진핵생물에서는 유전자 사이에 정보를 담지 않은 부분이 넓게 자리한다. 유전자는 유전체의 일부일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gn-size"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "gene-gene"
+    },
+    {
+      "type": "next",
+      "target": "gene-prokaryotic-genome"
+    },
+    {
+      "type": "next",
+      "target": "gene-eukaryotic-genome"
+    },
+    {
+      "type": "related",
+      "target": "gene-dna-double-helix"
+    }
+  ],
+  "curriculum": [
+    "12유전01-06"
+  ],
+  "subject": "생물의 유전",
+  "unit": "Ⅰ. 유전자와 유전물질",
+  "unit_id": "gene-1",
+  "topic_id": "gene-1-4-2",
+  "pages": [
+    44
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}
