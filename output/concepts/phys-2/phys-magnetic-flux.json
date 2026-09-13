@@ -1,0 +1,122 @@
+{
+  "id": "phys-magnetic-flux",
+  "concept_key": "concept:magnetic-flux",
+  "registry_status": "new",
+  "term": "자기선속",
+  "notation": {
+    "hanja": "磁氣線束",
+    "english": "magnetic flux",
+    "hanja_gloss": "磁 자석 자 · 氣 기운 기 · 線 줄 선 · 束 묶을 속"
+  },
+  "definition": "코일의 단면을 가로질러 지나가는 자기장을 선의 다발로 보아 그 수로 헤아린 물리량.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-flux-field",
+      "text": "코일 단면의 넓이가 같다면 그 코일을 지나는 자기장이 셀수록 자기선속이 크다.",
+      "form": {
+        "condition": "코일 단면의 넓이가 일정할 때",
+        "type": "direct",
+        "scope": "자기장 안에 놓인 코일",
+        "antecedent": {
+          "quantity": "코일을 지나는 자기장의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기선속",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자기장에 비례하므로 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코일을 지나는 자기장이 셀수록 자기선속은 작아진다."
+    },
+    {
+      "id": "rel-flux-area",
+      "text": "같은 자기장 안이라도 코일 단면이 넓으면 자기선속이 커서, 자기장의 세기만으로는 자기선속이 정해지지 않는다.",
+      "form": {
+        "condition": "자기장의 세기가 일정할 때",
+        "type": "direct",
+        "scope": "자기장 안에 놓인 코일",
+        "antecedent": {
+          "quantity": "코일 단면의 넓이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기선속",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "단면의 넓이에 비례하므로 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 자기장 안이라면 코일의 단면이 넓을수록 자기선속이 작아진다."
+    },
+    {
+      "id": "rel-flux-change",
+      "text": "코일에 전류를 유도하는 것은 자기선속의 값 자체가 아니라 그 값이 달라지는 정도다.",
+      "form": {
+        "condition": "코일에 유도 전류가 흐르는지 따질 때",
+        "type": "causal",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "값이 커도 변하지 않으면 유도되지 않으므로 값 자체라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기선속의 값이 크기만 하면 변하지 않아도 코일에 전류가 유도된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기선속이 크면 그것만으로 유도 전류가 흐른다",
+      "why_wrong": "자기선속이 변해야 유도 전류가 흐른다. 아무리 큰 값이라도 변하지 않으면 전류는 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-flux-change"
+    },
+    {
+      "text": "자기선속은 자기장의 세기와 같은 말이다",
+      "why_wrong": "자기선속은 자기장의 세기에 코일 단면의 넓이까지 함께 반영한 양이다. 같은 자기장에서도 단면이 넓으면 자기선속이 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-flux-area"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field-of-solenoid"
+    },
+    {
+      "type": "next",
+      "target": "phys-electromagnetic-induction"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    120
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

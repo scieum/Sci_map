@@ -1,0 +1,124 @@
+{
+  "id": "phys-energy-level",
+  "concept_key": "concept:energy-level",
+  "registry_status": "new",
+  "term": "에너지 준위",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 음차어여서 표제어 전체를 한자로 적을 수 없다. '준위'만 準位에 해당한다.",
+    "english": "energy level",
+    "symbol_display": "Eₙ",
+    "symbol_plain": "En"
+  },
+  "definition": "원자에 묶인 전자가 놓일 수 있는 에너지 상태. 양자수 n 으로 하나씩 매긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-el-quantized",
+      "text": "원자에 묶인 전자는 아무 에너지나 갖지 못하고 허용된 값만 가진다.",
+      "form": {
+        "condition": "전자가 원자에 묶여 있을 때",
+        "type": "conditional",
+        "scope": "원자에 묶인 전자. 떨어져 나온 자유 전자는 그렇지 않다"
+      },
+      "invertible": false,
+      "invertible_reason": "양자화라는 성질을 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-el-gap",
+      "text": "양자수가 커질수록 준위는 높아지지만 이웃한 준위 사이의 간격은 좁아진다.",
+      "form": {
+        "condition": "수소 원자의 준위를 양자수 차례대로 볼 때",
+        "type": "direct",
+        "scope": "수소 원자의 에너지 준위 구조",
+        "antecedent": {
+          "quantity": "양자수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이웃한 준위 사이의 간격",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양자수가 커지면 간격은 반드시 좁아지므로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양자수가 커질수록 이웃한 준위 사이의 간격이 넓어진다."
+    },
+    {
+      "id": "rel-el-ground",
+      "text": "전자가 가장 낮은 준위에 있으면 바닥상태, 에너지를 흡수해 더 높은 준위로 가면 들뜬상태다.",
+      "form": {
+        "condition": "전자가 어느 준위에 있는지 볼 때",
+        "type": "classification",
+        "scope": "바닥상태와 들뜬상태를 가르는 기준",
+        "antecedent": {
+          "quantity": "전자가 있는 준위",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "원자의 상태",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 붙이는 분류 명제여서 뒤집을 방향이 분명하지 않다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자는 에너지를 조금씩 연속적으로 얻거나 잃을 수 있다",
+      "why_wrong": "허용된 준위 사이의 차에 꼭 맞는 에너지만 주고받을 수 있어서, 그 사이의 값은 흡수되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-el-quantized"
+    },
+    {
+      "text": "양자수가 커지면 이웃한 준위 사이의 간격도 함께 넓어진다",
+      "why_wrong": "준위 자체는 높아지지만 간격은 오히려 좁아진다. 짧은 파장 쪽 선들이 촘촘해지는 까닭이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-el-gap"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-bohr-atomic-model"
+    },
+    {
+      "type": "next",
+      "target": "phys-electron-transition"
+    },
+    {
+      "type": "next",
+      "target": "phys-energy-band"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-01",
+  "pages": [
+    171,
+    174
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

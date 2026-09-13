@@ -1,0 +1,114 @@
+{
+  "id": "phys-ferromagnetic-material",
+  "concept_key": "concept:ferromagnetic-material",
+  "registry_status": "new",
+  "term": "강자성체",
+  "notation": {
+    "hanja": "強磁性體",
+    "english": "ferromagnetic material",
+    "hanja_gloss": "強 강할 강 · 磁 자석 자 · 性 성품 성 · 體 몸 체"
+  },
+  "definition": "외부 자기장 방향으로 원자 자석이 세게 정렬하고, 자기장을 치운 뒤에도 그 정렬이 상당히 남는 자성체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ferro-examples",
+      "text": "금속 가운데 철·니켈·코발트와 그 합금이 강자성체에 들고, 알루미늄이나 구리는 여기에 들지 않는다.",
+      "form": {
+        "condition": "물질을 자성에 따라 갈라놓을 때",
+        "type": "classification",
+        "scope": "강자성을 보이는 물질",
+        "antecedent": {
+          "quantity": "물질의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "강자성체 해당 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "예시를 든 분류 명제라 앞뒤에 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ferro-domain",
+      "text": "외부 자기장이 없을 때에도 일정한 영역 안에서는 원자 자석들이 한 방향을 향하는데, 이 영역을 자기 구역이라 한다.",
+      "form": {
+        "condition": "자기장을 걸기 전의 내부를 들여다볼 때",
+        "type": "conditional",
+        "scope": "강자성체 내부"
+      },
+      "invertible": false,
+      "invertible_reason": "내부 구조에 이름을 붙인 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ferro-use",
+      "text": "센 자성을 띠므로 전자석의 철심, 영구 자석, 하드디스크의 기록면 재료로 쓰인다.",
+      "form": {
+        "condition": "센 자성이 필요한 장치를 만들 때",
+        "type": "conditional",
+        "scope": "산업과 일상에서 쓰이는 강자성체"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 든 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "금속이면 모두 강자성체다",
+      "why_wrong": "강자성체는 철·니켈·코발트 등으로 한정된다. 알루미늄은 상자성체이고 구리와 금은 반자성체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ferro-examples"
+    },
+    {
+      "text": "강자성체는 늘 다른 쇠붙이를 끌어당긴다",
+      "why_wrong": "자기 구역들이 제각기 다른 방향을 향하면 자기장이 서로 상쇄되어 겉으로는 자성이 드러나지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ferro-domain"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetization"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-motor",
+      "note": "전동기의 영구 자석이 강자성체다"
+    },
+    {
+      "type": "related",
+      "target": "phys-paramagnetic-material",
+      "note": "자기장을 치운 뒤 자성이 남는지가 둘을 가른다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-01",
+  "pages": [
+    109,
+    112
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

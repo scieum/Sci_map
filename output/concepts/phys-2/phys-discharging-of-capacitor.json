@@ -1,0 +1,134 @@
+{
+  "id": "phys-discharging-of-capacitor",
+  "concept_key": "concept:discharging-of-capacitor",
+  "registry_status": "new",
+  "term": "방전",
+  "notation": {
+    "hanja": "放電",
+    "english": "discharging",
+    "hanja_gloss": "放 놓을 방 · 電 번개 전"
+  },
+  "definition": "충전된 축전기가 이어진 기구로 전하를 내보내며 저장해 둔 전기 에너지를 잃는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-discharging-energy",
+      "text": "방전하는 동안 축전기에 쌓여 있던 전기 에너지가 기구에서 빛이나 열 등으로 바뀐다.",
+      "form": {
+        "condition": "충전된 축전기에 저항이 있는 기구를 이었을 때",
+        "type": "causal",
+        "scope": "전원을 떼어 낸 축전기 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지 전환 과정을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-discharging-rate",
+      "text": "같은 양의 전하를 내보내더라도 걸리는 시간이 짧을수록 방전 전류가 세다.",
+      "form": {
+        "condition": "저장해 둔 전하량이 같을 때",
+        "type": "inverse",
+        "scope": "축전기를 이용한 방전 회로",
+        "antecedent": {
+          "quantity": "방전에 걸리는 시간",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "방전 전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "시간에 반비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 양의 전하를 내보낼 때 걸리는 시간이 짧을수록 방전 전류는 약해진다."
+    },
+    {
+      "id": "rel-discharging-recharge",
+      "text": "한 번 방전한 축전기를 다시 쓰려면 충전할 시간이 필요하다.",
+      "form": {
+        "condition": "방전을 마친 직후일 때",
+        "type": "conditional",
+        "scope": "자동 심장 충격기처럼 충전과 방전을 되풀이하는 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "장치를 다시 쓰는 조건을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-discharging-direction",
+      "text": "방전할 때는 전하가 축전기에서 빠져나가므로 회로에 흐르는 전류의 방향이 충전할 때와 반대다.",
+      "form": {
+        "condition": "충전을 마친 축전기에서 전원을 떼고 기구를 이었을 때",
+        "type": "causal",
+        "scope": "같은 축전기 회로에서 충전 과정과 방전 과정을 견줄 때",
+        "antecedent": {
+          "quantity": "축전기를 드나드는 전하의 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "회로에 흐르는 전류의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "충전과 방전에서 전하가 오가는 쪽이 서로 반대라 같다고 바꾸면 반드시 거짓이다.",
+      "inverted_text": "방전할 때 회로에 흐르는 전류의 방향은 충전할 때와 같다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "방전된 축전기는 못 쓰게 된 것이라 버려야 한다",
+      "why_wrong": "방전은 저장해 둔 전하를 내보낸 상태일 뿐이다. 다시 전원을 이으면 충전되어 되풀이해 쓸 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-discharging-recharge"
+    },
+    {
+      "text": "방전할 때 회로에 흐르는 전류의 방향은 충전할 때와 같다",
+      "why_wrong": "충전할 때는 전하가 축전기로 모이고 방전할 때는 빠져나가므로 회로에 흐르는 전류의 방향이 서로 반대다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-discharging-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-charging-of-capacitor"
+    },
+    {
+      "type": "related",
+      "target": "phys-charge-stored-in-capacitor",
+      "note": "내보낼 수 있는 전하의 양이 방전의 규모를 정한다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-03",
+  "pages": [
+    99,
+    101
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

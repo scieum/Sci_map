@@ -1,0 +1,137 @@
+{
+  "id": "phys-stability-of-object",
+  "concept_key": "concept:stability-of-object",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "물체의 안정성",
+  "aliases": [
+    "안정성",
+    "구조물의 안정성"
+  ],
+  "notation": {
+    "hanja": "物體 安定性",
+    "hanja_gloss": "物 만물 물 · 體 몸 체 · 安 편안할 안 · 定 정할 정 · 性 성품 성",
+    "english": "stability of an object"
+  },
+  "definition": "기울어져도 넘어지지 않고 본래 자세로 돌아오려는 성질. 무게 중심의 높이와 받침면의 넓이가 그 정도를 좌우한다.",
+  "relations": [
+    {
+      "id": "rel-stab-height",
+      "text": "받침면이 같다면 무게 중심이 낮게 놓인 물체일수록 잘 넘어지지 않는다.",
+      "form": {
+        "condition": "받침면의 넓이가 같을 때",
+        "type": "inverse",
+        "scope": "바닥에 놓여 기울어질 수 있는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "무게 중심의 높이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "안정성",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "무게 중심이 높으면 작은 기울기에도 연직선이 받침면을 벗어나므로 뒤집은 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "받침면이 같다면 무게 중심이 높게 놓인 물체일수록 잘 넘어지지 않는다."
+    },
+    {
+      "id": "rel-stab-base",
+      "text": "무게 중심의 높이가 같다면 바닥과 닿는 면이 넓을수록 안정성이 크다.",
+      "form": {
+        "condition": "무게 중심의 높이가 같을 때",
+        "type": "direct",
+        "scope": "바닥에 놓여 기울어질 수 있는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "받침면의 넓이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "안정성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "받침면이 넓을수록 무게 중심의 연직선이 그 안에 머무를 여유가 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무게 중심의 높이가 같다면 바닥과 닿는 면이 좁을수록 안정성이 크다."
+    },
+    {
+      "id": "rel-stab-topple",
+      "text": "기울인 물체의 무게 중심에서 내린 연직선이 받침면을 벗어나면 중력이 만든 돌림힘이 물체를 넘어뜨린다.",
+      "form": {
+        "condition": "무게 중심에서 내린 연직선이 받침면을 벗어날 때",
+        "type": "causal",
+        "scope": "미끄러지지 않을 만큼 마찰이 있는 바닥에 놓인 물체",
+        "antecedent": {
+          "quantity": "무게 중심 연직선의 받침면 이탈",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "넘어질 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "받침면 밖으로 나간 순간 돌림힘의 방향이 넘어지는 쪽으로 바뀌므로 되돌아온다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무게 중심에서 내린 연직선이 받침면을 벗어나도 물체는 본래 자세로 되돌아온다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "받침면만 넓으면 무게 중심이 아무리 높아도 넘어지지 않는다",
+      "why_wrong": "무게 중심이 높으면 조금만 기울여도 연직선이 받침면을 벗어난다. 두 요인을 함께 보아야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stab-height"
+    },
+    {
+      "text": "기울어진 탑은 이미 평형이 깨졌으므로 곧 넘어질 수밖에 없다",
+      "why_wrong": "기울어도 무게 중심의 연직선이 받침면 안에 있으면 평형이 유지된다. 기울기만으로는 판단할 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stab-topple"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-center-of-gravity"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-equilibrium-condition"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-torque"
+    }
+  ],
+  "curriculum": [
+    "12물리01-01"
+  ],
+  "topic_id": "phys-1-1-01",
+  "pages": [
+    27,
+    28,
+    29
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

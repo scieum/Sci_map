@@ -1,0 +1,123 @@
+{
+  "id": "phys-magnetic-field",
+  "concept_key": "concept:magnetic-field",
+  "registry_status": "new",
+  "term": "자기장",
+  "notation": {
+    "hanja": "磁氣場",
+    "english": "magnetic field",
+    "hanja_gloss": "磁 자석 자 · 氣 기운 기 · 場 마당 장",
+    "symbol_display": "B",
+    "symbol_plain": "B"
+  },
+  "definition": "자기력이 작용하는 공간. 자리마다 방향과 세기가 정해져 있어 화살표로 나타낼 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mf-source",
+      "text": "자기장은 자석 둘레뿐 아니라 전류가 흐르는 도선 둘레에도 생긴다.",
+      "form": {
+        "condition": "자기장이 어디에 생기는지 따질 때",
+        "type": "conditional",
+        "scope": "자석과 전류가 흐르는 도선"
+      },
+      "invertible": true,
+      "invertible_reason": "전류도 자기장을 만들므로 자석에만 생긴다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기장은 오직 자석 둘레에만 생긴다."
+    },
+    {
+      "id": "rel-mf-direction",
+      "text": "어떤 점의 자기장 방향은 그 자리에 놓은 나침반 자침의 N극이 가리키는 쪽으로 정한다.",
+      "form": {
+        "condition": "나침반을 그 점에 놓았을 때",
+        "type": "conditional",
+        "scope": "자기장 안의 한 지점"
+      },
+      "invertible": true,
+      "invertible_reason": "방향을 정하는 약속이 N극 쪽이라 S극이라 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기장의 방향은 나침반 자침의 S극이 가리키는 쪽으로 정한다."
+    },
+    {
+      "id": "rel-mf-distance",
+      "text": "자석에서 멀어질수록 그 자석이 만드는 자기장은 약해진다.",
+      "form": {
+        "condition": "같은 자석을 두고 거리만 바꿀 때",
+        "type": "inverse",
+        "scope": "자석 하나가 만드는 자기장",
+        "antecedent": {
+          "quantity": "자석과의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기장의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀수록 약해지므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석에서 멀어질수록 그 자석이 만드는 자기장은 세진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기장은 자석 주위에만 생긴다",
+      "why_wrong": "전류가 흐르는 도선 둘레에도 자기장이 생긴다. 전자석은 바로 이 점을 이용한 장치다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mf-source"
+    },
+    {
+      "text": "도선은 전류가 흐르지 않아도 둘레에 자기장을 만든다",
+      "why_wrong": "전류가 흐를 때에만 도선 둘레에 자기장이 생긴다. 스위치를 열면 자침은 움직이지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mf-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-magnetization"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-field-of-straight-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-flux"
+    },
+    {
+      "type": "related",
+      "target": "phys-magnetism",
+      "note": "자성은 자기장에 대한 반응으로 드러난다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-04",
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-01",
+  "pages": [
+    109,
+    115
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

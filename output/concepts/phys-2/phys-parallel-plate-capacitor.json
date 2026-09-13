@@ -1,0 +1,104 @@
+{
+  "id": "phys-parallel-plate-capacitor",
+  "concept_key": "concept:parallel-plate-capacitor",
+  "registry_status": "new",
+  "term": "평행판 축전기",
+  "aliases": [
+    "콘덴서",
+    "커패시터"
+  ],
+  "notation": {
+    "hanja": "平行板蓄電器",
+    "english": "parallel-plate capacitor",
+    "hanja_gloss": "平 평평할 평 · 行 갈 행 · 板 널 판 · 蓄 모을 축 · 電 번개 전 · 器 그릇 기"
+  },
+  "definition": "두 금속판을 나란히 마주 놓아 전하를 모아 두는 장치. 모인 전하의 형태로 전기 에너지를 저장한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ppc-store",
+      "text": "축전기는 전원에서 받은 에너지를 두 금속판에 모인 전하의 형태로 저장해 둔다.",
+      "form": {
+        "condition": "전원을 이어 전하를 모았을 때",
+        "type": "causal",
+        "scope": "전원에 이어진 평행판 축전기"
+      },
+      "invertible": false,
+      "invertible_reason": "저장 방식을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ppc-field",
+      "text": "전하가 모인 두 금속판 사이에는 한 판에서 다른 판 쪽으로 거의 고른 전기장이 생긴다.",
+      "form": {
+        "condition": "두 금속판이 서로 다른 전하로 대전되었을 때",
+        "type": "conditional",
+        "scope": "간격이 판의 크기에 비해 좁은 평행판"
+      },
+      "invertible": false,
+      "invertible_reason": "판 사이 전기장의 모습을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ppc-no-current",
+      "text": "축전기가 완전히 충전되면 회로에 더 이상 전류가 흐르지 않는다.",
+      "form": {
+        "condition": "두 금속판 사이 전위차가 전원의 전압과 같아졌을 때",
+        "type": "conditional",
+        "scope": "전원에 이어 둔 축전기 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "전하가 옮겨 갈 까닭이 사라지므로 계속 흐른다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "축전기가 완전히 충전된 뒤에도 회로에는 전류가 계속 흐른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "축전기는 전지처럼 스스로 전기 에너지를 만들어 낸다",
+      "why_wrong": "축전기는 전원이 해 준 일을 저장해 두었다가 되돌려 줄 뿐, 에너지를 새로 만들지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ppc-store"
+    },
+    {
+      "text": "충전된 축전기는 전체적으로 양전하를 띤다",
+      "why_wrong": "한쪽 판이 양전하를 띠면 다른 쪽 판은 같은 양의 음전하를 띤다. 축전기 전체로 보면 알짜 전하는 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ppc-field"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-field"
+    },
+    {
+      "type": "next",
+      "target": "phys-charging-of-capacitor"
+    }
+  ],
+  "curriculum": [
+    "12물리02-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-03",
+  "pages": [
+    98
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

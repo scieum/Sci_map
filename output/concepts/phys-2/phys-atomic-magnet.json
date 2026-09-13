@@ -1,0 +1,110 @@
+{
+  "id": "phys-atomic-magnet",
+  "concept_key": "concept:atomic-magnet",
+  "registry_status": "new",
+  "term": "원자 자석",
+  "notation": {
+    "hanja": "原子磁石",
+    "english": "atomic magnet",
+    "hanja_gloss": "原 근원 원 · 子 아들 자 · 磁 자석 자 · 石 돌 석"
+  },
+  "definition": "원자핵 둘레를 도는 전자가 자기장을 만들어, 원자 하나가 작은 자석처럼 행동하는 것을 이르는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-am-electron",
+      "text": "원자 자석의 자기장은 원자핵 둘레를 도는 전자의 운동에서 비롯된다.",
+      "form": {
+        "condition": "원자 하나를 자석으로 볼 때",
+        "type": "causal",
+        "scope": "전자를 거느린 원자"
+      },
+      "invertible": true,
+      "invertible_reason": "자기장을 만드는 것은 전자의 운동이므로 원자핵이라 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자 자석의 자기장은 원자핵 자체가 자석이기 때문에 생긴다."
+    },
+    {
+      "id": "rel-am-cancel",
+      "text": "전자들이 만드는 자기장이 서로 상쇄되는 원자는 외부 자기장이 없을 때 원자 자석이 되지 않는다.",
+      "form": {
+        "condition": "외부 자기장을 걸지 않았을 때",
+        "type": "conditional",
+        "scope": "반자성체를 이루는 원자"
+      },
+      "invertible": false,
+      "invertible_reason": "상쇄가 낳는 결과를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-am-align",
+      "text": "원자 자석들이 한 방향으로 모일수록 물질이 겉으로 드러내는 자성이 세다.",
+      "form": {
+        "condition": "물질 안 원자 자석의 배열을 견줄 때",
+        "type": "direct",
+        "scope": "원자 자석을 지닌 자성체",
+        "antecedent": {
+          "quantity": "한 방향으로 정렬한 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "겉으로 드러나는 자성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "정렬이 흐트러지면 자성이 약해지므로 반대로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자 자석들이 제멋대로 흩어져 있을수록 물질이 드러내는 자성이 세다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원자 자석이란 원자핵이 자석 노릇을 한다는 뜻이다",
+      "why_wrong": "여기서 말하는 '핵'은 원자핵이지만, 자기장을 만드는 것은 그 둘레를 도는 전자의 운동이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-am-electron"
+    },
+    {
+      "text": "모든 원자는 원래부터 원자 자석이다",
+      "why_wrong": "전자들이 만드는 자기장이 서로 상쇄되는 원자는 외부 자기장이 없으면 자성을 띠지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-am-cancel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetism"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetization"
+    }
+  ],
+  "curriculum": [
+    "12물리02-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-01",
+  "pages": [
+    109,
+    110
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

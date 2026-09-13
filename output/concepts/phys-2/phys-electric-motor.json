@@ -1,0 +1,115 @@
+{
+  "id": "phys-electric-motor",
+  "concept_key": "concept:electric-motor",
+  "registry_status": "new",
+  "term": "전동기",
+  "notation": {
+    "hanja": "電動機",
+    "english": "electric motor",
+    "hanja_gloss": "電 번개 전 · 動 움직일 동 · 機 틀 기"
+  },
+  "definition": "자석 사이에 놓인 코일에 전류를 흘려, 코일이 받는 힘으로 회전축을 돌리는 장치.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-motor-rotate",
+      "text": "사각 코일의 양쪽 변은 전류의 방향이 서로 반대여서 받는 힘의 방향도 반대가 되고, 그 때문에 코일이 돈다.",
+      "form": {
+        "condition": "자기장 안의 코일에 전류가 흐를 때",
+        "type": "causal",
+        "scope": "영구 자석 사이에 놓인 사각 코일"
+      },
+      "invertible": false,
+      "invertible_reason": "회전이 일어나는 까닭을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-motor-energy",
+      "text": "전동기는 전기 에너지를 회전하는 운동 에너지로 바꾸어 준다.",
+      "form": {
+        "condition": "코일에 전류를 흘려 돌릴 때",
+        "type": "causal",
+        "scope": "전원에 이어진 전동기"
+      },
+      "invertible": true,
+      "invertible_reason": "전기에서 운동으로 바꾸는 장치라 거꾸로 적으면 발전기가 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전동기는 운동 에너지를 전기 에너지로 바꾸어 주는 장치다."
+    },
+    {
+      "id": "rel-motor-current",
+      "text": "코일에 흐르는 전류가 셀수록 코일이 받는 힘이 커져 더 빠르게 돈다.",
+      "form": {
+        "condition": "자석의 세기와 코일의 모양이 그대로일 때",
+        "type": "direct",
+        "scope": "전동기의 회전 코일",
+        "antecedent": {
+          "quantity": "코일에 흐르는 전류",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "회전하는 빠르기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류가 셀수록 힘이 커지므로 느려진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코일에 흐르는 전류가 셀수록 전동기는 더 느리게 돈다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전동기는 전기 에너지를 만들어 내는 장치다",
+      "why_wrong": "전동기는 전기 에너지를 받아 운동 에너지로 바꾼다. 반대로 운동에서 전기를 얻는 장치는 발전기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-motor-energy"
+    },
+    {
+      "text": "코일의 양쪽 변이 같은 방향으로 힘을 받아 코일이 돈다",
+      "why_wrong": "양쪽 변은 전류의 방향이 반대라서 받는 힘도 반대다. 반대 방향의 두 힘이 짝을 이루어야 코일이 회전한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-motor-rotate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-effect-of-current"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-ferromagnetic-material",
+      "note": "전동기의 영구 자석이 강자성체다"
+    },
+    {
+      "type": "related",
+      "target": "phys-loudspeaker",
+      "note": "둘 다 코일이 받는 힘을 쓰는 장치다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-02",
+  "pages": [
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

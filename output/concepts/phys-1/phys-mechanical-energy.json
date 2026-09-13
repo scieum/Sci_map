@@ -1,0 +1,110 @@
+{
+  "id": "phys-mechanical-energy",
+  "concept_key": "concept:mechanical-energy",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "역학적 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어라 낱말 전체를 한자로 적을 수 없다. '역학적'만 力學的에 해당한다.",
+    "english": "mechanical energy",
+    "symbol_display": "E",
+    "symbol_plain": "E"
+  },
+  "definition": "물체가 지금의 운동 상태와 놓인 자리 때문에 지니는 에너지를 한데 묶어 이르는 말. 중력이나 탄성력처럼 자리로 값이 정해지는 힘이 걸릴 때 쓴다.",
+  "relations": [
+    {
+      "id": "rel-me-sum",
+      "text": "역학적 에너지는 운동 에너지와 위치 에너지를 더해 구한 값이다.",
+      "form": {
+        "condition": "물체가 지닌 역학적 에너지를 셈할 때",
+        "type": "classification",
+        "scope": "중력·탄성력처럼 자리에 따라 에너지가 정해지는 힘이 작용하는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "운동 에너지와 위치 에너지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "역학적 에너지",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 더해 얻는 값인지 밝힌 분류 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-me-three",
+      "text": "용수철에 매달려 오르내리는 물체에서는 운동 에너지에 중력과 탄성력의 위치 에너지를 모두 더한다.",
+      "form": {
+        "condition": "중력과 탄성력이 함께 작용할 때",
+        "type": "conditional",
+        "scope": "연직으로 매달린 용수철이 진동하는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "작용하는 힘의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "역학적 에너지의 구성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "어떤 항을 넣어 셈하는지 밝힌 명제라 뒤집을 두 양의 증감이 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "역학적 에너지는 움직이는 물체가 가진 운동 에너지만 가리킨다",
+      "why_wrong": "위치 에너지도 함께 더한 값이다. 높은 곳에 정지해 있는 물체도 역학적 에너지를 지닌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-me-sum"
+    },
+    {
+      "text": "정지해 있는 물체의 역학적 에너지는 언제나 0이다",
+      "why_wrong": "운동 에너지는 0이지만 높이나 변형이 있으면 위치 에너지가 남아 역학적 에너지는 0이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-me-sum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-gravitational-potential-energy"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-elastic-potential-energy"
+    },
+    {
+      "type": "next",
+      "target": "phys-mechanical-energy-conservation-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-04"
+  ],
+  "topic_id": "phys-1-2-01",
+  "pages": [
+    55,
+    57,
+    59
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

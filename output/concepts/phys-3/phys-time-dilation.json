@@ -1,0 +1,136 @@
+{
+  "id": "phys-time-dilation",
+  "concept_key": "concept:time-dilation",
+  "registry_status": "new",
+  "term": "시간 팽창",
+  "notation": {
+    "hanja": "時間 膨脹",
+    "hanja_gloss": "時 때 시 · 間 사이 간 · 膨 부풀 팽 · 脹 부을 창",
+    "english": "time dilation"
+  },
+  "definition": "나에 대해 움직이는 관찰자의 시간이 내 시간보다 느리게 가는 것으로 관측되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-td-moving",
+      "text": "지면의 관찰자는 빠르게 지나가는 우주선 안의 시간이 자기 시간보다 느리게 간다고 관측한다.",
+      "form": {
+        "condition": "우주선이 지면에 대해 등속도로 움직일 때",
+        "type": "causal",
+        "scope": "관성계끼리의 관측. 어느 한쪽이 절대적으로 느린 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "관측 결과를 말하는 명제여서 뒤집을 방향이 분명하지 않다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-td-speed",
+      "text": "두 관성계의 상대 속력이 클수록 시간이 벌어지는 정도가 커진다.",
+      "form": {
+        "condition": "두 관성계가 서로 등속도로 움직일 때",
+        "type": "direct",
+        "scope": "상대 속력이 빛의 속력에 가까워질수록 뚜렷하다",
+        "antecedent": {
+          "quantity": "두 관성계의 상대 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "시간 팽창의 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속력과 팽창 정도가 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 관성계의 상대 속력이 클수록 시간이 벌어지는 정도가 작아진다."
+    },
+    {
+      "id": "rel-td-mutual",
+      "text": "두 관찰자는 저마다 상대편의 시간이 자기 시간보다 느리게 간다고 관측한다.",
+      "form": {
+        "condition": "두 관성계가 서로 등속도로 움직일 때",
+        "type": "conditional",
+        "scope": "서로 관성계인 두 관찰자. 한쪽이 방향을 바꿔 돌아오면 사정이 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "서로 대등함을 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-td-lightclock",
+      "text": "빛 시계에서 빛이 지나는 길이 더 길어 보이는 쪽이 시간을 더 길게 잰다.",
+      "form": {
+        "condition": "광속이 두 관성계에서 같다고 볼 때",
+        "type": "causal",
+        "scope": "빛 시계로 시간 팽창을 이끌어 낼 때"
+      },
+      "invertible": false,
+      "invertible_reason": "유도 과정을 설명하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빠르게 움직이는 우주선 안 사람은 자기 시계가 느리게 가는 것을 느낀다",
+      "why_wrong": "자기 관성계 안에서는 모든 것이 평소와 같다. 시간이 느리다고 보는 쪽은 바깥의 관찰자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-td-mutual"
+    },
+    {
+      "text": "둘 중 실제로 움직이는 쪽의 시간만 진짜로 느려진다",
+      "why_wrong": "등속도로 움직이는 두 관성계는 서로 대등해서, 두 사람 모두 상대의 시간이 느리다고 관측한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-td-moving"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-constancy-of-light-speed"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-proper-time"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-principle-of-relativity"
+    },
+    {
+      "type": "next",
+      "target": "phys-length-contraction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-03",
+  "pages": [
+    189,
+    190
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "시간 지연"
+  ]
+}

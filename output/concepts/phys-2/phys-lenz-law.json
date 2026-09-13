@@ -1,0 +1,103 @@
+{
+  "id": "phys-lenz-law",
+  "concept_key": "concept:lenz-law",
+  "registry_status": "new",
+  "term": "렌츠 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Lenz's law",
+    "hanja_note": "인명 Lenz 를 음차한 말이 앞에 붙은 표제어라 전체를 한자로 옮기지 않는다. 뒤의 '법칙'만 法則이다."
+  },
+  "definition": "유도 전류가 코일을 지나는 자기선속의 변화를 방해하는 쪽으로 흐른다는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lenz-approach",
+      "text": "자석의 N극을 코일에 가까이 하면 코일의 마주 보는 면이 N극이 되도록 유도 전류가 흐른다.",
+      "form": {
+        "condition": "코일을 지나는 자기선속이 늘어날 때",
+        "type": "conditional",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "늘어나는 자기선속을 막는 쪽이라 S극이 된다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석의 N극을 코일에 가까이 하면 마주 보는 면이 S극이 되도록 유도 전류가 흐른다."
+    },
+    {
+      "id": "rel-lenz-reverse",
+      "text": "자기선속이 늘어날 때와 줄어들 때 유도 전류의 방향은 서로 반대다.",
+      "form": {
+        "condition": "자석을 가까이 할 때와 멀리 할 때를 견줄 때",
+        "type": "conditional",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "변화를 막는 방향이 반대로 뒤집히므로 같다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기선속이 늘어날 때와 줄어들 때 유도 전류의 방향은 서로 같다."
+    },
+    {
+      "id": "rel-lenz-brake",
+      "text": "구리관 속을 떨어지는 자석이 천천히 내려오는 것은 유도 전류가 만든 자기력이 낙하를 막기 때문이다.",
+      "form": {
+        "condition": "도체 관 속에서 자석이 떨어질 때",
+        "type": "causal",
+        "scope": "구리처럼 전류가 잘 흐르는 관"
+      },
+      "invertible": false,
+      "invertible_reason": "현상의 원인을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유도 전류는 자석의 운동을 도와주는 방향으로 흐른다",
+      "why_wrong": "변화를 방해하는 방향으로 흐른다. 도와주는 방향이라면 자석이 저절로 빨라져 에너지가 저절로 늘어나는 셈이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lenz-reverse"
+    },
+    {
+      "text": "구리관 속 자석이 천천히 떨어지는 것은 구리가 자석을 끌어당기기 때문이다",
+      "why_wrong": "구리는 자석에 붙지 않는다. 떨어지는 동안 생긴 유도 전류가 자석의 운동을 막는 자기력을 만드는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lenz-brake"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-induced-current"
+    },
+    {
+      "type": "related",
+      "target": "phys-faraday-law-of-induction",
+      "note": "유도 전류의 방향과 세기를 각각 맡는다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    121,
+    126
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

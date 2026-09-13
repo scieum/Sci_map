@@ -1,0 +1,107 @@
+{
+  "id": "phys-magnetic-effect-of-current",
+  "concept_key": "concept:magnetic-effect-of-current",
+  "registry_status": "new",
+  "term": "전류의 자기 작용",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magnetic effect of current",
+    "hanja_note": "조사 '의'가 들어간 구 형태의 표제어라 전체를 한자로 옮기지 않는다. '전류'는 電流, '자기 작용'은 磁氣作用이다."
+  },
+  "definition": "전류가 만든 자기장과 자석의 자기장이 서로 힘을 미쳐 도선이나 자석이 움직이게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mec-interaction",
+      "text": "전류가 흐르는 도선을 자석 가까이 두면 도선과 자석이 서로 힘을 주고받는다.",
+      "form": {
+        "condition": "도선에 전류가 흐르고 있을 때",
+        "type": "causal",
+        "scope": "자석의 자기장 안에 놓인 도선"
+      },
+      "invertible": true,
+      "invertible_reason": "전류가 있어야 힘이 생기므로 없어도 받는다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도선에 전류가 흐르지 않아도 자석 곁에 두기만 하면 도선이 힘을 받는다."
+    },
+    {
+      "id": "rel-mec-direction",
+      "text": "전류의 방향이나 자기장의 방향 가운데 하나를 뒤집으면 도선이 받는 힘의 방향도 뒤집힌다.",
+      "form": {
+        "condition": "전류나 자기장의 방향만 바꿀 때",
+        "type": "conditional",
+        "scope": "자기장 안에 놓인 전류 도선"
+      },
+      "invertible": true,
+      "invertible_reason": "힘의 방향이 둘을 따라 정해지므로 그대로라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류의 방향을 뒤집어도 도선이 받는 힘의 방향은 그대로다."
+    },
+    {
+      "id": "rel-mec-energy",
+      "text": "전류의 자기 작용을 쓰는 장치는 전기 에너지를 운동 에너지로 바꾼다.",
+      "form": {
+        "condition": "코일에 전류를 흘려 장치를 움직일 때",
+        "type": "causal",
+        "scope": "전동기·스피커 같은 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "전기에서 운동으로 바꾸는 쪽이라 거꾸로 적으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류의 자기 작용을 쓰는 장치는 운동 에너지를 전기 에너지로 바꾼다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "도선은 전류가 흐르지 않아도 자석 곁에 두면 힘을 받는다",
+      "why_wrong": "전류가 만든 자기장이 있어야 자석의 자기장과 힘을 주고받는다. 스위치를 열면 도선은 움직이지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mec-interaction"
+    },
+    {
+      "text": "자석의 극만 바꾸면 도선이 받는 힘의 방향은 그대로다",
+      "why_wrong": "자기장의 방향이 뒤집히므로 도선이 받는 힘의 방향도 뒤집힌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mec-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field-of-straight-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-motor"
+    },
+    {
+      "type": "next",
+      "target": "phys-loudspeaker"
+    }
+  ],
+  "curriculum": [
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-02",
+  "pages": [
+    114,
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

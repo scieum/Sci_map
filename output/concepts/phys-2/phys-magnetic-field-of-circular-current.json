@@ -1,0 +1,118 @@
+{
+  "id": "phys-magnetic-field-of-circular-current",
+  "concept_key": "concept:magnetic-field-of-circular-current",
+  "registry_status": "new",
+  "term": "원형 전류에 의한 자기장",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magnetic field of a circular current",
+    "hanja_note": "조사가 들어간 구 형태의 표제어라 전체를 한자로 옮기지 않는다. '원형 전류'는 圓形電流, '자기장'은 磁氣場이다."
+  },
+  "definition": "곧은 도선을 둥글게 구부려 전류를 흘릴 때 그 도선 둘레에 생기는 자기장.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-circular-inside",
+      "text": "고리를 이루는 각 부분이 만드는 자기장이 안쪽에서 같은 방향으로 겹치므로 안쪽이 바깥쪽보다 세다.",
+      "form": {
+        "condition": "같은 도선의 안팎을 견줄 때",
+        "type": "conditional",
+        "scope": "전류가 흐르는 둥근 도선 하나"
+      },
+      "invertible": true,
+      "invertible_reason": "안쪽에서 자기장이 겹쳐 세지므로 바깥이 세다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원형 도선 바깥쪽의 자기장이 안쪽보다 세다."
+    },
+    {
+      "id": "rel-circular-current",
+      "text": "원의 중심에서 잰 자기장은 도선에 흐르는 전류가 셀수록 세다.",
+      "form": {
+        "condition": "원의 반지름이 일정할 때",
+        "type": "direct",
+        "scope": "전류가 흐르는 둥근 도선의 중심",
+        "antecedent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "중심의 자기장 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원의 중심에서 잰 자기장은 전류가 셀수록 약해진다."
+    },
+    {
+      "id": "rel-circular-radius",
+      "text": "전류가 같다면 도선이 그리는 원의 반지름이 클수록 중심의 자기장이 약하다.",
+      "form": {
+        "condition": "전류의 세기가 일정할 때",
+        "type": "inverse",
+        "scope": "전류가 흐르는 둥근 도선의 중심",
+        "antecedent": {
+          "quantity": "원의 반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "중심의 자기장 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반지름에 반비례하므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류가 같다면 원의 반지름이 클수록 중심의 자기장이 세다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원형 도선은 바깥쪽 자기장이 안쪽보다 세다",
+      "why_wrong": "고리를 이루는 부분들이 만드는 자기장이 안쪽에서 같은 방향으로 겹치므로 안쪽이 더 세다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-circular-inside"
+    },
+    {
+      "text": "고리를 크게 만들수록 중심의 자기장도 세진다",
+      "why_wrong": "전류가 같다면 반지름이 커질수록 중심의 자기장은 오히려 약해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-circular-radius"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field-of-straight-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-field-of-solenoid"
+    }
+  ],
+  "curriculum": [
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-02",
+  "pages": [
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

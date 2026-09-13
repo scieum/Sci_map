@@ -1,0 +1,122 @@
+{
+  "id": "phys-faraday-law-of-induction",
+  "concept_key": "concept:faraday-law-of-induction",
+  "registry_status": "new",
+  "term": "패러데이 법칙",
+  "aliases": [
+    "전자기 유도 법칙"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Faraday's law of induction",
+    "hanja_note": "인명 Faraday 를 음차한 말이 앞에 붙은 표제어라 전체를 한자로 옮기지 않는다. 뒤의 '법칙'만 法則이다."
+  },
+  "definition": "유도 전류의 세기가 코일을 지나는 자기선속이 달라지는 빠르기에 비례한다는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-faraday-rate",
+      "text": "자기선속이 같은 크기만큼 달라지더라도 그 일이 짧은 시간에 일어날수록 유도 전류가 세다.",
+      "form": {
+        "condition": "자기선속의 변화량이 같을 때",
+        "type": "inverse",
+        "scope": "닫힌 회로를 이룬 코일",
+        "antecedent": {
+          "quantity": "변화에 걸린 시간",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "유도 전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변화율에 비례하므로 오래 걸릴수록 세다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기선속이 같은 크기만큼 달라질 때 시간이 오래 걸릴수록 유도 전류가 세다."
+    },
+    {
+      "id": "rel-faraday-turns",
+      "text": "같은 자기선속 변화라도 코일을 많이 감을수록 유도 전류가 세다.",
+      "form": {
+        "condition": "자기선속의 변화율이 같을 때",
+        "type": "direct",
+        "scope": "여러 번 감은 코일",
+        "antecedent": {
+          "quantity": "코일을 감은 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "감은 수에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 자기선속 변화라도 코일을 많이 감을수록 유도 전류가 약해진다."
+    },
+    {
+      "id": "rel-faraday-no-change",
+      "text": "자기선속이 아무리 크더라도 달라지지 않으면 유도 전류는 흐르지 않는다.",
+      "form": {
+        "condition": "코일을 지나는 자기선속이 일정할 때",
+        "type": "conditional",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "변화율이 0이면 전류도 0이므로 흐른다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기선속이 크기만 하면 달라지지 않아도 유도 전류가 흐른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자석을 코일 속에 깊이 넣어 둘수록 유도 전류가 세진다",
+      "why_wrong": "유도 전류를 정하는 것은 자기선속의 변화 빠르기다. 넣어 둔 채 멈추면 변화가 없어 전류도 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-faraday-no-change"
+    },
+    {
+      "text": "유도 전류의 세기는 자기선속의 크기에 비례한다",
+      "why_wrong": "비례하는 대상은 자기선속 자체가 아니라 그것이 변하는 빠르기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-faraday-rate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-induced-current"
+    },
+    {
+      "type": "related",
+      "target": "phys-lenz-law",
+      "note": "유도 전류의 방향과 세기를 각각 맡는다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    121
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

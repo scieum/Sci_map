@@ -1,0 +1,139 @@
+{
+  "id": "phys-torque",
+  "concept_key": "concept:torque",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "돌림힘",
+  "aliases": [
+    "토크"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'돌림'과 '힘'이 모두 고유어라 낱말 전체를 옮길 한자어가 없다. 별칭 '토크'는 영어 torque 의 음차어다.",
+    "english": "torque",
+    "symbol_display": "τ",
+    "symbol_plain": "tau"
+  },
+  "definition": "회전축을 중심으로 물체를 돌리려는 정도를 나타내는 물리량. 회전축에서 힘점까지의 거리와 그 거리에 수직인 힘의 크기를 곱해 정한다.",
+  "relations": [
+    {
+      "id": "rel-torque-distance",
+      "text": "같은 크기의 힘을 주더라도 회전축에서 멀리 떨어진 곳을 밀수록 돌림힘은 커진다.",
+      "form": {
+        "condition": "작용하는 힘의 크기가 일정할 때",
+        "type": "direct",
+        "scope": "회전축이 정해져 있고 힘이 회전축까지의 선분에 수직으로 걸리는 경우",
+        "antecedent": {
+          "quantity": "회전축에서 힘점까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "돌림힘의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "돌림힘은 거리와 힘의 곱이라 거리만 늘리고 돌림힘이 줄어든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 크기의 힘이라도 회전축에서 멀리 떨어진 곳을 밀수록 돌림힘은 작아진다."
+    },
+    {
+      "id": "rel-torque-perpendicular",
+      "text": "힘점의 자리가 같다면 회전축까지의 선분에 수직인 힘 성분이 클수록 돌림힘이 크다.",
+      "form": {
+        "condition": "힘을 주는 지점이 고정되어 있을 때",
+        "type": "direct",
+        "scope": "고정된 회전축을 갖는 강체에서 힘을 수직 성분과 나란한 성분으로 나눌 수 있는 경우",
+        "antecedent": {
+          "quantity": "수직 방향 힘 성분의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "돌림힘의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "나란한 성분은 회전에 보태지 못하므로 수직 성분이 커질 때 돌림힘이 줄어든다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "회전축까지의 선분에 수직인 힘 성분이 클수록 돌림힘은 작아진다."
+    },
+    {
+      "id": "rel-torque-not-energy",
+      "text": "돌림힘의 단위는 힘과 거리의 곱이지만 이 양은 에너지가 아니어서 J 로 적을 수 없다.",
+      "form": {
+        "condition": "단위가 같아 보이는 두 물리량을 가를 때",
+        "type": "classification",
+        "scope": "돌림힘과 에너지를 구별하는 맥락에 한정한다",
+        "antecedent": {
+          "quantity": "돌림힘",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "에너지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 두 물리량을 갈라 놓은 명제라 같은 양이라고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "돌림힘은 힘과 거리의 곱이므로 에너지와 같은 양이고 단위도 J 로 적는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "돌림힘의 단위가 힘과 거리의 곱이므로 돌림힘은 일이나 에너지와 같은 양이다",
+      "why_wrong": "단위가 같다고 같은 물리량은 아니다. 돌림힘은 회전을 일으키는 능력을 나타내는 양이라 J 을 쓰지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-torque-not-energy"
+    },
+    {
+      "text": "문손잡이를 회전축 가까이 달아도 같은 힘을 주면 문은 똑같이 열린다",
+      "why_wrong": "회전축에 가까울수록 거리가 짧아져 돌림힘이 작아지므로, 같은 힘으로는 문을 열기가 더 어렵다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-torque-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-torque-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "phys-stability-of-object",
+      "note": "받침면을 벗어난 무게 중심이 만드는 돌림힘이 전도를 설명한다"
+    },
+    {
+      "type": "related",
+      "target": "phys-center-of-gravity"
+    }
+  ],
+  "curriculum": [
+    "12물리01-01"
+  ],
+  "topic_id": "phys-1-1-01",
+  "pages": [
+    22,
+    23,
+    48
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

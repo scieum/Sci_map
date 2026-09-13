@@ -1,0 +1,135 @@
+{
+  "id": "phys-equilibrium-condition",
+  "concept_key": "concept:condition-for-equilibrium",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "물체의 평형 조건",
+  "aliases": [
+    "평형 조건",
+    "평형 상태"
+  ],
+  "notation": {
+    "hanja": "物體 平衡 條件",
+    "hanja_gloss": "物 만물 물 · 體 몸 체 · 平 평평할 평 · 衡 저울대 형 · 條 가지 조 · 件 물건 건",
+    "english": "condition for equilibrium"
+  },
+  "definition": "물체의 운동 상태가 그대로 이어지기 위해 갖추어야 할 조건. 작용하는 힘의 합과 돌림힘의 합이 함께 0이어야 한다.",
+  "relations": [
+    {
+      "id": "rel-eqc-two",
+      "text": "알짜힘이 0인 것만으로는 모자라고 돌림힘의 합까지 0이라야 평형이 유지된다.",
+      "form": {
+        "condition": "크기를 가진 물체를 강체로 볼 때",
+        "type": "conditional",
+        "scope": "점이 아니라 부피와 모양을 가진 물체에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘과 돌림힘의 합",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "평형 유지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집어 '두 합이 모두 0이면 평형이다' 로 읽어도 참이라 오답 지문이 되지 못한다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eqc-rotate",
+      "text": "크기가 같고 방향이 반대인 두 힘이라도 작용선이 어긋나 있으면 알짜힘은 0인데도 물체가 돈다.",
+      "form": {
+        "condition": "두 힘의 작용선이 한 직선 위에 놓이지 않을 때",
+        "type": "causal",
+        "scope": "회전할 수 있는 크기를 가진 물체에 한정한다",
+        "antecedent": {
+          "quantity": "두 힘의 작용선 어긋남",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "회전 운동의 발생",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "어긋난 작용선은 반드시 0이 아닌 돌림힘을 남기므로 돌지 않는다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크기가 같고 방향이 반대인 두 힘이 작용선이 어긋나게 걸리면 물체는 회전하지 않는다."
+    },
+    {
+      "id": "rel-eqc-uniform",
+      "text": "정지해 있을 때뿐 아니라 일정한 속도로 움직이는 동안에도 물체는 평형 상태에 있다.",
+      "form": {
+        "condition": "운동 상태가 변하는지로 평형을 가릴 때",
+        "type": "classification",
+        "scope": "관성 기준틀에서 관찰한 물체에 한정한다",
+        "antecedent": {
+          "quantity": "등속도 운동",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "평형 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇을 평형으로 부를지 범위를 넓힌 분류 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물체가 정지해 있을 때만 평형 상태라고 할 수 있다",
+      "why_wrong": "평형은 운동 상태가 변하지 않는다는 뜻이다. 속도가 일정한 채 달리는 물체도 평형 상태다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eqc-uniform"
+    },
+    {
+      "text": "알짜힘이 0이면 물체는 절대 회전하지 않는다",
+      "why_wrong": "같은 크기의 두 힘이 서로 다른 작용선에 걸리면 알짜힘은 0이어도 돌림힘이 남아 물체가 돈다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eqc-rotate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-torque-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "phys-stability-of-object"
+    },
+    {
+      "type": "next",
+      "target": "phys-action-reaction-vs-force-balance",
+      "note": "힘의 평형 쪽을 알아야 작용 반작용과 구별이 선다"
+    }
+  ],
+  "curriculum": [
+    "12물리01-01"
+  ],
+  "topic_id": "phys-1-1-01",
+  "pages": [
+    25,
+    48
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

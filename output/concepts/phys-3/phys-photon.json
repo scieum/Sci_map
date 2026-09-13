@@ -1,0 +1,127 @@
+{
+  "id": "phys-photon",
+  "concept_key": "concept:photon",
+  "registry_status": "new",
+  "term": "광자",
+  "notation": {
+    "hanja": "光子",
+    "hanja_gloss": "光 빛 광 · 子 아들 자",
+    "english": "photon",
+    "symbol_display": "E = hf",
+    "symbol_plain": "E = hf"
+  },
+  "definition": "빛을 이루는 알갱이. 아인슈타인이 광전 효과를 풀려고 내놓은 광양자설의 기본 단위다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-photon-energy",
+      "text": "광자 하나가 지닌 에너지는 빛의 진동수가 클수록 크다.",
+      "form": {
+        "condition": "진동수가 일정한 단색광을 볼 때",
+        "type": "direct",
+        "scope": "광자 한 개의 에너지. 빛 전체의 세기와는 다른 양이다",
+        "antecedent": {
+          "quantity": "빛의 진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광자 한 개의 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진동수와 광자 에너지가 비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광자 하나가 지닌 에너지는 빛의 진동수가 클수록 작다."
+    },
+    {
+      "id": "rel-photon-count",
+      "text": "진동수가 같은 빛에서는 세기가 클수록 1초에 도달하는 광자의 수가 많다.",
+      "form": {
+        "condition": "빛의 진동수가 일정할 때",
+        "type": "direct",
+        "scope": "같은 진동수의 빛끼리 견줄 때. 진동수가 다르면 광자 하나의 에너지부터 다르다",
+        "antecedent": {
+          "quantity": "빛의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "도달하는 광자의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세기와 광자 수가 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 같은 빛에서는 세기가 클수록 1초에 도달하는 광자의 수가 적다."
+    },
+    {
+      "id": "rel-photon-pe",
+      "text": "전자는 광자 하나의 에너지를 받아 나오므로 광자 하나가 작으면 수가 많아도 방출되지 않는다.",
+      "form": {
+        "condition": "금속에 빛을 비출 때",
+        "type": "causal",
+        "scope": "광전 효과를 광양자설로 설명할 때"
+      },
+      "invertible": false,
+      "invertible_reason": "설명의 얼개를 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "센 빛일수록 광자 한 개의 에너지가 크다",
+      "why_wrong": "광자 한 개의 에너지는 진동수가 정한다. 세기가 크다는 것은 광자의 수가 많다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photon-energy"
+    },
+    {
+      "text": "진동수가 작은 빛이라도 아주 세게 비추면 광전자가 튀어나온다",
+      "why_wrong": "전자는 광자 하나의 에너지를 받는다. 그 하나가 모자라면 광자 수가 아무리 많아도 전자는 나오지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-photon-pe"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-photoelectric-effect"
+    },
+    {
+      "type": "next",
+      "target": "phys-wave-particle-duality-of-light"
+    },
+    {
+      "type": "next",
+      "target": "phys-electron-transition"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-03",
+  "pages": [
+    154
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "광양자"
+  ]
+}

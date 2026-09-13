@@ -1,0 +1,157 @@
+{
+  "id": "phys-uniformly-accelerated-linear-motion",
+  "concept_key": "concept:uniformly-accelerated-linear-motion",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "등가속도 직선 운동",
+  "aliases": [
+    "등가속도 운동"
+  ],
+  "notation": {
+    "hanja": "等加速度 直線 運動",
+    "hanja_gloss": "等 같을 등 · 加 더할 가 · 速 빠를 속 · 度 법도 도 · 直 곧을 직 · 線 줄 선 · 運 옮길 운 · 動 움직일 동",
+    "english": "uniformly accelerated linear motion"
+  },
+  "definition": "곧은 길을 따라가면서 가속도의 크기와 방향이 내내 같은 운동. 같은 시간마다 속도가 같은 양만큼 달라진다.",
+  "relations": [
+    {
+      "id": "rel-ualm-const-force",
+      "text": "크기와 방향이 변하지 않는 알짜힘만 받는 물체는 속도가 고르게 변한다.",
+      "form": {
+        "condition": "알짜힘의 크기와 방향이 변하지 않을 때",
+        "type": "causal",
+        "scope": "질량이 일정하고 직선을 따라 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "단위 시간당 속도 변화량",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "일정한 힘은 일정한 가속도를 낳으므로 속도 변화가 들쭉날쭉해진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크기와 방향이 변하지 않는 알짜힘을 받아도 속도는 들쭉날쭉하게 변한다."
+    },
+    {
+      "id": "rel-ualm-slope",
+      "text": "시간을 가로축, 속도를 세로축에 둔 그래프가 기울기 일정한 직선이 되고 그 기울기가 가속도다.",
+      "form": {
+        "condition": "가속도가 일정한 구간을 그래프로 나타냈을 때",
+        "type": "classification",
+        "scope": "직선을 따라 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "시간·속도 그래프의 기울기",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "가속도",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 어느 요소가 어떤 양인지 짝지은 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ualm-area-v",
+      "text": "시간·속도 그래프에서 그래프와 시간축이 둘러싼 넓이는 그동안의 변위와 같다.",
+      "form": {
+        "condition": "속도의 부호가 바뀌지 않는 구간을 볼 때",
+        "type": "classification",
+        "scope": "직선을 따라 한 방향으로 움직이는 구간에 한정한다",
+        "antecedent": {
+          "quantity": "시간·속도 그래프의 넓이",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "변위",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 어떤 양인지 짝지은 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ualm-area-a",
+      "text": "시간·가속도 그래프 아래의 넓이는 그 시간 동안 일어난 속도 변화량과 같다.",
+      "form": {
+        "condition": "가속도를 시간에 대해 나타냈을 때",
+        "type": "classification",
+        "scope": "직선을 따라 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "시간·가속도 그래프의 넓이",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "속도 변화량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 무엇을 뜻하는지 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "속도가 일정하게 유지되는 운동을 등가속도 운동이라고 한다",
+      "why_wrong": "등가속도 운동은 속도가 아니라 가속도가 일정한 운동이다. 속도는 시간에 따라 꾸준히 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ualm-const-force"
+    },
+    {
+      "text": "가속도가 일정하면 물체의 속력은 반드시 점점 빨라진다",
+      "why_wrong": "가속도가 운동 방향과 반대이면 일정한 가속도로도 속력이 꾸준히 줄어 결국 멈춘다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ualm-slope"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-acceleration"
+    },
+    {
+      "type": "next",
+      "target": "phys-braking-distance"
+    },
+    {
+      "type": "next",
+      "target": "phys-work-energy-theorem",
+      "note": "등가속도 관계로 알짜힘이 한 일과 운동 에너지를 잇는다"
+    }
+  ],
+  "curriculum": [
+    "12물리01-02"
+  ],
+  "topic_id": "phys-1-1-02",
+  "pages": [
+    32,
+    48
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

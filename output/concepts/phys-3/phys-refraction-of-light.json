@@ -1,0 +1,128 @@
+{
+  "id": "phys-refraction-of-light",
+  "concept_key": "concept:refraction-of-light",
+  "registry_status": "new",
+  "term": "빛의 굴절",
+  "notation": {
+    "hanja": "屈折",
+    "hanja_gloss": "屈 굽을 굴 · 折 꺾을 절",
+    "english": "refraction of light",
+    "symbol_display": "n = c/v",
+    "symbol_plain": "n = c/v"
+  },
+  "definition": "서로 다른 두 매질의 경계를 비스듬히 지나는 빛에서 일어나는 진행 방향의 꺾임.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ref-cause",
+      "text": "매질이 바뀌면 빛의 속력이 달라지고, 그 때문에 경계면에서 진행 방향이 꺾인다.",
+      "form": {
+        "condition": "빛이 경계면에 비스듬히 들어갈 때",
+        "type": "causal",
+        "scope": "비스듬한 입사. 경계면에 수직으로 들어가면 속력만 바뀌고 방향은 그대로다"
+      },
+      "invertible": false,
+      "invertible_reason": "원인과 결과를 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ref-index",
+      "text": "굴절률이 큰 매질일수록 그 안에서 빛이 느리게 진행한다.",
+      "form": {
+        "condition": "같은 진동수의 빛을 여러 매질에서 견줄 때",
+        "type": "inverse",
+        "scope": "굴절률은 진공에서의 속력을 매질에서의 속력으로 나눈 값이다",
+        "antecedent": {
+          "quantity": "매질의 굴절률",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "매질 속 빛의 속력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "굴절률의 정의상 속력과 반비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "굴절률이 큰 매질일수록 그 안에서 빛이 빠르게 진행한다."
+    },
+    {
+      "id": "rel-ref-angle",
+      "text": "굴절률이 작은 매질에서 큰 매질로 들어가면 굴절각이 입사각보다 작다.",
+      "form": {
+        "condition": "빛이 경계면에 비스듬히 입사할 때",
+        "type": "conditional",
+        "scope": "두 매질의 굴절률을 견줄 수 있는 경우. 수직 입사는 제외한다"
+      },
+      "invertible": true,
+      "invertible_reason": "굴절률이 큰 쪽에서 각이 작아지므로 부등호를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "굴절률이 작은 매질에서 큰 매질로 들어가면 굴절각이 입사각보다 크다."
+    },
+    {
+      "id": "rel-ref-frequency",
+      "text": "매질이 바뀌어도 빛의 진동수는 그대로이고 속력과 파장이 함께 달라진다.",
+      "form": {
+        "condition": "빛이 한 매질에서 다른 매질로 넘어갈 때",
+        "type": "conditional",
+        "scope": "굴절하는 빛. 진동수는 빛을 낸 광원이 정한다"
+      },
+      "invertible": false,
+      "invertible_reason": "어느 양이 보존되는지를 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛이 물에서 공기로 나올 때 진동수가 달라져서 색이 바뀐다",
+      "why_wrong": "매질이 바뀌어도 진동수는 그대로여서 색은 변하지 않는다. 달라지는 것은 속력과 파장이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ref-frequency"
+    },
+    {
+      "text": "물속 물체가 실제보다 떠 보이는 것은 물이 물체를 밀어 올리기 때문이다",
+      "why_wrong": "물에서 나온 빛이 수면에서 꺾이는데 눈은 빛이 곧게 왔다고 여기므로, 물체가 더 얕은 곳에 있는 것처럼 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ref-cause"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-convex-lens"
+    },
+    {
+      "type": "next",
+      "target": "phys-ray-tracing"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-02",
+  "pages": [
+    146,
+    147
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

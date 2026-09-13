@@ -1,0 +1,110 @@
+{
+  "id": "phys-charging-of-capacitor",
+  "concept_key": "concept:charging-of-capacitor",
+  "registry_status": "new",
+  "term": "충전",
+  "notation": {
+    "hanja": "充電",
+    "english": "charging",
+    "hanja_gloss": "充 채울 충 · 電 번개 전"
+  },
+  "definition": "전원을 이어 축전기의 두 금속판에 서로 다른 종류의 전하를 모으는 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-charging-sign",
+      "text": "전원의 (+)극에 이어진 금속판은 양전하를, (-)극에 이어진 판은 음전하를 띠게 된다.",
+      "form": {
+        "condition": "축전기를 전원에 이어 스위치를 닫았을 때",
+        "type": "causal",
+        "scope": "전원에 이어진 평행판 축전기"
+      },
+      "invertible": true,
+      "invertible_reason": "전자가 옮겨 가는 쪽이 정해져 있어 극을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전원의 (+)극에 이어진 금속판이 음전하를, (-)극에 이어진 판이 양전하를 띤다."
+    },
+    {
+      "id": "rel-charging-until",
+      "text": "전하의 이동은 두 금속판 사이 전위차가 전원의 전압과 같아지는 순간 멈춘다.",
+      "form": {
+        "condition": "축전기를 전원에 이어 두었을 때",
+        "type": "conditional",
+        "scope": "저항이 함께 있는 충전 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "두 값이 같아지면 옮겨 갈 까닭이 사라지므로 계속 옮긴다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 금속판 사이 전위차가 전원의 전압과 같아진 뒤에도 전하는 계속 옮겨 간다."
+    },
+    {
+      "id": "rel-charging-energy",
+      "text": "충전이 진행되는 동안 전원이 한 일은 축전기에 전기 에너지로 쌓인다.",
+      "form": {
+        "condition": "전원이 전하를 옮기는 일을 하는 동안",
+        "type": "causal",
+        "scope": "충전 중인 축전기 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지가 옮겨 가는 과정을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "충전은 축전기 안에 없던 전하를 새로 만들어 넣는 것이다",
+      "why_wrong": "전원은 한쪽 판의 전자를 다른 쪽 판으로 옮길 뿐이다. 두 판의 전하량을 합하면 충전 전과 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-charging-sign"
+    },
+    {
+      "text": "충전이 끝난 축전기에서는 두 금속판 사이로 전하가 계속 건너다닌다",
+      "why_wrong": "두 판 사이는 이어져 있지 않아 전하가 건너가지 못한다. 전위차가 전원 전압과 같아지면 전류 자체가 멎는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-charging-until"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-potential-difference",
+      "note": "전원의 전압과 금속판 사이 전위차를 견준다"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-parallel-plate-capacitor"
+    },
+    {
+      "type": "next",
+      "target": "phys-discharging-of-capacitor"
+    },
+    {
+      "type": "next",
+      "target": "phys-charge-stored-in-capacitor"
+    }
+  ],
+  "curriculum": [
+    "12물리02-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-03",
+  "pages": [
+    99
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

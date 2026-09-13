@@ -1,0 +1,128 @@
+{
+  "id": "phys-electron-microscope",
+  "concept_key": "concept:electron-microscope",
+  "registry_status": "new",
+  "term": "전자 현미경",
+  "notation": {
+    "hanja": "電子顯微鏡",
+    "hanja_gloss": "電 번개 전 · 子 아들 자 · 顯 나타날 현 · 微 작을 미 · 鏡 거울 경",
+    "english": "electron microscope"
+  },
+  "definition": "가시광선 대신 파장이 훨씬 짧은 전자의 물질파를 써서 아주 작은 구조까지 또렷하게 보는 현미경.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-em-wavelength",
+      "text": "쓰는 파동의 파장이 짧을수록 회절이 덜해 더 작은 구조까지 구별할 수 있다.",
+      "form": {
+        "condition": "렌즈 성능 등 다른 조건이 같을 때",
+        "type": "inverse",
+        "scope": "회절이 분해능을 가르는 현미경",
+        "antecedent": {
+          "quantity": "이용하는 파동의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분해능",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 길수록 회절로 흐려지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "쓰는 파동의 파장이 짧을수록 회절이 심해져 큰 구조만 구별할 수 있다."
+    },
+    {
+      "id": "rel-em-speed",
+      "text": "전자를 더 빠르게 가속할수록 물질파 파장이 짧아져 더 작은 것까지 볼 수 있다.",
+      "form": {
+        "condition": "전자 현미경 안에서 전자를 가속할 때",
+        "type": "inverse",
+        "scope": "전자의 물질파를 쓰는 현미경",
+        "antecedent": {
+          "quantity": "전자의 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물질파의 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속력이 커지면 운동량이 커져 파장이 짧아지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자를 더 빠르게 가속할수록 물질파 파장이 길어져 큰 것만 볼 수 있다."
+    },
+    {
+      "id": "rel-em-compare",
+      "text": "파장이 수백 나노미터인 가시광선으로는 볼 수 없는 수 나노미터 구조도 전자 현미경으로는 볼 수 있다.",
+      "form": {
+        "condition": "가시광선과 전자의 물질파를 견줄 때",
+        "type": "classification",
+        "scope": "가시광선을 쓰는 광학 현미경과 전자의 물질파를 쓰는 전자 현미경의 비교",
+        "antecedent": {
+          "quantity": "이용하는 파동",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관찰 한계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 장치의 범위를 견주는 명제여서 뒤집을 방향이 분명하지 않다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자 현미경은 배율이 높아서 작은 것을 볼 수 있다",
+      "why_wrong": "배율만 올리면 흐려질 뿐이다. 전자 현미경이 유리한 까닭은 물질파의 파장이 짧기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-em-wavelength"
+    },
+    {
+      "text": "전자 현미경은 전자가 물체에 부딪혀 모양을 더듬는 장치다",
+      "why_wrong": "전자의 파동성을 이용해 상을 만드는 장치여서, 파장이 짧을수록 분해능이 좋아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-em-speed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-matter-wave"
+    },
+    {
+      "type": "related",
+      "target": "phys-wave-particle-duality-of-matter",
+      "note": "키 concept:electron-microscope 를 cell-electron-microscope 가 이미 쓰고 있으나 사전 미등재라 same 링크를 걸지 않았다. G3 제안으로만 남긴다."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-03",
+  "pages": [
+    159,
+    160
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

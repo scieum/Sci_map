@@ -1,0 +1,141 @@
+{
+  "id": "phys-electric-power-consumption",
+  "concept_key": "concept:electric-power-consumption",
+  "registry_status": "new",
+  "term": "소비 전력",
+  "notation": {
+    "hanja": "消費電力",
+    "english": "power consumption",
+    "hanja_gloss": "消 사라질 소 · 費 쓸 비 · 電 번개 전 · 力 힘 력",
+    "symbol_display": "P",
+    "symbol_plain": "P"
+  },
+  "definition": "저항에서 1초 동안 쓰이는 전기 에너지의 양. 전압과 전류의 곱으로 구하고 단위는 W(와트)다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-power-vi",
+      "text": "저항에 걸린 전압이 같다면 흐르는 전류가 셀수록 그 저항의 소비 전력이 크다.",
+      "form": {
+        "condition": "저항에 걸린 전압이 일정할 때",
+        "type": "direct",
+        "scope": "전기 에너지를 빛과 열로 바꾸는 저항",
+        "antecedent": {
+          "quantity": "저항에 흐르는 전류",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "소비 전력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전압과 전류의 곱이므로 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "저항에 걸린 전압이 같다면 전류가 셀수록 소비 전력이 작아진다."
+    },
+    {
+      "id": "rel-power-resistance",
+      "text": "저항 양끝의 전압이 고정되어 있다면 저항값이 작은 쪽이 전력을 더 많이 쓴다.",
+      "form": {
+        "condition": "저항 양끝의 전압이 일정할 때",
+        "type": "inverse",
+        "scope": "전원에 곧바로 이어졌거나 병렬 가지에 놓여 저항마다 같은 전압이 걸리는 배치",
+        "antecedent": {
+          "quantity": "저항값",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "소비 전력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전압이 고정되면 저항이 작을수록 전력이 크므로 반대로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "저항 양끝의 전압이 고정되어 있으면 저항값이 큰 쪽이 전력을 더 많이 쓴다."
+    },
+    {
+      "id": "rel-power-heat",
+      "text": "소비 전력이 큰 기구일수록 같은 시간 동안 더 많은 전기 에너지를 빛과 열로 내보낸다.",
+      "form": {
+        "condition": "기구를 쓰는 시간이 같을 때",
+        "type": "direct",
+        "scope": "전기 에너지를 소비하는 전기 기구",
+        "antecedent": {
+          "quantity": "소비 전력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "같은 시간에 소비한 전기 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "1초당 쓰는 에너지가 크면 총량도 크므로 적다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소비 전력이 큰 기구일수록 같은 시간 동안 내보내는 에너지가 적다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "저항값이 클수록 소비 전력은 언제나 크다",
+      "why_wrong": "전류가 고정된 직렬 회로에서는 저항이 큰 쪽이 더 많이 쓰지만, 전압이 고정된 병렬 회로에서는 저항이 작은 쪽이 더 많이 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-power-resistance"
+    },
+    {
+      "text": "소비 전력은 전기 기구가 쓴 전기 에너지의 총량이다",
+      "why_wrong": "소비 전력은 1초 동안 쓰는 에너지다. 총량을 알려면 소비 전력에 사용한 시간을 곱해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-power-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-current"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-ohm-law"
+    },
+    {
+      "type": "next",
+      "target": "phys-series-connection-of-resistor"
+    },
+    {
+      "type": "next",
+      "target": "phys-parallel-connection-of-resistor"
+    },
+    {
+      "type": "next",
+      "target": "phys-electrical-safety"
+    }
+  ],
+  "curriculum": [
+    "12물리02-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-02",
+  "pages": [
+    90,
+    91
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

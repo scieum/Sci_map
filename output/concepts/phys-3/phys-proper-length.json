@@ -1,0 +1,97 @@
+{
+  "id": "phys-proper-length",
+  "concept_key": "concept:proper-length",
+  "registry_status": "new",
+  "term": "고유 길이",
+  "notation": {
+    "hanja": "固有",
+    "hanja_gloss": "固 굳을 고 · 有 있을 유",
+    "english": "proper length",
+    "symbol_display": "L₀",
+    "symbol_plain": "L0"
+  },
+  "definition": "재려는 물체가 정지해 있는 것으로 보이는 관성계에서 잰 그 물체의 길이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pl-nottogether",
+      "text": "막대의 고유 길이를 재는 관찰자에게는 두 끝을 지나는 사건이 다른 자리에서 일어나 그가 잰 시간은 고유 시간이 아니다.",
+      "form": {
+        "condition": "막대는 정지해 있고 우주선이 그 곁을 지나는 상황을 볼 때",
+        "type": "conditional",
+        "scope": "고유 길이와 고유 시간을 한 관성계에서 함께 잴 수 없는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "어느 측정이 고유량인지 가리는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pl-longest",
+      "text": "같은 물체를 여러 관성계에서 재면 고유 길이가 가장 길다.",
+      "form": {
+        "condition": "같은 물체를 여러 관성계에서 잴 때",
+        "type": "classification",
+        "scope": "운동 방향에 나란한 길이의 비교",
+        "antecedent": {
+          "quantity": "측정하는 관성계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "길이 측정값",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가장 길다를 가장 짧다로 바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 물체를 여러 관성계에서 재면 고유 길이가 가장 짧다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고유 길이를 잰 관찰자는 시간도 고유 시간으로 잰다",
+      "why_wrong": "막대가 정지한 계에서는 두 끝을 지나는 사건이 서로 다른 자리에서 일어나므로 그 시간은 고유 시간이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pl-nottogether"
+    },
+    {
+      "text": "고유 시간이 가장 짧으니 고유 길이도 가장 짧다",
+      "why_wrong": "시간은 고유 시간이 가장 짧지만 길이는 고유 길이가 가장 길다. 두 양이 반대로 움직인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pl-longest"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-length-contraction"
+    },
+    {
+      "type": "related",
+      "target": "phys-proper-time"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-03",
+  "pages": [
+    190,
+    191
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,133 @@
+{
+  "id": "phys-braking-distance",
+  "concept_key": "concept:braking-distance",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "제동 거리",
+  "notation": {
+    "hanja": "制動 距離",
+    "hanja_gloss": "制 억제할 제 · 動 움직일 동 · 距 떨어질 거 · 離 떠날 리",
+    "english": "braking distance"
+  },
+  "definition": "브레이크가 걸리기 시작한 순간부터 자동차가 완전히 설 때까지 나아간 거리. 처음 속력과 감속의 정도가 이를 정한다.",
+  "relations": [
+    {
+      "id": "rel-bd-speed2",
+      "text": "질량과 제동력이 같은 자동차끼리 견주면 처음 속력이 두 배인 쪽의 제동 거리가 네 배가 된다.",
+      "form": {
+        "condition": "견주는 두 자동차의 질량이 같고 제동하는 동안 알짜힘의 크기도 같을 때",
+        "type": "direct",
+        "scope": "같은 노면에서 등가속도로 감속해 멈추는 직선 운동에 한정한다",
+        "antecedent": {
+          "quantity": "처음 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "제동 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 질량과 제동력을 붙박아 두면 제동 거리는 처음 속력의 제곱에 비례하므로 두 배라고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량과 제동력이 같은 자동차끼리 견주면 처음 속력이 두 배인 쪽의 제동 거리도 두 배가 된다."
+    },
+    {
+      "id": "rel-bd-accel",
+      "text": "처음 속력이 같을 때 빗길처럼 감속의 크기가 절반으로 줄면 제동 거리는 두 배로 길어진다.",
+      "form": {
+        "condition": "브레이크를 밟기 직전의 속력이 같을 때",
+        "type": "inverse",
+        "scope": "등가속도로 감속해 멈추는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "가속도의 크기",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "제동 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "감속의 크기와 제동 거리는 반비례하므로 감속이 작을수록 짧아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "처음 속력이 같을 때 감속의 크기가 절반으로 줄면 제동 거리는 절반이 된다."
+    },
+    {
+      "id": "rel-bd-mass",
+      "text": "브레이크가 주는 힘이 같다면 짐을 실어 질량이 커진 차일수록 멈출 때까지 더 멀리 간다.",
+      "form": {
+        "condition": "제동하는 힘의 크기와 처음 속력이 같을 때",
+        "type": "direct",
+        "scope": "같은 노면에서 등가속도로 감속하는 자동차에 한정한다",
+        "antecedent": {
+          "quantity": "자동차의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "제동 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량이 크면 가속도가 작아져 더 멀리 가므로 짧아진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "브레이크가 주는 힘이 같다면 질량이 큰 차일수록 제동 거리가 짧아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "같은 차라도 속력을 두 배로 올리면 제동 거리는 두 배가 된다",
+      "why_wrong": "질량과 제동력이 그대로여도 제동 거리는 속력의 제곱에 비례한다. 속력이 두 배면 네 배의 거리를 달린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bd-speed2"
+    },
+    {
+      "text": "빗길에서도 브레이크만 세게 밟으면 제동 거리는 마른 길과 같다",
+      "why_wrong": "젖은 노면에서는 마찰이 줄어 감속의 크기가 작아지므로 같은 속력이라도 더 멀리 미끄러진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bd-accel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-uniformly-accelerated-linear-motion"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-newton-second-law"
+    },
+    {
+      "type": "related",
+      "target": "phys-impulse-momentum-relation"
+    }
+  ],
+  "curriculum": [
+    "12물리01-02"
+  ],
+  "topic_id": "phys-1-1-02",
+  "pages": [
+    34,
+    35
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

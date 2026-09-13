@@ -1,0 +1,106 @@
+{
+  "id": "phys-ray-tracing",
+  "concept_key": "concept:ray-tracing",
+  "registry_status": "new",
+  "term": "광선 추적법",
+  "notation": {
+    "hanja": "光線 追跡法",
+    "hanja_gloss": "光 빛 광 · 線 줄 선 · 追 쫓을 추 · 跡 자취 적 · 法 법 법",
+    "english": "ray tracing"
+  },
+  "definition": "반사와 굴절의 규칙에 따라 빛이 지나는 길을 따라 그려서 상의 위치와 크기를 알아내는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ray-three",
+      "text": "볼록 렌즈에서는 광축에 나란한 광선, 초점을 지나는 광선, 렌즈 중심을 지나는 광선으로 상을 찾는다.",
+      "form": {
+        "condition": "얇은 볼록 렌즈로 상을 작도할 때",
+        "type": "conditional",
+        "scope": "렌즈가 얇고 광축에 가까운 광선만 다루는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "작도 절차를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ray-center",
+      "text": "렌즈 중심을 지나는 광선은 꺾이지 않고 그대로 곧게 나아간다고 본다.",
+      "form": {
+        "condition": "렌즈가 충분히 얇다고 볼 때",
+        "type": "conditional",
+        "scope": "얇은 렌즈 근사. 두꺼운 렌즈에서는 어긋난다"
+      },
+      "invertible": false,
+      "invertible_reason": "근사 규칙을 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ray-thin",
+      "text": "두 번 일어나는 굴절을 렌즈 중심에서 한 번 꺾이는 것으로 줄여 그려도 된다.",
+      "form": {
+        "condition": "렌즈의 두께를 무시할 수 있을 때",
+        "type": "conditional",
+        "scope": "얇은 렌즈 가정이 성립하는 범위 안에서만"
+      },
+      "invertible": false,
+      "invertible_reason": "가정의 내용을 말하는 명제여서 방향이 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상을 작도할 때 쓰는 세 광선만 물체에서 나온다",
+      "why_wrong": "물체에서는 사방으로 무수히 많은 광선이 나오고, 그중 경로를 알기 쉬운 셋을 골라 그리는 것뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ray-three"
+    },
+    {
+      "text": "렌즈 중심을 지나는 빛도 크게 꺾인다",
+      "why_wrong": "렌즈가 얇다고 보면 중심을 지나는 광선은 거의 꺾이지 않고 직진한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ray-center"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-optical-image"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-refraction-of-light"
+    },
+    {
+      "type": "next",
+      "target": "phys-real-and-virtual-image"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-02",
+  "pages": [
+    146,
+    148,
+    149
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "id": "phys-potential-difference",
+  "concept_key": "concept:potential-difference",
+  "registry_status": "new",
+  "homonym_flag": true,
+  "term": "전위차",
+  "aliases": [
+    "전압"
+  ],
+  "notation": {
+    "hanja": "電位差",
+    "english": "potential difference",
+    "hanja_gloss": "電 번개 전 · 位 자리 위 · 差 다를 차",
+    "symbol_display": "V",
+    "symbol_plain": "V"
+  },
+  "definition": "전기장 안 두 점의 전위가 얼마나 벌어져 있는지를 나타낸 값. 회로에서는 흔히 전압이라 부른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pd-two-points",
+      "text": "전위차는 두 점을 짝지어야 값이 나오며, 한 점만 집어서는 정해지지 않는다.",
+      "form": {
+        "condition": "회로나 전기장의 한 지점을 볼 때",
+        "type": "conditional",
+        "scope": "기준점을 따로 정하지 않은 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "두 점의 차로 정의되므로 한 점만으로 정해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전위차는 회로의 한 점마다 정해져 있는 값이다."
+    },
+    {
+      "id": "rel-pd-current",
+      "text": "저항값이 그대로일 때 걸어 준 전위차가 클수록 회로에 흐르는 전류가 세다.",
+      "form": {
+        "condition": "저항값이 일정할 때",
+        "type": "direct",
+        "scope": "옴의 법칙이 성립하는 전기 회로",
+        "antecedent": {
+          "quantity": "전위차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전위차와 전류는 함께 커지므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "저항값이 일정할 때 전위차가 클수록 회로에 흐르는 전류는 약해진다."
+    },
+    {
+      "id": "rel-pd-energy",
+      "text": "1 V의 전위차가 있는 두 점 사이를 1 C의 전하가 옮겨 갈 때 주고받는 에너지는 1 J이다.",
+      "form": {
+        "condition": "전하가 두 점 사이를 옮겨 갈 때",
+        "type": "conditional",
+        "scope": "전위차가 유지되는 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "단위의 뜻을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전압은 회로의 한 점에 정해져 있는 값이다",
+      "why_wrong": "전압은 두 점 사이 전위의 차이다. 어디를 기준으로 삼았는지 밝히지 않으면 값이 정해지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pd-two-points"
+    },
+    {
+      "text": "전지를 회로에 연결하지 않으면 두 극 사이에는 전위차가 없다",
+      "why_wrong": "전지는 연결 여부와 상관없이 두 극 사이에 전위차를 유지한다. 연결하면 그 전위차 때문에 전류가 흐르기 시작한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pd-current"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-potential"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-charging-of-capacitor",
+      "note": "전원의 전압과 금속판 사이 전위차를 견준다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    87,
+    90
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

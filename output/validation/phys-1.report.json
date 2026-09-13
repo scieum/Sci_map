@@ -1,0 +1,549 @@
+{
+  "unit_id": "phys-1",
+  "generated_at": "2026-09-13T00:00:00+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 35,
+    "standards_in_scope": [
+      {
+        "code": "12물리01-01",
+        "text": "물체에 작용하는 알짜힘과 돌림힘이 0일 때 평형을 이룸을 알고, 다양한 구조물의 안정성을 분석할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리01-02",
+        "text": "뉴턴 운동 법칙으로 등가속도 운동을 설명하고, 교통안전 사고 예방에 적용할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리01-03",
+        "text": "작용과 반작용 관계와 운동량 보존 법칙을 알고, 스포츠, 교통수단, 발사체 등에 적용할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리01-04",
+        "text": "일과 운동 에너지의 관계를 이해하고, 위치 에너지와 역학적 에너지 보존 법칙을 설명할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리01-05",
+        "text": "역학적 에너지가 열의 형태로 전환될 때 에너지 총량이 변하지 않음을 설명할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리01-06",
+        "text": "열이 역학적 에너지로 전환되는 과정의 효율을 정성적으로 이해하고, 영구기관이 불가능함을 사례를 통해 논증할 수 있다.",
+        "crosscheck": "일치"
+      }
+    ],
+    "topic_to_standard": {
+      "phys-1-1-01": "12물리01-01",
+      "phys-1-1-02": "12물리01-02",
+      "phys-1-1-03": "12물리01-03",
+      "phys-1-1-04": "12물리01-03",
+      "phys-1-2-01": "12물리01-04",
+      "phys-1-2-02": "12물리01-05",
+      "phys-1-2-03": "12물리01-06"
+    },
+    "topic_to_standard_basis": "추정이 아니라 교과서가 소단원 첫 쪽에 성취기준을 쪼개 찍어 둔 것을 그대로 옮겼다. 22쪽('물체에 작용하는 알짜힘과 돌림힘이 0일 때 평형을 이룸을 설명할 수 있다' + '다양한 구조물의 안정성을 분석할 수 있다') = 01-01, 30쪽('뉴턴 운동 법칙으로 등가속도 운동을 설명할 수 있다' + '교통안전 사고 예방에 적용') = 01-02, 36쪽('작용과 반작용 관계를 알고 스포츠, 교통수단, 발사체 등에 적용') 과 40쪽('운동량 보존 법칙을 알고, 스포츠, 교통수단, 발사체 등에 적용') 이 01-03 을 앞뒤로 나눠 가진다. 52쪽('일과 운동 에너지의 관계' + '위치 에너지와 역학적 에너지 보존 법칙') = 01-04, 60쪽('역학적 에너지가 열의 형태로 전환됨' + '에너지 총량이 변하지 않음') = 01-05, 66쪽('열이 역학적 에너지로 전환되는 과정의 효율' + '영구 기관이 불가능함을 사례를 통해 논증') = 01-06. 35장 전부 이 대응대로 태그가 붙어 있고 어긋난 카드가 없다.",
+    "findings": [
+      {
+        "card_id": "phys-heat-transfer",
+        "verdict": "out_of_scope",
+        "current": [
+          "12물리01-05"
+        ],
+        "suggested": [],
+        "reason": "카드가 세우는 것은 전도·대류·복사 세 가지 열전달 방식이다(rel-ht-conduction·rel-ht-convection·rel-ht-radiation). 이 소단원(phys-1-2-02)이 60쪽에 찍어 둔 성취기준은 '역학적 에너지가 열의 형태로 전환됨을 설명할 수 있다' 와 '에너지 전환 과정에서 에너지의 총량이 변하지 않음을 설명할 수 있다' 둘뿐이고, 열이 '어떤 길로' 옮겨 가는지는 두 문장 어디에도 없다. 01-01~01-06 여섯 문장 전체를 훑어도 열의 이동 방식을 요구하는 자리가 없다. 붙어 있는 01-05 는 이 카드가 실제로 받치는 성취기준이 아니라 같은 소단원의 코드다. 반대 근거를 함께 적는다 — 64쪽은 role 이 body 이고(읽기 자료·곁주가 아니다) 72쪽 중단원 마무리 '핵심 개념 정리하기' 6번에 '열전달 방식에는 전도, 대류, 복사가 있다' 로 실려 있다. 곧 교과서 저자는 이 내용을 01-05 소단원의 본문 개념으로 다루지만, 성취기준 문장은 그것을 요구하지 않는다. 어느 쪽을 따를지는 사람이 정할 일이라 태그를 억지로 맞추지 않고 이탈로 올린다. 카드 스스로 role 을 context 로 적어 둔 것도 같은 사정으로 읽힌다.",
+        "prerequisites": [
+          "concept:heat-budget",
+          "concept:radiative-equilibrium"
+        ]
+      },
+      {
+        "card_id": "phys-latent-heat",
+        "verdict": "out_of_scope",
+        "current": [
+          "12물리01-05"
+        ],
+        "suggested": [],
+        "reason": "카드가 세우는 것은 상태 변화 중 열이 드나들어도 온도가 오르지 않는다는 것(rel-lh-temp), 그 열이 입자 사이 인력을 끊는 데 쓰인다는 것(rel-lh-bond), 가열 곡선의 평평한 구간이 그 구간이라는 것(rel-lh-graph)이다. 셋 다 '역학적 에너지 → 열' 전환도 '총량 불변' 도 아니다. 01-05 의 두 문장은 물론 01-01~01-06 어디에도 상태 변화와 잠열을 요구하는 자리가 없다. 65쪽 본문이고 72쪽 마무리 7번('잠열: 물질의 상태 변화가 일어날 때 출입하는 열에너지이다')에 실려 있다는 반대 근거는 phys-heat-transfer 와 같다. 덧붙여 65쪽 잠열 대목은 곁주 '알고 있니?'(대기와 해수의 순환)와 그림 I-43 설명(태풍·기상 현상)으로 통합과학2 기상 쪽으로 뻗어 있어, 이 카드가 받치는 성취기준을 물리학 01 영역에서 찾기가 더 어렵다.",
+        "prerequisites": []
+      }
+    ],
+    "prerequisites_outside_unit": [
+      {
+        "card_id": "phys-momentum",
+        "keys": [
+          "concept:momentum"
+        ],
+        "note": "40쪽 곁주가 '연계 학습 • 통합과학1 / 운동량 / 충격량' 으로 이 둘을 선수 학습으로 못박아 두었다. 같은 키를 쓰는 카드가 이미 있다 — isci1-momentum(10통과1-03-04). 범위 이탈은 아니다. 12물리01-03 이 운동량 보존 법칙을 이름으로 요구하므로 물리학에서 다시 세우는 것이 맞다."
+      },
+      {
+        "card_id": "phys-impulse",
+        "keys": [
+          "concept:impulse"
+        ],
+        "note": "isci1-impulse(10통과1-03-04)와 같은 키다. 40쪽 연계 학습 곁주 대상. 12물리01-03 의 문장에 '충격량' 은 없지만, 교과서는 40~41쪽에서 F=Δp/Δt → I=FΔt=Δp 로 충격량을 거쳐 운동량 보존으로 간다. 성취기준이 이름으로 요구하는 운동량 보존에 이르는 본문 경로라 이탈로 보지 않았다 — 열전달·잠열과 갈린 지점이 여기다."
+      },
+      {
+        "card_id": "phys-impulse-momentum-relation",
+        "keys": [
+          "concept:impulse-momentum-relation",
+          "concept:collision-safety-device"
+        ],
+        "note": "isci1-impulse-momentum-relation·isci1-collision-safety-device(10통과1-03-04 '충격량과 운동량의 관계를 충돌 관련 안전장치와 스포츠에 적용')와 정면으로 겹친다. 특히 rel-imr-airbag(에어백·범퍼)은 통합과학1 성취기준이 이름으로 든 사례이고, 12물리 쪽에서는 01-02 가 '교통안전 사고 예방' 을 든다. 01-03 을 01-02 로 바꾸자는 것이 아니다 — 이 카드는 40~46쪽 '운동량 보존' 소단원 소속이고 41쪽 본문이 근거라 01-03 이 맞다. 다만 D 파이프라인에서 통합과학1 카드와 문항이 겹칠 자리라 적어 둔다."
+      },
+      {
+        "card_id": "phys-energy-conservation-law",
+        "keys": [
+          "concept:energy-conservation-law",
+          "concept:energy-conversion"
+        ],
+        "note": "isci2-energy-conservation-law·isci2-energy-conversion(10통과2-02-06·02-04)과 같은 키다. 12물리01-05 가 '에너지 총량이 변하지 않음' 을 이름으로 요구하므로 범위 안이다. 카드에 same 링크가 없다 — G 파이프라인에서 concept_key 로 걸 자리다."
+      },
+      {
+        "card_id": "phys-thermal-efficiency",
+        "keys": [
+          "concept:thermal-efficiency",
+          "concept:energy-efficiency"
+        ],
+        "note": "isci2-thermal-efficiency·isci2-energy-efficiency(10통과2-02-06)와 같은 키다. 12물리01-06 이 '효율을 정성적으로 이해' 를 이름으로 요구하므로 범위 안이다. 통합과학2 는 신재생·지속가능 쪽에서, 물리학은 68쪽 열기관 W/Q1 쪽에서 다뤄 초점이 다르다. same 링크가 없다."
+      },
+      {
+        "card_id": "phys-internal-energy",
+        "keys": [
+          "concept:internal-energy"
+        ],
+        "note": "유일하게 registry_status 가 reused 인 카드다. concept_registry.yaml 에 concept:internal-energy 가 이미 있고 cards 에 mate-internal-energy(12물에03-03)가 걸려 있다. 카드도 same 링크를 이미 달아 두었다. 물리학 63쪽은 입자의 무작위 운동 총합으로, 물질과 에너지 쪽은 열역학 계·엔트로피 맥락으로 세운다 — 같은 키를 두 과목이 다른 결로 쓰는 자리라 G3 에서 봐야 한다."
+      },
+      {
+        "card_id": "phys-gravitational-potential-energy",
+        "keys": [
+          "concept:free-fall-motion",
+          "concept:gravitational-acceleration"
+        ],
+        "note": "54쪽 곁주가 '연계 학습 • 중학교 과학3 / 자유 낙하 운동 / 중력 가속도 g' 다. 우리 말뭉치에서 중학교 카드는 없고 같은 키를 isci1-free-fall-motion·isci1-gravitational-acceleration(10통과1-03-03)이 들고 있다."
+      },
+      {
+        "card_id": "phys-work",
+        "keys": [],
+        "note": "53쪽 곁주가 '연계 학습 • 중학교 과학3 / 일 W=Fs / 운동 에너지 Ek=1/2 mv²' 다. 중학교 과정이라 걸 concept_key 가 우리 말뭉치에 없다. 선수 개념이 있다는 사실만 적는다 — 없는 키를 지어내지 않았다."
+      },
+      {
+        "card_id": "phys-force-interaction",
+        "keys": [],
+        "note": "36쪽 '연계 학습 • 중학교 과학1 / 힘', 39쪽 '연계 학습 • 통합과학1 / 힘의 작용(전기력·자기력)' 이 붙어 있다. 39쪽 곁주가 받치는 rel-fi-noncontact(닿지 않아도 힘을 주고받는다)는 통합과학1 쪽 내용이지만, 물리학 36~39쪽 본문이 작용 반작용(01-03)을 세우는 데 쓰는 전제라 범위 안으로 보았다. 통합과학1 쪽에 대응하는 개념 카드가 isci1-3 에 없어 걸 키를 찾지 못했다."
+      }
+    ],
+    "stats": {
+      "ok": 33,
+      "retag": 0,
+      "out_of_scope": 2,
+      "uncertain": 0
+    }
+  },
+  "notes": [
+    "검사 모드 curriculum(C5)만 돌렸다. relations 절(C6)은 이 보고서에 없다 — 아직 돌지 않았다는 뜻이지 통과했다는 뜻이 아니다. 나중에 relation 모드가 돌면 이 파일의 curriculum 절을 그대로 두고 relations 절만 더해야 한다.",
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 output/concepts/phys-1 에 --unit phys-1 로 돌렸다. 결과는 '카드 35장 검사 / 통과' 로 지적이 없다. 곧 태그 0개인 카드 없음, 실재하지 않는 코드 없음, crosscheck 가 일치가 아닌 코드 없음(12물리 18건 전부 일치), 영역 01 밖 코드 없음이다. 이 넷은 다시 보지 않았다. 처음에 대상 경로를 output/concepts/ 로 주었더니 그 디렉터리의 *.candidates.json 30개를 카드로 읽어 '태그가 없다' 를 30건 뱉었다 — 스크립트는 하위 디렉터리를 훑지 않는다. 단원 디렉터리를 직접 주어야 한다.",
+    "스크립트가 보지 않는 자리를 따로 확인했다. 명제 103개 전부 curriculum 필드를 갖고 있고, 쓰인 코드가 모두 standards.yaml 에 실재하며, 명제 태그가 소속 카드의 태그와 한 건도 어긋나지 않는다. 곧 태그 누락은 카드 0건·명제 0건이다.",
+    "카드 두 장 이상이 한 코드를 나눠 가지는 것은 정상이다. 다만 phys-action-reaction-vs-force-balance 한 장만 코드를 둘(12물리01-03 + 12물리01-01) 달고 있다. 이탈로 보지 않았다 — 39쪽 본문 소속이라 01-03 이 주 태그이고, 카드가 실제로 가르치는 것이 '한 물체에 걸리면 평형' 이라는 판별이라 01-01 의 '알짜힘과 돌림힘이 0일 때 평형을 이룸을 설명할 수 있다' 를 곧바로 받친다. 같은 단원 코드를 덤으로 붙인 경우와는 다르다고 보았다.",
+    "물리학 성취기준 18건은 standards.yaml 에서 전부 crosscheck: 일치다. 이 단원이 쓰는 01 영역 6건도 모두 일치라 '사람이 확정할 때까지 못 쓰는 코드' 때문에 uncertain 으로 올린 카드는 없다.",
+    "phys-facts 같은 <track>-facts 스킬이 없다. .claude/skills 아래에 -facts 로 끝나는 스킬이 하나도 없어 물리 사실 대조는 통째로 건너뛰었다. C5 판정은 성취기준 문장과 교과서 본문만으로 내렸다.",
+    "선수 과목 겹침 다섯(운동량·충격량·에너지 보존 법칙·열효율·내부 에너지)은 전부 12물리01-03·01-05·01-06 이 이름으로 요구하는 개념이라 이 과목 범위 안이다. 통합과학1 isci1-3 · 통합과학2 isci2-2 · 물질과 에너지 mate-3 에 같은 concept_key 를 쓰는 카드가 이미 있다는 사실만 prerequisites_outside_unit 에 적었다.",
+    "registry_status 에 어긋남이 하나 보인다. concept:momentum · concept:impulse · concept:impulse-momentum-relation · concept:energy-conservation-law · concept:thermal-efficiency 는 phys-1 카드에서 new 로 적혀 있는데, 같은 키를 isci1-3 · isci2-2 카드가 이미 쓰고 있다(그쪽도 new 다). concept_registry.yaml 에 아직 없는 키라 new 자체가 틀린 것은 아니지만, G3 에서 한 키에 카드가 둘씩 몰린다. 반대로 concept:internal-energy 는 사전에 있는 키인데 mate-internal-energy 가 new 로 적혀 있고 phys-internal-energy 만 reused 다. 사전은 읽기만 했고 고치지 않았다 — G3 사람 게이트 몫이다.",
+    "verified_by 는 어느 카드·명제·오개념에서도 건드리지 않았다. 카드 파일 35장과 사전 세 개(concept_registry.yaml·homonyms.yaml·misconceptions.yaml) 모두 이 검사에서 수정하지 않았다.",
+    "[C6] verified_by 는 명제 103개·오개념 70개 어디에서도 읽기만 했다. 전부 pending 이고 이 보고서는 그 필드를 바꾸지 않았다. 카드 파일도 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 고치지 않았다.",
+    "[C6] <track>-facts 스킬 대조를 건너뛰었다. .claude/skills 에 phys-facts 가 없다(concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯뿐). 수치·상수 대조가 필요한 rel-n2-unit(1 N 의 정의) 같은 자리는 대조하지 못했고 형식만 보았다.",
+    "[C6] ② 의 큰 줄기: invertible: true 47건 가운데 뒤집은 문장이 참일 수 있는 것(학생에게 오개념을 심는 쪽)은 찾지 못했다. C2 의 기준('곱·비례로 정의된 양과 방향이 하나로 정해진 명제만 true')은 true 쪽에서는 일관되게 지켜졌다. 문제는 그 기준이 좁다는 데 있다 — 불가능을 밝힌 명제(rel-pmm-energy 등), 두 이름을 맞바꾸는 분류 명제(rel-heat-vs-work 등), 방향을 짝지은 명제(rel-imp-direction 등)는 뒤집으면 반드시 거짓인데도 기준에 들지 못해 false 로 내려갔다. 지적 22건 가운데 12건이 이 한 갈래다.",
+    "[C6] 진위를 확정한 대목은 없다. rel-bd-mass 는 진위 판단이 걸려 uncertain 으로 올렸다 — C8 검토 항목이다.",
+    "[C6] ①(제곱 비례 명제의 scope): rel-epe-kx 는 '탄성을 잃지 않는 범위' 가 scope 에 서 있어 문제가 없고, rel-bd-speed2 는 질량 한정이 빠져 있다. 운동 에너지의 제곱 비례는 명제 자리가 아예 없고 오개념(rel-wet-equal 에 걸린 것)만 떠 있다.",
+    "[C6] ①(보존 법칙의 condition·scope): rel-mecl-const·rel-mecl-exchange·rel-mecl-spring 셋 모두 '마찰과 공기 저항' 한정이 본문과 condition 에 함께 서 있다. rel-mcl-collision·rel-mcl-explosion 은 '밖에서 걸리는 힘이 없을 때', rel-ecl-total 은 '주위까지 넣어 살펴본 경우' 로 닫혀 있다. 보존 법칙 쪽에서는 과일반화를 찾지 못했다."
+  ],
+  "relations": {
+    "checked": 103,
+    "cards_checked": 35,
+    "invertible_true_count": 47,
+    "misconceptions_checked": 70,
+    "findings": [
+      {
+        "card_id": "phys-action-reaction-law",
+        "relation_id": "rel-ar-magnitude",
+        "verdict": "defect",
+        "checks": [
+          2,
+          4
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] 명제는 '주고받는 두 힘은 크기가 서로 같고 방향이 정반대다'. 뒤집어 '크기가 같고 방향도 같다' 또는 '크기가 서로 다르다' 로 읽으면 작용 반작용 관계인 두 힘에 대해 반드시 거짓이다. invertible_reason 은 '두 힘의 관계를 규정한 명제라 뒤집을 방향이 따로 없다' 고 적었는데, ② 의 기준은 뒤집을 방향이 있느냐가 아니라 뒤집은 문장이 반드시 거짓이 되느냐다. [4] 이 명제에 걸린 오개념 둘 가운데 '작용이 먼저 생기고 반작용은 그 뒤에 따라 생긴다' 는 명제가 말하지 않은 동시성을 다툰다. 명제 본문·condition·scope 어디에도 두 힘이 동시에 생긴다는 말이 없어 이 오개념은 명제의 반대편이 아니라 법칙 일반에 대한 오해다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다. 오개념 재배치가 필요한 곳은 reason 에 적은 자리다."
+      },
+      {
+        "card_id": "phys-action-reaction-vs-force-balance",
+        "relation_id": "rel-arfb-object",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] 명제는 두 이름을 가르는 분류형이다. 뒤집어 '한 물체에 걸리면 작용 반작용, 다른 두 물체에 나뉘어 걸리면 힘의 평형' 으로 읽으면 반드시 거짓이 된다. 같은 카드의 rel-arfb-sum 은 구조가 똑같은 이름 맞바꿈인데 invertible: true 다 — 한 카드 안에서 같은 형식에 서로 다른 판정이 붙었다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-impulse",
+        "relation_id": "rel-imp-direction",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '충격량의 방향은 힘의 방향과 같다' 를 뒤집어 '반대다' 로 읽으면 condition('작용하는 힘의 방향이 일정할 때') 안에서 반드시 거짓이다. 방향이 하나로 정해지는 명제라 C2 자신의 기준('방향이 하나로 정해진 명제')에도 들어맞는데 false 로 내려 있다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-momentum",
+        "relation_id": "rel-mom-direction",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '운동량의 방향은 속도의 방향과 같다' 를 뒤집어 '반대다' 로 읽으면 scope('질량이 양수인 물체') 안에서 반드시 거짓이다. 같은 카드의 오개념 '운동량은 방향이 없는 양이다' 가 이미 이 자리를 겨누고 있어 뒤집은 지문의 값이 크다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-internal-energy",
+        "relation_id": "rel-ie-distinct",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '물체 전체가 함께 움직이며 갖는 운동 에너지는 내부 에너지에 들어가지 않는다' 를 뒤집어 '들어간다' 로 읽으면 반드시 거짓이다. 이 명제에 걸린 오개념 '빠르게 달리는 물체일수록 내부 에너지가 크다' 가 뒤집은 문장과 정확히 같은 자리에 서 있다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-perpetual-motion-machine",
+        "relation_id": "rel-pmm-energy",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '에너지를 공급받지 않고 계속 일을 내놓는 장치는 만들 수 없다' 를 뒤집어 '만들 수 있다' 로 읽으면 반드시 거짓이다. 불가능을 밝힌 명제는 가능을 주장하는 문장으로 뒤집히며, 그것이 이 단원에서 가장 곧바로 쓸 수 있는 OX 지문이다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-perpetual-motion-machine",
+        "relation_id": "rel-pmm-direction",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '받은 열을 남김없이 일로 바꾸는 장치도 만들 수 없다' 를 뒤집어 '만들 수 있다' 로 읽으면 반드시 거짓이다. 위 rel-pmm-energy 와 같은 자리다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-thermal-efficiency",
+        "relation_id": "rel-te-not-one",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '열효율이 1이 될 수 없다' 를 뒤집어 '열효율이 1인 열기관을 만들 수 있다' 로 읽으면 반드시 거짓이다. 걸린 오개념('기술이 더 좋아지면 열효율 100 % 기관을 만들 수 있다') 이 이미 뒤집은 문장이다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-torque",
+        "relation_id": "rel-torque-not-energy",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '돌림힘은 에너지가 아니어서 J 로 적을 수 없다' 를 뒤집어 '에너지와 같은 양이라 J 로 적는다' 로 읽으면 반드시 거짓이다. 걸린 오개념이 그대로 뒤집은 문장이다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-heat-transfer",
+        "relation_id": "rel-ht-conduction",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '고체에서는 전도가 주로 일어난다' 에서 전달 방식을 맞바꿔 '고체에서는 대류가 주로 일어난다' 로 읽으면 반드시 거짓이다(고체에서는 입자가 제자리 진동만 하므로). 같은 카드의 rel-ht-convection 은 같은 짝짓기형인데 true 다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-heat",
+        "relation_id": "rel-heat-vs-work",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '열은 온도 차로, 일은 역학적 상호작용으로 에너지를 옮긴다' 는 두 항의 설명을 맞바꾸면 반드시 거짓이 된다. rel-arfb-sum 과 같은 이름 맞바꿈형인데 판정이 엇갈린다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-work",
+        "relation_id": "rel-work-transfer",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "[보수적 오판정 — 학생에게 오개념을 심는 쪽은 아니다] '일은 역학적으로 밀고 당겨 에너지를 건넨다' 의 두 항을 맞바꿔 '일은 온도 차로 에너지를 옮긴다' 로 읽으면 반드시 거짓이다. 위 rel-heat-vs-work 와 한 쌍으로 같은 판정을 받아야 한다.",
+        "suggest": "invertible 판정 근거를 '뒤집은 문장이 반드시 거짓인가' 하나로 다시 대고, true 로 올린다면 inverted_text 를 채운다."
+      },
+      {
+        "card_id": "phys-braking-distance",
+        "relation_id": "rel-bd-speed2",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "명제는 '멈추기까지 받는 힘이 같다면 처음 속력이 두 배인 자동차는 제동 거리가 네 배' 다. 견주는 대상이 '자동차' 둘인데 condition('제동하는 동안 알짜힘의 크기가 일정할 때')·scope('등가속도로 감속해 멈추는 직선 운동') 어디에도 두 차의 질량이 같다는 한정이 없다. 같은 카드의 rel-bd-mass 가 '힘이 같아도 질량이 크면 더 멀리 간다' 고 못 박고 있으므로, 질량을 놓아둔 채 힘만 같게 하면 네 배는 나오지 않는다 — 제곱 비례가 서는 자리가 명제 안에서 닫히지 않는다. inverted_text 도 같은 결함을 물려받아 OX 오답 지문으로 나간다.",
+        "suggest": "condition 또는 scope 에 '같은 자동차' 처럼 질량을 붙박는 한정을 세운다."
+      },
+      {
+        "card_id": "phys-stability-of-object",
+        "relation_id": "rel-stab-topple",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "본문은 '무게 중심이 받침면 밖으로 나가면' 이고 condition 은 '무게 중심에서 내린 연직선이 받침면을 벗어날 때' 다. 두 자리가 서로 다른 판정 기준을 적고 있다 — 무게 중심 자체는 받침면 위 공중에 있는 것이 보통이라 '무게 중심이 받침면 밖' 은 조건으로 성립하지 않는다. inverted_text('무게 중심이 받침면 밖으로 나가도 되돌아온다') 가 이 어긋난 표현을 그대로 물고 OX 지문이 된다.",
+        "suggest": "본문의 판정 기준을 condition 과 같은 낱말(연직선)로 맞춘다. inverted_text 도 같이 다시 쓴다."
+      },
+      {
+        "card_id": "phys-gravitational-potential-energy",
+        "relation_id": "rel-gpe-work",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "scope 는 '중력만 일을 하는 낙하나 미끄럼 운동에 한정한다' 인데 본문은 '그 물체는 다른 곳에 일을 할 수 있다' 고 말한다. 중력만 일을 하는 상황에서는 줄어든 위치 에너지가 전부 운동 에너지가 될 뿐 다른 대상에게 건네지지 않으므로, 본문이 그리는 장면과 scope 가 닫아 놓은 장면이 어긋난다. 다만 '할 수 있다(가능)' 로 읽으면 어긋나지 않는다는 해석도 서므로 결함 여부가 갈린다.",
+        "suggest": "scope 를 본문이 그리는 장면(물체가 다른 대상에 일을 건네는 경우)에 맞출지, 본문을 운동 에너지 증가로 좁힐지 C2 가 고른다."
+      },
+      {
+        "card_id": "phys-transformation-of-mechanical-energy",
+        "relation_id": "rel-tme-friction-work",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "본문은 '한 일의 양만큼 역학적 에너지가 줄어든다' 로 일을 부호 없는 양으로 쓰는데, 같은 명제의 invertible_reason 은 '저항이 한 일은 음수라' 로 부호 있는 양으로 쓴다. 한 명제 안에서 '일' 이 두 규약을 오간다. 크기로만 읽으면 본문은 맞고, 부호까지 읽으면 '음수인 일의 양만큼 줄어든다' 가 되어 뜻이 뒤집히므로 결함인지 판단이 갈린다.",
+        "suggest": "본문과 invertible_reason 가운데 한쪽의 부호 규약으로 통일한다."
+      },
+      {
+        "card_id": "phys-perpetual-motion-machine",
+        "relation_id": "rel-pmm-ball",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "scope 자리에 범위가 아니라 해설이 들어 있다 — '마찰을 무시해도 그대로 성립하는 한계에 해당한다' 는 이 명제가 어떤 대상에 한정되는지를 말하지 않는다. 명제 자체(떨어진 구슬이 처음 높이보다 높이 올라가지 못한다)와 inverted_text 는 ② 기준으로 문제가 없다.",
+        "suggest": "scope 를 적용 대상(밖에서 에너지를 받지 않는 계)으로 다시 적는다. 지금 문장은 invertible_reason 자리에 어울린다."
+      },
+      {
+        "card_id": "phys-braking-distance",
+        "relation_id": "rel-bd-mass",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "'브레이크가 주는 힘이 같다면 질량이 커진 차일수록 더 멀리 간다' 는 제동력을 질량과 무관하게 고정한 이상화 위에 선다. 실제 노면 제동에서 최대 제동력은 질량에 따라 달라지므로 condition 이 잡아 놓은 '제동하는 힘의 크기가 같을 때' 가 교과서 밖에서도 서는지는 이 자리에서 가릴 수 없다. 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "condition 이 교과서가 세운 이상화임을 드러낼지 사람이 정한다."
+      },
+      {
+        "card_id": "phys-mechanical-energy",
+        "relation_id": "rel-me-sum",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '물체가 지닌 운동 에너지와 위치 에너지를 더한 값' 이고 명제는 '역학적 에너지는 운동 에너지와 위치 에너지를 더해 구한 값이다' 다. 주어를 붙이고 '더한 값' 을 '더해 구한 값' 으로 바꾼 것 말고 겹치지 않는 낱말이 없다. 이 단원에서 가장 무거운 되풀이다. 같은 카드의 rel-me-three 는 정의에 없는 것(연직 용수철에서 세 항을 더한다)을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 합 규정을 빼고 명제가 맡게 하든지, 명제를 정의가 담지 않은 내용으로 갈음한다."
+      },
+      {
+        "card_id": "phys-thermal-efficiency",
+        "relation_id": "rel-te-ratio",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '넣어 준 열 가운데 실제로 일로 바뀐 몫이 얼마인지 나타내는 비율' 이고 명제는 '열효율은 한 일을 공급받은 열로 나눈 값이다' 다. 분자·분모의 자리가 정의에 이미 들어 있어 정의를 읽으면 저절로 나온다. invertible_reason 도 '정의를 밝힌 명제라' 라고 스스로 적고 있다.",
+        "suggest": "정의에서 비율의 분자·분모를 빼고 명제가 맡게 하든지, 명제를 정의가 담지 않은 내용(효율이 높다는 것이 무엇을 뜻하는지 등)으로 갈음한다."
+      },
+      {
+        "card_id": "phys-temperature",
+        "relation_id": "rel-temp-average",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '입자들이 무작위 운동으로 지니는 평균적인 역학적 에너지가 얼마나 되는지 재어 나타낸 척도' 이고 명제는 '입자들의 평균 역학적 에너지가 클수록 온도가 높게 측정된다' 다. 척도라는 말 안에 이미 단조 대응이 들어 있어 정의를 읽으면 저절로 나온다. 같은 카드의 rel-temp-not-total 은 정의에 없는 것(양이 다르면 내부 에너지가 다르다)을 보태 이 지적을 받지 않는다.",
+        "suggest": "정의에서 평균 역학적 에너지 규정을 빼고 명제가 맡게 하든지, 명제를 정의가 담지 않은 내용으로 갈음한다."
+      },
+      {
+        "card_id": "phys-work",
+        "relation_id": "rel-work-fs",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '힘의 크기와 이동 거리의 곱으로 잰다' 이고 명제는 '거리가 같다면 힘이 클수록 한 일이 많다' 다. 곱의 한쪽을 붙박고 다른 쪽을 늘린 것이라 정의에서 곧바로 나온다. 정의가 곱을 이미 적어 놓았다는 점에서는 되풀이이나, 명제가 보탠 '한쪽을 고정하고 견준다' 는 구조가 학생이 곱의 두 요인을 갈라 보게 만든다는 점에서는 학습 가치가 있다. 결함인지 판단이 갈린다. 이 네 명제(rel-work-fs·rel-imp-ft·rel-mom-mass-speed·rel-torque-distance)는 한 묶음으로 같은 판정을 받아야 한다.",
+        "suggest": "정의에서 곱셈식을 빼고 명제가 맡게 할지, 네 명제를 그대로 둘지 한 묶음으로 정한다."
+      },
+      {
+        "card_id": "phys-impulse",
+        "relation_id": "rel-imp-ft",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '힘에 그 힘이 걸린 시간을 곱해 정한다' 이고 명제는 '시간이 같다면 힘이 클수록 충격량이 크다' 다. 같은 자리다. 정의가 곱을 이미 적어 놓았다는 점에서는 되풀이이나, 명제가 보탠 '한쪽을 고정하고 견준다' 는 구조가 학생이 곱의 두 요인을 갈라 보게 만든다는 점에서는 학습 가치가 있다. 결함인지 판단이 갈린다. 이 네 명제(rel-work-fs·rel-imp-ft·rel-mom-mass-speed·rel-torque-distance)는 한 묶음으로 같은 판정을 받아야 한다.",
+        "suggest": "정의에서 곱셈식을 빼고 명제가 맡게 할지, 네 명제를 그대로 둘지 한 묶음으로 정한다."
+      },
+      {
+        "card_id": "phys-momentum",
+        "relation_id": "rel-mom-mass-speed",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '질량에 속도를 곱해 정하며' 이고 명제는 '속도가 그대로라면 질량이 클수록 운동량이 크다' 다. 같은 자리다. 정의가 곱을 이미 적어 놓았다는 점에서는 되풀이이나, 명제가 보탠 '한쪽을 고정하고 견준다' 는 구조가 학생이 곱의 두 요인을 갈라 보게 만든다는 점에서는 학습 가치가 있다. 결함인지 판단이 갈린다. 이 네 명제(rel-work-fs·rel-imp-ft·rel-mom-mass-speed·rel-torque-distance)는 한 묶음으로 같은 판정을 받아야 한다.",
+        "suggest": "정의에서 곱셈식을 빼고 명제가 맡게 할지, 네 명제를 그대로 둘지 한 묶음으로 정한다."
+      },
+      {
+        "card_id": "phys-torque",
+        "relation_id": "rel-torque-distance",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '거리와 그 거리에 수직인 힘의 크기를 곱해 정한다' 이고 명제는 '힘이 같을 때 멀수록 돌림힘이 크다' 다. 같은 자리다. 정의가 곱을 이미 적어 놓았다는 점에서는 되풀이이나, 명제가 보탠 '한쪽을 고정하고 견준다' 는 구조가 학생이 곱의 두 요인을 갈라 보게 만든다는 점에서는 학습 가치가 있다. 결함인지 판단이 갈린다. 이 네 명제(rel-work-fs·rel-imp-ft·rel-mom-mass-speed·rel-torque-distance)는 한 묶음으로 같은 판정을 받아야 한다.",
+        "suggest": "정의에서 곱셈식을 빼고 명제가 맡게 할지, 네 명제를 그대로 둘지 한 묶음으로 정한다."
+      },
+      {
+        "card_id": "phys-elastic-force",
+        "relation_id": "rel-ef-direction",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '본래 상태로 돌아가려고 내는 힘' 이고 명제는 '변형된 쪽과 반대 방향, 곧 평형 위치를 향하는 쪽으로 작용한다' 다. invertible_reason 이 '되돌아가려는 힘이라는 점이 정의에 들어 있어' 라고 스스로 겹침을 밝히고 있다. 다만 걸린 오개념('눌러 줄일 때에는 탄성력이 생기지 않는다') 은 정의만 읽어서는 걸러지지 않아 학습 가치가 남는다. ② 는 문제가 없다 — 뒤집은 문장은 반드시 거짓이다.",
+        "suggest": "정의에서 '돌아가려고' 를 덜어 명제가 방향을 맡게 할지 판단한다."
+      },
+      {
+        "card_id": "phys-work-energy-theorem",
+        "relation_id": "rel-wet-equal",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "이 명제에 걸린 오개념 '속력이 두 배가 되면 운동 에너지도 두 배가 된다' 는 명제의 반대편에 서 있지 않다. 명제는 '알짜힘이 한 일 = 운동 에너지 변화량' 이라는 등식이고 제곱 비례를 말하지 않는다. why_wrong 이 드는 근거('운동 에너지는 속력의 제곱에 비례한다') 는 이 단원 카드 35장 어느 명제에도 없다 — 제곱 비례를 받치는 명제가 없는 채 오개념만 떠 있다. 참고로 제곱 비례를 본문에 세운 명제는 rel-bd-speed2(제동 거리)와 rel-epe-kx(탄성 위치 에너지) 둘뿐이고 운동 에너지 쪽은 비어 있다.",
+        "suggest": "이 오개념을 받칠 명제가 이 단원에 있는지 메인이 가린다. 없으면 C1 로 돌아가 운동 에너지의 제곱 비례를 세울지, 오개념을 내릴지 정한다. 카드 안에서 링크만 옮겨서는 풀리지 않는다."
+      },
+      {
+        "card_id": "phys-acceleration",
+        "relation_id": "rel-acc-netforce",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '가속도가 큰 물체는 속도도 반드시 크다' 는 가속도와 속도를 가르는 오해인데, 명제는 '알짜힘을 받으면 가속도가 0이 아니다' 로 알짜힘과 가속도를 잇는다. 오개념이 다투는 두 양(가속도·속도)이 명제의 antecedent(알짜힘의 크기)와 맞물리지 않아 명제의 반대편이 아니다. 같은 카드의 rel-acc-speedup·rel-acc-slowdown 이 가속도와 속도를 함께 다룬다.",
+        "suggest": "이 오개념을 받는 명제를 바꿀지 메인이 정한다."
+      },
+      {
+        "card_id": "phys-heat-transfer",
+        "relation_id": "rel-ht-radiation",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '복사는 매질이 있어야만 열을 옮길 수 있다' 는 매질의 필요 여부를 다투는데, 명제는 '표면 상태가 같다면 온도가 높을수록 더 많이 내보낸다' 로 온도와 복사량만 잇는다. 명제 본문·condition·scope 어디에도 매질 이야기가 없어 오개념이 명제의 반대편에 서지 못한다(매질 이야기는 카드 definition 에만 있다).",
+        "suggest": "매질 없이도 복사가 일어난다는 내용을 어느 명제가 맡을지 메인이 정한다."
+      },
+      {
+        "card_id": "phys-impulse",
+        "relation_id": "rel-imp-graph",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '충격량과 힘은 같은 물리량이라 단위도 같다' 는 두 물리량의 단위를 다투는데, 명제는 '힘·시간 그래프 아래 넓이가 충격량' 이라는 그래프 짝짓기다. why_wrong 이 드는 근거('충격량은 힘에 시간을 곱한 양') 는 같은 카드의 rel-imp-ft 쪽 내용이지 이 명제가 아니다.",
+        "suggest": "이 오개념을 받는 명제를 바꿀지 메인이 정한다."
+      },
+      {
+        "card_id": "phys-center-of-gravity",
+        "relation_id": "rel-cog-support",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '무게 중심은 물체의 한가운데라서 모양과 상관없이 늘 가운데에 있다' 는 무게 중심의 위치에 대한 일반적 오해이고, 명제는 '한 점으로 받쳐 멈추면 그 자리가 무게 중심을 지난다' 는 찾는 방법이다. 반대편이라기보다 옆자리다. 다만 받침점 하나로 찾는다는 절차가 '늘 가운데' 를 반증하는 데 쓰인다고 보면 이어지므로 판단이 갈린다.",
+        "suggest": "같은 카드의 rel-cog-plumb 쪽이 더 맞는지 견주어 정한다."
+      },
+      {
+        "card_id": "phys-heat",
+        "relation_id": "rel-heat-flow",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '온도가 높은 물체는 열을 많이 가지고 있다' 는 열을 소유물로 보는 오해이고, 명제는 열이 옮겨 가는 방향을 말한다. why_wrong 도 방향이 아니라 '열은 이동 중인 에너지' 라는 정의 쪽을 근거로 든다 — 같은 카드의 rel-heat-vs-work 가 그 자리다. 다만 '이동' 이라는 낱말을 공유해 이어진다고 볼 여지가 있어 판단이 갈린다.",
+        "suggest": "rel-heat-vs-work 쪽으로 옮길지 견주어 정한다."
+      },
+      {
+        "card_id": "phys-newton-second-law",
+        "relation_id": "rel-n2-force",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '물체가 계속 움직이려면 힘이 계속 작용해야 한다' 는 관성에 대한 오해이고, why_wrong 도 '알짜힘이 0이면 속도를 그대로 지킨다' 로 관성 법칙을 근거로 든다. 명제는 '알짜힘을 두 배로 키우면 가속도도 두 배' 라는 비례 관계라 알짜힘이 0인 경우를 말하지 않는다. 다만 힘의 역할(속도를 바꾼다)이라는 점에서 맞닿아 있어 판단이 갈린다. 이 단원에 관성·뉴턴 제1법칙 카드가 따로 없다는 점도 함께 본다.",
+        "suggest": "관성을 받칠 자리가 이 단원에 있는지 메인이 가린 뒤 정한다."
+      },
+      {
+        "card_id": "phys-uniformly-accelerated-linear-motion",
+        "relation_id": "rel-ualm-slope",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "걸린 오개념 '가속도가 일정하면 속력은 반드시 점점 빨라진다' 는 가속도의 방향을 다투는데, 명제는 'v-t 그래프가 기울기 일정한 직선이고 그 기울기가 가속도' 라는 그래프 짝짓기다. why_wrong 의 근거(가속도가 운동 방향과 반대인 경우)는 다른 카드의 rel-acc-slowdown 자리다. 다만 기울기의 부호로 읽으면 이 명제에서도 풀리므로 판단이 갈린다.",
+        "suggest": "같은 카드의 rel-ualm-const-force 쪽이 더 맞는지 견주어 정한다."
+      },
+      {
+        "card_id": "phys-transformation-of-mechanical-energy",
+        "relation_id": "rel-tme-heat",
+        "verdict": "defect",
+        "checks": [
+          5
+        ],
+        "reason": "명제의 주어가 '줄어든 역학적 에너지는' 이라 줄어든 몫 전체가 열이 된다고 읽힌다. 그런데 같은 카드의 rel-tme-sound-light 는 '소리나 빛으로 바뀐 에너지도 끝에 가서는 열이 되어' 라며 열이 아닌 형태를 거쳐 가는 몫이 따로 있다고 말한다. 두 명제가 같은 카드 안에서 어긋난다. 카드 definition 도 '열을 비롯한 다른 형태로' 라고 적어 rel-tme-sound-light 쪽에 선다.",
+        "suggest": "rel-tme-heat 의 주어를 전체가 아닌 몫으로 좁힌다."
+      },
+      {
+        "card_id": "phys-momentum-conservation-law",
+        "relation_id": "rel-mcl-from-ar",
+        "verdict": "ok",
+        "checks": [
+          2
+        ],
+        "reason": "C2 가 재검토를 청한 자리라 따로 적는다. 뒤집은 문장 '두 물체의 운동량 변화량은 크기가 같고 방향도 서로 같다' 는, 크기가 같고 방향이 같은 두 변화량을 더하면 0이 아니므로 scope('외부 힘을 무시할 수 있는 충돌') 안에서 반드시 거짓이다. form.type 이 causal 인 것은 판정과 무관하다. 다만 두 변화량이 모두 0인 극단(부딪혔으나 아무 일도 일어나지 않은 경우)에서는 '방향이 같다' 도 '반대다' 도 정해지지 않는데, 그 경우는 condition('두 물체가 서로 힘을 주고받는 동안') 이 이미 걷어 낸다. invertible: true 를 그대로 둘 근거가 선다."
+      },
+      {
+        "card_id": "phys-action-reaction-law",
+        "relation_id": "rel-ar-different-objects",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "inverted_text 가 '작용과 반작용인 두 힘은 크기가 같고 방향이 반대이므로 더하면 알짜힘이 0이 된다' 다. 앞 절은 같은 카드 rel-ar-magnitude 가 참으로 세워 둔 내용이고, 두 힘의 벡터 합이 0인 것 자체도 어긋나지 않는다. 거짓이 되는 지점이 '알짜힘' 이라는 낱말 하나(알짜힘은 한 물체에 걸린 힘끼리만 더해 얻는다)에 걸려 있어, OX 오답 지문으로 냈을 때 반드시 거짓으로 읽히는지 판단이 갈린다. 참인 절로 문장을 열어 두면 학생이 앞 절만 보고 O 를 고를 길이 열린다.",
+        "suggest": "inverted_text 에서 참인 앞 절을 덜어 거짓이 걸리는 자리만 남길지 판단한다. invertible 판정 자체는 내리지 않아도 된다."
+      }
+    ],
+    "stats": {
+      "ok": 67,
+      "defect": 22,
+      "uncertain": 14
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "phys-transformation-of-mechanical-energy",
+  "concept_key": "concept:transformation-of-mechanical-energy",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "역학적 에너지의 전환",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어라 낱말 전체를 한자로 적을 수 없다. '역학적 전환'만 力學的 轉換에 해당한다.",
+    "english": "transformation of mechanical energy"
+  },
+  "definition": "마찰이나 공기 저항이 있을 때 물체의 역학적 에너지가 열을 비롯한 다른 형태로 바뀌어 가는 과정.",
+  "relations": [
+    {
+      "id": "rel-tme-friction-work",
+      "text": "마찰력과 공기 저항이 물체에 한 일의 양만큼 물체의 역학적 에너지가 줄어든다.",
+      "form": {
+        "condition": "마찰력과 공기 저항이 운동을 방해할 때",
+        "type": "causal",
+        "scope": "저항을 무시할 수 없는 실제 운동에 한정한다",
+        "antecedent": {
+          "quantity": "저항이 한 일의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "역학적 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "저항이 한 일은 음수라 역학적 에너지를 반드시 줄이므로 늘린다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마찰력과 공기 저항이 한 일의 양만큼 물체의 역학적 에너지가 늘어난다."
+    },
+    {
+      "id": "rel-tme-heat",
+      "text": "줄어든 역학적 에너지 가운데 한 몫이 열로 바뀌어 맞닿은 면의 온도를 올린다.",
+      "form": {
+        "condition": "두 물체가 맞닿은 채 미끄러질 때",
+        "type": "causal",
+        "scope": "마찰이 일어나는 접촉면에 한정한다",
+        "antecedent": {
+          "quantity": "열로 바뀐 역학적 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "접촉면의 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "마찰은 접촉면의 내부 에너지를 늘리므로 온도가 내려간다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마찰이 일어나면 맞닿은 면의 온도가 오히려 내려간다."
+    },
+    {
+      "id": "rel-tme-speed",
+      "text": "손바닥을 더 빠르게 비빌수록 같은 시간에 더 많은 열이 생겨 온도가 더 오른다.",
+      "form": {
+        "condition": "누르는 힘과 비비는 면이 같을 때",
+        "type": "direct",
+        "scope": "마찰로 열이 나는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "비비는 빠르기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "발생하는 열의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "빠르게 비빌수록 마찰력이 한 일이 많아지므로 열이 줄어든다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "손바닥을 더 빠르게 비빌수록 같은 시간에 생기는 열이 줄어든다."
+    },
+    {
+      "id": "rel-tme-sound-light",
+      "text": "소리나 빛으로 바뀐 에너지도 끝에 가서는 열이 되어 주위로 흩어진다.",
+      "form": {
+        "condition": "에너지가 여러 형태를 거쳐 갈 때",
+        "type": "causal",
+        "scope": "주위와 에너지를 주고받는 실제 과정에 한정한다",
+        "antecedent": {
+          "quantity": "소리·빛으로 바뀐 에너지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "주위로 흩어진 열",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "최종 행선지를 밝힌 명제라 맞바꿀 두 양의 증감이 없다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마찰이 있으면 에너지의 일부가 사라져 없어진다",
+      "why_wrong": "사라지는 것이 아니라 열이나 소리로 형태를 바꾼다. 이들을 모두 헤아리면 총량은 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tme-heat"
+    },
+    {
+      "text": "굴러가던 공이 멈추는 것은 공이 가진 힘을 다 썼기 때문이다",
+      "why_wrong": "마찰력과 공기 저항이 음의 일을 해서 운동 에너지가 열로 바뀐 것이다. 물체가 힘을 지니고 있는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tme-friction-work"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-mechanical-energy-conservation-law"
+    },
+    {
+      "type": "next",
+      "target": "phys-energy-conservation-law"
+    },
+    {
+      "type": "related",
+      "target": "phys-internal-energy"
+    }
+  ],
+  "curriculum": [
+    "12물리01-05"
+  ],
+  "topic_id": "phys-1-2-02",
+  "pages": [
+    60,
+    61
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

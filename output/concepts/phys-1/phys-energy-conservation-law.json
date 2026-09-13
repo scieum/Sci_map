@@ -1,0 +1,135 @@
+{
+  "id": "phys-energy-conservation-law",
+  "concept_key": "concept:energy-conservation-law",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "에너지 보존 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어라 낱말 전체를 한자로 적을 수 없다. '보존 법칙'만 保存 法則에 해당한다.",
+    "english": "law of conservation of energy"
+  },
+  "definition": "에너지가 다른 형태로 바뀔 수는 있어도 새로 생기거나 없어지지는 않아 총량이 언제나 그대로라는 법칙.",
+  "relations": [
+    {
+      "id": "rel-ecl-total",
+      "text": "에너지가 여러 형태로 바뀌어도 관련된 에너지를 모두 더한 총량은 달라지지 않는다.",
+      "form": {
+        "condition": "에너지가 드나드는 모든 경로를 헤아렸을 때",
+        "type": "classification",
+        "scope": "주위까지 넣어 살펴본 경우에 한정한다",
+        "antecedent": {
+          "quantity": "에너지의 형태",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "에너지의 총량",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "총량이 유지된다는 사실을 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ecl-joule",
+      "text": "줄의 실험에서 추가 해 준 역학적 일이 많을수록 물이 얻은 열량도 그만큼 많아진다.",
+      "form": {
+        "condition": "장치 밖으로 새어 나가는 열을 무시할 때",
+        "type": "direct",
+        "scope": "역학적 일을 열로 바꾸는 실험 장치에 한정한다",
+        "antecedent": {
+          "quantity": "역학적 일",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전환된 열량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "일과 열량은 정비례하므로 일이 많을수록 열량이 적어진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "줄의 실험에서 추가 해 준 역학적 일이 많을수록 물이 얻은 열량은 적어진다."
+    },
+    {
+      "id": "rel-ecl-beyond-mech",
+      "text": "역학적 에너지가 보존되지 않는 상황에서도 열까지 넣어 세면 총량은 그대로다.",
+      "form": {
+        "condition": "마찰로 역학적 에너지가 줄어들 때",
+        "type": "conditional",
+        "scope": "열과 소리까지 빠짐없이 헤아린 경우에 한정한다",
+        "antecedent": {
+          "quantity": "역학적 에너지",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "에너지의 총량",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 넓힌 명제라 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "역학적 에너지가 보존되지 않으면 에너지 보존 법칙도 깨진다",
+      "why_wrong": "역학적 에너지는 줄어도 열이나 소리로 바뀐 몫을 더하면 총량은 그대로다. 두 법칙은 적용 범위가 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecl-beyond-mech"
+    },
+    {
+      "text": "에너지를 쓰면 그만큼 없어지므로 총량이 줄어든다",
+      "why_wrong": "쓴 에너지는 형태를 바꿔 주위로 흩어질 뿐 사라지지 않는다. 다시 쓰기 어려워질 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecl-total"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-transformation-of-mechanical-energy"
+    },
+    {
+      "type": "next",
+      "target": "phys-thermal-efficiency"
+    },
+    {
+      "type": "next",
+      "target": "phys-perpetual-motion-machine"
+    },
+    {
+      "type": "related",
+      "target": "phys-heat"
+    }
+  ],
+  "curriculum": [
+    "12물리01-05"
+  ],
+  "topic_id": "phys-1-2-02",
+  "pages": [
+    62,
+    72
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

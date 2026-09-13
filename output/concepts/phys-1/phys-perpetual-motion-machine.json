@@ -1,0 +1,136 @@
+{
+  "id": "phys-perpetual-motion-machine",
+  "concept_key": "concept:perpetual-motion-machine",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "영구 기관",
+  "aliases": [
+    "무한 동력"
+  ],
+  "notation": {
+    "hanja": "永久 機關",
+    "hanja_gloss": "永 길 영 · 久 오랠 구 · 機 틀 기 · 關 빗장 관",
+    "english": "perpetual motion machine"
+  },
+  "definition": "밖에서 에너지를 받지 않고도 스스로 끝없이 움직이며 일을 해낸다고 내세우는 장치. 실제로는 만들 수 없다.",
+  "relations": [
+    {
+      "id": "rel-pmm-energy",
+      "text": "에너지를 공급받지 않고 계속 일을 내놓는 장치는 에너지 보존 법칙에 어긋나 만들 수 없다.",
+      "form": {
+        "condition": "밖에서 에너지를 받지 않는다고 할 때",
+        "type": "causal",
+        "scope": "에너지 보존 법칙이 성립하는 모든 장치에 두루 성립한다",
+        "antecedent": {
+          "quantity": "공급받는 에너지",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "계속 내놓는 일",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 불가능을 밝힌 명제라 가능을 주장하는 쪽으로 뒤집으면 에너지 보존 법칙에 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에너지를 공급받지 않고도 계속 일을 내놓는 장치를 만들 수 있다."
+    },
+    {
+      "id": "rel-pmm-direction",
+      "text": "받은 열을 남김없이 일로 바꾸는 장치도 열 이동의 방향성 때문에 만들 수 없다.",
+      "form": {
+        "condition": "열을 일로 바꾸려 할 때",
+        "type": "causal",
+        "scope": "되풀이해 작동하는 열기관에 한정한다",
+        "antecedent": {
+          "quantity": "열효율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "장치의 실현 가능성",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 불가능을 밝힌 명제라 가능을 주장하는 쪽으로 뒤집으면 열 이동의 방향성에 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "받은 열을 남김없이 일로 바꾸는 장치를 만들 수 있다."
+    },
+    {
+      "id": "rel-pmm-ball",
+      "text": "떨어진 구슬은 역학적 에너지가 보존되더라도 처음 높이보다 더 높이 올라가지 못한다.",
+      "form": {
+        "condition": "밖에서 에너지를 더해 주지 않을 때",
+        "type": "conditional",
+        "scope": "마찰을 무시해도 그대로 성립하는 한계에 해당한다",
+        "antecedent": {
+          "quantity": "처음 높이",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "올라갈 수 있는 높이",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "보존되는 총량이 처음 값을 넘을 수 없어 더 올라간다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "떨어진 구슬은 마찰만 없으면 처음 높이보다 더 높이 올라갈 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마찰만 완전히 없애면 영구 기관을 만들 수 있다",
+      "why_wrong": "마찰이 없어도 처음 가진 에너지보다 더 많은 일을 내놓을 수는 없다. 에너지를 만들어 내는 장치가 아니기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmm-ball"
+    },
+    {
+      "text": "열효율을 100 %로 높인 기관을 만들면 그것이 영구 기관이다",
+      "why_wrong": "열효율 100 %도 열 이동의 방향성 때문에 이룰 수 없다. 두 한계가 함께 영구 기관을 막는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmm-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-thermal-efficiency"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-energy-conservation-law"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-direction-of-heat-flow"
+    }
+  ],
+  "curriculum": [
+    "12물리01-06"
+  ],
+  "topic_id": "phys-1-2-03",
+  "pages": [
+    68,
+    69,
+    70
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

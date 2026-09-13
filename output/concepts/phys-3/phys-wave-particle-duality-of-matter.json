@@ -1,0 +1,100 @@
+{
+  "id": "phys-wave-particle-duality-of-matter",
+  "concept_key": "concept:wave-particle-duality-of-matter",
+  "registry_status": "new",
+  "term": "물질의 이중성",
+  "notation": {
+    "hanja": "物質 二重性",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 二 두 이 · 重 무거울 중 · 性 성품 성",
+    "english": "wave-particle duality of matter"
+  },
+  "definition": "전자처럼 입자로만 다루던 것도 파동의 성질을 함께 지니는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wpdm-slit",
+      "text": "전자를 이중 슬릿에 쏘면 빛에서와 같은 간섭무늬가 나타나 파동성이 드러난다.",
+      "form": {
+        "condition": "전자를 이중 슬릿에 통과시킬 때",
+        "type": "causal",
+        "scope": "전자처럼 운동량이 작은 입자. 거시 물체에서는 나타나지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "실험 결과를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wpdm-particle",
+      "text": "전자에 입자성만 있다면 스크린에는 슬릿 수만큼인 두 줄만 생겨야 한다.",
+      "form": {
+        "condition": "전자가 곧게 날아가 슬릿을 지난다고 볼 때",
+        "type": "conditional",
+        "scope": "전자의 이중 슬릿 실험을 입자성만으로 예측했을 때"
+      },
+      "invertible": false,
+      "invertible_reason": "가정에서 따라 나오는 예측을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wpdm-ccd",
+      "text": "빛을 받은 소자에서 전자가 튀어나오는 성질을 이용해 영상 정보를 저장한다.",
+      "form": {
+        "condition": "빛이 반도체 소자에 닿을 때",
+        "type": "causal",
+        "scope": "전하 결합 소자처럼 빛의 입자성을 쓰는 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임새를 드는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자를 하나씩 쏘면 간섭무늬가 생기지 않는다",
+      "why_wrong": "하나씩 쏘아도 오래 쌓으면 같은 간섭무늬가 나타난다. 파동성은 전자 하나에도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wpdm-slit"
+    },
+    {
+      "text": "전자를 이중 슬릿에 쏘면 슬릿 수와 같은 두 줄의 무늬만 스크린에 생긴다",
+      "why_wrong": "입자로만 본 예측이 두 줄이고, 실제로는 두 줄보다 많은 간섭무늬가 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wpdm-particle"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-matter-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-double-slit-interference"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-03",
+  "pages": [
+    158
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

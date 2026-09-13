@@ -45,7 +45,7 @@ key_format:
 #   concept_key : `concept:vapor-pressure`  — 개념 그 자체. 과목·학년 무관. 여러 카드가 공유
 #   card id     : `mate-vapor-pressure`     — 그 개념을 이 과목에서 다룬 카드 한 장
 id_format:
-  pattern: '^(isci1|isci2|chem|mate|reac|cell|bio|gene)-[a-z][a-z0-9]*(-[a-z0-9]+)*$'
+  pattern: '^(isci1|isci2|chem|mate|reac|cell|bio|gene|phys)-[a-z][a-z0-9]*(-[a-z0-9]+)*$'
   subject_prefix:
     isci1: 통합과학1
     isci2: 통합과학2
@@ -55,6 +55,7 @@ id_format:
     cell: 세포와 물질대사
     bio: 생명과학
     gene: 생물의 유전
+    phys: 물리학
   note: >
     접두어 뒤 첫 글자는 반드시 영문자다. 단원 id(`mate-1`, `mate-1-1-01`)는
     접두어 뒤가 숫자이므로 정규식만으로 카드 id 와 구별된다. 규칙을 깨지 마라.

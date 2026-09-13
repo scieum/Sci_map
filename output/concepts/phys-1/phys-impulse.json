@@ -1,0 +1,134 @@
+{
+  "id": "phys-impulse",
+  "concept_key": "concept:impulse",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "충격량",
+  "notation": {
+    "hanja": "衝擊量",
+    "hanja_gloss": "衝 찌를 충 · 擊 칠 격 · 量 헤아릴 량",
+    "english": "impulse",
+    "symbol_display": "I",
+    "symbol_plain": "I"
+  },
+  "definition": "물체가 힘을 받는 동안 얼마만큼의 충격을 받았는지 나타내는 양. 작용한 힘에 그 힘이 걸린 시간을 곱해 정한다.",
+  "relations": [
+    {
+      "id": "rel-imp-ft",
+      "text": "힘이 걸린 시간이 같다면 더 큰 힘을 받은 물체가 더 큰 충격량을 받는다.",
+      "form": {
+        "condition": "힘이 작용한 시간이 같을 때",
+        "type": "direct",
+        "scope": "힘의 방향이 바뀌지 않는 구간에 한정한다",
+        "antecedent": {
+          "quantity": "작용한 힘의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "충격량의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "충격량은 힘과 시간의 곱이라 힘만 키우고 충격량이 줄어든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "힘이 걸린 시간이 같다면 더 큰 힘을 받은 물체가 더 작은 충격량을 받는다."
+    },
+    {
+      "id": "rel-imp-graph",
+      "text": "시간을 가로축, 힘을 세로축에 둔 그래프에서 그래프 아래 넓이가 충격량의 크기다.",
+      "form": {
+        "condition": "힘의 크기가 시간에 따라 변해도 되는 구간을 볼 때",
+        "type": "classification",
+        "scope": "힘의 방향이 바뀌지 않는 구간에 한정한다",
+        "antecedent": {
+          "quantity": "시간·힘 그래프의 넓이",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "충격량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 어떤 양인지 짝지은 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-imp-direction",
+      "text": "충격량의 방향은 물체에 작용한 힘의 방향과 같다.",
+      "form": {
+        "condition": "작용하는 힘의 방향이 일정할 때",
+        "type": "classification",
+        "scope": "한 방향으로만 힘이 걸리는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "힘의 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "충격량의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 방향이 하나로 정해진 명제라 반대라고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "충격량의 방향은 물체에 작용한 힘의 방향과 반대다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "받는 힘이 크면 충격량도 반드시 크다",
+      "why_wrong": "충격량은 힘에 시간을 곱한 양이다. 큰 힘이라도 아주 짧게 걸리면 충격량은 작을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-imp-ft"
+    },
+    {
+      "text": "충격량과 힘은 같은 물리량이라 단위도 같다",
+      "why_wrong": "충격량은 힘에 시간을 곱한 양이라 단위가 다르고, 운동량 변화량과 같은 단위를 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-imp-ft"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-newton-second-law"
+    },
+    {
+      "type": "next",
+      "target": "phys-impulse-momentum-relation"
+    },
+    {
+      "type": "related",
+      "target": "phys-momentum"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03"
+  ],
+  "topic_id": "phys-1-1-04",
+  "pages": [
+    40,
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

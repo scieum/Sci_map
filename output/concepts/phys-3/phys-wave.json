@@ -1,0 +1,109 @@
+{
+  "id": "phys-wave",
+  "concept_key": "concept:wave",
+  "registry_status": "new",
+  "term": "파동",
+  "notation": {
+    "hanja": "波動",
+    "hanja_gloss": "波 물결 파 · 動 움직일 동",
+    "english": "wave"
+  },
+  "definition": "한곳에서 생긴 진동이 주위로 퍼져 나가는 현상. 진동을 처음 만든 곳을 파원, 그 진동을 옮겨 주는 물질을 매질이라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wave-medium",
+      "text": "매질의 각 점은 제자리에서 진동만 할 뿐 파동을 따라 옮겨 가지 않는다.",
+      "form": {
+        "condition": "역학적 파동이 매질을 지나갈 때",
+        "type": "causal",
+        "scope": "물결파·줄파 같은 역학적 파동. 옮겨 가는 것은 진동 상태와 에너지다"
+      },
+      "invertible": false,
+      "invertible_reason": "매질 입자의 성질을 말하는 명제여서 방향을 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wave-em",
+      "text": "빛은 전기장과 자기장의 진동이 퍼져 나가는 전자기파여서 매질 없이도 진행한다.",
+      "form": {
+        "condition": "빛이 진공을 지날 때",
+        "type": "causal",
+        "scope": "전자기파에 한함. 소리 같은 역학적 파동은 매질이 있어야 전달된다"
+      },
+      "invertible": false,
+      "invertible_reason": "전자기파의 성질을 말하는 명제라 뒤집은 문장이 거짓이라고 단정할 근거가 방향에 있지 않다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wave-amplitude",
+      "text": "진동수가 같은 파동끼리 견주면 진폭이 큰 쪽이 더 많은 에너지를 나른다.",
+      "form": {
+        "condition": "두 파동의 진동수가 같을 때",
+        "type": "direct",
+        "scope": "같은 종류·같은 진동수의 파동끼리 비교하는 경우",
+        "antecedent": {
+          "quantity": "파동의 진폭",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "파동이 전달하는 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진폭과 에너지가 함께 커지므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 같은 파동끼리 견주면 진폭이 큰 쪽이 더 적은 에너지를 나른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "파도가 밀려오면 바닷물도 파도를 따라 해안까지 옮겨 간다",
+      "why_wrong": "매질인 물은 제자리에서 위아래로 진동할 뿐이고, 이동하는 것은 진동 상태와 에너지다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wave-medium"
+    },
+    {
+      "text": "빛도 소리처럼 전달해 줄 매질이 있어야 진행한다",
+      "why_wrong": "빛은 전자기파여서 매질이 없는 진공에서도 진행한다. 햇빛이 우주 공간을 건너오는 것이 그 증거다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wave-em"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-wavelength-and-frequency"
+    },
+    {
+      "type": "next",
+      "target": "phys-wave-superposition"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-01",
+  "pages": [
+    138
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

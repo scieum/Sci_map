@@ -1,0 +1,125 @@
+{
+  "id": "phys-electric-field",
+  "concept_key": "concept:electric-field",
+  "registry_status": "new",
+  "term": "전기장",
+  "notation": {
+    "hanja": "電氣場",
+    "english": "electric field",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 場 마당 장",
+    "symbol_display": "E",
+    "symbol_plain": "E"
+  },
+  "definition": "전하가 둘레에 만들어 놓아, 그 안에 놓인 다른 전하에 전기력을 미치는 공간의 성질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-field-strength",
+      "text": "어떤 점의 전기장 세기는 그 자리에 놓인 전하가 받는 전기력을 그 전하의 전하량으로 나눈 값이다.",
+      "form": {
+        "condition": "시험 전하를 그 점에 놓았을 때",
+        "type": "conditional",
+        "scope": "정지한 전하가 만드는 전기장"
+      },
+      "invertible": false,
+      "invertible_reason": "세기를 정하는 방법을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-field-distance",
+      "text": "전기장을 만든 대전체에서 멀어질수록 그 자리의 전기장은 약해진다.",
+      "form": {
+        "condition": "대전체의 전하량이 일정할 때",
+        "type": "inverse",
+        "scope": "점전하 하나가 만드는 전기장",
+        "antecedent": {
+          "quantity": "대전체와의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기장의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리가 멀수록 약해지므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대전체에서 멀어질수록 그 자리의 전기장은 세진다."
+    },
+    {
+      "id": "rel-field-independent",
+      "text": "한 점의 전기장 세기는 그곳에 무엇을 놓는지와 상관없이 전기장을 만든 전하가 정한다.",
+      "form": {
+        "condition": "같은 점에 여러 시험 전하를 차례로 놓아 볼 때",
+        "type": "conditional",
+        "scope": "시험 전하가 원래 전기장을 흩뜨리지 않는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "시험 전하의 전하량은 전기장 값을 바꾸지 않으므로 바꾼다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하량이 큰 전하를 갖다 놓으면 그 점의 전기장 세기도 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기장은 전하가 둘 이상 있어야 생긴다",
+      "why_wrong": "전하 하나만 있어도 둘레에는 전기장이 생긴다. 다른 전하는 그 전기장이 있음을 힘으로 드러내 줄 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-field-independent"
+    },
+    {
+      "text": "전기장 안에 놓는 전하가 클수록 그 자리의 전기장도 세진다",
+      "why_wrong": "전기장은 그것을 만든 전하가 정하는 공간의 성질이다. 놓는 전하가 크면 받는 힘이 커질 뿐 전기장 세기는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-field-independent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-charge"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-electric-force"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-potential-energy"
+    },
+    {
+      "type": "next",
+      "target": "phys-parallel-plate-capacitor"
+    },
+    {
+      "type": "related",
+      "target": "phys-coulomb-law",
+      "note": "전기력을 공간의 성질로 바꿔 읽는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    83,
+    86
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

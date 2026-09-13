@@ -1,0 +1,89 @@
+{
+  "id": "phys-electrical-insulator",
+  "concept_key": "concept:electrical-insulator",
+  "registry_status": "new",
+  "term": "부도체",
+  "notation": {
+    "hanja": "不導體",
+    "hanja_gloss": "不 아닐 부 · 導 이끌 도 · 體 몸 체",
+    "english": "insulator"
+  },
+  "definition": "전기 전도성이 작아 전류가 잘 흐르지 않는 물질. 유리·플라스틱·도자기가 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ins-band",
+      "text": "부도체는 원자가 띠가 전자로 꽉 차 있고 띠 간격이 매우 넓다.",
+      "form": {
+        "condition": "부도체의 에너지띠 구조를 볼 때",
+        "type": "causal",
+        "scope": "유리·플라스틱처럼 전기 전도성이 작은 고체"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 서술하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ins-nocurrent",
+      "text": "띠 간격이 너무 넓어 전압을 걸어도 전자가 전도띠로 올라가지 못해 전류가 흐르지 못한다.",
+      "form": {
+        "condition": "보통 세기의 전압을 걸었을 때",
+        "type": "causal",
+        "scope": "실온·보통 전압. 아주 높은 전압에서는 절연이 깨질 수 있다"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나지 않는 까닭을 대는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "부도체 안에는 움직일 수 있는 전자가 아예 하나도 없다",
+      "why_wrong": "전자는 있지만 원자가 띠가 꽉 차 있고 띠 간격이 넓어 옮겨 갈 자리가 없을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ins-band"
+    },
+    {
+      "text": "부도체에는 아무리 높은 전압을 걸어도 절대 전류가 흐르지 않는다",
+      "why_wrong": "충분히 높은 전압에서는 절연이 깨져 전류가 흐를 수 있다. 보통 조건에서 흐르지 않는다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ins-nocurrent"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-band-gap"
+    },
+    {
+      "type": "related",
+      "target": "phys-electrical-conductor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    176,
+    179
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "절연체"
+  ]
+}

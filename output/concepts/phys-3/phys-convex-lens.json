@@ -1,0 +1,111 @@
+{
+  "id": "phys-convex-lens",
+  "concept_key": "concept:convex-lens",
+  "registry_status": "new",
+  "term": "볼록 렌즈",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'볼록'은 고유어이고 '렌즈(lens)'는 음차어여서 표제어를 한자로 적을 수 없다.",
+    "english": "convex lens",
+    "symbol_display": "f",
+    "symbol_plain": "f"
+  },
+  "definition": "가운데가 가장자리보다 두꺼워서, 나란히 들어온 빛을 굴절시켜 한 점에 모으는 렌즈.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lens-focus",
+      "text": "광축에 나란하게 들어온 빛은 굴절한 뒤 초점이라는 한 점에 모인다.",
+      "form": {
+        "condition": "광축에 나란한 빛이 얇은 볼록 렌즈에 들어갈 때",
+        "type": "causal",
+        "scope": "얇은 볼록 렌즈. 오목 렌즈는 빛을 오히려 퍼뜨린다"
+      },
+      "invertible": false,
+      "invertible_reason": "빛이 모이는 자리를 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lens-reverse",
+      "text": "초점을 지나 렌즈로 들어간 빛은 굴절한 뒤 광축에 나란하게 나아간다.",
+      "form": {
+        "condition": "빛이 초점을 지나 볼록 렌즈로 들어갈 때",
+        "type": "causal",
+        "scope": "얇은 볼록 렌즈"
+      },
+      "invertible": false,
+      "invertible_reason": "빛이 나아가는 방향을 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lens-index",
+      "text": "곡면 모양이 같다면 굴절률이 큰 재료로 만든 렌즈일수록 초점 거리가 짧다.",
+      "form": {
+        "condition": "렌즈의 곡률이 같을 때",
+        "type": "inverse",
+        "scope": "얇은 렌즈. 재료의 굴절률만 달리 보는 경우",
+        "antecedent": {
+          "quantity": "렌즈 재료의 굴절률",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "초점 거리",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "굴절률이 크면 빛이 더 많이 꺾여 초점이 가까워지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "곡면 모양이 같다면 굴절률이 큰 재료로 만든 렌즈일수록 초점 거리가 길다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "볼록 렌즈에 들어온 빛은 어느 방향에서 오든 모두 초점 한 점에 모인다",
+      "why_wrong": "초점에 모이는 것은 광축에 나란하게 들어온 빛이다. 비스듬히 들어온 빛은 다른 자리에 모인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lens-focus"
+    },
+    {
+      "text": "볼록 렌즈의 초점은 렌즈 한쪽에만 있다",
+      "why_wrong": "빛은 양쪽 어디에서든 들어올 수 있으므로 초점은 렌즈 앞뒤로 같은 거리에 하나씩 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lens-reverse"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-refraction-of-light"
+    },
+    {
+      "type": "next",
+      "target": "phys-real-and-virtual-image"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-02",
+  "pages": [
+    148
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

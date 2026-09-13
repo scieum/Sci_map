@@ -1,0 +1,100 @@
+{
+  "id": "phys-rutherford-atomic-model",
+  "concept_key": "concept:rutherford-atomic-model",
+  "registry_status": "new",
+  "term": "러더퍼드 원자 모형",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 '러더퍼드'가 음차어여서 표제어 전체를 한자로 적을 수 없다.",
+    "english": "Rutherford atomic model"
+  },
+  "definition": "원자 가운데에 양전하가 몰린 아주 작은 원자핵이 있고 그 둘레를 전자가 도는 것으로 본 모형.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ram-scatter",
+      "text": "알파 입자 일부가 크게 튕겨 나온 것은 양전하가 아주 좁은 공간에 몰려 있기 때문이다.",
+      "form": {
+        "condition": "얇은 금박에 알파 입자를 쏘았을 때",
+        "type": "causal",
+        "scope": "알파 입자 산란 실험의 해석"
+      },
+      "invertible": false,
+      "invertible_reason": "실험 결과의 까닭을 대는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ram-problem",
+      "text": "고전 물리학대로라면 원운동하는 전자는 빛을 내며 에너지를 잃어 원자핵으로 끌려 들어간다.",
+      "form": {
+        "condition": "전자가 원자핵 둘레를 원운동한다고 볼 때",
+        "type": "causal",
+        "scope": "고전 전자기 이론을 그대로 적용했을 때 나오는 결론"
+      },
+      "invertible": false,
+      "invertible_reason": "이론에서 따라 나오는 결론을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ram-fail",
+      "text": "이 모형은 전자가 이어진 파장의 빛을 낸다고 보아 선스펙트럼을 설명하지 못한다.",
+      "form": {
+        "condition": "기체가 내는 빛을 설명하려 할 때",
+        "type": "causal",
+        "scope": "러더퍼드 모형의 한계"
+      },
+      "invertible": false,
+      "invertible_reason": "설명하지 못한다는 한계를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "알파 입자 산란 실험으로 전자가 어떤 궤도를 도는지까지 알아냈다",
+      "why_wrong": "이 실험이 보여 준 것은 양전하가 좁은 곳에 몰려 있다는 사실이고, 전자의 궤도는 알려 주지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ram-scatter"
+    },
+    {
+      "text": "러더퍼드 모형은 원자가 왜 무너지지 않는지도 잘 설명한다",
+      "why_wrong": "고전 물리학대로라면 전자가 빛을 내며 에너지를 잃어 원자가 무너져야 해서 오히려 설명하지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ram-problem"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-bohr-atomic-model"
+    },
+    {
+      "type": "related",
+      "target": "phys-line-spectrum"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-01",
+  "pages": [
+    170
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,100 @@
+{
+  "id": "phys-valence-band-and-conduction-band",
+  "concept_key": "concept:valence-band-and-conduction-band",
+  "registry_status": "new",
+  "term": "원자가 띠와 전도띠",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'띠'가 고유어여서 표제어 전체를 한자로 적을 수 없다. '원자가'와 '전도'만 原子價·傳導에 해당한다.",
+    "english": "valence band and conduction band"
+  },
+  "definition": "전자가 채워진 띠 가운데 가장 높은 것이 원자가 띠이고, 그보다 높으면서 비어 있는 띠가 전도띠다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-vcb-fill",
+      "text": "전자는 낮은 준위부터 차례로 채워지므로 채워진 띠 중 가장 높은 것이 원자가 띠가 된다.",
+      "form": {
+        "condition": "절대 온도 0 K에 가까운 상태에서",
+        "type": "causal",
+        "scope": "결정 고체의 에너지띠 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "채워지는 차례를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-vcb-conduction",
+      "text": "전자가 전도띠로 올라가면 빈 준위가 많아 고체 안을 자유롭게 옮겨 다닐 수 있다.",
+      "form": {
+        "condition": "전자가 원자가 띠에서 전도띠로 전이했을 때",
+        "type": "causal",
+        "scope": "전도띠에 빈 준위가 많은 보통의 고체"
+      },
+      "invertible": false,
+      "invertible_reason": "전이 뒤에 일어나는 일을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-vcb-full",
+      "text": "원자가 띠가 전자로 꽉 차 있으면 옮겨 갈 빈자리가 없어 전자가 이동하지 못한다.",
+      "form": {
+        "condition": "원자가 띠에 빈 준위가 없을 때",
+        "type": "causal",
+        "scope": "띠가 완전히 채워진 경우. 도체처럼 일부만 찬 경우는 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "조건에서 따라 나오는 결과를 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전도띠에는 전자가 하나도 없어서 어떤 경우에도 전류가 흐르지 못한다",
+      "why_wrong": "실온에서 에너지를 얻어 전도띠로 올라간 전자가 있으면 그 전자가 전류를 나른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vcb-conduction"
+    },
+    {
+      "text": "원자가 띠에 전자가 많이 차 있을수록 전류가 잘 흐른다",
+      "why_wrong": "꽉 찬 띠에서는 옮겨 갈 빈자리가 없어 오히려 흐르지 않는다. 중요한 것은 빈자리와 띠 간격이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vcb-full"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-energy-band"
+    },
+    {
+      "type": "next",
+      "target": "phys-band-gap"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    177
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

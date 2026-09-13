@@ -1,0 +1,120 @@
+{
+  "id": "phys-rfid-system",
+  "concept_key": "concept:rfid-system",
+  "registry_status": "new",
+  "term": "RFID 시스템",
+  "aliases": [
+    "무선 인식 시스템"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "Radio Frequency Identification 의 머리글자를 딴 영문 약어라 대응하는 한자어가 없다 (표기 정책 §4).",
+    "english": "RFID system",
+    "symbol_display": "RFID",
+    "symbol_plain": "RFID"
+  },
+  "definition": "리더와 태그가 닿지 않은 채 전자기 유도로 태그 쪽에 전류를 일으켜 정보를 주고받는 무선 인식 장치. 하이패스와 교통 카드가 이 방식이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rfid-contactless",
+      "text": "리더가 만든 자기장의 변화가 태그 속 코일에 전류를 유도하므로 둘이 닿지 않아도 정보가 오간다.",
+      "form": {
+        "condition": "태그가 리더의 인식 범위 안에 들어왔을 때",
+        "type": "causal",
+        "scope": "전자기 유도로 전력을 받는 무선 인식 태그"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rfid-no-battery",
+      "text": "교통 카드 속 회로는 전지 없이도 움직이는데, 단말기의 자기장 변화가 쓸 전류를 유도해 주기 때문이다.",
+      "form": {
+        "condition": "카드를 단말기에 가까이 댔을 때",
+        "type": "causal",
+        "scope": "전지를 품지 않은 수동형 태그"
+      },
+      "invertible": true,
+      "invertible_reason": "전류를 유도받아 움직이므로 전지가 있어야만 움직인다고 바꾸면 반드시 거짓이다.",
+      "inverted_text": "교통 카드는 안에 전지가 들어 있어야만 단말기와 정보를 주고받을 수 있다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-rfid-range",
+      "text": "리더에서 멀어질수록 태그에 유도되는 전류가 약해져 어느 거리를 넘으면 인식되지 않는다.",
+      "form": {
+        "condition": "리더의 출력을 그대로 둔 채 태그와의 거리만 늘릴 때",
+        "type": "inverse",
+        "scope": "전지를 품지 않은 수동형 태그",
+        "antecedent": {
+          "quantity": "리더와 태그 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "태그에 유도되는 전류의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀어지면 태그를 지나는 자기선속의 변화가 작아지므로 세진다고 바꾸면 반드시 거짓이다.",
+      "inverted_text": "리더에서 멀어질수록 태그에 유도되는 전류는 세진다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "교통 카드는 단말기에 직접 닿아야만 작동한다",
+      "why_wrong": "닿지 않아도 단말기가 만든 자기장의 변화가 카드 속 코일에 전류를 유도한다. 닿는 것이 조건이 아니라 가까이 있는 것이 조건이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rfid-contactless"
+    },
+    {
+      "text": "교통 카드 안에는 작은 전지가 들어 있어 그 힘으로 정보를 보낸다",
+      "why_wrong": "수동형 태그는 전지를 품지 않는다. 단말기 쪽 자기장이 변하면서 카드 속 코일에 유도 전류가 흐르고, 그 전류로 회로가 움직인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rfid-no-battery"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electromagnetic-induction"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-induced-current"
+    },
+    {
+      "type": "related",
+      "target": "phys-wireless-charging",
+      "note": "같은 기제를 전력 전달에 쓴 장치"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    123,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

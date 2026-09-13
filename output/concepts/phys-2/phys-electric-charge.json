@@ -1,0 +1,108 @@
+{
+  "id": "phys-electric-charge",
+  "concept_key": "concept:electric-charge",
+  "registry_status": "new",
+  "term": "전하",
+  "notation": {
+    "hanja": "電荷",
+    "english": "electric charge",
+    "hanja_gloss": "電 번개 전 · 荷 멜 하",
+    "symbol_display": "Q",
+    "symbol_plain": "Q"
+  },
+  "definition": "전기 현상의 원인이 되는 물질의 성질. 양과 음 두 종류가 있고, 그 양은 C(쿨롬) 단위로 잰다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-charge-force-source",
+      "text": "두 물체가 모두 전하를 띠고 있을 때라야 둘 사이에 전기력이 오간다.",
+      "form": {
+        "condition": "두 물체를 서로 가까이 두었을 때",
+        "type": "conditional",
+        "scope": "정지해 있는 대전체 사이"
+      },
+      "invertible": false,
+      "invertible_reason": "전하가 힘의 조건임을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-charge-friction",
+      "text": "두 물체를 마찰하면 전자가 한쪽에서 다른 쪽으로 옮겨 가, 전자를 얻은 쪽이 음전하를 띤다.",
+      "form": {
+        "condition": "서로 다른 두 물체를 마찰할 때",
+        "type": "causal",
+        "scope": "전자를 주고받는 절연체 사이의 마찰"
+      },
+      "invertible": true,
+      "invertible_reason": "전자를 얻은 쪽은 음전하가 남으므로 양전하로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 물체를 마찰하면 전자를 얻은 쪽이 양전하를 띤다."
+    },
+    {
+      "id": "rel-charge-neutral",
+      "text": "중성인 물체는 전하가 없는 것이 아니라 양전하량과 음전하량이 같아 알짜 전하가 0인 상태다.",
+      "form": {
+        "condition": "대전되지 않은 물체를 볼 때",
+        "type": "conditional",
+        "scope": "원자로 이루어진 보통의 물체"
+      },
+      "invertible": true,
+      "invertible_reason": "중성 물체 안에도 전하는 들어 있으므로 없다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중성인 물체 안에는 전하가 하나도 들어 있지 않다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마찰하면 없던 전하가 새로 만들어진다",
+      "why_wrong": "마찰로 전하가 생기는 것이 아니라 이미 물체 안에 있던 전자가 옮겨 가는 것이다. 두 물체의 전하량을 합하면 마찰 전과 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-charge-friction"
+    },
+    {
+      "text": "중성인 물체 안에는 전하가 하나도 없다",
+      "why_wrong": "중성은 양전하량과 음전하량이 같아 서로 상쇄된 상태일 뿐이고, 전하 자체는 물체 안에 그대로 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-charge-neutral"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-electric-force",
+      "note": "전하를 알아야 전하 사이의 힘을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-field"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-current"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    84
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

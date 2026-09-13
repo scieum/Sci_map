@@ -1,0 +1,102 @@
+{
+  "id": "phys-loudspeaker",
+  "concept_key": "concept:loudspeaker",
+  "registry_status": "new",
+  "term": "스피커",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "loudspeaker",
+    "hanja_note": "영어 speaker 를 그대로 받아 적은 외래어 표제어라 대응하는 한자가 없다."
+  },
+  "definition": "자석 속 코일에 소리 신호를 실은 전류를 흘려, 코일과 진동판을 함께 떨리게 해 소리를 내는 장치.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-speaker-vibrate",
+      "text": "코일에 흐르는 전류가 시시각각 바뀌면 코일이 받는 힘도 따라 바뀌어 붙어 있는 진동판이 떨린다.",
+      "form": {
+        "condition": "소리 신호를 실은 전류가 코일에 흐를 때",
+        "type": "causal",
+        "scope": "영구 자석과 코일로 이루어진 스피커"
+      },
+      "invertible": false,
+      "invertible_reason": "소리가 나는 과정을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-speaker-energy",
+      "text": "스피커는 전기 에너지를 진동판의 운동을 거쳐 소리 에너지로 바꾼다.",
+      "form": {
+        "condition": "스피커가 소리를 내는 동안",
+        "type": "causal",
+        "scope": "전류의 자기 작용을 쓰는 스피커"
+      },
+      "invertible": true,
+      "invertible_reason": "전기에서 소리로 가는 쪽이라 거꾸로 적으면 마이크가 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "스피커는 소리 에너지를 전기 에너지로 바꾸는 장치다."
+    },
+    {
+      "id": "rel-speaker-magnet",
+      "text": "영구 자석을 빼면 코일이 힘을 받지 못해 진동판이 떨리지 않는다.",
+      "form": {
+        "condition": "코일에 전류가 흐르고 있을 때",
+        "type": "conditional",
+        "scope": "자석과 코일로 이루어진 스피커"
+      },
+      "invertible": false,
+      "invertible_reason": "부품이 없을 때의 결과를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "스피커는 소리를 전기 신호로 바꾸는 장치다",
+      "why_wrong": "그것은 마이크가 하는 일이다. 스피커는 반대로 전기 신호를 받아 소리를 낸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-speaker-energy"
+    },
+    {
+      "text": "스피커에서는 코일만 움직이고 진동판은 가만히 있다",
+      "why_wrong": "진동판이 코일에 붙어 함께 떨려야 둘레의 공기가 흔들려 소리가 난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-speaker-vibrate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-effect-of-current"
+    },
+    {
+      "type": "related",
+      "target": "phys-electric-motor",
+      "note": "둘 다 코일이 받는 힘을 쓰는 장치다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-02",
+  "pages": [
+    118,
+    129
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

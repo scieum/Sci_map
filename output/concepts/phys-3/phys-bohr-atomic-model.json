@@ -1,0 +1,113 @@
+{
+  "id": "phys-bohr-atomic-model",
+  "concept_key": "concept:bohr-atomic-model",
+  "registry_status": "new",
+  "term": "보어 원자 모형",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 '보어'가 음차어여서 표제어 전체를 한자로 적을 수 없다.",
+    "english": "Bohr atomic model"
+  },
+  "definition": "러더퍼드 모형의 문제와 수소의 선스펙트럼을 함께 풀려고 보어가 내놓은 원자 모형.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bam-stable",
+      "text": "허용된 궤도에 있는 전자는 원운동을 하면서도 빛을 내지 않고 안정한 상태를 지킨다.",
+      "form": {
+        "condition": "전자가 허용된 궤도에 있을 때",
+        "type": "conditional",
+        "scope": "보어가 세운 가정. 고전 전자기 이론과는 어긋난다"
+      },
+      "invertible": false,
+      "invertible_reason": "가정의 내용을 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bam-jump",
+      "text": "전자가 궤도를 옮길 때 두 궤도의 에너지 차에 해당하는 빛을 내놓거나 흡수한다.",
+      "form": {
+        "condition": "전자가 한 궤도에서 다른 궤도로 옮겨 갈 때",
+        "type": "causal",
+        "scope": "보어 모형이 다루는 전이"
+      },
+      "invertible": false,
+      "invertible_reason": "주고받는 양을 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bam-limit",
+      "text": "이 모형은 수소의 선스펙트럼은 설명하지만 전자가 여럿인 원자는 설명하지 못한다.",
+      "form": {
+        "condition": "여러 원소의 선스펙트럼에 적용해 볼 때",
+        "type": "classification",
+        "scope": "보어 모형이 통하는 범위",
+        "antecedent": {
+          "quantity": "원자의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "설명 가능 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 말하는 명제여서 뒤집는다는 말이 성립하지 않는다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보어 모형은 모든 원자의 선스펙트럼을 설명한다",
+      "why_wrong": "수소처럼 전자가 하나인 경우에만 잘 맞고, 전자가 여럿인 원자의 스펙트럼은 설명하지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bam-limit"
+    },
+    {
+      "text": "전자는 궤도와 궤도 사이 아무 곳에나 머무를 수 있다",
+      "why_wrong": "보어 모형에서 전자는 허용된 궤도에만 있을 수 있고 그 사이에는 머무르지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bam-stable"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-line-spectrum"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-rutherford-atomic-model"
+    },
+    {
+      "type": "next",
+      "target": "phys-energy-level"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-01",
+  "pages": [
+    171,
+    172
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,110 @@
+{
+  "id": "phys-temperature",
+  "concept_key": "concept:temperature",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "온도",
+  "notation": {
+    "hanja": "溫度",
+    "hanja_gloss": "溫 따뜻할 온 · 度 법도 도",
+    "english": "temperature",
+    "symbol_display": "T",
+    "symbol_plain": "T"
+  },
+  "definition": "물체가 얼마나 뜨겁고 찬지를 수로 나타낸 값. 맞닿은 두 물체 사이에서 열이 어느 쪽으로 옮겨 갈지를 이 값의 대소가 정한다.",
+  "relations": [
+    {
+      "id": "rel-temp-average",
+      "text": "입자들의 평균 역학적 에너지가 클수록 물체의 온도가 높게 측정된다.",
+      "form": {
+        "condition": "같은 물질을 견줄 때",
+        "type": "direct",
+        "scope": "입자로 이루어진 물체에 한정한다",
+        "antecedent": {
+          "quantity": "입자의 평균 역학적 에너지",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도가 평균 운동 에너지를 나타내는 척도라 클수록 낮아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "입자들의 평균 역학적 에너지가 클수록 물체의 온도가 낮게 측정된다."
+    },
+    {
+      "id": "rel-temp-not-total",
+      "text": "온도가 같아도 양이 많은 쪽의 내부 에너지가 크므로 온도만으로 내부 에너지를 견줄 수 없다.",
+      "form": {
+        "condition": "온도가 같고 양이 다른 두 물체를 견줄 때",
+        "type": "conditional",
+        "scope": "같은 물질로 이루어진 두 물체에 한정한다",
+        "antecedent": {
+          "quantity": "물질의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내부 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇으로는 가릴 수 없는지를 밝힌 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온도가 높은 물체는 언제나 내부 에너지가 더 크다",
+      "why_wrong": "온도는 입자 하나당 평균값을 나타낸다. 미지근한 욕조 물이 뜨거운 찻잔 물보다 내부 에너지가 클 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-temp-not-total"
+    },
+    {
+      "text": "온도는 물체가 지닌 열의 양을 잰 값이다",
+      "why_wrong": "온도는 입자의 평균 운동 에너지를 나타내는 척도다. 열은 온도 차로 오가는 에너지이지 물체가 담고 있는 양이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-temp-average"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-internal-energy"
+    },
+    {
+      "type": "next",
+      "target": "phys-heat"
+    },
+    {
+      "type": "related",
+      "target": "phys-latent-heat"
+    }
+  ],
+  "curriculum": [
+    "12물리01-05"
+  ],
+  "topic_id": "phys-1-2-02",
+  "pages": [
+    63,
+    72
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

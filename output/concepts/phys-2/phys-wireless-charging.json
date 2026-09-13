@@ -1,0 +1,128 @@
+{
+  "id": "phys-wireless-charging",
+  "concept_key": "concept:wireless-charging",
+  "registry_status": "new",
+  "term": "무선 충전",
+  "notation": {
+    "hanja": "無線充電",
+    "english": "wireless charging",
+    "hanja_gloss": "無 없을 무 · 線 줄 선 · 充 채울 충 · 電 번개 전"
+  },
+  "definition": "충전 패드의 1차 코일과 기기 속 2차 코일 사이에서 전자기 유도로 전기 에너지를 건네주는 충전 방식. 두 회로를 전선으로 잇지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wc-varying",
+      "text": "1차 코일에 시간에 따라 변하는 전류를 흘려 줄 때에만 2차 코일에 전류가 유도된다.",
+      "form": {
+        "condition": "두 코일이 겹쳐 놓인 채 1차 코일에 전류를 흘릴 때",
+        "type": "conditional",
+        "scope": "코일 두 개로 전력을 주고받는 무선 충전 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "세기가 일정한 전류는 자기선속을 바꾸지 못해 유도 전류를 만들지 못하므로 반드시 거짓이 된다.",
+      "inverted_text": "1차 코일에 세기가 일정한 직류를 흘려 주어도 2차 코일에는 전류가 유도된다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wc-path",
+      "text": "두 코일을 잇는 도선이 없어도 에너지가 건너가는 까닭은 1차 코일이 만든 자기장의 변화가 2차 코일의 자기선속을 바꾸기 때문이다.",
+      "form": {
+        "condition": "두 코일이 전기적으로 이어져 있지 않을 때",
+        "type": "causal",
+        "scope": "전자기 유도로 전력을 전달하는 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wc-distance",
+      "text": "두 코일 사이를 벌릴수록 2차 코일로 건너가는 전기 에너지는 줄어든다.",
+      "form": {
+        "condition": "1차 코일에 같은 전류를 흘린 채 코일 사이 거리만 늘릴 때",
+        "type": "inverse",
+        "scope": "마주 놓인 1차·2차 코일",
+        "antecedent": {
+          "quantity": "두 코일 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "2차 코일로 전달되는 전기 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀어지면 2차 코일을 지나는 자기선속의 변화가 작아지므로 더 많이 전달된다고 바꾸면 반드시 거짓이다.",
+      "inverted_text": "두 코일 사이를 벌릴수록 2차 코일로 건너가는 전기 에너지는 많아진다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무선 충전은 전기가 공기 중을 건너 배터리로 곧장 흘러 들어가는 것이다",
+      "why_wrong": "전기가 그대로 날아가는 것이 아니라, 1차 코일이 만든 자기장의 변화가 2차 코일에 전류를 유도해 배터리를 채운다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wc-path"
+    },
+    {
+      "text": "충전 패드에 세기가 일정한 전류만 흘려 주어도 기기가 충전된다",
+      "why_wrong": "자기선속이 변하지 않으면 2차 코일에 유도 전류가 생기지 않는다. 그래서 충전 패드에는 변하는 전류를 흘린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wc-varying"
+    },
+    {
+      "text": "무선 충전은 거리가 얼마나 떨어져 있든 충전 속도가 같다",
+      "why_wrong": "코일이 멀어질수록 2차 코일을 지나는 자기선속의 변화가 작아져 전달되는 에너지가 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wc-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electromagnetic-induction"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-induced-current"
+    },
+    {
+      "type": "related",
+      "target": "phys-rfid-system",
+      "note": "같은 기제를 정보 전달에 쓴 장치"
+    },
+    {
+      "type": "related",
+      "target": "phys-magnetic-flux",
+      "note": "건너가는 에너지의 크기는 2차 코일의 자기선속 변화로 따진다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    122,
+    123,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

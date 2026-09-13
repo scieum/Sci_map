@@ -1,0 +1,141 @@
+{
+  "id": "phys-band-gap",
+  "concept_key": "concept:band-gap",
+  "registry_status": "new",
+  "term": "띠 간격",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'띠'가 고유어여서 표제어 전체를 한자로 적을 수 없다. '간격'만 間隔에 해당한다.",
+    "english": "band gap",
+    "symbol_display": "Eg",
+    "symbol_plain": "Eg"
+  },
+  "definition": "원자가 띠와 전도띠 사이에 놓인, 전자가 가질 수 없는 에너지 구간의 폭.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bg-transition",
+      "text": "띠 간격이 넓을수록 원자가 띠의 전자가 전도띠로 올라가기 어렵다.",
+      "form": {
+        "condition": "같은 온도에서 여러 고체를 견줄 때",
+        "type": "direct",
+        "scope": "결정 고체. 온도가 달라지면 견주는 조건이 달라진다",
+        "antecedent": {
+          "quantity": "띠 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전도띠로 전이하는 데 드는 어려움",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "간격이 넓으면 필요한 에너지가 커지므로 '쉽다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "띠 간격이 넓을수록 원자가 띠의 전자가 전도띠로 올라가기 쉽다."
+    },
+    {
+      "id": "rel-bg-conductivity",
+      "text": "같은 온도라면 띠 간격이 넓은 고체일수록 전기 전도성이 작다.",
+      "form": {
+        "condition": "실온처럼 온도가 같은 조건에서",
+        "type": "inverse",
+        "scope": "결정 고체끼리의 전기 전도성 비교",
+        "antecedent": {
+          "quantity": "띠 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기 전도성",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "간격과 전도성이 반대로 움직이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 온도라면 띠 간격이 넓은 고체일수록 전기 전도성이 크다."
+    },
+    {
+      "id": "rel-bg-classify",
+      "text": "띠 간격의 크기가 고체를 도체·반도체·부도체로 가르는 잣대가 된다.",
+      "form": {
+        "condition": "고체의 에너지띠 구조를 볼 때",
+        "type": "classification",
+        "scope": "결정 고체의 분류",
+        "antecedent": {
+          "quantity": "띠 간격",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "고체의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 잣대를 말하는 명제여서 뒤집을 방향이 분명하지 않다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "띠 간격은 물질에 상관없이 늘 같은 값이다",
+      "why_wrong": "규소·저마늄·다이아몬드처럼 물질마다 띠 간격이 달라, 그 차이가 전기 전도성의 차이를 만든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bg-classify"
+    },
+    {
+      "text": "띠 간격이 넓으면 전자가 더 쉽게 전도띠로 올라간다",
+      "why_wrong": "간격이 넓을수록 전이에 필요한 에너지가 커져 올라가기 어렵다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bg-transition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-valence-band-and-conduction-band"
+    },
+    {
+      "type": "next",
+      "target": "phys-electrical-conductor"
+    },
+    {
+      "type": "next",
+      "target": "phys-electrical-insulator"
+    },
+    {
+      "type": "next",
+      "target": "phys-semiconductor"
+    },
+    {
+      "type": "next",
+      "target": "phys-light-emitting-diode"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    177,
+    178
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

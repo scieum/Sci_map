@@ -1,0 +1,139 @@
+{
+  "id": "phys-parallel-connection-of-resistor",
+  "concept_key": "concept:parallel-connection-of-resistor",
+  "registry_status": "new",
+  "term": "저항의 병렬연결",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "parallel connection of resistors",
+    "hanja_note": "조사 '의'가 들어간 구 형태의 표제어라 전체를 한자로 옮기지 않는다. '저항'은 抵抗, '병렬연결'은 竝列連結이다."
+  },
+  "definition": "전류가 여러 갈래로 나뉘어 흐르도록 저항을 나란히 잇는 연결. 전체 저항은 어느 저항값보다도 작아진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-parallel-voltage",
+      "text": "병렬로 이은 저항에는 저항값이 서로 달라도 모두 같은 크기의 전압이 걸린다.",
+      "form": {
+        "condition": "각 저항의 양끝이 같은 두 지점에 이어져 있을 때",
+        "type": "conditional",
+        "scope": "저항만으로 이루어진 병렬 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "양끝이 같은 두 점이라 전압이 갈린다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "병렬로 이은 저항 가운데 저항값이 큰 쪽에 더 큰 전압이 걸린다."
+    },
+    {
+      "id": "rel-parallel-total",
+      "text": "병렬로 잇는 저항의 개수를 늘리면 회로 전체의 저항값은 오히려 작아진다.",
+      "form": {
+        "condition": "같은 두 지점 사이에 저항을 더 이을 때",
+        "type": "inverse",
+        "scope": "저항만 병렬로 이은 회로",
+        "antecedent": {
+          "quantity": "병렬로 이은 저항의 개수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전체 저항값",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류가 지날 길이 늘어 저항이 줄므로 커진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "병렬로 잇는 저항의 개수를 늘리면 회로 전체의 저항값이 커진다."
+    },
+    {
+      "id": "rel-parallel-power",
+      "text": "전원의 전압이 그대로일 때 병렬 저항을 더 이으면 전체 전류와 전체 소비 전력이 커진다.",
+      "form": {
+        "condition": "전원의 전압이 일정할 때",
+        "type": "direct",
+        "scope": "저항만 병렬로 이은 회로",
+        "antecedent": {
+          "quantity": "병렬로 이은 저항의 개수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전체 소비 전력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전체 저항이 줄어 전류가 늘므로 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전원의 전압이 일정할 때 병렬 저항을 더 이으면 전체 소비 전력이 작아진다."
+    },
+    {
+      "id": "rel-parallel-ratio",
+      "text": "병렬 회로에서 각 저항이 쓰는 전력의 비는 저항값의 역수비와 같다.",
+      "form": {
+        "condition": "각 저항에 걸리는 전압이 같을 때",
+        "type": "inverse",
+        "scope": "저항만 병렬로 이은 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "전압이 같으므로 전력은 저항값에 반비례하고, 저항값의 비라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "병렬 회로에서 각 저항이 쓰는 전력의 비는 저항값의 비와 같다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "저항을 병렬로 더 이으면 전체 저항이 커진다",
+      "why_wrong": "전류가 흐를 길이 늘어나는 셈이라 전체 저항은 줄고, 그만큼 전체 전류는 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-parallel-total"
+    },
+    {
+      "text": "병렬 회로에서는 저항이 큰 쪽이 전력을 더 많이 쓴다",
+      "why_wrong": "걸리는 전압이 같으므로 저항이 작은 쪽에 전류가 많이 흘러 전력을 더 많이 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-parallel-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-ohm-law"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-electric-power-consumption"
+    },
+    {
+      "type": "next",
+      "target": "phys-electrical-safety"
+    }
+  ],
+  "curriculum": [
+    "12물리02-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-02",
+  "pages": [
+    95,
+    96
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

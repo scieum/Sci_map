@@ -1,0 +1,129 @@
+{
+  "id": "phys-heat-transfer",
+  "concept_key": "concept:heat-transfer",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "열전달",
+  "aliases": [
+    "열의 전달",
+    "전도·대류·복사"
+  ],
+  "notation": {
+    "hanja": "熱傳達",
+    "hanja_gloss": "熱 더울 열 · 傳 전할 전 · 達 통달할 달",
+    "english": "heat transfer"
+  },
+  "definition": "열이 옮겨 가는 길을 전도·대류·복사 셋으로 갈라 보는 틀. 매질의 상태와 매질이 있는지 없는지에 따라 방식이 갈린다.",
+  "relations": [
+    {
+      "id": "rel-ht-conduction",
+      "text": "고체에서는 이웃한 입자끼리 부딪치며 차례로 에너지를 넘겨주는 전도가 주로 일어난다.",
+      "form": {
+        "condition": "매질이 고체일 때",
+        "type": "classification",
+        "scope": "입자가 제자리에서 진동하는 물질에 한정한다",
+        "antecedent": {
+          "quantity": "매질의 상태",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "열전달 방식",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 전달 방식의 이름을 맞바꾸면 반드시 거짓이 된다. 고체에서는 입자가 제자리에서 진동할 뿐 직접 옮겨 다니지 않는다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고체에서는 입자가 직접 옮겨 다니며 에너지를 나르는 대류가 주로 일어난다."
+    },
+    {
+      "id": "rel-ht-convection",
+      "text": "액체나 기체에서는 데워져 밀도가 작아진 부분이 위로 올라가면서 에너지가 옮겨 간다.",
+      "form": {
+        "condition": "유체가 자유롭게 움직일 수 있을 때",
+        "type": "causal",
+        "scope": "중력이 작용하는 곳의 액체와 기체에 한정한다",
+        "antecedent": {
+          "quantity": "데워진 부분의 밀도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "위로 올라가는 흐름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "데워진 유체는 가벼워져 반드시 떠오르므로 내려간다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "데워져 밀도가 작아진 유체는 아래로 내려가고 찬 유체가 위로 올라간다."
+    },
+    {
+      "id": "rel-ht-radiation",
+      "text": "표면 상태가 같다면 온도가 높은 물체일수록 전자기파 형태로 더 많은 에너지를 내보낸다.",
+      "form": {
+        "condition": "물체의 표면 상태가 같을 때",
+        "type": "direct",
+        "scope": "복사로 에너지를 내보내는 모든 물체에 두루 성립한다",
+        "antecedent": {
+          "quantity": "물체의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "복사로 방출하는 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "복사로 나가는 에너지는 온도가 오를수록 늘어나므로 줄어든다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 상태가 같다면 온도가 높은 물체일수록 복사로 내보내는 에너지가 적다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주전자의 물은 전도로만 데워진다",
+      "why_wrong": "액체에서는 데워진 물이 떠오르고 찬물이 내려오는 대류가 열을 옮기는 주된 길이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ht-convection"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-heat"
+    },
+    {
+      "type": "related",
+      "target": "phys-temperature"
+    },
+    {
+      "type": "related",
+      "target": "phys-internal-energy"
+    }
+  ],
+  "curriculum": [
+    "12물리01-05"
+  ],
+  "topic_id": "phys-1-2-02",
+  "pages": [
+    64,
+    72
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

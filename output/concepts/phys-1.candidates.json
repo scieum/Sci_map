@@ -1,0 +1,975 @@
+{
+  "unit_id": "phys-1",
+  "subject": "물리학",
+  "unit_title": "Ⅰ. 힘과 에너지",
+  "generated_at": "2026-09-13",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/phys-1/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "phys-torque",
+      "term": "돌림힘",
+      "aliases": ["토크"],
+      "term_en": "torque",
+      "concept_key": "concept:torque",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [22, 23, 48],
+      "topic_id": "phys-1-1-01",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 22, "block_id": "p22-b13", "hint": "회전을 일으키는 힘 도입 물음" },
+        { "page": 23, "block_id": "p23-b2", "hint": "돌림힘 정의와 크기 결정 요인" },
+        { "page": 48, "block_id": "p48-b3", "hint": "중단원 정리 1항" }
+      ],
+      "relation_seeds": [
+        "회전축에서 떨어진 거리와 돌림힘 크기",
+        "수직 성분 힘의 크기와 돌림힘 크기",
+        "돌림힘과 에너지의 구별(단위가 같아도 다른 양)"
+      ],
+      "note": "p23 곁주가 돌림힘을 에너지로 오해하는 것을 경고한다 — C2 가 명제로 살릴 자리."
+    },
+    {
+      "id": "phys-torque-equilibrium",
+      "term": "돌림힘의 평형",
+      "aliases": [],
+      "term_en": "equilibrium of torques",
+      "concept_key": "concept:torque-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [24, 25, 48],
+      "topic_id": "phys-1-1-01",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 24, "block_id": "p24-b30", "hint": "지레 수평 유지 조건 토의" },
+        { "page": 25, "block_id": "p25-b2", "hint": "돌림힘 크기가 같을 때 회전 없음" },
+        { "page": 25, "block_id": "p25-b9", "hint": "돌림힘 평형 조건 관계" }
+      ],
+      "relation_seeds": [
+        "양쪽 돌림힘 크기가 같을 때 회전 여부",
+        "시계 방향과 반시계 방향 돌림힘의 부호"
+      ]
+    },
+    {
+      "id": "phys-equilibrium-condition",
+      "term": "물체의 평형 조건",
+      "aliases": ["평형 조건", "평형 상태"],
+      "term_en": "condition for equilibrium",
+      "concept_key": "concept:condition-for-equilibrium",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [25, 48],
+      "topic_id": "phys-1-1-01",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 25, "block_id": "p25-b17", "hint": "알짜힘 0이어도 회전하는 경우" },
+        { "page": 25, "block_id": "p25-b21", "hint": "힘의 평형과 돌림힘의 평형" },
+        { "page": 48, "block_id": "p48-b4", "hint": "중단원 정리 2항" }
+      ],
+      "relation_seeds": [
+        "알짜힘 0과 돌림힘 합 0의 동시 성립",
+        "알짜힘만 0일 때 회전 운동 발생",
+        "정지 상태와 등속도 운동 모두 평형"
+      ],
+      "note": "p25 곁주가 '정지할 때만 평형이다' 를 오개념으로 지목한다. 힘의 평형은 따로 카드로 만들지 않고 이 카드 안에 둔다."
+    },
+    {
+      "id": "phys-center-of-gravity",
+      "term": "무게 중심",
+      "aliases": [],
+      "term_en": "center of gravity",
+      "concept_key": "concept:center-of-gravity",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [26, 27],
+      "topic_id": "phys-1-1-01",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 26, "block_id": "p26-b14", "hint": "전체 무게가 작용한다고 보는 점" },
+        { "page": 26, "block_id": "p26-b20", "hint": "두 점 매달아 찾는 방법 그림" },
+        { "page": 27, "block_id": "p27-b36", "hint": "개념확인 1번 빈칸" }
+      ],
+      "relation_seeds": [
+        "물체를 떠받치는 한 점과 무게 중심",
+        "두 연직선의 교점과 무게 중심 위치"
+      ]
+    },
+    {
+      "id": "phys-stability-of-object",
+      "term": "물체의 안정성",
+      "aliases": ["안정성", "구조물의 안정성"],
+      "term_en": "stability of an object",
+      "concept_key": "concept:stability-of-object",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [27, 28, 29],
+      "topic_id": "phys-1-1-01",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 27, "block_id": "p27-b20", "hint": "무게 중심과 받침면 관계 서술" },
+        { "page": 28, "block_id": "p28-b9", "hint": "구조물 안정성에 영향을 주는 요인" },
+        { "page": 29, "block_id": "p29-b1", "hint": "고층 건물·사탑 안정성 설명" }
+      ],
+      "relation_seeds": [
+        "무게 중심 높이와 안정성",
+        "받침면 넓이와 안정성",
+        "무게 중심이 받침면을 벗어날 때 돌림힘과 전도"
+      ]
+    },
+    {
+      "id": "phys-acceleration",
+      "term": "가속도",
+      "aliases": [],
+      "term_en": "acceleration",
+      "concept_key": "concept:acceleration",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [30, 32, 48],
+      "topic_id": "phys-1-1-02",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-02"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 30, "block_id": "p30-b19", "hint": "단위 시간당 속도 변화량" },
+        { "page": 30, "block_id": "p30-b23", "hint": "가속도 방향과 속도 방향 비교" },
+        { "page": 48, "block_id": "p48-b15", "hint": "중단원 정리 가속도 항" }
+      ],
+      "relation_seeds": [
+        "알짜힘 작용과 속도 변화",
+        "속도가 느려질 때 가속도 방향"
+      ],
+      "note": "통합과학1 자기 점검(p20)이 가속도를 선수 개념으로 표시하지만 이 소단원이 정의를 다시 세운다. 통합과학1 에는 같은 표제어 카드가 없어 키를 새로 지었다."
+    },
+    {
+      "id": "phys-uniformly-accelerated-linear-motion",
+      "term": "등가속도 직선 운동",
+      "aliases": ["등가속도 운동"],
+      "term_en": "uniformly accelerated linear motion",
+      "concept_key": "concept:uniformly-accelerated-linear-motion",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [32, 48],
+      "topic_id": "phys-1-1-02",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-02"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 32, "block_id": "p32-b2", "hint": "일정한 힘과 일정한 속도 변화" },
+        { "page": 32, "block_id": "p32-b37", "hint": "시간·가속도, 시간·속도 그래프 해석" },
+        { "page": 48, "block_id": "p48-b20", "hint": "중단원 정리 관계식 세 줄" }
+      ],
+      "relation_seeds": [
+        "시간·속도 그래프 기울기와 가속도",
+        "시간·가속도 그래프 넓이와 속도 변화량",
+        "시간·속도 그래프 넓이와 변위"
+      ],
+      "note": "★관계식은 전용 글꼴이 깨져 나온다(`v`=`v0`+`at`). 정의와 명제를 말로 세우고 식은 C7 그림(p32 그림 I-9)으로 붙인다."
+    },
+    {
+      "id": "phys-newton-second-law",
+      "term": "뉴턴 제2법칙",
+      "aliases": ["가속도 법칙", "뉴턴 운동 제2법칙"],
+      "term_en": "Newton's second law of motion",
+      "concept_key": "concept:newton-second-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [33, 48, 74],
+      "topic_id": "phys-1-1-02",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 33, "block_id": "p33-b54", "hint": "힘·질량을 바꿀 때 가속도 변화" },
+        { "page": 33, "block_id": "p33-b95", "hint": "가속도 법칙 진술" },
+        { "page": 74, "block_id": "p74-b9", "hint": "대단원 개념 연결 짓기" }
+      ],
+      "relation_seeds": [
+        "알짜힘 크기와 가속도 크기",
+        "질량과 가속도 크기",
+        "1 N 의 정의와 질량·가속도"
+      ]
+    },
+    {
+      "id": "phys-braking-distance",
+      "term": "제동 거리",
+      "aliases": [],
+      "term_en": "braking distance",
+      "concept_key": "concept:braking-distance",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [34, 35],
+      "topic_id": "phys-1-1-02",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-02"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 34, "block_id": "p34-b10", "hint": "정지까지 이동한 거리 정의" },
+        { "page": 34, "block_id": "p34-b12", "hint": "속도 제곱 비례·가속도 감소 논의" },
+        { "page": 35, "block_id": "p35-b8", "hint": "질량이 클 때 제동 거리" }
+      ],
+      "relation_seeds": [
+        "처음 속도의 제곱과 제동 거리",
+        "가속도 크기와 제동 거리",
+        "질량과 제동 거리(같은 힘일 때)"
+      ],
+      "note": "성취기준 12물리01-02 의 '교통안전 사고 예방에 적용' 이 걸리는 자리다."
+    },
+    {
+      "id": "phys-force-interaction",
+      "term": "힘의 상호작용",
+      "aliases": ["상호작용하는 힘"],
+      "term_en": "force as an interaction",
+      "concept_key": "concept:force-interaction",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [36, 37, 39],
+      "topic_id": "phys-1-1-03",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 36, "block_id": "p36-b11", "hint": "힘은 두 물체 사이의 상호작용" },
+        { "page": 37, "block_id": "p37-b1", "hint": "한 쌍으로 존재하며 다른 물체에 작용" },
+        { "page": 39, "block_id": "p39-b25", "hint": "떨어져 있어도 상호작용하는 힘" }
+      ],
+      "relation_seeds": [
+        "힘의 존재와 두 물체",
+        "접촉하지 않은 두 물체 사이의 상호작용"
+      ]
+    },
+    {
+      "id": "phys-action-reaction-law",
+      "term": "작용 반작용 법칙",
+      "aliases": ["뉴턴 제3법칙", "작용과 반작용"],
+      "term_en": "Newton's third law of motion",
+      "concept_key": "concept:action-reaction-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [37, 39, 48],
+      "topic_id": "phys-1-1-03",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 37, "block_id": "p37-b5", "hint": "두 힘의 크기·방향 관계" },
+        { "page": 37, "block_id": "p37-b7", "hint": "뉴턴 제3법칙 진술 상자" },
+        { "page": 48, "block_id": "p48-b72", "hint": "중단원 정리 3항" }
+      ],
+      "relation_seeds": [
+        "작용하는 힘과 반작용하는 힘의 크기·방향",
+        "두 힘이 작용하는 물체가 서로 다름",
+        "떨어져 있는 두 물체에서도 성립"
+      ]
+    },
+    {
+      "id": "phys-action-reaction-vs-force-balance",
+      "term": "작용 반작용과 힘의 평형의 구별",
+      "aliases": [],
+      "term_en": "action-reaction pair versus balanced forces",
+      "concept_key": "concept:action-reaction-vs-force-balance",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [39],
+      "topic_id": "phys-1-1-03",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03", "12물리01-01"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 39, "block_id": "p39-b2", "hint": "두 관계의 작용 대상 비교" },
+        { "page": 39, "block_id": "p39-b15", "hint": "드론에 작용하는 네 힘" },
+        { "page": 39, "block_id": "p39-b21", "hint": "그림 속 두 관계의 짝 표시" }
+      ],
+      "relation_seeds": [
+        "한 물체에 작용하는가 두 물체에 작용하는가",
+        "합성할 수 있는 두 힘과 없는 두 힘"
+      ],
+      "note": "개념이라기보다 두 개념의 구별이지만 이 단원의 대표 오개념 지점이라 카드로 남긴다. C8 에서 지울 만하면 지운다."
+    },
+    {
+      "id": "phys-momentum",
+      "term": "운동량",
+      "aliases": [],
+      "term_en": "momentum",
+      "concept_key": "concept:momentum",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [40, 48],
+      "topic_id": "phys-1-1-04",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 40, "block_id": "p40-b12", "hint": "운동 정도를 나타내는 물리량" },
+        { "page": 40, "block_id": "p40-b17", "hint": "단위·방향과 운동량 변화량" },
+        { "page": 48, "block_id": "p48-b73", "hint": "중단원 정리 4항" }
+      ],
+      "relation_seeds": [
+        "질량·속도와 운동량 크기",
+        "운동량의 방향과 속도의 방향",
+        "속도 변화와 운동량 변화량"
+      ],
+      "note": "통합과학1 카드 isci1-momentum 이 같은 concept_key 를 쓰고 있다 — G3 에서 한 키로 묶일 자리다. 운동량의 변화량은 별도 카드로 쪼개지 않고 이 카드에 둔다."
+    },
+    {
+      "id": "phys-impulse",
+      "term": "충격량",
+      "aliases": [],
+      "term_en": "impulse",
+      "concept_key": "concept:impulse",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [40, 41],
+      "topic_id": "phys-1-1-04",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 40, "block_id": "p40-b21", "hint": "뉴턴 제2법칙에서 힘 표현 유도" },
+        { "page": 41, "block_id": "p41-b1", "hint": "힘과 작용 시간의 곱" },
+        { "page": 41, "block_id": "p41-b3", "hint": "시간·힘 그래프 넓이와 단위" }
+      ],
+      "relation_seeds": [
+        "힘의 크기·작용 시간과 충격량",
+        "시간·힘 그래프 넓이와 충격량",
+        "충격량의 방향과 힘의 방향"
+      ],
+      "note": "통합과학1 카드 isci1-impulse 와 같은 concept_key 다."
+    },
+    {
+      "id": "phys-impulse-momentum-relation",
+      "term": "운동량과 충격량의 관계",
+      "aliases": ["충격량과 운동량의 변화량"],
+      "term_en": "impulse-momentum relation",
+      "concept_key": "concept:impulse-momentum-relation",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [41],
+      "topic_id": "phys-1-1-04",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 41, "block_id": "p41-b2", "hint": "충격량과 운동량 변화량 등식" },
+        { "page": 41, "block_id": "p41-b14", "hint": "충돌 시간과 평균 힘 크기" },
+        { "page": 41, "block_id": "p41-b24", "hint": "개념확인 빈칸 문항" }
+      ],
+      "relation_seeds": [
+        "받은 충격량과 운동량 변화량",
+        "충격량이 같을 때 작용 시간과 평균 힘",
+        "힘 작용 시간을 늘리는 장치와 받는 힘"
+      ],
+      "note": "통합과학1 카드 isci1-impulse-momentum-relation 과 표제어·키가 같다 — 같은 개념으로 이어질 자리."
+    },
+    {
+      "id": "phys-momentum-conservation-law",
+      "term": "운동량 보존 법칙",
+      "aliases": [],
+      "term_en": "law of conservation of momentum",
+      "concept_key": "concept:momentum-conservation-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [42, 44, 45, 48],
+      "topic_id": "phys-1-1-04",
+      "section_id": "phys-1-1",
+      "curriculum": ["12물리01-03"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 44, "block_id": "p44-b26", "hint": "작용 반작용에서 식 유도" },
+        { "page": 44, "block_id": "p44-b30", "hint": "보존 법칙 진술과 성립 범위" },
+        { "page": 42, "block_id": "p42-b9", "hint": "충돌 전후 운동량 합 탐구 물음" }
+      ],
+      "relation_seeds": [
+        "외부 힘이 없을 때 충돌 전후 운동량의 합",
+        "작용 반작용 법칙과 운동량 보존",
+        "폭발·분리·결합에서도 성립"
+      ]
+    },
+    {
+      "id": "phys-work",
+      "term": "일",
+      "aliases": ["일(work)"],
+      "term_en": "work",
+      "concept_key": "concept:work-physics",
+      "registry_status": "new",
+      "homonym_flag": true,
+      "pages": [53, 54],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 53, "block_id": "p53-b38", "hint": "연계 학습 곁주의 일 정의" },
+        { "page": 53, "block_id": "p53-b21", "hint": "힘·이동 거리 그래프 넓이" },
+        { "page": 54, "block_id": "p54-b7", "hint": "중력에 대해 한 일" }
+      ],
+      "relation_seeds": [
+        "힘의 크기·힘 방향 이동 거리와 일",
+        "힘·이동 거리 그래프 넓이와 일의 양",
+        "일과 열은 에너지가 전달되는 방식"
+      ],
+      "note": "★homonyms.yaml watch_terms 의 '일'. 키는 그 파일이 물리학 sense 로 적어 둔 concept:work-physics 를 따랐다. 표기가 짧아 오탐이 잦으니 링크 판정은 G3 사람 게이트로 넘긴다."
+    },
+    {
+      "id": "phys-work-energy-theorem",
+      "term": "일·운동 에너지 정리",
+      "aliases": ["일과 운동 에너지의 관계"],
+      "term_en": "work-energy theorem",
+      "concept_key": "concept:work-energy-theorem",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [52, 53],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 52, "block_id": "p52-b17", "hint": "소단원 학습 목표" },
+        { "page": 53, "block_id": "p53-b21", "hint": "알짜힘이 한 일과 운동 에너지 변화" },
+        { "page": 53, "block_id": "p53-b30", "hint": "개념확인 빈칸 문항" }
+      ],
+      "relation_seeds": [
+        "알짜힘이 한 일과 운동 에너지 변화량",
+        "운동 방향으로 힘이 작용할 때 속력 변화"
+      ],
+      "note": "운동 에너지는 중3 선수 개념(p53 연계 학습 곁주)이라 따로 카드로 만들지 않고 이 카드 안에서 다룬다."
+    },
+    {
+      "id": "phys-gravitational-potential-energy",
+      "term": "중력에 의한 위치 에너지",
+      "aliases": [],
+      "term_en": "gravitational potential energy",
+      "concept_key": "concept:gravitational-potential-energy",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [54, 72],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 54, "block_id": "p54-b7", "hint": "중력에 대해 한 일과 위치 에너지" },
+        { "page": 54, "block_id": "p54-b11", "hint": "기준점에 따라 값이 달라짐" },
+        { "page": 72, "block_id": "p72-b3", "hint": "중단원 정리 1항" }
+      ],
+      "relation_seeds": [
+        "질량·높이와 중력에 의한 위치 에너지",
+        "기준점 선택과 위치 에너지 값",
+        "낙하할 때 감소한 위치 에너지와 할 수 있는 일"
+      ]
+    },
+    {
+      "id": "phys-elastic-force",
+      "term": "탄성력",
+      "aliases": [],
+      "term_en": "elastic force",
+      "concept_key": "concept:elastic-force",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [56],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 56, "block_id": "p56-b3", "hint": "평형 위치로 되돌아가려는 힘" },
+        { "page": 56, "block_id": "p56-b6", "hint": "용수철 상수 곁주" },
+        { "page": 56, "block_id": "p56-b13", "hint": "부호가 뜻하는 방향 관계" }
+      ],
+      "relation_seeds": [
+        "변형된 길이와 탄성력의 크기",
+        "탄성력의 방향과 변형 방향",
+        "용수철 상수와 탄성력"
+      ],
+      "note": "평형 위치·용수철 상수는 이 카드 안에 둔다(각각 p56 곁주)."
+    },
+    {
+      "id": "phys-elastic-potential-energy",
+      "term": "탄성력에 의한 위치 에너지",
+      "aliases": [],
+      "term_en": "elastic potential energy",
+      "concept_key": "concept:elastic-potential-energy",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [56, 72],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 56, "block_id": "p56-b32", "hint": "탄성력에 대해 한 일" },
+        { "page": 56, "block_id": "p56-b33", "hint": "저장된 에너지의 정의" },
+        { "page": 72, "block_id": "p72-b7", "hint": "중단원 정리 2항" }
+      ],
+      "relation_seeds": [
+        "용수철 상수·변형된 길이와 탄성 위치 에너지",
+        "힘·늘어난 길이 그래프 넓이와 저장된 에너지",
+        "평형 위치에서의 탄성 위치 에너지 값"
+      ]
+    },
+    {
+      "id": "phys-mechanical-energy",
+      "term": "역학적 에너지",
+      "aliases": [],
+      "term_en": "mechanical energy",
+      "concept_key": "concept:mechanical-energy",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [55, 57, 59],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 55, "block_id": "p55-b1", "hint": "운동 에너지와 위치 에너지의 합" },
+        { "page": 57, "block_id": "p57-b41", "hint": "탄성 위치 에너지를 포함한 합" },
+        { "page": 59, "block_id": "p59-b21", "hint": "세 에너지의 합이 일정" }
+      ],
+      "relation_seeds": [
+        "운동 에너지와 위치 에너지의 합",
+        "중력·탄성력이 함께 작용할 때 역학적 에너지의 구성"
+      ]
+    },
+    {
+      "id": "phys-mechanical-energy-conservation-law",
+      "term": "역학적 에너지 보존 법칙",
+      "aliases": [],
+      "term_en": "law of conservation of mechanical energy",
+      "concept_key": "concept:mechanical-energy-conservation-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [55, 59, 72],
+      "topic_id": "phys-1-2-01",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 55, "block_id": "p55-b1", "hint": "마찰·공기 저항 없을 때 일정" },
+        { "page": 55, "block_id": "p55-b2", "hint": "보존 법칙 진술 상자" },
+        { "page": 72, "block_id": "p72-b8", "hint": "중단원 정리 3항" }
+      ],
+      "relation_seeds": [
+        "마찰·공기 저항이 없을 때 역학적 에너지의 총량",
+        "높이가 낮아질 때 위치 에너지와 운동 에너지의 교환",
+        "용수철에 매달린 물체의 진동에서 세 에너지의 합"
+      ]
+    },
+    {
+      "id": "phys-transformation-of-mechanical-energy",
+      "term": "역학적 에너지의 전환",
+      "aliases": [],
+      "term_en": "transformation of mechanical energy",
+      "concept_key": "concept:transformation-of-mechanical-energy",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [60, 61],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 61, "block_id": "p61-b2", "hint": "마찰·공기 저항과 역학적 에너지 감소" },
+        { "page": 61, "block_id": "p61-b3", "hint": "한 일의 양과 감소량 등식" },
+        { "page": 61, "block_id": "p61-b5", "hint": "소리·빛도 결국 열로 흩어짐" }
+      ],
+      "relation_seeds": [
+        "마찰력·공기 저항이 한 일과 역학적 에너지 감소량",
+        "감소한 역학적 에너지와 발생한 열",
+        "비비는 빠르기와 발생하는 열의 양"
+      ]
+    },
+    {
+      "id": "phys-energy-conservation-law",
+      "term": "에너지 보존 법칙",
+      "aliases": [],
+      "term_en": "law of conservation of energy",
+      "concept_key": "concept:energy-conservation-law",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [62, 72],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 62, "block_id": "p62-b3", "hint": "줄의 실험과 역학적 일·열량" },
+        { "page": 62, "block_id": "p62-b12", "hint": "전환되어도 총량은 일정" },
+        { "page": 72, "block_id": "p72-b12", "hint": "중단원 정리 에너지 보존 항" }
+      ],
+      "relation_seeds": [
+        "에너지 전환 과정과 에너지 총량",
+        "역학적 일과 전환된 열량의 비례",
+        "역학적 에너지가 보존되지 않을 때에도 총량은 보존"
+      ],
+      "note": "통합과학2 카드 isci2-energy-conservation-law 가 같은 concept_key 를 쓴다 — G3 에서 한 키로 묶일 자리다."
+    },
+    {
+      "id": "phys-internal-energy",
+      "term": "내부 에너지",
+      "aliases": [],
+      "term_en": "internal energy",
+      "concept_key": "concept:internal-energy",
+      "registry_status": "reused",
+      "same_candidate": ["mate-internal-energy"],
+      "homonym_flag": false,
+      "pages": [63],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 63, "block_id": "p63-b3", "hint": "무작위 운동 에너지의 총합" },
+        { "page": 63, "block_id": "p63-b5", "hint": "물체 자체의 역학적 에너지와 구별" },
+        { "page": 63, "block_id": "p63-b19", "hint": "마찰과 내부 에너지 증가" }
+      ],
+      "relation_seeds": [
+        "입자의 무작위 운동과 내부 에너지",
+        "마찰에 의한 내부 에너지 증가와 표면 온도",
+        "물체 전체의 운동 에너지와 내부 에너지의 구별"
+      ],
+      "note": "사전에 이미 있는 키다(mate-internal-energy). 물질과 에너지 카드는 화학 맥락이라 진술이 다를 수 있으니 C8 에서 대조가 필요하다."
+    },
+    {
+      "id": "phys-temperature",
+      "term": "온도",
+      "aliases": [],
+      "term_en": "temperature",
+      "concept_key": "concept:temperature",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [63, 72],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 63, "block_id": "p63-b3", "hint": "내부 에너지를 나타내는 척도" },
+        { "page": 63, "block_id": "p63-b17", "hint": "무작위 운동이 활발할수록 높음" },
+        { "page": 72, "block_id": "p72-b13", "hint": "중단원 정리 온도 항" }
+      ],
+      "relation_seeds": [
+        "입자의 평균 역학적 에너지와 온도",
+        "내부 에너지 크기와 온도"
+      ]
+    },
+    {
+      "id": "phys-heat",
+      "term": "열",
+      "aliases": ["열에너지"],
+      "term_en": "heat",
+      "concept_key": "concept:heat",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [64],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 64, "block_id": "p64-b8", "hint": "온도 차에 의한 에너지 전달" },
+        { "page": 64, "block_id": "p64-b9", "hint": "입자 충돌과 에너지 전달 그림" },
+        { "page": 64, "block_id": "p64-b1", "hint": "일과 열을 견주는 곁주" }
+      ],
+      "relation_seeds": [
+        "온도 차와 열의 이동",
+        "열의 이동과 두 물체의 온도 변화",
+        "일과 열의 차이(전달 방식)"
+      ]
+    },
+    {
+      "id": "phys-heat-transfer",
+      "term": "열전달",
+      "aliases": ["열의 전달", "전도·대류·복사"],
+      "term_en": "heat transfer",
+      "concept_key": "concept:heat-transfer",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [64, 72],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        { "page": 64, "block_id": "p64-b8", "hint": "전도·대류·복사 구분" },
+        { "page": 64, "block_id": "p64-b18", "hint": "전도 설명 그림 글" },
+        { "page": 64, "block_id": "p64-b28", "hint": "복사 설명 그림 글" }
+      ],
+      "relation_seeds": [
+        "물질의 상태와 열이 전달되는 방식",
+        "밀도 변화와 대류",
+        "온도와 복사로 방출되는 에너지"
+      ],
+      "note": "중1 선수 내용을 다시 세운 자리라 context 로 둔다. 세 방식을 각각 카드로 쪼개지 않는다."
+    },
+    {
+      "id": "phys-latent-heat",
+      "term": "잠열",
+      "aliases": ["숨은열"],
+      "term_en": "latent heat",
+      "concept_key": "concept:latent-heat",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [65, 72],
+      "topic_id": "phys-1-2-02",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-05"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 65, "block_id": "p65-b2", "hint": "상태 변화 때 출입하는 열" },
+        { "page": 65, "block_id": "p65-b40", "hint": "물의 상태 변화 그래프 설명" },
+        { "page": 72, "block_id": "p72-b12", "hint": "중단원 정리 7항" }
+      ],
+      "relation_seeds": [
+        "상태 변화 중 열 출입과 온도",
+        "입자 사이 인력을 끊는 데 쓰이는 열"
+      ]
+    },
+    {
+      "id": "phys-work-done-by-gas",
+      "term": "기체가 하는 일",
+      "aliases": [],
+      "term_en": "work done by a gas",
+      "concept_key": "concept:work-done-by-gas",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [67, 72],
+      "topic_id": "phys-1-2-03",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-06"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        { "page": 67, "block_id": "p67-b2", "hint": "팽창하는 기체가 하는 일 도입" },
+        { "page": 67, "block_id": "p67-b16", "hint": "압력과 피스톤을 미는 힘" },
+        { "page": 67, "block_id": "p67-b19", "hint": "부피 변화량과 한 일" }
+      ],
+      "relation_seeds": [
+        "압력·부피 변화량과 기체가 한 일",
+        "부피·압력 그래프 넓이와 기체가 한 일"
+      ]
+    },
+    {
+      "id": "phys-heat-engine",
+      "term": "열기관",
+      "aliases": [],
+      "term_en": "heat engine",
+      "concept_key": "concept:heat-engine",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [67, 68],
+      "topic_id": "phys-1-2-03",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-06"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 67, "block_id": "p67-b19", "hint": "열을 일로 전환하는 장치" },
+        { "page": 68, "block_id": "p68-b8", "hint": "고열원·저열원 사이 에너지 흐름" },
+        { "page": 68, "block_id": "p68-b22", "hint": "받은 열·한 일·방출한 열 관계" }
+      ],
+      "relation_seeds": [
+        "받은 열과 한 일, 방출한 열의 관계",
+        "고열원·저열원과 열기관의 작동"
+      ]
+    },
+    {
+      "id": "phys-thermal-efficiency",
+      "term": "열효율",
+      "aliases": [],
+      "term_en": "thermal efficiency",
+      "concept_key": "concept:thermal-efficiency",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [68, 72],
+      "topic_id": "phys-1-2-03",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-06"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 68, "block_id": "p68-b8", "hint": "공급한 열에 대한 일의 비율" },
+        { "page": 68, "block_id": "p68-b15", "hint": "열효율 정의 식 자리" },
+        { "page": 68, "block_id": "p68-b27", "hint": "방출한 열로 다시 쓴 곁주" }
+      ],
+      "relation_seeds": [
+        "받은 열과 한 일의 비율",
+        "방출하는 열과 열효율",
+        "열효율이 1이 될 수 없음"
+      ],
+      "note": "통합과학2 카드 isci2-thermal-efficiency 가 같은 concept_key 를 쓴다."
+    },
+    {
+      "id": "phys-direction-of-heat-flow",
+      "term": "열 이동의 방향성",
+      "aliases": [],
+      "term_en": "directionality of heat flow",
+      "concept_key": "concept:direction-of-heat-flow",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [68, 69],
+      "topic_id": "phys-1-2-03",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-06"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 68, "block_id": "p68-b3", "hint": "얼음이 녹는 쪽으로만 일어남" },
+        { "page": 68, "block_id": "p68-b6", "hint": "고온에서 저온으로 이동" },
+        { "page": 68, "block_id": "p68-b26", "hint": "냉장고·에어컨은 추가 에너지 필요" }
+      ],
+      "relation_seeds": [
+        "열이 저절로 이동하는 방향",
+        "에너지 보존 법칙만으로 설명되지 않는 방향성",
+        "저온에서 고온으로 옮기려면 필요한 것"
+      ]
+    },
+    {
+      "id": "phys-perpetual-motion-machine",
+      "term": "영구 기관",
+      "aliases": ["무한 동력"],
+      "term_en": "perpetual motion machine",
+      "concept_key": "concept:perpetual-motion-machine",
+      "registry_status": "new",
+      "homonym_flag": false,
+      "pages": [68, 69, 70],
+      "topic_id": "phys-1-2-03",
+      "section_id": "phys-1-2",
+      "curriculum": ["12물리01-06"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        { "page": 68, "block_id": "p68-b25", "hint": "영구 기관의 정의" },
+        { "page": 69, "block_id": "p69-b1", "hint": "만들 수 없는 까닭 논증" },
+        { "page": 70, "block_id": "p70-b14", "hint": "사례 1에 대한 반박 글" }
+      ],
+      "relation_seeds": [
+        "에너지 보존 법칙과 영구 기관의 불가능",
+        "열 이동의 방향성과 영구 기관의 불가능",
+        "역학적 에너지 보존과 구슬이 처음 높이를 넘지 못함"
+      ]
+    }
+  ],
+  "hierarchy": [
+    { "from": "phys-torque", "to": "phys-torque-equilibrium" },
+    { "from": "phys-torque-equilibrium", "to": "phys-equilibrium-condition" },
+    { "from": "phys-torque", "to": "phys-stability-of-object", "note": "받침면을 벗어난 무게 중심이 만드는 돌림힘으로 전도를 설명한다" },
+    { "from": "phys-center-of-gravity", "to": "phys-stability-of-object" },
+    { "from": "phys-equilibrium-condition", "to": "phys-stability-of-object" },
+    { "from": "phys-acceleration", "to": "phys-uniformly-accelerated-linear-motion" },
+    { "from": "phys-acceleration", "to": "phys-newton-second-law" },
+    { "from": "phys-uniformly-accelerated-linear-motion", "to": "phys-braking-distance" },
+    { "from": "phys-newton-second-law", "to": "phys-braking-distance" },
+    { "from": "phys-force-interaction", "to": "phys-action-reaction-law" },
+    { "from": "phys-action-reaction-law", "to": "phys-action-reaction-vs-force-balance" },
+    { "from": "phys-equilibrium-condition", "to": "phys-action-reaction-vs-force-balance", "note": "힘의 평형 쪽을 알아야 구별이 선다" },
+    { "from": "phys-newton-second-law", "to": "phys-impulse", "note": "충격량은 뉴턴 제2법칙에서 끌어낸다" },
+    { "from": "phys-momentum", "to": "phys-impulse-momentum-relation" },
+    { "from": "phys-impulse", "to": "phys-impulse-momentum-relation" },
+    { "from": "phys-action-reaction-law", "to": "phys-momentum-conservation-law" },
+    { "from": "phys-impulse-momentum-relation", "to": "phys-momentum-conservation-law" },
+    { "from": "phys-work", "to": "phys-work-energy-theorem" },
+    { "from": "phys-uniformly-accelerated-linear-motion", "to": "phys-work-energy-theorem", "note": "등가속도 관계식으로 정리를 끌어낸다" },
+    { "from": "phys-work", "to": "phys-gravitational-potential-energy" },
+    { "from": "phys-elastic-force", "to": "phys-elastic-potential-energy" },
+    { "from": "phys-gravitational-potential-energy", "to": "phys-mechanical-energy" },
+    { "from": "phys-elastic-potential-energy", "to": "phys-mechanical-energy" },
+    { "from": "phys-work-energy-theorem", "to": "phys-mechanical-energy-conservation-law" },
+    { "from": "phys-mechanical-energy", "to": "phys-mechanical-energy-conservation-law" },
+    { "from": "phys-mechanical-energy-conservation-law", "to": "phys-transformation-of-mechanical-energy" },
+    { "from": "phys-transformation-of-mechanical-energy", "to": "phys-energy-conservation-law" },
+    { "from": "phys-internal-energy", "to": "phys-temperature", "note": "온도를 내부 에너지의 척도로 세운다" },
+    { "from": "phys-internal-energy", "to": "phys-heat" },
+    { "from": "phys-temperature", "to": "phys-heat" },
+    { "from": "phys-heat", "to": "phys-heat-transfer" },
+    { "from": "phys-heat", "to": "phys-latent-heat" },
+    { "from": "phys-heat", "to": "phys-direction-of-heat-flow" },
+    { "from": "phys-work", "to": "phys-work-done-by-gas" },
+    { "from": "phys-work-done-by-gas", "to": "phys-heat-engine" },
+    { "from": "phys-heat-engine", "to": "phys-thermal-efficiency" },
+    { "from": "phys-energy-conservation-law", "to": "phys-thermal-efficiency" },
+    { "from": "phys-direction-of-heat-flow", "to": "phys-thermal-efficiency" },
+    { "from": "phys-thermal-efficiency", "to": "phys-perpetual-motion-machine" },
+    { "from": "phys-energy-conservation-law", "to": "phys-perpetual-motion-machine" }
+  ],
+  "excluded": [
+    { "term": "알짜힘", "reason": "중복", "note": "중학교 과학1 선수 개념(p20 자기 점검). 평형 조건·뉴턴 제2법칙 카드 안에서 다룬다. 소단원 용어 목록(p22·p30)에도 없다.", "pages": [20, 25, 30, 33] },
+    { "term": "힘의 평형", "reason": "중복", "note": "물체의 평형 조건 카드에 흡수했다. 작용 반작용과의 구별은 별도 후보가 받는다.", "pages": [25, 39] },
+    { "term": "속력과 속도", "reason": "중복", "note": "중3 선수 개념을 p30 앞머리에서 되짚는 자리. 소단원이 짚으라고 표시한 용어(가속도·등가속도 운동·뉴턴 운동 법칙)에 들지 않는다. ★사람이 되살릴 만하다 — 속력과 속도의 구별은 물리학 전체에서 되풀이된다.", "pages": [30] },
+    { "term": "변위와 이동 거리", "reason": "중복", "note": "위와 같은 이유. 등가속도 직선 운동 카드가 변위를 쓴다.", "pages": [30, 32] },
+    { "term": "운동 에너지", "reason": "중복", "note": "p53 연계 학습 곁주가 중3 정의를 그대로 되짚는다. 일·운동 에너지 정리 카드에 흡수. ★사람이 되살릴 만하다.", "pages": [52, 53] },
+    { "term": "운동량의 변화량", "reason": "중복", "note": "운동량 카드 안에 둔다 — 따로 떼면 운동량과 명제가 겹친다.", "pages": [40] },
+    { "term": "용수철 상수", "reason": "중복", "note": "탄성력 카드 곁주(p56). 단독 명제가 서지 않는다.", "pages": [56, 58] },
+    { "term": "평형 위치", "reason": "중복", "note": "탄성력 카드 안에 둔다(p56 곁주). 물체의 평형 조건과 표기가 비슷하나 다른 뜻이라 C2 가 조심해야 한다.", "pages": [56, 57, 59] },
+    { "term": "중력 가속도", "reason": "중복", "note": "통합과학1 카드 isci1-gravitational-acceleration 이 이미 있다. 이 단원에서는 p54 곁주로만 나온다.", "pages": [54] },
+    { "term": "자유 낙하 운동", "reason": "중복", "note": "통합과학1 카드 isci1-free-fall-motion 이 있다. 여기서는 등가속도 운동의 예로만 쓰인다.", "pages": [32, 54] },
+    { "term": "에어백과 범퍼", "reason": "사례", "note": "충돌 시간을 늘리는 장치. 운동량과 충격량의 관계 카드의 relation_seed 로 넘겼다.", "pages": [41] },
+    { "term": "로켓의 추진 원리", "reason": "사례", "note": "운동량 보존·작용 반작용의 적용 사례(누리호 포함).", "pages": [46] },
+    { "term": "타워 크레인의 평형추", "reason": "사례", "note": "무게 중심·안정성의 적용 사례.", "pages": [28] },
+    { "term": "피사의 사탑", "reason": "사례", "note": "안정성 도입·마무리 사례. C7 그림 후보로는 쓸 만하다.", "pages": [22, 29] },
+    { "term": "줄(Joule, J. P.)", "reason": "인물", "note": "인물은 카드로 만들지 않는다. 줄의 실험 장치 그림은 에너지 보존 법칙 카드의 삽화 후보다.", "pages": [62] },
+    { "term": "뉴턴(Newton, I.)", "reason": "인물", "pages": [33] },
+    { "term": "N(뉴턴)·J(줄)·kg·m/s", "reason": "단위·기호", "note": "단위 자체는 카드로 만들지 않는다. 단위가 정의하는 개념(힘·일·운동량)은 각각 카드가 받는다.", "pages": [33, 40, 41, 53] },
+    { "term": "동영상 분석 프로그램을 이용한 운동 분석", "reason": "활동", "pages": [31, 42, 43, 52, 58] },
+    { "term": "저마찰 트랙·역학 수레 취급 주의", "reason": "실험 유의사항", "pages": [42, 52] },
+    { "term": "중력 도움(스윙바이)", "reason": "사례", "note": "대단원 마무리의 심화 적용 문항. 성취기준 범위를 넘는다.", "pages": [77] },
+    { "term": "태풍과 잠열", "reason": "사례", "note": "지구과학 쪽 사례. 잠열 카드의 맥락으로만 쓴다.", "pages": [65, 77] },
+    { "term": "서멀 그리스와 방열판", "reason": "사례", "pages": [76] },
+    { "term": "부력 중심", "reason": "범위 밖", "note": "대단원 마무리 창의 활동에서만 나온다. 성취기준 12물리01-01 이 요구하지 않는다.", "pages": [76] }
+  ],
+  "notes": [
+    "성취기준은 12물리 영역 01 의 여섯 코드(01-01~01-06)만 썼고 여섯 코드 모두에 최소 한 개념이 붙었다. standards.yaml 의 18건이 전부 crosscheck: 일치라 배제한 코드는 없다.",
+    "★수식이 깨져 나온다. 전용 글꼴이 사설 인코딩을 써서 `aF `=` bF`·`v`=`v0`+`at`·`;2!;` 같은 꼴로 뽑힌다. 어느 후보의 term·hint·relation_seed 도 수식 글자열에 기대지 않았다 — 식이 필요한 카드(등가속도 직선 운동·탄성력에 의한 위치 에너지·기체가 하는 일·열효율)는 C7 에서 해당 그림(그림 I-9·I-29·I-45·I-48)을 붙이는 것을 전제로 씨앗을 말로만 적었다.",
+    "★동음이의: '일'(p53~)은 homonyms.yaml watch_terms 라 homonym_flag: true 를 붙이고 그 파일이 물리학 sense 로 적어 둔 concept:work-physics 를 키로 썼다. 같은 파일의 '계'·'전위'·'상'·'핵'·'주기'는 이 단원 표제어와 표기가 겹치지 않는다(공백 무시 대조). 다만 p64 곁주가 '두 계 사이' 라는 말을 쓰므로 C2 가 '계' 를 개념으로 잡지 않도록 주의해야 한다.",
+    "기존 카드와 concept_key 가 같은 것 5개: 운동량·충격량·운동량과 충격량의 관계(통합과학1 isci1-3), 에너지 보존 법칙·열효율(통합과학2 isci2-2). 표기 일치가 아니라 키를 같게 지은 것이 근거다(R9). 사전에는 아직 없어 registry_status 는 new 이고, G3 에서 한 키로 등록되면 same 링크의 씨앗이 된다.",
+    "사전에서 그대로 가져온 키는 concept:internal-energy 하나다(mate-internal-energy). 나머지 34개는 신규 — 사전이 아직 화학 4과목 중심이라 물리 개념이 통째로 비어 있다. G3 에 34건이 한꺼번에 올라간다.",
+    "개수 35 = 소단원 7개 × 5. 소단원별로 5·4·3·4·7·7·5 다. 작용 반작용(p36~39, 4쪽)이 3개로 가장 적고, 역학적 에너지 보존(p52~59)과 에너지 보존(p60~65)이 8·6쪽이라 7개씩이다.",
+    "중단원 정리 대조: p48 '핵심 개념 정리하기' 가 이름 붙인 9항(돌림힘·평형 조건·안정성·가속도·뉴턴 제2법칙·등가속도 직선 운동·작용 반작용 법칙·운동량·운동량 보존 법칙)과 p72 의 13항(역학적 에너지 보존·탄성력에 의한 위치 에너지·역학적 에너지의 전환·에너지 보존·내부 에너지·온도·열전달·잠열·열의 일 전환·기체가 하는 일·열기관·열효율·영구 기관)이 모두 후보에 들어 있다. 누락 없음.",
+    "role 배분: core 14 는 성취기준 문장이 직접 이름을 부르는 것에만 주었다(평형 조건·구조물의 안정성·뉴턴 운동 법칙·등가속도 운동·작용 반작용·운동량 보존·일과 운동 에너지의 관계·위치 에너지 둘·역학적 에너지 보존·역학적 에너지의 열 전환·에너지 총량 보존·효율·영구 기관). supporting 19, context 2(열전달·잠열 — 중1 선수 내용을 다시 세운 자리).",
+    "'작용 반작용과 힘의 평형의 구별' 은 개념이라기보다 두 개념의 구별이다. 이 단원의 대표 오개념 지점(p39 본문 전체가 이것만 다룬다)이라 카드로 남겼으나 C8 에서 지워도 무리가 없다.",
+    "★교과서 위계가 앞의 과목과 다르다. section_id 가 중단원(phys-1-1 힘과 운동 · phys-1-2 에너지와 열), topic_id 가 소단원(01~04, 01~03)이다. 모든 후보에 두 필드를 함께 적었다.",
+    "p20·p50 의 '자기 점검' 이 선수 개념 목록을 직접 준다(중1 힘의 작용·중3 운동과 에너지·통합과학1 시스템과 상호작용·통합과학2 환경과 에너지). 위계 판단과 excluded 사유에 그대로 썼다."
+  ]
+}

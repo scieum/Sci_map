@@ -1,0 +1,144 @@
+{
+  "id": "phys-charge-stored-in-capacitor",
+  "concept_key": "concept:charge-stored-in-capacitor",
+  "registry_status": "new",
+  "term": "축전기에 저장되는 전하량",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "stored charge of a capacitor",
+    "hanja_note": "조사와 어미가 들어간 구 형태의 표제어라 전체를 한자로 옮기지 않는다. '축전기'는 蓄電器, '전하량'은 電荷量이다."
+  },
+  "definition": "축전기의 금속판에 모이는 전하의 양. 판의 넓이와 간격, 그리고 걸어 준 전압에 따라 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-stored-area",
+      "text": "걸어 준 전압이 같을 때 금속판의 넓이가 넓을수록 저장되는 전하량이 많다.",
+      "form": {
+        "condition": "축전기 양끝의 전압이 일정할 때",
+        "type": "direct",
+        "scope": "간격이 좁은 평행판 축전기",
+        "antecedent": {
+          "quantity": "금속판의 넓이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "저장되는 전하량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "넓이에 비례하므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전압이 같을 때 금속판의 넓이가 넓을수록 저장되는 전하량이 적어진다."
+    },
+    {
+      "id": "rel-stored-gap",
+      "text": "걸어 준 전압이 같을 때 두 금속판 사이 간격이 좁을수록 저장되는 전하량이 많다.",
+      "form": {
+        "condition": "축전기 양끝의 전압이 일정할 때",
+        "type": "inverse",
+        "scope": "간격이 판의 크기에 비해 좁은 평행판 축전기",
+        "antecedent": {
+          "quantity": "금속판 사이의 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "저장되는 전하량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "간격에 반비례하므로 벌릴수록 많아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전압이 같을 때 두 금속판 사이를 넓게 벌릴수록 저장되는 전하량이 많아진다."
+    },
+    {
+      "id": "rel-stored-voltage",
+      "text": "같은 축전기라면 걸어 준 전압이 클수록 판에 모이는 전하량이 많다.",
+      "form": {
+        "condition": "축전기의 구조가 그대로일 때",
+        "type": "direct",
+        "scope": "평행판 축전기",
+        "antecedent": {
+          "quantity": "걸어 준 전압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "저장되는 전하량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전압에 비례하므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 축전기라면 걸어 준 전압이 클수록 모이는 전하량이 적어진다."
+    },
+    {
+      "id": "rel-stored-signal",
+      "text": "눌림이나 진동으로 판 사이 간격이 바뀌면 저장 전하량이 달라지고, 그 변화가 전기 신호로 읽힌다.",
+      "form": {
+        "condition": "바깥 힘이 금속판 사이 간격을 바꿀 때",
+        "type": "causal",
+        "scope": "키보드·마이크·회전 센서 같은 축전기형 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "장치가 신호를 얻는 과정을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 금속판 사이를 벌릴수록 전하가 더 많이 저장된다",
+      "why_wrong": "전압이 같다면 간격이 좁을수록 전하가 많이 모인다. 키보드가 눌린 키를 알아채는 것도 간격이 좁아져 전하량이 늘기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stored-gap"
+    },
+    {
+      "text": "저장되는 전하량은 축전기의 생김새로만 정해지고 전압과는 상관없다",
+      "why_wrong": "같은 축전기라도 걸어 준 전압이 크면 그만큼 많은 전하가 모인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stored-voltage"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-charging-of-capacitor"
+    },
+    {
+      "type": "related",
+      "target": "phys-discharging-of-capacitor",
+      "note": "내보낼 수 있는 전하의 양이 방전의 규모를 정한다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-03",
+  "pages": [
+    99,
+    100,
+    102
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,133 @@
+{
+  "id": "phys-impulse-momentum-relation",
+  "concept_key": "concept:impulse-momentum-relation",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "운동량과 충격량의 관계",
+  "aliases": [
+    "충격량과 운동량의 변화량"
+  ],
+  "notation": {
+    "hanja": "運動量 衝擊量 關係",
+    "hanja_gloss": "運 옮길 운 · 動 움직일 동 · 量 헤아릴 량 · 衝 찌를 충 · 擊 칠 격 · 量 헤아릴 량 · 關 빗장 관 · 係 맬 계",
+    "english": "impulse-momentum relation"
+  },
+  "definition": "물체가 받은 충격량이 그 물체의 운동량 변화량과 같다는 관계. 힘과 시간의 곱이 질량과 속도 변화의 곱에 맞물린다.",
+  "relations": [
+    {
+      "id": "rel-imr-equal",
+      "text": "물체가 받은 충격량의 크기는 그 물체의 운동량이 변한 양과 같다.",
+      "form": {
+        "condition": "물체의 질량이 변하지 않을 때",
+        "type": "classification",
+        "scope": "물체에 걸린 힘을 빠짐없이 헤아린 경우에 한정한다",
+        "antecedent": {
+          "quantity": "받은 충격량",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "운동량 변화량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 양이 같음을 밝힌 명제라 맞바꿀 방향이 따로 없다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-imr-time-force",
+      "text": "운동량 변화량이 정해져 있을 때 힘이 걸리는 시간을 늘리면 받는 평균 힘은 작아진다.",
+      "form": {
+        "condition": "충격량이 같게 유지될 때",
+        "type": "inverse",
+        "scope": "충돌처럼 짧은 시간에 힘을 주고받는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "힘이 작용한 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평균 힘의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "시간과 평균 힘의 곱이 일정하므로 시간이 길어질 때 힘도 커진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "운동량 변화량이 같을 때 힘이 걸리는 시간을 늘리면 받는 평균 힘도 커진다."
+    },
+    {
+      "id": "rel-imr-airbag",
+      "text": "에어백과 범퍼는 부딪히는 시간을 길게 늘여 사람이 받는 힘의 크기를 줄인다.",
+      "form": {
+        "condition": "충돌 전후의 운동량 변화량이 정해져 있을 때",
+        "type": "causal",
+        "scope": "충돌 시간을 늘려 주는 완충 장치에 한정한다",
+        "antecedent": {
+          "quantity": "충돌 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "사람이 받는 힘",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "충격량이 같은 채 시간만 늘면 힘은 반드시 줄어들므로 커진다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에어백은 부딪히는 시간을 길게 늘여 사람이 받는 힘의 크기를 오히려 키운다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에어백은 사람이 받는 충격량을 줄여 주는 장치다",
+      "why_wrong": "충돌 전후 운동량 변화는 그대로라 충격량도 같다. 에어백은 시간을 늘려 힘을 줄일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-imr-airbag"
+    },
+    {
+      "text": "포수가 글러브를 뒤로 빼면 공에서 받는 충격량이 줄어든다",
+      "why_wrong": "공의 운동량 변화가 같으므로 충격량도 같다. 손이 받는 힘의 크기만 작아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-imr-time-force"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-momentum"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-impulse"
+    },
+    {
+      "type": "next",
+      "target": "phys-momentum-conservation-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03"
+  ],
+  "topic_id": "phys-1-1-04",
+  "pages": [
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

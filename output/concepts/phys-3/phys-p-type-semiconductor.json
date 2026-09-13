@@ -1,0 +1,100 @@
+{
+  "id": "phys-p-type-semiconductor",
+  "concept_key": "concept:p-type-semiconductor",
+  "registry_status": "new",
+  "term": "p형 반도체",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "머리글자 'p'가 로마자여서 표제어 전체를 한자로 적을 수 없다.",
+    "english": "p-type semiconductor"
+  },
+  "definition": "고유 반도체에 불순물을 섞어 전자가 빠진 빈자리인 양공을 갖게 만든 불순물 반도체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ptype-hole",
+      "text": "원자가 전자가 세 개인 원소를 섞으면 전자가 하나 모자라 결합에 빈자리가 생긴다.",
+      "form": {
+        "condition": "규소 같은 고유 반도체에 도핑할 때",
+        "type": "causal",
+        "scope": "붕소·알루미늄·갈륨처럼 원자가 전자가 세 개인 원소를 섞은 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "도핑의 결과를 말하는 명제여서 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ptype-positive",
+      "text": "양공은 이웃 전자가 차례로 옮겨 오면서 양전하가 움직이는 것처럼 행동한다.",
+      "form": {
+        "condition": "양공 둘레의 전자가 이동할 때",
+        "type": "causal",
+        "scope": "p형 반도체 안에서의 전도. 양공은 실제 입자가 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "행동 방식을 설명하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ptype-level",
+      "text": "불순물 준위가 원자가 띠 바로 위에 생겨 작은 에너지로도 전자가 그 준위로 올라간다.",
+      "form": {
+        "condition": "불순물 준위가 생긴 p형 반도체에서",
+        "type": "causal",
+        "scope": "p형 반도체의 에너지띠 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 따라 나오는 결과를 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양공은 양전하를 띤 실제 입자다",
+      "why_wrong": "양공은 전자가 빠진 빈자리이며, 전자가 그 자리를 메우며 옮겨 가는 것을 양전하의 이동처럼 다루는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ptype-positive"
+    },
+    {
+      "text": "p형 반도체는 전자가 모자라니 전체가 양전하를 띤다",
+      "why_wrong": "섞어 넣은 원자까지 세면 전하의 합이 0이어서 전체로는 중성이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ptype-hole"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-semiconductor"
+    },
+    {
+      "type": "next",
+      "target": "phys-pn-junction-diode"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    181
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

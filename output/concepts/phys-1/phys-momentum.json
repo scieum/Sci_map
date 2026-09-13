@@ -1,0 +1,134 @@
+{
+  "id": "phys-momentum",
+  "concept_key": "concept:momentum",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "운동량",
+  "notation": {
+    "hanja": "運動量",
+    "hanja_gloss": "運 옮길 운 · 動 움직일 동 · 量 헤아릴 량",
+    "english": "momentum",
+    "symbol_display": "p",
+    "symbol_plain": "p"
+  },
+  "definition": "물체가 얼마나 세게 운동하고 있는지 나타내는 양. 질량에 속도를 곱해 정하며 방향은 속도가 가리키는 쪽과 같다.",
+  "relations": [
+    {
+      "id": "rel-mom-mass-speed",
+      "text": "속도가 그대로라면 질량이 큰 물체일수록 운동량이 크다.",
+      "form": {
+        "condition": "속도가 일정하게 유지될 때",
+        "type": "direct",
+        "scope": "속력이 빛의 속력에 견줄 수 없을 만큼 느린 물체에 한정한다",
+        "antecedent": {
+          "quantity": "질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동량의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "운동량은 질량과 속도의 곱이라 질량만 키우고 운동량이 줄어든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속도가 그대로라면 질량이 큰 물체일수록 운동량이 작다."
+    },
+    {
+      "id": "rel-mom-direction",
+      "text": "운동량은 크기와 방향을 함께 갖는 양이며 그 방향은 속도의 방향과 같다.",
+      "form": {
+        "condition": "운동량의 방향을 정할 때",
+        "type": "classification",
+        "scope": "질량이 양수인 물체에 한정한다",
+        "antecedent": {
+          "quantity": "속도의 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "운동량의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 방향이 하나로 정해진 명제라 반대라고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "운동량의 방향은 물체의 속도 방향과 반대다."
+    },
+    {
+      "id": "rel-mom-change",
+      "text": "속도가 달라지면 운동량도 달라지고, 운동량 변화량의 방향은 속도 변화량의 방향과 같다.",
+      "form": {
+        "condition": "물체의 질량이 변하지 않을 때",
+        "type": "causal",
+        "scope": "직선을 따라 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "속도 변화량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동량 변화량",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "변화량끼리 방향을 맞춘 명제라 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "속력이 같으면 두 물체의 운동량도 같다",
+      "why_wrong": "운동량에는 질량도 곱해진다. 같은 속력이라도 트럭과 자전거의 운동량은 크게 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mom-mass-speed"
+    },
+    {
+      "text": "운동량은 크기만 있고 방향은 없는 양이다",
+      "why_wrong": "운동량은 속도와 같은 방향을 갖는 양이다. 반대로 달리는 두 물체의 운동량은 부호가 서로 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mom-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-impulse-momentum-relation"
+    },
+    {
+      "type": "related",
+      "target": "phys-newton-second-law"
+    },
+    {
+      "type": "related",
+      "target": "phys-momentum-conservation-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03"
+  ],
+  "topic_id": "phys-1-1-04",
+  "pages": [
+    40,
+    48
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

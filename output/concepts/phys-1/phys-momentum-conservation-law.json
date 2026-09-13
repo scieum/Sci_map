@@ -1,0 +1,133 @@
+{
+  "id": "phys-momentum-conservation-law",
+  "concept_key": "concept:momentum-conservation-law",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "운동량 보존 법칙",
+  "notation": {
+    "hanja": "運動量 保存 法則",
+    "hanja_gloss": "運 옮길 운 · 動 움직일 동 · 量 헤아릴 량 · 保 지킬 보 · 存 있을 존 · 法 법 법 · 則 법칙 칙",
+    "english": "law of conservation of momentum"
+  },
+  "definition": "바깥에서 힘이 걸리지 않으면 물체들이 서로 힘을 주고받아도 운동량을 모두 더한 값이 달라지지 않는다는 법칙.",
+  "relations": [
+    {
+      "id": "rel-mcl-collision",
+      "text": "외부 힘이 없는 충돌에서는 부딪히기 전 두 물체의 운동량 합과 부딪힌 뒤의 합이 같다.",
+      "form": {
+        "condition": "마찰처럼 밖에서 걸리는 힘이 없을 때",
+        "type": "conditional",
+        "scope": "충돌하는 물체들을 한 묶음으로 묶어 볼 때에 한정한다",
+        "antecedent": {
+          "quantity": "충돌 전 운동량의 합",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "충돌 후 운동량의 합",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "보존이 성립하는 조건을 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mcl-from-ar",
+      "text": "충돌하는 두 물체가 주고받는 힘은 작용 반작용이라 두 운동량 변화량은 크기가 같고 방향이 반대다.",
+      "form": {
+        "condition": "두 물체가 서로 힘을 주고받는 동안",
+        "type": "causal",
+        "scope": "외부 힘을 무시할 수 있는 충돌에 한정한다",
+        "antecedent": {
+          "quantity": "한 물체의 운동량 변화량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "다른 물체의 운동량 변화량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 변화량이 상쇄되어야 총합이 유지되므로 방향이 같다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "충돌하는 두 물체의 운동량 변화량은 크기가 같고 방향도 서로 같다."
+    },
+    {
+      "id": "rel-mcl-explosion",
+      "text": "충돌뿐 아니라 물체가 터져 쪼개지거나 붙어 한 덩어리가 될 때에도 운동량의 합은 그대로다.",
+      "form": {
+        "condition": "밖에서 힘이 걸리지 않을 때",
+        "type": "conditional",
+        "scope": "폭발·분리·결합처럼 안에서만 힘이 오가는 과정에 한정한다",
+        "antecedent": {
+          "quantity": "과정의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "운동량의 총합",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성립 범위를 넓힌 명제라 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "충돌에서 운동량이 보존되므로 운동 에너지도 언제나 보존된다",
+      "why_wrong": "찌그러지거나 소리가 나는 충돌에서는 운동 에너지 일부가 열과 소리로 바뀐다. 보존되는 것은 운동량이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mcl-collision"
+    },
+    {
+      "text": "정지해 있던 물체가 끼어 있으면 운동량 보존 법칙을 쓸 수 없다",
+      "why_wrong": "정지한 물체의 운동량은 0으로 셈하면 된다. 외부 힘만 없으면 보존 법칙이 그대로 성립한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mcl-explosion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-action-reaction-law"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-impulse-momentum-relation"
+    },
+    {
+      "type": "related",
+      "target": "phys-momentum"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03"
+  ],
+  "topic_id": "phys-1-1-04",
+  "pages": [
+    42,
+    44,
+    45,
+    48
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

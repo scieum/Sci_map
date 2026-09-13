@@ -1,0 +1,130 @@
+{
+  "id": "phys-semiconductor",
+  "concept_key": "concept:semiconductor",
+  "registry_status": "reused",
+  "term": "반도체",
+  "notation": {
+    "hanja": "半導體",
+    "hanja_gloss": "半 반 반 · 導 이끌 도 · 體 몸 체",
+    "english": "semiconductor"
+  },
+  "definition": "띠 간격이 부도체보다 좁아 전기 전도성이 도체와 부도체의 중간쯤 되는 고체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-semi-room",
+      "text": "띠 간격이 좁아 실온에서도 전도띠로 올라간 전자가 있어 약한 전류가 흐를 수 있다.",
+      "form": {
+        "condition": "실온 정도의 온도에서",
+        "type": "causal",
+        "scope": "규소·저마늄 같은 반도체. 절대 영도 가까이에서는 거의 흐르지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 대는 명제여서 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-semi-temp",
+      "text": "온도가 올라갈수록 전도띠로 전이하는 전자가 늘어 반도체의 비저항이 작아진다.",
+      "form": {
+        "condition": "반도체의 온도를 높일 때",
+        "type": "inverse",
+        "scope": "반도체. 도체는 온도가 오르면 오히려 비저항이 커진다",
+        "antecedent": {
+          "quantity": "온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "비저항",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반도체에서 온도와 비저항은 반대로 움직이므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 올라갈수록 반도체의 비저항이 커진다."
+    },
+    {
+      "id": "rel-semi-doping",
+      "text": "고유 반도체에 불순물을 알맞게 섞으면 전기 전도성이 크게 커진다.",
+      "form": {
+        "condition": "규소 같은 고유 반도체에 도핑할 때",
+        "type": "causal",
+        "scope": "도핑으로 만든 불순물 반도체"
+      },
+      "invertible": false,
+      "invertible_reason": "도핑의 효과를 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-semi-intrinsic",
+      "text": "고유 반도체는 원자가 전자 네 개가 모두 공유 결합에 쓰여 전기 전도성이 낮다.",
+      "form": {
+        "condition": "불순물이 없는 완전한 결정일 때",
+        "type": "causal",
+        "scope": "규소·저마늄처럼 원자가 전자가 네 개인 고유 반도체"
+      },
+      "invertible": false,
+      "invertible_reason": "구조에서 따라 나오는 성질을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반도체도 도체처럼 온도를 올리면 저항이 커진다",
+      "why_wrong": "반도체는 온도가 오르면 전도띠로 가는 전자가 늘어 비저항이 오히려 작아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-semi-temp"
+    },
+    {
+      "text": "불순물이 섞이면 순수할 때보다 전기가 덜 통한다",
+      "why_wrong": "도핑은 전류를 나르는 전자나 양공을 만들어 주어 전기 전도성을 오히려 높인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-semi-doping"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-band-gap"
+    },
+    {
+      "type": "next",
+      "target": "phys-n-type-semiconductor"
+    },
+    {
+      "type": "next",
+      "target": "phys-p-type-semiconductor"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    178,
+    179,
+    180
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

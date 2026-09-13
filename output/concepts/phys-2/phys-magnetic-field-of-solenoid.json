@@ -1,0 +1,132 @@
+{
+  "id": "phys-magnetic-field-of-solenoid",
+  "concept_key": "concept:magnetic-field-of-solenoid",
+  "registry_status": "new",
+  "term": "솔레노이드에 의한 자기장",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magnetic field of a solenoid",
+    "hanja_note": "'솔레노이드'가 음차어이고 조사가 붙은 구라 표제어를 한자로 옮기지 않는다. '자기장'만 磁氣場이다."
+  },
+  "definition": "도선을 원통 모양으로 여러 번 감은 솔레노이드에 전류를 흘릴 때 그 둘레에 생기는 자기장.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-solenoid-uniform",
+      "text": "솔레노이드 안쪽에는 중심축과 나란한 방향으로 세기가 고른 자기장이 생긴다.",
+      "form": {
+        "condition": "감은 도선에 전류가 흐를 때",
+        "type": "conditional",
+        "scope": "충분히 촘촘히 감은 솔레노이드의 내부"
+      },
+      "invertible": false,
+      "invertible_reason": "내부 자기장의 모습을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-solenoid-hand",
+      "text": "네 손가락을 전류의 방향으로 감아쥐고 엄지를 폈을 때 엄지가 가리키는 쪽이 내부 자기장의 방향이다.",
+      "form": {
+        "condition": "솔레노이드에 전류가 흐를 때",
+        "type": "conditional",
+        "scope": "솔레노이드 내부"
+      },
+      "invertible": false,
+      "invertible_reason": "방향을 찾는 방법을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-solenoid-turns",
+      "text": "길이가 같다면 도선을 많이 감을수록 내부 자기장이 세다.",
+      "form": {
+        "condition": "솔레노이드의 길이와 전류가 일정할 때",
+        "type": "direct",
+        "scope": "솔레노이드 내부",
+        "antecedent": {
+          "quantity": "단위 길이당 감은 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내부 자기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "단위 길이당 감은 수에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "길이가 같다면 도선을 많이 감을수록 내부 자기장이 약해진다."
+    },
+    {
+      "id": "rel-solenoid-current",
+      "text": "감은 수가 같다면 흐르는 전류가 셀수록 내부 자기장이 세다.",
+      "form": {
+        "condition": "감은 수와 길이가 일정할 때",
+        "type": "direct",
+        "scope": "솔레노이드 내부",
+        "antecedent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내부 자기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감은 수가 같다면 전류가 셀수록 내부 자기장이 약해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "솔레노이드 안쪽은 가운데만 자기장이 세고 나머지는 거의 없다",
+      "why_wrong": "촘촘히 감은 솔레노이드 안쪽에는 축과 나란한 고른 자기장이 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-solenoid-uniform"
+    },
+    {
+      "text": "감은 수를 늘려도 내부 자기장의 세기는 달라지지 않는다",
+      "why_wrong": "길이가 같을 때 감은 수를 2배로 하면 단위 길이당 감은 수가 2배가 되어 자기장도 2배가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-solenoid-turns"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field-of-circular-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-flux"
+    }
+  ],
+  "curriculum": [
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-02",
+  "pages": [
+    116
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

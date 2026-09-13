@@ -1,0 +1,158 @@
+{
+  "id": "phys-work-energy-theorem",
+  "concept_key": "concept:work-energy-theorem",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "일·운동 에너지 정리",
+  "aliases": [
+    "일과 운동 에너지의 관계"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'일'이 고유어이고 '에너지'가 영어 energy 의 음차어라 낱말 전체를 한자로 적을 수 없다. '운동'과 '정리'만 運動·定理에 해당한다.",
+    "english": "work-energy theorem"
+  },
+  "definition": "알짜힘이 물체에 해 준 일만큼 그 물체의 운동 에너지가 달라진다는 관계. 일의 부호가 곧 운동 에너지의 증감으로 이어진다.",
+  "relations": [
+    {
+      "id": "rel-wet-equal",
+      "text": "알짜힘이 한 일의 양은 물체의 운동 에너지가 변한 양과 같다.",
+      "form": {
+        "condition": "물체의 질량이 변하지 않을 때",
+        "type": "classification",
+        "scope": "물체에 걸린 힘을 모두 더한 알짜힘으로 셈할 때에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘이 한 일",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "운동 에너지 변화량",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 양이 같음을 밝힌 명제라 맞바꿀 방향이 따로 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wet-speedup",
+      "text": "알짜힘이 운동 방향으로 걸리면 한 일이 양수가 되어 물체의 속력이 커진다.",
+      "form": {
+        "condition": "알짜힘의 방향이 운동 방향과 같을 때",
+        "type": "causal",
+        "scope": "직선을 따라 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘이 한 일",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "양수인 일은 운동 에너지를 반드시 늘리므로 느려진다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "알짜힘이 운동 방향으로 걸리면 물체의 속력이 줄어든다."
+    },
+    {
+      "id": "rel-wet-slowdown",
+      "text": "알짜힘이 운동 방향과 반대로 걸리면 운동 에너지가 줄어 물체가 느려진다.",
+      "form": {
+        "condition": "알짜힘의 방향이 운동 방향과 반대일 때",
+        "type": "causal",
+        "scope": "직선을 따라 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘이 한 일",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "속력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "음수인 일은 운동 에너지를 반드시 줄이므로 빨라진다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "알짜힘이 운동 방향과 반대로 걸리면 물체의 속력이 커진다."
+    },
+    {
+      "id": "rel-wet-square",
+      "text": "질량이 같은 물체의 속력이 두 배가 되면 그 물체의 운동 에너지는 네 배가 된다.",
+      "form": {
+        "condition": "물체의 질량이 변하지 않을 때",
+        "type": "direct",
+        "scope": "회전 없이 전체가 함께 옮겨 가는 물체의 운동 에너지에 한정한다",
+        "antecedent": {
+          "quantity": "속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "운동 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 운동 에너지는 속력의 제곱에 비례하므로 두 배가 된다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 같은 물체의 속력이 두 배가 되면 운동 에너지도 두 배가 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물체에 힘을 작용하면 언제나 운동 에너지가 커진다",
+      "why_wrong": "힘이 운동 방향과 반대이면 한 일이 음수라서 운동 에너지가 오히려 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wet-slowdown"
+    },
+    {
+      "text": "속력이 두 배가 되면 운동 에너지도 두 배가 된다",
+      "why_wrong": "운동 에너지는 속력의 제곱에 비례한다. 속력이 두 배면 운동 에너지는 네 배가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wet-square"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-work"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-uniformly-accelerated-linear-motion"
+    },
+    {
+      "type": "next",
+      "target": "phys-mechanical-energy-conservation-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-04"
+  ],
+  "topic_id": "phys-1-2-01",
+  "pages": [
+    52,
+    53
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

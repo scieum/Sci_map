@@ -1,0 +1,134 @@
+{
+  "id": "phys-electric-force",
+  "concept_key": "concept:electric-force",
+  "registry_status": "new",
+  "term": "전기력",
+  "notation": {
+    "hanja": "電氣力",
+    "english": "electric force",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 力 힘 력",
+    "symbol_display": "F",
+    "symbol_plain": "F"
+  },
+  "definition": "전하를 띤 물체끼리 서로 미치는 힘. 전하의 종류가 같으면 밀어내고 다르면 끌어당긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-force-sign",
+      "text": "전하의 종류가 같은 두 대전체는 서로 밀어내고, 종류가 다르면 서로 끌어당긴다.",
+      "form": {
+        "condition": "두 대전체가 서로 힘을 미칠 때",
+        "type": "conditional",
+        "scope": "정지해 있는 두 점전하"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 종류 사이의 힘은 척력이므로 인력으로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하의 종류가 같은 두 대전체 사이에는 서로 끌어당기는 힘이 작용한다."
+    },
+    {
+      "id": "rel-force-charge",
+      "text": "거리를 그대로 두고 한쪽의 전하량을 키우면 두 대전체가 주고받는 힘의 크기도 커진다.",
+      "form": {
+        "condition": "두 전하 사이의 거리가 일정할 때",
+        "type": "direct",
+        "scope": "크기를 무시할 수 있는 두 점전하",
+        "antecedent": {
+          "quantity": "한쪽 전하량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전하량과 힘은 함께 커지므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리가 일정할 때 한쪽의 전하량을 키우면 전기력의 크기는 작아진다."
+    },
+    {
+      "id": "rel-force-pair",
+      "text": "두 대전체가 주고받는 전기력은 전하량이 서로 달라도 크기가 같고 방향만 반대다.",
+      "form": {
+        "condition": "두 대전체가 서로 힘을 미칠 때",
+        "type": "conditional",
+        "scope": "두 점전하로 이루어진 계"
+      },
+      "invertible": true,
+      "invertible_reason": "두 힘의 크기는 늘 같으므로 한쪽이 더 크다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 대전체 가운데 전하량이 큰 쪽이 더 큰 전기력을 받는다."
+    },
+    {
+      "id": "rel-force-noncontact",
+      "text": "두 대전체가 서로 닿아 있지 않아도 전기력은 작용하며, 사이가 멀어질수록 그 크기가 작아진다.",
+      "form": {
+        "condition": "두 대전체가 떨어져 있을 때",
+        "type": "conditional",
+        "scope": "공기나 진공을 사이에 두고 떨어져 있는 두 대전체"
+      },
+      "invertible": true,
+      "invertible_reason": "떨어져 있어도 힘이 작용하므로 닿아야만 작용한다고 바꾸면 반드시 거짓이다.",
+      "inverted_text": "전기력은 두 대전체가 서로 맞닿아 있을 때에만 작용한다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전하량이 더 큰 쪽이 더 센 전기력을 받는다",
+      "why_wrong": "두 대전체가 주고받는 힘은 크기가 같고 방향이 반대다. 전하량이 달라도 받는 힘의 크기는 서로 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-force-pair"
+    },
+    {
+      "text": "전기력은 두 물체가 맞닿아 있어야 작용한다",
+      "why_wrong": "전하 주위에는 전기장이 생기므로 떨어져 있어도 힘이 작용한다. 거리가 멀어질수록 약해질 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-force-noncontact"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-charge",
+      "note": "전하를 알아야 전하 사이의 힘을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "phys-coulomb-law"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-field"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    84,
+    85
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

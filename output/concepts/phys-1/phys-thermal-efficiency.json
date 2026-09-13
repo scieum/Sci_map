@@ -1,0 +1,136 @@
+{
+  "id": "phys-thermal-efficiency",
+  "concept_key": "concept:thermal-efficiency",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "열효율",
+  "notation": {
+    "hanja": "熱效率",
+    "hanja_gloss": "熱 더울 열 · 效 본받을 효 · 率 비율 률",
+    "english": "thermal efficiency"
+  },
+  "definition": "열기관이 공급받은 열을 얼마나 알뜰하게 쓰는지 견주어 나타내는 척도. 같은 열을 받고도 더 많은 일을 내놓는 기관일수록 이 값이 크다.",
+  "relations": [
+    {
+      "id": "rel-te-ratio",
+      "text": "열효율은 열기관이 한 일을 그 기관이 공급받은 열로 나눈 값이다.",
+      "form": {
+        "condition": "한 순환 동안의 값으로 셈할 때",
+        "type": "classification",
+        "scope": "되풀이해 작동하는 열기관에 한정한다",
+        "antecedent": {
+          "quantity": "한 일과 받은 열의 비",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "열효율",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "정의를 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-te-release",
+      "text": "공급받은 열이 같다면 저열원으로 버리는 열이 많을수록 열효율이 낮다.",
+      "form": {
+        "condition": "공급받은 열이 같을 때",
+        "type": "inverse",
+        "scope": "한 순환을 도는 열기관에 한정한다",
+        "antecedent": {
+          "quantity": "방출하는 열",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "열효율",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "버린 열이 많을수록 일로 바뀐 몫이 줄므로 효율이 높아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공급받은 열이 같다면 저열원으로 버리는 열이 많을수록 열효율이 높다."
+    },
+    {
+      "id": "rel-te-not-one",
+      "text": "열기관은 저열원으로 열을 내보내는 것을 막을 수 없어 열효율이 1이 될 수 없다.",
+      "form": {
+        "condition": "되풀이해 작동하는 열기관에서",
+        "type": "causal",
+        "scope": "실제로 만들 수 있는 모든 열기관에 두루 성립한다",
+        "antecedent": {
+          "quantity": "저열원으로 나가는 열",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "열효율의 한계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 한계를 밝힌 명제라 한계를 넘을 수 있다는 쪽으로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "열기관도 잘 만들면 저열원으로 열을 내보내지 않아 열효율이 1이 될 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기술이 더 좋아지면 열효율이 100 %인 열기관을 만들 수 있다",
+      "why_wrong": "열이 저온 쪽으로 빠져나가는 것을 막을 수 없어 효율에는 넘을 수 없는 한계가 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-te-not-one"
+    },
+    {
+      "text": "열효율이 높은 기관일수록 일을 더 많이 한다",
+      "why_wrong": "효율은 받은 열에 대한 비율이다. 받은 열이 적으면 효율이 높아도 한 일의 양은 적을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-te-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-heat-engine"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-energy-conservation-law"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-direction-of-heat-flow"
+    },
+    {
+      "type": "next",
+      "target": "phys-perpetual-motion-machine"
+    }
+  ],
+  "curriculum": [
+    "12물리01-06"
+  ],
+  "topic_id": "phys-1-2-03",
+  "pages": [
+    68,
+    72
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

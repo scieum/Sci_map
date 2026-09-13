@@ -1,0 +1,132 @@
+{
+  "id": "phys-torque-equilibrium",
+  "concept_key": "concept:torque-equilibrium",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "돌림힘의 평형",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'돌림힘'이 고유어라 낱말 전체를 한자로 옮길 수 없다. '평형'만 平衡에 해당한다.",
+    "english": "equilibrium of torques"
+  },
+  "definition": "물체에 걸린 돌림힘을 모두 더한 값이 0이어서 회전 상태가 달라지지 않는 상태. 양쪽으로 돌리려는 정도가 서로 맞선 경우다.",
+  "relations": [
+    {
+      "id": "rel-teq-balance",
+      "text": "지레 양쪽에서 돌리려는 정도가 서로 같으면 막대는 어느 쪽으로도 돌지 않는다.",
+      "form": {
+        "condition": "받침점을 회전축으로 삼을 때",
+        "type": "conditional",
+        "scope": "막대의 무게를 무시할 수 있고 회전축이 고정된 지레",
+        "antecedent": {
+          "quantity": "양쪽 돌림힘의 크기 차이",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "회전 상태",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집은 문장인 '회전하지 않으면 양쪽 돌림힘이 같다' 도 참이라 OX 오답으로 쓸 수 없다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-teq-lever",
+      "text": "받침점에서 멀리 매달수록 작은 힘으로도 평형을 이룰 수 있어, 무거운 쪽을 받침점 가까이 둔다.",
+      "form": {
+        "condition": "지레가 수평을 유지할 때",
+        "type": "inverse",
+        "scope": "막대 자체의 무게를 무시할 수 있는 지레에 한정한다",
+        "antecedent": {
+          "quantity": "받침점에서 매단 지점까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "평형에 필요한 힘의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리와 힘의 곱이 일정해야 평형이므로 거리가 멀어질 때 필요한 힘도 커진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "받침점에서 멀리 매달수록 평형을 이루는 데 더 큰 힘이 필요하다."
+    },
+    {
+      "id": "rel-teq-sign",
+      "text": "반시계 방향으로 돌리려는 돌림힘을 양수로 잡으면 시계 방향 돌림힘은 음수로 잡아 더한다.",
+      "form": {
+        "condition": "여러 돌림힘을 더해 합을 구하려 방향을 정할 때",
+        "type": "classification",
+        "scope": "한 평면 안에서 회전하는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "회전 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "돌림힘의 부호",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "부호를 정하는 약속을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지레 양쪽에 같은 크기의 힘을 주면 언제나 수평을 유지한다",
+      "why_wrong": "돌림힘은 힘에 받침점까지의 거리를 곱한 값이다. 힘이 같아도 거리가 다르면 먼 쪽으로 기운다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-teq-lever"
+    },
+    {
+      "text": "돌림힘의 평형만 이루면 물체는 움직이지 않는다",
+      "why_wrong": "돌림힘의 합이 0이어도 알짜힘이 남아 있으면 물체 전체가 한쪽으로 밀려간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-teq-balance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-torque"
+    },
+    {
+      "type": "next",
+      "target": "phys-equilibrium-condition"
+    },
+    {
+      "type": "related",
+      "target": "phys-stability-of-object"
+    }
+  ],
+  "curriculum": [
+    "12물리01-01"
+  ],
+  "topic_id": "phys-1-1-01",
+  "pages": [
+    24,
+    25,
+    48
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

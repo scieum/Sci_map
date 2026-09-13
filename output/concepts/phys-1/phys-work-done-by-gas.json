@@ -1,0 +1,132 @@
+{
+  "id": "phys-work-done-by-gas",
+  "concept_key": "concept:work-done-by-gas",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "기체가 하는 일",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'하는 일'이 고유어 서술이라 낱말 전체를 한자로 적을 수 없다. '기체'만 氣體에 해당한다.",
+    "english": "work done by a gas"
+  },
+  "definition": "기체가 부피를 늘리며 피스톤 같은 바깥 대상을 밀어 건네준 에너지. 기체의 압력과 부피 변화량을 곱해 잰다.",
+  "relations": [
+    {
+      "id": "rel-wg-pv",
+      "text": "압력이 그대로 유지된다면 부피가 많이 늘어날수록 기체가 밖에 한 일이 많다.",
+      "form": {
+        "condition": "기체의 압력이 일정하게 유지될 때",
+        "type": "direct",
+        "scope": "피스톤이 움직일 수 있는 밀폐 용기 안의 기체에 한정한다",
+        "antecedent": {
+          "quantity": "부피 변화량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기체가 한 일",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "한 일은 압력과 부피 변화량의 곱이라 부피만 늘리고 일이 줄어든다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "압력이 그대로라면 부피가 많이 늘어날수록 기체가 밖에 한 일이 적다."
+    },
+    {
+      "id": "rel-wg-area",
+      "text": "부피를 가로축, 압력을 세로축에 둔 그래프의 아래 넓이가 기체가 한 일의 양이다.",
+      "form": {
+        "condition": "부피가 변해 가는 과정을 그래프로 나타냈을 때",
+        "type": "classification",
+        "scope": "천천히 변해 각 순간의 압력을 정할 수 있는 과정에 한정한다",
+        "antecedent": {
+          "quantity": "부피·압력 그래프의 넓이",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "기체가 한 일",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 무엇을 뜻하는지 짝지은 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wg-compress",
+      "text": "바깥에서 눌러 부피가 줄어들면 기체가 한 일은 음수가 되고 기체는 일을 받는 쪽이 된다.",
+      "form": {
+        "condition": "바깥에서 눌러 기체의 부피가 줄어들 때",
+        "type": "conditional",
+        "scope": "밀폐된 용기 안의 기체에 한정한다",
+        "antecedent": {
+          "quantity": "기체의 부피",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "기체가 한 일",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부피가 줄면 일의 부호가 반드시 바뀌므로 여전히 일을 한다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바깥에서 눌러 부피가 줄어들 때에도 기체가 밖에 양의 일을 한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기체의 압력이 높으면 부피가 그대로여도 기체가 일을 한다",
+      "why_wrong": "한 일은 압력에 부피 변화량을 곱한 값이다. 부피가 변하지 않으면 압력이 아무리 높아도 한 일은 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wg-pv"
+    },
+    {
+      "text": "기체를 압축할 때에도 기체가 밖에 일을 한다",
+      "why_wrong": "압축될 때는 바깥이 기체에 일을 해 주는 것이라 기체가 한 일은 음수로 셈한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wg-compress"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-work"
+    },
+    {
+      "type": "next",
+      "target": "phys-heat-engine"
+    },
+    {
+      "type": "related",
+      "target": "phys-heat"
+    }
+  ],
+  "curriculum": [
+    "12물리01-06"
+  ],
+  "topic_id": "phys-1-2-03",
+  "pages": [
+    67,
+    72
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

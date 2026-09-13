@@ -1,0 +1,125 @@
+{
+  "id": "phys-ohm-law",
+  "concept_key": "concept:ohm-law",
+  "registry_status": "new",
+  "term": "옴의 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Ohm's law",
+    "hanja_note": "인명 Ohm 을 음차한 말에 조사가 붙은 표제어라 한자로 옮기지 않는다. 뒤의 '법칙'만 法則이다."
+  },
+  "definition": "저항 양끝의 전압과 그곳에 흐르는 전류의 세기가 비례한다는 법칙. 비례 상수가 그 저항의 저항값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ohm-voltage",
+      "text": "저항값이 그대로일 때 저항 양끝의 전압을 3배로 올리면 전류의 세기도 3배가 된다.",
+      "form": {
+        "condition": "저항값이 일정할 때",
+        "type": "direct",
+        "scope": "저항값이 변하지 않는 도체",
+        "antecedent": {
+          "quantity": "저항 양끝의 전압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전압에 비례하므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "저항값이 일정할 때 전압을 3배로 올리면 전류의 세기는 3분의 1이 된다."
+    },
+    {
+      "id": "rel-ohm-resistance",
+      "text": "같은 전압을 걸어 주었다면 저항값이 큰 쪽일수록 흐르는 전류가 약하다.",
+      "form": {
+        "condition": "저항 양끝의 전압이 일정할 때",
+        "type": "inverse",
+        "scope": "저항값이 변하지 않는 도체",
+        "antecedent": {
+          "quantity": "저항값",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전류의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "저항에 반비례하므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 전압을 걸면 저항값이 큰 쪽일수록 전류가 세게 흐른다."
+    },
+    {
+      "id": "rel-ohm-scope",
+      "text": "이 법칙은 온도 등에 따라 저항값이 달라지지 않는 도체에서만 그대로 성립한다.",
+      "form": {
+        "condition": "전압과 전류의 관계를 식으로 다룰 때",
+        "type": "conditional",
+        "scope": "저항값이 일정하게 유지되는 부품"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "저항값이 커지면 저항에 걸리는 전압도 저절로 커진다",
+      "why_wrong": "옴의 법칙은 전압과 전류의 관계다. 전압을 전원이 고정해 두었다면 저항이 커질 때 줄어드는 것은 전류다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ohm-resistance"
+    },
+    {
+      "text": "옴의 법칙은 모든 전기 부품에서 성립한다",
+      "why_wrong": "온도가 오르면 저항값이 달라지는 부품이나 다이오드처럼 저항값이 일정하지 않은 부품에서는 그대로 성립하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ohm-scope"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-power-consumption"
+    },
+    {
+      "type": "next",
+      "target": "phys-series-connection-of-resistor"
+    },
+    {
+      "type": "next",
+      "target": "phys-parallel-connection-of-resistor"
+    }
+  ],
+  "curriculum": [
+    "12물리02-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-02",
+  "pages": [
+    91
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

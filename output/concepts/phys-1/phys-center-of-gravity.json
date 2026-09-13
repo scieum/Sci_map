@@ -1,0 +1,107 @@
+{
+  "id": "phys-center-of-gravity",
+  "concept_key": "concept:center-of-gravity",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "무게 중심",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'무게'가 고유어라 낱말 전체를 한자로 옮길 수 없다. '중심'만 中心에 해당한다.",
+    "english": "center of gravity"
+  },
+  "definition": "물체를 이루는 입자들이 받는 무게가 모두 그 한 점에 모여 작용한다고 보아도 되는 점. 그 점을 받치면 물체가 평형을 이룬다.",
+  "relations": [
+    {
+      "id": "rel-cog-support",
+      "text": "손가락 하나로 받쳐 물체가 기울지 않고 멈추었다면 받친 곳은 무게 중심을 지난다.",
+      "form": {
+        "condition": "받침점 하나만으로 물체를 떠받칠 때",
+        "type": "conditional",
+        "scope": "모양이 변하지 않는 강체이고 다른 힘이 걸리지 않는 경우",
+        "antecedent": {
+          "quantity": "한 점 받치기로 이룬 평형",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "무게 중심의 위치",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무게 중심을 찾는 방법을 밝힌 명제라 뒤집어도 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cog-plumb",
+      "text": "물체의 서로 다른 두 점을 차례로 실에 매달아 그은 연직선이 만나는 곳이 무게 중심이다.",
+      "form": {
+        "condition": "매달아 정지시킨 뒤 실의 방향으로 선을 그을 때",
+        "type": "classification",
+        "scope": "얇고 판판해 연직선을 그을 수 있는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "두 연직선의 교점",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "무게 중심의 위치",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무게 중심을 찾아내는 절차를 밝힌 명제라 맞바꿀 두 양이 없다.",
+      "curriculum": [
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "무게 중심은 반드시 물체 안쪽에 있다",
+      "why_wrong": "도넛이나 부메랑처럼 가운데가 비거나 굽은 물체는 무게 중심이 물체 바깥에 놓일 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cog-plumb"
+    },
+    {
+      "text": "무게 중심은 물체의 한가운데라서 모양과 상관없이 늘 가운데에 있다",
+      "why_wrong": "무게가 한쪽에 몰려 있으면 무게 중심도 그쪽으로 치우친다. 모양과 무게 분포가 함께 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cog-support"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-stability-of-object"
+    },
+    {
+      "type": "related",
+      "target": "phys-torque"
+    },
+    {
+      "type": "related",
+      "target": "phys-equilibrium-condition"
+    }
+  ],
+  "curriculum": [
+    "12물리01-01"
+  ],
+  "topic_id": "phys-1-1-01",
+  "pages": [
+    26,
+    27
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

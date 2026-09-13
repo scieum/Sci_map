@@ -1,0 +1,122 @@
+{
+  "id": "phys-wave-particle-duality-of-light",
+  "concept_key": "concept:wave-particle-duality-of-light",
+  "registry_status": "new",
+  "term": "빛의 이중성",
+  "notation": {
+    "hanja": "二重性",
+    "hanja_gloss": "二 두 이 · 重 무거울 중 · 性 성품 성",
+    "english": "wave-particle duality of light"
+  },
+  "definition": "빛이 간섭 같은 파동의 성질과 광전 효과 같은 입자의 성질을 함께 지니는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wpdl-two",
+      "text": "간섭과 회절은 빛의 파동성으로, 광전 효과와 콤프턴 효과는 입자성으로 설명된다.",
+      "form": {
+        "condition": "빛이 보이는 현상을 설명하려 할 때",
+        "type": "classification",
+        "scope": "한 실험에서 두 성질이 동시에 드러나지는 않는다",
+        "antecedent": {
+          "quantity": "관찰하는 현상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "드러나는 성질",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 현상에 붙는 성질을 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "간섭과 회절은 빛의 입자성으로, 광전 효과와 콤프턴 효과는 파동성으로 설명된다."
+    },
+    {
+      "id": "rel-wpdl-momentum",
+      "text": "광자 하나의 운동량은 빛의 파장이 짧을수록 크다.",
+      "form": {
+        "condition": "광자 하나를 두고 볼 때",
+        "type": "inverse",
+        "scope": "광자의 운동량. 파장과 운동량의 곱이 플랑크 상수가 된다",
+        "antecedent": {
+          "quantity": "빛의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광자 하나의 운동량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장과 운동량이 반비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광자 하나의 운동량은 빛의 파장이 짧을수록 작다."
+    },
+    {
+      "id": "rel-wpdl-compton",
+      "text": "X선과 전자의 충돌을 운동량 보존으로 풀 수 있다는 점이 빛의 입자성을 보여 준다.",
+      "form": {
+        "condition": "X선 광자가 전자와 충돌할 때",
+        "type": "causal",
+        "scope": "콤프턴 효과. 파장이 짧은 전자기파에서 뚜렷하다"
+      },
+      "invertible": false,
+      "invertible_reason": "증거 관계를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛은 파동이거나 입자이거나 둘 중 하나로 정해져 있다",
+      "why_wrong": "빛은 두 성질을 함께 지니며, 어떤 실험을 하느냐에 따라 드러나는 쪽이 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wpdl-two"
+    },
+    {
+      "text": "빛은 질량이 없으므로 운동량도 0이다",
+      "why_wrong": "광자의 운동량은 질량이 아니라 파장이 정한다. 콤프턴 효과가 그 증거다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wpdl-momentum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-photon"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-double-slit-interference"
+    },
+    {
+      "type": "next",
+      "target": "phys-matter-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-03",
+  "pages": [
+    155
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

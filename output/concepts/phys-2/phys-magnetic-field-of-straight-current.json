@@ -1,0 +1,141 @@
+{
+  "id": "phys-magnetic-field-of-straight-current",
+  "concept_key": "concept:magnetic-field-of-straight-current",
+  "registry_status": "new",
+  "term": "직선 전류에 의한 자기장",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magnetic field of a straight current",
+    "hanja_note": "조사가 들어간 구 형태의 표제어라 전체를 한자로 옮기지 않는다. '직선 전류'는 直線電流, '자기장'은 磁氣場이다."
+  },
+  "definition": "전류가 흐르는 곧은 도선 둘레에 도선을 중심으로 동심원을 그리며 생기는 자기장.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-straight-hand",
+      "text": "오른손 엄지를 전류 방향으로 두고 도선을 감아쥘 때 네 손가락이 감기는 쪽이 자기장의 방향이다.",
+      "form": {
+        "condition": "도선에 전류가 흐를 때",
+        "type": "conditional",
+        "scope": "곧게 뻗은 도선 둘레"
+      },
+      "invertible": false,
+      "invertible_reason": "방향을 찾는 방법을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-straight-reverse",
+      "text": "전류의 방향을 반대로 하면 도선 둘레 자기장의 방향도 함께 반대가 된다.",
+      "form": {
+        "condition": "도선에 흐르는 전류의 방향만 바꿀 때",
+        "type": "conditional",
+        "scope": "곧게 뻗은 도선 둘레"
+      },
+      "invertible": true,
+      "invertible_reason": "방향이 전류를 따라 뒤집히므로 그대로라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류의 방향을 반대로 해도 도선 둘레 자기장의 방향은 그대로다."
+    },
+    {
+      "id": "rel-straight-current",
+      "text": "도선에 흐르는 전류가 셀수록 같은 자리의 자기장이 세다.",
+      "form": {
+        "condition": "도선에서 떨어진 거리가 일정할 때",
+        "type": "direct",
+        "scope": "충분히 긴 곧은 도선",
+        "antecedent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도선에 흐르는 전류가 셀수록 같은 자리의 자기장은 약해진다."
+    },
+    {
+      "id": "rel-straight-distance",
+      "text": "도선에서 수직으로 멀어질수록 그 자리의 자기장이 약해진다.",
+      "form": {
+        "condition": "전류의 세기가 일정할 때",
+        "type": "inverse",
+        "scope": "충분히 긴 곧은 도선",
+        "antecedent": {
+          "quantity": "도선에서 떨어진 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기장의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리에 반비례하므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도선에서 수직으로 멀어질수록 그 자리의 자기장이 세진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "직선 도선 주위의 자기장은 도선에서 바깥으로 곧게 뻗어 나간다",
+      "why_wrong": "철 가루를 뿌려 보면 도선을 감싸는 동심원 모양으로 늘어선다. 자기장은 도선을 둘러싸는 방향이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-straight-hand"
+    },
+    {
+      "text": "도선에서 멀어져도 자기장의 세기는 달라지지 않는다",
+      "why_wrong": "나침반을 멀리 둘수록 자침이 덜 돌아간다. 자기장은 거리에 반비례해 약해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-straight-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-electric-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-field-of-circular-current"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-effect-of-current"
+    }
+  ],
+  "curriculum": [
+    "12물리02-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-02",
+  "pages": [
+    115
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

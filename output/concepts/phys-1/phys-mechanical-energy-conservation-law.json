@@ -1,0 +1,132 @@
+{
+  "id": "phys-mechanical-energy-conservation-law",
+  "concept_key": "concept:mechanical-energy-conservation-law",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "역학적 에너지 보존 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어라 낱말 전체를 한자로 적을 수 없다. '역학적 보존 법칙'만 力學的 保存 法則에 해당한다.",
+    "english": "law of conservation of mechanical energy"
+  },
+  "definition": "마찰과 공기 저항이 없으면 물체의 역학적 에너지 총량이 달라지지 않는다는 법칙. 두 에너지가 서로 자리를 바꿀 뿐이다.",
+  "relations": [
+    {
+      "id": "rel-mecl-const",
+      "text": "마찰과 공기 저항이 없다면 운동 에너지와 위치 에너지의 합은 어느 지점에서나 같다.",
+      "form": {
+        "condition": "중력이나 탄성력만 일을 할 때",
+        "type": "conditional",
+        "scope": "마찰과 공기 저항을 무시할 수 있는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "위치에 따른 역학적 에너지",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "역학적 에너지의 총량",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "보존이 성립하는 조건을 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mecl-exchange",
+      "text": "높이가 낮아지는 동안 줄어든 위치 에너지만큼 운동 에너지가 늘어 속력이 커진다.",
+      "form": {
+        "condition": "마찰과 공기 저항을 무시할 수 있을 때",
+        "type": "causal",
+        "scope": "중력만 일을 하는 낙하나 미끄럼 운동에 한정한다",
+        "antecedent": {
+          "quantity": "중력에 의한 위치 에너지",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "운동 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "합이 일정하려면 한쪽이 줄 때 다른 쪽이 늘어야 하므로 함께 준다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "높이가 낮아지면 위치 에너지가 줄어든 만큼 운동 에너지도 함께 줄어든다."
+    },
+    {
+      "id": "rel-mecl-spring",
+      "text": "용수철에 매달려 진동하는 물체에서도 세 에너지를 더한 값은 일정하게 지켜진다.",
+      "form": {
+        "condition": "마찰과 공기 저항을 무시할 수 있을 때",
+        "type": "conditional",
+        "scope": "탄성을 잃지 않는 범위에서 진동하는 용수철에 한정한다",
+        "antecedent": {
+          "quantity": "진동하는 동안의 위치",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "세 에너지의 합",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성립 범위를 넓힌 명제라 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마찰이 있어도 역학적 에너지는 언제나 보존된다",
+      "why_wrong": "마찰력이 한 일만큼 역학적 에너지가 줄어든다. 보존 법칙은 마찰과 공기 저항이 없을 때의 이야기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mecl-const"
+    },
+    {
+      "text": "물체가 떨어지는 동안 운동 에너지가 늘어나므로 역학적 에너지도 함께 커진다",
+      "why_wrong": "운동 에너지가 늘어난 만큼 위치 에너지가 줄어들어 둘의 합은 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mecl-exchange"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-work-energy-theorem"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-mechanical-energy"
+    },
+    {
+      "type": "next",
+      "target": "phys-transformation-of-mechanical-energy"
+    }
+  ],
+  "curriculum": [
+    "12물리01-04"
+  ],
+  "topic_id": "phys-1-2-01",
+  "pages": [
+    55,
+    59,
+    72
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

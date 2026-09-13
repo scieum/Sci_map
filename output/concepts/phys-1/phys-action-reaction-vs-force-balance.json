@@ -1,0 +1,135 @@
+{
+  "id": "phys-action-reaction-vs-force-balance",
+  "concept_key": "concept:action-reaction-vs-force-balance",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "작용 반작용과 힘의 평형의 구별",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'힘'이 고유어라 낱말 전체를 한자로 옮길 수 없다. '작용 반작용'과 '평형'만 作用 反作用·平衡에 해당한다.",
+    "english": "action-reaction pair versus balanced forces"
+  },
+  "definition": "크기가 같고 방향이 반대인 두 힘을 가르는 기준. 한 물체에 함께 걸리면 평형 관계, 서로 다른 물체에 나뉘어 걸리면 작용 반작용이다.",
+  "relations": [
+    {
+      "id": "rel-arfb-object",
+      "text": "두 힘이 한 물체에 걸리면 힘의 평형, 서로 다른 두 물체에 나뉘어 걸리면 작용 반작용이다.",
+      "form": {
+        "condition": "크기가 같고 방향이 반대인 두 힘을 가를 때",
+        "type": "classification",
+        "scope": "두 힘이 각각 어느 물체에 걸리는지 가려낼 수 있는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "힘이 걸린 물체의 수",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "두 힘의 관계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 두 이름을 맞바꾸면 반드시 거짓이 되는 분류 명제다. 같은 카드의 rel-arfb-sum 과 같은 형식이라 판정을 맞추었다.",
+      "curriculum": [
+        "12물리01-03",
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 힘이 한 물체에 걸리면 작용 반작용, 서로 다른 두 물체에 나뉘어 걸리면 힘의 평형이다."
+    },
+    {
+      "id": "rel-arfb-sum",
+      "text": "평형 관계의 두 힘은 더해 알짜힘을 구할 수 있지만 작용 반작용인 두 힘은 더할 수 없다.",
+      "form": {
+        "condition": "두 힘을 더해 한 물체의 알짜힘을 구하려 할 때",
+        "type": "conditional",
+        "scope": "한 물체의 운동을 다루는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "두 힘이 걸린 물체",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "합성 가능 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "합성은 같은 물체에 걸린 힘끼리만 되므로 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03",
+        "12물리01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "작용 반작용인 두 힘은 더해 알짜힘을 구할 수 있지만 평형 관계의 두 힘은 더할 수 없다."
+    },
+    {
+      "id": "rel-arfb-drone",
+      "text": "한자리에 떠 있는 드론에서 공기가 드론을 미는 힘과 지구가 드론을 당기는 힘은 평형 관계다.",
+      "form": {
+        "condition": "드론 하나만을 대상으로 힘을 따질 때",
+        "type": "classification",
+        "scope": "드론이 높이를 바꾸지 않고 떠 있는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "드론에 걸린 두 힘",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "두 힘의 관계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "사례에서 두 힘의 관계를 가려낸 명제라 뒤집을 두 양이 없다.",
+      "curriculum": [
+        "12물리01-03",
+        "12물리01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "크기가 같고 방향이 반대인 두 힘은 모두 작용 반작용 관계다",
+      "why_wrong": "두 힘이 한 물체에 걸려 있다면 평형 관계다. 힘의 크기와 방향만으로는 두 관계를 가를 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-arfb-object"
+    },
+    {
+      "text": "책상 위에 놓인 책에 작용하는 중력과 책상이 책을 떠받치는 힘은 작용 반작용이다",
+      "why_wrong": "두 힘 모두 책 한 물체에 걸려 있으므로 평형 관계다. 중력의 반작용은 책이 지구를 당기는 힘이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-arfb-object"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-action-reaction-law"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-equilibrium-condition"
+    },
+    {
+      "type": "related",
+      "target": "phys-force-interaction"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03",
+    "12물리01-01"
+  ],
+  "topic_id": "phys-1-1-03",
+  "pages": [
+    39
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

@@ -1,0 +1,89 @@
+{
+  "id": "phys-line-spectrum",
+  "concept_key": "concept:line-spectrum",
+  "registry_status": "new",
+  "term": "선스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'스펙트럼'이 음차어여서 표제어 전체를 한자로 적을 수 없다. '선'만 線에 해당한다.",
+    "english": "line spectrum"
+  },
+  "definition": "특정 파장에서만 밝은 선이 띄엄띄엄 나타나는 스펙트럼. 기체 방전관의 빛에서 볼 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ls-element",
+      "text": "원소마다 선의 위치와 개수가 달라 스펙트럼으로 어떤 원소인지 가려낼 수 있다.",
+      "form": {
+        "condition": "같은 분광기로 여러 원소를 관찰할 때",
+        "type": "causal",
+        "scope": "방출 선스펙트럼. 불꽃색이 같아도 선의 배열은 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "구별이 가능하다는 사실을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ls-quantized",
+      "text": "선이 띄엄띄엄하다는 것은 원자 속 전자가 불연속한 에너지 값만 갖는다는 증거다.",
+      "form": {
+        "condition": "원자가 내는 빛을 분광기로 볼 때",
+        "type": "causal",
+        "scope": "원자의 스펙트럼. 고온 고체의 연속 스펙트럼은 해당하지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "증거 관계를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "선스펙트럼은 분광기가 나빠서 연속 스펙트럼이 끊겨 보이는 것이다",
+      "why_wrong": "원자가 특정 에너지 차에 해당하는 빛만 내놓기 때문이며, 좋은 분광기로 볼수록 선이 더 또렷해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ls-quantized"
+    },
+    {
+      "text": "불꽃색이 같은 원소는 선스펙트럼도 같다",
+      "why_wrong": "리튬과 스트론튬은 둘 다 붉은 불꽃색이지만 선의 위치가 달라 스펙트럼으로 구별된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ls-element"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-spectrum"
+    },
+    {
+      "type": "next",
+      "target": "phys-bohr-atomic-model"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-01",
+  "pages": [
+    167,
+    168
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "선 스펙트럼"
+  ]
+}

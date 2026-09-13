@@ -1,0 +1,109 @@
+{
+  "id": "phys-photolithography",
+  "concept_key": "concept:photolithography",
+  "registry_status": "new",
+  "term": "포토 리소그래피",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 photolithography 의 음차어로, 한자어 표기가 존재하지 않는다.",
+    "english": "photolithography"
+  },
+  "definition": "회로 도면을 그린 마스크에 빛을 비추어 렌즈로 축소한 상을 웨이퍼에 맺히게 해 미세한 패턴을 새기는 공정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-litho-reduce",
+      "text": "큰 도면이 렌즈를 지나 웨이퍼 위에 작은 실상으로 맺히므로 아주 미세한 패턴을 만들 수 있다.",
+      "form": {
+        "condition": "마스크가 렌즈의 초점 거리의 두 배보다 멀리 있을 때",
+        "type": "causal",
+        "scope": "빛으로 축소해 새기는 노광 공정"
+      },
+      "invertible": false,
+      "invertible_reason": "공정의 원리를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-litho-wavelength",
+      "text": "노광에 쓰는 빛의 파장이 짧을수록 더 미세한 패턴을 새길 수 있다.",
+      "form": {
+        "condition": "렌즈 등 다른 조건이 같을 때",
+        "type": "inverse",
+        "scope": "회절이 해상도를 가르는 광학 노광 공정",
+        "antecedent": {
+          "quantity": "노광에 쓰는 빛의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "새길 수 있는 패턴의 미세함",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 길수록 회절 때문에 무뎌지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "노광에 쓰는 빛의 파장이 짧을수록 굵은 패턴만 새길 수 있다."
+    },
+    {
+      "id": "rel-litho-use",
+      "text": "집적 회로뿐 아니라 디스플레이 화소 속 반도체와 회로도 이 공정을 되풀이해 쌓아 만든다.",
+      "form": {
+        "condition": "미세한 회로를 대량으로 찍어 낼 때",
+        "type": "conditional",
+        "scope": "반도체·디스플레이 제작 공정"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임새를 드는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "포토 리소그래피는 도면을 같은 크기로 그대로 옮겨 찍는 공정이다",
+      "why_wrong": "렌즈가 큰 도면을 줄여 실상으로 맺어 주기 때문에 도면보다 훨씬 작은 패턴이 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-litho-reduce"
+    },
+    {
+      "text": "노광에 쓰는 빛의 파장은 회로 패턴의 크기와 상관이 없다",
+      "why_wrong": "회절 때문에 파장보다 훨씬 작은 구조는 또렷하게 새기기 어려워, 파장이 짧은 빛을 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-litho-wavelength"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-real-and-virtual-image"
+    },
+    {
+      "type": "related",
+      "target": "phys-convex-lens"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-02",
+  "pages": [
+    151
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1
+}

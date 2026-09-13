@@ -1,0 +1,129 @@
+{
+  "id": "phys-length-contraction",
+  "concept_key": "concept:length-contraction",
+  "registry_status": "new",
+  "term": "길이 수축",
+  "notation": {
+    "hanja": "收縮",
+    "hanja_gloss": "收 거둘 수 · 縮 줄일 축",
+    "english": "length contraction"
+  },
+  "definition": "움직이는 물체의 길이가 운동 방향으로 고유 길이보다 짧게 측정되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lc-mutual",
+      "text": "두 관성계의 관찰자는 서로 상대편의 길이를 짧게 재므로 어느 한쪽만 줄어든 것이 아니다.",
+      "form": {
+        "condition": "두 관성계가 서로에 대해 등속도로 운동할 때",
+        "type": "conditional",
+        "scope": "운동 방향에 나란한 길이. 자기 관성계에서 잰 자기 길이는 고유 길이 그대로다"
+      },
+      "invertible": false,
+      "invertible_reason": "양쪽 관찰자에게 대칭으로 성립하는 명제라 한 방향으로 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lc-direction",
+      "text": "길이가 줄어드는 것은 운동 방향뿐이고 그에 수직인 방향은 그대로다.",
+      "form": {
+        "condition": "물체가 한 방향으로 등속도 운동할 때",
+        "type": "conditional",
+        "scope": "특수 상대성 이론이 말하는 길이 수축"
+      },
+      "invertible": true,
+      "invertible_reason": "줄어드는 방향을 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "길이가 줄어드는 것은 운동 방향에 수직인 쪽이고 운동 방향은 그대로다."
+    },
+    {
+      "id": "rel-lc-space",
+      "text": "우주선에서 보면 두 행성 사이의 공간도 함께 줄어들어 거리가 짧게 측정된다.",
+      "form": {
+        "condition": "우주선이 두 행성 사이를 등속도로 빠르게 지날 때",
+        "type": "causal",
+        "scope": "운동 방향을 따라 놓인 거리. 가속하지 않는 관성계에서의 관측"
+      },
+      "invertible": false,
+      "invertible_reason": "공간에도 같은 일이 일어남을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lc-speed",
+      "text": "상대 속력이 클수록 길이가 줄어드는 정도가 커진다.",
+      "form": {
+        "condition": "물체와 관찰자의 상대 속력을 달리해 볼 때",
+        "type": "direct",
+        "scope": "빛의 속력에 가까워질수록 뚜렷하다",
+        "antecedent": {
+          "quantity": "상대 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "길이가 줄어드는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속력과 수축 정도가 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상대 속력이 클수록 길이가 줄어드는 정도가 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "길이 수축이 일어나면 물체의 모든 방향이 고르게 줄어든다",
+      "why_wrong": "운동 방향으로만 줄고 수직인 방향은 그대로여서 납작해진 것처럼 측정된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lc-direction"
+    },
+    {
+      "text": "우주선 안 사람도 자기 우주선이 짧아진 것을 본다",
+      "why_wrong": "자기 관성계에서 우주선은 정지해 있어 고유 길이 그대로다. 짧게 재는 쪽은 바깥 관찰자다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lc-mutual"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-constancy-of-light-speed"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-proper-length"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-time-dilation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-03",
+  "pages": [
+    191
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

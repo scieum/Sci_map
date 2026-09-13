@@ -1,0 +1,86 @@
+{
+  "id": "phys-optical-image",
+  "concept_key": "concept:optical-image",
+  "registry_status": "new",
+  "term": "상",
+  "notation": {
+    "hanja": "像",
+    "hanja_gloss": "像 모양 상",
+    "english": "image"
+  },
+  "definition": "거울이나 렌즈에서 반사하거나 굴절한 빛이 눈에 들어왔을 때 보이는 물체의 모습.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-img-formation",
+      "text": "물체의 한 점에서 나온 광선들이 다시 만나거나 그 연장선이 만나는 자리에 상이 생긴다.",
+      "form": {
+        "condition": "빛이 거울이나 렌즈에서 반사·굴절한 뒤",
+        "type": "causal",
+        "scope": "거울·렌즈 같은 광학 기기가 만드는 상"
+      },
+      "invertible": false,
+      "invertible_reason": "상이 생기는 자리를 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-img-mirror",
+      "text": "평면거울에서는 반사한 광선의 연장선이 만나는 거울 뒤쪽에 상이 보인다.",
+      "form": {
+        "condition": "평면거울로 물체를 볼 때",
+        "type": "conditional",
+        "scope": "평면거울에 한함. 볼록 렌즈는 물체 위치에 따라 상의 종류가 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "평면거울이라는 조건 아래의 서술이라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상은 물체에서 나온 빛이 거울 표면에 그대로 찍힌 그림이다",
+      "why_wrong": "상은 거울 표면의 무늬가 아니라 반사한 광선이 모이거나 그 연장선이 모이는 자리에 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-img-formation"
+    },
+    {
+      "text": "평면거울에 보이는 상은 거울 면 위에 있다",
+      "why_wrong": "반사 광선의 연장선이 거울 뒤에서 만나므로, 상은 거울 뒤로 물체와 같은 거리만큼 떨어진 곳에 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-img-mirror"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-ray-tracing"
+    },
+    {
+      "type": "next",
+      "target": "phys-real-and-virtual-image"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-02",
+  "pages": [
+    146
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "homonym_flag": true
+}

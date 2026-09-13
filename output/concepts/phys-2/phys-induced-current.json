@@ -1,0 +1,115 @@
+{
+  "id": "phys-induced-current",
+  "concept_key": "concept:induced-current",
+  "registry_status": "new",
+  "term": "유도 전류",
+  "notation": {
+    "hanja": "誘導電流",
+    "english": "induced current",
+    "hanja_gloss": "誘 꾈 유 · 導 이끌 도 · 電 번개 전 · 流 흐를 류"
+  },
+  "definition": "전자기 유도가 일어날 때 코일에 생기는 전류. 전지를 잇지 않아도 흐른다는 점이 회로의 전류와 다르다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-induced-strength",
+      "text": "자석이 셀수록, 자석을 빠르게 움직일수록, 코일을 많이 감을수록 유도 전류가 세다.",
+      "form": {
+        "condition": "코일과 자석의 상대 운동이 있을 때",
+        "type": "direct",
+        "scope": "닫힌 회로를 이룬 코일",
+        "antecedent": {
+          "quantity": "자석을 움직이는 빠르기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세 조건 모두 전류를 키우므로 천천히 움직일수록 세다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석을 천천히 움직일수록 코일에 흐르는 유도 전류가 세진다."
+    },
+    {
+      "id": "rel-induced-oppose",
+      "text": "유도 전류는 자석의 운동을 방해하는 쪽으로 자기력이 생기도록 흐른다.",
+      "form": {
+        "condition": "자석과 코일이 상대 운동을 할 때",
+        "type": "causal",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "운동을 방해하는 쪽이라 도와주는 쪽이라 바꾸면 에너지 보존에 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유도 전류는 자석의 운동을 도와주는 쪽으로 자기력이 생기도록 흐른다."
+    },
+    {
+      "id": "rel-induced-while",
+      "text": "유도 전류는 자기선속이 달라지는 동안에만 흐르고 변화가 멎으면 곧 사라진다.",
+      "form": {
+        "condition": "코일을 지나는 자기선속을 볼 때",
+        "type": "conditional",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "변화가 있어야 흐르므로 멎은 뒤에도 흐른다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 번 생긴 유도 전류는 자기선속의 변화가 멎은 뒤에도 계속 흐른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자석을 가까이 할 때와 멀리 할 때 유도 전류의 방향은 같다",
+      "why_wrong": "자기선속이 늘 때와 줄 때는 그 변화를 방해하는 방향이 서로 반대라서 유도 전류의 방향도 반대가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-induced-oppose"
+    },
+    {
+      "text": "자석을 아주 천천히 움직이면 유도 전류가 더 세게 흐른다",
+      "why_wrong": "자기선속이 빠르게 변할수록 유도 전류가 세다. 천천히 움직이면 오히려 약해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-induced-strength"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electromagnetic-induction"
+    },
+    {
+      "type": "next",
+      "target": "phys-lenz-law"
+    },
+    {
+      "type": "next",
+      "target": "phys-faraday-law-of-induction"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    120,
+    121
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

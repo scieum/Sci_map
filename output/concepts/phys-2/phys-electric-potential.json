@@ -1,0 +1,105 @@
+{
+  "id": "phys-electric-potential",
+  "concept_key": "concept:electric-potential",
+  "registry_status": "new",
+  "homonym_flag": true,
+  "term": "전위",
+  "notation": {
+    "hanja": "電位",
+    "english": "electric potential",
+    "hanja_gloss": "電 번개 전 · 位 자리 위",
+    "symbol_display": "V",
+    "symbol_plain": "V"
+  },
+  "definition": "전기장 안 한 점의 전기적 상태를 중력장의 높이처럼 나타내는 물리량. 단위는 V(볼트)이고 두 점의 차이가 전위차다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-potential-per-charge",
+      "text": "어떤 점의 전위는 그 점에 놓인 전하의 전기적 위치 에너지를 그 전하량으로 나누어 구한다.",
+      "form": {
+        "condition": "전기장 안의 한 점을 볼 때",
+        "type": "conditional",
+        "scope": "기준점을 정해 둔 정전기장"
+      },
+      "invertible": false,
+      "invertible_reason": "값을 구하는 방법을 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-potential-independent",
+      "text": "같은 점이라면 어떤 전하를 갖다 놓든 그 점의 전위 값은 달라지지 않는다.",
+      "form": {
+        "condition": "전기장과 기준점이 같을 때",
+        "type": "conditional",
+        "scope": "시험 전하가 전기장을 흩뜨리지 않는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "전위는 놓는 전하와 무관하므로 따라 커진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하량이 큰 전하를 놓으면 그 점의 전위도 함께 커진다."
+    },
+    {
+      "id": "rel-potential-move",
+      "text": "전기력만 받는 양전하는 전위가 높은 곳에서 낮은 곳으로 저절로 움직인다.",
+      "form": {
+        "condition": "양전하가 전기력 외의 힘을 받지 않을 때",
+        "type": "causal",
+        "scope": "정지 상태에서 놓아 준 양전하"
+      },
+      "invertible": true,
+      "invertible_reason": "저절로 가는 쪽은 전위가 낮아지는 쪽이므로 반대로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기력만 받는 양전하는 전위가 낮은 곳에서 높은 곳으로 저절로 움직인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전위는 그 점에 놓인 전하의 전하량이 클수록 높다",
+      "why_wrong": "전위는 단위 전하당 값으로 정의되므로 놓는 전하와 상관없이 그 점의 전기장이 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-potential-independent"
+    },
+    {
+      "text": "전위가 높은 곳에 있는 전하는 종류와 상관없이 위치 에너지가 크다",
+      "why_wrong": "양전하는 전위가 높을수록 위치 에너지가 크지만, 음전하는 전위가 높은 곳에서 오히려 위치 에너지가 작다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-potential-per-charge"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-potential-energy",
+      "note": "전위는 단위 전하당 전기적 위치 에너지다"
+    },
+    {
+      "type": "next",
+      "target": "phys-potential-difference"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    87
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

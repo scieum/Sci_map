@@ -1,0 +1,109 @@
+{
+  "id": "phys-magnetism",
+  "concept_key": "concept:magnetism",
+  "registry_status": "new",
+  "term": "자성",
+  "notation": {
+    "hanja": "磁性",
+    "english": "magnetism",
+    "hanja_gloss": "磁 자석 자 · 性 성품 성"
+  },
+  "definition": "물질이 자석에 끌리거나 밀리는 방식으로 자기장에 반응하는 성질. 반응의 세기와 방향은 물질마다 다르다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-magnetism-classify",
+      "text": "물질은 자석에 반응하는 방식에 따라 강자성체·상자성체·반자성체로 나뉜다.",
+      "form": {
+        "condition": "자석을 가까이 해 반응을 살필 때",
+        "type": "classification",
+        "scope": "고체·액체·기체를 아우른 보통의 물질",
+        "antecedent": {
+          "quantity": "자석에 대한 반응",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "자성체의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류를 밝힌 명제라 앞뒤에 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-magnetism-origin",
+      "text": "물질이 자성을 띠는 밑바탕에는 원자 하나하나가 작은 자석 노릇을 한다는 사정이 있다.",
+      "form": {
+        "condition": "자성이 생기는 까닭을 따질 때",
+        "type": "causal",
+        "scope": "원자로 이루어진 물질 전반"
+      },
+      "invertible": false,
+      "invertible_reason": "원인을 가려낸 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-magnetism-weak",
+      "text": "자석에 붙지 않는 물질도 자기장에 아주 약하게나마 반응한다.",
+      "form": {
+        "condition": "충분히 센 자석을 가까이 했을 때",
+        "type": "conditional",
+        "scope": "상자성체와 반자성체"
+      },
+      "invertible": true,
+      "invertible_reason": "약하게라도 반응하므로 전혀 반응하지 않는다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석에 붙지 않는 물질은 자기장에 전혀 반응하지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자석에 붙지 않는 물질은 자성이 아예 없다",
+      "why_wrong": "알루미늄은 약하게 끌리고 물이나 구리는 약하게 밀린다. 붙지 않을 뿐 반응은 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-magnetism-weak"
+    },
+    {
+      "text": "금속이면 모두 자석에 붙는다",
+      "why_wrong": "철·니켈·코발트처럼 강하게 붙는 금속이 있는가 하면 알루미늄은 약하게 끌리고 구리와 금은 오히려 밀린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-magnetism-classify"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-atomic-magnet"
+    },
+    {
+      "type": "related",
+      "target": "phys-magnetic-field",
+      "note": "자성은 자기장에 대한 반응으로 드러난다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-01",
+  "pages": [
+    108
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

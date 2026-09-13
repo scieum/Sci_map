@@ -45,7 +45,10 @@ def normalize_title(s: str) -> str:
     어긋나 원인을 찾기 어렵다. 폭 0 문자(U+200B)와 소프트 하이픈도 같은 부류다.
     """
     t = "".join(ch for ch in clean(s) if unicodedata.category(ch) not in ("Cc", "Cf"))
-    return re.sub(r"[\s·ㆍ‧・,]", "", t)
+    # 가운뎃점 무리에 불릿(U+2022)을 넣는다. 「물리학」 164쪽은 중단원 제목을
+    # '반도체•상대성 이론' 으로, 백로그는 '반도체·상대성 이론' 으로 적는다 —
+    # 글자가 아니라 조판의 차이라서 이것까지 불일치로 보면 단원 경계가 헛되이 막힌다.
+    return re.sub(r"[\s·ㆍ‧・•,]", "", t)
 
 
 def title_on_page(title: str, page_text: str) -> bool:

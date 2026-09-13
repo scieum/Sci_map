@@ -1,0 +1,136 @@
+{
+  "id": "phys-action-reaction-law",
+  "concept_key": "concept:action-reaction-law",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "작용 반작용 법칙",
+  "aliases": [
+    "뉴턴 제3법칙",
+    "작용과 반작용"
+  ],
+  "notation": {
+    "hanja": "作用 反作用 法則",
+    "hanja_gloss": "作 지을 작 · 用 쓸 용 · 反 돌이킬 반 · 作 지을 작 · 用 쓸 용 · 法 법 법 · 則 법칙 칙",
+    "english": "Newton's third law of motion"
+  },
+  "definition": "한 물체가 다른 물체를 밀거나 당기면 그 물체도 같은 크기로 되밀거나 되당긴다는 법칙. 두 힘의 방향은 서로 반대다.",
+  "relations": [
+    {
+      "id": "rel-ar-magnitude",
+      "text": "주고받는 두 힘은 어느 쪽이 먼저랄 것 없이 함께 나타나며 크기가 같고 방향이 정반대다.",
+      "form": {
+        "condition": "두 물체가 서로 힘을 주고받는 동안",
+        "type": "classification",
+        "scope": "두 물체의 질량이나 운동 상태와 상관없이 성립한다",
+        "antecedent": {
+          "quantity": "작용하는 힘의 크기",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반작용하는 힘의 크기",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 크기와 방향이 하나로 정해진 명제라 방향을 같다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주고받는 두 힘은 크기가 서로 같고 방향도 서로 같다."
+    },
+    {
+      "id": "rel-ar-different-objects",
+      "text": "작용과 반작용은 서로 다른 물체에 하나씩 걸리므로 둘을 더해 알짜힘을 구할 수 없다.",
+      "form": {
+        "condition": "두 힘이 걸린 물체가 서로 다를 때",
+        "type": "causal",
+        "scope": "작용 반작용 관계로 짝지어진 두 힘에 한정한다",
+        "antecedent": {
+          "quantity": "힘이 걸린 물체",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "합성 가능 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "걸린 물체가 다르면 합성이 성립하지 않으므로 합칠 수 있다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "작용과 반작용인 두 힘은 크기가 같고 방향이 반대이므로 더하면 알짜힘이 0이 된다."
+    },
+    {
+      "id": "rel-ar-distance",
+      "text": "지구와 드론처럼 닿아 있지 않은 두 물체 사이에서도 이 법칙은 그대로 성립한다.",
+      "form": {
+        "condition": "두 물체가 접촉하지 않은 채 힘을 주고받을 때",
+        "type": "conditional",
+        "scope": "중력·전기력처럼 떨어져서도 작용하는 힘에 한정한다",
+        "antecedent": {
+          "quantity": "두 물체의 접촉 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "법칙의 성립",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성립 범위를 넓힌 명제라 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "가벼운 물체가 무거운 물체에 부딪히면 가벼운 쪽이 더 큰 힘을 받는다",
+      "why_wrong": "두 물체가 주고받는 힘의 크기는 같다. 다만 질량이 작은 쪽의 가속도가 커서 더 크게 튕겨 나갈 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ar-magnitude"
+    },
+    {
+      "text": "작용이 먼저 생기고 반작용은 그 뒤에 따라 생긴다",
+      "why_wrong": "두 힘은 동시에 나타난다. 어느 쪽을 작용이라 부를지는 관점에 따른 이름일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ar-magnitude"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-force-interaction"
+    },
+    {
+      "type": "next",
+      "target": "phys-action-reaction-vs-force-balance"
+    },
+    {
+      "type": "next",
+      "target": "phys-momentum-conservation-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03"
+  ],
+  "topic_id": "phys-1-1-03",
+  "pages": [
+    37,
+    39,
+    48
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

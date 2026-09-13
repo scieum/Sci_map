@@ -1,0 +1,115 @@
+{
+  "id": "phys-constancy-of-light-speed",
+  "concept_key": "concept:constancy-of-light-speed",
+  "registry_status": "new",
+  "term": "광속 불변 원리",
+  "notation": {
+    "hanja": "光速 不變 原理",
+    "hanja_gloss": "光 빛 광 · 速 빠를 속 · 不 아닐 불 · 變 변할 변 · 原 근원 원 · 理 다스릴 리",
+    "english": "principle of constancy of the speed of light",
+    "symbol_display": "c",
+    "symbol_plain": "c"
+  },
+  "definition": "진공에서 빛의 속력은 광원이나 관찰자가 어떻게 움직이든 모든 관성계에서 같게 측정된다는 원리.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cls-evidence",
+      "text": "광속에 가까운 속력으로 달리는 입자가 낸 빛도 정지한 입자가 낸 빛과 같은 속력으로 측정되었다.",
+      "form": {
+        "condition": "가속기에서 빠르게 달리는 입자가 낸 빛의 속력을 잴 때",
+        "type": "causal",
+        "scope": "진공에서 잰 빛의 속력. 매질 속에서는 굴절률만큼 느려진다"
+      },
+      "invertible": false,
+      "invertible_reason": "실험 결과를 전하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cls-arrow",
+      "text": "화살의 속력은 열차 안과 밖에서 다르게 측정되지만 빛의 속력은 같게 측정된다.",
+      "form": {
+        "condition": "열차가 일정한 속도로 달릴 때",
+        "type": "classification",
+        "scope": "속도 덧셈이 통하는 물체와 빛의 대비",
+        "antecedent": {
+          "quantity": "측정하는 대상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "두 관성계 측정값의 차이",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "화살과 빛에 붙는 성질을 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화살의 속력은 열차 안과 밖에서 같게 측정되지만 빛의 속력은 다르게 측정된다."
+    },
+    {
+      "id": "rel-cls-consequence",
+      "text": "두 관성계의 시간과 길이 측정이 달라지는 것은 이 원리를 지키기 위한 결과다.",
+      "form": {
+        "condition": "광속이 모든 관성계에서 같다고 받아들일 때",
+        "type": "causal",
+        "scope": "특수 상대성 이론의 결론인 시간 팽창과 길이 수축"
+      },
+      "invertible": false,
+      "invertible_reason": "원리에서 결론이 따라 나옴을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛을 쏜 우주선이 빠르게 달리면 그 빛의 속력도 더 빨라진다",
+      "why_wrong": "광원의 속력은 빛의 속력에 더해지지 않는다. 어느 관성계에서 재도 같은 값이 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cls-arrow"
+    },
+    {
+      "text": "빛의 속력이 일정하다는 것은 물속에서도 같은 값이라는 뜻이다",
+      "why_wrong": "이 원리는 진공에서의 속력에 대한 것이다. 매질 속에서는 굴절률만큼 느려진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cls-evidence"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-time-dilation"
+    },
+    {
+      "type": "next",
+      "target": "phys-length-contraction"
+    },
+    {
+      "type": "related",
+      "target": "phys-principle-of-relativity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-03",
+  "pages": [
+    188
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,141 @@
+{
+  "id": "phys-newton-second-law",
+  "concept_key": "concept:newton-second-law",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "뉴턴 제2법칙",
+  "aliases": [
+    "가속도 법칙",
+    "뉴턴 운동 제2법칙"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'뉴턴'이 사람 이름을 옮긴 음차어라 낱말 전체를 한자로 적을 수 없다. '제2법칙'만 第二法則에 해당한다.",
+    "english": "Newton's second law of motion"
+  },
+  "definition": "물체의 가속도가 무엇으로 정해지는지 밝힌 법칙. 가속도는 알짜힘에 비례하고 질량에 반비례하며 방향은 알짜힘 쪽이다.",
+  "relations": [
+    {
+      "id": "rel-n2-force",
+      "text": "질량이 그대로일 때 알짜힘을 두 배로 키우면 가속도의 크기도 두 배가 된다.",
+      "form": {
+        "condition": "물체의 질량이 일정할 때",
+        "type": "direct",
+        "scope": "속력이 빛의 속력에 견줄 수 없을 만큼 느린 물체에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "가속도의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "힘과 가속도는 정비례하므로 힘을 키울 때 가속도가 줄어든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 그대로일 때 알짜힘을 두 배로 키우면 가속도는 절반이 된다."
+    },
+    {
+      "id": "rel-n2-mass",
+      "text": "같은 크기의 알짜힘을 받아도 질량이 큰 물체일수록 가속도의 크기는 작다.",
+      "form": {
+        "condition": "작용하는 알짜힘이 일정할 때",
+        "type": "inverse",
+        "scope": "운동하는 동안 질량이 변하지 않는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "가속도의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량과 가속도는 반비례하므로 질량이 클수록 가속도가 크다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 크기의 알짜힘을 받으면 질량이 큰 물체일수록 가속도의 크기가 크다."
+    },
+    {
+      "id": "rel-n2-unit",
+      "text": "1 N 은 질량이 1 kg 인 물체의 속도를 1초마다 1 m/s 씩 바꾸는 힘의 크기다.",
+      "form": {
+        "condition": "힘의 단위를 정의할 때",
+        "type": "classification",
+        "scope": "국제단위계를 쓰는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "1 N 의 힘",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "질량과 가속도의 곱",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "단위를 정하는 약속을 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물체가 계속 움직이려면 힘이 계속 작용해야 한다",
+      "why_wrong": "힘은 속도를 바꾸는 원인이지 속도를 유지시키는 원인이 아니다. 알짜힘이 0이면 물체는 속도를 그대로 지킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-n2-force"
+    },
+    {
+      "text": "무거운 물체일수록 더 빨리 가속된다",
+      "why_wrong": "같은 힘을 받는다면 질량이 클수록 가속도는 오히려 작아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-n2-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-acceleration"
+    },
+    {
+      "type": "next",
+      "target": "phys-braking-distance"
+    },
+    {
+      "type": "next",
+      "target": "phys-impulse",
+      "note": "충격량은 이 법칙을 시간에 대해 다시 쓴 것이다"
+    },
+    {
+      "type": "related",
+      "target": "phys-action-reaction-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-02"
+  ],
+  "topic_id": "phys-1-1-02",
+  "pages": [
+    33,
+    48,
+    74
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

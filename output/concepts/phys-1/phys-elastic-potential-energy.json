@@ -1,0 +1,131 @@
+{
+  "id": "phys-elastic-potential-energy",
+  "concept_key": "concept:elastic-potential-energy",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "탄성력에 의한 위치 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어라 낱말 전체를 한자로 적을 수 없다. '탄성력'과 '위치'만 彈性力·位置에 해당한다.",
+    "english": "elastic potential energy"
+  },
+  "definition": "탄성력을 거슬러 용수철을 변형시키며 해 준 일만큼 용수철에 쌓이는 에너지. 평형 위치로 되돌아가는 동안 이 에너지가 다시 일로 나온다.",
+  "relations": [
+    {
+      "id": "rel-epe-kx",
+      "text": "용수철 상수가 크거나 변형된 길이가 길수록 저장되는 에너지가 크며, 길이가 두 배면 에너지는 네 배다.",
+      "form": {
+        "condition": "탄성을 잃지 않는 범위 안에서 변형시킬 때",
+        "type": "direct",
+        "scope": "변형된 길이에 비례하는 탄성력을 내는 용수철에 한정한다",
+        "antecedent": {
+          "quantity": "변형된 길이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "탄성력에 의한 위치 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "저장된 에너지는 변형된 길이의 제곱에 비례하므로 두 배라고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변형된 길이가 두 배가 되면 탄성력에 의한 위치 에너지도 두 배가 된다."
+    },
+    {
+      "id": "rel-epe-area",
+      "text": "늘어난 길이를 가로축, 작용한 힘을 세로축에 둔 그래프의 삼각형 넓이가 저장된 에너지다.",
+      "form": {
+        "condition": "용수철을 천천히 잡아당겨 변형시킬 때",
+        "type": "classification",
+        "scope": "탄성을 잃지 않는 범위 안의 용수철에 한정한다",
+        "antecedent": {
+          "quantity": "힘·늘어난 길이 그래프의 넓이",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "저장된 에너지",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 무엇을 뜻하는지 짝지은 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-epe-zero",
+      "text": "평형 위치에서는 변형이 없어 값이 0이고, 늘이든 줄이든 벗어나기만 하면 값이 커진다.",
+      "form": {
+        "condition": "평형 위치를 기준으로 값을 잴 때",
+        "type": "classification",
+        "scope": "탄성을 잃지 않는 범위 안의 용수철에 한정한다",
+        "antecedent": {
+          "quantity": "평형 위치에서의 변형",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "탄성력에 의한 위치 에너지",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "값이 0이 되는 자리를 밝힌 명제라 뒤집을 두 양의 증감이 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "용수철을 눌러 줄이면 탄성력에 의한 위치 에너지가 음수가 된다",
+      "why_wrong": "늘이든 줄이든 변형된 길이의 제곱에 비례하므로 값은 언제나 0보다 크거나 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-epe-zero"
+    },
+    {
+      "text": "변형된 길이가 두 배가 되면 저장된 에너지도 두 배가 된다",
+      "why_wrong": "저장된 에너지는 변형된 길이의 제곱에 비례한다. 길이가 두 배면 에너지는 네 배가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-epe-kx"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-elastic-force"
+    },
+    {
+      "type": "next",
+      "target": "phys-mechanical-energy"
+    },
+    {
+      "type": "related",
+      "target": "phys-work"
+    }
+  ],
+  "curriculum": [
+    "12물리01-04"
+  ],
+  "topic_id": "phys-1-2-01",
+  "pages": [
+    56,
+    72
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

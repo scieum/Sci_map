@@ -1,0 +1,109 @@
+{
+  "id": "phys-energy-band",
+  "concept_key": "concept:energy-band",
+  "registry_status": "new",
+  "term": "에너지띠",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'는 음차어이고 '띠'는 고유어여서 표제어를 한자로 적을 수 없다.",
+    "english": "energy band"
+  },
+  "definition": "고체에서 이웃한 원자끼리 영향을 주고받아 준위가 잘게 갈라져 이루어진, 띠 모양의 에너지 영역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eb-close",
+      "text": "원자 사이 간격이 가까운 고체에서는 이웃 원자가 전자의 준위에 서로 영향을 준다.",
+      "form": {
+        "condition": "원자들이 결정으로 촘촘히 모여 있을 때",
+        "type": "causal",
+        "scope": "고체. 원자 사이가 먼 기체에서는 거의 영향을 주지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 대는 명제여서 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-eb-split",
+      "text": "가까이 모인 원자의 수가 많을수록 준위가 더 잘게 갈라져 거의 이어진 띠처럼 보인다.",
+      "form": {
+        "condition": "같은 종류의 원자가 가까이 모일 때",
+        "type": "direct",
+        "scope": "원자 수가 아주 많은 고체",
+        "antecedent": {
+          "quantity": "가까이 모인 원자의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "갈라진 준위의 촘촘함",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "원자 수와 갈라짐의 촘촘함이 함께 늘므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가까이 모인 원자의 수가 많을수록 준위가 성기게 갈라져 띠가 되지 않는다."
+    },
+    {
+      "id": "rel-eb-forbidden",
+      "text": "고체 속 전자는 띠에 해당하는 에너지만 가질 수 있고 띠 사이의 값은 가질 수 없다.",
+      "form": {
+        "condition": "전자가 고체 안에 있을 때",
+        "type": "conditional",
+        "scope": "결정 고체의 에너지띠 구조"
+      },
+      "invertible": false,
+      "invertible_reason": "가질 수 있는 값의 범위를 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에너지띠 안에서는 전자가 어떤 에너지든 제한 없이 가질 수 있다",
+      "why_wrong": "띠도 아주 촘촘한 준위가 모인 것이라 준위 수만큼만 전자가 들어간다. 간격이 좁아 이어져 보일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eb-split"
+    },
+    {
+      "text": "기체에서도 고체처럼 에너지띠가 나타난다",
+      "why_wrong": "기체는 원자 사이가 멀어 서로 거의 영향을 주지 않으므로 준위가 갈라지지 않고 선스펙트럼이 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eb-close"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-energy-level"
+    },
+    {
+      "type": "next",
+      "target": "phys-valence-band-and-conduction-band"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    177
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

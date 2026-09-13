@@ -1,0 +1,119 @@
+{
+  "id": "phys-matter-wave",
+  "concept_key": "concept:matter-wave",
+  "registry_status": "new",
+  "term": "물질파",
+  "notation": {
+    "hanja": "物質波",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 波 물결 파",
+    "english": "matter wave",
+    "symbol_display": "λ = h/p",
+    "symbol_plain": "lambda = h/p"
+  },
+  "definition": "전자처럼 입자로만 다루던 것이 함께 나타내는 파동. 드브로이가 제안해 물질의 이중성으로 이어졌다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mw-lambda",
+      "text": "입자의 운동량이 클수록 그 입자의 물질파 파장은 짧다.",
+      "form": {
+        "condition": "입자 하나의 운동량을 두고 볼 때",
+        "type": "inverse",
+        "scope": "모든 입자에 해당하지만 파동성은 운동량이 작을 때만 드러난다",
+        "antecedent": {
+          "quantity": "입자의 운동량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물질파의 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 플랑크 상수를 운동량으로 나눈 값이어서 운동량이 커지면 파장은 반드시 짧아진다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "입자의 운동량이 클수록 그 입자의 물질파 파장은 길다."
+    },
+    {
+      "id": "rel-mw-macro",
+      "text": "야구공처럼 무거운 물체는 물질파 파장이 원자보다 훨씬 짧아 파동성이 드러나지 않는다.",
+      "form": {
+        "condition": "일상적인 크기와 속력의 물체일 때",
+        "type": "causal",
+        "scope": "거시 물체. 전자처럼 가벼운 입자에서는 사정이 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 대는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mw-davisson",
+      "text": "니켈에 쏜 전자가 특정 각도에서 많이 튀어나온 것은 전자의 물질파가 보강 간섭한 결과다.",
+      "form": {
+        "condition": "결정 표면에 일정한 속력의 전자를 쏘았을 때",
+        "type": "causal",
+        "scope": "데이비슨·거머 실험. 전자의 속력이 바뀌면 각도도 바뀐다"
+      },
+      "invertible": false,
+      "invertible_reason": "실험 결과의 해석을 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질파는 전자처럼 아주 작은 입자에만 생긴다",
+      "why_wrong": "운동량이 있는 모든 물체에 물질파가 있다. 무거운 물체는 파장이 너무 짧아 관찰되지 않을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mw-macro"
+    },
+    {
+      "text": "전자의 속력을 키우면 물질파 파장도 길어진다",
+      "why_wrong": "속력이 커지면 운동량이 커지고, 파장은 그에 반비례해 오히려 짧아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mw-lambda"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-wave-particle-duality-of-light"
+    },
+    {
+      "type": "next",
+      "target": "phys-wave-particle-duality-of-matter"
+    },
+    {
+      "type": "next",
+      "target": "phys-electron-microscope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-03",
+  "pages": [
+    157,
+    158
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "드브로이파"
+  ]
+}

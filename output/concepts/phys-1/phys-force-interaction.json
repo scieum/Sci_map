@@ -1,0 +1,106 @@
+{
+  "id": "phys-force-interaction",
+  "concept_key": "concept:force-interaction",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "힘의 상호작용",
+  "aliases": [
+    "상호작용하는 힘"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'힘'이 고유어라 낱말 전체를 한자로 옮길 수 없다. '상호작용'만 相互作用에 해당한다.",
+    "english": "force as an interaction"
+  },
+  "definition": "힘을 한 물체가 지닌 성질이 아니라 두 물체가 서로 주고받는 작용으로 보는 관점. 힘은 늘 짝을 이루어 나타난다.",
+  "relations": [
+    {
+      "id": "rel-fi-pair",
+      "text": "힘은 혼자 생기지 않으며 언제나 두 물체 사이에서 한 쌍으로 나타난다.",
+      "form": {
+        "condition": "어떤 힘이 걸린 상황을 살필 때",
+        "type": "classification",
+        "scope": "접촉하든 떨어져 있든 모든 힘에 두루 성립한다",
+        "antecedent": {
+          "quantity": "힘의 존재",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "두 물체",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "힘이 무엇인지 규정한 분류 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-fi-noncontact",
+      "text": "전기력이나 자기력처럼 두 물체가 닿아 있지 않아도 서로 힘을 주고받는다.",
+      "form": {
+        "condition": "두 물체가 떨어져 있을 때",
+        "type": "conditional",
+        "scope": "중력·전기력·자기력처럼 접촉 없이 작용하는 힘에 한정한다",
+        "antecedent": {
+          "quantity": "두 물체 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "상호작용의 성립",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "성립 범위를 넓힌 명제라 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12물리01-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "미는 쪽만 힘을 주고 밀리는 쪽은 힘을 주지 않는다",
+      "why_wrong": "밀 때 상대도 나를 밀고 있다. 바퀴 달린 의자에 앉아 벽을 밀면 벽이 미는 힘 때문에 내가 밀려난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fi-pair"
+    },
+    {
+      "text": "두 물체가 닿아 있어야만 힘을 주고받을 수 있다",
+      "why_wrong": "자석과 쇠붙이처럼 떨어져 있어도 서로 힘을 주고받는다. 중력도 마찬가지다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fi-noncontact"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-action-reaction-law"
+    },
+    {
+      "type": "related",
+      "target": "phys-action-reaction-vs-force-balance"
+    }
+  ],
+  "curriculum": [
+    "12물리01-03"
+  ],
+  "topic_id": "phys-1-1-03",
+  "pages": [
+    36,
+    37,
+    39
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

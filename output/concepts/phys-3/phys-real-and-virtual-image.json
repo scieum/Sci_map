@@ -1,0 +1,144 @@
+{
+  "id": "phys-real-and-virtual-image",
+  "concept_key": "concept:real-and-virtual-image",
+  "registry_status": "new",
+  "term": "실상과 허상",
+  "notation": {
+    "hanja": "實像 虛像",
+    "hanja_gloss": "實 열매 실 · 像 모양 상 · 虛 빌 허 · 像 모양 상",
+    "english": "real image and virtual image"
+  },
+  "definition": "빛이 실제로 모여 맺히는 상이 실상이고, 광선의 연장선이 만나는 자리에 보이기만 하는 상이 허상이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rvi-outside",
+      "text": "물체를 초점보다 멀리 두면 렌즈 반대쪽에 거꾸로 선 실상이 맺힌다.",
+      "form": {
+        "condition": "물체가 볼록 렌즈의 초점 바깥에 있을 때",
+        "type": "conditional",
+        "scope": "얇은 볼록 렌즈. 물체가 초점 위에 있으면 상이 맺히지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "초점 바깥 물체의 실상은 반드시 거꾸로 서므로 '바로 선'으로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체를 초점보다 멀리 두면 렌즈 반대쪽에 바로 선 실상이 맺힌다."
+    },
+    {
+      "id": "rel-rvi-inside",
+      "text": "물체를 초점 안쪽에 두면 물체와 같은 쪽에 바로 서고 확대된 허상이 보인다.",
+      "form": {
+        "condition": "물체가 볼록 렌즈의 초점 안쪽에 있을 때",
+        "type": "conditional",
+        "scope": "얇은 볼록 렌즈를 돋보기로 쓰는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "초점 안쪽 물체의 허상은 반드시 바로 서고 확대되므로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체를 초점 안쪽에 두면 물체와 같은 쪽에 거꾸로 서고 축소된 허상이 보인다."
+    },
+    {
+      "id": "rel-rvi-distance",
+      "text": "물체를 초점 거리의 두 배보다 더 멀리 둘수록 실상은 작아지고 초점 가까이에 맺힌다.",
+      "form": {
+        "condition": "물체가 초점 거리의 두 배보다 멀리 있을 때",
+        "type": "inverse",
+        "scope": "얇은 볼록 렌즈. 물체가 초점과 두 배 거리 사이면 실상이 물체보다 커진다",
+        "antecedent": {
+          "quantity": "물체와 렌즈 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "실상의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "물체를 멀리 둘수록 실상이 작아지므로 '커진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체를 초점 거리의 두 배보다 더 멀리 둘수록 실상은 커진다."
+    },
+    {
+      "id": "rel-rvi-screen",
+      "text": "실상은 스크린에 받아 볼 수 있지만 허상은 스크린에 받을 수 없다.",
+      "form": {
+        "condition": "상이 맺힌 자리에 스크린을 놓아 볼 때",
+        "type": "classification",
+        "scope": "실상과 허상을 가르는 기준",
+        "antecedent": {
+          "quantity": "상의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "스크린에 맺히는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "실상과 허상의 정의를 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "허상은 스크린에 받아 볼 수 있지만 실상은 스크린에 받을 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "허상은 눈에 보이지 않는 상이다",
+      "why_wrong": "허상도 눈으로는 잘 보인다. 다만 그 자리에서 실제로 빛이 나오지 않아 스크린에는 맺히지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rvi-screen"
+    },
+    {
+      "text": "돋보기로 크게 보이는 모습은 실상이다",
+      "why_wrong": "물체를 초점 안쪽에 두고 보는 것이므로, 광선의 연장선이 만드는 허상을 보는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rvi-inside"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-optical-image"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-convex-lens"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-ray-tracing"
+    },
+    {
+      "type": "next",
+      "target": "phys-photolithography"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-02",
+  "pages": [
+    148,
+    149
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

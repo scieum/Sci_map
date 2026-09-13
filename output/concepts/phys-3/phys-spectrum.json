@@ -1,0 +1,119 @@
+{
+  "id": "phys-spectrum",
+  "concept_key": "concept:spectrum",
+  "registry_status": "new",
+  "term": "스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 spectrum 의 음차어로, 한자어 표기가 존재하지 않는다.",
+    "english": "spectrum"
+  },
+  "definition": "빛이 파장에 따라 갈라져 펼쳐진 색의 띠. 프리즘이나 분광기로 관찰한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-spec-prism",
+      "text": "프리즘에서는 파장에 따라 굴절하는 정도가 달라 섞여 있던 빛이 색깔별로 갈라진다.",
+      "form": {
+        "condition": "여러 파장이 섞인 빛이 프리즘을 지날 때",
+        "type": "causal",
+        "scope": "분산이 일어나는 매질. 단색광은 갈라지지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "갈라지는 까닭을 대는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-spec-energy",
+      "text": "빛의 파장이 길수록 그 빛의 광자 하나가 지닌 에너지는 작다.",
+      "form": {
+        "condition": "빛을 광자 하나 단위로 볼 때",
+        "type": "inverse",
+        "scope": "전자기파 전반. 빛의 세기와는 다른 이야기다",
+        "antecedent": {
+          "quantity": "빛의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광자 하나의 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장과 광자 에너지가 반비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빛의 파장이 길수록 그 빛의 광자 하나가 지닌 에너지는 크다."
+    },
+    {
+      "id": "rel-spec-kinds",
+      "text": "햇빛과 백열등은 색이 이어진 연속 스펙트럼을, 기체 방전관은 선스펙트럼을 낸다.",
+      "form": {
+        "condition": "광원의 종류를 달리해 관찰할 때",
+        "type": "classification",
+        "scope": "고온 고체가 내는 빛과 기체 방전관이 내는 빛의 대비",
+        "antecedent": {
+          "quantity": "광원의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "스펙트럼의 모양",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 광원에 붙는 스펙트럼을 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "햇빛과 백열등은 선스펙트럼을, 기체 방전관은 연속 스펙트럼을 낸다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빨간빛은 파장이 길어서 광자의 에너지도 크다",
+      "why_wrong": "파장이 길면 진동수가 작고 광자 하나의 에너지도 작다. 에너지가 큰 쪽은 보라색이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spec-energy"
+    },
+    {
+      "text": "프리즘이 원래 없던 색을 빛에 새로 입혀 준다",
+      "why_wrong": "프리즘은 이미 섞여 있던 여러 파장의 빛을 굴절하는 정도의 차이로 갈라 놓을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-spec-prism"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-refraction-of-light"
+    },
+    {
+      "type": "next",
+      "target": "phys-line-spectrum"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-01",
+  "pages": [
+    166,
+    167
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

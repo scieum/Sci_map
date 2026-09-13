@@ -1,0 +1,139 @@
+{
+  "id": "phys-internal-energy",
+  "concept_key": "concept:internal-energy",
+  "registry_status": "reused",
+  "homonym_flag": false,
+  "term": "내부 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어라 낱말 전체를 옮길 한자어가 없다. '내부'만 內部에 해당한다.",
+    "english": "internal energy",
+    "symbol_display": "U",
+    "symbol_plain": "U"
+  },
+  "definition": "물체를 이루는 입자들이 저마다 무작위로 움직이며 지니는 역학적 에너지를 모두 더한 값.",
+  "relations": [
+    {
+      "id": "rel-ie-random",
+      "text": "물질의 종류와 양이 같다면 입자의 무작위 운동이 활발할수록 내부 에너지가 크다.",
+      "form": {
+        "condition": "물질의 종류와 양이 같을 때",
+        "type": "direct",
+        "scope": "입자로 이루어진 물체에 한정한다",
+        "antecedent": {
+          "quantity": "입자의 무작위 운동",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내부 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "무작위 운동 에너지의 총합이 곧 내부 에너지라 활발할수록 작아진다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물질의 종류와 양이 같다면 입자의 무작위 운동이 활발할수록 내부 에너지가 작다."
+    },
+    {
+      "id": "rel-ie-friction",
+      "text": "마찰이 일어나면 맞닿은 면 입자의 운동이 활발해져 내부 에너지가 늘고 표면 온도가 오른다.",
+      "form": {
+        "condition": "두 물체가 맞닿은 채 미끄러질 때",
+        "type": "causal",
+        "scope": "마찰이 일어나는 접촉면에 한정한다",
+        "antecedent": {
+          "quantity": "마찰",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내부 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "마찰이 일으키는 변화를 짚은 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-ie-distinct",
+      "text": "물체 전체가 함께 움직이며 갖는 운동 에너지는 내부 에너지에 들어가지 않는다.",
+      "form": {
+        "condition": "물체의 운동 에너지와 내부 에너지를 가를 때",
+        "type": "classification",
+        "scope": "전체의 운동과 입자의 무작위 운동을 나누어 볼 때에 한정한다",
+        "antecedent": {
+          "quantity": "물체 전체의 운동 에너지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "내부 에너지 포함 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 무엇이 들어가지 않는지 못 박은 명제라 들어간다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체 전체가 함께 움직이며 갖는 운동 에너지도 내부 에너지에 들어간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빠르게 달리는 물체일수록 내부 에너지가 크다",
+      "why_wrong": "물체 전체의 운동 에너지는 내부 에너지에 들어가지 않는다. 내부 에너지는 입자들의 무작위 운동에서 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ie-distinct"
+    },
+    {
+      "text": "마찰로 생긴 열은 물체 밖에서 새로 들어온 것이다",
+      "why_wrong": "역학적 에너지가 입자의 무작위 운동으로 옮겨 간 것이다. 밖에서 열이 들어온 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ie-friction"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-temperature"
+    },
+    {
+      "type": "next",
+      "target": "phys-heat"
+    },
+    {
+      "type": "related",
+      "target": "phys-transformation-of-mechanical-energy"
+    },
+    {
+      "type": "same",
+      "target": "mate-internal-energy",
+      "note": "concept_key 가 같다 (concept:internal-energy). 물질과 에너지 쪽은 화학 맥락이라 C8 에서 진술을 대조해야 한다",
+      "grade_from": "물질과 에너지"
+    }
+  ],
+  "curriculum": [
+    "12물리01-05"
+  ],
+  "topic_id": "phys-1-2-02",
+  "pages": [
+    63
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

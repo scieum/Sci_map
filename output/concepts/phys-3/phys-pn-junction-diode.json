@@ -1,0 +1,122 @@
+{
+  "id": "phys-pn-junction-diode",
+  "concept_key": "concept:pn-junction-diode",
+  "registry_status": "new",
+  "term": "p-n 접합 다이오드",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'p-n'은 로마자이고 '다이오드(diode)'는 음차어여서 표제어를 한자로 적을 수 없다.",
+    "english": "p-n junction diode"
+  },
+  "definition": "p형 반도체와 n형 반도체를 맞붙여 만든 소자. 전류를 한 방향으로만 흐르게 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pn-rectify",
+      "text": "p형에 전원의 양극을, n형에 음극을 이었을 때에만 다이오드에 전류가 흐른다.",
+      "form": {
+        "condition": "다이오드를 전원에 이어 줄 때",
+        "type": "conditional",
+        "scope": "p-n 접합 다이오드. 역방향 항복 전압 아래에서"
+      },
+      "invertible": true,
+      "invertible_reason": "극을 맞바꾸면 전류가 흐르지 않으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "p형에 전원의 음극을, n형에 양극을 이었을 때에만 다이오드에 전류가 흐른다."
+    },
+    {
+      "id": "rel-pn-forward",
+      "text": "순방향에서는 전자와 양공이 접합면 쪽으로 몰려 그곳에서 결합하며 전류가 이어진다.",
+      "form": {
+        "condition": "순방향 바이어스를 걸었을 때",
+        "type": "causal",
+        "scope": "p-n 접합 다이오드의 순방향 동작"
+      },
+      "invertible": false,
+      "invertible_reason": "과정을 설명하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pn-reverse",
+      "text": "역방향에서는 전자와 양공이 접합면에서 멀어져 전류가 이어지지 못한다.",
+      "form": {
+        "condition": "역방향 바이어스를 걸었을 때",
+        "type": "causal",
+        "scope": "항복이 일어나지 않는 보통의 역방향 전압"
+      },
+      "invertible": false,
+      "invertible_reason": "과정을 설명하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pn-depletion",
+      "text": "순방향에서는 공핍층이 얇아지고 역방향에서는 두꺼워져 전류가 막힌다.",
+      "form": {
+        "condition": "바이어스 방향에 따라 견줄 때",
+        "type": "conditional",
+        "scope": "접합면에 생기는 공핍층의 두께 변화"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방향에 붙는 두께 변화를 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순방향에서는 공핍층이 두꺼워지고 역방향에서는 얇아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "다이오드는 어느 방향으로 이어도 전류를 흐르게 한다",
+      "why_wrong": "순방향으로 이었을 때만 전류가 흐르고 반대로 이으면 거의 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pn-rectify"
+    },
+    {
+      "text": "공핍층은 전자와 양공이 많이 모여 있어 전기가 잘 통하는 층이다",
+      "why_wrong": "공핍층은 전자와 양공이 거의 없는 영역이라 오히려 전기 저항이 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pn-depletion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-n-type-semiconductor"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-p-type-semiconductor"
+    },
+    {
+      "type": "next",
+      "target": "phys-light-emitting-diode"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    180,
+    182
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

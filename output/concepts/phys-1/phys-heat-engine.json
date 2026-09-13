@@ -1,0 +1,131 @@
+{
+  "id": "phys-heat-engine",
+  "concept_key": "concept:heat-engine",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "열기관",
+  "notation": {
+    "hanja": "熱機關",
+    "hanja_gloss": "熱 더울 열 · 機 틀 기 · 關 빗장 관",
+    "english": "heat engine"
+  },
+  "definition": "온도가 높은 곳에서 열을 받아 일부를 일로 바꾸고 남은 열은 온도가 낮은 곳으로 내보내며 되풀이해 작동하는 장치.",
+  "relations": [
+    {
+      "id": "rel-he-balance",
+      "text": "열기관이 받은 열은 열기관이 한 일과 저열원으로 내보낸 열을 더한 값과 같다.",
+      "form": {
+        "condition": "한 순환을 마쳐 처음 상태로 돌아왔을 때",
+        "type": "classification",
+        "scope": "에너지가 다른 데로 새지 않는 열기관에 한정한다",
+        "antecedent": {
+          "quantity": "받은 열",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "한 일과 방출한 열의 합",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "세 양의 셈을 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-he-two-reservoirs",
+      "text": "열기관이 돌아가려면 온도가 높은 열원과 낮은 열원이 함께 있어야 한다.",
+      "form": {
+        "condition": "열을 일로 바꾸려 할 때",
+        "type": "conditional",
+        "scope": "되풀이해 작동하는 열기관에 한정한다",
+        "antecedent": {
+          "quantity": "두 열원의 온도 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "열기관의 작동",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "작동에 필요한 조건을 밝힌 명제라 뒤집을 두 양의 증감이 없다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-he-release",
+      "text": "받은 열이 같을 때 저열원으로 버리는 열이 적을수록 열기관이 해내는 일이 많다.",
+      "form": {
+        "condition": "공급받은 열이 같을 때",
+        "type": "inverse",
+        "scope": "한 순환을 도는 열기관에 한정한다",
+        "antecedent": {
+          "quantity": "방출한 열",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "열기관이 한 일",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "받은 열이 일과 버린 열로 나뉘므로 버린 열이 적을수록 일이 적어진다고 하면 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "받은 열이 같을 때 저열원으로 버리는 열이 적을수록 열기관이 하는 일도 적다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "열기관은 받은 열을 남김없이 일로 바꿀 수 있다",
+      "why_wrong": "저열원으로 열을 내보내는 것을 막을 수 없어 받은 열의 일부만 일이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-he-release"
+    },
+    {
+      "text": "열기관은 고열원 하나만 있으면 작동한다",
+      "why_wrong": "열이 흘러가려면 온도가 낮은 쪽이 있어야 한다. 열원이 하나뿐이면 순환이 이어지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-he-two-reservoirs"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-work-done-by-gas"
+    },
+    {
+      "type": "next",
+      "target": "phys-thermal-efficiency"
+    },
+    {
+      "type": "related",
+      "target": "phys-energy-conservation-law"
+    }
+  ],
+  "curriculum": [
+    "12물리01-06"
+  ],
+  "topic_id": "phys-1-2-03",
+  "pages": [
+    67,
+    68
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

@@ -1,0 +1,118 @@
+{
+  "id": "phys-coulomb-law",
+  "concept_key": "concept:coulomb-law",
+  "registry_status": "new",
+  "term": "쿨롱 법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Coulomb's law",
+    "hanja_note": "인명 Coulomb 을 음차한 말이 앞에 붙은 표제어라 전체를 한자로 옮기지 않는다. 뒤의 '법칙'만 法則이다."
+  },
+  "definition": "두 대전체가 주고받는 전기력의 크기가 전하량의 곱에 비례하고 떨어진 거리의 제곱에 반비례한다고 나타낸 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-coulomb-distance",
+      "text": "두 점전하 사이의 거리를 2배로 벌리면 전기력의 크기는 4분의 1로 줄어든다.",
+      "form": {
+        "condition": "두 전하량이 일정할 때",
+        "type": "inverse",
+        "scope": "크기를 무시할 수 있는 두 점전하",
+        "antecedent": {
+          "quantity": "두 전하 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기력의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리의 제곱에 반비례하므로 힘이 커진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 점전하 사이의 거리를 2배로 벌리면 전기력의 크기도 2배가 된다."
+    },
+    {
+      "id": "rel-coulomb-product",
+      "text": "거리가 그대로일 때 두 전하량의 곱이 2배가 되면 전기력의 크기도 2배가 된다.",
+      "form": {
+        "condition": "두 전하 사이의 거리가 일정할 때",
+        "type": "direct",
+        "scope": "크기를 무시할 수 있는 두 점전하",
+        "antecedent": {
+          "quantity": "두 전하량의 곱",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "곱에 비례하므로 힘이 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리가 일정할 때 두 전하량의 곱이 2배가 되면 전기력의 크기는 절반이 된다."
+    },
+    {
+      "id": "rel-coulomb-scope",
+      "text": "이 법칙은 크기를 무시할 수 있는 점전하 사이의 힘을 다룰 때 쓴다.",
+      "form": {
+        "condition": "전기력의 크기를 식으로 구할 때",
+        "type": "conditional",
+        "scope": "점전하로 볼 수 있는 대전체"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 전하 사이의 거리를 2배로 하면 전기력도 절반이 된다",
+      "why_wrong": "거리의 제곱에 반비례하므로 거리가 2배가 되면 힘은 4분의 1이 된다. 단순한 반비례가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coulomb-distance"
+    },
+    {
+      "text": "쿨롱 법칙은 서로 밀어내는 경우에만 성립한다",
+      "why_wrong": "끌어당기는 경우에도 힘의 크기를 구하는 방법은 같다. 전하의 종류는 힘의 방향만 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coulomb-product"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-force"
+    },
+    {
+      "type": "related",
+      "target": "phys-electric-field",
+      "note": "전기력을 공간의 성질로 바꿔 읽는 자리다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    85
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

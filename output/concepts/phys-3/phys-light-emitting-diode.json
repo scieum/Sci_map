@@ -1,0 +1,140 @@
+{
+  "id": "phys-light-emitting-diode",
+  "concept_key": "concept:light-emitting-diode",
+  "registry_status": "new",
+  "term": "발광 다이오드",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'다이오드(diode)'가 음차어여서 표제어 전체를 한자로 적을 수 없다. '발광'만 發光에 해당한다.",
+    "english": "light emitting diode",
+    "symbol_display": "LED",
+    "symbol_plain": "LED"
+  },
+  "definition": "순방향으로 전류가 흐를 때 전자와 양공이 결합하면서 빛을 내놓는 p-n 접합 다이오드.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-led-emit",
+      "text": "접합면에서 전자가 양공과 결합할 때 띠 간격만큼의 에너지가 광자로 나온다.",
+      "form": {
+        "condition": "순방향 바이어스를 걸어 전류가 흐를 때",
+        "type": "causal",
+        "scope": "발광 다이오드. 보통의 규소 다이오드는 빛을 거의 내지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "빛이 나오는 과정을 설명하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-led-color",
+      "text": "재료의 띠 간격이 넓을수록 나오는 빛의 파장이 짧다.",
+      "form": {
+        "condition": "발광 다이오드의 재료를 바꿔 가며 볼 때",
+        "type": "inverse",
+        "scope": "발광 다이오드가 내는 빛의 색",
+        "antecedent": {
+          "quantity": "재료의 띠 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "방출되는 빛의 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "에너지와 파장이 반비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "재료의 띠 간격이 넓을수록 나오는 빛의 파장이 길다."
+    },
+    {
+      "id": "rel-led-forward",
+      "text": "역방향으로 이으면 전류가 흐르지 않아 발광 다이오드에 불이 켜지지 않는다.",
+      "form": {
+        "condition": "발광 다이오드를 역방향으로 이었을 때",
+        "type": "conditional",
+        "scope": "항복이 일어나지 않는 보통의 역방향 전압. p-n 접합 다이오드의 성질을 그대로 따른다"
+      },
+      "invertible": true,
+      "invertible_reason": "역방향에서 켜진다고 하면 다이오드의 정류 성질에 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "역방향으로 이으면 발광 다이오드에 불이 켜진다."
+    },
+    {
+      "id": "rel-led-voltage",
+      "text": "청색 발광 다이오드는 적색보다 띠 간격이 넓어 불이 켜지는 전압이 더 높다.",
+      "form": {
+        "condition": "같은 회로에서 색만 바꿔 볼 때",
+        "type": "direct",
+        "scope": "적색·녹색·청색 발광 다이오드의 비교",
+        "antecedent": {
+          "quantity": "재료의 띠 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "불이 켜지는 전압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "띠 간격이 넓을수록 필요한 전압이 높으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "청색 발광 다이오드는 적색보다 불이 켜지는 전압이 더 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "발광 다이오드는 필라멘트가 뜨거워지면서 빛을 내는 장치다",
+      "why_wrong": "전자와 양공이 결합할 때 띠 간격만큼의 에너지가 바로 빛으로 나오는 것이라 열로 버리는 몫이 적다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-led-emit"
+    },
+    {
+      "text": "발광 다이오드의 색은 겉을 감싼 플라스틱 색이 정한다",
+      "why_wrong": "빛의 색을 정하는 것은 반도체 재료의 띠 간격이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-led-color"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-pn-junction-diode"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-band-gap"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    183,
+    184
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "LED"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "phys-electrical-conductor",
+  "concept_key": "concept:electrical-conductor",
+  "registry_status": "new",
+  "term": "도체",
+  "notation": {
+    "hanja": "導體",
+    "hanja_gloss": "導 이끌 도 · 體 몸 체",
+    "english": "conductor"
+  },
+  "definition": "전기 전도성이 커서 전류가 잘 흐르는 물질. 구리·철·알루미늄이 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cond-band",
+      "text": "도체는 원자가 띠가 일부만 차 있거나 전도띠와 겹쳐 있어 띠 간격이 없다.",
+      "form": {
+        "condition": "도체의 에너지띠 구조를 볼 때",
+        "type": "causal",
+        "scope": "금속처럼 전기 전도성이 큰 고체"
+      },
+      "invertible": false,
+      "invertible_reason": "구조를 서술하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cond-easy",
+      "text": "아주 작은 에너지만 얻어도 전자가 빈 준위로 옮겨 가 도체 안을 자유롭게 이동한다.",
+      "form": {
+        "condition": "도체에 전기장을 걸어 줄 때",
+        "type": "causal",
+        "scope": "도체. 띠 간격이 큰 부도체에서는 일어나지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "일어나는 과정을 말하는 명제라 방향이 없다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cond-temp",
+      "text": "도체는 온도가 올라갈수록 비저항이 커져 반도체와 반대 경향을 보인다.",
+      "form": {
+        "condition": "같은 물질의 온도를 올려 가며 비저항을 잴 때",
+        "type": "direct",
+        "scope": "구리·납 같은 금속 도체. 반도체는 온도가 오르면 오히려 비저항이 작아진다",
+        "antecedent": {
+          "quantity": "도체의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "비저항",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "금속 도체에서는 반드시 커지지만 도체 전체로 넓히면 예외를 배제하기 어려워 늘 거짓이라고 단언하지 않는다.",
+      "curriculum": [
+        "12물리03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "도체는 띠 간격이 아주 작을 뿐 반도체와 구조가 같다",
+      "why_wrong": "도체는 띠 간격이 아예 없거나 원자가 띠가 일부만 차 있어, 띠 간격이 있는 반도체와 구조부터 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cond-band"
+    },
+    {
+      "text": "도체는 온도를 올리면 전기 저항이 작아진다",
+      "why_wrong": "도체는 온도가 오르면 원자의 진동이 심해져 비저항이 커진다. 작아지는 쪽은 반도체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cond-temp"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-band-gap"
+    },
+    {
+      "type": "related",
+      "target": "phys-electrical-insulator"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-05"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-02",
+  "pages": [
+    176,
+    179
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

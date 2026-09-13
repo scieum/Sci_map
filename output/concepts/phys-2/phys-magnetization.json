@@ -1,0 +1,147 @@
+{
+  "id": "phys-magnetization",
+  "concept_key": "concept:magnetization",
+  "registry_status": "new",
+  "term": "자기화",
+  "aliases": [
+    "자화"
+  ],
+  "notation": {
+    "hanja": "磁氣化",
+    "english": "magnetization",
+    "hanja_gloss": "磁 자석 자 · 氣 기운 기 · 化 될 화"
+  },
+  "definition": "외부 자기장을 받은 물질 안에서 원자 자석들의 배열이 달라져 그 물질이 자성을 띠게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-magn-external",
+      "text": "물질에 외부 자기장이 걸리면 물질 안의 원자 자석들이 그에 반응해 배열을 바꾼다.",
+      "form": {
+        "condition": "자석을 물질에 가까이 했을 때",
+        "type": "causal",
+        "scope": "원자 자석을 지닌 물질"
+      },
+      "invertible": false,
+      "invertible_reason": "원인과 결과를 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-magn-strength",
+      "text": "거는 자기장이 셀수록 물질이 자기화되는 정도가 커진다.",
+      "form": {
+        "condition": "물질의 종류가 같을 때",
+        "type": "direct",
+        "scope": "같은 온도에 놓인 같은 자성체",
+        "antecedent": {
+          "quantity": "외부 자기장의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기화되는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자기장이 셀수록 정렬이 잘 되므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거는 자기장이 셀수록 물질이 자기화되는 정도는 작아진다."
+    },
+    {
+      "id": "rel-magn-kind",
+      "text": "같은 세기의 자기장을 걸어도 자기화되는 정도와 방향은 물질의 종류에 따라 다르다.",
+      "form": {
+        "condition": "여러 물질에 같은 자기장을 걸었을 때",
+        "type": "conditional",
+        "scope": "강자성체·상자성체·반자성체"
+      },
+      "invertible": false,
+      "invertible_reason": "물질에 따라 갈린다는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-magn-remove",
+      "text": "외부 자기장을 없앴을 때 정렬이 남는지 흐트러지는지가 자성체를 가르는 기준이 된다.",
+      "form": {
+        "condition": "걸어 두었던 자기장을 치웠을 때",
+        "type": "classification",
+        "scope": "자기화된 자성체",
+        "antecedent": {
+          "quantity": "자기장을 치운 뒤의 정렬",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "자성체의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 기준을 밝힌 명제라 앞뒤에 방향이 없다.",
+      "curriculum": [
+        "12물리02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "한 번 자기화된 물질은 언제나 자석으로 남는다",
+      "why_wrong": "강자성체는 정렬이 남지만 상자성체와 반자성체는 자기장을 치우면 곧 자성을 잃는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-magn-remove"
+    },
+    {
+      "text": "자기화는 물질이 자석에 닿아야 일어난다",
+      "why_wrong": "닿지 않아도 자기장이 미치는 곳에 있으면 원자 자석의 배열이 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-magn-external"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-field"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-atomic-magnet"
+    },
+    {
+      "type": "next",
+      "target": "phys-ferromagnetic-material"
+    },
+    {
+      "type": "next",
+      "target": "phys-paramagnetic-material"
+    },
+    {
+      "type": "next",
+      "target": "phys-diamagnetic-material"
+    }
+  ],
+  "curriculum": [
+    "12물리02-04"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-01",
+  "pages": [
+    109,
+    110
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

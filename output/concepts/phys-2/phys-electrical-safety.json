@@ -1,0 +1,118 @@
+{
+  "id": "phys-electrical-safety",
+  "concept_key": "concept:electrical-safety",
+  "registry_status": "new",
+  "term": "전기 안전",
+  "notation": {
+    "hanja": "電氣安全",
+    "english": "electrical safety",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 安 편안할 안 · 全 온전할 전"
+  },
+  "definition": "과전류로 인한 화재와 감전 사고를 막도록 전기 기구를 잇고 다루는 방법을 지키는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-safety-multitap",
+      "text": "한 멀티탭에 기구를 여러 개 꽂아 함께 쓰면 병렬 연결이 늘어난 셈이라 전체 전류가 커지고 열이 많이 난다.",
+      "form": {
+        "condition": "여러 기구를 한 멀티탭에 동시에 쓸 때",
+        "type": "causal",
+        "scope": "옥내 배선에 이어진 멀티탭",
+        "antecedent": {
+          "quantity": "동시에 쓰는 기구의 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "멀티탭에 흐르는 전체 전류",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "병렬이 늘면 전체 저항이 줄어 전류가 커지므로 작아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 멀티탭에 기구를 여러 개 꽂아 쓸수록 멀티탭에 흐르는 전체 전류는 작아진다."
+    },
+    {
+      "id": "rel-safety-wet-skin",
+      "text": "피부가 젖으면 저항이 크게 줄어들어 같은 전압에도 훨씬 센 전류가 몸에 흐른다.",
+      "form": {
+        "condition": "몸에 걸리는 전압이 같을 때",
+        "type": "causal",
+        "scope": "젖은 피부로 전기 기구를 만지는 상황",
+        "antecedent": {
+          "quantity": "피부의 저항",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "몸에 흐르는 전류",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "젖으면 저항이 줄어 전류가 커지므로 위험이 준다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "피부가 젖으면 저항이 커져 몸에 흐르는 전류가 줄어든다."
+    },
+    {
+      "id": "rel-safety-parallel-wiring",
+      "text": "옥내 배선은 기구가 병렬로 이어져 있어 한 기구를 꺼도 나머지 기구는 그대로 작동한다.",
+      "form": {
+        "condition": "콘센트에 기구를 꽂아 쓸 때",
+        "type": "conditional",
+        "scope": "건물의 옥내 배선"
+      },
+      "invertible": false,
+      "invertible_reason": "배선 방식이 낳는 결과를 밝힌 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "멀티탭에 기구를 많이 꽂아도 전압이 220 V로 같으니 안전하다",
+      "why_wrong": "전압은 같아도 기구가 늘수록 멀티탭 한 줄에 흐르는 전체 전류가 커진다. 그만큼 열이 많이 나 화재로 이어질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-safety-multitap"
+    },
+    {
+      "text": "손이 젖어 있어도 전압이 같으니 감전 위험은 똑같다",
+      "why_wrong": "젖은 피부는 저항이 100분의 1 가까이 줄어든다. 같은 전압에서도 훨씬 센 전류가 흘러 훨씬 위험하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-safety-wet-skin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-parallel-connection-of-resistor"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-electric-power-consumption"
+    }
+  ],
+  "curriculum": [
+    "12물리02-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-02",
+  "pages": [
+    96,
+    97
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

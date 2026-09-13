@@ -1,0 +1,121 @@
+{
+  "id": "phys-electric-potential-energy",
+  "concept_key": "concept:electric-potential-energy",
+  "registry_status": "new",
+  "term": "전기적 위치 에너지",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "electric potential energy",
+    "hanja_note": "'에너지'가 음차어라 표제어 전체에 대응하는 한자어가 없다. 앞부분 '전기적 위치'는 電氣的位置다.",
+    "symbol_display": "U",
+    "symbol_plain": "U"
+  },
+  "definition": "전기장 안에서 기준점부터 어떤 점까지 전하를 옮기는 데 드는 일의 양으로 정해지는, 그 점에서 전하가 지니는 에너지.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-epe-work",
+      "text": "전기력을 거슬러 전하를 옮기며 외부가 해 준 일이 많을수록 그 전하의 전기적 위치 에너지가 크다.",
+      "form": {
+        "condition": "전기력의 반대 방향으로 전하를 옮길 때",
+        "type": "direct",
+        "scope": "균일한 전기장 안의 점전하",
+        "antecedent": {
+          "quantity": "외부가 해 준 일",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기적 위치 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "해 준 일만큼 에너지가 늘어나므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기력을 거슬러 전하를 옮기며 일을 해 줄수록 전기적 위치 에너지는 작아진다."
+    },
+    {
+      "id": "rel-epe-direction",
+      "text": "전하에 작용하는 전기력이 가리키는 쪽은 그 전하의 전기적 위치 에너지가 낮아지는 쪽이다.",
+      "form": {
+        "condition": "전기장 안의 전하가 전기력만 받을 때",
+        "type": "causal",
+        "scope": "전기력 외의 힘이 없는 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "힘의 방향은 에너지가 낮아지는 쪽이므로 높아지는 쪽이라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하에 작용하는 전기력의 방향은 전기적 위치 에너지가 높아지는 쪽이다."
+    },
+    {
+      "id": "rel-epe-charge",
+      "text": "전기장 안의 같은 점이라도 옮겨 놓은 전하의 전하량이 클수록 그 전하가 지니는 전기적 위치 에너지가 크다.",
+      "form": {
+        "condition": "전기장과 위치가 같고 기준점도 같을 때",
+        "type": "direct",
+        "scope": "기준점보다 전위가 높은 점에 놓인 양전하 — 교과서 87쪽처럼 전기력을 거슬러 옮겨 놓아 위치 에너지가 양인 자리",
+        "antecedent": {
+          "quantity": "옮겨 놓은 전하량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기적 위치 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 범위 안에서는 위치 에너지가 전하량에 비례하므로 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 점이라도 전하량이 클수록 전기적 위치 에너지는 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기적 위치 에너지가 큰 전하가 있는 곳은 전위도 반드시 높다",
+      "why_wrong": "전위는 단위 전하가 갖는 값이다. 전하량이 크면 위치 에너지가 커도 전위는 같거나 오히려 낮을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-epe-charge"
+    },
+    {
+      "text": "전기력이 전하를 밀어 준 쪽으로 갈수록 전기적 위치 에너지가 커진다",
+      "why_wrong": "전기력이 하는 일만큼 전기적 위치 에너지는 줄어든다. 커지려면 외부가 힘을 거슬러 일을 해 주어야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-epe-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-field"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-potential",
+      "note": "전위는 단위 전하당 전기적 위치 에너지다"
+    }
+  ],
+  "curriculum": [
+    "12물리02-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-01",
+  "pages": [
+    87
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

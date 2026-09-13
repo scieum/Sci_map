@@ -1,0 +1,138 @@
+{
+  "id": "phys-wavelength-and-frequency",
+  "concept_key": "concept:wavelength-and-frequency",
+  "registry_status": "new",
+  "term": "파장과 진동수",
+  "notation": {
+    "hanja": "波長 振動數",
+    "hanja_gloss": "波 물결 파 · 長 길 장 · 振 떨칠 진 · 動 움직일 동 · 數 셈 수",
+    "english": "wavelength and frequency",
+    "symbol_display": "λ · f",
+    "symbol_plain": "lambda, f"
+  },
+  "definition": "같은 위상이 되풀이되는 이웃한 두 지점 사이의 거리가 파장이고, 1초 동안 일어나는 진동 횟수가 진동수다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wf-period",
+      "text": "주기와 진동수는 서로 역수여서, 진동수가 큰 파동일수록 한 번 진동하는 데 걸리는 시간이 짧다.",
+      "form": {
+        "condition": "주기적으로 진동하는 한 파동을 볼 때",
+        "type": "inverse",
+        "scope": "일정한 진동수로 진동하는 주기적 파동",
+        "antecedent": {
+          "quantity": "진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "역수 관계여서 한쪽이 커지면 다른 쪽은 반드시 작아진다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 큰 파동일수록 한 번 진동하는 데 걸리는 시간이 길다."
+    },
+    {
+      "id": "rel-wf-speed",
+      "text": "속력이 같은 파동끼리 견주면 진동수가 큰 쪽의 파장이 짧다.",
+      "form": {
+        "condition": "같은 매질에서 파동의 속력이 일정할 때",
+        "type": "inverse",
+        "scope": "속력이 같은 파동끼리의 비교. 매질이 바뀌면 속력이 달라져 그대로 쓸 수 없다",
+        "antecedent": {
+          "quantity": "진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속력이 고정되면 진동수와 파장의 곱이 일정해 한쪽이 커지면 다른 쪽은 반드시 작아진다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 같은 파동끼리 견주면 진동수가 큰 쪽의 파장이 길다."
+    },
+    {
+      "id": "rel-wf-vacuum",
+      "text": "진공에서는 모든 빛의 속력이 같으므로 파장이 긴 빛일수록 진동수가 작다.",
+      "form": {
+        "condition": "빛이 진공을 지날 때",
+        "type": "inverse",
+        "scope": "진공(또는 공기)에서의 빛. 매질 속에서는 속력이 달라진다",
+        "antecedent": {
+          "quantity": "빛의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "빛의 진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속력이 상수로 고정되어 파장과 진동수가 반비례하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진공에서는 파장이 긴 빛일수록 진동수가 크다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진동수가 큰 파동은 파장도 길다",
+      "why_wrong": "속력이 같은 파동에서 진동수와 파장은 반비례한다. 진동수가 크면 파장은 오히려 짧아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wf-speed"
+    },
+    {
+      "text": "주기가 길수록 1초 동안 더 많이 진동한다",
+      "why_wrong": "주기는 한 번 진동하는 데 걸린 시간이고 진동수는 그 역수여서, 주기가 길면 1초당 진동 횟수는 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wf-period"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-wave"
+    },
+    {
+      "type": "next",
+      "target": "phys-constructive-and-destructive-interference"
+    },
+    {
+      "type": "next",
+      "target": "phys-double-slit-interference"
+    },
+    {
+      "type": "next",
+      "target": "phys-photoelectric-effect"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-01",
+  "pages": [
+    138,
+    139
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

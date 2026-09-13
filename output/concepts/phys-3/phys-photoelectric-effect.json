@@ -1,0 +1,113 @@
+{
+  "id": "phys-photoelectric-effect",
+  "concept_key": "concept:photoelectric-effect",
+  "registry_status": "new",
+  "term": "광전 효과",
+  "notation": {
+    "hanja": "光電效果",
+    "hanja_gloss": "光 빛 광 · 電 번개 전 · 效 본받을 효 · 果 열매 과",
+    "english": "photoelectric effect",
+    "symbol_display": "f₀ (문턱 진동수)",
+    "symbol_plain": "f0"
+  },
+  "definition": "금속 표면에 빛을 비출 때 금속 속의 전자가 빛의 에너지를 받아 밖으로 튀어나오는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pe-threshold",
+      "text": "비추는 빛의 진동수가 그 금속의 문턱 진동수보다 커야 광전자가 튀어나온다.",
+      "form": {
+        "condition": "금속 표면에 빛을 비출 때",
+        "type": "conditional",
+        "scope": "문턱 진동수는 금속마다 다르다"
+      },
+      "invertible": true,
+      "invertible_reason": "문턱보다 커야 한다는 조건을 작아야 한다로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비추는 빛의 진동수가 그 금속의 문턱 진동수보다 작아야 광전자가 튀어나온다."
+    },
+    {
+      "id": "rel-pe-intensity",
+      "text": "문턱 진동수를 넘는 빛이라면 세게 비출수록 튀어나오는 광전자의 수가 많아진다.",
+      "form": {
+        "condition": "빛의 진동수가 문턱 진동수보다 클 때",
+        "type": "direct",
+        "scope": "진동수가 문턱을 넘는 경우에 한함. 넘지 못하면 세기를 키워도 소용없다",
+        "antecedent": {
+          "quantity": "빛의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "방출되는 광전자의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세기와 광전자 수가 함께 늘어나므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "문턱 진동수를 넘는 빛이라면 세게 비출수록 튀어나오는 광전자의 수가 적어진다."
+    },
+    {
+      "id": "rel-pe-wave-limit",
+      "text": "진동수가 작은 빛은 아무리 세게 비춰도 전자가 나오지 않아 파동만으로는 설명되지 않는다.",
+      "form": {
+        "condition": "빛의 진동수가 문턱 진동수보다 작을 때",
+        "type": "conditional",
+        "scope": "광전 효과. 빛을 파동으로만 볼 때 부딪히는 한계다"
+      },
+      "invertible": false,
+      "invertible_reason": "파동 설명의 한계를 지적하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛을 아주 세게 오래 비추면 어떤 빛으로도 광전자를 뽑아낼 수 있다",
+      "why_wrong": "진동수가 문턱보다 작으면 광자 하나의 에너지가 모자라서, 세기를 아무리 키워도 전자가 나오지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pe-wave-limit"
+    },
+    {
+      "text": "빛의 세기를 키우면 튀어나오는 광전자의 최대 운동 에너지도 커진다",
+      "why_wrong": "최대 운동 에너지를 정하는 것은 빛의 진동수이고, 세기는 광전자의 수만 늘린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pe-intensity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-wavelength-and-frequency"
+    },
+    {
+      "type": "next",
+      "target": "phys-photon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-03"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-03",
+  "pages": [
+    152,
+    153
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

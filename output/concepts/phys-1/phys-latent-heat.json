@@ -1,0 +1,133 @@
+{
+  "id": "phys-latent-heat",
+  "concept_key": "concept:latent-heat",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "잠열",
+  "aliases": [
+    "숨은열"
+  ],
+  "notation": {
+    "hanja": "潛熱",
+    "hanja_gloss": "潛 잠길 잠 · 熱 더울 열",
+    "english": "latent heat"
+  },
+  "definition": "물질의 상태가 바뀌는 동안 드나드는 열. 온도를 올리는 데 쓰이지 않고 입자 사이의 인력을 끊거나 맺는 데 쓰인다.",
+  "relations": [
+    {
+      "id": "rel-lh-temp",
+      "text": "상태가 바뀌는 동안에는 열을 계속 주어도 물질의 온도가 오르지 않는다.",
+      "form": {
+        "condition": "상태 변화가 일어나는 구간에서",
+        "type": "conditional",
+        "scope": "녹는점이나 끓는점에 머물러 있는 순수한 물질에 한정한다",
+        "antecedent": {
+          "quantity": "가한 열",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "온도",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "들어온 열이 인력을 끊는 데 모두 쓰이므로 온도가 오른다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상태가 바뀌는 동안에도 열을 주면 물질의 온도가 꾸준히 오른다."
+    },
+    {
+      "id": "rel-lh-bond",
+      "text": "이때 준 열은 온도를 올리는 대신 입자 사이를 붙들고 있던 인력을 끊는 데 쓰인다.",
+      "form": {
+        "condition": "고체가 액체로, 액체가 기체로 바뀔 때",
+        "type": "causal",
+        "scope": "가열해 상태가 바뀌는 과정에 한정한다",
+        "antecedent": {
+          "quantity": "흡수한 잠열",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "입자 사이 인력의 끊김",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "들어온 열이 어디에 쓰이는지 밝힌 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-lh-graph",
+      "text": "가열 곡선에서 온도가 변하지 않는 평평한 구간이 잠열이 드나드는 구간이다.",
+      "form": {
+        "condition": "시간에 따른 온도 변화를 그래프로 볼 때",
+        "type": "classification",
+        "scope": "순수한 물질을 고르게 가열하는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "온도가 일정한 구간",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "잠열의 출입",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 어느 구간이 무엇인지 짝지은 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리01-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "얼음이 녹는 동안에도 계속 열을 주면 온도가 0 ℃ 보다 높아진다",
+      "why_wrong": "다 녹기 전까지 들어온 열은 모두 얼음을 물로 바꾸는 데 쓰여 온도는 그대로 머문다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lh-temp"
+    },
+    {
+      "text": "온도가 변하지 않는 구간에서는 열이 드나들지 않는다",
+      "why_wrong": "온도가 그대로여도 상태를 바꾸는 데 많은 열이 오간다. 이 열이 잠열이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lh-graph"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-heat"
+    },
+    {
+      "type": "related",
+      "target": "phys-temperature"
+    },
+    {
+      "type": "related",
+      "target": "phys-heat-transfer"
+    }
+  ],
+  "curriculum": [
+    "12물리01-05"
+  ],
+  "topic_id": "phys-1-2-02",
+  "pages": [
+    65,
+    72
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

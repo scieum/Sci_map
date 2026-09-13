@@ -1,0 +1,128 @@
+{
+  "id": "phys-acceleration",
+  "concept_key": "concept:acceleration",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "가속도",
+  "notation": {
+    "hanja": "加速度",
+    "hanja_gloss": "加 더할 가 · 速 빠를 속 · 度 법도 도",
+    "english": "acceleration",
+    "symbol_display": "a",
+    "symbol_plain": "a"
+  },
+  "definition": "속도가 1초 동안 얼마나 달라지는지 나타내는 양. 속도 변화량을 걸린 시간으로 나눈 값이며 크기와 방향을 함께 갖는다.",
+  "relations": [
+    {
+      "id": "rel-acc-netforce",
+      "text": "알짜힘을 받는 물체는 속도가 달라지므로 가속도가 0이 아니다.",
+      "form": {
+        "condition": "물체에 작용하는 알짜힘이 0이 아닐 때",
+        "type": "causal",
+        "scope": "질량이 변하지 않는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "알짜힘의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "가속도의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집어 '가속도가 0이 아니면 알짜힘이 있다' 로 읽어도 참이라 오답 지문이 되지 못한다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-acc-slowdown",
+      "text": "한 방향으로 가던 물체가 느려지는 동안 가속도는 속도와 반대쪽을 가리킨다.",
+      "form": {
+        "condition": "속력이 줄어드는 구간에서",
+        "type": "conditional",
+        "scope": "직선 위를 한 방향으로 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "속력",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "가속도의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속도 변화량의 방향이 곧 가속도의 방향이므로 같은 쪽이라고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체가 느려지는 동안에도 가속도는 속도와 같은 쪽을 가리킨다."
+    },
+    {
+      "id": "rel-acc-speedup",
+      "text": "속력이 커지는 동안에는 가속도가 속도와 같은 쪽을 가리킨다.",
+      "form": {
+        "condition": "속력이 늘어나는 구간에서",
+        "type": "conditional",
+        "scope": "직선 위를 한 방향으로 움직이는 물체에 한정한다",
+        "antecedent": {
+          "quantity": "속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "가속도의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "빨라지는 동안의 속도 변화량은 운동 방향과 같으므로 반대라고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 커지는 동안 가속도는 속도와 반대쪽을 가리킨다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "속도가 0인 순간에는 가속도도 0이다",
+      "why_wrong": "연직 위로 던진 공은 가장 높은 곳에서 속도가 0이지만 중력을 계속 받아 가속도는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-acc-slowdown"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-uniformly-accelerated-linear-motion"
+    },
+    {
+      "type": "next",
+      "target": "phys-newton-second-law"
+    },
+    {
+      "type": "related",
+      "target": "phys-braking-distance"
+    }
+  ],
+  "curriculum": [
+    "12물리01-02"
+  ],
+  "topic_id": "phys-1-1-02",
+  "pages": [
+    30,
+    32,
+    48
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

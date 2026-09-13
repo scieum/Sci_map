@@ -1,0 +1,140 @@
+{
+  "id": "phys-work",
+  "concept_key": "concept:work-physics",
+  "registry_status": "new",
+  "homonym_flag": true,
+  "term": "일",
+  "aliases": [
+    "일(work)"
+  ],
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "물리학의 '일'은 고유어라 한자로 옮길 낱말이 없다. 일상어의 '일'과 표기가 같아 docs/homonyms.yaml 이 지켜보는 낱말이다.",
+    "english": "work",
+    "symbol_display": "W",
+    "symbol_plain": "W"
+  },
+  "definition": "힘을 받은 물체가 그 힘의 방향으로 움직였을 때 힘이 물체에 건네준 에너지의 양. 힘의 크기와 이동 거리의 곱으로 잰다.",
+  "relations": [
+    {
+      "id": "rel-work-fs",
+      "text": "움직인 거리가 같다면 이동 방향으로 걸린 힘이 클수록 물체에 한 일이 많다.",
+      "form": {
+        "condition": "물체가 움직인 거리가 같을 때",
+        "type": "direct",
+        "scope": "힘의 방향과 이동 방향이 나란한 경우에 한정한다",
+        "antecedent": {
+          "quantity": "힘의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "한 일의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "일은 힘과 거리의 곱이라 힘만 키우고 일이 줄어든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "움직인 거리가 같다면 이동 방향으로 걸린 힘이 클수록 물체에 한 일이 적다."
+    },
+    {
+      "id": "rel-work-area",
+      "text": "이동 거리를 가로축, 힘을 세로축에 둔 그래프의 아래 넓이가 그 구간에서 한 일의 양이다.",
+      "form": {
+        "condition": "힘의 크기가 일정하지 않아도 되는 구간을 볼 때",
+        "type": "classification",
+        "scope": "힘의 방향이 이동 방향과 나란한 경우에 한정한다",
+        "antecedent": {
+          "quantity": "힘·이동 거리 그래프의 넓이",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "한 일의 양",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "그래프의 넓이가 무엇을 뜻하는지 짝지은 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-work-transfer",
+      "text": "일과 열은 모두 에너지를 옮기는 방식이며, 일은 역학적으로 밀고 당겨 에너지를 건넨다.",
+      "form": {
+        "condition": "에너지가 오가는 방식을 가를 때",
+        "type": "classification",
+        "scope": "두 대상 사이에 에너지가 오가는 과정에 한정한다",
+        "antecedent": {
+          "quantity": "에너지 전달 방식",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "일과 열의 구별",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장이 반드시 거짓인가를 기준으로 다시 대었다. 두 이름에 붙은 설명을 맞바꾸면 반드시 거짓이 되는 분류 명제다.",
+      "curriculum": [
+        "12물리01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일은 온도 차로 에너지를 옮기고, 열은 역학적으로 밀고 당겨 에너지를 건넨다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "힘을 아무리 세게 주어도 물체가 움직이지 않으면 일을 한 것이다",
+      "why_wrong": "물리학의 일은 힘에 이동 거리를 곱한 양이다. 거리가 0이면 힘이 아무리 커도 한 일은 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-work-fs"
+    },
+    {
+      "text": "무거운 가방을 들고 수평으로 걸으면 가방에 큰 일을 한 것이다",
+      "why_wrong": "드는 힘은 위쪽이고 이동은 수평이라 힘의 방향으로 간 거리가 0이다. 가방에 한 일은 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-work-fs"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-work-energy-theorem"
+    },
+    {
+      "type": "next",
+      "target": "phys-gravitational-potential-energy"
+    },
+    {
+      "type": "next",
+      "target": "phys-work-done-by-gas"
+    },
+    {
+      "type": "related",
+      "target": "phys-heat"
+    }
+  ],
+  "curriculum": [
+    "12물리01-04"
+  ],
+  "topic_id": "phys-1-2-01",
+  "pages": [
+    53,
+    54
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1
+}

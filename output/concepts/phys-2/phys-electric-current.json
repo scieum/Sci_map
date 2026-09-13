@@ -1,0 +1,123 @@
+{
+  "id": "phys-electric-current",
+  "concept_key": "concept:electric-current",
+  "registry_status": "new",
+  "term": "전류의 세기",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "electric current",
+    "hanja_note": "'세기'가 고유어이고 조사 '의'가 들어간 구라 표제어 전체를 한자로 옮기지 않는다. 앞부분 '전류'는 電流다.",
+    "symbol_display": "I",
+    "symbol_plain": "I"
+  },
+  "definition": "전하가 도선을 따라 흐르는 현상, 또는 그 흐름의 세기를 나타내는 물리량. 단위는 A(암페어)를 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-current-charge",
+      "text": "같은 시간 동안 도선 단면을 지나가는 전하량이 많을수록 전류가 세다.",
+      "form": {
+        "condition": "전하가 지나가는 시간이 일정할 때",
+        "type": "direct",
+        "scope": "한 가닥 도선의 한 단면",
+        "antecedent": {
+          "quantity": "단면을 지난 전하량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전하량에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 시간 동안 단면을 지나는 전하량이 많을수록 전류는 약해진다."
+    },
+    {
+      "id": "rel-current-series-same",
+      "text": "갈라지는 곳이 없는 회로에서는 어느 단면에서 재도 전류의 세기가 같다.",
+      "form": {
+        "condition": "도선이 한 가닥으로 이어진 회로일 때",
+        "type": "conditional",
+        "scope": "전하가 쌓이지 않는 정상 상태의 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "저항을 지나도 전하량은 줄지 않으므로 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류는 저항을 지나면서 조금씩 약해지므로 저항 뒤쪽에서 더 작게 잰다."
+    },
+    {
+      "id": "rel-current-source",
+      "text": "회로에 전류가 끊이지 않고 흐르려면 전원이 전압을 유지하며 전하에 에너지를 계속 공급해야 한다.",
+      "form": {
+        "condition": "회로에 전류가 계속 흐르고 있을 때",
+        "type": "conditional",
+        "scope": "전지 같은 전원을 포함한 닫힌 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "전자기 유도처럼 전지 없이 전류가 흐르는 자리가 있어 뒤집은 문장이 늘 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "12물리02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전류는 저항을 지나면서 조금씩 소모되어 줄어든다",
+      "why_wrong": "저항에서 소모되는 것은 전기 에너지이지 전하가 아니다. 갈라지지 않는 회로라면 저항 앞뒤의 전류는 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-current-series-same"
+    },
+    {
+      "text": "전류는 전지의 (+)극에서 나와 저항에서 다 쓰이고 (-)극으로는 돌아가지 않는다",
+      "why_wrong": "회로는 닫힌 고리라서 나간 전하는 모두 돌아온다. 돌아오지 않는다면 전류가 계속 흐를 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-current-series-same"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-electric-charge"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-potential-difference"
+    },
+    {
+      "type": "next",
+      "target": "phys-ohm-law"
+    },
+    {
+      "type": "next",
+      "target": "phys-electric-power-consumption"
+    },
+    {
+      "type": "next",
+      "target": "phys-magnetic-field-of-straight-current"
+    }
+  ],
+  "curriculum": [
+    "12물리02-02"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-1-02",
+  "pages": [
+    91
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

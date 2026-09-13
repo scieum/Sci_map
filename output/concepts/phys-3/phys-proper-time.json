@@ -1,0 +1,97 @@
+{
+  "id": "phys-proper-time",
+  "concept_key": "concept:proper-time",
+  "registry_status": "new",
+  "term": "고유 시간",
+  "notation": {
+    "hanja": "固有 時間",
+    "hanja_gloss": "固 굳을 고 · 有 있을 유 · 時 때 시 · 間 사이 간",
+    "english": "proper time",
+    "symbol_display": "Δt₀",
+    "symbol_plain": "delta t0"
+  },
+  "definition": "두 사건이 같은 자리에서 잇따라 일어난 것으로 보는 관찰자가 재는 시간 간격.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pt-own",
+      "text": "고유 시간을 재는 관찰자에게 자기 시계는 느려지지 않고, 느리게 가는 쪽은 늘 상대편의 시계다.",
+      "form": {
+        "condition": "두 관성계가 서로에 대해 등속도로 운동할 때",
+        "type": "conditional",
+        "scope": "관성계끼리의 관측. 한쪽이 방향을 바꿔 돌아오면 사정이 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "어느 쪽 시계가 느려 보이는지가 관찰자마다 맞물려 있어 한 방향으로 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pt-smallest",
+      "text": "여러 관성계에서 잰 시간 간격 가운데 고유 시간이 가장 짧다.",
+      "form": {
+        "condition": "같은 두 사건을 여러 관성계에서 잴 때",
+        "type": "classification",
+        "scope": "관성계끼리의 비교",
+        "antecedent": {
+          "quantity": "측정하는 관성계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "시간 간격의 크기",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "가장 짧다를 가장 길다로 바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "여러 관성계에서 잰 시간 간격 가운데 고유 시간이 가장 길다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고유 시간만 진짜 시간이고 다른 관성계의 측정값은 틀린 값이다",
+      "why_wrong": "어느 관성계의 측정도 옳다. 고유 시간은 그중 두 사건이 같은 자리에서 일어난 계의 값일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pt-own"
+    },
+    {
+      "text": "우주선 안 관찰자가 잰 시간이 지면에서 잰 시간보다 길다",
+      "why_wrong": "빛이 같은 자리에서 출발해 돌아온 우주선 쪽 시간이 고유 시간이어서 오히려 더 짧다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pt-smallest"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "phys-time-dilation"
+    },
+    {
+      "type": "related",
+      "target": "phys-proper-length"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-2-03",
+  "pages": [
+    189,
+    191
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

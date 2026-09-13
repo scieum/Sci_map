@@ -1,0 +1,106 @@
+{
+  "id": "phys-constructive-and-destructive-interference",
+  "concept_key": "concept:constructive-and-destructive-interference",
+  "registry_status": "new",
+  "term": "보강 간섭과 상쇄 간섭",
+  "notation": {
+    "hanja": "補強 干涉 相殺 干涉",
+    "hanja_gloss": "補 기울 보 · 強 굳셀 강 · 干 방패 간 · 涉 건널 섭 · 相 서로 상 · 殺 감할 쇄 · 干 방패 간 · 涉 건널 섭",
+    "english": "constructive and destructive interference"
+  },
+  "definition": "중첩으로 합성파의 진폭이 달라지는 것이 간섭이며, 진폭이 커지면 보강 간섭, 작아지면 상쇄 간섭이라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-int-constructive",
+      "text": "마루끼리 겹치도록 같은 위상으로 만나면 합성파의 진폭이 커진다.",
+      "form": {
+        "condition": "진동수와 파장이 같은 두 파동이 만날 때",
+        "type": "causal",
+        "scope": "위상차가 없는 지점. 진동수가 다르면 이런 무늬가 유지되지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 위상 중첩은 진폭을 키우므로 '작아진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마루끼리 겹치도록 같은 위상으로 만나면 합성파의 진폭이 작아진다."
+    },
+    {
+      "id": "rel-int-destructive",
+      "text": "마루와 골이 겹치도록 반대 위상으로 만나면 합성파의 진폭이 작아진다.",
+      "form": {
+        "condition": "진동수와 파장이 같은 두 파동이 만날 때",
+        "type": "causal",
+        "scope": "위상이 반대인 지점. 진폭까지 같아야 변위가 완전히 0이 된다"
+      },
+      "invertible": true,
+      "invertible_reason": "반대 위상 중첩은 진폭을 줄이므로 '커진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마루와 골이 겹치도록 반대 위상으로 만나면 합성파의 진폭이 커진다."
+    },
+    {
+      "id": "rel-int-coherence",
+      "text": "간섭무늬가 또렷하려면 겹치는 두 파동의 진동수와 파장이 같아야 한다.",
+      "form": {
+        "condition": "두 파동이 같은 영역에서 겹칠 때",
+        "type": "conditional",
+        "scope": "간섭무늬 관찰. 여러 진동수가 섞인 빛에서는 무늬가 흐려진다"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보강 간섭이 일어난 곳에서는 합성파의 진동수와 파장도 함께 커진다",
+      "why_wrong": "중첩으로 달라지는 것은 진폭뿐이다. 진동수와 파장은 본래 두 파동의 값 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-int-constructive"
+    },
+    {
+      "text": "진폭이 다른 두 파동이 반대 위상으로 만나면 언제나 변위가 0이 된다",
+      "why_wrong": "두 진폭의 차만큼 변위가 남는다. 완전히 0이 되려면 진폭까지 같아야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-int-destructive"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-wave-superposition"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-wavelength-and-frequency"
+    },
+    {
+      "type": "next",
+      "target": "phys-double-slit-interference"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-01",
+  "pages": [
+    141
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

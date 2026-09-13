@@ -1,0 +1,441 @@
+{
+  "unit_id": "phys-2",
+  "generated_at": "2026-09-13T00:00:00+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 35,
+    "standards_in_scope": [
+      {
+        "code": "12물리02-01",
+        "text": "전하를 띤 입자들이 전기장과 전위차를 형성하여 서로 전기적으로 상호작용함을 설명할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리02-02",
+        "text": "전기 회로에서 저항의 연결에 따라 소비 전력이 달라짐을 알고, 다양한 전기 기구에서 적용되는 사례를 찾을 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리02-03",
+        "text": "축전기에서 전기 에너지를 저장하는 원리가 각종 센서와 전기 신호 입력 장치 등 실생활 제품에서 활용됨을 설명할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리02-04",
+        "text": "자성체의 종류를 알고 일상생활과 산업 기술에서 자성체가 활용되는 예를 찾을 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리02-05",
+        "text": "전류의 자기 작용을 이용하여 에너지를 전환하는 장치의 원리를 알고, 스피커와 전동기 등을 설계할 수 있다.",
+        "crosscheck": "일치"
+      },
+      {
+        "code": "12물리02-06",
+        "text": "전자기 유도 현상이 센서, 무선통신, 무선충전 등 에너지 전달 기술에 적용되어 현대 문명에 미친 영향을 인식할 수 있다.",
+        "crosscheck": "일치"
+      }
+    ],
+    "topic_to_standard": {
+      "phys-2-1-01": "12물리02-01",
+      "phys-2-1-02": "12물리02-02",
+      "phys-2-1-03": "12물리02-03",
+      "phys-2-2-01": "12물리02-04",
+      "phys-2-2-02": "12물리02-05",
+      "phys-2-2-03": "12물리02-06"
+    },
+    "topic_to_standard_basis": "추정이 아니라 교과서가 소단원 첫 쪽에 성취기준을 쪼개 찍어 둔 것을 그대로 옮겼다. 84쪽('전하를 띤 입자들이 전기장과 전위차를 형성하여 서로 전기적으로 상호작용함을 설명할 수 있다') = 02-01, 90쪽('전기 회로에서 저항의 연결에 따라 소비 전력이 달라짐을 안다' + '소비 전력이 다양한 전기 기구에서 적용되는 사례를 찾을 수 있다' + '전기 기구를 안전하게 사용하는 방법을 설명할 수 있다') = 02-02, 98쪽('축전기에서 전기 에너지를 저장하는 원리를 이해할 수 있다' + '축전기의 원리가 각종 센서와 전기 신호 입력 장치 등 실생활 제품에서 활용됨을 설명할 수 있다') = 02-03, 108쪽('자성체를 강자성체, 상자성체, 반자성체로 구분할 수 있다' + '일상생활과 산업 기술에서 자성체가 활용되는 예를 찾을 수 있다') = 02-04, 114쪽('전류의 자기 작용을 이해할 수 있다' + '스피커를 설계하고 스피커에서의 에너지 전환 원리를 설명할 수 있다') = 02-05, 120쪽('전자기 유도 현상에 의한 에너지 전환 원리를 설명할 수 있다' + '일상생활에서 전자기 유도 현상이 적용되는 다양한 예를 찾아 그 원리를 설명할 수 있다') = 02-06. 35장 전부 topic_id 가 가리키는 소단원의 코드를 정확히 하나씩 달고 있어 코드 자체가 어긋난 카드는 없다.",
+    "findings": [
+      {
+        "card_id": "phys-magnetic-field",
+        "verdict": "retag",
+        "current": [
+          "12물리02-05"
+        ],
+        "suggested": [
+          "12물리02-04",
+          "12물리02-05"
+        ],
+        "reason": "이 카드의 정의('자석이나 전류 둘레에 생겨 자기력이 작용하는 공간')는 109쪽 곁주에서 왔다. 109쪽은 소단원 phys-2-2-01(자성체, 108~113쪽)이고 그 소단원을 받치는 코드는 12물리02-04다. 카드 자신이 pages 에 109 를 이미 적어 두었다. 명제 셋을 갈라 보면 12물리02-05(전류의 자기 작용) 쪽에 서는 것은 rel-mf-source('자기장은 자석 둘레뿐 아니라 전류가 흐르는 도선 둘레에도 생긴다') 하나뿐이고, rel-mf-direction(나침반 자침의 N극이 가리키는 쪽)과 rel-mf-distance(자석에서 멀어질수록 약해진다)는 전류와 아무 상관이 없는 자석 쪽 명제다. links 도 next 가 phys-magnetization(12물리02-04)이고 그 카드가 다시 강자성체·상자성체·반자성체 세 장으로 갈라진다 — 곧 이 카드는 자성체 계열의 뿌리로 쓰이는데 태그에서는 그 사실이 지워져 있다. 12물리02-05 를 떼자는 것이 아니라 12물리02-04 를 더하자는 것이다. 범위 이탈은 아니다. 덧붙여 topic_id 가 phys-2-2-02 인데 pages 의 109 는 phys-2-2-01 쪽이라 둘이 어긋나 있다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "phys-electromagnetic-induction",
+        "verdict": "ok",
+        "current": [
+          "12물리02-06"
+        ],
+        "suggested": [
+          "12물리02-06"
+        ],
+        "reason": "★메인이 물은 통합과학2 겹침. **카드 전체로는 통합과학 범위를 넘는다.** 넘는 근거는 둘이다. (1) 정의가 '자기선속이 달라질 때' 로 서 있다 — 통합과학2 카드(isci2-electromagnetic-induction)는 '자기장이 변할 때' 이고 자기선속이라는 물리량을 쓰지 않는다. 이 단원은 phys-magnetic-flux 를 따로 세워 그 위에 올렸다. (2) rel-emi-energy(구리관 속 자석, 줄어든 역학적 에너지가 전기 에너지로)는 통합과학2 카드 어디에도 없고 교과서 120~121쪽 탐구와 그림 II-37 이 근거다. **다만 명제 단위로는 겹치는 것이 둘 있다.** rel-emi-cause('전류가 흐르게 하는 원인은 자석의 세기 자체가 아니라 코일을 지나는 자기선속의 변화다')는 isci2 의 rel-emi-change('…자기장의 변화다')와 '자기선속/자기장' 한 낱말만 다르고, rel-emi-motion(상대 운동하면 전지 없이 전류가 흐른다)은 isci2 의 rel-emi-relative 와 사실상 같다. 태그와 범위에는 문제가 없으므로 ok 이나, 같은 concept_key 를 두 과목이 나눠 쓰는 자리이니 G 파이프라인에서 링크를 걸 때 이 겹침을 알고 걸어야 한다.",
+        "prerequisites": [
+          "concept:magnetic-flux",
+          "concept:mechanical-energy",
+          "concept:transformation-of-mechanical-energy"
+        ]
+      },
+      {
+        "card_id": "phys-induced-current",
+        "verdict": "ok",
+        "current": [
+          "12물리02-06"
+        ],
+        "suggested": [
+          "12물리02-06"
+        ],
+        "reason": "★메인이 물은 통합과학2 겹침, 둘째 카드. 역시 **넘는다.** rel-induced-while('자기선속이 달라지는 동안에만 흐르고 변화가 멎으면 곧 사라진다')와 rel-induced-oppose(자석의 운동을 방해하는 쪽)는 통합과학2 카드(isci2-induced-current)에 없다 — isci2 쪽은 방향을 'N극을 넣을 때와 뺄 때가 반대' 라는 현상 기술로만 다루고 방해라는 까닭을 대지 않는다. 이 단원은 그 까닭을 phys-lenz-law 로 따로 세운다. 겹치는 명제는 rel-induced-strength('자석이 셀수록, 빠르게 움직일수록, 많이 감을수록') 하나로, isci2 의 rel-ic-strength 와 내용이 같다. 태그·범위 문제 없음.",
+        "prerequisites": [
+          "concept:electromagnetic-induction"
+        ]
+      },
+      {
+        "card_id": "phys-electric-power-consumption",
+        "verdict": "ok",
+        "current": [
+          "12물리02-02"
+        ],
+        "suggested": [
+          "12물리02-02"
+        ],
+        "reason": "★메인이 물은 rel-power-resistance 의 범위 한정. **태그는 맞고 범위 이탈도 아니다 — C5 판정은 ok 다.** 그러나 한정 자체는 12물리02-02 가 요구하는 범위를 다 덮지 못한다. 성취기준 전문은 '전기 회로에서 **저항의 연결에 따라** 소비 전력이 달라짐' 이고, 연결에는 직렬과 병렬이 다 든다. C2 가 단 scope('전압이 고정된 채 저항만 바뀌는 경우')는 각 저항에 같은 전압이 걸리는 자리 — 곧 병렬이거나 전원에 직결된 자리 — 만 덮는다. 직렬로 이으면 고정되는 것은 전압이 아니라 전류이고, 그때는 저항값이 **큰** 쪽이 전력을 더 쓴다. 그 사실은 같은 단원 phys-series-connection-of-resistor 의 rel-series-ratio('직렬 회로에서 각 저항이 쓰는 전력의 비는 저항값의 비와 같다')에 이미 적혀 있다. 두 명제가 각자의 조건 안에서는 어긋나지 않지만, 소비 전력 카드의 대표 명제가 한쪽 조건만 들고 있어 학생이 두 카드를 잇대어 읽으면 어긋나 보인다. 이 대목은 명제의 scope 와 카드 간 일관성 문제이므로 **C6(검사 항목 ①·⑤)으로 넘긴다** — C5 에서 태그를 건드릴 일이 아니다. 교과서 근거는 90~95쪽이다.",
+        "prerequisites": []
+      }
+    ],
+    "prerequisites_outside_unit": [
+      {
+        "card_id": "phys-electric-potential-energy",
+        "keys": [
+          "concept:gravitational-potential-energy",
+          "concept:work-physics"
+        ],
+        "note": "교과서 87쪽이 '중력장 내에서 질량 m 인 물체를 높이 h 만큼 옮기려면 mgh 만큼의 일' 을 먼저 세우고 그것에 빗대어 qEd 를 끌어낸다. 두 키 모두 같은 과목 앞 대단원 phys-1 의 카드가 이미 들고 있다. 카드에 링크는 아직 없다 — G 파이프라인에서 concept_key 로 걸 자리다."
+      },
+      {
+        "card_id": "phys-electromagnetic-induction",
+        "keys": [
+          "concept:mechanical-energy",
+          "concept:transformation-of-mechanical-energy",
+          "concept:electromagnetic-induction"
+        ],
+        "note": "rel-emi-energy 가 '줄어든 역학적 에너지의 일부가 전기 에너지로 바뀐다' 로 역학적 에너지와 그 전환 위에 선다 — 둘 다 phys-1 카드가 들고 있다. 셋째 키는 이 카드 자신의 키이면서 통합과학2 카드(isci2-electromagnetic-induction, 10통과2-02-05)가 이미 쓰고 있는 키다 — 학년·과목이 다른 같은 키다."
+      },
+      {
+        "card_id": "phys-lenz-law",
+        "keys": [
+          "concept:mechanical-energy"
+        ],
+        "note": "rel-lenz-brake(구리관 속 자석이 천천히 내려온다)가 역학적 에너지가 보존되지 않는다는 사정 위에 선다. 교과서 121쪽 그림 II-37 (나)가 그 그래프다."
+      },
+      {
+        "card_id": "phys-induced-current",
+        "keys": [
+          "concept:induced-current"
+        ],
+        "note": "통합과학2 카드 isci2-induced-current 가 같은 키를 쓴다(10통과2-02-05). 링크를 거는 것은 G 파이프라인의 일이다."
+      },
+      {
+        "card_id": "phys-magnetic-field",
+        "keys": [],
+        "note": "★교과서가 스스로 선수 과목을 적어 놓은 자리다. 109쪽 곁주가 '연계 학습 • **통합과학2** / 자기장: 자석이나 전류에 의해 자기력이 작용하는 공간' 이다. 그런데 통합과학2 카드 30장(output/concepts/isci2-2/) 가운데 concept:magnetic-field 를 든 카드가 없다 — 통합과학2 쪽 전자기 유도 카드 셋은 '자기장' 을 정의 없이 쓴다. 그래서 걸 키가 지금은 없다. keys 를 비워 둔 것은 선수가 없어서가 아니라 받을 카드가 없어서다. 메인이 통합과학2 C1 보강을 따로 볼 항목이다."
+      }
+    ],
+    "coverage_notes": [
+      {
+        "code": "12물리02-06",
+        "issue": "적용·영향 쪽이 카드로 전혀 잡히지 않았다",
+        "detail": "성취기준 전문이 '전자기 유도 현상이 **센서, 무선통신, 무선충전 등 에너지 전달 기술에 적용되어 현대 문명에 미친 영향을 인식**할 수 있다' 로 적용과 영향에 무게가 실려 있는데, 이 코드가 붙은 카드 다섯(phys-electromagnetic-induction·phys-induced-current·phys-magnetic-flux·phys-faraday-law-of-induction·phys-lenz-law)은 모두 원리 쪽이고 적용을 다루는 카드가 하나도 없다. 교과서는 122~123쪽을 통째로 무선 충전(1차 코일→2차 코일)과 RFID·하이패스에 쓰고 120쪽 단원 도입도 하이패스로 연다. 다섯 장 가운데 pages 에 122·123 을 든 카드가 없다. 다만 원리 다섯 장이 이탈이라는 뜻은 아니다 — 적용을 설명하려면 그 원리가 있어야 하고 121쪽 본문이 패러데이·렌츠를 이름까지 붙여 본문으로 다룬다. C1(개념 추출)이 122~123쪽을 놓친 것으로 보이므로 메인이 판단할 항목이다."
+      },
+      {
+        "code": "12물리02-03",
+        "issue": "실생활 활용이 명제 하나에만 걸려 있다",
+        "detail": "성취기준이 '각종 센서와 전기 신호 입력 장치 등 실생활 제품에서 활용됨' 을 요구하는데, 네 장(phys-parallel-plate-capacitor·phys-charging-of-capacitor·phys-discharging-of-capacitor·phys-charge-stored-in-capacitor) 가운데 활용을 드는 것은 rel-stored-signal(눌림·진동으로 간격이 바뀌면 신호로 읽힌다) 하나뿐이다. 교과서 98쪽 도입이 터치스크린·키오스크를 들고 소단원 목표에도 그 문장이 있다. 02-06 만큼 비어 있지는 않으나 얇다."
+      }
+    ],
+    "stats": {
+      "ok": 34,
+      "retag": 1,
+      "out_of_scope": 0,
+      "uncertain": 0
+    }
+  },
+  "notes": [
+    "verified_by 는 어느 명제·오개념에서도 읽기만 했다. 이 보고서는 그 필드를 바꾸지 않는다. 카드 파일도 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)도 고치지 않았다.",
+    "결정론적 사전 검사: curriculum-mapper 의 validate_tags.py 를 output/concepts/phys-2 에 --unit phys-2 로 돌렸다. 결과는 '카드 35장 검사 / 통과' 로 지적이 없다 — 태그 0개도, 실재하지 않는 코드도, 영역 불일치도, crosscheck 미확정 코드도 없다. 12물리02-01~02-06 여섯은 모두 crosscheck: 일치이고 영역 01·03 코드는 어느 카드에도 붙어 있지 않다. 이 보고서는 스크립트가 원리적으로 못 잡는 것 — 코드는 실재하지만 카드 내용과 맞지 않는 자리 — 만 다룬다.",
+    "명제 111개도 따로 훑었다. 전부 curriculum 필드를 갖고 있고, 쓰인 코드가 모두 standards.yaml 에 실재하며, 명제 태그가 소속 카드의 태그와 한 건도 어긋나지 않는다. 곧 태그 누락은 카드 0건·명제 0건이다.",
+    "pages 가 소단원 쪽 범위 밖으로 나간 카드가 여섯 장이라 하나씩 대조했다. phys-electric-field 의 83쪽은 중단원 1 도입면, phys-electromagnetic-induction·phys-lenz-law 의 126쪽은 중단원 마무리, phys-loudspeaker 의 129쪽은 대단원 마무리, phys-potential-difference 의 90쪽은 소비 전력 소단원 첫머리의 전압 재설명(수로 비유)이다. 다섯은 정리면·도입면이라 태그를 건드릴 일이 아니다. 남은 하나 phys-magnetic-field 의 109쪽만 다른 소단원의 **본문**이어서 findings 로 올렸다.",
+    "범위 이탈(out_of_scope)로 올릴 만해 보였으나 교과서 본문을 대조해 물린 것 셋. (1) phys-coulomb-law — 02-01 전문이 '상호작용함을 설명' 으로 정성적이라 정량 명제(거리 2배→4분의 1)가 넘어 보였으나, 85쪽 본문이 쿨롱 법칙을 F=kq1q2/r² 식과 예제까지 달아 본문으로 다룬다. 곁주가 아니라 본문이다. (2) phys-electric-potential·phys-electric-potential-energy — 02-01 은 '전위차' 만 이름을 대지만 87쪽 본문이 전기적 위치 에너지→전위→전위차를 한 줄기로 끌어내므로 전위차를 떼어 놓고 쓸 수 없다. (3) 직선·원형·솔레노이드 자기장 세 장 — 02-05 는 '스피커와 전동기 등을 설계' 로 장치 쪽에 무게가 실려 있으나, 114쪽 소단원 머리의 학습 목표 첫 줄이 '전류의 자기 작용을 이해할 수 있다' 이고 115~116쪽이 그 본문이다. 셋 다 이탈이 아니다.",
+    "판단이 갈렸던 대목 하나를 적어 둔다. phys-potential-difference 에 12물리02-02 를 더할지 망설였다. rel-pd-current('저항값이 그대로일 때 걸어 준 전위차가 클수록 회로에 흐르는 전류가 세다')의 근거가 90쪽이고 그 쪽은 소비 전력 소단원이라 phys-magnetic-field 와 같은 모양으로 보였다. 더하지 않기로 한 까닭은 02-02 의 요구가 '**저항의 연결에** 따라 소비 전력이 달라짐' 이고 rel-pd-current 는 연결을 다루지 않기 때문이다. 90쪽의 그 대목도 옴의 법칙으로 넘어가기 전의 전압 복습(수로 비유)이다. 02-01 이 '전위차' 를 이름으로 대고 있으니 한 코드로 둔다. phys-magnetic-field 와 갈린 지점은 '다른 소단원의 본문에서 명제의 근거를 끌어왔는가' 이다 — 자기장 카드는 명제 셋 중 둘이 그러하고, 전위차 카드는 하나도 그렇지 않다.",
+    "성취기준을 지어내지 않았다. suggested 에 쓴 12물리02-04 는 standards.yaml 에 crosscheck: 일치로 실재하는 코드다. 물리학 18건은 전부 일치라 '사람이 확정할 때까지 못 쓰는 코드' 때문에 uncertain 으로 올린 카드는 없다.",
+    "★phys-facts 같은 <track>-facts 스킬이 없다. .claude/skills 아래에 -facts 로 끝나는 스킬이 한 벌도 없어 물리량·법칙의 대조를 스킬로 돌리지 못했다. 쿨롱 법칙의 거리 제곱 반비례, 직선 전류 자기장의 B∝I/r, 원형 전류의 B∝I/R 같은 대조 가능한 항목은 교과서 원문(output/source/phys-2/text.jsonl 85·115쪽)으로만 맞춰 보았다. 그 대조는 진위 확정이 아니라 카드가 교과서와 같은 것을 말하는지 본 것이다. 진위는 C8 에서 사람이 본다.",
+    "이 보고서는 curriculum 절만 채웠다. relations 절(C6)은 아직 돌지 않았고, 이 파일에 그 키가 없는 것은 검사 결과가 비었다는 뜻이 아니라 아직 검사하지 않았다는 뜻이다. 나중에 relation 모드가 돌면 이 curriculum 절을 그대로 두고 relations 절만 더해야 한다.",
+    "[relation] 카드 37장·명제 117개·오개념 75개를 훑었다. 메인이 준 수(111)는 신설 두 장 앞의 수다 — phys-wireless-charging 3개, phys-rfid-system 3개가 더해져 117 이 되었다. invertible: true 는 82개(70.1%)다.",
+    "[relation] ②를 82개 모두 하나씩 뒤집어 읽었다. form.type 은 어디를 먼저 볼지 고르는 데만 쓰고 판정은 inverted_text 가 반드시 거짓이 되는지로만 했다. conditional 에 true 가 붙은 것이 26개나 되지만(rel-charging-until·rel-force-pair·rel-mf-direction·rel-para-lose·rel-wc-varying 등) 뒤집으면 모두 반드시 거짓이 된다 — 극을 맞바꾸거나 약속(N극 쪽)을 뒤집거나 '변화가 멎은 뒤에도 흐른다'로 바꾸는 자리들이라 true 가 맞다. classification 에 true 가 붙은 것은 한 건도 없다. 70% 는 이 단원이 '무엇이 커지면 무엇이 커진다' 꼴 정량 명제를 많이 담은 데서 온 수로 보이고 기준이 느슨해서 난 수로는 보이지 않는다. ②로 걸린 것은 rel-epe-charge 하나(defect)와 전력비 두 건(uncertain)뿐이다.",
+    "[relation] 메인이 물은 '배수 관계를 말로 푼 명제'를 따로 모아 보았다 — rel-coulomb-distance(거리 2배→4분의 1), rel-coulomb-product(곱 2배→힘 2배), rel-ohm-voltage(전압 3배→전류 3배), rel-faraday-rate, rel-solenoid-turns, rel-circular-radius, rel-straight-distance. 일곱 모두 condition 과 scope 가 채워져 있고 고정해야 할 양(다른 전하량·거리·저항값·감은 수·반지름)을 condition 이 제대로 묶고 있다. 이 갈래에서 걸린 것은 없다.",
+    "[relation] ③(동어반복)이 18건 가운데 13건으로 가장 많다. 흩어진 실수가 아니라 결이 하나다 — 자성체 세 장(강·상·반)과 자기장 계열 네 장(자기장·솔레노이드·원형 전류·자기선속), 법칙 카드 둘(옴·쿨롱), 그리고 전류·전위·유도 전류 카드에서 definition 의 한정구나 둘째 문장이 그대로 명제가 되었다. 명제를 덜지 정의를 덜지는 카드마다 갈리므로 문장을 써 주지 않았다.",
+    "[relation] ⑤(카드 내·카드 간 모순)로 걸린 명제는 없다. 메인이 지목한 소비 전력 ↔ 직렬 전력비는 조건이 서로 달라 모순이 아니다(finding 참조). 같은 내용이 두 카드에 겹쳐 적힌 자리 셋도 대조했으나 어긋나지 않는다 — rel-am-cancel ↔ rel-dia-no-atomic-magnet, rel-charging-until ↔ rel-ppc-no-current, rel-emi-energy ↔ rel-lenz-brake. rel-rfid-range 의 정의-명제 어긋남만 ⑤ 자리로 보아 uncertain 에 올렸다.",
+    "[relation] 신설 두 장. phys-wireless-charging 의 명제 셋(rel-wc-varying·rel-wc-path·rel-wc-distance)은 다섯 항목 어디에도 걸리지 않았다 — rel-wc-varying 의 '시간에 따라 변하는 전류를 흘려 줄 때에만'은 정의에서 저절로 나오는 말이 아니라 조건을 새로 세운 것이라 ③에도 걸리지 않는다. 오개념 셋도 각각 제 명제의 반대편에 서 있다. phys-rfid-system 은 rel-rfid-range 한 건만 uncertain 이다.",
+    "[relation] 오개념은 75개 모두 source: llm 이다. linked_relation 이 가리키는 명제의 반대편에 실제로 서 있는지 하나씩 대조해 셋을 defect(④)로, 하나를 uncertain 으로 올렸다. 나머지는 제자리에 서 있다. verified_by 는 명제·오개념 어디에서도 읽기만 했다.",
+    "[relation] <track>-facts 스킬 대조는 하지 못했다. .claude/skills 에 phys-facts 가 없다(있는 것은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 여섯). 쿨롱·옴·패러데이의 수치 관계를 스킬로 대조할 자리였으나 건너뛰었다 — 없는 스킬을 흉내 내지 않았다.",
+    "[relation] curriculum-mapper 의 validate_tags.py 는 C5 절에서 이미 돌았고 relation 모드의 다섯 항목과 겹치지 않아 다시 돌리지 않았다. 카드 파일도 사전도 고치지 않았고 진위는 어느 명제에서도 확정하지 않았다. curriculum 절은 손대지 않고 그대로 두었다."
+  ],
+  "relations": {
+    "checked": 117,
+    "cards_checked": 37,
+    "misconceptions_checked": 75,
+    "findings": [
+      {
+        "card_id": "phys-electric-power-consumption",
+        "relation_id": "rel-power-resistance",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "★C5 가 넘긴 자리. 먼저 ⑤(카드 간 모순)부터 적는다 — 모순이 아니다. rel-power-resistance 의 condition 은 '저항 양끝의 전압이 일정할 때'이고 rel-series-ratio(phys-series-connection-of-resistor)의 condition 은 '각 저항에 흐르는 전류가 같을 때'다. 고정된 양이 서로 달라 두 명제는 각자의 조건 안에서 어긋나지 않는다. 같은 카드 안의 rel-power-vi·rel-power-heat 와도 어긋나는 데가 없다. 걸리는 것은 ①이다. form.scope 에 적힌 '전압이 고정된 채 저항만 바뀌는 경우'는 바로 윗줄 condition('저항 양끝의 전압이 일정할 때')과 같은 말을 되풀이한 것뿐이어서 scope 필드가 아무 범위도 새로 지목하지 못한다. 이 명제가 실제로 서는 자리는 각 저항에 같은 전압이 걸리는 배치 — 전원에 직결되었거나 병렬 가지에 놓인 저항끼리의 비교 — 인데 그 말이 어디에도 없다. 그래서 직렬 회로의 두 저항을 견주는 자리에 이 문장을 그대로 옮겨 적용할 여지가 남는다. 근거 하나 더. 이 카드의 오개념 '저항값이 클수록 소비 전력은 언제나 크다'의 why_wrong 은 직렬·병렬 두 경우를 모두 적고 있다. 명제의 scope 가 담지 못한 경계를 오개념 쪽이 대신 지고 있는 모양이다.",
+        "suggest": "form.scope 를 condition 과 겹치지 않게 다시 잡아 이 명제가 서는 회로 배치를 지목하게 한다. 전류가 고정되는 자리(직렬)에서는 반대가 된다는 경계를 이 카드가 스스로 들지, rel-series-ratio 쪽에 맡길지는 메인이 정한다. 명제 문장 자체는 조건이 붙어 있어 고칠 까닭이 없다."
+      },
+      {
+        "card_id": "phys-induced-current",
+        "relation_id": "rel-induced-while",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 둘째 문장이 '자기선속이 달라지는 동안에만 흐른다'이고 명제 앞절이 '유도 전류는 자기선속이 달라지는 동안에만 흐르고'다. 어절 단위로 같은 말이다. 뒤절('변화가 멎으면 곧 사라진다')도 앞절의 대우일 뿐이라 정의를 읽으면 저절로 나온다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-magnetic-field-of-solenoid",
+        "relation_id": "rel-solenoid-uniform",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '…그 안쪽에 축과 나란히 생기는 고른 자기장'으로 끝나는데 명제는 '솔레노이드 안쪽에는 중심축과 나란한 방향으로 세기가 고른 자기장이 생긴다'다. 정의를 평서문으로 풀어 쓴 것 말고 더해진 정보가 없다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-magnetic-field-of-circular-current",
+        "relation_id": "rel-circular-inside",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '고리 안쪽에서는 작은 자기장들이 겹쳐 바깥보다 세다'라고 이미 말했다. 명제 '원형 도선 안쪽의 자기장은 바깥쪽보다 세다'는 그 구절에서 까닭('겹쳐')만 덜어 낸 것이다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-magnetic-flux",
+        "relation_id": "rel-flux-field",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 둘째 문장 '자기장이 셀수록, 단면이 넓을수록 크다'의 앞 조각을 그대로 명제로 세웠다. 뒤 조각은 rel-flux-area 가 가져갔다 — 정의 한 문장을 둘로 쪼갠 셈이라 두 명제 모두 새 정보가 없다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-magnetic-flux",
+        "relation_id": "rel-flux-area",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "위와 같은 자리. definition 의 '단면이 넓을수록 크다'와 명제 '같은 자기장 안이라면 코일의 단면이 넓을수록 자기선속이 크다'가 같은 말이다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-magnetic-field",
+        "relation_id": "rel-mf-source",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '자석이나 전류 둘레에 생겨'로 시작한다. 명제 '자기장은 자석 둘레뿐 아니라 전류가 흐르는 도선 둘레에도 생긴다'는 그 구절의 '이나'를 '뿐 아니라'로 바꾼 것이다. 오개념 두 개가 모두 이 명제를 물고 있어 학습 자리는 있으나, 지금 형태로는 정의를 다시 읽는 것과 같다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-ferromagnetic-material",
+        "relation_id": "rel-ferro-keep",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '자기장을 치운 뒤에도 그 정렬이 상당히 남는 물질'이라고 못박아 두었다. 명제 '외부 자기장을 치운 뒤에도 정렬이 어느 정도 남아 오랫동안 자성을 유지한다'는 그 술어를 그대로 되풀이한다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-paramagnetic-material",
+        "relation_id": "rel-para-lose",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 '자기장을 치우면 자성이 사라지는 물질'과 명제 '외부 자기장을 치우면 원자 자석의 방향이 다시 흐트러져 자성이 남지 않는다'가 같은 내용이다. 더해진 것은 까닭 한 구절('방향이 다시 흐트러져')뿐이다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-diamagnetic-material",
+        "relation_id": "rel-dia-opposite",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition '외부 자기장을 걸면 그 반대 방향으로 약한 자성을 띠어 자석에 밀려나는 물질'이 명제 '걸어 준 자기장과 반대 방향으로 자기화되므로 센 자석을 가까이 하면 밀려난다'를 통째로 담고 있다. 자성체 세 장이 같은 모양으로 정의를 되풀이한다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-ohm-law",
+        "relation_id": "rel-ohm-scope",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '저항값이 변하지 않는 도체에서 …비례한다는 법칙'이다. 명제 '이 법칙은 온도 등에 따라 저항값이 달라지지 않는 도체에서만 그대로 성립한다'는 정의에 이미 붙어 있는 한정구를 문장으로 옮겼을 뿐이다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-coulomb-law",
+        "relation_id": "rel-coulomb-scope",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '두 점전하가 주고받는 전기력의 크기를 …나타낸 법칙'이라 적용 대상을 이미 점전하로 한정했다. 명제 '이 법칙은 크기를 무시할 수 있는 점전하 사이의 힘을 다룰 때 쓴다'는 그 한정을 되풀이하며 '크기를 무시할 수 있는'만 덧붙였다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-electric-current",
+        "relation_id": "rel-current-time",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '도선의 한 단면을 지나간 전하량을 걸린 시간으로 나눈 값'이다. 이 카드의 rel-current-charge(전하량↑→전류↑)와 rel-current-time(시간↑→전류↓)은 그 나눗셈을 두 방향으로 읽은 것이어서 둘을 합쳐도 정의 한 문장을 넘지 않는다. 대표로 rel-current-time 에 건다 — 둘이 같은 자리다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-electric-potential",
+        "relation_id": "rel-potential-per-charge",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 '전기장 안 어떤 점에서 단위 양전하가 지니는 전기적 위치 에너지'다. 명제 '어떤 점의 전위는 그 점에 놓인 전하의 전기적 위치 에너지를 그 전하량으로 나누어 구한다'는 '단위 …당'을 '나누어'로 바꿔 쓴 같은 말이다.",
+        "suggest": "명제를 덜어 내고 그 자리에 정의에서 곧바로 나오지 않는 명제를 넣거나, 반대로 정의 쪽에서 그 구절을 덜어 명제가 새 정보를 지게 한다. 어느 쪽을 고칠지는 메인이 정한다."
+      },
+      {
+        "card_id": "phys-electric-potential-energy",
+        "relation_id": "rel-epe-charge",
+        "verdict": "defect",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "명제는 '전기장 안의 같은 점이라도 옮겨 놓은 전하의 전하량이 클수록 그 전하가 지니는 전기적 위치 에너지가 크다'이고 scope 는 '균일한 전기장 안의 양전하'다. scope 가 전하의 종류만 묶어 두고 그 점이 기준점에 견주어 어느 쪽인지를 묶지 않았다. 같은 카드의 definition 이 '기준점부터 어떤 점까지 전하를 옮기는 데 드는 일의 양으로 정해지는' 값이라고 적어 두었으므로, 기준점보다 전위가 낮은 점에서는 양전하라도 전하량이 클수록 위치 에너지가 작아지는 자리가 생긴다. 곧 '같은 점이라면 언제나'로 읽히는 지금의 범위가 실제 적용 범위보다 넓다. 그 자리에서는 inverted_text('같은 점이라도 전하량이 클수록 전기적 위치 에너지는 작아진다')가 참이 되므로 ②도 함께 걸린다 — D1 이 이 명제로 OX 를 만들면 기준점을 어디에 두었는지에 따라 정답이 갈린다. 기준점 잡기에 딸린 진위 자체는 확정하지 않는다 — C8 검토 항목이다.",
+        "suggest": "form.scope 에 기준점 한정을 넣을지 condition 으로 옮길지를 정한다. 한정이 들어오기 전까지 invertible 을 그대로 둘지도 함께 본다."
+      },
+      {
+        "card_id": "phys-discharging-of-capacitor",
+        "relation_id": "rel-discharging-energy",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '방전할 때 회로에 흐르는 전류의 방향은 충전할 때와 같다'가 이 명제를 linked_relation 으로 물고 있다. 그런데 rel-discharging-energy 는 '쌓여 있던 전기 에너지가 기구에서 빛이나 열 등으로 바뀐다'는 에너지 전환 명제라 전류의 방향을 한 글자도 다루지 않는다. 오개념이 그 반대편에 서 있지 않다. 이 카드의 나머지 둘(rel-discharging-rate·rel-discharging-recharge)도 방향을 다루지 않으므로 이 오개념이 다툴 명제가 카드 안에 없다.",
+        "suggest": "이 오개념을 받칠 명제가 이 카드에 있어야 하는지, 아니면 링크를 옮길지를 정한다."
+      },
+      {
+        "card_id": "phys-ferromagnetic-material",
+        "relation_id": "rel-ferro-use",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '금속이면 모두 강자성체다'가 rel-ferro-use('센 자성을 띠므로 전자석의 철심, 영구 자석, 하드디스크의 기록면 재료로 쓰인다')를 물고 있다. rel-ferro-use 는 쓰임을 든 명제라 어떤 물질이 강자성체에 드는지를 가르지 않는다. why_wrong 이 실제로 기대는 것은 '철·니켈·코발트로 한정'이라는 소속 판정인데 그 내용의 명제가 이 카드에 없다(definition 에도 예시가 없다). 견주면 phys-paramagnetic-material·phys-diamagnetic-material 은 rel-para-examples·rel-dia-examples 라는 예시 명제를 두고 같은 모양의 오개념을 거기에 걸었다 — 강자성체 카드만 그 자리가 비어 있다.",
+        "suggest": "오개념이 걸릴 자리를 카드 안에 둘지, 오개념 쪽을 다른 명제에 붙일지를 정한다."
+      },
+      {
+        "card_id": "phys-electric-force",
+        "relation_id": "rel-force-charge",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 '전기력은 두 물체가 맞닿아 있어야 작용한다'가 rel-force-charge('거리를 그대로 두고 한쪽의 전하량을 키우면 두 대전체가 주고받는 힘의 크기도 커진다')를 물고 있다. 이 명제는 거리를 고정한 채 전하량만 견주므로 '떨어져서도 힘이 작용하는가'를 다루지 않는다. why_wrong 이 드는 근거('전하 주위에 전기장이 생기므로 떨어져 있어도 힘이 작용한다')는 phys-electric-field 쪽 내용이고, 이 카드의 세 명제 어느 것도 그 반대편에 서지 않는다.",
+        "suggest": "이 오개념이 이 카드에 남을 자리인지부터 정하고, 남긴다면 그 반대편에 설 명제를 어디서 가져올지 정한다."
+      },
+      {
+        "card_id": "phys-series-connection-of-resistor",
+        "relation_id": "rel-series-ratio",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "invertible: true 이고 inverted_text 는 '전력의 비는 저항값의 역수비와 같다'다. 저항값이 서로 다르면 뒤집은 문장이 거짓이지만, 직렬로 이은 저항값이 모두 같은 회로에서는 비도 역수비도 1:1 이라 뒤집은 문장이 참이 된다. '뒤집으면 반드시 거짓'이라는 기준을 문자 그대로 대면 어긋난다. 다만 명제가 일반 규칙을 말하고 있으니 OX 지문으로는 여전히 '아니다'가 정답이라는 판단도 선다 — 갈려서 uncertain 으로 올린다.",
+        "suggest": "저항값이 모두 같은 경우를 condition 이나 scope 에서 어떻게 다룰지, 아니면 invertible 을 그대로 둘지를 정한다."
+      },
+      {
+        "card_id": "phys-parallel-connection-of-resistor",
+        "relation_id": "rel-parallel-ratio",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "rel-series-ratio 와 같은 자리다. inverted_text('전력의 비는 저항값의 비와 같다')는 병렬로 이은 저항값이 모두 같은 회로에서 참이 된다(둘 다 1:1). 판단이 갈린다.",
+        "suggest": "위와 같은 자리이므로 두 카드를 한꺼번에 정한다."
+      },
+      {
+        "card_id": "phys-faraday-law-of-induction",
+        "relation_id": "rel-faraday-turns",
+        "verdict": "uncertain",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "명제는 '같은 자기선속 변화라도 코일을 많이 감을수록 유도 전류가 세다'이고 condition 은 '자기선속의 변화율이 같을 때'다. 감은 수를 늘리면 코일 자체의 저항도 함께 늘어나므로, condition 이 회로의 저항을 묶어 두지 않는 한 '전류'가 세진다고 단정되지 않는다. condition 에 빠진 것이 있는지 아니면 명제가 가리키는 양이 전류가 맞는지가 갈린다. 어느 쪽이 옳은지는 진위 판단 필요 — C8 검토 항목이다. invertible: true 도 그 판정에 딸려 간다.",
+        "suggest": "condition 이 무엇을 더 묶어야 하는지, 명제가 가리키는 양이 무엇인지를 C8 판정 뒤에 정한다."
+      },
+      {
+        "card_id": "phys-induced-current",
+        "relation_id": "rel-induced-strength",
+        "verdict": "uncertain",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "명제가 '자석이 셀수록, 자석을 빠르게 움직일수록, 코일을 많이 감을수록'이라는 선행량 셋을 한 문장에 묶었는데 form 에 antecedent/consequent 가 없고 inverted_text 는 그 가운데 빠르기 하나만 뒤집는다. 나머지 둘을 뒤집은 지문이 D1 에서 어떻게 나올지 정해지지 않는다. 또 '많이 감을수록'은 rel-faraday-turns 와 같은 자리라 진위 판단 필요 — C8 검토 항목이다.",
+        "suggest": "선행량을 나눌지 한 명제로 둘지, 둔다면 inverted_text 가 어느 선행량을 뒤집는지를 form 에 드러낼지를 정한다."
+      },
+      {
+        "card_id": "phys-rfid-system",
+        "relation_id": "rel-rfid-range",
+        "verdict": "uncertain",
+        "checks": [
+          1,
+          5
+        ],
+        "reason": "★신설 카드. scope 가 '전지를 품지 않은 수동형 태그'로 좁혀져 있는데 같은 카드의 definition 은 '하이패스와 교통 카드가 이 방식이다'라고 적어 두었다. 명제의 범위(수동형)와 정의가 든 예시(하이패스)가 어긋나 보인다 — 하이패스 차량 단말기가 전지 없이 리더의 자기장만으로 움직이는 수동형인지가 걸린다. 같은 사정이 rel-rfid-no-battery(scope 가 똑같이 '전지를 품지 않은 수동형 태그')에도 그대로 있다. 어긋남이 scope 를 좁게 잡은 탓인지 정의의 예시가 넘친 탓인지는 진위 판단 필요 — C8 검토 항목이다. 덧붙여, scope 를 수동형으로 좁힌 것 자체는 ①의 과일반화가 아니다 — 거리가 멀어지면 인식되지 않는다는 내용은 좁힌 범위 안에서 성립하고, 좁힌 쪽은 결함으로 올리지 않는다. rel-rfid-contactless 는 다섯 항목 어디에도 걸리지 않는다.",
+        "suggest": "정의의 예시와 명제의 scope 가운데 어느 쪽을 맞출지를 C8 판정 뒤에 정한다."
+      },
+      {
+        "card_id": "phys-electric-potential",
+        "relation_id": "rel-potential-per-charge",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "★메인이 지목한 오개념. '전위가 높은 곳에 있는 전하는 종류와 상관없이 위치 에너지가 크다'가 이 명제를 물고 있고 why_wrong 이 '음전하는 전위가 높은 곳에서 오히려 위치 에너지가 작다'로 음전하를 끌어온다. 링크 자체가 아주 엉뚱하지는 않다 — 위치 에너지와 전위를 전하량으로 잇는 명제가 이 카드에서는 이것뿐이다. 걸리는 것은 그 반대편에 설 명제가 음전하를 다루지 않는다는 점이다. 이 카드의 rel-potential-move 는 '양전하'로 한정되어 있고 phys-electric-potential-energy 의 rel-epe-charge 도 scope 가 '균일한 전기장 안의 양전하'다. 곧 음전하의 위치 에너지 부호를 받치는 명제가 두 카드 어디에도 없다. C5 는 이 카드를 범위 안(12물리02-01)으로 판정했으나 음전하 사례가 교과서 본문에 있는지는 이 보고서가 정하지 않는다 — 승인 여부는 C8 이다. 결함으로 확정할지 그대로 둘지가 갈려 uncertain 으로 올린다. 이 명제는 ③(동어반복)으로도 따로 올라가 있다.",
+        "suggest": "음전하를 받치는 명제를 둘지, 오개념을 음전하 없이 다시 세울지, 아니면 이 오개념을 그대로 C8 에 올릴지를 정한다."
+      }
+    ],
+    "stats": {
+      "ok": 93,
+      "defect": 18,
+      "uncertain": 6
+    }
+  }
+}

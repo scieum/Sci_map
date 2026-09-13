@@ -1,0 +1,131 @@
+{
+  "id": "phys-direction-of-heat-flow",
+  "concept_key": "concept:direction-of-heat-flow",
+  "registry_status": "new",
+  "homonym_flag": false,
+  "term": "열 이동의 방향성",
+  "notation": {
+    "hanja": "熱 移動 方向性",
+    "hanja_gloss": "熱 더울 열 · 移 옮길 이 · 動 움직일 동 · 方 모 방 · 向 향할 향 · 性 성품 성",
+    "english": "directionality of heat flow"
+  },
+  "definition": "열이 저절로 옮겨 가는 쪽이 한 방향으로 정해져 있다는 성질. 거꾸로 가는 이동은 에너지 셈이 맞아도 저절로는 일어나지 않는다.",
+  "relations": [
+    {
+      "id": "rel-dhf-spontaneous",
+      "text": "밖에서 손을 대지 않으면 열은 온도가 높은 쪽에서 낮은 쪽으로만 옮겨 간다.",
+      "form": {
+        "condition": "밖에서 따로 에너지를 넣어 주지 않을 때",
+        "type": "causal",
+        "scope": "온도 차가 있는 두 대상에 한정한다",
+        "antecedent": {
+          "quantity": "온도가 높은 쪽의 열",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "온도가 낮은 쪽의 열",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "저절로 일어나는 방향이 하나로 정해져 있어 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "밖에서 손을 대지 않아도 열은 온도가 낮은 쪽에서 높은 쪽으로 옮겨 간다."
+    },
+    {
+      "id": "rel-dhf-not-energy",
+      "text": "녹은 물이 저절로 다시 얼지 않는 까닭은 에너지 셈이 아니라 이동의 방향성으로 설명된다.",
+      "form": {
+        "condition": "에너지 총량만으로는 가릴 수 없는 현상을 볼 때",
+        "type": "conditional",
+        "scope": "저절로 일어나는 변화의 방향을 묻는 경우에 한정한다",
+        "antecedent": {
+          "quantity": "에너지 보존 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "현상의 설명 가능 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "무엇으로 설명해야 하는지를 짚은 명제라 맞바꿀 두 양의 방향이 없다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-dhf-fridge",
+      "text": "냉장고처럼 낮은 온도에서 높은 온도로 열을 옮기려면 바깥에서 에너지를 넣어 주어야 한다.",
+      "form": {
+        "condition": "열을 자연스러운 방향과 거꾸로 옮기려 할 때",
+        "type": "conditional",
+        "scope": "냉장고·에어컨처럼 강제로 열을 옮기는 장치에 한정한다",
+        "antecedent": {
+          "quantity": "거꾸로 옮기는 열",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "밖에서 넣어 줄 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "필요한 조건을 밝힌 명제라 뒤집을 두 양의 증감이 없다.",
+      "curriculum": [
+        "12물리01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "냉장고는 안쪽의 열을 없애 주는 장치다",
+      "why_wrong": "열을 없애는 것이 아니라 안쪽의 열을 바깥으로 퍼내는 장치다. 그러려면 전기 에너지가 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dhf-fridge"
+    },
+    {
+      "text": "에너지 보존 법칙만 지켜지면 열은 어느 쪽으로든 저절로 옮겨 갈 수 있다",
+      "why_wrong": "물이 저절로 얼면서 주위를 데우는 일은 에너지 셈이 맞아도 일어나지 않는다. 이동에는 방향이 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dhf-not-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-heat"
+    },
+    {
+      "type": "next",
+      "target": "phys-thermal-efficiency"
+    },
+    {
+      "type": "next",
+      "target": "phys-perpetual-motion-machine"
+    }
+  ],
+  "curriculum": [
+    "12물리01-06"
+  ],
+  "topic_id": "phys-1-2-03",
+  "pages": [
+    68,
+    69
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "definition_source": "restated",
+  "subject": "물리학",
+  "unit": "Ⅰ. 힘과 에너지",
+  "unit_id": "phys-1",
+  "version": 1,
+  "aliases": []
+}

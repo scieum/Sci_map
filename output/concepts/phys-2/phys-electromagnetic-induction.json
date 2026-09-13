@@ -1,0 +1,101 @@
+{
+  "id": "phys-electromagnetic-induction",
+  "concept_key": "concept:electromagnetic-induction",
+  "registry_status": "new",
+  "term": "전자기 유도",
+  "notation": {
+    "hanja": "電磁氣誘導",
+    "english": "electromagnetic induction",
+    "hanja_gloss": "電 번개 전 · 磁 자석 자 · 氣 기운 기 · 誘 꾈 유 · 導 이끌 도"
+  },
+  "definition": "코일을 지나는 자기선속이 달라질 때 전지가 없어도 코일에 전류가 흐르게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-emi-motion",
+      "text": "자석과 코일이 서로 가까워지거나 멀어지면 전지가 없어도 코일에 전류가 흐른다.",
+      "form": {
+        "condition": "자석과 코일 사이에 상대 운동이 있을 때",
+        "type": "causal",
+        "scope": "닫힌 회로를 이룬 코일과 자석"
+      },
+      "invertible": true,
+      "invertible_reason": "상대 운동이 없으면 전류가 흐르지 않으므로 흐른다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석과 코일이 서로 움직이지 않아도 코일에는 전류가 계속 흐른다."
+    },
+    {
+      "id": "rel-emi-cause",
+      "text": "전류가 흐르게 하는 원인은 자석의 세기 자체가 아니라 코일을 지나는 자기선속의 변화다.",
+      "form": {
+        "condition": "유도 전류가 흐르는 까닭을 따질 때",
+        "type": "causal",
+        "scope": "전자기 유도가 일어나는 상황 전반"
+      },
+      "invertible": false,
+      "invertible_reason": "원인을 가려낸 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-emi-energy",
+      "text": "구리관 속을 떨어지는 자석처럼, 줄어든 역학적 에너지의 일부가 전기 에너지로 바뀐다.",
+      "form": {
+        "condition": "유도 전류가 흐르는 동안",
+        "type": "causal",
+        "scope": "도체 안에서 자석이 움직이는 경우"
+      },
+      "invertible": false,
+      "invertible_reason": "에너지 전환을 밝힌 명제라 앞뒤를 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12물리02-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "센 자석을 코일 속에 넣어 두기만 해도 전류가 계속 흐른다",
+      "why_wrong": "자기선속이 변하는 동안에만 전류가 흐른다. 자석을 넣어 둔 채 가만두면 곧 전류가 멎는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-emi-motion"
+    },
+    {
+      "text": "전자기 유도로 얻는 전기 에너지는 아무 대가 없이 생긴 것이다",
+      "why_wrong": "자석을 움직이려면 힘을 써야 한다. 그때 든 역학적 에너지가 전기 에너지로 바뀐 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-emi-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-magnetic-flux"
+    },
+    {
+      "type": "next",
+      "target": "phys-induced-current"
+    }
+  ],
+  "curriculum": [
+    "12물리02-06"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅱ. 전기와 자기",
+  "unit_id": "phys-2",
+  "topic_id": "phys-2-2-03",
+  "pages": [
+    120,
+    126
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

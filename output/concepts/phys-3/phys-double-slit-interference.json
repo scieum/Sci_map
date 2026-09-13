@@ -1,0 +1,146 @@
+{
+  "id": "phys-double-slit-interference",
+  "concept_key": "concept:double-slit-interference",
+  "registry_status": "new",
+  "term": "이중 슬릿 간섭 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'슬릿(slit)'이 영어 음차어여서 표제어 전체를 한자로 적을 수 없다.",
+    "english": "double-slit interference experiment"
+  },
+  "definition": "좁은 틈 두 개에 빛을 통과시켜 스크린에 밝고 어두운 무늬가 번갈아 생기는 것을 확인하는 실험.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dsi-path",
+      "text": "두 슬릿에서 온 빛의 경로차가 반파장의 짝수 배인 곳은 밝고, 홀수 배인 곳은 어둡다.",
+      "form": {
+        "condition": "같은 위상·같은 파장의 빛이 두 슬릿에 들어갈 때",
+        "type": "conditional",
+        "scope": "단색광으로 하는 이중 슬릿 간섭. 여러 색이 섞이면 무늬가 겹친다"
+      },
+      "invertible": true,
+      "invertible_reason": "보강과 상쇄 조건을 맞바꾸면 반드시 거짓이 된다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 슬릿에서 온 빛의 경로차가 반파장의 짝수 배인 곳은 어둡고, 홀수 배인 곳은 밝다."
+    },
+    {
+      "id": "rel-dsi-wavelength",
+      "text": "슬릿 간격이 그대로일 때 파장이 긴 빛을 쓸수록 무늬 사이의 간격이 넓어진다.",
+      "form": {
+        "condition": "슬릿 사이 간격과 스크린까지의 거리가 일정할 때",
+        "type": "direct",
+        "scope": "이중 슬릿 간섭무늬. 파장 말고는 조건을 바꾸지 않는 경우",
+        "antecedent": {
+          "quantity": "빛의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "간섭무늬 사이의 간격",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장과 무늬 간격이 함께 커지므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "슬릿 간격이 그대로일 때 파장이 긴 빛을 쓸수록 무늬 사이의 간격이 좁아진다."
+    },
+    {
+      "id": "rel-dsi-slit",
+      "text": "파장이 그대로일 때 두 슬릿 사이를 더 벌릴수록 무늬 사이의 간격이 좁아진다.",
+      "form": {
+        "condition": "빛의 파장과 스크린까지의 거리가 일정할 때",
+        "type": "inverse",
+        "scope": "이중 슬릿 간섭무늬. 슬릿 간격만 달리 보는 경우",
+        "antecedent": {
+          "quantity": "슬릿 사이의 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "간섭무늬 사이의 간격",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "슬릿을 벌리면 무늬가 촘촘해지므로 '넓어진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 그대로일 때 두 슬릿 사이를 더 벌릴수록 무늬 사이의 간격이 넓어진다."
+    },
+    {
+      "id": "rel-dsi-evidence",
+      "text": "밝고 어두운 무늬가 번갈아 생긴다는 것은 빛이 파동으로서 간섭한다는 증거다.",
+      "form": {
+        "condition": "빛을 두 슬릿에 통과시켰을 때",
+        "type": "causal",
+        "scope": "간섭·회절로 설명되는 현상. 광전 효과 같은 입자성 현상은 이것으로 설명되지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "증거 관계를 말하는 명제여서 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12물리03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "슬릿이 두 개니까 스크린에는 밝은 무늬도 두 개만 생긴다",
+      "why_wrong": "두 슬릿을 지난 빛이 겹쳐 간섭하기 때문에 밝고 어두운 무늬가 여러 개 번갈아 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dsi-evidence"
+    },
+    {
+      "text": "빨간빛보다 파란빛을 쓰면 간섭무늬 간격이 더 넓어진다",
+      "why_wrong": "파란빛은 파장이 짧아 무늬 간격이 오히려 좁아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dsi-wavelength"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "phys-constructive-and-destructive-interference"
+    },
+    {
+      "type": "prereq",
+      "target": "phys-wavelength-and-frequency"
+    },
+    {
+      "type": "next",
+      "target": "phys-wave-particle-duality-of-light"
+    },
+    {
+      "type": "next",
+      "target": "phys-wave-particle-duality-of-matter"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12물리03-01"
+  ],
+  "subject": "물리학",
+  "unit": "Ⅲ. 빛과 물질",
+  "unit_id": "phys-3",
+  "topic_id": "phys-3-1-01",
+  "pages": [
+    142,
+    143
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "영의 간섭 실험"
+  ]
+}
