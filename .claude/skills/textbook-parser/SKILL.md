@@ -28,7 +28,7 @@ V=~/.venvs/scimap/bin/python
 S=.claude/skills/textbook-parser/scripts
 
 $V $S/check_licenses.py                                   # 0. 금지 임포트 점검
-$V $S/detect_layer.py inbox/textbook/<책>.pdf --first 10 --last 45   # 1. 텍스트 레이어·추출률
+$V $S/detect_layer.py "inbox/textbook/<판>/<계열>/<책>.pdf" --first 10 --last 45   # 1. 텍스트 레이어·추출률
 $V $S/split_unit.py mate-1                                # 2. 단원 경계 확정
 $V $S/extract_text.py mate-1                              # 3. 원문·레이아웃·그림 후보
 ```
@@ -44,6 +44,12 @@ $V $S/extract_text.py mate-1                              # 3. 원문·레이아
 모든 결과는 `output/logs/pipeline.jsonl` 에 남는다 (CLAUDE.md §12).
 
 ## 입력
+
+교과서는 `inbox/textbook/<교육과정 판>/<과목 계열>/` 에 있다 (`15개정`|`22개정` ×
+`통합과학`|`물리학`|`화학`|`생명과학`|`지구과학`). 2026-09-13 에 평평한 한 폴더에서
+이 구조로 갈랐다. **경로를 쓰는 곳이 백로그·plan·후보 목록에 흩어져 있으니**
+파일을 옮기거나 이름을 바꿀 때는 같은 커밋에서 참조도 함께 고쳐라 —
+자세한 것은 `inbox/README.md` 에 있다.
 
 `docs/unit_backlog.yaml` 이 단원 구조와 쪽 범위의 선언이다. **선언을 정답으로 믿지 않는다** —
 `split_unit.py` 가 본문과 대조해 확정한다. 확정 실패는 스킵이 아니라 에스컬레이션이다.
