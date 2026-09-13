@@ -1,0 +1,94 @@
+{
+ "id": "mech-kepler-second-law",
+ "concept_key": "concept:kepler-second-law",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "케플러 제2법칙",
+ "aliases": [
+  "면적 속도 일정 법칙"
+ ],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'케플러' 가 사람 이름을 소리대로 옮긴 말이라 표제어 전체를 한자어로 적을 수 없다.",
+  "english": "Kepler's second law"
+ },
+ "definition": "태양과 행성을 이은 선분이 같은 시간 동안 쓸고 지나는 넓이가 언제나 같다는 법칙. 그래서 공전 속력이 자리마다 달라진다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-k2-speed",
+   "text": "태양에 가까이 있을수록 행성의 공전 속력이 빠르다.",
+   "form": {
+    "condition": "같은 시간에 쓸고 가는 넓이가 같을 때",
+    "type": "inverse",
+    "scope": "타원 궤도를 도는 하나의 행성",
+    "antecedent": {
+     "quantity": "태양까지의 거리",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "공전 속력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "넓이가 같으려면 거리가 짧을 때 더 빨리 움직여야 하므로 느리다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "태양에 가까이 있을수록 행성의 공전 속력이 느리다."
+  },
+  {
+   "id": "rel-k2-apsis",
+   "text": "한 행성의 공전 속력은 근일점에서 가장 크고 원일점에서 가장 작다.",
+   "form": {
+    "condition": "궤도를 한 바퀴 도는 동안",
+    "type": "conditional",
+    "scope": "타원 궤도를 도는 행성 하나"
+   },
+   "invertible": true,
+   "invertible_reason": "두 지점의 대소가 정해져 있어 맞바꾸면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "한 행성의 공전 속력은 근일점에서 가장 작고 원일점에서 가장 크다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "행성은 궤도를 일정한 속력으로 돈다",
+   "why_wrong": "같은 시간에 쓸고 가는 넓이가 같으려면 태양에 가까울 때 더 빨리, 멀 때 더 느리게 움직여야 한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-k2-speed"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-kepler-first-law"
+  },
+  {
+   "type": "related",
+   "target": "mech-kepler-third-law"
+  }
+ ],
+ "curriculum": [
+  "12역학01-04"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-01",
+ "pages": [
+  33
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "12역학01-04 의 crosscheck 가 '교사 확정' 이다 (지도서 166쪽 곁주 오식 정정). 경고는 뜨지만 사람이 이미 확정한 코드다."
+ ]
+}

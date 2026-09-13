@@ -1,0 +1,144 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-01",
+ "pages": [
+  78,
+  79,
+  86
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermodynamic-cycle",
+ "concept_key": "concept:thermodynamic-cycle",
+ "registry_status": "new",
+ "term": "열기관의 순환 과정",
+ "aliases": [
+  "순환 과정"
+ ],
+ "notation": {
+  "hanja": "熱機關循環過程",
+  "hanja_gloss": "熱 더울 열 · 機 틀 기 · 關 빗장 관 · 循 좇을 순 · 環 고리 환 · 過 지날 과 · 程 길 정",
+  "english": "thermodynamic cycle"
+ },
+ "definition": "열기관 속 기체가 여러 열역학 과정을 차례로 거쳐 처음 상태로 되돌아오는 한 바퀴. 어떤 과정들을 어떤 차례로 엮었느냐가 기관의 종류를 가른다.",
+ "relations": [
+  {
+   "id": "rel-cy-pv",
+   "text": "순환을 압력-부피 그래프에 그리면 닫힌 곡선이 되고, 팽창하며 한 일이 압축하며 받은 일보다 커야 한 바퀴에 알짜일이 남는다",
+   "form": {
+    "condition": "한 바퀴를 압력-부피 그래프로 따라갈 때",
+    "type": "conditional",
+    "scope": "열기관으로 쓰이는 순환 과정",
+    "antecedent": {
+     "quantity": "팽창에서 한 일과 압축에서 받은 일의 차",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "한 바퀴의 알짜일",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "알짜일은 두 일의 차이므로 압축에서 받은 일이 더 큰데도 알짜일이 남는다는 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "압축하며 받은 일이 팽창하며 한 일보다 커도 한 바퀴에 알짜일이 남는다"
+  },
+  {
+   "id": "rel-cy-kinds",
+   "text": "어떤 열역학 과정을 어떻게 엮었는지에 따라 카르노 기관과 스털링 엔진처럼 기관의 종류가 갈린다",
+   "form": {
+    "condition": "여러 열기관을 견줄 때",
+    "type": "classification",
+    "scope": "이상적인 순환 과정으로 나타낸 열기관",
+    "antecedent": {
+     "quantity": "과정의 조합",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "기관의 종류",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "기관을 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cy-stirling",
+   "text": "이상적인 스털링 엔진은 등온 팽창과 등적 과정, 등온 압축과 등적 과정을 차례로 거친다",
+   "form": {
+    "condition": "이상적인 스털링 엔진의 순환을 볼 때",
+    "type": "classification",
+    "scope": "교과서 그림 II-27 의 순환 (79쪽)",
+    "antecedent": {
+     "quantity": "스털링 엔진",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "네 과정의 조합",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "순환의 차례를 늘어놓은 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "한 순환이 끝나면 기체는 처음보다 에너지를 더 많이 가지고 있다",
+   "why_wrong": "처음 상태로 돌아오므로 내부 에너지 변화는 0이다. 기체가 한 일은 고열원에서 받은 열에서 나온 것이지 기체가 쌓아 둔 것이 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cy-pv"
+  },
+  {
+   "text": "모든 열기관은 같은 순환 과정을 거친다",
+   "why_wrong": "카르노 기관은 등온 과정과 단열 과정으로, 스털링 엔진은 등온 과정과 등적 과정으로 순환한다. 엮는 방식이 기관을 가른다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cy-kinds"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-engine",
+   "note": "무엇이 도는지 먼저 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-carnot-engine",
+   "note": "최대 효율을 내는 순환으로 나아간다"
+  },
+  {
+   "type": "related",
+   "target": "mech-isothermal-process",
+   "note": "순환을 이루는 과정 가운데 하나다"
+  },
+  {
+   "type": "related",
+   "target": "mech-isochoric-process",
+   "note": "스털링 엔진의 순환에 들어 있다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-04"
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "notes": [
+  "C6 결함 수정 — rel-cy-return('한 바퀴 뒤 처음 값으로 돌아온다')은 정의를 문장으로 바꾼 것이었다. 한 바퀴 뒤 내부 에너지 변화가 0 이라는 몫은 mech-heat-engine 의 rel-he-cycle-du 가 이미 맡고 있어, 겹치지 않는 자리인 압력-부피 그래프의 알짜일로 옮기고 id 를 rel-cy-pv 로 바꿨다."
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-02",
+ "pages": [
+  85,
+  87
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-gas-diffusion",
+ "concept_key": "concept:gas-diffusion",
+ "registry_status": "reused",
+ "term": "기체의 확산",
+ "aliases": [],
+ "notation": {
+  "hanja": "氣體擴散",
+  "hanja_gloss": "氣 기운 기 · 體 몸 체 · 擴 넓힐 확 · 散 흩을 산",
+  "english": "diffusion of gas"
+ },
+ "definition": "기체 분자가 열운동을 하며 저절로 퍼져 고르게 섞이는 현상. 물에 떨어뜨린 잉크가 번지는 것과 같은 자리에 놓이는 비가역 현상이다.",
+ "relations": [
+  {
+   "id": "rel-gd-spread",
+   "text": "칸막이를 치우면 기체는 저절로 고르게 퍼지지만 저절로 한쪽으로 다시 모이지는 않는다",
+   "form": {
+    "condition": "바깥에서 일을 해 주지 않을 때",
+    "type": "conditional",
+    "scope": "분자 수가 거시적 규모로 많은 기체 (낱낱의 요동은 다루지 않는다)",
+    "antecedent": {
+     "quantity": "시간",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "기체가 퍼진 정도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "거시적 규모에서는 고르게 퍼진 상태를 만드는 미시 배열이 압도적으로 많아 저절로 되모인다는 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "칸막이를 치우면 고르게 퍼진 기체가 저절로 다시 한쪽으로 모이기도 한다"
+  },
+  {
+   "id": "rel-gd-entropy",
+   "text": "기체가 퍼져 나가는 쪽이 엔트로피가 커지는 방향이어서 확산은 한 방향으로만 일어난다",
+   "form": {
+    "condition": "계가 주변과 주고받는 것이 없을 때",
+    "type": "causal",
+    "scope": "고립된 용기 속 기체의 확산",
+    "antecedent": {
+     "quantity": "확산",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "엔트로피",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "엔트로피가 커지는 쪽으로 변화가 일어나므로 확산이 엔트로피를 줄이는 방향이라는 말은 거짓이다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "기체가 퍼져 나가는 쪽은 엔트로피가 줄어드는 방향이다"
+  },
+  {
+   "id": "rel-gd-example",
+   "text": "잉크가 물에 번지는 일과 열이 고온에서 저온으로 흐르는 일은 확산과 나란히 놓이는 비가역 현상이다",
+   "form": {
+    "condition": "비가역 현상의 예를 모아 볼 때",
+    "type": "classification",
+    "scope": "자발적으로 일어나는 자연의 변화",
+    "antecedent": {
+     "quantity": "확산·열 이동",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "비가역 현상",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "같은 갈래의 현상을 나란히 든 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기체가 퍼지는 것은 분자끼리 밀어내기 때문이다",
+   "why_wrong": "이상 기체에서 분자는 부딪칠 때만 힘을 주고받는다. 퍼지는 까닭은 서로 밀어서가 아니라 무작위 운동의 결과로 고르게 퍼진 배열이 압도적으로 많기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gd-entropy"
+  },
+  {
+   "text": "시간을 충분히 오래 두면 퍼진 기체가 저절로 다시 한쪽에 모일 수 있다",
+   "why_wrong": "분자가 거시적 규모로 많아지면 한쪽으로 몰린 배열이 나타나는 비율은 사실상 사라진다. 주사위 몇 개짜리 작은 계라면 되돌아가는 일도 있지만, 이 단원이 다루는 규모에서는 일어나지 않는 방향이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gd-spread"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-entropy",
+   "note": "왜 한 방향인지를 이 양으로 설명한다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-irreversible-process",
+   "note": "이 갈래에 드는 현상이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-second-law-of-thermodynamics",
+   "note": "법칙이 설명하는 대표 사례다"
+  },
+  {
+   "type": "same",
+   "target": "mate-gas-diffusion",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-05"
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "notes": [
+  "C6 결함 수정 — rel-gd-spread 의 '반드시 거짓' 과 오개념의 '확률이 0에 가깝다' 가 강도가 갈렸다. 적용 규모를 가르는 쪽으로 맞췄다: 명제는 거시적 규모(scope 에 명시)에서 반드시 거짓, 오개념 설명은 작은 계와 거시 규모를 갈라 적었다. 교과서 85쪽이 주사위 2개와 10,000개를 갈라 보인 서술을 따랐다. mech-entropy 오개념 M2 도 같은 기준으로 고쳤다."
+ ]
+}

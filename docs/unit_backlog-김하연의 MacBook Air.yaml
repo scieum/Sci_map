@@ -1,0 +1,212 @@
+# 단원 백로그 — [A] 개념 파이프라인(C0~C10)의 실행 단위 목록
+#
+# 실행 단위 = 단원 1개 (Sci_Map §4.1). 한 사이클이 카드 10~30장을 낳고,
+# 교사 게이트(C8)가 한 번에 감당하는 분량이 그 정도다.
+# 그래서 대단원(영역)이 아니라 성취기준 2~3개 묶음을 한 단원으로 잡는다.
+#
+# status: pending | in_progress | gated | deployed | blocked
+# blocked_on: 진행 불가 사유 (해소되어야 status가 pending으로 돌아간다)
+#
+# ⚠️ 전 단원이 blocked 상태다. C0(교과서 전처리)의 입력인
+#    /inbox/textbook/*.pdf 가 비어 있다. 교과서 PDF 투입 전에는
+#    C0 이후 어느 단계도 시작할 수 없다.
+
+meta:
+  updated: "2026-09-05"
+  target_cards_per_unit: [10, 30]
+  cycle_rule: "전 단원 동시 착수 금지 — 파이프라인 한 바퀴 완주가 먼저다 (CLAUDE.md §13)"
+
+units:
+
+  # ═══════════════════════ 통합과학1 ═══════════════════════
+  - unit_id: isci1-01-a
+    subject: 통합과학1
+    area: "과학의 기초"
+    unit: "통합과학1 > 과학의 기초 > 시간·공간과 측정"
+    curriculum: ["10통과1-01-01", "10통과1-01-02", "10통과1-01-03"]
+    track: PHYS
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci1-01-b
+    subject: 통합과학1
+    area: "과학의 기초"
+    unit: "통합과학1 > 과학의 기초 > 정보와 신호"
+    curriculum: ["10통과1-01-04"]
+    track: PHYS
+    priority: 5
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci1-02-a
+    subject: 통합과학1
+    area: "물질과 규칙성"
+    unit: "통합과학1 > 물질과 규칙성 > 원소의 생성"
+    curriculum: ["10통과1-02-01", "10통과1-02-02"]
+    track: EARTH
+    priority: 3
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  # ★ 화학 계열 종단(P4)의 출발점. 교과서 투입 시 이 단원부터 돈다.
+  - unit_id: isci1-02-b
+    subject: 통합과학1
+    area: "물질과 규칙성"
+    unit: "통합과학1 > 물질과 규칙성 > 원소의 주기성과 화학 결합"
+    curriculum: ["10통과1-02-03", "10통과1-02-04"]
+    track: CHEM
+    priority: 1
+    status: blocked
+    blocked_on: "no-textbook-source"
+    note: "화학 계열 종단의 시작. 화학 '물질의 구조와 성질'로 same 링크가 뻗는다."
+
+  - unit_id: isci1-02-c
+    subject: 통합과학1
+    area: "물질과 규칙성"
+    unit: "통합과학1 > 물질과 규칙성 > 지각과 생명체 구성 물질"
+    curriculum: ["10통과1-02-05"]
+    track: BIO
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci1-02-d
+    subject: 통합과학1
+    area: "물질과 규칙성"
+    unit: "통합과학1 > 물질과 규칙성 > 물질의 전기적 성질"
+    curriculum: ["10통과1-02-06"]
+    track: PHYS
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci1-03-a
+    subject: 통합과학1
+    area: "시스템과 상호작용"
+    unit: "통합과학1 > 시스템과 상호작용 > 지구 시스템"
+    curriculum: ["10통과1-03-01", "10통과1-03-02"]
+    track: EARTH
+    priority: 3
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci1-03-b
+    subject: 통합과학1
+    area: "시스템과 상호작용"
+    unit: "통합과학1 > 시스템과 상호작용 > 역학 시스템"
+    curriculum: ["10통과1-03-03", "10통과1-03-04"]
+    track: PHYS
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci1-03-c
+    subject: 통합과학1
+    area: "시스템과 상호작용"
+    unit: "통합과학1 > 시스템과 상호작용 > 생명 시스템"
+    curriculum: ["10통과1-03-05", "10통과1-03-06"]
+    track: BIO
+    priority: 3
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  # ═══════════════════════ 통합과학2 ═══════════════════════
+  - unit_id: isci2-01-a
+    subject: 통합과학2
+    area: "변화와 다양성"
+    unit: "통합과학2 > 변화와 다양성 > 지질시대와 생물다양성"
+    curriculum: ["10통과2-01-01", "10통과2-01-02"]
+    track: EARTH
+    priority: 3
+    status: blocked
+    blocked_on: "no-textbook-source"
+    note: "SciMetro 지질시대 노선과 concept_key를 공유할 후보 단원."
+
+  # ★ 화학 계열 종단 2순위
+  - unit_id: isci2-01-b
+    subject: 통합과학2
+    area: "변화와 다양성"
+    unit: "통합과학2 > 변화와 다양성 > 산화와 환원"
+    curriculum: ["10통과2-01-03"]
+    track: CHEM
+    priority: 2
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-01-c
+    subject: 통합과학2
+    area: "변화와 다양성"
+    unit: "통합과학2 > 변화와 다양성 > 산·염기와 중화 반응"
+    curriculum: ["10통과2-01-04"]
+    track: CHEM
+    priority: 2
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-01-d
+    subject: 통합과학2
+    area: "변화와 다양성"
+    unit: "통합과학2 > 변화와 다양성 > 물질 변화와 에너지 출입"
+    curriculum: ["10통과2-01-05"]
+    track: CHEM
+    priority: 2
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-02-a
+    subject: 통합과학2
+    area: "환경과 에너지"
+    unit: "통합과학2 > 환경과 에너지 > 생태계와 환경"
+    curriculum: ["10통과2-02-01", "10통과2-02-02"]
+    track: BIO
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-02-b
+    subject: 통합과학2
+    area: "환경과 에너지"
+    unit: "통합과학2 > 환경과 에너지 > 지구 환경 변화"
+    curriculum: ["10통과2-02-03"]
+    track: EARTH
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-02-c
+    subject: 통합과학2
+    area: "환경과 에너지"
+    unit: "통합과학2 > 환경과 에너지 > 에너지 전환과 발전"
+    curriculum: ["10통과2-02-04", "10통과2-02-05"]
+    track: PHYS
+    priority: 4
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-02-d
+    subject: 통합과학2
+    area: "환경과 에너지"
+    unit: "통합과학2 > 환경과 에너지 > 에너지 효율과 신재생에너지"
+    curriculum: ["10통과2-02-06"]
+    track: PHYS
+    priority: 5
+    status: blocked
+    blocked_on: "no-textbook-source"
+
+  - unit_id: isci2-03-a
+    subject: 통합과학2
+    area: "과학과 미래 사회"
+    unit: "통합과학2 > 과학과 미래 사회"
+    curriculum: ["10통과2-03-01", "10통과2-03-02", "10통과2-03-03", "10통과2-03-04"]
+    track: BIO
+    priority: 5
+    status: blocked
+    blocked_on: "no-textbook-source"
+    note: "개념 카드보다 논증·조사 활동 비중이 큰 영역. C1에서 카드화 대상이 10개 미만이면 인접 단원과 병합 검토."
+
+blockers:
+  no-textbook-source:
+    since: "2026-09-05"
+    detail: "/inbox/textbook/ 이 비어 있다. C0 교과서 전처리의 입력이 없어 C0~C10 전 단계가 시작 불가."
+    resolution: "통합과학1·통합과학2 교과서 PDF를 /inbox/textbook/ 에 넣으면 해소된다."

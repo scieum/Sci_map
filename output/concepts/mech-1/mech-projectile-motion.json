@@ -1,0 +1,99 @@
+{
+ "id": "mech-projectile-motion",
+ "concept_key": "concept:projectile-motion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "포물선 운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "抛物線運動",
+  "hanja_gloss": "抛 던질 포 · 物 물건 물 · 線 줄 선 · 運 옮길 운 · 動 움직일 동",
+  "english": "projectile motion"
+ },
+ "definition": "속도와 나란하지 않은 일정한 알짜힘을 받으며 날아가는 물체가 그리는 곡선 운동. 경로 식에서 시간을 지우면 이차식이 된다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-pm-condition",
+   "text": "속도와 어긋난 방향으로 크기·방향이 일정한 알짜힘이 걸리면 경로가 포물선이 된다.",
+   "form": {
+    "condition": "알짜힘의 크기와 방향이 변하지 않을 때",
+    "type": "causal",
+    "scope": "알짜힘이 처음 속도와 나란하지 않은 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "'포물선 운동이면 그런 알짜힘이 있다' 로 뒤집어도 참이라 오답 지문이 서지 않는다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pm-gravity",
+   "text": "지표 근처에서 던진 물체의 포물선 운동을 만드는 알짜힘은 중력이다.",
+   "form": {
+    "condition": "공기 저항을 무시할 때",
+    "type": "causal",
+    "scope": "지표 근처에서 손을 떠난 물체"
+   },
+   "invertible": false,
+   "invertible_reason": "원인을 지목한 명제라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pm-superpose",
+   "text": "포물선 운동은 수평 등속도 운동과 연직 등가속도 운동을 겹쳐 놓은 것으로 볼 수 있다.",
+   "form": {
+    "condition": "수평과 연직을 서로 수직인 두 축으로 잡을 때",
+    "type": "conditional",
+    "scope": "중력만 받는 물체"
+   },
+   "invertible": false,
+   "invertible_reason": "두 성분 운동의 합성이라는 서술이라 뒤집은 문장이 성립하지 않는다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "포물선 운동을 하는 물체에는 앞으로 미는 힘이 계속 작용한다",
+   "why_wrong": "손을 떠난 뒤 남는 힘은 중력뿐이다. 앞으로 나아가는 것은 힘 때문이 아니라 처음 속도가 그대로 남아 있기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pm-gravity"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-horizontal-projectile-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-projectile-at-an-angle"
+  },
+  {
+   "type": "next",
+   "target": "mech-mechanical-energy-in-projectile"
+  }
+ ],
+ "curriculum": [
+  "12역학01-02"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-02",
+ "pages": [
+  19,
+  20
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

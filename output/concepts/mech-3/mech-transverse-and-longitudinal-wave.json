@@ -1,0 +1,122 @@
+{
+  "id": "mech-transverse-and-longitudinal-wave",
+  "concept_key": "concept:transverse-and-longitudinal-wave",
+  "registry_status": "new",
+  "term": "횡파와 종파",
+  "notation": {
+    "hanja": "橫波 縱波",
+    "hanja_gloss": "橫 가로 횡 · 波 물결 파 · 縱 세로 종 · 波 물결 파",
+    "english": "transverse wave and longitudinal wave"
+  },
+  "definition": "매질의 진동 방향이 진행 방향과 수직인 파동을 횡파, 진행 방향과 나란한 파동을 종파라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-same-medium-both-types",
+      "text": "한 용수철이라도 수직으로 흔들면 횡파가, 앞뒤로 밀고 당기면 종파가 생긴다.",
+      "form": {
+        "condition": "같은 매질을 서로 다른 방향으로 흔들 때",
+        "type": "causal",
+        "scope": "용수철처럼 두 갈래가 모두 전달되는 매질(101쪽 그림 8)",
+        "antecedent": {
+          "quantity": "흔드는 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생기는 파동의 갈래",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "갈래를 가르는 것은 흔드는 방향이므로 매질이 같으면 갈래도 하나뿐이라는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 용수철에서는 흔드는 방향을 바꾸어도 한 갈래의 파동만 생긴다."
+    },
+    {
+      "id": "rel-longitudinal-dense-sparse",
+      "text": "종파에서는 매질이 진행 방향으로 밀리고 당겨져 빽빽한 곳과 듬성듬성한 곳이 번갈아 생긴다.",
+      "form": {
+        "condition": "종파가 매질을 지나갈 때",
+        "type": "causal",
+        "scope": "종파"
+      },
+      "invertible": false,
+      "invertible_reason": "밀·소가 생기는 까닭을 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-crest-trough",
+      "text": "횡파에서 진동의 중심보다 가장 높이 솟은 곳을 마루, 가장 낮게 내려간 곳을 골이라 부른다.",
+      "form": {
+        "condition": "진동의 중심을 기준으로 볼 때",
+        "type": "classification",
+        "scope": "횡파",
+        "antecedent": {
+          "quantity": "변위의 위치",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "부르는 이름",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "이름을 붙이는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "종파에서는 매질이 파동을 따라 함께 실려 간다.",
+      "why_wrong": "매질은 제자리에서 앞뒤로 진동할 뿐이고, 옮겨 가는 것은 진동과 에너지다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-longitudinal-dense-sparse"
+    },
+    {
+      "text": "소리는 마루와 골이 있는 횡파다.",
+      "why_wrong": "소리는 매질이 진행 방향으로 진동하는 종파다. 그림에서 마루처럼 그리는 것은 진폭을 보기 쉽게 나타낸 것일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-crest-trough"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-elastic-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-sound-wave",
+      "note": "음파가 종파임을 알려면 이 갈래를 알아야 한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    101
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 101쪽 그림 8(횡파와 종파).",
+    "C6 수정: rel-transverse-classify 는 definition 을 낱말만 바꾼 문장이라 접었다. 101쪽 본문의 '같은 용수철을 어느 쪽으로 흔드느냐가 갈래를 가른다' 를 rel-same-medium-both-types 로 세우고, 오개념 '소리는 마루와 골이 있는 횡파다' 의 링크는 마루·골을 다루는 rel-crest-trough 로 옮겼다."
+  ]
+}

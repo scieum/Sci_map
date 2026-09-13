@@ -1,0 +1,98 @@
+{
+ "id": "mech-inertial-and-accelerated-frame",
+ "concept_key": "concept:inertial-and-accelerated-reference-frame",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "관성 좌표계와 가속 좌표계",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "두 용어를 '와' 로 묶은 표제어라 한 덩어리의 한자어로 적을 수 없다. 각각은 慣性座標系·加速座標系다.",
+  "english": "inertial and accelerated reference frames"
+ },
+ "definition": "관성 법칙이 그대로 성립하는 좌표계와 그렇지 않은 좌표계를 가르는 구분. 가속도를 갖고 움직이는 쪽이 뒤의 것이다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-frm-inertial",
+   "text": "정지해 있거나 등속도로 움직이는 좌표계에서는 관성 법칙이 성립한다.",
+   "form": {
+    "condition": "좌표계의 가속도가 0 일 때",
+    "type": "conditional",
+    "scope": "고전 역학에서 다루는 좌표계"
+   },
+   "invertible": false,
+   "invertible_reason": "관성계의 정의를 밝힌 명제라 뒤집어 읽어도 참이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-frm-noninertial",
+   "text": "가속도를 갖고 움직이는 좌표계는 관성 법칙이 성립하지 않아 비관성 좌표계로 분류한다.",
+   "form": {
+    "condition": "좌표계의 가속도가 0 이 아닐 때",
+    "type": "classification",
+    "scope": "고전 역학에서 다루는 좌표계",
+    "antecedent": {
+     "quantity": "좌표계의 분류",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "분류 기준을 밝힌 명제라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-frm-observer",
+   "text": "같은 현상이라도 어느 좌표계에서 보느냐에 따라 기술하는 방식이 달라진다.",
+   "form": {
+    "condition": "관찰자가 서로 다른 좌표계에 있을 때",
+    "type": "causal",
+    "scope": "버스·엘리베이터처럼 가속하는 관찰 상황"
+   },
+   "invertible": false,
+   "invertible_reason": "관점 차이를 밝힌 서술이라 뒤집을 자리가 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "가속 좌표계에서 관찰한 결과는 틀린 것이므로 쓰면 안 된다",
+   "why_wrong": "틀린 것이 아니라 기술하는 방식이 다를 뿐이다. 관성력을 넣어 주면 가속 좌표계에서도 운동을 앞뒤가 맞게 설명할 수 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-frm-noninertial"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-net-force"
+  },
+  {
+   "type": "next",
+   "target": "mech-inertial-force"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  42
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

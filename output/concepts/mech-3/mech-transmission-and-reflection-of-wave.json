@@ -1,0 +1,118 @@
+{
+  "id": "mech-transmission-and-reflection-of-wave",
+  "concept_key": "concept:transmission-and-reflection-of-wave",
+  "registry_status": "new",
+  "term": "탄성파의 투과와 반사",
+  "notation": {
+    "hanja": "彈性波 透過 反射",
+    "hanja_gloss": "彈 탄알 탄 · 性 성품 성 · 波 물결 파 · 透 통할 투 · 過 지날 과 · 反 돌이킬 반 · 射 쏠 사",
+    "english": "transmission and reflection of an elastic wave"
+  },
+  "definition": "매질의 경계에 이른 탄성파가 일부는 경계를 넘어 나아가고 나머지는 되돌아 나오는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-boundary-splits",
+      "text": "성질이 다른 두 매질이 맞닿은 경계에서 파동은 일부만 넘어가고 나머지는 되돌아온다.",
+      "form": {
+        "condition": "두 매질이 이어져 있을 때",
+        "type": "causal",
+        "scope": "경계에 입사한 탄성파"
+      },
+      "invertible": false,
+      "invertible_reason": "갈라짐이 일어난다는 사실을 말하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-transmitted-phase",
+      "text": "경계를 넘어간 투과파의 위상은 어느 경우에나 입사파와 같다.",
+      "form": {
+        "condition": "두 매질이 끊기지 않고 이어져 있을 때",
+        "type": "conditional",
+        "scope": "굵기가 다른 두 용수철의 연결부 같은 매질 경계",
+        "antecedent": {
+          "quantity": "입사파의 위상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "투과파의 위상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "투과파는 위상이 뒤집히지 않으므로 반대라는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "경계를 넘어간 투과파의 위상은 입사파와 반대가 된다."
+    },
+    {
+      "id": "rel-reflection-action-reaction",
+      "text": "반사파의 위상이 뒤집히는지 아닌지는 경계에서 두 매질이 주고받는 힘의 작용과 반작용으로 설명된다.",
+      "form": {
+        "condition": "경계에서 두 매질이 서로 힘을 미칠 때",
+        "type": "causal",
+        "scope": "매질 경계에서의 반사"
+      },
+      "invertible": false,
+      "invertible_reason": "설명의 근거를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "매질의 경계에서는 반사만 일어나고 넘어가는 파동은 없다.",
+      "why_wrong": "경계에서는 되돌아오는 반사파와 넘어가는 투과파가 함께 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-boundary-splits"
+    },
+    {
+      "text": "투과파도 반사파처럼 위상이 뒤집힐 때가 있다.",
+      "why_wrong": "위상이 뒤집힐 수 있는 것은 반사파뿐이고, 투과파의 위상은 언제나 입사파와 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-transmitted-phase"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-elastic-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-free-end-and-fixed-end-reflection"
+    },
+    {
+      "type": "next",
+      "target": "mech-ultrasound"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    102,
+    103
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "성취기준 12역학03-02 의 표제 문구(진행·투과·반사)를 받는 카드다.",
+    "C7 후보 삽화: 102쪽 그림 10(빛의 입사와 반사 및 투과), 103쪽 그림 12."
+  ]
+}

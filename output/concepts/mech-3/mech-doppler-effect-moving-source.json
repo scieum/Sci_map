@@ -1,0 +1,124 @@
+{
+  "id": "mech-doppler-effect-moving-source",
+  "concept_key": "concept:doppler-effect-moving-source",
+  "registry_status": "new",
+  "term": "음원이 움직일 때의 도플러 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 음차어 '도플러' 를 품은 표제어라 전체에 대응하는 한자어가 없다.",
+    "english": "Doppler effect for a moving source",
+    "symbol_display": "λ_A = λ - v_S T",
+    "symbol_plain": "lambdaA = lambda - vS T"
+  },
+  "definition": "음원이 움직여 파면 사이의 간격이 달라지고, 그 때문에 정지한 관측자가 다른 진동수를 재게 되는 경우.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-source-wavelength-short",
+      "text": "음원이 다가오는 쪽에서는 파면이 촘촘해져 관측자가 재는 파장이 vS T 만큼 짧아진다.",
+      "form": {
+        "condition": "음원이 일정한 속력으로 관측자에게 다가갈 때",
+        "type": "causal",
+        "scope": "관측자와 매질이 정지해 있는 경우",
+        "antecedent": {
+          "quantity": "음원의 접근",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관측되는 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "다가오는 쪽에서는 파면이 촘촘해질 수밖에 없어 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음원이 다가오는 쪽에서는 파면이 성겨져 관측자가 재는 파장이 길어진다."
+    },
+    {
+      "id": "rel-source-receding-lower",
+      "text": "음원이 멀어지는 쪽에 선 관측자는 음원이 낸 것보다 낮은 진동수의 소리를 듣는다.",
+      "form": {
+        "condition": "음원이 관측자에게서 멀어질 때",
+        "type": "conditional",
+        "scope": "정지한 관측자, 정지한 매질",
+        "antecedent": {
+          "quantity": "음원의 후퇴",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관측되는 진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀어지는 쪽에서는 진동수가 반드시 작아지므로 커진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음원이 멀어지는 쪽에 선 관측자는 음원이 낸 것보다 높은 진동수의 소리를 듣는다."
+    },
+    {
+      "id": "rel-source-speed-unchanged",
+      "text": "음원이 움직여도 소리가 매질을 지나는 속력 자체는 달라지지 않는다.",
+      "form": {
+        "condition": "매질의 상태가 일정할 때",
+        "type": "conditional",
+        "scope": "정지한 공기 속을 지나는 음파"
+      },
+      "invertible": false,
+      "invertible_reason": "변하지 않는다는 사실을 말하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "음원이 빠르게 다가오면 소리의 속력도 함께 빨라진다.",
+      "why_wrong": "음속은 매질이 정하므로 음원의 운동과 무관하다. 달라지는 것은 파장과 관측되는 진동수다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-source-speed-unchanged"
+    },
+    {
+      "text": "음원이 움직일 때에도 파장은 그대로이고 진동수만 달라진다.",
+      "why_wrong": "음원이 움직이면 파면 간격이 달라져 파장 자체가 변한다. 파장이 그대로인 쪽은 관측자만 움직이는 경우다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-source-wavelength-short"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-doppler-effect"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-effect-equation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-03"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-01",
+  "pages": [
+    110,
+    111
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 110쪽 그림 14(음원이 움직일 때 도플러 효과)."
+  ]
+}

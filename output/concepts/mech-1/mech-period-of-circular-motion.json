@@ -1,0 +1,105 @@
+{
+ "id": "mech-period-of-circular-motion",
+ "concept_key": "concept:period-of-circular-motion",
+ "registry_status": "new",
+ "homonym_flag": true,
+ "term": "원운동의 주기",
+ "aliases": [
+  "주기"
+ ],
+ "notation": {
+  "hanja": "週期",
+  "hanja_gloss": "週 돌 주 · 期 기약할 기",
+  "english": "period of circular motion",
+  "symbol_display": "T",
+  "symbol_plain": "T"
+ },
+ "definition": "원 궤도를 한 바퀴 도는 데 걸리는 시간. 원둘레를 속력으로 나누거나 한 바퀴에 해당하는 각을 각속도로 나누어 구한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-pcm-radius",
+   "text": "속력이 같다면 궤도 반지름이 클수록 한 바퀴에 걸리는 시간이 길다.",
+   "form": {
+    "condition": "속력이 일정할 때",
+    "type": "direct",
+    "scope": "원 궤도를 도는 운동",
+    "antecedent": {
+     "quantity": "궤도 반지름",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "주기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "주기가 원둘레를 속력으로 나눈 값이므로 짧아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "속력이 같을 때 궤도 반지름이 클수록 주기는 오히려 짧아진다."
+  },
+  {
+   "id": "rel-pcm-omega",
+   "text": "각속도가 클수록 한 바퀴를 도는 데 걸리는 시간이 짧다.",
+   "form": {
+    "condition": "회전이 고르게 이어질 때",
+    "type": "inverse",
+    "scope": "등속 원운동",
+    "antecedent": {
+     "quantity": "각속도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "주기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "주기와 각속도가 반비례하므로 길어진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "각속도가 클수록 한 바퀴를 도는 데 걸리는 시간이 길어진다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "주기가 긴 물체일수록 빠르게 돈다",
+   "why_wrong": "한 바퀴에 걸리는 시간이 길다는 것은 느리게 돈다는 뜻이다. 각속도는 주기에 반비례한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pcm-omega"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-uniform-circular-motion"
+  },
+  {
+   "type": "related",
+   "target": "mech-angular-velocity"
+  }
+ ],
+ "curriculum": [
+  "12역학01-03"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-03",
+ "pages": [
+  25
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "본문 표기는 '주기' 이나 homonyms.yaml 의 감시어라 표제어를 '원운동의 주기' 로 좁히고 '주기' 는 alias 로 두었다.",
+  "★G3 신규 등록 대상 — concept_key 를 concept:oscillation-period 에서 concept:period-of-circular-motion 으로 갈랐다. mech-3 「단진동의 주기」가 같은 키를 쓰고 있었는데, homonyms.yaml 이 그 키의 뜻을 '진동·파동이 한 번 되풀이되는 데 걸리는 시간' 으로 적어 두었고 원운동은 진동도 파동도 아니다. 링크는 concept_key 일치만 근거로 걸리므로(CLAUDE.md §9-5) 한 키에 두 카드가 서면 G2·D1 이 둘을 구별하지 못한다. 주기율표의 주기(concept:periodic-table-period)와도 잇지 않는다."
+ ]
+}

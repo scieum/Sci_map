@@ -1,0 +1,148 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  70,
+  71
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-internal-energy",
+ "concept_key": "concept:internal-energy",
+ "registry_status": "reused",
+ "term": "내부 에너지",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'에너지'가 영어 energy 의 음차어라 표제어 전체를 한자어로 적을 수 없다.",
+  "english": "internal energy",
+  "symbol_display": "U, ΔU",
+  "symbol_plain": "U, deltaU"
+ },
+ "definition": "기체 분자들이 무작위 운동으로 가진 운동 에너지를 모두 더한 양. 눈에 보이는 물체 전체의 운동과는 상관없이, 온도가 그 크기를 알려 주는 잣대가 된다.",
+ "relations": [
+  {
+   "id": "rel-ie-temp",
+   "text": "기체의 온도가 오르면 내부 에너지가 늘어난 것으로 읽는다",
+   "form": {
+    "condition": "기체의 양이 정해져 있을 때",
+    "type": "direct",
+    "scope": "이상 기체로 다루는 일정량의 기체",
+    "antecedent": {
+     "quantity": "절대 온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "내부 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "온도를 내부 에너지의 척도로 삼았으므로 온도가 오를 때 내부 에너지가 준다는 말은 척도의 뜻과 어긋난다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "기체의 온도가 오르면 내부 에너지는 줄어든 것으로 읽는다"
+  },
+  {
+   "id": "rel-ie-two-ways",
+   "text": "기체의 내부 에너지는 열을 가해서도 늘릴 수 있고 기체에 일을 해 주어서도 늘릴 수 있다",
+   "form": {
+    "condition": "기체에 에너지를 건넬 방법을 따질 때",
+    "type": "classification",
+    "scope": "열과 일이 드나드는 기체",
+    "antecedent": {
+     "quantity": "열·일",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "내부 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 가지 길을 나란히 든 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ie-random",
+   "text": "내부 에너지는 분자들의 무작위 운동만 헤아린 양이어서 용기 전체가 움직인다고 커지지 않는다",
+   "form": {
+    "condition": "물체 전체의 운동과 분자의 열운동을 가를 때",
+    "type": "classification",
+    "scope": "일정량의 기체가 든 용기",
+    "antecedent": {
+     "quantity": "용기 전체의 운동",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "내부 에너지",
+     "direction": "일정"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "무엇을 헤아린 양인지 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기체가 든 통을 빠르게 던지면 통 속 기체의 내부 에너지가 커진다",
+   "why_wrong": "내부 에너지는 분자의 무작위 운동만 더한 값이다. 통 전체가 한 방향으로 움직이는 운동 에너지는 여기에 들어가지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ie-random"
+  },
+  {
+   "text": "내부 에너지를 늘리려면 반드시 열을 가해야 한다",
+   "why_wrong": "기체를 압축해 일을 해 주어도 내부 에너지는 늘어난다. 단열 압축에서 온도가 오르는 것이 그 예다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ie-two-ways"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermal-motion",
+   "note": "무엇을 더한 양인지 알려면 먼저 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "열·일과 함께 묶이는 자리로 나아간다"
+  },
+  {
+   "type": "related",
+   "target": "mech-work-done-by-gas",
+   "note": "기체가 일을 하면 이 양이 달라진다"
+  },
+  {
+   "type": "same",
+   "target": "phys-internal-energy",
+   "note": "concept_key 가 같다"
+  },
+  {
+   "type": "same",
+   "target": "mate-internal-energy",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "notes": [
+  "C6 uncertain(고치지 않음) — 정의('온도가 그 크기를 알려 주는 잣대가 된다')와 rel-ie-temp 가 같은 구조로 겹친다. mech-thermal-motion rel-thm-temp 와 같은 꼴이라 세 카드에 걸친 '척도·잣대' 되풀이를 한꺼번에 볼지 C8 에서 정해 주기 바란다."
+ ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "mech-doppler-effect",
+  "concept_key": "concept:doppler-effect",
+  "registry_status": "new",
+  "term": "도플러 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "오스트리아 물리학자 도플러의 이름을 딴 음차어라 표제어에 대응하는 한자어가 없다. '효과(效果)' 만 한자어다.",
+    "english": "Doppler effect"
+  },
+  "definition": "음원이나 관측자가 움직여서, 관측자가 재는 소리의 진동수가 음원이 낸 진동수와 달라지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-doppler-approach",
+      "text": "음원과 관측자 사이의 거리가 줄어드는 동안 관측자가 재는 진동수는 음원이 낸 진동수보다 크다.",
+      "form": {
+        "condition": "둘 사이의 거리가 줄어드는 동안",
+        "type": "conditional",
+        "scope": "음속보다 느리게 움직이는 음원과 관측자, 정지한 매질",
+        "antecedent": {
+          "quantity": "음원과 관측자의 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "관측되는 진동수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리가 줄어드는 동안에는 재는 진동수가 반드시 커지므로 작아진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리가 줄어드는 동안 관측자가 재는 진동수는 음원이 낸 진동수보다 작다."
+    },
+    {
+      "id": "rel-doppler-relative-motion",
+      "text": "소리의 높낮이가 달라져 들리는 까닭은 음원과 관측자 사이에 상대 운동이 있기 때문이다.",
+      "form": {
+        "condition": "매질이 정지해 있을 때",
+        "type": "causal",
+        "scope": "음파의 도플러 효과"
+      },
+      "invertible": false,
+      "invertible_reason": "까닭을 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-doppler-em-too",
+      "text": "도플러 효과는 음파뿐 아니라 전자기파에서도 나타난다.",
+      "form": {
+        "condition": "파동을 내는 물체가 관측자에 대해 움직일 때",
+        "type": "classification",
+        "scope": "파동 일반",
+        "antecedent": {
+          "quantity": "파동의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "도플러 효과의 발생",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 넓히는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "구급차가 지나갈 때 사이렌 소리의 높이가 달라지는 것은 운전자가 사이렌 음을 바꾸기 때문이다.",
+      "why_wrong": "음원이 내는 진동수는 그대로이고, 음원과 관측자의 상대 운동 때문에 관측자가 재는 진동수만 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-doppler-relative-motion"
+    },
+    {
+      "text": "도플러 효과가 나타나면 음원이 내는 진동수 자체가 달라진다.",
+      "why_wrong": "달라지는 것은 관측자가 측정하는 진동수이지 음원이 내는 진동수가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-doppler-relative-motion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-wave-speed"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-wavelength-and-frequency"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-effect-moving-source"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-effect-moving-observer"
+    },
+    {
+      "type": "next",
+      "target": "mech-redshift-and-blueshift"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-03"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-01",
+  "pages": [
+    110
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

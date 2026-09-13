@@ -1,0 +1,115 @@
+{
+ "id": "mech-gravity",
+ "concept_key": "concept:gravity",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "중력",
+ "aliases": [
+  "만유인력"
+ ],
+ "notation": {
+  "hanja": "重力",
+  "hanja_gloss": "重 무거울 중 · 力 힘 력",
+  "english": "gravity"
+ },
+ "definition": "질량을 가진 두 물체가 서로를 끌어당기는 힘. 지구가 사과를 당기는 힘과 달을 붙잡아 두는 힘이 같은 종류다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-grv-unify",
+   "text": "사과가 떨어지는 일과 달이 지구를 도는 일은 한 가지 힘으로 함께 설명된다.",
+   "form": {
+    "condition": "두 현상의 원인을 같다고 볼 때",
+    "type": "causal",
+    "scope": "질량을 가진 물체 사이의 상호작용"
+   },
+   "invertible": false,
+   "invertible_reason": "두 현상을 하나로 묶었다는 서술이라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-grv-mass",
+   "text": "같은 천체로부터 같은 거리에 놓인 서로 다른 물체를 견주면 질량이 큰 쪽이 더 큰 중력을 받는다.",
+   "form": {
+    "condition": "견주는 두 물체가 같은 천체를 상대로 하고 그 중심에서 잰 거리도 같을 때",
+    "type": "direct",
+    "scope": "서로 다른 물체가 받는 중력의 크기를 견주는 경우 — 한 쌍이 주고받는 작용과 반작용을 견주는 것이 아니다",
+    "antecedent": {
+     "quantity": "물체의 질량",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "중력의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "같은 천체·같은 거리로 비교틀을 못박으면 중력의 크기가 물체의 질량에 비례하므로, 큰 쪽이 더 작게 받는다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 천체로부터 같은 거리에 있을 때 질량이 큰 물체일수록 받는 중력이 작다."
+  },
+  {
+   "id": "rel-grv-cause",
+   "text": "케플러는 행성이 도는 모습을 정리했을 뿐 그 원인을 밝히지 못했고, 그 빈자리를 중력이 메웠다.",
+   "form": {
+    "condition": "행성 운동의 원인을 물을 때",
+    "type": "causal",
+    "scope": "근대 천문학이 전개되는 과정"
+   },
+   "invertible": false,
+   "invertible_reason": "과학사적 순서를 밝힌 서술이라 뒤집을 자리가 없다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "중력은 지구처럼 큰 천체만 만들어 내는 힘이다",
+   "why_wrong": "질량이 있는 물체라면 무엇이든 서로 당긴다. 다만 질량이 작으면 그 힘이 너무 작아 느껴지지 않을 뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-grv-unify"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-law-of-universal-gravitation"
+  },
+  {
+   "type": "next",
+   "target": "mech-equivalence-principle"
+  },
+  {
+   "type": "same",
+   "target": "isci1-gravity"
+  }
+ ],
+ "curriculum": [
+  "12역학01-04"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-01",
+ "pages": [
+  35
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "「통합과학1」 isci1-gravity 와 concept_key 가 같아 same 을 걸었다 (R9). 사전 미등록 키라 G3 에서 함께 등록 여부를 본다.",
+  "12역학01-04 의 crosscheck 가 '교사 확정' 이다.",
+  "C6 수정 — rel-grv-mass 의 scope 가 '질량을 가진 두 물체 사이' 로 열려 있어 '서로 당기는 두 물체 중 무거운 쪽이 더 큰 중력을 받는다' 로 읽히고, mech-rocket-propulsion 의 rel-rp-reaction(작용 반작용)과 부딪혔다. 비교틀(같은 천체·같은 거리의 서로 다른 물체)을 문면과 condition·scope 에 못박았다.",
+  "C6 수정 — 오개념 '중력은 큰 천체만 만들어 내는 힘이다' 의 반대편은 질량 비례가 아니라 '질량이 있으면 무엇이든 서로 당긴다' 쪽이라, linked_relation 을 rel-grv-mass 에서 rel-grv-unify 로 옮겼다."
+ ]
+}

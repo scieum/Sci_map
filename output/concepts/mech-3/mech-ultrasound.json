@@ -1,0 +1,126 @@
+{
+  "id": "mech-ultrasound",
+  "concept_key": "concept:ultrasound",
+  "registry_status": "new",
+  "term": "초음파",
+  "notation": {
+    "hanja": "超音波",
+    "hanja_gloss": "超 뛰어넘을 초 · 音 소리 음 · 波 물결 파",
+    "english": "ultrasound"
+  },
+  "definition": "사람이 들을 수 있는 범위보다 진동수가 큰 음파. 기본 성질은 소리와 같은 탄성파다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ultrasound-inaudible",
+      "text": "진동수가 20 kHz 를 넘어서면 사람의 귀로는 들리지 않지만, 박쥐와 돌고래는 그 소리를 내고 들어 먹이를 찾는다.",
+      "form": {
+        "condition": "사람의 청각과 박쥐·돌고래의 청각을 견줄 때",
+        "type": "conditional",
+        "scope": "20 kHz 를 넘는 음파(104쪽 곁주·본문)",
+        "antecedent": {
+          "quantity": "음파의 진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "사람이 듣는지 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 '20 kHz 를 넘어도 사람이 들을 수 있다' 인데, 104쪽 곁주가 그 대역을 사람이 들을 수 없는 범위로 못 박으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 20 kHz 를 넘어서는 음파도 사람의 귀로 들을 수 있다."
+    },
+    {
+      "id": "rel-ultrasound-distance",
+      "text": "초음파를 보낸 시각과 되돌아온 시각의 차가 클수록 반사시킨 목표물이 멀리 있다.",
+      "form": {
+        "condition": "음속이 일정한 매질에서 잴 때",
+        "type": "direct",
+        "scope": "초음파 반사를 이용한 거리 탐지",
+        "antecedent": {
+          "quantity": "시간 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "목표물까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리는 시간 차에 비례하므로 반대 방향 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "초음파를 보낸 시각과 되돌아온 시각의 차가 클수록 목표물이 가까이 있다."
+    },
+    {
+      "id": "rel-ultrasound-nondestructive",
+      "text": "속의 층마다 초음파가 되돌아오는 성질을 쓰면 물체를 자르지 않고도 내부를 살필 수 있다.",
+      "form": {
+        "condition": "내부에 성질이 다른 층이 있을 때",
+        "type": "causal",
+        "scope": "비파괴 검사·초음파 영상"
+      },
+      "invertible": false,
+      "invertible_reason": "활용의 까닭을 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "초음파는 소리가 아니라 전자기파의 한 종류다.",
+      "why_wrong": "초음파는 진동수가 큰 음파이고 탄성파다. 전자기파와 달리 매질이 있어야 전달된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ultrasound-inaudible"
+    },
+    {
+      "text": "사람이 못 듣는 소리는 모두 초음파다.",
+      "why_wrong": "가청 범위 아래쪽의 낮은 진동수도 들리지 않는다. 초음파는 가청 범위 위쪽을 가리킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ultrasound-inaudible"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-transmission-and-reflection-of-wave"
+    },
+    {
+      "type": "related",
+      "target": "mech-sound-wave",
+      "note": "기본 성질은 음파와 같고 진동수만 크다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    104,
+    105
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "20 kHz 는 104쪽 곁주의 값이다. 교과서에 없는 수치는 쓰지 않았다.",
+    "C7 후보 삽화: 104쪽 그림 13(탄성파의 활용 예).",
+    "C6 수정: rel-ultrasound-inaudible 이 정의의 되풀이였고 invertible 사유도 역 명제를 겨냥하고 있었다. 104쪽 본문의 박쥐·돌고래를 끌어들여 정의 밖 정보를 담게 고치고, invertible 을 뒤집은 문장 기준으로 다시 재어 true 로 올렸다.",
+    "C8 확인 요청(C6 uncertain): 오개념 '초음파는 전자기파다' 를 실제로 받치는 것은 명제가 아니라 카드 definition('탄성파') 이다. 명제를 따로 세울지는 판단이 갈려 그대로 두었다."
+  ]
+}

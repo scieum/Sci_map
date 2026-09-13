@@ -1,0 +1,126 @@
+{
+ "id": "mech-black-hole",
+ "concept_key": "concept:black-hole",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "블랙홀",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "black hole 을 소리대로 옮긴 말이라 대응하는 한자어가 없다.",
+  "english": "black hole"
+ },
+ "definition": "중력이 너무 커서 빛조차 빠져나오지 못하는 천체. 질량이 좁은 곳에 몰려 있어 탈출 속도가 빛의 속력을 넘어선다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-bh-escape",
+   "text": "탈출 속도가 빛의 속력보다 커지면 빛도 그 천체를 벗어나지 못한다.",
+   "form": {
+    "condition": "천체 표면에서 잰 탈출 속도를 볼 때",
+    "type": "conditional",
+    "scope": "질량이 크고 크기가 작은 천체"
+   },
+   "invertible": false,
+   "invertible_reason": "성립 조건을 밝힌 명제로 뒤집어 읽어도 참이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-bh-size",
+   "text": "질량이 같아도 크기가 작아질수록 표면에서의 탈출 속도가 커진다.",
+   "form": {
+    "condition": "천체의 질량이 일정할 때",
+    "type": "inverse",
+    "scope": "구형으로 볼 수 있는 천체",
+    "antecedent": {
+     "quantity": "천체의 반지름",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "탈출 속도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "탈출 속도가 반지름의 제곱근에 반비례하므로 작아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "질량이 같을 때 천체의 크기가 작아질수록 탈출 속도도 작아진다."
+  },
+  {
+   "id": "rel-bh-time",
+   "text": "블랙홀 둘레의 시공간은 극단적으로 휘어져 시간이 거의 멈춘 듯 흐른다.",
+   "form": {
+    "condition": "멀리 떨어진 관찰자가 볼 때",
+    "type": "causal",
+    "scope": "질량이 매우 큰 천체의 둘레"
+   },
+   "invertible": false,
+   "invertible_reason": "관찰되는 모습을 밝힌 서술이라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-bh-distance",
+   "text": "충분히 멀리 떨어진 곳에서 받는 중력은 같은 질량의 보통 천체가 미치는 중력과 다르지 않다.",
+   "form": {
+    "condition": "블랙홀과 견주는 천체의 질량이 같을 때",
+    "type": "conditional",
+    "scope": "사건의 지평선에서 멀리 떨어진 영역"
+   },
+   "invertible": true,
+   "invertible_reason": "중력의 크기는 질량과 거리로 정해지므로, 질량이 같고 거리도 같은데 블랙홀 쪽이 더 세게 당긴다고 하면 반드시 거짓이다.",
+   "inverted_text": "블랙홀은 질량이 같은 보통 천체보다 훨씬 먼 곳의 물체까지 남김없이 끌어들인다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "블랙홀은 둘레의 모든 것을 무엇이든 빨아들이는 구멍이다",
+   "why_wrong": "충분히 떨어진 곳에서는 같은 질량의 보통 천체와 다르지 않은 중력을 받는다. 아주 가까이 다가갔을 때에만 벗어나기 어려워진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-bh-distance"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-spacetime-curvature"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-escape-velocity"
+  },
+  {
+   "type": "related",
+   "target": "mech-gravitational-time-dilation"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  47
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 수정 — 오개념 '무엇이든 빨아들이는 구멍' 의 반박은 거리에 따른 중력 이야기인데 가리키던 rel-bh-size 는 질량·크기와 탈출 속도 이야기였다. rel-bh-distance 를 세우고 오개념을 그리로 옮겼다."
+ ]
+}

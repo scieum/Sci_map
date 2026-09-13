@@ -1,0 +1,858 @@
+{
+  "unit_id": "mech-2",
+  "subject": "역학과 에너지",
+  "unit_title": "Ⅱ. 열과 에너지",
+  "generated_at": "2026-09-14",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/mech-2/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "mech-heat-transfer",
+      "term": "열전달",
+      "term_en": "heat transfer",
+      "concept_key": "concept:heat-transfer",
+      "registry_status": "new",
+      "same_candidate": ["phys-heat-transfer"],
+      "pages": [58, 59, 60],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "core",
+      "evidence": [
+        { "page": 58, "block_id": "p58-b10", "hint": "온도 차와 입자 열운동에 의한 에너지 이동" },
+        { "page": 58, "block_id": "p58-b17", "hint": "전도·대류·복사 세 형태 그림 설명" }
+      ],
+      "relation_seeds": [
+        "온도 차이와 에너지 이동 방향",
+        "열전달 방식 세 가지의 구분 기준"
+      ],
+      "note": "phys-1 카드와 같은 키를 쓴다. 키는 아직 사전에 없어 new 로 둔다."
+    },
+    {
+      "id": "mech-heat-conduction",
+      "term": "전도",
+      "aliases": ["열의 전도"],
+      "term_en": "thermal conduction",
+      "concept_key": "concept:heat-conduction",
+      "registry_status": "new",
+      "pages": [59],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 59, "block_id": "p59-b2", "hint": "입자 이동 없이 이웃 입자로 열 전달" },
+        { "page": 59, "block_id": "p59-b12", "hint": "이동 열량과 단면적·온도차·길이 관계" }
+      ],
+      "relation_seeds": [
+        "단면적·온도 차·시간과 이동 열량",
+        "원통 길이와 이동 열량",
+        "열전도도 크기와 열 전달 정도"
+      ]
+    },
+    {
+      "id": "mech-heat-convection",
+      "term": "대류",
+      "term_en": "convection",
+      "concept_key": "concept:heat-convection",
+      "registry_status": "new",
+      "pages": [59],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 59, "block_id": "p59-b20", "hint": "가열된 유체의 밀도 변화와 흐름" },
+        { "page": 59, "block_id": "p59-b28", "hint": "대류를 고려한 생활 속 배치" }
+      ],
+      "relation_seeds": [
+        "유체 온도와 밀도, 상승·하강 방향",
+        "냉난방 기기 설치 위치와 대류"
+      ]
+    },
+    {
+      "id": "mech-thermal-radiation",
+      "term": "복사",
+      "term_en": "thermal radiation",
+      "concept_key": "concept:thermal-radiation",
+      "registry_status": "new",
+      "pages": [60],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 60, "block_id": "p60-b4", "hint": "전자기파 형태의 에너지 방출" },
+        { "page": 74, "block_id": "p74-b62", "hint": "중단원 정리의 복사 항목" }
+      ],
+      "relation_seeds": [
+        "표면 온도와 복사 에너지",
+        "매질 없이 일어나는 열전달"
+      ]
+    },
+    {
+      "id": "mech-thermal-motion",
+      "term": "열운동",
+      "term_en": "thermal motion",
+      "concept_key": "concept:thermal-motion",
+      "registry_status": "new",
+      "pages": [58, 67, 70],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 58, "block_id": "p58-b10", "hint": "입자의 무작위 운동과 온도의 관계" },
+        { "page": 67, "block_id": "p67-b5", "hint": "온도는 열운동의 척도" },
+        { "page": 70, "block_id": "p70-b3", "hint": "무작위 운동 에너지의 총합" }
+      ],
+      "relation_seeds": [
+        "온도와 열운동의 활발함",
+        "열운동과 기체 분자의 벽 충돌"
+      ]
+    },
+    {
+      "id": "mech-thermal-insulation",
+      "term": "단열",
+      "aliases": ["단열재"],
+      "term_en": "thermal insulation",
+      "concept_key": "concept:thermal-insulation",
+      "registry_status": "new",
+      "pages": [59, 62],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "core",
+      "evidence": [
+        { "page": 59, "block_id": "p59-b18", "hint": "열전도도가 작은 물질과 단열재" },
+        { "page": 62, "block_id": "p62-b27", "hint": "건축의 단열 기술 적용" }
+      ],
+      "relation_seeds": [
+        "열전도도와 단열 성능",
+        "건축 냉난방 에너지와 단열"
+      ]
+    },
+    {
+      "id": "mech-thermal-expansion",
+      "term": "열팽창",
+      "term_en": "thermal expansion",
+      "concept_key": "concept:thermal-expansion",
+      "registry_status": "new",
+      "pages": [61],
+      "topic_id": "mech-2-1-01",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-01"],
+      "role": "core",
+      "evidence": [
+        { "page": 61, "block_id": "p61-b5", "hint": "온도 상승과 길이·부피 팽창" },
+        { "page": 61, "block_id": "p61-b14", "hint": "선팽창 계수와 물질별 차이" }
+      ],
+      "relation_seeds": [
+        "온도 변화량과 늘어난 길이",
+        "선팽창 계수와 팽창 정도",
+        "구조물 이음새와 열팽창 대비"
+      ],
+      "note": "선팽창 계수는 이 카드 안에서 다룬다."
+    },
+    {
+      "id": "mech-specific-heat",
+      "term": "비열",
+      "term_en": "specific heat",
+      "concept_key": "concept:specific-heat",
+      "registry_status": "reused",
+      "same_candidate": ["mate-specific-heat"],
+      "pages": [63, 64],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 63, "block_id": "p63-b9", "hint": "1 kg을 1도 올리는 데 필요한 열량" },
+        { "page": 63, "block_id": "p63-b10", "hint": "열량·질량·온도 변화 관계식" }
+      ],
+      "relation_seeds": [
+        "비열과 같은 열량에서의 온도 변화",
+        "물의 큰 비열과 해안 지역 기온"
+      ]
+    },
+    {
+      "id": "mech-heat-capacity",
+      "term": "열용량",
+      "term_en": "heat capacity",
+      "concept_key": "concept:heat-capacity",
+      "registry_status": "reused",
+      "same_candidate": ["mate-heat-capacity"],
+      "pages": [63, 74],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 63, "block_id": "p63-b10", "hint": "온도를 1도 변하게 하는 데 필요한 열량" },
+        { "page": 74, "block_id": "p74-b67", "hint": "중단원 정리의 열용량 항목" }
+      ],
+      "relation_seeds": [
+        "질량과 비열의 곱으로서의 열용량",
+        "열용량과 온도 변화의 크기"
+      ]
+    },
+    {
+      "id": "mech-change-of-state",
+      "term": "상태 변화",
+      "term_en": "change of state",
+      "concept_key": "concept:change-of-state",
+      "registry_status": "new",
+      "pages": [64],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "core",
+      "evidence": [
+        { "page": 64, "block_id": "p64-b3", "hint": "성질은 그대로이고 상태만 변하는 변화" },
+        { "page": 64, "block_id": "p64-b6", "hint": "상태 변화 중 온도가 변하지 않는 까닭" }
+      ],
+      "relation_seeds": [
+        "상태 변화 구간과 온도 일정",
+        "가해 준 열과 입자 사이 인력"
+      ]
+    },
+    {
+      "id": "mech-latent-heat",
+      "term": "잠열",
+      "term_en": "latent heat",
+      "concept_key": "concept:latent-heat",
+      "registry_status": "new",
+      "same_candidate": ["phys-latent-heat"],
+      "pages": [64, 65],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 64, "block_id": "p64-b22", "hint": "상태가 변하는 동안 출입한 에너지" },
+        { "page": 65, "block_id": "p65-b7", "hint": "융해열과 기화열의 크기 비교" }
+      ],
+      "relation_seeds": [
+        "잠열과 물질 고유 특성",
+        "융해열보다 큰 기화열",
+        "잠열과 일정 온도 유지"
+      ],
+      "note": "융해열·기화열은 이 카드 안에서 다룬다."
+    },
+    {
+      "id": "mech-pressure-volume-relation",
+      "term": "기체의 압력과 부피 관계",
+      "aliases": ["보일 법칙"],
+      "term_en": "Boyle's law",
+      "concept_key": "concept:boyle-law",
+      "registry_status": "reused",
+      "same_candidate": ["mate-boyle-law"],
+      "pages": [67],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "core",
+      "evidence": [
+        { "page": 67, "block_id": "p67-b2", "hint": "부피 감소와 벽 충돌 증가" },
+        { "page": 67, "block_id": "p67-b3", "hint": "압력과 부피의 곱이 일정" }
+      ],
+      "relation_seeds": [
+        "온도 일정 시 압력과 부피",
+        "분자 충돌 빈도와 압력"
+      ],
+      "note": "교과서는 표제를 '압력과 부피의 관계'로 쓰고 보일은 곁주에서만 언급한다. 키는 mate-1 카드와 같게 두었다."
+    },
+    {
+      "id": "mech-pressure-temperature-relation",
+      "term": "기체의 압력과 절대 온도 관계",
+      "aliases": ["게이뤼삭 법칙"],
+      "term_en": "Gay-Lussac's law",
+      "concept_key": "concept:gay-lussac-law",
+      "registry_status": "new",
+      "pages": [67],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 67, "block_id": "p67-b5", "hint": "온도 상승과 분자 속력·충돌" },
+        { "page": 67, "block_id": "p67-b7", "hint": "압력을 절대 온도로 나눈 값이 일정" }
+      ],
+      "relation_seeds": [
+        "부피 일정 시 압력과 절대 온도",
+        "열운동 속력과 벽 충돌"
+      ],
+      "note": "교과서는 법칙 이름을 붙이지 않는다. 표제어를 교과서 표기로 두고 통용 명칭을 alias 로 남겼다."
+    },
+    {
+      "id": "mech-temperature-volume-relation",
+      "term": "기체의 절대 온도와 부피 관계",
+      "aliases": ["샤를 법칙"],
+      "term_en": "Charles's law",
+      "concept_key": "concept:charles-law",
+      "registry_status": "reused",
+      "same_candidate": ["mate-charles-law"],
+      "pages": [67],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "core",
+      "evidence": [
+        { "page": 67, "block_id": "p67-b15", "hint": "압력 일정 시 절대 온도와 부피" },
+        { "page": 67, "block_id": "p67-b21", "hint": "낮은 온도로 연장한 그래프와 절대 영도" }
+      ],
+      "relation_seeds": [
+        "압력 일정 시 부피와 절대 온도",
+        "그래프 연장과 절대 영도"
+      ],
+      "note": "절대 영도는 이 카드 안에서 다룬다."
+    },
+    {
+      "id": "mech-ideal-gas",
+      "term": "이상 기체",
+      "term_en": "ideal gas",
+      "concept_key": "concept:ideal-gas",
+      "registry_status": "reused",
+      "same_candidate": ["mate-ideal-gas"],
+      "pages": [68, 71],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 68, "block_id": "p68-b2", "hint": "점 입자 집단으로 보는 기체 모형" },
+        { "page": 71, "block_id": "p71-b48", "hint": "실린더 속 이상 기체를 계로 다룸" }
+      ],
+      "relation_seeds": [
+        "분자 자체 부피 무시와 모형의 한계",
+        "밀도·온도 조건과 모형 적용 범위"
+      ]
+    },
+    {
+      "id": "mech-ideal-gas-law",
+      "term": "이상 기체 법칙",
+      "aliases": ["이상 기체 상태 방정식"],
+      "term_en": "ideal gas law",
+      "concept_key": "concept:ideal-gas-law",
+      "registry_status": "reused",
+      "same_candidate": ["mate-ideal-gas-law"],
+      "pages": [68, 74],
+      "topic_id": "mech-2-1-02",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-02"],
+      "role": "core",
+      "evidence": [
+        { "page": 68, "block_id": "p68-b14", "hint": "분자 수와 볼츠만 상수를 쓴 관계식" },
+        { "page": 74, "block_id": "p74-b71", "hint": "중단원 정리의 이상 기체 법칙" }
+      ],
+      "relation_seeds": [
+        "압력·부피·온도 세 관계의 결합",
+        "기체 분자 수와 부피",
+        "관계식이 성립하지 않는 조건"
+      ],
+      "note": "표제어는 교과서 표기('이상 기체 법칙')를 따르고, 키는 mate-1 의 '이상 기체 방정식' 카드와 같게 두었다."
+    },
+    {
+      "id": "mech-work",
+      "term": "일",
+      "term_en": "work",
+      "concept_key": "concept:work-physics",
+      "registry_status": "new",
+      "same_candidate": ["phys-work"],
+      "homonym_flag": true,
+      "pages": [58, 69, 70],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 58, "block_id": "p58-b7", "hint": "열과 일은 에너지 이동 방식" },
+        { "page": 69, "block_id": "p69-b8", "hint": "일·운동 에너지 정리와 에너지" },
+        { "page": 70, "block_id": "p70-b40", "hint": "열과 일의 이동 방식 차이" }
+      ],
+      "relation_seeds": [
+        "역학적 상호작용과 에너지 이동",
+        "열과 일의 구분 기준"
+      ],
+      "note": "homonyms.yaml 의 '일' 에 걸린다. 링크는 사람 게이트 전까지 걸지 않는다."
+    },
+    {
+      "id": "mech-internal-energy",
+      "term": "내부 에너지",
+      "term_en": "internal energy",
+      "concept_key": "concept:internal-energy",
+      "registry_status": "reused",
+      "same_candidate": ["phys-internal-energy", "mate-internal-energy"],
+      "pages": [70, 71],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "core",
+      "evidence": [
+        { "page": 70, "block_id": "p70-b3", "hint": "무작위 운동 운동 에너지의 총합" },
+        { "page": 71, "block_id": "p71-b3", "hint": "온도는 내부 에너지의 척도" }
+      ],
+      "relation_seeds": [
+        "기체 온도와 내부 에너지",
+        "일을 받은 기체와 내부 에너지 증가"
+      ]
+    },
+    {
+      "id": "mech-work-done-by-gas",
+      "term": "기체가 한 일",
+      "aliases": ["기체가 하는 일"],
+      "term_en": "work done by gas",
+      "concept_key": "concept:work-done-by-gas",
+      "registry_status": "new",
+      "same_candidate": ["phys-work-done-by-gas"],
+      "pages": [70],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "core",
+      "evidence": [
+        { "page": 70, "block_id": "p70-b15", "hint": "일정 압력에서 팽창할 때의 일" },
+        { "page": 70, "block_id": "p70-b19", "hint": "압력과 부피 변화량의 곱" },
+        { "page": 70, "block_id": "p70-b37", "hint": "압력-부피 그래프 넓이와 일" }
+      ],
+      "relation_seeds": [
+        "압력과 부피 변화량, 기체가 한 일",
+        "부피 변화의 부호와 일의 부호",
+        "압력-부피 그래프 넓이와 일"
+      ]
+    },
+    {
+      "id": "mech-first-law-of-thermodynamics",
+      "term": "열역학 제1법칙",
+      "term_en": "first law of thermodynamics",
+      "concept_key": "concept:first-law-of-thermodynamics",
+      "registry_status": "new",
+      "pages": [71, 74],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "core",
+      "evidence": [
+        { "page": 71, "block_id": "p71-b3", "hint": "가한 열과 일·내부 에너지 변화" },
+        { "page": 74, "block_id": "p74-b75", "hint": "중단원 정리의 제1법칙 식" }
+      ],
+      "relation_seeds": [
+        "가한 열, 한 일, 내부 에너지 변화의 관계",
+        "열을 포함한 에너지 보존",
+        "열·일·내부 에너지의 부호 약속"
+      ]
+    },
+    {
+      "id": "mech-thermodynamic-system",
+      "term": "계",
+      "aliases": ["열역학 계"],
+      "term_en": "system",
+      "concept_key": "concept:thermodynamic-system",
+      "registry_status": "reused",
+      "same_candidate": ["mate-thermodynamic-system"],
+      "homonym_flag": true,
+      "pages": [71],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 71, "block_id": "p71-b21", "hint": "관심 대상과 주변 환경의 구분" },
+        { "page": 71, "block_id": "p71-b48", "hint": "실린더 속 기체를 계로 삼음" }
+      ],
+      "relation_seeds": [
+        "계와 주변 환경의 경계",
+        "계를 어디로 잡느냐와 열·일의 부호"
+      ],
+      "note": "homonyms.yaml 의 '계' 에 걸린다."
+    },
+    {
+      "id": "mech-isothermal-process",
+      "term": "등온 과정",
+      "term_en": "isothermal process",
+      "concept_key": "concept:isothermal-process",
+      "registry_status": "new",
+      "pages": [71],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 71, "block_id": "p71-b24", "hint": "온도가 일정하고 압력·부피가 변함" },
+        { "page": 71, "block_id": "p71-b45", "hint": "등온 팽창에서 일과 열의 부호" }
+      ],
+      "relation_seeds": [
+        "온도 일정과 내부 에너지 변화 0",
+        "등온 팽창에서 흡수한 열과 한 일"
+      ]
+    },
+    {
+      "id": "mech-adiabatic-process",
+      "term": "단열 과정",
+      "term_en": "adiabatic process",
+      "concept_key": "concept:adiabatic-process",
+      "registry_status": "new",
+      "pages": [72],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 72, "block_id": "p72-b2", "hint": "열 출입 없는 압축·팽창" },
+        { "page": 72, "block_id": "p72-b23", "hint": "단열 팽창과 온도 감소" }
+      ],
+      "relation_seeds": [
+        "열 출입 0과 일·내부 에너지",
+        "단열 팽창과 온도 하강",
+        "단열 압축과 온도 상승"
+      ]
+    },
+    {
+      "id": "mech-isobaric-process",
+      "term": "등압 과정",
+      "term_en": "isobaric process",
+      "concept_key": "concept:isobaric-process",
+      "registry_status": "new",
+      "pages": [72],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 72, "block_id": "p72-b26", "hint": "압력이 일정하고 부피가 변함" },
+        { "page": 72, "block_id": "p72-b47", "hint": "등압 팽창의 열·온도·부피" }
+      ],
+      "relation_seeds": [
+        "압력 일정과 부피·온도의 동시 변화",
+        "흡수한 열이 일과 내부 에너지로 나뉨"
+      ]
+    },
+    {
+      "id": "mech-isochoric-process",
+      "term": "등적 과정",
+      "term_en": "isochoric process",
+      "concept_key": "concept:isochoric-process",
+      "registry_status": "new",
+      "pages": [73],
+      "topic_id": "mech-2-1-03",
+      "section_id": "mech-2-1",
+      "curriculum": ["12역학02-03"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 73, "block_id": "p73-b2", "hint": "부피 일정, 압력과 온도가 변함" },
+        { "page": 73, "block_id": "p73-b21", "hint": "가한 열이 모두 내부 에너지로" }
+      ],
+      "relation_seeds": [
+        "부피 일정과 일 0",
+        "가한 열과 압력·온도 상승"
+      ]
+    },
+    {
+      "id": "mech-heat-engine",
+      "term": "열기관",
+      "term_en": "heat engine",
+      "concept_key": "concept:heat-engine",
+      "registry_status": "new",
+      "same_candidate": ["phys-heat-engine"],
+      "pages": [78],
+      "topic_id": "mech-2-2-01",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-04"],
+      "role": "core",
+      "evidence": [
+        { "page": 78, "block_id": "p78-b10", "hint": "열에너지를 역학적 일로 바꾸는 장치" },
+        { "page": 78, "block_id": "p78-b19", "hint": "고열원 흡수·일·저열원 방출" }
+      ],
+      "relation_seeds": [
+        "흡수한 열, 한 일, 방출한 열의 관계",
+        "고열원·저열원 사이의 열 흐름"
+      ],
+      "note": "고열원·저열원(열원)은 이 카드 안에서 다룬다."
+    },
+    {
+      "id": "mech-thermal-efficiency",
+      "term": "열효율",
+      "term_en": "thermal efficiency",
+      "concept_key": "concept:thermal-efficiency",
+      "registry_status": "new",
+      "same_candidate": ["phys-thermal-efficiency", "isci2-thermal-efficiency"],
+      "pages": [78, 86],
+      "topic_id": "mech-2-2-01",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-04"],
+      "role": "core",
+      "evidence": [
+        { "page": 78, "block_id": "p78-b26", "hint": "흡수한 열량에 대한 한 일의 비" },
+        { "page": 86, "block_id": "p86-b4", "hint": "중단원 정리의 열효율 정의" }
+      ],
+      "relation_seeds": [
+        "흡수·방출 열량과 열효율",
+        "방출 열량을 줄일 때의 열효율",
+        "실제 열기관의 열효율 한계"
+      ]
+    },
+    {
+      "id": "mech-thermodynamic-cycle",
+      "term": "열기관의 순환 과정",
+      "term_en": "thermodynamic cycle",
+      "concept_key": "concept:thermodynamic-cycle",
+      "registry_status": "new",
+      "pages": [78, 79, 86],
+      "topic_id": "mech-2-2-01",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-04"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 78, "block_id": "p78-b19", "hint": "한 순환 뒤 처음 상태로 되돌아옴" },
+        { "page": 86, "block_id": "p86-b35", "hint": "순환 각 과정의 부피·온도 변화표" }
+      ],
+      "relation_seeds": [
+        "한 순환과 내부 에너지 변화 0",
+        "순환 과정의 조합과 기관의 종류"
+      ],
+      "note": "스털링 엔진의 순환도 이 카드에서 예로 다룰 수 있다."
+    },
+    {
+      "id": "mech-carnot-engine",
+      "term": "카르노 기관",
+      "term_en": "Carnot engine",
+      "concept_key": "concept:carnot-engine",
+      "registry_status": "new",
+      "pages": [79, 86],
+      "topic_id": "mech-2-2-01",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-04"],
+      "role": "core",
+      "evidence": [
+        { "page": 79, "block_id": "p79-b1", "hint": "최대 효율로 작동하는 이상적 열기관" },
+        { "page": 79, "block_id": "p79-b17", "hint": "열효율 1이 불가능한 까닭" }
+      ],
+      "relation_seeds": [
+        "두 열원의 절대 온도와 최대 열효율",
+        "등온·단열 과정으로 이루어진 순환",
+        "열효율 1인 열기관의 불가능"
+      ]
+    },
+    {
+      "id": "mech-social-impact-of-heat-engine",
+      "term": "열기관의 개발과 우리 생활",
+      "term_en": "social impact of heat engines",
+      "concept_key": "concept:social-impact-of-heat-engine",
+      "registry_status": "new",
+      "pages": [80, 81],
+      "topic_id": "mech-2-2-01",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-04"],
+      "role": "context",
+      "evidence": [
+        { "page": 80, "block_id": "p80-b2", "hint": "증기 기관과 산업·생산성 변화" },
+        { "page": 81, "block_id": "p81-b18", "hint": "열기관과 발전기, 전기 대량 생산" },
+        { "page": 81, "block_id": "p81-b21", "hint": "화석 연료 사용과 기후 위기" }
+      ],
+      "relation_seeds": [
+        "열기관 보급과 산업 생산성",
+        "화석 연료 열기관과 환경 문제",
+        "열효율 개선 노력과 에너지 소비"
+      ]
+    },
+    {
+      "id": "mech-reversible-process",
+      "term": "가역 과정",
+      "term_en": "reversible process",
+      "concept_key": "concept:reversible-process",
+      "registry_status": "new",
+      "pages": [82, 83],
+      "topic_id": "mech-2-2-02",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-05"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 82, "block_id": "p82-b11", "hint": "거꾸로도 일어날 수 있는 과정" },
+        { "page": 83, "block_id": "p83-b16", "hint": "미시적 가역과 거시적 비가역" }
+      ],
+      "relation_seeds": [
+        "분자 충돌의 가역성",
+        "미시적 가역 과정과 거시적 방향성"
+      ]
+    },
+    {
+      "id": "mech-irreversible-process",
+      "term": "비가역 과정",
+      "term_en": "irreversible process",
+      "concept_key": "concept:irreversible-process",
+      "registry_status": "new",
+      "pages": [82, 83],
+      "topic_id": "mech-2-2-02",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-05"],
+      "role": "core",
+      "evidence": [
+        { "page": 82, "block_id": "p82-b19", "hint": "한 방향으로만 일어나는 자연 변화" },
+        { "page": 83, "block_id": "p83-b16", "hint": "분포 변화의 비가역성" }
+      ],
+      "relation_seeds": [
+        "열의 이동 방향과 비가역성",
+        "마찰·확산과 되돌아가지 않는 변화"
+      ],
+      "note": "chem-3 의 '비가역 반응'(concept:irreversible-reaction)과는 다른 개념으로 두었다. 화학 반응이 아니라 열역학 과정이다."
+    },
+    {
+      "id": "mech-entropy",
+      "term": "엔트로피",
+      "aliases": ["무질서도"],
+      "term_en": "entropy",
+      "concept_key": "concept:entropy",
+      "registry_status": "reused",
+      "same_candidate": ["mate-entropy"],
+      "pages": [84, 85],
+      "topic_id": "mech-2-2-02",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-05"],
+      "role": "core",
+      "evidence": [
+        { "page": 84, "block_id": "p84-b28", "hint": "거시적 현상과 미시적 배열의 비유" },
+        { "page": 84, "block_id": "p84-b31", "hint": "미시적 상태 수를 나타내는 척도" },
+        { "page": 85, "block_id": "p85-b1", "hint": "입자 수가 클수록 치우치는 분포" }
+      ],
+      "relation_seeds": [
+        "미시적 상태 수와 엔트로피",
+        "거시 상태의 확률과 엔트로피",
+        "온도 차가 큰 상태와 엔트로피"
+      ],
+      "note": "거시 상태·미시 상태는 이 카드 안에서 다룬다."
+    },
+    {
+      "id": "mech-second-law-of-thermodynamics",
+      "term": "열역학 제2법칙",
+      "term_en": "second law of thermodynamics",
+      "concept_key": "concept:second-law-of-thermodynamics",
+      "registry_status": "new",
+      "pages": [85, 86],
+      "topic_id": "mech-2-2-02",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-05"],
+      "role": "core",
+      "evidence": [
+        { "page": 85, "block_id": "p85-b30", "hint": "비가역 현상의 방향성을 설명하는 법칙" },
+        { "page": 85, "block_id": "p85-b31", "hint": "열은 고온에서 저온으로만 이동" },
+        { "page": 85, "block_id": "p85-b34", "hint": "고립계의 엔트로피는 감소하지 않음" }
+      ],
+      "relation_seeds": [
+        "열 이동의 방향과 제2법칙",
+        "고립계의 엔트로피 변화 방향",
+        "에너지 보존만으로 설명되지 않는 방향성"
+      ]
+    },
+    {
+      "id": "mech-gas-diffusion",
+      "term": "기체의 확산",
+      "term_en": "diffusion of gas",
+      "concept_key": "concept:gas-diffusion",
+      "registry_status": "reused",
+      "same_candidate": ["mate-gas-diffusion"],
+      "pages": [85, 87],
+      "topic_id": "mech-2-2-02",
+      "section_id": "mech-2-2",
+      "curriculum": ["12역학02-05"],
+      "role": "supporting",
+      "evidence": [
+        { "page": 85, "block_id": "p85-b30", "hint": "잉크 확산과 열 이동의 비가역성" },
+        { "page": 87, "block_id": "p87-b50", "hint": "칸막이를 연 뒤 고르게 퍼진 기체" }
+      ],
+      "relation_seeds": [
+        "확산과 엔트로피 증가",
+        "퍼진 상태가 되돌아가지 않는 까닭"
+      ]
+    }
+  ],
+  "hierarchy": [
+    { "from": "mech-thermal-motion", "to": "mech-heat-transfer" },
+    { "from": "mech-heat-transfer", "to": "mech-heat-conduction" },
+    { "from": "mech-heat-transfer", "to": "mech-heat-convection" },
+    { "from": "mech-heat-transfer", "to": "mech-thermal-radiation" },
+    { "from": "mech-heat-conduction", "to": "mech-thermal-insulation" },
+    { "from": "mech-thermal-motion", "to": "mech-thermal-expansion" },
+    { "from": "mech-heat-transfer", "to": "mech-specific-heat" },
+    { "from": "mech-specific-heat", "to": "mech-heat-capacity" },
+    { "from": "mech-thermal-motion", "to": "mech-change-of-state" },
+    { "from": "mech-specific-heat", "to": "mech-latent-heat", "note": "온도가 오르는 경우와 오르지 않는 경우를 견주어야 읽힌다" },
+    { "from": "mech-change-of-state", "to": "mech-latent-heat" },
+    { "from": "mech-thermal-motion", "to": "mech-pressure-volume-relation" },
+    { "from": "mech-thermal-motion", "to": "mech-pressure-temperature-relation" },
+    { "from": "mech-pressure-volume-relation", "to": "mech-ideal-gas-law" },
+    { "from": "mech-pressure-temperature-relation", "to": "mech-ideal-gas-law" },
+    { "from": "mech-temperature-volume-relation", "to": "mech-ideal-gas-law" },
+    { "from": "mech-ideal-gas", "to": "mech-ideal-gas-law" },
+    { "from": "mech-thermal-motion", "to": "mech-internal-energy" },
+    { "from": "mech-work", "to": "mech-work-done-by-gas" },
+    { "from": "mech-internal-energy", "to": "mech-first-law-of-thermodynamics" },
+    { "from": "mech-work-done-by-gas", "to": "mech-first-law-of-thermodynamics" },
+    { "from": "mech-thermodynamic-system", "to": "mech-first-law-of-thermodynamics" },
+    { "from": "mech-first-law-of-thermodynamics", "to": "mech-isothermal-process" },
+    { "from": "mech-first-law-of-thermodynamics", "to": "mech-adiabatic-process" },
+    { "from": "mech-first-law-of-thermodynamics", "to": "mech-isobaric-process" },
+    { "from": "mech-first-law-of-thermodynamics", "to": "mech-isochoric-process" },
+    { "from": "mech-pressure-volume-relation", "to": "mech-isothermal-process" },
+    { "from": "mech-first-law-of-thermodynamics", "to": "mech-heat-engine" },
+    { "from": "mech-heat-engine", "to": "mech-thermal-efficiency" },
+    { "from": "mech-heat-engine", "to": "mech-thermodynamic-cycle" },
+    { "from": "mech-thermodynamic-cycle", "to": "mech-carnot-engine" },
+    { "from": "mech-thermal-efficiency", "to": "mech-carnot-engine" },
+    { "from": "mech-isothermal-process", "to": "mech-carnot-engine" },
+    { "from": "mech-adiabatic-process", "to": "mech-carnot-engine" },
+    { "from": "mech-heat-engine", "to": "mech-social-impact-of-heat-engine" },
+    { "from": "mech-thermal-efficiency", "to": "mech-social-impact-of-heat-engine" },
+    { "from": "mech-reversible-process", "to": "mech-irreversible-process" },
+    { "from": "mech-heat-transfer", "to": "mech-irreversible-process" },
+    { "from": "mech-irreversible-process", "to": "mech-second-law-of-thermodynamics" },
+    { "from": "mech-entropy", "to": "mech-second-law-of-thermodynamics" },
+    { "from": "mech-thermal-motion", "to": "mech-entropy" },
+    { "from": "mech-entropy", "to": "mech-gas-diffusion" },
+    { "from": "mech-irreversible-process", "to": "mech-gas-diffusion" }
+  ],
+  "excluded": [
+    { "term": "열", "reason": "중복", "note": "phys-1 의 '열'(concept:heat) 카드가 이미 있다. 이 단원은 그 카드를 전제로 읽힌다", "pages": [58] },
+    { "term": "온도", "reason": "중복", "note": "phys-1 의 '온도'(concept:temperature) 카드가 있다. 이 단원에서는 열운동의 척도로만 쓰인다", "pages": [58, 67] },
+    { "term": "절대 온도", "reason": "중복", "note": "mate-absolute-temperature 카드가 있다. 기체 관계 세 카드가 그 카드를 전제로 한다", "pages": [66, 67] },
+    { "term": "절대 영도", "reason": "중복", "note": "'기체의 절대 온도와 부피 관계' 카드 안에서 다룬다", "pages": [67] },
+    { "term": "열전도도", "reason": "중복", "note": "'전도'·'단열' 카드가 함께 다룬다. 따로 세우면 둘 다 얇아진다", "pages": [59] },
+    { "term": "선팽창 계수", "reason": "중복", "note": "'열팽창' 카드 안의 비례 상수다", "pages": [61] },
+    { "term": "융해열과 기화열", "reason": "중복", "note": "'잠열' 카드 안에서 다룬다", "pages": [65] },
+    { "term": "기체의 압력", "reason": "중복", "note": "mate-gas-pressure 카드가 있다", "pages": [67] },
+    { "term": "열평형", "reason": "중복", "note": "중학교 선수 개념이고 이 단원은 '열적 평형 상태'로 한 번 언급할 뿐이다", "pages": [85] },
+    { "term": "거시 상태와 미시 상태", "reason": "중복", "note": "'엔트로피' 카드의 정의에 포함된다", "pages": [84] },
+    { "term": "열 이동의 방향성", "reason": "중복", "note": "phys-direction-of-heat-flow 카드가 있고, 이 단원에서는 '열역학 제2법칙' 카드가 받는다", "pages": [85] },
+    { "term": "고열원과 저열원", "reason": "중복", "note": "'열기관' 카드 안의 곁주 용어다", "pages": [78] },
+    { "term": "스털링 엔진", "reason": "사례", "note": "순환 과정의 예다. '열기관의 순환 과정' 카드에서 예로 쓴다", "pages": [79] },
+    { "term": "가솔린 엔진과 디젤 엔진", "reason": "사례", "pages": [73, 79] },
+    { "term": "패시브 하우스", "reason": "사례", "note": "단열 기술의 적용 사례", "pages": [62] },
+    { "term": "히트 파이프", "reason": "사례", "note": "잠열 활용 사례", "pages": [65] },
+    { "term": "상변화 물질(PCM)", "reason": "사례", "pages": [65] },
+    { "term": "푄 현상", "reason": "사례", "note": "단열 과정 적용 사례", "pages": [73] },
+    { "term": "와트의 증기 기관", "reason": "사례", "pages": [80] },
+    { "term": "열회수 환기 장치·건물의 기밀성·열교", "reason": "사례", "note": "패시브 하우스 도해의 부속 용어", "pages": [62] },
+    { "term": "카르노", "reason": "인물", "pages": [79] },
+    { "term": "보일·샤를", "reason": "인물", "note": "곁주에만 등장한다. 법칙은 기체 관계 카드가 받는다", "pages": [67] },
+    { "term": "로버트 스털링", "reason": "인물", "pages": [79] },
+    { "term": "볼츠만 상수", "reason": "단위·기호", "note": "이상 기체 법칙 카드 안의 비례 상수", "pages": [68] },
+    { "term": "켈빈(K)", "reason": "단위·기호", "pages": [66] },
+    { "term": "단열재의 종류에 따른 보온·보냉 효과 비교하기", "reason": "활동", "pages": [60] },
+    { "term": "센서를 이용하여 기체의 압력, 부피, 온도 관계 분석하기", "reason": "활동", "pages": [66] },
+    { "term": "공기 압축 점화 장치로 솜 태우기", "reason": "활동", "pages": [69] },
+    { "term": "열기관 모형을 관찰하고 원리 이해하기", "reason": "활동", "pages": [78] },
+    { "term": "공 옮기기·주사위 던지기 사고 실험", "reason": "활동", "note": "엔트로피 카드의 설명 장치로만 쓴다", "pages": [83, 84] },
+    { "term": "다양한 열에너지 관련 기술 조사하기", "reason": "활동", "pages": [62] }
+  ],
+  "notes": [
+    "성취기준 12역학02-01 은 standards.yaml 의 crosscheck 가 '일치' 가 아니라 '교사 확정' 이다(지도서 166쪽 곁주 오식을 사람이 바로잡은 건). 이 코드를 쓰지 않으면 열전달·단열·열팽창 카드가 성취기준을 못 받아 단원 절반이 태그 없이 남는다. 그래서 붙였고, 검증에서 warn 으로 뜬다. C5 진입 전에 사람이 이 상태를 확인해 주기 바란다.",
+    "phys-1 카드와 키를 같이 쓴 것이 6건이다(열전달·잠열·일·기체가 한 일·열기관·열효율). 그 키들은 아직 concept_registry.yaml 에 없어 registry_status 는 new 로 두었다. G3 에서 phys 계열 키와 한꺼번에 승인하는 편이 좋겠다.",
+    "'기체의 압력과 부피 관계'·'기체의 절대 온도와 부피 관계' 는 교과서가 법칙 이름을 본문에 쓰지 않아 표제어를 교과서 표기로 두되, 키는 mate-1 의 보일·샤를 법칙과 같게 두어 링크가 끊기지 않게 했다. 판단이 갈릴 수 있는 지점이다.",
+    "'기체의 압력과 절대 온도 관계' 는 교과서에 이름이 없어 게이뤼삭 법칙 키를 새로 지었다. 사전에 이미 다른 이름의 같은 개념이 있는지 G3 에서 확인이 필요하다.",
+    "'비가역 과정'(concept:irreversible-process)은 chem-3 의 '비가역 반응'(concept:irreversible-reaction)과 다른 키로 두었다. 표기가 비슷하나 하나는 열역학 과정, 하나는 화학 반응이다 — 사람이 한 번 봐 주면 좋겠다.",
+    "'일'·'계' 는 homonyms.yaml 의 감시 낱말이라 homonym_flag 를 붙였다. 링크는 사람 게이트 전까지 걸지 않는다."
+  ]
+}

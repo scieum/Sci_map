@@ -1,0 +1,164 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-01",
+ "pages": [
+  79,
+  86
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-carnot-engine",
+ "concept_key": "concept:carnot-engine",
+ "registry_status": "new",
+ "term": "카르노 기관",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'카르노'가 프랑스 물리학자의 이름을 옮긴 음차어라 표제어 전체를 한자어로 적을 수 없다.",
+  "english": "Carnot engine",
+  "symbol_display": "e = 1 − T₂/T₁",
+  "symbol_plain": "e = 1 - T2/T1"
+ },
+ "definition": "온도가 다른 두 열원 사이에서 낼 수 있는 가장 높은 효율로 돌아가도록 고안한 이상적인 열기관. 등온 과정 둘과 단열 과정 둘을 엮은 순환을 거친다.",
+ "relations": [
+  {
+   "id": "rel-ca-eff",
+   "text": "카르노 기관의 열효율은 두 열원의 절대 온도만으로 정해지며, 저열원 온도를 고열원 온도로 나눈 값을 1에서 뺀 값이다",
+   "form": {
+    "condition": "두 열원의 절대 온도가 정해져 있을 때",
+    "type": "conditional",
+    "scope": "이상적인 카르노 기관"
+   },
+   "invertible": false,
+   "invertible_reason": "두 온도로 값을 정하는 식이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ca-gap",
+   "text": "고열원 온도가 같다면 저열원 온도가 낮을수록 카르노 기관의 열효율이 높다",
+   "form": {
+    "condition": "고열원의 절대 온도를 고정했을 때",
+    "type": "inverse",
+    "scope": "이상적인 카르노 기관",
+    "antecedent": {
+     "quantity": "저열원의 절대 온도",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "열효율",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "저열원 온도를 고열원 온도로 나눈 값을 1에서 빼므로 둘을 같은 방향에 놓으면 식이 깨진다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "고열원 온도가 같다면 저열원 온도가 높을수록 카르노 기관의 열효율이 높다"
+  },
+  {
+   "id": "rel-ca-cycle",
+   "text": "카르노 기관의 순환은 등온 팽창, 단열 팽창, 등온 압축, 단열 압축의 네 과정으로 이루어진다",
+   "form": {
+    "condition": "카르노 기관의 순환을 볼 때",
+    "type": "classification",
+    "scope": "교과서 그림 II-26 의 순환 (79쪽)",
+    "antecedent": {
+     "quantity": "카르노 순환",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "네 과정의 조합",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "순환의 차례를 늘어놓은 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ca-max",
+   "text": "같은 두 열원 사이에서 돌아가는 어떤 열기관도 카르노 기관보다 효율이 높을 수 없다",
+   "form": {
+    "condition": "두 열원의 온도가 같은 조건에서 여러 기관을 견줄 때",
+    "type": "conditional",
+    "scope": "두 열원 사이에서 작동하는 모든 열기관",
+    "antecedent": {
+     "quantity": "열기관의 종류",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "열효율의 상한",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "카르노 기관의 효율을 이론적 최대치로 세웠으므로 그것을 넘는 기관이 있다는 말은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 두 열원 사이에서도 카르노 기관보다 효율이 높은 열기관을 만들 수 있다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "카르노 기관은 이상적인 기관이므로 열효율이 1이다",
+   "why_wrong": "카르노 기관도 저열원으로 열을 버린다. 효율이 1이 되려면 저열원이 0 K이어야 하는데 그런 열원은 없다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ca-eff"
+  },
+  {
+   "text": "두 열원의 온도 차가 같으면 열효율도 같다",
+   "why_wrong": "효율은 두 온도의 차가 아니라 비로 정해진다. 온도 차가 같더라도 두 열원의 온도가 함께 높은 쪽이면 저열원 온도를 고열원 온도로 나눈 값이 1에 가까워져 효율은 오히려 낮아진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ca-gap"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermodynamic-cycle",
+   "note": "어떤 순환인지 먼저 본다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-thermal-efficiency",
+   "note": "무엇이 최대인지 먼저 본다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-isothermal-process",
+   "note": "순환의 절반을 이룬다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-adiabatic-process",
+   "note": "순환의 나머지 절반을 이룬다"
+  },
+  {
+   "type": "related",
+   "target": "mech-second-law-of-thermodynamics",
+   "note": "효율 1이 불가능한 까닭이 여기에 있다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-04"
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "notes": [
+  "C6 결함 수정 — 오개념[1] 이 교과서에 없는 1000 K·900 K 로 효율을 계산해 보이고 있었다. 지도서 총론 21쪽 '열기관 등에서의 열 현상의 정량적인 계산은 지양' 에 맞춰 수치를 걷어내고 정성적 서술로 바꿨다. C5 의 mech-carnot-engine uncertain 도 이 대목이었다 — 교과서에 있는 400 K·300 K(87쪽)조차 카드에 들이지 않았으니 C8 에서 이 처리가 맞는지 보아 주기 바란다."
+ ]
+}

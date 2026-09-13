@@ -1,0 +1,128 @@
+{
+  "id": "mech-doppler-effect-equation",
+  "concept_key": "concept:doppler-effect-equation",
+  "registry_status": "new",
+  "term": "도플러 효과 관계식",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 음차어 '도플러' 를 품은 표제어라 전체에 대응하는 한자어가 없다. '관계식(關係式)' 만 한자어다.",
+    "english": "Doppler effect equation",
+    "symbol_display": "f_O = {(v ± v_O)/(v ∓ v_S)} f_S",
+    "symbol_plain": "fO = ((v +- vO)/(v -+ vS)) fS"
+  },
+  "definition": "음원과 관측자의 속력을 부호 규칙에 따라 넣어 관측 진동수를 구하는 식. 둘의 운동을 한꺼번에 다룬다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-doppler-sign-rule",
+      "text": "서로 가까워지는 쪽으로 움직이면 관측자 속력은 분자에 더하고 음원 속력은 분모에서 뺀다.",
+      "form": {
+        "condition": "음원과 관측자의 속도 방향을 정할 때",
+        "type": "conditional",
+        "scope": "도플러 효과 일반식의 부호 규칙"
+      },
+      "invertible": false,
+      "invertible_reason": "부호를 정하는 약속이라 방향을 맞바꾼 문장을 세울 수 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-doppler-same-velocity",
+      "text": "음원과 관측자가 같은 방향으로 같은 속력으로 달리면 관측되는 진동수는 음원의 진동수와 같다.",
+      "form": {
+        "condition": "둘의 속도가 완전히 같을 때",
+        "type": "conditional",
+        "scope": "매질이 정지한 경우",
+        "antecedent": {
+          "quantity": "상대 속도",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "관측되는 진동수",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "상대 속도가 0 이면 진동수가 변할 까닭이 없어 달라진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음원과 관측자가 같은 방향으로 같은 속력으로 달리면 관측되는 진동수가 음원의 진동수보다 커진다."
+    },
+    {
+      "id": "rel-doppler-needs-relative-velocity",
+      "text": "도플러 효과는 음원과 관측자 사이에 상대 속도가 있을 때에만 나타난다.",
+      "form": {
+        "condition": "매질이 정지해 있을 때",
+        "type": "conditional",
+        "scope": "시선 방향의 상대 운동에 한한 음파의 도플러 효과(시선에 수직인 운동은 뺀다 — 114쪽 쌍성계)",
+        "antecedent": {
+          "quantity": "도플러 효과의 발생",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "상대 속도",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 '상대 속도가 없어도 도플러 효과가 나타난다' 인데, 둘이 같은 속도로 움직이면 관측 진동수가 그대로라는 112쪽 서술과 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음원과 관측자 사이에 상대 속도가 없어도 도플러 효과는 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "음원과 나란히 같은 속력으로 달리면 소리가 더 높게 들린다.",
+      "why_wrong": "상대 속도가 0 이므로 관측되는 진동수는 음원이 낸 진동수 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-doppler-same-velocity"
+    },
+    {
+      "text": "도플러 효과에서는 음원의 속력이 클수록 소리의 속력도 커진다.",
+      "why_wrong": "식에 들어가는 v 는 매질이 정하는 소리의 속력이라 음원의 속력과 무관하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-source-speed-unchanged"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-doppler-effect-moving-source"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-doppler-effect-moving-observer"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-speed-measurement"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-03"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-01",
+  "pages": [
+    112
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 수정: rel-doppler-needs-relative-velocity 의 invertible 을 '뒤집은 문장이 반드시 거짓인가' 기준으로 다시 재어 true 로 올렸다. 예전 사유가 반박하던 역(逆) 명제('상대 속도가 있으면 늘 나타난다')의 반례인 시선 수직 운동은 form.scope 로 내렸다.",
+    "C6 수정: 오개념 '음원의 속력이 클수록 소리의 속력도 커진다' 의 linked_relation 을 부호 규칙에서 mech-doppler-effect-moving-source 의 rel-source-speed-unchanged 로 옮겼다 — 이 카드 안에는 대응 명제가 없다(선수 링크로 이어져 있다)."
+  ]
+}

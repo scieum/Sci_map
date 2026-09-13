@@ -1,0 +1,800 @@
+{
+  "unit_id": "mech-3",
+  "subject": "역학과 에너지",
+  "unit_title": "Ⅲ. 탄성파와 소리",
+  "generated_at": "2026-09-14",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/mech-3/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "mech-elastic-force",
+      "term": "탄성력",
+      "term_en": "elastic force",
+      "concept_key": "concept:elastic-force",
+      "registry_status": "new",
+      "same_candidate": ["phys-elastic-force"],
+      "pages": [96],
+      "topic_id": "mech-3-1-01",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 96, "block_id": "p96-b12", "hint": "변형된 길이 x와 탄성력"},
+        {"page": 96, "block_id": "p96-b13", "hint": "크기는 x에 비례, 방향은 반대"}
+      ],
+      "relation_seeds": [
+        "변형된 길이와 탄성력의 크기",
+        "탄성력의 방향과 변형 방향",
+        "탄성력의 방향과 운동 방향에 따른 속력 변화"
+      ],
+      "note": "키는 「물리학」 phys-elastic-force 와 같은 문자열을 썼다. 사전에 아직 등록되지 않은 키라 status 는 new 다 — 링크는 G3 승인 뒤에 건다."
+    },
+    {
+      "id": "mech-equilibrium-point-of-oscillation",
+      "term": "단진동의 평형점",
+      "term_en": "equilibrium point of oscillation",
+      "concept_key": "concept:equilibrium-point-of-oscillation",
+      "registry_status": "new",
+      "pages": [97],
+      "topic_id": "mech-3-1-01",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 97, "block_id": "p97-b2", "hint": "알짜힘 0 지점, 속력 최대"},
+        {"page": 106, "block_id": "p106-b55", "hint": "정리 — 평형점 빈칸"}
+      ],
+      "relation_seeds": [
+        "알짜힘과 평형점의 위치",
+        "평형점에서의 속력",
+        "연직 진동에서 탄성력과 중력의 평형"
+      ]
+    },
+    {
+      "id": "mech-simple-harmonic-motion",
+      "term": "단진동",
+      "term_en": "simple harmonic motion",
+      "concept_key": "concept:simple-harmonic-motion",
+      "registry_status": "new",
+      "pages": [96, 97],
+      "topic_id": "mech-3-1-01",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 97, "block_id": "p97-b1", "hint": "평형점 중심 주기적 왕복 운동"},
+        {"page": 106, "block_id": "p106-b53", "hint": "정리 — 단진동 표제"}
+      ],
+      "relation_seeds": [
+        "탄성력과 왕복 운동",
+        "단진동과 역학적 에너지 보존",
+        "연직 용수철 진자도 단진동을 한다"
+      ]
+    },
+    {
+      "id": "mech-acceleration-displacement-relation",
+      "term": "단진동에서 가속도와 변위의 관계",
+      "term_en": "relation between acceleration and displacement in SHM",
+      "concept_key": "concept:acceleration-displacement-relation-in-shm",
+      "registry_status": "new",
+      "pages": [95, 97],
+      "topic_id": "mech-3-1-01",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 97, "block_id": "p97-b6", "hint": "크기는 비례, 방향은 반대"},
+        {"page": 95, "block_id": "p95-b2", "hint": "배울 내용 미리보기 표제 명제"}
+      ],
+      "relation_seeds": [
+        "가속도의 크기와 변위의 크기",
+        "가속도의 방향과 변위의 방향",
+        "뉴턴 제2법칙과 a = -(k/m)x"
+      ],
+      "note": "성취기준 12역학03-01 의 표제 문구 그대로다."
+    },
+    {
+      "id": "mech-oscillation-period",
+      "term": "단진동의 주기",
+      "aliases": ["용수철 진자의 주기"],
+      "term_en": "period of oscillation",
+      "concept_key": "concept:oscillation-period",
+      "registry_status": "new",
+      "homonym_flag": true,
+      "pages": [98, 99],
+      "topic_id": "mech-3-1-01",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-01"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 99, "block_id": "p99-b12", "hint": "용수철 진자의 주기 T"},
+        {"page": 99, "block_id": "p99-b20", "hint": "연직 진동도 주기가 같다"},
+        {"page": 106, "block_id": "p106-b59", "hint": "정리 — 주기 빈칸"}
+      ],
+      "relation_seeds": [
+        "질량·용수철 상수와 주기",
+        "주기와 진동수의 관계",
+        "등속 원운동의 주기와 그림자의 단진동 주기"
+      ],
+      "note": "homonyms.yaml 의 '주기' 감시어. 화학의 concept:periodic-table-period 와 섞이지 않도록 표기 아닌 키로만 잇는다."
+    },
+    {
+      "id": "mech-elastic-wave",
+      "term": "탄성파",
+      "term_en": "elastic wave",
+      "concept_key": "concept:elastic-wave",
+      "registry_status": "new",
+      "pages": [100, 102],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 100, "block_id": "p100-b9", "hint": "입자 진동이 매질로 퍼지는 파동"},
+        {"page": 102, "block_id": "p102-b15", "hint": "빛과 달리 매질이 반드시 필요"}
+      ],
+      "relation_seeds": [
+        "탄성파와 매질의 필요성",
+        "탄성파와 전자기파의 차이",
+        "매질의 성질과 파동의 속력"
+      ],
+      "note": "매질은 따로 카드로 두지 않고 이 카드의 관계 명제로 흡수했다."
+    },
+    {
+      "id": "mech-transverse-and-longitudinal-wave",
+      "term": "횡파와 종파",
+      "term_en": "transverse wave and longitudinal wave",
+      "concept_key": "concept:transverse-and-longitudinal-wave",
+      "registry_status": "new",
+      "pages": [101],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 101, "block_id": "p101-b12", "hint": "진동 방향과 진행 방향의 관계"},
+        {"page": 106, "block_id": "p106-b72", "hint": "정리 — 횡파·종파 빈칸"}
+      ],
+      "relation_seeds": [
+        "진동 방향과 진행 방향이 수직인 파동",
+        "진동 방향과 진행 방향이 나란한 파동",
+        "횡파의 마루·골과 종파의 밀·소"
+      ]
+    },
+    {
+      "id": "mech-wavelength-and-frequency",
+      "term": "파장과 진동수",
+      "term_en": "wavelength and frequency",
+      "concept_key": "concept:wavelength-and-frequency",
+      "registry_status": "new",
+      "same_candidate": ["phys-wavelength-and-frequency"],
+      "pages": [99, 101],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 101, "block_id": "p101-b53", "hint": "연계 곁주 — 파장·주기 정의"},
+        {"page": 99, "block_id": "p99-b17", "hint": "진동수는 주기의 역수"}
+      ],
+      "relation_seeds": [
+        "위상이 같은 이웃 지점 사이의 거리",
+        "진동수와 주기의 역수 관계",
+        "매질이 일정할 때 진동수와 파장"
+      ],
+      "note": "「물리학」 phys-wavelength-and-frequency 와 같은 키 문자열. 사전 미등록이라 status 는 new."
+    },
+    {
+      "id": "mech-wave-speed",
+      "term": "파동의 속력",
+      "term_en": "wave speed",
+      "concept_key": "concept:wave-speed",
+      "registry_status": "new",
+      "pages": [101],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 101, "block_id": "p101-b54", "hint": "속력은 매질이 결정한다"},
+        {"page": 106, "block_id": "p106-b78", "hint": "정리 — 한 주기에 한 파장"}
+      ],
+      "relation_seeds": [
+        "한 주기 동안 한 파장을 이동한다",
+        "속력·파장·주기의 관계",
+        "줄의 단위 길이당 질량과 파동의 속력"
+      ]
+    },
+    {
+      "id": "mech-wave-phase",
+      "term": "위상",
+      "term_en": "phase",
+      "concept_key": "concept:wave-phase",
+      "registry_status": "new",
+      "pages": [102],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 102, "block_id": "p102-b14", "hint": "매질의 위치와 운동 상태"}
+      ],
+      "relation_seeds": [
+        "마루끼리는 위상이 같다",
+        "마루와 골은 위상이 반대다",
+        "반사·간섭에서 위상이 결과를 가른다"
+      ],
+      "note": "homonyms.yaml 의 감시어 '상' 과는 표기가 다르지만 concept:phase-matter(물질의 상)·concept:optical-image(광학의 상)와 섞이지 않게 키를 wave-phase 로 분리했다."
+    },
+    {
+      "id": "mech-transmission-and-reflection-of-wave",
+      "term": "탄성파의 투과와 반사",
+      "term_en": "transmission and reflection of an elastic wave",
+      "concept_key": "concept:transmission-and-reflection-of-wave",
+      "registry_status": "new",
+      "pages": [102, 103],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 102, "block_id": "p102-b2", "hint": "매질 경계에서의 반사·투과"},
+        {"page": 103, "block_id": "p103-b13", "hint": "투과파·반사파의 위상 비교"}
+      ],
+      "relation_seeds": [
+        "매질의 경계와 반사·투과",
+        "투과파의 위상은 입사파와 같다",
+        "작용·반작용으로 설명되는 반사 위상"
+      ],
+      "note": "성취기준 12역학03-02 의 표제 문구(진행·투과·반사)를 받는 카드다."
+    },
+    {
+      "id": "mech-free-end-and-fixed-end-reflection",
+      "term": "자유단 반사와 고정단 반사",
+      "term_en": "free-end reflection and fixed-end reflection",
+      "concept_key": "concept:free-end-and-fixed-end-reflection",
+      "registry_status": "new",
+      "pages": [95, 102, 103],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 102, "block_id": "p102-b13", "hint": "위상 유지 반사와 반전 반사"},
+        {"page": 103, "block_id": "p103-b24", "hint": "매질 속력 차와 위상 반전"},
+        {"page": 106, "block_id": "p106-b86", "hint": "정리 — 반사 위상 변화 빈칸"}
+      ],
+      "relation_seeds": [
+        "자유단에서 반사파와 입사파의 위상",
+        "고정단에서 반사파와 입사파의 위상",
+        "느린 매질 → 빠른 매질 반사의 위상",
+        "빠른 매질 → 느린 매질 반사의 위상"
+      ],
+      "note": "p95 배울 내용 미리보기가 이 명제를 단원 대표 명제로 내세운다. 매질 속력에 따른 위상 변화를 별도 후보로 두지 않고 여기 씨앗으로 넣었다."
+    },
+    {
+      "id": "mech-ultrasound",
+      "term": "초음파",
+      "term_en": "ultrasound",
+      "concept_key": "concept:ultrasound",
+      "registry_status": "new",
+      "pages": [104, 105],
+      "topic_id": "mech-3-1-02",
+      "section_id": "mech-3-1",
+      "curriculum": ["12역학03-02"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 104, "block_id": "p104-b2", "hint": "20 kHz 이상, 사람이 못 듣는다"},
+        {"page": 104, "block_id": "p104-b3", "hint": "반사를 이용한 목표물 탐지"}
+      ],
+      "relation_seeds": [
+        "진동수와 가청 범위",
+        "반사 시간 차와 목표물까지의 거리",
+        "초음파 반사와 비파괴 검사·초음파 영상"
+      ],
+      "note": "비파괴 검사·해저 지형 조사 등 개별 사례는 excluded 로 빼고 이 카드의 씨앗으로 남겼다."
+    },
+    {
+      "id": "mech-doppler-effect",
+      "term": "도플러 효과",
+      "term_en": "Doppler effect",
+      "concept_key": "concept:doppler-effect",
+      "registry_status": "new",
+      "pages": [110],
+      "topic_id": "mech-3-2-01",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-03"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 110, "block_id": "p110-b7", "hint": "운동 상태와 소리의 높낮이 변화"},
+        {"page": 126, "block_id": "p126-b52", "hint": "정리 — 도플러 효과 빈칸"}
+      ],
+      "relation_seeds": [
+        "음원·관측자의 운동과 측정 진동수",
+        "가까워질 때와 멀어질 때의 진동수",
+        "음파뿐 아니라 전자기파에서도 나타난다"
+      ]
+    },
+    {
+      "id": "mech-doppler-effect-moving-source",
+      "term": "음원이 움직일 때의 도플러 효과",
+      "term_en": "Doppler effect for a moving source",
+      "concept_key": "concept:doppler-effect-moving-source",
+      "registry_status": "new",
+      "pages": [110, 111],
+      "topic_id": "mech-3-2-01",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-03"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 110, "block_id": "p110-b34", "hint": "파장이 vS T 만큼 짧아진다"},
+        {"page": 111, "block_id": "p111-b1", "hint": "A·B가 측정한 파장"}
+      ],
+      "relation_seeds": [
+        "음원의 속력과 관측되는 파장",
+        "파면 간격과 측정 진동수",
+        "다가올 때·멀어질 때 진동수의 크기 비교"
+      ]
+    },
+    {
+      "id": "mech-doppler-effect-moving-observer",
+      "term": "관측자가 움직일 때의 도플러 효과",
+      "term_en": "Doppler effect for a moving observer",
+      "concept_key": "concept:doppler-effect-moving-observer",
+      "registry_status": "new",
+      "pages": [111],
+      "topic_id": "mech-3-2-01",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-03"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 111, "block_id": "p111-b34", "hint": "정지한 음원, 움직이는 관측자"},
+        {"page": 111, "block_id": "p111-b50", "hint": "파장은 그대로, 상대 속력이 변한다"}
+      ],
+      "relation_seeds": [
+        "관측자의 속력과 음파의 상대 속력",
+        "파장이 변하지 않는다는 조건",
+        "다가올 때·멀어질 때 진동수의 크기 비교"
+      ]
+    },
+    {
+      "id": "mech-doppler-effect-equation",
+      "term": "도플러 효과 관계식",
+      "term_en": "Doppler effect equation",
+      "concept_key": "concept:doppler-effect-equation",
+      "registry_status": "new",
+      "pages": [112],
+      "topic_id": "mech-3-2-01",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-03"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 112, "block_id": "p112-b7", "hint": "일반 관계식과 부호 규칙"},
+        {"page": 112, "block_id": "p112-b11", "hint": "상대 속도가 있어야 효과가 난다"},
+        {"page": 126, "block_id": "p126-b56", "hint": "정리 — 관계식"}
+      ],
+      "relation_seeds": [
+        "음원·관측자 속도의 부호 규칙",
+        "같은 방향 같은 속력이면 진동수가 그대로다",
+        "상대 속도와 도플러 효과의 발생 조건"
+      ]
+    },
+    {
+      "id": "mech-doppler-speed-measurement",
+      "term": "도플러 효과를 이용한 속력 측정",
+      "term_en": "speed measurement using the Doppler effect",
+      "concept_key": "concept:doppler-speed-measurement",
+      "registry_status": "new",
+      "pages": [114, 115],
+      "topic_id": "mech-3-2-01",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-03"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 115, "block_id": "p115-b4", "hint": "반사 전자기파의 진동수 변화"},
+        {"page": 115, "block_id": "p115-b9", "hint": "기상 도플러 레이더"}
+      ],
+      "relation_seeds": [
+        "반사파의 진동수 차와 물체의 속력",
+        "도플러 심장 초음파와 혈류 속력",
+        "전자기파도 파동이므로 도플러 효과가 난다"
+      ],
+      "note": "성취기준 12역학03-03 의 '물체의 속도 측정 등 다양한 장치' 를 받는 카드다."
+    },
+    {
+      "id": "mech-redshift-and-blueshift",
+      "term": "적색 편이와 청색 편이",
+      "term_en": "redshift and blueshift",
+      "concept_key": "concept:redshift-and-blueshift",
+      "registry_status": "new",
+      "pages": [114],
+      "topic_id": "mech-3-2-01",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-03"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 114, "block_id": "p114-b3", "hint": "은하 스펙트럼의 적색 편이"},
+        {"page": 114, "block_id": "p114-b14", "hint": "쌍성계에서의 편이 차이"}
+      ],
+      "relation_seeds": [
+        "멀어지는 광원과 진동수 감소",
+        "다가오는 광원과 진동수 증가",
+        "시선 방향 운동만 편이를 만든다"
+      ],
+      "note": "「지구과학」 쪽 개념과 이어질 자리다. 이 단원 안에서는 도플러 효과의 적용 사례로만 둔다."
+    },
+    {
+      "id": "mech-sound-wave",
+      "term": "음파",
+      "term_en": "sound wave",
+      "concept_key": "concept:sound-wave",
+      "registry_status": "new",
+      "pages": [116, 117],
+      "topic_id": "mech-3-2-02",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-04"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 117, "block_id": "p117-b37", "hint": "음파는 종파다"},
+        {"page": 116, "block_id": "p116-b11", "hint": "공기를 통해 전달되는 파동"}
+      ],
+      "relation_seeds": [
+        "음파는 종파이고 매질이 필요하다",
+        "진폭과 소리의 크기",
+        "진동수와 소리의 높낮이"
+      ]
+    },
+    {
+      "id": "mech-wave-superposition",
+      "term": "파동의 중첩",
+      "term_en": "superposition of waves",
+      "concept_key": "concept:wave-superposition",
+      "registry_status": "new",
+      "same_candidate": ["phys-wave-superposition"],
+      "pages": [116, 120],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05", "12역학03-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b11", "hint": "두 파동이 겹쳐 합성파가 된다"},
+        {"page": 116, "block_id": "p116-b11", "hint": "같은 영역을 지나면 중첩된다"}
+      ],
+      "relation_seeds": [
+        "겹친 두 파동과 합성파의 변위",
+        "중첩과 간섭의 관계",
+        "중첩 후에도 각 파동은 원래대로 진행한다"
+      ],
+      "note": "「물리학」 phys-wave-superposition 과 같은 키 문자열. 사전 미등록이라 status 는 new."
+    },
+    {
+      "id": "mech-constructive-and-destructive-interference",
+      "term": "보강 간섭과 상쇄 간섭",
+      "term_en": "constructive and destructive interference",
+      "concept_key": "concept:constructive-and-destructive-interference",
+      "registry_status": "new",
+      "same_candidate": ["phys-constructive-and-destructive-interference"],
+      "pages": [117],
+      "topic_id": "mech-3-2-02",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-04"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 117, "block_id": "p117-b7", "hint": "진폭이 커지는 쪽·작아지는 쪽"},
+        {"page": 126, "block_id": "p126-b60", "hint": "정리 — 보강·상쇄 빈칸"}
+      ],
+      "relation_seeds": [
+        "위상이 같은 두 파동의 중첩과 진폭",
+        "위상이 반대인 두 파동의 중첩과 진폭",
+        "진폭과 소리의 크기"
+      ],
+      "note": "「물리학」 phys-constructive-and-destructive-interference 와 같은 키 문자열."
+    },
+    {
+      "id": "mech-sound-wave-interference",
+      "term": "음파의 간섭",
+      "term_en": "interference of sound waves",
+      "concept_key": "concept:sound-wave-interference",
+      "registry_status": "new",
+      "pages": [116, 117],
+      "topic_id": "mech-3-2-02",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-04"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 116, "block_id": "p116-b11", "hint": "음파에서도 간섭이 나타난다"},
+        {"page": 117, "block_id": "p117-b7", "hint": "간섭과 들리는 소리의 크기"}
+      ],
+      "relation_seeds": [
+        "간섭과 들리는 소리의 크기",
+        "위치에 따라 잘 들리는 곳과 안 들리는 곳",
+        "두 스피커 사이 지점의 간섭"
+      ]
+    },
+    {
+      "id": "mech-path-difference",
+      "term": "경로차",
+      "term_en": "path difference",
+      "concept_key": "concept:path-difference",
+      "registry_status": "new",
+      "pages": [117],
+      "topic_id": "mech-3-2-02",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-04"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 117, "block_id": "p117-b7", "hint": "두 파원까지의 거리 차"},
+        {"page": 117, "block_id": "p117-b11", "hint": "반파장의 짝수 배·홀수 배"}
+      ],
+      "relation_seeds": [
+        "경로차와 보강 간섭 조건",
+        "경로차와 상쇄 간섭 조건",
+        "파장과 간섭 지점의 간격"
+      ]
+    },
+    {
+      "id": "mech-active-noise-control",
+      "term": "소음 제거 기술",
+      "aliases": ["능동 소음 제어"],
+      "term_en": "active noise control",
+      "concept_key": "concept:active-noise-control",
+      "registry_status": "new",
+      "pages": [118, 119],
+      "topic_id": "mech-3-2-02",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-04"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 118, "block_id": "p118-b2", "hint": "반대 위상 음파로 상쇄시킨다"},
+        {"page": 126, "block_id": "p126-b65", "hint": "정리 — 소음 제거 이어폰"}
+      ],
+      "relation_seeds": [
+        "반대 위상 음파와 소음 제거",
+        "특정 진동수만 골라 제거할 수 있다",
+        "보강 간섭을 쓰면 진폭을 키울 수도 있다"
+      ],
+      "note": "성취기준 12역학03-04 의 '소음 제어에 음파의 간섭' 을 받는 카드다."
+    },
+    {
+      "id": "mech-standing-wave",
+      "term": "정상파",
+      "term_en": "standing wave",
+      "concept_key": "concept:standing-wave",
+      "registry_status": "new",
+      "pages": [120],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b11", "hint": "반대 방향 두 파동의 합성파"},
+        {"page": 120, "block_id": "p120-b37", "hint": "진행하지 않는 것처럼 보인다"}
+      ],
+      "relation_seeds": [
+        "반대 방향으로 진행하는 두 파동의 중첩",
+        "정상파와 파장·진폭 조건",
+        "반사파와 입사파가 만드는 정상파"
+      ]
+    },
+    {
+      "id": "mech-node-and-antinode",
+      "term": "마디와 배",
+      "term_en": "node and antinode",
+      "concept_key": "concept:node-and-antinode",
+      "registry_status": "new",
+      "pages": [120],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b37", "hint": "변위가 항상 0인 지점과 그 사이"},
+        {"page": 120, "block_id": "p120-b38", "hint": "정상파의 배와 마디 그림"}
+      ],
+      "relation_seeds": [
+        "마디에서의 변위",
+        "배에서의 진폭",
+        "마디 사이 간격과 파장"
+      ]
+    },
+    {
+      "id": "mech-standing-wave-on-string",
+      "term": "줄에서의 정상파",
+      "term_en": "standing wave on a string",
+      "concept_key": "concept:standing-wave-on-string",
+      "registry_status": "new",
+      "pages": [120, 121],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b43", "hint": "양 끝 고정단 반사와 중첩"},
+        {"page": 121, "block_id": "p121-b1", "hint": "줄의 길이가 파장을 정한다"}
+      ],
+      "relation_seeds": [
+        "양 끝이 고정되면 끝이 마디가 된다",
+        "줄의 길이와 정상파의 파장",
+        "기본 진동과 n배 진동의 파장"
+      ]
+    },
+    {
+      "id": "mech-natural-frequency",
+      "term": "고유 진동수",
+      "term_en": "natural frequency",
+      "concept_key": "concept:natural-frequency",
+      "registry_status": "new",
+      "pages": [121, 122],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 121, "block_id": "p121-b20", "hint": "줄의 고유 진동수와 그 사이 값"},
+        {"page": 122, "block_id": "p122-b22", "hint": "한쪽만 열린 관의 고유 진동수"}
+      ],
+      "relation_seeds": [
+        "길이·파동 속력과 고유 진동수",
+        "고유 진동수 이외의 정상파는 생기지 않는다",
+        "한쪽만 열린 관에서는 홀수 배 진동만 생긴다"
+      ],
+      "note": "기본 진동·n배 진동은 따로 후보로 두지 않고 이 카드의 씨앗으로 넣었다."
+    },
+    {
+      "id": "mech-standing-wave-in-pipe",
+      "term": "관에서의 정상파",
+      "term_en": "standing wave in a pipe",
+      "concept_key": "concept:standing-wave-in-pipe",
+      "registry_status": "new",
+      "pages": [121, 122],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 121, "block_id": "p121-b22", "hint": "닫힌 끝은 마디, 열린 끝은 배"},
+        {"page": 122, "block_id": "p122-b23", "hint": "양쪽이 열린 관의 기본 진동"}
+      ],
+      "relation_seeds": [
+        "닫힌 끝의 고정단 반사와 마디",
+        "열린 끝의 자유단 반사와 배",
+        "관의 길이와 정상파의 파장"
+      ]
+    },
+    {
+      "id": "mech-resonance",
+      "term": "공명",
+      "term_en": "resonance",
+      "concept_key": "concept:resonance",
+      "registry_status": "new",
+      "pages": [124, 125],
+      "topic_id": "mech-3-2-03",
+      "section_id": "mech-3-2",
+      "curriculum": ["12역학03-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 124, "block_id": "p124-b3", "hint": "고유 진동수가 일치할 때 증폭"},
+        {"page": 125, "block_id": "p125-b1", "hint": "관악기에서의 공명"}
+      ],
+      "relation_seeds": [
+        "유입 음파의 진동수와 고유 진동수의 일치",
+        "공명과 소리의 증폭",
+        "악기의 형태·크기·재질과 고유 진동수"
+      ]
+    }
+  ],
+
+  "hierarchy": [
+    {"from": "mech-elastic-force", "to": "mech-simple-harmonic-motion"},
+    {"from": "mech-equilibrium-point-of-oscillation", "to": "mech-simple-harmonic-motion", "note": "평형점을 알아야 '평형점을 중심으로 왕복' 을 읽는다"},
+    {"from": "mech-simple-harmonic-motion", "to": "mech-acceleration-displacement-relation"},
+    {"from": "mech-acceleration-displacement-relation", "to": "mech-oscillation-period", "note": "a = -w^2 x 에서 주기를 끌어낸다"},
+    {"from": "mech-simple-harmonic-motion", "to": "mech-elastic-wave", "note": "입자의 진동이 매질로 퍼진 것이 탄성파다"},
+    {"from": "mech-elastic-wave", "to": "mech-transverse-and-longitudinal-wave"},
+    {"from": "mech-elastic-wave", "to": "mech-wave-speed"},
+    {"from": "mech-wavelength-and-frequency", "to": "mech-wave-speed"},
+    {"from": "mech-oscillation-period", "to": "mech-wavelength-and-frequency", "note": "진동수는 주기의 역수다"},
+    {"from": "mech-elastic-wave", "to": "mech-transmission-and-reflection-of-wave"},
+    {"from": "mech-wave-phase", "to": "mech-free-end-and-fixed-end-reflection"},
+    {"from": "mech-transmission-and-reflection-of-wave", "to": "mech-free-end-and-fixed-end-reflection"},
+    {"from": "mech-wave-speed", "to": "mech-free-end-and-fixed-end-reflection", "note": "매질의 속력 비교가 위상 반전 여부를 가른다"},
+    {"from": "mech-transmission-and-reflection-of-wave", "to": "mech-ultrasound"},
+    {"from": "mech-wave-speed", "to": "mech-doppler-effect"},
+    {"from": "mech-wavelength-and-frequency", "to": "mech-doppler-effect"},
+    {"from": "mech-doppler-effect", "to": "mech-doppler-effect-moving-source"},
+    {"from": "mech-doppler-effect", "to": "mech-doppler-effect-moving-observer"},
+    {"from": "mech-doppler-effect-moving-source", "to": "mech-doppler-effect-equation"},
+    {"from": "mech-doppler-effect-moving-observer", "to": "mech-doppler-effect-equation"},
+    {"from": "mech-doppler-effect-equation", "to": "mech-doppler-speed-measurement"},
+    {"from": "mech-doppler-effect", "to": "mech-redshift-and-blueshift"},
+    {"from": "mech-elastic-wave", "to": "mech-sound-wave"},
+    {"from": "mech-transverse-and-longitudinal-wave", "to": "mech-sound-wave", "note": "음파가 종파임을 알아야 한다"},
+    {"from": "mech-wave-superposition", "to": "mech-constructive-and-destructive-interference"},
+    {"from": "mech-wave-phase", "to": "mech-constructive-and-destructive-interference"},
+    {"from": "mech-wavelength-and-frequency", "to": "mech-path-difference"},
+    {"from": "mech-path-difference", "to": "mech-constructive-and-destructive-interference", "note": "간섭 조건을 경로차로 판정한다"},
+    {"from": "mech-constructive-and-destructive-interference", "to": "mech-sound-wave-interference"},
+    {"from": "mech-sound-wave", "to": "mech-sound-wave-interference"},
+    {"from": "mech-sound-wave-interference", "to": "mech-active-noise-control"},
+    {"from": "mech-wave-superposition", "to": "mech-standing-wave"},
+    {"from": "mech-free-end-and-fixed-end-reflection", "to": "mech-standing-wave", "note": "반사파와 입사파가 만나 정상파가 된다"},
+    {"from": "mech-standing-wave", "to": "mech-node-and-antinode"},
+    {"from": "mech-standing-wave", "to": "mech-standing-wave-on-string"},
+    {"from": "mech-node-and-antinode", "to": "mech-standing-wave-on-string"},
+    {"from": "mech-node-and-antinode", "to": "mech-standing-wave-in-pipe"},
+    {"from": "mech-sound-wave", "to": "mech-standing-wave-in-pipe"},
+    {"from": "mech-standing-wave-on-string", "to": "mech-natural-frequency"},
+    {"from": "mech-standing-wave-in-pipe", "to": "mech-natural-frequency"},
+    {"from": "mech-natural-frequency", "to": "mech-resonance"}
+  ],
+
+  "excluded": [
+    {"term": "용수철 상수", "reason": "중복", "note": "탄성력 카드의 관계 명제(F=-kx)와 주기 카드(T=2p√(m/k))에 흡수했다. 따로 두면 관계 명제가 갈라진다", "pages": [96]},
+    {"term": "등속 원운동하는 물체의 그림자", "reason": "기타", "note": "단진동 주기를 끌어내는 유도 모형이다. 카드로 두기보다 '단진동의 주기' 카드의 근거로 두는 편이 낫다고 보았다 — 사람이 다시 볼 만한 지점", "pages": [98, 99]},
+    {"term": "각진동수", "reason": "범위 밖", "note": "곁주에서만 다룬다. 성취기준 12역학03-01 이 요구하지 않는다", "pages": [99]},
+    {"term": "매질", "reason": "중복", "note": "'탄성파는 반드시 매질을 통해 전달된다' 는 탄성파 카드의 관계 명제다", "pages": [100, 102]},
+    {"term": "긴 용수철로 종파·횡파 구현하고 속력 측정하기", "reason": "활동", "pages": [100, 101]},
+    {"term": "파동의 투과와 반사에서 위상 변화(탐구)", "reason": "활동", "pages": [103]},
+    {"term": "비파괴 검사", "reason": "사례", "note": "핵심 아이디어와 성취기준 12역학03-02 의 '활용 예' 에 해당한다. 초음파 카드의 씨앗으로 남겼지만 따로 카드를 줄지는 사람이 볼 만하다", "pages": [94, 105]},
+    {"term": "지진파", "reason": "사례", "note": "탄성파의 한 종류로 조사 탐구에서만 나온다. 「지구과학」 쪽에 본 카드가 서는 것이 옳다", "pages": [105]},
+    {"term": "해저 지형 조사·자동차 후방 센서·초음파 세척", "reason": "사례", "pages": [104, 105]},
+    {"term": "도플러", "reason": "인물", "pages": [110]},
+    {"term": "충격파·소닉 붐", "reason": "범위 밖", "note": "자료실 심화다. 12역학03-03 이 요구하지 않는다. 다만 음원 속력과 음속의 비교라는 좋은 명제가 있어 사람이 볼 만하다", "pages": [112]},
+    {"term": "스마트폰으로 도플러 효과 측정하기", "reason": "활동", "pages": [113]},
+    {"term": "두 개의 스피커를 이용한 간섭 실험", "reason": "활동", "pages": [116]},
+    {"term": "체외 충격파 쇄석술", "reason": "사례", "note": "보강 간섭의 응용 사례. 자료실이다", "pages": [119]},
+    {"term": "소음 제거 이어폰·비행기 소음 제거", "reason": "사례", "note": "소음 제거 기술 카드에 흡수", "pages": [118, 119]},
+    {"term": "정상파를 이용한 음파의 진행 속력 측정하기", "reason": "활동", "pages": [123]},
+    {"term": "울림통(공명통)", "reason": "사례", "note": "공명 카드의 사례", "pages": [124]},
+    {"term": "음색", "reason": "범위 밖", "note": "자료실 심화다. 여러 고유 진동수의 중첩이라는 명제가 있어 사람이 다시 볼 만하다", "pages": [125]},
+    {"term": "동조 질량 댐퍼·클라드니 무늬", "reason": "사례", "note": "시민 면·심화 활동", "pages": [130, 131]},
+    {"term": "Hz·kHz", "reason": "단위·기호", "pages": [104, 121]}
+  ],
+
+  "notes": [
+    "이 교과서는 대단원 > 중단원(1~) > 소단원(01~) 위계라 topic_id 가 mech-3-1-01 처럼 세 칸이다. 「생명과학」 계열과 번호가 한 칸 밀려 있다.",
+    "소주제 5개에 후보 31개 — 소주제당 6.2개다. 중단원 1-02(탄성파의 성질과 활용)가 6쪽·성취기준 하나를 통째로 지고 있어 8개가 몰렸다.",
+    "성취기준 12역학03-01~03-05 다섯 개 모두 crosscheck 가 '일치' 다. 다섯 개 모두 후보가 붙었다.",
+    "「물리학」 phys-3 카드와 키 문자열을 맞춘 것이 4건이다(탄성력·파장과 진동수·파동의 중첩·보강 간섭과 상쇄 간섭). 다만 그 키들도 아직 concept_registry.yaml 에 없어 registry_status 는 전부 new 다 — 사전에 없는 키를 reused 로 쓰면 검증이 막힌다. same_candidate 로 잇힐 카드만 가리켜 두었고 실제 링크는 G3 뒤 G2 의 일이다.",
+    "'주기' 는 homonyms.yaml 감시어라 표제어를 '단진동의 주기' 로 두고 homonym_flag 를 세웠다. 키는 homonyms.yaml 이 물리학 sense 로 적어 둔 concept:oscillation-period 를 그대로 썼다.",
+    "'위상' 은 homonyms.yaml 의 '상'(phase/image)과 표기가 달라 flag 대상이 아니지만, 키를 concept:wave-phase 로 분리해 두었다.",
+    "p93(front)의 '알고 있는 용어' 목록(진폭·종파와 횡파·파동의 굴절·파동의 반사·단진자·운동량)은 선수 개념 표시다. 이 단원에서 다시 정의하는 것만 후보로 올렸다.",
+    "p106·p126 의 중단원 정리(생각 그물)를 체크리스트로 훑었다. 정리에 나오는 항 중 후보에도 excluded 에도 없는 것은 없다.",
+    ".claude/skills/concept-schema/references/candidates.schema.json 의 id 패턴에 'mech' 가 없어 검증이 통째로 막혔다. concept.schema.json 과 concept_registry.yaml 의 id_format 에는 이미 mech 가 있어 그 둘에 맞춰 접두어만 등록했다 — 메인에 보고한다."
+  ]
+}

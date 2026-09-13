@@ -1,0 +1,140 @@
+{
+  "id": "mech-standing-wave-in-pipe",
+  "concept_key": "concept:standing-wave-in-pipe",
+  "registry_status": "new",
+  "term": "관에서의 정상파",
+  "notation": {
+    "hanja": "管 定常波",
+    "hanja_gloss": "管 대롱 관 · 定 정할 정 · 常 항상 상 · 波 물결 파",
+    "english": "standing wave in a pipe"
+  },
+  "definition": "관 속을 오가는 음파가 닫힌 끝에서 고정단 반사, 열린 끝에서 자유단 반사하며 겹쳐 만드는 정상파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pipe-closed-node",
+      "text": "관의 닫힌 끝에서는 음파가 고정단 반사를 하므로 그 자리에 마디가 생긴다.",
+      "form": {
+        "condition": "관의 한쪽 끝이 막혀 있을 때",
+        "type": "causal",
+        "scope": "관 속 음파의 정상파",
+        "antecedent": {
+          "quantity": "관 끝의 상태",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생기는 지점의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "고정단에서는 변위가 0 이 되므로 배가 생긴다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관의 닫힌 끝에서는 그 자리에 배가 생긴다."
+    },
+    {
+      "id": "rel-pipe-open-antinode",
+      "text": "관의 열린 끝에서는 자유단 반사가 일어나 그 자리에 배가 생긴다.",
+      "form": {
+        "condition": "관의 끝이 열려 있을 때",
+        "type": "causal",
+        "scope": "관 속 음파의 정상파",
+        "antecedent": {
+          "quantity": "관 끝의 상태",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "생기는 지점의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자유단에서는 진폭이 최대가 되므로 마디가 생긴다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관의 열린 끝에서는 그 자리에 마디가 생긴다."
+    },
+    {
+      "id": "rel-pipe-closed-fundamental",
+      "text": "한쪽만 열린 관의 기본 진동에서는 관의 길이가 파장의 4 분의 1 이다.",
+      "form": {
+        "condition": "가장 낮은 진동수의 정상파가 생겼을 때",
+        "type": "conditional",
+        "scope": "한쪽 끝만 열린 관"
+      },
+      "invertible": false,
+      "invertible_reason": "길이와 파장의 관계를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pipe-open-fundamental",
+      "text": "양쪽이 열린 관의 기본 진동에서는 관의 길이가 파장의 절반이다.",
+      "form": {
+        "condition": "가장 낮은 진동수의 정상파가 생겼을 때",
+        "type": "conditional",
+        "scope": "양쪽이 열린 관"
+      },
+      "invertible": false,
+      "invertible_reason": "길이와 파장의 관계를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "관악기는 관의 길이를 길게 할수록 높은 소리가 난다.",
+      "why_wrong": "관이 길어지면 정상파의 파장이 길어져 진동수가 작아지므로 낮은 소리가 난다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "관의 열린 끝에서는 음파가 모두 빠져나가 반사되지 않는다.",
+      "why_wrong": "열린 끝에서도 자유단 반사가 일어나며, 그래서 그 자리에 배가 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pipe-open-antinode"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-node-and-antinode"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-sound-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-natural-frequency"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    121,
+    122
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 121쪽 그림 27, 122쪽 그림 28~30(관에서의 정상파)."
+  ]
+}

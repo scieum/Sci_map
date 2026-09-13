@@ -1,0 +1,113 @@
+{
+  "id": "mech-wave-phase",
+  "concept_key": "concept:wave-phase",
+  "registry_status": "new",
+  "term": "위상",
+  "notation": {
+    "hanja": "位相",
+    "hanja_gloss": "位 자리 위 · 相 서로 상",
+    "english": "phase"
+  },
+  "definition": "파동 위의 한 점이 지금 어느 위치에 있고 어느 쪽으로 움직이는지를 함께 가리키는 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-phase-crests-same",
+      "text": "한 파동 위에 늘어선 마루들끼리는 위상이 서로 같다.",
+      "form": {
+        "condition": "같은 파동 위의 지점끼리 견줄 때",
+        "type": "classification",
+        "scope": "한 파동"
+      },
+      "invertible": false,
+      "invertible_reason": "같은 상태끼리 묶는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-phase-crest-trough",
+      "text": "마루와 골은 위상이 서로 반대다.",
+      "form": {
+        "condition": "같은 파동 위의 지점끼리 견줄 때",
+        "type": "classification",
+        "scope": "한 파동",
+        "antecedent": {
+          "quantity": "두 지점의 관계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "위상의 관계",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "위치도 운동 방향도 맞은편이라 위상이 같다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마루와 골은 위상이 서로 같다."
+    },
+    {
+      "id": "rel-phase-decides-interference",
+      "text": "두 파동이 겹칠 때 위상이 같은지 반대인지가 합성파의 진폭을 가른다.",
+      "form": {
+        "condition": "진동수와 진폭이 같은 두 파동이 만날 때",
+        "type": "causal",
+        "scope": "간섭하는 두 파동"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 결과를 가르는지 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02",
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진폭이 같은 두 지점은 위상도 같다.",
+      "why_wrong": "마루와 골은 변위의 크기가 같아도 위상이 반대다. 위상은 크기만이 아니라 방향까지 함께 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-phase-crest-trough"
+    },
+    {
+      "text": "위상이 반대인 두 파동이 만나면 서로를 막아 더 나아가지 못한다.",
+      "why_wrong": "겹치는 동안에만 변위가 더해질 뿐, 지나간 뒤에는 두 파동 모두 본디 모양으로 진행한다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mech-free-end-and-fixed-end-reflection"
+    },
+    {
+      "type": "next",
+      "target": "mech-constructive-and-destructive-interference"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    102
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "homonyms.yaml 의 감시어 '상'(물질의 상·광학의 상)과 섞이지 않도록 키를 concept:wave-phase 로 갈랐다. G3 에서 이 갈래를 확인해야 한다.",
+    "C5 재태깅: rel-phase-decides-interference 는 간섭의 조건을 말하므로 03-02 에 03-04 를 병기했다."
+  ]
+}

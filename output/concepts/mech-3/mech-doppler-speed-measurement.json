@@ -1,0 +1,115 @@
+{
+  "id": "mech-doppler-speed-measurement",
+  "concept_key": "concept:doppler-speed-measurement",
+  "registry_status": "new",
+  "term": "도플러 효과를 이용한 속력 측정",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 음차어 '도플러' 를 품은 표제어라 전체에 대응하는 한자어가 없다.",
+    "english": "speed measurement using the Doppler effect"
+  },
+  "definition": "움직이는 물체에 파동을 보낸 뒤 되돌아온 파동의 진동수 변화를 재어 그 물체의 속력을 알아내는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-speed-from-frequency-shift",
+      "text": "되돌아온 파동의 진동수가 보낸 진동수와 많이 어긋날수록 반사시킨 물체가 빠르게 움직인 것이다.",
+      "form": {
+        "condition": "물체가 파동을 보낸 방향을 따라 움직일 때",
+        "type": "direct",
+        "scope": "속력 측정 장치·기상 도플러 레이더",
+        "antecedent": {
+          "quantity": "진동수의 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물체의 속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진동수 차는 속력에 따라 커지므로 반대 방향 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "되돌아온 파동의 진동수가 많이 어긋날수록 물체가 느리게 움직인 것이다."
+    },
+    {
+      "id": "rel-em-speed-measurement",
+      "text": "전자기파에서도 도플러 효과가 나타나므로 자동차나 구름의 속력을 전자기파로 잴 수 있다.",
+      "form": {
+        "condition": "반사시킨 물체가 측정 장치에 대해 움직일 때",
+        "type": "causal",
+        "scope": "스피드건·기상 레이더"
+      },
+      "invertible": false,
+      "invertible_reason": "적용 근거를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-doppler-echocardiography",
+      "text": "혈액에서 되돌아온 초음파의 진동수 변화를 분석하면 혈류의 속력과 방향을 알 수 있다.",
+      "form": {
+        "condition": "초음파를 혈관 쪽으로 보낼 때",
+        "type": "causal",
+        "scope": "도플러 심장 초음파 검사"
+      },
+      "invertible": false,
+      "invertible_reason": "활용 사례를 설명하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "속력 측정 장치는 물체까지의 거리를 재어 속력을 계산한다.",
+      "why_wrong": "거리가 아니라 되돌아온 파동의 진동수 변화를 재어 속력을 얻는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-speed-from-frequency-shift"
+    },
+    {
+      "text": "도플러 효과는 소리에서만 나타나므로 전자기파로는 속력을 잴 수 없다.",
+      "why_wrong": "전자기파도 파동이어서 도플러 효과가 나타나고, 스피드건과 기상 레이더가 그 원리를 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-em-speed-measurement"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-doppler-effect-equation"
+    },
+    {
+      "type": "related",
+      "target": "mech-redshift-and-blueshift",
+      "note": "천체 관측도 같은 원리를 쓴다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-03"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-01",
+  "pages": [
+    114,
+    115
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "성취기준 12역학03-03 의 '물체의 속도 측정 등 다양한 장치' 를 받는 카드다.",
+    "C7 후보 삽화: 114쪽 그림 16, 115쪽 그림 19(도플러 효과를 이용하는 예)."
+  ]
+}

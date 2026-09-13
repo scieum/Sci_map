@@ -1,0 +1,145 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  58,
+  59,
+  60
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-heat-transfer",
+ "concept_key": "concept:heat-transfer",
+ "registry_status": "new",
+ "term": "열전달",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱傳達",
+  "hanja_gloss": "熱 더울 열 · 傳 전할 전 · 達 통달할 달",
+  "english": "heat transfer"
+ },
+ "definition": "온도 차가 있을 때 에너지가 옮겨 가는 현상. 미시적으로 보면 열운동이 활발한 쪽 입자가 덜 활발한 쪽에 에너지를 넘겨 주는 일이며, 전도·대류·복사 세 형태를 띤다.",
+ "relations": [
+  {
+   "id": "rel-ht-direction",
+   "text": "두 물체가 맞닿아 있으면 에너지는 온도가 높은 쪽에서 낮은 쪽으로 옮겨 간다",
+   "form": {
+    "condition": "두 물체가 접촉해 있고 온도가 서로 다를 때",
+    "type": "causal",
+    "scope": "외부에서 일을 해 주지 않는 자발적 열전달",
+    "antecedent": {
+     "quantity": "높은 온도 쪽",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "낮은 온도 쪽",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "저절로 일어나는 열전달의 방향은 하나뿐이라 방향을 맞바꾼 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "두 물체가 맞닿아 있으면 에너지는 온도가 낮은 쪽에서 높은 쪽으로 옮겨 간다"
+  },
+  {
+   "id": "rel-ht-three",
+   "text": "열이 옮겨 가는 길은 입자끼리 넘겨 주는 전도, 유체가 흘러 나르는 대류, 전자기파로 내보내는 복사로 갈린다",
+   "form": {
+    "condition": "열이 옮겨 가는 방식을 나눌 때",
+    "type": "classification",
+    "scope": "이 단원이 다루는 세 가지 열전달 형태",
+    "antecedent": {
+     "quantity": "열전달",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "전도·대류·복사",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "세 형태를 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ht-feel",
+   "text": "온도가 같은 두 물체라도 손의 열을 빨리 가져가는 쪽이 더 차갑게 느껴진다",
+   "form": {
+    "condition": "두 물체의 온도가 같고 손으로 만질 때",
+    "type": "causal",
+    "scope": "금속과 천처럼 열전도도가 크게 다른 물체",
+    "antecedent": {
+     "quantity": "손에서 빠져나가는 열의 빠르기",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "차갑다는 느낌",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "차갑다는 느낌은 손에서 빠져나가는 열의 빠르기가 만든 것이므로 느리게 가져가는 쪽이 더 차갑다는 말은 거짓이다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "온도가 같은 두 물체라면 손의 열을 느리게 가져가는 쪽이 더 차갑게 느껴진다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "금속 의자가 천 의자보다 차갑게 느껴지는 것은 금속 의자의 온도가 더 낮기 때문이다",
+   "why_wrong": "같은 방에 오래 둔 두 의자는 온도가 같다. 금속은 열전도도가 커서 손의 열을 빠르게 가져가기 때문에 더 차갑게 느껴질 뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ht-feel"
+  },
+  {
+   "text": "열은 온도가 낮은 물체에서 높은 물체로도 저절로 옮겨 갈 수 있다",
+   "why_wrong": "저절로 일어나는 열전달의 방향은 고온에서 저온 한쪽뿐이다. 냉장고처럼 반대로 보내려면 바깥에서 일을 해 주어야 한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ht-direction"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermal-motion",
+   "note": "무엇이 옮겨 가는지 알려면 먼저 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-heat-conduction",
+   "note": "맞닿은 입자끼리 넘겨 주는 형태"
+  },
+  {
+   "type": "next",
+   "target": "mech-heat-convection",
+   "note": "유체가 흘러 나르는 형태"
+  },
+  {
+   "type": "next",
+   "target": "mech-thermal-radiation",
+   "note": "전자기파로 내보내는 형태"
+  },
+  {
+   "type": "same",
+   "target": "phys-heat-transfer",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 2,
+ "role": "core"
+}

@@ -1,0 +1,137 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  67
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-pressure-temperature-relation",
+ "concept_key": "concept:gay-lussac-law",
+ "registry_status": "new",
+ "term": "기체의 압력과 절대 온도 관계",
+ "aliases": [
+  "게이뤼삭 법칙"
+ ],
+ "notation": {
+  "hanja": "氣體壓力絶對溫度關係",
+  "hanja_gloss": "氣 기운 기 · 體 몸 체 · 壓 누를 압 · 力 힘 력 · 絶 끊을 절 · 對 대할 대 · 溫 따뜻할 온 · 度 법도 도 · 關 빗장 관 · 係 맬 계",
+  "english": "Gay-Lussac's law",
+  "symbol_display": "P/T = 일정",
+  "symbol_plain": "P/T = const"
+ },
+ "definition": "부피와 분자 수를 고정해 둔 기체에서 압력이 절대 온도에 비례한다는 관계. 압력을 절대 온도로 나눈 값이 변하지 않는다.",
+ "relations": [
+  {
+   "id": "rel-pt-direct",
+   "text": "부피와 분자 수가 그대로라면 절대 온도가 오르는 만큼 기체의 압력도 커진다",
+   "form": {
+    "condition": "기체의 부피와 분자 수가 일정할 때",
+    "type": "direct",
+    "scope": "밀폐된 용기 속 이상 기체",
+    "antecedent": {
+     "quantity": "절대 온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "압력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "나눈 값이 일정한 두 양이라 한쪽이 오를 때 다른 쪽이 내린다는 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "부피와 분자 수가 그대로라면 절대 온도가 오를수록 기체의 압력은 작아진다"
+  },
+  {
+   "id": "rel-pt-speed",
+   "text": "온도가 오르면 분자가 더 빠르게 움직여 벽을 더 자주 세게 때리므로 압력이 커진다",
+   "form": {
+    "condition": "용기의 부피가 변하지 않을 때",
+    "type": "causal",
+    "scope": "열운동을 하는 기체 분자 집단",
+    "antecedent": {
+     "quantity": "절대 온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "분자의 속력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "온도가 열운동의 척도이므로 온도가 올랐는데 분자가 느려진다는 말은 성립하지 않는다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "온도가 오르면 분자가 더 느리게 움직여 벽을 덜 때리므로 압력이 커진다"
+  },
+  {
+   "id": "rel-pt-kelvin",
+   "text": "이 비례 관계는 섭씨온도가 아니라 절대 온도에서만 성립한다",
+   "form": {
+    "condition": "온도 눈금을 고를 때",
+    "type": "conditional",
+    "scope": "절대 온도(K)로 잰 기체의 온도"
+   },
+   "invertible": false,
+   "invertible_reason": "어느 눈금에서 성립하는지 조건을 밝힌 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기체의 온도를 20 ℃에서 40 ℃로 올리면 압력이 두 배가 된다",
+   "why_wrong": "비례 관계는 절대 온도에서만 성립한다. 293 K에서 313 K로 오른 것이라 압력은 채 7 %도 늘지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pt-kelvin"
+  },
+  {
+   "text": "겨울에 타이어 압력이 낮아지는 것은 공기가 새어 나갔기 때문이다",
+   "why_wrong": "공기가 새지 않아도 기온이 내려가면 절대 온도가 낮아져 압력이 함께 떨어진다. 그래서 겨울에 공기를 보충하게 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pt-direct"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermal-motion",
+   "note": "분자 속력이 온도에 달려 있다는 데서 출발한다"
+  },
+  {
+   "type": "next",
+   "target": "mech-ideal-gas-law",
+   "note": "세 관계를 하나로 묶는 자리로 나아간다"
+  },
+  {
+   "type": "related",
+   "target": "mech-temperature-volume-relation",
+   "note": "고정하는 양이 무엇인지가 갈림길이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-isochoric-process",
+   "note": "부피를 붙잡아 둔 열역학 과정에서 다시 만난다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "notes": [
+  "교과서는 이 관계에 법칙 이름을 붙이지 않는다. 표제어는 교과서 표제를 따르고 통용 명칭을 alias 로 두었으며, concept:gay-lussac-law 는 C1 이 새로 지은 키다 — ★G3 에서 사전에 같은 개념이 다른 이름으로 이미 있는지 확인해 주기 바란다."
+ ]
+}

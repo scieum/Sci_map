@@ -1,0 +1,140 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  71
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermodynamic-system",
+ "concept_key": "concept:thermodynamic-system",
+ "registry_status": "reused",
+ "homonym_flag": true,
+ "term": "계",
+ "aliases": [
+  "열역학 계"
+ ],
+ "notation": {
+  "hanja": "系",
+  "hanja_gloss": "系 이어맬 계",
+  "english": "system"
+ },
+ "definition": "열과 일을 따질 때 관심을 두고 떼어 낸 대상. 이 단원에서는 실린더 속 기체가 계이고, 그 바깥의 모든 것이 주변 환경이 된다.",
+ "relations": [
+  {
+   "id": "rel-sys-boundary",
+   "text": "무엇을 계로 삼으면 나머지 전부는 주변 환경으로 갈린다",
+   "form": {
+    "condition": "열역학 문제에서 대상을 정할 때",
+    "type": "classification",
+    "scope": "계와 주변 환경으로 나눈 열역학 상황",
+    "antecedent": {
+     "quantity": "관심 대상",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "주변 환경",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "대상을 둘로 가르는 약속이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sys-sign",
+   "text": "열과 일의 부호는 계를 기준으로 적는다 — 계가 흡수한 열이 양, 계가 한 일이 양이다",
+   "form": {
+    "condition": "열역학 제1법칙에 부호를 넣을 때",
+    "type": "conditional",
+    "scope": "계를 실린더 속 기체로 잡은 경우",
+    "antecedent": {
+     "quantity": "계가 흡수한 열",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "Q의 부호",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "부호를 계 기준으로 정해 두었으므로 방향을 맞바꾸면 같은 과정의 부호가 모두 뒤집혀 버린다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "열과 일의 부호는 주변 환경을 기준으로 적어 계가 흡수한 열을 음으로 둔다"
+  },
+  {
+   "id": "rel-sys-cylinder",
+   "text": "실린더 속 기체를 계로 잡으면 피스톤이 움직여 부피가 바뀔 때에만 계와 주변 환경 사이에 일이 오간다",
+   "form": {
+    "condition": "계를 실린더와 피스톤으로 막아 둔 기체로 잡았을 때",
+    "type": "causal",
+    "scope": "부피 변화로만 일이 오가는 실린더·피스톤 모형",
+    "antecedent": {
+     "quantity": "피스톤이 움직여 생긴 부피 변화",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "계와 주변이 주고받는 일",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "이 모형에서 일은 부피 변화로만 오가므로 부피가 그대로인데 일이 오간다는 문장은 반드시 거짓이다 — 등적 과정에서 기체가 한 일이 0인 것과 같은 근거다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "실린더 속 기체는 부피가 그대로여도 피스톤을 거쳐 주변과 일을 주고받는다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "계는 실험 장치 전체를 가리키는 말이다",
+   "why_wrong": "계는 우리가 관심을 두고 떼어 낸 부분이다. 실린더 속 기체를 계로 잡으면 실린더 벽과 피스톤, 바깥 공기는 모두 주변 환경이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sys-boundary"
+  },
+  {
+   "text": "기체가 열을 방출해도 Q는 항상 양수로 적는다",
+   "why_wrong": "부호는 계를 기준으로 한다. 계가 열을 내놓으면 Q는 음수, 계가 일을 받으면 W는 음수다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sys-sign"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "이 말 위에서 법칙이 적힌다"
+  },
+  {
+   "type": "related",
+   "target": "mech-internal-energy",
+   "note": "계가 안고 있는 에너지다"
+  },
+  {
+   "type": "related",
+   "target": "mech-work-done-by-gas",
+   "note": "계가 주변에 건넨 에너지다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "notes": [
+  "homonyms.yaml 의 감시 낱말 '계' 에 걸려 homonym_flag 를 붙였다. concept_key 는 mate-thermodynamic-system 과 같지만 C1 판단대로 사람 게이트 전까지 same 링크를 걸지 않았다 — G3 에서 확인해 주기 바란다.",
+  "C6 결함 수정 — rel-sys-cylinder 가 정의 둘째 문장을 낱말까지 되풀이하고 있었다. 세 명제 중 둘이 정의라 지우지 않고, 계 경계(피스톤)가 움직여야 일이 오간다는 내용을 더해 명제로 세웠다. 오개념[0] 은 실제 상대인 rel-sys-boundary 로 옮겼다."
+ ]
+}

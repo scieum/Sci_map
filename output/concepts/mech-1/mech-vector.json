@@ -1,0 +1,110 @@
+{
+ "id": "mech-vector",
+ "concept_key": "concept:vector",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "벡터",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "vector 를 소리대로 옮긴 말이라 대응하는 한자어가 없다.",
+  "english": "vector"
+ },
+ "definition": "크기만으로는 다 말할 수 없고 방향까지 밝혀야 정해지는 물리량. 화살표의 길이로 크기를, 화살표가 가리키는 쪽으로 방향을 나타낸다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-vec-same",
+   "text": "두 화살표의 길이와 가리키는 쪽이 모두 같으면 같은 벡터로 본다.",
+   "form": {
+    "condition": "두 벡터를 견주어 볼 때",
+    "type": "conditional",
+    "scope": "크기와 방향만으로 정해지는 자유 벡터에 한정",
+    "antecedent": {
+     "quantity": "크기와 방향의 일치",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "두 벡터의 동일 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "뒤집어 '같은 벡터이면 크기와 방향이 같다' 로 읽어도 참이라 오답 지문이 되지 못한다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-vec-translate",
+   "text": "평행 이동을 해도 길이와 방향이 그대로이므로 옮기기 전후는 같은 벡터다.",
+   "form": {
+    "condition": "이동 중에 길이와 방향이 달라지지 않을 때",
+    "type": "conditional",
+    "scope": "시작점의 위치가 뜻을 갖지 않는 자유 벡터"
+   },
+   "invertible": false,
+   "invertible_reason": "'같은 벡터를 평행 이동한 것이다' 로 뒤집어도 참이라 반드시 거짓이 되지 않는다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-vec-scalar",
+   "text": "시간·질량·온도·속력처럼 방향을 따지지 않는 양은 벡터가 아니라 스칼라다.",
+   "form": {
+    "condition": "물리량을 방향의 유무로 가를 때",
+    "type": "classification",
+    "scope": "고전 역학에서 다루는 물리량",
+    "antecedent": {
+     "quantity": "방향의 유무",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "벡터·스칼라 구분",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "스칼라 쪽에서 뒤집어 읽어도 참이라 오답 지문이 서지 않는다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "속력도 크기가 있으니 벡터다",
+   "why_wrong": "크기가 있다는 것만으로는 모자라고 방향이 함께 정해져야 벡터다. 속력은 속도에서 방향을 떼어 낸 크기뿐이라 스칼라다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-vec-scalar"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-force-composition"
+  },
+  {
+   "type": "next",
+   "target": "mech-force-resolution"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  13
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1
+}

@@ -1,0 +1,118 @@
+{
+ "id": "mech-escape-velocity",
+ "concept_key": "concept:escape-velocity",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "탈출 속도",
+ "aliases": [],
+ "notation": {
+  "hanja": "脫出速度",
+  "hanja_gloss": "脫 벗을 탈 · 出 날 출 · 速 빠를 속 · 度 법도 도",
+  "english": "escape velocity",
+  "symbol_display": "v = √(2GM/R)",
+  "symbol_plain": "v = (2GM/R)^(1/2)"
+ },
+ "definition": "행성 표면에서 던진 물체가 다시 끌려오지 않고 무한히 먼 곳까지 갈 수 있는, 가장 작은 처음 속력.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-esc-energy",
+   "text": "표면에서 잰 역학적 에너지가 0 이면 물체는 무한히 먼 곳까지 갈 수 있다.",
+   "form": {
+    "condition": "무한원점을 위치 에너지의 기준으로 삼을 때",
+    "type": "conditional",
+    "scope": "중력만 작용하고 저항을 무시한 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "기준을 정하고 값을 따진 명제로 뒤집어 읽어도 참이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-esc-planet",
+   "text": "행성의 질량이 클수록, 반지름이 작을수록 탈출 속도가 크다.",
+   "form": {
+    "condition": "표면에서 잰 값끼리 견줄 때",
+    "type": "direct",
+    "scope": "구형으로 볼 수 있는 천체의 표면",
+    "antecedent": {
+     "quantity": "행성의 질량",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "탈출 속도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "탈출 속도가 질량의 제곱근에 비례하므로 작아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "행성의 질량이 클수록 탈출 속도는 오히려 작아진다."
+  },
+  {
+   "id": "rel-esc-independent",
+   "text": "탈출 속도는 던지는 물체의 질량과 상관이 없다.",
+   "form": {
+    "condition": "역학적 에너지 식에서 물체의 질량이 약분될 때",
+    "type": "conditional",
+    "scope": "중력만 받는 물체"
+   },
+   "invertible": true,
+   "invertible_reason": "물체 질량이 식에서 지워지므로 질량에 따라 달라진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "무거운 물체일수록 탈출하는 데 더 큰 처음 속력이 필요하다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "무거운 물체일수록 지구를 벗어나려면 더 빠르게 던져야 한다",
+   "why_wrong": "탈출 속도 식에서 물체의 질량은 약분되어 사라진다. 질량이 커지면 운동 에너지와 위치 에너지가 같은 비율로 함께 커지기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-esc-independent"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-gravitational-potential-energy"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-mechanical-energy-in-projectile"
+  },
+  {
+   "type": "next",
+   "target": "mech-escape-velocity-and-atmosphere"
+  },
+  {
+   "type": "next",
+   "target": "mech-black-hole"
+  }
+ ],
+ "curriculum": [
+  "12역학01-05"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-02",
+ "pages": [
+  38,
+  39
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "지구의 탈출 속도 11.2 km/s 와 원 궤도 속력 7.9 km/s 는 교과서 39쪽의 곁주와 그림 I-31 에 실린 값이다. 명제 본문에는 수치를 넣지 않았다."
+ ]
+}

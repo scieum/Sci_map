@@ -1,0 +1,152 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  67
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-pressure-volume-relation",
+ "concept_key": "concept:boyle-law",
+ "registry_status": "reused",
+ "term": "기체의 압력과 부피 관계",
+ "aliases": [
+  "보일 법칙"
+ ],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "표제어에 고유어 '부피'가 들어 있어 전체를 한자어로 적을 수 없다. 교과서 표제를 그대로 표제어로 삼았다.",
+  "english": "Boyle's law",
+  "symbol_display": "PV = 일정",
+  "symbol_plain": "PV = const"
+ },
+ "definition": "온도와 분자 수를 고정해 둔 기체에서 압력과 부피가 서로 반비례한다는 관계. 두 양을 곱한 값이 일정하게 지켜진다.",
+ "relations": [
+  {
+   "id": "rel-pv-inverse",
+   "text": "온도와 분자 수가 그대로라면 기체의 부피를 줄인 만큼 압력이 커진다",
+   "form": {
+    "condition": "기체의 온도와 분자 수가 일정할 때",
+    "type": "inverse",
+    "scope": "밀폐된 용기 속 이상 기체",
+    "antecedent": {
+     "quantity": "부피",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "압력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "곱이 일정한 두 양이므로 한쪽이 줄 때 다른 쪽도 준다는 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "온도와 분자 수가 그대로라면 기체의 부피를 줄일수록 압력도 함께 작아진다"
+  },
+  {
+   "id": "rel-pv-collision",
+   "text": "부피가 줄면 분자가 벽에 부딪치는 횟수가 늘어나기 때문에 압력이 커진다",
+   "form": {
+    "condition": "분자의 평균 속력이 그대로일 때",
+    "type": "causal",
+    "scope": "무작위 운동을 하는 기체 분자 집단",
+    "antecedent": {
+     "quantity": "부피",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "벽과의 충돌 횟수",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "충돌 횟수가 압력을 만드는 까닭이므로 부피가 줄 때 충돌이 준다고 하면 압력이 커지는 사실과 어긋난다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "부피가 줄면 분자가 벽에 부딪치는 횟수가 줄어들기 때문에 압력이 커진다"
+  },
+  {
+   "id": "rel-pv-product",
+   "text": "압력과 부피를 곱한 값이 일정하므로 부피가 절반이 되면 압력은 두 배가 된다",
+   "form": {
+    "condition": "온도와 분자 수를 고정했을 때",
+    "type": "inverse",
+    "scope": "이상 기체로 다룰 수 있는 범위",
+    "antecedent": {
+     "quantity": "부피",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "압력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "곱이 일정하다는 관계에서 배수를 같은 쪽으로 놓으면 곱이 달라져 버린다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "부피가 절반이 되면 압력도 절반이 된다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "압력을 두 배로 하면 부피도 두 배가 된다",
+   "why_wrong": "온도가 일정할 때 압력과 부피는 반비례한다. 압력이 두 배면 부피는 절반이 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pv-product"
+  },
+  {
+   "text": "기체를 압축하면 분자 하나하나가 눌려서 작아진다",
+   "why_wrong": "이 관계에서 달라지는 것은 분자들이 차지한 공간이지 분자 자체의 크기가 아니다. 이상 기체 모형에서는 분자의 부피를 아예 무시한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pv-collision"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermal-motion",
+   "note": "벽과의 충돌이 압력을 만드는 데서 출발한다"
+  },
+  {
+   "type": "next",
+   "target": "mech-ideal-gas-law",
+   "note": "세 관계를 하나로 묶는 자리로 나아간다"
+  },
+  {
+   "type": "next",
+   "target": "mech-isothermal-process",
+   "note": "온도를 붙잡아 둔 열역학 과정으로 이어진다"
+  },
+  {
+   "type": "related",
+   "target": "mech-pressure-temperature-relation",
+   "note": "고정하는 양이 무엇인지가 갈림길이다"
+  },
+  {
+   "type": "same",
+   "target": "mate-boyle-law",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "notes": [
+  "교과서가 본문에 법칙 이름을 쓰지 않아 표제어를 교과서 표제로 두고 '보일 법칙'을 alias 로 남겼다 (C1 판단 유지). 키는 mate-1 카드와 같다.",
+  "C6 uncertain(고치지 않음) — rel-pv-product 의 앞 절은 정의 둘째 문장의 되풀이고 뒤 절은 rel-pv-inverse 의 수치 사례다. 다만 배수 관계를 짚는 것이 rel-pv-inverse 가 못 하는 몫이라고 볼 여지가 있어 고치지 않았다 — C8 에서 정해 주기 바란다."
+ ]
+}

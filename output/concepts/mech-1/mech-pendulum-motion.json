@@ -1,0 +1,110 @@
+{
+ "id": "mech-pendulum-motion",
+ "concept_key": "concept:pendulum-motion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "진자 운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "振子運動",
+  "hanja_gloss": "振 떨칠 진 · 子 아들 자 · 運 옮길 운 · 動 움직일 동",
+  "english": "pendulum motion"
+ },
+ "definition": "한 점에 매달린 물체가 원 궤도의 일부를 오가며 되풀이하는 운동. 물체에는 중력과 실의 장력이 함께 걸린다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-pen-netforce",
+   "text": "위치마다 장력의 크기와 방향이 달라지므로 진자에 걸린 알짜힘도 계속 변한다.",
+   "form": {
+    "condition": "진자가 궤도 위를 움직이는 동안",
+    "type": "causal",
+    "scope": "실에 매달려 흔들리는 진자"
+   },
+   "invertible": false,
+   "invertible_reason": "앞뒤를 맞바꾸어도 참이라 반드시 거짓인 문장을 만들 수 없다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pen-direction",
+   "text": "알짜힘이 궤도의 접선과 어긋나 있기 때문에 진자가 가는 쪽이 바뀐다.",
+   "form": {
+    "condition": "진자가 최고점을 지난 뒤",
+    "type": "causal",
+    "scope": "원 궤도의 일부를 따르는 진자"
+   },
+   "invertible": false,
+   "invertible_reason": "'방향이 바뀌면 알짜힘이 어긋나 있다' 로 뒤집어도 참이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pen-bottom",
+   "text": "가장 낮은 곳에서 진자는 수평으로 움직이지만 알짜힘은 연직 위쪽을 향한다.",
+   "form": {
+    "condition": "진자가 궤도의 최하점을 지날 때",
+    "type": "conditional",
+    "scope": "실 길이가 일정한 진자"
+   },
+   "invertible": true,
+   "invertible_reason": "최하점에서는 장력이 중력보다 커 알짜힘이 위를 향하므로 아래라고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "가장 낮은 곳에서 진자에 걸린 알짜힘은 연직 아래쪽을 향한다."
+  },
+  {
+   "id": "rel-pen-top",
+   "text": "최고점에서는 속도가 0 이라 진자는 알짜힘이 가리키는 쪽으로 움직이기 시작한다.",
+   "form": {
+    "condition": "진자가 궤도의 끝에 이른 순간",
+    "type": "causal",
+    "scope": "마찰과 공기 저항을 무시한 진자"
+   },
+   "invertible": false,
+   "invertible_reason": "한 순간의 출발 방향을 짚은 서술이라 뒤집을 자리가 없다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "진자가 가장 낮은 곳을 지날 때는 알짜힘이 0 이다",
+   "why_wrong": "최하점에서도 원 궤도를 돌려면 중심 쪽 알짜힘이 있어야 한다. 그래서 장력이 중력보다 크다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pen-bottom"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-centripetal-force"
+  },
+  {
+   "type": "related",
+   "target": "mech-uniform-circular-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-03"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-03",
+ "pages": [
+  27
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

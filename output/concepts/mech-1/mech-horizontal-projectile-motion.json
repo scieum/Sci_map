@@ -1,0 +1,115 @@
+{
+ "id": "mech-horizontal-projectile-motion",
+ "concept_key": "concept:horizontal-projectile-motion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "수평으로 던진 물체의 운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "풀어 쓴 구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "horizontal projectile motion"
+ },
+ "definition": "수평으로 밀어 던진 뒤 중력만 받으며 날아가는 물체의 운동. 수평 쪽은 등속도, 연직 쪽은 등가속도로 갈라 볼 수 있다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-hpm-horizontal",
+   "text": "공기 저항을 무시하면 수평 방향 알짜힘이 0이라 수평 속도가 달라지지 않는다.",
+   "form": {
+    "condition": "공기 저항을 무시할 때",
+    "type": "causal",
+    "scope": "지표 근처에서 중력만 받는 물체",
+    "antecedent": {
+     "quantity": "수평 방향 속도",
+     "direction": "일정"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "앞뒤를 맞바꾸어도 참이라 반드시 거짓인 문장을 만들 수 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-hpm-time",
+   "text": "던지는 수평 속력을 아무리 키워도 바닥에 닿기까지 걸리는 시간은 그대로다.",
+   "form": {
+    "condition": "던진 높이가 같고 공기 저항을 무시할 때",
+    "type": "conditional",
+    "scope": "지표 근처에서 중력만 받는 물체",
+    "antecedent": {
+     "quantity": "던진 수평 속력",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "낙하 시간",
+     "direction": "일정"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "낙하 시간은 높이와 중력 가속도만으로 정해지므로 수평 속력에 따라 달라진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "수평 속력을 크게 할수록 바닥에 닿기까지 걸리는 시간이 길어진다."
+  },
+  {
+   "id": "rel-hpm-vertical",
+   "text": "연직 방향으로는 가만히 놓은 물체와 똑같은 크기의 가속도를 갖는다.",
+   "form": {
+    "condition": "중력 말고 다른 힘이 걸리지 않을 때",
+    "type": "conditional",
+    "scope": "지표 근처, 공기 저항을 무시한 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "두 운동의 연직 가속도가 같다는 말이라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "빠르게 던진 공일수록 늦게 바닥에 닿는다",
+   "why_wrong": "수평 운동과 연직 운동은 서로 간섭하지 않는다. 바닥에 닿는 시간은 던진 높이로만 정해진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-hpm-time"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-net-force"
+  },
+  {
+   "type": "next",
+   "target": "mech-projectile-motion"
+  },
+  {
+   "type": "same",
+   "target": "isci1-horizontal-projectile-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-02"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-02",
+ "pages": [
+  18,
+  19
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "「통합과학1」 isci1-horizontal-projectile-motion 과 concept_key 가 같아 same 을 걸었다 (R9). 사전 미등록 키라 G3 에서 함께 봐야 한다."
+ ]
+}

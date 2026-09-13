@@ -1,0 +1,106 @@
+{
+ "id": "mech-centripetal-acceleration",
+ "concept_key": "concept:centripetal-acceleration",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "구심 가속도",
+ "aliases": [],
+ "notation": {
+  "hanja": "求心加速度",
+  "hanja_gloss": "求 구할 구 · 心 마음 심 · 加 더할 가 · 速 빠를 속 · 度 법도 도",
+  "english": "centripetal acceleration",
+  "symbol_display": "a = v²/r",
+  "symbol_plain": "a = v^2/r"
+ },
+ "definition": "원운동하는 물체가 갖는 가속도. 크기는 속력을 제곱해 반지름으로 나눈 값이고, 방향은 언제나 원의 중심 쪽이다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ca-speed",
+   "text": "반지름이 같을 때 속력을 2배로 하면 구심 가속도는 4배가 된다.",
+   "form": {
+    "condition": "궤도 반지름이 일정할 때",
+    "type": "direct",
+    "scope": "등속 원운동",
+    "antecedent": {
+     "quantity": "속력",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "구심 가속도의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "속력의 제곱에 비례하므로 작아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "반지름이 같을 때 속력을 2배로 하면 구심 가속도는 오히려 작아진다."
+  },
+  {
+   "id": "rel-ca-direction",
+   "text": "가속도의 방향은 속도 변화량이 가리키는 쪽이므로 원의 중심을 향한다.",
+   "form": {
+    "condition": "아주 짧은 시간 동안의 속도 변화를 볼 때",
+    "type": "causal",
+    "scope": "속력이 일정한 원운동"
+   },
+   "invertible": true,
+   "invertible_reason": "속도 변화량이 중심 쪽을 가리키므로 바깥쪽이라고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "등속 원운동하는 물체의 가속도는 원의 바깥쪽을 향한다."
+  },
+  {
+   "id": "rel-ca-constant",
+   "text": "등속 원운동에서 구심 가속도는 크기가 일정하고 방향만 쉼 없이 바뀐다.",
+   "form": {
+    "condition": "속력과 궤도 반지름이 일정할 때",
+    "type": "conditional",
+    "scope": "등속 원운동"
+   },
+   "invertible": false,
+   "invertible_reason": "상태를 서술한 명제라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "구심 가속도는 원의 바깥쪽을 향한다",
+   "why_wrong": "속도 변화량이 중심 쪽을 가리키므로 가속도도 중심 쪽이다. 바깥으로 느껴지는 것은 회전하는 좌표계에서 나타나는 원심력이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ca-direction"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-angular-velocity"
+  },
+  {
+   "type": "next",
+   "target": "mech-centripetal-force"
+  }
+ ],
+ "curriculum": [
+  "12역학01-03"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-03",
+ "pages": [
+  25
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

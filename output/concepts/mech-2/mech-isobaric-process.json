@@ -1,0 +1,123 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  72
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-isobaric-process",
+ "concept_key": "concept:isobaric-process",
+ "registry_status": "new",
+ "term": "등압 과정",
+ "aliases": [],
+ "notation": {
+  "hanja": "等壓過程",
+  "hanja_gloss": "等 같을 등 · 壓 누를 압 · 過 지날 과 · 程 길 정",
+  "english": "isobaric process",
+  "symbol_display": "P = 일정, Q = W + ΔU",
+  "symbol_plain": "P = const, Q = W + deltaU"
+ },
+ "definition": "압력을 그대로 유지한 채 부피가 달라지는 열역학 과정. 부피와 온도가 함께 변하므로 드나든 열이 일과 내부 에너지 변화 양쪽으로 갈린다.",
+ "relations": [
+  {
+   "id": "rel-isb-split",
+   "text": "등압 팽창에서 흡수한 열은 기체가 한 일과 내부 에너지 증가로 나뉘어 쓰인다",
+   "form": {
+    "condition": "압력을 일정하게 유지한 채 천천히 가열할 때",
+    "type": "conditional",
+    "scope": "실린더 속 일정량의 이상 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "열이 두 몫으로 갈린다는 등식이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-isb-together",
+   "text": "압력이 일정하면 부피가 늘어날 때 온도도 함께 올라간다",
+   "form": {
+    "condition": "기체의 압력과 분자 수가 일정할 때",
+    "type": "direct",
+    "scope": "이상 기체 법칙이 성립하는 범위",
+    "antecedent": {
+     "quantity": "부피",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "절대 온도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "압력이 일정할 때 부피와 절대 온도는 비례하므로 반대 방향에 놓으면 거짓이 된다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "압력이 일정하면 부피가 늘어날 때 온도는 내려간다"
+  },
+  {
+   "id": "rel-isb-work",
+   "text": "등압 과정에서 기체가 한 일은 일정한 압력에 부피 변화량을 곱해 바로 구할 수 있다",
+   "form": {
+    "condition": "압력이 과정 내내 일정할 때",
+    "type": "conditional",
+    "scope": "등압 팽창·압축"
+   },
+   "invertible": false,
+   "invertible_reason": "일을 셈하는 방법을 밝힌 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "등압 과정에서 기체에 가한 열은 모두 기체가 한 일이 된다",
+   "why_wrong": "부피와 함께 온도도 올라가므로 열의 일부는 내부 에너지를 늘리는 데 쓰인다. 가한 열이 곧 한 일이 되는 것은 등온 과정이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-isb-split"
+  },
+  {
+   "text": "압력이 일정하면 기체의 온도도 일정하다",
+   "why_wrong": "압력이 일정해도 부피가 달라지면 절대 온도가 함께 달라진다. 일정한 것은 압력 하나뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-isb-together"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "이 법칙에 조건을 넣어 얻는다"
+  },
+  {
+   "type": "related",
+   "target": "mech-work-done-by-gas",
+   "note": "여기서 일 계산식이 그대로 쓰인다"
+  },
+  {
+   "type": "related",
+   "target": "mech-temperature-volume-relation",
+   "note": "압력이 일정할 때의 온도·부피 관계를 쓴다"
+  },
+  {
+   "type": "related",
+   "target": "mech-isochoric-process",
+   "note": "무엇을 고정했는지가 갈림길이다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 4,
+ "role": "supporting"
+}

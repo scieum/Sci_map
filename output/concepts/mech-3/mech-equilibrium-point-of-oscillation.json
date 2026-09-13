@@ -1,0 +1,123 @@
+{
+  "id": "mech-equilibrium-point-of-oscillation",
+  "concept_key": "concept:equilibrium-point-of-oscillation",
+  "registry_status": "new",
+  "term": "단진동의 평형점",
+  "notation": {
+    "hanja": "單振動 平衡點",
+    "hanja_gloss": "單 홑 단 · 振 떨칠 진 · 動 움직일 동 · 平 평평할 평 · 衡 저울대 형 · 點 점 점",
+    "english": "equilibrium point of oscillation"
+  },
+  "definition": "단진동하는 물체에 작용하는 알짜힘이 0 이 되는 지점으로, 왕복 운동의 중심이 되는 자리.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-equilibrium-speed-max",
+      "text": "물체가 평형점에 가까워질수록 속력이 커지고, 평형점을 지나는 순간 가장 빠르다.",
+      "form": {
+        "condition": "마찰과 공기 저항을 무시할 때",
+        "type": "inverse",
+        "scope": "역학적 에너지가 보존되는 단진동",
+        "antecedent": {
+          "quantity": "평형점까지의 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "에너지 보존에 따라 평형점에 가까울수록 운동 에너지가 커지므로 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체가 평형점에 가까워질수록 속력이 작아지고, 평형점을 지나는 순간 가장 느리다."
+    },
+    {
+      "id": "rel-equilibrium-net-force-zero",
+      "text": "평형점에서는 알짜힘이 0 이므로 그 순간 물체의 가속도도 0 이다.",
+      "form": {
+        "condition": "단진동이 이어지는 동안",
+        "type": "causal",
+        "scope": "단진동하는 물체",
+        "antecedent": {
+          "quantity": "알짜힘",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "가속도",
+          "direction": "일정"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "알짜힘과 가속도는 늘 같은 방향이라 방향을 맞바꾼 문장을 세울 수 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-equilibrium-vertical",
+      "text": "연직으로 매달린 용수철에서는 탄성력과 중력의 크기가 같아지는 자리가 진동의 중심이 된다.",
+      "form": {
+        "condition": "용수철이 연직 방향으로 진동할 때",
+        "type": "conditional",
+        "scope": "연직 용수철 진자"
+      },
+      "invertible": false,
+      "invertible_reason": "두 힘의 평형 지점을 가리키는 서술이라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평형점에서는 알짜힘이 0 이므로 물체도 그 자리에 멈춘다.",
+      "why_wrong": "알짜힘이 0 인 것은 속도가 변하지 않는다는 뜻이지 속도가 0 이라는 뜻이 아니다. 오히려 평형점에서 속력이 가장 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-equilibrium-speed-max"
+    },
+    {
+      "text": "연직으로 매단 용수철 진자의 평형점은 용수철이 본디 길이일 때의 위치다.",
+      "why_wrong": "연직으로 매달면 중력 때문에 용수철이 이미 늘어난 자리에서 두 힘이 균형을 이루고, 그 자리가 진동의 중심이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-equilibrium-vertical"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mech-simple-harmonic-motion",
+      "note": "'평형점을 중심으로 왕복' 을 읽으려면 이 자리를 알아야 한다"
+    },
+    {
+      "type": "related",
+      "target": "mech-acceleration-displacement-relation",
+      "note": "평형점은 변위가 0 인 자리이므로 가속도도 0 이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-01"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-01",
+  "pages": [
+    97
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 97쪽 그림 2(용수철에 매달려 진동하는 물체).",
+    "C8 확인 요청(C6 uncertain): rel-equilibrium-net-force-zero 의 앞 절('평형점에서는 알짜힘이 0')은 definition 의 되풀이지만 뒤 절('그러므로 가속도도 0')은 뉴턴 제2법칙이라는 정의 밖 정보를 싣는다. 앞 절을 form.condition 으로 내릴지는 사람이 정한다 — 고치지 않았다."
+  ]
+}

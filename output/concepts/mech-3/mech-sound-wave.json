@@ -1,0 +1,139 @@
+{
+  "id": "mech-sound-wave",
+  "concept_key": "concept:sound-wave",
+  "registry_status": "new",
+  "term": "음파",
+  "notation": {
+    "hanja": "音波",
+    "hanja_gloss": "音 소리 음 · 波 물결 파",
+    "english": "sound wave"
+  },
+  "definition": "공기 같은 매질이 진행 방향으로 밀리고 당겨지며 전해지는 종파. 우리가 소리로 듣는 파동이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sound-is-longitudinal",
+      "text": "음파는 매질의 진동 방향과 진행 방향이 나란한 종파에 속한다.",
+      "form": {
+        "condition": "공기 등 매질을 지나갈 때",
+        "type": "classification",
+        "scope": "소리",
+        "antecedent": {
+          "quantity": "음파",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "파동의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "갈래를 밝히는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-02",
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sound-amplitude-loudness",
+      "text": "공기가 진동하는 폭이 클수록 소리는 크게 들린다.",
+      "form": {
+        "condition": "듣는 거리와 진동수가 같을 때",
+        "type": "direct",
+        "scope": "사람이 듣는 음파",
+        "antecedent": {
+          "quantity": "진폭",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "소리의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진폭과 소리의 크기는 함께 커지므로 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공기가 진동하는 폭이 클수록 소리는 작게 들린다."
+    },
+    {
+      "id": "rel-sound-frequency-pitch",
+      "text": "진동수가 큰 음파일수록 높은 소리로 들린다.",
+      "form": {
+        "condition": "같은 매질을 지나는 음파끼리 견줄 때",
+        "type": "direct",
+        "scope": "가청 범위 안의 음파",
+        "antecedent": {
+          "quantity": "진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "소리의 높이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진동수와 음의 높이는 함께 커지므로 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 큰 음파일수록 낮은 소리로 들린다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소리의 높낮이는 진폭이 정한다.",
+      "why_wrong": "높낮이를 정하는 것은 진동수이고, 진폭이 정하는 것은 소리의 크기다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sound-frequency-pitch"
+    },
+    {
+      "text": "음파는 마루와 골이 있는 횡파다.",
+      "why_wrong": "음파는 종파여서 밀한 곳과 소한 곳이 번갈아 생긴다. 그래프에서 마루처럼 그리는 것은 진폭을 보기 쉽게 옮긴 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sound-is-longitudinal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-elastic-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-transverse-and-longitudinal-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-sound-wave-interference"
+    },
+    {
+      "type": "next",
+      "target": "mech-standing-wave-in-pipe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-04"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-02",
+  "pages": [
+    116,
+    117
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C5 재태깅: rel-sound-is-longitudinal 은 탄성파의 갈래를 말하는 명제라 03-04 에 03-02 를 병기했다(근거 쪽도 101쪽·117쪽 곁주로 갈린다)."
+  ]
+}

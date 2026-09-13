@@ -1,0 +1,126 @@
+{
+  "id": "mech-node-and-antinode",
+  "concept_key": "concept:node-and-antinode",
+  "registry_status": "new",
+  "term": "마디와 배",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'마디' 와 '배' 는 고유어다. 표제어에 대응하는 한자어 표기를 쓰지 않는다.",
+    "english": "node and antinode"
+  },
+  "definition": "정상파에서 변위가 늘 0 인 지점을 마디, 마디 사이에서 가장 크게 진동하는 지점을 배라고 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-node-zero",
+      "text": "마디에서는 두 파동이 언제나 서로 상쇄되어 매질이 움직이지 않는다.",
+      "form": {
+        "condition": "정상파가 유지되는 동안",
+        "type": "causal",
+        "scope": "정상파",
+        "antecedent": {
+          "quantity": "마디",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "변위",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "마디는 늘 변위가 0 인 자리이므로 크게 진동한다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마디에서는 두 파동이 언제나 보강되어 매질이 가장 크게 움직인다."
+    },
+    {
+      "id": "rel-antinode-keeps-vibrating",
+      "text": "마디가 아닌 지점들은 저마다 진폭이 달라도 시간이 흐르는 동안 제자리에서 계속 진동한다.",
+      "form": {
+        "condition": "정상파가 유지되는 동안",
+        "type": "conditional",
+        "scope": "정상파에서 마디를 뺀 모든 지점(120쪽 그림 25)",
+        "antecedent": {
+          "quantity": "마디가 아닌 지점",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "진동 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "정상파에서 멈춰 있는 자리는 마디뿐이므로 나머지 지점도 멈춘다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마디가 아닌 지점들도 시간이 흐르면 진동을 멈추고 가만히 있다."
+    },
+    {
+      "id": "rel-node-antinode-alternate",
+      "text": "마디와 마디의 한가운데에 배가 놓여, 마디와 배가 번갈아 나타난다.",
+      "form": {
+        "condition": "정상파가 한 매질 위에 만들어졌을 때",
+        "type": "classification",
+        "scope": "정상파의 배치"
+      },
+      "invertible": false,
+      "invertible_reason": "자리 관계를 밝히는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정상파의 마디에서도 매질이 크게 진동한다.",
+      "why_wrong": "마디는 두 파동이 늘 상쇄되는 자리라 변위가 0 이다. 크게 진동하는 곳은 배다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-node-zero"
+    },
+    {
+      "text": "마디는 파동의 마루에 해당하는 지점이다.",
+      "why_wrong": "마루는 한 파동에서 변위가 가장 큰 자리이고, 마디는 정상파에서 변위가 늘 0 인 자리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-node-antinode-alternate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-standing-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-standing-wave-on-string"
+    },
+    {
+      "type": "next",
+      "target": "mech-standing-wave-in-pipe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    120
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 120쪽 그림 25(정상파의 배와 마디).",
+    "C6 수정: rel-antinode-max('배에서 진폭이 가장 크다')는 definition 의 되풀이여서 접었다. 그 자리에 120쪽 본문의 '마디를 제외한 점들은 계속 진동한다' 를 rel-antinode-keeps-vibrating 으로 세웠다."
+  ]
+}

@@ -1,0 +1,125 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  68,
+  71
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-ideal-gas",
+ "concept_key": "concept:ideal-gas",
+ "registry_status": "reused",
+ "term": "이상 기체",
+ "aliases": [],
+ "notation": {
+  "hanja": "理想氣體",
+  "hanja_gloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체",
+  "english": "ideal gas"
+ },
+ "definition": "기체를 제각각의 속력과 방향으로 무작위 운동을 하는 점 입자 집단으로 본 모형. 분자 자체의 부피를 무시하고, 분자끼리는 부딪칠 때만 상호작용한다고 둔다.",
+ "relations": [
+  {
+   "id": "rel-ig-energy",
+   "text": "이상 기체는 분자 사이 힘을 무시하므로 위치 에너지를 셈하지 않고, 내부 에너지가 분자들의 운동 에너지 합만으로 정해진다",
+   "form": {
+    "condition": "분자 사이 힘을 무시할 수 있는 모형으로 다룰 때",
+    "type": "causal",
+    "scope": "이상 기체로 다루는 일정량의 기체",
+    "antecedent": {
+     "quantity": "분자들의 운동 에너지 합",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "내부 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "모형이 분자 사이 힘을 아예 버렸으므로 위치 에너지가 내부 에너지에 들어간다는 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "이상 기체의 내부 에너지에는 분자 사이 힘에 의한 위치 에너지도 들어간다"
+  },
+  {
+   "id": "rel-ig-range",
+   "text": "밀도가 아주 높거나 온도가 아주 낮은 경우처럼 특수한 상황이 아니면 실제 기체도 이 모형으로 잘 설명된다",
+   "form": {
+    "condition": "기체가 놓인 밀도와 온도 조건을 따질 때",
+    "type": "conditional",
+    "scope": "특수 조건을 벗어난 보통의 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "모형이 잘 맞는 조건을 짚은 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ig-system",
+   "text": "열역학 과정을 다룰 때는 실린더 속 이상 기체만을 계로 잡고 나머지는 주변 환경으로 둔다",
+   "form": {
+    "condition": "열역학 과정을 분석할 때",
+    "type": "conditional",
+    "scope": "실린더와 피스톤으로 밀폐한 일정량의 이상 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "계를 어디로 잡는지 정한 약속이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "이상 기체는 실제로 존재하는 특별한 기체다",
+   "why_wrong": "이상 기체는 계산을 다루기 쉽게 만든 모형이지 실재하는 물질이 아니다. 다만 보통의 조건에서는 실제 기체가 이 모형에 가깝게 행동한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ig-range"
+  },
+  {
+   "text": "이상 기체 모형은 어떤 조건에서나 그대로 맞는다",
+   "why_wrong": "밀도가 매우 높거나 온도가 매우 낮으면 분자의 부피와 분자 사이 힘을 더는 무시할 수 없어 어긋나기 시작한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ig-range"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-ideal-gas-law",
+   "note": "이 모형 위에서 세워진 관계식이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-pressure-volume-relation",
+   "note": "이 모형으로 설명되는 관계 가운데 하나다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-motion",
+   "note": "점 입자의 무작위 운동이 곧 열운동이다"
+  },
+  {
+   "type": "same",
+   "target": "mate-ideal-gas",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "notes": [
+  "C6 결함 수정 — rel-ig-point 가 정의 둘째 문장과 낱말 단위로 겹쳤다. 모형의 가정을 되풀이하는 대신 그 가정이 낳는 결과(내부 에너지가 운동 에너지 합뿐이라는 것)로 옮기고 id 를 rel-ig-energy 로 바꿨다. 오개념[0]('실재하는 특별한 기체다')은 모형과 실제 기체를 가르는 rel-ig-range 로 옮겼다."
+ ]
+}

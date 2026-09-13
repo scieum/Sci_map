@@ -1,0 +1,127 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  63,
+  64
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-specific-heat",
+ "concept_key": "concept:specific-heat",
+ "registry_status": "reused",
+ "term": "비열",
+ "aliases": [],
+ "notation": {
+  "hanja": "比熱",
+  "hanja_gloss": "比 견줄 비 · 熱 더울 열",
+  "english": "specific heat",
+  "symbol_display": "Q = cmΔT",
+  "symbol_plain": "Q = cm deltaT"
+ },
+ "definition": "어떤 물질 1 kg의 온도를 1 ℃ 올리는 데 들어가는 열에너지의 양. 물질마다 값이 달라 물질을 가려내는 특성으로 쓰인다.",
+ "relations": [
+  {
+   "id": "rel-sh-temp",
+   "text": "질량이 같은 두 물질에 같은 열량을 주면 비열이 큰 쪽의 온도가 덜 오른다",
+   "form": {
+    "condition": "질량과 가한 열량을 같게 두었을 때",
+    "type": "inverse",
+    "scope": "상태 변화가 일어나지 않는 온도 구간",
+    "antecedent": {
+     "quantity": "비열",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온도 변화",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "같은 열량에서 온도 변화는 비열에 반비례하므로 방향을 맞바꾸면 식이 깨진다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "질량이 같은 두 물질에 같은 열량을 주면 비열이 큰 쪽의 온도가 더 많이 오른다"
+  },
+  {
+   "id": "rel-sh-formula",
+   "text": "출입한 열량은 비열과 질량, 온도 변화량을 모두 곱한 값으로 구한다",
+   "form": {
+    "condition": "온도만 바뀌고 상태는 그대로일 때",
+    "type": "direct",
+    "scope": "고체·액체·기체의 온도 변화 구간"
+   },
+   "invertible": false,
+   "invertible_reason": "세 양의 곱으로 정의한 관계식이라 방향을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sh-coast",
+   "text": "물은 비열이 커서 온도가 천천히 변하므로 해안 지역은 내륙보다 겨울이 덜 춥고 여름이 덜 덥다",
+   "form": {
+    "condition": "바다와 접한 지역과 내륙을 견줄 때",
+    "type": "causal",
+    "scope": "물의 비열이 다른 물질보다 큰 데서 오는 결과"
+   },
+   "invertible": false,
+   "invertible_reason": "여러 조건이 얽힌 기후 현상이라 두 양을 맞바꾼 문장이 반드시 거짓이라고 말할 수 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "비열이 큰 물질은 열을 잘 받아들이지 못한다",
+   "why_wrong": "비열이 크다는 것은 같은 온도만큼 올리는 데 더 많은 열이 든다는 뜻이지 열을 받지 못한다는 뜻이 아니다. 오히려 같은 온도 변화에 더 많은 열을 품는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sh-temp"
+  },
+  {
+   "text": "같은 열을 가하면 어떤 물질이든 온도가 똑같이 올라간다",
+   "why_wrong": "온도 변화는 비열과 질량에 따라 달라진다. 물과 금속에 같은 열을 주면 금속의 온도가 훨씬 빨리 오른다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sh-formula"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-transfer",
+   "note": "열이 오간 뒤 무엇이 달라지는지를 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-heat-capacity",
+   "note": "질량까지 합쳐 본 양으로 나아간다"
+  },
+  {
+   "type": "next",
+   "target": "mech-latent-heat",
+   "note": "온도가 오르지 않는 구간의 열로 나아간다"
+  },
+  {
+   "type": "same",
+   "target": "mate-specific-heat",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "notes": [
+  "C6 uncertain(고치지 않음) — 같은 concept_key(concept:specific-heat)로 묶인 mate-specific-heat 는 비열의 기준량을 1 g 으로, 이 카드는 1 kg 으로 적는다. 물리 교과서와 화학 교과서의 관행 차이라 명제끼리 어긋나지는 않지만, 같은 키로 묶여 D1 문항과 G 링크에서 함께 읽히면 학생이 부딪힌다. rel-sh-formula 의 계산에도 단위가 걸린다. 두 카드를 같은 키로 둘지, 기준량 차이를 카드에 드러낼지 G3·C8 에서 정해 주기 바란다."
+ ]
+}

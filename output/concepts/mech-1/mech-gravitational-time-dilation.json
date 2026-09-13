@@ -1,0 +1,118 @@
+{
+ "id": "mech-gravitational-time-dilation",
+ "concept_key": "concept:gravitational-time-dilation",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "중력에 의한 시간 지연",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "gravitational time dilation"
+ },
+ "definition": "시공간이 굽은 곳일수록 시간이 더디게 흐르는 현상. 중력이 세게 작용하는 것으로 관찰되는 지점일수록 뚜렷하게 나타난다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-gtd-curvature",
+   "text": "시공간이 크게 휘어진 곳일수록 시간이 더디게 흐른다.",
+   "form": {
+    "condition": "두 지점의 시간 흐름을 견줄 때",
+    "type": "inverse",
+    "scope": "중력이 작용하는 것으로 관찰되는 시공간",
+    "antecedent": {
+     "quantity": "시공간이 휘어진 정도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "시간이 흐르는 빠르기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "휘어짐이 클수록 느려지므로 빨라진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "시공간이 크게 휘어진 곳일수록 시간이 빠르게 흐른다."
+  },
+  {
+   "id": "rel-gtd-height",
+   "text": "같은 천체 둘레에서는 지표면에 가까운 지점일수록 시간이 느리게 간다.",
+   "form": {
+    "condition": "높이만 다르고 다른 조건이 같을 때",
+    "type": "direct",
+    "scope": "지구 둘레의 중력장",
+    "antecedent": {
+     "quantity": "지표면으로부터의 높이",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "시간이 흐르는 빠르기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "낮을수록 느려지므로 빨라진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "지표면에 가까운 지점일수록 시간이 빠르게 간다."
+  },
+  {
+   "id": "rel-gtd-gps",
+   "text": "인공위성의 시간은 지표면보다 빠르게 흐르므로 위성 항법 장치는 시간 보정을 한다.",
+   "form": {
+    "condition": "위성이 지표면보다 중력이 약한 곳에 있을 때",
+    "type": "causal",
+    "scope": "특수·일반 상대론 효과를 함께 따진 위성 항법"
+   },
+   "invertible": true,
+   "invertible_reason": "두 효과를 합하면 위성 쪽이 빠르므로 느리다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "인공위성의 시간은 지표면보다 느리게 흐르므로 시간 보정이 필요하다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "인공위성은 빠르게 움직이므로 위성의 시간은 지표면보다 느리게 간다",
+   "why_wrong": "운동에 의한 지연도 있지만 중력이 약해 생기는 앞섬이 더 크다. 그래서 결과적으로는 위성의 시간이 더 빠르게 간다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gtd-gps"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-spacetime-curvature"
+  },
+  {
+   "type": "related",
+   "target": "mech-black-hole"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  46,
+  47
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "47쪽 그림 I-47 은 하루당 중력 효과 약 45.8 µs 빠름 · 운동 효과 약 7.2 µs 느림 · 합쳐 약 36.8 µs 빠름으로 적고 있다. 흔히 인용되는 38 µs 와 값이 다르므로 명제 본문에는 수치를 넣지 않았다 — 수치를 넣을지 C8 에서 판단해 달라.",
+  "★C8 판단 요청 (C6 uncertain) — rel-gtd-gps 의 문면이 '인공위성' 으로 열려 있다. 두 효과의 대소는 궤도 고도에 달려 있어 낮은 궤도에서는 운동에 의한 지연이 이겨 inverted_text 쪽이 설 수 있는데, 그 한정은 form.scope 에만 있고 D1 은 inverted_text 만 떼어다 쓴다. 다만 교과서 47쪽 본문도 똑같이 일반화해 적고 그 절이 '블랙홀과 위성 항법 장치' 라 맥락상 위성 항법 위성을 가리킨다. 카드가 교과서 문면을 따른 것이라 고치지 않았다. 문면에 위성 항법 맥락을 드러낼지, 아니면 invertible 을 false 로 내릴지 사람이 정해 달라."
+ ]
+}

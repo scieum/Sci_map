@@ -3255,3 +3255,216 @@ subjects:
     extras:
       wrapup: 210
       project: 216
+- code: mech
+  name: 역학과 에너지
+  course_type: 진로선택
+  grade: null
+  curriculum: 2022 개정
+  standard_prefix: 12역학
+  textbook:
+    file: inbox/textbook/22개정/물리학/고_역학과 에너지(최혁준)_교과서_2쇄.pdf
+    publisher: 천재교과서
+    author: 최혁준 외
+    pages: 140
+    note: |-
+      ★위계는 「물리학」과 같다 — 대단원 > 중단원(1~) > **소단원(01~)**. 같은 저자·같은 판형이라 번호가 한 칸 밀려 있다. sections 의 numeral 이 '1'·'2' 이고 topics 가 '01'~'03' 인 것을 오타로 보지 마라.
+
+      인쇄 쪽수 == PDF 쪽수 (1-base). 앞부속 p1~8, 부록 p132~140(측정 단위 132 · 정답과 해설 134 · 자료 출처 140)은 본문이 아니다.
+
+      ★mediabox == cropbox = (36.85, -36.85, 646.299, 756.851) 로 140쪽이 모두 같다. 「지구과학」과 같은 상자이고 「물리학」(원점 (0,0))과는 다르다. ★C7 렌더 좌표 보정값을 실측했다 — scale=1 에서 render = (x - 36.85, top + 36.85) 다. y 부호가 +다(「생물의 유전」과 반대). 세 쪽(13·59·101)의 잉크 프로파일 상관과 낱말 상자 안 잉크 밀도(0.35~0.44 vs 대안 0.10~0.23) 두 방법이 같은 값을 준다.
+
+      대단원 경계는 표지 쪽(9 · 55 · 93)부터다. 중단원 표지가 2쪽(예: 10~11)이고 그 뒤부터 소단원이다. 중단원 끝 2쪽이 「중단원 마무리」라 review 를 그 첫 쪽으로 두었다. 대단원 끝은 「대단원 마무리」 3쪽 + 시민 면 1쪽이고 시민 면 이름이 대단원마다 다르다 — Ⅰ 과학 아는 민주 시민, Ⅱ 행동하는 생태 시민, Ⅲ 과학하는 미래 시민.
+  guide:
+    file: inbox/textbook/22개정/물리학/고_역학과 에너지(최혁준)_지도서_2쇄.pdf
+    pages: 320
+    note: |-
+      표준 배치다 — 총론 '나. 성취기준' 절(19~21쪽)에 띄어쓰기가 살아 있어 1차, 각론의 「최소 성취 수준 평가」 쪽(160~242, 소단원마다 한 쪽)이 대조본이다.
+
+      ★각론 166쪽의 곁주 코드가 [12역학02-01] 로 오식돼 있다. 그 쪽 본문은 01-04(케플러 법칙)다. 진짜 02-01 은 198쪽이다. standards.yaml 의 두 건을 사람이 짝만 바로잡아 crosscheck 를 '교사 확정' 으로 두었으니, extract_standards.py 를 다시 돌리면 01-04 미대조 · 02-01 불일치로 되돌아간다는 것을 기억해라.
+  units:
+  - id: mech-1
+    numeral: Ⅰ
+    title: 시공간과 운동
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 9
+    - 53
+    sections:
+    - id: mech-1-1
+      numeral: '1'
+      title: 힘과 운동
+      pages:
+      - 10
+      - 29
+      review: 28
+      topics:
+      - id: mech-1-1-01
+        numeral: '01'
+        title: 힘의 합성
+        pages:
+        - 12
+        - 17
+      - id: mech-1-1-02
+        numeral: '02'
+        title: 포물선 운동과 역학적 에너지 보존
+        pages:
+        - 18
+        - 23
+      - id: mech-1-1-03
+        numeral: '03'
+        title: 등속 원운동과 진자 운동
+        pages:
+        - 24
+        - 27
+    - id: mech-1-2
+      numeral: '2'
+      title: 중력의 작용과 등가 원리
+      pages:
+      - 30
+      - 49
+      review: 48
+      topics:
+      - id: mech-1-2-01
+        numeral: '01'
+        title: 케플러 법칙과 중력
+        pages:
+        - 32
+        - 37
+      - id: mech-1-2-02
+        numeral: '02'
+        title: 탈출 속도
+        pages:
+        - 38
+        - 41
+      - id: mech-1-2-03
+        numeral: '03'
+        title: 일반 상대론
+        pages:
+        - 42
+        - 47
+    extras:
+      wrapup: 50
+      citizen: 53
+  - id: mech-2
+    numeral: Ⅱ
+    title: 열과 에너지
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 55
+    - 91
+    sections:
+    - id: mech-2-1
+      numeral: '1'
+      title: 열과 일
+      pages:
+      - 56
+      - 75
+      review: 74
+      topics:
+      - id: mech-2-1-01
+        numeral: '01'
+        title: 열전달과 우리 생활
+        pages:
+        - 58
+        - 62
+      - id: mech-2-1-02
+        numeral: '02'
+        title: 물질의 상태 변화와 이상 기체
+        pages:
+        - 63
+        - 68
+      - id: mech-2-1-03
+        numeral: '03'
+        title: 열역학 제1법칙
+        pages:
+        - 69
+        - 73
+    - id: mech-2-2
+      numeral: '2'
+      title: 열기관과 엔트로피
+      pages:
+      - 76
+      - 87
+      review: 86
+      topics:
+      - id: mech-2-2-01
+        numeral: '01'
+        title: 열기관과 우리 생활
+        pages:
+        - 78
+        - 81
+      - id: mech-2-2-02
+        numeral: '02'
+        title: 열역학 제2법칙
+        pages:
+        - 82
+        - 85
+    extras:
+      wrapup: 88
+      citizen: 91
+  - id: mech-3
+    numeral: Ⅲ
+    title: 탄성파와 소리
+    priority: 2
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 93
+    - 131
+    sections:
+    - id: mech-3-1
+      numeral: '1'
+      title: 탄성파의 성질
+      pages:
+      - 94
+      - 107
+      review: 106
+      topics:
+      - id: mech-3-1-01
+        numeral: '01'
+        title: 단진동
+        pages:
+        - 96
+        - 99
+      - id: mech-3-1-02
+        numeral: '02'
+        title: 탄성파의 성질과 활용
+        pages:
+        - 100
+        - 105
+    - id: mech-3-2
+      numeral: '2'
+      title: 도플러 효과와 파동의 이용
+      pages:
+      - 108
+      - 127
+      review: 126
+      topics:
+      - id: mech-3-2-01
+        numeral: '01'
+        title: 도플러 효과
+        pages:
+        - 110
+        - 115
+      - id: mech-3-2-02
+        numeral: '02'
+        title: 음파의 간섭과 소음 제어
+        pages:
+        - 116
+        - 119
+      - id: mech-3-2-03
+        numeral: '03'
+        title: 정상파
+        pages:
+        - 120
+        - 125
+    extras:
+      wrapup: 128
+      citizen: 131

@@ -1,0 +1,84 @@
+{
+ "id": "mech-centrifugal-force",
+ "concept_key": "concept:centrifugal-force",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "원심력",
+ "aliases": [],
+ "notation": {
+  "hanja": "遠心力",
+  "hanja_gloss": "遠 멀 원 · 心 마음 심 · 力 힘 력",
+  "english": "centrifugal force"
+ },
+ "definition": "돌고 있는 좌표계 안의 관찰자가 바깥쪽으로 느끼는 관성력. 회전하는 자동차 안에서 몸이 밀리는 듯한 느낌이 이것이다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cfg-outward",
+   "text": "회전하는 좌표계 안에서 관찰하면 관성력이 원의 바깥쪽으로 나타난다.",
+   "form": {
+    "condition": "관찰자가 회전하는 좌표계에 함께 있을 때",
+    "type": "conditional",
+    "scope": "원운동하는 비관성 좌표계"
+   },
+   "invertible": true,
+   "invertible_reason": "관성력은 구심 가속도와 반대쪽이므로 안쪽이라고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "회전하는 좌표계 안에서 관성력은 원의 안쪽으로 나타난다."
+  },
+  {
+   "id": "rel-cfg-vs-cent",
+   "text": "구심력과 원심력은 힘 두 개가 맞선 것이 아니라 보는 좌표계가 달라 생긴 서술 차이다.",
+   "form": {
+    "condition": "같은 원운동을 서로 다른 좌표계에서 볼 때",
+    "type": "classification",
+    "scope": "관성 좌표계와 회전 좌표계의 대비",
+    "antecedent": {
+     "quantity": "힘의 이름",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 서술의 관계를 밝힌 명제라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "원심력과 구심력은 크기가 같고 방향이 반대인 작용 반작용 쌍이다",
+   "why_wrong": "작용 반작용은 서로 다른 두 물체에 걸리는 힘이다. 게다가 둘은 보는 좌표계가 달라 한 그림에 함께 그리지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cfg-vs-cent"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-inertial-force"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-uniform-circular-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  43
+ ],
+ "difficulty": 3,
+ "role": "context",
+ "version": 1
+}

@@ -1,0 +1,164 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  59
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-heat-conduction",
+ "concept_key": "concept:heat-conduction",
+ "registry_status": "new",
+ "term": "전도",
+ "aliases": [
+  "열의 전도"
+ ],
+ "notation": {
+  "hanja": "傳導",
+  "hanja_gloss": "傳 전할 전 · 導 인도할 도",
+  "english": "thermal conduction",
+  "symbol_display": "Q = kA(T₁−T₂)t/L",
+  "symbol_plain": "Q = kA(T1-T2)t/L"
+ },
+ "definition": "입자가 제자리를 지킨 채 이웃 입자와 주고받는 상호작용만으로 열이 옮겨 가는 형태. 고체에서 주로 일어나며 옮겨 가는 양은 물질의 열전도도에 달려 있다.",
+ "relations": [
+  {
+   "id": "rel-cond-geometry",
+   "text": "원통형 고체를 지나 옮겨 가는 열량은 단면적과 양 끝의 온도 차, 걸린 시간에 비례한다",
+   "form": {
+    "condition": "물질과 원통의 길이를 고정했을 때",
+    "type": "direct",
+    "scope": "양 끝이 두 열원에 닿아 있는 원통형 고체",
+    "antecedent": {
+     "quantity": "단면적·온도 차·시간",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "이동 열량",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "비례 관계를 뒤집으면 같은 식에서 곧바로 모순이 나온다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "원통형 고체를 지나 옮겨 가는 열량은 단면적이 넓을수록, 온도 차가 클수록 줄어든다"
+  },
+  {
+   "id": "rel-cond-length",
+   "text": "같은 조건이라면 원통이 길수록 전도로 옮겨 가는 열량은 줄어든다",
+   "form": {
+    "condition": "단면적·온도 차·시간·물질을 고정했을 때",
+    "type": "inverse",
+    "scope": "양 끝이 두 열원에 닿아 있는 원통형 고체",
+    "antecedent": {
+     "quantity": "길이",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "이동 열량",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "길이는 분모에 있으므로 길수록 열량이 는다는 말은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 조건이라면 원통이 길수록 전도로 옮겨 가는 열량이 늘어난다"
+  },
+  {
+   "id": "rel-cond-k",
+   "text": "열전도도가 큰 물질일수록 열을 잘 나르고, 작은 물질은 열을 가두는 쪽에 쓰인다",
+   "form": {
+    "condition": "물질을 서로 견줄 때",
+    "type": "direct",
+    "scope": "전도로 열이 오가는 물질",
+    "antecedent": {
+     "quantity": "열전도도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "전달하는 열량",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "열전도도는 전도의 잘 일어남을 재는 비례 상수라 크기와 전달 정도를 반대로 놓으면 거짓이 된다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "열전도도가 큰 물질일수록 열을 잘 나르지 못한다"
+  },
+  {
+   "id": "rel-cond-solid",
+   "text": "고체는 입자가 자리를 옮길 수 없어 열이 전도로만 오가지만, 유체에서는 입자가 실려 가는 대류가 함께 일어난다",
+   "form": {
+    "condition": "물질의 상태에 따라 열이 오가는 길을 가를 때",
+    "type": "classification",
+    "scope": "매질이 있는 물질 안의 열전달 (복사는 따로 본다)",
+    "antecedent": {
+     "quantity": "물질의 상태",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "열이 오가는 형태",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "물질의 상태로 열전달 형태를 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "전도가 일어날 때는 뜨거운 쪽 입자가 차가운 쪽으로 옮겨 간다",
+   "why_wrong": "전도에서 입자는 제자리에서 진동할 뿐이고, 이웃 입자와 부딪치며 에너지만 넘겨준다. 입자가 실려 가는 것은 대류다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cond-solid"
+  },
+  {
+   "text": "두께가 두꺼울수록 열이 더 잘 전달된다",
+   "why_wrong": "열이 지나는 길이가 길어질수록 같은 시간에 옮겨 가는 열량은 줄어든다. 벽을 두껍게 하는 것이 단열에 도움이 되는 까닭이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cond-length"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-transfer",
+   "note": "세 형태 가운데 하나다"
+  },
+  {
+   "type": "next",
+   "target": "mech-thermal-insulation",
+   "note": "열전도도가 작은 쪽을 골라 쓰는 자리"
+  },
+  {
+   "type": "related",
+   "target": "mech-heat-convection",
+   "note": "유체에서는 이 길 대신 흐름이 열을 나른다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "notes": [
+  "C6 결함 수정 — 오개념[0]('뜨거운 쪽 입자가 옮겨 간다')이 rel-cond-k(열전도도와 전달량)를 가리키고 있었다. 입자가 자리를 옮기는지 아닌지를 받는 명제 rel-cond-solid 를 새로 세워 그리로 옮겼다. mech-heat-convection 의 rel-conv-particle 과 짝을 이룬다."
+ ]
+}

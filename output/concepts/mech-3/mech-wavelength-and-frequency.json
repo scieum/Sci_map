@@ -1,0 +1,137 @@
+{
+  "id": "mech-wavelength-and-frequency",
+  "concept_key": "concept:wavelength-and-frequency",
+  "registry_status": "new",
+  "term": "파장과 진동수",
+  "notation": {
+    "hanja": "波長 振動數",
+    "hanja_gloss": "波 물결 파 · 長 길 장 · 振 떨칠 진 · 動 움직일 동 · 數 셈 수",
+    "english": "wavelength and frequency",
+    "symbol_display": "λ, f = 1/T",
+    "symbol_plain": "lambda, f = 1/T"
+  },
+  "definition": "파동에서 위상이 같은 이웃 지점까지의 거리가 파장이고, 매질이 1 초 동안 진동하는 횟수가 진동수다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-frequency-period",
+      "text": "한 번 진동하는 데 드는 시간이 짧을수록 1 초 동안의 진동 횟수는 많아진다.",
+      "form": {
+        "condition": "진동이 규칙적으로 되풀이될 때",
+        "type": "inverse",
+        "scope": "주기가 일정한 파동",
+        "antecedent": {
+          "quantity": "주기",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "진동수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진동수와 주기는 역수 관계라 둘이 함께 줄어든다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 번 진동하는 데 드는 시간이 짧을수록 1 초 동안의 진동 횟수도 적어진다."
+    },
+    {
+      "id": "rel-frequency-wavelength",
+      "text": "매질이 같아 속력이 변하지 않으면 진동수가 커질수록 파장은 짧아진다.",
+      "form": {
+        "condition": "매질의 성질이 일정해 파동의 속력이 변하지 않을 때",
+        "type": "inverse",
+        "scope": "한 매질 안을 지나는 파동",
+        "antecedent": {
+          "quantity": "진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "v = fλ 에서 v 가 고정이면 둘이 함께 커진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 변하지 않을 때 진동수가 커지면 파장도 함께 길어진다."
+    },
+    {
+      "id": "rel-wavelength-where",
+      "text": "파장은 횡파에서는 이웃한 두 마루 사이, 종파에서는 이웃한 두 밀한 지점 사이의 거리로 잰다.",
+      "form": {
+        "condition": "한 파동 위에서 거리를 잴 때",
+        "type": "classification",
+        "scope": "횡파와 종파"
+      },
+      "invertible": false,
+      "invertible_reason": "재는 자리를 일러 주는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "파장이 긴 파동일수록 빠르게 나아간다.",
+      "why_wrong": "같은 매질에서는 속력이 일정하므로, 파장이 길면 그만큼 진동수가 작아질 뿐 속력은 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-frequency-wavelength"
+    },
+    {
+      "text": "진동수가 큰 파동은 진폭도 크다.",
+      "why_wrong": "진동수는 1 초 동안의 진동 횟수이고 진폭은 진동의 폭이다. 서로 따로 정해지는 양이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-oscillation-period"
+    },
+    {
+      "type": "next",
+      "target": "mech-wave-speed"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-effect"
+    },
+    {
+      "type": "next",
+      "target": "mech-path-difference"
+    },
+    {
+      "type": "same",
+      "target": "phys-wavelength-and-frequency",
+      "note": "「물리학」 phys-3 과 같은 concept_key"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    99,
+    101
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "「물리학」 phys-wavelength-and-frequency 와 같은 키 문자열이다. G3 에서 물리학 쪽과 한 키(concept:wavelength-and-frequency)로 등록해야 한다.",
+    "C8 확인 요청(C6 uncertain): rel-frequency-period 가 mech-oscillation-period 의 rel-period-frequency 와 겹친다. 고치지 않았다."
+  ]
+}

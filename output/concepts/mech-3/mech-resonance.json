@@ -1,0 +1,115 @@
+{
+  "id": "mech-resonance",
+  "concept_key": "concept:resonance",
+  "registry_status": "new",
+  "term": "공명",
+  "notation": {
+    "hanja": "共鳴",
+    "hanja_gloss": "共 함께 공 · 鳴 울 명",
+    "english": "resonance"
+  },
+  "definition": "밖에서 들어온 음파의 진동수가 그 물체의 고유 진동수와 같을 때 진폭이 크게 커지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-resonance-amplifies-loudness",
+      "text": "공명으로 커지는 것은 소리의 크기일 뿐이고, 음의 높이는 들어온 음파의 진동수 그대로다.",
+      "form": {
+        "condition": "들어온 음파의 진동수가 고유 진동수와 일치할 때",
+        "type": "conditional",
+        "scope": "공명으로 소리를 키우는 악기(124쪽)",
+        "antecedent": {
+          "quantity": "공명의 발생",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "음의 높이",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "공명은 진동수가 일치할 때 일어나므로 높이까지 달라진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공명이 일어나면 소리의 크기와 함께 음의 높이도 높아진다."
+    },
+    {
+      "id": "rel-resonance-soundbox",
+      "text": "현악기는 현의 진동으로 생긴 작은 소리를 울림통의 공명으로 키운다.",
+      "form": {
+        "condition": "울림통의 고유 진동수가 현의 진동수와 맞을 때",
+        "type": "causal",
+        "scope": "현악기"
+      },
+      "invertible": false,
+      "invertible_reason": "장치의 구실을 설명하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-resonance-instrument",
+      "text": "악기는 형태와 크기, 재질에 따라 고유 진동수가 달라서 공명하는 소리도 달라진다.",
+      "form": {
+        "condition": "같은 방식으로 소리를 낼 때",
+        "type": "causal",
+        "scope": "현악기와 관악기"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 차이를 만드는지 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공명이 일어나면 소리의 높이가 높아진다.",
+      "why_wrong": "공명으로 커지는 것은 진폭, 곧 소리의 크기다. 진동수가 같아야 공명하므로 높이는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resonance-amplifies-loudness"
+    },
+    {
+      "text": "어떤 진동수의 소리든 울림통에 넣으면 커진다.",
+      "why_wrong": "울림통의 고유 진동수와 맞는 소리만 공명으로 증폭된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-resonance-soundbox"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-natural-frequency"
+    },
+    {
+      "type": "related",
+      "target": "mech-standing-wave-in-pipe",
+      "note": "관악기의 공명은 관 속 정상파로 설명된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    124,
+    125
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 124쪽 그림 31~32, 125쪽 그림 33(플루트가 내는 음파의 정상파).",
+    "C6 수정: rel-resonance-match 는 조건절·귀결절이 definition 과 그대로 겹쳐 접었다. 124쪽의 '공명을 이용하여 소리의 크기를 증폭시킨다' 에 기대어 '커지는 것은 크기뿐이고 높이는 그대로' 를 rel-resonance-amplifies-loudness 로 세웠다 — 오개념 '공명하면 높이가 높아진다' 의 대응 명제이기도 하다."
+  ]
+}

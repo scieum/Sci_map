@@ -1,0 +1,376 @@
+{
+  "unit_id": "mech-3",
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "generated_at": "2026-09-14",
+  "generated_by": "concept-fact-validator",
+  "mode_run": ["curriculum", "relation"],
+  "inputs": {
+    "cards": "output/concepts/mech-3/ (31장)",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml (12역학03-01~03-05, 전부 crosscheck 일치)",
+    "teacher_guide": "inbox/textbook/22개정/물리학/고_역학과 에너지(최혁준)_지도서_2쇄.pdf 총론 21~22쪽 (성취기준 해설 · 적용 시 고려 사항)",
+    "source_text": "output/source/mech-3/text.jsonl (93~131쪽)",
+    "script": "curriculum-mapper/scripts/validate_tags.py output/concepts/mech-3 --unit mech-3 → cards 31, problems 0, ok true"
+  },
+  "notes_on_method": [
+    "진위는 확정하지 않았다. 구조적 결함만 본다 — 진위는 C8 사람 게이트 몫이다 (CLAUDE.md §9.7).",
+    "invertible 판정은 form.type 이 아니라 '뒤집은 문장이 논리적으로 반드시 거짓인가' 하나로만 따졌다.",
+    "카드 파일·사전 파일은 하나도 고치지 않았다. 이 보고서만 썼다.",
+    "물리 계열 <track>-facts 스킬(phys-facts 등)이 없어 수치 대조는 교과서 원문(text.jsonl)으로만 했다."
+  ],
+
+  "curriculum_limits_found": [
+    {
+      "source": "지도서 총론 21쪽 (가) 성취기준 해설 [12역학03-02]",
+      "text_summary": "탄성파의 진행을 파장·진동수·진행 속력으로 기술하고, 경계면 투과·반사에서 위상 변화를 다루며, 활용 예로 초음파 영상·비파괴 검사를 이용한다",
+      "effect": "mech-ultrasound(초음파 영상·비파괴 검사)·mech-wave-phase·mech-transmission-and-reflection-of-wave·mech-free-end-and-fixed-end-reflection 은 해설이 직접 지정한 범위 안이다"
+    },
+    {
+      "source": "지도서 총론 21쪽 (가) 성취기준 해설 [12역학03-04]",
+      "text_summary": "둘 이상의 파원에서 만들어지는 파동의 중첩, 중첩이 일정한 형태로 지속될 때 간섭이 발생함, 이를 활용한 소음 제거·소리의 증폭",
+      "effect": "중첩(mech-wave-superposition)은 해설이 03-04 쪽에 명시한 내용이다. 이 카드의 명제가 03-05 로만 태깅된 것이 아래 retag 지적의 근거다"
+    },
+    {
+      "source": "지도서 총론 21쪽 (가) 성취기준 해설 [12역학03-05]",
+      "text_summary": "정상파의 특성을 악기로 이해하게 하고, 현 또는 관의 길이에 따라 정상파의 파장이 달라짐을 정량적으로 설명할 수 있게 한다",
+      "effect": "l=λ/2, l=λ/4, λn=2l/n 같은 정량 명제(mech-standing-wave-on-string, mech-standing-wave-in-pipe)는 해설이 '정량적으로' 라고 못 박은 범위 안이다 — 이탈이 아니다"
+    },
+    {
+      "source": "지도서 총론 22쪽 (나) 성취기준 적용 시 고려 사항",
+      "text_summary": "파동 방정식을 도입하지 않고, 탄성체의 연속적 결합을 통하여 파동의 진행과 파동의 속성을 설명하게 한다",
+      "effect": "이 단원의 유일한 명시적 '제한'이다. 31장 전체를 훑었으나 파동 방정식(편미분 형태)을 도입한 카드·명제는 없다. 단진동의 x(t)=A cos ωt, a=-(k/m)x 는 교과서 98~99쪽 본문이 그대로 쓰는 식이고 파동 방정식이 아니다 — 제한선을 넘지 않았다"
+    },
+    {
+      "source": "지도서 총론 21쪽 [12역학03-01]",
+      "text_summary": "해설이 붙어 있지 않다(해설은 03-02·03-04·03-05 세 건뿐)",
+      "effect": "03-01 은 성취기준 본문('용수철 진자를 통해 단진동을 이해하고, 가속도와 변위 사이의 관계')만이 기준이다. 용수철 진자의 주기 T=2π√(m/k) 는 성취기준 본문에 없지만 교과서 99쪽 **본문**이 유도해 싣고 있어 이탈로 보지 않았다"
+    }
+  ],
+
+  "curriculum": {
+    "checked": 31,
+    "stats": { "ok": 28, "retag": 3, "out_of_scope": 0, "uncertain": 0 },
+    "scope_table": [
+      { "card_id": "mech-simple-harmonic-motion", "curriculum": ["12역학03-01"], "curriculum_scope": "in", "reason": "성취기준 본문 '용수철 진자를 통해 단진동을 이해' 그 자체. 교과서 96~97쪽 본문", "prerequisites": ["concept:net-force", "concept:elastic-force"] },
+      { "card_id": "mech-elastic-force", "curriculum": ["12역학03-01"], "curriculum_scope": "in", "reason": "단진동을 만드는 힘. 교과서 96쪽 본문, 03-01 의 '용수철 진자' 안", "prerequisites": ["concept:net-force"] },
+      { "card_id": "mech-equilibrium-point-of-oscillation", "curriculum": ["12역학03-01"], "curriculum_scope": "in", "reason": "교과서 97쪽 본문. 단진동 이해의 구성 요소", "prerequisites": [] },
+      { "card_id": "mech-acceleration-displacement-relation", "curriculum": ["12역학03-01"], "curriculum_scope": "in", "reason": "성취기준 본문이 '가속도와 변위 사이의 관계' 를 직접 지목한다", "prerequisites": [] },
+      { "card_id": "mech-oscillation-period", "curriculum": ["12역학03-01"], "curriculum_scope": "in", "reason": "성취기준 본문에 '주기' 가 없지만 교과서 98~99쪽 본문이 등속 원운동 그림자로 유도해 T=2π√(m/k) 까지 싣는다. 03-01 해설이 없어 제한선도 없다", "prerequisites": ["concept:uniform-circular-motion", "concept:angular-velocity"], "note": "선수 개념이 mech-1(12역학01-03)에 있다. 아래 key_conflict 판정도 이 카드가 대상이다" },
+      { "card_id": "mech-elastic-wave", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "03-02 본문 '탄성파의 진행'. 교과서 100·102쪽", "prerequisites": [] },
+      { "card_id": "mech-transverse-and-longitudinal-wave", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "교과서 101쪽 본문. 03-02 해설의 '파장·진동수·진행 속력으로 기술' 의 앞자리", "prerequisites": [] },
+      { "card_id": "mech-wavelength-and-frequency", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "03-02 해설이 '파장, 진동수' 를 명시. 교과서 99·101쪽", "prerequisites": [] },
+      { "card_id": "mech-wave-speed", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "03-02 해설이 '진행 속력' 을 명시. 교과서 101쪽 본문·곁주", "prerequisites": [], "note": "rel-wave-speed-string(장력·단위 길이당 질량)의 근거는 101쪽이 아니라 **103쪽 곁주 '줄에서의 파동의 속력'** 이다. 카드 pages 가 [101] 뿐이라 근거 쪽이 빠졌다 — 범위는 안이고 쪽수만 어긋난다" },
+      { "card_id": "mech-wave-phase", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "03-02 해설이 '투과 또는 반사를 할 때 위상이 변화됨' 을 명시. 교과서 102쪽", "prerequisites": [] },
+      { "card_id": "mech-transmission-and-reflection-of-wave", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "성취기준 본문 '투과, 반사'. 교과서 102~103쪽", "prerequisites": [] },
+      { "card_id": "mech-free-end-and-fixed-end-reflection", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "03-02 해설의 위상 변화. 교과서 102~103쪽 본문이 속력 관계까지 그대로 서술", "prerequisites": [] },
+      { "card_id": "mech-ultrasound", "curriculum": ["12역학03-02"], "curriculum_scope": "in", "reason": "03-02 해설이 '초음파 영상, 비파괴 검사' 를 활용 예로 직접 지정. 교과서 104~105쪽", "prerequisites": [] },
+      { "card_id": "mech-doppler-effect", "curriculum": ["12역학03-03"], "curriculum_scope": "in", "reason": "성취기준 본문 '도플러 효과를 이해하고'. 교과서 110쪽", "prerequisites": [] },
+      { "card_id": "mech-doppler-effect-moving-source", "curriculum": ["12역학03-03"], "curriculum_scope": "in", "reason": "교과서 110~111쪽 본문", "prerequisites": [] },
+      { "card_id": "mech-doppler-effect-moving-observer", "curriculum": ["12역학03-03"], "curriculum_scope": "in", "reason": "교과서 111쪽 본문", "prerequisites": [] },
+      { "card_id": "mech-doppler-effect-equation", "curriculum": ["12역학03-03"], "curriculum_scope": "in", "reason": "교과서 112쪽 본문의 일반식·부호 규칙. 03-03 에는 해설이 없어 정량 제한이 걸려 있지 않다", "prerequisites": [] },
+      { "card_id": "mech-doppler-speed-measurement", "curriculum": ["12역학03-03"], "curriculum_scope": "in", "reason": "성취기준 본문 '물체의 속도 측정 등 다양한 장치에 이용됨'. 교과서 110쪽 도입(도플러 심장 초음파)·115쪽(스피드건·기상 레이더)", "prerequisites": [] },
+      { "card_id": "mech-redshift-and-blueshift", "curriculum": ["12역학03-03"], "curriculum_scope": "in", "reason": "교과서 114쪽 본문(은하의 적색 편이·쌍성계). 03-03 의 '다양한 장치에 이용됨' 을 받치는 맥락 카드(role: context)", "prerequisites": [] },
+      { "card_id": "mech-sound-wave", "curriculum": ["12역학03-04"], "curriculum_scope": "in", "reason": "교과서 116~117쪽. 음파의 간섭(03-04)을 받치는 선행 개념", "prerequisites": [] },
+      { "card_id": "mech-wave-superposition", "curriculum": ["12역학03-05", "12역학03-04"], "curriculum_scope": "in", "reason": "03-04 해설이 '둘 이상의 파원에서 만들어지는 파동은 중첩될 수 있으며' 라고 명시. 교과서 116·120쪽", "prerequisites": [] },
+      { "card_id": "mech-sound-wave-interference", "curriculum": ["12역학03-04"], "curriculum_scope": "in", "reason": "성취기준 본문 '음파의 간섭'. 교과서 116~117쪽", "prerequisites": [] },
+      { "card_id": "mech-constructive-and-destructive-interference", "curriculum": ["12역학03-04"], "curriculum_scope": "in", "reason": "교과서 117쪽 본문", "prerequisites": [] },
+      { "card_id": "mech-path-difference", "curriculum": ["12역학03-04"], "curriculum_scope": "in", "reason": "교과서 117쪽 본문('보강 간섭 지점의 경로차는 반파장의 짝수 배')", "prerequisites": [] },
+      { "card_id": "mech-active-noise-control", "curriculum": ["12역학03-04"], "curriculum_scope": "in", "reason": "성취기준 본문·해설이 '소음 제어', '소음 제거, 소리의 증폭' 을 직접 지정. 교과서 118~119쪽", "prerequisites": [] },
+      { "card_id": "mech-standing-wave", "curriculum": ["12역학03-05"], "curriculum_scope": "in", "reason": "성취기준 본문 '정상파를 이용하여'. 교과서 120쪽", "prerequisites": [] },
+      { "card_id": "mech-node-and-antinode", "curriculum": ["12역학03-05"], "curriculum_scope": "in", "reason": "교과서 120쪽 본문", "prerequisites": [] },
+      { "card_id": "mech-standing-wave-on-string", "curriculum": ["12역학03-05"], "curriculum_scope": "in", "reason": "성취기준 본문 '현악기'. 03-05 해설이 정량 서술을 허용. 교과서 120~121쪽", "prerequisites": [] },
+      { "card_id": "mech-standing-wave-in-pipe", "curriculum": ["12역학03-05"], "curriculum_scope": "in", "reason": "성취기준 본문 '관악기'. 교과서 121~122쪽", "prerequisites": [] },
+      { "card_id": "mech-natural-frequency", "curriculum": ["12역학03-05"], "curriculum_scope": "in", "reason": "교과서 121~122쪽 본문이 '고유 진동수' 를 학습 요소로 세운다", "prerequisites": [] },
+      { "card_id": "mech-resonance", "curriculum": ["12역학03-05"], "curriculum_scope": "in", "reason": "성취기준 본문 '소리를 내는 원리'. 교과서 124~125쪽 본문(공명·울림통)", "prerequisites": [] }
+    ],
+    "findings": [
+      {
+        "card_id": "mech-wave-superposition",
+        "verdict": "retag",
+        "level": "relation",
+        "relation_id": "rel-superposition-to-interference",
+        "current": ["12역학03-05"],
+        "suggested": ["12역학03-04"],
+        "reason": "카드 머리(card.curriculum)에는 03-05·03-04 가 둘 다 있는데 명제 셋은 모두 03-05 만 달고 있다. '두 파동이 겹치는 동안 합성파가 만들어지고, 이것이 간섭으로 나타난다' 는 지도서 총론 21쪽 03-04 해설이 '중첩이 일정한 형태로 지속될 때 간섭 현상이 발생함을 알게 하여' 라고 문장째 지정한 내용이다. 명제 단위 태그로는 03-05(정상파)가 받치지 못한다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "mech-wave-phase",
+        "verdict": "retag",
+        "level": "relation",
+        "relation_id": "rel-phase-decides-interference",
+        "current": ["12역학03-02"],
+        "suggested": ["12역학03-02", "12역학03-04"],
+        "reason": "카드 전체(위상·반사 시 위상 변화)는 03-02 해설이 받치지만, 이 명제 하나는 '위상이 같은지 반대인지가 합성파의 진폭을 가른다' 로 간섭의 조건을 말한다. 03-02 해설은 경계면에서의 위상 변화까지만 지정하고 간섭은 03-04 해설이 맡는다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "mech-sound-wave",
+        "verdict": "retag",
+        "level": "relation",
+        "relation_id": "rel-sound-is-longitudinal",
+        "current": ["12역학03-04"],
+        "suggested": ["12역학03-02", "12역학03-04"],
+        "reason": "'음파는 종파에 속한다' 는 03-04(음파의 간섭 활용)가 아니라 03-02 계열의 탄성파 분류다. 근거 쪽도 117쪽 곁주('종파의 진폭 표현')와 101쪽(횡파·종파)으로 갈린다. 나머지 두 명제(진폭↔크기, 진동수↔높이)는 03-04 로 두어도 된다",
+        "prerequisites": []
+      }
+    ],
+    "escalation": {
+      "out_of_scope_count": 0,
+      "threshold": "이탈 2건 초과 시 C1 복귀 (설계서 §4.3 C5)",
+      "triggered": false
+    }
+  },
+
+  "relations": {
+    "checked": 97,
+    "checked_note": "카드 31장의 관계 명제 97건(4건짜리 카드 4장 + 3건짜리 27장). 오개념 링크 62건은 misconception_findings 에 따로 적었다",
+    "stats": { "ok": 84, "defect": 8, "uncertain": 5 },
+    "invertible_summary": {
+      "true_count": 49,
+      "false_count": 48,
+      "dangerous_direction_found": 0,
+      "note": "invertible: true 49건을 하나씩 뒤집어 읽었다. '뒤집은 문장이 참일 수 있는데 true 로 둔' 건(= D1 에서 잘못된 OX 오답 지문이 될 건)은 **찾지 못했다.** 결함은 모두 반대 방향(true 여야 할 것을 false 로 둔 쪽)이라 학생에게 오개념을 심을 위험은 없다"
+    },
+    "findings": [
+      {
+        "card_id": "mech-doppler-effect-equation",
+        "relation_id": "rel-doppler-needs-relative-velocity",
+        "verdict": "defect",
+        "checks": [2],
+        "severity": "high",
+        "reason": "명제는 '도플러 효과는 음원과 관측자 사이에 상대 속도가 있을 때에만 나타난다' 곧 필요조건(도플러 → 상대 속도)이다. 이것을 뒤집은 문장은 '상대 속도가 없어도 도플러 효과가 나타난다' 이고, invertible_reason 은 이것을 반박해야 한다. 그런데 적혀 있는 사유('상대 속도가 있어도 시선 방향에 수직이면 나타나지 않아 — 114쪽 쌍성계')는 뒤집은 문장이 아니라 **역(逆) 명제 '상대 속도가 있으면 도플러 효과가 나타난다'** 를 반박한 것이다. 뒤집기와 역 명제를 맞바꾼 판정이다. 같은 카드의 rel-doppler-same-velocity 는 바로 그 '상대 속도 0 → 진동수 그대로' 를 invertible: true 로 두고 있어, 한 카드 안에서 두 명제가 서로 다른 기준으로 판정됐다. 메인이 짚은 대로 rel-doppler-approach(거리가 줄어드는 동안 → 진동수가 커진다)는 전제가 '거리가 줄어드는 동안' 이라 시선 수직 운동을 애초에 배제하므로 쌍성계는 그 명제의 반례가 아니다 — 두 판정이 같은 기준으로 내려지지 않았다",
+        "evidence": "교과서 112쪽 본문: '음원과 관측자가 같은 방향으로 같은 속력으로 움직이면 관측자에 도달하는 음원의 진동수는 변화가 없다. 따라서 음원과 관측자의 상대 속도가 다를 때만 도플러 효과가 발생한다.' 114쪽 쌍성계는 '시선 방향에 수직으로 움직일 때 스펙트럼에 차이가 없다' 는 별개 서술이다",
+        "suggest": "invertible_reason 을 다시 쓰되 **뒤집은 문장(상대 속도가 없어도 나타난다)** 을 대상으로 판정하게 한다. 쌍성계 반례를 살리고 싶으면 그 반례가 겨냥하는 역 명제를 form.scope 또는 별도 명제로 분리한다. invertible 값 자체를 어느 쪽으로 확정할지는 C8 에서 사람이 본 뒤에 정한다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-ultrasound",
+        "relation_id": "rel-ultrasound-inaudible",
+        "verdict": "defect",
+        "checks": [2, 3],
+        "severity": "medium",
+        "reason": "① [2] 위와 똑같은 맞바꿈이다. 명제는 '진동수가 가청 범위 위쪽을 넘어서면 귀로 들리지 않는다' 인데, invertible_reason 은 '들리지 않는 소리에는 진동수가 너무 낮은 것도 있어' 라고 적어 **역 명제(들리지 않으면 초음파다)** 를 반박했다. 뒤집은 문장은 '가청 범위 위쪽을 넘어도 들린다' 다. ② [3] 이 카드의 definition 이 '사람이 들을 수 있는 범위보다 진동수가 큰 음파' 이므로 이 명제는 정의를 문장으로 옮긴 것에 가깝다 — 정의를 읽으면 저절로 나온다",
+        "evidence": "교과서 104쪽 곁주: '탄성파의 한 종류이며 … 진동수가 커서(20 kHz 이상) 사람은 들을 수 없다' — 수치 20 kHz 는 교과서에 있다(결함 (e) 아님)",
+        "suggest": "invertible_reason 의 판정 대상을 뒤집은 문장으로 바로잡고, 정의와 겹치지 않는 명제(예: 카드가 아직 명제로 세우지 않은 '초음파도 매질이 있어야 전달된다' 쪽)로 갈아 끼울지 C2 가 정한다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-simple-harmonic-motion",
+        "relation_id": "rel-shm-restoring",
+        "verdict": "defect",
+        "checks": [2],
+        "severity": "medium",
+        "reason": "세 번째 같은 맞바꿈이다. invertible_reason 이 '되돌리는 힘 말고도 왕복을 만드는 까닭이 있을 수 있어' 라고 적어 역 방향(왕복한다 → 탄성력 때문이다)을 반박했다. 원 명제를 뒤집은 문장은 '탄성력이 늘 평형점 쪽을 향하는데도 물체가 왕복하지 않는다' 다. 이 세 건(rel-doppler-needs-relative-velocity · rel-ultrasound-inaudible · rel-shm-restoring)은 흩어진 실수가 아니라 **같은 기준 혼동이 세 번 되풀이된 것**이라 묶어서 보고한다",
+        "evidence": "같은 카드의 나머지 명제와 이 단원 나머지 카드 53건은 모두 '뒤집은 문장(부정)' 기준으로 판정돼 있다",
+        "suggest": "세 건의 invertible_reason 판정 기준을 하나로 맞춘다. 값을 false 로 남기든 true 로 올리든 사유가 뒤집은 문장을 가리켜야 한다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-node-and-antinode",
+        "relation_id": "rel-antinode-max",
+        "verdict": "defect",
+        "checks": [3],
+        "severity": "medium",
+        "reason": "definition 이 '마디 사이에서 가장 크게 진동하는 지점을 배' 인데 명제는 '배에서는 진폭이 가장 커서 매질이 가장 크게 진동한다' 다. 정의의 술어를 주어 자리로 옮긴 것뿐이라 학습 가치가 없다. invertible: true 여서 D1 이 이 동어반복으로 OX 를 만들게 된다",
+        "evidence": "카드 definition 과 명제 text 가 '가장 크게 진동' 이라는 같은 술어를 공유한다. 교과서 120쪽도 같은 문장을 정의로 쓴다",
+        "suggest": "정의 밖 정보를 담은 명제로 바꾸거나(예: 마디·배의 간격이 파장과 맺는 관계) 이 명제를 접는다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-natural-frequency",
+        "relation_id": "rel-only-natural-freq",
+        "verdict": "defect",
+        "checks": [3],
+        "severity": "medium",
+        "reason": "definition 이 '줄이나 관에서 정상파가 만들어질 수 있는 진동수들' 이다. 명제 '고유 진동수가 아닌 진동수로는 그 줄에 정상파를 만들 수 없다' 는 그 정의의 대우(對偶)일 뿐이다",
+        "evidence": "교과서 121쪽은 이 문장을 '고유 진동수는 줄의 길이와 속도에 의해 결정되기 때문에 고유 진동수 이외의 정상파는 만들 수 없다' 로 쓴다 — 교과서에서는 앞 절(길이·속력)이 정보를 싣지만, 카드는 그 앞 절을 rel-natural-freq-determined 로 따로 떼어 놓아 이 명제에는 정의만 남았다",
+        "suggest": "두 명제를 어떻게 나눌지 C2 가 다시 정한다(정량 조건 f_n = n·v/2l 쪽으로 내용을 옮기는 것도 방법이다)",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-resonance",
+        "relation_id": "rel-resonance-match",
+        "verdict": "defect",
+        "checks": [3],
+        "severity": "medium",
+        "reason": "definition 이 '밖에서 들어온 음파의 진동수가 그 물체의 고유 진동수와 같을 때 진폭이 크게 커지는 현상' 이고 명제는 '들어온 음파의 진동수가 관의 고유 진동수와 맞아떨어지면 그 음파의 진폭이 커진다' 다. 조건절·귀결절이 정의와 그대로 겹친다. invertible: true 라 이 동어반복이 OX 지문이 된다",
+        "evidence": "카드 definition ↔ 명제 text 의 어절 대응이 '진동수가 고유 진동수와 같을 때 / 진폭이 커진다' 로 1:1 이다",
+        "suggest": "정의를 좁히거나(공명의 정의를 '증폭' 이 아닌 다른 축으로) 명제를 교과서 124쪽의 다른 내용(리드·울림통에서 고유 진동수와 맞는 음파만 증폭된다)으로 옮긴다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-transverse-and-longitudinal-wave",
+        "relation_id": "rel-transverse-classify",
+        "verdict": "defect",
+        "checks": [3],
+        "severity": "low",
+        "reason": "definition 이 '매질의 진동 방향이 진행 방향과 수직인 파동을 횡파' 인데 명제는 '매질이 진행 방향과 직각으로 흔들리면 그 파동은 횡파로 분류한다' 다. 낱말만 바꾼 같은 문장이다. invertible_reason 도 '정의에 가까운 분류라 뒤집어도 참이 되어 버린다' 고 스스로 정의임을 적어 놓았으면서 명제로 남겨 두었다",
+        "evidence": "카드 definition 첫 구절과 명제 text 가 같은 내용이다",
+        "suggest": "이 명제를 접거나, 정의에 없는 내용(횡파가 어느 매질에서 생기는지 등)으로 바꾼다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-wave-speed",
+        "relation_id": "rel-wave-speed-one-wavelength",
+        "verdict": "defect",
+        "checks": [3],
+        "severity": "low",
+        "reason": "definition 이 '한 주기 동안 한 파장을 나아간다는 사실에서 구한다' 인데 명제는 '매질의 한 점이 한 번 진동하는 사이에 파동은 한 파장만큼 앞으로 나아간다' 다. 같은 카드의 rel-wave-speed-formula(v=λ/T=fλ) 도 이 정의의 산술 표현이라, 세 명제 가운데 둘이 정의의 되풀이다",
+        "evidence": "카드 definition ↔ rel-wave-speed-one-wavelength ↔ rel-wave-speed-formula 가 같은 사실을 세 번 적는다",
+        "suggest": "셋 중 하나만 남기고, 빈자리에는 교과서 103쪽 곁주·101쪽 곁주가 말하는 '속력은 매질의 성질이 정한다' 쪽 내용을 세울지 C2 가 정한다",
+        "verified_by_untouched": true
+      },
+      {
+        "card_id": "mech-standing-wave",
+        "relation_id": "rel-standing-condition",
+        "verdict": "uncertain",
+        "checks": [1],
+        "reason": "'정상파가 생기려면 겹치는 두 파동의 파장과 진폭이 같아야 한다' 는 필요조건 셋 가운데 둘만 적고 '서로 반대 방향으로 진행' 을 빠뜨렸다. 필요조건을 다 적어야 한다는 규칙은 없어 결함으로 확정하지 않는다. 다만 같은 카드 rel-standing-from-opposite 는 그 셋째 조건을 form.condition 이 아니라 본문에 담고 있어, 두 명제를 나란히 읽으면 조건이 어디에 붙는지 흔들린다",
+        "evidence": "교과서 120쪽: '파장과 진폭이 같은 두 파동이 서로 반대 방향으로 진행하면서 중첩되면'",
+        "suggest": "조건 셋을 한 명제에 모을지 두 명제로 나눌지 C2 가 정한다"
+      },
+      {
+        "card_id": "mech-equilibrium-point-of-oscillation",
+        "relation_id": "rel-equilibrium-net-force-zero",
+        "verdict": "uncertain",
+        "checks": [3],
+        "reason": "카드 definition 이 '알짜힘이 0 이 되는 지점' 이라 명제의 앞 절은 정의의 되풀이다. 뒤 절(그러므로 가속도도 0)은 뉴턴 제2법칙이라는 정의 밖 정보를 싣는다. 동어반복이라 확정하기에는 얻는 것이 있어 uncertain 으로 올린다",
+        "suggest": "앞 절을 조건(form.condition)으로 내리면 겹침이 사라지는지 C2 가 본다"
+      },
+      {
+        "card_id": "mech-wave-speed",
+        "relation_id": "rel-wave-speed-string",
+        "verdict": "uncertain",
+        "checks": [5],
+        "reason": "명제 자체는 교과서에 있다(103쪽 곁주 '줄에서의 파동의 속력 — 줄에 걸린 장력의 크기가 일정한 경우, 줄의 단위 길이당 질량이 클수록 파동의 속력은 작다'). 그런데 카드의 pages 는 [101] 뿐이어서 이 명제의 근거 쪽이 카드 어디에도 남아 있지 않다. 내용 결함이 아니라 근거 표시 결함이라 uncertain 으로 올린다 — (e) '교과서에 없는 사실' 은 아니다",
+        "suggest": "카드 pages 에 103 을 더할지, 이 명제를 103쪽을 쓰는 다른 카드로 옮길지 메인이 정한다"
+      },
+      {
+        "card_id": "mech-oscillation-period",
+        "relation_id": "rel-period-frequency",
+        "verdict": "uncertain",
+        "checks": [5],
+        "reason": "mech-wavelength-and-frequency 의 rel-frequency-period 와 사실상 같은 명제다(주기와 진동수는 역수). 둘 다 invertible: true 라 D1 이 서로 구별되지 않는 OX 두 개를 만든다. 어긋나는 것이 아니라 겹치는 것이라 결함으로 확정하지 않는다",
+        "suggest": "한쪽을 접을지 메인이 정한다"
+      },
+      {
+        "card_id": "mech-path-difference",
+        "relation_id": "rel-path-zero",
+        "verdict": "uncertain",
+        "checks": [5],
+        "reason": "mech-sound-wave-interference 의 rel-sound-interference-midpoint 와 같은 주장(경로차 0 → 보강)이다. 두 카드의 오개념 항목까지 거의 같은 문장이라 겹침이 두 겹이다. 모순은 아니다",
+        "suggest": "음파 쪽에 남길지 경로차 쪽에 남길지 메인이 정한다"
+      }
+    ],
+    "misconception_findings": {
+      "checked": 62,
+      "stats": { "ok": 57, "defect": 3, "uncertain": 2 },
+      "items": [
+        {
+          "card_id": "mech-simple-harmonic-motion",
+          "misconception": "단진동하는 물체는 양 끝에서 가장 빠르게 움직인다.",
+          "linked_relation": "rel-shm-energy",
+          "verdict": "defect",
+          "checks": [4],
+          "reason": "가리키는 명제는 '운동 에너지와 탄성 퍼텐셜 에너지의 합이 변하지 않는다' 로 어디서 가장 빠른지를 말하지 않는다. 이 오개념의 반대편에 실제로 서 있는 명제는 다른 카드(mech-equilibrium-point-of-oscillation 의 rel-equilibrium-speed-max, '평형점을 지나는 순간 가장 빠르다')다",
+          "suggest": "이 카드 안에 대응 명제가 없다는 점을 메인에 알리고, 링크 대상을 바꿀지 명제를 세울지 정한다"
+        },
+        {
+          "card_id": "mech-acceleration-displacement-relation",
+          "misconception": "가속도가 0 인 지점에서는 물체의 속력도 0 이다.",
+          "linked_relation": "rel-accel-disp-direction",
+          "verdict": "defect",
+          "checks": [4],
+          "reason": "가리키는 명제는 가속도와 변위의 **방향**을 말하는데 오개념은 가속도의 **크기 0** 과 속력을 잇는다. why_wrong 이 실제로 기대는 것은 같은 카드의 rel-accel-disp-magnitude(크기 비례, a=0 ⟺ x=0)와 다른 카드의 rel-equilibrium-speed-max 다",
+          "suggest": "링크 대상을 바꾼다"
+        },
+        {
+          "card_id": "mech-doppler-effect-equation",
+          "misconception": "도플러 효과에서는 음원의 속력이 클수록 소리의 속력도 커진다.",
+          "linked_relation": "rel-doppler-sign-rule",
+          "verdict": "defect",
+          "checks": [4],
+          "reason": "가리키는 명제는 부호를 정하는 약속이라 '소리의 속력' 을 말하지 않는다. 이 오개념의 반대편에 서 있는 명제는 mech-doppler-effect-moving-source 의 rel-source-speed-unchanged('음원이 움직여도 소리가 매질을 지나는 속력은 달라지지 않는다')다",
+          "suggest": "링크 대상을 바꾸거나 이 오개념을 해당 카드로 옮긴다"
+        },
+        {
+          "card_id": "mech-wave-speed",
+          "misconception": "파원을 빠르게 흔들면 파동도 빠르게 나아간다.",
+          "linked_relation": "rel-wave-speed-formula",
+          "verdict": "uncertain",
+          "checks": [4],
+          "reason": "why_wrong 이 '속력은 매질이 정한다' 에 기대는데 이 카드에는 그런 명제가 없다(그 명제는 mech-elastic-wave 의 rel-elastic-wave-speed-by-medium 이다). 가리킨 v=fλ 로도 간접 반박은 되므로 결함으로 확정하지 않는다"
+        },
+        {
+          "card_id": "mech-ultrasound",
+          "misconception": "초음파는 소리가 아니라 전자기파의 한 종류다.",
+          "linked_relation": "rel-ultrasound-inaudible",
+          "verdict": "uncertain",
+          "checks": [4],
+          "reason": "가리키는 명제는 들리는지 여부만 말하고 탄성파인지 전자기파인지는 말하지 않는다. 반박 근거는 카드 definition('기본 성질은 소리와 같은 탄성파')에 있다. 명제가 아니라 정의가 받치는 구조라 판단이 갈린다"
+        }
+      ]
+    },
+    "cross_card_contradictions": {
+      "found": 0,
+      "note": "카드 사이에서 서로 어긋나는 명제쌍(검사 4번 (d))은 찾지 못했다. 겹치는 명제쌍 둘(위 uncertain 2건)과 같은 오개념 문장이 두 카드에 중복된 건 하나(mech-sound-wave / mech-transverse-and-longitudinal-wave 의 '소리는 마루와 골이 있는 횡파다')가 있을 뿐이다"
+    },
+    "textbook_number_check": {
+      "method": "output/source/mech-3/text.jsonl 원문 대조 (물리 계열 <track>-facts 스킬이 없어 스킬 대조는 건너뛰었다)",
+      "verified": [
+        "20 kHz (104쪽 곁주) — 있다",
+        "λ_A = λ - v_S·T (110쪽 본문) — 있다",
+        "보강 = 반파장의 짝수 배 / 상쇄 = 반파장의 홀수 배 (117쪽 본문) — 있다",
+        "줄의 n 배 진동 λ_n = 2l/n (121쪽 본문) — 있다",
+        "한쪽만 열린 관 l = λ/4 · 홀수 배만 (121~122쪽 본문) — 있다",
+        "양쪽 열린 관 l = λ/2 (122쪽 본문) — 있다",
+        "T = 2π√(m/k), 연직·수평 주기 같음 (99쪽 본문) — 있다",
+        "줄에서의 속력: 장력 일정 시 단위 길이당 질량이 클수록 느림 (103쪽 곁주) — 있다 (카드 pages 에는 빠짐)",
+        "쌍성계·시선 수직 운동 (114쪽 본문) — 있다",
+        "도플러 심장 초음파 검사 (110쪽 단원 도입) — 있다",
+        "스피드건·기상 레이더 (115쪽) — 있다"
+      ],
+      "not_found": [],
+      "conclusion": "검사 항목 (e) '교과서에 없는 수치·사실' 에 걸리는 건은 없다"
+    },
+    "escalation": {
+      "uncertain_ratio": 0.052,
+      "threshold": "uncertain 20% 초과 시 에스컬레이션 (CLAUDE.md §11)",
+      "triggered": false
+    }
+  },
+
+  "key_conflict": {
+    "key": "concept:oscillation-period",
+    "claimants": [
+      { "card": "output/concepts/mech-3/mech-oscillation-period.json", "term": "단진동의 주기", "unit_id": "mech-3", "curriculum": ["12역학03-01"], "registry_status": "new", "definition": "단진동하는 물체가 한 번 왕복하는 데 드는 시간" },
+      { "card": "output/concepts/mech-1/mech-period-of-circular-motion.json", "term": "원운동의 주기", "unit_id": "mech-1", "curriculum": ["12역학01-03"], "registry_status": "new", "definition": "원 궤도를 한 바퀴 도는 데 걸리는 시간" }
+    ],
+    "verdict": "split_keys",
+    "keeper": "mech-3/mech-oscillation-period (단진동의 주기)",
+    "renamer": "mech-1/mech-period-of-circular-motion (원운동의 주기)",
+    "suggested_new_key_for_renamer": "concept:period-of-circular-motion",
+    "suggested_new_key_status": "제안일 뿐이다. 키를 실제로 세우는 것은 G3 사람 게이트이고, 나는 concept_registry.yaml·homonyms.yaml 을 읽기만 했다 (CLAUDE.md §9.3)",
+    "rationale": [
+      "① 합치면 안 되는 까닭 — 두 카드는 성취기준 영역이 다르다(12역학01-03 ↔ 12역학03-01). 카드는 unit_id·topic_id 를 하나씩만 갖고, validate_tags.py 는 '단원이 다루는 영역의 코드인가' 를 영역 번호로 검사한다. 한 카드에 01 영역과 03 영역 코드를 함께 달면 그 순간 범위 이탈로 잡힌다. 곧 병합은 C5 를 통과할 수 없는 형태다.",
+      "② 두 양이 같은 값을 갖는 국면이 있다는 것은 동일 개념이라는 뜻이 아니다 — 교과서 99쪽은 '물체의 원운동 주기와 그림자의 단진동 주기는 서로 같다' 고 적는다. 이것은 단진동의 주기를 끌어내려고 등속 원운동의 그림자를 빌린 유도 장치이고, 같다는 **결론**이 나오는 자리다. 정의도 결정 요인도 다르다: 원운동의 주기는 T=2πr/v=2π/ω(반지름·속력·각속도), 단진동의 주기는 T=2π√(m/k)(질량·용수철 상수). 같은 키를 주면 이 '같다' 라는 교과서의 결론이 카드 구조상 전제가 되어 버린다.",
+      "③ 어느 쪽이 키를 지키는가 — homonyms.yaml 이 concept:oscillation-period 에 달아 둔 뜻은 '진동·파동이 한 번 되풀이되는 데 걸리는 시간' 이다. 원운동은 진동도 파동도 아니므로 mech-1 카드는 그 gloss 문면 밖에 있다. 반대로 mech-3 의 '단진동의 주기' 와, 같은 단원이 쓰는 파동의 주기(101쪽 연계 곁주 '주기: 매질이 한 번 진동하는 데 걸리는 시간')는 gloss 그대로다. 게다가 phys-3 후보 노트도 '주기' 를 표제어로 세울 때 이 키를 쓰라고 예약해 두었다 — 앞으로 이 키에 붙을 카드는 진동·파동 쪽이 더 많다.",
+      "④ 지금이 가장 싸다 — 두 카드 모두 registry_status 가 new 이고 concept_registry.yaml 에 이 키가 아직 없다. G3 에서 등록되기 전이라 지금 가르면 되돌릴 링크가 없다. mech-1 카드의 notes 도 이미 'G3 에서 확인해 달라' 라고 남겨 두었다.",
+      "⑤ 갈라도 동음이의 보호는 그대로다 — 두 카드 모두 표제어를 '원운동의 주기' · '단진동의 주기' 로 좁혀 두었고 homonym_flag 가 서 있다. 화학의 concept:periodic-table-period 와 잇지 않는다는 기존 금지쌍은 건드리지 않는다."
+    ],
+    "consequence_if_unfixed": "링크는 concept_key 일치만 근거로 걸린다(CLAUDE.md §9-5). 키가 그대로면 G2 가 '원운동의 주기' 를 선수 개념으로 거는 링크와 '단진동의 주기' 를 거는 링크를 구별하지 못하고, D1 의 OX 도 두 카드의 명제를 한 개념의 것으로 섞는다. mech-3 의 주기 명제(T ∝ √m, T ∝ 1/√k)와 mech-1 의 주기 명제(T ∝ r, T ∝ 1/ω)가 한 개념 아래 모이면 학생에게는 서로 어긋나 보인다.",
+    "handoff": "이 판정은 G3(개념 사전 사람 게이트) 안건이다. 사전 파일은 고치지 않았고, 카드의 concept_key 도 고치지 않았다 — 고칠 카드는 mech-1 쪽 한 장이고 그 지시는 메인이 내린다."
+  },
+
+  "summary_for_main": {
+    "c5": { "checked": 31, "in": 31, "out": 0, "uncertain": 0, "retag_findings": 3, "escalation": false },
+    "c6": { "relations_checked": 97, "ok": 84, "defect": 8, "uncertain": 5, "misconception_defects": 3, "escalation": false },
+    "heaviest": [
+      "invertible 판정 기준이 세 건에서 '뒤집기' 대신 '역 명제' 로 내려졌다 (rel-doppler-needs-relative-velocity · rel-ultrasound-inaudible · rel-shm-restoring)",
+      "동어반복 5건 — 그중 rel-antinode-max · rel-resonance-match 는 invertible: true 라 D1 이 정의 되풀이로 OX 를 만든다",
+      "오개념 링크가 엉뚱한 명제를 가리키는 3건"
+    ],
+    "reassuring": "invertible: true 49건을 모두 뒤집어 읽었으나 '뒤집은 문장이 참일 수 있는' 건은 없었다 — 학생에게 오개념을 심을 방향의 오판정은 이 단원에 없다"
+  }
+}

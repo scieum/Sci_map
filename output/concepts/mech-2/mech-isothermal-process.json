@@ -1,0 +1,123 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  71
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-isothermal-process",
+ "concept_key": "concept:isothermal-process",
+ "registry_status": "new",
+ "term": "등온 과정",
+ "aliases": [],
+ "notation": {
+  "hanja": "等溫過程",
+  "hanja_gloss": "等 같을 등 · 溫 따뜻할 온 · 過 지날 과 · 程 길 정",
+  "english": "isothermal process",
+  "symbol_display": "ΔU = 0, Q = W",
+  "symbol_plain": "deltaU = 0, Q = W"
+ },
+ "definition": "온도를 붙잡아 둔 채 압력과 부피만 달라지게 하는 열역학 과정. 온도가 그대로이므로 내부 에너지 변화량이 0이 되고, 드나든 열이 곧 일이 된다.",
+ "relations": [
+  {
+   "id": "rel-iso-du",
+   "text": "온도가 변하지 않으므로 등온 과정에서 기체의 내부 에너지 변화량은 0이다",
+   "form": {
+    "condition": "기체의 온도가 일정하게 유지될 때",
+    "type": "conditional",
+    "scope": "일정량의 이상 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "온도가 일정하다는 조건에서 곧바로 따라 나오는 값이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-iso-qw",
+   "text": "등온 팽창에서 기체가 흡수한 열은 기체가 바깥에 한 일과 같은 크기다",
+   "form": {
+    "condition": "온도를 일정하게 유지한 채 부피를 늘릴 때",
+    "type": "conditional",
+    "scope": "얼음물처럼 온도가 일정한 물체에 접촉한 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "두 양이 같다고 말하는 등식이라 방향을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-iso-sign",
+   "text": "등온 압축에서는 기체가 일을 받으므로 같은 크기의 열을 바깥으로 내놓는다",
+   "form": {
+    "condition": "온도를 일정하게 유지한 채 부피를 줄일 때",
+    "type": "causal",
+    "scope": "등온 과정으로 압축되는 기체",
+    "antecedent": {
+     "quantity": "기체가 받은 일",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "방출한 열",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "내부 에너지가 그대로인데 일을 받고 열까지 흡수하면 온도가 올라야 해서 앞뒤가 맞지 않는다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "등온 압축에서는 기체가 일을 받는 동시에 바깥에서 열을 흡수한다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "등온 과정에서는 열이 드나들지 않는다",
+   "why_wrong": "온도가 변하지 않는 것과 열이 드나들지 않는 것은 다른 말이다. 등온 팽창에서는 한 일과 같은 크기의 열이 들어온다. 열 출입이 없는 쪽은 단열 과정이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-iso-qw"
+  },
+  {
+   "text": "기체가 팽창하면 온도는 반드시 내려간다",
+   "why_wrong": "열을 계속 공급받으며 천천히 팽창하면 온도를 그대로 둘 수 있다. 온도가 내려가는 것은 열 출입을 끊은 단열 팽창일 때다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-iso-du"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "이 법칙에 조건을 넣어 얻는다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-pressure-volume-relation",
+   "note": "온도가 일정할 때의 압력·부피 관계를 쓴다"
+  },
+  {
+   "type": "next",
+   "target": "mech-carnot-engine",
+   "note": "이 과정 둘이 순환의 절반을 이룬다"
+  },
+  {
+   "type": "related",
+   "target": "mech-adiabatic-process",
+   "note": "무엇을 고정했는지가 갈림길이다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 4,
+ "role": "supporting"
+}

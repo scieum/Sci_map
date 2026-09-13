@@ -1,0 +1,127 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  63,
+  74
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-heat-capacity",
+ "concept_key": "concept:heat-capacity",
+ "registry_status": "reused",
+ "term": "열용량",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱容量",
+  "hanja_gloss": "熱 더울 열 · 容 담을 용 · 量 헤아릴 량",
+  "english": "heat capacity",
+  "symbol_display": "C = cm, Q = CΔT",
+  "symbol_plain": "C = cm, Q = C deltaT"
+ },
+ "definition": "어떤 물체의 온도를 1 ℃ 바꾸는 데 드는 열량. 물질의 종류만 보는 비열과 달리 그 물체가 얼마나 많은지까지 안고 있는 양이다.",
+ "relations": [
+  {
+   "id": "rel-hc-product",
+   "text": "열용량은 그 물체의 비열에 질량을 곱한 값이다",
+   "form": {
+    "condition": "물체의 비열과 질량이 정해져 있을 때",
+    "type": "direct",
+    "scope": "한 가지 물질로 이루어진 물체"
+   },
+   "invertible": false,
+   "invertible_reason": "두 양의 곱으로 정의한 관계라 방향을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-hc-mass",
+   "text": "같은 물질이라도 양이 많을수록 열용량이 커서 같은 열을 주었을 때 온도가 덜 오른다",
+   "form": {
+    "condition": "같은 물질에 같은 열량을 주었을 때",
+    "type": "inverse",
+    "scope": "상태 변화가 없는 온도 구간",
+    "antecedent": {
+     "quantity": "열용량",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온도 변화",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "열용량이 클수록 온도 변화가 작다는 관계를 뒤집으면 물 200 g이 100 g보다 빨리 데워져야 한다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 물질이라도 양이 많을수록 같은 열을 주었을 때 온도가 더 많이 오른다"
+  },
+  {
+   "id": "rel-hc-vs-c",
+   "text": "비열은 물질만 보면 정해지지만 열용량은 물체의 질량이 달라지면 함께 달라진다",
+   "form": {
+    "condition": "비열과 열용량을 가를 때",
+    "type": "classification",
+    "scope": "같은 물질로 만든 크기가 다른 물체",
+    "antecedent": {
+     "quantity": "비열·열용량",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "질량 의존 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 양을 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "열용량이 큰 물체는 비열도 반드시 크다",
+   "why_wrong": "열용량은 비열에 질량을 곱한 값이다. 비열이 작은 쇠라도 덩어리가 크면 열용량은 물 한 컵보다 클 수 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-hc-product"
+  },
+  {
+   "text": "열용량은 그 물체가 품을 수 있는 열의 최대량이다",
+   "why_wrong": "열용량은 온도를 1 ℃ 바꾸는 데 드는 열량이지 담을 수 있는 한계가 아니다. 열은 더 주면 더 들어간다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-hc-mass"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-specific-heat",
+   "note": "비열에 질량을 곱한 양이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-latent-heat",
+   "note": "온도가 바뀌지 않는 구간에서는 이 양으로 셈하지 않는다"
+  },
+  {
+   "type": "same",
+   "target": "mate-heat-capacity",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 3,
+ "role": "supporting"
+}

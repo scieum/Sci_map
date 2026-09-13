@@ -1,154 +1,53 @@
-# 동음이의 금지쌍 — homonyms.yaml
+# 동음이의 금지쌍 — ★공용 자산 (Sci_Map §0.3, R9)
 #
-# ★공용 자산이다 (Sci_Map §0.3). 개념 계열의 `same` 링크(G2)와
-#   노선 계열의 환승 판정(N2)이 **같은 이 파일**을 본다. 복사본을 만들지 마라.
+# 표기가 같아도 개념이 다르면 **절대 같은 concept_key 를 주지 않는다.**
+# 개념 링크(`same`)와 노선 환승은 표기 일치가 아니라 concept_key 일치로만 건다.
+# 이 파일은 "이 낱말이 보이면 멈추고 어느 쪽인지 확인하라"는 경고 목록이다.
 #
-# ★사람 관리 파일이다. 어느 계열에서 제안하든 사람 승인 없이 갱신하지 않는다
-#   (CLAUDE.md §9.3). 에이전트는 `proposals` 절에 후보만 적는다.
-#
-# ── 이 파일이 존재하는 이유 ────────────────────────────────────────────────
-# 개념 링크와 환승은 **문자열 일치로 걸지 않는다** (R9, CLAUDE.md §9.5).
-# 근거는 `concept_key` 일치 하나뿐이다. 그런데 사람도 기계도 실수한다 —
-# "핵"이라는 두 글자를 보고 원자핵과 세포핵을 잇는 실수가 가장 흔하다.
-# 이 파일은 그 실수를 **차단 목록으로** 만든다. 여기 실린 표기가 같다는 이유로
-# 걸린 링크는 자동으로 reject 된다. 사람이 게이트에서 뒤집을 수는 있다.
+# ★ 사람 관리 파일이다. 어느 계열에서 제안하든 **사람 승인 없이 갱신하지 않는다**
+#   (CLAUDE.md §9-3). 스크립트는 읽기만 한다.
 
 version: 1
-updated: 2026-09-05
 
-# ── 금지쌍 ──────────────────────────────────────────────────────────────────
-# surface : 겉으로 같아 보이는 표기 (사람이 헷갈리는 그 낱말)
-# senses  : 그 표기가 가리키는 서로 다른 개념들. 각각 concept_key 가 다르다.
-#           key 가 `null` 인 것은 아직 concept_registry.yaml 에 등록되지 않은 뜻이다.
-#           `proposed_key` 는 등록될 때 쓸 이름의 제안일 뿐 효력이 없다
-#           (등록은 G3/N3 사람 게이트에서). 1차 착수 시점에는 사전이 비어 있으므로
-#           전부 null 이다 — 금지 규칙 자체는 표기(surface)로 동작하므로 지금도 유효하다.
-# rule    : reject = 표기 일치만으로 link/환승을 걸면 무조건 기각
-#
-# ★ 주의: senses 안의 두 항목을 잇는 것이 금지다.
-#   같은 sense 끼리(원자핵 ↔ 원자핵)는 당연히 정상 링크다.
-
-homonyms:
-  - surface: 주기
-    rule: reject
+# 파이프라인이 이 낱말을 표제어나 링크 후보로 만나면 경고를 띄운다.
+watch_terms:
+  - term: 주기
+    reason: 주기율표의 가로줄 ↔ 진동·파동의 되풀이 시간. 과목이 갈리면 거의 확실히 다른 개념이다
     senses:
-      - key: null
-        proposed_key: concept:periodic-table-period
-        gloss: 주기율표의 가로줄. 같은 전자 껍질 수를 갖는 원소의 묶음
-        subject: 화학
-      - key: null
-        gloss: 파동이 한 번 진동하는 데 걸리는 시간 (T)
-        subject: 물리
-      - key: null
-        gloss: 천체가 궤도를 한 바퀴 도는 데 걸리는 시간
-        subject: 지구과학
+      - {key: "concept:periodic-table-period", gloss: "주기율표에서 같은 전자 껍질 수를 갖는 원소들의 가로줄", subject: 화학}
+      - {key: "concept:oscillation-period",    gloss: "진동·파동이 한 번 되풀이되는 데 걸리는 시간", subject: 물리학}
 
-  - surface: 핵
-    rule: reject
+  - term: 핵
+    reason: 원자핵 ↔ 세포핵 ↔ 응결핵. 셋 다 고등학교 과정에 나온다
     senses:
-      - key: null
-        proposed_key: concept:atomic-nucleus
-        gloss: 원자핵. 양성자와 중성자로 이루어진 원자의 중심
-        subject: 화학·물리
-      - key: null
-        gloss: 세포핵. 진핵세포의 유전 물질을 담은 세포 소기관
-        subject: 생명과학
-      - key: null
-        gloss: 지구 내부 구조의 최심부 (외핵·내핵)
-        subject: 지구과학
+      - {key: "concept:atomic-nucleus",  gloss: "양성자와 중성자로 이루어진 원자의 중심부", subject: 화학}
+      - {key: "concept:cell-nucleus",    gloss: "진핵세포에서 유전물질을 담고 있는 세포소기관", subject: 생명과학}
+      - {key: "concept:condensation-nucleus", gloss: "수증기가 응결할 때 중심이 되는 미세 입자", subject: 지구과학}
 
-  - surface: 전위
-    rule: reject
+  - term: 전위
+    reason: 전기 퍼텐셜 ↔ 지층의 자리바꿈. 표기가 같을 뿐 아무 관계가 없다
     senses:
-      - key: null
-        gloss: 電位. 단위 전하가 갖는 전기적 위치 에너지 (V)
-        subject: 물리·화학
-      - key: null
-        gloss: 轉位. 결정 격자의 선결함 (dislocation)
-        subject: 화학(고체)
-      - key: null
-        gloss: 轉位. 유기 반응에서 원자단이 자리를 옮기는 반응 (rearrangement)
-        subject: 화학(유기)
+      - {key: "concept:electric-potential", gloss: "단위 전하가 갖는 전기 퍼텐셜 에너지", subject: 물리학}
+      - {key: "concept:dislocation",        gloss: "결정 안 원자 배열의 어긋남", subject: 화학}
 
-  - surface: 일
-    rule: reject
+  - term: 일
+    reason: 물리학의 일(W=Fs) ↔ 일상어. 낱말이 짧아 오탐이 잦으니 링크 후보에서 특히 조심한다
     senses:
-      - key: null
-        gloss: 힘이 물체를 이동시킬 때 한 일 (W = F·s). 에너지의 한 형태
-        subject: 물리·화학
-      - key: null
-        gloss: 날. 시간 단위 (day)
-        subject: 일반
-    note: >
-      한 글자 표기라 부분 문자열 일치로도 오검출된다.
-      링크 후보 탐지(G1)에서 1글자 표기는 애초에 후보로 올리지 않는다.
+      - {key: "concept:work-physics", gloss: "힘이 물체를 옮긴 거리에 곱해진 양", subject: 물리학}
 
-  - surface: 계
-    rule: reject
+  - term: 계
+    reason: 열역학의 계(system) ↔ 태양계·생태계 등의 접미사. 접미사로 쓰인 것을 개념으로 잡지 않는다
     senses:
-      - key: null
-        proposed_key: concept:thermodynamic-system
-        gloss: 系. 열역학에서 관찰 대상으로 잘라낸 영역 (계 ↔ 주위)
-        subject: 화학·물리
-      - key: null
-        gloss: 界. 생물 분류 계급의 최상위 (동물계·식물계)
-        subject: 생명과학
-      - key: null
-        gloss: 系. 결정계 (cubic·tetragonal 등 결정 구조의 분류)
-        subject: 화학(고체)
-    note: 위 '일'과 같은 이유로 1글자 표기 규칙이 함께 적용된다.
+      - {key: "concept:thermodynamic-system", gloss: "주위와 구분해 살피는 대상 영역", subject: 화학}
 
-# ── 부분 문자열 오검출 방지 ─────────────────────────────────────────────────
-# 짧은 표기는 다른 낱말 안에 통째로 들어앉는다. 링크 후보 탐지가
-# "핵"을 보고 "핵산·핵심·중핵"을 물어오는 일을 막는다.
-matching_rules:
-  min_surface_length: 2        # 1글자 표기는 링크 후보로 올리지 않는다
-  whole_word_only: true        # 부분 문자열 일치 금지
-  ignore_spacing: true         # '증기 압력' ≡ '증기압력' (표기 정책 §6)
+  - term: 상
+    reason: 물질의 상(phase) ↔ 광학의 상(image). 물질과 에너지 단원에서 자주 나온다
+    senses:
+      - {key: "concept:phase-matter", gloss: "기체·액체·고체처럼 물리적 성질이 균일한 부분", subject: 화학}
+      - {key: "concept:optical-image", gloss: "렌즈·거울이 만드는 물체의 상", subject: 물리학}
 
-# ── 제안 대기열 ─────────────────────────────────────────────────────────────
-# 에이전트(graph-curator·network-curator)가 발견한 금지쌍 후보를 여기 적는다.
-# **사람이 homonyms 절로 옮기기 전까지는 효력이 없다.**
-proposals:
-  - surface: 전해질
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: whole_word_only
-    rationale: "'비전해질'(전해질이 아님)이 '전해질'로 잡혀 용해도·총괄성 카드 8장이 전해질 카드와 이어질 뻔했다. 뜻이 정반대인 부정 접두사 '비-'가 붙은 낱말을 부분 문자열로 물어 오는 것을 막아야 한다."
-    rejected_candidates: [g1-0005, g1-0008, g1-0017, g1-0018, g1-0019, g1-0023, g1-0032, g1-0037]
-  - surface: 결정
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: homonym
-    rationale: "'결정(結晶, crystal)'과 '결정하다(決定, determine)'가 표기가 같다. homonyms.yaml 의 금지쌍에 올릴 값어치가 있다."
-    rejected_candidates: [g1-0060]
-  - surface: 고분자
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: ignore_spacing + whole_word_only
-    rationale: "'…같고 분자성…', '…두고 분자만…', '…있고 분자는…'에서 공백을 지우자 '고분자'가 만들어졌다. ignore_spacing 을 낱말 경계 없이 적용한 탓이다."
-    rejected_candidates: [g1-0002, g1-0043, g1-0069]
-  - surface: 산화수
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: ignore_spacing + whole_word_only
-    rationale: "'과산화 수소수'에서 공백을 지우자 '산화수'가 잡혔다."
-    rejected_candidates: [g1-0056]
-  - surface: 호흡
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: whole_word_only
-    rationale: "'과호흡'이 '호흡'으로 잡혀 세포 호흡 카드와 이어질 뻔했다."
-    rejected_candidates: [g1-0065]
-  - surface: 기압
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: whole_word_only
-    rationale: "압력 단위 표기 '1기압'이 개념어 '대기압'의 표기로 잡혔다."
-    rejected_candidates: [g1-0039]
-  - surface: 충돌 횟수
-    proposed_by: graph-curator
-    proposed_at: 2026-09-07
-    rule_hint: homonym
-    rationale: 기체 분자와 용기 벽의 충돌 횟수(기체의 압력)와 반응물 입자끼리의 충돌 횟수(충돌수)는 세는 대상이 다르다. 같은 표기로 이어지지 않도록 뜻 갈래를 적어 두는 편이 좋다.
-    rejected_candidates: [g1-0001]
+# 링크를 걸 때의 규칙 (R9)
+rules:
+  - watch_terms 에 있는 낱말은 **표기 일치만으로 `same` 링크를 걸지 않는다**
+  - 어느 sense 인지 단정할 수 없으면 `uncertain` 으로 두고 G2 를 거쳐 G3 사람 게이트로 올린다
+  - 새 sense 를 발견하면 여기에 **제안**만 하고, 등록은 사람이 한다

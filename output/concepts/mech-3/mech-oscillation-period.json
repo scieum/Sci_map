@@ -1,0 +1,162 @@
+{
+  "id": "mech-oscillation-period",
+  "concept_key": "concept:oscillation-period",
+  "registry_status": "new",
+  "term": "단진동의 주기",
+  "notation": {
+    "hanja": "單振動 週期",
+    "hanja_gloss": "單 홑 단 · 振 떨칠 진 · 動 움직일 동 · 週 돌 주 · 期 기약할 기",
+    "english": "period of oscillation",
+    "symbol_display": "T = 2π√(m/k)",
+    "symbol_plain": "T = 2pi sqrt(m/k)"
+  },
+  "definition": "단진동하는 물체가 한 번 왕복하는 데 드는 시간. 용수철 진자에서는 질량과 용수철 상수만으로 정해진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-period-mass",
+      "text": "매단 물체가 무거울수록 용수철 진자가 한 번 왕복하는 데 걸리는 시간이 길어진다.",
+      "form": {
+        "condition": "용수철 상수가 일정할 때",
+        "type": "direct",
+        "scope": "탄성 한계 안의 용수철 진자",
+        "antecedent": {
+          "quantity": "물체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "T 가 질량의 제곱근에 비례하므로 반대 방향 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "매단 물체가 무거울수록 용수철 진자의 주기는 짧아진다."
+    },
+    {
+      "id": "rel-period-spring-constant",
+      "text": "빳빳해서 용수철 상수가 큰 용수철일수록 주기는 짧아진다.",
+      "form": {
+        "condition": "매단 물체의 질량이 일정할 때",
+        "type": "inverse",
+        "scope": "탄성 한계 안의 용수철 진자",
+        "antecedent": {
+          "quantity": "용수철 상수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "T 가 k 의 제곱근에 반비례하므로 반대 방향 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용수철 상수가 큰 용수철일수록 주기도 길어진다."
+    },
+    {
+      "id": "rel-period-frequency",
+      "text": "진동수는 주기의 역수이므로 주기가 길어지면 1 초 동안의 진동 횟수는 줄어든다.",
+      "form": {
+        "condition": "진동이 규칙적으로 되풀이될 때",
+        "type": "inverse",
+        "scope": "주기가 일정한 단진동",
+        "antecedent": {
+          "quantity": "주기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "역수 관계라 둘이 함께 커진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주기가 길어지면 1 초 동안의 진동 횟수도 함께 늘어난다."
+    },
+    {
+      "id": "rel-period-vertical-same",
+      "text": "연직으로 진동하는 용수철 진자의 주기는 같은 용수철로 수평으로 진동시킬 때와 같다.",
+      "form": {
+        "condition": "같은 물체와 같은 용수철을 쓸 때",
+        "type": "conditional",
+        "scope": "용수철 진자(중력은 진동의 중심만 옮긴다)"
+      },
+      "invertible": false,
+      "invertible_reason": "두 경우가 같다는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "용수철을 더 많이 당겼다 놓으면 주기가 길어진다.",
+      "why_wrong": "용수철 진자의 주기는 질량과 용수철 상수로만 정해지고 진폭과는 무관하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-period-mass"
+    },
+    {
+      "text": "매단 물체의 질량을 4 배로 하면 주기도 4 배가 된다.",
+      "why_wrong": "주기는 질량의 제곱근에 비례하므로 질량이 4 배가 되면 주기는 2 배가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-period-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-acceleration-displacement-relation"
+    },
+    {
+      "type": "next",
+      "target": "mech-wavelength-and-frequency",
+      "note": "진동수는 주기의 역수다"
+    },
+    {
+      "type": "related",
+      "target": "mech-elastic-force",
+      "note": "용수철 상수가 주기를 정하는 값이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-01"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-01",
+  "pages": [
+    98,
+    99
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "용수철 진자의 주기"
+  ],
+  "homonym_flag": true,
+  "notes": [
+    "homonyms.yaml 의 감시어 '주기' 다. 표제어를 '단진동의 주기' 로 좁히고 키는 homonyms.yaml 이 물리학 sense 로 적어 둔 concept:oscillation-period 를 그대로 썼다 — 화학의 concept:periodic-table-period 와 표기로 잇지 않는다.",
+    "T = 2π√(m/k) 는 99 쪽 본문 식이다. 각진동수는 곁주에만 있어 카드에 올리지 않았다.",
+    "C7 후보 삽화: 98쪽 그림 3~5(등속 원운동하는 물체의 그림자), 99쪽 그림 6.",
+    "C8 확인 요청(C6 uncertain): rel-period-frequency 는 mech-wavelength-and-frequency 의 rel-frequency-period 와 사실상 같은 명제다(주기와 진동수는 역수). 둘 다 invertible: true 라 D1 이 구별되지 않는 OX 둘을 만들 수 있다. 어느 쪽을 접을지는 사람이 정한다 — 고치지 않았다.",
+    "G3 안건(C5 키 충돌 판정): concept:oscillation-period 는 이 카드가 지킨다. homonyms.yaml 이 이 키에 달아 둔 뜻이 '진동·파동이 한 번 되풀이되는 데 걸리는 시간' 이어서 단진동·파동의 주기인 이 카드가 gloss 그대로이고, 원운동은 진동도 파동도 아니다. 키를 바꾸는 쪽은 mech-1 의 '원운동의 주기' 이며, 그 조정은 다른 단원에서 한다. 사전 파일은 읽기만 했다."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+ "id": "mech-force-composition",
+ "concept_key": "concept:force-composition",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "힘의 합성",
+ "aliases": [],
+ "notation": {
+  "hanja": "合成",
+  "hanja_gloss": "合 합할 합 · 成 이룰 성",
+  "english": "composition of forces"
+ },
+ "definition": "여러 힘이 함께 낸 효과를 한 힘으로 바꾸어 적는 일. 두 힘을 두 변으로 삼은 평행사변형의 대각선이 그 합력이 된다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-fc-angle",
+   "text": "두 힘의 크기를 그대로 둔 채 벌어진 각만 넓히면 합력의 크기는 작아진다.",
+   "form": {
+    "condition": "두 힘의 크기가 각각 일정할 때",
+    "type": "inverse",
+    "scope": "0°~180° 사이에서 한 물체에 함께 걸리는 두 힘",
+    "antecedent": {
+     "quantity": "두 힘이 이루는 각",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "합력의 크기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "코사인 항이 각이 커질수록 줄어들므로 '각이 커지면 합력도 커진다' 는 이 구간에서 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "두 힘의 크기가 같을 때 벌어진 각을 넓히면 합력의 크기도 함께 커진다."
+  },
+  {
+   "id": "rel-fc-methods",
+   "text": "평행사변형으로 그리든 삼각형으로 이어 그리든 얻어지는 합력은 하나로 같다.",
+   "form": {
+    "condition": "같은 두 힘을 같은 축척으로 작도할 때",
+    "type": "conditional",
+    "scope": "한 평면 위의 두 벡터 작도"
+   },
+   "invertible": false,
+   "invertible_reason": "두 작도법이 같은 결과를 준다는 말이라 방향을 뒤집을 자리가 없다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fc-three",
+   "text": "힘이 셋 이상이면 먼저 둘을 합치고 그 결과에 남은 힘을 차례로 더한다.",
+   "form": {
+    "condition": "세 개 이상의 힘이 한 물체에 함께 걸릴 때",
+    "type": "conditional",
+    "scope": "합하는 차례가 결과를 바꾸지 않는 벡터 합"
+   },
+   "invertible": false,
+   "invertible_reason": "작도 절차를 밝힌 명제라 뒤집은 문장이 성립하지 않는다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "두 힘의 크기를 그냥 더하면 합력의 크기가 된다",
+   "why_wrong": "두 힘이 나란할 때만 그렇다. 각을 이루면 대각선의 길이가 두 변 길이의 합보다 짧아 합력이 더 작다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fc-angle"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-vector"
+  },
+  {
+   "type": "next",
+   "target": "mech-net-force"
+  },
+  {
+   "type": "related",
+   "target": "mech-force-resolution"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  12,
+  13
+ ],
+ "difficulty": 2,
+ "role": "core",
+ "version": 1
+}

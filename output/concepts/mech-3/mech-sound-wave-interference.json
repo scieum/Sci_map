@@ -1,0 +1,125 @@
+{
+  "id": "mech-sound-wave-interference",
+  "concept_key": "concept:sound-wave-interference",
+  "registry_status": "new",
+  "term": "음파의 간섭",
+  "notation": {
+    "hanja": "音波 干涉",
+    "hanja_gloss": "音 소리 음 · 波 물결 파 · 干 방패 간 · 涉 건널 섭",
+    "english": "interference of sound waves"
+  },
+  "definition": "두 음원에서 나온 소리가 같은 공간에서 겹쳐, 자리마다 크게 또는 작게 들리게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sound-interference-walk",
+      "text": "같은 소리를 내는 두 스피커 앞을 가로질러 걸으면 크게 들리는 자리와 작게 들리는 자리가 번갈아 나온다.",
+      "form": {
+        "condition": "두 스피커가 같은 진동수의 소리를 낼 때",
+        "type": "causal",
+        "scope": "장애물이 없는 넓은 공간"
+      },
+      "invertible": false,
+      "invertible_reason": "관측 결과를 서술하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sound-interference-midpoint",
+      "text": "두 스피커에서 같은 거리에 있는 자리에서는 보강 간섭이 일어나 소리가 크게 들린다.",
+      "form": {
+        "condition": "두 음원이 같은 위상으로 소리를 낼 때",
+        "type": "conditional",
+        "scope": "경로차가 0 인 지점",
+        "antecedent": {
+          "quantity": "두 음원까지의 거리 차",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "소리의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "경로차가 0 이면 반드시 보강이므로 상쇄된다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 스피커에서 같은 거리에 있는 자리에서는 상쇄 간섭이 일어나 소리가 작게 들린다."
+    },
+    {
+      "id": "rel-sound-can-interfere",
+      "text": "음파도 파동이므로 다른 파동과 마찬가지로 간섭이 나타난다.",
+      "form": {
+        "condition": "두 음파가 같은 영역을 지날 때",
+        "type": "classification",
+        "scope": "음파",
+        "antecedent": {
+          "quantity": "음파",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "간섭의 발생",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "적용 범위를 밝히는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소리가 작게 들리는 자리는 소리가 거기까지 닿지 못했기 때문이다.",
+      "why_wrong": "두 음파가 모두 닿았지만 위상이 반대여서 상쇄 간섭이 일어난 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sound-interference-walk"
+    },
+    {
+      "text": "간섭은 빛에서만 일어나고 소리에서는 일어나지 않는다.",
+      "why_wrong": "음파도 파동이므로 겹치면 간섭한다. 두 스피커 실험이 그 증거다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sound-can-interfere"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-constructive-and-destructive-interference"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-sound-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-active-noise-control"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-04"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-02",
+  "pages": [
+    116,
+    117
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C8 확인 요청(C6 uncertain): rel-sound-interference-midpoint 가 mech-path-difference 의 rel-path-zero 와 겹친다. 고치지 않았다."
+  ]
+}

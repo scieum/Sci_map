@@ -1,0 +1,94 @@
+{
+ "id": "mech-angular-velocity",
+ "concept_key": "concept:angular-velocity",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "각속도",
+ "aliases": [],
+ "notation": {
+  "hanja": "角速度",
+  "hanja_gloss": "角 뿔 각 · 速 빠를 속 · 度 법도 도",
+  "english": "angular velocity",
+  "symbol_display": "ω",
+  "symbol_plain": "omega"
+ },
+ "definition": "돌고 있는 물체가 단위 시간 동안 쓸고 가는 각. 회전한 각을 걸린 시간으로 나눈 값이며 단위로 rad/s 를 쓴다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-av-radius",
+   "text": "같은 각속도로 도는 두 지점 가운데 회전 반지름이 큰 쪽의 속력이 크다.",
+   "form": {
+    "condition": "각속도가 일정할 때",
+    "type": "direct",
+    "scope": "같은 축을 도는 원운동",
+    "antecedent": {
+     "quantity": "회전 반지름",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "속력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "속력이 반지름과 각속도의 곱이므로 반지름이 큰 쪽이 느리다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 각속도로 돌 때 회전 반지름이 클수록 속력은 오히려 작아진다."
+  },
+  {
+   "id": "rel-av-radian",
+   "text": "회전각을 라디안으로 재면 호의 길이를 반지름으로 나눈 값이 된다.",
+   "form": {
+    "condition": "각의 단위로 라디안을 쓸 때",
+    "type": "conditional",
+    "scope": "원 궤도 위에서 잰 각"
+   },
+   "invertible": false,
+   "invertible_reason": "단위를 정의한 명제라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "회전목마 안쪽에 앉은 사람이 바깥쪽 사람보다 빠르게 움직인다",
+   "why_wrong": "두 사람의 각속도는 같지만 속력은 v = rω 이므로 반지름이 큰 바깥쪽이 더 빠르다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-av-radius"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-uniform-circular-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-centripetal-acceleration"
+  },
+  {
+   "type": "related",
+   "target": "mech-period-of-circular-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-03"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-03",
+ "pages": [
+  25
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

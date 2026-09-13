@@ -1,0 +1,121 @@
+{
+  "id": "mech-standing-wave",
+  "concept_key": "concept:standing-wave",
+  "registry_status": "new",
+  "term": "정상파",
+  "notation": {
+    "hanja": "定常波",
+    "hanja_gloss": "定 정할 정 · 常 항상 상 · 波 물결 파",
+    "english": "standing wave"
+  },
+  "definition": "반대 방향으로 지나가는 두 파동이 겹쳐, 어느 쪽으로도 나아가지 않고 제자리에서 진동하는 듯 보이는 합성파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-standing-from-opposite",
+      "text": "서로 반대 방향으로 진행하는 두 파동이 겹치면 진행하지 않는 것처럼 보이는 합성파가 생긴다.",
+      "form": {
+        "condition": "두 파동의 파장과 진폭이 같을 때",
+        "type": "causal",
+        "scope": "한 매질 위를 오가는 두 파동",
+        "antecedent": {
+          "quantity": "두 파동의 진행 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "정상파의 형성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 방향으로 나아가는 두 파동은 정상파를 만들지 못하므로 뒤집은 서술은 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 방향으로 진행하는 두 파동이 겹치면 진행하지 않는 것처럼 보이는 합성파가 생긴다."
+    },
+    {
+      "id": "rel-standing-condition",
+      "text": "정상파가 생기려면 겹치는 두 파동의 파장과 진폭이 같아야 한다.",
+      "form": {
+        "condition": "두 파동이 한 매질에서 만날 때",
+        "type": "conditional",
+        "scope": "정상파의 형성 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-standing-from-reflection",
+      "text": "줄의 끝에서 되돌아온 반사파가 뒤따라오는 입사파와 겹치면서 정상파를 만든다.",
+      "form": {
+        "condition": "줄 끝에서 반사가 되풀이될 때",
+        "type": "causal",
+        "scope": "양 끝이 고정된 줄"
+      },
+      "invertible": false,
+      "invertible_reason": "정상파가 실제로 만들어지는 경로를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정상파에서는 매질이 아예 움직이지 않는다.",
+      "why_wrong": "움직이지 않는 곳은 마디뿐이고, 나머지 지점은 제자리에서 계속 진동한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-standing-from-opposite"
+    },
+    {
+      "text": "정상파는 같은 방향으로 나아가는 두 파동이 만든다.",
+      "why_wrong": "반대 방향으로 진행하는 두 파동이 겹쳐야 정상파가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-standing-from-opposite"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-wave-superposition"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-free-end-and-fixed-end-reflection"
+    },
+    {
+      "type": "next",
+      "target": "mech-node-and-antinode"
+    },
+    {
+      "type": "next",
+      "target": "mech-standing-wave-on-string"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    120
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 120쪽 그림 24(정상파의 발생 원리).",
+    "C8 확인 요청(C6 uncertain): rel-standing-condition 이 정상파의 필요조건 셋 가운데 '파장' '진폭' 둘만 적고 '서로 반대 방향으로 진행' 을 빠뜨렸다. 셋째 조건은 rel-standing-from-opposite 가 본문으로 담고 있다. 한 명제에 모을지 둘로 나눌지는 사람이 정한다 — 여기서는 고치지 않았다."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "mech-kepler-first-law",
+ "concept_key": "concept:kepler-first-law",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "케플러 제1법칙",
+ "aliases": [
+  "타원 궤도 법칙"
+ ],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'케플러' 가 사람 이름을 소리대로 옮긴 말이라 표제어 전체를 한자어로 적을 수 없다.",
+  "english": "Kepler's first law"
+ },
+ "definition": "행성이 도는 길은 원이 아니라 타원이며, 태양은 그 타원의 두 초점 가운데 하나에 놓인다는 법칙.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-k1-distance",
+   "text": "궤도가 타원이므로 행성과 태양 사이의 거리는 근일점에서 가장 짧고 원일점에서 가장 길다.",
+   "form": {
+    "condition": "궤도가 원이 아닌 타원일 때",
+    "type": "conditional",
+    "scope": "태양을 한 초점으로 도는 행성"
+   },
+   "invertible": true,
+   "invertible_reason": "근일점과 원일점의 뜻이 거리로 정해져 있어 맞바꾸면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "행성과 태양 사이의 거리는 근일점에서 가장 길고 원일점에서 가장 짧다."
+  },
+  {
+   "id": "rel-k1-history",
+   "text": "궤도를 타원으로 보면 원 궤도 우주관으로는 풀리지 않던 속도 변화를 설명할 수 있다.",
+   "form": {
+    "condition": "화성 관측 자료를 설명하려 할 때",
+    "type": "causal",
+    "scope": "태양계 행성의 공전"
+   },
+   "invertible": false,
+   "invertible_reason": "설명력이 늘었다는 서술이라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "태양은 행성 타원 궤도의 중심에 있다",
+   "why_wrong": "태양이 놓인 자리는 중심이 아니라 두 초점 가운데 하나다. 그래서 행성과 태양 사이의 거리가 자리마다 달라진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-k1-distance"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-kepler-second-law"
+  },
+  {
+   "type": "next",
+   "target": "mech-kepler-third-law"
+  }
+ ],
+ "curriculum": [
+  "12역학01-04"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-01",
+ "pages": [
+  32
+ ],
+ "difficulty": 2,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "성취기준 12역학01-04 는 standards.yaml 의 crosscheck 가 '교사 확정' 이다 — 지도서 각론 166쪽 곁주 코드 오식을 사람이 바로잡은 결과라 '일치' 와 같은 신뢰도로 쓴다. 검증에서 뜨는 curriculum_crosscheck 경고는 이 사정 때문이다."
+ ]
+}

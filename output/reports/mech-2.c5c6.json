@@ -1,0 +1,841 @@
+{
+ "unit_id": "mech-2",
+ "unit_title": "역학과 에너지 Ⅱ. 열과 에너지",
+ "generated_at": "2026-09-14T08:47:33",
+ "generated_by": "concept-fact-validator",
+ "mode_run": [
+  "curriculum",
+  "relation"
+ ],
+ "inputs": {
+  "cards": "output/concepts/mech-2/",
+  "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+  "standard_commentary": "inbox/textbook/22개정/물리학/고_역학과 에너지(최혁준)_지도서_2쇄.pdf 총론 21쪽 (성취기준 해설·적용 시 고려 사항)",
+  "source_text": "output/source/mech-2/text.jsonl",
+  "unit_backlog": "docs/unit_backlog.yaml",
+  "cross_unit_cards": "output/concepts/mate-1/, mate-2/, mate-3/ (concept_key 가 같은 10장)"
+ },
+ "preconditions": {
+  "validate_tags_py": "통과 — 35장 모두. problems 0건. 실재하지 않는 코드·과목 접두어 불일치·태그 0개·미확정 crosscheck 없음.",
+  "crosscheck_note": "12역학02-01 의 crosscheck 는 '교사 확정' 이다. 지도서 각론 166쪽 곁주 코드 오식을 사람이 바로잡은 것이라 '일치' 와 같은 신뢰도로 다뤘다. 이 코드를 근거로 한 범위 이탈 판정은 하나도 내리지 않았다 (02-01 을 붙인 카드 7장 모두 in).",
+  "track_facts_skill": "없음 — .claude/skills/ 아래에 phys-facts·mech-facts 등 <track>-facts 스킬이 존재하지 않는다. 결정론적 사실 대조는 건너뛰었고, 대신 output/source/mech-2/text.jsonl 의 교과서 원문(59·61·65·67·68·69·75·79·81·82·83·84·85·86·87쪽)과 대조했다.",
+  "scope_of_this_report": "진위를 확정하지 않았다. 참·거짓이 걸린 것은 모두 uncertain 으로 두고 C8 검토 항목으로 올렸다. 카드 파일·사전 파일은 하나도 고치지 않았다."
+ },
+ "curriculum": {
+  "checked": 35,
+  "standards_in_scope": [
+   "12역학02-01",
+   "12역학02-02",
+   "12역학02-03",
+   "12역학02-04",
+   "12역학02-05"
+  ],
+  "commentary_limits_applied": [
+   "12역학02-01 — 고체뿐 아니라 유체에서 전도·대류·복사로 전달되는 과정 + 건축물 단열재·구조 사례 (해설)",
+   "12역학02-02 — 비열과 잠열을 정량적으로, 이상 기체 법칙을 실생활의 다양한 열 현상에 적용 (해설)",
+   "12역학02-03 — 등압·등적·등온 등 다양한 열역학 과정을 통해 '열역학 제1법칙의 기초' 로 한정, 제1법칙이 에너지 보존 법칙의 다른 표현임 (해설)",
+   "12역학02-04·02-05 — 해설 없음. 성취기준 본문과 교과서 본문으로 판정했다.",
+   "(적용 시 고려 사항) 열기관 등에서의 열 현상의 정량적인 계산은 지양 — 이 제한에 걸리는 것은 mech-carnot-engine 의 오개념 M2 한 곳뿐이었다."
+  ],
+  "findings": [
+   {
+    "card_id": "mech-adiabatic-process",
+    "term": "단열 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     72
+    ],
+    "role": "supporting",
+    "reason": "72쪽 본문. 해설은 등압·등적·등온을 들고 '등' 으로 열어 두었고, 교과서가 본문에서 다루므로 02-03 범위 안이다."
+   },
+   {
+    "card_id": "mech-carnot-engine",
+    "term": "카르노 기관",
+    "curriculum_scope": "uncertain",
+    "current_tags": [
+     "12역학02-04"
+    ],
+    "suggested_tags": null,
+    "verdict": "uncertain",
+    "pages": [
+     79,
+     86
+    ],
+    "role": "core",
+    "reason": "카드 본체는 02-04 범위 안이다 — 카르노 기관과 열효율 식(1 에서 두 열원의 절대 온도 비를 뺀 값)이 교과서 79쪽 본문과 86쪽 핵심 개념 정리에 실려 있고, 400 K·300 K 로 0.25 를 구하는 문항도 87쪽에 있다. 판단이 갈리는 것은 카드가 덧붙인 오개념 M2 다. '1000 K와 900 K 사이는 0.1' 은 교과서 어디에도 없는 수치 조합이고, 지도서 총론 21쪽 적용 시 고려 사항이 '열기관 등에서의 열 현상의 정량적인 계산은 지양' 하라고 못 박은 대목과 부딪힌다. 카드를 범위 밖으로 미는 정도는 아니라고 보아 out 으로 내리지 않고 C8 검토 항목으로 올린다."
+   },
+   {
+    "card_id": "mech-change-of-state",
+    "term": "상태 변화",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     64
+    ],
+    "role": "core",
+    "reason": "64쪽 본문. 02-02 성취기준 본문 '열에 의한 물질의 상태 변화' 그대로다."
+   },
+   {
+    "card_id": "mech-entropy",
+    "term": "엔트로피",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-05"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     84,
+     85
+    ],
+    "role": "core",
+    "reason": "84·85쪽 본문. 02-05 의 '엔트로피를 이용하여' 그대로다."
+   },
+   {
+    "card_id": "mech-first-law-of-thermodynamics",
+    "term": "열역학 제1법칙",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     71,
+     74
+    ],
+    "role": "core",
+    "reason": "71·74쪽 본문. 02-03 해설이 '열역학 제1법칙의 기초' 와 '제1법칙이 에너지 보존 법칙의 다른 표현' 을 함께 요구한다. 카드의 rel-fl-conservation 이 뒤쪽을 받친다."
+   },
+   {
+    "card_id": "mech-gas-diffusion",
+    "term": "기체의 확산",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-05"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     85,
+     87
+    ],
+    "role": "supporting",
+    "reason": "85·87쪽 본문. 02-05 성취기준 본문이 '기체의 확산' 을 낱말 그대로 들고 있다."
+   },
+   {
+    "card_id": "mech-heat-capacity",
+    "term": "열용량",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     63,
+     74
+    ],
+    "role": "supporting",
+    "reason": "63·74쪽 본문. 해설은 비열·잠열만 들었으나 열용량은 교과서 본문과 74쪽 핵심 개념 정리에 실려 있어 02-02 범위 안이다."
+   },
+   {
+    "card_id": "mech-heat-conduction",
+    "term": "전도",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     59
+    ],
+    "role": "supporting",
+    "reason": "59쪽 본문. 02-01 해설의 전도 과정에 해당한다. 원통형 고체의 전도식(Q 는 A·ΔT·t 에 비례하고 L 에 반비례)은 59쪽 본문과 75쪽 개념 확인에 실려 있어 교과서 안의 정량 서술이고, 지도서가 지양하라고 한 것은 '열기관 등에서의 열 현상' 의 정량 계산이라 여기에 걸리지 않는다."
+   },
+   {
+    "card_id": "mech-heat-convection",
+    "term": "대류",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     59
+    ],
+    "role": "supporting",
+    "reason": "59쪽 본문. 02-01 해설의 대류 과정에 해당한다."
+   },
+   {
+    "card_id": "mech-heat-engine",
+    "term": "열기관",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-04"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     78
+    ],
+    "role": "core",
+    "reason": "78쪽 본문. 02-04 성취기준 본문의 '다양한 열기관' 그대로다."
+   },
+   {
+    "card_id": "mech-heat-transfer",
+    "term": "열전달",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     58,
+     59,
+     60
+    ],
+    "role": "core",
+    "reason": "58~60쪽 본문. 02-01 해설이 '고체뿐 아니라 유체에서 열이 전도·대류·복사로 전달되는 과정을 이해' 하라고 적은 그 자리다."
+   },
+   {
+    "card_id": "mech-ideal-gas",
+    "term": "이상 기체",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     68,
+     71
+    ],
+    "role": "supporting",
+    "reason": "68·71쪽 본문. 02-02 의 '이상 기체' 를 다루기 위한 모형 서술이다."
+   },
+   {
+    "card_id": "mech-ideal-gas-law",
+    "term": "이상 기체 법칙",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     68,
+     74
+    ],
+    "role": "core",
+    "reason": "68·74쪽 본문. PV = NkT 와 볼츠만 상수가 68쪽에 실려 있다. 02-02 해설의 '이상 기체 법칙을 실생활의 다양한 열 현상에 적용' 에 해당한다.",
+    "prerequisites": [
+     "concept:absolute-temperature"
+    ],
+    "prerequisite_note": "concept:absolute-temperature 는 사전에 등록돼 있고 카드는 mate-absolute-temperature 다. 이 단원에는 절대 온도 카드가 따로 없고 mech-temperature-volume-relation 이 절대 영도를 안고 있다."
+   },
+   {
+    "card_id": "mech-internal-energy",
+    "term": "내부 에너지",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     70,
+     71
+    ],
+    "role": "core",
+    "reason": "70·71쪽 본문. 02-03 의 '계의 내부 에너지를 변화시키거나' 그대로다."
+   },
+   {
+    "card_id": "mech-irreversible-process",
+    "term": "비가역 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-05"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     82,
+     83
+    ],
+    "role": "core",
+    "reason": "82·83쪽 본문. 02-05 의 '비가역 현상' 그대로다."
+   },
+   {
+    "card_id": "mech-isobaric-process",
+    "term": "등압 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     72
+    ],
+    "role": "supporting",
+    "reason": "72쪽 본문. 02-03 해설의 등압 과정이다."
+   },
+   {
+    "card_id": "mech-isochoric-process",
+    "term": "등적 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     73
+    ],
+    "role": "supporting",
+    "reason": "73쪽 본문. 02-03 해설의 등적 과정이다."
+   },
+   {
+    "card_id": "mech-isothermal-process",
+    "term": "등온 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     71
+    ],
+    "role": "supporting",
+    "reason": "71쪽 본문. 02-03 해설이 '등압 과정, 등적 과정, 등온 과정 등 다양한 열역학 과정' 을 명시한다."
+   },
+   {
+    "card_id": "mech-latent-heat",
+    "term": "잠열",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     64,
+     65
+    ],
+    "role": "supporting",
+    "reason": "64·65쪽 본문. 02-02 해설의 '잠열을 정량적으로' 에 해당한다."
+   },
+   {
+    "card_id": "mech-pressure-temperature-relation",
+    "term": "기체의 압력과 절대 온도 관계",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     67
+    ],
+    "role": "supporting",
+    "reason": "67쪽 본문. 02-02 의 세 짝 가운데 하나다.",
+    "prerequisites": [
+     "concept:absolute-temperature"
+    ]
+   },
+   {
+    "card_id": "mech-pressure-volume-relation",
+    "term": "기체의 압력과 부피 관계",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     67
+    ],
+    "role": "core",
+    "reason": "67쪽 본문. 02-02 의 '온도, 압력, 부피의 관계' 세 짝 가운데 하나다.",
+    "prerequisites": [
+     "concept:absolute-temperature"
+    ]
+   },
+   {
+    "card_id": "mech-reversible-process",
+    "term": "가역 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-05"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     82,
+     83
+    ],
+    "role": "supporting",
+    "reason": "82·83쪽 본문. 02-05 가 비가역을 다루기 위해 교과서가 먼저 세운 짝 개념이다."
+   },
+   {
+    "card_id": "mech-second-law-of-thermodynamics",
+    "term": "열역학 제2법칙",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-05"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     85,
+     86
+    ],
+    "role": "core",
+    "reason": "85·86쪽 본문. 02-05 의 비가역 현상 설명을 법칙으로 적는 자리다."
+   },
+   {
+    "card_id": "mech-social-impact-of-heat-engine",
+    "term": "열기관의 개발과 우리 생활",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-04"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     80,
+     81
+    ],
+    "role": "context",
+    "reason": "80·81쪽 본문. 02-04 의 '인류 공동체에 미친 영향을 산업발전과 환경 측면에서 평가' 그대로다. 자동차 엔진 40 %·초기 증기 기관 10 % 미만은 81쪽 본문에 그대로 있다."
+   },
+   {
+    "card_id": "mech-specific-heat",
+    "term": "비열",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     63,
+     64
+    ],
+    "role": "supporting",
+    "reason": "63·64쪽 본문. 02-02 해설이 '물질의 고유한 특성인 비열과 잠열을 정량적으로 이해' 하라고 명시한 자리다."
+   },
+   {
+    "card_id": "mech-temperature-volume-relation",
+    "term": "기체의 절대 온도와 부피 관계",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-02"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     67
+    ],
+    "role": "core",
+    "reason": "67쪽 본문. 02-02 의 세 짝 가운데 하나다.",
+    "prerequisites": [
+     "concept:absolute-temperature"
+    ]
+   },
+   {
+    "card_id": "mech-thermal-efficiency",
+    "term": "열효율",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-04"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     78,
+     86
+    ],
+    "role": "core",
+    "reason": "78·86쪽 본문. 02-04 의 '열효율을 설명하고' 그대로다. 열효율의 정의는 86쪽 핵심 개념 정리에 실려 있다."
+   },
+   {
+    "card_id": "mech-thermal-expansion",
+    "term": "열팽창",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     61
+    ],
+    "role": "core",
+    "reason": "61쪽 본문. 02-01 성취기준 본문이 '열팽창' 을 낱말 그대로 들고 있다."
+   },
+   {
+    "card_id": "mech-thermal-insulation",
+    "term": "단열",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     59,
+     62
+    ],
+    "role": "core",
+    "reason": "59·62쪽 본문. 02-01 성취기준 본문이 '단열' 을 낱말 그대로 들고 있다."
+   },
+   {
+    "card_id": "mech-thermal-motion",
+    "term": "열운동",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     58,
+     67,
+     70
+    ],
+    "role": "supporting",
+    "reason": "58·67·70쪽 본문. 열전달을 미시적으로 읽는 바탕이라 02-01 에 걸리지만, 67쪽(기체의 압력)·70쪽(내부 에너지)에서도 쓰이므로 02-02·02-03 을 함께 붙일 여지가 있다. 태그가 틀린 것은 아니어서 retag 로 올리지 않는다."
+   },
+   {
+    "card_id": "mech-thermal-radiation",
+    "term": "복사",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-01"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     60,
+     74
+    ],
+    "role": "supporting",
+    "reason": "60쪽 본문. 02-01 해설의 복사 과정에 해당한다."
+   },
+   {
+    "card_id": "mech-thermodynamic-cycle",
+    "term": "열기관의 순환 과정",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-04"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     78,
+     79,
+     86
+    ],
+    "role": "supporting",
+    "reason": "78·79·86쪽 본문. 02-04 의 '순환 과정' 그대로다. 스털링 엔진 순환의 네 과정은 79쪽 그림 II-27 과 차례까지 맞는다."
+   },
+   {
+    "card_id": "mech-thermodynamic-system",
+    "term": "계",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     71
+    ],
+    "role": "supporting",
+    "reason": "71쪽 본문. 02-03 성취기준 본문의 '계' 를 세우는 자리다."
+   },
+   {
+    "card_id": "mech-work",
+    "term": "일",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     58,
+     69,
+     70
+    ],
+    "role": "supporting",
+    "reason": "58·69·70쪽 본문. 02-03 의 '외부에 일을 할 수 있음' 을 받친다. 다만 rel-wk-ke(일·운동 에너지 정리)는 Ⅰ단원(12역학01-01·01-02)에서 온 선수 개념을 69쪽이 다시 불러 쓴 것이다.",
+    "prerequisites": [
+     "concept:net-force"
+    ],
+    "prerequisite_note": "concept:net-force 는 mech-1 의 mech-net-force 카드가 쓰는 키다. docs/concept_registry.yaml 에는 아직 등록돼 있지 않으니 G3 에서 확인해야 한다. 링크를 거는 것은 G 파이프라인의 일이다."
+   },
+   {
+    "card_id": "mech-work-done-by-gas",
+    "term": "기체가 한 일",
+    "curriculum_scope": "in",
+    "current_tags": [
+     "12역학02-03"
+    ],
+    "suggested_tags": null,
+    "verdict": "ok",
+    "pages": [
+     70
+    ],
+    "role": "core",
+    "reason": "70쪽 본문. 02-03 의 '외부에 일을 할 수 있음' 그대로다."
+   }
+  ],
+  "stats": {
+   "in": 34,
+   "out": 0,
+   "uncertain": 1
+  },
+  "verdict_stats": {
+   "ok": 34,
+   "retag": 0,
+   "out_of_scope": 0,
+   "uncertain": 1
+  },
+  "escalation": {
+   "out_of_scope_over_2": false,
+   "uncertain_ratio": 0.029,
+   "uncertain_over_20pct": false
+  }
+ },
+ "relations": {
+  "checked": 109,
+  "misconceptions_checked": 70,
+  "invertible_true_count": 53,
+  "checks": {
+   "1": "scope 누락·과일반화",
+   "2": "invertible 오판정 — 뒤집은 문장이 반드시 거짓인가",
+   "3": "동어반복 (정의를 문장으로 바꾼 것)",
+   "4": "오개념 정합성 (linked_relation 이 가리키는 명제의 반대편인가)",
+   "5": "카드 내·카드 사이 모순",
+   "e": "교과서에 없는 수치·사실 (메인이 따로 지시한 항목)"
+  },
+  "findings": [
+   {
+    "card_id": "mech-gas-diffusion",
+    "relation_id": "rel-gd-spread",
+    "verdict": "defect",
+    "checks": [
+     2,
+     5
+    ],
+    "severity": "high",
+    "reason": "invertible: true 이고 invertible_reason 은 되모임 문장이 '반드시 거짓' 이라고 적었다. 그런데 같은 카드의 오개념 '시간을 충분히 오래 두면 퍼진 기체가 저절로 다시 한쪽에 모일 수 있다' 의 why_wrong 은 '그 확률은 0에 가까워진다' 로, 0 이 아님을 스스로 인정한다. 한 카드 안에서 같은 문장의 강도가 '반드시 거짓' 과 '확률이 0에 가깝다' 로 갈린다. mech-entropy 의 오개념 '엔트로피가 작은 상태는 절대로 나타날 수 없다 — 나타날 확률이 아주 작을 뿐 불가능한 것은 아니다' 도 같은 쪽에 선다. inverted_text 가 D1 에서 OX 오답 지문이 되므로 강도를 한쪽으로 정해야 한다.",
+    "suggest": "명제와 오개념 가운데 어느 쪽 강도를 바꿀지 정하고, 바꾸는 쪽에 적용 규모(거시적 규모인지 낱낱의 요동까지인지)를 가르는 단서를 넣게 한다. 문장은 C2 가 쓴다."
+   },
+   {
+    "card_id": "mech-heat-conduction",
+    "relation_id": "rel-cond-k",
+    "target": "misconceptions[0] (linked_relation: rel-cond-k)",
+    "verdict": "defect",
+    "checks": [
+     4
+    ],
+    "severity": "medium",
+    "reason": "오개념 '전도가 일어날 때는 뜨거운 쪽 입자가 차가운 쪽으로 옮겨 간다' 가 rel-cond-k 를 가리킨다. 그런데 rel-cond-k 는 '열전도도가 큰 물질일수록 열을 잘 나른다' 로 전도도의 크기와 전달량을 잇는 명제라 입자가 옮겨 가는지 아닌지와는 맞서지 않는다. 이 오개념이 실제로 마주 서는 것은 이 카드의 정의 구절 '입자가 제자리를 지킨 채' 와 mech-heat-convection 의 rel-conv-particle 이다. 엉뚱한 명제를 가리키고 있다.",
+    "suggest": "linked_relation 을 바꾸거나, 입자가 자리를 옮기지 않는다는 내용을 받는 명제를 이 카드에 두게 한다. 어느 쪽인지는 메인이 정한다."
+   },
+   {
+    "card_id": "mech-latent-heat",
+    "relation_id": "rel-lh-property",
+    "target": "misconceptions[1] (linked_relation: rel-lh-property)",
+    "verdict": "defect",
+    "checks": [
+     4
+    ],
+    "severity": "medium",
+    "reason": "오개념 '잠열은 온도계에 나타나지 않으니 실제로 흡수되거나 방출되는 에너지가 아니다' 가 rel-lh-property 를 가리킨다. rel-lh-property 는 '잠열은 물질마다 고유한 값을 가진다' 라서 그 반대편은 '물질이 달라도 잠열은 같다' 여야 한다. 이 오개념이 마주 서는 것은 rel-lh-keep('잠열이 드나드는 동안 온도가 머물러 있다')과 정의의 '온도계에는 나타나지 않지만' 구절이다.",
+    "suggest": "linked_relation 대상을 다시 고르게 한다."
+   },
+   {
+    "card_id": "mech-temperature-volume-relation",
+    "relation_id": "rel-tv-direct",
+    "target": "misconceptions[1] (linked_relation: rel-tv-direct)",
+    "verdict": "defect",
+    "checks": [
+     "e"
+    ],
+    "severity": "medium",
+    "reason": "why_wrong 이 '283 K가 293 K가 된 것이라 부피는 4 % 남짓 늘어난다' 고 적었다. 293/283 은 1.0353 이라 실제 증가는 3.5 % 이고, '4 % 남짓' 은 4 % 를 조금 넘는다는 뜻이므로 값을 넘겨 적은 것이 된다. 과학적 진위가 아니라 카드 안에서 닫히는 산술이라 여기서 짚는다. 교과서 67쪽에는 이 수치 예가 없다.",
+    "suggest": "수치 표현을 실제 계산과 맞추게 한다. 고쳐 쓴 문장은 여기 적지 않는다."
+   },
+   {
+    "card_id": "mech-carnot-engine",
+    "relation_id": "rel-ca-gap",
+    "target": "misconceptions[1] (linked_relation: rel-ca-gap)",
+    "verdict": "defect",
+    "checks": [
+     "e"
+    ],
+    "severity": "medium",
+    "reason": "why_wrong 이 '400 K와 300 K 사이의 효율은 0.25지만, 1000 K와 900 K 사이는 0.1이다' 라고 적었다. 앞의 짝은 교과서 87쪽 문항에 그대로 있으나 뒤의 1000 K·900 K 짝은 교과서 어디에도 없는 수치다. 지도서 총론 21쪽 적용 시 고려 사항의 '열기관 등에서의 열 현상의 정량적인 계산은 지양' 과도 부딪힌다. C5 절의 mech-carnot-engine uncertain 판정과 같은 대목이다.",
+    "suggest": "교과서에 있는 수치만 남길지, 두 짝을 견주는 서술 자체를 정성적으로 바꿀지 정하게 한다."
+   },
+   {
+    "card_id": "mech-thermodynamic-system",
+    "relation_id": "rel-sys-cylinder",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "명제 '이 단원에서는 실린더와 피스톤으로 막아 둔 일정량의 이상 기체만을 계로 다룬다' 는 정의의 둘째 문장 '이 단원에서는 실린더 속 기체가 계이고, 그 바깥의 모든 것이 주변 환경이 된다' 를 낱말까지 되풀이한다. 같은 카드의 rel-sys-boundary('무엇을 계로 삼으면 나머지 전부는 주변 환경으로 갈린다')도 같은 문장의 뒷부분을 옮긴 것이라, 세 명제 가운데 정의에서 저절로 나오지 않는 것은 rel-sys-sign 하나뿐이다.",
+    "suggest": "정의와 명제 가운데 어느 쪽에 이 내용을 둘지 정리하게 한다."
+   },
+   {
+    "card_id": "mech-ideal-gas",
+    "relation_id": "rel-ig-point",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "명제 '분자 자체가 차지하는 부피를 0으로 두고 충돌할 때만 서로 힘을 주고받는다고 본다' 가 정의의 둘째 문장 '분자 자체의 부피를 무시하고, 분자끼리는 부딪칠 때만 상호작용한다고 둔다' 와 낱말 단위로 겹친다.",
+    "suggest": "정의와 명제 중 한쪽을 비우게 한다."
+   },
+   {
+    "card_id": "mech-thermodynamic-cycle",
+    "relation_id": "rel-cy-return",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "명제 '한 바퀴를 돌고 나면 기체의 압력·부피·온도가 모두 처음 값으로 돌아온다' 는 정의 '여러 열역학 과정을 차례로 거쳐 처음 상태로 되돌아오는 한 바퀴' 를 문장으로 바꾼 것이다. invertible_reason 도 '순환이라는 말의 뜻에서 따라 나오는 서술' 이라고 스스로 적었다.",
+    "suggest": "정의에서 바로 나오지 않는 내용으로 자리를 다시 잡게 한다. 한 바퀴 뒤 내부 에너지 변화가 0 이라는 몫은 mech-heat-engine 의 rel-he-cycle-du 가 이미 맡고 있다."
+   },
+   {
+    "card_id": "mech-entropy",
+    "relation_id": "rel-en-count",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "명제 '같은 거시 상태를 만드는 미시적 배열의 가짓수가 많을수록 그 상태의 엔트로피가 크다' 는 정의 '미시적 배열이 얼마나 많은지를 재는 척도' 를 문장으로 바꾼 것이다. invertible_reason 이 '정의와 곧바로 어긋난다' 고 적은 것 자체가 동어반복의 표시다. 뒤집은 문장이 거짓인 것은 맞으므로 invertible 판정은 건드릴 일이 아니다.",
+    "suggest": "정의를 읽으면 나오지 않는 내용으로 옮길지, 명제를 접고 rel-en-prob·rel-en-gap 만 남길지 정하게 한다."
+   },
+   {
+    "card_id": "mech-thermal-motion",
+    "relation_id": "rel-thm-temp",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "정의 둘째 문장 '이 운동이 얼마나 활발한지를 재는 잣대가 온도다' 와 명제 '온도가 높은 쪽이 열운동이 더 활발하다' 가 같은 말이다. 다만 이 명제가 0 ℃ 오개념을 받치고 있어 학습 가치가 남아 있는지 판단이 갈린다 — C8 검토 항목으로 올린다.",
+    "suggest": "정의의 둘째 문장을 옮길지 명제를 옮길지 사람이 정하게 한다."
+   },
+   {
+    "card_id": "mech-internal-energy",
+    "relation_id": "rel-ie-temp",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "정의 '온도가 그 크기를 알려 주는 잣대가 된다' 와 명제 '온도가 오르면 내부 에너지가 늘어난 것으로 읽는다' 가 같은 구조로 겹친다. rel-thm-temp·rel-en-count 와 같은 '척도·잣대' 꼴 되풀이다. 판단이 갈려 C8 로 올린다.",
+    "suggest": "세 카드에 걸친 같은 꼴을 한꺼번에 손볼지 정하게 한다."
+   },
+   {
+    "card_id": "mech-pressure-volume-relation",
+    "relation_id": "rel-pv-product",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "severity": "low",
+    "reason": "앞 절 '압력과 부피를 곱한 값이 일정하므로' 는 정의 둘째 문장 '두 양을 곱한 값이 일정하게 지켜진다' 의 되풀이고, 뒤 절 '부피가 절반이 되면 압력은 두 배' 는 같은 카드 rel-pv-inverse 의 수치 사례다. 다만 배수 관계를 짚는 것이 rel-pv-inverse 가 못 하는 몫이라고 볼 여지가 있다.",
+    "suggest": "rel-pv-inverse 와 겹치는 몫을 정리할지 사람이 정하게 한다."
+   },
+   {
+    "card_id": "mech-second-law-of-thermodynamics",
+    "relation_id": "rel-sl-entropy",
+    "verdict": "uncertain",
+    "checks": [
+     5
+    ],
+    "severity": "medium",
+    "reason": "rel-sl-entropy 의 invertible_reason 은 '고립계에서 엔트로피가 저절로 줄어드는 변화는 일어나지 않는다고 못 박은 것' 이라 뒤집은 문장을 반드시 거짓으로 본다. 그런데 같은 카드의 rel-sl-statistical 은 '제2법칙은 반드시 그래야 한다는 단정이 아니라 확률에 기댄 진술' 이라고 적는다. 두 명제가 같은 카드 안에서 강도를 달리한다. 교과서 85쪽이 본문('고립된 계의 엔트로피는 감소하지 않는다')과 곁주('제2법칙은 통계에 기반한 확률적 진술이다')를 모두 싣고 있어 카드만의 결함이라 단정할 수 없다 — 진위 판단 필요, C8 검토 항목이다. mech-gas-diffusion rel-gd-spread 와 같은 뿌리다.",
+    "suggest": "두 명제가 같은 카드에 있어도 되는지, 강도 차이를 문장에 드러낼지 사람이 정하게 한다."
+   },
+   {
+    "card_id": "mech-thermal-expansion",
+    "relation_id": "rel-exp-dt",
+    "verdict": "uncertain",
+    "checks": [
+     1
+    ],
+    "severity": "low",
+    "reason": "scope 가 '선팽창 계수가 일정하다고 볼 수 있는 온도 범위' 까지만 적었다. 짝인 rel-exp-alpha 는 scope 에 '선팽창 계수가 양인 고체' 를 박아 두었는데 이 명제에는 그 단서가 없다. 교과서 61쪽도 '대부분의 물질은 온도가 올라가면 길이나 부피가 팽창' 이라고 적어 예외를 열어 두었고, 카드 정의는 '대부분' 없이 단정한다. 예외를 이 수준에서 다룰지가 갈려 uncertain 으로 둔다.",
+    "suggest": "rel-exp-alpha 와 같은 단서를 scope 에 맞출지 정하게 한다."
+   },
+   {
+    "card_id": "mech-specific-heat",
+    "relation_id": null,
+    "target": "definition (카드 사이 대조)",
+    "verdict": "uncertain",
+    "checks": [
+     5
+    ],
+    "severity": "low",
+    "reason": "같은 concept_key(concept:specific-heat)로 묶인 mate-specific-heat 는 비열을 '1 g 의 온도를 1 ℃ 올리는 에너지' 로, 이 카드는 '1 kg' 으로 적는다. 물리 교과서와 화학 교과서의 관행 차이라 명제끼리 어긋나는 것은 아니지만, 같은 키로 묶여 D1 문항과 G 링크에서 함께 읽히면 학생이 부딪힌다. rel-sh-formula 의 계산에도 단위가 걸린다.",
+    "suggest": "두 카드를 같은 키로 둘지, 기준량 차이를 카드에 드러낼지는 G3·C8 에서 사람이 정한다. 이 검사는 어느 쪽도 고치지 않는다."
+   },
+   {
+    "card_id": "mech-entropy",
+    "relation_id": null,
+    "target": "definition / misconceptions[0] (카드 사이 대조)",
+    "verdict": "uncertain",
+    "checks": [
+     5
+    ],
+    "severity": "low",
+    "reason": "같은 concept_key(concept:entropy)인 mate-entropy 의 정의는 '입자의 배열과 운동이 흐트러진 정도' 다. 이 카드는 aliases 에 '무질서도' 를 두면서도 오개념 M1 에서 '어질러 보이는지와는 상관이 없다' 고 갈라 세운다. same 링크가 걸려 있어 두 카드가 나란히 읽히면 어느 쪽을 정의로 받아야 할지 갈린다. 어느 정의가 옳은가는 진위 판단이라 여기서 정하지 않는다.",
+    "suggest": "두 카드의 정의를 맞출지, 계열별 서술을 그대로 둘지 G3·C8 에서 사람이 정한다."
+   }
+  ],
+  "stats": {
+   "ok": 99,
+   "defect": 9,
+   "uncertain": 7
+  },
+  "notes": [
+   "invertible: true 53건을 하나씩 뒤집어 읽었다. 뒤집은 문장이 반드시 거짓이 아닐 수 있다고 본 것은 rel-gd-spread 한 건뿐이고, 그것도 카드 안의 오개념 서술과 강도가 어긋난다는 근거로 올린 것이다 (진위 판정 아님).",
+   "form.type 이 classification·conditional 인데 invertible: true 인 것이 11건 있었다 (rel-ca-max·rel-cos-flat·rel-gd-spread·rel-he-two-sources·rel-irr-heat·rel-rad-balance·rel-rev-micro-macro·rel-sl-direction·rel-sl-entropy·rel-sys-sign·rel-wg-sign). 하나씩 뒤집어 읽어 보니 rel-gd-spread 를 빼고는 모두 뒤집은 문장이 반드시 거짓이 되는 자리였다. type 만 보고 내린 지적은 하지 않았다.",
+   "냉장고·열펌프가 반례가 되는 자리는 모두 조건이 박혀 있었다 — rel-ht-direction(scope '외부에서 일을 해 주지 않는 자발적 열전달'), rel-irr-heat·rel-gd-spread·rel-sl-direction(condition '바깥에서 일을 해 주지 않을 때'). mech-heat-transfer·mech-irreversible-process·mech-second-law-of-thermodynamics 의 오개념도 냉장고를 직접 들어 설명한다. 이 항목에서는 지적할 것이 없었다.",
+   "교과서가 말한 방향의 역전은 찾지 못했다. 카르노 순환 네 과정의 차례(79쪽 그림 II-26), 스털링 엔진 네 과정의 차례(79쪽 그림 II-27), 열효율 정의(86쪽), 제2법칙 진술(85쪽), 온도 차와 엔트로피의 관계(85쪽)를 원문과 대조해 모두 같은 방향이었다.",
+   "교과서에 없는 수치로 걸린 것은 두 건이다. 40 %·10 %(81쪽), 2.26×10⁶ J/kg(65쪽), 열전도도 표(59쪽), 400 K·300 K(87쪽), PV = NkT 와 볼츠만 상수(68쪽)는 모두 원문에 있었다.",
+   "mate-* 카드와의 대조(concept_key 가 같은 10장: entropy·gas-diffusion·heat-capacity·internal-energy·specific-heat·thermodynamic-system·ideal-gas·ideal-gas-law·boyle-law·charles-law)에서 명제끼리 어긋나는 것은 없었다. 갈린 것은 정의의 기준량(비열 1 kg 대 1 g)과 엔트로피 정의의 서술 방식 두 곳이고 둘 다 uncertain 으로 올렸다."
+  ],
+  "escalation": {
+   "uncertain_ratio": 0.064,
+   "uncertain_over_20pct": false
+  }
+ }
+}

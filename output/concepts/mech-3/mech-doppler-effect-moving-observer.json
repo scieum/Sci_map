@@ -1,0 +1,130 @@
+{
+  "id": "mech-doppler-effect-moving-observer",
+  "concept_key": "concept:doppler-effect-moving-observer",
+  "registry_status": "new",
+  "term": "관측자가 움직일 때의 도플러 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 음차어 '도플러' 를 품은 표제어라 전체에 대응하는 한자어가 없다.",
+    "english": "Doppler effect for a moving observer"
+  },
+  "definition": "정지한 음원을 두고 관측자가 움직여, 음파를 만나는 상대 속력이 달라지면서 진동수가 변하는 경우.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-observer-relative-speed",
+      "text": "관측자가 음원 쪽으로 다가가면 관측자가 느끼는 음파의 상대 속력이 v + vO 로 커진다.",
+      "form": {
+        "condition": "음원이 정지해 있을 때",
+        "type": "causal",
+        "scope": "정지한 매질 속을 움직이는 관측자",
+        "antecedent": {
+          "quantity": "관측자의 접근",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "음파의 상대 속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "마주 보고 다가가면 상대 속력이 커질 수밖에 없어 작아진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관측자가 음원 쪽으로 다가가면 음파의 상대 속력이 v - vO 로 작아진다."
+    },
+    {
+      "id": "rel-observer-wavelength-fixed",
+      "text": "관측자만 움직이는 경우에는 음파의 파장이 달라지지 않는다.",
+      "form": {
+        "condition": "음원이 정지해 있을 때",
+        "type": "conditional",
+        "scope": "관측자만 움직이는 경우",
+        "antecedent": {
+          "quantity": "관측자의 운동",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "파장",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파면을 만드는 쪽이 정지해 있어 간격이 변할 까닭이 없으므로 달라진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관측자만 움직여도 음파의 파장이 달라진다."
+    },
+    {
+      "id": "rel-observer-receding-lower",
+      "text": "관측자가 음원에서 멀어지면 재는 진동수가 음원의 진동수보다 작아진다.",
+      "form": {
+        "condition": "음원이 정지해 있을 때",
+        "type": "conditional",
+        "scope": "음속보다 느리게 움직이는 관측자",
+        "antecedent": {
+          "quantity": "관측자의 후퇴",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관측되는 진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀어지는 동안에는 진동수가 반드시 작아지므로 커진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관측자가 음원에서 멀어지면 재는 진동수가 음원의 진동수보다 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "관측자가 움직일 때에도 파장이 짧아져서 진동수가 커진다.",
+      "why_wrong": "파장이 짧아지는 쪽은 음원이 움직이는 경우다. 관측자가 움직일 때는 파장은 그대로이고 음파를 만나는 상대 속력이 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-observer-wavelength-fixed"
+    },
+    {
+      "text": "관측자가 달려가면 음원이 내는 소리의 높이 자체가 달라진다.",
+      "why_wrong": "음원이 내는 진동수는 그대로다. 달라지는 것은 관측자가 재는 진동수다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-observer-relative-speed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-doppler-effect"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-effect-equation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-03"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-01",
+  "pages": [
+    111
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 111쪽 그림 15(정지한 음원에 관찰자가 움직일 때)."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  71,
+  74
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-first-law-of-thermodynamics",
+ "concept_key": "concept:first-law-of-thermodynamics",
+ "registry_status": "new",
+ "term": "열역학 제1법칙",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱力學第一法則",
+  "hanja_gloss": "熱 더울 열 · 力 힘 력 · 學 배울 학 · 第 차례 제 · 一 한 일 · 法 법 법 · 則 법칙 칙",
+  "english": "first law of thermodynamics",
+  "symbol_display": "Q = W + ΔU",
+  "symbol_plain": "Q = W + deltaU"
+ },
+ "definition": "열 현상까지 끌어안은 에너지 보존 법칙. 기체에 가한 열은 기체가 바깥에 한 일과 내부 에너지 변화량으로 남김없이 갈린다.",
+ "relations": [
+  {
+   "id": "rel-fl-equation",
+   "text": "기체에 가한 열은 기체가 한 일과 내부 에너지 변화량을 더한 값과 같다",
+   "form": {
+    "condition": "계를 정하고 열과 일의 부호를 약속했을 때",
+    "type": "conditional",
+    "scope": "모든 열역학 과정"
+   },
+   "invertible": false,
+   "invertible_reason": "세 양을 묶은 등식이라 두 양을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fl-conservation",
+   "text": "열이 드나드는 과정에서도 에너지의 총량은 새로 생기거나 사라지지 않는다",
+   "form": {
+    "condition": "계와 주변을 함께 헤아릴 때",
+    "type": "conditional",
+    "scope": "열과 역학이 함께 얽힌 모든 과정"
+   },
+   "invertible": false,
+   "invertible_reason": "보존을 선언한 서술이라 방향을 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fl-partition",
+   "text": "같은 열을 주어도 기체가 바깥에 일을 많이 할수록 내부 에너지 증가분은 적어진다",
+   "form": {
+    "condition": "가한 열의 양을 고정했을 때",
+    "type": "inverse",
+    "scope": "부피가 달라질 수 있는 기체",
+    "antecedent": {
+     "quantity": "기체가 한 일",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "내부 에너지 변화량",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "가한 열이 정해져 있으면 일과 내부 에너지 변화의 합이 고정되므로 둘이 함께 커질 수 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 열을 주어도 기체가 바깥에 일을 많이 할수록 내부 에너지 증가분이 커진다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기체에 열을 가하면 그만큼 온도가 올라간다",
+   "why_wrong": "가한 열의 일부가 팽창하며 바깥에 일을 하는 데 쓰이면 내부 에너지 증가분은 그만큼 줄어든다. 등온 팽창에서는 아예 온도가 그대로다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fl-partition"
+  },
+  {
+   "text": "열역학 제1법칙은 열이 저절로 어느 방향으로 흐르는지도 알려 준다",
+   "why_wrong": "제1법칙이 말하는 것은 에너지의 총량이지 변화의 방향이 아니다. 방향을 말하는 것은 제2법칙이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fl-conservation"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-internal-energy",
+   "note": "식의 한 항이다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-work-done-by-gas",
+   "note": "식의 한 항이다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-thermodynamic-system",
+   "note": "무엇을 기준으로 적는지 정한다"
+  },
+  {
+   "type": "next",
+   "target": "mech-isothermal-process",
+   "note": "온도를 고정한 경우로 나아간다"
+  },
+  {
+   "type": "next",
+   "target": "mech-adiabatic-process",
+   "note": "열 출입을 끊은 경우로 나아간다"
+  },
+  {
+   "type": "next",
+   "target": "mech-heat-engine",
+   "note": "열을 일로 바꾸는 장치로 나아간다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 4,
+ "role": "core"
+}

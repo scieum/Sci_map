@@ -1,0 +1,138 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  58,
+  67,
+  70
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermal-motion",
+ "concept_key": "concept:thermal-motion",
+ "registry_status": "new",
+ "term": "열운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱運動",
+  "hanja_gloss": "熱 더울 열 · 運 옮길 운 · 動 움직일 동",
+  "english": "thermal motion"
+ },
+ "definition": "물체를 이루는 입자들이 방향도 속력도 제멋대로인 채 끊임없이 하는 운동. 이 운동이 얼마나 활발한지를 재는 잣대가 온도다.",
+ "relations": [
+  {
+   "id": "rel-thm-temp",
+   "text": "같은 물질이라도 온도가 높은 쪽이 낮은 쪽보다 입자의 열운동이 더 활발하다",
+   "form": {
+    "condition": "두 물체의 온도를 견줄 때",
+    "type": "direct",
+    "scope": "열운동을 하는 모든 물질",
+    "antecedent": {
+     "quantity": "온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "열운동의 활발한 정도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "온도가 열운동의 척도이므로 높은 쪽이 덜 활발하다는 말은 척도의 정의와 곧바로 어긋난다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 물질이라면 온도가 높은 쪽일수록 입자의 열운동이 덜 활발하다"
+  },
+  {
+   "id": "rel-thm-collision",
+   "text": "기체에서는 분자의 열운동이 활발해질수록 분자가 벽에 더 자주, 더 세게 부딪친다",
+   "form": {
+    "condition": "기체 분자 수와 용기가 정해져 있을 때",
+    "type": "causal",
+    "scope": "밀폐 용기에 든 기체",
+    "antecedent": {
+     "quantity": "열운동의 활발한 정도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "벽과의 충돌",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "벽과의 충돌이 압력의 원인이므로 활발해질수록 충돌이 줄어든다는 말은 원인과 결과를 거꾸로 놓는다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "기체 분자의 열운동이 활발해질수록 분자가 벽에 부딪치는 횟수는 줄어든다"
+  },
+  {
+   "id": "rel-thm-random",
+   "text": "열운동은 정해진 방향이 없는 무작위 운동이어서 물체 전체가 한쪽으로 움직이는 것과는 다르다",
+   "form": {
+    "condition": "열운동과 물체의 이동을 가를 때",
+    "type": "classification",
+    "scope": "물체를 이루는 입자 수준",
+    "antecedent": {
+     "quantity": "입자의 운동",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "무작위 운동 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 운동을 갈라 보인 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "온도가 0 ℃인 물체의 입자는 열운동을 멈춘다",
+   "why_wrong": "0 ℃는 섭씨 눈금에서 물이 어는 온도일 뿐이다. 입자의 운동이 멎는다고 정한 온도는 0 K이고, 0 ℃는 그보다 273도나 높다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-thm-temp"
+  },
+  {
+   "text": "열운동이 활발하다는 것은 물체가 눈에 보이게 움직인다는 뜻이다",
+   "why_wrong": "열운동은 입자 하나하나가 제각기 다른 방향으로 하는 운동이라 서로 상쇄된다. 물체 전체가 옮겨 가는 운동과는 다른 층위의 이야기다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-thm-random"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-heat-transfer",
+   "note": "열운동의 차이가 에너지를 옮기는 자리로 나아간다"
+  },
+  {
+   "type": "next",
+   "target": "mech-internal-energy",
+   "note": "열운동의 운동 에너지를 모두 더한 양이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-pressure-temperature-relation",
+   "note": "열운동이 빨라지면 압력이 오르는 까닭을 준다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "notes": [
+  "C6 uncertain(고치지 않음) — 정의 둘째 문장('이 운동이 얼마나 활발한지를 재는 잣대가 온도다')과 rel-thm-temp 가 같은 말이다. 다만 이 명제가 0 ℃ 오개념을 받치고 있어 학습 가치가 남아 있는지 판단이 갈린다. mech-internal-energy rel-ie-temp 와 함께 같은 '잣대' 꼴이라 한꺼번에 손볼지 C8 에서 정해 주기 바란다."
+ ]
+}

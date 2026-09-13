@@ -1,0 +1,110 @@
+{
+  "id": "mech-wave-speed",
+  "concept_key": "concept:wave-speed",
+  "registry_status": "new",
+  "term": "파동의 속력",
+  "notation": {
+    "hanja": "波動 速力",
+    "hanja_gloss": "波 물결 파 · 動 움직일 동 · 速 빠를 속 · 力 힘 력",
+    "english": "wave speed",
+    "symbol_display": "v = λ/T = fλ",
+    "symbol_plain": "v = lambda/T = f lambda"
+  },
+  "definition": "파동이 매질을 따라 나아가는 빠르기. 매질의 성질이 정하는 값이라 파원을 어떻게 흔드느냐로는 달라지지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wave-speed-formula",
+      "text": "파동의 속력은 파장을 주기로 나눈 값, 곧 진동수와 파장을 곱한 값과 같다.",
+      "form": {
+        "condition": "한 매질을 지나가는 동안",
+        "type": "direct",
+        "scope": "탄성파 일반"
+      },
+      "invertible": false,
+      "invertible_reason": "정의식이라 방향을 맞바꾼 문장을 세울 수 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-wave-speed-string",
+      "text": "줄에 걸린 장력이 같다면 단위 길이당 질량이 큰 줄일수록 파동이 느리게 나아간다.",
+      "form": {
+        "condition": "줄에 걸린 장력이 일정할 때",
+        "type": "inverse",
+        "scope": "줄을 따라 진행하는 파동",
+        "antecedent": {
+          "quantity": "줄의 단위 길이당 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "파동의 속력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "선밀도가 클수록 속력이 작아지는 관계라 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "장력이 같다면 단위 길이당 질량이 큰 줄일수록 파동이 빠르게 나아간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "파원을 빠르게 흔들면 파동도 빠르게 나아간다.",
+      "why_wrong": "빠르게 흔들면 진동수가 커지고 파장이 짧아질 뿐, 속력은 매질이 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wave-speed-formula"
+    },
+    {
+      "text": "파동의 속력은 진폭이 클수록 커진다.",
+      "why_wrong": "진폭은 매질이 얼마나 크게 흔들리는지를 나타낼 뿐 속력과 관계가 없다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-elastic-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-wavelength-and-frequency"
+    },
+    {
+      "type": "next",
+      "target": "mech-free-end-and-fixed-end-reflection",
+      "note": "두 매질의 속력 비교가 위상 반전을 가른다"
+    },
+    {
+      "type": "next",
+      "target": "mech-doppler-effect"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    101,
+    103
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 101쪽 그림 9(횡파의 진행).",
+    "C6 수정: rel-wave-speed-one-wavelength 는 definition·rel-wave-speed-formula 와 같은 사실을 세 번째로 적은 것이라 접었다. definition 도 유도 절을 빼고 101쪽 곁주의 '속력은 매질의 성질이 결정한다' 쪽으로 다시 썼다. 빈자리에 새 명제를 세우지 않은 까닭은, 마땅한 후보('진동수가 커지면 파장이 짧아진다' · '속력은 매질이 정한다')가 이미 mech-wavelength-and-frequency · mech-elastic-wave 의 명제와 겹치기 때문이다.",
+    "C5 수정: rel-wave-speed-string 의 근거는 101쪽이 아니라 103쪽 곁주('줄에서의 파동의 속력')다. pages 에 103 을 더했다."
+  ]
+}

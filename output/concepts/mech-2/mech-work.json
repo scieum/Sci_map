@@ -1,0 +1,141 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  58,
+  69,
+  70
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-work",
+ "concept_key": "concept:work-physics",
+ "registry_status": "new",
+ "homonym_flag": true,
+ "term": "일",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "우리말 낱말이라 한자 표기가 없다. 물리학 용어 work 를 옮긴 말이다.",
+  "english": "work",
+  "symbol_display": "W",
+  "symbol_plain": "W"
+ },
+ "definition": "역학적 상호작용을 통해 에너지가 오가는 방식. 힘을 주어 물체를 움직이면 그만큼의 에너지가 건네지며, 열과 함께 에너지를 옮기는 두 갈래를 이룬다.",
+ "relations": [
+  {
+   "id": "rel-wk-vs-heat",
+   "text": "열은 온도 차 때문에, 일은 역학적 상호작용 때문에 에너지가 옮겨 간다는 점에서 갈린다",
+   "form": {
+    "condition": "에너지가 옮겨 가는 방식을 나눌 때",
+    "type": "classification",
+    "scope": "열과 일 두 가지 이동 방식",
+    "antecedent": {
+     "quantity": "에너지 이동 방식",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "열·일",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 방식을 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-wk-ke",
+   "text": "알짜힘이 물체에 해 준 일만큼 그 물체의 운동 에너지가 달라진다",
+   "form": {
+    "condition": "물체에 알짜힘이 작용해 물체가 움직일 때",
+    "type": "direct",
+    "scope": "일·운동 에너지 정리가 성립하는 역학계",
+    "antecedent": {
+     "quantity": "알짜힘이 한 일",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "운동 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "해 준 일과 운동 에너지 변화가 같다고 못 박은 정리라 두 양을 반대 방향에 놓으면 거짓이 된다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "알짜힘이 물체에 일을 해 줄수록 그 물체의 운동 에너지는 줄어든다"
+  },
+  {
+   "id": "rel-wk-to-gas",
+   "text": "기체에 일을 해 주면 열을 가하지 않아도 기체의 에너지를 늘릴 수 있다",
+   "form": {
+    "condition": "기체와 바깥 사이에 열 출입이 없을 때",
+    "type": "causal",
+    "scope": "공기 압축 점화 장치처럼 빠르게 압축하는 경우",
+    "antecedent": {
+     "quantity": "기체가 받은 일",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "기체의 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "일을 해 주었는데 에너지가 줄어든다면 에너지 보존과 어긋난다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "기체에 일을 해 주면 열을 가하지 않는 한 기체의 에너지는 줄어든다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "물체의 온도를 올리려면 반드시 열을 가해야 한다",
+   "why_wrong": "일로도 에너지를 건넬 수 있다. 공기 압축 점화 장치는 불을 대지 않고 압축봉을 눌러 준 일만으로 솜에 불을 붙인다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-wk-to-gas"
+  },
+  {
+   "text": "힘을 주어 버티고 있으면 물체에 일을 해 주는 것이다",
+   "why_wrong": "물리학의 일은 힘을 준 방향으로 물체가 움직였을 때 셈한다. 움직이지 않으면 건네진 에너지가 없다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-wk-ke"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-work-done-by-gas",
+   "note": "기체가 팽창하며 하는 일로 좁혀 본다"
+  },
+  {
+   "type": "related",
+   "target": "mech-heat-transfer",
+   "note": "에너지를 옮기는 나머지 한 갈래다"
+  },
+  {
+   "type": "related",
+   "target": "mech-internal-energy",
+   "note": "일이 건네진 에너지가 쌓이는 자리다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "notes": [
+  "homonyms.yaml 의 감시 낱말 '일' 에 걸려 homonym_flag 를 붙였다. concept_key 는 phys-work 와 같지만 C1 판단대로 사람 게이트 전까지 same 링크를 걸지 않았다 — G3 에서 확인해 주기 바란다."
+ ]
+}

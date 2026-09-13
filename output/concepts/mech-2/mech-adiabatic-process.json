@@ -1,0 +1,132 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  72
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-adiabatic-process",
+ "concept_key": "concept:adiabatic-process",
+ "registry_status": "new",
+ "term": "단열 과정",
+ "aliases": [],
+ "notation": {
+  "hanja": "斷熱過程",
+  "hanja_gloss": "斷 끊을 단 · 熱 더울 열 · 過 지날 과 · 程 길 정",
+  "english": "adiabatic process",
+  "symbol_display": "Q = 0, ΔU = −W",
+  "symbol_plain": "Q = 0, deltaU = -W"
+ },
+ "definition": "열이 드나들지 못하게 막아 둔 채 기체를 압축하거나 팽창시키는 과정. 열 출입이 0이므로 기체가 주고받은 일이 그대로 내부 에너지 변화가 된다.",
+ "relations": [
+  {
+   "id": "rel-adi-q0",
+   "text": "열 출입이 없으므로 기체가 한 일만큼 내부 에너지가 줄고, 받은 일만큼 내부 에너지가 는다",
+   "form": {
+    "condition": "계와 주변 사이에 열이 오가지 않을 때",
+    "type": "conditional",
+    "scope": "단열된 실린더 속 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "제1법칙에 Q = 0을 넣어 얻은 등식이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-adi-expand",
+   "text": "단열 팽창에서는 기체가 일을 한 만큼 내부 에너지가 줄어 온도가 내려간다",
+   "form": {
+    "condition": "열 출입을 막은 채 부피를 늘릴 때",
+    "type": "causal",
+    "scope": "단열 과정으로 팽창하는 기체",
+    "antecedent": {
+     "quantity": "부피",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온도",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "열이 들어오지 않는데 일을 하고도 내부 에너지가 늘 수는 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "단열 팽창에서는 기체가 일을 한 만큼 내부 에너지가 늘어 온도가 올라간다"
+  },
+  {
+   "id": "rel-adi-compress",
+   "text": "단열 압축에서는 기체가 받은 일만큼 내부 에너지가 늘어 온도가 올라간다",
+   "form": {
+    "condition": "열 출입을 막은 채 부피를 줄일 때",
+    "type": "causal",
+    "scope": "단열 과정으로 압축되는 기체",
+    "antecedent": {
+     "quantity": "부피",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "온도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "일을 받아 에너지가 들어왔는데 온도가 내려간다면 에너지가 갈 곳이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "단열 압축에서는 기체가 일을 받아도 내부 에너지가 줄어 온도가 내려간다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "열을 가하지 않았으므로 단열 압축을 해도 기체의 온도는 변하지 않는다",
+   "why_wrong": "온도를 바꾸는 길은 열만이 아니다. 압축하며 해 준 일이 내부 에너지를 늘려 온도가 올라간다. 공기 압축 점화 장치가 그 예다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-adi-compress"
+  },
+  {
+   "text": "단열 과정은 온도가 일정한 과정이다",
+   "why_wrong": "열 출입이 없는 것이 단열 과정이고, 온도가 일정한 것은 등온 과정이다. 단열 과정에서는 오히려 온도가 크게 변한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-adi-q0"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "이 법칙에 조건을 넣어 얻는다"
+  },
+  {
+   "type": "next",
+   "target": "mech-carnot-engine",
+   "note": "이 과정 둘이 순환의 나머지 절반을 이룬다"
+  },
+  {
+   "type": "related",
+   "target": "mech-isothermal-process",
+   "note": "무엇을 고정했는지가 갈림길이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-insulation",
+   "note": "낱말은 같지만 이쪽은 열을 막는 기술이다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 4,
+ "role": "supporting"
+}

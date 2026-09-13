@@ -1,0 +1,107 @@
+{
+ "id": "mech-uniform-circular-motion",
+ "concept_key": "concept:uniform-circular-motion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "등속 원운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "等速圓運動",
+  "hanja_gloss": "等 같을 등 · 速 빠를 속 · 圓 둥글 원 · 運 옮길 운 · 動 움직일 동",
+  "english": "uniform circular motion"
+ },
+ "definition": "속력을 바꾸지 않은 채 원 궤도를 따라 도는 운동. 빠르기는 그대로여도 가는 쪽이 쉼 없이 바뀌므로 가속 운동에 든다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ucm-accel",
+   "text": "속력이 일정해도 가는 쪽이 계속 바뀌므로 등속 원운동은 가속 운동이다.",
+   "form": {
+    "condition": "물체가 원 궤도를 벗어나지 않을 때",
+    "type": "causal",
+    "scope": "속력이 일정한 원운동"
+   },
+   "invertible": false,
+   "invertible_reason": "'가속 운동이므로 방향이 바뀐다' 로 뒤집어도 참이라 오답 지문이 서지 않는다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ucm-tangent",
+   "text": "매 순간의 속도는 그 지점에서 원에 그은 접선 쪽을 가리킨다.",
+   "form": {
+    "condition": "물체가 원 궤도 위를 지날 때",
+    "type": "conditional",
+    "scope": "원 궤도를 따르는 운동"
+   },
+   "invertible": true,
+   "invertible_reason": "접선 방향이 정해져 있으므로 중심 쪽을 가리킨다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "등속 원운동하는 물체의 속도는 언제나 원의 중심 쪽을 가리킨다."
+  },
+  {
+   "id": "rel-ucm-force",
+   "text": "가는 쪽이 매 순간 달라지므로 물체에는 0 이 아닌 알짜힘이 걸려 있다.",
+   "form": {
+    "condition": "물체의 질량이 일정할 때",
+    "type": "causal",
+    "scope": "관성 좌표계에서 본 원운동"
+   },
+   "invertible": false,
+   "invertible_reason": "앞뒤를 맞바꾸어도 참이 되어 반드시 거짓인 문장을 만들 수 없다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "속력이 일정하면 가속도는 0 이다",
+   "why_wrong": "가속도는 속도가 달라지는 빠르기인데 속도는 크기와 방향을 함께 갖는다. 방향만 바뀌어도 가속도는 0 이 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ucm-accel"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-net-force"
+  },
+  {
+   "type": "next",
+   "target": "mech-angular-velocity"
+  },
+  {
+   "type": "next",
+   "target": "mech-period-of-circular-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-centrifugal-force"
+  },
+  {
+   "type": "related",
+   "target": "mech-pendulum-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-03"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-03",
+ "pages": [
+  24
+ ],
+ "difficulty": 2,
+ "role": "core",
+ "version": 1
+}

@@ -1,0 +1,123 @@
+{
+  "id": "mech-redshift-and-blueshift",
+  "concept_key": "concept:redshift-and-blueshift",
+  "registry_status": "new",
+  "term": "적색 편이와 청색 편이",
+  "notation": {
+    "hanja": "赤色偏移 靑色偏移",
+    "hanja_gloss": "赤 붉을 적 · 色 빛 색 · 偏 치우칠 편 · 移 옮길 이 · 靑 푸를 청 · 色 빛 색 · 偏 치우칠 편 · 移 옮길 이",
+    "english": "redshift and blueshift"
+  },
+  "definition": "멀어지는 천체의 빛은 진동수가 작은 쪽으로, 다가오는 천체의 빛은 진동수가 큰 쪽으로 치우쳐 관측되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-redshift",
+      "text": "천체가 관측자에게서 멀어지면 그 스펙트럼선이 진동수가 작은 쪽으로 치우친다.",
+      "form": {
+        "condition": "천체가 시선 방향을 따라 멀어질 때",
+        "type": "conditional",
+        "scope": "빛을 내는 천체의 스펙트럼",
+        "antecedent": {
+          "quantity": "천체의 후퇴",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관측되는 진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "멀어질 때는 진동수가 반드시 작아지므로 큰 쪽이라는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천체가 관측자에게서 멀어지면 스펙트럼선이 진동수가 큰 쪽으로 치우친다."
+    },
+    {
+      "id": "rel-blueshift",
+      "text": "지구 쪽으로 다가오는 별의 스펙트럼에서는 청색 편이가 나타난다.",
+      "form": {
+        "condition": "별이 시선 방향을 따라 다가올 때",
+        "type": "conditional",
+        "scope": "쌍성계처럼 시선 방향 운동이 있는 천체",
+        "antecedent": {
+          "quantity": "별의 접근",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관측되는 진동수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "다가올 때는 진동수가 반드시 커지므로 적색 편이라는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 쪽으로 다가오는 별의 스펙트럼에서는 적색 편이가 나타난다."
+    },
+    {
+      "id": "rel-line-of-sight-only",
+      "text": "시선 방향에 수직으로만 움직이는 두 별은 스펙트럼에 차이가 나타나지 않는다.",
+      "form": {
+        "condition": "운동 방향이 관측자의 시선과 수직일 때",
+        "type": "conditional",
+        "scope": "쌍성계 관측"
+      },
+      "invertible": false,
+      "invertible_reason": "차이가 없다는 사실을 말하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적색 편이가 나타난 은하는 실제로 붉은색으로 보인다.",
+      "why_wrong": "빛의 스펙트럼선이 진동수가 작은 쪽으로 치우친다는 뜻이지 은하의 색이 붉게 바뀐다는 뜻이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-redshift"
+    },
+    {
+      "text": "천체가 어느 방향으로 움직이든 적색 편이가 나타난다.",
+      "why_wrong": "시선 방향으로 멀어질 때 적색 편이가, 다가올 때 청색 편이가 나타나며, 시선에 수직으로만 움직이면 편이가 나타나지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-line-of-sight-only"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-doppler-effect"
+    },
+    {
+      "type": "related",
+      "target": "mech-doppler-speed-measurement",
+      "note": "같은 원리를 천체에 적용한 것이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-03"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-01",
+  "pages": [
+    114
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "「지구과학」 쪽 개념과 이어질 자리다. 이 단원에서는 도플러 효과의 적용 사례로만 둔다 — G3 에서 지구과학 카드와의 키 관계를 볼 것.",
+    "C7 후보 삽화: 114쪽 그림 17(은하의 적색 편이), 그림 18(쌍성계의 적색 편이)."
+  ]
+}

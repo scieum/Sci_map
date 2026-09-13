@@ -1,0 +1,134 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  60,
+  74
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermal-radiation",
+ "concept_key": "concept:thermal-radiation",
+ "registry_status": "new",
+ "term": "복사",
+ "aliases": [],
+ "notation": {
+  "hanja": "輻射",
+  "hanja_gloss": "輻 바퀴살 복 · 射 쏠 사",
+  "english": "thermal radiation"
+ },
+ "definition": "물체가 전자기파의 꼴로 에너지를 내보내 열이 옮겨 가는 형태. 사이에 물질이 없어도 일어나므로 햇빛처럼 진공을 건너온다.",
+ "relations": [
+  {
+   "id": "rel-rad-temp",
+   "text": "표면 온도가 높은 물체일수록 복사로 내보내는 에너지가 크다",
+   "form": {
+    "condition": "물체의 표면 상태를 같게 두고 견줄 때",
+    "type": "direct",
+    "scope": "전자기파를 방출하는 모든 물체",
+    "antecedent": {
+     "quantity": "표면 온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "방출하는 복사 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "온도가 높을수록 방출이 작아진다는 말은 복사를 재는 방식과 곧바로 어긋난다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "표면 온도가 높은 물체일수록 복사로 내보내는 에너지가 작다"
+  },
+  {
+   "id": "rel-rad-balance",
+   "text": "흡수한 복사 에너지가 방출한 복사 에너지보다 많으면 그 물체의 온도는 올라간다",
+   "form": {
+    "condition": "복사 말고 다른 열 출입이 없을 때",
+    "type": "conditional",
+    "scope": "복사를 주고받는 물체",
+    "antecedent": {
+     "quantity": "흡수−방출",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "들어온 에너지가 나간 에너지보다 많은데 온도가 내려간다면 에너지 보존이 깨진다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "흡수한 복사 에너지가 방출한 복사 에너지보다 많으면 그 물체의 온도는 내려간다"
+  },
+  {
+   "id": "rel-rad-medium",
+   "text": "복사는 사이를 채운 물질이 없어도 일어난다는 점에서 전도·대류와 갈린다",
+   "form": {
+    "condition": "세 가지 열전달 형태를 가를 때",
+    "type": "classification",
+    "scope": "진공을 사이에 둔 열전달",
+    "antecedent": {
+     "quantity": "복사",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "매질의 필요 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "매질이 필요한지를 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "복사는 아주 뜨거운 물체만 내보내는 것이고 상온의 물체는 복사를 하지 않는다",
+   "why_wrong": "온도를 가진 모든 물체가 전자기파를 내보낸다. 상온의 물체는 눈에 보이지 않는 적외선 쪽으로 내보낼 뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rad-temp"
+  },
+  {
+   "text": "진공에서는 열이 전혀 전달되지 않는다",
+   "why_wrong": "전도와 대류는 막히지만 복사는 매질 없이도 건너간다. 햇빛이 우주 공간을 지나 지구에 닿는 것이 그 증거다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rad-medium"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-transfer",
+   "note": "세 형태 가운데 하나다"
+  },
+  {
+   "type": "related",
+   "target": "mech-heat-convection",
+   "note": "매질이 있어야 하는지가 갈림길이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-insulation",
+   "note": "거울 시트처럼 복사를 막는 단열도 있다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 3,
+ "role": "supporting"
+}

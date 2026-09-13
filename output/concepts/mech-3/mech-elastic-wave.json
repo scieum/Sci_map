@@ -1,0 +1,133 @@
+{
+  "id": "mech-elastic-wave",
+  "concept_key": "concept:elastic-wave",
+  "registry_status": "new",
+  "term": "탄성파",
+  "notation": {
+    "hanja": "彈性波",
+    "hanja_gloss": "彈 탄알 탄 · 性 성품 성 · 波 물결 파",
+    "english": "elastic wave"
+  },
+  "definition": "탄성이 있는 매질의 입자들이 제자리에서 진동하고 그 진동이 이웃으로 이어지며 퍼져 나가는 파동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-elastic-wave-medium",
+      "text": "탄성파는 진동을 넘겨받을 매질이 있어야만 퍼져 나갈 수 있다.",
+      "form": {
+        "condition": "파동이 퍼져 나가는 동안",
+        "type": "conditional",
+        "scope": "소리·지진파처럼 매질의 탄성으로 전달되는 파동",
+        "antecedent": {
+          "quantity": "매질의 유무",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "전달 가능 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "매질 없이 전달되는 탄성파는 정의상 있을 수 없어 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탄성파는 매질이 없는 진공에서도 퍼져 나갈 수 있다."
+    },
+    {
+      "id": "rel-elastic-wave-vs-em",
+      "text": "빛은 전자기파여서 진공도 지나가지만 탄성파는 그러지 못한다.",
+      "form": {
+        "condition": "진공을 지날 수 있는지 견줄 때",
+        "type": "classification",
+        "scope": "빛(전자기파)과 탄성파의 비교",
+        "antecedent": {
+          "quantity": "파동의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "진공 통과 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 갈래를 가르는 분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-elastic-wave-speed-by-medium",
+      "text": "탄성파가 얼마나 빠르게 나아가는지는 파원이 아니라 지나가는 매질의 성질이 정한다.",
+      "form": {
+        "condition": "매질의 상태가 일정할 때",
+        "type": "causal",
+        "scope": "한 매질 안을 지나는 탄성파"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 속력을 정하는가를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 공간에서도 폭발음이 들린다.",
+      "why_wrong": "소리는 탄성파여서 공기 같은 매질이 있어야 전달된다. 진공인 우주에서는 퍼져 나갈 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-elastic-wave-medium"
+    },
+    {
+      "text": "줄을 더 세게 흔들면 파동이 더 빨리 나아간다.",
+      "why_wrong": "세게 흔들면 진폭이 커질 뿐이고, 속력은 매질의 성질이 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-elastic-wave-speed-by-medium"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-simple-harmonic-motion"
+    },
+    {
+      "type": "next",
+      "target": "mech-transverse-and-longitudinal-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-wave-speed"
+    },
+    {
+      "type": "next",
+      "target": "mech-transmission-and-reflection-of-wave"
+    },
+    {
+      "type": "next",
+      "target": "mech-sound-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    100,
+    102
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "'매질' 은 따로 카드로 두지 않고 rel-elastic-wave-medium 으로 흡수했다(C1 후보 판단을 이었다)."
+  ]
+}

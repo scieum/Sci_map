@@ -1,0 +1,111 @@
+{
+ "id": "mech-spacetime-curvature",
+ "concept_key": "concept:spacetime-curvature",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "시공간의 휘어짐",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'휘어짐' 이 고유어라 표제어 전체를 한자어로 적을 수 없다. '시공간' 만 떼면 時空間이다.",
+  "english": "curvature of spacetime"
+ },
+ "definition": "질량을 가진 물체가 둘레의 시간과 공간을 굽어지게 만드는 현상. 굽은 시공간을 따라가는 것이 중력에 의한 운동이다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-sc-mass",
+   "text": "물체의 질량이 클수록 둘레의 시공간이 크게 휘어진다.",
+   "form": {
+    "condition": "다른 조건이 같을 때",
+    "type": "direct",
+    "scope": "질량을 가진 천체의 둘레",
+    "antecedent": {
+     "quantity": "물체의 질량",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "시공간이 휘어진 정도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "질량이 휘어짐의 원인이므로 적게 휜다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "물체의 질량이 클수록 둘레의 시공간은 오히려 덜 휘어진다."
+  },
+  {
+   "id": "rel-sc-light",
+   "text": "질량이 없는 빛도 휘어진 시공간을 지나면 진행 경로가 굽는다.",
+   "form": {
+    "condition": "빛이 질량이 큰 천체 곁을 지날 때",
+    "type": "causal",
+    "scope": "휘어진 시공간을 지나는 빛"
+   },
+   "invertible": false,
+   "invertible_reason": "앞뒤를 맞바꾸어도 참이 되어 반드시 거짓인 문장을 만들 수 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sc-predict",
+   "text": "등가 원리로 가속하는 우주선 안의 빛을 따져 보면 중력장에서도 빛이 휠 것을 미리 알 수 있다.",
+   "form": {
+    "condition": "관성력의 효과와 중력의 효과를 같다고 볼 때",
+    "type": "causal",
+    "scope": "등가 원리를 적용한 사고 실험"
+   },
+   "invertible": false,
+   "invertible_reason": "예측이 나오는 경로를 밝힌 서술이라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "빛은 질량이 없으므로 중력의 영향을 받지 않는다",
+   "why_wrong": "빛은 시공간을 따라 나아가므로 그 시공간이 휘면 경로도 함께 휜다. 일식 때의 별빛 관측이 이를 보였다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sc-light"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-general-relativity"
+  },
+  {
+   "type": "next",
+   "target": "mech-gravitational-lensing"
+  },
+  {
+   "type": "next",
+   "target": "mech-gravitational-time-dilation"
+  },
+  {
+   "type": "next",
+   "target": "mech-black-hole"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  45
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1
+}

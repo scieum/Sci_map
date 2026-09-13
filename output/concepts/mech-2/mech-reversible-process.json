@@ -1,0 +1,125 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-02",
+ "pages": [
+  82,
+  83
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-reversible-process",
+ "concept_key": "concept:reversible-process",
+ "registry_status": "new",
+ "term": "가역 과정",
+ "aliases": [],
+ "notation": {
+  "hanja": "可逆過程",
+  "hanja_gloss": "可 옳을 가 · 逆 거스를 역 · 過 지날 과 · 程 길 정",
+  "english": "reversible process"
+ },
+ "definition": "같은 경로를 거꾸로도 똑같이 일어날 수 있는 과정. 두 기체 분자가 부딪쳐 튕겨 나가는 일처럼 미시 세계의 낱낱 사건이 여기에 든다.",
+ "relations": [
+  {
+   "id": "rel-rev-collision",
+   "text": "두 기체 분자의 충돌은 순서를 거꾸로 돌려도 똑같이 일어날 수 있는 가역 과정이다",
+   "form": {
+    "condition": "분자 두 개의 충돌 하나만 떼어 볼 때",
+    "type": "classification",
+    "scope": "기체 분자 사이의 개별 충돌",
+    "antecedent": {
+     "quantity": "분자 충돌",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "가역 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "가역인지 아닌지를 가른 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rev-micro-macro",
+   "text": "낱낱의 충돌은 가역적이지만 수많은 입자의 분포가 달라지는 과정은 비가역적이다",
+   "form": {
+    "condition": "미시적 사건과 거시적 변화를 함께 볼 때",
+    "type": "conditional",
+    "scope": "입자 수가 아주 많은 계",
+    "antecedent": {
+     "quantity": "미시적 충돌",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "거시적 분포 변화",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "두 층위를 맞바꾸면 충돌 하나가 되돌릴 수 없고 전체 분포가 되돌아간다는 말이 되어 관찰과 정반대가 된다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "낱낱의 충돌은 비가역적이지만 수많은 입자의 분포가 달라지는 과정은 가역적이다"
+  },
+  {
+   "id": "rel-rev-pendulum",
+   "text": "진자처럼 제자리로 돌아오는 듯 보이는 운동도 마찰과 공기 저항이 있으면 가역 과정이 아니다",
+   "form": {
+    "condition": "마찰이나 공기 저항이 있을 때",
+    "type": "conditional",
+    "scope": "실제로 관찰되는 진자 운동"
+   },
+   "invertible": false,
+   "invertible_reason": "겉보기와 실제를 갈라 짚은 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "진자 운동은 제자리로 돌아오므로 가역 과정이다",
+   "why_wrong": "공기 저항과 마찰로 역학적 에너지가 조금씩 열로 흩어져 언젠가는 멈춘다. 흩어진 에너지는 저절로 돌아오지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rev-pendulum"
+  },
+  {
+   "text": "미시적으로 가역이면 거시적으로도 가역이다",
+   "why_wrong": "공 옮기기 사고 실험처럼 공 한 개를 옮기는 일은 되돌릴 수 있어도, 수많은 공의 분포가 고르게 퍼진 뒤에는 처음처럼 한쪽으로 몰리지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rev-micro-macro"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-irreversible-process",
+   "note": "되돌릴 수 없는 쪽과 짝을 이룬다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-motion",
+   "note": "미시적 사건의 무대가 되는 운동이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-second-law-of-thermodynamics",
+   "note": "방향성을 말하는 법칙으로 이어진다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-05"
+ ],
+ "difficulty": 3,
+ "role": "supporting"
+}

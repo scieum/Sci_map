@@ -1,0 +1,90 @@
+{
+ "id": "mech-normal-force",
+ "concept_key": "concept:normal-force",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "수직 항력",
+ "aliases": [],
+ "notation": {
+  "hanja": "垂直抗力",
+  "hanja_gloss": "垂 드리울 수 · 直 곧을 직 · 抗 막을 항 · 力 힘 력",
+  "english": "normal force",
+  "symbol_display": "N",
+  "symbol_plain": "N"
+ },
+ "definition": "물체가 접촉면을 누르는 힘에 대한 반작용으로, 면이 물체를 면에 수직한 쪽으로 떠받치는 힘.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-nml-balance",
+   "text": "빗면에서 수직 항력은 중력의 빗면 수직 성분과 크기가 같고 방향이 반대다.",
+   "form": {
+    "condition": "물체가 빗면을 파고들지도 떠오르지도 않을 때",
+    "type": "conditional",
+    "scope": "빗면에 수직한 방향의 가속도가 0인 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "두 힘이 평형이라는 말이라 앞뒤를 맞바꾸어도 같은 뜻이 된다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-nml-slope",
+   "text": "빗면의 기울기가 커질수록 수직 항력의 크기는 작아진다.",
+   "form": {
+    "condition": "물체의 무게가 일정하고 면을 누르는 다른 힘이 없을 때",
+    "type": "inverse",
+    "scope": "0°~90° 구간의 빗면 기울기",
+    "antecedent": {
+     "quantity": "빗면의 기울기",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "수직 항력의 크기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "크기가 mg cos θ 라 이 구간에서 줄기만 하므로 커진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "빗면의 기울기가 커질수록 수직 항력의 크기도 함께 커진다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "수직 항력의 크기는 언제나 물체의 무게와 같다",
+   "why_wrong": "빗면에서는 무게의 빗면 수직 성분만 떠받치므로 mg cos θ 가 되어 무게보다 작다. 누르는 힘이 더해지면 무게보다 클 수도 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-nml-slope"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "mech-kinetic-friction-coefficient"
+  },
+  {
+   "type": "related",
+   "target": "mech-force-resolution"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  15
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1
+}

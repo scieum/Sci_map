@@ -1,0 +1,114 @@
+{
+ "id": "mech-inertial-force",
+ "concept_key": "concept:inertial-force",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "관성력",
+ "aliases": [],
+ "notation": {
+  "hanja": "慣性力",
+  "hanja_gloss": "慣 익숙할 관 · 性 성품 성 · 力 힘 력",
+  "english": "inertial force",
+  "symbol_display": "f = −ma",
+  "symbol_plain": "f = -ma"
+ },
+ "definition": "가속하는 좌표계 안의 관찰자가 운동을 설명하려고 끌어들이는 가상의 힘. 크기는 ma 이고 방향은 좌표계의 가속도와 반대다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-if-direction",
+   "text": "관성력이 가리키는 쪽은 좌표계의 가속도 방향과 반대다.",
+   "form": {
+    "condition": "가속 좌표계 안에서 관찰할 때",
+    "type": "conditional",
+    "scope": "비관성 좌표계 안에 놓인 물체"
+   },
+   "invertible": true,
+   "invertible_reason": "방향이 반대로 정해져 있으므로 같다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "관성력은 좌표계의 가속도와 같은 방향을 가리킨다."
+  },
+  {
+   "id": "rel-if-size",
+   "text": "물체의 질량이 같다면 좌표계의 가속도가 클수록 관성력의 크기도 커진다.",
+   "form": {
+    "condition": "물체의 질량이 일정할 때",
+    "type": "direct",
+    "scope": "가속 좌표계 안에 놓인 물체",
+    "antecedent": {
+     "quantity": "좌표계의 가속도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "관성력의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "크기가 질량과 가속도의 곱이므로 작아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "좌표계의 가속도가 클수록 관성력의 크기는 오히려 작아진다."
+  },
+  {
+   "id": "rel-if-freefall",
+   "text": "자유 낙하하는 좌표계에서는 위로 향한 관성력이 중력과 맞서 평형을 이룬다.",
+   "form": {
+    "condition": "좌표계가 중력 가속도로 낙하할 때",
+    "type": "conditional",
+    "scope": "중력 말고 다른 힘이 걸리지 않는 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "평형을 서술한 명제라 앞뒤를 맞바꾸어도 같은 뜻이다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "관성력은 물체를 실제로 밀거나 당기는 힘이다",
+   "why_wrong": "관성력은 힘을 주고받는 상대가 없다. 지상의 관성 좌표계에서 같은 장면을 보면 그런 힘은 나타나지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-if-direction"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-inertial-and-accelerated-frame"
+  },
+  {
+   "type": "next",
+   "target": "mech-centrifugal-force"
+  },
+  {
+   "type": "next",
+   "target": "mech-equivalence-principle"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  42,
+  43
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "★C8 판단 요청 (C6 uncertain) — 오개념 '관성력은 실제로 밀거나 당기는 힘이다' 가 방향을 말하는 rel-if-direction 을 가리켜 축이 어긋난다. 다만 실재 여부는 definition 이 '가상의 힘' 으로 못박고 있고, 이 단원에서 정면으로 다루는 곳은 mech-centrifugal-force 의 rel-cfg-vs-cent 라 카드 안에 더 나은 짝이 없다. 명제를 새로 세울 값어치가 있는지 사람이 정해 달라 — 관계 4개 상한도 아직 한 자리 남아 있다."
+ ]
+}

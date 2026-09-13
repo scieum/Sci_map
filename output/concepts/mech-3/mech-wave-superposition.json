@@ -1,0 +1,120 @@
+{
+  "id": "mech-wave-superposition",
+  "concept_key": "concept:wave-superposition",
+  "registry_status": "new",
+  "term": "파동의 중첩",
+  "notation": {
+    "hanja": "波動 重疊",
+    "hanja_gloss": "波 물결 파 · 動 움직일 동 · 重 거듭 중 · 疊 겹쳐질 첩",
+    "english": "superposition of waves"
+  },
+  "definition": "두 파동이 같은 자리에서 만났을 때 그 지점의 변위가 각 파동의 변위를 더한 값이 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-superposition-sum",
+      "text": "겹친 지점의 변위는 두 파동이 따로 만들었을 변위를 더한 값과 같다.",
+      "form": {
+        "condition": "두 파동이 같은 영역을 함께 지날 때",
+        "type": "direct",
+        "scope": "진폭이 지나치게 크지 않은 탄성파"
+      },
+      "invertible": false,
+      "invertible_reason": "덧셈으로 정해진다는 규칙이라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-superposition-pass-through",
+      "text": "겹쳐 지나간 뒤 두 파동은 저마다 본디 모양과 속력을 되찾아 진행한다.",
+      "form": {
+        "condition": "중첩이 끝난 뒤",
+        "type": "conditional",
+        "scope": "선형 매질을 지나는 탄성파",
+        "antecedent": {
+          "quantity": "중첩 이후",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "각 파동의 모양",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "중첩은 서로를 바꾸어 놓지 않으므로 모양이 달라진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겹쳐 지나간 뒤 두 파동은 모양이 달라진 채로 진행한다."
+    },
+    {
+      "id": "rel-superposition-to-interference",
+      "text": "두 파동이 겹치는 동안 합성파가 만들어지고, 이것이 간섭으로 나타난다.",
+      "form": {
+        "condition": "두 파동이 같은 영역을 동시에 지날 때",
+        "type": "causal",
+        "scope": "간섭 현상"
+      },
+      "invertible": false,
+      "invertible_reason": "중첩과 간섭의 관계를 잇는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 파동이 만나면 서로 부딪혀 튕겨 나간다.",
+      "why_wrong": "파동은 물체가 아니어서 부딪히지 않는다. 겹치는 동안 변위가 더해질 뿐이고 지나간 뒤에는 본디대로 진행한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-superposition-pass-through"
+    },
+    {
+      "text": "상쇄되어 변위가 0 이 된 자리에서는 파동의 에너지도 사라진다.",
+      "why_wrong": "그 순간 그 자리의 변위가 0 일 뿐, 두 파동은 그대로 지나가며 에너지도 없어지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-superposition-sum"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mech-constructive-and-destructive-interference"
+    },
+    {
+      "type": "next",
+      "target": "mech-standing-wave"
+    },
+    {
+      "type": "same",
+      "target": "phys-wave-superposition",
+      "note": "「물리학」 phys-3 과 같은 concept_key"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05",
+    "12역학03-04"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    116,
+    120
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "「물리학」 phys-wave-superposition 과 같은 키 문자열이다. G3 에서 물리학 쪽과 한 키(concept:wave-superposition)로 등록해야 한다.",
+    "C5 재태깅: rel-superposition-to-interference 는 지도서 총론 21쪽 03-04 해설('중첩이 일정한 형태로 지속될 때 간섭 현상이 발생함')이 받치는 내용이라 명제 태그를 12역학03-04 로 옮겼다. 카드 머리는 그대로다."
+  ]
+}

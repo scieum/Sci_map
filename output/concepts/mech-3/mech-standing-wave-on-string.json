@@ -1,0 +1,128 @@
+{
+  "id": "mech-standing-wave-on-string",
+  "concept_key": "concept:standing-wave-on-string",
+  "registry_status": "new",
+  "term": "줄에서의 정상파",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'줄' 이 고유어라 표제어 전체에 대응하는 한자어가 없다. '정상파(定常波)' 만 한자어다.",
+    "english": "standing wave on a string",
+    "symbol_display": "λ_n = 2l/n",
+    "symbol_plain": "lambdan = 2l/n"
+  },
+  "definition": "양 끝이 고정된 줄에서 고정단 반사한 두 파동이 겹쳐 생기는 정상파. 줄의 길이가 파장을 정한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-string-ends-are-nodes",
+      "text": "양 끝이 묶인 줄에서는 그 두 끝이 반드시 마디가 된다.",
+      "form": {
+        "condition": "줄의 양 끝이 움직이지 못하게 고정되었을 때",
+        "type": "conditional",
+        "scope": "줄에 생긴 정상파",
+        "antecedent": {
+          "quantity": "끝의 고정",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "끝의 상태",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "움직이지 못하는 자리는 변위가 0 이므로 배가 된다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양 끝이 묶인 줄에서는 그 두 끝이 배가 된다."
+    },
+    {
+      "id": "rel-string-fundamental",
+      "text": "가장 낮은 진동수로 진동하는 기본 진동에서는 줄의 길이가 파장의 절반이다.",
+      "form": {
+        "condition": "양 끝이 고정된 줄이 기본 진동을 할 때",
+        "type": "conditional",
+        "scope": "기본 진동"
+      },
+      "invertible": false,
+      "invertible_reason": "길이와 파장의 관계를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-string-n-th",
+      "text": "n 배 진동에서는 파장이 2l/n 로 짧아지고 진동수는 기본 진동수의 n 배가 된다.",
+      "form": {
+        "condition": "줄의 길이와 줄에서의 파동 속력이 일정할 때",
+        "type": "direct",
+        "scope": "양 끝이 고정된 줄",
+        "antecedent": {
+          "quantity": "진동의 차수 n",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "정상파의 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "n 이 커지면 파장은 짧아질 수밖에 없어 길어진다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "n 배 진동에서는 파장이 길어지고 진동수는 기본 진동수보다 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "기타 줄을 짧게 잡고 뜯으면 더 낮은 소리가 난다.",
+      "why_wrong": "줄이 짧아지면 정상파의 파장이 짧아져 진동수가 커지므로 더 높은 소리가 난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-string-fundamental"
+    },
+    {
+      "text": "양 끝이 고정된 줄에서는 어떤 파장의 정상파든 만들 수 있다.",
+      "why_wrong": "양 끝이 마디가 되어야 하므로 줄의 길이가 허용하는 파장만 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-string-ends-are-nodes"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-standing-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-node-and-antinode"
+    },
+    {
+      "type": "next",
+      "target": "mech-natural-frequency"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    120,
+    121
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 121쪽 그림 26(줄에서 형성된 정상파)."
+  ]
+}

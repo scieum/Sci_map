@@ -1,0 +1,115 @@
+{
+ "id": "mech-gravitational-potential-energy",
+ "concept_key": "concept:gravitational-potential-energy",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "중력에 의한 위치 에너지",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'에너지' 가 음차어라 표제어 전체를 한자어로 적을 수 없다.",
+  "english": "gravitational potential energy",
+  "symbol_display": "Ep = −GMm/r",
+  "symbol_plain": "Ep = -GMm/r"
+ },
+ "definition": "중력을 받는 물체가 자리 때문에 갖는 에너지. 무한히 먼 곳을 0 으로 잡으면 거리 r 인 곳에서 −GMm/r 이 된다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-gpe-sign",
+   "text": "무한히 먼 곳을 기준으로 삼으면 유한한 거리에 있는 물체의 위치 에너지는 음수가 된다.",
+   "form": {
+    "condition": "위치 에너지의 기준점을 무한원점으로 둘 때",
+    "type": "conditional",
+    "scope": "중력이 인력으로만 작용하는 계"
+   },
+   "invertible": true,
+   "invertible_reason": "인력이라 가까워질수록 값이 작아지므로 양수라고 하면 이 기준에서 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "무한히 먼 곳을 기준으로 잡아도 물체의 중력 위치 에너지는 양수다."
+  },
+  {
+   "id": "rel-gpe-mgh",
+   "text": "지표면을 0 으로 잡은 mgh 는 높이 변화가 지구 반지름에 견주어 아주 작을 때에만 쓸 수 있다.",
+   "form": {
+    "condition": "기준점을 지표면에 두고 중력 가속도 g 를 상수로 볼 수 있을 때",
+    "type": "conditional",
+    "scope": "지표 근처의 짧은 높이 변화 — 무한원점을 0 으로 잡는 −GMm/r 과는 기준점 자체가 다르다"
+   },
+   "invertible": false,
+   "invertible_reason": "근사가 통하는 범위와 기준점을 밝힌 명제라 뒤집어 읽어도 참이 될 수 있다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-gpe-trade",
+   "text": "물체가 지구에 가까워지면서 줄어든 위치 에너지만큼 운동 에너지가 늘어난다.",
+   "form": {
+    "condition": "중력 말고 다른 힘이 일을 하지 않을 때",
+    "type": "inverse",
+    "scope": "역학적 에너지가 보존되는 구간",
+    "antecedent": {
+     "quantity": "중력 위치 에너지",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "운동 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "두 에너지의 합이 일정하므로 함께 줄어든다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "물체가 지구에 가까워지면 위치 에너지와 운동 에너지가 나란히 줄어든다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "위치 에너지가 음수라는 것은 에너지가 모자란다는 뜻이다",
+   "why_wrong": "부호는 기준점을 어디에 두었는지 알려 줄 뿐이다. 무한원점을 0 으로 잡았기에 가까울수록 더 작은 값이 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gpe-sign"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-law-of-universal-gravitation"
+  },
+  {
+   "type": "next",
+   "target": "mech-escape-velocity"
+  },
+  {
+   "type": "same",
+   "target": "phys-gravitational-potential-energy"
+  }
+ ],
+ "curriculum": [
+  "12역학01-05"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-02",
+ "pages": [
+  38,
+  39
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "★C8·G3 확인 요청 — 「물리학」 phys-gravitational-potential-energy 는 지표 근처의 mgh 꼴이고 이 카드는 −GMm/r 꼴이다. concept_key 가 같아 same 을 걸되, 두 표현의 적용 조건 차이는 rel-gpe-mgh 로 명시했다. 한 카드로 둘지 키를 갈라야 할지 사람이 판정해 달라.",
+  "C6 수정 — rel-gpe-mgh 에 기준점 조건이 빠져 있어 같은 카드의 rel-gpe-sign(무한원점 기준·음수)과 맞섰다. mgh 는 지표면 0, −GMm/r 은 무한원점 0 이라는 것을 문면·condition·scope 에 넣었다. 교과서 38쪽이 기준점을 따로 짚는 자리이고, 같은 단원 mech-mechanical-energy-in-projectile 의 rel-mep-reference 를 본보기로 삼았다."
+ ]
+}

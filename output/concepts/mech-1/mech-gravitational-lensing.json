@@ -1,0 +1,79 @@
+{
+ "id": "mech-gravitational-lensing",
+ "concept_key": "concept:gravitational-lensing",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "중력 렌즈 효과",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'렌즈' 가 음차어라 표제어 전체를 한자어로 적을 수 없다.",
+  "english": "gravitational lensing"
+ },
+ "definition": "질량이 아주 큰 천체 곁에서 휘어진 시공간이 볼록 렌즈처럼 빛을 모아, 훨씬 멀리 있는 천체를 볼 수 있게 하는 현상.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-gl-focus",
+   "text": "질량이 아주 큰 천체 곁을 지나는 빛은 휘어져 한곳으로 모인다.",
+   "form": {
+    "condition": "빛이 무거운 천체 가까이를 지날 때",
+    "type": "causal",
+    "scope": "휘어진 시공간을 지나는 빛"
+   },
+   "invertible": false,
+   "invertible_reason": "원인과 결과를 맞바꾸어도 참이라 오답 지문이 되지 못한다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-gl-multiple",
+   "text": "이 효과 때문에 천체 하나가 여러 개로 나뉘어 보이기도 한다.",
+   "form": {
+    "condition": "관측자·무거운 천체·먼 천체가 거의 한 줄로 놓일 때",
+    "type": "causal",
+    "scope": "은하단 규모의 중력 렌즈 관측"
+   },
+   "invertible": false,
+   "invertible_reason": "관측되는 모습을 밝힌 서술이라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "중력 렌즈로 여러 개로 보이는 천체는 실제로도 여러 개다",
+   "why_wrong": "하나의 천체에서 나온 빛이 서로 다른 경로로 휘어져 들어오기 때문에 여러 개처럼 보이는 것이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gl-multiple"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-spacetime-curvature"
+  },
+  {
+   "type": "related",
+   "target": "mech-general-relativity"
+  }
+ ],
+ "curriculum": [
+  "12역학01-06"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-03",
+ "pages": [
+  46
+ ],
+ "difficulty": 3,
+ "role": "context",
+ "version": 1
+}

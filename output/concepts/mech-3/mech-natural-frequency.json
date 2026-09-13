@@ -1,0 +1,144 @@
+{
+  "id": "mech-natural-frequency",
+  "concept_key": "concept:natural-frequency",
+  "registry_status": "new",
+  "term": "고유 진동수",
+  "notation": {
+    "hanja": "固有振動數",
+    "hanja_gloss": "固 굳을 고 · 有 있을 유 · 振 떨칠 진 · 動 움직일 동 · 數 셈 수",
+    "english": "natural frequency",
+    "symbol_display": "f_n = n v/(2l)",
+    "symbol_plain": "fn = n v/(2l)"
+  },
+  "definition": "줄이나 관에서 정상파가 만들어질 수 있는 진동수들. 길이와 파동의 속력으로 정해진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-natural-freq-determined",
+      "text": "줄의 고유 진동수는 줄의 길이와 줄에서의 파동 속력으로 정해진다.",
+      "form": {
+        "condition": "줄의 양 끝이 고정되어 있을 때",
+        "type": "causal",
+        "scope": "양 끝이 고정된 줄"
+      },
+      "invertible": false,
+      "invertible_reason": "무엇이 값을 정하는지 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-no-inbetween-freq",
+      "text": "기본 진동수와 2 배 진동수 사이의 어중간한 진동수로는 그 줄에 정상파가 만들어지지 않는다.",
+      "form": {
+        "condition": "줄의 길이와 줄에서의 파동 속력이 정해져 있을 때",
+        "type": "conditional",
+        "scope": "양 끝이 고정된 줄(121쪽 본문)",
+        "antecedent": {
+          "quantity": "고유 진동수 사이의 진동수",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "정상파의 형성",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "줄은 고유 진동수에서만 정상파를 이루므로 그 사이 진동수로도 정상파가 선다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기본 진동수와 2 배 진동수 사이의 진동수로 흔들어도 그 줄에 정상파가 만들어진다."
+    },
+    {
+      "id": "rel-closed-pipe-odd",
+      "text": "한쪽 끝만 열린 관에서는 기본 진동수의 홀수 배에 해당하는 정상파만 생긴다.",
+      "form": {
+        "condition": "관의 한쪽 끝이 막혀 있을 때",
+        "type": "conditional",
+        "scope": "한쪽만 열린 관"
+      },
+      "invertible": false,
+      "invertible_reason": "허용되는 차수를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-length-frequency",
+      "text": "관 속 음파의 속력이 같다면 관이 길수록 기본 진동수는 작아진다.",
+      "form": {
+        "condition": "관 속 음파의 속력이 일정할 때",
+        "type": "inverse",
+        "scope": "관에 생기는 정상파",
+        "antecedent": {
+          "quantity": "관의 길이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기본 진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "길이와 기본 진동수는 반비례라 함께 커진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관 속 음파의 속력이 같다면 관이 길수록 기본 진동수도 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "줄을 세게 뜯을수록 고유 진동수가 커진다.",
+      "why_wrong": "세게 뜯으면 진폭이 커져 소리가 커질 뿐이고, 고유 진동수는 줄의 길이와 파동 속력이 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-natural-freq-determined"
+    },
+    {
+      "text": "한쪽이 막힌 관에서도 기본 진동수의 짝수 배 진동이 생긴다.",
+      "why_wrong": "한쪽만 열린 관에서는 홀수 배에 해당하는 정상파만 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-closed-pipe-odd"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-standing-wave-on-string"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-standing-wave-in-pipe"
+    },
+    {
+      "type": "next",
+      "target": "mech-resonance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-05"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-03",
+  "pages": [
+    121,
+    122
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "기본 진동·n 배 진동은 따로 카드로 두지 않고 이 카드와 줄·관 카드의 관계 명제로 흡수했다.",
+    "C6 수정: rel-only-natural-freq 는 definition 의 대우일 뿐이어서 접었다. 121쪽 본문의 'f1과 f2 사이의 진동수를 가지는 정상파는 발생할 수 없다' 를 정량 경계로 살려 rel-no-inbetween-freq 로 세웠다."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+ "id": "mech-centripetal-force",
+ "concept_key": "concept:centripetal-force",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "구심력",
+ "aliases": [],
+ "notation": {
+  "hanja": "求心力",
+  "hanja_gloss": "求 구할 구 · 心 마음 심 · 力 힘 력",
+  "english": "centripetal force",
+  "symbol_display": "F = mv²/r",
+  "symbol_plain": "F = mv^2/r"
+ },
+ "definition": "원운동을 이어 가게 만드는, 원의 중심 쪽으로 걸리는 알짜힘. 크기는 질량과 속력의 제곱을 곱해 반지름으로 나눈 값이다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cf-speed",
+   "text": "질량과 반지름이 그대로일 때 속력이 커지면 필요한 구심력도 커진다.",
+   "form": {
+    "condition": "질량과 궤도 반지름이 일정할 때",
+    "type": "direct",
+    "scope": "등속 원운동",
+    "antecedent": {
+     "quantity": "속력",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "구심력의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "구심력이 속력의 제곱에 비례하므로 작아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "질량과 반지름이 같을 때 속력이 커지면 필요한 구심력은 오히려 작아진다."
+  },
+  {
+   "id": "rel-cf-role",
+   "text": "구심력은 따로 있는 힘이 아니라 장력·중력·마찰력 같은 힘이 맡는 역할의 이름이다.",
+   "form": {
+    "condition": "원운동하는 물체에 걸린 힘을 헤아릴 때",
+    "type": "classification",
+    "scope": "관성 좌표계에서 본 원운동",
+    "antecedent": {
+     "quantity": "구심력이라는 이름",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "이름 붙이는 방식을 밝힌 명제라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cf-radius",
+   "text": "질량과 속력이 같을 때 궤도 반지름이 클수록 구심력은 작아진다.",
+   "form": {
+    "condition": "질량과 속력이 일정할 때",
+    "type": "inverse",
+    "scope": "등속 원운동",
+    "antecedent": {
+     "quantity": "궤도 반지름",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "구심력의 크기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "구심력이 반지름에 반비례하므로 커진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "질량과 속력이 같을 때 궤도 반지름이 클수록 구심력도 커진다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "원운동하는 물체에는 중심 쪽 힘과 바깥쪽 힘이 함께 걸려 균형을 이룬다",
+   "why_wrong": "관성 좌표계에서 물체에 남는 알짜힘은 중심 쪽 하나뿐이다. 균형을 이룬다면 물체는 곧게 나아가 원운동이 되지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cf-role"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-centripetal-acceleration"
+  },
+  {
+   "type": "next",
+   "target": "mech-pendulum-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-satellite-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-03"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-03",
+ "pages": [
+  26
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

@@ -1,0 +1,170 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-02",
+ "pages": [
+  85,
+  86
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-second-law-of-thermodynamics",
+ "concept_key": "concept:second-law-of-thermodynamics",
+ "registry_status": "new",
+ "term": "열역학 제2법칙",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱力學第二法則",
+  "hanja_gloss": "熱 더울 열 · 力 힘 력 · 學 배울 학 · 第 차례 제 · 二 두 이 · 法 법 법 · 則 법칙 칙",
+  "english": "second law of thermodynamics"
+ },
+ "definition": "비가역 현상이 왜 한쪽으로만 일어나는지를 밝히는 법칙. 열은 고온에서 저온으로만 저절로 옮겨 가며, 고립된 계의 엔트로피는 줄어들지 않는다고 말한다.",
+ "relations": [
+  {
+   "id": "rel-sl-direction",
+   "text": "온도가 다른 두 물체가 맞닿으면 열은 높은 쪽에서 낮은 쪽으로만 저절로 옮겨 간다",
+   "form": {
+    "condition": "바깥에서 일을 해 주지 않을 때",
+    "type": "conditional",
+    "scope": "자발적으로 일어나는 열 이동",
+    "antecedent": {
+     "quantity": "고온 물체",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "저온 물체",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "저절로 일어나는 방향을 하나로 못 박은 법칙이라 방향을 맞바꾼 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "온도가 다른 두 물체가 맞닿으면 열은 낮은 쪽에서 높은 쪽으로도 저절로 옮겨 간다"
+  },
+  {
+   "id": "rel-sl-entropy",
+   "text": "바깥과 주고받는 것이 없는 고립된 계에서는 엔트로피가 줄어들지 않는다",
+   "form": {
+    "condition": "계가 주변과 아무것도 주고받지 않을 때",
+    "type": "conditional",
+    "scope": "고립계",
+    "antecedent": {
+     "quantity": "시간",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "고립계의 엔트로피",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "고립계에서 엔트로피가 저절로 줄어드는 변화는 이 법칙이 일어나지 않는다고 못 박은 것이다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "고립된 계에서도 엔트로피는 저절로 줄어들 수 있다"
+  },
+  {
+   "id": "rel-sl-vs-first",
+   "text": "열이 저온에서 고온으로 흘러도 에너지 보존에는 어긋나지 않으므로 변화의 방향은 제1법칙만으로 설명되지 않는다",
+   "form": {
+    "condition": "제1법칙과 제2법칙이 하는 일을 가를 때",
+    "type": "classification",
+    "scope": "열 현상의 방향성",
+    "antecedent": {
+     "quantity": "에너지 보존",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "변화의 방향성",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 법칙이 맡은 몫을 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sl-statistical",
+   "text": "제2법칙은 반드시 그래야 한다는 단정이 아니라 확률에 기댄 진술이다",
+   "form": {
+    "condition": "제1법칙과 견주어 성격을 볼 때",
+    "type": "classification",
+    "scope": "통계적으로 다루는 많은 입자의 계",
+    "antecedent": {
+     "quantity": "제2법칙",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "확률적 진술",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "법칙의 성격을 짚은 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "냉장고는 열을 차가운 안쪽에서 뜨거운 바깥으로 옮기므로 열역학 제2법칙을 어긴다",
+   "why_wrong": "제2법칙이 금지하는 것은 저절로 일어나는 반대 방향의 이동이다. 냉장고는 전기 에너지로 일을 해 주어 열을 퍼내므로 법칙과 부딪히지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sl-direction"
+  },
+  {
+   "text": "엔트로피는 어떤 경우에도 줄어들 수 없다",
+   "why_wrong": "줄어들지 않는다고 말한 것은 고립된 계의 엔트로피다. 물이 얼 때처럼 계 하나만 보면 줄어들 수 있고, 그때는 주변의 엔트로피가 그보다 더 늘어난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sl-entropy"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-irreversible-process",
+   "note": "이 법칙이 설명하려는 현상이다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-entropy",
+   "note": "법칙을 정량으로 적는 데 쓰는 양이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-heat-engine",
+   "note": "열을 모두 일로 바꿀 수 없는 까닭이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-carnot-engine",
+   "note": "열효율에 한계가 있는 까닭이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-gas-diffusion",
+   "note": "확산의 방향을 이 법칙으로 설명한다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-05"
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "notes": [
+  "C6 uncertain(고치지 않음) — rel-sl-entropy 는 '엔트로피가 줄어드는 변화는 일어나지 않는다' 로 단정하고, rel-sl-statistical 은 '반드시 그래야 한다는 단정이 아니라 확률에 기댄 진술' 이라 적어 한 카드 안에서 강도가 갈린다. 교과서 85쪽이 본문(고립계의 엔트로피는 감소하지 않는다)과 곁주(제2법칙은 통계에 기반한 확률적 진술)를 함께 싣고 있어 카드만의 결함이라 단정할 수 없다. 두 명제를 한 카드에 둘지, 강도 차이를 문장에 드러낼지 C8 에서 정해 주기 바란다. mech-gas-diffusion rel-gd-spread 와 같은 뿌리다."
+ ]
+}

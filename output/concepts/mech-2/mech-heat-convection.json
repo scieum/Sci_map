@@ -1,0 +1,124 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  59
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-heat-convection",
+ "concept_key": "concept:heat-convection",
+ "registry_status": "new",
+ "term": "대류",
+ "aliases": [],
+ "notation": {
+  "hanja": "對流",
+  "hanja_gloss": "對 대할 대 · 流 흐를 류",
+  "english": "convection"
+ },
+ "definition": "데워진 부분과 식은 부분의 밀도 차 때문에 유체가 돌면서 열을 실어 나르는 형태. 입자 자체가 자리를 옮긴다는 점에서 전도와 갈린다.",
+ "relations": [
+  {
+   "id": "rel-conv-density",
+   "text": "유체는 데워지면 부피가 늘어 밀도가 작아지므로 위로 오르고, 식어서 밀도가 커진 쪽은 아래로 내려온다",
+   "form": {
+    "condition": "중력이 작용하고 유체가 자유로이 흐를 수 있을 때",
+    "type": "causal",
+    "scope": "가열하면 팽창하는 보통의 유체",
+    "antecedent": {
+     "quantity": "유체의 온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "밀도",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뜨고 가라앉는 까닭이 밀도 차이므로 오르내리는 방향을 맞바꾼 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "유체는 데워지면 밀도가 커져 아래로 가라앉고, 식은 쪽이 위로 오른다"
+  },
+  {
+   "id": "rel-conv-placement",
+   "text": "찬 공기를 방 전체에 돌리려면 냉방 기기를 높은 곳에 두는 편이 낫다",
+   "form": {
+    "condition": "한 방 안에서 공기가 돌 수 있을 때",
+    "type": "conditional",
+    "scope": "대류로 냉난방을 하는 실내 공간"
+   },
+   "invertible": false,
+   "invertible_reason": "설치 자리를 고르는 판단이라 뒤집어 놓을 두 양이 뚜렷하지 않다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-conv-particle",
+   "text": "대류는 데워진 입자가 직접 자리를 옮겨 열을 나른다는 점에서 전도와 다르다",
+   "form": {
+    "condition": "전도와 대류를 가를 때",
+    "type": "classification",
+    "scope": "유체에서 일어나는 열전달",
+    "antecedent": {
+     "quantity": "열전달 방식",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "입자의 이동 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "두 형태를 갈라 보인 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "에어컨은 찬 공기를 멀리 보내야 하므로 바닥 가까이에 설치하는 것이 좋다",
+   "why_wrong": "찬 공기는 밀도가 커서 저절로 내려온다. 천장에 달아야 찬 공기가 내려오면서 방 전체에 돌게 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-conv-placement"
+  },
+  {
+   "text": "공기는 열전도도가 낮으니 공기를 통해서는 열이 거의 전달되지 않는다",
+   "why_wrong": "공기는 전도로는 열을 잘 나르지 못하지만 흐를 수 있어 대류로 열을 나른다. 에어캡이 단열에 쓰이는 것은 그 공기를 가두어 흐르지 못하게 하기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-conv-density"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-transfer",
+   "note": "세 형태 가운데 하나다"
+  },
+  {
+   "type": "related",
+   "target": "mech-heat-conduction",
+   "note": "입자가 옮겨 가는지가 갈림길이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-radiation",
+   "note": "매질이 있어야 하는지가 갈림길이다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 2,
+ "role": "supporting"
+}

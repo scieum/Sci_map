@@ -1,0 +1,129 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-03",
+ "pages": [
+  73
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-isochoric-process",
+ "concept_key": "concept:isochoric-process",
+ "registry_status": "new",
+ "term": "등적 과정",
+ "aliases": [
+  "등부피 과정"
+ ],
+ "notation": {
+  "hanja": "等積過程",
+  "hanja_gloss": "等 같을 등 · 積 쌓을 적 · 過 지날 과 · 程 길 정",
+  "english": "isochoric process",
+  "symbol_display": "W = 0, Q = ΔU",
+  "symbol_plain": "W = 0, Q = deltaU"
+ },
+ "definition": "부피를 묶어 둔 채 압력과 온도만 달라지는 열역학 과정. 부피가 변하지 않아 기체가 한 일이 0이므로 드나든 열이 그대로 내부 에너지 변화가 된다.",
+ "relations": [
+  {
+   "id": "rel-isc-w0",
+   "text": "부피가 변하지 않으므로 등적 과정에서 기체가 한 일은 0이다",
+   "form": {
+    "condition": "기체의 부피가 일정하게 유지될 때",
+    "type": "conditional",
+    "scope": "부피가 고정된 용기 속 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "부피가 일정하다는 조건에서 곧바로 따라 나오는 값이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-isc-heat",
+   "text": "등적 과정에서 기체가 열을 흡수하면 그 열이 전부 내부 에너지로 가 압력과 온도가 함께 오른다",
+   "form": {
+    "condition": "부피를 고정한 채 열을 가할 때",
+    "type": "causal",
+    "scope": "부피가 고정된 용기 속 이상 기체",
+    "antecedent": {
+     "quantity": "흡수한 열",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "압력·온도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "일이 0인데 열을 넣고도 내부 에너지가 줄어든다면 제1법칙이 깨진다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "등적 과정에서 기체가 열을 흡수하면 압력과 온도가 함께 내려간다"
+  },
+  {
+   "id": "rel-isc-release",
+   "text": "반대로 열을 내놓으면 온도가 내려가고 내부 에너지가 줄어 압력도 떨어진다",
+   "form": {
+    "condition": "부피를 고정한 채 기체를 식힐 때",
+    "type": "causal",
+    "scope": "부피가 고정된 용기 속 이상 기체",
+    "antecedent": {
+     "quantity": "방출한 열",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "압력·온도",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "열이 빠져나갔는데 내부 에너지와 압력이 오른다면 에너지가 어디서도 오지 않은 셈이 된다",
+   "curriculum": [
+    "12역학02-03"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "열을 내놓으면 온도가 내려가지만 압력은 오히려 올라간다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "등적 과정에서도 기체는 바깥에 일을 한다",
+   "why_wrong": "일은 부피가 달라질 때 셈한다. 부피가 그대로면 피스톤이 움직이지 않았다는 뜻이므로 한 일은 0이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-isc-w0"
+  },
+  {
+   "text": "부피가 일정하면 압력도 일정하다",
+   "why_wrong": "부피를 묶어 두어도 열을 가하면 온도가 오르고 압력이 따라 오른다. 전자레인지 속 달걀이 터지는 것이 그 예다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-isc-heat"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "이 법칙에 조건을 넣어 얻는다"
+  },
+  {
+   "type": "related",
+   "target": "mech-isobaric-process",
+   "note": "무엇을 고정했는지가 갈림길이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-pressure-temperature-relation",
+   "note": "부피가 일정할 때의 압력·온도 관계를 쓴다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-03"
+ ],
+ "difficulty": 4,
+ "role": "supporting"
+}

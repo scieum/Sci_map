@@ -1,0 +1,136 @@
+{
+ "id": "mech-satellite-motion",
+ "concept_key": "concept:satellite-circular-motion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "인공위성의 운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다. '인공위성' 만 떼면 人工衛星이다.",
+  "english": "motion of an artificial satellite",
+  "symbol_display": "v = √(GM/r)",
+  "symbol_plain": "v = (GM/r)^(1/2)"
+ },
+ "definition": "지구가 당기는 중력을 구심력으로 삼아 지구 둘레를 도는 물체의 원운동. 궤도 반지름이 정해지면 속력과 주기가 따라 정해진다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-sat-mass",
+   "text": "원 궤도를 도는 인공위성의 속력은 위성의 질량과 상관없이 궤도 반지름으로 정해진다.",
+   "form": {
+    "condition": "중력만 구심력으로 작용할 때",
+    "type": "conditional",
+    "scope": "지구 둘레의 원 궤도"
+   },
+   "invertible": true,
+   "invertible_reason": "속력 식에서 위성의 질량이 지워지므로 질량에 따라 달라진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "무거운 인공위성일수록 같은 궤도에서 더 빠른 속력으로 돌아야 한다."
+  },
+  {
+   "id": "rel-sat-radius",
+   "text": "궤도 반지름이 클수록 인공위성의 속력은 작고 공전 주기는 길다.",
+   "form": {
+    "condition": "같은 천체를 도는 위성끼리 견줄 때",
+    "type": "inverse",
+    "scope": "원 궤도를 도는 인공위성",
+    "antecedent": {
+     "quantity": "궤도 반지름",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "인공위성의 속력",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "속력이 반지름의 제곱근에 반비례하므로 커진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "궤도 반지름이 클수록 인공위성의 속력도 함께 커진다."
+  },
+  {
+   "id": "rel-sat-geo",
+   "text": "지구에서 늘 같은 자리에 있는 것으로 보이려면 위성의 공전 주기가 지구의 자전 주기와 같아야 한다.",
+   "form": {
+    "condition": "위성이 적도 위 원 궤도를 돌 때",
+    "type": "conditional",
+    "scope": "정지 위성으로 쓰이는 궤도"
+   },
+   "invertible": false,
+   "invertible_reason": "성립 조건을 밝힌 명제로 뒤집어 읽어도 참이라 오답 지문이 서지 않는다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sat-gravity",
+   "text": "궤도 높이에서도 지구의 중력은 그대로 작용하며, 그 중력이 인공위성을 돌게 하는 구심력이 된다.",
+   "form": {
+    "condition": "위성에 공기 저항 등 다른 힘이 걸리지 않을 때",
+    "type": "causal",
+    "scope": "지구 둘레의 원 궤도를 도는 인공위성"
+   },
+   "invertible": true,
+   "invertible_reason": "중력이 0 이라면 구심력이 없어 위성은 직선으로 날아가 버린다. 궤도 높이에서 중력이 0 이라고 하면 원운동이라는 전제와 함께 설 수 없어 반드시 거짓이다.",
+   "inverted_text": "인공위성이 떨어지지 않는 것은 궤도 높이에서 지구의 중력이 0 이 되기 때문이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "인공위성이 떨어지지 않는 것은 그 높이에서 중력이 0 이기 때문이다",
+   "why_wrong": "궤도 높이에서도 중력은 작용한다. 그 중력이 구심력이 되어 위성을 계속 돌게 한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sat-gravity"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-centripetal-force"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-law-of-universal-gravitation"
+  },
+  {
+   "type": "same",
+   "target": "isci1-satellite-circular-motion"
+  },
+  {
+   "type": "related",
+   "target": "mech-rocket-propulsion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-04"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-01",
+ "pages": [
+  37
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "정지 위성의 공전 주기 24시간과 높이 약 36,000 km 는 교과서 37쪽의 곁주·탐구에 근거한 값이다. 명제 본문에는 수치를 넣지 않고 조건만 적었다.",
+  "「통합과학1」 isci1-satellite-circular-motion 과 concept_key 가 같아 same 을 걸었다. 표제어가 다르므로 G3 에서 확인해 달라.",
+  "12역학01-04 의 crosscheck 가 '교사 확정' 이다.",
+  "C6 수정 — 오개념 '그 높이에서 중력이 0 이다' 가 rel-sat-mass(속력의 질량 무관성)를 가리켜 축이 어긋나 있었다. 반박 내용이 definition 에만 있었으므로 rel-sat-gravity(중력이 구심력 노릇을 한다)를 세우고 오개념을 그리로 옮겼다."
+ ]
+}

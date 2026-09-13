@@ -1,0 +1,120 @@
+{
+ "id": "mech-mechanical-energy-in-projectile",
+ "concept_key": "concept:mechanical-energy-conservation-in-projectile-motion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "포물선 운동에서의 역학적 에너지 보존",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "풀어 쓴 구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "conservation of mechanical energy in projectile motion"
+ },
+ "definition": "포물선을 그리며 나는 동안 운동 에너지와 중력 위치 에너지의 합이 달라지지 않는 성질. 중력 말고는 일을 하는 힘이 없기 때문이다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-mep-constant",
+   "text": "궤도 어느 지점에서 재도 운동 에너지와 중력 위치 에너지의 합은 같은 값이다.",
+   "form": {
+    "condition": "공기 저항과 마찰을 무시할 때",
+    "type": "conditional",
+    "scope": "중력만 일을 하는 구간"
+   },
+   "invertible": false,
+   "invertible_reason": "보존된다는 서술이라 앞뒤를 맞바꾸어도 같은 뜻이 된다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-mep-trade",
+   "text": "올라가는 동안 줄어든 운동 에너지만큼 중력 위치 에너지가 늘어난다.",
+   "form": {
+    "condition": "역학적 에너지가 보존될 때",
+    "type": "inverse",
+    "scope": "중력만 받는 포물선 궤도",
+    "antecedent": {
+     "quantity": "운동 에너지",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "중력 위치 에너지",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "합이 일정하므로 두 에너지가 같은 쪽으로 변한다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "올라가는 동안 운동 에너지가 줄면 중력 위치 에너지도 함께 줄어든다."
+  },
+  {
+   "id": "rel-mep-apex",
+   "text": "최고점에도 수평 속도가 남아 있어 운동 에너지가 0 이 되지 않는다.",
+   "form": {
+    "condition": "던진 각이 90°가 아닐 때",
+    "type": "conditional",
+    "scope": "비스듬히 던져 올린 물체의 최고점"
+   },
+   "invertible": true,
+   "invertible_reason": "수평 성분이 끝까지 남으므로 0 이라고 하면 이 조건에서 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "최고점에서는 속도가 모두 사라져 운동 에너지가 0 이 된다."
+  },
+  {
+   "id": "rel-mep-reference",
+   "text": "위치 에너지는 기준을 어디로 잡았는지 밝혀야 값을 말할 수 있다.",
+   "form": {
+    "condition": "위치 에너지의 값을 적을 때",
+    "type": "conditional",
+    "scope": "중력 위치 에너지를 다루는 모든 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "값을 적는 규약을 밝힌 명제라 뒤집을 자리가 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "최고점에서 역학적 에너지는 위치 에너지뿐이다",
+   "why_wrong": "비스듬히 던진 물체는 최고점에서도 수평으로 움직인다. 운동 에너지가 0 이 아니므로 위치 에너지만 남는 것이 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-mep-apex"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-projectile-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-escape-velocity"
+  }
+ ],
+ "curriculum": [
+  "12역학01-02"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-02",
+ "pages": [
+  21,
+  22
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1
+}

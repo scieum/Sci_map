@@ -1,0 +1,127 @@
+{
+  "id": "mech-acceleration-displacement-relation",
+  "concept_key": "concept:acceleration-displacement-relation-in-shm",
+  "registry_status": "new",
+  "term": "단진동에서 가속도와 변위의 관계",
+  "notation": {
+    "hanja": "加速度 變位 關係",
+    "hanja_gloss": "加 더할 가 · 速 빠를 속 · 度 법도 도 · 變 변할 변 · 位 자리 위 · 關 관계할 관 · 係 맬 계",
+    "english": "relation between acceleration and displacement in simple harmonic motion",
+    "symbol_display": "a = -(k/m)x",
+    "symbol_plain": "a = -(k/m)x"
+  },
+  "definition": "단진동에서 가속도가 변위와 크기는 비례하고 방향은 반대가 되는 관계. a = -(k/m)x 로 적는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-accel-disp-magnitude",
+      "text": "변위의 크기가 커지면 그에 비례해 가속도의 크기도 커진다.",
+      "form": {
+        "condition": "물체의 질량과 용수철 상수가 일정할 때",
+        "type": "direct",
+        "scope": "단진동하는 물체",
+        "antecedent": {
+          "quantity": "변위의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "가속도의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "정비례 관계라 한쪽만 방향을 맞바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변위의 크기가 커지면 가속도의 크기는 오히려 작아진다."
+    },
+    {
+      "id": "rel-accel-disp-direction",
+      "text": "가속도가 향하는 쪽은 변위가 가리키는 쪽의 반대편, 곧 언제나 평형점 쪽이다.",
+      "form": {
+        "condition": "단진동이 이어지는 동안",
+        "type": "conditional",
+        "scope": "단진동하는 물체",
+        "antecedent": {
+          "quantity": "변위의 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "가속도의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부호가 음인 관계라 같은 쪽을 향한다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가속도가 향하는 쪽은 변위가 가리키는 쪽과 같은 편이다."
+    },
+    {
+      "id": "rel-accel-disp-newton",
+      "text": "이 관계는 뉴턴 운동 제2법칙에 탄성력 F = -kx 를 넣어 얻는다.",
+      "form": {
+        "condition": "물체에 작용하는 알짜힘이 탄성력뿐일 때",
+        "type": "causal",
+        "scope": "용수철 진자"
+      },
+      "invertible": false,
+      "invertible_reason": "유도 경로를 밝히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "가속도가 0 인 지점에서는 물체의 속력도 0 이다.",
+      "why_wrong": "가속도가 0 이 되는 곳은 변위가 0 인 평형점이고, 그곳에서 속력은 오히려 가장 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-accel-disp-magnitude"
+    },
+    {
+      "text": "물체가 평형점에서 멀어지는 동안에는 가속도도 바깥쪽을 향한다.",
+      "why_wrong": "가속도의 방향은 변위와 반대여서, 멀어지는 동안에도 평형점 쪽을 향하며 물체를 되돌린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-accel-disp-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-simple-harmonic-motion"
+    },
+    {
+      "type": "next",
+      "target": "mech-oscillation-period",
+      "note": "이 관계에서 주기를 끌어낸다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-01"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-01",
+  "pages": [
+    95,
+    97
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "성취기준 12역학03-01 의 표제 문구를 받는 카드다.",
+    "C7 후보 삽화: 99쪽 그림 7(용수철 진자의 변위·속도·가속도).",
+    "C6 수정: 오개념 '가속도가 0 인 지점에서는 속력도 0 이다' 의 linked_relation 을 방향 명제에서 rel-accel-disp-magnitude 로 옮겼다 — why_wrong 이 딛고 선 것은 크기 비례(a=0 ⟺ x=0)다. 방향 명제는 둘째 오개념('멀어지는 동안 가속도도 바깥쪽')의 상대로 그대로 둔다."
+  ]
+}

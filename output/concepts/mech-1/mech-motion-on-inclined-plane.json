@@ -1,0 +1,135 @@
+{
+ "id": "mech-motion-on-inclined-plane",
+ "concept_key": "concept:motion-on-inclined-plane",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "빗면에서 운동하는 물체",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "풀어 쓴 구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "motion on an inclined plane"
+ },
+ "definition": "중력·수직 항력·마찰력을 함께 받으며 기울어진 면을 따라 미끄러지는 물체. 중력을 빗면 방향과 그에 수직한 방향으로 갈라 다룬다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-inc-accel",
+   "text": "마찰이 없는 빗면에서는 기울기가 클수록 빗면 방향 가속도의 크기가 크다.",
+   "form": {
+    "condition": "빗면의 마찰을 무시할 때",
+    "type": "direct",
+    "scope": "0°~90° 구간의 기울기",
+    "antecedent": {
+     "quantity": "빗면의 기울기",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "빗면 방향 가속도의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "크기가 g sin θ 라 이 구간에서 늘기만 하므로 작아진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "마찰이 없는 빗면에서 기울기가 클수록 빗면 방향 가속도의 크기는 작아진다."
+  },
+  {
+   "id": "rel-inc-uniform",
+   "text": "각 힘의 크기와 방향이 그대로 유지되는 동안에만 빗면 위 물체가 등가속도로 움직인다.",
+   "form": {
+    "condition": "물체의 질량이 변하지 않을 때",
+    "type": "conditional",
+    "scope": "빗면을 따라 미끄러지는 물체"
+   },
+   "invertible": false,
+   "invertible_reason": "등가속도가 되는 조건을 밝힌 명제로, 뒤집어 읽어도 참이라 오답 지문이 되지 못한다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-inc-varying",
+   "text": "미끄럼틀처럼 받는 힘이 시시각각 달라지면 가속도도 함께 변해 등가속도 운동이 아니다.",
+   "form": {
+    "condition": "알짜힘의 크기나 방향이 시간에 따라 변할 때",
+    "type": "causal",
+    "scope": "질량이 일정한 물체"
+   },
+   "invertible": false,
+   "invertible_reason": "앞뒤를 맞바꾸어도 참이 되어 반드시 거짓인 문장을 만들 수 없다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-inc-mass",
+   "text": "빗면을 미끄러지는 물체의 가속도는 물체가 무겁든 가볍든 같고, 기울기와 마찰 계수로 정해진다.",
+   "form": {
+    "condition": "같은 빗면 위에서 재료가 같은 물체끼리 견줄 때",
+    "type": "conditional",
+    "scope": "빗면을 따라 미끄러지는 물체",
+    "antecedent": {
+     "quantity": "물체의 질량",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "빗면 방향 가속도의 크기",
+     "direction": "일정"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "운동 방정식에서 질량이 양변에서 지워지므로, 무거울수록 가속도가 크다고 하면 반드시 거짓이다.",
+   "inverted_text": "같은 빗면에서 무거운 물체일수록 빗면 방향 가속도가 크다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "빗면을 내려오는 물체는 무거울수록 가속도가 크다",
+   "why_wrong": "가속도는 g sin θ − μ g cos θ 로 질량이 지워진다. 무게가 늘면 물체를 끌어내리는 힘과 마찰력이 같은 비율로 함께 커지기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-inc-mass"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-net-force"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-force-resolution"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-kinetic-friction-coefficient"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  15,
+  16
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 수정 — 오개념 '무거울수록 가속도가 크다' 가 기울기·가속도 관계인 rel-inc-accel 을 가리켜 축이 어긋나 있었다. 반박 내용이 why_wrong 에만 있었으므로 질량 무관성을 rel-inc-mass 로 세우고(본보기: mech-escape-velocity 의 rel-esc-independent) 오개념을 그리로 옮겼다."
+ ]
+}

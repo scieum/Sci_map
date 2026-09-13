@@ -1,0 +1,136 @@
+{
+  "id": "mech-elastic-force",
+  "concept_key": "concept:elastic-force",
+  "registry_status": "new",
+  "term": "탄성력",
+  "notation": {
+    "hanja": "彈性力",
+    "hanja_gloss": "彈 탄알 탄 · 性 성품 성 · 力 힘 력",
+    "english": "elastic force",
+    "symbol_display": "F = -kx",
+    "symbol_plain": "F = -kx"
+  },
+  "definition": "변형된 용수철이 본디 모양으로 돌아가려 하며 매달린 물체에 작용하는 힘. 크기는 변형된 길이에 비례한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-elastic-force-proportional",
+      "text": "용수철을 길게 늘일수록 물체가 받는 탄성력의 크기도 그만큼 커진다.",
+      "form": {
+        "condition": "용수철 상수 k 가 일정할 때",
+        "type": "direct",
+        "scope": "탄성 한계를 넘지 않은 용수철",
+        "antecedent": {
+          "quantity": "변형된 길이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "탄성력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "늘어난 길이와 힘의 크기는 정비례라 방향을 맞바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "용수철을 길게 늘일수록 물체가 받는 탄성력의 크기는 오히려 작아진다."
+    },
+    {
+      "id": "rel-elastic-force-direction",
+      "text": "탄성력이 향하는 쪽은 용수철이 변형된 쪽의 반대편이다.",
+      "form": {
+        "condition": "용수철이 늘어나거나 압축되어 있을 때",
+        "type": "conditional",
+        "scope": "탄성 한계를 넘지 않은 용수철",
+        "antecedent": {
+          "quantity": "변형된 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "탄성력의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "복원력이므로 변형된 쪽과 같은 방향을 향한다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탄성력이 향하는 쪽은 용수철이 변형된 쪽과 같은 편이다."
+    },
+    {
+      "id": "rel-elastic-force-speed",
+      "text": "탄성력이 물체의 운동 방향과 같은 쪽을 향하는 구간에서 물체는 점점 빨라진다.",
+      "form": {
+        "condition": "마찰이 없는 수평면에서 운동할 때",
+        "type": "causal",
+        "scope": "용수철에 매달려 진동하는 물체",
+        "antecedent": {
+          "quantity": "탄성력과 운동 방향의 일치",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "알짜힘이 운동 방향과 같으면 속력은 커질 수밖에 없어 반대 서술은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탄성력이 물체의 운동 방향과 같은 쪽을 향하는 구간에서 물체는 점점 느려진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "용수철을 얼마나 늘였든 탄성력의 크기는 늘 같다.",
+      "why_wrong": "탄성력의 크기는 변형된 길이에 비례하므로, 많이 늘일수록 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-elastic-force-proportional"
+    },
+    {
+      "text": "탄성력은 물체의 운동 방향과 언제나 반대다.",
+      "why_wrong": "탄성력은 평형점 쪽을 향하므로, 물체가 평형점으로 다가가는 구간에서는 운동 방향과 같은 쪽을 향한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-elastic-force-speed"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "mech-simple-harmonic-motion",
+      "note": "탄성력이 되돌리는 힘이 되어 왕복 운동이 생긴다"
+    },
+    {
+      "type": "related",
+      "target": "mech-oscillation-period",
+      "note": "용수철 상수 k 가 주기를 정하는 두 값 가운데 하나다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-01"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-01",
+  "pages": [
+    96
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "「물리학」 phys-3 과 키 문자열(concept:elastic-force)을 맞췄다. G3 에서 한 키로 등록해야 한다.",
+    "phys 쪽에 대응 카드(phys-elastic-force)가 아직 없어 same 링크를 걸지 못했다 — 카드가 서면 G2 에서 잇는다.",
+    "C7 후보 삽화: 96쪽 그림 1(용수철의 탄성력에 의한 진동과 역학적 에너지 보존)."
+  ]
+}

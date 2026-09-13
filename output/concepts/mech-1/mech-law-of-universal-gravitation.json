@@ -1,0 +1,141 @@
+{
+ "id": "mech-law-of-universal-gravitation",
+ "concept_key": "concept:law-of-universal-gravitation",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "만유인력 법칙",
+ "aliases": [],
+ "notation": {
+  "hanja": "萬有引力法則",
+  "hanja_gloss": "萬 일만 만 · 有 있을 유 · 引 끌 인 · 力 힘 력 · 法 법 법 · 則 법칙 칙",
+  "english": "law of universal gravitation",
+  "symbol_display": "F = G m₁m₂ / r²",
+  "symbol_plain": "F = G m1m2 / r^2"
+ },
+ "definition": "두 물체가 주고받는 인력의 크기가 두 질량을 곱한 값에 비례하고 사이 거리를 제곱한 값에 반비례한다는 법칙.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-lug-inverse-square",
+   "text": "두 물체를 2배 멀리 떼어 놓으면 인력의 크기는 4분의 1로 줄어든다.",
+   "form": {
+    "condition": "두 물체의 질량이 그대로일 때",
+    "type": "inverse",
+    "scope": "질량이 한 점에 모였다고 볼 수 있는 두 물체",
+    "antecedent": {
+     "quantity": "두 물체 사이의 거리",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "인력의 크기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "거리의 제곱에 반비례하므로 커진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "두 물체를 2배 멀리 떼어 놓으면 인력의 크기는 4배로 커진다."
+  },
+  {
+   "id": "rel-lug-centripetal",
+   "text": "행성이 원 궤도를 돌 때는 태양이 당기는 중력이 구심력 노릇을 한다.",
+   "form": {
+    "condition": "행성이 태양을 중심으로 등속 원운동한다고 볼 때",
+    "type": "causal",
+    "scope": "중심 별이 훨씬 무거운 계"
+   },
+   "invertible": false,
+   "invertible_reason": "어떤 힘이 구심력을 맡는지 지목한 명제라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lug-kepler3",
+   "text": "이 법칙에 원운동 조건을 넣으면 케플러 제3법칙이 유도된다.",
+   "form": {
+    "condition": "궤도를 원으로 근사할 때",
+    "type": "causal",
+    "scope": "하나의 중심 별을 도는 천체들"
+   },
+   "invertible": false,
+   "invertible_reason": "유도 관계를 밝힌 명제라 뒤집은 문장이 서지 않는다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lug-constant",
+   "text": "식에 들어가는 G 는 물체가 무엇이든 어디에서 재든 같은 값을 갖는 보편 상수다.",
+   "form": {
+    "condition": "두 물체 사이의 인력을 이 법칙으로 계산할 때",
+    "type": "classification",
+    "scope": "만유인력 법칙이 적용되는 모든 물체",
+    "antecedent": {
+     "quantity": "만유인력 상수 G",
+     "direction": "일정"
+    },
+    "consequent": {
+     "quantity": "물체와 장소",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "보편 상수라는 규정 자체가 값의 변동을 막으므로, 천체마다 값이 달라진다고 하면 반드시 거짓이다.",
+   "inverted_text": "만유인력 상수 G 는 행성마다 서로 다른 값을 갖는다.",
+   "curriculum": [
+    "12역학01-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "만유인력 상수 G 는 행성마다 다른 값을 갖는다",
+   "why_wrong": "G 는 어디에서나 같은 보편 상수다. 행성마다 달라지는 것은 질량과 반지름이지 상수가 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-lug-constant"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-kepler-third-law"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-gravity"
+  },
+  {
+   "type": "next",
+   "target": "mech-satellite-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-gravitational-potential-energy"
+  }
+ ],
+ "curriculum": [
+  "12역학01-04"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-01",
+ "pages": [
+  36
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "12역학01-04 의 crosscheck 가 '교사 확정' 이다.",
+  "C6 수정 — 오개념 'G 가 행성마다 다르다' 가 거리 의존성만 말하는 rel-lug-inverse-square 를 가리켜 축이 어긋나 있었다. G 의 보편성을 말하는 rel-lug-constant 를 세우고 오개념을 그리로 옮겼다."
+ ]
+}

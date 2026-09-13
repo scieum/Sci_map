@@ -1,0 +1,135 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  64,
+  65
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-latent-heat",
+ "concept_key": "concept:latent-heat",
+ "registry_status": "new",
+ "term": "잠열",
+ "aliases": [
+  "숨은열"
+ ],
+ "notation": {
+  "hanja": "潛熱",
+  "hanja_gloss": "潛 잠길 잠 · 熱 더울 열",
+  "english": "latent heat"
+ },
+ "definition": "어떤 물질 1 kg이 상태를 바꾸는 동안 드나든 에너지. 온도계에는 나타나지 않지만 물질마다 정해진 값을 가져 물질의 특성이 된다.",
+ "relations": [
+  {
+   "id": "rel-lh-property",
+   "text": "잠열은 비열과 마찬가지로 물질마다 고유한 값을 가진다",
+   "form": {
+    "condition": "여러 물질의 잠열을 견줄 때",
+    "type": "classification",
+    "scope": "순수한 물질의 융해열과 기화열",
+    "antecedent": {
+     "quantity": "물질의 종류",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "잠열 값",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "물질 특성임을 밝힌 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lh-vapor",
+   "text": "한 물질에서 액체와 기체 사이의 상태 변화에는 고체와 액체 사이보다 대체로 더 많은 에너지가 든다",
+   "form": {
+    "condition": "같은 물질의 융해열과 기화열을 견줄 때",
+    "type": "direct",
+    "scope": "교과서 표 II-4 에 실린 물질들 (65쪽)"
+   },
+   "invertible": false,
+   "invertible_reason": "교과서가 '대체로' 라고 못 박은 경향이라 뒤집은 문장이 반드시 거짓이라고 단정할 수 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lh-keep",
+   "text": "잠열이 드나드는 동안 온도가 머물러 있어 중탕이나 아이스박스가 일정한 온도를 지킬 수 있다",
+   "form": {
+    "condition": "상태 변화가 끝나기 전까지",
+    "type": "causal",
+    "scope": "두 상태가 함께 있는 계",
+    "antecedent": {
+     "quantity": "잠열의 출입",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온도",
+     "direction": "일정"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "상태 변화가 끝나기 전에 온도가 오른다면 잠열이 드나든다는 사실과 어긋난다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "잠열이 드나드는 동안에도 온도는 꾸준히 오르거나 내려간다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "100 ℃의 물과 100 ℃의 수증기는 가진 에너지가 같다",
+   "why_wrong": "물이 수증기로 바뀌는 동안 1 kg마다 2.26×10⁶ J의 기화열이 더 들어갔다. 같은 온도라도 수증기 쪽이 그만큼 더 많은 에너지를 안고 있어 데었을 때 더 위험하다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-lh-keep"
+  },
+  {
+   "text": "잠열은 온도계에 나타나지 않으니 실제로 흡수되거나 방출되는 에너지가 아니다",
+   "why_wrong": "온도가 변하지 않을 뿐 에너지는 분명히 드나든다. 히트 파이프는 바로 그 에너지를 실어 날라 열을 옮긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-lh-keep"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-change-of-state",
+   "note": "이 변화가 일어나는 구간의 열이다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-specific-heat",
+   "note": "온도가 오르는 구간의 열과 짝을 이룬다"
+  },
+  {
+   "type": "related",
+   "target": "mech-heat-capacity",
+   "note": "구간을 나누어 셈할 때 함께 쓴다"
+  },
+  {
+   "type": "same",
+   "target": "phys-latent-heat",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "notes": [
+  "C6 결함 수정 — 오개념[1]('온도계에 안 나타나니 실제 에너지가 아니다')이 rel-lh-property(물질 고유값)를 가리키고 있었다. 마주 서는 것은 온도가 머물러 있다는 rel-lh-keep 이라 그리로 옮겼다."
+ ]
+}

@@ -1,0 +1,78 @@
+# 동음이의 금지쌍 (공용 자산 · 사람 관리)
+#
+# 왜 필요한가: 개념 링크와 노선 환승은 **concept_key 일치**로만 건다.
+# 표기가 같다는 이유로 이으면 "핵(원자핵)"과 "핵(세포핵)"이 한 노드가 된다.
+# 아래 표기는 자동 링크 후보에서 **무조건 제외**하고, 사람이 키를 보고 판정한다.
+#
+# ⚠️ 이 파일은 사람이 관리한다. 어느 계열에서 제안하든 사람 승인 없이 갱신하지 않는다.
+
+meta:
+  updated: "2026-09-05"
+  rule: "surface_form 이 같아도 concept_key 가 다르면 별개 개념. 문자열 일치로 링크 금지."
+
+blocked_pairs:
+
+  - surface_form: "주기"
+    senses:
+      - concept_key: "concept:periodicity"
+        gloss: "원소의 성질이 원자 번호에 따라 되풀이되는 규칙성"
+        subjects: ["통합과학1", "화학"]
+        curriculum: ["10통과1-02-03"]
+      - concept_key: "concept:period-wave"
+        gloss: "파동·진동이 한 번 되풀이되는 데 걸리는 시간"
+        subjects: ["물리학"]
+      - concept_key: "concept:period-table-row"
+        gloss: "주기율표의 가로줄"
+        subjects: ["통합과학1", "화학"]
+
+  - surface_form: "핵"
+    senses:
+      - concept_key: "concept:atomic-nucleus"
+        gloss: "원자 중심의 양성자·중성자 덩어리"
+        subjects: ["통합과학1", "화학", "물리학"]
+      - concept_key: "concept:cell-nucleus"
+        gloss: "유전 물질을 담은 세포 소기관"
+        subjects: ["통합과학1", "생명과학"]
+        curriculum: ["10통과1-03-06"]
+
+  - surface_form: "전위"
+    senses:
+      - concept_key: "concept:electric-potential"
+        gloss: "단위 전하가 갖는 전기적 위치 에너지"
+        subjects: ["물리학", "화학"]
+      - concept_key: "concept:dislocation"
+        gloss: "결정 격자의 선 결함"
+        subjects: ["화학", "지구과학"]
+
+  - surface_form: "일"
+    senses:
+      - concept_key: "concept:work-mechanics"
+        gloss: "힘이 물체를 움직여 에너지를 옮긴 양"
+        subjects: ["통합과학1", "물리학"]
+      - concept_key: "concept:day"
+        gloss: "지구 자전 주기로서의 하루"
+        subjects: ["지구과학"]
+
+  - surface_form: "계"
+    senses:
+      - concept_key: "concept:system-thermo"
+        gloss: "관찰 대상으로 잘라낸 물질과 공간의 범위 (주위와 대비)"
+        subjects: ["통합과학1", "화학"]
+        curriculum: ["10통과2-01-05"]
+      - concept_key: "concept:system-earth"
+        gloss: "상호작용하는 권역들의 집합으로서의 지구 시스템"
+        subjects: ["통합과학1", "지구과학"]
+        curriculum: ["10통과1-03-01"]
+      - concept_key: "concept:group-periodic-table"
+        gloss: "주기율표의 세로줄(족)을 뜻하는 옛 표기"
+        subjects: ["화학"]
+        note: "현행 표기는 '족'. term 으로 쓰지 않고 alias 로만 둔다."
+
+# 통합과학 착수 시 추가 감시 대상 (아직 금지쌍으로 확정하지 않음 — C1에서 실제 충돌이 잡히면 승격)
+watchlist:
+  - surface_form: "환원"
+    note: "산화·환원의 '환원'과 논리학·수학의 '환원'. 통합과학 범위에서는 충돌 없음."
+  - surface_form: "평형"
+    note: "생태계 평형(10통과2-02-02) / 화학 평형 / 힘의 평형. 통합과학2에서 실제로 갈린다."
+  - surface_form: "에너지 준위"
+    note: "스펙트럼(10통과1-02-01)과 화학 결합 양쪽에서 등장."

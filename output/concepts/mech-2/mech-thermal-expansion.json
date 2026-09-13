@@ -1,0 +1,130 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  61
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermal-expansion",
+ "concept_key": "concept:thermal-expansion",
+ "registry_status": "new",
+ "term": "열팽창",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱膨脹",
+  "hanja_gloss": "熱 더울 열 · 膨 부풀 팽 · 脹 부을 창",
+  "english": "thermal expansion",
+  "symbol_display": "ΔL/L = αΔT",
+  "symbol_plain": "deltaL/L = alpha deltaT"
+ },
+ "definition": "온도가 오를 때 물체의 길이나 부피가 늘어나는 현상. 늘어나는 정도는 물질마다 다르며 그 차이를 선팽창 계수로 나타낸다.",
+ "relations": [
+  {
+   "id": "rel-exp-dt",
+   "text": "막대가 늘어난 길이는 처음 길이와 온도 변화량에 비례한다",
+   "form": {
+    "condition": "같은 물질의 막대를 두고 볼 때",
+    "type": "direct",
+    "scope": "선팽창 계수가 일정하다고 볼 수 있는 온도 범위",
+    "antecedent": {
+     "quantity": "온도 변화량",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "늘어난 길이",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "늘어난 길이를 온도 변화에 비례하도록 정의했으므로 반대로 놓으면 식과 어긋난다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "막대가 늘어난 길이는 온도 변화량이 클수록 작아진다"
+  },
+  {
+   "id": "rel-exp-alpha",
+   "text": "온도를 같은 폭으로 올려도 선팽창 계수가 큰 물질이 더 많이 늘어난다",
+   "form": {
+    "condition": "온도 변화량과 처음 길이를 같게 두고 견줄 때",
+    "type": "direct",
+    "scope": "선팽창 계수가 양인 고체",
+    "antecedent": {
+     "quantity": "선팽창 계수",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "늘어난 길이",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "선팽창 계수는 팽창의 크기를 재는 비례 상수라 크기와 팽창 정도를 반대로 놓으면 거짓이 된다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "온도를 같은 폭으로 올리면 선팽창 계수가 큰 물질이 더 적게 늘어난다"
+  },
+  {
+   "id": "rel-exp-design",
+   "text": "다리나 철로에 이음매 틈을 두는 것은 더울 때 늘어난 길이를 받아 주기 위해서다",
+   "form": {
+    "condition": "계절에 따라 온도가 크게 바뀌는 구조물일 때",
+    "type": "causal",
+    "scope": "금속으로 만든 긴 구조물"
+   },
+   "invertible": false,
+   "invertible_reason": "설계에 담긴 까닭을 밝힌 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "금속 고리를 가열하면 금속이 팽창하면서 가운데 구멍은 작아진다",
+   "why_wrong": "물체의 모든 부분이 같은 비율로 커지므로 구멍도 함께 커진다. 잘 열리지 않는 금속 병뚜껑을 데워서 여는 것이 그 예다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-exp-dt"
+  },
+  {
+   "text": "모든 물질은 온도가 오르면 같은 비율로 팽창한다",
+   "why_wrong": "선팽창 계수는 물질마다 다르다. 유리보다 금속이 크게 늘어나기 때문에 유리병의 금속 뚜껑을 데우면 열린다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-exp-alpha"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermal-motion",
+   "note": "온도가 오르면 입자 운동이 활발해지는 데서 출발한다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-insulation",
+   "note": "열에너지 관련 기술에서 나란히 다뤄진다"
+  },
+  {
+   "type": "related",
+   "target": "mech-change-of-state",
+   "note": "온도가 올라도 부피만 바뀌는 경우와 견준다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "notes": [
+  "C6 uncertain(고치지 않음) — rel-exp-dt 의 scope 에는 '선팽창 계수가 양' 이라는 단서가 없고 짝인 rel-exp-alpha 에는 있다. 교과서 61쪽은 '대부분의 물질은 온도가 올라가면 팽창' 이라 예외를 열어 두었는데 이 카드 정의는 '대부분' 없이 단정한다. 예외(물의 이상 팽창 등)를 이 수준에서 다룰지가 갈려 고치지 않았다 — C8 에서 정해 주기 바란다."
+ ]
+}

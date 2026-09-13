@@ -1,0 +1,108 @@
+{
+ "id": "mech-projectile-at-an-angle",
+ "concept_key": "concept:projectile-motion-at-an-angle",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "비스듬히 위로 던진 물체의 운동",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "풀어 쓴 구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "projectile launched at an angle"
+ },
+ "definition": "수평과 각을 이루며 위로 던져진 뒤 중력만 받는 물체의 운동. 처음 속도를 수평·연직 성분으로 갈라 각각 따로 다룬다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-pa-components",
+   "text": "처음 속력이 같다면 던지는 각이 클수록 처음 속도의 수평 성분은 작아진다.",
+   "form": {
+    "condition": "처음 속력이 일정할 때",
+    "type": "inverse",
+    "scope": "0°~90° 구간의 던진 각",
+    "antecedent": {
+     "quantity": "던진 각",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "처음 속도의 수평 성분",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "수평 성분이 v₀ cos θ 라 이 구간에서 줄기만 하므로 커진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "처음 속력이 같을 때 던지는 각이 클수록 처음 속도의 수평 성분도 커진다."
+  },
+  {
+   "id": "rel-pa-apex",
+   "text": "최고점에서는 속도의 연직 성분이 0 이 되지만 물체가 멈춘 것은 아니다.",
+   "form": {
+    "condition": "연직 속도의 부호가 바뀌는 순간",
+    "type": "conditional",
+    "scope": "연직으로 곧게 던지지 않은 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "한 순간의 상태를 밝힌 서술이라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pa-horizontal",
+   "text": "날아가는 내내 속도의 수평 성분은 던질 때의 값 그대로다.",
+   "form": {
+    "condition": "공기 저항을 무시할 때",
+    "type": "conditional",
+    "scope": "중력만 받는 구간",
+    "antecedent": {
+     "quantity": "수평 성분 속도",
+     "direction": "일정"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "유지된다는 서술이라 뒤집어 반드시 거짓인 문장을 만들 수 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "최고점에서는 속도가 0 이므로 힘도 작용하지 않는다",
+   "why_wrong": "최고점에서도 수평 속도가 남아 있고, 중력은 궤도 어디에서나 연직 아래로 그대로 작용한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pa-apex"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-projectile-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-range-and-max-height"
+  }
+ ],
+ "curriculum": [
+  "12역학01-02"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-02",
+ "pages": [
+  20,
+  21
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

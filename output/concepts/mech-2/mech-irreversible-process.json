@@ -1,0 +1,139 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-02",
+ "pages": [
+  82,
+  83
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-irreversible-process",
+ "concept_key": "concept:irreversible-process",
+ "registry_status": "new",
+ "term": "비가역 과정",
+ "aliases": [],
+ "notation": {
+  "hanja": "非可逆過程",
+  "hanja_gloss": "非 아닐 비 · 可 옳을 가 · 逆 거스를 역 · 過 지날 과 · 程 길 정",
+  "english": "irreversible process"
+ },
+ "definition": "한쪽 방향으로만 저절로 일어나고 반대로는 저절로 돌아가지 않는 과정. 식은 물이 스스로 데워지지 않고 깨진 컵이 붙지 않는 것이 그 예다.",
+ "relations": [
+  {
+   "id": "rel-irr-heat",
+   "text": "뜨거운 물은 저절로 식지만 차가워진 물이 저절로 뜨거워지지는 않는다",
+   "form": {
+    "condition": "바깥에서 일을 해 주지 않을 때",
+    "type": "conditional",
+    "scope": "주변과 온도가 다른 물체의 자발적 변화",
+    "antecedent": {
+     "quantity": "시간",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "주변과의 온도 차",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "자발적 열 이동의 방향은 하나뿐이므로 반대로 일어난다는 문장은 반드시 거짓이다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "차가워진 물도 그대로 두면 저절로 다시 뜨거워진다"
+  },
+  {
+   "id": "rel-irr-friction",
+   "text": "마찰로 열이 되어 흩어진 역학적 에너지는 시간이 지나도 저절로 되돌아오지 않는다",
+   "form": {
+    "condition": "마찰이나 공기 저항이 있을 때",
+    "type": "causal",
+    "scope": "실제 물체의 운동",
+    "antecedent": {
+     "quantity": "마찰",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "되돌릴 수 있음",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "흩어진 에너지가 저절로 모여 운동 에너지로 되돌아온다면 자연에서 관찰되지 않는 방향의 변화가 된다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "마찰로 흩어진 에너지는 시간이 지나면 저절로 모여 운동 에너지로 돌아온다"
+  },
+  {
+   "id": "rel-irr-micro",
+   "text": "수많은 가역적 충돌이 쌓이면 평균적으로 한 방향의 변화만 남아 거시적으로는 비가역이 된다",
+   "form": {
+    "condition": "입자 수가 매우 많을 때",
+    "type": "causal",
+    "scope": "많은 입자로 이루어진 계"
+   },
+   "invertible": false,
+   "invertible_reason": "미시에서 거시로 넘어가는 까닭을 밝힌 서술이라 두 양을 맞바꿀 수 없다",
+   "curriculum": [
+    "12역학02-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "비가역 과정은 어떤 방법으로도 되돌릴 수 없는 과정이다",
+   "why_wrong": "되돌릴 수 없다는 말은 '저절로'라는 단서가 붙은 말이다. 냉장고처럼 바깥에서 일을 해 주면 열을 저온에서 고온으로 옮길 수 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-irr-heat"
+  },
+  {
+   "text": "비가역 과정에서는 에너지가 사라진다",
+   "why_wrong": "에너지는 사라지지 않고 흩어질 뿐이다. 마찰로 생긴 열도 에너지이며 총량은 그대로다. 달라진 것은 다시 쓸 수 있는지다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-irr-friction"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-reversible-process",
+   "note": "되돌릴 수 있는 쪽과 견주어 읽는다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-heat-transfer",
+   "note": "열이 한쪽으로만 흐른다는 사실에서 출발한다"
+  },
+  {
+   "type": "next",
+   "target": "mech-second-law-of-thermodynamics",
+   "note": "이 방향성을 법칙으로 적는다"
+  },
+  {
+   "type": "next",
+   "target": "mech-gas-diffusion",
+   "note": "대표적인 비가역 현상으로 나아간다"
+  },
+  {
+   "type": "related",
+   "target": "mech-entropy",
+   "note": "방향을 재는 양이다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-05"
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "notes": [
+  "chem-3 의 '비가역 반응'(concept:irreversible-reaction)과 다른 키로 두었다. 표기가 비슷하나 이쪽은 화학 반응이 아니라 열역학 과정이다 — ★G3 에서 두 키를 나란히 두고 확인해 주기 바란다."
+ ]
+}

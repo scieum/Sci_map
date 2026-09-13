@@ -1,0 +1,154 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  68,
+  74
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-ideal-gas-law",
+ "concept_key": "concept:ideal-gas-law",
+ "registry_status": "reused",
+ "term": "이상 기체 법칙",
+ "aliases": [
+  "이상 기체 상태 방정식"
+ ],
+ "notation": {
+  "hanja": "理想氣體法則",
+  "hanja_gloss": "理 다스릴 리 · 想 생각 상 · 氣 기운 기 · 體 몸 체 · 法 법 법 · 則 법칙 칙",
+  "english": "ideal gas law",
+  "symbol_display": "PV = NkT",
+  "symbol_plain": "PV = NkT"
+ },
+ "definition": "기체의 압력·부피·절대 온도를 짝지어 얻은 세 관계를 하나로 묶은 식. 분자 수 N과 볼츠만 상수 k를 넣어 PV = NkT로 적는다.",
+ "relations": [
+  {
+   "id": "rel-igl-combine",
+   "text": "분자 수가 일정하면 압력과 부피를 곱한 값을 절대 온도로 나눈 값이 변하지 않는다",
+   "form": {
+    "condition": "기체 분자 수가 일정할 때",
+    "type": "conditional",
+    "scope": "이상 기체로 다룰 수 있는 범위의 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "세 양을 한데 묶은 등식이라 두 양을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-igl-number",
+   "text": "다른 조건이 같다면 기체 분자 수가 많을수록 부피가 커진다",
+   "form": {
+    "condition": "압력과 온도를 고정했을 때",
+    "type": "direct",
+    "scope": "이상 기체 법칙이 성립하는 조건",
+    "antecedent": {
+     "quantity": "분자 수",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "부피",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "식에서 N과 V가 같은 쪽으로 움직이므로 반대로 놓으면 등식이 깨진다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "압력과 온도가 같다면 기체 분자 수가 많을수록 부피가 작아진다"
+  },
+  {
+   "id": "rel-igl-limit",
+   "text": "이 관계식은 밀도가 매우 높거나 온도가 매우 낮은 기체에서는 성립하지 않는다",
+   "form": {
+    "condition": "기체가 놓인 밀도와 온도를 따질 때",
+    "type": "conditional",
+    "scope": "이상 기체 모형이 무너지는 영역"
+   },
+   "invertible": false,
+   "invertible_reason": "식이 통하지 않는 경계를 짚은 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-igl-balloon",
+   "text": "열기구 속 공기는 압력이 대기압으로 유지된 채 데워지므로 부피가 늘고 일부가 빠져나가 가벼워진다",
+   "form": {
+    "condition": "기구가 밀폐되어 있지 않아 압력이 대기압과 같을 때",
+    "type": "causal",
+    "scope": "열기구처럼 열린 계"
+   },
+   "invertible": false,
+   "invertible_reason": "여러 단계가 이어진 사례 설명이라 두 양을 맞바꾼 문장을 만들 수 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "이상 기체 법칙은 온도와 압력이 어떤 값이어도 항상 성립한다",
+   "why_wrong": "밀도가 아주 높거나 온도가 아주 낮으면 어긋난다. 그런 영역에서는 분자의 부피와 분자 사이 힘을 무시할 수 없다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-igl-limit"
+  },
+  {
+   "text": "식의 T 자리에는 섭씨온도를 넣어도 된다",
+   "why_wrong": "PV = NkT의 T는 절대 온도다. 섭씨온도를 넣으면 0 ℃에서 PV가 0이 되어야 한다는 엉뚱한 결과가 나온다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-igl-combine"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-pressure-volume-relation",
+   "note": "묶이기 전의 세 관계 가운데 하나다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-pressure-temperature-relation",
+   "note": "묶이기 전의 세 관계 가운데 하나다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-temperature-volume-relation",
+   "note": "묶이기 전의 세 관계 가운데 하나다"
+  },
+  {
+   "type": "prereq",
+   "target": "mech-ideal-gas",
+   "note": "어떤 기체를 두고 하는 말인지 정한다"
+  },
+  {
+   "type": "related",
+   "target": "mech-internal-energy",
+   "note": "온도가 오르면 무엇이 달라지는지로 이어진다"
+  },
+  {
+   "type": "same",
+   "target": "mate-ideal-gas-law",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "notes": [
+  "표제어는 교과서 표기('이상 기체 법칙')를 따르고 키는 mate-1 카드와 같게 두었다 (C1 판단 유지)."
+ ]
+}

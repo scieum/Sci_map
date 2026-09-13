@@ -1,0 +1,106 @@
+{
+ "id": "mech-range-and-max-height",
+ "concept_key": "concept:range-and-maximum-height-of-projectile",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "수평 도달 거리와 최고점 높이",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "두 용어를 '와' 로 묶은 구절 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "range and maximum height",
+  "symbol_display": "R, H",
+  "symbol_plain": "R, H"
+ },
+ "definition": "던진 물체가 같은 높이로 되돌아올 때까지 가로로 간 거리와, 궤도에서 가장 높이 오른 지점의 높이. 처음 속력과 던진 각으로 정해진다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-rh-45",
+   "text": "처음 속력이 같다면 45°로 던졌을 때 가장 멀리 나간다.",
+   "form": {
+    "condition": "처음 속력이 일정하고 던진 자리와 도착 자리의 높이가 같을 때",
+    "type": "conditional",
+    "scope": "공기 저항을 무시한 포물선 운동"
+   },
+   "invertible": false,
+   "invertible_reason": "최댓값을 주는 각을 짚은 서술이라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rh-complement",
+   "text": "두 던짐 각을 더해 90°가 되면 수평 도달 거리가 서로 같다.",
+   "form": {
+    "condition": "두 경우의 처음 속력이 같을 때",
+    "type": "conditional",
+    "scope": "던진 높이와 도착 높이가 같은 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "여각끼리 같다는 대칭 서술이라 뒤집어도 같은 뜻이 된다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rh-speed",
+   "text": "던진 각이 그대로일 때 처음 속력을 2배로 하면 수평 도달 거리는 4배가 된다.",
+   "form": {
+    "condition": "던진 각이 일정할 때",
+    "type": "direct",
+    "scope": "공기 저항을 무시한 포물선 운동",
+    "antecedent": {
+     "quantity": "처음 속력",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "수평 도달 거리",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "도달 거리가 처음 속력의 제곱에 비례하므로 줄어든다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "던진 각이 같을 때 처음 속력을 2배로 하면 수평 도달 거리는 오히려 줄어든다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "45°보다 더 세워서 던질수록 멀리 나간다",
+   "why_wrong": "45°를 넘기면 연직 성분만 커지고 수평 성분이 줄어, 오래 떠 있어도 가로로 가는 거리는 짧아진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rh-45"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-projectile-at-an-angle"
+  },
+  {
+   "type": "related",
+   "target": "mech-projectile-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-02"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-02",
+ "pages": [
+  20,
+  21
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

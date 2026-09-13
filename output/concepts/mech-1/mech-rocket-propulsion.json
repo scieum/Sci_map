@@ -1,0 +1,107 @@
+{
+ "id": "mech-rocket-propulsion",
+ "concept_key": "concept:rocket-propulsion",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "우주선의 추진 원리",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "구절 형태의 표제어라 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "rocket propulsion"
+ },
+ "definition": "연료를 태워 만든 가스를 뒤로 내보내고 그 반작용으로 나아가는 방식. 작용 반작용 법칙과 운동량 보존으로 설명한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-rp-reaction",
+   "text": "우주선이 가스를 아래로 밀면 가스는 같은 크기의 힘으로 우주선을 위로 민다.",
+   "form": {
+    "condition": "두 물체가 서로 힘을 주고받을 때",
+    "type": "causal",
+    "scope": "작용 반작용 법칙이 성립하는 모든 경우"
+   },
+   "invertible": true,
+   "invertible_reason": "반작용은 크기가 같고 방향이 반대이므로 방향을 같게 적으면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "우주선이 가스를 아래로 밀면 가스도 우주선을 아래로 민다."
+  },
+  {
+   "id": "rel-rp-mass",
+   "text": "내보내는 가스의 양과 속력이 같다면 로켓의 질량을 절반으로 줄일 때 속도 증가량은 2배가 된다.",
+   "form": {
+    "condition": "분출하는 가스의 질량과 상대 속력이 같을 때",
+    "type": "inverse",
+    "scope": "한 단의 분출로 볼 수 있는 경우",
+    "antecedent": {
+     "quantity": "로켓의 질량",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "속도 증가량",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "속도 증가량이 로켓 질량에 반비례하므로 줄어든다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "로켓의 질량을 절반으로 줄이면 속도 증가량도 절반이 된다."
+  },
+  {
+   "id": "rel-rp-stage",
+   "text": "다 쓴 단을 떼어 내는 다단 로켓이 한 단짜리보다 위성을 궤도에 올리기 좋다.",
+   "form": {
+    "condition": "실을 수 있는 연료의 양이 같을 때",
+    "type": "causal",
+    "scope": "위성을 궤도에 올리는 발사체"
+   },
+   "invertible": false,
+   "invertible_reason": "효율을 견준 서술이라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "로켓은 뿜어낸 가스가 지면을 밀기 때문에 떠오른다",
+   "why_wrong": "발사대를 멀리 떠난 뒤에도 로켓은 계속 빨라진다. 밀어 주는 것은 지면이 아니라 뒤로 내보낸 가스다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rp-reaction"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-momentum-conservation-law"
+  },
+  {
+   "type": "related",
+   "target": "mech-satellite-motion"
+  }
+ ],
+ "curriculum": [
+  "12역학01-05"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-02",
+ "pages": [
+  41
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "★C8 판단 요청 (C6 uncertain) — rel-rp-mass('질량 절반 → 속도 증가량 2배')는 교과서 41쪽이 (M+m)v0=Mv1+m(v0−u) 를 전개해 그대로 싣는 정량 진술이다. 그런데 12역학01-05 성취기준 해설은 우주선이 궤도에 오르는 원리를 '정량적으로 다루지 않고 정성적으로 설명한다' 로 제한한다. 교과서가 해설의 선을 넘어간 자리이지 카드가 지어낸 것이 아니므로 그대로 두었다. 이 명제를 정성 진술로 낮출지 교과서 문면대로 둘지 사람이 정해 달라."
+ ]
+}

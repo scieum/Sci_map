@@ -1,0 +1,166 @@
+{
+  "id": "mech-free-end-and-fixed-end-reflection",
+  "concept_key": "concept:free-end-and-fixed-end-reflection",
+  "registry_status": "new",
+  "term": "자유단 반사와 고정단 반사",
+  "notation": {
+    "hanja": "自由端 反射 固定端 反射",
+    "hanja_gloss": "自 스스로 자 · 由 말미암을 유 · 端 끝 단 · 反 돌이킬 반 · 射 쏠 사 · 固 굳을 고 · 定 정할 정 · 端 끝 단 · 反 돌이킬 반 · 射 쏠 사",
+    "english": "free-end reflection and fixed-end reflection"
+  },
+  "definition": "되돌아 나오는 파동의 위상이 그대로면 자유단 반사, 정반대로 뒤집히면 고정단 반사로 가른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-free-end-phase",
+      "text": "끝이 자유롭게 오르내릴 수 있는 자리에서는 반사파가 입사파와 같은 위상으로 되돌아온다.",
+      "form": {
+        "condition": "줄 끝이 걸림 없이 움직일 수 있을 때",
+        "type": "conditional",
+        "scope": "자유단 반사",
+        "antecedent": {
+          "quantity": "끝의 구속 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반사파의 위상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자유단에서는 위상이 유지되므로 반대라는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자유단에서는 반사파가 입사파와 반대 위상으로 되돌아온다."
+    },
+    {
+      "id": "rel-fixed-end-phase",
+      "text": "끝이 벽에 묶여 움직이지 못하는 자리에서는 반사파의 위상이 입사파와 반대가 된다.",
+      "form": {
+        "condition": "줄 끝이 고정되어 있을 때",
+        "type": "conditional",
+        "scope": "고정단 반사",
+        "antecedent": {
+          "quantity": "끝의 구속 여부",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반사파의 위상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "고정단에서는 위상이 뒤집히므로 같다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고정단에서는 반사파의 위상이 입사파와 같다."
+    },
+    {
+      "id": "rel-fast-to-slow",
+      "text": "속력이 큰 매질에서 작은 매질 쪽으로 나아가다 반사한 파동은 위상이 뒤집힌다.",
+      "form": {
+        "condition": "두 매질에서의 파동 속력을 견줄 때",
+        "type": "conditional",
+        "scope": "매질 경계에서의 반사(고정단에 해당)",
+        "antecedent": {
+          "quantity": "두 매질의 속력 관계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반사파의 위상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 경우 위상은 반드시 반전하므로 유지된다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 큰 매질에서 작은 매질 쪽으로 나아가다 반사한 파동은 위상이 그대로 유지된다."
+    },
+    {
+      "id": "rel-slow-to-fast",
+      "text": "속력이 작은 매질에서 큰 매질 쪽으로 나아가다 반사한 파동은 위상이 그대로다.",
+      "form": {
+        "condition": "두 매질에서의 파동 속력을 견줄 때",
+        "type": "conditional",
+        "scope": "매질 경계에서의 반사(자유단에 해당)",
+        "antecedent": {
+          "quantity": "두 매질의 속력 관계",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "반사파의 위상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "이 경우 위상은 반드시 유지되므로 뒤집힌다는 문장은 거짓이다.",
+      "curriculum": [
+        "12역학03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 작은 매질에서 큰 매질 쪽으로 나아가다 반사한 파동은 위상이 뒤집힌다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반사한 파동은 언제나 위상이 뒤집혀 돌아온다.",
+      "why_wrong": "위상이 뒤집히는 것은 고정단 반사일 때다. 자유단 반사에서는 위상이 그대로 유지된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-free-end-phase"
+    },
+    {
+      "text": "자유단 반사인지 고정단 반사인지는 파동의 진동수가 정한다.",
+      "why_wrong": "무엇으로 반사하느냐, 곧 끝이 묶였는지 자유로운지와 두 매질의 속력 관계가 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fast-to-slow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-wave-phase"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-transmission-and-reflection-of-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-wave-speed"
+    },
+    {
+      "type": "next",
+      "target": "mech-standing-wave",
+      "note": "반사파와 입사파가 겹쳐 정상파가 된다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-02"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-02",
+  "pages": [
+    95,
+    102,
+    103
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "95쪽 '배울 내용 미리보기' 가 rel-fast-to-slow 를 단원 대표 명제로 내세운다.",
+    "C7 후보 삽화: 102쪽 그림 11(자유단과 고정단에서의 위상 변화), 103쪽 그림 12."
+  ]
+}

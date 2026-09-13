@@ -1,0 +1,121 @@
+{
+ "id": "mech-escape-velocity-and-atmosphere",
+ "concept_key": "concept:escape-velocity-and-atmospheric-composition",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "탈출 속도와 행성 대기의 조성",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "구절 형태의 표제어이고 '가스·대기' 쪽 용어가 섞여 한 덩어리의 한자어로 적을 수 없다.",
+  "english": "escape velocity and planetary atmosphere"
+ },
+ "definition": "행성이 대기를 붙잡아 둘 수 있는지, 어떤 기체가 남는지를 탈출 속도와 기체 분자의 속력 분포로 풀어내는 내용.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-eva-escape",
+   "text": "탈출 속도가 큰 행성일수록 기체 분자가 대기에서 빠져나가기 어렵다.",
+   "form": {
+    "condition": "표면 온도가 비슷할 때",
+    "type": "inverse",
+    "scope": "대기를 가진 행성",
+    "antecedent": {
+     "quantity": "행성의 탈출 속도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "기체 분자가 달아날 가능성",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "붙잡아 두는 힘이 셀수록 달아나기 어려우므로 쉽다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "탈출 속도가 큰 행성일수록 기체 분자가 더 쉽게 빠져나간다."
+  },
+  {
+   "id": "rel-eva-mass",
+   "text": "온도가 같다면 분자 질량이 작은 기체일수록 빠르게 움직여 먼저 달아난다.",
+   "form": {
+    "condition": "대기의 온도가 같을 때",
+    "type": "inverse",
+    "scope": "기체 분자의 속력 분포",
+    "antecedent": {
+     "quantity": "분자의 질량",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "분자의 평균 속력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "같은 온도에서 가벼운 분자가 더 빠르므로 느리다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "온도가 같다면 분자 질량이 작은 기체일수록 느리게 움직인다."
+  },
+  {
+   "id": "rel-eva-temp",
+   "text": "표면 온도가 높을수록 기체 분자의 속력이 커져 대기를 잃기 쉬워진다.",
+   "form": {
+    "condition": "행성의 탈출 속도가 같을 때",
+    "type": "direct",
+    "scope": "행성 대기를 이루는 기체",
+    "antecedent": {
+     "quantity": "표면 온도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "분자의 평균 속력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "온도가 높을수록 분자가 빨라지므로 느려진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-05"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "표면 온도가 높을수록 기체 분자의 속력은 오히려 작아진다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "지구의 탈출 속도가 수소 분자의 속력보다 크므로 수소는 지구를 떠날 수 없다",
+   "why_wrong": "분자의 속력은 하나로 정해지지 않고 분포를 이룬다. 분포의 빠른 쪽 꼬리에 있는 분자가 조금씩 달아나고, 더 뜨거웠던 초기 지구에서는 그 비율이 훨씬 컸다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-eva-mass"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-escape-velocity"
+  },
+  {
+   "type": "related",
+   "target": "mech-gravitational-potential-energy"
+  }
+ ],
+ "curriculum": [
+  "12역학01-05"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-2-02",
+ "pages": [
+  40
+ ],
+ "difficulty": 3,
+ "role": "context",
+ "version": 1
+}

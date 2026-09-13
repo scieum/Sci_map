@@ -1,0 +1,131 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-01",
+ "pages": [
+  78
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-heat-engine",
+ "concept_key": "concept:heat-engine",
+ "registry_status": "new",
+ "term": "열기관",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱機關",
+  "hanja_gloss": "熱 더울 열 · 機 틀 기 · 關 빗장 관",
+  "english": "heat engine",
+  "symbol_display": "W = Q₁ − Q₂",
+  "symbol_plain": "W = Q1 - Q2"
+ },
+ "definition": "열에너지를 역학적인 일로 바꾸어 주는 장치. 고열원에서 열을 받아 일부를 일로 내놓고 나머지는 저열원으로 흘려보내며 돌아간다.",
+ "relations": [
+  {
+   "id": "rel-he-balance",
+   "text": "한 순환에서 열기관이 한 일은 고열원에서 흡수한 열량에서 저열원으로 내보낸 열량을 뺀 값이다",
+   "form": {
+    "condition": "한 순환을 마쳐 기체가 처음 상태로 돌아왔을 때",
+    "type": "conditional",
+    "scope": "순환하며 작동하는 열기관"
+   },
+   "invertible": false,
+   "invertible_reason": "에너지 보존에서 곧바로 나오는 등식이라 두 양을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-he-cycle-du",
+   "text": "한 순환을 마치면 기체가 처음 상태로 돌아오므로 내부 에너지 변화가 없다",
+   "form": {
+    "condition": "순환 과정이 한 바퀴를 다 돌았을 때",
+    "type": "conditional",
+    "scope": "열기관 속 작동 기체"
+   },
+   "invertible": false,
+   "invertible_reason": "처음 상태로 돌아왔다는 조건에서 따라 나오는 값이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-he-two-sources",
+   "text": "열기관이 돌아가려면 열을 내주는 고열원과 열을 받아 주는 저열원이 함께 있어야 한다",
+   "form": {
+    "condition": "열기관을 작동시킬 때",
+    "type": "conditional",
+    "scope": "두 열원 사이에서 작동하는 열기관",
+    "antecedent": {
+     "quantity": "두 열원의 존재",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "열기관의 작동",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "저열원 없이 흡수한 열을 모두 일로 바꿀 수 있다면 열효율 1인 기관이 가능해져 제2법칙과 부딪힌다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "열기관은 고열원 하나만 있으면 저열원 없이도 돌아간다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "좋은 열기관은 흡수한 열을 모두 일로 바꾼다",
+   "why_wrong": "흡수한 열의 일부는 반드시 저열원으로 빠져나간다. 전부를 일로 바꾸는 기관은 만들 수 없다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-he-two-sources"
+  },
+  {
+   "text": "열기관이 한 순환을 돌면 기체의 내부 에너지가 그만큼 줄어든다",
+   "why_wrong": "한 순환 뒤 기체는 처음 상태로 돌아오므로 내부 에너지 변화는 0이다. 줄어든 것은 고열원의 에너지다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-he-cycle-du"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-first-law-of-thermodynamics",
+   "note": "에너지 출입을 적는 바탕이다"
+  },
+  {
+   "type": "next",
+   "target": "mech-thermal-efficiency",
+   "note": "얼마나 잘 바꾸는지를 재는 양이다"
+  },
+  {
+   "type": "next",
+   "target": "mech-thermodynamic-cycle",
+   "note": "어떤 과정들을 거쳐 도는지를 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-social-impact-of-heat-engine",
+   "note": "이 장치가 사회에 미친 영향을 본다"
+  },
+  {
+   "type": "same",
+   "target": "phys-heat-engine",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-04"
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "notes": [
+  "고열원·저열원(열원)은 이 카드 안에서 다룬다 (C1 판단 유지)."
+ ]
+}

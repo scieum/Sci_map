@@ -1,0 +1,128 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-01",
+ "pages": [
+  59,
+  62
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermal-insulation",
+ "concept_key": "concept:thermal-insulation",
+ "registry_status": "new",
+ "term": "단열",
+ "aliases": [
+  "단열재"
+ ],
+ "notation": {
+  "hanja": "斷熱",
+  "hanja_gloss": "斷 끊을 단 · 熱 더울 열",
+  "english": "thermal insulation"
+ },
+ "definition": "열이 드나드는 세 길을 막아 안팎의 에너지 출입을 줄이는 일. 열전도도가 작은 물질을 쓰거나 공기를 가두어 흐름을 끊는 방법이 흔하다.",
+ "relations": [
+  {
+   "id": "rel-ins-k",
+   "text": "열전도도가 작은 물질일수록 단열재로 쓰기에 알맞다",
+   "form": {
+    "condition": "단열재로 쓸 물질을 고를 때",
+    "type": "inverse",
+    "scope": "전도를 막는 것이 주된 목적인 단열",
+    "antecedent": {
+     "quantity": "열전도도",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "단열 성능",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "열전도도가 큰 물질이 단열에 알맞다면 금속으로 벽을 채우는 편이 나아야 하는데 그렇지 않다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "열전도도가 큰 물질일수록 단열재로 쓰기에 알맞다"
+  },
+  {
+   "id": "rel-ins-air",
+   "text": "에어캡이나 패딩솜은 열전도도가 낮은 공기를 잘게 가두어 대류까지 막는다",
+   "form": {
+    "condition": "공기를 품은 단열재를 쓸 때",
+    "type": "causal",
+    "scope": "공기층을 이용한 단열재"
+   },
+   "invertible": false,
+   "invertible_reason": "가두어 둔 공기가 어떻게 작용하는지 밝힌 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ins-building",
+   "text": "건물의 단열을 높이면 같은 실내 온도를 지키는 데 드는 냉난방 에너지가 줄어든다",
+   "form": {
+    "condition": "실내 온도를 같게 유지할 때",
+    "type": "inverse",
+    "scope": "패시브 하우스처럼 단열을 설계에 넣은 건축물",
+    "antecedent": {
+     "quantity": "단열 성능",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "냉난방 에너지",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "단열이 좋아질수록 새어 나가는 열이 줄어드는데 에너지가 더 든다는 말은 앞뒤가 맞지 않는다",
+   "curriculum": [
+    "12역학02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "건물의 단열을 높일수록 같은 실내 온도를 지키는 데 드는 냉난방 에너지가 늘어난다"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "단열재는 열을 완전히 차단하므로 단열이 잘된 집은 온도가 영원히 유지된다",
+   "why_wrong": "단열은 열이 드나드는 빠르기를 줄이는 것이지 0으로 만드는 것이 아니다. 시간이 지나면 안팎의 온도는 결국 같아진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ins-k"
+  },
+  {
+   "text": "단열재는 따뜻한 것을 따뜻하게 지킬 때만 쓸모가 있다",
+   "why_wrong": "단열은 열의 출입을 줄이는 것이라 방향을 가리지 않는다. 얼음을 담은 아이스박스도 같은 원리로 차가움을 지킨다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ins-building"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-conduction",
+   "note": "열전도도를 알아야 고를 수 있다"
+  },
+  {
+   "type": "related",
+   "target": "mech-thermal-radiation",
+   "note": "거울 시트는 복사를 되돌려 막는다"
+  },
+  {
+   "type": "related",
+   "target": "mech-adiabatic-process",
+   "note": "낱말은 같지만 이쪽은 열 출입이 없는 과정이다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-01"
+ ],
+ "difficulty": 2,
+ "role": "core"
+}

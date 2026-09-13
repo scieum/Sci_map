@@ -1,0 +1,129 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-2-01",
+ "pages": [
+  78,
+  86
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-thermal-efficiency",
+ "concept_key": "concept:thermal-efficiency",
+ "registry_status": "new",
+ "term": "열효율",
+ "aliases": [],
+ "notation": {
+  "hanja": "熱效率",
+  "hanja_gloss": "熱 더울 열 · 效 본받을 효 · 率 비율 률",
+  "english": "thermal efficiency",
+  "symbol_display": "e = W/Q₁ = 1 − Q₂/Q₁",
+  "symbol_plain": "e = W/Q1 = 1 - Q2/Q1"
+ },
+ "definition": "열기관이 흡수한 열량 가운데 일로 바뀐 몫이 차지하는 비. 흡수한 열에 대한 한 일의 비율로 정의하며, 방출한 열의 비율을 1에서 뺀 값과 같다.",
+ "relations": [
+  {
+   "id": "rel-te-def",
+   "text": "열효율은 열기관이 한 일을 고열원에서 흡수한 열량으로 나눈 값이다",
+   "form": {
+    "condition": "한 순환에서 오간 열과 일을 헤아릴 때",
+    "type": "conditional",
+    "scope": "순환하며 작동하는 열기관"
+   },
+   "invertible": false,
+   "invertible_reason": "비로 정의한 양이라 두 양을 맞바꾼다는 말이 성립하지 않는다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-te-release",
+   "text": "흡수한 열량이 같다면 저열원으로 버리는 열이 적을수록 열효율이 높다",
+   "form": {
+    "condition": "고열원에서 흡수한 열량을 고정했을 때",
+    "type": "inverse",
+    "scope": "두 열원 사이에서 작동하는 열기관",
+    "antecedent": {
+     "quantity": "방출한 열량",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "열효율",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "버리는 열의 비율을 1에서 뺀 값이 열효율이므로 둘이 함께 커질 수는 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "흡수한 열량이 같다면 저열원으로 버리는 열이 많을수록 열효율이 높다"
+  },
+  {
+   "id": "rel-te-lt1",
+   "text": "실제 열기관의 열효율은 언제나 1보다 작다",
+   "form": {
+    "condition": "실제로 만들어 쓰는 열기관을 볼 때",
+    "type": "conditional",
+    "scope": "현실의 모든 열기관"
+   },
+   "invertible": false,
+   "invertible_reason": "상한을 짚은 서술이라 맞바꿀 두 양이 없다",
+   "curriculum": [
+    "12역학02-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기술이 더 발전하면 열효율이 1인 열기관을 만들 수 있다",
+   "why_wrong": "열효율이 1이 되려면 고열원의 온도가 무한대이거나 저열원의 온도가 0 K이어야 한다. 둘 다 현실에서 이룰 수 없다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-te-lt1"
+  },
+  {
+   "text": "열효율이 40 %라는 것은 연료의 40 %만 타고 나머지는 남는다는 뜻이다",
+   "why_wrong": "연료는 다 타고 그 에너지가 모두 열기관에 들어간다. 그 가운데 일로 바뀐 몫이 40 %이고 나머지 60 %는 열로 버려진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-te-def"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-heat-engine",
+   "note": "무엇의 효율인지 먼저 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-carnot-engine",
+   "note": "이 값의 이론적 최대치를 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-social-impact-of-heat-engine",
+   "note": "효율을 올리려는 노력으로 이어진다"
+  },
+  {
+   "type": "same",
+   "target": "phys-thermal-efficiency",
+   "note": "concept_key 가 같다"
+  },
+  {
+   "type": "same",
+   "target": "isci2-thermal-efficiency",
+   "note": "concept_key 가 같다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-04"
+ ],
+ "difficulty": 3,
+ "role": "core"
+}

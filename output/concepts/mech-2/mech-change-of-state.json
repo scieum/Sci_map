@@ -1,0 +1,133 @@
+{
+ "subject": "역학과 에너지",
+ "unit": "Ⅱ. 열과 에너지",
+ "unit_id": "mech-2",
+ "topic_id": "mech-2-1-02",
+ "pages": [
+  64
+ ],
+ "version": 1,
+ "definition_source": "restated",
+ "id": "mech-change-of-state",
+ "concept_key": "concept:change-of-state",
+ "registry_status": "new",
+ "term": "상태 변화",
+ "aliases": [],
+ "notation": {
+  "hanja": "狀態變化",
+  "hanja_gloss": "狀 형상 상 · 態 모습 태 · 變 변할 변 · 化 될 화",
+  "english": "change of state"
+ },
+ "definition": "물질을 이루는 분자는 그대로인 채 고체·액체·기체 사이를 오가는 물리적 변화. 이 변화가 일어나는 동안에는 열이 드나들어도 온도가 머물러 있다.",
+ "relations": [
+  {
+   "id": "rel-cos-flat",
+   "text": "상태가 바뀌는 구간에서는 열을 계속 주어도 온도가 오르지 않고 한 값에 머문다",
+   "form": {
+    "condition": "특정한 녹는점이나 끓는점에 이르렀을 때",
+    "type": "conditional",
+    "scope": "순수한 물질이 두 상태로 함께 있는 구간",
+    "antecedent": {
+     "quantity": "가한 열",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온도",
+     "direction": "일정"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "상태 변화 구간의 온도가 일정하다는 것이 이 구간을 가르는 표지이므로 오른다고 하면 곧바로 거짓이다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "상태가 바뀌는 구간에서도 열을 계속 주면 온도가 꾸준히 오른다"
+  },
+  {
+   "id": "rel-cos-force",
+   "text": "상태 변화 때 들어간 열은 입자의 열운동을 키우기보다 입자 사이의 인력을 끊는 데 쓰인다",
+   "form": {
+    "condition": "상태가 바뀌고 있는 동안",
+    "type": "causal",
+    "scope": "고체·액체·기체 사이의 상태 변화",
+    "antecedent": {
+     "quantity": "가한 열",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "입자 사이의 인력",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "들어간 열이 열운동을 키웠다면 온도가 올라야 하는데 실제로는 오르지 않는다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "상태 변화 때 들어간 열은 입자 사이의 인력을 끊기보다 입자의 열운동을 키우는 데 쓰인다"
+  },
+  {
+   "id": "rel-cos-identity",
+   "text": "상태 변화는 물질을 이루는 분자 자체가 달라지지 않는 물리적 변화다",
+   "form": {
+    "condition": "화학 변화와 갈라 볼 때",
+    "type": "classification",
+    "scope": "물의 융해·기화 같은 상태 변화",
+    "antecedent": {
+     "quantity": "상태 변화",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "분자의 종류",
+     "direction": "일정"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "물리적 변화임을 밝힌 분류 서술이라 맞바꿀 방향이 없다",
+   "curriculum": [
+    "12역학02-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "얼음이 녹는 동안 계속 열을 주면 0 ℃보다 온도가 조금씩 올라간다",
+   "why_wrong": "얼음이 다 녹을 때까지 들어간 열은 얼음을 물로 바꾸는 데 쓰이므로 온도는 0 ℃에 머문다. 아이스박스 속이 0 ℃로 유지되는 까닭이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cos-flat"
+  },
+  {
+   "text": "물이 끓어 수증기가 되면 물 분자가 산소와 수소로 쪼개진다",
+   "why_wrong": "상태 변화는 분자가 그대로 있고 분자들 사이의 거리와 인력만 달라지는 변화다. 분자 자체가 쪼개지는 것은 화학 변화다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cos-identity"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-thermal-motion",
+   "note": "입자 사이의 인력과 운동을 먼저 본다"
+  },
+  {
+   "type": "next",
+   "target": "mech-latent-heat",
+   "note": "이 구간에서 드나든 열을 재는 양이다"
+  },
+  {
+   "type": "related",
+   "target": "mech-specific-heat",
+   "note": "온도가 오르는 구간과 견주어 읽는다"
+  }
+ ],
+ "curriculum": [
+  "12역학02-02"
+ ],
+ "difficulty": 2,
+ "role": "core"
+}

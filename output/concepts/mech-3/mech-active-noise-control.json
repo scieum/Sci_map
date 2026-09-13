@@ -1,0 +1,118 @@
+{
+  "id": "mech-active-noise-control",
+  "concept_key": "concept:active-noise-control",
+  "registry_status": "new",
+  "term": "소음 제거 기술",
+  "notation": {
+    "hanja": "騷音 除去 技術",
+    "hanja_gloss": "騷 떠들 소 · 音 소리 음 · 除 덜 제 · 去 갈 거 · 技 재주 기 · 術 재주 술",
+    "english": "active noise control"
+  },
+  "definition": "없애려는 소리를 마이크로 받아 위상이 반대인 음파를 내보내, 상쇄 간섭으로 소음을 줄이는 기술.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-anc-opposite-phase",
+      "text": "소음과 진폭이 같고 위상이 반대인 음파를 내보내면 상쇄 간섭이 일어나 소음이 줄어든다.",
+      "form": {
+        "condition": "두 음파의 진동수와 진폭이 같을 때",
+        "type": "causal",
+        "scope": "소음 제거 이어폰·비행기 실내",
+        "antecedent": {
+          "quantity": "발생시킨 음파의 위상",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "소음의 진폭",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반대 위상끼리는 상쇄되므로 커진다는 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소음과 위상이 반대인 음파를 내보내면 보강 간섭이 일어나 소음이 커진다."
+    },
+    {
+      "id": "rel-anc-selective",
+      "text": "없애려는 진동수를 골라 상쇄시키면 그 진동수의 소리만 덜어 낼 수 있다.",
+      "form": {
+        "condition": "제거할 진동수를 미리 분석했을 때",
+        "type": "conditional",
+        "scope": "능동 소음 제어 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "골라 없앨 수 있다는 가능성을 말하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-anc-reverse-use",
+      "text": "같은 간섭을 거꾸로 써서 보강 간섭을 일으키면 음파의 진폭을 크게 키울 수도 있다.",
+      "form": {
+        "condition": "두 음파의 위상을 맞추었을 때",
+        "type": "conditional",
+        "scope": "음파의 간섭을 이용하는 장치"
+      },
+      "invertible": false,
+      "invertible_reason": "쓰임을 넓히는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소음 제거 이어폰은 귀를 꽉 막아 소리를 차단하는 장치다.",
+      "why_wrong": "귀마개처럼 막는 것이 아니라, 소음과 반대 위상인 음파를 내보내 상쇄 간섭을 일으키는 장치다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-anc-opposite-phase"
+    },
+    {
+      "text": "소음 제거 음파를 내보내면 소음의 진동수가 낮아져 들리지 않게 된다.",
+      "why_wrong": "진동수를 바꾸는 것이 아니라 진폭을 작게 만드는 것이다. 진동수가 같아야 상쇄가 잘 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-anc-selective"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-sound-wave-interference"
+    },
+    {
+      "type": "related",
+      "target": "mech-constructive-and-destructive-interference",
+      "note": "상쇄 간섭을 그대로 쓴 장치다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-04"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-2-02",
+  "pages": [
+    118,
+    119
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "능동 소음 제어"
+  ],
+  "notes": [
+    "성취기준 12역학03-04 의 '소음 제어에 음파의 간섭' 을 받는 카드다.",
+    "C7 후보 삽화: 118쪽 그림 22(소음 제거 이어폰의 원리), 119쪽 그림 23."
+  ]
+}

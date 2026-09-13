@@ -1,0 +1,114 @@
+{
+ "id": "mech-kinetic-friction-coefficient",
+ "concept_key": "concept:kinetic-friction-coefficient",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "운동 마찰 계수",
+ "aliases": [],
+ "notation": {
+  "hanja": "運動摩擦係數",
+  "hanja_gloss": "運 옮길 운 · 動 움직일 동 · 摩 문지를 마 · 擦 비빌 찰 · 係 맬 계 · 數 셈 수",
+  "english": "coefficient of kinetic friction",
+  "symbol_display": "μ",
+  "symbol_plain": "mu"
+ },
+ "definition": "미끄러지는 물체가 받는 마찰력을 수직 항력으로 나눈 값. 맞닿은 두 면의 성질로 정해지며 실험으로 잰다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-kfc-normal",
+   "text": "같은 면 위라면 수직 항력이 클수록 마찰력의 크기도 커진다.",
+   "form": {
+    "condition": "접촉면의 재질과 상태가 같을 때",
+    "type": "direct",
+    "scope": "이미 미끄러지고 있는 물체",
+    "antecedent": {
+     "quantity": "수직 항력의 크기",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "마찰력의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "마찰력이 계수와 수직 항력의 곱이므로 반대로 말하면 같은 면에서 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 면 위에서 수직 항력이 클수록 마찰력의 크기는 오히려 작아진다."
+  },
+  {
+   "id": "rel-kfc-vs-static",
+   "text": "같은 두 면을 견주면 운동 마찰 계수가 정지 마찰 계수보다 작다.",
+   "form": {
+    "condition": "같은 접촉면에서 두 계수를 견줄 때",
+    "type": "conditional",
+    "scope": "건조한 고체 사이의 접촉면",
+    "antecedent": {
+     "quantity": "운동 마찰 계수",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "정지 마찰 계수",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "두 계수의 대소가 정해져 있으므로 크다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "같은 두 면에서 운동 마찰 계수는 정지 마찰 계수보다 크다."
+  },
+  {
+   "id": "rel-kfc-empirical",
+   "text": "마찰 계수는 이론으로 유도하지 않고 접촉면마다 실험으로 정한다.",
+   "form": {
+    "condition": "마찰력의 크기를 계산하려 할 때",
+    "type": "causal",
+    "scope": "고전 역학에서 다루는 접촉 마찰"
+   },
+   "invertible": false,
+   "invertible_reason": "값을 얻는 방법을 밝힌 명제라 방향을 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "무거운 물체일수록 운동 마찰 계수가 크다",
+   "why_wrong": "무게가 늘면 수직 항력이 커져 마찰력이 커질 뿐이다. 계수는 맞닿은 면의 성질로 정해지므로 그대로다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-kfc-normal"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-normal-force"
+  },
+  {
+   "type": "next",
+   "target": "mech-motion-on-inclined-plane"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  15
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

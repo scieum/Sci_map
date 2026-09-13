@@ -1,0 +1,107 @@
+{
+ "id": "mech-force-resolution",
+ "concept_key": "concept:force-resolution",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "힘의 분해",
+ "aliases": [],
+ "notation": {
+  "hanja": "分解",
+  "hanja_gloss": "分 나눌 분 · 解 풀 해",
+  "english": "resolution of forces"
+ },
+ "definition": "한 힘을 같은 효과를 내는 두 힘으로 갈라 적는 일. 합성을 거꾸로 한 것이며 보통 서로 수직인 두 방향을 골라 나눈다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-fr-component",
+   "text": "분해하려는 방향이 원래 힘과 각 θ 를 이루면 그 방향 성분의 크기는 F cos θ 다.",
+   "form": {
+    "condition": "두 분해 방향이 서로 수직일 때",
+    "type": "conditional",
+    "scope": "한 평면 안에서 두 성분으로 나누는 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "성분의 크기를 계산하는 식이라 앞뒤를 맞바꿀 자리가 없다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fr-angle",
+   "text": "분해각이 0°에서 90°로 커지는 동안 그 방향 성분의 크기는 줄어든다.",
+   "form": {
+    "condition": "원래 힘의 크기가 일정할 때",
+    "type": "inverse",
+    "scope": "0°~90° 구간의 분해각",
+    "antecedent": {
+     "quantity": "분해각",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "그 방향 성분의 크기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "이 구간에서 코사인 값은 줄기만 하므로 커진다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "분해각이 0°에서 90°로 커지는 동안 그 방향 성분의 크기도 함께 커진다."
+  },
+  {
+   "id": "rel-fr-perp",
+   "text": "서로 수직인 방향으로 나누면 두 성분이 서로의 크기에 끼어들지 않아 셈이 간단해진다.",
+   "form": {
+    "condition": "분해할 두 방향을 고르는 단계에서",
+    "type": "causal",
+    "scope": "직교 좌표로 운동을 기술하는 경우"
+   },
+   "invertible": false,
+   "invertible_reason": "수직 분해를 고르는 까닭을 밝힌 명제라 뒤집은 문장이 서지 않는다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "힘을 분해하면 물체가 받는 힘이 두 개로 늘어난다",
+   "why_wrong": "분해는 계산을 쉽게 하려고 같은 힘 하나를 두 방향으로 나눠 적은 것이다. 물체가 실제로 받는 힘은 그대로다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fr-perp"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-vector"
+  },
+  {
+   "type": "next",
+   "target": "mech-motion-on-inclined-plane"
+  },
+  {
+   "type": "related",
+   "target": "mech-normal-force"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  14
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1
+}

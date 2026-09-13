@@ -1,0 +1,133 @@
+{
+ "id": "mech-net-force",
+ "concept_key": "concept:net-force",
+ "registry_status": "new",
+ "homonym_flag": false,
+ "term": "알짜힘",
+ "aliases": [],
+ "notation": {
+  "hanja": "해당 없음",
+  "hanja_note": "'알짜' 가 고유어라 표제어 전체를 한자어로 적을 수 없다. 같은 뜻의 한자어 합력(合力)은 표제어가 아니다.",
+  "english": "net force",
+  "symbol_display": "F",
+  "symbol_plain": "F"
+ },
+ "definition": "한 물체에 걸린 힘을 남김없이 합쳐 남은 하나의 힘. 운동이 어떻게 달라지는지는 힘 하나하나가 아니라 이 힘이 정한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-nf-angle",
+   "text": "각을 좁혀 두 힘을 걸면 힘의 크기를 키우지 않아도 알짜힘이 커진다.",
+   "form": {
+    "condition": "두 힘의 크기가 각각 일정할 때",
+    "type": "inverse",
+    "scope": "나란하지 않은 두 힘이 한 물체에 함께 걸릴 때",
+    "antecedent": {
+     "quantity": "두 힘이 이루는 각",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "알짜힘의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "각이 좁아질수록 합력이 커지므로 반대로 말한 문장은 같은 조건에서 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "각을 좁혀 두 힘을 걸면 알짜힘은 오히려 작아진다."
+  },
+  {
+   "id": "rel-nf-constant",
+   "text": "걸린 힘들이 저마다 변하지 않아 알짜힘이 일정하면 물체는 등가속도 운동을 한다.",
+   "form": {
+    "condition": "물체의 질량이 변하지 않을 때",
+    "type": "causal",
+    "scope": "뉴턴 운동 법칙이 성립하는 관성 좌표계",
+    "antecedent": {
+     "quantity": "가속도",
+     "direction": "일정"
+    }
+   },
+   "invertible": false,
+   "invertible_reason": "'등가속도 운동이면 알짜힘이 일정하다' 로 뒤집어도 질량이 일정한 한 참이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-nf-parallel",
+   "text": "알짜힘이 운동 방향과 같은 쪽을 가리키는 동안에는 가는 쪽이 그대로이고 빠르기만 늘어난다.",
+   "form": {
+    "condition": "알짜힘이 0 이 아니고 그 방향이 운동 방향과 같은 쪽일 때",
+    "type": "conditional",
+    "scope": "질량이 일정한 물체의 직선 운동 — 알짜힘이 운동 방향과 반대쪽인 경우는 뺀다",
+    "antecedent": {
+     "quantity": "알짜힘의 방향",
+     "direction": "일정"
+    },
+    "consequent": {
+     "quantity": "운동 방향",
+     "direction": "일정"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "'나란하다' 를 같은 쪽으로 못박았으므로 속도는 크기만 늘고 방향이 바뀔 길이 없다. 방향이 바뀐다고 하면 반드시 거짓이다.",
+   "curriculum": [
+    "12역학01-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "알짜힘이 운동 방향과 같은 쪽을 가리키는 동안에도 물체가 가는 쪽은 바뀐다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "여러 힘이 걸리면 물체는 가장 큰 힘의 방향으로 움직인다",
+   "why_wrong": "운동의 변화를 정하는 것은 힘 하나하나가 아니라 모두 합친 알짜힘의 방향이다. 큰 힘이 다른 힘들에 상쇄될 수도 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-nf-parallel"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "mech-force-composition"
+  },
+  {
+   "type": "next",
+   "target": "mech-motion-on-inclined-plane"
+  },
+  {
+   "type": "next",
+   "target": "mech-horizontal-projectile-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-uniform-circular-motion"
+  },
+  {
+   "type": "next",
+   "target": "mech-inertial-and-accelerated-frame"
+  }
+ ],
+ "curriculum": [
+  "12역학01-01"
+ ],
+ "subject": "역학과 에너지",
+ "unit": "Ⅰ. 시공간과 운동",
+ "unit_id": "mech-1",
+ "topic_id": "mech-1-1-01",
+ "pages": [
+  14
+ ],
+ "difficulty": 2,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 수정 — rel-nf-parallel 의 '나란하다' 가 반대 방향까지 품어 invertible 이 서지 않았다(빗면을 거슬러 올라갔다 되내려오는 물체가 반례). 문면과 condition·scope 를 같은 쪽으로 좁히고 invertible 을 다시 뒤집어 읽어 true 로 유지했다."
+ ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "mech-simple-harmonic-motion",
+  "concept_key": "concept:simple-harmonic-motion",
+  "registry_status": "new",
+  "term": "단진동",
+  "notation": {
+    "hanja": "單振動",
+    "hanja_gloss": "單 홑 단 · 振 떨칠 진 · 動 움직일 동",
+    "english": "simple harmonic motion",
+    "symbol_display": "x(t) = A cos ωt",
+    "symbol_plain": "x(t) = A cos(omega t)"
+  },
+  "definition": "평형점을 가운데 두고 같은 왕복을 일정한 시간 간격마다 되풀이하는 운동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-shm-restoring",
+      "text": "용수철의 탄성력이 늘 평형점 쪽을 향하기 때문에 물체는 왕복 운동을 이어 간다.",
+      "form": {
+        "condition": "마찰이 없는 수평면에 놓였을 때",
+        "type": "causal",
+        "scope": "탄성 한계 안의 용수철 진자"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집은 문장은 '탄성력이 늘 평형점 쪽을 향하는데도 물체가 왕복하지 않는다' 인데, 평형점에 가만히 놓인 물체에서는 이것이 참이 되므로 반드시 거짓이라고 할 수 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-shm-energy",
+      "text": "마찰이 없다면 진동하는 동안 운동 에너지와 탄성 퍼텐셜 에너지의 합은 변하지 않는다.",
+      "form": {
+        "condition": "마찰과 공기 저항을 무시할 때",
+        "type": "conditional",
+        "scope": "수평 용수철 진자"
+      },
+      "invertible": false,
+      "invertible_reason": "보존 여부를 말하는 명제라 맞바꿀 방향이 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-shm-vertical",
+      "text": "용수철에 매달려 위아래로 오르내리는 물체의 운동도 단진동에 속한다.",
+      "form": {
+        "condition": "용수철이 탄성 한계 안에 있을 때",
+        "type": "classification",
+        "scope": "연직 용수철 진자",
+        "antecedent": {
+          "quantity": "연직 용수철 진자",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "단진동 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 명제라 방향이 없다.",
+      "curriculum": [
+        "12역학03-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "단진동하는 물체는 양 끝에서 가장 빠르게 움직인다.",
+      "why_wrong": "양 끝은 변위가 가장 큰 자리여서 속력이 0 이 되고, 가장 빠른 곳은 평형점이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-equilibrium-speed-max"
+    },
+    {
+      "text": "단진동은 물체가 원을 그리며 도는 운동이다.",
+      "why_wrong": "단진동은 한 직선 위에서 평형점을 중심으로 오가는 운동이다. 등속 원운동은 그 주기를 끌어내기 위한 견줌 대상일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "mech-elastic-force"
+    },
+    {
+      "type": "prereq",
+      "target": "mech-equilibrium-point-of-oscillation"
+    },
+    {
+      "type": "next",
+      "target": "mech-acceleration-displacement-relation"
+    },
+    {
+      "type": "next",
+      "target": "mech-elastic-wave",
+      "note": "입자의 진동이 매질로 퍼져 나간 것이 탄성파다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12역학03-01"
+  ],
+  "subject": "역학과 에너지",
+  "unit": "Ⅲ. 탄성파와 소리",
+  "unit_id": "mech-3",
+  "topic_id": "mech-3-1-01",
+  "pages": [
+    96,
+    97
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C7 후보 삽화: 96쪽 그림 1.",
+    "C6 수정: rel-shm-restoring 의 invertible 사유를 역 명제가 아니라 뒤집은 문장을 겨냥하도록 다시 썼다. 값은 false 그대로다.",
+    "C6 수정: 오개념 '양 끝에서 가장 빠르다' 의 linked_relation 을 에너지 보존 명제에서 mech-equilibrium-point-of-oscillation 의 rel-equilibrium-speed-max 로 옮겼다 — 이 카드 안에는 대응 명제가 없다(선수 링크로 이어져 있다)."
+  ]
+}
