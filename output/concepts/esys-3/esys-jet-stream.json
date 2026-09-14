@@ -1,0 +1,119 @@
+{
+ "id": "esys-jet-stream",
+ "concept_key": "concept:jet-stream",
+ "registry_status": "new",
+ "term": "제트류",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "jet stream",
+  "hanja_note": "'제트'가 영어 jet 의 음차라 한자가 없다. 뒷머리는 流다."
+ },
+ "definition": "남북 기온 경도 때문에 고도에 따라 강해진 편서풍이 중위도 대류권 계면 부근에서 최대 풍속을 이루는 강풍대.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-js-thermal-wind",
+   "text": "남북 기온 차가 있으면 편서풍은 고도가 높아질수록 강해져 대류권 계면 부근에서 가장 빨라진다.",
+   "form": {
+    "condition": "중위도에 남북 기온 경도가 있을 때",
+    "type": "direct",
+    "scope": "중위도 대류권",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "편서풍의 풍속",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「고도가 높아질수록 약해져 지표 부근에서 가장 빠르다」는 제트류가 대류권 계면 부근에 있다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "남북 기온 차가 있으면 편서풍은 고도가 높아질수록 약해져 지표 부근에서 가장 빠르다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-js-season",
+   "text": "제트류는 겨울철에 가장 강하게 발달하며 여름철보다 더 저위도에 나타난다.",
+   "form": {
+    "condition": "계절에 따라 남북 기온 차가 달라질 때",
+    "type": "conditional",
+    "scope": "북반구 중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「여름철에 가장 강하고 겨울철보다 저위도에 나타난다」는 계절 변화를 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "제트류는 여름철에 가장 강하게 발달하며 겨울철보다 더 저위도에 나타난다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-js-flight",
+   "text": "제트류를 타고 가면 비행 시간이 줄고 거슬러 가면 비행 시간이 늘어난다.",
+   "form": {
+    "condition": "항공기가 제트류 고도를 지날 때",
+    "type": "causal",
+    "scope": "중위도 항로"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「타고 가면 시간이 늘고 거슬러 가면 줄어든다」는 바람이 항속에 더해지고 빠진다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "제트류를 타고 가면 비행 시간이 늘고 거슬러 가면 비행 시간이 줄어든다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "제트류는 지표 부근에서 부는 가장 강한 바람이다.",
+   "why_wrong": "제트류는 중위도 대류권 계면 부근, 곧 상층에 나타나는 강풍대다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-js-thermal-wind"
+  },
+  {
+   "text": "제트류는 여름철에 가장 강하다.",
+   "why_wrong": "남북 기온 차가 큰 겨울철에 가장 강하게 발달하며, 그때 더 저위도에 나타난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-js-season"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-meridional-temperature-gradient"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-rossby-wave"
+  },
+  {
+   "type": "next",
+   "target": "esys-subtropical-and-polar-jet"
+  },
+  {
+   "type": "related",
+   "target": "esys-nocturnal-jet"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-1",
+ "pages": [
+  119
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

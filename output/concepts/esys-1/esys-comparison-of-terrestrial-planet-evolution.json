@@ -1,0 +1,112 @@
+{
+  "id": "esys-comparison-of-terrestrial-planet-evolution",
+  "concept_key": "concept:comparison-of-terrestrial-planet-evolution",
+  "registry_status": "new",
+  "term": "고체 행성의 진화 비교",
+  "notation": {
+    "hanja": "固體 行星 進化 比較",
+    "english": "comparison of terrestrial planet evolution",
+    "hanja_gloss": "固 굳을 고 · 體 몸 체 · 行 다닐 행 · 星 별 성 · 進 나아갈 진 · 化 될 화 · 比 견줄 비 · 較 견줄 교"
+  },
+  "definition": "크기·질량·표면 중력·태양과의 거리 같은 물리적 성질이 고체 행성의 대기 유지와 지질 활동을 어떻게 갈랐는지 견주어 보는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cmp-size",
+      "text": "고체 행성은 크기와 질량이 클수록 내부 열에너지를 오래 지녀 판의 운동과 화산 활동이 오래 이어진다.",
+      "form": {
+        "condition": "고체 행성끼리 견줄 때",
+        "type": "direct",
+        "scope": "지각을 가진 고체 행성에 한함",
+        "antecedent": {
+          "quantity": "행성의 크기와 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "내부 열에너지를 지니는 시간",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「크고 무거울수록 열을 빨리 잃어 화산 활동이 일찍 멈춘다」는 지구가 역동적 행성이 된 까닭과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고체 행성은 크기와 질량이 클수록 내부 열에너지를 빨리 잃어 판의 운동과 화산 활동이 일찍 멈춘다."
+    },
+    {
+      "id": "rel-cmp-gravity",
+      "text": "표면 중력이 지구의 절반에 못 미치는 수성과 화성은 기체를 붙잡아 두지 못해 대기압이 지구보다 훨씬 낮다.",
+      "form": {
+        "condition": "표의 지구형 행성 넷을 표면 중력과 대기압으로 견줄 때",
+        "type": "conditional",
+        "scope": "수성과 화성에 한함 — 금성은 중력이 지구보다 작아도 대기압이 90배다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수성과 화성도 기체를 잘 붙잡아 대기압이 지구보다 높다」는 표의 값(10⁻¹⁴, 0.01)과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 중력이 지구의 절반에 못 미치는 수성과 화성도 기체를 잘 붙잡아 대기압이 지구보다 높다."
+    },
+    {
+      "id": "rel-cmp-distance",
+      "text": "지구는 태양과의 거리가 적당해 표면 온도가 물이 액체로 있을 수 있는 범위에 놓였다.",
+      "form": {
+        "condition": "지구형 행성 넷의 평균 표면 온도를 견줄 때",
+        "type": "conditional",
+        "scope": "표에 실린 수성·금성·지구·화성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「거리가 적당한 지구에서도 물이 액체로 있을 수 없다」는 지구에만 액체 상태의 물이 풍부하다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구는 태양과의 거리가 적당한데도 표면 온도가 물이 액체로 있을 수 있는 범위를 벗어나 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "행성이 작을수록 내부가 오래 뜨거워 화산 활동이 활발하다",
+      "why_wrong": "작은 행성은 내부 열을 빨리 잃는다. 크고 무거운 행성일수록 열에너지를 오래 지녀 지질 활동이 오래간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmp-size"
+    },
+    {
+      "text": "표면 중력이 큰 행성일수록 반드시 대기압이 크다",
+      "why_wrong": "금성은 표면 중력이 지구보다 작지만 대기압은 90배나 된다. 대기압은 중력만으로 정해지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmp-gravity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-terrestrial-and-jovian-planet"
+    },
+    {
+      "type": "related",
+      "target": "esys-coevolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    16,
+    17
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

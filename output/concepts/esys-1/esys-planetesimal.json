@@ -1,0 +1,107 @@
+{
+  "id": "esys-planetesimal",
+  "concept_key": "concept:planetesimal",
+  "registry_status": "new",
+  "term": "미행성체",
+  "notation": {
+    "hanja": "微行星體",
+    "english": "planetesimal",
+    "hanja_gloss": "微 작을 미 · 行 다닐 행 · 星 별 성 · 體 몸 체"
+  },
+  "definition": "원시 태양계 원반에서 물질이 뭉쳐 이루어진 작은 천체. 서로 충돌하고 합쳐지며 원시 지구를 키운 재료다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pl-growth",
+      "text": "미행성체가 충돌해 합쳐지는 일이 거듭될수록 원시 지구의 크기는 커졌다.",
+      "form": {
+        "condition": "원시 지구가 생긴 뒤에도 충돌이 이어질 때",
+        "type": "direct",
+        "scope": "약 46억 년 전 지구 형성 초기",
+        "antecedent": {
+          "quantity": "미행성체의 충돌 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원시 지구의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「충돌이 거듭될수록 원시 지구가 작아졌다」는 충돌로 크기가 성장했다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미행성체가 충돌해 합쳐지는 일이 거듭될수록 원시 지구의 크기는 작아졌다."
+    },
+    {
+      "id": "rel-pl-heat",
+      "text": "미행성체의 충돌이 잦을수록 충돌 에너지가 열로 쌓여 원시 지구의 온도는 높아졌다.",
+      "form": {
+        "condition": "방사성 붕괴열과 중력 수축열이 함께 쌓이던 시기",
+        "type": "direct",
+        "scope": "마그마 바다가 만들어지기까지의 원시 지구",
+        "antecedent": {
+          "quantity": "미행성체의 충돌 빈도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원시 지구의 온도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「충돌이 잦을수록 원시 지구의 온도가 낮아졌다」는 충돌열이 지표와 내부를 녹였다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미행성체의 충돌이 잦을수록 원시 지구의 온도는 낮아졌다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원시 지구는 처음부터 지금 크기였고 미행성체의 충돌과는 관계가 없다",
+      "why_wrong": "원시 지구는 수많은 미행성체가 충돌해 합쳐지면서 크기가 자랐고, 충돌이 이어지는 동안 계속 커졌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pl-growth"
+    },
+    {
+      "text": "미행성체가 충돌할수록 지구는 식어 갔다",
+      "why_wrong": "충돌로 생긴 에너지는 열이 되어 쌓였으므로 충돌이 잦을수록 지구는 더 뜨거워졌다. 지구가 식은 것은 충돌이 뜸해진 뒤의 일이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pl-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-solar-system-formation"
+    },
+    {
+      "type": "next",
+      "target": "esys-magma-ocean"
+    },
+    {
+      "type": "next",
+      "target": "esys-primitive-atmosphere"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-2",
+  "pages": [
+    14
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

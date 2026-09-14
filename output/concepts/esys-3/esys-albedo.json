@@ -1,0 +1,102 @@
+{
+ "id": "esys-albedo",
+ "concept_key": "concept:albedo",
+ "registry_status": "new",
+ "term": "반사도",
+ "notation": {
+  "hanja": "反射度",
+  "english": "albedo",
+  "hanja_gloss": "反 돌이킬 반 · 射 쏠 사 · 度 법도 도"
+ },
+ "definition": "지구에 들어온 태양 복사 가운데 반사·산란되어 우주로 되돌아가는 몫의 비율.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-albedo-value",
+   "text": "현재 지구의 평균 반사도는 0.294이며, 이는 들어온 100단위 가운데 29.4단위가 되돌아간다는 뜻이다.",
+   "form": {
+    "condition": "전 지구 연평균을 기준으로 할 때",
+    "type": "conditional",
+    "scope": "지구 전체"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「0.294 는 29.4단위만 흡수된다는 뜻이다」는 반사도의 정의를 거꾸로 읽은 것이라 참이 될 경우가 없다.",
+   "inverted_text": "지구의 평균 반사도 0.294 는 들어온 100단위 가운데 29.4단위만 흡수된다는 뜻이다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-albedo-vs-absorbed",
+   "text": "들어오는 태양 복사량이 같다면 반사도가 커질수록 지구가 흡수하는 태양 복사 에너지는 줄어든다.",
+   "form": {
+    "condition": "들어오는 태양 복사량이 일정할 때",
+    "type": "inverse",
+    "scope": "전 지구 평균",
+    "antecedent": {
+     "quantity": "반사도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "흡수되는 태양 복사량",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「반사도가 커질수록 흡수량도 늘어난다」는 반사된 몫과 흡수된 몫의 합이 일정하다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "들어오는 태양 복사량이 일정할 때 반사도가 커질수록 지구가 흡수하는 태양 복사 에너지도 늘어난다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "반사도는 지표가 흡수하는 에너지의 비율을 뜻한다.",
+   "why_wrong": "반사도는 되돌아가는 몫의 비율이다. 지구 평균 0.294 는 29.4 %가 우주로 되돌아간다는 뜻이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-albedo-value"
+  },
+  {
+   "text": "반사도가 달라져도 지구가 흡수하는 에너지는 그대로다.",
+   "why_wrong": "들어오는 양이 같다면 반사도가 커진 만큼 흡수되는 몫이 줄어든다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-albedo-vs-absorbed"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-solar-radiation-in-atmosphere"
+  },
+  {
+   "type": "next",
+   "target": "esys-global-mean-heat-budget"
+  },
+  {
+   "type": "related",
+   "target": "esys-radiative-equilibrium-temperature"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-02"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-3",
+ "pages": [
+  90
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1,
+ "aliases": [
+  "알베도"
+ ]
+}

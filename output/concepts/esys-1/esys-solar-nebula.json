@@ -1,0 +1,88 @@
+{
+  "id": "esys-solar-nebula",
+  "concept_key": "concept:solar-nebula",
+  "registry_status": "new",
+  "term": "원시 태양계 성운",
+  "notation": {
+    "hanja": "原始 太陽系 星雲",
+    "english": "solar nebula",
+    "hanja_gloss": "原 근원 원 · 始 처음 시 · 太 클 태 · 陽 볕 양 · 系 이을 계 · 星 별 성 · 雲 구름 운"
+  },
+  "definition": "태양계를 이루게 된 성간 기체와 티끌의 모임. 앞선 별들이 남긴 여러 원소를 품은 채 지금의 태양계보다 넓은 영역에 퍼져 있었다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-neb-origin",
+      "text": "성운에 든 원소 가운데 수소와 헬륨보다 무거운 것은 앞선 별의 핵융합과 초신성 폭발에서 만들어져 우주로 퍼진 것이다.",
+      "form": {
+        "condition": "별이 태어나고 사라지기를 되풀이한 뒤의 성간 물질을 볼 때",
+        "type": "causal",
+        "scope": "수소·헬륨보다 무거운 원소에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「무거운 원소도 빅뱅에서 한꺼번에 만들어졌다」는 빅뱅에서는 수소와 헬륨이 만들어졌다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성운에 든 원소는 수소와 헬륨보다 무거운 것까지 모두 빅뱅에서 한꺼번에 만들어졌다."
+    },
+    {
+      "id": "rel-neb-shock",
+      "text": "이웃한 초신성 폭발의 충격파가 전해지면 안정하던 성운에 밀도 차가 생겨 수축이 시작된다.",
+      "form": {
+        "condition": "성운 바깥에서 충격이 전해질 때",
+        "type": "causal",
+        "scope": "약 50억 년 전 원시 태양계 성운이 수축을 시작한 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「충격파가 전해져도 성운의 밀도는 고르게 유지되어 수축이 시작되지 않는다」는 충격파가 수축의 계기였다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이웃한 초신성 폭발의 충격파가 전해져도 성운의 밀도는 고르게 유지되어 수축이 시작되지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성운은 바깥에서 아무런 계기가 없어도 저절로 수축하기 시작했다",
+      "why_wrong": "안정하게 퍼져 있던 성운이 수축하려면 밀도 차가 먼저 생겨야 했고, 그 계기가 이웃한 초신성 폭발의 충격파였다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neb-shock"
+    },
+    {
+      "text": "성운을 이루는 원소는 모두 빅뱅에서 한꺼번에 만들어졌다",
+      "why_wrong": "빅뱅에서 만들어진 것은 수소와 헬륨이고, 그보다 무거운 원소는 별 내부의 핵융합과 초신성 폭발을 거쳐 우주로 퍼졌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neb-origin"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-solar-system-formation"
+    },
+    {
+      "type": "related",
+      "target": "esys-terrestrial-and-jovian-planet"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-1",
+  "pages": [
+    12,
+    13
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

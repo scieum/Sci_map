@@ -1,0 +1,113 @@
+{
+ "id": "esys-fog",
+ "concept_key": "concept:fog",
+ "registry_status": "new",
+ "term": "안개",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "fog",
+  "hanja_note": "'안개'는 고유어다. 한자어 霧 는 '해무'처럼 합성어에서만 쓰인다."
+ },
+ "definition": "지표 부근 공기가 식거나 수증기를 공급받아 포화에 이르러 수증기가 응결하면서 작은 물방울이 떠 있게 되는 현상.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-fog-two-routes",
+   "text": "안개는 공기가 식어 포화에 이르거나 수증기를 더 받아 포화에 이를 때 생긴다.",
+   "form": {
+    "condition": "지표 부근 공기가 포화될 때",
+    "type": "classification",
+    "scope": "지표 부근"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「공기가 데워지거나 수증기를 잃어 불포화가 될 때 생긴다」는 응결이 포화에서 시작된다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "안개는 지표 부근 공기가 데워지거나 수증기를 잃어 불포화가 될 때 생긴다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fog-vs-cloud",
+   "text": "안개는 응결이 지표 부근에서 일어난다는 점에서, 올라간 공기가 높은 곳에서 응결해 생기는 구름과 갈린다.",
+   "form": {
+    "condition": "응결이 일어나는 높이를 기준으로 볼 때",
+    "type": "classification",
+    "scope": "응결로 생긴 물방울 무리"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「안개는 높은 하늘에서, 구름은 지표 부근에서 응결해 생긴다」는 두 자리를 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "안개는 높은 하늘에서 응결이 일어나 생기고 구름은 지표 부근에서 응결해 생긴다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fog-hazard",
+   "text": "짙은 안개는 시야를 가려 항공기 결항이나 교통사고의 원인이 될 수 있다.",
+   "form": {
+    "condition": "짙은 안개가 생겼을 때",
+    "type": "causal",
+    "scope": "교통과 항공"
+   },
+   "invertible": false,
+   "invertible_reason": "뒤집은 문장 「짙은 안개가 생겨도 항공기 결항이나 교통사고의 원인이 되지는 않는다」는 짙은 안개가 끼고도 결항도 사고도 없이 지나간 밤에 대해 문면 그대로 참이 된다. 원 명제가 가능성을 말하므로 낱 사례를 부정하는 문장은 반드시 거짓이 되지 않는다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "안개는 지표에서 수증기가 그대로 피어오른 것이다.",
+   "why_wrong": "눈에 보이는 것은 수증기가 아니라 응결한 작은 물방울이다. 수증기 자체는 눈에 보이지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fog-two-routes"
+  },
+  {
+   "text": "안개와 구름은 전혀 다른 과정으로 만들어진다.",
+   "why_wrong": "둘 다 수증기가 응결해 생긴 물방울 무리이며, 응결이 일어나는 높이가 다를 뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fog-vs-cloud"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-lifting-condensation-level"
+  },
+  {
+   "type": "next",
+   "target": "esys-radiation-fog"
+  },
+  {
+   "type": "next",
+   "target": "esys-advection-fog"
+  },
+  {
+   "type": "related",
+   "target": "esys-temperature-inversion"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-4",
+ "pages": [
+  101
+ ],
+ "difficulty": 2,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — rel-fog-hazard 를 invertible false 로 내렸다. 「~될 수 있다」는 가능성 명제라 뒤집은 문장이 낱 사례에서는 참이 된다. mech-latent-heat rel-lh-vapor 를 false 로 둔 잣대와 같게 맞췄다."
+ ]
+}

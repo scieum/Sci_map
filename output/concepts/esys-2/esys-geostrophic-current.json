@@ -1,0 +1,111 @@
+{
+  "id": "esys-geostrophic-current",
+  "concept_key": "concept:geostrophic-current",
+  "registry_status": "new",
+  "term": "지형류",
+  "notation": {
+    "hanja": "地衡流",
+    "hanja_gloss": "地 땅 지 · 衡 저울대 형 · 流 흐를 류",
+    "english": "geostrophic current"
+  },
+  "definition": "수평 수압 경도력과 전향력이 맞선 채 속도가 변하지 않고 이어지는 해류.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gc-north",
+      "text": "북반구의 지형류는 수평 수압 경도력이 향하는 쪽의 오른쪽 90°로 흐른다.",
+      "form": {
+        "condition": "두 힘이 평형을 이룰 때",
+        "type": "classification",
+        "scope": "북반구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「왼쪽 90°로 흐른다」인데, 그 방향은 힘의 평형이 성립하지 않는 쪽이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "북반구의 지형류는 수평 수압 경도력이 향하는 쪽의 왼쪽 90°로 흐른다."
+    },
+    {
+      "id": "rel-gc-south",
+      "text": "남반구의 지형류는 북반구와 반대로 수평 수압 경도력의 왼쪽 90°로 흐른다.",
+      "form": {
+        "condition": "두 힘이 평형을 이룰 때",
+        "type": "classification",
+        "scope": "남반구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「남반구에서도 오른쪽 90°로 흐른다」인데, 남반구 전향력이 왼쪽으로 작용하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "남반구의 지형류도 수평 수압 경도력이 향하는 쪽의 오른쪽 90°로 흐른다."
+    },
+    {
+      "id": "rel-gc-persistence",
+      "text": "오랜 기간 바람이 쌓아 둔 에너지가 해수면 높이차로 남아 있어 바람이 그쳐도 지형류는 한동안 이어진다.",
+      "form": {
+        "condition": "해수면 높이차가 남아 있는 동안",
+        "type": "causal",
+        "scope": "대양 규모의 표층 해류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「바람이 그치면 지형류도 곧바로 멎는다」인데, 높이차가 남아 힘을 계속 대 주므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바람이 그치면 지형류도 곧바로 멎는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지형류는 해수면이 높은 곳에서 낮은 곳으로 곧장 흘러내린다.",
+      "why_wrong": "전향력 때문에 방향이 꺾여, 북반구에서는 수평 수압 경도력의 오른쪽 90°로 흐른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc-north"
+    },
+    {
+      "text": "바람이 그치면 해류를 만드는 힘도 함께 사라진다.",
+      "why_wrong": "바람이 쌓아 둔 해수면 높이차가 남아 있는 한 수평 수압 경도력이 계속 작용해, 바람이 멎은 뒤에도 지형류는 한동안 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc-persistence"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-geostrophic-balance"
+    },
+    {
+      "type": "next",
+      "target": "esys-geostrophic-current-speed"
+    },
+    {
+      "type": "next",
+      "target": "esys-surface-ocean-circulation",
+      "note": "표층 순환을 지형류로 다시 읽는 자리"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-3",
+  "pages": [
+    60
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 이 esys-horizontal-pressure-gradient-force 에 잘못 걸려 있다고 짚은 오개념('바람이 그치면 해류를 만드는 힘도 사라진다')을, 실제로 마주 선 명제 rel-gc-persistence 가 있는 이 카드로 옮겼다."
+  ]
+}

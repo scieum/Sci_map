@@ -1,0 +1,121 @@
+{
+  "id": "esys-volcanic-rock",
+  "concept_key": "concept:volcanic-rock",
+  "registry_status": "new",
+  "term": "화산암",
+  "notation": {
+    "hanja": "火山岩",
+    "english": "volcanic rock",
+    "hanja_gloss": "火 불 화 · 山 메 산 · 岩 바위 암"
+  },
+  "definition": "지표 가까이에서 마그마가 빠르게 식어 굳은 화성암. 결정이 작은 세립질이나 결정이 자라지 못한 유리질 조직을 가진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-vr-texture",
+      "text": "화산암은 지표 근처에서 빠르게 식어 세립질이나 유리질 조직을 가진다.",
+      "form": {
+        "condition": "마그마가 지표 근처에서 굳을 때",
+        "type": "causal",
+        "scope": "화산암의 조직"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「빠르게 식어 결정이 큰 조립질 조직을 가진다」는 그림 19 의 대응과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산암은 지표 근처에서 빠르게 식어 결정이 큰 조립질 조직을 가진다."
+    },
+    {
+      "id": "rel-vr-compare",
+      "text": "같은 배율로 관찰하면 화산암의 결정은 심성암의 결정보다 작게 보인다.",
+      "form": {
+        "condition": "편광 현미경으로 같은 배율에서 견줄 때",
+        "type": "classification",
+        "scope": "화산암과 심성암의 조직 비교"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 암석의 결정 크기를 맞바꾼 것이라 냉각 속도의 차이와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 배율로 관찰하면 화산암의 결정은 심성암의 결정보다 크게 보인다."
+    },
+    {
+      "id": "rel-vr-depth",
+      "text": "현무암처럼 화산암으로 분류되는 암석은 지하 깊은 곳이 아니라 지표 부근에서 만들어진 것이다.",
+      "form": {
+        "condition": "암석의 조직으로 생성 깊이를 되짚을 때",
+        "type": "conditional",
+        "scope": "화산암의 생성 위치"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「현무암은 지하 깊은 곳에서 만들어졌다」는 중단원 정리 문항이 ×로 가른 지문이라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "현무암처럼 화산암으로 분류되는 암석은 지하 깊은 곳에서 만들어진 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "현무암은 지하 깊은 곳에서 만들어진 화성암이다",
+      "why_wrong": "현무암은 지표 근처에서 빠르게 식어 굳은 화산암이다. 지하 깊은 곳에서 천천히 굳은 것은 화강암 같은 심성암이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vr-depth"
+    },
+    {
+      "text": "화산암은 빠르게 식었기 때문에 결정이 크다",
+      "why_wrong": "빠르게 식으면 결정이 자랄 시간이 없어 작아진다. 그래서 화산암은 세립질이나 유리질 조직을 가진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vr-texture"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-igneous-rock"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-fine-grained-texture"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-polarizing-microscope",
+      "note": "박편의 조직을 보고 종류를 가린다"
+    },
+    {
+      "type": "related",
+      "target": "esys-plutonic-rock"
+    },
+    {
+      "type": "same",
+      "target": "earth-volcanic-rock",
+      "note": "concept_key 가 concept:volcanic-rock 으로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-2",
+  "pages": [
+    34,
+    36
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "분출암"
+  ]
+}

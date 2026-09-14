@@ -1,0 +1,111 @@
+{
+ "id": "esys-habitable-zone",
+ "concept_key": "concept:habitable-zone",
+ "registry_status": "new",
+ "term": "생명 가능 지대",
+ "notation": {
+  "hanja": "生命可能地帶",
+  "english": "habitable zone",
+  "hanja_gloss": "生 날 생 · 命 목숨 명 · 可 옳을 가 · 能 능할 능 · 地 땅 지 · 帶 띠 대"
+ },
+ "definition": "항성 둘레에서 행성이 표면에 생명체가 살 만한 환경을 갖출 수 있는 거리 범위.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-liquid-water-criterion",
+   "text": "생명 가능 지대를 가르는 기준은 물이 액체로 있을 수 있는가이며, 안쪽은 너무 뜨거워 증발하고 바깥쪽은 너무 차가워 언다.",
+   "form": {
+    "condition": "항성으로부터의 거리에 따라 행성 표면 온도가 달라질 때",
+    "type": "classification",
+    "scope": "항성 둘레의 행성"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「안쪽은 너무 차가워 물이 얼고 바깥쪽은 너무 뜨거워 증발하는 범위다」는 항성에 가까울수록 뜨겁다는 점과 정반대라 참이 될 경우가 없다.",
+   "inverted_text": "생명 가능 지대는 안쪽이 너무 차가워 물이 얼고 바깥쪽이 너무 뜨거워 물이 증발하는 범위의 사이다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-boundary-depends-on-atmosphere",
+   "text": "같은 항성을 돌더라도 행성 대기의 온실 효과가 다르면 생명 가능 지대 경계의 위치가 달라진다.",
+   "form": {
+    "condition": "행성마다 대기 조성이 다를 때",
+    "type": "causal",
+    "scope": "생명 가능 지대의 안쪽·바깥쪽 경계"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「온실 효과가 달라도 경계 위치는 그대로다」는 바깥쪽 경계가 온실 효과로 정해진다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "행성 대기의 온실 효과가 서로 달라도 생명 가능 지대 경계의 위치는 그대로다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-solar-system-range",
+   "text": "태양계의 생명 가능 지대는 금성과 화성 사이에 놓인 것으로 알려져 있다.",
+   "form": {
+    "condition": "태양을 중심 항성으로 볼 때",
+    "type": "classification",
+    "scope": "태양계"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「생명 가능 지대는 금성보다 안쪽과 화성보다 바깥쪽에 놓인다」는 교과서 서술과 정반대라 참이 될 경우가 없다.",
+   "inverted_text": "태양계의 생명 가능 지대는 금성보다 안쪽과 화성보다 바깥쪽에 놓여 있다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "생명 가능 지대는 항성으로부터의 거리만으로 정해진다.",
+   "why_wrong": "행성이 어떤 대기를 지녀 온실 효과가 얼마나 센지에 따라 경계가 안팎으로 움직인다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-boundary-depends-on-atmosphere"
+  },
+  {
+   "text": "생명 가능 지대 안에 있는 행성에는 반드시 생명체가 산다.",
+   "why_wrong": "액체 상태의 물이 있을 수 있는 범위라는 뜻일 뿐, 생명체가 있음을 보장하지는 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-liquid-water-criterion"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-greenhouse-effect"
+  },
+  {
+   "type": "next",
+   "target": "esys-runaway-greenhouse-effect"
+  },
+  {
+   "type": "related",
+   "target": "esys-radiative-equilibrium-temperature"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-2",
+ "pages": [
+  88,
+  89
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 판별 기준(액체 상태의 물)을 품어 rel-liquid-water-criterion 이 동어반복이었다. definition 을 「생명체가 살 만한 환경」으로 넓히고, 액체 물 기준과 안팎 경계의 까닭을 명제 쪽으로 옮겼다."
+ ]
+}

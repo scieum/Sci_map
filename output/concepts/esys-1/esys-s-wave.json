@@ -1,0 +1,113 @@
+{
+  "id": "esys-s-wave",
+  "concept_key": "concept:s-wave",
+  "registry_status": "new",
+  "term": "S파",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "S wave",
+    "hanja_note": "'S'는 Secondary 의 머리글자를 그대로 쓴 것이어서 한자 표기가 없다. '파(波)'만 한자다.",
+    "symbol_display": "S파",
+    "symbol_plain": "S wave"
+  },
+  "definition": "매질의 진동 방향이 파의 진행 방향에 수직인 횡파 형태의 실체파. 고체 상태의 매질에서만 전파된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-swave-transverse",
+      "text": "S파에서는 매질의 입자가 파가 나아가는 쪽과 직각을 이루며 진동한다. 이런 파를 횡파라 한다.",
+      "form": {
+        "condition": "매질 입자의 진동 방향으로 가를 때",
+        "type": "classification",
+        "scope": "실체파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 S파를 종파로 바꾼 것이라 횡파라는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "S파에서는 매질의 입자가 파가 나아가는 쪽과 같은 방향으로 진동한다. 이런 파를 종파라 한다."
+    },
+    {
+      "id": "rel-swave-solid",
+      "text": "S파는 고체 상태의 매질에서만 전파된다.",
+      "form": {
+        "condition": "매질의 상태가 달라질 때",
+        "type": "conditional",
+        "scope": "S파의 전파 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「액체와 기체에서도 전파된다」는 외핵에서 S파가 끊긴다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "S파는 액체와 기체 상태의 매질에서도 전파된다."
+    },
+    {
+      "id": "rel-swave-outercore",
+      "text": "외핵에 이르러 S파가 더 나아가지 못하는 것은 외핵이 액체 상태임을 알려 준다.",
+      "form": {
+        "condition": "S파가 고체에서만 전달된다는 성질을 전제할 때",
+        "type": "causal",
+        "scope": "외핵의 상태 추론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「외핵을 지나 S파가 계속 전달되는 것이 액체임을 알려 준다」는 S파가 액체를 지나지 못한다는 성질과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "외핵을 지나서도 S파가 계속 전달되는 것이 외핵이 액체 상태임을 알려 준다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "S파도 액체를 통과할 수 있다",
+      "why_wrong": "S파는 고체 상태의 매질에서만 전파된다. 그래서 액체인 외핵에 이르면 더 나아가지 못한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-swave-solid"
+    },
+    {
+      "text": "외핵은 고체이기 때문에 S파가 그대로 통과한다",
+      "why_wrong": "외핵에서 S파가 끊기는 것이 오히려 외핵이 액체라는 근거가 되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-swave-outercore"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-body-and-surface-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-ps-time"
+    },
+    {
+      "type": "next",
+      "target": "esys-earth-internal-structure"
+    },
+    {
+      "type": "related",
+      "target": "esys-p-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

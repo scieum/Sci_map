@@ -1,0 +1,101 @@
+{
+  "id": "esys-ekman-upwelling-and-downwelling",
+  "concept_key": "concept:upwelling-and-downwelling",
+  "registry_status": "new",
+  "term": "에크만 수송에 의한 용승과 침강",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 '에크만'의 음차어가 들어간 구라 전체를 한자어로 적지 않는다.",
+    "english": "Ekman upwelling and downwelling"
+  },
+  "definition": "표층 해수가 에크만 수송으로 밀려나 빈자리를 아래 해수가 채우는 용승과, 표층 해수가 모여들어 가라앉는 침강.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eud-coastal",
+      "text": "연안과 나란한 바람이 표층수를 바깥 바다로 밀어내면 그 빈자리를 메우려 아래의 해수가 올라온다.",
+      "form": {
+        "condition": "연안을 따라 바람이 이어 불 때",
+        "type": "causal",
+        "scope": "연안 해역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「표층수가 바깥으로 밀려난 자리에서 해수가 가라앉는다」인데, 표층이 비면 아래에서 채워 올라오므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "연안을 따라 부는 바람이 표층수를 바깥 바다로 밀어내면 그 자리에서는 해수가 가라앉는다."
+    },
+    {
+      "id": "rel-eud-cyclonic",
+      "text": "태풍처럼 저기압성으로 도는 바람 아래에서는 표층수가 바깥으로 흩어져 나가 용승이 나타난다.",
+      "form": {
+        "condition": "저기압성으로 도는 바람이 불 때",
+        "type": "causal",
+        "scope": "북반구 외해"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「저기압성 바람 아래에서 표층수가 모여들어 침강이 나타난다」인데, 저기압성 바람의 에크만 수송은 바깥을 향하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "저기압성으로 도는 바람이 부는 해역에서는 표층수가 모여들어 침강이 나타난다."
+    },
+    {
+      "id": "rel-eud-anticyclonic",
+      "text": "고기압성으로 도는 바람 아래에서는 표층수가 가운데로 모여들어 가라앉는다.",
+      "form": {
+        "condition": "고기압성으로 도는 바람이 불 때",
+        "type": "causal",
+        "scope": "북반구 외해"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「고기압성 바람 아래에서 표층수가 흩어져 용승이 일어난다」인데, 고기압성 바람의 에크만 수송은 안쪽을 향하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고기압성으로 도는 바람이 부는 해역에서는 표층수가 흩어져 용승이 일어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "용승은 바닷물이 데워져 가벼워진 탓에 떠오르는 현상이다.",
+      "why_wrong": "바람이 표층수를 옆으로 옮겨 생긴 빈자리를 아래의 찬 해수가 메우는 것이라, 오히려 표층 수온이 낮아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eud-coastal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ekman-transport"
+    },
+    {
+      "type": "same",
+      "target": "earth-upwelling-and-downwelling",
+      "note": "concept_key 가 같다 — 「지구과학」 Ⅰ단원의 같은 개념",
+      "grade_from": "지구과학"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-1",
+  "pages": [
+    57
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "같은 concept_key 를 쓰는 earth-upwelling-and-downwelling 이 실재하는 것을 확인하고 same 을 걸었다. 두 키 모두 concept_registry.yaml 에는 아직 없어 G3 등록 대상이다."
+  ]
+}

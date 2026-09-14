@@ -1,0 +1,84 @@
+{
+  "id": "esys-coastal-breaker",
+  "concept_key": "concept:coastal-breaker",
+  "registry_status": "new",
+  "term": "연안 쇄파",
+  "notation": {
+    "hanja": "沿岸碎波",
+    "hanja_gloss": "沿 물따라갈 연 · 岸 언덕 안 · 碎 부술 쇄 · 波 물결 파",
+    "english": "coastal breaker"
+  },
+  "definition": "연안에서 해파의 마루가 앞으로 무너져 쏟아지는 모양으로 부서진 파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cb-crest-trough",
+      "text": "파의 아래쪽인 골이 마루보다 느려지면서 마루가 앞으로 넘어져 파가 부서진다.",
+      "form": {
+        "condition": "수심이 얕아져 파의 아래쪽이 먼저 느려질 때",
+        "type": "causal",
+        "scope": "연안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「마루가 골보다 느려져 부서진다」인데, 그러면 마루가 뒤로 처져 앞으로 쏟아질 수 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파의 마루가 골보다 느려지면서 파가 앞으로 쏟아져 부서진다."
+    },
+    {
+      "id": "rel-cb-depth",
+      "text": "연안 쇄파는 해파가 수심이 얕아지는 연안에 이르렀을 때 나타난다.",
+      "form": {
+        "condition": "해파가 연안으로 다가올 때",
+        "type": "conditional",
+        "scope": "연안 해역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「연안 쇄파는 수심이 깊은 먼 바다에서 주로 나타난다」는, 해저면이 물 입자의 운동을 막아야 마루와 골의 빠르기가 갈리는데 먼 바다에서는 그 일이 일어나지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "연안 쇄파는 수심이 깊은 먼 바다에서 주로 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "쇄파는 바람이 갑자기 세져서 파도가 깨지는 것이다.",
+      "why_wrong": "수심이 얕아져 마루와 골의 빠르기가 달라지기 때문에 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cb-crest-trough"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-wave-shoaling"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-swell"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-1",
+  "pages": [
+    62,
+    65
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 지적을 받아 form.scope 에만 있던 '연안'을 표제어대로 text·inverted_text 문면으로 옮겼다."
+  ]
+}

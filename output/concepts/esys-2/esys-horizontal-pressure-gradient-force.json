@@ -1,0 +1,113 @@
+{
+  "id": "esys-horizontal-pressure-gradient-force",
+  "concept_key": "concept:horizontal-pressure-gradient-force",
+  "registry_status": "new",
+  "term": "수평 수압 경도력",
+  "notation": {
+    "hanja": "水平水壓傾度力",
+    "hanja_gloss": "水 물 수 · 平 평평할 평 · 水 물 수 · 壓 누를 압 · 傾 기울 경 · 度 법도 도 · 力 힘 력",
+    "english": "horizontal pressure gradient force",
+    "symbol_display": "Pₓ = -g·Δh/Δx",
+    "symbol_plain": "Px = -g (dh/dx)"
+  },
+  "definition": "해수면에 경사가 생겼을 때 수평 방향으로 나타나는 수압 차가 해수를 미는 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hpgf-slope",
+      "text": "밀도가 일정하다면 이 힘의 크기는 해수면의 경사도에 비례한다.",
+      "form": {
+        "condition": "해수의 밀도가 일정할 때",
+        "type": "direct",
+        "scope": "해수면에 경사가 있는 해역",
+        "antecedent": {
+          "quantity": "해수면의 경사도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수평 수압 경도력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「경사도가 클수록 힘이 작아진다」인데, 경사도에 비례하는 양이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "밀도가 일정할 때 해수면의 경사가 급할수록 수평 수압 경도력은 작아진다."
+    },
+    {
+      "id": "rel-hpgf-direction",
+      "text": "힘이 향하는 쪽은 해수면이 높은 곳에서 낮은 곳이다.",
+      "form": {
+        "condition": "두 지점의 해수면 높이가 다를 때",
+        "type": "causal",
+        "scope": "해양 표층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「해수면이 낮은 곳에서 높은 곳을 향한다」인데, 높은 쪽이 수압이 커서 미는 쪽이 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수평 수압 경도력은 해수면이 낮은 곳에서 높은 곳을 향한다."
+    },
+    {
+      "id": "rel-hpgf-origin",
+      "text": "멈춰 있던 해수를 처음 움직이게 하는 근본적인 힘은 전향력이 아니라 이 수평 방향의 압력 차다.",
+      "form": {
+        "condition": "정지해 있던 해수가 움직이기 시작할 때",
+        "type": "causal",
+        "scope": "지형류가 만들어지는 해역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「멈춰 있던 해수를 처음 움직이게 하는 힘이 전향력이다」인데, 전향력은 이미 움직이는 물체에만 작용하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "멈춰 있던 해수를 처음 움직이게 하는 근본적인 힘은 전향력이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정지해 있던 해수를 처음 움직이게 하는 것은 전향력이다.",
+      "why_wrong": "전향력은 이미 움직이고 있는 것에만 작용한다. 멈춰 있던 해수를 처음 미는 것은 해수면 경사가 만든 수평 방향의 압력 차다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hpgf-origin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-water-pressure-gradient-force"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-sea-surface-height-difference"
+    },
+    {
+      "type": "next",
+      "target": "esys-geostrophic-balance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-2",
+  "pages": [
+    58
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 지적대로 오개념을 바꿨다. 걷어 낸 '바람이 그치면 해류를 만드는 힘도 사라진다'가 실제로 마주 선 명제는 이 카드가 아니라 esys-geostrophic-current/rel-gc-persistence 여서, 그쪽 카드로 옮기고 여기에는 rel-hpgf-origin 과 정면으로 맞서는 오개념을 두었다."
+  ]
+}

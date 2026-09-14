@@ -1,0 +1,96 @@
+{
+  "id": "esys-coarse-grained-texture",
+  "concept_key": "concept:coarse-grained-texture",
+  "registry_status": "new",
+  "term": "조립질 조직",
+  "notation": {
+    "hanja": "粗粒質 組織",
+    "english": "coarse-grained texture",
+    "hanja_gloss": "粗 거칠 조 · 粒 알 립 · 質 바탕 질 · 組 짤 조 · 織 짤 직"
+  },
+  "definition": "마그마가 천천히 식는 동안 결정이 크게 자라 알갱이가 굵게 보이는 화성암의 조직.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cgt-slow",
+      "text": "결정이 크게 자라려면 마그마가 천천히 식어 결정이 자랄 시간이 넉넉해야 한다.",
+      "form": {
+        "condition": "같은 성분의 마그마가 굳을 때",
+        "type": "conditional",
+        "scope": "조립질 조직이 생기는 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「결정이 크게 자라려면 빠르게 식어야 한다」는 중단원 정리의 '천천히 식어'와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "결정이 크게 자라려면 마그마가 빠르게 식어야 한다."
+    },
+    {
+      "id": "rel-cgt-plutonic",
+      "text": "조립질 조직은 지하 깊은 곳에서 굳은 심성암에서 나타난다.",
+      "form": {
+        "condition": "조직과 생성 위치를 이어 볼 때",
+        "type": "classification",
+        "scope": "조직과 화성암 종류의 대응"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「조립질 조직이 지표 근처에서 굳은 화산암에서 나타난다」는 그림 19 의 대응과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조립질 조직은 지표 근처에서 굳은 화산암에서 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조립질 조직은 마그마가 빠르게 식을 때 만들어진다",
+      "why_wrong": "빠르게 식으면 결정이 자랄 틈이 없다. 조립질 조직은 천천히 식어 결정이 크게 자란 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cgt-slow"
+    },
+    {
+      "text": "현무암처럼 지표에서 굳은 암석에서도 조립질 조직을 볼 수 있다",
+      "why_wrong": "지표 근처에서 굳은 암석은 빠르게 식어 세립질이나 유리질이 된다. 조립질은 깊은 곳에서 굳은 심성암의 조직이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cgt-plutonic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-igneous-rock"
+    },
+    {
+      "type": "next",
+      "target": "esys-plutonic-rock"
+    },
+    {
+      "type": "next",
+      "target": "esys-porphyritic-texture"
+    },
+    {
+      "type": "related",
+      "target": "esys-fine-grained-texture"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-2",
+  "pages": [
+    34,
+    37
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

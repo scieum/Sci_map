@@ -1,0 +1,114 @@
+{
+  "id": "esys-travel-time-curve",
+  "concept_key": "concept:travel-time-curve",
+  "registry_status": "new",
+  "term": "주시 곡선",
+  "notation": {
+    "hanja": "走時曲線",
+    "english": "travel time curve",
+    "hanja_gloss": "走 달릴 주 · 時 때 시 · 曲 굽을 곡 · 線 줄 선"
+  },
+  "definition": "진앙에서 관측소까지의 거리를 가로축에, 지진파가 도달하는 데 걸린 시간을 세로축에 나타낸 그래프.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ttc-gap",
+      "text": "주시 곡선에서 두 곡선 사이의 세로 간격이 그 진앙 거리에서의 PS시다.",
+      "form": {
+        "condition": "같은 진앙 거리에서 두 곡선을 읽을 때",
+        "type": "causal",
+        "scope": "주시 곡선 읽기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가로 간격이 PS시다」는 세로축이 도달 시간이라는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주시 곡선에서 두 곡선 사이의 가로 간격이 그 지점에서의 PS시다."
+    },
+    {
+      "id": "rel-ttc-which",
+      "text": "같은 진앙 거리에서 도달 시간이 짧은 아래쪽 곡선이 속도가 빠른 P파의 곡선이다.",
+      "form": {
+        "condition": "두 곡선을 같은 진앙 거리에서 견줄 때",
+        "type": "classification",
+        "scope": "주시 곡선의 두 곡선 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 위아래 곡선과 파의 짝을 맞바꾼 것이라 P파가 더 빠르다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 진앙 거리에서 도달 시간이 긴 위쪽 곡선이 속도가 빠른 P파의 곡선이다."
+    },
+    {
+      "id": "rel-ttc-distance",
+      "text": "진앙 거리가 멀어질수록 두 곡선의 간격이 벌어져 PS시가 커진다.",
+      "form": {
+        "condition": "주시 곡선을 오른쪽으로 따라갈 때",
+        "type": "direct",
+        "scope": "주시 곡선",
+        "antecedent": {
+          "quantity": "진앙 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "두 곡선의 간격",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「멀어질수록 간격이 좁아져 PS시가 작아진다」는 그래프의 모양과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진앙 거리가 멀어질수록 두 곡선의 간격이 좁아져 PS시가 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주시 곡선에서 위쪽에 있는 곡선이 P파의 곡선이다",
+      "why_wrong": "P파가 더 빨라 같은 거리에서 더 짧은 시간에 도착한다. 따라서 P파는 아래쪽 곡선이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ttc-which"
+    },
+    {
+      "text": "진앙 거리가 멀어져도 PS시는 늘 일정하다",
+      "why_wrong": "거리가 멀어질수록 두 곡선의 간격이 벌어지므로 PS시는 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ttc-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ps-time"
+    },
+    {
+      "type": "next",
+      "target": "esys-direct-and-refracted-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "★C8 판단 요청 — 같은 PS시를 두 카드가 서로 다른 거리 축에서 읽는다. esys-ps-time/rel-pst-origin 은 「PS시로 구하는 것은 관측소와 진원 사이의 거리다」로 진원 거리라 못 박고, esys-travel-time-curve/rel-ttc-distance 는 「진앙 거리가 멀어질수록 …PS시가 커진다」로 진앙 거리 축에서 읽는다. 교과서 관행상 둘 다 성립하지만 D1 이 두 지문을 나란히 내면 학생이 진원 거리와 진앙 거리를 가를 근거를 잃는다. 어느 쪽 문면이나 scope 에 「주시 곡선의 가로축은 진앙 거리다」를 드러낼지 사람이 정한다."
+  ]
+}

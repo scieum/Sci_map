@@ -1,0 +1,116 @@
+{
+ "id": "esys-atmospheric-window",
+ "concept_key": "concept:atmospheric-window",
+ "registry_status": "new",
+ "term": "대기의 창",
+ "notation": {
+  "hanja": "大氣窓",
+  "english": "atmospheric window",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 窓 창 창",
+  "symbol_display": "8~9 μm · 10~12 μm",
+  "symbol_plain": "8-9 um, 10-12 um"
+ },
+ "definition": "지구 복사 가운데 대기를 거의 그대로 지나 우주로 빠져나가는 8~9 μm·10~12 μm 적외선 영역.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-window-weak-absorption",
+   "text": "대기의 창이 생기는 까닭은 이산화 탄소와 수증기가 적외선을 파장에 따라 가려 흡수하면서 이 두 파장대만 거의 흡수하지 못하기 때문이다.",
+   "form": {
+    "condition": "대기 중에 이산화 탄소와 수증기가 있을 때",
+    "type": "causal",
+    "scope": "8~9 μm 및 10~12 μm 적외선"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「이산화 탄소와 수증기가 이 두 파장대의 적외선을 가장 잘 흡수하기 때문이다」는 흡수가 강하면 창이 열리지 않는다는 점에서 스스로 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기의 창이 생기는 까닭은 이산화 탄소와 수증기가 8~9 μm·10~12 μm 적외선을 가장 잘 흡수하기 때문이다.",
+   "curriculum": [
+    "12지시03-01",
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-window-satellite",
+   "text": "대기의 창 파장대를 쓰면 인공위성이 대기에 가리지 않고 지표면을 내려다볼 수 있다.",
+   "form": {
+    "condition": "위성이 적외선으로 관측할 때",
+    "type": "causal",
+    "scope": "대기의 창 파장대"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「대기의 창 파장대로는 인공위성이 지표면을 관측할 수 없다」는 이 파장대가 지표 관측에 쓰인다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "적외선으로 관측하는 인공위성은 대기의 창 파장대로 지표면을 관측할 수 없다.",
+   "curriculum": [
+    "12지시03-01",
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-window-share",
+   "text": "지표면 복사 117.1단위 가운데 대기의 창으로 곧장 우주로 나가는 것은 11.8단위뿐이고 나머지는 대기가 흡수한다.",
+   "form": {
+    "condition": "100단위 기준 전 지구 평균 열수지에서",
+    "type": "conditional",
+    "scope": "지표면이 내놓는 적외선"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지표면 복사의 대부분이 대기의 창으로 곧장 우주로 나간다」는 117.1 대 11.8 이라는 수치와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "100단위 기준 열수지에서 지표면 복사 117.1단위의 대부분이 대기의 창으로 곧장 우주로 빠져나간다.",
+   "curriculum": [
+    "12지시03-01",
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "대기의 창은 대기에 실제로 뚫려 있는 구멍이다.",
+   "why_wrong": "구멍이 아니라 대기 기체가 잘 흡수하지 못하는 파장대를 가리키는 말이다. 그 파장대의 복사만 통과가 쉽다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-window-weak-absorption"
+  },
+  {
+   "text": "대기의 창은 태양 복사가 지표로 들어오는 통로다.",
+   "why_wrong": "대기의 창은 적외선 영역이고, 이 통로로 빠져나가는 것은 지표가 내놓은 지구 복사다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-window-share"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-selective-absorption"
+  },
+  {
+   "type": "next",
+   "target": "esys-global-mean-heat-budget"
+  },
+  {
+   "type": "related",
+   "target": "esys-atmospheric-reradiation"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01",
+  "12지시03-02"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-1",
+ "pages": [
+  87
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 「이산화 탄소와 수증기에도 잘 붙잡히지 않아」까지 품어 rel-window-escape 가 동어반복이었다. definition 에서 그 까닭을 덜어 내고, 명제는 선택적 흡수라는 원인을 말하도록 rel-window-weak-absorption 으로 다시 세웠다. 「태양 복사 통로」 오개념은 지표면 복사를 다루는 rel-window-share 쪽으로 옮겨 걸었다."
+ ]
+}

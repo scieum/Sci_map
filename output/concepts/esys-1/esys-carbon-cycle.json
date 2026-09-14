@@ -1,0 +1,124 @@
+{
+  "id": "esys-carbon-cycle",
+  "concept_key": "concept:carbon-cycle",
+  "registry_status": "new",
+  "term": "탄소의 순환",
+  "notation": {
+    "hanja": "炭素 循環",
+    "english": "carbon cycle",
+    "hanja_gloss": "炭 숯 탄 · 素 본디 소 · 循 돌 순 · 環 고리 환"
+  },
+  "definition": "탄소가 이산화 탄소·탄산 이온·탄산염과 석회암으로 모습을 바꾸어 가며 기권과 수권, 지권을 오가는 흐름.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cc-weathering",
+      "text": "규산염의 풍화가 활발할수록 대기의 이산화 탄소는 더 많이 소모된다.",
+      "form": {
+        "condition": "열대의 습한 기후에서 풍화가 촉진될 때",
+        "type": "inverse",
+        "scope": "초대륙 분리 무렵의 지질학적 시간 규모",
+        "antecedent": {
+          "quantity": "규산염의 풍화",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "대기의 이산화 탄소",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「풍화가 활발할수록 이산화 탄소가 더 쌓인다」는 풍화가 이산화 탄소를 소모했다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "규산염의 풍화가 활발할수록 대기의 이산화 탄소는 더 많이 쌓인다."
+    },
+    {
+      "id": "rel-cc-limestone",
+      "text": "풍화로 생긴 탄산 이온은 강이나 해저에서 탄산염을 이루고 석회암으로 퇴적되어 탄소를 지권에 묶어 둔다.",
+      "form": {
+        "condition": "대기의 이산화 탄소가 물에 녹아 있을 때",
+        "type": "causal",
+        "scope": "수권에서 지권으로 가는 탄소의 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「탄산 이온이 탄산염을 이루지 못하고 탄소를 곧바로 기권에 되돌린다」는 석회암으로 퇴적된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "풍화로 생긴 탄산 이온은 탄산염을 이루지 못하고 탄소를 곧바로 기권으로 되돌린다."
+    },
+    {
+      "id": "rel-cc-volcano",
+      "text": "화산 활동은 이산화 탄소를 기권으로 되돌려 주는 탄소 순환의 공급 경로다.",
+      "form": {
+        "condition": "지구 내부 에너지로 화산 활동이 이어질 때",
+        "type": "causal",
+        "scope": "지권에서 기권으로 가는 탄소의 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「화산 활동이 기권의 이산화 탄소를 거두어들이는 소모 경로다」는 화산이 온실 기체를 내놓는다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산 활동은 기권의 이산화 탄소를 거두어들이는 탄소 순환의 소모 경로다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암석이 풍화되면 대기의 이산화 탄소가 늘어난다",
+      "why_wrong": "규산염이 풍화될 때 이산화 탄소가 소모되어 탄산 이온이 나온다. 풍화는 대기의 이산화 탄소를 줄이는 쪽으로 작용한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cc-weathering"
+    },
+    {
+      "text": "탄소는 기권과 수권 사이에서만 오갈 뿐 암석에는 저장되지 않는다",
+      "why_wrong": "바다에 녹은 탄소는 탄산염을 이루고 석회암으로 퇴적되어 오랫동안 지권에 저장된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cc-limestone"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-primitive-atmosphere"
+    },
+    {
+      "type": "next",
+      "target": "esys-snowball-earth"
+    },
+    {
+      "type": "next",
+      "target": "esys-coevolution"
+    },
+    {
+      "type": "same",
+      "target": "isci1-carbon-cycle",
+      "note": "concept_key 가 concept:carbon-cycle 로 같다 (R9). 표제어는 '탄소 순환'과 '탄소의 순환'으로 다르지만 링크 근거는 키 일치다."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    18,
+    19
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "탄소 순환"
+  ]
+}

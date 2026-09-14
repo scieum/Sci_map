@@ -1,0 +1,97 @@
+{
+ "id": "esys-advection-fog",
+ "concept_key": "concept:advection-fog",
+ "registry_status": "new",
+ "term": "이류 안개",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "advection fog",
+  "hanja_note": "'안개'가 고유어라 표제어 전체를 한자로 적을 수 없다. 앞머리는 移流다."
+ },
+ "definition": "따뜻하고 습한 공기가 차가운 지표나 해수면 위로 옮겨 가 아래쪽부터 식으면서 생기는 안개.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-af-warm-over-cold",
+   "text": "온난 습윤한 공기가 차가운 지표 위로 옮겨 가면 아래쪽부터 식어 포화에 이르러 이류 안개가 생긴다.",
+   "form": {
+    "condition": "공기가 수평으로 이동할 때",
+    "type": "causal",
+    "scope": "찬 지표와 찬 해수면 위"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「차가운 지표 위로 옮겨 가도 아래쪽이 식지 않아 안개가 생기지 않는다」는 냉각에 의한 안개라는 분류와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "온난 습윤한 공기가 차가운 지표 위로 옮겨 가도 아래쪽이 식지 않아 안개가 생기지 않는다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-af-sea-fog",
+   "text": "찬 해수 위에서 생긴 이류 안개를 해무라고 부른다.",
+   "form": {
+    "condition": "이류 안개가 바다 위에서 일어날 때",
+    "type": "classification",
+    "scope": "해상"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「해무는 찬 공기가 따뜻한 해수 위로 옮겨 가 생긴 안개다」는 그것이 증발 안개라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "해무는 찬 공기가 따뜻한 해수 위로 옮겨 가 생긴 안개다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "이류 안개는 지표가 밤사이 식어서 생긴다.",
+   "why_wrong": "그것은 복사 안개다. 이류 안개는 따뜻하고 습한 공기가 찬 지표로 옮겨 가 아래부터 식어 생긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-af-warm-over-cold"
+  },
+  {
+   "text": "해무는 바닷물이 증발해 곧바로 안개가 된 것이다.",
+   "why_wrong": "해무는 온난 습윤한 공기가 찬 해수 위로 이동해 식으며 응결한 이류 안개다. 증발로 생기는 것은 증발 안개다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-af-sea-fog"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-fog"
+  },
+  {
+   "type": "related",
+   "target": "esys-radiation-fog"
+  },
+  {
+   "type": "related",
+   "target": "esys-temperature-inversion"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-4",
+ "pages": [
+  101
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "aliases": [
+  "해무"
+ ],
+ "notes": [
+  "C6 uncertain — rel-af-sea-fog 의 뒤집은 문장은 교과서 101쪽 표 1(해무 = 이류 안개)에 따르면 거짓이지만, 해무를 바다 위 안개 일반으로 쓰는 용법에서는 증발 안개도 해무로 불려 참이 될 여지가 있다. 낱말 범위가 걸린 문제라 고치지 않고 C8 검토 항목으로 올린다."
+ ]
+}

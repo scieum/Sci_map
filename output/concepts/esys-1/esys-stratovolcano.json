@@ -1,0 +1,104 @@
+{
+  "id": "esys-stratovolcano",
+  "concept_key": "concept:stratovolcano",
+  "registry_status": "new",
+  "term": "성층 화산",
+  "notation": {
+    "hanja": "成層 火山",
+    "english": "stratovolcano",
+    "hanja_gloss": "成 이룰 성 · 層 층 층 · 火 불 화 · 山 메 산"
+  },
+  "definition": "점성이 큰 마그마가 폭발적으로 분출해 용암과 화산 쇄설물이 분화구 둘레에 번갈아 쌓여 이루어진 가파른 화산체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-st-layer",
+      "text": "성층 화산은 용암과 화산 쇄설물이 번갈아 쌓여 층을 이룬 화산체다.",
+      "form": {
+        "condition": "폭발적인 분출이 되풀이될 때",
+        "type": "classification",
+        "scope": "성층 화산의 내부 구조"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「용암만 겹겹이 흘러 쌓여 이루어졌다」는 이름의 유래인 교대 누적과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성층 화산은 용암만 겹겹이 흘러 쌓여 이루어진 화산체다."
+    },
+    {
+      "id": "rel-st-slope",
+      "text": "점성이 큰 용암은 멀리 흐르지 못해 성층 화산은 순상 화산보다 경사가 가파르다.",
+      "form": {
+        "condition": "용암이 흘러간 거리를 견줄 때",
+        "type": "causal",
+        "scope": "화산체의 경사"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「점성이 큰 용암이 멀리 흘러 경사가 완만하다」는 점성이 클수록 잘 흐르지 못한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "점성이 큰 용암은 멀리까지 흘러 성층 화산은 순상 화산보다 경사가 완만하다."
+    },
+    {
+      "id": "rel-st-example",
+      "text": "필리핀의 마욘산과 일본의 후지산은 성층 화산에 해당한다.",
+      "form": {
+        "condition": "실제 화산을 화산체의 모양으로 분류할 때",
+        "type": "classification",
+        "scope": "교과서가 든 사례"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이들이 순상 화산이다」는 교과서가 든 분류와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "필리핀의 마욘산과 일본의 후지산은 순상 화산에 해당한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성층 화산은 용암만 여러 번 흘러나와 층을 이룬 화산이다",
+      "why_wrong": "용암과 화산 쇄설물이 번갈아 또는 함께 쌓여 층을 이룬 것이 성층 화산이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-st-layer"
+    },
+    {
+      "text": "성층 화산이 완만한 까닭은 용암이 멀리까지 흐르기 때문이다",
+      "why_wrong": "성층 화산은 완만하지 않고 가파르다. 점성이 큰 용암이 멀리 흐르지 못해 분화구 둘레에 쌓이기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-st-slope"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-magma-type"
+    },
+    {
+      "type": "related",
+      "target": "esys-shield-volcano"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-1",
+  "pages": [
+    33,
+    37
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

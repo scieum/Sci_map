@@ -1,0 +1,111 @@
+{
+  "id": "esys-volcanic-activity",
+  "concept_key": "concept:volcanic-activity",
+  "registry_status": "new",
+  "term": "화산 활동",
+  "notation": {
+    "hanja": "火山 活動",
+    "english": "volcanic activity",
+    "hanja_gloss": "火 불 화 · 山 메 산 · 活 살 활 · 動 움직일 동"
+  },
+  "definition": "지하의 마그마가 지표 밖으로 분출해 용암과 화산 가스, 화산 쇄설물을 내놓는 지질 활동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-va-igneous",
+      "text": "분출한 마그마가 식어 굳으면 화성암이 되므로 화산 활동은 화성암을 만드는 주요 과정이다.",
+      "form": {
+        "condition": "마그마가 지표나 지하에서 냉각될 때",
+        "type": "causal",
+        "scope": "화성암의 생성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 만들어지는 암석의 종류를 바꾼 것이라 마그마가 굳으면 화성암이 된다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분출한 마그마가 식어 굳으면 퇴적암이 되므로 화산 활동은 퇴적암을 만드는 주요 과정이다."
+    },
+    {
+      "id": "rel-va-sediment",
+      "text": "분출한 화산재가 쌓이고 다져지면 새로운 퇴적암이 만들어진다.",
+      "form": {
+        "condition": "분출물이 지표에 쌓여 굳을 때",
+        "type": "causal",
+        "scope": "화산 분출물에서 비롯한 퇴적암"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「화산재는 아무리 쌓여도 퇴적암이 되지 못한다」는 새 퇴적암을 만든다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분출한 화산재는 아무리 쌓이고 다져져도 퇴적암이 되지 못한다."
+    },
+    {
+      "id": "rel-va-rockcycle",
+      "text": "화산 활동은 새 암석을 만드는 한편 기존 암석을 변성시키거나 녹여 암석의 순환에서 한 고리를 맡는다.",
+      "form": {
+        "condition": "암석이 서로 모습을 바꾸어 가는 순환으로 볼 때",
+        "type": "causal",
+        "scope": "암석의 순환에서 화산 활동이 맡는 몫"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「새 암석을 만들 뿐 기존 암석은 건드리지 않아 순환과 무관하다」는 변성·용융까지 일으킨다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산 활동은 새 암석을 만들 뿐 기존 암석을 변성시키거나 녹이지는 않아 암석의 순환과 무관하다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화산 활동은 암석을 새로 만들기만 할 뿐 없애지는 않는다",
+      "why_wrong": "화산 활동은 주변 암석을 변성시키거나 녹이기도 한다. 만들기와 없애기를 함께 맡아 암석의 순환을 잇는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-va-rockcycle"
+    },
+    {
+      "text": "화산재가 쌓여 굳은 암석도 화성암이다",
+      "why_wrong": "마그마가 굳은 것이 화성암이고, 화산재가 쌓여 다져진 것은 퇴적암이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-va-sediment"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-magma"
+    },
+    {
+      "type": "next",
+      "target": "esys-igneous-rock"
+    },
+    {
+      "type": "same",
+      "target": "isci1-volcanic-activity",
+      "note": "concept_key 가 concept:volcanic-activity 로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-1",
+  "pages": [
+    32
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "「암석의 순환」은 earth-rock-cycle 카드와 겹쳐 C1 후보에서 빠졌으나 성취기준 12지시01-04 가 '암석의 순환 과정에서 화산 활동의 역할'을 직접 요구하므로 rel-va-rockcycle 로 살렸다. earth-rock-cycle 은 이 단원 밖이라 related 링크를 걸지 않았다 (link_scope)."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "esys-greenhouse-gas",
+ "concept_key": "concept:greenhouse-gas",
+ "registry_status": "new",
+ "term": "온실 기체",
+ "notation": {
+  "hanja": "溫室氣體",
+  "english": "greenhouse gas",
+  "hanja_gloss": "溫 따뜻할 온 · 室 집 실 · 氣 기운 기 · 體 몸 체"
+ },
+ "definition": "적외선을 골라 흡수했다가 다시 내놓아 지표 온도를 높이는 대기 성분으로, 이산화 탄소·수증기·메테인·오존·산화 이질소가 여기 든다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ghg-absorbs-ir-not-vis",
+   "text": "온실 기체는 태양에서 오는 가시광선은 거의 그대로 지나 보내면서 지표가 내놓는 적외선은 붙잡는다.",
+   "form": {
+    "condition": "복사가 대기를 지날 때",
+    "type": "classification",
+    "scope": "지구 대기의 주요 온실 기체"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「온실 기체가 가시광선을 붙잡고 적외선은 그대로 지나 보낸다」는 기체별 흡수율 자료와 반대라 참이 될 경우가 없다.",
+   "inverted_text": "온실 기체는 태양에서 오는 가시광선을 붙잡고 지표가 내놓는 적외선은 그대로 지나 보낸다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-n2-o2-not-ghg",
+   "text": "대기에서 가장 많은 질소와 산소는 온실 기체로 꼽히지 않고, 양이 훨씬 적은 이산화 탄소·메테인 등이 온실 기체가 된다.",
+   "form": {
+    "condition": "대기 조성을 부피비로 함께 볼 때",
+    "type": "classification",
+    "scope": "이 교과서가 든 온실 기체 목록"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「질소와 산소가 대표적인 온실 기체다」는 교과서가 든 온실 기체 목록에 둘이 없다는 사실과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기에서 가장 많은 질소와 산소가 대표적인 온실 기체이고 이산화 탄소·메테인은 온실 기체가 아니다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "대기에 가장 많은 질소가 온실 효과를 일으키는 주된 기체다.",
+   "why_wrong": "온실 효과는 양이 많은 기체가 아니라 적외선을 잘 흡수하는 기체가 일으킨다. 질소와 산소는 그 목록에 없다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-n2-o2-not-ghg"
+  },
+  {
+   "text": "온실 기체는 태양 복사를 가로막아 지구를 덥힌다.",
+   "why_wrong": "온실 기체가 붙잡는 것은 들어오는 가시광선이 아니라 지표가 내보내는 적외선이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ghg-absorbs-ir-not-vis"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-selective-absorption"
+  },
+  {
+   "type": "next",
+   "target": "esys-greenhouse-effect"
+  },
+  {
+   "type": "same",
+   "target": "isci2-greenhouse-gas",
+   "note": "concept_key 가 concept:greenhouse-gas 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-2",
+ "pages": [
+  88
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "earth-greenhouse-gas 도 같은 concept_key 를 쓴다. same 은 isci2 쪽 하나만 걸었고, 세 카드를 어떻게 묶을지는 G3 에서 볼 일이다."
+ ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "esys-tidal-lag",
+  "concept_key": "concept:tidal-lag",
+  "registry_status": "new",
+  "term": "조석 지연",
+  "notation": {
+    "hanja": "潮汐遲延",
+    "hanja_gloss": "潮 밀물 조 · 汐 썰물 석 · 遲 늦을 지 · 延 늘일 연",
+    "english": "tidal lag"
+  },
+  "definition": "이론이 말하는 대조 시기보다 실제 대조가 며칠 늦게 나타나는 어긋남.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tl-observed",
+      "text": "실제 대조는 삭이나 망이 지난 뒤 1일에서 3일쯤 지나 나타난다.",
+      "form": {
+        "condition": "실제 조석 자료를 평형 조석론의 예측과 견줄 때",
+        "type": "direct",
+        "scope": "실제 해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「삭이나 망보다 1일에서 3일쯤 앞서 나타난다」인데, 관성과 마찰은 반응을 늦출 뿐 앞당기지 못하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "실제 대조는 삭이나 망보다 1일에서 3일쯤 앞서 나타난다."
+    },
+    {
+      "id": "rel-tl-cause",
+      "text": "이 어긋남은 해수의 관성, 대륙의 분포, 수심, 마찰처럼 평형 조석론이 빼놓은 조건 때문에 생긴다.",
+      "form": {
+        "condition": "평형 조석론의 가정이 실제 지구와 다를 때",
+        "type": "causal",
+        "scope": "실제 지구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「평형 조석론이 이미 가정에 넣어 둔 조건들 때문에 생긴다」인데, 그 이론은 마찰과 관성을 없다고 놓았으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조석 지연은 평형 조석론이 이미 가정에 넣어 둔 조건들 때문에 생긴다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "음력 1일과 15일에 조차가 가장 크다.",
+      "why_wrong": "이론상으로는 그렇지만 실제로는 1~3일 늦게 대조가 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tl-observed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-equilibrium-tide-theory"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-spring-and-neap-tide"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-2",
+  "pages": [
+    74
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

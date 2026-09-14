@@ -1,0 +1,108 @@
+{
+  "id": "esys-oxygen-cycle",
+  "concept_key": "concept:oxygen-cycle",
+  "registry_status": "new",
+  "term": "산소의 순환",
+  "notation": {
+    "hanja": "酸素 循環",
+    "english": "oxygen cycle",
+    "hanja_gloss": "酸 실 산 · 素 본디 소 · 循 돌 순 · 環 고리 환"
+  },
+  "definition": "광합성으로 만들어진 산소가 수권에서 기권으로 옮겨 가고 침전물과 오존층으로 모습을 바꾸며 권역 사이를 도는 흐름.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oc-accumulate",
+      "text": "바다에서 생성된 산소가 쌓이면서 시간이 지남에 따라 대기에도 산소가 축적되었다.",
+      "form": {
+        "condition": "광합성이 오랜 기간 이어질 때",
+        "type": "causal",
+        "scope": "선캄브리아시대 이후의 대기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「바다에 산소가 쌓여도 대기의 산소는 늘지 않았다」는 대기 산소가 축적되었다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바다에서 생성된 산소가 쌓여도 대기의 산소는 늘지 않았다."
+    },
+    {
+      "id": "rel-oc-ozone",
+      "text": "대기에 산소가 충분히 쌓이자 오존층이 만들어지기 시작했다.",
+      "form": {
+        "condition": "대기의 산소 분압이 일정 수준을 넘은 뒤",
+        "type": "causal",
+        "scope": "약 5억~4억 년 전 무렵"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「산소가 쌓이면서 오존층이 사라져 갔다」는 산소가 오존층의 재료라는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기에 산소가 충분히 쌓이자 오존층은 오히려 사라져 갔다."
+    },
+    {
+      "id": "rel-oc-uv",
+      "text": "오존층이 자외선을 막아 준 덕분에 생명체가 바다에서 육지로 올라올 수 있었다.",
+      "form": {
+        "condition": "그전까지 자외선이 지표에 그대로 닿던 상황과 견줄 때",
+        "type": "causal",
+        "scope": "육상 생물이 등장하는 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「오존층이 자외선을 막아 주었는데도 육지로 올라올 수 없었다」는 오존층이 육상 진출의 계기였다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오존층이 자외선을 막아 주었는데도 생명체는 육지로 올라올 수 없었다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "오존층이 먼저 생긴 뒤에 대기에 산소가 쌓이기 시작했다",
+      "why_wrong": "순서가 거꾸로다. 대기에 산소가 쌓이면서 그 산소로부터 오존층이 만들어지기 시작했다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-ozone"
+    },
+    {
+      "text": "지구 대기의 산소는 화산 활동으로 지구 내부에서 나온 것이다",
+      "why_wrong": "화산이 내놓는 기체는 수증기와 이산화 탄소 등이다. 대기의 산소는 바다에서 시작된 광합성이 만든 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-accumulate"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-cyanobacteria"
+    },
+    {
+      "type": "next",
+      "target": "esys-banded-iron-formation"
+    },
+    {
+      "type": "next",
+      "target": "esys-coevolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    15,
+    17
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

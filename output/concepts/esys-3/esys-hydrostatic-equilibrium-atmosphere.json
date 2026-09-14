@@ -1,0 +1,108 @@
+{
+ "id": "esys-hydrostatic-equilibrium-atmosphere",
+ "concept_key": "concept:hydrostatic-equilibrium",
+ "registry_status": "new",
+ "term": "정역학 평형",
+ "notation": {
+  "hanja": "靜力學平衡",
+  "english": "hydrostatic equilibrium",
+  "hanja_gloss": "靜 고요할 정 · 力 힘 력 · 學 배울 학 · 平 평평할 평 · 衡 저울대 형",
+  "symbol_display": "−(1/ρ)(Δp/Δz) = g",
+  "symbol_plain": "-(1/rho)(dp/dz) = g"
+ },
+ "definition": "공기 덩어리를 위로 미는 연직 기압 경도력과 아래로 당기는 중력이 거의 같은 크기로 맞서 균형을 이룬 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-he-balance",
+   "text": "공기 덩어리는 아래쪽 기압이 위쪽보다 높아 위로 힘을 받으며, 이 연직 기압 경도력이 중력과 거의 같은 크기로 맞선다.",
+   "form": {
+    "condition": "대규모 대기를 연직 방향에서 볼 때",
+    "type": "classification",
+    "scope": "정역학 평형 상태의 대기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「연직 기압 경도력이 중력과 같은 아래 방향으로 작용한다」는 아래쪽 기압이 더 높다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "공기 덩어리에 작용하는 연직 기압 경도력은 중력과 같은 아래 방향으로 작용해 중력에 더해진다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-he-suppresses-vertical",
+   "text": "정역학 평형이 성립하므로 연직 기압 변화가 매우 큰데도 공기의 연직 움직임은 초속 수 cm 정도로 작다.",
+   "form": {
+    "condition": "대규모 대기를 평균해서 볼 때",
+    "type": "causal",
+    "scope": "대류권 전반"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「연직 기압 변화가 크므로 공기가 연직 방향으로 매우 빠르게 움직인다」는 관측된 수 cm/s 와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "연직 기압 변화가 매우 크므로 공기는 연직 방향으로 매우 빠르게 움직인다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "연직 방향 기압 차가 크니 공기는 위로 빠르게 솟구쳐야 한다.",
+   "why_wrong": "기압 경도력이 중력과 거의 맞서 상쇄되기 때문에 실제 연직 속도는 초속 수 cm에 그친다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-he-suppresses-vertical"
+  },
+  {
+   "text": "공기 덩어리에는 중력만 작용하므로 모두 아래로 가라앉아야 한다.",
+   "why_wrong": "아래쪽 기압이 위쪽보다 높아 위 방향 기압 경도력이 함께 작용하며, 그 크기가 중력과 거의 같다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-he-balance"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-vertical-pressure-distribution"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-pressure"
+  },
+  {
+   "type": "next",
+   "target": "esys-vertical-motion"
+  },
+  {
+   "type": "same",
+   "target": "earth-hydrostatic-equilibrium",
+   "note": "concept_key 가 concept:hydrostatic-equilibrium 로 같다 (R9)"
+  },
+  {
+   "type": "same",
+   "target": "esys-hydrostatic-equilibrium",
+   "note": "concept_key 가 concept:hydrostatic-equilibrium 로 같다 (R9) — Ⅱ단원에서는 해수의 연직 평형으로 나온다"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-04"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-1",
+ "pages": [
+  105
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "earth-3 의 '정역학 평형'은 별 내부, 이 카드는 대기가 적용 대상이다. 키는 같게 두었으니 한 카드로 묶을지는 C8 에서 사람이 판단해 주기 바란다.",
+  "카드 id 를 esys-hydrostatic-equilibrium 에서 esys-hydrostatic-equilibrium-atmosphere 로 바꿨다. esys-2 에 같은 id 의 카드가 있어 전역 색인에서 한쪽이 다른 쪽을 덮었다. 교과서가 먼저 정의하는 Ⅱ단원(esys-2) 쪽이 평범한 id 를 지키고, 대기를 다루는 이 카드에 접미사를 붙였다. concept_key 는 그대로 공유하며 두 카드를 same 으로 이었다. G3 안건이다.",
+  "C5 uncertain — 이 카드는 earth-hydrostatic-equilibrium(별 내부의 중력 대 기체 압력)과 같은 concept:hydrostatic-equilibrium 키를 쓴다. 대기(중력 대 연직 기압 경도력)와 쓰임이 달라 동음이의로 갈라야 하는지는 사람이 볼 자리다. 키는 고치지 않았다."
+ ]
+}

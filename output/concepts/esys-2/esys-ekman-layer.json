@@ -1,0 +1,126 @@
+{
+  "id": "esys-ekman-layer",
+  "concept_key": "concept:ekman-layer",
+  "registry_status": "new",
+  "term": "에크만층",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 '에크만'의 음차어에 '층(層)'이 붙은 말이라 전체를 한자어로 적지 않는다.",
+    "english": "Ekman layer"
+  },
+  "definition": "바람이 일으킨 운동이 점성으로 아래에 전해지며 나선을 이루는 동안 그 영향이 미치는 해양 표층 구간.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ekman-layer-bottom",
+      "text": "에크만층의 아래 경계는 해수가 흐르는 방향이 표면과 정반대가 되는 깊이다.",
+      "form": {
+        "condition": "에크만 나선이 만들어진 표층에서 경계를 정할 때",
+        "type": "classification",
+        "scope": "바람이 이어 부는 해양 표층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「표면과 같은 방향이 되는 깊이를 경계로 잡는다」인데, 그 깊이는 나선이 한 바퀴 돈 자리일 뿐 경계가 아니므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에크만층의 아래 경계는 해수가 흐르는 방향이 표면과 같아지는 깊이로 잡는다."
+    },
+    {
+      "id": "rel-ekman-layer-wind",
+      "text": "같은 위도에서 견주면 바람이 셀수록 에크만층은 두꺼워진다.",
+      "form": {
+        "condition": "전향력이 같은 위도에서 견줄 때",
+        "type": "direct",
+        "scope": "바람이 이어 부는 해양 표층",
+        "antecedent": {
+          "quantity": "바람의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "에크만층의 두께",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「같은 위도에서 바람이 셀수록 얇아진다」인데, 센 바람은 운동을 더 깊은 곳까지 밀어 내리므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 위도에서 바람이 셀수록 에크만층은 얇아진다."
+    },
+    {
+      "id": "rel-ekman-layer-coriolis",
+      "text": "바람의 세기가 같다면 전향력이 약한 곳일수록 에크만층은 두꺼워진다.",
+      "form": {
+        "condition": "바람의 세기가 같을 때",
+        "type": "inverse",
+        "scope": "바람이 이어 부는 해양 표층",
+        "antecedent": {
+          "quantity": "전향력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "에크만층의 두께",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「바람이 같을 때 전향력이 약할수록 얇아진다」인데, 전향력이 약하면 방향이 천천히 돌아 더 깊은 곳까지 나선이 이어지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바람의 세기가 같다면 전향력이 약한 곳일수록 에크만층은 얇아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에크만층의 두께는 바다 어디서나 같다.",
+      "why_wrong": "바람이 셀수록, 전향력이 약할수록 두꺼워지므로 해역마다 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ekman-layer-wind"
+    },
+    {
+      "text": "에크만층 아래에서는 해수가 전혀 움직이지 않는다.",
+      "why_wrong": "에크만층은 흐름의 방향이 표면과 반대가 되는 깊이까지를 가리키는 것이지 해수의 운동이 멎는 깊이가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ekman-layer-bottom"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ekman-spiral"
+    },
+    {
+      "type": "next",
+      "target": "esys-ekman-transport",
+      "note": "에크만층의 평균 이동이 곧 에크만 수송이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-1",
+  "pages": [
+    57
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "마찰층"
+  ],
+  "notes": [
+    "C6 이 rel-ekman-layer-bottom 을 정의의 되풀이로 짚었다. 아래 경계를 정하는 몫은 명제가 지게 두고, 정의에서 그 문장을 덜어 냈다."
+  ]
+}

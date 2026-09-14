@@ -1,0 +1,2245 @@
+{
+ "unit_id": "esys-1",
+ "subject": "지구시스템과학",
+ "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+ "generated_at": "2026-09-14T11:14:30",
+ "mode_run": [
+  "curriculum",
+  "relation"
+ ],
+ "inputs": {
+  "cards": "output/concepts/esys-1/ (59장, 관계 172개)",
+  "standards": ".claude/skills/curriculum-mapper/references/standards.yaml — 12지시01-01~01-05, 다섯 개 모두 crosscheck: 일치",
+  "guide": "inbox/textbook/22개정/지구과학/고_지구시스템과학(오필석)_지도서_2쇄.pdf 총론 24쪽 (가) 성취 기준 해설 — pdfplumber 로 추출해 대조",
+  "source": "output/source/esys-1/text.jsonl (44행)",
+  "cross_units": [
+   "output/concepts/earth-2/",
+   "output/concepts/isci1-2/",
+   "output/concepts/isci1-3/"
+  ]
+ },
+ "preflight": {
+  "validate_tags.py": "output/concepts/esys-1 을 직접 가리켜 실행 — cards 59, problems 0, ok: true. 실재하지 않는 코드·과목 접두어 불일치·태그 0개·미확정 crosscheck 는 이 단계에서 모두 걸러졌다.",
+  "crosscheck_note": "12지시01-01~01-05 는 모두 crosscheck: 일치. 이 단원에는 「불일치」·「미대조」·「교사 확정」 코드가 쓰이지 않았다.",
+  "track_facts_skill": "earth-facts / esys-facts 계열 스킬이 없어 스킬 기반 수치 대조는 건너뛰었다. 없는 스킬을 흉내 내지 않고 교과서 원문(text.jsonl) 대조로 대신했다."
+ },
+ "curriculum_constraints": [
+  "12지시01-01 — 생명체 탄생 이전의 권역 형성. 응축·집적·분화, 마그마 바다에서 화성암 형성과 냉각 뒤 상호작용.",
+  "12지시01-02 — 생명체 탄생 이후 상호작용 중심. 산소는 남세균과 호상철광층, 탄소는 얼음덩어리 지구와 석회암 퇴적, 물은 풍화·침식·퇴적과 지형 형성. 그리고 공진화 개념.",
+  "12지시01-03 — 상부 맨틀 대류에 의한 판 운동과 맨틀-핵 경계의 플룸 운동을 구분. 플룸 상승류의 사례로 열점. 판을 움직이는 힘은 맨틀 대류에 의한 수동적인 움직임으로 설명하기보다는 능동적인 힘(섭입하는 판이 당기는 힘, 해령에서 미는 힘)을 다룬다.",
+  "12지시01-04 — 마그마의 특성에 따라 순상 화산·성층 화산으로 분류하고 분출 물질의 차이를 다룬다. 편광 현미경으로 화산암의 유리질·반상 조직과 심성암의 조립질을 비교·관찰하는 정도만 다루며, 광학적 성질에 대해서는 다루지 않는다.",
+  "12지시01-05 — 지진파 단층 촬영 결과를 이용하여 알아낸 지구 내부 구조를 함께 다룬다."
+ ],
+ "curriculum": {
+  "checked": 59,
+  "stats": {
+   "in": 57,
+   "out": 0,
+   "uncertain": 2,
+   "retag": 0,
+   "out_of_scope": 0
+  },
+  "tag_fitness": "59장 모두 붙은 코드가 그 카드가 실제로 받치는 성취기준이었다. retag 대상 0건. esys-seismic-tomography(01-05+01-03), esys-primitive-atmosphere·esys-primitive-crust-and-ocean(01-01+01-02)의 두 코드 병기도 각각 근거가 있다.",
+  "prerequisites": [
+   {
+    "card_id": "esys-polarizing-microscope",
+    "needs": [
+     "concept:polarized-light"
+    ],
+    "note": "편광판을 지난 빛의 진동 방향은 물리 쪽 선수 개념이다. 링크를 거는 것은 G 파이프라인의 일이라 표시만 한다."
+   },
+   {
+    "card_id": "esys-solar-nebula",
+    "needs": [
+     "concept:nuclear-fusion",
+     "concept:supernova"
+    ],
+    "note": "핵융합·초신성은 행성우주과학 또는 통합과학1 쪽 개념이다."
+   },
+   {
+    "card_id": "esys-magma-ocean",
+    "needs": [
+     "concept:radioactive-decay"
+    ],
+    "note": "방사성 동위원소의 붕괴열."
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "needs": [
+     "concept:greenhouse-effect",
+     "concept:albedo"
+    ],
+    "note": "온실 효과와 반사율은 12지시03-01 및 통합과학1 쪽 개념이다."
+   },
+   {
+    "card_id": "esys-banded-iron-formation",
+    "needs": [
+     "concept:oxidation"
+    ],
+    "note": "철 이온의 산화."
+   }
+  ],
+  "scope_table": [
+   {
+    "card_id": "esys-banded-iron-formation",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-body-and-surface-wave",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-carbon-cycle",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-coarse-grained-texture",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-coevolution",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-comparison-of-terrestrial-planet-evolution",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다. ※ 탐구 활동 「지구가 역동적 행성으로 진화한 이유를 다른 고체 행성의 진화 과정과 비교하기」에 바로 대응한다. 다만 인용한 표면 중력·대기압 표 값(10⁻¹⁴, 0.01, 90배)은 output/source/esys-1/text.jsonl 에 표가 추출되지 않아 대조하지 못했다."
+   },
+   {
+    "card_id": "esys-continental-drift",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-crustal-thickness",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다. ※ 탐구 활동 「지진파 자료를 활용하여 지각의 두께 구하기」에 대응한다."
+   },
+   {
+    "card_id": "esys-cyanobacteria",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-direct-and-refracted-wave",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-earth-internal-structure",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-earthquake",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-echo-sounding",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다. ※ 탐구 활동 「관측 기기의 발달과 관련지어 판 구조론 정립의 역사 추적하기」에 대응한다."
+   },
+   {
+    "card_id": "esys-fine-grained-texture",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-glassy-texture",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-gutenberg-discontinuity",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-hot-spot",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-igneous-rock",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-layer-differentiation",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다."
+   },
+   {
+    "card_id": "esys-lehmann-discontinuity",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-lithosphere-and-asthenosphere",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-magma-ocean",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다."
+   },
+   {
+    "card_id": "esys-magma-type",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-magma",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-mantle-convection-drag",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "uncertain",
+    "reason": "해설 01-03 은 「맨틀 대류에 의한 수동적인 움직임으로 설명하기보다는 …능동적인 힘에 관해 다룬다」고 방향을 눌러 두었다. 카드 자체는 능동적인 힘과 구분하기 위해 필요하고 role 도 그 구분을 위한 것이지만, rel-mcd-cellsize(해령과 해구가 가까워질수록 대류 세포의 수평 규모가 작아져 판이 멈춘다)는 27쪽 곁주 수준의 수동적 모델 내부 논의여서 해설이 억제한 쪽을 본문 명제만큼 두껍게 세운 것이 된다. 이탈이라고 단정하지 않고 사람 판단으로 올린다.",
+    "flagged_relations": [
+     "rel-mcd-cellsize"
+    ]
+   },
+   {
+    "card_id": "esys-mantle-convection-hypothesis",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-mineral-diversification",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다. ※ 해설 01-02 의 「생명과 행성의 공진화」 사례로 교과서 22쪽에 실려 있다."
+   },
+   {
+    "card_id": "esys-mohorovicic-discontinuity",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-oxygen-cycle",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다. ※ rel-oc-ozone·rel-oc-uv 는 해설 01-02 가 산소 순환의 소재로 든 「남세균과 호상철광층」 밖이지만, 교과서 본문 정리에 「오존층이 형성되어 육상 생물이 등장함」이 그대로 있어 범위 안으로 본다. 다만 자외선 차단 효과는 12지시03-01 의 소재와 겹치므로 태그 중복 여부를 G 단계에서 볼 것."
+   },
+   {
+    "card_id": "esys-p-wave",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-paleomagnetism",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다. ※ 48쪽은 단원 마무리 쪽이다. 해설 01-03 의 판 구조론 발달사에 든다."
+   },
+   {
+    "card_id": "esys-planetesimal",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다."
+   },
+   {
+    "card_id": "esys-plate-tectonics",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-plume-tectonics",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-plume",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-plutonic-rock",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-polarizing-microscope",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "uncertain",
+    "reason": "해설 01-04 는 「조직을 비교·관찰하는 정도만 다루며 광학적 성질에 대해서는 다루지 않는다」고 못 박는데, rel-pmic-thin 「석영·장석 같은 규산염 광물은 …빛을 통과시키는 투명 광물이다」는 광물의 투명·불투명, 곧 광학적 성질을 진술한다. 다만 교과서 본문(35쪽)에 「박편 상에서 빛을 투과시키는 투명 광물에 해당한다」가 그대로 있어 지도서 해설과 교과서 본문이 갈린다. 어느 쪽을 따를지는 사람이 정할 일이라 uncertain 으로 올린다. rel-pmic-polarizer(자연광·편광판의 진동 방향)도 본문 35쪽에 있으나 기기 원리 쪽이라 해설의 금지선과는 거리가 있다.",
+    "flagged_relations": [
+     "rel-pmic-thin"
+    ]
+   },
+   {
+    "card_id": "esys-porphyritic-texture",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-primitive-atmosphere",
+    "curriculum": [
+     "12지시01-01",
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다. / 해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-primitive-crust-and-ocean",
+    "curriculum": [
+     "12지시01-01",
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다. / 해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-ps-time",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-ridge-push",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-s-wave",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-seafloor-spreading",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-seismic-tomography",
+    "curriculum": [
+     "12지시01-05",
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다. / 해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다. ※ 01-05(지진파 단층 촬영으로 알아낸 내부 구조)와 01-03(플룸의 근거) 양쪽을 실제로 받치므로 두 코드 병기가 맞다."
+   },
+   {
+    "card_id": "esys-seismic-wave",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-shadow-zone",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-shield-volcano",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-slab-pull",
+    "curriculum": [
+     "12지시01-03"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-03 의 상부 맨틀 대류에 의한 판 운동·플룸 운동 구분·열점·능동적인 힘, 그리고 탐구 활동(관측 기기와 판 구조론 발달사) 안에 든다."
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   },
+   {
+    "card_id": "esys-solar-nebula",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다."
+   },
+   {
+    "card_id": "esys-solar-system-formation",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다."
+   },
+   {
+    "card_id": "esys-stratovolcano",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-terrestrial-and-jovian-planet",
+    "curriculum": [
+     "12지시01-01"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-01(응축·집적·분화, 마그마 바다에서 화성암 형성, 냉각 뒤 상호작용) 안에 든다."
+   },
+   {
+    "card_id": "esys-travel-time-curve",
+    "curriculum": [
+     "12지시01-05"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-05 및 탐구 활동(지진파 자료로 지각 두께 구하기, 지진파 단층 촬영)과 맞는다."
+   },
+   {
+    "card_id": "esys-volcanic-activity",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-volcanic-ejecta",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-volcanic-rock",
+    "curriculum": [
+     "12지시01-04"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-04 의 마그마 특성에 따른 화산체 분류·분출물·편광 현미경 조직 비교 안에 든다. 광학적 성질(간섭색·소광·복굴절)은 다루지 않는다."
+   },
+   {
+    "card_id": "esys-water-cycle",
+    "curriculum": [
+     "12지시01-02"
+    ],
+    "curriculum_scope": "in",
+    "reason": "해설 01-02 가 지정한 산소(남세균·호상철광층)·탄소(얼음덩어리 지구·석회암)·물(풍화·침식·퇴적과 지형) 및 공진화 안에 든다."
+   }
+  ]
+ },
+ "relations": {
+  "checked": 172,
+  "check_codes": {
+   "a": "교과서가 말한 방향의 역전",
+   "b": "invertible 오판정",
+   "c": "조건·범위 누락 또는 문면 왜곡",
+   "d": "다른 카드 명제와의 충돌",
+   "e": "교과서에 없는 수치·사실",
+   "f": "동어반복·중복",
+   "g": "오개념의 linked_relation 이 반박 대상 명제를 가리키지 않음"
+  },
+  "stats": {
+   "ok": 161,
+   "defect": 2,
+   "uncertain": 9
+  },
+  "findings": [
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-distance",
+    "verdict": "defect",
+    "checks": [
+     "c",
+     "e",
+     "b"
+    ],
+    "reason": "text 의 「두 파의 속도가 같다고 두면」이 form.condition 의 「지각과 맨틀에서의 속도를 일정하게 두고 볼 때」와 다른 말이 되어 있다. 직접파와 굴절파의 속도가 서로 같다면(v지각 = v맨틀) 굴절파가 직접파를 앞지르는 일이 없어 「동시 도달 지점」 자체가 생기지 않는다. 조건절이 명제의 전제를 무너뜨린 것이라 text 도 inverted_text 「…거리가 멀수록 지각은 얇다」도 문면 그대로는 참·거짓을 가릴 수 없다. invertible_reason 이 드는 「두께가 그 거리에 비례한다는 식」은 두 속도가 서로 다를 때만 성립한다.",
+    "suggest": "「속도가 같다고 두면」을 form.condition 과 같은 뜻(두 속도를 각각 일정하게 고정한다)으로 고쳐 쓰고, 고친 뒤 inverted_text 를 다시 세워 invertible 을 재판정한다.",
+    "invertible_current": true,
+    "invertible_proposed": "재작성 뒤 재판정"
+   },
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-point",
+    "verdict": "defect",
+    "checks": [
+     "c",
+     "b"
+    ],
+    "reason": "지각의 두께를 구하려면 지각·맨틀에서의 지진파 속도를 알아야 하는데 그 조건이 form.condition 에만 있고 text·inverted_text 문면에는 없다. D1 은 scope·condition 을 끌고 가지 않으므로 inverted_text 「직접파와 굴절파의 도달 시간이 같아지는 진앙 거리를 알아도 지각의 두께는 구할 수 없다」는 두 속도를 모르는 경우 문면 그대로 참이 된다. 참이 될 경우가 있으므로 현재의 invertible: true 가 문면 기준으로는 지탱되지 않는다.",
+    "suggest": "invertible 을 내리기 전에 「두 층에서의 지진파 속도를 알 때」를 text 와 inverted_text 문면에 넣어 살리는 쪽을 먼저 검토한다. 문면에 넣으면 true 가 유지된다.",
+    "invertible_current": true,
+    "invertible_proposed": "조건을 문면에 넣으면 true 유지, 그대로 두면 false"
+   },
+   {
+    "card_id": "esys-ps-time",
+    "relation_id": "rel-pst-gap",
+    "verdict": "uncertain",
+    "checks": [
+     "f"
+    ],
+    "reason": "이 카드의 definition 이 PS시를 「P파가 닿은 뒤 S파가 닿기까지 걸린 시간 차」로 정의한다. 「속도 차가 없다면 PS시가 생기지 않는다」는 그 정의를 읽으면 저절로 나오는 말이라 동어반복에 가깝다. 뒤 절(「그래서 진원 거리를 구할 수 없다」)만 정의 밖의 내용인데 그 부분은 rel-pst-distance 가 이미 담고 있다. invertible 판정 자체는 유지된다.",
+    "suggest": "정의에서 저절로 나오는 앞 절을 걷어내고 PS시가 거리 정보를 담는 까닭 쪽으로 다시 세울지, rel-pst-distance 와 합칠지 정한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-ps-time",
+    "relation_id": "rel-pst-origin",
+    "verdict": "uncertain",
+    "checks": [
+     "d"
+    ],
+    "reason": "rel-pst-origin 은 PS시가 알려 주는 것이 「관측소와 진원 사이의 거리」라고 못 박는데, 같은 단원 esys-travel-time-curve 의 rel-ttc-distance 는 「진앙 거리가 멀어질수록 PS시가 커진다」로 PS시를 진앙 거리 축에서 읽는다. 교과서 관행상 둘 다 성립하지만 D1 이 두 지문을 나란히 내면 학생이 진원 거리와 진앙 거리를 가를 근거를 잃는다.",
+    "suggest": "두 명제 가운데 한쪽에 「주시 곡선의 가로축은 진앙 거리다」라는 구분을 문면이나 scope 에 드러낼지 정한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-travel-time-curve",
+    "relation_id": "rel-ttc-distance",
+    "verdict": "uncertain",
+    "checks": [
+     "d"
+    ],
+    "reason": "rel-pst-origin 과 짝을 이루는 항목이다. 같은 PS시를 한쪽은 진원 거리로, 한쪽은 진앙 거리로 읽게 한다.",
+    "suggest": "rel-pst-origin 과 함께 어느 거리 축을 쓰는지 문면에서 갈라 준다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-body-and-surface-wave",
+    "relation_id": "rel-bs-why-body",
+    "verdict": "uncertain",
+    "checks": [
+     "b"
+    ],
+    "reason": "inverted_text 「지구 내부 구조를 파악하는 데 쓰이는 것은 지표면을 따라 도는 표면파다」를 문면 그대로 읽으면, 표면파 분산으로 지각·상부 맨틀 구조를 구하는 실제 지진학에서는 참이 될 여지가 있다. 「쓰이는 것은 ~다」라는 배타적 어법이라 더 그렇다. 다만 invertible_reason 이 드는 근거가 「중단원 정리 문항이 ×로 가른 지문」이라 교과서 안에서는 방어된다. 진위 판단 필요 — C8 검토 항목.",
+    "suggest": "「이 단원에서 지구 내부 구조를 알아내는 데 쓰는 것은」처럼 문면을 교과서 범위로 묶을지 검토한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-paleomagnetism",
+    "relation_id": "rel-pmg-remanent",
+    "verdict": "uncertain",
+    "checks": [
+     "b"
+    ],
+    "reason": "inverted_text 「마그마가 식어 굳을 때 자성 광물은 현재의 지구 자기장 방향으로 자화되어 잔류 자기로 남는다」는 전칭으로 읽으면 거짓이지만, 정자극기에 굳은 암석 하나를 두고 읽으면 문면 그대로 참이다. OX 지문으로 떨어져 나가면 학생이 특칭으로 읽을 여지가 크다.",
+    "suggest": "전칭임이 문면에 드러나게 할지(굳던 때의 방향을 간직한다는 쪽에 무게를 실을지) 검토한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-shield-volcano",
+    "relation_id": "rel-sv-example",
+    "verdict": "uncertain",
+    "checks": [
+     "c"
+    ],
+    "reason": "text 「…순상 화산이거나 여러 순상 화산이 모인 복합체다」가 선언(A이거나 B)이라 문면이 하나의 시험 가능한 주장이 아니다. inverted_text 는 성층 화산으로 맞바꾼 것이라 여전히 거짓이어서 invertible 판정 자체는 버틴다.",
+    "suggest": "선언을 하나로 좁힐지, 복합체 쪽을 별도 명제로 뺄지 정한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-plume-tectonics",
+    "relation_id": "rel-ptc-evidence",
+    "verdict": "uncertain",
+    "checks": [
+     "f"
+    ],
+    "reason": "esys-seismic-tomography 의 rel-tomo-plume 「주변보다 지진파 속도가 느리게 나타나는 부분은 고온의 맨틀 물질, 곧 플룸으로 읽는다」와 사실상 같은 말이다. 두 카드의 오개념도 같은 것을 싣고 있다(「고온 지역은 지진파 속도가 빠르다」). D1 이 두 카드에서 같은 OX 지문을 두 번 내게 된다.",
+    "suggest": "둘 중 하나를 남기고 다른 하나는 링크로 대신할지 정한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-magma",
+    "relation_id": "rel-mg-erupt",
+    "verdict": "uncertain",
+    "checks": [
+     "f"
+    ],
+    "reason": "「내부 압력이 충분히 높아지면 지표 밖으로 분출해 화산을 만든다」의 「충분히」가 곧 분출을 일으킬 만큼이라는 뜻이라 순환적이다. 학생이 무엇을 재어 참·거짓을 가릴지 문면에 없다.",
+    "suggest": "「충분히」를 교과서가 든 조건(지표 부근의 낮은 압력에서 화산 가스가 팽창할 때 등)으로 바꿔 쓸지 검토한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   },
+   {
+    "card_id": "esys-magma",
+    "relation_id": "rel-mg-source",
+    "verdict": "uncertain",
+    "checks": [
+     "d"
+    ],
+    "reason": "text 와 form.condition 이 마그마의 발생 자리를 「지각 하부」로 한정하는데, 같은 단원 esys-plume 의 rel-plm-origin 은 하와이의 마그마가 지하 약 2900 km 맨틀과 외핵의 경계부에서 올라온 물질에서 비롯한다고 한다(교과서 29~30쪽도 그렇게 쓴다). 카드 definition 도 「지각 하부에서」로 되어 있어 둘이 어긋난다. 대조한 earth-2 의 earth-magma 는 definition 을 「지각 아래나 맨틀에서」로 두어 이 문제가 없다.",
+    "suggest": "마그마의 발생 자리를 지각 하부로 한정할지 맨틀까지 포함할지 두 카드 사이에서 통일한다.",
+    "invertible_current": true,
+    "invertible_proposed": "true"
+   }
+  ],
+  "card_level_findings": [
+   {
+    "card_id": "esys-solar-system-formation",
+    "target": "misconceptions[0]",
+    "verdict": "defect",
+    "checks": [
+     "g"
+    ],
+    "reason": "「태양계는 138억 년 전 빅뱅이 일어날 때 우주와 함께 만들어졌다」 항목에 linked_relation 키가 아예 없다(나머지 58장의 오개념은 모두 있다). 게다가 내용이 이 카드 어느 명제의 반대편에도 서 있지 않다 — rel-ssf-contraction·rel-ssf-protosun·rel-ssf-accretion 은 모두 형성 과정을 다룰 뿐 형성 시점을 말하지 않는다. 시점을 다루는 것은 이웃 카드 esys-solar-nebula 의 rel-neb-origin(빅뱅이 만든 원소와 별이 만든 원소) 쪽이다.",
+    "suggest": "linked_relation 을 채우되, 반박 대상이 될 명제가 이 카드에 없다면 오개념을 esys-solar-nebula 쪽으로 옮길지 이 카드에 시점 명제를 세울지 정한다."
+   },
+   {
+    "card_id": "esys-direct-and-refracted-wave",
+    "target": "misconceptions[「지각이 맨틀보다 밀도가 커서 …」].why_wrong",
+    "verdict": "defect",
+    "checks": [
+     "d"
+    ],
+    "reason": "why_wrong 이 「지진파는 밀도가 높은 깊은 곳에서 빨라진다」는 일반 규칙을 세우는데, 같은 단원의 esys-shadow-zone rel-sz-pcause(P파가 핵의 경계에서 크게 굴절한다 = 속도가 급격히 떨어진다)와 esys-earth-internal-structure rel-eis-outercore 가 그 규칙의 반례다. 외핵은 맨틀보다 밀도가 크지만 P파 속도는 떨어진다. 학생이 이 규칙을 그대로 들고 암영대 쪽으로 가면 걸린다.",
+    "suggest": "일반 규칙으로 쓰지 말고 지각과 맨틀 두 층에 한정해 다시 쓴다."
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "target": "definition",
+    "verdict": "uncertain",
+    "checks": [
+     "e"
+    ],
+    "reason": "definition 의 「약 7억 2천만 년 전부터 8천5백만 년쯤 이어진 것으로 추정된다」에서 8천5백만 년은 교과서가 쓴 값이 아니다. 교과서(output/source/esys-1/text.jsonl)는 「약 7억 2천만 년 전부터 약 6억 3천5백만 년 전까지」와 「1억 년 가량 지속되었다」 두 가지를 쓴다. 720 − 635 = 85 라 산술은 맞지만 교과서가 스스로 든 「1억 년 가량」과 다른 숫자를 카드가 새로 만들어 낸 꼴이다.",
+    "suggest": "교과서가 쓴 표현(두 시점 또는 1억 년 가량) 가운데 하나로 되돌릴지 정한다."
+   }
+  ],
+  "a_check_result": "(a) 교과서가 말한 방향의 역전 — 172 건에서 한 건도 찾지 못했다. 방향을 담은 명제는 모두 교과서 서술과 같은 쪽을 가리킨다.",
+  "style_note": "「A가 아니라 B다」 구문이 8 건 남짓 있다(rel-wtc-energy, rel-pa-component, rel-vr-depth 등). 결함 다섯 가지 어디에도 걸리지 않지만, 학생에게 대비를 미리 쥐여 주는 어법이라 OX 지문으로 나갈 때 난도가 떨어진다. 지적이 아니라 참고 사항이다."
+ },
+ "invertible_audit": {
+  "total": 172,
+  "current": {
+   "true": 172,
+   "false": 0,
+   "rate": "100.0%"
+  },
+  "criterion": "inverted_text 를 문면 그대로 읽어 참이 될 경우가 하나라도 있으면 false, 없으면 true. form.type 은 어디를 먼저 볼지 알려 주는 표지로만 쓰고 판정 근거로 쓰지 않았다. 역(逆) 명제 B→A 가 아니라 뒤집은 문장 A→not B 로만 판정했다.",
+  "proposed": {
+   "true 유지": 170,
+   "재작성 뒤 재판정": 2,
+   "false 로 즉시 내릴 것": 0
+  },
+  "verdict": "100 % 는 작성 기법의 결과로 대체로 정당하다. 172 건 가운데 160 건 남짓이 두 이름·두 값·두 방향을 문면 안에서 맞바꾼 형태이거나 인과의 방향을 부정한 형태여서 뒤집으면 반드시 거짓이 된다. 앞 과목에서 문제가 된 「분류형이라 방향이 없다」·「인과라 뒤집는 꼴이 아니다」류의 무효 사유는 이 단원 172 건 어디에도 없고, invertible_reason 이 역 명제를 반박하고 있는 건도 없다. 다만 조건을 문면 밖(form.condition)에 둔 채 true 를 매긴 것이 esys-crustal-thickness 에서 2 건 나왔고, 그 가운데 rel-ct-distance 는 조건 자체가 명제를 무너뜨린다.",
+  "skew_check": "정도를 담은 말(대체로·보통·~수 있다·거의·대부분)이 들어간 명제 15 건을 따로 뽑아 전수로 다시 읽었다. 그 가운데 판정이 흔들리는 것은 rel-bs-why-body, rel-pmg-remanent, rel-sv-example 셋이고 모두 uncertain 으로 올렸다. 나머지 12 건은 「~할 수 있다」의 부정형이 반드시 거짓이 되는 형태라 true 가 맞다.",
+  "twist_check": "invertible 을 얻으려고 명제를 뒤튼 흔적 — rel-ct-distance 1 건이 명백하다(「두 파의 속도가 같다고 두면」). rel-sv-example 의 선언 구문과 rel-mg-erupt 의 「충분히」도 문면을 시험하기 어렵게 만든 쪽에 가까워 uncertain 으로 올렸다. 그 밖에 교과서가 하지 않은 한정을 새로 붙인 사례는 찾지 못했다 — rel-cmp-gravity 처럼 한정이 붙은 것들은 교과서 표·본문이 그대로 받친다.",
+  "changes": [
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-point",
+    "from": true,
+    "to": "조건을 문면에 넣으면 true 유지, 그대로 두면 false",
+    "checks": [
+     "c",
+     "b"
+    ]
+   },
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-distance",
+    "from": true,
+    "to": "재작성 뒤 재판정",
+    "checks": [
+     "c",
+     "e",
+     "b"
+    ]
+   }
+  ],
+  "watchlist": [
+   "esys-ps-time / rel-pst-gap (f)",
+   "esys-ps-time / rel-pst-origin (d)",
+   "esys-travel-time-curve / rel-ttc-distance (d)",
+   "esys-body-and-surface-wave / rel-bs-why-body (b)",
+   "esys-paleomagnetism / rel-pmg-remanent (b)",
+   "esys-shield-volcano / rel-sv-example (c)",
+   "esys-plume-tectonics / rel-ptc-evidence (f)",
+   "esys-magma / rel-mg-erupt (f)",
+   "esys-magma / rel-mg-source (d)"
+  ],
+  "table": [
+   {
+    "card_id": "esys-banded-iron-formation",
+    "relation_id": "rel-bif-precip",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-banded-iron-formation",
+    "relation_id": "rel-bif-band",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-banded-iron-formation",
+    "relation_id": "rel-bif-evidence",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-body-and-surface-wave",
+    "relation_id": "rel-bs-path",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-body-and-surface-wave",
+    "relation_id": "rel-bs-lwave",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-body-and-surface-wave",
+    "relation_id": "rel-bs-why-body",
+    "type": "conditional",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-carbon-cycle",
+    "relation_id": "rel-cc-weathering",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-carbon-cycle",
+    "relation_id": "rel-cc-limestone",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-carbon-cycle",
+    "relation_id": "rel-cc-volcano",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-coarse-grained-texture",
+    "relation_id": "rel-cgt-slow",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-coarse-grained-texture",
+    "relation_id": "rel-cgt-plutonic",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-coevolution",
+    "relation_id": "rel-ce-two-way",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-coevolution",
+    "relation_id": "rel-ce-channels",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-coevolution",
+    "relation_id": "rel-ce-extinction",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-comparison-of-terrestrial-planet-evolution",
+    "relation_id": "rel-cmp-size",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-comparison-of-terrestrial-planet-evolution",
+    "relation_id": "rel-cmp-gravity",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-comparison-of-terrestrial-planet-evolution",
+    "relation_id": "rel-cmp-distance",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-continental-drift",
+    "relation_id": "rel-cd-evidence",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-continental-drift",
+    "relation_id": "rel-cd-limit",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-continental-drift",
+    "relation_id": "rel-cd-pangaea",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-point",
+    "type": "conditional",
+    "current": true,
+    "proposed": "조건을 문면에 넣으면 true 유지, 그대로 두면 false",
+    "verdict": "defect"
+   },
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-slope",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-crustal-thickness",
+    "relation_id": "rel-ct-distance",
+    "type": "direct",
+    "current": true,
+    "proposed": "재작성 뒤 재판정",
+    "verdict": "defect"
+   },
+   {
+    "card_id": "esys-cyanobacteria",
+    "relation_id": "rel-cy-photo",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-cyanobacteria",
+    "relation_id": "rel-cy-prokaryote",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-cyanobacteria",
+    "relation_id": "rel-cy-order",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-direct-and-refracted-wave",
+    "relation_id": "rel-drw-speed",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-direct-and-refracted-wave",
+    "relation_id": "rel-drw-near",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-direct-and-refracted-wave",
+    "relation_id": "rel-drw-kink",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-earth-internal-structure",
+    "relation_id": "rel-eis-boundary",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-earth-internal-structure",
+    "relation_id": "rel-eis-order",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-earth-internal-structure",
+    "relation_id": "rel-eis-outercore",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-earthquake",
+    "relation_id": "rel-eq-elastic",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-earthquake",
+    "relation_id": "rel-eq-focus",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-earthquake",
+    "relation_id": "rel-eq-plate",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-echo-sounding",
+    "relation_id": "rel-es-time",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-echo-sounding",
+    "relation_id": "rel-es-discovery",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-fine-grained-texture",
+    "relation_id": "rel-fgt-fast",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-fine-grained-texture",
+    "relation_id": "rel-fgt-volcanic",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-glassy-texture",
+    "relation_id": "rel-gt-nocrystal",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-glassy-texture",
+    "relation_id": "rel-gt-compare",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-gutenberg-discontinuity",
+    "relation_id": "rel-gut-depth",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-gutenberg-discontinuity",
+    "relation_id": "rel-gut-swave",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-gutenberg-discontinuity",
+    "relation_id": "rel-gut-shadow",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-hot-spot",
+    "relation_id": "rel-hs-fixed",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-hot-spot",
+    "relation_id": "rel-hs-age",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-hot-spot",
+    "relation_id": "rel-hs-inside",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-igneous-rock",
+    "relation_id": "rel-ir-classify",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-igneous-rock",
+    "relation_id": "rel-ir-cooling",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-igneous-rock",
+    "relation_id": "rel-ir-depth",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-layer-differentiation",
+    "relation_id": "rel-ld-density",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-layer-differentiation",
+    "relation_id": "rel-ld-gravity",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-layer-differentiation",
+    "relation_id": "rel-ld-core",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-lehmann-discontinuity",
+    "relation_id": "rel-leh-depth",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-lehmann-discontinuity",
+    "relation_id": "rel-leh-weakp",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-lehmann-discontinuity",
+    "relation_id": "rel-leh-solid",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-lithosphere-and-asthenosphere",
+    "relation_id": "rel-la-plate",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-lithosphere-and-asthenosphere",
+    "relation_id": "rel-la-flow",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-lithosphere-and-asthenosphere",
+    "relation_id": "rel-la-sink",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-ocean",
+    "relation_id": "rel-mo-heat",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-ocean",
+    "relation_id": "rel-mo-sphere",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-ocean",
+    "relation_id": "rel-mo-mobility",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-type",
+    "relation_id": "rel-mt-visc",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-type",
+    "relation_id": "rel-mt-style",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-type",
+    "relation_id": "rel-mt-shape",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma-type",
+    "relation_id": "rel-mt-gas",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma",
+    "relation_id": "rel-mg-rise",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-magma",
+    "relation_id": "rel-mg-erupt",
+    "type": "conditional",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-magma",
+    "relation_id": "rel-mg-source",
+    "type": "conditional",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-mantle-convection-drag",
+    "relation_id": "rel-mcd-friction",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mantle-convection-drag",
+    "relation_id": "rel-mcd-cellsize",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mantle-convection-drag",
+    "relation_id": "rel-mcd-limit",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mantle-convection-hypothesis",
+    "relation_id": "rel-mch-heat",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mantle-convection-hypothesis",
+    "relation_id": "rel-mch-updown",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mantle-convection-hypothesis",
+    "relation_id": "rel-mch-role",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mineral-diversification",
+    "relation_id": "rel-md-count",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mineral-diversification",
+    "relation_id": "rel-md-life",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mohorovicic-discontinuity",
+    "relation_id": "rel-moho-pvel",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mohorovicic-discontinuity",
+    "relation_id": "rel-moho-crust",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-mohorovicic-discontinuity",
+    "relation_id": "rel-moho-thickness",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-oxygen-cycle",
+    "relation_id": "rel-oc-accumulate",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-oxygen-cycle",
+    "relation_id": "rel-oc-ozone",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-oxygen-cycle",
+    "relation_id": "rel-oc-uv",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-p-wave",
+    "relation_id": "rel-pwv-longitudinal",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-p-wave",
+    "relation_id": "rel-pwv-media",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-p-wave",
+    "relation_id": "rel-pwv-first",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-paleomagnetism",
+    "relation_id": "rel-pmg-remanent",
+    "type": "causal",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-paleomagnetism",
+    "relation_id": "rel-pmg-symmetry",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-paleomagnetism",
+    "relation_id": "rel-pmg-support",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-planetesimal",
+    "relation_id": "rel-pl-growth",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-planetesimal",
+    "relation_id": "rel-pl-heat",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plate-tectonics",
+    "relation_id": "rel-pt-lineage",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plate-tectonics",
+    "relation_id": "rel-pt-instruments",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plate-tectonics",
+    "relation_id": "rel-pt-limit",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plume-tectonics",
+    "relation_id": "rel-ptc-scale",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plume-tectonics",
+    "relation_id": "rel-ptc-interior",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plume-tectonics",
+    "relation_id": "rel-ptc-evidence",
+    "type": "causal",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-plume",
+    "relation_id": "rel-plm-origin",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plume",
+    "relation_id": "rel-plm-shape",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plume",
+    "relation_id": "rel-plm-down",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plutonic-rock",
+    "relation_id": "rel-pr-texture",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plutonic-rock",
+    "relation_id": "rel-pr-observe",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-plutonic-rock",
+    "relation_id": "rel-pr-depth",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-polarizing-microscope",
+    "relation_id": "rel-pmic-polarizer",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-polarizing-microscope",
+    "relation_id": "rel-pmic-thin",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-polarizing-microscope",
+    "relation_id": "rel-pmic-use",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-porphyritic-texture",
+    "relation_id": "rel-por-two-stage",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-porphyritic-texture",
+    "relation_id": "rel-por-mixed",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-primitive-atmosphere",
+    "relation_id": "rel-pa-component",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-primitive-atmosphere",
+    "relation_id": "rel-pa-co2",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-primitive-atmosphere",
+    "relation_id": "rel-pa-o2",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-primitive-crust-and-ocean",
+    "relation_id": "rel-pco-cooling",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-primitive-crust-and-ocean",
+    "relation_id": "rel-pco-rain",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-primitive-crust-and-ocean",
+    "relation_id": "rel-pco-co2fix",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-ps-time",
+    "relation_id": "rel-pst-distance",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-ps-time",
+    "relation_id": "rel-pst-gap",
+    "type": "conditional",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-ps-time",
+    "relation_id": "rel-pst-origin",
+    "type": "classification",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-ridge-push",
+    "relation_id": "rel-rp-uplift",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-ridge-push",
+    "relation_id": "rel-rp-slope",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-ridge-push",
+    "relation_id": "rel-rp-gravity",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-s-wave",
+    "relation_id": "rel-swave-transverse",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-s-wave",
+    "relation_id": "rel-swave-solid",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-s-wave",
+    "relation_id": "rel-swave-outercore",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seafloor-spreading",
+    "relation_id": "rel-sfs-ridge",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seafloor-spreading",
+    "relation_id": "rel-sfs-trench",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seafloor-spreading",
+    "relation_id": "rel-sfs-age",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seismic-tomography",
+    "relation_id": "rel-tomo-temp",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seismic-tomography",
+    "relation_id": "rel-tomo-slab",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seismic-tomography",
+    "relation_id": "rel-tomo-plume",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seismic-wave",
+    "relation_id": "rel-swv-medium",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seismic-wave",
+    "relation_id": "rel-swv-boundary",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-seismic-wave",
+    "relation_id": "rel-swv-inference",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shadow-zone",
+    "relation_id": "rel-sz-range",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shadow-zone",
+    "relation_id": "rel-sz-pcause",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shadow-zone",
+    "relation_id": "rel-sz-scause",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shadow-zone",
+    "relation_id": "rel-sz-size",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shield-volcano",
+    "relation_id": "rel-sv-slope",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shield-volcano",
+    "relation_id": "rel-sv-magma",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-shield-volcano",
+    "relation_id": "rel-sv-example",
+    "type": "classification",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-slab-pull",
+    "relation_id": "rel-sp-density",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-slab-pull",
+    "relation_id": "rel-sp-whole",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-slab-pull",
+    "relation_id": "rel-sp-speed",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-slab-pull",
+    "relation_id": "rel-sp-dominant",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "relation_id": "rel-se-co2",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "relation_id": "rel-se-albedo",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "relation_id": "rel-se-thaw",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-snowball-earth",
+    "relation_id": "rel-se-evidence",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-solar-nebula",
+    "relation_id": "rel-neb-origin",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-solar-nebula",
+    "relation_id": "rel-neb-shock",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-solar-system-formation",
+    "relation_id": "rel-ssf-contraction",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-solar-system-formation",
+    "relation_id": "rel-ssf-protosun",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-solar-system-formation",
+    "relation_id": "rel-ssf-accretion",
+    "type": "direct",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-stratovolcano",
+    "relation_id": "rel-st-layer",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-stratovolcano",
+    "relation_id": "rel-st-slope",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-stratovolcano",
+    "relation_id": "rel-st-example",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-terrestrial-and-jovian-planet",
+    "relation_id": "rel-tj-distance",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-terrestrial-and-jovian-planet",
+    "relation_id": "rel-tj-solarwind",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-travel-time-curve",
+    "relation_id": "rel-ttc-gap",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-travel-time-curve",
+    "relation_id": "rel-ttc-which",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-travel-time-curve",
+    "relation_id": "rel-ttc-distance",
+    "type": "direct",
+    "current": true,
+    "proposed": "true",
+    "verdict": "uncertain"
+   },
+   {
+    "card_id": "esys-volcanic-activity",
+    "relation_id": "rel-va-igneous",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-activity",
+    "relation_id": "rel-va-sediment",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-activity",
+    "relation_id": "rel-va-rockcycle",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-ejecta",
+    "relation_id": "rel-ve-kinds",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-ejecta",
+    "relation_id": "rel-ve-expand",
+    "type": "inverse",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-ejecta",
+    "relation_id": "rel-ve-size",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-rock",
+    "relation_id": "rel-vr-texture",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-rock",
+    "relation_id": "rel-vr-compare",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-volcanic-rock",
+    "relation_id": "rel-vr-depth",
+    "type": "conditional",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-water-cycle",
+    "relation_id": "rel-wtc-energy",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-water-cycle",
+    "relation_id": "rel-wtc-path",
+    "type": "causal",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   },
+   {
+    "card_id": "esys-water-cycle",
+    "relation_id": "rel-wtc-landform",
+    "type": "classification",
+    "current": true,
+    "proposed": true,
+    "verdict": "ok"
+   }
+  ]
+ },
+ "cross_unit": {
+  "same_links_checked": 11,
+  "esys_vs_earth2": {
+   "pairs": [
+    "concept:igneous-rock",
+    "concept:magma-type",
+    "concept:magma",
+    "concept:plutonic-rock",
+    "concept:volcanic-rock"
+   ],
+   "finding": "내용 충돌 없음. earth-2 는 SiO2 조성 축으로, esys-1 은 온도·점성·가스량 축으로 마그마를 가르고 두 카드가 그 사실을 note 에 적어 두었다. invertible 도 같은 잣대다 — earth-2 의 false 4 건(rel-mag-origin, rel-plu-members, rel-plu-uplift, rel-vol-members)은 모두 「한 문장 안에 맞바꿀 짝이 없어 inverted_text 를 정하지 못한다」는 문면 근거를 들었지 form.type 을 근거로 들지 않았다. esys-1 의 기준으로 봐도 무리가 없다.",
+   "one_note": "esys-magma 의 definition·rel-mg-source 는 마그마의 발생 자리를 「지각 하부」로 한정하는데 earth-magma 는 「지각 아래나 맨틀에서」로 둔다. 같은 concept_key 를 쓰면서 범위가 다르다 (relations.findings 의 esys-magma/rel-mg-source 항목 참조)."
+  },
+  "esys_vs_isci1": {
+   "pairs": [
+    "concept:water-cycle",
+    "concept:carbon-cycle",
+    "concept:earthquake",
+    "concept:plate-tectonics",
+    "concept:solar-system-formation",
+    "concept:volcanic-activity"
+   ],
+   "finding": "명제 내용에 충돌은 없다. 그러나 invertible 이 같은 기준으로 내려지지 않았다. isci1 쪽 6 장 19 개 명제 가운데 12 개가 invertible: false 인데, 그 사유가 「분류형 명제라 뒤집을 양의 방향이 없다」·「인과라 방향을 뒤집는 꼴이 아니다」로 form.type 을 근거 삼은 것이다. 설계서가 무효로 못 박은 바로 그 사유이고, esys-1 은 같은 형태의 명제(분류형 맞바꿈, 인과 방향 부정)를 모두 true 로 처리했다. 두 단원이 같은 concept_key 로 이어져 있는데 판정 잣대가 다르다.",
+   "isci1_recheck_candidates": [
+    "isci1-water-cycle / rel-wc-erosion — 뒤집으면 「물이 하천을 이루어 흘러도 지표는 깎이지 않는다」로 반드시 거짓. true 후보.",
+    "isci1-water-cycle / rel-wc-biosphere — 사유가 「분류형이라 방향이 없다」로 무효. 재판정 필요.",
+    "isci1-plate-tectonics / rel-pt-mantle — 「맨틀이 대류해도 표면은 판으로 갈라져 움직이지 않는다」 반드시 거짓. true 후보.",
+    "isci1-plate-tectonics / rel-pt-boundary — true 후보.",
+    "isci1-plate-tectonics / rel-pt-continent — true 후보.",
+    "isci1-plate-tectonics / rel-pt-plate-kind — 해양판과 대륙판의 이름을 맞바꾸면 반드시 거짓. true 후보이며, 사유가 esys-1 의 분류형 처리와 정면으로 어긋난다.",
+    "isci1-carbon-cycle / rel-cc-photo-resp — 광합성과 호흡을 맞바꾸면 반드시 거짓. true 후보.",
+    "isci1-carbon-cycle / rel-cc-ocean — true 후보.",
+    "isci1-volcanic-activity / rel-volc-distribution — 「화산은 전 세계에 고르게 있다」 거짓. true 후보.",
+    "isci1-volcanic-activity / rel-volc-hydro — true 후보.",
+    "isci1-solar-system-formation / rel-solar-disk — 중심과 원반에서 만들어지는 것을 맞바꾸면 반드시 거짓. true 후보.",
+    "isci1-solar-system-formation / rel-solar-origin — true 후보.",
+    "isci1-earthquake / rel-eq-tsunami·rel-eq-distribution·rel-eq-biosphere — 뒤집어도 참이 될 여지가 있어 false 유지가 타당하다. 다만 사유 문구가 form.type 을 들고 있어 다시 써야 한다."
+   ],
+   "note": "이것은 isci1 단원에 대한 보고일 뿐이고 그 카드를 고치는 것은 이 작업의 범위가 아니다. isci1-2·isci1-3 에 C6 를 다시 돌릴지는 메인이 정한다."
+  },
+  "water_cycle_avoidance": {
+   "question": "작성자가 esys-water-cycle 에서 isci1 쪽이 false 로 잠근 명제를 피해 간 것이 옳았는가",
+   "answer": "결과는 옳았다. isci1-water-cycle 의 rel-wc-erosion(물의 흐름 → 침식)이 false 로 잠겨 있고, esys-water-cycle 은 같은 소재를 rel-wtc-landform 「삼각주는 퇴적으로, 해식 동굴은 침식으로」라는 맞바꿈 형태로 다시 세워 true 로 매겼다. 이 명제는 뒤집으면 두 지형을 만든 작용이 맞바뀌어 반드시 거짓이므로 판정이 바르다. 다만 피해야 했던 까닭이 isci1 쪽 명제가 원래 false 여서가 아니라 isci1 쪽이 무효 사유로 잘못 잠겨 있어서다. isci1-3 을 재판정하면 회피할 이유 자체가 없어진다."
+  }
+ },
+ "escalation": {
+  "out_of_scope_over_2": false,
+  "out_of_scope_count": 0,
+  "uncertain_over_20pct": false,
+  "uncertain_pct": {
+   "curriculum": "2/59 = 3.4 %",
+   "relations": "9/172 = 5.2 %"
+  },
+  "note": "두 에스컬레이션 조건 모두 걸리지 않는다. 설계서 §4.3 C5 의 C1 복귀 조건(이탈 2건 초과)에도 해당하지 않는다."
+ },
+ "not_done": [
+  "진위 확정 — 하지 않았다. 진위가 걸린 항목(rel-bs-why-body, rel-bif-evidence 등)은 uncertain 으로 두거나 C8 검토 항목으로 남겼다.",
+  "verified_by 는 59 장 172 개 명제 모두 pending 그대로다. 건드리지 않았다.",
+  "카드 파일·사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)은 모두 읽기만 했다.",
+  "esys-comparison-of-terrestrial-planet-evolution 이 인용한 지구형 행성 표(표면 중력·대기압 10⁻¹⁴·0.01·90배·평균 표면 온도)는 output/source/esys-1/text.jsonl 에 표가 추출되어 있지 않아 대조하지 못했다.",
+  "<track>-facts 스킬이 없어 스킬 대조는 건너뛰었다. 대신 교과서 원문으로 플룸 머리 800~1200 km·꼬리 100~200 km, 맨틀-외핵 경계 2900 km, 레만 5100 km, 섭입판 정체 660 km, 암영대 103°~142°/103°~180°, 광물 60여 종 → 4200여 종, 하와이 510만 년, 박편 0.03 mm, 얼음덩어리 지구 −50 ℃ → 약 50 ℃, 판게아 약 2억 년, 태평양판 > 남극판 이동 속도를 직접 확인했다(모두 일치)."
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "id": "esys-ice-crystal-process",
+ "concept_key": "concept:ice-crystal-process",
+ "registry_status": "new",
+ "term": "빙정 과정",
+ "notation": {
+  "hanja": "氷晶過程",
+  "english": "ice crystal process",
+  "hanja_gloss": "氷 얼음 빙 · 晶 맑을 정 · 過 지날 과 · 程 길 정"
+ },
+ "definition": "기온 -40~0 ℃ 구간의 구름에서 과냉각 물방울로부터 수증기가 빙정 쪽으로 옮겨 가 빙정이 커지고 떨어지는 강수 과정.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-icp-vapor-pressure",
+   "text": "과냉각 물방울 둘레의 포화 수증기압이 빙정 둘레보다 높아 수증기 분자가 물방울에서 빙정 쪽으로 확산된다.",
+   "form": {
+    "condition": "빙정과 과냉각 물방울이 함께 있을 때",
+    "type": "causal",
+    "scope": "기온 -40~0 ℃ 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「수증기 분자가 빙정에서 과냉각 물방울 쪽으로 확산된다」는 포화 수증기압의 대소와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "빙정과 과냉각 물방울이 함께 있으면 수증기 분자가 빙정에서 과냉각 물방울 쪽으로 확산된다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-icp-growth-fall",
+   "text": "빙정이 수증기를 받아 점점 커지면 그 무게 때문에 떨어져 강수가 된다.",
+   "form": {
+    "condition": "빙정이 계속 성장할 때",
+    "type": "causal",
+    "scope": "빙정 과정이 일어나는 구름 부분"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「커져도 무게가 늘지 않아 떨어지지 않는다」는 무게 때문에 낙하한다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "빙정은 수증기를 받아 점점 커져도 무게가 늘지 않아 떨어지지 않는다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-icp-range",
+   "text": "빙정 과정은 기온이 -40 ℃에서 0 ℃ 사이인 구름 부분에서 일어난다.",
+   "form": {
+    "condition": "구름을 기온 구간으로 나누어 볼 때",
+    "type": "classification",
+    "scope": "적란운처럼 두꺼운 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기온이 0 ℃ 이상인 구름 부분에서 일어난다」는 그곳이 병합 과정 구역이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "빙정 과정은 기온이 0 ℃ 이상인 구름 부분에서 일어난다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "빙정 과정에서는 과냉각 물방울끼리 서로 붙어 얼음이 커진다.",
+   "why_wrong": "물방울이 붙는 것이 아니라 수증기가 물방울에서 빙정 쪽으로 확산해 빙정에 달라붙는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-icp-vapor-pressure"
+  },
+  {
+   "text": "빙정 과정은 0 ℃보다 따뜻한 구름에서도 일어난다.",
+   "why_wrong": "빙정이 있어야 하므로 -40~0 ℃ 구간에서 일어난다. 0 ℃ 이상에서는 병합 과정이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-icp-range"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-supercooled-droplet"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-absolute-instability"
+  },
+  {
+   "type": "related",
+   "target": "esys-coalescence-process"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-3",
+ "pages": [
+  100
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1
+}

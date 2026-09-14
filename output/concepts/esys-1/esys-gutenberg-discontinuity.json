@@ -1,0 +1,110 @@
+{
+  "id": "esys-gutenberg-discontinuity",
+  "concept_key": "concept:gutenberg-discontinuity",
+  "registry_status": "new",
+  "term": "구텐베르크 불연속면",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Gutenberg discontinuity",
+    "hanja_note": "'구텐베르크'는 발견자의 이름을 옮긴 음차어여서 한자 표기가 없다. '불연속면'만 不連續面이다."
+  },
+  "definition": "S파가 더 나아가지 못하는 깊이 약 2900 km에 놓인 맨틀과 핵의 경계면.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gut-depth",
+      "text": "구텐베르크 불연속면은 깊이 약 2900 km에 있는 맨틀과 핵의 경계다.",
+      "form": {
+        "condition": "깊이에 따른 지진파 속도 분포를 읽을 때",
+        "type": "classification",
+        "scope": "이 교과서가 든 깊이 값"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「깊이 약 5100 km의 외핵과 내핵 경계다」는 그 깊이가 레만 불연속면이라는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구텐베르크 불연속면은 깊이 약 5100 km에 있는 외핵과 내핵의 경계다."
+    },
+    {
+      "id": "rel-gut-swave",
+      "text": "이 경계면 아래로 S파가 전달되지 못하는 것에서 그 아래가 액체 상태임을 알 수 있다.",
+      "form": {
+        "condition": "S파가 고체에서만 전달될 때",
+        "type": "causal",
+        "scope": "외핵의 상태 추론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「S파가 잘 전달되는 것에서 액체임을 알 수 있다」는 S파가 액체를 지나지 못한다는 성질과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 경계면 아래로 S파가 잘 전달되는 것에서 그 아래가 액체 상태임을 알 수 있다."
+    },
+    {
+      "id": "rel-gut-shadow",
+      "text": "구텐베르크는 각거리 103° 너머에 S파가 닿지 않는 암영대를 연구해 이 경계를 찾아냈다.",
+      "form": {
+        "condition": "1914년의 지진 기록을 분석할 때",
+        "type": "causal",
+        "scope": "구텐베르크 불연속면의 발견 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「103° 너머에도 S파가 빠짐없이 닿는다는 것을 확인해 찾아냈다」는 암영대의 존재와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구텐베르크는 각거리 103° 너머에도 S파가 빠짐없이 닿는다는 것을 확인해 이 경계를 찾아냈다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "구텐베르크 불연속면은 외핵과 내핵의 경계다",
+      "why_wrong": "외핵과 내핵의 경계는 깊이 약 5100 km의 레만 불연속면이다. 구텐베르크 불연속면은 깊이 약 2900 km의 맨틀과 핵의 경계다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gut-depth"
+    },
+    {
+      "text": "S파가 닿지 않는 구역이 있는 것은 그쪽에 지진 관측소가 없기 때문이다",
+      "why_wrong": "관측소가 있어도 기록되지 않는다. S파가 액체인 외핵을 통과하지 못해 생기는 암영대다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gut-shadow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-earth-internal-structure"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-shadow-zone"
+    },
+    {
+      "type": "related",
+      "target": "esys-lehmann-discontinuity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-2",
+  "pages": [
+    41
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "구텐베르크면"
+  ]
+}

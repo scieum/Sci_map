@@ -1,0 +1,114 @@
+{
+ "id": "esys-weather-chart",
+ "concept_key": "concept:weather-chart",
+ "registry_status": "new",
+ "term": "일기도",
+ "notation": {
+  "hanja": "日氣圖",
+  "english": "weather chart",
+  "hanja_gloss": "日 날 일 · 氣 기운 기 · 圖 그림 도"
+ },
+ "definition": "여러 곳에서 같은 시각에 모은 관측 자료를 지도 위에 옮겨 기압·기온·바람 분포를 읽을 수 있게 만든 그림.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-wc-surface-reduction",
+   "text": "지상 일기도는 관측소마다 고도가 달라 생기는 기압 차를 없애려고 측정 기압을 해면 기압으로 바꾼 뒤 등압선을 그린다.",
+   "form": {
+    "condition": "관측소의 고도가 서로 다를 때",
+    "type": "causal",
+    "scope": "지상 일기도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「잰 기압을 그대로 써서 등압선을 그린다」는 보정 절차가 있다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지상 일기도는 관측소에서 잰 기압을 그대로 써서 등압선을 그린다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-wc-upper-height",
+   "text": "상층 일기도는 등압면이 놓인 고도를 재어 등고선으로 그리므로 기압 경도력을 구할 때 공기 밀도를 따질 필요가 없다.",
+   "form": {
+    "condition": "등압면을 기준면으로 삼을 때",
+    "type": "causal",
+    "scope": "상층 일기도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「상층 일기도에서도 기압 경도력을 구할 때 공기 밀도를 함께 따져야 한다」는 그 이점을 부정하는 것이라 참이 될 경우가 없다.",
+   "inverted_text": "상층 일기도에서도 기압 경도력을 구하려면 공기 밀도를 함께 따져야 한다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-wc-500hpa",
+   "text": "500 hPa 고도는 전체 공기량을 연직으로 반씩 나누는 자리라 그 일기도가 날씨 변화 예측에 중요하게 쓰인다.",
+   "form": {
+    "condition": "대기를 질량으로 이등분해 볼 때",
+    "type": "causal",
+    "scope": "500 hPa 등압면"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「500 hPa 일기도는 날씨 예측에 별 쓸모가 없다」는 중요하게 활용된다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "500 hPa 고도의 일기도는 대기의 한쪽 끝을 볼 뿐이어서 날씨 변화 예측에는 별 쓸모가 없다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "상층 일기도의 등고선은 땅의 높낮이를 나타낸 것이다.",
+   "why_wrong": "특정 등압면이 놓인 높이를 이은 선이다. 지형의 등고선과는 뜻이 다르다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-wc-upper-height"
+  },
+  {
+   "text": "지상 일기도의 등압선은 관측소에서 잰 기압을 그대로 이은 것이다.",
+   "why_wrong": "관측소 고도 차를 없애려고 해면 기압으로 바꾼 값을 이은 것이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-wc-surface-reduction"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-pressure"
+  },
+  {
+   "type": "next",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "related",
+   "target": "esys-trough-and-ridge"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05",
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-2",
+ "pages": [
+  111
+ ],
+ "difficulty": 3,
+ "role": "context",
+ "version": 1,
+ "aliases": [
+  "종관일기도"
+ ],
+ "notes": [
+  "C5 retag — 12지시03-06 을 더했다(03-05 는 그대로 둔다). rel-wc-upper-height·rel-wc-500hpa 는 지도서 25쪽 탐구 활동 「편서풍 파동 및 제트류와 관련지어 상층 일기도 해석하기」와 26쪽 고려 사항을 받치므로 03-06 으로 옮겼고, rel-wc-surface-reduction 만 03-05 에 남는다."
+ ]
+}

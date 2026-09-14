@@ -1,0 +1,112 @@
+{
+  "id": "esys-seismic-wave",
+  "concept_key": "concept:seismic-wave",
+  "registry_status": "new",
+  "term": "지진파",
+  "notation": {
+    "hanja": "地震波",
+    "english": "seismic wave",
+    "hanja_gloss": "地 땅 지 · 震 벼락 진 · 波 물결 파"
+  },
+  "definition": "지진이 일어날 때 방출된 에너지가 사방으로 퍼지며 전달되는 파동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-swv-medium",
+      "text": "지진파의 속도는 지나는 매질의 밀도나 상태 같은 성질에 따라 달라진다.",
+      "form": {
+        "condition": "성질이 다른 매질을 잇따라 지날 때",
+        "type": "causal",
+        "scope": "지구 내부를 지나는 지진파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「매질의 성질과 상관없이 어디서나 같다」는 속도 분포로 내부를 추론한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지진파의 속도는 지나는 매질의 성질과 상관없이 지구 안 어디서나 같다."
+    },
+    {
+      "id": "rel-swv-boundary",
+      "text": "성질이 서로 다른 매질의 경계에서 지진파는 반사하거나 굴절한다.",
+      "form": {
+        "condition": "매질이 바뀌는 면에 지진파가 닿을 때",
+        "type": "causal",
+        "scope": "지구 내부의 불연속면"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「경계에서도 방향을 바꾸지 않고 그대로 지난다」는 반사·굴절한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성질이 서로 다른 매질의 경계에서도 지진파는 방향을 바꾸지 않고 그대로 지나간다."
+    },
+    {
+      "id": "rel-swv-inference",
+      "text": "지진파의 전파 경로와 속도를 분석하면 직접 볼 수 없는 지구 내부의 구조를 추론할 수 있다.",
+      "form": {
+        "condition": "여러 관측소의 기록을 모아 볼 때",
+        "type": "causal",
+        "scope": "지구 내부 구조를 알아내는 방법"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분석해도 내부 구조는 알아낼 수 없다」는 불연속면을 밝혀냈다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지진파의 전파 경로와 속도를 분석해도 지구 내부의 구조는 알아낼 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지진파는 지구 내부 어디서나 같은 속도로 전달된다",
+      "why_wrong": "매질의 밀도와 상태에 따라 속도가 달라진다. 속도가 갑자기 바뀌는 깊이를 찾아 층의 경계를 알아냈다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-swv-medium"
+    },
+    {
+      "text": "지구 내부 구조는 땅을 깊이 파 보아야만 알 수 있다",
+      "why_wrong": "사람이 팔 수 있는 깊이는 얼마 되지 않는다. 지구 내부를 지나온 지진파의 경로와 속도가 그 대신 구조를 알려 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-swv-inference"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-earthquake"
+    },
+    {
+      "type": "next",
+      "target": "esys-body-and-surface-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-shadow-zone"
+    },
+    {
+      "type": "next",
+      "target": "esys-seismic-tomography"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    38,
+    45
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

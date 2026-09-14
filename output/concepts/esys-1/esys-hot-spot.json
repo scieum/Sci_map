@@ -1,0 +1,112 @@
+{
+  "id": "esys-hot-spot",
+  "concept_key": "concept:hot-spot",
+  "registry_status": "new",
+  "term": "열점",
+  "notation": {
+    "hanja": "熱點",
+    "english": "hot spot",
+    "hanja_gloss": "熱 더울 열 · 點 점 점"
+  },
+  "definition": "판 아래 고정된 자리에서 고온의 마그마가 솟아올라 화산 활동을 일으키는 지점.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hs-fixed",
+      "text": "열점의 자리는 판이 움직여도 바뀌지 않아 그 위를 지나간 판에 화산섬이 줄지어 남는다.",
+      "form": {
+        "condition": "마그마가 판보다 깊은 곳에서 올라올 때",
+        "type": "causal",
+        "scope": "하와이 열도 같은 판 내부 화산섬"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「열점이 판을 따라 함께 움직여 화산섬이 한자리에만 쌓인다」는 분출 위치가 바뀌지 않는다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "열점의 자리는 판을 따라 함께 움직이므로 화산섬은 한자리에만 겹겹이 쌓인다."
+    },
+    {
+      "id": "rel-hs-age",
+      "text": "하와이 열도의 섬들은 판이 이동해 온 쪽인 북서쪽으로 갈수록 나이가 많다.",
+      "form": {
+        "condition": "열점의 위치가 고정되어 있을 때",
+        "type": "direct",
+        "scope": "하와이 열도",
+        "antecedent": {
+          "quantity": "열점에서 북서쪽으로 떨어진 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "화산섬의 나이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「북서쪽으로 갈수록 나이가 적다」는 카우아이섬이 510만 년 전이고 하와이섬이 현재라는 자료와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "하와이 열도의 섬들은 북서쪽으로 갈수록 나이가 적다."
+    },
+    {
+      "id": "rel-hs-inside",
+      "text": "열점을 연구하면 판의 경계가 아닌 판 내부에서 화산 활동이 일어나는 까닭을 설명할 수 있다.",
+      "form": {
+        "condition": "판 경계에서 멀리 떨어진 화산을 볼 때",
+        "type": "causal",
+        "scope": "판 내부의 화산 활동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「열점은 화산 활동이 판의 경계에서만 일어남을 보여 준다」는 열점을 세운 까닭과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "열점은 화산 활동이 판의 경계에서만 일어난다는 것을 보여 준다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "열점은 그 위의 판과 함께 이동한다",
+      "why_wrong": "열점은 판보다 훨씬 깊은 곳에 고정되어 있다. 움직이는 것은 판이고, 그래서 화산섬이 줄지어 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hs-fixed"
+    },
+    {
+      "text": "하와이 열도에서 지금 화산 활동이 가장 활발한 섬이 가장 오래된 섬이다",
+      "why_wrong": "지금 분출하는 하와이섬이 열점 바로 위에 있는 가장 젊은 섬이고, 북서쪽 카우아이섬이 가장 오래되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hs-age"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-plate-tectonics"
+    },
+    {
+      "type": "next",
+      "target": "esys-plume"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-3",
+  "pages": [
+    29,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

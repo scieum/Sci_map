@@ -1,0 +1,87 @@
+{
+  "id": "esys-terrestrial-and-jovian-planet",
+  "concept_key": "concept:terrestrial-and-jovian-planet",
+  "registry_status": "new",
+  "term": "지구형 행성과 목성형 행성",
+  "notation": {
+    "hanja": "地球型 木星型 行星",
+    "english": "terrestrial and jovian planet",
+    "hanja_gloss": "地 땅 지 · 球 공 구 · 型 모형 형 · 木 나무 목 · 星 별 성 · 型 모형 형 · 行 다닐 행 · 星 별 성"
+  },
+  "definition": "원시 태양으로부터의 거리에 따라 서로 다른 물질을 재료로 자란 두 행성 무리. 가까운 쪽은 무거운 원소가, 먼 쪽은 기체와 얼음이 주된 재료였다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tj-distance",
+      "text": "원시 태양에 가까운 영역에서는 무거운 원소가 모여 지구형 행성이, 먼 영역에서는 기체와 얼음이 모여 목성형 행성이 자랐다.",
+      "form": {
+        "condition": "원시 태양이 열과 빛을 내뿜기 시작한 뒤",
+        "type": "classification",
+        "scope": "태양계 행성이 만들어지는 마지막 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 가까운 영역과 먼 영역의 행성 무리를 맞바꾼 것이라 원시 태양 부근에서 가벼운 물질이 증발했다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원시 태양에 가까운 영역에서는 기체와 얼음이 모여 목성형 행성이, 먼 영역에서는 무거운 원소가 모여 지구형 행성이 자랐다."
+    },
+    {
+      "id": "rel-tj-solarwind",
+      "text": "태양풍은 가벼운 기체를 바깥쪽으로 밀어내어 원시 태양에서 먼 영역에 기체와 얼음이 쌓이게 했다.",
+      "form": {
+        "condition": "원시 태양이 강한 태양풍을 내보낼 때",
+        "type": "causal",
+        "scope": "원시 태양계 원반 안의 물질 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양풍이 가벼운 기체를 안쪽으로 끌어모았다」는 밀려난 기체가 바깥에 모였다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양풍은 가벼운 기체를 안쪽으로 끌어모아 원시 태양에 가까운 영역에 기체와 얼음이 쌓이게 했다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "행성마다 구성 물질이 다른 것은 저마다 다른 성운에서 왔기 때문이다",
+      "why_wrong": "모두 같은 원시 태양계 성운에서 나왔지만, 원시 태양으로부터의 거리에 따라 남을 수 있었던 물질이 달라 두 무리로 갈렸다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tj-distance"
+    },
+    {
+      "text": "태양풍은 무거운 원소를 바깥으로 밀어냈다",
+      "why_wrong": "태양풍에 밀려난 것은 가벼운 기체이고, 녹는점이 높은 무거운 원소는 안쪽에 남아 지구형 행성의 재료가 되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tj-solarwind"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-solar-system-formation"
+    },
+    {
+      "type": "next",
+      "target": "esys-comparison-of-terrestrial-planet-evolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-1",
+  "pages": [
+    13
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

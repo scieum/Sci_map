@@ -1,0 +1,133 @@
+{
+ "id": "esys-coriolis-force",
+ "concept_key": "concept:coriolis-force",
+ "registry_status": "new",
+ "term": "전향력",
+ "notation": {
+  "hanja": "轉向力",
+  "hanja_gloss": "轉 구를 전 · 向 향할 향 · 力 힘 력",
+  "english": "Coriolis force",
+  "symbol_display": "C = 2vΩsinφ",
+  "symbol_plain": "C = 2 v Omega sin phi"
+ },
+ "definition": "자전하는 지구 위에서 운동을 바라볼 때, 물체의 경로가 휘어 보이게 만드는 겉보기 힘.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cf-magnitude",
+   "text": "물체가 빠를수록, 그리고 고위도로 갈수록 이 힘의 크기는 커진다.",
+   "form": {
+    "condition": "지구의 자전 각속도가 일정할 때",
+    "type": "direct",
+    "scope": "지구 표면을 수평으로 움직이는 물체",
+    "antecedent": {
+     "quantity": "물체의 속도와 위도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "전향력의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장은 「빠를수록 고위도일수록 작아진다」인데, 속도와 위도의 사인값 둘 다에 비례하므로 반드시 거짓이다.",
+   "curriculum": [
+    "12지시02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "물체가 빠를수록, 그리고 고위도로 갈수록 전향력은 작아진다."
+  },
+  {
+   "id": "rel-cf-direction",
+   "text": "북반구에서는 물체가 가는 쪽의 오른쪽 90°로, 남반구에서는 왼쪽 90°로 작용한다.",
+   "form": {
+    "condition": "물체가 수평면 위를 움직일 때",
+    "type": "classification",
+    "scope": "지구 표면"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장은 두 반구의 방향을 맞바꾼 것인데, 관측자가 선 평면이 도는 쪽이 반구마다 반대라 반드시 거짓이다.",
+   "curriculum": [
+    "12지시02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "북반구에서 전향력은 물체가 가는 쪽의 왼쪽 90°로, 남반구에서는 오른쪽 90°로 작용한다."
+  },
+  {
+   "id": "rel-cf-scale",
+   "text": "규모가 작은 운동에서는 효과가 거의 드러나지 않고, 수백에서 수천 km를 흐르는 해류에서 뚜렷해진다.",
+   "form": {
+    "condition": "운동의 공간 규모를 서로 견줄 때",
+    "type": "direct",
+    "scope": "지구 위 유체의 운동",
+    "antecedent": {
+     "quantity": "운동의 공간 규모",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "전향력 효과의 뚜렷함",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장은 「규모가 작을수록 효과가 뚜렷하다」인데, 작은 규모에서는 휘는 정도가 너무 작아 드러나지 않으므로 반드시 거짓이다.",
+   "curriculum": [
+    "12지시02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "규모가 작은 운동일수록 전향력의 효과가 뚜렷하게 드러난다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "적도에서도 전향력이 크게 작용해 해류가 많이 휜다.",
+   "why_wrong": "전향력의 크기는 위도의 사인값에 비례해 적도에서는 거의 0이 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cf-magnitude"
+  },
+  {
+   "text": "욕조의 물이 빠질 때 도는 방향도 전향력이 정한다.",
+   "why_wrong": "그만한 규모에서는 전향력의 효과가 너무 작아 드러나지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cf-scale"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-ekman-spiral",
+   "note": "전향력을 알아야 나선의 편향을 읽는다"
+  },
+  {
+   "type": "next",
+   "target": "esys-geostrophic-balance"
+  },
+  {
+   "type": "same",
+   "target": "esys-coriolis-force-on-wind",
+   "note": "concept_key 가 같다 — Ⅲ단원에서는 바람에 작용하는 전향력으로 다시 나온다"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시02-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅱ. 해수의 운동",
+ "unit_id": "esys-2",
+ "topic_id": "esys-2-01-2",
+ "pages": [
+  59
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "aliases": [
+  "코리올리 힘"
+ ],
+ "notes": [
+  "esys-3 의 같은 개념 카드가 id 충돌로 esys-coriolis-force-on-wind 로 이름을 바꿨다. 교과서가 먼저 정의하는 이 카드가 평범한 id 를 지킨다. same 링크만 더했고 내용은 손대지 않았다."
+ ]
+}

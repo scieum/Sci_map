@@ -1,0 +1,132 @@
+{
+  "id": "esys-slab-pull",
+  "concept_key": "concept:slab-pull",
+  "registry_status": "new",
+  "term": "섭입하는 판이 당기는 힘",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "slab pull",
+    "hanja_note": "'당기는 힘'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다. '섭입(攝入)'만 한자어다."
+  },
+  "definition": "식어서 무거워진 해양판이 섭입대에서 가라앉으며 뒤따르는 판 전체를 끌어당기는, 판을 움직이는 능동적인 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sp-density",
+      "text": "해양판이 주변 연약권보다 밀도가 커지면 섭입대에서 스스로 가라앉기 시작한다.",
+      "form": {
+        "condition": "해양판이 오래되어 충분히 냉각되었을 때",
+        "type": "conditional",
+        "scope": "섭입대에 이른 해양판"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「밀도가 커지면 오히려 떠올라 가라앉지 않는다」는 밀도가 크면 침강한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해양판이 주변 연약권보다 밀도가 커지면 섭입대에서 오히려 떠올라 가라앉지 않는다."
+    },
+    {
+      "id": "rel-sp-whole",
+      "text": "가라앉는 부분이 뒤따르는 부분을 끌어당겨 판 전체의 움직임에 영향을 미친다.",
+      "form": {
+        "condition": "판이 하나로 이어져 있을 때",
+        "type": "causal",
+        "scope": "섭입대에 이어진 해양판"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가라앉는 부분이 뒤따르는 부분을 밀어내 섭입대에서 멀어지게 한다」는 잡아당긴다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가라앉는 부분이 뒤따르는 부분을 밀어내어 판 전체를 섭입대에서 멀어지게 한다."
+    },
+    {
+      "id": "rel-sp-speed",
+      "text": "해구가 발달한 판은 섭입대가 거의 없는 판보다 이동 속도가 빠르다.",
+      "form": {
+        "condition": "여러 판의 이동 속도를 견줄 때",
+        "type": "direct",
+        "scope": "태평양판과 남극판 같은 사례",
+        "antecedent": {
+          "quantity": "해구(섭입대)의 발달 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "판의 이동 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「해구가 발달한 판이 더 느리다」는 태평양판이 남극판보다 빠르다는 자료와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해구가 발달한 판은 섭입대가 거의 없는 판보다 이동 속도가 느리다."
+    },
+    {
+      "id": "rel-sp-dominant",
+      "text": "최근 연구는 판을 움직이는 힘 가운데 섭입하는 판이 당기는 힘이 해령에서 미는 힘보다 크다고 본다.",
+      "form": {
+        "condition": "두 능동적인 힘의 크기를 견줄 때",
+        "type": "conditional",
+        "scope": "판을 움직이는 힘의 상대적 크기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 힘의 크기를 맞바꾼 것이라 최근 연구 결과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "최근 연구는 판을 움직이는 힘 가운데 해령에서 미는 힘이 섭입하는 판이 당기는 힘보다 크다고 본다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "섭입대가 거의 없는 남극판이 해구가 많은 태평양판보다 빠르게 움직인다",
+      "why_wrong": "자료는 그 반대다. 해구가 발달해 당기는 힘을 크게 받는 태평양판이 남극판보다 빠르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sp-speed"
+    },
+    {
+      "text": "판을 움직이는 힘 가운데 해령에서 미는 힘이 가장 크다",
+      "why_wrong": "최근 연구는 섭입대에서 당기는 힘이 해령에서 미는 힘보다 크며 판 이동의 주된 원동력이라고 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sp-dominant"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-lithosphere-and-asthenosphere"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-mantle-convection-drag"
+    },
+    {
+      "type": "related",
+      "target": "esys-ridge-push"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-2",
+  "pages": [
+    27,
+    28
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

@@ -23,6 +23,10 @@ LOG_DIR = ROOT / "output" / "logs"
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 # 조판용 제어문자
+# 조판 줄바꿈. 정규식 밖에서 쓰므로 상수로 둔다.
+CR, LF = "\r", "\n"
+CRLF = CR + LF
+
 _CTRL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 
 # ── 보이지 않는 문자 처리 ────────────────────────────────────────────────────
@@ -43,6 +47,12 @@ def clean(text: str) -> str:
     R4(재서술 의무) 검사의 정확도를 그대로 좌우한다.
     """
     text = unicodedata.normalize("NFC", text)
+    # CRLF 와 CR 을 LF 하나로 접는다. 줄바꿈 한 번은 한 글자여야 한다 —
+    # pypdfium2 는 CRLF 로, pdfplumber 는 LF 로 줄을 끊는데, 접지 않으면 줄이 많은
+    # 책일수록 pdfium 쪽 글자 수만 부풀어 C0 추출률이 부당하게 낮게 나온다
+    # (「지구시스템과학」이 94.7% 로 기준에 걸렸는데 차이가 전부 CR 이었다).
+    # C4 의 원문 n-gram 대조에서도 낱말 사이에 낀 CR 이 일치를 깨뜨린다.
+    text = text.replace(CRLF, LF).replace(CR, LF)
     text = _CTRL.sub("", text)
     text = _ZERO_WIDTH.sub("", text)
     text = _SPACE_LIKE.sub(" ", text)

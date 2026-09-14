@@ -1,0 +1,127 @@
+{
+ "id": "esys-atmospheric-stability",
+ "concept_key": "concept:atmospheric-stability",
+ "registry_status": "new",
+ "term": "대기 안정도",
+ "notation": {
+  "hanja": "大氣安定度",
+  "english": "atmospheric stability",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 安 편안 안 · 定 정할 정 · 度 법도 도"
+ },
+ "definition": "살짝 위아래로 흔든 공기 덩어리가 제자리로 돌아오려는지 계속 멀어지는지로 나타내는 대기층의 성질.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-parcel-vs-environment",
+   "text": "공기 덩어리를 단열적으로 옮겼을 때의 기온을 같은 높이의 주변 기온과 견주어 그 기층의 안정도를 가린다.",
+   "form": {
+    "condition": "공기 덩어리를 강제로 올리거나 내렸을 때",
+    "type": "classification",
+    "scope": "임의의 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「공기 덩어리 자신의 기온만 보고도 안정도를 가릴 수 있다」는 주변 기온과의 비교가 판별의 핵심이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "공기 덩어리를 강제로 옮겼을 때 그 덩어리 자신의 기온만 보고도 기층의 안정도를 가릴 수 있다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-stable-returns",
+   "text": "안정한 대기층에서는 옮겨진 공기 덩어리가 제자리로 되돌아오고, 불안정한 대기층에서는 본래 위치에서 계속 멀어진다.",
+   "form": {
+    "condition": "공기 덩어리를 조금 위아래로 옮겼을 때",
+    "type": "classification",
+    "scope": "임의의 대기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「안정한 층에서 계속 멀어지고 불안정한 층에서 되돌아온다」는 두 이름을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "조금 옮긴 공기 덩어리는 안정한 대기층에서 본래 위치에서 계속 멀어지고, 불안정한 대기층에서 제자리로 되돌아온다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-stability-vertical-motion",
+   "text": "대기가 안정할수록 연직 운동이 억눌리고 불안정할수록 연직 운동이 활발해진다.",
+   "form": {
+    "condition": "기층의 안정도가 정해져 있을 때",
+    "type": "inverse",
+    "scope": "대기의 연직 운동",
+    "antecedent": {
+     "quantity": "대기의 안정도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "연직 운동의 세기",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「안정할수록 연직 운동이 활발해진다」는 안정층에서 연직 운동이 제한된다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기층이 안정할수록 대기의 연직 운동이 활발해진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "바람이 세게 불면 그곳 대기는 불안정한 것이다.",
+   "why_wrong": "안정도는 수평 바람의 세기가 아니라 연직 기온 분포와 공기 덩어리의 기온 비교로 정해진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-parcel-vs-environment"
+  },
+  {
+   "text": "기온이 높은 날에는 언제나 대기가 불안정하다.",
+   "why_wrong": "중요한 것은 지표 기온 자체가 아니라 고도에 따라 기온이 얼마나 빠르게 떨어지는가이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-parcel-vs-environment"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-adiabatic-change"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-environmental-lapse-rate"
+  },
+  {
+   "type": "next",
+   "target": "esys-absolute-stability"
+  },
+  {
+   "type": "next",
+   "target": "esys-absolute-instability"
+  },
+  {
+   "type": "next",
+   "target": "esys-conditional-instability"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  96,
+  98
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — rel-stable-returns 가 definition 에서 곧바로 나온다. 다만 어느 쪽을 안정이라 부르는가 하는 이름 붙이기가 남아 완전한 동어반복인지 갈린다. 안정도 네 카드를 함께 볼 자리라 그대로 두었다."
+ ]
+}

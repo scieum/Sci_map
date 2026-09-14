@@ -1,0 +1,94 @@
+{
+ "id": "esys-foehn",
+ "concept_key": "concept:foehn-phenomenon",
+ "registry_status": "new",
+ "term": "푄 현상",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "foehn",
+  "hanja_note": "'푄'은 독일어 Föhn 의 음차라 한자가 없다. 우리말 이름 '높새바람'도 고유어다."
+ },
+ "definition": "습한 공기가 산을 넘는 동안 바람받이 쪽에 비를 뿌리고 바람그늘 쪽으로 내려오며 고온 건조해지는 바람 현상.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-foehn-asymmetry",
+   "text": "산을 오를 때는 응결 뒤 습윤 단열 감률로 천천히 식지만 내려올 때는 내내 건조 단열 감률로 데워져 바람그늘 쪽 기온이 더 높아진다.",
+   "form": {
+    "condition": "바람받이 쪽에서 구름과 비가 만들어졌을 때",
+    "type": "causal",
+    "scope": "산맥을 넘는 습윤한 공기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「바람그늘 쪽 기온이 출발할 때보다 낮아진다」는 그림 11 의 20 ℃ → 25 ℃ 와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "바람받이 쪽에서 비를 뿌리고 산을 넘은 공기는 바람그늘 쪽 지상에서 출발할 때보다 기온이 낮아진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-foehn-dry",
+   "text": "수증기를 바람받이 쪽에서 비로 떨구고 넘어온 공기는 바람그늘 쪽에서 건조한 바람으로 분다.",
+   "form": {
+    "condition": "바람받이 쪽에서 구름과 비가 만들어졌을 때",
+    "type": "causal",
+    "scope": "산을 넘은 뒤의 공기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「바람그늘 쪽에서 습한 바람으로 분다」는 수증기를 이미 비로 잃었다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "바람받이 쪽에서 비를 뿌리고 넘어온 공기는 바람그늘 쪽에서 습한 바람으로 분다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "푄으로 부는 바람이 따뜻한 것은 산 너머가 남쪽이기 때문이다.",
+   "why_wrong": "방위가 아니라 단열 변화 때문이다. 오를 때와 내릴 때 감률이 달라 넘어온 쪽이 더 따뜻해진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-foehn-asymmetry"
+  },
+  {
+   "text": "산을 넘은 공기는 오를 때와 내릴 때 같은 감률로 변하므로 기온이 처음과 같다.",
+   "why_wrong": "오를 때는 응결 뒤 습윤 단열 감률을, 내릴 때는 줄곧 건조 단열 감률을 따르므로 넘어온 쪽이 더 따뜻하다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-foehn-asymmetry"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-lifting-condensation-level"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-adiabatic-change"
+  },
+  {
+   "type": "related",
+   "target": "esys-moist-adiabatic-lapse-rate"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-1",
+ "pages": [
+  95
+ ],
+ "difficulty": 3,
+ "role": "context",
+ "version": 1,
+ "aliases": [
+  "높새바람"
+ ]
+}

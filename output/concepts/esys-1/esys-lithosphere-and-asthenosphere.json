@@ -1,0 +1,120 @@
+{
+  "id": "esys-lithosphere-and-asthenosphere",
+  "concept_key": "concept:lithosphere-and-asthenosphere",
+  "registry_status": "new",
+  "term": "암석권과 연약권",
+  "notation": {
+    "hanja": "岩石圈 軟弱圈",
+    "english": "lithosphere and asthenosphere",
+    "hanja_gloss": "岩 바위 암 · 石 돌 석 · 圈 우리 권 · 軟 연할 연 · 弱 약할 약 · 圈 우리 권"
+  },
+  "definition": "단단해서 판을 이루는 겉층이 암석권이고, 그 아래에서 천천히 흐를 수 있어 판이 그 위를 움직이게 하는 층이 연약권이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-la-plate",
+      "text": "판이라고 부르는 것은 연약권 위에 놓여 함께 움직이는 암석권 조각이다.",
+      "form": {
+        "condition": "판의 범위를 층으로 가를 때",
+        "type": "classification",
+        "scope": "판의 정의"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 층의 이름을 맞바꾼 것이라 해저 지형 도해의 표시와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "판이라고 부르는 것은 암석권 위에 놓여 함께 움직이는 연약권 조각이다."
+    },
+    {
+      "id": "rel-la-flow",
+      "text": "연약권은 오랜 시간에 걸쳐 천천히 흐를 수 있어서 그 위의 암석권이 이동할 수 있다.",
+      "form": {
+        "condition": "지질학적 시간 규모로 볼 때",
+        "type": "causal",
+        "scope": "연약권의 성질"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「연약권이 전혀 흐르지 못하므로 암석권도 움직일 수 없다」는 판이 연약권 위에서 움직인다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "연약권은 전혀 흐르지 못하므로 그 위의 암석권도 움직일 수 없다."
+    },
+    {
+      "id": "rel-la-sink",
+      "text": "해양판은 시간이 지나 식을수록 밀도가 커져 연약권 속으로 조금씩 잠긴다.",
+      "form": {
+        "condition": "해령에서 멀어지며 냉각이 진행될 때",
+        "type": "direct",
+        "scope": "해양 암석권에 한함",
+        "antecedent": {
+          "quantity": "해양판의 냉각 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해양판의 밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「식을수록 밀도가 작아져 떠오른다」는 냉각으로 밀도가 높아진다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해양판은 시간이 지나 식을수록 밀도가 작아져 연약권 위로 떠오른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연약권은 완전히 녹아 있는 액체 층이다",
+      "why_wrong": "연약권은 아주 느리게 흐를 수 있을 뿐 액체가 아니다. 액체라면 S파가 지나지 못하는데 맨틀에서는 S파가 전달된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-la-flow"
+    },
+    {
+      "text": "해양판은 오래될수록 가벼워져 가라앉지 않는다",
+      "why_wrong": "해양판은 오래될수록 더 식어 밀도가 커지고, 그래서 연약권 속으로 잠겨 들어간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-la-sink"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-plate-tectonics"
+    },
+    {
+      "type": "next",
+      "target": "esys-mantle-convection-drag"
+    },
+    {
+      "type": "next",
+      "target": "esys-ridge-push"
+    },
+    {
+      "type": "next",
+      "target": "esys-slab-pull"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-2",
+  "pages": [
+    26,
+    27
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

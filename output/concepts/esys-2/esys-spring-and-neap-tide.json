@@ -1,0 +1,104 @@
+{
+  "id": "esys-spring-and-neap-tide",
+  "concept_key": "concept:spring-tide-and-neap-tide",
+  "registry_status": "new",
+  "term": "대조와 소조",
+  "notation": {
+    "hanja": "大潮 小潮",
+    "hanja_gloss": "大 큰 대 · 潮 밀물 조 · 小 작을 소 · 潮 밀물 조",
+    "english": "spring tide and neap tide"
+  },
+  "definition": "한 달 가운데 조차가 가장 커지는 때가 대조이고, 가장 작아지는 때가 소조다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-snt-syzygy",
+      "text": "달이 삭이나 망의 자리에 있을 때 태양과 달의 기조력이 같은 방향으로 합쳐져 대조가 된다.",
+      "form": {
+        "condition": "태양·지구·달이 한 줄에 놓일 때",
+        "type": "causal",
+        "scope": "한 달 주기의 조차 변화"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「삭이나 망에서 두 기조력이 상쇄되어 소조가 된다」인데, 한 줄에 놓이면 두 효과가 겹쳐지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "달이 삭이나 망의 자리에 있을 때 두 기조력이 상쇄되어 소조가 나타난다."
+    },
+    {
+      "id": "rel-snt-quadrature",
+      "text": "상현과 하현 무렵에는 두 기조력이 서로 어긋나 상쇄되면서 소조가 된다.",
+      "form": {
+        "condition": "지구에서 볼 때 태양과 달이 90°로 갈라져 있을 때",
+        "type": "causal",
+        "scope": "한 달 주기의 조차 변화"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「상현과 하현에 두 기조력이 합쳐져 대조가 된다」인데, 두 방향이 어긋나 있어 효과가 깎이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상현과 하현 무렵에는 두 기조력이 합쳐져 대조가 나타난다."
+    },
+    {
+      "id": "rel-snt-sun-share",
+      "text": "태양의 기조력은 달의 절반쯤이지만 방향이 같으면 더해져 조차를 눈에 띄게 키운다.",
+      "form": {
+        "condition": "두 기조력의 방향이 같을 때",
+        "type": "causal",
+        "scope": "대조"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「절반쯤이라 방향이 같아도 조차에 아무 영향을 주지 못한다」인데, 절반이나 되는 몫이 더해지면 조차가 뚜렷이 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양의 기조력은 달의 절반쯤이라 방향이 같아도 조차에 아무런 영향을 주지 못한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "대조는 달이 지구에 가장 가까이 왔을 때 일어난다.",
+      "why_wrong": "대조를 가르는 것은 거리가 아니라 태양·지구·달이 한 줄에 놓이는 삭과 망의 위치 관계다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-snt-syzygy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-tidal-range"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-tide-generating-force"
+    },
+    {
+      "type": "next",
+      "target": "esys-tidal-lag"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-2",
+  "pages": [
+    72
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "사리",
+    "조금"
+  ]
+}

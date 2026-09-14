@@ -1,0 +1,1161 @@
+{
+ "unit_id": "esys-3",
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "generated_at": "2026-09-14T11:16:36",
+ "generated_by": "concept-fact-validator (C5 curriculum + C6 relation)",
+ "mode_run": [
+  "curriculum",
+  "relation"
+ ],
+ "inputs": {
+  "cards": "output/concepts/esys-3/ (62장 · 관계 163개)",
+  "standards": ".claude/skills/curriculum-mapper/references/standards.yaml (12지시03-01~06 · 여섯 개 모두 crosscheck 일치)",
+  "teacher_guide": "inbox/textbook/22개정/지구과학/고_지구시스템과학(오필석)_지도서_2쇄.pdf 총론 25~26쪽 (성취 기준 해설 · 적용 시 고려 사항)",
+  "source_text": "output/source/esys-3/text.jsonl (50쪽 · 1531 블록)",
+  "script": ".claude/skills/curriculum-mapper/scripts/validate_tags.py output/concepts/esys-3 → 「카드 62장 검사 / 통과」"
+ },
+ "notes_on_method": [
+  "진위는 확정하지 않았다. 참·거짓이 걸린 건은 모두 uncertain 으로 올렸고 C8 사람 게이트에서 본다.",
+  "카드 파일과 사전(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)은 한 글자도 고치지 않았다. verified_by 는 163개 명제 전부 pending 그대로다.",
+  "earth-facts 계열 스킬이 없어 <track>-facts 대조는 통째로 건너뛰었다. 대조 가능한 항목은 교과서 원문(output/source/esys-3/text.jsonl)만으로 확인했다.",
+  "수치 확인은 본문 블록만 보지 않고 곁주·용어 상자·그림 캡션·그림 안 글자까지 훑었다. 실제로 이 교과서는 습윤 단열 감률 평균 5 ℃/km(p95-b59 곁주), 이슬점 감률 2 ℃/km(p95-b61 곁주), 오존 3 mm(p86-b5 캡션), 푄 20 ℃→25 ℃(p95-b41·b50 그림 안 글자)를 본문 밖에 두고 있었다."
+ ],
+ "curriculum_limits_found": [
+  {
+   "source": "지도서 총론 26쪽 성취 기준 적용 시 고려 사항",
+   "text_summary": "편서풍 파동 실험으로 사용하던 회전 원통 실험은 로스비파인 편서풍 파동에 대한 오개념을 유발할 수 있으므로, 이 실험을 다룰 때는 실험이 갖는 한계점에 유의하여 활동을 구성한다.",
+   "effect": "회전 수조 실험을 카드로 다루되 결과를 일반화하는 명제를 세우면 안 된다. rotating_tank_ruling 참조."
+  },
+  {
+   "source": "지도서 총론 25쪽 성취 기준 해설 [12지시03-02]",
+   "text_summary": "에너지(열) 수지를 다루면서 잠열의 효과가 가장 크다는 것을 파악함으로써 구름 생성을 위한 단열 변화로 연결한다.",
+   "effect": "esys-latent-heat 의 03-02 태그와 rel-latent-24-1(숨은열 24.1 대 대류·전도 6.2)이 해설과 정확히 맞는다."
+  },
+  {
+   "source": "지도서 총론 25쪽 성취 기준 해설 [12지시03-04~05]",
+   "text_summary": "지상풍, 지균풍, 경도풍, 태양 상수, 편서풍 파동 등의 개념을 이해하고, 지상과 상층의 바람, 편서풍 파동(제트류), 대기 대순환 등을 시스템적으로 설명한다.",
+   "effect": "태양 상수·대기 대순환이 03-04~05 묶음에 이름으로 적혀 있다. 다만 같은 문장이 편서풍 파동도 함께 적고 있어 배타적 배정으로 읽을 수 없다. esys-solar-constant 한 장만 uncertain 으로 올렸다."
+  },
+  {
+   "source": "지도서 총론 26쪽 적용 시 고려 사항",
+   "text_summary": "상층 일기도를 확보하기 어려운 경우에는 보다 짧은 기간 동안의 일기를 예측하도록 한다.",
+   "effect": "상층 일기도가 03-06 쪽 활동임을 뒷받침한다. esys-weather-chart retag 의 근거."
+  }
+ ],
+ "rotating_tank_ruling": {
+  "question": "회전 수조 실험(교과서 121쪽)에 대한 작성자의 처리가 충분한가",
+  "verdict": "충분하다 — 다만 그림 배정은 아직 검증할 수 있는 상태가 아니다",
+  "checked": [
+   "esys-rossby-wave 의 네 명제 가운데 실험 결과를 일반화한 것은 하나도 없다. rel-rw-coriolis-latitude 는 로스비의 설명을, rel-rw-midlatitude·rel-rw-energy-balance 는 실제 대기를 말한다.",
+   "rel-rw-rotating-tank-limit 은 한계 자체를 명제로 세웠고, 그 문면(「위도에 따른 전향력 변화를 모의하지 못하므로」)이 교과서 121쪽 p121-b15 「이 실험은 위도에 따른 전향력의 변화를 고려하지 않고 있다 … 위도 변화를 고려한다면 수조 바닥을 경사지게 만들어야 한다」와 맞는다. 지어낸 한정이 아니다.",
+   "오개념 「회전 수조를 돌려 나타난 물결이 곧 실제 편서풍 파동이므로 실험 결과를 그대로 실제 대기에 적용할 수 있다」가 바로 그 명제의 반대편에 서 있다. linked_relation 지정이 맞고, 지도서가 말한 '유발될 수 있는 오개념'을 정면으로 겨눈다.",
+   "inverted_text 「회전 수조 실험에 나타난 파동은 실제 편서풍 파동을 그대로 재현한 것이다」는 참이 될 경우가 없다. invertible: true 가 맞다. 이 단원에서 흔치 않게 뒤집기가 제 구실을 하는 명제다.",
+   "탐구 활동 목록(지도서 25쪽)에 「행성파 시뮬레이션 실험하기」가 들어 있으므로 실험 자체는 범위 밖이 아니다. 한계와 함께 다루라는 것이 고려 사항의 뜻이고 카드가 그대로 따랐다."
+  ],
+  "caveat": "「그림 45(수조 안의 파동)를 일부러 배정하지 않았다」는 보고는 지금 확인할 수 없다. esys-3 카드 62장의 media 가 모두 빈 배열이고 output/media/esys-3.plan.json 이 아직 없다. 있는 것은 C7 준비용 esys-3.figbox.json 뿐이며 거기에는 그림 45(122쪽 · review=false)가 전수 목록으로 그대로 들어 있다. 곧 배정하지 않은 것이 아니라 아직 아무 그림도 배정되지 않은 단계다. C7 계획을 세울 때 esys-rossby-wave 에 그림 45 가 붙지 않는지 그 자리에서 다시 봐야 한다.",
+  "note": "그림 45 의 캡션은 「수조 내에서의 파동의 발달 · 회전 속도가 증가할수록 파동이 발달한다」로, 캡션 자체가 일반화를 부르는 문장이다. 붙이지 않기로 한 판단은 타당해 보인다."
+ },
+ "curriculum": {
+  "checked": 62,
+  "stats": {
+   "ok": 60,
+   "retag": 1,
+   "out_of_scope": 0,
+   "uncertain": 1
+  },
+  "script_result": "validate_tags.py 통과 — 실재하지 않는 코드·과목 접두어 불일치·태그 0개 없음. 아래는 스크립트가 원리적으로 못 잡는 것(코드는 실재하나 카드 내용과 맞는지)만 본 결과다.",
+  "tag_distribution": {
+   "12지시03-01": 8,
+   "12지시03-02": 6,
+   "12지시03-03": 19,
+   "12지시03-04": 4,
+   "12지시03-05": 12,
+   "12지시03-06": 14,
+   "note": "카드 기준(03-01·03-02 병기 카드 1장 포함). 명제 기준으로는 03-03 49 · 03-05 36 · 03-06 36 · 03-01 20 · 03-02 15 · 03-04 10."
+  },
+  "scope_table": [
+   {
+    "card_id": "esys-absolute-instability",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 03-03 「기온의 연직 분포와 대기의 안정도」에 바로 걸린다. 교과서 97쪽 본문."
+   },
+   {
+    "card_id": "esys-absolute-stability",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "같은 근거. 교과서 96쪽 본문."
+   },
+   {
+    "card_id": "esys-adiabatic-change",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "해설 「단열 변화에서 기온과 습도의 변화를 이해하고」. 교과서 94~95쪽 본문.",
+    "prerequisites": [
+     "concept:adiabatic-process (mech-2 · 12역학02-03)"
+    ]
+   },
+   {
+    "card_id": "esys-adiabatic-chart",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "탐구 활동 「단열선도를 이용하여 대기 안정도 해석하기」가 지도서 25쪽에 그대로 있다."
+   },
+   {
+    "card_id": "esys-advection-fog",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문의 「안개가 생성되는 과정」. 교과서 101쪽 표 1."
+   },
+   {
+    "card_id": "esys-albedo",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-02"
+    ],
+    "reason": "열수지 해석의 구성 요소. 교과서 90쪽 본문."
+   },
+   {
+    "card_id": "esys-atmospheric-pressure",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-04"
+    ],
+    "reason": "「기압의 연직 분포로 정역학적 균형을 이해하고」의 출발점. 교과서 104쪽.",
+    "prerequisites": [
+     "concept:atmospheric-pressure (mate-1 · 12물에01-01)"
+    ]
+   },
+   {
+    "card_id": "esys-atmospheric-reradiation",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-02"
+    ],
+    "reason": "열수지 100단위 배분. 교과서 90~91쪽."
+   },
+   {
+    "card_id": "esys-atmospheric-stability",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 그대로."
+   },
+   {
+    "card_id": "esys-atmospheric-window",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01",
+     "12지시03-02"
+    ],
+    "reason": "선택적 흡수(03-01)와 열수지 11.8단위(03-02)를 함께 받친다. 두 코드 병기가 맞다."
+   },
+   {
+    "card_id": "esys-boundary-layer",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "지상풍에 드는 마찰력의 작용 범위. 교과서 110쪽."
+   },
+   {
+    "card_id": "esys-centripetal-force",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "경도풍에 드는 힘. 교과서 110·113쪽.",
+    "prerequisites": [
+     "concept:centripetal-force (mech-1 · 12역학01-03)"
+    ]
+   },
+   {
+    "card_id": "esys-coalescence-process",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문의 「강수 과정」. 교과서 100쪽."
+   },
+   {
+    "card_id": "esys-conditional-instability",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "교과서 97쪽 본문."
+   },
+   {
+    "card_id": "esys-convergence-divergence",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "지상풍의 결과로 교과서 114~115쪽에 붙어 있다."
+   },
+   {
+    "card_id": "esys-coriolis-force",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "탐구 활동 「회전 원판을 이용한 전향 효과 실험하기」가 지도서 25쪽에 있다.",
+    "prerequisites": [
+     "중학교 1~3학년군 '날씨와 기후변화' (지도서 26쪽 연계 서술)"
+    ]
+   },
+   {
+    "card_id": "esys-cyclonic-anticyclonic-gradient-wind",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "성취기준 본문 「경도풍」."
+   },
+   {
+    "card_id": "esys-dry-adiabatic-lapse-rate",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「단열 변화」."
+   },
+   {
+    "card_id": "esys-environmental-lapse-rate",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「기온의 연직 분포」."
+   },
+   {
+    "card_id": "esys-ferrel-cell",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "교과서 124쪽 「대기 대순환의 역할」이 편서풍 파동 절 안에 있다. 지도서 해설은 대기 대순환을 03-04~05 묶음에도 적고 있어 두 코드 다 설 자리가 있으나, 교과서 배치와 편서풍 파동과의 대비를 보아 03-06 이 더 맞다."
+   },
+   {
+    "card_id": "esys-foehn",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "단열 변화의 적용. 교과서 95쪽 본문."
+   },
+   {
+    "card_id": "esys-fog",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「안개」."
+   },
+   {
+    "card_id": "esys-friction-force",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "성취기준 본문 「관련된 힘의 작용」."
+   },
+   {
+    "card_id": "esys-general-circulation",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "esys-ferrel-cell 과 같은 근거.",
+    "prerequisites": [
+     "concept:atmospheric-general-circulation (isci2-2 · 10통과2-02-03)"
+    ]
+   },
+   {
+    "card_id": "esys-geostrophic-wind",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "성취기준 본문 「지균풍」."
+   },
+   {
+    "card_id": "esys-global-mean-heat-budget",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-02"
+    ],
+    "reason": "성취기준 본문 「전 지구 평균 열수지」."
+   },
+   {
+    "card_id": "esys-gradient-wind",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "성취기준 본문 「경도풍」."
+   },
+   {
+    "card_id": "esys-greenhouse-effect",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "성취기준 본문 「온실 효과」.",
+    "prerequisites": [
+     "concept:greenhouse-effect (isci2-2 · 10통과2-02-03)"
+    ]
+   },
+   {
+    "card_id": "esys-greenhouse-gas",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "성취기준 본문 「선택적 흡수체」·「온실 효과」.",
+    "prerequisites": [
+     "concept:greenhouse-gas (isci2-2 · 10통과2-02-03)"
+    ]
+   },
+   {
+    "card_id": "esys-habitable-zone",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "해설 「생명 가능 지대로서의 지구, 즉 지구에 물이 존재함으로써 생명체가 발생하고 존재할 수 있는 이유에 대한 근거를 다룬다」."
+   },
+   {
+    "card_id": "esys-hadley-cell",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "esys-ferrel-cell 과 같은 근거."
+   },
+   {
+    "card_id": "esys-hydrostatic-equilibrium",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-04"
+    ],
+    "reason": "성취기준 본문 「정역학적 균형」.",
+    "prerequisites": [
+     "concept:hydrostatic-equilibrium (earth-3 · 12지구03-03) — 다만 별 내부와 대기로 쓰임이 달라 동음이의 여부를 사람이 볼 항목"
+    ]
+   },
+   {
+    "card_id": "esys-ice-crystal-process",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「강수 과정」."
+   },
+   {
+    "card_id": "esys-jet-stream",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "해설 「편서풍 파동(제트류)」."
+   },
+   {
+    "card_id": "esys-latent-heat",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-02"
+    ],
+    "reason": "해설 「잠열의 효과가 가장 크다는 것을 파악함으로써 구름 생성을 위한 단열 변화로 연결한다」가 이 카드를 03-02 에 못 박는다.",
+    "prerequisites": [
+     "concept:latent-heat (phys-1 · 12물리01-05, mech-2 · 12역학02-02)"
+    ]
+   },
+   {
+    "card_id": "esys-latitudinal-energy-imbalance",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "교과서 124쪽. esys-ferrel-cell 과 같은 근거."
+   },
+   {
+    "card_id": "esys-lifting-condensation-level",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「구름이 생성되는 과정」."
+   },
+   {
+    "card_id": "esys-meridional-heat-transport",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "성취기준 본문 「편서풍 파동의 역할」. 교과서 120쪽."
+   },
+   {
+    "card_id": "esys-meridional-temperature-gradient",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "제트류·편서풍 파동의 원인. 교과서 119쪽."
+   },
+   {
+    "card_id": "esys-moist-adiabatic-lapse-rate",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「단열 변화」.",
+    "prerequisites": [
+     "concept:latent-heat"
+    ]
+   },
+   {
+    "card_id": "esys-nocturnal-jet",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "교과서 116쪽 읽기 자료다. 본문 개념처럼 서술되지 않고 마찰력(03-05)의 적용으로 붙어 있어 범위 안이다. CLAUDE.md 의 「교과서가 곁주·읽기 자료로 다루는 것은 카드가 될 수 있다」에 해당한다."
+   },
+   {
+    "card_id": "esys-polar-cell",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "esys-ferrel-cell 과 같은 근거."
+   },
+   {
+    "card_id": "esys-pressure-gradient-force",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "성취기준 본문 「관련된 힘의 작용」."
+   },
+   {
+    "card_id": "esys-radiation-fog",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「안개」."
+   },
+   {
+    "card_id": "esys-radiative-equilibrium-temperature",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "해설의 생명체 존재 조건 추론을 받친다. 교과서 88쪽."
+   },
+   {
+    "card_id": "esys-rossby-wave",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "성취기준 본문 「행성파의 발달 과정」."
+   },
+   {
+    "card_id": "esys-rossby-wave-and-weather",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "성취기준 본문 「지상 고·저기압 발달에서 편서풍 파동의 역할을 평가」."
+   },
+   {
+    "card_id": "esys-runaway-greenhouse-effect",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "교과서 89쪽. 생명 가능 지대 안쪽 경계를 정하는 근거로 해설에 걸린다."
+   },
+   {
+    "card_id": "esys-selective-absorption",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "성취기준 본문 「선택적 흡수체」."
+   },
+   {
+    "card_id": "esys-solar-radiation-in-atmosphere",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-02"
+    ],
+    "reason": "해설 「산란, 반사, 흡수, 굴절 등으로 설명한다」와 낱말까지 맞는다."
+   },
+   {
+    "card_id": "esys-stratiform-and-cumuliform-cloud",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "해설 「대기의 안정도를 구름의 생성과 관련지어 다룬다」."
+   },
+   {
+    "card_id": "esys-subtropical-and-polar-jet",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "해설 「편서풍 파동(제트류)」."
+   },
+   {
+    "card_id": "esys-supercooled-droplet",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "빙정 과정의 전제. 교과서 100쪽."
+   },
+   {
+    "card_id": "esys-surface-wind",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-05"
+    ],
+    "reason": "성취기준 본문 「지상풍」."
+   },
+   {
+    "card_id": "esys-temperature-inversion",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-03"
+    ],
+    "reason": "성취기준 본문 「기온의 연직 분포」와 안개 생성 환경."
+   },
+   {
+    "card_id": "esys-trough-and-ridge",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "편서풍 파동을 읽는 단위. 교과서 120·123쪽."
+   },
+   {
+    "card_id": "esys-upper-divergence-and-cyclogenesis",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "성취기준 본문 「지상 고·저기압 발달에서 편서풍 파동의 역할」. 교과서 122쪽."
+   },
+   {
+    "card_id": "esys-vertical-motion",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-04"
+    ],
+    "reason": "성취기준 본문 「대기 중 연직 운동의 발생 원인을 추론」."
+   },
+   {
+    "card_id": "esys-vertical-pressure-distribution",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-04"
+    ],
+    "reason": "성취기준 본문 「기압의 연직 분포」."
+   },
+   {
+    "card_id": "esys-uv-shielding-by-ozone",
+    "curriculum_scope": "in",
+    "verdict": "ok",
+    "current": [
+     "12지시03-01"
+    ],
+    "reason": "성취기준 본문 「태양 자외선 차단 효과」. 교과서 86~87쪽."
+   },
+   {
+    "card_id": "esys-weather-chart",
+    "curriculum_scope": "in",
+    "verdict": "retag",
+    "current": [
+     "12지시03-05"
+    ],
+    "suggested": [
+     "12지시03-05",
+     "12지시03-06"
+    ],
+    "reason": "세 명제 가운데 rel-wc-upper-height(등압면 고도로 등고선을 그려 공기 밀도를 따질 필요가 없다)와 rel-wc-500hpa(500 hPa 가 대기를 질량으로 이등분한다)는 지균풍·경도풍·지상풍의 발생 원리(03-05)가 아니라 지도서 25쪽 탐구 활동 「편서풍 파동 및 제트류와 관련지어 상층 일기도 해석하기」와 26쪽 고려 사항 「상층 일기도를 확보하기 어려운 경우에는 …」이 가리키는 03-06 을 받친다. rel-wc-surface-reduction 만 03-05 에 남는다. 03-05 를 빼라는 뜻이 아니라 03-06 을 함께 달라는 뜻이다."
+   },
+   {
+    "card_id": "esys-solar-constant",
+    "curriculum_scope": "uncertain",
+    "verdict": "uncertain",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "지도서 25쪽 해설은 「[12지시03-04~05] … 지상풍, 지균풍, 경도풍, 태양 상수, 편서풍 파동 등의 개념을 이해하고」라며 태양 상수를 03-04~05 묶음에 이름으로 적어 넣었다. 그러나 교과서는 태양 상수를 124쪽 「대기 대순환의 역할」 용어 상자에 두었고, 03-06 성취기준 본문(행성파의 발달 과정·편서풍 파동의 역할)에는 태양 상수가 걸릴 자리가 없다. 같은 해설 문장이 편서풍 파동도 03-04~05 에 적고 있어 이 목록을 배타적으로 읽을 수 없으므로 03-06 이 틀렸다고 단정하지 못한다. 사람이 정할 항목으로 올린다."
+   }
+  ],
+  "findings": [
+   {
+    "card_id": "esys-weather-chart",
+    "curriculum_scope": "in",
+    "verdict": "retag",
+    "current": [
+     "12지시03-05"
+    ],
+    "suggested": [
+     "12지시03-05",
+     "12지시03-06"
+    ],
+    "reason": "세 명제 가운데 rel-wc-upper-height(등압면 고도로 등고선을 그려 공기 밀도를 따질 필요가 없다)와 rel-wc-500hpa(500 hPa 가 대기를 질량으로 이등분한다)는 지균풍·경도풍·지상풍의 발생 원리(03-05)가 아니라 지도서 25쪽 탐구 활동 「편서풍 파동 및 제트류와 관련지어 상층 일기도 해석하기」와 26쪽 고려 사항 「상층 일기도를 확보하기 어려운 경우에는 …」이 가리키는 03-06 을 받친다. rel-wc-surface-reduction 만 03-05 에 남는다. 03-05 를 빼라는 뜻이 아니라 03-06 을 함께 달라는 뜻이다."
+   },
+   {
+    "card_id": "esys-solar-constant",
+    "curriculum_scope": "uncertain",
+    "verdict": "uncertain",
+    "current": [
+     "12지시03-06"
+    ],
+    "reason": "지도서 25쪽 해설은 「[12지시03-04~05] … 지상풍, 지균풍, 경도풍, 태양 상수, 편서풍 파동 등의 개념을 이해하고」라며 태양 상수를 03-04~05 묶음에 이름으로 적어 넣었다. 그러나 교과서는 태양 상수를 124쪽 「대기 대순환의 역할」 용어 상자에 두었고, 03-06 성취기준 본문(행성파의 발달 과정·편서풍 파동의 역할)에는 태양 상수가 걸릴 자리가 없다. 같은 해설 문장이 편서풍 파동도 03-04~05 에 적고 있어 이 목록을 배타적으로 읽을 수 없으므로 03-06 이 틀렸다고 단정하지 못한다. 사람이 정할 항목으로 올린다."
+   }
+  ],
+  "escalation": {
+   "out_of_scope_count": 0,
+   "threshold": "이탈 2건 초과 시 C1 복귀",
+   "triggered": false
+  }
+ },
+ "relations": {
+  "checked": 163,
+  "checked_note": "62장 전수. 명제마다 설계서 §4.3 C6 의 다섯 항목(1 scope 누락·과일반화, 2 invertible 오판정, 3 동어반복, 4 오개념 정합성, 5 카드 내 모순)을 보고 메인이 준 (a)~(g) 기준을 brief_code 로 함께 적었다.",
+  "stats": {
+   "ok": 134,
+   "defect": 16,
+   "uncertain": 13
+  },
+  "invertible_summary": {
+   "before": {
+    "true": 163,
+    "false": 0,
+    "ratio": "100 %"
+   },
+   "after_reexamination": {
+    "must_flip_to_false": 2,
+    "needs_recheck": 5,
+    "ratio_if_only_defects_fixed": "161/163 = 98.8 %"
+   },
+   "other_units_for_comparison": "mech-1 47 % · mech-2 51 % · chem-2 52 % · earth-2 53 % · mech-3 55 % · phys-1 58 %. esys-1 100 %(172/172) · esys-2 100 %(120/120) · esys-3 100 %(163/163) — 지구시스템과학 세 단원만 모두 100 %다.",
+   "diagnosis": "전수로 다시 읽은 결과 100 %는 낱낱의 오판정이 쌓여 생긴 값이 아니었다. 163개 가운데 뒤집어서 참이 될 수 있는 것은 2건(갈리는 것 5건)뿐이고 나머지는 실제로 뒤집으면 반드시 거짓이 된다. 진짜 원인은 판정이 아니라 명제를 세우는 방식에 있다 — 뒤집어서 반드시 거짓이 되는 문장만 골라 쓰다 보니 카드 definition 을 그대로 문장으로 옮긴 명제가 13건 생겼다. 뒤집기는 완벽하지만 학습 가치가 없는 명제들이다. 100 %는 invertible 판정의 결함이 아니라 동어반복의 부작용으로 읽어야 한다.",
+   "dangerous_direction_found": 2,
+   "reverse_error_check": "invertible_reason 163개를 훑어 「A → B」를 「B → A」로 깨뜨린 역(逆) 명제 논증은 한 건도 없었다. 앞 단원에서 79건까지 나왔던 잘못은 이 단원에 없다.",
+   "type_not_used_as_ground": "form.type 은 어디를 먼저 볼지 고르는 데만 썼다. classification·conditional 에 true 가 붙은 것이 많지만 대부분 두 이름을 맞바꾸는 꼴이라 뒤집으면 반드시 거짓이 된다 — 그런 것은 ok 로 두었다.",
+   "twisted_for_invertibility": "invertible 을 얻으려고 조건을 욱여넣어 시험할 수 없게 된 문장은 rel-sc-value 한 건뿐이며, 그것은 거꾸로 definition 의 한정(「빛에 수직인」)을 떨어뜨린 쪽이다. 교과서가 하지 않은 한정을 붙인 자리는 찾지 못했다."
+  },
+  "findings": [
+   {
+    "card_id": "esys-fog",
+    "relation_id": "rel-fog-hazard",
+    "verdict": "defect",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "원문은 「원인이 될 수 있다」는 가능성 명제인데 inverted_text 「짙은 안개가 생겨도 항공기 결항이나 교통사고의 원인이 되지는 않는다」는 가능성을 부정하는 문장이 아니라 낱 사례를 말하는 문장으로 읽힌다. 짙은 안개가 끼고도 결항도 사고도 없는 밤은 얼마든지 있으므로 문면 그대로 읽으면 참이 되는 경우가 있다. invertible_reason 이 근거로 든 「안개 예측이 중요하다는 서술」(교과서 101쪽)은 가능성을 말할 뿐 필연을 말하지 않는다.",
+    "suggest": "invertible 을 false 로 내릴지, 뒤집은 문장 문면에 가능성 양화가 남도록 할지를 C2 가 정한다. 지금 문장 그대로 D1 로 넘기면 OX 오답 지문이 참인 지문이 된다."
+   },
+   {
+    "card_id": "esys-radiation-fog",
+    "relation_id": "rel-rf-radiative-cooling",
+    "verdict": "defect",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "inverted_text 「맑고 바람이 약한 밤에 지표가 복사 냉각으로 식어도 그 위 공기는 포화에 이르지 않아 복사 안개가 생기지 않는다」는 맑고 바람 약한 밤 대부분에서 실제로 참이다. 복사 안개는 냉각만이 아니라 충분한 수증기를 함께 요구하는데 그 조건이 form.condition 「맑고 바람이 약한 밤일 때」에만 있고 뒤집은 문장 문면으로 넘어가지 않는다. 같은 카드의 rel-rf-needs-stability 는 뒤집으면 반드시 거짓이 되는 꼴이라 대비된다.",
+    "suggest": "invertible 을 false 로 내리거나, 포화까지 이르는 조건이 뒤집은 문장 문면에 남도록 명제를 다시 세운다."
+   },
+   {
+    "card_id": "esys-centripetal-force",
+    "relation_id": "rel-cpf-curved-path",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「움직이는 물체의 자취를 직선이 아닌 곡선으로 만드는 힘」과 명제 「구심력이 작용하면 자취가 직선에서 벗어나 곡선이 된다」가 같은 문장이다. invertible_reason 스스로 「구심력의 정의와 어긋나」라고 적어 정의에서 곧바로 나온 말임을 인정하고 있다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-greenhouse-effect",
+    "relation_id": "rel-ghe-raises-surface-temp",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「지표가 내놓은 적외선을 온실 기체가 흡수했다가 되돌려 보내는 바람에 지표와 대기 하층의 온도가 높아지는 현상」을 어순만 바꾼 것이다. invertible_reason 도 「온실 효과라는 말 자체가 성립하지 않아」라고 적는다. 같은 concept_key 를 쓰는 isci2-greenhouse-effect 는 같은 내용의 rel-ghe-mechanism 을 invertible false 로 두었다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-atmospheric-window",
+    "relation_id": "rel-window-escape",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「이산화 탄소와 수증기에도 잘 붙잡히지 않아 지구 복사가 우주로 곧장 빠져나가는 8~9 μm·10~12 μm 적외선 영역」을 문장으로 편 것이다. invertible_reason 도 「그 파장대를 '창'이라 부를 까닭이 사라지므로」라고 적는다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-temperature-inversion",
+    "relation_id": "rel-inv-definition",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「고도가 높아질수록 기온이 오히려 올라가는 기층」과 명제가 같은 말이다. 명제 id 자체가 rel-inv-definition 이다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-habitable-zone",
+    "relation_id": "rel-liquid-water-criterion",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「행성 표면에 물이 액체 상태로 남아 있을 수 있는 거리 범위」와 명제 「가르는 기준은 물이 액체 상태로 있을 수 있는가이다」가 같은 말이다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-supercooled-droplet",
+    "relation_id": "rel-scd-liquid-below-zero",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「0 ℃보다 낮은 온도에서도 얼지 않고 액체로 남아 구름 속에서 빙정과 함께 떠 있는 물방울」과 명제가 같은 말이다. invertible_reason 도 「과냉각 물방울이라는 말이 성립하지 않아」라고 적는다. 같은 카드의 rel-scd-higher-svp 는 정의에서 나오지 않는 내용이라 대비된다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-solar-constant",
+    "relation_id": "rel-sc-value",
+    "verdict": "defect",
+    "checks": [
+     1,
+     3
+    ],
+    "brief_code": "f,c",
+    "reason": "definition 「지구 대기권 바깥에서 빛에 수직인 1 m²에 1초 동안 닿는 태양 복사 에너지의 양으로, 그 크기는 1361 W/m²다」를 수치까지 그대로 옮겼다. 덧붙여 definition 에 있는 「빛에 수직인」이라는 한정이 명제 문면에서 빠졌는데, 같은 카드의 오개념 「태양 상수만큼의 에너지가 지구 표면 어디에나 똑같이 들어온다」의 why_wrong 은 바로 그 한정에 기대고 있다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-trough-and-ridge",
+    "relation_id": "rel-tr-definition",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「등고선이 저위도 쪽으로 처져 골짜기처럼 보이는 곳과 고위도 쪽으로 불룩해 산마루처럼 보이는 곳」과 명제가 같은 말이다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-uv-shielding-by-ozone",
+    "relation_id": "rel-ozone-absorbs-uv",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「성층권에 모여 있는 오존이 생명체에 해로운 자외선을 흡수해 지표까지 닿지 못하게 막는 작용」과 명제가 같은 말이다. 같은 카드의 rel-ozone-thin-but-effective(3 mm)는 정의 밖의 내용이라 대비된다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-upper-divergence-and-cyclogenesis",
+    "relation_id": "rel-udc-coupling",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「상층의 발산·수렴이 하층의 수렴·발산과 연직 운동을 이끌어 지상 고·저기압을 키우는 과정」과 명제가 같은 말이다. 같은 카드의 rel-udc-trough-east·rel-udc-trough-west 가 실제 판별 내용을 담고 있어 이 명제가 없어도 카드가 비지 않는다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-ferrel-cell",
+    "relation_id": "rel-fc-indirect",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「중위도에서 찬 공기가 오르고 따뜻한 공기가 내리는, 역학적 원인으로 생기는 간접 순환」과 명제가 낱말까지 겹친다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-hadley-cell",
+    "relation_id": "rel-hc-direct",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「열대에서 따뜻한 공기가 오르고 찬 공기가 내리는 열적 원인의 직접 순환」과 명제가 낱말까지 겹친다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-polar-cell",
+    "relation_id": "rel-pc-direct",
+    "verdict": "defect",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「극지방에서 찬 공기가 내려앉고 저위도 쪽에서 올라간 공기가 되돌아오는, 열적 차이로 생기는 직접 순환」과 명제가 같은 말이다.",
+    "suggest": "정의를 좁혀 판별 내용을 명제 쪽으로 옮길지, 이 명제를 정의 밖의 내용으로 바꿀지 C2 가 정한다. 그냥 지우면 카드당 명제 수가 줄어 D1 문항이 모자랄 수 있으니 지우기보다 바꾸는 쪽을 검토한다."
+   },
+   {
+    "card_id": "esys-subtropical-and-polar-jet",
+    "relation_id": "rel-spj-merge",
+    "verdict": "defect",
+    "checks": [
+     4
+    ],
+    "brief_code": "g",
+    "reason": "오개념 「아열대 제트가 한대 제트보다 더 고위도에 놓인다」가 rel-spj-merge(「두 제트는 시간과 위치에 따라 합쳐지기도 하고 갈라지기도 한다」)를 가리키는데, 이 오개념의 반대편에 서 있는 것은 합류·분리가 아니라 두 제트의 남북 위치다. 그 내용은 명제가 아니라 카드 definition 「저위도 쪽의 것과 고위도 쪽의 것」에만 들어 있다.",
+    "suggest": "linked_relation 을 옮기려면 가리킬 명제가 먼저 있어야 한다. 두 제트의 남북 위치를 말하는 명제를 세울지, 오개념을 다른 명제 쪽으로 옮길지 C2 가 정한다."
+   },
+   {
+    "card_id": "esys-advection-fog",
+    "relation_id": "rel-af-sea-fog",
+    "verdict": "uncertain",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "inverted_text 「해무는 찬 공기가 따뜻한 해수 위로 옮겨 가 생긴 안개다」는 교과서가 해무를 이류 안개 칸(101쪽 표 1 「온난 습윤한 공기가 차가운 지표로 이동할 때 생성(해무)」)에만 넣었으므로 거짓이지만, 해무를 바다 위 안개 일반으로 쓰는 용법에서는 증발 안개도 해무로 불려 참이 될 여지가 있다. 낱말의 범위가 걸린 문제라 진위 판단 필요 — C8 검토 항목."
+   },
+   {
+    "card_id": "esys-coalescence-process",
+    "relation_id": "rel-cp-warm-cloud",
+    "verdict": "uncertain",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "inverted_text 「병합 과정은 빙정과 과냉각 물방울이 함께 있는 구름에서 일어난다」는 교과서 100쪽 그림 16 의 구역 구분에 따르면 거짓이지만, 혼합상 구름에서도 충돌·병합이 일어나는지는 교과서 밖의 사실이다. 진위 판단 필요 — C8 검토 항목."
+   },
+   {
+    "card_id": "esys-convergence-divergence",
+    "relation_id": "rel-cd-upper-pairing",
+    "verdict": "uncertain",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "inverted_text 「지상에서 수렴이 일어나는 곳의 상층에도 똑같이 수렴이 나타난다」는 교과서의 상하 짝 구조에 어긋나지만, 기압계가 쇠퇴할 때 그런 배치가 나타날 수 있다. 진위 판단 필요 — C8 검토 항목."
+   },
+   {
+    "card_id": "esys-absolute-instability",
+    "relation_id": "rel-ai-cumuliform",
+    "verdict": "uncertain",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "inverted_text 「절대 불안정한 대기에서는 옆으로 퍼지는 층운형 구름이 발달한다」는 교과서 97쪽 서술에 어긋나지만, 얕은 불안정층에 층적운이 생기는 일이 있어 문면 그대로는 참이 될 여지가 있다. 짝인 rel-as-stratiform(안정층에 적운형)은 그런 여지가 없어 판정이 갈린다. 진위 판단 필요 — C8 검토 항목."
+   },
+   {
+    "card_id": "esys-stratiform-and-cumuliform-cloud",
+    "relation_id": "rel-cumuliform-strong-precip",
+    "verdict": "uncertain",
+    "checks": [
+     2
+    ],
+    "brief_code": "b",
+    "reason": "명제는 「적운형 구름은 강한 비를 내린다」인데 inverted_text 는 「층운형 구름보다 약한 비를 내린다」로 원문에 없던 비교를 끌어들였다. 뒤집은 문장이 원 명제의 부정이 아니므로 판정 근거가 흔들린다."
+   },
+   {
+    "card_id": "esys-absolute-stability",
+    "relation_id": "rel-as-criterion",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「기층의 기온 감률이 습윤 단열 감률보다도 작아」가 판별 기준을 이미 품고 있어 명제가 정의의 되풀이가 된다. 다만 이 판별 기준이야말로 카드의 학습 알맹이라 명제를 없앨 수 없다 — 손볼 곳이 정의 쪽인지 명제 쪽인지 갈린다."
+   },
+   {
+    "card_id": "esys-absolute-instability",
+    "relation_id": "rel-ai-criterion",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "rel-as-criterion 과 같은 꼴이다. definition 이 판별 기준을 품고 있다."
+   },
+   {
+    "card_id": "esys-conditional-instability",
+    "relation_id": "rel-ci-criterion",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "rel-as-criterion 과 같은 꼴이다. definition 이 두 감률 사이라는 기준을 품고 있다."
+   },
+   {
+    "card_id": "esys-conditional-instability",
+    "relation_id": "rel-ci-free-ascent",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「포화 전에는 안정하고 포화 뒤에는 불안정해지는 상태」의 뒷부분을 편 말이다. invertible_reason 도 「'조건부'라는 이름이 성립하지 않아」라고 적는다."
+   },
+   {
+    "card_id": "esys-atmospheric-stability",
+    "relation_id": "rel-stable-returns",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「살짝 위아래로 흔든 공기 덩어리가 제자리로 돌아오려는지 계속 멀어지는지로 나타내는 성질」에서 곧바로 나온다. 다만 어느 쪽을 안정이라 부르는가 하는 이름 붙이기가 남아 있어 완전한 동어반복인지 갈린다."
+   },
+   {
+    "card_id": "esys-environmental-lapse-rate",
+    "relation_id": "rel-elr-is-environment",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 「그 자리의 대기가 실제로 지니고 있는 연직 기온 분포」를 되풀이한다. 다만 단열 감률과 갈라 보는 대비가 학습 알맹이라 동어반복으로만 볼지 갈린다."
+   },
+   {
+    "card_id": "esys-stratiform-and-cumuliform-cloud",
+    "relation_id": "rel-cloud-shape-by-stability",
+    "verdict": "uncertain",
+    "checks": [
+     3
+    ],
+    "brief_code": "f",
+    "reason": "definition 이 이미 「연직 운동이 억눌린 대기에서 옆으로 퍼져 생기는 구름과 연직 운동이 활발한 대기에서 위로 솟아 생기는 구름」이라 안정도-모양 대응이 정의에 들어 있다."
+   },
+   {
+    "card_id": "esys-nocturnal-jet",
+    "relation_id": "rel-nj-friction-drop",
+    "verdict": "uncertain",
+    "checks": [
+     4
+    ],
+    "brief_code": "g",
+    "reason": "오개념 「야간 제트는 대류권 계면 부근에서 부는 제트류와 같은 것이다」가 이 명제에 걸려 있는데, 이것은 명제의 반대편이 아니라 두 낱말을 혼동한 것이다. 명제가 말하는 것은 밤의 마찰 감소이지 제트류와의 구별이 아니다."
+   }
+  ],
+  "misconception_findings": {
+   "checked": 124,
+   "note": "카드마다 2건씩 124건. linked_relation 이 가리키는 명제의 반대편에 실제로 서 있는지 전수로 봤다.",
+   "defect": 1,
+   "uncertain": 1,
+   "items": [
+    "esys-subtropical-and-polar-jet 「아열대 제트가 한대 제트보다 더 고위도에 놓인다」 → rel-spj-merge (defect)",
+    "esys-nocturnal-jet 「야간 제트는 제트류와 같은 것이다」 → rel-nj-friction-drop (uncertain)"
+   ]
+  },
+  "cross_card_contradictions": {
+   "found": 0,
+   "checked": [
+    "esys-albedo 는 지구 평균 반사도 0.294(교과서 90쪽), esys-radiative-equilibrium-temperature 는 0.30(교과서 88쪽)을 쓴다. 값이 다르지만 둘 다 교과서가 각각 다른 자리에서 쓴 값이라 카드 간 충돌이 아니다.",
+    "esys-boundary-layer rel-bl-wind-profile(경계층 풍속 < 자유 대기)과 esys-nocturnal-jet rel-nj-friction-drop(밤에 경계층 상부 바람이 낮보다 강해진다)은 견주는 대상이 달라(자유 대기 대 낮) 어긋나지 않는다.",
+    "esys-latitudinal-energy-imbalance rel-lei-solar-quarter 와 esys-solar-constant rel-sc-quarter 가 사실상 같은 명제다. 충돌은 아니나 겹친다 — D1 에서 같은 문항이 두 번 나올 수 있으니 메인이 알아 둘 일이다.",
+    "esys-ferrel-cell rel-fc-not-main-transport(극 쪽 열 수송 주역은 편서풍 파동)는 교과서 124쪽 「중위도에서는 간접 순환인 페렐 순환이 나타나지만, 열을 극쪽으로 보내는 것은 주로 편서풍 파동이 담당한다」로 확인했다. esys-hadley-cell 과도 위도대가 달라 어긋나지 않는다."
+   ]
+  },
+  "cross_unit_check": {
+   "note": "same 으로 이어진 카드의 명제와 어긋나는지, invertible 판정 기준이 같은지 대조했다.",
+   "items": [
+    {
+     "key": "concept:greenhouse-gas",
+     "pair": "esys-greenhouse-gas ↔ isci2-greenhouse-gas",
+     "content": "어긋나지 않음",
+     "invertible": "isci2 는 3건 중 1건만 true. 내용 충돌 없음."
+    },
+    {
+     "key": "concept:greenhouse-effect",
+     "pair": "esys-greenhouse-effect ↔ isci2-greenhouse-effect",
+     "content": "어긋나지 않음",
+     "invertible": "기준이 다르다. 사실상 같은 명제인 isci2 rel-ghe-mechanism 은 invertible false 인데 esys rel-ghe-raises-surface-temp 는 true 다. 두 명제 모두 정의를 되풀이한 것이라 isci2 쪽이 보수적이다. esys 쪽을 동어반복(defect 3)으로 올린 근거의 하나다."
+    },
+    {
+     "key": "concept:atmospheric-general-circulation",
+     "pair": "esys-general-circulation ↔ isci2-atmospheric-general-circulation",
+     "content": "어긋나지 않음(둘 다 세 순환 세포·차등 가열 원인)",
+     "invertible": "isci2 3건 중 2건 true. 기준 다툼 없음."
+    },
+    {
+     "key": "concept:atmospheric-pressure",
+     "pair": "esys-atmospheric-pressure ↔ mate-atmospheric-pressure",
+     "content": "어긋나지 않음(mate 는 1 atm = 760 mmHg, esys 는 1 hPa = 100 Pa)",
+     "invertible": "mate 2건 모두 true. 기준 같음."
+    },
+    {
+     "key": "concept:centripetal-force",
+     "pair": "esys-centripetal-force ↔ mech-centripetal-force",
+     "content": "어긋나지 않음",
+     "invertible": "기준이 다르다. 「구심력은 따로 있는 힘이 아니다」라는 같은 뜻의 명제를 mech rel-cf-role 은 false, esys rel-cpf-difference 는 true 로 두었다. 이 건은 esys 쪽이 옳다고 본다 — 뒤집은 문장 「별개로 작용하는 또 하나의 힘이다」는 참이 될 경우가 없다. 고칠 곳이 있다면 mech-1 쪽이며 이 보고서의 소관이 아니다."
+    },
+    {
+     "key": "concept:adiabatic-process",
+     "pair": "esys-adiabatic-change ↔ mech-adiabatic-process",
+     "content": "어긋나지 않음(단열 팽창 → 냉각, 단열 압축 → 가열이 양쪽 같다)",
+     "invertible": "mech 3건 중 2건 true. 기준 같음."
+    },
+    {
+     "key": "concept:latent-heat",
+     "pair": "esys-latent-heat ↔ phys-latent-heat ↔ mech-latent-heat (세 카드)",
+     "content": "어긋나지 않음. phys 는 입자 사이 인력, mech 는 물질 특성값, esys 는 증발·응결과 열수지로 각각 다른 면을 잡고 있어 겹치되 부딪히지 않는다.",
+     "invertible": "mech-latent-heat rel-lh-vapor 는 「대체로 더 많은 에너지가 든다」는 정도 명제를 invertible false 로 두었다. 이 단원의 rel-fog-hazard 를 defect 로 올린 판단과 같은 기준이며, 같은 키를 쓰는 세 카드 가운데 esys 만 다르게 가고 있음을 보여 준다."
+    },
+    {
+     "key": "concept:hydrostatic-equilibrium",
+     "pair": "esys-hydrostatic-equilibrium ↔ earth-hydrostatic-equilibrium",
+     "content": "내용은 어긋나지 않으나 쓰임이 다르다 — earth 는 별 내부의 중력 대 기체 압력, esys 는 대기의 중력 대 연직 기압 경도력이다. 같은 키를 써도 되는지는 동음이의 판단이라 사람이 볼 항목이다(G 파이프라인·homonyms.yaml). 메인이 준 7건 밖의 same 링크라 여기 적어 둔다.",
+     "invertible": "earth 3건 중 2건 true."
+    }
+   ]
+  },
+  "textbook_number_check": {
+   "method": "output/source/esys-3/text.jsonl 1531 블록을 본문·곁주·용어 상자·그림 캡션·그림 안 글자까지 훑어 대조",
+   "verified": [
+    "태양 상수 1361 W/m² (p124-b6 용어 상자)",
+    "반사도 0.294 · 100단위 배분 29.4/23.5/47.1 (p90-b6)",
+    "지표면 복사 117.1 · 재복사 100.6 · 순 적외선 16.5 · 대기의 창 11.8 (p90 그림 5 안 글자 + p91-b1)",
+    "70.6 대 70.3 · 남는 0.3단위 · 해양 축적 (p91-b1)",
+    "숨은열 24.1 대 대류·전도 6.2 (p91-b1)",
+    "-18 ℃ · 실제 15 ℃ · 33 ℃ 차 (p89-b1)",
+    "금성 0.78 · 지구 0.30 · 복사 평형 온도 -48/-18/-57 ℃ (p88-b36)",
+    "대기의 창 8~9 μm·10~12 μm · 위성 지표 관측 (p87-b1)",
+    "오존 3 mm (p86-b5 그림 1 캡션)",
+    "건조 단열 감률 100 m당 약 1 ℃ · 습윤 100 m당 0.5 ℃ (p95-b1)",
+    "습윤 단열 감률 평균 약 5 ℃/km (p95-b59 곁주)",
+    "이슬점 감률 2 ℃/km (p95-b61 곁주)",
+    "H = 125(T-Td) (p95-b2)",
+    "푄 초기 20 ℃ → 최종 25 ℃ (p95-b50·b41 그림 11 안 글자)",
+    "빙정 과정 -40~0 ℃ (p100-b1 · p100-b23 캡션)",
+    "10 m당 약 1 hPa · 태풍 수평 변화의 1000배 이상 (p104-b7·b8)",
+    "연직 속도 수 cm/s (p105-b1)",
+    "전향력 C = 2vΩsinφ (p107-b20)",
+    "지상풍 각 약 30° · 육상에서 크고 해양에서 작다 (p115-b1)",
+    "실제 바람과 지균풍 속력 차 약 10 % (p113-b1)",
+    "500 hPa 이 공기량을 연직으로 이등분 (p111-b3·b5)",
+    "경계층 고도 1 km 이내 (p114-b1 · p110-b11 캡션)",
+    "새벽 3시 최강 바람 (p116-b4)",
+    "제트류 겨울철 최강 · 여름보다 저위도 (p119-b16)",
+    "편서풍 파동이 극 쪽 열 수송 주역 (p124-b4)",
+    "태양 상수의 약 1/4 (p124-b3·b4)",
+    "회전 수조 실험의 한계 (p121-b15)",
+    "직접·간접 순환의 정의와 예 (p124-b15·b18 용어 상자)",
+    "욕실 배수구·먼지 소용돌이 (p109-b45)",
+    "안개로 인한 결항·교통사고 (p101-b1)",
+    "복사 안개 늦가을·겨울 내륙 (p101-b24)",
+    "야간 제트와 새벽 집중 호우 (p116-b13)",
+    "산화 이질소 표기 (p87-b1·b6)"
+   ],
+   "not_found": [],
+   "conclusion": "교과서에 없는 수치·사실로 지적할 것은 없다. (e) 결함 0건."
+  },
+  "escalation": {
+   "uncertain_ratio": 0.08,
+   "threshold": "uncertain 20 % 초과",
+   "triggered": false
+  }
+ },
+ "handoff": [
+  "C6 결함 16건은 전부 C2(concept-writer)가 고칠 자리다. 어느 카드부터 고칠지는 메인이 정한다.",
+  "이 보고서는 카드 파일을 고치지 않았고 verified_by 도 건드리지 않았다.",
+  "esys-1(172/172)·esys-2(120/120)도 같은 100 %다. 같은 작성 습관이 세 단원에 걸쳐 있으므로 두 단원도 같은 잣대로 다시 볼 것을 권한다.",
+  "C7 에서 esys-rossby-wave 에 그림 45 가 붙지 않는지 확인할 것."
+ ]
+}

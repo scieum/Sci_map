@@ -1,0 +1,111 @@
+{
+  "id": "esys-body-and-surface-wave",
+  "concept_key": "concept:body-and-surface-wave",
+  "registry_status": "new",
+  "term": "실체파와 표면파",
+  "notation": {
+    "hanja": "實體波 表面波",
+    "english": "body wave and surface wave",
+    "hanja_gloss": "實 열매 실 · 體 몸 체 · 波 물결 파 · 表 겉 표 · 面 낯 면 · 波 물결 파"
+  },
+  "definition": "지구 내부를 뚫고 지나는 지진파가 실체파, 지표면을 따라 퍼지는 지진파가 표면파다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bs-path",
+      "text": "실체파는 지구 내부를 통과해 진행하고 표면파는 지표면을 따라 전파된다.",
+      "form": {
+        "condition": "전파 경로로 지진파를 가를 때",
+        "type": "classification",
+        "scope": "지진파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 파의 경로를 맞바꾼 것이라 이름의 뜻과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "실체파는 지표면을 따라 전파되고 표면파는 지구 내부를 통과해 진행한다."
+    },
+    {
+      "id": "rel-bs-lwave",
+      "text": "표면파인 L파는 전파 속도가 느린 대신 진폭이 P파·S파보다 커서 가장 큰 피해를 준다.",
+      "form": {
+        "condition": "같은 지진의 기록에서 세 파를 견줄 때",
+        "type": "classification",
+        "scope": "지진 기록에 나타나는 세 파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 속도와 진폭을 맞바꾼 것이라 L파가 가장 큰 피해를 준다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면파인 L파는 전파 속도가 빠른 대신 진폭이 P파·S파보다 작아 피해가 가장 작다."
+    },
+    {
+      "id": "rel-bs-why-body",
+      "text": "지구 내부 구조를 파악하는 데 쓰이는 것은 내부를 통과해 온 실체파다.",
+      "form": {
+        "condition": "내부를 지나온 기록이 필요할 때",
+        "type": "conditional",
+        "scope": "지구 내부 구조 연구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「표면파를 이용해 내부 구조를 파악한다」는 중단원 정리 문항이 ×로 가른 지문이라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 내부 구조를 파악하는 데 쓰이는 것은 지표면을 따라 도는 표면파다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지구 내부 구조는 표면파를 분석해 알아낸 것이다",
+      "why_wrong": "표면파는 지표면만 따라 돌아 내부 정보를 싣지 못한다. 내부를 통과하며 반사·굴절한 실체파가 그 일을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bs-why-body"
+    },
+    {
+      "text": "속도가 느린 표면파는 피해도 작다",
+      "why_wrong": "L파는 느리게 오지만 진폭이 P파·S파보다 커서 오히려 가장 큰 피해를 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bs-lwave"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-seismic-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-p-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-s-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    38,
+    39
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 검토 기록(고치지 않음) — rel-bs-why-body 의 inverted_text 「지구 내부 구조를 파악하는 데 쓰이는 것은 지표면을 따라 도는 표면파다」는 표면파 분산으로 지각·상부 맨틀 구조를 구하는 실제 지진학에서는 참이 될 여지가 있다. 다만 이 단원 교과서 안에서는 중단원 정리가 그 지문을 ×로 가르므로 invertible: true 를 그대로 두었다. 문면을 교과서 범위로 묶을지는 C8 에서 볼 일이다."
+  ]
+}

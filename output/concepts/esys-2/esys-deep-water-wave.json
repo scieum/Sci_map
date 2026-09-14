@@ -1,0 +1,116 @@
+{
+  "id": "esys-deep-water-wave",
+  "concept_key": "concept:deep-water-wave",
+  "registry_status": "new",
+  "term": "심해파",
+  "notation": {
+    "hanja": "深海波",
+    "hanja_gloss": "深 깊을 심 · 海 바다 해 · 波 물결 파",
+    "english": "deep-water wave",
+    "symbol_display": "v = √(gL/2π)",
+    "symbol_plain": "v = (g L/(2 pi))^(1/2)"
+  },
+  "definition": "수심이 파장의 1/2보다 깊은 구간을 지나 해저면의 영향을 받지 않는 해파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dww-criterion",
+      "text": "수심이 파장의 1/2보다 깊으면 그 해파를 심해파로 분류한다.",
+      "form": {
+        "condition": "수심과 파장의 비를 견줄 때",
+        "type": "classification",
+        "scope": "해파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「파장의 1/2보다 얕으면 심해파로 분류한다」인데, 그 구간은 전이파나 천해파의 자리이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심이 파장의 1/2보다 얕으면 그 해파를 심해파로 분류한다."
+    },
+    {
+      "id": "rel-dww-speed",
+      "text": "심해파는 파장이 길수록 빠르게 나아간다.",
+      "form": {
+        "condition": "중력 가속도가 일정할 때",
+        "type": "direct",
+        "scope": "심해파",
+        "antecedent": {
+          "quantity": "파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "심해파의 속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「파장이 길수록 느려진다」인데, 속력이 파장의 제곱근에 비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "심해파는 파장이 길수록 느리게 나아간다."
+    },
+    {
+      "id": "rel-dww-invariant",
+      "text": "심해파가 나아가는 동안에는 주기뿐 아니라 파장과 속력도 달라지지 않는다.",
+      "form": {
+        "condition": "수심이 파장의 1/2보다 깊은 구간을 지나는 동안",
+        "type": "conditional",
+        "scope": "심해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「파장과 속력이 계속 달라진다」인데, 해저면의 영향을 받지 않아 값이 그대로이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "심해파가 나아가는 동안 파장과 속력은 계속 달라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "심해파는 수심이 깊을수록 빠르게 나아간다.",
+      "why_wrong": "심해파의 속력을 정하는 것은 파장이다. 수심이 파장의 1/2보다 깊기만 하면 해저면이 운동에 닿지 않아 수심은 속력에 관여하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dww-speed"
+    },
+    {
+      "text": "먼 바다는 수심이 깊으니 그곳을 지나는 해파는 모두 심해파다.",
+      "why_wrong": "기준은 수심 자체가 아니라 수심과 파장의 비다. 파장이 수백 km인 지진 해일은 수심 4000 m의 심해에서도 천해파다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dww-criterion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ocean-wave-speed"
+    },
+    {
+      "type": "next",
+      "target": "esys-transitional-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-2",
+  "pages": [
+    64
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 이 짚은 대로, 파고를 말하면서 주기·파장·속력 명제(rel-dww-invariant)에 걸려 있던 오개념을 걷어 냈다 — why_wrong 이 카드의 어느 명제도 받치지 않고 교과서에도 없는 '파고도 저절로 커지지 않는다'를 들여왔기 때문이다. 대신 카드 안 명제와 정면으로 맞서는 오개념 둘을 세웠다."
+  ]
+}

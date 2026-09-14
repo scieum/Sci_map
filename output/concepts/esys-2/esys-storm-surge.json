@@ -1,0 +1,123 @@
+{
+  "id": "esys-storm-surge",
+  "concept_key": "concept:storm-surge",
+  "registry_status": "new",
+  "term": "폭풍 해일",
+  "notation": {
+    "hanja": "暴風海溢",
+    "hanja_gloss": "暴 사나울 폭 · 風 바람 풍 · 海 바다 해 · 溢 넘칠 일",
+    "english": "storm surge"
+  },
+  "definition": "태풍이나 강한 저기압이 다가올 때 해수면이 빠르게 높아지며 육지로 밀려드는 해일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ss-pressure",
+      "text": "기압이 1 hPa 낮아질 때마다 해수면은 약 1 cm 올라간다.",
+      "form": {
+        "condition": "기압 변화가 해면에 미치는 효과만 따질 때",
+        "type": "inverse",
+        "scope": "저기압 중심 부근의 해면",
+        "antecedent": {
+          "quantity": "기압",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "해수면의 높이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「기압이 1 hPa 낮아지면 해수면이 1 cm 내려간다」인데, 누르는 힘이 줄면 해면이 올라오므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기압이 1 hPa 낮아질 때마다 해수면은 약 1 cm 내려간다."
+    },
+    {
+      "id": "rel-ss-share",
+      "text": "기압이 낮아져 생기는 해수면 상승은 폭풍 해일 파고의 5 % 정도밖에 설명하지 못한다.",
+      "form": {
+        "condition": "폭풍 해일의 원인을 몫으로 나눌 때",
+        "type": "classification",
+        "scope": "폭풍 해일"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「폭풍 해일 파고는 대부분 기압이 낮아진 결과다」인데, 기압 효과의 몫이 5 % 정도에 지나지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "폭풍 해일의 파고는 대부분 기압이 낮아져 해수면이 올라간 결과다."
+    },
+    {
+      "id": "rel-ss-wind",
+      "text": "폭풍 해일의 높은 파고를 만드는 더 큰 원인은 강풍이 해수를 밀어 올리는 효과다.",
+      "form": {
+        "condition": "기압 효과와 바람 효과의 크기를 견줄 때",
+        "type": "causal",
+        "scope": "폭풍 해일"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「더 큰 원인이 낮은 기압이다」인데, 기압 효과는 5 % 정도라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "폭풍 해일의 높은 파고를 만드는 더 큰 원인은 낮은 기압이다."
+    },
+    {
+      "id": "rel-ss-example",
+      "text": "중심 기압이 963 hPa인 태풍 아래에서는 기압 효과만으로도 해수면이 약 50 cm 높아진다.",
+      "form": {
+        "condition": "1 hPa마다 1 cm라는 비례를 적용할 때",
+        "type": "direct",
+        "scope": "교과서가 든 태풍 사례"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「약 5 cm 높아진다」인데, 평상시 기압과의 차가 50 hPa 남짓이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심 기압 963 hPa인 태풍 아래에서 기압 효과로 높아지는 해수면은 약 5 cm다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "폭풍 해일은 기압이 낮아져 해수면이 솟아오르는 것이 주된 원인이다.",
+      "why_wrong": "기압 효과가 설명하는 몫은 파고의 5 % 정도이고, 더 큰 원인은 강풍이 해수를 밀어 올리는 효과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ss-share"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-coastal-surge"
+    },
+    {
+      "type": "next",
+      "target": "esys-surge-countermeasures"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-3",
+  "pages": [
+    66
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "후보 단계에서 '기압에 의한 해수면 상승'을 따로 세우지 않고 흡수했으므로, 1 hPa 당 1 cm·전체의 5 %·963 hPa 사례를 이 카드의 명제로 살렸다."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+ "id": "esys-latent-heat",
+ "concept_key": "concept:latent-heat",
+ "registry_status": "new",
+ "term": "숨은열",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "latent heat",
+  "hanja_note": "'숨은'이 고유어라 표제어 전체를 한자로 적을 수 없다. 같은 뜻의 한자어 표기는 alias 인 '잠열(潛熱)'이다."
+ },
+ "definition": "온도는 그대로인 채 상태만 바뀌는 동안 드나드는 열로, 증발할 때 흡수되고 응결할 때 방출된다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-evap-cond",
+   "text": "물이 증발할 때는 숨은열을 흡수하고 수증기가 응결할 때는 숨은열을 방출한다.",
+   "form": {
+    "condition": "온도 변화 없이 상태만 바뀔 때",
+    "type": "classification",
+    "scope": "물의 상태 변화"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「증발할 때 방출하고 응결할 때 흡수한다」는 두 방향을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "물이 증발할 때는 숨은열을 방출하고 수증기가 응결할 때는 숨은열을 흡수한다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-surface-cool-upper-warm",
+   "text": "지표에서 증발한 물이 상승해 구름으로 응결하면 지표는 식고 상층 대기는 데워져 위아래 기온 차가 줄어든다.",
+   "form": {
+    "condition": "증발한 수증기가 상승해 응결할 때",
+    "type": "causal",
+    "scope": "대류권의 연직 기온 분포"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지표가 데워지고 상층이 식어 기온 차가 커진다」는 흡수가 지표에서, 방출이 상층에서 일어난다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지표에서 증발한 물이 상승해 구름으로 응결하면 지표는 데워지고 상층 대기는 식어 위아래 기온 차가 커진다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-latent-24-1",
+   "text": "지표면이 대기로 넘기는 에너지 가운데 물의 증발에 딸린 숨은열이 24.1단위로, 대류와 전도의 6.2단위보다 훨씬 크다.",
+   "form": {
+    "condition": "100단위 기준 전 지구 평균 열수지에서",
+    "type": "conditional",
+    "scope": "지표에서 대기로의 에너지 전달"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「대류와 전도가 숨은열보다 훨씬 크다」는 24.1 대 6.2 라는 값과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "100단위 기준 열수지에서 지표면이 대기로 넘기는 에너지는 대류와 전도가 숨은열보다 훨씬 크다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "숨은열이 드나들면 물질의 온도가 곧바로 오르내린다.",
+   "why_wrong": "숨은열은 온도를 바꾸지 않으면서 상태를 바꾸는 데 쓰이는 열이다. 온도 변화로 드러나지 않기에 '숨은'이라 부른다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-evap-cond"
+  },
+  {
+   "text": "구름이 만들어질 때 방출된 숨은열은 지표를 데운다.",
+   "why_wrong": "지표는 증발로 숨은열을 빼앗겨 식고, 데워지는 곳은 응결이 일어나는 상층 대기다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-surface-cool-upper-warm"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-global-mean-heat-budget"
+  },
+  {
+   "type": "next",
+   "target": "esys-moist-adiabatic-lapse-rate"
+  },
+  {
+   "type": "related",
+   "target": "esys-atmospheric-reradiation"
+  },
+  {
+   "type": "same",
+   "target": "phys-latent-heat",
+   "note": "concept_key 가 concept:latent-heat 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-02"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-3",
+ "pages": [
+  91,
+  92
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "aliases": [
+  "잠열"
+ ],
+ "notes": [
+  "이 교과서는 '숨은열'을 표제 표기로 쓰고 '잠열'을 병기한다. phys-1 의 '잠열'(concept:latent-heat)과 같은 개념으로 보아 키를 그대로 쓰되 표제어는 교과서를 따랐다 — 표기 확정은 G3 사람 몫이다.",
+  "mech-latent-heat 도 같은 키를 쓴다. same 은 phys 쪽 하나만 걸었다.",
+  "C5 기록 — 같은 concept:latent-heat 를 쓰는 mech-latent-heat 는 정도 명제(rel-lh-vapor)를 invertible false 로 두어 이 단원과 잣대가 갈린다. 내용 충돌은 없다. 다른 단원 카드는 건드리지 않았고 C8·G3 에서 사람이 볼 자리다."
+ ]
+}

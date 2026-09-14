@@ -1,0 +1,129 @@
+{
+ "id": "esys-lifting-condensation-level",
+ "concept_key": "concept:lifting-condensation-level",
+ "registry_status": "new",
+ "term": "응결 고도",
+ "notation": {
+  "hanja": "凝結高度",
+  "english": "lifting condensation level",
+  "hanja_gloss": "凝 엉길 응 · 結 맺을 결 · 高 높을 고 · 度 법도 도",
+  "symbol_display": "H = 125(T − T_d) m",
+  "symbol_plain": "H = 125(T - Td) m"
+ },
+ "definition": "올라가는 공기 덩어리의 기온과 이슬점이 같아져 구름이 생기기 시작하는 높이.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-lcl-formula",
+   "text": "지표의 기온과 이슬점 차가 클수록 응결 고도가 높아지며, 그 높이는 H = 125(T − Td) m로 어림한다.",
+   "form": {
+    "condition": "공기 덩어리가 건조 단열 감률로 올라갈 때",
+    "type": "direct",
+    "scope": "불포화 상태로 출발한 공기 덩어리",
+    "antecedent": {
+     "quantity": "기온과 이슬점의 차",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "응결 고도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기온과 이슬점 차가 클수록 응결 고도가 낮아진다」는 H 가 그 차에 비례한다는 식과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "건조 단열 감률로 올라가는 공기 덩어리는 지표의 기온과 이슬점 차가 클수록 응결 고도가 낮아진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lcl-cloud-base",
+   "text": "응결 고도는 구름이 생기기 시작하는 높이이므로 그 구름의 밑면 높이에 해당한다.",
+   "form": {
+    "condition": "상승 응결로 구름이 만들어질 때",
+    "type": "classification",
+    "scope": "상승하는 공기 덩어리가 만드는 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「응결 고도가 구름의 꼭대기 높이에 해당한다」는 응결이 시작되는 자리라는 정의와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "상승 응결로 구름이 만들어질 때 응결 고도는 그 구름의 꼭대기 높이에 해당한다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-dewpoint-lapse",
+   "text": "불포화 공기 덩어리의 이슬점은 1 km 오를 때마다 2 ℃씩만 낮아져 기온보다 훨씬 천천히 떨어진다.",
+   "form": {
+    "condition": "공기 덩어리가 불포화 상태로 올라갈 때",
+    "type": "inverse",
+    "scope": "응결 고도 아래 구간",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "이슬점",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「이슬점이 기온보다 빠르게 떨어진다」가 참이라면 둘이 만나 포화되는 일이 없어 참이 될 경우가 없다.",
+   "inverted_text": "불포화 상태로 올라가는 공기 덩어리의 이슬점은 기온보다 빠르게 떨어진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기온과 이슬점의 차가 작을수록 구름 밑면이 높아진다.",
+   "why_wrong": "차가 작으면 조금만 올라가도 둘이 같아지므로 응결 고도, 곧 구름 밑면이 낮아진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-lcl-formula"
+  },
+  {
+   "text": "올라가는 공기 덩어리의 이슬점은 고도가 달라져도 변하지 않는다.",
+   "why_wrong": "부피가 늘면서 이슬점도 1 km당 2 ℃씩 낮아진다. 다만 기온보다 천천히 떨어져 둘이 만난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-dewpoint-lapse"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-dry-adiabatic-lapse-rate"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-moist-adiabatic-lapse-rate"
+  },
+  {
+   "type": "next",
+   "target": "esys-foehn"
+  },
+  {
+   "type": "related",
+   "target": "esys-stratiform-and-cumuliform-cloud"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-1",
+ "pages": [
+  95
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

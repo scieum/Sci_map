@@ -1,0 +1,107 @@
+{
+ "id": "esys-rossby-wave-and-weather",
+ "concept_key": "concept:rossby-wave-and-midlatitude-weather",
+ "registry_status": "new",
+ "term": "편서풍 파동과 중위도 날씨",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "Rossby waves and midlatitude weather",
+  "hanja_note": "'날씨'가 고유어라 표제어 전체를 한자로 적을 수 없다. 앞머리는 偏西風波動·中緯度다."
+ },
+ "definition": "기압골이 다가오면 흐리고 비가 오기 쉽고 기압 마루가 다가오면 맑아지는 식으로 중위도 날씨가 상층 파동을 따라 달라지는 것.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-rww-trough-approach",
+   "text": "기압골이 서쪽에서 다가오면 상층 발산과 하층 수렴으로 저기압이 발달해 비가 올 가능성이 커진다.",
+   "form": {
+    "condition": "기압골이 관측 지점의 서쪽에 있을 때",
+    "type": "causal",
+    "scope": "우리나라를 포함한 중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기압골이 다가오면 맑은 날씨가 될 가능성이 커진다」는 상층 발산이 저기압을 키운다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기압골이 서쪽에서 다가오면 맑은 날씨가 될 가능성이 커진다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rww-ridge-approach",
+   "text": "기압 마루가 다가오면 상층 수렴과 하층 발산으로 하강 기류가 생겨 구름이 줄고 맑아진다.",
+   "form": {
+    "condition": "기압 마루가 관측 지점에 접근할 때",
+    "type": "causal",
+    "scope": "중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기압 마루가 다가오면 구름이 늘고 비가 온다」는 하강 기류가 구름을 줄인다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기압 마루가 다가오면 상층 수렴과 하층 발산으로 구름이 늘고 비가 온다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rww-forecast",
+   "text": "일기 예보의 정확도는 편서풍 파동이 앞으로 어떻게 움직일지를 얼마나 잘 짚어 내느냐에 달려 있다.",
+   "form": {
+    "condition": "수치 예보로 파동을 다룰 때",
+    "type": "causal",
+    "scope": "중위도 일기 예보"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「파동의 움직임을 잘 짚어 내는 것과 예보 정확도는 상관이 없다」는 수치 예보의 출발점이 이 시도였다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "일기 예보의 정확도는 편서풍 파동이 앞으로 어떻게 움직일지를 얼마나 잘 짚어 내는가와는 상관이 없다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기압골이 다가오면 날씨가 맑아진다.",
+   "why_wrong": "기압골 동쪽에서 상층 발산이 일어나 저기압이 발달하므로 흐리고 비가 오기 쉽다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rww-trough-approach"
+  },
+  {
+   "text": "상층 일기도는 지상 날씨를 내다보는 데는 쓸모가 없다.",
+   "why_wrong": "상층 파동의 기압골·마루 위치로 지상 기압계의 발달과 날씨를 내다볼 수 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rww-forecast"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-upper-divergence-and-cyclogenesis"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-trough-and-ridge"
+  },
+  {
+   "type": "related",
+   "target": "esys-weather-chart"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-2",
+ "pages": [
+  124
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

@@ -1,0 +1,114 @@
+{
+ "id": "esys-meridional-heat-transport",
+ "concept_key": "concept:meridional-heat-transport-by-rossby-wave",
+ "registry_status": "new",
+ "term": "편서풍 파동의 남북 열 수송",
+ "notation": {
+  "hanja": "偏西風波動 南北熱輸送",
+  "english": "meridional heat transport by Rossby waves"
+ },
+ "definition": "편서풍 파동의 진폭이 커지며 따뜻한 공기를 고위도로, 찬 공기를 저위도로 옮겨 남북 에너지 불균형을 덜어 주는 작용.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-mht-amplitude",
+   "text": "편서풍 파동의 진폭이 커지면 따뜻한 공기가 고위도로, 찬 공기가 저위도로 옮겨 가 남북 열 교환이 활발해진다.",
+   "form": {
+    "condition": "파동의 진폭이 달라질 때",
+    "type": "direct",
+    "scope": "중위도 상층",
+    "antecedent": {
+     "quantity": "파동의 진폭",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "남북 열 교환",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「진폭이 커지면 남북 열 교환이 오히려 줄어든다」는 진폭 증가가 열 수송을 늘린다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "편서풍 파동의 진폭이 커지면 남북 열 교환은 오히려 줄어든다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-mht-cutoff",
+   "text": "찬 공기가 저기압 형태로 저위도 쪽에 떨어져 나가고 나면 중위도 편서풍 파동의 진폭은 다시 작아진다.",
+   "form": {
+    "condition": "파동이 충분히 성장한 뒤",
+    "type": "causal",
+    "scope": "중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「떨어져 나간 뒤에도 진폭이 계속 커진다」는 2월 10일 자료에서 진폭이 다시 작아졌다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "찬 공기가 저위도 쪽으로 떨어져 나간 뒤에도 편서풍 파동의 진폭은 계속 커진다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-mht-imbalance",
+   "text": "편서풍 파동의 발달은 남북 에너지 불균형을 해소하는 데 기여한다.",
+   "form": {
+    "condition": "저위도 과잉·고위도 부족이 있을 때",
+    "type": "causal",
+    "scope": "지구 규모의 에너지 수지"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「파동이 발달할수록 불균형이 더 커진다」는 파동이 열을 옮겨 불균형을 덜어 준다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "편서풍 파동이 발달할수록 남북 에너지 불균형은 더 커진다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "편서풍 파동은 날씨만 바꿀 뿐 열을 옮기지는 않는다.",
+   "why_wrong": "진폭이 커지며 따뜻한 공기를 북으로, 찬 공기를 남으로 옮겨 남북 에너지 불균형을 덜어 준다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-mht-imbalance"
+  },
+  {
+   "text": "편서풍 파동의 진폭은 한 번 커지기 시작하면 계속 커진다.",
+   "why_wrong": "찬 공기가 저기압 형태로 떨어져 나가면 진폭이 다시 작아진다. 커졌다 작아졌다를 되풀이한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-mht-cutoff"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-rossby-wave"
+  },
+  {
+   "type": "next",
+   "target": "esys-latitudinal-energy-imbalance"
+  },
+  {
+   "type": "related",
+   "target": "esys-trough-and-ridge"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-1",
+ "pages": [
+  120
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1
+}

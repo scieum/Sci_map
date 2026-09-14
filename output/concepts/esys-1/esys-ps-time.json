@@ -1,0 +1,122 @@
+{
+  "id": "esys-ps-time",
+  "concept_key": "concept:s-p-time-interval",
+  "registry_status": "new",
+  "term": "PS시",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "S-P time interval",
+    "hanja_note": "'PS'는 P파·S파의 머리글자여서 한자 표기가 없다. '시(時)'만 한자다.",
+    "symbol_display": "PS시(t)",
+    "symbol_plain": "PS time (t)"
+  },
+  "definition": "한 관측소에 P파가 닿은 뒤 S파가 닿기까지 걸린 시간 차. 관측소에서 진원까지의 거리를 구하는 데 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pst-distance",
+      "text": "관측소가 진원에서 멀수록 P파와 S파의 도달 시간 차인 PS시는 커진다.",
+      "form": {
+        "condition": "두 파의 속도를 일정하다고 볼 때",
+        "type": "direct",
+        "scope": "같은 지진을 여러 관측소에서 잰 기록",
+        "antecedent": {
+          "quantity": "진원까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "PS시",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「멀수록 PS시가 작아진다」는 중단원 정리의 'PS시는 멀수록 크다'와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "관측소가 진원에서 멀수록 P파와 S파의 도달 시간 차인 PS시는 작아진다."
+    },
+    {
+      "id": "rel-pst-gap",
+      "text": "P파와 S파의 속도 차가 없다면 PS시가 생기지 않아 진원 거리를 구할 수 없다.",
+      "form": {
+        "condition": "두 파가 같은 경로를 지날 때",
+        "type": "conditional",
+        "scope": "PS시로 거리를 구하는 원리"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「속도 차가 없어도 PS시가 생겨 거리를 구할 수 있다」는 PS시가 속도 차에서 비롯한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "P파와 S파의 속도 차가 없어도 PS시가 생겨 진원 거리를 구할 수 있다."
+    },
+    {
+      "id": "rel-pst-origin",
+      "text": "PS시로 구하는 것은 관측소와 진원 사이의 거리다.",
+      "form": {
+        "condition": "진원과 진앙을 가려 볼 때",
+        "type": "classification",
+        "scope": "PS시가 알려 주는 거리의 뜻"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「관측소와 진앙 사이의 거리다」는 진원 거리라는 교과서의 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "PS시로 구하는 것은 관측소와 진앙 사이의 거리다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "관측소가 진원에서 멀어질수록 PS시는 작아진다",
+      "why_wrong": "속도가 빠른 P파가 먼저 앞서가므로 거리가 멀수록 두 파의 도달 시각 차이가 벌어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pst-distance"
+    },
+    {
+      "text": "PS시로 구한 거리는 관측소에서 진앙까지의 거리다",
+      "why_wrong": "PS시가 알려 주는 것은 진원까지의 거리다. 진앙 거리는 주시 곡선의 가로축에서 읽는 값이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pst-origin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-p-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-s-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-travel-time-curve"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    39,
+    45
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "★C8 판단 요청 — rel-pst-gap 「P파와 S파의 속도 차가 없다면 PS시가 생기지 않아 진원 거리를 구할 수 없다」의 앞 절은 이 카드의 definition(PS시 = P파가 닿은 뒤 S파가 닿기까지의 시간 차)에서 저절로 나오는 말이라 동어반복에 가깝다. 뒤 절만 정의 밖의 내용인데 그것은 rel-pst-distance 가 이미 담고 있다. 앞 절을 걷어낼지 rel-pst-distance 와 합칠지는 사람이 정한다. invertible 판정 자체는 흔들리지 않는다.",
+    "★C8 판단 요청 — 같은 PS시를 두 카드가 서로 다른 거리 축에서 읽는다. esys-ps-time/rel-pst-origin 은 「PS시로 구하는 것은 관측소와 진원 사이의 거리다」로 진원 거리라 못 박고, esys-travel-time-curve/rel-ttc-distance 는 「진앙 거리가 멀어질수록 …PS시가 커진다」로 진앙 거리 축에서 읽는다. 교과서 관행상 둘 다 성립하지만 D1 이 두 지문을 나란히 내면 학생이 진원 거리와 진앙 거리를 가를 근거를 잃는다. 어느 쪽 문면이나 scope 에 「주시 곡선의 가로축은 진앙 거리다」를 드러낼지 사람이 정한다."
+  ]
+}

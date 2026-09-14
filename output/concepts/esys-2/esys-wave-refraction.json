@@ -1,0 +1,101 @@
+{
+  "id": "esys-wave-refraction",
+  "concept_key": "concept:wave-refraction",
+  "registry_status": "new",
+  "term": "해파의 굴절과 에너지 집중",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'해파(海波)'·'굴절(屈折)'·'집중(集中)'에 음차어 '에너지'가 섞인 구라 전체를 한자어로 적지 않는다.",
+    "english": "wave refraction"
+  },
+  "definition": "천해파의 속력이 수심에 따라 달라져 마루의 방향이 꺾이고 에너지가 한쪽에 몰리는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wr-crest",
+      "text": "천해파의 마루를 이은 선은 등수심선과 나란해지고, 해파는 해안선에 수직인 방향으로 다가온다.",
+      "form": {
+        "condition": "속력이 수심 하나로 정해질 때",
+        "type": "causal",
+        "scope": "연안의 천해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「마루를 이은 선이 등수심선과 직각을 이루고 해안선과 나란히 다가온다」인데, 얕은 쪽이 먼저 느려져 마루가 등수심선 쪽으로 돌아서므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03",
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천해파의 마루를 이은 선은 등수심선과 직각을 이루고, 해파는 해안선과 나란한 방향으로 다가온다."
+    },
+    {
+      "id": "rel-wr-headland",
+      "text": "수심이 급히 얕아지는 곶에서는 해파가 굽어 들어와 에너지가 몰린다.",
+      "form": {
+        "condition": "곶과 만의 수심이 서로 다를 때",
+        "type": "causal",
+        "scope": "굴곡진 해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「곶에서 에너지가 흩어져 옅어진다」인데, 굴절이 파의 진행 방향을 곶 쪽으로 모으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심이 급히 얕아지는 곶에서는 해파의 에너지가 흩어져 옅어진다."
+    },
+    {
+      "id": "rel-wr-bay",
+      "text": "만은 곶보다 에너지가 덜 몰리지만, 만이 좁은 강 하구와 이어지면 그 물길을 타고 에너지가 몰려 파고가 치솟는다.",
+      "form": {
+        "condition": "만이 좁은 강 하구와 이어져 있을 때",
+        "type": "causal",
+        "scope": "만과 강 하구 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「강 하구와 이어지면 에너지가 흩어져 파고가 낮아진다」인데, 좁아지는 물길은 에너지를 모으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "만이 좁은 강 하구와 이어지면 에너지가 흩어져 파고가 낮아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "만 안쪽은 곶보다 에너지가 덜 몰리니 언제나 더 안전하다.",
+      "why_wrong": "만이 좁은 강 하구로 이어지면 그 물길에 에너지가 몰려 파고가 급격히 높아질 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wr-bay"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-shallow-water-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-surge-countermeasures"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-03",
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-4",
+  "pages": [
+    67
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C5 의 retag 지적을 받아 12지시02-02 를 더했다 — rel-wr-crest 의 내용(천해파의 속력이 수심 하나로 정해진다)은 02-02 가 받치고 결과인 해일 피해만 02-03 이 받는다. 같은 자리에 선 esys-wave-shoaling 은 이미 둘 다 달고 있었다."
+  ]
+}

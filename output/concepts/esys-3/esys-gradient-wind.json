@@ -1,0 +1,92 @@
+{
+ "id": "esys-gradient-wind",
+ "concept_key": "concept:gradient-wind",
+ "registry_status": "new",
+ "term": "경도풍",
+ "notation": {
+  "hanja": "傾度風",
+  "english": "gradient wind",
+  "hanja_gloss": "傾 기울 경 · 度 법도 도 · 風 바람 풍"
+ },
+ "definition": "기압 경도력과 전향력이 어긋난 만큼 구심력이 생겨 등고선의 곡선을 따라 도는 상층 바람.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-grw-imbalance",
+   "text": "경도풍은 기압 경도력과 전향력이 균형을 이루지 못해 남은 차이가 구심력으로 작용하면서 분다.",
+   "form": {
+    "condition": "상층 등고선이 곡선일 때",
+    "type": "causal",
+    "scope": "마찰이 없는 상층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「두 힘이 정확히 균형을 이룰 때 분다」는 그때가 지균풍이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "경도풍은 기압 경도력과 전향력이 정확히 균형을 이룰 때 분다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-grw-curvature",
+   "text": "상층에서 등압선이나 등고선이 원형으로 굽은 곳에서는 지균풍 대신 경도풍이 나타난다.",
+   "form": {
+    "condition": "상층 등고선에 곡률이 있을 때",
+    "type": "conditional",
+    "scope": "자유 대기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「원형으로 굽은 곳에서도 바람은 지균풍으로 분다」는 곡선에서는 구심력이 필요하다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "상층에서 등압선이 원형으로 굽은 곳에서도 바람은 지균풍으로 분다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "경도풍에는 기압 경도력·전향력에 더해 구심력이라는 힘이 따로 하나 더 작용한다.",
+   "why_wrong": "구심력은 두 힘의 차이가 만들어 내는 것이지, 밖에서 따로 더해지는 힘이 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-grw-imbalance"
+  },
+  {
+   "text": "등고선이 굽어 있어도 상층 바람은 모두 지균풍이다.",
+   "why_wrong": "곡선을 따라 돌려면 구심력이 있어야 하므로 두 힘이 어긋나 있다. 그런 바람이 경도풍이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-grw-curvature"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-centripetal-force"
+  },
+  {
+   "type": "next",
+   "target": "esys-cyclonic-anticyclonic-gradient-wind"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-3",
+ "pages": [
+  112,
+  113
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1
+}

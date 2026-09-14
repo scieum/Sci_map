@@ -1,0 +1,132 @@
+{
+ "id": "esys-adiabatic-change",
+ "concept_key": "concept:adiabatic-process",
+ "registry_status": "new",
+ "term": "단열 변화",
+ "notation": {
+  "hanja": "斷熱變化",
+  "english": "adiabatic change",
+  "hanja_gloss": "斷 끊을 단 · 熱 더울 열 · 變 변할 변 · 化 될 화"
+ },
+ "definition": "공기 덩어리가 주위와 열을 주고받지 않은 채 오르내리면서 팽창·압축만으로 기온이 달라지는 변화.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-rise-expand-cool",
+   "text": "주위와 열을 주고받지 않는 공기 덩어리가 올라가면 낮아진 주변 기압에 맞춰 부피가 늘면서 기온이 내려간다.",
+   "form": {
+    "condition": "주위와 열 교환이 없을 때",
+    "type": "causal",
+    "scope": "대기 중의 공기 덩어리",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "공기 덩어리의 기온",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「팽창하면서 기온이 올라간다」는 팽창에 운동 에너지가 쓰인다는 설명과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "주위와 열을 주고받지 않는 공기 덩어리가 올라가면 부피가 늘면서 기온이 올라간다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sink-compress-warm",
+   "text": "같은 조건에서 공기 덩어리가 내려오면 높아진 기압에 눌려 부피가 줄면서 기온이 올라간다.",
+   "form": {
+    "condition": "주위와 열 교환이 없을 때",
+    "type": "causal",
+    "scope": "대기 중의 공기 덩어리",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "공기 덩어리의 기온",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「압축되면서 기온이 내려간다」는 압축이 운동 에너지를 키운다는 설명과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "주위와 열을 주고받지 않는 공기 덩어리가 내려오면 부피가 줄면서 기온이 내려간다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-no-heat-exchange",
+   "text": "단열 변화에서 기온이 달라지는 까닭은 주위와 열을 주고받아서가 아니라 부피가 달라졌기 때문이다.",
+   "form": {
+    "condition": "단열 조건이 지켜질 때",
+    "type": "causal",
+    "scope": "단열 변화하는 공기 덩어리"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「주위와 열을 주고받기 때문이다」는 열 교환이 없다는 단열의 뜻과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "단열 조건이 지켜져도 공기 덩어리의 기온이 달라지는 까닭은 주위와 열을 주고받기 때문이다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "상승하는 공기가 식는 것은 위쪽 공기가 차갑기 때문이다.",
+   "why_wrong": "단열 변화에서는 주위와 열을 주고받지 않는다. 식는 까닭은 팽창에 에너지가 쓰이기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-no-heat-exchange"
+  },
+  {
+   "text": "산을 넘어 내려오는 공기가 따뜻해지는 것은 햇빛을 더 받아서다.",
+   "why_wrong": "내려오면서 기압에 눌려 압축되기 때문이다. 열을 밖에서 받아서가 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sink-compress-warm"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-dry-adiabatic-lapse-rate"
+  },
+  {
+   "type": "next",
+   "target": "esys-moist-adiabatic-lapse-rate"
+  },
+  {
+   "type": "next",
+   "target": "esys-atmospheric-stability"
+  },
+  {
+   "type": "same",
+   "target": "mech-adiabatic-process",
+   "note": "concept_key 가 concept:adiabatic-process 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-1",
+ "pages": [
+  94,
+  95
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "mech-2 의 '단열 과정'(concept:adiabatic-process)과 같은 물리다. 표제어가 달라 표기 검증기로는 짝을 찾을 수 없으니 G3 에서 확인해 주기 바란다."
+ ]
+}

@@ -1,0 +1,108 @@
+{
+  "id": "esys-water-cycle",
+  "concept_key": "concept:water-cycle",
+  "registry_status": "new",
+  "term": "물의 순환",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "water cycle",
+    "hanja_note": "'순환'은 循環이지만 '물'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "태양 에너지를 받은 물이 상태를 바꾸며 수권·기권·지권·생물권을 오가는 흐름. 그 과정에서 날씨와 지형도 함께 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wtc-energy",
+      "text": "물의 순환을 이끄는 에너지원은 지구 내부의 열이 아니라 태양 에너지다.",
+      "form": {
+        "condition": "지구시스템에서 물이 권역 사이를 오갈 때",
+        "type": "causal",
+        "scope": "물의 순환 전체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 에너지원을 맞바꾼 것이라 태양 에너지가 물을 증발시킨다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물의 순환을 이끄는 에너지원은 태양 에너지가 아니라 지구 내부의 열이다."
+    },
+    {
+      "id": "rel-wtc-path",
+      "text": "증발해 기권으로 오른 물은 응결해 구름이 되고 비나 눈으로 다시 지권과 수권으로 돌아온다.",
+      "form": {
+        "condition": "물이 상태 변화를 거듭할 때",
+        "type": "causal",
+        "scope": "물의 순환 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「기권에 오른 물이 응결하지 못해 지권이나 수권으로 돌아오지 않는다」는 강수로 되돌아온다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "증발해 기권으로 오른 물은 응결하지 못해 비나 눈으로 지권과 수권에 돌아오지 않는다."
+    },
+    {
+      "id": "rel-wtc-landform",
+      "text": "삼각주는 퇴적으로, 해식 동굴은 침식으로 만들어지듯 물의 순환은 지표의 모습을 바꾸어 놓는다.",
+      "form": {
+        "condition": "물이 지표를 흐르거나 해안에 부딪칠 때",
+        "type": "classification",
+        "scope": "그림 7 이 드는 네 가지 지형"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 지형을 만든 작용을 맞바꾼 것이라 그림 7 의 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "삼각주는 침식으로, 해식 동굴은 퇴적으로 만들어진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물의 순환을 일으키는 원동력은 지구 내부의 열이다",
+      "why_wrong": "물을 증발시켜 순환을 이끄는 것은 태양 에너지다. 지구 내부 에너지는 화산 활동이나 판의 운동 쪽에서 일한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wtc-energy"
+    },
+    {
+      "text": "삼각주는 하천이 땅을 깎아 만든 침식 지형이다",
+      "why_wrong": "삼각주는 하구에서 유속이 느려지며 퇴적물이 쌓여 만들어진 퇴적 지형이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wtc-landform"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-primitive-crust-and-ocean"
+    },
+    {
+      "type": "next",
+      "target": "esys-coevolution"
+    },
+    {
+      "type": "same",
+      "target": "isci1-water-cycle",
+      "note": "concept_key 가 concept:water-cycle 로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    20
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

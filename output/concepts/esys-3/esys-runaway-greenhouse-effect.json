@@ -1,0 +1,91 @@
+{
+ "id": "esys-runaway-greenhouse-effect",
+ "concept_key": "concept:runaway-greenhouse-effect",
+ "registry_status": "new",
+ "term": "탈주 온실 효과",
+ "notation": {
+  "hanja": "脫走溫室效果",
+  "english": "runaway greenhouse effect",
+  "hanja_gloss": "脫 벗을 탈 · 走 달릴 주 · 溫 따뜻할 온 · 室 집 실 · 效 본받을 효 · 果 열매 과"
+ },
+ "definition": "대기 중 수증기가 늘면서 온실 효과가 더 세지는 되먹임이 이어져 끝내 행성의 물이 모두 증발해 버리는 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-vapor-feedback",
+   "text": "항성에 너무 가까우면 대기 중 수증기가 늘고 그 수증기가 온실 효과를 더 키워 물이 모두 증발한다.",
+   "form": {
+    "condition": "행성이 항성에 아주 가까이 있을 때",
+    "type": "causal",
+    "scope": "대기와 물을 함께 지닌 행성"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「수증기가 늘어도 온실 효과는 더 세지지 않는다」는 수증기가 온실 기체라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "행성이 항성에 아주 가까워 대기 중 수증기가 늘어도 온실 효과는 더 세지지 않는다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-inner-boundary",
+   "text": "탈주 온실 효과가 시작되는 지점이 생명 가능 지대의 안쪽 경계가 된다.",
+   "form": {
+    "condition": "생명 가능 지대의 경계를 정할 때",
+    "type": "classification",
+    "scope": "항성 쪽 안쪽 경계"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「탈주 온실 효과가 시작되는 지점이 바깥쪽 경계가 된다」는 안팎을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "생명 가능 지대의 경계를 정할 때 탈주 온실 효과가 시작되는 지점이 바깥쪽 경계가 된다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "탈주 온실 효과가 일어나면 행성의 물이 얼어붙는다.",
+   "why_wrong": "온실 효과가 폭주하며 온도가 올라가 물이 모두 증발하고, 끝내 물 분자가 우주로 달아난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-vapor-feedback"
+  },
+  {
+   "text": "생명 가능 지대의 바깥쪽 경계가 탈주 온실 효과로 정해진다.",
+   "why_wrong": "탈주 온실 효과가 시작되는 곳은 안쪽 경계다. 바깥쪽 경계는 온실 효과 덕분에 액체 물이 남을 수 있는 한계다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-inner-boundary"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-habitable-zone"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-greenhouse-effect"
+  },
+  {
+   "type": "related",
+   "target": "esys-greenhouse-gas"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-2",
+ "pages": [
+  89
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

@@ -1,0 +1,124 @@
+{
+  "id": "esys-shallow-water-wave",
+  "concept_key": "concept:shallow-water-wave",
+  "registry_status": "new",
+  "term": "천해파",
+  "notation": {
+    "hanja": "淺海波",
+    "hanja_gloss": "淺 얕을 천 · 海 바다 해 · 波 물결 파",
+    "english": "shallow-water wave",
+    "symbol_display": "v = √(gd)",
+    "symbol_plain": "v = (g d)^(1/2)"
+  },
+  "definition": "수심이 파장의 1/20보다 얕은 구간을 지나 속력이 수심으로 정해지는 해파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sww-criterion",
+      "text": "수심이 파장의 1/20보다 얕으면 그 해파를 천해파로 분류한다.",
+      "form": {
+        "condition": "수심과 파장의 비를 견줄 때",
+        "type": "classification",
+        "scope": "해파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「파장의 1/20보다 깊으면 천해파로 분류한다」인데, 그 구간은 전이파나 심해파의 자리이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심이 파장의 1/20보다 깊으면 그 해파를 천해파로 분류한다."
+    },
+    {
+      "id": "rel-sww-speed",
+      "text": "천해파는 수심이 얕은 곳일수록 느리게 나아간다.",
+      "form": {
+        "condition": "중력 가속도가 일정할 때",
+        "type": "direct",
+        "scope": "천해파",
+        "antecedent": {
+          "quantity": "수심",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "천해파의 속력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「수심이 얕을수록 빠르다」인데, 속력이 수심의 제곱근에 비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "천해파는 수심이 얕은 곳일수록 빠르게 나아간다."
+    },
+    {
+      "id": "rel-sww-same-depth",
+      "text": "수심이 같은 지점에서는 천해파의 속력도 서로 같다.",
+      "form": {
+        "condition": "천해파가 전파될 때",
+        "type": "conditional",
+        "scope": "연안 해역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「수심이 같아도 속력이 서로 다르다」인데, 천해파의 속력은 수심 하나로 정해지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심이 같은 지점이라도 천해파의 속력은 서로 다르다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "천해파도 파장이 길수록 빠르게 나아간다.",
+      "why_wrong": "천해파의 속력을 정하는 것은 파장이 아니라 수심이다. 파장으로 속력이 정해지는 것은 심해파다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sww-speed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ocean-wave-speed"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-water-particle-orbital-motion",
+      "note": "해저면이 물 입자 운동을 막는 것이 천해파의 근거"
+    },
+    {
+      "type": "next",
+      "target": "esys-transitional-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-wave-shoaling"
+    },
+    {
+      "type": "next",
+      "target": "esys-coastal-surge",
+      "note": "긴 파장의 해파가 전 해양에서 천해파라는 것이 전제"
+    },
+    {
+      "type": "next",
+      "target": "esys-wave-refraction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-2",
+  "pages": [
+    64
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

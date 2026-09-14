@@ -1,0 +1,97 @@
+{
+  "id": "esys-echo-sounding",
+  "concept_key": "concept:echo-sounding",
+  "registry_status": "new",
+  "term": "음향 측심법",
+  "notation": {
+    "hanja": "音響 測深法",
+    "english": "echo sounding",
+    "hanja_gloss": "音 소리 음 · 響 울릴 향 · 測 헤아릴 측 · 深 깊을 심 · 法 법 법"
+  },
+  "definition": "배에서 쏜 음파가 해저에 부딪혀 돌아오는 데 걸린 시간으로 수심을 재어 해저 지형을 알아내는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-es-time",
+      "text": "같은 바다에서 음파의 왕복 시간이 긴 지점일수록 수심이 깊다.",
+      "form": {
+        "condition": "바닷물 속 음파의 속도를 일정하다고 볼 때",
+        "type": "direct",
+        "scope": "음향 측심으로 잰 수심",
+        "antecedent": {
+          "quantity": "음파의 왕복 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수심",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「왕복 시간이 길수록 수심이 얕다」는 속도가 일정할 때 시간이 거리에 비례한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 바다에서 음파의 왕복 시간이 긴 지점일수록 수심이 얕다."
+    },
+    {
+      "id": "rel-es-discovery",
+      "text": "음향 측심법으로 해저를 정밀히 훑은 결과 대서양 한가운데의 거대한 해저 산맥과 그 중심의 깊은 골짜기가 드러났다.",
+      "form": {
+        "condition": "제2차 세계 대전을 전후해 해양 탐사가 본격화된 뒤",
+        "type": "causal",
+        "scope": "해저 지형 탐사의 성과"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대서양 한가운데는 평탄해 해저 산맥이 발견되지 않았다」는 탐사 결과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음향 측심법으로 해저를 훑었지만 대서양 한가운데는 평탄해 해저 산맥이 발견되지 않았다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "음파의 왕복 시간이 짧은 곳일수록 바다가 깊다",
+      "why_wrong": "음파가 빨리 돌아왔다는 것은 해저까지의 거리가 가깝다는 뜻이므로 그곳은 얕은 바다다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-es-time"
+    },
+    {
+      "text": "해령은 배에서 눈으로 보아 발견한 지형이다",
+      "why_wrong": "해령은 물속 깊이 있어 눈으로 볼 수 없다. 음파로 수심을 재는 기술이 발달한 뒤에야 그 모습이 드러났다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-es-discovery"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-seafloor-spreading",
+      "note": "해저 지형을 알아야 해령과 해구를 말할 수 있다"
+    },
+    {
+      "type": "related",
+      "target": "esys-plate-tectonics"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-1",
+  "pages": [
+    25,
+    26
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

@@ -1,0 +1,81 @@
+{
+  "id": "esys-tide",
+  "concept_key": "concept:tide",
+  "registry_status": "new",
+  "term": "조석",
+  "notation": {
+    "hanja": "潮汐",
+    "hanja_gloss": "潮 밀물 조 · 汐 썰물 석",
+    "english": "tide"
+  },
+  "definition": "밀물과 썰물이 되풀이되면서 해수면이 주기적으로 오르내리는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tide-cause",
+      "text": "조석을 일으키는 힘은 달과 태양이 지구의 물에 미치는 기조력이다.",
+      "form": {
+        "condition": "달과 태양이 지구에 인력을 미칠 때",
+        "type": "causal",
+        "scope": "지구의 해수"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「조석을 일으키는 힘이 지구 자전이 만드는 전향력이다」인데, 전향력은 이미 움직이는 물체의 방향을 틀 뿐 해면을 오르내리게 하지 못하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조석을 일으키는 힘은 지구 자전이 만드는 전향력이다."
+    },
+    {
+      "id": "rel-tide-flood-ebb",
+      "text": "해수면이 높아지고 있는 동안이 밀물이고, 낮아지고 있는 동안이 썰물이다.",
+      "form": {
+        "condition": "해수면의 높이가 달라지고 있을 때",
+        "type": "classification",
+        "scope": "조석이 나타나는 해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 이름을 맞바꾼 것인데, 물이 들어오는 동안을 밀물이라 하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해수면이 낮아지고 있는 동안이 밀물이고, 높아지고 있는 동안이 썰물이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "밀물과 썰물은 그날 바람이 부는 방향에 따라 정해진다.",
+      "why_wrong": "조석은 달과 태양의 기조력이 일으키는 주기적인 현상이라 바람의 방향과 관계없이 되풀이된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tide-cause"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-tide-generating-force"
+    },
+    {
+      "type": "next",
+      "target": "esys-high-and-low-tide"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-1",
+  "pages": [
+    70,
+    71
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

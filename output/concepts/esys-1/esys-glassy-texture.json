@@ -1,0 +1,88 @@
+{
+  "id": "esys-glassy-texture",
+  "concept_key": "concept:glassy-texture",
+  "registry_status": "new",
+  "term": "유리질 조직",
+  "notation": {
+    "hanja": "琉璃質 組織",
+    "english": "glassy texture",
+    "hanja_gloss": "琉 유리 류 · 璃 유리 리 · 質 바탕 질 · 組 짤 조 · 織 짤 직"
+  },
+  "definition": "마그마가 너무 빨리 식는 바람에 결정이 자라지 못한 채 굳어 유리처럼 보이는 화성암의 조직.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gt-nocrystal",
+      "text": "마그마의 냉각 속도가 너무 빠르면 결정이 성장하지 못해 유리질 조직이 된다.",
+      "form": {
+        "condition": "마그마가 급격히 냉각될 때",
+        "type": "causal",
+        "scope": "유리질 조직이 생기는 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「너무 빠르면 결정이 오히려 크게 자란다」는 결정이 성장하지 못한다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마의 냉각 속도가 너무 빠르면 결정이 오히려 크게 자라 유리질 조직이 된다."
+    },
+    {
+      "id": "rel-gt-compare",
+      "text": "유리질 조직은 세립질 조직보다도 더 빠르게 식었을 때 만들어진다.",
+      "form": {
+        "condition": "두 조직을 냉각 속도로 견줄 때",
+        "type": "classification",
+        "scope": "화성암 조직의 냉각 속도 차례"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「유리질이 세립질보다 느린 냉각에서 만들어진다」는 결정조차 자라지 못했다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유리질 조직은 세립질 조직보다 느리게 식었을 때 만들어진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유리질 조직에도 아주 작은 결정이 자라 있다",
+      "why_wrong": "유리질 조직은 냉각이 너무 빨라 결정이 성장하지 못한 것이다. 결정이 작게라도 자란 것은 세립질 조직이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gt-nocrystal"
+    },
+    {
+      "text": "유리질 조직은 지하 깊은 곳에서 천천히 식어 만들어진다",
+      "why_wrong": "깊은 곳에서 천천히 식으면 결정이 크게 자라 조립질이 된다. 유리질은 가장 빠른 냉각의 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gt-compare"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-igneous-rock"
+    },
+    {
+      "type": "related",
+      "target": "esys-fine-grained-texture"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-2",
+  "pages": [
+    34,
+    37
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

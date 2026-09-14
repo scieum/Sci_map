@@ -1,0 +1,90 @@
+{
+ "id": "esys-cyclonic-anticyclonic-gradient-wind",
+ "concept_key": "concept:cyclonic-and-anticyclonic-gradient-wind",
+ "registry_status": "new",
+ "term": "저기압성 경도풍과 고기압성 경도풍",
+ "notation": {
+  "hanja": "低氣壓性傾度風 高氣壓性傾度風",
+  "english": "cyclonic and anticyclonic gradient wind"
+ },
+ "definition": "원의 중심이 저기압일 때와 고기압일 때로 갈리는 경도풍으로, 두 힘의 대소와 도는 방향이 서로 반대다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cyc-forces",
+   "text": "북반구 저기압성 경도풍은 기압 경도력이 전향력보다 커서 시계 반대 방향으로, 고기압성 경도풍은 그 반대로 시계 방향으로 돈다.",
+   "form": {
+    "condition": "상층 등고선이 원형일 때",
+    "type": "classification",
+    "scope": "북반구 자유 대기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「저기압성 경도풍에서 전향력이 더 커 시계 방향으로 돈다」는 두 경우를 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "북반구 저기압성 경도풍에서는 전향력이 기압 경도력보다 커서 시계 방향으로 돈다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-speed-compare",
+   "text": "기압 경도가 같다고 볼 때 저기압성 경도풍은 지균풍보다 느리고 고기압성 경도풍은 지균풍보다 빠르다.",
+   "form": {
+    "condition": "기압 경도가 일정하다고 볼 때",
+    "type": "conditional",
+    "scope": "상층의 경도풍"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「저기압성이 지균풍보다 빠르고 고기압성이 느리다」는 전향력이 풍속에 비례한다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기압 경도가 같을 때 저기압성 경도풍은 지균풍보다 빠르고 고기압성 경도풍은 지균풍보다 느리다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "저기압 둘레에서는 언제나 바람이 더 세다.",
+   "why_wrong": "기압 경도가 같다면 저기압성 경도풍이 지균풍보다 오히려 느리고, 고기압성 경도풍이 더 빠르다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-speed-compare"
+  },
+  {
+   "text": "고기압성 경도풍에서는 기압 경도력이 전향력보다 크다.",
+   "why_wrong": "고기압성 경도풍은 전향력이 더 크기 때문에 시계 방향으로 도는 흐름이 나타난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cyc-forces"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-gradient-wind"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "related",
+   "target": "esys-centripetal-force"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-3",
+ "pages": [
+  113
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

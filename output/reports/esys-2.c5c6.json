@@ -1,0 +1,1029 @@
+{
+  "unit_id": "esys-2",
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "generated_at": "2026-09-14",
+  "generated_by": "concept-fact-validator",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "inputs": {
+    "cards": "output/concepts/esys-2/ (40장 · 관계 명제 120건 · 오개념 45건)",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml (12지시02-01~02-04, 넷 모두 crosscheck 일치)",
+    "teacher_guide": "inbox/textbook/22개정/지구과학/고_지구시스템과학(오필석)_지도서_2쇄.pdf 총론 25쪽 성취기준 해설 (메인이 전달한 제한 조항)",
+    "source_text": "output/source/esys-2/text.jsonl (52~81쪽, 본문 대조는 56~75쪽)",
+    "script": "curriculum-mapper/scripts/validate_tags.py output/concepts/esys-2 --unit esys-2 --json → {\"cards\": 40, \"problems\": [], \"ok\": true}",
+    "cross_unit_cards": "output/concepts/mech-3/mech-wave-speed.json, output/concepts/earth-1/earth-upwelling-and-downwelling.json, output/concepts/earth-1/earth-surface-ocean-circulation.json, output/concepts/earth-3/earth-hydrostatic-equilibrium.json"
+  },
+  "notes_on_method": [
+    "진위는 확정하지 않았다. 구조적 결함만 본다 — 진위는 C8 사람 게이트 몫이다 (CLAUDE.md §9.7).",
+    "invertible 판정은 form.type 이 아니라 'inverted_text 를 문면 그대로 읽었을 때 참이 될 경우가 하나라도 있는가' 하나로만 따졌다. 역(逆) 명제는 판정 근거로 쓰지 않았다.",
+    "카드 파일·사전 파일(concept_registry.yaml·homonyms.yaml·misconceptions.yaml)은 하나도 고치지 않았다. 이 보고서만 썼다. verified_by 는 손대지 않았다.",
+    "지구과학 계열 <track>-facts 스킬(earth-facts 등)이 저장소에 없어 수치 대조는 교과서 원문(output/source/esys-2/text.jsonl)으로만 했다 — 없는 스킬을 흉내 내지 않았다.",
+    "mech-3 은 이 단원 소관이 아니므로 고치라고 하지 않고 cross_unit 절에 판정만 적었다."
+  ],
+  "curriculum_limits_found": [
+    {
+      "source": "지도서 총론 25쪽 성취기준 해설 [12지시02-01]",
+      "text_summary": "수압 경도력과 전향력에 의한 정역학 평형을 학습하여 해수를 움직이는 힘을 정량적으로 다룰 수 있게 한다",
+      "effect": "esys-geostrophic-current-speed(v=g/(2Ωsinφ)·Δh/Δx)·esys-hydrostatic-equilibrium(단위 질량당 연직 수압 경도력 = g)·esys-horizontal-pressure-gradient-force(Px=-g·Δh/Δx)의 정량 명제는 해설이 직접 허용한 범위 안이다 — 이탈이 아니다"
+    },
+    {
+      "source": "지도서 총론 25쪽 성취기준 해설 [12지시02-02]",
+      "text_summary": "전이파는 간단히 다룬다",
+      "effect": "esys-transitional-wave 가 명제 둘로 그친 것은 제한을 지킨 것이다. 다만 첫 명제가 정의의 되풀이라는 별개의 C6 지적이 있다"
+    },
+    {
+      "source": "지도서 총론 25쪽 성취기준 해설 [12지시02-04]",
+      "text_summary": "기조력은 정성적으로 도입하고 평형 조석론 정도까지만 다루며, 달의 기조력이 태양보다 2배 정도 크다는 것을 다룬다",
+      "effect": "작성자가 교과서 71쪽 곁단의 기조력 식 2GMR/d³ 을 명제로 세우지 않은 판정은 옳다. 대신 71쪽 본문이 서술한 '질량에 비례·거리의 세제곱에 반비례' 와 '달의 기조력이 태양의 2배' 까지만 명제로 남겼는데 이는 해설이 콕 집은 항목이다. 동역학 조석론으로 넘어간 카드도 없다"
+    },
+    {
+      "source": "교과서 66·67·68쪽 본문·탐구 (02-03)",
+      "text_summary": "1 hPa 당 1 cm, 963 hPa 사례 50 cm, 기압 효과는 전체의 5 %, 곶·암초 증폭과 절벽의 낮은 피해, 만조 0.6 m + 해일 4.6 m = 5.2 m",
+      "effect": "esys-storm-surge·esys-surge-and-high-tide-overlap·esys-surge-countermeasures 의 수치·사실은 모두 원문에 있다 — 검사 (e)에 걸리는 건이 없다"
+    }
+  ],
+  "curriculum": {
+    "checked": 40,
+    "stats": {
+      "ok": 39,
+      "retag": 1,
+      "out_of_scope": 0,
+      "uncertain": 0
+    },
+    "scope_table": [
+      {
+        "card_id": "esys-coriolis-force",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "02-01 해설이 '수압 경도력과 전향력에 의한 정역학 평형'을 학습 대상으로 지정했다. 교과서 59쪽 본문이 C=2vΩsinφ 와 반구별 작용 방향을 본문으로 다룬다.",
+        "prerequisites": [
+          "concept:earth-rotation",
+          "concept:angular-velocity"
+        ]
+      },
+      {
+        "card_id": "esys-water-pressure-gradient-force",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "교과서 58쪽 본문 '수압 차로 발생하는 힘을 수압 경도력이라고 한다'. 02-01 이 요구하는 '해수를 움직이는 힘'의 출발점이다.",
+        "prerequisites": [
+          "concept:pressure"
+        ]
+      },
+      {
+        "card_id": "esys-hydrostatic-equilibrium",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "02-01 해설이 정역학 평형을 이름으로 지정했다. 58쪽 본문의 (1/ρ)(Δp/Δh)=-g 까지 해설이 '정량적으로' 허용한 범위 안이다.",
+        "prerequisites": [
+          "concept:gravity",
+          "concept:buoyancy"
+        ]
+      },
+      {
+        "card_id": "esys-horizontal-pressure-gradient-force",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "58쪽 본문 Px=-g·Δh/Δx 와 '경사도에 비례'. 02-01 해설의 정량 허용 범위 안이다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-sea-surface-height-difference",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '에크만 수송과 관련지어' 의 중간 고리. 57·60쪽 본문이 30°N·60°N·적도의 높이차를 직접 서술한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-ekman-spiral",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "57쪽 본문 '에크만 나선'. 에크만 수송을 설명하는 데 필요한 앞 단계다.",
+        "prerequisites": [
+          "concept:viscosity"
+        ]
+      },
+      {
+        "card_id": "esys-ekman-layer",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "57쪽 본문 '에크만층 또는 마찰층'. 수송의 정의역(깊이 방향 평균 구간)을 정한다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-ekman-transport",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문에 이름이 그대로 있다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-ekman-upwelling-and-downwelling",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "57쪽 본문(그림 3·4)이 연안 용승과 고·저기압성 바람의 용승·침강을 본문으로 다룬다.",
+        "prerequisites": [
+          "concept:cyclone-and-anticyclone"
+        ]
+      },
+      {
+        "card_id": "esys-geostrophic-balance",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '지형류의 발생 원리'. 60쪽 1~4단계 본문 그대로다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-geostrophic-current",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문의 대상 개념 자체.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-geostrophic-current-speed",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "60쪽 곁단 '지형류의 속력 계산'과 본문 '경사도가 크고 위도가 낮을수록 빠르다'. 02-01 해설이 '정량적으로' 를 허용하므로 속력식을 명제로 세운 것은 범위 안이다 — 02-04 의 '정성적으로' 와 구분되는 자리다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-surface-ocean-circulation",
+        "curriculum": [
+          "12지시02-01"
+        ],
+        "curriculum_scope": "in",
+        "reason": "60쪽 본문 '대양의 표층 순환은 대기 대순환의 영향을 받아 형성된 지형류이다'. role=context 로 얇게 둔 것도 적절하다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-ocean-wave",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '해파의 발생 과정'. 62·64쪽 본문.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-ocean-wave-elements",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "62쪽 곁단의 마루·골·파장·파고·주기 정의.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-ocean-wave-speed",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "62쪽 곁단 '해파의 속력 = L/T'.",
+        "prerequisites": [
+          "concept:wave-speed"
+        ]
+      },
+      {
+        "card_id": "esys-wind-wave",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "62쪽 본문 '풍랑'·'완전히 성장한 풍랑'.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-swell",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "62쪽 본문 '너울'.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-coastal-breaker",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "62·65쪽 본문 '연안 쇄파'. 해파의 전파 과정에 속하므로 02-02 태그가 맞다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-water-particle-orbital-motion",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "64쪽 본문·표 1 '물 입자의 운동(원운동/타원 운동)'.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-deep-water-wave",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '천해파와 심해파의 차이점을 비교·설명'.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-shallow-water-wave",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 그대로.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-transitional-wave",
+        "curriculum": [
+          "12지시02-02"
+        ],
+        "curriculum_scope": "in",
+        "reason": "지도서 총론 25쪽 02-02 해설이 전이파를 '간단히' 다루라고 제한했고, 카드는 명제 둘(중간 영역이라는 위치, 속력이 수심·파장에 좌우됨)로 그쳤다 — 제한을 지켰다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-wave-shoaling",
+        "curriculum": [
+          "12지시02-02",
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "65쪽 본문이 해파의 연안 변형과 해일을 잇는 자리다. 두 성취기준에 걸치므로 태그 둘이 맞다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-coastal-surge",
+        "curriculum": [
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '해일이 발생하는 여러 가지 원인'. 65쪽 본문·그림 12.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-tsunami",
+        "curriculum": [
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "66쪽 본문 '지진 해일'.",
+        "prerequisites": [
+          "concept:earthquake"
+        ]
+      },
+      {
+        "card_id": "esys-storm-surge",
+        "curriculum": [
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "66쪽 본문 '폭풍 해일'. 1 hPa/1 cm·5 %·963 hPa 모두 본문 수치다.",
+        "prerequisites": [
+          "concept:atmospheric-pressure",
+          "concept:typhoon"
+        ]
+      },
+      {
+        "card_id": "esys-surge-and-high-tide-overlap",
+        "curriculum": [
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "67쪽 본문·그림 15.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-wave-refraction",
+        "curriculum": [
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "67쪽 본문·그림 16. 다만 태그가 한 쪽만 붙어 있다 — 아래 findings 의 retag 지적 참조.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-surge-countermeasures",
+        "curriculum": [
+          "12지시02-03"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '피해 사례와 대처 방안을 제안'. 67~68쪽 본문·탐구.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-tide-generating-force",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "70~71쪽 본문. 71쪽 곁단의 2GMR/d³ 식을 명제로 세우지 않은 작성자의 판단은 옳다 — 지도서 총론 25쪽 02-04 해설이 기조력을 '정성적으로' 도입하라고 못 박았고, 본문이 말하는 '질량에 비례·거리의 세제곱에 반비례' 까지가 본문 서술이기 때문이다.",
+        "prerequisites": [
+          "concept:universal-gravitation",
+          "concept:centrifugal-force"
+        ]
+      },
+      {
+        "card_id": "esys-tide",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '조석의 발생 과정'. 70쪽 본문.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-equilibrium-tide-theory",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "70쪽 본문 '평형 조석론'. 해설이 그은 '평형 조석론 정도까지' 의 상한을 넘지 않았고 동역학 조석론으로 가지 않았다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-high-and-low-tide",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "71쪽 본문 만조·간조.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-tidal-range",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "71~72쪽 본문 조차.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-tidal-period-and-tidal-day",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "71쪽 본문 조석 주기·조석일 24시간 50분.",
+        "prerequisites": [
+          "concept:lunar-orbit"
+        ]
+      },
+      {
+        "card_id": "esys-spring-and-neap-tide",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "72쪽 본문 대조·소조. '태양의 기조력은 달의 절반' 도 본문이며, 해설이 요구한 '달의 기조력이 태양보다 2배' 와 같은 사실의 뒤집힌 표현이다.",
+        "prerequisites": [
+          "concept:lunar-phase"
+        ]
+      },
+      {
+        "card_id": "esys-tidal-pattern",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "72쪽 본문 일주조·혼합조·반일주조.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-tidal-lag",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "74쪽 본문 조석 지연 1~3일.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "esys-tide-of-korean-coast",
+        "curriculum": [
+          "12지시02-04"
+        ],
+        "curriculum_scope": "in",
+        "reason": "성취기준 본문 '자료 해석을 통해 각 지역에서의 조석 양상'. 73~74쪽 본문·탐구.",
+        "prerequisites": []
+      }
+    ],
+    "findings": [
+      {
+        "card_id": "esys-wave-refraction",
+        "verdict": "retag",
+        "level": "card",
+        "current": [
+          "12지시02-03"
+        ],
+        "suggested": [
+          "12지시02-03",
+          "12지시02-02"
+        ],
+        "reason": "카드의 세 명제 가운데 rel-wr-crest 는 '천해파의 속력이 수심 하나로 정해진다 → 마루를 이은 선이 등수심선과 나란해진다' 로, 내용은 02-02(천해파의 성질)가 받치고 결과(에너지 집중 → 해일 피해)만 02-03 이 받는다. 같은 자리에 선 esys-wave-shoaling 은 이미 02-02·02-03 을 둘 다 달고 있다. 범위를 벗어난 것이 아니라 태그가 한쪽만 붙은 것이므로 02-02 를 더하는 쪽을 제안한다.",
+        "prerequisites": []
+      }
+    ],
+    "escalation": {
+      "out_of_scope_count": 0,
+      "threshold": "이탈 2건 초과 시 C1 복귀 (설계서 §4.3 C5)",
+      "triggered": false
+    }
+  },
+  "relations": {
+    "checked": 120,
+    "checked_note": "카드 40장의 관계 명제 120건 전수. 오개념 링크 45건은 misconception_findings 에서 따로 셌다.",
+    "stats": {
+      "ok": 92,
+      "defect": 16,
+      "uncertain": 12
+    },
+    "invertible_audit": {
+      "declared": {
+        "true": 120,
+        "false": 0,
+        "ratio": 1.0
+      },
+      "reaudited": 120,
+      "method": "120건 모두 inverted_text 를 문면 그대로 읽고 참이 될 경우가 하나라도 있는지만 따졌다. form.type 은 어디를 먼저 볼지 고르는 데만 썼다.",
+      "flip_to_false_now": [],
+      "verdict": "지금 당장 false 로 내려야 할 건은 없다. 100 % 라는 비율 자체는 이 단원의 성격으로 설명된다 — 방향(오른쪽/왼쪽 90°·45°)·부호·이름 맞바꿈(풍랑↔너울, 만조↔간조, 대조↔소조, 일주조↔반일주조, 심해파↔천해파)·문면에 박힌 수치(54 cm, 24시간 50분, 1 hPa/1 cm, 800→35 km/h)로 이루어진 명제가 대다수이고, 이들은 뒤집으면 반드시 거짓이 된다. 작성자의 설명은 대체로 사실에 맞다.",
+      "but": "다만 100 % 가 거저 나온 것은 아니다. 일곱 건은 '뒤집으면 반드시 거짓' 이 명제 자체의 힘이 아니라 문면 밖의 조건이나 끼워 넣은 낱말에 기대고 있다. 이 일곱을 고치지 않으면 D1 이 scope·condition 을 떼어 낸 지문을 내보내는 순간 판정이 무너진다.",
+      "propped_up_by_conditions_outside_the_text": [
+        "esys-ocean-wave/rel-ow-energy",
+        "esys-coastal-breaker/rel-cb-depth",
+        "esys-coastal-surge/rel-cs-height"
+      ],
+      "propped_up_by_extreme_words_or_trivial_negation": [
+        "esys-surge-countermeasures/rel-sct-breakwater",
+        "esys-surge-countermeasures/rel-sct-warning",
+        "esys-tide-of-korean-coast/rel-tkc-data"
+      ],
+      "inverted_text_not_the_flip_of_its_own_claim": [
+        "esys-transitional-wave/rel-tw-position",
+        "esys-tidal-period-and-tidal-day/rel-tpd-half"
+      ],
+      "in_unit_counterexample_hunt": {
+        "asked_for": "작성자가 rel-ett-max-range 에서 찾아낸 것과 같은 종류(단원 안의 반례)를 겨냥해 찾으라는 지시",
+        "found": [
+          {
+            "relation": "esys-tidal-range/rel-tr-coast",
+            "counterexample": "esys-tide-of-korean-coast/rel-tkc-east 의 '동해안은 조차가 작고' — 대양의 1 m 보다도 작다",
+            "note": "rel-ett-max-range 와 똑같은 자리인데 이쪽은 문면이 닫혀 있다"
+          },
+          {
+            "relation": "esys-ocean-wave/rel-ow-growth",
+            "counterexample": "esys-wind-wave/rel-ww-fully-developed 의 '더 자라지 못하는 상태'",
+            "note": "성장에 상한이 있다는 사실을 같은 단원이 스스로 세워 두었다"
+          },
+          {
+            "relation": "esys-ocean-wave/rel-ow-energy",
+            "counterexample": "esys-coastal-breaker(마루가 앞으로 쏟아짐)·esys-tsunami/rel-ts-withdrawal(거대한 물의 벽)",
+            "note": "뒤집은 문장이 참이 되는 자리가 같은 단원 안에 둘 있다"
+          }
+        ],
+        "checked_and_clear": [
+          "esys-equilibrium-tide-theory/rel-ett-max-range 는 '이 이론이 내놓는' 이라는 한정이 문면에 있어 살아 있다 — 작성자의 수정이 옳았다",
+          "esys-equilibrium-tide-theory/rel-ett-vs-real 은 '커지기도 한다' 로 열려 있어 동해안 반례에 걸리지 않는다",
+          "esys-geostrophic-current-speed/rel-gcs-latitude 는 scope 가 '지형류 평형이 이루어진 해역' 이라 적도(sinφ→0)에서 평형이 깨지는 반례를 이미 걸러 낸다"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "card_id": "esys-ocean-wave",
+        "relation_id": "rel-ow-energy",
+        "verdict": "defect",
+        "checks": [
+          "c",
+          "f"
+        ],
+        "severity": "high",
+        "invertible_verdict": "조건을 문면에 넣으면 true 유지",
+        "reason": "form.condition 이 '마찰을 무시한 이론적인 해파' 인데 text·inverted_text 어느 쪽에도 그 한정이 없다. D1 은 scope·condition 을 끌고 가지 않으므로 OX 지문은 「해파가 지나가면 물 입자도 파를 따라 함께 멀리 옮겨 간다」만 남는데, 이 단원 안에 그 문장이 참이 되는 자리가 둘 있다 — esys-coastal-breaker(마루가 앞으로 쏟아지는 쇄파)와 esys-tsunami/rel-ts-withdrawal(거대한 물의 벽이 덮친다). 교과서 63쪽 탐구 정리하기 3 도 '작은 배의 이동이 마찰을 고려하지 않는 이론적 해파에서와 다른 점' 을 일부러 묻는다. 덧붙여 카드 definition('해수면이 제자리에서 …')과 겹치는 몫도 있다.",
+        "evidence": "교과서 64쪽 '물 입자는 함께 이동하지 않고 원운동한다' / 63쪽 탐구 정리하기 3 / 65쪽 '해파가 앞으로 쏟아지는 형태'",
+        "suggest": "invertible 을 false 로 내리기 전에, 부서지지 않는 해파라는 한정을 text 와 inverted_text 문면에 넣어 살리는 쪽을 먼저 검토한다"
+      },
+      {
+        "card_id": "esys-ocean-wave",
+        "relation_id": "rel-ow-growth",
+        "verdict": "defect",
+        "checks": [
+          "c",
+          "d"
+        ],
+        "severity": "high",
+        "invertible_verdict": "true 유지 (뒤집은 문장은 여전히 거짓)",
+        "reason": "'같은 해역에 바람이 오래 이어질수록 파고는 높아지고 파장은 길어진다' 에 상한이 없다. 같은 단원 esys-wind-wave/rel-ww-fully-developed 가 '더 자라지 못하고 깨지기 직전까지 커진 상태(완전히 성장한 풍랑)' 를 세워 두었으므로 두 명제를 나란히 읽으면 어긋난다. 교과서 62쪽도 두 문장을 잇달아 쓰면서 성장에 끝이 있음을 밝힌다.",
+        "evidence": "교과서 62쪽 '바람의 지속 시간이 길어지면 …' 과 '더 이상 자라지 않고 깨어지기 직전 상태까지 발달하면 완전히 성장한 풍랑'",
+        "suggest": "완전히 성장하기 전까지라는 한계를 명제 문면에 넣어 rel-ww-fully-developed 와의 충돌을 없앤다"
+      },
+      {
+        "card_id": "esys-tidal-range",
+        "relation_id": "rel-tr-coast",
+        "verdict": "defect",
+        "checks": [
+          "c",
+          "d"
+        ],
+        "severity": "high",
+        "invertible_verdict": "true 유지 (뒤집은 문장은 여전히 거짓)",
+        "reason": "'조차는 대양 한가운데보다 연안에서 훨씬 크게 나타난다' 에 한정이 없는데, 같은 단원 esys-tide-of-korean-coast/rel-tkc-east 가 '동해안은 조차가 작고' 라고 적어 반례를 스스로 안고 있다. 교과서 72쪽도 '연안에서는 10배까지 증가하기도 한다' 로 열어 두었지 언제나 크다고 하지 않았다. 작성자가 rel-ett-max-range 에서 고쳤다고 보고한 것과 같은 종류의 반례다 — 이웃 명제 rel-ett-vs-real 은 '커지기도 한다' 로 열려 살아 있는데 이 명제만 닫혀 있다.",
+        "evidence": "교과서 72쪽 '연안에서는 10배까지 증가하기도 한다' / 74쪽 '동해안의 경우는 조차가 작고'",
+        "suggest": "rel-ett-vs-real 과 같은 정도로 문면을 열어 동해안 반례와 어긋나지 않게 한다"
+      },
+      {
+        "card_id": "esys-coastal-breaker",
+        "relation_id": "rel-cb-depth",
+        "verdict": "defect",
+        "checks": [
+          "c"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "문면을 고치면 true 유지",
+        "reason": "카드의 표제어는 '연안 쇄파' 인데 text·inverted_text 는 '쇄파' 로만 적혀 있고 '연안' 은 form.scope 에만 있다. 문면만 남은 OX 지문 「쇄파는 수심이 깊은 먼 바다에서 주로 나타난다」는 깊은 바다에서 바람에 부서지는 파를 떠올리면 참으로 읽을 길이 열린다.",
+        "evidence": "교과서 62쪽 '너울이 연안으로 접근하면 … 연안 쇄파가 나타난다' — 교과서도 언제나 '연안 쇄파' 로 붙여 쓴다",
+        "suggest": "scope 에 있는 '연안' 을 text·inverted_text 문면으로 옮긴다"
+      },
+      {
+        "card_id": "esys-coastal-surge",
+        "relation_id": "rel-cs-height",
+        "verdict": "defect",
+        "checks": [
+          "c"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "문면을 고치면 true 유지",
+        "reason": "'다섯 배쯤 높아진다' 는 교과서 그림 12 의 한 사례(먼 바다 20 cm → 연안 1 m)에서 나온 값인데 그 사례가 form.scope 에만 있고 문면에 없다. 같은 카드의 rel-cs-slowdown·같은 단원의 rel-ss-example·rel-sht-flood 는 수치를 문면에 안고 있어 스스로 한정되는데, 이 명제만 사례 없이 배율만 남아 일반 법칙처럼 읽힌다.",
+        "evidence": "교과서 65쪽 '파고가 5배 정도 높아져 1 m 정도의 해일을 형성한다'",
+        "suggest": "수치의 출처가 되는 사례를 문면에 넣어 배율이 홀로 서지 않게 한다"
+      },
+      {
+        "card_id": "esys-transitional-wave",
+        "relation_id": "rel-tw-position",
+        "verdict": "defect",
+        "checks": [
+          "a",
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 이지만 대응이 어긋남",
+        "reason": "두 겹이다. ① text '심해파와 천해파 어느 쪽에도 들지 않는 중간 영역의 해파다' 는 카드 definition('심해파와 천해파의 중간에 놓인 해파')을 문장으로 바꾼 것에 지나지 않는다. ② inverted_text '수심이 파장의 1/2보다 깊은 구간에서 나타난다' 는 text 에 없는 기준을 뒤집고 있어 뒤집은 문장이 원 명제의 대응물이 아니다.",
+        "evidence": "카드 definition 과 text 의 겹침 / inverted_text 가 text 에 없는 '1/2' 을 끌어옴",
+        "suggest": "정의에 없는 몫을 명제로 삼고 inverted_text 를 그 명제의 뒤집음으로 다시 맞춘다"
+      },
+      {
+        "card_id": "esys-tidal-period-and-tidal-day",
+        "relation_id": "rel-tpd-half",
+        "verdict": "defect",
+        "checks": [
+          "a"
+        ],
+        "severity": "low",
+        "invertible_verdict": "true 이지만 대응이 어긋남",
+        "reason": "text 는 까닭을 대는 명제('…인 것은 조석일이 태양일보다 길기 때문이다')인데 inverted_text 는 까닭이 아니라 그 안에 들린 수치('12시간보다 조금 짧다')만 뒤집는다. 뒤집은 문장 자체는 거짓이라 invertible 은 살지만, D1 이 만드는 OX 는 이 명제가 가르치려는 인과를 묻지 못한다.",
+        "evidence": "교과서 71쪽 '반일인 12시간 25분 주기의 반일주조'",
+        "suggest": "text 를 수치 명제로 좁히거나 inverted_text 를 인과를 뒤집은 문장으로 다시 쓴다 — 어느 쪽인지는 C2 가 정한다"
+      },
+      {
+        "card_id": "esys-surge-countermeasures",
+        "relation_id": "rel-sct-breakwater",
+        "verdict": "defect",
+        "checks": [
+          "b"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "지금 문면으로는 true 지만 '전혀' 에 기대고 있다",
+        "reason": "inverted_text 에 '전혀' 라는 극단어를 넣어 거짓을 만들어 냈다. 그 낱말을 빼고 곧이곧대로 뒤집으면 「방파제가 있어도 해수가 육지로 들이치는 것을 막지 못한다」가 되고, 해일이 방파제를 넘는 사례가 있어 참이 될 길이 열린다. invertible 을 얻으려고 문장을 뒤튼 자리로 본다.",
+        "evidence": "교과서 67쪽 '해안에 방파제를 설치하여 해수의 직접적인 유입을 막고' — 교과서도 '직접적인 유입' 으로 한정한다",
+        "suggest": "극단어에 기대지 말고 교과서가 한정한 '직접적인 유입' 을 명제와 뒤집은 문장 양쪽 문면에 두고 다시 판정한다"
+      },
+      {
+        "card_id": "esys-ekman-layer",
+        "relation_id": "rel-ekman-layer-bottom",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition 둘째 문장 '아래 경계는 흐름의 방향이 표면과 정반대가 되는 깊이로 잡는다' 와 명제 문장이 사실상 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "evidence": "카드 definition 과 text 의 문면 대조",
+        "suggest": "정의와 명제 가운데 어느 쪽이 이 사실을 질지 정한다"
+      },
+      {
+        "card_id": "esys-water-pressure-gradient-force",
+        "relation_id": "rel-wpgf-direction",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '수압이 높은 쪽에서 낮은 쪽으로 해수를 미는 힘' 을 그대로 문장으로 바꾼 것이다. 같은 카드의 오개념도 이 한 사실만 되풀이한다.",
+        "evidence": "카드 definition 과 text 의 문면 대조",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-equilibrium-tide-theory",
+        "relation_id": "rel-ett-assumption",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '지구가 온통 물로 덮여 있고 마찰도 없다고 가정한 채' 를 그대로 펼친 문장이다.",
+        "evidence": "카드 definition 과 text 의 문면 대조",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-surge-and-high-tide-overlap",
+        "relation_id": "rel-sht-max",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '해일이 닿은 시각이 만조와 겹쳐 해수면 상승 효과가 최대가 되는 상황' 과 명제가 같은 문장이다.",
+        "evidence": "카드 definition 과 text 의 문면 대조",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-swell",
+        "relation_id": "rel-swell-no-supply",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '더는 에너지를 받지 못한 채 전파해 가는 해파' 의 되풀이다. invertible_reason 이 '그렇다면 너울이라는 이름이 성립하지 않으므로' 라고 적은 것 자체가 이 명제가 이름의 뜻에서 저절로 나온다는 자인이다.",
+        "evidence": "카드 definition / invertible_reason 문면",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-wind-wave",
+        "relation_id": "rel-ww-leaving",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '바람이 불고 있는 해역의 표면에서 그 바람으로부터 에너지를 받아 아직 자라고 있는 해파' 의 대우를 적은 것이다. invertible_reason 도 '그때부터는 너울이라 부르므로' 라고 이름에 기댄다.",
+        "evidence": "카드 definition / invertible_reason 문면",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-tide-generating-force",
+        "relation_id": "rel-tgf-composition",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "medium",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '만유인력과 … 원심력이 합쳐지고 남은 힘' 을 그대로 문장으로 바꾼 것이다. 다만 invertible_reason 이 끌어온 근거(달의 반대편 만조)는 정의에서 저절로 나오지 않는 몫이라 그 몫을 명제로 세우면 살아난다.",
+        "evidence": "카드 definition / 교과서 71쪽 '달에서 가장 가까운 곳과 가장 먼 곳에서 기조력이 가장 크고 방향은 서로 반대이다'",
+        "suggest": "정의에 없는 몫(달의 반대편에서 기조력의 방향이 반대라는 사실)을 명제로 올리는 쪽을 검토한다"
+      },
+      {
+        "card_id": "esys-tsunami",
+        "relation_id": "rel-ts-cause",
+        "verdict": "defect",
+        "checks": [
+          "f"
+        ],
+        "severity": "low",
+        "invertible_verdict": "true 유지",
+        "reason": "카드 definition '해저 지진처럼 바다 밑에서 일어난 충격으로 해수면이 크게 출렁이며 만들어진 해일' 을 조건문으로 바꾼 것이다.",
+        "evidence": "카드 definition 과 text 의 문면 대조",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-deep-water-wave",
+        "relation_id": "rel-dww-criterion",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "카드 definition 이 이미 '수심이 파장의 1/2보다 깊은 구간을 지나' 를 안고 있어 명제가 정의의 되풀이다. 다만 심해파·천해파의 분류 기준은 성취기준 02-02 가 곧바로 요구하는 것이고 뒤집은 문장이 좋은 변별 지문이라, 명제를 지우는 쪽이 옳은지 정의를 얇게 하는 쪽이 옳은지는 C2·C8 이 정할 일로 남긴다.",
+        "suggest": "정의와 명제 가운데 어느 쪽이 기준을 질지 결정한다"
+      },
+      {
+        "card_id": "esys-shallow-water-wave",
+        "relation_id": "rel-sww-criterion",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "rel-dww-criterion 과 같은 자리다.",
+        "suggest": "위와 같다"
+      },
+      {
+        "card_id": "esys-shallow-water-wave",
+        "relation_id": "rel-sww-same-depth",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "카드 definition '속력이 수심으로 정해지는 해파' 에서 곧바로 따라 나오고 같은 카드 rel-sww-speed 와도 겹친다. 다만 교과서 67쪽이 굴절을 설명하려고 이 문장을 따로 쓰고 있고 esys-wave-refraction/rel-wr-crest 가 그것을 딛고 서 있어 버릴 명제는 아닐 수 있다.",
+        "suggest": "이 명제가 쓰이는 자리(굴절 카드)로 옮길지 여기 둘지 정한다"
+      },
+      {
+        "card_id": "esys-wind-wave",
+        "relation_id": "rel-ww-fully-developed",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "'완전히 성장한 풍랑' 이라는 이름의 뜻을 되풀이하는 쪽에 가깝다. 그러나 이 명제는 rel-ow-growth 의 상한 노릇을 하므로 지우면 위 defect 를 고칠 근거가 사라진다.",
+        "suggest": "지우지 말고 rel-ow-growth 쪽을 고치는 데 쓴다"
+      },
+      {
+        "card_id": "esys-hydrostatic-equilibrium",
+        "relation_id": "rel-hse-magnitude",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "카드 definition 이 '같은 크기로 맞서' 를 이미 말하므로 크기가 같다는 몫은 되풀이다. 더해진 몫은 '단위 질량당 크기가 중력 가속도 g' 라는 정량 표현인데 교과서 58쪽 곁단의 (1/ρ)(Δp/Δh)=-g 가 근거이고 02-01 해설이 정량을 허용하므로 범위 문제는 없다.",
+        "suggest": "정의와 겹치는 몫을 덜고 정량 표현만 남길지 C2 가 정한다"
+      },
+      {
+        "card_id": "esys-hydrostatic-equilibrium",
+        "relation_id": "rel-hse-no-vertical",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "카드 definition 의 '연직 방향의 알짜힘이 남지 않은 상태' 에서 곧바로 따라 나온다. 다만 교과서 58쪽 본문이 같은 문장을 따로 쓰고 있다.",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-geostrophic-balance",
+        "relation_id": "rel-gb-steady",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "카드 definition('두 힘이 … 맞선 상태')에서 따라 나오는 몫이 크다. 교과서 60쪽 본문에 같은 문장이 있어 버리기 어렵다.",
+        "suggest": "정의와 명제의 분담을 다시 정한다"
+      },
+      {
+        "card_id": "esys-high-and-low-tide",
+        "relation_id": "rel-hlt-vertical-small",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "같은 카드 rel-hlt-horizontal 과 사실상 한 사실의 앞뒤다 — rel-hlt-horizontal 의 invertible_reason 이 rel-hlt-vertical-small 의 내용을 그대로 근거로 쓴다. 카드 세 명제 가운데 둘이 같은 몫을 지고 있어 D1 에서 거의 같은 OX 가 둘 나온다.",
+        "suggest": "둘을 하나로 합칠지 한쪽을 다른 사실로 바꿀지 정한다"
+      },
+      {
+        "card_id": "esys-storm-surge",
+        "relation_id": "rel-ss-wind",
+        "verdict": "uncertain",
+        "checks": [
+          "f"
+        ],
+        "reason": "같은 카드 rel-ss-share 와 같은 사실(기압 효과 5 %, 더 큰 원인은 강풍)을 앞뒤로 적은 것이다. 둘 다 교과서 66쪽 본문 문장이라 어느 쪽도 틀리지 않지만 명제로는 겹친다.",
+        "suggest": "한쪽만 남길지 정한다"
+      },
+      {
+        "card_id": "esys-tide-of-korean-coast",
+        "relation_id": "rel-tkc-data",
+        "verdict": "uncertain",
+        "checks": [
+          "f",
+          "b"
+        ],
+        "reason": "'자료를 읽으면 조석 형태와 조차를 알아낼 수 있다' 는 절차를 적은 문장이라 뒤집은 문장이 손쉽게 거짓이 된다(변별력이 낮다). 성취기준 02-04 의 '자료 해석' 을 받치려는 뜻은 맞지만 OX 로 쓸 명제인지는 갈린다.",
+        "suggest": "명제로 둘지 탐구 활동 쪽으로 넘길지 정한다"
+      },
+      {
+        "card_id": "esys-surge-countermeasures",
+        "relation_id": "rel-sct-warning",
+        "verdict": "uncertain",
+        "checks": [
+          "b"
+        ],
+        "reason": "'경보가 나오면 높은 곳으로 피해야 한다' 는 행동 지침이지 참·거짓을 가릴 과학 명제가 아니다. invertible_reason 이 든 근거('해일은 하루도 걸리지 않아 닿을 만큼 빨라')도 지침의 근거로는 어긋난다. 카드 note 는 '과학적 근거로 판정할 수 있는 것에 한정했다' 고 적었는데 이 명제는 그 기준에서 벗어난다.",
+        "suggest": "성취기준이 '대처 방안 제안' 을 요구하므로 카드에서 빼라는 뜻은 아니다 — OX 대상으로 삼을지, invertible 을 내릴지를 C8 에서 사람이 정하게 올린다"
+      },
+      {
+        "card_id": "esys-surface-ocean-circulation",
+        "relation_id": "rel-soc-wind",
+        "verdict": "uncertain",
+        "checks": [
+          "d"
+        ],
+        "reason": "단원 밖 대조에서 걸린다. 아래 cross_unit 절 참조.",
+        "suggest": "cross_unit 절의 판정을 따른다"
+      }
+    ],
+    "misconception_findings": {
+      "checked": 45,
+      "stats": {
+        "ok": 42,
+        "defect": 2,
+        "uncertain": 1
+      },
+      "items": [
+        {
+          "card_id": "esys-deep-water-wave",
+          "misconception": "먼 바다를 지나는 심해파는 나아가면서 파고가 저절로 커진다.",
+          "linked_relation": "rel-dww-invariant",
+          "verdict": "defect",
+          "checks": [
+            "g"
+          ],
+          "reason": "가리키는 명제는 '주기·파장·속력이 달라지지 않는다' 로 파고를 말하지 않는다. 오개념과 why_wrong 은 파고를 말하므로 명제의 반대편에 서 있지 않고, why_wrong 이 '파고도 저절로 커지지 않는다' 를 새로 들여온다 — 카드 어느 명제도 받치지 않고 교과서 원문에도 대응 서술이 없는 문장이다.",
+          "suggest": "링크 대상을 바꿀지 파고에 관한 명제를 세울지 메인이 정한다. 카드 안에 대응 명제가 없다는 사실을 그대로 올린다"
+        },
+        {
+          "card_id": "esys-horizontal-pressure-gradient-force",
+          "misconception": "바람이 그치면 해류를 만드는 힘도 함께 사라진다.",
+          "linked_relation": "rel-hpgf-origin",
+          "verdict": "defect",
+          "checks": [
+            "g"
+          ],
+          "reason": "rel-hpgf-origin 은 '처음 움직이게 하는 힘이 전향력이 아니라 수압 경도력' 이라는 두 힘의 대비다. 이 오개념이 실제로 마주 선 명제는 다른 카드의 esys-geostrophic-current/rel-gc-persistence('바람이 그쳐도 지형류는 한동안 이어진다')다.",
+          "suggest": "링크 대상을 바로잡을지 이 카드 안에 대응 명제를 세울지 메인이 정한다"
+        },
+        {
+          "card_id": "esys-geostrophic-balance",
+          "misconception": "지형류 평형은 수평 수압 경도력과 중력이 맞선 상태다.",
+          "linked_relation": "rel-gb-right-angle",
+          "verdict": "uncertain",
+          "checks": [
+            "g"
+          ],
+          "reason": "오개념이 다투는 것은 '어느 두 힘이 맞서는가' 인데 가리키는 명제 rel-gb-right-angle 은 '어느 방향으로 흐를 때 평형인가' 다. 마주 선 것은 명제가 아니라 카드의 definition 이고, 같은 카드 안에 더 알맞은 명제가 없다.",
+          "suggest": "이 카드에 '맞서는 두 힘' 을 말하는 명제가 없다는 사실을 메인에 올린다"
+        }
+      ]
+    },
+    "cross_card_contradictions": {
+      "found": 2,
+      "pairs": [
+        {
+          "a": "esys-tidal-range/rel-tr-coast",
+          "b": "esys-tide-of-korean-coast/rel-tkc-east",
+          "kind": "d",
+          "note": "위 findings 참조"
+        },
+        {
+          "a": "esys-ocean-wave/rel-ow-growth",
+          "b": "esys-wind-wave/rel-ww-fully-developed",
+          "kind": "d",
+          "note": "위 findings 참조"
+        }
+      ]
+    },
+    "textbook_number_check": {
+      "method": "output/source/esys-2/text.jsonl 원문 대조 (지구과학 계열 <track>-facts 스킬이 없어 원문으로만 했다)",
+      "verified": [
+        "표면 해수 45° 편향 (57쪽)",
+        "에크만 수송 북반구 오른쪽 90°·남반구 왼쪽 90° (57쪽)",
+        "에크만층 두께: 바람이 강할수록·전향력이 약할수록 두꺼움 (57쪽)",
+        "저기압성 바람 → 발산·용승 / 고기압성 → 수렴·침강 (57쪽)",
+        "C=2vΩsinφ, 북반구 오른쪽 90° (59쪽)",
+        "30°N 상승, 60°N·적도 하강 (60쪽)",
+        "v=(1/2Ωsinφ)·g·Δh/Δx, 경사도가 크고 위도가 낮을수록 빠름 (60쪽)",
+        "(1/ρ)(Δp/Δh)=-g, 정역학 평형 상태의 연직 운동 거의 없음 (58쪽)",
+        "해파의 속력 = L/T (62쪽 곁단)",
+        "심해파 수심 ≥ 파장/2, 천해파 수심 ≤ 파장/20 (64쪽 표 1)",
+        "물 입자: 심해파 원운동, 전이파·천해파 타원 운동 (64쪽)",
+        "수심 5000 m 800 km/h → 수심 10 m 35 km/h, 파고 5배 → 1 m, 좁은 통로 10 m (65쪽)",
+        "지진 해일 파장 수백 km, 수심 4000 m 에서도 천해파 (66쪽)",
+        "1 hPa 당 1 cm, 963 hPa → 50 cm, 기압 효과는 전체의 5 % (66쪽)",
+        "만조 0.6 m + 폭풍 해일 4.6 m = 5.2 m (67쪽 그림 15)",
+        "곶·암초 사이 증폭 / 절벽 피해 크지 않음 (68쪽 탐구 자료)",
+        "평형 조석론 달에 의한 조차 최댓값 54 cm, 실제 대양 1 m·연안 10배 (72쪽)",
+        "조석일 24시간 50분, 반일주조 12시간 25분 (71쪽)",
+        "태양의 기조력은 달의 절반 / 달이 태양의 2배 (71·72·75쪽)",
+        "대조 지연 1~3일 (74쪽)",
+        "서해안 반일주조·큰 조차·갯벌 / 동해안 조차 작고 혼합조 (74쪽)"
+      ],
+      "not_found": [
+        "esys-deep-water-wave 의 오개념 why_wrong '심해파는 파고도 저절로 커지지 않는다' — 원문에 대응 서술이 없고 카드의 어느 명제도 받치지 않는다 (misconception_findings 참조)"
+      ],
+      "conclusion": "관계 명제 120건 가운데 검사 (e)'교과서에 없는 수치·사실' 에 걸리는 건은 없다. 걸린 것은 오개념 why_wrong 한 건뿐이다"
+    },
+    "escalation": {
+      "uncertain_ratio": 0.1,
+      "threshold": "uncertain 20% 초과 시 에스컬레이션 (CLAUDE.md §11)",
+      "triggered": false
+    }
+  },
+  "cross_unit": [
+    {
+      "question": "esys-ocean-wave-speed/rel-ows-formula(invertible: true) 와 mech-3/mech-wave-speed/rel-wave-speed-formula(invertible: false) 가운데 어느 쪽이 옳은가",
+      "verdict": "esys-2 쪽이 옳다. mech-3 쪽이 오판정이다.",
+      "rationale": [
+        "기준은 하나다 — inverted_text 를 문면 그대로 읽어 참이 될 경우가 있는가. 「해파의 속력은 주기를 파장으로 나눈 값이다」는 속력이 아니라 그 역수를 가리키므로 어느 해파에서도 참이 되지 않는다. 따라서 true 가 맞다.",
+        "mech-3 의 invertible_reason 은 '정의식이라 방향을 맞바꾼 문장을 쓸 수 없다' 인데 이것은 form.type(정의식)을 근거로 든 것이라 판정 근거가 되지 못한다. 실제로 mech-3 쪽은 inverted_text 를 null 로 비워 두어 뒤집어 읽어 보지도 않았다.",
+        "정의식이라는 성질은 오히려 true 쪽 근거다 — 정의를 어긴 식은 예외 없이 거짓이 되기 때문이다. 「파동의 속력은 주기를 파장으로 나눈 값이다」는 교과서가 쓰는 전형적인 오답 지문이다.",
+        "작성자가 든 근거(concept_key 가 다르고 OX 대상이 해파 ↔ 줄·소리라 D1 에서 부딪히지 않는다)는 사실이지만 판정의 근거로는 약하다. 부딪히지 않는다는 것은 두 판정이 달라도 된다는 뜻이 아니라 잘못된 쪽이 조용히 남는다는 뜻이다."
+      ],
+      "action": "esys-2 카드는 그대로 두어도 된다. mech-3/mech-wave-speed/rel-wave-speed-formula 는 이 단원 소관이 아니므로 손대지 않았고 메인에 보고만 한다 — invertible 을 true 로 올리고 inverted_text 를 채우는 것이 맞다고 본다.",
+      "note": "esys-2 카드의 notes 에 이 갈림이 적혀 있고 'C8 에서 사람이 볼 자리' 라고 남겼다. 그 기록은 옳게 남긴 것이다."
+    },
+    {
+      "question": "earth-1/earth-upwelling-and-downwelling(concept:upwelling-and-downwelling, same 링크)와 어긋나는가",
+      "verdict": "어긋나지 않는다",
+      "detail": "earth-1 의 rel-ud-ekman 은 '북반구의 표층 해수는 바람 방향의 오른쪽으로 밀려난다' 로 방향만 말하고 각도를 말하지 않는다. esys-2 는 표면 45°(rel-ekman-spiral-surface)와 층 평균 90°(rel-ekman-transport-north)를 나눠 적었으므로 더 자세할 뿐 충돌하지 않는다. 연안 용승의 방향·원인도 양쪽이 같다. earth-1 이 더 다루는 적도 용승·어장·기후는 esys-2 가 건드리지 않아 겹치지 않는다."
+    },
+    {
+      "question": "earth-1/earth-surface-ocean-circulation(concept:surface-ocean-circulation, same 링크)와 어긋나는가",
+      "verdict": "uncertain — 정면 충돌은 아니나 D1 에서 부딪힐 자리가 둘 있다",
+      "detail": [
+        "① earth-1/rel-sc-wind 는 '표층 순환을 밀고 가는 것은 대기 대순환의 바람' 이라고 한다. esys-2/esys-surface-ocean-circulation 의 오개념은 '표층 순환은 바람이 해수를 직접 밀어 그대로 끌고 가는 흐름이다' 를 틀린 것으로 세운다. 두 문장을 가르는 것은 '직접' 한 낱말뿐이라, 두 카드가 같은 concept_key 로 묶인 채 OX 로 나가면 학생에게는 모순으로 보인다.",
+        "② esys-2/rel-soc-wind 는 '표층 순환이 어느 자리에 어느 방향으로 놓이는지는 바람 분포가 정한다' 고 닫아 말하는데, earth-1/rel-sc-shape 는 '같은 바람이 불어도 지구 자전의 영향과 대양의 생김새에 따라 방향과 세기가 달라진다' 고 한다. esys-2 쪽 문면이 더 넓다."
+      ],
+      "action": "esys-2 쪽은 rel-soc-wind 의 문면을 '정한다' 보다 좁게 여는 것으로 고칠 수 있다. earth-1 은 이 단원 소관이 아니므로 손대지 않았다. 같은 concept_key 를 쓰는 두 카드이므로 G2·G3 에서 한 번 더 볼 자리다."
+    },
+    {
+      "question": "earth-3/earth-hydrostatic-equilibrium(concept:hydrostatic-equilibrium, same 링크)와 어긋나는가",
+      "verdict": "어긋나지 않는다. 다만 한 키로 묶을지는 G3 안건이다",
+      "detail": "명제끼리 충돌하는 것은 없다(별: 중력 ↔ 기체 압력 차 / 해양: 중력 ↔ 연직 수압 경도력). 맞서는 두 힘의 이름이 과목마다 다르다는 점은 esys-2 카드의 notes 가 이미 적어 두었고 한 키로 묶을지는 사람이 볼 자리다. 사전은 고치지 않았다."
+    }
+  ],
+  "summary_for_main": {
+    "c5": {
+      "checked": 40,
+      "in": 40,
+      "out": 0,
+      "uncertain": 0,
+      "retag_findings": 1,
+      "escalation": false,
+      "teacher_guide_call": "기조력 식(2GMR/d³)을 빼고 비례 관계까지만 남긴 작성자의 판단은 옳다. 반대로 02-01 쪽에서 지형류 속력식을 명제로 세운 것도 옳다 — 해설이 한쪽은 '정성적으로', 다른 쪽은 '정량적으로' 로 갈라 놓았기 때문이다."
+    },
+    "c6": {
+      "relations_checked": 120,
+      "ok": 92,
+      "defect": 16,
+      "uncertain": 12,
+      "misconception_defects": 2,
+      "escalation": false
+    },
+    "invertible": {
+      "declared_true": 120,
+      "declared_false": 0,
+      "reaudited": 120,
+      "flip_to_false": 0,
+      "propped_up_count": 7,
+      "verdict": "100 % 는 조작이 아니라 단원의 성격이다. 다만 일곱 건은 문면 밖의 조건·극단어에 기대어 서 있어 그대로 두면 D1 에서 무너진다."
+    },
+    "heaviest": [
+      "esys-tidal-range/rel-tr-coast — 같은 단원의 동해안 명제가 곧 반례다 (작성자가 rel-ett-max-range 에서 고친 것과 같은 종류)",
+      "esys-ocean-wave/rel-ow-energy — 조건이 문면 밖에 있고 뒤집은 문장이 참이 되는 자리(쇄파·지진 해일)가 같은 단원 안에 있다",
+      "esys-ocean-wave/rel-ow-growth — 같은 단원의 '완전히 성장한 풍랑' 과 어긋난다",
+      "mech-3/mech-wave-speed/rel-wave-speed-formula — 이 단원이 아니라 저쪽이 오판정이다 (cross_unit 절)"
+    ],
+    "where_i_was_split": [
+      "정의 되풀이(검사 f)를 어디까지 defect 로 볼지. 카드 definition 문장에 그대로 들어 있는 8건은 defect 로, 분류 기준처럼 성취기준이 곧바로 요구하고 뒤집은 문장이 좋은 지문이 되는 것들은 uncertain 으로 갈랐다.",
+      "esys-swell/rel-swell-breaker('너울이 연안으로 다가오면 쇄파가 된다')는 교과서 62쪽이 단정해 쓰고 있어 ok 로 두었다. 급경사 해안에서 부서지지 않는 경우를 떠올리면 갈릴 수 있고 그것은 진위 문제라 C8 몫이다.",
+      "esys-surge-countermeasures/rel-sct-warning 은 행동 지침이라 참·거짓을 가릴 과학 명제가 아니라고 보았으나 성취기준 02-03 이 '대처 방안 제안' 을 직접 요구하므로 빼라고 하지 않고 uncertain 으로 올렸다."
+    ],
+    "skipped": "지구과학 계열 <track>-facts 스킬(earth-facts)이 저장소에 없어 대조 가능한 항목은 전부 교과서 원문(text.jsonl)으로만 맞췄다. 외부 사실 대조는 건너뛰었다."
+  }
+}

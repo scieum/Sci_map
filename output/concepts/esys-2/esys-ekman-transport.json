@@ -1,0 +1,109 @@
+{
+  "id": "esys-ekman-transport",
+  "concept_key": "concept:ekman-transport",
+  "registry_status": "new",
+  "term": "에크만 수송",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 '에크만'의 음차어에 '수송(輸送)'이 붙은 말이라 전체를 한자어로 적지 않는다.",
+    "english": "Ekman transport"
+  },
+  "definition": "바람의 영향이 미치는 에크만층 전체를 깊이 방향으로 평균했을 때 드러나는 해수의 알짜 이동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ekman-transport-north",
+      "text": "북반구에서 이 알짜 이동은 바람이 향하는 쪽의 오른쪽 90° 방향으로 나타난다.",
+      "form": {
+        "condition": "에크만층 전체를 깊이 방향으로 평균할 때",
+        "type": "causal",
+        "scope": "북반구의 외해"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「북반구에서 바람의 왼쪽 90°로 나타난다」인데, 북반구 전향력이 오른쪽으로 작용해 평균 방향도 오른쪽이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "북반구에서 에크만 수송은 바람이 향하는 쪽의 왼쪽 90° 방향으로 나타난다."
+    },
+    {
+      "id": "rel-ekman-transport-south",
+      "text": "남반구에서는 방향이 북반구와 반대가 되어 바람이 향하는 쪽의 왼쪽 90°로 나타난다.",
+      "form": {
+        "condition": "같은 방향의 바람이 남반구에 불 때",
+        "type": "classification",
+        "scope": "남반구의 외해"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「남반구에서도 바람의 오른쪽 90°로 나타난다」인데, 남반구 전향력은 왼쪽으로 작용하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "남반구에서도 에크만 수송은 바람이 향하는 쪽의 오른쪽 90° 방향으로 나타난다."
+    },
+    {
+      "id": "rel-ekman-transport-height",
+      "text": "대양에서는 대기 대순환의 바람이 빚은 이 수송 때문에 위도마다 해수면 높이가 달라진다.",
+      "form": {
+        "condition": "대기 대순환의 바람이 이어 불 때",
+        "type": "causal",
+        "scope": "대양 규모의 표층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「바람이 이어 불어도 위도에 따른 높이차가 생기지 않는다」인데, 수송이 해수를 특정 위도로 모으고 다른 위도에서 덜어 내므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기 대순환의 바람이 이어 불어도 에크만 수송은 위도에 따른 해수면 높이차를 만들지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "에크만 수송은 바람이 부는 방향 그대로 해수를 옮긴다.",
+      "why_wrong": "북반구에서는 바람의 오른쪽 90°, 남반구에서는 왼쪽 90° 방향으로 옮긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ekman-transport-north"
+    },
+    {
+      "text": "남반구에서도 에크만 수송은 바람의 오른쪽으로 일어난다.",
+      "why_wrong": "전향력이 작용하는 쪽이 반구마다 반대라서 남반구에서는 바람의 왼쪽 90° 방향이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ekman-transport-south"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ekman-layer",
+      "note": "에크만층의 평균 이동이 곧 에크만 수송이다"
+    },
+    {
+      "type": "next",
+      "target": "esys-ekman-upwelling-and-downwelling"
+    },
+    {
+      "type": "next",
+      "target": "esys-sea-surface-height-difference"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-1",
+  "pages": [
+    56,
+    57
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

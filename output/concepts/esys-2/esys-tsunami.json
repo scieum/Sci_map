@@ -1,0 +1,99 @@
+{
+  "id": "esys-tsunami",
+  "concept_key": "concept:tsunami",
+  "registry_status": "new",
+  "term": "지진 해일",
+  "notation": {
+    "hanja": "地震海溢",
+    "hanja_gloss": "地 땅 지 · 震 우레 진 · 海 바다 해 · 溢 넘칠 일",
+    "english": "tsunami"
+  },
+  "definition": "폭풍이 아니라 해저 지진처럼 바다 밑 지각의 갑작스러운 움직임에서 비롯된 해일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ts-cause",
+      "text": "해저 지각이 갑자기 솟거나 꺼지면 그 위에 실린 물기둥이 통째로 들려 해수면 높이가 크게 달라지고 해일이 된다.",
+      "form": {
+        "condition": "해저에서 큰 충격이 일어났을 때",
+        "type": "causal",
+        "scope": "해저 지진대"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 바닥이 움직여도 해수면이 그대로라는 말인데, 물기둥이 바닥을 따라 함께 오르내리므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해저 지각이 갑자기 솟거나 꺼져도 그 위의 해수면 높이는 달라지지 않는다."
+    },
+    {
+      "id": "rel-ts-shallow",
+      "text": "지진 해일은 파장이 수백 km나 되어 수심 4000 m쯤 되는 심해에서도 천해파의 성질을 띤다.",
+      "form": {
+        "condition": "파장이 수심의 20배를 크게 넘을 때",
+        "type": "classification",
+        "scope": "심해를 지나는 지진 해일"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「수심 4000 m의 심해에서는 심해파의 성질을 띤다」인데, 파장이 수심보다 훨씬 길어 천해파 조건에 들어가므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 수백 km인 지진 해일은 수심 4000 m의 심해에서 심해파의 성질을 띤다."
+    },
+    {
+      "id": "rel-ts-withdrawal",
+      "text": "해안에 닿기 전에 바닷물이 썰물처럼 빠져나갔다가 거대한 물의 벽이 덮치는 일도 있다.",
+      "form": {
+        "condition": "파의 골이 마루보다 먼저 해안에 닿을 때",
+        "type": "conditional",
+        "scope": "해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「물이 빠지는 일 없이 언제나 마루가 먼저 덮친다」인데, 골이 먼저 닿는 경우가 실제로 있으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지진 해일은 물이 빠지는 일 없이 언제나 마루가 먼저 해안을 덮친다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지진 해일이 오기 전에는 반드시 바닷물이 먼저 빠진다.",
+      "why_wrong": "골이 먼저 닿으면 물이 빠지지만, 마루가 먼저 닿아 곧바로 덮치기도 한다. 물이 빠지지 않았다고 안심할 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ts-withdrawal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-coastal-surge"
+    },
+    {
+      "type": "next",
+      "target": "esys-surge-countermeasures"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-3",
+  "pages": [
+    66
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 이 rel-ts-cause 를 정의의 되풀이로 짚었다. 정의는 다른 해일(폭풍 해일)과 가르는 종차까지만 말하도록 고치고, '바닥이 움직이면 물기둥이 따라 들린다'는 기제는 명제가 지게 했다."
+  ]
+}

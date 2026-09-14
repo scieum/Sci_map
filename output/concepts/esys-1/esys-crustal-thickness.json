@@ -1,0 +1,118 @@
+{
+  "id": "esys-crustal-thickness",
+  "concept_key": "concept:crustal-thickness",
+  "registry_status": "new",
+  "term": "지각의 두께",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "crustal thickness",
+    "hanja_note": "'두께'가 고유어여서 표제어 전체에 대응하는 한자 표기가 없다. '지각'만 地殼이다.",
+    "symbol_display": "d = (l/2)√((V₂−V₁)/(V₂+V₁))",
+    "symbol_plain": "d = (l/2) sqrt((V2 - V1)/(V2 + V1))"
+  },
+  "definition": "직접파와 굴절파가 동시에 도착하는 진앙 거리와 두 파의 속도로부터 구해 내는 지각의 두께.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ct-point",
+      "text": "지각과 맨틀에서의 지진파 속도를 알면, 직접파와 굴절파가 동시에 도달하는 진앙 거리로 지각의 두께를 구할 수 있다.",
+      "form": {
+        "condition": "지표에서 발생한 지진의 근거리 주시 곡선에서 꺾이는 지점을 읽었을 때",
+        "type": "conditional",
+        "scope": "지표에서 발생한 지진에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 속도를 알아도 그 거리로는 두께를 구할 수 없다」는 두 속도와 그 거리만으로 두께가 나오는 식이 세워진다는 서술과 어긋나 반드시 거짓이다. 필요한 속도 조건을 문면에 넣었으므로 참이 될 경우가 없다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지각과 맨틀에서의 지진파 속도를 알아도, 직접파와 굴절파가 동시에 도달하는 진앙 거리로는 지각의 두께를 구할 수 없다."
+    },
+    {
+      "id": "rel-ct-slope",
+      "text": "진앙 거리와 도달 시각을 그래프로 그리면 그 기울기에서 직접파와 굴절파의 속도를 각각 구할 수 있다.",
+      "form": {
+        "condition": "여러 관측소의 자료를 그래프로 옮겼을 때",
+        "type": "causal",
+        "scope": "근거리 주시 곡선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「기울기로는 속도를 구할 수 없다」는 기울기가 속도의 역수를 나타낸다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진앙 거리와 도달 시각을 그래프로 그려도 그 기울기로는 지진파의 속도를 구할 수 없다."
+    },
+    {
+      "id": "rel-ct-distance",
+      "text": "지각과 맨틀에서의 속도가 각각 정해져 있으면 동시 도달 지점까지의 진앙 거리가 멀수록 지각은 두껍다.",
+      "form": {
+        "condition": "지각에서의 속도와 맨틀에서의 속도를 각각 정해진 값으로 고정하고 볼 때 (두 값은 서로 다르다)",
+        "type": "direct",
+        "scope": "지표에서 발생한 지진의 근거리 주시 곡선",
+        "antecedent": {
+          "quantity": "동시 도달 지점까지의 진앙 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지각의 두께",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 속도가 정해져 있을 때 거리가 멀수록 지각이 얇다」는 두께가 그 거리에 정비례한다는 식과 정면으로 어긋나 반드시 거짓이다. 속도를 고정한다는 조건을 문면에 넣었으므로 참이 될 경우가 없다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지각과 맨틀에서의 속도가 각각 정해져 있으면 동시 도달 지점까지의 진앙 거리가 멀수록 지각은 얇다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지각의 두께는 땅을 직접 뚫어 보아야만 알 수 있다",
+      "why_wrong": "직접파와 굴절파가 동시에 도착하는 지점과 두 파의 속도를 알면 계산으로 구할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ct-point"
+    },
+    {
+      "text": "주시 곡선의 기울기는 지진이 일어난 시각을 나타낸다",
+      "why_wrong": "기울기는 지진파가 얼마나 빨리 달렸는지를 나타낸다. 그래서 기울기에서 속도를 구할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ct-slope"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-direct-and-refracted-wave"
+    },
+    {
+      "type": "related",
+      "target": "esys-mohorovicic-discontinuity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-3",
+  "pages": [
+    43,
+    44
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 defect 수정 — rel-ct-distance 의 「두 파의 속도가 같다고 두면」은 두 속도가 같으면 굴절파가 직접파를 앞지르지 못해 동시 도달 지점 자체가 생기지 않는 문장이었다. 교과서 43쪽의 식 d = (l/2)√((V맨틀−V지각)/(V맨틀+V지각)) 은 두 속도가 서로 다른 값으로 정해져 있을 때 두께가 거리 l 에 정비례한다는 뜻이므로, 조건을 「각각 정해진 값으로 고정(두 값은 서로 다름)」으로 바로 세웠다.",
+    "C6 defect 수정 — rel-ct-point 은 두께 계산에 필요한 속도 조건이 form.condition 에만 있어 inverted_text 가 문면 그대로 참이 될 수 있었다. D1 은 condition·scope 를 끌고 가지 않으므로 「지각과 맨틀에서의 지진파 속도를 알면」을 text·inverted_text 문면에 넣어 invertible: true 를 살렸다. false 로 내리지 않았다."
+  ]
+}

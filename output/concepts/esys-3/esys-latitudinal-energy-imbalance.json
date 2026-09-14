@@ -1,0 +1,107 @@
+{
+ "id": "esys-latitudinal-energy-imbalance",
+ "concept_key": "concept:latitudinal-energy-imbalance",
+ "registry_status": "new",
+ "term": "위도별 에너지 불균형",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "latitudinal energy imbalance",
+  "hanja_note": "'에너지'가 영어 energy 의 음차라 표제어 전체를 한자로 적을 수 없다. 나머지는 緯度別·不均衡이다."
+ },
+ "definition": "위도에 따라 다르게 분배된 태양 복사와 우주로 나가는 지구 복사가 어긋나 열대는 남고 극지방은 모자라게 되는 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-lei-surplus-deficit",
+   "text": "위도별로 받는 태양 복사와 내보내는 지구 복사가 달라 열대 지방은 에너지가 남고 극지방은 모자란다.",
+   "form": {
+    "condition": "위도별 복사 수지를 견줄 때",
+    "type": "classification",
+    "scope": "지구 전체"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「열대에서 모자라고 극지방에서 남는다」는 과잉·부족을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "위도별 복사 수지를 보면 열대 지방은 에너지가 모자라고 극지방은 남는다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lei-drives-circulation",
+   "text": "이 에너지 불균형을 해소하려고 대기는 대기 대순환을 형성한다.",
+   "form": {
+    "condition": "차등 가열이 이어질 때",
+    "type": "causal",
+    "scope": "지구 대기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「불균형이 있어도 대기 대순환은 만들어지지 않는다」는 대순환이 불균형 해소 과정이라는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "위도별 에너지 불균형이 있어도 대기 대순환은 만들어지지 않는다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-lei-solar-quarter",
+   "text": "지구 전체에 들어오는 단위 면적당 태양 복사 에너지는 태양 상수의 약 1/4 정도다.",
+   "form": {
+    "condition": "구형인 지구 표면 전체로 나누어 볼 때",
+    "type": "conditional",
+    "scope": "지구 평균"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「태양 상수와 같다」는 1/4 이라는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지구 전체에 들어오는 단위 면적당 태양 복사 에너지는 태양 상수와 같다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "적도와 극지방이 받는 태양 복사량은 서로 같다.",
+   "why_wrong": "태양 복사는 위도에 따라 다르게 분배되어 열대는 과잉, 극지방은 부족이 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-lei-surplus-deficit"
+  },
+  {
+   "text": "지구 표면이 받는 단위 면적당 평균 태양 복사는 태양 상수와 같다.",
+   "why_wrong": "태양 상수는 빛에 수직인 면이 받는 값이다. 구형인 지구 전체로 고루 나누면 그 약 1/4이 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-lei-solar-quarter"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-general-circulation"
+  },
+  {
+   "type": "related",
+   "target": "esys-meridional-heat-transport"
+  },
+  {
+   "type": "related",
+   "target": "esys-global-mean-heat-budget"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-3",
+ "pages": [
+  124
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

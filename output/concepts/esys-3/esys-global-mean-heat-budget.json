@@ -1,0 +1,112 @@
+{
+ "id": "esys-global-mean-heat-budget",
+ "concept_key": "concept:global-mean-heat-budget",
+ "registry_status": "new",
+ "term": "전 지구 평균 열수지",
+ "notation": {
+  "hanja": "全地球平均熱收支",
+  "english": "global mean heat budget",
+  "hanja_gloss": "全 온전 전 · 地 땅 지 · 球 공 구 · 平 평평할 평 · 均 고를 균 · 熱 더울 열 · 收 거둘 수 · 支 지탱할 지"
+ },
+ "definition": "지구에 들어온 태양 복사가 반사·흡수·방출로 어떻게 나뉘고 얼마나 되돌아가는지를 100단위 기준으로 정리한 수지.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-100-split",
+   "text": "대기 꼭대기에 이르는 태양 복사를 100단위로 두면 29.4단위가 되돌아가고 23.5단위는 대기와 구름이, 47.1단위는 지표면이 흡수한다.",
+   "form": {
+    "condition": "대기 꼭대기 입사량을 100단위로 둘 때",
+    "type": "classification",
+    "scope": "전 지구 연평균"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「29.4단위를 지표면이 흡수하고 47.1단위가 되돌아간다」는 두 값을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "태양 복사를 100단위로 두면 29.4단위를 지표면이 흡수하고 47.1단위가 반사·산란되어 우주로 되돌아간다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-imbalance-0-3",
+   "text": "흡수량 70.6단위에 견주어 우주로 나가는 양은 70.3단위에 그쳐 0.3단위가 지구에 남는다.",
+   "form": {
+    "condition": "최신 관측 자료로 구성한 열수지에서",
+    "type": "conditional",
+    "scope": "전 지구 연평균"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「들어온 만큼 그대로 나가 남는 에너지가 없다」는 0.3단위가 남는다는 관측 자료와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "최신 관측 자료로 보면 지구는 흡수한 만큼 그대로 내보내고 있어 남는 에너지가 전혀 없다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-residual-to-ocean",
+   "text": "빠져나가지 못한 0.3단위의 에너지는 대부분 해양에 쌓여 지구 온난화와 해수면 상승, 물순환 변화를 일으킨다.",
+   "form": {
+    "condition": "복사 평형이 깨져 남는 에너지가 있을 때",
+    "type": "causal",
+    "scope": "전 지구 규모"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「남는 에너지는 해양에 거의 들어가지 않는다」는 여분이 대부분 해양에 축적된다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "빠져나가지 못한 0.3단위의 에너지는 해양에 거의 들어가지 않고 대부분 대기에만 머문다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "지구는 받은 만큼 그대로 내보내므로 남는 에너지가 전혀 없다.",
+   "why_wrong": "최신 열수지 자료에서는 나가는 쪽이 0.3단위 모자라며, 그만큼이 지구에 쌓이고 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-imbalance-0-3"
+  },
+  {
+   "text": "지구 온난화는 태양이 내놓는 에너지가 늘었기 때문에 일어난다.",
+   "why_wrong": "열수지가 보여 주는 것은 들어오는 양이 아니라 나가는 양이 모자라 에너지가 쌓인다는 점이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-residual-to-ocean"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-solar-radiation-in-atmosphere"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-albedo"
+  },
+  {
+   "type": "related",
+   "target": "esys-latent-heat"
+  },
+  {
+   "type": "related",
+   "target": "esys-atmospheric-reradiation"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-02"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-3",
+ "pages": [
+  90,
+  91
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1
+}

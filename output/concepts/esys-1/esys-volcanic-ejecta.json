@@ -1,0 +1,111 @@
+{
+  "id": "esys-volcanic-ejecta",
+  "concept_key": "concept:volcanic-ejecta",
+  "registry_status": "new",
+  "term": "화산 분출물",
+  "notation": {
+    "hanja": "火山 噴出物",
+    "english": "volcanic ejecta",
+    "hanja_gloss": "火 불 화 · 山 메 산 · 噴 뿜을 분 · 出 날 출 · 物 물건 물"
+  },
+  "definition": "화산 활동으로 지표에 나오는 물질. 용암과 화산 가스, 크기에 따라 나뉘는 화산 쇄설물로 이루어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ve-kinds",
+      "text": "화산 분출물은 용암·화산 가스·화산 쇄설물로 나뉘며, 화산 가스의 대부분은 수증기다.",
+      "form": {
+        "condition": "분출물을 상태와 성분으로 가를 때",
+        "type": "classification",
+        "scope": "화산 분출물의 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가스의 대부분이 이산화 황이고 수증기는 거의 없다」는 대부분이 수증기라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산 분출물 가운데 화산 가스의 대부분은 이산화 황이고 수증기는 거의 들어 있지 않다."
+    },
+    {
+      "id": "rel-ve-expand",
+      "text": "마그마가 올라와 압력이 낮아지면 녹아 있던 기체는 원래 부피의 수백 배로 팽창한다.",
+      "form": {
+        "condition": "마그마의 높은 온도가 유지된 채 압력만 낮아질 때",
+        "type": "inverse",
+        "scope": "마그마에 녹아 있던 화산 가스",
+        "antecedent": {
+          "quantity": "마그마에 걸리는 압력",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "기체의 부피",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「압력이 낮아지면 부피가 줄어든다」는 곁주의 설명과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마가 올라와 압력이 낮아지면 녹아 있던 기체는 부피가 크게 줄어든다."
+    },
+    {
+      "id": "rel-ve-size",
+      "text": "화산 쇄설물은 알갱이의 크기에 따라 화산암괴·화산력·화산재·화산진으로 구분한다.",
+      "form": {
+        "condition": "쇄설물을 분류 기준으로 가를 때",
+        "type": "classification",
+        "scope": "화산 쇄설물의 분류 기준"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「색깔에 따라 구분한다」는 크기 기준이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산 쇄설물은 알갱이의 색깔에 따라 화산암괴·화산력·화산재·화산진으로 구분한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화산 가스의 대부분은 이산화 탄소다",
+      "why_wrong": "화산 가스의 대부분은 수증기이고, 이산화 탄소·이산화 황·황화 수소 등이 함께 들어 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ve-kinds"
+    },
+    {
+      "text": "마그마가 지표로 올라오면 압력이 낮아져 화산 가스의 부피가 줄어든다",
+      "why_wrong": "압력이 낮아지면 기체는 팽창한다. 지표 부근에서 부피가 수백 배로 늘어나기 때문에 폭발적인 분출이 일어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ve-expand"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-magma-type"
+    },
+    {
+      "type": "related",
+      "target": "esys-stratovolcano"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-1",
+  "pages": [
+    33
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

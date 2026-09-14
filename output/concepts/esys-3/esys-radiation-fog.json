@@ -1,0 +1,110 @@
+{
+ "id": "esys-radiation-fog",
+ "concept_key": "concept:radiation-fog",
+ "registry_status": "new",
+ "term": "복사 안개",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "radiation fog",
+  "hanja_note": "'안개'가 고유어라 표제어 전체를 한자로 적을 수 없다. 앞머리는 輻射다."
+ },
+ "definition": "밤사이 지표가 복사 냉각으로 식으면서 그 위 공기가 포화에 이르러 생기는 안개.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-rf-radiative-cooling",
+   "text": "맑고 바람이 약한 밤에 지표 부근 공기가 복사 냉각으로 이슬점까지 식으면 수증기가 응결해 복사 안개가 생긴다.",
+   "form": {
+    "condition": "맑고 바람이 약한 밤이고 공기가 이슬점까지 식을 만큼 수증기를 지녔을 때",
+    "type": "causal",
+    "scope": "내륙의 지표 부근"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「이슬점까지 식어도 수증기가 응결하지 않아 복사 안개가 생기지 않는다」는 이슬점이 곧 포화에 이르는 온도라는 점과 어긋나 참이 될 경우가 없다. 수증기 조건을 form.condition 에만 두지 않고 「이슬점까지」로 문면에 넣어 두었다 — 조건이 떨어지면 냉각만으로는 안개가 안 생기는 밤이 반례가 된다.",
+   "inverted_text": "맑고 바람이 약한 밤에 지표 부근 공기가 복사 냉각으로 이슬점까지 식어도 수증기는 응결하지 않아 복사 안개가 생기지 않는다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rf-needs-stability",
+   "text": "복사 안개는 바람이 약하고 대기가 안정할 때 잘 생기며, 연직 운동이 활발하면 상층의 건조한 공기와 섞여 생기기 어렵다.",
+   "form": {
+    "condition": "지표 부근 대기의 안정도가 정해질 때",
+    "type": "conditional",
+    "scope": "복사 안개"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「연직 운동이 활발한 불안정한 대기에서 더 잘 생긴다」는 혼합으로 생기기 어렵다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "복사 안개는 연직 운동이 활발한 불안정한 대기에서 더 잘 생긴다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rf-season",
+   "text": "우리나라에서 복사 안개는 늦가을과 겨울철 내륙 지역에서 자주 관측된다.",
+   "form": {
+    "condition": "우리나라를 기준으로 볼 때",
+    "type": "classification",
+    "scope": "우리나라 내륙"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「한여름 해안 지역에서 가장 자주 관측된다」는 교과서가 든 시기·지역과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "우리나라에서 복사 안개는 한여름 해안 지역에서 가장 자주 관측된다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "바람이 세게 불수록 복사 안개가 잘 생긴다.",
+   "why_wrong": "바람이 세면 상층의 건조한 공기와 섞여 안개가 흩어진다. 복사 안개는 바람이 약하고 안정할 때 생긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rf-needs-stability"
+  },
+  {
+   "text": "복사 안개는 따뜻한 공기가 옮겨 와서 생기는 안개다.",
+   "why_wrong": "그것은 이류 안개다. 복사 안개는 지표가 복사 냉각으로 식어서 생긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rf-radiative-cooling"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-fog"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-temperature-inversion"
+  },
+  {
+   "type": "related",
+   "target": "esys-advection-fog"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-4",
+ "pages": [
+  101
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — rel-rf-radiative-cooling 은 false 로 내리는 대신 「이슬점까지」라는 포화 조건을 뒤집은 문장 문면에 넣어 invertible true 를 살렸다. D1 은 inverted_text 만 떼어 쓰므로 조건이 문면에 있어야 한다."
+ ]
+}

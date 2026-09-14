@@ -1,0 +1,94 @@
+{
+ "id": "esys-ferrel-cell",
+ "concept_key": "concept:ferrel-cell",
+ "registry_status": "new",
+ "term": "페렐 순환",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "Ferrel cell",
+  "hanja_note": "'페렐'은 사람 이름 Ferrel 의 음차라 한자가 없다. 뒷머리는 循環이다."
+ },
+ "definition": "위도 30°와 60° 사이 중위도를 차지하며 해들리 순환과 극순환 사이에 끼어 도는 대기 대순환의 한 세포.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-fc-indirect",
+   "text": "페렐 순환은 찬 공기가 상승하고 따뜻한 공기가 하강하는 간접 순환으로 역학적 원인으로 생긴다.",
+   "form": {
+    "condition": "중위도의 순환을 볼 때",
+    "type": "classification",
+    "scope": "중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「따뜻한 공기가 상승하고 찬 공기가 하강하는 직접 순환이다」는 간접 순환의 정의와 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "페렐 순환은 따뜻한 공기가 상승하고 찬 공기가 하강하는 직접 순환이다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-fc-not-main-transport",
+   "text": "중위도에서 열을 극 쪽으로 보내는 몫은 페렐 순환보다 편서풍 파동이 주로 맡는다.",
+   "form": {
+    "condition": "중위도 열 수송의 분담을 따질 때",
+    "type": "classification",
+    "scope": "중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「극 쪽으로 열을 보내는 일을 주로 페렐 순환이 맡는다」는 교과서가 편서풍 파동을 주역으로 든 것과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "중위도에서 극 쪽으로 열을 보내는 일은 주로 페렐 순환이 맡는다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "페렐 순환은 열적 차이로 생기는 직접 순환이다.",
+   "why_wrong": "찬 공기가 오르고 따뜻한 공기가 내리는 간접 순환이며 역학적 원인으로 생긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fc-indirect"
+  },
+  {
+   "text": "중위도의 남북 열 수송은 대부분 페렐 순환이 맡는다.",
+   "why_wrong": "중위도에서 극 쪽으로 열을 보내는 일은 주로 편서풍 파동이 한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-fc-not-main-transport"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-general-circulation"
+  },
+  {
+   "type": "related",
+   "target": "esys-meridional-heat-transport"
+  },
+  {
+   "type": "related",
+   "target": "esys-rossby-wave"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-3",
+ "pages": [
+  124
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 「찬 공기가 오르고 따뜻한 공기가 내리는 간접 순환」까지 품어 rel-fc-indirect 가 동어반복이었다. definition 을 위도대와 자리로 좁혀 판별 내용을 명제에 남겼다."
+ ]
+}

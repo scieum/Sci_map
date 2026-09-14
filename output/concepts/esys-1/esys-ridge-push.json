@@ -1,0 +1,112 @@
+{
+  "id": "esys-ridge-push",
+  "concept_key": "concept:ridge-push",
+  "registry_status": "new",
+  "term": "해령에서 미는 힘",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "ridge push",
+    "hanja_note": "'미는 힘'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다. '해령'만 海嶺이다."
+  },
+  "definition": "높이 솟은 해령에서 해구 쪽으로 낮아지는 경사를 따라 해양판이 중력을 받아 미끄러지며 생기는, 판을 움직이는 능동적인 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rp-uplift",
+      "text": "해령 아래에서 마그마가 올라올 때 열팽창이 일어나 해령 부근은 심해저 평원보다 수 km 높이 솟는다.",
+      "form": {
+        "condition": "해령 아래로 고온의 물질이 공급될 때",
+        "type": "causal",
+        "scope": "해령 주변의 지형 높이"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「해령 부근이 심해저 평원보다 낮게 꺼진다」는 해령이 솟아 있다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령 아래에서 마그마가 올라올 때 열팽창이 일어나 해령 부근은 심해저 평원보다 낮게 꺼진다."
+    },
+    {
+      "id": "rel-rp-slope",
+      "text": "해령에서 멀어질수록 해양판은 냉각되어 밀도가 높아지고 연약권 속으로 잠겨 경사가 만들어진다.",
+      "form": {
+        "condition": "해양판이 해령에서 멀어지며 식을 때",
+        "type": "direct",
+        "scope": "해양판의 냉각과 침강",
+        "antecedent": {
+          "quantity": "해령으로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해양판이 잠기는 깊이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「멀어질수록 더 뜨거워져 위로 떠오른다」는 냉각과 침강이라는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령에서 멀어질수록 해양판은 더 뜨거워지고 밀도가 낮아져 연약권 위로 떠오른다."
+    },
+    {
+      "id": "rel-rp-gravity",
+      "text": "해령이 주변보다 높이 솟아 있기 때문에 해양판은 그 경사를 따라 중력을 받아 미끄러진다.",
+      "form": {
+        "condition": "해령에서 해구 쪽으로 높이가 낮아질 때",
+        "type": "causal",
+        "scope": "해령에서 미는 힘의 정체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「해령이 높이 솟아 있어도 해양판은 중력을 받지 않아 미끄러지지 않는다」는 경사와 중력으로 미끄러진다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령이 주변보다 높이 솟아 있어도 해양판은 중력을 받지 않아 미끄러지지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해령에서 미는 힘은 올라온 마그마가 판의 옆구리를 밀어내는 힘이다",
+      "why_wrong": "마그마가 직접 옆으로 밀어내는 것이 아니라, 해령이 높이 솟아 생긴 경사를 따라 판이 중력으로 미끄러지는 힘이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rp-gravity"
+    },
+    {
+      "text": "해령에서 멀어질수록 해양판은 더 뜨거워진다",
+      "why_wrong": "해령을 떠난 해양판은 시간이 흐르며 식는다. 그래서 멀어질수록 차갑고 밀도가 커져 연약권 속으로 잠긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rp-slope"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-lithosphere-and-asthenosphere"
+    },
+    {
+      "type": "related",
+      "target": "esys-slab-pull"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-2",
+  "pages": [
+    27,
+    28
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

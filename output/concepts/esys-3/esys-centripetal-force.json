@@ -1,0 +1,127 @@
+{
+ "id": "esys-centripetal-force",
+ "concept_key": "concept:centripetal-force",
+ "registry_status": "new",
+ "term": "구심력",
+ "notation": {
+  "hanja": "求心力",
+  "english": "centripetal force",
+  "hanja_gloss": "求 구할 구 · 心 마음 심 · 力 힘 력",
+  "symbol_display": "F_c = v²/r",
+  "symbol_plain": "F_c = v^2/r"
+ },
+ "definition": "운동하는 물체의 자취를 직선이 아닌 곡선으로 만드는 힘.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cpf-center-directed",
+   "text": "곡선으로 부는 바람에 작용하는 구심력은 회전 중심 쪽을 향하며, 바깥쪽으로 밀어내는 힘이 따로 있는 것이 아니다.",
+   "form": {
+    "condition": "공기가 원을 그리며 돌 때",
+    "type": "classification",
+    "scope": "곡선 운동하는 공기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「구심력은 회전 중심의 바깥쪽을 향해 공기를 밀어낸다」는 회전 중심 쪽을 향한다는 힘의 방향과 정반대라 참이 될 경우가 없다.",
+   "inverted_text": "곡선으로 부는 바람에 작용하는 구심력은 회전 중심의 바깥쪽을 향해 공기를 밀어낸다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cpf-difference",
+   "text": "대기에서 구심력은 따로 있는 힘이 아니라 기압 경도력과 전향력의 크기 차이로 나타난다.",
+   "form": {
+    "condition": "두 힘이 균형을 이루지 못할 때",
+    "type": "classification",
+    "scope": "상층의 곡선 바람"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「구심력은 두 힘과 별개로 작용하는 또 하나의 힘이다」는 두 힘의 차이로 주어진다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기에서 구심력은 기압 경도력·전향력과 별개로 작용하는 또 하나의 힘이다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cpf-formula",
+   "text": "단위 질량에 작용하는 구심력의 크기는 속력의 제곱에 비례하고 회전 반지름에 반비례한다.",
+   "form": {
+    "condition": "물체가 원운동을 할 때",
+    "type": "direct",
+    "scope": "곡선 운동하는 공기",
+    "antecedent": {
+     "quantity": "속력",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "구심력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「속력이 클수록 구심력이 작아진다」는 v²/r 이라는 식과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "구심력의 크기는 속력이 클수록 작아지고 회전 반지름이 클수록 커진다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "구심력은 바깥쪽으로 작용해 공기를 원 밖으로 밀어낸다.",
+   "why_wrong": "구심력은 회전 중심 쪽으로 작용해 자취를 안쪽으로 휘게 만드는 힘이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cpf-center-directed"
+  },
+  {
+   "text": "곡선으로 부는 바람에는 기압 경도력·전향력 말고 구심력이 따로 하나 더 작용한다.",
+   "why_wrong": "구심력은 두 힘이 균형을 이루지 못하고 남은 차이를 부르는 이름이다. 새로 더해지는 힘이 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cpf-difference"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-pressure-gradient-force"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-coriolis-force-on-wind"
+  },
+  {
+   "type": "next",
+   "target": "esys-gradient-wind"
+  },
+  {
+   "type": "same",
+   "target": "mech-centripetal-force",
+   "note": "concept_key 가 concept:centripetal-force 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-2",
+ "pages": [
+  110
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "mech-1 의 '구심력'과 같은 개념이며 적용 맥락만 다르다.",
+  "C6 결함 수정 — definition 이 구심력의 판별 내용을 통째로 품어 rel-cpf-curved-path 가 동어반복이었다. definition 에서 「기압 경도력과 전향력의 차이」를 덜어 rel-cpf-difference 와 겹치지 않게 하고, 명제는 힘의 방향(회전 중심 쪽)을 말하도록 바꿨다.",
+  "C5 기록 — 같은 concept_key 를 쓰는 mech-centripetal-force 는 「구심력은 따로 있는 힘이 아니다」를 invertible false 로 두어 이 카드(rel-cpf-difference, true)와 잣대가 갈린다. 다른 단원 카드는 건드리지 않았다. C8·G3 에서 사람이 볼 자리다."
+ ]
+}

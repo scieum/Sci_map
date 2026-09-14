@@ -1,0 +1,108 @@
+{
+  "id": "esys-paleomagnetism",
+  "concept_key": "concept:paleomagnetism",
+  "registry_status": "new",
+  "term": "고지자기 연구",
+  "notation": {
+    "hanja": "古地磁氣",
+    "english": "paleomagnetism",
+    "hanja_gloss": "古 옛 고 · 地 땅 지 · 磁 자석 자 · 氣 기운 기"
+  },
+  "definition": "암석에 남은 잔류 자기를 조사해 암석이 만들어질 당시의 지구 자기장 방향과 해양 지각의 연령 분포를 알아내는 연구.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pmg-remanent",
+      "text": "마그마가 식어 굳을 때 자성 광물은 그때의 지구 자기장 방향으로 자화되어 잔류 자기로 남는다.",
+      "form": {
+        "condition": "자철석 같은 물질이 퀴리 온도 아래로 냉각될 때",
+        "type": "causal",
+        "scope": "화산암의 열 잔류 자기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「현재의 지구 자기장 방향으로 자화되어 남는다」는 현재와 반대로 자화된 화산암이 있다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마가 식어 굳을 때 자성 광물은 현재의 지구 자기장 방향으로 자화되어 잔류 자기로 남는다."
+    },
+    {
+      "id": "rel-pmg-symmetry",
+      "text": "해령축을 가운데 두고 정자극기와 역자극기의 줄무늬가 양쪽에 대칭으로 나타난다.",
+      "form": {
+        "condition": "해양저가 해령 양쪽으로 퍼져 나갈 때",
+        "type": "causal",
+        "scope": "해양 지각의 지자기 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「줄무늬가 해령 한쪽에만 나타난다」는 대칭이라는 관측 결과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령축을 가운데 두고 정자극기와 역자극기의 줄무늬는 한쪽에만 나타난다."
+    },
+    {
+      "id": "rel-pmg-support",
+      "text": "지자기 줄무늬의 대칭과 해양 지각의 연령 분포는 해양저 확장설을 뒷받침해 판 구조론이 서는 데 힘을 보탰다.",
+      "form": {
+        "condition": "판 구조론 발달사의 순서로 볼 때",
+        "type": "causal",
+        "scope": "판 구조론이 정립되는 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이 자료들이 해양저 확장설과 어긋나 판 구조론을 가로막았다」는 발달사 도해와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지자기 줄무늬의 대칭과 연령 분포는 해양저 확장설과 어긋나 판 구조론이 서는 것을 가로막았다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암석의 잔류 자기는 언제나 현재의 지구 자기장 방향과 같다",
+      "why_wrong": "잔류 자기는 암석이 식어 굳던 때의 자기장 방향을 간직한다. 그래서 현재와 반대 방향으로 자화된 화산암도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmg-remanent"
+    },
+    {
+      "text": "해령의 한쪽에서만 지자기 역전의 줄무늬가 나타난다",
+      "why_wrong": "해령에서 만들어진 지각이 양쪽으로 퍼져 나가므로 줄무늬는 해령축을 가운데 두고 대칭으로 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmg-symmetry"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-seafloor-spreading"
+    },
+    {
+      "type": "next",
+      "target": "esys-plate-tectonics"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-1",
+  "pages": [
+    26,
+    48
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "잔류 자기·정자극기·역자극기의 자세한 설명은 본문이 아니라 단원 마무리 48쪽 자료에 있어 pages 에 48쪽을 더했다.",
+    "C6 검토 기록(고치지 않음) — rel-pmg-remanent 의 inverted_text 「마그마가 식어 굳을 때 자성 광물은 현재의 지구 자기장 방향으로 자화된다」는 전칭으로 읽으면 거짓이지만 정자극기에 굳은 암석 하나만 두고 특칭으로 읽으면 참이 된다. 명제는 「그때의 자기장 방향을 간직한다」는 쪽에 무게가 있어 invertible: true 를 유지했다. 전칭임을 문면에 더 드러낼지는 C8 판단 사항이다."
+  ]
+}

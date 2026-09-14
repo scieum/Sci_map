@@ -1,0 +1,133 @@
+{
+ "id": "esys-coriolis-force-on-wind",
+ "concept_key": "concept:coriolis-force",
+ "registry_status": "new",
+ "term": "전향력",
+ "notation": {
+  "hanja": "轉向力",
+  "english": "Coriolis force",
+  "hanja_gloss": "轉 구를 전 · 向 향할 향 · 力 힘 력",
+  "symbol_display": "C = 2vΩ sin φ",
+  "symbol_plain": "C = 2 v Omega sin(phi)"
+ },
+ "definition": "지구 자전 때문에 지표에 붙어 보는 사람에게 나타나는 겉보기 힘으로, 움직이는 공기의 방향을 옆으로 휘게 한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cf-magnitude",
+   "text": "전향력은 같은 질량이라도 공기가 빨리 움직일수록, 그리고 위도가 높은 곳일수록 크게 작용한다.",
+   "form": {
+    "condition": "지구가 자전하고 있을 때",
+    "type": "direct",
+    "scope": "대규모 운동",
+    "antecedent": {
+     "quantity": "풍속과 위도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "전향력의 크기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「빨리 움직일수록, 위도가 높을수록 작게 작용한다」는 C = 2vΩ sin φ 라는 식과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "전향력은 공기가 빨리 움직일수록, 그리고 위도가 높은 곳일수록 작게 작용한다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cf-direction",
+   "text": "전향력은 북반구에서 운동 방향의 오른쪽 직각으로, 남반구에서 왼쪽 직각으로 작용한다.",
+   "form": {
+    "condition": "움직이는 공기를 지표에서 볼 때",
+    "type": "classification",
+    "scope": "남반구와 북반구"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「북반구에서 왼쪽, 남반구에서 오른쪽」은 두 반구를 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "전향력은 북반구에서 운동 방향의 왼쪽 직각으로, 남반구에서 오른쪽 직각으로 작용한다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cf-scale",
+   "text": "욕실 배수구나 먼지 소용돌이처럼 규모가 작은 운동에서는 전향력을 느끼기 어렵고, 태풍 같은 대규모 현상에서 뚜렷이 드러난다.",
+   "form": {
+    "condition": "운동의 공간 규모를 견주어 볼 때",
+    "type": "conditional",
+    "scope": "지구 대기의 운동"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「욕실 배수구에서 물이 도는 방향도 전향력이 정한다」는 작은 규모에서 영향을 받지 않는다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "욕실 배수구에서 물이 빠져나가며 도는 방향도 전향력이 정한다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "전향력은 적도에서 가장 크게 작용한다.",
+   "why_wrong": "전향력은 고위도로 갈수록 커진다. 적도 지역에서는 진동면이 돌지 않듯 전향 효과가 나타나지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cf-magnitude"
+  },
+  {
+   "text": "세면대 물이 빠지는 방향은 북반구와 남반구가 서로 반대다.",
+   "why_wrong": "그만한 규모에서는 전향력의 영향이 너무 작다. 방향은 그릇 모양이나 처음 흐름으로 정해진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cf-scale"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-pressure-gradient-force"
+  },
+  {
+   "type": "next",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "next",
+   "target": "esys-friction-force"
+  },
+  {
+   "type": "related",
+   "target": "esys-rossby-wave"
+  },
+  {
+   "type": "same",
+   "target": "esys-coriolis-force",
+   "note": "concept_key 가 concept:coriolis-force 로 같다 (R9) — Ⅱ단원에서는 해수의 운동에 작용하는 전향력으로 나온다"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-2",
+ "pages": [
+  107,
+  109
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "aliases": [
+  "코리올리 힘"
+ ],
+ "notes": [
+  "카드 id 를 esys-coriolis-force 에서 esys-coriolis-force-on-wind 로 바꿨다. esys-2 에 같은 id 의 카드가 있어 전역 색인에서 한쪽이 다른 쪽을 덮었다. 교과서가 먼저 정의하는 Ⅱ단원(esys-2) 쪽이 평범한 id 를 지키고, 바람에 작용하는 맥락인 이 카드에 접미사를 붙였다. concept_key 는 concept:coriolis-force 로 그대로 공유하며 두 카드를 same 으로 이었다. 한 키에 카드가 둘인 것을 그대로 둘지는 G3 안건이다."
+ ]
+}

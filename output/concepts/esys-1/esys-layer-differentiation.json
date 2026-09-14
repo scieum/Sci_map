@@ -1,0 +1,112 @@
+{
+  "id": "esys-layer-differentiation",
+  "concept_key": "concept:layer-differentiation-of-earth",
+  "registry_status": "new",
+  "term": "층의 분화",
+  "notation": {
+    "hanja": "分化",
+    "english": "layer differentiation of the Earth",
+    "hanja_gloss": "分 나눌 분 · 化 될 화"
+  },
+  "definition": "밀도가 큰 물질은 가라앉고 작은 물질은 떠올라 지구 내부가 핵과 맨틀로 갈라진 과정.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ld-density",
+      "text": "철과 니켈처럼 밀도가 큰 물질은 가라앉아 핵이 되고, 밀도가 작은 물질은 떠올라 맨틀이 되었다.",
+      "form": {
+        "condition": "마그마 바다에서 물질이 자유롭게 움직일 수 있을 때",
+        "type": "classification",
+        "scope": "원시 지구의 내부가 갈리던 시기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 가라앉는 쪽과 떠오르는 쪽을 맞바꾼 것이라 밀도가 큰 것이 가라앉는다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "철과 니켈처럼 밀도가 큰 물질은 떠올라 맨틀이 되고, 밀도가 작은 물질은 가라앉아 핵이 되었다."
+    },
+    {
+      "id": "rel-ld-gravity",
+      "text": "층의 분화를 일으킨 힘은 밀도가 다른 물질에 작용한 중력이다.",
+      "form": {
+        "condition": "밀도가 다른 물질이 섞여 움직일 수 있을 때",
+        "type": "causal",
+        "scope": "마그마 바다 상태의 원시 지구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「밀도가 다른 물질에 중력이 작용해도 층의 분화는 일어나지 않는다」는 중력이 분화를 이끌었다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "밀도가 다른 물질에 중력이 작용해도 층의 분화는 일어나지 않는다."
+    },
+    {
+      "id": "rel-ld-core",
+      "text": "핵과 맨틀이 갈린 뒤에도 분화가 이어져 핵은 다시 외핵과 내핵으로 나뉘었다.",
+      "form": {
+        "condition": "층의 분화가 계속 진행될 때",
+        "type": "causal",
+        "scope": "이 교과서가 든 지구 진화 단계(중단원 정리)"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분화가 이어져도 핵은 외핵과 내핵으로 나뉘지 않았다」는 중단원 정리의 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵과 맨틀이 갈린 뒤로는 분화가 멈추어 핵은 외핵과 내핵으로 나뉘지 않았다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "밀도가 큰 무거운 물질이 위로 떠올라 맨틀을 이루었다",
+      "why_wrong": "중력이 작용하면 밀도가 큰 철과 니켈이 가라앉아 핵이 되고, 밀도가 작은 물질이 떠올라 맨틀이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ld-density"
+    },
+    {
+      "text": "층의 분화는 물질의 종류만으로 정해졌고 중력과는 관계가 없다",
+      "why_wrong": "같은 종류라도 밀도가 다르면 자리가 갈린다. 분화를 실제로 일으킨 것은 밀도 차가 있는 물질에 작용한 중력이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ld-gravity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-magma-ocean"
+    },
+    {
+      "type": "related",
+      "target": "esys-earth-internal-structure",
+      "note": "같은 '핵·맨틀'을 다루지만 이 카드는 형성 과정을, 그쪽은 지진파로 알아낸 층상 구조를 다룬다."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-2",
+  "pages": [
+    14,
+    15
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "층상 분화"
+  ],
+  "notes": [
+    "여기서 말하는 '핵'은 지구 중심부를 가리킨다. docs/homonyms.yaml 의 감시어 '핵'에는 원자핵·세포핵·응결핵 세 sense 만 올라 있어 이 뜻은 아직 사전에 없다 — G3 에서 concept:earth-core 를 새 sense 로 세울지 사람이 볼 일이다.",
+    "링크는 표기가 아니라 concept_key 로만 걸었다 (R9). esys-earth-internal-structure 와는 키가 달라 same 이 아니라 related 로 두었다."
+  ]
+}

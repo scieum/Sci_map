@@ -1,0 +1,115 @@
+{
+  "id": "esys-cyanobacteria",
+  "concept_key": "concept:cyanobacteria",
+  "registry_status": "new",
+  "term": "남세균",
+  "notation": {
+    "hanja": "藍細菌",
+    "english": "cyanobacteria",
+    "hanja_gloss": "藍 쪽 람 · 細 가늘 세 · 菌 버섯 균"
+  },
+  "definition": "광합성으로 산소를 만들어 낸 원핵생물. 원시 바다에 등장해 지구시스템의 산소 축적을 시작하게 했다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cy-photo",
+      "text": "남세균이 바다에서 광합성을 하면서 바닷물에 산소가 공급되기 시작했다.",
+      "form": {
+        "condition": "원시 바다가 만들어져 생명체가 살 수 있게 된 뒤",
+        "type": "causal",
+        "scope": "선캄브리아시대 바다의 산소"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「남세균이 광합성을 해도 바닷물의 산소는 늘지 않았다」는 광합성이 바다에 산소를 공급했다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "남세균이 바다에서 광합성을 해도 바닷물의 산소는 늘지 않았다."
+    },
+    {
+      "id": "rel-cy-prokaryote",
+      "text": "남세균은 아직 분화되지 않은 원시적인 핵을 가져 세균류와 함께 원핵생물로 분류된다.",
+      "form": {
+        "condition": "핵이 분화되었는지로 생물을 가를 때",
+        "type": "classification",
+        "scope": "남세균의 분류상 위치"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분화된 핵을 갖추어 진핵생물로 분류된다」는 곁주의 분류와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "남세균은 분화된 핵을 갖추고 있어 진핵생물로 분류된다."
+    },
+    {
+      "id": "rel-cy-order",
+      "text": "대기에 산소가 쌓인 것은 남세균이 바다에 산소를 공급한 뒤의 일이다.",
+      "form": {
+        "condition": "산소가 쌓인 순서를 시간 축으로 볼 때",
+        "type": "conditional",
+        "scope": "약 25억~18억 년 전으로 추정되는 시기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대기에 먼저 쌓인 뒤에야 남세균이 바다에 공급하기 시작했다」는 순서를 거꾸로 놓은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기에 산소가 먼저 쌓인 뒤에야 남세균이 바다에 산소를 공급하기 시작했다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "남세균은 분화된 핵을 가진 진핵생물이다",
+      "why_wrong": "남세균의 핵은 아직 분화되지 않은 원시적인 것이어서 세균류와 함께 원핵생물로 분류한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cy-prokaryote"
+    },
+    {
+      "text": "남세균이 등장하자마자 대기의 산소가 곧바로 지금 수준이 되었다",
+      "why_wrong": "먼저 바다에 산소가 공급되었고, 대기에 쌓이기까지는 오랜 시간이 걸려 약 25억~18억 년 전으로 추정된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cy-order"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-primitive-crust-and-ocean"
+    },
+    {
+      "type": "next",
+      "target": "esys-oxygen-cycle"
+    },
+    {
+      "type": "related",
+      "target": "esys-banded-iron-formation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    15,
+    17,
+    21
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "시아노박테리아"
+  ],
+  "notes": [
+    "rel-cy-prokaryote 의 '핵'은 세포핵이다. docs/homonyms.yaml 의 감시어 '핵'이 가리키는 세 sense 가운데 concept:cell-nucleus 쪽이며, 이 단원의 다른 카드에 나오는 지구의 핵과는 다른 뜻이다. 링크는 concept_key 로만 걸었다 (R9)."
+  ]
+}

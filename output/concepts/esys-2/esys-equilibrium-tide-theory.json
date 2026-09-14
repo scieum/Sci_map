@@ -1,0 +1,126 @@
+{
+  "id": "esys-equilibrium-tide-theory",
+  "concept_key": "concept:equilibrium-tide-theory",
+  "registry_status": "new",
+  "term": "평형 조석론",
+  "notation": {
+    "hanja": "平衡潮汐論",
+    "hanja_gloss": "平 평평할 평 · 衡 저울대 형 · 潮 밀물 조 · 汐 썰물 석 · 論 논할 론",
+    "english": "equilibrium theory of tides"
+  },
+  "definition": "지구가 온통 물로 덮여 있고 마찰도 없다고 가정한 채 기조력만으로 조석을 설명하는 이론.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ett-limit",
+      "text": "지구 표면이 모두 바다라고 본 이 이론은 대륙 분포 때문에 조석이 지역마다 달라지는 것을 설명하지 못한다.",
+      "form": {
+        "condition": "실제 해안의 조석 형태를 이론의 예측과 견줄 때",
+        "type": "causal",
+        "scope": "평형 조석론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 이 이론이 지역별 차이를 설명해 낸다는 말인데, 대륙과 수심의 분포를 처음부터 빼놓고 세운 이론이라 그 차이가 예측에 들어올 길이 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형 조석론은 지구 표면이 모두 바다라고 보면서도 대륙 분포에 따른 지역별 조석 차이를 설명해 낸다."
+    },
+    {
+      "id": "rel-ett-instant",
+      "text": "마찰과 관성을 빼놓았으므로 기조력이 작용하면 조석이 곧바로 나타난다고 본다.",
+      "form": {
+        "condition": "마찰과 관성을 무시할 때",
+        "type": "causal",
+        "scope": "평형 조석론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「기조력이 작용해도 조석이 한참 뒤에야 나타난다고 본다」인데, 늦게 나타나는 것은 실제 지구에서 관찰되는 일이고 이 이론의 예측이 아니므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형 조석론에서는 기조력이 작용해도 조석이 한참 뒤에야 나타난다고 본다."
+    },
+    {
+      "id": "rel-ett-max-range",
+      "text": "이 이론이 내놓는 달에 의한 조차의 최댓값은 약 54 cm다.",
+      "form": {
+        "condition": "달의 기조력만 따질 때",
+        "type": "direct",
+        "scope": "평형 조석론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「최댓값이 약 5 m다」인데, 평형 조석론이 내놓는 값은 그 10분의 1 남짓인 54 cm 정도이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "평형 조석론이 내놓는 달에 의한 조차의 최댓값은 약 5 m다."
+    },
+    {
+      "id": "rel-ett-vs-real",
+      "text": "실제 조차는 대양에서 1 m 정도지만 연안에서는 그 10배까지 커지기도 한다.",
+      "form": {
+        "condition": "실제 관측값을 이론값과 견줄 때",
+        "type": "direct",
+        "scope": "실제 해양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「대양에서 가장 크고 연안으로 갈수록 작아진다」인데, 지형이 조석파를 좁혀 연안에서 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "실제 조차는 대양에서 가장 크고 연안으로 갈수록 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "평형 조석론이 예측한 조차가 실제 조차와 같다.",
+      "why_wrong": "이론값은 약 54 cm지만 실제 조차는 지형과 수심의 영향으로 훨씬 크게 나타나기도 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ett-vs-real"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-tide-generating-force"
+    },
+    {
+      "type": "next",
+      "target": "esys-high-and-low-tide"
+    },
+    {
+      "type": "next",
+      "target": "esys-tidal-pattern"
+    },
+    {
+      "type": "next",
+      "target": "esys-tidal-lag"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-1",
+  "pages": [
+    70,
+    71,
+    72
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "지도서 총론 25쪽 02-04 해설이 '평형 조석론 정도까지'로 한계를 그어, 동역학 조석론으로 넘어가지 않았다.",
+    "C6 이 rel-ett-assumption 을 정의의 되풀이로 짚었다(가정 둘은 definition 이 이미 말한다). 가정 자체가 아니라 그 가정이 낳는 한계를 명제로 세우고 id 를 rel-ett-limit 으로 바꿨다."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "esys-high-and-low-tide",
+  "concept_key": "concept:high-tide-and-low-tide",
+  "registry_status": "new",
+  "term": "만조와 간조",
+  "notation": {
+    "hanja": "滿潮 干潮",
+    "hanja_gloss": "滿 찰 만 · 潮 밀물 조 · 干 방패 간 · 潮 밀물 조",
+    "english": "high tide and low tide"
+  },
+  "definition": "조석에서 해수면이 가장 높아진 때가 만조이고, 가장 낮아진 때가 간조다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hlt-horizontal",
+      "text": "조석 해면을 빚는 것은 기조력의 연직 성분이 아니라 수평 성분이다.",
+      "form": {
+        "condition": "기조력을 두 성분으로 나누어 볼 때",
+        "type": "causal",
+        "scope": "평형 조석론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「연직 성분이 해수를 들어 올려 조석 해면을 만든다」인데, 연직 성분은 지구 중력에 견주면 너무 작아 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조석 해면은 기조력의 연직 성분이 해수를 들어 올려 만들어진다."
+    },
+    {
+      "id": "rel-hlt-position",
+      "text": "달 바로 아래쪽과 그 정반대쪽에서 만조가, 달과 90°를 이루는 곳에서 간조가 나타난다.",
+      "form": {
+        "condition": "평형 조석론의 가정 아래에서",
+        "type": "classification",
+        "scope": "지구 위의 위치"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 만조와 간조의 자리를 맞바꾼 것인데, 기조력이 가장 큰 두 지점이 달과 이은 선 위에 놓이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "달 바로 아래쪽과 그 정반대쪽에서 간조가, 달과 90°를 이루는 곳에서 만조가 나타난다."
+    },
+    {
+      "id": "rel-hlt-vertical-small",
+      "text": "기조력의 연직 성분은 지구 중력에 견주면 아주 작아 해수를 들어 올리지 못한다.",
+      "form": {
+        "condition": "지구 중력과 크기를 견줄 때",
+        "type": "causal",
+        "scope": "해수에 작용하는 기조력"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「연직 성분이 지구 중력보다 커서 해수를 직접 들어 올린다」인데, 기조력은 중력에 견주면 지극히 작으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기조력의 연직 성분은 지구 중력보다 커서 해수를 직접 들어 올린다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "만조는 달이 해수를 위로 잡아당겨 바닷물이 부풀어 오른 것이다.",
+      "why_wrong": "연직 방향으로 끌어올리는 몫은 지구 중력에 견주면 무시할 만큼 작고, 해수를 옆으로 모으는 수평 성분이 조석 해면을 만든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hlt-horizontal"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-tide"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-equilibrium-tide-theory"
+    },
+    {
+      "type": "next",
+      "target": "esys-surge-and-high-tide-overlap",
+      "note": "만조를 알아야 중첩을 읽는다 — 서술 순서(02→03)와 반대인 위계다"
+    },
+    {
+      "type": "next",
+      "target": "esys-tidal-range"
+    },
+    {
+      "type": "next",
+      "target": "esys-tidal-period-and-tidal-day"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-2",
+  "pages": [
+    71
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "고조와 저조"
+  ]
+}

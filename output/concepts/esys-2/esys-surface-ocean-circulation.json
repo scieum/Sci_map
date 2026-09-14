@@ -1,0 +1,89 @@
+{
+  "id": "esys-surface-ocean-circulation",
+  "concept_key": "concept:surface-ocean-circulation",
+  "registry_status": "new",
+  "term": "표층 순환",
+  "notation": {
+    "hanja": "表層循環",
+    "hanja_gloss": "表 겉 표 · 層 층 층 · 循 돌 순 · 環 고리 환",
+    "english": "surface ocean circulation"
+  },
+  "definition": "대기 대순환이 빚어 놓은 해수면 높이차 위에서 대양의 표층에 자리 잡은 큰 규모의 순환.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-soc-is-geostrophic",
+      "text": "대양의 표층 순환은 힘의 평형으로 흐르는 지형류다.",
+      "form": {
+        "condition": "수평 수압 경도력과 전향력이 평형을 이룰 때",
+        "type": "classification",
+        "scope": "대양 규모의 표층 해류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「힘의 평형과 무관하게 바람이 해수를 직접 끌고 가는 흐름이다」인데, 표층 순환은 두 힘의 평형으로 방향과 속력이 정해지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대양의 표층 순환은 힘의 평형과 무관하게 바람이 해수를 직접 끌고 가는 흐름이다."
+    },
+    {
+      "id": "rel-soc-wind",
+      "text": "표층 순환이 어느 자리에 어느 방향으로 놓이는지는 그 위를 부는 대기 대순환의 바람 분포가 정한다.",
+      "form": {
+        "condition": "대기 대순환이 유지되는 동안",
+        "type": "causal",
+        "scope": "대양의 표층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「바람 분포와 관계없이 정해진다」인데, 바람이 에크만 수송을 거쳐 해수면 높이차를 빚으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표층 순환의 자리와 방향은 그 위를 부는 바람 분포와 관계없이 정해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "표층 순환은 바람이 해수를 직접 밀어 그대로 끌고 가는 흐름이다.",
+      "why_wrong": "바람이 하는 일은 에크만 수송으로 해수면 높이차를 만드는 데까지이고, 실제 흐름은 수평 수압 경도력과 전향력이 평형을 이룬 지형류다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-soc-is-geostrophic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-geostrophic-current",
+      "note": "표층 순환을 지형류로 다시 읽는 자리"
+    },
+    {
+      "type": "same",
+      "target": "earth-surface-ocean-circulation",
+      "note": "concept_key 가 같다 — 「지구과학」이 순환의 모습을, 이 카드가 그 역학을 맡는다",
+      "grade_from": "지구과학"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-3",
+  "pages": [
+    57,
+    60
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "「지구과학」 earth-surface-ocean-circulation 이 이미 순환의 모습과 기후 효과를 다루므로 이 카드는 얇게 두고 '표층 순환 = 지형류'라는 관계만 중심에 놓았다 (후보 note 의 요청).",
+    "G2·G3 안건 ① — 같은 concept_key 를 쓰는 earth-1/earth-surface-ocean-circulation 의 rel-sc-wind('표층 순환을 밀고 가는 것은 대기 대순환의 바람')와 이 카드의 오개념('바람이 해수를 직접 밀어 그대로 끌고 간다')이 '직접' 한 낱말로만 갈린다. 두 카드가 한 키로 묶인 채 OX 로 나가면 학생에게는 모순으로 보일 수 있다.",
+    "G2·G3 안건 ② — rel-soc-wind('바람 분포가 정한다')가 earth-1/rel-sc-shape('같은 바람이 불어도 자전과 대양의 생김새에 따라 달라진다')보다 문면이 넓다. C5/C6 보고서가 uncertain 으로 올린 건이고, 이번 패스에서는 메인의 지시대로 고치지 않고 기록만 남긴다."
+  ]
+}

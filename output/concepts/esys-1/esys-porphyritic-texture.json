@@ -1,0 +1,88 @@
+{
+  "id": "esys-porphyritic-texture",
+  "concept_key": "concept:porphyritic-texture",
+  "registry_status": "new",
+  "term": "반상 조직",
+  "notation": {
+    "hanja": "斑狀 組織",
+    "english": "porphyritic texture",
+    "hanja_gloss": "斑 얼룩 반 · 狀 모양 상 · 組 짤 조 · 織 짤 직"
+  },
+  "definition": "큰 결정과 작은 결정이 섞여 있는 화성암의 조직. 냉각이 두 단계로 나뉘어 일어났음을 말해 준다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-por-two-stage",
+      "text": "깊은 곳에서 일부 결정이 크게 자란 마그마가 지표 부근으로 올라와 빠르게 식으면 반상 조직이 된다.",
+      "form": {
+        "condition": "마그마가 상승하는 도중 냉각 속도가 바뀔 때",
+        "type": "causal",
+        "scope": "반상 조직이 만들어지는 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 냉각 순서를 거꾸로 놓은 것이라 마그마가 위로 상승한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지표 부근에서 잘게 굳은 마그마가 지하 깊은 곳으로 내려가 천천히 식으면 반상 조직이 된다."
+    },
+    {
+      "id": "rel-por-mixed",
+      "text": "반상 조직에서 큰 결정은 느린 냉각 단계에서, 작은 결정은 빠른 냉각 단계에서 자란 것이다.",
+      "form": {
+        "condition": "한 암석 안의 두 크기 결정을 견줄 때",
+        "type": "classification",
+        "scope": "반상 조직 안의 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 결정이 자란 단계를 맞바꾼 것이라 냉각 속도와 결정 크기의 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반상 조직에서 큰 결정은 빠른 냉각 단계에서, 작은 결정은 느린 냉각 단계에서 자란 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반상 조직은 마그마가 처음부터 끝까지 같은 속도로 식어 만들어진다",
+      "why_wrong": "한 가지 속도로 식으면 결정 크기가 고르다. 큰 결정과 작은 결정이 섞인 것은 냉각이 두 단계로 나뉘었다는 표시다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-por-two-stage"
+    },
+    {
+      "text": "반상 조직의 큰 결정은 지표에서 빠르게 식는 동안 자란 것이다",
+      "why_wrong": "큰 결정은 지하 깊은 곳에서 천천히 식는 동안 자랐고, 지표 부근으로 올라와 빠르게 식은 부분이 작은 결정이 되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-por-mixed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-coarse-grained-texture"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-fine-grained-texture"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-2",
+  "pages": [
+    34,
+    37
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

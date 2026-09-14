@@ -1,0 +1,96 @@
+{
+ "id": "esys-stratiform-and-cumuliform-cloud",
+ "concept_key": "concept:stratiform-and-cumuliform-cloud",
+ "registry_status": "new",
+ "term": "층운형 구름과 적운형 구름",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "stratiform and cumuliform clouds",
+  "hanja_note": "'구름'이 고유어라 표제어 전체를 한자로 적을 수 없다. 앞머리는 각각 層雲形·積雲形이다."
+ },
+ "definition": "연직 운동이 억눌린 대기에서 옆으로 퍼져 생기는 구름과, 연직 운동이 활발한 대기에서 위로 솟아 생기는 구름.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cloud-shape-by-stability",
+   "text": "층운형 구름은 대기가 안정할 때, 적운형 구름은 대기가 불안정할 때 잘 만들어진다.",
+   "form": {
+    "condition": "구름이 생길 만큼 수증기가 있을 때",
+    "type": "classification",
+    "scope": "대류권의 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「층운형이 불안정할 때, 적운형이 안정할 때 만들어진다」는 두 이름을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "층운형 구름은 대기가 불안정할 때, 적운형 구름은 대기가 안정할 때 잘 만들어진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cumuliform-strong-precip",
+   "text": "연직으로 높게 발달한 적운형 구름은 넓은 기온 범위에 걸쳐 있어 강한 비를 내린다.",
+   "form": {
+    "condition": "구름이 두껍게 발달했을 때",
+    "type": "causal",
+    "scope": "적란운 같은 적운형 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「적운형 구름이 층운형보다 약한 비를 내린다」는 적란운이 강한 비를 내린다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "연직으로 높게 발달한 적운형 구름은 층운형 구름보다 약한 비를 내린다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "구름의 모양은 바람의 세기만으로 정해진다.",
+   "why_wrong": "모양을 가르는 것은 대기 안정도다. 안정하면 옆으로 퍼지고 불안정하면 위로 솟는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cloud-shape-by-stability"
+  },
+  {
+   "text": "층운형 구름에서 더 강한 비가 내린다.",
+   "why_wrong": "강한 비는 연직으로 높게 발달한 적운형 구름, 특히 적란운에서 내린다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cumuliform-strong-precip"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-absolute-stability"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-absolute-instability"
+  },
+  {
+   "type": "next",
+   "target": "esys-ice-crystal-process"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  96,
+  97
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — rel-cumuliform-strong-precip 의 inverted_text 가 원문에 없던 층운형과의 비교를 끌어들여 원 명제의 부정이 아니게 됐다. 고칠지 여부가 진위 판단에 걸려 C8 검토 항목으로 올린다.",
+  "C6 uncertain — rel-cloud-shape-by-stability 는 definition 이 이미 안정도-모양 대응을 품어 동어반복에 가깝다. 안정도 계열 카드와 함께 볼 자리다."
+ ]
+}

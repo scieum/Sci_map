@@ -1,0 +1,91 @@
+{
+ "id": "esys-boundary-layer",
+ "concept_key": "concept:atmospheric-boundary-layer-and-free-atmosphere",
+ "registry_status": "new",
+ "term": "대기 경계층과 자유 대기",
+ "notation": {
+  "hanja": "大氣境界層自由大氣",
+  "english": "atmospheric boundary layer and free atmosphere",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 境 지경 경 · 界 지경 계 · 層 층 층 · 自 스스로 자 · 由 말미암을 유 · 大 큰 대 · 氣 기운 기"
+ },
+ "definition": "지표 마찰이 미치는 고도 1 km 안팎의 층과, 그 위에서 마찰을 사실상 무시할 수 있는 층을 갈라 부르는 이름.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-bl-friction-split",
+   "text": "마찰력은 주로 고도 1 km 정도까지인 대기 경계층에서 작용하고 그 위 자유 대기에서는 거의 고려하지 않는다.",
+   "form": {
+    "condition": "고도에 따라 지표의 영향이 달라질 때",
+    "type": "classification",
+    "scope": "대류권 하부"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「자유 대기에서 크게 작용하고 경계층에서 거의 고려하지 않는다」는 두 층을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "마찰력은 자유 대기에서 크게 작용하고 고도 1 km 아래 대기 경계층에서는 거의 고려하지 않는다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-bl-wind-profile",
+   "text": "대기 경계층에서는 마찰력 때문에 자유 대기보다 풍속이 작게 나타난다.",
+   "form": {
+    "condition": "같은 기압 경도 아래에서 볼 때",
+    "type": "causal",
+    "scope": "풍속의 연직 분포"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「경계층에서 자유 대기보다 풍속이 크게 나타난다」는 그림 28 의 연직 분포와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기 경계층에서는 마찰력 때문에 자유 대기보다 풍속이 크게 나타난다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "자유 대기에서는 마찰력이 정확히 0이다.",
+   "why_wrong": "영향이 미미해 크게 고려하지 않을 뿐, 아예 없다고 못박은 것은 아니다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-bl-friction-split"
+  },
+  {
+   "text": "지표에 가까울수록 바람이 더 세게 분다.",
+   "why_wrong": "지표에 가까울수록 마찰력이 커져 풍속이 줄어든다. 같은 조건이면 자유 대기 쪽이 더 세다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-bl-wind-profile"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-friction-force"
+  },
+  {
+   "type": "next",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "next",
+   "target": "esys-surface-wind"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-2",
+ "pages": [
+  110
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

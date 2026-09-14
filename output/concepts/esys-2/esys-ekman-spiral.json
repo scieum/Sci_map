@@ -1,0 +1,125 @@
+{
+  "id": "esys-ekman-spiral",
+  "concept_key": "concept:ekman-spiral",
+  "registry_status": "new",
+  "term": "에크만 나선",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "인명 '에크만'의 음차어에 '나선(螺旋)'이 붙은 말이라 전체를 한자어로 적지 않는다.",
+    "english": "Ekman spiral"
+  },
+  "definition": "바람이 이어 부는 바다에서 깊이 내려갈수록 해수의 이동 방향이 조금씩 더 틀어져, 층마다의 흐름이 나선을 그리는 모습.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ekman-spiral-surface",
+      "text": "북반구 바다의 표면 해수는 바람이 향하는 쪽에서 오른쪽으로 약 45° 꺾인 방향으로 흐른다.",
+      "form": {
+        "condition": "바람이 오래 이어 불어 마찰과 전향력이 함께 작용할 때",
+        "type": "causal",
+        "scope": "북반구 넓은 바다의 표면층",
+        "antecedent": {
+          "quantity": "바람과의 마찰·전향력",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "표면 해수의 편향 각도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「북반구 표면 해수가 바람의 왼쪽 45°로 흐른다」인데, 북반구의 전향력은 운동 방향의 오른쪽으로 작용하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바람이 이어 부는 북반구 바다에서 표면 해수는 바람이 향하는 쪽의 왼쪽으로 약 45° 꺾여 흐른다."
+    },
+    {
+      "id": "rel-ekman-spiral-depth",
+      "text": "아래층으로 내려갈수록 해수는 바로 위층보다 오른쪽으로 더 많이 틀어지고, 흐르는 빠르기는 줄어든다.",
+      "form": {
+        "condition": "표층의 운동이 점성으로 아래층에 차례로 전달되는 동안",
+        "type": "direct",
+        "scope": "북반구 에크만층 안",
+        "antecedent": {
+          "quantity": "수심",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "이동 방향의 편향 각도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「깊이 내려갈수록 덜 틀어지고 빨라진다」인데, 편향은 깊이와 함께 커지고 전달되는 에너지는 줄어들므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "북반구 에크만층에서는 깊이 내려갈수록 해수가 위층보다 덜 틀어지고 흐르는 빠르기는 커진다."
+    },
+    {
+      "id": "rel-ekman-spiral-viscosity",
+      "text": "표면에서 얻은 운동을 아래층으로 넘겨 주는 통로 노릇을 하는 것은 해수의 점성이다.",
+      "form": {
+        "condition": "표층 해수가 바람에서 에너지를 얻은 뒤",
+        "type": "causal",
+        "scope": "에크만 나선이 만들어지는 해양 표층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「점성이 없어도 표면의 운동이 아래층에 전달된다」인데, 점성이 없으면 층 사이에 힘이 오가지 못해 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해수에 점성이 없어도 표면의 운동은 아래층으로 그대로 전달된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "북반구에서 표면 해수는 바람이 부는 방향 그대로 흘러간다.",
+      "why_wrong": "전향력이 함께 작용하기 때문에 표면 해수는 바람 방향에서 오른쪽으로 약 45° 꺾여 흐른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ekman-spiral-surface"
+    },
+    {
+      "text": "에크만 나선에서는 깊이와 상관없이 해수가 같은 빠르기로 흐른다.",
+      "why_wrong": "아래층으로 갈수록 전달되는 에너지가 줄어들어 흐르는 빠르기도 함께 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ekman-spiral-depth"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-coriolis-force",
+      "note": "전향력을 알아야 나선의 편향을 읽는다"
+    },
+    {
+      "type": "next",
+      "target": "esys-ekman-layer"
+    },
+    {
+      "type": "related",
+      "target": "esys-ekman-transport",
+      "note": "나선을 깊이로 평균한 것이 수송이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-1",
+  "pages": [
+    57
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

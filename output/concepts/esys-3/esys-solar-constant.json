@@ -1,0 +1,97 @@
+{
+ "id": "esys-solar-constant",
+ "concept_key": "concept:solar-constant",
+ "registry_status": "new",
+ "term": "태양 상수",
+ "notation": {
+  "hanja": "太陽常數",
+  "english": "solar constant",
+  "hanja_gloss": "太 클 태 · 陽 볕 양 · 常 항상 상 · 數 셈 수",
+  "symbol_display": "1361 W/m²",
+  "symbol_plain": "1361 W/m^2"
+ },
+ "definition": "지구 대기권 바깥에서 빛에 수직인 1 m²가 1초 동안 받는 태양 복사 에너지의 양.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-sc-value",
+   "text": "태양 상수의 크기는 약 1361 W/m²이며, 이는 빛에 수직인 면을 기준으로 대기권 바깥에서 잰 값이다.",
+   "form": {
+    "condition": "빛에 수직인 면을 대기권 바깥에 두고 잴 때",
+    "type": "classification",
+    "scope": "지구 궤도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「약 1361 W/m²는 지표에 놓인 면이 실제로 받는 값이다」는 대기권 바깥에서 빛에 수직인 면을 기준으로 잰다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "태양 상수 약 1361 W/m²는 지표에 놓인 면이 실제로 받는 태양 복사 에너지의 양이다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sc-quarter",
+   "text": "지구 전체가 받는 단위 면적당 평균 태양 복사 에너지는 태양 상수의 약 1/4이다.",
+   "form": {
+    "condition": "구형인 지구 표면 전체로 나눌 때",
+    "type": "conditional",
+    "scope": "지구 평균"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지구 전체가 받는 단위 면적당 평균값이 태양 상수와 같다」는 1/4 이라는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "구형인 지구 전체로 나누어도 단위 면적당 평균 태양 복사 에너지는 태양 상수와 같다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "태양 상수는 지표에 도달하는 태양 복사 에너지의 양이다.",
+   "why_wrong": "대기권 바깥에서 재는 값이다. 지표에 닿는 양은 반사·산란·흡수를 거쳐 훨씬 작아진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sc-value"
+  },
+  {
+   "text": "태양 상수만큼의 에너지가 지구 표면 어디에나 똑같이 들어온다.",
+   "why_wrong": "태양 상수는 빛에 수직인 면의 값이다. 구형인 지구 전체로 고루 나누면 그 약 1/4이 된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sc-quarter"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-latitudinal-energy-imbalance"
+  },
+  {
+   "type": "related",
+   "target": "esys-radiative-equilibrium-temperature"
+  },
+  {
+   "type": "related",
+   "target": "esys-albedo"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-3",
+ "pages": [
+  124
+ ],
+ "difficulty": 3,
+ "role": "context",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 수치까지 품어 rel-sc-value 가 동어반복이었다. definition 에서 1361 W/m² 를 덜어 내고 수치를 명제로 옮겼으며, 오개념 「표면 어디에나 똑같이」의 근거가 되는 「빛에 수직인」 한정을 명제 문면에 되살렸다.",
+  "C5 uncertain — 지도서 25쪽 해설은 태양 상수를 [12지시03-04~05] 묶음에 이름으로 적었으나 교과서는 124쪽 「대기 대순환의 역할」 용어 상자에 두었다. 같은 해설 문장이 편서풍 파동도 함께 적어 배타적으로 읽을 수 없어 03-06 을 그대로 두었다. 성취기준 배정은 사람이 정할 자리다."
+ ]
+}

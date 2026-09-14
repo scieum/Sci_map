@@ -1,0 +1,115 @@
+{
+ "id": "esys-radiative-equilibrium-temperature",
+ "concept_key": "concept:radiative-equilibrium-temperature",
+ "registry_status": "new",
+ "term": "복사 평형 온도",
+ "notation": {
+  "hanja": "輻射平衡溫度",
+  "english": "radiative equilibrium temperature",
+  "hanja_gloss": "輻 바퀴살 복 · 射 쏠 사 · 平 평평할 평 · 衡 저울대 형 · 溫 따뜻할 온 · 度 법도 도"
+ },
+ "definition": "행성이 받아들이는 태양 복사와 내보내는 적외선 복사가 같아질 때의 온도로, 반사도를 고려해 구한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-albedo-lowers-teq",
+   "text": "태양으로부터의 거리가 같다면 반사도가 큰 행성일수록 복사 평형 온도가 낮다.",
+   "form": {
+    "condition": "태양으로부터의 거리가 같을 때",
+    "type": "inverse",
+    "scope": "반사도를 고려해 구한 복사 평형 온도",
+    "antecedent": {
+     "quantity": "행성의 반사도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "복사 평형 온도",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「거리가 같을 때 반사도가 큰 행성일수록 복사 평형 온도가 높다」는 반사도가 클수록 흡수량이 적다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "태양으로부터의 거리가 같을 때 반사도가 큰 행성일수록 복사 평형 온도가 높다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-teq-vs-actual",
+   "text": "실제 표면 온도가 복사 평형 온도보다 높다면 그 차이는 행성 대기의 온실 효과가 만들어 낸 것이다.",
+   "form": {
+    "condition": "반사도를 고려한 복사 평형 온도와 견줄 때",
+    "type": "causal",
+    "scope": "대기를 가진 행성"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「두 온도의 차이는 대기의 온실 효과와 관계가 없다」가 참이라면 대기가 없는 천체와 있는 천체의 차이를 설명할 길이 없어 참이 될 경우가 없다.",
+   "inverted_text": "실제 표면 온도가 복사 평형 온도보다 높아도 그 차이는 대기의 온실 효과와 아무 관계가 없다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-venus-earth-teq",
+   "text": "반사도를 고려하면 지구의 복사 평형 온도는 약 -18 ℃로, 태양에 더 가까운 금성의 약 -48 ℃보다 오히려 높다.",
+   "form": {
+    "condition": "금성 0.78, 지구 0.30 의 반사도를 넣어 구할 때",
+    "type": "conditional",
+    "scope": "금성과 지구의 비교"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지구의 복사 평형 온도가 금성보다 낮다」는 -18 ℃와 -48 ℃라는 값과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "반사도를 고려하면 지구의 복사 평형 온도는 태양에 더 가까운 금성보다 낮다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "행성의 복사 평형 온도가 곧 그 행성의 실제 표면 온도다.",
+   "why_wrong": "대기가 있으면 온실 효과 때문에 실제 표면 온도가 복사 평형 온도보다 높아진다. 지구는 그 차이가 33 ℃다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-teq-vs-actual"
+  },
+  {
+   "text": "태양에 가까운 행성일수록 복사 평형 온도가 반드시 높다.",
+   "why_wrong": "거리만이 아니라 반사도도 함께 본다. 금성은 지구보다 가깝지만 반사도가 커서 복사 평형 온도가 더 낮다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-albedo-lowers-teq"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-greenhouse-effect"
+  },
+  {
+   "type": "related",
+   "target": "esys-albedo"
+  },
+  {
+   "type": "next",
+   "target": "esys-habitable-zone"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-2",
+ "pages": [
+  88
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

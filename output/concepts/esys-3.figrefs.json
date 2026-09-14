@@ -1,0 +1,455 @@
+{
+ "unit_id": "esys-3",
+ "stage": "C2",
+ "produced_by": "concept-writer",
+ "note": "concept.schema.json 에 figure_ref 자리가 없어(additionalProperties: false) 카드 밖에 따로 적는다. C7 이 output/media/esys-3.figbox.json 의 {page, no} 를 찾아 크롭하고 plan.json 을 만든다. 크롭 상한은 없다 (CLAUDE.md §0). 101쪽 표 1 은 kind 가 '표'이므로 figbox 에서 kind 까지 맞춰 찾아야 한다. 122쪽 그림 45(회전 수조 안의 파동)는 일부러 비워 두었다 — 회전 수조 실험은 후보 단계에서 제외됐고, 편서풍 파동 카드에 그 그림을 붙이면 실험 결과를 실제 대기로 일반화하는 오개념을 되레 굳힐 수 있다. ★101쪽 「안개의 종류와 생성 과정」은 그림이 아니라 표다(figbox 에 표 1 로 잡혀 있다). 메인이 kind 를 바로잡았다 — C7 은 {page, kind, no} 로 찾는다. ★2026-09-14 C5/C6 수정 패스 — esys-coriolis-force → esys-coriolis-force-on-wind, esys-hydrostatic-equilibrium → esys-hydrostatic-equilibrium-atmosphere 로 카드 id 가 바뀌었다(esys-2 와의 전역 id 충돌 해소). 이 표의 card_id 도 함께 고쳤다.",
+ "source_figbox": "output/media/esys-3.figbox.json",
+ "cards": [
+  {
+   "card_id": "esys-selective-absorption",
+   "figure_ref": [
+    {
+     "page": 87,
+     "no": 2,
+     "title": "기체 종류별 태양 복사 에너지 흡수율"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-atmospheric-window",
+   "figure_ref": [
+    {
+     "page": 87,
+     "no": 3,
+     "title": "기체에 의한 태양 복사 에너지"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-uv-shielding-by-ozone",
+   "figure_ref": [
+    {
+     "page": 86,
+     "no": 1,
+     "title": "지구의 대기 · 대기 중 성층권의 오존은 생명체에게 해로운 자외선을 막아주는데,"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-habitable-zone",
+   "figure_ref": [
+    {
+     "page": 89,
+     "no": 4,
+     "title": "생명 가능 지대(태양계 구성원의 크기와"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-global-mean-heat-budget",
+   "figure_ref": [
+    {
+     "page": 90,
+     "no": 5,
+     "title": "지구와 대기의 에너지 균형 (자료 출처: 『정부 간 기후 변화 협의체 (IPCC) 6차 보고서』, 2021., 미국 항공 우주국)"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-latent-heat",
+   "figure_ref": [
+    {
+     "page": 92,
+     "no": 6,
+     "title": "구름의 생성 · 구름이 생성될 때 지표의 열이"
+    },
+    {
+     "page": 92,
+     "no": 7,
+     "title": "숨은열에 의한 지표의 냉각과 상층 대기의 가열 · 구름"
+    },
+    {
+     "page": 92,
+     "no": 8,
+     "title": "숨은열을 활용한 예 · 도로에 물을"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-adiabatic-change",
+   "figure_ref": [
+    {
+     "page": 94,
+     "no": 9,
+     "title": "단열 변화"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-lifting-condensation-level",
+   "figure_ref": [
+    {
+     "page": 95,
+     "no": 10,
+     "title": "구름 생성 시 기온 및 습도 변화"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-foehn",
+   "figure_ref": [
+    {
+     "page": 95,
+     "no": 11,
+     "title": "푄(높새바람)"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-atmospheric-stability",
+   "figure_ref": [
+    {
+     "page": 96,
+     "no": 12,
+     "title": "안정 상태와 불안정 상태"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-absolute-stability",
+   "figure_ref": [
+    {
+     "page": 96,
+     "no": 13,
+     "title": "절대 안정한 대기의 기온 분포"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-absolute-instability",
+   "figure_ref": [
+    {
+     "page": 97,
+     "no": 14,
+     "title": "절대 불안정한 대기의 기온 분"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-conditional-instability",
+   "figure_ref": [
+    {
+     "page": 97,
+     "no": 15,
+     "title": "조건부 불안정한 대기의 기온"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-stratiform-and-cumuliform-cloud",
+   "figure_ref": [
+    {
+     "page": 102,
+     "no": 18,
+     "title": "Terra 위성이 촬영한 구름길"
+    },
+    {
+     "page": 102,
+     "no": 19,
+     "title": "천리안 2A호가 촬영한 물결구름"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-ice-crystal-process",
+   "figure_ref": [
+    {
+     "page": 100,
+     "no": 16,
+     "title": "강한 비가 내리는 적란운 내에서의 강수 과정 · 적란운은 연직으로 높게 발달하여 넓은 기온 분포를 보인다."
+    }
+   ]
+  },
+  {
+   "card_id": "esys-coalescence-process",
+   "figure_ref": [
+    {
+     "page": 100,
+     "no": 16,
+     "title": "강한 비가 내리는 적란운 내에서의 강수 과정 · 적란운은 연직으로 높게 발달하여 넓은 기온 분포를 보인다."
+    }
+   ]
+  },
+  {
+   "card_id": "esys-fog",
+   "figure_ref": [
+    {
+     "page": 101,
+     "no": 1,
+     "title": "안개의 종류와 생성 과정",
+     "kind": "표"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-radiation-fog",
+   "figure_ref": [
+    {
+     "page": 101,
+     "no": 17,
+     "title": "안개의 생성"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-advection-fog",
+   "figure_ref": [
+    {
+     "page": 101,
+     "no": 17,
+     "title": "안개의 생성"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-vertical-pressure-distribution",
+   "figure_ref": [
+    {
+     "page": 104,
+     "no": 20,
+     "title": "고도에 따른 기압 및 밀도 분포 · 대기의 상층에서는 기압 감소"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-hydrostatic-equilibrium-atmosphere",
+   "figure_ref": [
+    {
+     "page": 105,
+     "no": 21,
+     "title": "기압 경도력과 중력의"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-vertical-motion",
+   "figure_ref": [
+    {
+     "page": 106,
+     "no": 22,
+     "title": "상승 운동을 유도하여 구름이 생성되는 주요 과정"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-pressure-gradient-force",
+   "figure_ref": [
+    {
+     "page": 107,
+     "no": 23,
+     "title": "기압 경도력"
+    },
+    {
+     "page": 107,
+     "no": 24,
+     "title": "고기압 주변의 기압 경도력의 크기"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-coriolis-force-on-wind",
+   "figure_ref": [
+    {
+     "page": 109,
+     "no": 25,
+     "title": "회전 원판의 위치 · 회전 원판은 중위도에 접하는"
+    },
+    {
+     "page": 109,
+     "no": 26,
+     "title": "위도와 속력에 따른 전향력의 크기"
+    },
+    {
+     "page": 109,
+     "no": 27,
+     "title": "위도에 따른 전향력의 크기"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-friction-force",
+   "figure_ref": [
+    {
+     "page": 110,
+     "no": 28,
+     "title": "마찰력과 풍속의 연직 분포 · 대기 경계층에서는 마찰력의 영향으로 자유 대기보다 풍속이 작게 나타난다."
+    }
+   ]
+  },
+  {
+   "card_id": "esys-centripetal-force",
+   "figure_ref": [
+    {
+     "page": 110,
+     "no": 29,
+     "title": "구심력"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-boundary-layer",
+   "figure_ref": [
+    {
+     "page": 110,
+     "no": 28,
+     "title": "마찰력과 풍속의 연직 분포 · 대기 경계층에서는 마찰력의 영향으로 자유 대기보다 풍속이 작게 나타난다."
+    }
+   ]
+  },
+  {
+   "card_id": "esys-weather-chart",
+   "figure_ref": [
+    {
+     "page": 111,
+     "no": 30,
+     "title": "지상 일기도 · 관측소에서 측정한 기압을 해면 기"
+    },
+    {
+     "page": 111,
+     "no": 31,
+     "title": "상층 일기도 · 500 hPa 일기도의 등고선"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-geostrophic-wind",
+   "figure_ref": [
+    {
+     "page": 112,
+     "no": 32,
+     "title": "지균풍과 경도풍 (북반구)"
+    },
+    {
+     "page": 112,
+     "no": 33,
+     "title": "바람이 불지 않는 초기 상태에서"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-cyclonic-anticyclonic-gradient-wind",
+   "figure_ref": [
+    {
+     "page": 113,
+     "no": 34,
+     "title": "저기압성 경도풍과 고기압성 경도풍의 힘의 평형(북반구)"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-surface-wind",
+   "figure_ref": [
+    {
+     "page": 114,
+     "no": 35,
+     "title": "지상풍 (북반구)"
+    },
+    {
+     "page": 115,
+     "no": 37,
+     "title": "등압선이 직선일 때 지상에서 부는 바람(북반구) · 등압"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-convergence-divergence",
+   "figure_ref": [
+    {
+     "page": 114,
+     "no": 36,
+     "title": "지상 저기압과 고기압에 대응되는 연직 운동, 발산과 수렴(북반구)"
+    },
+    {
+     "page": 115,
+     "no": 38,
+     "title": "지상 저기압과 고기압에서 부는 바람(북반구)"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-nocturnal-jet",
+   "figure_ref": [
+    {
+     "page": 116,
+     "no": 39,
+     "title": "하루 동안 나타나는 고도에 따른 풍속 분포"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-rossby-wave",
+   "figure_ref": [
+    {
+     "page": 118,
+     "no": 40,
+     "title": "2023년 1월 9일 21시의 북반구 500 hPa 등압면의 고도(왼쪽), 기온과 바람 분포(오른쪽)"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-jet-stream",
+   "figure_ref": [
+    {
+     "page": 119,
+     "no": 41,
+     "title": "북반구에서 남북 기온 경도에 의해 제트류가 발생하는 과정"
+    },
+    {
+     "page": 119,
+     "no": 42,
+     "title": "북반구 겨울철 평균 동서 바람 분포 · (+)는 서풍, (-)는 동풍이다."
+    }
+   ]
+  },
+  {
+   "card_id": "esys-subtropical-and-polar-jet",
+   "figure_ref": [
+    {
+     "page": 119,
+     "no": 43,
+     "title": "2023년 1월 9일 21시의 한반도"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-meridional-heat-transport",
+   "figure_ref": [
+    {
+     "page": 120,
+     "no": 44,
+     "title": "관측 자료에서 볼 수 있는 편서풍 파동의 변동과 남북 열 수송 (자료 출처: NCEP reanalysis)"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-upper-divergence-and-cyclogenesis",
+   "figure_ref": [
+    {
+     "page": 122,
+     "no": 46,
+     "title": "지상 고 · 저기압 발달에서 편서풍"
+    }
+   ]
+  },
+  {
+   "card_id": "esys-general-circulation",
+   "figure_ref": [
+    {
+     "page": 124,
+     "no": 47,
+     "title": "대기 대순환"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "esys-p-wave",
+  "concept_key": "concept:p-wave",
+  "registry_status": "new",
+  "term": "P파",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "P wave",
+    "hanja_note": "'P'는 Primary 의 머리글자를 그대로 쓴 것이어서 한자 표기가 없다. '파(波)'만 한자다.",
+    "symbol_display": "P파",
+    "symbol_plain": "P wave"
+  },
+  "definition": "매질의 진동 방향이 파의 진행 방향과 나란한 종파 형태의 실체파. 속도가 빨라 지진계에 가장 먼저 도착한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pwv-longitudinal",
+      "text": "P파에서는 매질의 입자가 파가 나아가는 쪽과 같은 방향으로 진동한다. 이런 파를 종파라 한다.",
+      "form": {
+        "condition": "매질 입자의 진동 방향으로 가를 때",
+        "type": "classification",
+        "scope": "실체파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 P파를 횡파로 바꾼 것이라 종파라는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "P파에서는 매질의 입자가 파가 나아가는 쪽과 직각을 이루며 진동한다. 이런 파를 횡파라 한다."
+    },
+    {
+      "id": "rel-pwv-media",
+      "text": "P파는 고체·액체·기체 상태의 매질에서 모두 전파된다.",
+      "form": {
+        "condition": "매질의 상태가 달라질 때",
+        "type": "conditional",
+        "scope": "P파의 전파 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「고체에서만 전파된다」는 P파가 액체인 외핵도 지난다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "P파는 고체 상태의 매질에서만 전파된다."
+    },
+    {
+      "id": "rel-pwv-first",
+      "text": "P파는 S파보다 전파 속도가 빨라 같은 관측소에 먼저 도착한다.",
+      "form": {
+        "condition": "같은 진원에서 나온 두 실체파를 견줄 때",
+        "type": "classification",
+        "scope": "지진 기록의 도달 순서"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 파의 도달 순서를 맞바꾼 것이라 지진 기록과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "P파는 S파보다 전파 속도가 느려 같은 관측소에 나중에 도착한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "P파는 횡파여서 고체에서만 전달된다",
+      "why_wrong": "P파는 종파이고 고체·액체·기체를 가리지 않고 전달된다. 고체에서만 전달되는 것은 횡파인 S파다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pwv-media"
+    },
+    {
+      "text": "지진계에 가장 먼저 기록되는 것은 진폭이 가장 큰 L파다",
+      "why_wrong": "가장 먼저 도착하는 것은 속도가 가장 빠른 P파다. L파는 늦게 도착하지만 진폭이 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pwv-first"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-body-and-surface-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-ps-time"
+    },
+    {
+      "type": "next",
+      "target": "esys-earth-internal-structure"
+    },
+    {
+      "type": "related",
+      "target": "esys-s-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    39
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

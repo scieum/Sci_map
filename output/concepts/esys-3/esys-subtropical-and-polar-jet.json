@@ -1,0 +1,118 @@
+{
+ "id": "esys-subtropical-and-polar-jet",
+ "concept_key": "concept:subtropical-and-polar-jet",
+ "registry_status": "new",
+ "term": "아열대 제트와 한대 제트",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "subtropical jet and polar jet",
+  "hanja_note": "'제트'가 영어 jet 의 음차라 한자가 없다. 앞머리는 각각 亞熱帶·寒帶다."
+ },
+ "definition": "중위도 제트류가 때에 따라 둘로 갈려 나타나는 것으로, 저위도 쪽의 것과 고위도 쪽의 것이 붙었다 떨어졌다 한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-spj-average-vs-instant",
+   "text": "오랜 기간을 평균한 자료에서는 중위도 제트류가 하나의 강한 바람대로 보이지만 특정 시기에는 둘로 갈려 나타나기도 한다.",
+   "form": {
+    "condition": "평균 자료와 특정 시각 자료를 견줄 때",
+    "type": "conditional",
+    "scope": "북반구 중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「특정 시기의 자료에서도 제트류는 늘 하나의 바람대로만 나타난다」는 그림 43 의 두 제트와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "특정 시기의 관측 자료에서도 중위도 제트류는 늘 하나의 바람대로만 나타난다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-spj-merge",
+   "text": "아열대 제트와 한대 제트는 시간과 위치에 따라 합쳐지기도 하고 갈라지기도 한다.",
+   "form": {
+    "condition": "시기와 지역이 달라질 때",
+    "type": "conditional",
+    "scope": "아열대 제트와 한대 제트"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「두 제트는 언제나 따로 떨어져 있어 합쳐지는 일이 없다」는 합류·분리 경향이 있다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "아열대 제트와 한대 제트는 언제나 따로 떨어져 있어 합쳐지는 일이 없다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-spj-latitude",
+   "text": "아열대 제트는 해들리 순환과 페렐 순환이 만나는 위도 30° 부근에, 한대 제트는 페렐 순환과 극순환이 만나는 60° 부근에 나타난다.",
+   "form": {
+    "condition": "두 제트가 갈려 나타날 때",
+    "type": "classification",
+    "scope": "북반구 대류권 계면 부근",
+    "antecedent": {
+     "quantity": "제트의 종류",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "나타나는 위도",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「아열대 제트가 위도 60° 부근에, 한대 제트가 30° 부근에 나타난다」는 두 제트의 남북 자리를 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "아열대 제트는 위도 60° 부근에, 한대 제트는 위도 30° 부근에 나타난다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "평균한 바람 분포 그림에 제트류가 하나로 보이므로 실제로도 늘 하나다.",
+   "why_wrong": "평균이 특정 시각의 모습과 다를 수 있다. 특정 시기에는 아열대 제트와 한대 제트로 갈려 나타난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-spj-average-vs-instant"
+  },
+  {
+   "text": "아열대 제트가 한대 제트보다 더 고위도에 놓인다.",
+   "why_wrong": "이름 그대로 아열대 제트가 저위도 쪽, 한대 제트가 고위도 쪽에 놓인다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-spj-latitude"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-jet-stream"
+  },
+  {
+   "type": "related",
+   "target": "esys-meridional-temperature-gradient"
+  },
+  {
+   "type": "related",
+   "target": "esys-rossby-wave"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-1",
+ "pages": [
+  119
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — 오개념 「아열대 제트가 한대 제트보다 더 고위도에 놓인다」가 합류·분리를 말하는 rel-spj-merge 에 걸려 있었다. 그 반대편에 설 명제(두 제트의 남북 자리)를 rel-spj-latitude 로 새로 세워 옮겨 걸었다. 위도 30°·60° 는 교과서 124쪽 그림 47 의 표시에 따른다."
+ ]
+}

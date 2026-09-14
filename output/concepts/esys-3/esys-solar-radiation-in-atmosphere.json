@@ -1,0 +1,91 @@
+{
+ "id": "esys-solar-radiation-in-atmosphere",
+ "concept_key": "concept:solar-radiation-passage-through-atmosphere",
+ "registry_status": "new",
+ "term": "태양 복사 에너지의 대기 통과",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "passage of solar radiation through the atmosphere",
+  "hanja_note": "'에너지'가 영어 energy 의 음차라 표제어 전체를 한자로 적을 수 없다. 나머지는 太陽輻射·大氣通過다."
+ },
+ "definition": "태양 복사가 대기권을 지나는 동안 산란·반사·흡수·굴절을 겪으며 세기와 진행 방향이 달라지는 과정.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-four-processes",
+   "text": "대기권을 지나는 태양 복사는 산란·반사·흡수·굴절을 겪으므로 꼭대기에 들어온 양이 그대로 지표에 닿지는 않는다.",
+   "form": {
+    "condition": "태양 복사가 대기를 통과할 때",
+    "type": "causal",
+    "scope": "지구 대기권"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「그대로 지표에 닿는다」가 참이라면 반사·흡수로 나뉘는 열수지 자체가 성립하지 않아 참이 될 경우가 없다.",
+   "inverted_text": "태양 복사는 대기권을 지나며 산란·반사·흡수·굴절을 겪어도 꼭대기에 들어온 양이 그대로 지표에 닿는다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-refraction-sun-position",
+   "text": "빛이 대기를 지나며 굴절하는 탓에 태양은 실제 위치보다 조금 높게 보이고, 지평선 아래에 있어도 떠 있는 듯 보인다.",
+   "form": {
+    "condition": "태양 고도가 낮아 빛이 대기를 비스듬히 지날 때",
+    "type": "causal",
+    "scope": "지표에서의 태양 관측"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「굴절해도 태양은 늘 실제 위치에 보인다」는 굴절이 겉보기 위치를 올린다는 설명과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "태양 고도가 낮아 빛이 대기를 비스듬히 지나도 태양은 늘 실제 위치에 보인다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "대기 꼭대기에 도달한 태양 복사는 전부 지표까지 내려온다.",
+   "why_wrong": "100단위 가운데 29.4단위는 되돌아가고 23.5단위는 대기와 구름이 흡수해, 지표에 닿는 것은 47.1단위다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-four-processes"
+  },
+  {
+   "text": "지평선에 걸쳐 보이는 해의 위치가 태양의 실제 위치다.",
+   "why_wrong": "대기에서 빛이 굴절하기 때문에 태양은 실제보다 조금 높게 보인다. 지평선 아래에 있어도 떠 있는 것처럼 보인다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-refraction-sun-position"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-selective-absorption"
+  },
+  {
+   "type": "next",
+   "target": "esys-albedo"
+  },
+  {
+   "type": "next",
+   "target": "esys-global-mean-heat-budget"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-02"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-3",
+ "pages": [
+  90
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

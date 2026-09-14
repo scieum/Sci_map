@@ -1,0 +1,84 @@
+{
+  "id": "esys-tide-of-korean-coast",
+  "concept_key": "concept:tide-of-korean-coast",
+  "registry_status": "new",
+  "term": "우리나라 해안의 조석",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "고유어 '우리나라'가 들어간 구라 전체를 한자어로 적지 않는다.",
+    "english": "tides along the Korean coast"
+  },
+  "definition": "서해안과 동해안이 지형과 수심의 차이 때문에 서로 다르게 보이는 조석의 모습.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tkc-west",
+      "text": "서해안은 반일주조가 나타나고 조차가 큰 데다 수심까지 얕아 넓은 갯벌이 발달한다.",
+      "form": {
+        "condition": "서해의 얕은 수심과 큰 조차 아래에서",
+        "type": "causal",
+        "scope": "우리나라 서해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「서해안은 조차가 작아 갯벌이 거의 발달하지 못한다」인데, 큰 조차로 드러나는 땅이 넓어 갯벌이 발달하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "서해안은 조차가 작아 갯벌이 거의 발달하지 못한다."
+    },
+    {
+      "id": "rel-tkc-east",
+      "text": "동해안은 조차가 작고 혼합조의 성격이 강하며 수심이 급히 깊어져 넓은 갯벌이 자리 잡기 어렵다.",
+      "form": {
+        "condition": "동해의 급한 수심 아래에서",
+        "type": "causal",
+        "scope": "우리나라 동해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「동해안은 조차가 크고 반일주조가 뚜렷해 넓은 갯벌이 발달한다」인데, 그것은 서해안의 모습이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동해안은 조차가 크고 반일주조가 뚜렷해 넓은 갯벌이 발달한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우리나라 해안은 어디나 조차가 커서 갯벌이 잘 발달한다.",
+      "why_wrong": "동해안은 조차가 작고 수심이 급히 깊어져 넓은 갯벌이 발달하기 어렵다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tkc-east"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-tidal-pattern"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-tidal-range"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-2",
+  "pages": [
+    73,
+    74
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "C6 이 rel-tkc-data 를 절차 문장(변별력 낮음)으로 짚었다. 명제로 다시 세우려 했으나 쓸 만한 내용(하루 두 번이어도 간격·조차가 고르지 않으면 혼합조)은 esys-tidal-pattern/rel-tp-mixed 가, 조석 지연은 esys-tidal-lag 가 이미 지고 있어 겹치기만 하므로 접었다. 02-04 의 '자료 해석'은 남은 두 명제(서해안·동해안의 조석 양상)가 받는다."
+  ]
+}

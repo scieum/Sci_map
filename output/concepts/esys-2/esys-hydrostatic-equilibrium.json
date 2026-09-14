@@ -1,0 +1,108 @@
+{
+ "id": "esys-hydrostatic-equilibrium",
+ "concept_key": "concept:hydrostatic-equilibrium",
+ "registry_status": "new",
+ "term": "정역학 평형",
+ "notation": {
+  "hanja": "靜力學平衡",
+  "hanja_gloss": "靜 고요할 정 · 力 힘 력 · 學 배울 학 · 平 평평할 평 · 衡 저울대 형",
+  "english": "hydrostatic equilibrium"
+ },
+ "definition": "위로 미는 연직 수압 경도력과 아래로 당기는 중력이 같은 크기로 맞서 연직 방향의 알짜힘이 남지 않은 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-hse-magnitude",
+   "text": "이 상태에서 단위 질량의 해수가 받는 연직 수압 경도력의 크기는 중력 가속도와 같다.",
+   "form": {
+    "condition": "연직 방향으로 두 힘만 작용할 때",
+    "type": "direct",
+    "scope": "정역학 평형에 놓인 해수"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장은 「연직 수압 경도력이 중력 가속도보다 크다」인데, 크기가 같아야 평형이므로 반드시 거짓이다.",
+   "curriculum": [
+    "12지시02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "정역학 평형에서 단위 질량의 해수가 받는 연직 수압 경도력의 크기는 중력 가속도보다 크다."
+  },
+  {
+   "id": "rel-hse-no-vertical",
+   "text": "두 힘이 맞선 해수는 연직 방향으로는 거의 움직이지 않는다.",
+   "form": {
+    "condition": "연직 수압 경도력과 중력이 평형을 이룰 때",
+    "type": "conditional",
+    "scope": "해수 내부"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장은 「두 힘이 맞서도 위아래로 활발히 움직인다」인데, 알짜힘이 없으면 연직 가속이 생기지 않으므로 반드시 거짓이다.",
+   "curriculum": [
+    "12지시02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "연직 수압 경도력과 중력이 맞선 해수도 위아래로 활발히 움직인다."
+  },
+  {
+   "id": "rel-hse-buoyancy",
+   "text": "아래쪽 수압이 위쪽보다 높아 생기는 위로 향한 압력 차가 곧 해수가 받는 부력이다.",
+   "form": {
+    "condition": "수심에 따라 수압이 커지는 바닷속에서",
+    "type": "causal",
+    "scope": "해수 내부"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장은 「아래쪽 수압이 더 높은데 압력 차가 아래를 향한다」인데, 압력 차는 압력이 큰 쪽에서 작은 쪽으로 밀므로 반드시 거짓이다.",
+   "curriculum": [
+    "12지시02-01"
+   ],
+   "verified_by": "pending",
+   "inverted_text": "아래쪽 수압이 위쪽보다 높으면 압력 차는 아래를 향한다."
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "정역학 평형인 해수에는 아무 힘도 작용하지 않는다.",
+   "why_wrong": "연직 수압 경도력과 중력이 둘 다 작용하고 있으며, 크기가 같아 서로 상쇄될 뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-hse-no-vertical"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-water-pressure-gradient-force"
+  },
+  {
+   "type": "same",
+   "target": "earth-hydrostatic-equilibrium",
+   "note": "concept_key 가 같다 — 「지구과학」에서는 별 내부의 평형으로 나온다",
+   "grade_from": "지구과학"
+  },
+  {
+   "type": "same",
+   "target": "esys-hydrostatic-equilibrium-atmosphere",
+   "note": "concept_key 가 같다 — Ⅲ단원에서는 대기의 연직 평형으로 다시 나온다"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시02-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅱ. 해수의 운동",
+ "unit_id": "esys-2",
+ "topic_id": "esys-2-01-2",
+ "pages": [
+  58
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "같은 concept_key 를 쓰는 earth-hydrostatic-equilibrium 이 실재하는 것을 확인하고 same 을 걸었다. 맞서는 두 힘의 이름이 과목마다 다르다(별: 기체 압력 차 ↔ 해양: 연직 수압 경도력) — G3 에서 한 키로 묶을지 사람이 볼 자리다.",
+  "02-01 해설이 정량 취급을 허용하므로 rel-hse-magnitude 를 크기 관계로 적었다.",
+  "esys-3 의 같은 개념 카드가 id 충돌로 esys-hydrostatic-equilibrium-atmosphere 로 이름을 바꿨다. 교과서가 먼저 정의하는 이 카드가 평범한 id 를 지킨다. same 링크만 더했고 내용은 손대지 않았다."
+ ]
+}

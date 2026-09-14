@@ -1,0 +1,84 @@
+{
+  "id": "esys-swell",
+  "concept_key": "concept:swell",
+  "registry_status": "new",
+  "term": "너울",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "순우리말이라 한자어 표기가 없다.",
+    "english": "swell"
+  },
+  "definition": "바람 부는 해역을 벗어나 더는 에너지를 받지 못한 채 전파해 가는 해파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-swell-shape",
+      "text": "너울은 풍랑보다 마루가 둥글고 파장도 긴 편이다.",
+      "form": {
+        "condition": "같은 바다의 풍랑과 나란히 견줄 때",
+        "type": "classification",
+        "scope": "모양에 따른 해파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「너울이 풍랑보다 마루가 뾰족하고 파장이 짧다」인데, 그것은 풍랑의 모습이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "너울은 풍랑보다 마루가 뾰족하고 파장도 짧은 편이다."
+    },
+    {
+      "id": "rel-swell-breaker",
+      "text": "너울이 연안으로 다가오면 마루가 앞으로 무너지는 연안 쇄파가 된다.",
+      "form": {
+        "condition": "너울이 수심 얕은 연안에 이르렀을 때",
+        "type": "causal",
+        "scope": "연안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「연안으로 다가와도 마루가 무너지지 않는다」인데, 얕아지면서 마루와 골의 빠르기가 달라져 반드시 무너지므로 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "너울이 연안으로 다가와도 마루는 무너지지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "너울은 지금 그 자리에 부는 바람이 만든 파도다.",
+      "why_wrong": "지금 부는 바람이 만든 풍랑은 마루가 뾰족하고 모양이 고르지 않다. 마루가 둥근 너울은 다른 해역에서 자라 에너지 공급 없이 건너온 파다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-swell-shape"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-wind-wave",
+      "note": "풍랑이 성장한 뒤의 상태가 너울이다"
+    },
+    {
+      "type": "next",
+      "target": "esys-coastal-breaker"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-1",
+  "pages": [
+    62
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 지적대로 rel-swell-no-supply 를 접었다 — definition('더는 에너지를 받지 못한 채 전파해 가는 해파')의 되풀이였고, 정의를 더 얇게 하면 너울을 가릴 수 없어 명제 쪽을 접는 것이 맞다고 보았다. 오개념은 관찰로 갈리는 rel-swell-shape 에 다시 걸었다."
+  ]
+}

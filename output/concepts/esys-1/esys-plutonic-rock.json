@@ -1,0 +1,120 @@
+{
+  "id": "esys-plutonic-rock",
+  "concept_key": "concept:plutonic-rock",
+  "registry_status": "new",
+  "term": "심성암",
+  "notation": {
+    "hanja": "深成岩",
+    "english": "plutonic rock",
+    "hanja_gloss": "深 깊을 심 · 成 이룰 성 · 岩 바위 암"
+  },
+  "definition": "지하 깊은 곳에서 마그마가 서서히 식어 굳은 화성암. 결정이 크게 자란 조립질 조직을 가진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pr-texture",
+      "text": "심성암은 지하 깊은 곳에서 서서히 식어 결정이 큰 조립질 조직을 가진다.",
+      "form": {
+        "condition": "마그마가 깊은 곳에서 굳을 때",
+        "type": "causal",
+        "scope": "심성암의 조직"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「서서히 식어 결정이 작은 세립질 조직을 가진다」는 그림 19 의 대응과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "심성암은 지하 깊은 곳에서 서서히 식어 결정이 작은 세립질 조직을 가진다."
+    },
+    {
+      "id": "rel-pr-observe",
+      "text": "박편에서 결정이 크고 고르게 맞물려 보이면 그 화성암은 심성암으로 볼 수 있다.",
+      "form": {
+        "condition": "같은 배율에서 조직만으로 가릴 때",
+        "type": "conditional",
+        "scope": "편광 현미경 박편 관찰로 하는 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「결정이 작고 유리처럼 보이면 심성암이다」는 그런 조직이 화산암의 것이라는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "박편에서 결정이 작고 유리처럼 보이면 그 화성암은 심성암으로 볼 수 있다."
+    },
+    {
+      "id": "rel-pr-depth",
+      "text": "화강암처럼 심성암으로 분류되는 암석은 화산암보다 깊은 곳에서 만들어졌다.",
+      "form": {
+        "condition": "두 화성암의 생성 깊이를 견줄 때",
+        "type": "classification",
+        "scope": "화성암의 생성 위치"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 암석의 생성 깊이를 맞바꾼 것이라 그림 19 의 배치와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화강암처럼 심성암으로 분류되는 암석은 화산암보다 얕은 곳에서 만들어졌다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "심성암은 지표에서 빠르게 식어 만들어진 암석이다",
+      "why_wrong": "심성암은 지하 깊은 곳에서 천천히 식어 굳은 암석이다. 지표 부근에서 빠르게 굳은 것은 화산암이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pr-depth"
+    },
+    {
+      "text": "결정이 작고 치밀해 보이는 박편은 심성암의 것이다",
+      "why_wrong": "결정이 작은 것은 빠르게 식었다는 뜻이므로 화산암이다. 심성암은 결정이 크게 자란 조립질 조직을 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pr-observe"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-igneous-rock"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-coarse-grained-texture"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-polarizing-microscope"
+    },
+    {
+      "type": "related",
+      "target": "esys-volcanic-rock"
+    },
+    {
+      "type": "same",
+      "target": "earth-plutonic-rock",
+      "note": "concept_key 가 concept:plutonic-rock 으로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-2",
+  "pages": [
+    34,
+    36
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "관입암"
+  ]
+}

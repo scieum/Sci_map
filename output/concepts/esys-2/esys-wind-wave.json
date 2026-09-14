@@ -1,0 +1,84 @@
+{
+  "id": "esys-wind-wave",
+  "concept_key": "concept:wind-wave",
+  "registry_status": "new",
+  "term": "풍랑",
+  "notation": {
+    "hanja": "風浪",
+    "hanja_gloss": "風 바람 풍 · 浪 물결 랑",
+    "english": "wind wave"
+  },
+  "definition": "바람이 불고 있는 해역의 표면에서 그 바람으로부터 에너지를 받아 아직 자라고 있는 해파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ww-fully-developed",
+      "text": "해면이 바람에서 에너지를 충분히 받아 더 자라지 못하고 깨지기 직전까지 커진 상태를 완전히 성장한 풍랑이라 한다.",
+      "form": {
+        "condition": "바람이 충분히 오래 이어 불 때",
+        "type": "classification",
+        "scope": "바람이 부는 해역의 해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「완전히 성장한 풍랑도 바람이 계속 불면 얼마든지 더 높아진다」인데, 더 자라지 못하는 상태를 가리키는 이름이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "완전히 성장한 풍랑은 바람이 계속 불면 파고가 얼마든지 더 높아진다."
+    },
+    {
+      "id": "rel-ww-shape",
+      "text": "풍랑은 마루가 뾰족하고 파의 모양이 고르지 않다.",
+      "form": {
+        "condition": "풍랑과 너울을 나란히 놓고 볼 때",
+        "type": "classification",
+        "scope": "모양에 따른 해파의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「풍랑은 마루가 둥글고 모양이 고르다」인데, 그것은 너울의 모습이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "풍랑은 마루가 둥글고 파의 모양이 고른 편이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바람이 오래 불기만 하면 풍랑의 파고는 끝없이 높아진다.",
+      "why_wrong": "해면이 바람에서 에너지를 충분히 받으면 깨지기 직전 상태에서 더 자라지 못한다. 이 상태가 완전히 성장한 풍랑이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ww-fully-developed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ocean-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-swell",
+      "note": "풍랑이 성장한 뒤의 상태가 너울이다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-1",
+  "pages": [
+    62
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 지적대로 rel-ww-leaving 을 접었다 — definition 의 대우였고 invertible_reason 도 '그때부터는 너울이라 부르므로'로 이름에 기대고 있었다. 대신 rel-ww-fully-developed 를 마주 보는 오개념을 세웠고, 접은 명제에 걸려 있던 오개념은 esys-ocean-wave/rel-ow-after-wind 로 옮겼다."
+  ]
+}

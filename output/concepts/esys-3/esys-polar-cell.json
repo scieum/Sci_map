@@ -1,0 +1,94 @@
+{
+ "id": "esys-polar-cell",
+ "concept_key": "concept:polar-cell",
+ "registry_status": "new",
+ "term": "극순환",
+ "notation": {
+  "hanja": "極循環",
+  "english": "polar cell",
+  "hanja_gloss": "極 지극할 극 · 循 돌 순 · 環 고리 환"
+ },
+ "definition": "위도 60° 부근에서 극까지 걸쳐 도는 대기 대순환의 한 세포로, 세 순환 가운데 가장 고위도에 있다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-pc-direct",
+   "text": "극순환은 해들리 순환과 마찬가지로 열적 차이로 생기는 직접 순환이다.",
+   "form": {
+    "condition": "순환의 원인을 따질 때",
+    "type": "classification",
+    "scope": "고위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「극순환은 역학적 원인으로 생기는 간접 순환이다」는 교과서가 극순환을 직접 순환의 예로 든 것과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "극순환은 역학적 원인으로 생기는 간접 순환이다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pc-cold-sinking",
+   "text": "극지방은 강하게 냉각되어 공기가 가라앉으므로 극순환의 하강 구역이 된다.",
+   "form": {
+    "condition": "극지방이 에너지 부족 상태일 때",
+    "type": "causal",
+    "scope": "고위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「극지방에서 공기가 솟아올라 상승 구역이 된다」는 찬 공기가 하강한다는 직접 순환의 짜임과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "극지방은 강하게 냉각되지만 그곳에서 공기가 솟아올라 극순환의 상승 구역이 된다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "극순환은 역학적 원인으로 생기는 간접 순환이다.",
+   "why_wrong": "극순환은 해들리 순환과 함께 직접 순환으로 분류된다. 간접 순환은 페렐 순환이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pc-direct"
+  },
+  {
+   "text": "극지방에서는 공기가 데워져 위로 올라간다.",
+   "why_wrong": "극지방은 에너지가 부족해 강하게 냉각되므로 공기가 가라앉는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pc-cold-sinking"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-general-circulation"
+  },
+  {
+   "type": "related",
+   "target": "esys-hadley-cell"
+  },
+  {
+   "type": "related",
+   "target": "esys-ferrel-cell"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-3",
+ "pages": [
+  124
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 찬 공기의 하강과 직접 순환을 품어 rel-pc-direct 가 동어반복이었다. definition 을 위도대로 좁혀 두 명제를 모두 정의 밖에 두었다."
+ ]
+}

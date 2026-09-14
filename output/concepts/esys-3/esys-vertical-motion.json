@@ -1,0 +1,111 @@
+{
+ "id": "esys-vertical-motion",
+ "concept_key": "concept:vertical-motion-in-atmosphere",
+ "registry_status": "new",
+ "term": "대기의 연직 운동",
+ "notation": {
+  "hanja": "大氣鉛直運動",
+  "english": "vertical motion in the atmosphere",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 鉛 납 연 · 直 곧을 직 · 運 옮길 운 · 動 움직일 동"
+ },
+ "definition": "국지적 가열, 지형, 공기의 수렴, 전선면 같은 원인으로 공기가 오르내리며 구름과 강수를 만드는 운동.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-vm-four-causes",
+   "text": "상승 운동은 국지적 가열, 지형의 영향, 공기의 수렴, 전선면을 타고 오르는 것 같은 과정으로 촉발된다.",
+   "form": {
+    "condition": "정역학 평형을 깨뜨릴 원인이 있을 때",
+    "type": "classification",
+    "scope": "대류권"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「상승 운동은 그런 과정과 상관없이 저절로 일어난다」는 그림 22 가 네 과정을 원인으로 든다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기의 상승 운동은 국지적 가열·지형·수렴·전선면과 상관없이 저절로 일어난다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-vm-stability-modulates",
+   "text": "일단 촉발된 상승 운동은 대기 안정도에 따라 더 세지기도 하고 약해지기도 한다.",
+   "form": {
+    "condition": "상승 운동이 이미 시작되었을 때",
+    "type": "causal",
+    "scope": "대류권의 상승 기류"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「상승 운동의 세기가 대기 안정도와 관계없이 정해진다」는 안정도가 강화·약화시킨다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "이미 촉발된 상승 운동의 세기는 대기 안정도와 관계없이 정해진다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-vm-makes-weather",
+   "text": "구름과 비를 비롯한 날씨 변화는 공기의 상승과 하강에서 비롯한다.",
+   "form": {
+    "condition": "수증기를 지닌 대기에서",
+    "type": "causal",
+    "scope": "대류권의 날씨"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「구름과 비는 연직 운동 없이 수평 운동만으로 만들어진다」는 상승 응결이 구름 생성의 길이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "구름과 비는 공기의 연직 운동 없이 수평 운동만으로 만들어진다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "정역학 평형이 성립하므로 대기에는 연직 운동이 일어나지 않는다.",
+   "why_wrong": "평형은 연직 운동을 억누를 뿐이다. 실제 날씨를 만드는 상승·하강은 그 위에서 일어난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-vm-makes-weather"
+  },
+  {
+   "text": "상승 운동은 언제나 같은 세기로 일어난다.",
+   "why_wrong": "촉발된 뒤 대기 안정도에 따라 강화되기도 하고 약화되기도 한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-vm-stability-modulates"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-hydrostatic-equilibrium-atmosphere"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-stability"
+  },
+  {
+   "type": "next",
+   "target": "esys-convergence-divergence"
+  },
+  {
+   "type": "related",
+   "target": "esys-adiabatic-change"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-04"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-1",
+ "pages": [
+  106
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

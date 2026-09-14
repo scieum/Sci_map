@@ -1,0 +1,102 @@
+{
+ "id": "esys-coalescence-process",
+ "concept_key": "concept:coalescence-process",
+ "registry_status": "new",
+ "term": "병합 과정",
+ "notation": {
+  "hanja": "倂合過程",
+  "english": "coalescence process",
+  "hanja_gloss": "倂 아우를 병 · 合 합할 합 · 過 지날 과 · 程 길 정"
+ },
+ "definition": "기온 0 ℃ 이상인 구름에서 큰 물방울이 떨어지며 작은 물방울과 부딪혀 합쳐지면서 빗방울로 자라는 강수 과정.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cp-size-fall",
+   "text": "크기가 큰 물방울일수록 빠르게 떨어지므로 작은 물방울을 따라잡아 부딪힌다.",
+   "form": {
+    "condition": "물방울들이 같은 구름 안에서 떨어질 때",
+    "type": "direct",
+    "scope": "기온 0 ℃ 이상 구름",
+    "antecedent": {
+     "quantity": "물방울의 크기",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "낙하 속도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「큰 물방울일수록 느리게 떨어져 작은 물방울에 따라잡힌다」가 참이라면 충돌·병합이 일어날 길이 없어 참이 될 경우가 없다.",
+   "inverted_text": "같은 구름 안에서 크기가 큰 물방울일수록 느리게 떨어져 작은 물방울에 따라잡힌다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cp-warm-cloud",
+   "text": "병합 과정은 빙정이 없는 0 ℃ 이상의 구름에서 물방울끼리 부딪혀 합쳐지며 일어난다.",
+   "form": {
+    "condition": "구름이 대체로 물방울로 이루어졌을 때",
+    "type": "classification",
+    "scope": "기온 0 ℃ 이상 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「빙정과 과냉각 물방울이 함께 있는 구름에서 일어난다」는 그곳이 빙정 과정 구역이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "병합 과정은 빙정과 과냉각 물방울이 함께 있는 구름에서 일어난다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "모든 비는 하늘에서 만들어진 얼음이 녹아서 내리는 것이다.",
+   "why_wrong": "0 ℃ 이상인 구름에서는 얼음 없이 물방울끼리 부딪혀 합쳐지는 병합 과정으로 비가 만들어진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cp-warm-cloud"
+  },
+  {
+   "text": "구름 속 물방울은 크기와 상관없이 같은 속도로 떨어진다.",
+   "why_wrong": "큰 물방울이 더 빨리 떨어지기 때문에 작은 물방울을 따라잡아 충돌·병합이 일어난다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cp-size-fall"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-stratiform-and-cumuliform-cloud"
+  },
+  {
+   "type": "related",
+   "target": "esys-ice-crystal-process"
+  },
+  {
+   "type": "related",
+   "target": "esys-supercooled-droplet"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-3",
+ "pages": [
+  100
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — rel-cp-warm-cloud 의 뒤집은 문장은 교과서 100쪽 그림 16 의 구역 구분에는 어긋나나, 혼합상 구름에서도 충돌·병합이 일어나는지는 교과서 밖의 사실이다. 고치지 않고 C8 검토 항목으로 올린다."
+ ]
+}

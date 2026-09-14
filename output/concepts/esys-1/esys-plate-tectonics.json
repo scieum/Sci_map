@@ -1,0 +1,117 @@
+{
+  "id": "esys-plate-tectonics",
+  "concept_key": "concept:plate-tectonics",
+  "registry_status": "new",
+  "term": "판 구조론",
+  "notation": {
+    "hanja": "板 構造論",
+    "english": "plate tectonics",
+    "hanja_gloss": "板 널 판 · 構 얽을 구 · 造 지을 조 · 論 논할 론"
+  },
+  "definition": "지구의 겉이 여러 개의 판으로 나뉘어 움직이고 그 경계에서 지각 변동이 일어난다고 설명하는 이론.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pt-lineage",
+      "text": "판 구조론은 대륙 이동설에서 출발해 맨틀 대류설과 해양저 확장설을 거쳐 정립되었다.",
+      "form": {
+        "condition": "발달사를 시간 순으로 볼 때",
+        "type": "classification",
+        "scope": "판 구조론의 정립 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「판 구조론이 먼저 정립된 뒤 해양저 확장설과 대륙 이동설이 나왔다」는 발달사 도해의 차례와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "판 구조론이 먼저 정립된 뒤 그로부터 해양저 확장설과 대륙 이동설이 갈라져 나왔다."
+    },
+    {
+      "id": "rel-pt-instruments",
+      "text": "음향 측심법·고지자기 연구·표준 지진 관측망 같은 관측 기기가 발달하면서 새 증거가 드러나 판 구조론이 정립되었다.",
+      "form": {
+        "condition": "새 탐사 기술이 잇달아 도입될 때",
+        "type": "causal",
+        "scope": "관측 기기와 이론 정립의 관계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「판 구조론이 먼저 정립된 덕분에 이 관측 기기들이 개발되었다」는 기기가 증거를 먼저 내놓았다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "판 구조론이 먼저 정립된 덕분에 음향 측심법과 고지자기 연구 같은 관측 기기가 개발되었다."
+    },
+    {
+      "id": "rel-pt-limit",
+      "text": "판 구조론은 판 경계의 지각 변동은 설명하지만 판 내부에서 일어나는 화산 활동까지 설명하지는 못한다.",
+      "form": {
+        "condition": "하와이섬이나 동아프리카처럼 경계에서 먼 사례를 볼 때",
+        "type": "conditional",
+        "scope": "판 구조론의 설명 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「판 내부의 화산 활동까지 남김없이 설명한다」는 플룸 운동을 따로 세운 까닭과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "판 구조론은 판 내부에서 일어나는 화산 활동까지 남김없이 설명한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "판 구조론이 먼저 나오고 그것을 증명하려고 대륙 이동설이 제안되었다",
+      "why_wrong": "차례가 거꾸로다. 대륙 이동설이 먼저 나오고 맨틀 대류설과 해양저 확장설을 거쳐 판 구조론이 정립되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pt-lineage"
+    },
+    {
+      "text": "하와이섬의 화산 활동도 판의 경계에서 일어나는 일이다",
+      "why_wrong": "하와이섬은 태평양판 한가운데에 있다. 이런 판 내부의 화산 활동은 열점과 플룸 운동으로 설명한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pt-limit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-seafloor-spreading"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-paleomagnetism"
+    },
+    {
+      "type": "next",
+      "target": "esys-lithosphere-and-asthenosphere"
+    },
+    {
+      "type": "next",
+      "target": "esys-hot-spot"
+    },
+    {
+      "type": "same",
+      "target": "isci1-plate-tectonics",
+      "note": "concept_key 가 concept:plate-tectonics 로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-1",
+  "pages": [
+    26,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

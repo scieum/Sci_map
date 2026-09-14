@@ -1,0 +1,94 @@
+{
+ "id": "esys-hadley-cell",
+ "concept_key": "concept:hadley-cell",
+ "registry_status": "new",
+ "term": "해들리 순환",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "Hadley cell",
+  "hanja_note": "'해들리'는 사람 이름 Hadley 의 음차라 한자가 없다. 뒷머리는 循環이다."
+ },
+ "definition": "적도에서 위도 30° 부근까지 걸쳐 도는 대기 대순환의 한 세포로, 세 순환 가운데 가장 저위도에 있다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-hc-direct",
+   "text": "해들리 순환은 따뜻한 공기가 상승하고 찬 공기가 하강하는 직접 순환이며 열적 차이로 생긴다.",
+   "form": {
+    "condition": "열대의 가열 분포를 볼 때",
+    "type": "classification",
+    "scope": "열대"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「찬 공기가 상승하고 따뜻한 공기가 하강하는 간접 순환이다」는 직접 순환의 정의와 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "해들리 순환은 찬 공기가 상승하고 따뜻한 공기가 하강하는 간접 순환이다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-hc-heat-transport",
+   "text": "해들리 순환은 열대에서 남는 열을 고위도 쪽으로 전달한다.",
+   "form": {
+    "condition": "열대에 에너지 과잉이 있을 때",
+    "type": "causal",
+    "scope": "저위도에서 아열대까지"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「고위도의 열을 열대 쪽으로 전달한다」는 열대 과잉을 덜어 준다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "해들리 순환은 고위도의 열을 열대 쪽으로 전달한다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "해들리 순환은 역학적 원인으로 만들어지는 간접 순환이다.",
+   "why_wrong": "해들리 순환은 열적 차이로 생기는 직접 순환이다. 간접 순환의 예는 페렐 순환이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-hc-direct"
+  },
+  {
+   "text": "해들리 순환은 열을 저위도 쪽으로 모아들인다.",
+   "why_wrong": "열대에서 남는 열을 고위도 쪽으로 내보내는 구실을 한다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-hc-heat-transport"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-general-circulation"
+  },
+  {
+   "type": "related",
+   "target": "esys-ferrel-cell"
+  },
+  {
+   "type": "related",
+   "target": "esys-polar-cell"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-3",
+ "pages": [
+  124
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 직접 순환의 짜임과 열 수송까지 품어 rel-hc-direct 가 동어반복이었다. definition 을 위도대로 좁혀 두 명제(직접 순환·열 수송)를 모두 정의 밖에 두었다."
+ ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "esys-mantle-convection-drag",
+  "concept_key": "concept:mantle-drag-force",
+  "registry_status": "new",
+  "term": "맨틀 대류에 의한 수동적인 힘",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "mantle drag force",
+    "hanja_note": "'맨틀(mantle)'이 음차어여서 표제어 전체에 대응하는 한자 표기가 없다. '대류(對流)·수동(受動)'만 한자어다."
+  },
+  "definition": "맨틀이 수평으로 흐르며 생긴 마찰이 그 위의 판을 끌고 간다고 보는, 판을 움직이는 수동적인 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mcd-friction",
+      "text": "맨틀이 수평으로 흐르면 그 위의 판은 경계면에 생긴 마찰에 끌려 함께 움직인다.",
+      "form": {
+        "condition": "판이 연약권 위에 얹혀 있을 때",
+        "type": "causal",
+        "scope": "초기 판 구조론의 수동적 모델"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「맨틀이 흘러도 판은 마찰을 받지 않아 제자리에 머문다」는 마찰이 판을 끌었다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "맨틀이 수평으로 흘러도 그 위의 판은 마찰을 받지 않아 제자리에 머문다."
+    },
+    {
+      "id": "rel-mcd-cellsize",
+      "text": "해령과 해구가 가까워질수록 대류 세포의 수평 규모가 작아져 판의 이동은 느려지다 멈춘다.",
+      "form": {
+        "condition": "대류 세포의 수직 규모와 수평 규모가 비슷하게 유지될 때",
+        "type": "inverse",
+        "scope": "맨틀 대류에 의한 수동적 모델",
+        "antecedent": {
+          "quantity": "해령과 해구 사이의 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "판의 이동 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가까워질수록 대류 세포가 커져 판이 빨라진다」는 곁주의 설명과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령과 해구가 가까워질수록 대류 세포의 수평 규모가 커져 판의 이동은 빨라진다."
+    },
+    {
+      "id": "rel-mcd-limit",
+      "text": "해령이 해구 쪽으로 끌려 들어가는 현상은 수동적인 맨틀 대류 모델만으로는 설명하기 어렵다.",
+      "form": {
+        "condition": "대류 세포가 약해지거나 사라지는 경우를 볼 때",
+        "type": "conditional",
+        "scope": "수동적 모델의 설명 한계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수동적 모델로 잘 설명된다」는 능동적인 힘을 따로 세운 까닭과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령이 해구 쪽으로 끌려 들어가는 현상은 수동적인 맨틀 대류 모델로 잘 설명된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "판을 움직이는 가장 큰 힘은 맨틀 대류가 판 밑면에 주는 마찰력이다",
+      "why_wrong": "오랫동안 그렇게 여겨졌지만, 20세기 후반 이후의 연구는 섭입하는 판이 당기는 힘을 주된 원동력으로 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mcd-limit"
+    },
+    {
+      "text": "해령과 해구가 가까워지면 맨틀 대류가 더 활발해져 판이 빨라진다",
+      "why_wrong": "둘이 가까워지면 대류 세포의 수평 규모가 줄어 상승류와 하강류가 겹치고, 대류는 오히려 약해지거나 사라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mcd-cellsize"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-lithosphere-and-asthenosphere"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-mantle-convection-hypothesis"
+    },
+    {
+      "type": "next",
+      "target": "esys-slab-pull",
+      "note": "수동적 모델의 한계를 알아야 능동적인 힘의 뜻이 선다"
+    },
+    {
+      "type": "next",
+      "target": "esys-plume-tectonics"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-2",
+  "pages": [
+    27
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C5 uncertain(고치지 않음) — rel-mcd-cellsize 는 27쪽 곁주 수준의 수동적 대류 모델 내부 논의인데, 해설 01-03 은 판을 움직이는 힘을 「수동적인 움직임으로 설명하기보다는 능동적인 힘(섭입하는 판이 당기는 힘, 해령에서 미는 힘)」으로 다루라고 방향을 눌러 두었다. 억제된 쪽을 본문 명제만큼 두껍게 세운 셈이라 범위 판단을 사람(C8)에게 올린다. 카드 자체는 능동적인 힘과 구분하기 위해 필요하다."
+  ]
+}

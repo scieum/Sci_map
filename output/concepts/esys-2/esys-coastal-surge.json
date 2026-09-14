@@ -1,0 +1,136 @@
+{
+  "id": "esys-coastal-surge",
+  "concept_key": "concept:coastal-surge",
+  "registry_status": "new",
+  "term": "해일",
+  "notation": {
+    "hanja": "海溢",
+    "hanja_gloss": "海 바다 해 · 溢 넘칠 일",
+    "english": "coastal surge"
+  },
+  "definition": "파장이 매우 긴 해파가 연안에서 파고를 크게 키워 육지를 덮치는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cs-shallow-everywhere",
+      "text": "파장이 수심보다 훨씬 긴 해파는 깊은 대양을 지날 때에도 천해파처럼 행동한다.",
+      "form": {
+        "condition": "폭풍이나 지진이 파장이 매우 긴 해파를 만들었을 때",
+        "type": "classification",
+        "scope": "전 해양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「깊은 대양에서는 심해파의 성질을 보인다」인데, 심해파·천해파를 가르는 것은 수심 자체가 아니라 수심과 파장의 비이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 수심보다 훨씬 긴 해파도 깊은 대양에서는 심해파의 성질을 보인다."
+    },
+    {
+      "id": "rel-cs-slowdown",
+      "text": "수심 5000 m에서 800 km/h로 달리던 해일은 수심 10 m인 연안에 이르면 35 km/h 남짓으로 느려진다.",
+      "form": {
+        "condition": "천해파의 속력이 수심으로 정해지므로",
+        "type": "direct",
+        "scope": "교과서 그림 12가 든 사례",
+        "antecedent": {
+          "quantity": "수심",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "해일의 전파 속력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「연안에서 더 빨라진다」인데, 얕아질수록 천해파는 느려지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심 5000 m를 800 km/h로 달리던 해일은 수심 10 m인 연안에서 더 빨라진다."
+    },
+    {
+      "id": "rel-cs-height",
+      "text": "먼 바다에서 파고가 20 cm이던 해일은 연안에서 속력이 느려지고 파장이 짧아지며 파고가 다섯 배인 1 m로 높아진다.",
+      "form": {
+        "condition": "수심 5000 m의 먼 바다에서 수심 10 m의 연안으로 옮겨 갈 때",
+        "type": "causal",
+        "scope": "교과서 그림 12가 든 사례"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 연안에서 파고가 20 cm보다 낮아진다는 말인데, 같은 에너지가 좁은 구간에 몰려 1 m로 치솟으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "먼 바다에서 파고가 20 cm이던 해일은 연안에서 속력이 느려지고 파장이 짧아지면서 파고도 20 cm보다 낮아진다."
+    },
+    {
+      "id": "rel-cs-narrow",
+      "text": "해일이 강 하구나 만의 좁은 통로로 몰리면 파고가 10 m에 이르기도 한다.",
+      "form": {
+        "condition": "해일이 폭이 좁아지는 지형으로 들어설 때",
+        "type": "causal",
+        "scope": "강 하구와 만 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「좁은 통로로 몰리면 파고가 낮아진다」인데, 좁아질수록 에너지가 모여 파고가 치솟으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해일이 강 하구나 만의 좁은 통로로 몰리면 파고는 오히려 낮아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해일은 먼 바다에서부터 파고가 높은 큰 파도로 밀려오는 것이다.",
+      "why_wrong": "먼 바다에서는 파고가 20 cm 남짓에 지나지 않고, 연안에서 느려지며 파고가 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cs-height"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-wave-shoaling"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-shallow-water-wave",
+      "note": "긴 파장의 해파가 전 해양에서 천해파라는 것이 전제"
+    },
+    {
+      "type": "next",
+      "target": "esys-tsunami"
+    },
+    {
+      "type": "next",
+      "target": "esys-storm-surge"
+    },
+    {
+      "type": "next",
+      "target": "esys-surge-and-high-tide-overlap"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-3",
+  "pages": [
+    65
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 지적을 받아 form.scope 에만 있던 사례 수치(먼 바다 20 cm → 연안 1 m)를 문면에 넣어 '다섯 배'가 홀로 일반 법칙처럼 읽히지 않게 했다."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "esys-magma",
+  "concept_key": "concept:magma",
+  "registry_status": "new",
+  "term": "마그마",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magma",
+    "hanja_note": "'마그마(magma)'는 그리스어에서 온 음차어여서 한자 표기가 없다."
+  },
+  "definition": "지각 하부에서 기존 암석이 용융점에 이르러 녹은 고온의 물질. 주변 암석보다 밀도가 작아 위로 올라온다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mg-rise",
+      "text": "마그마는 주변 암석보다 밀도가 작아 지각의 약한 부분이나 틈을 따라 지표 가까이 올라온다.",
+      "form": {
+        "condition": "마그마와 주변 암석의 밀도를 견줄 때",
+        "type": "causal",
+        "scope": "지각 안에서의 마그마 상승"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「마그마가 주변 암석보다 밀도가 커서 더 깊이 가라앉는다」는 밀도가 작아 상승한다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마는 주변 암석보다 밀도가 커서 지각의 틈을 따라 더 깊은 곳으로 가라앉는다."
+    },
+    {
+      "id": "rel-mg-erupt",
+      "text": "마그마의 내부 압력이 충분히 높아지면 지표 밖으로 분출해 화산을 만든다.",
+      "form": {
+        "condition": "마그마가 지표 근처까지 올라온 뒤",
+        "type": "conditional",
+        "scope": "화산을 만드는 분출"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「압력이 충분히 높아지면 지표로 나오지 못하고 그대로 굳는다」는 분출해 화산을 만든다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마의 내부 압력이 충분히 높아지면 지표 밖으로 나오지 못하고 그 자리에서 굳는다."
+    },
+    {
+      "id": "rel-mg-source",
+      "text": "화성암·퇴적암·변성암을 가리지 않고 기존의 암석은 용융점에 이르면 마그마가 된다.",
+      "form": {
+        "condition": "지각 하부에서 암석이 가열될 때",
+        "type": "conditional",
+        "scope": "마그마의 근원 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「화성암이 녹은 것만 마그마다」는 세 암석 모두가 마그마를 만든다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마는 화성암이 녹은 것만을 가리키며 퇴적암이나 변성암은 녹아도 마그마가 되지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마그마는 무거워서 지하 깊은 곳에 머무를 뿐 스스로 올라오지 못한다",
+      "why_wrong": "마그마는 주변 암석보다 밀도가 작다. 그래서 약한 틈을 따라 지표 가까이까지 떠오른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mg-rise"
+    },
+    {
+      "text": "마그마는 화성암이 녹은 것만을 가리킨다",
+      "why_wrong": "퇴적암이든 변성암이든 지각 하부에서 용융점에 이르면 녹아 마그마가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mg-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-volcanic-activity"
+    },
+    {
+      "type": "next",
+      "target": "esys-magma-type"
+    },
+    {
+      "type": "same",
+      "target": "earth-magma",
+      "note": "concept_key 가 concept:magma 로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-1",
+  "pages": [
+    32
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "★C8 판단 요청 — rel-mg-erupt 「마그마의 내부 압력이 충분히 높아지면 지표 밖으로 분출해 화산을 만든다」의 「충분히」가 곧 분출을 일으킬 만큼이라는 뜻이라 순환적이다. 학생이 무엇을 재어 참·거짓을 가릴지 문면에 없다. 교과서가 든 조건(지표 부근의 낮은 압력에서 화산 가스가 팽창하는 것 등)으로 바꿔 쓸지는 사람이 정한다.",
+    "★C8 판단 요청 — 마그마가 생기는 자리를 이 카드는 지각 하부로 한정한다(definition 「지각 하부에서 기존 암석이 …녹은 고온의 물질」, rel-mg-source 의 form.condition 「지각 하부에서 암석이 가열될 때」). 그런데 같은 단원 esys-plume/rel-plm-origin 은 플룸 상승류가 지하 약 2900 km 인 맨틀과 외핵의 경계부에서 올라온다고 하고 교과서 29~30쪽도 그렇게 쓴다. 대조한 earth-2/earth-magma 는 「지각 아래나 맨틀에서」로 두어 이 어긋남이 없다. 지각 하부로 한정할지 맨틀까지 넓힐지는 진위 판정이라 사람이 정한다."
+  ]
+}

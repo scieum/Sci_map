@@ -1,0 +1,87 @@
+{
+  "id": "esys-transitional-wave",
+  "concept_key": "concept:transitional-wave",
+  "registry_status": "new",
+  "term": "전이파",
+  "notation": {
+    "hanja": "轉移波",
+    "hanja_gloss": "轉 구를 전 · 移 옮길 이 · 波 물결 파",
+    "english": "transitional wave"
+  },
+  "definition": "수심이 파장의 1/20과 1/2 사이인 구간을 지나는, 심해파와 천해파의 중간에 놓인 해파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tw-transition",
+      "text": "먼 바다에서 만들어진 심해파는 연안으로 다가오며 반드시 전이파 구간을 거쳐 천해파로 바뀐다.",
+      "form": {
+        "condition": "수심이 파장의 1/2에서 1/20 사이로 얕아지는 동안",
+        "type": "conditional",
+        "scope": "연안으로 다가오는 해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 전이파 구간을 건너뛴다는 말인데, 수심이 파장의 1/2에서 1/20으로 줄어드는 사이를 지나지 않고 천해파에 이를 수는 없으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "먼 바다의 심해파는 연안으로 다가올 때 전이파 구간을 건너뛰고 곧바로 천해파가 된다."
+    },
+    {
+      "id": "rel-tw-speed",
+      "text": "전이파의 속력은 수심과 파장 두 가지에 함께 좌우된다.",
+      "form": {
+        "condition": "중간 영역을 지나는 동안",
+        "type": "causal",
+        "scope": "전이파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「수심과도 파장과도 관계없이 정해진다」인데, 중간 영역에서는 두 값이 모두 속력에 관여하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전이파의 속력은 수심과 파장 어느 쪽과도 관계없이 정해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해파는 심해파와 천해파 두 가지뿐이다.",
+      "why_wrong": "수심이 파장의 1/20과 1/2 사이인 구간에는 전이파가 놓인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tw-transition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-deep-water-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-shallow-water-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-2",
+  "pages": [
+    64
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "천이파"
+  ],
+  "notes": [
+    "지도서 총론 25쪽 02-02 해설이 전이파를 '간단히' 다루라고 제한해 정의와 위치 관계, 속력을 정하는 요인까지만 남겼다.",
+    "C6 이 두 겹으로 짚었다 — text 가 definition 의 되풀이였고, inverted_text 는 text 에 없는 '1/2'을 뒤집어 제 명제의 대응물이 아니었다. 정의에 없는 몫(심해파가 전이파를 거쳐 천해파가 되는 과정, 65쪽)을 명제로 삼고 뒤집은 문장을 거기 맞췄다. id 는 rel-tw-transition 으로 바꿨다."
+  ]
+}

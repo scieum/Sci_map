@@ -1,0 +1,105 @@
+{
+  "id": "esys-sea-surface-height-difference",
+  "concept_key": "concept:sea-surface-height-difference",
+  "registry_status": "new",
+  "term": "해수면 높이차",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'해수면(海水面)'에 고유어 '높이차'가 붙은 말이라 전체를 한자어로 적지 않는다.",
+    "english": "sea surface height difference"
+  },
+  "definition": "에크만 수송으로 해수가 어느 해역에는 쌓이고 다른 해역에서는 빠져나가 위도마다 벌어진 해수면 높이의 차이.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sshd-pileup",
+      "text": "바람이 이어 불어 에크만 수송으로 해수가 모이는 해역은 해수면이 주변보다 높아진다.",
+      "form": {
+        "condition": "지속적인 바람 아래 에크만 수송이 일어날 때",
+        "type": "causal",
+        "scope": "대양 규모의 표층",
+        "antecedent": {
+          "quantity": "모여드는 해수의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해수면의 높이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「해수가 모이는 해역의 해수면이 낮아진다」인데, 물이 쌓이면 수면이 올라가므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "에크만 수송으로 해수가 모여드는 해역은 해수면이 주변보다 낮아진다."
+    },
+    {
+      "id": "rel-sshd-steady",
+      "text": "이 높이차가 유지되는 동안 대양에는 안정적인 표층 해류가 이어진다.",
+      "form": {
+        "condition": "에크만 수송이 계속되어 높이차가 유지될 때",
+        "type": "conditional",
+        "scope": "대양의 표층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「높이차가 유지되어도 안정적인 표층 해류가 이어지지 못한다」인데, 높이차가 힘을 계속 대 주므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해수면 높이차가 그대로 유지되어도 대양의 표층 해류는 안정적으로 이어지지 못한다."
+    },
+    {
+      "id": "rel-sshd-north",
+      "text": "편서풍과 북동 무역풍이 부는 북반구에서는 30°N 부근이 높아지고 60°N 부근과 적도 부근이 낮아진다.",
+      "form": {
+        "condition": "대기 대순환의 바람이 이어 불 때",
+        "type": "causal",
+        "scope": "북반구 아열대 해양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「30°N 부근이 낮아지고 60°N 부근과 적도 부근이 높아진다」인데, 두 바람의 에크만 수송이 30°N 쪽으로 해수를 모으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "편서풍과 북동 무역풍 아래에서 30°N 부근 해수면은 낮아지고 60°N 부근과 적도 부근이 높아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바다는 어디서나 해수면 높이가 같다.",
+      "why_wrong": "바람과 에크만 수송 때문에 위도마다 높이가 달라지며, 그 차이가 해류를 밀어 주는 힘이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sshd-pileup"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ekman-transport"
+    },
+    {
+      "type": "next",
+      "target": "esys-horizontal-pressure-gradient-force"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-1",
+  "pages": [
+    57,
+    60
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

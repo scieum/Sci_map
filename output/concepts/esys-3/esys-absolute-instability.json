@@ -1,0 +1,115 @@
+{
+ "id": "esys-absolute-instability",
+ "concept_key": "concept:absolute-instability",
+ "registry_status": "new",
+ "term": "절대 불안정",
+ "notation": {
+  "hanja": "絶對不安定",
+  "english": "absolute instability",
+  "hanja_gloss": "絶 끊을 절 · 對 대할 대 · 不 아닐 불 · 安 편안 안 · 定 정할 정"
+ },
+ "definition": "기층의 기온 감률이 건조 단열 감률보다도 커서, 올라간 공기 덩어리가 주위보다 따뜻해 스스로 더 오르는 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ai-criterion",
+   "text": "기층의 기온 감률이 건조 단열 감률보다 크면 그 기층은 절대 불안정이다.",
+   "form": {
+    "condition": "기온 감률과 건조 단열 감률을 견줄 때",
+    "type": "conditional",
+    "scope": "임의의 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「그 기층은 절대 안정이다」는 절대 안정의 조건이 습윤 단열 감률보다 작다는 것이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기층의 기온 감률이 건조 단열 감률보다 크면 그 기층은 절대 안정이다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ai-warmer-parcel",
+   "text": "절대 불안정한 기층에서 올라간 공기 덩어리는 같은 높이의 주위 공기보다 따뜻해 외부 힘 없이도 계속 올라간다.",
+   "form": {
+    "condition": "공기 덩어리가 조금이라도 올라갔을 때",
+    "type": "causal",
+    "scope": "절대 불안정한 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「주위보다 차가워져 제자리로 돌아온다」는 기온 감률이 더 크다는 조건과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "절대 불안정한 기층에서 올라간 공기 덩어리는 주위보다 차가워져 제자리로 돌아온다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ai-cumuliform",
+   "text": "절대 불안정한 대기에서는 연직 운동이 활발해 위로 높게 솟는 적운형 구름이 발달한다.",
+   "form": {
+    "condition": "수증기가 공급될 때",
+    "type": "causal",
+    "scope": "절대 불안정한 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「옆으로 퍼지는 층운형 구름이 발달한다」는 연직 운동이 활발하다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "절대 불안정한 대기에서는 옆으로 퍼지는 층운형 구름이 발달한다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기온 감률이 습윤 단열 감률보다 크기만 하면 절대 불안정이다.",
+   "why_wrong": "건조 단열 감률보다도 커야 절대 불안정이다. 두 감률 사이에 있으면 조건부 불안정이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ai-criterion"
+  },
+  {
+   "text": "적운형 구름은 대기가 안정할 때 잘 만들어진다.",
+   "why_wrong": "적운형 구름은 연직 운동이 활발한 불안정한 대기에서 발달한다. 안정할 때는 층운형이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ai-cumuliform"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-environmental-lapse-rate"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-stability"
+  },
+  {
+   "type": "related",
+   "target": "esys-stratiform-and-cumuliform-cloud"
+  },
+  {
+   "type": "next",
+   "target": "esys-ice-crystal-process"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  97
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — rel-ai-cumuliform 의 뒤집은 문장은 교과서 97쪽 서술에 어긋나지만 얕은 불안정층에 층적운이 생기는 일이 있어 문면 그대로는 참이 될 여지가 있다. 짝인 esys-absolute-stability rel-as-stratiform 과 판정이 갈린다. C8 검토 항목.",
+  "C6 uncertain — rel-ai-criterion 은 definition 이 판별 기준(기온 감률 대소)을 이미 품어 동어반복에 가깝다. 다만 그 기준이 카드의 학습 알맹이라 손볼 곳이 정의 쪽인지 명제 쪽인지 갈려 이번 패스에서는 그대로 두었다. 안정도 네 카드(절대 안정·절대 불안정·조건부 불안정·대기 안정도)를 한꺼번에 다시 볼 자리다."
+ ]
+}

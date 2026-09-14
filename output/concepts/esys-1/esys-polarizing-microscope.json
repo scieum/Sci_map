@@ -1,0 +1,112 @@
+{
+  "id": "esys-polarizing-microscope",
+  "concept_key": "concept:polarizing-microscope",
+  "registry_status": "new",
+  "term": "편광 현미경",
+  "notation": {
+    "hanja": "偏光 顯微鏡",
+    "english": "polarizing microscope",
+    "hanja_gloss": "偏 치우칠 편 · 光 빛 광 · 顯 나타날 현 · 微 작을 미 · 鏡 거울 경"
+  },
+  "definition": "편광판을 지난 빛으로 암석 박편을 비추어 구성 광물과 조직을 확대해 관찰하는 현미경.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pmic-polarizer",
+      "text": "자연광은 진행 방향에 수직인 모든 방향으로 진동하지만 편광판을 지난 빛은 한 방향으로만 진동한다.",
+      "form": {
+        "condition": "빛이 편광판을 지날 때",
+        "type": "causal",
+        "scope": "편광판을 지난 빛의 진동 방향"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 편광판을 지나기 전과 뒤의 진동 상태를 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자연광은 한 방향으로만 진동하지만 편광판을 지나면 모든 방향으로 진동하게 된다."
+    },
+    {
+      "id": "rel-pmic-thin",
+      "text": "석영·장석 같은 규산염 광물은 얇게 간 박편에서 빛을 통과시키는 투명 광물이다.",
+      "form": {
+        "condition": "약 0.03 mm 두께의 박편으로 만들었을 때",
+        "type": "conditional",
+        "scope": "화성암을 주로 이루는 규산염 광물"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「얇게 갈아도 빛을 통과시키지 못한다」는 투명 광물이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "석영·장석 같은 규산염 광물은 얇게 갈아도 빛을 통과시키지 못해 박편으로는 볼 수 없다."
+    },
+    {
+      "id": "rel-pmic-use",
+      "text": "편광 현미경으로 화성암 박편을 관찰하면 유리질·반상·조립질 같은 조직을 구분할 수 있다.",
+      "form": {
+        "condition": "화성암 박편을 관찰할 때",
+        "type": "causal",
+        "scope": "조직의 비교에 한함 — 광물의 광학적 성질은 다루지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「관찰해도 조직은 구분할 수 없다」는 조직을 구분할 수 있다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "편광 현미경으로 화성암 박편을 관찰해도 화성암의 조직은 구분할 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "편광판을 지난 빛도 여러 방향으로 진동한다",
+      "why_wrong": "여러 방향으로 진동하는 것은 편광판을 지나기 전의 자연광이다. 편광판을 지나면 한 방향으로만 진동한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmic-polarizer"
+    },
+    {
+      "text": "박편은 두꺼울수록 광물이 잘 보인다",
+      "why_wrong": "빛이 충분히 투과해야 관찰이 되므로 약 0.03 mm 정도로 얇게 간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pmic-thin"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-volcanic-rock"
+    },
+    {
+      "type": "next",
+      "target": "esys-plutonic-rock"
+    },
+    {
+      "type": "related",
+      "target": "esys-igneous-rock"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-2",
+  "pages": [
+    35,
+    36
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "지도서 총론 24쪽 성취기준 해설의 제한을 지켰다 — 유리질·반상·조립질 조직의 비교까지만 두고 간섭색·소광 같은 광물의 광학적 성질은 명제로 세우지 않았다.",
+    "C5 uncertain(고치지 않음) — rel-pmic-thin 「…빛을 통과시키는 투명 광물이다」는 광물의 투명·불투명, 곧 광학적 성질에 걸치는데 지도서 총론 24쪽 해설 01-04 는 「광학적 성질에 대해서는 다루지 않는다」고 못 박는다. 그러나 교과서 본문 35쪽에 「박편 상에서 빛을 투과시키는 투명 광물에 해당한다」가 그대로 있어 지도서와 교과서가 갈린 자리다. 어느 쪽을 따를지는 사람(C8)이 정한다."
+  ]
+}

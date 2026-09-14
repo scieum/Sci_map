@@ -1,0 +1,114 @@
+{
+ "id": "esys-conditional-instability",
+ "concept_key": "concept:conditional-instability",
+ "registry_status": "new",
+ "term": "조건부 불안정",
+ "notation": {
+  "hanja": "條件附不安定",
+  "english": "conditional instability",
+  "hanja_gloss": "條 가지 조 · 件 사건 건 · 附 붙을 부 · 不 아닐 불 · 安 편안 안 · 定 정할 정"
+ },
+ "definition": "기층의 기온 감률이 습윤 단열 감률과 건조 단열 감률 사이에 놓여, 포화 전에는 안정하고 포화 뒤에는 불안정해지는 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ci-criterion",
+   "text": "기온 감률이 습윤 단열 감률보다 크고 건조 단열 감률보다 작은 기층이 조건부 불안정이다.",
+   "form": {
+    "condition": "기온 감률이 두 단열 감률 사이 값을 가질 때",
+    "type": "conditional",
+    "scope": "임의의 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「두 단열 감률 사이에 있으면 절대 안정이다」는 절대 안정이 습윤 단열 감률보다 작은 경우라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기온 감률이 습윤 단열 감률과 건조 단열 감률 사이에 있으면 그 기층은 절대 안정이다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ci-needs-forcing",
+   "text": "조건부 불안정한 기층에서 지상의 공기 덩어리가 어느 높이까지 올라가려면 외부 강제력이 있어야 한다.",
+   "form": {
+    "condition": "공기 덩어리가 아직 포화되지 않았을 때",
+    "type": "conditional",
+    "scope": "응결 고도 아래 구간"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「외부 강제력 없이도 스스로 올라간다」는 포화 전에는 주위보다 차갑다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "조건부 불안정한 기층에서 지상의 공기 덩어리는 포화되기 전에도 외부 강제력 없이 스스로 올라간다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ci-free-ascent",
+   "text": "조건부 불안정한 기층에서는 구름이 생긴 뒤 어느 높이부터 공기 덩어리가 주위보다 따뜻해져 자유롭게 올라간다.",
+   "form": {
+    "condition": "구름이 생겨 습윤 단열 감률을 따를 때",
+    "type": "causal",
+    "scope": "응결 고도 위 구간"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「구름이 생긴 뒤에도 끝내 주위보다 따뜻해지지 않는다」가 참이라면 '조건부'라는 이름이 성립하지 않아 참이 될 경우가 없다.",
+   "inverted_text": "조건부 불안정한 기층에서는 구름이 생긴 뒤에도 공기 덩어리가 끝내 주위보다 따뜻해지지 않는다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "조건부 불안정한 대기는 어느 높이에서나 늘 불안정하다.",
+   "why_wrong": "포화되기 전에는 안정해서 외부 힘이 있어야 올라간다. 불안정해지는 것은 구름이 생긴 뒤다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ci-needs-forcing"
+  },
+  {
+   "text": "조건부 불안정에서는 구름이 생기기도 전에 자유 상승이 시작된다.",
+   "why_wrong": "자유 상승은 응결이 일어나 습윤 단열 감률을 따르게 된 뒤, 주위보다 따뜻해지는 높이에서 시작된다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ci-free-ascent"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-environmental-lapse-rate"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-lifting-condensation-level"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-stability"
+  },
+  {
+   "type": "related",
+   "target": "esys-vertical-motion"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  97
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — rel-ci-criterion 과 rel-ci-free-ascent 가 definition 에서 곧바로 나온다. 두 감률 사이라는 기준과 포화 뒤 불안정해진다는 내용이 모두 정의에 들어 있어서다. 안정도 네 카드를 함께 손봐야 할 자리라 이번 패스에서는 그대로 두었다."
+ ]
+}

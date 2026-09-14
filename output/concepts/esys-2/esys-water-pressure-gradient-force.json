@@ -1,0 +1,109 @@
+{
+  "id": "esys-water-pressure-gradient-force",
+  "concept_key": "concept:water-pressure-gradient-force",
+  "registry_status": "new",
+  "term": "수압 경도력",
+  "notation": {
+    "hanja": "水壓傾度力",
+    "hanja_gloss": "水 물 수 · 壓 누를 압 · 傾 기울 경 · 度 법도 도 · 力 힘 력",
+    "english": "pressure gradient force",
+    "symbol_display": "Δp/Δh",
+    "symbol_plain": "dp/dh"
+  },
+  "definition": "거리에 따라 수압이 달라지는 정도, 곧 수압 경도 때문에 해수가 받게 되는 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wpgf-direction",
+      "text": "이 힘은 언제나 수압이 높은 쪽에서 낮은 쪽을 향한다.",
+      "form": {
+        "condition": "두 지점 사이에 수압 차가 있을 때",
+        "type": "causal",
+        "scope": "정지해 있거나 흐르고 있는 해수 모두"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「수압이 낮은 쪽에서 높은 쪽을 향한다」인데, 압력 차가 미는 쪽은 언제나 낮은 압력 쪽이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수압 경도력은 수압이 낮은 쪽에서 높은 쪽을 향한다."
+    },
+    {
+      "id": "rel-wpgf-depth",
+      "text": "같은 연직선 위에서는 깊이 내려갈수록 수압이 커져 아래쪽이 위쪽보다 수압이 높다.",
+      "form": {
+        "condition": "같은 연직선 위의 두 지점을 견줄 때",
+        "type": "direct",
+        "scope": "해수 내부",
+        "antecedent": {
+          "quantity": "수심",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「깊이 내려갈수록 수압이 작아진다」인데, 위에 실린 물기둥이 길어질수록 압력이 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 연직선 위에서는 깊이 내려갈수록 수압이 작아진다."
+    },
+    {
+      "id": "rel-wpgf-split",
+      "text": "해양에서는 이 힘을 중력과 맞서는 연직 성분과 해류를 낳는 수평 성분으로 나누어 다룬다.",
+      "form": {
+        "condition": "힘을 두 성분으로 나누어 볼 때",
+        "type": "classification",
+        "scope": "해양 역학"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「연직 성분이 해류를 낳고 수평 성분이 중력과 맞선다」인데, 중력은 연직 방향이고 해류는 수평 방향의 흐름이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수압 경도력의 연직 성분이 해류를 낳고, 수평 성분이 중력과 맞선다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수압 경도력은 수압이 낮은 곳에서 높은 곳으로 해수를 민다.",
+      "why_wrong": "힘의 방향은 압력이 큰 쪽에서 작은 쪽이다. 밸브를 열면 물은 수압이 높은 쪽에서 낮은 쪽으로 흘러간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wpgf-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-hydrostatic-equilibrium"
+    },
+    {
+      "type": "next",
+      "target": "esys-horizontal-pressure-gradient-force"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-2",
+  "pages": [
+    58
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 이 rel-wpgf-direction 을 정의의 되풀이로 짚었다. 힘의 방향은 명제가 지게 두고, 정의는 '수압 경도에서 비롯된 힘'까지만 말하도록 덜어 냈다 (58쪽 곁단의 수압 경도 정의)."
+  ]
+}

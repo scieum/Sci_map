@@ -1,0 +1,106 @@
+{
+  "id": "esys-tidal-pattern",
+  "concept_key": "concept:tidal-pattern",
+  "registry_status": "new",
+  "term": "조석 형태",
+  "notation": {
+    "hanja": "潮汐形態",
+    "hanja_gloss": "潮 밀물 조 · 汐 썰물 석 · 形 모양 형 · 態 모습 태",
+    "english": "tidal pattern"
+  },
+  "definition": "하루에 만조와 간조가 몇 번 나타나는지, 그 간격과 조차가 고른지에 따라 나눈 조석의 유형.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tp-classification",
+      "text": "하루에 만조와 간조가 한 번씩이면 일주조, 두 번씩이면 반일주조로 나눈다.",
+      "form": {
+        "condition": "하루 동안의 횟수를 셀 때",
+        "type": "classification",
+        "scope": "조석 형태의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 이름을 맞바꾼 것인데, '반일'은 하루의 절반마다 되풀이된다는 뜻이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "하루에 만조와 간조가 한 번씩 나타나는 조석을 반일주조라고 한다."
+    },
+    {
+      "id": "rel-tp-mixed",
+      "text": "혼합조는 하루에 두 번씩 나타나되 시간 간격과 조차가 고르지 않은 조석이다.",
+      "form": {
+        "condition": "만조·간조의 간격과 조차를 함께 볼 때",
+        "type": "classification",
+        "scope": "조석 형태의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「간격과 조차가 모두 고른 조석이다」인데, 고르게 두 번씩 나타나는 것은 반일주조이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혼합조는 하루에 두 번씩 나타나면서 시간 간격과 조차가 모두 고른 조석이다."
+    },
+    {
+      "id": "rel-tp-basin",
+      "text": "실제 조석 형태가 지역마다 다른 것은 대양의 생김새와 크기, 수심이 저마다 다르기 때문이다.",
+      "form": {
+        "condition": "실제 관측이 평형 조석론의 예측과 어긋날 때",
+        "type": "causal",
+        "scope": "실제 해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「대양의 생김새나 수심과 관계없이 어디서나 반일주조다」인데, 일주조와 혼합조가 나타나는 해안이 실제로 있으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조석 형태는 대양의 생김새나 수심과 관계없이 어디서나 반일주조로 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "어느 해안에서나 하루에 두 번씩 만조가 든다.",
+      "why_wrong": "대양의 형태·크기·수심에 따라 일주조나 혼합조가 나타나는 해안도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tp-basin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-tidal-period-and-tidal-day"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-equilibrium-tide-theory"
+    },
+    {
+      "type": "next",
+      "target": "esys-tide-of-korean-coast"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-2",
+  "pages": [
+    72,
+    74
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "반일주조",
+    "일주조",
+    "혼합조"
+  ]
+}

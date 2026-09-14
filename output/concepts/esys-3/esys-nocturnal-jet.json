@@ -1,0 +1,110 @@
+{
+ "id": "esys-nocturnal-jet",
+ "concept_key": "concept:nocturnal-jet",
+ "registry_status": "new",
+ "term": "야간 제트",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "nocturnal jet",
+  "hanja_note": "'제트'가 영어 jet 의 음차라 한자가 없다. 앞머리는 夜間이다."
+ },
+ "definition": "밤사이 지표가 식어 연직 혼합이 멎고 마찰이 약해지면서 새벽 무렵 수백 m 상공에 나타나는 강한 바람.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-nj-friction-drop",
+   "text": "밤에는 지표면이 식어 연직 혼합이 멎고 지표 부근이 안정해져 마찰력이 약해지므로 경계층 상부의 바람이 낮보다 강해진다.",
+   "form": {
+    "condition": "맑은 밤 지표면이 복사 냉각될 때",
+    "type": "causal",
+    "scope": "대기 경계층 상부"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「마찰력이 약해지므로 경계층 상부의 바람도 함께 약해진다」는 그림 39 의 새벽 3시 강풍과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "밤에 지표면이 식어 마찰력이 약해지면 경계층 상부의 바람도 함께 약해진다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-nj-daytime-mixing",
+   "text": "낮에는 지표 가열로 생긴 대류가 공기를 연직으로 섞어 풍속이 고도에 따라 고르게 나타나는 구간을 넓힌다.",
+   "form": {
+    "condition": "낮에 지표면이 가열될 때",
+    "type": "causal",
+    "scope": "대기 경계층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「낮의 대류 때문에 풍속이 고도에 따라 더 들쭉날쭉해진다」는 혼합이 풍속을 고르게 만든다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "낮에는 지표 가열로 생긴 대류 때문에 풍속이 고도에 따라 더 들쭉날쭉해진다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-nj-heavy-rain",
+   "text": "야간 제트는 적란운에 수증기를 많이 실어 보내 새벽 시간대 집중 호우의 원인이 된다.",
+   "form": {
+    "condition": "적란운이 발달할 조건이 갖추어졌을 때",
+    "type": "causal",
+    "scope": "새벽 시간대의 강수"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「적란운에서 수증기를 걷어 내어 새벽 강수를 줄인다」는 강한 비의 주요 원인이라는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "야간 제트는 적란운에서 수증기를 걷어 내어 새벽 시간대의 강수를 줄인다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "밤에는 바람이 잦아드니 모든 고도에서 풍속이 낮보다 작다.",
+   "why_wrong": "지표 부근은 그렇지만 경계층 상부에서는 마찰이 약해져 새벽에 오히려 바람이 강해진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-nj-friction-drop"
+  },
+  {
+   "text": "야간 제트는 대류권 계면 부근에서 부는 제트류와 같은 것이다.",
+   "why_wrong": "야간 제트는 수백 m 고도 경계층 상부의 바람이고, 제트류는 대류권 계면 부근의 강풍대다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-nj-friction-drop"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-friction-force"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-boundary-layer"
+  },
+  {
+   "type": "related",
+   "target": "esys-jet-stream"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-4",
+ "pages": [
+  116
+ ],
+ "difficulty": 4,
+ "role": "context",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — 오개념 「야간 제트는 대류권 계면 부근의 제트류와 같은 것이다」가 rel-nj-friction-drop 에 걸려 있으나, 이 명제가 말하는 것은 밤의 마찰 감소이지 제트류와의 구별이 아니다. 두 낱말의 혼동을 겨눌 명제를 새로 세울지는 C8 에서 사람이 볼 자리다."
+ ]
+}

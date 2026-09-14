@@ -1,0 +1,116 @@
+{
+ "id": "esys-general-circulation",
+ "concept_key": "concept:atmospheric-general-circulation",
+ "registry_status": "new",
+ "term": "대기 대순환",
+ "notation": {
+  "hanja": "大氣大循環",
+  "english": "atmospheric general circulation",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 大 큰 대 · 循 돌 순 · 環 고리 환"
+ },
+ "definition": "위도별 에너지 불균형을 덜기 위해 대기가 남북으로 이루는 큰 규모의 흐름으로, 반구마다 세 개의 순환 세포로 나뉜다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-gc-three-cells",
+   "text": "대기 대순환은 한 반구에서 해들리 순환·페렐 순환·극순환의 세 세포로 나뉜다.",
+   "form": {
+    "condition": "위도대별로 나누어 볼 때",
+    "type": "classification",
+    "scope": "한 반구"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「한 반구에서 하나의 세포로만 이루어진다」는 그림 47 의 세 순환과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기 대순환은 한 반구에서 하나의 커다란 순환 세포로만 이루어진다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-gc-differential-heating",
+   "text": "대기 대순환은 태양 복사의 차등 가열로 생긴 에너지 불균형을 해소하려는 과정에서 형성된다.",
+   "form": {
+    "condition": "위도별로 가열이 다를 때",
+    "type": "causal",
+    "scope": "지구 대기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「차등 가열과 관계없이 지구 자전만으로 형성된다」는 불균형 해소를 위해 형성된다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기 대순환은 위도별 차등 가열과 관계없이 지구 자전만으로 형성된다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-gc-interaction",
+   "text": "여러 대기 순환은 따로 떨어져 일어나지 않고 지구시스템 안에서 서로 영향을 주고받으며 남북 에너지 균형에 기여한다.",
+   "form": {
+    "condition": "지구시스템 전체를 볼 때",
+    "type": "causal",
+    "scope": "대기의 여러 순환"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「대기 순환들은 서로 영향을 주고받지 않고 따로따로 일어난다」는 상호작용한다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기의 여러 순환은 서로 영향을 주고받지 않고 따로따로 일어난다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "대기 대순환은 한 반구에 하나의 큰 순환으로 이루어져 있다.",
+   "why_wrong": "해들리 순환·페렐 순환·극순환의 세 세포로 나뉜다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gc-three-cells"
+  },
+  {
+   "text": "대기 대순환은 지구 자전만으로 만들어진다.",
+   "why_wrong": "출발점은 위도별 차등 가열로 생긴 에너지 불균형이다. 자전은 그 흐름의 방향을 바꾼다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-gc-differential-heating"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-latitudinal-energy-imbalance"
+  },
+  {
+   "type": "next",
+   "target": "esys-hadley-cell"
+  },
+  {
+   "type": "next",
+   "target": "esys-ferrel-cell"
+  },
+  {
+   "type": "next",
+   "target": "esys-polar-cell"
+  },
+  {
+   "type": "same",
+   "target": "isci2-atmospheric-general-circulation",
+   "note": "concept_key 가 concept:atmospheric-general-circulation 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-3",
+ "pages": [
+  124
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

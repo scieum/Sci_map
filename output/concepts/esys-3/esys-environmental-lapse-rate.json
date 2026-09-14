@@ -1,0 +1,99 @@
+{
+ "id": "esys-environmental-lapse-rate",
+ "concept_key": "concept:environmental-lapse-rate",
+ "registry_status": "new",
+ "term": "기온 감률",
+ "notation": {
+  "hanja": "氣溫減率",
+  "english": "environmental lapse rate",
+  "hanja_gloss": "氣 기운 기 · 溫 따뜻할 온 · 減 덜 감 · 率 비율 률",
+  "symbol_display": "Γ",
+  "symbol_plain": "Gamma"
+ },
+ "definition": "그때 그 자리의 대기가 실제로 지니고 있는 연직 기온 분포에서 높이에 따라 기온이 줄어드는 비율.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-elr-is-environment",
+   "text": "기온 감률은 움직이는 공기 덩어리가 겪는 변화가 아니라 그 자리 대기가 실제로 지닌 기온의 연직 분포를 나타낸다.",
+   "form": {
+    "condition": "연직 기온을 관측으로 잴 때",
+    "type": "classification",
+    "scope": "실제 대기의 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기온 감률은 상승하는 공기 덩어리가 스스로 식는 비율이다」는 그것이 단열 감률이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "관측으로 잰 기온 감률은 상승하는 공기 덩어리가 스스로 식는 비율을 나타낸다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-elr-vs-adiabatic",
+   "text": "기온 감률을 건조 단열 감률·습윤 단열 감률과 견주어 절대 안정·조건부 불안정·절대 불안정을 가른다.",
+   "form": {
+    "condition": "두 단열 감률을 기준선으로 삼을 때",
+    "type": "classification",
+    "scope": "대기 안정도 판별"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「단열 감률과 견주지 않고 기온 감률만으로 안정도를 가를 수 있다」는 판별 기준이 두 감률과의 대소라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기온 감률 값만 있으면 단열 감률과 견주지 않고도 기층의 안정도를 가를 수 있다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기온 감률은 어디서나 100 m당 1 ℃로 일정하다.",
+   "why_wrong": "그것은 건조 단열 감률이다. 실제 기온 감률은 관측할 때마다 달라 1 km당 4 ℃, 8 ℃, 12 ℃ 같은 값이 나온다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-elr-is-environment"
+  },
+  {
+   "text": "기온 감률이 크다는 것은 고도가 올라갈수록 기온이 높아진다는 뜻이다.",
+   "why_wrong": "감률이 크다는 것은 고도에 따라 기온이 더 가파르게 떨어진다는 뜻이다. 올라가며 높아지는 것은 역전층이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-elr-is-environment"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-adiabatic-change"
+  },
+  {
+   "type": "next",
+   "target": "esys-atmospheric-stability"
+  },
+  {
+   "type": "next",
+   "target": "esys-adiabatic-chart"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  96
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "aliases": [
+  "연직 기온 감률"
+ ],
+ "notes": [
+  "C6 uncertain — rel-elr-is-environment 가 definition 을 되풀이한다. 단열 감률과 갈라 보는 대비가 학습 알맹이라 동어반복으로만 볼지 갈려 그대로 두었다."
+ ]
+}

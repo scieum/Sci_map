@@ -1,0 +1,138 @@
+{
+ "id": "esys-rossby-wave",
+ "concept_key": "concept:rossby-wave",
+ "registry_status": "new",
+ "term": "편서풍 파동",
+ "notation": {
+  "hanja": "偏西風波動",
+  "english": "Rossby wave",
+  "hanja_gloss": "偏 치우칠 편 · 西 서녘 서 · 風 바람 풍 · 波 물결 파 · 動 움직일 동"
+ },
+ "definition": "중위도 상층 대류권의 편서풍이 남북으로 굽이치며 수천 km 파장으로 나타나는 파동.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-rw-midlatitude",
+   "text": "편서풍 파동은 남북 기온 차가 큰 중위도에서 뚜렷하게 발달한다.",
+   "form": {
+    "condition": "위도별로 기온 차가 있을 때",
+    "type": "causal",
+    "scope": "중위도 상층 대류권"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「남북 기온 차가 작은 적도 부근에서 가장 뚜렷하게 발달한다」는 중위도에서 두드러진다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "편서풍 파동은 남북 기온 차가 작은 적도 부근에서 가장 뚜렷하게 발달한다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rw-coriolis-latitude",
+   "text": "로스비는 편서풍 파동이 위도에 따라 전향력이 달라지기 때문에 생긴다는 것을 밝혔다.",
+   "form": {
+    "condition": "지구가 구형이어서 위도마다 전향력이 다를 때",
+    "type": "causal",
+    "scope": "행성 규모의 파동"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「위도에 따른 전향력 차이와 상관없이 생긴다」는 로스비가 밝힌 내용과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "편서풍 파동은 위도에 따른 전향력의 차이와 상관없이 생긴다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rw-energy-balance",
+   "text": "편서풍 파동은 지구의 위도별 에너지 불균형을 조절하는 구실을 한다.",
+   "form": {
+    "condition": "저위도 과잉·고위도 부족이 있을 때",
+    "type": "causal",
+    "scope": "중위도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「위도별 에너지 불균형과는 아무 관계가 없다」는 파동이 그것을 조절한다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "편서풍 파동은 지구의 위도별 에너지 불균형과는 아무 관계가 없다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rw-rotating-tank-limit",
+   "text": "회전 수조 실험은 위도에 따른 전향력 변화를 모의하지 못하므로 거기 나타난 파동은 실제 편서풍 파동과 차이가 있다.",
+   "form": {
+    "condition": "회전 수조로 행성파를 모의할 때",
+    "type": "conditional",
+    "scope": "모형 실험의 한계"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「실험에 나타난 파동이 실제 편서풍 파동을 그대로 재현한 것이다」는 교과서가 밝힌 유의점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "회전 수조 실험에 나타난 파동은 실제 편서풍 파동을 그대로 재현한 것이다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "회전 수조를 돌려 나타난 물결이 곧 실제 편서풍 파동이므로 실험 결과를 그대로 실제 대기에 적용할 수 있다.",
+   "why_wrong": "이 실험은 위도에 따른 전향력 변화를 넣지 않은 모형이다. 위도 변화를 고려하려면 수조 바닥을 경사지게 만들어야 하며, 그래서 실험 속 파동은 실제와 차이가 있다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rw-rotating-tank-limit"
+  },
+  {
+   "text": "편서풍 파동은 지표 가까이에서 부는 바람이 좌우로 굽이치는 것이다.",
+   "why_wrong": "중위도 상층 대류권의 편서풍이 남북으로 굽이치는 파동이며, 지상 기압계는 그 영향을 받는 쪽이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rw-midlatitude"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-coriolis-force-on-wind"
+  },
+  {
+   "type": "next",
+   "target": "esys-jet-stream"
+  },
+  {
+   "type": "next",
+   "target": "esys-meridional-heat-transport"
+  },
+  {
+   "type": "next",
+   "target": "esys-upper-divergence-and-cyclogenesis"
+  },
+  {
+   "type": "related",
+   "target": "esys-meridional-temperature-gradient"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-1",
+ "pages": [
+  118
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "aliases": [
+  "로스비파",
+  "행성파"
+ ],
+ "notes": [
+  "회전 수조 실험(121쪽)은 후보 단계에서 제외되었다. 성취기준 적용 고려 사항과 교과서 유의점이 함께 짚는 한계를 rel-rw-rotating-tank-limit 명제와 첫 오개념으로 드러냈다 — 실험 결과를 그대로 일반화하는 명제는 세우지 않았다."
+ ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "esys-plume-tectonics",
+  "concept_key": "concept:plume-tectonics",
+  "registry_status": "new",
+  "term": "플룸 운동",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "plume tectonics",
+    "hanja_note": "'플룸(plume)'이 음차어여서 표제어 전체에 대응하는 한자 표기가 없다. '운동'만 運動이다."
+  },
+  "definition": "맨틀과 핵의 경계에서 올라오는 상승류와 가라앉는 하강류로 맨틀 전체 규모에서 일어나는 운동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ptc-scale",
+      "text": "판 운동은 상부 맨틀의 대류가 일으키지만 플룸 운동은 맨틀과 핵의 경계까지 걸친 맨틀 전체 규모의 운동이다.",
+      "form": {
+        "condition": "두 운동이 미치는 깊이 범위로 가를 때",
+        "type": "classification",
+        "scope": "판 운동과 플룸 운동의 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 운동이 미치는 규모를 맞바꾼 것이라 둘을 구분하는 기준과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "판 운동이 맨틀 전체 규모의 운동이고 플룸 운동은 상부 맨틀에만 머무는 운동이다."
+    },
+    {
+      "id": "rel-ptc-interior",
+      "text": "하와이섬이나 동아프리카 열곡대처럼 판 내부에서 일어나는 지각 변동은 플룸 운동의 결과로 설명된다.",
+      "form": {
+        "condition": "판 경계에서 멀리 떨어진 지각 변동을 볼 때",
+        "type": "causal",
+        "scope": "판 내부의 지각 변동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「상부 맨틀의 판 운동만으로 설명된다」는 판 운동만으로는 한계가 있다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "하와이섬이나 동아프리카 열곡대의 지각 변동은 상부 맨틀의 판 운동만으로 설명된다."
+    },
+    {
+      "id": "rel-ptc-evidence",
+      "text": "지진파 속도가 주변보다 느리게 나타나는 부분을 따라가면 고온의 플룸이 어디에 있는지 확인할 수 있다.",
+      "form": {
+        "condition": "지진파 단면 영상의 속도 편차를 읽을 때",
+        "type": "causal",
+        "scope": "지진파 속도 편차로 읽는 플룸"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「속도가 빠른 부분이 고온의 플룸이다」는 온도가 높을수록 지진파가 느려진다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지진파 속도가 주변보다 빠르게 나타나는 부분을 따라가면 고온의 플룸이 어디에 있는지 확인할 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "맨틀 물질이 상승하는 고온 지역은 온도가 높아 지진파의 속도가 빨라진다",
+      "why_wrong": "지진파는 매질의 온도가 높을수록 느려진다. 그래서 단면 영상에서 고온의 상승 지역은 속도가 느린 쪽으로 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ptc-evidence"
+    },
+    {
+      "text": "판 내부에서 일어나는 화산 활동도 상부 맨틀의 대류가 일으킨 것이다",
+      "why_wrong": "판 내부의 지각 변동은 상부 맨틀의 대류만으로는 설명되지 않아, 맨틀 전체 규모의 플룸 운동으로 설명한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ptc-interior"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-plume"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-mantle-convection-drag",
+      "note": "상부 맨틀 대류와 구분하는 것이 성취기준이다"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-seismic-tomography",
+      "note": "플룸의 확인은 지진파 단면 영상이 근거다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-3",
+  "pages": [
+    29,
+    30
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "★C8 판단 요청 — esys-plume-tectonics/rel-ptc-evidence 「지진파 속도가 주변보다 느리게 나타나는 부분을 따라가면 고온의 플룸이 어디에 있는지 확인할 수 있다」와 esys-seismic-tomography/rel-tomo-plume 「주변보다 지진파 속도가 느리게 나타나는 부분은 고온의 맨틀 물질, 곧 플룸으로 읽는다」가 사실상 같은 말이다. 두 카드의 오개념도 같은 것(「고온 지역은 지진파 속도가 빠르다」)을 싣고 있어 D1 이 같은 OX 지문을 두 번 내게 된다. 둘 중 하나를 남기고 다른 하나는 링크로 대신할지 사람이 정한다."
+  ]
+}

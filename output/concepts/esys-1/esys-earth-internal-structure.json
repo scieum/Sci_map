@@ -1,0 +1,123 @@
+{
+  "id": "esys-earth-internal-structure",
+  "concept_key": "concept:earth-internal-structure",
+  "registry_status": "new",
+  "term": "지구 내부 구조",
+  "notation": {
+    "hanja": "地球 內部 構造",
+    "english": "internal structure of the Earth",
+    "hanja_gloss": "地 땅 지 · 球 공 구 · 內 안 내 · 部 떼 부 · 構 얽을 구 · 造 지을 조"
+  },
+  "definition": "지진파의 속도가 갑자기 달라지는 경계면을 기준으로 지각·맨틀·외핵·내핵으로 나뉜 지구 내부의 층상 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eis-boundary",
+      "text": "지진파의 속도가 급격히 달라지는 깊이를 경계로 삼아 지구 내부를 네 층으로 나눈다.",
+      "form": {
+        "condition": "깊이에 따른 지진파의 속도 분포를 읽을 때",
+        "type": "causal",
+        "scope": "층을 가르는 기준"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「속도가 고르게 이어지는 깊이를 경계로 나눈다」는 불연속면을 기준 삼는다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 내부의 층은 지진파의 속도가 고르게 이어지는 깊이를 경계로 삼아 나눈다."
+    },
+    {
+      "id": "rel-eis-order",
+      "text": "지구 내부는 겉에서부터 지각·맨틀·외핵·내핵의 차례로 놓여 있다.",
+      "form": {
+        "condition": "깊이 순서로 볼 때",
+        "type": "classification",
+        "scope": "층의 배열"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 층의 차례를 거꾸로 놓은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 내부는 겉에서부터 내핵·외핵·맨틀·지각의 차례로 놓여 있다."
+    },
+    {
+      "id": "rel-eis-outercore",
+      "text": "외핵을 지나며 S파가 사라지는 것에서 외핵이 액체 상태임을 알아냈다.",
+      "form": {
+        "condition": "S파가 고체에서만 전달된다는 성질을 전제할 때",
+        "type": "causal",
+        "scope": "외핵의 상태"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 사라지는 파를 P파로 바꾼 것이라 P파가 핵을 통과한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "외핵을 지나며 P파가 사라지는 것에서 외핵이 액체 상태임을 알아냈다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지구의 핵은 바깥부터 중심까지 모두 액체 상태다",
+      "why_wrong": "S파가 지나지 못하는 외핵은 액체지만, 그 안쪽의 내핵은 P파의 속도가 다시 빨라지는 것으로 보아 고체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eis-outercore"
+    },
+    {
+      "text": "지구 내부의 층은 땅을 파서 직접 확인해 나눈 것이다",
+      "why_wrong": "직접 팔 수 있는 깊이는 얼마 되지 않는다. 층의 경계는 지진파의 속도가 급격히 변하는 깊이로부터 알아낸 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eis-boundary"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-p-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-s-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-mohorovicic-discontinuity"
+    },
+    {
+      "type": "next",
+      "target": "esys-gutenberg-discontinuity"
+    },
+    {
+      "type": "next",
+      "target": "esys-lehmann-discontinuity"
+    },
+    {
+      "type": "related",
+      "target": "esys-layer-differentiation",
+      "note": "그쪽은 핵과 맨틀이 갈린 과정을, 이 카드는 지진파로 알아낸 층상 구조를 다룬다."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-2",
+  "pages": [
+    41
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "여기서 말하는 '핵(외핵·내핵)'은 지구 중심부를 가리킨다. docs/homonyms.yaml 의 감시어 '핵'에는 원자핵·세포핵·응결핵만 올라 있어 이 뜻은 사전에 없다 — G3 에서 새 sense 를 세울지 사람이 볼 일이다. 그때까지 링크는 concept_key 일치로만 걸었다 (R9)."
+  ]
+}

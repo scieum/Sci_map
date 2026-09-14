@@ -1,0 +1,113 @@
+{
+ "id": "esys-temperature-inversion",
+ "concept_key": "concept:temperature-inversion-layer",
+ "registry_status": "new",
+ "term": "기온 역전층",
+ "notation": {
+  "hanja": "氣溫逆轉層",
+  "english": "temperature inversion layer",
+  "hanja_gloss": "氣 기운 기 · 溫 따뜻할 온 · 逆 거스를 역 · 轉 구를 전 · 層 층 층"
+ },
+ "definition": "고도가 높아질수록 기온이 오히려 올라가는 기층으로, 연직 운동을 눌러 대기를 매우 안정하게 만든다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-inv-nocturnal-formation",
+   "text": "맑은 날 밤 지표면이 복사 냉각으로 빠르게 식으면 지표 부근 공기가 그 위 공기보다 차가워져 새벽에 역전층이 만들어진다.",
+   "form": {
+    "condition": "맑고 바람이 약한 밤에 지표가 복사 냉각될 때",
+    "type": "causal",
+    "scope": "지표 부근 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지표면이 복사 냉각으로 식으면 지표 부근 공기가 그 위 공기보다 따뜻해져 역전층이 만들어진다」는 식는 쪽이 지표라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "맑은 날 밤 지표면이 복사 냉각으로 빠르게 식으면 지표 부근 공기가 그 위 공기보다 따뜻해져 새벽에 역전층이 만들어진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-inv-stability",
+   "text": "역전층은 대기 안정도를 크게 높여 연직 운동을 억누른다.",
+   "form": {
+    "condition": "역전층이 만들어졌을 때",
+    "type": "causal",
+    "scope": "역전층이 놓인 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「역전층이 대기를 불안정하게 만들어 연직 운동이 활발해진다」는 안정도를 높인다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "역전층이 만들어지면 대기가 불안정해져 연직 운동이 활발해진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-inv-fog-env",
+   "text": "새벽에 생긴 역전층은 대기를 안정하게 만들어 복사 안개가 생기기 좋은 환경을 마련한다.",
+   "form": {
+    "condition": "맑고 바람이 약한 새벽일 때",
+    "type": "causal",
+    "scope": "지표 부근"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「역전층이 대기를 불안정하게 만들어 복사 안개가 생기기 어렵게 한다」는 역전층이 최적 환경이라는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "새벽에 생긴 역전층은 대기를 불안정하게 만들어 복사 안개가 생기기 어렵게 한다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "역전층은 기온이 낮은 층을 가리키는 말이다.",
+   "why_wrong": "기온의 높낮이가 아니라, 고도에 따라 기온이 올라가는 거꾸로 된 분포를 가리킨다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-inv-nocturnal-formation"
+  },
+  {
+   "text": "역전층이 생기면 공기가 잘 섞여 오염 물질이 흩어진다.",
+   "why_wrong": "역전층은 연직 운동을 억눌러 오히려 아래쪽 공기가 갇히게 만든다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-inv-stability"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-environmental-lapse-rate"
+  },
+  {
+   "type": "next",
+   "target": "esys-radiation-fog"
+  },
+  {
+   "type": "related",
+   "target": "esys-fog"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-4",
+ "pages": [
+  101
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "aliases": [
+  "역전층"
+ ],
+ "notes": [
+  "C6 결함 수정 — rel-inv-definition 은 이름 그대로 definition 의 되풀이였다. definition 은 그대로 두고 명제를 정의 밖의 내용(밤사이 복사 냉각으로 역전층이 만들어지는 과정)으로 바꿔 rel-inv-nocturnal-formation 으로 다시 세웠다."
+ ]
+}

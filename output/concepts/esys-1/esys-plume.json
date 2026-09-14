@@ -1,0 +1,104 @@
+{
+  "id": "esys-plume",
+  "concept_key": "concept:plume",
+  "registry_status": "new",
+  "term": "플룸",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "plume",
+    "hanja_note": "'플룸(plume)'은 영어를 그대로 옮긴 음차어여서 한자 표기가 없다."
+  },
+  "definition": "맨틀과 외핵의 경계부에서 데워져 주변보다 부력이 커진 채 솟아오르는 고온의 맨틀 물질 덩어리.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-plm-origin",
+      "text": "플룸 상승류는 지하 약 2900 km인 맨틀과 외핵의 경계부에서 데워져 지표 근처까지 올라온다.",
+      "form": {
+        "condition": "경계부에서 열이 공급될 때",
+        "type": "causal",
+        "scope": "이 교과서가 든 깊이 값"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「경계부에서 식어 무거워진 채 가라앉는다」는 데워져 부력으로 상승한다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "플룸 상승류는 맨틀과 외핵의 경계부에서 식어 주변보다 무거워진 채 가라앉는다."
+    },
+    {
+      "id": "rel-plm-shape",
+      "text": "플룸 상승류는 지름 800~1200 km의 머리와 100~200 km 폭의 꼬리를 가진 원기둥 모양이다.",
+      "form": {
+        "condition": "지진파 자료로 모양을 그려 볼 때",
+        "type": "classification",
+        "scope": "이 교과서가 든 수치"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 머리와 꼬리의 굵기를 맞바꾼 것이라 교과서가 든 값과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "플룸 상승류는 꼬리가 머리보다 훨씬 굵은 원기둥 모양이다."
+    },
+    {
+      "id": "rel-plm-down",
+      "text": "섭입해 내려간 차가운 해양판은 상부와 하부 맨틀의 경계에 머물다 한계에 이르면 맨틀과 핵의 경계까지 가라앉는다.",
+      "form": {
+        "condition": "차가운 판이 경계 부근에 계속 쌓일 때",
+        "type": "causal",
+        "scope": "플룸 하강류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「경계에서 다시 떠올라 지표로 돌아간다」는 하강류라는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "섭입해 내려간 차가운 해양판은 상부와 하부 맨틀의 경계에서 다시 떠올라 지표로 돌아간다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "플룸은 상부 맨틀에서 만들어져 올라오는 마그마다",
+      "why_wrong": "일반적인 마그마는 지하 약 660 km보다 얕은 곳에서 생기지만, 플룸은 지하 약 2900 km의 맨틀과 외핵 경계에서 올라온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plm-origin"
+    },
+    {
+      "text": "플룸 운동에는 올라오는 흐름만 있고 내려가는 흐름은 없다",
+      "why_wrong": "섭입한 차가운 해양판이 가라앉는 하강류도 플룸 운동의 한 부분이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plm-down"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-hot-spot"
+    },
+    {
+      "type": "next",
+      "target": "esys-plume-tectonics"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-3",
+  "pages": [
+    29,
+    30
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

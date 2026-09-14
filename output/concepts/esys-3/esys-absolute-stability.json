@@ -1,0 +1,114 @@
+{
+ "id": "esys-absolute-stability",
+ "concept_key": "concept:absolute-stability",
+ "registry_status": "new",
+ "term": "절대 안정",
+ "notation": {
+  "hanja": "絶對安定",
+  "english": "absolute stability",
+  "hanja_gloss": "絶 끊을 절 · 對 대할 대 · 安 편안 안 · 定 정할 정"
+ },
+ "definition": "기층의 기온 감률이 습윤 단열 감률보다도 작아, 올린 공기 덩어리가 늘 주위보다 차가워 되돌아오는 상태.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-as-criterion",
+   "text": "기층의 기온 감률이 습윤 단열 감률보다 작으면 그 기층은 절대 안정이다.",
+   "form": {
+    "condition": "기온 감률과 습윤 단열 감률을 견줄 때",
+    "type": "conditional",
+    "scope": "임의의 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「그 기층은 절대 불안정이다」는 절대 불안정의 조건이 건조 단열 감률보다 크다는 것이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기층의 기온 감률이 습윤 단열 감률보다 작으면 그 기층은 절대 불안정이다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-as-return",
+   "text": "절대 안정한 기층에서는 강제로 올린 공기 덩어리가 주위보다 차가워 외부 힘이 사라지면 제자리로 내려온다.",
+   "form": {
+    "condition": "외부 강제력이 사라졌을 때",
+    "type": "causal",
+    "scope": "절대 안정한 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「주위보다 따뜻해져 스스로 더 올라간다」는 절대 안정의 판별 근거와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "절대 안정한 기층에서 강제로 올린 공기 덩어리는 주위보다 따뜻해져 스스로 더 올라간다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-as-stratiform",
+   "text": "절대 안정한 대기에서는 연직 운동이 제한되어 옆으로 퍼지는 층운형 구름이 만들어진다.",
+   "form": {
+    "condition": "구름이 생길 만큼 수증기가 있을 때",
+    "type": "causal",
+    "scope": "절대 안정한 기층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「연직으로 높게 솟는 적운형 구름이 만들어진다」는 안정층에서 연직 운동이 제한된다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "절대 안정한 대기에서는 연직으로 높게 솟는 적운형 구름이 만들어진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "절대 안정한 대기에서는 구름이 아예 생기지 않는다.",
+   "why_wrong": "연직 운동이 제한될 뿐이며, 수증기가 있으면 옆으로 퍼진 층운형 구름이 생긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-as-stratiform"
+  },
+  {
+   "text": "기온 감률이 건조 단열 감률보다 작기만 하면 절대 안정이다.",
+   "why_wrong": "습윤 단열 감률보다도 작아야 절대 안정이다. 두 감률 사이에 있으면 조건부 불안정이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-as-criterion"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-environmental-lapse-rate"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-stability"
+  },
+  {
+   "type": "related",
+   "target": "esys-stratiform-and-cumuliform-cloud"
+  },
+  {
+   "type": "related",
+   "target": "esys-absolute-instability"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  96
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 uncertain — rel-as-criterion 은 definition 이 판별 기준을 품어 동어반복에 가깝다. 그 기준이 카드의 학습 알맹이라 명제를 없앨 수 없어 이번 패스에서는 그대로 두었다. 안정도 네 카드를 한꺼번에 다시 볼 자리다."
+ ]
+}

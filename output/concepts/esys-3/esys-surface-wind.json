@@ -1,0 +1,143 @@
+{
+ "id": "esys-surface-wind",
+ "concept_key": "concept:surface-wind",
+ "registry_status": "new",
+ "term": "지상풍",
+ "notation": {
+  "hanja": "地上風",
+  "english": "surface wind",
+  "hanja_gloss": "地 땅 지 · 上 위 상 · 風 바람 풍"
+ },
+ "definition": "마찰력까지 더해진 세 힘이 균형을 이루며 등압선을 비스듬히 가로질러 저기압 쪽으로 부는 지표 부근 바람.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-sw-three-forces",
+   "text": "지상풍은 기압 경도력·전향력·마찰력 세 힘이 함께 균형을 이루며 분다.",
+   "form": {
+    "condition": "고도 1 km 이내 지표 부근에서",
+    "type": "classification",
+    "scope": "대기 경계층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기압 경도력과 전향력 두 힘만 균형을 이루며 분다」는 그때가 지균풍이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "고도 1 km 이내 지표 부근의 지상풍은 기압 경도력과 전향력 두 힘만 균형을 이루며 분다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sw-friction-chain",
+   "text": "마찰력이 풍속을 줄이면 풍속에 비례하는 전향력도 함께 작아져 바람이 저기압 쪽으로 비스듬히 꺾인다.",
+   "form": {
+    "condition": "지표 마찰이 작용할 때",
+    "type": "causal",
+    "scope": "지표 부근의 바람"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「풍속이 줄어도 전향력은 그대로여서 방향이 꺾이지 않는다」는 전향력이 풍속에 비례한다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "마찰력이 풍속을 줄여도 전향력은 그대로여서 지상풍의 방향은 꺾이지 않는다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sw-angle",
+   "text": "지상풍이 등압선과 이루는 각은 약 30°이며, 마찰이 큰 육상에서 크고 해양에서 작다.",
+   "form": {
+    "condition": "등압선이 직선일 때",
+    "type": "direct",
+    "scope": "북반구 지표 부근",
+    "antecedent": {
+     "quantity": "마찰력",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "등압선과 이루는 각",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「마찰이 큰 육상에서 그 각이 더 작다」는 각이 마찰이 클수록 커진다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지상풍이 등압선과 이루는 각은 마찰이 큰 육상에서 더 작고 해양에서 더 크다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-sw-vs-geostrophic",
+   "text": "지상풍은 지균풍보다 풍속이 작고 풍향이 저기압 쪽으로 치우치며, 두 차이는 모두 마찰력에서 비롯한다.",
+   "form": {
+    "condition": "같은 기압 경도를 놓고 견줄 때",
+    "type": "conditional",
+    "scope": "지상풍과 지균풍의 비교"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지상풍이 지균풍보다 빠르고 고기압 쪽으로 치우친다」는 마찰이 속력을 줄인다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "같은 기압 경도에서 지상풍은 지균풍보다 풍속이 크고 풍향이 고기압 쪽으로 치우친다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "지상풍도 지균풍처럼 등압선에 나란하게 분다.",
+   "why_wrong": "마찰력이 더해지면서 등압선을 약 30° 가로질러 저기압 쪽으로 분다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sw-three-forces"
+  },
+  {
+   "text": "지상에서는 마찰 때문에 풍속만 줄고 풍향은 그대로다.",
+   "why_wrong": "풍속이 줄면 전향력도 작아져 기압 경도력 쪽으로 기울므로 풍향까지 바뀐다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-sw-friction-chain"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-friction-force"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-boundary-layer"
+  },
+  {
+   "type": "next",
+   "target": "esys-convergence-divergence"
+  },
+  {
+   "type": "related",
+   "target": "esys-weather-chart"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-4",
+ "pages": [
+  114,
+  115
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "aliases": [
+  "마찰풍"
+ ]
+}

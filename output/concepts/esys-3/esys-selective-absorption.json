@@ -1,0 +1,102 @@
+{
+ "id": "esys-selective-absorption",
+ "concept_key": "concept:selective-absorption-by-atmosphere",
+ "registry_status": "new",
+ "term": "대기의 선택적 흡수",
+ "notation": {
+  "hanja": "大氣選擇的吸收",
+  "english": "selective absorption by the atmosphere",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 選 가릴 선 · 擇 가릴 택 · 的 과녁 적 · 吸 마실 흡 · 收 거둘 수"
+ },
+ "definition": "대기 기체들이 모든 파장의 복사를 똑같이 다루지 않고 성분마다 정해진 파장대만 골라서 흡수하는 성질.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-uv-absorbed-vis-transmitted",
+   "text": "감마선·X선·자외선은 대기에서 대부분 흡수되고 가시광선은 지표까지 내려와 지표를 덥힌다.",
+   "form": {
+    "condition": "태양 복사가 대기 꼭대기로 들어올 때",
+    "type": "classification",
+    "scope": "지구 대기 전체",
+    "antecedent": {
+     "quantity": "복사의 파장대",
+     "direction": "해당 없음"
+    },
+    "consequent": {
+     "quantity": "지표 도달 여부",
+     "direction": "해당 없음"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「감마선·X선·자외선이 지표까지 내려오고 가시광선은 대기에 대부분 흡수된다」는 그림 3 의 흡수율 곡선과 정면으로 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "태양 복사가 대기 꼭대기로 들어올 때 감마선·X선·자외선은 지표까지 내려오고 가시광선은 대기에 대부분 흡수된다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ir-absorbers",
+   "text": "수증기·이산화 탄소·메테인·오존·산화 이질소는 가시광선을 거의 흡수하지 않으면서 적외선은 많이 흡수한다.",
+   "form": {
+    "condition": "이 기체들이 대기 중에 들어 있을 때",
+    "type": "classification",
+    "scope": "그림 2 가 다루는 자외선~적외선 파장 범위"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「이 기체들이 가시광선을 많이 흡수하고 적외선은 거의 흡수하지 않는다」는 기체별 흡수율 자료와 반대라 참이 될 경우가 없다.",
+   "inverted_text": "대기 중의 수증기·이산화 탄소·메테인·오존·산화 이질소는 가시광선을 많이 흡수하고 적외선은 거의 흡수하지 않는다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "대기는 태양에서 오는 빛을 파장에 관계없이 고르게 흡수한다.",
+   "why_wrong": "기체마다 잘 흡수하는 파장대가 따로 있어서, 같은 기체라도 가시광선은 거의 통과시키고 적외선만 많이 붙잡는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ir-absorbers"
+  },
+  {
+   "text": "가시광선이 지표까지 내려오는 것은 대기층이 얇기 때문이다.",
+   "why_wrong": "두께가 아니라 파장별 흡수율의 문제다. 대기는 자외선을 잘 흡수하지만 가시광선은 거의 흡수하지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-uv-absorbed-vis-transmitted"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-atmospheric-window"
+  },
+  {
+   "type": "next",
+   "target": "esys-greenhouse-effect"
+  },
+  {
+   "type": "related",
+   "target": "esys-uv-shielding-by-ozone"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-1",
+ "pages": [
+  87
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "aliases": [
+  "선택적 흡수체"
+ ]
+}

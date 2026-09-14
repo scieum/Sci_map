@@ -1,0 +1,122 @@
+{
+ "id": "esys-pressure-gradient-force",
+ "concept_key": "concept:pressure-gradient-force",
+ "registry_status": "new",
+ "term": "기압 경도력",
+ "notation": {
+  "hanja": "氣壓傾度力",
+  "english": "pressure gradient force",
+  "hanja_gloss": "氣 기운 기 · 壓 누를 압 · 傾 기울 경 · 度 법도 도 · 力 힘 력",
+  "symbol_display": "P_H = (1/ρ)(Δp/Δs)",
+  "symbol_plain": "P_H = (1/rho)(dp/ds)"
+ },
+ "definition": "두 지점 사이의 기압 차 때문에 단위 질량의 공기가 고기압 쪽에서 저기압 쪽으로 받게 되는 힘.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-pgf-isobar-spacing",
+   "text": "등압선 간격이 좁을수록 같은 거리에 걸린 기압 차가 커져 기압 경도력이 커진다.",
+   "form": {
+    "condition": "공기 밀도가 같다고 볼 때",
+    "type": "inverse",
+    "scope": "수평 기압 경도력",
+    "antecedent": {
+     "quantity": "등압선의 간격",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "기압 경도력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「등압선 간격이 좁을수록 기압 경도력이 작아진다」는 Δp/Δs 라는 식과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "공기 밀도가 같을 때 등압선 간격이 좁을수록 기압 경도력이 작아진다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pgf-direction",
+   "text": "수평 기압 경도력은 등압선에 수직으로 고기압에서 저기압을 향한다.",
+   "form": {
+    "condition": "수평면에서 볼 때",
+    "type": "classification",
+    "scope": "지상 일기도와 상층 일기도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「등압선에 나란하게 저기압에서 고기압을 향한다」는 방향을 정반대로 돌린 것이라 참이 될 경우가 없다.",
+   "inverted_text": "수평 기압 경도력은 등압선에 나란하게 저기압에서 고기압을 향한다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-pgf-origin-of-wind",
+   "text": "바람을 처음 일으키는 힘은 기압 경도력이고, 전향력과 마찰력은 이미 부는 바람의 방향과 속력을 바꾼다.",
+   "form": {
+    "condition": "바람이 만들어지는 과정을 따져 볼 때",
+    "type": "classification",
+    "scope": "대기의 수평 운동"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「바람을 처음 일으키는 힘이 전향력이다」는 전향력이 운동하는 물체에만 작용하는 겉보기 힘이라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "바람을 처음 일으키는 힘은 전향력이고 기압 경도력은 이미 부는 바람을 바꿀 뿐이다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "등압선 간격이 넓은 곳일수록 바람이 세다.",
+   "why_wrong": "간격이 넓으면 같은 거리의 기압 차가 작아 기압 경도력이 작고, 따라서 바람도 약하다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pgf-isobar-spacing"
+  },
+  {
+   "text": "바람은 전향력 때문에 불기 시작한다.",
+   "why_wrong": "전향력은 이미 움직이는 공기에만 작용하는 겉보기 힘이다. 바람을 일으키는 것은 기압 경도력이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-pgf-origin-of-wind"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-pressure"
+  },
+  {
+   "type": "next",
+   "target": "esys-coriolis-force-on-wind"
+  },
+  {
+   "type": "next",
+   "target": "esys-geostrophic-wind"
+  },
+  {
+   "type": "related",
+   "target": "esys-hydrostatic-equilibrium-atmosphere"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-2",
+ "pages": [
+  105,
+  107
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

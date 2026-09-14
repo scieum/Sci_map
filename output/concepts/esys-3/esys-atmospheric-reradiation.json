@@ -1,0 +1,92 @@
+{
+ "id": "esys-atmospheric-reradiation",
+ "concept_key": "concept:atmospheric-reradiation",
+ "registry_status": "new",
+ "term": "대기의 재복사",
+ "notation": {
+  "hanja": "大氣再輻射",
+  "english": "atmospheric re-radiation",
+  "hanja_gloss": "大 큰 대 · 氣 기운 기 · 再 두 재 · 輻 바퀴살 복 · 射 쏠 사"
+ },
+ "definition": "대기가 지표면 복사로 받아들인 적외선 에너지를 다시 지표 쪽으로 내보내는 복사.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-net-ir-16-5",
+   "text": "지표면 복사 117.1단위에서 대기의 재복사 100.6단위를 뺀 16.5단위만이 지표가 순수하게 잃는 적외선이다.",
+   "form": {
+    "condition": "100단위 기준 전 지구 평균 열수지에서",
+    "type": "conditional",
+    "scope": "지표면의 적외선 수지"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「117.1단위가 그대로 지표가 순수하게 잃는 양이다」는 재복사로 되돌아오는 몫을 빼지 않은 것이라 참이 될 경우가 없다.",
+   "inverted_text": "100단위 기준 열수지에서 지표면 복사 117.1단위가 그대로 지표가 순수하게 잃는 적외선이다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-reradiation-keeps-warm",
+   "text": "대기의 재복사가 지표로 되돌아오므로 지표는 복사로 잃는 에너지가 줄어 더 따뜻하게 유지된다.",
+   "form": {
+    "condition": "대기에 적외선을 흡수하는 기체가 있을 때",
+    "type": "causal",
+    "scope": "지표 부근"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「재복사가 되돌아와도 지표가 잃는 에너지는 줄지 않는다」는 순 적외선 방출이 16.5단위로 줄어든다는 계산과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기의 재복사가 지표로 되돌아와도 지표가 복사로 잃는 에너지는 줄지 않는다.",
+   "curriculum": [
+    "12지시03-02"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "대기의 재복사가 지표면 복사보다 커서 지표는 계속 데워지기만 한다.",
+   "why_wrong": "재복사 100.6단위는 지표면 복사 117.1단위보다 작다. 지표는 순 적외선으로 16.5단위를 잃는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-net-ir-16-5"
+  },
+  {
+   "text": "지표가 내놓은 적외선은 모두 우주로 빠져나간다.",
+   "why_wrong": "대부분은 대기가 흡수했다가 되돌려 보내고, 곧장 우주로 나가는 것은 대기의 창을 지나는 몫뿐이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-reradiation-keeps-warm"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-greenhouse-effect"
+  },
+  {
+   "type": "next",
+   "target": "esys-global-mean-heat-budget"
+  },
+  {
+   "type": "related",
+   "target": "esys-atmospheric-window"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-02"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-3",
+ "pages": [
+  90,
+  91
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

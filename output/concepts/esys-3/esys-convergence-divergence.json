@@ -1,0 +1,132 @@
+{
+ "id": "esys-convergence-divergence",
+ "concept_key": "concept:surface-convergence-and-divergence",
+ "registry_status": "new",
+ "term": "지상 기압계의 수렴과 발산",
+ "notation": {
+  "hanja": "地上氣壓系 收斂 發散",
+  "english": "convergence and divergence in surface pressure systems"
+ },
+ "definition": "마찰로 등압선을 가로지르는 바람 탓에 지상 저기압에 공기가 모이고 고기압에서 흩어지며 상승·하강 기류가 생기는 구조.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-cd-low-converge",
+   "text": "북반구 지상 저기압에서는 바람이 시계 반대 방향으로 돌며 모여들어 상승 기류가 생긴다.",
+   "form": {
+    "condition": "지표 마찰이 작용할 때",
+    "type": "causal",
+    "scope": "북반구 지상"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「시계 방향으로 돌며 흩어져 하강 기류가 생긴다」는 저기압에서 수렴이 일어난다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "북반구 지상 저기압에서는 바람이 시계 방향으로 돌며 흩어져 하강 기류가 생긴다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cd-high-diverge",
+   "text": "북반구 지상 고기압에서는 바람이 시계 방향으로 돌며 빠져나가 하강 기류가 생긴다.",
+   "form": {
+    "condition": "지표 마찰이 작용할 때",
+    "type": "causal",
+    "scope": "북반구 지상"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「시계 반대 방향으로 돌며 모여들어 상승 기류가 생긴다」는 고기압에서 발산이 일어난다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "북반구 지상 고기압에서는 바람이 시계 반대 방향으로 돌며 모여들어 상승 기류가 생긴다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cd-upper-pairing",
+   "text": "지상에서 수렴이 일어나는 곳의 상층에는 발산이, 지상에서 발산이 일어나는 곳의 상층에는 수렴이 짝지어 나타난다.",
+   "form": {
+    "condition": "같은 연직 축에서 위아래를 함께 볼 때",
+    "type": "classification",
+    "scope": "지상 기압계와 그 위 상층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「지상에서 수렴이 일어나는 곳의 상층에도 수렴이 나타난다」는 상하가 짝을 이룬다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지상에서 수렴이 일어나는 곳의 상층에도 똑같이 수렴이 나타난다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-cd-southern",
+   "text": "남반구에서는 전향력이 바람의 왼쪽 직각으로 작용하므로 수렴·발산에 딸린 회전 방향이 북반구와 반대다.",
+   "form": {
+    "condition": "남반구에서 볼 때",
+    "type": "causal",
+    "scope": "남반구의 지상 기압계"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「남반구에서도 회전 방향이 북반구와 같다」는 전향력 방향이 반대라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "남반구에서도 지상 저기압과 고기압 둘레의 회전 방향은 북반구와 같다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "고기압 중심에서는 공기가 모여들어 위로 올라간다.",
+   "why_wrong": "고기압에서는 바람이 바깥으로 빠져나가고, 그 자리를 메우려 위에서 공기가 내려온다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cd-high-diverge"
+  },
+  {
+   "text": "지상 저기압 위 상층에서도 공기가 모여든다.",
+   "why_wrong": "지상에서 모이면 상층에서는 흩어져야 공기가 계속 올라올 수 있다. 위아래가 짝을 이룬다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-cd-upper-pairing"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-surface-wind"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-friction-force"
+  },
+  {
+   "type": "next",
+   "target": "esys-upper-divergence-and-cyclogenesis"
+  },
+  {
+   "type": "related",
+   "target": "esys-vertical-motion"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-4",
+ "pages": [
+  114,
+  115
+ ],
+ "difficulty": 4,
+ "role": "core",
+ "version": 1,
+ "homonym_flag": true,
+ "notes": [
+  "표제어에 '계'(氣壓系)가 들어가 homonyms.yaml 의 감시어와 겹친다. 접미사로 쓰인 것이라 동음이의 개념으로 잡지 않았고, 링크는 concept_key 일치로만 걸었다 (R9).",
+  "C6 uncertain — rel-cd-upper-pairing 의 뒤집은 문장은 교과서의 상하 짝 구조에 어긋나지만 기압계가 쇠퇴할 때는 그런 배치가 나타날 수 있다. 고치지 않고 C8 검토 항목으로 올린다."
+ ]
+}

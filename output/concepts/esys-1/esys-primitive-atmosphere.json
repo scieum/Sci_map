@@ -1,0 +1,109 @@
+{
+  "id": "esys-primitive-atmosphere",
+  "concept_key": "concept:primitive-atmosphere",
+  "registry_status": "new",
+  "term": "원시 대기",
+  "notation": {
+    "hanja": "原始 大氣",
+    "english": "primitive atmosphere",
+    "hanja_gloss": "原 근원 원 · 始 처음 시 · 大 클 대 · 氣 기운 기"
+  },
+  "definition": "미행성체 충돌과 화산 활동으로 지구 내부에서 빠져나온 기체가 지구를 둘러싸 이룬 초기의 대기. 수증기와 이산화 탄소가 주를 이루었다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pa-component",
+      "text": "원시 대기의 주성분은 산소가 아니라 화산 활동으로 방출된 수증기와 이산화 탄소였다.",
+      "form": {
+        "condition": "지구 형성 초기에 기체 방출이 활발할 때",
+        "type": "classification",
+        "scope": "원시 대기의 조성에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 주성분과 없던 성분을 맞바꾼 것이라 산소가 나중에야 쌓였다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원시 대기의 주성분은 수증기와 이산화 탄소가 아니라 산소였다."
+    },
+    {
+      "id": "rel-pa-co2",
+      "text": "원시 대기의 이산화 탄소는 바다에 녹아 탄산염으로 고정되면서 분압이 크게 낮아졌다.",
+      "form": {
+        "condition": "원시 바다가 만들어진 뒤",
+        "type": "causal",
+        "scope": "지질 시대 동안의 대기 조성 변화(그림 3)"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「바다가 생긴 뒤 이산화 탄소 분압이 크게 높아졌다」는 그림 3 이 보여 주는 감소 추세와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원시 대기의 이산화 탄소는 바다가 생긴 뒤 오히려 분압이 크게 높아졌다."
+    },
+    {
+      "id": "rel-pa-o2",
+      "text": "대기의 산소는 지구가 탄생할 때부터 있던 것이 아니라 광합성을 하는 생물이 나온 뒤에야 쌓이기 시작했다.",
+      "form": {
+        "condition": "그림 3 의 대기 조성 변화를 시간 축으로 읽을 때",
+        "type": "causal",
+        "scope": "지질 시대 동안 대기의 산소 분압"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「산소가 처음부터 있다가 광합성 생물이 나온 뒤 줄었다」는 그림 3 의 증가 추세와 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기의 산소는 지구가 탄생할 때부터 있었고 광합성을 하는 생물이 나온 뒤 오히려 줄어들었다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원시 대기에도 지금처럼 산소가 많이 들어 있었다",
+      "why_wrong": "산소는 바다에서 광합성이 시작된 뒤에야 늘기 시작했고, 대기에 쌓인 것은 약 25억~18억 년 전으로 추정된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pa-o2"
+    },
+    {
+      "text": "대기의 이산화 탄소가 줄어든 것은 우주로 날아갔기 때문이다",
+      "why_wrong": "이산화 탄소는 원시 바다에 녹아 탄산염 이온이 되었다가 석회암으로 지권에 고정되면서 줄었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pa-co2"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-planetesimal"
+    },
+    {
+      "type": "next",
+      "target": "esys-primitive-crust-and-ocean"
+    },
+    {
+      "type": "next",
+      "target": "esys-carbon-cycle"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01",
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-2",
+  "pages": [
+    14,
+    15
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

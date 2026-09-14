@@ -1,0 +1,123 @@
+{
+  "id": "esys-seismic-tomography",
+  "concept_key": "concept:seismic-tomography",
+  "registry_status": "new",
+  "term": "지진파 단면 영상",
+  "notation": {
+    "hanja": "斷面 映像",
+    "english": "seismic tomography",
+    "hanja_gloss": "斷 끊을 단 · 面 낯 면 · 映 비칠 영 · 像 모양 상"
+  },
+  "definition": "여러 관측소가 모은 지진 자료를 컴퓨터로 처리해 지구 내부의 모습을 삼차원 영상으로 그려 내는 기법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tomo-temp",
+      "text": "매질의 온도가 높을수록 지진파의 속도는 느려진다.",
+      "form": {
+        "condition": "같은 깊이에서 온도만 다를 때",
+        "type": "inverse",
+        "scope": "단면 영상을 읽는 기준",
+        "antecedent": {
+          "quantity": "매질의 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지진파의 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「온도가 높을수록 속도가 빨라진다」는 중단원 정리 문항이 ×로 가른 지문이라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05",
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "매질의 온도가 높을수록 지진파의 속도는 빨라진다."
+    },
+    {
+      "id": "rel-tomo-slab",
+      "text": "주변보다 지진파 속도가 빠르게 나타나는 부분은 섭입한 차가운 해양판으로 읽는다.",
+      "form": {
+        "condition": "속도 편차를 온도 차로 옮겨 읽을 때",
+        "type": "causal",
+        "scope": "우리나라 주변의 단면 영상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 빠른 쪽과 느린 쪽을 맞바꾼 것이라 차가운 판이 빠르게 나타난다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05",
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주변보다 지진파 속도가 느리게 나타나는 부분을 섭입한 차가운 해양판으로 읽는다."
+    },
+    {
+      "id": "rel-tomo-plume",
+      "text": "주변보다 지진파 속도가 느리게 나타나는 부분은 고온의 맨틀 물질, 곧 플룸으로 읽는다.",
+      "form": {
+        "condition": "속도 편차를 온도 차로 옮겨 읽을 때",
+        "type": "causal",
+        "scope": "동아프리카 열곡대 하부의 단면 영상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 빠른 쪽과 느린 쪽을 맞바꾼 것이라 고온일수록 느려진다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05",
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주변보다 지진파 속도가 빠르게 나타나는 부분을 고온의 플룸으로 읽는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "맨틀 물질이 상승하는 고온 지역은 지진파의 속도가 빠르다",
+      "why_wrong": "지진파는 매질의 온도가 높을수록 느려진다. 고온의 상승 지역은 속도가 느린 쪽으로 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tomo-temp"
+    },
+    {
+      "text": "단면 영상에서 파란색으로 칠해진 곳이 고온의 플룸이다",
+      "why_wrong": "파란색은 지진파 속도가 빠른 곳, 곧 주변보다 차가운 물질이다. 고온의 플룸은 속도가 느린 빨간색으로 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tomo-plume"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-seismic-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-plume-tectonics"
+    },
+    {
+      "type": "related",
+      "target": "esys-plume"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05",
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-2",
+  "pages": [
+    30,
+    42
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "★C8 판단 요청 — esys-plume-tectonics/rel-ptc-evidence 「지진파 속도가 주변보다 느리게 나타나는 부분을 따라가면 고온의 플룸이 어디에 있는지 확인할 수 있다」와 esys-seismic-tomography/rel-tomo-plume 「주변보다 지진파 속도가 느리게 나타나는 부분은 고온의 맨틀 물질, 곧 플룸으로 읽는다」가 사실상 같은 말이다. 두 카드의 오개념도 같은 것(「고온 지역은 지진파 속도가 빠르다」)을 싣고 있어 D1 이 같은 OX 지문을 두 번 내게 된다. 둘 중 하나를 남기고 다른 하나는 링크로 대신할지 사람이 정한다."
+  ]
+}

@@ -1,0 +1,129 @@
+{
+ "id": "esys-friction-force",
+ "concept_key": "concept:friction-force-on-wind",
+ "registry_status": "new",
+ "term": "마찰력",
+ "notation": {
+  "hanja": "摩擦力",
+  "english": "frictional force on wind",
+  "hanja_gloss": "摩 갈 마 · 擦 문지를 찰 · 力 힘 력",
+  "symbol_display": "F_r = kv",
+  "symbol_plain": "F_r = kv"
+ },
+ "definition": "지표면의 거칠기와 연직 혼합 때문에 바람이 속력을 잃게 되는 힘으로, 바람의 반대 방향으로 작용한다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ff-roughness",
+   "text": "지표면이 거칠수록 소용돌이와 연직 혼합이 활발해져 마찰력이 커지므로 해양보다 육지에서, 평야보다 숲이나 도심에서 크다.",
+   "form": {
+    "condition": "바람이 지표면 위를 지날 때",
+    "type": "direct",
+    "scope": "대기 경계층",
+    "antecedent": {
+     "quantity": "지표면의 거칠기",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "마찰력",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「거칠수록 마찰력이 작아져 해양보다 육지에서 작다」는 거칠기와 마찰력의 관계와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지표면이 거칠수록 마찰력이 작아져 해양보다 육지에서 마찰력이 작다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ff-height",
+   "text": "고도가 높아질수록 지표의 영향이 줄어 마찰력이 작아지고, 고도 1 km 위 자유 대기에서는 거의 고려하지 않는다.",
+   "form": {
+    "condition": "지표에서 멀어질 때",
+    "type": "inverse",
+    "scope": "대기 경계층과 자유 대기",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "마찰력",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「고도가 높아질수록 마찰력이 커져 자유 대기에서 가장 크다」는 자유 대기에서 영향이 미미하다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "고도가 높아질수록 마찰력이 커져 자유 대기에서 가장 크게 작용한다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ff-direction",
+   "text": "마찰력은 바람이 부는 방향의 반대쪽으로 작용해 풍속을 줄인다.",
+   "form": {
+    "condition": "바람이 불고 있을 때",
+    "type": "causal",
+    "scope": "지표 부근"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「바람이 부는 방향과 같은 쪽으로 작용해 풍속을 키운다」는 마찰이 속도를 잃게 한다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "마찰력은 바람이 부는 방향과 같은 쪽으로 작용해 풍속을 키운다.",
+   "curriculum": [
+    "12지시03-05"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "마찰력은 바람의 방향만 바꿀 뿐 속력은 바꾸지 않는다.",
+   "why_wrong": "마찰력은 바람의 반대 방향으로 작용해 먼저 풍속을 줄이고, 그 결과 전향력이 작아져 방향까지 꺾인다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ff-direction"
+  },
+  {
+   "text": "마찰력은 높이 올라갈수록 커진다.",
+   "why_wrong": "지표에서 멀어질수록 작아지며, 고도 1 km 위 자유 대기에서는 거의 고려하지 않는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ff-height"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-coriolis-force-on-wind"
+  },
+  {
+   "type": "next",
+   "target": "esys-boundary-layer"
+  },
+  {
+   "type": "next",
+   "target": "esys-surface-wind"
+  },
+  {
+   "type": "related",
+   "target": "esys-nocturnal-jet"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-05"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-2",
+ "pages": [
+  110
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

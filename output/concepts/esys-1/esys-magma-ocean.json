@@ -1,0 +1,115 @@
+{
+  "id": "esys-magma-ocean",
+  "concept_key": "concept:magma-ocean",
+  "registry_status": "new",
+  "term": "마그마 바다",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magma ocean",
+    "hanja_note": "'마그마(magma)'가 음차어이고 '바다'가 고유어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "지표와 내부의 상당 부분이 녹아 있던 원시 지구의 상태. 충돌 에너지와 방사성 동위원소의 붕괴열이 쌓여 만들어졌다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mo-heat",
+      "text": "미행성체의 충돌 에너지와 방사성 동위원소의 붕괴열이 많이 쌓일수록 원시 지구는 더 많이 녹았다.",
+      "form": {
+        "condition": "쌓인 열이 암석의 용융점을 넘어설 때",
+        "type": "direct",
+        "scope": "지구 형성 초기의 열원에 한함",
+        "antecedent": {
+          "quantity": "쌓인 열의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "녹은 부분의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「열이 많이 쌓일수록 덜 녹았다」는 열이 암석을 녹인다는 사실과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미행성체의 충돌 에너지와 방사성 동위원소의 붕괴열이 많이 쌓일수록 원시 지구는 덜 녹았다."
+    },
+    {
+      "id": "rel-mo-sphere",
+      "text": "겉이 액체 상태였던 마그마 바다 시기에도 지구는 중력의 작용으로 구형을 유지했다.",
+      "form": {
+        "condition": "지구 전체에 중력이 작용할 때",
+        "type": "causal",
+        "scope": "마그마 바다 시기 지구의 모양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중력이 작용해도 구형을 잃었다」는 액체 상태에서도 구형을 유지했다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겉이 액체 상태였던 마그마 바다 시기에 지구는 중력이 작용해도 구형을 잃었다."
+    },
+    {
+      "id": "rel-mo-mobility",
+      "text": "지구 내부가 녹아 물질이 움직일 수 있게 되자 밀도에 따라 층이 갈리는 분화가 일어날 수 있었다.",
+      "form": {
+        "condition": "암석이 녹아 유동성을 가진 뒤",
+        "type": "conditional",
+        "scope": "층의 분화가 시작되는 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「내부가 녹아 물질이 움직일 수 있게 되어도 분화는 일어날 수 없었다」는 마그마 바다 다음 단계가 층의 분화라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 내부가 녹아 물질이 움직일 수 있게 되어도 밀도에 따라 층이 갈리는 분화는 일어날 수 없었다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마그마 바다 시기의 지구는 액체였으므로 모양이 일정하지 않았다",
+      "why_wrong": "액체 상태였어도 지구 전체에 작용하는 중력 때문에 구형을 유지했다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mo-sphere"
+    },
+    {
+      "text": "원시 지구 내부를 녹인 열은 태양이 보낸 열이다",
+      "why_wrong": "지구를 녹인 열은 미행성체가 부딪히며 생긴 충돌 에너지와 암석 속 방사성 동위원소의 붕괴열이었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mo-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-planetesimal"
+    },
+    {
+      "type": "next",
+      "target": "esys-layer-differentiation"
+    },
+    {
+      "type": "next",
+      "target": "esys-primitive-crust-and-ocean"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-2",
+  "pages": [
+    14
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

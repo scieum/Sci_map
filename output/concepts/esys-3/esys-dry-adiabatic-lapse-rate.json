@@ -1,0 +1,101 @@
+{
+ "id": "esys-dry-adiabatic-lapse-rate",
+ "concept_key": "concept:dry-adiabatic-lapse-rate",
+ "registry_status": "new",
+ "term": "건조 단열 감률",
+ "notation": {
+  "hanja": "乾燥斷熱減率",
+  "english": "dry adiabatic lapse rate",
+  "hanja_gloss": "乾 마를 건 · 燥 마를 조 · 斷 끊을 단 · 熱 더울 열 · 減 덜 감 · 率 비율 률",
+  "symbol_display": "Γ_d ≈ 1 ℃/100 m",
+  "symbol_plain": "Gamma_d = 1 C/100 m"
+ },
+ "definition": "포화에 이르지 않은 공기 덩어리가 단열적으로 100 m 오르내릴 때 기온이 약 1 ℃씩 달라지는 비율.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-dalr-value",
+   "text": "불포화 공기 덩어리는 100 m 올라갈 때마다 기온이 약 1 ℃ 내려가고 100 m 내려갈 때마다 약 1 ℃ 올라간다.",
+   "form": {
+    "condition": "주위와 열을 주고받지 않고 아직 포화되지 않았을 때",
+    "type": "inverse",
+    "scope": "불포화 상태의 공기 덩어리",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "공기 덩어리의 기온",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「100 m 올라갈 때마다 약 1 ℃ 올라간다」는 상승하며 식는다는 단열 팽창과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "불포화 공기 덩어리는 100 m 올라갈 때마다 기온이 약 1 ℃ 올라간다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-rh-rises-to-lcl",
+   "text": "건조 단열 감률로 식으며 올라가는 불포화 공기 덩어리는 상대 습도가 점점 커지다가 응결 고도에서 포화된다.",
+   "form": {
+    "condition": "수증기를 지닌 공기 덩어리가 상승할 때",
+    "type": "causal",
+    "scope": "응결 고도 아래 구간"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「상대 습도가 점점 작아진다」가 참이라면 상승만으로 포화에 이르는 일이 없어 참이 될 경우가 없다.",
+   "inverted_text": "건조 단열 감률로 식으며 올라가는 불포화 공기 덩어리는 상대 습도가 점점 작아진다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "건조 단열 감률은 수증기가 전혀 없는 공기에만 쓸 수 있다.",
+   "why_wrong": "'건조'는 아직 포화되지 않았다는 뜻이다. 수증기를 지녀도 포화 전이면 이 감률을 따른다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-dalr-value"
+  },
+  {
+   "text": "건조 단열 감률로 식으면 상대 습도도 함께 낮아진다.",
+   "why_wrong": "기온이 내려갈수록 같은 수증기량으로도 포화에 가까워지므로 상대 습도는 오히려 커진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-rh-rises-to-lcl"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-adiabatic-change"
+  },
+  {
+   "type": "next",
+   "target": "esys-lifting-condensation-level"
+  },
+  {
+   "type": "related",
+   "target": "esys-moist-adiabatic-lapse-rate"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-1",
+ "pages": [
+  95
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

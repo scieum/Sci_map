@@ -1,0 +1,107 @@
+{
+  "id": "esys-shield-volcano",
+  "concept_key": "concept:shield-volcano",
+  "registry_status": "new",
+  "term": "순상 화산",
+  "notation": {
+    "hanja": "楯狀 火山",
+    "english": "shield volcano",
+    "hanja_gloss": "楯 방패 순 · 狀 모양 상 · 火 불 화 · 山 메 산"
+  },
+  "definition": "온도가 높고 점성이 작은 마그마가 조용히 흘러나와 넓고 완만하게 쌓여 만들어진 화산체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sv-slope",
+      "text": "순상 화산은 성층 화산보다 경사가 완만하다.",
+      "form": {
+        "condition": "두 화산체의 겉모습을 견줄 때",
+        "type": "classification",
+        "scope": "이 교과서가 든 두 가지 화산체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 화산체의 경사를 맞바꾼 것이라 중단원 정리의 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순상 화산은 성층 화산보다 경사가 가파르다."
+    },
+    {
+      "id": "rel-sv-magma",
+      "text": "순상 화산은 성층 화산 쪽보다 점성이 작은 마그마에서 만들어진다.",
+      "form": {
+        "condition": "화산체의 모양으로 마그마의 성질을 되짚을 때",
+        "type": "classification",
+        "scope": "두 화산체를 만든 마그마"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 마그마의 점성을 맞바꾼 것이라 중단원 정리 문항의 정답과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순상 화산은 성층 화산 쪽보다 점성이 큰 마그마에서 만들어진다."
+    },
+    {
+      "id": "rel-sv-example",
+      "text": "한라산과 하와이·아이슬란드의 화산은 순상 화산이거나 여러 순상 화산이 모인 복합체다.",
+      "form": {
+        "condition": "실제 화산을 화산체의 모양으로 분류할 때",
+        "type": "classification",
+        "scope": "교과서가 든 사례"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이들이 성층 화산이다」는 교과서가 든 분류와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한라산과 하와이·아이슬란드의 화산은 성층 화산에 해당한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "순상 화산은 점성이 큰 용암이 굳어 만들어진 가파른 화산이다",
+      "why_wrong": "순상 화산은 점성이 작은 용암이 멀리까지 흘러 넓고 완만하게 쌓인 화산체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sv-magma"
+    },
+    {
+      "text": "후지산과 한라산은 같은 종류의 화산체다",
+      "why_wrong": "한라산은 순상 화산이고 후지산은 용암과 쇄설물이 번갈아 쌓인 성층 화산이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sv-example"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-magma-type"
+    },
+    {
+      "type": "related",
+      "target": "esys-stratovolcano"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-03-1",
+  "pages": [
+    33,
+    37
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 검토 기록(고치지 않음) — rel-sv-example 의 「순상 화산이거나 여러 순상 화산이 모인 복합체다」가 선언(A이거나 B) 구문이라 문면이 하나의 주장으로 좁혀지지 않는다. 다만 inverted_text 는 성층 화산으로 맞바꾼 것이라 어느 쪽으로 읽어도 거짓이어서 invertible: true 는 버틴다. 선언을 하나로 좁힐지는 C8 판단 사항이다."
+  ]
+}

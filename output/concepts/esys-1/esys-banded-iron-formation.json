@@ -1,0 +1,108 @@
+{
+  "id": "esys-banded-iron-formation",
+  "concept_key": "concept:banded-iron-formation",
+  "registry_status": "new",
+  "term": "호상철광층",
+  "notation": {
+    "hanja": "縞狀鐵鑛層",
+    "english": "banded iron formation",
+    "hanja_gloss": "縞 줄무늬 호 · 狀 모양 상 · 鐵 쇠 철 · 鑛 쇳돌 광 · 層 층 층"
+  },
+  "definition": "바닷물에 녹아 있던 철 이온이 산소와 결합해 가라앉으면서 붉은 층과 회색 층이 번갈아 쌓여 만들어진 지층.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bif-precip",
+      "text": "바닷물의 산소 농도가 일정 수준을 넘으면 녹아 있던 철 이온이 산소와 결합해 산화 철로 가라앉는다.",
+      "form": {
+        "condition": "바닷물에 철 이온이 녹아 있을 때",
+        "type": "conditional",
+        "scope": "선캄브리아시대의 바다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「산소 농도가 높아지면 철 이온이 더 잘 녹아 가라앉지 않는다」는 산화 철로 침전된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바닷물의 산소 농도가 일정 수준을 넘으면 녹아 있던 철 이온은 더 잘 녹아 가라앉지 않는다."
+    },
+    {
+      "id": "rel-bif-band",
+      "text": "바다에 산소가 풍부할 때는 붉은 철 광물 층이, 고갈될 때는 회색 층이 쌓여 줄무늬가 만들어진다.",
+      "form": {
+        "condition": "바다의 산소 농도가 오르내리기를 되풀이할 때",
+        "type": "classification",
+        "scope": "호상철광층의 줄무늬"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 붉은 층과 회색 층이 쌓이는 조건을 맞바꾼 것이라 산화 철이 붉다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바다에 산소가 풍부할 때는 회색 층이, 고갈될 때는 붉은 철 광물 층이 쌓여 줄무늬가 만들어진다."
+    },
+    {
+      "id": "rel-bif-evidence",
+      "text": "호상철광층은 남세균의 광합성이 바다의 화학 환경을 바꾸었음을 보여 주는 증거로 쓰인다.",
+      "form": {
+        "condition": "생물과 지구시스템의 상호작용을 읽을 때",
+        "type": "causal",
+        "scope": "공진화의 증거로서의 쓰임"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「생물 활동과 무관하게 만들어져 증거가 되지 못한다」는 그림 8 의 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "호상철광층은 생물의 활동과 무관하게 만들어져 공진화의 증거가 되지 못한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "호상철광층의 붉은 층은 바다에 산소가 부족할 때 쌓인 것이다",
+      "why_wrong": "붉은 층은 산소가 풍부해 철 이온이 산화 철로 침전될 때 쌓인 철 광물층이다. 산소가 고갈되면 회색 층이 쌓인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bif-band"
+    },
+    {
+      "text": "호상철광층은 생물이 없어도 만들어지는 평범한 퇴적층이다",
+      "why_wrong": "철 이온을 침전시킨 산소는 남세균의 광합성이 내놓은 것이어서, 이 지층은 생물과 지구가 주고받은 자취다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bif-evidence"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-oxygen-cycle"
+    },
+    {
+      "type": "next",
+      "target": "esys-coevolution"
+    },
+    {
+      "type": "related",
+      "target": "esys-cyanobacteria"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    17,
+    21
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

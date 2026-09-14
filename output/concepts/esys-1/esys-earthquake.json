@@ -1,0 +1,108 @@
+{
+  "id": "esys-earthquake",
+  "concept_key": "concept:earthquake",
+  "registry_status": "new",
+  "term": "지진",
+  "notation": {
+    "hanja": "地震",
+    "english": "earthquake",
+    "hanja_gloss": "地 땅 지 · 震 벼락 진"
+  },
+  "definition": "암석에 쌓여 있던 탄성 에너지가 한계를 넘어 한꺼번에 풀리면서 지면이 흔들리는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-eq-elastic",
+      "text": "암석이 견딜 한계를 넘는 힘을 받아 부서질 때 쌓였던 탄성 에너지가 순간적으로 방출되어 진동이 퍼진다.",
+      "form": {
+        "condition": "판의 운동 등으로 암석에 힘이 쌓여 갈 때",
+        "type": "causal",
+        "scope": "지진이 일어나는 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「탄성 에너지가 서서히 흡수되어 진동이 퍼지지 않는다」는 순간적으로 방출된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "암석이 부서질 때 쌓였던 탄성 에너지는 서서히 흡수되어 진동이 퍼지지 않는다."
+    },
+    {
+      "id": "rel-eq-focus",
+      "text": "지진이 처음 일어난 지구 내부의 지점이 진원이고, 그 연직 방향 지표면의 지점이 진앙이다.",
+      "form": {
+        "condition": "진원에서 연직으로 지표를 향해 볼 때",
+        "type": "classification",
+        "scope": "진원과 진앙의 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 이름을 맞바꾼 것이라 그림 22 의 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지진이 처음 일어난 지구 내부의 지점이 진앙이고, 그 연직 방향 지표면의 지점이 진원이다."
+    },
+    {
+      "id": "rel-eq-plate",
+      "text": "판의 운동으로 암석에 힘이 쌓이는 곳에서는 단층이 생기며 지진이 잘 일어난다.",
+      "form": {
+        "condition": "판 경계나 단층대처럼 힘이 모이는 곳을 볼 때",
+        "type": "causal",
+        "scope": "지진의 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「힘이 쌓이는 곳에서는 지진이 일어나지 않는다」는 축적된 힘이 방출되며 지진이 난다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "판의 운동으로 암석에 힘이 쌓이는 곳에서는 오히려 지진이 일어나지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "진앙은 지구 내부에서 지진이 발생한 지점이다",
+      "why_wrong": "지구 내부에서 지진이 발생한 지점은 진원이고, 진앙은 그 바로 위 지표면의 지점이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eq-focus"
+    },
+    {
+      "text": "지진은 땅속의 빈 공간이 갑자기 무너져 생긴다",
+      "why_wrong": "지진은 힘을 받아 변형되던 암석이 한계를 넘어 어긋나며 부서질 때, 쌓였던 탄성 에너지가 풀려 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eq-elastic"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-seismic-wave"
+    },
+    {
+      "type": "related",
+      "target": "esys-plate-tectonics"
+    },
+    {
+      "type": "same",
+      "target": "isci1-earthquake",
+      "note": "concept_key 가 concept:earthquake 로 같다 (R9)."
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-1",
+  "pages": [
+    38
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

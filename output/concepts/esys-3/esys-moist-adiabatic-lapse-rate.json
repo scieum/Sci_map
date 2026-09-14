@@ -1,0 +1,97 @@
+{
+ "id": "esys-moist-adiabatic-lapse-rate",
+ "concept_key": "concept:moist-adiabatic-lapse-rate",
+ "registry_status": "new",
+ "term": "습윤 단열 감률",
+ "notation": {
+  "hanja": "濕潤斷熱減率",
+  "english": "moist adiabatic lapse rate",
+  "hanja_gloss": "濕 젖을 습 · 潤 불을 윤 · 斷 끊을 단 · 熱 더울 열 · 減 덜 감 · 率 비율 률",
+  "symbol_display": "Γ_s ≈ 0.5 ℃/100 m",
+  "symbol_plain": "Gamma_s = 0.5 C/100 m"
+ },
+ "definition": "포화된 공기 덩어리가 올라갈 때 응결로 나온 숨은열이 냉각을 덜어 주어 100 m당 약 0.5 ℃씩만 기온이 내려가는 비율.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-malr-smaller",
+   "text": "응결로 방출된 숨은열이 팽창에 따른 냉각을 얼마쯤 상쇄하므로 습윤 단열 감률은 건조 단열 감률보다 작다.",
+   "form": {
+    "condition": "공기 덩어리가 포화되어 응결이 일어날 때",
+    "type": "causal",
+    "scope": "응결 고도 위 구간"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「습윤 단열 감률이 건조 단열 감률보다 크다」는 숨은열이 냉각을 덜어 준다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "포화되어 응결이 일어나는 공기 덩어리의 습윤 단열 감률은 건조 단열 감률보다 크다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-malr-not-constant",
+   "text": "습윤 단열 감률의 크기는 하나로 고정되어 있지 않고 수증기 함량에 따라 달라지며, 보통 평균값 약 5 ℃/km를 쓴다.",
+   "form": {
+    "condition": "공기마다 수증기 함량이 다를 때",
+    "type": "conditional",
+    "scope": "포화된 공기 덩어리"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「수증기 함량과 상관없이 늘 같은 값이다」는 곁주의 설명과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "습윤 단열 감률의 크기는 수증기 함량과 상관없이 언제나 같은 값이다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "공기 덩어리는 포화된 뒤에도 100 m당 1 ℃씩 식는다.",
+   "why_wrong": "포화 뒤에는 응결로 나온 숨은열이 냉각을 덜어 주어 100 m당 약 0.5 ℃로 감률이 작아진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-malr-smaller"
+  },
+  {
+   "text": "습윤 단열 감률이 작은 것은 수증기가 열을 잘 전달하기 때문이다.",
+   "why_wrong": "전달이 아니라 응결할 때 방출되는 숨은열이 팽창 냉각을 상쇄하기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-malr-smaller"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-adiabatic-change"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-latent-heat"
+  },
+  {
+   "type": "next",
+   "target": "esys-lifting-condensation-level"
+  },
+  {
+   "type": "related",
+   "target": "esys-dry-adiabatic-lapse-rate"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-1",
+ "pages": [
+  95
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1
+}

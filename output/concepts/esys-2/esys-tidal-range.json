@@ -1,0 +1,104 @@
+{
+  "id": "esys-tidal-range",
+  "concept_key": "concept:tidal-range",
+  "registry_status": "new",
+  "term": "조차",
+  "notation": {
+    "hanja": "潮差",
+    "hanja_gloss": "潮 밀물 조 · 差 다를 차",
+    "english": "tidal range"
+  },
+  "definition": "잇달아 나타난 만조와 간조에서 해수면의 높이가 얼마나 벌어졌는지를 나타낸 값.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tr-coast",
+      "text": "같은 대양에 이어져 있어도 조차는 해안마다 크게 갈려, 대양 한가운데의 값보다 훨씬 큰 해안도 더 작은 해안도 있다.",
+      "form": {
+        "condition": "여러 해안에서 잰 조차를 대양 한가운데의 값과 견줄 때",
+        "type": "classification",
+        "scope": "실제 해양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「조차는 어느 해안에서나 대양 한가운데의 값과 비슷하다」는, 연안에서 10배까지 커지는 해안이 있는가 하면 동해안처럼 더 작은 해안도 있어 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조차는 어느 해안에서나 대양 한가운데의 값과 비슷하게 나타난다."
+    },
+    {
+      "id": "rel-tr-terrain",
+      "text": "해안의 지형과 수심이 조석파를 좁게 가두면 조차가 크게 불어난다.",
+      "form": {
+        "condition": "조석이 파동의 형태로 연안에 들어올 때",
+        "type": "causal",
+        "scope": "연안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「좁게 가두면 조차가 오히려 작아진다」인데, 좁아진 통로에서 해면의 오르내림이 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해안의 지형이 조석파를 좁게 가두면 조차는 오히려 작아진다."
+    },
+    {
+      "id": "rel-tr-monthly",
+      "text": "한 달 동안 조차는 일정하지 않고 커졌다 작아졌다를 되풀이한다.",
+      "form": {
+        "condition": "한 달 치 해수면 높이 변화를 볼 때",
+        "type": "conditional",
+        "scope": "조석이 나타나는 해안"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「한 달 동안 조차가 거의 변하지 않는다」인데, 태양과 달의 위치 관계가 달라지면서 조차가 커지고 작아지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 달 동안 조차는 거의 변하지 않고 일정하게 유지된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조차는 어느 해안에서나 비슷한 값이다.",
+      "why_wrong": "대양에서는 1 m 정도인데, 연안에서는 10배까지 커지는 해안이 있는가 하면 동해안처럼 작게 나타나는 해안도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-coast"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-high-and-low-tide"
+    },
+    {
+      "type": "next",
+      "target": "esys-spring-and-neap-tide"
+    },
+    {
+      "type": "next",
+      "target": "esys-tide-of-korean-coast"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-2",
+  "pages": [
+    71,
+    72
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 이 찾은 단원 안 반례(esys-tide-of-korean-coast/rel-tkc-east 의 '동해안은 조차가 작고')를 받아, '연안이면 언제나 크다'로 닫혀 있던 문면을 이웃 rel-ett-vs-real 과 같은 정도로 열었다 — 이제 동해안이 반례가 아니라 이 명제가 품는 사례다."
+  ]
+}

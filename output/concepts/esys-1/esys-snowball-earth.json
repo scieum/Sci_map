@@ -1,0 +1,142 @@
+{
+  "id": "esys-snowball-earth",
+  "concept_key": "concept:snowball-earth",
+  "registry_status": "new",
+  "term": "얼음덩어리 지구",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "snowball Earth",
+    "hanja_note": "'얼음덩어리'가 고유어여서 표제어 전체에 대응하는 한자 표기가 없다. '지구'만 地球다."
+  },
+  "definition": "적도 부근까지 빙하가 덮여 지구 전체가 얼음에 싸였던 시기. 약 7억 2천만 년 전부터 8천5백만 년쯤 이어진 것으로 추정된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-se-co2",
+      "text": "대기의 이산화 탄소가 급격히 줄면 온실 효과가 약해져 지구의 평균 온도가 내려간다.",
+      "form": {
+        "condition": "다른 온실 기체의 양이 크게 달라지지 않을 때",
+        "type": "inverse",
+        "scope": "지질 시대 규모의 기후 변화",
+        "antecedent": {
+          "quantity": "대기의 이산화 탄소",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "지구의 평균 온도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이산화 탄소가 줄면 온실 효과가 강해져 온도가 오른다」는 보온 장치가 사라진 것과 같았다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기의 이산화 탄소가 급격히 줄면 온실 효과가 강해져 지구의 평균 온도가 올라간다."
+    },
+    {
+      "id": "rel-se-albedo",
+      "text": "얼음에 덮인 면적이 넓어질수록 지구의 반사율이 높아져 온도는 더욱 내려간다.",
+      "form": {
+        "condition": "빙하가 극지방을 넘어 저위도까지 확장할 때",
+        "type": "direct",
+        "scope": "얼음덩어리 지구를 만든 되먹임",
+        "antecedent": {
+          "quantity": "얼음에 덮인 면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지구의 반사율",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「얼음 면적이 넓어질수록 반사율이 낮아져 온도가 오른다」는 얼음이 햇빛을 잘 되쏜다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "얼음에 덮인 면적이 넓어질수록 지구의 반사율이 낮아져 온도는 올라간다."
+    },
+    {
+      "id": "rel-se-thaw",
+      "text": "얼음을 녹인 것은 화산 활동으로 대기에 쌓인 이산화 탄소가 일으킨 온실 효과였다.",
+      "form": {
+        "condition": "바다가 얼어 이산화 탄소가 물에 녹지 못하던 동안",
+        "type": "causal",
+        "scope": "얼음덩어리 지구가 끝나는 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「화산이 내놓은 이산화 탄소가 쌓였지만 온실 효과가 약해져 얼음이 두꺼워졌다」는 평균 온도가 약 50 ℃까지 올랐다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화산 활동으로 대기에 이산화 탄소가 쌓였지만 온실 효과가 약해져 얼음은 더 두꺼워졌다."
+    },
+    {
+      "id": "rel-se-evidence",
+      "text": "빙하 퇴적층 위를 덮은 두꺼운 석회암층은 얼음이 녹은 뒤 급격한 온난화가 있었음을 뒷받침한다.",
+      "form": {
+        "condition": "두 지층이 쌓인 위아래 순서를 볼 때",
+        "type": "causal",
+        "scope": "나미비아·호주에서 발견된 증거"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 지층의 위아래를 맞바꾼 것이라 실제 노두의 배열과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "석회암층 위를 덮은 두꺼운 빙하 퇴적층이 얼음이 녹은 뒤의 급격한 온난화를 뒷받침한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "얼음덩어리 지구는 대기 중의 산소가 급격히 줄어 보온 장치가 사라져 생겼다",
+      "why_wrong": "급격히 줄어든 것은 산소가 아니라 온실 기체인 이산화 탄소다. 산소는 온실 효과를 일으키는 기체가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-se-co2"
+    },
+    {
+      "text": "지구가 한 번 완전히 얼어붙으면 반사율 때문에 다시는 녹을 수 없다",
+      "why_wrong": "얼음에 덮여 있어도 화산 활동은 계속되어 이산화 탄소가 대기에 쌓였고, 그 온실 효과로 얼음이 모두 녹았다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-se-thaw"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-carbon-cycle"
+    },
+    {
+      "type": "next",
+      "target": "esys-coevolution"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-3",
+  "pages": [
+    18,
+    19
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "눈덩이 지구"
+  ],
+  "notes": [
+    "출처 확인 — definition 의 「약 7억 2천만 년 전부터 8천5백만 년」은 교과서 19쪽 본문 블록(p19-b3)에 「약 7억 2천만 년 전부터 약 6억 3천5백만 년 전까지, 약 8천5백만 년 동안 지속되었다고 추정한다」로 실려 있다. 다만 단원 마무리 48쪽 자료는 같은 가설을 「약 7억 년 전부터 …1억 년 가량 지속」으로 다르게 적는다 — 두 값이 함께 있는 교과서라는 점만 C8 에 알린다. 미결 사항이 아니다."
+  ]
+}

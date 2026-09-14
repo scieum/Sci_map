@@ -1,0 +1,95 @@
+{
+  "id": "esys-mineral-diversification",
+  "concept_key": "concept:mineral-diversification",
+  "registry_status": "new",
+  "term": "광물 종의 다양화",
+  "notation": {
+    "hanja": "鑛物 多樣化",
+    "english": "mineral diversification",
+    "hanja_gloss": "鑛 쇳돌 광 · 物 물건 물 · 多 많을 다 · 樣 모양 양 · 化 될 화"
+  },
+  "definition": "지구의 광물 종 수가 생명체의 출현과 진화에 힘입어 60여 종에서 4200여 종으로 크게 늘어난 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-md-count",
+      "text": "지구가 만들어질 무렵 60여 종이던 광물 종 수는 현재 4200여 종으로 늘었다.",
+      "form": {
+        "condition": "태양계 형성기와 현재를 견줄 때",
+        "type": "direct",
+        "scope": "이 교과서가 든 수치(22쪽)",
+        "antecedent": {
+          "quantity": "지구가 진화한 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광물 종 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 시기의 종 수를 맞바꾼 것이라 교과서가 든 수치와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구가 만들어질 무렵 4200여 종이던 광물 종 수는 현재 60여 종으로 줄었다."
+    },
+    {
+      "id": "rel-md-life",
+      "text": "광물 종 수가 폭발적으로 늘어난 것은 생명체가 나타나 산소와 탄산염·점토 광물을 만들어 낸 덕분이다.",
+      "form": {
+        "condition": "생명체가 등장한 뒤의 증가분을 볼 때",
+        "type": "causal",
+        "scope": "금속 산화물·탄산염 광물·점토 광물에 한함"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「생명체와 무관하게 화산 활동만으로 늘었다」는 생명체 출현 전에는 수백 종에 그쳤다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광물 종 수가 폭발적으로 늘어난 것은 생명체와 무관하게 화산 활동과 물의 작용만으로 이루어졌다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광물은 생명체와 무관하게 화산 활동과 물의 작용만으로 다양해졌다",
+      "why_wrong": "화산 활동과 물의 작용만으로는 수백 종에 그쳤다. 4200여 종까지 늘어난 것은 산소·탄산염·점토 광물을 만든 생명체 덕분이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-md-life"
+    },
+    {
+      "text": "지구의 광물 종 수는 형성 초기부터 지금과 비슷했다",
+      "why_wrong": "지구가 만들어질 때는 60여 종뿐이었다. 지금의 4200여 종은 지구와 생명이 함께 진화한 결과다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-md-count"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-coevolution"
+    },
+    {
+      "type": "related",
+      "target": "esys-cyanobacteria"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-4",
+  "pages": [
+    22
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

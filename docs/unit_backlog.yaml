@@ -3689,3 +3689,367 @@ subjects:
     extras:
       wrapup: 128
       citizen: 130
+- code: esys
+  name: 지구시스템과학
+  course_type: 진로선택
+  grade: null
+  curriculum: 2022 개정
+  standard_prefix: 12지시
+  textbook:
+    file: inbox/textbook/22개정/지구과학/고_지구시스템과학(오필석)_교과서_2쇄.pdf
+    publisher: 천재교과서
+    author: 오필석 외
+    pages: 140
+    note: |-
+      ★위계는 「지구과학」·「생명과학」 계열과 같다 — 대단원 > 중단원(01~) > 소주제(1~). 「물리학」 계열처럼 한 칸 밀린 판형이 아니다.
+
+      인쇄 쪽수 == PDF 쪽수 (1-base). 앞부속 p1~7, 부록 p132~140 은 본문이 아니다. 대단원마다 표지 2쪽 + 「단원 펼쳐보기」 2쪽이 앞에 붙고, 끝에 「단원 마무리」 4쪽 + 「대단원 프로젝트」 2쪽이 붙는다. 소주제는 홀수 쪽 아래 띠에만 이름이 찍힌다 — 짝수 쪽은 대단원 이름이라 쪽 띠만 보고 경계를 잡으면 절반이 빈다.
+
+      ★★상자가 쪽마다 다르다 — page.bbox 가 126쪽은 (29.504, -29.504, 638.953, 764.197), 나머지 14쪽(11·26·40·44·47·48 …)은 (36.85, -36.85, 646.299, 756.851) 이다. 「생물의 유전」과 같은 꼴이니 한 값으로 굳히지 말고 **쪽마다 page.bbox 를 읽어라.**
+
+      ★C7 렌더 좌표 보정값을 실측했다 — scale=1 에서 `render = (x - bbox.x0, top - bbox.y0)`. bbox.y0 가 음수라 사실상 top 에 |bbox.y0| 를 더하는 것이다. 두 상자 무리에서 각각 네 쪽씩 재어 낱말 상자 안 잉크 밀도가 0.41~0.56 으로 나왔고, 한 값으로 굳혔을 때(0.12~0.17)와 뚜렷이 갈린다.
+  guide:
+    file: inbox/textbook/22개정/지구과학/고_지구시스템과학(오필석)_지도서_2쇄.pdf
+    pages: 320
+    note: 표준 배치다 — 총론 '나. 성취 기준' 절(24~26쪽)에 띄어쓰기가 살아 있어 1차, 각론의 대단원 개관 쪽(60~161)이 대조본이다. 15건 모두 교차 대조 일치라 손댈 곳이 없었다 — 「역학과 에너지」·「전자기와 양자」 지도서에 있던 곁주 코드 오식이 이 책에는 없다.
+  units:
+  - id: esys-1
+    numeral: Ⅰ
+    title: 지구 탄생과 생동하는 지구
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 8
+    - 51
+    sections:
+    - id: esys-1-01
+      numeral: '01'
+      title: 지구의 탄생과 진화
+      pages:
+      - 12
+      - 23
+      review: 23
+      topics:
+      - id: esys-1-01-1
+        numeral: '1'
+        title: 태양계의 형성
+        pages:
+        - 12
+        - 13
+      - id: esys-1-01-2
+        numeral: '2'
+        title: 지구의 탄생과 진화
+        pages:
+        - 14
+        - 16
+      - id: esys-1-01-3
+        numeral: '3'
+        title: 지구시스템과 생명체의 상호작용
+        pages:
+        - 17
+        - 20
+      - id: esys-1-01-4
+        numeral: '4'
+        title: 생명과 지구의 공진화
+        pages:
+        - 21
+        - 22
+    - id: esys-1-02
+      numeral: '02'
+      title: 판 구조론 발달사와 판을 움직이는 힘
+      pages:
+      - 24
+      - 31
+      review: 31
+      topics:
+      - id: esys-1-02-1
+        numeral: '1'
+        title: 판 구조론의 정립 과정
+        pages:
+        - 24
+        - 26
+      - id: esys-1-02-2
+        numeral: '2'
+        title: 판을 움직이는 힘
+        pages:
+        - 27
+        - 28
+      - id: esys-1-02-3
+        numeral: '3'
+        title: 플룸 운동
+        pages:
+        - 29
+        - 30
+    - id: esys-1-03
+      numeral: '03'
+      title: 화산 활동과 화성암
+      pages:
+      - 32
+      - 37
+      review: 37
+      topics:
+      - id: esys-1-03-1
+        numeral: '1'
+        title: 마그마의 종류와 화산의 형태
+        pages:
+        - 32
+        - 33
+      - id: esys-1-03-2
+        numeral: '2'
+        title: 편광 현미경을 이용한 화성암 조직 관찰
+        pages:
+        - 34
+        - 36
+    - id: esys-1-04
+      numeral: '04'
+      title: 지진파와 지구 내부 구조
+      pages:
+      - 38
+      - 45
+      review: 45
+      topics:
+      - id: esys-1-04-1
+        numeral: '1'
+        title: 지진파
+        pages:
+        - 38
+        - 40
+      - id: esys-1-04-2
+        numeral: '2'
+        title: 지구 내부 구조
+        pages:
+        - 41
+        - 42
+      - id: esys-1-04-3
+        numeral: '3'
+        title: 지각의 두께 구하기
+        pages:
+        - 43
+        - 44
+    extras:
+      wrapup: 46
+      project: 50
+  - id: esys-2
+    numeral: Ⅱ
+    title: 해수의 운동
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 52
+    - 81
+    sections:
+    - id: esys-2-01
+      numeral: '01'
+      title: 에크만 수송과 지형류
+      pages:
+      - 56
+      - 61
+      review: 61
+      topics:
+      - id: esys-2-01-1
+        numeral: '1'
+        title: 에크만 수송
+        pages:
+        - 56
+        - 57
+      - id: esys-2-01-2
+        numeral: '2'
+        title: 해수가 받는 힘
+        pages:
+        - 58
+        - 59
+      - id: esys-2-01-3
+        numeral: '3'
+        title: 지형류
+        pages:
+        - 60
+        - 60
+    - id: esys-2-02
+      numeral: '02'
+      title: 해파와 해일
+      pages:
+      - 62
+      - 69
+      review: 69
+      topics:
+      - id: esys-2-02-1
+        numeral: '1'
+        title: 해파의 발생과 전파
+        pages:
+        - 62
+        - 63
+      - id: esys-2-02-2
+        numeral: '2'
+        title: 심해파와 천해파
+        pages:
+        - 64
+        - 64
+      - id: esys-2-02-3
+        numeral: '3'
+        title: 지진 해일과 폭풍 해일
+        pages:
+        - 65
+        - 66
+      - id: esys-2-02-4
+        numeral: '4'
+        title: 해일 피해와 대처 방안
+        pages:
+        - 67
+        - 68
+    - id: esys-2-03
+      numeral: '03'
+      title: 조석의 발생 과정
+      pages:
+      - 70
+      - 75
+      review: 75
+      topics:
+      - id: esys-2-03-1
+        numeral: '1'
+        title: 기조력
+        pages:
+        - 70
+        - 70
+      - id: esys-2-03-2
+        numeral: '2'
+        title: 조석 현상의 이해
+        pages:
+        - 71
+        - 74
+    extras:
+      wrapup: 76
+      project: 80
+  - id: esys-3
+    numeral: Ⅲ
+    title: 강수 과정과 대기의 운동
+    priority: 2
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 82
+    - 131
+    sections:
+    - id: esys-3-01
+      numeral: '01'
+      title: 대기의 온실 효과와 에너지 수지
+      pages:
+      - 86
+      - 93
+      review: 93
+      topics:
+      - id: esys-3-01-1
+        numeral: '1'
+        title: 대기의 선택적 흡수
+        pages:
+        - 87
+        - 87
+      - id: esys-3-01-2
+        numeral: '2'
+        title: 온실 효과와 생명 가능 지대
+        pages:
+        - 88
+        - 89
+      - id: esys-3-01-3
+        numeral: '3'
+        title: 전 지구 평균 열수지
+        pages:
+        - 90
+        - 92
+    - id: esys-3-02
+      numeral: '02'
+      title: 단열 변화와 대기 안정도
+      pages:
+      - 94
+      - 103
+      review: 103
+      topics:
+      - id: esys-3-02-1
+        numeral: '1'
+        title: 단열 변화
+        pages:
+        - 94
+        - 95
+      - id: esys-3-02-2
+        numeral: '2'
+        title: 대기 안정도
+        pages:
+        - 96
+        - 99
+      - id: esys-3-02-3
+        numeral: '3'
+        title: 강수 과정
+        pages:
+        - 100
+        - 100
+      - id: esys-3-02-4
+        numeral: '4'
+        title: 안개 생성과 안정도
+        pages:
+        - 101
+        - 102
+    - id: esys-3-03
+      numeral: '03'
+      title: 정역학 평형과 바람의 유형
+      pages:
+      - 104
+      - 117
+      review: 117
+      topics:
+      - id: esys-3-03-1
+        numeral: '1'
+        title: 연직 기압 분포와 정역학 평형
+        pages:
+        - 104
+        - 106
+      - id: esys-3-03-2
+        numeral: '2'
+        title: 바람에 작용하는 힘
+        pages:
+        - 107
+        - 111
+      - id: esys-3-03-3
+        numeral: '3'
+        title: '상층의 바람: 지균풍과 경도풍'
+        pages:
+        - 112
+        - 113
+      - id: esys-3-03-4
+        numeral: '4'
+        title: '지상의 바람: 지상풍'
+        pages:
+        - 114
+        - 116
+    - id: esys-3-04
+      numeral: '04'
+      title: 편서풍 파동과 지상 고·저기압의 발달
+      pages:
+      - 118
+      - 125
+      review: 125
+      topics:
+      - id: esys-3-04-1
+        numeral: '1'
+        title: 편서풍 파동의 발달
+        pages:
+        - 118
+        - 121
+      - id: esys-3-04-2
+        numeral: '2'
+        title: 지상 고·저기압 발달에서 편서풍 파동의 역할
+        pages:
+        - 122
+        - 123
+      - id: esys-3-04-3
+        numeral: '3'
+        title: 대기 대순환의 역할
+        pages:
+        - 124
+        - 124
+    extras:
+      wrapup: 126
+      project: 130

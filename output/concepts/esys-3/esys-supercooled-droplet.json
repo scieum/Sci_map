@@ -1,0 +1,94 @@
+{
+ "id": "esys-supercooled-droplet",
+ "concept_key": "concept:supercooled-water-droplet",
+ "registry_status": "new",
+ "term": "과냉각 물방울",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "supercooled water droplet",
+  "hanja_note": "'물방울'이 고유어라 표제어 전체를 한자로 적을 수 없다. 앞머리는 過冷却이다."
+ },
+ "definition": "0 ℃보다 낮은 온도에서도 얼지 않고 액체로 남아 구름 속에서 빙정과 함께 떠 있는 물방울.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-scd-temperature-range",
+   "text": "구름 속에서 빙정과 과냉각 물방울이 함께 나타나는 구간은 대략 -40~0 ℃이고, 빙정 과정은 그 구간에서 일어난다.",
+   "form": {
+    "condition": "구름 속 기온이 어는점 아래일 때",
+    "type": "conditional",
+    "scope": "중위도 구름의 연직 구간"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「빙정과 과냉각 물방울이 함께 나타나는 구간은 0 ℃보다 따뜻한 구간이다」는 0 ℃보다 따뜻한 곳에 빙정이 남지 못한다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "구름 속에서 빙정과 과냉각 물방울이 함께 나타나는 구간은 0 ℃보다 따뜻한 구간이다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-scd-higher-svp",
+   "text": "같은 온도에서 과냉각 물방울 둘레의 포화 수증기압은 빙정 둘레보다 높다.",
+   "form": {
+    "condition": "빙정과 과냉각 물방울이 같은 온도에 있을 때",
+    "type": "conditional",
+    "scope": "기온 -40~0 ℃ 구름"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「과냉각 물방울 둘레가 빙정 둘레보다 낮다」는 수증기가 물방울에서 빙정으로 옮겨 간다는 사실과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "같은 온도에서 과냉각 물방울 둘레의 포화 수증기압은 빙정 둘레보다 낮다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "0 ℃보다 차가운 구름 속에는 얼음만 들어 있다.",
+   "why_wrong": "-40~0 ℃ 구간에는 빙정과 과냉각 물방울이 함께 있고, 그 둘 사이의 수증기 이동이 빙정 과정을 만든다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-scd-temperature-range"
+  },
+  {
+   "text": "과냉각 물방울은 온도가 0 ℃보다 높은 물방울이다.",
+   "why_wrong": "'과냉각'은 어는점 아래인데도 얼지 않은 상태를 뜻한다. 온도는 0 ℃보다 낮다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-scd-temperature-range"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-adiabatic-change"
+  },
+  {
+   "type": "next",
+   "target": "esys-ice-crystal-process"
+  },
+  {
+   "type": "related",
+   "target": "esys-coalescence-process"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-3",
+ "pages": [
+  100
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — rel-scd-liquid-below-zero 는 definition 의 되풀이였다. definition 은 그대로 두고 명제를 정의 밖의 내용(-40~0 ℃ 라는 공존 구간)으로 바꿔 rel-scd-temperature-range 로 다시 세웠다."
+ ]
+}

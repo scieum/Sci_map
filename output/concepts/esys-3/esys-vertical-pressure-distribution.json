@@ -1,0 +1,115 @@
+{
+ "id": "esys-vertical-pressure-distribution",
+ "concept_key": "concept:vertical-pressure-distribution",
+ "registry_status": "new",
+ "term": "기압의 연직 분포",
+ "notation": {
+  "hanja": "氣壓鉛直分布",
+  "english": "vertical distribution of atmospheric pressure",
+  "hanja_gloss": "氣 기운 기 · 壓 누를 압 · 鉛 납 연 · 直 곧을 직 · 分 나눌 분 · 布 베 포"
+ },
+ "definition": "높이 올라갈수록 위에 남은 공기가 줄어 기압이 빠르게 떨어지고, 상층으로 갈수록 그 감소가 둔해지는 분포.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-vpd-10m-1hpa",
+   "text": "지표 근처에서는 고도가 10 m 높아질 때마다 기압이 약 1 hPa씩 낮아진다.",
+   "form": {
+    "condition": "지표에서 그리 멀지 않은 높이에서",
+    "type": "inverse",
+    "scope": "지표 근처 대기",
+    "antecedent": {
+     "quantity": "고도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "기압",
+     "direction": "감소"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「10 m 높아질 때마다 기압이 약 1 hPa씩 높아진다」는 위로 갈수록 공기가 줄어든다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "지표 근처에서는 고도가 10 m 높아질 때마다 기압이 약 1 hPa씩 높아진다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-vpd-vs-horizontal",
+   "text": "연직 방향의 기압 변화는 태풍에서 나타나는 수평 방향의 기압 변화보다 1000배 이상 크다.",
+   "form": {
+    "condition": "같은 거리만큼 옮겨 갈 때",
+    "type": "conditional",
+    "scope": "지구 대기"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「연직 방향의 기압 변화가 태풍의 수평 기압 변화보다 작다」는 1000배 이상이라는 비교와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "같은 거리만큼 옮겨 갈 때 연직 방향의 기압 변화는 태풍의 수평 기압 변화보다 작다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-vpd-upper-slow",
+   "text": "대기 상층에서는 공기가 지상 부근에 눌려 몰려 있는 탓에 고도에 따른 기압 감소가 둔해진다.",
+   "form": {
+    "condition": "고도가 충분히 높아졌을 때",
+    "type": "causal",
+    "scope": "대류권 위 상층"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「상층에서 기압 감소가 지표 부근보다 더 가파르다」는 그림 20 의 곡선 모양과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "대기 상층에서는 고도에 따른 기압 감소가 지표 부근보다 더 가파르다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기압은 고도에 따라 일정한 비율로 줄어든다.",
+   "why_wrong": "지표 부근에서는 가파르게 줄지만 상층으로 갈수록 감소가 둔해진다. 공기가 아래쪽에 몰려 있기 때문이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-vpd-upper-slow"
+  },
+  {
+   "text": "수평 방향의 기압 차가 연직 방향보다 훨씬 크다.",
+   "why_wrong": "같은 거리로 보면 연직 방향 변화가 태풍의 수평 변화보다도 1000배 이상 크다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-vpd-vs-horizontal"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-atmospheric-pressure"
+  },
+  {
+   "type": "next",
+   "target": "esys-hydrostatic-equilibrium-atmosphere"
+  },
+  {
+   "type": "related",
+   "target": "esys-pressure-gradient-force"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-04"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-1",
+ "pages": [
+  104
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1
+}

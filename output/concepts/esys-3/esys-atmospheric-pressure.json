@@ -1,0 +1,100 @@
+{
+ "id": "esys-atmospheric-pressure",
+ "concept_key": "concept:atmospheric-pressure",
+ "registry_status": "reused",
+ "term": "기압",
+ "notation": {
+  "hanja": "氣壓",
+  "english": "atmospheric pressure",
+  "hanja_gloss": "氣 기운 기 · 壓 누를 압",
+  "symbol_display": "1 hPa = 100 Pa",
+  "symbol_plain": "1 hPa = 100 Pa"
+ },
+ "definition": "어느 지점 위로 연직으로 쌓인 공기의 무게가 단위 넓이에 미치는 힘으로 나타나는 압력.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ap-weight",
+   "text": "기압은 그 위에 얹혀 있는 공기의 무게로 만들어지므로 위에 남은 공기가 적을수록 작아진다.",
+   "form": {
+    "condition": "정역학 평형이 대체로 성립할 때",
+    "type": "causal",
+    "scope": "대기 중 임의의 높이"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「위에 얹힌 공기가 적을수록 기압이 커진다」는 기압이 공기의 무게에서 온다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기압은 그 위에 얹혀 있는 공기가 적을수록 커진다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ap-unit",
+   "text": "1 m²의 넓이를 1 N의 힘이 누를 때가 1 Pa이고, 기상학에서 흔히 쓰는 1 hPa은 그 100배다.",
+   "form": {
+    "condition": "국제단위계를 따를 때",
+    "type": "classification",
+    "scope": "압력의 단위"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「1 hPa은 1 Pa의 100분의 1이다」는 접두어 헥토가 100배라는 뜻과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기상학에서 쓰는 1 hPa은 1 Pa의 100분의 1이다.",
+   "curriculum": [
+    "12지시03-04"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기압은 그날 바람이 얼마나 센가로 정해진다.",
+   "why_wrong": "기압은 위에 쌓인 공기의 무게로 정해진다. 바람은 오히려 기압 차 때문에 생긴다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ap-weight"
+  },
+  {
+   "text": "hPa은 Pa보다 작은 단위다.",
+   "why_wrong": "헥토(h)는 100배를 뜻하므로 1 hPa은 100 Pa이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ap-unit"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-vertical-pressure-distribution"
+  },
+  {
+   "type": "next",
+   "target": "esys-hydrostatic-equilibrium-atmosphere"
+  },
+  {
+   "type": "same",
+   "target": "mate-atmospheric-pressure",
+   "note": "concept_key 가 concept:atmospheric-pressure 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-04"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-03-1",
+ "pages": [
+  104
+ ],
+ "difficulty": 2,
+ "role": "supporting",
+ "version": 1,
+ "aliases": [
+  "대기압"
+ ],
+ "notes": [
+  "사전에 이미 있는 키를 그대로 쓴다. mate-1 카드는 기체 압력 맥락이고 이 카드는 연직 분포·정역학 평형 맥락이다."
+ ]
+}

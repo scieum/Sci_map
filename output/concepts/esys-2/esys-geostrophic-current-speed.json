@@ -1,0 +1,118 @@
+{
+  "id": "esys-geostrophic-current-speed",
+  "concept_key": "concept:geostrophic-current-speed",
+  "registry_status": "new",
+  "term": "지형류의 속력",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'지형류(地衡流)'와 '속력(速力)'을 조사 '의'로 이은 구라 한 낱말의 한자어가 아니다.",
+    "english": "geostrophic current speed",
+    "symbol_display": "v = g/(2Ωsinφ) · Δh/Δx",
+    "symbol_plain": "v = g/(2 Omega sin phi) (dh/dx)"
+  },
+  "definition": "해수면의 경사도와 위도로 정해지는 지형류의 빠르기. 두 힘의 평형식에서 끌어낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gcs-slope",
+      "text": "위도가 같다면 해수면의 경사가 급한 곳일수록 지형류가 빠르다.",
+      "form": {
+        "condition": "같은 위도에서 견줄 때",
+        "type": "direct",
+        "scope": "지형류 평형이 이루어진 해역",
+        "antecedent": {
+          "quantity": "해수면의 경사도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지형류의 속력",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「같은 위도에서 경사가 급할수록 느려진다」인데, 속력이 경사도에 비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 위도에서는 해수면의 경사가 급한 곳일수록 지형류가 느리다."
+    },
+    {
+      "id": "rel-gcs-latitude",
+      "text": "경사도가 같다면 위도가 낮은 곳일수록 지형류가 빠르다.",
+      "form": {
+        "condition": "해수면의 경사도가 같을 때",
+        "type": "inverse",
+        "scope": "지형류 평형이 이루어진 해역",
+        "antecedent": {
+          "quantity": "위도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지형류의 속력",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「경사도가 같을 때 위도가 높을수록 빠르다」인데, 속력식의 분모에 위도의 사인값이 있어 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해수면의 경사도가 같다면 위도가 높은 곳일수록 지형류가 빠르다."
+    },
+    {
+      "id": "rel-gcs-formula",
+      "text": "지형류의 속력은 중력 가속도와 해수면 경사도를 곱한 값을 2Ωsinφ로 나눈 값이다.",
+      "form": {
+        "condition": "수평 수압 경도력과 전향력이 평형을 이룰 때",
+        "type": "direct",
+        "scope": "밀도가 일정한 해수"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「2Ωsinφ를 곱한 값이다」인데, 평형식에서 그 항은 나누는 자리에 오므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지형류의 속력은 중력 가속도와 해수면 경사도를 곱한 값에 2Ωsinφ를 다시 곱한 값이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적도에 가까울수록 전향력이 작아지니 지형류도 느려진다.",
+      "why_wrong": "속력식의 분모에 위도의 사인값이 들어 있어, 경사도가 같다면 위도가 낮을수록 지형류는 오히려 빨라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gcs-latitude"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-geostrophic-current"
+    },
+    {
+      "type": "related",
+      "target": "esys-horizontal-pressure-gradient-force",
+      "note": "경사도에 비례하는 힘이 속력식의 분자를 이룬다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-3",
+  "pages": [
+    60
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "02-01 해설이 정량 취급을 허용해 속력식을 명제로 남겼다."
+  ]
+}

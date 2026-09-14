@@ -1,0 +1,129 @@
+{
+ "id": "esys-greenhouse-effect",
+ "concept_key": "concept:greenhouse-effect",
+ "registry_status": "new",
+ "term": "온실 효과",
+ "notation": {
+  "hanja": "溫室效果",
+  "english": "greenhouse effect",
+  "hanja_gloss": "溫 따뜻할 온 · 室 집 실 · 效 본받을 효 · 果 열매 과"
+ },
+ "definition": "지표가 내놓은 적외선을 온실 기체가 흡수했다가 되돌려 보내는 바람에 지표와 대기 하층의 온도가 높아지는 현상.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-ghe-strength-by-amount",
+   "text": "다른 조건이 같다면 대기 중 온실 기체의 양이 늘어날수록 지표 복사 가운데 대기에 붙들리는 몫이 커져 온실 효과가 세진다.",
+   "form": {
+    "condition": "반사도와 태양 복사가 그대로일 때",
+    "type": "direct",
+    "scope": "행성 대기",
+    "antecedent": {
+     "quantity": "대기 중 온실 기체의 양",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "온실 효과의 세기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「온실 기체가 늘어날수록 대기에 붙들리는 몫이 줄어 온실 효과가 약해진다」는 흡수체가 많아질수록 흡수가 늘어난다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "반사도와 태양 복사가 그대로일 때 대기 중 온실 기체의 양이 늘어날수록 지표 복사가 대기에 붙들리는 몫은 줄어 온실 효과가 약해진다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-33c-gap",
+   "text": "온실 기체가 없다면 지구 표면 온도는 약 -18 ℃에 머물러 실제 표면 온도 약 15 ℃보다 33 ℃ 낮아진다.",
+   "form": {
+    "condition": "반사도를 고려한 복사 평형을 기준으로 볼 때",
+    "type": "conditional",
+    "scope": "지구 전체 평균 표면 온도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「온실 기체가 없어도 표면 온도는 약 15 ℃로 유지된다」는 -18 ℃라는 복사 평형 온도와 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "반사도를 고려한 복사 평형을 기준으로 보면 온실 기체가 없어도 지구 표면 온도는 실제와 같은 약 15 ℃로 유지된다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-ghe-transparent-opaque",
+   "text": "지구 대기는 들어오는 태양 복사에는 투명하고 나가는 지구 복사에는 불투명하게 행동한다.",
+   "form": {
+    "condition": "파장대를 나누어 볼 때",
+    "type": "classification",
+    "scope": "지구 대기 전체"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「태양 복사에 불투명하고 지구 복사에 투명하다」가 참이라면 지표가 덥혀질 길이 없어 참이 될 경우가 없다.",
+   "inverted_text": "지구 대기는 들어오는 태양 복사에 불투명하고 나가는 지구 복사에는 투명하다.",
+   "curriculum": [
+    "12지시03-01"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "온실 효과는 지구 온난화와 같은 말이므로 없을수록 좋다.",
+   "why_wrong": "온실 효과가 없으면 지구 표면은 약 -18 ℃가 된다. 문제는 온실 효과 자체가 아니라 그것이 지나치게 세지는 것이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-33c-gap"
+  },
+  {
+   "text": "온실 기체는 태양 복사 에너지를 대기 안에 가두어 지구를 덥힌다.",
+   "why_wrong": "가두는 대상은 들어오는 태양 복사가 아니라 지표가 내보내는 적외선이다. 대기는 태양 복사에는 투명한 편이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-ghe-transparent-opaque"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-greenhouse-gas"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-selective-absorption"
+  },
+  {
+   "type": "next",
+   "target": "esys-radiative-equilibrium-temperature"
+  },
+  {
+   "type": "next",
+   "target": "esys-habitable-zone"
+  },
+  {
+   "type": "same",
+   "target": "isci2-greenhouse-effect",
+   "note": "concept_key 가 concept:greenhouse-effect 로 같다 (R9)"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-01"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-01-2",
+ "pages": [
+  88,
+  89
+ ],
+ "difficulty": 3,
+ "role": "core",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — rel-ghe-raises-surface-temp 는 definition 을 어순만 바꾼 동어반복이었다. 정의 밖의 내용(온실 기체 양과 온실 효과 세기의 관계)으로 바꿔 rel-ghe-strength-by-amount 로 다시 세웠다.",
+  "C5 기록 — 같은 concept_key 의 isci2-greenhouse-effect 는 사실상 같던 명제(rel-ghe-mechanism)를 invertible false 로 두어 잣대가 갈렸다. 이 카드의 명제를 동어반복에서 걷어 내면서 그 대립은 사라진다. isci2 카드는 건드리지 않았다."
+ ]
+}

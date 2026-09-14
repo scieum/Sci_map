@@ -1,0 +1,113 @@
+{
+  "id": "esys-primitive-crust-and-ocean",
+  "concept_key": "concept:primitive-crust-and-ocean",
+  "registry_status": "new",
+  "term": "원시 지각과 원시 바다",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "primitive crust and primitive ocean",
+    "hanja_note": "'원시 지각(原始 地殼)'은 한자어지만 '바다'가 고유어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "충돌이 뜸해져 지구가 식으면서 마그마가 굳어 만들어진 첫 지각과, 대기의 수증기가 비로 내려 낮은 곳에 고여 이룬 첫 바다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pco-cooling",
+      "text": "미행성체의 충돌이 뜸해져 지구가 식자 마그마가 굳어 화성암을 이루며 원시 지각이 만들어졌다.",
+      "form": {
+        "condition": "지표 온도가 마그마의 응고점 아래로 내려갔을 때",
+        "type": "causal",
+        "scope": "원시 지각이 만들어지는 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「지구가 식었는데도 마그마가 굳지 않아 지각이 만들어지지 못했다」는 4단계 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미행성체의 충돌이 뜸해져 지구가 식었는데도 마그마는 굳지 않아 원시 지각이 만들어지지 못했다."
+    },
+    {
+      "id": "rel-pco-rain",
+      "text": "대기의 수증기가 구름을 이루어 비로 내리고 낮은 곳에 고이면서 원시 바다가 되었다.",
+      "form": {
+        "condition": "지표가 식어 물이 액체로 머무를 수 있게 된 뒤",
+        "type": "causal",
+        "scope": "원시 바다의 형성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「지표가 식은 뒤에도 수증기가 비가 되지 못해 바다가 생기지 않았다」는 4단계 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지표가 식어 물이 액체로 머무를 수 있게 된 뒤에도 수증기는 비가 되지 못해 원시 바다가 만들어지지 않았다."
+    },
+    {
+      "id": "rel-pco-co2fix",
+      "text": "바다에 녹아든 이산화 탄소는 탄산염 이온으로 수권에 옮겨졌다가 석회암의 형태로 지권에 붙잡혔다.",
+      "form": {
+        "condition": "이산화 탄소가 바닷물에 용해될 때",
+        "type": "causal",
+        "scope": "기권에서 수권을 거쳐 지권으로 가는 탄소의 경로"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「탄소가 지권에 붙잡히지 않고 모두 기권으로 되돌아갔다」는 석회암으로 고정되었다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바다에 녹아든 이산화 탄소는 석회암이 되어 지권에 붙잡히지 않고 모두 기권으로 되돌아갔다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원시 바다가 먼저 생긴 뒤에 원시 지각이 만들어졌다",
+      "why_wrong": "지구가 식으면서 지표의 마그마가 먼저 굳어 원시 지각이 되었고, 그 뒤에 뜨거운 비가 내려 낮은 곳에 고인 물이 원시 바다가 되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pco-cooling"
+    },
+    {
+      "text": "바다에 녹은 이산화 탄소는 모두 다시 대기로 돌아갔다",
+      "why_wrong": "상당량은 탄산염 이온을 거쳐 석회암이 되어 지권에 남았다. 그래서 대기의 이산화 탄소 분압이 크게 줄었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pco-co2fix"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-magma-ocean"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-primitive-atmosphere",
+      "note": "수증기가 있어야 비가 내려 원시 바다가 된다"
+    },
+    {
+      "type": "next",
+      "target": "esys-cyanobacteria"
+    },
+    {
+      "type": "next",
+      "target": "esys-water-cycle"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-01",
+    "12지시01-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-01-2",
+  "pages": [
+    15
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

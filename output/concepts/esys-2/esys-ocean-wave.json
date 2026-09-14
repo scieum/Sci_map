@@ -1,0 +1,121 @@
+{
+  "id": "esys-ocean-wave",
+  "concept_key": "concept:ocean-wave",
+  "registry_status": "new",
+  "term": "해파",
+  "notation": {
+    "hanja": "海波",
+    "hanja_gloss": "海 바다 해 · 波 물결 파",
+    "english": "ocean wave"
+  },
+  "definition": "바람 등에서 얻은 에너지를 해수면의 주기적인 오르내림으로 옆 해역에 실어 나르는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ow-energy",
+      "text": "부서지지 않고 나아가는 해파에서는 물 입자가 제자리를 맴돌 뿐 파를 따라 멀리 옮겨 가지 않는다.",
+      "form": {
+        "condition": "해파가 부서지지 않고 전파되는 동안",
+        "type": "causal",
+        "scope": "마찰을 무시한 이론적인 해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「부서지지 않고 나아가는 해파에서도 물 입자가 파를 따라 함께 멀리 옮겨 간다」는, 그런 해파가 옮기는 것이 물이 아니라 에너지뿐이므로 반드시 거짓이다. 쇄파나 지진 해일의 물의 벽은 '부서지지 않고'라는 한정 밖이라 반례가 되지 못한다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부서지지 않고 나아가는 해파에서도 물 입자는 파를 따라 함께 멀리 옮겨 간다."
+    },
+    {
+      "id": "rel-ow-growth",
+      "text": "같은 해역에 바람이 이어 불면 완전히 성장하기 전까지는 지속 시간이 길수록 파고가 높아지고 파장이 길어진다.",
+      "form": {
+        "condition": "완전히 성장한 풍랑에 이르기 전까지",
+        "type": "direct",
+        "scope": "바람이 부는 해역의 해파",
+        "antecedent": {
+          "quantity": "바람의 지속 시간",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "파고와 파장",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 아직 다 자라지 않은 구간에서 파가 오히려 줄어든다는 말인데, 그 구간에서는 바람이 대 주는 에너지만큼 파가 커지므로 반드시 거짓이다. 성장의 상한은 esys-wind-wave/rel-ww-fully-developed 가 따로 맡는다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 해역에 바람이 이어 불면 완전히 성장하기 전인데도 지속 시간이 길수록 파고가 낮아지고 파장이 짧아진다."
+    },
+    {
+      "id": "rel-ow-after-wind",
+      "text": "잔물결은 바람이 멎으면 곧 사라지지만, 충분히 자란 해파는 바람이 없어도 계속 나아간다.",
+      "form": {
+        "condition": "바람이 멎은 뒤",
+        "type": "conditional",
+        "scope": "해양 표면의 해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「충분히 자란 해파도 바람이 멎으면 곧바로 사라진다」인데, 너울이 먼 바다까지 전파하는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "충분히 자란 해파도 바람이 멎으면 곧바로 사라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "파도가 밀려오면 먼 바다의 바닷물이 그대로 해안까지 실려 온다.",
+      "why_wrong": "해파가 나르는 것은 에너지이고, 물 입자는 제자리에서 원이나 타원을 그린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ow-energy"
+    },
+    {
+      "text": "바람이 멎으면 파도도 곧 따라 사라진다.",
+      "why_wrong": "잔물결은 사라지지만 충분히 자란 해파는 너울이 되어 바람 없이도 먼 바다까지 나아간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ow-after-wind"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-ocean-wave-elements"
+    },
+    {
+      "type": "next",
+      "target": "esys-wind-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-water-particle-orbital-motion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-1",
+  "pages": [
+    62,
+    64
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 지적(rel-ow-energy)을 받아 '마찰을 무시한 이론적인 해파'라는 한정을 text·inverted_text 문면에 '부서지지 않고 나아가는'으로 옮겼다 — D1 이 scope 를 떼어도 판정이 서도록.",
+    "C6 지적(rel-ow-growth)을 받아 성장에 상한이 있음을 문면에 넣어 esys-wind-wave/rel-ww-fully-developed 와의 충돌을 없앴다.",
+    "esys-wind-wave 에서 정의 되풀이로 접은 rel-ww-leaving 자리에 있던 오개념('바람이 멎으면 파도도 사라진다')을 대응 명제 rel-ow-after-wind 가 있는 이 카드로 옮겼다."
+  ]
+}

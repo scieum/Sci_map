@@ -1,0 +1,97 @@
+{
+  "id": "esys-water-particle-orbital-motion",
+  "concept_key": "concept:water-particle-orbital-motion",
+  "registry_status": "new",
+  "term": "해파에서 물 입자의 운동",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'해파(海波)'·'물 입자'·'운동(運動)'이 이어진 구이고 고유어가 섞여 있어 전체를 한자어로 적지 않는다.",
+    "english": "orbital motion of water particles"
+  },
+  "definition": "해파가 지날 때 물 입자가 제자리에서 그리는 원이나 타원 모양의 되풀이 운동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wpom-deep",
+      "text": "수심이 파장의 절반보다 깊은 곳에서 물 입자는 원을 그리며 돈다.",
+      "form": {
+        "condition": "해저면이 물 입자의 운동을 건드리지 않을 때",
+        "type": "classification",
+        "scope": "심해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「그런 곳에서 타원을 그린다」인데, 타원은 해저면이 운동을 눌러 찌그러뜨릴 때 나타나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심이 파장의 절반보다 깊은 곳에서 물 입자는 타원을 그리며 돈다."
+    },
+    {
+      "id": "rel-wpom-shallow",
+      "text": "전이파와 천해파에서는 물 입자의 자취가 원이 아니라 타원이 된다.",
+      "form": {
+        "condition": "해저면이 물 입자의 운동을 방해할 때",
+        "type": "classification",
+        "scope": "전이파와 천해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「전이파와 천해파에서도 원을 그린다」인데, 바닥이 연직 방향의 운동을 눌러 자취가 납작해지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전이파와 천해파에서도 물 입자는 원을 그리며 돈다."
+    },
+    {
+      "id": "rel-wpom-bottom",
+      "text": "수심이 파장의 절반보다 얕아지면 해저면이 물 입자의 운동을 막아 해파가 느려진다.",
+      "form": {
+        "condition": "해파가 얕은 쪽으로 들어올 때",
+        "type": "causal",
+        "scope": "연안으로 다가오는 해파"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「해저면이 운동을 도와 해파가 빨라진다」인데, 바닥은 운동을 방해할 뿐이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수심이 파장의 절반보다 얕아지면 해저면이 물 입자의 운동을 도와 해파가 빨라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해파를 타고 있는 부표는 파와 함께 해안까지 떠밀려 간다.",
+      "why_wrong": "물 입자는 제자리에서 원이나 타원을 그릴 뿐이라 부표도 그 자리에서 오르내린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wpom-deep"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ocean-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-shallow-water-wave",
+      "note": "해저면이 물 입자 운동을 막는 것이 천해파의 근거"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-2",
+  "pages": [
+    64
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

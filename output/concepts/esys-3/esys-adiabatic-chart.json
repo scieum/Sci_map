@@ -1,0 +1,120 @@
+{
+ "id": "esys-adiabatic-chart",
+ "concept_key": "concept:adiabatic-chart",
+ "registry_status": "new",
+ "term": "단열선도",
+ "notation": {
+  "hanja": "斷熱線圖",
+  "english": "adiabatic chart",
+  "hanja_gloss": "斷 끊을 단 · 熱 더울 열 · 線 줄 선 · 圖 그림 도"
+ },
+ "definition": "건조 단열선·습윤 단열선·이슬점 감률선을 미리 그려 두고 관측한 기온과 이슬점을 얹어 안정도를 읽는 도표.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-chart-three-lines",
+   "text": "단열선도에는 건조 단열선·습윤 단열선·이슬점 감률선이 함께 그려져 있어 공기 덩어리의 경로를 따라갈 수 있다.",
+   "form": {
+    "condition": "단열선도를 읽을 때",
+    "type": "classification",
+    "scope": "단열선도"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「관측된 기온 곡선만 그려져 있어 공기 덩어리의 경로는 알 수 없다」는 세 종류의 선이 인쇄되어 있다는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "단열선도에는 관측된 기온 곡선만 그려져 있어 공기 덩어리의 경로는 따라갈 수 없다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-chart-use",
+   "text": "관측한 기온과 이슬점을 단열선도에 얹어 선으로 이으면 기층별 안정도와 구름 두께·강수 형태를 분석할 수 있다.",
+   "form": {
+    "condition": "연직 관측 자료가 있을 때",
+    "type": "causal",
+    "scope": "단열선도 해석"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「얹어도 기층별 안정도는 알 수 없다」는 단열선도가 안정도 분석 도구라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "연직 관측 자료를 단열선도에 얹어도 기층별 안정도나 구름 두께는 알 수 없다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-chart-rh",
+   "text": "단열선도에 얹은 자료에서 같은 고도의 기온과 이슬점 차가 작은 기층일수록 상대 습도가 높다.",
+   "form": {
+    "condition": "같은 고도에서 두 값을 견줄 때",
+    "type": "inverse",
+    "scope": "단열선도에 기입한 관측 자료",
+    "antecedent": {
+     "quantity": "기온과 이슬점의 차",
+     "direction": "감소"
+    },
+    "consequent": {
+     "quantity": "상대 습도",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「기온과 이슬점 차가 작은 기층일수록 상대 습도가 낮다」는 차가 0이면 포화라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "같은 고도에서 기온과 이슬점 차가 작은 기층일수록 상대 습도가 낮다.",
+   "curriculum": [
+    "12지시03-03"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "단열선도의 건조 단열선은 그날 실제로 관측된 기온 분포를 그린 선이다.",
+   "why_wrong": "미리 인쇄된 기준선이다. 관측값은 기온 변화선과 이슬점 자료로 따로 얹는다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-chart-three-lines"
+  },
+  {
+   "text": "단열선도로는 안정도만 알 수 있고 구름이나 강수는 알 수 없다.",
+   "why_wrong": "안정도와 함께 구름 두께와 강수 형태를 분석하려고 쓰는 도구다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-chart-use"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-environmental-lapse-rate"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-dry-adiabatic-lapse-rate"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-moist-adiabatic-lapse-rate"
+  },
+  {
+   "type": "related",
+   "target": "esys-atmospheric-stability"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-03"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-02-2",
+ "pages": [
+  98,
+  99
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

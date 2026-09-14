@@ -1,0 +1,100 @@
+{
+  "id": "esys-geostrophic-balance",
+  "concept_key": "concept:geostrophic-balance",
+  "registry_status": "new",
+  "term": "지형류 평형",
+  "notation": {
+    "hanja": "地衡流平衡",
+    "hanja_gloss": "地 땅 지 · 衡 저울대 형 · 流 흐를 류 · 平 평평할 평 · 衡 저울대 형",
+    "english": "geostrophic balance"
+  },
+  "definition": "수평 수압 경도력과 전향력만 작용하는 해수에서 두 힘이 크기는 같고 방향은 반대가 되어 맞선 상태.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gb-steps",
+      "text": "해수가 움직이기 시작하면 전향력이 작용해 가는 쪽이 바뀌고, 가는 쪽이 바뀌면 전향력이 작용하는 쪽도 따라 바뀐다.",
+      "form": {
+        "condition": "수평 수압 경도력을 받아 해수가 움직이기 시작한 뒤",
+        "type": "causal",
+        "scope": "평형에 이르기 전 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「해수의 이동 방향이 바뀌어도 전향력의 방향은 그대로다」인데, 전향력은 운동 방향을 기준으로 직각으로 작용하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해수가 가는 쪽이 바뀌어도 전향력이 작용하는 방향은 그대로 남는다."
+    },
+    {
+      "id": "rel-gb-right-angle",
+      "text": "북반구에서 해수가 수평 수압 경도력의 오른쪽 90°로 흐르게 되면 전향력이 수압 경도력과 정반대가 되어 평형이 이루어진다.",
+      "form": {
+        "condition": "두 힘만 작용할 때",
+        "type": "conditional",
+        "scope": "북반구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「왼쪽 90°로 흐를 때 평형을 이룬다」인데, 그 방향에서는 전향력이 수압 경도력과 같은 쪽을 향해 상쇄되지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "북반구에서 해수가 수평 수압 경도력의 왼쪽 90° 방향으로 흐를 때 두 힘이 평형을 이룬다."
+    },
+    {
+      "id": "rel-gb-steady",
+      "text": "평형에 이르면 해수는 더 빨라지지 않고 일정한 속도로 흐른다.",
+      "form": {
+        "condition": "수평 수압 경도력과 전향력만 작용할 때",
+        "type": "conditional",
+        "scope": "지형류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「평형에 이른 뒤에도 계속 빨라진다」인데, 알짜힘이 0이면 가속되지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 힘이 평형을 이룬 뒤에도 해수는 계속 빨라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지형류 평형은 수평 수압 경도력과 중력이 맞선 상태다.",
+      "why_wrong": "중력과 맞서는 것은 연직 수압 경도력이고(정역학 평형), 지형류 평형은 수평 수압 경도력과 전향력의 평형이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gb-right-angle"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-horizontal-pressure-gradient-force"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-coriolis-force"
+    },
+    {
+      "type": "next",
+      "target": "esys-geostrophic-current"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-01"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-01-3",
+  "pages": [
+    60
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

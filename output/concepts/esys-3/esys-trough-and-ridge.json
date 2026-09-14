@@ -1,0 +1,103 @@
+{
+ "id": "esys-trough-and-ridge",
+ "concept_key": "concept:trough-and-ridge",
+ "registry_status": "new",
+ "term": "기압골과 기압 마루",
+ "notation": {
+  "hanja": "해당 없음",
+  "english": "trough and ridge",
+  "hanja_note": "'골'과 '마루'가 고유어라 표제어 전체를 한자로 적을 수 없다. 앞머리는 氣壓이다."
+ },
+ "definition": "상층 일기도의 등고선이 남북으로 굽이치며 만드는 골짜기 모양의 축과 산마루 모양의 축.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-tr-trough-equatorward",
+   "text": "북반구 상층 일기도에서 등고선이 저위도 쪽으로 처진 곳이 기압골, 고위도 쪽으로 불룩한 곳이 기압 마루다.",
+   "form": {
+    "condition": "북반구 상층 일기도를 읽을 때",
+    "type": "classification",
+    "scope": "500 hPa 등고선"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「저위도 쪽으로 처진 곳이 기압 마루, 고위도 쪽으로 불룩한 곳이 기압골이다」는 두 이름을 맞바꾼 것이라 참이 될 경우가 없다.",
+   "inverted_text": "북반구 상층 일기도에서 등고선이 저위도 쪽으로 처진 곳이 기압 마루, 고위도 쪽으로 불룩한 곳이 기압골이다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-tr-amplitude",
+   "text": "기압골과 기압 마루가 더 깊고 높게 발달할수록 편서풍 파동의 진폭이 커진 것이다.",
+   "form": {
+    "condition": "등고선의 남북 굽이를 볼 때",
+    "type": "direct",
+    "scope": "중위도 상층",
+    "antecedent": {
+     "quantity": "기압골·기압 마루의 발달",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "편서풍 파동의 진폭",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「깊고 높게 발달할수록 파동의 진폭이 작아진다」는 진폭이 곧 굽이의 크기라는 점과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "기압골과 기압 마루가 깊고 높게 발달할수록 편서풍 파동의 진폭은 작아진다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "기압골은 등고선 값이 가장 낮은 점 하나를 가리킨다.",
+   "why_wrong": "점이 아니라 등고선이 저위도 쪽으로 처진 축을 가리킨다. 기압 마루도 마찬가지로 축이다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-tr-trough-equatorward"
+  },
+  {
+   "text": "기압골이 깊어져도 편서풍 파동의 진폭과는 관계가 없다.",
+   "why_wrong": "기압골과 기압 마루의 발달 정도가 곧 파동 진폭의 크기다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-tr-amplitude"
+  }
+ ],
+ "links": [
+  {
+   "type": "prereq",
+   "target": "esys-rossby-wave"
+  },
+  {
+   "type": "prereq",
+   "target": "esys-weather-chart"
+  },
+  {
+   "type": "next",
+   "target": "esys-upper-divergence-and-cyclogenesis"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-2",
+ "pages": [
+  120,
+  123
+ ],
+ "difficulty": 3,
+ "role": "supporting",
+ "version": 1,
+ "notes": [
+  "C6 결함 수정 — definition 이 저위도·고위도 방향까지 품어 rel-tr-definition 이 동어반복이었다. definition 에서 방향을 덜어 내 명제 쪽에만 남기고, 명제 id 도 rel-tr-trough-equatorward 로 바꿨다."
+ ]
+}

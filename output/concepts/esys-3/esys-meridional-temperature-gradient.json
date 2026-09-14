@@ -1,0 +1,99 @@
+{
+ "id": "esys-meridional-temperature-gradient",
+ "concept_key": "concept:meridional-temperature-gradient",
+ "registry_status": "new",
+ "term": "남북 기온 경도",
+ "notation": {
+  "hanja": "南北氣溫傾度",
+  "english": "meridional temperature gradient",
+  "hanja_gloss": "南 남녘 남 · 北 북녘 북 · 氣 기운 기 · 溫 따뜻할 온 · 傾 기울 경 · 度 법도 도"
+ },
+ "definition": "저위도와 고위도 사이에서 거리에 따라 기온이 달라지는 정도로, 열대와 한대가 만나는 중위도에서 가장 크다.",
+ "definition_source": "restated",
+ "relations": [
+  {
+   "id": "rel-mtg-max-midlat",
+   "text": "남북 기온 경도는 열대와 한대의 경계인 중위도에서 가장 크게 나타난다.",
+   "form": {
+    "condition": "위도별 기온 분포를 볼 때",
+    "type": "classification",
+    "scope": "지구 규모"
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「열대 한가운데에서 가장 크게 나타난다」는 중위도가 가장 크다는 서술과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "남북 기온 경도는 열대 한가운데에서 가장 크게 나타난다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  },
+  {
+   "id": "rel-mtg-westerly",
+   "text": "남북 기온 경도가 클수록 편서풍이 고도에 따라 더 강해지고 편서풍 파동도 잘 발달한다.",
+   "form": {
+    "condition": "중위도 상층에서 볼 때",
+    "type": "direct",
+    "scope": "중위도 대류권",
+    "antecedent": {
+     "quantity": "남북 기온 경도",
+     "direction": "증가"
+    },
+    "consequent": {
+     "quantity": "편서풍의 세기",
+     "direction": "증가"
+    }
+   },
+   "invertible": true,
+   "invertible_reason": "뒤집은 문장 「남북 기온 경도가 클수록 편서풍이 약해진다」는 기온 차가 제트류를 만든다는 설명과 어긋나 참이 될 경우가 없다.",
+   "inverted_text": "남북 기온 경도가 클수록 중위도 상층의 편서풍은 약해진다.",
+   "curriculum": [
+    "12지시03-06"
+   ],
+   "verified_by": "pending"
+  }
+ ],
+ "misconceptions": [
+  {
+   "text": "남북 기온 경도는 적도에서 가장 크다.",
+   "why_wrong": "적도 부근은 남북으로 기온이 고르다. 경도가 가장 큰 곳은 열대와 한대가 만나는 중위도다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-mtg-max-midlat"
+  },
+  {
+   "text": "남북 기온 차가 작아져도 편서풍과 제트류의 세기는 그대로다.",
+   "why_wrong": "기온 경도가 줄면 고도에 따른 편서풍 강화가 약해져 제트류도 약해진다.",
+   "source": "llm",
+   "verified_by": "pending",
+   "linked_relation": "rel-mtg-westerly"
+  }
+ ],
+ "links": [
+  {
+   "type": "next",
+   "target": "esys-jet-stream"
+  },
+  {
+   "type": "next",
+   "target": "esys-meridional-heat-transport"
+  },
+  {
+   "type": "related",
+   "target": "esys-rossby-wave"
+  }
+ ],
+ "media": [],
+ "curriculum": [
+  "12지시03-06"
+ ],
+ "subject": "지구시스템과학",
+ "unit": "Ⅲ. 강수 과정과 대기의 운동",
+ "unit_id": "esys-3",
+ "topic_id": "esys-3-04-1",
+ "pages": [
+  119
+ ],
+ "difficulty": 4,
+ "role": "supporting",
+ "version": 1
+}

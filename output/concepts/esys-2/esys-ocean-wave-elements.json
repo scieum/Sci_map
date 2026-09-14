@@ -1,0 +1,96 @@
+{
+  "id": "esys-ocean-wave-elements",
+  "concept_key": "concept:ocean-wave-elements",
+  "registry_status": "new",
+  "term": "해파의 요소",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'해파(海波)'와 '요소(要素)'를 조사 '의'로 이은 구라 한 낱말의 한자어가 아니다.",
+    "english": "elements of an ocean wave"
+  },
+  "definition": "해파의 모양과 시간 변화를 나타내는 마루·골·파장·파고·주기를 아울러 이르는 값들.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-owe-height",
+      "text": "파고는 마루와 골의 높이 차이로 잰다.",
+      "form": {
+        "condition": "한 해파의 마루와 골을 견줄 때",
+        "type": "classification",
+        "scope": "해파의 모양을 나타내는 값"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「파고는 이웃한 두 마루 사이의 거리다」인데, 그것은 파장의 정의이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파고는 이웃한 두 마루 사이의 거리로 잰다."
+    },
+    {
+      "id": "rel-owe-wavelength",
+      "text": "파장은 마루에서 다음 마루까지, 또는 골에서 다음 골까지의 거리다.",
+      "form": {
+        "condition": "이웃한 같은 위상의 두 지점을 잡을 때",
+        "type": "classification",
+        "scope": "해파의 모양을 나타내는 값"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「파장은 마루에서 다음 골까지의 거리다」인데, 그 거리는 파장의 절반이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장은 마루에서 바로 다음 골까지의 거리다."
+    },
+    {
+      "id": "rel-owe-roles",
+      "text": "파고는 해파가 지닌 에너지의 크기를 말해 주고, 파장과 주기는 해파가 나아가는 빠르기를 정한다.",
+      "form": {
+        "condition": "한 해파의 여러 값을 견줄 때",
+        "type": "classification",
+        "scope": "해파 일반"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 구실을 맞바꾼 것인데, 속력은 파장을 주기로 나눈 값이고 파고는 그 식에 들어가지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장과 주기가 해파의 에너지 크기를 말해 주고, 파고가 해파의 빠르기를 정한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "파고는 평균 해수면에서 마루까지의 높이다.",
+      "why_wrong": "파고는 마루와 골의 높이 차이라서, 평균 해수면에서 마루까지 높이의 두 배에 해당한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-owe-height"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-ocean-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-ocean-wave-speed"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-02"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-02-1",
+  "pages": [
+    62
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

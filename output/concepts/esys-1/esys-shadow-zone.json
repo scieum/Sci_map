@@ -1,0 +1,123 @@
+{
+  "id": "esys-shadow-zone",
+  "concept_key": "concept:seismic-shadow-zone",
+  "registry_status": "new",
+  "term": "암영대",
+  "notation": {
+    "hanja": "暗影帶",
+    "english": "seismic shadow zone",
+    "hanja_gloss": "暗 어두울 암 · 影 그림자 영 · 帶 띠 대"
+  },
+  "definition": "지진파가 크게 굴절하거나 가로막혀 관측되지 않는 지표의 구역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sz-range",
+      "text": "진앙에서 잰 각거리로 P파의 암영대는 103°~142°, S파의 암영대는 103°~180°다.",
+      "form": {
+        "condition": "암영대의 범위를 각거리로 나타낼 때",
+        "type": "classification",
+        "scope": "이 교과서가 든 각거리 값"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 파의 암영대 범위를 맞바꾼 것이라 곁주의 값과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진앙에서 잰 각거리로 P파의 암영대는 103°~180°, S파의 암영대는 103°~142°다."
+    },
+    {
+      "id": "rel-sz-pcause",
+      "text": "P파의 암영대가 생기는 것은 P파가 핵의 경계에서 크게 굴절하기 때문이다.",
+      "form": {
+        "condition": "P파가 맨틀에서 핵으로 들어갈 때",
+        "type": "causal",
+        "scope": "P파 암영대가 생기는 까닭"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「P파가 핵을 아예 통과하지 못하기 때문이다」는 P파가 핵을 지나 반대편에 도달한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "P파의 암영대가 생기는 것은 P파가 핵을 아예 통과하지 못하기 때문이다."
+    },
+    {
+      "id": "rel-sz-scause",
+      "text": "S파의 암영대가 더 넓은 것은 S파가 액체인 외핵을 통과하지 못하기 때문이다.",
+      "form": {
+        "condition": "두 실체파의 암영대를 견줄 때",
+        "type": "causal",
+        "scope": "S파 암영대가 생기는 까닭"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「S파가 외핵에서 크게 굴절하기 때문이다」는 굴절이 아니라 통과 불가라는 까닭과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "S파의 암영대가 더 넓은 것은 S파가 외핵에서 크게 굴절하기 때문이다."
+    },
+    {
+      "id": "rel-sz-size",
+      "text": "암영대가 나타나는 범위를 이용하면 지구 핵의 크기를 가늠할 수 있다.",
+      "form": {
+        "condition": "지진파가 지나온 경로를 그려 볼 때",
+        "type": "causal",
+        "scope": "핵의 크기 추정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「암영대의 범위는 핵의 크기와 아무 상관이 없다」는 암영대가 핵에서 비롯한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "암영대가 나타나는 범위는 지구 핵의 크기와 아무런 상관이 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "P파는 핵을 전혀 통과하지 못하기 때문에 암영대가 생긴다",
+      "why_wrong": "P파는 핵을 통과한다. 다만 핵의 경계에서 크게 굴절해 일정 각거리 구간에 닿지 못하는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sz-pcause"
+    },
+    {
+      "text": "P파의 암영대와 S파의 암영대는 범위가 같다",
+      "why_wrong": "P파는 103°~142°, S파는 103°~180°로 S파 쪽이 훨씬 넓다. S파는 외핵을 아예 통과하지 못하기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sz-range"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-seismic-wave"
+    },
+    {
+      "type": "next",
+      "target": "esys-gutenberg-discontinuity"
+    },
+    {
+      "type": "next",
+      "target": "esys-lehmann-discontinuity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-05"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-04-2",
+  "pages": [
+    41
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

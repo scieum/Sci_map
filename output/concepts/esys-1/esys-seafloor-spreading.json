@@ -1,0 +1,122 @@
+{
+  "id": "esys-seafloor-spreading",
+  "concept_key": "concept:seafloor-spreading-hypothesis",
+  "registry_status": "new",
+  "term": "해양저 확장설",
+  "notation": {
+    "hanja": "海洋底 擴張說",
+    "english": "seafloor spreading hypothesis",
+    "hanja_gloss": "海 바다 해 · 洋 큰바다 양 · 底 밑 저 · 擴 넓힐 확 · 張 베풀 장 · 說 말씀 설"
+  },
+  "definition": "해령 아래에서 올라온 맨틀 물질이 새 해양 지각을 만들어 양쪽으로 퍼져 나가고 해구에서 침강해 사라진다고 본 헤스와 디츠의 학설.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sfs-ridge",
+      "text": "해령의 갈라진 골짜기를 따라 분출한 용암이 굳으면서 새로운 해양 지각이 만들어진다.",
+      "form": {
+        "condition": "해령 아래에서 고온의 맨틀 물질이 상승할 때",
+        "type": "causal",
+        "scope": "해령에서의 지각 생성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「해령의 골짜기에서 해양 지각이 맨틀 속으로 사라진다」는 해령이 생성 자리라는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령의 갈라진 골짜기에서는 해양 지각이 맨틀 속으로 사라진다."
+    },
+    {
+      "id": "rel-sfs-trench",
+      "text": "해령에서 만들어진 해양 지각은 양쪽으로 이동하다가 해구에서 침강해 소멸한다.",
+      "form": {
+        "condition": "해양저가 계속 확장할 때",
+        "type": "causal",
+        "scope": "해양 지각의 일생"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 생성 자리와 소멸 자리를 맞바꾼 것이라 해양저 확장설의 뼈대와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해구에서 만들어진 해양 지각이 양쪽으로 이동하다가 해령에서 침강해 소멸한다."
+    },
+    {
+      "id": "rel-sfs-age",
+      "text": "해령을 가운데 두고 볼 때 해령에서 멀어질수록 해양 지각의 나이는 많아진다.",
+      "form": {
+        "condition": "같은 해령의 양쪽을 견줄 때",
+        "type": "direct",
+        "scope": "해양 지각에 한함",
+        "antecedent": {
+          "quantity": "해령으로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "해양 지각의 나이",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「해령에서 멀어질수록 나이가 적어진다」는 해령에서 새로 만들어져 밀려난다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12지시01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "해령을 가운데 두고 볼 때 해령에서 멀어질수록 해양 지각의 나이는 적어진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "해양 지각은 해구에서 만들어져 해령 쪽으로 이동한다",
+      "why_wrong": "새 해양 지각은 해령에서 분출한 용암이 굳어 만들어지고, 해구는 그 지각이 가라앉아 사라지는 자리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sfs-trench"
+    },
+    {
+      "text": "해령에서 멀리 떨어진 해양 지각일수록 갓 만들어진 젊은 지각이다",
+      "why_wrong": "해령에서 만들어진 지각이 밀려나므로, 멀리 있는 지각일수록 오래전에 만들어진 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sfs-age"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "esys-echo-sounding"
+    },
+    {
+      "type": "prereq",
+      "target": "esys-mantle-convection-hypothesis"
+    },
+    {
+      "type": "next",
+      "target": "esys-paleomagnetism"
+    },
+    {
+      "type": "next",
+      "target": "esys-plate-tectonics"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시01-03"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅰ. 지구 탄생과 생동하는 지구",
+  "unit_id": "esys-1",
+  "topic_id": "esys-1-02-1",
+  "pages": [
+    26
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "해저 확장설"
+  ]
+}

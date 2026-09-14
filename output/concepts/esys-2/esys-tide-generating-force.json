@@ -1,0 +1,136 @@
+{
+  "id": "esys-tide-generating-force",
+  "concept_key": "concept:tide-generating-force",
+  "registry_status": "new",
+  "term": "기조력",
+  "notation": {
+    "hanja": "起潮力",
+    "hanja_gloss": "起 일으킬 기 · 潮 밀물 조 · 力 힘 력",
+    "english": "tide-generating force"
+  },
+  "definition": "천체가 지구의 물에 미치는 만유인력과, 공통 질량 중심을 도는 공전의 원심력이 합쳐지고 남은 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tgf-opposite",
+      "text": "기조력은 달에 가장 가까운 곳과 가장 먼 곳에서 가장 크고, 그 두 곳에서 방향은 서로 반대다.",
+      "form": {
+        "condition": "만유인력과 원심력의 합력을 지구 위 지점마다 따질 때",
+        "type": "classification",
+        "scope": "평형 조석론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 곳에서 기조력의 방향이 같다는 말인데, 가까운 쪽은 만유인력이 원심력보다 크고 먼 쪽은 그 반대여서 합력의 방향이 정반대가 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기조력은 달에 가장 가까운 곳과 가장 먼 곳에서 방향이 서로 같다."
+    },
+    {
+      "id": "rel-tgf-centrifugal",
+      "text": "원심력은 지구 위 어디서나 크기와 방향이 같지만, 달의 만유인력은 위치마다 크기와 방향이 다르다.",
+      "form": {
+        "condition": "지구-달 계의 공전을 생각할 때",
+        "type": "classification",
+        "scope": "평형 조석론"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 힘의 성질을 맞바꾼 것인데, 위치에 따라 달라지는 쪽은 거리에 좌우되는 만유인력이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "달의 만유인력이 지구 위 어디서나 같고, 공전의 원심력이 위치마다 다르다."
+    },
+    {
+      "id": "rel-tgf-magnitude",
+      "text": "기조력은 천체의 질량이 클수록 커지고, 거리가 멀수록 급격히 작아진다.",
+      "form": {
+        "condition": "다른 조건이 같을 때",
+        "type": "direct",
+        "scope": "달과 태양의 기조력을 견줄 때",
+        "antecedent": {
+          "quantity": "천체까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "기조력의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「질량이 클수록 작아지고 거리가 멀수록 커진다」인데, 질량에 비례하고 거리의 세제곱에 반비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "기조력은 천체의 질량이 클수록 작아지고, 거리가 멀수록 커진다."
+    },
+    {
+      "id": "rel-tgf-moon-vs-sun",
+      "text": "달은 태양보다 훨씬 가볍지만 훨씬 가까이 있어, 달의 기조력이 태양의 약 2배가 된다.",
+      "form": {
+        "condition": "질량의 비와 거리의 비를 함께 따질 때",
+        "type": "direct",
+        "scope": "지구가 받는 기조력"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「태양이 훨씬 무거우니 태양의 기조력이 달의 약 2배다」인데, 거리의 세제곱에 반비례해 가까운 달이 이기므로 반드시 거짓이다.",
+      "curriculum": [
+        "12지시02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양은 달보다 훨씬 무거우므로 태양의 기조력이 달의 약 2배다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양이 달보다 훨씬 크고 무거우니 조석도 태양이 주로 일으킨다.",
+      "why_wrong": "기조력은 거리의 세제곱에 반비례해서, 훨씬 가까운 달의 기조력이 태양의 약 2배다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tgf-moon-vs-sun"
+    },
+    {
+      "text": "기조력은 달이 지구를 끌어당기는 만유인력 그 자체다.",
+      "why_wrong": "만유인력에 공전의 원심력을 더한 합력이라, 달의 반대편에서는 달에서 멀어지는 쪽으로 기조력이 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tgf-opposite"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "esys-tide"
+    },
+    {
+      "type": "next",
+      "target": "esys-equilibrium-tide-theory"
+    },
+    {
+      "type": "next",
+      "target": "esys-spring-and-neap-tide"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12지시02-04"
+  ],
+  "subject": "지구시스템과학",
+  "unit": "Ⅱ. 해수의 운동",
+  "unit_id": "esys-2",
+  "topic_id": "esys-2-03-1",
+  "pages": [
+    70,
+    71
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "지도서 총론 25쪽 02-04 해설이 기조력을 '정성적으로' 도입하라고 제한해, 71쪽 곁단의 2GMR/d³ 식은 명제로 세우지 않고 비례 관계까지만 적었다.",
+    "C6 이 rel-tgf-composition 을 정의의 되풀이로 짚으면서, 그 invertible_reason 이 끌어온 근거(달의 반대편 만조)는 정의에서 나오지 않는 몫이라고 했다. 그 몫을 명제로 올리고 id 를 rel-tgf-opposite 로 바꿨다 (71쪽 본문)."
+  ]
+}
