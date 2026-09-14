@@ -1,0 +1,99 @@
+{
+  "id": "emag-monochromaticity",
+  "concept_key": "concept:monochromaticity",
+  "registry_status": "new",
+  "term": "단색성",
+  "notation": {
+    "hanja": "單色性",
+    "hanja_gloss": "單 홑 단 · 色 빛 색 · 性 성품 성",
+    "english": "monochromaticity"
+  },
+  "definition": "빛이 한 가지 파장만으로 이루어진 성질. 레이저 빛이 지닌 특징의 하나다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mono-prism",
+      "text": "여러 파장이 섞인 백색광은 프리즘에서 여러 색으로 갈라지지만, 파장이 하나인 레이저 빛은 갈라지지 않는다.",
+      "form": {
+        "condition": "같은 프리즘을 지나게 할 때",
+        "type": "classification",
+        "scope": "백색광과 레이저 빛의 비교",
+        "antecedent": {
+          "quantity": "빛의 파장 구성",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "프리즘에서의 분산",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 빛의 결과를 맞바꾸면 분산의 원리와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "백색광은 프리즘에서 갈라지지 않고, 레이저 빛이 여러 색으로 갈라진다."
+    },
+    {
+      "id": "rel-mono-use",
+      "text": "파장이 하나로 정해져 있어 특정 파장에만 반응하는 측정이나 분석에 쓸 수 있다.",
+      "form": {
+        "condition": "단일 파장의 빛이 필요한 기술에서",
+        "type": "causal",
+        "scope": "분광·계측 분야의 활용"
+      },
+      "invertible": false,
+      "invertible_reason": "쓸모를 말하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "단색성이란 빛의 색이 진하다는 뜻이다",
+      "why_wrong": "색의 진하기가 아니라 섞인 파장이 한 가지뿐이라는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mono-prism"
+    },
+    {
+      "text": "백색광도 프리즘을 지나면 한 가지 색만 남는다",
+      "why_wrong": "백색광에 섞여 있던 파장들이 저마다 다른 각도로 꺾여 여러 색으로 갈라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mono-prism"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-laser"
+    },
+    {
+      "type": "next",
+      "target": "emag-optical-communication"
+    },
+    {
+      "type": "related",
+      "target": "emag-directionality-of-light"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    87,
+    90
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,109 @@
+{
+  "id": "emag-directionality-of-light",
+  "concept_key": "concept:directionality-of-light",
+  "registry_status": "new",
+  "term": "지향성",
+  "notation": {
+    "hanja": "指向性",
+    "hanja_gloss": "指 가리킬 지 · 向 향할 향 · 性 성품 성",
+    "english": "directionality"
+  },
+  "definition": "빛이 나아가면서 옆으로 거의 퍼지지 않고 한 방향을 지키는 성질. 레이저 빛이 지닌 특징의 하나다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dir-spread",
+      "text": "일반적인 빛은 나아갈수록 넓게 퍼지지만 레이저 빛은 거의 퍼지지 않고 나아간다.",
+      "form": {
+        "condition": "같은 거리를 진행시켜 견줄 때",
+        "type": "classification",
+        "scope": "레이저와 일반 광원의 비교",
+        "antecedent": {
+          "quantity": "광원의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "퍼지는 정도",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 광원의 성질을 맞바꾸면 관찰 결과와 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일반적인 빛은 거의 퍼지지 않고 레이저 빛이 나아갈수록 넓게 퍼진다."
+    },
+    {
+      "id": "rel-dir-distance",
+      "text": "퍼짐이 작을수록 먼 곳에서도 빛의 세기가 남아 있어 거리 재기나 통신에 쓸 수 있다.",
+      "form": {
+        "condition": "같은 세기로 출발한 빛끼리 견줄 때",
+        "type": "inverse",
+        "scope": "먼 거리 전달. 공기 중 흡수·산란까지 없앤다는 뜻은 아니다",
+        "antecedent": {
+          "quantity": "퍼지는 정도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "먼 거리에서의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "퍼짐이 작을수록 세기가 덜 줄어들므로 '더 빨리 약해진다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "퍼짐이 작을수록 먼 곳에서 빛의 세기가 더 빨리 약해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "레이저 빛은 아무리 멀리 가도 조금도 퍼지지 않는다",
+      "why_wrong": "거의 퍼지지 않을 뿐 완전히 평행하지는 않다. 달까지 보낸 레이저도 도착할 무렵에는 넓어져 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dir-spread"
+    },
+    {
+      "text": "레이저가 멀리까지 닿는 것은 그저 밝기 때문이다",
+      "why_wrong": "밝기보다 옆으로 퍼지지 않는 성질이 먼 거리 전달을 가능하게 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dir-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-laser"
+    },
+    {
+      "type": "next",
+      "target": "emag-optical-communication"
+    },
+    {
+      "type": "related",
+      "target": "emag-monochromaticity"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    86,
+    87,
+    90
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

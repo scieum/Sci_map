@@ -1,0 +1,116 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-line-spectrum",
+  "concept_key": "concept:line-spectrum",
+  "registry_status": "new",
+  "term": "선스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'스펙트럼'이 영어 spectrum 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "line spectrum"
+  },
+  "definition": "특정 파장 자리에서만 밝은 선이나 검은 선으로 나타나는 스펙트럼. 원자의 에너지 준위 차가 그 자리를 정한다.",
+  "relations": [
+    {
+      "id": "rel-ls-element",
+      "text": "원자의 종류마다 에너지 준위 차가 달라 선이 나타나는 파장도 원소마다 다르다.",
+      "form": {
+        "condition": "서로 다른 원소의 스펙트럼을 견줄 때",
+        "type": "causal",
+        "scope": "원자의 선스펙트럼"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「원자의 종류가 달라도 선이 나타나는 파장은 같다」는 원소마다 선의 파장이 다르다고 한 124쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자의 종류가 달라도 선이 나타나는 파장은 같다."
+    },
+    {
+      "id": "rel-ls-same-position",
+      "text": "같은 원소라면 흡수선이 생기는 자리와 방출선이 생기는 자리가 서로 같다.",
+      "form": {
+        "condition": "같은 원소를 두 방식으로 관찰할 때",
+        "type": "conditional",
+        "scope": "같은 원소의 선스펙트럼"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「같은 원소라도 흡수선이 생기는 자리와 방출선이 생기는 자리는 서로 다르다」는 같은 원소의 흡수선과 방출선 자리가 같다고 한 124쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 원소라도 흡수선이 생기는 자리와 방출선이 생기는 자리는 서로 다르다."
+    },
+    {
+      "id": "rel-ls-types",
+      "text": "고온의 저밀도 기체에서는 방출 선스펙트럼이, 연속 스펙트럼의 빛이 저온 기체를 지나면 흡수 선스펙트럼이 나타난다.",
+      "form": {
+        "condition": "기체의 온도와 빛이 지나는 길에 따라",
+        "type": "classification",
+        "scope": "스펙트럼의 세 가지 유형"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「고온의 저밀도 기체에서는 흡수 선스펙트럼이, 연속 스펙트럼의 빛이 저온 기체를 지나면 방출 선스펙트럼이 나타난다」는 두 유형이 생기는 조건을 갈라 둔 124쪽 — 두 이름을 맞바꾼 문장과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고온의 저밀도 기체에서는 흡수 선스펙트럼이, 연속 스펙트럼의 빛이 저온 기체를 지나면 방출 선스펙트럼이 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "원소가 달라도 선의 위치는 같고 밝기만 다르다",
+      "why_wrong": "원소마다 에너지 준위 배치가 달라 선이 찍히는 파장 자체가 다르다. 그래서 지문처럼 원소를 가려낼 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ls-element"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-energy-level"
+    },
+    {
+      "type": "next",
+      "target": "emag-stellar-composition-from-spectrum"
+    },
+    {
+      "type": "related",
+      "target": "emag-continuous-spectrum"
+    },
+    {
+      "type": "same",
+      "target": "phys-line-spectrum"
+    },
+    {
+      "type": "same",
+      "target": "isci1-line-spectrum"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "aliases": [
+    "방출 선스펙트럼",
+    "흡수 선스펙트럼"
+  ],
+  "notes": [
+    "phys-line-spectrum·isci1-line-spectrum 과 concept_key 가 같아 same 으로 이었다. 두 카드 모두 실재함을 확인했다.",
+    "C6 겹침 — rel-ls-element 는 emag-energy-level 의 rel-el-element 와 사실상 같은 말이다. 두 카드 가운데 어느 쪽을 남길지는 사람이 정한다."
+  ]
+}

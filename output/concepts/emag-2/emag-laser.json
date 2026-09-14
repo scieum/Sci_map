@@ -1,0 +1,124 @@
+{
+  "id": "emag-laser",
+  "concept_key": "concept:laser",
+  "registry_status": "new",
+  "term": "레이저",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 LASER(Light Amplification by Stimulated Emission of Radiation)의 음차어라 한자어 표기가 없다.",
+    "english": "laser",
+    "symbol_display": "LASER",
+    "symbol_plain": "LASER"
+  },
+  "definition": "유도 방출로 빛을 증폭해 내보내는 장치. 에너지 공급원과 빛을 낼 매질, 마주 보는 거울 두 장으로 이루어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-laser-amplify",
+      "text": "유도 방출로 나온 빛은 이끌어 낸 빛과 방향·위상·파장이 같아 두 빛이 겹치며 증폭된다.",
+      "form": {
+        "condition": "준안정 상태의 원자에 준위 차만 한 에너지의 빛이 닿을 때",
+        "type": "causal",
+        "scope": "레이저 매질 안에서 일어나는 증폭"
+      },
+      "invertible": false,
+      "invertible_reason": "증폭이 일어나는 경로를 서술하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-laser-mirrors",
+      "text": "거울 축에 수직으로 나아가는 빛만 두 거울 사이를 거듭 오가며 증폭되므로 한 방향으로 정렬된 빛이 남는다.",
+      "form": {
+        "condition": "매질 양쪽에 거울을 마주 세웠을 때",
+        "type": "causal",
+        "scope": "레이저 발생 장치. 비스듬한 빛은 밖으로 새어 나가 증폭되지 못한다"
+      },
+      "invertible": false,
+      "invertible_reason": "장치가 빛을 고르는 방식을 서술하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-laser-output",
+      "text": "두 거울 가운데 한쪽을 일부만 반사하도록 만들어야 증폭된 빛이 밖으로 빠져나온다.",
+      "form": {
+        "condition": "매질 양쪽에 거울을 둔 구조에서",
+        "type": "conditional",
+        "scope": "레이저 빛이 나오는 출구"
+      },
+      "invertible": true,
+      "invertible_reason": "양쪽을 모두 완전 반사로 두면 빛이 갇혀 나오지 못하므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 거울을 모두 완전 반사 거울로 만들어야 증폭된 빛이 밖으로 빠져나온다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "레이저는 그저 아주 밝은 전구다",
+      "why_wrong": "전구 빛은 방향과 파장과 위상이 제각각이다. 레이저 빛은 유도 방출로 만들어져 이 셋이 고르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-laser-amplify"
+    },
+    {
+      "text": "거울 사이를 오가기만 하면 빛이 저절로 세지므로 매질은 없어도 된다",
+      "why_wrong": "증폭은 매질 속 원자에서 일어나는 유도 방출에서 나온다. 거울은 그 빛을 한 방향으로 붙들어 둘 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-laser-mirrors"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-stimulated-emission"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-population-inversion"
+    },
+    {
+      "type": "next",
+      "target": "emag-directionality-of-light"
+    },
+    {
+      "type": "next",
+      "target": "emag-monochromaticity"
+    },
+    {
+      "type": "next",
+      "target": "emag-coherence"
+    },
+    {
+      "type": "next",
+      "target": "emag-optical-communication"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    86,
+    88,
+    90
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "LASER"
+  ]
+}

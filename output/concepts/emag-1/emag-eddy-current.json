@@ -1,0 +1,107 @@
+{
+  "id": "emag-eddy-current",
+  "concept_key": "concept:eddy-current",
+  "registry_status": "new",
+  "term": "맴돌이 전류",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'맴돌이'는 고유어라 한자가 없다. 뒤에 붙은 '전류(電流)'만 한자어다.",
+    "english": "eddy current"
+  },
+  "definition": "도체판을 지나는 자기장이 변할 때 판 속에 소용돌이 모양으로 맴돌며 생기는 유도 전류.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-flux-change",
+      "text": "자석을 도체판에 가까이 하거나 멀리 하면 판을 지나는 자기장이 변해 판 안에 소용돌이 모양의 유도 전류가 생긴다.",
+      "form": {
+        "condition": "도체판과 자석이 서로 움직이고 있을 때",
+        "type": "causal",
+        "scope": "자석 가까이 놓인 도체판"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집은 문장만 떼어 읽으면 전자석처럼 자기장 자체가 변하는 경우에 참이 되어 반드시 거짓이라 할 수 없다 — 상대 운동 없이 맴돌이 전류를 만드는 인덕션 레인지가 그 예다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-braking",
+      "text": "맴돌이 전류는 변화를 방해하는 쪽으로 흘러 자석이나 도체판의 움직임을 늦추는 힘을 낸다.",
+      "form": {
+        "condition": "도체판 안에 맴돌이 전류가 흐르는 동안",
+        "type": "causal",
+        "scope": "자기 브레이크 같은 제동 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "돕는 쪽이면 에너지가 저절로 늘어나 렌츠 법칙과 반드시 어긋난다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "맴돌이 전류는 자석이나 도체판의 움직임을 더 빠르게 하는 힘을 낸다."
+    },
+    {
+      "id": "rel-comb-shape",
+      "text": "금속판에 빗살처럼 틈을 내면 전류가 맴돌 길이 끊겨 맴돌이 전류가 줄고 제동 효과도 약해진다.",
+      "form": {
+        "condition": "금속판에서 전류가 고리를 그릴 수 있는 길을 끊었을 때",
+        "type": "causal",
+        "scope": "진자로 흔드는 금속판"
+      },
+      "invertible": true,
+      "invertible_reason": "길이 끊기면 전류가 줄어드는 것이 확정적이라 커진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속판에 빗살처럼 틈을 내면 맴돌이 전류가 커져 제동 효과가 강해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "금속판이기만 하면 모양과 상관없이 똑같이 제동된다",
+      "why_wrong": "맴돌이 전류는 판 안에서 고리를 그리며 흐른다. 빗살처럼 길을 끊어 놓으면 전류가 줄고 제동 효과도 약해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-comb-shape"
+    },
+    {
+      "text": "맴돌이 전류는 자석이 도체판에 닿아 있어야 생긴다",
+      "why_wrong": "닿을 필요가 없다. 도체판을 지나는 자기장이 변하기만 하면 전자기 유도로 전류가 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-flux-change"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-lenz-law"
+    },
+    {
+      "type": "related",
+      "target": "emag-electromagnetic-induction"
+    }
+  ],
+  "curriculum": [
+    "12전자01-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-01",
+  "pages": [
+    38,
+    39,
+    50
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "자기 브레이크와 인덕션 레인지는 이 카드의 응용 사례로 묶고 따로 카드를 세우지 않았다.",
+    "rel-flux-change 는 invertible 을 false 로 내렸다. 자석과 도체판이 멈춰 있어도 전자석이면 자기선속이 변해 맴돌이 전류가 생기므로, 뒤집은 문장이 참이 되는 경우가 있다 (C6 defect 수정)."
+  ]
+}

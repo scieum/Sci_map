@@ -1,0 +1,95 @@
+{
+  "id": "emag-oled-display",
+  "concept_key": "concept:oled-display",
+  "registry_status": "new",
+  "term": "유기 발광 다이오드 디스플레이",
+  "notation": {
+    "hanja": "有機 發光",
+    "hanja_gloss": "有 있을 유 · 機 틀 기 · 發 필 발 · 光 빛 광",
+    "hanja_note": "'다이오드'와 '디스플레이'는 영어 음차어라 한자가 없다.",
+    "english": "organic light-emitting diode display",
+    "symbol_display": "OLED",
+    "symbol_plain": "OLED"
+  },
+  "definition": "화소를 이루는 광원이 스스로 빛의 3원색을 내는 화면. 뒤쪽 광원도 액정층도 따로 두지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oled-self-emission",
+      "text": "화소 자체가 색깔 빛을 내므로 이 화면에는 액정층이 필요 없다.",
+      "form": {
+        "condition": "유기 발광 다이오드를 화소의 광원으로 쓸 때",
+        "type": "causal",
+        "scope": "OLED 디스플레이. 액정을 쓰는 LCD 와 갈리는 대목이다"
+      },
+      "invertible": true,
+      "invertible_reason": "화소가 스스로 빛을 내면 액정으로 빛을 여닫을 까닭이 없으므로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화소 자체가 색깔 빛을 내지만 그래도 액정층이 있어야 화면이 켜진다."
+    },
+    {
+      "id": "rel-oled-antiglare",
+      "text": "수직 편광판과 파장판을 겹쳐 두면 전극에서 되튄 바깥 빛이 수평 편광으로 바뀌어 밖으로 나오지 못한다.",
+      "form": {
+        "condition": "햇빛이 강한 야외에서 화면을 볼 때",
+        "type": "causal",
+        "scope": "편광축이 한 번 지날 때 45°씩 바뀌는 파장판을 수직 편광판과 함께 쓸 때"
+      },
+      "invertible": false,
+      "invertible_reason": "차단이 이루어지는 경로를 서술하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "OLED에는 편광판이 전혀 쓰이지 않는다",
+      "why_wrong": "액정은 없지만 바깥 빛의 반사를 막으려고 편광판과 파장판을 함께 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oled-antiglare"
+    },
+    {
+      "text": "OLED도 뒤쪽 광원이 켜져 있어야 화면이 보인다",
+      "why_wrong": "화소를 이루는 광원이 직접 빛을 내므로 뒤쪽 광원이 없어도 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oled-self-emission"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-polarizing-filter"
+    },
+    {
+      "type": "related",
+      "target": "emag-liquid-crystal-display"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-03",
+  "pages": [
+    75
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1,
+  "aliases": [
+    "OLED"
+  ],
+  "notes": [
+    "rel-oled-antiglare 의 scope 에 든 파장판의 45° 는 교과서 75쪽 용어 설명 상자(text.jsonl 블록 p75-b14)에 실려 있다 — 「빛이 지나갈 때 편광 상태를 바꾸어 주는 광학 소자이다. OLED에서는 한번 지나갈 때 편광축이 45°씩 바뀌는 것을 사용한다」."
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "emag-transistor-amplification",
+  "concept_key": "concept:transistor-amplification",
+  "registry_status": "new",
+  "term": "트랜지스터의 증폭 작용",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'트랜지스터'가 transistor 의 음차라 표제어 전체에 대응하는 한자어가 없다. '증폭 작용(增幅作用)'만 한자어다.",
+    "english": "transistor amplification",
+    "symbol_display": "I_C = βI_B",
+    "symbol_plain": "IC = betaIB"
+  },
+  "definition": "작은 베이스 전류의 변화로 훨씬 큰 컬렉터 전류의 변화를 얻어 약한 신호를 크게 키우는 트랜지스터의 구실.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-current-gain",
+      "text": "컬렉터 전류는 베이스 전류에 비례하므로 베이스 전류를 조금만 바꿔도 컬렉터 전류는 증폭률만큼 크게 바뀐다.",
+      "form": {
+        "condition": "전류 증폭률이 일정할 때",
+        "type": "direct",
+        "scope": "공통 이미터 증폭 회로",
+        "antecedent": {
+          "quantity": "베이스 전류",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "컬렉터 전류",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "비례 관계라 줄어든다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "베이스 전류를 키우면 컬렉터 전류는 오히려 줄어든다."
+    },
+    {
+      "id": "rel-beta",
+      "text": "같은 입력 신호를 넣어도 전류 증폭률이 큰 트랜지스터일수록 출력 신호가 크다.",
+      "form": {
+        "condition": "입력 신호의 크기가 일정할 때",
+        "type": "direct",
+        "scope": "공통 이미터 증폭 회로",
+        "antecedent": {
+          "quantity": "전류 증폭률",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "출력 신호의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "증폭률에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류 증폭률이 클수록 같은 입력에서 얻는 출력 신호가 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "증폭 작용은 트랜지스터가 없던 에너지를 새로 만들어 내는 것이다",
+      "why_wrong": "출력에 실리는 에너지는 컬렉터 쪽 전원에서 온다. 트랜지스터는 작은 베이스 전류로 그 큰 흐름을 조절할 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-current-gain"
+    },
+    {
+      "text": "증폭 회로의 출력 신호 크기는 입력 신호와 상관없이 전류 증폭률만으로 정해진다",
+      "why_wrong": "출력은 입력과 증폭률이 함께 정한다. 증폭률이 같아도 입력 신호가 약하면 출력도 그만큼 작다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-beta"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-transistor"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-bias-voltage"
+    }
+  ],
+  "curriculum": [
+    "12전자01-07"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-03",
+  "pages": [
+    46,
+    47,
+    50
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "바이어스 명제(rel-bias-needed)를 빼고 emag-bias-voltage/rel-full-signal 한 자리로 모았다 — 세 명제가 거의 같은 OX 를 만들던 것을 정리한 것이다(C6 중복). 바이어스가 없으면 반주기만 증폭된다는 오개념도 그 카드에 있으므로, 이 카드의 두 번째 오개념은 증폭률 쪽으로 갈아 끼웠다."
+  ]
+}

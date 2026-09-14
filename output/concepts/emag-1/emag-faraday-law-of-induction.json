@@ -1,0 +1,135 @@
+{
+  "id": "emag-faraday-law-of-induction",
+  "concept_key": "concept:faraday-law-of-induction",
+  "registry_status": "new",
+  "term": "전자기 유도 법칙",
+  "notation": {
+    "hanja": "電磁氣誘導法則",
+    "hanja_gloss": "電 번개 전 · 磁 자석 자 · 氣 기운 기 · 誘 꾈 유 · 導 이끌 도 · 法 법 법 · 則 법칙 칙",
+    "english": "Faraday's law of induction",
+    "symbol_display": "V = −N ΔΦ/Δt",
+    "symbol_plain": "V = -N deltaPhi/deltat"
+  },
+  "definition": "유도 기전력의 크기를 코일의 감은 수와 자기선속의 시간 변화율을 곱한 값으로 정하고, 부호로 그 방향까지 담은 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-product",
+      "text": "감은 수를 2배로 늘리면서 자기선속의 시간 변화율을 절반으로 줄이면 유도 기전력의 크기는 달라지지 않는다.",
+      "form": {
+        "condition": "감은 수와 자기선속의 시간 변화율을 함께 바꿀 때",
+        "type": "conditional",
+        "scope": "자기선속이 변하는 코일",
+        "antecedent": {
+          "quantity": "감은 수와 자기선속 시간 변화율의 곱",
+          "direction": "일정"
+        },
+        "consequent": {
+          "quantity": "유도 기전력의 크기",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 곱이 그대로면 기전력도 그대로이므로, 2배가 된다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감은 수를 2배로 늘리면서 자기선속의 시간 변화율을 절반으로 줄이면 유도 기전력의 크기는 2배가 된다."
+    },
+    {
+      "id": "rel-minus-sign",
+      "text": "식 앞의 (−)부호는 크기를 줄이라는 뜻이 아니라, 유도 기전력이 자기선속의 변화를 방해하는 쪽으로 생긴다는 표시다.",
+      "form": {
+        "condition": "전자기 유도 법칙의 식에서 부호를 해석할 때",
+        "type": "conditional",
+        "scope": "전자기 유도 법칙의 식"
+      },
+      "invertible": true,
+      "invertible_reason": "부호가 방향을 담은 표시라는 것이 확정적이라 크기가 음수라고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식 앞의 (−)부호는 유도 기전력의 크기가 음수라는 뜻이다."
+    },
+    {
+      "id": "rel-graph",
+      "text": "자기선속-시간 그래프의 기울기가 가파른 구간일수록 그때의 유도 기전력이 크고, 기울기가 0인 구간에서는 기전력도 0이다.",
+      "form": {
+        "condition": "코일의 감은 수가 일정할 때",
+        "type": "direct",
+        "scope": "자기선속이 시간에 따라 변하는 코일",
+        "antecedent": {
+          "quantity": "자기선속-시간 그래프의 기울기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 기전력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "기울기가 곧 변화율이라 0인 구간에서 최대라고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기선속-시간 그래프의 기울기가 0인 구간에서 유도 기전력이 가장 크다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기선속이 줄어드는 구간에서는 유도 기전력이 생기지 않는다",
+      "why_wrong": "기전력의 크기를 정하는 것은 변화의 방향이 아니라 변화율의 크기다. 줄어들 때도 기전력이 생기고 방향만 반대가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-graph"
+    },
+    {
+      "text": "식에 (−)부호가 붙어 있으므로 유도 기전력의 크기는 음수다",
+      "why_wrong": "(−)부호는 크기가 아니라 방향을 나타내는 표시로, 유도 전류가 변화를 방해하는 쪽으로 흐른다는 렌츠 법칙을 담고 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-minus-sign"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-induced-emf"
+    },
+    {
+      "type": "next",
+      "target": "emag-lenz-law"
+    },
+    {
+      "type": "next",
+      "target": "emag-transformer"
+    },
+    {
+      "type": "next",
+      "target": "emag-inductor"
+    }
+  ],
+  "curriculum": [
+    "12전자01-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-01",
+  "pages": [
+    35,
+    50
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "패러데이 법칙"
+  ],
+  "notes": [
+    "rel-product 는 카드 definition 을 문장으로 되풀이하고 emag-induced-emf 의 rel-turns·rel-rate 와도 겹쳐(C6 defect) 내용을 갈아 끼웠다. 지금은 두 양을 반대 방향으로 함께 바꾸면 곱이 그대로라 기전력이 변하지 않는다는, 한쪽씩 보아서는 나오지 않는 명제를 맡는다."
+  ]
+}

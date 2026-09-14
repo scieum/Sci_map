@@ -1,0 +1,130 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-quantum-superposition",
+  "concept_key": "concept:quantum-superposition",
+  "registry_status": "new",
+  "term": "중첩 상태",
+  "notation": {
+    "hanja": "重疊狀態",
+    "hanja_gloss": "重 무거울 중 · 疊 겹칠 첩 · 狀 형상 상 · 態 모습 태",
+    "english": "quantum superposition"
+  },
+  "definition": "여러 가능성을 한꺼번에 지닌 상태. 이중 슬릿 앞의 전자가 두 슬릿을 지날 가능성을 함께 갖는 것이 그 예다.",
+  "relations": [
+    {
+      "id": "rel-sup-not-ignorance",
+      "text": "중첩은 둘 중 어느 쪽인지 우리가 모르는 상태가 아니라 두 가능성을 함께 지닌 상태다.",
+      "form": {
+        "condition": "측정하기 전의 상태를 기술할 때",
+        "type": "classification",
+        "scope": "코펜하겐 해석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중첩은 둘 중 어느 쪽인지 우리가 모를 뿐인 상태다」는 중첩을 두 상태가 함께 있는 것으로 규정한 104·107쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중첩은 둘 중 어느 쪽인지 우리가 모를 뿐인 상태다."
+    },
+    {
+      "id": "rel-sup-interference",
+      "text": "전자가 중첩 상태로 나아가는 동안에만 스크린에 간섭무늬가 쌓인다.",
+      "form": {
+        "condition": "경로를 측정하지 않을 때",
+        "type": "conditional",
+        "scope": "전자의 이중 슬릿 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자의 중첩이 깨진 뒤에도 스크린에는 간섭무늬가 쌓인다」는 경로를 재어 중첩이 깨지면 간섭 줄무늬가 나타나지 않는다고 한 104쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자의 중첩이 깨진 뒤에도 스크린에는 간섭무늬가 쌓인다."
+    },
+    {
+      "id": "rel-sup-micro",
+      "text": "중첩은 미시 입자에서 확인되는 상태이고 일상 크기의 물체에서는 관찰되지 않는다.",
+      "form": {
+        "condition": "관찰 대상의 크기를 견줄 때",
+        "type": "classification",
+        "scope": "미시 세계"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 104쪽 도입이 슈뢰딩거의 고양이로 거시 물체의 중첩을 꺼내 놓아 '일상 크기의 물체에서도 중첩이 관찰된다'가 이 교과서 안에서 반드시 거짓이라 단정하기 어렵다. 진위 판단이 필요하다 — C8.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sup-whole",
+      "text": "중첩 상태로 나아간 전자라도 스크린에 닿을 때는 한 개분의 점 하나로 찍힌다.",
+      "form": {
+        "condition": "전자를 한 개씩 보내 도착점을 볼 때",
+        "type": "conditional",
+        "scope": "단일 전자 이중 슬릿 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중첩 상태로 나아간 전자는 스크린에 반쪽짜리 점 두 개로 나뉘어 찍힌다」는 전자 1개를 입사시키면 도착점이 1개 찍힌다고 한 102·108쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중첩 상태로 나아간 전자는 스크린에 반쪽짜리 점 두 개로 나뉘어 찍힌다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중첩은 전자가 실제로는 한쪽 슬릿을 지났는데 우리가 모를 뿐인 상태다",
+      "why_wrong": "그렇다면 두 슬릿을 지난 물질파가 겹칠 일이 없어 간섭무늬가 생기지 않는다. 중첩은 무지가 아니라 상태 자체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sup-not-ignorance"
+    },
+    {
+      "text": "중첩 상태에서는 전자가 반씩 쪼개져 두 슬릿을 하나씩 지난다",
+      "why_wrong": "스크린에는 언제나 전자 한 개분의 점이 통째로 찍힌다. 쪼개진 반쪽이 검출된 적은 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sup-whole"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-probability-wave-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-measurement-state-change"
+    },
+    {
+      "type": "next",
+      "target": "emag-qubit"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-02"
+  ],
+  "topic_id": "emag-3-1-02",
+  "pages": [
+    104,
+    108
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "aliases": [
+    "양자 중첩"
+  ],
+  "notes": [
+    "★C8 진위 판단 요청 — rel-sup-micro 의 invertible 은 false 로 두었다. 104쪽 도입이 슈뢰딩거의 고양이로 거시 물체의 중첩을 이야기로 꺼내 놓아, '일상 크기의 물체에서도 중첩이 관찰된다'가 이 교과서 안에서 반드시 거짓이라고 단정하기 어렵다.",
+    "오개념 연결 정리 — '전자가 반씩 쪼개져 두 슬릿을 하나씩 지난다'의 반박 근거가 다른 카드(rel-sed-one-dot)에 있어, 이 카드에 rel-sup-whole 명제를 세우고 그쪽에 이었다. emag-single-electron-double-slit 의 rel-sed-one-dot 과 같은 사실을 쓰므로 D1 에서 겹칠 수 있다."
+  ]
+}

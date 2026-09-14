@@ -1,0 +1,126 @@
+{
+  "id": "emag-light-diffraction",
+  "concept_key": "concept:diffraction-of-light",
+  "registry_status": "new",
+  "term": "빛의 회절",
+  "notation": {
+    "hanja": "回折",
+    "hanja_gloss": "回 돌 회 · 折 꺾을 절",
+    "hanja_note": "'빛'은 고유어이고 '회절'만 한자어다.",
+    "english": "diffraction of light"
+  },
+  "definition": "좁은 틈을 지나거나 장애물 가장자리를 돌아 파동이 뒤쪽까지 퍼지는 현상. 빛에서도 나타나므로 빛이 파동임을 뒷받침한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ld-slit",
+      "text": "틈이 좁을수록 그곳을 지난 파동은 더 넓게 퍼져 나간다.",
+      "form": {
+        "condition": "파장을 바꾸지 않고 틈만 좁힐 때",
+        "type": "inverse",
+        "scope": "틈의 폭이 파장과 견줄 만한 범위. 틈이 파장보다 훨씬 넓으면 거의 직진한다",
+        "antecedent": {
+          "quantity": "틈의 폭",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "퍼지는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "좁은 틈일수록 퍼짐이 커지므로 '덜 퍼진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "틈이 좁을수록 그곳을 지난 파동은 덜 퍼져 나간다."
+    },
+    {
+      "id": "rel-ld-wavelength",
+      "text": "파장이 긴 파동일수록 같은 틈에서 회절이 뚜렷하게 일어난다.",
+      "form": {
+        "condition": "틈의 크기를 바꾸지 않고 파장만 달리할 때",
+        "type": "direct",
+        "scope": "같은 틈을 지나는 파동끼리의 비교. 저음이 담 너머로 잘 넘어가는 까닭이다",
+        "antecedent": {
+          "quantity": "파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "회절의 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 길수록 회절이 잘 되므로 '약하게 일어난다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 긴 파동일수록 같은 틈에서 회절이 약하게 일어난다."
+    },
+    {
+      "id": "rel-ld-light-wave",
+      "text": "레이저를 좁은 틈에 통과시키면 틈보다 넓은 자리까지 빛이 번져, 빛도 파동처럼 행동함을 보여 준다.",
+      "form": {
+        "condition": "슬릿의 폭이 충분히 좁을 때",
+        "type": "causal",
+        "scope": "파동성이 드러나는 실험 조건. 넓은 틈에서는 그림자 경계가 뚜렷해진다"
+      },
+      "invertible": false,
+      "invertible_reason": "실험이 무엇을 보여 주는가를 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛은 직진만 하므로 장애물 뒤쪽에는 빛이 전혀 가지 않는다",
+      "why_wrong": "틈이나 장애물이 파장과 견줄 만큼 작으면 빛도 뒤쪽으로 돌아 퍼진다. 그림자 경계가 흐려지는 것이 그 증거다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ld-light-wave"
+    },
+    {
+      "text": "박쥐가 쓰는 초음파는 파장이 짧으니 회절이 더 잘 된다",
+      "why_wrong": "회절은 파장이 길수록 잘 일어난다. 파장이 짧은 초음파는 잘 퍼지지 않아 반사로 장애물을 찾는 데 쓰인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ld-wavelength"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-single-slit-diffraction-pattern"
+    },
+    {
+      "type": "related",
+      "target": "emag-light-interference"
+    },
+    {
+      "type": "related",
+      "target": "emag-resolving-power",
+      "note": "회절이 광학 기기의 한계를 정한다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-01",
+  "pages": [
+    62,
+    63,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

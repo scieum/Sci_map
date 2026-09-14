@@ -3468,3 +3468,224 @@ subjects:
     extras:
       wrapup: 128
       citizen: 131
+- code: emag
+  name: 전자기와 양자
+  course_type: 진로선택
+  grade: null
+  curriculum: 2022 개정
+  standard_prefix: 12전자
+  textbook:
+    file: inbox/textbook/22개정/물리학/고_전자기와 양자(최혁준)_교과서_2쇄.pdf
+    publisher: 천재교과서
+    author: 최혁준 외
+    pages: 140
+    note: |-
+      ★위계는 「물리학」·「역학과 에너지」와 같다 — 대단원 > 중단원(1~) > **소단원(01~)**. 같은 저자·같은 판형이라 번호가 한 칸 밀려 있다. sections 의 numeral 이 '1'·'2' 이고 topics 가 '01'~'04' 인 것을 오타로 보지 마라.
+
+      인쇄 쪽수 == PDF 쪽수 (1-base). 앞부속 p1~8, 부록 p132~140 은 본문이 아니다. 대단원 사이의 p56·p96 은 빈 쪽이다.
+
+      ★★상자가 「역학과 에너지」와 다르다. mediabox = (0, 0, 683.149, 867.401) 인데 cropbox = (36.85, 36.85, 646.299, 830.551) 로 사방 36.85pt 안쪽이다. pdfplumber 는 mediabox 를, pypdfium2 는 cropbox 를 기준으로 삼으므로 page.bbox 가 (0,0) 이라고 보정이 필요 없다고 믿으면 상자가 통째로 37pt 어긋난다.
+
+      ★C7 렌더 좌표 보정값을 실측했다 — scale=1 에서 render = (x - 36.85, top - 36.85). y 부호가 **-** 다(「물리학」과 같고 「역학과 에너지」와는 반대). 네 쪽(13·61·101·121)에서 낱말 상자 안 잉크 밀도가 0.36~0.42 로, 대안(0.08~0.19)과 뚜렷이 갈린다.
+
+      대단원 경계는 표지 쪽(9 · 57 · 97)부터다. 중단원 표지가 2쪽이고 그 뒤부터 소단원이다. 중단원 끝 2쪽은 「핵심 개념 정리하기 / 개념 확인하기」라 review 를 그 첫 쪽으로 두었다. 대단원 끝은 「개념 적용하기」 2쪽 + 시민 면 2쪽이다.
+  guide:
+    file: inbox/textbook/22개정/물리학/고_전자기와 양자(최혁준)_지도서_2쇄.pdf
+    pages: 336
+    note: |-
+      표준 배치다 — 총론 '나. 성취기준' 절(19~21쪽)에 띄어쓰기가 살아 있어 1차, 각론의 「최소 성취 수준 평가」 쪽(170~260, 소단원마다 한 쪽)이 대조본이다.
+
+      ★각론 172쪽의 곁주 코드가 [12물리01-02] 로 오식돼 있다 — 「물리학」 접두어를 잘못 쓴 것이고 그 쪽은 12전자01-02 의 쪽이다. 본문은 총론과 글자 그대로 같아 standards.yaml 의 해당 건을 사람이 짝만 바로잡아 crosscheck 를 '교사 확정' 으로 두었다. extract_standards.py 를 다시 돌리면 '미대조' 로 되돌아간다. (「역학과 에너지」 지도서 166쪽에도 같은 종류의 오식이 있다 — 이 시리즈의 버릇으로 보인다.)
+  units:
+  - id: emag-1
+    numeral: Ⅰ
+    title: 전자기적 상호작용
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 9
+    - 55
+    sections:
+    - id: emag-1-1
+      numeral: '1'
+      title: 전기장과 자기장
+      pages:
+      - 10
+      - 31
+      review: 30
+      topics:
+      - id: emag-1-1-01
+        numeral: '01'
+        title: 전기력선과 등전위면
+        pages:
+        - 12
+        - 17
+      - id: emag-1-1-02
+        numeral: '02'
+        title: 정전기 유도와 유전 분극
+        pages:
+        - 18
+        - 21
+      - id: emag-1-1-03
+        numeral: '03'
+        title: 전류에 의한 자기장
+        pages:
+        - 22
+        - 25
+      - id: emag-1-1-04
+        numeral: '04'
+        title: 로런츠 힘
+        pages:
+        - 26
+        - 29
+    - id: emag-1-2
+      numeral: '2'
+      title: 전자기 활용
+      pages:
+      - 32
+      - 51
+      review: 50
+      topics:
+      - id: emag-1-2-01
+        numeral: '01'
+        title: 전자기 유도
+        pages:
+        - 34
+        - 39
+      - id: emag-1-2-02
+        numeral: '02'
+        title: 저항, 축전기, 인덕터의 활용
+        pages:
+        - 40
+        - 43
+      - id: emag-1-2-03
+        numeral: '03'
+        title: 반도체 소자
+        pages:
+        - 44
+        - 49
+    extras:
+      wrapup: 52
+      citizen: 54
+  - id: emag-2
+    numeral: Ⅱ
+    title: 빛과 정보 통신
+    priority: 1
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 57
+    - 95
+    sections:
+    - id: emag-2-1
+      numeral: '1'
+      title: 광학 기술
+      pages:
+      - 58
+      - 77
+      review: 76
+      topics:
+      - id: emag-2-1-01
+        numeral: '01'
+        title: 빛의 간섭과 회절
+        pages:
+        - 60
+        - 65
+      - id: emag-2-1-02
+        numeral: '02'
+        title: 렌즈와 거울을 이용한 광학 기기
+        pages:
+        - 66
+        - 71
+      - id: emag-2-1-03
+        numeral: '03'
+        title: 편광
+        pages:
+        - 72
+        - 75
+    - id: emag-2-2
+      numeral: '2'
+      title: 정보 통신
+      pages:
+      - 78
+      - 91
+      review: 90
+      topics:
+      - id: emag-2-2-01
+        numeral: '01'
+        title: 광전 효과와 관련 기술
+        pages:
+        - 80
+        - 85
+      - id: emag-2-2-02
+        numeral: '02'
+        title: 레이저의 원리와 활용
+        pages:
+        - 86
+        - 89
+    extras:
+      wrapup: 92
+      citizen: 94
+  - id: emag-3
+    numeral: Ⅲ
+    title: 양자와 미시 세계
+    priority: 2
+    status: pending
+    semester: null
+    stage: null
+    pages:
+    - 97
+    - 131
+    sections:
+    - id: emag-3-1
+      numeral: '1'
+      title: 양자 기술
+      pages:
+      - 98
+      - 109
+      review: 108
+      topics:
+      - id: emag-3-1-01
+        numeral: '01'
+        title: 이중성과 확률 파동
+        pages:
+        - 100
+        - 103
+      - id: emag-3-1-02
+        numeral: '02'
+        title: 확률 파동과 중첩
+        pages:
+        - 104
+        - 107
+    - id: emag-3-2
+      numeral: '2'
+      title: 양자 역학·핵융합
+      pages:
+      - 110
+      - 127
+      review: 126
+      topics:
+      - id: emag-3-2-01
+        numeral: '01'
+        title: 터널 효과
+        pages:
+        - 112
+        - 115
+      - id: emag-3-2-02
+        numeral: '02'
+        title: 불확정성 원리
+        pages:
+        - 116
+        - 119
+      - id: emag-3-2-03
+        numeral: '03'
+        title: 핵융합
+        pages:
+        - 120
+        - 125
+    extras:
+      wrapup: 128
+      citizen: 130

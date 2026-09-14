@@ -1,0 +1,152 @@
+{
+  "id": "emag-electric-field-line",
+  "concept_key": "concept:electric-field-line",
+  "registry_status": "new",
+  "term": "전기력선",
+  "notation": {
+    "hanja": "電氣力線",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 力 힘 력 · 線 줄 선",
+    "english": "electric field line"
+  },
+  "definition": "전기장 속 단위 양전하가 받는 전기력의 방향을 차례로 이어 그려, 전기장을 눈으로 보게 만든 선.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-density-strength",
+      "text": "한 그림 안에서 견줄 때 전기력선이 빽빽하게 지나는 곳일수록 그 자리의 전기장이 세다.",
+      "form": {
+        "condition": "같은 전기력선 그림 안에서 견줄 때",
+        "type": "direct",
+        "scope": "정지한 전하가 만드는 전기장을 그린 전기력선",
+        "antecedent": {
+          "quantity": "전기력선의 조밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "조밀도와 세기가 같이 커지는 관계라 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기력선이 빽빽하게 지나는 곳일수록 전기장의 세기가 작다."
+    },
+    {
+      "id": "rel-tangent-direction",
+      "text": "전기력선 위 한 점에서 그은 접선이 가리키는 쪽이 그 점의 전기장 방향이라, 두 전기력선은 서로 엇갈릴 수 없다.",
+      "form": {
+        "condition": "전기력선 위의 한 점을 잡아 방향을 읽을 때",
+        "type": "conditional",
+        "scope": "정지한 전하가 만드는 전기장"
+      },
+      "invertible": true,
+      "invertible_reason": "한 점의 전기장 방향은 하나뿐이라 교차를 허용하면 반드시 모순이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기력선은 한 점에서 서로 엇갈리며 교차할 수 있다."
+    },
+    {
+      "id": "rel-count-charge",
+      "text": "같은 기준으로 그린 그림에서 전하량이 클수록 그 전하에 드나드는 전기력선의 수가 많다.",
+      "form": {
+        "condition": "한 그림에서 같은 기준으로 선을 그렸을 때",
+        "type": "direct",
+        "scope": "정지한 점전하",
+        "antecedent": {
+          "quantity": "전하량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "드나드는 전기력선의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전하량에 비례해 선을 그리는 약속이라 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전하량이 클수록 그 전하에 드나드는 전기력선의 수가 적다."
+    },
+    {
+      "id": "rel-start-end",
+      "text": "전기력선은 양전하에서 시작해 음전하에서 끝나므로, 선이 모여 들어가는 쪽 전하는 음전하다.",
+      "form": {
+        "condition": "전하 둘레의 전기력선을 보고 전하의 종류를 읽을 때",
+        "type": "classification",
+        "scope": "정지한 전하가 만드는 전기장",
+        "antecedent": {
+          "quantity": "전기력선이 드나드는 방향",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "전하의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "들고 나는 방향을 부호와 맞바꾸면 약속과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기력선이 모여 들어가는 쪽 전하는 양전하다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기력선은 전하가 실제로 지나가는 운동 경로다",
+      "why_wrong": "전기력선은 각 지점의 전기력 방향을 이은 선일 뿐이다. 전하의 실제 경로는 처음 속도에 따라 달라져 전기력선과 어긋날 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tangent-direction"
+    },
+    {
+      "text": "음전하 주위에서도 전기력선은 전하에서 바깥으로 뻗어 나온다",
+      "why_wrong": "전기력선은 양전하에서 나와 음전하로 들어가기로 약속되어 있어, 음전하 주위에서는 전하 쪽으로 모여든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-start-end"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electric-field"
+    },
+    {
+      "type": "next",
+      "target": "emag-equipotential-surface"
+    },
+    {
+      "type": "related",
+      "target": "emag-superposition-of-electric-fields"
+    },
+    {
+      "type": "related",
+      "target": "emag-magnetic-field-line"
+    }
+  ],
+  "curriculum": [
+    "12전자01-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-01",
+  "pages": [
+    14,
+    15,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

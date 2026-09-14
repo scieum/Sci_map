@@ -1,0 +1,121 @@
+{
+  "id": "emag-induced-emf",
+  "concept_key": "concept:induced-emf",
+  "registry_status": "new",
+  "term": "유도 기전력",
+  "notation": {
+    "hanja": "誘導起電力",
+    "hanja_gloss": "誘 꾈 유 · 導 이끌 도 · 起 일어날 기 · 電 번개 전 · 力 힘 력",
+    "english": "induced electromotive force",
+    "symbol_display": "V = −N ΔΦ/Δt",
+    "symbol_plain": "V = -N deltaPhi/deltat"
+  },
+  "definition": "자기선속이 변할 때 코일 양 끝에 생겨 유도 전류를 흐르게 하는 전압.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-turns",
+      "text": "같은 자기선속 변화를 주어도 코일을 많이 감을수록 유도 기전력이 커진다.",
+      "form": {
+        "condition": "자기선속의 시간 변화율이 일정할 때",
+        "type": "direct",
+        "scope": "여러 번 감은 코일",
+        "antecedent": {
+          "quantity": "코일의 감은 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 기전력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "감은 수에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코일을 많이 감을수록 유도 기전력은 작아진다."
+    },
+    {
+      "id": "rel-rate",
+      "text": "유도 기전력의 크기를 정하는 것은 자기선속의 값이 아니라 단위 시간 동안 변한 양이다.",
+      "form": {
+        "condition": "코일의 감은 수가 일정할 때",
+        "type": "direct",
+        "scope": "자기선속이 변하는 코일",
+        "antecedent": {
+          "quantity": "자기선속의 시간 변화율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 기전력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변화율에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기선속이 빠르게 변할수록 유도 기전력은 작아진다."
+    },
+    {
+      "id": "rel-emf-vs-current",
+      "text": "유도 기전력은 회로가 끊겨 전류가 흐르지 않아도 생기지만, 유도 전류는 회로가 닫혀야 흐른다.",
+      "form": {
+        "condition": "코일이 열린 회로로 이어져 있을 때",
+        "type": "conditional",
+        "scope": "코일과 그에 이어진 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "기전력과 전류의 성립 조건이 다른 것이 확정적이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유도 전류는 회로가 끊겨도 흐르지만 유도 기전력은 회로가 닫혀야 생긴다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유도 기전력은 코일을 지나는 자기선속이 클수록 크다",
+      "why_wrong": "크기를 정하는 것은 자기선속의 값이 아니라 시간당 변화율이다. 값이 커도 변하지 않으면 기전력은 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rate"
+    },
+    {
+      "text": "유도 기전력과 유도 전류는 같은 말이다",
+      "why_wrong": "기전력은 전하를 밀어내는 전압이고 전류는 전하의 흐름이다. 회로가 끊겨 있으면 기전력이 생겨도 전류는 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-emf-vs-current"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electromagnetic-induction"
+    },
+    {
+      "type": "next",
+      "target": "emag-faraday-law-of-induction"
+    }
+  ],
+  "curriculum": [
+    "12전자01-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-01",
+  "pages": [
+    34,
+    35
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

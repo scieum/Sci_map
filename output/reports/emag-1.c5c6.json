@@ -1,0 +1,1988 @@
+{
+  "unit_id": "emag-1",
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "generated_at": "2026-09-14T10:13:48",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "inputs": {
+    "cards": "output/concepts/emag-1/ (39장)",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml (12전자01-01~01-07)",
+    "guide": "inbox/textbook/22개정/물리학/고_전자기와 양자(최혁준)_지도서_2쇄.pdf 총론 19~20쪽 (성취기준 해설·적용 시 고려 사항)",
+    "source": "output/source/emag-1/text.jsonl",
+    "backlog": "docs/unit_backlog.yaml"
+  },
+  "preflight": {
+    "validate_tags.py": "통과 (카드 39장, 지적 0건) — 실재하지 않는 코드·접두어 불일치·태그 0개 없음",
+    "crosscheck_note": "12전자01-02 의 crosscheck 는 '교사 확정'이다. 스크립트도 '일치'와 같은 신뢰도로 받고 있으며, 이 값을 근거로 이탈 판정을 내리지 않았다.",
+    "track_facts_skill": "phys-facts 스킬이 없다(.claude/skills 에 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 만 있다). 대조는 output/source/emag-1/text.jsonl 원문과 지도서 총론으로 갈음했고 스킬 대조는 건너뛰었다."
+  },
+  "curriculum_constraints": [
+    "[12전자01-01, 03] 등전위면·전기력선·자기력선을 그리는 방법 대신 이미 그려진 그림을 해석하여 추리하는 방식으로 다룬다",
+    "[12전자01-04] 도선이 받는 힘·입자 가속기·토카막·밴앨런대 등 로런츠 힘과 관련된 현상과 사례를 다룬다",
+    "[12전자01-06] 저항·축전기·인덕터를 활용하는 장치를 에너지 관점에서 정성적으로 설명한다",
+    "[12전자01-07] 정류·증폭·기초 논리회로를 회로 위주로 다루며 미시적 작동 원리에 초점을 맞추지 않도록 한다"
+  ],
+  "curriculum": {
+    "checked": 39,
+    "findings": [
+      {
+        "card_id": "emag-application-of-electrostatic-induction",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-02"
+        ],
+        "suggested": [
+          "12전자01-02"
+        ],
+        "reason": "카드의 쪽수 [20, 21] 가 성취기준 12전자01-02 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-bias-voltage",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-07"
+        ],
+        "suggested": [
+          "12전자01-07"
+        ],
+        "reason": "카드의 쪽수 [45, 48] 가 성취기준 12전자01-07 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-capacitance",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-06"
+        ],
+        "suggested": [
+          "12전자01-06"
+        ],
+        "reason": "교과서 본문 p40 이 전기 용량 식을 본문으로 싣는다. 다만 01-06 은 '에너지 관점에서 정성적으로'라 했으므로 용량 계산 문항으로 확장하지 않는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-capacitor-in-ac-circuit",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-06"
+        ],
+        "suggested": [
+          "12전자01-06"
+        ],
+        "reason": "카드의 쪽수 [41, 43, 50] 가 성취기준 12전자01-06 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:alternating-current"
+        ]
+      },
+      {
+        "card_id": "emag-circular-motion-of-charged-particle",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-04"
+        ],
+        "suggested": [
+          "12전자01-04"
+        ],
+        "reason": "카드의 쪽수 [28] 가 성취기준 12전자01-04 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:centripetal-force",
+          "concept:uniform-circular-motion"
+        ]
+      },
+      {
+        "card_id": "emag-coulomb-law",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-01"
+        ],
+        "suggested": [
+          "12전자01-01"
+        ],
+        "reason": "「물리학」 연계 상자로 실린 선수 개념이나, 01-01 이 요구하는 '전하 주위의 전기장을 정량적으로 구하고'의 근거식이라 범위 안이다.",
+        "prerequisites": [
+          "concept:coulomb-law",
+          "concept:point-charge"
+        ]
+      },
+      {
+        "card_id": "emag-dielectric-polarization",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-02"
+        ],
+        "suggested": [
+          "12전자01-02"
+        ],
+        "reason": "카드의 쪽수 [19, 30] 가 성취기준 12전자01-02 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:free-electron"
+        ]
+      },
+      {
+        "card_id": "emag-eddy-current",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [38, 39, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-electric-field",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-01"
+        ],
+        "suggested": [
+          "12전자01-01"
+        ],
+        "reason": "카드의 쪽수 [12, 30] 가 성취기준 12전자01-01 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-electric-field-line",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-01"
+        ],
+        "suggested": [
+          "12전자01-01"
+        ],
+        "reason": "카드의 쪽수 [14, 15, 30] 가 성취기준 12전자01-01 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-01"
+        ],
+        "suggested": [
+          "12전자01-01"
+        ],
+        "reason": "카드의 쪽수 [16, 17] 가 성취기준 12전자01-01 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:potential-difference",
+          "concept:electric-potential-energy",
+          "concept:work"
+        ]
+      },
+      {
+        "card_id": "emag-electrical-oscillation",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-06"
+        ],
+        "suggested": [
+          "12전자01-06"
+        ],
+        "reason": "카드의 쪽수 [41, 42, 50] 가 성취기준 12전자01-06 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:mechanical-energy-conservation"
+        ]
+      },
+      {
+        "card_id": "emag-electromagnetic-induction",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [34, 35, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-electrostatic-induction",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-02"
+        ],
+        "suggested": [
+          "12전자01-02"
+        ],
+        "reason": "12전자01-02 의 crosscheck 는 '교사 확정'이며 '일치'와 같은 신뢰도다. 이 코드를 근거로 이탈 판정을 내리지 않았다.",
+        "prerequisites": [
+          "concept:free-electron"
+        ]
+      },
+      {
+        "card_id": "emag-equipotential-surface",
+        "curriculum_scope": "uncertain",
+        "verdict": "uncertain",
+        "current": [
+          "12전자01-01"
+        ],
+        "suggested": [
+          "12전자01-01"
+        ],
+        "reason": "01-01·03 해설이 '등전위면·전기력선·자기력선을 그리는 방법 대신 이미 그려진 그림을 해석'하라고 못 박았는데, rel-perpendicular 는 '전기력선 그림만 있으면 등전위선의 모양을 그릴 수 있다'로 그리기를 학습 목표처럼 서술한다. 카드 자체는 범위 안이나 이 구절이 해설이 제한한 선에 닿는다.",
+        "prerequisites": [
+          "concept:electric-potential"
+        ]
+      },
+      {
+        "card_id": "emag-faraday-law-of-induction",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [35, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-force-on-current-carrying-wire",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-04"
+        ],
+        "suggested": [
+          "12전자01-04"
+        ],
+        "reason": "카드의 쪽수 [26, 27] 가 성취기준 12전자01-04 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-induced-emf",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [34, 35] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-inductor",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [37, 38, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-inductor-in-ac-circuit",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-06"
+        ],
+        "suggested": [
+          "12전자01-06"
+        ],
+        "reason": "카드의 쪽수 [41, 43, 50] 가 성취기준 12전자01-06 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:alternating-current"
+        ]
+      },
+      {
+        "card_id": "emag-lenz-law",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [35, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-logic-gate",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-07"
+        ],
+        "suggested": [
+          "12전자01-07"
+        ],
+        "reason": "카드의 쪽수 [48, 49] 가 성취기준 12전자01-07 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-lorentz-force",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-04"
+        ],
+        "suggested": [
+          "12전자01-04"
+        ],
+        "reason": "카드의 쪽수 [26, 27, 30] 가 성취기준 12전자01-04 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-magnetic-field",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-03"
+        ],
+        "suggested": [
+          "12전자01-03"
+        ],
+        "reason": "카드의 쪽수 [22, 23] 가 성취기준 12전자01-03 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-magnetic-field-line",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-03"
+        ],
+        "suggested": [
+          "12전자01-03"
+        ],
+        "reason": "카드의 쪽수 [22, 23, 30] 가 성취기준 12전자01-03 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-03"
+        ],
+        "suggested": [
+          "12전자01-03"
+        ],
+        "reason": "중심 자기장의 전류 비례·반지름 반비례는 p23 「연계•물리학」 곁주다. 01-03 해설의 그림 해석 선을 넘지 않도록 정량 계산으로 확장하지 않는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-magnetic-field-of-solenoid",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-03"
+        ],
+        "suggested": [
+          "12전자01-03"
+        ],
+        "reason": "단위 길이당 감은 수 비례는 p23 「연계•물리학」 곁주다. 같은 제한이 걸린다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-magnetic-field-of-straight-current",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-03"
+        ],
+        "suggested": [
+          "12전자01-03"
+        ],
+        "reason": "세기의 정량 비례(거리에 반비례)는 교과서 p23 「연계•물리학」 곁주에서 왔다. 01-03 해설은 '이미 그려진 그림을 해석하여 추리'로 다루라 했으므로 이 비례를 정량 계산 문항의 근거로 쓰지 않는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-magnetic-flux",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [35, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-particle-accelerator",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-04"
+        ],
+        "suggested": [
+          "12전자01-04"
+        ],
+        "reason": "카드의 쪽수 [28, 30] 가 성취기준 12전자01-04 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-pn-junction-diode",
+        "curriculum_scope": "uncertain",
+        "verdict": "uncertain",
+        "current": [
+          "12전자01-07"
+        ],
+        "suggested": [
+          "12전자01-07"
+        ],
+        "reason": "01-07 해설은 '회로 위주로 다루며 미시적 작동 원리에 초점을 맞추지 않도록 한다'고 제한한다. 그런데 이 카드의 세 명제가 모두 접합면의 전자·양공 수준 서술이고 근거도 교과서 p45 「연계•물리학」 곁주다. 회로에서의 구실(정류)은 emag-rectification 이 이미 받는다. 카드의 무게중심이 해설이 제한한 쪽에 있는지 사람이 볼 자리다.",
+        "prerequisites": [
+          "concept:semiconductor"
+        ]
+      },
+      {
+        "card_id": "emag-rectification",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-07"
+        ],
+        "suggested": [
+          "12전자01-07"
+        ],
+        "reason": "카드의 쪽수 [44, 45, 50] 가 성취기준 12전자01-07 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-resonance-frequency",
+        "curriculum_scope": "uncertain",
+        "verdict": "uncertain",
+        "current": [
+          "12전자01-06"
+        ],
+        "suggested": [
+          "12전자01-06"
+        ],
+        "reason": "01-06 은 '에너지 관점에서 정성적으로 설명'으로 제한한다. rel-lc 는 공명 진동수가 인덕턴스·전기 용량 곱의 제곱근에 반비례한다는 정량 의존성을 명제로 세운다. 교과서 본문 p42 에 식이 실려 있어 이탈이라 단정하지 않으나, 정량 계산 문항으로 쓰이면 해설의 선을 넘는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-rlc-circuit",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-06"
+        ],
+        "suggested": [
+          "12전자01-06"
+        ],
+        "reason": "카드의 쪽수 [42, 43, 50] 가 성취기준 12전자01-06 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:alternating-current",
+          "concept:resistance"
+        ]
+      },
+      {
+        "card_id": "emag-superposition-of-electric-fields",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-01"
+        ],
+        "suggested": [
+          "12전자01-01"
+        ],
+        "reason": "카드의 쪽수 [13] 가 성취기준 12전자01-01 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-transformer",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-05"
+        ],
+        "suggested": [
+          "12전자01-05"
+        ],
+        "reason": "카드의 쪽수 [36, 50] 가 성취기준 12전자01-05 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-transistor",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-07"
+        ],
+        "suggested": [
+          "12전자01-07"
+        ],
+        "reason": "rel-thin-base 는 교과서 본문 p47 서술이라 범위 안이다. 01-07 해설의 '미시적 작동 원리에 초점을 맞추지 않도록 한다'에 닿아 있으므로 회로 동작 쪽에 무게를 둔다.",
+        "prerequisites": [
+          "concept:semiconductor",
+          "concept:hole"
+        ]
+      },
+      {
+        "card_id": "emag-transistor-amplification",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-07"
+        ],
+        "suggested": [
+          "12전자01-07"
+        ],
+        "reason": "카드의 쪽수 [46, 47, 50] 가 성취기준 12전자01-07 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": []
+      },
+      {
+        "card_id": "emag-van-allen-belt",
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "current": [
+          "12전자01-04"
+        ],
+        "suggested": [
+          "12전자01-04"
+        ],
+        "reason": "카드의 쪽수 [29, 30] 가 성취기준 12전자01-04 이 걸린 소단원 범위 안에 있고, 서술이 그 성취기준이 요구하는 내용을 그대로 받는다.",
+        "prerequisites": [
+          "concept:geomagnetic-field"
+        ]
+      }
+    ],
+    "stats": {
+      "ok": 36,
+      "retag": 0,
+      "out_of_scope": 0,
+      "uncertain": 3
+    }
+  },
+  "relations": {
+    "checked": 128,
+    "findings": [
+      {
+        "card_id": "emag-eddy-current",
+        "relation_id": "rel-flux-change",
+        "verdict": "defect",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "inverted_text '자석과 도체판이 서로 멈춰 있을 때 도체판 안에 맴돌이 전류가 생긴다' 는 전자석이면 참이 된다. 이 카드의 notes 가 응용으로 든 인덕션 레인지가 바로 상대 운동 없이 자기장만 변해 맴돌이 전류를 만드는 장치다.",
+        "suggest": "invertible 을 false 로 내리거나, inverted_text 에서 떨어져 나간 한정(전기장 방향으로 잰 / 단위 길이당 / 축전기 없이 / 영구 자석)을 문장 안으로 되살린다. 둘 중 무엇을 택할지는 C2 가 정한다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-field-distance-pd",
+        "verdict": "defect",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "inverted_text 가 원문의 '전기장 방향으로 잰'을 떨어뜨렸다. D1 은 scope·condition 을 끌고 가지 않으므로 '두 점 사이의 거리가 멀수록 전위차는 작아진다'만 남는데, 등전위면 위로 더 멀리 떨어진 두 점을 고르면 거리가 커도 전위차가 0 이라 이 문장이 참이 되는 경우가 있다. 같은 카드의 오개념 서술('전위가 높아도 전기장이 0인 곳이 있다')이 그 반례를 스스로 들고 있다.",
+        "suggest": "invertible 을 false 로 내리거나, inverted_text 에서 떨어져 나간 한정(전기장 방향으로 잰 / 단위 길이당 / 축전기 없이 / 영구 자석)을 문장 안으로 되살린다. 둘 중 무엇을 택할지는 C2 가 정한다."
+      },
+      {
+        "card_id": "emag-electromagnetic-induction",
+        "relation_id": "rel-relative-motion",
+        "verdict": "uncertain",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "inverted_text '자석을 고정한 채 코일만 움직이면 코일에는 전류가 유도되지 않는다' 는 자기선속이 변하지 않는 움직임(균일한 영역에서의 평행 이동, 대칭축 둘레의 회전)에서는 참이 된다. 수업 맥락에서는 거짓으로 읽혀 위험이 낮으나 기준으로는 걸린다.",
+        "suggest": "scope 가 아니라 문장 안에 비교 지점·운동 방식을 못 박아 inverted_text 만 떼어 읽어도 반례가 서지 않게 한다."
+      },
+      {
+        "card_id": "emag-lorentz-force",
+        "relation_id": "rel-right-hand",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "현재 false. 그런데 같은 꼴의 손 규칙인 emag-magnetic-field-of-straight-current/rel-right-hand 는 true 다. 엄지=운동 방향, 네 손가락=자기장으로 손 모양을 고정하면 양전하가 받는 힘의 방향은 하나로 정해지므로 '손바닥의 반대쪽'이라 한 문장은 반드시 거짓이다 — 직선 전류 쪽과 같은 기준이면 true 가 된다. 두 카드의 판정 기준이 갈려 있어 하나로 맞춰야 한다.",
+        "suggest": "두 오른손 법칙 명제의 invertible 판정 기준을 하나로 맞춘다. 어느 쪽으로 맞추든 invertible_reason 에 같은 기준을 적는다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "relation_id": "rel-inside-outside",
+        "verdict": "uncertain",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "'안쪽/바깥쪽'의 비교 지점이 정해지지 않았다. 도선 바로 바깥은 도선에 가까워 중심보다 셀 수 있어 뒤집은 문장이 참이 되는 자리가 있다. 다만 교과서 p24 가 같은 문장으로 서술하므로 진위는 C8 이 본다.",
+        "suggest": "scope 가 아니라 문장 안에 비교 지점·운동 방식을 못 박아 inverted_text 만 떼어 읽어도 반례가 서지 않게 한다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-solenoid",
+        "relation_id": "rel-turns",
+        "verdict": "defect",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "원문은 '단위 길이당 감은 수'인데 inverted_text 는 '감은 수를 늘릴수록'으로 줄었다. 같은 카드의 오개념('같은 감은 수라도 길게 늘여 감으면 단위 길이당 감은 수가 줄어 내부 자기장이 약해진다')이 곧 반례다 — 늘여 감으며 감은 수를 늘리면 내부 자기장이 약해질 수 있어 뒤집은 문장이 참이 되는 경우가 있다.",
+        "suggest": "invertible 을 false 로 내리거나, inverted_text 에서 떨어져 나간 한정(전기장 방향으로 잰 / 단위 길이당 / 축전기 없이 / 영구 자석)을 문장 안으로 되살린다. 둘 중 무엇을 택할지는 C2 가 정한다."
+      },
+      {
+        "card_id": "emag-rectification",
+        "relation_id": "rel-half-wave",
+        "verdict": "defect",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "inverted_text '다이오드를 하나만 이어도 끊기지 않는 한 방향 전류를 얻는다' 는 같은 카드 rel-smoothing(축전기를 더하면 출력이 직류에 가까워진다)과 교과서 p45 서술이 반례다. 반파 정류에 축전기를 붙이면 끊기지 않는 한 방향 전류가 실제로 나온다.",
+        "suggest": "invertible 을 false 로 내리거나, inverted_text 에서 떨어져 나간 한정(전기장 방향으로 잰 / 단위 길이당 / 축전기 없이 / 영구 자석)을 문장 안으로 되살린다. 둘 중 무엇을 택할지는 C2 가 정한다."
+      },
+      {
+        "card_id": "emag-faraday-law-of-induction",
+        "relation_id": "rel-product",
+        "verdict": "defect",
+        "checks": [
+          6
+        ],
+        "reason": "카드 definition 이 '유도 기전력의 크기를 코일의 감은 수와 자기선속의 시간 변화율을 곱한 값으로 정하고'라고 이미 말한다. rel-product 는 그 곱을 '하나만 2배가 되어도 2배'로 바꿔 말한 것이라 정의를 읽으면 저절로 나온다. 더구나 emag-induced-emf 의 rel-turns(감은 수 비례)·rel-rate(변화율 비례)가 같은 내용을 이미 둘로 나눠 갖고 있다.",
+        "suggest": "정의를 되풀이하지 않는 내용으로 갈아 끼우거나, emag-induced-emf 의 두 명제와 역할을 나눠 이 카드는 부호(방향)를 담는 쪽만 맡게 한다."
+      },
+      {
+        "card_id": "emag-inductor",
+        "relation_id": "rel-di-dt",
+        "verdict": "uncertain",
+        "checks": [
+          6
+        ],
+        "reason": "'유도 기전력의 크기는 인덕턴스와 전류의 시간 변화율을 곱한 값이다'는 인덕턴스를 정의하는 식 자체다. 같은 카드 rel-turns-inductance 가 인덕턴스를 이미 쓰고 있어 정의와 명제의 경계가 흐리다. 카드 definition 에는 이 식이 없어 동어반복이라 잘라 말하기는 어렵다.",
+        "suggest": "인덕턴스를 정의로 둘지 명제로 둘지 한쪽으로 정한다."
+      },
+      {
+        "card_id": "emag-logic-gate",
+        "relation_id": "rel-switch-output",
+        "verdict": "defect",
+        "checks": [
+          7
+        ],
+        "reason": "misconceptions[0]('AND 게이트는 두 입력 가운데 하나만 1이어도 출력이 1이다')의 linked_relation 이 rel-switch-output 을 가리키는데, 그 명제는 '여는 것이 0, 닫는 것이 1'이라는 표기 약속과 '어떤 입력 조합에서 출력이 1이 되는가로 논리가 정해진다'만 말한다. AND 의 동작을 세운 명제가 카드 안에 없어 이 오개념은 반박 대상 명제의 반대편에 서 있지 않다.",
+        "suggest": "AND·OR 의 동작을 명제로 세우고 그쪽을 가리키게 하거나, 이 오개념을 이 카드에서 뺀다."
+      },
+      {
+        "card_id": "emag-transistor",
+        "relation_id": "rel-type",
+        "verdict": "defect",
+        "checks": [
+          7
+        ],
+        "reason": "misconceptions[0]('이미터와 컬렉터는 구조가 같으므로 바꿔 이어도 똑같이 작동한다')의 linked_relation 이 rel-type 인데, rel-type 은 접합 차례로 p-n-p·n-p-n 을 가르는 분류 명제다. 오개념을 무너뜨리는 근거(도핑 비율이 이미터>베이스>컬렉터, 교과서 p47 곁주)는 이 카드의 어느 명제에도 없다.",
+        "suggest": "도핑 비율의 비대칭을 명제로 세워 그쪽을 가리키게 하거나, 오개념을 카드에서 뺀다."
+      },
+      {
+        "card_id": "emag-superposition-of-electric-fields",
+        "relation_id": "rel-zero-field",
+        "verdict": "defect",
+        "checks": [
+          7
+        ],
+        "reason": "misconceptions[1]('합성 전기장이 0인 지점에는 전하가 아예 없는 것이다')의 linked_relation 이 rel-zero-field 인데, 그 명제는 '합성장이 0이면 그 자리의 전하가 힘을 받지 않는다'를 말한다. 오개념은 장이 0인 것과 전하가 없는 것을 혼동한 것이라 명제의 반대편이 아니라 옆에 서 있다.",
+        "suggest": "전기장이 0인 것과 전하가 없는 것을 가르는 명제를 세워 그쪽에 걸거나, 기존 명제의 서술 범위를 그 구분까지 넓힌다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-field-distance-pd",
+        "verdict": "uncertain",
+        "checks": [
+          7
+        ],
+        "reason": "misconceptions[0]('전위가 높은 곳일수록 전기장도 반드시 세다')가 이 명제에 걸려 있으나, 이 명제는 균일 전기장에서의 거리-전위차 관계다. 오개념이 겨냥한 것은 전위 값과 전기장 세기의 혼동이라 rel-reference-point 쪽이 더 가깝다. 판단이 갈린다.",
+        "suggest": "linked_relation 을 다시 고르거나, 전위 값과 전기장 세기를 가르는 명제를 따로 세운다."
+      },
+      {
+        "card_id": "emag-bias-voltage",
+        "relation_id": "rel-full-signal",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "emag-bias-voltage 의 rel-full-signal·rel-be-forward 와 emag-transistor-amplification 의 rel-bias-needed 가 사실상 같은 내용을 세 번 말한다. 서로 어긋나지 않으므로 모순은 아니지만 D1 에서 거의 같은 OX 지문이 셋 나온다.",
+        "suggest": "한 카드에 명제를 몰고 다른 쪽은 링크로 받게 한다. 어느 쪽에 둘지는 메인이 정한다."
+      }
+    ],
+    "stats": {
+      "ok": 114,
+      "defect": 8,
+      "uncertain": 6
+    },
+    "check_codes": {
+      "1": "교과서가 말한 방향의 역전",
+      "2": "invertible 오판정",
+      "3": "조건·범위 누락으로 인한 과일반화",
+      "4": "다른 카드 명제와의 충돌·중복",
+      "5": "교과서에 없는 수치·사실",
+      "6": "동어반복",
+      "7": "오개념의 linked_relation 이 반박 대상 명제를 가리키지 않음"
+    }
+  },
+  "invertible_audit": {
+    "total": 128,
+    "current": {
+      "true": 109,
+      "false": 19
+    },
+    "proposed": {
+      "true": 103,
+      "false": 22,
+      "uncertain": 2,
+      "review": 1
+    },
+    "criterion": "뒤집은 문장(inverted_text)이 논리적으로 반드시 거짓인가 하나만 보았다. form.type 과 '역도 참' 은 판정 근거로 쓰지 않았다. D1 이 scope·condition 을 끌고 가지 않으므로 inverted_text 만 떼어 읽고 참이 될 경우가 하나라도 있는지 따졌다.",
+    "changes": [
+      {
+        "card_id": "emag-eddy-current",
+        "relation_id": "rel-flux-change",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "자석과 도체판이 서로 멈춰 있을 때 도체판 안에 맴돌이 전류가 생긴다.",
+        "basis": "inverted_text '자석과 도체판이 서로 멈춰 있을 때 도체판 안에 맴돌이 전류가 생긴다' 는 전자석이면 참이 된다. 이 카드의 notes 가 응용으로 든 인덕션 레인지가 바로 상대 운동 없이 자기장만 변해 맴돌이 전류를 만드는 장치다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-field-distance-pd",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "균일한 전기장에서 두 점 사이의 거리가 멀수록 전위차는 작아진다.",
+        "basis": "inverted_text 가 원문의 '전기장 방향으로 잰'을 떨어뜨렸다. D1 은 scope·condition 을 끌고 가지 않으므로 '두 점 사이의 거리가 멀수록 전위차는 작아진다'만 남는데, 등전위면 위로 더 멀리 떨어진 두 점을 고르면 거리가 커도 전위차가 0 이라 이 문장이 참이 되는 경우가 있다. 같은 카드의 오개념 서술('전위가 높아도 전기장이 0인 곳이 있다')이 그 반례를 스스로 들고 있다."
+      },
+      {
+        "card_id": "emag-electromagnetic-induction",
+        "relation_id": "rel-relative-motion",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "uncertain",
+        "inverted_text": "자석을 고정한 채 코일만 움직이면 코일에는 전류가 유도되지 않는다.",
+        "basis": "inverted_text '자석을 고정한 채 코일만 움직이면 코일에는 전류가 유도되지 않는다' 는 자기선속이 변하지 않는 움직임(균일한 영역에서의 평행 이동, 대칭축 둘레의 회전)에서는 참이 된다. 수업 맥락에서는 거짓으로 읽혀 위험이 낮으나 기준으로는 걸린다."
+      },
+      {
+        "card_id": "emag-lorentz-force",
+        "relation_id": "rel-right-hand",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "review",
+        "inverted_text": null,
+        "basis": "현재 false. 그런데 같은 꼴의 손 규칙인 emag-magnetic-field-of-straight-current/rel-right-hand 는 true 다. 엄지=운동 방향, 네 손가락=자기장으로 손 모양을 고정하면 양전하가 받는 힘의 방향은 하나로 정해지므로 '손바닥의 반대쪽'이라 한 문장은 반드시 거짓이다 — 직선 전류 쪽과 같은 기준이면 true 가 된다. 두 카드의 판정 기준이 갈려 있어 하나로 맞춰야 한다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "relation_id": "rel-inside-outside",
+        "form_type": "classification",
+        "current": "true",
+        "proposed": "uncertain",
+        "inverted_text": "원형 전류가 만드는 자기장은 고리 바깥쪽이 안쪽보다 세다.",
+        "basis": "'안쪽/바깥쪽'의 비교 지점이 정해지지 않았다. 도선 바로 바깥은 도선에 가까워 중심보다 셀 수 있어 뒤집은 문장이 참이 되는 자리가 있다. 다만 교과서 p24 가 같은 문장으로 서술하므로 진위는 C8 이 본다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-solenoid",
+        "relation_id": "rel-turns",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "감은 수를 늘릴수록 솔레노이드 내부의 자기장은 약해진다.",
+        "basis": "원문은 '단위 길이당 감은 수'인데 inverted_text 는 '감은 수를 늘릴수록'으로 줄었다. 같은 카드의 오개념('같은 감은 수라도 길게 늘여 감으면 단위 길이당 감은 수가 줄어 내부 자기장이 약해진다')이 곧 반례다 — 늘여 감으며 감은 수를 늘리면 내부 자기장이 약해질 수 있어 뒤집은 문장이 참이 되는 경우가 있다."
+      },
+      {
+        "card_id": "emag-rectification",
+        "relation_id": "rel-half-wave",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "다이오드를 하나만 이어도 끊기지 않는 한 방향 전류를 얻는다.",
+        "basis": "inverted_text '다이오드를 하나만 이어도 끊기지 않는 한 방향 전류를 얻는다' 는 같은 카드 rel-smoothing(축전기를 더하면 출력이 직류에 가까워진다)과 교과서 p45 서술이 반례다. 반파 정류에 축전기를 붙이면 끊기지 않는 한 방향 전류가 실제로 나온다."
+      }
+    ],
+    "table": [
+      {
+        "card_id": "emag-application-of-electrostatic-induction",
+        "relation_id": "rel-paint-repulsion",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "같은 부호로 대전된 페인트 입자끼리는 서로 끌어당겨 한곳에 뭉친다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-application-of-electrostatic-induction",
+        "relation_id": "rel-paint-induction",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "음전하를 띤 페인트 입자가 다가오면 금속 차체 표면에도 음전하가 유도되어 입자가 밀려난다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-application-of-electrostatic-induction",
+        "relation_id": "rel-precipitator",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "음전하로 대전된 먼지는 양전하로 대전된 집진 극에서 밀려나 그대로 배출된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-application-of-electrostatic-induction",
+        "relation_id": "rel-wrap",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-bias-voltage",
+        "relation_id": "rel-forward-reverse",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "순방향 바이어스가 걸리면 전류가 거의 흐르지 않고 역방향 바이어스에서 잘 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-bias-voltage",
+        "relation_id": "rel-full-signal",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "바이어스 전압을 더하면 교류 신호 가운데 절반만 증폭된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-bias-voltage",
+        "relation_id": "rel-be-forward",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-capacitance",
+        "relation_id": "rel-area",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "극판을 넓힐수록 축전기의 전기 용량은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitance",
+        "relation_id": "rel-gap",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "극판 사이를 좁힐수록 축전기의 전기 용량은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitance",
+        "relation_id": "rel-dielectric",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "극판 사이를 유전체로 채우면 축전기의 전기 용량이 줄어든다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitance",
+        "relation_id": "rel-geometry-only",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "축전기에 걸어 주는 전압을 높이면 그 축전기의 전기 용량도 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitor-in-ac-circuit",
+        "relation_id": "rel-capacitance",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전기 용량이 작을수록 축전기의 저항 역할이 작아져 전류가 잘 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitor-in-ac-circuit",
+        "relation_id": "rel-frequency",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "교류 전원의 진동수가 낮을수록 축전기의 저항 역할이 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitor-in-ac-circuit",
+        "relation_id": "rel-treble",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "축전기는 진동수가 높은 전류를 더 막으므로 저음을 살리는 필터에 쓰인다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-capacitor-in-ac-circuit",
+        "relation_id": "rel-dc-block",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "충전이 끝난 축전기에도 직류가 계속 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-circular-motion-of-charged-particle",
+        "relation_id": "rel-radius",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "입자의 속력이 빠를수록 원 궤도의 반지름은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-circular-motion-of-charged-particle",
+        "relation_id": "rel-radius-field",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기장이 셀수록 같은 속력의 입자는 더 큰 원을 그린다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-circular-motion-of-charged-particle",
+        "relation_id": "rel-period",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "속력이 빨라지면 원운동의 주기도 함께 짧아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-circular-motion-of-charged-particle",
+        "relation_id": "rel-centripetal",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "로런츠 힘은 대전 입자의 속력을 점점 빠르게 만든다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-coulomb-law",
+        "relation_id": "rel-charge-force",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "두 점전하의 거리를 그대로 둔 채 한쪽 전하량을 키우면 전기력의 크기는 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-coulomb-law",
+        "relation_id": "rel-distance-force",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "두 점전하를 2배 멀리 떼어 놓으면 전기력의 크기는 4배로 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-coulomb-law",
+        "relation_id": "rel-force-to-field",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-dielectric-polarization",
+        "relation_id": "rel-insulator-vs-conductor",
+        "form_type": "classification",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자유 전자가 없는 절연체에서도 전자가 물체 끝까지 옮겨 가 한쪽에 쌓인다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-dielectric-polarization",
+        "relation_id": "rel-attraction",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "분극된 절연체는 대전체와 가까운 쪽이 같은 부호를 띠어 대전체에서 밀려난다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-dielectric-polarization",
+        "relation_id": "rel-permittivity",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "유전율이 큰 물질일수록 같은 전기장에서 분극이 덜 일어난다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-eddy-current",
+        "relation_id": "rel-flux-change",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "자석과 도체판이 서로 멈춰 있을 때 도체판 안에 맴돌이 전류가 생긴다.",
+        "basis": "inverted_text '자석과 도체판이 서로 멈춰 있을 때 도체판 안에 맴돌이 전류가 생긴다' 는 전자석이면 참이 된다. 이 카드의 notes 가 응용으로 든 인덕션 레인지가 바로 상대 운동 없이 자기장만 변해 맴돌이 전류를 만드는 장치다."
+      },
+      {
+        "card_id": "emag-eddy-current",
+        "relation_id": "rel-braking",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "맴돌이 전류는 자석이나 도체판의 움직임을 더 빠르게 하는 힘을 낸다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-eddy-current",
+        "relation_id": "rel-comb-shape",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "금속판에 빗살처럼 틈을 내면 맴돌이 전류가 커져 제동 효과가 강해진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field",
+        "relation_id": "rel-source-charge",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "같은 거리에서 잴 때 점전하의 전하량이 클수록 전기장의 세기는 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field",
+        "relation_id": "rel-distance",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "점전하에서 3배 멀어진 자리의 전기장 세기는 9배로 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field",
+        "relation_id": "rel-direction",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "어떤 지점의 전기장 방향은 그 자리에 놓인 음전하가 밀려가는 쪽이다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field-line",
+        "relation_id": "rel-density-strength",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전기력선이 빽빽하게 지나는 곳일수록 전기장의 세기가 작다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field-line",
+        "relation_id": "rel-tangent-direction",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전기력선은 한 점에서 서로 엇갈리며 교차할 수 있다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field-line",
+        "relation_id": "rel-count-charge",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전하량이 클수록 그 전하에 드나드는 전기력선의 수가 적다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-field-line",
+        "relation_id": "rel-start-end",
+        "form_type": "classification",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전기력선이 모여 들어가는 쪽 전하는 양전하다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-field-distance-pd",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "균일한 전기장에서 두 점 사이의 거리가 멀수록 전위차는 작아진다.",
+        "basis": "inverted_text 가 원문의 '전기장 방향으로 잰'을 떨어뜨렸다. D1 은 scope·condition 을 끌고 가지 않으므로 '두 점 사이의 거리가 멀수록 전위차는 작아진다'만 남는데, 등전위면 위로 더 멀리 떨어진 두 점을 고르면 거리가 커도 전위차가 0 이라 이 문장이 참이 되는 경우가 있다. 같은 카드의 오개념 서술('전위가 높아도 전기장이 0인 곳이 있다')이 그 반례를 스스로 들고 있다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-drop-of-pe",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "양전하가 전기장 방향을 따라 움직이면 전기적 위치 에너지가 늘어난다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-equipotential-no-current",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "두 도체의 전위가 같아져도 둘 사이에는 전류가 계속 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electric-potential",
+        "relation_id": "rel-reference-point",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-electrical-oscillation",
+        "relation_id": "rel-energy-exchange",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-electrical-oscillation",
+        "relation_id": "rel-max-current",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "축전기 양단의 전위차가 가장 클 때 인덕터에 흐르는 전류도 가장 크다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electrical-oscillation",
+        "relation_id": "rel-conservation",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전기 진동이 이어지는 동안 회로 전체의 에너지는 점점 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electrical-oscillation",
+        "relation_id": "rel-spring-analogy",
+        "form_type": "classification",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-electromagnetic-induction",
+        "relation_id": "rel-relative-motion",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "uncertain",
+        "inverted_text": "자석을 고정한 채 코일만 움직이면 코일에는 전류가 유도되지 않는다.",
+        "basis": "inverted_text '자석을 고정한 채 코일만 움직이면 코일에는 전류가 유도되지 않는다' 는 자기선속이 변하지 않는 움직임(균일한 영역에서의 평행 이동, 대칭축 둘레의 회전)에서는 참이 된다. 수업 맥락에서는 거짓으로 읽혀 위험이 낮으나 기준으로는 걸린다."
+      },
+      {
+        "card_id": "emag-electromagnetic-induction",
+        "relation_id": "rel-flux-change",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자석이 세기만 하면 코일과 자석이 멈춰 있어도 유도 전류가 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electromagnetic-induction",
+        "relation_id": "rel-speed",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자석을 빠르게 움직일수록 코일에 흐르는 유도 전류는 약해진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electrostatic-induction",
+        "relation_id": "rel-near-side-charge",
+        "form_type": "classification",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "대전체와 가까운 쪽 도체 표면에는 대전체와 같은 부호의 전하가 모인다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electrostatic-induction",
+        "relation_id": "rel-free-electron-move",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "음전하로 대전된 막대를 금속에 대면 자유 전자가 막대 쪽으로 끌려와 그쪽이 음전하를 띤다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-electrostatic-induction",
+        "relation_id": "rel-net-attraction",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전체 알짜 전하가 0인 도체는 대전체에 끌려오지 않는다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-equipotential-surface",
+        "relation_id": "rel-perpendicular",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "등전위선은 전기력선과 어디서나 나란하게 놓인다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-equipotential-surface",
+        "relation_id": "rel-density",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "등전위선이 빽빽한 곳일수록 전기장의 세기가 작다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-equipotential-surface",
+        "relation_id": "rel-zero-work",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "등전위면 위에서 전하를 옮겨도 전기력은 0이 아닌 일을 한다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-faraday-law-of-induction",
+        "relation_id": "rel-product",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기선속의 시간 변화율이 2배가 되면 유도 기전력은 절반이 된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-faraday-law-of-induction",
+        "relation_id": "rel-minus-sign",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "식 앞의 (−)부호는 유도 기전력의 크기가 음수라는 뜻이다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-faraday-law-of-induction",
+        "relation_id": "rel-graph",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기선속-시간 그래프의 기울기가 0인 구간에서 유도 기전력이 가장 크다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-force-on-current-carrying-wire",
+        "relation_id": "rel-bil",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "도선에 흐르는 전류를 세게 할수록 도선이 받는 힘은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-force-on-current-carrying-wire",
+        "relation_id": "rel-sum-of-lorentz",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-force-on-current-carrying-wire",
+        "relation_id": "rel-motor",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전동기는 운동 에너지를 전기 에너지로 바꾸는 장치다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-induced-emf",
+        "relation_id": "rel-turns",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "코일을 많이 감을수록 유도 기전력은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-induced-emf",
+        "relation_id": "rel-rate",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기선속이 빠르게 변할수록 유도 기전력은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-induced-emf",
+        "relation_id": "rel-emf-vs-current",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "유도 전류는 회로가 끊겨도 흐르지만 유도 기전력은 회로가 닫혀야 생긴다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor",
+        "relation_id": "rel-self-induction",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "스위치를 닫는 순간 인덕터에 흐르는 전류는 곧바로 최댓값에 이른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor",
+        "relation_id": "rel-turns-inductance",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "코일을 많이 감을수록 인덕턴스는 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor",
+        "relation_id": "rel-di-dt",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전류가 빠르게 변할수록 인덕터에 생기는 유도 기전력은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor-in-ac-circuit",
+        "relation_id": "rel-inductance",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "인덕턴스가 클수록 인덕터의 저항 역할이 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor-in-ac-circuit",
+        "relation_id": "rel-frequency",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "교류 전원의 진동수가 높을수록 인덕터의 저항 역할이 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor-in-ac-circuit",
+        "relation_id": "rel-bass",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "인덕터는 진동수가 낮은 전류를 더 막으므로 고음을 살리는 필터에 쓰인다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-inductor-in-ac-circuit",
+        "relation_id": "rel-opposite-to-capacitor",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "진동수를 올리면 인덕터와 축전기의 저항 노릇이 나란히 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-lenz-law",
+        "relation_id": "rel-approach",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자석의 N극을 코일에 가까이 하면 코일은 그 N극을 끌어당기는 쪽으로 전류를 흘린다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-lenz-law",
+        "relation_id": "rel-recede",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자석을 코일에서 멀리 하면 코일은 줄어드는 자기선속을 더 빨리 줄이는 쪽으로 전류를 흘린다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-lenz-law",
+        "relation_id": "rel-energy",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "유도 전류는 자석의 운동을 도와주는 쪽으로 흘러 자석이 저절로 빨라지게 한다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-logic-gate",
+        "relation_id": "rel-switch-output",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-logic-gate",
+        "relation_id": "rel-transistor-as-switch",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "논리 회로에서 스위치 노릇을 하는 것은 다이오드이고, 트랜지스터는 전류를 한 방향으로만 흘린다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-logic-gate",
+        "relation_id": "rel-combination",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-lorentz-force",
+        "relation_id": "rel-magnitude",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "속력이 빠를수록, 자기장이 셀수록 대전 입자가 받는 로런츠 힘은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-lorentz-force",
+        "relation_id": "rel-angle",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "운동 방향과 자기장의 방향이 나란할 때 로런츠 힘이 가장 크고, 수직일 때 0이 된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-lorentz-force",
+        "relation_id": "rel-right-hand",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "review",
+        "inverted_text": null,
+        "basis": "현재 false. 그런데 같은 꼴의 손 규칙인 emag-magnetic-field-of-straight-current/rel-right-hand 는 true 다. 엄지=운동 방향, 네 손가락=자기장으로 손 모양을 고정하면 양전하가 받는 힘의 방향은 하나로 정해지므로 '손바닥의 반대쪽'이라 한 문장은 반드시 거짓이다 — 직선 전류 쪽과 같은 기준이면 true 가 된다. 두 카드의 판정 기준이 갈려 있어 하나로 맞춰야 한다."
+      },
+      {
+        "card_id": "emag-magnetic-field",
+        "relation_id": "rel-iron-filings",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-magnetic-field",
+        "relation_id": "rel-source",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전류가 흐르는 도선 둘레에는 자기장이 생기지 않고 자석 둘레에만 생긴다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field",
+        "relation_id": "rel-field-vs-force",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기력을 받을 물체를 놓기 전에는 자석 둘레에 자기장이 없다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-line",
+        "relation_id": "rel-density",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기력선이 빽빽한 곳일수록 자기장의 세기가 작다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-line",
+        "relation_id": "rel-tangent",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기력선은 자석의 S극에서 나와 N극으로 들어간다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-line",
+        "relation_id": "rel-superposition",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기력선이 같은 방향으로 겹치는 곳에서는 자기장이 약해지고 반대 방향으로 겹치는 곳에서 세진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "relation_id": "rel-current",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "반지름이 같을 때 전류가 셀수록 원 중심의 자기장은 약해진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "relation_id": "rel-radius",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전류가 같을 때 고리를 크게 만들수록 원 중심의 자기장이 세진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "relation_id": "rel-sum-of-segments",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-circular-current",
+        "relation_id": "rel-inside-outside",
+        "form_type": "classification",
+        "current": "true",
+        "proposed": "uncertain",
+        "inverted_text": "원형 전류가 만드는 자기장은 고리 바깥쪽이 안쪽보다 세다.",
+        "basis": "'안쪽/바깥쪽'의 비교 지점이 정해지지 않았다. 도선 바로 바깥은 도선에 가까워 중심보다 셀 수 있어 뒤집은 문장이 참이 되는 자리가 있다. 다만 교과서 p24 가 같은 문장으로 서술하므로 진위는 C8 이 본다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-solenoid",
+        "relation_id": "rel-turns",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "감은 수를 늘릴수록 솔레노이드 내부의 자기장은 약해진다.",
+        "basis": "원문은 '단위 길이당 감은 수'인데 inverted_text 는 '감은 수를 늘릴수록'으로 줄었다. 같은 카드의 오개념('같은 감은 수라도 길게 늘여 감으면 단위 길이당 감은 수가 줄어 내부 자기장이 약해진다')이 곧 반례다 — 늘여 감으며 감은 수를 늘리면 내부 자기장이 약해질 수 있어 뒤집은 문장이 참이 되는 경우가 있다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-solenoid",
+        "relation_id": "rel-current",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전류를 세게 할수록 솔레노이드 내부의 자기장은 약해진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-solenoid",
+        "relation_id": "rel-uniform",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-straight-current",
+        "relation_id": "rel-current-strength",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "도선에서 같은 거리에서 잴 때 전류가 셀수록 자기장의 세기는 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-straight-current",
+        "relation_id": "rel-distance",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "도선에서 2배 멀어지면 자기장의 세기는 2배로 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-straight-current",
+        "relation_id": "rel-right-hand",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "오른손으로 도선을 감아쥘 때 네 손가락이 감기는 반대쪽이 자기장의 방향이다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-field-of-straight-current",
+        "relation_id": "rel-parallel-wires",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "나란한 두 도선에 같은 방향으로 전류가 흐르면 두 도선은 서로 밀어낸다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-flux",
+        "relation_id": "rel-angle",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "코일 면이 자기장과 나란할 때 자기선속이 가장 크고, 수직일 때 0이 된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-flux",
+        "relation_id": "rel-strength-area",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "코일이 넓을수록 그 코일을 지나는 자기선속은 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-magnetic-flux",
+        "relation_id": "rel-flux-not-current",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기선속이 크기만 하면 변하지 않아도 코일에 전류가 유도된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-particle-accelerator",
+        "relation_id": "rel-constant-period",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "입자가 빨라질수록 원운동의 주기가 짧아지므로 미는 박자를 계속 바꿔 주어야 한다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-particle-accelerator",
+        "relation_id": "rel-accelerating-gap",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "사이클로트론에서 입자를 가속시키는 것은 자기장이고, 전기력은 궤도를 휘게 할 뿐이다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-particle-accelerator",
+        "relation_id": "rel-radius-grows",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "가속을 거듭할수록 입자의 궤도 반지름은 점점 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-pn-junction-diode",
+        "relation_id": "rel-forward",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "p형 쪽에 (-)극, n형 쪽에 (+)극을 이었을 때 접합면에서 전자와 양공이 만나 전류가 잘 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-pn-junction-diode",
+        "relation_id": "rel-reverse",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "역방향 바이어스를 걸면 다이오드에 전류가 잘 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-pn-junction-diode",
+        "relation_id": "rel-direction-only",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "다이오드는 n형에서 p형으로 가는 쪽으로만 전류를 잘 흘린다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-rectification",
+        "relation_id": "rel-half-wave",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "false",
+        "inverted_text": "다이오드를 하나만 이어도 끊기지 않는 한 방향 전류를 얻는다.",
+        "basis": "inverted_text '다이오드를 하나만 이어도 끊기지 않는 한 방향 전류를 얻는다' 는 같은 카드 rel-smoothing(축전기를 더하면 출력이 직류에 가까워진다)과 교과서 p45 서술이 반례다. 반파 정류에 축전기를 붙이면 끊기지 않는 한 방향 전류가 실제로 나온다."
+      },
+      {
+        "card_id": "emag-rectification",
+        "relation_id": "rel-bridge",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-rectification",
+        "relation_id": "rel-smoothing",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "정류 회로에 축전기를 더하면 전류가 끊기는 구간이 넓어져 출력이 교류에 가까워진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-resonance-frequency",
+        "relation_id": "rel-lc",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "인덕턴스를 키우면 회로의 공명 진동수가 높아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-resonance-frequency",
+        "relation_id": "rel-match",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "교류 전원의 진동수를 공명 진동수에서 멀리 떨어뜨릴수록 회로에 큰 전류가 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-resonance-frequency",
+        "relation_id": "rel-detector",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "금속 물체가 게이트를 지나면 회로가 공명 상태에 들어가 전류가 최댓값이 된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-rlc-circuit",
+        "relation_id": "rel-frequency-current",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "RLC 회로의 전류는 진동수를 올릴수록 줄어들다가 어느 진동수에서 가장 작아진 뒤 다시 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-rlc-circuit",
+        "relation_id": "rel-balance",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "인덕터와 축전기의 저항 노릇이 같아지는 진동수에서 회로의 전류가 가장 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-rlc-circuit",
+        "relation_id": "rel-series",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-superposition-of-electric-fields",
+        "relation_id": "rel-vector-sum",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "두 전기장의 방향이 나란하지 않아도 각각의 세기를 그냥 더하면 합성 전기장의 세기가 된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-superposition-of-electric-fields",
+        "relation_id": "rel-zero-field",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "두 전기장의 크기가 같고 방향이 정반대인 지점에 놓인 전하도 전기력을 받는다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-superposition-of-electric-fields",
+        "relation_id": "rel-third-charge-sign",
+        "form_type": "conditional",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-transformer",
+        "relation_id": "rel-turns-ratio",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "2차 코일을 1차 코일보다 많이 감으면 2차 코일의 전압이 낮아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transformer",
+        "relation_id": "rel-current-ratio",
+        "form_type": "inverse",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전압을 올린 쪽 코일에서는 전류도 함께 커진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transformer",
+        "relation_id": "rel-ac-only",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "1차 코일에 일정한 직류를 흘려도 2차 코일에 기전력이 계속 생긴다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transistor",
+        "relation_id": "rel-type",
+        "form_type": "classification",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-transistor",
+        "relation_id": "rel-thin-base",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "베이스가 매우 얇으면 이미터에서 온 전자 대부분이 베이스에 붙들려 컬렉터로 가지 못한다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transistor",
+        "relation_id": "rel-base-collector",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "베이스-이미터에 전류를 끊어도 컬렉터-이미터에는 전류가 그대로 흐른다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transistor",
+        "relation_id": "rel-switching",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-transistor-amplification",
+        "relation_id": "rel-current-gain",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "베이스 전류를 키우면 컬렉터 전류는 오히려 줄어든다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transistor-amplification",
+        "relation_id": "rel-beta",
+        "form_type": "direct",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "전류 증폭률이 클수록 같은 입력에서 얻는 출력 신호가 작아진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-transistor-amplification",
+        "relation_id": "rel-bias-needed",
+        "form_type": "conditional",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "바이어스 전압을 걸면 교류 입력 신호가 일그러져 일부만 증폭된다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-van-allen-belt",
+        "relation_id": "rel-parallel-component",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "자기장에 나란한 속도 성분도 로런츠 힘을 받아 곧 사라진다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      },
+      {
+        "card_id": "emag-van-allen-belt",
+        "relation_id": "rel-perpendicular-component",
+        "form_type": "causal",
+        "current": "false",
+        "proposed": "false",
+        "inverted_text": null,
+        "basis": "현행 false 유지 — 뒤집어 견줄 두 양의 방향이 없거나(약속·방법·유비 서술) 뒤집은 문장이 참일 수 있다."
+      },
+      {
+        "card_id": "emag-van-allen-belt",
+        "relation_id": "rel-polar",
+        "form_type": "causal",
+        "current": "true",
+        "proposed": "true",
+        "inverted_text": "태양풍 입자는 지구 자기력선을 따라 적도 쪽으로 이끌려 가 오로라가 적도에서 잘 보인다.",
+        "basis": "inverted_text 를 문면 그대로 읽었을 때 참이 되는 경우를 찾지 못했다 — 비례 방향이나 두 자리(0↔최대, 순방향↔역방향, 인력↔척력, N극↔S극)를 맞바꾼 문장이라 반드시 거짓이다."
+      }
+    ]
+  },
+  "escalation": {
+    "out_of_scope_over_2": false,
+    "uncertain_over_20pct": {
+      "curriculum": 7.7,
+      "relations": 4.7
+    }
+  },
+  "not_done": [
+    "진위 판정은 하지 않았다 — C8 사람 게이트의 몫이다.",
+    "카드 파일·사전 파일을 고치지 않았다.",
+    "verified_by 는 건드리지 않았다."
+  ]
+}

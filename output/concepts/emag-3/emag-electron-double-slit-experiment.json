@@ -1,0 +1,107 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-electron-double-slit-experiment",
+  "concept_key": "concept:electron-double-slit-experiment",
+  "registry_status": "new",
+  "term": "전자의 이중 슬릿 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'슬릿'이 영어 slit 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "electron double-slit experiment"
+  },
+  "definition": "전자를 이중 슬릿에 쏘아 스크린의 무늬를 보는 실험. 슬릿을 하나만 열 때와 둘 다 열 때를 견주어 파동성을 확인한다.",
+  "relations": [
+    {
+      "id": "rel-eds-single",
+      "text": "슬릿을 한쪽만 열면 줄무늬 없이 전자가 그 슬릿 맞은편에 고루 도달한다.",
+      "form": {
+        "condition": "이중 슬릿 가운데 한쪽만 열었을 때",
+        "type": "conditional",
+        "scope": "전자를 쏘는 이중 슬릿 장치"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「슬릿을 한쪽만 열어도 스크린에 간섭 줄무늬가 나타난다」는 슬릿을 하나만 열면 간섭이 나타나지 않는다고 한 101쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "슬릿을 한쪽만 열어도 스크린에 간섭 줄무늬가 나타난다."
+    },
+    {
+      "id": "rel-eds-both",
+      "text": "두 슬릿을 모두 열면 전자가 전혀 닿지 않는 지점이 생기며 줄무늬가 드러난다.",
+      "form": {
+        "condition": "두 슬릿을 열고 경로를 측정하지 않을 때",
+        "type": "conditional",
+        "scope": "경로를 관측하지 않은 전자의 이중 슬릿 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 슬릿을 모두 열면 슬릿 모양을 본뜬 줄 두 개만 생긴다」는 두 슬릿을 열면 간섭 줄무늬가 드러난다고 한 101쪽의 실험 결과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 슬릿을 모두 열면 슬릿 모양을 본뜬 줄 두 개만 생긴다."
+    },
+    {
+      "id": "rel-eds-interpret",
+      "text": "이 줄무늬는 각 슬릿을 지난 전자의 물질파끼리 간섭한 결과로 읽는다.",
+      "form": {
+        "condition": "두 슬릿을 모두 열었을 때",
+        "type": "causal",
+        "scope": "전자를 물질파로 해석하는 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이 줄무늬는 날아가던 전자들끼리 서로 부딪혀 생긴 결과로 읽는다」는 각 슬릿을 지난 물질파의 간섭으로 해석한다고 한 101쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 줄무늬는 날아가던 전자들끼리 서로 부딪혀 생긴 결과로 읽는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자는 입자니까 슬릿을 두 개 열면 슬릿 모양대로 줄 두 개만 생긴다",
+      "why_wrong": "경로를 재지 않으면 여러 줄의 간섭무늬가 생기고 전자가 전혀 닿지 않는 지점까지 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eds-both"
+    },
+    {
+      "text": "슬릿을 하나만 열어도 간섭무늬가 나타난다",
+      "why_wrong": "슬릿이 하나면 지나온 물질파도 하나여서 겹칠 상대가 없다. 그래서 간섭이 생기지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-eds-single"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-matter-wave"
+    },
+    {
+      "type": "next",
+      "target": "emag-single-electron-double-slit"
+    },
+    {
+      "type": "related",
+      "target": "emag-wave-particle-duality"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-01"
+  ],
+  "topic_id": "emag-3-1-01",
+  "pages": [
+    101
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

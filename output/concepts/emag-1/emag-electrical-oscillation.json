@@ -1,0 +1,138 @@
+{
+  "id": "emag-electrical-oscillation",
+  "concept_key": "concept:electrical-oscillation",
+  "registry_status": "new",
+  "term": "전기 진동",
+  "notation": {
+    "hanja": "電氣振動",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 振 떨칠 진 · 動 움직일 동",
+    "english": "electrical oscillation"
+  },
+  "definition": "충전된 축전기와 인덕터를 이은 회로에서 전기 에너지와 자기 에너지가 번갈아 오가며 되풀이되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-energy-exchange",
+      "text": "축전기가 방전되면 그 전기 에너지가 인덕터의 자기 에너지로 옮겨 가고, 전류가 줄면 다시 축전기로 돌아온다.",
+      "form": {
+        "condition": "저항으로 잃는 에너지가 없다고 볼 때",
+        "type": "causal",
+        "scope": "축전기와 인덕터로만 이루어진 LC 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "두 방향의 전환이 모두 일어나는 순환이라 한쪽을 뒤집어도 반드시 거짓이 되지 않는다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-max-current",
+      "text": "축전기 양단의 전위차가 0이 되는 순간 인덕터에 흐르는 전류가 가장 크다.",
+      "form": {
+        "condition": "저항으로 잃는 에너지가 없다고 볼 때",
+        "type": "conditional",
+        "scope": "이상적인 LC 회로",
+        "antecedent": {
+          "quantity": "축전기 양단의 전위차",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "회로에 흐르는 전류",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전기 에너지가 전부 자기 에너지로 옮겨 간 순간이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "축전기 양단의 전위차가 가장 클 때 인덕터에 흐르는 전류도 가장 크다."
+    },
+    {
+      "id": "rel-conservation",
+      "text": "저항이 없다면 회로 전체의 에너지는 일정한 채로 두 형태 사이를 오갈 뿐이다.",
+      "form": {
+        "condition": "저항으로 잃는 에너지가 없다고 볼 때",
+        "type": "conditional",
+        "scope": "이상적인 LC 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "에너지 보존과 어긋나므로 저절로 늘어난다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기 진동이 이어지는 동안 회로 전체의 에너지는 점점 커진다."
+    },
+    {
+      "id": "rel-spring-analogy",
+      "text": "전기 진동은 용수철 진자에서 운동 에너지와 탄성 위치 에너지가 번갈아 바뀌는 것과 같은 꼴이다.",
+      "form": {
+        "condition": "두 계의 에너지 전환을 견주어 볼 때",
+        "type": "classification",
+        "scope": "LC 회로와 용수철 진자",
+        "antecedent": {
+          "quantity": "LC 회로의 에너지 전환",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "용수철 진자의 에너지 전환",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "두 계를 견준 유비라 방향을 뒤집는 것이 뜻을 갖지 않는다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "축전기가 완전히 방전되면 회로의 전류도 그 순간 0이 된다",
+      "why_wrong": "방전이 끝나는 순간이 오히려 전류가 가장 큰 때다. 전기 에너지가 전부 인덕터의 자기 에너지로 옮겨 간 상태다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-max-current"
+    },
+    {
+      "text": "전기 진동이 이어질수록 회로의 에너지가 점점 늘어난다",
+      "why_wrong": "저항이 없다고 보면 전체 에너지는 일정하게 유지되고 형태만 바뀐다. 실제 회로에서는 저항 때문에 오히려 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-conservation"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-capacitance"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-inductor"
+    },
+    {
+      "type": "next",
+      "target": "emag-resonance-frequency"
+    }
+  ],
+  "curriculum": [
+    "12전자01-06"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-02",
+  "pages": [
+    41,
+    42,
+    50
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

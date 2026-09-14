@@ -1,0 +1,120 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-nuclear-fusion",
+  "concept_key": "concept:nuclear-fusion",
+  "registry_status": "new",
+  "term": "핵융합 반응",
+  "notation": {
+    "hanja": "核融合反應",
+    "hanja_gloss": "核 씨 핵 · 融 녹을 융 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응",
+    "english": "nuclear fusion"
+  },
+  "definition": "가벼운 원자핵들이 합쳐져 더 무거운 원자핵이 되면서 에너지를 내놓는 핵반응.",
+  "relations": [
+    {
+      "id": "rel-nf-release",
+      "text": "가벼운 원자핵이 합쳐져 무거운 원자핵이 될 때 질량 결손만큼의 에너지가 나온다.",
+      "form": {
+        "condition": "가벼운 원자핵끼리 융합할 때",
+        "type": "causal",
+        "scope": "핵융합 반응"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가벼운 원자핵이 합쳐져 무거운 원자핵이 될 때 질량 결손만큼의 에너지를 흡수한다」는 에너지를 방출하는 반응이라고 한 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가벼운 원자핵이 합쳐져 무거운 원자핵이 될 때 질량 결손만큼의 에너지를 흡수한다."
+    },
+    {
+      "id": "rel-nf-condition",
+      "text": "온도와 압력이 높을수록 원자핵들이 가까이 접근해 핵융합이 일어나기 쉽다.",
+      "form": {
+        "condition": "원자핵 사이의 전기적 척력을 이겨야 할 때",
+        "type": "direct",
+        "scope": "별 내부나 핵융합 장치",
+        "antecedent": {
+          "quantity": "온도와 압력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "핵융합이 일어날 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "온도와 압력이 높을수록 접근이 쉬워지므로, 어려워진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도와 압력이 높을수록 원자핵들이 가까이 접근하기 어려워 핵융합이 잘 일어나지 않는다."
+    },
+    {
+      "id": "rel-nf-vs-fission",
+      "text": "핵융합은 가벼운 핵이 합쳐지는 반응이고, 핵분열은 무거운 핵이 쪼개지는 반응이다.",
+      "form": {
+        "condition": "두 핵반응을 갈라 볼 때",
+        "type": "classification",
+        "scope": "핵반응의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「핵융합은 무거운 핵이 쪼개지는 반응이고, 핵분열은 가벼운 핵이 합쳐지는 반응이다」는 두 반응을 갈라 규정한 121쪽 — 두 이름을 맞바꾼 문장과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵융합은 무거운 핵이 쪼개지는 반응이고, 핵분열은 가벼운 핵이 합쳐지는 반응이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵융합은 원자핵이 쪼개지면서 에너지를 내는 반응이다",
+      "why_wrong": "쪼개지는 것은 핵분열이다. 핵융합은 가벼운 원자핵이 합쳐져 무거운 원자핵이 되는 반응이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nf-vs-fission"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-mass-defect"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-nuclear-reaction-equation"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-strong-nuclear-force"
+    },
+    {
+      "type": "next",
+      "target": "emag-hydrogen-fusion"
+    },
+    {
+      "type": "related",
+      "target": "emag-mass-energy-equivalence"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    121,
+    126
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "notes": [
+    "여기서 '핵'은 원자핵(concept:atomic-nucleus) 뜻이다. homonyms.yaml 의 금지쌍(원자핵 ↔ 세포핵)에 걸리는 자리이므로 링크는 표기가 아니라 concept_key 로만 걸었다."
+  ]
+}

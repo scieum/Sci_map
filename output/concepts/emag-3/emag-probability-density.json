@@ -1,0 +1,121 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-probability-density",
+  "concept_key": "concept:probability-density",
+  "registry_status": "new",
+  "term": "확률 밀도",
+  "notation": {
+    "hanja": "確率密度",
+    "hanja_gloss": "確 굳을 확 · 率 비율 률 · 密 빽빽할 밀 · 度 법도 도",
+    "english": "probability density",
+    "symbol_display": "|Ψ|²",
+    "symbol_plain": "psi^2"
+  },
+  "definition": "어느 지점에서 입자를 발견할 확률의 크기. 그 지점의 확률 파동 값을 절댓값 제곱해서 얻는다.",
+  "relations": [
+    {
+      "id": "rel-pd-zero",
+      "text": "확률 파동 절댓값의 제곱이 0인 자리에서는 입자가 발견되지 않는다.",
+      "form": {
+        "condition": "확률 파동이 서로 상쇄되어 0이 된 지점에서",
+        "type": "conditional",
+        "scope": "보른의 확률 해석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「확률 파동 절댓값의 제곱이 0인 자리에도 입자가 가끔 발견된다」는 그 지점에서 입자는 발견되지 않는다고 한 103쪽 보른의 확률 해석과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "확률 파동 절댓값의 제곱이 0인 자리에도 입자가 가끔 발견된다."
+    },
+    {
+      "id": "rel-pd-meaning",
+      "text": "확률 밀도는 전자가 그 자리에 퍼져 있는 양이 아니라 그 자리에서 발견될 확률을 뜻한다.",
+      "form": {
+        "condition": "파동 함수의 절댓값 제곱을 해석할 때",
+        "type": "classification",
+        "scope": "보른의 해석과 현대의 원자 모형"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「확률 밀도는 전자가 그 자리에 퍼져 있는 양을 뜻한다」는 확률 밀도를 그 위치에서 전자를 발견할 확률로 규정한 103·119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01",
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "확률 밀도는 전자가 그 자리에 퍼져 있는 양을 뜻한다."
+    },
+    {
+      "id": "rel-pd-hydrogen",
+      "text": "수소 원자의 (1, 0, 0) 상태에서 확률 밀도가 가장 큰 거리는 보어 모형의 n=1 궤도 반지름과 같다.",
+      "form": {
+        "condition": "수소 원자의 바닥 상태를 볼 때",
+        "type": "conditional",
+        "scope": "수소 원자에 한정. 다전자 원자에는 그대로 적용되지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수소 원자의 (1, 0, 0) 상태에서 확률 밀도가 가장 큰 거리는 보어 모형의 n=1 궤도 반지름과 다르다」는 그 거리가 보어 모형 n=1 궤도 반지름과 같다고 한 119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 원자의 (1, 0, 0) 상태에서 확률 밀도가 가장 큰 거리는 보어 모형의 n=1 궤도 반지름과 다르다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "확률 밀도가 큰 곳에는 전자가 더 많이 몰려 퍼져 있다",
+      "why_wrong": "전자 하나가 그 자리에 두껍게 깔려 있다는 뜻이 아니라, 재어 보면 그 자리에서 발견될 가능성이 크다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pd-meaning"
+    },
+    {
+      "text": "확률 밀도가 0인 자리는 전자가 지나가기만 하고 머무르지 않는 자리다",
+      "why_wrong": "머무르고 말고의 문제가 아니라 그 자리에서 발견될 확률 자체가 0이다. 아무리 오래 재어도 전자가 찍히지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pd-zero"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-probability-wave"
+    },
+    {
+      "type": "next",
+      "target": "emag-probability-wave-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-mechanical-atomic-model"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-01",
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-1-01",
+  "pages": [
+    103,
+    108,
+    119
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "aliases": [
+    "발견 확률"
+  ],
+  "notes": [
+    "★C5 경계 — (1, 0, 0) 표기를 오비탈 이름(1s·2s)으로 바꾸지 말 것. 12전자03-04 해설이 '오비탈은 다루지 않는다'이다. 지금 표기는 교과서 119쪽이 그대로 인쇄한 것이다.",
+    "C6 겹침 — rel-pd-zero 는 emag-probability-wave-interference 의 rel-pwi-cancel 과 결론이 같다(조건 한 마디만 다르다). 둘 다 invertible: true 라 D1 이 비슷한 OX 를 둘 만들 수 있다. 모순은 아니므로 이번 패스에서는 손대지 않았다.",
+    "중복 정리 — rel-pd-zero 의 inverted_text 와 글자가 겹치던 오개념을 다른 오류 문장으로 바꿔 적었다."
+  ]
+}

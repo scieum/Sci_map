@@ -1,0 +1,132 @@
+{
+  "id": "emag-coherence",
+  "concept_key": "concept:coherence",
+  "registry_status": "new",
+  "term": "결맞음성",
+  "notation": {
+    "hanja": "性",
+    "hanja_gloss": "性 성품 성",
+    "hanja_note": "'결맞음'은 고유어로 지은 말이라 한자가 없고, 접미사 '성'만 한자다.",
+    "english": "coherence"
+  },
+  "definition": "함께 나아가는 빛들의 파장과 위상이 한결같은 성질. 이런 빛끼리는 간섭이 또렷하게 일어난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-coh-phase",
+      "text": "파장이 같아도 위상이 제각각인 LED 빛과 달리, 레이저 빛은 파장과 위상이 모두 같다.",
+      "form": {
+        "condition": "LED 빛과 레이저 빛을 견줄 때",
+        "type": "classification",
+        "scope": "두 광원의 비교. 파장만 같다고 결맞음성이 있는 것은 아니다",
+        "antecedent": {
+          "quantity": "광원의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "위상의 고른 정도",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 광원의 이름을 맞바꾼 문장은 반드시 거짓이다. 같은 단원의 rel-dir-spread·rel-mono-prism 과 같은 기준으로 맞췄다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 같아도 위상이 제각각인 것은 레이저 빛이고, LED 빛은 파장과 위상이 모두 같다."
+    },
+    {
+      "id": "rel-coh-interference",
+      "text": "위상이 고르게 유지되는 빛일수록 간섭무늬가 또렷하게 나타난다.",
+      "form": {
+        "condition": "두 빛을 겹쳐 간섭시킬 때",
+        "type": "direct",
+        "scope": "간섭성. 위상이 흐트러진 빛에서는 무늬가 흐려진다",
+        "antecedent": {
+          "quantity": "위상의 고른 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "간섭무늬의 또렷함",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "위상이 고를수록 무늬가 또렷해지므로 '흐려진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위상이 고르게 유지되는 빛일수록 간섭무늬가 흐려진다."
+    },
+    {
+      "id": "rel-coh-brightness",
+      "text": "결맞음성이 좋은 빛은 같은 에너지를 들이고도 훨씬 밝은 빛을 만들 수 있다.",
+      "form": {
+        "condition": "같은 에너지를 공급했을 때",
+        "type": "causal",
+        "scope": "레이저 빛. 에너지가 커지는 것이 아니라 한곳에 모이는 것이다"
+      },
+      "invertible": false,
+      "invertible_reason": "쓸모를 말하는 명제라 뒤집을 방향이 뚜렷하지 않다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "파장만 같으면 결맞음성이 좋은 빛이다",
+      "why_wrong": "위상까지 고르게 같아야 한다. 파란색 LED 빛은 파장이 같아도 위상이 제각각이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coh-phase"
+    },
+    {
+      "text": "결맞음성이 좋다는 것은 빛이 지닌 에너지가 더 크다는 뜻이다",
+      "why_wrong": "같은 에너지로도 밝게 만들 수 있다는 뜻이지, 에너지 자체가 커진다는 말이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-coh-brightness"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-laser"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-light-interference"
+    },
+    {
+      "type": "related",
+      "target": "emag-monochromaticity"
+    },
+    {
+      "type": "related",
+      "target": "emag-optical-communication"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    87,
+    90
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "rel-coh-phase 를 invertible: true 로 올렸다. 근거는 form.type 이 아니라 '두 이름을 맞바꾼 문장이 반드시 거짓인가' 하나다.",
+    "rel-coh-brightness 의 근거는 교과서 87쪽 본문(text.jsonl 블록 p87-b16)이다 — 「결맞음성이 좋은 빛은 간섭성이 좋아서 같은 에너지로도 매우 밝은 빛을 만들 수 있다」. 밝기를 결맞음성에 귀속시킨 것은 교과서 서술 그대로다."
+  ]
+}

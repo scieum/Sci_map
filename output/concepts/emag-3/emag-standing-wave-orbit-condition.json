@@ -1,0 +1,102 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-standing-wave-orbit-condition",
+  "concept_key": "concept:standing-wave-condition-of-electron-orbit",
+  "registry_status": "new",
+  "term": "전자 궤도의 정상파 조건",
+  "notation": {
+    "hanja": "電子軌道定常波條件",
+    "hanja_gloss": "電 번개 전 · 子 아들 자 · 軌 바퀴자국 궤 · 道 길 도 · 定 정할 정 · 常 항상 상 · 波 물결 파 · 條 가지 조 · 件 사건 건",
+    "english": "standing wave condition of electron orbit"
+  },
+  "definition": "전자의 물질파가 궤도를 한 바퀴 돌아 자기 자신과 매끄럽게 이어져 정상파를 이루어야 한다는 조건.",
+  "relations": [
+    {
+      "id": "rel-swo-integer",
+      "text": "이 조건을 채우는 반지름은 둘레가 파장의 정수배인 경우뿐이어서, 그 사이의 반지름에서는 전자가 안정할 수 없다.",
+      "form": {
+        "condition": "전자를 물질파로 다루어 궤도 반지름을 따질 때",
+        "type": "conditional",
+        "scope": "보어 모형의 원 궤도"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「궤도 둘레가 물질파 파장의 정수배가 아닌 반지름에서도 전자는 안정하게 머물 수 있다」는 정수배가 되어 정상파를 이룰 때에만 안정한 궤도가 된다고 한 118쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "궤도 둘레가 물질파 파장의 정수배가 아닌 반지름에서도 전자는 안정하게 머물 수 있다."
+    },
+    {
+      "id": "rel-swo-reread",
+      "text": "보어가 가설로 놓았던 양자 조건을 드브로이 이론으로 다시 읽으면 이 정상파 조건이 된다.",
+      "form": {
+        "condition": "물질파 이론을 보어 모형에 적용할 때",
+        "type": "causal",
+        "scope": "수소 원자 모형"
+      },
+      "invertible": false,
+      "invertible_reason": "보어의 양자 조건을 드브로이 이론으로 다시 읽는 절차를 말할 뿐이어서 뒤집을 결론이 없다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-swo-n",
+      "text": "궤도 둘레에 들어가는 파장의 개수가 그 궤도의 양자수에 해당한다.",
+      "form": {
+        "condition": "정상파 조건을 채운 궤도일 때",
+        "type": "classification",
+        "scope": "보어 모형의 궤도"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「궤도 둘레에 들어가는 파장의 개수는 그 궤도의 양자수와 아무 관계가 없다」는 2πr=nλ 로 둘을 맞세운 118쪽 그림 Ⅲ-20과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "궤도 둘레에 들어가는 파장의 개수는 그 궤도의 양자수와 아무 관계가 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자 궤도는 반지름이 얼마든 물질파만 있으면 안정하다",
+      "why_wrong": "둘레가 파장의 정수배가 되어 정상파를 이루는 반지름에서만 안정하다. 그 밖의 반지름에서는 파동이 이어지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-swo-integer"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-matter-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-bohr-atomic-model"
+    },
+    {
+      "type": "related",
+      "target": "emag-energy-level"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-2-02",
+  "pages": [
+    118
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "notes": [
+    "C6 동어반복 정리 — rel-swo-integer 가 definition 의 뼈대에 '정상파 → 파장의 정수배' 동의어 치환만 더한 꼴이어서, definition 은 정상파 조건이 무엇인가만 담게 하고 명제는 '정수배가 아닌 반지름은 허용되지 않는다'는 귀결로 옮겼다."
+  ]
+}

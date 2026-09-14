@@ -1,0 +1,127 @@
+{
+  "id": "emag-photoelectric-effect",
+  "concept_key": "concept:photoelectric-effect",
+  "registry_status": "new",
+  "term": "광전 효과",
+  "notation": {
+    "hanja": "光電效果",
+    "hanja_gloss": "光 빛 광 · 電 번개 전 · 效 본받을 효 · 果 열매 과",
+    "english": "photoelectric effect"
+  },
+  "definition": "빛을 비춘 금속에서 전자가 튀어나오는 현상. 전자가 광자 하나에게서 에너지를 받는다는 빛의 입자성으로 설명된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pe-particle",
+      "text": "전자가 나오고 안 나오고를 가르는 것은 빛의 세기가 아니라 진동수여서, 이 현상은 빛을 알갱이로 볼 때 풀린다.",
+      "form": {
+        "condition": "금속판에 단색광을 비출 때",
+        "type": "causal",
+        "scope": "광전 효과 실험. 빛을 파동으로만 보면 설명되지 않는 대목이다"
+      },
+      "invertible": false,
+      "invertible_reason": "해석을 담은 명제라 방향을 뒤집어 참·거짓을 가릴 수 없다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pe-frequency",
+      "text": "비추는 빛의 진동수가 그 금속의 문턱 진동수보다 커야 광전자가 튀어나온다.",
+      "form": {
+        "condition": "금속의 종류를 정해 두었을 때",
+        "type": "conditional",
+        "scope": "광전 효과. 진동수가 모자라면 세기를 키워도 나오지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "문턱보다 작은 진동수로는 전자가 나오지 않으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비추는 빛의 진동수가 그 금속의 문턱 진동수보다 작아야 광전자가 튀어나온다."
+    },
+    {
+      "id": "rel-pe-intensity",
+      "text": "문턱 진동수를 넘는 빛이라면 세게 비출수록 튀어나오는 광전자의 수가 늘어난다.",
+      "form": {
+        "condition": "빛의 진동수를 바꾸지 않을 때",
+        "type": "direct",
+        "scope": "문턱 진동수를 넘는 빛. 광전자 하나의 최대 운동 에너지는 이것으로 달라지지 않는다",
+        "antecedent": {
+          "quantity": "빛의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "방출되는 광전자의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세기는 광자의 수를 늘리므로 '줄어든다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "문턱 진동수를 넘는 빛이라면 세게 비출수록 튀어나오는 광전자의 수가 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛을 아주 세게, 오래 비추면 어떤 빛으로도 전자를 꺼낼 수 있다",
+      "why_wrong": "진동수가 문턱보다 작으면 아무리 세게 오래 비춰도 전자는 나오지 않는다. 전자는 광자 하나와 주고받기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pe-frequency"
+    },
+    {
+      "text": "빛의 세기를 키우면 광전자 하나하나가 더 빨라진다",
+      "why_wrong": "세기는 광전자의 수를 늘릴 뿐이다. 하나하나의 최대 운동 에너지는 진동수와 일함수가 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pe-intensity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-photon"
+    },
+    {
+      "type": "next",
+      "target": "emag-photoelectron"
+    },
+    {
+      "type": "next",
+      "target": "emag-work-function"
+    },
+    {
+      "type": "next",
+      "target": "emag-optical-sensor"
+    },
+    {
+      "type": "same",
+      "target": "phys-photoelectric-effect",
+      "note": "「물리학」 Ⅲ단원의 같은 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-01",
+  "pages": [
+    80,
+    90
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "concept_key 를 phys-photoelectric-effect 와 같게 두었다 — G3 에서 한 키로 묶일 자리다."
+  ]
+}

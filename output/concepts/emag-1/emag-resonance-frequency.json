@@ -1,0 +1,120 @@
+{
+  "id": "emag-resonance-frequency",
+  "concept_key": "concept:resonance-frequency",
+  "registry_status": "new",
+  "term": "공명 진동수",
+  "notation": {
+    "hanja": "共鳴振動數",
+    "hanja_gloss": "共 함께 공 · 鳴 울 명 · 振 떨칠 진 · 動 움직일 동 · 數 셈 수",
+    "english": "resonance frequency",
+    "symbol_display": "f₀ = 1/(2π√(LC))",
+    "symbol_plain": "f0 = 1/(2pi sqrt(LC))"
+  },
+  "definition": "RLC 회로에 흐르는 전류가 가장 커지는 교류 전원의 진동수로, 인덕턴스와 전기 용량으로 정해진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lc",
+      "text": "인덕턴스나 전기 용량 가운데 하나를 키우면 공명 진동수는 낮아진다.",
+      "form": {
+        "condition": "인덕턴스와 전기 용량 가운데 하나만 바꿀 때",
+        "type": "inverse",
+        "scope": "직렬로 이은 RLC 회로",
+        "antecedent": {
+          "quantity": "인덕턴스",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공명 진동수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 양의 곱의 제곱근에 반비례하므로 높아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인덕턴스를 키우면 회로의 공명 진동수가 높아진다."
+    },
+    {
+      "id": "rel-match",
+      "text": "교류 전원의 진동수를 회로의 공명 진동수에 맞추면 회로에 큰 전류를 흘릴 수 있다.",
+      "form": {
+        "condition": "회로의 인덕턴스와 전기 용량이 정해져 있을 때",
+        "type": "conditional",
+        "scope": "직렬로 이은 RLC 교류 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "맞출수록 전류가 커지므로 멀어질수록 커진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교류 전원의 진동수를 공명 진동수에서 멀리 떨어뜨릴수록 회로에 큰 전류가 흐른다."
+    },
+    {
+      "id": "rel-detector",
+      "text": "금속 물체가 게이트를 지나면 회로의 공명이 깨져 전류가 크게 달라지고, 센서가 그 변화를 읽어 경고음을 낸다.",
+      "form": {
+        "condition": "게이트가 미리 공명 상태에 맞춰져 있을 때",
+        "type": "causal",
+        "scope": "공항의 보안 검색대"
+      },
+      "invertible": true,
+      "invertible_reason": "평소가 공명 상태이므로 금속이 지날 때 공명에 든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속 물체가 게이트를 지나면 회로가 공명 상태에 들어가 전류가 최댓값이 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공명 진동수는 회로의 저항이 정한다",
+      "why_wrong": "공명 진동수는 인덕턴스와 전기 용량만으로 정해진다. 저항은 공명일 때 흐르는 전류의 크기에 관여할 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lc"
+    },
+    {
+      "text": "보안 검색대는 금속이 지날 때 공명이 일어나 경고음을 낸다",
+      "why_wrong": "게이트는 평소에 공명 상태로 맞춰져 있고, 금속이 들어오면 그 공명이 깨지면서 전류가 크게 변하는 것을 센서가 읽는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-detector"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-rlc-circuit"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-electrical-oscillation"
+    },
+    {
+      "type": "related",
+      "target": "emag-inductor-in-ac-circuit"
+    }
+  ],
+  "curriculum": [
+    "12전자01-06"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-02",
+  "pages": [
+    42,
+    43
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "[C5 uncertain] 성취기준 01-06 은 '에너지 관점에서 정성적으로'라 했는데 rel-lc 는 공명 진동수의 정량 의존성을 명제로 세운다. 교과서 본문 42쪽에 식이 실려 있어 이탈로 내리지 않았다. 대신 계산 문항으로 확장하지 말 것 — 진동수가 무엇에 따라 높아지고 낮아지는가까지만 쓴다 (C8 확인 자리)."
+  ]
+}

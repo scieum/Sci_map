@@ -1,0 +1,118 @@
+{
+  "id": "emag-stimulated-emission",
+  "concept_key": "concept:stimulated-emission",
+  "registry_status": "new",
+  "term": "유도 방출",
+  "notation": {
+    "hanja": "誘導 放出",
+    "hanja_gloss": "誘 꾈 유 · 導 이끌 도 · 放 놓을 방 · 出 날 출",
+    "english": "stimulated emission"
+  },
+  "definition": "준안정 상태에 머물던 전자가 바깥에서 온 빛에 이끌려 낮은 준위로 내려가며 빛을 내놓는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-se-same-phase",
+      "text": "이렇게 나온 빛은 이끌어 낸 빛과 방향·위상·파장이 같아, 두 빛이 겹쳐 하나였던 빛이 두 배가 된다.",
+      "form": {
+        "condition": "준위 차만 한 에너지의 빛이 닿을 때",
+        "type": "causal",
+        "scope": "유도 방출. 증폭이 이어지는 출발점이다"
+      },
+      "invertible": false,
+      "invertible_reason": "나온 빛의 성질을 서술하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-se-vs-spontaneous",
+      "text": "자발 방출은 바깥 빛 없이 저절로 일어나 방향과 위상이 제각각이지만, 유도 방출은 닿은 빛을 그대로 따라간다.",
+      "form": {
+        "condition": "두 방출을 견줄 때",
+        "type": "classification",
+        "scope": "자발 방출과 유도 방출의 구별",
+        "antecedent": {
+          "quantity": "방출의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "나온 빛의 방향과 위상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 방출의 이름을 맞바꾼 문장은 반드시 거짓이다. rel-coh-phase·rel-mono-prism 과 같은 기준이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자발 방출은 닿은 빛을 그대로 따라가고, 유도 방출은 바깥 빛 없이 저절로 일어나 방향과 위상이 제각각이다."
+    },
+    {
+      "id": "rel-se-metastable",
+      "text": "전자가 준안정 상태에 오래 머무는 동안 바깥 빛을 만나야 유도 방출이 일어난다.",
+      "form": {
+        "condition": "들뜬상태에 머무는 시간이 충분할 때",
+        "type": "conditional",
+        "scope": "준안정 상태를 가진 매질. 보통의 들뜬상태에서는 곧바로 자발 방출이 일어난다"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 말하는 명제라 뒤집어 참·거짓을 가릴 수 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유도 방출에서는 쪼여 준 빛이 흡수되어 사라진다",
+      "why_wrong": "쪼인 빛은 그대로 나아가고 같은 빛이 하나 더 생긴다. 그래서 빛이 증폭된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-se-same-phase"
+    },
+    {
+      "text": "자발 방출로 나온 빛도 위상이 고르다",
+      "why_wrong": "자발 방출은 저마다 다른 때에 일어나 방향과 위상이 제각각이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-se-vs-spontaneous"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-population-inversion"
+    },
+    {
+      "type": "next",
+      "target": "emag-laser"
+    },
+    {
+      "type": "related",
+      "target": "emag-coherence"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    88,
+    90
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "자발 방출은 따로 카드를 세우지 않고 이 카드에서 대비로 다룬다.",
+    "rel-se-vs-spontaneous 를 invertible: true 로 올렸다 (C6 지시). 분류형이라는 것은 판정 근거가 아니다."
+  ]
+}

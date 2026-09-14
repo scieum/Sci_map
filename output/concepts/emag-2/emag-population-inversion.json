@@ -1,0 +1,104 @@
+{
+  "id": "emag-population-inversion",
+  "concept_key": "concept:population-inversion",
+  "registry_status": "new",
+  "term": "밀도 반전",
+  "notation": {
+    "hanja": "密度 反轉",
+    "hanja_gloss": "密 빽빽할 밀 · 度 법도 도 · 反 돌이킬 반 · 轉 구를 전",
+    "english": "population inversion"
+  },
+  "definition": "준안정 상태에 있는 전자가 더 낮은 준위에 있는 전자보다 많아진 상태. 유도 방출이 이어지려면 이 상태가 먼저 이루어져야 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pi-pumping",
+      "text": "에너지 공급원이 매질에 에너지를 넣어 전자를 높은 준위로 올리면, 전자들이 준안정 상태로 내려와 그곳에 쌓인다.",
+      "form": {
+        "condition": "매질에 에너지를 꾸준히 공급할 때",
+        "type": "causal",
+        "scope": "레이저 매질. 공급이 끊기면 쌓인 전자가 줄어든다"
+      },
+      "invertible": false,
+      "invertible_reason": "쌓이는 과정을 서술하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pi-metastable",
+      "text": "준안정 상태는 전자가 다른 들뜬상태보다 오래 머무는 자리여서 전자가 쌓일 수 있다.",
+      "form": {
+        "condition": "여러 들뜬상태와 견줄 때",
+        "type": "causal",
+        "scope": "준안정 상태의 성질"
+      },
+      "invertible": true,
+      "invertible_reason": "오래 머물기 때문에 쌓이는 것이므로 '짧게만 머문다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "준안정 상태는 전자가 아주 짧게만 머무는 자리여서 전자가 쌓이지 않는다."
+    },
+    {
+      "id": "rel-pi-lasing",
+      "text": "밀도 반전이 이루어져야 흡수보다 유도 방출이 앞서 빛이 줄지 않고 증폭된다.",
+      "form": {
+        "condition": "매질 속에서 빛이 오갈 때",
+        "type": "conditional",
+        "scope": "레이저가 발진하는 조건"
+      },
+      "invertible": false,
+      "invertible_reason": "필요조건을 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "밀도 반전은 전자가 모두 높은 준위로 올라간 상태다",
+      "why_wrong": "모두가 아니라 준안정 상태 쪽 전자가 아래쪽보다 많아진 상태다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pi-pumping"
+    },
+    {
+      "text": "한 번 밀도 반전이 되면 에너지를 넣지 않아도 레이저가 계속 나온다",
+      "why_wrong": "공급이 끊기면 준안정 상태의 전자가 줄어 밀도 반전이 무너지고 증폭도 멎는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pi-lasing"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-stimulated-emission"
+    },
+    {
+      "type": "next",
+      "target": "emag-laser"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    88
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "준안정 상태는 따로 카드를 세우지 않고 이 카드 안에서 정의한다."
+  ]
+}

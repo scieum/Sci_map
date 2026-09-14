@@ -1,0 +1,131 @@
+{
+  "id": "emag-work-function",
+  "concept_key": "concept:work-function",
+  "registry_status": "new",
+  "term": "일함수",
+  "notation": {
+    "hanja": "函數",
+    "hanja_gloss": "函 함 함 · 數 셀 수",
+    "hanja_note": "'일'은 고유어로 쓴 물리량 이름(work)이라 한자를 달지 않았다.",
+    "english": "work function",
+    "symbol_display": "W₀",
+    "symbol_plain": "W0"
+  },
+  "definition": "금속 안에 붙들려 있는 전자를 밖으로 꺼내는 데 드는 에너지의 최솟값. 금속의 종류마다 값이 다르다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wf-material",
+      "text": "일함수는 금속의 종류가 정하는 값이라 비추는 빛을 바꾸어도 달라지지 않는다.",
+      "form": {
+        "condition": "같은 금속판을 쓸 때",
+        "type": "causal",
+        "scope": "금속의 고유한 성질. 세슘과 구리처럼 금속이 바뀌면 값도 바뀐다"
+      },
+      "invertible": true,
+      "invertible_reason": "금속이 정하는 값이므로 '빛에 따라 달라진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일함수는 비추는 빛의 진동수나 세기에 따라 달라진다."
+    },
+    {
+      "id": "rel-wf-threshold",
+      "text": "일함수가 큰 금속일수록 광전 효과를 일으키는 데 필요한 문턱 진동수도 크다.",
+      "form": {
+        "condition": "문턱 진동수와 일함수가 hf0 = W0 으로 묶일 때",
+        "type": "direct",
+        "scope": "광전 효과. 플랑크 상수가 둘을 이어 준다",
+        "antecedent": {
+          "quantity": "일함수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "문턱 진동수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "hf0 = W0 에서 둘은 비례하므로 '작다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일함수가 큰 금속일수록 문턱 진동수는 작다."
+    },
+    {
+      "id": "rel-wf-maxke",
+      "text": "같은 빛을 비출 때 일함수가 큰 금속일수록 광전자의 최대 운동 에너지는 작다.",
+      "form": {
+        "condition": "비추는 빛의 진동수를 같게 둘 때",
+        "type": "inverse",
+        "scope": "Emax = hf - W0 가 성립하는 범위. 광전자가 아예 나오지 않는 금속은 견줄 수 없다",
+        "antecedent": {
+          "quantity": "일함수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광전자의 최대 운동 에너지",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 광자 에너지에서 더 많이 쓰면 남는 것이 적으므로 '크다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 빛을 비출 때 일함수가 큰 금속일수록 광전자의 최대 운동 에너지가 크다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛을 세게 비추면 일함수가 작아져 전자가 잘 나온다",
+      "why_wrong": "일함수는 금속의 종류가 정하는 값이라 빛으로 바뀌지 않는다. 세기가 늘리는 것은 나오는 전자의 수다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wf-material"
+    },
+    {
+      "text": "일함수가 큰 금속일수록 전자가 잘 튀어나온다",
+      "why_wrong": "일함수가 클수록 더 큰 진동수의 빛이 있어야 전자가 나온다. 꺼내기가 더 어렵다는 뜻이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wf-threshold"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-photoelectric-effect"
+    },
+    {
+      "type": "next",
+      "target": "emag-threshold-frequency"
+    },
+    {
+      "type": "next",
+      "target": "emag-maximum-kinetic-energy-of-photoelectron"
+    },
+    {
+      "type": "related",
+      "target": "emag-photon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-01",
+  "pages": [
+    81,
+    90
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

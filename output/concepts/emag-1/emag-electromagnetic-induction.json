@@ -1,0 +1,120 @@
+{
+  "id": "emag-electromagnetic-induction",
+  "concept_key": "concept:electromagnetic-induction",
+  "registry_status": "new",
+  "term": "전자기 유도",
+  "notation": {
+    "hanja": "電磁氣誘導",
+    "hanja_gloss": "電 번개 전 · 磁 자석 자 · 氣 기운 기 · 誘 꾈 유 · 導 이끌 도",
+    "english": "electromagnetic induction"
+  },
+  "definition": "코일을 지나는 자기선속이 달라질 때 코일에 전압이 생겨 전류가 흐르게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-relative-motion",
+      "text": "코일과 자석 중 어느 쪽이 움직이든 코일을 지나는 자기선속이 달라지기만 하면 코일에 전류가 유도된다.",
+      "form": {
+        "condition": "코일과 자석의 상대적 움직임으로 코일을 지나는 자기선속이 달라질 때",
+        "type": "causal",
+        "scope": "닫힌 회로를 이룬 코일과 자석"
+      },
+      "invertible": true,
+      "invertible_reason": "자기선속이 달라지는 것을 문면에 못 박으면 어느 쪽이 움직이느냐로 유도가 갈린다고 한 문장은 반드시 거짓이다. 뒤집은 문장에도 '자기선속이 달라져도'를 남겨 선속이 변하지 않는 이동이 반례가 되지 않게 했다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석을 고정한 채 코일만 움직여 코일을 지나는 자기선속이 달라져도 코일에는 전류가 유도되지 않는다."
+    },
+    {
+      "id": "rel-flux-change",
+      "text": "코일을 지나는 자기선속이 변하지 않으면 자석이 아무리 세도 유도 전류는 흐르지 않는다.",
+      "form": {
+        "condition": "코일과 자석이 서로 멈춰 있을 때",
+        "type": "conditional",
+        "scope": "닫힌 회로를 이룬 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "변화가 없으면 유도가 없다는 것이 확정적이라 흐른다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석이 세기만 하면 코일과 자석이 멈춰 있어도 유도 전류가 흐른다."
+    },
+    {
+      "id": "rel-speed",
+      "text": "같은 자석과 코일이라도 자석을 빠르게 움직일수록 자기선속이 급하게 변해 유도 전류가 세진다.",
+      "form": {
+        "condition": "같은 자석과 같은 코일을 쓸 때",
+        "type": "direct",
+        "scope": "닫힌 회로를 이룬 코일",
+        "antecedent": {
+          "quantity": "자석을 움직이는 빠르기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변화율에 비례하는 관계라 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자석을 빠르게 움직일수록 코일에 흐르는 유도 전류는 약해진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "코일 속에 자석을 넣은 채 가만히 두면 전류가 계속 흐른다",
+      "why_wrong": "자기선속이 변해야 전류가 유도된다. 자석을 넣은 채 멈추면 자기선속이 일정해져 전류가 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-flux-change"
+    },
+    {
+      "text": "코일을 고정하고 자석만 움직여야 전류가 유도된다",
+      "why_wrong": "중요한 것은 둘의 상대적인 움직임이다. 자석을 두고 코일을 움직여도 자기선속이 변해 전류가 유도된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-relative-motion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-magnetic-flux"
+    },
+    {
+      "type": "next",
+      "target": "emag-induced-emf"
+    },
+    {
+      "type": "same",
+      "target": "phys-electromagnetic-induction",
+      "note": "concept:electromagnetic-induction 가 같다"
+    }
+  ],
+  "curriculum": [
+    "12전자01-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-01",
+  "pages": [
+    34,
+    35,
+    50
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "rel-relative-motion 은 '상대 운동'만으로는 자기선속이 변하지 않는 이동(균일한 영역의 평행 이동·대칭축 회전)이 반례가 되어, 자기선속 변화를 text 와 inverted_text 문면에 넣어 invertible: true 를 지켰다 (C6 수정)."
+  ]
+}

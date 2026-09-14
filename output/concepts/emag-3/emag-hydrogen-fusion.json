@@ -1,0 +1,146 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-hydrogen-fusion",
+  "concept_key": "concept:hydrogen-fusion",
+  "registry_status": "new",
+  "term": "수소 핵융합 반응",
+  "notation": {
+    "hanja": "水素核融合反應",
+    "hanja_gloss": "水 물 수 · 素 본디 소 · 核 씨 핵 · 融 녹을 융 · 合 합할 합 · 反 돌이킬 반 · 應 응할 응",
+    "english": "hydrogen fusion"
+  },
+  "definition": "수소 원자핵 넷이 세 단계를 거쳐 헬륨 원자핵 하나로 합쳐지는 반응. 별이 오래도록 빛을 내는 에너지의 원천이다.",
+  "relations": [
+    {
+      "id": "rel-hf-steps",
+      "text": "수소 원자핵 4개가 세 단계를 거쳐 헬륨 원자핵 1개가 되며 양전자와 전자 중성미자가 함께 나온다.",
+      "form": {
+        "condition": "별 내부에서 수소 핵융합이 일어날 때",
+        "type": "causal",
+        "scope": "태양처럼 수소를 태우는 별에서 일어나는 p-p 연쇄 경로. CNO 순환 경로는 이 명제 밖이다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「헬륨 원자핵 1개가 세 단계를 거쳐 수소 원자핵 4개로 쪼개진다」는 수소 원자핵이 헬륨 원자핵으로 바뀐다고 한 120·121쪽의 반응 방향과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "헬륨 원자핵 1개가 세 단계를 거쳐 수소 원자핵 4개로 쪼개진다."
+    },
+    {
+      "id": "rel-hf-tunneling",
+      "text": "고전적으로 계산한 태양 중심의 온도는 원자핵을 맞붙이기에 모자라지만 터널 효과 덕분에 융합이 일어난다.",
+      "form": {
+        "condition": "태양 중심의 온도와 압력을 고전적으로 계산해 견줄 때",
+        "type": "causal",
+        "scope": "태양 내부"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양 중심의 온도만으로 원자핵을 맞붙이기에 충분해 터널 효과 없이도 융합이 일어난다」는 계산으로 얻은 태양 중심 온도가 필요한 운동 에너지에 미치지 못한다고 한 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05",
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 중심의 온도만으로 원자핵을 맞붙이기에 충분해 터널 효과 없이도 융합이 일어난다."
+    },
+    {
+      "id": "rel-hf-delay",
+      "text": "중심에서 생긴 빛이 태양 표면까지 나오는 데는 수천 년에서 수백만 년이 걸린다.",
+      "form": {
+        "condition": "고밀도 플라스마 속을 지나야 할 때",
+        "type": "conditional",
+        "scope": "태양 내부"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중심에서 생긴 빛은 곧바로 태양 표면으로 빠져나온다」는 표면까지 수천 년에서 수백만 년이 걸린다고 한 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심에서 생긴 빛은 곧바로 태양 표면으로 빠져나온다."
+    },
+    {
+      "id": "rel-hf-gamma",
+      "text": "중심에서 나온 감마선은 표면에 이르는 동안 에너지를 잃어 자외선·가시광선·적외선으로 바뀐다.",
+      "form": {
+        "condition": "빛이 태양 내부를 빠져나오는 동안",
+        "type": "causal",
+        "scope": "태양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중심에서 나온 감마선은 표면에 이르는 동안 에너지를 얻어 더 짧은 파장의 빛으로 바뀐다」는 에너지를 잃어 자외선·가시광선·적외선으로 바뀐다고 한 122쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심에서 나온 감마선은 표면에 이르는 동안 에너지를 얻어 더 짧은 파장의 빛으로 바뀐다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양은 수소를 연료로 태우는 화학적 연소로 빛을 낸다",
+      "why_wrong": "연소가 아니라 수소 원자핵이 헬륨 원자핵으로 합쳐지는 핵반응이다. 질량 결손이 에너지로 바뀐다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hf-steps"
+    },
+    {
+      "text": "태양 중심에서 만들어진 빛은 곧바로 표면으로 빠져나온다",
+      "why_wrong": "내부가 고밀도 플라스마여서 흡수와 재방출을 거듭한다. 표면까지 수천 년에서 수백만 년이 걸린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hf-delay"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-nuclear-fusion"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-quantum-tunneling"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-plasma"
+    },
+    {
+      "type": "next",
+      "target": "emag-continuous-spectrum"
+    },
+    {
+      "type": "same",
+      "target": "earth-hydrogen-fusion"
+    },
+    {
+      "type": "same",
+      "target": "isci2-hydrogen-fusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    120,
+    121,
+    122
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "notes": [
+    "earth-hydrogen-fusion·isci2-hydrogen-fusion 과 concept_key 가 같아 same 으로 이었다. 세 카드 모두 실재함을 확인했다.",
+    "★C8 확인 요청 — 이 교과서는 p-p 연쇄의 3단계를 직접 다루는데 earth-3 에는 concept:pp-chain-and-cno-cycle 카드가 따로 있다. 그 카드는 'p-p 연쇄와 CNO 순환 중 어느 쪽이 우세한가'를 다루고 이 카드는 '수소 4개 → 헬륨 1개'의 단계와 태양 내부 사정을 다뤄 범위가 겹치지는 않는다. 다만 이 교과서가 3단계 반응식을 직접 싣는 만큼 두 키의 경계를 사람이 한 번 확인해 주기 바란다 — 고치지 않고 그대로 두었다.",
+    "여기서 '핵'은 원자핵(concept:atomic-nucleus) 뜻이다. 링크는 표기가 아니라 concept_key 로만 걸었다.",
+    "★C8 단원 간 확인 — rel-hf-steps 의 '세 단계'는 p-p 연쇄 한 경로다. 같은 concept_key 로 묶인 earth-3 의 concept:pp-chain-and-cno-cycle 카드는 태양 질량의 1.5배가 넘는 별에서 CNO 순환이 우세하다고 말한다(rel-ppcno-mass). 이번 패스에서는 scope 를 p-p 연쇄로 좁혀 문면만 맞추었고, 두 카드의 경계는 사람이 정할 일로 남긴다.",
+    "★C8 단원 간 확인 — rel-hf-tunneling 은 isci2-hydrogen-fusion 의 rel-fus-condition('약 1500만 K 초고온에서 일어난다')과 문면상 부딪혀 보인다. 이번 패스에서 '고전적으로 계산한' 전제를 명제와 condition 에 드러내 충돌을 풀었으나, 두 카드를 나란히 놓고 한 번 봐 주기 바란다.",
+    "C5 재태깅 — rel-hf-tunneling 에 12전자03-03 을 병기했다. 터널 효과의 응용 사례여서 03-03 해설('다양한 현상과 기술에서 나타나는 확률적 현상')에 걸린다. 범위 이탈이 아니라 태그 보강이다."
+  ]
+}

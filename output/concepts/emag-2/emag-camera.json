@@ -1,0 +1,142 @@
+{
+  "id": "emag-camera",
+  "concept_key": "concept:camera",
+  "registry_status": "new",
+  "term": "카메라",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 camera 의 음차어로 한자어 표기가 없다.",
+    "english": "camera"
+  },
+  "definition": "볼록 렌즈가 맺은 실상을 필름이나 이미지 센서에 남기는 기기. 조리개로 들어오는 빛의 양을 조절한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cam-real-image",
+      "text": "필름이나 이미지 센서는 볼록 렌즈가 실상을 맺는 자리에 놓여야 선명한 사진이 남는다.",
+      "form": {
+        "condition": "물체가 렌즈의 초점 바깥에 있을 때",
+        "type": "conditional",
+        "scope": "실상을 기록하는 카메라. 허상은 기록할 수 없다"
+      },
+      "invertible": true,
+      "invertible_reason": "허상 자리에는 빛이 실제로 모이지 않으므로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "필름이나 이미지 센서는 볼록 렌즈가 허상을 맺는 자리에 놓아야 선명한 사진이 남는다."
+    },
+    {
+      "id": "rel-cam-aperture",
+      "text": "조리개를 좁히면 렌즈를 지나 안으로 들어오는 빛의 양이 줄어든다.",
+      "form": {
+        "condition": "같은 밝기의 장면을 찍을 때",
+        "type": "direct",
+        "scope": "조리개 크기와 광량의 관계. 상의 크기는 이것으로 달라지지 않는다",
+        "antecedent": {
+          "quantity": "조리개의 크기",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "들어오는 빛의 양",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "조리개는 빛이 지나는 구멍이므로 '빛의 양이 늘어난다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조리개를 좁히면 안으로 들어오는 빛의 양이 늘어난다."
+    },
+    {
+      "id": "rel-cam-compound-lens",
+      "text": "정밀한 카메라는 여러 장을 겹친 복합 렌즈를 써서 한 장짜리 렌즈에서 생기는 수차를 줄인다.",
+      "form": {
+        "condition": "상이 흐려지거나 색이 번질 때",
+        "type": "causal",
+        "scope": "수차 보정. 거울이나 프리즘을 함께 쓰기도 한다"
+      },
+      "invertible": false,
+      "invertible_reason": "보정 방법을 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-cam-inverted-image",
+      "text": "볼록 렌즈 한 장이 이미지 센서에 맺는 실상은 물체와 견주어 위아래와 좌우가 뒤집힌 채로 기록된다.",
+      "form": {
+        "condition": "물체가 렌즈의 초점 바깥에 있을 때",
+        "type": "classification",
+        "scope": "렌즈 한 장으로 맺은 실상. 사진을 볼 때는 기록한 상을 바로 세워 보여 준다",
+        "antecedent": {
+          "quantity": "상의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "상이 선 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "렌즈 한 장이 맺는 실상은 반드시 뒤집히므로, 바로 선다고 바꾼 문장은 거짓이다.",
+      "inverted_text": "볼록 렌즈 한 장이 이미지 센서에 맺는 실상은 물체와 같은 방향으로 바로 선 채 기록된다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이미지 센서에는 물체와 똑같이 바로 선 상이 맺힌다",
+      "why_wrong": "볼록 렌즈가 맺는 실상이므로 거꾸로 맺힌다. 우리가 보는 사진은 기록한 뒤 바로 세워 보여 주는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cam-inverted-image"
+    },
+    {
+      "text": "조리개는 상의 크기를 바꾸는 장치다",
+      "why_wrong": "조리개가 조절하는 것은 들어오는 빛의 양이다. 상의 크기는 렌즈와 물체의 거리가 정한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cam-aperture"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-real-and-virtual-image"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-optical-aberration"
+    },
+    {
+      "type": "related",
+      "target": "emag-optical-microscope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    71
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "'센서에 바로 선 상이 맺힌다'는 오개념이 상의 방향을 말하지 않는 명제를 가리키고 있어, rel-cam-inverted-image 를 세우고 링크를 옮겼다.",
+    "C5 uncertain: 이 카드의 뼈대인 '조리개'는 교과서 71쪽 본문에 기능 서술이 없고 그림 II-21 의 부품 이름표로만 나온다. 카드 정의·rel-cam-aperture·오개념 '조리개는 상의 크기를 바꾸는 장치다' 가 모두 그 라벨 위에 서 있다 — 고치지 않고 C8 판단에 올린다."
+  ]
+}

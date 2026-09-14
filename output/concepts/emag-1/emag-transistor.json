@@ -1,0 +1,137 @@
+{
+  "id": "emag-transistor",
+  "concept_key": "concept:transistor",
+  "registry_status": "new",
+  "term": "트랜지스터",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'트랜지스터'는 transistor 의 음차라 한자로 적을 수 없다.",
+    "english": "transistor",
+    "symbol_display": "n–p–n / p–n–p",
+    "symbol_plain": "n-p-n / p-n-p"
+  },
+  "definition": "p형과 n형 반도체를 세 겹으로 맞붙인 소자로, 이미터·베이스·컬렉터 세 부분으로 이루어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-type",
+      "text": "세 반도체를 맞붙인 차례에 따라 p-n-p형과 n-p-n형으로 갈린다.",
+      "form": {
+        "condition": "세 반도체 층을 맞붙인 차례를 볼 때",
+        "type": "classification",
+        "scope": "양극 접합 트랜지스터",
+        "antecedent": {
+          "quantity": "세 층을 맞붙인 차례",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "트랜지스터의 형식",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": false,
+      "invertible_reason": "분류 명제라 방향을 뒤집는 것이 뜻을 갖지 않는다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-thin-base",
+      "text": "베이스가 매우 얇아 이미터에서 온 전자 대부분이 베이스를 지나쳐 컬렉터로 건너간다.",
+      "form": {
+        "condition": "베이스-이미터 사이에 순방향 바이어스가 걸렸을 때",
+        "type": "causal",
+        "scope": "n-p-n 트랜지스터의 공통 이미터 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "얇을수록 통과하는 전자가 많아지므로 붙들린다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "베이스가 매우 얇으면 이미터에서 온 전자 대부분이 베이스에 붙들려 컬렉터로 가지 못한다."
+    },
+    {
+      "id": "rel-base-collector",
+      "text": "컬렉터 쪽 전류가 흐르느냐 마느냐는 베이스 쪽 전류가 열려 있느냐에 달려 있어, 베이스를 끊으면 컬렉터도 함께 끊긴다.",
+      "form": {
+        "condition": "컬렉터-이미터 사이에 전압이 걸려 있을 때",
+        "type": "causal",
+        "scope": "공통 이미터 회로의 트랜지스터"
+      },
+      "invertible": true,
+      "invertible_reason": "베이스 전류가 컬렉터 전류의 문 노릇을 하므로 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "베이스-이미터에 전류를 끊어도 컬렉터-이미터에는 전류가 그대로 흐른다."
+    },
+    {
+      "id": "rel-doping-asymmetry",
+      "text": "이미터·베이스·컬렉터는 불순물을 넣은 정도가 서로 달라, 이미터와 컬렉터를 바꿔 이으면 증폭이 제대로 되지 않는다.",
+      "form": {
+        "condition": "세 부분에 불순물을 넣은 정도를 견줄 때",
+        "type": "causal",
+        "scope": "양극 접합 트랜지스터"
+      },
+      "invertible": true,
+      "invertible_reason": "세 부분의 도핑 정도가 서로 다른 것이 구조로 정해져 있어, 같아서 바꿔 이어도 된다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이미터와 컬렉터는 불순물을 넣은 정도가 같아서 서로 바꿔 이어도 증폭이 똑같이 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이미터와 컬렉터는 구조가 같으므로 서로 바꿔 이어도 똑같이 작동한다",
+      "why_wrong": "불순물을 넣은 정도가 이미터·베이스·컬렉터 순으로 달라서, 이미터와 컬렉터를 바꿔 이으면 회로가 제대로 작동하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-doping-asymmetry"
+    },
+    {
+      "text": "베이스에 전류를 흘리지 않아도 컬렉터-이미터 전압만 걸면 전류가 흐른다",
+      "why_wrong": "컬렉터-베이스 사이가 역방향 바이어스라 베이스 전류가 없으면 컬렉터 전류도 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-base-collector"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-pn-junction-diode"
+    },
+    {
+      "type": "next",
+      "target": "emag-transistor-amplification"
+    },
+    {
+      "type": "next",
+      "target": "emag-logic-gate"
+    }
+  ],
+  "curriculum": [
+    "12전자01-07"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-03",
+  "pages": [
+    46,
+    47,
+    49
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "스위칭 작용은 rel-base-collector 와 emag-logic-gate/rel-transistor-as-switch 가 받는다 — 겹치던 rel-switching 을 빼고 그 자리에 이미터·컬렉터 오개념이 기댈 rel-doping-asymmetry 를 세웠다 (C6 defect 수정).",
+    "rel-doping-asymmetry 의 근거는 교과서 p47 곁주다. 성취기준 01-07 해설이 '미시적 작동 원리에 초점을 맞추지 않도록' 했으므로, 이 명제는 이미터와 컬렉터를 바꿔 이으면 안 된다는 회로 수준의 결론까지만 쓰고 도핑 농도를 묻는 문항으로 확장하지 말 것 (C8 확인 자리)."
+  ]
+}

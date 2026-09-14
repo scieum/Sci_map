@@ -1,0 +1,137 @@
+{
+  "id": "emag-light-interference",
+  "concept_key": "concept:interference-of-light",
+  "registry_status": "new",
+  "term": "빛의 간섭",
+  "notation": {
+    "hanja": "干涉",
+    "hanja_gloss": "干 방패 간 · 涉 건널 섭",
+    "hanja_note": "'빛'은 고유어라 한자가 없고, '간섭'만 한자어다.",
+    "english": "interference of light"
+  },
+  "definition": "두 빛이 한자리에서 겹쳐 합쳐진 파동의 진폭이 커지거나 작아지는 현상. 파장이 짧은 빛에서는 얇거나 미세한 구조에서 주로 드러난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-li-superposition",
+      "text": "겹친 두 빛은 서로를 튕겨 내지 않고, 만난 자리의 진폭만 달라진 뒤 각자 가던 길로 나아간다.",
+      "form": {
+        "condition": "두 빛이 같은 지점에서 만날 때",
+        "type": "causal",
+        "scope": "파동의 중첩. 서로 부딪혀 방향이 바뀌는 두 물체의 충돌과는 다르다"
+      },
+      "invertible": true,
+      "invertible_reason": "겹친 두 빛이 서로를 튕겨 내어 방향이 바뀐다는 문장은 반드시 거짓이다. mech-3/rel-superposition-pass-through 와 기준을 맞췄다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겹친 두 빛은 서로를 튕겨 내어, 만난 뒤에는 오던 방향과 다른 쪽으로 꺾여 나아간다."
+    },
+    {
+      "id": "rel-li-thin-structure",
+      "text": "빛의 간섭무늬는 비누막처럼 두께가 파장 정도로 얇은 구조에서 눈에 잘 띈다.",
+      "form": {
+        "condition": "가시광선을 비출 때",
+        "type": "conditional",
+        "scope": "구조의 크기가 빛의 파장과 견줄 만한 경우. 두꺼운 유리판에서는 무늬가 잡히지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 말하는 명제라 뒤집어 참·거짓을 가릴 수 없다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-li-stable-phase",
+      "text": "간섭무늬가 한자리에 머물러 보이려면 겹치는 두 빛의 위상 관계가 일정하게 유지되어야 한다.",
+      "form": {
+        "condition": "두 빛이 같은 영역에서 겹칠 때",
+        "type": "conditional",
+        "scope": "결맞은 빛. 위상이 제멋대로인 광원 두 개를 나란히 켜면 무늬가 유지되지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "필요조건을 말하는 명제라 방향을 뒤집을 수 없다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-li-energy",
+      "text": "상쇄로 어두워진 자리에 닿지 못한 빛에너지는 보강으로 밝아진 자리에 몰릴 뿐, 간섭무늬 전체가 받는 에너지는 그대로다.",
+      "form": {
+        "condition": "간섭무늬가 생긴 영역을 통째로 볼 때",
+        "type": "causal",
+        "scope": "에너지 보존. 어두운 자리 한 곳만 떼어 보면 에너지가 사라진 것처럼 보인다"
+      },
+      "invertible": true,
+      "invertible_reason": "상쇄 간섭으로 에너지가 없어진다는 문장은 에너지 보존과 어긋나 반드시 거짓이다.",
+      "inverted_text": "상쇄 간섭이 일어난 어두운 자리에서는 빛에너지가 없어져 전체 에너지가 그만큼 줄어든다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "두 빛줄기가 만나면 서로 부딪혀 진행 방향이 꺾인다",
+      "why_wrong": "파동은 만난 자리에서 변위만 더해지고, 지나간 뒤에는 각자 원래 모습대로 진행한다. 방향이 바뀌는 것은 충돌하는 물체 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-li-superposition"
+    },
+    {
+      "text": "상쇄 간섭이 일어난 어두운 자리에서는 빛에너지가 없어진다",
+      "why_wrong": "어두운 자리에 오지 않은 에너지는 밝은 자리로 몰린 것이다. 전체 에너지는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-li-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-constructive-and-destructive-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-thin-film-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-single-slit-diffraction-pattern",
+      "note": "회절 무늬의 명암은 간섭으로 설명된다"
+    },
+    {
+      "type": "next",
+      "target": "emag-coherence"
+    },
+    {
+      "type": "related",
+      "target": "emag-light-diffraction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-01",
+  "pages": [
+    60,
+    61,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "rel-li-superposition 을 invertible: true 로 올렸다 — mech-3/mech-wave-superposition/rel-superposition-pass-through 와 같은 기준이다 (C6 XU-1).",
+    "'상쇄 자리에서 빛에너지가 없어진다'는 오개념이 반박할 명제가 없어 rel-li-energy 를 새로 세웠다. 다만 에너지 재분배는 교과서 60~61쪽 본문에 그대로 서술돼 있지 않으니 C8 에서 진위와 범위를 함께 봐 주기 바란다."
+  ]
+}

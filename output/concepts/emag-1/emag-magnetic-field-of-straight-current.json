@@ -1,0 +1,145 @@
+{
+  "id": "emag-magnetic-field-of-straight-current",
+  "concept_key": "concept:magnetic-field-of-straight-current",
+  "registry_status": "new",
+  "term": "직선 전류에 의한 자기장",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'…에 의한'이 낀 구절이라 표제어 전체에 대응하는 한자어가 없다. 직선(直線)·전류(電流)·자기장(磁氣場)은 각각 한자어다.",
+    "english": "magnetic field of a straight current"
+  },
+  "definition": "곧은 도선에 전류가 흐를 때 도선을 중심으로 동심원을 이루며 둘레에 생기는 자기장.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-current-strength",
+      "text": "도선에서 같은 거리만큼 떨어진 곳에서 재면 전류가 셀수록 자기장도 세다.",
+      "form": {
+        "condition": "도선으로부터의 거리가 일정할 때",
+        "type": "direct",
+        "scope": "충분히 긴 곧은 도선 둘레",
+        "antecedent": {
+          "quantity": "도선에 흐르는 전류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류에 비례하는 관계라 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도선에서 같은 거리에서 잴 때 전류가 셀수록 자기장의 세기는 작아진다."
+    },
+    {
+      "id": "rel-distance",
+      "text": "전류를 그대로 둔 채 도선에서 2배 멀어지면 자기장의 세기는 절반으로 줄어든다.",
+      "form": {
+        "condition": "도선에 흐르는 전류의 세기가 일정할 때",
+        "type": "inverse",
+        "scope": "충분히 긴 곧은 도선 둘레",
+        "antecedent": {
+          "quantity": "도선으로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기장의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리에 반비례하므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도선에서 2배 멀어지면 자기장의 세기는 2배로 커진다."
+    },
+    {
+      "id": "rel-right-hand",
+      "text": "오른손 엄지를 전류 쪽으로 두고 도선을 감아쥐면 나머지 네 손가락이 감기는 쪽이 자기장의 방향이다.",
+      "form": {
+        "condition": "오른손 법칙으로 자기장의 방향을 정할 때",
+        "type": "conditional",
+        "scope": "곧은 도선에 흐르는 정상 전류"
+      },
+      "invertible": true,
+      "invertible_reason": "손 모양(엄지=전류 방향, 네 손가락=도선을 감아쥔 방향)을 문면에 고정하면 자기장의 방향이 하나로 정해지므로, 그 반대쪽이라 한 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오른손으로 도선을 감아쥘 때 네 손가락이 감기는 반대쪽이 자기장의 방향이다."
+    },
+    {
+      "id": "rel-parallel-wires",
+      "text": "나란한 두 도선에 같은 방향으로 전류가 흐르면 두 도선 사이의 자기장은 상쇄되어 약해지고 도선끼리는 서로 끌린다.",
+      "form": {
+        "condition": "두 도선이 나란하고 전류의 방향이 같을 때",
+        "type": "conditional",
+        "scope": "나란하게 놓인 두 직선 도선"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 방향 전류 사이에 인력이 작용하는 것이 확정적이라 밀어낸다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "나란한 두 도선에 같은 방향으로 전류가 흐르면 두 도선은 서로 밀어낸다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "직선 전류가 만드는 자기장의 세기는 거리의 제곱에 반비례한다",
+      "why_wrong": "점전하의 전기장과 달리 직선 전류의 자기장은 거리에 반비례한다. 2배 멀어지면 4분의 1이 아니라 2분의 1이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-distance"
+    },
+    {
+      "text": "전류의 방향을 반대로 바꿔도 자기장의 방향은 그대로다",
+      "why_wrong": "오른손 법칙에서 엄지의 방향이 뒤집히면 네 손가락이 감기는 방향도 뒤집힌다. 자기장의 방향도 반대가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-right-hand"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-magnetic-field-line"
+    },
+    {
+      "type": "next",
+      "target": "emag-magnetic-field-of-circular-current"
+    },
+    {
+      "type": "same",
+      "target": "phys-magnetic-field-of-straight-current",
+      "note": "concept:magnetic-field-of-straight-current 가 같다"
+    }
+  ],
+  "curriculum": [
+    "12전자01-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-03",
+  "pages": [
+    23,
+    25
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "'평행한 두 직선 도선 사이에 작용하는 힘'은 교과서에서 곁주와 그림으로만 나와 카드를 세우지 않고 rel-parallel-wires 로 담았다.",
+    "rel-right-hand 의 invertible_reason 을 emag-lorentz-force/rel-right-hand 와 같은 잣대로 다시 적었다 — 손 모양을 문면에 고정하면 결과 방향이 하나로 정해진다 (C6 수정).",
+    "이 카드의 정량 비례는 교과서 「연계•물리학」 곁주에서 왔다. 성취기준 해설이 그림 해석·정성적 설명으로 선을 그었으므로 계산 문항으로 확장하지 말 것 (C5 uncertain, C8 확인 자리)."
+  ]
+}

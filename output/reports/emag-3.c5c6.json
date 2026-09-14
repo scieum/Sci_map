@@ -1,0 +1,2082 @@
+{
+  "unit_id": "emag-3",
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "generated_at": "2026-09-14T10:16:36",
+  "generated_by": "concept-fact-validator (C5 curriculum + C6 relation)",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "inputs": {
+    "cards": "output/concepts/emag-3/ (35장)",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml (12전자03-01~03-05, 다섯 개 모두 crosscheck 일치)",
+    "guide": "inbox/textbook/22개정/물리학/고_전자기와 양자(최혁준)_지도서_2쇄.pdf 총론 21쪽 (성취기준 해설·적용 시 고려 사항)",
+    "source_text": "output/source/emag-3/text.jsonl (97~131쪽)",
+    "cross_unit": [
+      "output/concepts/earth-3/earth-hydrogen-fusion.json",
+      "output/concepts/earth-3/earth-pp-chain-and-cno-cycle.json",
+      "output/concepts/isci2-2/isci2-hydrogen-fusion.json",
+      "output/concepts/phys-3/phys-matter-wave.json",
+      "output/concepts/phys-3/phys-energy-level.json",
+      "output/concepts/phys-3/phys-line-spectrum.json",
+      "output/concepts/phys-3/phys-bohr-atomic-model.json"
+    ]
+  },
+  "preflight": {
+    "script": ".claude/skills/curriculum-mapper/scripts/validate_tags.py output/concepts/emag-3 --unit emag-3",
+    "result": {
+      "cards": 35,
+      "problems": 0,
+      "ok": true
+    },
+    "note": "스크립트를 output/concepts/ 에 대고 돌리면 glob 이 하위 디렉터리로 내려가지 않아 그 자리에 흩어져 있는 후보 json 45개를 카드로 읽고 45건을 헛되이 지적한다. --unit 은 글롭 범위를 좁히지 않는다. 단원 디렉터리를 직접 가리켜야 한다. 스크립트는 고치지 않았다 — 메인에 보고만 한다.",
+    "track_facts_skill": "없음. .claude/skills/ 에 phys-facts 계열 스킬이 없어 수치·사실 대조는 교과서 원문(output/source/emag-3/text.jsonl)으로만 했다. 없는 스킬을 흉내 내지 않았다."
+  },
+  "curriculum": {
+    "checked": 35,
+    "standards_used": {
+      "12전자03-01": "단일 양자 수준의 이중 슬릿 실험 · 확률 파동의 간섭",
+      "12전자03-02": "중첩과 측정을 통한 확률적 상태 변화 · 양자 기술의 영향",
+      "12전자03-03": "터널 효과와 관련 현상·기술",
+      "12전자03-04": "현대의 원자 모형 · 불확정성 원리 · 보어 모형과의 비교",
+      "12전자03-05": "별의 핵융합과 빛의 방출 · 별빛 스펙트럼과 구성 원소"
+    },
+    "findings": [
+      {
+        "card_id": "emag-bohr-atomic-model",
+        "term": "보어의 원자 모형",
+        "pages": [
+          118,
+          126
+        ],
+        "curriculum": [
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "118쪽 보어의 두 가설. 03-04 가 '보어의 원자 모형과 비교할 수 있다'를 명시한다.",
+        "prerequisites": [
+          "concept:atomic-nucleus",
+          "concept:electron"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-classical-vs-quantum-physics",
+        "term": "고전 물리학과 양자 물리학",
+        "pages": [
+          123
+        ],
+        "curriculum": [
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "123쪽 읽기 자료. 불확정성 원리의 귀결로서 확률적 예측을 다루므로 03-04 의 '불확정성 원리와 확률을 기반으로'에 걸린다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-continuous-spectrum",
+        "term": "연속 스펙트럼",
+        "pages": [
+          122,
+          124,
+          126
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "122·124쪽. 별빛 스펙트럼(03-05)의 앞자리다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-copenhagen-interpretation",
+        "term": "코펜하겐 해석",
+        "pages": [
+          105
+        ],
+        "curriculum": [
+          "12전자03-02"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "105쪽 곁주. 03-02 의 '확률적 상태 변화'를 떠받치는 해석 층위.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-electron-double-slit-experiment",
+        "term": "전자의 이중 슬릿 실험",
+        "pages": [
+          101
+        ],
+        "curriculum": [
+          "12전자03-01"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "101쪽 모의실험. 03-01 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-energy-level",
+        "term": "에너지 준위",
+        "pages": [
+          118,
+          124
+        ],
+        "curriculum": [
+          "12전자03-04",
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "118·124쪽. 03-04(원자 모형)와 03-05(선스펙트럼) 두 곳을 함께 받친다 — 병기가 맞다.",
+        "prerequisites": [
+          "concept:photon-energy"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "term": "수소 핵융합 반응",
+        "pages": [
+          120,
+          121,
+          122
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "retag",
+        "reason": "120~122쪽. 03-05 본문. 다만 rel-hf-tunneling 은 터널 효과의 응용 사례이고, 03-03 해설이 터널 효과를 '다양한 현상과 기술에서 나타나는 확률적 현상'으로 다루라고 적었다. 명제 수준에서 12전자03-03 을 병기할 것을 권한다 — 범위 이탈이 아니라 태그 보강이다.",
+        "prerequisites": [],
+        "suggested": [
+          "12전자03-05",
+          "12전자03-03"
+        ]
+      },
+      {
+        "card_id": "emag-line-spectrum",
+        "term": "선스펙트럼",
+        "pages": [
+          124
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "124쪽. 03-05 본문.",
+        "prerequisites": [
+          "concept:spectrum"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-mass-defect",
+        "term": "질량 결손",
+        "pages": [
+          120,
+          126
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "120쪽. 03-05 의 '핵융합에 의해 에너지가 생성되고'를 받친다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-mass-energy-equivalence",
+        "term": "질량-에너지 등가 원리",
+        "pages": [
+          120
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "120쪽. 위와 같다.",
+        "prerequisites": [
+          "concept:speed-of-light"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-matter-wave",
+        "term": "물질파",
+        "pages": [
+          100,
+          102,
+          118
+        ],
+        "curriculum": [
+          "12전자03-01"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "100·102·118쪽. 03-01 해설이 '드브로이 관계식을 바탕으로'라고 명시한다.",
+        "prerequisites": [
+          "concept:momentum",
+          "concept:wavelength"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-measurement-disturbance",
+        "term": "측정에 의한 교란",
+        "pages": [
+          116,
+          117
+        ],
+        "curriculum": [
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "116·117쪽 하이젠베르크 사고 실험. 03-04 의 불확정성 원리로 이어진다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-measurement-state-change",
+        "term": "측정에 의한 확률적 상태 변화",
+        "pages": [
+          104,
+          105,
+          108
+        ],
+        "curriculum": [
+          "12전자03-02"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "104·105쪽. 03-02 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-nuclear-fusion",
+        "term": "핵융합 반응",
+        "pages": [
+          121,
+          126
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "121쪽. 03-05 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-nuclear-reaction-equation",
+        "term": "핵반응식",
+        "pages": [
+          120
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "120쪽. 03-05 의 핵융합 에너지 계산을 받친다.",
+        "prerequisites": [
+          "concept:mass-number",
+          "concept:atomic-number"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-plasma",
+        "term": "플라스마",
+        "pages": [
+          121,
+          122
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "121·122쪽 곁주와 본문. 03-05 의 별 내부 조건.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-potential-barrier",
+        "term": "퍼텐셜 장벽",
+        "pages": [
+          112,
+          113
+        ],
+        "curriculum": [
+          "12전자03-03"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "112·113쪽. 03-03 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-probability-density",
+        "term": "확률 밀도",
+        "pages": [
+          103,
+          108,
+          119
+        ],
+        "curriculum": [
+          "12전자03-01",
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "103·108·119쪽. 03-01(보른 해석)과 03-04(현대 원자 모형) 두 곳을 받친다 — 병기가 맞다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-probability-wave",
+        "term": "확률 파동",
+        "pages": [
+          102,
+          103,
+          108
+        ],
+        "curriculum": [
+          "12전자03-01"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "102·103쪽. 03-01 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-probability-wave-interference",
+        "term": "확률 파동의 간섭",
+        "pages": [
+          103,
+          108
+        ],
+        "curriculum": [
+          "12전자03-01"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "103쪽. 03-01 의 '확률 파동의 간섭을 토대로 해석' 그 자리다.",
+        "prerequisites": [
+          "concept:wave-interference"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-quantum-computer",
+        "term": "양자 컴퓨터",
+        "pages": [
+          105,
+          106,
+          108
+        ],
+        "curriculum": [
+          "12전자03-02"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "105·106쪽. 03-02 가 양자 컴퓨터를 이름으로 든다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-quantum-cryptography",
+        "term": "양자 암호 통신",
+        "pages": [
+          106,
+          108
+        ],
+        "curriculum": [
+          "12전자03-02"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "106쪽. 03-02 가 양자 암호 통신을 이름으로 든다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-quantum-mechanical-atomic-model",
+        "term": "현대의 원자 모형",
+        "pages": [
+          119,
+          126
+        ],
+        "curriculum": [
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "119쪽. 03-04 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-quantum-superposition",
+        "term": "중첩 상태",
+        "pages": [
+          104,
+          108
+        ],
+        "curriculum": [
+          "12전자03-02"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "104쪽. 03-02 의 '중첩'.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-quantum-tunneling",
+        "term": "터널 효과",
+        "pages": [
+          112,
+          113,
+          126
+        ],
+        "curriculum": [
+          "12전자03-03"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "112·113쪽. 03-03 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-qubit",
+        "term": "큐비트",
+        "pages": [
+          105,
+          108
+        ],
+        "curriculum": [
+          "12전자03-02"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "105쪽 본문·곁주. 03-02 의 양자 컴퓨터를 읽기 위한 단위 개념.",
+        "prerequisites": [
+          "concept:binary-digit"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-scanning-tunneling-microscope",
+        "term": "주사 터널링 현미경",
+        "pages": [
+          114,
+          126
+        ],
+        "curriculum": [
+          "12전자03-03"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "114쪽. 03-03 해설이 STM 을 이름으로 든다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-single-electron-double-slit",
+        "term": "단일 전자의 이중 슬릿 실험",
+        "pages": [
+          102,
+          103,
+          108
+        ],
+        "curriculum": [
+          "12전자03-01"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "102·103쪽. 03-01 의 '단일 양자 수준' 그 자리다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-standing-wave-orbit-condition",
+        "term": "전자 궤도의 정상파 조건",
+        "pages": [
+          118
+        ],
+        "curriculum": [
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "118쪽 그림 III-20. 03-04 의 보어 모형 재해석.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-stellar-composition-from-spectrum",
+        "term": "별빛 스펙트럼과 구성 원소",
+        "pages": [
+          125,
+          126
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "125쪽. 03-05 의 '별의 구성 원소를 추리할 수 있다' 그 자리다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-strong-nuclear-force",
+        "term": "강한 핵력",
+        "pages": [
+          121
+        ],
+        "curriculum": [
+          "12전자03-05"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "121쪽 본문·곁주. 03-05 의 핵융합 조건.",
+        "prerequisites": [
+          "concept:electric-force"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-tunneling-in-miniaturized-device",
+        "term": "전자 소자 소형화와 터널 효과",
+        "pages": [
+          114,
+          115,
+          126
+        ],
+        "curriculum": [
+          "12전자03-03"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "114·115쪽. 03-03 해설이 '전자소자 소형화에 따른 터널 효과 발생 문제'를 이름으로 든다.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-tunneling-probability",
+        "term": "투과 확률",
+        "pages": [
+          113,
+          126
+        ],
+        "curriculum": [
+          "12전자03-03"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "113쪽. 03-03 본문.",
+        "prerequisites": [],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-uncertainty-principle",
+        "term": "불확정성 원리",
+        "pages": [
+          117,
+          119,
+          126
+        ],
+        "curriculum": [
+          "12전자03-04"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "117·119쪽. 03-04 본문.",
+        "prerequisites": [
+          "concept:diffraction",
+          "concept:momentum"
+        ],
+        "suggested": null
+      },
+      {
+        "card_id": "emag-wave-particle-duality",
+        "term": "빛과 물질의 이중성",
+        "pages": [
+          100,
+          108
+        ],
+        "curriculum": [
+          "12전자03-01"
+        ],
+        "curriculum_scope": "in",
+        "verdict": "ok",
+        "reason": "100쪽. 03-01 의 '입자-파동 이중성' 그 자리다.",
+        "prerequisites": [],
+        "suggested": null
+      }
+    ],
+    "stats": {
+      "ok": 34,
+      "retag": 1,
+      "out_of_scope": 0,
+      "uncertain": 0
+    },
+    "scope_stats": {
+      "in": 35
+    },
+    "notes": [
+      {
+        "topic": "지도서 총론 21쪽 해설의 제한선 — 넘은 카드는 없다",
+        "detail": "03-01 '정성적으로', 03-02 '물리적 원리보다는 사회에 미치는 영향을 중심으로', 03-03 '정성적으로 설명', 03-04 '오비탈은 다루지 않는다' 네 제한선을 35장 전부에 대고 읽었다. 선을 넘은 카드는 없다. 수식이 들어간 자리(rel-bohr-energy 의 -13.6/n² eV, rel-pd-hydrogen 의 (1, 0, 0) 상태)는 모두 교과서 118·119쪽이 그대로 인쇄한 것이고, 오비탈이라는 낱말은 35장 어디에도 없다."
+      },
+      {
+        "topic": "그러나 C2 가 다음 판에서 넘기 쉬운 자리 셋",
+        "detail": "① emag-qubit 의 rel-qb-hardware(스핀·에너지 준위·초전도 소자)와 rel-qb-two 는 03-02 해설이 누르는 '물리적 원리' 쪽이다. 지금은 교과서 105쪽 곁주 범위 안이라 in 이지만 여기서 더 들어가면 이탈이 된다. ② emag-probability-density 의 (1, 0, 0) 표기를 오비탈 이름(1s·2s)으로 바꾸면 그 순간 03-04 해설 위반이다. ③ emag-quantum-mechanical-atomic-model 의 rel-qm-density 에 슈뢰딩거 방정식의 형태를 보태면 '기초적인 수준'을 넘는다. 세 자리 모두 카드 파일에는 손대지 않았다."
+      },
+      {
+        "topic": "이탈 건수",
+        "detail": "out_of_scope 0건. 설계서 §4.3 C5 의 C1 복귀 조건(이탈 2건 초과)에 걸리지 않는다."
+      }
+    ],
+    "escalation": {
+      "out_of_scope_over_2": false,
+      "uncertain_ratio": 0.0,
+      "needed": false
+    }
+  },
+  "relations": {
+    "checked": 106,
+    "findings": [
+      {
+        "card_id": "(단원 전체)",
+        "relation_id": "(106개 명제 전수)",
+        "checks": [
+          "b"
+        ],
+        "verdict": "defect",
+        "reason": "invertible 판정 기준이 어긋나 있다. 106개 중 79개가 false 로 잘못 내려가 있다. invertible_reason 을 전수로 읽으면 작성자가 시험한 것이 '뒤집은 문장(조건은 두고 결론만 반대로 한 문장)'이 아니라 '역(converse: 결론을 조건 자리로 옮긴 문장)'이다. 보기: rel-eds-single 은 '간섭무늬가 없다고 해서 슬릿을 하나만 연 것은 아니므로'라고 적었는데 이것은 역을 시험한 것이고, 뒤집은 문장은 '슬릿을 한쪽만 열어도 간섭 줄무늬가 나타난다'여서 반드시 거짓이다. 같은 잘못이 rel-pd-zero · rel-pwi-cancel · rel-pb-classical · rel-qt-occurs · rel-sed-one-dot · rel-msc-detector · rel-dual-matter · rel-dual-light · rel-sup-interference 의 invertible_reason 에 글자만 바꾼 채 되풀이된다. 또 '까닭을 대는 명제라 뒤집을 방향이 없다'(causal 17건), '분류를 말하는 명제여서 방향이 없다'(classification 12건)는 form.type 을 판정 근거로 삼은 것인데, 설계서는 type 을 표지로만 쓰라고 적었다.",
+        "suggest": "invertible_review 절의 79건을 false→true 로 올린다. 함께 inverted_text 를 채우고 invertible_reason 은 '역(converse)이 아니라 뒤집은 문장이 반드시 거짓인 까닭'으로 다시 쓴다."
+      },
+      {
+        "card_id": "emag-measurement-state-change",
+        "relation_id": "rel-msc-detector",
+        "checks": [
+          "b"
+        ],
+        "verdict": "defect",
+        "reason": "★이 단원에서 가장 무거운 한 건. 뒤집은 문장 '검출기를 달아 경로를 확인해도 간섭무늬는 그대로 남는다'는 교과서 104쪽('간섭에 의한 줄무늬가 나타나지 않고 …두 개의 줄무늬만 나타난다')과 정면으로 어긋나 반드시 거짓이다. 게다가 같은 카드의 misconceptions[0].text 가 그 뒤집은 문장과 글자 그대로 같다 — 오답 지문이 이미 카드 안에 쓰여 있는데 invertible 만 false 로 잠겨 D1 이 쓰지 못하는 상태다.",
+        "suggest": "invertible 을 true 로 올리고 inverted_text 를 채운다. 방향은 misconceptions[0].text 와 같다."
+      },
+      {
+        "card_id": "emag-plasma",
+        "relation_id": "rel-pl-ionized",
+        "checks": [
+          "f"
+        ],
+        "verdict": "defect",
+        "reason": "동어반복이다. definition 이 '원자핵과 전자가 서로 떨어져 나와 뒤섞인 이온 상태'인데 명제는 '플라스마에서는 원자핵과 전자가 묶여 있지 않고 서로 떨어진 채 섞여 있다'로, 정의의 마디 셋(원자핵-전자 / 떨어짐 / 섞임)이 그대로 되풀이된다. 정의를 읽으면 저절로 나오는 말이다.",
+        "suggest": "정의에서 저절로 나오지 않는 마디로 명제를 다시 세운다. 121·122쪽에 있는 '고밀도 플라스마여서 광자가 흡수·재방출을 되풀이한다'나 '별 내부처럼 온도가 매우 높은 곳에서 나타난다' 쪽이 정의와 겹치지 않는 자리다. 어느 쪽을 쓸지는 메인이 정한다."
+      },
+      {
+        "card_id": "emag-standing-wave-orbit-condition",
+        "relation_id": "rel-swo-integer",
+        "checks": [
+          "f"
+        ],
+        "verdict": "defect",
+        "reason": "동어반복이다. definition 이 '궤도 둘레에 전자의 물질파가 끊김 없이 이어져 정상파를 이루는 경우에만 그 궤도가 안정하다고 보는 조건'인데 명제는 '궤도 둘레가 전자의 물질파 파장의 정수배가 될 때에만 그 궤도에서 전자가 안정하다'로, '…경우에만 안정'이라는 뼈대가 같고 '정상파를 이룬다'를 '파장의 정수배'로 바꾼 것이 차이의 전부다. 동의어 치환은 재서술이 아니다(CLAUDE.md §6).",
+        "suggest": "정의 쪽을 조건의 뜻만 담게 줄이든지, 명제를 118쪽이 실제로 더 말한 것 (정수배가 아닌 반지름에서는 파동이 이어지지 않아 상쇄된다)으로 옮기든지 한쪽을 고른다."
+      },
+      {
+        "card_id": "emag-probability-wave",
+        "relation_id": "rel-pw-describe",
+        "checks": [
+          "f"
+        ],
+        "verdict": "uncertain",
+        "reason": "동어반복에 가깝다. definition '물질파에서 변하는 양을 시간과 위치의 함수로 적은 것'과 명제 '미시 입자의 진행은 위치와 시간에 따라 값이 달라지는 확률 파동으로 기술한다'가 '시간과 위치의 함수'라는 같은 마디를 공유한다. 다만 명제 쪽에는 정의에 없는 대비 (거시 물체는 위치의 함수만으로 충분하다 — scope 에만 적혀 있다)가 있어 판단이 갈린다.",
+        "suggest": "겹치는 마디를 덜어 내든지, scope 에만 있는 거시·미시 대비를 명제 본문으로 끌어올려 정의와 겹치지 않게 만든다."
+      },
+      {
+        "card_id": "emag-copenhagen-interpretation",
+        "relation_id": "rel-ci-account",
+        "checks": [
+          "f"
+        ],
+        "verdict": "uncertain",
+        "reason": "동어반복 여지가 있다. definition 이 '중첩과 측정에 의한 확률적 상태 변화를 설명하는 …해석'이고 명제가 '이 해석에 따르면 입자는 확률 파동으로 나아가다 측정 순간 계산된 확률대로 한 점에 나타난다'여서 정의가 요약한 것을 문장으로 편 것에 가깝다. 다만 '계산된 확률대로 한 점에'는 정의에 없는 마디다.",
+        "suggest": "정의를 해석의 이름·계보 쪽으로 좁히거나, 명제를 105쪽 곁주가 더 말한 자리로 옮긴다."
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "relation_id": "rel-hf-tunneling",
+        "checks": [
+          "c",
+          "d"
+        ],
+        "verdict": "defect",
+        "reason": "조건이 빠져 과일반화된다. 명제가 '태양 중심의 온도는 원자핵을 맞붙이기에 모자라지만'이라고 단언하는데, 교과서 121쪽은 '계산을 통해 얻어진 태양 중심 온도가 …충분한 운동 에너지 값에 미치지 못하지만'이라고 고전적 계산을 전제로 깔아 두었다. 그 전제가 form.condition('태양 중심의 온도와 압력에서')과 form.scope('태양 내부') 어디에도 없다. 그래서 문면만 보면 같은 단원의 rel-nf-condition ('온도와 압력이 높을수록 …핵융합이 일어나기 쉽다')과, 다른 단원 isci2-hydrogen-fusion 의 rel-fus-condition('약 1500만 K에 이르는 태양 중심부의 초고온 상태에서 일어난다')과 서로 부딪히는 것처럼 읽힌다. D1 은 scope 를 끌고 가지 않으므로 이 충돌이 그대로 문항에 실린다.",
+        "suggest": "form.condition 에 고전적 계산을 전제로 한다는 것을 밝힌다. 명제 본문의 '모자라지만'이 어느 기준에서 모자란 것인지가 문면에 드러나야 한다."
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "relation_id": "rel-hf-steps",
+        "checks": [
+          "c"
+        ],
+        "verdict": "defect",
+        "reason": "적용 범위가 좁혀지지 않았다. 명제가 '수소 원자핵 4개가 세 단계를 거쳐'라고 단계 수까지 못박는데 이것은 p-p 연쇄 반응 한 경로의 이야기다. 같은 concept_key(concept:hydrogen-fusion)로 묶인 earth-3 의 concept:pp-chain-and-cno-cycle 카드는 같은 별의 수소 핵융합에 CNO 순환이라는 다른 경로를 함께 든다(rel-ppcno-mass: 질량이 태양의 1.5배보다 큰 별에서는 CNO 순환이 우세). form.scope 가 '태양처럼 수소를 태우는 별'이어서 이 경로 구분을 담지 못한다.",
+        "suggest": "form.scope 에 이 명제가 p-p 연쇄 경로를 말한다는 것을 밝힌다. earth-3 쪽 카드를 고치라는 뜻이 아니다 — 두 카드가 같은 별을 두고 서로 다른 것을 말하지 않게 하는 것이 목적이다."
+      },
+      {
+        "card_id": "emag-quantum-tunneling",
+        "relation_id": "rel-qt-classical-contrast",
+        "checks": [
+          "c"
+        ],
+        "verdict": "defect",
+        "reason": "한 문장에 두 주장이 들어 있고 뒤쪽이 과일반화다. 앞은 '고전 역학으로는 설명할 수 없다'(교과서 112쪽 그대로)이고 뒤는 '미시 세계에서만 인정된다'인데, 뒤쪽의 '인정된다'는 교과서에 대응하는 구절이 없다. 112쪽은 '미시 세계에서는 …이동할 수 있다'라고 일어나는 곳을 말했지 인정 여부를 말하지 않았다. 게다가 같은 단원 rel-tp-mass 는 질량이 클수록 확률이 작아진다고만 하고 거시에서 금지된다고 하지 않는다.",
+        "suggest": "두 주장을 가르고, 뒤쪽은 교과서가 실제로 말한 '일어나는 곳'의 표현으로 낮춘다."
+      },
+      {
+        "card_id": "emag-strong-nuclear-force",
+        "relation_id": "(definition)",
+        "checks": [
+          "c"
+        ],
+        "verdict": "defect",
+        "reason": "definition 이 교과서보다 좁다. 카드는 '양성자와 중성자 사이에 작용하는 인력'이라고만 적었는데 교과서 121쪽 곁주는 '양성자와 중성자, 양성자와 양성자, 중성자와 중성자 사이에 작용하는 인력'이라고 세 짝을 모두 든다. 카드대로 읽으면 양성자끼리는 강한 핵력으로 묶이지 않는다는 말이 되어, 같은 카드 rel-snf-fusion(수소 원자핵끼리 융합)과 어긋난다.",
+        "suggest": "definition 을 교과서가 든 세 짝이 모두 들어가게 넓힌다. 명제 셋은 그대로 두어도 된다."
+      },
+      {
+        "card_id": "emag-quantum-tunneling",
+        "relation_id": "(definition ↔ rel-qt-occurs)",
+        "checks": [
+          "c"
+        ],
+        "verdict": "uncertain",
+        "reason": "카드 안에서 용어가 갈린다. definition 은 '자기 역학적 에너지보다 높은 퍼텐셜 장벽'이라 적고 rel-qt-occurs 는 '자기 에너지보다 높은 장벽'이라 적었다. 교과서는 112·113쪽 본문에서 '역학적 에너지'를, 126쪽 정리에서 '자신이 가진 운동 에너지'를 써 판본이 갈려 있어 어느 쪽이 옳은지는 진위 판단이 필요하다 — C8 검토 항목. 다만 한 카드 안에서 두 표기가 갈린 것은 판본 문제와 별개로 손볼 자리다.",
+        "suggest": "카드 안에서 한 표기로 맞춘다. 어느 표기를 쓸지는 사람이 정한다."
+      },
+      {
+        "card_id": "emag-potential-barrier",
+        "relation_id": "rel-pb-classical",
+        "checks": [
+          "g"
+        ],
+        "verdict": "defect",
+        "reason": "오개념의 linked_relation 이 반박 대상을 가리키지 않는다. 오개념은 '퍼텐셜 장벽은 벽돌처럼 물질로 만들어진 실제 벽이다'로 장벽이 무엇인가를 묻는데, 가리키는 rel-pb-classical 은 '고전 역학에서는 E<Ub 인 입자가 장벽을 넘지 못한다'로 장벽을 넘느냐 마느냐를 말한다. 이 명제를 참으로 알아도 오개념은 그대로 남는다. 반박 근거는 이 카드의 definition('퍼텐셜 에너지가 둘레보다 높아 입자의 진행을 가로막는 구간')에 있지 명제에 있지 않다.",
+        "suggest": "장벽이 퍼텐셜 에너지의 구간이라는 것을 말하는 명제를 가리키게 하거나, 그런 명제가 카드에 없으므로 명제 쪽을 보탤지 오개념을 옮길지 메인이 정한다."
+      },
+      {
+        "card_id": "emag-quantum-superposition",
+        "relation_id": "rel-sup-not-ignorance",
+        "checks": [
+          "g"
+        ],
+        "verdict": "defect",
+        "reason": "오개념 둘이 같은 명제를 가리키는데 둘째가 그 명제의 반대편이 아니다. 둘째 오개념 '중첩 상태에서는 전자가 반씩 쪼개져 두 슬릿을 하나씩 지난다'의 반박 근거는 why_wrong 이 스스로 밝히듯 '스크린에는 언제나 전자 한 개분의 점이 통째로 찍힌다'인데, 그것은 rel-sup-not-ignorance('중첩은 …두 가능성을 함께 지닌 상태다')가 아니라 다른 카드의 rel-sed-one-dot('전자를 한 개 보내면 스크린에는 점이 하나만 찍힌다')이 하는 말이다. 첫째 오개념은 제대로 걸려 있다.",
+        "suggest": "둘째 오개념이 실제로 반박되는 명제를 가리키게 한다. 카드가 다르면 이 카드 안에 전자가 쪼개지지 않는다는 명제를 세울지 오개념을 옮길지 메인이 정한다."
+      },
+      {
+        "card_id": "emag-quantum-computer",
+        "relation_id": "rel-qc-qubit-count",
+        "checks": [
+          "g"
+        ],
+        "verdict": "uncertain",
+        "reason": "오개념 '양자 컴퓨터는 어떤 계산이든 고전 컴퓨터보다 빠르다'가 가리키는 rel-qc-qubit-count 는 '큐비트가 50개 정도만 되어도 …빠른 계산 결과를 얻을 수 있다'로, 명제 본문만 읽으면 오개념을 거들지 반박하지 않는다. 반박은 form.scope 의 '모든 문제에서 빠른 것은 아니다'에만 있고 D1 은 scope 를 끌고 가지 않는다. 다만 rel-qc-parallel · rel-qc-interference 도 사정이 같아 이 카드에 더 나은 과녁이 있는지는 갈린다.",
+        "suggest": "scope 에만 있는 '모든 문제에서 빠른 것은 아니다'를 명제 본문으로 끌어올리든지, 오개념을 더 맞는 명제로 옮기든지 한쪽을 고른다."
+      },
+      {
+        "card_id": "emag-probability-density",
+        "relation_id": "rel-pd-zero",
+        "checks": [
+          "f"
+        ],
+        "verdict": "uncertain",
+        "reason": "다른 카드의 명제와 사실상 같은 말이다. rel-pd-zero('확률 파동 절댓값의 제곱이 0인 자리에서는 입자가 발견되지 않는다')와 emag-probability-wave-interference 의 rel-pwi-cancel ('두 확률 파동이 상쇄되어 절댓값의 제곱이 0이 된 자리에는 전자가 찍히지 않는다')은 조건 한 마디(상쇄의 유래)만 다르고 결론이 같다. 둘 다 invertible 을 올리면 D1 이 거의 같은 OX 를 두 개 만든다. 모순은 아니므로 결함으로 단정하지 않는다.",
+        "suggest": "둘 가운데 하나를 상위 개념 쪽으로 돌리거나, 한쪽의 조건을 더 또렷이 갈라 문항이 겹치지 않게 한다."
+      },
+      {
+        "card_id": "emag-energy-level",
+        "relation_id": "rel-el-element",
+        "checks": [
+          "f"
+        ],
+        "verdict": "uncertain",
+        "reason": "위와 같은 겹침이다. rel-el-element('원자의 종류가 다르면 준위의 배치도 달라 …선의 위치가 원소마다 다르다')와 emag-line-spectrum 의 rel-ls-element('원자의 종류마다 에너지 준위 차가 달라 선이 나타나는 파장도 원소마다 다르다')는 낱말만 다르고 같은 말이다. 두 카드의 오개념도 같은 자리를 친다.",
+        "suggest": "한쪽을 준위 쪽(왜 배치가 다른가), 다른 쪽을 스펙트럼 쪽(그래서 무엇을 가려낼 수 있는가)으로 갈라 세운다."
+      }
+    ],
+    "stats": {
+      "ok": 90,
+      "defect": 10,
+      "uncertain": 6
+    },
+    "note": "위 findings 의 첫 항목은 invertible 오판정 79건을 하나로 묶은 계통 지적이다. 건별 근거는 invertible_review.rows 에 명제 id 와 함께 낱낱이 적었다. 진위는 어디에서도 확정하지 않았다 — 진위가 걸린 자리는 모두 uncertain 으로 올렸다."
+  },
+  "invertible_review": {
+    "criterion": "뒤집은 문장(조건은 그대로 두고 결론만 반대로 한 문장)이 이 교과서의 서술 안에서 논리적으로 반드시 거짓인가. 이것 하나만 보았다. form.type 은 어디를 먼저 볼지 알려 주는 표지로만 썼고 판정 근거로 쓰지 않았다. D1 이 scope·condition 을 끌고 가지 않으므로 문면으로 판정했다.",
+    "before": {
+      "true": 17,
+      "false": 89,
+      "ratio_true": 0.16
+    },
+    "after": {
+      "true": 96,
+      "false": 3,
+      "uncertain": 7,
+      "ratio_true": 0.91
+    },
+    "stats": {
+      "상향": 79,
+      "보류": 7,
+      "유지_true": 17,
+      "유지_false": 3
+    },
+    "verdict_on_author_claim": "작성자의 '조건부 양자 명제는 뒤집으면 반례가 있어 애매해서 전부 false' 는 옳지 않다. 작성자가 찾은 '반례'는 뒤집은 문장의 반례가 아니라 역(converse)의 반례다. 보기: rel-eds-single 의 사유 '간섭무늬가 없다고 해서 슬릿을 하나만 연 것은 아니다'는 「간섭무늬 없음 → 슬릿 하나」라는 역을 깬 것이고, 뒤집은 문장은 「슬릿을 한쪽만 열어도 간섭무늬가 나타난다」로 반드시 거짓이다. 조건이 붙어 있다는 것 자체는 false 의 근거가 아니라는 지시와 정확히 같은 자리다. 다만 모든 false 가 틀린 것은 아니어서, 열거·절차형 3건은 false 로 두는 것이 옳고 수치·기준값을 드는 7건은 갈린다.",
+    "rows": [
+      {
+        "card_id": "emag-bohr-atomic-model",
+        "relation_id": "rel-bohr-orbit",
+        "form_type": "conditional",
+        "text": "수소 원자 속 전자는 특정 조건을 채운 궤도에서만 전자기파를 내지 않고 안정하게 머문다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "보어 제1가설 아래 '조건을 채우지 않은 궤도에서도 안정하다'는 반드시 거짓이다. '…에서만'이 그은 배타 범위를 넓힌 문장이라 반례가 없다.",
+        "inverted_text_방향": "수소 원자 속 전자는 양자 조건을 채우지 않은 궤도에서도 전자기파를 내지 않고 안정하게 머문다"
+      },
+      {
+        "card_id": "emag-bohr-atomic-model",
+        "relation_id": "rel-bohr-transition",
+        "form_type": "causal",
+        "text": "전자가 다른 궤도로 옮길 때 두 궤도의 에너지 차만큼을 광자로 내놓거나 받아들인다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "제2가설(교과서 118쪽)이 '두 궤도의 에너지 차에 해당하는 에너지를' 주고받는다고 못박았으므로, 에너지 차와 무관한 크기로 뒤집으면 반드시 거짓이다.",
+        "inverted_text_방향": "전자가 궤도를 옮길 때 두 궤도의 에너지 차와 상관없는 크기의 에너지를 광자로 주고받는다"
+      },
+      {
+        "card_id": "emag-bohr-atomic-model",
+        "relation_id": "rel-bohr-energy",
+        "form_type": "conditional",
+        "text": "양자수가 n인 수소 원자 속 전자의 에너지는 -13.6/n² eV 로 주어진다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "값을 주는 식이다. -13.6n² eV 처럼 식을 흐트러뜨린 문장은 반드시 거짓이 되지만, 그것을 '뒤집기'로 볼지 '다른 식으로 바꾸기'로 볼지 갈린다. C2 가 문면만으로 서는 inverted_text 를 쓸 수 있으면 true, 못 쓰면 false 로 둔다.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-bohr-atomic-model",
+        "relation_id": "rel-bohr-limit",
+        "form_type": "conditional",
+        "text": "보어 모형은 전자가 여럿인 원자의 선스펙트럼을 설명하지 못했다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "119쪽이 다전자 원자의 선스펙트럼을 설명할 수 없었다고 한계로 적었으므로 '설명해 냈다'는 반드시 거짓이다.",
+        "inverted_text_방향": "보어 모형은 전자가 여럿인 원자의 선스펙트럼까지 설명해 냈다"
+      },
+      {
+        "card_id": "emag-classical-vs-quantum-physics",
+        "relation_id": "rel-cvq-classical",
+        "form_type": "direct",
+        "text": "고전 물리학에서는 초기 조건을 정밀하게 알수록 미래의 운동을 더 정확히 예측할 수 있다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "고전 물리학에서는 초기 조건을 정밀하게 알수록 미래의 운동을 더 부정확하게 예측하게 된다."
+      },
+      {
+        "card_id": "emag-classical-vs-quantum-physics",
+        "relation_id": "rel-cvq-quantum",
+        "form_type": "causal",
+        "text": "양자 물리학에서는 초기 조건을 원하는 만큼 정밀하게 정할 수 없어 결과를 확률로만 말한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "123쪽 '임의의 정밀도로 초기 조건(위치와 운동량)을 규정할 수 없다'와 정면으로 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "양자 물리학에서도 초기 조건을 원하는 만큼 정밀하게 정할 수 있어 미래를 정확히 예측한다"
+      },
+      {
+        "card_id": "emag-classical-vs-quantum-physics",
+        "relation_id": "rel-cvq-example",
+        "form_type": "conditional",
+        "text": "같은 판에 쏜 입자 1000개 중 600개가 통과했다면 다음 한 개는 60 %의 확률로 통과한다고만 말할 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "123쪽이 '60 %의 확률로 통과한다'만이 가능한 답이라고 못박았으므로 통과 여부를 확정해 말할 수 있다는 문장은 반드시 거짓이다.",
+        "inverted_text_방향": "같은 판에 쏜 입자 1000개 중 600개가 통과했다면 다음 한 개가 통과할지 못할지 확정해 말할 수 있다"
+      },
+      {
+        "card_id": "emag-continuous-spectrum",
+        "relation_id": "rel-cs-sun",
+        "form_type": "causal",
+        "text": "태양 표면에서 나오는 빛은 고밀도 수소 원자핵에 흡수되고 다시 방출되기를 거듭한 빛이라 연속 스펙트럼으로 보인다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "122쪽 '연속 스펙트럼으로 관찰되는 것이다'와 어긋나 반드시 거짓이다. 이 카드의 오개념 문장이 바로 그 자리다.",
+        "inverted_text_방향": "태양 표면에서 나오는 빛은 재흡수·재방출을 거친 빛이라 선스펙트럼으로 보인다"
+      },
+      {
+        "card_id": "emag-continuous-spectrum",
+        "relation_id": "rel-cs-source",
+        "form_type": "conditional",
+        "text": "연속 스펙트럼은 백열등이나 용광로의 쇳물처럼 뜨거운 광원의 빛에서 관찰된다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "124쪽 연계 자료가 백열등·용광로 쇳물을 연속 스펙트럼의 광원으로 들었으므로 선스펙트럼으로 뒤집으면 반드시 거짓이다.",
+        "inverted_text_방향": "백열등이나 용광로의 쇳물처럼 뜨거운 광원의 빛에서는 선스펙트럼이 관찰된다"
+      },
+      {
+        "card_id": "emag-copenhagen-interpretation",
+        "relation_id": "rel-ci-account",
+        "form_type": "conditional",
+        "text": "이 해석에 따르면 입자는 확률 파동으로 나아가다 측정 순간 계산된 확률대로 한 점에 나타난다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "코펜하겐 해석의 기술(104~105쪽) 안에서 '측정 뒤에도 퍼진 채 남는다'는 반드시 거짓이다.",
+        "inverted_text_방향": "입자는 측정한 뒤에도 여러 곳에 퍼진 확률 파동인 채로 남는다"
+      },
+      {
+        "card_id": "emag-copenhagen-interpretation",
+        "relation_id": "rel-ci-one-of-many",
+        "form_type": "classification",
+        "text": "양자 역학의 해석은 역사적으로 여럿 제안되었고 코펜하겐 해석은 그 가운데 하나다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "105쪽 곁주 '역사적으로 양자 역학에 대한 다양한 해석이 존재하였는데'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "양자 역학의 해석은 역사적으로 코펜하겐 해석 하나뿐이었다"
+      },
+      {
+        "card_id": "emag-electron-double-slit-experiment",
+        "relation_id": "rel-eds-single",
+        "form_type": "conditional",
+        "text": "슬릿을 한쪽만 열면 줄무늬 없이 전자가 그 슬릿 맞은편에 고루 도달한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "101쪽 '하나의 슬릿만 열었을 때는 …간섭 현상이 나타나지 않고'와 어긋나 반드시 거짓이다. 현 invertible_reason 은 역(converse: 간섭무늬가 없으면 슬릿이 하나인가)을 시험했을 뿐 결론을 뒤집지 않았다.",
+        "inverted_text_방향": "슬릿을 한쪽만 열어도 스크린에 간섭 줄무늬가 나타난다"
+      },
+      {
+        "card_id": "emag-electron-double-slit-experiment",
+        "relation_id": "rel-eds-both",
+        "form_type": "conditional",
+        "text": "두 슬릿을 모두 열면 전자가 전혀 닿지 않는 지점이 생기며 줄무늬가 드러난다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "101쪽 실험 결과와 어긋나 반드시 거짓이다. 조건(두 슬릿·경로 미측정)을 그대로 두고 결론만 뒤집는 것이 옳은 시험이다.",
+        "inverted_text_방향": "두 슬릿을 모두 열면 슬릿 모양을 본뜬 줄 두 개만 생긴다"
+      },
+      {
+        "card_id": "emag-electron-double-slit-experiment",
+        "relation_id": "rel-eds-interpret",
+        "form_type": "causal",
+        "text": "이 줄무늬는 각 슬릿을 지난 전자의 물질파끼리 간섭한 결과로 읽는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "101쪽이 '각 슬릿을 지난 전자의 물질파가 간섭을 한 결과'로 해석한다고 명시했으므로 전자끼리의 충돌로 뒤집으면 반드시 거짓이다.",
+        "inverted_text_방향": "이 줄무늬는 날아가던 전자들끼리 서로 부딪혀 생긴 결과로 읽는다"
+      },
+      {
+        "card_id": "emag-energy-level",
+        "relation_id": "rel-el-quantized",
+        "form_type": "classification",
+        "text": "원자에 묶인 전자의 에너지는 아무 값이나 갖지 못하고 양자수에 따라 정해진 값만 갖는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "양자화 명제의 결론을 뒤집은 '연속으로 가질 수 있다'는 반드시 거짓이다. 이 카드의 오개념이 바로 그 문장이다.",
+        "inverted_text_방향": "원자에 묶인 전자는 어떤 에너지 값이든 연속적으로 가질 수 있다"
+      },
+      {
+        "card_id": "emag-energy-level",
+        "relation_id": "rel-el-wavelength",
+        "form_type": "inverse",
+        "text": "두 에너지 준위의 차가 클수록 전이하며 주고받는 빛의 파장은 짧다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "두 에너지 준위의 차가 클수록 전이하며 주고받는 빛의 파장은 길다."
+      },
+      {
+        "card_id": "emag-energy-level",
+        "relation_id": "rel-el-element",
+        "form_type": "causal",
+        "text": "원자의 종류가 다르면 준위의 배치도 달라 전이로 생기는 선의 위치가 원소마다 다르다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "124~125쪽의 원소별 선 위치 서술과 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "원자의 종류가 달라도 전이로 생기는 선의 파장은 같다"
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "relation_id": "rel-hf-steps",
+        "form_type": "causal",
+        "text": "수소 원자핵 4개가 세 단계를 거쳐 헬륨 원자핵 1개가 되며 양전자와 전자 중성미자가 함께 나온다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "120쪽 반응 방향과 정면으로 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "헬륨 원자핵 1개가 세 단계를 거쳐 수소 원자핵 4개로 쪼개진다"
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "relation_id": "rel-hf-tunneling",
+        "form_type": "causal",
+        "text": "태양 중심의 온도는 원자핵을 맞붙이기에 모자라지만 터널 효과 덕분에 융합이 일어난다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 '태양 중심 온도가 …충분한 운동 에너지 값에 미치지 못하지만'과 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "태양 중심의 온도만으로 원자핵을 맞붙이기에 충분해 터널 효과 없이도 융합이 일어난다"
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "relation_id": "rel-hf-delay",
+        "form_type": "conditional",
+        "text": "중심에서 생긴 빛이 태양 표면까지 나오는 데는 수천 년에서 수백만 년이 걸린다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 '수천 년에서 수백만 년이 걸린다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "중심에서 생긴 빛은 곧바로 태양 표면으로 빠져나온다"
+      },
+      {
+        "card_id": "emag-hydrogen-fusion",
+        "relation_id": "rel-hf-gamma",
+        "form_type": "causal",
+        "text": "중심에서 나온 감마선은 표면에 이르는 동안 에너지를 잃어 자외선·가시광선·적외선으로 바뀐다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "122쪽 '에너지를 잃어버려 자외선, 가시광선, 적외선 등으로 바뀌어 방출된다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "중심에서 나온 감마선은 표면에 이르는 동안 에너지를 얻어 더 짧은 파장의 빛으로 바뀐다"
+      },
+      {
+        "card_id": "emag-line-spectrum",
+        "relation_id": "rel-ls-element",
+        "form_type": "causal",
+        "text": "원자의 종류마다 에너지 준위 차가 달라 선이 나타나는 파장도 원소마다 다르다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "124쪽과 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "원자의 종류가 달라도 선이 나타나는 파장은 같다"
+      },
+      {
+        "card_id": "emag-line-spectrum",
+        "relation_id": "rel-ls-same-position",
+        "form_type": "conditional",
+        "text": "같은 원소라면 흡수선이 생기는 자리와 방출선이 생기는 자리가 서로 같다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "124쪽 '동일한 원소의 흡수선과 방출선이 생기는 위치는 같고'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "같은 원소라도 흡수선이 생기는 자리와 방출선이 생기는 자리는 서로 다르다"
+      },
+      {
+        "card_id": "emag-line-spectrum",
+        "relation_id": "rel-ls-types",
+        "form_type": "classification",
+        "text": "고온의 저밀도 기체에서는 방출 선스펙트럼이, 연속 스펙트럼의 빛이 저온 기체를 지나면 흡수 선스펙트럼이 나타난다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "두 유형의 조건을 맞바꾼 문장은 반드시 거짓이다. 설계서가 말한 '두 이름을 맞바꾸는 분류형'이 바로 이 자리다.",
+        "inverted_text_방향": "고온의 저밀도 기체에서는 흡수 선스펙트럼이, 연속 스펙트럼의 빛이 저온 기체를 지나면 방출 선스펙트럼이 나타난다"
+      },
+      {
+        "card_id": "emag-mass-defect",
+        "relation_id": "rel-mdf-energy",
+        "form_type": "causal",
+        "text": "핵반응에서 줄어든 질량은 사라지는 것이 아니라 에너지로 바뀌어 빛과 열로 방출된다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "120쪽 '이 질량 결손이 에너지로 전환되어 빛과 열로 방출되는 것이다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "핵반응에서 줄어든 질량은 에너지로 바뀌지 않고 그대로 사라진다"
+      },
+      {
+        "card_id": "emag-mass-defect",
+        "relation_id": "rel-mdf-amount",
+        "form_type": "direct",
+        "text": "질량 결손이 클수록 그 반응에서 방출되는 에너지도 크다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "질량 결손이 클수록 그 반응에서 방출되는 에너지는 작다."
+      },
+      {
+        "card_id": "emag-mass-defect",
+        "relation_id": "rel-mdf-sun",
+        "form_type": "conditional",
+        "text": "태양은 1초마다 4×10⁹ kg 가량의 질량 결손을 일으키며 그만큼의 에너지를 내놓는다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "4×10⁹ kg 이라는 특정 수치를 드는 명제다. '질량이 도리어 늘어난다'로 뒤집으면 반드시 거짓이지만, 수치 명제는 OX 보다 계산 문항에 맞아 D1 에서 값이 떨어진다. 갈리는 자리다.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-mass-energy-equivalence",
+        "relation_id": "rel-mee-convert",
+        "form_type": "causal",
+        "text": "질량은 에너지로, 에너지는 질량으로 바뀔 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "질량-에너지 등가 원리의 결론 자체를 뒤집은 문장이라 반드시 거짓이다.",
+        "inverted_text_방향": "질량과 에너지는 서로 바뀔 수 없다"
+      },
+      {
+        "card_id": "emag-mass-energy-equivalence",
+        "relation_id": "rel-mee-amount",
+        "form_type": "direct",
+        "text": "전환되는 질량이 클수록 그에 해당하는 에너지도 크다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "전환되는 질량이 클수록 그에 해당하는 에너지는 작다."
+      },
+      {
+        "card_id": "emag-matter-wave",
+        "relation_id": "rel-mw-momentum",
+        "form_type": "inverse",
+        "text": "입자의 운동량이 커질수록 그 입자의 물질파 파장은 짧아진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "입자의 운동량이 커질수록 그 입자의 물질파 파장은 길어진다."
+      },
+      {
+        "card_id": "emag-matter-wave",
+        "relation_id": "rel-mw-macro",
+        "form_type": "causal",
+        "text": "야구공 같은 물체에도 물질파가 딸리지만 파장이 너무 짧아 파동성이 관찰되지 않는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "드브로이 관계식상 운동량이 있으면 물질파가 딸리므로 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "야구공 같은 물체에는 물질파가 아예 딸리지 않는다"
+      },
+      {
+        "card_id": "emag-matter-wave",
+        "relation_id": "rel-mw-microscope",
+        "form_type": "causal",
+        "text": "전자 현미경이 광학 현미경보다 미세한 구조를 보는 것은 전자의 물질파 파장이 가시광선보다 짧기 때문이다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "100쪽 '가시광선보다 파장이 짧은 전자의 물질파를 이용하므로'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "전자 현미경이 더 미세한 구조를 보는 것은 전자의 물질파 파장이 가시광선보다 길기 때문이다"
+      },
+      {
+        "card_id": "emag-measurement-disturbance",
+        "relation_id": "rel-mdt-macro",
+        "form_type": "conditional",
+        "text": "자동차처럼 무거운 대상에서는 스피드 건이 쏜 전자기파가 주는 운동량 변화를 무시할 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "116쪽 '자동차의 운동량 변화는 무시할 수 있다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "자동차처럼 무거운 대상에서도 스피드 건이 주는 운동량 변화가 커서 무시할 수 없다"
+      },
+      {
+        "card_id": "emag-measurement-disturbance",
+        "relation_id": "rel-mdt-electron",
+        "form_type": "causal",
+        "text": "전자처럼 가벼운 입자는 위치를 보려고 비춘 빛의 광자와 부딪혀 운동량이 달라진다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "116쪽 '전자의 운동량이 측정 전에 비해 달라진다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "전자처럼 가벼운 입자도 위치를 보려고 비춘 빛의 광자와 부딪혀서는 운동량이 달라지지 않는다"
+      },
+      {
+        "card_id": "emag-measurement-disturbance",
+        "relation_id": "rel-mdt-wavelength",
+        "form_type": "inverse",
+        "text": "조명에 쓰는 빛의 파장이 짧을수록 광자의 운동량이 커져 전자의 운동량 교란도 커진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "조명에 쓰는 빛의 파장이 짧을수록 광자의 운동량이 작아져 전자의 운동량 교란도 작아진다."
+      },
+      {
+        "card_id": "emag-measurement-state-change",
+        "relation_id": "rel-msc-collapse",
+        "form_type": "causal",
+        "text": "위치를 재는 순간 다른 곳에서 발견될 확률은 사라지고 그 자리에 입자 하나로 나타난다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "104쪽 '다른 곳에 존재할 확률은 없어지고, 그 위치에 하나의 입자로 나타나게 된다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "위치를 잰 뒤에도 다른 곳에서 발견될 확률이 그대로 남는다"
+      },
+      {
+        "card_id": "emag-measurement-state-change",
+        "relation_id": "rel-msc-detector",
+        "form_type": "causal",
+        "text": "이중 슬릿 뒤 검출기로 어느 슬릿을 지났는지 확인하면 간섭무늬가 사라지고 줄 두 개만 남는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "★104쪽 '간섭에 의한 줄무늬가 나타나지 않고, 두 개의 슬릿을 통과한 입자처럼 두 개의 줄무늬만 나타난다'와 정면으로 어긋나 반드시 거짓이다. 더구나 이 카드의 오개념 문장('검출기를 달아 경로를 확인해도 간섭무늬는 그대로 남는다')이 뒤집은 문장과 글자 그대로 같다 — 반박 지문이 이미 카드 안에 있는데 invertible 만 false 로 잠겨 있었다.",
+        "inverted_text_방향": "검출기를 달아 경로를 확인해도 간섭무늬는 그대로 남는다"
+      },
+      {
+        "card_id": "emag-measurement-state-change",
+        "relation_id": "rel-msc-probability",
+        "form_type": "conditional",
+        "text": "측정에서 어떤 값이 나올지는 확률 파동이 주는 확률로만 말할 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "104~105쪽의 확률적 상태 변화 서술과 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "측정에서 어떤 값이 나올지 측정 전에 확정해 말할 수 있다"
+      },
+      {
+        "card_id": "emag-nuclear-fusion",
+        "relation_id": "rel-nf-release",
+        "form_type": "causal",
+        "text": "가벼운 원자핵이 합쳐져 무거운 원자핵이 될 때 질량 결손만큼의 에너지가 나온다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 '가벼운 원자핵이 그보다 무거운 원자핵으로 바뀌면서 에너지를 방출하는 반응'과 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "가벼운 원자핵이 합쳐져 무거운 원자핵이 될 때 질량 결손만큼의 에너지를 흡수한다"
+      },
+      {
+        "card_id": "emag-nuclear-fusion",
+        "relation_id": "rel-nf-condition",
+        "form_type": "direct",
+        "text": "온도와 압력이 높을수록 원자핵들이 가까이 접근해 핵융합이 일어나기 쉽다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "온도와 압력이 높을수록 원자핵들이 가까이 접근하기 어려워 핵융합이 잘 일어나지 않는다."
+      },
+      {
+        "card_id": "emag-nuclear-fusion",
+        "relation_id": "rel-nf-vs-fission",
+        "form_type": "classification",
+        "text": "핵융합은 가벼운 핵이 합쳐지는 반응이고, 핵분열은 무거운 핵이 쪼개지는 반응이다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "두 이름을 맞바꾼 문장은 반드시 거짓이다. 이 카드의 오개념이 바로 그 맞바꿈이다.",
+        "inverted_text_방향": "핵융합은 무거운 핵이 쪼개지는 반응이고, 핵분열은 가벼운 핵이 합쳐지는 반응이다"
+      },
+      {
+        "card_id": "emag-nuclear-reaction-equation",
+        "relation_id": "rel-nre-mass-number",
+        "form_type": "conditional",
+        "text": "핵반응식에서 반응 전 질량수의 합과 반응 후 질량수의 합은 같다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "120쪽 '핵반응 전후 질량수와 원자 번호의 합이 각각 같다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "핵반응식에서 반응 후 질량수의 합은 반응 전보다 줄어든다"
+      },
+      {
+        "card_id": "emag-nuclear-reaction-equation",
+        "relation_id": "rel-nre-charge",
+        "form_type": "conditional",
+        "text": "핵반응식에서 반응 전 원자 번호의 합과 반응 후 원자 번호의 합은 같다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "120쪽 전하량 보존과 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "핵반응식에서 반응 후 원자 번호의 합은 반응 전과 달라진다"
+      },
+      {
+        "card_id": "emag-nuclear-reaction-equation",
+        "relation_id": "rel-nre-notation",
+        "form_type": "classification",
+        "text": "원소 기호의 왼쪽 위에는 질량수를, 왼쪽 아래에는 원자 번호를 적는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "표기 약속의 두 자리를 맞바꾼 문장은 반드시 거짓이다 — 맞바꿈 분류형.",
+        "inverted_text_방향": "원소 기호의 왼쪽 위에는 원자 번호를, 왼쪽 아래에는 질량수를 적는다"
+      },
+      {
+        "card_id": "emag-plasma",
+        "relation_id": "rel-pl-ionized",
+        "form_type": "classification",
+        "text": "플라스마에서는 원자핵과 전자가 묶여 있지 않고 서로 떨어진 채 섞여 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 곁주 '원자핵과 전자가 분리된 이온 상태'와 어긋나 반드시 거짓이다. 다만 아래 (f) 동어반복 지적을 먼저 푼 뒤에 올려야 한다.",
+        "inverted_text_방향": "플라스마에서도 원자핵과 전자는 원자로 묶인 채 남아 있다"
+      },
+      {
+        "card_id": "emag-plasma",
+        "relation_id": "rel-pl-ground",
+        "form_type": "conditional",
+        "text": "지구에서 핵융합을 일으키려면 1억 ℃ 이상의 초고온 플라스마를 인위적으로 만들어야 한다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "1억 ℃ 라는 기준값을 드는 명제다. 위와 같은 이유로 갈린다.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-plasma",
+        "relation_id": "rel-pl-sun",
+        "form_type": "causal",
+        "text": "태양 내부는 고밀도 플라스마여서 생겨난 광자가 조금 나아갈 때마다 흡수와 재방출을 되풀이한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 '고밀도의 플라스마 상태이므로 …흡수되었다가 다시 방출되면서'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "태양 내부는 밀도가 낮아 생겨난 광자가 흡수되지 않고 곧장 빠져나온다"
+      },
+      {
+        "card_id": "emag-potential-barrier",
+        "relation_id": "rel-pb-classical",
+        "form_type": "conditional",
+        "text": "고전 역학에서는 역학적 에너지가 장벽 높이보다 작은 입자가 장벽을 넘지 못한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "112쪽 '고전역학에 의하면 …입자는 오른쪽 언덕을 넘을 수 없다'와 어긋나 반드시 거짓이다. 현 invertible_reason 은 역(converse)을 시험했다.",
+        "inverted_text_방향": "고전 역학에서도 역학적 에너지가 장벽 높이보다 작은 입자가 장벽을 넘을 수 있다"
+      },
+      {
+        "card_id": "emag-potential-barrier",
+        "relation_id": "rel-pb-quantum",
+        "form_type": "conditional",
+        "text": "같은 조건이라도 양자 역학은 장벽 오른쪽에서 입자가 발견될 확률이 0이 아니라고 본다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "113쪽 '입자가 장벽의 오른쪽에서 발견될 확률은 0이 아님을 알 수 있다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "같은 조건에서 양자 역학도 장벽 오른쪽에서 입자가 발견될 확률은 0이라고 본다"
+      },
+      {
+        "card_id": "emag-potential-barrier",
+        "relation_id": "rel-pb-reflect",
+        "form_type": "causal",
+        "text": "장벽에 부딪힌 입자의 확률 파동은 일부가 반사되고 일부가 장벽을 투과한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "113쪽 '일부는 반사하고, 일부는 투과할 수 있다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "장벽에 부딪힌 입자의 확률 파동은 남김없이 모두 반사되고 투과하는 몫은 없다"
+      },
+      {
+        "card_id": "emag-probability-density",
+        "relation_id": "rel-pd-zero",
+        "form_type": "conditional",
+        "text": "확률 파동 절댓값의 제곱이 0인 자리에서는 입자가 발견되지 않는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "103쪽 보른의 해석 '|W|²=0인 지점에서 입자는 발견되지 않는다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다. 현 invertible_reason 은 역(converse)을 시험했다.",
+        "inverted_text_방향": "확률 파동 절댓값의 제곱이 0인 자리에도 입자가 가끔 발견된다"
+      },
+      {
+        "card_id": "emag-probability-density",
+        "relation_id": "rel-pd-meaning",
+        "form_type": "classification",
+        "text": "확률 밀도는 전자가 그 자리에 퍼져 있는 양이 아니라 그 자리에서 발견될 확률을 뜻한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "보른의 확률 해석과 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "확률 밀도는 전자가 그 자리에 퍼져 있는 양을 뜻한다"
+      },
+      {
+        "card_id": "emag-probability-density",
+        "relation_id": "rel-pd-hydrogen",
+        "form_type": "conditional",
+        "text": "수소 원자의 (1, 0, 0) 상태에서 확률 밀도가 가장 큰 거리는 보어 모형의 n=1 궤도 반지름과 같다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "119쪽 '…보어의 원자 모형에서 n=1인 상태에서의 전자 궤도 반지름 a0와 같다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "수소 원자의 (1, 0, 0) 상태에서 확률 밀도가 가장 큰 거리는 보어 모형의 n=1 궤도 반지름과 다르다"
+      },
+      {
+        "card_id": "emag-probability-wave-interference",
+        "relation_id": "rel-pwi-both",
+        "form_type": "causal",
+        "text": "전자 하나가 확률 파동으로 나아가므로 슬릿 두 개를 동시에 지나는 일이 가능하다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "103쪽 '1개의 전자는 확률 파동으로 진행하므로 2개의 슬릿을 동시에 지나는 것이 가능하다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "전자 하나는 두 슬릿 가운데 한쪽만 지날 수 있다"
+      },
+      {
+        "card_id": "emag-probability-wave-interference",
+        "relation_id": "rel-pwi-cancel",
+        "form_type": "causal",
+        "text": "두 확률 파동이 상쇄되어 절댓값의 제곱이 0이 된 자리에는 전자가 찍히지 않는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "103쪽과 어긋나 반드시 거짓이다. 현 invertible_reason 은 역(converse)을 시험했다.",
+        "inverted_text_방향": "두 확률 파동이 상쇄되어 절댓값의 제곱이 0이 된 자리에도 전자가 찍힌다"
+      },
+      {
+        "card_id": "emag-probability-wave-interference",
+        "relation_id": "rel-pwi-arrival",
+        "form_type": "causal",
+        "text": "확률 파동이 스크린에 닿는 순간 전자의 위치가 확률에 따라 한 점으로 정해진다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "103쪽 '확률 파동이 스크린에 도달하는 순간 전자의 위치가 확률적으로 결정되어'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "전자의 위치는 확률 파동이 스크린에 닿기 전에 이미 한 점으로 정해져 있다"
+      },
+      {
+        "card_id": "emag-probability-wave",
+        "relation_id": "rel-pw-describe",
+        "form_type": "classification",
+        "text": "미시 입자의 진행은 위치와 시간에 따라 값이 달라지는 확률 파동으로 기술한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "102쪽이 거시(위치는 시간의 함수)와 미시(시간과 위치의 함수인 확률 파동)의 기술 방식을 갈라 놓았으므로 반드시 거짓이다. 다만 아래 (f) 지적을 함께 볼 것.",
+        "inverted_text_방향": "미시 입자의 진행도 거시 물체처럼 위치만의 함수로 기술한다"
+      },
+      {
+        "card_id": "emag-probability-wave",
+        "relation_id": "rel-pw-square",
+        "form_type": "direct",
+        "text": "확률 파동 절댓값의 제곱이 큰 지점일수록 그곳에서 입자가 발견될 확률이 크다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "확률 파동 절댓값의 제곱이 큰 지점일수록 그곳에서 입자가 발견될 확률이 작다."
+      },
+      {
+        "card_id": "emag-probability-wave",
+        "relation_id": "rel-pw-not-path",
+        "form_type": "classification",
+        "text": "확률 파동은 입자가 실제로 지나간 하나의 길이 아니라 발견될 가능성의 분포를 나타낸다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "보른의 해석과 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "확률 파동은 입자가 실제로 지나간 하나의 길을 그린 것이다"
+      },
+      {
+        "card_id": "emag-quantum-computer",
+        "relation_id": "rel-qc-parallel",
+        "form_type": "classification",
+        "text": "고전 컴퓨터가 후보를 차례로 하나씩 확인하는 데 비해 양자 컴퓨터는 중첩시켜 한 번에 통과시킨다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "105쪽에서 두 방식이 정해져 있으므로 맞바꾼 문장은 반드시 거짓이다 — 맞바꿈 분류형.",
+        "inverted_text_방향": "고전 컴퓨터가 후보를 중첩시켜 한 번에 통과시키는 데 비해 양자 컴퓨터는 하나씩 차례로 확인한다"
+      },
+      {
+        "card_id": "emag-quantum-computer",
+        "relation_id": "rel-qc-interference",
+        "form_type": "causal",
+        "text": "정답이 아닌 경로의 파동은 상쇄시키고 정답 경로의 파동만 남긴 뒤 측정해 답을 읽는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "105쪽 '정답이 아닌 슬릿을 통과한 파동은 상쇄 간섭이 일어나게 하고, 정답인 슬릿을 통과한 파동만 남게 하여'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "정답 경로의 파동을 상쇄시키고 정답이 아닌 경로의 파동만 남긴 뒤 측정해 답을 읽는다"
+      },
+      {
+        "card_id": "emag-quantum-computer",
+        "relation_id": "rel-qc-qubit-count",
+        "form_type": "conditional",
+        "text": "큐비트가 50개 정도만 되어도 고전 컴퓨터를 넘어서는 빠른 계산 결과를 얻을 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "50개라는 교과서 기준값을 드는 명제다. 위와 같은 이유로 갈린다. 아래 (g) 지적(오개념 연결)과 함께 볼 것.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-quantum-computer",
+        "relation_id": "rel-qc-rsa",
+        "form_type": "causal",
+        "text": "양자 컴퓨터가 실용화되면 큰 수의 소인수 분해가 빨라져 현대 암호 체계의 안전성이 무너진다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "106쪽 '양자 컴퓨터가 실용화되면 현대 암호 체계는 무용지물이 되고 만다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "양자 컴퓨터가 실용화되어도 소인수 분해는 여전히 느려 현대 암호 체계의 안전성은 지켜진다"
+      },
+      {
+        "card_id": "emag-quantum-cryptography",
+        "relation_id": "rel-qcr-collapse",
+        "form_type": "causal",
+        "text": "도청자가 암호를 측정하는 순간 송신자가 실어 보낸 중첩이 깨진다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "106쪽 '암호를 도청(측정)하는 순간 …암호의 중첩이 깨지고'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "도청자가 암호를 측정해도 송신자가 실어 보낸 중첩은 그대로 유지된다"
+      },
+      {
+        "card_id": "emag-quantum-cryptography",
+        "relation_id": "rel-qcr-detect",
+        "form_type": "causal",
+        "text": "도청자가 다시 보낸 암호는 송신자가 보낸 것과 달라지므로 수신자가 도청을 알아챈다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "106쪽 '도청자가 수신자에게 보낸 암호도 송신자가 보낸 암호와 달라지므로'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "도청자가 다시 보낸 암호는 송신자가 보낸 것과 같아 수신자가 도청을 알아채지 못한다"
+      },
+      {
+        "card_id": "emag-quantum-cryptography",
+        "relation_id": "rel-qcr-classical",
+        "form_type": "conditional",
+        "text": "고전적인 방법으로 보낸 암호는 도청자가 신호를 똑같이 복제해 보내면 도청 여부를 알 수 없다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "106쪽 '수신자는 암호의 도청 여부를 알 수 없다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "고전적인 방법으로 보낸 암호도 도청자가 복제해 보내면 수신자가 도청을 알아챌 수 있다"
+      },
+      {
+        "card_id": "emag-quantum-mechanical-atomic-model",
+        "relation_id": "rel-qm-no-orbit",
+        "form_type": "causal",
+        "text": "위치와 운동량을 함께 확정하는 보어의 궤도 개념은 불확정성 원리 때문에 성립하지 않는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "119쪽 '보어의 원자 모형이 더 이상 성립하지 않음을 보여주었다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "현대의 원자 모형에서도 전자는 정해진 궤도를 따라 원운동한다"
+      },
+      {
+        "card_id": "emag-quantum-mechanical-atomic-model",
+        "relation_id": "rel-qm-density",
+        "form_type": "causal",
+        "text": "슈뢰딩거 방정식의 해인 파동 함수를 절댓값 제곱하면 그 자리에서 전자를 발견할 확률 밀도가 된다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "119쪽 '파동 함수의 절댓값의 제곱이 그 위치에서의 전자를 발견할 확률, 즉 확률 밀도를 의미한다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "슈뢰딩거 방정식의 해인 파동 함수 값 자체가 곧 그 자리의 확률 밀도가 된다"
+      },
+      {
+        "card_id": "emag-quantum-mechanical-atomic-model",
+        "relation_id": "rel-qm-same-level",
+        "form_type": "conditional",
+        "text": "현대의 수소 원자 모형이 주는 에너지 준위 값은 보어 모형에서 구한 값과 같다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "119쪽 '보어의 원자 모형에서 구한 값과 같고'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "현대의 수소 원자 모형이 주는 에너지 준위 값은 보어 모형에서 구한 값과 다르다"
+      },
+      {
+        "card_id": "emag-quantum-mechanical-atomic-model",
+        "relation_id": "rel-qm-multi",
+        "form_type": "conditional",
+        "text": "현대의 원자 모형은 수소뿐 아니라 전자가 여럿인 원자의 성질까지 설명한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "119쪽 '수소 원자만이 아니라 다전자 원자에도 적용되어'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "현대의 원자 모형도 보어 모형처럼 수소 원자에만 적용된다"
+      },
+      {
+        "card_id": "emag-quantum-superposition",
+        "relation_id": "rel-sup-not-ignorance",
+        "form_type": "classification",
+        "text": "중첩은 둘 중 어느 쪽인지 우리가 모르는 상태가 아니라 두 가능성을 함께 지닌 상태다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "104쪽 중첩의 규정과 어긋나 반드시 거짓이다. 이 카드의 첫 오개념이 그 자리다.",
+        "inverted_text_방향": "중첩은 둘 중 어느 쪽인지 우리가 모를 뿐인 상태다"
+      },
+      {
+        "card_id": "emag-quantum-superposition",
+        "relation_id": "rel-sup-interference",
+        "form_type": "conditional",
+        "text": "전자가 중첩 상태로 나아가는 동안에만 스크린에 간섭무늬가 쌓인다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "104쪽 검출기 실험과 어긋나 반드시 거짓이다. 현 invertible_reason 은 역(converse)이 '참에 가깝다'고 적었을 뿐 결론을 뒤집지 않았다 — 시험 대상을 잘못 골랐다.",
+        "inverted_text_방향": "전자의 중첩이 깨진 뒤에도 스크린에는 간섭무늬가 쌓인다"
+      },
+      {
+        "card_id": "emag-quantum-superposition",
+        "relation_id": "rel-sup-micro",
+        "form_type": "classification",
+        "text": "중첩은 미시 입자에서 확인되는 상태이고 일상 크기의 물체에서는 관찰되지 않는다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "교과서 104쪽 도입이 슈뢰딩거의 고양이로 거시 물체의 중첩을 이야기로 꺼내 놓았다. '일상 크기의 물체에서도 중첩이 관찰된다'가 이 교과서의 서술 안에서 반드시 거짓이라고 단정하기 어렵다. 진위 판단이 필요하다 — C8 검토 항목.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-quantum-tunneling",
+        "relation_id": "rel-qt-occurs",
+        "form_type": "conditional",
+        "text": "미시 입자는 아주 낮은 확률로나마 자기 에너지보다 높은 장벽을 건너갈 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "112쪽 '입자는 아주 작은 확률일지라도 터널을 뚫어 반대쪽으로 넘어갈 수 있다'와 어긋나 반드시 거짓이다. 현 invertible_reason 은 역(converse)을 시험했다.",
+        "inverted_text_방향": "미시 입자도 자기 에너지보다 높은 장벽은 결코 건너갈 수 없다"
+      },
+      {
+        "card_id": "emag-quantum-tunneling",
+        "relation_id": "rel-qt-wave",
+        "form_type": "causal",
+        "text": "터널 효과가 가능한 것은 입자가 파동의 성질을 지녀 장벽 너머까지 확률 파동이 이어지기 때문이다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "113쪽 '입자도 파동의 성질을 가지고 있으므로'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "터널 효과가 가능한 것은 입자가 어디선가 에너지를 더 얻어 장벽을 뛰어넘기 때문이다"
+      },
+      {
+        "card_id": "emag-quantum-tunneling",
+        "relation_id": "rel-qt-classical-contrast",
+        "form_type": "classification",
+        "text": "고전 역학으로는 이 현상을 설명할 수 없어 미시 세계에서만 인정된다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "112쪽 '고전역학에 의하면 …넘을 수 없다'와 어긋나 반드시 거짓이다. 다만 아래 (c) 지적을 함께 볼 것.",
+        "inverted_text_방향": "터널 효과는 고전 역학으로도 설명할 수 있는 현상이다"
+      },
+      {
+        "card_id": "emag-qubit",
+        "relation_id": "rel-qb-vs-bit",
+        "form_type": "classification",
+        "text": "비트가 0이나 1 가운데 하나만 담는 데 비해 큐비트는 둘의 중첩 상태도 담는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "105쪽 비트·큐비트 대비를 맞바꾼 문장은 반드시 거짓이다 — 맞바꿈 분류형. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "비트가 0과 1의 중첩 상태를 담는 데 비해 큐비트는 0이나 1 가운데 하나만 담는다"
+      },
+      {
+        "card_id": "emag-qubit",
+        "relation_id": "rel-qb-two",
+        "form_type": "conditional",
+        "text": "큐비트가 2개면 00·01·10·11 네 상태를 중첩해 한꺼번에 나타내고 처리할 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "105쪽 '네 가지 상태를 모두 중첩해서 동시에 표시하고 처리할 수 있으므로'와 어긋나 반드시 거짓이다. 교과서가 바로 그 문장에서 고전 비트 2개는 '네 가지 상태 중 하나만' 표시한다고 대비해 두었다.",
+        "inverted_text_방향": "큐비트가 2개여도 00·01·10·11 네 상태 가운데 하나만 나타낼 수 있다"
+      },
+      {
+        "card_id": "emag-qubit",
+        "relation_id": "rel-qb-hardware",
+        "form_type": "classification",
+        "text": "실제 큐비트는 전자의 스핀이나 원자의 에너지 준위처럼 중첩을 구현할 수 있는 계로 만든다.",
+        "current_invertible": false,
+        "proposed_invertible": false,
+        "verdict": "유지(false)",
+        "reason": "구현 사례를 드는 열거형이다. 결론을 뒤집으면 '중첩을 구현할 수 없는 계로 만든다'가 되어 문장이 무너질 뿐, 학생이 판단할 만한 뒤집힌 명제가 서지 않는다.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-scanning-tunneling-microscope",
+        "relation_id": "rel-stm-current",
+        "form_type": "causal",
+        "text": "탐침이 시료에 닿지 않아도 그 사이 퍼텐셜 장벽을 전자가 터널 효과로 건너 전류가 흐른다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "114쪽 '표면에 접촉하지 않고 가까이 가져가면 …전류가 흐르게 된다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "탐침이 시료에 직접 닿아야만 그 사이에 전류가 흐른다"
+      },
+      {
+        "card_id": "emag-scanning-tunneling-microscope",
+        "relation_id": "rel-stm-distance",
+        "form_type": "inverse",
+        "text": "탐침과 시료 사이가 멀어질수록 터널링 전류의 세기는 지수 함수로 줄어든다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "탐침과 시료 사이가 멀어질수록 터널링 전류의 세기는 지수 함수로 커진다."
+      },
+      {
+        "card_id": "emag-scanning-tunneling-microscope",
+        "relation_id": "rel-stm-height",
+        "form_type": "causal",
+        "text": "전류를 일정하게 유지하도록 맞춘 탐침의 높이가 그대로 시료 표면의 높낮이 정보가 된다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "뒤집을 자리가 '전류를 일정하게 두는 방식'이라는 전제다. 탐침 높이를 일정하게 두고 전류를 읽는 방식이 실제로 있어 문면을 뒤집어도 반드시 거짓이 되지 않을 여지가 있다. 교과서는 일정 전류 방식만 실었다. 진위 판단이 필요하다 — C8 검토 항목.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-single-electron-double-slit",
+        "relation_id": "rel-sed-one-dot",
+        "form_type": "conditional",
+        "text": "전자를 한 개 보내면 스크린에는 점이 하나만 찍힌다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "102쪽 '이중 슬릿에 전자 1개를 입사시키면, 스크린에 전자의 도착점이 1개 찍힌다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다. 현 invertible_reason 은 역(converse)을 시험했다.",
+        "inverted_text_방향": "이중 슬릿에 전자를 한 개 보내도 스크린에 간섭무늬가 통째로 그려진다"
+      },
+      {
+        "card_id": "emag-single-electron-double-slit",
+        "relation_id": "rel-sed-accumulate",
+        "form_type": "direct",
+        "text": "스크린에 쌓인 전자 수가 많아질수록 점들의 분포는 간섭무늬에 가까워진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "스크린에 쌓인 전자 수가 많아질수록 점들의 분포는 간섭무늬에서 멀어진다."
+      },
+      {
+        "card_id": "emag-single-electron-double-slit",
+        "relation_id": "rel-sed-neither",
+        "form_type": "conditional",
+        "text": "이 결과는 입자성만으로도, 파동성만으로도 설명되지 않는다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "102쪽 '입자의 성질과 파동의 성질 중 하나만으로는 설명할 수 없는 것이었다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "이 결과는 전자의 입자성만으로 남김없이 설명된다"
+      },
+      {
+        "card_id": "emag-standing-wave-orbit-condition",
+        "relation_id": "rel-swo-integer",
+        "form_type": "conditional",
+        "text": "궤도 둘레가 전자의 물질파 파장의 정수배가 될 때에만 그 궤도에서 전자가 안정하다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "118쪽 '둘레가 드브로이 파장의 정수배가 되어 정상파를 이룰 때에만 안정한 궤도를 이룬다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다. 다만 아래 (f) 동어반복 지적을 먼저 풀어야 한다.",
+        "inverted_text_방향": "궤도 둘레가 전자의 물질파 파장의 정수배가 아니어도 그 궤도에서 전자가 안정하다"
+      },
+      {
+        "card_id": "emag-standing-wave-orbit-condition",
+        "relation_id": "rel-swo-reread",
+        "form_type": "causal",
+        "text": "보어가 가설로 놓았던 양자 조건을 드브로이 이론으로 다시 읽으면 이 정상파 조건이 된다.",
+        "current_invertible": false,
+        "proposed_invertible": false,
+        "verdict": "유지(false)",
+        "reason": "보어의 양자 조건을 드브로이 이론으로 다시 읽는 절차를 말한다. 뒤집을 결론이 없다.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-standing-wave-orbit-condition",
+        "relation_id": "rel-swo-n",
+        "form_type": "classification",
+        "text": "궤도 둘레에 들어가는 파장의 개수가 그 궤도의 양자수에 해당한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "118쪽 그림 III-20 의 대응(2πr=nλ)과 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "궤도 둘레에 들어가는 파장의 개수는 그 궤도의 양자수와 아무 관계가 없다"
+      },
+      {
+        "card_id": "emag-stellar-composition-from-spectrum",
+        "relation_id": "rel-sc-fingerprint",
+        "form_type": "causal",
+        "text": "별빛의 흡수 선스펙트럼 패턴을 원소마다 알려진 선의 자리와 견주면 그 별의 구성 원소를 알 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "125쪽 '별빛의 흡수 선스펙트럼의 패턴은 마치 지문과 같아 그 별의 구성 원소를 알 수 있다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "별빛의 흡수 선스펙트럼을 원소별 선 자리와 견주어도 그 별의 구성 원소는 알 수 없다"
+      },
+      {
+        "card_id": "emag-stellar-composition-from-spectrum",
+        "relation_id": "rel-sc-thickness",
+        "form_type": "direct",
+        "text": "구성 원소의 밀도가 높을수록 그 원소가 만드는 스펙트럼 선은 두껍게 나타난다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "구성 원소의 밀도가 높을수록 그 원소가 만드는 스펙트럼 선은 얇게 나타난다."
+      },
+      {
+        "card_id": "emag-stellar-composition-from-spectrum",
+        "relation_id": "rel-sc-more",
+        "form_type": "conditional",
+        "text": "선스펙트럼을 더 자세히 분석하면 구성 원소의 질량비와 별의 온도까지 알아낼 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "125쪽 '각각의 원소들의 질량비까지 알 수 있으며 …천체의 온도도 알 수 있으며'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "선스펙트럼을 아무리 자세히 분석해도 구성 원소의 질량비나 별의 온도는 알아낼 수 없다"
+      },
+      {
+        "card_id": "emag-strong-nuclear-force",
+        "relation_id": "rel-snf-range",
+        "form_type": "conditional",
+        "text": "강한 핵력은 10⁻¹⁵ m 정도의 매우 짧은 거리 안에서만 작용한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 곁주 '매우 짧은 거리(10-15 m)에서 작용한다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "강한 핵력은 거리가 멀어져도 계속 작용한다"
+      },
+      {
+        "card_id": "emag-strong-nuclear-force",
+        "relation_id": "rel-snf-repulsion",
+        "form_type": "causal",
+        "text": "원자핵끼리는 모두 양전하를 띠어 전기력이 척력으로 작용해 서로 가까워지기 어렵다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 '원자핵 사이에 작용하는 전기력(척력)은 두 원자핵이 가까이 접근하기 어렵게 하지만'과 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "원자핵끼리는 전기력이 인력으로 작용해 서로 쉽게 가까워진다"
+      },
+      {
+        "card_id": "emag-strong-nuclear-force",
+        "relation_id": "rel-snf-fusion",
+        "form_type": "causal",
+        "text": "두 원자핵이 전기적 척력을 이기고 충분히 가까워져야 강한 핵력이 작용해 융합할 수 있다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "121쪽 '서로 가까이 접근하여 …강한 핵력에 의해 융합할 수 있다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "두 원자핵은 멀리 떨어져 있어도 강한 핵력이 작용해 융합할 수 있다"
+      },
+      {
+        "card_id": "emag-tunneling-in-miniaturized-device",
+        "relation_id": "rel-tmd-scale",
+        "form_type": "inverse",
+        "text": "회로에서 전자가 흐르는 길 사이 간격이 좁아질수록 터널 효과가 잦아진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "회로에서 전자가 흐르는 길 사이 간격이 좁아질수록 터널 효과가 드물어진다."
+      },
+      {
+        "card_id": "emag-tunneling-in-miniaturized-device",
+        "relation_id": "rel-tmd-leak",
+        "form_type": "causal",
+        "text": "길을 벗어난 전자는 회로의 오작동과 누설 전류에 의한 전력 손실을 일으킨다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "115쪽 '반도체 회로의 오작동을 일으키고, 누설 전류에 의한 전력 손실도 일으키게 된다'와 어긋나 반드시 거짓이다.",
+        "inverted_text_방향": "길을 벗어난 전자는 회로의 동작을 오히려 안정시키고 전력 손실도 줄여 준다"
+      },
+      {
+        "card_id": "emag-tunneling-probability",
+        "relation_id": "rel-tp-thickness",
+        "form_type": "inverse",
+        "text": "장벽이 두꺼울수록 입자가 그 장벽을 투과할 확률은 작아진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "장벽이 두꺼울수록 입자가 그 장벽을 투과할 확률은 커진다."
+      },
+      {
+        "card_id": "emag-tunneling-probability",
+        "relation_id": "rel-tp-height",
+        "form_type": "inverse",
+        "text": "장벽이 높을수록 입자가 그 장벽을 투과할 확률은 작아진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "장벽이 높을수록 입자가 그 장벽을 투과할 확률은 커진다."
+      },
+      {
+        "card_id": "emag-tunneling-probability",
+        "relation_id": "rel-tp-mass",
+        "form_type": "inverse",
+        "text": "입자의 질량이 클수록 터널 효과가 작아져, 같은 장벽이라도 원자핵은 전자보다 통과하기 어렵다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "입자의 질량이 클수록 터널 효과가 커져, 같은 장벽이라도 원자핵은 전자보다 통과하기 쉽다."
+      },
+      {
+        "card_id": "emag-tunneling-probability",
+        "relation_id": "rel-tp-meaning",
+        "form_type": "conditional",
+        "text": "투과 확률이 0.001이라면 장벽에 1000번 부딪힐 때 한 번 통과한다는 뜻이다.",
+        "current_invertible": false,
+        "proposed_invertible": null,
+        "verdict": "판단 보류",
+        "reason": "확률값 0.001 을 읽는 방법을 푸는 명제다. '1000번 가운데 999번 통과한다'로 뒤집으면 반드시 거짓이지만 계산 절차 풀이에 가까워 갈린다.",
+        "inverted_text_방향": null
+      },
+      {
+        "card_id": "emag-uncertainty-principle",
+        "relation_id": "rel-up-tradeoff",
+        "form_type": "inverse",
+        "text": "위치의 불확정도를 줄이면 운동량의 불확정도는 그만큼 커진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "위치의 불확정도를 줄이면 운동량의 불확정도도 함께 줄어든다."
+      },
+      {
+        "card_id": "emag-uncertainty-principle",
+        "relation_id": "rel-up-slit",
+        "form_type": "inverse",
+        "text": "단일 슬릿의 폭을 좁힐수록 회절 무늬의 폭이 넓어져 운동량의 불확정도가 커진다.",
+        "current_invertible": true,
+        "proposed_invertible": true,
+        "verdict": "유지(true)",
+        "reason": "현재 판정이 옳다. 크기 관계를 뒤집은 문장이 교과서가 든 관계식·실험 결과와 정면으로 어긋나 반드시 거짓이 된다.",
+        "inverted_text_방향": "단일 슬릿의 폭을 좁힐수록 회절 무늬의 폭이 좁아져 운동량의 불확정도가 작아진다."
+      },
+      {
+        "card_id": "emag-uncertainty-principle",
+        "relation_id": "rel-up-fundamental",
+        "form_type": "classification",
+        "text": "이 한계는 측정 기구나 기법이 모자라서가 아니라 자연 자체가 지닌 한계다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "123쪽 '실험 기구나 기법의 한계가 아니라 우주의 근본적인 한계이다'와 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다.",
+        "inverted_text_방향": "이 한계는 자연이 지닌 것이 아니라 측정 기구와 기법이 모자라서 생긴 것이다"
+      },
+      {
+        "card_id": "emag-wave-particle-duality",
+        "relation_id": "rel-dual-matter",
+        "form_type": "classification",
+        "text": "전자처럼 작은 물질 입자는 입자이면서 파동의 성질도 함께 나타낸다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "100쪽 이중성 서술과 어긋나 반드시 거짓이다. 이 카드의 오개념이 그 자리다. 현 invertible_reason 은 역(converse: 파동성을 보이면 미시 입자인가)을 시험했다.",
+        "inverted_text_방향": "전자처럼 작은 물질 입자는 입자의 성질만 나타내고 파동의 성질은 나타내지 않는다"
+      },
+      {
+        "card_id": "emag-wave-particle-duality",
+        "relation_id": "rel-dual-light",
+        "form_type": "conditional",
+        "text": "빛은 파동으로 다루어 왔지만 광자를 하나씩 세는 장치에서는 입자처럼 행동한다.",
+        "current_invertible": false,
+        "proposed_invertible": true,
+        "verdict": "상향(false→true)",
+        "reason": "100쪽 '미시 세계에서 물질과 빛은 각각 파동의 성질과 입자의 성질도 나타내는데'와 어긋나 반드시 거짓이다. 현 invertible_reason 은 역(converse)을 시험했다.",
+        "inverted_text_방향": "광자를 하나씩 세는 장치에서도 빛은 파동처럼만 행동한다"
+      },
+      {
+        "card_id": "emag-wave-particle-duality",
+        "relation_id": "rel-dual-use",
+        "form_type": "causal",
+        "text": "전자 현미경과 전하 결합 소자(CCD)는 이 이중성을 실제 장치에 옮겨 놓은 사례다.",
+        "current_invertible": false,
+        "proposed_invertible": false,
+        "verdict": "유지(false)",
+        "reason": "전자 현미경·CCD 라는 사례를 드는 열거형이다. 뒤집을 결론이 없다.",
+        "inverted_text_방향": null
+      }
+    ]
+  },
+  "cross_unit_check": {
+    "asked": "emag-hydrogen-fusion 이 earth-3 의 concept:pp-chain-and-cno-cycle · isci2 의 수소 핵융합 카드와 겹친다. 명제 수준에서 어긋나는지 확인.",
+    "concept_key_overlap": {
+      "concept:hydrogen-fusion": [
+        "emag-hydrogen-fusion (emag-3)",
+        "earth-hydrogen-fusion (earth-3)",
+        "isci2-hydrogen-fusion (isci2-2)"
+      ]
+    },
+    "findings": [
+      {
+        "verdict": "defect",
+        "checks": [
+          "c"
+        ],
+        "what": "emag rel-hf-steps 의 '세 단계'는 p-p 연쇄 한 경로다. earth-3 의 rel-ppcno-mass 는 질량이 태양의 1.5배보다 큰 별에서는 CNO 순환이 우세하다고 한다. 두 카드가 같은 concept_key 아래에서 서로 다른 경로를 말하는데 emag 쪽 scope('태양처럼 수소를 태우는 별')가 그 구분을 담지 못한다. 모순은 아니지만 범위가 어긋난다 — 작성자의 '어긋나지 않는다'는 판단은 명제 수준에서 그대로 받아들이기 어렵다.",
+        "suggest": "emag rel-hf-steps 의 form.scope 에 p-p 연쇄 경로임을 밝힌다."
+      },
+      {
+        "verdict": "defect",
+        "checks": [
+          "c",
+          "d"
+        ],
+        "what": "emag rel-hf-tunneling('태양 중심의 온도는 …모자라지만')과 isci2 rel-fus-condition('약 1500만 K에 이르는 태양 중심부의 초고온 상태에서 일어난다')이 문면상 부딪힌다. 앞의 것에 고전적 계산이라는 전제가 빠져 있어서다. relations.findings 의 같은 항목과 한 건이다.",
+        "suggest": "emag rel-hf-tunneling 의 condition 에 고전적 계산 전제를 밝힌다."
+      },
+      {
+        "verdict": "ok",
+        "what": "그 밖의 대조는 어긋나지 않는다. 수소 4개→헬륨 1개, 질량 결손이 에너지로 바뀜, 질량 결손 0.7 %(earth) 와 초당 4×10⁹ kg(emag) 는 서로 다른 것을 재는 값이라 충돌하지 않는다."
+      },
+      {
+        "verdict": "ok",
+        "what": "phys-3 와 same 으로 이어진 넷(concept:matter-wave · concept:energy-level · concept:line-spectrum · concept:bohr-atomic-model)은 방향이 모두 같다. phys rel-mw-lambda 와 emag rel-mw-momentum 은 둘 다 invertible: true 이고 방향도 같다."
+      },
+      {
+        "verdict": "uncertain",
+        "what": "다만 phys-3 쪽도 같은 병을 앓는 것으로 보인다. phys rel-el-quantized · phys rel-ls-element · phys rel-bam-limit 는 emag-3 에서 내가 true 로 올린 명제와 같은 말인데 phys-3 에서는 invertible: false 다. 내 검사 범위(emag-3) 밖이라 판정하지 않았다. 메인이 phys-3 에 같은 재판정을 걸지 정할 일이다."
+      }
+    ]
+  },
+  "checks_with_no_finding": {
+    "a_교과서_방향_역전": "없다. 106개 명제의 방향을 교과서 97~131쪽 원문과 하나씩 대조했다. 뒤집힌 것은 없었다.",
+    "e_교과서에_없는_수치·사실": "없다. 대조한 수치는 -13.6/n² eV(118쪽) · (1, 0, 0) 상태(119쪽) · 초당 4×10⁹ kg(122쪽 개념확인) · 큐비트 50개(106쪽) · 1억 ℃(122쪽) · 투과 확률 0.001 과 1,000번(113쪽) · 10⁻¹⁵ m(121쪽 곁주) · 지수 함수 증감(114쪽) · 밀도와 선 두께(125쪽 그림 III-26) · 1000개 중 600개와 60 %(123쪽) 열 건이고 모두 원문에 있다.",
+    "g_오개념_연결": "misconceptions 51건을 모두 짚었다. 어긋난 것은 위에 든 3건(rel-pb-classical · rel-sup-not-ignorance 둘째 · rel-qc-qubit-count)뿐이고 나머지 48건은 가리키는 명제의 반대편에 제대로 서 있다. 특히 잘 맞은 자리가 여럿이다 — rel-msc-detector · rel-pd-zero · rel-snf-range · rel-up-fundamental 의 오개념은 그 명제를 뒤집은 문장과 사실상 같아서, invertible 을 올리는 즉시 inverted_text 를 새로 지어낼 필요가 없다."
+  },
+  "not_touched": {
+    "cards": "output/concepts/emag-3/ 의 35개 파일 가운데 한 글자도 고치지 않았다.",
+    "verified_by": "모든 명제의 verified_by 는 pending 그대로다. 손대지 않았다 — C8 게이트의 몫이다.",
+    "dictionaries": "docs/concept_registry.yaml · docs/homonyms.yaml · docs/misconceptions.yaml 은 읽지도 고치지도 않았다.",
+    "scripts": "validate_tags.py 의 글롭 문제는 보고만 하고 고치지 않았다.",
+    "curriculum_scope_field": "카드마다 남기라고 한 curriculum_scope 판정은 이 보고서의 curriculum.findings[].curriculum_scope 에 카드 id 와 함께 적었다. 카드 파일에 필드를 새로 박아 넣는 것은 C2 의 일이라 하지 않았다."
+  }
+}

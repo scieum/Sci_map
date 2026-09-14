@@ -1,0 +1,116 @@
+{
+  "id": "emag-optical-aberration",
+  "concept_key": "concept:optical-aberration",
+  "registry_status": "new",
+  "term": "수차",
+  "notation": {
+    "hanja": "收差",
+    "hanja_gloss": "收 거둘 수 · 差 어긋날 차",
+    "english": "optical aberration"
+  },
+  "definition": "거울이나 렌즈를 지난 빛이 한 점에 모이지 않아 상이 흐려지는 현상. 면의 구면 모양 때문에도, 색깔별 굴절 차이 때문에도 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-aber-spherical",
+      "text": "구면으로 깎은 렌즈나 거울에서는 광축에서 먼 빛이 초점을 비껴가 상의 가장자리가 흐려진다.",
+      "form": {
+        "condition": "면을 구면으로 만들었을 때",
+        "type": "causal",
+        "scope": "광축에서 먼 광선. 포물면 거울에서는 이 어긋남이 생기지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "구면에서는 먼 빛이 반드시 어긋나므로 '가장자리가 더 선명해진다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구면으로 깎은 렌즈나 거울에서는 광축에서 먼 빛이 오히려 초점에 꼭 모여 가장자리가 더 선명해진다."
+    },
+    {
+      "id": "rel-aber-chromatic",
+      "text": "색깔마다 굴절되는 정도가 달라 렌즈에서는 초점 위치가 갈리고, 물체 둘레에 본래 없던 색이 번진다.",
+      "form": {
+        "condition": "여러 색이 섞인 빛이 렌즈를 지날 때",
+        "type": "causal",
+        "scope": "굴절을 쓰는 렌즈. 반사만 쓰는 거울에는 이 수차가 없다"
+      },
+      "invertible": true,
+      "invertible_reason": "굴절률이 색에 따라 다르다는 사실에서 곧바로 따라 나오므로 '색이 번지지 않는다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "여러 색이 섞인 빛이 렌즈를 지나도 색마다 굴절 정도가 같아 물체 둘레에 색이 번지지 않는다."
+    },
+    {
+      "id": "rel-aber-correction",
+      "text": "여러 장을 겹친 복합 렌즈를 쓰면 각 렌즈에서 생긴 어긋남이 서로 상쇄되어 수차가 줄어든다.",
+      "form": {
+        "condition": "정밀한 광학 기기를 만들 때",
+        "type": "causal",
+        "scope": "수차 보정. 줄일 수 있을 뿐 완전히 없애지는 못한다"
+      },
+      "invertible": false,
+      "invertible_reason": "보정 방법을 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "수차는 렌즈를 잘못 깎아서 생기는 불량이다",
+      "why_wrong": "구면 모양과 색깔별 굴절률 차이에서 오는 것이라, 잘 만든 렌즈에서도 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-aber-spherical"
+    },
+    {
+      "text": "거울로 만든 망원경에도 색깔에 의한 수차가 생긴다",
+      "why_wrong": "반사는 색에 따라 각도가 달라지지 않는다. 그래서 포물면 거울을 쓰는 반사 망원경에는 색에 의한 수차가 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-aber-chromatic"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-concave-mirror"
+    },
+    {
+      "type": "next",
+      "target": "emag-refracting-telescope"
+    },
+    {
+      "type": "next",
+      "target": "emag-camera"
+    },
+    {
+      "type": "related",
+      "target": "emag-optical-microscope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    66,
+    70,
+    71,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "교과서가 '구면 수차'·'색수차'라는 낱말을 쓰지 않고 '구면에 의한 수차'·'색깔별 굴절률 차이에 의한 수차'로 서술한다. 두 갈래를 한 카드 안의 분류로 두었다 — 쪼갤지는 C8 에서 사람이 본다."
+  ]
+}

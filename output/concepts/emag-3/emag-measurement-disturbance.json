@@ -1,0 +1,120 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-measurement-disturbance",
+  "concept_key": "concept:measurement-disturbance",
+  "registry_status": "new",
+  "term": "측정에 의한 교란",
+  "notation": {
+    "hanja": "測定攪亂",
+    "hanja_gloss": "測 헤아릴 측 · 定 정할 정 · 攪 흔들 교 · 亂 어지러울 란",
+    "hanja_note": "조사 '에 의한'은 고유어여서 한자로 옮기지 않았다.",
+    "english": "disturbance by measurement"
+  },
+  "definition": "재는 행위 자체가 대상의 운동 상태를 바꾸어 놓는 일. 대상이 가벼울수록 그 영향이 커진다.",
+  "relations": [
+    {
+      "id": "rel-mdt-macro",
+      "text": "자동차처럼 무거운 대상에서는 스피드 건이 쏜 전자기파가 주는 운동량 변화를 무시할 수 있다.",
+      "form": {
+        "condition": "광자의 운동량이 대상의 운동량보다 훨씬 작을 때",
+        "type": "conditional",
+        "scope": "거시 물체의 속력 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「자동차처럼 무거운 대상에서도 스피드 건이 주는 운동량 변화가 커서 무시할 수 없다」는 자동차의 운동량 변화는 무시할 수 있다고 한 116쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자동차처럼 무거운 대상에서도 스피드 건이 주는 운동량 변화가 커서 무시할 수 없다."
+    },
+    {
+      "id": "rel-mdt-electron",
+      "text": "전자처럼 가벼운 입자는 위치를 보려고 비춘 빛의 광자와 부딪혀 운동량이 달라진다.",
+      "form": {
+        "condition": "빛을 비춰 전자의 위치를 잴 때",
+        "type": "causal",
+        "scope": "미시 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자처럼 가벼운 입자도 위치를 보려고 비춘 빛의 광자와 부딪혀서는 운동량이 달라지지 않는다」는 측정 과정의 충돌로 전자의 운동량이 측정 전과 달라진다고 한 116쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자처럼 가벼운 입자도 위치를 보려고 비춘 빛의 광자와 부딪혀서는 운동량이 달라지지 않는다."
+    },
+    {
+      "id": "rel-mdt-wavelength",
+      "text": "조명에 쓰는 빛의 파장이 짧을수록 광자의 운동량이 커져 전자의 운동량 교란도 커진다.",
+      "form": {
+        "condition": "빛으로 전자의 위치를 재려 할 때",
+        "type": "inverse",
+        "scope": "하이젠베르크의 사고 실험",
+        "antecedent": {
+          "quantity": "조명광의 파장",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "전자의 운동량 불확정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "광자의 운동량이 파장에 반비례하므로 방향을 뒤집으면 관계식과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "조명에 쓰는 빛의 파장이 짧을수록 광자의 운동량이 작아져 전자의 운동량 교란도 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "측정 기술이 좋아지면 전자를 전혀 건드리지 않고 위치를 잴 수 있다",
+      "why_wrong": "위치를 보려면 광자를 부딪혀야 하고, 그 순간 전자의 운동량이 달라진다. 장비를 개선해도 이 충돌 자체가 없어지지는 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mdt-electron"
+    },
+    {
+      "text": "스피드 건으로 자동차 속력을 재면 자동차의 운동량도 크게 달라진다",
+      "why_wrong": "자동차의 운동량에 견주면 광자가 주는 충격량이 매우 작아 변화를 무시할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mdt-macro"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-matter-wave"
+    },
+    {
+      "type": "next",
+      "target": "emag-uncertainty-principle"
+    },
+    {
+      "type": "related",
+      "target": "emag-measurement-state-change"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-2-02",
+  "pages": [
+    116,
+    117
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "notes": [
+    "교과서가 '하이젠베르크 현미경'이라는 이름을 쓰지 않아 표제어로 삼지 않았다. p123 읽기 면에만 그 이름이 나온다."
+  ]
+}

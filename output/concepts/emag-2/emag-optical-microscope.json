@@ -1,0 +1,123 @@
+{
+  "id": "emag-optical-microscope",
+  "concept_key": "concept:optical-microscope",
+  "registry_status": "new",
+  "term": "현미경",
+  "notation": {
+    "hanja": "顯微鏡",
+    "hanja_gloss": "顯 나타날 현 · 微 작을 미 · 鏡 거울 경",
+    "english": "optical microscope"
+  },
+  "definition": "가까이 있는 작은 물체를 크게 확대해 보도록 만든 광학 기기. 초점 거리가 다른 볼록 렌즈 두 장으로 이루어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-micro-two-stage",
+      "text": "대물렌즈가 맺은 확대된 실상을 접안렌즈가 다시 확대하므로, 눈에 들어오는 최종 상은 더 크게 확대된 허상이다.",
+      "form": {
+        "condition": "물체를 대물렌즈의 초점 바로 바깥에 둘 때",
+        "type": "causal",
+        "scope": "볼록 렌즈 두 장으로 꾸린 현미경의 두 단계 결상"
+      },
+      "invertible": true,
+      "invertible_reason": "두 상의 종류를 맞바꾸면 이 구조에서 반드시 거짓이다. 같은 구조를 말하는 rel-tele-two-stage 와 기준을 맞췄다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대물렌즈가 맺는 중간 상이 허상이고, 접안렌즈를 지나 눈에 들어오는 최종 상이 실상이다."
+    },
+    {
+      "id": "rel-micro-vs-telescope",
+      "text": "현미경과 망원경은 초점 거리가 다른 볼록 렌즈 두 장을 쓰는 점은 같지만, 현미경은 가까이 있는 작은 물체를 본다.",
+      "form": {
+        "condition": "두 기기를 견줄 때",
+        "type": "classification",
+        "scope": "케플러식 굴절 망원경과 현미경의 비교",
+        "antecedent": {
+          "quantity": "기기의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "관찰 대상",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 기기의 이름을 맞바꾼 문장은 반드시 거짓이다. rel-coh-phase·rel-se-vs-spontaneous 와 같은 기준이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "현미경은 멀리 있는 물체를 보고, 망원경은 가까이 있는 작은 물체를 본다."
+    },
+    {
+      "id": "rel-micro-limit",
+      "text": "빛으로 보는 현미경은 회절 때문에 쓰는 빛의 파장보다 훨씬 작은 구조를 가려내지 못한다.",
+      "form": {
+        "condition": "가시광선을 광원으로 쓸 때",
+        "type": "conditional",
+        "scope": "광학 현미경의 분해능 한계. 파장이 훨씬 짧은 전자선을 쓰면 한계가 달라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "한계를 말하는 명제라 뒤집은 문장의 참·거짓을 가릴 방향이 없다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "배율을 계속 높이기만 하면 원자까지 볼 수 있다",
+      "why_wrong": "광학 현미경의 한계는 배율이 아니라 빛의 파장과 회절이 정한다. 무늬가 겹치면 더 키워도 흐려질 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-micro-limit"
+    },
+    {
+      "text": "현미경의 대물렌즈는 허상을 만든다",
+      "why_wrong": "대물렌즈가 맺는 중간 상은 커진 실상이고, 허상은 접안렌즈 쪽에서 만들어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-micro-two-stage"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-resolving-power"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-real-and-virtual-image"
+    },
+    {
+      "type": "related",
+      "target": "emag-refracting-telescope"
+    },
+    {
+      "type": "related",
+      "target": "emag-optical-aberration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    70,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "정의에서 두 단계 결상을 빼고 rel-micro-two-stage 쪽에 두었다. 정의와 명제가 같은 말을 되풀이하던 것을 푼 것이다 (C6 동어반복 지적).",
+    "rel-micro-vs-telescope·rel-micro-two-stage 를 invertible: true 로 올렸다."
+  ]
+}

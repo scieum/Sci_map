@@ -1,0 +1,91 @@
+{
+  "id": "emag-hologram",
+  "concept_key": "concept:hologram",
+  "registry_status": "new",
+  "term": "홀로그램",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 hologram 의 음차어로 한자어 표기가 없다.",
+    "english": "hologram"
+  },
+  "definition": "물체에서 온 빛과 기준 광선이 만든 간섭무늬를 기록해 두었다가 되살려, 공간에 떠 보이는 입체 상을 만드는 기술.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-holo-record",
+      "text": "거울로 갈라낸 기준 광선과 물체에서 반사된 빛이 필름 위에서 겹치며 간섭무늬가 새겨진다.",
+      "form": {
+        "condition": "결맞은 레이저 빛을 두 갈래로 나눌 때",
+        "type": "causal",
+        "scope": "홀로그램을 기록하는 단계. 위상이 흐트러진 빛으로는 무늬가 남지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "기록 과정을 서술하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-holo-bright-point",
+      "text": "보강 간섭이 일어난 자리마다 밝은 점이 생기고, 이런 점이 수없이 모여 입체로 보이는 이미지를 이룬다.",
+      "form": {
+        "condition": "기록된 무늬에 다시 빛을 비출 때",
+        "type": "causal",
+        "scope": "홀로그램 이미지가 만들어지는 단계"
+      },
+      "invertible": false,
+      "invertible_reason": "형성 과정을 서술하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "홀로그램은 사진 두 장을 겹쳐 입체처럼 보이게 한 것이다",
+      "why_wrong": "밝기만 담는 사진과 달리 홀로그램은 빛이 만든 간섭무늬를 통째로 기록한다. 그래서 보는 각도에 따라 모습이 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-holo-record"
+    },
+    {
+      "text": "일반 전구 빛으로도 홀로그램을 만들 수 있다",
+      "why_wrong": "위상이 일정한 결맞은 빛이라야 간섭무늬가 흐트러지지 않고 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-holo-record"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-constructive-and-destructive-interference"
+    },
+    {
+      "type": "related",
+      "target": "emag-light-interference"
+    },
+    {
+      "type": "related",
+      "target": "emag-laser",
+      "note": "기준 광선으로 레이저를 쓴다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-01",
+  "pages": [
+    60,
+    64
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

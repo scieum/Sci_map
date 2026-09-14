@@ -26,6 +26,11 @@ STANDARDS = REPO / ".claude" / "skills" / "curriculum-mapper" / "references" / "
 CONCEPTS_DIR = REPO / "output" / "concepts"
 
 
+
+# 스크립트가 도출한 일치와, 지도서 곁주 코드 오식을 사람이 바로잡아 확정한 것.
+# curriculum-mapper 의 validate_tags.py 와 같은 집합을 쓴다 — 한쪽만 고치면 갈린다.
+CONFIRMED_CROSSCHECK = {"일치", "교사 확정"}
+
 def norm(s: str) -> str:
     """표기 정규화 — 공백·가운뎃점 무시 (naming_policy.md 5·6절)."""
     s = unicodedata.normalize("NFKC", s)
@@ -255,7 +260,7 @@ def check_curriculum(cands, res: Result) -> None:
         for code in c.get("curriculum", []):
             if code not in table:
                 unknown.append(c["id"] + ": " + code)
-            elif table[code].get("crosscheck") != "일치":
+            elif table[code].get("crosscheck") not in CONFIRMED_CROSSCHECK:
                 not_agreed.append(c["id"] + ": " + code + " (" + str(table[code].get("crosscheck")) + ")")
     res.add("curriculum_codes_exist", not unknown,
             "실재하지 않는 성취기준 코드 " + str(len(unknown)) + "건", unknown)

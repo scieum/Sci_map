@@ -1,0 +1,120 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-potential-barrier",
+  "concept_key": "concept:potential-barrier",
+  "registry_status": "new",
+  "term": "퍼텐셜 장벽",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'퍼텐셜'이 영어 potential 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "potential barrier"
+  },
+  "definition": "퍼텐셜 에너지가 둘레보다 높아 입자의 진행을 가로막는 구간. 높이와 두께로 그 성질을 나타낸다.",
+  "relations": [
+    {
+      "id": "rel-pb-classical",
+      "text": "고전 역학에서는 역학적 에너지가 장벽 높이보다 작은 입자가 장벽을 넘지 못한다.",
+      "form": {
+        "condition": "입자의 역학적 에너지 E가 장벽 높이 Ub보다 작을 때",
+        "type": "conditional",
+        "scope": "고전 역학이 통하는 거시 세계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「고전 역학에서도 역학적 에너지가 장벽 높이보다 작은 입자가 장벽을 넘을 수 있다」는 그런 입자는 언덕을 넘을 수 없다고 한 112쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고전 역학에서도 역학적 에너지가 장벽 높이보다 작은 입자가 장벽을 넘을 수 있다."
+    },
+    {
+      "id": "rel-pb-quantum",
+      "text": "같은 조건이라도 양자 역학은 장벽 오른쪽에서 입자가 발견될 확률이 0이 아니라고 본다.",
+      "form": {
+        "condition": "E가 Ub보다 작은 미시 입자를 다룰 때",
+        "type": "conditional",
+        "scope": "미시 세계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「같은 조건에서 양자 역학도 장벽 오른쪽에서 입자가 발견될 확률은 0이라고 본다」는 장벽 오른쪽에서 발견될 확률이 0이 아니라고 한 113쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 조건에서 양자 역학도 장벽 오른쪽에서 입자가 발견될 확률은 0이라고 본다."
+    },
+    {
+      "id": "rel-pb-reflect",
+      "text": "장벽에 부딪힌 입자의 확률 파동은 일부가 반사되고 일부가 장벽을 투과한다.",
+      "form": {
+        "condition": "입자가 퍼텐셜 장벽을 만났을 때",
+        "type": "causal",
+        "scope": "파동성이 드러나는 미시 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「장벽에 부딪힌 입자의 확률 파동은 남김없이 모두 반사되고 투과하는 몫은 없다」는 일부는 반사하고 일부는 투과한다고 한 113쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "장벽에 부딪힌 입자의 확률 파동은 남김없이 모두 반사되고 투과하는 몫은 없다."
+    },
+    {
+      "id": "rel-pb-hill",
+      "text": "U자형 언덕 위에 놓인 입자를 막는 것은 물질로 된 벽이 아니라 언덕 꼭대기의 높은 퍼텐셜 에너지다.",
+      "form": {
+        "condition": "퍼텐셜 에너지가 주위보다 높아지는 구간을 장벽으로 볼 때",
+        "type": "classification",
+        "scope": "퍼텐셜 에너지로 그린 장벽. 물질로 된 칸막이를 뜻하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「U자형 언덕 위의 입자를 막는 것은 언덕이 아니라 그 자리에 세워 둔 물질 벽이다」는 언덕 꼭대기에 해당하는 퍼텐셜 에너지가 입자를 막는다고 한 112쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "U자형 언덕 위의 입자를 막는 것은 언덕이 아니라 그 자리에 세워 둔 물질 벽이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "퍼텐셜 장벽은 벽돌처럼 물질로 만들어진 실제 벽이다",
+      "why_wrong": "물질로 된 막이 아니라 위치에 따라 퍼텐셜 에너지가 높아지는 구간을 뜻한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pb-hill"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-quantum-tunneling"
+    },
+    {
+      "type": "related",
+      "target": "emag-probability-wave"
+    },
+    {
+      "type": "related",
+      "target": "emag-tunneling-probability"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-03"
+  ],
+  "topic_id": "emag-3-2-01",
+  "pages": [
+    112,
+    113
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "notes": [
+    "오개념 연결 정리 — '퍼텐셜 장벽은 물질로 된 실제 벽이다'는 rel-pb-classical(넘느냐 마느냐)로는 반박되지 않아, 112쪽 U자형 언덕 보기를 근거로 rel-pb-hill 명제를 세우고 그쪽에 이었다."
+  ]
+}

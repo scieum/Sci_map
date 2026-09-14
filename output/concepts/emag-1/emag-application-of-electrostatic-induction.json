@@ -1,0 +1,122 @@
+{
+  "id": "emag-application-of-electrostatic-induction",
+  "concept_key": "concept:application-of-electrostatic-induction",
+  "registry_status": "new",
+  "term": "정전기 유도와 유전 분극의 활용",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "낱말이 아니라 '…의 활용'이 붙은 구절이라 표제어 전체에 대응하는 한자어가 없다. 정전기 유도(靜電氣誘導)·유전 분극(誘電分極)의 한자는 각 개념 카드에 적었다.",
+    "english": "applications of electrostatic induction and dielectric polarization"
+  },
+  "definition": "대전체가 도체나 절연체에 전하를 유도해 끌어당기는 성질을, 도색·집진·포장 같은 일상 장치에 쓰는 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-paint-repulsion",
+      "text": "같은 부호로 대전된 페인트 입자끼리는 서로 밀어내므로 차체 표면에서 뭉치지 않고 고르게 퍼진다.",
+      "form": {
+        "condition": "분사된 페인트 입자가 모두 같은 부호로 대전되었을 때",
+        "type": "causal",
+        "scope": "자동차 정전 도색"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 부호 사이에는 척력만 작용하므로 뭉친다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 부호로 대전된 페인트 입자끼리는 서로 끌어당겨 한곳에 뭉친다."
+    },
+    {
+      "id": "rel-paint-induction",
+      "text": "음전하를 띤 페인트 입자가 다가오면 금속 차체 표면에 양전하가 유도되어 인력으로 입자가 달라붙는다.",
+      "form": {
+        "condition": "차체가 도체이고 페인트 입자가 대전되어 있을 때",
+        "type": "causal",
+        "scope": "금속성 자동차 표면의 정전 도색"
+      },
+      "invertible": true,
+      "invertible_reason": "정전기 유도로 가까운 쪽에는 반대 부호가 생기므로 같은 부호라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음전하를 띤 페인트 입자가 다가오면 금속 차체 표면에도 음전하가 유도되어 입자가 밀려난다."
+    },
+    {
+      "id": "rel-precipitator",
+      "text": "방전 극에서 나온 전자를 받아 음전하로 대전된 먼지는 양전하로 대전된 집진 극에 달라붙어 배기가스에서 걸러진다.",
+      "form": {
+        "condition": "집진 극과 방전 극 사이에 높은 전압을 걸었을 때",
+        "type": "causal",
+        "scope": "전기 집진기"
+      },
+      "invertible": true,
+      "invertible_reason": "반대 부호 사이에는 인력이 작용하므로 밀려난다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음전하로 대전된 먼지는 양전하로 대전된 집진 극에서 밀려나 그대로 배출된다."
+    },
+    {
+      "id": "rel-wrap",
+      "text": "말린 랩을 떼어 낼 때 대전된 랩이 그릇 표면에 전하를 유도해 둘이 서로 달라붙는다.",
+      "form": {
+        "condition": "랩을 떼어 내는 과정에서 랩이 대전되었을 때",
+        "type": "causal",
+        "scope": "그릇에 씌우는 랩 포장"
+      },
+      "invertible": false,
+      "invertible_reason": "그릇이 도체인지 절연체인지에 따라 유도 방식이 갈려 뒤집은 문장이 반드시 거짓이라고 하기 어렵다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기 집진기는 촘촘한 필터로 먼지를 걸러 낸다",
+      "why_wrong": "전기 집진기는 먼지를 먼저 대전시킨 뒤 반대 부호로 대전된 집진 극에 전기력으로 붙잡는다. 체로 거르는 방식이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-precipitator"
+    },
+    {
+      "text": "페인트가 고르게 퍼지는 것은 분사기의 압력이 세기 때문이다",
+      "why_wrong": "같은 부호로 대전된 입자들 사이에 척력이 작용해 서로 벌어지기 때문에 뭉치지 않고 고르게 퍼진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-paint-repulsion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electrostatic-induction"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-dielectric-polarization"
+    }
+  ],
+  "curriculum": [
+    "12전자01-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-02",
+  "pages": [
+    20,
+    21
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "자동차 도색·전기 집진기·랩 포장·복사기·F램을 낱낱이 쪼개지 않고 한 장에 묶었다. 성취기준 12전자01-02 가 '일상생활에서 적용되는 예'를 직접 요구한다.",
+    "복사기와 F램은 교과서에서 학생 활동 빈칸으로만 제시돼 명제로 세울 서술이 없어 관계에 넣지 않았다."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-probability-wave-interference",
+  "concept_key": "concept:probability-wave-interference",
+  "registry_status": "new",
+  "term": "확률 파동의 간섭",
+  "notation": {
+    "hanja": "確率波動干涉",
+    "hanja_gloss": "確 굳을 확 · 率 비율 률 · 波 물결 파 · 動 움직일 동 · 干 방패 간 · 涉 건널 섭",
+    "english": "interference of probability waves"
+  },
+  "definition": "두 슬릿을 지난 확률 파동이 서로 겹쳐 보강하거나 상쇄하는 일. 단일 전자 실험의 도착점 분포를 이것으로 설명한다.",
+  "relations": [
+    {
+      "id": "rel-pwi-both",
+      "text": "전자 하나가 확률 파동으로 나아가므로 슬릿 두 개를 동시에 지나는 일이 가능하다.",
+      "form": {
+        "condition": "경로를 측정하지 않은 이중 슬릿 실험에서",
+        "type": "causal",
+        "scope": "미시 입자. 거시 물체에는 해당하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자 하나는 두 슬릿 가운데 한쪽만 지날 수 있다」는 확률 파동으로 진행하므로 두 슬릿을 동시에 지날 수 있다고 한 103쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자 하나는 두 슬릿 가운데 한쪽만 지날 수 있다."
+    },
+    {
+      "id": "rel-pwi-cancel",
+      "text": "두 확률 파동이 상쇄되어 절댓값의 제곱이 0이 된 자리에는 전자가 찍히지 않는다.",
+      "form": {
+        "condition": "두 슬릿을 열고 경로를 측정하지 않을 때",
+        "type": "causal",
+        "scope": "간섭이 유지되는 이중 슬릿 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 확률 파동이 상쇄되어 절댓값의 제곱이 0이 된 자리에도 전자가 찍힌다」는 그 자리에는 전자가 찍히지 않는다고 한 103·108쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 확률 파동이 상쇄되어 절댓값의 제곱이 0이 된 자리에도 전자가 찍힌다."
+    },
+    {
+      "id": "rel-pwi-arrival",
+      "text": "확률 파동이 스크린에 닿는 순간 전자의 위치가 확률에 따라 한 점으로 정해진다.",
+      "form": {
+        "condition": "스크린에서 검출이 일어날 때",
+        "type": "causal",
+        "scope": "코펜하겐 해석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자의 위치는 확률 파동이 스크린에 닿기 전에 이미 한 점으로 정해져 있다」는 스크린에 닿는 순간 위치가 확률적으로 결정된다고 한 103쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자의 위치는 확률 파동이 스크린에 닿기 전에 이미 한 점으로 정해져 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "간섭무늬는 여러 전자가 날아가다 서로 부딪혀 생긴 것이다",
+      "why_wrong": "전자를 한 개씩 보내도 무늬가 쌓인다. 부딪힐 상대가 없으므로 충돌로는 설명되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pwi-both"
+    },
+    {
+      "text": "전자가 찍히지 않는 자리는 스크린이 그곳만 반응하지 못하기 때문이다",
+      "why_wrong": "두 확률 파동이 상쇄되어 그 자리의 발견 확률이 0이 된 것이지 검출 장치의 문제가 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pwi-cancel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-probability-wave"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-probability-density"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-superposition"
+    },
+    {
+      "type": "related",
+      "target": "emag-single-electron-double-slit"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-01"
+  ],
+  "topic_id": "emag-3-1-01",
+  "pages": [
+    103,
+    108
+  ],
+  "difficulty": 4,
+  "role": "core"
+}

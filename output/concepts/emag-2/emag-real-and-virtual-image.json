@@ -1,0 +1,147 @@
+{
+  "id": "emag-real-and-virtual-image",
+  "concept_key": "concept:real-and-virtual-image",
+  "registry_status": "new",
+  "term": "실상과 허상",
+  "notation": {
+    "hanja": "實像 虛像",
+    "hanja_gloss": "實 열매 실 · 像 모양 상 · 虛 빌 허 · 像 모양 상",
+    "english": "real image and virtual image"
+  },
+  "definition": "빛이 실제로 한자리에 모여 생기는 상이 실상이고, 반사하거나 굴절한 빛의 연장선이 모이는 자리에 보이는 상이 허상이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rvi-screen",
+      "text": "실상 자리에 스크린을 놓으면 상이 맺히지만, 허상 자리에는 스크린을 놓아도 아무것도 맺히지 않는다.",
+      "form": {
+        "condition": "거울이나 렌즈로 상을 만들 때",
+        "type": "classification",
+        "scope": "실상과 허상을 가르는 기준",
+        "antecedent": {
+          "quantity": "상의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "스크린에 맺히는가",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 상의 성질을 맞바꾸면 정의 자체와 어긋나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "허상 자리에 스크린을 놓으면 상이 맺히고, 실상 자리에는 아무것도 맺히지 않는다."
+    },
+    {
+      "id": "rel-rvi-orientation",
+      "text": "오목 거울이나 볼록 렌즈 한 장이 만드는 실상은 거꾸로 서고, 허상은 물체와 같은 방향으로 바로 선다.",
+      "form": {
+        "condition": "거울이나 렌즈를 한 장만 쓸 때",
+        "type": "classification",
+        "scope": "오목 거울·볼록 렌즈 하나. 렌즈를 여러 장 겹친 기기에는 그대로 적용되지 않는다",
+        "antecedent": {
+          "quantity": "상의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "상이 선 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 상의 방향을 맞바꾸면 이 조건에서 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오목 거울이나 볼록 렌즈 한 장이 만드는 실상은 바로 서고, 허상은 거꾸로 선다."
+    },
+    {
+      "id": "rel-rvi-virtual-use",
+      "text": "망원경이나 현미경을 들여다볼 때 눈에 들어오는 최종 상은 스크린에 맺히지 않는 허상이다.",
+      "form": {
+        "condition": "볼록 렌즈 두 장으로 꾸린 기기를 눈으로 들여다볼 때",
+        "type": "classification",
+        "scope": "망원경·현미경의 최종 상. 필름에 기록하는 카메라는 실상을 쓴다",
+        "antecedent": {
+          "quantity": "기기의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "최종 상의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "눈으로 들여다보는 기기의 최종 상을 실상이라고 하면 이 구조에서 반드시 거짓이다.",
+      "inverted_text": "망원경이나 현미경을 들여다볼 때 눈에 들어오는 최종 상은 스크린에 맺히는 실상이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "거울에 비친 내 모습도 빛이 모여 생긴 실상이다",
+      "why_wrong": "평면거울의 상은 반사광의 연장선이 만나는 자리에 보이는 허상이다. 거울 뒤에 스크린을 놓아도 아무것도 맺히지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rvi-screen"
+    },
+    {
+      "text": "허상은 눈의 착각일 뿐이라 광학 기기에서는 쓸모가 없다",
+      "why_wrong": "망원경과 현미경으로 우리가 보는 최종 상이 바로 허상이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rvi-virtual-use"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-image-formation-by-concave-mirror"
+    },
+    {
+      "type": "next",
+      "target": "emag-refracting-telescope"
+    },
+    {
+      "type": "next",
+      "target": "emag-optical-microscope"
+    },
+    {
+      "type": "next",
+      "target": "emag-camera"
+    },
+    {
+      "type": "same",
+      "target": "phys-real-and-virtual-image",
+      "note": "「물리학」 Ⅲ단원의 같은 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    67
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "concept_key 를 phys-real-and-virtual-image 와 같게 두었다 — G3 에서 한 키로 묶일 자리다.",
+    "'상'이 homonyms.yaml 의 watch_terms 에 있어 플래그를 달아 둔다.",
+    "정의에서 스크린 기준을 빼고 '빛이 실제로 모이는가'로 잡았다. 스크린 기준은 rel-rvi-screen 이 맡는다 — 정의와 명제가 같은 말을 하던 것을 푼 것이다 (C6 동어반복 지적).",
+    "'허상은 쓸모없다'는 오개념이 상의 방향 명제를 가리키고 있어, 반박을 실제로 맡는 rel-rvi-virtual-use 를 이 카드에 세우고 링크를 옮겼다."
+  ],
+  "homonym_flag": true
+}

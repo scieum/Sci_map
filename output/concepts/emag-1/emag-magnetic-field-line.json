@@ -1,0 +1,119 @@
+{
+  "id": "emag-magnetic-field-line",
+  "concept_key": "concept:magnetic-field-line",
+  "registry_status": "new",
+  "term": "자기력선",
+  "notation": {
+    "hanja": "磁氣力線",
+    "hanja_gloss": "磁 자석 자 · 氣 기운 기 · 力 힘 력 · 線 줄 선",
+    "english": "magnetic field line"
+  },
+  "definition": "자기장 안 여러 자리에 놓은 나침반 자침의 N극이 가리키는 쪽을 차례로 이어 그린 선.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-density",
+      "text": "한 그림 안에서 견줄 때 자기력선이 빽빽한 곳일수록 그 자리의 자기장이 세다.",
+      "form": {
+        "condition": "같은 자기력선 그림 안에서 견줄 때",
+        "type": "direct",
+        "scope": "자석이나 전류가 만드는 자기장",
+        "antecedent": {
+          "quantity": "자기력선의 조밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "조밀도와 세기가 같이 커지는 관계라 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기력선이 빽빽한 곳일수록 자기장의 세기가 작다."
+    },
+    {
+      "id": "rel-tangent",
+      "text": "자기력선 위 한 점에서 그은 접선의 방향이 그 점의 자기장 방향이고, 선은 자석의 N극에서 나와 S극으로 들어간다.",
+      "form": {
+        "condition": "자석 둘레의 자기력선을 읽을 때",
+        "type": "conditional",
+        "scope": "자석이 만드는 자기장"
+      },
+      "invertible": true,
+      "invertible_reason": "N극에서 나온다는 약속을 뒤집으면 자침이 가리키는 방향과 반드시 어긋난다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기력선은 자석의 S극에서 나와 N극으로 들어간다."
+    },
+    {
+      "id": "rel-superposition",
+      "text": "두 도선의 자기력선이 같은 방향으로 겹치는 곳은 자기장이 세지고, 반대 방향으로 겹치는 곳은 약해진다.",
+      "form": {
+        "condition": "두 자기장이 한 지점에서 겹칠 때",
+        "type": "conditional",
+        "scope": "나란한 두 직선 도선 둘레"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 방향이면 더해지고 반대면 상쇄되는 것이 확정적이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기력선이 같은 방향으로 겹치는 곳에서는 자기장이 약해지고 반대 방향으로 겹치는 곳에서 세진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기력선은 서로 교차하거나 도중에 갈라질 수 있다",
+      "why_wrong": "한 지점의 자기장 방향은 하나뿐이라 접선 방향도 하나다. 교차하면 한 점에 방향이 둘이 되어 모순이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tangent"
+    },
+    {
+      "text": "두 도선의 자기력선이 겹치기만 하면 자기장은 언제나 세진다",
+      "why_wrong": "겹치는 두 자기장의 방향이 같을 때만 세진다. 방향이 반대면 서로 상쇄되어 오히려 약해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-superposition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-magnetic-field"
+    },
+    {
+      "type": "next",
+      "target": "emag-magnetic-field-of-straight-current"
+    },
+    {
+      "type": "related",
+      "target": "emag-electric-field-line"
+    }
+  ],
+  "curriculum": [
+    "12전자01-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-03",
+  "pages": [
+    22,
+    23,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "p24~25 의 '자기력선 중첩으로 자기장 추리하기' 활동은 따로 카드를 세우지 않고 rel-superposition 으로 담았다."
+  ]
+}

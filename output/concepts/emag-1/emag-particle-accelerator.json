@@ -1,0 +1,114 @@
+{
+  "id": "emag-particle-accelerator",
+  "concept_key": "concept:particle-accelerator",
+  "registry_status": "new",
+  "term": "입자 가속기",
+  "notation": {
+    "hanja": "粒子加速器",
+    "hanja_gloss": "粒 낟알 립 · 子 아들 자 · 加 더할 가 · 速 빠를 속 · 器 그릇 기",
+    "english": "particle accelerator"
+  },
+  "definition": "대전 입자를 거듭 밀어 높은 에너지 상태로 만드는 장치로, 자기장으로 궤도를 휘게 하며 같은 자리를 여러 번 지나게 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-constant-period",
+      "text": "원운동의 주기가 속력과 상관없이 일정하기 때문에 같은 박자로 계속 밀어 주어 입자를 여러 번 가속할 수 있다.",
+      "form": {
+        "condition": "자기장의 세기가 일정할 때",
+        "type": "causal",
+        "scope": "사이클로트론 안의 대전 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "주기가 일정하다는 사실이 설계의 전제라, 박자를 계속 바꿔야 한다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "입자가 빨라질수록 원운동의 주기가 짧아지므로 미는 박자를 계속 바꿔 주어야 한다."
+    },
+    {
+      "id": "rel-accelerating-gap",
+      "text": "입자를 실제로 가속하는 것은 D자형 금속 통 사이에 걸린 전기력이고, 자기장은 궤도를 휘게 할 뿐이다.",
+      "form": {
+        "condition": "D자형 통 사이를 지날 때 교류 전원의 극이 알맞게 바뀌어 있을 때",
+        "type": "causal",
+        "scope": "사이클로트론"
+      },
+      "invertible": true,
+      "invertible_reason": "로런츠 힘은 운동 방향에 수직이라 속력을 바꾸지 못하므로 역할을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "사이클로트론에서 입자를 가속시키는 것은 자기장이고, 전기력은 궤도를 휘게 할 뿐이다."
+    },
+    {
+      "id": "rel-radius-grows",
+      "text": "가속을 거듭할수록 입자의 속력이 커지므로 궤도 반지름도 함께 커져 바깥으로 퍼지는 나선을 그린다.",
+      "form": {
+        "condition": "자기장의 세기가 일정할 때",
+        "type": "direct",
+        "scope": "사이클로트론 안의 대전 입자",
+        "antecedent": {
+          "quantity": "입자의 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "궤도 반지름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반지름이 속력에 비례하므로 작아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가속을 거듭할수록 입자의 궤도 반지름은 점점 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "입자 가속기에서 입자를 빠르게 하는 것은 자기장이다",
+      "why_wrong": "자기장이 주는 로런츠 힘은 운동 방향에 수직이라 속력을 바꾸지 못한다. 속력을 키우는 것은 D자형 통 사이의 전기력이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-accelerating-gap"
+    },
+    {
+      "text": "입자가 빨라지면 한 바퀴 도는 시간이 짧아져 미는 박자를 계속 바꿔 주어야 한다",
+      "why_wrong": "자기장이 일정하면 원운동의 주기는 속력과 상관없이 같다. 그래서 일정한 주기로 밀어 주면 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-constant-period"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-circular-motion-of-charged-particle"
+    },
+    {
+      "type": "related",
+      "target": "emag-lorentz-force"
+    }
+  ],
+  "curriculum": [
+    "12전자01-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-04",
+  "pages": [
+    28,
+    30
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1,
+  "aliases": [
+    "사이클로트론"
+  ]
+}

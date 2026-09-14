@@ -1,0 +1,99 @@
+{
+  "id": "emag-photoelectron",
+  "concept_key": "concept:photoelectron",
+  "registry_status": "new",
+  "term": "광전자",
+  "notation": {
+    "hanja": "光電子",
+    "hanja_gloss": "光 빛 광 · 電 번개 전 · 子 아들 자",
+    "english": "photoelectron"
+  },
+  "definition": "광전 효과로 금속에서 튀어나온 전자. 원래 금속 안에 있던 전자가 광자의 에너지를 받아 밖으로 나온 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pen-one-photon",
+      "text": "전자 하나는 광자 하나에게서만 에너지를 받으므로, 광자 하나의 에너지가 일함수에 못 미치면 광전자가 되지 못한다.",
+      "form": {
+        "condition": "금속 표면에 빛을 비출 때",
+        "type": "conditional",
+        "scope": "광전 효과. 광자 여러 개의 에너지가 한 전자에게 차곡차곡 쌓이지는 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "성립 조건을 말하는 명제이고, 아주 센 빛에서의 예외 가능성까지는 이 단원이 다루지 않는다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pen-count",
+      "text": "진동수가 같은 빛이라면 센 빛일수록 튀어나오는 광전자의 수가 많아 회로에 흐르는 전류도 커진다.",
+      "form": {
+        "condition": "빛의 진동수를 일정하게 둘 때",
+        "type": "direct",
+        "scope": "문턱 진동수를 넘는 빛. 전극에 도달하는 광전자를 모두 모을 수 있는 전압 조건에서",
+        "antecedent": {
+          "quantity": "빛의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광전자의 수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "센 빛일수록 광자가 많아 광전자도 많아지므로 '적어진다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 같은 빛이라면 센 빛일수록 튀어나오는 광전자의 수가 적어 전류도 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광전자는 빛이 만들어 낸 새 입자다",
+      "why_wrong": "금속 안에 원래 있던 전자가 에너지를 받아 밖으로 나온 것이다. 이름이 다를 뿐 보통 전자와 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pen-one-photon"
+    },
+    {
+      "text": "약한 빛이라도 오래 비추면 에너지가 쌓여 전자가 나온다",
+      "why_wrong": "전자는 광자 하나와 주고받으므로, 광자 하나의 에너지가 모자라면 시간이 지나도 나오지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pen-one-photon"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-photoelectric-effect"
+    },
+    {
+      "type": "next",
+      "target": "emag-stopping-voltage"
+    },
+    {
+      "type": "related",
+      "target": "emag-maximum-kinetic-energy-of-photoelectron"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-01",
+  "pages": [
+    80,
+    90
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

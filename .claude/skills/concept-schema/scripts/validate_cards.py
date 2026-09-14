@@ -29,6 +29,11 @@ NGRAM_FAIL = 12   # 원문 연속 12어절 이상 일치 → fail (R4, §4.4)
 NGRAM_WARN = 8
 
 
+
+# 스크립트가 도출한 일치와, 지도서 곁주 코드 오식을 사람이 바로잡아 확정한 것.
+# curriculum-mapper 의 validate_tags.py 와 같은 집합을 쓴다 — 한쪽만 고치면 갈린다.
+CONFIRMED_CROSSCHECK = {"일치", "교사 확정"}
+
 def norm(s: str) -> str:
     s = unicodedata.normalize("NFKC", s)
     return re.sub(r"[\s·ㆍ・]", "", s).lower()
@@ -344,7 +349,7 @@ def check_curriculum(cards, res: Result) -> None:
         for code in codes:
             if code not in table:
                 unknown.append(f"{c['id']}: {code}")
-            elif table[code].get("crosscheck") != "일치":
+            elif table[code].get("crosscheck") not in CONFIRMED_CROSSCHECK:
                 not_agreed.append(f"{c['id']}: {code}")
     res.add("curriculum_exists", not unknown, f"실재하지 않는 성취기준 {len(unknown)}건", unknown)
     if not_agreed:

@@ -1,0 +1,104 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-qubit",
+  "concept_key": "concept:qubit",
+  "registry_status": "new",
+  "term": "큐비트",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 qubit(quantum bit)의 음차어다. 한자어 표기가 존재하지 않는다.",
+    "english": "qubit"
+  },
+  "definition": "양자 컴퓨터가 정보를 다루는 단위. 0과 1뿐 아니라 그 사이의 중첩 상태까지 연산에 쓸 수 있다.",
+  "relations": [
+    {
+      "id": "rel-qb-vs-bit",
+      "text": "비트가 0이나 1 가운데 하나만 담는 데 비해 큐비트는 둘의 중첩 상태도 담는다.",
+      "form": {
+        "condition": "정보 처리 단위를 견줄 때",
+        "type": "classification",
+        "scope": "고전 컴퓨터의 비트와 양자 컴퓨터의 큐비트"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「비트가 0과 1의 중첩 상태를 담는 데 비해 큐비트는 0이나 1 가운데 하나만 담는다」는 비트와 큐비트를 갈라 대비한 105쪽 — 두 단위를 맞바꾼 문장과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "비트가 0과 1의 중첩 상태를 담는 데 비해 큐비트는 0이나 1 가운데 하나만 담는다."
+    },
+    {
+      "id": "rel-qb-two",
+      "text": "큐비트가 2개면 00·01·10·11 네 상태를 중첩해 한꺼번에 나타내고 처리할 수 있다.",
+      "form": {
+        "condition": "큐비트 2개를 쓸 때",
+        "type": "conditional",
+        "scope": "중첩이 유지되는 이상적인 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「큐비트가 2개여도 00·01·10·11 네 상태 가운데 하나만 나타낼 수 있다」는 큐비트 2개는 네 상태를 모두 중첩해 동시에 표시·처리한다고 한 105쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "큐비트가 2개여도 00·01·10·11 네 상태 가운데 하나만 나타낼 수 있다."
+    },
+    {
+      "id": "rel-qb-hardware",
+      "text": "실제 큐비트는 전자의 스핀이나 원자의 에너지 준위처럼 중첩을 구현할 수 있는 계로 만든다.",
+      "form": {
+        "condition": "양자 컴퓨터를 실제로 제작할 때",
+        "type": "classification",
+        "scope": "현재 쓰이는 구현 방식"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집은 문장이 '중첩을 구현할 수 없는 계로 만든다'가 되어 명제로 서지 않는다. 구현 사례를 드는 열거형이라 학생이 판단할 뒤집힌 문장을 만들 수 없다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "큐비트는 0과 1을 아주 빠르게 번갈아 저장하는 비트다",
+      "why_wrong": "번갈아 담는 것이 아니라 두 값을 함께 지닌 중첩 상태를 그대로 연산에 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qb-vs-bit"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-quantum-superposition"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-computer"
+    },
+    {
+      "type": "related",
+      "target": "emag-measurement-state-change"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-02"
+  ],
+  "topic_id": "emag-3-1-02",
+  "pages": [
+    105,
+    108
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "notes": [
+    "★C5 경계 — rel-qb-hardware 와 rel-qb-two 는 12전자03-02 해설이 누르는 '물리적 원리' 쪽에 가깝다. 지금은 교과서 105쪽 곁주 범위 안이라 이탈이 아니지만, 구현 서술을 여기서 더 파고들면 이탈이 된다. 다음 판에서 보태지 말 것.",
+    "rel-qb-hardware 의 invertible 은 false 로 유지했다. 구현 사례를 드는 열거형이라 뒤집은 문장이 명제로 서지 않는다."
+  ]
+}

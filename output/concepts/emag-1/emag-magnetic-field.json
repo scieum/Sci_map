@@ -1,0 +1,116 @@
+{
+  "id": "emag-magnetic-field",
+  "concept_key": "concept:magnetic-field",
+  "registry_status": "new",
+  "term": "자기장",
+  "notation": {
+    "hanja": "磁氣場",
+    "hanja_gloss": "磁 자석 자 · 氣 기운 기 · 場 마당 장",
+    "english": "magnetic field",
+    "symbol_display": "B (T)",
+    "symbol_plain": "B (T)"
+  },
+  "definition": "자석이나 전류 둘레에 퍼져 있어 그 안에 놓인 자성체나 움직이는 전하에 자기력을 미치는 공간.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-iron-filings",
+      "text": "자기장은 눈에 보이지 않지만 그 안에 놓인 철 가루나 나침반 자침이 늘어선 모양으로 세기와 방향을 읽을 수 있다.",
+      "form": {
+        "condition": "자기장 속에 자기력을 받는 물체를 놓았을 때",
+        "type": "causal",
+        "scope": "자석이나 전류가 만드는 자기장"
+      },
+      "invertible": false,
+      "invertible_reason": "관찰 방법을 말한 명제라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-source",
+      "text": "자기장은 자석뿐 아니라 전류가 흐르는 도선 둘레에도 생긴다.",
+      "form": {
+        "condition": "도선에 전류가 흐를 때",
+        "type": "causal",
+        "scope": "정상 전류가 흐르는 도선"
+      },
+      "invertible": true,
+      "invertible_reason": "전류 둘레에 자기장이 생기는 것이 확정적이라 생기지 않는다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류가 흐르는 도선 둘레에는 자기장이 생기지 않고 자석 둘레에만 생긴다."
+    },
+    {
+      "id": "rel-field-vs-force",
+      "text": "자기장은 자기력 그 자체가 아니라 자기력이 작용할 수 있는 공간의 성질이어서, 힘을 받을 물체가 없어도 자기장은 있다.",
+      "form": {
+        "condition": "자기장 안에 아무 물체도 놓지 않았을 때",
+        "type": "conditional",
+        "scope": "자석이나 전류 둘레의 공간"
+      },
+      "invertible": true,
+      "invertible_reason": "원천이 있으면 자기장이 있다는 규정과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기력을 받을 물체를 놓기 전에는 자석 둘레에 자기장이 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기장은 철 가루를 뿌려야 비로소 생긴다",
+      "why_wrong": "철 가루는 이미 있는 자기장을 눈에 보이게 드러낼 뿐이다. 자석이나 전류가 있으면 그 둘레에 자기장이 이미 퍼져 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-field-vs-force"
+    },
+    {
+      "text": "자기장을 만드는 것은 자석뿐이다",
+      "why_wrong": "전류가 흐르는 도선 둘레에도 자기장이 생긴다. 전자석과 솔레노이드가 그 예다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-source"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-magnetic-field-line"
+    },
+    {
+      "type": "next",
+      "target": "emag-lorentz-force"
+    },
+    {
+      "type": "next",
+      "target": "emag-magnetic-flux"
+    },
+    {
+      "type": "same",
+      "target": "phys-magnetic-field",
+      "note": "concept:magnetic-field 가 같다"
+    }
+  ],
+  "curriculum": [
+    "12전자01-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-03",
+  "pages": [
+    22,
+    23
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "단위 T(테슬라)·Wb/m² 는 카드로 세우지 않고 이 카드의 notation 에서만 다뤘다."
+  ]
+}

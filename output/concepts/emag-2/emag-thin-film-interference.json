@@ -1,0 +1,112 @@
+{
+  "id": "emag-thin-film-interference",
+  "concept_key": "concept:thin-film-interference",
+  "registry_status": "new",
+  "term": "얇은 막에 의한 빛의 간섭",
+  "notation": {
+    "hanja": "膜 干涉",
+    "hanja_gloss": "膜 꺼풀 막 · 干 방패 간 · 涉 건널 섭",
+    "hanja_note": "'얇은'·'빛'은 고유어다. 한자는 '막'과 '간섭'에만 있다.",
+    "english": "thin film interference"
+  },
+  "definition": "막의 앞면과 뒷면에서 각각 되돌아 나온 두 빛이 겹쳐 일어나는 간섭. 반사에서 생긴 위상 변화와 두께에 따른 경로차가 밝기를 정한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tfi-phase",
+      "text": "공기에서 비누막으로 들어가며 앞면에서 되돌아 나온 빛은 위상이 180° 바뀌고, 막을 지나 뒷면에서 돌아 나온 빛은 위상이 그대로다.",
+      "form": {
+        "condition": "빛이 공기 → 비누막 → 공기 순으로 지날 때",
+        "type": "causal",
+        "scope": "막의 굴절률이 둘레보다 큰 경우. 앞면은 고정단, 뒷면은 자유단 반사에 해당한다"
+      },
+      "invertible": true,
+      "invertible_reason": "굴절률이 큰 매질로 들어가며 반사할 때만 위상이 뒤집히므로, 두 면을 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공기에서 비누막으로 들어가며 앞면에서 되돌아 나온 빛은 위상이 그대로이고, 뒷면에서 돌아 나온 빛의 위상이 180° 바뀐다."
+    },
+    {
+      "id": "rel-tfi-verythin",
+      "text": "두께를 무시할 만큼 막이 얇은 곳에서는 두 반사광이 반대 위상으로 겹쳐 그 부분이 어둡게 보인다.",
+      "form": {
+        "condition": "세워 둔 비누막의 위쪽처럼 두께가 파장보다 훨씬 얇을 때",
+        "type": "conditional",
+        "scope": "앞면 고정단·뒷면 자유단 반사인 막. 경로차가 거의 0이라 위상 변화만 남는다"
+      },
+      "invertible": true,
+      "invertible_reason": "위상 변화 180°만 남으므로 '밝게 보인다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두께를 무시할 만큼 막이 얇은 곳에서는 두 반사광이 같은 위상으로 겹쳐 그 부분이 밝게 보인다."
+    },
+    {
+      "id": "rel-tfi-color",
+      "text": "두께가 같은 자리라도 색깔마다 파장이 달라 보강 간섭 조건을 만족하는 빛의 색이 갈린다.",
+      "form": {
+        "condition": "백색광이 두께가 일정한 자리에 비칠 때",
+        "type": "causal",
+        "scope": "두께가 빛의 파장 정도인 얇은 막. 두꺼운 막에서는 색이 갈리지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "색이 갈린다는 서술에 크고 작음의 방향이 없어 뒤집을 수 없다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "비누막이 여러 색으로 보이는 것은 비눗물에 색소가 들어 있기 때문이다",
+      "why_wrong": "색소가 없는 비눗물도 무지개빛을 낸다. 두 반사광의 간섭 조건이 파장마다 다른 데서 생기는 색이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tfi-color"
+    },
+    {
+      "text": "막이 얇을수록 반사한 빛이 밝게 보인다",
+      "why_wrong": "아주 얇은 곳에서는 반사에서 생긴 위상 변화 때문에 상쇄 간섭이 일어나 오히려 어둡다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tfi-verythin"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-light-interference"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-constructive-and-destructive-interference"
+    },
+    {
+      "type": "related",
+      "target": "emag-hologram",
+      "note": "둘 다 빛의 간섭이 겉으로 드러난 예다"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-01",
+  "pages": [
+    61,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "고정단·자유단 반사는 「역학과 에너지」에 별도 카드가 있어 여기서는 조건으로만 안고 간다."
+  ]
+}

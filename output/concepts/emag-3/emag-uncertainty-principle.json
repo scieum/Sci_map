@@ -1,0 +1,130 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-uncertainty-principle",
+  "concept_key": "concept:uncertainty-principle",
+  "registry_status": "new",
+  "term": "불확정성 원리",
+  "notation": {
+    "hanja": "不確定性原理",
+    "hanja_gloss": "不 아닐 불 · 確 굳을 확 · 定 정할 정 · 性 성품 성 · 原 근원 원 · 理 다스릴 리",
+    "english": "uncertainty principle",
+    "symbol_display": "Δx·Δp ≥ h",
+    "symbol_plain": "dx dp >= h"
+  },
+  "definition": "입자의 위치와 운동량을 동시에 정확히 알 수는 없다는 원리. 두 불확정도의 곱이 플랑크 상수보다 작아지지 않는다.",
+  "relations": [
+    {
+      "id": "rel-up-tradeoff",
+      "text": "위치의 불확정도를 줄이면 운동량의 불확정도는 그만큼 커진다.",
+      "form": {
+        "condition": "같은 입자의 위치와 운동량을 함께 잴 때",
+        "type": "inverse",
+        "scope": "미시 입자",
+        "antecedent": {
+          "quantity": "위치의 불확정도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "운동량의 불확정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 불확정도의 곱이 플랑크 상수보다 작아질 수 없으므로 함께 줄어든다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위치의 불확정도를 줄이면 운동량의 불확정도도 함께 줄어든다."
+    },
+    {
+      "id": "rel-up-slit",
+      "text": "단일 슬릿의 폭을 좁힐수록 회절 무늬의 폭이 넓어져 운동량의 불확정도가 커진다.",
+      "form": {
+        "condition": "전자를 단일 슬릿에 통과시킬 때",
+        "type": "inverse",
+        "scope": "전자의 단일 슬릿 회절 실험",
+        "antecedent": {
+          "quantity": "단일 슬릿의 폭",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "회절 무늬의 폭",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "슬릿을 좁히면 회절이 커진다는 실험 결과와 정면으로 어긋나므로 뒤집은 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "단일 슬릿의 폭을 좁힐수록 회절 무늬의 폭이 좁아져 운동량의 불확정도가 작아진다."
+    },
+    {
+      "id": "rel-up-fundamental",
+      "text": "이 한계는 측정 기구나 기법이 모자라서가 아니라 자연 자체가 지닌 한계다.",
+      "form": {
+        "condition": "한계의 성격을 물을 때",
+        "type": "classification",
+        "scope": "양자 물리학"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이 한계는 자연이 지닌 것이 아니라 측정 기구와 기법이 모자라서 생긴 것이다」는 실험 기구나 기법의 한계가 아니라 우주의 근본적인 한계라고 한 123쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 한계는 자연이 지닌 것이 아니라 측정 기구와 기법이 모자라서 생긴 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "불확정성 원리는 지금 기술의 한계를 적어 둔 것이라 언젠가는 깨질 수 있다",
+      "why_wrong": "실험 기구나 기법의 한계가 아니라 자연 자체가 지닌 한계다. 기법이 아무리 발전해도 넘어설 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-up-fundamental"
+    },
+    {
+      "text": "전자는 정해진 위치와 속도를 갖고 있는데 우리가 그것을 모를 뿐이다",
+      "why_wrong": "하나를 정확히 정할수록 다른 하나의 불확정도가 커진다. 둘을 함께 확정한 상태 자체가 존재하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-up-tradeoff"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-measurement-disturbance"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-mechanical-atomic-model"
+    },
+    {
+      "type": "next",
+      "target": "emag-classical-vs-quantum-physics"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-2-02",
+  "pages": [
+    117,
+    119,
+    126
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "notes": [
+    "중복 정리 — rel-up-fundamental 의 inverted_text 와 같은 주장을 되풀이하던 오개념의 문면을 바꿔 적었다."
+  ]
+}

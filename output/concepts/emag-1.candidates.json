@@ -1,0 +1,998 @@
+{
+  "unit_id": "emag-1",
+  "subject": "전자기와 양자",
+  "unit_title": "Ⅰ. 전자기적 상호작용",
+  "generated_at": "2026-09-14",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/emag-1/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "emag-coulomb-law",
+      "term": "쿨롱 법칙",
+      "term_en": "Coulomb's law",
+      "concept_key": "concept:coulomb-law",
+      "registry_status": "new",
+      "same_candidate": ["phys-coulomb-law"],
+      "pages": [12],
+      "topic_id": "emag-1-1-01",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-01"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 12, "block_id": "p12-b6", "hint": "두 점전하 사이 전기력의 크기"},
+        {"page": 12, "block_id": "p12-b30", "hint": "연계 상자 전기력"}
+      ],
+      "relation_seeds": [
+        "전하량의 곱과 전기력",
+        "거리의 제곱과 전기력",
+        "전기력과 전기장의 세기"
+      ],
+      "note": "「물리학」 연계 상자로 제시된 선수 개념이나, 전기장을 정량적으로 구하는 근거식이라 카드로 둔다. concept_key 는 phys-coulomb-law 와 같은 키를 썼다."
+    },
+    {
+      "id": "emag-electric-field",
+      "term": "전기장",
+      "term_en": "electric field",
+      "concept_key": "concept:electric-field",
+      "registry_status": "new",
+      "same_candidate": ["phys-electric-field"],
+      "pages": [12, 30],
+      "topic_id": "emag-1-1-01",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 12, "block_id": "p12-b10", "hint": "단위 양전하가 받는 전기력"},
+        {"page": 12, "block_id": "p12-b14", "hint": "점전하 주위 전기장의 세기"},
+        {"page": 30, "block_id": "p30-b3", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "전하량과 전기장의 세기",
+        "거리와 전기장의 세기",
+        "전기장의 방향과 단위 양전하가 받는 힘의 방향"
+      ]
+    },
+    {
+      "id": "emag-superposition-of-electric-fields",
+      "term": "전기장의 합성",
+      "term_en": "superposition of electric fields",
+      "concept_key": "concept:superposition-of-electric-fields",
+      "registry_status": "new",
+      "pages": [13],
+      "topic_id": "emag-1-1-01",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 13, "block_id": "p13-b1", "hint": "두 전하가 한 점에 만드는 전기장"},
+        {"page": 13, "block_id": "p13-b10", "hint": "여러 전하에 의한 전기장"},
+        {"page": 13, "block_id": "p13-b16", "hint": "평행사변형법 적용"}
+      ],
+      "relation_seeds": [
+        "각 전하의 전기장과 합성 전기장",
+        "합성 전기장이 0이 되는 조건과 전하의 종류"
+      ]
+    },
+    {
+      "id": "emag-electric-field-line",
+      "term": "전기력선",
+      "term_en": "electric field line",
+      "concept_key": "concept:electric-field-line",
+      "registry_status": "new",
+      "pages": [14, 15, 30],
+      "topic_id": "emag-1-1-01",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 14, "block_id": "p14-b2", "hint": "전기력의 방향을 이은 선"},
+        {"page": 15, "block_id": "p15-b2", "hint": "전기력선의 특징 목록"},
+        {"page": 30, "block_id": "p30-b8", "hint": "중단원 정리 2번 항목"}
+      ],
+      "relation_seeds": [
+        "전기력선의 조밀도와 전기장의 세기",
+        "전기력선의 접선 방향과 전기장의 방향",
+        "전하량과 전기력선의 수"
+      ]
+    },
+    {
+      "id": "emag-electric-potential",
+      "term": "전위",
+      "term_en": "electric potential",
+      "concept_key": "concept:electric-potential",
+      "registry_status": "new",
+      "same_candidate": ["phys-electric-potential"],
+      "homonym_flag": true,
+      "pages": [16, 17],
+      "topic_id": "emag-1-1-01",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 16, "block_id": "p16-b1", "hint": "단위 전하당 전기적 위치 에너지"},
+        {"page": 16, "block_id": "p16-b10", "hint": "균일한 전기장에서 전위차"},
+        {"page": 17, "block_id": "p17-b13", "hint": "도입 질문의 등전위 상태"}
+      ],
+      "relation_seeds": [
+        "전기장의 세기·거리와 전위차",
+        "전기장 방향의 이동과 전기적 위치 에너지의 감소",
+        "두 도체가 등전위일 때 전류"
+      ],
+      "note": "homonyms.yaml 의 '전위' 감시어와 표기가 겹친다(전기적 전위 / 생태 천이의 극상 전위 등). 링크 판정은 G3 사람 게이트로 넘긴다. 전위차는 별도 카드로 쪼개지 않고 이 카드의 관계 명제 씨앗으로 두었다."
+    },
+    {
+      "id": "emag-equipotential-surface",
+      "term": "등전위면",
+      "aliases": ["등전위선"],
+      "term_en": "equipotential surface",
+      "concept_key": "concept:equipotential-surface",
+      "registry_status": "new",
+      "pages": [16, 17, 30],
+      "topic_id": "emag-1-1-01",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 16, "block_id": "p16-b24", "hint": "전위가 같은 점을 연결한 면"},
+        {"page": 17, "block_id": "p17-b1", "hint": "등전위선의 조밀도"},
+        {"page": 30, "block_id": "p30-b12", "hint": "중단원 정리 3번 항목"}
+      ],
+      "relation_seeds": [
+        "등전위선과 전기력선의 수직 관계",
+        "등전위선의 조밀도와 전기장의 세기",
+        "등전위선을 따라 전하를 옮길 때 전기력이 한 일"
+      ]
+    },
+    {
+      "id": "emag-electrostatic-induction",
+      "term": "정전기 유도",
+      "term_en": "electrostatic induction",
+      "concept_key": "concept:electrostatic-induction",
+      "registry_status": "new",
+      "pages": [18, 30],
+      "topic_id": "emag-1-1-02",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-02"],
+      "role": "core",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 18, "block_id": "p18-b12", "hint": "도체에서 자유 전자의 이동"},
+        {"page": 19, "block_id": "p19-b14", "hint": "개념확인 1번"},
+        {"page": 30, "block_id": "p30-b15", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "대전체와 가까운 쪽에 유도되는 전하의 종류",
+        "자유 전자의 이동과 유도 전하",
+        "유도 전하와 대전체 사이의 전기력"
+      ]
+    },
+    {
+      "id": "emag-dielectric-polarization",
+      "term": "유전 분극",
+      "term_en": "dielectric polarization",
+      "concept_key": "concept:dielectric-polarization",
+      "registry_status": "new",
+      "pages": [19, 30],
+      "topic_id": "emag-1-1-02",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 19, "block_id": "p19-b1", "hint": "절연체에서 일어나는 정전기 유도"},
+        {"page": 19, "block_id": "p19-b6", "hint": "종잇조각·물줄기가 끌려오는 까닭"},
+        {"page": 30, "block_id": "p30-b17", "hint": "중단원 정리 2번 항목"}
+      ],
+      "relation_seeds": [
+        "자유 전자의 유무와 정전기 유도·유전 분극의 구별",
+        "원자 내부 전하의 재배열과 인력",
+        "유전 분극의 정도와 유전율"
+      ]
+    },
+    {
+      "id": "emag-application-of-electrostatic-induction",
+      "term": "정전기 유도와 유전 분극의 활용",
+      "concept_key": "concept:application-of-electrostatic-induction",
+      "registry_status": "new",
+      "pages": [20, 21],
+      "topic_id": "emag-1-1-02",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-02"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 20, "block_id": "p20-b5", "hint": "일상 장치에 적용되는 원리"},
+        {"page": 21, "block_id": "p21-b3", "hint": "자동차 도색의 원리"},
+        {"page": 21, "block_id": "p21-b6", "hint": "전기 집진기의 구성"}
+      ],
+      "relation_seeds": [
+        "대전된 페인트 입자 사이의 척력과 도색의 균일성",
+        "유도 전하와 먼지 포집",
+        "유전 분극과 랩의 밀착"
+      ],
+      "note": "개별 사례(자동차 도색·전기 집진기·복사기·F램)는 카드로 쪼개지 않고 한 장에 묶었다. 성취기준 12전자01-02 가 '일상생활에서 적용되는 예'를 직접 요구해 빼지 않았다."
+    },
+    {
+      "id": "emag-magnetic-field",
+      "term": "자기장",
+      "term_en": "magnetic field",
+      "concept_key": "concept:magnetic-field",
+      "registry_status": "new",
+      "same_candidate": ["phys-magnetic-field"],
+      "pages": [22, 23],
+      "topic_id": "emag-1-1-03",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-03"],
+      "role": "supporting",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 22, "block_id": "p22-b13", "hint": "자기력이 미치는 공간"},
+        {"page": 23, "block_id": "p23-b17", "hint": "자석과 전류가 만드는 자기장"}
+      ],
+      "relation_seeds": [
+        "자기력을 받는 물체의 배열과 자기장의 분포",
+        "자석·전류와 자기장의 원천"
+      ]
+    },
+    {
+      "id": "emag-magnetic-field-line",
+      "term": "자기력선",
+      "term_en": "magnetic field line",
+      "concept_key": "concept:magnetic-field-line",
+      "registry_status": "new",
+      "pages": [22, 23, 30],
+      "topic_id": "emag-1-1-03",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-03"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 22, "block_id": "p22-b14", "hint": "자침 N극 방향을 이은 선"},
+        {"page": 23, "block_id": "p23-b2", "hint": "자기력선의 특징 목록"},
+        {"page": 30, "block_id": "p30-b18", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "자기력선의 조밀도와 자기장의 세기",
+        "자기력선의 접선 방향과 자기장의 방향",
+        "같은 방향·반대 방향 자기력선의 중첩과 자기장의 세기"
+      ],
+      "note": "p24~25 의 '자기력선 중첩으로 자기장 추리하기'는 별도 카드로 쪼개지 않고 이 카드의 씨앗으로 두었다."
+    },
+    {
+      "id": "emag-magnetic-field-of-straight-current",
+      "term": "직선 전류에 의한 자기장",
+      "term_en": "magnetic field of a straight current",
+      "concept_key": "concept:magnetic-field-of-straight-current",
+      "registry_status": "new",
+      "same_candidate": ["phys-magnetic-field-of-straight-current"],
+      "pages": [23, 25],
+      "topic_id": "emag-1-1-03",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-03"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 23, "block_id": "p23-b13", "hint": "오른손 법칙과 세기"},
+        {"page": 23, "block_id": "p23-b24", "hint": "도선 주위 자기력선 그림"},
+        {"page": 25, "block_id": "p25-b35", "hint": "두 도선 사이 자기장의 상쇄"}
+      ],
+      "relation_seeds": [
+        "전류의 세기와 자기장의 세기",
+        "도선으로부터의 거리와 자기장의 세기",
+        "전류의 방향과 자기장의 방향",
+        "평행한 두 도선의 전류 방향과 도선 사이에 작용하는 힘"
+      ]
+    },
+    {
+      "id": "emag-magnetic-field-of-circular-current",
+      "term": "원형 전류에 의한 자기장",
+      "term_en": "magnetic field of a circular current",
+      "concept_key": "concept:magnetic-field-of-circular-current",
+      "registry_status": "new",
+      "same_candidate": ["phys-magnetic-field-of-circular-current"],
+      "pages": [23, 24],
+      "topic_id": "emag-1-1-03",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 23, "block_id": "p23-b14", "hint": "원 중심의 자기장 세기"},
+        {"page": 24, "block_id": "p24-b1", "hint": "직선 도선 조각의 합"},
+        {"page": 24, "block_id": "p24-b33", "hint": "원 안쪽과 바깥쪽의 세기"}
+      ],
+      "relation_seeds": [
+        "전류의 세기와 원 중심의 자기장",
+        "원의 반지름과 원 중심의 자기장",
+        "직선 전류의 자기장 합성과 원형 전류의 자기장"
+      ]
+    },
+    {
+      "id": "emag-magnetic-field-of-solenoid",
+      "term": "솔레노이드에 의한 자기장",
+      "term_en": "magnetic field of a solenoid",
+      "concept_key": "concept:magnetic-field-of-solenoid",
+      "registry_status": "new",
+      "same_candidate": ["phys-magnetic-field-of-solenoid"],
+      "pages": [23, 30],
+      "topic_id": "emag-1-1-03",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 23, "block_id": "p23-b15", "hint": "감은 수·전류와 내부 자기장"},
+        {"page": 23, "block_id": "p23-b26", "hint": "개념확인 2번"},
+        {"page": 30, "block_id": "p30-b33", "hint": "중단원 정리 그림"}
+      ],
+      "relation_seeds": [
+        "단위 길이당 감은 수와 내부 자기장의 세기",
+        "전류의 세기와 내부 자기장의 세기",
+        "원형 전류의 중첩과 솔레노이드 내부의 균일한 자기장"
+      ]
+    },
+    {
+      "id": "emag-lorentz-force",
+      "term": "로런츠 힘",
+      "term_en": "Lorentz force",
+      "concept_key": "concept:lorentz-force",
+      "registry_status": "new",
+      "pages": [26, 27, 30],
+      "topic_id": "emag-1-1-04",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-04"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 26, "block_id": "p26-b26", "hint": "자기장 속 움직이는 전하가 받는 힘"},
+        {"page": 27, "block_id": "p27-b27", "hint": "크기를 결정하는 세 가지"},
+        {"page": 30, "block_id": "p30-b21", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "전하량·속력·자기장의 세기와 로런츠 힘의 크기",
+        "운동 방향과 자기장의 방향이 이루는 각과 힘의 크기",
+        "오른손과 로런츠 힘의 방향"
+      ]
+    },
+    {
+      "id": "emag-force-on-current-carrying-wire",
+      "term": "자기장 속 도선이 받는 힘",
+      "term_en": "force on a current-carrying wire",
+      "concept_key": "concept:force-on-current-carrying-wire",
+      "registry_status": "new",
+      "pages": [26, 27],
+      "topic_id": "emag-1-1-04",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-04"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 27, "block_id": "p27-b29", "hint": "자유 전자가 받는 힘의 합"},
+        {"page": 27, "block_id": "p27-b34", "hint": "F=BIl 로 정리"},
+        {"page": 26, "block_id": "p26-b9", "hint": "전동기의 에너지 전환"}
+      ],
+      "relation_seeds": [
+        "전류의 세기·도선의 길이·자기장의 세기와 도선이 받는 힘",
+        "전하 하나가 받는 로런츠 힘과 도선이 받는 힘"
+      ]
+    },
+    {
+      "id": "emag-circular-motion-of-charged-particle",
+      "term": "자기장 속 대전 입자의 원운동",
+      "term_en": "circular motion of a charged particle in a magnetic field",
+      "concept_key": "concept:circular-motion-of-charged-particle",
+      "registry_status": "new",
+      "pages": [28],
+      "topic_id": "emag-1-1-04",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-04"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 28, "block_id": "p28-b15", "hint": "구심력 역할을 하는 로런츠 힘"},
+        {"page": 28, "block_id": "p28-b32", "hint": "궤도 반지름과 원운동 주기"},
+        {"page": 28, "block_id": "p28-b10", "hint": "구심력 곁주"}
+      ],
+      "relation_seeds": [
+        "속력·질량·전하량·자기장과 궤도 반지름",
+        "원운동 주기와 속력·반지름의 무관함"
+      ]
+    },
+    {
+      "id": "emag-particle-accelerator",
+      "term": "입자 가속기",
+      "aliases": ["사이클로트론"],
+      "term_en": "particle accelerator",
+      "concept_key": "concept:particle-accelerator",
+      "registry_status": "new",
+      "pages": [28, 30],
+      "topic_id": "emag-1-1-04",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-04"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 28, "block_id": "p28-b13", "hint": "로런츠 힘을 활용한 연구 장비"},
+        {"page": 28, "block_id": "p28-b37", "hint": "사이클로트론의 가속 원리"},
+        {"page": 30, "block_id": "p30-b22", "hint": "중단원 정리 2번 항목"}
+      ],
+      "relation_seeds": [
+        "일정한 주기의 가속과 속력·궤도 반지름의 증가",
+        "D자형 금속 통 사이의 전기력과 입자의 가속"
+      ]
+    },
+    {
+      "id": "emag-van-allen-belt",
+      "term": "밴앨런대",
+      "term_en": "Van Allen belt",
+      "concept_key": "concept:van-allen-belt",
+      "registry_status": "new",
+      "pages": [29, 30],
+      "topic_id": "emag-1-1-04",
+      "section_id": "emag-1-1",
+      "curriculum": ["12전자01-04"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 29, "block_id": "p29-b2", "hint": "태양풍 입자의 나선 운동"},
+        {"page": 30, "block_id": "p30-b23", "hint": "중단원 정리 3번 항목"},
+        {"page": 26, "block_id": "p26-b3", "hint": "도입의 오로라 질문"}
+      ],
+      "relation_seeds": [
+        "자기장에 나란한 속도 성분과 자기장 방향의 이동",
+        "자기장에 수직인 속도 성분과 원운동",
+        "지구 자기장과 태양풍 입자의 극지방 이동"
+      ],
+      "note": "오로라는 이 카드의 현상 예로 묶고 따로 카드를 만들지 않았다."
+    },
+    {
+      "id": "emag-magnetic-flux",
+      "term": "자기선속",
+      "term_en": "magnetic flux",
+      "concept_key": "concept:magnetic-flux",
+      "registry_status": "new",
+      "same_candidate": ["phys-magnetic-flux"],
+      "pages": [35, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 35, "block_id": "p35-b2", "hint": "코일 면적과 수직 성분의 곱"},
+        {"page": 35, "block_id": "p35-b15", "hint": "최대·0 이 되는 경우"},
+        {"page": 50, "block_id": "p50-b3", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "자기장의 세기·코일 면적과 자기선속",
+        "코일 면의 법선과 자기장이 이루는 각과 자기선속"
+      ]
+    },
+    {
+      "id": "emag-electromagnetic-induction",
+      "term": "전자기 유도",
+      "term_en": "electromagnetic induction",
+      "concept_key": "concept:electromagnetic-induction",
+      "registry_status": "new",
+      "same_candidate": ["phys-electromagnetic-induction"],
+      "pages": [34, 35, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 34, "block_id": "p34-b28", "hint": "자기장 변화로 전류가 유도"},
+        {"page": 35, "block_id": "p35-b6", "hint": "자기선속의 변화와 유도 전류"},
+        {"page": 50, "block_id": "p50-b3", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "코일과 자석의 상대 운동과 유도 전류",
+        "자기선속의 변화와 전류의 유도"
+      ]
+    },
+    {
+      "id": "emag-induced-emf",
+      "term": "유도 기전력",
+      "term_en": "induced electromotive force",
+      "concept_key": "concept:induced-emf",
+      "registry_status": "new",
+      "pages": [34, 35],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 34, "block_id": "p34-b28", "hint": "유도 전류가 흐르게 하는 전압"},
+        {"page": 35, "block_id": "p35-b22", "hint": "감은 수·변화율과의 관계"}
+      ],
+      "relation_seeds": [
+        "코일의 감은 수와 유도 기전력의 크기",
+        "자기선속의 변화율과 유도 기전력의 크기"
+      ]
+    },
+    {
+      "id": "emag-faraday-law-of-induction",
+      "term": "전자기 유도 법칙",
+      "aliases": ["패러데이 법칙"],
+      "term_en": "Faraday's law of induction",
+      "concept_key": "concept:faraday-law-of-induction",
+      "registry_status": "new",
+      "pages": [35, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 35, "block_id": "p35-b19", "hint": "자기선속 변화와 기전력의 관계"},
+        {"page": 35, "block_id": "p35-b22", "hint": "(-)부호의 뜻"},
+        {"page": 50, "block_id": "p50-b4", "hint": "중단원 정리 2번 항목"}
+      ],
+      "relation_seeds": [
+        "시간당 자기선속 변화량과 유도 기전력",
+        "식의 (-)부호와 렌츠 법칙"
+      ]
+    },
+    {
+      "id": "emag-lenz-law",
+      "term": "렌츠 법칙",
+      "term_en": "Lenz's law",
+      "concept_key": "concept:lenz-law",
+      "registry_status": "new",
+      "same_candidate": ["phys-lenz-law"],
+      "pages": [35, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 35, "block_id": "p35-b22", "hint": "변화를 방해하는 방향"},
+        {"page": 35, "block_id": "p35-b16", "hint": "N극을 가까이 할 때"},
+        {"page": 50, "block_id": "p50-b6", "hint": "중단원 정리 3번 항목"}
+      ],
+      "relation_seeds": [
+        "자기선속의 증가·감소와 유도 전류의 방향",
+        "유도 전류가 만드는 자기장과 원래 자기장의 변화"
+      ]
+    },
+    {
+      "id": "emag-transformer",
+      "term": "변압기",
+      "term_en": "transformer",
+      "concept_key": "concept:transformer",
+      "registry_status": "new",
+      "pages": [36, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 36, "block_id": "p36-b7", "hint": "철심 양쪽 코일과 자기선속"},
+        {"page": 36, "block_id": "p36-b22", "hint": "감은 수 비와 전압 비"},
+        {"page": 50, "block_id": "p50-b7", "hint": "중단원 정리 활용 기술"}
+      ],
+      "relation_seeds": [
+        "1·2차 코일의 감은 수 비와 전압 비",
+        "에너지 손실이 없을 때 전압 비와 전류 비",
+        "교류 공급과 2차 코일의 유도 기전력"
+      ]
+    },
+    {
+      "id": "emag-inductor",
+      "term": "인덕터",
+      "term_en": "inductor",
+      "concept_key": "concept:inductor",
+      "registry_status": "new",
+      "pages": [37, 38, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 37, "block_id": "p37-b2", "hint": "유도 기전력을 내도록 만든 소자"},
+        {"page": 37, "block_id": "p37-b16", "hint": "자체 유도와 인덕턴스"},
+        {"page": 38, "block_id": "p38-b5", "hint": "전류의 급격한 변화 방지"}
+      ],
+      "relation_seeds": [
+        "자체 유도와 전류 변화의 방해",
+        "코일의 감은 수와 인덕턴스",
+        "전류의 시간 변화율과 유도 기전력의 크기"
+      ],
+      "note": "자체 유도·인덕턴스를 따로 쪼개지 않고 이 카드의 씨앗으로 두었다. 인덕턴스 L 은 공명 진동수 카드에서 다시 쓰인다."
+    },
+    {
+      "id": "emag-eddy-current",
+      "term": "맴돌이 전류",
+      "term_en": "eddy current",
+      "concept_key": "concept:eddy-current",
+      "registry_status": "new",
+      "pages": [38, 39, 50],
+      "topic_id": "emag-1-2-01",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 38, "block_id": "p38-b11", "hint": "도체판 속 소용돌이 전류"},
+        {"page": 39, "block_id": "p39-b19", "hint": "진자 실험의 결론"},
+        {"page": 50, "block_id": "p50-b10", "hint": "중단원 정리 활용 기술"}
+      ],
+      "relation_seeds": [
+        "도체판을 지나는 자기장의 변화와 맴돌이 전류",
+        "맴돌이 전류와 자석의 운동을 방해하는 힘",
+        "금속판의 모양(빗살)과 맴돌이 전류의 크기"
+      ]
+    },
+    {
+      "id": "emag-capacitance",
+      "term": "축전기의 전기 용량",
+      "term_en": "capacitance",
+      "concept_key": "concept:capacitance",
+      "registry_status": "new",
+      "pages": [40, 50],
+      "topic_id": "emag-1-2-02",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-06"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 40, "block_id": "p40-b12", "hint": "전압과 저장 전하량"},
+        {"page": 40, "block_id": "p40-b14", "hint": "극판 면적·간격과 용량"},
+        {"page": 50, "block_id": "p50-b29", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "극판의 면적과 전기 용량",
+        "극판 사이의 간격과 전기 용량",
+        "유전체의 유전율과 전기 용량"
+      ]
+    },
+    {
+      "id": "emag-capacitor-in-ac-circuit",
+      "term": "교류 회로에서 축전기의 역할",
+      "concept_key": "concept:capacitor-in-ac-circuit",
+      "registry_status": "new",
+      "pages": [41, 43, 50],
+      "topic_id": "emag-1-2-02",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-06"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 41, "block_id": "p41-b2", "hint": "충전 완료와 전류 차단"},
+        {"page": 50, "block_id": "p50-b30", "hint": "중단원 정리 2번 항목"},
+        {"page": 43, "block_id": "p43-b2", "hint": "앰프 트레블 다이얼"}
+      ],
+      "relation_seeds": [
+        "전기 용량과 축전기의 저항 역할",
+        "교류 전원의 진동수와 축전기의 저항 역할",
+        "고음 강조 필터와 축전기"
+      ]
+    },
+    {
+      "id": "emag-inductor-in-ac-circuit",
+      "term": "교류 회로에서 인덕터의 역할",
+      "concept_key": "concept:inductor-in-ac-circuit",
+      "registry_status": "new",
+      "pages": [41, 43, 50],
+      "topic_id": "emag-1-2-02",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-06"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 41, "block_id": "p41-b19", "hint": "인덕턴스·진동수와 저항 역할"},
+        {"page": 50, "block_id": "p50-b49", "hint": "중단원 정리 3번 항목"},
+        {"page": 43, "block_id": "p43-b2", "hint": "앰프 베이스 다이얼"}
+      ],
+      "relation_seeds": [
+        "인덕턴스와 인덕터의 저항 역할",
+        "교류 전원의 진동수와 인덕터의 저항 역할",
+        "저음 강조 필터와 인덕터"
+      ]
+    },
+    {
+      "id": "emag-electrical-oscillation",
+      "term": "전기 진동",
+      "term_en": "electrical oscillation",
+      "concept_key": "concept:electrical-oscillation",
+      "registry_status": "new",
+      "pages": [41, 42, 50],
+      "topic_id": "emag-1-2-02",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-06"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 42, "block_id": "p42-b1", "hint": "축전기·인덕터의 에너지 전환"},
+        {"page": 41, "block_id": "p41-b27", "hint": "전기 에너지와 자기 에너지 저장"},
+        {"page": 42, "block_id": "p42-b11", "hint": "방전과 전류 최대 시점"}
+      ],
+      "relation_seeds": [
+        "축전기의 전기 에너지와 인덕터의 자기 에너지의 전환",
+        "회로 전체 에너지의 보존",
+        "용수철 진자의 역학적 에너지 전환과의 대응"
+      ]
+    },
+    {
+      "id": "emag-rlc-circuit",
+      "term": "RLC 회로",
+      "concept_key": "concept:rlc-circuit",
+      "registry_status": "new",
+      "pages": [42, 43, 50],
+      "topic_id": "emag-1-2-02",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-06"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 42, "block_id": "p42-b86", "hint": "저항·인덕터·축전기의 직렬"},
+        {"page": 43, "block_id": "p43-b12", "hint": "개념확인 1번"},
+        {"page": 50, "block_id": "p50-b60", "hint": "중단원 정리 4번 항목"}
+      ],
+      "relation_seeds": [
+        "교류 전원의 진동수와 회로에 흐르는 전류",
+        "축전기·인덕터의 저항 역할이 겹치는 지점과 전류의 최댓값"
+      ]
+    },
+    {
+      "id": "emag-resonance-frequency",
+      "term": "공명 진동수",
+      "term_en": "resonance frequency",
+      "concept_key": "concept:resonance-frequency",
+      "registry_status": "new",
+      "pages": [42, 43],
+      "topic_id": "emag-1-2-02",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-06"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 42, "block_id": "p42-b88", "hint": "인덕턴스·전기 용량으로 결정"},
+        {"page": 43, "block_id": "p43-b6", "hint": "보안 검색대의 전류 변화"},
+        {"page": 42, "block_id": "p42-b86", "hint": "전류가 최대가 되는 진동수"}
+      ],
+      "relation_seeds": [
+        "인덕턴스·전기 용량과 공명 진동수",
+        "공명 진동수와 교류 전원 진동수의 일치와 전류의 크기",
+        "금속 물체의 통과와 공명의 깨짐"
+      ]
+    },
+    {
+      "id": "emag-pn-junction-diode",
+      "term": "p-n 접합 다이오드",
+      "term_en": "p-n junction diode",
+      "concept_key": "concept:pn-junction-diode",
+      "registry_status": "new",
+      "same_candidate": ["phys-pn-junction-diode"],
+      "pages": [44, 45],
+      "topic_id": "emag-1-2-03",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-07"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 44, "block_id": "p44-b13", "hint": "p형·n형 반도체의 접합"},
+        {"page": 45, "block_id": "p45-b30", "hint": "연계 상자 바이어스 설명"},
+        {"page": 50, "block_id": "p50-b65", "hint": "중단원 정리 1번 항목"}
+      ],
+      "relation_seeds": [
+        "접합 방향과 전류가 흐르는 방향",
+        "전자·양공의 결합과 전류"
+      ]
+    },
+    {
+      "id": "emag-rectification",
+      "term": "정류 작용",
+      "term_en": "rectification",
+      "concept_key": "concept:rectification",
+      "registry_status": "new",
+      "pages": [44, 45, 50],
+      "topic_id": "emag-1-2-03",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-07"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 44, "block_id": "p44-b13", "hint": "한 방향으로만 전류를 흘림"},
+        {"page": 45, "block_id": "p45-b19", "hint": "다이오드 여러 개와 축전기"},
+        {"page": 45, "block_id": "p45-b50", "hint": "개념확인 1·2번"}
+      ],
+      "relation_seeds": [
+        "다이오드의 방향성과 교류에서 직류로의 전환",
+        "축전기의 방전과 직류에 가까운 전류",
+        "다이오드의 개수와 끊기지 않는 전류"
+      ],
+      "note": "정류 회로를 별도 카드로 쪼개지 않고 이 카드에 묶었다."
+    },
+    {
+      "id": "emag-bias-voltage",
+      "term": "바이어스 전압",
+      "term_en": "bias voltage",
+      "concept_key": "concept:bias-voltage",
+      "registry_status": "new",
+      "pages": [45, 48],
+      "topic_id": "emag-1-2-03",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-07"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 48, "block_id": "p48-b3", "hint": "교류 신호에 더하는 직류 전압"},
+        {"page": 48, "block_id": "p48-b1", "hint": "순방향이 유지되어야 하는 까닭"},
+        {"page": 45, "block_id": "p45-b30", "hint": "순방향·역방향 바이어스"}
+      ],
+      "relation_seeds": [
+        "순방향·역방향 바이어스와 전류의 흐름",
+        "바이어스 전압의 유무와 증폭되는 신호의 범위"
+      ]
+    },
+    {
+      "id": "emag-transistor",
+      "term": "트랜지스터",
+      "term_en": "transistor",
+      "concept_key": "concept:transistor",
+      "registry_status": "new",
+      "pages": [46, 47, 49],
+      "topic_id": "emag-1-2-03",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-07"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 46, "block_id": "p46-b27", "hint": "세 부분과 접합 순서"},
+        {"page": 47, "block_id": "p47-b43", "hint": "공통 이미터 회로의 전류"},
+        {"page": 49, "block_id": "p49-b15", "hint": "반도체 칩 속의 스위칭"}
+      ],
+      "relation_seeds": [
+        "접합 순서와 p-n-p형·n-p-n형의 구별",
+        "베이스 전류와 컬렉터 전류",
+        "베이스의 두께와 전자의 통과",
+        "베이스 전류의 여닫음과 스위칭 작용"
+      ],
+      "note": "스위칭 작용을 별도 카드로 쪼개지 않고 이 카드의 씨앗으로 두었다 — 기초 논리 회로 카드가 그 귀결을 받는다."
+    },
+    {
+      "id": "emag-transistor-amplification",
+      "term": "트랜지스터의 증폭 작용",
+      "term_en": "transistor amplification",
+      "concept_key": "concept:transistor-amplification",
+      "registry_status": "new",
+      "pages": [46, 47, 50],
+      "topic_id": "emag-1-2-03",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-07"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 46, "block_id": "p46-b2", "hint": "보청기의 소리 증폭"},
+        {"page": 47, "block_id": "p47-b53", "hint": "전류 증폭률"},
+        {"page": 50, "block_id": "p50-b67", "hint": "중단원 정리 2번 항목"}
+      ],
+      "relation_seeds": [
+        "베이스 전류의 작은 변화와 컬렉터 전류의 큰 변화",
+        "전류 증폭률과 출력 신호의 크기",
+        "바이어스 전압과 증폭되는 신호"
+      ]
+    },
+    {
+      "id": "emag-logic-gate",
+      "term": "기초 논리 회로",
+      "term_en": "basic logic circuit",
+      "concept_key": "concept:logic-gate",
+      "registry_status": "new",
+      "pages": [48, 49],
+      "topic_id": "emag-1-2-03",
+      "section_id": "emag-1-2",
+      "curriculum": ["12전자01-07"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 48, "block_id": "p48-b29", "hint": "입력을 논리 연산해 출력"},
+        {"page": 48, "block_id": "p48-b37", "hint": "스위치 개폐와 출력값"},
+        {"page": 49, "block_id": "p49-b15", "hint": "스위치 역할을 하는 트랜지스터"}
+      ],
+      "relation_seeds": [
+        "스위치의 개폐와 출력값 0·1",
+        "트랜지스터의 스위칭 작용과 논리 연산",
+        "논리 회로의 결합과 복합 기능"
+      ]
+    }
+  ],
+
+  "hierarchy": [
+    {"from": "emag-coulomb-law", "to": "emag-electric-field", "note": "전기력의 정량 관계를 알아야 전기장의 세기를 구한다"},
+    {"from": "emag-electric-field", "to": "emag-superposition-of-electric-fields"},
+    {"from": "emag-electric-field", "to": "emag-electric-field-line"},
+    {"from": "emag-electric-field", "to": "emag-electric-potential"},
+    {"from": "emag-electric-potential", "to": "emag-equipotential-surface"},
+    {"from": "emag-electric-field-line", "to": "emag-equipotential-surface", "note": "등전위선이 전기력선에 수직이라는 관계를 읽으려면 먼저 전기력선"},
+    {"from": "emag-electric-field", "to": "emag-electrostatic-induction"},
+    {"from": "emag-electrostatic-induction", "to": "emag-dielectric-polarization", "note": "유전 분극을 '절연체에서 일어나는 정전기 유도'로 정의한다"},
+    {"from": "emag-electrostatic-induction", "to": "emag-application-of-electrostatic-induction"},
+    {"from": "emag-dielectric-polarization", "to": "emag-application-of-electrostatic-induction"},
+    {"from": "emag-magnetic-field", "to": "emag-magnetic-field-line"},
+    {"from": "emag-magnetic-field-line", "to": "emag-magnetic-field-of-straight-current"},
+    {"from": "emag-magnetic-field-of-straight-current", "to": "emag-magnetic-field-of-circular-current", "note": "원형 도선을 직선 도선 조각의 합으로 본다"},
+    {"from": "emag-magnetic-field-of-circular-current", "to": "emag-magnetic-field-of-solenoid"},
+    {"from": "emag-magnetic-field", "to": "emag-lorentz-force"},
+    {"from": "emag-lorentz-force", "to": "emag-force-on-current-carrying-wire"},
+    {"from": "emag-lorentz-force", "to": "emag-circular-motion-of-charged-particle"},
+    {"from": "emag-circular-motion-of-charged-particle", "to": "emag-particle-accelerator"},
+    {"from": "emag-circular-motion-of-charged-particle", "to": "emag-van-allen-belt"},
+    {"from": "emag-magnetic-field", "to": "emag-magnetic-flux"},
+    {"from": "emag-magnetic-flux", "to": "emag-electromagnetic-induction"},
+    {"from": "emag-electromagnetic-induction", "to": "emag-induced-emf"},
+    {"from": "emag-induced-emf", "to": "emag-faraday-law-of-induction"},
+    {"from": "emag-faraday-law-of-induction", "to": "emag-lenz-law", "note": "식의 (-)부호가 렌츠 법칙이다"},
+    {"from": "emag-faraday-law-of-induction", "to": "emag-transformer"},
+    {"from": "emag-faraday-law-of-induction", "to": "emag-inductor"},
+    {"from": "emag-lenz-law", "to": "emag-eddy-current"},
+    {"from": "emag-dielectric-polarization", "to": "emag-capacitance", "note": "유전율이 분극의 정도라 전기 용량으로 이어진다"},
+    {"from": "emag-capacitance", "to": "emag-capacitor-in-ac-circuit"},
+    {"from": "emag-inductor", "to": "emag-inductor-in-ac-circuit"},
+    {"from": "emag-capacitance", "to": "emag-electrical-oscillation"},
+    {"from": "emag-inductor", "to": "emag-electrical-oscillation"},
+    {"from": "emag-capacitor-in-ac-circuit", "to": "emag-rlc-circuit"},
+    {"from": "emag-inductor-in-ac-circuit", "to": "emag-rlc-circuit"},
+    {"from": "emag-rlc-circuit", "to": "emag-resonance-frequency"},
+    {"from": "emag-electrical-oscillation", "to": "emag-resonance-frequency"},
+    {"from": "emag-pn-junction-diode", "to": "emag-rectification"},
+    {"from": "emag-capacitance", "to": "emag-rectification", "note": "정류 회로의 평활에 축전기의 충·방전을 쓴다"},
+    {"from": "emag-pn-junction-diode", "to": "emag-bias-voltage"},
+    {"from": "emag-pn-junction-diode", "to": "emag-transistor"},
+    {"from": "emag-bias-voltage", "to": "emag-transistor-amplification"},
+    {"from": "emag-transistor", "to": "emag-transistor-amplification"},
+    {"from": "emag-transistor", "to": "emag-logic-gate"}
+  ],
+
+  "excluded": [
+    {"term": "자유 전자", "reason": "중복", "note": "isci1-free-electron(concept:free-electron) 카드가 이미 있다. 이 단원에서는 정전기 유도 카드의 설명 요소로만 쓴다.", "pages": [18]},
+    {"term": "전위차", "reason": "중복", "note": "phys-potential-difference 카드가 있고, 이 단원에서 새로 더하는 것은 '균일한 전기장에서 ΔV=Ed' 라는 관계뿐이라 전위 카드의 씨앗으로 넘겼다.", "pages": [16]},
+    {"term": "전기적 위치 에너지", "reason": "중복", "note": "phys-electric-potential-energy 카드가 있다. 전위 카드의 선수 개념으로만 쓴다.", "pages": [16]},
+    {"term": "유전체", "reason": "중복", "note": "★표기 충돌 주의 — gene-genome 카드의 표제어가 '유전체'(genome)다. 물리의 dielectric 과 생명과학의 genome 이 같은 표기라 homonyms.yaml 감시어 후보다(사람 결정 필요). 이 단원에서는 유전 분극 카드 안에서 설명한다.", "pages": [19, 40]},
+    {"term": "유전율", "reason": "기타", "note": "전기 용량 카드의 비례 상수로만 쓰인다. 단독 관계 명제를 세우기 어려워 씨앗으로 넘겼다.", "pages": [40]},
+    {"term": "교류와 직류", "reason": "중복", "note": "「물리학」·「통합과학」 선수 개념이고 이 단원에서는 곁주로만 나온다.", "pages": [36, 40]},
+    {"term": "평행한 두 직선 도선 사이에 작용하는 힘", "reason": "기타", "note": "곁주와 그림으로만 나오고 본문 서술이 없다. 직선 전류에 의한 자기장 카드의 씨앗으로 넘겼다 — 사람이 보기에 카드 값이 있다면 되살릴 만하다.", "pages": [25]},
+    {"term": "자기장의 중첩", "reason": "기타", "note": "p24~25 의 추리 활동 전체가 이것인데, 독립 개념이라기보다 자기력선 카드의 읽기 규칙이라 씨앗으로 넘겼다.", "pages": [24, 25]},
+    {"term": "토카막", "reason": "사례", "note": "본문 강조 용어 목록에는 있으나 서술은 로런츠 힘의 응용 사례다. Ⅲ단원 핵융합(emag-3)에서 다시 나오므로 그쪽에서 카드를 만드는 편이 낫다.", "pages": [26, 29]},
+    {"term": "오로라", "reason": "사례", "note": "밴앨런대 카드에 묶었다.", "pages": [26, 29]},
+    {"term": "플라스마", "reason": "범위 밖", "note": "곁주 용어이고 emag-3 핵융합 단원의 개념이다.", "pages": [29]},
+    {"term": "패러데이 슈트·패러데이 상자", "reason": "사례", "note": "등전위면 카드의 도입·마무리 사례다.", "pages": [12, 17]},
+    {"term": "패러데이", "reason": "인물", "pages": [14]},
+    {"term": "쇼클리 연구진", "reason": "인물", "pages": [49]},
+    {"term": "자기 브레이크", "reason": "사례", "note": "맴돌이 전류 카드의 응용 사례다.", "pages": [38, 39]},
+    {"term": "인덕션 레인지", "reason": "사례", "pages": [38]},
+    {"term": "보안 검색대", "reason": "사례", "note": "공명 진동수 카드의 응용 사례다.", "pages": [40, 43]},
+    {"term": "집적 회로(IC)", "reason": "사례", "note": "곁주 수준의 소개다.", "pages": [49]},
+    {"term": "구심력", "reason": "중복", "note": "「역학과 에너지」·「물리학」의 선수 개념 곁주다. 대전 입자의 원운동 카드에서 선수로만 쓴다.", "pages": [28]},
+    {"term": "속도의 분해", "reason": "중복", "note": "역학 선수 개념 곁주(mech-force-resolution 계열).", "pages": [29]},
+    {"term": "진공관", "reason": "사례", "pages": [49]},
+    {"term": "도선 그네 실험·정류 작용 알아보기 실험", "reason": "활동", "pages": [26, 44, 46, 48]},
+    {"term": "스위치를 계속 닫고 있지 않기·감전 주의", "reason": "실험 유의사항", "pages": [26, 44]},
+    {"term": "T(테슬라)·Wb(웨버)·F(패럿)·H(헨리)", "reason": "단위·기호", "note": "단위 그 자체는 카드로 만들지 않는다. 해당 물리량(자기장·자기선속·전기 용량·인덕턴스) 카드가 받는다.", "pages": [22, 35, 40, 37]}
+  ],
+
+  "notes": [
+    "소단원 7개(01~04, 01~03)에 39개를 배분했다 — 6/4/5/5/8/6/7. 쪽수가 6쪽인 소단원(1-1-01, 1-2-01, 1-2-03)에 더 많이 배분했다.",
+    "role 분포: core 19 / supporting 17 / context 3. core 가 48.7% 로 절반을 넘지 않는다.",
+    "concept_registry.yaml 에는 전자기 계열 키가 concept:semiconductor 하나뿐이다(276건 중). 「물리학」(phys-*) 카드가 쓰고 있는 키들(concept:electric-field·concept:magnetic-flux 등)이 아직 사전에 오르지 않아, 같은 키 문자열을 그대로 쓰되 registry_status 는 규칙대로 new 로 두었다. G3 에서 한꺼번에 올라가면 그 순간 same 링크가 선다. same_candidate 에 대응 phys 카드 id 를 적어 두었다.",
+    "12전자01-02 의 crosscheck 는 '교사 확정' 이라 검증 스크립트가 warn 을 낸다. 메인 지시대로 '일치' 와 같은 신뢰도로 썼다 — 스크립트가 '일치' 문자열만 보도록 짜여 있어 생기는 warn 이다.",
+    "표기 충돌 하나를 발견했다: '유전체' 가 물리(dielectric)와 생명과학(genome, gene-genome 카드)에서 같은 표기다. homonyms.yaml 감시어 후보로 사람 판단이 필요하다 — 이 단원에서는 카드를 만들지 않아 지금 당장 충돌하지는 않는다.",
+    "'전위' 는 homonyms.yaml 의 감시어라 homonym_flag 를 붙였다. 이 단원의 핵심어이므로 G3 에서 먼저 볼 만하다."
+  ]
+}

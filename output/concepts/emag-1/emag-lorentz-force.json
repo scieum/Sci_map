@@ -1,0 +1,122 @@
+{
+  "id": "emag-lorentz-force",
+  "concept_key": "concept:lorentz-force",
+  "registry_status": "new",
+  "term": "로런츠 힘",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'로런츠'는 인명 Lorentz 의 음차이고 '힘'은 고유어라 한자로 적을 수 없다.",
+    "english": "Lorentz force",
+    "symbol_display": "F = qvB",
+    "symbol_plain": "F = qvB"
+  },
+  "definition": "자기장 안을 지나가는 전하가 자기장 때문에 받는 힘으로, 전하가 멈춰 있으면 생기지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-magnitude",
+      "text": "자기장에 수직으로 움직이는 대전 입자는 전하량이 클수록, 속력이 빠를수록, 자기장이 셀수록 큰 힘을 받는다.",
+      "form": {
+        "condition": "운동 방향과 자기장의 방향이 서로 수직일 때",
+        "type": "direct",
+        "scope": "자기장 안을 움직이는 대전 입자",
+        "antecedent": {
+          "quantity": "입자의 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "로런츠 힘의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세 양 모두에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 빠를수록, 자기장이 셀수록 대전 입자가 받는 로런츠 힘은 작아진다."
+    },
+    {
+      "id": "rel-angle",
+      "text": "운동 방향과 자기장의 방향이 나란하면 로런츠 힘은 0이고, 서로 수직일 때 가장 크다.",
+      "form": {
+        "condition": "대전 입자가 자기장 안에서 움직일 때",
+        "type": "conditional",
+        "scope": "자기장 안을 움직이는 대전 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "0이 되는 자리와 최대가 되는 자리를 맞바꾸는 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "운동 방향과 자기장의 방향이 나란할 때 로런츠 힘이 가장 크고, 수직일 때 0이 된다."
+    },
+    {
+      "id": "rel-right-hand",
+      "text": "오른손 엄지를 양전하의 운동 방향, 네 손가락을 자기장 방향으로 두면 손바닥이 향하는 쪽이 로런츠 힘의 방향이다.",
+      "form": {
+        "condition": "오른손 법칙으로 힘의 방향을 정할 때",
+        "type": "conditional",
+        "scope": "자기장 안을 움직이는 양전하"
+      },
+      "invertible": true,
+      "invertible_reason": "손 모양(엄지=운동 방향, 네 손가락=자기장)을 문면에 고정하면 힘의 방향이 하나로 정해지므로, 그 반대쪽이라 한 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오른손 엄지를 양전하의 운동 방향, 네 손가락을 자기장 방향으로 두면 손등이 향하는 쪽이 로런츠 힘의 방향이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기장 안에 놓인 전하는 멈춰 있어도 자기력을 받는다",
+      "why_wrong": "로런츠 힘의 크기는 속력에 비례하므로 속력이 0이면 힘도 0이다. 전하가 움직여야 힘이 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-magnitude"
+    },
+    {
+      "text": "대전 입자가 자기장 방향을 따라 나아가면 자기장이 세니 큰 힘을 받는다",
+      "why_wrong": "운동 방향이 자기장과 나란하면 로런츠 힘은 0이다. 힘은 두 방향이 수직일 때 가장 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-angle"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-magnetic-field"
+    },
+    {
+      "type": "next",
+      "target": "emag-force-on-current-carrying-wire"
+    },
+    {
+      "type": "next",
+      "target": "emag-circular-motion-of-charged-particle"
+    }
+  ],
+  "curriculum": [
+    "12전자01-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-04",
+  "pages": [
+    26,
+    27,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "토카막은 이 단원에서 로런츠 힘의 응용 사례로만 나오고 Ⅲ단원 핵융합(emag-3)에서 다시 다뤄져 카드를 세우지 않았다.",
+    "rel-right-hand 의 invertible 을 false 에서 true 로 올려 emag-magnetic-field-of-straight-current/rel-right-hand 와 기준을 맞췄다 — 손 모양을 문면에 고정하면 결과 방향이 하나로 정해지므로 반대쪽이라 한 문장은 반드시 거짓이다 (C6 수정)."
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "id": "emag-single-slit-diffraction-pattern",
+  "concept_key": "concept:single-slit-diffraction-pattern",
+  "registry_status": "new",
+  "term": "단일 슬릿에 의한 회절 무늬",
+  "notation": {
+    "hanja": "單一 回折",
+    "hanja_gloss": "單 홑 단 · 一 한 일 · 回 돌 회 · 折 꺾을 절",
+    "hanja_note": "'슬릿'은 영어 slit 의 음차어, '무늬'는 고유어다.",
+    "english": "single-slit diffraction pattern"
+  },
+  "definition": "틈 하나를 지난 빛이 퍼지며 서로 겹쳐 만드는 밝기 무늬. 가운데가 가장 밝고 그 바깥으로 밝고 어두운 띠가 번갈아 나타난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ssd-width",
+      "text": "슬릿의 폭이 좁아질수록 가운데 밝은 띠의 폭은 넓어진다.",
+      "form": {
+        "condition": "같은 색의 빛을 쓸 때",
+        "type": "inverse",
+        "scope": "단일 슬릿 회절 무늬. 가운데 띠의 폭은 슬릿 폭에 반비례한다",
+        "antecedent": {
+          "quantity": "슬릿의 폭",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "가운데 밝은 무늬의 폭",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "슬릿 폭과 무늬 폭은 반비례하므로 '좁아진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "슬릿의 폭이 좁아질수록 가운데 밝은 띠의 폭도 좁아진다."
+    },
+    {
+      "id": "rel-ssd-wavelength",
+      "text": "같은 슬릿이라면 파장이 긴 빛일수록 회절 무늬가 넓게 퍼진다.",
+      "form": {
+        "condition": "슬릿의 폭을 바꾸지 않을 때",
+        "type": "direct",
+        "scope": "적색광과 청색광처럼 색만 달리해 견줄 때",
+        "antecedent": {
+          "quantity": "빛의 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "회절 무늬의 폭",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 길수록 회절이 커져 무늬가 넓어지므로 '좁게'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 슬릿이라면 파장이 긴 빛일수록 회절 무늬가 좁게 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "슬릿이 하나뿐이면 겹칠 빛이 없으니 스크린이 고르게 밝다",
+      "why_wrong": "한 틈을 지난 빛도 퍼지면서 서로 겹치기 때문에 밝고 어두운 띠가 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ssd-width"
+    },
+    {
+      "text": "슬릿을 넓힐수록 빛이 더 넓게 퍼져 무늬도 넓어진다",
+      "why_wrong": "틈이 넓으면 회절이 약해져 가운데 밝은 띠가 오히려 좁아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ssd-width"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-light-diffraction"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-light-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-resolving-power"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-01",
+  "pages": [
+    63,
+    76
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

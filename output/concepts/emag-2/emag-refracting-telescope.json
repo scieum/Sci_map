@@ -1,0 +1,111 @@
+{
+  "id": "emag-refracting-telescope",
+  "concept_key": "concept:refracting-telescope",
+  "registry_status": "new",
+  "term": "케플러식 굴절 망원경",
+  "notation": {
+    "hanja": "式 屈折 望遠鏡",
+    "hanja_gloss": "式 법 식 · 屈 굽을 굴 · 折 꺾을 절 · 望 바랄 망 · 遠 멀 원 · 鏡 거울 경",
+    "hanja_note": "'케플러'는 사람 이름의 음차어다.",
+    "english": "Keplerian refracting telescope"
+  },
+  "definition": "초점 거리가 다른 볼록 렌즈 두 장으로 먼 물체를 크게 보는 기기. 대물렌즈가 맺은 중간 상을 접안렌즈가 다시 확대한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tele-two-stage",
+      "text": "대물렌즈가 만든 중간 상은 실상이고, 그것을 접안렌즈가 확대해 우리가 보는 최종 상은 허상이다.",
+      "form": {
+        "condition": "멀리 있는 물체를 관측할 때",
+        "type": "causal",
+        "scope": "케플러식 굴절 망원경의 두 단계 결상"
+      },
+      "invertible": true,
+      "invertible_reason": "두 상의 종류를 맞바꾸면 이 구조에서 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대물렌즈가 만든 중간 상이 허상이고, 접안렌즈가 만드는 최종 상이 실상이다."
+    },
+    {
+      "id": "rel-tele-focal-length",
+      "text": "초점 거리가 긴 렌즈를 대물렌즈 자리에, 짧은 렌즈를 접안렌즈 자리에 놓는다.",
+      "form": {
+        "condition": "볼록 렌즈 두 장으로 망원경을 꾸릴 때",
+        "type": "conditional",
+        "scope": "케플러식 배치. 두 렌즈를 맞바꿔 놓으면 멀리 있는 물체가 크게 보이지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "두 자리를 맞바꾸면 케플러식 망원경이 되지 않으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "초점 거리가 짧은 렌즈를 대물렌즈 자리에, 긴 렌즈를 접안렌즈 자리에 놓는다."
+    },
+    {
+      "id": "rel-tele-aberration",
+      "text": "렌즈로 빛을 모으는 구조라 색깔별 굴절 차이에 의한 수차를 안고 있어, 정밀한 기기에서는 복합 렌즈로 보정한다.",
+      "form": {
+        "condition": "굴절을 이용해 상을 만들 때",
+        "type": "causal",
+        "scope": "굴절 망원경. 반사 망원경에는 이 수차가 없다"
+      },
+      "invertible": false,
+      "invertible_reason": "구조가 안고 있는 한계를 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "망원경은 렌즈 한 장으로 먼 물체를 크게 보는 기기다",
+      "why_wrong": "대물렌즈와 접안렌즈 두 장이 차례로 상을 만든다. 한 장으로는 이만큼 확대되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tele-two-stage"
+    },
+    {
+      "text": "대물렌즈가 만든 중간 상을 눈으로 곧바로 본다",
+      "why_wrong": "중간 상을 접안렌즈가 한 번 더 확대한 허상을 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tele-two-stage"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-real-and-virtual-image"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-optical-aberration"
+    },
+    {
+      "type": "related",
+      "target": "emag-optical-microscope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    68,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C5/C6 uncertain — rel-tele-focal-length: 두 렌즈를 맞바꿔도 광학적으로 불가능한 배치는 아니고 확대가 되지 않을 뿐이라 invertible 판정이 갈린다. 교과서 94쪽 서술형 문제가 바로 그 상황을 다루므로 판정을 고치지 않고 C8 에 올린다."
+  ]
+}

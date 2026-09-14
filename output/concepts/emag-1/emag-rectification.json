@@ -1,0 +1,106 @@
+{
+  "id": "emag-rectification",
+  "concept_key": "concept:rectification",
+  "registry_status": "new",
+  "term": "정류 작용",
+  "notation": {
+    "hanja": "整流作用",
+    "hanja_gloss": "整 가지런할 정 · 流 흐를 류 · 作 지을 작 · 用 쓸 용",
+    "english": "rectification"
+  },
+  "definition": "다이오드가 한쪽 방향으로만 전류를 흘리는 성질을 써서, 방향이 계속 바뀌는 교류를 한 방향의 전류로 바꾸는 작용.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-half-wave",
+      "text": "교류 전원에 다이오드를 하나만 이으면 순방향인 동안에만 전류가 흘러 주기적으로 끊기는 한 방향 전류를 얻는다.",
+      "form": {
+        "condition": "정류 회로에 다이오드를 하나만 썼을 때",
+        "type": "causal",
+        "scope": "교류 전원에 이은 반파 정류 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "뒤집은 문장만 떼어 읽으면 축전기를 더한 회로에서 참이 되어 반드시 거짓이라 할 수 없다 — 같은 카드 rel-smoothing 과 교과서 45쪽이 그 반례다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bridge",
+      "text": "다이오드 여러 개를 짜 맞추면 교류의 두 반주기를 모두 한쪽 방향으로 돌려보내 전류가 끊기지 않게 할 수 있다.",
+      "form": {
+        "condition": "다이오드를 여러 개 짜 맞춰 회로를 꾸몄을 때",
+        "type": "causal",
+        "scope": "여러 개의 다이오드로 꾸민 정류 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "회로를 꾸미는 방법을 말한 명제라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-smoothing",
+      "text": "정류 회로에 축전기를 더하면 전류가 끊기는 동안 축전기가 방전해 저항에 전류를 보내므로 출력이 직류에 가까워진다.",
+      "form": {
+        "condition": "전류가 끊기는 구간에서 축전기가 충전되어 있을 때",
+        "type": "causal",
+        "scope": "축전기를 더한 정류 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "축전기가 빈 구간을 메우는 것이 확정적이라 반대로 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "정류 회로에 축전기를 더하면 전류가 끊기는 구간이 넓어져 출력이 교류에 가까워진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "다이오드 하나만 있으면 완전한 직류를 얻을 수 있다",
+      "why_wrong": "다이오드 하나로는 한쪽 반주기만 통과해 전류가 주기적으로 끊긴다. 끊기지 않게 하려면 다이오드를 여럿 쓰고 축전기를 더해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-half-wave"
+    },
+    {
+      "text": "정류 회로의 축전기는 출력 전압을 높이려고 넣는 것이다",
+      "why_wrong": "축전기는 전류가 끊기는 동안 저장해 둔 전하를 내보내 출력의 들쭉날쭉함을 메우는 구실을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-smoothing"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-pn-junction-diode"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-capacitance"
+    }
+  ],
+  "curriculum": [
+    "12전자01-07"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-03",
+  "pages": [
+    44,
+    45,
+    50
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "정류 회로를 따로 카드로 쪼개지 않고 이 카드에 묶었다.",
+    "rel-half-wave 는 invertible 을 false 로 내렸다. '다이오드 하나로는 전류가 끊긴다'를 뒤집은 문장이 축전기를 더한 회로에서 참이 되기 때문이다 (C6 defect 수정). 반파·평활의 대비는 rel-smoothing 이 OX 원천으로 남는다."
+  ]
+}

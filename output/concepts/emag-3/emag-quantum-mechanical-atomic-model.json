@@ -1,0 +1,138 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-quantum-mechanical-atomic-model",
+  "concept_key": "concept:quantum-mechanical-atomic-model",
+  "registry_status": "new",
+  "term": "현대의 원자 모형",
+  "notation": {
+    "hanja": "現代原子模型",
+    "hanja_gloss": "現 나타날 현 · 代 대신할 대 · 原 근원 원 · 子 아들 자 · 模 본뜰 모 · 型 모형 형",
+    "hanja_note": "조사 '의'는 고유어여서 한자로 옮기지 않았다.",
+    "english": "quantum mechanical atomic model"
+  },
+  "definition": "불확정성 원리를 바탕에 두고 전자의 자리를 궤도가 아닌 확률 분포로 나타낸 원자 모형. 전자구름 모형이라고도 한다.",
+  "relations": [
+    {
+      "id": "rel-qm-no-orbit",
+      "text": "위치와 운동량을 함께 확정하는 보어의 궤도 개념은 불확정성 원리 때문에 성립하지 않는다.",
+      "form": {
+        "condition": "원자 속 전자를 기술할 때",
+        "type": "causal",
+        "scope": "현대의 원자 모형"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「현대의 원자 모형에서도 전자는 정해진 궤도를 따라 원운동한다」는 보어의 원자 모형이 더 이상 성립하지 않음을 보여 주었다고 한 119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "현대의 원자 모형에서도 전자는 정해진 궤도를 따라 원운동한다."
+    },
+    {
+      "id": "rel-qm-density",
+      "text": "슈뢰딩거 방정식의 해인 파동 함수를 절댓값 제곱하면 그 자리에서 전자를 발견할 확률 밀도가 된다.",
+      "form": {
+        "condition": "파동 함수의 해를 해석할 때",
+        "type": "causal",
+        "scope": "현대의 원자 모형"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「슈뢰딩거 방정식의 해인 파동 함수 값 자체가 곧 그 자리의 확률 밀도가 된다」는 파동 함수의 절댓값을 제곱한 것이 확률 밀도라고 한 119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "슈뢰딩거 방정식의 해인 파동 함수 값 자체가 곧 그 자리의 확률 밀도가 된다."
+    },
+    {
+      "id": "rel-qm-same-level",
+      "text": "현대의 수소 원자 모형이 주는 에너지 준위 값은 보어 모형에서 구한 값과 같다.",
+      "form": {
+        "condition": "수소 원자를 다룰 때",
+        "type": "conditional",
+        "scope": "수소 원자에 한정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「현대의 수소 원자 모형이 주는 에너지 준위 값은 보어 모형에서 구한 값과 다르다」는 보어 모형에서 구한 값과 같다고 한 119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "현대의 수소 원자 모형이 주는 에너지 준위 값은 보어 모형에서 구한 값과 다르다."
+    },
+    {
+      "id": "rel-qm-multi",
+      "text": "현대의 원자 모형은 수소뿐 아니라 전자가 여럿인 원자의 성질까지 설명한다.",
+      "form": {
+        "condition": "다전자 원자를 다룰 때",
+        "type": "conditional",
+        "scope": "현대의 원자 모형"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「현대의 원자 모형도 보어 모형처럼 수소 원자에만 적용된다」는 다전자 원자에도 적용된다고 한 119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "현대의 원자 모형도 보어 모형처럼 수소 원자에만 적용된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "현대의 원자 모형은 보어 모형의 전자 궤도를 더 정밀하게 계산해 낸 것이다",
+      "why_wrong": "궤도를 더 정밀하게 그린 것이 아니라 궤도라는 개념 자체를 버리고 확률 분포로 바꾼 모형이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qm-no-orbit"
+    },
+    {
+      "text": "보어 모형이 틀렸으니 거기서 구한 에너지 준위 값도 모두 폐기되었다",
+      "why_wrong": "수소 원자의 에너지 준위 값은 현대의 모형에서 구한 것과 같다. 버려진 것은 궤도 개념이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qm-same-level"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-uncertainty-principle"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-bohr-atomic-model"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-probability-density"
+    },
+    {
+      "type": "related",
+      "target": "emag-energy-level"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-2-02",
+  "pages": [
+    119,
+    126
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "aliases": [
+    "양자 역학적 원자 모형",
+    "전자구름 모형"
+  ],
+  "notes": [
+    "후보 단계에서 '양자수(주·궤도·자기 양자수)'를 이 카드에 넣기로 했다. 곁주 수준이라 별도 명제로 세우지 않고 rel-qm-density 의 파동 함수 설명에 묻어 두었다 — C8 에서 따로 볼지 판단해 주기 바란다.",
+    "★C5 경계 — rel-qm-density 에 슈뢰딩거 방정식의 형태(식)를 보태지 말 것. 12전자03-04 가 요구하는 '기초적인 수준'을 넘는다.",
+    "중복 정리 — rel-qm-no-orbit 의 inverted_text 와 글자 그대로 같던 오개념의 문면을 바꿔 적었다. 뒤집은 문장 쪽이 D1 의 OX 원천이다."
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "id": "emag-inductor-in-ac-circuit",
+  "concept_key": "concept:inductor-in-ac-circuit",
+  "registry_status": "new",
+  "term": "교류 회로에서 인덕터의 역할",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'…에서 …의 역할'이라는 구절이고 '인덕터'는 inductor 의 음차라 표제어 전체에 대응하는 한자어가 없다. 교류(交流)·회로(回路)·역할(役割)은 한자어다.",
+    "english": "role of an inductor in an AC circuit"
+  },
+  "definition": "교류 회로에 놓인 인덕터가 자체 유도로 전류 변화를 거스르면서, 진동수가 높을수록 전류를 더 막는 소자처럼 구실하는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-inductance",
+      "text": "인덕턴스가 클수록 같은 전류 변화에도 큰 유도 기전력이 생겨 회로에 전류가 흐르기 어렵다.",
+      "form": {
+        "condition": "교류 전원의 진동수가 일정할 때",
+        "type": "direct",
+        "scope": "교류 전원에 이은 인덕터",
+        "antecedent": {
+          "quantity": "인덕턴스",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "인덕터의 저항 역할",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "인덕턴스에 비례해 막는 정도가 커지므로 작아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인덕턴스가 클수록 인덕터의 저항 역할이 작아진다."
+    },
+    {
+      "id": "rel-frequency",
+      "text": "교류 전원의 진동수가 높을수록 전류의 시간 변화율이 커져 인덕터의 저항 노릇이 커진다.",
+      "form": {
+        "condition": "인덕턴스가 일정할 때",
+        "type": "direct",
+        "scope": "교류 전원에 이은 인덕터",
+        "antecedent": {
+          "quantity": "교류 전원의 진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "인덕터의 저항 역할",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진동수가 높을수록 막는 정도가 커지는 것이 확정적이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교류 전원의 진동수가 높을수록 인덕터의 저항 역할이 작아진다."
+    },
+    {
+      "id": "rel-bass",
+      "text": "인덕터는 진동수가 높은 전류를 더 막으므로, 앰프의 베이스 다이얼처럼 저음을 살리는 필터에 쓰인다.",
+      "form": {
+        "condition": "인덕터를 교류 신호가 지나는 길에 넣었을 때",
+        "type": "causal",
+        "scope": "앰프의 사운드 필터"
+      },
+      "invertible": true,
+      "invertible_reason": "인덕터가 막는 쪽은 고음이므로 저음을 막는다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인덕터는 진동수가 낮은 전류를 더 막으므로 고음을 살리는 필터에 쓰인다."
+    },
+    {
+      "id": "rel-opposite-to-capacitor",
+      "text": "진동수를 올리면 인덕터의 저항 노릇은 커지고 축전기의 저항 노릇은 작아져 둘이 서로 반대로 움직인다.",
+      "form": {
+        "condition": "인덕턴스와 전기 용량이 일정할 때",
+        "type": "conditional",
+        "scope": "교류 회로에 함께 놓인 인덕터와 축전기"
+      },
+      "invertible": true,
+      "invertible_reason": "두 소자가 진동수에 반대로 반응하는 것이 확정적이라 나란히 움직인다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수를 올리면 인덕터와 축전기의 저항 노릇이 나란히 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인덕터는 진동수가 낮을수록 전류를 더 잘 막는다",
+      "why_wrong": "진동수가 낮으면 전류의 시간 변화율이 작아 자체 유도가 약하다. 인덕터의 저항 노릇은 진동수가 높을수록 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-frequency"
+    },
+    {
+      "text": "인덕터와 축전기는 둘 다 전류를 막으므로 진동수에 대해 같은 방식으로 움직인다",
+      "why_wrong": "진동수가 높아지면 인덕터는 더 막고 축전기는 덜 막아 서로 반대로 움직인다. 이 차이 때문에 RLC 회로에 공명 진동수가 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-opposite-to-capacitor"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-inductor"
+    },
+    {
+      "type": "next",
+      "target": "emag-rlc-circuit"
+    },
+    {
+      "type": "related",
+      "target": "emag-capacitor-in-ac-circuit"
+    }
+  ],
+  "curriculum": [
+    "12전자01-06"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-02",
+  "pages": [
+    41,
+    43,
+    50
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

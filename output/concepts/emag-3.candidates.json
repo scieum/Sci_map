@@ -1,0 +1,875 @@
+{
+  "unit_id": "emag-3",
+  "subject": "전자기와 양자",
+  "unit_title": "Ⅲ. 양자와 미시 세계",
+  "generated_at": "2026-09-14",
+  "attempt": 1,
+  "source": {
+    "text_jsonl": "output/source/emag-3/text.jsonl",
+    "standards": ".claude/skills/curriculum-mapper/references/standards.yaml",
+    "registry": "docs/concept_registry.yaml"
+  },
+  "candidates": [
+    {
+      "id": "emag-wave-particle-duality",
+      "term": "빛과 물질의 이중성",
+      "aliases": ["입자-파동 이중성", "이중성"],
+      "term_en": "wave-particle duality",
+      "concept_key": "concept:wave-particle-duality",
+      "registry_status": "new",
+      "pages": [100, 108],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 100, "block_id": "p100-b10", "hint": "거시/미시 세계에서의 성질 대비"},
+        {"page": 100, "block_id": "p100-b6", "hint": "소단원 1 표제"},
+        {"page": 108, "block_id": "p108-b3", "hint": "중단원 정리 빈칸 1"}
+      ],
+      "relation_seeds": [
+        "미시 세계에서 물질이 나타내는 파동성",
+        "미시 세계에서 빛이 나타내는 입자성",
+        "이중성과 전자 현미경·CCD의 작동"
+      ],
+      "note": "「물리학」은 빛의 이중성(concept:wave-particle-duality-of-light)과 물질의 이중성(concept:wave-particle-duality-of-matter)을 두 장으로 나눠 두었다. 이 교과서는 한 묶음으로 서술해 통합 키를 잠정으로 지었다 — 갈지 합칠지는 G3 사람 판정이 필요하다."
+    },
+    {
+      "id": "emag-matter-wave",
+      "term": "물질파",
+      "aliases": ["드브로이파"],
+      "term_en": "matter wave",
+      "concept_key": "concept:matter-wave",
+      "registry_status": "new",
+      "same_candidate": ["phys-matter-wave"],
+      "pages": [100, 102, 118],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 100, "block_id": "p100-b11", "hint": "연계 곁주 드브로이 관계식"},
+        {"page": 102, "block_id": "p102-b14", "hint": "연계 학습 물질파"},
+        {"page": 118, "block_id": "p118-b3", "hint": "드브로이 물질파 곁주"}
+      ],
+      "relation_seeds": [
+        "입자의 운동량과 물질파 파장",
+        "물질파 파장과 전자 현미경의 분해능"
+      ],
+      "note": "concept_key 는 phys-matter-wave 카드와 같은 문자열로 두었다. 사전에는 아직 없어 registry_status 는 new 다."
+    },
+    {
+      "id": "emag-electron-double-slit-experiment",
+      "term": "전자의 이중 슬릿 실험",
+      "term_en": "electron double-slit experiment",
+      "concept_key": "concept:electron-double-slit-experiment",
+      "registry_status": "new",
+      "pages": [101],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 101, "block_id": "p101-b13", "hint": "슬릿 하나/둘일 때 무늬 차이"},
+        {"page": 101, "block_id": "p101-b23", "hint": "물질파 간섭으로 해석"}
+      ],
+      "relation_seeds": [
+        "연 슬릿의 개수와 간섭무늬의 유무",
+        "두 슬릿을 지난 물질파의 간섭"
+      ]
+    },
+    {
+      "id": "emag-single-electron-double-slit",
+      "term": "단일 전자의 이중 슬릿 실험",
+      "aliases": ["단일 양자 이중 슬릿 실험"],
+      "term_en": "single-electron double-slit experiment",
+      "concept_key": "concept:single-particle-double-slit-experiment",
+      "registry_status": "new",
+      "pages": [102, 103, 108],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 102, "block_id": "p102-b3", "hint": "전자 1개씩 입사 실험"},
+        {"page": 102, "block_id": "p102-b4", "hint": "실험 결과 a~d 무늬 변화"},
+        {"page": 108, "block_id": "p108-b19", "hint": "중단원 정리 3"}
+      ],
+      "relation_seeds": [
+        "누적된 전자 수와 간섭무늬의 형성",
+        "입자성·파동성 하나만으로는 결과를 설명할 수 없음"
+      ]
+    },
+    {
+      "id": "emag-probability-wave",
+      "term": "확률 파동",
+      "aliases": ["파동 함수"],
+      "term_en": "probability wave",
+      "concept_key": "concept:probability-wave",
+      "registry_status": "new",
+      "pages": [102, 103, 108],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 102, "block_id": "p102-b17", "hint": "확률 파동(파동 함수)의 정의"},
+        {"page": 103, "block_id": "p103-b11", "hint": "그림 III-3 확률 파동"},
+        {"page": 108, "block_id": "p108-b5", "hint": "중단원 정리 2"}
+      ],
+      "relation_seeds": [
+        "물질파에서 변하는 양을 시간과 위치의 함수로 나타낸 것",
+        "확률 파동과 입자가 발견될 확률"
+      ]
+    },
+    {
+      "id": "emag-probability-density",
+      "term": "확률 밀도",
+      "aliases": ["발견 확률"],
+      "term_en": "probability density",
+      "concept_key": "concept:probability-density",
+      "registry_status": "new",
+      "pages": [103, 108, 119],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01", "12전자03-04"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 103, "block_id": "p103-b12", "hint": "그림 III-4 입자가 발견될 확률"},
+        {"page": 108, "block_id": "p108-b5", "hint": "절댓값의 제곱이 큰 지점"},
+        {"page": 119, "block_id": "p119-b14", "hint": "수소 원자 확률 밀도 그림"}
+      ],
+      "relation_seeds": [
+        "확률 파동 절댓값의 제곱과 발견 확률의 크기",
+        "절댓값의 제곱이 0인 지점에는 입자가 도달하지 않음"
+      ]
+    },
+    {
+      "id": "emag-probability-wave-interference",
+      "term": "확률 파동의 간섭",
+      "term_en": "interference of probability waves",
+      "concept_key": "concept:probability-wave-interference",
+      "registry_status": "new",
+      "pages": [103, 108],
+      "topic_id": "emag-3-1-01",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-01"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 103, "block_id": "p103-b21", "hint": "단일 전자 결과의 확률 파동 해석"},
+        {"page": 103, "block_id": "p103-b23", "hint": "그림 III-5"},
+        {"page": 108, "block_id": "p108-b23", "hint": "중단원 정리 결과의 해석"}
+      ],
+      "relation_seeds": [
+        "하나의 전자가 두 슬릿을 동시에 지나는 것이 가능한 까닭",
+        "두 확률 파동의 간섭과 스크린 위 도착점 분포",
+        "확률 파동이 스크린에 닿는 순간 위치가 확률적으로 결정됨"
+      ]
+    },
+    {
+      "id": "emag-quantum-superposition",
+      "term": "중첩 상태",
+      "aliases": ["양자 중첩"],
+      "term_en": "quantum superposition",
+      "concept_key": "concept:quantum-superposition",
+      "registry_status": "new",
+      "pages": [104, 108],
+      "topic_id": "emag-3-1-02",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-02"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 104, "block_id": "p104-b9", "hint": "중첩 상태의 정의"},
+        {"page": 104, "block_id": "p104-b22", "hint": "알고 있니 중첩 상태"},
+        {"page": 108, "block_id": "p108-b32", "hint": "중단원 정리 빈칸 6"}
+      ],
+      "relation_seeds": [
+        "여러 가능성을 동시에 갖는 상태",
+        "중첩 상태와 이중 슬릿 간섭무늬"
+      ]
+    },
+    {
+      "id": "emag-measurement-state-change",
+      "term": "측정에 의한 확률적 상태 변화",
+      "term_en": "probabilistic state change by measurement",
+      "concept_key": "concept:quantum-measurement-state-change",
+      "registry_status": "new",
+      "pages": [104, 105, 108],
+      "topic_id": "emag-3-1-02",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-02"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 104, "block_id": "p104-b25", "hint": "측정 순간 하나의 입자로"},
+        {"page": 105, "block_id": "p105-b2", "hint": "확률로 그 위치에 나타남"},
+        {"page": 108, "block_id": "p108-b33", "hint": "중단원 정리 빈칸 7"}
+      ],
+      "relation_seeds": [
+        "측정 전후의 상태 변화",
+        "검출기로 경로를 측정하면 간섭무늬가 사라짐"
+      ]
+    },
+    {
+      "id": "emag-copenhagen-interpretation",
+      "term": "코펜하겐 해석",
+      "term_en": "Copenhagen interpretation",
+      "concept_key": "concept:copenhagen-interpretation",
+      "registry_status": "new",
+      "pages": [105],
+      "topic_id": "emag-3-1-02",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-02"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 105, "block_id": "p105-b1", "hint": "코펜하겐 해석을 따른다는 서술"},
+        {"page": 105, "block_id": "p105-b13", "hint": "곁주 코펜하겐 해석"}
+      ],
+      "relation_seeds": [
+        "중첩과 확률적 상태 변화를 설명하는 표준 해석"
+      ]
+    },
+    {
+      "id": "emag-qubit",
+      "term": "큐비트",
+      "term_en": "qubit",
+      "concept_key": "concept:qubit",
+      "registry_status": "new",
+      "pages": [105, 108],
+      "topic_id": "emag-3-1-02",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-02"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 105, "block_id": "p105-b12", "hint": "비트와 큐비트의 대비"},
+        {"page": 105, "block_id": "p105-b16", "hint": "곁주 큐비트"},
+        {"page": 108, "block_id": "p108-b35", "hint": "중단원 정리 빈칸 8"}
+      ],
+      "relation_seeds": [
+        "비트와 달리 0과 1의 중첩 상태를 가질 수 있음",
+        "큐비트 수와 동시에 표시 가능한 상태 수"
+      ]
+    },
+    {
+      "id": "emag-quantum-computer",
+      "term": "양자 컴퓨터",
+      "term_en": "quantum computer",
+      "concept_key": "concept:quantum-computer",
+      "registry_status": "new",
+      "pages": [105, 106, 108],
+      "topic_id": "emag-3-1-02",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 105, "block_id": "p105-b8", "hint": "중첩시켜 동시에 통과시킴"},
+        {"page": 105, "block_id": "p105-b12", "hint": "큐비트를 정보 처리 단위로"},
+        {"page": 106, "block_id": "p106-b2", "hint": "큐비트 수와 계산 속도"}
+      ],
+      "relation_seeds": [
+        "중첩을 이용한 동시 탐색과 고전 컴퓨터의 순차 탐색",
+        "간섭으로 정답만 남기고 측정",
+        "양자 컴퓨터와 소인수 분해 기반 암호의 안전성"
+      ]
+    },
+    {
+      "id": "emag-quantum-cryptography",
+      "term": "양자 암호 통신",
+      "term_en": "quantum cryptographic communication",
+      "concept_key": "concept:quantum-cryptography",
+      "registry_status": "new",
+      "pages": [106, 108],
+      "topic_id": "emag-3-1-02",
+      "section_id": "emag-3-1",
+      "curriculum": ["12전자03-02"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 106, "block_id": "p106-b25", "hint": "도청 순간 중첩이 깨짐"},
+        {"page": 106, "block_id": "p106-b29", "hint": "그림 III-10 원리"},
+        {"page": 108, "block_id": "p108-b40", "hint": "중단원 정리 빈칸 9"}
+      ],
+      "relation_seeds": [
+        "도청(측정)과 중첩의 붕괴",
+        "고전적 암호 전송과의 도청 탐지 가능성 차이"
+      ]
+    },
+    {
+      "id": "emag-potential-barrier",
+      "term": "퍼텐셜 장벽",
+      "term_en": "potential barrier",
+      "concept_key": "concept:potential-barrier",
+      "registry_status": "new",
+      "pages": [112, 113],
+      "topic_id": "emag-3-2-01",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-03"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 112, "block_id": "p112-b13", "hint": "퍼텐셜 장벽의 정의"},
+        {"page": 113, "block_id": "p113-b30", "hint": "그림 III-12 (가) E<Ub"}
+      ],
+      "relation_seeds": [
+        "입자의 역학적 에너지와 장벽 높이의 비교",
+        "고전 역학에서 장벽을 넘지 못하는 조건"
+      ]
+    },
+    {
+      "id": "emag-quantum-tunneling",
+      "term": "터널 효과",
+      "aliases": ["양자 터널링"],
+      "term_en": "quantum tunneling",
+      "concept_key": "concept:quantum-tunneling",
+      "registry_status": "new",
+      "pages": [112, 113, 126],
+      "topic_id": "emag-3-2-01",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-03"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 112, "block_id": "p112-b11", "hint": "고전 역학과 미시 세계의 대비"},
+        {"page": 112, "block_id": "p112-b13", "hint": "터널 효과의 정의"},
+        {"page": 126, "block_id": "p126-b3", "hint": "중단원 정리 빈칸 1"}
+      ],
+      "relation_seeds": [
+        "역학적 에너지보다 높은 장벽을 투과하는 현상",
+        "입자의 파동성과 장벽에서의 반사·투과"
+      ]
+    },
+    {
+      "id": "emag-tunneling-probability",
+      "term": "투과 확률",
+      "term_en": "transmission probability",
+      "concept_key": "concept:tunneling-probability",
+      "registry_status": "new",
+      "pages": [113, 126],
+      "topic_id": "emag-3-2-01",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-03"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 113, "block_id": "p113-b33", "hint": "두께·높이·질량과 투과 확률"},
+        {"page": 113, "block_id": "p113-b34", "hint": "곁주 질량과 투과 확률"},
+        {"page": 126, "block_id": "p126-b5", "hint": "중단원 정리 투과율"}
+      ],
+      "relation_seeds": [
+        "장벽의 두께와 투과 확률",
+        "장벽의 높이와 투과 확률",
+        "입자의 질량과 터널 효과의 크기"
+      ]
+    },
+    {
+      "id": "emag-scanning-tunneling-microscope",
+      "term": "주사 터널링 현미경",
+      "aliases": ["STM"],
+      "term_en": "scanning tunneling microscope",
+      "concept_key": "concept:scanning-tunneling-microscope",
+      "registry_status": "new",
+      "pages": [114, 126],
+      "topic_id": "emag-3-2-01",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-03"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 114, "block_id": "p114-b7", "hint": "STM의 구조와 원리"},
+        {"page": 114, "block_id": "p114-b8", "hint": "그림 III-13 탐침·압전 소자"},
+        {"page": 126, "block_id": "p126-b7", "hint": "중단원 정리 빈칸 3"}
+      ],
+      "relation_seeds": [
+        "탐침과 시료 사이의 터널링 전류",
+        "일정한 전류를 유지하는 탐침 높이와 표면 높낮이"
+      ]
+    },
+    {
+      "id": "emag-tunneling-in-miniaturized-device",
+      "term": "전자 소자 소형화와 터널 효과",
+      "term_en": "tunneling in miniaturized electronic devices",
+      "concept_key": "concept:tunneling-in-miniaturized-device",
+      "registry_status": "new",
+      "pages": [114, 115, 126],
+      "topic_id": "emag-3-2-01",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-03"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 114, "block_id": "p114-b12", "hint": "미세화와 전자의 이탈"},
+        {"page": 115, "block_id": "p115-b1", "hint": "오작동·누설 전류"},
+        {"page": 126, "block_id": "p126-b8", "hint": "중단원 정리 3"}
+      ],
+      "relation_seeds": [
+        "소자 미세화와 터널 효과의 빈도",
+        "터널 효과와 누설 전류에 의한 전력 손실"
+      ],
+      "note": "사례에 가깝지만 12전자03-03 이 '관련된 현상'을 직접 요구하고 중단원 정리에도 항목으로 올라 있어 context 로 남겼다."
+    },
+    {
+      "id": "emag-measurement-disturbance",
+      "term": "측정에 의한 교란",
+      "term_en": "disturbance by measurement",
+      "concept_key": "concept:measurement-disturbance",
+      "registry_status": "new",
+      "pages": [116, 117],
+      "topic_id": "emag-3-2-02",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 116, "block_id": "p116-b12", "hint": "스피드 건과 전자 측정의 대비"},
+        {"page": 116, "block_id": "p116-b20", "hint": "그림 III-16 운동량 교란"},
+        {"page": 116, "block_id": "p116-b22", "hint": "광자의 운동량과 불확정도"}
+      ],
+      "relation_seeds": [
+        "측정 대상의 질량과 측정으로 생기는 교란의 크기",
+        "조명광의 파장과 운동량 교란"
+      ],
+      "note": "하이젠베르크의 사고 실험 자리다. 표제어를 '하이젠베르크 현미경'으로 두지 않은 것은 교과서가 그 이름을 쓰지 않기 때문이다."
+    },
+    {
+      "id": "emag-uncertainty-principle",
+      "term": "불확정성 원리",
+      "term_en": "uncertainty principle",
+      "concept_key": "concept:uncertainty-principle",
+      "registry_status": "new",
+      "pages": [117, 119, 126],
+      "topic_id": "emag-3-2-02",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 117, "block_id": "p117-b1", "hint": "위치와 운동량의 동시 측정 불가"},
+        {"page": 117, "block_id": "p117-b2", "hint": "관계식"},
+        {"page": 126, "block_id": "p126-b9", "hint": "중단원 정리 불확정성 원리"}
+      ],
+      "relation_seeds": [
+        "위치의 불확정도와 운동량의 불확정도의 관계",
+        "단일 슬릿 폭과 회절 무늬 폭",
+        "측정 기술의 한계가 아니라 원리적 한계"
+      ]
+    },
+    {
+      "id": "emag-bohr-atomic-model",
+      "term": "보어의 원자 모형",
+      "aliases": ["보어 원자 모형"],
+      "term_en": "Bohr atomic model",
+      "concept_key": "concept:bohr-atomic-model",
+      "registry_status": "new",
+      "same_candidate": ["phys-bohr-atomic-model"],
+      "pages": [118, 126],
+      "topic_id": "emag-3-2-02",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 118, "block_id": "p118-b11", "hint": "두 가설로 안정성·선스펙트럼 설명"},
+        {"page": 118, "block_id": "p118-b12", "hint": "제1가설 양자 조건"},
+        {"page": 118, "block_id": "p118-b17", "hint": "제2가설 전이와 광자"}
+      ],
+      "relation_seeds": [
+        "양자 조건과 안정한 궤도",
+        "궤도 전이와 방출·흡수되는 광자의 에너지",
+        "보어 모형이 설명하지 못한 다전자 원자의 선스펙트럼"
+      ]
+    },
+    {
+      "id": "emag-energy-level",
+      "term": "에너지 준위",
+      "term_en": "energy level",
+      "concept_key": "concept:energy-level",
+      "registry_status": "new",
+      "same_candidate": ["phys-energy-level"],
+      "pages": [118, 124],
+      "topic_id": "emag-3-2-02",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04", "12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 118, "block_id": "p118-b38", "hint": "그림 III-19 양자화된 에너지 준위"},
+        {"page": 124, "block_id": "p124-b55", "hint": "연계 곁주 전자의 전이"}
+      ],
+      "relation_seeds": [
+        "양자수와 에너지 준위의 값",
+        "두 준위의 에너지 차와 방출·흡수되는 빛의 파장",
+        "원자의 종류와 에너지 준위 차"
+      ]
+    },
+    {
+      "id": "emag-standing-wave-orbit-condition",
+      "term": "전자 궤도의 정상파 조건",
+      "term_en": "standing wave condition of electron orbit",
+      "concept_key": "concept:standing-wave-condition-of-electron-orbit",
+      "registry_status": "new",
+      "pages": [118],
+      "topic_id": "emag-3-2-02",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04"],
+      "role": "supporting",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 118, "block_id": "p118-b42", "hint": "물질파 이론을 보어 모형에 적용"},
+        {"page": 118, "block_id": "p118-b51", "hint": "궤도 둘레와 파장의 정수배"},
+        {"page": 118, "block_id": "p118-b49", "hint": "그림 III-20"}
+      ],
+      "relation_seeds": [
+        "궤도 둘레가 물질파 파장의 정수배일 때 안정한 궤도",
+        "물질파로 재해석한 보어의 제1가설"
+      ]
+    },
+    {
+      "id": "emag-quantum-mechanical-atomic-model",
+      "term": "현대의 원자 모형",
+      "aliases": ["양자 역학적 원자 모형"],
+      "term_en": "quantum mechanical atomic model",
+      "concept_key": "concept:quantum-mechanical-atomic-model",
+      "registry_status": "new",
+      "pages": [119, 126],
+      "topic_id": "emag-3-2-02",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 119, "block_id": "p119-b2", "hint": "보어 모형의 한계와 슈뢰딩거"},
+        {"page": 119, "block_id": "p119-b18", "hint": "보어 모형과의 공통점·차이"},
+        {"page": 126, "block_id": "p126-b30", "hint": "중단원 정리 3"}
+      ],
+      "relation_seeds": [
+        "불확정성 원리와 궤도 개념의 폐기",
+        "파동 함수로 주어지는 전자의 존재 확률 분포",
+        "현대 모형과 보어 모형의 에너지 준위 일치"
+      ]
+    },
+    {
+      "id": "emag-classical-vs-quantum-physics",
+      "term": "고전 물리학과 양자 물리학",
+      "term_en": "classical physics and quantum physics",
+      "concept_key": "concept:classical-vs-quantum-physics",
+      "registry_status": "new",
+      "pages": [123],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-04"],
+      "role": "context",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 123, "block_id": "p123-b2", "hint": "예측 가능성의 대비"},
+        {"page": 123, "block_id": "p123-b3", "hint": "우주의 근본적 한계"}
+      ],
+      "relation_seeds": [
+        "초기 조건의 정밀도와 미래 예측 가능성",
+        "확률로만 답할 수 있는 미시 세계의 기술 방식"
+      ],
+      "note": "읽기 면(p123)이라 topic_id 는 03 핵융합 자리에 있지만 내용은 불확정성 원리에 붙는다. 그래서 성취기준은 12전자03-04 로 달았다."
+    },
+    {
+      "id": "emag-mass-energy-equivalence",
+      "term": "질량-에너지 등가 원리",
+      "term_en": "mass-energy equivalence",
+      "concept_key": "concept:mass-energy-equivalence",
+      "registry_status": "new",
+      "pages": [120],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b11", "hint": "E=mc² 와 등가 원리"}
+      ],
+      "relation_seeds": [
+        "질량과 에너지의 상호 전환",
+        "질량 결손의 크기와 방출 에너지"
+      ]
+    },
+    {
+      "id": "emag-mass-defect",
+      "term": "질량 결손",
+      "term_en": "mass defect",
+      "concept_key": "concept:mass-defect",
+      "registry_status": "new",
+      "pages": [120, 126],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b11", "hint": "핵반응 전후의 질량 차"},
+        {"page": 126, "block_id": "p126-b31", "hint": "중단원 정리 빈칸 7"}
+      ],
+      "relation_seeds": [
+        "핵반응 전후 질량 차가 에너지로 전환됨",
+        "태양의 초당 질량 결손과 방출 에너지"
+      ]
+    },
+    {
+      "id": "emag-nuclear-reaction-equation",
+      "term": "핵반응식",
+      "term_en": "nuclear reaction equation",
+      "concept_key": "concept:nuclear-reaction-equation",
+      "registry_status": "new",
+      "pages": [120],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b11", "hint": "질량수·전하량 보존"},
+        {"page": 120, "block_id": "p120-b67", "hint": "곁주 원소의 표시"}
+      ],
+      "relation_seeds": [
+        "반응 전후 질량수의 합이 같음",
+        "반응 전후 원자 번호의 합이 같음"
+      ]
+    },
+    {
+      "id": "emag-strong-nuclear-force",
+      "term": "강한 핵력",
+      "aliases": ["강한 상호작용"],
+      "term_en": "strong nuclear force",
+      "concept_key": "concept:strong-nuclear-force",
+      "registry_status": "new",
+      "pages": [121],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 121, "block_id": "p121-b11", "hint": "전기력 척력과 핵력의 경쟁"},
+        {"page": 121, "block_id": "p121-b20", "hint": "곁주 강한 핵력"}
+      ],
+      "relation_seeds": [
+        "원자핵 사이의 전기적 척력과 강한 핵력의 작용 거리",
+        "두 원자핵이 가까워져야 융합이 일어남"
+      ]
+    },
+    {
+      "id": "emag-plasma",
+      "term": "플라스마",
+      "term_en": "plasma",
+      "concept_key": "concept:plasma",
+      "registry_status": "new",
+      "pages": [121, 122],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "context",
+      "difficulty": 2,
+      "evidence": [
+        {"page": 121, "block_id": "p121-b21", "hint": "곁주 플라스마 상태"},
+        {"page": 122, "block_id": "p122-b3", "hint": "초고온 플라스마와 KSTAR"}
+      ],
+      "relation_seeds": [
+        "원자핵과 전자가 분리된 상태",
+        "초고온 플라스마와 핵융합 반응의 조건"
+      ]
+    },
+    {
+      "id": "emag-nuclear-fusion",
+      "term": "핵융합 반응",
+      "term_en": "nuclear fusion",
+      "concept_key": "concept:nuclear-fusion",
+      "registry_status": "new",
+      "pages": [121, 126],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "core",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 121, "block_id": "p121-b11", "hint": "가벼운 핵이 무거운 핵으로"},
+        {"page": 126, "block_id": "p126-b31", "hint": "중단원 정리 핵융합"}
+      ],
+      "relation_seeds": [
+        "가벼운 원자핵이 무거운 원자핵으로 바뀌며 에너지 방출",
+        "온도와 압력이 높을수록 융합이 일어나기 쉬움"
+      ]
+    },
+    {
+      "id": "emag-hydrogen-fusion",
+      "term": "수소 핵융합 반응",
+      "term_en": "hydrogen fusion",
+      "concept_key": "concept:hydrogen-fusion",
+      "registry_status": "new",
+      "same_candidate": ["earth-hydrogen-fusion", "isci2-hydrogen-fusion"],
+      "pages": [120, 121, 122],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 120, "block_id": "p120-b15", "hint": "별 내부 핵융합 단계 자료"},
+        {"page": 120, "block_id": "p120-b46", "hint": "1단계 반응"},
+        {"page": 121, "block_id": "p121-b18", "hint": "터널 효과와 태양 중심 융합"}
+      ],
+      "relation_seeds": [
+        "수소 원자핵 4개가 헬륨 원자핵 1개로",
+        "터널 효과 덕분에 태양 중심 온도에서도 융합이 일어남",
+        "태양 중심에서 생성된 빛이 표면까지 전달되는 과정"
+      ],
+      "note": "concept_key 를 earth-hydrogen-fusion·isci2-hydrogen-fusion 과 같은 문자열로 맞췄다. 별의 에너지원이라는 점에서 같은 개념으로 본다."
+    },
+    {
+      "id": "emag-continuous-spectrum",
+      "term": "연속 스펙트럼",
+      "term_en": "continuous spectrum",
+      "concept_key": "concept:continuous-spectrum",
+      "registry_status": "new",
+      "pages": [122, 124, 126],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 122, "block_id": "p122-b2", "hint": "재흡수·재방출과 연속 스펙트럼"},
+        {"page": 124, "block_id": "p124-b48", "hint": "연계 곁주 스펙트럼 3종"},
+        {"page": 126, "block_id": "p126-b33", "hint": "중단원 정리 빈칸 8"}
+      ],
+      "relation_seeds": [
+        "고밀도 기체의 재흡수·재방출과 연속 스펙트럼",
+        "태양 표면에서 방출되는 빛의 스펙트럼 형태"
+      ]
+    },
+    {
+      "id": "emag-line-spectrum",
+      "term": "선스펙트럼",
+      "aliases": ["방출 선스펙트럼", "흡수 선스펙트럼"],
+      "term_en": "line spectrum",
+      "concept_key": "concept:line-spectrum",
+      "registry_status": "new",
+      "same_candidate": ["phys-line-spectrum", "isci1-line-spectrum"],
+      "pages": [124],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "supporting",
+      "difficulty": 3,
+      "evidence": [
+        {"page": 124, "block_id": "p124-b2", "hint": "흡수선·방출선의 위치 일치"},
+        {"page": 124, "block_id": "p124-b48", "hint": "연계 곁주 방출·흡수 선스펙트럼"},
+        {"page": 124, "block_id": "p124-b27", "hint": "그림 III-25 3가지 유형"}
+      ],
+      "relation_seeds": [
+        "원자의 에너지 준위 차와 선의 위치",
+        "같은 원소의 흡수선과 방출선의 위치가 같음"
+      ]
+    },
+    {
+      "id": "emag-stellar-composition-from-spectrum",
+      "term": "별빛 스펙트럼과 구성 원소",
+      "term_en": "stellar composition from spectrum",
+      "concept_key": "concept:stellar-composition-from-spectrum",
+      "registry_status": "new",
+      "pages": [125, 126],
+      "topic_id": "emag-3-2-03",
+      "section_id": "emag-3-2",
+      "curriculum": ["12전자03-05"],
+      "role": "core",
+      "difficulty": 4,
+      "evidence": [
+        {"page": 125, "block_id": "p125-b11", "hint": "흡수선 패턴으로 구성 원소 판별"},
+        {"page": 125, "block_id": "p125-b16", "hint": "그림 III-26 선의 굵기"},
+        {"page": 126, "block_id": "p126-b34", "hint": "중단원 정리 3"}
+      ],
+      "relation_seeds": [
+        "별빛의 흡수 선스펙트럼 패턴과 구성 원소",
+        "스펙트럼 선의 굵기와 구성 원소의 밀도"
+      ]
+    }
+  ],
+
+  "hierarchy": [
+    {"from": "emag-wave-particle-duality", "to": "emag-matter-wave"},
+    {"from": "emag-matter-wave", "to": "emag-electron-double-slit-experiment", "note": "간섭을 물질파로 읽어야 실험 결과가 보인다"},
+    {"from": "emag-electron-double-slit-experiment", "to": "emag-single-electron-double-slit"},
+    {"from": "emag-single-electron-double-slit", "to": "emag-probability-wave", "note": "확률 파동은 이 실험 결과를 설명하려고 도입된다"},
+    {"from": "emag-probability-wave", "to": "emag-probability-density"},
+    {"from": "emag-probability-wave", "to": "emag-probability-wave-interference"},
+    {"from": "emag-probability-density", "to": "emag-probability-wave-interference"},
+    {"from": "emag-probability-wave-interference", "to": "emag-quantum-superposition"},
+    {"from": "emag-quantum-superposition", "to": "emag-measurement-state-change"},
+    {"from": "emag-measurement-state-change", "to": "emag-copenhagen-interpretation"},
+    {"from": "emag-quantum-superposition", "to": "emag-qubit"},
+    {"from": "emag-qubit", "to": "emag-quantum-computer"},
+    {"from": "emag-measurement-state-change", "to": "emag-quantum-cryptography"},
+    {"from": "emag-potential-barrier", "to": "emag-quantum-tunneling"},
+    {"from": "emag-probability-wave", "to": "emag-quantum-tunneling", "note": "장벽 너머 확률이 0이 아님을 확률 파동으로 읽는다"},
+    {"from": "emag-quantum-tunneling", "to": "emag-tunneling-probability"},
+    {"from": "emag-quantum-tunneling", "to": "emag-scanning-tunneling-microscope"},
+    {"from": "emag-tunneling-probability", "to": "emag-tunneling-in-miniaturized-device"},
+    {"from": "emag-measurement-disturbance", "to": "emag-uncertainty-principle"},
+    {"from": "emag-matter-wave", "to": "emag-measurement-disturbance", "note": "광자의 운동량 p=h/λ 가 전제다"},
+    {"from": "emag-bohr-atomic-model", "to": "emag-energy-level"},
+    {"from": "emag-matter-wave", "to": "emag-standing-wave-orbit-condition"},
+    {"from": "emag-bohr-atomic-model", "to": "emag-standing-wave-orbit-condition"},
+    {"from": "emag-uncertainty-principle", "to": "emag-quantum-mechanical-atomic-model"},
+    {"from": "emag-bohr-atomic-model", "to": "emag-quantum-mechanical-atomic-model"},
+    {"from": "emag-probability-density", "to": "emag-quantum-mechanical-atomic-model"},
+    {"from": "emag-uncertainty-principle", "to": "emag-classical-vs-quantum-physics"},
+    {"from": "emag-mass-energy-equivalence", "to": "emag-mass-defect"},
+    {"from": "emag-mass-defect", "to": "emag-nuclear-fusion"},
+    {"from": "emag-nuclear-reaction-equation", "to": "emag-nuclear-fusion"},
+    {"from": "emag-strong-nuclear-force", "to": "emag-nuclear-fusion"},
+    {"from": "emag-nuclear-fusion", "to": "emag-hydrogen-fusion"},
+    {"from": "emag-quantum-tunneling", "to": "emag-hydrogen-fusion", "note": "태양 중심 온도로는 부족한 부분을 터널 효과가 메운다"},
+    {"from": "emag-plasma", "to": "emag-hydrogen-fusion"},
+    {"from": "emag-hydrogen-fusion", "to": "emag-continuous-spectrum"},
+    {"from": "emag-energy-level", "to": "emag-line-spectrum"},
+    {"from": "emag-line-spectrum", "to": "emag-stellar-composition-from-spectrum"},
+    {"from": "emag-continuous-spectrum", "to": "emag-stellar-composition-from-spectrum"}
+  ],
+
+  "excluded": [
+    {"term": "전자 현미경", "reason": "중복", "note": "phys-electron-microscope·cell-electron-microscope 카드가 이미 있다. 여기서는 이중성 이용 사례로만 등장한다", "pages": [100, 103]},
+    {"term": "전하 결합 소자(CCD)", "reason": "사례", "note": "이중성의 응용 사례로 그림 설명에만 나온다", "pages": [100]},
+    {"term": "양자 기술", "reason": "기타", "note": "상위 범주다. 양자 컴퓨터·양자 암호 통신 카드가 실질을 담는다", "pages": [107]},
+    {"term": "양자 센서", "reason": "사례", "note": "조사 활동 표에 이름만 있다", "pages": [107]},
+    {"term": "슈뢰딩거의 고양이", "reason": "사례", "note": "소단원 도입 삽화의 예화. 본문에서 개념으로 정의하지 않는다", "pages": [104]},
+    {"term": "고전 컴퓨터와 비트", "reason": "기타", "note": "큐비트 카드 안에서 대비로 다루는 편이 낫다", "pages": [105]},
+    {"term": "공개키·개인키(RSA)", "reason": "범위 밖", "note": "정보 교과의 암호 체계다. 양자 암호 통신의 배경으로만 서술된다", "pages": [106]},
+    {"term": "압전 소자", "reason": "사례", "note": "STM 그림 설명의 부품", "pages": [114]},
+    {"term": "알파 붕괴", "reason": "활동", "note": "터널 효과 조사 활동의 자료다. 본문 정의가 없다", "pages": [115]},
+    {"term": "양자수(주·궤도·자기 양자수)", "reason": "기타", "note": "곁주로만 나온다. 현대의 원자 모형 카드에 포함시키는 편이 낫다. 사람이 다시 볼 만한 항목", "pages": [119]},
+    {"term": "핵분열", "reason": "범위 밖", "note": "곁주에서 핵융합과 대비로만 언급된다. isci2-nuclear-fission 후보가 이미 있다", "pages": [122]},
+    {"term": "KSTAR·핵융합 발전", "reason": "사례", "note": "12전자03-05 는 별의 핵융합을 요구한다. 지상 핵융합 개발은 응용 사례다. 사람이 다시 볼 만한 항목", "pages": [122]},
+    {"term": "전자 중성미자·양전자", "reason": "기타", "note": "핵융합 단계 설명의 부속 입자. 곁주 수준이다", "pages": [120]},
+    {"term": "원자 질량 단위(u)", "reason": "단위·기호", "pages": [121]},
+    {"term": "도플러 효과", "reason": "범위 밖", "note": "별빛 스펙트럼으로 알 수 있는 것의 목록에 이름만 있다", "pages": [125]},
+    {"term": "보른", "reason": "인물", "pages": [102]},
+    {"term": "슈뢰딩거", "reason": "인물", "pages": [119]},
+    {"term": "하이젠베르크", "reason": "인물", "pages": [97, 116]}
+  ],
+
+  "notes": [
+    "role 분포 확인: body 28 · section_review 2(p108·p126) · unit_review 4 · front 1. 카드는 body 에서만 뽑았고 p108·p126 의 「핵심 개념 정리하기」를 누락 점검 체크리스트로 썼다 — 정리면의 9+8 항목이 모두 후보 또는 excluded 에 대응한다.",
+    "p97·p98·p110 의 '자기 점검' 목록(물질파·이중성·에너지 준위·원자핵·스펙트럼 등)은 교과서가 직접 밝힌 선수 개념이다. 이 단원에서 다시 정의하는 것만 카드로 만들고, 나머지는 단원 밖 위계로 남겼다.",
+    "homonyms.yaml 의 '핵'에 걸릴 표제어는 만들지 않았다. 원자핵은 이 단원에서 새로 정의하지 않아 카드 후보에서 제외했고, 관련 개념은 '강한 핵력'으로만 잡았다 — 표기가 '핵력'이라 watch_term '핵'과 정규화가 일치하지 않으므로 homonym_flag 는 붙이지 않았다. 다만 C2·G2 에서 원자핵(concept:atomic-nucleus) ↔ 세포핵(concept:cell-nucleus) 혼동 여지가 있는 자리이므로 링크는 키로만 걸어야 한다.",
+    "concept_registry.yaml 에는 아직 물리 계열 키가 거의 없다(등록된 192+84 개가 화학·통합과학 범위다). 그래서 phys-*·earth-* 카드와 같은 개념이어도 registry_status 는 전부 new 다. 키 문자열만 기존 카드와 동일하게 맞추고 same_candidate 로 표시했다 — 실제 same 링크는 G3 승인 뒤에 건다.",
+    "판단이 갈린 자리 ①: '빛과 물질의 이중성'을 한 장으로 둘지, 「물리학」처럼 빛/물질 둘로 나눌지. 이 교과서는 한 문장에서 묶어 정의하므로 통합 키(concept:wave-particle-duality)를 잠정으로 두었다.",
+    "판단이 갈린 자리 ②: '전자 소자 소형화와 터널 효과'는 사례에 가깝지만 12전자03-03 이 '관련된 현상과 기술'을 직접 요구하고 중단원 정리에도 항목이 있어 context 로 남겼다.",
+    "판단이 갈린 자리 ③: p123 「고전 물리학과 양자 물리학」은 읽기 면이라 topic_id 는 03(핵융합) 자리에 있지만 내용은 불확정성 원리에 붙는다. 성취기준은 12전자03-04 로 달았다."
+  ]
+}

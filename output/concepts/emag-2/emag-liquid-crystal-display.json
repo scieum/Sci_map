@@ -1,0 +1,118 @@
+{
+  "id": "emag-liquid-crystal-display",
+  "concept_key": "concept:liquid-crystal-display",
+  "registry_status": "new",
+  "term": "액정 디스플레이",
+  "notation": {
+    "hanja": "液晶",
+    "hanja_gloss": "液 진 액 · 晶 맑을 정",
+    "hanja_note": "'디스플레이'는 영어 display 의 음차어라 한자가 없다.",
+    "english": "liquid crystal display",
+    "symbol_display": "LCD",
+    "symbol_plain": "LCD"
+  },
+  "definition": "편광축이 서로 수직인 두 편광판 사이를 액정으로 채워, 전압으로 화소마다 빛이 지날지 말지를 정하는 화면.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lcd-off",
+      "text": "편광축이 서로 수직인 두 편광판 사이에서, 전압이 걸리지 않은 화소는 액정이 편광축을 돌려 주어 뒤쪽 광원의 빛을 아래 편광판 밖으로 내보낸다.",
+      "form": {
+        "condition": "뒤쪽 광원을 켜 두고 화소에 전압을 걸지 않았을 때",
+        "type": "conditional",
+        "scope": "전압을 걸지 않은 화소"
+      },
+      "invertible": true,
+      "invertible_reason": "축이 수직인 이 구조에서 전압이 없으면 빛이 빠져나오므로, 막힌다고 바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "편광축이 서로 수직인 두 편광판 사이에서, 전압이 걸리지 않은 화소는 뒤쪽 광원의 빛을 아래 편광판 밖으로 내보내지 못한다."
+    },
+    {
+      "id": "rel-lcd-on",
+      "text": "편광축이 서로 수직인 두 편광판 사이에서, 전압이 걸린 화소는 액정이 편광축을 돌리지 못해 빛이 아래 편광판에서 막힌다.",
+      "form": {
+        "condition": "뒤쪽 광원을 켜 두고 두 편광판 사이에 전압을 걸었을 때",
+        "type": "conditional",
+        "scope": "전압을 건 화소"
+      },
+      "invertible": true,
+      "invertible_reason": "이 구조에서 전압이 걸리면 편광축이 그대로여서 막히므로, 통과한다고 바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "편광축이 서로 수직인 두 편광판 사이에서, 전압이 걸린 화소는 빛이 아래 편광판을 그대로 통과한다."
+    },
+    {
+      "id": "rel-lcd-color",
+      "text": "화소마다 빛의 3원색 컬러 필터를 두고 저마다 밝기를 달리해 여러 색을 나타낸다.",
+      "form": {
+        "condition": "컬러 액정 디스플레이에서",
+        "type": "causal",
+        "scope": "색 표현 방식"
+      },
+      "invertible": false,
+      "invertible_reason": "색을 내는 방법을 말하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "LCD 화면은 액정이 직접 빛을 내어 영상을 만든다",
+      "why_wrong": "액정은 빛을 내지 못한다. 뒤쪽 광원의 빛을 편광판과 액정이 통과시키거나 막는 방식이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lcd-off"
+    },
+    {
+      "text": "편광판 한 장만 있어도 LCD를 만들 수 있다",
+      "why_wrong": "축이 수직인 두 장 사이에 액정이 들어가야 전압으로 투과 여부를 정할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lcd-on"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-polarizing-filter"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-liquid-crystal"
+    },
+    {
+      "type": "related",
+      "target": "emag-oled-display"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-03",
+  "pages": [
+    74,
+    75,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "LCD"
+  ],
+  "notes": [
+    "rel-lcd-off·rel-lcd-on 의 '편광축이 수직인 두 편광판' 구조를 condition 에서 text·inverted_text 문면으로 옮겼다. D1 이 inverted_text 만 떼어 가도 문장이 홀로 선다.",
+    "'뒤쪽 광원'을 rel-lcd-off 문면에 세워, '액정이 스스로 빛을 낸다'는 오개념이 반박할 명제를 갖도록 했다. 근거는 교과서 75쪽 그림 II-27 의 광원 표시다."
+  ]
+}

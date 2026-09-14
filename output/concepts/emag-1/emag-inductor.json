@@ -1,0 +1,135 @@
+{
+  "id": "emag-inductor",
+  "concept_key": "concept:inductor",
+  "registry_status": "new",
+  "term": "인덕터",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'인덕터'는 inductor 의 음차라 한자로 적을 수 없다.",
+    "english": "inductor",
+    "symbol_display": "L = NΦ/I",
+    "symbol_plain": "L = NPhi/I"
+  },
+  "definition": "코일을 감아 자체 유도가 일어나게 만든 회로 소자로, 회로의 전류가 갑자기 달라지는 것을 막는 노릇을 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-self-induction",
+      "text": "인덕터는 스스로 만든 자기장이 변할 때 그 변화를 거스르는 쪽으로 기전력을 내므로, 스위치를 닫아도 전류가 단번에 커지지 않는다.",
+      "form": {
+        "condition": "인덕터에 흐르는 전류가 변하고 있을 때",
+        "type": "causal",
+        "scope": "직류 전원과 스위치를 이은 인덕터 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "자체 유도가 변화를 늦추는 것이 확정적이라 곧바로 최댓값에 이른다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "스위치를 닫는 순간 인덕터에 흐르는 전류는 곧바로 최댓값에 이른다."
+    },
+    {
+      "id": "rel-turns-inductance",
+      "text": "같은 전류 변화를 주어도 감은 수가 많은 코일일수록 자기선속이 많이 생겨 인덕턴스가 크다.",
+      "form": {
+        "condition": "인덕터에 준 전류의 변화가 같을 때",
+        "type": "direct",
+        "scope": "솔레노이드 모양의 인덕터",
+        "antecedent": {
+          "quantity": "코일의 감은 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "인덕턴스",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "감은 수에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코일을 많이 감을수록 인덕턴스는 작아진다."
+    },
+    {
+      "id": "rel-di-dt",
+      "text": "인덕터 양끝에 생기는 유도 기전력의 크기는 인덕턴스와 전류의 시간 변화율을 곱한 값이다.",
+      "form": {
+        "condition": "인덕턴스가 일정할 때",
+        "type": "direct",
+        "scope": "전류가 변하고 있는 인덕터",
+        "antecedent": {
+          "quantity": "전류의 시간 변화율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "유도 기전력의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "변화율에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류가 빠르게 변할수록 인덕터에 생기는 유도 기전력은 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인덕터는 회로에 흐르는 전류를 아예 막아 버린다",
+      "why_wrong": "인덕터가 막는 것은 전류의 급격한 변화이지 전류 자체가 아니다. 시간이 지나면 전류가 완만히 늘어 일정한 값에 이른다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-self-induction"
+    },
+    {
+      "text": "전류가 일정하게 흐르는 동안에도 인덕터에는 유도 기전력이 계속 생긴다",
+      "why_wrong": "유도 기전력은 전류의 시간 변화율에 비례한다. 전류가 변하지 않으면 기전력은 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-di-dt"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-faraday-law-of-induction"
+    },
+    {
+      "type": "next",
+      "target": "emag-inductor-in-ac-circuit"
+    },
+    {
+      "type": "next",
+      "target": "emag-electrical-oscillation"
+    },
+    {
+      "type": "related",
+      "target": "emag-magnetic-field-of-solenoid"
+    }
+  ],
+  "curriculum": [
+    "12전자01-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-01",
+  "pages": [
+    37,
+    38,
+    50
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "자체 유도와 인덕턴스를 따로 쪼개지 않고 이 카드의 관계 명제로 담았다. 인덕턴스 L 은 공명 진동수 카드에서 다시 쓰인다.",
+    "단위 H(헨리)는 카드로 세우지 않고 이 카드가 받는다.",
+    "[C6 uncertain] rel-di-dt('유도 기전력의 크기는 인덕턴스와 전류의 시간 변화율을 곱한 값')는 인덕턴스를 정의하는 식이기도 해서 정의와 명제의 경계가 흐리다. 카드 definition 에 이 식이 없어 동어반복으로 잘라 말하기 어려워 그대로 두었다 — 어느 쪽으로 둘지는 C8 이 본다."
+  ]
+}

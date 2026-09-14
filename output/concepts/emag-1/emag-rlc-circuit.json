@@ -1,0 +1,109 @@
+{
+  "id": "emag-rlc-circuit",
+  "concept_key": "concept:rlc-circuit",
+  "registry_status": "new",
+  "term": "RLC 회로",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'RLC'는 저항(R)·인덕턴스(L)·전기 용량(C)의 기호를 딴 이름이라 한자가 없다. '회로(回路)'만 한자어다.",
+    "english": "RLC circuit",
+    "symbol_display": "R–L–C",
+    "symbol_plain": "R-L-C"
+  },
+  "definition": "교류 전원에 저항·인덕터·축전기를 한 줄로 이어 붙인 회로로, 전원의 진동수에 따라 흐르는 전류가 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-frequency-current",
+      "text": "RLC 회로의 전류는 진동수를 올릴수록 커지다가 어느 진동수에서 최댓값을 찍고 그 뒤로는 다시 줄어든다.",
+      "form": {
+        "condition": "저항·인덕턴스·전기 용량이 일정할 때",
+        "type": "conditional",
+        "scope": "직렬로 이은 RLC 교류 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "최댓값이 생기는 것이 확정적이라 최솟값을 갖는다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "RLC 회로의 전류는 진동수를 올릴수록 줄어들다가 어느 진동수에서 가장 작아진 뒤 다시 커진다."
+    },
+    {
+      "id": "rel-balance",
+      "text": "인덕터의 저항 노릇과 축전기의 저항 노릇이 서로 같아지는 진동수에서 회로 전체의 전류가 가장 커진다.",
+      "form": {
+        "condition": "회로의 저항이 일정할 때",
+        "type": "conditional",
+        "scope": "직렬로 이은 RLC 교류 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "둘이 상쇄되는 자리가 전류의 최댓값 자리라 최솟값이라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인덕터와 축전기의 저항 노릇이 같아지는 진동수에서 회로의 전류가 가장 작아진다."
+    },
+    {
+      "id": "rel-series",
+      "text": "저항·인덕터·축전기를 직렬로 이었으므로 세 소자에는 같은 세기의 전류가 흐른다.",
+      "form": {
+        "condition": "세 소자를 직렬로 이었을 때",
+        "type": "conditional",
+        "scope": "직렬로 이은 RLC 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "직렬 연결의 성질을 그대로 옮긴 것이라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "RLC 회로에서는 진동수를 올릴수록 전류가 계속 커진다",
+      "why_wrong": "전류는 공명 진동수에서 최대가 되고, 그보다 높은 진동수에서는 인덕터의 저항 노릇이 커져 다시 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-frequency-current"
+    },
+    {
+      "text": "인덕터와 축전기를 함께 넣으면 저항 노릇이 서로 더해져 전류가 가장 작아지는 진동수가 생긴다",
+      "why_wrong": "둘은 진동수에 대해 반대로 움직여 서로 상쇄된다. 저항 노릇이 같아지는 진동수에서 오히려 전류가 가장 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-balance"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-capacitor-in-ac-circuit"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-inductor-in-ac-circuit"
+    },
+    {
+      "type": "next",
+      "target": "emag-resonance-frequency"
+    }
+  ],
+  "curriculum": [
+    "12전자01-06"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-02",
+  "pages": [
+    42,
+    43,
+    50
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

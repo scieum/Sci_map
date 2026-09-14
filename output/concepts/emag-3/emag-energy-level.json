@@ -1,0 +1,121 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-energy-level",
+  "concept_key": "concept:energy-level",
+  "registry_status": "new",
+  "term": "에너지 준위",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "energy level",
+    "symbol_display": "ΔE = hf",
+    "symbol_plain": "dE = hf"
+  },
+  "definition": "원자 속 전자가 가질 수 있는 띄엄띄엄한 에너지 값. 양자수로 구분되며 원자의 종류마다 배치가 다르다.",
+  "relations": [
+    {
+      "id": "rel-el-quantized",
+      "text": "원자에 묶인 전자의 에너지는 아무 값이나 갖지 못하고 양자수에 따라 정해진 값만 갖는다.",
+      "form": {
+        "condition": "원자핵에 묶인 전자를 다룰 때",
+        "type": "classification",
+        "scope": "원자 내부의 전자"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「원자에 묶인 전자는 어떤 에너지 값이든 연속적으로 가질 수 있다」는 전자가 양자화된 준위 값만 갖는다고 한 118·119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자에 묶인 전자는 어떤 에너지 값이든 연속적으로 가질 수 있다."
+    },
+    {
+      "id": "rel-el-wavelength",
+      "text": "두 에너지 준위의 차가 클수록 전이하며 주고받는 빛의 파장은 짧다.",
+      "form": {
+        "condition": "전자가 두 준위 사이를 전이할 때",
+        "type": "inverse",
+        "scope": "원자의 전자 전이",
+        "antecedent": {
+          "quantity": "두 준위의 에너지 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주고받는 빛의 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "광자의 에너지가 파장에 반비례하므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04",
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 에너지 준위의 차가 클수록 전이하며 주고받는 빛의 파장은 길다."
+    },
+    {
+      "id": "rel-el-element",
+      "text": "원자의 종류가 다르면 준위의 배치도 달라 전이로 생기는 선의 위치가 원소마다 다르다.",
+      "form": {
+        "condition": "서로 다른 원소를 견줄 때",
+        "type": "causal",
+        "scope": "원자의 선스펙트럼"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「원자의 종류가 달라도 전이로 생기는 선의 파장은 같다」는 원소마다 선의 자리가 다르다고 한 124~125쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자의 종류가 달라도 전이로 생기는 선의 파장은 같다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자는 에너지를 조금씩 연속으로 잃으면서 원자핵 쪽으로 떨어진다",
+      "why_wrong": "전자의 에너지는 허용된 준위 값만 가지므로 연속으로 줄어들 수 없다. 준위 사이를 건너뛸 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-el-quantized"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-bohr-atomic-model"
+    },
+    {
+      "type": "next",
+      "target": "emag-line-spectrum"
+    },
+    {
+      "type": "related",
+      "target": "emag-quantum-mechanical-atomic-model"
+    },
+    {
+      "type": "same",
+      "target": "phys-energy-level"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04",
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-02",
+  "pages": [
+    118,
+    124
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "notes": [
+    "phys-energy-level 과 concept_key 가 같아 same 으로 이었다.",
+    "C6 겹침 — rel-el-element 는 emag-line-spectrum 의 rel-ls-element 와 사실상 같은 말이다. 한쪽을 준위 쪽(왜 배치가 다른가), 다른 쪽을 스펙트럼 쪽(그래서 무엇을 가려낼 수 있는가)으로 가르는 일은 사람의 판단을 기다린다."
+  ]
+}

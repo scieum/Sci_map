@@ -1,0 +1,146 @@
+{
+  "id": "emag-electric-field",
+  "concept_key": "concept:electric-field",
+  "registry_status": "new",
+  "term": "전기장",
+  "notation": {
+    "hanja": "電氣場",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 場 마당 장",
+    "english": "electric field",
+    "symbol_display": "E (N/C)",
+    "symbol_plain": "E (N/C)"
+  },
+  "definition": "전하 둘레에 퍼져 있어 다른 전하에 전기력을 미치는 공간이며, 그 세기는 단위 양전하가 받는 힘으로 정한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-source-charge",
+      "text": "재는 자리까지의 거리가 같다면, 전기장을 만드는 점전하의 전하량이 클수록 전기장이 세다.",
+      "form": {
+        "condition": "재는 지점까지의 거리가 일정할 때",
+        "type": "direct",
+        "scope": "진공 속 점전하 하나가 만드는 전기장",
+        "antecedent": {
+          "quantity": "전기장을 만드는 점전하의 전하량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전하량에 비례하므로 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 거리에서 잴 때 점전하의 전하량이 클수록 전기장의 세기는 작아진다."
+    },
+    {
+      "id": "rel-distance",
+      "text": "점전하에서 3배 멀어진 자리의 전기장 세기는 9분의 1로 줄어든다.",
+      "form": {
+        "condition": "점전하의 전하량이 일정할 때",
+        "type": "inverse",
+        "scope": "진공 속 점전하 하나가 만드는 전기장",
+        "antecedent": {
+          "quantity": "점전하로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기장의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리의 제곱에 반비례하므로 커진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "점전하에서 3배 멀어진 자리의 전기장 세기는 9배로 커진다."
+    },
+    {
+      "id": "rel-direction",
+      "text": "어떤 지점의 전기장 방향은 그 자리에 놓인 양전하가 밀려가는 쪽이고, 음전하는 그 반대쪽으로 밀린다.",
+      "form": {
+        "condition": "전기장 안에 시험 전하를 놓았을 때",
+        "type": "conditional",
+        "scope": "정지한 전하가 만드는 전기장",
+        "antecedent": {
+          "quantity": "시험 전하의 부호",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "전하가 받는 전기력의 방향",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "방향을 양전하 기준으로 못 박은 약속이라 음전하 기준으로 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "어떤 지점의 전기장 방향은 그 자리에 놓인 음전하가 밀려가는 쪽이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기장의 세기는 그 자리에 놓은 시험 전하의 전하량이 클수록 커진다",
+      "why_wrong": "전기장의 세기는 시험 전하가 받은 힘을 그 전하량으로 나눈 값이라 시험 전하를 바꿔도 달라지지 않는다. 세기를 정하는 것은 원천 전하와 거리다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-source-charge"
+    },
+    {
+      "text": "음전하 주위에서는 전기장의 방향이 전하에서 바깥으로 뻗어 나간다",
+      "why_wrong": "전기장의 방향은 양전하가 받는 힘의 방향으로 약속되어 있어, 음전하 주위에서는 전하를 향해 안쪽으로 들어간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-direction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-coulomb-law"
+    },
+    {
+      "type": "next",
+      "target": "emag-superposition-of-electric-fields"
+    },
+    {
+      "type": "next",
+      "target": "emag-electric-field-line"
+    },
+    {
+      "type": "next",
+      "target": "emag-electric-potential"
+    },
+    {
+      "type": "next",
+      "target": "emag-electrostatic-induction"
+    },
+    {
+      "type": "same",
+      "target": "phys-electric-field",
+      "note": "concept:electric-field 가 같다"
+    }
+  ],
+  "curriculum": [
+    "12전자01-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-01",
+  "pages": [
+    12,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

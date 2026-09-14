@@ -1,0 +1,105 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-plasma",
+  "concept_key": "concept:plasma",
+  "registry_status": "new",
+  "term": "플라스마",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 plasma 의 음차어다. 한자어 표기가 존재하지 않는다.",
+    "english": "plasma"
+  },
+  "definition": "원자핵과 전자가 서로 떨어져 나와 이온으로 뒤섞여 있는 물질의 상태.",
+  "relations": [
+    {
+      "id": "rel-pl-ionized",
+      "text": "별의 내부처럼 압력과 온도가 충분히 높은 곳에서는 원자가 이온화되어 물질이 플라스마가 된다.",
+      "form": {
+        "condition": "압력과 온도가 원자를 이온화할 만큼 높을 때",
+        "type": "causal",
+        "scope": "별의 내부와 같은 초고온·고압 환경. 상온의 기체는 해당하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「별의 내부처럼 온도가 매우 높은 곳에서도 원자는 이온화되지 않고 그대로 남는다」는 별 내부를 플라스마 상태로 적고 플라스마를 원자핵과 전자가 분리된 상태로 푼 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별의 내부처럼 온도가 매우 높은 곳에서도 원자는 이온화되지 않고 그대로 남는다."
+    },
+    {
+      "id": "rel-pl-ground",
+      "text": "지구에서 핵융합을 일으키려면 1억 ℃ 이상의 초고온 플라스마를 인위적으로 만들어야 한다.",
+      "form": {
+        "condition": "지상의 핵융합 장치를 운전할 때",
+        "type": "conditional",
+        "scope": "지상 핵융합 연구 장치. 별 내부와는 조건이 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 1억 ℃ 라는 기준값을 드는 명제여서 뒤집은 문장을 OX 로 쓸지가 갈린다. C8 에서 사람이 정할 때까지 false 로 둔다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pl-sun",
+      "text": "태양 내부는 고밀도 플라스마여서 생겨난 광자가 조금 나아갈 때마다 흡수와 재방출을 되풀이한다.",
+      "form": {
+        "condition": "태양 내부를 지나는 빛을 볼 때",
+        "type": "causal",
+        "scope": "태양 내부"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양 내부는 밀도가 낮아 생겨난 광자가 흡수되지 않고 곧장 빠져나온다」는 고밀도 플라스마 속에서 광자가 흡수와 재방출을 되풀이한다고 한 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 내부는 밀도가 낮아 생겨난 광자가 흡수되지 않고 곧장 빠져나온다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "플라스마는 기체가 뜨거워진 것일 뿐 원자는 그대로 붙어 있다",
+      "why_wrong": "온도가 높아 원자핵과 전자가 분리된 이온 상태다. 원자가 그대로 남아 있는 기체와 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pl-ionized"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-hydrogen-fusion"
+    },
+    {
+      "type": "related",
+      "target": "emag-strong-nuclear-force"
+    },
+    {
+      "type": "related",
+      "target": "emag-continuous-spectrum"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    121,
+    122
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "notes": [
+    "여기서 '핵'은 원자핵(concept:atomic-nucleus) 뜻이다. homonyms.yaml 의 금지쌍(원자핵 ↔ 세포핵)에 걸리는 자리이므로 링크는 표기가 아니라 concept_key 로만 걸었다.",
+    "★C8 검토 — rel-pl-ground 의 invertible 은 false 로 두었다. 1억 ℃ 라는 기준값을 드는 명제여서 뒤집은 문장을 OX 로 쓸지가 갈렸다.",
+    "C6 동어반복 정리 — rel-pl-ionized 가 definition 의 마디 셋을 그대로 되풀이해, definition 은 이온 상태의 뜻만 담게 줄이고 명제는 '어떤 곳에서 플라스마가 되는가'로 옮겼다."
+  ]
+}

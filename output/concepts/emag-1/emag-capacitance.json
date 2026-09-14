@@ -1,0 +1,158 @@
+{
+  "id": "emag-capacitance",
+  "concept_key": "concept:capacitance",
+  "registry_status": "new",
+  "term": "축전기의 전기 용량",
+  "notation": {
+    "hanja": "蓄電器電氣容量",
+    "hanja_gloss": "蓄 쌓을 축 · 電 번개 전 · 器 그릇 기 · 電 번개 전 · 氣 기운 기 · 容 담을 용 · 量 헤아릴 량",
+    "english": "capacitance",
+    "symbol_display": "C = Q/V",
+    "symbol_plain": "C = Q/V"
+  },
+  "definition": "같은 전압에서 축전기가 얼마나 많은 전하를 담아 둘 수 있는지를 나타내는 값으로, 전하량과 전압의 비로 정한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-area",
+      "text": "극판 사이의 간격을 그대로 두고 극판을 넓히면 담을 수 있는 전하가 늘어 전기 용량이 커진다.",
+      "form": {
+        "condition": "극판 사이의 간격과 채운 물질이 일정할 때",
+        "type": "direct",
+        "scope": "평행판 축전기",
+        "antecedent": {
+          "quantity": "극판의 면적",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기 용량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "극판의 면적에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "극판을 넓힐수록 축전기의 전기 용량은 작아진다."
+    },
+    {
+      "id": "rel-gap",
+      "text": "같은 전압을 걸었을 때 극판 사이를 좁힐수록 극판 사이 전기장이 세져 더 많은 전하가 쌓이므로 전기 용량이 커진다.",
+      "form": {
+        "condition": "극판의 면적과 채운 물질이 일정할 때",
+        "type": "inverse",
+        "scope": "평행판 축전기",
+        "antecedent": {
+          "quantity": "극판 사이의 간격",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기 용량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "간격에 반비례하는 관계라 함께 작아진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "극판 사이를 좁힐수록 축전기의 전기 용량은 작아진다."
+    },
+    {
+      "id": "rel-dielectric",
+      "text": "극판 사이를 유전체로 채우면 유전율이 진공일 때보다 커지므로 전기 용량이 늘어난다.",
+      "form": {
+        "condition": "극판의 면적과 간격이 일정할 때",
+        "type": "direct",
+        "scope": "평행판 축전기",
+        "antecedent": {
+          "quantity": "극판 사이를 채운 물질의 유전율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기 용량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "모든 물질의 유전율이 진공보다 크므로 줄어든다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "극판 사이를 유전체로 채우면 축전기의 전기 용량이 줄어든다."
+    },
+    {
+      "id": "rel-geometry-only",
+      "text": "전기 용량은 걸어 준 전압이나 담긴 전하량과 상관없이 극판의 생김새와 사이를 채운 물질로만 정해진다.",
+      "form": {
+        "condition": "축전기의 구조를 바꾸지 않을 때",
+        "type": "conditional",
+        "scope": "평행판 축전기"
+      },
+      "invertible": true,
+      "invertible_reason": "전압을 올리면 전하량도 함께 늘어 비가 그대로이므로 용량이 커진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "축전기에 걸어 주는 전압을 높이면 그 축전기의 전기 용량도 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전기 용량은 축전기에 걸어 준 전압이 클수록 커진다",
+      "why_wrong": "전기 용량은 전하량과 전압의 비다. 전압을 올리면 담기는 전하량도 그만큼 늘어 비는 그대로다. 용량을 정하는 것은 극판의 생김새와 채운 물질이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-geometry-only"
+    },
+    {
+      "text": "극판 사이를 절연체로 채우면 전하가 통하지 못해 전기 용량이 줄어든다",
+      "why_wrong": "유전체는 분극되어 극판 사이 전기장을 약하게 만든다. 그만큼 같은 전압에서 더 많은 전하를 담을 수 있어 전기 용량이 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dielectric"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-dielectric-polarization"
+    },
+    {
+      "type": "next",
+      "target": "emag-capacitor-in-ac-circuit"
+    },
+    {
+      "type": "next",
+      "target": "emag-electrical-oscillation"
+    },
+    {
+      "type": "next",
+      "target": "emag-rectification"
+    }
+  ],
+  "curriculum": [
+    "12전자01-06"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-02",
+  "pages": [
+    40,
+    50
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "단위 F(패럿)은 카드로 세우지 않고 이 카드가 받는다.",
+    "유전율은 이 카드와 유전 분극 카드의 비례 상수로만 쓰고 따로 카드를 세우지 않았다.",
+    "[C5 uncertain] 성취기준 01-06 은 '에너지 관점에서 정성적으로'라 했는데 이 카드의 명제들은 전기 용량이 무엇에 따라 커지는가를 정량 비례로 세운다. 교과서 본문 40쪽에 식이 실려 있어 이탈로 내리지 않았다. 대신 용량 계산 문항으로 확장하지 말 것 (C8 확인 자리)."
+  ]
+}

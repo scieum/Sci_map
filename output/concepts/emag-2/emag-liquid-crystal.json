@@ -1,0 +1,87 @@
+{
+  "id": "emag-liquid-crystal",
+  "concept_key": "concept:liquid-crystal",
+  "registry_status": "new",
+  "term": "액정",
+  "notation": {
+    "hanja": "液晶",
+    "hanja_gloss": "液 진 액 · 晶 맑을 정",
+    "english": "liquid crystal"
+  },
+  "definition": "가늘고 긴 분자가 거의 한 방향으로 늘어선, 고체와 액체의 중간 상태 물질. 걸린 전압에 따라 편광 상태가 달라진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lc-voltage",
+      "text": "전압을 걸면 액정 분자들이 전기장을 따라 한 방향으로 가지런히 정렬한다.",
+      "form": {
+        "condition": "두 전극 사이를 액정으로 채웠을 때",
+        "type": "causal",
+        "scope": "액정 디스플레이 화소 안의 액정층"
+      },
+      "invertible": true,
+      "invertible_reason": "전압은 분자를 정렬시키므로 '흐트러진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전압을 걸면 액정 분자들의 배열이 오히려 흐트러져 제각각이 된다."
+    },
+    {
+      "id": "rel-lc-twist",
+      "text": "전압이 걸리지 않으면 액정 분자가 비틀린 채 늘어서서, 지나가는 빛의 편광축을 90°까지 돌려 놓는다.",
+      "form": {
+        "condition": "위아래 편광판의 축이 서로 수직인 구조에서",
+        "type": "causal",
+        "scope": "전압을 걸지 않은 액정 셀"
+      },
+      "invertible": false,
+      "invertible_reason": "분자 배열이 빛에 무엇을 하는지 서술하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "액정은 스스로 빛을 내는 물질이다",
+      "why_wrong": "액정은 빛을 내지 못한다. 뒤쪽에서 온 빛의 편광만 돌려 줄 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lc-twist"
+    },
+    {
+      "text": "액정은 이름 그대로 액체다",
+      "why_wrong": "고체와 액체의 중간 상태로, 흐르면서도 분자가 거의 일정한 방향으로 늘어서 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lc-voltage"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-liquid-crystal-display"
+    },
+    {
+      "type": "related",
+      "target": "emag-polarizing-filter"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-03",
+  "pages": [
+    74,
+    75
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

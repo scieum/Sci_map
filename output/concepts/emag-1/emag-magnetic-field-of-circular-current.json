@@ -1,0 +1,151 @@
+{
+  "id": "emag-magnetic-field-of-circular-current",
+  "concept_key": "concept:magnetic-field-of-circular-current",
+  "registry_status": "new",
+  "term": "원형 전류에 의한 자기장",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'…에 의한'이 낀 구절이라 표제어 전체에 대응하는 한자어가 없다. 원형(圓形)·전류(電流)·자기장(磁氣場)은 각각 한자어다.",
+    "english": "magnetic field of a circular current"
+  },
+  "definition": "고리 모양으로 굽힌 도선에 전류가 흐를 때 생기는 자기장으로, 고리 중심에서 특히 세다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-current",
+      "text": "고리의 반지름을 그대로 두면 전류가 셀수록 원 중심의 자기장이 세다.",
+      "form": {
+        "condition": "원형 도선의 반지름이 일정할 때",
+        "type": "direct",
+        "scope": "한 번 감은 원형 도선의 중심",
+        "antecedent": {
+          "quantity": "도선에 흐르는 전류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원 중심의 자기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전류에 비례하는 관계라 약해진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반지름이 같을 때 전류가 셀수록 원 중심의 자기장은 약해진다."
+    },
+    {
+      "id": "rel-radius",
+      "text": "전류를 그대로 두고 고리를 크게 만들면 원 중심의 자기장은 반지름에 반비례해 약해진다.",
+      "form": {
+        "condition": "도선에 흐르는 전류의 세기가 일정할 때",
+        "type": "inverse",
+        "scope": "한 번 감은 원형 도선의 중심",
+        "antecedent": {
+          "quantity": "원형 도선의 반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원 중심의 자기장의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "반지름에 반비례하므로 세진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전류가 같을 때 고리를 크게 만들수록 원 중심의 자기장이 세진다."
+    },
+    {
+      "id": "rel-sum-of-segments",
+      "text": "원형 도선을 짧은 직선 조각이 이어진 것으로 보면, 중심의 자기장은 조각마다 만드는 자기장을 더해 얻을 수 있다.",
+      "form": {
+        "condition": "원형 도선을 직선 조각으로 나누어 볼 때",
+        "type": "causal",
+        "scope": "한 번 감은 원형 도선"
+      },
+      "invertible": false,
+      "invertible_reason": "계산 방법을 말한 명제라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-inside-outside",
+      "text": "원형 도선에서 같은 거리만큼 떨어진 두 점을 견주면 고리 안쪽 점의 자기장이 바깥쪽 점보다 세다.",
+      "form": {
+        "condition": "원형 도선에서 같은 거리만큼 떨어진 안팎의 두 점을 견줄 때",
+        "type": "classification",
+        "scope": "원형 도선이 놓인 평면 위의 두 점",
+        "antecedent": {
+          "quantity": "견주는 점이 도선의 안쪽인지 바깥쪽인지",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "그 점에서의 자기장의 세기",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "도선에서 같은 거리로 비교 지점을 못 박으면 안쪽은 조각들의 자기장이 겹치고 바깥쪽은 상쇄되므로, 바깥쪽이 세다고 맞바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원형 도선에서 같은 거리만큼 떨어진 두 점을 견주면 고리 바깥쪽 점의 자기장이 안쪽 점보다 세다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고리를 크게 만들면 중심의 자기장도 함께 세진다",
+      "why_wrong": "반지름이 커지면 도선에서 중심까지의 거리가 멀어져 중심의 자기장은 오히려 약해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-radius"
+    },
+    {
+      "text": "원형 전류의 자기장은 고리 안팎에서 세기가 같다",
+      "why_wrong": "직선 조각들이 만드는 자기장이 고리 안쪽에서는 같은 방향으로 겹치고 바깥쪽에서는 서로 상쇄되어, 안쪽이 더 세다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-inside-outside"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-magnetic-field-of-straight-current"
+    },
+    {
+      "type": "next",
+      "target": "emag-magnetic-field-of-solenoid"
+    },
+    {
+      "type": "same",
+      "target": "phys-magnetic-field-of-circular-current",
+      "note": "concept:magnetic-field-of-circular-current 가 같다"
+    }
+  ],
+  "curriculum": [
+    "12전자01-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-03",
+  "pages": [
+    23,
+    24
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "rel-inside-outside 는 '안쪽/바깥쪽'의 비교 지점이 없어 뒤집은 문장이 참이 될 자리가 있었다(도선 바로 바깥). '도선에서 같은 거리만큼 떨어진 두 점'이라는 비교틀을 문면에 넣어 invertible: true 를 지켰다 (C6 수정). 교과서 p24 는 비교틀 없이 서술하므로 진위는 C8 이 본다.",
+    "이 카드의 정량 비례는 교과서 「연계•물리학」 곁주에서 왔다. 성취기준 해설이 그림 해석·정성적 설명으로 선을 그었으므로 계산 문항으로 확장하지 말 것 (C5 uncertain, C8 확인 자리)."
+  ]
+}

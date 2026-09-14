@@ -1,0 +1,105 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-nuclear-reaction-equation",
+  "concept_key": "concept:nuclear-reaction-equation",
+  "registry_status": "new",
+  "term": "핵반응식",
+  "notation": {
+    "hanja": "核反應式",
+    "hanja_gloss": "核 씨 핵 · 反 돌이킬 반 · 應 응할 응 · 式 법 식",
+    "english": "nuclear reaction equation",
+    "symbol_display": "ᴬZX",
+    "symbol_plain": "^A_Z X"
+  },
+  "definition": "핵반응에 참여하는 원자핵과 입자를 기호로 적은 식. 반응 전후로 질량수와 전하량이 보존된다.",
+  "relations": [
+    {
+      "id": "rel-nre-mass-number",
+      "text": "핵반응식에서 반응 전 질량수의 합과 반응 후 질량수의 합은 같다.",
+      "form": {
+        "condition": "핵반응식을 세울 때",
+        "type": "conditional",
+        "scope": "핵반응"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「핵반응식에서 반응 후 질량수의 합은 반응 전보다 줄어든다」는 반응 전후 질량수의 합이 같다고 한 120쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵반응식에서 반응 후 질량수의 합은 반응 전보다 줄어든다."
+    },
+    {
+      "id": "rel-nre-charge",
+      "text": "핵반응식에서 반응 전 원자 번호의 합과 반응 후 원자 번호의 합은 같다.",
+      "form": {
+        "condition": "핵반응식을 세울 때",
+        "type": "conditional",
+        "scope": "핵반응"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「핵반응식에서 반응 후 원자 번호의 합은 반응 전과 달라진다」는 반응 전후 원자 번호의 합이 같다고 한 120쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵반응식에서 반응 후 원자 번호의 합은 반응 전과 달라진다."
+    },
+    {
+      "id": "rel-nre-notation",
+      "text": "원소 기호의 왼쪽 위에는 질량수를, 왼쪽 아래에는 원자 번호를 적는다.",
+      "form": {
+        "condition": "원소를 핵반응식에 표기할 때",
+        "type": "classification",
+        "scope": "핵반응식 표기 약속"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「원소 기호의 왼쪽 위에는 원자 번호를, 왼쪽 아래에는 질량수를 적는다」는 두 자리를 정해 둔 120쪽의 표기 약속 — 두 자리를 맞바꾼 문장과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원소 기호의 왼쪽 위에는 원자 번호를, 왼쪽 아래에는 질량수를 적는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량 결손이 생기니 핵반응식에서도 질량수의 합이 달라진다",
+      "why_wrong": "질량수는 양성자와 중성자의 개수라 보존된다. 달라지는 것은 개수가 아니라 실제 질량이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-nre-mass-number"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-nuclear-fusion"
+    },
+    {
+      "type": "related",
+      "target": "emag-mass-defect"
+    },
+    {
+      "type": "related",
+      "target": "emag-hydrogen-fusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    120
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "notes": [
+    "여기서 '핵'은 원자핵(concept:atomic-nucleus) 뜻이다. homonyms.yaml 의 금지쌍(원자핵 ↔ 세포핵)에 걸리는 자리이므로 링크는 표기가 아니라 concept_key 로만 걸었다."
+  ]
+}

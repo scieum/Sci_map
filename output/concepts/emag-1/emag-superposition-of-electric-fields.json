@@ -1,0 +1,126 @@
+{
+  "id": "emag-superposition-of-electric-fields",
+  "concept_key": "concept:superposition-of-electric-fields",
+  "registry_status": "new",
+  "term": "전기장의 합성",
+  "notation": {
+    "hanja": "電氣場合成",
+    "hanja_gloss": "電 번개 전 · 氣 기운 기 · 場 마당 장 · 合 합할 합 · 成 이룰 성",
+    "english": "superposition of electric fields",
+    "symbol_display": "E = E₁ + E₂",
+    "symbol_plain": "E = E1 + E2"
+  },
+  "definition": "여러 전하가 한 지점에 만드는 전기장을, 전하마다 따로 만든 전기장을 벡터로 더해 구하는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-vector-sum",
+      "text": "두 전기장의 방향이 나란하지 않으면 세기를 그냥 더할 수 없고, 두 벡터를 두 변으로 하는 평행사변형의 대각선으로 구한다.",
+      "form": {
+        "condition": "두 전기장의 방향이 나란하지 않을 때",
+        "type": "conditional",
+        "scope": "여러 점전하가 만드는 정전기장"
+      },
+      "invertible": true,
+      "invertible_reason": "벡터 합과 산술 합을 맞바꾸면 나란하지 않은 경우에는 반드시 값이 어긋난다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 전기장의 방향이 나란하지 않아도 각각의 세기를 그냥 더하면 합성 전기장의 세기가 된다."
+    },
+    {
+      "id": "rel-zero-field",
+      "text": "두 전기장의 크기가 같고 방향이 정반대인 지점에서는 합성 전기장이 0이라 그곳에 놓인 전하는 전기력을 받지 않는다.",
+      "form": {
+        "condition": "두 전기장의 크기가 같고 방향이 정반대일 때",
+        "type": "conditional",
+        "scope": "여러 점전하가 만드는 정전기장"
+      },
+      "invertible": true,
+      "invertible_reason": "합이 0인 자리에서 힘이 있다고 하면 전기력의 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 전기장의 크기가 같고 방향이 정반대인 지점에 놓인 전하도 전기력을 받는다."
+    },
+    {
+      "id": "rel-third-charge-sign",
+      "text": "일직선 위 한 지점의 합성 전기장이 0이 되려면, 나머지 전하들이 만드는 전기장을 상쇄하도록 세 번째 전하의 부호가 정해진다.",
+      "form": {
+        "condition": "세 점전하가 한 직선 위에 고정되어 있을 때",
+        "type": "conditional",
+        "scope": "정지한 점전하들이 만드는 전기장"
+      },
+      "invertible": false,
+      "invertible_reason": "부호가 무엇으로 정해지는지는 전하들의 배치에 따라 갈려 뒤집은 문장이 언제나 거짓이라고 할 수 없다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-zero-field-vs-no-charge",
+      "text": "합성 전기장이 0인 자리는 전하가 없는 자리가 아니라, 여러 전하가 만든 전기장이 서로 지워 없어진 자리다.",
+      "form": {
+        "condition": "여러 전하가 만드는 전기장을 한 지점에서 합쳐 볼 때",
+        "type": "conditional",
+        "scope": "여러 점전하가 만드는 정전기장"
+      },
+      "invertible": true,
+      "invertible_reason": "서로 지워 없앤 결과와 애초에 없는 것을 맞바꾼 문장이라 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "합성 전기장이 0인 지점은 그 둘레에 전하가 하나도 없는 자리다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "합성 전기장의 세기는 각 전하가 만드는 전기장의 세기를 그냥 더하면 된다",
+      "why_wrong": "전기장은 크기와 방향을 함께 갖는 벡터라, 방향이 나란하지 않으면 숫자를 더하는 것이 아니라 평행사변형법으로 합성해야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-vector-sum"
+    },
+    {
+      "text": "합성 전기장이 0인 지점에는 전하가 아예 없는 것이다",
+      "why_wrong": "전하가 있어도 그들이 만드는 전기장이 서로 상쇄되면 합성 전기장은 0이 된다. 전기장이 0인 것과 전하가 없는 것은 다른 말이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-zero-field-vs-no-charge"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electric-field"
+    },
+    {
+      "type": "related",
+      "target": "emag-electric-field-line"
+    },
+    {
+      "type": "related",
+      "target": "emag-coulomb-law"
+    }
+  ],
+  "curriculum": [
+    "12전자01-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-01",
+  "pages": [
+    13
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "'장이 0'과 '전하가 없다'를 가르는 명제가 없어 misconceptions[1] 이 rel-zero-field 의 옆에 서 있었다(C6 defect). rel-zero-field-vs-no-charge 를 세워 그쪽으로 옮겼다 — rel-zero-field 는 합성장이 0인 자리에서 전하가 힘을 받지 않는다는 쪽만 맡는다."
+  ]
+}

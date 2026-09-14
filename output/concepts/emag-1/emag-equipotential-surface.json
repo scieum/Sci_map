@@ -1,0 +1,123 @@
+{
+  "id": "emag-equipotential-surface",
+  "concept_key": "concept:equipotential-surface",
+  "registry_status": "new",
+  "term": "등전위면",
+  "notation": {
+    "hanja": "等電位面",
+    "hanja_gloss": "等 같을 등 · 電 번개 전 · 位 자리 위 · 面 낯 면",
+    "english": "equipotential surface"
+  },
+  "definition": "전기장 안에서 전위가 서로 같은 점들을 이어 만든 선이나 면으로, 지도의 등고선에 견줄 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-perpendicular",
+      "text": "등전위선은 전기력선과 어디서나 수직으로 만나므로, 전기력선 그림만 있으면 등전위선의 모양을 그릴 수 있다.",
+      "form": {
+        "condition": "정전기적 평형 상태의 전기장을 다룰 때",
+        "type": "conditional",
+        "scope": "정지한 전하가 만드는 전기장"
+      },
+      "invertible": true,
+      "invertible_reason": "나란하다고 하면 선을 따라 전위가 달라져 '전위가 같은 선'이라는 정의와 어긋난다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등전위선은 전기력선과 어디서나 나란하게 놓인다."
+    },
+    {
+      "id": "rel-density",
+      "text": "전위 간격을 같게 잡아 그렸을 때 등전위선이 빽빽한 곳일수록 그 자리의 전기장이 세다.",
+      "form": {
+        "condition": "전위 간격을 같게 잡아 그렸을 때",
+        "type": "direct",
+        "scope": "정지한 전하가 만드는 전기장",
+        "antecedent": {
+          "quantity": "등전위선의 조밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전기장의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "같은 전위차를 더 짧은 거리에서 넘는 것이라 세기가 작다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등전위선이 빽빽한 곳일수록 전기장의 세기가 작다."
+    },
+    {
+      "id": "rel-zero-work",
+      "text": "등전위면 위에서만 전하를 옮기면 두 점의 전위차가 0이므로 전기력이 한 일도 0이다.",
+      "form": {
+        "condition": "이동 경로가 등전위면 위에만 놓일 때",
+        "type": "causal",
+        "scope": "정전기장 속에서 옮기는 전하"
+      },
+      "invertible": true,
+      "invertible_reason": "전위차가 0인데 일이 0이 아니라고 하면 전위차의 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등전위면 위에서 전하를 옮겨도 전기력은 0이 아닌 일을 한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "등전위면을 따라 전하를 옮기려면 전기력을 이겨 내는 일을 해 주어야 한다",
+      "why_wrong": "등전위면 위 두 점은 전위차가 0이라 전기력이 한 일이 0이다. 전기력은 등전위면에 수직으로 작용해 이동 방향과 직각을 이룬다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-zero-work"
+    },
+    {
+      "text": "등전위선은 전기력선과 나란하게 그려진다",
+      "why_wrong": "전기력선을 따라 움직이면 전위가 달라지므로 등전위선이 전기력선과 나란할 수 없다. 둘은 언제나 수직으로 만난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-perpendicular"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electric-potential"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-electric-field-line"
+    },
+    {
+      "type": "related",
+      "target": "emag-electric-field"
+    }
+  ],
+  "curriculum": [
+    "12전자01-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-01",
+  "pages": [
+    16,
+    17,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "등전위선"
+  ],
+  "notes": [
+    "고압 전선 작업자의 '패러데이 슈트'는 이 카드와 전위 카드(rel-equipotential-no-current)의 사례로 묶고 따로 카드를 세우지 않았다.",
+    "[C5 uncertain] 성취기준 01-01·03 해설은 '등전위면·전기력선·자기력선을 그리는 방법 대신 이미 그려진 그림을 해석'하라고 한다. rel-perpendicular 의 '전기력선 그림만 있으면 등전위선의 모양을 그릴 수 있다'가 그 선에 닿으므로 문장을 손대지 않고 남겼다 — 범위 판정은 C8 사람 게이트가 한다."
+  ]
+}

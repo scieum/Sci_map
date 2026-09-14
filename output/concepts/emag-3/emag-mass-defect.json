@@ -1,0 +1,114 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-mass-defect",
+  "concept_key": "concept:mass-defect",
+  "registry_status": "new",
+  "term": "질량 결손",
+  "notation": {
+    "hanja": "質量缺損",
+    "hanja_gloss": "質 바탕 질 · 量 헤아릴 량 · 缺 이지러질 결 · 損 덜 손",
+    "english": "mass defect",
+    "symbol_display": "Δm",
+    "symbol_plain": "dm"
+  },
+  "definition": "핵반응 전후에 생기는 질량의 차. 이 차이만큼이 에너지로 바뀌어 빛과 열의 형태로 나온다.",
+  "relations": [
+    {
+      "id": "rel-mdf-energy",
+      "text": "핵반응에서 줄어든 질량은 사라지는 것이 아니라 에너지로 바뀌어 빛과 열로 방출된다.",
+      "form": {
+        "condition": "핵융합이나 핵분열이 일어날 때",
+        "type": "causal",
+        "scope": "핵반응"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「핵반응에서 줄어든 질량은 에너지로 바뀌지 않고 그대로 사라진다」는 질량 결손이 에너지로 전환되어 빛과 열로 방출된다고 한 120쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "핵반응에서 줄어든 질량은 에너지로 바뀌지 않고 그대로 사라진다."
+    },
+    {
+      "id": "rel-mdf-amount",
+      "text": "질량 결손이 클수록 그 반응에서 방출되는 에너지도 크다.",
+      "form": {
+        "condition": "같은 종류의 핵반응을 견줄 때",
+        "type": "direct",
+        "scope": "핵반응",
+        "antecedent": {
+          "quantity": "질량 결손",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "방출되는 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "방출 에너지가 질량 결손에 비례하므로 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량 결손이 클수록 그 반응에서 방출되는 에너지는 작다."
+    },
+    {
+      "id": "rel-mdf-sun",
+      "text": "태양은 1초마다 4×10⁹ kg 가량의 질량 결손을 일으키며 그만큼의 에너지를 내놓는다.",
+      "form": {
+        "condition": "현재의 태양을 두고 말할 때",
+        "type": "conditional",
+        "scope": "태양. 별마다 값이 다르다"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 초당 4×10⁹ kg 이라는 수치를 드는 명제여서 OX 보다 계산 문항에 맞는다. C8 에서 사람이 정할 때까지 false 로 둔다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "핵반응에서도 질량 보존 법칙이 그대로 성립해 질량은 변하지 않는다",
+      "why_wrong": "핵반응 전후에는 질량 차가 생긴다. 줄어든 만큼이 에너지로 바뀌기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mdf-energy"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-mass-energy-equivalence"
+    },
+    {
+      "type": "next",
+      "target": "emag-nuclear-fusion"
+    },
+    {
+      "type": "related",
+      "target": "emag-nuclear-reaction-equation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    120,
+    126
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "notes": [
+    "여기서 '핵'은 원자핵(concept:atomic-nucleus) 뜻이다. homonyms.yaml 의 금지쌍(원자핵 ↔ 세포핵)에 걸리는 자리이므로 링크는 표기가 아니라 concept_key 로만 걸었다.",
+    "★C8 검토 — rel-mdf-sun 의 invertible 은 false 로 두었다. 초당 4×10⁹ kg 이라는 수치를 드는 명제여서 OX 보다 계산 문항에 맞는다는 판단이 갈렸다."
+  ]
+}

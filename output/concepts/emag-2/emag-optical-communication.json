@@ -1,0 +1,98 @@
+{
+  "id": "emag-optical-communication",
+  "concept_key": "concept:optical-communication",
+  "registry_status": "new",
+  "term": "디지털 광통신",
+  "notation": {
+    "hanja": "光通信",
+    "hanja_gloss": "光 빛 광 · 通 통할 통 · 信 믿을 신",
+    "hanja_note": "'디지털'은 영어 digital 의 음차어라 한자가 없다.",
+    "english": "digital optical communication"
+  },
+  "definition": "정보를 빛 신호에 실어 광섬유로 보내고, 받는 쪽에서 다시 전기 신호로 되돌리는 통신 방식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oc-conversion",
+      "text": "송신기가 전기 신호를 빛 신호로 바꾸어 광섬유로 보내면, 수신기가 그 빛에서 정보를 꺼내 전기 신호로 되돌린다.",
+      "form": {
+        "condition": "송신기·광섬유·수신기로 이어진 회선에서",
+        "type": "causal",
+        "scope": "디지털 광통신의 신호 흐름"
+      },
+      "invertible": false,
+      "invertible_reason": "신호가 오가는 경로를 서술하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-oc-laser",
+      "text": "결맞음성과 지향성이 좋은 레이저 빛을 쓰기에 많은 정보를 아주 먼 거리까지 보낼 수 있다.",
+      "form": {
+        "condition": "광원으로 레이저를 쓸 때",
+        "type": "causal",
+        "scope": "광통신. 퍼지고 위상이 흐트러진 빛을 쓰면 손실이 커진다"
+      },
+      "invertible": false,
+      "invertible_reason": "레이저를 쓰는 까닭을 밝히는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-05"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광통신은 빛을 공기 중으로 곧장 쏘아 보내는 방식이다",
+      "why_wrong": "보통은 광섬유 안에 빛을 가두어 보낸다. 인공위성 사이의 레이저 통신처럼 공간을 가로지르는 경우는 따로 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-conversion"
+    },
+    {
+      "text": "일반 전구 빛으로도 광섬유 통신을 할 수 있다",
+      "why_wrong": "퍼지고 위상이 고르지 않은 빛은 먼 거리에서 신호가 심하게 흐트러진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-laser"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-laser"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-directionality-of-light"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-monochromaticity"
+    },
+    {
+      "type": "related",
+      "target": "emag-coherence"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-02",
+  "pages": [
+    89,
+    90
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "광섬유는 따로 카드를 세우지 않고 이 카드의 전달 매체로 다룬다."
+  ]
+}

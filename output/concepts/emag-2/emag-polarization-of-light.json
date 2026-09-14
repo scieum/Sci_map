@@ -1,0 +1,118 @@
+{
+  "id": "emag-polarization-of-light",
+  "concept_key": "concept:polarization-of-light",
+  "registry_status": "new",
+  "term": "편광",
+  "notation": {
+    "hanja": "偏光",
+    "hanja_gloss": "偏 치우칠 편 · 光 빛 광",
+    "english": "polarization of light"
+  },
+  "definition": "진행 방향에 수직인 면에서 전기장이 한 방향으로만 진동하며 나아가는 빛.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pol-transverse",
+      "text": "빛은 진행 방향에 수직으로 전기장이 떨리는 파동이어서 떨림의 방향을 골라낼 수 있다.",
+      "form": {
+        "condition": "전자기파로서의 빛을 다룰 때",
+        "type": "causal",
+        "scope": "횡파인 전자기파. 진행 방향으로 떨리는 음파에는 편광이 없다"
+      },
+      "invertible": false,
+      "invertible_reason": "성질의 까닭을 밝히는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-pol-natural-light",
+      "text": "전구나 태양처럼 일반적인 광원에서 나온 빛은 전기장의 진동 방향이 제각각이라 편광되어 있지 않다.",
+      "form": {
+        "condition": "필터를 거치지 않은 자연광일 때",
+        "type": "classification",
+        "scope": "일반 광원의 빛. 레이저나 반사광은 사정이 다르다",
+        "antecedent": {
+          "quantity": "광원의 종류",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "편광 여부",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "일반 광원의 빛은 진동 방향이 고루 섞여 있으므로 '한 방향뿐'으로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전구나 태양처럼 일반적인 광원에서 나온 빛은 전기장이 한 방향으로만 진동한다."
+    },
+    {
+      "id": "rel-pol-making",
+      "text": "편광되지 않은 빛도 편광판을 지나거나 표면에서 반사하면 특정 방향 성분만 남아 편광이 된다.",
+      "form": {
+        "condition": "자연광이 편광판이나 반사면을 만날 때",
+        "type": "causal",
+        "scope": "편광을 만드는 두 가지 길. 반사로 생기는 것은 부분 편광이다"
+      },
+      "invertible": false,
+      "invertible_reason": "만드는 방법을 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소리도 편광판을 쓰면 편광시킬 수 있다",
+      "why_wrong": "편광은 진행 방향에 수직으로 떨리는 횡파에서만 가능하다. 음파는 진행 방향으로 떨리는 종파라 해당하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pol-transverse"
+    },
+    {
+      "text": "형광등에서 나오는 빛은 원래부터 한 방향으로만 진동한다",
+      "why_wrong": "일반 광원의 빛은 진동 방향이 고루 섞여 있다. 한 방향만 남기려면 편광판 같은 것을 거쳐야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pol-natural-light"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-polarizing-filter"
+    },
+    {
+      "type": "next",
+      "target": "emag-polarization-by-reflection"
+    },
+    {
+      "type": "related",
+      "target": "emag-liquid-crystal-display"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-03",
+  "pages": [
+    72,
+    73,
+    76
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "concept_registry.yaml 의 concept:polarization 은 화학의 '분극'이다. 같은 키를 쓰면 서로 다른 개념이 한 키로 묶이므로 concept:polarization-of-light 로 갈랐다 — ★G3 에서 사람이 확인해 주기 바란다."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "emag-optical-sensor",
+  "concept_key": "concept:optical-sensor",
+  "registry_status": "new",
+  "term": "광센서",
+  "notation": {
+    "hanja": "光",
+    "hanja_gloss": "光 빛 광",
+    "hanja_note": "'센서'는 영어 sensor 의 음차어라 한자가 없다.",
+    "english": "optical sensor"
+  },
+  "definition": "빛이나 자외선·적외선을 받아 그 세기를 전기 신호로 바꾸어 주는 소자. p형과 n형 반도체로 만든 광 다이오드가 주요 부품이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sensor-transition",
+      "text": "광 다이오드에 빛이 닿으면 원자가 띠의 전자가 광자의 에너지를 받아 전도띠로 올라가고, 전자와 양공이 생겨 전류가 흐른다.",
+      "form": {
+        "condition": "광자 하나의 에너지가 띠 사이 간격보다 클 때",
+        "type": "causal",
+        "scope": "p형·n형 반도체를 붙여 만든 광 다이오드"
+      },
+      "invertible": false,
+      "invertible_reason": "작동 과정을 서술하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sensor-current",
+      "text": "광 다이오드에 닿는 빛이 셀수록 흐르는 전류도 커지므로, 전류를 재어 들어온 빛의 세기를 알 수 있다.",
+      "form": {
+        "condition": "광자의 수와 이동한 전자의 수가 비례할 때",
+        "type": "direct",
+        "scope": "광 다이오드가 견디는 측정 범위 안",
+        "antecedent": {
+          "quantity": "빛의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "전류의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "광자가 많을수록 옮겨 가는 전자도 많으므로, 전류가 작아진다고 바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광 다이오드에 닿는 빛이 셀수록 흐르는 전류는 오히려 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광센서는 빛이 아니라 빛이 내는 열을 느껴 작동한다",
+      "why_wrong": "광자의 에너지를 받은 전자가 전도띠로 올라가며 전류가 생기는 원리다. 데워져서 반응하는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sensor-transition"
+    },
+    {
+      "text": "어떤 빛이든 세게만 비추면 광 다이오드에 전류가 흐른다",
+      "why_wrong": "광자 하나의 에너지가 띠 사이 간격보다 작으면 전자가 올라가지 못해 전류가 생기지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sensor-transition"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-photoelectric-effect"
+    },
+    {
+      "type": "next",
+      "target": "emag-solar-cell"
+    },
+    {
+      "type": "related",
+      "target": "emag-photon"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-01",
+  "pages": [
+    83,
+    84,
+    90
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "광 다이오드는 따로 카드를 세우지 않고 이 카드의 주요 부품으로 다룬다.",
+    "rel-sensor-current 의 text 를 측정 가능성만 말하던 문장에서 단조 관계까지 함께 말하는 문장으로 고쳤다. inverted_text 와 가리키는 대상이 어긋나던 것을 맞춘 것이다 (C6 지적)."
+  ]
+}

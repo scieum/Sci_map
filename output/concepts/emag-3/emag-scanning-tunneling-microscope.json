@@ -1,0 +1,116 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-scanning-tunneling-microscope",
+  "concept_key": "concept:scanning-tunneling-microscope",
+  "registry_status": "new",
+  "term": "주사 터널링 현미경",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'터널링'이 영어 tunneling 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "scanning tunneling microscope",
+    "symbol_display": "STM",
+    "symbol_plain": "STM"
+  },
+  "definition": "뾰족한 탐침을 시료 표면 가까이 두고 터널링 전류를 읽어 원자 크기의 높낮이를 재는 현미경.",
+  "relations": [
+    {
+      "id": "rel-stm-current",
+      "text": "탐침이 시료에 닿지 않아도 그 사이 퍼텐셜 장벽을 전자가 터널 효과로 건너 전류가 흐른다.",
+      "form": {
+        "condition": "탐침을 시료 표면에 매우 가까이 가져갔을 때",
+        "type": "causal",
+        "scope": "주사 터널링 현미경"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「탐침이 시료에 직접 닿아야만 그 사이에 전류가 흐른다」는 표면에 접촉하지 않고 가까이 가져가도 전류가 흐른다고 한 114쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탐침이 시료에 직접 닿아야만 그 사이에 전류가 흐른다."
+    },
+    {
+      "id": "rel-stm-distance",
+      "text": "탐침과 시료 사이가 멀어질수록 터널링 전류의 세기는 지수 함수로 줄어든다.",
+      "form": {
+        "condition": "같은 탐침과 시료를 쓸 때",
+        "type": "inverse",
+        "scope": "주사 터널링 현미경의 작동 거리",
+        "antecedent": {
+          "quantity": "탐침과 시료 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "터널링 전류의 세기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "거리가 멀어지면 투과 확률이 줄고 전류도 줄어드는 관계라 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탐침과 시료 사이가 멀어질수록 터널링 전류의 세기는 지수 함수로 커진다."
+    },
+    {
+      "id": "rel-stm-height",
+      "text": "전류를 일정하게 유지하도록 맞춘 탐침의 높이가 그대로 시료 표면의 높낮이 정보가 된다.",
+      "form": {
+        "condition": "전류를 일정하게 두고 탐침을 움직일 때",
+        "type": "causal",
+        "scope": "일정 전류 방식으로 작동하는 주사 터널링 현미경"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 탐침 높이를 일정하게 두고 전류를 읽는 방식이 따로 있어 문면을 뒤집어도 반드시 거짓이 되지 않을 여지가 있다. 교과서는 일정 전류 방식만 실었다 — C8.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주사 터널링 현미경은 빛을 비춰 원자를 크게 확대해 보는 장치다",
+      "why_wrong": "빛이 아니라 탐침과 시료 사이를 터널 효과로 건너는 전자의 전류를 읽어 표면을 그린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-stm-current"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-quantum-tunneling"
+    },
+    {
+      "type": "related",
+      "target": "emag-tunneling-probability"
+    },
+    {
+      "type": "related",
+      "target": "emag-tunneling-in-miniaturized-device"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-03"
+  ],
+  "topic_id": "emag-3-2-01",
+  "pages": [
+    114,
+    126
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "aliases": [
+    "STM"
+  ],
+  "notes": [
+    "★C8 진위 판단 요청 — rel-stm-height 의 invertible 은 false 로 두었다. 탐침 높이를 일정하게 두고 전류를 읽는 방식이 따로 있어 문면을 뒤집어도 반드시 거짓이 되지 않을 여지가 있다. 교과서는 일정 전류 방식만 실었다."
+  ]
+}

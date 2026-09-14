@@ -1,0 +1,151 @@
+{
+  "id": "emag-circular-motion-of-charged-particle",
+  "concept_key": "concept:circular-motion-of-charged-particle",
+  "registry_status": "new",
+  "term": "자기장 속 대전 입자의 원운동",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'…속 …의 원운동'이라는 구절이라 표제어 전체에 대응하는 한자어가 없다. 자기장(磁氣場)·대전(帶電)·입자(粒子)·원운동(圓運動)은 각각 한자어다.",
+    "english": "circular motion of a charged particle in a magnetic field",
+    "symbol_display": "r = mv/qB",
+    "symbol_plain": "r = mv/qB"
+  },
+  "definition": "균일한 자기장에 수직으로 들어간 대전 입자가 로런츠 힘을 구심력 삼아 일정한 반지름으로 도는 운동.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-radius",
+      "text": "자기장과 입자의 질량·전하량이 같다면 입자가 빠를수록 원 궤도의 반지름이 커진다.",
+      "form": {
+        "condition": "자기장의 세기와 입자의 질량·전하량이 일정할 때",
+        "type": "direct",
+        "scope": "균일한 자기장에 수직으로 들어간 대전 입자",
+        "antecedent": {
+          "quantity": "입자의 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "궤도 반지름",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "속력에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "입자의 속력이 빠를수록 원 궤도의 반지름은 작아진다."
+    },
+    {
+      "id": "rel-radius-field",
+      "text": "같은 속력의 입자라도 자기장이 셀수록 더 작은 원을 그린다.",
+      "form": {
+        "condition": "입자의 속력·질량·전하량이 일정할 때",
+        "type": "inverse",
+        "scope": "균일한 자기장 속의 대전 입자",
+        "antecedent": {
+          "quantity": "자기장의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "궤도 반지름",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자기장에 반비례하는 관계라 커진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기장이 셀수록 같은 속력의 입자는 더 큰 원을 그린다."
+    },
+    {
+      "id": "rel-period",
+      "text": "자기장이 일정하면 원운동의 주기는 입자의 속력이나 궤도 반지름이 달라져도 바뀌지 않는다.",
+      "form": {
+        "condition": "자기장의 세기와 입자의 질량·전하량이 일정할 때",
+        "type": "conditional",
+        "scope": "균일한 자기장 속 대전 입자의 원운동",
+        "antecedent": {
+          "quantity": "입자의 속력",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원운동의 주기",
+          "direction": "일정"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "주기 식에 속력과 반지름이 들어 있지 않으므로 함께 변한다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "속력이 빨라지면 원운동의 주기도 함께 짧아진다."
+    },
+    {
+      "id": "rel-centripetal",
+      "text": "로런츠 힘은 언제나 운동 방향과 수직이라 속력은 바꾸지 못하고 방향만 바꾸므로 구심력 노릇을 한다.",
+      "form": {
+        "condition": "로런츠 힘 말고 다른 힘이 작용하지 않을 때",
+        "type": "causal",
+        "scope": "균일한 자기장 속의 대전 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "힘이 운동 방향에 수직이면 일을 하지 않으므로 속력이 변한다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "로런츠 힘은 대전 입자의 속력을 점점 빠르게 만든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "자기장 속에서 원운동하는 입자는 로런츠 힘 때문에 속력이 점점 빨라진다",
+      "why_wrong": "로런츠 힘은 운동 방향에 수직이라 일을 하지 않는다. 운동 방향만 바뀔 뿐 속력과 운동 에너지는 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-centripetal"
+    },
+    {
+      "text": "입자를 더 빠르게 하면 한 바퀴 도는 데 걸리는 시간도 짧아진다",
+      "why_wrong": "속력이 커지면 궤도 반지름도 그만큼 커져 한 바퀴 도는 시간은 그대로다. 주기는 자기장과 입자의 질량·전하량으로만 정해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-period"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-lorentz-force"
+    },
+    {
+      "type": "next",
+      "target": "emag-particle-accelerator"
+    },
+    {
+      "type": "next",
+      "target": "emag-van-allen-belt"
+    }
+  ],
+  "curriculum": [
+    "12전자01-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-04",
+  "pages": [
+    28
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "구심력은 「역학과 에너지」·「물리학」의 선수 개념 곁주라 카드를 세우지 않고 rel-centripetal 안에서만 썼다."
+  ]
+}

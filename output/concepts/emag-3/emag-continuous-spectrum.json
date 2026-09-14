@@ -1,0 +1,86 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-continuous-spectrum",
+  "concept_key": "concept:continuous-spectrum",
+  "registry_status": "new",
+  "term": "연속 스펙트럼",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'스펙트럼'이 영어 spectrum 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "continuous spectrum"
+  },
+  "definition": "파장이 끊기지 않고 이어져 나타나는 스펙트럼. 뜨거운 고밀도 광원에서 나온 빛에서 관찰된다.",
+  "relations": [
+    {
+      "id": "rel-cs-sun",
+      "text": "태양 표면에서 나오는 빛은 고밀도 수소 원자핵에 흡수되고 다시 방출되기를 거듭한 빛이라 연속 스펙트럼으로 보인다.",
+      "form": {
+        "condition": "태양 표면에서 방출되는 빛을 분광할 때",
+        "type": "causal",
+        "scope": "태양처럼 고밀도인 광원"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양 표면에서 나오는 빛은 재흡수·재방출을 거친 빛이라 선스펙트럼으로 보인다」는 그 빛이 연속 스펙트럼으로 관찰된다고 한 122쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 표면에서 나오는 빛은 재흡수·재방출을 거친 빛이라 선스펙트럼으로 보인다."
+    },
+    {
+      "id": "rel-cs-source",
+      "text": "연속 스펙트럼은 백열등이나 용광로의 쇳물처럼 뜨거운 광원의 빛에서 관찰된다.",
+      "form": {
+        "condition": "광원이 고온의 고밀도 물체일 때",
+        "type": "conditional",
+        "scope": "연속 스펙트럼이 생기는 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「백열등이나 용광로의 쇳물처럼 뜨거운 광원의 빛에서는 선스펙트럼이 관찰된다」는 백열등과 용광로 쇳물을 연속 스펙트럼의 광원으로 든 124쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "백열등이나 용광로의 쇳물처럼 뜨거운 광원의 빛에서는 선스펙트럼이 관찰된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양 빛은 중심에서 생긴 감마선이 그대로 나온 것이라 선스펙트럼으로 보인다",
+      "why_wrong": "중심에서 나온 빛은 내부에서 흡수와 재방출을 거듭한 끝에 표면에서 연속 스펙트럼으로 방출된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cs-sun"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-hydrogen-fusion"
+    },
+    {
+      "type": "next",
+      "target": "emag-stellar-composition-from-spectrum"
+    },
+    {
+      "type": "related",
+      "target": "emag-line-spectrum"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    122,
+    124,
+    126
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

@@ -1,0 +1,105 @@
+{
+  "id": "emag-constructive-and-destructive-interference",
+  "concept_key": "concept:constructive-and-destructive-interference",
+  "registry_status": "new",
+  "term": "보강 간섭과 상쇄 간섭",
+  "notation": {
+    "hanja": "補強 干涉 相殺 干涉",
+    "hanja_gloss": "補 기울 보 · 強 굳셀 강 · 干 방패 간 · 涉 건널 섭 · 相 서로 상 · 殺 감할 쇄 · 干 방패 간 · 涉 건널 섭",
+    "english": "constructive and destructive interference"
+  },
+  "definition": "겹친 두 빛의 위상에 따라 갈리는 두 결과. 진폭이 커지는 쪽이 보강 간섭, 작아지는 쪽이 상쇄 간섭이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cdi-constructive",
+      "text": "같은 위상으로 만나는 지점에서는 합쳐진 빛의 진폭이 커져 밝게 보인다.",
+      "form": {
+        "condition": "진동수가 같은 두 빛이 겹칠 때",
+        "type": "causal",
+        "scope": "위상차가 없는 지점. 진동수가 다르면 밝은 자리가 한곳에 머물지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 위상의 중첩은 진폭을 키우므로 '어두워진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 위상으로 만나는 지점에서는 합쳐진 빛의 진폭이 작아져 어둡게 보인다."
+    },
+    {
+      "id": "rel-cdi-destructive",
+      "text": "위상차가 180°인 두 빛이 만나는 지점에서는 진폭이 작아져 어둡게 보인다.",
+      "form": {
+        "condition": "진동수와 진폭이 같은 두 빛이 겹칠 때",
+        "type": "causal",
+        "scope": "위상이 반대인 지점. 두 빛의 진폭이 다르면 완전히 어두워지지는 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "반대 위상의 중첩은 진폭을 줄이므로 '밝아진다'로 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위상차가 180°인 두 빛이 만나는 지점에서는 진폭이 커져 밝게 보인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "상쇄 간섭이 일어나면 빛의 파장과 진동수도 함께 작아진다",
+      "why_wrong": "중첩으로 달라지는 것은 진폭뿐이다. 파장과 진동수는 본래 두 빛이 가지고 있던 값 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cdi-destructive"
+    },
+    {
+      "text": "반대 위상으로 만나기만 하면 빛은 언제나 완전히 사라진다",
+      "why_wrong": "두 빛의 진폭까지 같아야 완전히 없어진다. 진폭이 다르면 그 차이만큼 빛이 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cdi-destructive"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-light-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-thin-film-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-hologram"
+    },
+    {
+      "type": "same",
+      "target": "phys-constructive-and-destructive-interference",
+      "note": "「물리학」 Ⅲ단원의 같은 개념"
+    },
+    {
+      "type": "same",
+      "target": "mech-constructive-and-destructive-interference",
+      "note": "「역학과 에너지」의 같은 개념"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-01",
+  "pages": [
+    60,
+    61
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "concept_key 를 phys-3·mech-3 카드와 같게 두었다. 세 카드가 한 키로 묶이는지는 G3 에서 사람이 확인한다."
+  ]
+}

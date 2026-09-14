@@ -1,0 +1,140 @@
+{
+  "id": "emag-capacitor-in-ac-circuit",
+  "concept_key": "concept:capacitor-in-ac-circuit",
+  "registry_status": "new",
+  "term": "교류 회로에서 축전기의 역할",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'…에서 …의 역할'이라는 구절이라 표제어 전체에 대응하는 한자어가 없다. 교류(交流)·회로(回路)·축전기(蓄電器)·역할(役割)은 각각 한자어다.",
+    "english": "role of a capacitor in an AC circuit"
+  },
+  "definition": "교류 회로에 놓인 축전기가 충전과 방전을 되풀이하면서, 진동수가 낮을수록 전류를 더 막는 소자처럼 구실하는 것.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-capacitance",
+      "text": "전기 용량이 작을수록 전류의 방향이 바뀌기 전에 충전이 끝나 버려 축전기의 저항 노릇이 커진다.",
+      "form": {
+        "condition": "교류 전원의 진동수가 일정할 때",
+        "type": "inverse",
+        "scope": "교류 전원에 이은 축전기",
+        "antecedent": {
+          "quantity": "축전기의 전기 용량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "축전기의 저항 역할",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "용량이 작을수록 막는 정도가 커지는 것이 확정적이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전기 용량이 작을수록 축전기의 저항 역할이 작아져 전류가 잘 흐른다."
+    },
+    {
+      "id": "rel-frequency",
+      "text": "교류 전원의 진동수가 낮을수록 방향이 바뀌기까지 시간이 길어 충전이 끝나 버리므로 전류가 흐르기 어렵다.",
+      "form": {
+        "condition": "축전기의 전기 용량이 일정할 때",
+        "type": "inverse",
+        "scope": "교류 전원에 이은 축전기",
+        "antecedent": {
+          "quantity": "교류 전원의 진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "축전기의 저항 역할",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "진동수가 낮을수록 막는 정도가 커지는 것이 확정적이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "교류 전원의 진동수가 낮을수록 축전기의 저항 역할이 작아진다."
+    },
+    {
+      "id": "rel-treble",
+      "text": "축전기는 진동수가 낮은 전류를 더 막으므로, 앰프의 트레블 다이얼처럼 고음을 살리는 필터에 쓰인다.",
+      "form": {
+        "condition": "축전기를 교류 신호가 지나는 길에 넣었을 때",
+        "type": "causal",
+        "scope": "앰프의 사운드 필터"
+      },
+      "invertible": true,
+      "invertible_reason": "축전기가 막는 쪽은 저음이므로 고음을 막는다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "축전기는 진동수가 높은 전류를 더 막으므로 저음을 살리는 필터에 쓰인다."
+    },
+    {
+      "id": "rel-dc-block",
+      "text": "충전이 완전히 끝난 축전기는 끊어진 회로와 같아서, 방향이 바뀌지 않는 직류는 계속 흐르지 못한다.",
+      "form": {
+        "condition": "전원의 방향이 바뀌지 않을 때",
+        "type": "conditional",
+        "scope": "직류 전원에 이은 축전기"
+      },
+      "invertible": true,
+      "invertible_reason": "충전이 끝나면 전하가 더 쌓이지 못하므로 계속 흐른다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-06"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "충전이 끝난 축전기에도 직류가 계속 흐른다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "축전기는 전기 용량이 클수록 전류를 더 잘 막는다",
+      "why_wrong": "전기 용량이 크면 전류의 방향이 바뀌기 전에 충전이 끝나지 않아 전류가 계속 흐른다. 저항 노릇은 전기 용량이 작을수록 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-capacitance"
+    },
+    {
+      "text": "축전기는 진동수와 상관없이 모든 교류를 똑같이 통과시킨다",
+      "why_wrong": "진동수가 낮을수록 축전기의 저항 노릇이 커져 전류가 흐르기 어렵다. 이 성질이 고음 강조 필터로 쓰인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-frequency"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-capacitance"
+    },
+    {
+      "type": "next",
+      "target": "emag-rlc-circuit"
+    },
+    {
+      "type": "related",
+      "target": "emag-inductor-in-ac-circuit"
+    }
+  ],
+  "curriculum": [
+    "12전자01-06"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-02",
+  "pages": [
+    41,
+    43,
+    50
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,108 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-quantum-cryptography",
+  "concept_key": "concept:quantum-cryptography",
+  "registry_status": "new",
+  "term": "양자 암호 통신",
+  "notation": {
+    "hanja": "量子暗號通信",
+    "hanja_gloss": "量 헤아릴 량 · 子 아들 자 · 暗 어두울 암 · 號 이름 호 · 通 통할 통 · 信 믿을 신",
+    "english": "quantum cryptographic communication"
+  },
+  "definition": "정보를 중첩 상태에 실어 보내는 통신 방식. 도청하려고 측정하면 중첩이 깨져 가로챈 사실이 드러난다.",
+  "relations": [
+    {
+      "id": "rel-qcr-collapse",
+      "text": "도청자가 암호를 측정하는 순간 송신자가 실어 보낸 중첩이 깨진다.",
+      "form": {
+        "condition": "중첩 상태로 보낸 신호를 가로챌 때",
+        "type": "causal",
+        "scope": "양자 암호 통신"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「도청자가 암호를 측정해도 송신자가 실어 보낸 중첩은 그대로 유지된다」는 도청(측정)하는 순간 중첩이 깨진다고 한 106쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도청자가 암호를 측정해도 송신자가 실어 보낸 중첩은 그대로 유지된다."
+    },
+    {
+      "id": "rel-qcr-detect",
+      "text": "도청자가 다시 보낸 암호는 송신자가 보낸 것과 달라지므로 수신자가 도청을 알아챈다.",
+      "form": {
+        "condition": "도청자가 측정한 뒤 신호를 되보낼 때",
+        "type": "causal",
+        "scope": "양자 암호 통신"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「도청자가 다시 보낸 암호는 송신자가 보낸 것과 같아 수신자가 도청을 알아채지 못한다」는 두 암호가 달라진다고 한 106쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도청자가 다시 보낸 암호는 송신자가 보낸 것과 같아 수신자가 도청을 알아채지 못한다."
+    },
+    {
+      "id": "rel-qcr-classical",
+      "text": "고전적인 방법으로 보낸 암호는 도청자가 신호를 똑같이 복제해 보내면 도청 여부를 알 수 없다.",
+      "form": {
+        "condition": "복제가 가능한 고전 신호일 때",
+        "type": "conditional",
+        "scope": "고전 암호 전송"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「고전적인 방법으로 보낸 암호도 도청자가 복제해 보내면 수신자가 도청을 알아챌 수 있다」는 고전 방식에서는 도청 여부를 알 수 없다고 한 106쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고전적인 방법으로 보낸 암호도 도청자가 복제해 보내면 수신자가 도청을 알아챌 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양자 암호 통신을 쓰면 도청자가 신호를 가로채는 일 자체가 일어나지 않는다",
+      "why_wrong": "가로채는 행위는 할 수 있다. 다만 측정이 중첩을 깨뜨려 정보가 변형되고 그 사실이 드러날 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qcr-detect"
+    },
+    {
+      "text": "도청자가 양자 암호를 그대로 복제해 두었다가 보내면 들키지 않는다",
+      "why_wrong": "복제하려면 먼저 측정해야 하는데, 그 순간 중첩이 깨져 원래 신호와 다른 것이 전달된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qcr-collapse"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-measurement-state-change"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-quantum-computer"
+    },
+    {
+      "type": "related",
+      "target": "emag-qubit"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-02"
+  ],
+  "topic_id": "emag-3-1-02",
+  "pages": [
+    106,
+    108
+  ],
+  "difficulty": 3,
+  "role": "core"
+}

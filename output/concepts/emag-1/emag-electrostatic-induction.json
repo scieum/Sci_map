@@ -1,0 +1,119 @@
+{
+  "id": "emag-electrostatic-induction",
+  "concept_key": "concept:electrostatic-induction",
+  "registry_status": "new",
+  "term": "정전기 유도",
+  "notation": {
+    "hanja": "靜電氣誘導",
+    "hanja_gloss": "靜 고요할 정 · 電 번개 전 · 氣 기운 기 · 誘 꾈 유 · 導 이끌 도",
+    "english": "electrostatic induction"
+  },
+  "definition": "도체에 대전체를 가까이 댈 때 자유 전자가 한쪽으로 밀려, 가까운 쪽과 먼 쪽이 서로 다른 전하를 띠게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-near-side-charge",
+      "text": "대전체와 가까운 쪽 도체 표면에는 대전체와 부호가 반대인 전하가, 먼 쪽에는 같은 부호의 전하가 모인다.",
+      "form": {
+        "condition": "중성인 도체에 대전체를 가까이 두었을 때",
+        "type": "classification",
+        "scope": "전기적으로 중성인 도체",
+        "antecedent": {
+          "quantity": "대전체가 띤 전하의 부호",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "가까운 쪽에 유도된 전하의 부호",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "부호를 맞바꾸면 인력이 척력이 되어 실제 관찰과 반드시 어긋난다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대전체와 가까운 쪽 도체 표면에는 대전체와 같은 부호의 전하가 모인다."
+    },
+    {
+      "id": "rel-free-electron-move",
+      "text": "음전하로 대전된 막대를 금속에 대면 자유 전자가 막대에서 먼 쪽으로 밀려나 그쪽이 음전하를 띤다.",
+      "form": {
+        "condition": "도체 안에 자유롭게 움직이는 전자가 있을 때",
+        "type": "causal",
+        "scope": "금속처럼 자유 전자를 가진 도체"
+      },
+      "invertible": true,
+      "invertible_reason": "같은 부호끼리는 밀어내므로 전자가 막대 쪽으로 끌려온다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음전하로 대전된 막대를 금속에 대면 자유 전자가 막대 쪽으로 끌려와 그쪽이 음전하를 띤다."
+    },
+    {
+      "id": "rel-net-attraction",
+      "text": "반대 부호로 유도된 전하가 대전체에 더 가까워 인력이 척력보다 커지므로, 알짜 전하가 0인 도체도 대전체에 끌려온다.",
+      "form": {
+        "condition": "도체 전체의 알짜 전하가 0일 때",
+        "type": "causal",
+        "scope": "대전체 가까이 놓인 중성 도체"
+      },
+      "invertible": true,
+      "invertible_reason": "가까운 쪽 인력이 먼 쪽 척력보다 큰 것이 확정적이라 끌리지 않는다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전체 알짜 전하가 0인 도체는 대전체에 끌려오지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정전기 유도가 일어나면 도체 전체가 한 부호로 대전된다",
+      "why_wrong": "전자가 도체 안에서 자리만 옮겼을 뿐 드나들지 않았으므로 도체 전체의 알짜 전하는 그대로 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-near-side-charge"
+    },
+    {
+      "text": "전기적으로 중성인 물체는 대전체에 끌리지도 밀리지도 않는다",
+      "why_wrong": "정전기 유도로 가까운 쪽에 반대 부호의 전하가 모이고, 가까운 쪽이 더 센 인력을 받아 물체가 끌려온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-net-attraction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electric-field"
+    },
+    {
+      "type": "next",
+      "target": "emag-dielectric-polarization"
+    },
+    {
+      "type": "next",
+      "target": "emag-application-of-electrostatic-induction"
+    }
+  ],
+  "curriculum": [
+    "12전자01-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-02",
+  "pages": [
+    18,
+    30
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "'자유 전자'는 isci1-free-electron 카드가 있어 여기서는 설명 요소로만 썼다.",
+    "성취기준 12전자01-02 의 crosscheck 는 '교사 확정' 이다 — 지도서 곁주 코드 오식을 사람이 바로잡은 것이라 '일치'와 같은 신뢰도로 썼다."
+  ]
+}

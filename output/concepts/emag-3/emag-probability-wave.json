@@ -1,0 +1,129 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-probability-wave",
+  "concept_key": "concept:probability-wave",
+  "registry_status": "new",
+  "term": "확률 파동",
+  "notation": {
+    "hanja": "確率波動",
+    "hanja_gloss": "確 굳을 확 · 率 비율 률 · 波 물결 파 · 動 움직일 동",
+    "english": "probability wave",
+    "symbol_display": "Ψ",
+    "symbol_plain": "psi"
+  },
+  "definition": "물질파에서 변하는 양을 시간과 위치의 함수로 적은 것. 파동 함수라고도 하며 입자가 어디서 발견될지를 담는다.",
+  "relations": [
+    {
+      "id": "rel-pw-describe",
+      "text": "미시 입자의 진행은 위치와 시간에 따라 값이 달라지는 확률 파동으로 기술한다.",
+      "form": {
+        "condition": "전자·광자처럼 작은 입자를 다룰 때",
+        "type": "classification",
+        "scope": "미시 세계. 거시 물체는 위치의 함수만으로 충분하다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「미시 입자의 진행도 거시 물체처럼 위치만의 함수로 기술한다」는 미시 입자를 시간과 위치의 함수인 확률 파동으로 기술한다고 갈라 둔 102쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미시 입자의 진행도 거시 물체처럼 위치만의 함수로 기술한다."
+    },
+    {
+      "id": "rel-pw-square",
+      "text": "확률 파동 절댓값의 제곱이 큰 지점일수록 그곳에서 입자가 발견될 확률이 크다.",
+      "form": {
+        "condition": "같은 확률 파동 위의 서로 다른 지점을 견줄 때",
+        "type": "direct",
+        "scope": "보른의 확률 해석을 따르는 범위",
+        "antecedent": {
+          "quantity": "확률 파동 절댓값의 제곱",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "입자가 발견될 확률",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "발견 확률이 절댓값의 제곱으로 정해지므로 크기 관계를 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "확률 파동 절댓값의 제곱이 큰 지점일수록 그곳에서 입자가 발견될 확률이 작다."
+    },
+    {
+      "id": "rel-pw-not-path",
+      "text": "확률 파동은 입자가 실제로 지나간 하나의 길이 아니라 발견될 가능성의 분포를 나타낸다.",
+      "form": {
+        "condition": "확률 파동의 뜻을 물을 때",
+        "type": "classification",
+        "scope": "코펜하겐 해석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「확률 파동은 입자가 실제로 지나간 하나의 길을 그린 것이다」는 확률 파동을 발견 확률의 분포로 읽는 보른의 해석(103쪽)와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "확률 파동은 입자가 실제로 지나간 하나의 길을 그린 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "확률 파동은 전자가 물결치듯 그리며 날아가는 실제 경로다",
+      "why_wrong": "확률 파동이 알려 주는 것은 경로가 아니라 각 위치에서 전자를 발견할 가능성이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pw-not-path"
+    },
+    {
+      "text": "확률 파동의 값이 큰 곳은 전자의 에너지가 큰 곳이다",
+      "why_wrong": "값의 크기는 에너지가 아니라 그 자리에서 발견될 확률과 이어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pw-square"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-single-electron-double-slit"
+    },
+    {
+      "type": "next",
+      "target": "emag-probability-density"
+    },
+    {
+      "type": "next",
+      "target": "emag-probability-wave-interference"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-tunneling"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-01"
+  ],
+  "topic_id": "emag-3-1-01",
+  "pages": [
+    102,
+    103,
+    108
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "aliases": [
+    "파동 함수"
+  ],
+  "notes": [
+    "C6 확인 요청 — rel-pw-describe 가 definition 과 '시간과 위치의 함수'라는 마디를 공유해 동어반복에 가깝다. 다만 명제 쪽에는 거시·미시 대비가 있어 판단이 갈려 이번 패스에서는 문면을 고치지 않았다."
+  ]
+}

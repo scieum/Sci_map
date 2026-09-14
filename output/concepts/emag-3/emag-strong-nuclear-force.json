@@ -1,0 +1,109 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-strong-nuclear-force",
+  "concept_key": "concept:strong-nuclear-force",
+  "registry_status": "new",
+  "term": "강한 핵력",
+  "notation": {
+    "hanja": "核力",
+    "hanja_gloss": "核 씨 핵 · 力 힘 력",
+    "hanja_note": "'강한'은 고유어 형용사여서 한자로 옮기지 않았다.",
+    "english": "strong nuclear force"
+  },
+  "definition": "양성자와 중성자 사이, 양성자끼리, 중성자끼리 모두에 작용하는 인력. 아주 짧은 거리에서만 미쳐 원자핵을 묶어 둔다.",
+  "relations": [
+    {
+      "id": "rel-snf-range",
+      "text": "강한 핵력은 10⁻¹⁵ m 정도의 매우 짧은 거리 안에서만 작용한다.",
+      "form": {
+        "condition": "핵자 사이의 거리를 따질 때",
+        "type": "conditional",
+        "scope": "원자핵 내부"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「강한 핵력은 거리가 멀어져도 계속 작용한다」는 매우 짧은 거리에서 작용한다고 한 121쪽 곁주와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "강한 핵력은 거리가 멀어져도 계속 작용한다."
+    },
+    {
+      "id": "rel-snf-repulsion",
+      "text": "원자핵끼리는 모두 양전하를 띠어 전기력이 척력으로 작용해 서로 가까워지기 어렵다.",
+      "form": {
+        "condition": "두 원자핵이 접근할 때",
+        "type": "causal",
+        "scope": "원자핵 사이"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「원자핵끼리는 전기력이 인력으로 작용해 서로 쉽게 가까워진다」는 원자핵 사이의 전기력이 척력이어서 접근을 어렵게 한다고 한 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "원자핵끼리는 전기력이 인력으로 작용해 서로 쉽게 가까워진다."
+    },
+    {
+      "id": "rel-snf-fusion",
+      "text": "두 원자핵이 전기적 척력을 이기고 충분히 가까워져야 강한 핵력이 작용해 융합할 수 있다.",
+      "form": {
+        "condition": "핵융합이 일어나려 할 때",
+        "type": "causal",
+        "scope": "핵융합이 일어나는 상황"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 원자핵은 멀리 떨어져 있어도 강한 핵력이 작용해 융합할 수 있다」는 서로 가까이 접근해야 강한 핵력으로 융합할 수 있다고 한 121쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 원자핵은 멀리 떨어져 있어도 강한 핵력이 작용해 융합할 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양성자끼리는 같은 전하라 밀어내기만 하므로 강한 핵력으로는 묶이지 않는다",
+      "why_wrong": "강한 핵력은 양성자와 중성자 사이뿐 아니라 양성자끼리·중성자끼리에도 작용하는 인력이다. 다만 아주 짧은 거리에서만 미친다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-snf-fusion"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-nuclear-fusion"
+    },
+    {
+      "type": "related",
+      "target": "emag-plasma"
+    },
+    {
+      "type": "related",
+      "target": "emag-hydrogen-fusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    121
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "aliases": [
+    "강한 상호작용"
+  ],
+  "notes": [
+    "여기서 '핵'은 원자핵(concept:atomic-nucleus) 뜻이다. homonyms.yaml 의 금지쌍(원자핵 ↔ 세포핵)에 걸리는 자리이므로 링크는 표기가 아니라 concept_key 로만 걸었다.",
+    "definition 을 교과서 121쪽 곁주가 든 세 짝(양성자-중성자, 양성자끼리, 중성자끼리)이 모두 들어가게 넓혔다. 좁게 적으면 같은 카드의 rel-snf-fusion(수소 원자핵끼리 융합)과 어긋난다.",
+    "중복 정리 — rel-snf-range 의 inverted_text 와 겹치던 오개념을 양성자끼리의 결합을 묻는 다른 오류 문장으로 바꾸고 rel-snf-fusion 에 이었다."
+  ]
+}

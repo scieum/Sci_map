@@ -1,0 +1,116 @@
+{
+  "id": "emag-force-on-current-carrying-wire",
+  "concept_key": "concept:force-on-current-carrying-wire",
+  "registry_status": "new",
+  "term": "자기장 속 도선이 받는 힘",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'…속 …이 받는 힘'이라는 구절이고 '힘'이 고유어라 표제어 전체에 대응하는 한자어가 없다. 자기장(磁氣場)·도선(導線)은 한자어다.",
+    "english": "force on a current-carrying wire",
+    "symbol_display": "F = BIl",
+    "symbol_plain": "F = BIl"
+  },
+  "definition": "자기장 안에 놓인 도선에 전류가 흐를 때, 도선 속을 움직이는 전하들이 받는 로런츠 힘이 모여 도선 전체에 나타나는 힘.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bil",
+      "text": "자기장에 수직으로 놓인 도선이 받는 힘은 자기장의 세기·전류의 세기·도선의 길이 각각에 비례한다.",
+      "form": {
+        "condition": "도선이 자기장과 수직으로 놓였을 때",
+        "type": "direct",
+        "scope": "균일한 자기장 속의 곧은 도선",
+        "antecedent": {
+          "quantity": "도선에 흐르는 전류의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "도선이 받는 힘의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "세 양 모두에 비례하는 관계라 작아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도선에 흐르는 전류를 세게 할수록 도선이 받는 힘은 작아진다."
+    },
+    {
+      "id": "rel-sum-of-lorentz",
+      "text": "도선이 힘을 받는 까닭은 도선 안을 흐르는 자유 전자 하나하나가 로런츠 힘을 받기 때문이다.",
+      "form": {
+        "condition": "도선 안에서 전하가 움직이고 있을 때",
+        "type": "causal",
+        "scope": "자기장 속에서 전류가 흐르는 도선"
+      },
+      "invertible": false,
+      "invertible_reason": "원인과 결과가 층위가 달라 방향을 뒤집은 문장을 세울 수 없다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-motor",
+      "text": "전동기는 자기장 속 도선이 받는 힘으로 회전하므로 전기 에너지를 운동 에너지로 바꾼다.",
+      "form": {
+        "condition": "코일에 전류가 흐르고 자기장이 걸려 있을 때",
+        "type": "causal",
+        "scope": "직류 전동기"
+      },
+      "invertible": true,
+      "invertible_reason": "전환 방향을 맞바꾸면 전동기가 아니라 발전기의 설명이 되어 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전동기는 운동 에너지를 전기 에너지로 바꾸는 장치다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전류가 흐르지 않아도 자기장 속에 놓인 도선이면 힘을 받는다",
+      "why_wrong": "힘의 원천은 도선 안에서 움직이는 전하다. 전류가 0이면 F=BIl 에 따라 힘도 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bil"
+    },
+    {
+      "text": "전동기와 발전기는 같은 장치를 다르게 부르는 이름이다",
+      "why_wrong": "전동기는 자기장 속 도선이 받는 힘으로 전기 에너지를 운동 에너지로 바꾸고, 발전기는 전자기 유도로 그 반대 방향의 전환을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-motor"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-lorentz-force"
+    },
+    {
+      "type": "related",
+      "target": "emag-magnetic-field-of-straight-current"
+    },
+    {
+      "type": "related",
+      "target": "emag-electromagnetic-induction"
+    }
+  ],
+  "curriculum": [
+    "12전자01-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-04",
+  "pages": [
+    26,
+    27
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

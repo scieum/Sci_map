@@ -1,0 +1,133 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-matter-wave",
+  "concept_key": "concept:matter-wave",
+  "registry_status": "new",
+  "term": "물질파",
+  "notation": {
+    "hanja": "物質波",
+    "hanja_gloss": "物 물건 물 · 質 바탕 질 · 波 물결 파",
+    "english": "matter wave",
+    "symbol_display": "λ = h/p",
+    "symbol_plain": "lambda = h/p"
+  },
+  "definition": "운동량을 가진 입자에 딸려 나타나는 파동. 드브로이가 제안했고, 그 파장은 플랑크 상수를 운동량으로 나눈 값이다.",
+  "relations": [
+    {
+      "id": "rel-mw-momentum",
+      "text": "입자의 운동량이 커질수록 그 입자의 물질파 파장은 짧아진다.",
+      "form": {
+        "condition": "플랑크 상수가 일정할 때",
+        "type": "inverse",
+        "scope": "운동량을 가진 모든 입자",
+        "antecedent": {
+          "quantity": "입자의 운동량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "물질파의 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "파장이 운동량에 반비례하므로 방향을 뒤집으면 관계식과 어긋나 반드시 거짓이 된다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "입자의 운동량이 커질수록 그 입자의 물질파 파장은 길어진다."
+    },
+    {
+      "id": "rel-mw-macro",
+      "text": "야구공 같은 물체에도 물질파가 딸리지만 파장이 너무 짧아 파동성이 관찰되지 않는다.",
+      "form": {
+        "condition": "일상적인 크기와 속력의 물체일 때",
+        "type": "causal",
+        "scope": "거시 물체. 전자처럼 가벼운 입자에서는 사정이 다르다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「야구공 같은 물체에는 물질파가 아예 딸리지 않는다」는 운동량을 가진 입자면 물질파를 가진다고 한 드브로이 관계식(100·118쪽)와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "야구공 같은 물체에는 물질파가 아예 딸리지 않는다."
+    },
+    {
+      "id": "rel-mw-microscope",
+      "text": "전자 현미경이 광학 현미경보다 미세한 구조를 보는 것은 전자의 물질파 파장이 가시광선보다 짧기 때문이다.",
+      "form": {
+        "condition": "같은 시료를 관찰할 때",
+        "type": "causal",
+        "scope": "전자의 속력이 충분히 커서 파장이 짧은 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자 현미경이 더 미세한 구조를 보는 것은 전자의 물질파 파장이 가시광선보다 길기 때문이다」는 가시광선보다 짧은 물질파를 쓴다고 한 100쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자 현미경이 더 미세한 구조를 보는 것은 전자의 물질파 파장이 가시광선보다 길기 때문이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "물질파는 전자처럼 아주 작은 입자에만 생긴다",
+      "why_wrong": "운동량이 있으면 무엇에나 물질파가 딸린다. 무거운 물체는 파장이 너무 짧아 드러나지 않을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mw-macro"
+    },
+    {
+      "text": "전자의 속력을 키우면 물질파 파장도 함께 길어진다",
+      "why_wrong": "속력이 커지면 운동량이 커지고, 파장은 운동량에 반비례하므로 오히려 짧아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mw-momentum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-wave-particle-duality"
+    },
+    {
+      "type": "next",
+      "target": "emag-electron-double-slit-experiment"
+    },
+    {
+      "type": "next",
+      "target": "emag-measurement-disturbance"
+    },
+    {
+      "type": "next",
+      "target": "emag-standing-wave-orbit-condition"
+    },
+    {
+      "type": "same",
+      "target": "phys-matter-wave"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-01"
+  ],
+  "topic_id": "emag-3-1-01",
+  "pages": [
+    100,
+    102,
+    118
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "aliases": [
+    "드브로이파"
+  ],
+  "notes": [
+    "phys-matter-wave 와 concept_key 가 같아 same 으로 이었다. 사전에는 아직 없는 키여서 registry_status 는 new 다 — G3 등록 대상."
+  ]
+}

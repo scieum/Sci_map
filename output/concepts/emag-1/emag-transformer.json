@@ -1,0 +1,125 @@
+{
+  "id": "emag-transformer",
+  "concept_key": "concept:transformer",
+  "registry_status": "new",
+  "term": "변압기",
+  "notation": {
+    "hanja": "變壓器",
+    "hanja_gloss": "變 변할 변 · 壓 누를 압 · 器 그릇 기",
+    "english": "transformer",
+    "symbol_display": "V₁/N₁ = V₂/N₂",
+    "symbol_plain": "V1/N1 = V2/N2"
+  },
+  "definition": "철심 양쪽에 감은 두 코일 사이에서 전자기 유도를 일으켜, 감은 수의 비만큼 교류 전압을 올리거나 내리는 장치.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-turns-ratio",
+      "text": "두 코일을 지나는 자기선속이 같다면 전압의 비가 감은 수의 비와 같아, 2차 코일을 더 많이 감을수록 전압이 올라간다.",
+      "form": {
+        "condition": "두 코일을 지나는 자기선속이 서로 같을 때",
+        "type": "direct",
+        "scope": "누설이 없는 이상적인 변압기",
+        "antecedent": {
+          "quantity": "2차 코일의 감은 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "2차 코일에 걸리는 전압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "감은 수에 비례하는 관계라 낮아진다고 바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "2차 코일을 1차 코일보다 많이 감으면 2차 코일의 전압이 낮아진다."
+    },
+    {
+      "id": "rel-current-ratio",
+      "text": "에너지 손실이 없다면 입력 전력과 출력 전력이 같으므로 전압을 올린 쪽은 전류가 그만큼 줄어든다.",
+      "form": {
+        "condition": "변압기에서 에너지 손실이 없다고 볼 때",
+        "type": "inverse",
+        "scope": "이상적인 변압기",
+        "antecedent": {
+          "quantity": "2차 코일에 걸리는 전압",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "2차 코일에 흐르는 전류",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전력이 일정한 데 둘이 함께 커진다고 하면 에너지 보존과 반드시 어긋난다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전압을 올린 쪽 코일에서는 전류도 함께 커진다."
+    },
+    {
+      "id": "rel-ac-only",
+      "text": "1차 코일에 교류를 공급해야 자기선속이 계속 변해 2차 코일에 기전력이 생긴다.",
+      "form": {
+        "condition": "1차 코일에 전원을 이었을 때",
+        "type": "conditional",
+        "scope": "철심으로 이어진 두 코일"
+      },
+      "invertible": true,
+      "invertible_reason": "일정한 직류는 자기선속을 변화시키지 못하므로 기전력이 생긴다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "1차 코일에 일정한 직류를 흘려도 2차 코일에 기전력이 계속 생긴다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "변압기로 전압을 높이면 전력도 함께 커진다",
+      "why_wrong": "손실이 없다면 입력 전력과 출력 전력이 같다. 전압이 올라간 만큼 전류가 줄어 전력은 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-current-ratio"
+    },
+    {
+      "text": "변압기는 직류에서도 전압을 바꿀 수 있다",
+      "why_wrong": "자기선속이 변해야 2차 코일에 기전력이 생긴다. 일정한 직류는 자기선속을 변화시키지 못해 변압기가 작동하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ac-only"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-faraday-law-of-induction"
+    },
+    {
+      "type": "related",
+      "target": "emag-electromagnetic-induction"
+    },
+    {
+      "type": "related",
+      "target": "emag-inductor"
+    }
+  ],
+  "curriculum": [
+    "12전자01-05"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-01",
+  "pages": [
+    36,
+    50
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

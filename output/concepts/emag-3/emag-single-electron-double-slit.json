@@ -1,0 +1,124 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-single-electron-double-slit",
+  "concept_key": "concept:single-particle-double-slit-experiment",
+  "registry_status": "new",
+  "term": "단일 전자의 이중 슬릿 실험",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'슬릿'이 영어 slit 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "single-electron double-slit experiment"
+  },
+  "definition": "전자를 한 개씩 차례로 이중 슬릿에 보내는 실험. 도착점이 쌓이는 모양을 보고 간섭무늬가 생기는지 확인한다.",
+  "relations": [
+    {
+      "id": "rel-sed-one-dot",
+      "text": "전자를 한 개 보내면 스크린에는 점이 하나만 찍힌다.",
+      "form": {
+        "condition": "전자 1개를 이중 슬릿에 입사시킬 때",
+        "type": "conditional",
+        "scope": "한 번의 검출에 한정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이중 슬릿에 전자를 한 개 보내도 스크린에 간섭무늬가 통째로 그려진다」는 전자 1개를 입사시키면 도착점이 1개 찍힌다고 한 102·108쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이중 슬릿에 전자를 한 개 보내도 스크린에 간섭무늬가 통째로 그려진다."
+    },
+    {
+      "id": "rel-sed-accumulate",
+      "text": "스크린에 쌓인 전자 수가 많아질수록 점들의 분포는 간섭무늬에 가까워진다.",
+      "form": {
+        "condition": "전자를 하나씩 계속 입사시킬 때",
+        "type": "direct",
+        "scope": "경로를 측정하지 않은 단일 전자 실험",
+        "antecedent": {
+          "quantity": "누적된 전자 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "간섭무늬의 뚜렷함",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전자가 쌓일수록 무늬가 드러나므로, 흐려진다고 뒤집으면 실험 결과와 정면으로 어긋난다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "스크린에 쌓인 전자 수가 많아질수록 점들의 분포는 간섭무늬에서 멀어진다."
+    },
+    {
+      "id": "rel-sed-neither",
+      "text": "이 결과는 입자성만으로도, 파동성만으로도 설명되지 않는다.",
+      "form": {
+        "condition": "점이 하나씩 찍히면서 간섭무늬가 쌓일 때",
+        "type": "conditional",
+        "scope": "단일 양자 수준의 이중 슬릿 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이 결과는 전자의 입자성만으로 남김없이 설명된다」는 입자성과 파동성 가운데 하나만으로는 설명할 수 없다고 한 102쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 결과는 전자의 입자성만으로 남김없이 설명된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전자를 하나씩 보내면 간섭무늬는 끝내 생기지 않는다",
+      "why_wrong": "한 개일 때는 점 하나뿐이지만, 같은 실험을 되풀이해 점이 쌓이면 간섭무늬가 드러난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sed-accumulate"
+    },
+    {
+      "text": "전자 한 개가 스크린에 간섭무늬를 통째로 그린다",
+      "why_wrong": "전자 하나는 점 하나로만 찍힌다. 무늬는 많은 전자의 도착점이 모여 드러나는 분포다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sed-one-dot"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electron-double-slit-experiment"
+    },
+    {
+      "type": "next",
+      "target": "emag-probability-wave"
+    },
+    {
+      "type": "related",
+      "target": "emag-probability-wave-interference"
+    },
+    {
+      "type": "related",
+      "target": "emag-quantum-superposition"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-01"
+  ],
+  "topic_id": "emag-3-1-01",
+  "pages": [
+    102,
+    103,
+    108
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "aliases": [
+    "단일 양자 이중 슬릿 실험"
+  ]
+}

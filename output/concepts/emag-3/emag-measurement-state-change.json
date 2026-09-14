@@ -1,0 +1,117 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-measurement-state-change",
+  "concept_key": "concept:quantum-measurement-state-change",
+  "registry_status": "new",
+  "term": "측정에 의한 확률적 상태 변화",
+  "notation": {
+    "hanja": "測定確率的狀態變化",
+    "hanja_gloss": "測 헤아릴 측 · 定 정할 정 · 確 굳을 확 · 率 비율 률 · 的 과녁 적 · 狀 형상 상 · 態 모습 태 · 變 변할 변 · 化 될 화",
+    "hanja_note": "조사 '에 의한'은 고유어여서 한자로 옮기지 않았다.",
+    "english": "probabilistic state change by measurement"
+  },
+  "definition": "측정 전에는 확률적으로 겹쳐 있던 여러 상태가 측정하는 순간 하나로 정해지는 일.",
+  "relations": [
+    {
+      "id": "rel-msc-collapse",
+      "text": "위치를 재는 순간 다른 곳에서 발견될 확률은 사라지고 그 자리에 입자 하나로 나타난다.",
+      "form": {
+        "condition": "측정이 일어나는 바로 그 순간",
+        "type": "causal",
+        "scope": "코펜하겐 해석을 따르는 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「위치를 잰 뒤에도 다른 곳에서 발견될 확률이 그대로 남는다」는 다른 곳에 존재할 확률은 없어진다고 한 104쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위치를 잰 뒤에도 다른 곳에서 발견될 확률이 그대로 남는다."
+    },
+    {
+      "id": "rel-msc-detector",
+      "text": "이중 슬릿 뒤 검출기로 어느 슬릿을 지났는지 확인하면 간섭무늬가 사라지고 줄 두 개만 남는다.",
+      "form": {
+        "condition": "경로를 재는 검출기를 설치했을 때",
+        "type": "causal",
+        "scope": "전자의 이중 슬릿 실험"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「검출기를 달아 경로를 확인해도 간섭무늬는 그대로 남는다」는 경로를 재면 간섭 줄무늬 대신 줄 두 개만 나타난다고 한 104쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "검출기를 달아 경로를 확인해도 간섭무늬는 그대로 남는다."
+    },
+    {
+      "id": "rel-msc-probability",
+      "text": "측정에서 어떤 값이 나올지는 확률 파동이 주는 확률로만 말할 수 있다.",
+      "form": {
+        "condition": "측정 전에 결과를 미리 말하려 할 때",
+        "type": "conditional",
+        "scope": "미시 세계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「측정에서 어떤 값이 나올지 측정 전에 확정해 말할 수 있다」는 측정 결과를 확률로만 말할 수 있다고 한 104~105쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "측정에서 어떤 값이 나올지 측정 전에 확정해 말할 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "검출기는 전자를 건드리지 않고 지나간 길만 읽으므로 무늬에 영향을 주지 않는다",
+      "why_wrong": "경로를 읽는 순간 중첩이 깨진다. 그래서 간섭무늬가 사라지고 슬릿을 본뜬 줄 두 개만 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-msc-detector"
+    },
+    {
+      "text": "측정 전에도 전자는 이미 한 지점에 있었고 측정은 그것을 확인할 뿐이다",
+      "why_wrong": "측정 전에는 여러 위치의 가능성이 겹쳐 있고, 측정하는 순간에 비로소 하나로 정해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-msc-collapse"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-quantum-superposition"
+    },
+    {
+      "type": "next",
+      "target": "emag-copenhagen-interpretation"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-cryptography"
+    },
+    {
+      "type": "related",
+      "target": "emag-measurement-disturbance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-02"
+  ],
+  "topic_id": "emag-3-1-02",
+  "pages": [
+    104,
+    105,
+    108
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "notes": [
+    "중복 정리 — rel-msc-detector 의 inverted_text 와 글자 그대로 같던 오개념을 다른 오류 문장으로 바꿔 적었다. 뒤집은 문장 쪽이 D1 의 OX 원천이다."
+  ]
+}

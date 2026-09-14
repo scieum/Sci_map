@@ -1,0 +1,131 @@
+{
+  "id": "emag-logic-gate",
+  "concept_key": "concept:logic-gate",
+  "registry_status": "new",
+  "term": "기초 논리 회로",
+  "notation": {
+    "hanja": "基礎論理回路",
+    "hanja_gloss": "基 터 기 · 礎 주춧돌 초 · 論 논할 론 · 理 다스릴 리 · 回 돌 회 · 路 길 로",
+    "english": "basic logic circuit",
+    "symbol_display": "AND / OR / NOT",
+    "symbol_plain": "AND / OR / NOT"
+  },
+  "definition": "입력으로 들어온 0과 1의 신호를 논리 연산해 출력값을 내놓는, 트랜지스터 스위치로 짜인 회로.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-switch-output",
+      "text": "스위치를 여는 것이 0, 닫는 것이 1일 때 어떤 입력 조합에서 출력이 1이 되는가로 그 회로의 논리가 정해진다.",
+      "form": {
+        "condition": "스위치의 개폐를 입력값으로 약속하고 볼 때",
+        "type": "conditional",
+        "scope": "스위치로 꾸민 기초 논리 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "표기 약속을 밝힌 것이라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-and-or",
+      "text": "두 입력이 모두 1일 때만 출력이 1인 것이 AND 회로이고, 둘 가운데 하나만 1이어도 출력이 1인 것이 OR 회로다.",
+      "form": {
+        "condition": "입력이 둘인 회로에서 입력 조합마다 출력을 따져 볼 때",
+        "type": "classification",
+        "scope": "입력이 둘인 기초 논리 회로",
+        "antecedent": {
+          "quantity": "출력이 1이 되는 입력 조합",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "그 회로가 하는 논리 연산의 종류",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두 회로에 붙는 이름을 맞바꾼 문장이라 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "둘 가운데 하나만 1이어도 출력이 1인 것이 AND 회로이고, 두 입력이 모두 1일 때만 출력이 1인 것이 OR 회로다."
+    },
+    {
+      "id": "rel-transistor-as-switch",
+      "text": "논리 회로에서 스위치 노릇을 하는 것은 트랜지스터이고, 베이스 전류를 여닫아 스위치를 대신한다.",
+      "form": {
+        "condition": "논리 회로를 반도체 소자로 구현할 때",
+        "type": "causal",
+        "scope": "디지털 논리 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "스위칭 작용은 트랜지스터의 성질이라 다른 소자로 바꿔 말하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "논리 회로에서 스위치 노릇을 하는 것은 다이오드이고, 트랜지스터는 전류를 한 방향으로만 흘린다."
+    },
+    {
+      "id": "rel-combination",
+      "text": "기초 논리 회로를 여러 개 이어 붙이면 더 복잡한 논리 기능을 하는 회로를 만들 수 있다.",
+      "form": {
+        "condition": "여러 논리 회로를 이어 붙였을 때",
+        "type": "causal",
+        "scope": "디지털 회로"
+      },
+      "invertible": false,
+      "invertible_reason": "구성 방법을 말한 명제라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "AND 게이트는 두 입력 가운데 하나만 1이어도 출력이 1이다",
+      "why_wrong": "그것은 OR 게이트의 동작이다. AND 게이트는 두 입력이 모두 1일 때만 출력이 1이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-and-or"
+    },
+    {
+      "text": "논리 회로의 스위치는 사람이 손으로 여닫아야 한다",
+      "why_wrong": "실제 회로에서는 트랜지스터가 스위치 노릇을 하고, 베이스에 흘리는 작은 전류로 여닫는다. 그래서 아주 빠른 연산이 가능하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-transistor-as-switch"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-transistor"
+    },
+    {
+      "type": "related",
+      "target": "emag-transistor-amplification"
+    }
+  ],
+  "curriculum": [
+    "12전자01-07"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-03",
+  "pages": [
+    48,
+    49
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "집적 회로(IC)와 진공관은 곁주 수준의 소개라 카드를 세우지 않았다.",
+    "AND 오개념이 기댈 명제가 카드에 없어(C6 defect) rel-and-or 을 새로 세우고 misconceptions[0] 을 그쪽으로 옮겼다. rel-switch-output 은 입력값 표기 약속만 말한다."
+  ]
+}

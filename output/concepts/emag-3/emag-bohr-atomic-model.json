@@ -1,0 +1,134 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-bohr-atomic-model",
+  "concept_key": "concept:bohr-atomic-model",
+  "registry_status": "new",
+  "term": "보어의 원자 모형",
+  "notation": {
+    "hanja": "原子模型",
+    "hanja_gloss": "原 근원 원 · 子 아들 자 · 模 본뜰 모 · 型 모형 형",
+    "hanja_note": "'보어'는 인명의 음차어여서 한자로 옮기지 않았다.",
+    "english": "Bohr atomic model",
+    "symbol_display": "Eₙ = -13.6/n² eV",
+    "symbol_plain": "En = -13.6/n^2 eV"
+  },
+  "definition": "전자가 특정 조건을 채운 원 궤도에서만 안정하다고 본 원자 모형. 두 가설로 원자의 안정성과 수소 선스펙트럼을 풀어냈다.",
+  "relations": [
+    {
+      "id": "rel-bohr-orbit",
+      "text": "수소 원자 속 전자는 특정 조건을 채운 궤도에서만 전자기파를 내지 않고 안정하게 머문다.",
+      "form": {
+        "condition": "보어의 제1가설을 받아들일 때",
+        "type": "conditional",
+        "scope": "수소 원자"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수소 원자 속 전자는 양자 조건을 채우지 않은 궤도에서도 전자기파를 내지 않고 안정하게 머문다」는 '조건을 채운 궤도에서만'이라고 배타 범위를 그은 보어 제1가설(118쪽)와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소 원자 속 전자는 양자 조건을 채우지 않은 궤도에서도 전자기파를 내지 않고 안정하게 머문다."
+    },
+    {
+      "id": "rel-bohr-transition",
+      "text": "전자가 다른 궤도로 옮길 때 두 궤도의 에너지 차만큼을 광자로 내놓거나 받아들인다.",
+      "form": {
+        "condition": "전자가 궤도 사이를 전이할 때",
+        "type": "causal",
+        "scope": "보어 모형의 제2가설"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자가 궤도를 옮길 때 두 궤도의 에너지 차와 상관없는 크기의 에너지를 광자로 주고받는다」는 에너지 차에 해당하는 만큼을 주고받는다고 못박은 보어 제2가설(118쪽)와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전자가 궤도를 옮길 때 두 궤도의 에너지 차와 상관없는 크기의 에너지를 광자로 주고받는다."
+    },
+    {
+      "id": "rel-bohr-energy",
+      "text": "양자수가 n인 수소 원자 속 전자의 에너지는 -13.6/n² eV 로 주어진다.",
+      "form": {
+        "condition": "수소 원자에서 양자수가 n인 상태일 때",
+        "type": "conditional",
+        "scope": "수소 원자에 한정. 다전자 원자에는 맞지 않는다"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 값을 주는 식이어서 식을 흐트러뜨린 문장을 '뒤집은 문장'으로 볼지가 갈린다. C8 에서 사람이 정할 때까지 false 로 둔다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-bohr-limit",
+      "text": "보어 모형은 전자가 여럿인 원자의 선스펙트럼을 설명하지 못했다.",
+      "form": {
+        "condition": "수소가 아닌 다전자 원자를 다룰 때",
+        "type": "conditional",
+        "scope": "보어 모형의 한계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「보어 모형은 전자가 여럿인 원자의 선스펙트럼까지 설명해 냈다」는 다전자 원자의 선스펙트럼을 설명하지 못한 것을 한계로 든 119쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "보어 모형은 전자가 여럿인 원자의 선스펙트럼까지 설명해 냈다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "보어 모형에서 전자는 원자핵 둘레 어느 거리에서나 자유롭게 돌 수 있다",
+      "why_wrong": "양자 조건을 채운 특정 궤도에서만 안정하다. 그 사이의 반지름은 허용되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bohr-orbit"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-energy-level"
+    },
+    {
+      "type": "next",
+      "target": "emag-standing-wave-orbit-condition"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-mechanical-atomic-model"
+    },
+    {
+      "type": "related",
+      "target": "emag-line-spectrum"
+    },
+    {
+      "type": "same",
+      "target": "phys-bohr-atomic-model"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-2-02",
+  "pages": [
+    118,
+    126
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "aliases": [
+    "보어 원자 모형"
+  ],
+  "notes": [
+    "phys-bohr-atomic-model 과 concept_key 가 같아 same 으로 이었다. 사전 등록은 G3 몫이다.",
+    "★C8 검토 — rel-bohr-energy 의 invertible 은 false 로 두었다. 값을 주는 식이라 '식을 흐트러뜨린 문장'을 뒤집기로 볼지가 갈려 이번 패스에서 판정하지 않았다."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "emag-bias-voltage",
+  "concept_key": "concept:bias-voltage",
+  "registry_status": "new",
+  "term": "바이어스 전압",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'바이어스'는 bias 의 음차라 한자가 없다. 뒤에 붙은 '전압(電壓)'만 한자어다.",
+    "english": "bias voltage"
+  },
+  "definition": "교류 신호에 미리 더해 두는 직류 전압으로, 신호가 오르내려도 접합에 순방향이 유지되도록 잡아 준다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-forward-reverse",
+      "text": "순방향 바이어스가 걸리면 접합에 전류가 흐르고, 역방향 바이어스가 걸리면 전류가 거의 흐르지 않는다.",
+      "form": {
+        "condition": "p-n 접합에 직류 전압을 걸었을 때",
+        "type": "conditional",
+        "scope": "p-n 접합을 가진 반도체 소자"
+      },
+      "invertible": true,
+      "invertible_reason": "두 방향의 결과를 맞바꾸면 접합의 성질과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "순방향 바이어스가 걸리면 전류가 거의 흐르지 않고 역방향 바이어스에서 잘 흐른다."
+    },
+    {
+      "id": "rel-full-signal",
+      "text": "바이어스 전압이 없으면 교류 신호 가운데 순방향이 되는 절반만 증폭되고, 바이어스를 더하면 신호 전체가 증폭된다.",
+      "form": {
+        "condition": "약한 교류 신호를 트랜지스터로 증폭할 때",
+        "type": "causal",
+        "scope": "공통 이미터 증폭 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "바이어스가 신호 전체를 순방향 구간에 올려놓는 것이라 맞바꾸면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-07"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "바이어스 전압을 더하면 교류 신호 가운데 절반만 증폭된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바이어스 전압은 출력 신호를 더 크게 하려고 더하는 것이다",
+      "why_wrong": "바이어스는 출력의 크기를 키우려는 것이 아니라, 교류 신호가 음이 되는 구간에서도 접합이 순방향을 잃지 않게 해 신호 전체가 증폭되도록 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-full-signal"
+    },
+    {
+      "text": "역방향 바이어스에서도 전류가 순방향과 비슷하게 흐른다",
+      "why_wrong": "역방향에서는 접합면 쪽으로 옮겨 갈 전자나 양공이 없어 전류가 거의 흐르지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-forward-reverse"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-pn-junction-diode"
+    },
+    {
+      "type": "next",
+      "target": "emag-transistor-amplification"
+    }
+  ],
+  "curriculum": [
+    "12전자01-07"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-2-03",
+  "pages": [
+    45,
+    48
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "바이어스의 구실을 말한 명제가 이 카드에 둘, emag-transistor-amplification 에 하나로 셋이라 D1 이 거의 같은 OX 를 셋 만들 상황이었다(C6 중복). 이 카드의 rel-full-signal 한 자리로 모으고 rel-be-forward 와 emag-transistor-amplification/rel-bias-needed 를 뺐다. 증폭 카드는 prereq 링크로 이 명제를 받는다."
+  ]
+}

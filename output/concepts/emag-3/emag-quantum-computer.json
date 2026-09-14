@@ -1,0 +1,128 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-quantum-computer",
+  "concept_key": "concept:quantum-computer",
+  "registry_status": "new",
+  "term": "양자 컴퓨터",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'컴퓨터'가 영어 computer 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "quantum computer"
+  },
+  "definition": "큐비트의 중첩과 간섭을 이용해 계산하는 컴퓨터. 여러 후보를 한꺼번에 다룬 뒤 간섭으로 답을 골라낸다.",
+  "relations": [
+    {
+      "id": "rel-qc-parallel",
+      "text": "고전 컴퓨터가 후보를 차례로 하나씩 확인하는 데 비해 양자 컴퓨터는 중첩시켜 한 번에 통과시킨다.",
+      "form": {
+        "condition": "여러 후보에서 정답 하나를 찾는 문제일 때",
+        "type": "classification",
+        "scope": "중첩을 쓸 수 있게 설계된 문제"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「고전 컴퓨터가 후보를 중첩시켜 한 번에 통과시키는 데 비해 양자 컴퓨터는 하나씩 차례로 확인한다」는 두 컴퓨터의 계산 방식을 갈라 둔 105쪽 — 두 방식을 맞바꾼 문장과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고전 컴퓨터가 후보를 중첩시켜 한 번에 통과시키는 데 비해 양자 컴퓨터는 하나씩 차례로 확인한다."
+    },
+    {
+      "id": "rel-qc-interference",
+      "text": "정답이 아닌 경로의 파동은 상쇄시키고 정답 경로의 파동만 남긴 뒤 측정해 답을 읽는다.",
+      "form": {
+        "condition": "양자 알고리즘으로 답을 고를 때",
+        "type": "causal",
+        "scope": "간섭을 설계할 수 있는 문제"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「정답 경로의 파동을 상쇄시키고 정답이 아닌 경로의 파동만 남긴 뒤 측정해 답을 읽는다」는 정답이 아닌 경로를 상쇄시키고 정답 경로만 남긴다고 한 105쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "정답 경로의 파동을 상쇄시키고 정답이 아닌 경로의 파동만 남긴 뒤 측정해 답을 읽는다."
+    },
+    {
+      "id": "rel-qc-qubit-count",
+      "text": "큐비트가 50개 정도만 되어도 고전 컴퓨터를 넘어서는 빠른 계산 결과를 얻을 수 있다.",
+      "form": {
+        "condition": "중첩이 유지되는 양자 컴퓨터일 때",
+        "type": "conditional",
+        "scope": "교과서가 든 기준. 모든 문제에서 빠른 것은 아니다"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 큐비트 50개라는 교과서 기준값을 드는 명제여서 판정이 갈린다. C8 에서 사람이 정할 때까지 false 로 둔다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-qc-rsa",
+      "text": "양자 컴퓨터가 실용화되면 큰 수의 소인수 분해가 빨라져 현대 암호 체계의 안전성이 무너진다.",
+      "form": {
+        "condition": "소인수 분해의 어려움에 기댄 암호일 때",
+        "type": "causal",
+        "scope": "공개키 방식의 현대 암호 체계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「양자 컴퓨터가 실용화되어도 소인수 분해는 여전히 느려 현대 암호 체계의 안전성은 지켜진다」는 실용화되면 현대 암호 체계가 무용지물이 된다고 한 106쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양자 컴퓨터가 실용화되어도 소인수 분해는 여전히 느려 현대 암호 체계의 안전성은 지켜진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양자 컴퓨터는 어떤 계산이든 고전 컴퓨터보다 빠르다",
+      "why_wrong": "중첩과 간섭을 설계할 수 있는 문제에서 빠른 것이지 모든 계산에서 앞서는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qc-qubit-count"
+    },
+    {
+      "text": "양자 컴퓨터는 계산이 끝나면 곧바로 답을 읽을 수 있다",
+      "why_wrong": "결과를 측정해 답을 확인하기까지 거쳐야 할 단계가 남아 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qc-interference"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-qubit"
+    },
+    {
+      "type": "next",
+      "target": "emag-quantum-cryptography"
+    },
+    {
+      "type": "related",
+      "target": "emag-quantum-superposition"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-02"
+  ],
+  "topic_id": "emag-3-1-02",
+  "pages": [
+    105,
+    106,
+    108
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "notes": [
+    "★C8 검토 — rel-qc-qubit-count 의 invertible 은 false 로 두었다. 큐비트 50개라는 교과서 기준값을 드는 명제여서 판정이 갈렸다.",
+    "C6 확인 요청 — 오개념 '어떤 계산이든 고전 컴퓨터보다 빠르다'가 가리키는 rel-qc-qubit-count 는 명제 본문만 읽으면 오개념을 거들지 반박하지 않는다. 반박은 form.scope 에만 있고 D1 은 scope 를 끌고 가지 않는다. 명제를 고칠지 오개념을 옮길지는 사람이 정할 일이라 그대로 두었다."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-classical-vs-quantum-physics",
+  "concept_key": "concept:classical-vs-quantum-physics",
+  "registry_status": "new",
+  "term": "고전 물리학과 양자 물리학",
+  "notation": {
+    "hanja": "古典物理學量子物理學",
+    "hanja_gloss": "古 예 고 · 典 법 전 · 物 물건 물 · 理 다스릴 리 · 學 배울 학 · 量 헤아릴 량 · 子 아들 자 · 物 물건 물 · 理 다스릴 리 · 學 배울 학",
+    "hanja_note": "이음말 '과'는 고유어여서 한자로 옮기지 않았다.",
+    "english": "classical physics and quantum physics"
+  },
+  "definition": "예측의 성격이 갈리는 두 물리학. 앞의 것은 초기 조건으로 미래를 정하고, 뒤의 것은 확률로만 답한다.",
+  "relations": [
+    {
+      "id": "rel-cvq-classical",
+      "text": "고전 물리학에서는 초기 조건을 정밀하게 알수록 미래의 운동을 더 정확히 예측할 수 있다.",
+      "form": {
+        "condition": "거시 물체의 운동을 다룰 때",
+        "type": "direct",
+        "scope": "고전 물리학이 통하는 범위",
+        "antecedent": {
+          "quantity": "초기 조건의 정밀도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "예측의 정확도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "초기 조건이 정밀할수록 예측이 나빠진다는 말은 고전 역학의 결정론과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고전 물리학에서는 초기 조건을 정밀하게 알수록 미래의 운동을 더 부정확하게 예측하게 된다."
+    },
+    {
+      "id": "rel-cvq-quantum",
+      "text": "양자 물리학에서는 초기 조건을 원하는 만큼 정밀하게 정할 수 없어 결과를 확률로만 말한다.",
+      "form": {
+        "condition": "미시 입자를 다룰 때",
+        "type": "causal",
+        "scope": "양자 물리학"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「양자 물리학에서도 초기 조건을 원하는 만큼 정밀하게 정할 수 있어 미래를 정확히 예측한다」는 미시 세계에서는 그것이 근본적으로 불가능하다고 한 123쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양자 물리학에서도 초기 조건을 원하는 만큼 정밀하게 정할 수 있어 미래를 정확히 예측한다."
+    },
+    {
+      "id": "rel-cvq-example",
+      "text": "같은 판에 쏜 입자 1000개 중 600개가 통과했다면 다음 한 개는 60 %의 확률로 통과한다고만 말할 수 있다.",
+      "form": {
+        "condition": "같은 조건으로 입자 하나를 다시 쏠 때",
+        "type": "conditional",
+        "scope": "양자 물리학의 확률적 예측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「같은 판에 쏜 입자 1000개 중 600개가 통과했다면 다음 한 개가 통과할지 못할지 확정해 말할 수 있다」는 확률로 답하는 것만이 가능하다고 한 123쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 판에 쏜 입자 1000개 중 600개가 통과했다면 다음 한 개가 통과할지 못할지 확정해 말할 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "양자 물리학이 확률로만 답하는 것은 이론이 아직 덜 다듬어졌기 때문이다",
+      "why_wrong": "초기 조건을 원하는 정밀도로 정하는 일 자체가 불확정성 원리 때문에 막혀 있다. 이론의 미완성 탓이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cvq-quantum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-uncertainty-principle"
+    },
+    {
+      "type": "related",
+      "target": "emag-measurement-state-change"
+    },
+    {
+      "type": "related",
+      "target": "emag-quantum-mechanical-atomic-model"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-04"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    123
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "notes": [
+    "p123 은 읽기 면이라 topic_id 가 03(핵융합) 자리에 있지만 내용은 불확정성 원리에 붙는다. 성취기준은 12전자03-04 로 달았다 — C8 에서 확인해 주기 바란다."
+  ]
+}

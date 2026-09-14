@@ -1,0 +1,90 @@
+{
+  "id": "emag-polarization-by-reflection",
+  "concept_key": "concept:polarization-by-reflection",
+  "registry_status": "new",
+  "term": "반사에 의한 편광",
+  "notation": {
+    "hanja": "反射 偏光",
+    "hanja_gloss": "反 돌이킬 반 · 射 쏠 사 · 偏 치우칠 편 · 光 빛 광",
+    "english": "polarization by reflection"
+  },
+  "definition": "표면에서 되튄 빛이 반사면에 나란한 방향으로 치우쳐 부분적으로 편광되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pbr-parallel",
+      "text": "수면처럼 매끄러운 면에서 되튄 빛에는 반사면과 나란하게 진동하는 성분이 더 많이 들어 있다.",
+      "form": {
+        "condition": "자연광이 매끄러운 표면에 비스듬히 닿을 때",
+        "type": "causal",
+        "scope": "부분 편광. 한 방향 성분만 남는 완전한 편광은 아니다"
+      },
+      "invertible": true,
+      "invertible_reason": "반사광에서 많아지는 것은 반사면과 나란한 성분이므로 '수직 성분'으로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수면처럼 매끄러운 면에서 되튄 빛에는 반사면에 수직으로 진동하는 성분이 더 많이 들어 있다."
+    },
+    {
+      "id": "rel-pbr-sunglasses",
+      "text": "수면에서 되튄 빛은 주로 수평으로 편광되므로 편광축이 수직인 선글라스를 쓰면 눈부심이 걷히고 물속이 보인다.",
+      "form": {
+        "condition": "수평인 수면을 비스듬히 내려다볼 때",
+        "type": "causal",
+        "scope": "편광 선글라스. 안경을 90° 돌려 쓰면 효과가 사라진다"
+      },
+      "invertible": false,
+      "invertible_reason": "활용의 까닭을 밝히는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "편광 선글라스는 색이 짙어서 눈부심을 막아 준다",
+      "why_wrong": "짙기가 아니라 반사광의 편광 성분을 골라 막는 것이다. 색만 짙은 안경으로는 물속이 밝게 드러나지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pbr-sunglasses"
+    },
+    {
+      "text": "표면에서 되튄 빛은 완전히 한 방향으로만 편광된다",
+      "why_wrong": "반사면과 나란한 성분이 많아질 뿐이라 다른 방향 성분도 함께 남는 부분 편광이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pbr-parallel"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-polarization-of-light"
+    },
+    {
+      "type": "related",
+      "target": "emag-polarizing-filter"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-03"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-03",
+  "pages": [
+    73
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "rel-pbr-parallel 의 근거는 교과서 73쪽 본문(text.jsonl 블록 p73-b8)이다 — 「반사된 빛은 전기장의 진동 방향이 반사면과 나란한 빛이 더 많도록 부분적으로 편광된다」. C6 가 '원문에 없다'고 본 것은 표현을 달리 찾은 탓이다.",
+    "다만 inverted_text 의 '반사면에 수직'을 학생이 '입사면에 수직'과 헷갈릴 수 있다는 점은 남는다 — 낱말을 바꿀지는 C8 에서 보아 주기 바란다."
+  ]
+}

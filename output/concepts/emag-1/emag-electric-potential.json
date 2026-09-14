@@ -1,0 +1,145 @@
+{
+  "id": "emag-electric-potential",
+  "concept_key": "concept:electric-potential",
+  "registry_status": "new",
+  "term": "전위",
+  "notation": {
+    "hanja": "電位",
+    "hanja_gloss": "電 번개 전 · 位 자리 위",
+    "english": "electric potential",
+    "symbol_display": "ΔV = Ed",
+    "symbol_plain": "deltaV = Ed"
+  },
+  "definition": "전하 하나가 전기장 안의 어떤 자리에서 갖는 전기적 위치 에너지를 그 전하량으로 나눈 값.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-field-distance-pd",
+      "text": "균일한 전기장 안에서는 전기장 방향으로 잰 두 점 사이의 거리가 멀수록 두 점의 전위차가 크다.",
+      "form": {
+        "condition": "전기장의 세기가 일정한 균일 전기장일 때",
+        "type": "direct",
+        "scope": "평행한 두 금속판 사이의 균일한 전기장",
+        "antecedent": {
+          "quantity": "두 점 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "두 점 사이의 전위차",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "전기장 방향으로 잰 거리에 전위차가 비례하므로 그 거리를 늘리며 전위차가 작아진다고 하면 반드시 거짓이다. 뒤집은 문장에도 '전기장 방향으로 잰'을 남겨, 등전위면 위의 두 점이 반례가 되지 않게 했다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "균일한 전기장에서 전기장 방향으로 잰 두 점 사이의 거리가 멀수록 두 점의 전위차는 작아진다."
+    },
+    {
+      "id": "rel-drop-of-pe",
+      "text": "양전하가 전기장 방향을 따라 움직이면 전기적 위치 에너지가 줄고, 줄어든 만큼 전기력이 전하에 일을 해 준 것이다.",
+      "form": {
+        "condition": "전기력만 작용한 채 전하가 움직일 때",
+        "type": "causal",
+        "scope": "정지한 전하가 만드는 전기장 속의 양전하"
+      },
+      "invertible": true,
+      "invertible_reason": "힘의 방향과 이동 방향이 같아 일이 양수이므로 에너지가 늘어난다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양전하가 전기장 방향을 따라 움직이면 전기적 위치 에너지가 늘어난다."
+    },
+    {
+      "id": "rel-equipotential-no-current",
+      "text": "서로 이어진 두 도체의 전위가 같아지면 그 사이에 전위차가 없어 전류가 흐르지 않는다.",
+      "form": {
+        "condition": "두 도체가 서로 이어져 전위가 같아졌을 때",
+        "type": "conditional",
+        "scope": "정전기적 평형에 이른 도체"
+      },
+      "invertible": true,
+      "invertible_reason": "전위차가 0이면 전하를 밀 전압이 없어 전류가 흐른다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 도체의 전위가 같아져도 둘 사이에는 전류가 계속 흐른다."
+    },
+    {
+      "id": "rel-reference-point",
+      "text": "전위 값은 기준점을 어디로 잡느냐에 따라 달라지므로, 물리적으로 뜻을 갖는 것은 두 점 사이의 전위차다.",
+      "form": {
+        "condition": "전위의 기준점을 새로 정할 때",
+        "type": "conditional",
+        "scope": "전기장 안의 임의의 두 점"
+      },
+      "invertible": false,
+      "invertible_reason": "기준 선택에 대한 서술이라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-01"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전위가 높은 곳일수록 전기장도 반드시 세다",
+      "why_wrong": "전위는 기준점에 따라 달라지는 값이고, 전기장의 세기는 전위가 거리에 따라 얼마나 가파르게 변하는가로 정해진다. 전위가 높아도 전기장이 0인 곳이 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-field-distance-pd"
+    },
+    {
+      "text": "양전하가 전기장 방향으로 움직이면 전기적 위치 에너지가 커진다",
+      "why_wrong": "전기력이 운동 방향으로 일을 해 주므로 위치 에너지는 그만큼 줄어든다. 물체가 중력 방향으로 떨어질 때와 같은 셈이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-drop-of-pe"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electric-field"
+    },
+    {
+      "type": "next",
+      "target": "emag-equipotential-surface"
+    },
+    {
+      "type": "related",
+      "target": "emag-electric-field-line"
+    },
+    {
+      "type": "same",
+      "target": "phys-electric-potential",
+      "note": "concept:electric-potential 가 같다"
+    }
+  ],
+  "curriculum": [
+    "12전자01-01"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-01",
+  "pages": [
+    16,
+    17
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "homonym_flag": true,
+  "notes": [
+    "homonyms.yaml 의 감시어 '전위'와 표기가 겹친다 — 전기 퍼텐셜(concept:electric-potential) ↔ 지층의 자리바꿈(concept:dislocation). 링크 근거는 concept_key 일치뿐이며 G3 에서 사람이 다시 볼 자리다.",
+    "'전위차'는 카드를 따로 세우지 않고 rel-field-distance-pd·rel-reference-point 로 흡수했다 — phys-potential-difference 카드가 이미 있다.",
+    "'전기적 위치 에너지'도 phys 쪽 카드가 있어 여기서는 선수 개념으로만 썼다.",
+    "rel-field-distance-pd 의 inverted_text 에 '전기장 방향으로 잰'을 되살려 invertible: true 를 지켰다 — D1 이 condition·scope 를 끌고 가지 않으므로 한정을 문면에 둔다 (C6 defect 수정).",
+    "misconceptions[0]('전위가 높은 곳일수록 전기장도 반드시 세다')의 linked_relation 이 rel-field-distance-pd 인지 rel-reference-point 인지 C5 판단이 갈렸다. 전위 값과 전기장 세기를 가르는 명제를 따로 세우지 않고 그대로 두었으니 C8 에서 볼 자리다."
+  ]
+}

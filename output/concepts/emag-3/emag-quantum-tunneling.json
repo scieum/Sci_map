@@ -1,0 +1,124 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-quantum-tunneling",
+  "concept_key": "concept:quantum-tunneling",
+  "registry_status": "new",
+  "term": "터널 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'터널'이 영어 tunnel 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "quantum tunneling"
+  },
+  "definition": "자기 역학적 에너지보다 높은 퍼텐셜 장벽을 미시 입자가 뚫고 건너가는 현상.",
+  "relations": [
+    {
+      "id": "rel-qt-occurs",
+      "text": "미시 입자는 아주 낮은 확률로나마 자기 에너지보다 높은 장벽을 건너갈 수 있다.",
+      "form": {
+        "condition": "장벽이 얇고 입자가 가벼울 때",
+        "type": "conditional",
+        "scope": "미시 세계. 거시 물체에서는 사실상 일어나지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「미시 입자도 자기 에너지보다 높은 장벽은 결코 건너갈 수 없다」는 아주 작은 확률일지라도 터널을 뚫어 넘어갈 수 있다고 한 112쪽과 어긋나 반드시 거짓이다. 앞서의 사유는 역(converse)을 시험한 것이어서 판정 근거가 되지 못한다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미시 입자도 자기 에너지보다 높은 장벽은 결코 건너갈 수 없다."
+    },
+    {
+      "id": "rel-qt-wave",
+      "text": "터널 효과가 가능한 것은 입자가 파동의 성질을 지녀 장벽 너머까지 확률 파동이 이어지기 때문이다.",
+      "form": {
+        "condition": "입자를 확률 파동으로 다룰 때",
+        "type": "causal",
+        "scope": "양자 역학이 적용되는 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「터널 효과가 가능한 것은 입자가 어디선가 에너지를 더 얻어 장벽을 뛰어넘기 때문이다」는 입자가 파동의 성질을 가지기 때문이라고 한 113쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "터널 효과가 가능한 것은 입자가 어디선가 에너지를 더 얻어 장벽을 뛰어넘기 때문이다."
+    },
+    {
+      "id": "rel-qt-classical-contrast",
+      "text": "고전 역학으로는 이 현상을 설명할 수 없으며, 미시 세계의 입자에서 일어나는 일로 다룬다.",
+      "form": {
+        "condition": "고전 역학과 양자 역학을 견줄 때",
+        "type": "classification",
+        "scope": "미시 세계의 입자. 거시 물체에서 금지된다는 뜻이 아니라 일어나는 곳을 말한다"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「터널 효과는 고전 역학으로도 설명할 수 있는 현상이다」는 고전역학으로는 입자가 언덕을 넘을 수 없다고 한 112쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "터널 효과는 고전 역학으로도 설명할 수 있는 현상이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "터널 효과는 입자가 어디선가 에너지를 얻어 장벽을 뛰어넘는 것이다",
+      "why_wrong": "에너지를 더 얻어 넘는 것이 아니라, 장벽 너머까지 이어진 확률 파동 때문에 그곳에서 발견될 확률이 남는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qt-wave"
+    },
+    {
+      "text": "사람도 벽에 계속 부딪히면 언젠가 터널 효과로 벽을 통과한다",
+      "why_wrong": "질량이 클수록 투과 확률이 급격히 작아진다. 사람 정도의 질량에서는 그 확률이 사실상 0이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-qt-occurs"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-potential-barrier"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-probability-wave"
+    },
+    {
+      "type": "next",
+      "target": "emag-tunneling-probability"
+    },
+    {
+      "type": "next",
+      "target": "emag-scanning-tunneling-microscope"
+    },
+    {
+      "type": "next",
+      "target": "emag-hydrogen-fusion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-03"
+  ],
+  "topic_id": "emag-3-2-01",
+  "pages": [
+    112,
+    113,
+    126
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "aliases": [
+    "양자 터널링"
+  ],
+  "notes": [
+    "★C8 확인 — 카드 안에서 definition 은 '역학적 에너지', rel-qt-occurs 는 '자기 에너지'로 표기가 갈린다. 교과서도 112·113쪽 본문은 '역학적 에너지', 126쪽 정리는 '운동 에너지'로 갈려 있어 어느 쪽으로 맞출지는 사람이 정할 일이라 그대로 두었다.",
+    "rel-qt-classical-contrast 의 '미시 세계에서만 인정된다'는 교과서에 대응 구절이 없어 '미시 세계의 입자에서 일어나는 일로 다룬다'로 낮췄다."
+  ]
+}

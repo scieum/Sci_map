@@ -1,0 +1,147 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-tunneling-probability",
+  "concept_key": "concept:tunneling-probability",
+  "registry_status": "new",
+  "term": "투과 확률",
+  "notation": {
+    "hanja": "透過確率",
+    "hanja_gloss": "透 통할 투 · 過 지날 과 · 確 굳을 확 · 率 비율 률",
+    "english": "transmission probability"
+  },
+  "definition": "입자가 퍼텐셜 장벽을 뚫고 지나갈 가능성의 크기. 장벽의 두께·높이와 입자의 질량·에너지가 이 값을 좌우한다.",
+  "relations": [
+    {
+      "id": "rel-tp-thickness",
+      "text": "장벽이 두꺼울수록 입자가 그 장벽을 투과할 확률은 작아진다.",
+      "form": {
+        "condition": "장벽의 높이와 입자의 조건이 같을 때",
+        "type": "inverse",
+        "scope": "퍼텐셜 장벽을 만난 미시 입자",
+        "antecedent": {
+          "quantity": "퍼텐셜 장벽의 두께",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "투과 확률",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "두께가 늘면 투과 확률이 줄어드는 관계여서 방향을 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "장벽이 두꺼울수록 입자가 그 장벽을 투과할 확률은 커진다."
+    },
+    {
+      "id": "rel-tp-height",
+      "text": "장벽이 높을수록 입자가 그 장벽을 투과할 확률은 작아진다.",
+      "form": {
+        "condition": "장벽의 두께와 입자의 조건이 같을 때",
+        "type": "inverse",
+        "scope": "퍼텐셜 장벽을 만난 미시 입자",
+        "antecedent": {
+          "quantity": "퍼텐셜 장벽의 높이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "투과 확률",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "높이가 올라가면 투과 확률이 줄어드는 관계라 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "장벽이 높을수록 입자가 그 장벽을 투과할 확률은 커진다."
+    },
+    {
+      "id": "rel-tp-mass",
+      "text": "입자의 질량이 클수록 터널 효과가 작아져, 같은 장벽이라도 원자핵은 전자보다 통과하기 어렵다.",
+      "form": {
+        "condition": "장벽의 두께와 높이가 같을 때",
+        "type": "inverse",
+        "scope": "미시 입자끼리 견줄 때",
+        "antecedent": {
+          "quantity": "입자의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "투과 확률",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "질량이 크면 투과 확률이 작아진다는 관계여서 뒤집으면 교과서가 든 전자·원자핵 비교와 정면으로 어긋난다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "입자의 질량이 클수록 터널 효과가 커져, 같은 장벽이라도 원자핵은 전자보다 통과하기 쉽다."
+    },
+    {
+      "id": "rel-tp-meaning",
+      "text": "투과 확률이 0.001이라면 장벽에 1000번 부딪힐 때 한 번 통과한다는 뜻이다.",
+      "form": {
+        "condition": "같은 조건으로 되풀이해 부딪힐 때",
+        "type": "conditional",
+        "scope": "확률값을 읽는 방법"
+      },
+      "invertible": false,
+      "invertible_reason": "판정 보류. 확률값 0.001 을 읽는 방법을 푸는 계산 절차형이라 판정이 갈린다. C8 에서 사람이 정할 때까지 false 로 둔다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "장벽이 아무리 높아도 두께만 얇으면 투과 확률은 달라지지 않는다",
+      "why_wrong": "두께와 높이가 함께 투과 확률을 정한다. 두께가 같아도 높이가 올라가면 확률은 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tp-height"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-quantum-tunneling"
+    },
+    {
+      "type": "next",
+      "target": "emag-tunneling-in-miniaturized-device"
+    },
+    {
+      "type": "related",
+      "target": "emag-scanning-tunneling-microscope"
+    },
+    {
+      "type": "related",
+      "target": "emag-potential-barrier"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-03"
+  ],
+  "topic_id": "emag-3-2-01",
+  "pages": [
+    113,
+    126
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "notes": [
+    "★C8 검토 — rel-tp-meaning 의 invertible 은 false 로 두었다. 확률값 0.001 을 읽는 방법을 푸는 계산 절차형이라 판정이 갈렸다."
+  ]
+}

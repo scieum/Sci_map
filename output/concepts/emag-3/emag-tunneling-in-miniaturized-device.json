@@ -1,0 +1,94 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-tunneling-in-miniaturized-device",
+  "concept_key": "concept:tunneling-in-miniaturized-device",
+  "registry_status": "new",
+  "term": "전자 소자 소형화와 터널 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'터널'이 영어 tunnel 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "tunneling in miniaturized electronic devices"
+  },
+  "definition": "반도체를 작게 만들수록 전자가 회로 밖으로 새는 문제. 얇아진 퍼텐셜 장벽을 전자가 터널 효과로 건너는 데서 온다.",
+  "relations": [
+    {
+      "id": "rel-tmd-scale",
+      "text": "회로에서 전자가 흐르는 길 사이 간격이 좁아질수록 터널 효과가 잦아진다.",
+      "form": {
+        "condition": "반도체 소자를 더 작게 만들어 갈 때",
+        "type": "inverse",
+        "scope": "미세화가 진행된 반도체 전자 소자",
+        "antecedent": {
+          "quantity": "전자가 흐르는 길 사이의 간격",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "터널 효과가 일어나는 빈도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "장벽이 얇을수록 투과 확률이 커지므로, 간격이 좁아질 때 드물어진다고 뒤집으면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "회로에서 전자가 흐르는 길 사이 간격이 좁아질수록 터널 효과가 드물어진다."
+    },
+    {
+      "id": "rel-tmd-leak",
+      "text": "길을 벗어난 전자는 회로의 오작동과 누설 전류에 의한 전력 손실을 일으킨다.",
+      "form": {
+        "condition": "전자가 설계된 경로를 벗어났을 때",
+        "type": "causal",
+        "scope": "반도체 집적 회로"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「길을 벗어난 전자는 회로의 동작을 오히려 안정시키고 전력 손실도 줄여 준다」는 오작동과 누설 전류에 의한 전력 손실을 일으킨다고 한 115쪽과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "길을 벗어난 전자는 회로의 동작을 오히려 안정시키고 전력 손실도 줄여 준다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "터널 효과는 언제나 이로운 현상이라 소자는 작게 만들수록 좋다",
+      "why_wrong": "소자가 작아지면 원치 않는 터널 효과로 전류가 새어 오작동과 전력 손실이 생긴다. 해결해야 할 과제다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tmd-leak"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-tunneling-probability"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-quantum-tunneling"
+    },
+    {
+      "type": "related",
+      "target": "emag-scanning-tunneling-microscope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-03"
+  ],
+  "topic_id": "emag-3-2-01",
+  "pages": [
+    114,
+    115,
+    126
+  ],
+  "difficulty": 3,
+  "role": "context"
+}

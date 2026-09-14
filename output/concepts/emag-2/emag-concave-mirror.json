@@ -1,0 +1,96 @@
+{
+  "id": "emag-concave-mirror",
+  "concept_key": "concept:concave-mirror",
+  "registry_status": "new",
+  "term": "오목 거울",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'오목'과 '거울' 모두 고유어라 한자어 표기가 없다.",
+    "english": "concave mirror"
+  },
+  "definition": "반사면이 안쪽으로 오목하게 패인 거울. 얼굴을 크게 비추는 화장 거울부터 망원경까지 빛을 모아야 하는 기기에 쓰인다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cm-focus",
+      "text": "반사면을 포물면으로 깎은 오목 거울에서는 광축에 나란히 들어온 빛이 반사한 뒤 초점 한 곳에 빠짐없이 모인다.",
+      "form": {
+        "condition": "빛이 광축에 나란한 방향으로 들어올 때",
+        "type": "causal",
+        "scope": "포물면으로 만든 오목 거울. 구면으로 깎은 거울은 여기에 들지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "포물면 거울에서는 나란히 들어온 빛이 모두 초점을 지나므로, 모이지 않는다고 바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반사면을 포물면으로 깎은 오목 거울에서도 광축에 나란히 들어온 빛은 초점을 지나지 않고 제각각 퍼진다."
+    },
+    {
+      "id": "rel-cm-spherical",
+      "text": "구면의 일부로 깎은 오목 거울에서는 광축에서 먼 자리에 닿은 빛이 초점에서 벗어난다.",
+      "form": {
+        "condition": "거울 면이 구면일 때",
+        "type": "causal",
+        "scope": "광축에서 멀리 떨어진 입사광. 포물면 거울에는 해당하지 않는다"
+      },
+      "invertible": true,
+      "invertible_reason": "구면에서는 먼 빛이 반드시 어긋나므로 '모두 모인다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구면의 일부로 깎은 오목 거울에서도 광축에서 먼 빛까지 모두 초점에 모인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "오목 거울은 구면으로 만들어도 모든 빛을 초점 한 점에 모은다",
+      "why_wrong": "광축에서 먼 빛은 초점보다 앞쪽에서 어긋나 상을 흐리게 만든다. 그래서 정밀한 기기에는 포물면을 쓴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cm-spherical"
+    },
+    {
+      "text": "오목 거울의 초점은 거울 뒤쪽에 있다",
+      "why_wrong": "반사한 빛이 실제로 모이는 자리이므로 초점은 거울 앞쪽에 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cm-focus"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-image-formation-by-concave-mirror"
+    },
+    {
+      "type": "next",
+      "target": "emag-optical-aberration"
+    },
+    {
+      "type": "related",
+      "target": "emag-real-and-virtual-image"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    66,
+    67
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "광축과 초점은 따로 카드를 세우지 않고 이 카드 안에서 정의한다.",
+    "정의에서 '초점에 모으는 성질'을 빼고 rel-cm-focus 쪽에 두었다. 또 포물면 조건을 condition 에서 text·inverted_text 문면으로 옮겨, 조건이 떨어진 지문이 rel-cm-spherical 과 부딪히지 않게 했다 (C6 지적)."
+  ]
+}

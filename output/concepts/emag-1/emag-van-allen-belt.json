@@ -1,0 +1,110 @@
+{
+  "id": "emag-van-allen-belt",
+  "concept_key": "concept:van-allen-belt",
+  "registry_status": "new",
+  "term": "밴앨런대",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'밴앨런'은 발견자 Van Allen 의 음차라 한자가 없다. 뒤에 붙은 '대(帶)'만 한자다.",
+    "english": "Van Allen belt"
+  },
+  "definition": "지구 자기장에 붙들려 나선을 그리며 도는 태양풍 대전 입자들이 많이 모여 있는, 지구를 둘러싼 영역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-parallel-component",
+      "text": "자기장에 나란한 속도 성분은 로런츠 힘을 받지 않아 그대로 남고, 입자는 그 방향으로 계속 나아간다.",
+      "form": {
+        "condition": "대전 입자가 자기장에 비스듬히 들어왔을 때",
+        "type": "causal",
+        "scope": "지구 자기장에 진입한 태양풍 대전 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "나란한 성분에는 로런츠 힘이 0이므로 힘을 받아 사라진다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기장에 나란한 속도 성분도 로런츠 힘을 받아 곧 사라진다."
+    },
+    {
+      "id": "rel-perpendicular-component",
+      "text": "자기장에 수직인 속도 성분은 원운동을 일으키고, 이것이 나란한 성분과 겹쳐 입자가 나선 운동을 한다.",
+      "form": {
+        "condition": "대전 입자가 자기장에 비스듬히 들어왔을 때",
+        "type": "causal",
+        "scope": "지구 자기장 속의 대전 입자"
+      },
+      "invertible": false,
+      "invertible_reason": "두 성분이 겹친 결과를 말한 것이라 뒤집어 견줄 두 양의 방향이 없다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-polar",
+      "text": "태양풍 입자는 지구 자기력선을 따라 극지방 쪽으로 이끌려 가므로 오로라도 주로 극 가까이에서 보인다.",
+      "form": {
+        "condition": "태양풍 입자가 지구 자기장에 붙들렸을 때",
+        "type": "causal",
+        "scope": "지구 자기권"
+      },
+      "invertible": true,
+      "invertible_reason": "자기력선이 극으로 모이는 모양이 확정적이라 적도 쪽이라 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양풍 입자는 지구 자기력선을 따라 적도 쪽으로 이끌려 가 오로라가 적도에서 잘 보인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양풍 입자는 지구 자기장에 부딪혀 튕겨 나가기 때문에 지표에 닿지 않는다",
+      "why_wrong": "입자는 자기장에 부딪히는 것이 아니라 로런츠 힘을 받아 나선을 그리며 자기력선을 따라 휘어 간다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-perpendicular-component"
+    },
+    {
+      "text": "오로라는 태양에서 온 빛이 그대로 보이는 것이다",
+      "why_wrong": "오로라는 자기력선을 따라 극지방으로 내려온 대전 입자가 공기 입자와 부딪히며 내는 빛이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-polar"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-circular-motion-of-charged-particle"
+    },
+    {
+      "type": "related",
+      "target": "emag-magnetic-field-line"
+    },
+    {
+      "type": "related",
+      "target": "emag-lorentz-force"
+    }
+  ],
+  "curriculum": [
+    "12전자01-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-04",
+  "pages": [
+    29,
+    30
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "오로라는 이 카드의 현상 예로 묶고 따로 카드를 세우지 않았다.",
+    "플라스마는 곁주 용어이고 emag-3 핵융합 단원의 개념이라 뺐다."
+  ]
+}

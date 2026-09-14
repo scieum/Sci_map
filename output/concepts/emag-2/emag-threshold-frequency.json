@@ -1,0 +1,120 @@
+{
+  "id": "emag-threshold-frequency",
+  "concept_key": "concept:threshold-frequency",
+  "registry_status": "new",
+  "term": "문턱 진동수",
+  "notation": {
+    "hanja": "振動數",
+    "hanja_gloss": "振 떨칠 진 · 動 움직일 동 · 數 셀 수",
+    "hanja_note": "'문턱'은 고유어라 한자가 없다.",
+    "english": "threshold frequency",
+    "symbol_display": "f₀",
+    "symbol_plain": "f0"
+  },
+  "definition": "광전 효과가 겨우 일어나기 시작하는 진동수. 광전자의 최대 운동 에너지가 0이 되는 지점의 진동수다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tf-metal-dependence",
+      "text": "일함수가 큰 금속일수록 문턱 진동수가 높아, 같은 빛을 비추어도 어떤 금속에서는 광전자가 나오고 어떤 금속에서는 나오지 않는다.",
+      "form": {
+        "condition": "일함수가 서로 다른 금속들에 같은 빛을 비출 때",
+        "type": "direct",
+        "scope": "hf0 = W0 에서 따라 나오는 금속별 차이. 빛의 세기는 여기에 끼어들지 않는다",
+        "antecedent": {
+          "quantity": "금속의 일함수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "문턱 진동수",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "일함수가 클수록 문턱 진동수도 높으므로, 낮아진다고 바꾼 문장은 반드시 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "일함수가 큰 금속일수록 문턱 진동수는 오히려 낮아진다."
+    },
+    {
+      "id": "rel-tf-intensity",
+      "text": "진동수가 문턱보다 작은 빛은 세기를 아무리 키워도 광전자를 내보내지 못한다.",
+      "form": {
+        "condition": "빛의 진동수를 문턱 아래로 붙들어 둘 때",
+        "type": "conditional",
+        "scope": "광전 효과. 빛의 세기로는 문턱 조건을 넘어서지 못한다"
+      },
+      "invertible": true,
+      "invertible_reason": "세기는 광자 하나의 에너지를 키우지 못하므로 '세게 비추면 나온다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "진동수가 문턱보다 작은 빛이라도 세게 비추면 광전자가 나온다."
+    },
+    {
+      "id": "rel-tf-workfunction",
+      "text": "문턱 진동수에 플랑크 상수를 곱한 값이 그 금속의 일함수와 같다.",
+      "form": {
+        "condition": "최대 운동 에너지가 0이 되는 지점에서",
+        "type": "causal",
+        "scope": "hf0 = W0 관계"
+      },
+      "invertible": false,
+      "invertible_reason": "등식을 말하는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "문턱 진동수는 모든 금속에서 같은 값이다",
+      "why_wrong": "일함수가 금속마다 다르므로 문턱 진동수도 금속마다 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tf-metal-dependence"
+    },
+    {
+      "text": "빛을 오래 비추면 문턱 진동수보다 작은 빛으로도 전자가 나온다",
+      "why_wrong": "시간을 늘리거나 세기를 키우는 것으로는 광자 하나의 에너지가 커지지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tf-intensity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-work-function"
+    },
+    {
+      "type": "related",
+      "target": "emag-photoelectric-effect"
+    },
+    {
+      "type": "related",
+      "target": "emag-maximum-kinetic-energy-of-photoelectron"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-01",
+  "pages": [
+    82
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "rel-tf-condition 을 접고 rel-tf-metal-dependence 로 바꿨다. 옛 명제는 카드 정의를 되풀이했고 emag-photoelectric-effect/rel-pe-frequency 와 단원 안에서 같은 문장이었다 — 문턱 조건 명제는 그 카드가 갖는다 (C6 지적)."
+  ]
+}

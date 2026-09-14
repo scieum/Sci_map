@@ -1,0 +1,116 @@
+{
+  "id": "emag-image-formation-by-concave-mirror",
+  "concept_key": "concept:image-formation-by-concave-mirror",
+  "registry_status": "new",
+  "term": "오목 거울에 의한 상",
+  "notation": {
+    "hanja": "像",
+    "hanja_gloss": "像 모양 상",
+    "hanja_note": "'오목 거울'은 고유어이고 '상'만 한자어다.",
+    "english": "image formation by a concave mirror"
+  },
+  "definition": "오목 거울 앞에 둔 물체가 만드는 상. 물체가 초점 밖이면 거꾸로 선 실상이, 초점 안이면 바로 서고 커진 허상이 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ifcm-outside",
+      "text": "물체를 초점보다 먼 곳에 두면 반사한 빛이 실제로 모여 거꾸로 선 실상이 맺힌다.",
+      "form": {
+        "condition": "물체와 거울 사이 거리가 초점 거리보다 클 때",
+        "type": "conditional",
+        "scope": "오목 거울 하나로 상을 만들 때"
+      },
+      "invertible": true,
+      "invertible_reason": "초점 밖 물체의 상은 반드시 실상이므로 '허상'으로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체를 초점보다 먼 곳에 두면 거울 뒤쪽에 바로 선 허상이 생긴다."
+    },
+    {
+      "id": "rel-ifcm-inside",
+      "text": "물체를 초점 안쪽에 두면 반사광이 퍼져 나가, 거울 뒤편에 바로 서고 커진 허상이 보인다.",
+      "form": {
+        "condition": "물체와 거울 사이 거리가 초점 거리보다 작을 때",
+        "type": "conditional",
+        "scope": "오목 거울 하나로 상을 만들 때"
+      },
+      "invertible": true,
+      "invertible_reason": "초점 안쪽 물체의 상은 반드시 허상이므로 '실상'으로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "물체를 초점 안쪽에 두면 거울 앞쪽에 거꾸로 선 실상이 맺힌다."
+    },
+    {
+      "id": "rel-ifcm-raytracing",
+      "text": "광축에 나란한 광선과 초점을 지나는 광선을 각각 작도해 두 반사광이 만나는 자리를 찾으면 상의 위치를 알 수 있다.",
+      "form": {
+        "condition": "광선 추적법으로 상을 찾을 때",
+        "type": "causal",
+        "scope": "작도로 상의 위치와 크기를 구하는 방법"
+      },
+      "invertible": false,
+      "invertible_reason": "작도 절차를 말하는 명제라 뒤집을 방향이 없다.",
+      "curriculum": [
+        "12전자02-02"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "오목 거울에 비친 모습은 언제나 크고 바로 서 보인다",
+      "why_wrong": "얼굴을 가까이 댈 때만 그렇다. 물체가 초점 밖으로 나가면 거꾸로 선 실상이 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ifcm-outside"
+    },
+    {
+      "text": "허상 자리에 스크린을 대면 상이 맺힌다",
+      "why_wrong": "허상 자리에는 빛이 실제로 모이지 않는다. 눈으로 볼 수 있을 뿐 스크린에는 아무것도 남지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ifcm-inside"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-concave-mirror"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-real-and-virtual-image"
+    },
+    {
+      "type": "related",
+      "target": "emag-optical-aberration"
+    },
+    {
+      "type": "related",
+      "target": "emag-refracting-telescope"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-1-02",
+  "pages": [
+    67,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "표제어에 '상'이 들어간다. homonyms.yaml 의 watch_terms 에 '상'이 있어 플래그를 달아 둔다 — 링크 근거는 concept_key 뿐이다."
+  ],
+  "homonym_flag": true
+}

@@ -1,0 +1,127 @@
+{
+  "id": "emag-dielectric-polarization",
+  "concept_key": "concept:dielectric-polarization",
+  "registry_status": "new",
+  "term": "유전 분극",
+  "notation": {
+    "hanja": "誘電分極",
+    "hanja_gloss": "誘 꾈 유 · 電 번개 전 · 分 나눌 분 · 極 다할 극",
+    "english": "dielectric polarization"
+  },
+  "definition": "자유 전자가 없는 절연체에서 원자 속 전하들이 자리를 고쳐 잡아 양 끝이 서로 다른 전하를 띠게 되는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-insulator-vs-conductor",
+      "text": "자유 전자가 없는 절연체에서는 전자가 물체 끝까지 옮겨 가지 못하고 원자 안에서 치우치기만 한다.",
+      "form": {
+        "condition": "물질 안에 자유롭게 움직이는 전자가 없을 때",
+        "type": "classification",
+        "scope": "종이·증류수 같은 절연체",
+        "antecedent": {
+          "quantity": "자유 전자의 유무",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "전하가 재배열되는 방식",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "자유 전자가 없다는 전제와 끝까지 옮겨 간다는 결론이 함께 설 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자유 전자가 없는 절연체에서도 전자가 물체 끝까지 옮겨 가 한쪽에 쌓인다."
+    },
+    {
+      "id": "rel-attraction",
+      "text": "분극된 절연체는 대전체와 가까운 쪽이 반대 부호를 띠게 되어, 종잇조각이나 물줄기가 대전체 쪽으로 끌려온다.",
+      "form": {
+        "condition": "대전체를 절연체 가까이 두었을 때",
+        "type": "causal",
+        "scope": "종이·증류수 같은 절연체"
+      },
+      "invertible": true,
+      "invertible_reason": "가까운 쪽이 반대 부호를 띠는 것이 확정적이라 밀려난다고 하면 반드시 거짓이다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분극된 절연체는 대전체와 가까운 쪽이 같은 부호를 띠어 대전체에서 밀려난다."
+    },
+    {
+      "id": "rel-permittivity",
+      "text": "걸어 준 전기장이 같아도 유전율이 큰 물질일수록 분극이 더 크게 일어난다.",
+      "form": {
+        "condition": "걸어 준 전기장의 세기가 일정할 때",
+        "type": "direct",
+        "scope": "전기장 안에 놓인 유전체",
+        "antecedent": {
+          "quantity": "물질의 유전율",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "분극의 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "유전율이 분극의 정도를 나타낸 수치라 반대로 말하면 정의와 어긋난다.",
+      "curriculum": [
+        "12전자01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유전율이 큰 물질일수록 같은 전기장에서 분극이 덜 일어난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "절연체는 전하가 움직일 수 없으므로 대전체에 끌려오지 않는다",
+      "why_wrong": "자유 전자가 없어도 원자 안에서 전하가 조금씩 치우칠 수 있다. 이 유전 분극 때문에 가까운 쪽에 반대 부호가 생겨 인력이 작용한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-attraction"
+    },
+    {
+      "text": "유전 분극이 일어나면 절연체가 전기를 통하게 된다",
+      "why_wrong": "분극은 전하가 원자 안에서 자리를 조금 바꾸는 것일 뿐 전하가 물질을 가로질러 흐르는 것이 아니다. 절연체는 여전히 전기를 통하지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-insulator-vs-conductor"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-electrostatic-induction"
+    },
+    {
+      "type": "next",
+      "target": "emag-application-of-electrostatic-induction"
+    },
+    {
+      "type": "next",
+      "target": "emag-capacitance"
+    }
+  ],
+  "curriculum": [
+    "12전자01-02"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅰ. 전자기적 상호작용",
+  "unit_id": "emag-1",
+  "topic_id": "emag-1-1-02",
+  "pages": [
+    19,
+    30
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "★표기 충돌 — '유전체'(dielectric)가 gene-genome 카드의 표제어 '유전체'(genome)와 표기가 같다. homonyms.yaml 감시어 후보로 사람 판단이 필요하다. 이번에는 유전체 카드를 따로 세우지 않아 지금 당장 충돌하지는 않는다.",
+    "'유전율'도 카드를 세우지 않고 rel-permittivity 와 축전기 카드의 비례 상수로만 썼다."
+  ]
+}

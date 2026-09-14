@@ -1,0 +1,94 @@
+{
+  "subject": "전자기와 양자",
+  "unit": "Ⅲ. 양자와 미시 세계",
+  "unit_id": "emag-3",
+  "definition_source": "restated",
+  "version": 1,
+  "id": "emag-mass-energy-equivalence",
+  "concept_key": "concept:mass-energy-equivalence",
+  "registry_status": "new",
+  "term": "질량-에너지 등가 원리",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'에너지'가 영어 energy 의 음차어여서 표제어 전체에 대응하는 한자어가 없다.",
+    "english": "mass-energy equivalence",
+    "symbol_display": "E = mc²",
+    "symbol_plain": "E = mc^2"
+  },
+  "definition": "질량과 에너지가 서로 바뀔 수 있다는 원리. 질량에 빛의 속력의 제곱을 곱한 값이 그에 해당하는 에너지다.",
+  "relations": [
+    {
+      "id": "rel-mee-convert",
+      "text": "질량은 에너지로, 에너지는 질량으로 바뀔 수 있다.",
+      "form": {
+        "condition": "핵반응처럼 질량이 달라지는 과정에서",
+        "type": "causal",
+        "scope": "상대성 이론이 적용되는 범위"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「질량과 에너지는 서로 바뀔 수 없다」는 둘이 서로 전환된다고 본 질량·에너지 등가 원리와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량과 에너지는 서로 바뀔 수 없다."
+    },
+    {
+      "id": "rel-mee-amount",
+      "text": "전환되는 질량이 클수록 그에 해당하는 에너지도 크다.",
+      "form": {
+        "condition": "빛의 속력이 일정할 때",
+        "type": "direct",
+        "scope": "질량이 에너지로 바뀌는 반응",
+        "antecedent": {
+          "quantity": "전환되는 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "그에 해당하는 에너지",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "에너지가 질량에 비례하므로 방향을 뒤집으면 관계식과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12전자03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "전환되는 질량이 클수록 그에 해당하는 에너지는 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 줄어들었다는 것은 그만큼의 물질이 흔적 없이 사라졌다는 뜻이다",
+      "why_wrong": "사라진 것이 아니라 같은 양이 에너지로 모습을 바꾼 것이다. 빛과 열로 방출된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mee-convert"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "emag-mass-defect"
+    },
+    {
+      "type": "related",
+      "target": "emag-nuclear-fusion"
+    },
+    {
+      "type": "related",
+      "target": "emag-nuclear-reaction-equation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자03-05"
+  ],
+  "topic_id": "emag-3-2-03",
+  "pages": [
+    120
+  ],
+  "difficulty": 3,
+  "role": "supporting"
+}

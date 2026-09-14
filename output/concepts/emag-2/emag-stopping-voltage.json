@@ -1,0 +1,117 @@
+{
+  "id": "emag-stopping-voltage",
+  "concept_key": "concept:stopping-voltage",
+  "registry_status": "new",
+  "term": "정지 전압",
+  "notation": {
+    "hanja": "停止 電壓",
+    "hanja_gloss": "停 머무를 정 · 止 그칠 지 · 電 번개 전 · 壓 누를 압",
+    "english": "stopping voltage",
+    "symbol_display": "V_S",
+    "symbol_plain": "VS"
+  },
+  "definition": "광전류가 0이 되게 만드는 전압. 가장 빠른 광전자마저 반대편 극판에 닿지 못하도록 막아서는 값이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sv-maxke",
+      "text": "정지 전압에 전자의 전하량을 곱한 값은 광전자의 최대 운동 에너지와 같다.",
+      "form": {
+        "condition": "에너지 보존 법칙을 적용할 때",
+        "type": "causal",
+        "scope": "Emax = eVs. 정지 전압을 재어 최대 운동 에너지를 알아내는 근거다"
+      },
+      "invertible": false,
+      "invertible_reason": "등식을 세우는 명제라 크고 작음의 방향이 없다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sv-frequency",
+      "text": "금속판을 그대로 두고 진동수가 큰 빛을 비출수록 정지 전압이 커진다.",
+      "form": {
+        "condition": "금속판의 종류를 바꾸지 않을 때",
+        "type": "direct",
+        "scope": "문턱 진동수를 넘는 빛",
+        "antecedent": {
+          "quantity": "빛의 진동수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "정지 전압",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "최대 운동 에너지가 커지면 막는 전압도 커지므로 '작아진다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "금속판을 그대로 두고 진동수가 큰 빛을 비출수록 정지 전압이 작아진다."
+    },
+    {
+      "id": "rel-sv-intensity",
+      "text": "빛의 세기만 키우면 광전류의 최댓값은 커지지만 정지 전압은 그대로다.",
+      "form": {
+        "condition": "빛의 진동수와 금속판을 바꾸지 않을 때",
+        "type": "causal",
+        "scope": "세기만 달리한 실험. 진동수를 바꾸면 이야기가 달라진다"
+      },
+      "invertible": true,
+      "invertible_reason": "세기는 최대 운동 에너지를 바꾸지 못하므로 '정지 전압도 커진다'로 뒤집으면 거짓이다.",
+      "curriculum": [
+        "12전자02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빛의 세기만 키우면 광전류의 최댓값과 함께 정지 전압도 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "빛을 세게 비추면 정지 전압도 커진다",
+      "why_wrong": "정지 전압은 최대 운동 에너지에 비례하고, 그 값은 진동수와 일함수가 정한다. 세기는 전류의 크기만 바꾼다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sv-intensity"
+    },
+    {
+      "text": "정지 전압을 걸면 금속판에서 광전자가 아예 나오지 않는다",
+      "why_wrong": "광전자는 그대로 나온다. 다만 반대편 극판에 닿지 못해 전류가 0으로 읽힐 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sv-maxke"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "emag-photoelectron"
+    },
+    {
+      "type": "prereq",
+      "target": "emag-maximum-kinetic-energy-of-photoelectron"
+    },
+    {
+      "type": "related",
+      "target": "emag-photoelectric-effect"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12전자02-04"
+  ],
+  "subject": "전자기와 양자",
+  "unit": "Ⅱ. 빛과 정보 통신",
+  "unit_id": "emag-2",
+  "topic_id": "emag-2-2-01",
+  "pages": [
+    81,
+    82
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}
