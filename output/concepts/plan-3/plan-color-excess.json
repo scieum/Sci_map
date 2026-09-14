@@ -1,0 +1,103 @@
+{
+  "id": "plan-color-excess",
+  "concept_key": "concept:color-excess",
+  "registry_status": "new",
+  "term": "색초과",
+  "notation": {
+    "hanja": "色超過",
+    "english": "color excess",
+    "hanja_gloss": "色 빛 색 · 超 넘을 초 · 過 지날 과",
+    "symbol_display": "E(B−V)",
+    "symbol_plain": "E(B-V)"
+  },
+  "definition": "관측한 색지수에서 그 별의 고유 색지수를 뺀 값. 별빛이 티끌에 얼마나 흡수되었는지 가늠하는 잣대다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ce-amount",
+      "text": "색초과가 클수록 별빛이 성간 티끌에 흡수된 정도가 크다.",
+      "form": {
+        "condition": "그 별의 고유 색지수를 알고 있을 때",
+        "type": "direct",
+        "scope": "성간 적색화를 겪은 별",
+        "antecedent": {
+          "quantity": "색초과",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "티끌에 흡수된 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「색초과가 클수록 흡수된 정도가 작다」는 색초과가 적색화의 크기를 재는 값이라는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "색초과가 클수록 별빛이 성간 티끌에 흡수된 정도가 작다."
+    },
+    {
+      "id": "rel-ce-av",
+      "text": "우리은하에서 성간 소광에 따른 V 등급의 증가량은 색초과의 약 3배다.",
+      "form": {
+        "condition": "우리은하의 평균적인 티끌 성질을 가정할 때",
+        "type": "direct",
+        "scope": "우리은하 안의 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「V 등급의 증가량이 색초과의 약 3분의 1이다」는 알려진 비례 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우리은하에서 성간 소광에 따른 V 등급의 증가량은 색초과의 약 3분의 1이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "색초과는 두 별의 색지수를 서로 뺀 값이다",
+      "why_wrong": "한 별의 관측 색지수에서 그 별의 고유 색지수를 뺀 값이다. 다른 별과 견주는 값이 아니다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "색초과를 알아도 소광 등급은 따로 관측해야만 알 수 있다",
+      "why_wrong": "우리은하에서는 V 등급의 증가량이 색초과의 약 3배로 알려져 있어, 색초과에서 소광 등급을 가늠할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ce-av"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-reddening"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-color-index"
+    },
+    {
+      "type": "related",
+      "target": "plan-interstellar-extinction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-2",
+  "pages": [
+    106
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — 무엇에서 무엇을 빼는가에 대한 정의 오개념이라 반박할 명제가 없어 linked_relation 을 비웠다."
+  ]
+}

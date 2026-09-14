@@ -1,0 +1,121 @@
+{
+  "id": "plan-apparent-magnitude-and-absolute-magnitude",
+  "concept_key": "concept:apparent-magnitude-and-absolute-magnitude",
+  "registry_status": "new",
+  "term": "겉보기 등급과 절대 등급",
+  "notation": {
+    "hanja": "等級絕對等級",
+    "hanja_note": "'겉보기'는 고유어라 한자가 없고, 한자어인 '등급'과 '절대 등급'만 적었다.",
+    "hanja_gloss": "等 무리 등 · 級 등급 급 · 絕 끊을 절 · 對 대할 대 · 等 무리 등 · 級 등급 급",
+    "english": "apparent magnitude and absolute magnitude",
+    "symbol_display": "m, M",
+    "symbol_plain": "m, M"
+  },
+  "definition": "별의 밝기를 나타내는 두 가지 잣대. 하나는 관측된 밝기를 그대로 적고, 다른 하나는 거리의 영향을 걷어 낸 밝기를 적는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-am-ambiguous",
+      "text": "겉보기 등급만으로는 그 별이 원래 어두운지, 밝지만 멀어서 어둡게 보이는지 가릴 수 없다.",
+      "form": {
+        "condition": "별까지의 거리를 모를 때",
+        "type": "conditional",
+        "scope": "겉보기 등급 관측값 하나만 주어진 경우"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「겉보기 등급만으로도 가릴 수 있다」인데, 같은 겉보기 등급이 되는 광도와 거리의 짝이 여럿이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겉보기 등급만으로도 그 별이 원래 어두운지, 멀어서 어둡게 보이는지 가릴 수 있다."
+    },
+    {
+      "id": "rel-am-ten-parsec",
+      "text": "별들을 모두 10 pc 되는 곳으로 옮겨 놓았다고 치고 매긴 등급이 절대 등급이다.",
+      "form": {
+        "condition": "절대 등급을 정의할 때",
+        "type": "classification",
+        "scope": "모든 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 기준 거리를 1 pc으로 바꿔 놓은 것인데, 약속된 기준이 10 pc이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별들을 모두 1 pc 되는 곳으로 옮겨 놓았다고 치고 매긴 등급이 절대 등급이다."
+    },
+    {
+      "id": "rel-am-distance-change",
+      "text": "같은 별을 더 멀리 옮겨 놓으면 겉보기 등급의 값은 커지지만 절대 등급은 그대로다.",
+      "form": {
+        "condition": "별 자체의 광도가 달라지지 않을 때",
+        "type": "conditional",
+        "scope": "거리만 달라진 같은 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「멀어지면 겉보기 등급 값이 작아지고 절대 등급이 커진다」인데, 멀수록 어두워지고 절대 등급은 거리와 무관하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 별을 더 멀리 옮겨 놓으면 겉보기 등급의 값은 작아지고 절대 등급이 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "절대 등급이 같은 두 별은 하늘에서 똑같은 밝기로 보인다.",
+      "why_wrong": "절대 등급이 같아도 거리가 다르면 겉보기 등급이 달라진다. 가까운 쪽이 더 밝게 보인다.",
+      "source": "llm",
+      "linked_relation": "rel-am-distance-change"
+    },
+    {
+      "text": "겉보기 등급이 작은 별이 실제로 가장 밝은 별이다.",
+      "why_wrong": "가까이 있어 밝게 보이는 것일 수 있다. 실제 밝기를 견주려면 절대 등급을 봐야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-am-ambiguous"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-pogson-formula"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-luminosity"
+    },
+    {
+      "type": "next",
+      "target": "plan-distance-modulus"
+    },
+    {
+      "type": "same",
+      "target": "earth-apparent-magnitude-and-absolute-magnitude",
+      "note": "「지구과학」에서는 H-R도 쪽에서 같은 개념을 다룬다"
+    },
+    {
+      "type": "same",
+      "target": "plan-apparent-and-absolute-magnitude",
+      "note": "「Ⅲ. 은하와 우주」에서 C-M도 쪽으로 다루는 같은 개념이다 (id 는 다르지만 concept_key 가 같다)"
+    }
+  ],
+  "curriculum": [
+    "12행우02-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-2",
+  "pages": [
+    65
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "concept_registry.yaml 에 천문 계열 키가 아직 없어 registry_status 를 new 로 두었다. 키가 같은 「지구과학」 카드와는 same 으로 이었다 (R9).",
+    "plan-3 의 plan-apparent-and-absolute-magnitude 와 id 는 다르나 concept_key 가 같다. 표기가 아니라 키를 근거로 same 을 걸었다 (R9)."
+  ]
+}

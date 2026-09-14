@@ -1,0 +1,100 @@
+{
+  "id": "plan-period-luminosity-relation",
+  "concept_key": "concept:period-luminosity-relation",
+  "registry_status": "new",
+  "term": "주기 - 광도 관계",
+  "notation": {
+    "hanja": "週期光度關係",
+    "english": "period-luminosity relation",
+    "hanja_gloss": "週 돌 주 · 期 기약할 기 · 光 빛 광 · 度 법도 도 · 關 빗장 관 · 係 맬 계"
+  },
+  "definition": "맥동 변광성의 변광 주기와 광도 사이에 성립하는 대응 관계. 주기를 재면 절대 등급을 읽어 낼 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-plr-long",
+      "text": "변광 주기가 긴 세페이드일수록 광도가 크다.",
+      "form": {
+        "condition": "같은 종족의 세페이드끼리 견줄 때",
+        "type": "direct",
+        "scope": "세페이드 변광성",
+        "antecedent": {
+          "quantity": "변광 주기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "별의 광도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「주기가 긴 세페이드일수록 광도가 작다」는 리비트가 찾아낸 관계와 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변광 주기가 긴 세페이드일수록 광도가 작다."
+    },
+    {
+      "id": "rel-plr-dist",
+      "text": "주기로 얻은 절대 등급과 관측한 평균 겉보기 등급을 맞대면 그 별까지의 거리를 구할 수 있다.",
+      "form": {
+        "condition": "성간 소광을 보정했을 때",
+        "type": "causal",
+        "scope": "세페이드 변광성까지의 거리 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 등급을 빼는 자리에 더하기를 놓은 것이라, 거리 지수가 등급의 차라는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주기로 얻은 절대 등급과 관측한 평균 겉보기 등급을 더하면 그 별까지의 거리가 나온다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주기 - 광도 관계로는 별의 겉보기 등급을 곧바로 알 수 있다",
+      "why_wrong": "주기에서 얻는 것은 광도, 곧 절대 등급이다. 겉보기 등급은 따로 관측해야 하며, 둘의 차로 거리를 구한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plr-dist"
+    },
+    {
+      "text": "주기 - 광도 관계는 모든 변광성에 똑같이 적용된다",
+      "why_wrong": "거문고자리 RR형 변광성은 주기가 달라도 밝기가 거의 일정하다. 주기가 길수록 밝아지는 관계는 세페이드 쪽이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-plr-long"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-cepheid-variable"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-distance-modulus-of-star-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-structure-of-the-milky-way"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-3",
+  "pages": [
+    98,
+    99
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

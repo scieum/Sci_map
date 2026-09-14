@@ -27,9 +27,15 @@ def load_cards(unit: str) -> list[dict]:
             for f in sorted(d.glob("*.json")) if not f.name.endswith(".candidates.json")]
 
 
-def load_media(unit: str) -> dict[str, dict]:
+def load_media(unit: str) -> dict[str, list[dict]]:
+    """카드 하나에 그림이 **여럿** 붙을 수 있다 — 카드마다 대장 행의 목록을 준다.
+
+    한 자리에 한 행만 담으면 나중 행이 앞 행을 덮어, 요약표의 「교과서 그림 N장」이
+    실제보다 적게 나온다 (plan-1 은 30장인데 24장으로 찍혔다). 크롭 상한을 푼 뒤로
+    그 수가 곧 감사 대상이니 (CLAUDE.md §6) 적게 세는 쪽도 틀린 것이다.
+    """
     led = REPO / "output" / "rights" / "ledger.jsonl"
-    out: dict[str, dict] = {}
+    out: dict[str, list[dict]] = {}
     if not led.exists():
         return out
     for line in led.open(encoding="utf-8"):
@@ -38,7 +44,7 @@ def load_media(unit: str) -> dict[str, dict]:
             continue
         for cid in (r.get("concept_ids") or []):
             if cid:
-                out[cid] = r
+                out.setdefault(cid, []).append(r)
     return out
 
 
@@ -84,7 +90,8 @@ def main() -> int:
     w(f"| 개념 카드 | {len(cards)}장 |")
     w(f"| 관계 명제 | **{len(rels)}개** (그중 `invertible` {len(inv)}개) |")
     w(f"| 오개념 | {sum(len(c['misconceptions']) for c in cards)}개 (LLM 출처 {len(llm_mis)}개) |")
-    w(f"| 교과서 그림 | {len(set(m['asset_id'] for m in media.values()))}장 → 카드 {len(media)}/{len(cards)} |")
+    assets = {r["asset_id"] for rows in media.values() for r in rows}
+    w(f"| 교과서 그림 | {len(assets)}장 → 카드 {len(media)}/{len(cards)} |")
     w(f"| 신규 `concept_key` | {len(new_keys)}개 (G3 대상) |")
     w(f"| 성취기준 커버리지 | {', '.join(f'{k}({v})' for k, v in sorted(cur.items())) or '없음'} |")
     w("")

@@ -1,0 +1,120 @@
+{
+  "id": "plan-asteroid",
+  "concept_key": "concept:asteroid",
+  "registry_status": "new",
+  "term": "소행성",
+  "notation": {
+    "hanja": "小行星",
+    "english": "asteroid",
+    "hanja_gloss": "小 작을 소 · 行 다닐 행 · 星 별 성"
+  },
+  "definition": "주로 암석질로 이루어진 태양계 소천체. 행성으로 자라지 못한 미행성과 초기 천체들이 부딪혀 남은 물질이 모여 이루어졌다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-as-shape",
+      "text": "크기가 작은 소행성은 대개 모양이 불규칙하지만, 중력이 충분할 만큼 큰 소행성은 구형을 이룬다.",
+      "form": {
+        "condition": "자체 중력이 암석을 둥글게 다듬을 만한 크기일 때",
+        "type": "conditional",
+        "scope": "소행성의 겉모양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「작은 소행성이 구형이고 큰 소행성일수록 불규칙하다」는 둘을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크기가 작은 소행성이 구형을 이루고, 크기가 큰 소행성일수록 모양이 불규칙하다."
+    },
+    {
+      "id": "rel-as-location",
+      "text": "소행성은 대부분 화성과 목성 사이의 소행성대나 목성의 공전 궤도 부근에 모여 있다.",
+      "form": {
+        "condition": "태양계 안 분포를 살필 때",
+        "type": "classification",
+        "scope": "알려진 소행성의 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「소행성은 대부분 해왕성 바깥 카이퍼 띠에 모여 있다」는 소행성대의 위치와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소행성은 대부분 해왕성 바깥의 카이퍼 띠에 모여 있다."
+    },
+    {
+      "id": "rel-as-primitive",
+      "text": "크기가 작은 소행성은 분화를 겪지 않아 태양계 초기의 물질을 그대로 간직하고 있다.",
+      "form": {
+        "condition": "내부 열이 모자라 마그마 바다를 거치지 않았을 때",
+        "type": "causal",
+        "scope": "크기가 작은 미분화 소천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분화를 겪지 않았어도 초기 물질을 간직하고 있지 않다」는 초기 물질이 보존된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크기가 작은 소행성은 분화를 겪지 않았어도 태양계 초기의 물질을 간직하고 있지 않다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소행성은 모두 둥근 모양이다",
+      "why_wrong": "중력이 약해 대부분 불규칙하며, 베스타처럼 큰 것만 구형에 가깝다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-as-shape"
+    },
+    {
+      "text": "소행성대는 소행성이 빽빽해 탐사선이 지나갈 수 없다",
+      "why_wrong": "실제로는 매우 넓게 흩어져 있어 탐사선 갈릴레오가 지나가며 이다와 가스프라를 촬영했다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-as-location"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-definition-of-planet"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-planetesimal"
+    },
+    {
+      "type": "next",
+      "target": "plan-asteroid-belt"
+    },
+    {
+      "type": "next",
+      "target": "plan-near-earth-object"
+    },
+    {
+      "type": "next",
+      "target": "plan-meteoroid-and-meteor"
+    },
+    {
+      "type": "next",
+      "target": "plan-differentiation-of-small-body"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    32,
+    39
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

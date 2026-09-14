@@ -1,0 +1,96 @@
+{
+  "id": "plan-differential-rotation",
+  "concept_key": "concept:differential-rotation",
+  "registry_status": "new",
+  "term": "차등 회전",
+  "notation": {
+    "hanja": "差等回轉",
+    "english": "differential rotation",
+    "hanja_gloss": "差 다를 차 · 等 무리 등 · 回 돌 회 · 轉 구를 전"
+  },
+  "definition": "회전 각속도가 중심으로부터의 거리에 따라 달라지는 회전. 우리은하 원반의 별과 기체가 이런 식으로 돈다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dr-omega",
+      "text": "태양 부근에서는 은하 중심에서 멀어질수록 회전 각속도가 작아진다.",
+      "form": {
+        "condition": "우리은하 원반의 천체를 볼 때",
+        "type": "inverse",
+        "scope": "태양 궤도 부근",
+        "antecedent": {
+          "quantity": "은하 중심으로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "회전 각속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「멀어질수록 각속도가 커진다」는 태양 근처 별들이 보이는 차등 회전의 경향과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 부근에서는 은하 중심에서 멀어질수록 회전 각속도가 커진다."
+    },
+    {
+      "id": "rel-dr-vs-rigid",
+      "text": "강체 회전은 각속도가 위치와 상관없이 같지만, 차등 회전은 거리에 따라 각속도가 달라진다.",
+      "form": {
+        "condition": "각속도가 거리에 따라 변하는지로 회전을 가를 때",
+        "type": "classification",
+        "scope": "천체의 회전 종류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 회전의 이름을 맞바꾼 것이라 각 정의와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "차등 회전은 각속도가 위치와 상관없이 같지만, 강체 회전은 거리에 따라 각속도가 달라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우리은하 원반은 음반처럼 통째로 같은 각속도로 돈다",
+      "why_wrong": "그것은 강체 회전이다. 원반의 별과 기체는 거리에 따라 각속도가 다른 차등 회전을 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dr-vs-rigid"
+    },
+    {
+      "text": "각속도가 줄어드는 차등 회전이면 회전 속도도 반드시 함께 줄어든다",
+      "why_wrong": "회전 속도는 각속도와 거리의 곱이다. 각속도가 거리에 반비례하면 회전 속도는 오히려 거의 일정하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dr-omega"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-galaxy-rotation-curve"
+    },
+    {
+      "type": "related",
+      "target": "plan-keplerian-rotation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-1",
+  "pages": [
+    109,
+    110
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

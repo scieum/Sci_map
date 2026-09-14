@@ -1,0 +1,92 @@
+{
+  "id": "plan-definition-of-planet",
+  "concept_key": "concept:definition-of-planet",
+  "registry_status": "new",
+  "term": "행성의 정의",
+  "notation": {
+    "hanja": "行星 定義",
+    "english": "definition of a planet",
+    "hanja_gloss": "行 다닐 행 · 星 별 성 · 定 정할 정 · 義 옳을 의"
+  },
+  "definition": "국제 천문 연맹이 2006년에 정한 행성의 조건. 중심별 둘레를 돌고, 구형을 이룰 만큼 중력이 크며, 궤도 주변을 비워야 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dp-three",
+      "text": "행성이 되려면 태양 둘레 공전, 구형을 이룰 만한 중력, 궤도 주변에 비슷한 크기의 천체가 없을 것을 모두 채워야 한다.",
+      "form": {
+        "condition": "세 조건을 함께 따질 때",
+        "type": "conditional",
+        "scope": "국제 천문 연맹이 내린 행성의 정의"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「세 조건 가운데 하나만 채우면 행성이 된다」는 세 조건을 모두 요구하는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성이 되려면 세 조건 가운데 하나만 채우면 된다."
+    },
+    {
+      "id": "rel-dp-dwarf",
+      "text": "왜소 행성은 태양을 돌고 구형에 가깝지만 궤도 주변의 천체를 흡수하지 못했다는 점에서 행성과 갈린다.",
+      "form": {
+        "condition": "세 번째 조건을 기준으로 가를 때",
+        "type": "classification",
+        "scope": "행성과 왜소 행성의 구분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「왜소 행성은 궤도 주변을 비웠지만 구형을 이루지 못해 행성과 갈린다」는 두 조건을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "왜소 행성은 궤도 주변을 비웠지만 구형을 이루지 못했다는 점에서 행성과 갈린다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "크기가 크기만 하면 행성이다",
+      "why_wrong": "크기만으로 정해지지 않으며 궤도 주변에 비슷한 크기의 천체가 없는지까지 따져야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dp-three"
+    },
+    {
+      "text": "명왕성은 지금도 행성으로 분류된다",
+      "why_wrong": "2006년의 새 정의에 따라 왜소 행성으로 옮겨졌다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dp-dwarf"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-composition-of-solar-system"
+    },
+    {
+      "type": "next",
+      "target": "plan-dwarf-planet"
+    },
+    {
+      "type": "next",
+      "target": "plan-asteroid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-1",
+  "pages": [
+    30,
+    39
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

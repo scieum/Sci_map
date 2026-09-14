@@ -1,0 +1,92 @@
+{
+  "id": "plan-infrared-observation",
+  "concept_key": "concept:infrared-observation",
+  "registry_status": "new",
+  "term": "적외선 관측",
+  "notation": {
+    "hanja": "赤外線觀測",
+    "english": "infrared observation",
+    "hanja_gloss": "赤 붉을 적 · 外 바깥 외 · 線 줄 선 · 觀 볼 관 · 測 헤아릴 측"
+  },
+  "definition": "가시광선보다 긴 파장인 적외선으로 천체를 살피는 일. 소광의 영향이 작아 티끌에 가린 안쪽까지 들여다볼 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ir-ext",
+      "text": "적외선은 가시광선보다 성간 소광의 영향을 적게 받는다.",
+      "form": {
+        "condition": "같은 티끌 층을 지나 올 때",
+        "type": "conditional",
+        "scope": "가시광선과 견준 적외선 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「적외선이 가시광선보다 소광의 영향을 더 크게 받는다」는 파장이 길수록 소광량이 작다는 자료와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적외선은 가시광선보다 성간 소광의 영향을 더 크게 받는다."
+    },
+    {
+      "id": "rel-ir-cool",
+      "text": "온도가 낮은 천체가 내놓는 복사는 적외선 영역에서 관측하기 편하다.",
+      "form": {
+        "condition": "천체의 표면 온도가 낮을 때",
+        "type": "conditional",
+        "scope": "저온 천체의 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「저온 천체의 복사는 자외선 영역에서 관측하기 편하다」는 온도가 낮을수록 복사의 세기가 긴 파장 쪽에서 커진다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "온도가 낮은 천체가 내놓는 복사는 자외선 영역에서 관측하기 편하다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적외선으로 보면 성간 티끌이 아예 없는 것처럼 소광이 완전히 사라진다",
+      "why_wrong": "가시광선보다 영향을 적게 받을 뿐 소광이 0이 되지는 않는다. 파장이 길수록 작아지는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ir-ext"
+    },
+    {
+      "text": "적외선 관측은 뜨거운 천체를 보는 데 가장 알맞다",
+      "why_wrong": "적외선은 온도가 낮은 천체의 복사를 살피거나 티끌에 가린 곳을 들여다보는 데 알맞다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ir-cool"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-extinction"
+    },
+    {
+      "type": "related",
+      "target": "plan-interstellar-dust"
+    },
+    {
+      "type": "related",
+      "target": "plan-dark-nebula"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-2",
+  "pages": [
+    104,
+    105
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

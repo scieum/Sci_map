@@ -1,0 +1,114 @@
+{
+  "id": "plan-doppler-effect",
+  "concept_key": "concept:doppler-effect",
+  "registry_status": "new",
+  "term": "도플러 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Doppler effect",
+    "hanja_note": "'도플러'가 사람 이름을 옮긴 음차어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "파원과 관측자가 가까워지거나 멀어질 때 관측되는 파장과 진동수가 본래 값과 다르게 나타나는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dpl-blue",
+      "text": "중심별이 지구 쪽으로 다가오는 동안에는 별빛의 파장이 짧아져 청색 편이가 나타난다.",
+      "form": {
+        "condition": "별이 시선 방향을 따라 다가올 때",
+        "type": "causal",
+        "scope": "별빛에서 나타나는 도플러 효과"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「다가오는 동안 파장이 길어져 적색 편이가 나타난다」는 접근할 때 청색 편이가 나타난다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심별이 지구 쪽으로 다가오는 동안에는 별빛의 파장이 길어져 적색 편이가 나타난다."
+    },
+    {
+      "id": "rel-dpl-period",
+      "text": "중심별이 공통 질량 중심을 한 바퀴 도는 동안 청색 편이와 적색 편이가 번갈아 나타난다.",
+      "form": {
+        "condition": "중심별이 공통 질량 중심 둘레를 공전할 때",
+        "type": "causal",
+        "scope": "외계 행성계의 중심별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「한 바퀴 도는 동안 편이가 한쪽으로만 치우쳐 나타난다」는 파장이 주기적으로 변한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심별이 공통 질량 중심을 한 바퀴 도는 동안 편이는 한쪽으로만 치우쳐 나타난다."
+    },
+    {
+      "id": "rel-dpl-los",
+      "text": "도플러 효과로 알 수 있는 것은 시선 방향의 속도이고, 시선에 수직인 운동은 파장에 드러나지 않는다.",
+      "form": {
+        "condition": "시선 방향 성분만 파장 변화로 나타날 때",
+        "type": "conditional",
+        "scope": "별빛의 도플러 효과로 읽는 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「도플러 효과로 시선에 수직인 방향의 운동까지 알아낼 수 있다」는 시선 속도만 드러난다는 원리와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "도플러 효과로는 시선에 수직인 방향의 운동까지 알아낼 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적색 편이가 나타나면 별이 눈에 띄게 붉게 보인다",
+      "why_wrong": "스펙트럼선의 위치가 긴 파장 쪽으로 밀리는 것이며 별의 색이 붉게 바뀌어 보이는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dpl-blue"
+    },
+    {
+      "text": "도플러 효과는 소리에서만 나타난다",
+      "why_wrong": "빛을 비롯한 전자기파에서도 나타나며 외계 행성 탐사에 바로 이 성질을 쓴다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "도플러 효과로 별이 어느 방향으로 얼마나 빠르게 움직이는지 모두 알 수 있다",
+      "why_wrong": "파장 변화에 드러나는 것은 시선 방향의 속도뿐이고, 시선에 수직인 운동은 알아낼 수 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dpl-los"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-radial-velocity-method"
+    },
+    {
+      "type": "same",
+      "target": "mech-doppler-effect"
+    },
+    {
+      "type": "related",
+      "target": "plan-center-of-mass-of-star-and-planet"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-1",
+  "pages": [
+    40,
+    45
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

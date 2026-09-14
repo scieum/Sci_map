@@ -1,0 +1,115 @@
+{
+  "id": "plan-annual-parallax",
+  "concept_key": "concept:annual-parallax",
+  "registry_status": "new",
+  "term": "연주 시차",
+  "notation": {
+    "hanja": "年周視差",
+    "hanja_gloss": "年 해 년 · 周 두루 주 · 視 볼 시 · 差 다를 차",
+    "english": "annual parallax",
+    "symbol_display": "p(″)",
+    "symbol_plain": "p"
+  },
+  "definition": "지구 공전 궤도의 양 끝에서 같은 별을 보았을 때 생기는 시차의 절반. 이 값이 1″인 별까지의 거리를 1 pc이라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-parallax-inverse",
+      "text": "별까지의 거리는 연주 시차에 반비례하므로, 멀리 있는 별일수록 연주 시차가 작게 측정된다.",
+      "form": {
+        "condition": "같은 방법으로 시차를 잴 때",
+        "type": "inverse",
+        "scope": "연주 시차를 잴 수 있는 가까운 별",
+        "antecedent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "연주 시차",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「멀리 있는 별일수록 연주 시차가 크다」인데, 거리와 시차는 반비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별까지의 거리가 멀수록 연주 시차는 크게 측정된다."
+    },
+    {
+      "id": "rel-parallax-limit",
+      "text": "100 pc보다 멀리 있는 별은 연주 시차가 너무 작아 지상 관측만으로는 거리를 구하기 어렵다.",
+      "form": {
+        "condition": "지상에서 관측할 때",
+        "type": "conditional",
+        "scope": "100 pc 이상 떨어진 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「100 pc보다 먼 별도 지상 관측으로 시차를 재어 거리를 쉽게 구한다」인데, 시차가 측정 한계보다 작아 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "100 pc보다 멀리 있는 별도 지상에서 연주 시차를 재어 거리를 쉽게 구할 수 있다."
+    },
+    {
+      "id": "rel-parallax-needs-revolution",
+      "text": "연주 시차가 생기는 까닭은 지구가 공전하여 별을 바라보는 지점이 달라지기 때문이다.",
+      "form": {
+        "condition": "지구가 공전하는 동안",
+        "type": "causal",
+        "scope": "지구에서의 별 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「지구가 공전하지 않아도 연주 시차가 생긴다」인데, 관측 지점이 달라져야 시차가 생기므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "연주 시차는 지구가 공전하지 않아도 생긴다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "연주 시차는 별이 실제로 움직여서 생긴다.",
+      "why_wrong": "관측 지점이 바뀌어 겉보기 위치가 달라지는 것이다. 별이 실제로 움직인 결과는 고유 운동 쪽에서 다룬다.",
+      "source": "llm",
+      "linked_relation": "rel-parallax-needs-revolution"
+    },
+    {
+      "text": "연주 시차가 큰 별이 더 멀리 있는 별이다.",
+      "why_wrong": "시차가 클수록 가까운 별이다. 거리는 시차에 반비례한다.",
+      "source": "llm",
+      "linked_relation": "rel-parallax-inverse"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-distance-modulus"
+    },
+    {
+      "type": "next",
+      "target": "plan-tangential-velocity"
+    },
+    {
+      "type": "related",
+      "target": "plan-brightness-distance-relation",
+      "note": "거리를 구하는 또 다른 길이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-1",
+  "pages": [
+    64
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

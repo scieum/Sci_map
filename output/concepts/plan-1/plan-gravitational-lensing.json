@@ -1,0 +1,99 @@
+{
+  "id": "plan-gravitational-lensing",
+  "concept_key": "concept:gravitational-lensing",
+  "registry_status": "new",
+  "term": "중력 렌즈 현상",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "gravitational lensing",
+    "hanja_note": "'렌즈(lens)'가 음차어여서 표제어 전체에 대응하는 한자 표기가 없다(重力만 한자어다)."
+  },
+  "definition": "질량이 큰 천체의 중력 때문에 그 뒤에서 오는 빛이 휘어져, 볼록 렌즈를 지난 것처럼 모여 보이는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gls-bend",
+      "text": "빛이 지나는 길목에 질량이 큰 천체가 있으면 빛이 휘어져 뒤쪽 천체가 더 밝게 관측된다.",
+      "form": {
+        "condition": "관측자와 광원 사이에 무거운 천체가 놓일 때",
+        "type": "causal",
+        "scope": "중력 렌즈 현상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「무거운 천체가 있어도 빛이 휘지 않아 밝기가 그대로다」는 빛이 굴절되어 밝게 보인다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빛이 지나는 길목에 질량이 큰 천체가 있어도 빛은 휘지 않아 뒤쪽 천체의 밝기가 그대로다."
+    },
+    {
+      "id": "rel-gls-mass",
+      "text": "가로막은 천체의 질량이 클수록 그 곁을 지나는 빛은 더 크게 휘어진다.",
+      "form": {
+        "condition": "광원과 관측자 사이에 놓인 천체일 때",
+        "type": "direct",
+        "scope": "중력에 의한 빛의 휘어짐",
+        "antecedent": {
+          "quantity": "가로막은 천체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "빛이 휘어지는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가로막은 천체의 질량이 클수록 빛이 덜 휘어진다」는 거대한 중력 때문에 굴절된다는 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가로막은 천체의 질량이 클수록 그 곁을 지나는 빛은 덜 휘어진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중력 렌즈 현상은 유리 렌즈처럼 매질에서 빛이 굴절되어 생긴다",
+      "why_wrong": "매질의 굴절이 아니라 큰 질량이 빛이 지나는 길을 휘게 하는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gls-bend"
+    },
+    {
+      "text": "중력 렌즈 현상이 일어나면 뒤쪽 별이 어두워진다",
+      "why_wrong": "휘어진 빛이 모이므로 오히려 밝게 관측된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gls-bend"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-microlensing-method"
+    },
+    {
+      "type": "same",
+      "target": "mech-gravitational-lensing"
+    },
+    {
+      "type": "related",
+      "target": "plan-extrasolar-planetary-system"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-1",
+  "pages": [
+    41
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

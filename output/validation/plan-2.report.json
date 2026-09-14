@@ -1,0 +1,818 @@
+{
+  "unit_id": "plan-2",
+  "generated_at": "2026-09-14T13:52:38",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 44,
+    "script": {
+      "tool": ".claude/skills/curriculum-mapper/scripts/validate_tags.py",
+      "cards": 44,
+      "problems": 0,
+      "note": "실재하지 않는 코드·과목 접두어 불일치·태그 0개·미확정(crosscheck) 코드 사용 없음. 12행우02-01~05 5건 모두 crosscheck: 일치. 44장 전부 02 영역 코드 1개씩만 붙어 있다."
+    },
+    "facts_skill": {
+      "available": false,
+      "note": "행성우주과학(천문) 계열 <track>-facts 스킬이 없다. 수치(5800 K·약 11년·2.3~4제곱·100 pc·20등급 이상·태양 광도의 100억 배 등)와 명칭 대조를 건너뛰었다. 흉내 내지 않았다."
+    },
+    "findings": [
+      {
+        "card_id": "plan-main-sequence-lifetime",
+        "verdict": "uncertain",
+        "current": [
+          "12행우02-04"
+        ],
+        "suggested": [],
+        "reason": "카드 본체가 76쪽 「읽기 자료 — 주계열성의 질량과 수명」에서만 나온다. 12행우02-04 의 문면은 「쌍성 관측으로 질량을 직접 구하고, 질량-광도 관계로 쌍성이 아닌 별의 질량을 구한다」까지이고 수명은 그 문면에 없다. 범위 안으로 볼 근거는 둘이다 — (1) 75쪽 탐구 「정리하기 3」이 「주계열성의 질량-광도 관계를 이용하여 ... 주계열에 머무르는 기간이 별의 질량에 따라 어떻게 다를지 토의해 보자」로 본문 탐구 안에서 이 결론을 요구한다, (2) 카드가 role: supporting 이고 세 명제 모두 질량-광도 관계를 근거로 세워져 있다. 이탈로 볼 근거는 별의 수명이 「지구과학」 별의 진화(earth-3) 몫이고 같은 과목 plan-1 에 concept:stellar-mass-and-lifetime 카드가 이미 있다는 점이다. 태그를 바꿀 자리는 아니다(02-04 말고 걸릴 코드가 없다) — 카드를 둘지 말지가 갈리는 것이므로 C8 검토 항목으로 올린다",
+        "prerequisites": [
+          "concept:stellar-mass-and-lifetime",
+          "concept:hydrogen-fusion"
+        ]
+      },
+      {
+        "card_id": "plan-solar-rotation-period-measurement",
+        "verdict": "ok",
+        "current": [
+          "12행우02-01"
+        ],
+        "suggested": [],
+        "reason": "12행우02-01 의 문면에 「자전 주기」는 없지만, 56쪽 중단원 도입의 학습 목표 셋째 줄이 「태양 흑점의 이동 자료를 이용하여 태양의 자전 주기를 구할 수 있다」이고 59~60쪽 탐구 두 개가 그것이다. 흑점은 광구에서 나타나는 현상이고 이 카드는 그 관측 자료를 분석하는 절차이므로 02-01 안에 든다. 달리 걸릴 코드도 없다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-solar-differential-rotation",
+        "verdict": "ok",
+        "current": [
+          "12행우02-01"
+        ],
+        "suggested": [],
+        "reason": "61쪽 본문(적도 약 25일, 고위도 30일 초과, 차등 자전으로 태양이 기체임을 알 수 있다)이 근거다. 광구에서 나타나는 현상의 해석이므로 02-01 안이다. 위와 같은 이유로 성취기준 문면에 「자전」이 없는 점만 적어 둔다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-type-ia-supernova",
+        "verdict": "ok",
+        "current": [
+          "12행우02-05"
+        ],
+        "suggested": [],
+        "reason": "80쪽 본문(「Ia형 초신성은 ... 표준 광원으로 사용된다」)과 같은 쪽 용어 상자(「백색왜성이 주변의 별로부터 물질을 끌어들여 ... 폭발하는 초신성을 Ia형 초신성이라고 한다」)가 근거다. 12행우02-05 의 「초신성 관측 자료를 통해 알 수 있는 과학적 사실」에 그대로 든다. 백색왜성은 이 단원에서 정의되지 않고 전제로만 쓰이므로 선수 개념으로 적는다",
+        "prerequisites": [
+          "concept:white-dwarf"
+        ]
+      },
+      {
+        "card_id": "plan-mass-luminosity-relation",
+        "verdict": "ok",
+        "current": [
+          "12행우02-04"
+        ],
+        "suggested": [],
+        "reason": "76쪽 본문 그대로이고 02-04 의 한가운데다. 다만 명제 rel-ml-only-main-sequence 가 거성·백색왜성을 이름으로 든다 — 둘 다 이 단원에서 정의되지 않는 「지구과학」 개념이라 선수로 적는다",
+        "prerequisites": [
+          "concept:red-giant-and-supergiant",
+          "concept:white-dwarf"
+        ]
+      },
+      {
+        "card_id": "plan-main-sequence-star",
+        "verdict": "ok",
+        "current": [
+          "12행우02-04"
+        ],
+        "suggested": [],
+        "reason": "76쪽 읽기 자료가 주계열성의 성격(수소 핵융합, 가장 오래 머무는 단계, 중심부 수소 고갈 후 이탈)을 그대로 서술한다. 02-04 의 「질량-광도 관계」가 주계열성에만 성립하므로 그 전제 카드로 범위 안이다. 주계열성의 정의 자체는 「지구과학」 H-R도 쪽에서 먼저 나온다",
+        "prerequisites": [
+          "concept:main-sequence-star",
+          "concept:hydrogen-fusion"
+        ]
+      },
+      {
+        "card_id": "plan-pulsating-variable-star",
+        "verdict": "ok",
+        "current": [
+          "12행우02-05"
+        ],
+        "suggested": [],
+        "reason": "79쪽 본문이 근거이고 02-05 의 「맥동 변광성과 폭발 변광성을 구분」에 그대로 든다. 명제 rel-pv-stage 가 드는 거성·초거성은 이 단원에서 정의되지 않는 선수 개념이다",
+        "prerequisites": [
+          "concept:red-giant-and-supergiant"
+        ]
+      },
+      {
+        "card_id": "plan-accelerating-expansion-of-universe",
+        "verdict": "ok",
+        "current": [
+          "12행우02-05"
+        ],
+        "suggested": [],
+        "reason": "우주의 팽창사는 영역 03(은하와 우주)이나 「지구과학」 우주론 쪽 어휘로 보이지만, 이 카드의 세 명제는 모두 81~82쪽 본문에서 Ia형 초신성의 거리 지수-적색 편이 관측으로부터 끌어낸 것이다. 12행우02-05 가 요구하는 「초신성 관측 자료를 통해 알 수 있는 과학적 사실」이 바로 이것이므로 범위 안이다. 03 영역 코드를 붙일 자리가 아니다",
+        "prerequisites": [
+          "concept:accelerating-universe",
+          "concept:big-bang-cosmology"
+        ]
+      },
+      {
+        "card_id": "plan-doppler-effect-of-starlight",
+        "verdict": "ok",
+        "current": [
+          "12행우02-03"
+        ],
+        "suggested": [],
+        "reason": "68쪽 「도플러 효과」 표제 문단이 근거이고, 시선 속도를 재는 원리 자리이므로 02-03 안이다. 파동 자체의 도플러 효과는 「역학과 에너지」(12역학03-03)에서 먼저 나오고 같은 과목 plan-1 에도 같은 키의 카드가 있다 — 카드에 same 링크가 이미 걸려 있다",
+        "prerequisites": [
+          "concept:doppler-effect"
+        ]
+      },
+      {
+        "card_id": "plan-redshift-and-blueshift",
+        "verdict": "ok",
+        "current": [
+          "12행우02-03"
+        ],
+        "suggested": [],
+        "reason": "68쪽 본문 그대로다. 흡수선·스펙트럼은 이 단원에서 정의되지 않는 선수 개념이다",
+        "prerequisites": [
+          "concept:spectrum"
+        ]
+      },
+      {
+        "card_id": "plan-radial-velocity",
+        "verdict": "ok",
+        "current": [
+          "12행우02-03"
+        ],
+        "suggested": [],
+        "reason": "68쪽 본문(시선 속도의 정의와 흡수선 이동 분석)이 근거다. 02-03 의 앞머리에 그대로 든다. 스펙트럼 흡수선이 선수다",
+        "prerequisites": [
+          "concept:spectrum"
+        ]
+      },
+      {
+        "card_id": "plan-center-of-mass",
+        "verdict": "ok",
+        "current": [
+          "12행우02-04"
+        ],
+        "suggested": [],
+        "reason": "72~73쪽 본문 그대로이고 02-04 안이다. 다만 같은 과목 plan-1 에 표제어가 똑같은 「공통 질량 중심」 카드가 concept:center-of-mass-of-star-and-planet 라는 다른 키로 있다. 키가 갈린 것은 G 파이프라인·G3 에서 볼 일이고 C5 판정을 바꾸지는 않는다",
+        "prerequisites": [
+          "concept:center-of-mass-of-star-and-planet"
+        ]
+      },
+      {
+        "card_id": "plan-kepler-third-law-for-binary-stars",
+        "verdict": "ok",
+        "current": [
+          "12행우02-04"
+        ],
+        "suggested": [],
+        "reason": "73~74쪽 본문 유도가 근거다. 02-04 의 「쌍성의 관측 자료로 항성의 질량을 직접 구한다」를 받치는 도구다. 법칙 자체는 plan-1(12행우01-03)과 「역학과 에너지」에서 먼저 나오며 만유인력이 전제다",
+        "prerequisites": [
+          "concept:kepler-third-law",
+          "concept:law-of-universal-gravitation"
+        ]
+      },
+      {
+        "card_id": "plan-multiwavelength-solar-observation",
+        "verdict": "ok",
+        "current": [
+          "12행우02-01"
+        ],
+        "suggested": [],
+        "reason": "62쪽 본문과 그림 5 가 근거이고 12행우02-01 의 뒷절(「다양한 파장의 관측 자료에서 어떻게 나타나는지 비교·분석」)에 정확히 대응한다. plan-1 보고서가 plan-solar-activity-monitoring-system 의 명제 rel-sams-wavelength 를 02-01 문면과 겹친다고 올려 두었는데, 그 명제가 있어야 할 자리가 이 카드다 — 두 단원을 함께 볼 때의 참고 사항이다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-supernova-nucleosynthesis",
+        "verdict": "ok",
+        "current": [
+          "12행우02-05"
+        ],
+        "suggested": [],
+        "reason": "80쪽 본문(철보다 무거운 원소의 기원, 성간 물질 순환)이 근거이고 02-05 의 「초신성 관측 자료를 통해 알 수 있는 과학적 사실」에 든다. 핵융합은 이 단원에서 정의되지 않는 선수 개념이고 「통합과학1」에 같은 키의 카드가 있다",
+        "prerequisites": [
+          "concept:hydrogen-fusion"
+        ]
+      },
+      {
+        "card_id": "plan-space-velocity",
+        "verdict": "ok",
+        "current": [
+          "12행우02-03"
+        ],
+        "suggested": [],
+        "reason": "68쪽 본문(벡터 합과 tan θ 관계식)이 근거이고 02-03 의 「시선 속도와 접선 속도의 합으로 공간 운동이 나타남」 그대로다. 벡터 합·삼각비는 수학 쪽 선수이지만 등록된 개념 키가 없어 키로 적지 않는다",
+        "prerequisites": []
+      }
+    ],
+    "stats": {
+      "ok": 43,
+      "retag": 0,
+      "out_of_scope": 0,
+      "uncertain": 1
+    },
+    "escalation": {
+      "out_of_scope_over_2": false,
+      "uncertain_over_20pct": false,
+      "uncertain_pct": 2.3
+    },
+    "notes": [
+      {
+        "topic": "C2 가 뺀 백색왜성 — 뺀 것이 맞다",
+        "text": "80쪽 용어 상자에서 백색왜성은 Ia형 초신성이 터지는 기제의 부품으로만 쓰이고 정의되지 않는다. 12행우02-05 는 광도 곡선 구분과 초신성 관측 자료로부터의 추론까지이고 백색왜성의 형성·성질은 요구하지 않는다. 별도 카드로 세울 자리가 아니고 「지구과학」(earth-3, concept:white-dwarf)의 선수 개념으로 두는 것이 맞다. 다만 plan-type-ia-supernova 의 links 에 그 카드로 가는 표시가 없다 — 선수 표시는 이 보고서의 prerequisites 로 올려 둔다."
+      },
+      {
+        "topic": "C2 가 뺀 표준 광원 — 뺀 사유는 맞지 않지만 결과는 메울 수 있다",
+        "text": "표준 광원은 「별의 진화」 개념이 아니라 이 단원의 거리 측정 개념이다. 80쪽 본문 「Ia형 초신성은 밝기가 최대일 때 광도가 거의 일정하여 우주에서 거리를 측정할 때 표준 광원으로 사용된다」와 82쪽 곁주 질문 「천체까지의 거리를 측정할 때 Ia형 초신성을 표준 광원으로 쓰는 까닭은 무엇일까?」가 본문 안에 있고, 12행우02-05 가 요구하는 추론의 고리다. 다만 그 내용은 plan-type-ia-supernova 의 rel-ia-standard-candle·rel-ia-distance 두 명제가 이미 담고 있어 빠진 내용은 없다. 별도 카드로 세울지는 C1 커버리지 판단이고 C5 판정 대상이 아니다 — 메인에 그대로 올린다."
+      },
+      {
+        "topic": "본문에 나오지만 카드가 없는 말 (C1 커버리지 참고, C5 이탈 아님)",
+        "text": "61쪽 본문의 스피큘(「채층에서는 스피큘이라고 불리는 불꽃이 나타났다가 사라지기를 반복하고」)과 64쪽 곁주의 광년(1 pc ≒ 3.26 광년)이 본문·곁주에 있으나 카드가 없다. 범위 이탈의 반대쪽(누락)이라 C5 판정에는 넣지 않는다."
+      },
+      {
+        "topic": "단원을 가로지르는 같은 키",
+        "text": "plan-2 의 14개 키가 다른 단원 카드와 키를 공유한다(concept:solar-flare·concept:solar-wind 는 plan-1, concept:supernova·concept:luminosity·concept:main-sequence-star·concept:accelerating-universe 등은 earth-3, concept:doppler-effect 는 mech-3·plan-1·plan-3). 카드에 same 링크가 대체로 걸려 있어 C5 에서 문제 삼지 않는다. 다만 earth-3 는 적색 편이를 concept:redshift 로, plan-2 는 concept:redshift-and-blueshift 로 잡아 키가 갈린다 — 사전은 읽기만 했고 고치지 않았다. G1·G3 에서 볼 항목이다."
+      }
+    ]
+  },
+  "relations": {
+    "checked": 126,
+    "cards_checked": 44,
+    "invertible_ratio": {
+      "true": 125,
+      "false": 1,
+      "percent_true": 99.2,
+      "note": "다른 단원(45~55 %)과 크게 달라 126개를 전수로 다시 뒤집어 읽었다. 쏠림의 원인은 invertible 오판정이 아니라 명제를 세우는 방식이다 — 36개가 카드 definition 을 문장으로 편 것이라 뒤집으면 당연히 거짓이 된다. 뒤집기 판정 자체의 오류는 7건(defect 5 · uncertain 2)에 그쳤다."
+    },
+    "findings": [
+      {
+        "card_id": "plan-accelerating-expansion-of-universe",
+        "relation_id": "rel-acc-history",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「우주가 팽창하는 속도가 한동안 줄다가 약 60억 년 전부터 다시 빨라지고 있다는 것」을 그대로 문장으로 폈다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-apparent-magnitude-and-absolute-magnitude",
+        "relation_id": "rel-am-ten-parsec",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「거리를 10 pc으로 맞춘 뒤 매긴 쪽이 절대 등급이다」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-binary-star",
+        "relation_id": "rel-bs-same-period",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「공통 질량 중심 둘레를 같은 주기로 도는 두 별」에 이미 들어 있다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-binary-star-mass",
+        "relation_id": "rel-bsm-sum",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 앞 절 「공전 주기와 두 별 사이의 거리로 질량의 합을 구하고」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-binary-star-mass",
+        "relation_id": "rel-bsm-split",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 뒤 절 「질량 중심까지의 거리비로 그 합을 두 별 몫으로 갈라 내는 일」의 되풀이다. 이 카드는 definition 이 두 명제를 그대로 열거하고 있다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-brightness-distance-relation",
+        "relation_id": "rel-inverse-square",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「겉보기 밝기가 거리의 제곱에 반비례해 줄어든다는 관계」와 같은 말이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-center-of-mass",
+        "relation_id": "rel-cm-toward-heavy",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 끝 문장 「질량이 큰 천체 쪽으로 치우쳐 놓인다」와 낱말까지 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-constellation-shape-change",
+        "relation_id": "rel-cs-proper-motion",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「별들이 저마다 다른 고유 운동을 하기 때문에 모양이 달라지는 일」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-corona",
+        "relation_id": "rel-corona-hot-but-thin",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「온도는 수백만 K에 이르지만 기체 밀도가 낮아 평상시에는 관측되지 않는다」와 낱말까지 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-doppler-effect-of-starlight",
+        "relation_id": "rel-dop-approach",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「거리가 줄어들면 파장이 짧게」의 되풀이다. 이 카드는 definition 을 반으로 갈라 두 명제로 삼았다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-doppler-effect-of-starlight",
+        "relation_id": "rel-dop-recede",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「늘어나면 파장이 길게」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-eruptive-variable-star",
+        "relation_id": "rel-ev-members",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「신성과 초신성이 여기 든다」와 같은 말이다. inverted_text 「신성과 초신성이 들지 않는다」도 지문으로서 변별력이 없다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-kepler-third-law-for-binary-stars",
+        "relation_id": "rel-k3-binary-mass",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「쌍성에 적용하면 두 별의 질량 합이 나온다」의 되풀이이고, plan-binary-star-mass/rel-bsm-sum 과도 사실상 같은 명제다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-light-curve",
+        "relation_id": "rel-lc-classify",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「곡선의 모양을 견주어 변광성의 종류를 가른다」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-main-sequence-lifetime",
+        "relation_id": "rel-msl-shorter",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「주계열에 머무는 시간이 질량이 클수록 짧아진다는 관계」와 같은 말이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-main-sequence-star",
+        "relation_id": "rel-ms-longest-stage",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「별이 일생 가운데 가장 오래 머무는 안정한 단계다」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-mass-luminosity-relation",
+        "relation_id": "rel-ml-proportional",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「광도가 질량의 2.3~4제곱에 비례한다는 관계」와 수치까지 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-nova",
+        "relation_id": "rel-nova-rise-fall",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 의 시간 척도(하루~이틀 / 수개월~수년)를 그대로 옮겼다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-pogson-formula",
+        "relation_id": "rel-pogson-hundred",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 둘째 문장 「등급이 5만큼 차이 나면 밝기는 100배 차이 난다」와 낱말까지 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-prominence",
+        "relation_id": "rel-prom-shape",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「채층에서 솟아 대기 바깥층까지 뻗어 오르는 불꽃 기둥이나 고리 모양」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-proper-motion",
+        "relation_id": "rel-pm-tangential-only",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「공간 운동 가운데 접선 방향 성분이 천구에 비친 것이다」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-pulsating-variable-star",
+        "relation_id": "rel-pv-pulse",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「팽창과 수축을 되풀이하며 광도가 주기적으로 변하는 별」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-radial-velocity",
+        "relation_id": "rel-rv-from-absorption",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「흡수선의 파장이 얼마나 밀렸는지로 구한다」에 「도플러 효과로」만 덧붙였다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-solar-activity-cycle",
+        "relation_id": "rel-cycle-eleven-years",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「흑점 수가 늘었다 줄기를 약 11년마다 되풀이하는」과 같은 말이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-solar-differential-rotation",
+        "relation_id": "rel-diff-latitude",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「고위도로 갈수록 길어져」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-solar-flare-in-solar-atmosphere",
+        "relation_id": "rel-flare-location",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「흑점 둘레에서 갑자기 일어나는」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-solar-wind-from-corona",
+        "relation_id": "rel-wind-origin",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「온도가 매우 높은 코로나에서 입자가 태양을 빠져나가며 이루는 흐름」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-space-motion",
+        "relation_id": "rel-sm-components",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「시선 방향의 운동과 거기에 수직인 접선 방향의 운동으로 나누어 다룬다」와 낱말까지 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-supernova",
+        "relation_id": "rel-supernova-peak",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「최대 광도는 태양의 100억 배에 이른다」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-supernova-nucleosynthesis",
+        "relation_id": "rel-snn-heavier-than-iron",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「철보다 무거운 원소가 초신성이 터지는 동안 만들어져 우주로 흩어진다는 것」과 낱말까지 같다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-supernova-remnant",
+        "relation_id": "rel-snr-shock",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「충격파가 둘레의 성간 물질을 두드려 밝게 빛나게 한 구조」를 주어·서술어만 뒤바꿔 옮겼다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-tangential-velocity",
+        "relation_id": "rel-tv-formula",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「고유 운동에 별까지의 거리를 곱해 구한다」의 되풀이다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-type-ia-supernova",
+        "relation_id": "rel-ia-mass-limit",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "text 가 같은 카드의 definition 을 문장으로 바꾼 것에 지나지 않는다 — definition 「물질을 받아 질량의 한계를 넘어설 때 무너지며 터지는 초신성」에 「중력을 이기지 못하고」만 덧붙였다. 정의를 읽으면 저절로 나오는 말이라 학습 가치가 없다.",
+        "suggest": "이 명제를 정의에서 한 걸음 나아간 내용(까닭·결과·다른 양과의 견줌·적용 한계)으로 다시 세우거나, 대신할 명제가 없으면 관계 명제에서 뺀다"
+      },
+      {
+        "card_id": "plan-supernova",
+        "relation_id": "rel-supernova-curve",
+        "verdict": "defect",
+        "checks": [
+          3,
+          4
+        ],
+        "reason": "[3] text 가 definition 「수일 안에 광도가 20등급 넘게 치솟았다가 수년에 걸쳐 낮아지는 폭발 현상」의 되풀이다. [4] misconceptions[1] 「초신성은 아주 큰 별이 새로 태어나는 일이다」가 이 명제를 linked_relation 으로 가리키는데, 이 명제는 광도 곡선의 오름·내림 기간을 다룰 뿐이라 그 오해의 반대편에 서 있지 않다. 그 자리에 설 명제가 이 카드에 없다(plan-nova/rel-nova-not-new 가 그 몫을 한다).",
+        "suggest": "[3] 은 명제를 다시 세우고, [4] 는 이 오해를 받칠 명제를 이 카드에 세우거나 linked_relation 을 비운다"
+      },
+      {
+        "card_id": "plan-supernova-nucleosynthesis",
+        "relation_id": "rel-snn-evidence",
+        "verdict": "defect",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "[2] 이 단원에서 유일한 invertible: false 인데, invertible_reason 이 뒤집은 문장을 세우지 않았다. text 의 직접 부정문은 「무거운 원소의 기원은 초신성이 뿜어낸 물질의 관측 자료를 근거로 추론된 것이 아니다」이고 교과서가 바로 그 자료를 근거로 들고 있으므로 반드시 거짓인데, invertible_reason 은 「관측 자료가 아니라 이론 계산만으로 정해진 것이다」라는 다른 문장을 세워 놓고 그것을 반박하고 있다. [3] 게다가 text 가 definition 「방출 물질의 관측 자료에서 읽어 내는 일」의 되풀이다.",
+        "suggest": "[3] 때문에 명제 자체를 다시 세우는 쪽이 낫다. 살린다면 invertible_reason 을 text 의 직접 부정문 기준으로 다시 쓰고 invertible 을 재판정한다"
+      },
+      {
+        "card_id": "plan-mass-of-single-star",
+        "relation_id": "rel-single-indirect",
+        "verdict": "defect",
+        "checks": [
+          2,
+          3
+        ],
+        "reason": "[2] inverted_text 「쌍성이 아닌 주계열성도 공전 주기와 궤도 반지름을 재어 질량을 직접 구한다」를 문면 그대로 읽으면 참이 될 경우가 있다 — 태양은 홑별이지만 행성의 공전 주기와 궤도 반지름으로 질량을 구하고, 그것이 같은 과목 앞 단원(케플러 제3법칙)에서 하는 일이다. invertible_reason 은 「함께 도는 짝이 없어 잴 주기가 없다」고 하는데, 짝별이 아닌 천체가 돌면 주기는 있다. [3] text 는 definition 「관측한 광도와 질량 - 광도 관계로 어림해 내는 일」의 되풀이다.",
+        "suggest": "[2] 는 「함께 도는 천체가 관측되지 않는 별」이라는 한정을 inverted_text 문면에 넣어 살리고, [3] 은 명제를 다시 세운다"
+      },
+      {
+        "card_id": "plan-binary-star",
+        "relation_id": "rel-bs-speed",
+        "verdict": "defect",
+        "checks": [
+          2,
+          1
+        ],
+        "reason": "[2] inverted_text 「쌍성에서 질량이 큰 별일수록 공전 속도가 빠르다」를 문면 그대로 읽으면 참이 될 경우가 있다 — 좁은 쌍성계의 무거운 별과 넓은 쌍성계의 가벼운 별을 견주면 무거운 쪽이 더 빠르다. [1] 이 명제를 떠받치는 「같은 쌍성계 안의 두 별을 견줄 때」가 form.condition 에만 있고 text·inverted_text 문면에 없다. D1 은 condition 을 끌고 가지 않으므로 OX 지문이 되는 순간 판정이 무너진다.",
+        "suggest": "비교 조건(한 쌍성계 안의 두 별)을 text 와 inverted_text 문면에 넣어 살린다. invertible 을 false 로 내릴 자리가 아니다"
+      },
+      {
+        "card_id": "plan-center-of-mass",
+        "relation_id": "rel-cm-ratio",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "inverted_text 「두 별에서 공통 질량 중심까지의 거리비는 두 별의 질량비와 같다」가 참이 되는 경우가 있다 — 두 별의 질량이 같으면 거리비도 질량비도 1이라 두 값이 같아진다. 같은 카드의 rel-cm-equal-mass 가 바로 그 경우를 명제로 세워 두고 있어 반례가 카드 안에 이미 있다. 비의 상등을 뒤집은 문장이라 판정이 무너지는 자리다.",
+        "suggest": "text 와 inverted_text 문면에 「질량이 서로 다른 두 별」이라는 한정을 넣어 살린다"
+      },
+      {
+        "card_id": "plan-space-velocity",
+        "relation_id": "rel-sv-angle",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "inverted_text 「탄젠트 값은 시선 속도를 접선 속도로 나눈 값과 같다」가 참이 되는 경우가 있다 — 접선 속도와 시선 속도가 같으면 각이 45°이고 tan = 1 이라 두 분수가 모두 1 이 되어 등식이 성립한다. invertible_reason 은 「역수가 되어 거짓」이라 하는데 값이 1 인 자리에서는 역수가 자기 자신이다. 비의 상등을 뒤집은 문장이 무너지는 전형이다.",
+        "suggest": "두 성분의 크기가 서로 다르다는 한정을 문면에 넣거나, 뒤집을 자리를 다른 곳으로 옮겨 명제를 다시 세운다"
+      },
+      {
+        "card_id": "plan-redshift-and-blueshift",
+        "relation_id": "rel-rb-amount",
+        "verdict": "defect",
+        "checks": [
+          2,
+          1
+        ],
+        "reason": "text 에는 「같은 흡수선을 견줄 때」가 있으나 inverted_text 문면에서 떨어져 나갔다. 밀린 양 Δλ 는 기준 파장 λ 에 비례하므로 서로 다른 흡수선끼리 견주면 밀린 정도가 큰 쪽의 시선 속도가 오히려 작을 수 있다. 조건이 문면에서 빠지자 inverted_text 가 참이 될 길이 열렸다.",
+        "suggest": "「같은 흡수선을 견줄 때」를 inverted_text 문면에도 넣어 살린다. invertible 을 false 로 내릴 자리가 아니다"
+      },
+      {
+        "card_id": "plan-photosphere",
+        "relation_id": "rel-photosphere-temperature",
+        "verdict": "defect",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "[1] text 「광구의 온도는 약 5800 K으로, 그 위를 덮은 채층이나 코로나보다 낮다」가 한정 없이 서술됐는데, 같은 단원 plan-chromosphere 카드의 definition 이 채층의 온도를 「4500 K에서 수만 K」로 적고 있다. 채층 아래쪽 구간은 광구보다 차므로 「채층보다 낮다」에 예외가 있고, form.scope 「태양의 광구와 그 위 대기층」이 그 예외를 담지 못한다. [2] 그 결과 inverted_text 「광구의 온도는 채층이나 코로나보다 높다」도 채층 하부를 두고 읽으면 참이 될 여지가 생긴다. 두 카드의 수치 가운데 어느 쪽이 옳은지는 진위 판단 필요 — C8 검토 항목.",
+        "suggest": "scope 를 예외가 빠진 범위로 좁히거나 text 문면에 견주는 대상을 못박아 예외가 끼어들 자리를 없앤다. 카드 사이 수치가 어긋나는지는 사람이 본다"
+      },
+      {
+        "card_id": "plan-accelerating-expansion-of-universe",
+        "relation_id": "rel-acc-dimmer",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "misconceptions[1] 「우주는 태어난 뒤로 줄곧 같은 빠르기로 팽창해 왔다」가 이 명제를 linked_relation 으로 가리키는데, 이 명제는 Ia형 초신성이 예측보다 어둡게 관측된 것이 근거라는 말이라 그 오해의 반대편이 아니다. 그 오해의 반대편에 서 있는 것은 rel-acc-history(감속 팽창하다가 가속으로 돌아섰다)이고, why_wrong 도 실제로 「감속하다가 가속으로 돌아선 모형이 더 잘 맞았다」며 그 명제의 내용을 적고 있다.",
+        "suggest": "linked_relation 을 이 오해가 실제로 어긋나는 명제로 옮긴다"
+      },
+      {
+        "card_id": "plan-brightness-distance-relation",
+        "relation_id": "rel-bd-magnitude",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "inverted_text 「등급 차는 거리의 비에 상용로그를 취한 값의 2.5배가 된다」가 두 별의 거리가 같은 퇴화된 경우(log 1 = 0, 등급 차 0 = 2.5×0)에는 성립한다. form.scope 「광도가 같고 거리만 다른 두 별」이 그 경우를 막지만 문면에는 없다. 0 = 0 뿐인 자리라 OX 지문으로서 실질 위험은 작다고 볼 수도 있어 판단이 갈린다.",
+        "suggest": "위험이 작다고 보면 그대로 두고, 막으려면 「거리가 서로 다른 두 별」을 문면에 넣는다"
+      },
+      {
+        "card_id": "plan-multiwavelength-solar-observation",
+        "relation_id": "rel-mw-hidden",
+        "verdict": "uncertain",
+        "checks": [
+          2
+        ],
+        "reason": "text 의 한정어 「고에너지 방출」이 inverted_text 「가시광선 사진에 나타나지 않는 영역은 X선 영상에서도 보이지 않는다」에서 떨어져 나갔다. 한정어가 빠진 채로 읽으면 가시광선에도 X선에도 드러나지 않는 영역(태양 내부 등)이 있어 참이 될 여지가 생긴다. 다만 문맥이 파장별 태양 표면 영상으로 좁혀 읽히기도 해 판단이 갈린다.",
+        "suggest": "「고에너지 방출 영역」이라는 한정을 inverted_text 문면에 되살려 여지를 없앤다"
+      }
+    ],
+    "stats": {
+      "ok": 82,
+      "defect": 42,
+      "uncertain": 2
+    },
+    "tautology_group": {
+      "count": 36,
+      "note": "checks 에 3 이 붙은 명제. 카드 표제어가 관계·법칙·공식·측정법인 카드(포그슨 공식·질량-광도 관계·밝기와 거리의 관계·쌍성의 질량·주계열성의 질량과 수명 등)에서는 definition 자체가 관계 서술이라 첫 명제가 definition 을 되풀이하기 쉽다. plan-binary-star-mass 와 plan-doppler-effect-of-starlight 은 definition 이 두 명제를 그대로 열거해 한 카드에서 2건씩, plan-supernova 와 plan-supernova-nucleosynthesis 도 2건씩 나왔다.",
+      "relation_ids": [
+        "plan-accelerating-expansion-of-universe/rel-acc-history",
+        "plan-apparent-magnitude-and-absolute-magnitude/rel-am-ten-parsec",
+        "plan-binary-star/rel-bs-same-period",
+        "plan-binary-star-mass/rel-bsm-sum",
+        "plan-binary-star-mass/rel-bsm-split",
+        "plan-brightness-distance-relation/rel-inverse-square",
+        "plan-center-of-mass/rel-cm-toward-heavy",
+        "plan-constellation-shape-change/rel-cs-proper-motion",
+        "plan-corona/rel-corona-hot-but-thin",
+        "plan-doppler-effect-of-starlight/rel-dop-approach",
+        "plan-doppler-effect-of-starlight/rel-dop-recede",
+        "plan-eruptive-variable-star/rel-ev-members",
+        "plan-kepler-third-law-for-binary-stars/rel-k3-binary-mass",
+        "plan-light-curve/rel-lc-classify",
+        "plan-main-sequence-lifetime/rel-msl-shorter",
+        "plan-main-sequence-star/rel-ms-longest-stage",
+        "plan-mass-luminosity-relation/rel-ml-proportional",
+        "plan-nova/rel-nova-rise-fall",
+        "plan-pogson-formula/rel-pogson-hundred",
+        "plan-prominence/rel-prom-shape",
+        "plan-proper-motion/rel-pm-tangential-only",
+        "plan-pulsating-variable-star/rel-pv-pulse",
+        "plan-radial-velocity/rel-rv-from-absorption",
+        "plan-solar-activity-cycle/rel-cycle-eleven-years",
+        "plan-solar-differential-rotation/rel-diff-latitude",
+        "plan-solar-flare-in-solar-atmosphere/rel-flare-location",
+        "plan-solar-wind-from-corona/rel-wind-origin",
+        "plan-space-motion/rel-sm-components",
+        "plan-supernova/rel-supernova-peak",
+        "plan-supernova-nucleosynthesis/rel-snn-heavier-than-iron",
+        "plan-supernova-remnant/rel-snr-shock",
+        "plan-tangential-velocity/rel-tv-formula",
+        "plan-type-ia-supernova/rel-ia-mass-limit",
+        "plan-supernova/rel-supernova-curve",
+        "plan-supernova-nucleosynthesis/rel-snn-evidence",
+        "plan-mass-of-single-star/rel-single-indirect"
+      ]
+    },
+    "duplicate_propositions": {
+      "note": "동어반복과 별개로, 서로 다른 카드에 사실상 같은 명제가 놓인 자리. C6 다섯 항목에는 들지 않아 verdict 를 주지 않고 보고만 한다.",
+      "pairs": [
+        [
+          "plan-binary-star-mass/rel-bsm-sum",
+          "plan-kepler-third-law-for-binary-stars/rel-k3-binary-mass"
+        ],
+        [
+          "plan-eruptive-variable-star/rel-ev-vs-pulsating",
+          "plan-light-curve/rel-lc-shapes",
+          "plan-pulsating-variable-star/rel-pv-not-explosion"
+        ],
+        [
+          "plan-proper-motion/rel-pm-tangential-only",
+          "plan-radial-velocity/rel-rv-not-on-sky",
+          "plan-tangential-velocity/rel-tv-on-sky"
+        ]
+      ]
+    },
+    "skipped_checks": [
+      "plan-facts 스킬이 없어 수치·사실 대조는 하지 않았다. 설치된 스킬은 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 뿐이다.",
+      "docs/misconceptions.yaml 의 concepts 항목이 비어 있어(0건) 오개념 사전 대조를 할 수 없었다. 검사 #4 는 카드 안에서 linked_relation 이 가리키는 명제가 그 오해의 반대편에 서 있는지만 보았다. 이 단원 오개념의 source 는 모두 llm 이다.",
+      "linked_relation 이 없는 오개념 4건(plan-photosphere·plan-solar-rotation-period-measurement·plan-solar-wind-from-corona·plan-sunspot)은 스키마상 선택 필드이므로 결함으로 올리지 않았다."
+    ],
+    "outside_unit_defects": {
+      "note": "단원 밖 카드라 고치지 않고 보고만 한다. 여섯 모두 「인과라서·분류라서·유도 관계라 방향이 없다」는 형(型) 근거이거나 역(逆) 명제를 반박한 사유로 invertible: false 를 준 자리이고, 설계서가 금한 근거다. 뒤집은 문장을 문면 그대로 세우면 모두 반드시 거짓이므로 plan-2 쪽 true 판정이 옳다.",
+      "items": [
+        {
+          "card_id": "isci1-supernova-nucleosynthesis",
+          "relation_id": "rel-sn-heavy",
+          "current": "false",
+          "reason": "invertible_reason 「폭발 에너지와 원소 생성의 인과를 밝힌 명제라 방향을 뒤집는 꼴이 아니다」는 form.type 을 근거로 삼은 것이다. 뒤집은 문장 「초신성이 터지는 몇 초 사이에 쏟아진 에너지는 철보다 무거운 원소를 만들어 내지 않는다」는 교과서 서술과 어긋나 반드시 거짓이다. plan-supernova-nucleosynthesis/rel-snn-heavier-than-iron 의 true 가 옳다.",
+          "suggest": "invertible 을 true 로 올리고 inverted_text 를 세운다"
+        },
+        {
+          "card_id": "earth-accelerating-universe",
+          "relation_id": "rel-accel-sn-dim",
+          "current": "false",
+          "reason": "invertible_reason 「어둡게 보이는 까닭을 하나로 되짚을 수는 없다」는 역 명제(「어두우면 가속 팽창이다」)를 반박한 것이지 뒤집은 문장을 본 것이 아니다. 뒤집은 문장은 「예측보다 밝게 관측된 것이 가속 팽창의 근거가 되었다」이고 관측과 어긋나 반드시 거짓이다. plan-accelerating-expansion-of-universe/rel-acc-dimmer 의 true 가 옳다.",
+          "suggest": "invertible 을 true 로 올리고, 같은 카드 rel-accel-distance 처럼 「적색 편이가 같은」 한정을 text 문면에 둔다"
+        },
+        {
+          "card_id": "earth-supernova",
+          "relation_id": "rel-sn-recycle",
+          "current": "false",
+          "reason": "invertible_reason 「별의 재료가 모두 초신성에서 왔다고 되짚을 수는 없다」도 역 명제를 반박한 것이다. 뒤집은 문장은 「폭발로 흩어진 물질은 성간 물질이 되지 않고 다음 세대 별의 재료도 되지 않는다」이고 반드시 거짓이다. plan-supernova-remnant/rel-snr-recycle 의 true 가 옳다.",
+          "suggest": "invertible 을 true 로 올린다"
+        },
+        {
+          "card_id": "mech-kepler-third-law",
+          "relation_id": "rel-k3-derive",
+          "current": "false",
+          "reason": "invertible_reason 「유도 관계를 밝힌 명제라 방향을 맞바꿀 자리가 없다」는 form.type 근거다. 뒤집은 문장 「중력이 구심력 노릇을 한다고 두어도 만유인력 법칙에서 이 관계식이 나오지 않는다」는 반드시 거짓이다. 이 false 때문에 plan-kepler-third-law-for-binary-stars 가 유도 명제를 우회했다.",
+          "suggest": "invertible 을 true 로 올린다"
+        },
+        {
+          "card_id": "earth-supernova",
+          "relation_id": "rel-sn-heavy-elements",
+          "current": "false",
+          "reason": "메인이 지목한 3건 밖이지만 같은 자리다. 「무거운 원소의 생성 경로를 하나로 되짚을 수는 없다」는 역 명제를 반박한 것이고, 뒤집은 문장 「철보다 무거운 원소는 초신성이 폭발하는 과정에서 만들어지지 않는다」는 반드시 거짓이다.",
+          "suggest": "invertible 을 true 로 올린다"
+        },
+        {
+          "card_id": "isci1-supernova-nucleosynthesis",
+          "relation_id": "rel-sn-mass",
+          "current": "false",
+          "reason": "「질량에 따라 갈리는 두 경로를 나눈 분류형 명제라 뒤집을 방향이 없다」는 사유인데, 이 명제는 두 경로를 두 질량 구간에 짝지은 것이라 짝을 맞바꾸면 반드시 거짓이 된다. 분류형이야말로 뒤집기가 성립하는 자리다.",
+          "suggest": "invertible 을 true 로 올리고 두 이름을 맞바꾼 inverted_text 를 세운다"
+        }
+      ]
+    },
+    "kepler_bypass_note": "plan-kepler-third-law-for-binary-stars 는 유도 명제를 세우지 않고 rel-k3-applicable-to-binary(쌍성에도 쓸 수 있는 까닭은 두 별도 중력에 묶여 공통 질량 중심을 돌기 때문)로 갈음했다. 이 대체 명제 자체는 뒤집기가 성립하고 내용도 있어 우회가 카드를 비우지는 않았다. 다만 남은 세 명제 가운데 rel-k3-binary-mass 가 definition 의 되풀이이고 rel-k3-orbit-period 도 법칙을 정성으로 읽은 것에 가까워, 실질 내용을 지고 있는 명제는 rel-k3-applicable-to-binary 하나뿐이다. 우회의 원인인 mech-kepler-third-law/rel-k3-derive 의 false 판정이 위 목록대로 잘못이므로, 그쪽이 바로잡히면 이 카드에도 유도 명제를 세울 길이 열린다."
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "id": "plan-space-hazard",
+  "concept_key": "concept:space-hazard",
+  "registry_status": "new",
+  "term": "우주 위험",
+  "notation": {
+    "hanja": "宇宙危險",
+    "english": "space hazard",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 危 위태할 위 · 險 험할 험"
+  },
+  "definition": "우주에서 비롯해 지구와 인류 활동에 피해를 줄 수 있는 요인. 태양의 급격한 물질 방출, 소천체 충돌, 우주 쓰레기가 여기 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hz-origin",
+      "text": "지구 접근 천체는 자연에서 온 소천체이고, 우주 쓰레기는 사람이 쏘아 올린 물체가 남긴 것이다.",
+      "form": {
+        "condition": "우주 위험 요인을 기원에 따라 가를 때",
+        "type": "classification",
+        "scope": "충돌 위험을 주는 궤도 위 물체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「지구 접근 천체가 사람이 남긴 물체이고 우주 쓰레기가 자연 천체다」는 두 이름을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 접근 천체는 사람이 쏘아 올린 물체가 남긴 것이고, 우주 쓰레기는 자연에서 온 소천체다."
+    },
+    {
+      "id": "rel-hz-impact",
+      "text": "지름이 약 10 km에 이르는 소행성이 지구에 부딪히면 지구 환경이 급격히 바뀌어 대규모 멸종이 일어날 수 있다.",
+      "form": {
+        "condition": "큰 소천체가 지구에 충돌할 때",
+        "type": "causal",
+        "scope": "중생대 말 대멸종의 원인으로 거론되는 가설"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「지름 10 km급 소행성이 부딪혀도 지구 환경은 거의 달라지지 않는다」는 공룡 멸종 가설의 근거와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지름이 약 10 km에 이르는 소행성이 지구에 부딪혀도 지구 환경은 거의 달라지지 않는다."
+    },
+    {
+      "id": "rel-hz-monitor",
+      "text": "우주 위험은 미리 알아채야 대비할 수 있으므로 태양 활동과 지구 접근 천체를 늘 감시할 필요가 있다.",
+      "form": {
+        "condition": "피해를 줄이려 할 때",
+        "type": "causal",
+        "scope": "우주 위험 감시 기술의 필요성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「미리 알아채도 대비할 수 없으므로 감시할 필요가 없다」는 감시 체계를 갖추는 까닭과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주 위험은 미리 알아채도 대비할 수 없으므로 태양 활동과 지구 접근 천체를 감시할 필요가 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 위험이란 소행성 충돌만을 가리킨다",
+      "why_wrong": "태양의 급격한 물질 방출에 따른 우주 기상 변화와 우주 쓰레기도 우주 위험에 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hz-origin"
+    },
+    {
+      "text": "우주 쓰레기는 대기권에서 모두 타 없어져 아무 피해가 없다",
+      "why_wrong": "큰 잔해는 다 타지 않고 지상으로 떨어질 수 있고, 궤도 위 인공위성과 부딪힐 위험이 더 크다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-space-weather"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-near-earth-object"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-space-debris"
+    },
+    {
+      "type": "next",
+      "target": "plan-space-object-surveillance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    17,
+    18,
+    22,
+    23
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

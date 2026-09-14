@@ -1,0 +1,117 @@
+{
+  "id": "plan-redshift-and-blueshift",
+  "concept_key": "concept:redshift-and-blueshift",
+  "registry_status": "new",
+  "term": "적색 편이와 청색 편이",
+  "notation": {
+    "hanja": "赤色偏移 靑色偏移",
+    "hanja_gloss": "赤 붉을 적 · 色 빛 색 · 偏 치우칠 편 · 移 옮길 이 · 靑 푸를 청 · 色 빛 색 · 偏 치우칠 편 · 移 옮길 이",
+    "english": "redshift and blueshift"
+  },
+  "definition": "별빛 흡수선이 기준 파장보다 붉은 쪽으로 밀리면 적색 편이, 파란 쪽으로 밀리면 청색 편이라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rb-approach",
+      "text": "별이 지구로 다가오면 별빛의 파장이 짧아져 흡수선이 파란색 쪽으로 밀린다.",
+      "form": {
+        "condition": "별이 시선 방향으로 다가올 때",
+        "type": "causal",
+        "scope": "별빛 스펙트럼의 흡수선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「다가오는 별의 흡수선이 붉은색 쪽으로 밀린다」인데, 다가올 때는 파장이 짧아지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별이 지구로 다가오면 별빛의 흡수선이 붉은색 쪽으로 밀린다."
+    },
+    {
+      "id": "rel-rb-recede",
+      "text": "별이 지구에서 멀어지면 별빛의 파장이 길어져 흡수선이 붉은색 쪽으로 밀린다.",
+      "form": {
+        "condition": "별이 시선 방향으로 멀어질 때",
+        "type": "causal",
+        "scope": "별빛 스펙트럼의 흡수선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「멀어지는 별의 흡수선이 파란색 쪽으로 밀린다」인데, 멀어질 때는 파장이 길어지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별이 지구에서 멀어지면 별빛의 흡수선이 파란색 쪽으로 밀린다."
+    },
+    {
+      "id": "rel-rb-amount",
+      "text": "같은 흡수선을 견줄 때, 기준 파장에서 밀린 정도가 클수록 그 별의 시선 속도가 크다.",
+      "form": {
+        "condition": "같은 흡수선끼리 견줄 때",
+        "type": "direct",
+        "scope": "시선 방향으로 움직이는 별",
+        "antecedent": {
+          "quantity": "흡수선이 밀린 정도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "시선 속도의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「밀린 정도가 클수록 시선 속도가 작다」인데, 같은 흡수선이라면 밀린 양이 속도에 비례하므로 반드시 거짓이다. 서로 다른 흡수선을 견주는 반례가 생기지 않도록 한정을 inverted_text 문면에도 넣었다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 흡수선을 견줄 때, 기준 파장에서 밀린 정도가 클수록 그 별의 시선 속도는 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적색 편이가 나타나는 별은 눈으로 보아도 붉게 보인다.",
+      "why_wrong": "흡수선의 위치가 긴 파장 쪽으로 밀릴 뿐이다. 별의 색이 붉게 바뀌는 것이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-rb-recede"
+    },
+    {
+      "text": "청색 편이는 별이 실제로 파랗게 달아오른다는 뜻이다.",
+      "why_wrong": "다가오는 별의 흡수선이 짧은 파장 쪽으로 밀린 것을 가리키는 말이다. 별의 온도와는 별개다.",
+      "source": "llm",
+      "linked_relation": "rel-rb-approach"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-doppler-effect-of-starlight"
+    },
+    {
+      "type": "next",
+      "target": "plan-radial-velocity"
+    },
+    {
+      "type": "next",
+      "target": "plan-accelerating-expansion-of-universe"
+    },
+    {
+      "type": "same",
+      "target": "mech-redshift-and-blueshift",
+      "note": "「역학과 에너지」에서 같은 개념을 파동 쪽에서 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-3",
+  "pages": [
+    68
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,98 @@
+{
+  "id": "plan-solar-wind",
+  "concept_key": "concept:solar-wind",
+  "registry_status": "new",
+  "term": "태양풍",
+  "notation": {
+    "hanja": "太陽風",
+    "english": "solar wind",
+    "hanja_gloss": "太 클 태 · 陽 볕 양 · 風 바람 풍"
+  },
+  "definition": "태양에서 끊임없이 뻗어 나오는 미립자의 흐름. 주로 양성자와 전자로 이루어지며 지구 부근에서 초속 수백 km로 지난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sws-magnetosphere",
+      "text": "태양풍이 지구 자기권에 닿으면 자기 폭풍과 오로라, 전리층의 요란이 일어난다.",
+      "form": {
+        "condition": "미립자의 흐름이 지구 자기권과 만날 때",
+        "type": "causal",
+        "scope": "지구 자기권이 받는 태양풍의 영향"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양풍이 자기권에 닿아도 자기 폭풍이나 오로라는 일어나지 않는다」는 태양풍이 이 현상들을 일으킨다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양풍이 지구 자기권에 닿아도 자기 폭풍과 오로라, 전리층의 요란은 일어나지 않는다."
+    },
+    {
+      "id": "rel-sws-polar",
+      "text": "태양풍이 셀수록 북극 항로의 운항과 통신이 어려워지고 승객이 받는 우주 방사선도 늘어난다.",
+      "form": {
+        "condition": "고위도 상공을 지나는 항공기일 때",
+        "type": "direct",
+        "scope": "항공 분야가 받는 태양풍의 영향",
+        "antecedent": {
+          "quantity": "태양풍의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주 방사선 노출",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양풍이 셀수록 북극 항로 운항이 수월해지고 방사선 노출도 줄어든다」는 항공 분야 피해 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양풍이 셀수록 북극 항로의 운항과 통신은 오히려 수월해지고 승객이 받는 우주 방사선도 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양풍은 태양에서 불어오는 뜨거운 공기의 흐름이다",
+      "why_wrong": "공기가 아니라 양성자와 전자 같은 전기를 띤 미립자의 흐름이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sws-magnetosphere"
+    },
+    {
+      "text": "태양풍은 흑점이 폭발할 때만 분다",
+      "why_wrong": "태양풍은 늘 불고 있으며 태양 활동이 활발할 때 더 세질 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-space-weather"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-flare"
+    },
+    {
+      "type": "related",
+      "target": "plan-structure-of-comet"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    18
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

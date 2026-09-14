@@ -1,0 +1,107 @@
+{
+  "id": "plan-asteroid-belt",
+  "concept_key": "concept:asteroid-belt",
+  "registry_status": "new",
+  "term": "소행성대",
+  "notation": {
+    "hanja": "小行星帶",
+    "english": "asteroid belt",
+    "hanja_gloss": "小 작을 소 · 行 다닐 행 · 星 별 성 · 帶 띠 대"
+  },
+  "definition": "화성 궤도와 목성 궤도 사이에 소행성이 많이 모여 띠를 이루는 구역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ab-position",
+      "text": "소행성대는 화성 궤도와 목성 궤도 사이에 있어 그 천체들의 긴반지름도 두 행성 사이 값이다.",
+      "form": {
+        "condition": "태양으로부터의 거리를 잴 때",
+        "type": "conditional",
+        "scope": "태양계 안에서 소행성대의 자리"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「소행성대는 지구 궤도 안쪽에 있어 긴반지름이 1 AU보다 작다」는 화성과 목성 사이라는 위치와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소행성대는 지구 궤도 안쪽에 있어 그 천체들의 긴반지름이 1 AU보다 작다."
+    },
+    {
+      "id": "rel-ab-period",
+      "text": "소행성대에 있는 베스타는 긴반지름이 화성과 목성 사이여서 공전 주기도 두 행성 사이인 약 3.6년이다.",
+      "form": {
+        "condition": "조화 법칙을 소행성대 천체에 적용할 때",
+        "type": "conditional",
+        "scope": "소행성대를 도는 천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「베스타는 소행성대에 있으면서도 공전 주기가 화성보다 짧다」는 긴반지름이 클수록 주기가 길다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소행성대에 있는 베스타는 긴반지름이 화성과 목성 사이인데도 공전 주기가 화성보다 짧다."
+    },
+    {
+      "id": "rel-ab-origin",
+      "text": "소행성대의 천체들은 행성으로 자라지 못한 미행성과 그 충돌 잔재로 본다.",
+      "form": {
+        "condition": "태양계가 만들어지던 과정을 되짚을 때",
+        "type": "causal",
+        "scope": "소행성대의 기원"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「한때 행성이었던 것이 부서져 남은 조각으로 본다」는 행성으로 자라지 못한 미행성의 잔재라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소행성대의 천체들은 한때 행성이었던 것이 부서져 남은 조각으로 본다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "소행성대는 부서진 행성의 파편이 모인 곳이다",
+      "why_wrong": "행성으로 자라지 못한 미행성과 충돌 잔재가 모인 곳이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ab-origin"
+    },
+    {
+      "text": "소행성대는 해왕성 바깥에 있다",
+      "why_wrong": "화성과 목성 사이에 있으며, 해왕성 바깥의 띠는 카이퍼 띠다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ab-position"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-asteroid"
+    },
+    {
+      "type": "related",
+      "target": "plan-semi-major-axis"
+    },
+    {
+      "type": "related",
+      "target": "plan-kuiper-belt"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    32
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

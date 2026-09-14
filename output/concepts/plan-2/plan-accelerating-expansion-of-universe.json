@@ -1,0 +1,119 @@
+{
+  "id": "plan-accelerating-expansion-of-universe",
+  "concept_key": "concept:accelerating-universe",
+  "registry_status": "new",
+  "term": "우주의 가속 팽창",
+  "notation": {
+    "hanja": "宇宙加速膨脹",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 加 더할 가 · 速 빠를 속 · 膨 부풀 팽 · 脹 부을 창",
+    "english": "accelerating expansion of the universe"
+  },
+  "definition": "우주가 팽창하는 빠르기가 시간에 따라 어떻게 달라져 왔는지를 Ia형 초신성 관측으로 밝혀낸 결론.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-acc-dimmer",
+      "text": "적색 편이가 같은 Ia형 초신성이 감속 팽창 모형의 예측보다 어둡게 관측된 것이 가속 팽창의 근거가 되었다.",
+      "form": {
+        "condition": "같은 적색 편이를 보이는 초신성끼리 견줄 때",
+        "type": "causal",
+        "scope": "먼 Ia형 초신성의 관측 자료"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「예측보다 밝게 관측되었다」인데, 실제 관측은 더 어두웠으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적색 편이가 같은 Ia형 초신성이 감속 팽창 모형의 예측보다 밝게 관측되었다."
+    },
+    {
+      "id": "rel-acc-redshift-distance",
+      "text": "적색 편이 값이 큰 Ia형 초신성일수록 더 멀리 있고, 그 폭발도 더 먼 과거에 일어난 것이다.",
+      "form": {
+        "condition": "우주 팽창으로 생긴 적색 편이를 읽을 때",
+        "type": "direct",
+        "scope": "먼 은하에서 관측된 초신성",
+        "antecedent": {
+          "quantity": "적색 편이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "천체까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「적색 편이가 클수록 가까이 있고 최근에 터진 것」이라는 말인데, 팽창하는 우주에서 편이는 거리와 함께 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적색 편이 값이 큰 Ia형 초신성일수록 더 가까이 있고 더 최근에 폭발한 것이다."
+    },
+    {
+      "id": "rel-acc-history",
+      "text": "우주는 빅뱅 뒤 한동안 감속 팽창하다가 약 60억 년 전부터 가속 팽창으로 돌아섰다.",
+      "form": {
+        "condition": "현재까지 알려진 우주 모형을 따를 때",
+        "type": "classification",
+        "scope": "우주의 팽창 역사"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 국면의 차례를 맞바꾼 것이라, 관측에서 얻은 팽창 역사와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주는 빅뱅 뒤 한동안 가속 팽창하다가 약 60억 년 전부터 감속 팽창으로 돌아섰다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주가 가속 팽창한다는 것은 은하들이 점점 빠르게 자전한다는 뜻이다.",
+      "why_wrong": "은하 사이의 거리가 벌어지는 속도가 빨라진다는 뜻이다. 은하 자체의 회전과는 다른 이야기다.",
+      "source": "llm",
+      "linked_relation": "rel-acc-history"
+    },
+    {
+      "text": "우주는 태어난 뒤로 줄곧 같은 빠르기로 팽창해 왔다.",
+      "why_wrong": "등속 팽창 모형의 이론값은 관측 자료와 어긋났다. 감속하다가 가속으로 돌아선 모형이 더 잘 맞았다.",
+      "source": "llm",
+      "linked_relation": "rel-acc-history"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-type-ia-supernova"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-distance-modulus"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-redshift-and-blueshift"
+    },
+    {
+      "type": "same",
+      "target": "earth-accelerating-universe",
+      "note": "「지구과학」의 '가속 팽창 우주론' 카드와 키가 같다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-2",
+  "pages": [
+    81,
+    82,
+    83
+  ],
+  "difficulty": 5,
+  "role": "core",
+  "version": 1
+}

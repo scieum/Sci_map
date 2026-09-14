@@ -1,0 +1,132 @@
+{
+  "id": "plan-semi-major-axis",
+  "concept_key": "concept:semi-major-axis",
+  "registry_status": "new",
+  "term": "궤도 긴반지름",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "semi-major axis",
+    "hanja_note": "'긴반지름'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다(軌道만 한자어다).",
+    "symbol_display": "a",
+    "symbol_plain": "a"
+  },
+  "definition": "타원 궤도의 중심에서 근일점 또는 원일점까지 잰 거리. 태양계에서는 천문단위(AU)로 나타내는 일이 많다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sma-mean",
+      "text": "궤도 긴반지름은 근일점 거리와 원일점 거리의 평균과 같다.",
+      "form": {
+        "condition": "타원 궤도의 두 끝까지 거리를 알 때",
+        "type": "conditional",
+        "scope": "타원 공전 궤도"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「긴반지름은 근일점 거리와 원일점 거리의 평균과 다르다」는 긴반지름을 그렇게 정의한 것과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "궤도 긴반지름은 근일점 거리와 원일점 거리의 평균과 다르다."
+    },
+    {
+      "id": "rel-sma-period",
+      "text": "같은 중심 천체를 도는 천체끼리 견주면 긴반지름이 큰 쪽의 공전 주기가 길다.",
+      "form": {
+        "condition": "같은 중심 천체의 중력에 묶여 돌 때",
+        "type": "direct",
+        "scope": "조화 법칙이 성립하는 한 계",
+        "antecedent": {
+          "quantity": "궤도 긴반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공전 주기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「긴반지름이 큰 쪽의 공전 주기가 짧다」는 주기의 제곱이 긴반지름의 세제곱에 비례한다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 중심 천체를 도는 천체끼리 견주면 긴반지름이 큰 쪽의 공전 주기가 짧다."
+    },
+    {
+      "id": "rel-sma-size",
+      "text": "이심률이 같더라도 긴반지름이 크면 궤도는 그만큼 크게 그려진다.",
+      "form": {
+        "condition": "이심률을 같게 두고 견줄 때",
+        "type": "direct",
+        "scope": "타원 궤도의 크기와 모양",
+        "antecedent": {
+          "quantity": "궤도 긴반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "궤도의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이심률이 같다면 긴반지름이 커도 궤도의 크기는 달라지지 않는다」는 긴반지름이 궤도의 크기를 정한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이심률이 같다면 긴반지름이 커도 궤도의 크기는 달라지지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "긴반지름은 태양에서 행성까지의 가장 먼 거리다",
+      "why_wrong": "원일점까지의 거리가 아니라 타원 중심에서 잰 값이며, 근일점 거리와 원일점 거리의 평균과 같다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sma-mean"
+    },
+    {
+      "text": "긴반지름이 크면 이심률도 크다",
+      "why_wrong": "둘은 따로 정해지는 값이라, 긴반지름이 커도 이심률이 작아 원에 가까운 궤도가 있다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-kepler-first-law"
+    },
+    {
+      "type": "next",
+      "target": "plan-orbital-eccentricity"
+    },
+    {
+      "type": "next",
+      "target": "plan-kepler-third-law"
+    },
+    {
+      "type": "related",
+      "target": "plan-perihelion-and-aphelion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-1",
+  "pages": [
+    25,
+    29
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "공전 궤도 긴반지름"
+  ]
+}

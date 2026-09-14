@@ -1,0 +1,95 @@
+{
+  "id": "plan-dark-nebula",
+  "concept_key": "concept:dark-nebula",
+  "registry_status": "new",
+  "term": "암흑 성운",
+  "notation": {
+    "hanja": "暗黑星雲",
+    "english": "dark nebula",
+    "hanja_gloss": "暗 어두울 암 · 黑 검을 흑 · 星 별 성 · 雲 구름 운"
+  },
+  "definition": "차갑고 조밀한 분자 구름이 모여, 그 뒤에서 오는 별빛을 완전히 가로막아 검게 보이는 영역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dn-dust",
+      "text": "성간 티끌이 많을수록 뒤쪽 별빛이 더 많이 가려져 그 영역은 더 검게 보인다.",
+      "form": {
+        "condition": "같은 배경 별빛을 견줄 때",
+        "type": "direct",
+        "scope": "암흑 성운과 그 둘레",
+        "antecedent": {
+          "quantity": "성간 티끌의 양",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "가려지는 별빛의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「티끌이 많을수록 별빛이 덜 가려져 밝게 보인다」는 티끌이 빛을 흡수·산란한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성간 티끌이 많을수록 뒤쪽 별빛이 덜 가려져 그 영역은 더 밝게 보인다."
+    },
+    {
+      "id": "rel-dn-ir",
+      "text": "가시광선에서 가려져 보이지 않던 배경 별이 적외선 관측에서는 드러난다.",
+      "form": {
+        "condition": "가시광선 대신 더 긴 파장으로 볼 때",
+        "type": "conditional",
+        "scope": "암흑 성운과 거대 성간운"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 파장대의 구실을 맞바꾼 것이라, 소광을 덜 받는 쪽이 적외선이라는 사실과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적외선에서 가려져 보이지 않던 배경 별이 가시광선 관측에서는 드러난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암흑 성운이 검게 보이는 까닭은 그 자리에 아무 물질도 없기 때문이다",
+      "why_wrong": "오히려 물질이 매우 많이 모인 곳이다. 조밀한 티끌이 뒤쪽 별빛을 가로막아 검게 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dn-dust"
+    },
+    {
+      "text": "암흑 성운 안에는 별이 하나도 없다",
+      "why_wrong": "적외선으로 보면 그 안에서 별이 태어나고 있음을 확인할 수 있다. 가시광선에서 가려져 보이지 않을 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dn-ir"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-nebula"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-molecular-cloud"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

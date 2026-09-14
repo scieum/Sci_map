@@ -1,0 +1,91 @@
+{
+  "id": "plan-space-radio-disaster",
+  "concept_key": "concept:space-radio-disaster",
+  "registry_status": "new",
+  "term": "우주 전파 재난",
+  "notation": {
+    "hanja": "宇宙電波災難",
+    "english": "space radio disaster",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 電 번개 전 · 波 물결 파 · 災 재앙 재 · 難 어려울 난"
+  },
+  "definition": "지구 대기권 밖 전자파 에너지가 크게 달라져 위성·항공·항법·전력·통신에 피해를 주는 재난. 위기 경보 체계로 대비한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-srd-alert",
+      "text": "흑점이 폭발해 많은 에너지가 지구에 다다를 것으로 보이면 우주 전파 재난 위기 경보가 발령된다.",
+      "form": {
+        "condition": "감시 자료가 위험을 가리킬 때",
+        "type": "conditional",
+        "scope": "우리나라의 우주 전파 재난 경보 체계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「많은 에너지가 다다를 것으로 보여도 경보는 발령되지 않는다」는 경보 체계를 마련한 까닭과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흑점이 폭발해 많은 에너지가 지구에 다다를 것으로 보여도 우주 전파 재난 위기 경보는 발령되지 않는다."
+    },
+    {
+      "id": "rel-srd-domain",
+      "text": "우주 전파 재난은 지자기와 전리권의 전자파 에너지 변화에서 비롯하므로 전파를 쓰는 분야가 특히 피해를 본다.",
+      "form": {
+        "condition": "전파를 이용하는 시스템일 때",
+        "type": "causal",
+        "scope": "위성·항공·항법·전력·통신 분야"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전자파 에너지 변화에서 비롯하지만 전파를 쓰는 분야는 피해를 보지 않는다」는 위성·항법 피해 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주 전파 재난은 지자기와 전리권의 전자파 에너지 변화에서 비롯하지만 전파를 쓰는 분야는 피해를 보지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 전파 재난은 우주에서 일어나는 일이라 지상에는 피해가 없다",
+      "why_wrong": "항법·통신·전력처럼 지상에서 쓰는 시스템이 직접 피해를 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-srd-domain"
+    },
+    {
+      "text": "우주 전파 재난은 우주 쓰레기가 부딪혀 생긴다",
+      "why_wrong": "전자파 에너지의 변화가 원인이며, 우주 쓰레기 충돌은 다른 갈래의 우주 위험이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-space-weather"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-flare"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-activity-monitoring-system"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    22,
+    23
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

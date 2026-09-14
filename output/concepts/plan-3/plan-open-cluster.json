@@ -1,0 +1,90 @@
+{
+  "id": "plan-open-cluster",
+  "concept_key": "concept:open-cluster",
+  "registry_status": "new",
+  "term": "산개 성단",
+  "notation": {
+    "hanja": "散開星團",
+    "english": "open cluster",
+    "hanja_gloss": "散 흩을 산 · 開 열 개 · 星 별 성 · 團 모일 단"
+  },
+  "definition": "은하 원반에 자리한, 수백에서 수천 개의 젊은 별이 성기게 모인 성단. 무거운 원소가 넉넉한 성간 물질에서 갓 태어난 별들로 이루어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oc-blue",
+      "text": "질량이 큰 청색 별이 훨씬 밝아 산개 성단은 전체가 푸른색으로 보인다.",
+      "form": {
+        "condition": "무거운 별이 아직 주계열에 남아 있을 때",
+        "type": "causal",
+        "scope": "젊은 산개 성단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「질량이 큰 청색 별이 훨씬 밝은데도 산개 성단은 전체가 붉은색으로 보인다」는 밝은 쪽이 성단의 색을 정한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 큰 청색 별이 훨씬 밝은데도 산개 성단은 전체가 붉은색으로 보인다."
+    },
+    {
+      "id": "rel-oc-disk",
+      "text": "우리은하에서 산개 성단은 원반 영역에, 구상 성단은 헤일로 영역에 주로 분포한다.",
+      "form": {
+        "condition": "두 성단의 공간 분포를 견줄 때",
+        "type": "classification",
+        "scope": "우리은하의 성단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 성단의 이름을 맞바꾼 것이라 교과서의 분포 서술과 정반대여서 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우리은하에서 산개 성단은 헤일로 영역에, 구상 성단은 원반 영역에 주로 분포한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "산개 성단은 별이 성기게 모여 있으므로 별의 개수가 수십 개에 지나지 않는다",
+      "why_wrong": "성기게 보일 뿐 수백에서 수천 개의 별로 이루어진다. 빽빽하기로는 수만~수십만 개인 구상 성단이 훨씬 더하다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "산개 성단이 푸르게 보이는 까닭은 성단 전체가 푸른 별로만 이루어져 있기 때문이다",
+      "why_wrong": "붉은 별도 함께 있지만 청색 별이 워낙 밝아 성단 전체의 색을 지배하는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-blue"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-stellar-population"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-color-magnitude-diagram"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-1",
+  "pages": [
+    94,
+    95
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 — 구성 별 수에 대한 오개념을 반박하는 명제가 이 카드에 없어 linked_relation 을 비웠다."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "plan-supercluster",
+  "concept_key": "concept:supercluster",
+  "registry_status": "new",
+  "term": "초은하단",
+  "notation": {
+    "hanja": "超銀河團",
+    "english": "supercluster",
+    "hanja_gloss": "超 넘을 초 · 銀 은 은 · 河 물 하 · 團 모일 단"
+  },
+  "definition": "은하군과 은하단, 그리고 그 둘레의 은하들이 다시 모여 이룬 더 큰 규모의 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sc-loose",
+      "text": "구성 은하가 자체 중력으로 단단히 묶여 있지 않아 초은하단은 크기가 크고 밀도가 낮다.",
+      "form": {
+        "condition": "은하단과 견줄 때",
+        "type": "causal",
+        "scope": "초은하단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중력으로 단단히 묶여 있어 크기가 작고 밀도가 높다」는 느슨하게 묶여 있다는 서술과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구성 은하가 자체 중력으로 단단히 묶여 있어 초은하단은 크기가 작고 밀도가 높다."
+    },
+    {
+      "id": "rel-sc-expand",
+      "text": "중력에 단단히 매이지 않은 만큼 초은하단은 우주가 팽창함에 따라 크기가 더 커진다.",
+      "form": {
+        "condition": "우주가 팽창하는 동안",
+        "type": "causal",
+        "scope": "초은하단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「우주가 팽창해도 초은하단의 크기는 오히려 줄어든다」는 팽창을 따라 확장된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주가 팽창해도 초은하단의 크기는 오히려 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "초은하단은 은하단보다 크니 중력으로 더 단단히 묶여 있다",
+      "why_wrong": "규모가 클수록 묶는 힘은 오히려 느슨하다. 초은하단은 자체 중력으로 강하게 묶여 있지 않다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-loose"
+    },
+    {
+      "text": "우리은하가 속한 가장 큰 구조는 국부 은하군이다",
+      "why_wrong": "국부 은하군은 처녀자리 초은하단의 일부이고, 그것은 다시 라니아케아 초은하단에 든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-expand"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-galaxy-group"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-galaxy-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-large-scale-structure"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-04-1",
+  "pages": [
+    115
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

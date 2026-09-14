@@ -1,0 +1,91 @@
+{
+  "id": "plan-differentiated-and-undifferentiated-meteorite",
+  "concept_key": "concept:differentiated-and-undifferentiated-meteorite",
+  "registry_status": "new",
+  "term": "미분화 운석과 분화 운석",
+  "notation": {
+    "hanja": "未分化 隕石 分化 隕石",
+    "english": "differentiated and undifferentiated meteorites",
+    "hanja_gloss": "未 아닐 미 · 分 나눌 분 · 化 될 화 · 隕 떨어질 운 · 石 돌 석 · 分 나눌 분 · 化 될 화 · 隕 떨어질 운 · 石 돌 석"
+  },
+  "definition": "모체가 화성 활동을 겪었는지에 따른 운석의 갈래. 겪지 않은 것이 미분화 운석, 겪은 것이 분화 운석이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-du-primitive",
+      "text": "미분화 운석에는 태양계 초기 물질이 그대로 남아 있어 태양계가 처음 만들어질 때를 알려 준다.",
+      "form": {
+        "condition": "모체가 화성 활동을 겪지 않았을 때",
+        "type": "causal",
+        "scope": "석질 운석 가운데 미분화 운석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「미분화 운석에는 초기 물질이 남아 있지 않아 초기 태양계를 알려 주지 못한다」는 초기 물질이 보존된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미분화 운석에는 태양계 초기 물질이 남아 있지 않아 태양계가 처음 만들어질 때를 알려 주지 못한다."
+    },
+    {
+      "id": "rel-du-which",
+      "text": "철질 운석과 석철질 운석은 모두 분화 운석이고, 미분화 운석은 석질 운석의 일부다.",
+      "form": {
+        "condition": "구성 성분 분류와 겹쳐 볼 때",
+        "type": "classification",
+        "scope": "두 분류 기준이 겹치는 자리"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「철질·석철질 운석이 미분화 운석이고 석질 운석은 모두 분화 운석이다」는 두 갈래를 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "철질 운석과 석철질 운석이 미분화 운석이고, 석질 운석은 모두 분화 운석이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "석질 운석은 모두 미분화 운석이다",
+      "why_wrong": "석질 운석 가운데 일부만 미분화 운석이고 나머지는 화성 활동을 겪은 분화 운석이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-du-which"
+    },
+    {
+      "text": "분화 운석이 미분화 운석보다 태양계 초기 물질을 잘 간직한다",
+      "why_wrong": "화성 활동을 겪으며 물질이 뒤바뀌었으므로 초기 상태를 간직한 쪽은 미분화 운석이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-du-primitive"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-classification-of-meteorite"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-differentiation-of-small-body"
+    },
+    {
+      "type": "related",
+      "target": "plan-geological-feature-from-small-body-exploration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-3",
+  "pages": [
+    34
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

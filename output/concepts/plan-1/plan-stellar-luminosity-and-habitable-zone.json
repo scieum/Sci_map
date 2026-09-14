@@ -1,0 +1,124 @@
+{
+  "id": "plan-stellar-luminosity-and-habitable-zone",
+  "concept_key": "concept:stellar-luminosity-and-habitable-zone",
+  "registry_status": "new",
+  "term": "중심별의 광도와 생명 가능 지대",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "stellar luminosity and the habitable zone",
+    "hanja_note": "'별'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다(光度·生命 可能 地帶만 한자어다)."
+  },
+  "definition": "중심별이 내는 에너지의 양에 따라 생명 가능 지대의 위치와 폭이 달라진다는 관계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lhz-outward",
+      "text": "중심별이 주계열성일 때 광도가 클수록 생명 가능 지대는 더 바깥쪽에 놓이고 폭도 넓어진다.",
+      "form": {
+        "condition": "중심별이 주계열 단계에 있을 때",
+        "type": "direct",
+        "scope": "주계열성을 중심별로 둔 행성계",
+        "antecedent": {
+          "quantity": "중심별의 광도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지대까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「광도가 클수록 지대가 더 안쪽에 놓이고 폭도 좁아진다」는 높은 에너지가 방출되면 지대가 바깥으로 간다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심별이 주계열성일 때 광도가 클수록 생명 가능 지대는 더 안쪽에 놓이고 폭도 좁아진다."
+    },
+    {
+      "id": "rel-lhz-mass",
+      "text": "주계열성은 질량이 클수록 표면 온도가 높고 광도도 커서 생명 가능 지대가 더 멀리 자리한다.",
+      "form": {
+        "condition": "중심별이 주계열 단계에 있을 때",
+        "type": "direct",
+        "scope": "주계열성의 질량·광도 관계",
+        "antecedent": {
+          "quantity": "중심별의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지대까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「질량이 클수록 광도가 작아 지대가 가까이 자리한다」는 질량이 큰 별이 밝다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주계열성은 질량이 클수록 광도가 작아 생명 가능 지대가 더 가까이 자리한다."
+    },
+    {
+      "id": "rel-lhz-m-type",
+      "text": "M형 별처럼 광도가 작은 별의 생명 가능 지대는 별에 바짝 붙어 있고 폭도 좁다.",
+      "form": {
+        "condition": "광도가 작은 주계열성일 때",
+        "type": "conditional",
+        "scope": "M형·K형 별의 행성계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「광도가 작은 별의 지대는 멀리 떨어져 있고 폭도 넓다」는 탐구 자료의 비교 결과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "M형 별처럼 광도가 작은 별의 생명 가능 지대는 별에서 멀리 떨어져 있고 폭도 넓다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중심별의 광도가 변해도 생명 가능 지대의 위치는 그대로다",
+      "why_wrong": "광도가 커지면 지대가 바깥쪽으로 옮겨 가고 폭도 넓어진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lhz-outward"
+    },
+    {
+      "text": "표면 온도가 낮은 별일수록 생명 가능 지대가 넓다",
+      "why_wrong": "광도가 작아 지대가 좁고 별 가까이에 붙는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lhz-m-type"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-habitable-zone"
+    },
+    {
+      "type": "next",
+      "target": "plan-condition-for-extraterrestrial-life"
+    },
+    {
+      "type": "related",
+      "target": "plan-stellar-mass-and-lifetime"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-2",
+  "pages": [
+    42,
+    43
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

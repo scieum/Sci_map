@@ -1,0 +1,109 @@
+{
+  "id": "plan-corona",
+  "concept_key": "concept:corona",
+  "registry_status": "new",
+  "term": "코로나",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "라틴어 corona 를 소리대로 옮긴 음차어라 표제어에 대응하는 한자어가 없다.",
+    "english": "corona"
+  },
+  "definition": "태양을 둘러싼 대기 가운데 가장 바깥을 이루는 층.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-corona-hot-but-thin",
+      "text": "코로나는 온도가 수백만 K이면서도 기체 밀도가 낮아 평상시에는 눈에 띄지 않는다.",
+      "form": {
+        "condition": "개기 일식이 아닌 평상시",
+        "type": "causal",
+        "scope": "태양의 최외곽 대기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「코로나가 뜨거워서 평상시에도 광구보다 밝게 보인다」인데, 밀도가 낮아 내는 빛이 약하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코로나는 온도가 수백만 K이므로 평상시에도 광구보다 밝게 보인다."
+    },
+    {
+      "id": "rel-corona-outermost",
+      "text": "코로나는 광구로부터 수백만 km 떨어진 곳까지 매우 불규칙한 모양으로 퍼져 있다.",
+      "form": {
+        "condition": "태양 대기의 층 구조를 볼 때",
+        "type": "classification",
+        "scope": "태양의 최외곽 대기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「광구에 얇고 고르게 붙어 있다」인데, 수백만 km까지 불규칙하게 퍼진다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코로나는 광구 표면에 얇고 고르게 달라붙어 있다."
+    },
+    {
+      "id": "rel-corona-eclipse",
+      "text": "개기 일식으로 광구가 가려지면 코로나의 모습을 관측할 수 있다.",
+      "form": {
+        "condition": "개기 일식이 일어날 때",
+        "type": "conditional",
+        "scope": "지상에서의 가시광선 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「광구가 가려져도 코로나를 관측할 수 없다」인데, 개기 일식 사진에 코로나가 찍히므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개기 일식으로 광구가 가려져도 코로나는 관측할 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "코로나는 온도가 수백만 K이니 손을 대면 광구보다 훨씬 뜨겁게 느껴질 것이다.",
+      "why_wrong": "온도는 입자 하나하나의 운동이 얼마나 격렬한지를 나타낸다. 코로나는 입자가 워낙 드물어 실제로 옮겨 오는 열량은 오히려 적다.",
+      "source": "llm",
+      "linked_relation": "rel-corona-hot-but-thin"
+    },
+    {
+      "text": "코로나는 개기 일식 때 달 뒤에서 새로 뿜어져 나오는 빛이다.",
+      "why_wrong": "코로나는 늘 태양을 둘러싸고 있다. 광구가 가려져야 비로소 보이는 것일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-corona-eclipse"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-photosphere"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-wind-from-corona"
+    },
+    {
+      "type": "next",
+      "target": "plan-multiwavelength-solar-observation"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-activity-cycle",
+      "note": "흑점이 많은 시기에 크고 밝다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-2",
+  "pages": [
+    62
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

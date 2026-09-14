@@ -1,0 +1,87 @@
+{
+  "id": "plan-oort-cloud",
+  "concept_key": "concept:oort-cloud",
+  "registry_status": "new",
+  "term": "오르트 구름",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Oort cloud",
+    "hanja_note": "'오르트'가 사람 이름을 옮긴 음차어이고 '구름'이 고유어여서 한자 표기가 없다."
+  },
+  "definition": "태양계의 가장 먼 곳을 둘러싸고 있는 천체들의 집합. 태양에 다가오는 많은 혜성이 여기서 출발한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-oc-distance",
+      "text": "오르트 구름은 카이퍼 띠보다 훨씬 멀리, 태양계의 가장 먼 곳에 자리한다.",
+      "form": {
+        "condition": "태양으로부터의 거리를 견줄 때",
+        "type": "conditional",
+        "scope": "태양계 바깥쪽 두 구역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「오르트 구름은 카이퍼 띠보다 태양에 가까운 곳에 자리한다」는 두 구역의 자리를 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오르트 구름은 카이퍼 띠보다 태양에 가까운 곳에 자리한다."
+    },
+    {
+      "id": "rel-oc-comet",
+      "text": "오르트 구름에서 출발한 혜성은 긴 타원 궤도를 그리며 태양을 한 바퀴 돌고 다시 바깥으로 멀어진다.",
+      "form": {
+        "condition": "태양 가까이 들어왔다가 되돌아갈 때",
+        "type": "conditional",
+        "scope": "오르트 구름에서 기원한 혜성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양을 한 바퀴 돈 뒤 그 자리에 머문다」는 다시 외곽으로 멀어진다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오르트 구름에서 출발한 혜성은 태양을 한 바퀴 돈 뒤 그 자리에 머문다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "오르트 구름은 성간 가스로 이루어진 구름이다",
+      "why_wrong": "이름과 달리 작은 천체들이 흩어져 있는 집합이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-comet"
+    },
+    {
+      "text": "혜성은 모두 카이퍼 띠에서 온다",
+      "why_wrong": "대다수가 오르트 구름과 카이퍼 띠 두 곳에서 기원한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-oc-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-comet"
+    },
+    {
+      "type": "related",
+      "target": "plan-kuiper-belt"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    33
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

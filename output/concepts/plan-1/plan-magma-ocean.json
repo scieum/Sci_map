@@ -1,0 +1,115 @@
+{
+  "id": "plan-magma-ocean",
+  "concept_key": "concept:magma-ocean",
+  "registry_status": "new",
+  "term": "마그마 바다",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "magma ocean",
+    "hanja_note": "'마그마(magma)'가 음차어이고 '바다'가 고유어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "천체 내부의 열이 쌓여 대부분이 녹아 있는 상태. 이 시기를 거친 천체는 밀도에 따라 핵과 맨틀로 갈린다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mgo-heat",
+      "text": "소행성이 클수록 내부에 쌓이는 열에너지가 많아 마그마 바다 상태에 이르기 쉽다.",
+      "form": {
+        "condition": "내부에 열원이 있고 열이 빠져나가기 어려울 때",
+        "type": "direct",
+        "scope": "초기 태양계의 소천체",
+        "antecedent": {
+          "quantity": "천체의 크기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "마그마 바다에 이를 가능성",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「소행성이 클수록 내부 열이 적어 마그마 바다에 이르기 어렵다」는 큰 소행성이 녹는다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소행성이 클수록 내부에 쌓이는 열에너지가 적어 마그마 바다 상태에 이르기 어렵다."
+    },
+    {
+      "id": "rel-mgo-diff",
+      "text": "마그마 바다 상태를 거친 천체는 분화 천체가 되고, 거치지 않은 천체는 미분화 천체로 남는다.",
+      "form": {
+        "condition": "마그마 바다를 겪었는지로 가를 때",
+        "type": "classification",
+        "scope": "태양계 소천체의 갈래"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「마그마 바다를 거친 천체가 미분화 천체가 되고 거치지 않은 천체가 분화 천체가 된다」는 두 갈래를 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "마그마 바다 상태를 거친 천체가 미분화 천체가 되고, 거치지 않은 천체가 분화 천체가 된다."
+    },
+    {
+      "id": "rel-mgo-planet",
+      "text": "소행성보다 큰 행성도 마그마 바다 상태를 거치며 내부가 핵과 맨틀로 갈린 것으로 본다.",
+      "form": {
+        "condition": "행성이 만들어지던 과정을 되짚을 때",
+        "type": "conditional",
+        "scope": "고체형 행성의 내부 구조"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「행성은 마그마 바다를 거치지 않고도 핵과 맨틀로 갈렸다」는 행성도 같은 과정을 거쳤다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소행성보다 큰 행성은 마그마 바다 상태를 거치지 않고 내부가 핵과 맨틀로 갈린 것으로 본다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "마그마 바다는 천체 표면에만 생긴 얕은 용암 호수다",
+      "why_wrong": "내부의 대부분이 녹아 있는 상태를 가리킨다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "마그마 바다는 태양이 데워서 생긴다",
+      "why_wrong": "천체 내부에 쌓인 열에너지 때문에 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mgo-heat"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-differentiation-of-small-body"
+    },
+    {
+      "type": "same",
+      "target": "esys-magma-ocean"
+    },
+    {
+      "type": "related",
+      "target": "plan-asteroid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-3",
+  "pages": [
+    34,
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,114 @@
+{
+  "id": "plan-binary-star",
+  "concept_key": "concept:binary-star",
+  "registry_status": "new",
+  "term": "쌍성",
+  "notation": {
+    "hanja": "雙星",
+    "hanja_gloss": "雙 쌍 쌍 · 星 별 성",
+    "english": "binary star"
+  },
+  "definition": "중력에 묶여 서로의 둘레를 돌고 있는 두 별. 우주에는 이런 별이나 다중성이 많이 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bs-same-period",
+      "text": "쌍성을 이루는 두 별의 공전 주기는 서로 같다.",
+      "form": {
+        "condition": "두 별이 중력으로 묶여 함께 돌 때",
+        "type": "classification",
+        "scope": "쌍성계의 두 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「무거운 쪽의 공전 주기가 더 길다」인데, 두 별은 같은 공통 질량 중심을 같은 주기로 돌므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "쌍성을 이루는 두 별 가운데 질량이 큰 쪽의 공전 주기가 더 길다."
+    },
+    {
+      "id": "rel-bs-speed",
+      "text": "한 쌍성계 안의 두 별을 견주면 질량이 큰 쪽의 공전 속도가 더 느리다.",
+      "form": {
+        "condition": "같은 쌍성계 안의 두 별을 견줄 때",
+        "type": "inverse",
+        "scope": "한 쌍성계 안의 두 별",
+        "antecedent": {
+          "quantity": "별의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공전 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「한 쌍성계 안에서 무거운 쪽이 더 빠르다」인데, 두 별의 공전 주기가 같고 무거운 쪽이 질량 중심에 가까워 작은 원을 돌므로 반드시 거짓이다. 비교 대상을 한 쌍성계 안으로 문면에 못박아, 서로 다른 쌍성계를 견주는 반례가 끼어들 자리를 없앴다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 쌍성계 안의 두 별을 견주면 질량이 큰 쪽의 공전 속도가 더 빠르다."
+    },
+    {
+      "id": "rel-bs-not-optical-pair",
+      "text": "하늘에서 나란히 붙어 보이는 두 별이라도 공통 질량 중심을 함께 돌지 않으면 쌍성이 아니다.",
+      "form": {
+        "condition": "두 별이 하늘에서 가까이 보일 때",
+        "type": "classification",
+        "scope": "하늘에서 나란히 보이는 두 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「나란히 보이기만 하면 쌍성이다」인데, 시선 방향이 겹쳐 보일 뿐 중력으로 묶이지 않은 짝이 있으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "하늘에서 나란히 붙어 보이는 두 별은 함께 돌지 않더라도 쌍성이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "하늘에서 나란히 붙어 보이는 두 별은 모두 쌍성이다.",
+      "why_wrong": "시선 방향이 겹쳐 보일 뿐 중력으로 묶이지 않은 짝도 있다. 쌍성은 공통 질량 중심을 함께 도는 별이다.",
+      "source": "llm",
+      "linked_relation": "rel-bs-not-optical-pair"
+    },
+    {
+      "text": "쌍성에서는 가벼운 별만 움직이고 무거운 별은 제자리에 있다.",
+      "why_wrong": "두 별 모두 공통 질량 중심 둘레를 돈다. 무거운 쪽은 작은 원을 느리게 돌 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-bs-speed"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-center-of-mass"
+    },
+    {
+      "type": "related",
+      "target": "plan-kepler-third-law-for-binary-stars",
+      "note": "쌍성의 질량을 구하는 도구다"
+    },
+    {
+      "type": "related",
+      "target": "plan-binary-star-mass",
+      "note": "쌍성 관측이 질량 측정으로 이어진다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-1",
+  "pages": [
+    72
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,100 @@
+{
+  "id": "plan-habitable-zone",
+  "concept_key": "concept:habitable-zone",
+  "registry_status": "new",
+  "term": "생명 가능 지대",
+  "notation": {
+    "hanja": "生命可能地帶",
+    "english": "habitable zone",
+    "hanja_gloss": "生 날 생 · 命 목숨 명 · 可 옳을 가 · 能 능할 능 · 地 땅 지 · 帶 띠 대"
+  },
+  "definition": "행성 표면에 물이 액체로 있을 수 있는, 중심별로부터의 거리 범위.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hbz-boundary",
+      "text": "지대보다 안쪽은 너무 뜨거워 물이 증발하고, 바깥쪽은 너무 차가워 물이 얼어붙는다.",
+      "form": {
+        "condition": "지대의 안팎을 가를 때",
+        "type": "classification",
+        "scope": "생명 가능 지대의 두 경계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「안쪽은 너무 차가워 물이 얼고 바깥쪽은 너무 뜨거워 증발한다」는 안팎을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지대보다 안쪽은 너무 차가워 물이 얼어붙고, 바깥쪽은 너무 뜨거워 물이 증발한다."
+    },
+    {
+      "id": "rel-hbz-solar",
+      "text": "태양계의 생명 가능 지대는 금성과 화성 사이 구간에 걸쳐 있다.",
+      "form": {
+        "condition": "태양을 중심별로 두고 볼 때",
+        "type": "conditional",
+        "scope": "태양계의 생명 가능 지대"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양계의 생명 가능 지대는 목성과 토성 사이에 걸쳐 있다」는 지구가 그 안에 든다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양계의 생명 가능 지대는 목성과 토성 사이 구간에 걸쳐 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생명 가능 지대에 있는 행성에는 반드시 생명체가 있다",
+      "why_wrong": "물이 액체로 있을 수 있는 거리 조건일 뿐이며, 대기와 자기장 같은 다른 조건도 갖춰져야 한다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "생명 가능 지대는 어느 별에서나 같은 거리에 있다",
+      "why_wrong": "중심별의 광도에 따라 위치와 폭이 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hbz-boundary"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-liquid-water-and-life"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-extrasolar-planetary-system"
+    },
+    {
+      "type": "next",
+      "target": "plan-stellar-luminosity-and-habitable-zone"
+    },
+    {
+      "type": "next",
+      "target": "plan-condition-for-extraterrestrial-life"
+    },
+    {
+      "type": "same",
+      "target": "esys-habitable-zone"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-2",
+  "pages": [
+    42,
+    43,
+    45
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

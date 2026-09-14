@@ -1,0 +1,87 @@
+{
+  "id": "plan-galaxy-group",
+  "concept_key": "concept:galaxy-group",
+  "registry_status": "new",
+  "term": "은하군",
+  "notation": {
+    "hanja": "銀河群",
+    "english": "galaxy group",
+    "hanja_gloss": "銀 은 은 · 河 물 하 · 群 무리 군"
+  },
+  "definition": "수십 개 안팎의 은하가 비교적 작은 규모로 모여 이룬 집단. 우리은하가 속한 것을 국부 은하군이라 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gg-vs-cluster",
+      "text": "은하군은 은하단보다 구성 은하의 수가 적고 규모도 작다.",
+      "form": {
+        "condition": "은하 집단의 규모를 견줄 때",
+        "type": "classification",
+        "scope": "은하들의 집단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「은하군이 은하단보다 은하 수가 많고 규모도 크다」는 두 이름을 맞바꾼 것이라 각 정의와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하군은 은하단보다 구성 은하의 수가 많고 규모도 크다."
+    },
+    {
+      "id": "rel-gg-local",
+      "text": "우리은하와 안드로메다은하는 직경 약 3 Mpc의 국부 은하군에 함께 속해 있다.",
+      "form": {
+        "condition": "국부 은하군의 범위를 잡을 때",
+        "type": "conditional",
+        "scope": "국부 은하군"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 은하는 서로 다른 은하군에 속한다」는 국부 은하군이 둘을 함께 품는다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우리은하와 안드로메다은하는 서로 다른 은하군에 속해 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "은하군은 수백~수천 개의 은하가 모인 집단이다",
+      "why_wrong": "그 규모는 은하단이다. 은하군은 수십 개 안팎의 은하가 모인 작은 집단이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gg-vs-cluster"
+    },
+    {
+      "text": "우리은하는 어느 집단에도 속하지 않고 홀로 떠 있다",
+      "why_wrong": "우리은하는 국부 은하군에 속하고, 국부 은하군은 다시 처녀자리 초은하단의 일부다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gg-local"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-supercluster"
+    },
+    {
+      "type": "related",
+      "target": "plan-galaxy-cluster"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-04-1",
+  "pages": [
+    114
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

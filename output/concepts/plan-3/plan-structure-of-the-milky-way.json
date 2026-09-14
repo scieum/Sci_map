@@ -1,0 +1,92 @@
+{
+  "id": "plan-structure-of-the-milky-way",
+  "concept_key": "concept:structure-of-the-milky-way",
+  "registry_status": "new",
+  "term": "우리은하의 구조",
+  "notation": {
+    "hanja": "銀河構造",
+    "english": "structure of the Milky Way",
+    "hanja_gloss": "銀 은 은 · 河 물 하 · 構 얽을 구 · 造 지을 조"
+  },
+  "definition": "중심의 팽대부, 나선팔을 품은 원반, 그 둘을 공 모양으로 감싼 헤일로로 이루어진 우리은하의 짜임.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mw-region",
+      "text": "젊은 별과 산개 성단은 원반에, 늙은 별과 구상 성단은 헤일로에 주로 자리한다.",
+      "form": {
+        "condition": "우리은하를 영역별로 나누어 볼 때",
+        "type": "classification",
+        "scope": "우리은하의 구성 천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 영역을 맞바꾼 것이라 원반이 별이 태어나는 자리라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "젊은 별과 산개 성단은 헤일로에, 늙은 별과 구상 성단은 원반에 주로 자리한다."
+    },
+    {
+      "id": "rel-mw-shapley",
+      "text": "헤일로의 구상 성단이 몰려 있는 쪽을 은하의 중심으로 보아 태양계가 중심에 있지 않음을 알아냈다.",
+      "form": {
+        "condition": "변광성으로 구상 성단까지 거리를 잰 뒤",
+        "type": "causal",
+        "scope": "섀플리의 우리은하 규모 결정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「구상 성단이 몰린 쪽이 은하 중심이 아니어서 태양계가 은하 중심에 있음을 알아냈다」는 섀플리가 얻은 결론과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구상 성단이 몰려 있는 쪽이 은하의 중심이 아니어서 태양계가 은하 중심에 있음을 알아냈다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양계는 우리은하의 한가운데에 있다",
+      "why_wrong": "구상 성단의 공간 분포로 밝혀진 은하 중심은 태양에서 약 8.5 kpc 떨어져 있다. 태양은 원반의 한쪽에 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mw-shapley"
+    },
+    {
+      "text": "헤일로에는 천체가 거의 없어 텅 비어 있다",
+      "why_wrong": "헤일로에는 수백 개의 구상 성단과 늙은 별들이 은하 둘레를 돌고 있고, 암흑 물질도 넓게 퍼져 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mw-region"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-period-luminosity-relation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-globular-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-galaxy-rotation-curve"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-3",
+  "pages": [
+    98,
+    100
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

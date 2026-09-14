@@ -230,7 +230,28 @@ def main() -> int:
         print(f"[크롭] {c['id']:26s} p{c['page']:<3} {img.width}x{img.height}  tier={tier}  {c.get('caption','')}")
 
     if not args.dry_run and rows:
-        with LEDGER.open("a", encoding="utf-8", newline="\n") as fh:
+        # 대장은 **자산 1건에 1행**이다 (CLAUDE.md §6). 그냥 덧붙이면 크롭을 다시 돌릴 때마다
+        # 같은 자산이 여러 행으로 늘어나고, 상한을 푼 뒤로 그 행 수가 곧 "교과서에서 몇 장을
+        # 가져왔나" 의 감사 근거다 — 부풀면 감사가 무너진다. 이 단원이 이번에 쓴 asset_id 의
+        # 옛 행을 걷어내고 새 행을 쓴다. 다른 단원 행은 건드리지 않는다.
+        replacing = {r["asset_id"] for r in rows}
+        kept = []
+        if LEDGER.exists():
+            for line in LEDGER.read_text(encoding="utf-8").splitlines():
+                if not line.strip():
+                    continue
+                try:
+                    old = json.loads(line)
+                except json.JSONDecodeError:
+                    kept.append(line)          # 읽지 못한 행은 지우지 않는다
+                    continue
+                if old.get("asset_id") in replacing:
+                    continue
+                kept.append(line)
+        LEDGER.parent.mkdir(parents=True, exist_ok=True)
+        with LEDGER.open("w", encoding="utf-8", newline="\n") as fh:
+            for line in kept:
+                fh.write(line + "\n")
             for r in rows:
                 fh.write(json.dumps(r, ensure_ascii=False) + "\n")
 

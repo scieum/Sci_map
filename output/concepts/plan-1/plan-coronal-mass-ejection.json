@@ -1,0 +1,91 @@
+{
+  "id": "plan-coronal-mass-ejection",
+  "concept_key": "concept:coronal-mass-ejection",
+  "registry_status": "new",
+  "term": "코로나 질량 방출",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "coronal mass ejection",
+    "hanja_note": "'코로나(corona)'가 음차어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "태양의 바깥층에서 많은 양의 물질이 통째로 우주 공간으로 튀어 나가는 현상. 방출된 물질은 1~3일 걸려 지구에 다다른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cme-delay",
+      "text": "코로나 질량 방출로 나온 물질은 빛보다 훨씬 느려, 흑점 폭발 뒤 하루에서 사흘이 지나 지구에 다다른다.",
+      "form": {
+        "condition": "같은 폭발에서 나온 빛과 물질을 견줄 때",
+        "type": "conditional",
+        "scope": "태양에서 지구까지의 이동 시간"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「빛보다 빨라 폭발 직후 곧바로 다다른다」는 도달에 1~3일이 걸린다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코로나 질량 방출로 나온 물질은 빛보다 빨라 흑점 폭발 직후 곧바로 지구에 다다른다."
+    },
+    {
+      "id": "rel-cme-grid",
+      "text": "방출된 물질이 지구 자기권과 부딪혀 지자기 폭풍이 일어나면 변압기 같은 송전 장비가 손상될 수 있다.",
+      "form": {
+        "condition": "자기장 변화가 도체에 유도 전류를 만들 때",
+        "type": "causal",
+        "scope": "지자기 폭풍이 전력망에 주는 영향"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「지자기 폭풍이 일어나도 송전 장비는 아무 손상을 입지 않는다」는 변압기 코일이 가열돼 성능이 떨어진다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "방출된 물질이 지구 자기권과 부딪혀 지자기 폭풍이 일어나도 변압기 같은 송전 장비는 손상되지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "코로나 질량 방출은 빛과 함께 8분 만에 지구에 닿는다",
+      "why_wrong": "8분 만에 닿는 것은 X선·자외선 같은 빛이고, 물질 덩어리는 1~3일이 걸린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cme-delay"
+    },
+    {
+      "text": "코로나 질량 방출은 태양 표면의 흑점 그 자체를 가리킨다",
+      "why_wrong": "흑점은 광구에 보이는 어두운 무늬이고, 코로나 질량 방출은 바깥층 물질이 우주로 튀어 나가는 사건이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-space-weather"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-flare"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-radio-disaster"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    18,
+    23
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

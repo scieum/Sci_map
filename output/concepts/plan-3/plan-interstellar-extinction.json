@@ -1,0 +1,131 @@
+{
+  "id": "plan-interstellar-extinction",
+  "concept_key": "concept:interstellar-extinction",
+  "registry_status": "new",
+  "term": "성간 소광",
+  "notation": {
+    "hanja": "星間消光",
+    "english": "interstellar extinction",
+    "hanja_gloss": "星 별 성 · 間 사이 간 · 消 사라질 소 · 光 빛 광"
+  },
+  "definition": "별과 관측자 사이에 놓인 성간 티끌이 빛을 흡수하고 산란해, 별이 본래보다 어두워 보이는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ext-mag",
+      "text": "소광이 클수록 관측된 겉보기 등급은 커진다.",
+      "form": {
+        "condition": "별 자체의 광도가 그대로일 때",
+        "type": "direct",
+        "scope": "티끌 층 뒤에 있는 별",
+        "antecedent": {
+          "quantity": "성간 소광량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "관측한 겉보기 등급",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「소광이 클수록 겉보기 등급이 작아진다」는 어두워질수록 등급이 커진다는 등급 체계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소광이 클수록 관측된 겉보기 등급은 작아진다."
+    },
+    {
+      "id": "rel-ext-dist",
+      "text": "소광을 보정하지 않으면 그 별까지의 거리를 실제보다 멀게 구하게 된다.",
+      "form": {
+        "condition": "겉보기 등급과 절대 등급의 차로 거리를 구할 때",
+        "type": "causal",
+        "scope": "소광이 있는 시선 방향"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「보정하지 않으면 거리를 실제보다 가깝게 구한다」는 소광이 겉보기 등급을 키운다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "소광을 보정하지 않으면 그 별까지의 거리를 실제보다 가깝게 구하게 된다."
+    },
+    {
+      "id": "rel-ext-wave",
+      "text": "같은 티끌 층을 지날 때 관측 파장이 길수록 소광량은 작아진다.",
+      "form": {
+        "condition": "가시광선에서 적외선으로 파장을 옮겨 갈 때",
+        "type": "inverse",
+        "scope": "가시광선~적외선 영역",
+        "antecedent": {
+          "quantity": "관측 파장",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "소광량",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「파장이 길수록 소광량이 커진다」는 파장에 따른 소광량 자료와 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 티끌 층을 지날 때 관측 파장이 길수록 소광량은 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성간 소광은 별이 실제로 어두워지는 현상이다",
+      "why_wrong": "별 자체의 광도가 줄어든 것이 아니라, 가로놓인 티끌이 빛을 흡수·산란해 어두워 보이는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ext-mag"
+    },
+    {
+      "text": "소광을 보정하지 않으면 거리를 실제보다 가깝게 구하게 된다",
+      "why_wrong": "소광은 겉보기 등급을 키워 거리 지수를 부풀리므로, 보정하지 않은 거리는 실제보다 멀게 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ext-dist"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-dust"
+    },
+    {
+      "type": "next",
+      "target": "plan-interstellar-reddening"
+    },
+    {
+      "type": "next",
+      "target": "plan-infrared-observation"
+    },
+    {
+      "type": "next",
+      "target": "plan-distance-modulus-of-star-cluster"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-2",
+  "pages": [
+    104,
+    105
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 — 중복 명제군 (rel-ext-dist, rel-dm-ext) 가운데 이 카드가 주인이다. 소광 보정과 거리 오차는 성취기준 12행우03-02 의 몫이다."
+  ]
+}

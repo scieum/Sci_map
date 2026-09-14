@@ -1,0 +1,119 @@
+{
+  "id": "plan-interstellar-dust",
+  "concept_key": "concept:interstellar-dust",
+  "registry_status": "new",
+  "term": "성간 티끌",
+  "notation": {
+    "hanja": "星間",
+    "english": "interstellar dust",
+    "hanja_gloss": "星 별 성 · 間 사이 간",
+    "hanja_note": "'티끌'은 고유어여서 한자가 없다. 한자는 '성간' 쪽만 적었다."
+  },
+  "definition": "크기가 나노미터에서 마이크로미터에 이르는 흑연·규산염 알갱이. 휘발성 얼음 성분이 달라붙어 길쭉한 모습으로 떠 있기도 하다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dust-wave",
+      "text": "파장이 짧은 빛일수록 성간 티끌에 더 많이 흡수되고 산란된다.",
+      "form": {
+        "condition": "별빛이 티끌 층을 지날 때",
+        "type": "inverse",
+        "scope": "성간 소광과 성간 적색화",
+        "antecedent": {
+          "quantity": "빛의 파장",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "흡수·산란되는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「파장이 짧은 빛일수록 더 적게 흡수·산란된다」는 파장이 짧을수록 소광량이 크다는 자료와 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 짧은 빛일수록 성간 티끌에 더 적게 흡수되고 산란된다."
+    },
+    {
+      "id": "rel-dust-ir",
+      "text": "성간 티끌은 밝은 별의 자외선을 흡수해 데워진 뒤 원적외선으로 빛을 내놓는다.",
+      "form": {
+        "condition": "가까이에 밝은 별이 있을 때",
+        "type": "causal",
+        "scope": "성간 티끌의 복사"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「원적외선을 흡수한 뒤 자외선으로 내놓는다」는 흡수와 방출의 파장을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성간 티끌은 원적외선을 흡수해 데워진 뒤 자외선으로 빛을 내놓는다."
+    },
+    {
+      "id": "rel-dust-disk",
+      "text": "적외선으로 본 우리은하의 모습에서 성간 티끌이 원반부에 몰려 있음을 알 수 있다.",
+      "form": {
+        "condition": "COBE 위성처럼 적외선으로 하늘 전체를 훑을 때",
+        "type": "conditional",
+        "scope": "우리은하"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「성간 티끌이 헤일로에 몰려 있다」는 원반부에 성간 물질이 많이 모여 있다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적외선으로 본 우리은하의 모습에서 성간 티끌이 헤일로에 몰려 있음을 알 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성간 티끌은 성간 물질의 대부분을 차지할 만큼 빽빽하다",
+      "why_wrong": "질량으로는 약 1 %이고 평균 10⁶ m³에 한 개 있을 만큼 희박하다. 그런데도 먼 거리를 지나며 빛을 뚜렷이 약하게 만든다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "성간 티끌은 모든 파장의 빛을 똑같이 가린다",
+      "why_wrong": "짧은 파장일수록 더 많이 흡수·산란된다. 그래서 별빛이 붉어지는 성간 적색화가 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dust-wave"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-matter"
+    },
+    {
+      "type": "next",
+      "target": "plan-reflection-nebula"
+    },
+    {
+      "type": "next",
+      "target": "plan-interstellar-extinction"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-2",
+  "pages": [
+    104,
+    106
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 — 티끌의 질량 비율에 대한 오개념은 plan-interstellar-matter/rel-ism-ratio 가 다루므로 이 카드에서는 linked_relation 을 비웠다."
+  ]
+}

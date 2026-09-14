@@ -1,0 +1,99 @@
+{
+  "id": "plan-perihelion-and-aphelion",
+  "concept_key": "concept:perihelion-and-aphelion",
+  "registry_status": "new",
+  "term": "근일점과 원일점",
+  "notation": {
+    "hanja": "近日點 遠日點",
+    "english": "perihelion and aphelion",
+    "hanja_gloss": "近 가까울 근 · 日 날 일 · 點 점 점 · 遠 멀 원 · 日 날 일 · 點 점 점"
+  },
+  "definition": "타원 궤도를 도는 행성이 태양에 가장 가까워지는 자리가 근일점이고, 가장 멀어지는 자리가 원일점이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pa-speed",
+      "text": "타원 궤도를 도는 행성은 근일점을 지날 때 가장 빠르고 원일점을 지날 때 가장 느리다.",
+      "form": {
+        "condition": "한 행성이 타원 궤도를 한 바퀴 도는 동안",
+        "type": "inverse",
+        "scope": "타원 궤도를 도는 한 천체",
+        "antecedent": {
+          "quantity": "태양까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공전 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「근일점에서 가장 느리고 원일점에서 가장 빠르다」는 두 자리를 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "타원 궤도를 도는 행성은 근일점을 지날 때 가장 느리고 원일점을 지날 때 가장 빠르다."
+    },
+    {
+      "id": "rel-pa-mean",
+      "text": "근일점 거리와 원일점 거리를 더해 절반으로 나눈 값이 그 궤도의 긴반지름이다.",
+      "form": {
+        "condition": "타원 궤도의 두 끝까지 거리를 알 때",
+        "type": "conditional",
+        "scope": "타원 공전 궤도의 기하"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「근일점 거리와 원일점 거리의 평균은 긴반지름과 관계가 없다」는 긴반지름의 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "근일점 거리와 원일점 거리를 더해 절반으로 나눈 값은 그 궤도의 긴반지름과 관계가 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "행성은 원일점에서 가장 빠르게 공전한다",
+      "why_wrong": "태양에서 멀수록 느려지므로 원일점에서 가장 느리고 근일점에서 가장 빠르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pa-speed"
+    },
+    {
+      "text": "지구가 근일점에 있을 때가 여름이다",
+      "why_wrong": "계절은 자전축이 기울어진 탓에 생기며, 근일점·원일점은 태양까지의 거리로만 정해진다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-kepler-first-law"
+    },
+    {
+      "type": "next",
+      "target": "plan-kepler-second-law"
+    },
+    {
+      "type": "related",
+      "target": "plan-semi-major-axis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-1",
+  "pages": [
+    25,
+    26
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

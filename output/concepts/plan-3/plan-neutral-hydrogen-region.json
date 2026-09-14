@@ -1,0 +1,95 @@
+{
+  "id": "plan-neutral-hydrogen-region",
+  "concept_key": "concept:neutral-hydrogen-region",
+  "registry_status": "new",
+  "term": "중성수소 영역(HⅠ 영역)",
+  "notation": {
+    "hanja": "中性水素領域",
+    "english": "neutral hydrogen region",
+    "hanja_gloss": "中 가운데 중 · 性 성품 성 · 水 물 수 · 素 본디 소 · 領 거느릴 령 · 域 지경 역",
+    "symbol_display": "HⅠ",
+    "symbol_plain": "H I"
+  },
+  "definition": "온도가 약 100 K이고 수소가 이온화되지 않은 원자 상태로 있는 성간 영역. 은하 원반의 성운은 대부분 여기에 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hi-disk",
+      "text": "은하 원반에 있는 성운들은 대부분 수소가 이온화되지 않은 원자 상태로 있다.",
+      "form": {
+        "condition": "은하 원반의 성운을 통틀어 볼 때",
+        "type": "conditional",
+        "scope": "나선 은하의 원반"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 수소의 상태를 맞바꾼 것이라, 원반의 성운 대부분이 중성 상태라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하 원반에 있는 성운들은 대부분 수소가 이온화된 상태로 있다."
+    },
+    {
+      "id": "rel-hi-temp-vs-hii",
+      "text": "중성수소 영역은 약 100 K로 차고 21 cm 전파로 관측되지만, 전리수소 영역은 약 1만 K로 뜨겁고 방출선으로 관측된다.",
+      "form": {
+        "condition": "온도와 관측 수단으로 두 영역을 가를 때",
+        "type": "classification",
+        "scope": "성간 물질의 두 수소 영역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 영역의 온도와 관측 수단을 통째로 맞바꾼 것이라 각 영역의 값과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중성수소 영역은 약 1만 K로 뜨겁고 방출선으로 관측되지만, 전리수소 영역은 약 100 K로 차고 21 cm 전파로 관측된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중성수소 영역은 온도가 약 1만 K로 뜨거운 곳이다",
+      "why_wrong": "약 100 K로 차가운 영역이다. 약 1만 K인 쪽은 수소가 이온화된 전리수소 영역이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hi-temp-vs-hii"
+    },
+    {
+      "text": "은하 원반의 성운은 대부분 수소가 이온화된 채로 있다",
+      "why_wrong": "원반의 성운은 대부분 이온화되지 않은 원자 상태다. 이온화된 영역은 젊고 뜨거운 별 둘레에 국한된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hi-disk"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-matter"
+    },
+    {
+      "type": "next",
+      "target": "plan-hydrogen-21cm-line"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    102
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "HI 영역"
+  ],
+  "notes": [
+    "C6 — rel-hi-vs-hii 는 두 카드의 정의를 이어 붙인 것이라 온도·관측 수단으로 가르는 rel-hi-temp-vs-hii 로 갈아 세웠다. rel-hi-21cm 은 plan-hydrogen-21cm-line/rel-21-through 와 겹쳐(중복 명제군) 21 cm 수소선 카드에 넘기고, 이 카드는 원반 성운의 상태를 묻는 rel-hi-disk 를 맡는다."
+  ]
+}

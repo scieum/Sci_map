@@ -1,0 +1,129 @@
+{
+  "id": "plan-sunspot",
+  "concept_key": "concept:sunspot",
+  "registry_status": "new",
+  "term": "흑점",
+  "notation": {
+    "hanja": "黑點",
+    "hanja_gloss": "黑 검을 흑 · 點 점 점",
+    "english": "sunspot"
+  },
+  "definition": "광구에서 둘레보다 온도가 낮아(4000~5000 K) 어둡게 보이는 점. 자기장이 매우 강한 곳에 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sunspot-dark",
+      "text": "흑점이 검게 보이는 것은 빛을 내지 않아서가 아니라 둘레 광구보다 온도가 낮기 때문이다.",
+      "form": {
+        "condition": "광구를 가시광선으로 볼 때",
+        "type": "causal",
+        "scope": "광구 위의 흑점",
+        "antecedent": {
+          "quantity": "흑점의 온도",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "흑점의 밝기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「흑점이 둘레보다 온도가 높아서 검게 보인다」인데, 흑점은 둘레보다 1000 K 이상 차므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흑점이 검게 보이는 것은 둘레 광구보다 온도가 높기 때문이다."
+    },
+    {
+      "id": "rel-sunspot-magnetic",
+      "text": "자기장이 매우 강한 곳에서는 아래에서 올라오던 대전 입자가 막혀 표면 온도가 낮아지고 흑점이 생긴다.",
+      "form": {
+        "condition": "광구 아래에서 대류가 일어나는 층",
+        "type": "causal",
+        "scope": "태양 표면의 강한 자기장 영역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「강한 자기장 영역에서 상승이 활발해져 온도가 높아진다」인데, 자기장은 상승을 억제하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "자기장이 매우 강한 곳에서는 대전 입자의 상승이 활발해져 표면 온도가 높아진다."
+    },
+    {
+      "id": "rel-sunspot-size-life",
+      "text": "지름이 큰 흑점일수록 오래 남아, 작은 것은 하루를 넘기지 못하지만 큰 것은 여러 달 이어지기도 한다.",
+      "form": {
+        "condition": "흑점을 이어서 관측할 때",
+        "type": "direct",
+        "scope": "광구 위의 흑점",
+        "antecedent": {
+          "quantity": "흑점의 지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "흑점의 수명",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「지름이 큰 흑점일수록 하루를 못 넘기고 사라진다」인데, 큰 흑점이 수개월 이어진다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지름이 큰 흑점일수록 수명이 짧아 하루를 넘기지 못한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흑점은 온도가 낮아 빛을 전혀 내지 못하는 검은 구멍이다.",
+      "why_wrong": "흑점도 4000~5000 K이라 그 자체로 밝게 빛난다. 훨씬 밝은 둘레와 견주어 어두워 보일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-sunspot-dark"
+    },
+    {
+      "text": "흑점의 수가 많아지면 태양이 식어서 지구도 추워진다.",
+      "why_wrong": "흑점이 많은 시기는 오히려 태양 활동이 활발한 때다. 흑점 수와 태양 활동은 같은 방향으로 움직인다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-photosphere"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-activity-cycle"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-rotation-period-measurement"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-flare-in-solar-atmosphere"
+    },
+    {
+      "type": "related",
+      "target": "plan-granule",
+      "note": "둘 다 광구에서 보이는 무늬지만 생기는 까닭이 다르다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-1",
+  "pages": [
+    56,
+    57
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

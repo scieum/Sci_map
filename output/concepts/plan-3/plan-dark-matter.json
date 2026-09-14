@@ -1,0 +1,112 @@
+{
+  "id": "plan-dark-matter",
+  "concept_key": "concept:dark-matter",
+  "registry_status": "new",
+  "term": "암흑 물질",
+  "notation": {
+    "hanja": "暗黑物質",
+    "english": "dark matter",
+    "hanja_gloss": "暗 어두울 암 · 黑 검을 흑 · 物 물건 물 · 質 바탕 질"
+  },
+  "definition": "빛을 내지도 되비치지도 않아 광학적으로는 잡히지 않고, 오직 중력을 통해서만 존재가 드러나는 물질.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dm-vs-normal",
+      "text": "보통 물질은 원자로 이루어져 빛으로도 확인되지만, 암흑 물질은 중력으로만 확인된다.",
+      "form": {
+        "condition": "물질의 존재를 무엇으로 알아내는지 견줄 때",
+        "type": "classification",
+        "scope": "우주를 이루는 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 물질의 이름을 맞바꾼 것이라 각 정의와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "암흑 물질은 원자로 이루어져 빛으로도 확인되지만, 보통 물질은 중력으로만 확인된다."
+    },
+    {
+      "id": "rel-dm-flat",
+      "text": "은하 외곽에 암흑 물질이 많이 분포해 회전 속도가 줄지 않고 거의 일정하게 유지된다.",
+      "form": {
+        "condition": "보이는 물질만으로는 회전 속도를 설명할 수 없을 때",
+        "type": "causal",
+        "scope": "나선 은하의 외곽"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「외곽에 암흑 물질이 많은데도 회전 속도가 바깥으로 갈수록 빠르게 줄어든다」는 질량이 속도를 떠받친다는 인과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하 외곽에 암흑 물질이 많이 분포하는데도 회전 속도는 바깥으로 갈수록 빠르게 줄어든다."
+    },
+    {
+      "id": "rel-dm-lens",
+      "text": "은하단이 일으키는 중력 렌즈 효과는 보이는 물질만으로 예상한 것보다 크게 나타난다.",
+      "form": {
+        "condition": "상이 휘어진 정도로 질량을 가늠할 때",
+        "type": "conditional",
+        "scope": "은하단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「보이는 물질만으로 예상한 것보다 작게 나타난다」는 암흑 물질이 훨씬 많다는 결론과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하단이 일으키는 중력 렌즈 효과는 보이는 물질만으로 예상한 것보다 작게 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "암흑 물질은 빛을 모두 흡수해 검게 보이는 물질이다",
+      "why_wrong": "흡수해 검게 보이는 것은 성간 티끌이다. 암흑 물질은 빛과 거의 상호작용하지 않아 광학적으로 아예 관측되지 않는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dm-vs-normal"
+    },
+    {
+      "text": "암흑 물질은 은하 중심에만 몰려 있다",
+      "why_wrong": "외곽의 회전 속도가 줄지 않는다는 사실은 오히려 은하 바깥쪽까지 넓게 퍼져 있음을 뜻한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dm-flat"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-galaxy-mass-estimation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-gravitational-lensing-by-galaxy-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-density-fluctuation"
+    },
+    {
+      "type": "next",
+      "target": "plan-baryon-acoustic-oscillation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-2",
+  "pages": [
+    110,
+    111
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

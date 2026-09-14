@@ -1,0 +1,93 @@
+{
+  "id": "plan-meteoroid-and-meteor",
+  "concept_key": "concept:meteoroid-and-meteor",
+  "registry_status": "new",
+  "term": "유성체와 유성",
+  "notation": {
+    "hanja": "流星體 流星",
+    "english": "meteoroid and meteor",
+    "hanja_gloss": "流 흐를 류 · 星 별 성 · 體 몸 체 · 流 흐를 류 · 星 별 성"
+  },
+  "definition": "태양계 공간을 떠도는 작은 먼지와 암석 조각이 유성체이고, 그것이 지구 대기에 뛰어들어 밝게 빛나는 현상이 유성이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mm-friction",
+      "text": "유성체가 빠른 속도로 지구 대기에 뛰어들면 대기와의 마찰로 뜨거워져 환하게 빛난다.",
+      "form": {
+        "condition": "대기권에 진입할 때",
+        "type": "causal",
+        "scope": "지구 대기에 들어온 유성체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대기에 뛰어들어도 뜨거워지지 않아 빛나지 않는다」는 마찰로 빛난다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유성체가 빠른 속도로 지구 대기에 뛰어들어도 뜨거워지지 않아 빛나지 않는다."
+    },
+    {
+      "id": "rel-mm-origin",
+      "text": "유성체는 소행성이나 혜성에서 떨어져 나온 작은 조각이다.",
+      "form": {
+        "condition": "유성체의 기원을 물을 때",
+        "type": "classification",
+        "scope": "태양계 공간을 떠도는 작은 물체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「유성체는 지구 대기에서 저절로 생겨난 조각이다」는 지구 밖 기원이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "유성체는 지구 대기에서 저절로 생겨난 작은 조각이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "유성은 별이 떨어지는 현상이다",
+      "why_wrong": "별이 아니라 작은 유성체가 대기에서 타며 내는 빛이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mm-friction"
+    },
+    {
+      "text": "유성은 반드시 땅에 떨어진다",
+      "why_wrong": "대부분 대기에서 다 타 없어지고 일부만 운석으로 남는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mm-friction"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-asteroid"
+    },
+    {
+      "type": "next",
+      "target": "plan-meteorite"
+    },
+    {
+      "type": "related",
+      "target": "plan-comet"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    19,
+    33,
+    39
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

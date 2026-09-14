@@ -1,0 +1,108 @@
+{
+  "id": "plan-color-magnitude-diagram",
+  "concept_key": "concept:color-magnitude-diagram",
+  "registry_status": "new",
+  "term": "C-M도(색등급도)",
+  "notation": {
+    "hanja": "色等級圖",
+    "english": "color-magnitude diagram",
+    "hanja_gloss": "色 빛 색 · 等 무리 등 · 級 등급 급 · 圖 그림 도"
+  },
+  "definition": "가로축에 색지수를, 세로축에 등급을 잡아 별들의 자리를 찍은 그림. H-R도의 두 축을 관측으로 바로 얻는 양으로 바꾼 것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cmd-shape",
+      "text": "젊은 산개 성단에는 (-) 색지수의 밝고 푸른 주계열성이 나타나고, 늙은 구상 성단에는 (+) 색지수의 붉은 별이 넓게 퍼진다.",
+      "form": {
+        "condition": "두 성단의 C-M도를 나란히 놓고 볼 때",
+        "type": "classification",
+        "scope": "성단의 C-M도"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 성단의 모습을 맞바꾼 것이라 M45와 M3의 실제 C-M도와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "젊은 산개 성단에는 (+) 색지수의 붉은 별이 넓게 퍼지고, 늙은 구상 성단에는 (-) 색지수의 밝고 푸른 주계열성이 나타난다."
+    },
+    {
+      "id": "rel-cmd-same",
+      "text": "한 성단의 별들은 거리와 나이가 거의 같으므로 C-M도 위의 자리 차이를 질량 차이로 읽을 수 있다.",
+      "form": {
+        "condition": "같은 성운에서 거의 동시에 태어난 별들일 때",
+        "type": "causal",
+        "scope": "하나의 성단에 속한 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 '같은 것'과 '다른 것'을 맞바꾼 것이라, 성단의 별이 거리와 나이가 같고 질량이 다르다는 전제와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "한 성단의 별들은 질량이 거의 같으므로 C-M도 위의 자리 차이를 거리와 나이의 차이로 읽는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "C-M도의 가로축은 별의 표면 온도이고 세로축은 광도다",
+      "why_wrong": "그것은 H-R도다. C-M도는 관측으로 바로 얻는 색지수와 등급을 축으로 삼는다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "겉보기 등급을 세로축에 쓴 C-M도만으로 두 성단의 절대적인 밝기를 곧바로 견줄 수 있다",
+      "why_wrong": "겉보기 등급은 거리에 따라 달라진다. 거리 지수를 알아낸 뒤라야 절대 등급으로 견줄 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmd-same"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-color-index"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-apparent-and-absolute-magnitude"
+    },
+    {
+      "type": "next",
+      "target": "plan-open-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-globular-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-main-sequence-turnoff"
+    },
+    {
+      "type": "next",
+      "target": "plan-main-sequence-fitting"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-1",
+  "pages": [
+    95
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "색등급도"
+  ],
+  "notes": [
+    "C6 — 두 축이 무엇인가에 대한 오개념은 명제가 아니라 definition 의 반대편이라 linked_relation 을 비웠다."
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "id": "plan-comet",
+  "concept_key": "concept:comet",
+  "registry_status": "new",
+  "term": "혜성",
+  "notation": {
+    "hanja": "彗星",
+    "english": "comet",
+    "hanja_gloss": "彗 비 혜 · 星 별 성"
+  },
+  "definition": "작은 암석 조각과 얼어붙은 기체로 이루어진 소천체. 이심률이 큰 타원 궤도를 그리며 태양 가까이 왔다가 다시 멀어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cmt-origin",
+      "text": "혜성의 대다수는 카이퍼 띠와 오르트 구름처럼 태양계 바깥쪽에서 기원한다.",
+      "form": {
+        "condition": "혜성이 어디서 왔는지 물을 때",
+        "type": "classification",
+        "scope": "알려진 혜성의 기원"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「혜성의 대다수는 태양과 가까운 소행성대 안쪽에서 기원한다」는 교과서가 든 두 기원 구역과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혜성의 대다수는 태양과 가까운 소행성대 안쪽에서 기원한다."
+    },
+    {
+      "id": "rel-cmt-tail",
+      "text": "혜성이 태양에 가까워질수록 표면의 얼음이 더 많이 증발해 꼬리가 길게 발달한다.",
+      "form": {
+        "condition": "태양 복사가 얼음을 증발시킬 만큼 가까울 때",
+        "type": "inverse",
+        "scope": "태양에 다가서는 혜성",
+        "antecedent": {
+          "quantity": "태양까지의 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "꼬리의 발달 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양에 가까워질수록 꼬리가 짧아진다」는 접근에 따라 꼬리가 발달한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혜성이 태양에 가까워질수록 꼬리는 짧아진다."
+    },
+    {
+      "id": "rel-cmt-ecc",
+      "text": "혜성은 이심률이 큰 납작한 타원 궤도를 돌기 때문에 태양과의 거리가 크게 달라진다.",
+      "form": {
+        "condition": "이심률이 1에 가까운 궤도를 돌 때",
+        "type": "causal",
+        "scope": "이심률이 큰 궤도를 도는 혜성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이심률이 큰 궤도를 돌아도 태양과의 거리는 거의 달라지지 않는다」는 납작한 궤도의 성질과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혜성은 이심률이 큰 납작한 타원 궤도를 돌지만 태양과의 거리는 거의 달라지지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혜성은 불타고 있어서 밝게 보인다",
+      "why_wrong": "태양빛을 받아 증발한 먼지와 기체가 빛을 반사하거나 스스로 내는 것이며 타는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmt-tail"
+    },
+    {
+      "text": "혜성의 꼬리는 늘 진행 방향의 뒤쪽으로 뻗는다",
+      "why_wrong": "꼬리는 태양풍과 복사압에 밀려 태양 반대쪽으로 뻗으므로, 태양에서 멀어질 때는 진행 방향 앞쪽으로 뻗기도 한다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-composition-of-solar-system"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-kuiper-belt"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-oort-cloud"
+    },
+    {
+      "type": "next",
+      "target": "plan-structure-of-comet"
+    },
+    {
+      "type": "next",
+      "target": "plan-geological-feature-from-small-body-exploration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    33,
+    39
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

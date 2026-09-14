@@ -1,0 +1,95 @@
+{
+  "id": "plan-reflection-nebula",
+  "concept_key": "concept:reflection-nebula",
+  "registry_status": "new",
+  "term": "반사 성운",
+  "notation": {
+    "hanja": "反射星雲",
+    "english": "reflection nebula",
+    "hanja_gloss": "反 되돌릴 반 · 射 쏠 사 · 星 별 성 · 雲 구름 운"
+  },
+  "definition": "둘레의 별이 내놓은 빛 가운데 일부가 성간 티끌에 되비쳐 푸르게 보이는 성운.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rn-blue",
+      "text": "성간 티끌이 짧은 파장의 빛을 더 많이 산란하기 때문에 반사 성운은 푸르게 보인다.",
+      "form": {
+        "condition": "가까이에 밝은 별이 있을 때",
+        "type": "causal",
+        "scope": "반사 성운"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「티끌이 짧은 파장을 더 많이 산란하는데도 반사 성운이 붉게 보인다」는 산란이 색을 정한다는 인과와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성간 티끌이 짧은 파장의 빛을 더 많이 산란하는데도 반사 성운은 붉게 보인다."
+    },
+    {
+      "id": "rel-rn-bright",
+      "text": "둘레 별빛이 셀수록 반사 성운은 밝게 보인다.",
+      "form": {
+        "condition": "성운 속 티끌의 양이 비슷할 때",
+        "type": "direct",
+        "scope": "반사 성운",
+        "antecedent": {
+          "quantity": "둘레 별빛의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반사 성운의 밝기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「별빛이 셀수록 반사 성운이 어둡게 보인다」는 되비칠 빛이 많을수록 밝다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "둘레 별빛이 셀수록 반사 성운은 어둡게 보인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "반사 성운이 푸른 까닭은 성운을 이루는 기체가 푸른빛을 내기 때문이다",
+      "why_wrong": "스스로 내는 빛이 아니라 되비친 빛이다. 짧은 파장이 더 잘 산란되어 푸르게 보인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rn-blue"
+    },
+    {
+      "text": "반사 성운은 가까이 별이 없어도 스스로 밝게 빛난다",
+      "why_wrong": "되비칠 별빛이 있어야 보인다. 둘레 별빛이 약하면 반사 성운도 어둡다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rn-bright"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-nebula"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-dust"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

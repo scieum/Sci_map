@@ -1,0 +1,84 @@
+{
+  "id": "plan-variable-star",
+  "concept_key": "concept:variable-star",
+  "registry_status": "new",
+  "term": "변광성",
+  "notation": {
+    "hanja": "變光星",
+    "hanja_gloss": "變 변할 변 · 光 빛 광 · 星 별 성",
+    "english": "variable star"
+  },
+  "definition": "밝기가 한결같지 않고 시간에 따라 달라지는 별. 옛 문헌에 객성으로 기록된 별들이 여기 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-vs-found-by-comparison",
+      "text": "변광성은 시간에 따라 밝기가 달라지므로 여러 날에 걸쳐 찍은 사진을 견주면 찾아낼 수 있다.",
+      "form": {
+        "condition": "같은 하늘을 날짜를 달리해 관측할 때",
+        "type": "causal",
+        "scope": "변광성 탐색"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「사진을 견주어서는 찾아낼 수 없다」인데, 밝기 차이가 사진에 드러나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변광성은 밝기가 달라져도 여러 날에 걸쳐 찍은 사진을 견주어서는 찾아낼 수 없다."
+    },
+    {
+      "id": "rel-vs-kinds",
+      "text": "변광성은 밝기가 변하는 방식에 따라 맥동 변광성과 폭발 변광성 등으로 나뉜다.",
+      "form": {
+        "condition": "광도 곡선의 모양을 기준으로 삼을 때",
+        "type": "classification",
+        "scope": "변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「밝기가 변하는 방식이 모두 같아 종류를 나눌 수 없다」인데, 광도 곡선으로 갈라지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변광성은 밝기가 변하는 방식이 모두 같아 종류를 나눌 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "별의 밝기가 달라져 보이는 것은 대기나 구름이 가리기 때문이다.",
+      "why_wrong": "관측 조건의 영향은 따로 보정한다. 변광성은 별 자체의 팽창·수축이나 폭발로 밝기가 변한다.",
+      "source": "llm",
+      "linked_relation": "rel-vs-found-by-comparison"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-light-curve"
+    },
+    {
+      "type": "related",
+      "target": "plan-pulsating-variable-star",
+      "note": "변광성의 한 갈래다"
+    },
+    {
+      "type": "related",
+      "target": "plan-eruptive-variable-star",
+      "note": "변광성의 또 한 갈래다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-1",
+  "pages": [
+    78
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,91 @@
+{
+  "id": "plan-cepheid-variable",
+  "concept_key": "concept:cepheid-variable",
+  "registry_status": "new",
+  "term": "세페이드 변광성",
+  "notation": {
+    "hanja": "變光星",
+    "english": "Cepheid variable",
+    "hanja_gloss": "變 변할 변 · 光 빛 광 · 星 별 성",
+    "hanja_note": "'세페이드'는 별자리 이름에서 온 음차어라 대응 한자가 없다. 한자는 '변광성' 쪽만 적었다."
+  },
+  "definition": "변광 주기가 며칠에서 수십 일에 이르는 맥동 변광성. 주기만 재면 절대 등급을 알 수 있어 먼 천체의 거리를 재는 잣대가 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cep-pop",
+      "text": "나선 은하 원반의 무거운 세페이드가 종족 Ⅰ이고, 구상 성단의 가벼운 세페이드가 종족 Ⅱ다.",
+      "form": {
+        "condition": "분포 영역과 질량으로 세페이드를 가를 때",
+        "type": "classification",
+        "scope": "세페이드 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 종족의 이름을 맞바꾼 것이라 종족 Ⅱ가 늙은 구상 성단 쪽이라는 구분과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "나선 은하 원반의 무거운 세페이드가 종족 Ⅱ이고, 구상 성단의 가벼운 세페이드가 종족 Ⅰ이다."
+    },
+    {
+      "id": "rel-cep-bright",
+      "text": "변광 주기가 같다면 종족 Ⅰ 세페이드가 종족 Ⅱ 세페이드보다 밝다.",
+      "form": {
+        "condition": "주기 - 광도 관계 그래프에서 같은 주기를 견줄 때",
+        "type": "conditional",
+        "scope": "세페이드 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 종족의 밝기 순서를 맞바꾼 것이라 그래프에서 종족 Ⅰ의 선이 위쪽에 있다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "변광 주기가 같다면 종족 Ⅱ 세페이드가 종족 Ⅰ 세페이드보다 밝다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "세페이드 변광성은 종족을 가리지 않고 주기가 같으면 절대 등급도 같다",
+      "why_wrong": "종족 Ⅰ과 종족 Ⅱ는 같은 주기에서도 절대 등급이 다르다. 종족을 가리지 않고 쓰면 거리에 오차가 생긴다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cep-bright"
+    },
+    {
+      "text": "세페이드 변광성의 밝기가 변하는 것은 지구와의 거리가 주기적으로 변하기 때문이다",
+      "why_wrong": "거리가 변해서가 아니라 별 자체가 팽창과 수축을 되풀이하기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-pulsating-variable-star-in-milky-way"
+    },
+    {
+      "type": "next",
+      "target": "plan-period-luminosity-relation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-3",
+  "pages": [
+    98,
+    99
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 — 맥동 원인에 대한 오개념은 이 카드 안에 반박할 명제가 없어 linked_relation 을 비웠다. 그 명제는 plan-pulsating-variable-star-in-milky-way 에 있다."
+  ]
+}

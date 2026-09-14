@@ -1,0 +1,102 @@
+{
+  "id": "plan-baryon-acoustic-oscillation",
+  "concept_key": "concept:baryon-acoustic-oscillation",
+  "registry_status": "new",
+  "term": "바리온 음향 진동",
+  "notation": {
+    "hanja": "音響振動",
+    "english": "baryon acoustic oscillation",
+    "hanja_gloss": "音 소리 음 · 響 울릴 향 · 振 떨칠 진 · 動 움직일 동",
+    "hanja_note": "'바리온'은 음차어라 대응 한자가 없다. 한자는 '음향 진동' 쪽만 적었다."
+  },
+  "definition": "우주 초기에 빛의 압력과 중력이 번갈아 바리온을 밀고 당기며 퍼뜨린 음파. 그 흔적이 은하 분포에 무늬로 남았다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-bao-push",
+      "text": "바깥으로 나가려는 빛의 압력이 바리온을 밀어내고 중력이 다시 끌어당기며 음파가 퍼져 나갔다.",
+      "form": {
+        "condition": "빛과 전자가 끊임없이 부딪히던 고온·고밀도 시기에",
+        "type": "causal",
+        "scope": "빅뱅 이후 38만 년 이전의 우주"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중력이 바리온을 밀어내고 빛의 압력이 끌어당기며 음파가 퍼졌다」는 두 힘의 노릇을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중력이 바리온을 밀어내고 빛의 압력이 다시 끌어당기며 음파가 퍼져 나갔다."
+    },
+    {
+      "id": "rel-bao-ruler",
+      "text": "음파 지평선의 실제 크기가 고정돼 있으므로 멀리 있을수록 그 무늬는 작게 보인다.",
+      "form": {
+        "condition": "음파 지평선 반지름이 4억 8000만 광년에서 동결된 뒤",
+        "type": "inverse",
+        "scope": "은하의 공간 분포에 남은 무늬",
+        "antecedent": {
+          "quantity": "천체까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "무늬의 겉보기 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「실제 크기가 고정돼 있는데도 멀수록 무늬가 크게 보인다」는 같은 크기의 것이 멀수록 작게 보인다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-04",
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "음파 지평선의 실제 크기가 고정돼 있어도 멀리 있을수록 그 무늬는 크게 보인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "바리온 음향 진동은 지금도 우주 공간을 소리로 퍼져 나가고 있다",
+      "why_wrong": "빛과 바리온이 갈라선 빅뱅 38만 년 뒤에 진행이 멈췄다. 남은 것은 그때 동결된 무늬다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bao-push"
+    },
+    {
+      "text": "음파 지평선의 크기는 관측하는 거리에 따라 실제로 달라진다",
+      "why_wrong": "실제 크기는 4억 8000만 광년으로 고정돼 있다. 달라지는 것은 겉보기 크기이며, 그래서 거리 잣대로 쓸 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-bao-ruler"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-density-fluctuation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-dark-matter"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-04",
+    "12행우03-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-04-3",
+  "pages": [
+    120
+  ],
+  "difficulty": 5,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "p120 '세로처럼 깊게' 심화 읽기 자리에서 온 카드다. 성취기준이 직접 요구하지 않아 role 을 context 로 두었다 — C8 에서 뺄 수 있다.",
+    "C5 — 12행우03-04 를 겹쳐 달았다. 120쪽 읽기 자료가 근거 블록이라 범위 이탈이 아니며, rel-bao-ruler(음파 지평선의 겉보기 크기로 우주 모형을 검증)는 116쪽 탐사 성과 서술과 같은 말이라 03-04 를 받친다. role: context 는 그대로 둔다 — 03-05 의 예시 목록에 이 개념이 없어 넣고 뺄지는 C8 이 본다."
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "plan-evidence-of-water-on-mars",
+  "concept_key": "concept:evidence-of-water-on-mars",
+  "registry_status": "new",
+  "term": "화성 탐사와 물의 흔적",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "evidence of water on Mars",
+    "hanja_note": "'물'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "화성에 내려앉은 탐사차들이 찾아낸, 과거 화성에 액체 상태의 물이 있었음을 가리키는 증거.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wm-rover",
+      "text": "스피릿·오퍼튜니티·큐리오시티 같은 탐사차가 표면을 돌며 탄산염과 마른 진흙층 같은 물의 흔적을 찾아냈다.",
+      "form": {
+        "condition": "탐사차가 표면에 착륙해 암석을 조사할 때",
+        "type": "causal",
+        "scope": "화성 표면 탐사의 결과"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「탐사차들은 표면을 돌았지만 물의 흔적을 전혀 찾지 못했다」는 다양한 물의 흔적을 찾아냈다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01",
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "화성에 내려앉은 탐사차들은 표면을 돌았지만 물의 흔적을 전혀 찾아내지 못했다."
+    },
+    {
+      "id": "rel-wm-rock",
+      "text": "퍼서비어런스가 찍은 화성의 바위들은 물에 운반된 것으로 보여 과거에 물이 흘렀음을 알려 준다.",
+      "form": {
+        "condition": "퇴적 지형과 암석의 배열을 해석할 때",
+        "type": "causal",
+        "scope": "화성 표면 사진의 해석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「그 바위들은 물에 운반된 것으로 보이지만 과거에 물이 흘렀다는 증거는 되지 못한다」는 사진 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01",
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "퍼서비어런스가 찍은 화성의 바위들은 물에 운반된 것으로 보이지만 과거에 물이 흘렀다는 증거는 되지 못한다."
+    },
+    {
+      "id": "rel-wm-life",
+      "text": "과거 화성에 액체 상태의 물이 있었다면 생명체가 살 수 있는 환경이었을 가능성도 열린다.",
+      "form": {
+        "condition": "액체 상태의 물이 있을 만한 온도였을 때",
+        "type": "conditional",
+        "scope": "과거 화성의 환경"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「액체 상태의 물이 있었더라도 생명체가 살 수 있는 환경이었을 가능성은 없다」는 물을 생명 존재의 요소로 보는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01",
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "과거 화성에 액체 상태의 물이 있었더라도 생명체가 살 수 있는 환경이었을 가능성은 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화성 표면에는 지금도 강물이 흐른다",
+      "why_wrong": "확인된 것은 과거에 물이 있었다는 흔적이며 현재 표면을 흐르는 물은 확인되지 않았다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wm-rock"
+    },
+    {
+      "text": "물의 흔적이 발견되었으므로 화성에 생명체가 있음이 밝혀졌다",
+      "why_wrong": "살 만한 환경이었을 가능성을 높일 뿐, 생명체의 존재가 확인된 것은 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-wm-life"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-planetary-rover"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-probe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-01",
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-4",
+  "pages": [
+    35,
+    36
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "C5 반려 반영(2026-09-14) — 세 명제가 모두 탐사차가 화성에서 알아낸 성과여서 12행우01-01(「태양계 탐사선의 활동을 통해 알아낸 성과를 이해하고…」)을 더했다. 12행우01-04 는 35쪽 탐구 문면 「행성과 소천체 탐사 자료를 조사하여」가 근거가 되므로 떼지 않았다. 두 코드 모두 standards.yaml 에서 crosscheck: 일치다."
+  ]
+}

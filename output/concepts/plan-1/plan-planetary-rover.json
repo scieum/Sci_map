@@ -1,0 +1,95 @@
+{
+  "id": "plan-planetary-rover",
+  "concept_key": "concept:planetary-rover",
+  "registry_status": "new",
+  "term": "탐사차",
+  "notation": {
+    "hanja": "探査車",
+    "english": "planetary rover",
+    "hanja_gloss": "探 찾을 탐 · 査 조사할 사 · 車 수레 차"
+  },
+  "definition": "행성이나 소천체 표면에 내려 바퀴로 옮겨 다니며 조사하는 무인 장치. 성분 분석기와 시료 채취 팔을 싣는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rover-insitu",
+      "text": "탐사차는 표면을 돌아다니며 암석을 직접 살피므로 멀리서 도는 궤도선보다 좁은 지역을 자세히 볼 수 있다.",
+      "form": {
+        "condition": "표면에 착륙해 이동하며 관측할 때",
+        "type": "conditional",
+        "scope": "착륙 탐사차와 궤도선을 견줄 때"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「표면을 돌아다니며 직접 살펴도 궤도선보다 자세히 볼 수 없다」는 현장 분석이 탐사차의 존재 이유라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "탐사차는 표면을 돌아다니며 암석을 직접 살펴도 멀리서 도는 궤도선보다 자세히 볼 수는 없다."
+    },
+    {
+      "id": "rel-rover-instrument",
+      "text": "퍼서비어런스처럼 분광 장치와 로봇 팔을 실은 탐사차는 암석의 화학 성분을 현장에서 알아낸다.",
+      "form": {
+        "condition": "분석 장비를 탑재하고 착륙했을 때",
+        "type": "conditional",
+        "scope": "마스 2020 탐사차의 장비 구성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분광 장치와 로봇 팔을 실어도 화학 성분을 현장에서 알아낼 수 없다」는 슈퍼캠과 X선 분광 장치의 쓰임과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "퍼서비어런스처럼 분광 장치와 로봇 팔을 실은 탐사차도 암석의 화학 성분은 현장에서 알아내지 못한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "화성 탐사차는 사람이 타고 운전한다",
+      "why_wrong": "지금까지 화성에 보낸 탐사차는 모두 무인이며 지구에서 보낸 명령으로 움직인다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "탐사차는 착륙한 자리에서 움직이지 못한다",
+      "why_wrong": "바퀴로 표면을 돌아다니며 여러 지점의 흙과 암석을 조사한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rover-insitu"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-achievement-of-solar-system-exploration"
+    },
+    {
+      "type": "next",
+      "target": "plan-evidence-of-water-on-mars"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-probe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-1",
+  "pages": [
+    12,
+    14,
+    15
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "로버"
+  ]
+}

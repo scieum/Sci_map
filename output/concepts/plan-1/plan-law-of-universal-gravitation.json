@@ -1,0 +1,136 @@
+{
+  "id": "plan-law-of-universal-gravitation",
+  "concept_key": "concept:law-of-universal-gravitation",
+  "registry_status": "new",
+  "term": "만유인력 법칙",
+  "notation": {
+    "hanja": "萬有引力法則",
+    "english": "law of universal gravitation",
+    "hanja_gloss": "萬 일만 만 · 有 있을 유 · 引 끌 인 · 力 힘 력 · 法 법 법 · 則 법칙 칙",
+    "symbol_display": "F = GMm/a²",
+    "symbol_plain": "F = GMm/a^2"
+  },
+  "definition": "질량을 가진 두 물체가 서로 끌어당긴다는 법칙. 힘의 크기는 두 질량의 곱에 비례하고 거리의 제곱에 반비례한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lug-inverse-square",
+      "text": "두 천체의 질량이 그대로일 때 사이 거리가 멀어지면 만유인력은 거리의 제곱에 반비례해 작아진다.",
+      "form": {
+        "condition": "두 천체의 질량이 일정할 때",
+        "type": "inverse",
+        "scope": "질량을 가진 두 물체 사이",
+        "antecedent": {
+          "quantity": "두 천체 사이의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "만유인력의 크기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「거리가 멀어질수록 만유인력이 커진다」는 거리의 제곱에 반비례한다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 천체의 질량이 그대로일 때 사이 거리가 멀어지면 만유인력은 오히려 커진다."
+    },
+    {
+      "id": "rel-lug-centripetal",
+      "text": "행성이 원 궤도를 돈다고 보면 태양과 행성 사이의 만유인력이 그대로 구심력 노릇을 한다.",
+      "form": {
+        "condition": "행성의 궤도를 원으로 가정할 때",
+        "type": "conditional",
+        "scope": "태양 둘레를 도는 행성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「행성이 원 궤도를 돈다고 보아도 만유인력이 구심력 노릇을 하지 않는다」는 원운동을 가정하면 만유인력이 구심력으로 작용한다는 교과서 28쪽 서술과 정면으로 어긋나 반드시 거짓이다. 원 궤도 가정이 text 문면 안에 붙어 있으므로 타원 궤도를 들어 반박할 수 없다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성이 원 궤도를 돈다고 보아도 태양과 행성 사이의 만유인력은 구심력 노릇을 하지 않는다."
+    },
+    {
+      "id": "rel-lug-history",
+      "text": "케플러의 세 법칙은 관측에서 얻은 경험 법칙이었고, 뉴턴의 만유인력 법칙에 이르러 왜 성립하는지가 밝혀졌다.",
+      "form": {
+        "condition": "두 법칙의 관계를 역사적으로 볼 때",
+        "type": "causal",
+        "scope": "케플러와 뉴턴의 연구가 이어진 과정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「케플러의 법칙이 먼저 이론으로 증명되었고 뉴턴이 그것을 관측으로 확인했다」는 두 사람의 역할을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "케플러의 세 법칙은 처음부터 이론으로 증명된 법칙이었고, 뉴턴의 만유인력 법칙은 그것을 관측으로 확인한 것이다."
+    },
+    {
+      "id": "rel-lug-sun",
+      "text": "태양계 천체가 태양 둘레를 도는 것은 태양의 중력에 묶여 있기 때문이다.",
+      "form": {
+        "condition": "태양이 태양계 질량의 대부분을 차지할 때",
+        "type": "causal",
+        "scope": "태양계를 지배하는 힘"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양 둘레를 도는 것은 태양의 중력과 상관이 없다」는 태양계를 지배하는 힘이 태양의 중력이라는 성취기준 문구와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양계 천체가 태양 둘레를 도는 것은 태양의 중력과는 상관이 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "만유인력은 태양처럼 큰 천체만 내는 힘이다",
+      "why_wrong": "질량을 가진 모든 물체 사이에 작용하며, 작은 물체 사이에서는 너무 약해 느끼지 못할 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lug-inverse-square"
+    },
+    {
+      "text": "두 천체 사이 거리가 2배가 되면 만유인력도 절반이 된다",
+      "why_wrong": "거리의 제곱에 반비례하므로 4분의 1로 줄어든다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-lug-inverse-square"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-kepler-third-law"
+    },
+    {
+      "type": "next",
+      "target": "plan-central-mass-from-kepler-third-law"
+    },
+    {
+      "type": "same",
+      "target": "mech-law-of-universal-gravitation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-3",
+  "pages": [
+    28
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "중력 법칙"
+  ]
+}

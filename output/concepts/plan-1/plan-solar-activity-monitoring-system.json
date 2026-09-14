@@ -1,0 +1,108 @@
+{
+  "id": "plan-solar-activity-monitoring-system",
+  "concept_key": "concept:solar-activity-monitoring-system",
+  "registry_status": "new",
+  "term": "태양 활동 감시 시스템",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "solar activity monitoring system",
+    "hanja_note": "'시스템(system)'이 음차어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "태양 관측 위성과 지상 관측망으로 태양의 활동 변화를 늘 지켜보며 우주 기상을 예보하는 체계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sams-position",
+      "text": "태양 관측 위성을 지구보다 태양에 가까운 쪽에 두면 다가오는 태양 활동 변화를 더 일찍 알아챌 수 있다.",
+      "form": {
+        "condition": "위성이 태양과 지구 사이에 놓일 때",
+        "type": "causal",
+        "scope": "태양 감시 위성을 어디에 둘 것인가"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양에 가까운 쪽에 두어도 더 일찍 알아챌 수는 없다」는 그렇게 배치하는 것이 좋은 방법이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 관측 위성을 지구보다 태양에 가까운 쪽에 두어도 다가오는 태양 활동 변화를 더 일찍 알아챌 수는 없다."
+    },
+    {
+      "id": "rel-sams-wavelength",
+      "text": "같은 태양이라도 관측하는 파장 영역이 다르면 드러나는 태양의 층과 현상이 달라진다.",
+      "form": {
+        "condition": "여러 파장 영역에서 함께 관측할 때",
+        "type": "conditional",
+        "scope": "SDO 같은 태양 관측 위성의 다파장 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「파장 영역이 달라도 드러나는 층과 현상은 똑같다」는 파장별로 다른 모습을 담아 합친다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 태양이라면 관측하는 파장 영역이 달라도 드러나는 태양의 층과 현상은 똑같다."
+    },
+    {
+      "id": "rel-sams-life",
+      "text": "감시 자료로 만든 우주 기상 예보 덕분에 전기·통신·항공·위성 분야가 태양 활동에 미리 대비한다.",
+      "form": {
+        "condition": "예보가 관련 분야에 제때 전해질 때",
+        "type": "causal",
+        "scope": "우주 기상 예보를 쓰는 분야"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「우주 기상 예보가 있어도 각 분야가 미리 대비하지는 못한다」는 예보를 바탕으로 대비한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "감시 자료로 우주 기상 예보를 만들어도 전기·통신·항공·위성 분야가 태양 활동에 미리 대비하지는 못한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양 활동 감시는 지상 망원경만으로 이루어진다",
+      "why_wrong": "대기 밖 궤도를 도는 태양 관측 위성들이 여러 파장에서 함께 감시한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sams-position"
+    },
+    {
+      "text": "태양 활동은 예보할 수 없어 대비가 불가능하다",
+      "why_wrong": "관측 위성 자료로 우주 기상을 예보해 분야별로 대비하고 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sams-life"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-solar-flare"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-artificial-satellite"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-weather"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    20,
+    21
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

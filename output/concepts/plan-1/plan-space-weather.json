@@ -1,0 +1,131 @@
+{
+  "id": "plan-space-weather",
+  "concept_key": "concept:space-weather",
+  "registry_status": "new",
+  "term": "우주 기상",
+  "notation": {
+    "hanja": "宇宙氣象",
+    "english": "space weather",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 氣 기운 기 · 象 코끼리 상"
+  },
+  "definition": "태양풍이나 지구 자기권의 변화처럼 위성·통신·전력 같은 기술 시스템과 생명체에 영향을 줄 수 있는 우주 공간의 물리적 조건.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sw-activity",
+      "text": "태양의 활동이 활발해질수록 지구 부근의 우주 기상은 크게 교란된다.",
+      "form": {
+        "condition": "흑점 폭발 등으로 태양 활동이 강해질 때",
+        "type": "direct",
+        "scope": "태양의 영향을 받는 지구 부근 우주 공간",
+        "antecedent": {
+          "quantity": "태양 활동의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주 기상 교란 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양 활동이 활발해질수록 우주 기상은 오히려 잔잔해진다」는 고에너지 물질 유입이 환경 변화를 일으킨다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양의 활동이 활발해질수록 지구 부근의 우주 기상은 오히려 잔잔해진다."
+    },
+    {
+      "id": "rel-sw-society",
+      "text": "인류의 활동 무대가 우주로 넓어질수록 우주 환경 변화가 사회와 경제에 미치는 영향도 커진다.",
+      "form": {
+        "condition": "우주에 기대는 기반 시설이 늘어날 때",
+        "type": "direct",
+        "scope": "우주 환경 변화가 사회·경제에 미치는 영향",
+        "antecedent": {
+          "quantity": "우주에 기댄 활동의 범위",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "사회·경제가 받는 영향",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「영향이 오히려 줄어든다」는 활동 무대가 넓어지며 영향이 커지고 있다는 22쪽 서술과 어긋나 반드시 거짓이다.",
+      "inverted_text": "인류의 활동 무대가 우주로 넓어질수록 우주 환경 변화가 사회와 경제에 미치는 영향은 오히려 줄어든다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sw-forecast",
+      "text": "태양 관측 자료로 우주 기상을 예보하면 영향을 받는 분야가 미리 대비할 수 있다.",
+      "form": {
+        "condition": "관측 자료가 제때 들어와 예보가 나올 때",
+        "type": "conditional",
+        "scope": "우주 기상 예보의 쓰임"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「우주 기상을 예보해도 영향을 받는 분야가 미리 대비할 수는 없다」는 분야별로 예보를 바탕으로 대비한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 관측 자료로 우주 기상을 예보해도 영향을 받는 분야가 미리 대비할 수는 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 기상은 지구의 날씨를 가리키는 다른 이름이다",
+      "why_wrong": "우주 기상은 태양풍과 자기권 변화 같은 우주 공간의 물리적 조건을 가리키며 비·구름 같은 대기 현상과 다르다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "우주 기상 변화는 우주 공간에서만 문제가 되고 지상에는 영향이 없다",
+      "why_wrong": "전리층이 교란되면 통신과 위치 정보가 흔들리고, 지자기 폭풍은 지상의 송전 설비까지 손상시킨다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sw-society"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-solar-flare"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-solar-wind"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-coronal-mass-ejection"
+    },
+    {
+      "type": "next",
+      "target": "plan-space-hazard"
+    },
+    {
+      "type": "next",
+      "target": "plan-space-radio-disaster"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    18,
+    21
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

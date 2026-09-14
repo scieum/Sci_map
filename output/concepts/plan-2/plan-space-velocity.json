@@ -1,0 +1,108 @@
+{
+  "id": "plan-space-velocity",
+  "concept_key": "concept:space-velocity",
+  "registry_status": "new",
+  "term": "공간 속도",
+  "notation": {
+    "hanja": "空間速度",
+    "hanja_gloss": "空 빌 공 · 間 사이 간 · 速 빠를 속 · 度 법도 도",
+    "english": "space velocity",
+    "symbol_display": "V = √(V_t² + V_r²)",
+    "symbol_plain": "V = (Vt^2 + Vr^2)^(1/2)"
+  },
+  "definition": "별이 우주 공간에서 실제로 움직이는 속도. 서로 수직인 접선 속도와 시선 속도의 벡터 합으로 구한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sv-vector-sum",
+      "text": "공간 속도는 접선 속도와 시선 속도를 그냥 더한 값이 아니라 두 성분의 벡터 합이다.",
+      "form": {
+        "condition": "두 성분이 서로 수직일 때",
+        "type": "classification",
+        "scope": "별의 공간 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「두 속도를 그대로 더한 값이 공간 속도」라는 말인데, 수직인 두 성분은 산술 합이 될 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공간 속도는 접선 속도와 시선 속도를 그대로 더한 값이다."
+    },
+    {
+      "id": "rel-sv-angle",
+      "text": "접선 속도와 시선 속도의 크기가 서로 다를 때, 시선 방향과 이루는 각의 탄젠트 값은 접선 속도를 시선 속도로 나눈 값이다.",
+      "form": {
+        "condition": "두 속도 성분을 모두 알 때",
+        "type": "direct",
+        "scope": "접선 속도와 시선 속도의 크기가 서로 다른 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 분자와 분모를 맞바꾼 것인데, 두 크기가 다르면 그 값과 역수가 같을 수 없으므로 반드시 거짓이다. 두 크기가 같아 값이 1이 되는 경우는 문면의 한정으로 막았다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "접선 속도와 시선 속도의 크기가 서로 다를 때, 시선 방향과 이루는 각의 탄젠트 값은 시선 속도를 접선 속도로 나눈 값이다."
+    },
+    {
+      "id": "rel-sv-need-both",
+      "text": "접선 속도와 시선 속도 가운데 하나만 알아서는 별의 공간 속도를 구할 수 없다.",
+      "form": {
+        "condition": "공간 속도를 구하려 할 때",
+        "type": "conditional",
+        "scope": "별의 공간 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「하나만 알아도 공간 속도를 구한다」인데, 나머지 성분의 크기를 모르면 벡터 합이 정해지지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "접선 속도와 시선 속도 가운데 하나만 알아도 별의 공간 속도를 구할 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "시선 속도가 큰 별은 공간 속도도 반드시 크다.",
+      "why_wrong": "접선 속도가 얼마인지에 따라 달라진다. 두 성분의 벡터 합이라 한쪽만으로는 단정할 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-sv-need-both"
+    },
+    {
+      "text": "접선 속도 100 km/s, 시선 속도 100 km/s인 별의 공간 속도는 200 km/s다.",
+      "why_wrong": "두 성분이 수직이므로 제곱의 합에 제곱근을 취해야 한다. 약 141 km/s이다.",
+      "source": "llm",
+      "linked_relation": "rel-sv-vector-sum"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-tangential-velocity"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-radial-velocity"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-motion",
+      "note": "공간 운동을 속도로 나타낸 것이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-3",
+  "pages": [
+    68,
+    69
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "plan-kepler-second-law",
+  "concept_key": "concept:kepler-second-law",
+  "registry_status": "new",
+  "term": "케플러 제2법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Kepler's second law",
+    "hanja_note": "'케플러'가 사람 이름을 옮긴 음차어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "태양과 행성을 잇는 선분이 같은 시간 동안 쓸고 지나는 넓이가 늘 일정하다는 법칙. 면적 속도 일정 법칙이라고도 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-k2-speed",
+      "text": "태양에 가까운 곳을 지날 때 행성은 빠르게, 먼 곳을 지날 때는 느리게 움직인다.",
+      "form": {
+        "condition": "한 행성이 같은 타원 궤도를 도는 동안",
+        "type": "inverse",
+        "scope": "타원 궤도를 도는 한 천체",
+        "antecedent": {
+          "quantity": "태양까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공전 속도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양에 가까운 곳에서 느리고 먼 곳에서 빠르다」는 근일점에서 가장 빠르다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양에 가까운 곳을 지날 때 행성은 느리게, 먼 곳을 지날 때는 빠르게 움직인다."
+    },
+    {
+      "id": "rel-k2-area",
+      "text": "시간 간격을 같게 잡으면 근일점 쪽에서 쓸고 간 넓이와 원일점 쪽에서 쓸고 간 넓이가 서로 같다.",
+      "form": {
+        "condition": "같은 길이의 시간 간격으로 끊어 볼 때",
+        "type": "conditional",
+        "scope": "한 행성의 타원 궤도 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「근일점 쪽에서 쓸고 간 넓이가 원일점 쪽보다 넓다」는 면적이 언제나 같다는 법칙과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "시간 간격을 같게 잡으면 근일점 쪽에서 쓸고 간 넓이가 원일점 쪽보다 넓다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "행성은 궤도 위를 늘 같은 속도로 돈다",
+      "why_wrong": "근일점에서 가장 빠르고 원일점에서 가장 느리며, 일정한 것은 속도가 아니라 쓸고 간 넓이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-k2-speed"
+    },
+    {
+      "text": "같은 시간 동안 행성이 지나간 거리가 같다",
+      "why_wrong": "일정한 것은 거리가 아니라 태양과 행성을 잇는 선분이 쓸고 간 넓이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-k2-area"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-perihelion-and-aphelion"
+    },
+    {
+      "type": "next",
+      "target": "plan-conservation-of-angular-momentum"
+    },
+    {
+      "type": "same",
+      "target": "mech-kepler-second-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-2",
+  "pages": [
+    26,
+    29
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "면적 속도 일정 법칙"
+  ]
+}

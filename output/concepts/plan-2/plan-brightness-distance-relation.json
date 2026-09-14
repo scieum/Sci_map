@@ -1,0 +1,115 @@
+{
+  "id": "plan-brightness-distance-relation",
+  "concept_key": "concept:inverse-square-law-of-stellar-brightness",
+  "registry_status": "new",
+  "term": "별의 밝기와 거리의 관계",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'밝기'가 우리말 고유어라 표제어 전체에 대응하는 한자 표기가 없다. '거리'와 '관계'만 한자어(距離·關係)다.",
+    "english": "inverse square law of stellar brightness",
+    "symbol_display": "l ∝ 1/d²",
+    "symbol_plain": "l = k / d^2"
+  },
+  "definition": "별까지의 거리가 달라질 때 그 별이 얼마나 밝게 보이는지가 어떻게 달라지는지를 나타내는 관계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-inverse-square",
+      "text": "광도가 같은 별의 겉보기 밝기는 거리의 제곱에 반비례한다.",
+      "form": {
+        "condition": "광도가 같은 별끼리 견줄 때",
+        "type": "inverse",
+        "scope": "빛이 중간에서 흡수되지 않는 경우",
+        "antecedent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "겉보기 밝기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「겉보기 밝기가 거리의 제곱에 비례한다」인데, 멀수록 어두워지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 같은 별의 겉보기 밝기는 거리의 제곱에 비례한다."
+    },
+    {
+      "id": "rel-double-distance",
+      "text": "거리가 2배가 되면 겉보기 밝기는 4분의 1로 줄어든다.",
+      "form": {
+        "condition": "별의 광도가 달라지지 않을 때",
+        "type": "inverse",
+        "scope": "거리만 달라진 같은 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「거리가 2배면 밝기가 2분의 1」이라는 말인데, 제곱에 반비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리가 2배가 되면 겉보기 밝기는 2분의 1로 줄어든다."
+    },
+    {
+      "id": "rel-bd-magnitude",
+      "text": "광도가 같은 두 별의 겉보기 등급 차는, 두 별까지 거리의 비에 상용로그를 취한 값의 5배가 된다.",
+      "form": {
+        "condition": "두 별의 광도가 서로 같음",
+        "type": "direct",
+        "scope": "광도가 같고 거리만 다른 두 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 계수를 2.5로 바꿔 놓은 것인데, 밝기가 거리의 제곱에 반비례해 계수가 5가 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 같은 두 별의 겉보기 등급 차는, 거리의 비에 상용로그를 취한 값의 2.5배가 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "거리가 2배 멀어지면 별은 절반만큼 어둡게 보인다.",
+      "why_wrong": "제곱에 반비례하므로 4분의 1로 어두워진다. 3배 멀어지면 9분의 1이다.",
+      "source": "llm",
+      "linked_relation": "rel-double-distance"
+    },
+    {
+      "text": "멀리 있는 별이 어둡게 보이는 것은 도중에 빛이 흡수되기 때문이다.",
+      "why_wrong": "흡수가 전혀 없어도 빛이 퍼지는 넓이가 거리의 제곱으로 늘어나 어두워진다.",
+      "source": "llm",
+      "linked_relation": "rel-inverse-square"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-luminosity"
+    },
+    {
+      "type": "next",
+      "target": "plan-distance-modulus"
+    },
+    {
+      "type": "related",
+      "target": "plan-pogson-formula",
+      "note": "밝기 비를 등급 차로 바꿔 준다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-2",
+  "pages": [
+    65
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

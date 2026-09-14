@@ -1,0 +1,108 @@
+{
+  "id": "plan-geological-feature-from-small-body-exploration",
+  "concept_key": "concept:geological-feature-from-small-body-exploration",
+  "registry_status": "new",
+  "term": "소천체 탐사와 지질학적 특징",
+  "notation": {
+    "hanja": "小天體 探査 地質學 特徵",
+    "english": "geological features from small body exploration",
+    "hanja_gloss": "小 작을 소 · 天 하늘 천 · 體 몸 체 · 探 찾을 탐 · 査 조사할 사 · 地 땅 지 · 質 바탕 질 · 學 배울 학 · 特 특별할 특 · 徵 부를 징"
+  },
+  "definition": "탐사선이 혜성과 소행성에 다가가거나 내려앉아 밝혀낸 소천체의 구성 물질과 표면의 특징.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gf-comet",
+      "text": "로제타와 딥 임팩트는 혜성 표면에 탐사 로봇과 충돌체를 보내 혜성이 먼지와 얼음으로 이루어졌음을 확인했다.",
+      "form": {
+        "condition": "스쳐 지나가는 관측을 넘어 직접 부딪히거나 내려앉을 때",
+        "type": "causal",
+        "scope": "두 혜성 탐사선의 성과"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「두 탐사선은 혜성 곁을 스쳐 지나기만 해 구성 물질을 확인하지 못했다」는 표면에 충돌시켜 직접 관찰했다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "로제타와 딥 임팩트는 혜성 곁을 스쳐 지나가기만 해 혜성의 구성 물질은 확인하지 못했다."
+    },
+    {
+      "id": "rel-gf-sample",
+      "text": "하야부사 2와 오시리스-렉스가 류구와 베누에서 가져온 시료에서 아미노산을 비롯한 유기물이 발견되었다.",
+      "form": {
+        "condition": "소행성 표면의 시료를 지구로 회수했을 때",
+        "type": "conditional",
+        "scope": "두 소행성 시료 회수 임무"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「가져온 시료에서는 유기물이 발견되지 않았다」는 두 시료에서 같은 종류의 유기물이 나왔다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "하야부사 2와 오시리스-렉스가 류구와 베누에서 가져온 시료에서는 유기물이 발견되지 않았다."
+    },
+    {
+      "id": "rel-gf-why",
+      "text": "크기가 작은 소행성은 분화를 겪지 않았으므로 그 시료에서 태양계 형성 직후의 물질을 알아낼 수 있다.",
+      "form": {
+        "condition": "미분화 소천체를 탐사 대상으로 고를 때",
+        "type": "causal",
+        "scope": "작은 소행성의 시료 연구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분화를 겪지 않은 소행성의 시료로도 형성 직후의 물질을 알아낼 수 없다」는 초기 물질이 잘 보존되어 있다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "크기가 작은 소행성은 분화를 겪지 않았지만 그 시료에서 태양계 형성 직후의 물질을 알아낼 수는 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "로제타와 딥 임팩트는 소행성을 탐사한 탐사선이다",
+      "why_wrong": "둘 다 혜성 탐사선으로, 각각 추류모프-게라시멘코 혜성과 템펠 1 혜성을 목표로 발사되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gf-comet"
+    },
+    {
+      "text": "소천체 연구는 탐사선을 보내야만 할 수 있다",
+      "why_wrong": "지구에 떨어진 운석을 분석하는 것도 태양계 진화를 밝히는 효율적인 방법이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gf-why"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-differentiation-of-small-body"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-comet"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-space-probe"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-4",
+  "pages": [
+    35,
+    37
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

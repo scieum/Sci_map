@@ -1,0 +1,101 @@
+{
+  "id": "plan-center-of-mass",
+  "concept_key": "concept:common-center-of-mass",
+  "registry_status": "new",
+  "term": "공통 질량 중심",
+  "notation": {
+    "hanja": "共通質量中心",
+    "hanja_gloss": "共 함께 공 · 通 통할 통 · 質 바탕 질 · 量 헤아릴 량 · 中 가운데 중 · 心 마음 심",
+    "english": "common center of mass"
+  },
+  "definition": "서로의 중력이 미치는 두 천체가 공전할 때 그 공전의 기준이 되는 지점.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cm-toward-heavy",
+      "text": "공통 질량 중심은 질량이 큰 천체 쪽으로 치우쳐 놓인다.",
+      "form": {
+        "condition": "두 천체의 질량이 서로 다를 때",
+        "type": "causal",
+        "scope": "중력으로 묶인 두 천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「가벼운 천체 쪽으로 치우친다」인데, 질량과 거리의 곱이 같아야 하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공통 질량 중심은 질량이 작은 천체 쪽으로 치우쳐 놓인다."
+    },
+    {
+      "id": "rel-cm-ratio",
+      "text": "질량이 서로 다른 두 별에서 공통 질량 중심까지의 거리비는 두 별의 질량비를 뒤집은 값과 같다.",
+      "form": {
+        "condition": "두 별이 공통 질량 중심을 함께 돌 때",
+        "type": "inverse",
+        "scope": "질량이 서로 다른 쌍성계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「거리비가 질량비와 같다」인데, 두 질량이 다르면 그 비는 1이 아니고 거리비는 그 역수이므로 반드시 거짓이다. 질량이 같아 두 비가 모두 1이 되는 경우는 문면의 한정으로 막았다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 서로 다른 두 별에서 공통 질량 중심까지의 거리비는 두 별의 질량비와 같다."
+    },
+    {
+      "id": "rel-cm-equal-mass",
+      "text": "두 별의 질량이 같으면 공통 질량 중심은 두 별을 잇는 선의 한가운데에 놓인다.",
+      "form": {
+        "condition": "두 별의 질량이 서로 같음",
+        "type": "conditional",
+        "scope": "질량이 같은 쌍성계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「질량이 같아도 한쪽 별에 치우쳐 놓인다」인데, 치우칠 까닭이 없어 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 별의 질량이 같으면 공통 질량 중심은 한쪽 별에 치우쳐 놓인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "공통 질량 중심은 늘 두 별의 한가운데에 있다.",
+      "why_wrong": "질량이 다르면 무거운 쪽으로 치우친다. 한가운데인 것은 두 질량이 같을 때뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-cm-toward-heavy"
+    },
+    {
+      "text": "공통 질량 중심은 두 별 가운데 무거운 별의 중심과 같은 곳이다.",
+      "why_wrong": "무거운 쪽으로 치우칠 뿐 그 별의 중심과 겹치지는 않는다. 질량 차가 아주 클 때 가까워질 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-cm-ratio"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-binary-star"
+    },
+    {
+      "type": "next",
+      "target": "plan-binary-star-mass"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-1",
+  "pages": [
+    72,
+    73
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

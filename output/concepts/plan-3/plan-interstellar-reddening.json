@@ -1,0 +1,88 @@
+{
+  "id": "plan-interstellar-reddening",
+  "concept_key": "concept:interstellar-reddening",
+  "registry_status": "new",
+  "term": "성간 적색화",
+  "notation": {
+    "hanja": "星間赤色化",
+    "english": "interstellar reddening",
+    "hanja_gloss": "星 별 성 · 間 사이 간 · 赤 붉을 적 · 色 빛 색 · 化 될 화"
+  },
+  "definition": "티끌 층을 지나온 별빛에서 파란빛이 더 많이 사라져, 별이 본래보다 붉게 보이는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-red-scatter",
+      "text": "파란빛이 붉은빛보다 더 많이 산란되어 관측자에게는 붉은빛의 비율이 높아진다.",
+      "form": {
+        "condition": "별빛이 성간 티끌 층을 통과할 때",
+        "type": "causal",
+        "scope": "성간 적색화"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「붉은빛이 파란빛보다 더 많이 산란되어 파란빛 비율이 높아진다」는 짧은 파장이 더 잘 산란된다는 사실과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "붉은빛이 파란빛보다 더 많이 산란되어 관측자에게는 파란빛의 비율이 높아진다."
+    },
+    {
+      "id": "rel-red-index",
+      "text": "B 등급이 V 등급보다 더 많이 늘어나므로 관측한 색지수는 실제보다 큰 값이 된다.",
+      "form": {
+        "condition": "적색화를 보정하기 전의 관측값을 볼 때",
+        "type": "causal",
+        "scope": "티끌 층 뒤에 있는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「V 등급이 더 많이 늘어 색지수가 실제보다 작아진다」는 파란 쪽이 더 어두워진다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "V 등급이 B 등급보다 더 많이 늘어나므로 관측한 색지수는 실제보다 작은 값이 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성간 적색화를 겪은 별은 표면 온도가 실제로 낮아진 별이다",
+      "why_wrong": "별의 온도가 변한 것이 아니라 파란빛이 덜 도달해 붉게 보이는 것이다. 보정하면 본래 색지수를 되찾는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-red-index"
+    },
+    {
+      "text": "성간 적색화는 별이 멀어지면서 파장이 길어지는 적색 편이와 같은 현상이다",
+      "why_wrong": "적색화는 티끌의 산란 때문에 색의 비율이 달라지는 것이고, 적색 편이는 파장 자체가 밀려나는 것이다. 원인이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-red-scatter"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-extinction"
+    },
+    {
+      "type": "next",
+      "target": "plan-color-excess"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-2",
+  "pages": [
+    105,
+    106
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

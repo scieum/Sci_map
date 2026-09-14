@@ -1,0 +1,96 @@
+{
+  "id": "plan-composition-of-solar-system",
+  "concept_key": "concept:composition-of-solar-system",
+  "registry_status": "new",
+  "term": "태양계의 구성 천체",
+  "notation": {
+    "hanja": "太陽系 構成 天體",
+    "english": "composition of the solar system",
+    "hanja_gloss": "太 클 태 · 陽 볕 양 · 系 이어맬 계 · 構 얽을 구 · 成 이룰 성 · 天 하늘 천 · 體 몸 체"
+  },
+  "definition": "태양의 중력에 묶여 그 둘레를 도는 천체 전체. 항성인 태양과 여덟 행성, 그 위성, 그리고 왜소 행성·소행성·혜성·유성체 같은 소천체를 아우른다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-css-mass",
+      "text": "태양 하나가 태양계 전체 질량의 약 99.8 %를 차지해 태양계 천체의 운동을 좌우한다.",
+      "form": {
+        "condition": "태양계 전체의 질량을 견줄 때",
+        "type": "causal",
+        "scope": "태양계 안 질량 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양이 차지하는 질량은 아주 일부여서 천체의 운동을 좌우하지 못한다」는 99.8 %라는 값과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양이 차지하는 질량은 태양계 전체의 아주 일부여서 천체의 운동을 좌우하지 못한다."
+    },
+    {
+      "id": "rel-css-count",
+      "text": "태양계의 행성은 지구를 포함해 여덟이고, 그 가운데 수성과 금성만 위성을 거느리지 않는다.",
+      "form": {
+        "condition": "태양계 천체를 종류별로 헤아릴 때",
+        "type": "classification",
+        "scope": "태양계를 이루는 천체의 수와 구성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「여덟 행성이 모두 위성을 거느린다」는 수성과 금성에 위성이 없다는 30쪽 서술과 어긋나 반드시 거짓이다.",
+      "inverted_text": "태양계의 행성은 지구를 포함해 여덟이고, 그 여덟이 모두 위성을 거느린다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending"
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양계는 태양과 8개의 행성만으로 이루어진다",
+      "why_wrong": "위성·왜소 행성·소행성·혜성·유성체도 태양계를 이루는 천체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-css-count"
+    },
+    {
+      "text": "태양계 질량의 대부분은 목성 같은 큰 행성이 차지한다",
+      "why_wrong": "태양 혼자 태양계 질량의 약 99.8 %를 차지한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-css-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-definition-of-planet"
+    },
+    {
+      "type": "next",
+      "target": "plan-natural-satellite"
+    },
+    {
+      "type": "next",
+      "target": "plan-comet"
+    },
+    {
+      "type": "related",
+      "target": "plan-asteroid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-1",
+  "pages": [
+    30,
+    39
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

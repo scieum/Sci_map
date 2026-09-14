@@ -1,0 +1,120 @@
+{
+  "id": "plan-radial-velocity-method",
+  "concept_key": "concept:radial-velocity-method",
+  "registry_status": "new",
+  "term": "시선 속도 변화를 이용하는 방법",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "radial velocity method",
+    "hanja_note": "표제어가 '시선 속도 변화(視線速度變化)'라는 한자어와 우리말 구절이 이어 붙은 형태라 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "중심별이 공통 질량 중심 둘레를 돌며 생기는 별빛 파장의 주기적 변화를 읽어 행성의 존재를 알아내는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rv-mass",
+      "text": "행성의 질량이 클수록 중심별이 크게 흔들려 별빛의 도플러 효과가 뚜렷하게 나타난다.",
+      "form": {
+        "condition": "궤도면이 시선 방향과 크게 어긋나지 않을 때",
+        "type": "direct",
+        "scope": "시선 속도 변화를 이용한 탐사",
+        "antecedent": {
+          "quantity": "행성의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "도플러 효과의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「행성의 질량이 클수록 중심별의 흔들림이 작아 도플러 효과가 약해진다」는 질량이 클수록 중력이 커진다는 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성의 질량이 클수록 중심별의 흔들림이 작아 별빛의 도플러 효과가 약하게 나타난다."
+    },
+    {
+      "id": "rel-rv-limit",
+      "text": "시선 방향과 행성의 공전 궤도면이 수직이면 시선 속도 변화가 드러나지 않아 이 방법을 쓸 수 없다.",
+      "form": {
+        "condition": "궤도면이 시선 방향과 수직일 때",
+        "type": "conditional",
+        "scope": "시선 속도 변화 탐사의 한계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「궤도면이 시선 방향과 수직이어도 시선 속도 변화로 행성을 찾을 수 있다」는 이 방법의 단점과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "시선 방향과 행성의 공전 궤도면이 수직이어도 시선 속도 변화로 행성을 찾아낼 수 있다."
+    },
+    {
+      "id": "rel-rv-spectrum",
+      "text": "이 방법에서 분석하는 것은 행성의 빛이 아니라 중심별의 스펙트럼이다.",
+      "form": {
+        "condition": "무엇을 관측 대상으로 삼는지 가릴 때",
+        "type": "classification",
+        "scope": "시선 속도 변화 탐사의 관측 대상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중심별의 빛이 아니라 행성의 스펙트럼을 분석한다」는 관측 대상을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 방법에서 분석하는 것은 중심별의 빛이 아니라 행성의 스펙트럼이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "시선 속도 변화를 이용할 때는 행성의 스펙트럼을 분석한다",
+      "why_wrong": "행성이 아니라 중심별의 스펙트럼에서 파장이 주기적으로 변하는 것을 읽는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rv-spectrum"
+    },
+    {
+      "text": "이 방법은 지구처럼 질량이 작은 행성을 찾는 데 가장 좋다",
+      "why_wrong": "질량이 작으면 중심별의 흔들림도 작아, 오히려 질량이 큰 행성을 찾기에 유리하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rv-mass"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-extrasolar-planetary-system"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-doppler-effect"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-center-of-mass-of-star-and-planet"
+    },
+    {
+      "type": "related",
+      "target": "plan-transit-method"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-1",
+  "pages": [
+    40,
+    45
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

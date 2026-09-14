@@ -1,0 +1,95 @@
+{
+  "id": "plan-density-fluctuation",
+  "concept_key": "concept:primordial-density-fluctuation",
+  "registry_status": "new",
+  "term": "우주 초기의 밀도 요동",
+  "notation": {
+    "hanja": "初期密度搖動",
+    "english": "primordial density fluctuation",
+    "hanja_gloss": "初 처음 초 · 期 기약할 기 · 密 빽빽할 밀 · 度 법도 도 · 搖 흔들 요 · 動 움직일 동"
+  },
+  "definition": "대폭발 직후 물질 분포에 있던 아주 작은 밀도의 높낮이. 오늘날의 은하와 보이드를 낳은 씨앗이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-df-grow",
+      "text": "미세한 밀도 차가 중력을 통해 점점 커지면서 은하와 은하 집단이 만들어졌다.",
+      "form": {
+        "condition": "중력이 오랜 시간 작용하는 동안",
+        "type": "causal",
+        "scope": "우주의 구조 형성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 밀도 차가 커지는 방향을 작아지는 방향으로 맞바꾼 것이라, 차이가 자라 은하를 이루었다는 과정과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "미세한 밀도 차는 중력이 작용하는 동안 점점 작아져 물질이 오히려 고르게 퍼졌다."
+    },
+    {
+      "id": "rel-df-seed",
+      "text": "밀도 요동은 대폭발 직후에 생긴 것이라 은하가 태어나기 전부터 물질 속에 새겨져 있었다.",
+      "form": {
+        "condition": "은하 형성의 앞뒤를 따질 때",
+        "type": "causal",
+        "scope": "우주 초기의 물질 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 원인과 결과의 앞뒤를 맞바꾼 것이라, 요동이 은하의 씨앗이라는 순서와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "밀도 요동은 은하들이 태어난 뒤에 그 은하들의 중력이 만들어 낸 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 초기의 물질은 완전히 고르게 퍼져 있어 아무 차이도 없었다",
+      "why_wrong": "아주 미세한 밀도 차이가 있었고, 그 차이가 자라 오늘날의 구조가 되었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-df-grow"
+    },
+    {
+      "text": "밀도 요동이 작았으므로 지금의 우주도 거의 균일하다",
+      "why_wrong": "작은 요동이 중력으로 오래 자라 은하 집단과 보이드라는 뚜렷한 불균일을 만들었다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-df-grow"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-dark-matter"
+    },
+    {
+      "type": "next",
+      "target": "plan-evolution-of-large-scale-structure"
+    },
+    {
+      "type": "next",
+      "target": "plan-baryon-acoustic-oscillation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-04-3",
+  "pages": [
+    118,
+    121
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — rel-df-low 는 plan-void/rel-void-origin·plan-evolution-of-large-scale-structure/rel-els-grow 와 겹쳐(중복 명제군) 보이드 형성은 보이드 카드에 넘기고, 이 카드는 요동이 은하의 씨앗이라는 rel-df-seed 를 맡는다."
+  ]
+}

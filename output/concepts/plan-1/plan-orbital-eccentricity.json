@@ -1,0 +1,117 @@
+{
+  "id": "plan-orbital-eccentricity",
+  "concept_key": "concept:orbital-eccentricity",
+  "registry_status": "new",
+  "term": "이심률",
+  "notation": {
+    "hanja": "離心率",
+    "english": "orbital eccentricity",
+    "hanja_gloss": "離 떠날 리 · 心 마음 심 · 率 비율 률",
+    "symbol_display": "e",
+    "symbol_plain": "e"
+  },
+  "definition": "타원의 중심에서 한 초점까지의 거리를 긴반지름으로 나눈 값. 궤도가 얼마나 납작한지를 나타낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ecc-shape",
+      "text": "이심률이 0에 가까울수록 공전 궤도의 모양은 원에 가까워진다.",
+      "form": {
+        "condition": "이심률이 0 이상 1 미만인 닫힌 궤도일 때",
+        "type": "inverse",
+        "scope": "타원 공전 궤도의 모양",
+        "antecedent": {
+          "quantity": "이심률",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "원에 가까운 정도",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「이심률이 0에 가까울수록 궤도가 더 납작해진다」는 e가 0이면 원이라는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이심률이 0에 가까울수록 공전 궤도의 모양은 더 납작해진다."
+    },
+    {
+      "id": "rel-ecc-curve",
+      "text": "e가 0이면 원, 0과 1 사이면 타원, 1이면 포물선, 1보다 크면 쌍곡선이 된다.",
+      "form": {
+        "condition": "이심률 값으로 곡선의 종류를 가를 때",
+        "type": "classification",
+        "scope": "이심률에 따른 곡선의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「e가 1이면 원이고 0이면 포물선이다」는 두 값을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "e가 1이면 원, 0이면 포물선, 1보다 크면 타원이 된다."
+    },
+    {
+      "id": "rel-ecc-comet",
+      "text": "행성의 공전 궤도는 대부분 이심률이 작아 원에 가깝지만 혜성은 이심률이 큰 납작한 타원을 그린다.",
+      "form": {
+        "condition": "행성과 혜성의 궤도를 견줄 때",
+        "type": "classification",
+        "scope": "태양계 천체의 궤도 모양"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「행성의 궤도가 납작하고 혜성의 궤도가 원에 가깝다」는 둘을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성의 공전 궤도는 이심률이 커서 납작하고 혜성은 이심률이 작아 원에 가까운 궤도를 그린다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "이심률이 큰 궤도는 긴반지름도 크다",
+      "why_wrong": "이심률은 납작한 정도만 나타내며 궤도의 크기와는 따로 정해진다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "태양계 행성의 궤도는 눈에 띄게 찌그러져 있다",
+      "why_wrong": "대부분 이심률이 0.1보다 작아 원에 가깝고, 수성만 상대적으로 크다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ecc-comet"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-semi-major-axis"
+    },
+    {
+      "type": "related",
+      "target": "plan-kepler-first-law"
+    },
+    {
+      "type": "related",
+      "target": "plan-comet"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-1",
+  "pages": [
+    25,
+    29
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,120 @@
+{
+  "id": "plan-kepler-third-law-for-binary-stars",
+  "concept_key": "concept:kepler-third-law",
+  "registry_status": "new",
+  "term": "케플러 제3법칙",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'케플러'가 사람 이름을 소리대로 옮긴 말이라 표제어 전체를 한자어로 적을 수 없다.",
+    "english": "Kepler's third law",
+    "symbol_display": "a³ ∝ P²",
+    "symbol_plain": "a^3 = k P^2"
+  },
+  "definition": "궤도 긴반지름의 세제곱이 공전 주기의 제곱에 비례한다는 법칙.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-k3-orbit-period",
+      "text": "같은 중심 질량을 도는 천체끼리 견주면 궤도가 클수록 공전 주기가 길다.",
+      "form": {
+        "condition": "같은 중심 질량 둘레를 도는 천체끼리 견줄 때",
+        "type": "direct",
+        "scope": "중력에 묶인 궤도 운동",
+        "antecedent": {
+          "quantity": "궤도 긴반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "공전 주기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「궤도가 클수록 공전 주기가 짧다」인데, 주기의 제곱이 긴반지름의 세제곱에 비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 중심 질량을 도는 천체끼리 견주면 궤도가 클수록 공전 주기가 짧다."
+    },
+    {
+      "id": "rel-k3-derivation",
+      "text": "두 별이 도는 데 필요한 구심력이 서로 사이의 만유인력이라고 두면 이 관계식이 유도된다.",
+      "form": {
+        "condition": "두 별이 원 궤도를 따라 등속 원운동한다고 볼 때",
+        "type": "causal",
+        "scope": "중력으로 묶여 도는 두 천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「그렇게 두어도 관계식이 유도되지 않는다」인데, 교과서가 바로 그 가정에서 식을 이끌어 내므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "두 별이 도는 데 필요한 구심력이 만유인력이라고 두어도 이 관계식은 유도되지 않는다."
+    },
+    {
+      "id": "rel-k3-applicable-to-binary",
+      "text": "행성에 쓰던 이 법칙을 쌍성에도 쓸 수 있는 것은 두 별 역시 중력에 묶여 공통 질량 중심을 돌기 때문이다.",
+      "form": {
+        "condition": "두 천체가 중력으로만 묶여 돌 때",
+        "type": "causal",
+        "scope": "중력으로 묶인 두 천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「쌍성은 공통 질량 중심을 돌기 때문에 이 법칙을 쓸 수 없다」인데, 바로 그 점이 적용 근거이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "쌍성은 공통 질량 중심을 돌기 때문에 행성에 쓰던 이 법칙을 쓸 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "케플러 제3법칙은 태양계 행성에만 쓸 수 있다.",
+      "why_wrong": "중력으로 묶여 도는 두 천체라면 쌍성에도 그대로 적용된다. 쌍성의 질량을 구하는 근거가 바로 이것이다.",
+      "source": "llm",
+      "linked_relation": "rel-k3-applicable-to-binary"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-binary-star-mass"
+    },
+    {
+      "type": "same",
+      "target": "mech-kepler-third-law",
+      "note": "「역학과 에너지」에서 같은 법칙을 행성 운동 쪽에서 다룬다"
+    },
+    {
+      "type": "related",
+      "target": "plan-binary-star",
+      "note": "적용 대상이 되는 천체다"
+    },
+    {
+      "type": "same",
+      "target": "plan-kepler-third-law",
+      "note": "「Ⅰ. 태양계와 외계 행성계」에서 행성의 조화 법칙으로 먼저 다룬 같은 법칙이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-1",
+  "pages": [
+    73,
+    74
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "id 가 plan-1 의 「케플러 제3법칙」 카드와 부딪혀 이 단원의 맥락(쌍성 질량 측정)을 접미사로 붙였다. concept_key 는 그대로 공유한다.",
+    "C6 지적에 따라 definition 을 되풀이하던 명제를 만유인력에서의 유도 명제로 갈음했다. 처음에는 mech-kepler-third-law/rel-k3-derive 가 invertible: false 로 잠겨 있어 이 자리를 비웠으나, C6 가 그 false 를 오판정으로 판정했으므로 이 카드에 유도 명제를 세웠다. 그쪽이 바로잡히기 전까지는 두 카드의 판정이 갈린다."
+  ]
+}

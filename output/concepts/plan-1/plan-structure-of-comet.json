@@ -1,0 +1,93 @@
+{
+  "id": "plan-structure-of-comet",
+  "concept_key": "concept:structure-of-comet",
+  "registry_status": "new",
+  "term": "혜성의 핵과 코마, 꼬리",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "structure of a comet",
+    "hanja_note": "'코마(coma)'가 음차어여서 표제어 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "혜성을 이루는 세 부분. 얼음과 암석이 뭉친 핵, 핵에서 승화한 기체와 먼지가 감싼 코마, 태양 반대쪽으로 뻗는 꼬리다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sc-two-tails",
+      "text": "먼지 입자는 태양의 복사압에, 이온화된 입자는 태양풍에 밀려 먼지 꼬리와 이온 꼬리가 따로 생긴다.",
+      "form": {
+        "condition": "꼬리를 밀어내는 힘을 나누어 볼 때",
+        "type": "classification",
+        "scope": "혜성에 생기는 두 갈래 꼬리"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「먼지 입자가 태양풍에, 이온화된 입자가 복사압에 밀린다」는 두 원인을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "먼지 입자는 태양풍에, 이온화된 입자는 태양의 복사압에 밀려 두 꼬리가 생긴다."
+    },
+    {
+      "id": "rel-sc-nucleus",
+      "text": "혜성의 핵은 분화를 겪지 않아 태양계 초기 물질과 가장 비슷한 상태를 간직하고 있다.",
+      "form": {
+        "condition": "소천체의 분화 여부를 따질 때",
+        "type": "conditional",
+        "scope": "미분화 상태인 혜성의 핵"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「혜성의 핵은 분화를 겪어 초기 물질과 가장 다른 상태가 되었다」는 미분화 상태라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "혜성의 핵은 분화를 겪어 태양계 초기 물질과 가장 다른 상태가 되었다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "혜성의 꼬리는 언제나 하나뿐이다",
+      "why_wrong": "복사압에 밀린 먼지 꼬리와 태양풍에 밀린 이온 꼬리, 두 갈래가 관측된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sc-two-tails"
+    },
+    {
+      "text": "코마는 혜성이 지나간 자리에 남은 자국이다",
+      "why_wrong": "핵에서 승화한 기체와 먼지가 핵 둘레를 감싼 부분이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-comet"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-wind"
+    },
+    {
+      "type": "related",
+      "target": "plan-geological-feature-from-small-body-exploration"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    33
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "표제어의 '핵'은 혜성의 중심 덩어리를 가리킨다 — 원자핵·세포핵과 다른 뜻이므로 링크나 검색에서 섞이지 않도록 사람이 한 번 볼 자리다(homonyms.yaml watch_terms 에 '핵'이 있다)."
+  ]
+}

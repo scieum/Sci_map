@@ -1,0 +1,109 @@
+{
+  "id": "plan-prominence",
+  "concept_key": "concept:solar-prominence",
+  "registry_status": "new",
+  "term": "홍염",
+  "notation": {
+    "hanja": "紅焰",
+    "hanja_gloss": "紅 붉을 홍 · 焰 불꽃 염",
+    "english": "prominence"
+  },
+  "definition": "태양의 대기에서 붉게 빛나며 솟아오르는 거대한 불꽃 모양의 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-prom-shape",
+      "text": "홍염은 채층에서 솟아 태양 대기의 바깥층까지 뻗어 오르는 불꽃 기둥이나 고리로 나타난다.",
+      "form": {
+        "condition": "채층과 그 바깥을 관측할 때",
+        "type": "classification",
+        "scope": "태양의 대기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「홍염이 광구 속에 머무는 작은 무늬로 나타난다」인데, 홍염은 대기 바깥층까지 뻗으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "홍염은 채층 아래 광구 속에 머무는 작은 무늬로 나타난다."
+    },
+    {
+      "id": "rel-prom-activity",
+      "text": "태양 활동이 활발한 시기일수록 홍염이 자주 나타난다.",
+      "form": {
+        "condition": "흑점 수가 많은 시기",
+        "type": "direct",
+        "scope": "태양 대기의 활동 현상",
+        "antecedent": {
+          "quantity": "태양 활동의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "홍염의 발생 빈도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「활동이 활발할수록 홍염이 드물어진다」인데, 활동 현상은 활발한 시기에 잦아지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 활동이 활발한 시기일수록 홍염이 드물게 나타난다."
+    },
+    {
+      "id": "rel-prom-vs-flare",
+      "text": "홍염은 채층에서 뻗어 오르는 기둥 모양의 현상이고, 플레어는 흑점 둘레에서 터지는 폭발 현상이다.",
+      "form": {
+        "condition": "태양 대기의 두 현상을 가를 때",
+        "type": "classification",
+        "scope": "태양 대기에서 나타나는 현상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 이름을 맞바꾼 것이라, 각 이름이 가리키는 현상과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "홍염은 흑점 둘레에서 터지는 폭발 현상이고, 플레어는 채층에서 뻗어 오르는 기둥 모양의 현상이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "홍염과 플레어는 같은 현상을 달리 부르는 이름이다.",
+      "why_wrong": "홍염은 기둥·고리 모양으로 뻗어 오르는 기체이고, 플레어는 흑점 둘레의 폭발이다. 나타나는 자리와 모습이 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-prom-vs-flare"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-chromosphere"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-flare-in-solar-atmosphere",
+      "note": "함께 견주면 둘을 가르기 쉽다"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-activity-cycle",
+      "note": "활동이 활발한 시기에 잦다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-2",
+  "pages": [
+    61,
+    63
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

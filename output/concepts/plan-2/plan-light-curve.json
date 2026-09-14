@@ -1,0 +1,98 @@
+{
+  "id": "plan-light-curve",
+  "concept_key": "concept:light-curve",
+  "registry_status": "new",
+  "term": "광도 곡선",
+  "notation": {
+    "hanja": "光度曲線",
+    "hanja_gloss": "光 빛 광 · 度 법도 도 · 曲 굽을 곡 · 線 줄 선",
+    "english": "light curve"
+  },
+  "definition": "시간에 따른 별의 밝기 변화를 나타낸 그래프.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lc-classify",
+      "text": "광도 곡선의 모양을 견주면 그 변광성이 어느 종류인지 가를 수 있다.",
+      "form": {
+        "condition": "밝기 변화를 충분한 기간 동안 관측했을 때",
+        "type": "conditional",
+        "scope": "변광성의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「곡선을 견주어도 종류를 가를 수 없다」인데, 교과서가 곡선 비교로 두 종류를 구분하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도 곡선의 모양을 견주어도 그 변광성이 어느 종류인지는 가를 수 없다."
+    },
+    {
+      "id": "rel-lc-shapes",
+      "text": "맥동 변광성의 광도 곡선은 같은 모양이 되풀이되고, 폭발 변광성의 곡선은 한 번 치솟았다가 서서히 낮아진다.",
+      "form": {
+        "condition": "두 종류의 광도 곡선을 나란히 놓고 볼 때",
+        "type": "classification",
+        "scope": "변광성의 광도 곡선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 곡선의 모양을 맞바꾼 것이라 실제 관측 자료와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "맥동 변광성의 광도 곡선은 한 번 치솟았다가 낮아지고, 폭발 변광성의 곡선은 같은 모양이 되풀이된다."
+    },
+    {
+      "id": "rel-lc-axes",
+      "text": "광도 곡선의 가로축은 시간이고 세로축은 별의 상대적 밝기다.",
+      "form": {
+        "condition": "광도 곡선을 읽을 때",
+        "type": "classification",
+        "scope": "광도 곡선 그래프"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 축을 맞바꾼 것이라 그래프를 잘못 읽게 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도 곡선의 가로축은 별의 상대적 밝기이고 세로축은 시간이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "광도 곡선이 오르내리면 무조건 맥동 변광성이다.",
+      "why_wrong": "되풀이되는 주기가 있어야 맥동이다. 한 번 치솟고 마는 폭발 변광성과 곡선 모양이 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-lc-shapes"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-variable-star"
+    },
+    {
+      "type": "next",
+      "target": "plan-pulsating-variable-star"
+    },
+    {
+      "type": "next",
+      "target": "plan-eruptive-variable-star"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-1",
+  "pages": [
+    79
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

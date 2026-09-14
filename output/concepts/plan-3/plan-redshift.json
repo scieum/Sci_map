@@ -1,0 +1,96 @@
+{
+  "id": "plan-redshift",
+  "concept_key": "concept:redshift",
+  "registry_status": "new",
+  "term": "적색 편이",
+  "notation": {
+    "hanja": "赤色偏移",
+    "english": "redshift",
+    "hanja_gloss": "赤 붉을 적 · 色 빛 색 · 偏 치우칠 편 · 移 옮길 이"
+  },
+  "definition": "천체의 분광선이 고유 파장보다 긴 쪽으로 밀려 나타나는 현상. 그 값으로 천체가 얼마나 멀리 있는지 가늠한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rs-dist",
+      "text": "분광선의 적색 편이가 큰 은하일수록 우리에게서 더 멀리 있다.",
+      "form": {
+        "condition": "우주 팽창에 따른 후퇴로 해석할 때",
+        "type": "direct",
+        "scope": "외부 은하",
+        "antecedent": {
+          "quantity": "적색 편이",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "은하까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「적색 편이가 클수록 더 가까이 있다」는 적색 편이로 거리를 가늠한다는 관계와 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분광선의 적색 편이가 큰 은하일수록 우리에게서 더 가까이 있다."
+    },
+    {
+      "id": "rel-rs-wave",
+      "text": "적색 편이는 관측 파장이 고유 파장보다 길어진 것이므로 그 천체가 멀어지고 있음을 뜻한다.",
+      "form": {
+        "condition": "시선 방향 운동으로 해석할 때",
+        "type": "causal",
+        "scope": "외부 은하의 분광선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「관측 파장이 짧아진 것이므로 다가오고 있음을 뜻한다」는 적색 편이의 정의와 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "적색 편이는 관측 파장이 고유 파장보다 짧아진 것이므로 그 천체가 다가오고 있음을 뜻한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "적색 편이가 나타난 은하는 실제로 붉은색 은하다",
+      "why_wrong": "은하의 색이 바뀐 것이 아니라 분광선의 위치가 긴 파장 쪽으로 밀린 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rs-wave"
+    },
+    {
+      "text": "적색 편이는 은하가 우리를 향해 다가올 때 나타난다",
+      "why_wrong": "다가오면 파장이 짧아져 청색 편이가 된다. 적색 편이는 멀어질 때 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rs-dist"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "earth-redshift",
+      "note": "「지구과학」에서 같은 concept_key 로 다룬 카드"
+    },
+    {
+      "type": "next",
+      "target": "plan-galaxy-redshift-survey"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-04-2",
+  "pages": [
+    116
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

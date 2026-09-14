@@ -1,0 +1,114 @@
+{
+  "id": "plan-supernova",
+  "concept_key": "concept:supernova",
+  "registry_status": "new",
+  "term": "초신성",
+  "notation": {
+    "hanja": "超新星",
+    "hanja_gloss": "超 뛰어넘을 초 · 新 새 신 · 星 별 성",
+    "english": "supernova"
+  },
+  "definition": "별이 일생의 끝에 이르러 터지면서 짧은 동안 엄청나게 밝아지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-supernova-peak",
+      "text": "절정에 이른 초신성 하나가 태양이 내는 빛의 100억 배쯤 되는 광도를 낸다.",
+      "form": {
+        "condition": "폭발이 절정에 이르렀을 때",
+        "type": "classification",
+        "scope": "초신성의 최대 광도"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「최대 광도가 태양과 비슷한 정도에 그친다」인데, 자릿수가 열 자리나 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "절정에 이른 초신성의 광도는 태양이 내는 빛과 비슷한 정도에 그친다."
+    },
+    {
+      "id": "rel-supernova-curve",
+      "text": "초신성은 수일 안에 20등급 이상 밝아졌다가 수년에 걸쳐 서서히 어두워진다.",
+      "form": {
+        "condition": "폭발 직후부터 이어서 관측할 때",
+        "type": "causal",
+        "scope": "초신성의 광도 곡선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 밝아지는 기간과 어두워지는 기간을 맞바꾼 것이라 관측된 곡선과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "초신성은 수년에 걸쳐 서서히 밝아졌다가 수일 만에 어두워진다."
+    },
+    {
+      "id": "rel-supernova-inference",
+      "text": "폭발로 뿜어져 나온 물질의 관측 자료에서 무거운 원소가 어디서 왔는지 추론할 수 있다.",
+      "form": {
+        "condition": "방출 물질의 관측 자료가 있을 때",
+        "type": "causal",
+        "scope": "초신성 관측으로 얻는 과학적 사실"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「방출 물질을 관측해도 무거운 원소의 기원을 추론할 수 없다」인데, 그 자료가 바로 추론의 근거이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "폭발로 뿜어져 나온 물질을 관측해도 무거운 원소가 어디서 왔는지는 추론할 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "초신성은 신성보다 조금 더 밝아지는 현상이다.",
+      "why_wrong": "증광 폭이 20등급을 넘어 신성과 견줄 수 없이 크다. 최대 광도는 태양의 100억 배에 이른다.",
+      "source": "llm",
+      "linked_relation": "rel-supernova-peak"
+    },
+    {
+      "text": "초신성은 아주 큰 별이 새로 태어나는 일이다.",
+      "why_wrong": "별이 일생의 끝에서 터지는 폭발이다. 태어남이 아니라 마감이다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-eruptive-variable-star"
+    },
+    {
+      "type": "next",
+      "target": "plan-type-ia-supernova"
+    },
+    {
+      "type": "next",
+      "target": "plan-supernova-remnant"
+    },
+    {
+      "type": "next",
+      "target": "plan-supernova-nucleosynthesis"
+    },
+    {
+      "type": "same",
+      "target": "earth-supernova",
+      "note": "「지구과학」에서는 별의 진화 쪽에서 같은 개념을 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-2",
+  "pages": [
+    79,
+    80,
+    83
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

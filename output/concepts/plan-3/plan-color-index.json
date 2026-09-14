@@ -1,0 +1,99 @@
+{
+  "id": "plan-color-index",
+  "concept_key": "concept:color-index",
+  "registry_status": "new",
+  "term": "색지수",
+  "notation": {
+    "hanja": "色指數",
+    "english": "color index",
+    "hanja_gloss": "色 빛 색 · 指 가리킬 지 · 數 셈 수",
+    "symbol_display": "B-V",
+    "symbol_plain": "B-V"
+  },
+  "definition": "이웃한 두 필터로 잰 겉보기 등급의 차이. 자외선·청색·녹색 영역의 U·B·V 등급으로 U-B, B-V 값을 만들어 별의 색을 수치로 나타낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ci-sign",
+      "text": "표면 온도가 10000 K보다 높은 별은 색지수가 (-) 값이고, 그보다 낮은 별은 (+) 값이다.",
+      "form": {
+        "condition": "U·B·V 필터로 잰 등급 차를 색지수로 삼을 때",
+        "type": "conditional",
+        "scope": "성간 적색화를 보정한 별빛"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 부호를 맞바꾼 것이라 색지수가 0인 기준 온도 10000 K와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 온도가 10000 K보다 높은 별은 색지수가 (+) 값이고, 그보다 낮은 별은 (-) 값이다."
+    },
+    {
+      "id": "rel-ci-temp",
+      "text": "표면 온도가 높은 별일수록 청색 파장 쪽으로 에너지를 많이 내놓아 색지수가 작아진다.",
+      "form": {
+        "condition": "별빛이 성간 티끌에 붉어지지 않았을 때",
+        "type": "inverse",
+        "scope": "주계열성을 비롯한 보통의 별",
+        "antecedent": {
+          "quantity": "별의 표면 온도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "색지수",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「표면 온도가 높을수록 색지수가 커진다」는 뜨거운 별이 파란 쪽에서 더 밝다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "표면 온도가 높은 별일수록 청색 파장 쪽으로 에너지를 많이 내놓지만 색지수는 커진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "색지수가 큰 별일수록 표면 온도가 높은 뜨거운 별이다",
+      "why_wrong": "거꾸로다. 색지수가 클수록 붉고 차가운 별이다. 색지수가 (-)인 쪽이 표면 온도가 높다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ci-temp"
+    },
+    {
+      "text": "색지수는 한 필터로 잰 밝기 그 자체다",
+      "why_wrong": "색지수는 밝기가 아니라 이웃한 두 필터 등급의 차다. 한 필터만으로는 구할 수 없다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-color-magnitude-diagram"
+    },
+    {
+      "type": "next",
+      "target": "plan-color-excess"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-1",
+  "pages": [
+    95
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — 색지수가 두 필터 등급의 차라는 정의에 대한 오개념이라 반박할 명제가 없어 linked_relation 을 비웠다."
+  ]
+}

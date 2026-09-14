@@ -1,0 +1,93 @@
+{
+  "id": "plan-solar-differential-rotation",
+  "concept_key": "concept:solar-differential-rotation",
+  "registry_status": "new",
+  "term": "태양의 차등 자전",
+  "notation": {
+    "hanja": "差等自轉",
+    "hanja_gloss": "差 다를 차 · 等 무리 등 · 自 스스로 자 · 轉 구를 전",
+    "english": "differential rotation"
+  },
+  "definition": "태양이 부분마다 서로 다른 주기로 도는 자전.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-diff-latitude",
+      "text": "위도가 높아질수록 태양의 자전 주기는 길어진다.",
+      "form": {
+        "condition": "흑점 이동으로 위도별 주기를 견줄 때",
+        "type": "direct",
+        "scope": "태양 표면의 위도별 자전",
+        "antecedent": {
+          "quantity": "위도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "자전 주기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「고위도로 갈수록 자전 주기가 짧아진다」인데, 적도 25일보다 고위도가 길다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위도가 높아질수록 태양의 자전 주기는 짧아진다."
+    },
+    {
+      "id": "rel-diff-gas",
+      "text": "부분마다 자전 주기가 다르다는 사실은 태양이 굳은 고체가 아니라 기체로 되어 있음을 말해 준다.",
+      "form": {
+        "condition": "차등 자전이 관측될 때",
+        "type": "causal",
+        "scope": "태양의 구성 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「차등 자전이 태양이 고체임을 말해 준다」인데, 고체는 부분마다 다른 주기로 돌 수 없어 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "부분마다 자전 주기가 다르다는 사실은 태양이 고체로 되어 있음을 말해 준다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양은 지구처럼 전체가 한 덩어리로 같은 주기로 돈다.",
+      "why_wrong": "적도와 고위도의 자전 주기가 다르다. 굳은 덩어리가 아니라 기체이기 때문에 가능한 일이다.",
+      "source": "llm",
+      "linked_relation": "rel-diff-latitude"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-solar-rotation-period-measurement"
+    },
+    {
+      "type": "related",
+      "target": "plan-sunspot",
+      "note": "차등 자전을 알아내는 표지가 흑점이다"
+    },
+    {
+      "type": "related",
+      "target": "plan-photosphere",
+      "note": "자전 주기를 재는 면이 광구다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-2",
+  "pages": [
+    59,
+    61
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

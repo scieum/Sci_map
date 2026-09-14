@@ -1,0 +1,114 @@
+{
+  "id": "plan-near-earth-object",
+  "concept_key": "concept:near-earth-object",
+  "registry_status": "new",
+  "term": "지구 접근 천체",
+  "notation": {
+    "hanja": "地球接近天體",
+    "english": "near-Earth object",
+    "hanja_gloss": "地 땅 지 · 球 공 구 · 接 이을 접 · 近 가까울 근 · 天 하늘 천 · 體 몸 체"
+  },
+  "definition": "공전 궤도가 지구 궤도 가까이까지 들어오는 소행성과 혜성. 크기가 작아 지구 곁을 지날 때 대기권으로 끌려들기도 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-neo-criterion",
+      "text": "지구 최접근 거리가 0.05 AU보다 가깝고 크기가 150 m를 넘는 소행성을 지구 위협 소행성으로 가른다.",
+      "form": {
+        "condition": "거리와 크기 두 기준을 함께 볼 때",
+        "type": "classification",
+        "scope": "지구 위협 소행성을 가르는 기준"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「최접근 거리가 0.05 AU보다 멀고 크기가 150 m보다 작은 소행성을 지구 위협 소행성이라 한다」는 기준의 부등호를 뒤집은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지구 최접근 거리가 0.05 AU보다 멀고 크기가 150 m보다 작은 소행성을 지구 위협 소행성으로 가른다."
+    },
+    {
+      "id": "rel-neo-unnoticed",
+      "text": "2013년 우랄산맥 부근에 떨어진 지름 약 18 m 운석은 대기권에 들어오기 전까지 존재조차 알려지지 않았다.",
+      "form": {
+        "condition": "작은 천체가 감시망에 걸리지 않은 채 다가올 때",
+        "type": "conditional",
+        "scope": "2013년 첼랴빈스크 낙하 사례"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「들어오기 훨씬 전부터 알려져 있었다」는 대기권 돌입 전까지 존재를 알 수 없었다는 19쪽 서술과 정면으로 어긋나 반드시 거짓이다.",
+      "inverted_text": "2013년 우랄산맥 부근에 떨어진 지름 약 18 m 운석은 대기권에 들어오기 훨씬 전부터 존재가 알려져 있었다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-neo-perihelion",
+      "text": "근일점이 약 1.3 AU 안쪽이어서 지구와 가깝게 공전하는 소행성을 근지구 소행성이라고 한다.",
+      "form": {
+        "condition": "근일점 거리를 기준으로 삼을 때",
+        "type": "classification",
+        "scope": "소행성을 궤도로 나눌 때"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「근일점이 1.3 AU 바깥이어서 지구와 멀리 떨어져 공전하는 소행성을 근지구 소행성이라 한다」는 기준을 거꾸로 놓은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "근일점이 약 1.3 AU 바깥이어서 지구와 멀리 떨어져 공전하는 소행성을 근지구 소행성이라고 한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "지구 접근 천체는 결국 지구와 충돌한다",
+      "why_wrong": "궤도가 지구 궤도 가까이 올 뿐이며, 감시로 충돌 확률을 계산해 대비한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neo-criterion"
+    },
+    {
+      "text": "지구에 다가오는 천체는 언제나 미리 발견된다",
+      "why_wrong": "2013년 우랄산맥 부근에 떨어진 지름 약 18 m 운석처럼 대기권에 들어오기 전까지 존재를 몰랐던 사례가 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neo-unnoticed"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-asteroid"
+    },
+    {
+      "type": "next",
+      "target": "plan-space-hazard"
+    },
+    {
+      "type": "next",
+      "target": "plan-space-object-surveillance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02",
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    19,
+    22,
+    32
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "근지구 소행성",
+    "지구 위협 소행성"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "plan-distance-modulus-of-star-cluster",
+  "concept_key": "concept:distance-modulus",
+  "registry_status": "new",
+  "term": "거리 지수",
+  "notation": {
+    "hanja": "距離指數",
+    "english": "distance modulus",
+    "hanja_gloss": "距 떨어질 거 · 離 떠날 리 · 指 가리킬 지 · 數 셈 수",
+    "symbol_display": "m − M",
+    "symbol_plain": "m - M"
+  },
+  "definition": "겉보기 등급에서 절대 등급을 뺀 값. 이 값 하나만 알면 천체까지의 거리를 환산해 낼 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dm-far",
+      "text": "거리 지수가 큰 천체일수록 우리에게서 멀리 있다.",
+      "form": {
+        "condition": "성간 소광을 보정했을 때",
+        "type": "direct",
+        "scope": "거리 지수로 거리를 구하는 천체",
+        "antecedent": {
+          "quantity": "거리 지수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "천체까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「거리 지수가 클수록 가까이 있다」는 등급 차가 거리에 따라 커진다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리 지수가 큰 천체일수록 우리에게서 가까이 있다."
+    },
+    {
+      "id": "rel-dm-zero",
+      "text": "거리 지수가 0인 천체는 절대 등급을 정의하는 기준 거리에 놓여 있다.",
+      "form": {
+        "condition": "겉보기 등급과 절대 등급이 같을 때",
+        "type": "conditional",
+        "scope": "거리 지수로 거리를 구하는 천체"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 기준 거리에 있는 천체를 아주 먼 천체로 바꿔 놓은 것이라, 두 등급이 같다는 조건과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리 지수가 0인 천체는 기준 거리보다 훨씬 먼 곳에 놓여 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "거리 지수는 절대 등급에서 겉보기 등급을 뺀 값이다",
+      "why_wrong": "빼는 순서가 반대다. 겉보기 등급에서 절대 등급을 뺀다. 순서를 뒤집으면 먼 천체일수록 값이 작아진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dm-far"
+    },
+    {
+      "text": "거리 지수가 0이면 그 별은 우리 눈에 보이지 않을 만큼 멀다",
+      "why_wrong": "거리 지수가 0이라는 것은 겉보기 등급과 절대 등급이 같다는 뜻으로, 절대 등급을 정의하는 기준 거리에 있다는 말이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dm-zero"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-apparent-and-absolute-magnitude"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-extinction"
+    },
+    {
+      "type": "next",
+      "target": "plan-main-sequence-fitting"
+    },
+    {
+      "type": "next",
+      "target": "plan-period-luminosity-relation"
+    },
+    {
+      "type": "same",
+      "target": "plan-distance-modulus",
+      "note": "「행성우주과학」 plan-2 가 별의 거리 측정 쪽에서 먼저 세운 같은 개념 카드"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-2",
+  "pages": [
+    97,
+    98
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "id 가 plan-2 의 'plan-distance-modulus' 와 부딪혀 이 단원의 맥락(성단까지의 거리)을 접미사로 붙였다. concept_key 는 그대로 두고 same 으로 이었다.",
+    "C6 — rel-dm-ext 는 plan-interstellar-extinction/rel-ext-dist 와 겹쳐(중복 명제군) 성간 소광 카드에 넘기고, 이 카드는 거리 지수 0 의 뜻을 묻는 rel-dm-zero 를 맡는다."
+  ]
+}

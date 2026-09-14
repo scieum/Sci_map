@@ -1,0 +1,103 @@
+{
+  "id": "plan-stellar-population",
+  "concept_key": "concept:stellar-population",
+  "registry_status": "new",
+  "term": "종족 Ⅰ 별과 종족 Ⅱ 별",
+  "notation": {
+    "hanja": "種族",
+    "english": "stellar population I and II",
+    "hanja_gloss": "種 씨 종 · 族 겨레 족"
+  },
+  "definition": "별을 태어난 시기와 무거운 원소 함량으로 가른 두 무리. 원반에서 나중에 태어난 젊은 쪽이 종족 Ⅰ, 은하가 생겨날 때 함께 태어나 팽대부와 헤일로에 남은 늙은 쪽이 종족 Ⅱ다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sp-where",
+      "text": "종족 Ⅰ 별은 은하 원반 쪽에, 종족 Ⅱ 별은 팽대부와 헤일로 쪽에 주로 놓인다.",
+      "form": {
+        "condition": "우리은하의 별을 나이로 갈라 볼 때",
+        "type": "classification",
+        "scope": "우리은하에 속한 별",
+        "antecedent": {
+          "quantity": "별의 종족",
+          "direction": "해당 없음"
+        },
+        "consequent": {
+          "quantity": "은하 안의 분포 영역",
+          "direction": "해당 없음"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「종족 Ⅰ 별은 팽대부와 헤일로에, 종족 Ⅱ 별은 원반에 주로 놓인다」는 두 이름을 맞바꾼 것이라 교과서 서술과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "종족 Ⅰ 별은 팽대부와 헤일로 쪽에, 종족 Ⅱ 별은 은하 원반 쪽에 주로 놓인다."
+    },
+    {
+      "id": "rel-sp-metal",
+      "text": "이전 세대 별이 남긴 무거운 원소를 많이 품은 별일수록 나중에 태어난 종족 Ⅰ에 가깝다.",
+      "form": {
+        "condition": "같은 은하 안에서 별의 화학 조성을 견줄 때",
+        "type": "direct",
+        "scope": "우리은하의 별",
+        "antecedent": {
+          "quantity": "무거운 원소 함량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "별이 태어난 시기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「무거운 원소를 많이 품은 별일수록 먼저 태어난 종족 Ⅱ에 가깝다」는 무거운 원소가 이전 세대 별에서 나온다는 순서를 거꾸로 놓은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무거운 원소를 많이 품은 별일수록 먼저 태어난 종족 Ⅱ에 가깝다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "종족 Ⅰ이 먼저 태어난 늙은 별이고 종족 Ⅱ가 나중에 태어난 젊은 별이다",
+      "why_wrong": "번호 순서와 나이 순서가 반대다. 종족 Ⅱ가 은하 생성기에 태어난 늙은 별이고, 종족 Ⅰ은 그 뒤 원반에서 태어난 젊은 별이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sp-where"
+    },
+    {
+      "text": "한 은하 안의 별들은 모두 비슷한 시기에 태어나 나이가 같다",
+      "why_wrong": "우리은하에 속한 별들의 나이는 매우 다양하다. 그래서 분포 영역과 무거운 원소 함량으로 종족을 갈라 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sp-metal"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-open-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-globular-cluster"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-1",
+  "pages": [
+    94
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

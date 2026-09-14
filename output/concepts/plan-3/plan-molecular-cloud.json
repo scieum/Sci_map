@@ -1,0 +1,91 @@
+{
+  "id": "plan-molecular-cloud",
+  "concept_key": "concept:molecular-cloud",
+  "registry_status": "new",
+  "term": "분자 구름",
+  "notation": {
+    "hanja": "分子",
+    "english": "molecular cloud",
+    "hanja_gloss": "分 나눌 분 · 子 아들 자",
+    "hanja_note": "'구름'은 고유어여서 한자가 없다. 한자는 '분자' 쪽만 적었다."
+  },
+  "definition": "온도가 약 10 K로 차갑고 밀도가 높아 수소가 분자 상태로 있는 성간 구름. 새로운 별이 태어나는 자리다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mc-collapse",
+      "text": "분자 구름에서 별이 태어나는 것은 온도가 낮아 기체 압력이 약하고 밀도가 높아 중력이 이기기 때문이다.",
+      "form": {
+        "condition": "중력과 기체 압력의 겨룸을 볼 때",
+        "type": "causal",
+        "scope": "분자 구름 속의 중력 수축"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 온도와 밀도의 구실을 맞바꾼 것이라, 약 10 K의 차갑고 조밀한 구름이라는 조건과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "분자 구름에서 별이 태어나는 것은 온도가 높아 기체 압력이 세고 밀도가 낮아 중력이 약하기 때문이다."
+    },
+    {
+      "id": "rel-mc-cold",
+      "text": "성간 물질 세 가지 가운데 분자 구름이 온도가 가장 낮고 밀도가 가장 높다.",
+      "form": {
+        "condition": "중성수소 영역·전리수소 영역과 나란히 견줄 때",
+        "type": "classification",
+        "scope": "수소의 상태에 따른 성간 물질 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「분자 구름이 온도가 가장 높고 밀도가 가장 낮다」는 약 10 K의 차갑고 조밀한 구름이라는 성질과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성간 물질 세 가지 가운데 분자 구름이 온도가 가장 높고 밀도가 가장 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "온도가 약 100 K인 중성수소 구름에서 새 별이 태어난다",
+      "why_wrong": "별이 태어나는 곳은 그보다 훨씬 차갑고 조밀한, 약 10 K의 분자 구름이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mc-collapse"
+    },
+    {
+      "text": "분자 구름은 온도가 낮으므로 밀도도 낮다",
+      "why_wrong": "온도가 낮은 대신 밀도는 오히려 높다. 차갑고 조밀하기에 중력으로 수축해 별이 될 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mc-cold"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-matter"
+    },
+    {
+      "type": "next",
+      "target": "plan-dark-nebula"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    102
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — 오개념 두 건의 linked_relation 이 서로 맞바뀌어 있어 바로잡았다. rel-mc-birth 는 definition 되풀이라 중력 수축 조건을 묻는 rel-mc-collapse 로 갈아 세웠다."
+  ]
+}

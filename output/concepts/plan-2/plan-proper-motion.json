@@ -1,0 +1,115 @@
+{
+  "id": "plan-proper-motion",
+  "concept_key": "concept:proper-motion",
+  "registry_status": "new",
+  "term": "고유 운동",
+  "notation": {
+    "hanja": "固有運動",
+    "hanja_gloss": "固 굳을 고 · 有 있을 유 · 運 옮길 운 · 動 움직일 동",
+    "english": "proper motion",
+    "symbol_display": "μ(″/년)",
+    "symbol_plain": "mu (arcsec/yr)"
+  },
+  "definition": "별이 천구상에서 1년 동안 움직인 각거리.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pm-tangential-only",
+      "text": "고유 운동에 드러나는 것은 공간 운동 가운데 접선 방향 성분뿐이다.",
+      "form": {
+        "condition": "천구상의 위치 변화를 관측할 때",
+        "type": "classification",
+        "scope": "별의 공간 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「고유 운동에 시선 방향 성분이 드러난다」인데, 시선 방향 운동은 천구상 위치를 바꾸지 않아 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고유 운동에는 공간 운동 가운데 시선 방향 성분이 드러난다."
+    },
+    {
+      "id": "rel-pm-distance",
+      "text": "접선 속도가 같다면 가까이 있는 별일수록 고유 운동이 크게 나타난다.",
+      "form": {
+        "condition": "두 별의 접선 속도가 서로 같음",
+        "type": "inverse",
+        "scope": "접선 속도가 같은 별끼리 견줄 때",
+        "antecedent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "고유 운동",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「접선 속도가 같으면 멀리 있는 별일수록 고유 운동이 크다」인데, 같은 거리 이동도 멀면 작은 각으로 보이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "접선 속도가 같다면 멀리 있는 별일수록 고유 운동이 크게 나타난다."
+    },
+    {
+      "id": "rel-pm-long-baseline",
+      "text": "고유 운동은 대체로 매우 작아서 수십 년 간격을 두고 관측해야 알아볼 수 있다.",
+      "form": {
+        "condition": "보통의 별을 천구상에서 관측할 때",
+        "type": "causal",
+        "scope": "천구상 위치 변화 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「며칠만 관측해도 고유 운동을 알아본다」인데, 1년에 1″도 되지 않는 별이 대부분이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고유 운동은 커서 며칠만 관측해도 알아볼 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고유 운동이 큰 별이 실제로 가장 빠르게 움직이는 별이다.",
+      "why_wrong": "가까이 있으면 같은 속도라도 각이 크게 보인다. 실제 속도를 알려면 거리도 함께 알아야 한다.",
+      "source": "llm",
+      "linked_relation": "rel-pm-distance"
+    },
+    {
+      "text": "고유 운동이 0인 별은 움직이지 않는 별이다.",
+      "why_wrong": "시선 방향으로만 움직이면 천구상 위치가 그대로라 고유 운동이 0에 가깝다. 그래도 별은 움직이고 있다.",
+      "source": "llm",
+      "linked_relation": "rel-pm-tangential-only"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-space-motion"
+    },
+    {
+      "type": "next",
+      "target": "plan-tangential-velocity"
+    },
+    {
+      "type": "next",
+      "target": "plan-constellation-shape-change"
+    }
+  ],
+  "curriculum": [
+    "12행우02-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-3",
+  "pages": [
+    67,
+    69
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

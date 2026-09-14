@@ -1,0 +1,107 @@
+{
+  "id": "plan-natural-satellite",
+  "concept_key": "concept:natural-satellite",
+  "registry_status": "new",
+  "term": "위성",
+  "notation": {
+    "hanja": "衛星",
+    "english": "natural satellite",
+    "hanja_gloss": "衛 지킬 위 · 星 별 성"
+  },
+  "definition": "행성 둘레를 도는 자연 천체. 지구의 달이 그 예이며 수성과 금성은 위성을 거느리지 않는다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ns-count",
+      "text": "목성형 행성은 지구나 화성에 견주어 훨씬 많은 위성을 거느린다.",
+      "form": {
+        "condition": "행성 유형별로 위성 수를 견줄 때",
+        "type": "classification",
+        "scope": "태양계 여덟 행성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「목성형 행성이 지구나 화성보다 위성을 적게 거느린다」는 수십 개의 위성을 갖는다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "목성형 행성은 지구나 화성보다 위성을 적게 거느린다."
+    },
+    {
+      "id": "rel-ns-none",
+      "text": "수성과 금성은 위성을 거느리지 않아, 모든 행성이 위성을 갖는 것은 아니다.",
+      "form": {
+        "condition": "태양계 여덟 행성을 모두 볼 때",
+        "type": "conditional",
+        "scope": "태양계 행성의 위성 유무"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양계의 모든 행성은 적어도 하나의 위성을 거느린다」는 수성·금성에 위성이 없다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양계의 모든 행성은 적어도 하나의 위성을 거느린다."
+    },
+    {
+      "id": "rel-ns-kepler",
+      "text": "위성도 행성의 중력에 묶여 돌기 때문에 한 행성의 위성계 안에서 조화 법칙이 성립한다.",
+      "form": {
+        "condition": "한 행성을 도는 위성끼리 견줄 때",
+        "type": "conditional",
+        "scope": "행성의 위성계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「위성계 안에서는 조화 법칙이 성립하지 않는다」는 위성과 고리에도 적용된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "위성은 행성의 중력에 묶여 돌지만 한 행성의 위성계 안에서는 조화 법칙이 성립하지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "인공위성도 위성이므로 둘은 같은 것이다",
+      "why_wrong": "위성은 행성 둘레를 도는 자연 천체이고 인공위성은 사람이 쏘아 올린 물체다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "태양계의 모든 행성은 위성을 가진다",
+      "why_wrong": "수성과 금성에는 위성이 없다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-ns-none"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-composition-of-solar-system"
+    },
+    {
+      "type": "related",
+      "target": "plan-definition-of-planet"
+    },
+    {
+      "type": "related",
+      "target": "plan-kepler-third-law"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-1",
+  "pages": [
+    30,
+    39
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

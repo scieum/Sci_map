@@ -1,0 +1,123 @@
+{
+  "id": "plan-mass-luminosity-relation",
+  "concept_key": "concept:mass-luminosity-relation",
+  "registry_status": "new",
+  "term": "주계열성의 질량 - 광도 관계",
+  "notation": {
+    "hanja": "主系列星質量光度關係",
+    "hanja_gloss": "主 주인 주 · 系 이어맬 계 · 列 벌일 렬 · 星 별 성 · 質 바탕 질 · 量 헤아릴 량 · 光 빛 광 · 度 법도 도 · 關 관계할 관 · 係 맬 계",
+    "english": "mass-luminosity relation",
+    "symbol_display": "L ∝ M^(2.3~4)",
+    "symbol_plain": "L = k M^(2.3-4)"
+  },
+  "definition": "주계열성의 질량과 광도 사이에 성립하는 관계. 별의 질량을 어림하는 잣대로 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ml-proportional",
+      "text": "주계열성은 질량이 큰 별일수록 광도가 크며, 광도는 질량의 2.3~4제곱에 비례한다.",
+      "form": {
+        "condition": "주계열 단계에 있는 별",
+        "type": "direct",
+        "scope": "주계열성",
+        "antecedent": {
+          "quantity": "별의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "광도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「질량이 큰 별일수록 광도가 작다」인데, 그래프가 오른쪽 위로 오르므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주계열성은 질량이 큰 별일수록 광도가 작다."
+    },
+    {
+      "id": "rel-ml-from-binary",
+      "text": "이 관계는 케플러 제3법칙으로 질량을 구한 쌍성 가운데 주계열성을 골라 광도와 견주어 얻은 것이다.",
+      "form": {
+        "condition": "질량을 직접 구할 수 있는 쌍성 자료를 쓸 때",
+        "type": "causal",
+        "scope": "주계열성의 질량-광도 자료"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「질량을 직접 잴 수 없는 홑별만 견주어 얻었다」인데, 질량을 아는 별이 있어야 관계가 세워지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 관계는 질량을 직접 잴 수 없는 홑별만을 견주어 얻은 것이다."
+    },
+    {
+      "id": "rel-ml-only-main-sequence",
+      "text": "이 관계는 주계열성에만 성립하므로 거성이나 백색왜성에 그대로 가져다 쓸 수 없다.",
+      "form": {
+        "condition": "주계열을 벗어난 별에 적용하려 할 때",
+        "type": "classification",
+        "scope": "주계열 밖의 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「거성이나 백색왜성에도 그대로 쓸 수 있다」인데, 주계열성에서 얻은 관계이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 관계는 거성이나 백색왜성에도 그대로 가져다 쓸 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량과 광도가 비례하므로 질량이 2배이면 광도도 2배다.",
+      "why_wrong": "제곱이 2.3~4이므로 질량이 2배이면 광도는 5배가 넘는다. 단순 비례가 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-ml-proportional"
+    },
+    {
+      "text": "광도만 재면 어떤 별이든 질량을 알 수 있다.",
+      "why_wrong": "이 관계는 주계열성에서만 성립한다. 거성이나 백색왜성에는 쓸 수 없다.",
+      "source": "llm",
+      "linked_relation": "rel-ml-only-main-sequence"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-binary-star-mass"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-main-sequence-star"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-luminosity"
+    },
+    {
+      "type": "next",
+      "target": "plan-mass-of-single-star"
+    },
+    {
+      "type": "next",
+      "target": "plan-main-sequence-lifetime"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-2",
+  "pages": [
+    75,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

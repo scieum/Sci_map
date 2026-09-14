@@ -1,0 +1,92 @@
+{
+  "id": "plan-ionized-hydrogen-region",
+  "concept_key": "concept:ionized-hydrogen-region",
+  "registry_status": "new",
+  "term": "전리수소 영역(HⅡ 영역)",
+  "notation": {
+    "hanja": "電離水素領域",
+    "english": "ionized hydrogen region",
+    "hanja_gloss": "電 번개 전 · 離 떠날 리 · 水 물 수 · 素 본디 소 · 領 거느릴 령 · 域 지경 역",
+    "symbol_display": "HⅡ",
+    "symbol_plain": "H II"
+  },
+  "definition": "온도가 약 1만 K로 높고 밀도는 낮으며 수소가 이온화되어 있는 성간 영역.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-hii-uv",
+      "text": "갓 태어난 O·B형 별이 내놓는 강한 자외선이 둘레의 수소 구름을 이온화해 이 영역을 만든다.",
+      "form": {
+        "condition": "가까이에 젊고 밝은 별이 있을 때",
+        "type": "causal",
+        "scope": "전리수소 영역의 형성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「자외선이 둘레의 수소를 중성 상태로 되돌려 전리수소 영역을 없앤다」는 이온화가 이 영역을 만든다는 사실과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "갓 태어난 O·B형 별의 강한 자외선이 둘레의 수소를 중성 상태로 되돌려 전리수소 영역을 없앤다."
+    },
+    {
+      "id": "rel-hii-hot",
+      "text": "성간 물질 세 가지 가운데 전리수소 영역이 온도가 가장 높다.",
+      "form": {
+        "condition": "분자 구름·중성수소 영역과 나란히 견줄 때",
+        "type": "classification",
+        "scope": "성간 물질의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「전리수소 영역이 온도가 가장 낮다」는 약 1만 K라는 값과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성간 물질 세 가지 가운데 전리수소 영역이 온도가 가장 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "전리수소 영역은 뜨거우므로 밀도도 가장 높다",
+      "why_wrong": "온도는 약 1만 K로 가장 높지만 밀도는 낮다. 밀도가 높은 쪽은 차가운 분자 구름이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hii-hot"
+    },
+    {
+      "text": "수소는 태양처럼 늙은 별 곁에서 주로 이온화된다",
+      "why_wrong": "이온화를 일으키는 것은 태어난 지 얼마 안 된 젊고 뜨거운 O·B형 별의 강한 자외선이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-hii-uv"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-matter"
+    },
+    {
+      "type": "next",
+      "target": "plan-emission-nebula"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "HII 영역"
+  ]
+}

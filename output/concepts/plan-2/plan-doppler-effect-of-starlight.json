@@ -1,0 +1,124 @@
+{
+  "id": "plan-doppler-effect-of-starlight",
+  "concept_key": "concept:doppler-effect",
+  "registry_status": "new",
+  "term": "도플러 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "오스트리아 물리학자 도플러의 이름을 딴 음차어라 표제어에 대응하는 한자어가 없다. '효과(效果)'만 한자어다.",
+    "english": "Doppler effect"
+  },
+  "definition": "파동을 내는 것과 관측자 사이에 상대 운동이 있을 때, 관측되는 파장이 본디 파장과 달라지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dop-approach",
+      "text": "파동의 발생원과 관측자 사이의 거리가 줄어드는 동안에는 관측되는 파장이 짧아진다.",
+      "form": {
+        "condition": "발생원과 관측자 사이 거리가 줄어드는 동안",
+        "type": "causal",
+        "scope": "파동 일반",
+        "antecedent": {
+          "quantity": "발생원과 관측자 사이 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "관측되는 파장",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「다가오는 동안 파장이 길어진다」인데, 다가올 때는 파장이 반드시 짧아지므로 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파동의 발생원과 관측자 사이의 거리가 줄어드는 동안에는 관측되는 파장이 길어진다."
+    },
+    {
+      "id": "rel-dop-recede",
+      "text": "파동의 발생원과 관측자 사이의 거리가 늘어나는 동안에는 관측되는 파장이 길어진다.",
+      "form": {
+        "condition": "발생원과 관측자 사이 거리가 늘어나는 동안",
+        "type": "causal",
+        "scope": "파동 일반",
+        "antecedent": {
+          "quantity": "발생원과 관측자 사이 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "관측되는 파장",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「멀어지는 동안 파장이 짧아진다」인데, 멀어질 때는 파장이 반드시 길어지므로 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파동의 발생원과 관측자 사이의 거리가 늘어나는 동안에는 관측되는 파장이 짧아진다."
+    },
+    {
+      "id": "rel-dop-starlight",
+      "text": "별과 관측자 사이에 시선 방향 상대 운동이 있으면 별빛 스펙트럼의 흡수선 위치도 밀린다.",
+      "form": {
+        "condition": "별과 관측자 사이에 시선 방향 상대 운동이 있을 때",
+        "type": "conditional",
+        "scope": "별빛 스펙트럼"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「상대 운동이 있어도 흡수선 위치가 밀리지 않는다」인데, 별빛에서도 도플러 효과가 나타나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별과 관측자 사이에 시선 방향 상대 운동이 있어도 별빛 흡수선의 위치는 밀리지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "도플러 효과는 소리에서만 나타나는 현상이다.",
+      "why_wrong": "빛을 비롯한 전자기파에서도 나타난다. 별의 시선 속도를 재는 근거가 바로 이것이다.",
+      "source": "llm",
+      "linked_relation": "rel-dop-starlight"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-redshift-and-blueshift"
+    },
+    {
+      "type": "same",
+      "target": "mech-doppler-effect",
+      "note": "「역학과 에너지」에서 소리로 배운 것을 별빛에 적용한다"
+    },
+    {
+      "type": "related",
+      "target": "plan-radial-velocity",
+      "note": "이 현상으로 시선 속도를 잰다"
+    },
+    {
+      "type": "same",
+      "target": "plan-doppler-effect",
+      "note": "「Ⅰ. 태양계와 외계 행성계」에서 시선 속도 탐사 쪽으로 먼저 다룬 같은 개념이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-3",
+  "pages": [
+    68
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "id 가 plan-1 의 「도플러 효과」 카드와 부딪혀 이 단원의 맥락(별빛 스펙트럼)을 접미사로 붙였다. concept_key 는 그대로 공유한다 — 같은 개념이므로 키를 가르지 않는다."
+  ]
+}

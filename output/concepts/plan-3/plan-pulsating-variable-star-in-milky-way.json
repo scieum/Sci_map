@@ -1,0 +1,96 @@
+{
+  "id": "plan-pulsating-variable-star-in-milky-way",
+  "concept_key": "concept:pulsating-variable-star",
+  "registry_status": "new",
+  "term": "맥동 변광성",
+  "notation": {
+    "hanja": "脈動變光星",
+    "english": "pulsating variable star",
+    "hanja_gloss": "脈 맥 맥 · 動 움직일 동 · 變 변할 변 · 光 빛 광 · 星 별 성"
+  },
+  "definition": "내부가 불안정해 팽창과 수축을 되풀이하면서 밝기가 주기적으로 오르내리는 별.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pv-period-magnitude",
+      "text": "맥동 변광성에서 변광 주기로 얻는 것은 절대 등급이고, 관측으로 따로 얻어야 하는 것은 평균 겉보기 등급이다.",
+      "form": {
+        "condition": "광도 곡선을 그려 주기와 평균 밝기를 읽을 때",
+        "type": "causal",
+        "scope": "맥동 변광성으로 거리를 구하는 절차"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 등급이 어디서 오는지를 맞바꾼 것이라, 주기에서 절대 등급이 나오고 겉보기 등급은 관측으로만 얻는다는 절차와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "맥동 변광성에서 변광 주기로 얻는 것은 평균 겉보기 등급이고, 관측으로 따로 얻어야 하는 것은 절대 등급이다."
+    },
+    {
+      "id": "rel-pv-kinds",
+      "text": "세페이드 변광성과 거문고자리 RR형 변광성은 모두 맥동 변광성에 든다.",
+      "form": {
+        "condition": "변광의 원인으로 변광성을 가를 때",
+        "type": "classification",
+        "scope": "우리은하에서 관측되는 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 변광의 원인을 맥동에서 식으로 바꿔 놓은 것이라, 두 별이 스스로 팽창·수축한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세페이드 변광성과 거문고자리 RR형 변광성은 다른 별이 앞을 가려 어두워지는 식변광성이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "맥동 변광성의 밝기가 변하는 것은 다른 별이 앞을 가리기 때문이다",
+      "why_wrong": "가려서 어두워지는 것은 식변광성이다. 맥동 변광성은 별 자신이 부풀었다 오므라들며 밝기가 변한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pv-period-magnitude"
+    },
+    {
+      "text": "맥동 변광성은 밝기가 불규칙하게 아무렇게나 변한다",
+      "why_wrong": "일정한 변광 주기를 갖고 되풀이해 변한다. 그 주기를 잴 수 있기에 거리 측정에 쓸 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pv-kinds"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-cepheid-variable"
+    },
+    {
+      "type": "next",
+      "target": "plan-rr-lyrae-variable"
+    },
+    {
+      "type": "same",
+      "target": "plan-pulsating-variable-star",
+      "note": "「행성우주과학」 plan-2 가 변광성 쪽에서 먼저 세운 같은 개념 카드"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-3",
+  "pages": [
+    98
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "id 가 plan-2 의 'plan-pulsating-variable-star' 와 부딪혀 이 단원의 맥락(우리은하의 규모 추론)을 접미사로 붙였다. concept_key 는 그대로 두고 same 으로 이었다.",
+    "C6 — rel-pv-cause 는 definition 을 그대로 편 것이라(어절 겹침 0.78) 거리 측정 절차를 묻는 rel-pv-period-magnitude 로 갈아 세웠다."
+  ]
+}

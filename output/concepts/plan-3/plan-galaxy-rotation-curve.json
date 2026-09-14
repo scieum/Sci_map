@@ -1,0 +1,114 @@
+{
+  "id": "plan-galaxy-rotation-curve",
+  "concept_key": "concept:galaxy-rotation-curve",
+  "registry_status": "new",
+  "term": "은하 회전 속도 곡선",
+  "notation": {
+    "hanja": "銀河回轉速度曲線",
+    "english": "galaxy rotation curve",
+    "hanja_gloss": "銀 은 은 · 河 물 하 · 回 돌 회 · 轉 구를 전 · 速 빠를 속 · 度 법도 도 · 曲 굽을 곡 · 線 줄 선"
+  },
+  "definition": "은하 중심으로부터의 거리에 따라 그 자리의 천체가 얼마나 빠르게 도는지를 나타낸 그래프.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-grc-bulge",
+      "text": "우리은하 팽대부에서는 중심에서 멀어질수록 회전 속도가 고르게 커지는 강체 회전이 나타난다.",
+      "form": {
+        "condition": "중심에서 0.5 kpc 안쪽을 볼 때",
+        "type": "direct",
+        "scope": "우리은하 팽대부",
+        "antecedent": {
+          "quantity": "은하 중심으로부터의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "회전 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「팽대부에서는 멀어질수록 회전 속도가 고르게 줄어든다」는 강체 회전에서 속도가 거리에 비례한다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우리은하 팽대부에서는 중심에서 멀어질수록 회전 속도가 고르게 줄어든다."
+    },
+    {
+      "id": "rel-grc-flat",
+      "text": "은하 외곽에서는 중심에서 멀어져도 회전 속도가 거의 줄지 않는다.",
+      "form": {
+        "condition": "나선 은하의 바깥쪽을 관측할 때",
+        "type": "conditional",
+        "scope": "우리은하와 다른 나선 은하의 외곽"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「외곽에서는 멀어질수록 회전 속도가 뚜렷이 줄어든다」는 실제 회전 속도 곡선이 평평하다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하 외곽에서는 중심에서 멀어질수록 회전 속도가 뚜렷이 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "은하 회전 속도 곡선은 바깥으로 갈수록 케플러 회전처럼 내려간다",
+      "why_wrong": "실제 관측은 그렇지 않다. 외곽에서도 속도가 거의 일정해, 보이지 않는 질량이 있음을 알려 준다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-grc-flat"
+    },
+    {
+      "text": "회전 속도 곡선은 눈에 보이는 별만 관측해 그린 것이다",
+      "why_wrong": "멀리까지 그릴 수 있는 까닭은 21 cm 수소선으로 중성수소 구름의 시선 속도를 잴 수 있기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-radial-velocity-of-hydrogen-cloud"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-differential-rotation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-keplerian-rotation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-structure-of-the-milky-way"
+    },
+    {
+      "type": "next",
+      "target": "plan-galaxy-mass-estimation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-2",
+  "pages": [
+    110,
+    111,
+    112
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "회전 속도 곡선"
+  ],
+  "notes": [
+    "C6 — 관측 수단에 대한 오개념을 반박하는 명제가 이 카드에 없어 linked_relation 을 비웠다. 21 cm 수소선 관측은 plan-hydrogen-21cm-line 이 다룬다."
+  ]
+}

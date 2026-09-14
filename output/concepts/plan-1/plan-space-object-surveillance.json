@@ -1,0 +1,108 @@
+{
+  "id": "plan-space-object-surveillance",
+  "concept_key": "concept:space-object-surveillance",
+  "registry_status": "new",
+  "term": "우주 물체 감시 과정",
+  "notation": {
+    "hanja": "宇宙物體監視過程",
+    "english": "space object surveillance",
+    "hanja_gloss": "宇 집 우 · 宙 집 주 · 物 물건 물 · 體 몸 체 · 監 볼 감 · 視 볼 시 · 過 지날 과 · 程 길 정"
+  },
+  "definition": "궤도를 도는 인공·자연 물체를 찾아내고 궤적을 따라가며 정체를 가려 목록으로 정리하기까지의 네 단계 절차.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sos-four",
+      "text": "우주 물체 감시는 탐지, 추적, 식별, 목록화의 차례로 이루어진다.",
+      "form": {
+        "condition": "감시 절차를 단계별로 볼 때",
+        "type": "classification",
+        "scope": "우주 물체 감시 체계의 네 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「목록화, 식별, 추적, 탐지의 차례로 이루어진다」는 단계 순서를 거꾸로 놓은 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우주 물체 감시는 목록화, 식별, 추적, 탐지의 차례로 이루어진다."
+    },
+    {
+      "id": "rel-sos-optical-radar",
+      "text": "광학 관측으로는 밝기와 위치, 이동 방향을 알아내고 레이더 관측으로는 속도와 위치, 크기를 알아낸다.",
+      "form": {
+        "condition": "탐지 수단을 나누어 볼 때",
+        "type": "classification",
+        "scope": "탐지 단계의 두 관측 방법"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「광학 관측으로 속도와 크기를, 레이더 관측으로 밝기와 이동 방향을 알아낸다」는 두 방법을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광학 관측으로는 속도와 크기를 알아내고 레이더 관측으로는 밝기와 이동 방향을 알아낸다."
+    },
+    {
+      "id": "rel-sos-catalog",
+      "text": "목록화 단계에서는 물체의 특징과 함께 지구 충돌 확률과 피해 범위를 모아 둔다.",
+      "form": {
+        "condition": "앞의 세 단계를 마친 뒤",
+        "type": "conditional",
+        "scope": "감시 절차의 마지막 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「목록화 단계에서는 충돌 확률과 피해 범위를 모으지 않는다」는 목록화 단계의 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "목록화 단계에서는 물체의 특징만 적고 지구 충돌 확률과 피해 범위는 모으지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 물체 감시는 물체를 찾아내는 것으로 끝난다",
+      "why_wrong": "탐지 뒤에도 궤적을 추적하고 정체를 식별해 충돌 확률까지 목록으로 정리해야 대비가 된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sos-four"
+    },
+    {
+      "text": "레이더 관측으로 물체의 밝기를 잰다",
+      "why_wrong": "밝기와 이동 방향은 광학 관측이 맡고, 레이더는 반사파로 속도·위치·크기를 잰다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sos-optical-radar"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-space-hazard"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-near-earth-object"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-debris"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    22,
+    23
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

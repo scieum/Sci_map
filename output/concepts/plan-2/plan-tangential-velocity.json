@@ -1,0 +1,108 @@
+{
+  "id": "plan-tangential-velocity",
+  "concept_key": "concept:tangential-velocity",
+  "registry_status": "new",
+  "term": "접선 속도",
+  "notation": {
+    "hanja": "接線速度",
+    "hanja_gloss": "接 이을 접 · 線 줄 선 · 速 빠를 속 · 度 법도 도",
+    "english": "tangential velocity",
+    "symbol_display": "V_t ≈ 4.74 μr",
+    "symbol_plain": "Vt = 4.74 mu r"
+  },
+  "definition": "별이 시선 방향에 수직인 쪽으로 움직이는 속도.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tv-formula",
+      "text": "접선 속도는 고유 운동과 별까지의 거리를 곱한 값에 비례한다.",
+      "form": {
+        "condition": "고유 운동과 거리를 모두 알 때",
+        "type": "direct",
+        "scope": "별의 접선 방향 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「고유 운동을 거리로 나눈 값에 비례한다」인데, 같은 각이라도 멀수록 실제 이동 거리가 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "접선 속도는 고유 운동을 별까지의 거리로 나눈 값에 비례한다."
+    },
+    {
+      "id": "rel-tv-same-proper-motion",
+      "text": "고유 운동이 같다면 멀리 있는 별일수록 접선 속도가 크다.",
+      "form": {
+        "condition": "두 별의 고유 운동이 서로 같음",
+        "type": "direct",
+        "scope": "고유 운동이 같은 별끼리 견줄 때",
+        "antecedent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "접선 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「고유 운동이 같으면 멀수록 접선 속도가 작다」인데, 접선 속도가 거리에 비례하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "고유 운동이 같다면 멀리 있는 별일수록 접선 속도가 작다."
+    },
+    {
+      "id": "rel-tv-on-sky",
+      "text": "접선 방향의 운동은 천구상 위치 변화로 드러나므로 여러 해에 걸쳐 찍은 사진을 견주어 잴 수 있다.",
+      "form": {
+        "condition": "여러 해 간격으로 같은 하늘을 찍었을 때",
+        "type": "causal",
+        "scope": "접선 방향 운동의 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「사진을 견주어서는 잴 수 없다」인데, 바너드별처럼 사진에서 위치 변화가 확인되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "접선 방향의 운동은 천구상 위치를 바꾸지 않아 사진을 견주어서는 잴 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "고유 운동을 재면 별의 실제 속도를 바로 알 수 있다.",
+      "why_wrong": "고유 운동은 각의 변화일 뿐이다. 거리를 곱해야 접선 속도가 되고, 시선 속도까지 합해야 실제 속도가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-tv-formula"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-proper-motion"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-annual-parallax"
+    },
+    {
+      "type": "next",
+      "target": "plan-space-velocity"
+    }
+  ],
+  "curriculum": [
+    "12행우02-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-3",
+  "pages": [
+    67
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

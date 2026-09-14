@@ -1,0 +1,87 @@
+{
+  "id": "plan-galaxy-cluster",
+  "concept_key": "concept:galaxy-cluster",
+  "registry_status": "new",
+  "term": "은하단",
+  "notation": {
+    "hanja": "銀河團",
+    "english": "galaxy cluster",
+    "hanja_gloss": "銀 은 은 · 河 물 하 · 團 모일 단"
+  },
+  "definition": "수백에서 수천 개의 은하가 무리 지어 함께 모여 있는 집단. 크기가 10 Mpc에 이르기도 한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gc2-gravity",
+      "text": "은하단에 속한 은하들은 집단 자체의 중력에 매여 은하단 안을 돌아다닌다.",
+      "form": {
+        "condition": "은하들이 중력으로 묶여 있을 때",
+        "type": "causal",
+        "scope": "은하단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「은하단 속 은하들은 집단의 중력에 매이지 않고 제멋대로 흩어진다」는 자체 중력에 따른 운동이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하단에 속한 은하들은 집단의 중력에 매이지 않고 제멋대로 흩어진다."
+    },
+    {
+      "id": "rel-gc2-where",
+      "text": "나선 은하는 은하단의 바깥쪽에 많고, 중심에는 병합으로 자란 거대 타원 은하가 자리한다.",
+      "form": {
+        "condition": "은하단 안의 위치에 따라 은하의 종류를 볼 때",
+        "type": "classification",
+        "scope": "은하단의 구성 은하"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 위치를 맞바꾼 것이라 중심의 cD 은하와 외곽의 나선 은하라는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "나선 은하는 은하단의 중심에 많고, 바깥쪽에는 병합으로 자란 거대 타원 은하가 자리한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "은하단을 이루는 은하는 대부분 크고 무거운 은하다",
+      "why_wrong": "크기가 매우 작고 어두운 왜소 타원 은하가 상당수를 차지한다. 눈에 띄는 것이 큰 은하일 뿐이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc2-where"
+    },
+    {
+      "text": "은하단 속 은하들은 우주 팽창을 따라 서로 멀어지기만 한다",
+      "why_wrong": "은하단은 자체 중력으로 묶여 있어 그 안의 은하들은 서로의 중력에 이끌려 운동한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc2-gravity"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-gravitational-lensing-by-galaxy-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-supercluster"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-04-1",
+  "pages": [
+    115
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

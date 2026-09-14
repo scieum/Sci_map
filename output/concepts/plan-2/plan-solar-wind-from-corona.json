@@ -1,0 +1,92 @@
+{
+  "id": "plan-solar-wind-from-corona",
+  "concept_key": "concept:solar-wind",
+  "registry_status": "new",
+  "term": "태양풍",
+  "notation": {
+    "hanja": "太陽風",
+    "hanja_gloss": "太 클 태 · 陽 볕 양 · 風 바람 풍",
+    "english": "solar wind"
+  },
+  "definition": "태양에서 끊임없이 흘러나오는 양성자·전자 같은 대전 입자의 흐름.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-wind-origin",
+      "text": "코로나의 온도가 매우 높아 입자들이 태양의 중력을 벗어나 밖으로 흘러 나간다.",
+      "form": {
+        "condition": "평상시의 태양",
+        "type": "causal",
+        "scope": "코로나의 입자"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「코로나가 뜨거워도 입자가 태양을 벗어나지 못한다」인데, 평소에도 입자 흐름이 관측되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "코로나의 온도가 매우 높아도 입자들은 태양을 벗어나지 못한다."
+    },
+    {
+      "id": "rel-wind-aurora",
+      "text": "태양풍이 지구에 이르면 극지방 부근에서 오로라가 나타나기도 한다.",
+      "form": {
+        "condition": "태양풍이 지구 자기권에 닿을 때",
+        "type": "causal",
+        "scope": "지구의 고위도 지역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「태양풍이 지구에 이르러도 극지방에 오로라가 나타나지 않는다」인데, 오로라가 태양풍의 결과로 관측되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양풍이 지구에 이르러도 극지방 부근에서 오로라는 나타나지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양풍은 태양 활동이 격렬할 때에만 부는 바람이다.",
+      "why_wrong": "코로나가 늘 뜨거우므로 평상시에도 입자가 흘러나온다. 활동이 활발할 때 세질 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-wind-origin"
+    },
+    {
+      "text": "태양풍은 공기의 흐름이어서 소리를 내며 분다.",
+      "why_wrong": "태양풍은 양성자·전자 같은 대전 입자의 흐름이다. 공기가 아니며 우주 공간에는 소리를 전할 매질도 없다.",
+      "source": "llm"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-corona"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-activity-cycle",
+      "note": "활동이 활발하면 태양풍도 세진다"
+    },
+    {
+      "type": "same",
+      "target": "plan-solar-wind",
+      "note": "「Ⅰ. 태양계와 외계 행성계」에서 우주 기상 쪽으로 먼저 다룬 같은 개념이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-2",
+  "pages": [
+    62
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "id 가 plan-1 의 「태양풍」 카드와 부딪혀 이 단원의 맥락(코로나에서 흘러나오는 입자 흐름)을 접미사로 붙였다. concept_key 는 그대로 공유한다."
+  ]
+}

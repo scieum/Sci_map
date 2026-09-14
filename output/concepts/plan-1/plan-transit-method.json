@@ -1,0 +1,115 @@
+{
+  "id": "plan-transit-method",
+  "concept_key": "concept:transit-method",
+  "registry_status": "new",
+  "term": "식현상을 이용하는 방법",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "transit method",
+    "hanja_note": "표제어가 '식현상(蝕現象)'이라는 한자어와 우리말 구절이 이어 붙은 형태라 전체에 대응하는 한자 표기가 없다."
+  },
+  "definition": "행성이 중심별 앞을 지날 때 별의 밝기가 주기적으로 줄어드는 것을 읽어 행성을 찾아내는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-tr-size",
+      "text": "행성의 반지름이 클수록 중심별을 가리는 면적이 넓어 밝기 감소량이 커진다.",
+      "form": {
+        "condition": "행성이 중심별 앞을 가로지를 때",
+        "type": "direct",
+        "scope": "식현상을 이용한 탐사",
+        "antecedent": {
+          "quantity": "행성의 반지름",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "중심별의 밝기 감소량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「행성의 반지름이 클수록 밝기 감소량이 작아진다」는 가리는 면적이 넓어진다는 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성의 반지름이 클수록 중심별의 밝기 감소량은 작아진다."
+    },
+    {
+      "id": "rel-tr-alignment",
+      "text": "식현상은 관측자의 시선과 행성 궤도면이 거의 나란한 계에서만 일어나므로 그런 계에서만 이 방법을 쓴다.",
+      "form": {
+        "condition": "궤도면이 시선 방향과 거의 나란할 때",
+        "type": "conditional",
+        "scope": "식현상 탐사를 쓸 수 있는 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「궤도면이 시선 방향과 수직이어도 식현상으로 행성을 찾을 수 있다」는 이 방법의 조건과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "식현상은 관측자의 시선과 행성 궤도면이 수직인 계에서도 일어나므로 그런 계에서도 이 방법을 쓸 수 있다."
+    },
+    {
+      "id": "rel-tr-atmosphere",
+      "text": "행성의 대기를 지나온 별빛을 분석하면 그 행성 대기의 성분까지 알아낼 수 있다.",
+      "form": {
+        "condition": "식현상이 일어나는 동안 스펙트럼을 잴 때",
+        "type": "conditional",
+        "scope": "식현상 탐사로 얻는 정보"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대기를 지나온 별빛을 분석해도 대기 성분은 알아낼 수 없다」는 대기 성분도 알아낸다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성의 대기를 지나온 별빛을 분석해도 그 행성 대기의 성분은 알아낼 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "식현상을 이용하는 방법은 행성의 밝기 변화를 관측한다",
+      "why_wrong": "관측하는 것은 행성이 아니라 중심별의 주기적인 밝기 변화다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-size"
+    },
+    {
+      "text": "식현상은 어느 외계 행성계에서나 관측된다",
+      "why_wrong": "공전 궤도면이 시선 방향과 거의 나란한 계에서만 볼 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-tr-alignment"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-extrasolar-planetary-system"
+    },
+    {
+      "type": "related",
+      "target": "plan-direct-imaging-method"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-1",
+  "pages": [
+    41,
+    45
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "통과법"
+  ]
+}

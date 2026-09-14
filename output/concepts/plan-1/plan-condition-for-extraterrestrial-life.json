@@ -1,0 +1,115 @@
+{
+  "id": "plan-condition-for-extraterrestrial-life",
+  "concept_key": "concept:condition-for-extraterrestrial-life",
+  "registry_status": "new",
+  "term": "외계 생명체 존재 조건",
+  "notation": {
+    "hanja": "外界生命體存在條件",
+    "english": "conditions for extraterrestrial life",
+    "hanja_gloss": "外 바깥 외 · 界 지경 계 · 生 날 생 · 命 목숨 명 · 體 몸 체 · 存 있을 존 · 在 있을 재 · 條 가지 조 · 件 물건 건"
+  },
+  "definition": "행성에 생명체가 살 수 있으려면 갖춰져야 할 것들. 알맞은 거리와 액체 상태의 물, 넉넉한 시간, 대기와 자기장이 여기 든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cel-time",
+      "text": "생명체가 나타나 진화하려면 중심별이 오랫동안 안정적으로 에너지를 공급해 주어야 한다.",
+      "form": {
+        "condition": "생명 탄생과 진화에 걸리는 시간을 헤아릴 때",
+        "type": "conditional",
+        "scope": "외계 생명체가 존재할 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중심별의 에너지 공급이 오래 이어지지 않아도 생명체가 나타나 진화할 수 있다」는 충분한 시간이 필요하다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생명체가 나타나 진화하는 데 중심별의 에너지 공급이 오래 이어질 필요는 없다."
+    },
+    {
+      "id": "rel-cel-shield",
+      "text": "강한 자외선을 막아 주는 대기와 고에너지 입자를 막아 주는 자기장이 있어야 생명체가 살아남기 쉽다.",
+      "form": {
+        "condition": "중심별과 우주에서 오는 복사가 강할 때",
+        "type": "conditional",
+        "scope": "생명체가 사는 행성의 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대기와 자기장이 없어도 생명체가 살아남는 데 아무 어려움이 없다」는 둘의 역할이 중요하다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대기와 자기장이 없어도 생명체가 살아남는 데에는 아무 어려움이 없다."
+    },
+    {
+      "id": "rel-cel-multiple",
+      "text": "생명 가능 지대 안에 있다는 것만으로는 모자라며 여러 조건이 함께 채워져야 한다.",
+      "form": {
+        "condition": "생명체의 존재 가능성을 따질 때",
+        "type": "conditional",
+        "scope": "외계 행성계의 생명체 존재 가능성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「생명 가능 지대 안에 있기만 하면 다른 조건과 상관없이 생명체가 존재한다」는 여러 조건이 만족되어야 한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "생명 가능 지대 안에 있기만 하면 다른 조건과 상관없이 생명체가 존재한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "생명 가능 지대 안의 행성이면 생명체가 존재한다",
+      "why_wrong": "대기와 자기장, 중심별의 수명 같은 조건이 함께 맞아야 한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cel-multiple"
+    },
+    {
+      "text": "중심별의 질량이 클수록 생명체가 생기기 좋다",
+      "why_wrong": "질량이 큰 별은 수명이 짧아 생명체가 진화할 시간이 모자랄 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cel-time"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-habitable-zone"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-stellar-mass-and-lifetime"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-synchronous-rotation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-stellar-luminosity-and-habitable-zone"
+    },
+    {
+      "type": "related",
+      "target": "plan-liquid-water-and-life"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-3",
+  "pages": [
+    44
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

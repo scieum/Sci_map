@@ -1,0 +1,79 @@
+{
+  "id": "plan-granule",
+  "concept_key": "concept:solar-granule",
+  "registry_status": "new",
+  "term": "쌀알 무늬",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'쌀알'과 '무늬'가 모두 우리말 고유어라 표제어에 대응하는 한자어가 없다.",
+    "english": "granule"
+  },
+  "definition": "광구를 덮은 쌀알을 뿌려 놓은 듯한 무늬. 평균 지름이 약 1000 km이고 수명은 3~4분이며 광구 아래 대류로 생긴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-granule-convection",
+      "text": "뜨거운 기체가 올라오는 곳은 밝게, 식어서 내려가는 곳은 어둡게 보여 쌀알 무늬가 나타난다.",
+      "form": {
+        "condition": "광구 밑에서 대류가 일어날 때",
+        "type": "causal",
+        "scope": "태양의 광구"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「올라오는 곳이 어둡고 내려가는 곳이 밝다」인데, 뜨거운 기체가 더 밝게 보이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "뜨거운 기체가 올라오는 곳은 어둡게, 식어서 내려가는 곳은 밝게 보인다."
+    },
+    {
+      "id": "rel-granule-lifetime",
+      "text": "쌀알 무늬는 수명이 3~4분에 그쳐, 며칠에서 몇 달씩 남는 흑점보다 훨씬 빨리 생겼다 사라진다.",
+      "form": {
+        "condition": "같은 광구를 이어서 관측할 때",
+        "type": "classification",
+        "scope": "광구에 나타나는 무늬"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「쌀알 무늬가 흑점보다 오래 남는다」인데, 분 단위와 일·월 단위의 차이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "쌀알 무늬는 흑점보다 훨씬 오래 남는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "쌀알 무늬의 어두운 부분은 아주 작은 흑점이다.",
+      "why_wrong": "어두운 부분은 식어서 내려가는 기체다. 흑점은 강한 자기장이 만드는 것이라 크기도 수명도 전혀 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-granule-convection"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-photosphere"
+    },
+    {
+      "type": "related",
+      "target": "plan-sunspot",
+      "note": "같은 광구 위에서 보이지만 생기는 원리가 다르다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-1",
+  "pages": [
+    57
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

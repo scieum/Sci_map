@@ -1,0 +1,126 @@
+{
+  "id": "plan-solar-activity-cycle",
+  "concept_key": "concept:solar-activity-cycle",
+  "registry_status": "new",
+  "term": "태양 활동 주기",
+  "notation": {
+    "hanja": "太陽活動週期",
+    "hanja_gloss": "太 클 태 · 陽 볕 양 · 活 살 활 · 動 움직일 동 · 週 돌 주 · 期 기약할 기",
+    "english": "solar activity cycle"
+  },
+  "definition": "태양의 활동이 활발해졌다 잠잠해지기를 되풀이하는 흐름.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cycle-eleven-years",
+      "text": "태양 표면의 흑점 수는 약 11년을 주기로 늘었다 줄기를 되풀이한다.",
+      "form": {
+        "condition": "수십 년에 걸친 월평균 흑점 수 자료",
+        "type": "conditional",
+        "scope": "태양 흑점 수의 장기 관측 기록"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「흑점 수가 주기 없이 불규칙하게만 달라진다」인데, 70여 년 자료에 11년 주기가 뚜렷해 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양 표면의 흑점 수는 되풀이되는 주기 없이 불규칙하게 달라진다."
+    },
+    {
+      "id": "rel-cycle-activity",
+      "text": "흑점 수가 많은 시기일수록 태양 활동이 활발하다.",
+      "form": {
+        "condition": "같은 태양을 시기별로 견줄 때",
+        "type": "direct",
+        "scope": "태양 활동의 세기",
+        "antecedent": {
+          "quantity": "흑점 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "태양 활동의 세기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「흑점이 많을수록 태양 활동이 잠잠하다」인데, 흑점 수는 활동이 활발할 때 늘므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흑점 수가 많은 시기일수록 태양 활동이 잠잠하다."
+    },
+    {
+      "id": "rel-cycle-corona",
+      "text": "흑점이 많은 시기의 코로나는 크고 밝게, 흑점이 적은 시기의 코로나는 상대적으로 작게 나타난다.",
+      "form": {
+        "condition": "개기 일식 등으로 코로나를 관측할 때",
+        "type": "direct",
+        "scope": "태양의 코로나",
+        "antecedent": {
+          "quantity": "흑점 수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "코로나의 크기와 밝기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「흑점이 많은 시기에 코로나가 작고 어둡다」인데, 활동이 활발할수록 코로나가 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흑점이 많은 시기의 코로나는 작고 어둡게 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흑점이 하나도 보이지 않으면 태양이 활동을 멈춘 것이다.",
+      "why_wrong": "흑점이 거의 나타나지 않는 시기가 있지만 이는 활동이 약해진 국면일 뿐, 태양의 활동이 멈춘 것이 아니다.",
+      "source": "llm",
+      "linked_relation": "rel-cycle-activity"
+    },
+    {
+      "text": "태양 활동 주기가 11년이므로 흑점 수는 해마다 똑같은 값을 되풀이한다.",
+      "why_wrong": "11년은 늘었다 주는 흐름의 대략적인 길이다. 최고 흑점 수와 주기의 길이는 주기마다 조금씩 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-cycle-eleven-years"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-sunspot"
+    },
+    {
+      "type": "related",
+      "target": "plan-corona",
+      "note": "활동이 활발하면 코로나가 커진다"
+    },
+    {
+      "type": "related",
+      "target": "plan-solar-flare-in-solar-atmosphere",
+      "note": "활동이 활발한 시기에 잦아진다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-1",
+  "pages": [
+    56,
+    57
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "흑점 수의 증감 주기"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "plan-dwarf-planet",
+  "concept_key": "concept:dwarf-planet",
+  "registry_status": "new",
+  "term": "왜소 행성",
+  "notation": {
+    "hanja": "矮小行星",
+    "english": "dwarf planet",
+    "hanja_gloss": "矮 난쟁이 왜 · 小 작을 소 · 行 다닐 행 · 星 별 성"
+  },
+  "definition": "태양을 돌며 구형에 가깝지만 궤도 주변의 천체를 쓸어 담지 못한 천체. 행성과 소행성의 중간 단계로 둔다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dw-location",
+      "text": "명왕성과 에리스는 카이퍼 띠에, 세레스는 소행성대에 있어 왜소 행성이 한곳에만 모여 있지 않다.",
+      "form": {
+        "condition": "알려진 왜소 행성의 자리를 살필 때",
+        "type": "classification",
+        "scope": "태양계 안 왜소 행성의 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양계의 왜소 행성은 모두 소행성대에 분포한다」는 카이퍼 띠에도 있다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "태양계의 왜소 행성은 모두 소행성대에 분포한다."
+    },
+    {
+      "id": "rel-dw-size",
+      "text": "알려진 왜소 행성 가운데 가장 큰 명왕성도 지름이 약 2380 km로 달의 3분의 2쯤이다.",
+      "form": {
+        "condition": "크기를 달과 견줄 때",
+        "type": "conditional",
+        "scope": "알려진 왜소 행성의 크기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「명왕성은 달보다 훨씬 커서 지름이 달의 두 배를 넘는다」는 2380 km라는 값과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "알려진 왜소 행성 가운데 가장 큰 명왕성은 달보다 훨씬 커서 지름이 달의 두 배를 넘는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "태양계 왜소 행성은 모두 소행성대에 분포한다",
+      "why_wrong": "세레스는 소행성대에 있지만 명왕성과 에리스는 해왕성 바깥 카이퍼 띠에 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dw-location"
+    },
+    {
+      "text": "왜소 행성은 구형이 아니다",
+      "why_wrong": "자체 중력으로 구형에 가까운 모양을 이룬다는 점에서는 행성과 같고, 궤도를 비우지 못한 점이 다르다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-definition-of-planet"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-kuiper-belt"
+    },
+    {
+      "type": "related",
+      "target": "plan-asteroid"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    31,
+    39
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

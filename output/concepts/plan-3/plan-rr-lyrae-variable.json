@@ -1,0 +1,94 @@
+{
+  "id": "plan-rr-lyrae-variable",
+  "concept_key": "concept:rr-lyrae-variable",
+  "registry_status": "new",
+  "term": "거문고자리 RR형 변광성",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "RR Lyrae variable",
+    "hanja_note": "'거문고자리'는 고유어이고 'RR형'은 변광성 명명 기호라 표제어에 대응하는 한자 표기가 없다."
+  },
+  "definition": "변광 주기가 하루 이내로 짧고, 주기가 달라도 밝기가 거의 일정한 맥동 변광성. 구상 성단에서 주로 발견된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rr-standard-candle",
+      "text": "거문고자리 RR형 변광성은 절대 밝기가 거의 하나로 정해져 있어 겉보기 등급만 재면 거리를 얻는다.",
+      "form": {
+        "condition": "구상 성단 안에서 이 변광성을 찾았을 때",
+        "type": "causal",
+        "scope": "구상 성단까지의 거리 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 거리를 얻는 데 쓰는 관측량을 겉보기 등급에서 변광 주기로 맞바꾼 것이라, 이 별의 밝기가 주기와 무관하다는 특징과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거문고자리 RR형 변광성은 겉보기 등급이 아니라 변광 주기를 재야 거리를 얻는다."
+    },
+    {
+      "id": "rel-rr-where",
+      "text": "거문고자리 RR형 변광성은 구상 성단에서 주로 발견되고, 세페이드 변광성은 나선 은하의 원반에서도 널리 발견된다.",
+      "form": {
+        "condition": "두 맥동 변광성이 놓인 자리를 견줄 때",
+        "type": "classification",
+        "scope": "우리은하와 나선 은하의 맥동 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 변광성의 이름을 맞바꾼 것이라, 종족 Ⅱ 별이 모인 구상 성단에서 거문고자리 RR형이 발견된다는 서술과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세페이드 변광성은 구상 성단에서만 발견되고, 거문고자리 RR형 변광성은 나선 은하의 원반에서 널리 발견된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "거문고자리 RR형 변광성도 주기가 길수록 밝으므로 주기만 재면 거리를 구할 수 있다",
+      "why_wrong": "이 별은 주기와 상관없이 밝기가 거의 일정하다. 거리를 구할 수 있는 까닭은 절대 밝기가 거의 하나로 정해져 있어 겉보기 등급만으로 견줄 수 있기 때문이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rr-standard-candle"
+    },
+    {
+      "text": "구상 성단에서 발견되는 맥동 변광성은 모두 세페이드 변광성이다",
+      "why_wrong": "구상 성단에서 주로 발견되는 쪽은 거문고자리 RR형이다. 세페이드는 나선 은하의 원반에도 널리 분포한다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rr-where"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-pulsating-variable-star-in-milky-way"
+    },
+    {
+      "type": "related",
+      "target": "plan-globular-cluster"
+    },
+    {
+      "type": "related",
+      "target": "plan-period-luminosity-relation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-3",
+  "pages": [
+    98
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — 두 명제가 모두 definition 되풀이였다(주기 하루 이내·밝기 일정). 쓰임새(rel-rr-standard-candle)와 분포(rel-rr-where)로 갈아 세우고, inverted_text 에 주어를 넣어 낱개 지문으로도 거짓이 되게 했다."
+  ]
+}

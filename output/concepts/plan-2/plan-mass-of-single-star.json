@@ -1,0 +1,102 @@
+{
+  "id": "plan-mass-of-single-star",
+  "concept_key": "concept:mass-of-single-star",
+  "registry_status": "new",
+  "term": "쌍성이 아닌 별의 질량",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'아닌'·'별' 같은 고유어가 섞인 풀이형 표제어라 한자 표기가 없다. '쌍성'과 '질량'만 한자어(雙星·質量)다.",
+    "english": "mass of a single star"
+  },
+  "definition": "쌍성을 이루지 않는 별의 질량을 알아내는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-single-indirect",
+      "text": "함께 도는 천체가 관측되지 않는 주계열성은 그 별의 광도를 재어 질량 - 광도 관계로 질량을 어림한다.",
+      "form": {
+        "condition": "주계열성임이 확인된 별",
+        "type": "conditional",
+        "scope": "함께 도는 천체가 관측되지 않는 주계열성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「함께 도는 천체가 없어도 주기와 궤도 반지름으로 직접 구한다」인데, 잴 주기 자체가 없으므로 반드시 거짓이다. 앞서는 '쌍성이 아닌'이라고만 해 행성을 거느린 태양이 반례가 됐던 자리다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "함께 도는 천체가 관측되지 않는 주계열성도 공전 주기와 궤도 반지름을 재어 질량을 직접 구한다."
+    },
+    {
+      "id": "rel-single-needs-ms",
+      "text": "이 방법은 그 별이 주계열성일 때에만 쓸 수 있다.",
+      "form": {
+        "condition": "질량 - 광도 관계를 적용하려 할 때",
+        "type": "conditional",
+        "scope": "주계열성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「주계열성이 아니어도 쓸 수 있다」인데, 그 관계가 주계열성에서만 성립하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "이 방법은 그 별이 주계열성이 아니어도 쓸 수 있다."
+    },
+    {
+      "id": "rel-single-vs-binary",
+      "text": "쌍성에서 얻은 질량은 관측량으로 직접 구한 값이고, 함께 도는 천체가 없는 별의 질량은 관계식으로 어림한 값이다.",
+      "form": {
+        "condition": "두 측정 방법을 견줄 때",
+        "type": "classification",
+        "scope": "별의 질량 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 방법의 성격을 맞바꾼 것이라 각 방법의 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "쌍성의 질량은 관계식으로 어림한 값이고, 함께 도는 천체가 없는 별의 질량은 관측량으로 직접 구한 값이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "쌍성이 아닌 별의 질량은 알아낼 방법이 없다.",
+      "why_wrong": "광도를 재어 질량 - 광도 관계에 넣으면 어림할 수 있다. 직접 잴 수 없을 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-single-indirect"
+    },
+    {
+      "text": "광도로 어림한 질량은 쌍성에서 구한 질량과 똑같이 정확하다.",
+      "why_wrong": "관계식으로 얻은 어림값이므로 직접 구한 값보다 불확실하다. 두 방법의 성격이 다르다.",
+      "source": "llm",
+      "linked_relation": "rel-single-vs-binary"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-mass-luminosity-relation"
+    },
+    {
+      "type": "related",
+      "target": "plan-binary-star-mass",
+      "note": "직접 재는 쪽과 견주어 보면 성격이 또렷해진다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-2",
+  "pages": [
+    75,
+    76
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

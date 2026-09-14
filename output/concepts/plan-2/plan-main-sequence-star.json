@@ -1,0 +1,101 @@
+{
+  "id": "plan-main-sequence-star",
+  "concept_key": "concept:main-sequence-star",
+  "registry_status": "new",
+  "term": "주계열성",
+  "notation": {
+    "hanja": "主系列星",
+    "hanja_gloss": "主 주인 주 · 系 이어맬 계 · 列 벌일 렬 · 星 별 성",
+    "english": "main-sequence star"
+  },
+  "definition": "별의 일생에서 가장 안정한 시기를 보내고 있는 별. 태양도 지금 이 단계에 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ms-hydrogen-fusion",
+      "text": "주계열성의 중심부에서는 수소가 헬륨으로 바뀌는 핵융합 반응이 일어난다.",
+      "form": {
+        "condition": "주계열 단계에 있는 동안",
+        "type": "classification",
+        "scope": "주계열성의 중심부"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 반응 물질과 생성 물질을 맞바꾼 것이라, 실제 반응 방향과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "주계열성의 중심부에서는 헬륨이 수소로 바뀌는 반응이 일어난다."
+    },
+    {
+      "id": "rel-ms-longest-stage",
+      "text": "별은 진화 과정 가운데 주계열 단계에서 가장 오랜 시간을 보낸다.",
+      "form": {
+        "condition": "별의 일생 전체를 견줄 때",
+        "type": "classification",
+        "scope": "별의 진화 단계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「주계열 단계에서 가장 짧은 시간을 보낸다」인데, 가장 오래 머무는 단계이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별은 진화 과정 가운데 주계열 단계에서 가장 짧은 시간을 보낸다."
+    },
+    {
+      "id": "rel-ms-leaving",
+      "text": "중심부의 수소를 다 쓰면 별은 주계열 단계를 떠나 다음 진화 단계로 넘어간다.",
+      "form": {
+        "condition": "중심부의 수소가 바닥날 때",
+        "type": "causal",
+        "scope": "주계열성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「수소를 다 써도 주계열에 그대로 머문다」인데, 연료가 떨어지면 단계를 떠나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심부의 수소를 다 써도 별은 주계열 단계에 그대로 머문다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주계열성은 밝기가 일정하니 속에서 아무 변화도 일어나지 않는 별이다.",
+      "why_wrong": "중심부에서는 수소가 꾸준히 헬륨으로 바뀌고 있다. 겉보기 상태가 오래 안정할 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-ms-hydrogen-fusion"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-mass-luminosity-relation"
+    },
+    {
+      "type": "same",
+      "target": "earth-main-sequence-star",
+      "note": "「지구과학」에서는 H-R도 쪽에서 같은 개념을 다룬다"
+    },
+    {
+      "type": "related",
+      "target": "plan-main-sequence-lifetime",
+      "note": "이 단계에 머무는 시간을 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-2",
+  "pages": [
+    75,
+    76
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

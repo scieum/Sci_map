@@ -1,0 +1,100 @@
+{
+  "id": "plan-nebula",
+  "concept_key": "concept:nebula",
+  "registry_status": "new",
+  "term": "성운",
+  "notation": {
+    "hanja": "星雲",
+    "english": "nebula",
+    "hanja_gloss": "星 별 성 · 雲 구름 운"
+  },
+  "definition": "성간 물질이 한데 모여 구름처럼 보이는 천체. 빛을 어떻게 내는가에 따라 암흑 성운·반사 성운·방출 성운으로 나뉜다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-neb-kind",
+      "text": "뒤쪽 별빛을 가로막아 검게 보이면 암흑 성운, 별빛을 되비쳐 푸르게 보이면 반사 성운, 스스로 방출선을 내어 붉게 빛나면 방출 성운이다.",
+      "form": {
+        "condition": "성운이 빛을 내거나 가리는 방식을 볼 때",
+        "type": "classification",
+        "scope": "성운의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 암흑 성운과 방출 성운의 이름을 맞바꾼 것이라 각 정의와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "뒤쪽 별빛을 가로막아 검게 보이면 방출 성운, 스스로 방출선을 내어 붉게 빛나면 암흑 성운이다."
+    },
+    {
+      "id": "rel-neb-together",
+      "text": "세 가지 성운은 새 별이 태어나는 한 영역 안에서 나란히 관측되기도 한다.",
+      "form": {
+        "condition": "성간 물질이 많이 모여 있을 때",
+        "type": "causal",
+        "scope": "오리온자리 제타 별 둘레와 같은 별 탄생 영역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 세 성운이 함께 보이는 자리를 별의 탄생지에서 소멸지로 맞바꾼 것이라, 성간 물질이 많이 모인 별 탄생 영역이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "세 가지 성운은 별이 모두 죽고 성간 물질이 흩어진 영역에서 나란히 관측된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "성운은 모두 스스로 빛을 내는 천체다",
+      "why_wrong": "스스로 빛을 내는 것은 방출 성운뿐이다. 반사 성운은 남의 빛을 되비치고, 암흑 성운은 오히려 빛을 가린다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neb-kind"
+    },
+    {
+      "text": "성운은 별이 폭발한 뒤에만 생기는 잔해다",
+      "why_wrong": "성운은 성간 물질이 응집해 구름처럼 보이는 것으로, 오히려 별이 태어나는 자리이기도 하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-neb-together"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "earth-nebula",
+      "note": "「지구과학」에서 같은 concept_key 로 다룬 카드"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-interstellar-matter"
+    },
+    {
+      "type": "next",
+      "target": "plan-dark-nebula"
+    },
+    {
+      "type": "next",
+      "target": "plan-reflection-nebula"
+    },
+    {
+      "type": "next",
+      "target": "plan-emission-nebula"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

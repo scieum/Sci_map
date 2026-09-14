@@ -1,0 +1,107 @@
+{
+  "id": "plan-synchronous-rotation",
+  "concept_key": "concept:synchronous-rotation",
+  "registry_status": "new",
+  "term": "동주기 자전",
+  "notation": {
+    "hanja": "同週期自轉",
+    "english": "synchronous rotation",
+    "hanja_gloss": "同 한가지 동 · 週 돌 주 · 期 기약할 기 · 自 스스로 자 · 轉 구를 전"
+  },
+  "definition": "행성의 자전 주기와 공전 주기가 같아진 상태. 늘 같은 면만 중심별을 향하게 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sr-tidal",
+      "text": "별 가까이를 도는 행성은 중심별의 중력에 붙들려 자전이 느려지다가 마침내 공전과 같은 주기로 돌게 된다.",
+      "form": {
+        "condition": "중심별과의 거리가 매우 가까울 때",
+        "type": "causal",
+        "scope": "질량이 작은 별 가까이를 도는 행성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「별의 중력 때문에 자전 주기가 짧아져 공전 주기와 어긋나게 된다」는 자전 주기가 길어진다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별 가까이를 도는 행성은 중심별의 중력에 붙들려 자전이 빨라지다가 공전과 어긋나는 주기로 돌게 된다."
+    },
+    {
+      "id": "rel-sr-noday",
+      "text": "동주기 자전을 하면 행성은 늘 같은 면만 별을 향해 밤과 낮의 바뀜이 사라진다.",
+      "form": {
+        "condition": "자전 주기와 공전 주기가 같을 때",
+        "type": "causal",
+        "scope": "동주기 자전을 하는 행성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「동주기 자전을 해도 밤과 낮의 바뀜이 그대로 나타난다」는 낮과 밤의 변화가 없어진다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "동주기 자전을 해도 행성 표면에는 밤과 낮의 바뀜이 그대로 나타난다."
+    },
+    {
+      "id": "rel-sr-life",
+      "text": "별빛을 받지 못하는 면이 늘 어둡고 차가워 그곳에서는 생명체가 살기 어렵다.",
+      "form": {
+        "condition": "한 면이 영구히 밤인 상태가 이어질 때",
+        "type": "causal",
+        "scope": "동주기 자전 행성의 거주 가능성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「별빛을 받지 못하는 면도 생명체가 살기에 어렵지 않다」는 살기 어려운 조건이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별빛을 받지 못하는 면이 늘 어둡고 차가워도 그곳에서 생명체가 살기는 어렵지 않다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "동주기 자전을 하는 행성은 자전을 멈춘 것이다",
+      "why_wrong": "공전 주기와 같은 주기로 자전하고 있으며 멈춘 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sr-noday"
+    },
+    {
+      "text": "동주기 자전을 하면 행성 전체가 고르게 데워진다",
+      "why_wrong": "한 면만 별을 향하므로 낮인 면과 밤인 면의 차이가 매우 커진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sr-life"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-condition-for-extraterrestrial-life"
+    },
+    {
+      "type": "related",
+      "target": "plan-habitable-zone"
+    },
+    {
+      "type": "related",
+      "target": "plan-stellar-mass-and-lifetime"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-3",
+  "pages": [
+    44
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

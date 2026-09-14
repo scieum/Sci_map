@@ -1,0 +1,107 @@
+{
+  "id": "plan-apparent-and-absolute-magnitude",
+  "concept_key": "concept:apparent-magnitude-and-absolute-magnitude",
+  "registry_status": "new",
+  "term": "겉보기 등급과 절대 등급",
+  "notation": {
+    "hanja": "絶對等級",
+    "english": "apparent magnitude and absolute magnitude",
+    "hanja_gloss": "絶 끊을 절 · 對 대할 대 · 等 무리 등 · 級 등급 급",
+    "hanja_note": "'겉보기'는 고유어여서 대응하는 한자가 없다. 한자는 '절대 등급' 쪽만 적었다."
+  },
+  "definition": "관측된 밝기를 그대로 나타낸 것이 겉보기 등급이고, 모든 천체를 같은 거리에 놓았다고 가정해 견준 것이 절대 등급이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mag-dist",
+      "text": "같은 별이라도 멀리 있을수록 겉보기 등급은 커지지만 절대 등급은 달라지지 않는다.",
+      "form": {
+        "condition": "별 자체의 광도가 그대로일 때",
+        "type": "conditional",
+        "scope": "거리만 다른 같은 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「멀리 있을수록 겉보기 등급이 작아지고 절대 등급도 함께 달라진다」는 멀수록 어두워 보인다는 사실, 그리고 절대 등급이 거리와 무관하다는 정의 둘 다와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "같은 별이라도 멀리 있을수록 겉보기 등급은 작아지고 절대 등급도 함께 달라진다."
+    },
+    {
+      "id": "rel-mag-lum",
+      "text": "절대 등급이 작은 별일수록 광도가 크다.",
+      "form": {
+        "condition": "모든 별을 같은 기준 거리에 놓고 견줄 때",
+        "type": "inverse",
+        "scope": "별의 밝기 비교",
+        "antecedent": {
+          "quantity": "절대 등급",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "별의 광도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「절대 등급이 작을수록 광도가 작다」는 등급이 작을수록 밝다는 등급 체계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "절대 등급이 작은 별일수록 광도가 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "겉보기 등급이 작은 별이 언제나 절대적으로 더 밝은 별이다",
+      "why_wrong": "겉보기 등급은 거리에 좌우된다. 가까이 있는 어두운 별이 멀리 있는 밝은 별보다 겉보기로는 밝을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mag-dist"
+    },
+    {
+      "text": "등급은 값이 클수록 밝은 별이다",
+      "why_wrong": "등급은 값이 작을수록 밝다. 그래서 절대 등급이 (-)로 갈수록 광도가 큰 별이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mag-lum"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "earth-apparent-magnitude-and-absolute-magnitude",
+      "note": "「지구과학」에서 같은 concept_key 로 다룬 카드"
+    },
+    {
+      "type": "next",
+      "target": "plan-color-magnitude-diagram"
+    },
+    {
+      "type": "next",
+      "target": "plan-distance-modulus-of-star-cluster"
+    },
+    {
+      "type": "same",
+      "target": "plan-apparent-magnitude-and-absolute-magnitude",
+      "note": "「행성우주과학」 plan-2 의 같은 concept_key 카드 (표제어 표기만 갈린다)"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-2",
+  "pages": [
+    95,
+    97
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,102 @@
+{
+  "id": "plan-nova",
+  "concept_key": "concept:nova",
+  "registry_status": "new",
+  "term": "신성",
+  "notation": {
+    "hanja": "新星",
+    "hanja_gloss": "新 새 신 · 星 별 성",
+    "english": "nova"
+  },
+  "definition": "밤하늘에 없던 별이 나타난 것처럼 갑자기 밝아지는 폭발 변광성. 동양에서 객성이라 부르던 것이 이것이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-nova-rise-fall",
+      "text": "신성은 하루나 이틀 만에 밝아진 뒤 수개월에서 수년에 걸쳐 서서히 어두워진다.",
+      "form": {
+        "condition": "폭발이 일어난 뒤 이어서 관측할 때",
+        "type": "causal",
+        "scope": "신성의 광도 곡선"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 밝아지는 데 걸리는 시간과 어두워지는 데 걸리는 시간을 맞바꾼 것이라 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신성은 수개월에 걸쳐 서서히 밝아졌다가 하루 이틀 만에 어두워진다."
+    },
+    {
+      "id": "rel-nova-vs-supernova",
+      "text": "증광 폭은 신성이 7~16등급, 초신성이 20등급 이상으로 초신성 쪽이 훨씬 크다.",
+      "form": {
+        "condition": "두 폭발 변광성의 광도 곡선을 견줄 때",
+        "type": "classification",
+        "scope": "폭발 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 값을 맞바꾼 것이라, 초신성이 더 크게 밝아진다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "증광 폭은 신성이 20등급 이상, 초신성이 7~16등급으로 신성 쪽이 훨씬 크다."
+    },
+    {
+      "id": "rel-nova-not-new",
+      "text": "신성은 새로 태어난 별이 아니라 원래 있던 어두운 별이 폭발해 갑자기 밝아진 것이다.",
+      "form": {
+        "condition": "이름과 실제 현상을 견줄 때",
+        "type": "classification",
+        "scope": "신성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「신성이 없던 자리에서 새로 태어난 별이다」인데, 폭발 전에도 그 자리에 별이 있었으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "신성은 그 자리에 없던 별이 새로 태어나 빛나기 시작한 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "신성은 새로 태어난 별이다.",
+      "why_wrong": "이름과 달리 이미 있던 별이 폭발해 밝아진 것이다. 없던 별이 나타난 것처럼 보일 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-nova-not-new"
+    },
+    {
+      "text": "신성과 초신성은 밝아지는 정도가 비슷하다.",
+      "why_wrong": "신성은 7~16등급, 초신성은 20등급 이상 밝아진다. 견줄 수 없는 차이다.",
+      "source": "llm",
+      "linked_relation": "rel-nova-vs-supernova"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-eruptive-variable-star"
+    },
+    {
+      "type": "related",
+      "target": "plan-supernova",
+      "note": "광도 곡선을 견주면 둘을 가를 수 있다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-1",
+  "pages": [
+    79,
+    83
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

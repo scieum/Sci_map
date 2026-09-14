@@ -1,0 +1,591 @@
+{
+  "unit_id": "plan-1",
+  "generated_at": "2026-09-14T13:49:08+09:00",
+  "mode_run": [
+    "curriculum",
+    "relation"
+  ],
+  "curriculum": {
+    "checked": 59,
+    "script": {
+      "tool": ".claude/skills/curriculum-mapper/scripts/validate_tags.py",
+      "cards": 59,
+      "problems": 0,
+      "note": "실재하지 않는 코드·과목 접두어 불일치·태그 0개·미확정(crosscheck) 코드 사용 없음. 12행우01-01~05 5건 모두 crosscheck: 일치."
+    },
+    "facts_skill": {
+      "available": false,
+      "note": "행성우주과학(천문) 계열 <track>-facts 스킬이 없어 수치·명칭 대조를 건너뛰었다. 흉내 내지 않았다."
+    },
+    "findings": [
+      {
+        "card_id": "plan-evidence-of-water-on-mars",
+        "verdict": "retag",
+        "current": [
+          "12행우01-04"
+        ],
+        "suggested": [
+          "12행우01-01",
+          "12행우01-04"
+        ],
+        "reason": "카드의 세 명제가 모두 탐사차(스피릿·오퍼튜니티·큐리오시티·퍼서비어런스)가 화성에서 알아낸 성과와 그 함의다. 12행우01-04 는 「행성과 소천체의 정의를 구분」하고 「소천체 탐사 자료로 특징을 추론」하는 성취기준인데, 화성은 소천체가 아니고 카드에 정의 구분 요소도 없다. 「탐사선의 활동을 통해 알아낸 성과」를 다루는 12행우01-01 이 이 카드가 실제로 받치는 자리다. 다만 교과서 배치(35~36쪽, 03단원 소주제4 「태양계 천체 탐사와 지질학적 특징」)와 35쪽 탐구 문면 「행성과 소천체 탐사 자료를 조사하여」가 01-04 쪽 근거도 주므로 01-04 를 떼지 말고 01-01 을 더하는 쪽을 제안한다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-solar-activity-monitoring-system",
+        "verdict": "uncertain",
+        "current": [
+          "12행우01-02"
+        ],
+        "suggested": [],
+        "reason": "카드 본체(태양 관측 위성·지상 관측망으로 우주 기상을 예보)는 21쪽 본문 그대로이고 12행우01-02 안에 든다. 갈린 대목은 명제 rel-sams-wavelength 「관측하는 파장 영역이 다르면 드러나는 태양의 층과 현상이 달라진다」다 — 이 문장은 12행우02-01 「이러한 현상이 다양한 파장의 관측 자료에서 어떻게 나타나는지 비교·분석」의 문면과 거의 그대로 겹친다. 카드를 옮길 일은 아니고, 이 명제 한 줄을 Ⅱ단원(plan-2) 카드와 어느 쪽에 둘지가 판단 항목이다 — C8 검토 항목으로 올린다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-conservation-of-angular-momentum",
+        "verdict": "ok",
+        "current": [
+          "12행우01-03"
+        ],
+        "suggested": [],
+        "reason": "26쪽 본문이 아니라 곁주 「면적 속도 일정 법칙과 각운동량」에만 나오는 개념이다. 본문 블록만 보면 이탈로 보이지만 곁주에 정의와 식(rmv 보존)이 그대로 있어 범위 안이다. role: context 도 그 지위와 맞는다",
+        "prerequisites": [
+          "concept:uniform-circular-motion",
+          "concept:centripetal-force"
+        ]
+      },
+      {
+        "card_id": "plan-doppler-effect",
+        "verdict": "ok",
+        "current": [
+          "12행우01-05"
+        ],
+        "suggested": [],
+        "reason": "40쪽 본문에서 시선 속도 변화 방법의 원리로 쓰인다. 범위 안이고 태그도 맞다. 다만 파동 개념 자체는 「역학과 에너지」에서 먼저 나온다",
+        "prerequisites": [
+          "concept:doppler-effect"
+        ]
+      },
+      {
+        "card_id": "plan-gravitational-lensing",
+        "verdict": "ok",
+        "current": [
+          "12행우01-05"
+        ],
+        "suggested": [],
+        "reason": "41쪽 곁주 「중력 렌즈 현상」이 근거다. 미세 중력 렌즈 방법의 선수 개념 자리이므로 01-05 안에 든다",
+        "prerequisites": [
+          "concept:gravitational-lensing"
+        ]
+      },
+      {
+        "card_id": "plan-liquid-water-and-life",
+        "verdict": "ok",
+        "current": [
+          "12행우01-05"
+        ],
+        "suggested": [],
+        "reason": "42쪽 본문(용매·비열)이 근거다. 비열은 다른 과목에서 먼저 배우는 개념이라 선수로 적어 둔다",
+        "prerequisites": [
+          "concept:specific-heat"
+        ]
+      },
+      {
+        "card_id": "plan-stellar-luminosity-and-habitable-zone",
+        "verdict": "ok",
+        "current": [
+          "12행우01-05"
+        ],
+        "suggested": [],
+        "reason": "42~43쪽 탐구와 정리하기 문면(주계열성의 질량-표면 온도-광도, 생명 가능 지대의 이동)이 근거다. 광도·주계열성은 「지구과학」에서 먼저 나오는 개념이므로 선수로 적는다",
+        "prerequisites": [
+          "concept:luminosity",
+          "concept:main-sequence-star"
+        ]
+      },
+      {
+        "card_id": "plan-stellar-mass-and-lifetime",
+        "verdict": "ok",
+        "current": [
+          "12행우01-05"
+        ],
+        "suggested": [],
+        "reason": "44쪽 본문(중심별 질량이 크면 수명이 짧아 진화 시간이 모자람)이 근거다. 별의 수명·진화는 선수 개념이다",
+        "prerequisites": [
+          "concept:main-sequence-star",
+          "concept:post-main-sequence-evolution"
+        ]
+      },
+      {
+        "card_id": "plan-synchronous-rotation",
+        "verdict": "ok",
+        "current": [
+          "12행우01-05"
+        ],
+        "suggested": [],
+        "reason": "44쪽 본문 아래 용어 상자에 동주기 자전의 정의와 밤낮 변화 소멸이 그대로 있다. 본문 블록만 보면 놓치기 쉬운 자리라 적어 둔다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-magma-ocean",
+        "verdict": "ok",
+        "current": [
+          "12행우01-04"
+        ],
+        "suggested": [],
+        "reason": "34쪽 본문이 근거이고, 30쪽 단원 학습 목표 「소천체를 태양계 원시 물질로 구성된 천체와 분화된 천체로 구분」에 곧바로 걸린다. 태양계 형성 쪽 개념이라 이탈로 보일 수 있으나 범위 안이다",
+        "prerequisites": [
+          "concept:planetesimal"
+        ]
+      },
+      {
+        "card_id": "plan-achievement-of-solar-system-exploration",
+        "verdict": "ok",
+        "current": [
+          "12행우01-01"
+        ],
+        "suggested": [],
+        "reason": "14~15쪽 본문·자료 상자가 근거다. 명제 rel-ach-dart(다트의 소행성 궤도 변경)는 12행우01-02 의 우주 위험 대응 쪽으로도 읽히지만, 교과서가 이 내용을 01단원 소주제1의 탐사 성과로 놓았으므로 태그를 늘릴 근거로는 약하다고 보아 ok 로 둔다",
+        "prerequisites": []
+      },
+      {
+        "card_id": "plan-near-earth-object",
+        "verdict": "ok",
+        "current": [
+          "12행우01-02",
+          "12행우01-04"
+        ],
+        "suggested": [],
+        "reason": "19쪽(지구 위협 소행성 기준 0.05 AU·150 m)과 32쪽(근지구 소행성 근일점 약 1.3 AU)에 근거가 나뉘어 있어 두 성취기준에 걸친다. 두 태그 모두 이 카드가 실제로 받치는 자리다",
+        "prerequisites": []
+      }
+    ],
+    "stats": {
+      "ok": 57,
+      "retag": 1,
+      "out_of_scope": 0,
+      "uncertain": 1
+    },
+    "escalation": {
+      "out_of_scope_over_2": false,
+      "uncertain_over_20pct": false,
+      "uncertain_pct": 1.7
+    }
+  },
+  "relations": {
+    "checked": 159,
+    "cards": 59,
+    "facts_skill": {
+      "available": false,
+      "note": "행성우주과학(천문) 계열 <track>-facts 스킬이 없다(.claude/skills 에 concept-schema·curriculum-mapper·figure-cropper·graph-builder·textbook-parser·typeability-check 뿐). 수치·명칭 대조는 output/source/plan-1/text.jsonl 의 본문·곁주·용어 상자·자료실 블록으로만 했고 스킬을 흉내 내지 않았다."
+    },
+    "source_crosscheck": {
+      "note": "곁주·자료 블록까지 보고 대조한 수치. 지구 위협 소행성 0.05 AU·150 m(우주 위험 요소 자료), 근지구 소행성 근일점 약 1.3 AU, 베스타 공전 주기 3.6년, 명왕성 지름 2380 km(달의 2/3), 카이퍼 띠 약 50 AU, 이심률 e 값에 따른 곡선 분류(25쪽 곁주), 면적 속도 일정 법칙과 각운동량(25쪽 곁주), a³/P² = k 와 「중심 천체의 질량이 클수록 a³/P² 값은 커진다」(28쪽) — 모두 카드 서술과 맞았다. 본문에 없다는 이유로 지적한 건은 없다."
+    },
+    "invertible_sweep": {
+      "true": 158,
+      "false": 1,
+      "ratio": 0.994,
+      "note": "45~55 % 대역에서 크게 벗어나 159건을 전수로 다시 읽었다. 뒤집기 판정 자체는 대체로 옳다 — inverted_text 가 부정형이거나 두 이름·두 자리를 맞바꾼 꼴이어서 문면 그대로 읽으면 참이 될 경우가 없다. 바꿔야 할 건은 rel-lug-centripetal 하나(false→true)뿐이고 그것까지 바꾸면 159/159 가 된다. 쏠림의 원인은 판정이 아니라 명제를 세우는 방식이다 — 교과서 서술을 단언으로 옮겨 적으면 부정형은 언제나 거짓이 되고, 그 과정에서 카드 definition 을 되풀이한 명제가 18건 생겼다(검사 3)."
+    },
+    "tautology_sweep": {
+      "method": "카드마다 definition 과 relation.text 를 어절 단위로 맞대어 훑은 뒤 걸린 건을 눈으로 다시 읽었다. 기계 판정에 기대지 않았다.",
+      "defect": 18,
+      "uncertain": 7,
+      "note": "기계 훑기가 올린 것 가운데 rel-k1-focus(궤도의 중심에는 놓이지 않는다)·rel-pa-speed(근일점에서 가장 빠르다)·rel-cm-binary(위성계·쌍성계로 넓힘)·rel-sr-tidal(조석 잠김 기작) 네 건은 정의에서 곧바로 나오지 않아 제외했다."
+    },
+    "card_internal_contradiction": {
+      "found": 0,
+      "note": "검사 5 — 한 카드 안에서 서로 어긋나는 명제 쌍은 없었다. 카드 사이 겹침(rel-sma-mean ↔ rel-pa-mean, rel-mgo-diff ↔ rel-du-criterion, rel-df-size ↔ rel-mgo-heat, rel-sw-forecast ↔ rel-sams-life ↔ rel-hz-monitor)은 모순이 아니라 중복이라 uncertain·note 로만 올렸다."
+    },
+    "findings": [
+      {
+        "card_id": "plan-law-of-universal-gravitation",
+        "relation_id": "rel-lug-centripetal",
+        "verdict": "defect",
+        "checks": [
+          2
+        ],
+        "reason": "invertible: false 로 잠겨 있으나 조건이 이미 text 문면 안에 있다. text 는 「행성이 원 궤도를 돈다고 보면 태양과 행성 사이의 만유인력이 그대로 구심력 노릇을 한다」이므로 뒤집은 문장도 「행성이 원 궤도를 돈다고 보면 … 구심력 노릇을 하지 않는다」가 되어 참이 될 경우가 없다. invertible_reason 은 「궤도가 타원이어서 … 인력의 일부만 구심력 노릇을 하므로」라고 적어, 문면에 붙어 있는 원 궤도 가정을 떼어 낸 채 판정했다. 교과서 28쪽도 「행성이 원운동을 하는 경우를 가정하면 태양과 행성 사이의 만유인력이 행성의 원운동을 일으키는 구심력으로 작용한다」로 가정을 문면에 달고 서술한다. 근거로 든 mech-1/rel-lug-centripetal 의 사유는 「어떤 힘이 구심력을 맡는지 지목한 명제라 방향을 맞바꿀 자리가 없다」로 form.type 을 근거로 삼은 사유여서 준거가 되지 못한다",
+        "suggest": "invertible 을 true 로 올리고 inverted_text 를 원 궤도 가정이 문면에 남도록 채운다. mech-1 의 같은 명제는 이 단원 밖이라 메인이 따로 처리할 항목이다"
+      },
+      {
+        "card_id": "plan-space-debris",
+        "relation_id": "rel-sd-increase",
+        "verdict": "defect",
+        "checks": [
+          1
+        ],
+        "reason": "form.condition 「수명이 끝난 위성을 궤도에 그대로 둘 때」가 text·inverted_text 어느 문면에도 없다. D1 은 scope·condition 을 끌고 가지 않으므로 오답 지문에는 「소형 위성 발사가 늘어날수록 궤도에 남는 우주 쓰레기는 오히려 줄어든다」만 남는데, 잔해 제거·궤도 이탈 처리를 전제하면 참이 될 길이 열린다",
+        "suggest": "invertible 을 내리지 말고 조건을 text 문면에 넣어 살린다"
+      },
+      {
+        "card_id": "plan-classification-of-meteorite",
+        "relation_id": "rel-cmr-basis",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「구성 성분에 따라 운석을 가르는 방법」을 그대로 문장으로 바꾼 것이다. 명제가 더한 것은 「떨어진 장소가 아니라」라는 대비뿐이고, 정의를 읽으면 저절로 나온다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-differentiated-and-undifferentiated-meteorite",
+        "relation_id": "rel-du-criterion",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「모체가 화성 활동을 겪었는지에 따른 운석의 갈래」와 명제 「가르는 기준은 모체가 화성 활동을 겪었는지다」가 같은 말이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-kepler-third-law",
+        "relation_id": "rel-k3-ratio",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「궤도 긴반지름의 세제곱과 공전 주기의 제곱의 비가 일정하다는 법칙」을 그대로 풀어 쓴 것이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-meteoroid-and-meteor",
+        "relation_id": "rel-mm-distinction",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「태양계 공간을 떠도는 작은 먼지와 암석 조각이 유성체이고, 그것이 지구 대기에 뛰어들어 밝게 빛나는 현상이 유성이다」와 절 구성까지 같다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-space-probe",
+        "relation_id": "rel-probe-crewed",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「사람이 타는 유인 우주선과 원격으로 조종되는 무인 우주선으로 나뉜다」를 두 절로 늘여 쓴 것이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-space-debris",
+        "relation_id": "rel-sd-origin",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「… 지구 둘레 궤도에 남아 돌고 있는 인공 물체」와 같은 말이다. invertible_reason 도 「정의를 뒤집은 것이라」라고 적어 정의 되풀이임을 스스로 밝혔다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-dwarf-planet",
+        "relation_id": "rel-dw-not-moon",
+        "verdict": "defect",
+        "checks": [
+          3,
+          4
+        ],
+        "reason": "definition 「태양을 돌며 구형에 가깝지만 …」의 앞 구절을 되풀이한다. form.scope 도 「왜소 행성의 정의」라고 적혀 있다 / 검사4 — 같은 카드의 오개념 「왜소 행성은 구형이 아니다」가 이 명제(무엇을 도는가)를 linked_relation 으로 가리키는데, 구형 여부는 이 명제의 반대편이 아니다",
+        "suggest": "명제를 다시 세우고, 오개념 「왜소 행성은 구형이 아니다」의 linked_relation 도 구형 조건을 다루는 명제로 옮긴다"
+      },
+      {
+        "card_id": "plan-habitable-zone",
+        "relation_id": "rel-hbz-temp",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「행성 표면에 물이 액체로 있을 수 있는, 중심별로부터의 거리 범위」에서 곧바로 나온다. invertible_reason 이 「지대를 그 거리 범위로 정의한 것과 어긋나」라고 적어 근거가 정의임을 스스로 밝혔다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-meteorite",
+        "relation_id": "rel-mt-survive",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「… 다 타지 않고 지표까지 떨어진 지구 밖 기원의 암석」과 같은 말이다. invertible_reason 도 「운석의 정의와 어긋나」라고 적었다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-composition-of-solar-system",
+        "relation_id": "rel-css-bound",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「태양의 중력에 묶여 그 둘레를 도는 천체 전체」를 범위 서술로 바꾼 것이다. invertible_reason 도 「… 정의와 어긋나」라고 적었다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-composition-of-solar-system",
+        "relation_id": "rel-css-small",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 든 목록(왜소 행성·소행성·혜성·유성체 같은 소천체)을 그대로 되풀이한다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-direct-imaging-method",
+        "relation_id": "rel-di-band",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「… 적외선이나 전파 영역에서 외계 행성 자체를 찾아내는 방법」과 같은 말이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-near-earth-object",
+        "relation_id": "rel-neo-capture",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「크기가 작아 지구 곁을 지날 때 대기권으로 끌려들기도 한다」를 거의 그대로 옮겼다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-stellar-mass-and-lifetime",
+        "relation_id": "rel-sml-inverse",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「중심별의 질량이 클수록 수명이 짧아지는 관계」를 그대로 문장으로 바꾼 것이다. 더한 것은 「에너지를 빨리 써 버려」라는 까닭 한 구절뿐이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-significance-of-space-exploration",
+        "relation_id": "rel-sig-earth",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「… 지구와 지구 생명체를 이해하고 지키는 데 갖는 값어치」와 같은 말이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-space-weather",
+        "relation_id": "rel-sw-tech",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「… 위성·통신·전력 같은 기술 시스템과 생명체에 영향을 줄 수 있는 …」이 이미 담고 있다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-structure-of-comet",
+        "relation_id": "rel-sc-coma",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「핵에서 승화한 기체와 먼지가 감싼 코마」를 인과 문장으로 바꾼 것뿐이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-space-station",
+        "relation_id": "rel-ss-microgravity",
+        "verdict": "defect",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「무중력 실험과 천체 관측을 하고 …」와 같은 말이다",
+        "suggest": "명제를 지우거나, 정의에서 곧바로 나오지 않는 내용(까닭·견줌·적용 한계)으로 다시 세운다. 어느 쪽인지는 메인이 정한다"
+      },
+      {
+        "card_id": "plan-artificial-satellite",
+        "relation_id": "rel-sat-mission",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「정지 궤도 위성은 우주 공간의 한자리에 멈춰 서 있다」가 이 명제를 가리키는데, 이 명제는 정지 궤도·저궤도의 임무 갈래를 말할 뿐 위성이 멈춰 있는지와 무관하다. why_wrong(자전과 같은 주기로 돈다)도 이 명제의 어느 구절도 반박하지 않는다",
+        "suggest": "linked_relation 을 이 오개념이 실제로 맞서는 명제로 옮기거나, 맞설 명제가 카드에 없으면 오개념을 그 명제가 있는 카드로 옮긴다"
+      },
+      {
+        "card_id": "plan-natural-satellite",
+        "relation_id": "rel-ns-count",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「인공위성도 위성이므로 둘은 같은 것이다」가 이 명제를 가리키는데, 이 명제는 목성형 행성의 위성 수를 견주는 것이라 자연 위성과 인공위성의 구분과 무관하다",
+        "suggest": "linked_relation 을 이 오개념이 실제로 맞서는 명제로 옮기거나, 맞설 명제가 카드에 없으면 오개념을 그 명제가 있는 카드로 옮긴다"
+      },
+      {
+        "card_id": "plan-doppler-effect",
+        "relation_id": "rel-dpl-los",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「도플러 효과는 소리에서만 나타난다」가 이 명제를 가리키는데, 이 명제는 시선 방향 성분만 파장에 드러난다는 내용이라 현상이 소리에만 있는지와 무관하다. 명제와 무관한 일반적 오해다",
+        "suggest": "linked_relation 을 이 오개념이 실제로 맞서는 명제로 옮기거나, 맞설 명제가 카드에 없으면 오개념을 그 명제가 있는 카드로 옮긴다"
+      },
+      {
+        "card_id": "plan-planetary-rover",
+        "relation_id": "rel-rover-instrument",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「화성 탐사차는 사람이 타고 운전한다」가 이 명제를 가리키는데, 이 명제는 분광 장치·로봇 팔로 현장에서 성분을 알아낸다는 내용이라 유·무인 여부와 무관하다",
+        "suggest": "linked_relation 을 이 오개념이 실제로 맞서는 명제로 옮기거나, 맞설 명제가 카드에 없으면 오개념을 그 명제가 있는 카드로 옮긴다"
+      },
+      {
+        "card_id": "plan-magma-ocean",
+        "relation_id": "rel-mgo-heat",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「마그마 바다는 천체 표면에만 생긴 얕은 용암 호수다」가 이 명제를 가리키는데, 이 명제는 크기와 열의 관계를 말한다. 이 오개념이 반박하는 것은 카드의 definition(내부의 대부분이 녹아 있는 상태)이지 이 명제가 아니다. 같은 카드의 다른 오개념 「태양이 데워서 생긴다」는 이 명제의 반대편에 제대로 서 있다",
+        "suggest": "linked_relation 을 이 오개념이 실제로 맞서는 명제로 옮기거나, 맞설 명제가 카드에 없으면 오개념을 그 명제가 있는 카드로 옮긴다"
+      },
+      {
+        "card_id": "plan-orbital-eccentricity",
+        "relation_id": "rel-ecc-shape",
+        "verdict": "defect",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「이심률이 큰 궤도는 긴반지름도 크다」가 이 명제를 가리키는데, 이 명제는 e가 0에 가까울수록 원에 가까워진다는 내용이라 이심률과 긴반지름이 따로 정해지는지와 무관하다. 같은 오개념이 plan-semi-major-axis 에서는 linked_relation 없이 달려 있다",
+        "suggest": "linked_relation 을 이 오개념이 실제로 맞서는 명제로 옮기거나, 맞설 명제가 카드에 없으면 오개념을 그 명제가 있는 카드로 옮긴다"
+      },
+      {
+        "card_id": "plan-central-mass-from-kepler-third-law",
+        "relation_id": "rel-cm-constant",
+        "verdict": "uncertain",
+        "checks": [
+          1,
+          2
+        ],
+        "reason": "「중심 천체의 질량이 클수록 상수 k가 커진다」는 k 를 a³/P² 로 잡았을 때만 참이다. 교과서 26·28쪽은 a³/P² = k 로 쓰고 「중심 천체의 질량이 클수록 a³/P² 값은 커진다」고 명시하므로 카드의 방향은 교과서와 맞다. 다만 k 의 정의가 text·inverted_text 문면 어디에도 없어, P² = k a³ 로 외운 학생에게는 뒤집은 문장이 참으로 읽힌다. 판단이 갈리는 대목이라 C8 검토 항목으로 올린다",
+        "suggest": "invertible 은 손대지 말고 k 를 「a³/P²」로 문면에 드러내 조건이 떨어져 나가지 않게 한다"
+      },
+      {
+        "card_id": "plan-natural-satellite",
+        "relation_id": "rel-ns-none",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 이미 「수성과 금성은 위성을 거느리지 않는다」를 담고 있어 앞 절은 되풀이다. 다만 뒤 절의 일반화(「모든 행성이 위성을 갖는 것은 아니다」)와 그 뒤집은 문장은 OX 로서 값이 있어, 명제를 지울 일인지 definition 쪽을 줄일 일인지 갈린다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-definition-of-planet",
+        "relation_id": "rel-dp-three",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 세 조건을 그대로 늘어놓아 되풀이에 가깝다. 그러나 명제가 더하는 것은 「모두 채워야 한다」는 연언이고 뒤집은 문장 「하나만 채우면 된다」는 학습 가치가 높다. 명제를 지울 일인지 definition 을 줄일 일인지 갈린다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-space-object-surveillance",
+        "relation_id": "rel-sos-four",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 네 단계를 같은 차례로 풀어 서술하고 있어 되풀이에 가깝다. 명제가 더하는 것은 탐지·추적·식별·목록화라는 용어 네 개뿐이다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-magma-ocean",
+        "relation_id": "rel-mgo-diff",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 「이 시기를 거친 천체는 밀도에 따라 핵과 맨틀로 갈린다」에서 곧바로 나오며, 같은 내용이 plan-differentiated-and-undifferentiated-meteorite/rel-du-criterion 과 겹친다. 용어(분화 천체·미분화 천체)를 붙인 만큼은 더한다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-semi-major-axis",
+        "relation_id": "rel-sma-mean",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition(타원 중심에서 근일점 또는 원일점까지 잰 거리)에서 곧바로 나오지는 않아 되풀이로 단정하기 어렵다. 다만 plan-perihelion-and-aphelion/rel-pa-mean 「근일점 거리와 원일점 거리를 더해 절반으로 나눈 값이 그 궤도의 긴반지름이다」와 사실상 같은 명제여서 D1 이 두 카드에서 거의 같은 OX 를 뽑게 된다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-korean-space-exploration",
+        "relation_id": "rel-kr-steps",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 이 「우리별 1호 → 누리호 → 다누리」를 차례로 늘어놓아 명제의 순서 주장과 겹친다. 순서를 명시한 만큼은 더한다고 볼 수도 있어 갈린다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-conservation-of-angular-momentum",
+        "relation_id": "rel-am-area",
+        "verdict": "uncertain",
+        "checks": [
+          3
+        ],
+        "reason": "definition 의 둘째 문장 「면적 속도가 일정한 까닭을 설명해 준다」와 같은 내용이다. 다만 교과서 25쪽 곁주 「면적 속도 일정 법칙과 각운동량」이 둘의 동치를 따로 다루므로 곁주 근거는 있다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-significance-of-space-exploration",
+        "relation_id": "rel-sig-tech",
+        "verdict": "uncertain",
+        "checks": [
+          1
+        ],
+        "reason": "「탐사 범위가 넓어질수록 관련 산업도 함께 자란다」는 사회·경제적 전망이라 뒤집은 문장이 반드시 거짓인지 단정하기 어렵다. 진위 판단 필요 — C8 검토 항목",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-microlensing-method",
+        "relation_id": "rel-ml-once",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「이 방법을 쓰려면 행성의 궤도면이 시선 방향과 나란해야 한다」가 이 명제(세 천체 정렬·비반복성)를 가리킨다. 정렬이라는 낱말이 겹치기는 하나 오개념이 말하는 것은 궤도면 제약이고 명제가 말하는 것은 시선 정렬이어서 반대편에 선 것인지 갈린다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-meteoroid-and-meteor",
+        "relation_id": "rel-mm-friction",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「유성은 반드시 땅에 떨어진다」가 이 명제(마찰로 빛난다)를 가리킨다. 이 오개념이 실제로 맞서는 것은 plan-meteorite/rel-mt-survive 쪽이어서 옮길 자리가 있는지 갈린다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      },
+      {
+        "card_id": "plan-asteroid",
+        "relation_id": "rel-as-location",
+        "verdict": "uncertain",
+        "checks": [
+          4
+        ],
+        "reason": "오개념 「소행성대는 소행성이 빽빽해 탐사선이 지나갈 수 없다」가 이 명제(소행성의 분포 위치)를 가리킨다. 분포라는 점은 닿아 있으나 명제는 밀도·통과 가능성을 말하지 않아 반대편인지 갈린다",
+        "suggest": "C8 검토 항목으로 올린다 — 이 자리에서 고칠지 말지 정하지 않는다"
+      }
+    ],
+    "stats": {
+      "ok": 121,
+      "defect": 26,
+      "uncertain": 12
+    }
+  }
+}

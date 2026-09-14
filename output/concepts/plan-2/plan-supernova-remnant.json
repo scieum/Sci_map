@@ -1,0 +1,95 @@
+{
+  "id": "plan-supernova-remnant",
+  "concept_key": "concept:supernova-remnant",
+  "registry_status": "new",
+  "term": "초신성 잔해",
+  "notation": {
+    "hanja": "超新星殘骸",
+    "hanja_gloss": "超 뛰어넘을 초 · 新 새 신 · 星 별 성 · 殘 남을 잔 · 骸 뼈 해",
+    "english": "supernova remnant"
+  },
+  "definition": "초신성이 터진 자리 둘레에 남아 밝게 빛나는 구조.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-snr-shock",
+      "text": "폭발로 생긴 충격파가 둘레의 성간 물질을 두드려 밝게 빛나게 한 것이 초신성 잔해다.",
+      "form": {
+        "condition": "폭발 뒤 충격파가 퍼져 나갈 때",
+        "type": "causal",
+        "scope": "초신성 둘레의 성간 물질"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「충격파와 상관없이 별 자체가 그대로 남아 빛나는 것」이라는 말인데, 잔해는 달구어진 성간 물질이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "초신성 잔해는 충격파와 상관없이 폭발한 별이 그대로 남아 빛나는 것이다."
+    },
+    {
+      "id": "rel-snr-age",
+      "text": "잔해가 퍼진 크기와 거리를 재면 폭발이 언제쯤 일어났는지 어림할 수 있다.",
+      "form": {
+        "condition": "잔해가 퍼지는 속도를 알 때",
+        "type": "conditional",
+        "scope": "관측된 초신성 잔해"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「크기와 거리를 재어도 폭발 시기를 어림할 수 없다」인데, 퍼진 거리와 속도로 시간을 되짚을 수 있어 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "잔해가 퍼진 크기와 거리를 재어도 폭발이 언제 일어났는지는 어림할 수 없다."
+    },
+    {
+      "id": "rel-snr-recycle",
+      "text": "잔해로 흩어진 기체와 티끌은 성간 물질에 더해져 다음 세대 별을 만드는 재료가 된다.",
+      "form": {
+        "condition": "폭발 물질이 성간 공간에 섞인 뒤",
+        "type": "causal",
+        "scope": "성간 물질의 순환"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「흩어진 물질이 성간 물질에 더해지지 않고 그대로 사라진다」인데, 물질은 우주 공간에 남아 성운을 이루므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "잔해로 흩어진 기체와 티끌은 성간 물질에 더해지지 않고 그대로 사라진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "초신성 잔해는 폭발한 별의 껍데기여서 스스로는 빛을 내지 않는다.",
+      "why_wrong": "충격파에 달구어진 성간 물질이 밝게 빛난다. 적외선·X선 영상으로 그 모습이 관측된다.",
+      "source": "llm",
+      "linked_relation": "rel-snr-shock"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-supernova"
+    },
+    {
+      "type": "related",
+      "target": "plan-supernova-nucleosynthesis",
+      "note": "흩어진 물질이 무거운 원소를 실어 나른다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-2",
+  "pages": [
+    80
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

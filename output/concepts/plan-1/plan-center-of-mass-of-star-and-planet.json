@@ -1,0 +1,95 @@
+{
+  "id": "plan-center-of-mass-of-star-and-planet",
+  "concept_key": "concept:center-of-mass-of-star-and-planet",
+  "registry_status": "new",
+  "term": "공통 질량 중심",
+  "notation": {
+    "hanja": "共通質量中心",
+    "english": "center of mass",
+    "hanja_gloss": "共 함께 공 · 通 통할 통 · 質 바탕 질 · 量 헤아릴 량 · 中 가운데 중 · 心 마음 심"
+  },
+  "definition": "중심별과 행성이 함께 도는 기준점. 두 천체는 이 점을 사이에 두고 마주 보며 공전한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cmc-ratio",
+      "text": "질량이 큰 중심별 쪽으로 공통 질량 중심이 치우쳐 있어 중심별은 작은 원을 그리며 돈다.",
+      "form": {
+        "condition": "두 천체의 질량 차가 매우 클 때",
+        "type": "causal",
+        "scope": "중심별과 행성으로 이루어진 계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중심별에서 먼 쪽에 공통 질량 중심이 있어 중심별이 큰 원을 그린다」는 무거운 쪽에 치우친다는 성질과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 큰 중심별에서 먼 쪽에 공통 질량 중심이 있어 중심별이 큰 원을 그리며 돈다."
+    },
+    {
+      "id": "rel-cmc-wobble",
+      "text": "행성의 질량이 클수록 공통 질량 중심이 중심별에서 멀어져 중심별의 흔들림이 커진다.",
+      "form": {
+        "condition": "중심별의 질량이 일정할 때",
+        "type": "direct",
+        "scope": "외계 행성계의 중심별 운동",
+        "antecedent": {
+          "quantity": "행성의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "중심별의 흔들림",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「행성의 질량이 클수록 중심별의 흔들림이 작아진다」는 질량이 클수록 움직임이 커진다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "행성의 질량이 클수록 중심별의 흔들림은 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "행성만 돌고 중심별은 한자리에 멈춰 있다",
+      "why_wrong": "두 천체가 공통 질량 중심 둘레를 함께 돌기 때문에 중심별도 작게 움직인다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmc-ratio"
+    },
+    {
+      "text": "공통 질량 중심은 언제나 중심별의 중심과 일치한다",
+      "why_wrong": "행성의 질량이 클수록 중심별의 중심에서 벗어난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmc-wobble"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-radial-velocity-method"
+    },
+    {
+      "type": "related",
+      "target": "plan-law-of-universal-gravitation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-1",
+  "pages": [
+    40
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

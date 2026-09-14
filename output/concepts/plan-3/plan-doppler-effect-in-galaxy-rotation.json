@@ -1,0 +1,98 @@
+{
+  "id": "plan-doppler-effect-in-galaxy-rotation",
+  "concept_key": "concept:doppler-effect",
+  "registry_status": "new",
+  "term": "도플러 효과",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "Doppler effect",
+    "hanja_note": "'도플러'는 사람 이름을 딴 음차어라 대응 한자가 없다. '효과(效果)'만 한자어다."
+  },
+  "definition": "파원과 관측자가 시선 방향으로 가까워지거나 멀어질 때, 관측되는 파장이 고유 파장과 달라지는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dop-shift",
+      "text": "멀어지는 천체의 관측 파장은 고유 파장보다 길고, 다가오는 천체의 관측 파장은 짧다.",
+      "form": {
+        "condition": "천체가 시선 방향으로 움직일 때",
+        "type": "conditional",
+        "scope": "빛이나 소리 같은 파동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 멀어짐과 다가옴의 결과를 맞바꾼 것이라 파장 변화의 방향과 정반대여서 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "멀어지는 천체의 관측 파장은 고유 파장보다 짧고, 다가오는 천체의 관측 파장은 길다."
+    },
+    {
+      "id": "rel-dop-none",
+      "text": "빛의 속도에 견주어 느린 천체에서는 시선 방향 성분만이 관측 파장을 바꾸고, 시선에 수직인 성분은 파장을 바꾸지 않는다.",
+      "form": {
+        "condition": "천체의 속도가 빛의 속도에 견주어 매우 느릴 때",
+        "type": "conditional",
+        "scope": "천체 운동의 두 속도 성분"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 속도 성분의 구실을 맞바꾼 것이다. '빛의 속도에 견주어 느린'이라는 한정을 문면 안에 넣었으므로 낱개 지문으로 읽어도 시선 방향 성분이 파장을 바꾼다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "빛의 속도에 견주어 느린 천체에서는 시선에 수직인 성분만이 관측 파장을 바꾸고, 시선 방향 성분은 파장을 바꾸지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "천체가 움직이기만 하면 어느 방향이든 파장이 달라진다",
+      "why_wrong": "파장을 바꾸는 것은 시선 방향 성분이다. 시선에 수직으로만 움직이면 고전적으로는 파장이 그대로다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dop-none"
+    },
+    {
+      "text": "도플러 효과로 파장이 달라지면 빛의 색도 실제로 바뀐 것이므로 천체 자체가 붉은 별이 된다",
+      "why_wrong": "천체가 내는 빛은 그대로다. 관측되는 파장이 밀렸을 뿐이며, 고유 파장과 견주어야 속도를 읽을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-dop-shift"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mech-doppler-effect",
+      "note": "「역학과 에너지」에서 같은 concept_key 로 다룬 카드"
+    },
+    {
+      "type": "next",
+      "target": "plan-radial-velocity-of-hydrogen-cloud"
+    },
+    {
+      "type": "same",
+      "target": "plan-doppler-effect",
+      "note": "「행성우주과학」 plan-1 이 시선 속도 탐사 쪽에서 먼저 세운 같은 개념 카드"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-1",
+  "pages": [
+    109,
+    113
+  ],
+  "difficulty": 3,
+  "role": "context",
+  "version": 1,
+  "notes": [
+    "id 가 plan-1·plan-2 의 'plan-doppler-effect' 와 부딪혀 이 단원의 맥락(은하 회전 측정)을 접미사로 붙였다. concept_key 는 같은 개념이므로 그대로 두고 same 으로 이었다.",
+    "C6 — 한정이 form.scope('고전적인 도플러 효과')에만 있어 D1 이 끌고 가지 못했다. 속도 한정을 text·inverted_text 문면 안으로 옮겨 true 를 살렸다."
+  ]
+}

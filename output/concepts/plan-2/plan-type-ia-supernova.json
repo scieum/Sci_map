@@ -1,0 +1,111 @@
+{
+  "id": "plan-type-ia-supernova",
+  "concept_key": "concept:type-ia-supernova",
+  "registry_status": "new",
+  "term": "Ia형 초신성",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "'Ia형'이 로마자와 숫자로 된 분류 기호라 표제어 전체를 한자로 적을 수 없다. '초신성'만 한자어(超新星)다.",
+    "english": "Type Ia supernova",
+    "symbol_display": "Ia형",
+    "symbol_plain": "Ia"
+  },
+  "definition": "백색왜성이 폭발해 생기는 초신성의 한 유형.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-ia-mass-limit",
+      "text": "백색왜성이 이웃 별에서 물질을 받아 질량의 한계를 넘어서면 중력을 이기지 못하고 무너지며 터진다.",
+      "form": {
+        "condition": "짝별에서 물질이 흘러드는 백색왜성",
+        "type": "causal",
+        "scope": "Ia형 초신성이 되는 백색왜성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「질량의 한계를 넘어서도 무너지지 않고 그대로 남는다」인데, 한계를 넘으면 붕괴하므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "백색왜성은 가질 수 있는 질량의 한계를 넘어서도 무너지지 않고 그대로 남는다."
+    },
+    {
+      "id": "rel-ia-standard-candle",
+      "text": "Ia형 초신성은 최대 광도가 거의 일정해 먼 천체까지의 거리를 재는 기준 광원으로 쓰인다.",
+      "form": {
+        "condition": "최대 광도에 이르렀을 때",
+        "type": "causal",
+        "scope": "Ia형 초신성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「최대 광도가 제각각이라 거리 측정의 기준으로 쓸 수 없다」인데, 거의 일정하다는 성질이 쓰임의 근거이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "Ia형 초신성은 최대 광도가 제각각이어서 거리를 재는 기준으로 쓸 수 없다."
+    },
+    {
+      "id": "rel-ia-distance",
+      "text": "최대 광도를 알고 겉보기 밝기를 재면 그 초신성이 속한 천체까지의 거리를 구할 수 있다.",
+      "form": {
+        "condition": "최대 광도가 알려진 표준 광원일 때",
+        "type": "conditional",
+        "scope": "먼 은하까지의 거리 측정"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「최대 광도와 겉보기 밝기를 알아도 거리를 구할 수 없다」인데, 밝기와 거리가 역제곱으로 이어져 있어 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "최대 광도를 알고 겉보기 밝기를 재어도 그 천체까지의 거리는 구할 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "Ia형 초신성은 무거운 별의 중심핵이 무너져 터지는 초신성이다.",
+      "why_wrong": "그것은 다른 유형이다. Ia형은 백색왜성이 물질을 받아 질량 한계를 넘어 터지는 것이다.",
+      "source": "llm",
+      "linked_relation": "rel-ia-mass-limit"
+    },
+    {
+      "text": "Ia형 초신성이 기준 광원이 되는 것은 가장 밝은 초신성이기 때문이다.",
+      "why_wrong": "밝아서가 아니라 최대 광도가 거의 일정해서다. 밝기가 일정해야 겉보기 밝기로 거리를 잴 수 있다.",
+      "source": "llm",
+      "linked_relation": "rel-ia-standard-candle"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-supernova"
+    },
+    {
+      "type": "next",
+      "target": "plan-accelerating-expansion-of-universe"
+    },
+    {
+      "type": "related",
+      "target": "plan-distance-modulus",
+      "note": "관측 결과를 거리 지수로 나타낸다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-2",
+  "pages": [
+    80,
+    82
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "Ⅰa형 초신성"
+  ]
+}

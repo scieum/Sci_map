@@ -1,0 +1,115 @@
+{
+  "id": "plan-solar-flare-in-solar-atmosphere",
+  "concept_key": "concept:solar-flare",
+  "registry_status": "new",
+  "term": "플레어",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "영어 flare 를 소리대로 옮긴 음차어라 표제어에 대응하는 한자어가 없다.",
+    "english": "solar flare"
+  },
+  "definition": "태양에서 갑자기 일어나는 강렬한 폭발 현상. 매우 밝은 빛이 함께 나타난다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-flare-location",
+      "text": "플레어는 자기장이 강한 흑점 둘레에서 일어난다.",
+      "form": {
+        "condition": "태양 표면의 활동을 관측할 때",
+        "type": "classification",
+        "scope": "태양의 광구와 채층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「플레어가 흑점이 없는 고요한 영역에서만 일어난다」인데, 흑점 주변이 발생 자리이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "플레어는 흑점이 없는 고요한 영역에서만 일어난다."
+    },
+    {
+      "id": "rel-flare-high-energy",
+      "text": "플레어가 일어나면 짧은 시간에 X선과 자외선이 쏟아져 나와 지구의 자기장을 어지럽히기도 한다.",
+      "form": {
+        "condition": "플레어가 일어난 직후",
+        "type": "causal",
+        "scope": "지구 자기권에 미치는 영향"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「플레어가 일어나도 고에너지 전자기파가 거의 나오지 않아 지구에 영향이 없다」인데, 실제로 교란이 관측되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "플레어가 일어나도 X선과 자외선은 거의 나오지 않아 지구에 아무 영향을 주지 않는다."
+    },
+    {
+      "id": "rel-flare-wavelength",
+      "text": "가시광선 사진에서 뚜렷하지 않은 플레어도 자외선이나 X선 영상에서는 밝은 영역으로 드러난다.",
+      "form": {
+        "condition": "같은 시각의 파장별 영상을 견줄 때",
+        "type": "conditional",
+        "scope": "파장별 태양 관측 영상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「플레어가 가시광선에서 가장 뚜렷하고 자외선·X선에서는 잘 안 보인다」인데, 고에너지 영역이라 짧은 파장에서 선명해 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "플레어는 가시광선 사진에서 가장 뚜렷하고 자외선·X선 영상에서는 잘 드러나지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "플레어가 터지면 태양 전체가 눈에 띄게 밝아진다.",
+      "why_wrong": "쏟아지는 에너지가 주로 X선·자외선 쪽이라 가시광선 사진에서는 두드러지지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-flare-wavelength"
+    },
+    {
+      "text": "플레어는 태양 어디에서나 고르게 일어난다.",
+      "why_wrong": "자기장이 강한 흑점 둘레에서 주로 일어난다.",
+      "source": "llm",
+      "linked_relation": "rel-flare-location"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-chromosphere"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-sunspot"
+    },
+    {
+      "type": "related",
+      "target": "plan-multiwavelength-solar-observation",
+      "note": "자외선·X선 영상에서 잘 드러난다"
+    },
+    {
+      "type": "same",
+      "target": "plan-solar-flare",
+      "note": "「Ⅰ. 태양계와 외계 행성계」에서 '태양 흑점 폭발'이라는 표제어로 우주 기상 쪽에서 먼저 다룬 같은 현상이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-2",
+  "pages": [
+    61,
+    62,
+    63
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "id 가 plan-1 의 「태양 흑점 폭발」 카드와 부딪혀 이 단원의 맥락(태양 대기에서 나타나는 현상)을 접미사로 붙였다. 표제어는 서로 다르지만 concept_key 가 같으므로 키는 그대로 공유하고 same 으로 잇는다 (R9 — 근거는 표기가 아니라 키다)."
+  ]
+}

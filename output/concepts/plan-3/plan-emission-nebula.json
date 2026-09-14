@@ -1,0 +1,90 @@
+{
+  "id": "plan-emission-nebula",
+  "concept_key": "concept:emission-nebula",
+  "registry_status": "new",
+  "term": "방출 성운",
+  "notation": {
+    "hanja": "放出星雲",
+    "english": "emission nebula",
+    "hanja_gloss": "放 놓을 방 · 出 날 출 · 星 별 성 · 雲 구름 운"
+  },
+  "definition": "이온화된 수소가 전자와 다시 결합하면서 내놓는 방출선 때문에 붉게 빛나는 성운.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-en-source",
+      "text": "방출 성운은 자외선을 쏟아 내는 젊고 뜨거운 별 가까이에 생긴다.",
+      "form": {
+        "condition": "가까운 별이 둘레 수소를 이온화할 만큼 뜨거울 때",
+        "type": "causal",
+        "scope": "방출 성운의 형성 자리"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 별의 성질을 맞바꾼 것이라, 수소를 이온화하는 것이 O·B형 별의 강한 자외선이라는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "방출 성운은 자외선을 거의 내지 않는 늙고 차가운 별 가까이에 생긴다."
+    },
+    {
+      "id": "rel-en-vs-rn",
+      "text": "방출 성운은 스스로 빛을 내지만 반사 성운은 남의 빛을 되비칠 뿐이다.",
+      "form": {
+        "condition": "성운이 빛을 얻는 방식을 견줄 때",
+        "type": "classification",
+        "scope": "성운의 분류"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 성운의 이름을 맞바꾼 것이라 각 정의와 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "반사 성운은 스스로 빛을 내지만 방출 성운은 남의 빛을 되비칠 뿐이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "방출 성운이 붉은 까닭은 성간 티끌이 붉은빛을 되비치기 때문이다",
+      "why_wrong": "되비침이 아니라 재결합하는 수소가 내는 방출선 때문이다. 되비쳐 보이는 쪽은 푸른 반사 성운이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-en-source"
+    },
+    {
+      "text": "방출 성운은 전리수소 영역과 아무 상관이 없다",
+      "why_wrong": "전리수소 영역에서 이온화된 수소가 재결합하며 내는 빛이 곧 방출 성운의 빛이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-en-vs-rn"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-nebula"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-ionized-hydrogen-region"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-02-1",
+  "pages": [
+    103
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — rel-en-recomb 은 definition 을 동의어 치환(이온화된→전리된, 다시 결합→재결합)만으로 옮긴 것이라 형성 자리를 묻는 rel-en-source 로 갈아 세웠다 (R4)."
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "plan-central-mass-from-kepler-third-law",
+  "concept_key": "concept:central-mass-from-kepler-third-law",
+  "registry_status": "new",
+  "term": "중심 천체의 질량과 조화 법칙",
+  "notation": {
+    "hanja": "中心 天體 質量 調和 法則",
+    "english": "central mass from Kepler's third law",
+    "hanja_gloss": "中 가운데 중 · 心 마음 심 · 天 하늘 천 · 體 몸 체 · 質 바탕 질 · 量 헤아릴 량 · 調 고를 조 · 和 화할 화 · 法 법 법 · 則 법칙 칙"
+  },
+  "definition": "조화 법칙의 상수가 중심 천체의 질량으로 정해진다는 것. 공전 주기와 긴반지름을 재면 중심 천체의 질량을 알아낼 수 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cm-constant",
+      "text": "중심 천체의 질량이 클수록 그 계에서 구한 a³/P², 곧 조화 법칙의 상수 k가 커진다.",
+      "form": {
+        "condition": "중심 천체의 중력만 작용할 때",
+        "type": "direct",
+        "scope": "중력으로 묶인 한 계",
+        "antecedent": {
+          "quantity": "중심 천체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "상수 k",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「a³/P² 값이 작아진다」는 28쪽의 「중심 천체의 질량이 클수록 a³/P² 값은 커진다」와 정면으로 어긋나 반드시 거짓이다. k 를 a³/P² 로 잡는다는 규약을 문면에 드러내 두었으므로 P² = k a³ 로 외운 학생에게도 뒤집은 문장이 참으로 읽히지 않는다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심 천체의 질량이 클수록 그 계에서 구한 a³/P², 곧 조화 법칙의 상수 k는 작아진다."
+    },
+    {
+      "id": "rel-cm-period",
+      "text": "궤도 긴반지름을 그대로 둔 채 태양의 질량이 줄면 행성의 공전 주기는 길어진다.",
+      "form": {
+        "condition": "궤도 긴반지름이 그대로일 때",
+        "type": "inverse",
+        "scope": "태양을 도는 행성",
+        "antecedent": {
+          "quantity": "중심 천체의 질량",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "공전 주기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「태양의 질량이 줄면 공전 주기가 짧아진다」는 k가 작아지면 같은 긴반지름에서 주기가 길어진다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "궤도 긴반지름을 그대로 둔 채 태양의 질량이 줄면 행성의 공전 주기는 짧아진다."
+    },
+    {
+      "id": "rel-cm-binary",
+      "text": "토성의 위성계나 태양계 밖 쌍성계에서도 주기와 긴반지름을 재면 중심 천체의 질량을 구할 수 있다.",
+      "form": {
+        "condition": "중심 천체 둘레를 도는 천체를 관측할 때",
+        "type": "conditional",
+        "scope": "중력으로 묶인 모든 계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「주기와 긴반지름을 재도 중심 천체의 질량은 구할 수 없다」는 조화 법칙이 쌍성계까지 적용된다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "토성의 위성계나 태양계 밖 쌍성계에서는 주기와 긴반지름을 재도 중심 천체의 질량을 구할 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "조화 법칙의 상수 k는 어디서나 같은 보편 상수다",
+      "why_wrong": "k는 중심 천체의 질량으로 정해지므로 태양계와 토성 위성계에서 값이 다르다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cm-constant"
+    },
+    {
+      "text": "공전 주기는 도는 천체 자신의 질량으로 정해진다",
+      "why_wrong": "주기는 중심 천체의 질량과 궤도 긴반지름으로 정해진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cm-period"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-kepler-third-law"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-law-of-universal-gravitation"
+    },
+    {
+      "type": "related",
+      "target": "plan-semi-major-axis"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-3",
+  "pages": [
+    27,
+    28,
+    29
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

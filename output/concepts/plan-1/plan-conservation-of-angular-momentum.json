@@ -1,0 +1,95 @@
+{
+  "id": "plan-conservation-of-angular-momentum",
+  "concept_key": "concept:conservation-of-angular-momentum",
+  "registry_status": "new",
+  "term": "각운동량 보존",
+  "notation": {
+    "hanja": "角運動量保存",
+    "english": "conservation of angular momentum",
+    "hanja_gloss": "角 뿔 각 · 運 옮길 운 · 動 움직일 동 · 量 헤아릴 량 · 保 지킬 보 · 存 있을 존"
+  },
+  "definition": "중심까지의 거리와 질량, 선속도를 곱한 양이 그대로 유지되는 성질. 면적 속도가 일정한 까닭을 설명해 준다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-am-area",
+      "text": "면적 속도가 일정하다는 것은 곧 그 천체의 각운동량이 보존된다는 뜻이다.",
+      "form": {
+        "condition": "중심 천체의 중력만 작용할 때",
+        "type": "conditional",
+        "scope": "교과서 곁주가 다루는 타원 궤도 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「면적 속도가 일정해도 각운동량은 보존되지 않는다」는 두 서술이 같은 내용이라는 곁주의 설명과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "면적 속도가 일정하더라도 그 천체의 각운동량은 보존되지 않는다."
+    },
+    {
+      "id": "rel-am-tradeoff",
+      "text": "각운동량이 보존되므로 중심까지의 거리가 짧아지면 그만큼 선속도가 커진다.",
+      "form": {
+        "condition": "질량이 일정한 한 천체가 중력만 받고 돌 때",
+        "type": "inverse",
+        "scope": "타원 궤도 운동",
+        "antecedent": {
+          "quantity": "중심까지의 거리",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "선속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「거리가 짧아지면 선속도도 함께 작아진다」는 거리와 속도의 곱이 일정하다는 것과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "각운동량이 보존되므로 중심까지의 거리가 짧아지면 선속도도 함께 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "각운동량이 보존되면 공전 속도도 늘 일정하다",
+      "why_wrong": "거리와 속도의 곱이 일정한 것이므로 거리가 달라지면 속도는 달라진다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-am-tradeoff"
+    },
+    {
+      "text": "각운동량 보존은 원 궤도에서만 성립한다",
+      "why_wrong": "중심 천체의 중력만 작용하면 타원 궤도에서도 보존된다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-am-area"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-kepler-second-law"
+    },
+    {
+      "type": "related",
+      "target": "plan-perihelion-and-aphelion"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-02-2",
+  "pages": [
+    26
+  ],
+  "difficulty": 4,
+  "role": "context",
+  "version": 1
+}

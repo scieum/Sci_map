@@ -1,0 +1,110 @@
+{
+  "id": "plan-gravitational-lensing-by-galaxy-cluster",
+  "concept_key": "concept:gravitational-lensing",
+  "registry_status": "new",
+  "term": "중력 렌즈 현상",
+  "notation": {
+    "hanja": "重力現象",
+    "english": "gravitational lensing",
+    "hanja_gloss": "重 무거울 중 · 力 힘 력 · 現 나타날 현 · 象 코끼리 상",
+    "hanja_note": "'렌즈'는 음차어라 대응 한자가 없다. 한자는 '중력'과 '현상' 쪽만 적었다."
+  },
+  "definition": "먼 천체에서 온 빛이 무거운 천체의 중력에 휘어져, 그 상이 일그러지거나 여러 개로 보이는 현상.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gl-mass",
+      "text": "가로놓인 천체의 질량이 클수록 빛이 더 많이 휘어진다.",
+      "form": {
+        "condition": "빛이 그 천체 곁을 스쳐 지날 때",
+        "type": "direct",
+        "scope": "중력 렌즈 현상",
+        "antecedent": {
+          "quantity": "가로놓인 천체의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "빛이 휘어지는 정도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「질량이 클수록 빛이 덜 휘어진다」는 휘는 정도가 질량에 따라 커진다는 사실과 정반대라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "가로놓인 천체의 질량이 클수록 빛이 덜 휘어진다."
+    },
+    {
+      "id": "rel-gl-dm",
+      "text": "상이 일그러진 정도로 가로놓인 천체의 질량을 가늠해 암흑 물질의 양을 추정한다.",
+      "form": {
+        "condition": "보이는 물질의 질량을 따로 어림할 수 있을 때",
+        "type": "causal",
+        "scope": "은하단에 의한 중력 렌즈"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 일그러짐이 알려 주는 것을 가로놓인 천체의 질량에서 먼 은하의 크기로 맞바꾼 것이라, 휘는 정도가 질량에 좌우된다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "상이 일그러진 정도는 가로놓인 천체의 질량이 아니라 먼 은하 자신의 크기를 알려 준다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "중력 렌즈 현상은 은하단이 유리처럼 빛을 굴절시켜 일어난다",
+      "why_wrong": "물질을 통과하며 꺾이는 굴절이 아니라, 중력이 빛의 경로 자체를 휘게 하는 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gl-mass"
+    },
+    {
+      "text": "중력 렌즈 효과의 크기는 눈에 보이는 은하들의 질량만으로 설명된다",
+      "why_wrong": "관측되는 효과는 보이는 물질로 예상한 것보다 크다. 그래서 암흑 물질이 훨씬 많다고 본다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gl-dm"
+    }
+  ],
+  "links": [
+    {
+      "type": "same",
+      "target": "mech-gravitational-lensing",
+      "note": "「역학과 에너지」에서 같은 concept_key 로 다룬 카드"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-galaxy-cluster"
+    },
+    {
+      "type": "next",
+      "target": "plan-dark-matter"
+    },
+    {
+      "type": "same",
+      "target": "plan-gravitational-lensing",
+      "note": "「행성우주과학」 plan-1 이 미세 중력 렌즈 현상 쪽에서 먼저 세운 같은 개념 카드"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-2",
+  "pages": [
+    111
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "「역학과 에너지」는 같은 개념을 '중력 렌즈 효과'로 적는다. 표제어 표기 통일은 naming_policy 판단이라 사람 몫으로 남긴다 — 키는 같으므로 same 으로 이었다.",
+    "id 가 plan-1 의 'plan-gravitational-lensing' 과 부딪혀 이 단원의 맥락(은하단에 의한 중력 렌즈)을 접미사로 붙였다. concept_key 는 그대로 두고 same 으로 이었다."
+  ]
+}

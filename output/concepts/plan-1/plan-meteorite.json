@@ -1,0 +1,108 @@
+{
+  "id": "plan-meteorite",
+  "concept_key": "concept:meteorite",
+  "registry_status": "new",
+  "term": "운석",
+  "notation": {
+    "hanja": "隕石",
+    "english": "meteorite",
+    "hanja_gloss": "隕 떨어질 운 · 石 돌 석"
+  },
+  "definition": "우주에서 온 물체가 다 타지 않고 지표까지 떨어진 지구 밖 기원의 암석. 대부분 소행성대에서 왔다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-mt-fragment",
+      "text": "운석이 될 조각은 주로 소행성끼리 부딪혀 생기며, 우주를 떠돌다 지구 중력에 이끌려 들어온다.",
+      "form": {
+        "condition": "소행성대에서 생긴 파편이 지구 궤도 부근을 지날 때",
+        "type": "causal",
+        "scope": "지구에 떨어지는 운석의 내력"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「조각이 지구 대기 안에서 생기고 중력과 상관없이 떨어진다」는 운석이 지구 밖에서 기원해 지구 중력에 이끌려 온다는 33쪽 서술과 어긋나 반드시 거짓이다.",
+      "inverted_text": "운석이 될 조각은 주로 지구 대기 안에서 생기며, 지구 중력과는 상관없이 떨어진다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-mt-parent",
+      "text": "대부분의 운석은 소행성대에서 왔지만 일부는 화성이나 달에서 떨어져 나온 것이다.",
+      "form": {
+        "condition": "운석의 모체를 밝힐 때",
+        "type": "classification",
+        "scope": "지금까지 확인된 운석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대부분이 화성과 달에서 왔고 소행성대에서 온 것은 거의 없다」는 비율을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "대부분의 운석은 화성이나 달에서 왔고 소행성대에서 온 것은 거의 없다."
+    },
+    {
+      "id": "rel-mt-research",
+      "text": "운석을 연구하면 탐사선을 보내지 않고도 태양계 초기 물질을 조사할 수 있다.",
+      "form": {
+        "condition": "지구에서 회수한 운석을 분석할 때",
+        "type": "causal",
+        "scope": "태양계 진화를 밝히는 연구 방법"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「운석으로는 초기 물질을 조사할 수 없어 반드시 탐사선을 보내야 한다」는 운석 연구가 효율적인 방법이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "운석을 연구해도 태양계 초기 물질은 조사할 수 없어 반드시 탐사선을 보내야 한다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "운석은 지구 암석이 높이 튀었다가 떨어진 것이다",
+      "why_wrong": "지구 밖에서 기원한 암석이 지표까지 떨어진 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-mt-fragment"
+    },
+    {
+      "text": "대기권에 들어온 유성체는 모두 운석이 된다",
+      "why_wrong": "대부분 다 타 없어지고 남은 것만 운석이 된다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-meteoroid-and-meteor"
+    },
+    {
+      "type": "next",
+      "target": "plan-classification-of-meteorite"
+    },
+    {
+      "type": "related",
+      "target": "plan-differentiation-of-small-body"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-2",
+  "pages": [
+    33,
+    34,
+    39
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

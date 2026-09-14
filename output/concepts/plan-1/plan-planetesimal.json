@@ -1,0 +1,99 @@
+{
+  "id": "plan-planetesimal",
+  "concept_key": "concept:planetesimal",
+  "registry_status": "new",
+  "term": "미행성",
+  "notation": {
+    "hanja": "微行星",
+    "english": "planetesimal",
+    "hanja_gloss": "微 작을 미 · 行 다닐 행 · 星 별 성"
+  },
+  "definition": "초기 태양계 성운의 고체 물질이 모이고 부딪혀 자라난 작은 천체. 행성의 재료가 된 단계다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pls-accretion",
+      "text": "성운 속 고체 물질이 모여 붙고 부딪혀 합쳐지는 일이 거듭되면서 미행성은 크기를 키웠다.",
+      "form": {
+        "condition": "초기 태양계 성운에서 집적이 일어날 때",
+        "type": "causal",
+        "scope": "태양계가 만들어지던 초기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「부딪혀 합쳐져도 미행성의 크기는 자라지 않았다」는 집적·충돌·병합으로 크기를 키웠다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "성운 속 고체 물질이 모여 붙고 부딪혀 합쳐져도 미행성의 크기는 자라지 않았다."
+    },
+    {
+      "id": "rel-pls-leftover",
+      "text": "행성으로 자라지 못한 미행성과 그 충돌 잔재가 오늘날의 소행성을 이룬다.",
+      "form": {
+        "condition": "행성 집적이 끝난 뒤 남은 물질을 볼 때",
+        "type": "causal",
+        "scope": "소행성의 기원"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「오늘날의 소행성은 미행성과 상관없이 행성이 부서져 생겼다」는 미행성의 잔재라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "오늘날의 소행성은 미행성과 상관없이 행성이 부서져 생긴 것이다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "미행성은 지금은 남아 있지 않은 옛 천체다",
+      "why_wrong": "행성으로 자라지 못한 미행성이 소행성으로 남아 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pls-leftover"
+    },
+    {
+      "text": "미행성은 행성이 부서져 생긴 조각이다",
+      "why_wrong": "거꾸로 행성이 만들어지기 전 단계의 천체다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-pls-accretion"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-asteroid"
+    },
+    {
+      "type": "same",
+      "target": "esys-planetesimal"
+    },
+    {
+      "type": "related",
+      "target": "plan-differentiation-of-small-body"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-3",
+  "pages": [
+    32,
+    34,
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "미행성체"
+  ],
+  "notes": [
+    "esys-1 은 같은 concept_key 를 '미행성체'라는 표제어로 쓴다. 이 카드는 이 교과서의 표기를 따라 '미행성'으로 두고 '미행성체'를 aliases 에 넣었다 — 표기 통일은 naming_policy 판단이 필요한 자리다."
+  ]
+}

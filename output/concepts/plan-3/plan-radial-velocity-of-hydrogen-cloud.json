@@ -1,0 +1,123 @@
+{
+  "id": "plan-radial-velocity-of-hydrogen-cloud",
+  "concept_key": "concept:radial-velocity",
+  "registry_status": "new",
+  "term": "시선 속도",
+  "notation": {
+    "hanja": "視線速度",
+    "english": "radial velocity",
+    "hanja_gloss": "視 볼 시 · 線 줄 선 · 速 빠를 속 · 度 법도 도"
+  },
+  "definition": "천체의 운동 가운데 관측자의 시선 방향으로 향하는 성분. 분광선의 도플러 이동량으로 구한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-rv-doppler",
+      "text": "수소선의 도플러 이동량을 재면 그 수소 구름의 시선 속도를 얻을 수 있다.",
+      "form": {
+        "condition": "수소선의 고유 파장을 알고 있을 때",
+        "type": "causal",
+        "scope": "21 cm 수소선 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 도플러 이동이 알려 주는 속도 성분을 시선 방향에서 접선 방향으로 맞바꾼 것이라, 파장 변화가 시선 방향 성분에서 온다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소선의 도플러 이동량에서 얻는 것은 시선 속도가 아니라 시선에 수직인 접선 속도다."
+    },
+    {
+      "id": "rel-rv-size",
+      "text": "은하 중심까지의 거리가 태양과 많이 다른 구름일수록 시선 속도의 크기가 커진다.",
+      "form": {
+        "condition": "같은 시선 방향에 놓인 수소 구름들을 견줄 때",
+        "type": "direct",
+        "scope": "우리은하 원반의 차등 회전",
+        "antecedent": {
+          "quantity": "은하 중심 거리의 차",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "시선 속도의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「거리가 많이 다를수록 시선 속도의 크기가 작아진다」는 차등 회전 때문에 상대 속도가 벌어진다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은하 중심까지의 거리가 태양과 많이 다른 구름일수록 시선 속도의 크기가 작아진다."
+    },
+    {
+      "id": "rel-rv-sign",
+      "text": "은경 0°~180° 방향에서는 태양 궤도 안쪽 구름의 시선 속도가 (+), 바깥쪽 구름이 (-)로 나타난다.",
+      "form": {
+        "condition": "은경 0°~180° 범위의 천체를 볼 때",
+        "type": "conditional",
+        "scope": "우리은하 원반의 중성수소 구름"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 안쪽과 바깥쪽의 부호를 맞바꾼 것이라 이 범위의 관측 경향과 정반대여서 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "은경 0°~180° 방향에서는 태양 궤도 안쪽 구름의 시선 속도가 (-), 바깥쪽 구름이 (+)로 나타난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "시선 속도는 천체가 실제로 움직이는 속도 전체다",
+      "why_wrong": "시선 방향 성분만을 가리킨다. 시선에 수직인 접선 방향 성분은 여기에 들어 있지 않다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rv-doppler"
+    },
+    {
+      "text": "시선 속도가 0이면 그 수소 구름은 멈춰 있는 것이다",
+      "why_wrong": "시선 방향 성분이 0일 뿐, 시선에 수직으로 움직이고 있을 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-rv-sign"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-hydrogen-21cm-line"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-doppler-effect-in-galaxy-rotation"
+    },
+    {
+      "type": "next",
+      "target": "plan-galaxy-rotation-curve"
+    },
+    {
+      "type": "same",
+      "target": "plan-radial-velocity",
+      "note": "「행성우주과학」 plan-2 가 별의 공간 운동 쪽에서 먼저 세운 같은 개념 카드"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-1",
+  "pages": [
+    109
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "id 가 plan-2 의 'plan-radial-velocity' 와 부딪혀 이 단원의 맥락(중성수소 구름의 시선 속도)을 접미사로 붙였다. concept_key 는 그대로 두고 same 으로 이었다."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "plan-pogson-formula",
+  "concept_key": "concept:pogson-formula",
+  "registry_status": "new",
+  "term": "포그슨 공식",
+  "notation": {
+    "hanja": "해당 없음",
+    "hanja_note": "천문학자 포그슨의 이름을 소리대로 옮긴 말이 앞에 붙어 표제어 전체를 한자로 적을 수 없다. '공식'만 한자어(公式)다.",
+    "english": "Pogson's formula",
+    "symbol_display": "m₂ − m₁ = −2.5 log(l₂/l₁)",
+    "symbol_plain": "m2 - m1 = -2.5 log(l2/l1)"
+  },
+  "definition": "두 별의 등급 차와 밝기 비 사이의 관계를 적은 식.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pogson-hundred",
+      "text": "등급이 5만큼 차이 나는 두 별의 밝기는 100배 차이가 난다.",
+      "form": {
+        "condition": "같은 방식으로 잰 밝기끼리 견줄 때",
+        "type": "direct",
+        "scope": "별의 밝기 등급"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「등급 차 5가 10배 차이」라는 말인데, 약속된 값이 100배이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등급이 5만큼 차이 나는 두 별의 밝기는 10배 차이가 난다."
+    },
+    {
+      "id": "rel-pogson-smaller-brighter",
+      "text": "등급의 값이 작을수록 밝은 별이다.",
+      "form": {
+        "condition": "등급 체계의 약속을 따를 때",
+        "type": "inverse",
+        "scope": "겉보기 등급과 절대 등급",
+        "antecedent": {
+          "quantity": "등급의 값",
+          "direction": "감소"
+        },
+        "consequent": {
+          "quantity": "별의 밝기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「등급 값이 작을수록 어둡다」인데, 1등급이 6등급보다 밝다는 약속과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등급의 값이 작을수록 어두운 별이다."
+    },
+    {
+      "id": "rel-pogson-one-step",
+      "text": "등급이 1만큼 차이 나면 밝기는 약 2.5배 차이가 난다.",
+      "form": {
+        "condition": "포그슨 공식을 적용할 때",
+        "type": "direct",
+        "scope": "별의 밝기 등급"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「1등급 차가 100배 차이」라는 말인데, 100배는 5등급 차이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "등급이 1만큼 차이 나면 밝기는 약 100배 차이가 난다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "1등급인 별은 6등급인 별보다 6배 밝다.",
+      "why_wrong": "등급 차 5는 100배 차이다. 등급은 밝기에 로그로 대응하므로 차를 그대로 배수로 읽으면 안 된다.",
+      "source": "llm",
+      "linked_relation": "rel-pogson-hundred"
+    },
+    {
+      "text": "등급의 값이 클수록 밝은 별이다.",
+      "why_wrong": "거꾸로다. 값이 작을수록 밝고, 아주 밝은 별은 음수 등급을 갖는다.",
+      "source": "llm",
+      "linked_relation": "rel-pogson-smaller-brighter"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-apparent-magnitude-and-absolute-magnitude"
+    },
+    {
+      "type": "related",
+      "target": "plan-luminosity",
+      "note": "등급으로 견주는 대상이 별의 밝기다"
+    },
+    {
+      "type": "related",
+      "target": "plan-brightness-distance-relation",
+      "note": "거리 비를 등급 차로 바꿀 때 쓴다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-2",
+  "pages": [
+    65
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

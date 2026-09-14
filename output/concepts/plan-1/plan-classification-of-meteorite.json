@@ -1,0 +1,76 @@
+{
+  "id": "plan-classification-of-meteorite",
+  "concept_key": "concept:classification-of-meteorite",
+  "registry_status": "new",
+  "term": "운석의 분류",
+  "notation": {
+    "hanja": "隕石 分類",
+    "english": "classification of meteorites",
+    "hanja_gloss": "隕 떨어질 운 · 石 돌 석 · 分 나눌 분 · 類 무리 류"
+  },
+  "definition": "구성 성분에 따라 운석을 가르는 방법. 규산염 광물 위주면 석질, 철-니켈 금속 위주면 철질, 둘이 섞이면 석철질이다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-cmr-position",
+      "text": "철질 운석은 모체의 핵에서, 석질 운석은 모체의 맨틀 쪽에서 떨어져 나온 것으로 본다.",
+      "form": {
+        "condition": "모체가 분화를 겪은 천체일 때",
+        "type": "classification",
+        "scope": "분화 천체에서 온 운석"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「철질 운석이 맨틀에서, 석질 운석이 핵에서 온 것으로 본다」는 두 자리를 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "철질 운석은 모체의 맨틀에서, 석질 운석은 모체의 핵에서 떨어져 나온 것으로 본다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "운석은 모두 돌로만 이루어져 있다",
+      "why_wrong": "철-니켈 금속으로 된 철질 운석과 두 성분이 섞인 석철질 운석도 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmr-position"
+    },
+    {
+      "text": "철질 운석의 철은 지구의 철이 섞여 들어간 것이다",
+      "why_wrong": "모체인 소행성의 핵을 이루던 철-니켈 금속이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-cmr-position"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-meteorite"
+    },
+    {
+      "type": "next",
+      "target": "plan-differentiated-and-undifferentiated-meteorite"
+    },
+    {
+      "type": "related",
+      "target": "plan-differentiation-of-small-body"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-03-3",
+  "pages": [
+    34,
+    39
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,103 @@
+{
+  "id": "plan-space-debris",
+  "concept_key": "concept:space-debris",
+  "registry_status": "new",
+  "term": "우주 쓰레기",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "space debris",
+    "hanja_note": "'쓰레기'가 고유어여서 표제어 전체에 대응하는 한자 표기가 없다(宇宙만 한자어다)."
+  },
+  "definition": "기능이 멈춘 인공위성과 로켓 잔해, 떨어져 나온 부품처럼 지구 둘레 궤도에 남아 돌고 있는 인공 물체.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sd-speed",
+      "text": "지름 1 cm를 넘는 우주 쓰레기도 시속 수만 km로 돌기 때문에 정상 가동 중인 인공위성에 큰 위협이 된다.",
+      "form": {
+        "condition": "궤도 속력이 매우 클 때",
+        "type": "causal",
+        "scope": "저궤도 위성 운용"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「시속 수만 km로 돌아도 인공위성에 위협이 되지 않는다」는 총알처럼 빠른 잔해가 위협이라는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "지름 1 cm를 넘는 우주 쓰레기는 시속 수만 km로 돌아도 인공위성에 위협이 되지 않는다."
+    },
+    {
+      "id": "rel-sd-increase",
+      "text": "수명이 끝난 위성을 궤도에 그대로 두는 한, 소형 위성 발사가 늘수록 궤도에 남는 우주 쓰레기도 늘어난다.",
+      "form": {
+        "condition": "수명이 끝난 위성을 궤도에 그대로 둘 때",
+        "type": "direct",
+        "scope": "지구 둘레 궤도의 인공 물체 수",
+        "antecedent": {
+          "quantity": "위성 발사 횟수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "우주 쓰레기의 양",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 수명이 끝난 위성을 그대로 둔다는 전제를 문면에 안고 있으므로, 잔해 제거나 궤도 이탈 처리를 들어 참으로 만들 길이 없다. 발사가 늘면 잔해도 는다는 19쪽 전망과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수명이 끝난 위성을 궤도에 그대로 두더라도, 소형 위성 발사가 늘수록 궤도에 남는 우주 쓰레기는 오히려 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우주 쓰레기는 작아서 인공위성에 아무 해가 없다",
+      "why_wrong": "지름 1 cm짜리도 총알보다 빠르게 돌기 때문에 위성을 부술 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sd-speed"
+    },
+    {
+      "text": "우주 쓰레기는 모두 저절로 떨어져 사라진다",
+      "why_wrong": "높은 궤도의 잔해는 오래 남고, 떨어지더라도 다 타지 않은 조각이 지상에 이를 수 있다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-space-hazard"
+    },
+    {
+      "type": "related",
+      "target": "plan-artificial-satellite"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-object-surveillance"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    19,
+    22,
+    23
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1,
+  "aliases": [
+    "우주 잔해물"
+  ]
+}

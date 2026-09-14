@@ -1,0 +1,96 @@
+{
+  "id": "plan-pulsating-variable-star",
+  "concept_key": "concept:pulsating-variable-star",
+  "registry_status": "new",
+  "term": "맥동 변광성",
+  "notation": {
+    "hanja": "脈動變光星",
+    "hanja_gloss": "脈 줄기 맥 · 動 움직일 동 · 變 변할 변 · 光 빛 광 · 星 별 성",
+    "english": "pulsating variable star"
+  },
+  "definition": "밝기가 주기적으로 오르내리기를 되풀이하는 변광성.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-pv-pulse",
+      "text": "별의 내부가 불안정해 팽창과 수축을 되풀이하면 광도도 주기적으로 오르내린다.",
+      "form": {
+        "condition": "거성이나 초거성 단계에 있을 때",
+        "type": "causal",
+        "scope": "맥동 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「팽창과 수축을 되풀이해도 광도는 주기적으로 오르내리지 않는다」인데, 부피 변화가 곧 밝기 변화로 이어지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별의 내부가 불안정해 팽창과 수축을 되풀이해도 광도는 주기적으로 오르내리지 않는다."
+    },
+    {
+      "id": "rel-pv-stage",
+      "text": "맥동 변광성은 주계열을 떠난 거성이나 초거성 단계에서 나타난다.",
+      "form": {
+        "condition": "별의 진화 단계를 견줄 때",
+        "type": "classification",
+        "scope": "맥동 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「주계열 단계의 별에서 나타난다」인데, 맥동은 주계열을 떠난 뒤의 현상이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "맥동 변광성은 주계열 단계에 있는 별에서 나타난다."
+    },
+    {
+      "id": "rel-pv-not-explosion",
+      "text": "맥동 변광성의 밝기 변화는 폭발이 아니라 별 자체의 부피가 커졌다 작아지기 때문에 생긴다.",
+      "form": {
+        "condition": "밝기 변화의 원인을 가릴 때",
+        "type": "causal",
+        "scope": "맥동 변광성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「밝기 변화가 별의 폭발로 생긴다」인데, 그것은 폭발 변광성의 경우이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "맥동 변광성의 밝기 변화는 별의 폭발 때문에 생긴다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "맥동 변광성은 작은 폭발을 되풀이하며 밝아졌다 어두워진다.",
+      "why_wrong": "폭발이 아니라 별이 부풀었다 오므라들기를 되풀이하기 때문이다. 별 자체는 그대로 남는다.",
+      "source": "llm",
+      "linked_relation": "rel-pv-not-explosion"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-light-curve"
+    },
+    {
+      "type": "related",
+      "target": "plan-eruptive-variable-star",
+      "note": "광도 곡선을 나란히 놓고 견주는 짝이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-04-1",
+  "pages": [
+    79,
+    83
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1
+}

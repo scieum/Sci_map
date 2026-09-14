@@ -1,0 +1,98 @@
+{
+  "id": "plan-artificial-satellite",
+  "concept_key": "concept:artificial-satellite",
+  "registry_status": "new",
+  "term": "인공위성",
+  "notation": {
+    "hanja": "人工衛星",
+    "english": "artificial satellite",
+    "hanja_gloss": "人 사람 인 · 工 장인 공 · 衛 지킬 위 · 星 별 성"
+  },
+  "definition": "지구나 다른 천체 둘레를 돌도록 사람이 쏘아 올린 물체. 궤도 위에서 우주 공간과 천체를 관측하는 데 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sat-mission",
+      "text": "정지 궤도 위성은 통신·기상 임무에, 저궤도 위성은 과학·군사 임무에 주로 쓰인다.",
+      "form": {
+        "condition": "인공위성을 궤도 높이에 따라 나눌 때",
+        "type": "classification",
+        "scope": "교과서가 든 정지 궤도·저궤도 두 갈래"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「정지 궤도 위성이 과학·군사 임무에, 저궤도 위성이 통신·기상 임무에 쓰인다」는 두 이름을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "정지 궤도 위성은 과학·군사 임무에, 저궤도 위성은 통신·기상 임무에 주로 쓰인다."
+    },
+    {
+      "id": "rel-sat-vantage",
+      "text": "인공위성은 대기 밖 궤도에서 관측하므로 지상 관측과 달리 대기의 방해를 덜 받는다.",
+      "form": {
+        "condition": "대기권 밖 궤도에 있을 때",
+        "type": "causal",
+        "scope": "대기 밖 궤도를 도는 관측 위성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「대기 밖 궤도에서 관측해도 지상 관측과 똑같이 대기의 방해를 받는다」는 대기 밖에는 방해할 대기가 없다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "인공위성은 대기 밖 궤도에서 관측해도 지상 관측과 똑같이 대기의 방해를 받는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "정지 궤도 위성은 우주 공간의 한자리에 멈춰 서 있다",
+      "why_wrong": "지구 자전과 같은 주기로 돌기 때문에 지상에서 같은 자리에 보일 뿐, 실제로는 궤도를 돌고 있다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "인공위성은 지구 둘레만 돈다",
+      "why_wrong": "달 궤도선 다누리처럼 다른 천체 둘레를 도는 위성도 인공위성이다.",
+      "source": "llm",
+      "verified_by": "pending"
+    },
+    {
+      "text": "통신과 기상을 맡는 위성은 지구에 가까운 저궤도를 돈다",
+      "why_wrong": "통신·기상 임무는 정지 궤도 위성이 맡고, 저궤도 위성은 과학·군사 임무를 맡는다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sat-mission"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-achievement-of-solar-system-exploration"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-activity-monitoring-system"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-debris"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-1",
+  "pages": [
+    14,
+    19,
+    23
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

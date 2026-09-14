@@ -1,0 +1,92 @@
+{
+  "id": "plan-globular-cluster",
+  "concept_key": "concept:globular-cluster",
+  "registry_status": "new",
+  "term": "구상 성단",
+  "notation": {
+    "hanja": "球狀星團",
+    "english": "globular cluster",
+    "hanja_gloss": "球 공 구 · 狀 모양 상 · 星 별 성 · 團 모일 단"
+  },
+  "definition": "수만에서 수십만 개의 늙은 별이 공 모양으로 빽빽이 모인 성단. 헤일로에 주로 놓이며 무거운 원소가 적은 종족 Ⅱ 별로 이루어진다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gc-red",
+      "text": "무거운 별이 모두 주계열을 떠난 뒤여서 구상 성단은 전체가 붉은색으로 보인다.",
+      "form": {
+        "condition": "나이가 100억 년을 넘긴 성단일 때",
+        "type": "causal",
+        "scope": "구상 성단"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「무거운 별이 모두 주계열을 떠난 뒤인데도 구상 성단은 전체가 푸른색으로 보인다」는 남은 별이 태양보다 가벼운 주계열성과 거성이라는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "무거운 별이 모두 주계열을 떠난 뒤인데도 구상 성단은 전체가 푸른색으로 보인다."
+    },
+    {
+      "id": "rel-gc-type",
+      "text": "구상 성단은 나선 은하뿐 아니라 타원 은하에서도 발견된다.",
+      "form": {
+        "condition": "외부 은하의 종류를 가로질러 볼 때",
+        "type": "classification",
+        "scope": "구상 성단의 분포"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 은하의 이름을 맞바꾼 것이라, 구상 성단이 나선 은하에도 존재한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "구상 성단은 타원 은하에서만 발견되고 나선 은하에서는 발견되지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "구상 성단의 별은 모두 거성이다",
+      "why_wrong": "태양보다 질량이 작은 주계열성이 함께 많이 남아 있다. 무거운 별만 먼저 주계열을 떠난 것이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc-red"
+    },
+    {
+      "text": "구상 성단은 별이 빽빽하니 젊고 활발한 성단이다",
+      "why_wrong": "밀집도는 나이와 상관이 없다. 구상 성단의 나이는 100억 년이 넘고, 무거운 원소도 상대적으로 적다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gc-red"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-stellar-population"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-color-magnitude-diagram"
+    },
+    {
+      "type": "next",
+      "target": "plan-structure-of-the-milky-way"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-1",
+  "pages": [
+    94,
+    98
+  ],
+  "difficulty": 2,
+  "role": "core",
+  "version": 1
+}

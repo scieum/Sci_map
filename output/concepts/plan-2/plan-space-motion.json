@@ -1,0 +1,94 @@
+{
+  "id": "plan-space-motion",
+  "concept_key": "concept:stellar-space-motion",
+  "registry_status": "new",
+  "term": "별의 공간 운동",
+  "notation": {
+    "hanja": "空間運動",
+    "hanja_gloss": "空 빌 공 · 間 사이 간 · 運 옮길 운 · 動 움직일 동",
+    "english": "space motion"
+  },
+  "definition": "별이 우주 공간에서 실제로 움직인 것을 가리키는 말.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sm-components",
+      "text": "별의 공간 운동은 시선 방향의 운동과, 시선 방향에 수직인 접선 방향의 운동으로 나누어 다룰 수 있다.",
+      "form": {
+        "condition": "관측자의 시선 방향을 기준으로 삼을 때",
+        "type": "classification",
+        "scope": "별의 운동"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「시선 방향의 운동 하나만으로 공간 운동을 온전히 나타낸다」인데, 수직 성분이 남으므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별의 공간 운동은 시선 방향의 운동 하나만으로 온전히 나타낼 수 있다."
+    },
+    {
+      "id": "rel-sm-hard-to-see",
+      "text": "별까지의 거리가 워낙 멀어서 짧은 기간의 관측만으로는 별이 움직인 것을 알아채기 어렵다.",
+      "form": {
+        "condition": "수년 이내의 짧은 관측",
+        "type": "causal",
+        "scope": "지구에서 관측하는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「거리가 멀어도 짧은 관측으로 움직임을 쉽게 알아챈다」인데, 같은 속도라도 멀수록 각의 변화가 작아 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "별까지의 거리가 멀어도 짧은 기간의 관측으로 움직임을 쉽게 알아챌 수 있다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "별은 밤하늘에서 자리를 바꾸지 않으므로 우주 공간에서 정지해 있다.",
+      "why_wrong": "별들은 빠르게 움직이지만 너무 멀어서 짧은 시간에는 위치 변화가 드러나지 않는다.",
+      "source": "llm",
+      "linked_relation": "rel-sm-hard-to-see"
+    },
+    {
+      "text": "천구상에서 움직이지 않는 별은 공간 운동도 하지 않는 별이다.",
+      "why_wrong": "시선 방향으로만 움직이는 별은 천구상 위치가 그대로다. 그래도 공간 운동은 하고 있다.",
+      "source": "llm",
+      "linked_relation": "rel-sm-components"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-proper-motion"
+    },
+    {
+      "type": "next",
+      "target": "plan-constellation-shape-change"
+    },
+    {
+      "type": "related",
+      "target": "plan-radial-velocity",
+      "note": "시선 방향 성분을 재는 방법이다"
+    },
+    {
+      "type": "related",
+      "target": "plan-space-velocity",
+      "note": "두 성분을 합한 값이다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-3",
+  "pages": [
+    66
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

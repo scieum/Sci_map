@@ -1,0 +1,106 @@
+{
+  "id": "plan-luminosity",
+  "concept_key": "concept:luminosity",
+  "registry_status": "new",
+  "term": "광도",
+  "notation": {
+    "hanja": "光度",
+    "hanja_gloss": "光 빛 광 · 度 법도 도",
+    "english": "luminosity",
+    "symbol_display": "L",
+    "symbol_plain": "L"
+  },
+  "definition": "단위 시간에 별이 내보내는 에너지의 총량으로 정한 밝기. 관측 거리에 좌우되지 않아 별끼리 실제 밝기를 견줄 때 쓴다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-lum-abs-mag",
+      "text": "광도가 큰 별일수록 절대 등급의 값은 작다.",
+      "form": {
+        "condition": "같은 기준으로 매긴 절대 등급",
+        "type": "inverse",
+        "scope": "모든 별",
+        "antecedent": {
+          "quantity": "광도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "절대 등급의 값",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「광도가 클수록 절대 등급 값이 크다」인데, 밝을수록 등급 값이 작아지는 약속과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 큰 별일수록 절대 등급의 값이 크다."
+    },
+    {
+      "id": "rel-lum-same-distance",
+      "text": "광도가 같은 두 별이라면 더 멀리 있는 쪽이 더 어둡게 보인다.",
+      "form": {
+        "condition": "두 별의 광도가 서로 같음",
+        "type": "inverse",
+        "scope": "광도가 같은 별끼리 견줄 때",
+        "antecedent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "겉보기 밝기",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「광도가 같으면 멀리 있는 쪽이 더 밝게 보인다」인데, 겉보기 밝기는 거리와 함께 줄므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 같은 두 별이라면 더 멀리 있는 쪽이 더 밝게 보인다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "밝게 보이는 별이 곧 광도가 큰 별이다.",
+      "why_wrong": "겉보기 밝기는 거리에 좌우된다. 가까이 있어서 밝아 보이는 광도가 작은 별도 있다.",
+      "source": "llm",
+      "linked_relation": "rel-lum-same-distance"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-apparent-magnitude-and-absolute-magnitude"
+    },
+    {
+      "type": "next",
+      "target": "plan-brightness-distance-relation"
+    },
+    {
+      "type": "next",
+      "target": "plan-mass-luminosity-relation"
+    },
+    {
+      "type": "same",
+      "target": "earth-luminosity",
+      "note": "「지구과학」에서는 별의 물리량 쪽에서 같은 개념을 다룬다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-2",
+  "pages": [
+    65,
+    76
+  ],
+  "difficulty": 2,
+  "role": "context",
+  "version": 1
+}

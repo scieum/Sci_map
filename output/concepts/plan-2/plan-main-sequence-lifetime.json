@@ -1,0 +1,117 @@
+{
+  "id": "plan-main-sequence-lifetime",
+  "concept_key": "concept:main-sequence-lifetime",
+  "registry_status": "new",
+  "term": "주계열성의 질량과 수명",
+  "notation": {
+    "hanja": "主系列星質量壽命",
+    "hanja_gloss": "主 주인 주 · 系 이어맬 계 · 列 벌일 렬 · 星 별 성 · 質 바탕 질 · 量 헤아릴 량 · 壽 목숨 수 · 命 목숨 명",
+    "english": "main-sequence lifetime"
+  },
+  "definition": "별이 주계열 단계에 머무는 시간을 그 별의 질량과 견주어 보는 관계.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-msl-shorter",
+      "text": "질량이 큰 주계열성일수록 주계열 단계에 머무는 시간이 짧다.",
+      "form": {
+        "condition": "주계열 단계에 있는 별끼리 견줄 때",
+        "type": "inverse",
+        "scope": "주계열성",
+        "antecedent": {
+          "quantity": "별의 질량",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "주계열 단계 체류 시간",
+          "direction": "감소"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「질량이 클수록 주계열에 오래 머문다」인데, 무거운 별이 먼저 주계열을 떠나므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 큰 주계열성일수록 주계열 단계에 머무는 시간이 길다."
+    },
+    {
+      "id": "rel-msl-luminosity",
+      "text": "광도가 큰 별일수록 수소 핵융합이 빠르게 일어나 연료를 그만큼 빨리 써 버린다.",
+      "form": {
+        "condition": "주계열 단계에 있는 동안",
+        "type": "direct",
+        "scope": "주계열성",
+        "antecedent": {
+          "quantity": "광도",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "수소 소비 속도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「광도가 클수록 핵융합이 느리게 일어난다」인데, 광도가 곧 단위 시간당 방출 에너지이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "광도가 큰 별일수록 수소 핵융합이 느리게 일어나 연료를 천천히 쓴다."
+    },
+    {
+      "id": "rel-msl-two-effects",
+      "text": "질량이 클수록 연료가 늘어 수명이 길어지는 효과보다, 광도가 커져 수명이 줄어드는 효과가 더 크다.",
+      "form": {
+        "condition": "두 효과의 크기를 견줄 때",
+        "type": "classification",
+        "scope": "주계열성의 수명"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 효과의 크기를 맞바꾼 것인데, 그렇다면 무거운 별이 오래 살아야 해서 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-04"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "질량이 클수록 광도가 커져 수명이 줄어드는 효과보다, 연료가 늘어 수명이 길어지는 효과가 더 크다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 큰 별은 연료인 수소를 많이 가지고 있으므로 더 오래 산다.",
+      "why_wrong": "연료가 늘어나는 정도보다 소비 속도가 훨씬 빨리 커진다. 그래서 수명은 오히려 짧아진다.",
+      "source": "llm",
+      "linked_relation": "rel-msl-two-effects"
+    },
+    {
+      "text": "밝은 별일수록 에너지를 아껴 쓰므로 오래 빛난다.",
+      "why_wrong": "광도는 단위 시간에 내보내는 에너지다. 밝을수록 연료를 빨리 소모한다.",
+      "source": "llm",
+      "linked_relation": "rel-msl-luminosity"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-mass-luminosity-relation"
+    },
+    {
+      "type": "related",
+      "target": "plan-main-sequence-star",
+      "note": "머무는 단계 자체를 다룬 카드다"
+    }
+  ],
+  "curriculum": [
+    "12행우02-04"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-03-2",
+  "pages": [
+    76
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1
+}

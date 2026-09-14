@@ -1,0 +1,108 @@
+{
+  "id": "plan-stellar-mass-and-lifetime",
+  "concept_key": "concept:stellar-mass-and-lifetime",
+  "registry_status": "new",
+  "term": "중심별의 질량과 수명",
+  "notation": {
+    "hanja": "해당 없음",
+    "english": "stellar mass and lifetime",
+    "hanja_note": "'별'이 고유어여서 표제어 전체에 대응하는 한자 표기가 없다(質量·壽命만 한자어다)."
+  },
+  "definition": "중심별의 질량이 클수록 수명이 짧아지는 관계. 행성에서 생명체가 진화할 시간이 얼마나 주어지는지를 정한다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-sml-intelligent",
+      "text": "지구에 지적 생명체가 나타나기까지 40억 년이 넘게 걸렸으므로, 지적 생명체를 품을 별은 그만큼 오래 살아야 한다.",
+      "form": {
+        "condition": "지적 생명체가 진화하는 데 걸리는 시간을 지구로 가늠할 때",
+        "type": "conditional",
+        "scope": "지적 생명체가 있는 행성을 거느릴 별의 조건"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수명이 짧아도 된다」는 진화에 더 많은 시간이 필요하다는 44쪽 서술, 그리고 40억 년이라는 지구의 사례와 어긋나 반드시 거짓이다.",
+      "inverted_text": "지구에 지적 생명체가 나타나기까지 40억 년이 넘게 걸렸지만, 지적 생명체를 품을 별은 수명이 짧아도 된다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending"
+    },
+    {
+      "id": "rel-sml-evolution",
+      "text": "중심별의 수명이 짧으면 그 행성에서 생명체가 나타나 진화할 시간이 모자랄 수 있다.",
+      "form": {
+        "condition": "생명 진화에 오랜 시간이 걸린다고 볼 때",
+        "type": "causal",
+        "scope": "외계 생명체가 존재할 가능성"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「중심별의 수명이 짧아도 생명체가 나타나 진화할 시간은 넉넉하다」는 시간이 확보되지 못한다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "중심별의 수명이 짧아도 그 행성에서 생명체가 나타나 진화할 시간은 넉넉하다."
+    },
+    {
+      "id": "rel-sml-small",
+      "text": "수명이 긴 저질량 별은 그 대신 생명 가능 지대가 별 가까이 붙고 폭도 좁다는 약점을 안는다.",
+      "form": {
+        "condition": "중심별이 질량이 작은 주계열성일 때",
+        "type": "conditional",
+        "scope": "저질량 별을 중심별로 둔 행성계"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「질량이 작은 별은 수명이 길고 생명 가능 지대도 멀고 넓다」는 지대가 가깝고 좁다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-05"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수명이 긴 저질량 별은 생명 가능 지대까지 별에서 멀리 떨어져 있고 폭도 넓다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "질량이 큰 별은 연료가 많아 오래 산다",
+      "why_wrong": "연료를 훨씬 빨리 소모하기 때문에 오히려 수명이 짧다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sml-small"
+    },
+    {
+      "text": "별의 수명은 생명체 존재와 관계없다",
+      "why_wrong": "생명체가 나타나 진화할 시간을 정하므로 중요한 조건이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-sml-evolution"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-condition-for-extraterrestrial-life"
+    },
+    {
+      "type": "related",
+      "target": "plan-stellar-luminosity-and-habitable-zone"
+    },
+    {
+      "type": "related",
+      "target": "plan-habitable-zone"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-05"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-04-3",
+  "pages": [
+    43,
+    44
+  ],
+  "difficulty": 3,
+  "role": "supporting",
+  "version": 1
+}

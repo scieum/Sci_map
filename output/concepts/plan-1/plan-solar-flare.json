@@ -1,0 +1,119 @@
+{
+  "id": "plan-solar-flare",
+  "concept_key": "concept:solar-flare",
+  "registry_status": "new",
+  "term": "태양 흑점 폭발",
+  "notation": {
+    "hanja": "太陽黑點爆發",
+    "english": "solar flare",
+    "hanja_gloss": "太 클 태 · 陽 볕 양 · 黑 검을 흑 · 點 점 점 · 爆 터질 폭 · 發 필 발"
+  },
+  "definition": "태양의 활동이 활발해질 때 흑점 부근에서 일어나는 큰 폭발. 막대한 빛에너지와 고에너지 물질을 한꺼번에 우주로 내보낸다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-fl-arrival",
+      "text": "폭발로 나온 X선과 자외선은 약 8분, 고에너지 입자는 15분에서 수 시간, 코로나 질량 방출은 1~3일 뒤에 지구에 닿는다.",
+      "form": {
+        "condition": "같은 폭발에서 나온 것들의 도달 시각을 견줄 때",
+        "type": "classification",
+        "scope": "태양에서 지구까지의 도달 시간"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「코로나 질량 방출이 8분 만에 닿고 X선이 1~3일 뒤에 닿는다」는 빠른 것과 느린 것을 맞바꾼 것이라 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "폭발로 나온 코로나 질량 방출은 약 8분, X선과 자외선은 1~3일 뒤에 지구에 닿는다."
+    },
+    {
+      "id": "rel-fl-ionosphere",
+      "text": "폭발로 온 X선이 전리층의 전자 밀도를 바꾸면 단파 통신과 위성 전파, 위치 정보 신호에 장애가 생긴다.",
+      "form": {
+        "condition": "X선이 지구 대기 상층에 닿을 때",
+        "type": "causal",
+        "scope": "전리층을 거치는 전파 통신"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「X선이 전리층의 전자 밀도를 바꿔도 통신과 위치 정보에는 아무 영향이 없다」는 통신 장애 사례와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "폭발로 온 X선이 전리층의 전자 밀도를 바꿔도 단파 통신과 위성 전파, 위치 정보 신호에는 아무 장애가 생기지 않는다."
+    },
+    {
+      "id": "rel-fl-strength",
+      "text": "흑점 폭발이 강할수록 지구로 들어오는 고에너지 물질이 많아져 지구 환경의 변화도 커진다.",
+      "form": {
+        "condition": "방출된 물질이 지구 쪽으로 향할 때",
+        "type": "direct",
+        "scope": "지구에 닿는 태양 방출 물질",
+        "antecedent": {
+          "quantity": "흑점 폭발의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "지구 환경 변화의 크기",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「폭발이 강할수록 지구 환경의 변화는 작아진다」는 막대한 고에너지 물질이 큰 변화를 일으킨다는 서술과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우01-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "흑점 폭발이 강할수록 지구로 들어오는 고에너지 물질이 많아지지만 지구 환경의 변화는 작아진다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "흑점 폭발의 영향은 폭발과 동시에 지구에 나타난다",
+      "why_wrong": "빛은 약 8분 뒤에 닿지만 고에너지 입자와 코로나 질량 방출은 수 시간에서 며칠이 걸려, 영향이 시차를 두고 나타난다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-fl-arrival"
+    },
+    {
+      "text": "흑점 폭발은 태양 전체가 터지는 현상이다",
+      "why_wrong": "흑점 부근에서 일어나는 국지적인 폭발이며 태양 자체가 부서지는 것이 아니다.",
+      "source": "llm",
+      "verified_by": "pending"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-space-weather"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-activity-monitoring-system"
+    },
+    {
+      "type": "related",
+      "target": "plan-coronal-mass-ejection"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우01-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅰ. 우주 탐사와 행성계",
+  "unit_id": "plan-1",
+  "topic_id": "plan-1-01-3",
+  "pages": [
+    17,
+    18,
+    20
+  ],
+  "difficulty": 3,
+  "role": "core",
+  "version": 1,
+  "aliases": [
+    "플레어"
+  ]
+}

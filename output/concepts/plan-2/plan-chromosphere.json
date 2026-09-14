@@ -1,0 +1,109 @@
+{
+  "id": "plan-chromosphere",
+  "concept_key": "concept:chromosphere",
+  "registry_status": "new",
+  "term": "채층",
+  "notation": {
+    "hanja": "彩層",
+    "hanja_gloss": "彩 무늬 채 · 層 층 층",
+    "english": "chromosphere"
+  },
+  "definition": "광구 바로 위를 덮은 태양의 대기층. 높이는 약 10000 km이고 온도는 4500 K에서 수만 K에 이르는 기체로 되어 있다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-chromo-eclipse",
+      "text": "평소 광구의 강한 빛에 묻혀 있던 채층은, 개기 일식으로 광구가 가려지면 붉게 빛나는 모습으로 드러난다.",
+      "form": {
+        "condition": "개기 일식으로 광구가 가려질 때",
+        "type": "conditional",
+        "scope": "지상에서의 가시광선 관측"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「광구가 가려져도 채층은 보이지 않는다」인데, 개기 일식 때 붉은 채층이 관측되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "개기 일식으로 광구가 가려져도 채층은 여전히 보이지 않는다."
+    },
+    {
+      "id": "rel-chromo-position",
+      "text": "채층은 광구 바로 위, 코로나보다는 안쪽에 놓인 대기층이다.",
+      "form": {
+        "condition": "태양 대기의 층 구조를 볼 때",
+        "type": "classification",
+        "scope": "태양의 대기층"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「채층이 코로나보다 바깥에 있다」인데, 가장 바깥층은 코로나이므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "채층은 코로나보다 바깥쪽에 놓인 대기층이다."
+    },
+    {
+      "id": "rel-chromo-uv",
+      "text": "30.4 nm 자외선으로 찍으면 가시광선 사진에 드러나지 않던 채층의 모습이 나타난다.",
+      "form": {
+        "condition": "같은 시각의 태양을 파장별로 찍을 때",
+        "type": "conditional",
+        "scope": "파장별 태양 관측 영상"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「자외선으로 찍어도 채층은 드러나지 않는다」인데, 30.4 nm 영상이 채층을 보여 주므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "30.4 nm 자외선으로 찍어도 채층의 모습은 드러나지 않는다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "채층은 개기 일식 때에만 생겨나는 층이다.",
+      "why_wrong": "채층은 늘 있지만 광구가 워낙 밝아 가려져 있을 뿐이다. 일식은 그것을 볼 기회를 줄 뿐이다.",
+      "source": "llm",
+      "linked_relation": "rel-chromo-eclipse"
+    },
+    {
+      "text": "채층은 광구보다 안쪽에 있는 층이다.",
+      "why_wrong": "채층은 광구 바로 바깥이다. 안쪽에서 바깥쪽으로 광구 - 채층 - 코로나 차례다.",
+      "source": "llm",
+      "linked_relation": "rel-chromo-position"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-photosphere"
+    },
+    {
+      "type": "next",
+      "target": "plan-prominence"
+    },
+    {
+      "type": "next",
+      "target": "plan-solar-flare-in-solar-atmosphere"
+    },
+    {
+      "type": "next",
+      "target": "plan-multiwavelength-solar-observation"
+    }
+  ],
+  "curriculum": [
+    "12행우02-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-01-2",
+  "pages": [
+    61,
+    62
+  ],
+  "difficulty": 2,
+  "role": "supporting",
+  "version": 1
+}

@@ -1,0 +1,118 @@
+{
+  "id": "plan-distance-modulus",
+  "concept_key": "concept:distance-modulus",
+  "registry_status": "new",
+  "term": "거리 지수",
+  "notation": {
+    "hanja": "距離指數",
+    "hanja_gloss": "距 상거할 거 · 離 떠날 리 · 指 가리킬 지 · 數 셈 수",
+    "english": "distance modulus",
+    "symbol_display": "m − M",
+    "symbol_plain": "m - M"
+  },
+  "definition": "겉보기 등급에서 절대 등급을 뺀 값. 10 pc을 기준으로 부호가 갈리며 별까지의 거리를 나타내는 척도가 된다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-dm-sign",
+      "text": "거리 지수가 0보다 크면 10 pc보다 먼 별이고, 0보다 작으면 10 pc보다 가까운 별이다.",
+      "form": {
+        "condition": "겉보기 등급과 절대 등급을 모두 알 때",
+        "type": "classification",
+        "scope": "거리를 알고자 하는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 두 부호의 뜻을 맞바꾼 것인데, 멀수록 겉보기 등급이 커져 거리 지수가 양수가 되므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리 지수가 0보다 크면 10 pc보다 가까운 별이고, 0보다 작으면 10 pc보다 먼 별이다."
+    },
+    {
+      "id": "rel-dm-larger-farther",
+      "text": "거리 지수가 클수록 별까지의 거리가 멀다.",
+      "form": {
+        "condition": "같은 척도로 매긴 두 등급을 쓸 때",
+        "type": "direct",
+        "scope": "별까지의 거리 척도",
+        "antecedent": {
+          "quantity": "거리 지수",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "별까지의 거리",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「거리 지수가 클수록 가깝다」인데, 거리 지수는 거리와 함께 커지므로 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "거리 지수가 클수록 별까지의 거리가 가깝다."
+    },
+    {
+      "id": "rel-dm-usable",
+      "text": "겉보기 등급과 절대 등급을 알면 연주 시차를 재지 않고도 별까지의 거리를 구할 수 있다.",
+      "form": {
+        "condition": "두 등급을 모두 아는 별",
+        "type": "conditional",
+        "scope": "연주 시차를 재기 어려운 먼 별까지 포함"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 「두 등급을 알아도 거리를 구할 수 없다」인데, 거리 지수와 거리가 식으로 이어져 있어 반드시 거짓이다.",
+      "curriculum": [
+        "12행우02-02"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "겉보기 등급과 절대 등급을 알아도 거리 지수로는 별까지의 거리를 구할 수 없다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "거리 지수가 0인 별은 지구에서 가장 가까운 별이다.",
+      "why_wrong": "10 pc에 있는 별이라는 뜻일 뿐이다. 더 가까운 별의 거리 지수는 음수가 된다.",
+      "source": "llm",
+      "linked_relation": "rel-dm-sign"
+    },
+    {
+      "text": "거리 지수는 겉보기 등급이 클수록 커지므로 어두운 별은 모두 멀리 있다.",
+      "why_wrong": "절대 등급까지 함께 봐야 한다. 원래 어두운 별이 가까이 있을 수도 있다.",
+      "source": "llm",
+      "linked_relation": "rel-dm-larger-farther"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-brightness-distance-relation"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-apparent-magnitude-and-absolute-magnitude"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-annual-parallax"
+    },
+    {
+      "type": "next",
+      "target": "plan-accelerating-expansion-of-universe"
+    }
+  ],
+  "curriculum": [
+    "12행우02-02"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅱ. 태양과 별의 관측",
+  "unit_id": "plan-2",
+  "topic_id": "plan-2-02-2",
+  "pages": [
+    65
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

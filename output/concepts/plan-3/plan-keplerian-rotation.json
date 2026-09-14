@@ -1,0 +1,91 @@
+{
+  "id": "plan-keplerian-rotation",
+  "concept_key": "concept:keplerian-rotation",
+  "registry_status": "new",
+  "term": "케플러 회전",
+  "notation": {
+    "hanja": "回轉",
+    "english": "Keplerian rotation",
+    "hanja_gloss": "回 돌 회 · 轉 구를 전",
+    "hanja_note": "'케플러'는 사람 이름을 딴 음차어라 대응 한자가 없다. 한자는 '회전' 쪽만 적었다."
+  },
+  "definition": "물질이 중심부에 몰려 있을 때 나타나는 회전. 중심에서 멀어질수록 회전 속도가 거리의 제곱근에 반비례해 줄어든다.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-kep-vs-differential",
+      "text": "케플러 회전은 차등 회전의 한 갈래여서 각속도뿐 아니라 회전 속도까지 바깥으로 갈수록 줄어든다.",
+      "form": {
+        "condition": "질량이 중심부에 몰린 계를 볼 때",
+        "type": "classification",
+        "scope": "차등 회전 가운데 케플러 회전"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 회전 속도가 커진다고 방향을 맞바꾼 것이라, 회전 속도가 거리의 제곱근에 반비례한다는 관계와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "케플러 회전에서는 각속도는 줄지만 회전 속도는 바깥으로 갈수록 오히려 커진다."
+    },
+    {
+      "id": "rel-kep-fail",
+      "text": "우리은하 원반의 수소 구름은 케플러 회전으로 예상한 속도 감소를 보이지 않는다.",
+      "form": {
+        "condition": "팽대부에 질량이 몰려 있다고 가정한 예상과 관측을 맞댈 때",
+        "type": "conditional",
+        "scope": "우리은하 원반 바깥쪽"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수소 구름이 케플러 회전으로 예상한 대로 속도가 줄어든다」는 외곽 회전 속도가 거의 일정하다는 관측과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "우리은하 원반의 수소 구름은 케플러 회전으로 예상한 대로 속도가 줄어든다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "우리은하는 태양계처럼 케플러 회전을 한다",
+      "why_wrong": "태양계는 질량이 태양에 몰려 있어 케플러 회전을 하지만, 우리은하 외곽은 속도가 거의 줄지 않는다. 이 어긋남이 암흑 물질의 단서다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-kep-fail"
+    },
+    {
+      "text": "케플러 회전은 강체 회전과 같은 말이다",
+      "why_wrong": "강체 회전은 각속도가 일정한 회전이고, 케플러 회전은 회전 속도가 거리의 제곱근에 반비례하는 차등 회전의 한 갈래다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-kep-vs-differential"
+    }
+  ],
+  "links": [
+    {
+      "type": "next",
+      "target": "plan-galaxy-rotation-curve"
+    },
+    {
+      "type": "related",
+      "target": "plan-differential-rotation"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-1",
+  "pages": [
+    110
+  ],
+  "difficulty": 4,
+  "role": "supporting",
+  "version": 1,
+  "notes": [
+    "C6 — rel-kep-slow 는 definition 의 전건·후건을 옮긴 것이라(어절 겹침 0.67) 차등 회전과의 구별을 묻는 rel-kep-vs-differential 로 갈아 세웠다."
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "plan-galaxy-mass-estimation",
+  "concept_key": "concept:galaxy-mass-estimation",
+  "registry_status": "new",
+  "term": "은하의 질량 추정",
+  "notation": {
+    "hanja": "銀河質量推定",
+    "english": "galaxy mass estimation",
+    "hanja_gloss": "銀 은 은 · 河 물 하 · 質 바탕 질 · 量 헤아릴 량 · 推 밀 추 · 定 정할 정",
+    "symbol_display": "M = Rv²/G",
+    "symbol_plain": "M = R v^2 / G"
+  },
+  "definition": "은하 중심에서 거리 R만큼 떨어진 천체의 공전 속도 v를 만유인력 법칙에 넣어 반경 R 안쪽의 질량을 구하는 일.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-gme-rv",
+      "text": "공전 속도가 같다면 회전 반경이 큰 천체일수록 그 안쪽에 든 질량이 크다.",
+      "form": {
+        "condition": "천체가 거의 원 궤도를 돌 때",
+        "type": "direct",
+        "scope": "나선 은하의 질량 추정",
+        "antecedent": {
+          "quantity": "회전 반경",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "반경 안쪽의 질량",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「반경이 클수록 안쪽 질량이 작다」는 질량이 반경에 비례한다는 식과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "공전 속도가 같다면 회전 반경이 큰 천체일수록 그 안쪽에 든 질량이 작다."
+    },
+    {
+      "id": "rel-gme-gap",
+      "text": "회전 속도로 구한 역학적 질량이 광학적 관측으로 어림한 질량보다 크다.",
+      "form": {
+        "condition": "나선 은하의 회전 속도 곡선을 쓸 때",
+        "type": "conditional",
+        "scope": "나선 은하의 총질량"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「역학적 질량이 광학적 질량보다 작다」는 외곽에 보이지 않는 물질이 더 있다는 결론과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "회전 속도로 구한 역학적 질량이 광학적 관측으로 어림한 질량보다 작다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "회전 속도로 구한 질량은 은하 전체의 질량이다",
+      "why_wrong": "그 천체의 공전 반경 안쪽에 든 질량이다. 더 바깥의 질량을 알려면 더 먼 천체의 공전 속도가 필요하다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gme-rv"
+    },
+    {
+      "text": "은하의 질량은 빛나는 별의 밝기를 모두 더하면 정확히 구할 수 있다",
+      "why_wrong": "빛을 내지 않는 물질이 상당량 있어, 그렇게 구한 질량은 역학적으로 구한 질량보다 훨씬 작다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-gme-gap"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-galaxy-rotation-curve"
+    },
+    {
+      "type": "next",
+      "target": "plan-dark-matter"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-2",
+  "pages": [
+    111
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1
+}

@@ -1,0 +1,94 @@
+{
+  "id": "plan-main-sequence-fitting",
+  "concept_key": "concept:main-sequence-fitting",
+  "registry_status": "new",
+  "term": "주계열 맞추기",
+  "notation": {
+    "hanja": "主系列",
+    "english": "main-sequence fitting",
+    "hanja_gloss": "主 주인 주 · 系 이을 계 · 列 벌일 렬"
+  },
+  "definition": "색지수가 겹치도록 성단의 C-M도를 표준 주계열성의 C-M도에 포개어 거리 지수를 읽어 내고, 그로부터 성단까지의 거리를 구하는 방법.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-msf-same",
+      "text": "별의 일생을 정하는 것이 질량이므로, 색지수가 같은 주계열성끼리는 거리가 달라도 절대 등급이 어긋나지 않는다.",
+      "form": {
+        "condition": "표준 주계열성과 견줄 때",
+        "type": "conditional",
+        "scope": "주계열 단계에 있는 별"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 절대 등급이 거리에 따라 달라진다고 말하는 것이라, 거리를 하나로 맞추어 정의하는 절대 등급의 뜻과 정면으로 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "색지수가 같은 주계열성이라도 멀리 있는 쪽은 절대 등급이 더 크게 나온다."
+    },
+    {
+      "id": "rel-msf-shift",
+      "text": "색지수를 맞추어 두 C-M도를 겹치면 세로축이 어긋난 양이 곧 그 성단의 거리 지수가 된다.",
+      "form": {
+        "condition": "성간 소광을 보정한 뒤 겹칠 때",
+        "type": "causal",
+        "scope": "성단까지의 거리 구하기"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 거리 지수를 읽는 축을 세로에서 가로로 맞바꾼 것이라, 거리 지수가 등급의 차라는 정의와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-01"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "색지수를 맞추어 두 C-M도를 겹치면 가로축이 어긋난 양이 그 성단의 거리 지수가 된다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "주계열 맞추기는 가로축인 색지수를 위아래로 옮겨 맞추는 방법이다",
+      "why_wrong": "색지수는 거리와 무관하므로 그대로 겹친다. 옮겨 읽는 것은 세로축의 등급 차이, 곧 거리 지수다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-msf-shift"
+    },
+    {
+      "text": "성간 소광이 있어도 주계열 맞추기로 구한 거리는 정확하다",
+      "why_wrong": "소광은 겉보기 등급을 키우므로 보정하지 않으면 거리를 실제보다 멀게 얻는다. 오차의 주된 원인이다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-msf-same"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-color-magnitude-diagram"
+    },
+    {
+      "type": "prereq",
+      "target": "plan-distance-modulus-of-star-cluster"
+    },
+    {
+      "type": "related",
+      "target": "plan-main-sequence-turnoff"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-01"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-01-2",
+  "pages": [
+    97
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 — rel-msf-same 의 text 가 원문 97쪽 문장과 조사·어미만 달라 구조를 바꿔 다시 썼다 (R4)."
+  ]
+}

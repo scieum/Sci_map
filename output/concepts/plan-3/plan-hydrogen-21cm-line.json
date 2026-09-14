@@ -1,0 +1,117 @@
+{
+  "id": "plan-hydrogen-21cm-line",
+  "concept_key": "concept:hydrogen-21-cm-line",
+  "registry_status": "new",
+  "term": "21 cm 수소선",
+  "notation": {
+    "hanja": "水素線",
+    "english": "21 cm hydrogen line",
+    "hanja_gloss": "水 물 수 · 素 본디 소 · 線 줄 선",
+    "symbol_display": "21 cm",
+    "symbol_plain": "21 cm"
+  },
+  "definition": "중성수소 원자의 전자가 높은 에너지 준위에서 낮은 준위로 스스로 내려앉을 때 나오는 파장 약 21 cm의 전파.",
+  "definition_source": "restated",
+  "relations": [
+    {
+      "id": "rel-21-spin",
+      "text": "양성자와 전자의 회전 방향이 같은 높은 준위에서 반대인 낮은 준위로 바뀔 때 이 전파가 나온다.",
+      "form": {
+        "condition": "수소가 중성 원자 상태로 있을 때",
+        "type": "causal",
+        "scope": "중성수소 영역"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「반대 방향인 낮은 준위에서 같은 방향인 높은 준위로 바뀔 때 전파가 나온다」는 준위가 낮아질 때 에너지를 내놓는다는 순서와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "양성자와 전자의 회전 방향이 반대인 낮은 준위에서 같은 방향인 높은 준위로 바뀔 때 이 전파가 나온다."
+    },
+    {
+      "id": "rel-21-through",
+      "text": "파장이 길어 성간 기체와 티끌에 흡수되거나 산란되지 않으므로 먼 나선팔까지 훑을 수 있다.",
+      "form": {
+        "condition": "전파 망원경으로 은하 원반을 관측할 때",
+        "type": "causal",
+        "scope": "은하 원반의 중성수소"
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장은 투과의 까닭을 긴 파장에서 짧은 파장으로 맞바꾼 것이라, 짧은 파장일수록 더 많이 흡수·산란된다는 사실과 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "파장이 짧아 성간 티끌을 잘 뚫고 지나가므로 먼 나선팔까지 훑을 수 있다."
+    },
+    {
+      "id": "rel-21-density",
+      "text": "수소선의 세기가 클수록 그 방향에 있는 중성수소의 밀도가 높다.",
+      "form": {
+        "condition": "같은 시선 방향의 관측값을 견줄 때",
+        "type": "direct",
+        "scope": "중성수소 구름",
+        "antecedent": {
+          "quantity": "수소선의 세기",
+          "direction": "증가"
+        },
+        "consequent": {
+          "quantity": "중성수소의 밀도",
+          "direction": "증가"
+        }
+      },
+      "invertible": true,
+      "invertible_reason": "뒤집은 문장 「수소선의 세기가 클수록 중성수소 밀도가 낮다」는 세기로 밀도를 추정한다는 원리와 어긋나 반드시 거짓이다.",
+      "curriculum": [
+        "12행우03-03"
+      ],
+      "verified_by": "pending",
+      "inverted_text": "수소선의 세기가 클수록 그 방향에 있는 중성수소의 밀도가 낮다."
+    }
+  ],
+  "misconceptions": [
+    {
+      "text": "21 cm 수소선은 수소 원자의 전자가 이온화될 때 나온다",
+      "why_wrong": "이온화가 아니라, 중성 상태에 머문 채 회전 방향이 뒤바뀌며 에너지 준위가 조금 낮아질 때 나온다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-21-spin"
+    },
+    {
+      "text": "21 cm 수소선은 파장이 길어 가까운 곳밖에 관측하지 못한다",
+      "why_wrong": "긴 파장 덕분에 성간 물질에 가로막히지 않아 오히려 우리은하 반대편 나선팔까지 파악할 수 있다.",
+      "source": "llm",
+      "verified_by": "pending",
+      "linked_relation": "rel-21-through"
+    }
+  ],
+  "links": [
+    {
+      "type": "prereq",
+      "target": "plan-neutral-hydrogen-region"
+    },
+    {
+      "type": "next",
+      "target": "plan-radial-velocity-of-hydrogen-cloud"
+    }
+  ],
+  "media": [],
+  "curriculum": [
+    "12행우03-03"
+  ],
+  "subject": "행성우주과학",
+  "unit": "Ⅲ. 은하와 우주",
+  "unit_id": "plan-3",
+  "topic_id": "plan-3-03-1",
+  "pages": [
+    108,
+    109
+  ],
+  "difficulty": 4,
+  "role": "core",
+  "version": 1,
+  "notes": [
+    "C6 — 중복 명제군 (rel-hi-21cm, rel-21-through) 가운데 이 카드가 주인이다."
+  ]
+}
