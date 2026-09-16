@@ -49,6 +49,14 @@ export interface Progress {
    * 전에 다시 보고 싶을 수 있으니 숙련도로 대신할 수 없다.
    */
   bookmarks: string[];
+  /**
+   * 푼 기출·평가 문항 — 문항 id → 고른 답과 채점 결과.
+   *
+   * 개념 숙련도(concepts)와 섞지 않는다. 저쪽은 카드 단위이고 이쪽은 문항
+   * 단위다. 한 문항이 카드 여럿을 묻는 일이 흔해서 한쪽 값으로 다른 쪽을
+   * 세울 수 없다.
+   */
+  exam: Record<string, { given: string; correct: boolean; at: string }>;
 }
 
 const KEY = "scisherpa-progress-v1";
@@ -60,6 +68,7 @@ const EMPTY: Progress = {
   streak: { count: 0, lastDate: "" },
   doneDates: [],
   bookmarks: [],
+  exam: {},
 };
 
 export function todayKey(): string {
@@ -86,6 +95,22 @@ export function markConcept(level: 0 | 1 | 2 | 3, conceptId: string) {
   const p = loadProgress();
   p.concepts[conceptId] = { level, updatedAt: new Date().toISOString() };
   saveProgress(p);
+}
+
+/* ────────────────────────────── 기출 문항 ────────────────────────────── */
+
+/** 한 문항의 답을 적어 둔다. 서술형은 given 이 "self" 다 — 스스로 확인한 것 */
+export function recordExam(itemId: string, given: string, correct: boolean) {
+  const p = loadProgress();
+  p.exam[itemId] = { given, correct, at: new Date().toISOString() };
+  saveProgress(p);
+}
+
+/** 회차 하나의 진행 — 푼 수와 맞힌 수 */
+export function examProgress(itemIds: string[]): { done: number; correct: number } {
+  const e = loadProgress().exam;
+  const rows = itemIds.map((id) => e[id]).filter(Boolean);
+  return { done: rows.length, correct: rows.filter((r) => r!.correct).length };
 }
 
 /* ────────────────────────────── 북마크 ────────────────────────────── */

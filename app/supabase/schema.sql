@@ -442,6 +442,26 @@ begin
 end $$;
 grant execute on function public.study_room_board(text) to authenticated;
 
+-- ── 평가 문항 저장소 ────────────────────────────────────────────────────────
+-- 문항 크롭은 **비공개 버킷 + 서명 URL** 이다. 2026-09-16 교사 결정으로 "로그인한
+-- 학생만" 으로 정해졌고, 리포가 공개라 파일을 거기 두면 그 결정이 무너진다
+-- (docs/rights_policy.md). 교과서 삽화(공개)와 다르게 다룬다.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values ('exam', 'exam', false, 5242880, array['image/png'])
+on conflict (id) do update
+  set public = false,
+      file_size_limit = excluded.file_size_limit,
+      allowed_mime_types = excluded.allowed_mime_types;
+
+-- 읽기는 로그인한 사람만. 익명(anon)에게는 정책을 주지 않는다 —
+-- 정책이 없으면 RLS 가 막는다
+drop policy if exists "exam read for signed in" on storage.objects;
+create policy "exam read for signed in" on storage.objects
+  for select to authenticated using (bucket_id = 'exam');
+
+-- 쓰기 정책은 두지 않는다. 올리는 일은 교사가 service_role 키로 하고,
+-- 그 키는 정책을 지나간다. 학생 세션에 쓰기를 열어 둘 이유가 없다
+
 -- ── 스키마 캐시 갱신 ────────────────────────────────────────────────────────
 -- 함수를 새로 만든 뒤 이 줄을 빠뜨리면 PostgREST 가 쥔 캐시가 옛것이라 앱에는
 -- "Could not find the function ... in the schema cache" 로 보인다. 실제로 한 번
