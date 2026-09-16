@@ -47,6 +47,25 @@ export type Result<T> = { ok: true; value: T } | { ok: false; reason: string };
 const NOT_CONFIGURED = "서버와 연결되지 않았어요.";
 const NOT_SIGNED_IN = "로그인하면 스터디룸을 쓸 수 있어요.";
 
+/**
+ * 서버가 돌려준 사유를 학생이 읽을 말로 바꾼다.
+ *
+ * ★ "Could not find the function public.create_study_room ... in the schema
+ *   cache" 는 학생이 잘못 눌러서 나는 말이 아니다. **스터디룸 스키마가 아직
+ *   프로젝트에 실행되지 않았다**는 뜻이다(supabase/migrations/20260916_study_rooms.sql).
+ *   영어 원문을 그대로 화면에 뱉으면 학생은 자기가 뭘 잘못했는지 찾게 된다 —
+ *   고칠 수 있는 사람(교사)을 가리키는 말로 바꿔 둔다.
+ */
+function explain(raw: string): string {
+  const m = raw ?? "";
+  if (/schema cache|does not exist|Could not find the (function|table)/i.test(m)) {
+    return "스터디룸이 아직 서버에 준비되지 않았어요. 선생님께 알려 주세요. (supabase/migrations/20260916_study_rooms.sql 실행 필요)";
+  }
+  if (/JWT|not authenticated/i.test(m)) return NOT_SIGNED_IN;
+  if (/Failed to fetch|NetworkError/i.test(m)) return "서버에 닿지 못했어요. 연결을 확인해 주세요.";
+  return m;
+}
+
 async function uid(): Promise<string | null> {
   if (!isSupabaseConfigured()) return null;
   const { data } = await supabase().auth.getSession();
@@ -81,7 +100,7 @@ export async function createRoom(
     p_subjects: subjects,
     p_goal: goal,
   });
-  if (error) return { ok: false, reason: error.message };
+  if (error) return { ok: false, reason: explain(error.message) };
   return { ok: true, value: String(data) };
 }
 
@@ -92,49 +111,62 @@ export async function joinRoom(code: string): Promise<Result<string>> {
   const { data, error } = await supabase().rpc("join_study_room", {
     p_code: normalizeCode(code),
   });
-  if (error) return { ok: false, reason: error.message };
+  if (error) return { ok: false, reason: explain(error.message) };
   return { ok: true, value: String(data) };
 }
 
 export async function leaveRoom(code: string): Promise<Result<null>> {
   if (!isSupabaseConfigured()) return { ok: false, reason: NOT_CONFIGURED };
   const { error } = await supabase().rpc("leave_study_room", { p_code: normalizeCode(code) });
-  if (error) return { ok: false, reason: error.message };
+  if (error) return { ok: false, reason: explain(error.message) };
   return { ok: true, value: null };
 }
 
-/** 내가 속한 방들 */
-export async function myRooms(): Promise<Room[]> {
+/**
+ * 내가 속한 방들.
+ *
+ * 빈 목록과 "서버가 준비되지 않음" 을 구분해 돌려준다. 예전에는 둘 다 빈
+ * 배열이라, 스키마가 없는 프로젝트에서 "아직 들어간 방이 없어요" 가 떴다 —
+ * 학생은 코드를 넣어 보고, 거기서야 진짜 사유를 만난다.
+ */
+export async function myRooms(): Promise<Result<Room[]>> {
+  if (!isSupabaseConfigured()) return { ok: false, reason: NOT_CONFIGURED };
   const id = await uid();
-  if (!id) return [];
+  if (!id) return { ok: true, value: [] };
   const { data, error } = await supabase()
     .from("room_members")
     .select("code, study_rooms(code, name, subjects, goal, owner)")
     .eq("user_id", id);
-  if (error || !data) return [];
+  if (error) return { ok: false, reason: explain(error.message) };
   type Row = { code: string; study_rooms: Room | Room[] | null };
-  return (data as Row[])
+  const rooms = (data as Row[] | null ?? [])
     .map((r) => (Array.isArray(r.study_rooms) ? r.study_rooms[0] : r.study_rooms))
     .filter((r): r is Room => Boolean(r));
+  return { ok: true, value: rooms };
 }
 
-/** 방 하나. 구성원이 아니면 RLS 가 막아 null 이 온다 */
-export async function roomInfo(code: string): Promise<Room | null> {
-  if (!isSupabaseConfigured()) return null;
-  const { data } = await supabase()
+/**
+ * 방 하나. 구성원이 아니면 RLS 가 막아 `value: null` 이 온다 — **없는 방과
+ * 구분하지 않는다**(코드를 하나씩 넣어 보며 방을 찾아내지 못하게).
+ * 서버 자체가 답하지 못한 경우는 그와 달리 `ok: false` 다.
+ */
+export async function roomInfo(code: string): Promise<Result<Room | null>> {
+  if (!isSupabaseConfigured()) return { ok: false, reason: NOT_CONFIGURED };
+  const { data, error } = await supabase()
     .from("study_rooms")
     .select("code, name, subjects, goal, owner")
     .eq("code", normalizeCode(code))
     .maybeSingle();
-  return (data as Room | null) ?? null;
+  if (error) return { ok: false, reason: explain(error.message) };
+  return { ok: true, value: (data as Room | null) ?? null };
 }
 
 /** 방 순위표 — 구성원 확인은 서버 함수 안에서 한다 */
-export async function roomBoard(code: string): Promise<BoardRow[]> {
-  if (!isSupabaseConfigured()) return [];
+export async function roomBoard(code: string): Promise<Result<BoardRow[]>> {
+  if (!isSupabaseConfigured()) return { ok: false, reason: NOT_CONFIGURED };
   const { data, error } = await supabase().rpc("study_room_board", {
     p_code: normalizeCode(code),
   });
-  if (error || !data) return [];
-  return data as BoardRow[];
+  if (error) return { ok: false, reason: explain(error.message) };
+  return { ok: true, value: (data ?? []) as BoardRow[] };
 }

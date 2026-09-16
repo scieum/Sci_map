@@ -7,7 +7,8 @@ import { asKind, buildDailySet, checkShortAnswer, KIND_LABEL } from "@/data/quiz
 import { Art } from "@/components/Art";
 import { conceptById } from "@/data/concepts";
 import type { QuizItem } from "@/lib/types";
-import { completeDaily, loadProgress, markConcept, todayKey } from "@/lib/store";
+import { completeDaily, loadProgress, markConcept, todayKey, useBookmark } from "@/lib/store";
+import { BookmarkStar } from "@/components/ui";
 import { gradeFor, reviewConcept, todayPlan } from "@/lib/scheduler";
 import { logAttempt } from "@/lib/sync";
 
@@ -130,6 +131,9 @@ function Runner() {
             <p className="mb-4 text-[15px] leading-relaxed text-ink-sub">
               {feedback.item.explanation}
             </p>
+            {/* 다시 볼 카드를 담는 자리는 **여기**다. 틀린 개념을 기억해 두었다가
+                나중에 개념 탭에서 찾아 담으라고 하면 아무도 담지 않는다 */}
+            <SaveForLater conceptId={feedback.item.conceptId} />
             <button
               onClick={next}
               className={`h-14 w-full rounded-full text-[17px] font-bold text-white ${
@@ -285,6 +289,35 @@ function OxBtn({
   );
 }
 
+/**
+ * "나중에 다시 보기" — 피드백 시트 안의 북마크 줄.
+ *
+ * 별 하나만 두지 않고 문장을 붙인다. 시트에는 설명과 다음 문제 단추뿐이라
+ * 맥락 없는 별이 무엇을 하는 물건인지 알 길이 없다.
+ */
+function SaveForLater({ conceptId }: { conceptId: string }) {
+  const [on, toggle] = useBookmark(conceptId);
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-pressed={on}
+      className={`mb-3 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-bold ${
+        on ? "bg-primary-50 text-primary-600" : "bg-bg-subtle text-ink-sub"
+      }`}
+    >
+      <span aria-hidden>{on ? "★" : "☆"}</span>
+      {on ? "북마크에 담았어요" : "나중에 다시 보기"}
+    </button>
+  );
+}
+
+/** 결과 카드의 별 — 훅을 쓰려면 카드마다 제 컴포넌트가 있어야 한다 */
+function BookmarkToggle({ conceptId }: { conceptId: string }) {
+  const [on, toggle] = useBookmark(conceptId);
+  return <BookmarkStar on={on} onToggle={toggle} />;
+}
+
 /** 결과 화면 — 점수 히어로 카드 + 문항 카드 스택 + 오답 → 개념 카드 */
 function ResultScreen({ answers }: { answers: Answered[] }) {
   const correct = answers.filter((a) => a.correct).length;
@@ -323,6 +356,8 @@ function ResultScreen({ answers }: { answers: Answered[] }) {
                 <span className="text-[13px] font-bold text-ink-faint">
                   Q{i + 1}
                 </span>
+                <span className="flex items-center gap-2">
+                {concept && <BookmarkToggle conceptId={concept.id} />}
                 <span
                   className={`rounded-full px-2.5 py-1 text-[12px] font-bold ${
                     a.correct
@@ -338,6 +373,7 @@ function ResultScreen({ answers }: { answers: Answered[] }) {
                   ) : (
                     "오답"
                   )}
+                </span>
                 </span>
               </div>
               <p className="text-[15px] font-medium">{a.item.prompt}</p>

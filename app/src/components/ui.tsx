@@ -239,3 +239,38 @@ export function EmptyState({
     </div>
   );
 }
+
+/**
+ * 북마크 단추 — "나중에 다시 볼 카드" 표시.
+ *
+ * 별을 쓴다. 숙련도 도트가 이미 파란 점 세 개라 같은 화면에서 또 점을 쓰면
+ * 무엇이 무엇인지 구분되지 않는다. 켜진 상태는 색만이 아니라 **모양**(속이 찬
+ * 별)으로도 달라야 한다 — 색만으로 구분하면 못 보는 학생이 생긴다.
+ */
+export function BookmarkStar({
+  on,
+  onToggle,
+  className = "",
+}: {
+  on: boolean;
+  onToggle: () => void;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-pressed={on}
+      aria-label={on ? "북마크 해제" : "북마크에 담기"}
+      className={`flex h-9 w-9 items-center justify-center rounded-full shadow-[0_2px_10px_rgba(23,58,94,0.06)] transition-colors ${
+        on ? "bg-primary-50 text-primary-600" : "bg-surface text-ink-faint"
+      } ${className}`}
+    >
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden
+        fill={on ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8"
+        strokeLinejoin="round">
+        <path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.6 9.7l5.8-.8z" />
+      </svg>
+    </button>
+  );
+}

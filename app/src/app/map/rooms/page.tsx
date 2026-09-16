@@ -23,6 +23,7 @@ import {
   myRooms,
   normalizeCode,
   roomNameProblem,
+  type Result,
   type Room,
 } from "@/lib/rooms";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
@@ -42,6 +43,8 @@ export default function RoomsPage() {
   const [ready, setReady] = useState(false);
   const [rooms, setRooms] = useState<Room[]>([]);
   const [view, setView] = useState<RoomsView>("mine");
+  /** 서버가 답하지 못한 사유. 방이 없는 것과 **다른 일**이라 따로 쥔다 */
+  const [problem, setProblem] = useState<string | null>(null);
 
   useEffect(() => {
     if (!isSupabaseConfigured()) {
@@ -53,8 +56,10 @@ export default function RoomsPage() {
     const read = async (id: string | null) => {
       if (!alive) return;
       setUid(id);
-      const mine = id ? await myRooms() : [];
+      const res: Result<Room[]> = id ? await myRooms() : { ok: true, value: [] };
+      const mine = res.ok ? res.value : [];
       setRooms(mine);
+      setProblem(res.ok ? null : res.reason);
       // 들어간 방이 없으면 '내 방'을 펼쳐 봐야 빈 카드뿐이다. 처음 온 학생이
       // 실제로 할 일은 코드를 넣는 쪽이므로 거기서 시작한다
       if (id && mine.length === 0) setView("join");
@@ -70,7 +75,11 @@ export default function RoomsPage() {
     };
   }, []);
 
-  const refresh = async () => setRooms(await myRooms());
+  const refresh = async () => {
+    const res = await myRooms();
+    setRooms(res.ok ? res.value : []);
+    setProblem(res.ok ? null : res.reason);
+  };
 
   if (!isSupabaseConfigured()) {
     return (
@@ -128,6 +137,14 @@ export default function RoomsPage() {
           셋은 **동시에 하는 일이 아니다** — 들어갈 방을 찾거나, 코드를 넣거나,
           새로 만들거나 셋 중 하나다. 한 번에 하나만 보여 주면 화면이 짧아지고
           지금 무엇을 하는 중인지도 또렷해진다. */}
+      {/* 서버 쪽 사유는 맨 위에 둔다. 아래 칩을 눌러 봐야 같은 벽에 부딪힌다 */}
+      {problem && (
+        <Card className="mb-3 !bg-[#fdf2f2]">
+          <p className="text-[14px] font-bold text-danger">스터디룸을 열지 못했어요</p>
+          <p className="mt-1.5 text-[13px] leading-relaxed text-ink-sub">{problem}</p>
+        </Card>
+      )}
+
       <ChipRow>
         <Chip on={view === "mine"} onClick={() => setView("mine")}>
           내 방

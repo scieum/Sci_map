@@ -33,6 +33,8 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
   const [board, setBoard] = useState<BoardRow[] | null>(null);
   const [me, setMe] = useState<string | null>(null);
   const [denied, setDenied] = useState(false);
+  /** 서버가 답하지 못한 사유 — "참여하지 않은 방" 과 구분해 보여 준다 */
+  const [problem, setProblem] = useState<string | null>(null);
   /** 한 바퀴 다 돌기 전에는 아무 결론도 내지 않는다 — 중간 상태를 화면으로
       삼으면 "들어갈 수 없어요" 가 잠깐 스친다 (/me 의 동의 화면과 같은 실수) */
   const [ready, setReady] = useState(false);
@@ -49,16 +51,23 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
       setReady(true);
       return;
     }
-    const r = await roomInfo(code);
-    if (!r) {
+    const info = await roomInfo(code);
+    if (!info.ok) {
+      setProblem(info.reason);
+      setReady(true);
+      return;
+    }
+    if (!info.value) {
       // 구성원이 아니면 RLS 가 방 자체를 감춘다 — 없는 방과 구분하지 않는다.
       // 구분해 주면 코드를 하나씩 넣어 보며 방이 있는지 알아낼 수 있다
       setDenied(true);
       setReady(true);
       return;
     }
-    setRoom(r);
-    setBoard(await roomBoard(code));
+    setRoom(info.value);
+    const b = await roomBoard(code);
+    if (b.ok) setBoard(b.value);
+    else setProblem(b.reason);
     setReady(true);
   }, [code]);
 
@@ -97,6 +106,23 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
           cta="로그인하러 가기"
           href="/me"
         />
+      </Shell>
+    );
+  }
+
+  if (problem) {
+    return (
+      <Shell code={code}>
+        <Card>
+          <p className="text-[15px] font-bold text-danger">방을 열지 못했어요</p>
+          <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">{problem}</p>
+          <Link
+            href="/map/rooms"
+            className="mt-4 inline-block rounded-full bg-primary-50 px-5 py-2.5 text-[14px] font-bold text-primary-600"
+          >
+            스터디룸으로
+          </Link>
+        </Card>
       </Shell>
     );
   }

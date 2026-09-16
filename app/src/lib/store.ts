@@ -41,6 +41,14 @@ export interface Progress {
   streak: { count: number; lastDate: string };
   /** 데일리 완료 날짜 목록 (출석 잔디) */
   doneDates: string[];
+  /**
+   * 북마크한 개념 id — 나중에 다시 볼 카드.
+   *
+   * 숙련도(concepts)와 **다른 축이다.** 저쪽은 얼마나 떠올렸는지를 앱이 적는
+   * 값이고, 이쪽은 "이건 다시 보겠다" 는 학생의 표시다. 잘 외운 카드도 시험
+   * 전에 다시 보고 싶을 수 있으니 숙련도로 대신할 수 없다.
+   */
+  bookmarks: string[];
 }
 
 const KEY = "scisherpa-progress-v1";
@@ -51,6 +59,7 @@ const EMPTY: Progress = {
   wrongConceptIds: [],
   streak: { count: 0, lastDate: "" },
   doneDates: [],
+  bookmarks: [],
 };
 
 export function todayKey(): string {
@@ -77,6 +86,24 @@ export function markConcept(level: 0 | 1 | 2 | 3, conceptId: string) {
   const p = loadProgress();
   p.concepts[conceptId] = { level, updatedAt: new Date().toISOString() };
   saveProgress(p);
+}
+
+/* ────────────────────────────── 북마크 ────────────────────────────── */
+
+export function isBookmarked(conceptId: string): boolean {
+  return loadProgress().bookmarks.includes(conceptId);
+}
+
+/** 켜고 끄기. 돌려주는 값은 **누른 뒤의 상태**다 */
+export function toggleBookmark(conceptId: string): boolean {
+  const p = loadProgress();
+  const on = p.bookmarks.includes(conceptId);
+  // 새로 담은 것이 앞에 온다 — 목록에서 방금 담은 카드를 찾아 스크롤하지 않게
+  p.bookmarks = on
+    ? p.bookmarks.filter((id) => id !== conceptId)
+    : [conceptId, ...p.bookmarks];
+  saveProgress(p);
+  return !on;
 }
 
 /** 데일리 세트 완료 처리 — 스트릭·잔디·오답 개념 갱신 */
@@ -108,4 +135,18 @@ export function useProgress(): Progress {
     setP(loadProgress());
   }, []);
   return p;
+}
+
+/**
+ * 북마크 하나의 상태를 쥐는 훅 — 카드 화면의 별.
+ *
+ * SSR 과 첫 그림은 항상 꺼진 상태다. localStorage 는 마운트 뒤에야 읽을 수
+ * 있고, 서버에서 켠 채로 그리면 hydration 이 어긋난다.
+ */
+export function useBookmark(conceptId: string): [boolean, () => void] {
+  const [on, setOn] = useState(false);
+  useEffect(() => {
+    setOn(isBookmarked(conceptId));
+  }, [conceptId]);
+  return [on, () => setOn(toggleBookmark(conceptId))];
 }

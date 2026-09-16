@@ -433,3 +433,9 @@ begin
   where m.code = v_code;
 end $$;
 grant execute on function public.study_room_board(text) to authenticated;
+
+-- ── 스키마 캐시 갱신 ────────────────────────────────────────────────────────
+-- 함수를 새로 만든 뒤 이 줄을 빠뜨리면 PostgREST 가 쥔 캐시가 옛것이라 앱에는
+-- "Could not find the function ... in the schema cache" 로 보인다. 실제로 한 번
+-- 겪은 일이다(스터디룸). 스키마를 실행할 때마다 마지막에 한 번 흔들어 준다.
+notify pgrst, 'reload schema';

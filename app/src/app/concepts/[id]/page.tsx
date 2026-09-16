@@ -7,7 +7,9 @@ import { Art } from "@/components/Art";
 import { ConceptLinks } from "@/components/ConceptLinks";
 import { conceptById } from "@/data/concepts";
 import { rememberSubject } from "@/lib/ui-state";
+import { useBookmark } from "@/lib/store";
 import {
+  BookmarkStar,
   BottomCta,
   Card,
   Chip,
@@ -24,6 +26,8 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
   const { id } = use(params);
   const c = conceptById(id);
   const [showGloss, setShowGloss] = useState(false);
+  // 훅은 카드가 없을 때도 같은 수만큼 불려야 한다 — notFound() 위에 둔다
+  const [marked, toggleMark] = useBookmark(id);
 
   // 이 카드의 과목을 개념 탭이 돌아갈 자리로 적어 둔다. 검색이나 오늘의 학습으로
   // 곧장 들어온 경우에도 ← 를 누르면 이 카드가 있는 과목이 열린다
@@ -44,7 +48,12 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         >
           ←
         </Link>
-        {c.subject} · {c.unit.split(" > ").pop()}
+        <span className="min-w-0 flex-1 truncate">
+          {c.subject} · {c.unit.split(" > ").pop()}
+        </span>
+        {/* 별은 제목 옆이 아니라 여기다. 제목 옆에 두면 표제어 길이에 따라
+            자리가 춤춘다 — 어느 카드를 열어도 같은 자리에 있어야 손이 기억한다 */}
+        <BookmarkStar on={marked} onToggle={toggleMark} />
       </nav>
 
       <h1 className="text-[26px] font-extrabold">{c.term}</h1>
@@ -134,7 +143,7 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
       <ConceptLinks links={c.links} />
 
       <BottomCta href={`/concepts/${c.id}/recall`}>
-        가리고 떠올려보기
+        빈칸 채우며 떠올리기
       </BottomCta>
     </Screen>
   );

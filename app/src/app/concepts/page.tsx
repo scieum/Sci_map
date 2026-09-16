@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { buildTree, byTopic, majorNo, minorNo, topicNo } from "@/data/concepts";
+import { buildTree, byTopic, conceptById, majorNo, minorNo, topicNo } from "@/data/concepts";
 import { orderSubjectNames, subjectNameOf } from "@/data/catalog";
 import type { Concept } from "@/lib/types";
-import { LevelDots, Screen, ScreenTitle } from "@/components/ui";
-import { useProgress } from "@/lib/store";
+import { BookmarkStar, LevelDots, Screen, ScreenTitle } from "@/components/ui";
+import { loadProgress, toggleBookmark, useProgress } from "@/lib/store";
 import { loadUi, saveUi } from "@/lib/ui-state";
 import { accentOfSubject, subjectAccent } from "@/lib/brand";
 
@@ -43,6 +43,17 @@ export default function ConceptsPage() {
   // 과목에서 뺐다면) 무시하고 목록의 첫 과목으로 돌아간다
   const [subject, setSubject] = useState(allSubjects[0]);
   const [open, setOpen] = useState<Record<string, boolean>>({});
+
+  // 북마크는 한 곳에서만 쥔다. 선반과 목록이 따로 읽으면 선반에서 뺀 카드가
+  // 아래 목록에서는 아직 별을 달고 있는, 같은 화면 안에서 어긋난 상태가 된다
+  const [marks, setMarks] = useState<string[]>([]);
+  useEffect(() => {
+    setMarks(loadProgress().bookmarks);
+  }, []);
+  const unmark = (id: string) => {
+    toggleBookmark(id);
+    setMarks((m) => m.filter((x) => x !== id));
+  };
 
   // 저장된 과목은 처음 한 번만 되살린다. 그 뒤로는 학생이 고른 것이 우선이라
   // 목록이 바뀌었을 때(수강 과목을 고쳤을 때)만 손댄다
@@ -86,6 +97,8 @@ export default function ConceptsPage() {
       <ScreenTitle>개념</ScreenTitle>
 
       <SubjectSelect subjects={subjects} value={subject} onChange={chooseSubject} />
+
+      <BookmarkShelf ids={marks} onRemove={unmark} />
 
       {Array.from(majors.entries()).map(([major, minors]) => {
         // 과목 색 — 같은 과목의 대단원은 전부 같은 색이다
@@ -159,6 +172,11 @@ export default function ConceptsPage() {
                                   {c.term}
                                 </span>
                                 <span className="flex items-center gap-2.5">
+                                  {marks.includes(c.id) && (
+                                    <span className="text-[13px] text-primary-500" aria-label="북마크한 개념">
+                                      ★
+                                    </span>
+                                  )}
                                   <LevelDots
                                     level={progress.concepts[c.id]?.level ?? 0}
                                   />
@@ -181,6 +199,73 @@ export default function ConceptsPage() {
         );
       })}
     </Screen>
+  );
+}
+
+
+/**
+ * 북마크 선반 — 과목·단원을 가로질러 "다시 볼 카드"만 모은다.
+ *
+ * 목록 맨 위에 둔다. 북마크는 트리 어디에 있든 상관없이 찾으려고 담는
+ * 것이라, 담아 둔 카드를 보려고 다시 트리를 파고들어야 한다면 담은 보람이
+ * 없다. 접어 두는 것이 기본이다 — 늘 펼쳐 두면 정작 목차가 아래로 밀린다.
+ *
+ * 지워진 카드(파이프라인에서 빠진 id)는 조용히 건너뛴다.
+ */
+function BookmarkShelf({
+  ids,
+  onRemove,
+}: {
+  ids: string[];
+  onRemove: (id: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const list = ids.map(conceptById).filter((c): c is Concept => Boolean(c));
+  if (list.length === 0) return null;
+
+  return (
+    <section className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between px-5 py-4 text-left"
+      >
+        <span className="text-[16px] font-bold">
+          <span className="mr-1.5 text-primary-500" aria-hidden>★</span>
+          북마크
+        </span>
+        <span className="flex items-center gap-2">
+          <span className="rounded-full bg-primary-50 px-2.5 py-0.5 text-[12px] font-bold text-primary-600">
+            {list.length}
+          </span>
+          <span
+            className={`text-ink-faint transition-transform ${open ? "rotate-180" : ""}`}
+            aria-hidden
+          >
+            ⌄
+          </span>
+        </span>
+      </button>
+
+      {open && (
+        <div className="pb-2">
+          {list.map((c) => (
+            <div
+              key={c.id}
+              className="mx-2 flex min-h-[48px] items-center gap-2 rounded-2xl py-1.5 pl-3 pr-2"
+            >
+              <Link href={`/concepts/${c.id}`} className="min-w-0 flex-1 py-1.5">
+                <span className="block truncate text-[15px] font-medium">{c.term}</span>
+                <span className="block truncate text-[12px] text-ink-faint">
+                  {c.subject} · {c.unit.split(" > ").pop()}
+                </span>
+              </Link>
+              <BookmarkStar on onToggle={() => onRemove(c.id)} />
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
   );
 }
 
