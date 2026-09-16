@@ -10,6 +10,17 @@ import { isSupabaseConfigured, supabase, type Profile } from "@/lib/supabase";
 import { accentOfSubject } from "@/lib/brand";
 import { loadProfile, pullStudyStates, saveProfile } from "@/lib/sync";
 import { loadProgress, saveProgress } from "@/lib/store";
+import {
+  initialPlan,
+  normalizePlan,
+  prunePlan,
+  samePlan,
+  slotLabel,
+  slotOf,
+  SLOTS,
+  type CoursePlan,
+  type Slot,
+} from "@/lib/enrollment";
 
 /**
  * 내 정보 — 노선 탭 자리에 임시로 (SciMetro 는 한참 뒤다. Design.md §4.6).
@@ -267,7 +278,16 @@ function ProfileForm({
   const [nickname, setNickname] = useState(profile.nickname ?? "");
   const [grade, setGrade] = useState<1 | 2 | 3 | null>(profile.grade);
   const [semester, setSemester] = useState<1 | 2 | null>(profile.semester);
-  const [subjects, setSubjects] = useState<string[]>(profile.subjects ?? []);
+  /**
+   * 학기별 수강 과목. 화면에서 고치는 것은 **한 칸**이지만(editSlot), 저장할
+   * 때는 여섯 칸을 한 벌로 보낸다 (lib/enrollment.ts)
+   */
+  const [plan, setPlan] = useState<CoursePlan>(() =>
+    initialPlan(profile.course_plan, slotOf(profile.grade, profile.semester), profile.subjects),
+  );
+  const [editSlot, setEditSlot] = useState<Slot>(
+    () => slotOf(profile.grade, profile.semester) ?? "1-1",
+  );
   const [email, setEmail] = useState(profile.recovery_email ?? "");
   const [school, setSchool] = useState<SchoolValue | null>(
     profile.school_code
@@ -284,11 +304,18 @@ function ProfileForm({
   const [msg, setMsg] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
+  // 지금 학기 칸. 학년·학기를 아직 고르지 않았다면 고쳐 보고 있는 칸을 쓴다 —
+  // 그렇지 않으면 저장할 과목이 없어져 출제 범위가 통째로 비어 버린다
+  const activeSlot = slotOf(grade, semester) ?? editSlot;
+  const subjects = plan[activeSlot] ?? [];
+  const editing = plan[editSlot] ?? [];
+
   const dirty =
     nickname !== (profile.nickname ?? "") ||
     grade !== profile.grade ||
     semester !== profile.semester ||
     subjects.join() !== (profile.subjects ?? []).join() ||
+    !samePlan(prunePlan(plan), normalizePlan(profile.course_plan)) ||
     email !== (profile.recovery_email ?? "") ||
     (school?.school_code ?? "") !== (profile.school_code ?? "");
 
@@ -301,6 +328,7 @@ function ProfileForm({
         grade,
         semester,
         subjects,
+        course_plan: prunePlan(plan),
         recovery_email: email.trim() || null,
         sido_code: school?.sido_code ?? null,
         sido: school?.sido ?? null,
@@ -328,8 +356,27 @@ function ProfileForm({
     }
   }
 
+  /** 고르고 빼는 것은 **지금 보고 있는 학기 칸**이다 */
   const toggle = (code: string) =>
-    setSubjects((s) => (s.includes(code) ? s.filter((x) => x !== code) : [...s, code]));
+    setPlan((p) => {
+      const cur = p[editSlot] ?? [];
+      return {
+        ...p,
+        [editSlot]: cur.includes(code) ? cur.filter((x) => x !== code) : [...cur, code],
+      };
+    });
+
+  /** 학년·학기를 고치면 보고 있던 칸도 그 학기로 따라간다 */
+  function chooseGrade(g: 1 | 2 | 3) {
+    setGrade(g);
+    const next = slotOf(g, semester);
+    if (next) setEditSlot(next);
+  }
+  function chooseSemester(sem: 1 | 2) {
+    setSemester(sem);
+    const next = slotOf(grade, sem);
+    if (next) setEditSlot(next);
+  }
 
   return (
     <Screen>
@@ -365,19 +412,61 @@ function ProfileForm({
       <div className="flex flex-col gap-2">
         <div className="flex gap-2">
           {([1, 2, 3] as const).map((g) => (
-            <Pill key={g} on={grade === g} onClick={() => setGrade(g)}>{g}학년</Pill>
+            <Pill key={g} on={grade === g} onClick={() => chooseGrade(g)}>{g}학년</Pill>
           ))}
         </div>
         <div className="flex gap-2">
           {([1, 2] as const).map((s) => (
-            <Pill key={s} on={semester === s} onClick={() => setSemester(s)}>{s}학기</Pill>
+            <Pill key={s} on={semester === s} onClick={() => chooseSemester(s)}>{s}학기</Pill>
           ))}
         </div>
       </div>
 
-      <SectionLabel>수강 과목</SectionLabel>
-      <p className="-mt-1 mb-3 text-[13px] text-ink-sub">
-        고른 과목에서만 오늘의 문항이 나와요. 나중에 언제든 바꿀 수 있어요.
+      <SectionLabel>학기별 수강 과목</SectionLabel>
+      <p className="-mt-1 mb-3 text-[13px] leading-relaxed text-ink-sub">
+        오늘의 문항은 <b className="text-ink">지금 학기</b>에 고른 과목에서만 나와요.
+        다른 학기도 미리 채워 두면 학기가 바뀔 때 그대로 이어져요.
+      </p>
+
+      {/* 학기 칸 고르기 — 지금 학기에는 표를 달아 둔다. 표가 없으면 어느 칸을
+          고치고 있는지와 어느 칸이 출제 범위인지가 같은 모양이라 구분되지 않는다 */}
+      <div className="mb-3 flex flex-wrap gap-2">
+        {SLOTS.map(({ slot, label }) => {
+          const count = (plan[slot] ?? []).length;
+          const now = slot === slotOf(grade, semester);
+          const on = slot === editSlot;
+          return (
+            <button
+              key={slot}
+              onClick={() => setEditSlot(slot)}
+              aria-pressed={on}
+              className={`flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] font-bold ${
+                on
+                  ? "bg-primary-500 text-white shadow-chip"
+                  : "bg-surface text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.05)]"
+              }`}
+            >
+              {label}
+              {now && (
+                <span
+                  className={`rounded-full px-1.5 py-0.5 text-[10px] font-bold ${
+                    on ? "bg-white/25 text-white" : "bg-primary-50 text-primary-600"
+                  }`}
+                >
+                  지금
+                </span>
+              )}
+              <span className={on ? "text-white/70" : "text-ink-faint"}>{count}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      <p className="mb-3 px-1 text-[13px] font-bold text-ink-sub">
+        {slotLabel(editSlot)}에 듣는 과목
+        {editing.length > 0 && (
+          <span className="ml-1.5 font-semibold text-ink-faint">{editing.length}과목</span>
+        )}
       </p>
 
       {/* 과목 구분(공통·일반 선택·진로 선택)으로 묶는다. 학생이 시간표를 짤 때
@@ -391,7 +480,7 @@ function ProfileForm({
           </p>
           <div className="flex flex-col gap-2">
             {list.map((s) => {
-              const on = subjects.includes(s.code);
+              const on = editing.includes(s.code);
               const ready = s.cardCount > 0;
               const accent = accentOfSubject(s.name);
               return (

@@ -114,11 +114,18 @@ export async function loadProfile(): Promise<Profile | null> {
 export async function saveProfile(patch: Partial<Profile>): Promise<Profile | null> {
   const uid = await userId();
   if (!uid) return null;
-  const { data, error } = await supabase()
-    .from("profiles")
-    .upsert({ id: uid, ...patch })
-    .select()
-    .single();
+  const write = (body: Partial<Profile>) =>
+    supabase().from("profiles").upsert({ id: uid, ...body }).select().single();
+
+  let { data, error } = await write(patch);
+  // 서버 스키마가 앱보다 뒤처져 있을 때 — 새로 생긴 열(course_plan) 하나 때문에
+  // 저장 전체가 실패하면 닉네임도 학교도 못 고친다. 그 열만 빼고 한 번 더 보낸다.
+  // 학기별 계획은 관리자가 schema.sql 을 올리는 순간 다시 저장된다
+  if (error && "course_plan" in patch && /course_plan/i.test(error.message)) {
+    const { course_plan: _dropped, ...rest } = patch;
+    void _dropped;
+    ({ data, error } = await write(rest));
+  }
   if (error) throw error;
   const prof = data as Profile;
   const p = loadProgress();

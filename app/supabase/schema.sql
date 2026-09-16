@@ -137,6 +137,14 @@ alter table public.profiles
   add column if not exists school_code     text,   -- NEIS SD_SCHUL_CODE
   add column if not exists school_name     text;
 
+-- 학기별 수강 과목 — {"1-1": ["isci1"], "2-2": ["chem","bio"]} (lib/enrollment.ts)
+--
+-- subjects 열을 대체하지 않는다. 저쪽은 **지금 학기**의 과목이고 스케줄러가
+-- 보는 값이다. 여섯 학기를 한 열에 담아 두고 매번 지금 칸을 꺼내 쓰게 하면,
+-- 학년·학기가 비어 있는 계정에서 출제 범위가 통째로 사라진다.
+alter table public.profiles
+  add column if not exists course_plan jsonb not null default '{}'::jsonb;
+
 -- 아이디 중복 방지 — 대소문자를 구분하지 않는다. Abc 와 abc 는 같은 아이디다
 create unique index if not exists profiles_username_key
   on public.profiles (lower(username));

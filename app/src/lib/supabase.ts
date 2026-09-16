@@ -52,7 +52,13 @@ export interface Profile {
   nickname: string | null;
   grade: 1 | 2 | 3 | null;
   semester: 1 | 2 | null;
+  /**
+   * 지금 학기의 수강 과목. `course_plan` 의 현재 칸을 꺼내 둔 것이다 —
+   * 스케줄러와 개념 탭이 보는 값이라 따로 두고 저장한다
+   */
   subjects: string[];
+  /** 학기별 수강 과목 — {"1-1": ["isci1"], …} (lib/enrollment.ts) */
+  course_plan: Record<string, string[]> | null;
   invite_code: string | null;
   consent_version: string | null;
   consent_at: string | null;
