@@ -20,6 +20,14 @@ export interface UiState {
   /** 개념 탭 중단원 접기 상태 — `${major}>${minor}` → 펼침 여부 */
   conceptsOpen?: Record<string, boolean>;
   /**
+   * 문제 탭에서 마지막으로 보던 과목 이름.
+   *
+   * `conceptsSubject` 와 따로 둔다. 개념을 보다가 문제를 풀러 오는 동선이
+   * 흔하긴 해도, 문제는 시험 범위대로 고르는 자리라 개념 탭에서 보던 과목과
+   * 다른 경우가 잦다 — 한 값을 나눠 쓰면 한쪽을 고칠 때마다 다른 쪽이 끌려간다.
+   */
+  itemsSubject?: string;
+  /**
    * 개념 지도에서 걸러 보던 과목. 빈 문자열이면 전체다.
    *
    * `conceptsSubject`(개념 탭)와 따로 둔다. 두 화면이 하는 일이 다르기

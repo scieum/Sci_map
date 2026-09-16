@@ -5,7 +5,8 @@ import { notFound } from "next/navigation";
 import { use, useEffect, useState } from "react";
 import { Card } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
-import { CHOICES, paperById, signedUrls, type ExamItem } from "@/lib/exam";
+import { CHOICES, paperById, signedUrls, subjectTitle, type ExamItem } from "@/lib/exam";
+import { saveUi } from "@/lib/ui-state";
 import { examProgress, recordExam } from "@/lib/store";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 
@@ -55,7 +56,11 @@ export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
   }, [paper, signedIn]);
 
   useEffect(() => {
-    if (paper) setScore(examProgress(paper.items.map((i) => i.id)));
+    if (!paper) return;
+    setScore(examProgress(paper.items.map((i) => i.id)));
+    // 이 회차의 과목을 문제 탭이 돌아갈 자리로 적어 둔다. 링크로 곧장 들어온
+    // 경우에도 ×를 누르면 이 회차가 있는 과목이 열린다 (개념 카드와 같은 규칙)
+    saveUi({ itemsSubject: subjectTitle(paper.subjectCode) });
   }, [paper]);
 
   if (!paper) notFound();
@@ -78,7 +83,7 @@ export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
 
   if (signedIn === false) {
     return (
-      <Shell paper={paper.label}>
+      <Shell paper={`${subjectTitle(paper.subjectCode)} · ${paper.label}`}>
         <Card>
           <p className="text-[15px] font-bold">로그인하면 문제가 열려요</p>
           <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">
@@ -97,7 +102,7 @@ export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
   }
 
   return (
-    <Shell paper={paper.label}>
+    <Shell paper={`${subjectTitle(paper.subjectCode)} · ${paper.label}`}>
       <header className="mb-4 flex items-center gap-3">
         <Link
           href="/items"
