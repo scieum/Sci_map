@@ -31,7 +31,14 @@ OUT = REPO / "output" / "items"
 LOG = REPO / "output" / "logs" / "pipeline.jsonl"
 
 CHOICE = "①②③④⑤"
-CURRICULUM = re.compile(r"\[?(10통과\d-\d\d-\d\d)\]?")
+CURRICULUM = re.compile(r"\[?((?:10통과\d|12물에)\d?-?\d\d-\d\d)\]?")
+
+# 교사용 문제지 끝의 정답 블록 — `01 ① 02 ② 03 ④ …`
+#
+# ★ 여기서 가져오는 것은 **번호와 기호뿐**이다. 같은 지면에 해설이 잔뜩 있지만
+#   한 글자도 읽지 않는다 (CLAUDE.md §6). 해설 본문에는 "01 ㄱ. 수은을…" 처럼
+#   번호가 다시 나오는데, 그 뒤에 ①~⑤ 가 붙지 않으므로 이 패턴에 걸리지 않는다.
+TEACHER_ANSWER = re.compile(r"(?<![\d])(\d{2})\s*([①②③④⑤])")
 
 
 def now() -> str:
@@ -42,6 +49,28 @@ def log(**row) -> None:
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with LOG.open("a", encoding="utf-8", newline="\n") as fh:
         fh.write(json.dumps({"ts": now(), "stage": "Q2", **row}, ensure_ascii=False) + "\n")
+
+
+def load_papers(subject: str | None = None) -> tuple[dict, list[dict]]:
+    """papers.json 을 읽어 (과목 메타, 회차 목록) 을 돌려준다.
+
+    여러 과목이 한 파일에 담긴다. 과목을 지정하지 않으면 전부 이어 붙인다 —
+    `--all` 은 "들어온 자료 전부" 라는 뜻이지 "마지막에 넣은 과목" 이 아니다.
+    """
+    index = json.loads((SRC / "papers.json").read_text(encoding="utf-8"))
+    subjects = index.get("subjects") or {}
+    out: list[dict] = []
+    meta: dict = {}
+    for code, entry in subjects.items():
+        if subject and code != subject:
+            continue
+        for rec in entry["papers"]:
+            rec = dict(rec)
+            rec["subject"] = entry["subject"]
+            rec["publisher"] = entry.get("publisher", "발행사")
+            out.append(rec)
+        meta[code] = entry
+    return meta, out
 
 
 def cell(row: list, idx: int) -> str:
@@ -114,14 +143,40 @@ def parse_info(pdf_path: Path) -> dict[int, dict]:
     return found
 
 
+def parse_teacher(pdf_path: Path) -> dict[int, dict]:
+    """교사용 문제지에서 **객관식 정답만** 읽는다.
+
+    발행사에 따라 문항정보표가 없고 교사용 문제지에 정답이 표시돼 오는 자료가
+    있다(물질과 에너지). 그 지면에는 해설도 함께 있지만 우리는 끝의 정답
+    블록에서 번호와 기호만 가져온다 — 서술형은 기호가 없으므로 자연히 빠진다.
+    """
+    import pdfplumber
+
+    found: dict[int, dict] = {}
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            for m in TEACHER_ANSWER.finditer(page.extract_text() or ""):
+                no = int(m.group(1))
+                if 1 <= no <= 40:
+                    found.setdefault(no, {
+                        "answer_raw": m.group(2),
+                        "answer": m.group(2),
+                        "kind": "choice",
+                        "curriculum": None,
+                        "topic_label": None,
+                        "domain": None,
+                        "difficulty": None,
+                    })
+    return found
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--paper")
     ap.add_argument("--all", action="store_true")
     args = ap.parse_args()
 
-    index = json.loads((SRC / "papers.json").read_text(encoding="utf-8"))
-    papers = index["papers"]
+    meta, papers = load_papers()
     if args.paper:
         papers = [p for p in papers if p["paper_id"] == args.paper]
     elif not args.all:
@@ -135,18 +190,41 @@ def main() -> int:
         if not items_path.exists():
             print(f"  {pid}: 크롭이 없다 — split.py 를 먼저 돌려라")
             continue
-        info_pdf = rec.get("pdf", {}).get("info")
-        table = parse_info(REPO / info_pdf) if info_pdf else {}
+        pdfs = rec.get("pdf", {})
+        info_pdf = pdfs.get("info")
+        teacher_pdf = pdfs.get("answers-teacher")
+        if info_pdf:
+            table = parse_info(REPO / info_pdf)
+            source = info_pdf
+        elif teacher_pdf:
+            table = parse_teacher(REPO / teacher_pdf)
+            source = teacher_pdf
+        else:
+            table, source = {}, None
 
         doc = json.loads(items_path.read_text(encoding="utf-8"))
         gaps: list[int] = []
+        # 회차 전체가 한 성취기준인 자료가 있다(최소성취수준평가). 그 값은
+        # 파일 이름에서 왔고, 문항마다 따로 적혀 있지 않다
+        paper_code = rec.get("curriculum")
         for item in doc["items"]:
             row = table.get(item["no"])
             if not row:
+                # 정답표에 없는 문항 = 서술형. 정답표가 객관식만 담는 자료에서는
+                # 이것이 결함이 아니라 형식이다 — 교사용에서 온 경우만 그렇게 본다
+                if teacher_pdf:
+                    item.update({"answer": None, "kind": "written",
+                                 "curriculum": paper_code, "topic_label": None,
+                                 "domain": None, "difficulty": None})
+                    written += 1
+                    total += 1
+                    continue
                 gaps.append(item["no"])
                 item["answer"] = None
                 item["kind"] = "unknown"
                 continue
+            if paper_code and not row.get("curriculum"):
+                row["curriculum"] = paper_code
             item.update({k: row[k] for k in
                          ("answer", "kind", "curriculum", "topic_label", "domain", "difficulty")})
             # 발행사가 쓴 모범답안은 앱으로 가지 않는다. 대조용으로만 남긴다
@@ -157,7 +235,7 @@ def main() -> int:
         missing += len(gaps)
         if gaps:
             doc.setdefault("problems", []).append(f"정답표에 없는 문항: {gaps}")
-        doc["answers_from"] = info_pdf
+        doc["answers_from"] = source
         items_path.write_text(
             json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
         mark = "⚠ " if gaps else "  "

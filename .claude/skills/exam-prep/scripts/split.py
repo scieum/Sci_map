@@ -308,6 +308,28 @@ def sha16(path: Path) -> str:
 
 # ── 본체 ───────────────────────────────────────────────────────────────────
 
+def load_papers(subject: str | None = None) -> tuple[dict, list[dict]]:
+    """papers.json 을 읽어 (과목 메타, 회차 목록) 을 돌려준다.
+
+    여러 과목이 한 파일에 담긴다. 과목을 지정하지 않으면 전부 이어 붙인다 —
+    `--all` 은 "들어온 자료 전부" 라는 뜻이지 "마지막에 넣은 과목" 이 아니다.
+    """
+    index = json.loads((SRC / "papers.json").read_text(encoding="utf-8"))
+    subjects = index.get("subjects") or {}
+    out: list[dict] = []
+    meta: dict = {}
+    for code, entry in subjects.items():
+        if subject and code != subject:
+            continue
+        for rec in entry["papers"]:
+            rec = dict(rec)
+            rec["subject"] = entry["subject"]
+            rec["publisher"] = entry.get("publisher", "발행사")
+            out.append(rec)
+        meta[code] = entry
+    return meta, out
+
+
 def split_paper(rec: dict, dry: bool) -> dict:
     import pdfplumber
     import pypdfium2 as pdfium
@@ -348,6 +370,10 @@ def split_paper(rec: dict, dry: bool) -> dict:
         "subject_code": rec["subject_code"],
         "unit_id": rec["unit_id"],
         "topic_id": rec.get("topic_id"),
+        # 소단원까지는 몰라도 중단원까지는 아는 자료가 있다(학업성취수준평가).
+        # 성취기준이 회차 전체에 하나뿐인 자료도 있다(최소성취수준평가)
+        "topic_prefix": rec.get("topic_prefix"),
+        "curriculum": rec.get("curriculum"),
         "exam_type": rec["exam_type"],
         "round": rec["round"],
         "label": rec["label"],
@@ -442,8 +468,7 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    index = json.loads((SRC / "papers.json").read_text(encoding="utf-8"))
-    papers = index["papers"]
+    meta, papers = load_papers()
     if args.paper:
         papers = [p for p in papers if p["paper_id"] == args.paper]
         if not papers:
@@ -453,21 +478,19 @@ def main() -> int:
         print("--paper 또는 --all 이 필요하다", file=sys.stderr)
         return 2
 
-    # 권리 메타는 회차마다 같다 — 발행사가 낸 한 벌이다
-    publisher = index.get("publisher", "천재교육")
-    subject = index["subject"]
-    rights = {
-        "holder": publisher,
-        "source": f"{publisher} 「{subject}」 평가자료 ({{label}})",
-        "basis": "저작권법 제25조 제3항 수업 목적 이용 (제6항에 따라 보상금 면제)",
-        "condition": "로그인한 학생 한정 · 비공개 저장소 서명 URL · 학기 종료 시 만료 · 검색 색인 차단",
-    }
-
     total = 0
     bad: list[str] = []
     for rec in papers:
         rec = dict(rec)
-        rec["rights"] = dict(rights, source=rights["source"].format(label=rec["label"]))
+        # 권리 메타는 회차가 아니라 **과목(발행사 자료 한 벌)** 단위로 같다.
+        # 과목마다 발행사가 다를 수 있으므로 회차가 들고 온 값을 쓴다
+        publisher, subject = rec["publisher"], rec["subject"]
+        rec["rights"] = {
+            "holder": publisher,
+            "source": f"{publisher} 「{subject}」 평가자료 ({rec['label']})",
+            "basis": "저작권법 제25조 제3항 수업 목적 이용 (제6항에 따라 보상금 면제)",
+            "condition": "로그인한 학생 한정 · 비공개 저장소 서명 URL · 학기 종료 시 만료 · 검색 색인 차단",
+        }
         rec["watermark"] = (
             f"○○고등학교 수업 목적 이용 (저작권법 제25조 제3항) · {publisher} {subject} {rec['label']}")
         res = split_paper(rec, args.dry_run)

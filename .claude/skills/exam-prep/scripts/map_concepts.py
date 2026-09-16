@@ -41,6 +41,28 @@ def log(**row) -> None:
         fh.write(json.dumps({"ts": now(), "stage": "Q3", **row}, ensure_ascii=False) + "\n")
 
 
+def load_papers(subject: str | None = None) -> tuple[dict, list[dict]]:
+    """papers.json 을 읽어 (과목 메타, 회차 목록) 을 돌려준다.
+
+    여러 과목이 한 파일에 담긴다. 과목을 지정하지 않으면 전부 이어 붙인다 —
+    `--all` 은 "들어온 자료 전부" 라는 뜻이지 "마지막에 넣은 과목" 이 아니다.
+    """
+    index = json.loads((SRC / "papers.json").read_text(encoding="utf-8"))
+    subjects = index.get("subjects") or {}
+    out: list[dict] = []
+    meta: dict = {}
+    for code, entry in subjects.items():
+        if subject and code != subject:
+            continue
+        for rec in entry["papers"]:
+            rec = dict(rec)
+            rec["subject"] = entry["subject"]
+            rec["publisher"] = entry.get("publisher", "발행사")
+            out.append(rec)
+        meta[code] = entry
+    return meta, out
+
+
 def card_index(subject_code: str) -> dict[str, list[dict]]:
     """성취기준 코드 → 그 코드를 인용한 카드들.
 
@@ -71,16 +93,20 @@ def main() -> int:
     ap.add_argument("--all", action="store_true")
     args = ap.parse_args()
 
-    index = json.loads((SRC / "papers.json").read_text(encoding="utf-8"))
-    papers = index["papers"]
+    meta, papers = load_papers()
     if args.paper:
         papers = [p for p in papers if p["paper_id"] == args.paper]
     elif not args.all:
         print("--paper 또는 --all 이 필요하다", file=sys.stderr)
         return 2
 
-    by_code = card_index(index["subject_code"])
-    print(f"성취기준 {len(by_code)}개에 카드가 붙어 있다")
+    # 카드 사전은 과목마다 따로 만든다 — 다른 과목 카드가 후보로 끼면 안 된다
+    indexes = {code: card_index(code) for code in meta}
+    # 성취기준이 붙지 않은 카드도 단원 범위 후보로는 쓸 수 있다
+    all_cards = {code: sorted({c["id"]: c for cs in idx.values() for c in cs}.values(),
+                              key=lambda c: c["id"]) for code, idx in indexes.items()}
+    for code, idx in indexes.items():
+        print(f"{code}: 성취기준 {len(idx)}개에 카드가 붙어 있다")
 
     total = unmapped = 0
     for rec in papers:
@@ -89,10 +115,13 @@ def main() -> int:
         if not path.exists():
             continue
         doc = json.loads(path.read_text(encoding="utf-8"))
+        by_code = indexes.get(doc["subject_code"], {})
         miss: list[int] = []
         for item in doc["items"]:
             total += 1
-            code = item.get("curriculum")
+            # 문항에 성취기준이 붙어 있으면 그것, 없으면 회차 전체의 성취기준
+            # (최소성취수준평가는 파일 이름이 곧 기준이다)
+            code = item.get("curriculum") or doc.get("curriculum")
             cands = by_code.get(code, []) if code else []
             # 소단원 형성평가는 어느 소단원의 시험지인지 파일 이름이 말해 준다.
             # 같은 성취기준이라도 다른 소단원의 카드는 이 회차의 문항일 수 없다 —
@@ -102,6 +131,18 @@ def main() -> int:
                 narrowed = [c for c in cands if c.get("topic_id") == topic]
                 if narrowed:
                     cands = narrowed
+            prefix = doc.get("topic_prefix")
+            if prefix:
+                narrowed = [c for c in cands if (c.get("topic_id") or "").startswith(prefix + "-")]
+                if narrowed:
+                    cands = narrowed
+
+            # 성취기준이 아예 없는 자료(대단원 총괄평가)는 단원으로라도 좁힌다.
+            # 문항을 읽어야 카드가 정해지므로 여기서는 범위만 준다 — 고르는 일은 LLM 몫
+            if not cands:
+                scope = doc.get("topic_prefix") or doc["unit_id"]
+                cands = [c for c in all_cards.get(doc["subject_code"], [])
+                         if (c.get("topic_id") or "").startswith(scope)]
             item["concept_candidates"] = [c["id"] for c in cands]
             # 후보가 하나뿐이면 그 카드가 곧 답이다. 여럿이면 고르는 일은 LLM 몫
             item["concept_ids"] = [cands[0]["id"]] if len(cands) == 1 else []

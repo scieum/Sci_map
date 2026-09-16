@@ -100,6 +100,39 @@ export function subjectSummaries(): SubjectSummary[] {
   }));
 }
 
+export interface UnitItems {
+  unitId: string;
+  title: string;
+  /** 이 단원의 문항 전부 — 평가지를 가로질러 한 줄로 세운다 */
+  items: (ExamItem & { paperId: string; paperLabel: string })[];
+  papers: number;
+}
+
+/**
+ * 단원 하나의 문항 전부.
+ *
+ * ★ 학생은 **단원으로 공부한다.** "1-2-5 형성평가 2회" 는 발행사가 자료를
+ *   나눈 단위이지 학생이 시험 범위를 잡는 단위가 아니다. 회차별로 늘어놓으면
+ *   한 단원을 훑으려고 목록을 여덟 번 드나들게 된다. 회차는 문항마다 배지로
+ *   남겨 두어 어디서 온 문항인지는 알 수 있게 한다.
+ *
+ * 순서는 평가지 → 문항 번호다. 섞지 않는다 — 공통 지문을 쓰는 이웃 문항이
+ * 흩어지면 앞 문항에서 본 자료를 다시 찾아야 한다.
+ */
+export function unitItems(unitId: string): UnitItems | null {
+  const papers = PAPERS.filter((p) => p.unitId === unitId)
+    .sort((a, b) => a.label.localeCompare(b.label));
+  if (papers.length === 0) return null;
+  return {
+    unitId,
+    title: unitTitle(unitId),
+    papers: papers.length,
+    items: papers.flatMap((p) =>
+      p.items.map((i) => ({ ...i, paperId: p.paperId, paperLabel: p.label })),
+    ),
+  };
+}
+
 /** 한 과목의 대단원 → 회차 */
 export function unitsOfSubject(code: string): { unitId: string; title: string; papers: ExamPaper[] }[] {
   const by = new Map<string, ExamPaper[]>();
@@ -119,22 +152,29 @@ export function unitsOfSubject(code: string): { unitId: string; title: string; p
 /**
  * 문항 이미지 주소 — 로그인한 세션에만 내려오는 서명 URL.
  *
- * 한 회차의 이미지를 한 번에 받는다. 문항마다 따로 부르면 25문항짜리 회차에서
- * 왕복이 25번이고, 넘길 때마다 기다리게 된다.
+ * 한 단원의 이미지를 **한 번에** 받는다. 문항마다 따로 부르면 75문항짜리
+ * 단원에서 왕복이 75번이고, 넘길 때마다 기다리게 된다.
  *
- * 서명 URL 은 유효 기간이 있다. 한 회차를 푸는 동안 넉넉하도록 1시간을 준다 —
- * 짧게 잡으면 풀다 말고 이미지가 깨진다.
+ * 서명 URL 은 유효 기간이 있다. 한 단원을 붙잡고 푸는 동안 넉넉하도록 두 시간을
+ * 준다 — 짧게 잡으면 풀다 말고 이미지가 깨진다.
  */
-export async function signedUrls(paper: ExamPaper): Promise<Record<string, string>> {
-  if (!isSupabaseConfigured()) return {};
-  const paths = paper.items.map((i) => `${paper.paperId}/${i.file}`);
+export async function signedUrls(
+  items: { id: string; paperId: string; file: string }[],
+): Promise<Record<string, string>> {
+  if (!isSupabaseConfigured() || items.length === 0) return {};
+  const paths = items.map((i) => `${i.paperId}/${i.file}`);
   const { data: rows, error } = await supabase()
     .storage.from("exam")
-    .createSignedUrls(paths, 60 * 60);
+    .createSignedUrls(paths, 2 * 60 * 60);
   if (error || !rows) return {};
-  const out: Record<string, string> = {};
+  const byPath = new Map<string, string>();
   for (const row of rows) {
-    if (row.signedUrl && row.path) out[row.path.split("/").pop()!] = row.signedUrl;
+    if (row.signedUrl && row.path) byPath.set(row.path, row.signedUrl);
+  }
+  const out: Record<string, string> = {};
+  for (const i of items) {
+    const url = byPath.get(`${i.paperId}/${i.file}`);
+    if (url) out[i.id] = url;
   }
   return out;
 }

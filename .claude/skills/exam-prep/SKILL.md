@@ -25,9 +25,14 @@ python .claude/skills/exam-prep/scripts/convert.py --subject 통합과학2   # Q
 python .claude/skills/exam-prep/scripts/split.py --all                   # Q1 문항 크롭
 python .claude/skills/exam-prep/scripts/tables.py --all                  # Q2 정답·성취기준
 python .claude/skills/exam-prep/scripts/map_concepts.py --all            # Q3 카드 후보
+python .claude/skills/exam-prep/scripts/review.py --subject mate          # Q6 검토 문서
 python app/scripts/build_items.py                                        # 앱 번들 데이터
 python app/scripts/upload_exam_assets.py                                 # 이미지 업로드(교사)
 ```
+
+★ **Q6 게이트는 코드가 막는다.** `build_items.py` 는 `output/review/<과목코드>-exam.review.md`
+의 `approved: true` 를 읽고, 없으면 그 과목 문항을 앱 번들에서 **통째로 뺀다**. 승인 전
+자료가 "빌드했더니 배포돼 있었다" 가 되지 않게 하는 자리다 (CLAUDE.md §5).
 
 각 단계는 `--dry-run` 을 받는다. 되돌리려면 `output/items/<paper_id>/` 를 지우고 다시 돌린다.
 
@@ -36,6 +41,22 @@ python app/scripts/upload_exam_assets.py                                 # 이�
 설계서 §5.1 Q0 는 `/inbox/exam/*.pdf`(평가원 기출 PDF)를 전제로 적혀 있는데, 실제로
 들어온 것은 발행사가 낸 **HWP 평가자료**였다. 형식만 다르고 하는 일은 같다. 변환은
 설치된 한컴오피스를 COM 으로 부른다 — 한 번 띄운 세션으로 전부 돌린다.
+
+## 발행사마다 다른 것 (과목별 읽기)
+
+| 과목 | 파일 구성 | 정답 출처 |
+|---|---|---|
+| 통합과학2 | `문제` / `문항정보표` / `정답및해설` | 문항정보표 (번호·정답·성취기준·난이도) |
+| 물질과 에너지 | `…(학)` / `…(교)` 쌍 | 교사용 끝의 정답 블록 `01 ① 02 ②…` |
+
+물질과 에너지는 문항정보표가 없다. 정답은 **교사용 문제지**에 있는데 그 지면에는 해설도
+함께 있다 — 우리는 `(?<!\d)(\d{2})\s*([①-⑤])` 로 **번호와 기호만** 집는다. 해설 본문에도
+번호가 나오지만 뒤에 기호가 붙지 않아 걸리지 않는다. 오려내는 것은 언제나 **학생용**이다.
+
+성취기준이 문항마다 적혀 있지 않은 자료가 많다. 그때는 회차 단위로 아는 만큼만 좁힌다 —
+최소성취수준평가는 파일 이름이 곧 성취기준(`12물에01-01`)이고, 중단원 학업성취수준평가는
+중단원까지(`mate-1-1`), 대단원 총괄평가는 단원까지다. 더 좁히는 일은 문항을 읽어야 하므로
+LLM(item-curator)의 몫이다.
 
 ## 이 자료에서 배운 것 (다음 회차에도 그대로 걸린다)
 
@@ -48,6 +69,12 @@ python app/scripts/upload_exam_assets.py                                 # 이�
 - **표가 다음 쪽으로 이어질 때 머리글이 다시 찍히지 않는다.** 문항정보표에서 앞 쪽의
   열 위치를 그대로 써야 이어진 쪽의 정답이 붙는다.
 - **`[01~02]` 공통 지문은 두 문항 모두에 붙인다.** 지문 없는 크롭은 문제가 성립하지 않는다.
+- **한컴 COM 의 `SaveAs` 는 거짓말을 한다.** PDF 를 제대로 써 놓고도 false 를 돌려줄 때가
+  있어, 성공 여부는 **파일이 생겼는지**로 본다.
+- **한글이 열려 있으면 변환이 멈춘다.** 사용자가 한글로 문서를 열어 둔 채 자동화를 돌리면
+  한 장도 나오지 않고 붙잡혀 있는다. 돌리기 전에 한글을 닫는다.
+- **과목을 따로 돌려도 목록은 하나다.** `papers.json` 은 과목별로 합쳐 쓴다 — 덮어쓰면
+  앞서 넣은 과목이 통째로 사라진다.
 
 ## 안 하는 것
 
