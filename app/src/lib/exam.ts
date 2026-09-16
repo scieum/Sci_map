@@ -71,25 +71,49 @@ export function subjectTitle(subjectCode: string): string {
   return c?.subject ?? subjectCode;
 }
 
-/** 과목 → 대단원 → 회차. 화면이 읽는 순서 그대로 접어 둔다 */
-export function papersByUnit(): { subject: string; units: { unitId: string; title: string; papers: ExamPaper[] }[] }[] {
-  const bySubject = new Map<string, Map<string, ExamPaper[]>>();
+export interface SubjectSummary {
+  code: string;
+  name: string;
+  papers: number;
+  items: number;
+  units: number;
+}
+
+/**
+ * 과목 목록 — 문제 탭의 첫 화면.
+ *
+ * 문항이 **하나라도 있는 과목만** 담는다. 들어가 봐야 빈 목록인 과목을 세워
+ * 두면, 학생은 그것이 "아직 안 들어온 과목" 인지 "내가 잘못 눌렀는지" 알 수 없다.
+ */
+export function subjectSummaries(): SubjectSummary[] {
+  const by = new Map<string, ExamPaper[]>();
   for (const p of PAPERS) {
-    if (!bySubject.has(p.subjectCode)) bySubject.set(p.subjectCode, new Map());
-    const units = bySubject.get(p.subjectCode)!;
-    if (!units.has(p.unitId)) units.set(p.unitId, []);
-    units.get(p.unitId)!.push(p);
+    if (!by.has(p.subjectCode)) by.set(p.subjectCode, []);
+    by.get(p.subjectCode)!.push(p);
   }
-  return Array.from(bySubject.entries()).map(([code, units]) => ({
-    subject: subjectTitle(code),
-    units: Array.from(units.entries())
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([unitId, papers]) => ({
-        unitId,
-        title: unitTitle(unitId),
-        papers: papers.sort((x, y) => x.label.localeCompare(y.label)),
-      })),
+  return Array.from(by.entries()).map(([code, papers]) => ({
+    code,
+    name: subjectTitle(code),
+    papers: papers.length,
+    items: papers.reduce((n, p) => n + p.count, 0),
+    units: new Set(papers.map((p) => p.unitId)).size,
   }));
+}
+
+/** 한 과목의 대단원 → 회차 */
+export function unitsOfSubject(code: string): { unitId: string; title: string; papers: ExamPaper[] }[] {
+  const by = new Map<string, ExamPaper[]>();
+  for (const p of PAPERS.filter((x) => x.subjectCode === code)) {
+    if (!by.has(p.unitId)) by.set(p.unitId, []);
+    by.get(p.unitId)!.push(p);
+  }
+  return Array.from(by.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([unitId, papers]) => ({
+      unitId,
+      title: unitTitle(unitId),
+      papers: papers.sort((x, y) => x.label.localeCompare(y.label)),
+    }));
 }
 
 /**

@@ -6,7 +6,6 @@ import { use, useEffect, useState } from "react";
 import { Card } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
 import { CHOICES, paperById, signedUrls, subjectTitle, type ExamItem } from "@/lib/exam";
-import { saveUi } from "@/lib/ui-state";
 import { examProgress, recordExam } from "@/lib/store";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 
@@ -20,7 +19,7 @@ import { isSupabaseConfigured, supabase } from "@/lib/supabase";
  * ★ 이미지는 로그인한 세션에만 내려오는 서명 URL 이다. 세션이 없으면 문항을
  *   아예 받아 오지 않는다.
  */
-export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
+export default function PaperPage({ params }: PageProps<"/items/[subjectCode]/[paperId]">) {
   const { paperId } = use(params);
   const paper = paperById(paperId);
 
@@ -56,11 +55,7 @@ export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
   }, [paper, signedIn]);
 
   useEffect(() => {
-    if (!paper) return;
-    setScore(examProgress(paper.items.map((i) => i.id)));
-    // 이 회차의 과목을 문제 탭이 돌아갈 자리로 적어 둔다. 링크로 곧장 들어온
-    // 경우에도 ×를 누르면 이 회차가 있는 과목이 열린다 (개념 카드와 같은 규칙)
-    saveUi({ itemsSubject: subjectTitle(paper.subjectCode) });
+    if (paper) setScore(examProgress(paper.items.map((i) => i.id)));
   }, [paper]);
 
   if (!paper) notFound();
@@ -105,7 +100,7 @@ export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
     <Shell paper={`${subjectTitle(paper.subjectCode)} · ${paper.label}`}>
       <header className="mb-4 flex items-center gap-3">
         <Link
-          href="/items"
+          href={`/items/${paper.subjectCode}`}
           aria-label="목록으로"
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface text-lg text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.06)]"
         >
@@ -204,7 +199,7 @@ export default function PaperPage({ params }: PageProps<"/items/[paperId]">) {
           </button>
           {idx + 1 >= total && (
             <Link
-              href="/items"
+              href={`/items/${paper.subjectCode}`}
               className="mt-3 block text-center text-[14px] font-bold text-primary-600"
             >
               목록으로 ({score.correct}/{score.done} 맞힘)
