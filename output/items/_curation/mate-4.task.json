@@ -1,0 +1,2008 @@
+{
+ "unit_id": "mate-4",
+ "subject_code": "mate",
+ "cards": {
+  "mate-activated-complex": {
+   "id": "mate-activated-complex",
+   "term": "활성화물",
+   "definition": "활성화 상태에 놓여 있는 불안정한 화합물. 반응물의 결합이 약해지고 생성물의 결합이 만들어지는 도중에 잠깐 존재한다.",
+   "relations": [
+    {
+     "id": "rel-complex-gap",
+     "text": "반응물과 활성화물의 에너지 차이가 그 반응의 활성화 에너지이다.",
+     "condition": "반응의 진행에 따른 에너지 도표를 정반응 쪽으로 읽을 때"
+    },
+    {
+     "id": "rel-complex-transient",
+     "text": "활성화물은 반응이 진행되는 도중에만 잠깐 나타나므로 반응이 끝난 뒤의 생성물과 구별해야 한다.",
+     "condition": "에너지 도표에서 반응물·활성화물·생성물을 차례로 짚을 때"
+    },
+    {
+     "id": "rel-complex-unstable",
+     "text": "활성화물은 에너지가 높고 불안정하여 따로 분리해 두고 관찰하기 어렵다.",
+     "condition": "반응이 진행되는 도중에 활성화물을 붙잡으려 할 때"
+    }
+   ]
+  },
+  "mate-activated-state": {
+   "id": "mate-activated-state",
+   "term": "활성화 상태",
+   "definition": "반응이 에너지 장벽의 정상에 이른 순간의 상태. 반응물의 결합은 약해지고 생성물이 될 결합은 아직 만들어지는 중인 중간 단계다.",
+   "relations": [
+    {
+     "id": "rel-state-peak",
+     "text": "반응의 진행에 따른 에너지 도표에서 활성화 상태는 에너지가 가장 높은 지점에 놓인다.",
+     "condition": "반응의 진행을 가로축, 엔탈피를 세로축에 두고 볼 때"
+    },
+    {
+     "id": "rel-state-bonds",
+     "text": "활성화 상태에서는 끊어지는 중인 결합과 새로 만들어지는 중인 결합이 함께 존재한다.",
+     "condition": "반응물이 장벽의 정상에 막 도달했을 때"
+    },
+    {
+     "id": "rel-state-unstable",
+     "text": "활성화 상태는 에너지가 높아 불안정하므로 그대로 머무르지 못하고 곧 반응물이나 생성물 쪽으로 내려간다.",
+     "condition": "입자가 장벽의 정상에 이른 뒤"
+    }
+   ]
+  },
+  "mate-activation-energy": {
+   "id": "mate-activation-energy",
+   "term": "활성화 에너지",
+   "definition": "화학 반응이 일어나려면 반드시 넘어야 하는 에너지 장벽의 높이. 반응물과 활성화물의 에너지 차이로 정해지는 최소한의 에너지다.",
+   "relations": [
+    {
+     "id": "rel-ea-minimum",
+     "text": "충돌한 입자가 가진 에너지가 활성화 에너지보다 작으면 반응은 일어나지 않는다.",
+     "condition": "반응물 입자가 서로 충돌하는 순간"
+    },
+    {
+     "id": "rel-ea-rate",
+     "text": "온도와 농도가 같다면 활성화 에너지가 작은 반응일수록 더 빠르게 일어난다.",
+     "condition": "온도와 농도를 같게 맞추고 서로 다른 반응을 견줄 때"
+    },
+    {
+     "id": "rel-ea-vs-enthalpy",
+     "text": "정반응과 역반응의 활성화 에너지 차이가 반응 엔탈피이며, 활성화 에너지의 크기만으로 반응 엔탈피를 알 수는 없다.",
+     "condition": "같은 반응의 정반응과 역반응을 에너지 도표에서 함께 볼 때"
+    }
+   ]
+  },
+  "mate-average-reaction-rate": {
+   "id": "mate-average-reaction-rate",
+   "term": "평균 반응 속도",
+   "definition": "시간 구간을 통째로 잡아 그동안의 농도 변화를 구간의 길이로 나눈 반응 속도. 시간-농도 그래프에서 두 점을 이은 직선의 기울기에 해당한다.",
+   "relations": [
+    {
+     "id": "rel-avg-slope",
+     "text": "시간-농도 그래프에서 구간의 두 끝점을 이은 직선의 기울기가 그 구간의 평균 반응 속도이다.",
+     "condition": "구간의 처음 농도와 끝 농도를 그래프에서 읽어 낼 때"
+    },
+    {
+     "id": "rel-avg-interval",
+     "text": "같은 반응이라도 구간을 반응 초기에 잡느냐 후기에 잡느냐에 따라 평균 반응 속도 값이 달라진다.",
+     "condition": "온도와 반응은 그대로 두고 구간만 옮겨 잡을 때"
+    },
+    {
+     "id": "rel-avg-coefficient",
+     "text": "같은 시간 구간에서 각 물질의 농도 변화로 구한 속도의 비는 화학 반응식의 계수비와 같다.",
+     "condition": "하나의 반응식에서 여러 물질의 농도 변화를 같은 구간으로 견줄 때"
+    }
+   ]
+  },
+  "mate-catalyst": {
+   "id": "mate-catalyst",
+   "term": "촉매",
+   "definition": "반응이 끝난 뒤에도 자신의 양은 줄지 않으면서 반응 속도만 바꾸어 놓는 물질. 활성화 에너지를 오르내리게 하여 작용한다.",
+   "relations": [
+    {
+     "id": "rel-catalyst-not-consumed",
+     "text": "촉매는 반응이 끝난 뒤에도 그대로 남아 있어 반응 전후로 그 양이 달라지지 않는다.",
+     "condition": "반응 전과 반응 후에 남아 있는 촉매의 양을 견줄 때"
+    },
+    {
+     "id": "rel-catalyst-changes-ea",
+     "text": "촉매를 넣으면 반응의 활성화 에너지가 달라지고, 그에 따라 반응을 일으킬 수 있는 분자 수가 늘거나 줄어 속도가 변한다.",
+     "condition": "반응물과 생성물이 같고 온도가 일정할 때"
+    },
+    {
+     "id": "rel-catalyst-enthalpy-unchanged",
+     "text": "촉매를 넣어도 반응물과 생성물의 엔탈피는 그대로여서 반응 엔탈피가 달라지지 않는다.",
+     "condition": "같은 반응물에서 같은 생성물이 만들어질 때"
+    },
+    {
+     "id": "rel-catalyst-notation",
+     "text": "화학 반응식에서 촉매는 화살표 위쪽에 적어 반응물이나 생성물과 구분한다.",
+     "condition": "촉매를 쓴 반응을 화학 반응식으로 나타낼 때"
+    }
+   ]
+  },
+  "mate-collision-frequency": {
+   "id": "mate-collision-frequency",
+   "term": "충돌수",
+   "definition": "정해진 시간 동안 반응물 입자끼리 서로 부딪치는 횟수. 이 가운데 방향과 에너지 조건을 갖춘 것만 반응으로 이어진다.",
+   "relations": [
+    {
+     "id": "rel-collision-frequency-density",
+     "text": "같은 부피 안에 반응물 입자가 빽빽하게 들어 있을수록 단위 시간당 충돌수가 많아진다.",
+     "condition": "온도가 일정하고 반응물의 종류가 같을 때"
+    },
+    {
+     "id": "rel-collision-frequency-effective",
+     "text": "부딪치는 횟수가 늘면 그 가운데 조건을 갖춘 유효 충돌의 수도 함께 늘어난다.",
+     "condition": "온도가 일정해 충돌 중 유효 충돌이 차지하는 비율이 그대로일 때"
+    },
+    {
+     "id": "rel-collision-frequency-temperature-limit",
+     "text": "온도를 10 ℃ 올렸을 때 늘어나는 충돌수는 몇 % 수준이어서, 속도가 두 배 가까이 빨라지는 까닭이 되지 못한다.",
+     "condition": "농도와 압력은 그대로 두고 온도만 올렸을 때"
+    }
+   ]
+  },
+  "mate-effect-of-concentration-on-reaction-rate": {
+   "id": "mate-effect-of-concentration-on-reaction-rate",
+   "term": "농도와 반응 속도",
+   "definition": "반응물이 얼마나 진한가가 반응 속도를 좌우한다는 관계. 진할수록 같은 시간에 부딪칠 기회가 많아져 반응이 빨라진다.",
+   "relations": [
+    {
+     "id": "rel-concentration-rate-up",
+     "text": "다른 조건을 그대로 두고 반응물을 더 진하게 하면 같은 시간에 반응하는 입자 수가 많아진다.",
+     "condition": "온도와 촉매를 바꾸지 않고 반응물의 농도만 바꿀 때"
+    },
+    {
+     "id": "rel-concentration-collision-chain",
+     "text": "농도가 속도를 끌어올리는 통로는 충돌수가 늘고 그에 따라 유효 충돌이 늘어나는 데 있다.",
+     "condition": "온도가 일정해 활성화 에너지를 넘는 분자의 비율이 그대로일 때"
+    },
+    {
+     "id": "rel-concentration-daily-example",
+     "text": "부채질을 하면 나무가 더 잘 타는 것은 반응물인 산소가 계속 공급되어 진하게 유지되기 때문이다.",
+     "condition": "탈 물질과 불이 붙을 조건이 이미 갖추어져 있을 때"
+    }
+   ]
+  },
+  "mate-effect-of-pressure-on-reaction-rate": {
+   "id": "mate-effect-of-pressure-on-reaction-rate",
+   "term": "압력과 반응 속도",
+   "definition": "기체 반응물을 누르는 압력이 반응 속도를 좌우한다는 관계. 압력을 올리면 같은 부피에 든 입자 수가 늘어 충돌 기회가 많아진다.",
+   "relations": [
+    {
+     "id": "rel-pressure-rate-up",
+     "text": "기체 반응물을 좁은 부피로 몰아 압력을 높이면 반응이 빨라진다.",
+     "condition": "온도가 일정하고 기체 반응물의 양이 그대로인 채 부피만 줄일 때"
+    },
+    {
+     "id": "rel-pressure-is-concentration",
+     "text": "압력이 속도를 바꾸는 까닭은 단위 부피에 든 기체 입자 수, 곧 농도가 커지는 데 있다.",
+     "condition": "온도가 일정하고 기체의 양이 변하지 않을 때"
+    },
+    {
+     "id": "rel-pressure-activation-energy-fixed",
+     "text": "압력을 올려 부딪치는 횟수가 늘어도 반응의 활성화 에너지는 그대로다.",
+     "condition": "온도가 일정하고 촉매를 넣지 않은 채 압력만 바꿀 때"
+    }
+   ]
+  },
+  "mate-effect-of-surface-area-on-reaction-rate": {
+   "id": "mate-effect-of-surface-area-on-reaction-rate",
+   "term": "표면적과 반응 속도",
+   "definition": "고체 반응물이 겉으로 드러낸 넓이가 반응 속도를 좌우한다는 관계. 덩어리를 잘게 쪼갤수록 다른 반응물과 맞닿는 면이 넓어진다.",
+   "relations": [
+    {
+     "id": "rel-surface-area-rate-up",
+     "text": "질량이 같은 고체라도 잘게 부수어 겉넓이를 넓히면 반응이 빨라진다.",
+     "condition": "고체의 질량과 나머지 반응 조건을 그대로 두고 조각의 크기만 줄일 때"
+    },
+    {
+     "id": "rel-surface-area-contact-sites",
+     "text": "겉넓이가 넓어지면 다른 반응물과 맞닿을 수 있는 자리가 많아져 단위 시간당 충돌수가 늘어난다.",
+     "condition": "고체 반응물의 양과 온도가 같을 때"
+    },
+    {
+     "id": "rel-surface-area-powder-medicine",
+     "text": "가루로 만든 약이 알약보다 빨리 흡수되는 것은 체액과 맞닿는 면이 넓어졌기 때문이다.",
+     "condition": "성분과 양이 같은 약을 형태만 달리해 견줄 때"
+    }
+   ]
+  },
+  "mate-effect-of-temperature-on-reaction-rate": {
+   "id": "mate-effect-of-temperature-on-reaction-rate",
+   "term": "온도와 반응 속도",
+   "definition": "온도가 반응 속도를 좌우한다는 관계. 온도를 올리면 활성화 에너지를 넘는 운동 에너지를 지닌 분자의 비율이 커져 반응이 빨라진다.",
+   "relations": [
+    {
+     "id": "rel-temperature-rate-up",
+     "text": "다른 조건을 그대로 두고 온도만 올리면 반응 속도는 눈에 띄게 빨라진다.",
+     "condition": "농도·압력·촉매를 바꾸지 않고 온도만 바꿀 때"
+    },
+    {
+     "id": "rel-temperature-fraction-above-ea",
+     "text": "온도를 올리면 활성화 에너지보다 큰 운동 에너지를 지닌 분자의 비율이 커져 반응을 일으킬 수 있는 분자가 많아진다.",
+     "condition": "같은 반응이어서 넘어야 할 활성화 에너지가 그대로일 때"
+    },
+    {
+     "id": "rel-temperature-not-only-collision",
+     "text": "온도를 올렸을 때 속도가 크게 빨라지는 것을 부딪치는 횟수의 증가만으로는 설명할 수 없다.",
+     "condition": "온도만 올렸을 때 속도가 얼마나 커지는지를 따질 때"
+    }
+   ]
+  },
+  "mate-effective-collision": {
+   "id": "mate-effective-collision",
+   "term": "유효 충돌",
+   "definition": "반응물 입자가 부딪칠 때 결합 상태가 실제로 바뀌어 생성물이 만들어지는 충돌. 충돌 방향과 충돌 에너지가 모두 조건을 갖춘 경우다.",
+   "relations": [
+    {
+     "id": "rel-eff-conditions",
+     "text": "충돌 방향이 적합하고 충분히 빠르게 부딪쳐야 유효 충돌이 되어 반응이 일어난다.",
+     "condition": "반응물 입자끼리 서로 충돌할 때"
+    },
+    {
+     "id": "rel-eff-not-all",
+     "text": "반응물 입자가 서로 충돌했다고 해서 그때마다 반응이 일어나는 것은 아니다.",
+     "condition": "반응물끼리 충돌이 일어나고 있을 때"
+    },
+    {
+     "id": "rel-eff-rate",
+     "text": "단위 시간당 유효 충돌 수가 많아질수록 반응 속도가 빨라진다.",
+     "condition": "같은 반응을 같은 조건에서 견줄 때"
+    }
+   ]
+  },
+  "mate-enzyme": {
+   "id": "mate-enzyme",
+   "term": "효소",
+   "definition": "생물의 몸속에서 만들어져 촉매 노릇을 하는 물질. 자신은 소모되지 않으면서 몸 안에서 일어나는 반응의 속도를 바꾼다.",
+   "relations": [
+    {
+     "id": "rel-enzyme-biological-catalyst",
+     "text": "상처에 바른 과산화 수소수가 곧바로 거품을 내는 것은 혈액 속 효소가 분해 반응의 촉매로 작용하기 때문이다.",
+     "condition": "효소가 들어 있는 혈액과 과산화 수소수가 맞닿았을 때"
+    }
+   ]
+  },
+  "mate-first-order-reaction": {
+   "id": "mate-first-order-reaction",
+   "term": "1차 반응",
+   "definition": "반응 속도가 어느 한 반응물의 농도에 정비례하는 반응. 농도를 가로축, 초기 속도를 세로축에 두면 자료가 원점을 지나는 직선이 된다.",
+   "relations": [
+    {
+     "id": "rel-first-proportional",
+     "text": "1차 반응에서는 반응물의 농도를 2배로 하면 반응 속도도 2배가 된다.",
+     "condition": "온도를 일정하게 두고 그 반응물의 농도만 바꿀 때"
+    },
+    {
+     "id": "rel-first-graph",
+     "text": "농도를 가로축, 초기 반응 속도를 세로축에 두면 1차 반응의 자료는 원점을 지나는 직선으로 나타난다.",
+     "condition": "온도를 일정하게 두고 처음 농도만 바꾸어 초기 속도를 잴 때"
+    },
+    {
+     "id": "rel-first-halflife",
+     "text": "1차 반응에서는 반응물의 농도가 절반으로 줄어드는 데 걸리는 시간이 처음 농도와 상관없이 일정하다.",
+     "condition": "온도가 일정하게 유지되는 하나의 1차 반응에서"
+    }
+   ]
+  },
+  "mate-half-life": {
+   "id": "mate-half-life",
+   "term": "반감기",
+   "definition": "반응물의 농도가 처음 값의 절반까지 줄어드는 데 걸리는 시간. 1차 반응에서는 이 시간이 처음 농도와 상관없이 늘 같다.",
+   "relations": [
+    {
+     "id": "rel-halflife-constant",
+     "text": "1차 반응에서는 처음 농도를 얼마로 잡든 반감기가 같은 값으로 유지된다.",
+     "condition": "온도가 일정하게 유지될 때"
+    },
+    {
+     "id": "rel-halflife-fraction",
+     "text": "반감기가 두 번 지나면 반응물은 처음 양의 4분의 1만 남고, 세 번 지나면 8분의 1만 남는다.",
+     "condition": "반감기가 일정한 반응에서 시간이 반감기의 정수배만큼 지났을 때"
+    },
+    {
+     "id": "rel-halflife-dating",
+     "text": "반감기를 알고 남아 있는 반응물의 비율을 재면 반응이 시작된 뒤 흐른 시간을 추정할 수 있다.",
+     "condition": "반감기가 알려져 있고 처음 비율을 아는 시료를 다룰 때"
+    }
+   ]
+  },
+  "mate-initial-reaction-rate": {
+   "id": "mate-initial-reaction-rate",
+   "term": "초기 반응 속도",
+   "definition": "반응 시간이 0인 시각에서의 순간 반응 속도. 생성물이 아직 쌓이지 않아 반응물의 처음 농도가 미치는 영향만 드러나는 값이다.",
+   "relations": [
+    {
+     "id": "rel-init-t0",
+     "text": "시간-농도 그래프에서 반응이 시작되는 지점에 그은 접선의 기울기가 초기 반응 속도이다.",
+     "condition": "반응을 시작한 시각을 0으로 잡고 그래프를 읽을 때"
+    },
+    {
+     "id": "rel-init-largest",
+     "text": "반응물을 처음에 모두 넣고 시작하면 초기 반응 속도가 그 반응에서 가장 큰 순간 반응 속도가 된다.",
+     "condition": "반응 도중에 반응물을 더 넣지 않고 온도를 일정하게 둘 때"
+    },
+    {
+     "id": "rel-init-order",
+     "text": "한 반응물의 처음 농도만 바꾸어 초기 반응 속도를 여러 번 재면 그 자료로 반응 차수를 정할 수 있다.",
+     "condition": "온도를 일정하게 두고 한 번에 한 반응물의 처음 농도만 바꿀 때"
+    }
+   ]
+  },
+  "mate-instantaneous-reaction-rate": {
+   "id": "mate-instantaneous-reaction-rate",
+   "term": "순간 반응 속도",
+   "definition": "어느 한 시각에서 반응이 진행되는 빠르기. 구간의 길이를 0에 가깝게 좁혔을 때의 평균 속도이며, 시간-농도 그래프의 접선 기울기로 읽는다.",
+   "relations": [
+    {
+     "id": "rel-inst-tangent",
+     "text": "어떤 시각에서 시간-농도 그래프에 그은 접선의 기울기가 그 시각의 순간 반응 속도이다.",
+     "condition": "그래프의 한 점에서 접선을 그을 수 있을 때"
+    },
+    {
+     "id": "rel-inst-limit",
+     "text": "구간의 길이를 0에 가깝게 줄여 가면 평균 반응 속도는 그 시각의 순간 반응 속도에 가까워진다.",
+     "condition": "구간의 시작점을 한 시각에 고정하고 길이만 줄여 갈 때"
+    },
+    {
+     "id": "rel-inst-decrease",
+     "text": "반응이 진행될수록 그래프의 접선이 완만해져 순간 반응 속도가 점점 작아진다.",
+     "condition": "온도를 일정하게 두고 반응물을 더 넣지 않을 때"
+    }
+   ]
+  },
+  "mate-molecular-kinetic-energy-distribution": {
+   "id": "mate-molecular-kinetic-energy-distribution",
+   "term": "분자 운동 에너지 분포",
+   "definition": "한 온도의 기체에서 분자마다 운동 에너지가 다르다는 사정을, 에너지 값마다 분자 수가 얼마인지로 나타낸 곡선.",
+   "relations": [
+    {
+     "id": "rel-distribution-spread",
+     "text": "온도가 같은 기체라도 분자마다 운동 에너지가 달라서 분자 수는 특정 값을 중심으로 넓게 퍼져 있다.",
+     "condition": "분자 수가 아주 많고 열적으로 고르게 섞인 상태일 때"
+    },
+    {
+     "id": "rel-distribution-temperature-shift",
+     "text": "온도가 높아지면 곡선의 봉우리가 낮아지면서 오른쪽으로 옮겨 가고, 에너지가 큰 쪽 분자의 비율이 커진다.",
+     "condition": "분자 수가 같은 같은 기체를 두 온도에서 견줄 때"
+    },
+    {
+     "id": "rel-distribution-area-above-ea",
+     "text": "곡선에서 활성화 에너지보다 오른쪽에 놓인 부분의 넓이가 반응을 일으킬 수 있는 분자 수에 해당한다.",
+     "condition": "가로축을 운동 에너지, 세로축을 분자 수로 잡은 분포 곡선을 읽을 때"
+    }
+   ]
+  },
+  "mate-negative-catalyst": {
+   "id": "mate-negative-catalyst",
+   "term": "부촉매",
+   "definition": "넘어야 할 활성화 에너지를 높이는 쪽으로 작용하여 반응 속도를 느리게 하는 촉매. 문턱이 올라간 만큼 반응할 수 있는 분자가 줄어든다.",
+   "relations": [
+    {
+     "id": "rel-negative-catalyst-raises-ea",
+     "text": "같은 반응을 견줄 때 부촉매를 넣은 쪽이 넣지 않은 쪽보다 활성화 에너지가 높다.",
+     "condition": "온도와 반응물을 그대로 두고 촉매만 달리하여 견줄 때"
+    },
+    {
+     "id": "rel-negative-catalyst-fewer-molecules",
+     "text": "넘어야 할 문턱이 올라가면 그 위에 놓이는 분자 수가 줄어들어 반응 속도가 느려진다.",
+     "condition": "온도가 일정해 분자의 운동 에너지 분포가 그대로일 때"
+    },
+    {
+     "id": "rel-negative-catalyst-still-catalyst",
+     "text": "부촉매는 속도를 늦추기는 하지만 반응 뒤에도 소모되지 않으므로 여전히 촉매로 분류된다.",
+     "condition": "반응 전후 부촉매의 양을 견줄 때"
+    }
+   ]
+  },
+  "mate-overall-reaction-order": {
+   "id": "mate-overall-reaction-order",
+   "term": "전체 반응 차수",
+   "definition": "속도식에 들어 있는 각 반응물의 반응 차수를 모두 더한 값. 반응 속도가 농도 변화에 얼마나 민감한지를 한 수로 요약한다.",
+   "relations": [
+    {
+     "id": "rel-overall-sum",
+     "text": "전체 반응 차수는 각 반응물에 대한 반응 차수를 모두 더하여 구한다.",
+     "condition": "속도식에서 각 반응물의 지수를 모두 읽어 냈을 때"
+    },
+    {
+     "id": "rel-overall-sensitivity",
+     "text": "전체 반응 차수가 클수록 모든 반응물의 농도를 같은 배수로 늘렸을 때 반응 속도가 더 크게 빨라진다.",
+     "condition": "온도를 일정하게 두고 모든 반응물의 농도를 같은 배수로 늘릴 때"
+    },
+    {
+     "id": "rel-overall-not-coefficient",
+     "text": "전체 반응 차수를 화학 반응식 왼쪽 계수의 합과 같다고 보아서는 안 된다.",
+     "condition": "실험으로 속도식을 확인하지 않은 채 반응식만 볼 때"
+    }
+   ]
+  },
+  "mate-positive-catalyst": {
+   "id": "mate-positive-catalyst",
+   "term": "정촉매",
+   "definition": "넘어야 할 활성화 에너지를 낮추는 쪽으로 작용하여 반응 속도를 빠르게 하는 촉매. 문턱이 내려간 만큼 반응할 수 있는 분자가 늘어난다.",
+   "relations": [
+    {
+     "id": "rel-positive-catalyst-lowers-ea",
+     "text": "같은 반응을 견줄 때 정촉매를 넣은 쪽이 넣지 않은 쪽보다 활성화 에너지가 낮다.",
+     "condition": "온도와 반응물을 그대로 두고 촉매만 달리하여 견줄 때"
+    },
+    {
+     "id": "rel-positive-catalyst-more-molecules",
+     "text": "넘어야 할 문턱이 내려가면 그 위에 놓이는 분자 수가 많아지므로 반응 속도가 빨라진다.",
+     "condition": "온도가 일정해 분자의 운동 에너지 분포가 그대로일 때"
+    },
+    {
+     "id": "rel-positive-catalyst-distribution-fixed",
+     "text": "정촉매를 넣어도 분자의 운동 에너지 분포는 그대로이고, 옮겨 가는 것은 활성화 에너지의 자리다.",
+     "condition": "온도를 바꾸지 않고 정촉매만 넣을 때"
+    }
+   ]
+  },
+  "mate-rate-constant": {
+   "id": "mate-rate-constant",
+   "term": "반응 속도 상수",
+   "definition": "반응 속도식에서 농도의 거듭제곱 앞에 붙는 비례 상수. 반응마다 고유한 값을 가지며 온도가 정해지면 값도 정해진다.",
+   "relations": [
+    {
+     "id": "rel-k-concentration",
+     "text": "반응물의 농도를 바꾸어도 반응 속도 상수의 값은 달라지지 않는다.",
+     "condition": "온도를 일정하게 두고 농도만 바꿀 때"
+    },
+    {
+     "id": "rel-k-temperature",
+     "text": "온도를 높이면 같은 반응이라도 속도 상수가 커져 같은 농도에서도 반응이 더 빨라진다.",
+     "condition": "농도 조건을 그대로 두고 온도만 올릴 때"
+    },
+    {
+     "id": "rel-k-specific",
+     "text": "반응 속도 상수는 반응마다 고유한 값이므로 온도가 같아도 반응이 다르면 같은 값이라고 볼 수 없다.",
+     "condition": "서로 다른 반응을 같은 온도에서 견줄 때"
+    }
+   ]
+  },
+  "mate-rate-law": {
+   "id": "mate-rate-law",
+   "term": "반응 속도식",
+   "definition": "온도가 일정할 때 반응 속도가 반응물의 농도에 어떻게 좌우되는지를, 비례 상수와 농도의 거듭제곱으로 나타낸 식.",
+   "relations": [
+    {
+     "id": "rel-ratelaw-experiment",
+     "text": "반응 속도식의 모양은 실험으로 얻은 자료에서 결정되며, 화학 반응식의 계수만 보고 미리 알아낼 수 없다.",
+     "condition": "전체 화학 반응식만 알고 속도식을 새로 구하려 할 때"
+    },
+    {
+     "id": "rel-ratelaw-parts",
+     "text": "반응 속도식에는 비례 상수인 반응 속도 상수와, 각 반응물의 농도에 붙는 지수인 반응 차수가 함께 들어 있다.",
+     "condition": "속도식을 부분으로 나누어 읽을 때"
+    },
+    {
+     "id": "rel-ratelaw-temperature",
+     "text": "온도가 달라지면 같은 반응이라도 속도 상수 값이 달라져 앞서 쓰던 속도식을 그대로 쓸 수 없다.",
+     "condition": "농도 조건은 그대로 두고 온도만 바꿀 때"
+    }
+   ]
+  },
+  "mate-reaction-order": {
+   "id": "mate-reaction-order",
+   "term": "반응 차수",
+   "definition": "반응 속도식에서 어떤 반응물의 농도에 붙은 지수. 그 반응물의 농도가 반응 속도를 얼마나 크게 좌우하는지를 나타낸다.",
+   "relations": [
+    {
+     "id": "rel-order-experiment",
+     "text": "반응 차수는 초기 농도를 바꾸어 가며 속도를 측정한 자료로 정하며, 반응식의 계수에서 끌어낼 수 없다.",
+     "condition": "전체 화학 반응식만 주어져 있을 때"
+    },
+    {
+     "id": "rel-order-second",
+     "text": "어떤 반응물에 대한 차수가 2이면 그 반응물의 농도를 2배로 할 때 반응 속도는 4배가 된다.",
+     "condition": "온도와 다른 반응물의 농도를 고정하고 그 반응물의 농도만 2배로 할 때"
+    },
+    {
+     "id": "rel-order-zero",
+     "text": "어떤 반응물에 대한 차수가 0이면 그 반응물의 농도를 바꾸어도 반응 속도는 변하지 않는다.",
+     "condition": "온도와 다른 반응물의 농도를 그대로 두고 그 반응물의 농도만 바꿀 때"
+    }
+   ]
+  },
+  "mate-reaction-rate": {
+   "id": "mate-reaction-rate",
+   "term": "반응 속도",
+   "definition": "화학 반응이 진행되는 빠르기를 수로 나타낸 값. 단위 시간 동안 줄어든 반응물이나 늘어난 생성물의 몰농도로 계산한다.",
+   "relations": [
+    {
+     "id": "rel-rate-ratio",
+     "text": "반응 속도는 반응물이나 생성물의 몰농도 변화량을 그동안 걸린 시간으로 나누어 M/s 나 M/min 단위로 구한다.",
+     "condition": "농도를 몰농도로 재고 그 변화를 시간에 견주어 볼 때"
+    },
+    {
+     "id": "rel-rate-sign",
+     "text": "반응물 쪽 농도 변화로 속도를 나타낼 때에는 줄어든 양 앞에 음의 부호를 붙여 값이 양수가 되게 한다.",
+     "condition": "속도를 언제나 양의 값으로 약속하고 반응물 쪽으로 계산할 때"
+    },
+    {
+     "id": "rel-rate-slows",
+     "text": "반응이 진행되어 반응물의 농도가 줄어들면 반응 속도도 함께 느려진다.",
+     "condition": "온도를 일정하게 두고 반응물을 더 넣지 않을 때"
+    },
+    {
+     "id": "rel-rate-pressure",
+     "text": "부피와 온도를 고정한 용기에서는 기체의 몰농도가 부분 압력에 비례하므로, 압력 변화를 재어 반응 속도를 나타낼 수 있다.",
+     "condition": "용기의 부피와 온도를 고정해 두고 압력만 측정할 때"
+    }
+   ]
+  }
+ },
+ "items": [
+  {
+   "item_id": "mate-ach-4-1-q01",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 1,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "01 다음은 Mg()과 HCl()의 화학 반응식이다. Mg()  HCl() ──→ MgCl ()  H (g)   표는 Mg()을 충분한 양의 HCl()과 반응시킬 때, 반 응 시간까지 생성된 H (g)의 부피를 나타낸 것이다.  반응 시간()       H (g)의 부피(mL)        이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? (단, 온도는 일정하다.) 보기 ㄱ. 이다.  ㄴ. ∼s 동안 반응의 평균 빠르기는  mLs이다.  ㄷ. 반응 속도는 시간이 지남에 따라 점점 빨라진다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q02",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 2,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "02 그림은 반응 A(g) ─→ B(g)에서 반응 시간에 따른 A(g)의 농도를 나 타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? (단, 온도는 일정하다.) 보기 ㄱ. ㉠의 기울기 절댓값(molL·s)은 초기 반응 속도이다. ㄴ. ㉡의 기울기 절댓값(molL·s)은  ∼ s 동안 평균   반응 속도이다. ㄷ. 순간 반응 속도는  일 때가  일 때보다 빠르다.   ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q03",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 3,
+   "kind": "written",
+   "answer": null,
+   "curriculum": null,
+   "topic_label": null,
+   "text": "03 표는 A(g)와 B(g)가 반응하여 C(g)를 생성하는 반응에서 반응물의 초기 농도에 따른 초기 반응 속도에 대한 자료 이다. 는 반응 속도 상수이고 온도는 일정하다. 초기 농도(M) 초기 반응 속도 실험 A(g) B(g) (Ms) Ⅰ   × Ⅱ   × Ⅲ   × Ⅳ   × ⑴ 이 반응의 반응 속도식을 쓰시오. ( ) ⑵ 를 구하시오. ( ) ⑶ 를 구하시오. ( )",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q04",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 4,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "04 그림은 강철 용기에 A(g)를 넣고 반응 A(g) ──→ B(g) 가 일어날 때, 반응 시간에 따른 A(g)의 농도를 나타낸 것이 다. 이에 대한 설명 으로 옳은 것만을 〈보기〉에서 있는 대 로 고른 것은? (단, 온도는 일정하다.) 보기  ㄱ. ∼min 동안 A(g)의 평균 반응 속도는  Mmin이다.   ㄴ. 초기 반응 속도는  Mmin보다 크다.  ㄷ. 반응 시간이 min일 때, BM이다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q05",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 5,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "05 그림은 반응 A(g) ──→ B(g)에서 A(g)의 초기 농도 에 따른 초기 반응 속도를 나타낸 것이다. 이에 대한 설명으로 옳은 것 만을 〈보기〉에서 있는 대로 고른 것은? (단, 온도는 일정 하고, 는 반응 속도 상수이다.) 보기 ㄱ. 반응 속도식은 A이다. ㄴ. 생성된 B(g)의 양은 ∼s 동안이 ∼s 동 안보다 크다. ㄷ. A(g)가 M에서 M이 될 때까지 걸린 시간은 A(g) 가 M에서 M이 될 때까지 걸린 시간보다 짧다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q06",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 6,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "06 그림은 강철 용기에 A(g)를 넣고 반응 A(g) ──→ B(g)C(g)이 일어날 때 반응 시간()에 따른 강철 용 기 속 기체의 반응물과, 가지 생성물을 분자 모형으로 나타낸 것이다. 모형 개는 mol을 나타낸다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 이 반응은 차 반응이다. ㄴ. 는 C이다. ㄷ. (가)에서 C(g)는 mol이다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q07",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 7,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "07 차 반응 A(g) ──→ B(g)에 대한 설명 중 옳은 것만 을 <보기>에서 있는 대로 고른 것은? (단, 온도는 일정 하다.) 보기 ㄱ. A(g)의 초기 농도가 증가하면 반감기는 감소한다. ㄴ. A(g)의 초기 농도가 증가하면 농도로 정의되는 평형 상수()는 증가한다. ㄷ. ∼s 동안 A(g)의 반응 속도는 B(g)의 생성 속  도의 이다.  ① ㄱ ② ㄴ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q08",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 8,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "08 다음은 A(g)로부터 B(g)가 생성되는 반응의 열화학 반응 식이다. A(g)  B(g) ⊿kJ 정반응의 활성화 에너지가 kJmol일 때, 역반응의 활성화 에너지(kJmol) 값으로 옳은 것은? ①  ②  ③  ④  ⑤ ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-1-q09",
+   "paper": "Ⅳ-1 화학 반응 속도 학업성취수준평가",
+   "no": 9,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "09 다음 설명 중 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 반응물이 충분히 빠른 속도로 충돌하면 항상 화학 반 응이 일어난다. ㄴ. 정반응의 활성화 에너지가 커지면 반응 엔탈피(⊿) 는 작아진다. ㄷ. 반응물의 결합 상태가 변하여 반응이 일어나는 충돌 을 유효 충돌이라고 한다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-effective-collision",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q01",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 1,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "01 반응 속도에 대한 설명으로 옳은 것만을 <보기>에서 있 는 대로 고른 것은? 보기 ㄱ. 차 반응에서 반응물의 농도가 작아지면 반응물의 충돌수가 감소하므로 반감기가 길어진다. ㄴ. 온도가 높아지면 활성화 에너지보다 큰 에너지를 가 지는 분자 수가 많아지므로 반응 속도가 빨라진다. ㄷ. 온도가 일정할 때, 부촉매를 사용하면 반응 속도가 느려지므로 평형 상수()가 작아진다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q02",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 2,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "02 표는 부피가 같은 개의 강철 용기에 A(g)를 각각 넣고 차 반응 A(g) ──→ B(g)을 진행시킨 실험 Ⅰ∼Ⅲ에 대한 자료이다. A(g)의 초기 실험 온도 초기 반응 속도 농도(M) Ⅰ    Ⅱ    Ⅲ    이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 이다. ㄴ. 이다. ㄷ. 활성화 에너지는 Ⅲ에서가 Ⅰ에서 보다 크다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q03",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 3,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "03 표는 개의 강철 용기에 A(g)를 각각 넣고 차 반응 A(g) ──→ B(g)이 일어날 때의 자료이다. A(g)의 초기 min 후 B(g)의 실험 온도 농도(M) 농도(M)  Ⅰ       Ⅱ     Ⅲ     이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ.  이다.   ㄴ. 반응 속도 상수는 Ⅱ에서와 Ⅲ에서가 같다.  ㄷ. Ⅲ에서 min일 때, A의 몰분율은 이다.  ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q04",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 4,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "04 다음은 반응 속도에 영향을 미치는 어떤 요인을 설명하 는 자료이다. 이 자료로 설명할 수 있는 예로 적절한 것만을 <보기> 에서 있는 대로 고른 것은? 보기 ㄱ. 부패를 막기 위해 음식을 냉장고에 보관한다. ㄴ. 대기 오염 물질을 줄이기 위해 자동차에 촉매 변환 장치를 설치한다. ㄷ. 빠른 약효를 위해 가루약을 사용한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q05",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 5,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "05 표는 충분한 양의 CaCO ()을 같은 농도의 HCl()과  반응시킨 실험 Ⅰ∼Ⅲ의 반응 조건이다. 온도 HCl()의 CaCO ()의 실험  (℃) 부피(mL) 상태 Ⅰ   조각 Ⅱ   조각 Ⅲ   가루 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 초기 반응 속도는 ⅢⅡⅠ이다. ㄴ. 반응 속도 상수는 ⅡⅠ이다. ㄷ. 반응 완결 후 생성된 CO (g)의 부피는 ⅢⅡ이다.  ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q06",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 6,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "06 그림은 금속 X의 표면에서 NH (g)가 생성되는 반응을  모형으로 나타낸 것이다. H 와 N 는 금속 X의 표면에   흡착되면서 원자 간 공유 결합이 약해져 H 원자와 N 원 자로 쉽게 분해된다. X에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. X는 촉매이다. ㄴ. X의 질량은 반응 전이 반응 후보다 크다. ㄷ. X는 NH (g) 생성 반응의 활성화 에너지를 높이는 역  할을 한다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q07",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 7,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "07 그림은 반응 A(g) ──→ B(g)에서 온도가 과 일   때, A(g)의 초기 농도(A )에 따른 초기 반응 속도를 나  타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ.  이다.   ㄴ. 반감기는 에서가 에서보다 짧다.   ㄷ. 반응 속도 상수는 에서가 에서의 배이다.   ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-ach-4-2-q08",
+   "paper": "Ⅳ-2 농도, 온도, 촉매와 반응 속도 학업성취수준평가",
+   "no": 8,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "08 그림 (가)는 온도 과 에서 반응물의 운동 에너지   분포를, (나)는 촉매 C()를 사용했을 때의 활성화 에너 지(′)와 반응물의 운동 에너지 분포를 나타낸 것이다. a ㉠ 과 의 크기 비교와 ㉡ C()의 종류를 바르게 나   타낸 것은? ㉠ ㉡ ㉠ ㉡ ①   정촉매 ②   부촉매     ③   정촉매 ④   부촉매     ⑤   정촉매  ",
+   "candidates": [
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-01-q01",
+   "paper": "12물에04-01 최소성취수준평가",
+   "no": 1,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-01",
+   "topic_label": null,
+   "text": "01 다음은 NO (g) ──→ NO (g)의 반응에서 반응 시간    에 따른 NO 의 몰농도를 나타낸 그래프이다.   그래프의 기울기 ㉠∼㉢ 중 순간 반응 속도와 평균 반 응 속도를 나타낸 것을 모두 찾아 각각 쓰시오. ⑴ 순간 반응 속도: ( ) ⑵ 평균 반응 속도: ( )",
+   "candidates": [
+    "mate-average-reaction-rate",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-first-order-reaction",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-01-q02",
+   "paper": "12물에04-01 최소성취수준평가",
+   "no": 2,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "12물에04-01",
+   "topic_label": null,
+   "text": "02 다음은 일정한 온도에서 수소와 일산화 질소가 반응하여 질소와 수증기가 생성되는 반응의 화학 반응식과 반응 속도식이다. H (g)  NO(g) ──→ N (g)  HO(g)    H NO  이에 대한 설명으로 옳지 않은 것은? (단, 는 반응 속 도 상수이다.) ① NO에 대해 차 반응이다. ② 전체 반응 차수는 차이다. ③ H 의 계수와 반응 차수는 무관하다.  ④ Ms는 반응 속도()의 단위로 사용할 수 있다. ⑤ 반응 차수는 온도에 따라 변하는 상수이다.",
+   "candidates": [
+    "mate-average-reaction-rate",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-first-order-reaction",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-01-q03",
+   "paper": "12물에04-01 최소성취수준평가",
+   "no": 3,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": "12물에04-01",
+   "topic_label": null,
+   "text": "03 다음은 일정한 온도에서 NO(g)와 O (g)의 반응 속도를  측정한 결과이다. 실험 [NO](M) [O ](M) 반응 속도(Ms)                  이 실험에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. NO에 대한 반응 차수는 이다. ㄴ. O 에 대한 반응 차수는 이다.  ㄷ. 이 반응의 반응 속도식은 NOO 이다.  ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-average-reaction-rate",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-first-order-reaction",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-01-q04",
+   "paper": "12물에04-01 최소성취수준평가",
+   "no": 4,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "12물에04-01",
+   "topic_label": null,
+   "text": "04 그림은 마그네슘과 묽은 염산이 반응하여 발생하는 수소 기체의 부피를 측정하는 실험이다. 위 실험에서 반응의 빠르기를 구하기 위해 측정할 자료 로 적절한 것을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 반응 시간 ㄴ. 묽은 염산의 농도 ㄷ. 마그네슘의 질량 ㄹ. 발생하는 수소 기체의 부피 ① ㄱ, ㄴ ② ㄱ, ㄹ ③ ㄴ, ㄷ ④ ㄴ, ㄹ ⑤ ㄱ, ㄷ, ㄹ",
+   "candidates": [
+    "mate-average-reaction-rate",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-first-order-reaction",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-overall-reaction-order",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-02-q01",
+   "paper": "12물에04-02 최소성취수준평가",
+   "no": 1,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-02",
+   "topic_label": null,
+   "text": "01 다음 글의 ( ) 안에 들어갈 알맞은 말을 쓰시오. 과산화 수소(HO )가 물과 산소로 분해되는 화학 반   응은 차 반응이다. 특정 조건에서 과산화 수소의 분해 반응의 반감기를 시간이라고 하면, 시간이 지나면 초기 농도의 절반이 되고 시간이 지나면 초기 농도의 ( )이 된다. ( )",
+   "candidates": [
+    "mate-first-order-reaction",
+    "mate-half-life"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-02-q02",
+   "paper": "12물에04-02 최소성취수준평가",
+   "no": 2,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "12물에04-02",
+   "topic_label": null,
+   "text": "02 다음 중 차 반응의 특징으로 옳은 것은? ① 반응 속도는 항상 일정하다. ② 반응 차수는 실험을 통해 결정할 수 없다. ③ 차 반응의 속도는 반응물의 농도와 무관하다. ④ 반감기는 반응물의 초기 농도에 따라 달라진다. ⑤ 반응물에 대한 생성물의 비율과 반감기를 알면 반응 시간을 알 수 있다.",
+   "candidates": [
+    "mate-first-order-reaction",
+    "mate-half-life"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-02-q03",
+   "paper": "12물에04-02 최소성취수준평가",
+   "no": 3,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "12물에04-02",
+   "topic_label": null,
+   "text": "03 과산화 수소(H O )의 분해 반응이 차 반응임을 알 수   있는 방법으로 가장 적절한 것은? ① 온도를 변화시키면서 반응 속도를 측정한다. ② 생성된 산소의 압력을 일정 시간마다 측정하여 시간 압력(농도) 그래프를 그린다. ③ 반응물과 생성물의 화학식량을 비교하여 반응 차수를 결정한다. ④ 반응 속도를 촉매 없이 측정한 후, 촉매를 추가하여 비교한다. ⑤ 일정 시간 후 생성물의 색 변화를 관찰하여 분석한다.",
+   "candidates": [
+    "mate-first-order-reaction",
+    "mate-half-life"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-02-q04",
+   "paper": "12물에04-02 최소성취수준평가",
+   "no": 4,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "12물에04-02",
+   "topic_label": null,
+   "text": "04 다음 자료는 오산화 이질소의 분해 반응의 반응 속도식 과, 시간에 따른 오산화 이질소의 농도 변화 그래프이다. N O  (는 반응 속도 상수)   이에 대한 설명으로 옳지 않은 것은? ① 반감기는  s이다.   ② ㉮의 입자 수는 s에서 입자 수의  이다.  ③ 초기 반응 속도가 NO 의 초기 농도에 비례한다.   ④ 오산화 이질소의 분해 반응은 NO 에 대해 차 반응   이다. ⑤ ㉯는 반감기가 회 경과한 시점이므로 입자 수가 개 이다.",
+   "candidates": [
+    "mate-first-order-reaction",
+    "mate-half-life"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-02-q05",
+   "paper": "12물에04-02 최소성취수준평가",
+   "no": 5,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-02",
+   "topic_label": null,
+   "text": "05 그림은 A(g)로부터 B(g)가 생성되는 반응에서 반응 시간에 따른 A(g)의 농도를 나타낸 것이다. (단, A(g) ─→ B(g) 반응은 차 반응이고 반응 속도 상수는 이다.) ⑴ A─→ B(g) 반응의 반응 속도식을 구해 보자. ( ) ⑵ 이 반응의 반감기를 구해 보자. ( )",
+   "candidates": [
+    "mate-first-order-reaction",
+    "mate-half-life"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-03-q01",
+   "paper": "12물에04-03 최소성취수준평가",
+   "no": 1,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-03",
+   "topic_label": null,
+   "text": "01 빈칸에 들어갈 알맞은 말을 쓰시오. 화학 반응이 일어나려면 반응물 입자들이 반응이 일어 나기에 적합한 ( ㉠ )으로 충분히 빠르게 충돌해야 한 다. 반응물이 빠른 속도로 충돌할 때 전달되는 ( ㉡ )는 반응물의 입자들 사이의 결합을 끊는 데 사용된다. 결합 이 끊어지면 입자들이 재배열되어 새로운 생성물이 된다. ㉠: ( ) ㉡: ( )",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-03-q02",
+   "paper": "12물에04-03 최소성취수준평가",
+   "no": 2,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "12물에04-03",
+   "topic_label": null,
+   "text": "02 다음은 유효 충돌과 활성화 에너지에 대한 설명이다. 옳 지 않은 것은? ① 활성화 상태에 있는 불안정한 화합물을 활성화물이라 고 한다. ② 화학 반응이 일어나는 데 필요한 최대한의 에너지를 활성화 에너지라고 한다. ③ 반응물 입자들 사이에 적합한 방향으로 충돌이 일어날 때 화학 반응이 일어날 수 있다. ④ 반응 엔탈피는 생성물과 반응물의 엔탈피 차이이므로 활성화 에너지의 크기와는 관계가 없다. ⑤ 반응물의 결합 상태가 변하여 반응이 일어나는 충돌을 유효 충돌이라고 한다.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-03-q03",
+   "paper": "12물에04-03 최소성취수준평가",
+   "no": 3,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "12물에04-03",
+   "topic_label": null,
+   "text": "03 화학 반응이 일어나기 위한 유효 충돌의 특징으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 적합한 충돌 방향 ㄴ. 충분히 빠른 속도 ㄷ. 개 이상의 입자의 동시 충돌 ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄴ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-03-q04",
+   "paper": "12물에04-03 최소성취수준평가",
+   "no": 4,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "12물에04-03",
+   "topic_label": null,
+   "text": "04 다음 중 활성화 에너지에 대한 설명으로 옳은 것은? ① 반응 엔탈피가 클수록 활성화 에너지도 크다. ② 활성화 에너지는 촉매의 영향을 받지 않는다. ③ 활성화 에너지가 높으면 반응을 일으키기 어렵다. ④ 활성화 에너지가 낮을수록 반응 속도는 느려진다. ⑤ 활성화 에너지는 반응물과 생성물의 총 에너지 차이를 의미한다. 서술형",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-03-q05",
+   "paper": "12물에04-03 최소성취수준평가",
+   "no": 5,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-03",
+   "topic_label": null,
+   "text": "05 다음은 CO(g)와 NO (g)가 반응하여 CO (g)와 NO(g)가   생성되는 반응의 열화학 반응식을 나타낸 것이다. CO(g)NO (g) ─→ CO (g)NO(g) (⊿)   ⑴ 정반응의 활성화 에너지()와 역반응의 활성화 에너 a 지(′)를 부등호를 사용하여 비교하시오. a ⑵ 반응 엔탈피(⊿)의 부호와 관련지어 정반응과 역반응 의 활성화 에너지를 비교하시오.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-03-q06",
+   "paper": "12물에04-03 최소성취수준평가",
+   "no": 6,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-03",
+   "topic_label": null,
+   "text": "06 다음은 아이오딘화 수소(HI)의 분해 반응에 관한 자료 이다. • 화학 반응식: HI(g) ─→ H (g)  I (g)   • 활성화 에너지가 kJ이고, 반응 엔탈피(⊿)가 kJ이다. 역반응의 활성화 에너지를 구하시오. ( )",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-positive-catalyst"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-04-q01",
+   "paper": "12물에04-04 최소성취수준평가",
+   "no": 1,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-04",
+   "topic_label": null,
+   "text": "01 빈칸에 들어갈 알맞은 말을 쓰시오. 반응 속도는 반응물의 농도가 증가할수록 ( ㉠ )지 고, ( ㉡ )이(가) 높을수록 일반적으로 증가하며, 촉매를 사용하면 ( ㉢ )을(를) 낮추어 반응 속도가 증가한다. ㉠: ( ) ㉡: ( ) ㉢: ( )",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-04-q02",
+   "paper": "12물에04-04 최소성취수준평가",
+   "no": 2,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "12물에04-04",
+   "topic_label": null,
+   "text": "02 다음 중 반응 속도를 증가시키는 방법으로 적절하지 않은 것은? ① 촉매를 사용하여 활성화 에너지를 낮춘다. ② 반응물의 농도를 증가시켜 충돌수를 늘린다. ③ 부촉매를 사용하여 활성화 에너지를 낮춘다. ④ 온도를 높여 반응물의 운동 에너지를 증가시킨다. ⑤ 기체 반응물의 압력을 증가시켜 단위 부피당 충돌 횟 수를 증가시킨다. .",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-04-q03",
+   "paper": "12물에04-04 최소성취수준평가",
+   "no": 3,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "12물에04-04",
+   "topic_label": null,
+   "text": "03 다음 중 촉매에 대한 설명으로 옳은 것은? ① 촉매는 반응 중에 소모되며, 반응이 끝나면 사라진다. ② 촉매는 반응 엔탈피를 변화시켜 반응 속도를 조절한다. ③ 촉매는 반응물의 운동 에너지를 증가시켜 반응 속도를 조절한다. ④ 촉매는 반응의 활성화 에너지를 변화시켜 반응 속도를 조절한다. ⑤ 정촉매를 사용하면 반응 속도가 증가하지만, 최종 생성 물이 감소한다.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-04-q04",
+   "paper": "12물에04-04 최소성취수준평가",
+   "no": 4,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": "12물에04-04",
+   "topic_label": null,
+   "text": "04 다음 그림과 표는 온도를 변화시켜가며 싸이오황산 나트 륨 수용액과 묽은 염산을 섞은 후에 ✕ 표시가 보이지 않을 때까지 걸린 시간을 측정한 결과를 나타낸 것이다. 두 수용액의 온도(℃)    ✕ 표시가 보이지 않을    때까지 걸린 시간(초) 이 실험에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 온도가 높아질수록 반응 속도는 빨라진다. ㄴ. 온도가 높아지면 활성화 에너지가 낮아진다. ㄷ. 싸이오황산 나트륨 수용액의 농도가 달라져도 반응 속도는 동일하다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄴ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-min-4-04-q05",
+   "paper": "12물에04-04 최소성취수준평가",
+   "no": 5,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "12물에04-04",
+   "topic_label": null,
+   "text": "05 그래프는 반응물의 에너지에 따른 분자 수의 분포를 나 타낸 것이다. 는 촉매가 없을 때의 활성화 에너지를 a 의미한다. (가)와 (나) 중 정촉매를 사용한 것과 부촉매를 사용한 것을 각각 고르시오. 정촉매: ( ) 부촉매: ( )",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q01",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "01 그림은 반응 A(g)  B(g)에서 반응의 진행에 따른 엔 탈피를 나타낸 것이다.   이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? (단, 온도는 일정하다.) 보기 ㄱ. 정반응의 활성화 에너지는 이다. ㄴ. 정촉매를 사용하면 ()는 증가한다. ㄷ. 역반응의 반응 엔탈피(⊿)는 ()이다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q02",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "02 다음은 A(g)로부터 B(g)가 생성되는 반응의 화학 반응식 과 반응 속도식이다. A(g) ──→ B(g) A (는 반응 속도 상수, 은 반응 차수) 그림은 A(g)의 초기 농도에 따른 초기 반응 속도를 나타 낸 것이다. 이에 대한 설명 으로 옳은 것만을 〈보기〉에 서 있는 대로 고른 것은? (단, 온도는 일정하다.) 보기 ㄱ. 이다.  ㄴ.   s이다.  ㄷ. 이 반응은 반응물의 농도와 관계없이 반감기가 일정 하다. ① ㄱ ② ㄷ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q03",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "03표는 A(g)B(g) ──→ C(g) 반응에서 A와 B의 초기 농도를 달리하면서 초기 반응 속도를 측정한 실험 결과 를 나타낸 것이다. 이 반응의 정반응은 흡열 반응이다. 초기 농도(M) 초기 반응 속도 실험 A(molL) B(molL) (mol/L‧s) Ⅰ    Ⅱ    Ⅲ   (가) 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고 른 것은? (단, 이 반응은 차 반응이고, 온도는 일정하다.) 보기 ㄱ. (가)는 이다. ㄴ. 온도를 높이면 반응 속도 상수() 값이 증가한다. ㄷ. A, B의 초기 농도가 각각 molL이면 초기 반 응 속도는 molL·s이다. ① ㄴ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q04",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "04 다음은 A(g)로부터 B(g)가 생성되는 반응의 화학 반응식 과 반응 속도이다. A(g) ──→ B(g) A 그림은 개의 부피가 같은 동일한 강철 용기에 A(g)를 각각 넣고 온도 과 에서 반응시킬 때, 반응 시간에   따른 A(g)의 농도([A])를 나타낸 것이다. 에서 B(g)의 압력 min일 때,  은? 에서 B(g)의 압력     ①   ②   ③           ④   ⑤      ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q05",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 5,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "05 다음은 A(g)와 B(g)가 반응하여 C(g)를 생성하는 반응의 화학 반응식과 반응 속도식이다. A(g)  B(g) ──→ C(g) (는 반응 계수) [A] (는 반응 속도 상수) 그림은 강철 용기에 A(g)와 B(g)를 넣고 반응시킬 때, 반응 시간에 따른 B(g)와 C(g)의 농도를 각각 나타낸 것 이다. ×(A(g)의 초기 농도)는? ①  ②  ③  ④  ⑤ ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q06",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 6,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "06 다음은 아이오딘화 수소(HI) 기체가 수소(H ) 기체와 아  이오딘(I ) 기체로 분해될 때의 열화학 반응식과 반응 경  로에 따른 에너지 변화를 나타낸 것이다. HI(g) ──→ H (g)  I (g) ⊿kJ   이에 대한 설명으로 옳지 않은 것은? ① 정반응의 활성화 에너지는 kJmol이다. ② 역반응의 활성화 에너지는 kJmol이다. ③ 정촉매를 첨가하면 ⊿는 kJmol보다 작아진다. ④ 부촉매를 첨가하면 정반응의 활성화 에너지는 kJmol 보다 커진다. ⑤ mol의 HI(g)가 모두 반응할 때 흡수하는 열은 kJ 이다.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q07",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 7,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "07 다음은 A(g)로부터 B(g)가 생성되는 반응의 화학 반응식 과 반응 속도식이다. A(g) ──→ B(g) [A] (는 반응 속도 상수) 표는 온도 에서 A(g)를 강철 용기에 넣어 반응시킬 때 반응 시간()에 따른 압력에 관한 자료이다. , 는 A B 각각 A(g), B(g)의 부분 압력이고 반감기는 min이다. min     (상댓값)    A  (상댓값)    B 전체 기체의 압력(상댓값)     는?     ①  ②  ③  ④  ⑤     서술형",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r1-q08",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 1회",
+   "no": 8,
+   "kind": "written",
+   "answer": null,
+   "curriculum": null,
+   "topic_label": null,
+   "text": "08 다음은 A(g)와 B(g)가 반응하여 C(g)를 생성하는 반응의 화학 반응식과 반응 속도식이다. A(g)  B(g) ──→ C(g) AmBn (는 반응 속도 상수, , 은 반응 차수) 그림 (가)는 A(g)의 초기 농도(A )가 M일 때 B(g)의  초기 농도(B )에 따른 초기 반응 속도( )를, (나)는 B 가    M일 때, A 에 따른  를 나타낸 것이다.   ⑴ , , 을 각각 구하는 과정을 서술하시오. ⑵ 를 구하는 과정을 서술하시오.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q01",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "01 다음은 A(g)로부터 B(g)와 C(g)가 생성되는 반응의 화학 반응식과 반응 속도식이다. A(g) ──→ B(g)  C(g) [A] (는 반응 속도 상수) 표는 A(g)를 강철 용기에 넣어 반응시킬 때, 반응 시간()에 따른 A B의 의 질 질 량 량    w B과 A C의 의 질 질 량 량    w C A A 을 나타낸 것이다. min   w B       A w C      A A의 화학식량 × 은? (단, 온도는 일정하다.) C의 화학식량      ①  ②  ③  ④  ⑤      ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q02",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "02 다음은 일정한 온도에서 수소와 일산화 질소가 반응하여 질소와 수증기가 생성되는 반응의 화학 반응식과 반응 속도식이다. H (g)  NO(g)  N (g)  HO(g)    H NO  이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? (단, 는 반응 속도 상수이다.) 보기 ㄱ. NO에 대해 차 반응이다. ㄴ. 전체 반응 차수는 차이다. ㄷ. 반응 속도식의 반응 차수는 반응물의 계수와 관계없다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q03",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "03 표는 A() ──→ B()  C()의 반응에서 용기 속에 들어 있는 물질 A∼C의 처음 농도와 초 후의 농도를 측정한 결과를 나타낸 것이다. A의 몰농도 B의 몰농도 C의 몰농도 실험 처음 초 후 처음 초 후 처음 초 후 Ⅰ       Ⅱ ㉠      이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. ㉠이다.  ㄴ.  이다.  ㄷ. 일정 시간에 감소하는 A의 양(mol)은 증가하는 C의 양(mol)과 같다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄴ ⑤ ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q04",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "04 그림은 온도 과 에서 기체 분자의 운동 에너지 분   포 곡선을 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? (단, 는 활성화 에너지이고, 전체 분자 수 a 는 같다.) 보기 ㄱ. 온도는 이 보다 높다.   ㄴ. 는 과 에서 같다. a   ㄷ. 반응 속도는 에서가 에서보다 빠르다.   ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q05",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 5,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "05 다음은 반응 속도에 영향을 주는 요인과 반응 속도를 조 절하는 사례에 대한 자료이다. • 요인: 농도, 온도, 촉매 • 사례: (가) 밀폐 용기에 음식 보관하기, (나) 배기가스 정화 장치, (다) 저온 숙성 빵, (라) 효모 발효 식품 반응 속도에 영향을 주는 요인과 관련 있는 사례를 바르 게 연결한 것은? 농도 온도 촉매 ① (가) (나), (다) (라) ② (가) (다) (나), (라) ③ (가), (나) (다) (라) ④ (나), (다) (가) (라) ⑤ (라) (나), (다) (가)",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q06",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 6,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": null,
+   "topic_label": null,
+   "text": "06 그림은 반응 A(g)  B(g)에서 반응의 진행에 따른 엔 탈피를 나타낸 것이다. 이에 대한 설명으로 옳은 것은? (단, 온도는 일정하며, 정촉매를 사용할 수 있다.) ① 활성화 에너지는 정반응이 역반응보다 작다. ② 역반응의 반응 엔탈피는 양()의 값을 가진다. ③ 정촉매를 사용하면 정반응과 역반응의 반응 엔탈피 차 가 커진다. ④ 정반응의 활성화 에너지는 반응물에서 최고점까지의 에 너지 차이이다. ⑤ 정촉매를 사용하면 생성물의 에너지가 낮아진다.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q07",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 7,
+   "kind": "written",
+   "answer": null,
+   "curriculum": null,
+   "topic_label": null,
+   "text": "07 아세트알데하이드는 메테인과 일산화 탄소로 분해된다. CH CHO() ──→ CH (g)  CO(g)   표는 아세트알데하이드의 초기 농도에 따른 아세트알데 하이드의 초기 분해 속도에 대한 자료이다. [CH CHO](molL)      분해 속도(molL·s)     이 반응의 반응 속도식을 구하시오. (단, 반응 속도 상수 는 로 한다.) ( ) 서술형",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  },
+  {
+   "item_id": "mate-total-4-r2-q08",
+   "paper": "Ⅳ 반응 속도 기말고사 대비 총괄평가 2회",
+   "no": 8,
+   "kind": "written",
+   "answer": null,
+   "curriculum": null,
+   "topic_label": null,
+   "text": "08 다음은 A(g)가 반응하여 B(g)를 생성하는 반응의 화학반 응식이다. A(g) ──→ B(g) 그림 (가)는 온도 과 에서 A의 초기 농도에 따른   초기 반응 속도를, (나)는 온도 과 에서 강철 용기   에 A(g)를 넣어 반응시킬 때, 반응 시간에 따른 A의 농 도를 각각 나타낸 것이다. ⑴ (가)에서, 온도 과 일 때 반응 속도 상수의 크기   를 비교하고 그 이유를 설명하시오. ⑵ (나)에서, 온도 과 일 때 A의 초기 농도를 각각   M, M로 하여 실험하였다. 반응 시간이 min 일 때, 온도 과 에서의 A의 농도비를 구하시오.   ⑶ 온도 과 에서 A의 초기 농도가 M이다. 반응   시간 ∼min 동안 온도 과 에서의 평균 반응   속도를 각각 구하시오.",
+   "candidates": [
+    "mate-activated-complex",
+    "mate-activated-state",
+    "mate-activation-energy",
+    "mate-average-reaction-rate",
+    "mate-catalyst",
+    "mate-collision-frequency",
+    "mate-effect-of-concentration-on-reaction-rate",
+    "mate-effect-of-pressure-on-reaction-rate",
+    "mate-effect-of-surface-area-on-reaction-rate",
+    "mate-effect-of-temperature-on-reaction-rate",
+    "mate-effective-collision",
+    "mate-enzyme",
+    "mate-first-order-reaction",
+    "mate-half-life",
+    "mate-initial-reaction-rate",
+    "mate-instantaneous-reaction-rate",
+    "mate-molecular-kinetic-energy-distribution",
+    "mate-negative-catalyst",
+    "mate-overall-reaction-order",
+    "mate-positive-catalyst",
+    "mate-rate-constant",
+    "mate-rate-law",
+    "mate-reaction-order",
+    "mate-reaction-rate"
+   ]
+  }
+ ]
+}

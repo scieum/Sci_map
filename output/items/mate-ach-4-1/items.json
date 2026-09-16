@@ -55,8 +55,18 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-average-reaction-rate",
+        "mate-reaction-rate"
+      ],
+      "mapping": "llm",
+      "text_internal": "01 다음은 Mg()과 HCl()의 화학 반응식이다. Mg()  HCl() ──→ MgCl ()  H (g)   표는 Mg()을 충분한 양의 HCl()과 반응시킬 때, 반 응 시간까지 생성된 H (g)의 부피를 나타낸 것이다.  반응 시간()       H (g)의 부피(mL)        이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? (단, 온도는 일정하다.) 보기 ㄱ. 이다.  ㄴ. ∼s 동안 반응의 평균 빠르기는  mLs이다.  ㄷ. 반응 속도는 시간이 지남에 따라 점점 빨라진다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "한 시간 구간 동안 생긴 기체의 양을 그 구간의 길이로 나누면 그 구간의 평균 반응 속도가 나온다. 표에서 두 끝점만 잡아 계산하면 되니 ㄴ의 값을 확인할 수 있다. 반응이 진행되어 반응물이 줄어들면 속도는 오히려 느려지므로, 점점 빨라진다고 본 쪽은 맞지 않는다. 답은 ②다.",
+      "cited_relations": [
+        "rel-avg-slope",
+        "rel-rate-slows"
+      ],
+      "mapping_reason": "표의 구간별 생성량으로 평균 반응 속도를 구하고 속도가 느려지는 경향을 판단하는 문항이다"
     },
     {
       "item_id": "mate-ach-4-1-q02",
@@ -96,8 +106,19 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-instantaneous-reaction-rate",
+        "mate-average-reaction-rate"
+      ],
+      "mapping": "llm",
+      "text_internal": "02 그림은 반응 A(g) ─→ B(g)에서 반응 시간에 따른 A(g)의 농도를 나 타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? (단, 온도는 일정하다.) 보기 ㄱ. ㉠의 기울기 절댓값(molL·s)은 초기 반응 속도이다. ㄴ. ㉡의 기울기 절댓값(molL·s)은  ∼ s 동안 평균   반응 속도이다. ㄷ. 순간 반응 속도는  일 때가  일 때보다 빠르다.   ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "시간-농도 그래프에서 접선의 기울기는 그 시각의 순간 반응 속도이고, 두 점을 이은 직선의 기울기는 그 구간의 평균 반응 속도다. 반응이 진행될수록 접선이 완만해지므로 이른 시각의 순간 속도가 더 크다. 세 보기가 모두 이 구분에 맞으니 답은 ⑤다.",
+      "cited_relations": [
+        "rel-inst-tangent",
+        "rel-inst-decrease",
+        "rel-avg-slope"
+      ],
+      "mapping_reason": "접선 기울기와 두 점을 이은 기울기를 순간·평균 반응 속도로 갈라 읽는 문항이다"
     },
     {
       "item_id": "mate-ach-4-1-q03",
@@ -136,8 +157,19 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-rate-law",
+        "mate-reaction-order"
+      ],
+      "mapping": "llm",
+      "text_internal": "03 표는 A(g)와 B(g)가 반응하여 C(g)를 생성하는 반응에서 반응물의 초기 농도에 따른 초기 반응 속도에 대한 자료 이다. 는 반응 속도 상수이고 온도는 일정하다. 초기 농도(M) 초기 반응 속도 실험 A(g) B(g) (Ms) Ⅰ   × Ⅱ   × Ⅲ   × Ⅳ   × ⑴ 이 반응의 반응 속도식을 쓰시오. ( ) ⑵ 를 구하시오. ( ) ⑶ 를 구하시오. ( )",
+      "explanation": "반응 속도식의 모양은 실험 자료에서 결정되지, 화학 반응식의 계수를 보고 미리 알 수 없다. 한 반응물의 초기 농도만 바꾼 두 실험을 짝지어 비교하면 그 반응물의 반응 차수가 정해지고, 차수가 정해지면 자료 한 줄을 대입해 반응 속도 상수를 구할 수 있다. 속도식에는 상수와 차수가 함께 들어 있다는 점을 잊지 말자.",
+      "cited_relations": [
+        "rel-ratelaw-experiment",
+        "rel-order-experiment",
+        "rel-ratelaw-parts"
+      ],
+      "mapping_reason": "초기 농도-초기 속도 자료로 속도식과 상수를 세우는 전형적인 차수 결정 문항이다"
     },
     {
       "item_id": "mate-ach-4-1-q04",
@@ -177,8 +209,18 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-average-reaction-rate",
+        "mate-initial-reaction-rate"
+      ],
+      "mapping": "llm",
+      "text_internal": "04 그림은 강철 용기에 A(g)를 넣고 반응 A(g) ──→ B(g) 가 일어날 때, 반응 시간에 따른 A(g)의 농도를 나타낸 것이 다. 이에 대한 설명 으로 옳은 것만을 〈보기〉에서 있는 대 로 고른 것은? (단, 온도는 일정하다.) 보기  ㄱ. ∼min 동안 A(g)의 평균 반응 속도는  Mmin이다.   ㄴ. 초기 반응 속도는  Mmin보다 크다.  ㄷ. 반응 시간이 min일 때, BM이다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "구간의 두 끝점을 이은 직선의 기울기가 그 구간의 평균 반응 속도다. 반응물을 처음에 모두 넣고 시작한 반응에서는 초기 반응 속도가 가장 큰 순간 속도이므로, 어느 구간의 평균값보다도 크다. 그래서 답은 ②다.",
+      "cited_relations": [
+        "rel-avg-slope",
+        "rel-init-largest"
+      ],
+      "mapping_reason": "구간 평균 속도와 초기 반응 속도의 크기 관계를 그래프로 판단하는 문항이다"
     },
     {
       "item_id": "mate-ach-4-1-q05",
@@ -218,8 +260,19 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-first-order-reaction",
+        "mate-half-life"
+      ],
+      "mapping": "llm",
+      "text_internal": "05 그림은 반응 A(g) ──→ B(g)에서 A(g)의 초기 농도 에 따른 초기 반응 속도를 나타낸 것이다. 이에 대한 설명으로 옳은 것 만을 〈보기〉에서 있는 대로 고른 것은? (단, 온도는 일정 하고, 는 반응 속도 상수이다.) 보기 ㄱ. 반응 속도식은 A이다. ㄴ. 생성된 B(g)의 양은 ∼s 동안이 ∼s 동 안보다 크다. ㄷ. A(g)가 M에서 M이 될 때까지 걸린 시간은 A(g) 가 M에서 M이 될 때까지 걸린 시간보다 짧다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "초기 농도를 가로축, 초기 반응 속도를 세로축에 둔 자료가 원점을 지나는 직선이면 1차 반응이다. 1차 반응에서는 농도가 절반으로 줄어드는 데 걸리는 시간이 처음 농도와 상관없이 일정하므로, 같은 절반 배수만큼 줄어드는 두 구간에 걸린 시간은 서로 같다. 답은 ③이다.",
+      "cited_relations": [
+        "rel-first-graph",
+        "rel-first-halflife",
+        "rel-halflife-constant"
+      ],
+      "mapping_reason": "원점을 지나는 직선으로 1차 반응을 읽고 반감기 일정성을 적용하는 문항이다"
     },
     {
       "item_id": "mate-ach-4-1-q06",
@@ -259,8 +312,18 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-first-order-reaction",
+        "mate-rate-law"
+      ],
+      "mapping": "llm",
+      "text_internal": "06 그림은 강철 용기에 A(g)를 넣고 반응 A(g) ──→ B(g)C(g)이 일어날 때 반응 시간()에 따른 강철 용 기 속 기체의 반응물과, 가지 생성물을 분자 모형으로 나타낸 것이다. 모형 개는 mol을 나타낸다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 이 반응은 차 반응이다. ㄴ. 는 C이다. ㄷ. (가)에서 C(g)는 mol이다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "분자 모형으로 준 시간별 입자 수에서 반응물이 줄어드는 몫을 읽어 내면, 농도를 2배로 할 때 속도도 2배가 되는 1차 반응인지 확인할 수 있다. 속도식은 계수가 아니라 이렇게 얻은 자료에서 세워야 한다. 답은 ①이다.",
+      "cited_relations": [
+        "rel-first-proportional",
+        "rel-ratelaw-experiment"
+      ],
+      "mapping_reason": "입자 모형 자료에서 반응물 농도와 속도의 비례 관계로 1차 반응과 속도식을 판정하는 문항이다"
     },
     {
       "item_id": "mate-ach-4-1-q07",
@@ -271,12 +334,12 @@
         308.1,
         70.9,
         597,
-        371.8
+        336.9
       ],
       "with_stimulus": false,
       "width": 578,
-      "height": 625,
-      "sha256_16": "77cc566db286462d",
+      "height": 555,
+      "sha256_16": "d9e60f1d254d38cd",
       "answer": "③",
       "kind": "choice",
       "curriculum": null,
@@ -300,8 +363,18 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-half-life",
+        "mate-average-reaction-rate"
+      ],
+      "mapping": "llm",
+      "text_internal": "07 차 반응 A(g) ──→ B(g)에 대한 설명 중 옳은 것만 을 <보기>에서 있는 대로 고른 것은? (단, 온도는 일정 하다.) 보기 ㄱ. A(g)의 초기 농도가 증가하면 반감기는 감소한다. ㄴ. A(g)의 초기 농도가 증가하면 농도로 정의되는 평형 상수()는 증가한다. ㄷ. ∼s 동안 A(g)의 반응 속도는 B(g)의 생성 속  도의 이다.  ① ㄱ ② ㄴ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "1차 반응의 반감기는 처음 농도를 얼마로 잡든 같은 값이므로, 초기 농도가 커졌다고 반감기가 줄지 않는다. 같은 시간 구간에서 각 물질의 농도 변화로 구한 속도의 비는 화학 반응식의 계수비와 같으니, 반응물과 생성물의 속도 관계는 계수를 보고 따지면 된다. 답은 ③이다.",
+      "cited_relations": [
+        "rel-halflife-constant",
+        "rel-avg-coefficient"
+      ],
+      "mapping_reason": "1차 반응 반감기의 초기 농도 무관성과 계수비에 따른 속도 관계를 묻는다"
     },
     {
       "item_id": "mate-ach-4-1-q08",
@@ -341,8 +414,16 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-activation-energy"
+      ],
+      "mapping": "llm",
+      "text_internal": "08 다음은 A(g)로부터 B(g)가 생성되는 반응의 열화학 반응 식이다. A(g)  B(g) ⊿kJ 정반응의 활성화 에너지가 kJmol일 때, 역반응의 활성화 에너지(kJmol) 값으로 옳은 것은? ①  ②  ③  ④  ⑤ ",
+      "explanation": "정반응과 역반응의 활성화 에너지 차이가 곧 반응 엔탈피다. 그러니 정반응의 활성화 에너지에서 반응 엔탈피만큼 덜거나 더해 주면 역반응의 활성화 에너지가 나온다. 답은 ⑤다.",
+      "cited_relations": [
+        "rel-ea-vs-enthalpy"
+      ],
+      "mapping_reason": "정반응 활성화 에너지와 반응 엔탈피로 역반응 활성화 에너지를 구하는 계산이다"
     },
     {
       "item_id": "mate-ach-4-1-q09",
@@ -382,8 +463,19 @@
         "mate-reaction-order",
         "mate-reaction-rate"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-effective-collision",
+        "mate-activation-energy"
+      ],
+      "mapping": "llm",
+      "text_internal": "09 다음 설명 중 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 반응물이 충분히 빠른 속도로 충돌하면 항상 화학 반 응이 일어난다. ㄴ. 정반응의 활성화 에너지가 커지면 반응 엔탈피(⊿) 는 작아진다. ㄷ. 반응물의 결합 상태가 변하여 반응이 일어나는 충돌 을 유효 충돌이라고 한다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "입자가 부딪쳤다고 해서 그때마다 반응이 일어나지는 않는다. 충돌 방향이 적합하고 충분히 빠르게 부딪쳐 반응물의 결합 상태가 실제로 바뀐 충돌만 유효 충돌이다. 또 반응 엔탈피는 정반응과 역반응의 활성화 에너지 차이로 정해지므로, 정반응 쪽 활성화 에너지만 커졌다고 엔탈피가 작아진다고 말할 수 없다. 답은 ③이다.",
+      "cited_relations": [
+        "rel-eff-not-all",
+        "rel-eff-conditions",
+        "rel-ea-vs-enthalpy"
+      ],
+      "mapping_reason": "유효 충돌의 정의와 활성화 에너지-반응 엔탈피의 관계를 함께 묻는 문항이다"
     }
   ],
   "problems": [],

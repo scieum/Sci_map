@@ -64,8 +64,20 @@
         "mate-water-molecule-structure",
         "mate-water-polarity"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-vapor-pressure-lowering",
+        "mate-nonvolatile-solute"
+      ],
+      "mapping": "llm",
+      "text_internal": "01 다음은 용액의 증기 압력에 대한 설명이다. 옳은 것에는 ○표, 옳지 않은 것에는 ✕표를 하시오. ⑴ 용액의 증기 압력은 순수한 용매보다 높다. ( ) ⑵ 증기 압력 내림은 온도에 따라 달라지지 않는다. ( ) ⑶ 증기 압력 내림은 용질의 성질에 따라 달라진다. ( ) ⑷ 용액의 농도가 진할수록 증기 압력 내림이 커진다. ( )",
+      "explanation": "비휘발성 용질이 녹으면 표면에서 증발할 수 있는 용매 입자의 비율이 줄어 용액의 증기 압력은 순수한 용매보다 낮아진다. 증기 압력 내림의 크기는 용질의 종류가 아니라 용질 입자가 차지하는 몫으로 정해지므로 농도가 진할수록 커지고, 기준이 되는 용매의 증기 압력 자체가 온도를 타는 값이라 그 내림도 온도에 따라 달라진다.",
+      "cited_relations": [
+        "rel-vpl-surface-particles",
+        "rel-vpl-mole-fraction",
+        "rel-vpl-kind-independent",
+        "rel-nvs-lowers-vp"
+      ],
+      "mapping_reason": "증기 압력 내림의 방향과 무엇에 따라 달라지는지를 네 진술로 나누어 묻는다"
     },
     {
       "item_id": "mate-min-2-02-q02",
@@ -114,8 +126,18 @@
         "mate-water-molecule-structure",
         "mate-water-polarity"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-vapor-pressure-lowering",
+        "mate-boiling-point-elevation"
+      ],
+      "mapping": "llm",
+      "text_internal": "02 그래프는 ℃에서 설탕물의 농도에 따른 증기 압력을 나타낸 것이다. 용액 (가)와 (나)에 대한 설명으로 옳은 것을 <보기>에서 있는 대로 고르시오. 보기 ㄱ. 농도는 (가)(나)이다. ㄴ. 증기 압력은 (가)(나)이다. ㄷ. 농도가 진할수록 끓는점이 높아진다.",
+      "explanation": "같은 온도에서 용질의 몰분율이 큰 용액일수록 증기 압력 내림이 크므로, 그래프에서 증기 압력이 낮은 쪽이 더 진한 용액이다. 증기 압력이 낮아진 용액은 외부 압력에 이를 때까지 더 데워야 끓으니 농도가 진할수록 끓는점도 높아진다.",
+      "cited_relations": [
+        "rel-vpl-mole-fraction",
+        "rel-bpe-why"
+      ],
+      "mapping_reason": "농도-증기 압력 그래프를 읽고 끓는점까지 잇는다"
     },
     {
       "item_id": "mate-min-2-02-q03",
@@ -165,8 +187,16 @@
         "mate-water-molecule-structure",
         "mate-water-polarity"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-raoult-law"
+      ],
+      "mapping": "llm",
+      "text_internal": "03 ℃에서 포도당의 몰분율이 인 포도당 수용액이 있다. 포도당 수용액의 증기 압력은? (단, ℃에서 물 의 증기 압력은 atm이다.) ① atm ② atm ✔③ atm ④ atm ⑤ atm",
+      "explanation": "용액의 증기 압력은 순수한 물의 증기 압력에 물의 몰분율을 곱한 값이다. 포도당의 몰분율이 주어졌으니 1에서 그것을 뺀 값이 물의 몰분율이고, 여기에 물의 증기 압력을 곱하면 된다. 답은 ③이다.",
+      "cited_relations": [
+        "rel-raoult-equation"
+      ],
+      "mapping_reason": "라울 법칙 식에 몰분율을 바로 대입하는 계산이다"
     },
     {
       "item_id": "mate-min-2-02-q04",
@@ -215,8 +245,18 @@
         "mate-water-molecule-structure",
         "mate-water-polarity"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-boiling-point-elevation",
+        "mate-freezing-point-depression"
+      ],
+      "mapping": "llm",
+      "text_internal": "04 이 실험에 대한 설명으로 옳은 것을 <보기>에서 있는 대로 고르시오. 보기 ㄱ. 용액의 농도는 (가)(나)이다. ㄴ. 끓는점이 가장 높은 용액은 용액 (나)이다. ㄷ. 어는점 내림이 가장 큰 용액은 용액 (가)이다. 서술형",
+      "explanation": "끓는점이 오르는 폭도 어는점이 내려가는 폭도 모두 용액의 몰랄 농도에 비례한다. 그러므로 농도가 가장 진한 용액이 끓는점이 가장 높고 어는점 내림도 가장 크다. 두 값의 대소가 같은 쪽을 가리키는지 확인하면 된다.",
+      "cited_relations": [
+        "rel-bpe-molality",
+        "rel-fpd-molality"
+      ],
+      "mapping_reason": "농도가 다른 용액의 끓는점·어는점 내림을 몰랄 농도로 줄 세운다"
     },
     {
       "item_id": "mate-min-2-02-q05",
@@ -265,8 +305,18 @@
         "mate-water-molecule-structure",
         "mate-water-polarity"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-boiling-point-elevation",
+        "mate-freezing-point-depression"
+      ],
+      "mapping": "llm",
+      "text_internal": "05 이 실험에서 얻을 수 있는 결론을 서술하시오.",
+      "explanation": "앞 문항과 같은 실험이므로 농도가 다른 용액을 견주어 얻을 결론은 하나다. 용액의 끓는점이 오르는 폭과 어는점이 내려가는 폭이 모두 몰랄 농도에 비례한다는 점을 썼는지 보면 된다.",
+      "cited_relations": [
+        "rel-bpe-molality",
+        "rel-fpd-molality"
+      ],
+      "mapping_reason": "같은 실험 세트의 결론 서술이라 끓는점 오름·어는점 내림의 농도 비례가 답이다"
     },
     {
       "item_id": "mate-min-2-02-q06",
@@ -315,8 +365,18 @@
         "mate-water-molecule-structure",
         "mate-water-polarity"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-boiling-point-elevation",
+        "mate-freezing-point-depression"
+      ],
+      "mapping": "llm",
+      "text_internal": "06 다음은 자동차 냉각수에 에틸렌글리콜을 섞는 까닭을 정 리한 것이다. 빈칸에 알맞은 내용을 쓰시오. 여름에는 냉각수의 끓는점을 ( ㉠ ) 냉각수가 끓는 것을 방지하고, 겨울에는 냉각수의 어는점을 ( ㉡ ) 냉 각수가 어는 것을 방지하기 위해서이다. ㉠: ( ) ㉡: ( )",
+      "explanation": "냉각수에 다른 물질을 녹이면 증기 압력이 낮아져 더 높은 온도까지 데워야 끓고, 용질 입자가 용매의 규칙적인 배열을 가로막아 더 낮은 온도까지 내려가야 언다. 빈칸을 '높여'와 '낮추어'의 방향으로 채웠는지 보면 된다.",
+      "cited_relations": [
+        "rel-bpe-why",
+        "rel-fpd-why"
+      ],
+      "mapping_reason": "부동액의 쓰임을 끓는점 오름과 어는점 내림으로 나누어 채운다"
     }
   ],
   "problems": [],

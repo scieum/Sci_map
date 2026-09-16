@@ -30,6 +30,14 @@ ITEM_FIELDS = ("no", "kind", "answer", "difficulty", "domain", "curriculum",
                "topicLabel", "file", "width", "height", "conceptIds", "conceptCandidates")
 
 
+def approved(kind: str, code: str) -> bool:
+    """검토 문서 하나의 승인 여부. `kind` 는 exam(크롭·정답) 또는 curation(매핑·해설)."""
+    path = REVIEW / f"{code}-{kind}.review.md"
+    if not path.exists():
+        return False
+    return bool(re.search(r"^approved:\s*true\s*$", path.read_text(encoding="utf-8"), re.M))
+
+
 def approved_subjects() -> dict[str, bool]:
     """Q6 게이트 — 교사가 승인한 과목만 앱으로 나간다 (CLAUDE.md §5).
 
@@ -55,6 +63,9 @@ def main() -> int:
         if not gate.get(code):
             held[code] = held.get(code, 0) + len(doc["items"])
             continue
+        # ★ 매핑·해설은 **따로 승인받는다** (Q6 재검토). 크롭·정답 승인만으로
+        #   LLM 이 쓴 해설이 학생에게 나가지 않는다 — 게이트가 다르면 문서도 다르다
+        curated = approved("curation", code)
         items = []
         for it in doc["items"]:
             row = {
@@ -69,9 +80,10 @@ def main() -> int:
                 "file": it["file"],
                 "width": it["width"],
                 "height": it["height"],
-                "conceptIds": it.get("concept_ids", []),
+                # 승인 전에는 LLM 이 고른 카드도 쓰지 않는다 — 후보만 보여 준다
+                "conceptIds": it.get("concept_ids", []) if curated else [],
                 "conceptCandidates": it.get("concept_candidates", []),
-                "explanation": it.get("explanation"),
+                "explanation": it.get("explanation") if curated else None,
             }
             items.append({k: v for k, v in row.items() if v not in (None, [], "")} | {
                 "id": row["id"], "no": row["no"], "kind": row["kind"], "file": row["file"]})
@@ -95,6 +107,12 @@ def main() -> int:
     total = sum(p["count"] for p in papers)
     choice = sum(1 for p in papers for i in p["items"] if i["kind"] == "choice")
     print(f"회차 {len(papers)}개 · 문항 {total}개 (객관식 {choice}) → {OUT.relative_to(REPO)}")
+    curated_codes = sorted({p["subjectCode"] for p in papers if approved("curation", p["subjectCode"])})
+    waiting = sorted({p["subjectCode"] for p in papers} - set(curated_codes))
+    if curated_codes:
+        print(f"  매핑·해설 반영: {', '.join(curated_codes)}")
+    for code in waiting:
+        print(f"  ⏸ {code}: 매핑·해설 승인 대기 (output/review/{code}-curation.review.md)")
     for code, n in sorted(held.items()):
         state = "승인 대기" if code in gate else "검토 파일 없음"
         print(f"  ⏸ {code}: {n}문항 보류 ({state} — output/review/{code}-exam.review.md)")

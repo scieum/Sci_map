@@ -68,8 +68,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-endothermic-reaction",
+        "mate-reaction-enthalpy"
+      ],
+      "mapping": "llm",
+      "text_internal": "01 그림은 N (g)와 O (g)가 반응하여 NO (g)가 생성될 때의    엔탈피 변화를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 반응 엔탈피는 양의 값을 가진다. ㄴ. 엔탈피 합은 생성물이 반응물보다 크다. ㄷ. NO mol의 생성 엔탈피 값은 반응 엔탈피와 같다.  ① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "그림에서 생성물 쪽 엔탈피 합이 더 높으면 흡열 반응이고 반응 엔탈피는 양의 값이다. 다만 반응 엔탈피는 그 반응식의 계수에 맞춘 값이라, 계수가 1이 아니면 1 mol 당 생성 엔탈피와 크기가 같지 않다. 계수를 그냥 지나치면 ㄷ에 걸려들어 답이 ③이 아닌 쪽으로 새기 쉽다.",
+      "cited_relations": [
+        "rel-endo-classify",
+        "rel-rxnh-sign",
+        "rel-rxnh-coefficient"
+      ],
+      "mapping_reason": "엔탈피 그림의 부호 판별에 반응식 계수 문제가 겹쳐 있다"
     },
     {
       "item_id": "mate-total-3-r2-q02",
@@ -122,8 +133,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-bond-energy",
+        "mate-exothermic-reaction"
+      ],
+      "mapping": "llm",
+      "text_internal": "02 그림은 수소(H )와 염소(Cl )로부터 염화 수소(HCl)가   생성될 때의 엔탈피 변화를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 결합 에너지는 HCl이 HH보다 크다. ㄴ. HCl의 결합 에너지는 kJmol이다. ㄷ. H (g)Cl (g) ─→ HCl(g) 반응이 진행될수록 반   응 용기의 온도는 올라간다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "그림의 위쪽 준위는 결합이 모두 끊어진 원자 상태여서, 거기까지 올라가는 폭이 반응물의 결합 에너지 합이고 내려오는 폭이 생성물의 결합 에너지 합이다. 내려오는 쪽이 더 크면 발열 반응이고, 방출된 열 때문에 반응 용기의 온도는 올라간다. 다만 결합 에너지는 결합 1 mol 을 기준으로 한 값이라 분자 수를 고려해 나눠야 해서 답은 ②다.",
+      "cited_relations": [
+        "rel-be-reaction-enthalpy",
+        "rel-be-positive",
+        "rel-exo-surroundings-temp"
+      ],
+      "mapping_reason": "결합 에너지 준위 그림에서 1 mol 당 값 환산과 온도 변화를 묻는다"
     },
     {
       "item_id": "mate-total-3-r2-q03",
@@ -175,8 +197,18 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-hess-law",
+        "mate-reaction-enthalpy"
+      ],
+      "mapping": "llm",
+      "text_internal": "03 그림은 ℃, atm에서 질소(N )와 산소(O )가 반응하   여 이산화 질소(NO )를 생성하는 과정의 엔탈피 변화를  나타낸 것이다. ⑴ 일산화 질소의 생성 반응에서 반응 엔탈피를  또는  로 나타내시오. ( ) ⑵ 다음 반응에서 반응 엔탈피를 , 로 나타내시오. N (g)O (g) ──→ NO (g)    ( )",
+      "explanation": "그림처럼 중간 단계를 거치는 경로와 한 번에 가는 경로의 엔탈피 변화의 합은 같다. 그러니 두 단계의 값을 더해 전체 반응의 반응 엔탈피를 나타내면 된다. 반응식의 계수를 두 배로 늘려 쓰면 반응 엔탈피도 두 배가 되므로, 답안의 식에 계수 몫이 반영되었는지 보면 된다.",
+      "cited_relations": [
+        "rel-hess-path",
+        "rel-rxnh-coefficient"
+      ],
+      "mapping_reason": "단계별 엔탈피 변화를 합치되 계수 배수를 함께 반영하게 한다"
     },
     {
       "item_id": "mate-total-3-r2-q04",
@@ -229,8 +261,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-exothermic-reaction",
+        "mate-total-entropy-change"
+      ],
+      "mapping": "llm",
+      "text_internal": "04 다음은 금속 나트륨과 물의 반응을 열화학 반응식으로 나타낸 것이다. Na()HO() ──→ NaOH()H (g)   ⊿kJ 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 반응물보다 생성물이 더 안정하다. ㄴ. 수소 기체 g이 발생할 때 kJ의 열이 발생한다. ㄷ. 전체 엔트로피가 증가하므로 반응은 자발적으로 진행 된다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "반응 엔탈피가 음이면 생성물 쪽 엔탈피 합이 더 낮다는 뜻이니 생성물이 더 안정하다. 또 반응은 전체 엔트로피가 커지는 쪽으로 저절로 진행하므로, 전체 엔트로피가 증가한다는 것과 자발적이라는 것은 같은 말이다. 다만 방출되는 열의 양은 반응식의 계수에 맞춰 환산해야 해서 답은 ④다.",
+      "cited_relations": [
+        "rel-exo-classify",
+        "rel-total-criterion",
+        "rel-total-offset"
+      ],
+      "mapping_reason": "소듐과 물의 반응식에서 안정성·열량·자발성을 함께 묻는다"
     },
     {
       "item_id": "mate-total-3-r2-q05",
@@ -283,8 +326,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-hess-law",
+        "mate-bond-energy"
+      ],
+      "mapping": "llm",
+      "text_internal": "05 다음은 몇 가지 반응의 열화학 반응식이다. • C(, 흑연) ──→ C(g) ⊿kJ  •   O  (g) ──→ O(g) ⊿kJ  • CO(g) ──→ C(, 흑연)   O  (g) ⊿kJ 이 자료를 이용하여 구한 CO(g)의 결합 에너지는 얼마 인가? ① kJmol ② kJmol ③ kJmol ④ kJmol ⑤ kJmol",
+      "explanation": "결합 에너지는 기체 상태의 분자를 원자로 모두 흩어 놓는 데 드는 에너지이므로 값이 양수다. 그 반응은 직접 재기 어렵지만, 주어진 세 식을 뒤집고 더해 원자 상태가 생성물로 남도록 맞추면 값을 구할 수 있다. 뒤집은 식의 부호를 바꿨는지가 계산의 갈림길이고 답은 ③이다.",
+      "cited_relations": [
+        "rel-hess-manipulate",
+        "rel-hess-unmeasurable",
+        "rel-be-positive"
+      ],
+      "mapping_reason": "헤스 법칙으로 CO 의 결합 에너지를 간접 계산하게 한다"
     },
     {
       "item_id": "mate-total-3-r2-q06",
@@ -337,8 +391,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-bond-energy",
+        "mate-exothermic-reaction"
+      ],
+      "mapping": "llm",
+      "text_internal": "06 다음은 수증기 생성 반응의 열화학 반응식과 몇 가지 결 합의 결합 에너지를 나타낸 것이다.  H  (g)  O  (g) ──→ H  O(g) ⊿kJ 결합 HH OO OH 결합 에너지(kJmol)    이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 는 이다. ㄴ. OO 결합이 HH 결합보다 강하다. ㄷ. 반응이 진행될수록 주위의 온도는 올라간다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "반응 엔탈피는 끊어지는 결합의 에너지 합에서 새로 만들어지는 결합의 에너지 합을 뺀 값이니, 표의 값을 계수만큼 곱해 대입하면 된다. 결합 에너지가 클수록 강한 결합이므로 표의 두 값을 견주면 강약도 바로 나온다. 계산 결과가 음이면 발열 반응이고 주위의 온도는 올라가 세 보기가 모두 맞는 ⑤가 답이다.",
+      "cited_relations": [
+        "rel-be-reaction-enthalpy",
+        "rel-be-positive",
+        "rel-exo-surroundings-temp"
+      ],
+      "mapping_reason": "결합 에너지 표로 반응 엔탈피·결합 강도·주위 온도를 한꺼번에 묻는다"
     },
     {
       "item_id": "mate-total-3-r2-q07",
@@ -391,8 +456,18 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy-change",
+        "mate-endothermic-reaction"
+      ],
+      "mapping": "llm",
+      "text_internal": "07 염화 나트륨이 물에 용해되는 반응에 대한 설명으로 옳 은 것을 고르시오. ① 계의 엔탈피와 계의 엔트로피가 감소한다. ② 계의 엔트로피와 주위의 엔트로피가 모두 증가한다. ③ 용해 과정에서 계의 엔탈피는 변화하지 않는다. ④ 염화 나트륨의 용해 과정은 발열 반응이며 주위의 엔 트로피가 증가한다. ⑤ 염화 나트륨이 물에 용해되면 계의 엔탈피와 계의 엔 트로피가 모두 증가한다.",
+      "explanation": "고체가 녹아 이온이 용액 전체로 흩어지면 계의 엔트로피는 커진다. 이 용해가 주위에서 열을 빨아들이는 쪽이라면 생성물 쪽 엔탈피 합이 더 높아진 것이므로 계의 엔탈피도 커진다. 두 값이 함께 커진다고 읽은 ⑤가 답이다.",
+      "cited_relations": [
+        "rel-ds-mixing",
+        "rel-endo-classify"
+      ],
+      "mapping_reason": "용해 과정에서 계의 엔탈피와 엔트로피가 모두 커지는지를 묻는다"
     },
     {
       "item_id": "mate-total-3-r2-q08",
@@ -445,8 +520,18 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy-change",
+        "mate-entropy-change-of-surroundings"
+      ],
+      "mapping": "llm",
+      "text_internal": "08 다음은 기체 A와 기체 B가 반응하여 기체 C가 생성되 는 반응을 열화학 반응식으로 나타낸 것이다. A(g)B(g) ──→ C(g) ⊿ 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 계의 엔트로피는 증가한다. ㄴ. 흡열 반응이므로 주위의 엔트로피는 감소한다. ㄷ. 이 반응은 자발적으로 진행된다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄴ ⑤ ㄱ, ㄷ",
+      "explanation": "반응물과 생성물이 모두 기체인데 반응 뒤 분자 수가 줄면 계의 엔트로피는 감소한다. 흡열 반응이면 주위가 에너지를 빼앗겨 온도가 내려가므로 주위의 엔트로피도 감소한다. 두 값이 모두 줄면 전체 엔트로피가 커질 길이 없어 자발적이지 않다는 결론까지 가면 답은 ②다.",
+      "cited_relations": [
+        "rel-ds-gas-particle-count",
+        "rel-sec-endothermic"
+      ],
+      "mapping_reason": "기체 분자 수 감소와 흡열이 겹친 반응에서 두 엔트로피 부호를 묻는다"
     },
     {
       "item_id": "mate-total-3-r2-q09",
@@ -499,8 +584,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-total-entropy-change",
+        "mate-reaction-spontaneity"
+      ],
+      "mapping": "llm",
+      "text_internal": "09 엔트로피의 변화와 반응의 자발성에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? 보기 ㄱ. 고립계에서는 계의 엔트로피가 감소해도 반응이 자발 적으로 진행될 수 있다. ㄴ. 열린계에서는 계의 엔트로피의 변화만으로는 반응의 자발성을 예측할 수 없다. ㄷ. 전체 엔트로피가 증가하면 반응은 자발적으로 진행된다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄴ ⑤ ㄴ, ㄷ 서술형",
+      "explanation": "자발성의 기준은 계가 아니라 계와 주위를 합친 전체 엔트로피가 커지는지에 있다. 계의 엔트로피가 줄어도 주위의 엔트로피가 그보다 크게 늘면 전체는 증가하므로, 계 쪽 부호만으로는 자발성을 정할 수 없다. 전체 엔트로피가 증가하면 자발적이라는 기준을 붙들면 답은 ⑤다.",
+      "cited_relations": [
+        "rel-total-criterion",
+        "rel-total-offset",
+        "rel-spon-mixed-sign"
+      ],
+      "mapping_reason": "계의 엔트로피만으로 자발성을 판단할 수 없다는 점이 갈림길이다"
     },
     {
       "item_id": "mate-total-3-r2-q10",
@@ -552,8 +648,17 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-isolated-system"
+      ],
+      "mapping": "llm",
+      "text_internal": "10 다음은 계 (가)에 대한 자료이다. (가)에서는 계와 주위 사이에 물질과 에너지의 교환이 모 두 일어나지 않는다. (가)를 쓰고, (가)에 해당하는 사례를 가지만 들어 설명 하시오.",
+      "explanation": "물질도 에너지도 주위와 주고받지 않는 계는 고립계다. 답안에는 계의 이름과 함께, 단열재로 감싸 밀폐한 통처럼 물질도 열도 통과시키지 않는 사례를 들었는지 보면 된다. 뚜껑만 덮은 그릇을 예로 들었다면 열이 오가므로 닫힌계여서 어긋난 답이다.",
+      "cited_relations": [
+        "rel-iso-insulated",
+        "rel-iso-vs-closed"
+      ],
+      "mapping_reason": "물질·에너지 교환이 모두 없는 계를 고립계로 짚고 예를 들게 한다"
     }
   ],
   "problems": [],

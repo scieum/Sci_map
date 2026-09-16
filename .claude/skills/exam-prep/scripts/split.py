@@ -187,14 +187,20 @@ def blocks_from(page, starts: list[float], item_toks: list[dict]) -> tuple[list[
     한 번호부터 같은 단의 다음 표지(다음 번호 또는 다음 공통 지문) 직전까지가
     한 문항이다. 단의 마지막 문항은 그 단에서 글·그림·선이 끝나는 곳까지다.
     """
-    stim_toks = [w for w in page.extract_words() if re.match(r"^\[\d\d", w["text"])]
+    words = page.extract_words()
+    stim_toks = [w for w in words if re.match(r"^\[\d\d", w["text"])]
+    # 「성취기준」 상자는 **뒤에 오는 문항**의 머리글이다. 경계로 쓰지 않으면 앞
+    # 문항의 크롭이 그 상자까지 물고 내려간다 — 실제로 물질과 에너지 회차에서
+    # 9번 크롭 끝에 10번의 성취기준이 붙어 나왔다. 상자 자체는 오려내지 않는다
+    meta_toks = [w for w in words if w["text"].startswith("성취기준")]
     items: list[dict] = []
     stims: list[dict] = []
     for i, cstart in enumerate(starts):
         left, right = band_of(starts, i, page.width)
         marks = sorted(
             [("item", w) for w in item_toks if abs(w["x0"] - cstart) <= COL_TOL]
-            + [("stim", w) for w in stim_toks if left <= w["x0"] <= right],
+            + [("stim", w) for w in stim_toks if left <= w["x0"] <= right]
+            + [("meta", w) for w in meta_toks if left <= w["x0"] <= right],
             key=lambda t: t[1]["top"],
         )
         for j, (kind, w) in enumerate(marks):
@@ -206,6 +212,8 @@ def blocks_from(page, starts: list[float], item_toks: list[dict]) -> tuple[list[
                 "bbox": [left, max(0.0, top), right, min(float(page.height), bottom)],
                 "column": i,
             }
+            if kind == "meta":
+                continue  # 경계로만 쓴다 — 오려내지 않는다
             if kind == "item":
                 items.append(box | {"no": w["no"]})
             else:
@@ -432,7 +440,25 @@ def split_paper(rec: dict, dry: bool) -> dict:
     finally:
         pdf.close()
 
-    (out_dir / "items.json").write_text(
+    # ★ 뒤 단계가 적어 둔 것을 덮지 않는다. 크롭을 다시 떠도 정답(Q2)·매핑(Q3)·
+    #   해설(Q4)은 그대로 남아야 한다 — 한 번 덮어서 416문항의 매핑을 통째로
+    #   날렸다. 되살릴 수 있었던 것은 결과 파일이 따로 있었기 때문이지 운이 좋아서가
+    #   아니다. 크롭은 언제든 다시 뜨게 되어 있으니 여기서 막아 둔다
+    items_path = out_dir / "items.json"
+    if items_path.exists():
+        before = json.loads(items_path.read_text(encoding="utf-8"))
+        keep = {i["item_id"]: i for i in before.get("items", [])}
+        carry = ("answer", "answer_internal", "kind", "curriculum", "topic_label", "domain",
+                 "difficulty", "text_internal", "concept_ids", "concept_candidates",
+                 "mapping", "mapping_reason", "explanation", "cited_relations")
+        for row in result["items"]:
+            old_row = keep.get(row["item_id"], {})
+            for field in carry:
+                if field in old_row and field not in row:
+                    row[field] = old_row[field]
+        if "answers_from" in before:
+            result.setdefault("answers_from", before["answers_from"])
+    items_path.write_text(
         json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     # 대장은 **1건 1행**이다 (CLAUDE.md §6). 같은 회차를 다시 크롭하면 같은

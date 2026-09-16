@@ -1,0 +1,2289 @@
+{
+ "unit_id": "isci2-3",
+ "subject_code": "isci2",
+ "cards": {
+  "isci2-ai-robot": {
+   "id": "isci2-ai-robot",
+   "term": "인공지능 로봇",
+   "definition": "인공지능 기술을 로봇에 접목해, 둘레 환경을 인식하고 스스로 판단해 움직이도록 만든 기계.",
+   "relations": [
+    {
+     "id": "rel-air-vs-old",
+     "text": "예전의 로봇이 미리 정해진 동작만 되풀이한 것과 달리, 이것은 둘레 상황을 인식해 스스로 판단해 움직인다.",
+     "condition": "예전의 로봇과 견줄 때"
+    },
+    {
+     "id": "rel-air-spread",
+     "text": "언론·교통·물류·안전·환경 등 여러 분야로 퍼지면서 생활이 편리해지고 산업 생산성이 높아졌다.",
+     "condition": "인공지능 로봇이 산업 현장에 도입된 경우"
+    },
+    {
+     "id": "rel-air-worry",
+     "text": "같은 확산이 일자리 감소나 로봇을 통제하지 못하는 문제 같은 걱정도 함께 불러왔다.",
+     "condition": "인공지능 로봇이 사람의 일을 대신하게 된 상황에서"
+    }
+   ]
+  },
+  "isci2-antibody-test": {
+   "id": "isci2-antibody-test",
+   "term": "항체 검사",
+   "definition": "혈액을 뽑아 그 안에 병원체에 맞서는 항체가 생겼는지 확인하는 진단법. 항체가 만들어진 뒤라야 결과를 얻을 수 있다.",
+   "relations": [
+    {
+     "id": "rel-abt-target",
+     "text": "이 검사는 병원체를 직접 찾는 것이 아니라 몸이 그 병원체에 맞서 만들어 낸 항체를 혈액에서 확인한다.",
+     "condition": "혈액으로 감염 여부를 가릴 때"
+    },
+    {
+     "id": "rel-abt-lag",
+     "text": "항체가 생기기까지 시간이 걸리므로 감염된 지 얼마 안 된 사람을 빨리 가려내는 데에는 알맞지 않다.",
+     "condition": "감염 초기에 신속한 진단이 필요한 상황에서"
+    }
+   ]
+  },
+  "isci2-antibody": {
+   "id": "isci2-antibody",
+   "term": "항체",
+   "definition": "병원체가 몸에 들어왔을 때 그에 맞서려고 우리 몸이 새로 만들어 내는 단백질. 짝이 되는 항원에만 달라붙는다.",
+   "relations": [
+    {
+     "id": "rel-ab-after",
+     "text": "몸이 병원체에 감염된 뒤라야 그에 맞서는 항체가 만들어지고, 다 만들어지기까지는 얼마간 시간이 걸린다.",
+     "condition": "병원체에 감염된 뒤 항체가 생기기까지"
+    },
+    {
+     "id": "rel-ab-specific",
+     "text": "항체는 아무 물질에나 붙지 않고 자신과 짝이 되는 항원에만 반응한다.",
+     "condition": "항체가 여러 항원과 만났을 때"
+    },
+    {
+     "id": "rel-ab-tool",
+     "text": "짝을 가리는 이 성질 덕분에 항체를 키트에 넣어 두면 찾으려는 병원체의 단백질만 골라 붙잡을 수 있다.",
+     "condition": "찾으려는 항원에 맞는 항체를 키트에 넣었을 때"
+    }
+   ]
+  },
+  "isci2-antigen-test": {
+   "id": "isci2-antigen-test",
+   "term": "항원 검사",
+   "definition": "몸에 들어온 병원체의 단백질, 곧 항원이 검체에 있는지 찾아 감염 여부를 가리는 진단법. 결과가 10분 안쪽으로 나온다.",
+   "relations": [
+    {
+     "id": "rel-agt-target",
+     "text": "이 검사가 찾는 것은 병원체 전체가 아니라 병원체가 지닌 단백질이 검체에 있는지 여부다.",
+     "condition": "검체에서 무엇을 검출하는지 따질 때"
+    },
+    {
+     "id": "rel-agt-tradeoff",
+     "text": "이 검사는 결과가 빨리 나오는 대신 정확도는 PCR 검사보다 낮다.",
+     "condition": "같은 검체를 두 방법으로 검사해 견줄 때"
+    },
+    {
+     "id": "rel-agt-response",
+     "text": "감염 여부를 빨리 알수록 격리와 접촉자 확인을 일찍 시작할 수 있어 확산을 막는 데 보탬이 된다.",
+     "condition": "확산이 진행 중인 감염병에 대응할 때"
+    }
+   ]
+  },
+  "isci2-antigen": {
+   "id": "isci2-antigen",
+   "term": "항원",
+   "definition": "우리 몸이 바깥에서 들어온 것으로 알아보는 물질. 감염병 진단에서는 몸에 들어온 병원체가 지닌 특정 단백질을 가리킨다.",
+   "relations": [
+    {
+     "id": "rel-ag-source",
+     "text": "진단에서 말하는 항원은 병원체 쪽에서 온 단백질이므로, 검체에서 항원이 잡히면 그 병원체가 몸에 들어왔다고 본다.",
+     "condition": "검체에 병원체의 단백질이 남아 있을 때"
+    },
+    {
+     "id": "rel-ag-release",
+     "text": "검체를 용액에 풀면 병원체가 흩어지면서 그것을 이루던 단백질이 항원으로 용액에 나온다.",
+     "condition": "검체를 용액에 풀어 병원체를 흩뜨렸을 때"
+    },
+    {
+     "id": "rel-ag-vs-antibody",
+     "text": "항원은 병원체 쪽에서 온 물질이고 항체는 우리 몸이 만들어 낸 단백질이어서, 둘은 서로 다른 것을 가리킨다.",
+     "condition": "감염 진단에서 두 낱말을 견줄 때"
+    }
+   ]
+  },
+  "isci2-artificial-intelligence": {
+   "id": "isci2-artificial-intelligence",
+   "term": "인공지능",
+   "definition": "사람이 하는 추론이나 학습 같은 일을 컴퓨터에서 이루어지도록 만든 기술.",
+   "relations": [
+    {
+     "id": "rel-ai-nature",
+     "text": "이 기술이 컴퓨터에 옮겨 놓으려는 것은 빠른 계산이 아니라 사람의 추론하고 학습하는 능력이다.",
+     "condition": "이 기술의 성격을 가릴 때"
+    },
+    {
+     "id": "rel-ai-data",
+     "text": "사물 인터넷 등으로 모은 데이터를 분석해 문제를 푸는 데 쓰이므로, 분석할 데이터가 갖추어져야 힘을 낸다.",
+     "condition": "분석할 데이터가 갖추어져 있을 때"
+    },
+    {
+     "id": "rel-ai-tracing",
+     "text": "방대한 정보를 빠르게 처리하는 힘 덕분에 감염 경로 분석이나 해외 유입 예측 같은 일에도 쓰였다.",
+     "condition": "처리할 정보가 사람이 다루기 어려울 만큼 많을 때"
+    }
+   ]
+  },
+  "isci2-big-data-limitation": {
+   "id": "isci2-big-data-limitation",
+   "term": "빅데이터 활용의 문제점",
+   "definition": "빅데이터를 분석해 쓸 때 결론을 그르치거나 남에게 해를 끼칠 수 있는 지점. 데이터의 치우침과 개인 정보 보호가 대표적이다.",
+   "relations": [
+    {
+     "id": "rel-bdl-bias",
+     "text": "분석에 쓴 데이터가 한쪽으로 치우쳐 있거나 믿기 어려우면 자료가 아무리 많아도 결론이 잘못될 수 있다.",
+     "condition": "치우치거나 신뢰성이 낮은 데이터를 걸러 내지 않았을 때"
+    },
+    {
+     "id": "rel-bdl-select",
+     "text": "그래서 어떤 데이터를 쓸지 미리 가려내는 일이 분석 과정에서 큰 몫을 차지한다.",
+     "condition": "여러 곳에서 온 데이터를 한데 놓고 분석할 때"
+    },
+    {
+     "id": "rel-bdl-privacy",
+     "text": "사람들의 활동에서 모은 데이터에는 민감한 개인 정보가 섞일 수 있어 따로 보호하고 관리해야 한다.",
+     "condition": "개인의 활동 기록이 담긴 데이터를 다룰 때"
+    }
+   ]
+  },
+  "isci2-big-data": {
+   "id": "isci2-big-data",
+   "term": "빅데이터",
+   "definition": "한눈에 다루기 어려울 만큼 방대하고 복잡한 데이터의 집합. 수치뿐 아니라 글·영상·음성처럼 그 형태도 여러 가지다.",
+   "relations": [
+    {
+     "id": "rel-bd-variety",
+     "text": "빅데이터를 가르는 기준은 양이 많다는 점만이 아니라 수치·글·영상·음성처럼 형태가 여러 가지라는 점에도 있다.",
+     "condition": "보통의 데이터와 견줄 때"
+    },
+    {
+     "id": "rel-bd-complex",
+     "text": "변수가 여럿 얽혀 하나씩 따져서는 풀기 어려운 문제도 빅데이터를 분석하면 빠르게 살펴볼 수 있다.",
+     "condition": "변수가 여럿 얽힌 문제를 다룰 때"
+    },
+    {
+     "id": "rel-bd-predict",
+     "text": "쌓인 데이터에서 가치 있는 정보를 뽑아내면 앞으로 일어날 변화를 미리 헤아려 정책이나 결정에 쓸 수 있다.",
+     "condition": "대용량 데이터를 분석해 규칙을 찾아냈을 때"
+    },
+    {
+     "id": "rel-bd-science",
+     "text": "빅데이터는 일상생활뿐 아니라 기상 관측, 유전체 분석, 신약 개발 같은 과학 분야에서도 쓰인다.",
+     "condition": "대량의 관측·실험 자료를 얻을 수 있는 분야에서"
+    }
+   ]
+  },
+  "isci2-data": {
+   "id": "isci2-data",
+   "term": "데이터",
+   "definition": "정보를 담고 있는 하나하나의 값. 시간대별 기온이나 하루 걸음 수처럼 그 자체로는 단순한 사실에 지나지 않는다.",
+   "relations": [
+    {
+     "id": "rel-data-to-info",
+     "text": "값 하나만으로는 알아낼 것이 없지만, 필요한 것을 골라 모아 분석하면 여러 가지를 알려 주는 정보가 된다.",
+     "condition": "목적에 맞는 값을 골라 모아 분석했을 때"
+    },
+    {
+     "id": "rel-data-amount",
+     "text": "같은 대상을 같은 방법으로 잴 때, 모은 값이 많을수록 알아낼 수 있는 것의 범위가 넓어진다.",
+     "condition": "같은 대상을 같은 방법으로 측정할 때"
+    }
+   ]
+  },
+  "isci2-dataset": {
+   "id": "isci2-dataset",
+   "term": "데이터셋",
+   "definition": "성질이 비슷한 데이터를 한데 모아 찾아 쓰기 좋게 정리해 놓은 묶음. 우리가 활용하는 빅데이터는 대개 이런 꼴로 되어 있다.",
+   "relations": [
+    {
+     "id": "rel-ds-tidy",
+     "text": "흩어진 값을 그대로 두는 대신 비슷한 성질끼리 묶어 정리하면 필요한 데이터를 찾아 쓰기가 쉬워진다.",
+     "condition": "여러 곳에서 모은 값을 실제로 쓰려 할 때"
+    },
+    {
+     "id": "rel-ds-choice",
+     "text": "같은 문제를 풀어도 어떤 데이터셋을 고르느냐에 따라 분석해서 얻는 결론이 달라진다.",
+     "condition": "한 문제에 서로 다른 데이터셋을 대입할 때"
+    },
+    {
+     "id": "rel-ds-relevance",
+     "text": "풀려는 문제와 관계가 먼 데이터셋을 고르면 자료가 아무리 많아도 원하는 답을 얻기 어렵다.",
+     "condition": "데이터셋과 문제의 관련성이 낮을 때"
+    }
+   ]
+  },
+  "isci2-digital-conversion": {
+   "id": "isci2-digital-conversion",
+   "term": "정보의 디지털 전환",
+   "definition": "관측이나 실험으로 얻은 자료를 컴퓨터가 다룰 수 있는 디지털 형태로 바꾸는 일. 바꾸어 놓으면 많은 양을 쌓아 둘 수 있다.",
+   "relations": [
+    {
+     "id": "rel-dc-store",
+     "text": "자료를 디지털 형태로 바꾸어 두면 종이나 필름으로 남길 때와 달리 대량으로 쌓고 필요할 때 꺼내 분석할 수 있다.",
+     "condition": "얻은 자료를 디지털 형태로 바꾸었을 때"
+    },
+    {
+     "id": "rel-dc-bigdata",
+     "text": "디지털로 바뀐 자료가 오랫동안 쌓인 것이 빅데이터라는 개념이 나오게 된 밑바탕이다.",
+     "condition": "디지털 전환과 실시간 수집이 함께 이루어진 상황에서"
+    }
+   ]
+  },
+  "isci2-future-society-problem": {
+   "id": "isci2-future-society-problem",
+   "term": "미래 사회 문제",
+   "definition": "새로운 기술의 등장, 기후 변화, 인구 증가처럼 앞으로 사회에 닥칠 것으로 보이는 어려움. 그중 어떤 것은 이미 현실이 되어 있다.",
+   "relations": [
+    {
+     "id": "rel-fsp-sources",
+     "text": "이 문제들은 한 가지 원인에서 오지 않고 새로운 기술 개발, 기후 변화, 인구 증가처럼 여러 갈래에서 생겨난다.",
+     "condition": "앞으로 예상되는 변화를 갈래로 나눠 볼 때"
+    },
+    {
+     "id": "rel-fsp-predict",
+     "text": "기후 위기처럼 미리 알아챈 것이 있는 한편, 코로나19의 대유행처럼 예상하지 못한 문제도 닥칠 수 있다.",
+     "condition": "미래에 닥칠 문제를 미리 헤아릴 수 있는지 따질 때"
+    },
+    {
+     "id": "rel-fsp-science-role",
+     "text": "감염병의 진단·추적·치료가 그러했듯, 앞으로 닥칠 문제를 푸는 데에도 과학기술이 맡는 몫은 커질 것으로 본다.",
+     "condition": "지금까지 과학이 문제 해결에 쓰인 사례를 근거로 삼을 때"
+    }
+   ]
+  },
+  "isci2-infection-route-tracing": {
+   "id": "isci2-infection-route-tracing",
+   "term": "감염 경로 추적",
+   "definition": "환자가 어디를 다녔고 누구와 만났는지 확인해 어디에서 감염되었는지 밝히는 조사. 다음 감염을 끊는 데 쓰인다.",
+   "relations": [
+    {
+     "id": "rel-trace-block",
+     "text": "환자의 이동 경로와 접촉자를 알아내면 그 사람들을 먼저 살펴 추가 감염을 끊을 수 있다.",
+     "condition": "확산이 진행 중인 감염병에서 경로 정보를 얻었을 때"
+    },
+    {
+     "id": "rel-trace-tech",
+     "text": "정보 통신 기술과 인공지능을 쓰면서 사람이 직접 다니며 조사하던 때보다 더 많은 자료를 더 빠르게 모으고 분석하게 되었다.",
+     "condition": "역학 조사에 정보 통신 기술과 인공지능을 활용할 때"
+    },
+    {
+     "id": "rel-trace-share",
+     "text": "모은 감염자 수와 분포를 빠르게 추려 시민에게 알리거나 해외에서 들어올 가능성을 미리 헤아리는 데에도 쓰인다.",
+     "condition": "수집한 감염 자료를 인공지능으로 분석할 때"
+    }
+   ]
+  },
+  "isci2-infectious-disease": {
+   "id": "isci2-infectious-disease",
+   "term": "감염병",
+   "definition": "몸속으로 들어온 병원체 때문에 나타나는 질병 가운데, 사람에서 사람으로 빠르게 옮아가는 성질을 지닌 것.",
+   "relations": [
+    {
+     "id": "rel-idis-pathogen",
+     "text": "세균이나 바이러스 같은 병원체가 몸 안에 들어와 자리 잡았을 때 이 질병이 나타난다.",
+     "condition": "병원체가 사람의 몸에 침입했을 때"
+    },
+    {
+     "id": "rel-idis-spread",
+     "text": "교통수단이 발달해 사람들의 이동량이 늘고 이동 속도가 빨라질수록 감염병이 퍼지는 속도도 빨라진다.",
+     "condition": "사람의 이동량과 이동 속도가 늘어난 사회에서"
+    },
+    {
+     "id": "rel-idis-diagnose",
+     "text": "치료 약이 아직 없는 단계에서는 감염 여부를 빨리 가려내고 경로를 끊는 일이 확산을 늦추는 방법이 된다.",
+     "condition": "치료 약이 개발되기 전 단계에서"
+    }
+   ]
+  },
+  "isci2-information-communication-technology": {
+   "id": "isci2-information-communication-technology",
+   "term": "정보 통신 기술",
+   "definition": "모은 정보를 멀리 떨어진 곳까지 실시간으로 주고받게 하는 기술. 사물을 인터넷에 잇는 바탕이 된다.",
+   "relations": [
+    {
+     "id": "rel-ict-realtime",
+     "text": "정보를 실시간으로 전할 수 있게 되면서 멀리서 일어난 일도 곧바로 알고 대응할 수 있게 되었다.",
+     "condition": "정보를 모으는 곳과 쓰는 곳이 떨어져 있을 때"
+    },
+    {
+     "id": "rel-ict-iot",
+     "text": "통신 기능이 있어야 물건이 인터넷에 이어지므로, 이 기술은 사물 인터넷이 서는 조건이 된다.",
+     "condition": "물건을 인터넷에 이으려 할 때"
+    },
+    {
+     "id": "rel-ict-bigdata",
+     "text": "여러 곳의 데이터를 실시간으로 한데 모을 수 있게 된 것이 빅데이터가 나타난 배경 가운데 하나다.",
+     "condition": "센서 개발과 통신 기술 발달이 겹친 상황에서"
+    }
+   ]
+  },
+  "isci2-internet-of-things": {
+   "id": "isci2-internet-of-things",
+   "term": "사물 인터넷",
+   "definition": "여러 물건에 센서와 통신 기능을 넣어 인터넷에 이어 놓은 기술. 이어진 물건들은 스스로 정보를 모으고 주고받는다.",
+   "relations": [
+    {
+     "id": "rel-iot-condition",
+     "text": "어떤 물건이 여기에 들려면 상태를 감지하는 센서와 인터넷에 이어 주는 통신 기능을 함께 갖추어야 한다.",
+     "condition": "어떤 물건이 사물 인터넷에 드는지 가릴 때"
+    },
+    {
+     "id": "rel-iot-autonomy",
+     "text": "이어진 물건은 사람이 일일이 조작하지 않아도 스스로 정보를 모아 작동하거나, 멀리서 보내는 신호로 조절된다.",
+     "condition": "물건이 인터넷에 이어져 정보를 주고받을 때"
+    },
+    {
+     "id": "rel-iot-home",
+     "text": "냉난방 장치나 조명처럼 집 안의 물건이 이 기술로 이어지면서 생활 환경을 자동으로 관리하는 일이 가능해졌다.",
+     "condition": "생활 공간의 물건을 인터넷으로 이었을 때"
+    }
+   ]
+  },
+  "isci2-pathogen": {
+   "id": "isci2-pathogen",
+   "term": "병원체",
+   "definition": "사람 몸에 들어가 질병을 일으키는 세균·바이러스 따위를 통틀어 이르는 말. 몸을 이루던 물질이 아니라 밖에서 들어온 것이다.",
+   "relations": [
+    {
+     "id": "rel-path-kinds",
+     "text": "세균과 바이러스처럼 종류가 서로 다른 것들이 모두 병원체에 든다.",
+     "condition": "병원체의 종류를 나눠 볼 때"
+    },
+    {
+     "id": "rel-path-antigen",
+     "text": "병원체가 지닌 특정 단백질은 진단에서 찾아내는 표적이 되며, 이 단백질을 항원이라 부른다.",
+     "condition": "병원체가 몸 안에 들어왔을 때"
+    },
+    {
+     "id": "rel-path-nucleic",
+     "text": "병원체는 저마다 고유한 유전물질을 지녀, 검체에서 그 핵산을 찾아내면 어떤 병원체가 들어왔는지 알 수 있다.",
+     "condition": "검체에 병원체의 핵산이 남아 있을 때"
+    }
+   ]
+  },
+  "isci2-pcr-test": {
+   "id": "isci2-pcr-test",
+   "term": "PCR 검사",
+   "definition": "검체에 든 병원체의 핵산을 거듭 늘려 양을 키운 뒤 그 존재를 확인하는 진단법. 교과서가 든 세 진단법 가운데 가장 정확하다.",
+   "relations": [
+    {
+     "id": "rel-pcr-amplify",
+     "text": "핵산이 아주 조금만 남아 있어도 증폭을 거치면 검출할 수 있을 만큼 양이 늘어난다.",
+     "condition": "검체에 병원체의 핵산이 조금이라도 남아 있을 때"
+    },
+    {
+     "id": "rel-pcr-target",
+     "text": "이 검사가 찾는 것은 병원체의 단백질이 아니라 유전물질인 핵산이다.",
+     "condition": "검출 대상이 무엇인지 따질 때"
+    },
+    {
+     "id": "rel-pcr-tradeoff",
+     "text": "이 검사는 항원 검사나 항체 검사보다 결과가 늦게 나오지만 감염 여부를 가장 정확하게 알려 준다.",
+     "condition": "교과서가 든 세 진단법을 견줄 때"
+    }
+   ]
+  },
+  "isci2-public-data": {
+   "id": "isci2-public-data",
+   "term": "공공 데이터",
+   "definition": "국가나 공공 기관이 모아 모든 사람에게 열어 둔 데이터. 포털을 통해 누구나 내려받아 쓸 수 있다.",
+   "relations": [
+    {
+     "id": "rel-pd-open",
+     "text": "기관이 모은 자료를 공개해 두면 관측 장비나 예산이 없는 사람도 빅데이터를 가져다 쓸 수 있다.",
+     "condition": "기관이 수집한 자료를 공개했을 때"
+    },
+    {
+     "id": "rel-pd-obs",
+     "text": "기상청이 관측소와 인공위성으로 모은 날씨·기후 자료처럼, 관측 자료도 공공 데이터로 열려 있다.",
+     "condition": "공공 기관이 관측 자료를 개방했을 때"
+    }
+   ]
+  },
+  "isci2-science-ethics": {
+   "id": "isci2-science-ethics",
+   "term": "과학 윤리",
+   "definition": "과학을 연구하거나 과학기술을 쓸 때 지켜야 할 윤리적 원칙과 기준. 생명 존중·공정성·안전·환경적 책임 등이 여기에 든다.",
+   "relations": [
+    {
+     "id": "rel-se-minimum",
+     "text": "이 원칙은 과학기술이 인류 전체에 이익이 되도록 하려고 두는 최소한의 기준이다.",
+     "condition": "과학 윤리가 무엇을 위해 있는지 따질 때"
+    },
+    {
+     "id": "rel-se-scope",
+     "text": "연구를 하는 자리에만 적용되는 것이 아니라 이미 개발된 기술을 쓰는 자리에도 함께 적용된다.",
+     "condition": "이 원칙이 어디까지 미치는지 따질 때"
+    },
+    {
+     "id": "rel-se-elements",
+     "text": "생명 존중, 공정성, 안전, 환경적 책임처럼 서로 다른 영역의 기준이 그 안에 함께 들어 있다.",
+     "condition": "어떤 기준이 여기에 드는지 나눠 볼 때"
+    },
+    {
+     "id": "rel-se-for-ssi",
+     "text": "쟁점을 놓고 판단이 갈릴 때 이 원칙은 어느 선을 넘지 말아야 하는지 가늠하는 잣대가 된다.",
+     "condition": "이해관계가 갈리는 과학 관련 사회적 쟁점에 대응할 때"
+    }
+   ]
+  },
+  "isci2-sensor": {
+   "id": "isci2-sensor",
+   "term": "센서",
+   "definition": "온도·빛·기체 농도처럼 둘레의 상태를 감지해, 기기가 다룰 수 있는 디지털 신호로 바꾸어 주는 장치.",
+   "relations": [
+    {
+     "id": "rel-sensor-auto",
+     "text": "측정할 곳에 센서를 놓아두면 사람이 일일이 재지 않아도 여러 지점의 상태를 실시간으로 모을 수 있다.",
+     "condition": "측정 대상이 있는 곳에 센서를 설치해 두었을 때"
+    },
+    {
+     "id": "rel-sensor-iot",
+     "text": "물건에 센서와 통신 기능을 함께 넣으면 그 물건이 스스로 둘레 상태를 알아채고 인터넷으로 알릴 수 있게 된다.",
+     "condition": "센서와 통신 기능을 함께 갖춘 물건일 때"
+    },
+    {
+     "id": "rel-sensor-bigdata",
+     "text": "센서로 모은 값이 디지털 형태로 쌓이면서 빅데이터라 부를 만한 규모의 데이터가 만들어졌다.",
+     "condition": "센서 개발과 통신 기술 발달이 겹친 상황에서"
+    }
+   ]
+  },
+  "isci2-socioscientific-issue": {
+   "id": "isci2-socioscientific-issue",
+   "term": "과학 관련 사회적 쟁점",
+   "definition": "과학기술이 발전하면서 새로 생겨난, 과학과 얽힌 사회·문화적 다툼거리. 여러 입장의 이해관계가 함께 걸려 있다.",
+   "relations": [
+    {
+     "id": "rel-ssi-new",
+     "text": "이전에는 없던 쟁점이 과학기술의 발전과 함께 새로 생겨나므로, 기술이 달라지면 다투는 문제도 달라진다.",
+     "condition": "새로운 과학기술이 사회에 들어왔을 때"
+    },
+    {
+     "id": "rel-ssi-stake",
+     "text": "하나의 쟁점에 입장이 다른 사람들의 이해관계가 얽혀 있어, 그대로 두면 사회적 갈등으로 번지기도 한다.",
+     "condition": "쟁점을 두고 이해관계가 갈리는 상황에서"
+    },
+    {
+     "id": "rel-ssi-decide",
+     "text": "쟁점을 풀려면 한쪽 입장만 내세우는 대신 여러 관점과 복잡한 사정을 함께 살펴 협의해 결정해야 한다.",
+     "condition": "이해관계가 갈리는 쟁점을 다룰 때"
+    },
+    {
+     "id": "rel-ssi-multi",
+     "text": "과학적 근거만으로는 답이 정해지지 않아, 사회·경제·환경 측면까지 아울러 따져야 논증이 선다.",
+     "condition": "쟁점을 놓고 논증할 때"
+    }
+   ]
+  },
+  "isci2-usefulness-and-limitation-of-technology": {
+   "id": "isci2-usefulness-and-limitation-of-technology",
+   "term": "과학기술의 유용성과 한계",
+   "definition": "하나의 과학기술이 가져오는 이로움과 그에 딸린 부정적 영향을 함께 놓고 헤아려 보는 틀. 미래 사회를 내다볼 때 쓰인다.",
+   "relations": [
+    {
+     "id": "rel-ul-two-sides",
+     "text": "같은 기술이 생활의 편의를 높이는 한편으로 일자리 감소 같은 부정적 영향도 함께 낳을 수 있다.",
+     "condition": "한 기술이 사회 전반에 퍼진 상황에서"
+    },
+    {
+     "id": "rel-ul-prepare",
+     "text": "기술이 사회에 미칠 영향을 미리 내다보고 기술적·제도적으로 대비하면 부정적 효과를 줄이고 긍정적 효과를 키울 수 있다.",
+     "condition": "기술이 널리 퍼지기 전에 영향을 헤아릴 수 있을 때"
+    },
+    {
+     "id": "rel-ul-consensus",
+     "text": "새 기술로 문제를 풀 때에는 그 과정에서 생길 부작용과 위험성을 점검하고 사회적 합의를 거치는 절차가 함께 필요하다.",
+     "condition": "과학기술로 사회 문제를 해결하려 할 때"
+    }
+   ]
+  }
+ },
+ "items": [
+  {
+   "item_id": "isci2-form-3-1-01-r1-q01",
+   "paper": "3-1-1 소단원 형성평가 1회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "01 그림은 신속 항원 검사 키트이다. ㉠ ㉡ 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. ㉠은 실험선이다. ㄴ. ㉡ 위치에 선이 나타나면 감염이다. ㄷ. 키트 내부에는 바이러스를 검출하는 항체가 들어있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r1-q02",
+   "paper": "3-1-1 소단원 형성평가 1회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병과 병원체",
+   "text": "02 감염병 확산과 예방에 대한 설명으로 옳지 않은 것은? ① 치료제가 개발되기 전 감염 경로 추적은 불가능하 다. ② PCR 검사는 감염병을 일으킨 유전물질을 확인하는 검사이다. ③ 감염병을 일으킨 병원체 존재 여부로 감염병을 진 단할 수 있다. ④ 현대 사회의 교통수단 발달은 감염병 전파 속도를 가속화 한다. ⑤ 정보 통신 기술을 이용하여 감염자의 이동 경로를 추적할 수 있다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r1-q03",
+   "paper": "3-1-1 소단원 형성평가 1회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "03 그림은 감염병을 진단하는 과학 기술 중 하나이다. PCR 검사와 비교했을 때 이 검사 방법의 단점으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 비교적 정확도가 낮다 ㄴ. 고가의 장비가 필요하다. ㄷ. 검사 결과를 확인하기까지 오랜 시간이 소요 된다. ① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r1-q04",
+   "paper": "3-1-1 소단원 형성평가 1회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "04 감염병 역학 조사 방법에 해당하는 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 항체 검사 ㄴ. 백신 개발 ㄷ. 감염자의 이동 경로 추적 ㄹ. 인공지능을 이용한 감염자 분포 취합 ① ㄱ, ㄴ ② ㄱ, ㄷ ③ ㄴ, ㄷ ④ ㄴ, ㄹ ⑤ ㄷ, ㄹ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r1-q05",
+   "paper": "3-1-1 소단원 형성평가 1회",
+   "no": 5,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "05 미래 사회의 문제와 과학 기술의 역할에 대한 설명이다. ( A )로 인해 자연재해가 증가함에 따라 이산화 탄 소 배출량이 낮은 신재생 에너지 개발이 필요하다. ( A )에 들어갈 알맞은 말을 <보기>에서 골라 쓰시오. <보기> 기후 변화, 인구 증가, 새로운 기술 개발",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r2-q01",
+   "paper": "3-1-1 소단원 형성평가 2회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병과 병원체",
+   "text": "01 감염병에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 감염병은 세균이나 바이러스 같은 병원체가 사람의 몸에 침입하여 생기는 질병이다. ㄴ. 비행기와 기차의 등장으로 감염병의 세계적 확산이 줄어들었다. ㄷ. 역학 조사 과정은 감염병의 확산 경로를 추적 하여 추가적인 감염을 차단한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r2-q02",
+   "paper": "3-1-1 소단원 형성평가 2회",
+   "no": 2,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "02 다음은 감염병을 진단하는 2가지 방법에 대한 설명이다. 감염병을 진단하는 방법에는 우리 몸에 감염병을 일으킨 병원체의 특정 단백질 성분인 ( ㉠ )이 (가) 존재하는지 확인하거나, 병원체에 감염되었을 때 우리 몸을 방어하려고 혈액 내에 생기는 ( ㉡ )을(를) 확인하는 방법이 있다. ㉠과 ㉡에 들어갈 알맞은 말을 쓰시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r2-q03",
+   "paper": "3-1-1 소단원 형성평가 2회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "03 PCR 검사에 대한 설명으로 옳은 것만을 <보기>에서 있 는 대로 고른 것은? <보기> ㄱ. 병원체 내부의 핵산을 증폭하여 병원체의 존 재 여부를 확인한다. ㄴ. 항원 검사에 비해 검사 시간이 짧다. ㄷ. 항원 검사보다 감염병 감염 여부를 정확하게 진단할 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r2-q04",
+   "paper": "3-1-1 소단원 형성평가 2회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "04 다음은 미래 사회의 예상되는 변화에 대한 학생 A~C의 발표 내용이다. A: 새로운 기술이 발달하면서 새로운 사회 문제가 생길 수도 있고, 그 사회 문제를 해결할 수도 있 다. B: 지구의 기온 상승으로 인해 자연재해와 환경의 변화가 가속화될 수 있다. C: 빠르게 증가하는 세계 인구는 식량 부족, 자원 고갈, 거주 공간 부족 등의 문제를 일으킬 수 있 다. 미래 사회의 예상되는 변화를 올바르게 발표한 학생만을 있는 대로 고른 것은? ① A ② B ③ A, C ④ B, C ⑤ A, B, C",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r2-q05",
+   "paper": "3-1-1 소단원 형성평가 2회",
+   "no": 5,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "05 과학을 이용하여 미래 사회 문제를 해결하려는 사례로 적절한 것을 있는 대로 고른 것은? <보기> ㄱ. 석유 자원의 고갈 문제를 해결하기 위해 신재 생에너지가 개발되고 있다. ㄴ. 인터넷과 컴퓨터 기술의 발전으로 개인 정보 를 보호하는 생체 인증 기술이 개발되고 있다. ㄷ. 인구 증가와 기후 변화로 인한 식량 문제를 해 결하기 위해 생명공학 기술이 발전하고 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r3-q01",
+   "paper": "3-1-1 소단원 형성평가 3회",
+   "no": 1,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "역학 조사",
+   "text": "01 다음은 위 자료에 대한 설명이다. 존 스노우의 감염병 지도는 콜레라로 인한 사망자 위치를 지도에 표시하여 특정 우물과 감염의 관련성 을 밝혀낸 사례로써 최초의 ( A )의 사례로 받 아들여진다. ( A )는 전염병의 진단 및 예방, 인 과 관계 분석을 위해 행해지는 조사를 뜻한다. ( A )에 들어갈 알맞은 말을 쓰시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r3-q02",
+   "paper": "3-1-1 소단원 형성평가 3회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "역학 조사",
+   "text": "02 위 자료에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 감염병과 관련된 사망자의 위치 정보를 나타 낸 자료이다. ㄴ. 사망자는 지도 전체에 고르게 분포한다. ㄷ. 감염 경로를 추적하여 발생 원인을 파악할 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r3-q03",
+   "paper": "3-1-1 소단원 형성평가 3회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "03 다음 중 미래 사회 문제에 대한 과학적 해결 방안을 옳 게 짝 지은 것은? 미래 사회 문제 과학적 해결 방안 ① 에너지 문제 위변조 방지 기술 개발 ② 환경 오염 문제 재생의료기술 개발 ③ 식량 부족 문제 해양 폐기물 수거 방법 연구 ④ 딥페이크 문제 새로운 농업 기술 및 품종 개발 ⑤ 생물 다양성 문제 생물종 보전을 위한 종자 은행 운영",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r3-q04",
+   "paper": "3-1-1 소단원 형성평가 3회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "04 다음 중 감염병 진단 기술에 대한 설명으로 옳지 않은 것은? ① 항원 검사는 검체에서 항원을 구성하는 단백질을 확인하는 검사이다. ② 항체 검사는 검체에서 항체의 존재를 확인하는 검 사이다. ③ 항체 검사는 검사 시간이 짧아 신속한 검사에 적합 하다. ④ 중합효소연쇄반응 검사는 병원체의 핵산을 증폭하 여 병원체의 존재 여부를 확인하는 검사이다. ⑤ 중합효소연쇄반응 검사는 검사 시간은 길지만 정확 도가 높은 검사이다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-form-3-1-01-r3-q05",
+   "paper": "3-1-1 소단원 형성평가 3회",
+   "no": 5,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "05 다음 중 미래 사회에 발생할 수 있는 문제로 적절하지 않은 것은? ① 천연자원이 고갈될 수 있다. ② 인구 증가에 의해 거주 공간이 부족해질 수 있다. ③ AI가 자가 발전을 통해 초지능 AI가 등장하여 인류 가 위협받을 수 있다. ④ 고층 주거 공간의 건설로 층간 소음 문제가 심각해 질 수 있다. ⑤ 기후 변화로 인해 자연재해와 환경 변화가 가속화 될 수 있다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q01",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병과 병원체",
+   "text": "01 감염병에 대한 설명으로 옳지 않은 것은? ① 전파 속도가 매우 빠르다. ② 감염 경로를 추적하는 것은 불가능하다. ③ 감염병에 의해 사라진 국가나 문명이 있다. ④ 코로나바이러스는 감염병의 대표적 예시이다. ⑤ 세균이나 바이러스와 같은 병원체에 의한 질병이 다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q02",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "02 PCR 검사에 대한 설명으로 옳은 것만을 <보기>에서 있 는 대로 고른 것은? <보기> ㄱ. 병원체의 단백질을 검출하는 방법이다. ㄴ. 검사 시간이 길지만 정확성이 가장 높다. ㄷ. 감염병을 진단하여 확산을 막는 역할을 한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q03",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "03 표는 A, B, C 3명의 사람이 신속 항원 검사 결과 반응을 나타낸 것이다. 결과 반응 A 대조선에만 빨간 선이 나타났다. B 대조선과 실험선 모두 빨간 선이 나타났다. C 실험선에만 빨간 선이 나타났다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 검사 시간이 10분 내외로 짧다. ㄴ. A는 음성 반응으로 감염되지 않았다. ㄷ. C의 경우 반응 오류로 재검사가 필요하다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q04",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "04 그림은 코로나바이러스 감염증 전국 상황판을 나타낸 것 이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 감염 관련 정보를 빠르게 안내하기 위한 목적 을 가지고 있다. ㄴ. 주로 역학 조사관의 직접 조사한 내용을 바탕 으로 만들어진다. ㄷ. 빅데이터 기술을 이용하여 감염 경로 등 취합 한 정보를 빠르게 분석한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q05",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 5,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "05 과학기술을 활용하여 미래 사회의 문제를 해결하는 방안 에 대한 예시로 적절한 것을 <보기>에서 있는 대로 고 른 것은? <보기> ㄱ. 화석 연료 고갈을 대비하여 새로운 친환경 에 너지를 개발한다. ㄴ. 기후 변화와 감염병의 연관성을 찾기 위해 역 사적 사실을 조사한다. ㄷ. 세계 인구 증가로 부족해질 식량을 대비하여 식품 대체재를 개발한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q06",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 6,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터",
+   "text": "06 그림은 교실의 이산화 탄소 농도를 측정하기 위한 기기 를 나타낸 것이다. 이산화 탄소 센서 마이크로컨트롤러 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 교실의 환경 변화를 실시간으로 판단하기는 어 렵다. ㄴ. 수집된 데이터를 분석하여 의사 결정에 활용할 수 있다. ㄷ. 이산화 탄소 센서가 교실의 이산화 탄소 농도 를 측정한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q07",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 7,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "데이터셋의 활용",
+   "text": "07 스마트폰을 이용한 데이터 측정 및 활용에 대한 설명으 로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 나의 걸음 수를 확인하여 만보 걷기 챌린지를 한다. ㄴ. 대기 화면의 알림 기능을 설정하여 현재 시각 을 확인한다. ㄷ. 한 달 동안 스마트폰 사용 시간을 확인하여 스마트폰 중독 여부를 확인한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q08",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 8,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "데이터셋의 활용",
+   "text": "08 표는 어떤 학생이 ‘우리나라의 친환경 에너지’에 대한 탐 구를 진행하기 위해 공공 포털 사이트에서 조사한 정보 이다. 정보 (가) 우리나라의 지역별 지형적 특징 우리나라의 모든 친환경 에너지 발전소 근 (나) 황 (다) 우리나라의 기상 데이터 통계 이에 대한 설명으로 옳지 않은 것은? ① 탐구를 위해 여러 가지 데이터셋을 동시에 활용할 수 있다. ② (가)와 (나)를 이용해 발전소의 입지 조건에 대해 탐구할 수 있다. ③ (나)를 이용하면 발전소 각각을 조사하는 것보다 시 간이 단축된다. ④ (다)는 탐구 주제와 관련성이 낮으므로 활용하기 어 렵다. ⑤ (가)~(다)는 모두 빅데이터 분석의 대상이 될 수 있 는 자료이다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q09",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 9,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "09 빅데이터를 활용하는 사례로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 언어 데이터 – 자동 번역 ㄴ. 소비자의 구매 데이터 – 관심 제품 추천 ㄷ. 영상 시청 데이터 – 유사한 주제의 영상 노 출 ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q10",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 10,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "10 빅데이터 활용에 대한 설명으로 옳지 않은 것은? ① 데이터 수집 기간이 길어질수록 양이 방대해진다. ② 다양한 변수가 얽힌 복잡한 문제를 분석한다. ③ 신뢰성이 낮은 데이터여도 옳은 결론을 도출한다. ④ 정부의 정책을 합리적으로 결정할 수 있도록 돕는 다. ⑤ 인공위성에서 관측한 데이터를 디지털 형태로 전환 하여 축적한다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q11",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 11,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "데이터셋의 활용",
+   "text": "11 감염성 질병 확산을 감시하고 예방하기 위해 필요한 데 이터셋과 정보로 옳은 것만을 <보기>에서 있는 대로 고 른 것은? <보기> ㄱ. 항공권 판매 데이터 – 저렴한 항공권 확인 ㄴ. 카드 이용 정보 – 감염자의 이동 경로 추적 ㄷ. 바이러스 백신 접종 현황 – 감염병에 취약한 인구 파악 ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q12",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 12,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터 사용의 주의점",
+   "text": "12 다음은 어떤 학생이 빅데이터를 활용하여 진행한 탐구 중 일부를 나타낸 것이다. 탐구 주제: 청소년의 방과 후 여가 시설 이용 유 형 분석 조사 내용 - 행복고등학교 1학년 학생들을 대상으로 이름, 학년, 방과 후 이동 경로 등을 조사하였다. - 수집한 자료를 바탕으로 학생들이 선호하는 여가 공간을 분석하였다. - 그 결과, 우리나라 청소년들은 주로 버스에서 여가 시간을 보내는 것으로 나타났다. 탐구 내용에서 나타나는 빅데이터 활용의 문제로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 데이터의 양이 커질수록 해석의 정확도가 낮 아진다. ㄴ. 빅데이터는 편향 없이 항상 신뢰할 만한 결과 를 제공한다. ㄷ. 빅데이터 수집 과정에서 민감한 개인 정보가 포함될 수 있다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q13",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 13,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "사물 인터넷(IoT)",
+   "text": "13 사물 인터넷(IoT)에 대한 설명으로 옳지 않은 것은? ① 센서를 이용하여 환경을 감지한다. ② 사용자 패턴을 분석하여 스스로 작동한다. ③ 인간의 학습 능력을 컴퓨터에 구현한 것이다. ④ 연결된 물건끼리 스스로 정보를 수집하고 교환한 다. ⑤ 대표적인 예시로 실내 온도에 따라 자동으로 켜지 는 에어컨이 있다.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q14",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 14,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "인공지능 로봇",
+   "text": "14 그림은 반려 로봇을 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 인공지능 기술이 사용되기도 한다. ㄴ. 외로운 사람에게 정서적 안정감을 제공한다. ㄷ. 스스로 판단하지 않고 정해진 동작만 수행한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q15",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 15,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "인공지능 로봇",
+   "text": "15 인공지능 로봇 사용으로 인한 부정적 영향으로 옳은 것 만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 일자리 감소 ㄴ. 생산성 증가 ㄷ. 로봇의 통제 불능 ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q16",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 16,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "인공지능 로봇",
+   "text": "16 다음은 우리나라 기후 변화와 관련된 탐구를 진행하기 위해 인공지능을 활용하는 과정을 나타낸 것이다. (가) 과거와 현재 우리나라의 연평균 기온 자료를 수집한다. (나) 인공지능 프로그램을 이용하여 현재까지 연평 균 기온 그래프를 그리게 시킨다. (다) 그려진 그래프를 해석하여 기후 변화 경향성을 도출한다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. (가)는 공공 포털 사이트를 이용할 수 있다. ㄴ. (나)에서 프롬프트에 x축과 y축을 정해주면 보 다 정확한 결과가 나올 것이다. ㄷ. (다)도 인공지능 프로그램을 사용할 수 있다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q17",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 17,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "17 과학 관련 사회적 쟁점에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 과학기술의 발전에 따른 긍정적인 측면이다. ㄴ. 다양한 입장을 가진 사람들의 이해관계가 얽 혀있는 경우가 많다. ㄷ. 대표적 예시로 원자력 발전소 안정성에 대한 걱정이 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q18",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 18,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "18 다음은 과학 관련 사회적 쟁점을 주제로 한 영화의 줄거 리이다. 식품용 슈퍼 돼지 신품종 개발 프로젝트 일환으 로 유전자를 조작하여 태어난 거대 돼지 ‘옥자’. 홍보 목적으로 착취하려는 기업에서 옥자를 지키 려는 소녀 ‘미자’와의 이야기 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 이전에는 없었던 과학 관련 사회적 쟁점이다. ㄴ. 생명윤리와 관련된 내용이다. ㄷ. 기업에 이익을 위하므로 과학 윤리가 지켜진 것이다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q19",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 19,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 윤리",
+   "text": "19 과학기술을 이용할 때 과학 윤리를 준수한 사례로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 공장에서 나온 폐수를 바다로 흘려보낸다. ㄴ. 생성형 인공지능이 제작한 그림을 과제로 제 출한다. ㄷ. 화장품을 개발하며 동물을 대상으로 실험을 최소화 한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q20",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 20,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 윤리",
+   "text": "20 다음은 생성형 인공지능에 ‘자율주행 자동차가 사고를 내면 누구의 책임일까?’를 질문했을 때 답변한 내용이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 국가에서 제도적인 규제를 만들 필요성이 있 다. ㄴ. 운전자, 제조사, 개발사 등의 여러 사람의 이 해관계가 얽혀있다. ㄷ. 인간의 이익을 배제하고 윤리적 기준으로 단순 한 결정을 내리는 것이 중요하다. ① ㄴ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q21",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 21,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "21 그림은 감염병 진단 방법 중 하나에 사용되는 도구이다. 진단 방법의 이름을 쓰고, 장점을 한 가지 서술하시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q22",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 22,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "22 다음은 과학기술 발전에 따른 미래 사회의 변화이다. 미래 사회의 변화: 인터넷 기술 발전 예상되는 문제: ( A ) (A)에 들어갈 말로 적절한 것을 한 가지 서술하시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q23",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 23,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "23 다음 사료에서 나타나는 빅데이터 활용의 장점을 한 가 지 서술하시오. ○○시에서는 기후 변화에 취약한 계층과 시민을 보호하기 위해 폭염 그늘막을 설치하고 있다. 설 치 장소는 필요한 사람이 실제로 이용할 수 있도 록, 다양한 빅데이터를 분석하여 결정하였다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q24",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 24,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-03",
+   "topic_label": "인공지능 로봇",
+   "text": "24 미래 과학 도시에서 사용할 수 있는 인공지능 기술을 두 가지 서술하시오.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r1-q25",
+   "paper": "3단원 중간·기말 대비평가 1회",
+   "no": 25,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 윤리",
+   "text": "25 원시림 벌목으로 인한 생태계 파괴에 대해 과학 윤리적 으로 부정적인 입장을 제시된 단어를 모두 사용하여 서 술하시오. 환경적 책임, 생명 존중",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q01",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "01 위 ㉠~㉢에 들어갈 말로 가장 적절한 것은? ㉠ ㉡ ㉢ ① 항원 항체 핵산 ② 항원 핵산 항체 ③ 항원 항체 핵산 ④ 항체 핵산 항체 ⑤ 핵산 항체 항원",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q02",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "02 위 PCR 검사에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 병원체 내부의 유전 물질을 증폭시킨다. ㄴ. 검사 시간이 항원이나 항체 검사에 비해 길 다. ㄷ. 항원이나 항체 검사보다 감염병 진단의 정확 도가 높다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q03",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병과 병원체",
+   "text": "03 다음 중 감염병에 대한 설명으로 옳지 않은 것은? ① 병원체가 사람의 몸에 침입하여 생기는 질병이다. ② 병원체의 전파 속도가 빠른 특성이 있다. ③ 전파 속도에 비해 치명적인 위험성은 떨어진다. ④ 인공지능기술을 활용하여 감염병 예방 백신 개발에 드는 시간을 단축시킬 수 있다. ⑤ 정보통신기술을 활용하여 감염 경로를 빠르고 정확하 게 분석할 수 있다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q04",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 4,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "04 (가)~(다)는 코로나 19 감염 여부를 검사하기 위해 신속 항원 키트를 실시한 서로 다른 3명의 검사 결과이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? (단, S는 검체를 넣는 곳, C는 대조군, T는 실 험군이다.) <보기> ㄱ. (가)에서 코로나 바이러스 항원이 검출되지 않았다. ㄴ. (나)의 결과는 코로나 19 양성을 의미한다. ㄷ. (다)는 유효한 검사가 아니므로 재검사를 실 시 해야 한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q05",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 5,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "05 다음 중 예상되는 미래 사회의 변화로 옳지 않은 것은? ① 빠르게 증가하는 세계 인구로 인해 식량 부족 문제가 발생할 것이다. ② 지구 온난화로 인한 기후 변화가 심해질 것이다. ③ 인공지능과 로봇 기술의 발전으로 많은 직업이 자동 화될 것이다. ④ 고령화로 인해 의료 및 복지에 대한 수요가 줄어들 것이다. ⑤ 가상현실과 증강현실 기술이 일상생활과 교육에 널리 활용될 것이다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q06",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 6,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제와 과학의 필요성",
+   "text": "06 (가)~(다)는 과학 기술을 활용하여 사회 문제를 해결한 사례를 나타낸 것이다. (가) 드론과 위성 영상 분석 기술을 활용하여 산불 발생 지역을 실시간으로 감시하고 신속 하게 대응하고 있다. (나) 인공지능(AI)을 활용한 언어 번역 앱이 개 발되어 서로 다른 언어를 사용하는 사람들 간 의 의사소통이 원활해지고 있다. (다) 사물인터넷(IoT) 기술을 기반으로 한 스마 트 홈 시스템이 고령자들의 생활 안전을 실시 간으로 모니터링하며 위급 상황 시 구조 요청 이 가능하도록 돕고 있다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. (가)는 자연재해의 대응 능력을 향상시킨 사 례이다. ㄴ. (나)는 사회적 약자의 정보 접근성을 낮추는 문제를 해결한 사례이다. ㄷ. (다)는 고령화 사회에서 노인의 안전 문제를 해결하려는 노력의 일환이다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q07",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 7,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터",
+   "text": "07 빅데이터에 대한 설명으로 옳은 것만을 <보기>에서 있 는 대로 고른 것은? <보기> ㄱ. 빅데이터는 규모가 크고 생성 속도가 빠르다. ㄴ. 빅데이터의 자료 형태는 한정적이다. ㄷ. 빅데이터 분석을 통해 미래의 경향을 예측할 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q08",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 8,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "08 다음은 빅데이터를 활용한 사례를 나타낸 것이다. 한 도시에서는 교통 혼잡을 줄이기 위해 시민들의 이동 경로, 날씨 정보, 대중교통 이용 기록 등 다 양한 데이터를 수집해 빅데이터 분석을 실시하였 다. 이를 통해 혼잡 시간대와 지역을 빠르게 파악하 고, 신속하게 버스 노선을 조정하여 교통 흐름을 개선할 수 있었다. 그러나 특정 연령대의 이동 정보만 분석했을 때는 일부 지역의 실제 교통 상황이 반영되지 않아 정책 의 오류가 발생하기도 했다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 빅데이터를 활용하여 일상 문제를 효과적으로 해결할 수 있다. ㄴ. 빅데이터 분석을 통해 복잡한 문제를 빠르게 해결할 수 있다. ㄷ. 편향된 데이터를 사용할 경우 잘못된 해석이 발생할 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q09",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 9,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "09 빅데이터를 활용한 사례로 옳지 않은 것은? ① 기상 관측 데이터를 분석하여 기상 현상을 예측한다. ② 출퇴근 유동 인구 자료를 분석하여 버스 배차 간격을 조정한다. ③ 학생의 학습 자료를 분석하여 개인별 맞춤형 교육을 제공한다. ④ 인터넷 뱅킹 서비스를 이용하여 온라인 전자 결제가 가능하다. ⑤ 인터넷 사용자의 검색 기록을 바탕으로 추천 광고를 제시한다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q10",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 10,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "데이터셋의 활용",
+   "text": "10 다음은 A 고등학교에서 학생의 통학 여건을 개선하기 위 해 빅데이터를 활용한 사례를 나타낸 것이다. A 고등학교는 학생들의 통학 환경을 개선하고자 여러 자료를 분석해 통학 경로와 소요 시간을 파악 하였다. 분석 결과, 일부 지역 학생들은 등하교에 오랜 시간이 걸리거나 대중교통 이용에 불편을 겪 는 것으로 나타났다. 이에 따라 학교는 특정 지역 을 중심으로 통학 셔틀버스를 운영하고, 등교 시간 을 탄력적으로 조정하는 등의 대책을 마련하였다. 효율적인 셔틀버스 운영을 위해 A 고등학교에서 이용할 수 있는 데이터셋을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 지역별 거주 학생 수 ㄴ. 지역별 통학 시 대중 교통 이용 방법 ㄷ. 지역 별 대중 교통 이용 시 통학 소요 시간 ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q11",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 11,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "11 다음은 A 기업이 과학 기술을 활용한 사례를 나타낸 것 이다. A 기업은 고객의 구매 이력, 시간대별 방문 빈도, SNS 반응 등 다양한 자료를 분석하여 새로운 제품 을 개발하고 맞춤형 광고 전략을 세웠다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 빅데이터 분석을 통해 인공지능이 소비자의 행동을 예측하였다. ㄴ. 과학기술이 마케팅 전략에 활용된 사례이다. ㄷ. 인공지능 기술이 감정 표현 능력을 키운 사례 에 해당한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q12",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 12,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 유용성",
+   "text": "12 다음 중 인공지능과 빅데이터의 관계에 대한 설명으로 옳지 않은 것은? ① 인공지능은 스스로 데이터를 생성하여 분석 결과를 제공한다. ② 빅데이터는 인공지능이 학습하고 판단하는 데 필요한 기반 자료이다. ③ 인공지능의 성능은 데이터의 양과 질에 영향을 받는 다. ④ 빅데이터 없이도 인공지능은 다양한 문제를 효과적으 로 해결할 수 있다. ⑤ 인공지능은 빅데이터를 활용해 패턴을 찾아내고 예측 모델을 만든다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q13",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 13,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "사물 인터넷(IoT)",
+   "text": "13 다음은 일상생활에서 과학기술이 유용하게 활용된 사례 를 나타낸 것이다. 고령자의 집에 설치된 센서가 움직임을 감지하지 못하자, 자동으로 보호자와 응급 구조센터에 알림 이 전송되었다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 사물 인터넷(IoT) 기술이 활용된 사례이다. ㄴ. 빅데이터 기반으로 건강 예측 알고리즘이 작 동하였다. ㄷ. 과학 기술이 고령자의 안전을 돕는데 활용될 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q14",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 14,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "사물 인터넷(IoT)",
+   "text": "14 다음 중 사물인터넷(IoT)을 활용한 사례로 적절하지 않은 것은? ① 스마트팜에서 온도와 습도 센서를 이용해 자동으로 환기창을 여는 시스템 ② 건강 관리 밴드가 사용자의 심박수와 수면 패턴을 기 록하고 모바일 앱으로 전송하는 기능 ③ 자동차가 도로 상황을 감지하고 자동으로 속도를 조 절하는 자율주행 기술 ④ 냉장고가 내부 식재료의 유통기한을 인식하고 스마트 폰에 알림을 보내는 기능 ⑤ 클라우드 문서 작성 도구를 사용해 팀원과 실시간으 로 문서를 편집하고 공유하는 활동",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q15",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 15,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "사물 인터넷(IoT), 인공지능로봇",
+   "text": "15 다음은 A 도시에서 도시 환경 개선을 위해 과학기술을 활용한 사례를 나타낸 것이다. A 도시는 도시의 공기 질을 개선하기 위해 공기 정화 사업을 실시하였다. 미세먼지 농도, 인구 밀집 도, 교통량 등의 데이터를 분석하여, 공기 정화가 필요한 지역에 공기 정화 장치를 실시간으로 가동 하였다. 사례에서 활용된 과학 기술로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 빅데이터 분석 ㄴ. 사물 인터넷(IoT) ㄷ. 인공 지능 로봇 ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q16",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 16,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "16 과학기술 발전의 유용성과 한계에 대한 설명으로 옳지 않은 것은? ① 과학기술은 인간의 삶을 편리하게 만들고 문제 해결 에 도움을 준다. ② 과학기술은 모든 사회 문제를 완벽하게 해결할 수 있 다. ③ 기술 발전은 새로운 윤리적 문제나 갈등을 야기할 수 있다. ④ 기술 활용에는 사회적 합의와 책임이 필요하다. ⑤ 기술이 만들어낸 문제는 기술만으로 해결되지 않을 수도 있다.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q17",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 17,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "17 과학기술 발전의 한계에 대한 대응으로 옳지 않은 것은? ① 다양한 분야의 전문가와 협력하여 기술의 부작용을 예측한다. ② 과학기술 개발 시 경제적 이익을 최우선으로 고려한 다. ③ 시민 참여를 통해 사회적 수용성을 높인다. ④ 새로운 기술의 윤리적 문제를 사전에 검토한다. ⑤ 교육을 통해 기술에 대한 비판적 사고를 기른다.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q18",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 18,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "18 (가)~(다)는 A 병원에서 개인별 맞춤 치료법을 제공하기 위해 사용하는 과학기술을 나타낸 것이다. (가) DNA 분석 기술을 통해 환자의 유전 정보를 파악하였다. (나) 실시간으로 수집된 건강 데이터를 이용하여 환자의 병력 데이터를 분석하였다. (다) 원격 모니터링 기기로 환자의 건강 상태를 실시간으로 수집하였다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. (가)에서 환자의 유전 정보는 민감한 개인 정 보이므로 정보 취급에 주의가 필요하다. ㄴ. (나)는 사물 인터넷(IoT) 기술을 활용한 사례 이다. ㄷ. (다)에서 환자의 건강 정보는 사전에 동의를 받은 후 수집해야 한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q19",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 19,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학 윤리",
+   "text": "19 과학자가 준수해야 할 연구 윤리에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 실험 결과는 투명하게 공개하고 검증받아야 한다. ㄴ. 동물 실험 시 실험 결과가 유익하다면 동물의 생명은 고려하지 않아도 된다. ㄷ. 다른 과학자의 연구 결과의 일부를 출처 없이 사용하는 것은 윤리적으로 문제되지 않는다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q20",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 20,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "20 과학 관련 사회적 쟁점(SSI)에 대한 설명으로 옳은 것만 을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 유전자 조작 기술은 사회적 쟁점의 대표적인 예시이다. ㄴ. 과학기술이 발달함에 따라 과학 관련 사회적 쟁점은 감소하고 있다. ㄷ. 사회적 쟁점을 해결하기 위해 다양한 관점에 서 상황을 이해하려는 노력이 필요하다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q21",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 21,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술",
+   "text": "21 신속 항원 검사와 PCR 검사의 장점을 1가지씩 서술하시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q22",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 22,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터",
+   "text": "22 빅데이터와 인공지능(AI) 기술의 관계를 서술하시오.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q23",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 23,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-02",
+   "topic_label": "사물 인터넷(IoT)",
+   "text": "23 사물 인터넷 기술(IoT) 기술이 일상 생활에서 활용되는 사례를 서술하시오.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q24",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 24,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-03",
+   "topic_label": "인공지능로봇",
+   "text": "24 인공지능 로봇 기술이 도입됨에 따라 발생할 수 있는 사 회적 문제 1가지를 서술하시오.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r2-q25",
+   "paper": "3단원 중간·기말 대비평가 2회",
+   "no": 25,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)",
+   "text": "25 다음은 자율 주행 자동차에 대한 설명이다. 자율 주행 자동차는 센서와 인공지능을 이용해 운전자의 조작 없이 스스로 주행하는 차량이다. 이 기술은 교통사고를 줄이고, 고령자나 장애인 도 이동할 수 있게 하는 등 많은 장점이 있지만, 실제 도로에서 발생할 수 있는 다양한 상황에 대 한 윤리적, 사회적 논의도 함께 이루어지고 있다. 자율 주행 자동차 기술이 발전하면서 나타날 수 있는 윤 리적 문제나 사회적 쟁점을 한 가지 제시하고, 그에 대 한 자신의 생각을 서술하시오.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q01",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 1,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병의 정의와 특성",
+   "text": "01 감염병에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 세균이나 바이러스와 같은 병원체가 몸에 침 입하여 생긴다. ㄴ. 교통수단의 발달과 인구 이동 증가는 감염병 의 전파 속도를 늦춘다. ㄷ. 감염병의 확산을 막기 위해서는 신속한 진단 과 감염 경로의 추적이 중요하다. ① ㄴ ② ㄷ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q02",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 2,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "식속 항원 검사",
+   "text": "02 그림은 신속 항원 검사를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 검체는 침이나 코에서 채취한다. ㄴ. 검체 속 병원체의 유전물질(핵산)을 검출하는 검사이다. ㄷ. 비감염자의 경우 대조선에만 색이 나타나고, 감염자의 경우 실험선과 대조선에 모두 색이 나타난다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q03",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 3,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "PCR 검사",
+   "text": "03 PCR 검사에 대한 설명으로 옳지 않은 것은? ① 코 또는 입 안에서 채취한 검체를 이용한다. ② 검체 속 유전자를 대량으로 증폭하여 검출한다. ③ 신속 항원 검사보다 진단에 걸리는 시간이 짧다. ④ 병원체의 유전 물질을 이용하여 감염 여부를 진단한다. ⑤ 코로나 바이러스의 경우 RNA를 DNA로 역전사한 후 증폭한다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q04",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 4,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 방법의 비교",
+   "text": "04 (가)~(다)에 해당하는 진단 방법의 이름을 각각 쓰시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q05",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 5,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-01",
+   "topic_label": "감염병 진단 기술의 정확성",
+   "text": "05 (다)의 검사가 (가)의 검사보다 감염 여부를 더 정확하게 진단할 수 있는 까닭을 서술하시오.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q06",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 6,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제 해결에서 과학의 역할",
+   "text": "06 미래 사회 문제 해결에서 과학의 역할에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 문제 해결 과정에서 사회적 합의를 거치는 자 세가 필요하다. ㄴ. 기후 변화, 인구 증가 등은 미래 사회에 발생 할 수 있는 문제이다. ㄷ. 과학기술로 문제를 해결할 때는 부작용이나 위험성을 점검할 필요가 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q07",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 7,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-01",
+   "topic_label": "미래 사회 문제 해결에서 과학의 필요성",
+   "text": "07 다음은 감염병 진단 기술에 대한 설명이다. COVID-19가 전 세계로 확산되던 초기에는 감염 여 부를 확인하는 데 며칠이 걸렸다. 이후 신속 항원 검사와 PCR 검사와 같은 진단 기술이 빠르게 개발· 보급되면서 짧은 시간 안에 감염 여부를 정확하게 확 인할 수 있게 되었다. 이러한 진단 기술의 발전에 힘입어 감염자를 신속하게 구분하고 격리함으로써 감염병의 확산 속도를 늦출 수 있었으며, 그 결과 의료 체계의 붕괴를 막고 많은 생명을 지킬 수 있었 다. 위 사례로부터 이끌낼 수 있는 결론으로 가장 적절한 것은? ① 감염병 진단 기술의 발전은 감염병 확산과는 관련이 없다. ② 과학기술이 발전하면 모든 사회 문제가 저절로 해결 된다. ③ 사회적 합의 없이 과학기술만 발전시키면 미래 사회 의 모든 문제가 해결된다. ④ 감염병 문제는 과학기술로만으로 해결할 수 없으므로 과학적 접근이 불필요하다. ⑤ 과학기술은 문제를 신속하고 정확하게 파악하고 해결 하는 데 중요한 역할을 한다.",
+   "candidates": [
+    "isci2-antibody-test",
+    "isci2-antibody",
+    "isci2-antigen-test",
+    "isci2-antigen",
+    "isci2-artificial-intelligence",
+    "isci2-future-society-problem",
+    "isci2-infection-route-tracing",
+    "isci2-infectious-disease",
+    "isci2-pathogen",
+    "isci2-pcr-test"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q08",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 8,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "데이터와 빅데이터의 정의",
+   "text": "08 데이터와 빅데이터에 대한 설명으로 옳은 것만을 <보 기>에서 있는 대로 고른 것은? <보기> ㄱ. 데이터는 수집하고 정리하면 정보가 될 수 있다. ㄴ. 빅데이터는 일반적인 소프트웨어로 쉽게 처리 할 수 있는 소량의 데이터를 의미한다. ㄷ. 빅데이터의 자료 형태는 수치 자료뿐만 아니라 글, 영상, 음상 등으로 다양하게 존재한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q09",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 9,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 특징과 등장 배경",
+   "text": "09 빅데이터에 대한 설명으로 옳지 않은 것은? ① 빅데이터는 방대하고 복잡한 데이터의 집합을 말한다. ② 빅데이터를 다룰 때는 데이터의 품질을 고려해야 한다. ③ 센서의 개발과 정보 통신 기술의 발달로 빅데이터가 대두되었다. ④ 빅데이터는 다양한 변수가 얽힌 복잡한 문제를 분석 하는 데 활용될 수 없다. ⑤ 빅데이터는 정부의 정책 결정이나 교육, 의료 등 다 양한 분야의 의사 결정에 활용된다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q10",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 10,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "데이터셋의 의미와 활용",
+   "text": "10 데이터셋과 이를 이용할 수 있는 공간에 대한 설명으로 옳은 것은? ① 국가에서 수집한 데이터셋은 저작권 문제로 공개하지 않는다. ② 데이터셋은 유사한 성질을 가진 데이터를 모아 정리 한 것이다. ③ 데이터셋은 개인이 직접 수집한 자료만을 데이터셋이 라고 한다. ④ 공공 데이터 포털에 공개된 데이터셋은 특정 전문가 만 이용할 수 있다. ⑤ 빅데이터를 다룰 때는 다른 사람이 수집한 데이터셋 을 이용해서는 안 된다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q11",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 11,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 과학기술 분야 활용 사례",
+   "text": "11 빅데이터가 과학기술 분야에서 활용되는 사례에 대한 설 명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 기상 관측에 수집된 데이터는 일기 예보의 정 확성을 낮추는 데 활용된다. ㄴ. 유전체 빅데이터는 암이나 난치병 치료, 개인 맞춤형 의학에 활용될 수 있다. ㄷ. 유럽 입자 물리 연구소의 대형 강입자 충돌기 에서는 매일 많은 양의 데이터가 생산된다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q12",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 12,
+   "kind": "choice",
+   "answer": "①",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터의 사회적 활용 사례",
+   "text": "12 빅데이터의 사회적 활용 사례에 대한 설명으로 옳지 않 은 것은? ① 기업에서는 소비자의 개인 정보를 반드시 공개하여 관리해야 한다. ② 교통 분야에서는 실시간 교통량 분석으로 교통 정보 를 제공할 수 있다. ③ 교육 분야에서는 학습 분석을 통해 개별화된 맞춤 교 육을 제공할 수 있다. ④ 농업 분야에서는 환경 정보 빅데이터로 식물 성장에 적절한 환경을 제어할 수 있다. ⑤ 정부 기관에서는 통화량 및 유동 인구 데이터를 분석 하여 심야 버스 노선을 결정할 수 있다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q13",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 13,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터 활용의 장점",
+   "text": "13 빅데이터 활용의 장점에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 빅데이터는 데이터 간의 상호 관계와 패턴을 알 수 있는 다량의 정보를 제공한다. ㄴ. 빅데이터를 활용하면 과학 지식의 발견과 정 확도 향상에 걸리는 시간과 경비를 늘릴 수 있다. ㄷ. 빅데이터는 많은 사람들의 행동 패턴을 분석 하여 개인 맞춤형 솔루션을 제공하는 데 활 용될 수 있다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q14",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 14,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터 활용 사례 분석",
+   "text": "14 다음은 빅데이터를 활용한 사례에 대한 설명이다. 한 지역의 보건 당국은 특정 시기에 감기약과 해열 제의 판매량이 평소보다 급격히 증가하는 것을 확인 하고, 이 지역에서 독감이 유행하기 시작했다고 예 측하였다. 이러한 예측은 약국의 판매 데이터, 병원 방문 기록, 포털 사이트에서의 건강 관련 검색량 등 다양한 종류의 방대한 자료를 실시간으로 수집하고 분석하여 이루어진 것이다. 보건 당국은 이 예측 결 과를 바탕으로 독감 유행이 예상되는 지역에 백신을 우선적으로 공급하고 예방 접종을 독려하는 등 선제 적으로 대응할 수 있었다. 위 사례에서 활용된 빅데이터의 특징으로 가장 적절하지 않은 것은? ① 데이터를 실시간으로 수집하고 분석하였다. ② 방대한 양의 자료를 처리하여 유행을 예측하였다. ③ 소량의 표본 자료만을 정밀하게 분석하여 결론을 도 출하였다. ④ 판매 데이터, 방문 기록, 검색량 등 다양한 형태의 자료를 함께 분석하였다. ⑤ 수집한 자료를 분석하여 향후 상황을 예측하고 대응 방안을 마련하는 데 활용하였다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q15",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 15,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터 사용의 주의점",
+   "text": "15 빅데이터는 사용할 때 주의해야 할 점에 대한 설명으로 옳은 것은? ① 빅데이터는 복잡성이 낮아 다루기 쉬운 자료이다. ② 빅데이터는 편향된 데이터가 포함되어도 항상 신뢰할 수 있다. ③ 빅데이터를 분석할 때는 데이터의 품질을 고려할 필 요가 없다. ④ 빅데이터를 다룰 때는 데이터의 양이 적을수록 분석 결과가 더 정확해진다. ⑤ 빅데이터에는 많은 사람의 개인 정보가 포함될 수 있 으므로 보호와 관리에 주의해야 한다.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q16",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 16,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터 활용의 장점",
+   "text": "16 다음은 스마트 병원에서 빅데이터를 활용하는 사례에 대 한 설명이다. 한 병원에서는 그 동안 축적된 수만 명의 환자 진료 기록, 유전자 정보, 임상 시험 결과 등 방대한 양의 의료 데이터를 분석하여 환자 개개인의 특성에 맞는 치료법을 제시하는 시스템을 도입하였다. 이 시스템 은 소수의 환자 자료만으로는 알기 어려웠던 질병의 패턴을 찾아내어, 신약 개발에 걸리는 기간을 단축 하고 환자 맞춤형 치료의 정확도를 높이는 데 기여 하고 있다. 위 사례에서 빅데이터를 활용함으로써 얻을 수 있는 장 점을 한 가지 서술하시오.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q17",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 17,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-02",
+   "topic_label": "빅데이터 사용의 주의점",
+   "text": "17 다음은 COVID-19 확산 당시 빅데이터 활용 사례에 대한 설명이다. 방역 당국은 확진자의 신용 카드 사용 내역, 이동 통신사의 위치 정보, 폐쇄 회로 텔레비전(CCTV) 영 상 등 다양한 데이터를 종합하여 확진자의 이동 경 로를 빠르게 파악하고 접촉자를 신속하게 찾아내는 데 활용하였다. 이러한 빅데이터 기반의 역학 조사 는 감염병의 확산을 효과적으로 억제하는 데 크게 기여하였다. 위와 같은 빅데이터를 활용할 때 발생할 수 있는 문제점 을 한 가지 서술하시오.",
+   "candidates": [
+    "isci2-big-data-limitation",
+    "isci2-big-data",
+    "isci2-data",
+    "isci2-dataset",
+    "isci2-digital-conversion",
+    "isci2-information-communication-technology",
+    "isci2-public-data",
+    "isci2-sensor"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q18",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 18,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "사물 인터넷, 인공지능, 로봇의 정의",
+   "text": "18 인공지능, 로봇, 사물 인터넷에 대한 설명으로 옳은 것만 을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 인공지능은 인간의 추론이나 학습 능력을 컴 퓨터에 구현한 기술이다. ㄴ. 로봇은 자동화된 기계 장치로, 인간의 작업을 보조하거나 대체하는 데 사용된다. ㄷ. 사물 인터넷은 각종 물건에 센서와 통신 기능 을 내장하여 인터넷에 연결하는 기술이다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q19",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 19,
+   "kind": "choice",
+   "answer": "②",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "첨단 과학기술의 활용 사례",
+   "text": "19 첨단 과학기술의 활용 사례에 대한 설명으로 옳지 않은 것은? ① 청소 로봇은 공간의 형태를 인지하여 스스로 청소한 다. ② 배송 드론은 사람이 직접 운전해야만 물건을 배달할 수 있다. ③ 인공지능 비서는 사람의 목소리를 인식하고 작업을 수행한다. ④ 스마트 병원에서는 환자의 상태를 모니터링하고 원격 으로 진료한다. ⑤ 자율주행 자동차는 환경 정보를 실시간으로 분석하여 최적의 경로를 선택한다.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q20",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 20,
+   "kind": "choice",
+   "answer": "④",
+   "curriculum": "10통과2-03-03",
+   "topic_label": "로봇 사용이 생활에 미치는 영향",
+   "text": "20 로봇 사용이 우리 생활에 미치는 영향에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 로봇 사용으로 생활이 편리해지고 산업 생산 성이 높아지고 있다. ㄴ. 로봇 기술의 발전이 가져올 부정적 영향에 대 해서는 대비할 필요가 없다. ㄷ. 로봇이 인간의 일자리를 대체하면서 일자리 감소와 같은 문제가 발생할 수 있다. ① ㄴ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q21",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 21,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-03",
+   "topic_label": "과학기술 발전의 부정적 영향",
+   "text": "21 다음은 한 물류 창고에서 도입한 인공지능 로봇에 대한 설명이다. 이 물류 창고에서는 상품을 분류하고 운반하는 작업 에 인공지능 로봇을 도입하였다. 로봇은 창고 내부 를 스스로 이동하며 상품의 위치를 인식하고, 가장 효율적인 경로로 상품을 옮긴다. 로봇 도입 이후 상 품 처리 속도가 크게 빨라지고 작업 중 발생하던 안 전사고도 줄어들었다. 그러나 기존에 이 작업을 담 당하던 직원들 중 상당수는 다른 일자리를 찾아야 했다. 위 사례에서 인공지능 로봇 도입으로 발생할 수 있는 문 제점을 한 가지 서술하시오.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-artificial-intelligence",
+    "isci2-information-communication-technology",
+    "isci2-internet-of-things",
+    "isci2-sensor",
+    "isci2-usefulness-and-limitation-of-technology"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q22",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 22,
+   "kind": "choice",
+   "answer": "③",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)의 정의",
+   "text": "22 과학 관련 사회적 쟁점(SSI)에 대한 설명으로 옳은 것만 을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 과학기술의 발전으로 발생한 사회적·윤리적 책임을 말한다. ㄴ. 과학 관련 사회적 쟁점은 한 가지 관점에서만 논증 근거를 제시할 수 있다. ㄷ. 기후 변화에 따른 기후 위기는 과학 관련 사 회적 쟁점의 예가 될 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q23",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 23,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 관련 사회적 쟁점(SSI)의 분야별 사례",
+   "text": "23 과학 관련 사회적 쟁점(SSI)에 대한 설명으로 옳지 않은 것은? ① 미세 먼지나 기후 변화와 같은 문제는 환경 분야의 과학 관련 사회적 쟁점에 해당한다. ② 원자력 발전소의 안전성에 대한 우려는 에너지 분야 의 과학 관련 사회적 쟁점에 해당한다. ③ 식품 첨가물이나 항생제 남용과 같은 문제는 건강 분 야의 과학 관련 사회적 쟁점에 해당한다. ④ 동물 실험이나 인간 복제와 같은 문제는 생명 윤리 분야의 과학 관련 사회적 쟁점에 해당한다. ⑤ 과학 관련 사회적 쟁점은 과학자들만의 문제이므로 일반 시민은 논의에 참여할 필요가 없다.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q24",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 24,
+   "kind": "choice",
+   "answer": "⑤",
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 윤리의 의미와 원칙",
+   "text": "24 과학 윤리에 대한 설명으로 옳은 것은? ① 과학 윤리는 소수의 과학자에게만 이익이 되도록 하 는 원칙이다. ② 과학 연구를 수행할 때는 어떠한 윤리적 원칙도 따를 필요가 없다. ③ 경제적 이윤을 극대화하는 것이 과학 윤리의 가장 중 요한 목표이다. ④ 과학 관련 사회적 쟁점은 한 사람의 판단만으로 쉽게 해결할 수 있다. ⑤ 과학 윤리에는 생명 존중, 공정성, 안전, 환경적 책임 등의 원칙이 있다.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  },
+  {
+   "item_id": "isci2-mid-3-r3-q25",
+   "paper": "3단원 중간·기말 대비평가 3회",
+   "no": 25,
+   "kind": "written",
+   "answer": null,
+   "curriculum": "10통과2-03-04",
+   "topic_label": "과학 관련 사회적 쟁점",
+   "text": "25 다음은 어떤 지역에서 있었던 유전자 변형 작물(GMO) 재배를 둘러싼 논쟁에 대한 설명이다. 한 지역에서 병충해에 강하고 수확량이 많은 유전자 변형 작물을 재배하려는 계획이 추진되었다. 이를 찬성하는 사람들은 유전자 변형 작물이 식량 부족 문제를 해결하고 농가의 소득을 높일 수 있다고 주 장하였다. 반면 이를 반대하는 사람들은 유전자 변 형 작물이 인체와 주변 생태계에 미치는 영향이 충 분히 검증되지 않았으며, 재래종 작물의 다양성을 해칠 수 있다고 주장하였다. 두 입장이 팽팽히 맞서 면서 지역 사회에서는 이 문제에 대한 논의가 계속 되고 있다. 위 사례와 같은 과학 관련 사회적 쟁점(SSI)을 해결하기 위해 필요한 자세를 두 가지 서술하시오.",
+   "candidates": [
+    "isci2-ai-robot",
+    "isci2-science-ethics",
+    "isci2-socioscientific-issue"
+   ]
+  }
+ ]
+}

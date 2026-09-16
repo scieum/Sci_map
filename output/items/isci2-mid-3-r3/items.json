@@ -51,8 +51,18 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-infectious-disease"
+      ],
+      "mapping": "llm",
+      "text_internal": "01 감염병에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 세균이나 바이러스와 같은 병원체가 몸에 침 입하여 생긴다. ㄴ. 교통수단의 발달과 인구 이동 증가는 감염병 의 전파 속도를 늦춘다. ㄷ. 감염병의 확산을 막기 위해서는 신속한 진단 과 감염 경로의 추적이 중요하다. ① ㄴ ② ㄷ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "감염병은 세균이나 바이러스 같은 병원체가 몸에 들어와 생기는 질병이고, 이동량과 이동 속도가 늘수록 퍼지는 속도도 빨라진다. 치료 약이 없는 단계에서는 신속한 진단과 경로 차단이 확산을 늦추는 방법이 된다. 전파 속도가 늦어진다고 한 보기가 명제와 반대다.",
+      "cited_relations": [
+        "rel-idis-pathogen",
+        "rel-idis-spread",
+        "rel-idis-diagnose"
+      ],
+      "mapping_reason": "감염병의 정의·전파·대응을 한꺼번에 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q02",
@@ -88,8 +98,17 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-antigen-test"
+      ],
+      "mapping": "llm",
+      "text_internal": "02 그림은 신속 항원 검사를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 검체는 침이나 코에서 채취한다. ㄴ. 검체 속 병원체의 유전물질(핵산)을 검출하는 검사이다. ㄷ. 비감염자의 경우 대조선에만 색이 나타나고, 감염자의 경우 실험선과 대조선에 모두 색이 나타난다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "신속 항원 검사가 찾는 것은 병원체 전체도, 유전물질인 핵산도 아니라 병원체가 지닌 단백질이다. 결과가 빨리 나오는 대신 정확도는 PCR 검사보다 낮다. 핵산을 검출한다고 한 보기가 여기서 걸린다.",
+      "cited_relations": [
+        "rel-agt-target",
+        "rel-agt-tradeoff"
+      ],
+      "mapping_reason": "항원 검사의 검출 대상이 갈림길인 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q03",
@@ -125,8 +144,18 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-pcr-test"
+      ],
+      "mapping": "llm",
+      "text_internal": "03 PCR 검사에 대한 설명으로 옳지 않은 것은? ① 코 또는 입 안에서 채취한 검체를 이용한다. ② 검체 속 유전자를 대량으로 증폭하여 검출한다. ③ 신속 항원 검사보다 진단에 걸리는 시간이 짧다. ④ 병원체의 유전 물질을 이용하여 감염 여부를 진단한다. ⑤ 코로나 바이러스의 경우 RNA를 DNA로 역전사한 후 증폭한다.",
+      "explanation": "PCR 검사는 병원체의 유전물질인 핵산을 증폭해, 아주 조금 남아 있어도 검출할 수 있게 만든다. 대신 항원 검사나 항체 검사보다 결과가 늦게 나오고 정확도는 가장 높다. 진단 시간이 더 짧다고 한 선택지가 명제와 어긋난다.",
+      "cited_relations": [
+        "rel-pcr-target",
+        "rel-pcr-amplify",
+        "rel-pcr-tradeoff"
+      ],
+      "mapping_reason": "PCR의 검출 대상과 시간·정확도 맞바꿈을 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q04",
@@ -162,8 +191,18 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-antigen-test",
+        "isci2-pcr-test"
+      ],
+      "mapping": "llm",
+      "text_internal": "04 (가)~(다)에 해당하는 진단 방법의 이름을 각각 쓰시오.",
+      "explanation": "진단법의 이름은 무엇을 검출하는가로 갈린다. 검체에서 병원체의 단백질을 찾으면 항원 검사이고, 유전물질인 핵산을 증폭해 찾으면 PCR 검사다. 남은 하나는 혈액에서 무엇을 확인하는지 떠올리면 이름이 나온다.",
+      "cited_relations": [
+        "rel-agt-target",
+        "rel-pcr-target"
+      ],
+      "mapping_reason": "검출 대상으로 진단법 이름을 가르게 하는 서술형이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q05",
@@ -199,8 +238,19 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-pcr-test",
+        "isci2-antigen-test"
+      ],
+      "mapping": "llm",
+      "text_internal": "05 (다)의 검사가 (가)의 검사보다 감염 여부를 더 정확하게 진단할 수 있는 까닭을 서술하시오.",
+      "explanation": "PCR 검사는 핵산이 아주 조금만 남아 있어도 증폭을 거치면 검출할 수 있을 만큼 양이 늘어나기 때문에, 결과는 늦게 나오지만 감염 여부를 가장 정확하게 알려 준다. 반대로 항원 검사는 빠른 대신 정확도가 낮다. 증폭이라는 과정을 정확도의 까닭으로 들었는지 보면 된다.",
+      "cited_relations": [
+        "rel-pcr-amplify",
+        "rel-pcr-tradeoff",
+        "rel-agt-tradeoff"
+      ],
+      "mapping_reason": "정확도 차이의 까닭을 증폭 원리로 설명하게 하는 서술형이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q06",
@@ -236,8 +286,17 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-future-society-problem"
+      ],
+      "mapping": "llm",
+      "text_internal": "06 미래 사회 문제 해결에서 과학의 역할에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 문제 해결 과정에서 사회적 합의를 거치는 자 세가 필요하다. ㄴ. 기후 변화, 인구 증가 등은 미래 사회에 발생 할 수 있는 문제이다. ㄷ. 과학기술로 문제를 해결할 때는 부작용이나 위험성을 점검할 필요가 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "미래 사회 문제는 기후 변화·인구 증가처럼 여러 갈래에서 생겨나고, 그것을 푸는 데 과학기술이 맡는 몫은 커질 것으로 본다. 다만 기술로 문제를 풀 때에도 부작용을 점검하고 합의를 거치는 자세가 함께 필요하다는 점을 놓치지 않으면 된다.",
+      "cited_relations": [
+        "rel-fsp-sources",
+        "rel-fsp-science-role"
+      ],
+      "mapping_reason": "미래 사회 문제의 갈래와 과학의 몫을 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q07",
@@ -273,8 +332,18 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-future-society-problem",
+        "isci2-infectious-disease"
+      ],
+      "mapping": "llm",
+      "text_internal": "07 다음은 감염병 진단 기술에 대한 설명이다. COVID-19가 전 세계로 확산되던 초기에는 감염 여 부를 확인하는 데 며칠이 걸렸다. 이후 신속 항원 검사와 PCR 검사와 같은 진단 기술이 빠르게 개발· 보급되면서 짧은 시간 안에 감염 여부를 정확하게 확 인할 수 있게 되었다. 이러한 진단 기술의 발전에 힘입어 감염자를 신속하게 구분하고 격리함으로써 감염병의 확산 속도를 늦출 수 있었으며, 그 결과 의료 체계의 붕괴를 막고 많은 생명을 지킬 수 있었 다. 위 사례로부터 이끌낼 수 있는 결론으로 가장 적절한 것은? ① 감염병 진단 기술의 발전은 감염병 확산과는 관련이 없다. ② 과학기술이 발전하면 모든 사회 문제가 저절로 해결 된다. ③ 사회적 합의 없이 과학기술만 발전시키면 미래 사회 의 모든 문제가 해결된다. ④ 감염병 문제는 과학기술로만으로 해결할 수 없으므로 과학적 접근이 불필요하다. ⑤ 과학기술은 문제를 신속하고 정확하게 파악하고 해결 하는 데 중요한 역할을 한다.",
+      "explanation": "치료 약이 없는 단계에서는 감염 여부를 빨리 가려내고 경로를 끊는 일이 확산을 늦추는 방법이 되고, 진단 기술의 발전이 바로 그 일을 해냈다. 감염병의 진단·추적·치료가 그러했듯 과학기술이 문제 해결에 맡는 몫이 크다는 결론으로 이어진다.",
+      "cited_relations": [
+        "rel-fsp-science-role",
+        "rel-idis-diagnose"
+      ],
+      "mapping_reason": "제시된 사례에서 끌어낼 결론이 과학의 몫에 관한 명제와 맞물린다"
     },
     {
       "item_id": "isci2-mid-3-r3-q08",
@@ -308,8 +377,18 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-data",
+        "isci2-big-data"
+      ],
+      "mapping": "llm",
+      "text_internal": "08 데이터와 빅데이터에 대한 설명으로 옳은 것만을 <보 기>에서 있는 대로 고른 것은? <보기> ㄱ. 데이터는 수집하고 정리하면 정보가 될 수 있다. ㄴ. 빅데이터는 일반적인 소프트웨어로 쉽게 처리 할 수 있는 소량의 데이터를 의미한다. ㄷ. 빅데이터의 자료 형태는 수치 자료뿐만 아니라 글, 영상, 음상 등으로 다양하게 존재한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "값 하나만으로는 알아낼 것이 없지만 필요한 것을 골라 모아 분석하면 정보가 된다. 빅데이터는 한눈에 다루기 어려울 만큼 방대하고, 수치뿐 아니라 글·영상·음성처럼 형태도 여러 가지다. 소량의 데이터라고 한 보기는 이 정의와 어긋난다.",
+      "cited_relations": [
+        "rel-data-to-info",
+        "rel-bd-variety"
+      ],
+      "mapping_reason": "데이터와 빅데이터의 정의를 나란히 묻는 문항이다 — 다만 정답 기호와 명제가 맞는지 사람이 한 번 확인할 것"
     },
     {
       "item_id": "isci2-mid-3-r3-q09",
@@ -343,8 +422,19 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data",
+        "isci2-sensor"
+      ],
+      "mapping": "llm",
+      "text_internal": "09 빅데이터에 대한 설명으로 옳지 않은 것은? ① 빅데이터는 방대하고 복잡한 데이터의 집합을 말한다. ② 빅데이터를 다룰 때는 데이터의 품질을 고려해야 한다. ③ 센서의 개발과 정보 통신 기술의 발달로 빅데이터가 대두되었다. ④ 빅데이터는 다양한 변수가 얽힌 복잡한 문제를 분석 하는 데 활용될 수 없다. ⑤ 빅데이터는 정부의 정책 결정이나 교육, 의료 등 다 양한 분야의 의사 결정에 활용된다.",
+      "explanation": "빅데이터는 변수가 여럿 얽혀 하나씩 따져서는 풀기 어려운 문제를 빠르게 살펴보는 데 쓰이고, 거기서 뽑아낸 정보는 정책이나 의료 같은 결정에 쓰인다. 센서로 모은 값이 디지털 형태로 쌓이면서 이런 규모의 데이터가 만들어졌다. 복잡한 문제 분석에 쓸 수 없다고 한 선택지가 명제와 정반대다.",
+      "cited_relations": [
+        "rel-bd-complex",
+        "rel-bd-predict",
+        "rel-sensor-bigdata"
+      ],
+      "mapping_reason": "빅데이터의 특징과 등장 배경을 함께 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q10",
@@ -378,8 +468,18 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-dataset",
+        "isci2-public-data"
+      ],
+      "mapping": "llm",
+      "text_internal": "10 데이터셋과 이를 이용할 수 있는 공간에 대한 설명으로 옳은 것은? ① 국가에서 수집한 데이터셋은 저작권 문제로 공개하지 않는다. ② 데이터셋은 유사한 성질을 가진 데이터를 모아 정리 한 것이다. ③ 데이터셋은 개인이 직접 수집한 자료만을 데이터셋이 라고 한다. ④ 공공 데이터 포털에 공개된 데이터셋은 특정 전문가 만 이용할 수 있다. ⑤ 빅데이터를 다룰 때는 다른 사람이 수집한 데이터셋 을 이용해서는 안 된다.",
+      "explanation": "데이터셋은 성질이 비슷한 데이터를 한데 모아 찾아 쓰기 좋게 정리해 놓은 묶음이다. 국가나 공공 기관이 모아 열어 둔 자료는 관측 장비나 예산이 없는 사람도 가져다 쓸 수 있으므로, 공개하지 않는다거나 전문가만 쓸 수 있다는 진술과는 어긋난다.",
+      "cited_relations": [
+        "rel-ds-tidy",
+        "rel-pd-open"
+      ],
+      "mapping_reason": "데이터셋의 정의와 공공 데이터의 개방성을 함께 묻는다"
     },
     {
       "item_id": "isci2-mid-3-r3-q11",
@@ -413,8 +513,17 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data"
+      ],
+      "mapping": "llm",
+      "text_internal": "11 빅데이터가 과학기술 분야에서 활용되는 사례에 대한 설 명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 기상 관측에 수집된 데이터는 일기 예보의 정 확성을 낮추는 데 활용된다. ㄴ. 유전체 빅데이터는 암이나 난치병 치료, 개인 맞춤형 의학에 활용될 수 있다. ㄷ. 유럽 입자 물리 연구소의 대형 강입자 충돌기 에서는 매일 많은 양의 데이터가 생산된다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "빅데이터는 일상생활뿐 아니라 기상 관측, 유전체 분석, 신약 개발 같은 과학 분야에서도 쓰이고, 쌓인 자료에서 정보를 뽑아내면 앞일을 더 정확히 헤아릴 수 있다. 관측 자료가 예보의 정확성을 '낮춘다'고 한 보기가 방향을 거꾸로 적었다.",
+      "cited_relations": [
+        "rel-bd-science",
+        "rel-bd-predict"
+      ],
+      "mapping_reason": "과학 분야에서의 빅데이터 활용을 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q12",
@@ -448,8 +557,16 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data-limitation"
+      ],
+      "mapping": "llm",
+      "text_internal": "12 빅데이터의 사회적 활용 사례에 대한 설명으로 옳지 않 은 것은? ① 기업에서는 소비자의 개인 정보를 반드시 공개하여 관리해야 한다. ② 교통 분야에서는 실시간 교통량 분석으로 교통 정보 를 제공할 수 있다. ③ 교육 분야에서는 학습 분석을 통해 개별화된 맞춤 교 육을 제공할 수 있다. ④ 농업 분야에서는 환경 정보 빅데이터로 식물 성장에 적절한 환경을 제어할 수 있다. ⑤ 정부 기관에서는 통화량 및 유동 인구 데이터를 분석 하여 심야 버스 노선을 결정할 수 있다.",
+      "explanation": "사람들의 활동에서 모은 데이터에는 민감한 개인 정보가 섞일 수 있어 따로 보호하고 관리해야 한다. 소비자의 개인 정보를 반드시 공개해 관리한다는 선택지는 이 명제와 정면으로 어긋난다.",
+      "cited_relations": [
+        "rel-bdl-privacy"
+      ],
+      "mapping_reason": "개인 정보 보호 명제가 오답 선택지를 바로 가른다"
     },
     {
       "item_id": "isci2-mid-3-r3-q13",
@@ -483,8 +600,17 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data"
+      ],
+      "mapping": "llm",
+      "text_internal": "13 빅데이터 활용의 장점에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 빅데이터는 데이터 간의 상호 관계와 패턴을 알 수 있는 다량의 정보를 제공한다. ㄴ. 빅데이터를 활용하면 과학 지식의 발견과 정 확도 향상에 걸리는 시간과 경비를 늘릴 수 있다. ㄷ. 빅데이터는 많은 사람들의 행동 패턴을 분석 하여 개인 맞춤형 솔루션을 제공하는 데 활 용될 수 있다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "쌓인 데이터에서 가치 있는 정보를 뽑아내면 데이터 사이의 관계와 규칙을 찾아 맞춤형 결정에 쓸 수 있고, 변수가 여럿 얽힌 문제도 빠르게 살펴볼 수 있다. 시간과 경비를 '늘린다'고 한 보기가 장점을 거꾸로 적었다.",
+      "cited_relations": [
+        "rel-bd-predict",
+        "rel-bd-complex"
+      ],
+      "mapping_reason": "빅데이터 활용의 장점을 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q14",
@@ -518,8 +644,17 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data"
+      ],
+      "mapping": "llm",
+      "text_internal": "14 다음은 빅데이터를 활용한 사례에 대한 설명이다. 한 지역의 보건 당국은 특정 시기에 감기약과 해열 제의 판매량이 평소보다 급격히 증가하는 것을 확인 하고, 이 지역에서 독감이 유행하기 시작했다고 예 측하였다. 이러한 예측은 약국의 판매 데이터, 병원 방문 기록, 포털 사이트에서의 건강 관련 검색량 등 다양한 종류의 방대한 자료를 실시간으로 수집하고 분석하여 이루어진 것이다. 보건 당국은 이 예측 결 과를 바탕으로 독감 유행이 예상되는 지역에 백신을 우선적으로 공급하고 예방 접종을 독려하는 등 선제 적으로 대응할 수 있었다. 위 사례에서 활용된 빅데이터의 특징으로 가장 적절하지 않은 것은? ① 데이터를 실시간으로 수집하고 분석하였다. ② 방대한 양의 자료를 처리하여 유행을 예측하였다. ③ 소량의 표본 자료만을 정밀하게 분석하여 결론을 도 출하였다. ④ 판매 데이터, 방문 기록, 검색량 등 다양한 형태의 자료를 함께 분석하였다. ⑤ 수집한 자료를 분석하여 향후 상황을 예측하고 대응 방안을 마련하는 데 활용하였다.",
+      "explanation": "빅데이터는 형태가 다른 방대한 자료를 함께 모아 규칙을 찾고 앞일을 헤아리는 데 쓰인다. 판매 기록·방문 기록·검색량을 한꺼번에 분석해 유행을 예측한 이 사례가 그러하다. 소량의 표본만 정밀하게 본다는 진술은 빅데이터의 성격과 어긋난다.",
+      "cited_relations": [
+        "rel-bd-variety",
+        "rel-bd-predict"
+      ],
+      "mapping_reason": "사례에 드러난 빅데이터의 특징을 가리는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q15",
@@ -553,8 +688,17 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data-limitation"
+      ],
+      "mapping": "llm",
+      "text_internal": "15 빅데이터는 사용할 때 주의해야 할 점에 대한 설명으로 옳은 것은? ① 빅데이터는 복잡성이 낮아 다루기 쉬운 자료이다. ② 빅데이터는 편향된 데이터가 포함되어도 항상 신뢰할 수 있다. ③ 빅데이터를 분석할 때는 데이터의 품질을 고려할 필 요가 없다. ④ 빅데이터를 다룰 때는 데이터의 양이 적을수록 분석 결과가 더 정확해진다. ⑤ 빅데이터에는 많은 사람의 개인 정보가 포함될 수 있 으므로 보호와 관리에 주의해야 한다.",
+      "explanation": "사람들의 활동에서 모은 데이터에는 민감한 개인 정보가 섞일 수 있어 보호와 관리가 필요하다. 또 데이터가 치우쳐 있거나 믿기 어려우면 양이 많아도 결론이 잘못될 수 있으므로, 편향이 있어도 늘 믿을 수 있다는 진술은 성립하지 않는다.",
+      "cited_relations": [
+        "rel-bdl-privacy",
+        "rel-bdl-bias"
+      ],
+      "mapping_reason": "빅데이터를 쓸 때의 주의점 두 가지가 모두 이 카드의 명제다"
     },
     {
       "item_id": "isci2-mid-3-r3-q16",
@@ -588,8 +732,18 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data"
+      ],
+      "mapping": "llm",
+      "text_internal": "16 다음은 스마트 병원에서 빅데이터를 활용하는 사례에 대 한 설명이다. 한 병원에서는 그 동안 축적된 수만 명의 환자 진료 기록, 유전자 정보, 임상 시험 결과 등 방대한 양의 의료 데이터를 분석하여 환자 개개인의 특성에 맞는 치료법을 제시하는 시스템을 도입하였다. 이 시스템 은 소수의 환자 자료만으로는 알기 어려웠던 질병의 패턴을 찾아내어, 신약 개발에 걸리는 기간을 단축 하고 환자 맞춤형 치료의 정확도를 높이는 데 기여 하고 있다. 위 사례에서 빅데이터를 활용함으로써 얻을 수 있는 장 점을 한 가지 서술하시오.",
+      "explanation": "빅데이터는 변수가 여럿 얽혀 하나씩 따져서는 풀기 어려운 문제를 빠르게 살펴보게 해 주고, 신약 개발 같은 과학 분야에서도 쓰인다. 소수의 자료로는 보이지 않던 규칙을 찾아 맞춤형 결정에 쓸 수 있다는 점을 장점으로 들었는지 보면 된다.",
+      "cited_relations": [
+        "rel-bd-complex",
+        "rel-bd-science",
+        "rel-bd-predict"
+      ],
+      "mapping_reason": "사례에서 얻는 장점을 빅데이터의 분석력 명제로 설명한다"
     },
     {
       "item_id": "isci2-mid-3-r3-q17",
@@ -623,8 +777,16 @@
         "isci2-public-data",
         "isci2-sensor"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-big-data-limitation"
+      ],
+      "mapping": "llm",
+      "text_internal": "17 다음은 COVID-19 확산 당시 빅데이터 활용 사례에 대한 설명이다. 방역 당국은 확진자의 신용 카드 사용 내역, 이동 통신사의 위치 정보, 폐쇄 회로 텔레비전(CCTV) 영 상 등 다양한 데이터를 종합하여 확진자의 이동 경 로를 빠르게 파악하고 접촉자를 신속하게 찾아내는 데 활용하였다. 이러한 빅데이터 기반의 역학 조사 는 감염병의 확산을 효과적으로 억제하는 데 크게 기여하였다. 위와 같은 빅데이터를 활용할 때 발생할 수 있는 문제점 을 한 가지 서술하시오.",
+      "explanation": "카드 사용 내역이나 위치 정보처럼 사람들의 활동에서 모은 데이터에는 민감한 개인 정보가 섞일 수 있어 따로 보호하고 관리해야 한다. 이 사례에서 문제가 될 만한 지점을 개인 정보 쪽에서 짚어 썼는지 보면 된다.",
+      "cited_relations": [
+        "rel-bdl-privacy"
+      ],
+      "mapping_reason": "역학 조사용 빅데이터의 문제점을 쓰게 하는 서술형이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q18",
@@ -656,8 +818,18 @@
         "isci2-sensor",
         "isci2-usefulness-and-limitation-of-technology"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-artificial-intelligence",
+        "isci2-internet-of-things"
+      ],
+      "mapping": "llm",
+      "text_internal": "18 인공지능, 로봇, 사물 인터넷에 대한 설명으로 옳은 것만 을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 인공지능은 인간의 추론이나 학습 능력을 컴 퓨터에 구현한 기술이다. ㄴ. 로봇은 자동화된 기계 장치로, 인간의 작업을 보조하거나 대체하는 데 사용된다. ㄷ. 사물 인터넷은 각종 물건에 센서와 통신 기능 을 내장하여 인터넷에 연결하는 기술이다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "인공지능이 컴퓨터에 옮겨 놓으려는 것은 빠른 계산이 아니라 사람의 추론하고 학습하는 능력이다. 사물 인터넷은 물건에 센서와 통신 기능을 넣어 인터넷에 이어 놓은 기술이다. 두 정의를 제자리에 놓으면 보기가 모두 가려진다.",
+      "cited_relations": [
+        "rel-ai-nature",
+        "rel-iot-condition"
+      ],
+      "mapping_reason": "인공지능·로봇·사물 인터넷의 정의를 나란히 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q19",
@@ -689,8 +861,17 @@
         "isci2-sensor",
         "isci2-usefulness-and-limitation-of-technology"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-ai-robot"
+      ],
+      "mapping": "llm",
+      "text_internal": "19 첨단 과학기술의 활용 사례에 대한 설명으로 옳지 않은 것은? ① 청소 로봇은 공간의 형태를 인지하여 스스로 청소한 다. ② 배송 드론은 사람이 직접 운전해야만 물건을 배달할 수 있다. ③ 인공지능 비서는 사람의 목소리를 인식하고 작업을 수행한다. ④ 스마트 병원에서는 환자의 상태를 모니터링하고 원격 으로 진료한다. ⑤ 자율주행 자동차는 환경 정보를 실시간으로 분석하여 최적의 경로를 선택한다.",
+      "explanation": "인공지능 로봇은 예전 로봇과 달리 둘레 상황을 인식해 스스로 판단해 움직이고, 그런 기계가 물류·교통·안전 등 여러 분야로 퍼졌다. 사람이 직접 운전해야만 배달할 수 있다고 한 선택지는 이 성질과 어긋난다.",
+      "cited_relations": [
+        "rel-air-vs-old",
+        "rel-air-spread"
+      ],
+      "mapping_reason": "자율 판단 여부로 첨단 기술 사례를 가르는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q20",
@@ -722,8 +903,19 @@
         "isci2-sensor",
         "isci2-usefulness-and-limitation-of-technology"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-ai-robot",
+        "isci2-usefulness-and-limitation-of-technology"
+      ],
+      "mapping": "llm",
+      "text_internal": "20 로봇 사용이 우리 생활에 미치는 영향에 대한 설명으로 옳은 것만을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 로봇 사용으로 생활이 편리해지고 산업 생산 성이 높아지고 있다. ㄴ. 로봇 기술의 발전이 가져올 부정적 영향에 대 해서는 대비할 필요가 없다. ㄷ. 로봇이 인간의 일자리를 대체하면서 일자리 감소와 같은 문제가 발생할 수 있다. ① ㄴ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "로봇이 여러 분야로 퍼지면서 생활이 편리해지고 산업 생산성이 높아졌지만, 같은 확산이 일자리 감소 같은 걱정도 함께 불러왔다. 부정적 영향은 미리 내다보고 대비할수록 줄일 수 있으므로, 대비할 필요가 없다는 보기가 여기서 걸린다.",
+      "cited_relations": [
+        "rel-air-spread",
+        "rel-air-worry",
+        "rel-ul-prepare"
+      ],
+      "mapping_reason": "로봇 확산의 두 쪽과 대비의 필요를 함께 묻는다"
     },
     {
       "item_id": "isci2-mid-3-r3-q21",
@@ -755,8 +947,18 @@
         "isci2-sensor",
         "isci2-usefulness-and-limitation-of-technology"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-ai-robot",
+        "isci2-usefulness-and-limitation-of-technology"
+      ],
+      "mapping": "llm",
+      "text_internal": "21 다음은 한 물류 창고에서 도입한 인공지능 로봇에 대한 설명이다. 이 물류 창고에서는 상품을 분류하고 운반하는 작업 에 인공지능 로봇을 도입하였다. 로봇은 창고 내부 를 스스로 이동하며 상품의 위치를 인식하고, 가장 효율적인 경로로 상품을 옮긴다. 로봇 도입 이후 상 품 처리 속도가 크게 빨라지고 작업 중 발생하던 안 전사고도 줄어들었다. 그러나 기존에 이 작업을 담 당하던 직원들 중 상당수는 다른 일자리를 찾아야 했다. 위 사례에서 인공지능 로봇 도입으로 발생할 수 있는 문 제점을 한 가지 서술하시오.",
+      "explanation": "인공지능 로봇이 사람의 일을 대신하게 되면서 일자리 감소나 통제 문제 같은 걱정이 함께 따라왔다. 처리 속도와 안전이 나아진 것과 같은 자리에서 생기는 문제를 한 가지 짚어 썼는지 보면 된다.",
+      "cited_relations": [
+        "rel-air-worry",
+        "rel-ul-two-sides"
+      ],
+      "mapping_reason": "같은 도입에서 나온 부정적 영향을 쓰게 하는 서술형이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q22",
@@ -785,8 +987,17 @@
         "isci2-science-ethics",
         "isci2-socioscientific-issue"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-socioscientific-issue"
+      ],
+      "mapping": "llm",
+      "text_internal": "22 과학 관련 사회적 쟁점(SSI)에 대한 설명으로 옳은 것만 을 <보기>에서 있는 대로 고른 것은? <보기> ㄱ. 과학기술의 발전으로 발생한 사회적·윤리적 책임을 말한다. ㄴ. 과학 관련 사회적 쟁점은 한 가지 관점에서만 논증 근거를 제시할 수 있다. ㄷ. 기후 변화에 따른 기후 위기는 과학 관련 사 회적 쟁점의 예가 될 수 있다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "과학 관련 사회적 쟁점은 과학기술의 발전과 함께 새로 생겨난 사회·윤리적 다툼거리이고, 기후 위기처럼 환경에 걸친 문제도 여기에 든다. 과학적 근거만으로는 답이 정해지지 않아 여러 측면을 아울러 따져야 하므로, 한 가지 관점에서만 논증한다는 보기는 성립하지 않는다.",
+      "cited_relations": [
+        "rel-ssi-new",
+        "rel-ssi-multi"
+      ],
+      "mapping_reason": "쟁점의 정의와 논증 방식을 함께 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q23",
@@ -815,8 +1026,17 @@
         "isci2-science-ethics",
         "isci2-socioscientific-issue"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-socioscientific-issue"
+      ],
+      "mapping": "llm",
+      "text_internal": "23 과학 관련 사회적 쟁점(SSI)에 대한 설명으로 옳지 않은 것은? ① 미세 먼지나 기후 변화와 같은 문제는 환경 분야의 과학 관련 사회적 쟁점에 해당한다. ② 원자력 발전소의 안전성에 대한 우려는 에너지 분야 의 과학 관련 사회적 쟁점에 해당한다. ③ 식품 첨가물이나 항생제 남용과 같은 문제는 건강 분 야의 과학 관련 사회적 쟁점에 해당한다. ④ 동물 실험이나 인간 복제와 같은 문제는 생명 윤리 분야의 과학 관련 사회적 쟁점에 해당한다. ⑤ 과학 관련 사회적 쟁점은 과학자들만의 문제이므로 일반 시민은 논의에 참여할 필요가 없다.",
+      "explanation": "하나의 쟁점에는 입장이 다른 사람들의 이해관계가 얽혀 있어, 한쪽 입장만 내세우는 대신 여러 관점을 함께 살펴 협의해 결정해야 한다. 과학자들만의 문제라 시민은 참여할 필요가 없다는 선택지가 이 명제와 어긋난다.",
+      "cited_relations": [
+        "rel-ssi-decide",
+        "rel-ssi-stake"
+      ],
+      "mapping_reason": "쟁점을 누가 어떻게 다루어야 하는지가 갈림길인 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q24",
@@ -845,8 +1065,17 @@
         "isci2-science-ethics",
         "isci2-socioscientific-issue"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-science-ethics"
+      ],
+      "mapping": "llm",
+      "text_internal": "24 과학 윤리에 대한 설명으로 옳은 것은? ① 과학 윤리는 소수의 과학자에게만 이익이 되도록 하 는 원칙이다. ② 과학 연구를 수행할 때는 어떠한 윤리적 원칙도 따를 필요가 없다. ③ 경제적 이윤을 극대화하는 것이 과학 윤리의 가장 중 요한 목표이다. ④ 과학 관련 사회적 쟁점은 한 사람의 판단만으로 쉽게 해결할 수 있다. ⑤ 과학 윤리에는 생명 존중, 공정성, 안전, 환경적 책임 등의 원칙이 있다.",
+      "explanation": "과학 윤리에는 생명 존중, 공정성, 안전, 환경적 책임처럼 서로 다른 영역의 기준이 함께 들어 있다. 이 원칙은 과학기술이 인류 전체에 이익이 되도록 하려고 두는 최소한의 기준이므로, 소수의 이익이나 이윤 극대화를 목표로 삼는다는 진술과는 어긋난다.",
+      "cited_relations": [
+        "rel-se-elements",
+        "rel-se-minimum"
+      ],
+      "mapping_reason": "과학 윤리의 구성 기준과 목적을 묻는 문항이다"
     },
     {
       "item_id": "isci2-mid-3-r3-q25",
@@ -875,8 +1104,19 @@
         "isci2-science-ethics",
         "isci2-socioscientific-issue"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "isci2-socioscientific-issue",
+        "isci2-science-ethics"
+      ],
+      "mapping": "llm",
+      "text_internal": "25 다음은 어떤 지역에서 있었던 유전자 변형 작물(GMO) 재배를 둘러싼 논쟁에 대한 설명이다. 한 지역에서 병충해에 강하고 수확량이 많은 유전자 변형 작물을 재배하려는 계획이 추진되었다. 이를 찬성하는 사람들은 유전자 변형 작물이 식량 부족 문제를 해결하고 농가의 소득을 높일 수 있다고 주 장하였다. 반면 이를 반대하는 사람들은 유전자 변 형 작물이 인체와 주변 생태계에 미치는 영향이 충 분히 검증되지 않았으며, 재래종 작물의 다양성을 해칠 수 있다고 주장하였다. 두 입장이 팽팽히 맞서 면서 지역 사회에서는 이 문제에 대한 논의가 계속 되고 있다. 위 사례와 같은 과학 관련 사회적 쟁점(SSI)을 해결하기 위해 필요한 자세를 두 가지 서술하시오.",
+      "explanation": "쟁점을 풀려면 한쪽 입장만 내세우는 대신 여러 관점과 복잡한 사정을 함께 살펴 협의해 결정해야 하고, 과학적 근거만으로 답이 정해지지 않으므로 사회·경제·환경 측면까지 아울러 따져야 한다. 과학 윤리는 그때 어느 선을 넘지 말아야 하는지 가늠하는 잣대가 된다. 이런 자세를 두 가지로 나눠 썼는지 보면 된다.",
+      "cited_relations": [
+        "rel-ssi-decide",
+        "rel-ssi-multi",
+        "rel-se-for-ssi"
+      ],
+      "mapping_reason": "쟁점 해결에 필요한 자세가 곧 이 두 카드의 명제다"
     }
   ],
   "problems": [],

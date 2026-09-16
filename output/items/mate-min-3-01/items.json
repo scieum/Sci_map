@@ -55,8 +55,18 @@
         "mate-standard-enthalpy-of-formation",
         "mate-thermochemical-equation"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-enthalpy",
+        "mate-reaction-enthalpy"
+      ],
+      "mapping": "llm",
+      "text_internal": "01 다음은 엔탈피(Enthalpy)에 대한 설명이다. 빈칸에 들어 갈 알맞은 말을 쓰시오. 엔탈피는 일정한 ( ㉠ )에서 물질이 갖는 고유한 ( ㉡ )의 양을 의미하며, 일정한 압력에서 화학 반 응이 일어날 때 엔탈피 변화를 ( ㉢ )(이)라고 하며, 생성물의 엔탈피 합에서 반응물의 엔탈피 합을 뺀 값 이다. ㉠: ( ) ㉡: ( ) ㉢: ( )",
+      "explanation": "엔탈피는 압력이 일정하다는 조건 아래에서 물질이 지니는 에너지의 총량이고, 그 합의 차이가 벌어질수록 반응에서 드나드는 열도 많아진다. 일정한 압력에서 일어난 반응의 엔탈피 변화, 곧 생성물 쪽 합에서 반응물 쪽 합을 뺀 값이 반응 엔탈피다. 빈칸 세 개가 압력·에너지·반응 엔탈피로 채워졌는지 보면 된다.",
+      "cited_relations": [
+        "rel-enthalpy-heat-gap",
+        "rel-rxnh-sign"
+      ],
+      "mapping_reason": "엔탈피와 반응 엔탈피의 정의를 그대로 확인하는 빈칸 문항이다"
     },
     {
       "item_id": "mate-min-3-01-q02",
@@ -97,8 +107,17 @@
         "mate-standard-enthalpy-of-formation",
         "mate-thermochemical-equation"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-exothermic-reaction"
+      ],
+      "mapping": "llm",
+      "text_internal": "02 다음 중 발열 반응에 해당하는 것만을 <보기>에서 있는 대로 고른 것은? 보기 ① ㄱ, ㄴ ② ㄱ, ㄷ ③ ㄴ, ㄷ ④ ㄴ, ㄹ ⑤ ㄷ, ㄹ 서술형",
+      "explanation": "생성물의 엔탈피 합이 반응물의 엔탈피 합보다 낮은 반응이 발열 반응이고, 이때 반응 엔탈피는 0보다 작다. 연소, 중화, 금속이 산소와 결합하는 반응이 그런 갈래에 든다. 보기의 각 반응을 이 잣대에 대어 보면 ④가 남는다.",
+      "cited_relations": [
+        "rel-exo-classify",
+        "rel-exo-examples"
+      ],
+      "mapping_reason": "보기의 반응들이 발열 반응인지를 반응 엔탈피의 부호로 가르게 한다"
     },
     {
       "item_id": "mate-min-3-01-q03",
@@ -138,8 +157,19 @@
         "mate-standard-enthalpy-of-formation",
         "mate-thermochemical-equation"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-exothermic-reaction",
+        "mate-reaction-enthalpy"
+      ],
+      "mapping": "llm",
+      "text_internal": "03 <보기>의 반응이 발열 반응인지, 흡열 반응인지를 판별 하고, 그와 같이 판단한 이유를 설명하시오. 보기 CaO(s)HO() ──→ CaOH ()   ⊿kJ",
+      "explanation": "반응 엔탈피가 0보다 작다는 것은 생성물 쪽 엔탈피 합이 더 낮아 열이 주위로 빠져나갔다는 뜻이다. 그러므로 판별 자체보다 '반응 엔탈피의 부호가 음이라서'라는 근거를 들었는지가 중요하다. 방출된 열을 받은 주위의 온도가 올라간다는 점까지 덧붙였다면 더 또렷한 답이다.",
+      "cited_relations": [
+        "rel-exo-classify",
+        "rel-rxnh-sign",
+        "rel-exo-surroundings-temp"
+      ],
+      "mapping_reason": "주어진 반응 엔탈피의 부호로 발열·흡열을 판별하고 근거를 쓰게 한다"
     },
     {
       "item_id": "mate-min-3-01-q04",
@@ -179,8 +209,19 @@
         "mate-standard-enthalpy-of-formation",
         "mate-thermochemical-equation"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-fuel-efficiency",
+        "mate-enthalpy-of-combustion"
+      ],
+      "mapping": "llm",
+      "text_internal": "04 다음은 수소(H ), 메테인(CH ), 뷰테인(C H ), 에탄올     (C H OH)의 연소 반응의 열화학 반응식을 나타낸 것이   다. (단, 수소, 메테인, 뷰테인, 에탄올의 분자량은 , , , 이다.) (가) H (g)O (g) ──→ H O()    ⊿kJ (나) CH (g)O (g) ──→ CO (g)H O()     ⊿kJ (다) C H (g)O (g) ──→ CO (g)H O()      ⊿kJ (라) C HOH()O (g) ──→ CO (g)HO()      ⊿kJ 위 연소 반응에서, 각 물질의 g당 연소열을 계산하고, g당 연소열이 가장 큰 연료는 어느 것인지 쓰시오. ( )",
+      "explanation": "연소 엔탈피는 1 mol 을 기준으로 적힌 값이므로, 1 g 당 연소열을 구하려면 각 연료의 분자량으로 나누어야 한다. 연소 엔탈피의 크기가 같아도 분자량이 큰 연료일수록 1 g 당 내놓는 열은 작아진다. 질량을 기준으로 삼으면 수소가 메테인·뷰테인·에탄올보다 1 g 당 내놓는 열이 많다는 결론에 닿았는지 보면 된다.",
+      "cited_relations": [
+        "rel-fe-basis-matters",
+        "rel-fe-hydrogen-top",
+        "rel-hc-per-gram"
+      ],
+      "mapping_reason": "네 연료의 연소 엔탈피를 질량 기준으로 환산해 견주게 한다"
     },
     {
       "item_id": "mate-min-3-01-q05",
@@ -220,8 +261,17 @@
         "mate-standard-enthalpy-of-formation",
         "mate-thermochemical-equation"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-calorimeter"
+      ],
+      "mapping": "llm",
+      "text_internal": "05 ℃의 물 g이 들어 있는 열량계에 수산화 나트륨 (NaOH) g을 모두 녹인 후, 최고 온도를 측정하였더니 ℃였다. 수산화 나트륨이 용해될 때의 반응 엔탈피를 구하시오. (단, NaOH의 화학식량은 이고, 용액의 비 열은 Jg⋅℃로 계산한다.) ( )",
+      "explanation": "열량계 안팎으로 열이 새지 않는다면 반응이 내놓은 열은 용액이 얻은 열과 같다. 같은 용액을 같은 질량만큼 쓸 때 온도 변화가 클수록 용액이 주고받은 열량도 크므로, 비열·질량·온도 변화로 용액이 얻은 열을 먼저 구한다. 그 값을 녹인 물질의 mol 수로 나누고 부호를 발열 쪽으로 붙였는지 보면 된다.",
+      "cited_relations": [
+        "rel-cal-heat-balance",
+        "rel-cal-q-formula"
+      ],
+      "mapping_reason": "열량계의 열평형으로 용해 반응 엔탈피를 계산하게 한다"
     },
     {
       "item_id": "mate-min-3-01-q06",
@@ -262,8 +312,17 @@
         "mate-standard-enthalpy-of-formation",
         "mate-thermochemical-equation"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-endothermic-reaction"
+      ],
+      "mapping": "llm",
+      "text_internal": "06 다음 중 흡열 반응이 실생활에서 활용되는 예로 적절한 것은? ① 석탄의 연소 ② 손난로의 작동 ③ 냉각팩의 작동 ④ 자동차 엔진의 작동 ⑤ 양초의 연소 ㉢: ( )",
+      "explanation": "흡열 반응이 일어나면 열을 빼앗긴 주위의 온도가 내려간다. 그러니 실생활에서 흡열 반응을 쓴 예는 둘레를 차갑게 만드는 쪽이고, 연소처럼 열을 내는 예는 여기에 들지 않는다. 주위가 더워지는지 차가워지는지만 갈라 보면 답이 ③으로 좁혀진다.",
+      "cited_relations": [
+        "rel-endo-surroundings-temp",
+        "rel-endo-examples"
+      ],
+      "mapping_reason": "흡열 반응의 활용 예를 주위 온도 변화로 가려내게 한다"
     }
   ],
   "problems": [],

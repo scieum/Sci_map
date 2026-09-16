@@ -53,8 +53,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy",
+        "mate-gas-diffusion"
+      ],
+      "mapping": "llm",
+      "text_internal": "01 엔트로피에 대한 다음 설명 중 옳지 않은 것은? ① 무질서도를 나타내는 척도이다. ② 액체 상태에서가 고체 상태에서보다 크다. ③ 기체 분자 수가 증가할수록 엔트로피는 증가한다. ④ 온도가 높아지면 엔트로피는 증가한다. ⑤ 확산이 일어날 때, 확산 전이 후보다 엔트로피가 크다.",
+      "explanation": "엔트로피는 입자의 배열과 운동이 흐트러진 정도를 나타내는 양이라, 같은 물질이면 고체보다 액체가, 액체보다 기체가 크다. 기체가 저절로 퍼지는 까닭도 퍼진 상태의 엔트로피가 한곳에 모인 상태보다 크기 때문이다. 확산은 엔트로피가 커지는 쪽으로 간다는 점을 붙들면 ⑤가 왜 어긋나는지 보인다.",
+      "cited_relations": [
+        "rel-entropy-state-order",
+        "rel-entropy-motion",
+        "rel-diff-entropy-cause"
+      ],
+      "mapping_reason": "엔트로피의 크기 비교와 확산의 방향을 함께 묻는 진위 판별 문항이다"
     },
     {
       "item_id": "mate-ach-3-2-q02",
@@ -92,8 +103,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy-change",
+        "mate-entropy-change-of-surroundings"
+      ],
+      "mapping": "llm",
+      "text_internal": "02 그림은 물과 수증기 사이의 상태 변화를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 무질서도는 수증기가 물보다 크다. ㄴ. (가)의 과정에서 엔트로피는 증가한다. ㄷ. (나)의 과정에서 주위의 엔트로피는 감소한다. ① ㄱ ② ㄴ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "액체가 기체로 바뀌는 동안 계의 엔트로피 변화는 양의 값을 가진다. 주위 쪽 부호는 그 변화가 열을 받아들이는지 내놓는지로 갈려서, 열을 빼앗기는 흡열 쪽이면 주위의 엔트로피가 줄고 열을 받는 발열 쪽이면 늘어난다. 그림에서 (가)와 (나)가 각각 어느 방향의 상태 변화인지를 먼저 정하고 두 부호를 따로 매겨야 한다.",
+      "cited_relations": [
+        "rel-ds-phase-change",
+        "rel-sec-endothermic",
+        "rel-sec-exothermic"
+      ],
+      "mapping_reason": "상태 변화에서 계와 주위의 엔트로피 부호를 갈라 묻는다 — 다만 정답 기호가 ㄱ(기체가 액체보다 무질서도가 큼)을 빼고 있어 카드의 rel-entropy-state-order 와 어긋나 보이니 사람 확인이 필요하다"
     },
     {
       "item_id": "mate-ach-3-2-q03",
@@ -130,8 +152,17 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy-change"
+      ],
+      "mapping": "llm",
+      "text_internal": "03 다음은 가지 변화를 화학 반응식으로 나타낸 것이다. (가) HO() ──→ H O()   (나) O (g) ──→ O (g)   (다) C H (g)O (g) ──→ CO (g)H O()      (가)∼(다) 중 반응이 진행될 때 엔트로피가 증가하는 것 만을 모두 고르시오.",
+      "explanation": "상태가 고체에서 액체로, 액체에서 기체로 가는 변화는 계의 엔트로피가 커지는 쪽이다. 반응물과 생성물이 모두 기체인 반응이라면 반응 뒤 분자 수가 줄었는지 늘었는지로 부호를 가른다. 각 반응식에서 상태와 기체 분자 수 두 가지만 확인했는지 보면 된다.",
+      "cited_relations": [
+        "rel-ds-phase-change",
+        "rel-ds-gas-particle-count"
+      ],
+      "mapping_reason": "상태 변화와 기체 분자 수 변화로 엔트로피 증가 여부를 고르게 한다"
     },
     {
       "item_id": "mate-ach-3-2-q04",
@@ -169,8 +200,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-thermodynamic-system",
+        "mate-closed-system"
+      ],
+      "mapping": "llm",
+      "text_internal": "04 그림은 우주를 우리가 관심을 갖는 대상인 (가)와, (가)를 제외한 (나)로 나눈 것을 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. (가)는 ‘계’이다. ㄴ. 닫힌계는 (가)와 (나) 사이에 물질이 교환된다. ㄷ. 열린계에서 발열 반응이 일어나면 에너지는 (나)에서 (가)로 이동한다. ① ㄱ ② ㄴ ③ ㄱ, ㄷ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "관찰자가 살피려고 따로 떼어 놓은 부분이 계이고, 나머지 전부가 주위다. 계는 주위와 무엇이 오갈 수 있는지에 따라 고립계·닫힌계·열린계로 나뉘는데, 닫힌계는 에너지만 오가고 물질은 오가지 못한다. 그리고 발열 반응이라면 에너지는 계에서 주위 쪽으로 옮겨 가므로 답은 ①이다.",
+      "cited_relations": [
+        "rel-sys-choice",
+        "rel-sys-exchange-classes",
+        "rel-closed-vs-open"
+      ],
+      "mapping_reason": "계와 주위의 구분, 그리고 계의 세 갈래 분류 기준을 묻는다"
     },
     {
       "item_id": "mate-ach-3-2-q05",
@@ -208,8 +250,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-closed-system",
+        "mate-open-system"
+      ],
+      "mapping": "llm",
+      "text_internal": "05 그림은 서로 다른 용기에 같은 온도의 물을 같은 양씩 담아 둔 것을 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. (가)는 닫힌계이다. ㄴ. (나)는 계와 주위 사이에 물질이 교환된다. ㄷ. (다)는 계와 주위 사이에 에너지가 교환된다. ① ㄱ ② ㄴ ③ ㄷ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "뚜껑을 덮은 컵 속의 물은 물질이 빠져나가지 못하고 열만 오가므로 닫힌계다. 뚜껑이 없는 그릇 속의 물은 증발한 기체가 빠져나가고 열도 오가므로 열린계다. 두 갈래는 에너지를 주고받는 점에서는 같고 물질을 주고받는지에서만 갈리니, 그림마다 뚜껑과 단열 여부를 확인하면 ⑤가 남는다.",
+      "cited_relations": [
+        "rel-closed-lid",
+        "rel-open-uncovered",
+        "rel-closed-vs-open"
+      ],
+      "mapping_reason": "용기의 뚜껑·단열 여부로 계의 종류를 판별하게 하는 문항이다"
     },
     {
       "item_id": "mate-ach-3-2-q06",
@@ -247,8 +300,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-isolated-system",
+        "mate-closed-system"
+      ],
+      "mapping": "llm",
+      "text_internal": "06 그림은 계 (가)∼(다)에서 물질과 에너지 교환을 모형으 로 나타낸 것이다. (가)∼(다)는 고립계, 닫힌계, 열린계를 순서없이 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. (가)는 열린계이다. ㄴ. (나)에서 발열 반응이 일어나면 주위의 온도가 높아진다. ㄷ. 뚜껑이 닫힌 생수병의 물은 (다)에 해당한다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ",
+      "explanation": "고립계는 닫힌계와 달리 물질뿐 아니라 에너지까지 주위와 주고받지 않는다. 그래서 고립계 안에서 발열 반응이 일어나도 주위의 온도는 달라지지 않는다. 뚜껑을 덮은 병 속의 물은 물질은 막히고 열만 오가므로 닫힌계이며, 모형에서 오가는 화살표가 물질인지 에너지인지를 갈라 보면 답은 ④다.",
+      "cited_relations": [
+        "rel-iso-vs-closed",
+        "rel-iso-no-surrounding-change",
+        "rel-closed-lid"
+      ],
+      "mapping_reason": "물질·에너지 교환 모형으로 고립계·닫힌계·열린계를 가려내게 한다"
     },
     {
       "item_id": "mate-ach-3-2-q07",
@@ -286,8 +350,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-gas-diffusion",
+        "mate-entropy"
+      ],
+      "mapping": "llm",
+      "text_internal": "07 그림 (가)는 꼭지가 닫혀 외부와 완전히 고립된 개의 용기에 각각 다른 기체를 넣은 것을, (나)는 (가)에서 꼭 지를 열어 충분한 시간이 지난 후를 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. 용기 내부의 엔트로피는 (나)에서가 (가)에서보다 크다. ㄴ. (가)에서 (나)로 변화되는 과정은 자발적으로 진행된다. ㄷ. (가)와 (나)로부터 기체의 확산 현상을 설명할 수 있다. ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄴ, ㄷ ⑤ ㄱ, ㄴ, ㄷ",
+      "explanation": "기체가 저절로 퍼지는 까닭은 퍼진 상태의 엔트로피가 한곳에 모인 상태보다 크기 때문이다. 주위와 열을 주고받지 않는 변화는 엔트로피가 커지는 쪽으로 저절로 진행하므로 꼭지를 연 뒤의 변화는 자발적이다. 게다가 한번 섞인 두 기체는 바깥에서 손대지 않는 한 저절로 다시 갈라지지 않아 세 보기가 모두 맞는 ⑤가 답이다.",
+      "cited_relations": [
+        "rel-diff-entropy-cause",
+        "rel-diff-irreversible",
+        "rel-entropy-isolated-direction"
+      ],
+      "mapping_reason": "고립된 용기에서 일어나는 기체 확산을 엔트로피로 설명하게 한다"
     },
     {
       "item_id": "mate-ach-3-2-q08",
@@ -325,8 +400,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-total-entropy-change",
+        "mate-reaction-spontaneity"
+      ],
+      "mapping": "llm",
+      "text_internal": "08 ℃, atm에서 X() ──→ X()이 자발적으로 진행된 다고 할 때 계의 엔트로피 변화(⊿ ), 주위의 엔트로피 계 변화(⊿ ), 계와 주위의 엔트로피 변화의 절댓값의 크 주위 기 비교(㉠)를 바르게 예측한 것은? ⊿ ⊿ ㉠ 계 주위 ① 증가 감소 |⊿ ||⊿ | 계 주위 ② 증가 감소 |⊿ ||⊿ | 주위 계 ③ 증가 감소 |⊿ ||⊿ | 계 주위 ④ 감소 증가 |⊿ ||⊿ | 계 주위 ⑤ 감소 증가 |⊿ ||⊿ | 주위 계",
+      "explanation": "반응이 저절로 일어났다는 것은 계와 주위를 합친 전체 엔트로피가 커졌다는 뜻이다. 계 쪽과 주위 쪽의 부호가 서로 반대일 때는 두 값의 크기가 전체의 부호를 가르므로, 늘어난 쪽의 크기가 줄어든 쪽보다 커야 한다. 두 부호를 먼저 정하고 크기 비교를 그 위에 얹으면 ①이 남는다.",
+      "cited_relations": [
+        "rel-total-criterion",
+        "rel-total-magnitude",
+        "rel-spon-mixed-sign"
+      ],
+      "mapping_reason": "자발적 변화에서 계·주위 엔트로피의 부호와 크기 관계를 묻는다"
     },
     {
       "item_id": "mate-ach-3-2-q09",
@@ -364,8 +450,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy-change",
+        "mate-total-entropy-change"
+      ],
+      "mapping": "llm",
+      "text_internal": "09 다음은 A(g)와 B(g)가 반응하여 C(g)가 생성되는 반응의 열화학 반응식이다. A(g)B(g) ──→ C(g) ⊿ 이에 대한 설명으로 옳은 것만을 〈보기〉에서 있는 대로 고른 것은? 보기 ㄱ. ⊿ 이다. ㄴ. ⊿ 이다. 계 주위 ㄷ. |⊿ ||⊿ |이면 이 반응은 자발적이다. 계 주위 ① ㄱ ② ㄷ ③ ㄱ, ㄴ ④ ㄱ, ㄷ ⑤ ㄴ, ㄷ 서술형",
+      "explanation": "반응물과 생성물이 모두 기체인 반응에서 반응 뒤 분자 수가 줄면 계의 엔트로피는 감소한다. 계의 엔트로피가 줄어도 주위의 엔트로피가 그보다 크게 늘면 전체 엔트로피는 증가하고, 그때 반응은 자발적으로 진행된다. 기체 분자 수부터 세고 두 변화의 크기를 견주는 순서를 지키면 답은 ③이다.",
+      "cited_relations": [
+        "rel-ds-gas-particle-count",
+        "rel-total-offset",
+        "rel-total-magnitude"
+      ],
+      "mapping_reason": "기체 분자 수 감소 반응에서 계·전체 엔트로피의 관계를 묻는다"
     },
     {
       "item_id": "mate-ach-3-2-q10",
@@ -402,8 +499,19 @@
         "mate-thermodynamic-system",
         "mate-total-entropy-change"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm"
+      "concept_ids": [
+        "mate-entropy-change-of-surroundings",
+        "mate-total-entropy-change"
+      ],
+      "mapping": "llm",
+      "text_internal": "10 다음은 가지 반응의 열화학 반응식을 나타낸 것이다. (가) CO (g) ──→ CO () ⊿   (나) CaCO () ──→ CaO()CO (g) ⊿   (다) CaO()HO() ──→ Ca()OH()  ⊿ ⑴ (가)∼(다)에서 ⊿ 와 ⊿ 가 보다 큰지 작은지 계 주위 각각 쓰시오. ( ) ⑵ (가)∼(다)의 자발성 여부를 예측하고, 조건에 따라 다 를 경우 자발적으로 일어나기 위한 조건을 쓰시오. ( )",
+      "explanation": "⑴은 각 반응이 발열인지 흡열인지를 먼저 정하고, 발열이면 주위의 엔트로피가 증가하고 흡열이면 감소한다는 점을 써야 한다. 계 쪽은 상태 변화와 기체 분자 수로 부호를 매긴다. ⑵는 전체 엔트로피가 커지는 쪽으로 반응이 저절로 진행한다는 기준을 들고, 두 부호가 반대인 반응에서는 어느 쪽이 더 커야 자발적인지를 조건으로 적었는지 보면 된다.",
+      "cited_relations": [
+        "rel-sec-exothermic",
+        "rel-sec-endothermic",
+        "rel-total-criterion"
+      ],
+      "mapping_reason": "세 반응의 계·주위 엔트로피 부호에서 자발성 조건까지 이어 쓰게 한다"
     }
   ],
   "problems": [],
