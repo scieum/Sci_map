@@ -25,7 +25,9 @@ import { isSupabaseConfigured, supabase } from "@/lib/supabase";
  */
 export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[unitId]">) {
   const { subjectCode, unitId } = use(params);
-  const unit = unitItems(unitId);
+  // Keep the item list stable across state updates so loading and progress effects
+  // only restart when the selected unit changes.
+  const unit = useMemo(() => unitItems(unitId), [unitId]);
 
   const [urls, setUrls] = useState<Record<string, string> | null>(null);
   const [signedIn, setSignedIn] = useState<boolean | null>(null);
