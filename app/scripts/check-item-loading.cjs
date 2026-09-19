@@ -16,13 +16,16 @@ async function main() {
     page.on('pageerror', e => errors.push(e.message));
     page.on('console', m => { if (m.type() === 'error' && m.text().includes('Maximum update depth')) errors.push(m.text()); });
     let requests = 0;
+    const loadedImages = new Set();
     await page.route(`https://${host}/**`, async route => {
       if (route.request().url().includes('/storage/v1/object/sign/exam')) {
         requests++;
         const { paths } = route.request().postDataJSON();
-        await route.fulfill({ json: paths.map(path => ({ path, signedURL: '/mock-question.svg', error: null })) });
+        await route.fulfill({ json: paths.map(path => ({ path, signedURL: `/mock-question.svg?item=${encodeURIComponent(path)}`, error: null })) });
       } else if (route.request().url().includes('mock-question.svg')) {
+        await new Promise(resolve => setTimeout(resolve, 300));
         await route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><text x="20" y="40">Test question</text></svg>' });
+        loadedImages.add(route.request().url());
       } else {
         await route.fulfill({ json: {} });
       }
@@ -44,12 +47,19 @@ async function main() {
     await page.waitForFunction(() => { const img = document.querySelector('img[alt$="번 문항"]'); return img?.complete && img.naturalWidth > 0; });
     const initialRequests = requests;
     const firstSrc = await img.getAttribute('src');
+    const deadline = Date.now() + 5000;
+    while (loadedImages.size < 3 && Date.now() < deadline) await page.waitForTimeout(50);
+    assert.equal(loadedImages.size, 3, 'Preload exactly the next two question images before navigation');
+    const preloaded = new Set(loadedImages);
     const choice = page.getByRole('button', { name: '①', exact: true });
     if (await choice.count()) await choice.click();
     else await page.getByRole('button', { name: '서술형이에요 · 스스로 확인하고 넘어가기', exact: true }).click();
     await page.getByRole('button', { name: '다음 문항', exact: true }).click();
     await page.waitForTimeout(1000);
     assert.ok(await page.getByText(/^2\/\d+$/).count(), 'Next question must remain selected');
+    const nextSrc = await img.getAttribute('src');
+    assert.notEqual(nextSrc, firstSrc);
+    assert.ok(preloaded.has(nextSrc), 'Next question image must already have been fetched');
     assert.equal(requests, initialRequests, 'Answering must not reload signed URLs');
     assert.ok(firstSrc);
     assert.deepEqual(errors, []);

@@ -71,6 +71,21 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
     setScore(examProgress(items.map((i) => i.id)));
   }, [items]);
 
+  // Fetch and decode only the next two images while the student reads this one.
+  // Signed URLs alone do not download the image bytes.
+  useEffect(() => {
+    if (!signedIn || !urls || idx === null) return;
+    for (const upcoming of items.slice(idx + 1, idx + 3)) {
+      const url = urls[upcoming.id];
+      if (!url) continue;
+      const image = new Image();
+      image.src = url;
+      void image.decode().catch(() => {
+        // A failed preload must not prevent normal loading when the item opens.
+      });
+    }
+  }, [idx, items, signedIn, urls]);
+
   if (!unit) notFound();
 
   const item = idx === null ? null : items[idx];
