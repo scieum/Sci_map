@@ -57,6 +57,7 @@ def main() -> int:
     gate = approved_subjects()
     papers = []
     held: dict[str, int] = {}
+    excluded: list[tuple[str, str, str]] = []
     for path in sorted(ITEMS.glob("*/items.json")):
         doc = json.loads(path.read_text(encoding="utf-8"))
         code = doc["subject_code"]
@@ -68,6 +69,12 @@ def main() -> int:
         curated = approved("curation", code)
         items = []
         for it in doc["items"]:
+            # ★ 문항 하나만 빼는 자리. 회차째로 보류하면 나머지 19문항까지 묶이고,
+            #   손으로 지우면 왜 없는지가 남지 않는다. 사유는 items.json 에 적고
+            #   검토 문서의 승인 범위와 맞춘다 (CLAUDE.md §5 부분 승인)
+            if it.get("excluded"):
+                excluded.append((doc["paper_id"], it["item_id"], it["excluded"]))
+                continue
             row = {
                 "id": it["item_id"],
                 "no": it["no"],
@@ -113,6 +120,8 @@ def main() -> int:
         print(f"  매핑·해설 반영: {', '.join(curated_codes)}")
     for code in waiting:
         print(f"  ⏸ {code}: 매핑·해설 승인 대기 (output/review/{code}-curation.review.md)")
+    for paper_id, item_id, reason in excluded:
+        print(f"  ✕ {item_id} 제외 ({reason})")
     for code, n in sorted(held.items()):
         state = "승인 대기" if code in gate else "검토 파일 없음"
         print(f"  ⏸ {code}: {n}문항 보류 ({state} — output/review/{code}-exam.review.md)")
