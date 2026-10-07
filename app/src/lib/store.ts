@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { QuizKind } from "@/lib/types";
 
 /**
  * 학습 상태 — MVP는 localStorage.
@@ -39,8 +40,17 @@ export interface Progress {
   /** 최근 세션에서 틀린 개념 — 다음 데일리 세트의 복습 후보 */
   wrongConceptIds: string[];
   streak: { count: number; lastDate: string };
-  /** 데일리 완료 날짜 목록 (출석 잔디) */
+  /** 데일리 완료 날짜 목록 (홈의 이번 주 줄·출석) */
   doneDates: string[];
+  /**
+   * 오늘 끝낸 유형 — 홈이 유형 카드마다 "✓ 완료"를 붙이는 근거다.
+   *
+   * doneDates 는 "그날 하나라도 끝냈는가"만 안다. 홈에서 OX·단답·선택형을 바로
+   * 고르게 되면서(2026-10-08 교사 결정, 홈 시안 C) 유형별로 알아야 했다.
+   * 날짜가 바뀌면 통째로 버린다 — 어제 끝낸 유형은 오늘 다시 풀 대상이다.
+   * 선택 필드라 이 값이 없던 기존 저장분도 그대로 읽힌다.
+   */
+  kindsDone?: { dateKey: string; kinds: QuizKind[] };
   /**
    * 북마크한 개념 id — 나중에 다시 볼 카드.
    *
@@ -131,11 +141,15 @@ export function toggleBookmark(conceptId: string): boolean {
   return !on;
 }
 
-/** 데일리 세트 완료 처리 — 스트릭·잔디·오답 개념 갱신 */
-export function completeDaily(wrongConceptIds: string[]) {
+/** 데일리 세트 완료 처리 — 스트릭·출석·오답 개념·끝낸 유형 갱신 */
+export function completeDaily(wrongConceptIds: string[], kind?: QuizKind) {
   const p = loadProgress();
   const today = todayKey();
   if (!p.doneDates.includes(today)) p.doneDates.push(today);
+  if (kind) {
+    const prev = p.kindsDone?.dateKey === today ? p.kindsDone.kinds : [];
+    p.kindsDone = { dateKey: today, kinds: Array.from(new Set([...prev, kind])) };
+  }
 
   const yesterday = (() => {
     const d = new Date();
@@ -151,6 +165,11 @@ export function completeDaily(wrongConceptIds: string[]) {
   }
   p.wrongConceptIds = Array.from(new Set(wrongConceptIds));
   saveProgress(p);
+}
+
+/** 오늘 끝낸 유형 — 어제 기록이면 빈 배열 */
+export function kindsDoneToday(p: Progress): QuizKind[] {
+  return p.kindsDone?.dateKey === todayKey() ? p.kindsDone.kinds : [];
 }
 
 /** SSR 안전 훅 — 마운트 후 localStorage 값으로 갱신 */

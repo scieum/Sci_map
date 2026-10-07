@@ -108,6 +108,13 @@ export const KIND_LABEL: Record<QuizKind, string> = {
 
 export const KIND_ORDER: QuizKind[] = ["ox", "short", "mcq"];
 
+/** 유형 한 줄 설명 — 홈의 유형 카드와 /today 가 같은 말을 쓴다 */
+export const KIND_DESC: Record<QuizKind, string> = {
+  ox: "명제를 읽고 맞다 · 틀리다",
+  short: "정의를 보고 개념 이름 쓰기",
+  mcq: "정의에 맞는 개념 고르기",
+};
+
 /** 문자열이 유형이면 그대로, 아니면 기본값(OX) */
 export function asKind(v: string | null | undefined): QuizKind {
   return v === "short" || v === "mcq" ? v : "ox";

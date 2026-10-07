@@ -1,28 +1,45 @@
 "use client";
 
-import { useMemo, useSyncExternalStore } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { Art } from "@/components/Art";
-import { BottomCta, Card, Screen } from "@/components/ui";
-import { BRAND, TILE } from "@/lib/brand";
-import { todayKey, useProgress } from "@/lib/store";
-import { buildDailyOverview } from "@/data/quiz";
+import { BottomCta, Card, Chip, Screen } from "@/components/ui";
+import { BRAND } from "@/lib/brand";
+import { kindsDoneToday, todayKey, useProgress } from "@/lib/store";
+import { buildDailyOverview, KIND_DESC, KIND_LABEL } from "@/data/quiz";
 import { todayPlan } from "@/lib/scheduler";
+import type { QuizKind } from "@/lib/types";
 
 /**
- * 오늘 탭(홈) — 컬러 히어로 카드(티키타카) + 진단 리스트 행(핑글) + 출석 잔디
+ * 오늘 탭(홈) — 이번 주 줄 + 유형 바로 고르기 (홈 시안 C, 2026-10-08 교사 결정).
+ *
+ * 예전 홈은 히어로 → [오늘의 학습 시작하기] → /today 에서 유형 고르기 → 풀이로
+ * 두 번을 눌러야 했다. 학생이 홈에서 실제로 정하는 것은 "어느 유형을 풀까"
+ * 하나뿐이라, 그 선택을 홈으로 올렸다. 유형 카드 셋은 선택지이고 실행은 아래
+ * BottomCta 하나다 — D2 는 "행동 하나"이지 "버튼 하나"가 아니다 (/today 와 같은 판단).
+ *
+ * 출석 잔디(12주)와 "오늘의 구성" 타일은 이번 주 7칸 줄과 유형 카드로 갈음했다.
+ * 복습·신규 수는 카드마다 "복습 n"으로 남는다. /today 는 예전 링크가 닿을 수
+ * 있어 그대로 둔다.
  */
 export default function TodayPage() {
   const progress = useProgress();
-  const doneToday = progress.doneDates.includes(todayKey());
 
-  // 세 유형의 오늘 세트 — 히어로와 타일은 개념 수로 말한다 (문항 수는 유형마다 다르다)
   // progress 가 마운트 뒤 localStorage 값으로 바뀌면 그때 다시 계산한다
   const today = useMemo(
     () => buildDailyOverview(todayKey(), todayPlan()),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [progress],
   );
-  const perKind = today.sets[0]?.items.length ?? 0;
+  const done = kindsDoneToday(progress);
+
+  // 고른 유형 — 고르기 전에는 "아직 안 끝낸 유형 중 첫째"를 미리 짚어 둔다.
+  // 셋 다 끝냈으면 첫째로 돌아가 "한 번 더"를 권한다
+  const [picked, setPicked] = useState<QuizKind | null>(null);
+  const playable = today.sets.filter((s) => s.items.length > 0);
+  const fallback =
+    playable.find((s) => !done.includes(s.kind))?.kind ?? playable[0]?.kind ?? null;
+  const current = picked ?? fallback;
+  const allDone = playable.length > 0 && playable.every((s) => done.includes(s.kind));
 
   return (
     <Screen>
@@ -44,77 +61,40 @@ export default function TodayPage() {
             </span>
           )}
         </h1>
-        <span className="flex items-center gap-1 rounded-full bg-surface px-3.5 py-1.5 text-[13px] font-bold text-ink shadow-[0_2px_10px_rgba(23,58,94,0.06)]">
+        <span className="flex items-center gap-1 rounded-full bg-primary-50 px-3.5 py-1.5 text-[13px] font-bold text-primary-700">
           <Art name="streak-flame" />
           {progress.streak.count}일 연속
         </span>
       </header>
 
-      {/* 히어로 카드 — 날짜 줄 · 제목 · 구성 알약. 시작 단추는 넣지 않는다:
-          이 화면의 CTA 는 아래 BottomCta 하나다 (D2) */}
-      <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-white shadow-hero">
-        <DayLine />
-        <h2 className="mt-2 text-[24px] font-extrabold leading-snug">
-          {doneToday ? (
-            <>
-              오늘 학습 끝!
-              <br />
-              내일 또 만나요
-            </>
-          ) : (
-            <>
-              오늘도 가볍게,
-              <br />
-              한 유형씩 {perKind}문항
-            </>
-          )}
-        </h2>
-        <p className="mt-2 text-[14px] text-white/85">
-          OX · 단답 · 선택형 — 하나 골라 시작해요
-        </p>
-        {/* 오늘 세트의 구성 — 아래 타일과 같은 값이지만 히어로만 보고 들어가는
-            학생에게도 "얼마나" 를 먼저 말한다. 분량은 유형당 어림값만 안다 */}
-        <ul className="relative z-10 mt-4 flex flex-wrap gap-2 text-[13px] font-bold">
-          <li className="rounded-full bg-white/20 px-3.5 py-1.5">
-            복습 {today.reviewConceptCount}
-          </li>
-          <li className="rounded-full bg-white/20 px-3.5 py-1.5">
-            신규 {today.newConceptCount}
-          </li>
-          <li className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3.5 py-1.5">
-            <Art name="timer" px={14} />
-            유형당 약 3분
-          </li>
-        </ul>
-        <span className="pointer-events-none absolute -bottom-3 -right-1" aria-hidden>
-          <Art name={doneToday ? "daily-done" : "daily-todo"} />
-        </span>
-      </section>
+      <WeekStrip doneDates={progress.doneDates} />
 
-      {/* 오늘의 구성 — 파스텔 타일 셋. 참고 이미지의 "이용 방법" 줄처럼
-          옅은 바탕 + 작은 색 태그 + 숫자. 브랜드색은 태그와 숫자에만 쓴다 (D1) */}
-      <div className="mt-4 grid grid-cols-3 gap-3">
-        <Tile tag="복습" label="돌아온 개념" value={`${today.reviewConceptCount}개`} art="review-return" tone={TILE.review} />
-        <Tile tag="신규" label="새 개념" value={`${today.newConceptCount}개`} art="concept-new" tone={TILE.fresh} />
-        <Tile tag="연속" label="이어온 학습" value={`${progress.streak.count}일`} art="streak-flame" tone={TILE.streak} />
+      <DayLine />
+
+      <p className="mb-3 text-[14px] text-ink-sub">
+        {allDone
+          ? "오늘 세 유형을 다 풀었어요. 한 번 더 풀어도 좋아요."
+          : "오늘은 어떤 유형으로 풀까요? 한 번에 한 유형만 풀어요."}
+      </p>
+
+      <div role="radiogroup" aria-label="오늘 풀 유형" className="flex flex-col gap-3">
+        {today.sets.map((s) => (
+          <KindCard
+            key={s.kind}
+            kind={s.kind}
+            count={s.items.length}
+            reviewCount={s.reviewCount}
+            done={done.includes(s.kind)}
+            selected={current === s.kind}
+            onPick={() => setPicked(s.kind)}
+          />
+        ))}
       </div>
-
-      {/* 출석 잔디 */}
-      <Card className="mt-4">
-        <div className="mb-3 flex items-center justify-between">
-          <h3 className="flex items-center gap-1.5 text-[15px] font-bold">
-            <Art name="attendance" />
-            출석 체크
-          </h3>
-          <span className="text-[12px] text-ink-faint">최근 12주</span>
-        </div>
-        <Grass doneDates={progress.doneDates} />
-      </Card>
 
       {/* 바닥 로고 줄 — 왼쪽 끝·오른쪽 끝. 이 앱이 어느 교재를 따라가는지
           밝히는 자리다. BottomCta 는 화면에 고정돼 있으므로 그 높이만큼
           띄워 두지 않으면 마지막 줄이 버튼 뒤로 숨는다 */}
-      <div className="mt-6 mb-24 flex items-center justify-between px-1 opacity-80">
+      <div className="mt-8 mb-24 flex items-center justify-between px-1 opacity-80">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/brand/selpa.png" alt="천재 셀파" width={89} height={20}
              className="h-5 w-auto object-contain" />
@@ -123,37 +103,78 @@ export default function TodayPage() {
              className="h-5 w-auto object-contain" />
       </div>
 
-      <BottomCta href="/today">
-        {doneToday ? "한 번 더 풀어보기" : "오늘의 학습 시작하기"}
-      </BottomCta>
+      {current ? (
+        <BottomCta href={`/today/run?kind=${current}`}>
+          {done.includes(current) ? `${KIND_LABEL[current]} 한 번 더 풀기` : `${KIND_LABEL[current]} 시작하기`}
+        </BottomCta>
+      ) : (
+        <BottomCta disabled>아직 오늘의 문항이 없어요</BottomCta>
+      )}
     </Screen>
   );
 }
 
-function Tile({
-  tag,
-  label,
-  value,
-  art,
-  tone,
+/** 유형 머리글자 — 카드 왼쪽 네모 안에 들어간다. 선택형은 "4지"로 모양을 말한다 */
+const KIND_BADGE: Record<QuizKind, string> = { ox: "OX", short: "단답", mcq: "4지" };
+
+/**
+ * 유형 카드 — 라디오 하나.
+ *
+ * 상태는 색만으로 말하지 않는다 (D4): 고름 = 테두리 + 속이 찬 동그라미,
+ * 끝냄 = ✓ 완료 칩. 끝낸 유형도 고를 수 있다 — 같은 날 다시 푸는 길을 막지 않는다.
+ */
+function KindCard({
+  kind,
+  count,
+  reviewCount,
+  done,
+  selected,
+  onPick,
 }: {
-  tag: string;
-  label: string;
-  value: string;
-  art: string;
-  tone: { tint: string; tag: string; value: string };
+  kind: QuizKind;
+  count: number;
+  reviewCount: number;
+  done: boolean;
+  selected: boolean;
+  onPick: () => void;
 }) {
+  const empty = count === 0;
   return (
-    <div className={`flex min-h-[120px] flex-col justify-between rounded-[20px] px-4 py-3.5 ${tone.tint}`}>
-      <span className={`text-[12px] font-bold ${tone.tag}`}>{tag}</span>
-      <span className={`mt-2 text-[22px] font-extrabold leading-none ${tone.value}`}>
-        {value}
+    <button
+      type="button"
+      role="radio"
+      aria-checked={selected}
+      disabled={empty}
+      onClick={onPick}
+      className={`flex w-full items-center gap-3.5 rounded-[20px] bg-surface px-4 py-4 text-left shadow-card transition-shadow disabled:opacity-50 ${
+        selected ? "ring-2 ring-primary-500" : ""
+      }`}
+    >
+      <span
+        aria-hidden
+        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] text-[14px] font-extrabold ${
+          done ? "bg-success-bg text-success" : "bg-primary-50 text-primary-700"
+        }`}
+      >
+        {KIND_BADGE[kind]}
       </span>
-      <span className="mt-1.5 flex items-center gap-1 text-[12px] leading-snug text-ink-sub">
-        <Art name={art} px={14} />
-        {label}
+      <span className="min-w-0 flex-1">
+        <span className="block text-[17px] font-bold text-ink">{KIND_LABEL[kind]}</span>
+        <span className="mt-0.5 block text-[13px] leading-snug text-ink-sub">
+          {KIND_DESC[kind]}
+          {" · "}
+          {empty ? "아직 문항이 없어요" : `${count}문항`}
+          {!empty && reviewCount > 0 && ` · 복습 ${reviewCount}`}
+        </span>
       </span>
-    </div>
+      {done && <Chip tone="success">✓ 완료</Chip>}
+      <span
+        aria-hidden
+        className={`h-[22px] w-[22px] shrink-0 rounded-full ${
+          selected ? "border-[7px] border-primary-500" : "border-2 border-line"
+        }`}
+      />
+    </button>
   );
 }
 
@@ -167,54 +188,97 @@ function subscribeMinute(onChange: () => void) {
 /** 분 단위로 자른 시각 — 스냅숏이 같은 분 안에서는 같은 값이어야 한다 */
 const minuteNow = () => Math.floor(Date.now() / 60_000);
 
-/**
- * 히어로 첫 줄 — "10월 7일 화요일 · 자정까지 6시간".
- *
- * 서버 렌더 시각과 기기 시각이 다르므로 마운트 뒤에만 그린다. 그 전에는 같은
- * 높이의 빈 줄을 두어 히어로가 한 번 출렁이지 않게 한다 (hydration 불일치 방지).
- */
-function DayLine() {
+/** 서버 렌더와 기기 시각이 다르므로 시각은 마운트 뒤에만 쓴다 (hydration) */
+function useNow(): Date | null {
   const minute = useSyncExternalStore(subscribeMinute, minuteNow, () => null);
-  const now = minute == null ? null : new Date(minute * 60_000);
+  return minute == null ? null : new Date(minute * 60_000);
+}
 
-  let text = String.fromCharCode(160); // NBSP — 마운트 전 자리 지킴 — 빈 줄 높이
+const dateKeyOf = (d: Date) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+
+/**
+ * 이번 주 줄 — 일요일부터 토요일까지 7칸 (하이링구얼 달력의 한 줄 판).
+ *
+ * 끝낸 날 = 연한 인디고 + ✓, 오늘 = 테두리, 지난 빈 날과 앞날은 회색 숫자.
+ * 마운트 전에는 칸만 그려 두어 높이가 출렁이지 않게 한다.
+ */
+function WeekStrip({ doneDates }: { doneDates: string[] }) {
+  const now = useNow();
+  const days = useMemo(() => {
+    if (!now) return null;
+    const start = new Date(now);
+    start.setHours(0, 0, 0, 0);
+    start.setDate(start.getDate() - start.getDay());
+    return Array.from({ length: 7 }, (_, i) => {
+      const d = new Date(start);
+      d.setDate(start.getDate() + i);
+      const key = dateKeyOf(d);
+      return { key, date: d.getDate(), done: doneDates.includes(key), isToday: key === dateKeyOf(now), future: d > now };
+    });
+  }, [now, doneDates]);
+  const doneCount = days?.filter((d) => d.done).length ?? 0;
+
+  return (
+    <Card className="mb-4">
+      <div className="mb-3 flex items-center justify-between">
+        <h2 className="text-[16px] font-bold">이번 주</h2>
+        <span className="text-[12px] text-ink-sub">{days ? `${doneCount}일 출석` : ""}</span>
+      </div>
+      <ol className="flex justify-between" aria-label="이번 주 출석">
+        {WEEKDAY.map((w, i) => {
+          const d = days?.[i];
+          return (
+            <li key={w} className="flex flex-col items-center gap-1.5">
+              <span className="text-[11px] font-medium text-ink-faint">{w}</span>
+              <span
+                aria-label={d ? `${d.date}일 ${d.done ? "출석" : d.future ? "" : "미출석"}`.trim() : undefined}
+                className={`flex h-[38px] w-[38px] items-center justify-center rounded-full text-[14px] font-bold ${
+                  d?.done ? "bg-primary-100 text-primary-700" : "bg-bg-subtle"
+                } ${d?.isToday ? "ring-2 ring-primary-500" : ""} ${
+                  d && !d.done ? (d.isToday ? "bg-surface text-primary-700" : d.future ? "text-ink-faint" : "text-ink-sub") : ""
+                }`}
+              >
+                {d ? (d.done ? <CheckIcon /> : d.date) : ""}
+              </span>
+            </li>
+          );
+        })}
+      </ol>
+    </Card>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="m5 12 5 5 9-10" />
+    </svg>
+  );
+}
+
+/** "10월 8일 수요일 · 자정까지 6시간" — 마운트 전에는 같은 높이의 빈 줄 */
+function DayLine() {
+  const now = useNow();
+  let date = String.fromCharCode(160);
+  let left = "";
   if (now) {
     const midnight = new Date(now);
     midnight.setHours(24, 0, 0, 0);
     const mins = Math.max(0, Math.round((+midnight - +now) / 60_000));
-    const left = mins >= 60 ? `${Math.floor(mins / 60)}시간` : `${mins}분`;
-    text = `${now.getMonth() + 1}월 ${now.getDate()}일 ${WEEKDAY[now.getDay()]}요일 · 자정까지 ${left}`;
+    left = mins >= 60 ? `${Math.floor(mins / 60)}시간` : `${mins}분`;
+    date = `${now.getMonth() + 1}월 ${now.getDate()}일 ${WEEKDAY[now.getDay()]}요일`;
   }
-  return <p className="text-[13px] font-semibold text-white/85">{text}</p>;
-}
-
-/**
- * 출석 잔디 — 이분값(한 날 / 안 한 날).
- * 시안은 5단계 농도지만 store 가 날짜별 문항 수를 남기지 않는다(doneDates 뿐).
- * 날짜별 횟수가 생기면 bg-subtle → primary-100/300/500/700 로 나눈다.
- */
-function Grass({ doneDates }: { doneDates: string[] }) {
-  const cells = useMemo(() => {
-    const out: { key: string; done: boolean }[] = [];
-    const d = new Date();
-    d.setDate(d.getDate() - 83);
-    for (let i = 0; i < 84; i++) {
-      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-      out.push({ key, done: doneDates.includes(key) });
-      d.setDate(d.getDate() + 1);
-    }
-    return out;
-  }, [doneDates]);
-
   return (
-    <div className="grid grid-flow-col grid-rows-7 gap-1" aria-label="최근 12주 출석 기록">
-      {cells.map((c) => (
-        <span
-          key={c.key}
-          title={c.key}
-          className={`h-3 w-3 rounded-[4px] ${c.done ? "bg-primary-500" : "bg-bg-subtle"}`}
-        />
-      ))}
+    <div className="mb-1 flex items-center justify-between">
+      <span className="text-[17px] font-bold">{date}</span>
+      {left && (
+        <span className="flex items-center gap-1 text-[13px] font-bold text-primary-700">
+          <Art name="timer" px={14} />
+          자정까지 {left}
+        </span>
+      )}
     </div>
   );
 }

@@ -73,7 +73,7 @@ function Runner() {
     setShownAt(Date.now());
     if (idx + 1 >= total) {
       const wrong = answers.filter((a) => !a.correct).map((a) => a.item.conceptId);
-      completeDaily(Array.from(new Set(wrong)));
+      completeDaily(Array.from(new Set(wrong)), kind);
       setFinished(true);
     } else {
       setIdx(idx + 1);

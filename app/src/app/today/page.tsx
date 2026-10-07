@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { Art } from "@/components/Art";
 import { Screen, ScreenTitle } from "@/components/ui";
-import { buildDailyOverview, KIND_LABEL } from "@/data/quiz";
+import { buildDailyOverview, KIND_DESC, KIND_LABEL } from "@/data/quiz";
 import { todayPlan } from "@/lib/scheduler";
 import { TILE } from "@/lib/brand";
 import { todayKey, useProgress } from "@/lib/store";
@@ -20,11 +20,11 @@ import type { QuizKind } from "@/lib/types";
 
 const KIND_META: Record<
   QuizKind,
-  { desc: string; art: string; tone: { tint: string; tag: string; value: string } }
+  { art: string; tone: { tint: string; tag: string; value: string } }
 > = {
-  ox: { desc: "명제를 읽고 맞다 · 틀리다", art: "ox-true", tone: TILE.fresh },
-  short: { desc: "정의를 보고 개념 이름 쓰기", art: "concept-new", tone: TILE.review },
-  mcq: { desc: "정의에 맞는 개념 고르기", art: "review-return", tone: TILE.streak },
+  ox: { art: "ox-true", tone: TILE.fresh },
+  short: { art: "concept-new", tone: TILE.review },
+  mcq: { art: "review-return", tone: TILE.streak },
 };
 
 export default function TodayPickPage() {
@@ -68,7 +68,7 @@ export default function TodayPickPage() {
                     </span>
                   )}
                 </span>
-                <span className="mt-1 block text-[13px] text-ink-sub">{meta.desc}</span>
+                <span className="mt-1 block text-[13px] text-ink-sub">{KIND_DESC[s.kind]}</span>
               </span>
               <span aria-hidden className={`text-[18px] ${meta.tone.value}`}>
                 ›
