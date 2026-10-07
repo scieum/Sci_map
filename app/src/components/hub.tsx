@@ -211,7 +211,7 @@ export function StatTiles({
       {items.map((s) => (
         <div
           key={s.label}
-          className="rounded-[20px] bg-surface px-3 py-4 shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
+          className="rounded-[20px] bg-surface px-3 py-4 shadow-card"
         >
           <p className="text-[26px] font-extrabold leading-none text-ink">
             {s.value}
@@ -249,7 +249,7 @@ export function Badge({
   const tones = {
     neutral: "bg-bg-subtle text-ink-sub",
     primary: "bg-primary-50 text-primary-700",
-    success: "bg-[#e9f7ee] text-success",
+    success: "bg-success-bg text-success",
     warning: "bg-warning-bg text-warning",
     dark: "bg-ink text-white",
   } as const;
@@ -267,7 +267,7 @@ export function Badge({
 /** 왼쪽 라벨 / 오른쪽 값. 규칙·조건처럼 "짝이 있는 사실"을 늘어놓는 자리 */
 export function MetaTable({ rows }: { rows: { k: string; v: ReactNode }[] }) {
   return (
-    <div className="rounded-[24px] bg-surface px-5 shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+    <div className="rounded-[24px] bg-surface px-5 shadow-card">
       {rows.map((r) => (
         <div
           key={r.k}
@@ -287,7 +287,7 @@ export function MetaTable({ rows }: { rows: { k: string; v: ReactNode }[] }) {
 
 export function Steps({ items }: { items: ReactNode[] }) {
   return (
-    <ol className="rounded-[24px] bg-surface p-5 shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+    <ol className="rounded-[24px] bg-surface p-5 shadow-card">
       {items.map((it, i) => (
         <li key={i} className={`flex gap-3 ${i > 0 ? "mt-3.5" : ""}`}>
           <span
@@ -342,7 +342,7 @@ export function ListCard({
     </>
   );
   const cls =
-    "flex w-full items-center gap-3 rounded-[20px] bg-surface px-5 py-4 text-left shadow-[0_2px_14px_rgba(23,58,94,0.06)]";
+    "flex w-full items-center gap-3 rounded-[20px] bg-surface px-5 py-4 text-left shadow-card";
   if (href) {
     return (
       <Link href={href} className={cls}>
@@ -409,7 +409,7 @@ export function SearchField({
       }}
       className="flex items-center gap-2"
     >
-      <div className="flex h-12 min-w-0 flex-1 items-center gap-2.5 rounded-full bg-surface px-4 shadow-[0_2px_14px_rgba(23,58,94,0.06)] focus-within:ring-2 focus-within:ring-primary-300">
+      <div className="flex h-12 min-w-0 flex-1 items-center gap-2.5 rounded-full bg-surface px-4 shadow-card focus-within:ring-2 focus-within:ring-primary-300">
         <svg
           width="17"
           height="17"

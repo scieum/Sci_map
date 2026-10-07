@@ -3,9 +3,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use, useEffect, useMemo, useState } from "react";
-import { Card } from "@/components/ui";
+import { BottomCta, Card, Chip, ProgressBar } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
-import { CHOICES, signedUrls, subjectTitle, unitItems, type ExamItem } from "@/lib/exam";
+import {
+  CHOICES,
+  paperById,
+  signedUrls,
+  subjectTitle,
+  unitItems,
+  type ExamItem,
+  type UnitItems,
+} from "@/lib/exam";
 import { examProgress, loadProgress, recordExam } from "@/lib/store";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 
@@ -23,6 +31,8 @@ import { isSupabaseConfigured, supabase } from "@/lib/supabase";
  * ★ 이미지는 로그인한 세션에만 내려오는 서명 URL 이다. 세션이 없으면 문항을
  *   아예 받아 오지 않는다.
  */
+type UnitItem = UnitItems["items"][number];
+
 export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[unitId]">) {
   const { subjectCode, unitId } = use(params);
   // Keep the item list stable across state updates so loading and progress effects
@@ -105,10 +115,11 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
   }
 
   const head = `${subjectTitle(subjectCode)} · ${unit.title}`;
+  const back = `/items/${subjectCode}`;
 
   if (signedIn === false) {
     return (
-      <Shell head={head}>
+      <Shell head={head} back={back}>
         <Card>
           <p className="text-[15px] font-bold">로그인하면 문제가 열려요</p>
           <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">
@@ -128,94 +139,105 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
 
   if (!item) {
     return (
-      <Shell head={head}>
+      <Shell head={head} back={back}>
         <p className="text-[14px] text-ink-faint">불러오는 중…</p>
       </Shell>
     );
   }
 
+  const isLast = idx! + 1 >= total;
+  const right = item.kind === "choice" && given === item.answer;
+
   return (
-    <Shell head={head}>
-      <header className="mb-4 flex items-center gap-3">
-        <Link
-          href={`/items/${subjectCode}`}
-          aria-label="단원 목록으로"
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-surface text-lg text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.06)]"
-        >
-          ×
-        </Link>
-        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-bg-subtle">
-          <div
-            className="h-full rounded-full bg-primary-500 transition-all"
-            style={{ width: `${((idx! + (given ? 1 : 0)) / total) * 100}%` }}
-          />
-        </div>
-        <span className="text-[13px] font-bold text-ink-sub">
-          {idx! + 1}/{total}
-        </span>
-      </header>
+    <Shell head={head} back={back} count={`${idx! + 1} / ${total}`} withCta={Boolean(given)}>
+      <div className="mb-4">
+        <ProgressBar
+          value={(idx! + (given ? 1 : 0)) / total}
+          size="sm"
+          label={`${total}문항 중 ${idx! + 1}번째`}
+        />
+      </div>
 
       <div className="mb-3 flex flex-wrap items-center gap-1.5">
         {/* 어느 평가지에서 온 문항인지 — 회차를 목록에서 뺀 대신 여기 남긴다 */}
-        <span className="rounded-full bg-primary-50 px-3 py-1 text-[12px] font-bold text-primary-600">
-          {item.paperLabel} {item.no}번
-        </span>
-        {item.difficulty && (
-          <span className="rounded-full bg-bg-subtle px-3 py-1 text-[12px] font-semibold text-ink-sub">
-            난이도 {item.difficulty}
-          </span>
+        <Chip tone="primary">
+          {item.paperLabel} · 문항 {item.no}
+        </Chip>
+        {item.kind !== "unknown" && (
+          <Chip tone="outline">{item.kind === "choice" ? "객관식" : "서술형"}</Chip>
         )}
-        {item.topicLabel && (
-          <span className="rounded-full bg-bg-subtle px-3 py-1 text-[12px] font-semibold text-ink-sub">
-            {item.topicLabel}
-          </span>
-        )}
+        {item.topicLabel && <Chip tone="outline">{item.topicLabel}</Chip>}
+        {item.difficulty && <Chip tone="outline">난이도 {item.difficulty}</Chip>}
       </div>
 
       <ItemImage item={item} url={urls?.[item.id]} loading={urls === null} />
 
       {item.kind === "choice" ? (
-        <div className="mt-4 grid grid-cols-5 gap-2">
-          {CHOICES.map((c) => {
-            const picked = given === c;
-            const isAnswer = given && c === item.answer;
-            return (
-              <button
-                key={c}
-                onClick={() => answer(c)}
-                disabled={Boolean(given)}
-                className={`h-14 rounded-2xl text-[18px] font-bold shadow-[0_2px_12px_rgba(23,58,94,0.06)] transition-colors ${
-                  isAnswer
-                    ? "bg-primary-500 text-white"
-                    : picked
-                      ? "bg-[#fdf2f2] text-danger ring-2 ring-danger"
-                      : "bg-surface text-ink"
-                }`}
-              >
-                {c}
-              </button>
-            );
-          })}
-        </div>
+        <>
+          <p className="mb-2.5 mt-5 text-[13px] font-bold text-ink-sub">답 고르기</p>
+          <div className="flex justify-between gap-1">
+            {CHOICES.map((c) => {
+              const picked = given === c;
+              const isAnswer = Boolean(given) && c === item.answer;
+              const wrongPick = picked && !isAnswer;
+              // 채점 결과는 색만으로 알리지 않는다 (D4) — 원 아래에 ✓·✕ 글자를 붙인다
+              const look = isAnswer
+                ? "bg-success-bg text-success ring-2 ring-success"
+                : wrongPick
+                  ? "bg-danger-bg text-danger ring-2 ring-danger"
+                  : given
+                    ? "bg-surface text-ink-faint ring-1 ring-line"
+                    : "bg-surface text-ink ring-1 ring-line active:bg-primary-50";
+              return (
+                <div key={c} className="flex flex-col items-center">
+                  <button
+                    onClick={() => answer(c)}
+                    disabled={Boolean(given)}
+                    aria-label={`${c}번${isAnswer ? " · 정답" : wrongPick ? " · 내 답, 오답" : ""}`}
+                    className={`flex h-[54px] w-[54px] items-center justify-center rounded-full text-[20px] font-bold shadow-chip transition-colors ${look}`}
+                  >
+                    {c}
+                  </button>
+                  <span
+                    aria-hidden
+                    className={`mt-1 h-4 text-[11px] font-bold ${
+                      isAnswer ? "text-success" : "text-danger"
+                    }`}
+                  >
+                    {isAnswer ? "✓ 정답" : wrongPick ? "✕ 내 답" : ""}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </>
       ) : (
         <button
           onClick={() => answer("self")}
           disabled={Boolean(given)}
-          className="mt-4 h-14 w-full rounded-full bg-surface text-[15px] font-bold text-primary-600 shadow-[0_2px_14px_rgba(23,58,94,0.08)] disabled:opacity-60"
+          className="mt-5 h-14 w-full rounded-full bg-surface text-[15px] font-bold text-primary-600 ring-1 ring-line shadow-chip disabled:opacity-60"
         >
           서술형이에요 · 스스로 확인하고 넘어가기
         </button>
       )}
 
       {given && (
-        <div className="mt-4">
+        <Card className="mt-4">
           {item.kind === "choice" ? (
             <p
-              className={`text-[16px] font-extrabold ${
-                given === item.answer ? "text-success" : "text-danger"
+              className={`flex items-center gap-2 text-[17px] font-extrabold ${
+                right ? "text-success" : "text-danger"
               }`}
             >
-              {given === item.answer ? "정답이에요!" : `아쉬워요 · 정답은 ${item.answer}`}
+              <span
+                aria-hidden
+                className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[13px] ring-2 ${
+                  right ? "ring-success" : "ring-danger"
+                }`}
+              >
+                {right ? "✓" : "✕"}
+              </span>
+              {right ? "정답이에요" : `오답이에요 · 정답 ${item.answer}`}
             </p>
           ) : (
             <p className="text-[15px] font-bold text-ink-sub">
@@ -223,70 +245,118 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
             </p>
           )}
 
+          {/* 해설은 사이맵이 쓴 것뿐이다 — 발행사 해설은 옮기지 않는다 (CLAUDE.md §6) */}
           {item.explanation && (
-            <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">{item.explanation}</p>
+            <>
+              <p className="mt-2 text-[12px] text-ink-faint">
+                해설 · 개념 카드의 관계 명제를 인용해 사이맵이 직접 썼어요
+              </p>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink">{item.explanation}</p>
+            </>
           )}
 
-          <RelatedConcepts item={item} subjectCode={subjectCode} />
+          <RelatedConcepts item={item} />
 
-          <button
-            onClick={next}
-            disabled={idx! + 1 >= total}
-            className="mt-5 h-14 w-full rounded-full bg-primary-500 text-[16px] font-bold text-white shadow-cta disabled:opacity-40"
-          >
-            {idx! + 1 >= total ? "이 단원의 마지막 문항이에요" : "다음 문항"}
-          </button>
           <Link
-            href={`/items/${subjectCode}`}
-            className="mt-3 block text-center text-[14px] font-bold text-primary-600"
+            href={back}
+            className="mt-5 block text-center text-[13px] font-bold text-ink-faint"
           >
             단원 목록으로 ({score.correct}/{score.done} 맞힘)
           </Link>
-        </div>
+        </Card>
+      )}
+
+      {given && (
+        <BottomCta onClick={next} disabled={isLast}>
+          {isLast ? "이 단원의 마지막 문항이에요" : "다음 문항"}
+        </BottomCta>
       )}
     </Shell>
   );
 }
 
-function Shell({ head, children }: { head: string; children: React.ReactNode }) {
+function Shell({
+  head,
+  back,
+  count,
+  withCta = false,
+  children,
+}: {
+  head: string;
+  back: string;
+  /** "3 / 25" — 문항을 보고 있을 때만 */
+  count?: string;
+  /** 하단 고정 CTA 가 뜨면 그만큼 아래를 비워 둔다 */
+  withCta?: boolean;
+  children: React.ReactNode;
+}) {
   return (
-    <main className="mx-auto w-full max-w-xl px-5 pb-28 pt-5">
-      <p className="mb-3 text-[13px] font-semibold text-ink-faint">{head}</p>
+    <main className={`mx-auto w-full max-w-xl px-5 pt-5 ${withCta ? "pb-48" : "pb-28"}`}>
+      <header className="mb-3 flex items-center gap-2">
+        <Link
+          href={back}
+          aria-label="단원 목록으로"
+          className="-ml-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[22px] leading-none text-ink"
+        >
+          ‹
+        </Link>
+        <p className="min-w-0 flex-1 truncate text-[16px] font-bold text-ink">
+          {head}
+          {count && <span className="text-ink-sub"> · {count}</span>}
+        </p>
+      </header>
       {children}
     </main>
   );
 }
 
-/** 문항 크롭. 비율을 미리 잡아 두어 이미지가 붙을 때 화면이 튀지 않게 한다 */
+/**
+ * 문항 크롭. 비율을 미리 잡아 두어 이미지가 붙을 때 화면이 튀지 않게 한다.
+ *
+ * ★ 이미지 아래 띠에 출처·이용 근거·경고 문구를 상시 둔다 (Design.md §4.3,
+ *   rights_policy §5). 크롭 안의 워터마크와 별개로, 화면에서도 늘 읽혀야 한다.
+ * ★ 길게 누르기·우클릭·끌어서 저장을 막는다 (Design.md §4.3). 캡처까지 막지는
+ *   못하지만, 손쉬운 저장 경로는 닫아 둔다.
+ */
 function ItemImage({
   item,
   url,
   loading,
 }: {
-  item: ExamItem;
+  item: UnitItem;
   url?: string;
   loading: boolean;
 }) {
+  const holder = paperById(item.paperId)?.rightsHolder;
   return (
-    <div
-      className="overflow-hidden rounded-[20px] bg-surface p-2 shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
-      style={{ aspectRatio: `${item.width} / ${item.height}` }}
-    >
-      {url ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={url}
-          alt={`${item.no}번 문항`}
-          width={item.width}
-          height={item.height}
-          className="h-full w-full object-contain"
-        />
-      ) : (
-        <div className="flex h-full w-full items-center justify-center rounded-2xl bg-bg-subtle text-[13px] text-ink-faint">
-          {loading ? "문항을 불러오는 중…" : "문항 이미지를 받지 못했어요"}
-        </div>
-      )}
-    </div>
+    <figure className="overflow-hidden rounded-[24px] bg-surface shadow-chip">
+      <div
+        className="select-none p-2 [-webkit-touch-callout:none]"
+        style={{ aspectRatio: `${item.width} / ${item.height}` }}
+        onContextMenu={(e) => e.preventDefault()}
+      >
+        {url ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={url}
+            alt={`${item.no}번 문항`}
+            width={item.width}
+            height={item.height}
+            draggable={false}
+            onDragStart={(e) => e.preventDefault()}
+            className="pointer-events-none h-full w-full object-contain"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center rounded-2xl bg-bg-subtle text-[13px] text-ink-faint">
+            {loading ? "문항을 불러오는 중…" : "문항 이미지를 받지 못했어요"}
+          </div>
+        )}
+      </div>
+      <figcaption className="bg-bg-subtle px-4 py-2.5 text-[12px] leading-snug text-ink-faint">
+        출처 · {holder ? `${holder} ` : ""}
+        {item.paperLabel} | 수업 목적 이용(저작권법 제25조 제3항) · 저장·공유 금지
+      </figcaption>
+    </figure>
   );
 }
 
@@ -304,7 +374,7 @@ function ItemImage({
  */
 const CHIP_LIMIT = 6;
 
-function RelatedConcepts({ item, subjectCode }: { item: ExamItem; subjectCode: string }) {
+function RelatedConcepts({ item }: { item: ExamItem }) {
   const exact = Boolean(item.conceptIds?.length);
   const ids = exact ? item.conceptIds! : (item.conceptCandidates ?? []);
   const cards = ids.map(conceptById).filter(Boolean);
@@ -313,12 +383,9 @@ function RelatedConcepts({ item, subjectCode }: { item: ExamItem; subjectCode: s
   if (!exact && cards.length > CHIP_LIMIT) {
     return (
       <div className="mt-4">
-        <p className="mb-2 text-[13px] font-bold text-ink-faint">개념 다시 보기</p>
-        <Link
-          href="/concepts"
-          className="inline-block rounded-full bg-primary-50 px-4 py-2 text-[13px] font-semibold text-primary-600"
-        >
-          이 단원의 개념 {cards.length}장 보기 ›
+        <p className="mb-2 text-[12px] font-bold text-ink-faint">개념 다시 보기</p>
+        <Link href="/concepts">
+          <Chip tone="primary">이 단원의 개념 {cards.length}장 보기 →</Chip>
         </Link>
         <p className="mt-1.5 text-[11px] text-ink-faint">
           이 문항이 어느 개념을 묻는지는 아직 좁히는 중이에요.
@@ -329,17 +396,13 @@ function RelatedConcepts({ item, subjectCode }: { item: ExamItem; subjectCode: s
 
   return (
     <div className="mt-4">
-      <p className="mb-2 text-[13px] font-bold text-ink-faint">
+      <p className="mb-2 text-[12px] font-bold text-ink-faint">
         {exact ? "관련 개념" : "이 성취기준의 개념들"}
       </p>
       <div className="flex flex-wrap gap-1.5">
         {cards.map((c) => (
-          <Link
-            key={c!.id}
-            href={`/concepts/${c!.id}`}
-            className="rounded-full bg-primary-50 px-3.5 py-1.5 text-[13px] font-semibold text-primary-600"
-          >
-            {c!.term}
+          <Link key={c!.id} href={`/concepts/${c!.id}`}>
+            <Chip tone="primary">{c!.term} →</Chip>
           </Link>
         ))}
       </div>

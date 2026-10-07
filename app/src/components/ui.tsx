@@ -28,16 +28,33 @@ export function Card({
 }) {
   return (
     <div
-      className={`rounded-[24px] bg-surface p-5 shadow-[0_2px_14px_rgba(23,58,94,0.06)] ${className}`}
+      className={`rounded-[24px] bg-surface p-5 shadow-card ${className}`}
     >
       {children}
     </div>
   );
 }
 
-export function SectionLabel({ children }: { children: ReactNode }) {
+/**
+ * 구간 제목 — 왼쪽 4px 막대 + 굵은 제목 (Figma 시안 v1).
+ * 카드 화면처럼 섹션이 여럿 이어질 때 어디서 끊기는지 막대가 먼저 알려 준다.
+ * `tone` 은 막대 색만 바꾼다 — 함정 섹션은 warning 이다.
+ */
+export function SectionLabel({
+  children,
+  tone = "primary",
+}: {
+  children: ReactNode;
+  tone?: "primary" | "warning";
+}) {
   return (
-    <h2 className="mb-2.5 mt-7 text-[16px] font-bold">{children}</h2>
+    <h2 className="mb-2.5 mt-7 flex items-center gap-2 text-[16px] font-bold">
+      <span
+        aria-hidden
+        className={`h-4 w-1 rounded-full ${tone === "warning" ? "bg-warning" : "bg-primary-500"}`}
+      />
+      {children}
+    </h2>
   );
 }
 
@@ -46,13 +63,17 @@ export function Chip({
   tone = "neutral",
 }: {
   children: ReactNode;
-  tone?: "neutral" | "primary" | "info" | "warning";
+  tone?: "neutral" | "primary" | "info" | "warning" | "outline" | "success" | "danger";
 }) {
+  // success·danger 는 색만으로 말하지 않는다 (D4) — 부르는 쪽이 ✓·✕ 를 함께 넣는다
   const tones = {
     neutral: "bg-bg-subtle text-ink-sub",
     primary: "bg-primary-50 text-primary-600",
     info: "bg-info-bg text-info",
     warning: "bg-warning-bg text-warning",
+    outline: "bg-surface text-ink-sub ring-1 ring-inset ring-line",
+    success: "bg-success-bg text-success",
+    danger: "bg-danger-bg text-danger",
   } as const;
   return (
     <span
@@ -94,6 +115,71 @@ export function BottomCta({
   );
 }
 
+/** 가로 진행 막대 — 단원 진도·방 목표·타석 시간이 같은 모양을 쓴다 */
+export function ProgressBar({
+  value,
+  tone = "primary",
+  size = "md",
+  label,
+}: {
+  /** 0~1 */
+  value: number;
+  tone?: "primary" | "soft" | "violet" | "azure" | "rose";
+  size?: "sm" | "md";
+  /** 스크린 리더용 이름 */
+  label?: string;
+}) {
+  const fills = {
+    primary: "bg-primary-500",
+    soft: "bg-primary-300",
+    violet: "bg-violet-500",
+    azure: "bg-azure-500",
+    rose: "bg-rose-500",
+  } as const;
+  const pct = Math.round(Math.min(1, Math.max(0, value)) * 100);
+  return (
+    <div
+      role="progressbar"
+      aria-label={label}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={pct}
+      className={`w-full overflow-hidden rounded-full bg-bg-subtle ${size === "sm" ? "h-1.5" : "h-2"}`}
+    >
+      <div className={`h-full rounded-full ${fills[tone]} transition-[width]`} style={{ width: `${pct}%` }} />
+    </div>
+  );
+}
+
+/**
+ * 세그먼트 진행 — 문항 수만큼 칸을 나눈다 (EF hello 패턴, 시안 ②).
+ * 칸이 너무 많으면 칸이 실선처럼 붙어 버리므로 20칸을 넘으면 막대 하나로 그린다.
+ */
+export function SegmentedProgress({ current, total }: { current: number; total: number }) {
+  if (total > 20) return <ProgressBar value={total ? current / total : 0} size="sm" label={`${current}/${total}`} />;
+  return (
+    <div className="flex w-full gap-1" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={current} aria-label={`${current}/${total}`}>
+      {Array.from({ length: total }, (_, i) => (
+        <span key={i} className={`h-1.5 flex-1 rounded-full ${i < current ? "bg-primary-500" : "bg-line"}`} />
+      ))}
+    </div>
+  );
+}
+
+/** 숫자 셋을 나란히 — 경기 점수판·내 정보 기록에 쓴다 (시안 ⑧ ⑪) */
+export function StatRow({ items }: { items: { value: ReactNode; label: string }[] }) {
+  return (
+    <Card className="flex py-4">
+      {items.map((it) => (
+        <div key={it.label} className="flex flex-1 flex-col items-center gap-0.5">
+          <span className="text-[22px] font-extrabold leading-tight text-primary-700">{it.value}</span>
+          <span className="text-[12px] text-ink-faint">{it.label}</span>
+        </div>
+      ))}
+    </Card>
+  );
+}
+
 /** 숙련도 도트 */
 export function LevelDots({ level }: { level: number }) {
   return (
@@ -118,7 +204,7 @@ export function LevelDots({ level }: { level: number }) {
  */
 export function LockedMedia({ caption }: { caption?: string }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 rounded-[24px] bg-surface px-4 py-9 text-center shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+    <div className="flex flex-col items-center justify-center gap-2 rounded-[24px] bg-surface px-4 py-9 text-center shadow-card">
       <Art name="locked" />
       <p className="text-[14px] text-ink-sub">
         로그인하면 교과서 그림을 볼 수 있어요
@@ -157,7 +243,7 @@ export function ConceptMedia({
   const own = file?.startsWith("own/");
 
   return (
-    <figure className="overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+    <figure className="overflow-hidden rounded-[24px] bg-surface shadow-card">
       {file ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -262,7 +348,7 @@ export function BookmarkStar({
       onClick={onToggle}
       aria-pressed={on}
       aria-label={on ? "북마크 해제" : "북마크에 담기"}
-      className={`flex h-9 w-9 items-center justify-center rounded-full shadow-[0_2px_10px_rgba(23,58,94,0.06)] transition-colors ${
+      className={`flex h-9 w-9 items-center justify-center rounded-full shadow-card transition-colors ${
         on ? "bg-primary-50 text-primary-600" : "bg-surface text-ink-faint"
       } ${className}`}
     >

@@ -14,12 +14,17 @@ import type { ConceptLink, LinkType } from "@/lib/types";
  * 묶여 보인다. 머리글 행을 넣지 않는 편이 카드가 조용하다.
  */
 
-const ROLE: Record<LinkType, { badge: string; cls: string }> = {
+const ROLE: Record<
+  LinkType,
+  { badge: string; before?: string; after?: string; cls: string }
+> = {
   // 셋이 서로 다른 색이어야 한다. 먼저와 관련이 둘 다 회색이던 때에는
   // 배지가 붙어 있어도 어느 쪽이 선수인지 형태로 구분되지 않았다.
-  prereq: { badge: "먼저", cls: "bg-bg-subtle text-ink-sub" },
-  next: { badge: "다음", cls: "bg-primary-50 text-primary-600" },
-  same: { badge: "연계", cls: "bg-info-bg text-info" },
+  // 색(회색·인디고·민트, Design.md §2.2)에 더해 화살표가 방향을 말한다 (D4) —
+  // 먼저는 테두리만 있는 칩 + ←, 다음은 틴트 칩 + →, 곁가지는 민트 칩.
+  prereq: { badge: "먼저", before: "←", cls: "bg-surface text-ink-sub ring-1 ring-inset ring-line" },
+  next: { badge: "다음", after: "→", cls: "bg-primary-50 text-primary-700" },
+  same: { badge: "연계", before: "↔", cls: "bg-info-bg text-info" },
   related: { badge: "관련", cls: "bg-info-bg text-info" },
 };
 
@@ -35,7 +40,7 @@ export function ConceptLinks({ links }: { links: ConceptLink[] }) {
   if (rows.length === 0) return null;
 
   return (
-    <div className="divide-y divide-line overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+    <div className="divide-y divide-line overflow-hidden rounded-[24px] bg-surface shadow-card">
       {rows.map(({ link, target }) => {
         const role = ROLE[link.type];
         return (
@@ -45,9 +50,11 @@ export function ConceptLinks({ links }: { links: ConceptLink[] }) {
             className="flex items-start gap-3 px-4 py-3.5 active:bg-bg-subtle"
           >
             <span
-              className={`mt-0.5 shrink-0 rounded-full px-2.5 py-1 text-[12px] font-bold ${role.cls}`}
+              className={`mt-0.5 inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-bold ${role.cls}`}
             >
+              {role.before && <span aria-hidden>{role.before}</span>}
               {role.badge}
+              {role.after && <span aria-hidden>{role.after}</span>}
             </span>
             <span className="min-w-0 flex-1">
               <span className="block text-[15px] font-semibold leading-snug">

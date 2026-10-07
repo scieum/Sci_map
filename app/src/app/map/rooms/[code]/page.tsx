@@ -3,15 +3,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useState } from "react";
-import {
-  Badge,
-  DarkHero,
-  HubAppBar,
-  MetaTable,
-  SectionHead,
-  StatTiles,
-} from "@/components/hub";
-import { Card, Screen } from "@/components/ui";
+import { Badge, DarkHero, HubAppBar, MetaTable, SectionHead } from "@/components/hub";
+import { Card, ProgressBar, Screen } from "@/components/ui";
 import { accentOfSubject } from "@/lib/brand";
 import { leaveRoom, roomBoard, roomInfo, type BoardRow, type Room } from "@/lib/rooms";
 import { isSupabaseConfigured, supabase } from "@/lib/supabase";
@@ -38,6 +31,8 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
   /** 한 바퀴 다 돌기 전에는 아무 결론도 내지 않는다 — 중간 상태를 화면으로
       삼으면 "들어갈 수 없어요" 가 잠깐 스친다 (/me 의 동의 화면과 같은 실수) */
   const [ready, setReady] = useState(false);
+  /** 순위를 받아 온 시각 — "HH:MM 기준" 으로 보여 준다 */
+  const [loadedAt, setLoadedAt] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     if (!isSupabaseConfigured()) {
@@ -66,8 +61,16 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
     }
     setRoom(info.value);
     const b = await roomBoard(code);
-    if (b.ok) setBoard(b.value);
-    else setProblem(b.reason);
+    if (b.ok) {
+      setBoard(b.value);
+      setLoadedAt(
+        new Date().toLocaleTimeString("ko-KR", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        }),
+      );
+    } else setProblem(b.reason);
     setReady(true);
   }, [code]);
 
@@ -160,9 +163,17 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
   const ranked = [...board].sort(
     (a, b) => b.today_count - a.today_count || b.week_days - a.week_days,
   );
-  const mine = ranked.find((r) => r.user_id === me);
+  const myIdx = ranked.findIndex((r) => r.user_id === me);
+  const mine = myIdx >= 0 ? ranked[myIdx] : undefined;
   const done = ranked.filter((r) => r.today_count >= room.goal).length;
+  const started = ranked.filter((r) => r.today_count > 0).length;
   const left = mine ? Math.max(0, room.goal - mine.today_count) : room.goal;
+  // 바로 위 순위까지의 거리 — 1위이면 셀 대상이 없다
+  const above = myIdx > 0 ? ranked[myIdx - 1] : undefined;
+  const gap = above && mine ? above.today_count - mine.today_count : null;
+
+  const podium = ranked.slice(0, 3);
+  const rest = ranked.slice(3);
 
   return (
     <Shell code={code}>
@@ -190,78 +201,121 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
         </div>
       )}
 
-      {/* 오늘 방이 어디까지 왔나 — 등수보다 먼저 */}
-      <section className="mt-4 rounded-[24px] bg-primary-500 p-5 text-white shadow-hero">
-        <p className="text-[13px] font-semibold text-white/85">오늘 목표를 채운 사람</p>
-        <p className="mt-1 text-[40px] font-extrabold leading-none">
-          {done}
-          <span className="ml-1 text-[18px] font-bold text-white/70">/ {ranked.length}명</span>
-        </p>
-        {mine && (
-          <p className="mt-3 inline-flex rounded-full bg-white/20 px-4 py-1.5 text-[13px] font-bold">
-            나는 오늘 {mine.today_count}문항
-            {left === 0 ? " · 목표 달성 🎉" : ` · ${left}문항 남았어요`}
+      {/* 오늘 방이 어디까지 왔나 — 등수보다 먼저.
+          시안은 "방 전체 합계 / 방 목표" 를 그렸지만, 이 방의 목표는 **한 사람의
+          하루 몫**(room.goal)이다. 합계 목표를 지어내지 않고 "몫을 채운 사람 수"
+          로 막대를 채운다 */}
+      <Card className="mt-4">
+        <div className="flex items-baseline justify-between gap-3">
+          <p className="text-[15px] font-bold text-ink">오늘 방 목표</p>
+          <p className="text-[15px] font-bold text-primary-700">
+            {done} / {ranked.length}명 달성
           </p>
-        )}
-      </section>
+        </div>
+        <div className="mt-3">
+          <ProgressBar
+            value={ranked.length ? done / ranked.length : 0}
+            label="오늘 목표를 채운 사람"
+          />
+        </div>
+        <p className="mt-3 text-[13px] leading-relaxed text-ink-sub">
+          한 사람 하루 {room.goal}문항 · {ranked.length}명 중 {started}명이 시작했어요 · 매일
+          0시에 다시 시작
+        </p>
+      </Card>
 
       {mine && (
-        <>
-          <SectionHead title="내 몫" action="한국 시간 기준" />
-          <StatTiles
-            items={[
-              { label: "오늘 푼 문항", value: mine.today_count },
-              { label: "최근 7일 학습", value: mine.week_days, unit: "일" },
-              { label: "익힌 개념", value: mine.concepts, unit: "개" },
-            ]}
-          />
-        </>
+        <section className="mt-3 flex items-center gap-4 rounded-[24px] bg-primary-50 px-5 py-4">
+          <p className="shrink-0 text-[26px] font-extrabold leading-none text-primary-700">
+            {myIdx + 1}위
+          </p>
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-[15px] font-bold text-ink">나 · {mine.nickname}</p>
+            <p className="mt-0.5 text-[13px] text-ink-sub">
+              오늘 {mine.today_count}문항
+              {gap !== null &&
+                (gap > 0 ? ` · ${myIdx}위까지 ${gap}문항` : ` · ${myIdx}위와 같은 문항 수`)}
+            </p>
+            <p className="mt-0.5 text-[12px] text-ink-faint">
+              {left === 0 ? "✓ 오늘 몫 달성" : `오늘 몫까지 ${left}문항`} · 최근 7일{" "}
+              {mine.week_days}일 · 익힌 개념 {mine.concepts}개
+            </p>
+          </div>
+        </section>
       )}
 
-      <SectionHead title="오늘의 순위" action="오늘 푼 문항 순" />
-      <div className="flex flex-col gap-2">
-        {ranked.map((r, i) => {
-          const isMe = r.user_id === me;
-          const hit = r.today_count >= room.goal;
+      <div className="mb-3 mt-7 flex items-center justify-between gap-3">
+        <h2 className="text-[16px] font-bold text-ink">오늘의 순위</h2>
+        <button
+          onClick={() => void load()}
+          aria-label="순위 새로고침"
+          className="inline-flex items-center gap-1 text-[12px] text-ink-faint"
+        >
+          {loadedAt && `${loadedAt} 기준`}
+          <span aria-hidden className="text-[14px] leading-none">
+            ↻
+          </span>
+        </button>
+      </div>
+
+      {/* 시상대 — 2위 · 1위 · 3위 순으로 세운다. 세 명이 안 되면 빈 자리는 비워 둔다 */}
+      <div className="grid grid-cols-3 items-end gap-2">
+        {[1, 0, 2].map((pos) => {
+          const r = podium[pos];
+          if (!r) return <span key={pos} aria-hidden />;
           return (
-            <div
+            <PodiumSpot
               key={r.user_id}
-              className={`flex items-center gap-3 rounded-[20px] px-5 py-4 shadow-[0_2px_14px_rgba(23,58,94,0.06)] ${
-                isMe ? "bg-primary-50 ring-2 ring-inset ring-primary-300" : "bg-surface"
-              }`}
-            >
-              <span
-                aria-hidden
-                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[12px] font-extrabold ${
-                  i === 0 && r.today_count > 0
-                    ? "bg-ink text-white"
-                    : "bg-bg-subtle text-ink-faint"
-                }`}
-              >
-                {i + 1}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="mb-1 flex items-center gap-1.5">
-                  <span className="truncate text-[15px] font-bold text-ink">{r.nickname}</span>
-                  {isMe && <Badge tone="primary">나</Badge>}
-                  {/* 달성은 색만으로 알리지 않는다 (D4) */}
-                  {hit && <Badge tone="success">✓ 달성</Badge>}
-                </span>
-                <span className="block text-[12px] text-ink-faint">
-                  최근 7일 {r.week_days}일 · 익힌 개념 {r.concepts}개
-                  {r.best_score > 0 && ` · 야구 ${r.best_score}점`}
-                </span>
-              </span>
-              <span className="shrink-0 text-right">
-                <span className="block text-[18px] font-extrabold text-primary-600">
-                  {r.today_count}
-                </span>
-                <span className="block text-[11px] text-ink-faint">문항</span>
-              </span>
-            </div>
+              row={r}
+              rank={(pos + 1) as 1 | 2 | 3}
+              isMe={r.user_id === me}
+              goal={room.goal}
+            />
           );
         })}
       </div>
+
+      {rest.length > 0 && (
+        <Card className="mt-4 px-0! py-2!">
+          <ul>
+            {rest.map((r, i) => {
+              const isMe = r.user_id === me;
+              const hit = r.today_count >= room.goal;
+              return (
+                <li
+                  key={r.user_id}
+                  className={`flex items-center gap-3 px-5 py-3 ${isMe ? "bg-primary-50" : ""}`}
+                >
+                  <span className="w-5 shrink-0 text-[15px] font-extrabold text-primary-700">
+                    {i + 4}
+                  </span>
+                  <span
+                    aria-hidden
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-bg-subtle text-[13px] font-bold text-ink-sub"
+                  >
+                    {initial(r.nickname)}
+                  </span>
+                  <span className="flex min-w-0 flex-1 items-center gap-1.5">
+                    <span className="truncate text-[15px] font-semibold text-ink">
+                      {r.nickname}
+                    </span>
+                    {isMe && <Badge tone="primary">나</Badge>}
+                    {/* 달성은 색만으로 알리지 않는다 (D4) */}
+                    {hit && <Badge tone="success">✓ 달성</Badge>}
+                  </span>
+                  {r.today_count > 0 ? (
+                    <span className="shrink-0 text-[13px] font-semibold text-ink-sub">
+                      {r.today_count}문항
+                    </span>
+                  ) : (
+                    <span className="shrink-0 text-[13px] text-ink-faint">아직 시작 전</span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </Card>
+      )}
 
       <SectionHead title="이 방은 이렇게 봐요" />
       <MetaTable
@@ -273,13 +327,10 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
         ]}
       />
 
-      <div className="mt-6 flex gap-2">
-        <button
-          onClick={() => void load()}
-          className="h-12 flex-1 rounded-full bg-surface text-[14px] font-bold text-ink-sub shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
-        >
-          새로고침
-        </button>
+      {/* 시안의 "초대 코드 공유하기" CTA 는 두지 않는다 — 공유 기능이 아직 없고,
+          방 코드는 교사의 초대 코드(invite_codes)와 다른 것이라 이름을 섞으면 안 된다.
+          방 나가기는 되돌리기 번거로운 일이라 눈에 띄는 버튼이 아니라 글자 버튼으로 둔다 */}
+      <div className="mt-6 text-center">
         <button
           onClick={async () => {
             if (!confirm(`'${room.name}' 방에서 나갈까요? 코드를 다시 넣으면 돌아올 수 있어요.`))
@@ -287,12 +338,70 @@ export default function RoomPage({ params }: PageProps<"/map/rooms/[code]"> ) {
             await leaveRoom(code);
             router.push("/map/rooms");
           }}
-          className="h-12 flex-1 rounded-full bg-surface text-[14px] font-bold text-ink-faint shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
+          className="px-4 py-2 text-[13px] font-semibold text-ink-faint"
         >
           방 나가기
         </button>
       </div>
     </Shell>
+  );
+}
+
+/** 닉네임 첫 글자 — 이모지·결합 문자가 반 토막 나지 않게 코드 포인트로 자른다 */
+function initial(name: string): string {
+  return Array.from(name.trim())[0] ?? "?";
+}
+
+/** 시상대 한 자리. 1위만 크게, 2·3위는 보조 팔레트로 구분한다 — 순위는 글자로도 적는다 */
+const PODIUM = {
+  1: {
+    circle: "h-16 w-16 bg-primary-100 text-[20px] text-primary-700 ring-[3px] ring-primary-500",
+    chip: "bg-primary-500 text-white",
+  },
+  2: {
+    circle: "h-12 w-12 bg-azure-50 text-[17px] text-azure-700 ring-2 ring-azure-500",
+    chip: "bg-azure-50 text-azure-700",
+  },
+  3: {
+    circle: "h-12 w-12 bg-rose-50 text-[17px] text-rose-700 ring-2 ring-rose-500",
+    chip: "bg-rose-50 text-rose-700",
+  },
+} as const;
+
+function PodiumSpot({
+  row,
+  rank,
+  isMe,
+  goal,
+}: {
+  row: BoardRow;
+  rank: 1 | 2 | 3;
+  isMe: boolean;
+  goal: number;
+}) {
+  const look = PODIUM[rank];
+  return (
+    <div className="flex min-w-0 flex-col items-center text-center">
+      <span
+        aria-hidden
+        className={`flex items-center justify-center rounded-full font-extrabold ${look.circle}`}
+      >
+        {initial(row.nickname)}
+      </span>
+      <span className={`relative -mt-2 rounded-full px-3 py-0.5 text-[12px] font-bold ${look.chip}`}>
+        {rank}위
+      </span>
+      <span className="mt-1.5 flex max-w-full items-center gap-1">
+        <span className="truncate text-[14px] font-bold text-ink">{row.nickname}</span>
+        {isMe && <Badge tone="primary">나</Badge>}
+      </span>
+      <span className="mt-0.5 text-[12px] text-ink-faint">
+        {row.today_count > 0 ? `오늘 ${row.today_count}문항` : "아직 시작 전"}
+      </span>
+      {row.today_count >= goal && (
+        <span className="mt-0.5 text-[11px] font-bold text-success">✓ 달성</span>
+      )}
+    </div>
   );
 }
 

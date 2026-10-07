@@ -7,13 +7,14 @@ import { Art } from "@/components/Art";
 import { ConceptLinks } from "@/components/ConceptLinks";
 import { conceptById } from "@/data/concepts";
 import { rememberSubject } from "@/lib/ui-state";
-import { useBookmark } from "@/lib/store";
+import { useBookmark, useProgress } from "@/lib/store";
 import {
   BookmarkStar,
   BottomCta,
   Card,
   Chip,
   ConceptMediaList,
+  LevelDots,
   Screen,
   SectionLabel,
 } from "@/components/ui";
@@ -28,6 +29,7 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
   const [showGloss, setShowGloss] = useState(false);
   // 훅은 카드가 없을 때도 같은 수만큼 불려야 한다 — notFound() 위에 둔다
   const [marked, toggleMark] = useBookmark(id);
+  const progress = useProgress();
 
   // 이 카드의 과목을 개념 탭이 돌아갈 자리로 적어 둔다. 검색이나 오늘의 학습으로
   // 곧장 들어온 경우에도 ← 를 누르면 이 카드가 있는 과목이 열린다
@@ -37,6 +39,12 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
 
   if (!c) notFound();
 
+  // 학습 상태 칩 — 한 번이라도 인출해 본 카드에만 단다. 미학습 카드에 빈 도트를
+  // 다는 것은 "아직 안 했다" 는 지적일 뿐이라 이 화면의 과업(읽기)에 보탬이 없다
+  const level = progress.concepts[c.id]?.level ?? 0;
+  // 한자가 없는 음차어는 null 이지만 "해당 없음" 문자열로 올 때도 같은 대접을 한다
+  const hanja = c.hanja && c.hanja !== "해당 없음" ? c.hanja : null;
+
   return (
     <Screen>
       {/* 브레드크럼 — 위치 감각 */}
@@ -44,25 +52,25 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         <Link
           href="/concepts"
           aria-label="트리로"
-          className="mr-1 flex h-8 w-8 items-center justify-center rounded-full bg-surface text-[15px] text-ink shadow-[0_2px_10px_rgba(23,58,94,0.06)]"
+          className="mr-1 flex h-8 w-8 items-center justify-center rounded-full bg-surface text-[15px] text-ink shadow-card"
         >
           ←
         </Link>
         <span className="min-w-0 flex-1 truncate">
-          {c.subject} · {c.unit.split(" > ").pop()}
+          {[c.subject, ...c.unit.split(" > ")].join(" › ")}
         </span>
         {/* 별은 제목 옆이 아니라 여기다. 제목 옆에 두면 표제어 길이에 따라
             자리가 춤춘다 — 어느 카드를 열어도 같은 자리에 있어야 손이 기억한다 */}
         <BookmarkStar on={marked} onToggle={toggleMark} />
       </nav>
 
-      <h1 className="text-[26px] font-extrabold">{c.term}</h1>
-      {c.hanja ? (
+      <h1 className="text-[24px] font-bold leading-tight">{c.term}</h1>
+      {hanja ? (
         <button
           onClick={() => setShowGloss((v) => !v)}
           className="mt-1 text-left text-[15px] text-ink-sub"
         >
-          {c.hanja} · {c.english}
+          {hanja} · {c.english}
           {c.hanjaGloss && (
             <span className="ml-1.5 text-primary-600">
               {showGloss ? "접기" : "풀이"}
@@ -73,10 +81,19 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         <p className="mt-1 text-[15px] text-ink-sub">{c.english}</p>
       )}
       {showGloss && c.hanjaGloss && (
-        <p className="mt-2 rounded-2xl bg-surface px-4 py-3 text-[14px] text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.05)]">
+        <p className="mt-2 rounded-2xl bg-surface px-4 py-3 text-[14px] text-ink-sub shadow-card">
           {c.hanjaGloss}
         </p>
       )}
+      {level > 0 && (
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          <Chip tone="primary">
+            학습 중
+            <LevelDots level={level} />
+          </Chip>
+        </div>
+      )}
+
       <SectionLabel>정의</SectionLabel>
       <Card>
         <p className="text-[16px] leading-relaxed">{c.definition}</p>
@@ -86,42 +103,50 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         <Art name="section-relations" className="mr-1.5 align-[-2px]" />
         관계 명제
       </SectionLabel>
+      {/* 관계 명제가 시각적 중심이다 (Design.md §4.1) — 흰 카드 사이에서 틴트 판으로
+          구별한다. 그림자를 빼 표면이 아니라 "강조된 영역" 으로 읽히게 한다 */}
       <div className="flex flex-col gap-3">
         {c.relations.map((r) => (
-          <Card key={r.id}>
+          <div key={r.id} className="rounded-[24px] bg-primary-50 p-5">
             <div className="flex flex-wrap gap-1.5">
-              <Chip tone="primary">{r.condition}</Chip>
-              {r.scope && <Chip>{r.scope}</Chip>}
+              {/* 조건이 먼저다 — 명제가 언제 성립하는지가 읽기의 전제다 */}
+              <Chip tone="outline">조건 · {r.condition}</Chip>
+              {r.scope && <Chip tone="outline">{r.scope}</Chip>}
             </div>
-            <p className="mt-2.5 text-[17px] font-semibold leading-relaxed">
+            <p className="mt-3 text-[17px] font-medium leading-relaxed text-ink">
               {r.text}
-            </p>
-          </Card>
-        ))}
-      </div>
-
-      <SectionLabel>
-        <Art name="section-caution" className="mr-1.5 align-[-2px]" />
-        이것만은 조심해요
-      </SectionLabel>
-      <div className="flex flex-col gap-3">
-        {c.misconceptions.map((m, i) => (
-          <div
-            key={i}
-            className="rounded-[24px] bg-[#fff6ea] p-5 shadow-[0_2px_14px_rgba(23,58,94,0.05)]"
-          >
-            <p className="text-[15px] font-semibold text-ink line-through decoration-warning/50">
-              &ldquo;{m.text}&rdquo;
-            </p>
-            <p className="mt-2 text-[14px] leading-relaxed text-ink-sub">
-              <span className="mr-1 rounded-full bg-warning-bg px-2 py-0.5 text-[12px] font-bold text-warning">
-                왜?
-              </span>
-              {m.whyWrong}
             </p>
           </div>
         ))}
       </div>
+
+      {c.misconceptions.length > 0 && (
+        <>
+          <SectionLabel tone="warning">
+            <Art name="section-caution" className="mr-1.5 align-[-2px]" />
+            흔한 함정
+          </SectionLabel>
+          <div className="flex flex-col gap-3">
+            {c.misconceptions.map((m, i) => (
+              <div key={i} className="rounded-[24px] bg-warning-bg p-5">
+                {/* 색만으로 "틀린 말" 을 말하지 않는다 — ⚠ 와 따옴표가 형태다 (D4) */}
+                <p className="flex gap-2 text-[16px] font-semibold leading-relaxed text-ink">
+                  <span aria-hidden className="shrink-0 text-warning">⚠</span>
+                  <span>
+                    <span className="sr-only">흔한 함정: </span>
+                    &ldquo;{m.text}&rdquo;
+                  </span>
+                </p>
+                <p className="mt-2 pl-6 text-[14px] leading-relaxed text-ink-sub">
+                  <span className="font-bold text-warning">왜 틀렸나</span>
+                  <span aria-hidden> · </span>
+                  {m.whyWrong}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       {(c.media?.length ?? 0) > 0 && (
         <>
@@ -142,8 +167,9 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
           들어오면 '연계' 배지가 종류를 말해 주므로 칩이 하던 일이 없어진다. */}
       <ConceptLinks links={c.links} />
 
+      {/* 화면 유일 CTA (D2) — 이 카드 단독의 3단계 인출 모드(§5.2)로 들어간다 */}
       <BottomCta href={`/concepts/${c.id}/recall`}>
-        빈칸 채우며 떠올리기
+        이 개념 인출 연습하기
       </BottomCta>
     </Screen>
   );

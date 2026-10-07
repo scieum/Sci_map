@@ -7,6 +7,7 @@ import { Art } from "@/components/Art";
 import { CONCEPTS, conceptById } from "@/data/concepts";
 import { makeCloze, type Segment } from "@/lib/cloze";
 import { markConcept } from "@/lib/store";
+import { Chip, SectionLabel } from "@/components/ui";
 
 /**
  * 3단계 인출 모드 — ① 빈칸 ② 초성 힌트 ③ 정답 + 자기 평가
@@ -32,7 +33,12 @@ export default function RecallPage({
 
   if (!c) notFound();
 
-  const stageLabel = ["빈칸을 채워 보세요", "초성 힌트", "정답 공개"][stage];
+  // 단계마다 무엇을 하면 되는지 한 줄로 — 스테퍼는 "어디" 를, 이 줄은 "무엇" 을 말한다
+  const stageGuide = [
+    "비운 자리를 소리 내어 떠올려 보세요.",
+    "비운 자리에 초성이 보여요. 다시 떠올려 보세요.",
+    "정답이 열렸어요. 얼마나 떠올렸는지 골라 주세요.",
+  ][stage];
 
   function grade(level: 1 | 2 | 3) {
     markConcept(level, c!.id);
@@ -44,54 +50,53 @@ export default function RecallPage({
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pb-8 pt-5">
-      <header className="mb-6 flex items-center justify-between">
+      <header className="mb-4 flex items-center gap-2">
         <Link
           href={`/concepts/${c.id}`}
           aria-label="카드로 돌아가기"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-surface text-lg text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.06)]"
+          className="-ml-2 flex h-11 w-11 items-center justify-center rounded-full text-[22px] text-ink-sub active:bg-bg-subtle"
         >
-          ×
+          ✕
         </Link>
-        <span className="rounded-full bg-primary-50 px-4 py-1.5 text-[13px] font-bold text-primary-600">
-          {stageLabel}
-        </span>
-        <span className="flex gap-1">
-          {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              className={`h-1.5 w-4 rounded-full ${i <= stage ? "bg-primary-500" : "bg-bg-subtle"}`}
-            />
-          ))}
-        </span>
+        <span className="text-[17px] font-bold">인출 연습</span>
       </header>
 
-      <h1 className="text-[26px] font-extrabold">{c.term}</h1>
-      <p className="text-[14px] text-ink-faint">
-        {c.subject} · {c.unit.split(" > ").pop()}
-      </p>
+      <Stepper stage={stage} />
 
-      <section className="mt-6 flex flex-col gap-3.5">
-        <ClozeBlock label="정의" segments={cloze(c.definition)} stage={stage} />
-        {c.relations.map((r, i) => (
-          <ClozeBlock
-            key={r.id}
-            label={`관계 명제${c.relations.length > 1 ? ` ${i + 1}` : ""}`}
-            segments={cloze(r.text)}
-            // 조건은 비우지 않는다. 명제가 **언제** 성립하는지는 답이 아니라
-            // 물음의 전제다 — 전제까지 가리면 무엇을 묻는지 알 수 없다
-            sub={`조건 · ${r.condition}`}
-            stage={stage}
-          />
-        ))}
+      <h1 className="mt-5 text-[24px] font-bold leading-tight">{c.term}</h1>
+      <p className="mt-1 text-[14px] text-ink-sub">{stageGuide}</p>
+
+      <section>
+        <SectionLabel>정의</SectionLabel>
+        <ClozeBlock segments={cloze(c.definition)} stage={stage} />
+      </section>
+
+      <section>
+        <SectionLabel>관계 명제</SectionLabel>
+        <div className="flex flex-col gap-3">
+          {c.relations.map((r) => (
+            <ClozeBlock
+              key={r.id}
+              tint
+              segments={cloze(r.text)}
+              // 조건은 비우지 않는다. 명제가 **언제** 성립하는지는 답이 아니라
+              // 물음의 전제다 — 전제까지 가리면 무엇을 묻는지 알 수 없다
+              condition={r.condition}
+              stage={stage}
+            />
+          ))}
+        </div>
       </section>
 
       <div className="mt-auto pt-8">
         {stage < 2 ? (
           <div className="flex gap-3">
+            {/* ① 단계의 힌트는 보조 단추다 — 주 행동은 언제나 "정답 보기" 하나 (D2).
+                ② 에서는 힌트가 이미 열려 있어 단추가 하나만 남는다 */}
             {stage === 0 && (
               <button
                 onClick={() => setStage(1)}
-                className="h-14 flex-1 rounded-full bg-surface text-[16px] font-bold text-primary-600 shadow-[0_2px_14px_rgba(23,58,94,0.08)]"
+                className="h-14 flex-1 rounded-full bg-surface text-[16px] font-bold text-primary-600 shadow-card"
               >
                 <Art name="hint" className="mr-1.5 align-[-3px]" />
                 초성 힌트
@@ -133,7 +138,7 @@ function GradeBtn({
   return (
     <button
       onClick={onClick}
-      className="flex h-20 flex-1 flex-col items-center justify-center gap-1 rounded-[20px] bg-surface text-[13px] font-bold text-ink-sub shadow-[0_2px_14px_rgba(23,58,94,0.08)] active:bg-primary-50 active:text-primary-600"
+      className="flex h-20 flex-1 flex-col items-center justify-center gap-1 rounded-[20px] bg-surface text-[13px] font-bold text-ink-sub shadow-card active:bg-primary-50 active:text-primary-600"
     >
       <Art name={art} />
       {label}
@@ -142,28 +147,66 @@ function GradeBtn({
 }
 
 /**
+ * 세 단계 알약 — ① 떠올리기 ② 힌트 ③ 정답.
+ * 지난 단계·지금 단계·남은 단계를 색과 함께 굵기·채움(형태)으로 가른다 (D4).
+ */
+function Stepper({ stage }: { stage: Stage }) {
+  const steps = ["① 떠올리기", "② 힌트", "③ 정답"];
+  return (
+    <ol className="flex gap-2" aria-label="인출 단계">
+      {steps.map((s, i) => {
+        const cls =
+          i < stage
+            ? "bg-primary-100 text-primary-700 font-semibold"
+            : i === stage
+              ? "bg-primary-500 text-white font-bold shadow-chip"
+              : "bg-bg-subtle text-ink-faint font-medium";
+        return (
+          <li
+            key={s}
+            aria-current={i === stage ? "step" : undefined}
+            className={`flex h-10 flex-1 items-center justify-center rounded-full text-[14px] ${cls}`}
+          >
+            {s}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+/**
  * 빈칸이 뚫린 문장 한 덩어리.
  *
  * 빈칸은 **하나씩** 열린다. 문장 전체를 한 번에 여는 단추였을 때는 한 자리가
  * 막혀도 문장이 통째로 펼쳐져, 나머지 빈칸까지 답을 보고 지나갔다.
+ *
+ * `tint` 는 관계 명제 판이다 — 카드 화면과 같은 bg-primary-50 판에 그림자 없이.
+ * 조건 칩은 맨 앞에 늘 보인다 (조건은 가리지 않는다 — lib/cloze.ts).
  */
 function ClozeBlock({
-  label,
   segments,
-  sub,
+  condition,
+  tint = false,
   stage,
 }: {
-  label: string;
   segments: Segment[];
-  sub?: string;
+  condition?: string;
+  tint?: boolean;
   stage: Stage;
 }) {
   const [open, setOpen] = useState<Record<number, boolean>>({});
 
   return (
-    <div className="rounded-[24px] bg-surface p-5 shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
-      <p className="mb-1.5 text-[13px] font-bold text-ink-faint">{label}</p>
-      <p className="text-[16px] leading-[1.9]">
+    <div
+      className={`rounded-[24px] p-5 ${tint ? "bg-primary-50" : "bg-surface shadow-card"}`}
+    >
+      {condition && (
+        <div className="mb-3 flex flex-wrap gap-1.5">
+          <Chip tone="outline">조건 · {condition}</Chip>
+        </div>
+      )}
+      <p className="text-[17px] font-medium leading-[2.1]">
         {segments.map((s, i) =>
           s.blank ? (
             <Blank
@@ -178,7 +221,6 @@ function ClozeBlock({
           ),
         )}
       </p>
-      {sub && <p className="mt-2 text-[13px] text-ink-faint">{sub}</p>}
     </div>
   );
 }
@@ -195,8 +237,9 @@ function Blank({
   onReveal: () => void;
 }) {
   if (shown) {
+    // 열린 칸은 점선 테두리를 지운다 — 닫힌 칸(점선)과 색이 아니라 형태로 갈린다 (D4)
     return (
-      <span className="rounded-md bg-primary-50 px-1 font-bold text-primary-600">
+      <span className="mx-0.5 rounded-lg bg-primary-100 px-1.5 py-0.5 font-bold text-primary-700">
         {seg.text}
       </span>
     );
@@ -211,11 +254,12 @@ function Blank({
       type="button"
       onClick={onReveal}
       aria-label={hinted ? `초성 ${seg.hint} — 탭하면 이 칸만 공개` : "빈칸 — 탭하면 이 칸만 공개"}
-      className={`mx-0.5 rounded-md border-b-2 border-dashed border-primary-300 bg-bg-subtle px-1.5 align-baseline font-bold tracking-[0.12em] ${
-        hinted ? "text-primary-600" : "text-ink-faint"
+      className={`mx-0.5 inline-block rounded-lg border-[1.5px] border-dashed border-primary-300 bg-primary-50 px-2 py-0.5 align-baseline text-[15px] font-bold leading-normal tracking-[0.12em] ${
+        hinted ? "text-primary-700" : "text-primary-300"
       }`}
     >
       {label}
     </button>
   );
 }
+

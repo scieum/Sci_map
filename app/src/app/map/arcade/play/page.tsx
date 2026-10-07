@@ -26,6 +26,7 @@ import {
   type Play,
 } from "@/lib/arcade";
 import { keystrokes } from "@/lib/keystrokes";
+import { Card, Chip, ProgressBar, StatRow } from "@/components/ui";
 import { loadUi } from "@/lib/ui-state";
 
 /**
@@ -221,44 +222,72 @@ function Field({
   }
 
   const ratio = leftMs / (lv.seconds * 1000);
+  const low = ratio <= 0.35;
 
   return (
-    <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pb-6 pt-4">
-      <Scoreboard game={game} />
-
-      {/* 남은 시간 — 색이 아니라 길이로도 읽히게 (D4) */}
-      <div className="mt-4 flex items-center gap-3">
-        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-bg-subtle">
-          <div
-            className={`h-full rounded-full transition-[width] duration-100 ease-linear ${
-              ratio > 0.35 ? "bg-primary-500" : "bg-danger"
-            }`}
-            style={{ width: `${ratio * 100}%` }}
-          />
-        </div>
-        <span
-          className={`w-9 shrink-0 text-right text-[13px] font-extrabold tabular-nums ${
-            ratio > 0.35 ? "text-ink-sub" : "text-danger"
-          }`}
+    <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pb-6 pt-3">
+      {/* 위 줄 — 나가기·이름·이닝 상태.
+          나가기는 예전에 화면 맨 아래 밑줄 글자였다. 입력창 바로 밑에 두면 스윙을
+          노리던 엄지가 그만두기를 누르기 때문이다 — 한 판이 통째로 날아가는 실수다.
+          왼쪽 위 ✕ 도 엄지가 닿는 자리에서 멀어 같은 이유를 지킨다 */}
+      <header className="flex items-center gap-2">
+        <Link
+          href="/map/arcade"
+          aria-label="경기 그만두기"
+          className="-ml-2 flex h-11 w-11 items-center justify-center text-[20px] text-ink-sub"
         >
-          {(leftMs / 1000).toFixed(1)}
-        </span>
+          ✕
+        </Link>
+        <h1 className="text-[18px] font-bold text-ink">개념 야구</h1>
+        <div className="ml-auto flex items-center gap-2">
+          <Diamond bases={game.bases} />
+          <Chip tone="primary">
+            <span aria-label={`${game.innings}이닝 중 ${game.inning}회, 아웃 ${game.outs}개`}>
+              {game.inning}/{game.innings}회 · {game.outs}아웃
+            </span>
+          </Chip>
+        </div>
+      </header>
+
+      {/* 전광판 — 경기가 실제로 세는 숫자만 둔다 */}
+      <div className="mt-3">
+        <StatRow
+          items={[
+            { value: game.score, label: "득점" },
+            { value: game.hits, label: "안타" },
+            { value: game.combo, label: "연속 안타" },
+          ]}
+        />
+      </div>
+
+      {/* 남은 시간 — 색이 아니라 길이로도 읽히게 (D4). 얼마 안 남으면 숫자가
+          danger 로 바뀌고 앞에 ! 가 붙는다 */}
+      <div className="mt-5">
+        <div className="mb-2 flex items-baseline justify-between">
+          <span className="text-[13px] text-ink-faint">타석 시간</span>
+          <span
+            className={`text-[15px] font-bold tabular-nums ${low ? "text-danger" : "text-primary-700"}`}
+          >
+            {low && "! "}
+            {Math.ceil(leftMs / 1000)}초
+          </span>
+        </div>
+        <ProgressBar value={ratio} tone="primary" size="md" label="남은 타석 시간" />
       </div>
 
       {/* 투구 — 개념의 정의 */}
-      <section className="mt-4 rounded-[24px] bg-surface p-6 shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
-        <p className="mb-2 flex items-center gap-2 text-[12px] font-bold text-ink-faint">
-          <span className="rounded-full bg-primary-50 px-2.5 py-1 text-primary-600">
-            {pitch.unit.split(" > ").pop()}
-          </span>
+      <Card className="mt-4">
+        <p className="mb-2 text-[13px] text-ink-faint">정의를 읽고 표제어를 쳐요</p>
+        <p className="text-[17px] font-medium leading-relaxed text-ink">{pitch.prompt}</p>
+        <p className="mt-3 flex flex-wrap items-center gap-1.5">
+          <Chip tone="outline">{pitch.unit.split(" > ").pop()}</Chip>
           {game.combo > 0 && (
-            <span className="rounded-full bg-warning-bg px-2.5 py-1 text-warning">
+            <Chip tone="warning">
               {game.combo}연속 · 다음 {HIT_LABEL[judge(game.combo, 0, lv)]}
-            </span>
+            </Chip>
           )}
         </p>
-        <p className="text-[17px] font-semibold leading-relaxed">{pitch.prompt}</p>
-      </section>
+      </Card>
 
       <form
         onSubmit={(e) => {
@@ -267,46 +296,47 @@ function Field({
         }}
         className="mt-4"
       >
-        <input
-          ref={inputRef}
-          value={input}
-          onChange={(e) => {
-            // 첫 타건에 시계를 켠다 — 여기부터가 타속을 재는 구간이다
-            if (typingFrom.current === null && e.target.value) typingFrom.current = Date.now();
-            typed.current = e.target.value;
-            setInput(e.target.value);
-          }}
-          onKeyDown={(e) => {
-            // 한글 조합을 확정하는 Enter 를 제출로 읽지 않는다
-            if (e.key === "Enter" && e.nativeEvent.isComposing) e.preventDefault();
-          }}
-          disabled={!!last}
-          placeholder="표제어를 쳐 주세요"
-          // 16px 미만이면 iOS 가 포커스 때 화면을 확대한다
-          className="h-14 w-full rounded-full bg-surface px-5 text-center text-[18px] font-bold shadow-[0_2px_14px_rgba(23,58,94,0.06)] outline-none focus:ring-2 focus:ring-primary-300"
-          autoFocus
-          autoComplete="off"
-          autoCorrect="off"
-          spellCheck={false}
-          enterKeyHint="send"
-        />
+        <div className="relative">
+          <input
+            ref={inputRef}
+            value={input}
+            onChange={(e) => {
+              // 첫 타건에 시계를 켠다 — 여기부터가 타속을 재는 구간이다
+              if (typingFrom.current === null && e.target.value) typingFrom.current = Date.now();
+              typed.current = e.target.value;
+              setInput(e.target.value);
+            }}
+            onKeyDown={(e) => {
+              // 한글 조합을 확정하는 Enter 를 제출로 읽지 않는다
+              if (e.key === "Enter" && e.nativeEvent.isComposing) e.preventDefault();
+            }}
+            disabled={!!last}
+            placeholder="표제어를 쳐 주세요"
+            aria-label="표제어"
+            // 16px 미만이면 iOS 가 포커스 때 화면을 확대한다
+            className="h-[58px] w-full rounded-2xl bg-surface pl-5 pr-24 text-[20px] font-bold text-ink shadow-card outline-none ring-1 ring-line placeholder:text-[16px] placeholder:font-medium placeholder:text-ink-faint focus:ring-2 focus:ring-primary-500 disabled:opacity-60"
+            autoFocus
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            enterKeyHint="send"
+          />
+          <span
+            aria-hidden
+            className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[13px] text-ink-faint"
+          >
+            Enter ⏎
+          </span>
+        </div>
+        {/* 건너뛰기는 이 경기에 없다(놓치면 아웃이 규칙이다). 그래서 버튼은 치기 하나다 */}
         <button
           type="submit"
           disabled={!!last || !input.trim()}
-          className="mt-3 h-14 w-full rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta disabled:opacity-40"
+          className="mt-3 h-14 w-full rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta active:bg-primary-600 disabled:opacity-40"
         >
-          스윙!
+          치기
         </button>
       </form>
-
-      {/* 화면 맨 아래로 민다. 입력창 바로 밑에 두면 스윙을 노리던 엄지가
-          그만두기를 누른다 — 한 판이 통째로 날아가는 실수다 */}
-      <Link
-        href="/map/arcade"
-        className="mx-auto mt-auto pb-2 pt-10 text-[13px] font-semibold text-ink-faint underline underline-offset-4"
-      >
-        경기 그만두기
-      </Link>
 
       {/* 타격 결과 — 안타는 스쳐 지나가고, 아웃은 정답을 보여 주고 멈춘다 */}
       {last && <HitSheet play={last} onNext={nextBatter} />}
@@ -314,55 +344,26 @@ function Field({
   );
 }
 
-/* ────────────────────────────── 전광판 ────────────────────────────── */
+/* ────────────────────────────── 베이스 ────────────────────────────── */
 
-function Scoreboard({ game }: { game: GameState }) {
-  return (
-    <section className="flex items-center gap-4 rounded-[24px] bg-primary-500 px-5 py-4 text-white shadow-hero">
-      <div>
-        <p className="text-[11px] font-semibold text-white/75">득점</p>
-        <p className="text-[32px] font-extrabold leading-none">{game.score}</p>
-      </div>
-      <Diamond bases={game.bases} />
-      <div className="ml-auto text-right">
-        <p className="text-[11px] font-semibold text-white/75">
-          {game.inning}/{game.innings}회
-        </p>
-        <p className="mt-1 flex items-center justify-end gap-1" aria-label={`아웃 ${game.outs}개`}>
-          {[0, 1, 2].map((i) => (
-            <span
-              key={i}
-              aria-hidden
-              className={`h-2.5 w-2.5 rounded-full ${
-                i < game.outs ? "bg-white" : "bg-white/30"
-              }`}
-            />
-          ))}
-          <span className="ml-1 text-[11px] font-bold text-white/75">OUT</span>
-        </p>
-      </div>
-    </section>
-  );
-}
-
-/** 베이스 — 마름모 네 칸. 주자가 선 루는 채워진다 */
+/** 베이스 — 마름모 네 칸. 주자가 선 루는 채워진다(색과 함께 채움/빈칸 모양으로) */
 function Diamond({ bases }: { bases: [boolean, boolean, boolean] }) {
   const [b1, b2, b3] = bases;
-  const on = "fill-white";
-  const off = "fill-white/25";
+  const on = "fill-primary-500";
+  const off = "fill-surface stroke-line";
   return (
     <svg
-      width="58"
-      height="58"
+      width="30"
+      height="30"
       viewBox="0 0 40 40"
       role="img"
       aria-label={`주자 — 1루 ${b1 ? "있음" : "없음"}, 2루 ${b2 ? "있음" : "없음"}, 3루 ${b3 ? "있음" : "없음"}`}
     >
       {/* 2루(위) · 3루(왼) · 1루(오) · 홈(아래) */}
-      <rect x="16" y="4" width="8" height="8" rx="1.5" transform="rotate(45 20 8)" className={b2 ? on : off} />
-      <rect x="4" y="16" width="8" height="8" rx="1.5" transform="rotate(45 8 20)" className={b3 ? on : off} />
-      <rect x="28" y="16" width="8" height="8" rx="1.5" transform="rotate(45 32 20)" className={b1 ? on : off} />
-      <rect x="16" y="28" width="8" height="8" rx="1.5" transform="rotate(45 20 32)" className="fill-white/50" />
+      <rect x="16" y="4" width="8" height="8" rx="1.5" strokeWidth="2" transform="rotate(45 20 8)" className={b2 ? on : off} />
+      <rect x="4" y="16" width="8" height="8" rx="1.5" strokeWidth="2" transform="rotate(45 8 20)" className={b3 ? on : off} />
+      <rect x="28" y="16" width="8" height="8" rx="1.5" strokeWidth="2" transform="rotate(45 32 20)" className={b1 ? on : off} />
+      <rect x="16" y="28" width="8" height="8" rx="1.5" transform="rotate(45 20 32)" className="fill-primary-100" />
     </svg>
   );
 }

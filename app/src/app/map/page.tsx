@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import HubTabs from "@/components/HubTabs";
 import { Badge, Chip, ChipRow, HubAppBar } from "@/components/hub";
-import { EmptyState, Screen } from "@/components/ui";
+import { Chip as StatusChip, EmptyState, Screen } from "@/components/ui";
 import { conceptById } from "@/data/concepts";
 import { accentOfSubject } from "@/lib/brand";
 import { boundsOf, fitTo, loadGraph, type ConceptGraph, type GraphNode } from "@/lib/graph";
@@ -88,6 +88,16 @@ function Bar() {
 
 /** 학습 상태 세 단계 — Design.md §4.2 의 노드 채움 */
 type Learned = "none" | "learning" | "stable";
+
+/**
+ * 미리보기 시트의 학습 상태 칩 — 범례와 같은 기호(●◐○)를 붙여 색 없이도
+ * 읽히게 한다 (D4).
+ */
+function LearnedChip({ learned }: { learned: Learned }) {
+  if (learned === "stable") return <StatusChip tone="success">● 안정</StatusChip>;
+  if (learned === "learning") return <StatusChip tone="primary">◐ 학습 중</StatusChip>;
+  return <StatusChip tone="outline">○ 미학습</StatusChip>;
+}
 
 function GraphCanvas({ graph }: { graph: ConceptGraph }) {
   const progress = useProgress();
@@ -214,7 +224,12 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
     setSubject(next);
     saveUi({ mapSubject: next });
     setPicked(null); // 걸러 낸 뒤에도 남아 있던 시트가 떠 있으면 어색하다
-    const pool = next ? graph.nodes.filter((n) => subjectOf(n) === next) : graph.nodes;
+    fitSubject(next);
+  }
+
+  /** 과목 하나(빈 문자열이면 전체)에 맞춰 다시 잡는다 — 칩과 제자리 버튼이 같이 쓴다 */
+  function fitSubject(name: string) {
+    const pool = name ? graph.nodes.filter((n) => subjectOf(n) === name) : graph.nodes;
     if (pool.length > 0 && box.w > 0) setView(fitTo(boundsOf(pool), box));
   }
 
@@ -428,6 +443,18 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
             );
           })}
         </g>
+        {/* 고른 노드의 글로우 — 노드 뒤에 옅은 원을 한 겹 깐다. 채움은 학습
+            상태가 쓰는 자리라 건드리지 않고, 고른 표시는 테두리와 이 후광만 맡는다 */}
+        {picked && shownIds.has(picked.id) && (
+          <circle
+            cx={picked.x}
+            cy={picked.y}
+            r={rOf(picked.degree) + 9 * u}
+            fill="var(--color-primary-300)"
+            opacity={0.35}
+            pointerEvents="none"
+          />
+        )}
         <g>
           {shownNodes.map((n) => {
             const r = rOf(n.degree);
@@ -447,8 +474,9 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
                       ? accent.fillSoft
                       : "fill-bg-subtle"
                 }
-                stroke={on ? "var(--color-ink)" : "var(--color-surface)"}
-                strokeWidth={(on ? 2 : 1) * u}
+                // 고른 노드는 굵은 primary-700 테두리 — 색만이 아니라 굵기·크기로도 구분된다 (D4)
+                stroke={on ? "var(--color-primary-700)" : "var(--color-surface)"}
+                strokeWidth={(on ? 3 : 1) * u}
                 onPointerUp={(e) => {
                   e.stopPropagation();
                   setPicked(n);
@@ -478,56 +506,111 @@ function GraphCanvas({ graph }: { graph: ConceptGraph }) {
         </g>
       </svg>
 
-      {/* 미니 범례 — 접어 둔다 (§4.2) */}
+      {/* 확대·축소·제자리 — 손가락 두 개를 못 쓰는 상황(한 손, 마우스)을 위한 버튼.
+          새 계산을 만들지 않고 오므리기와 같은 zoomBy, 과목 칩과 같은 맞춤을 부른다 */}
+      <div className="absolute right-3 top-1/2 z-10 flex -translate-y-1/2 flex-col overflow-hidden rounded-2xl bg-surface shadow-card">
+        <button
+          type="button"
+          onClick={() => zoomBy(0.8)}
+          aria-label="확대"
+          className="flex h-11 w-11 items-center justify-center text-[20px] font-bold text-ink-sub active:bg-bg-subtle"
+        >
+          +
+        </button>
+        <button
+          type="button"
+          onClick={() => zoomBy(1.25)}
+          aria-label="축소"
+          className="flex h-11 w-11 items-center justify-center text-[20px] font-bold text-ink-sub active:bg-bg-subtle"
+        >
+          −
+        </button>
+        <button
+          type="button"
+          onClick={() => fitSubject(subject)}
+          aria-label={`${subject || "전체 과목"}에 맞춰 다시 잡기`}
+          className="flex h-11 w-11 items-center justify-center text-primary-600 active:bg-bg-subtle"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+            <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" />
+          </svg>
+        </button>
+      </div>
+
+      {/* 미니 범례 — 접어 둔다 (§4.2). 시안은 캔버스 왼쪽 위에 두었지만 §4.2 가
+          "하단에 미니 범례 시트"로 적어 두었고, 위쪽은 개념·연결 수 줄이 쓰고
+          있어 자리는 그대로 두고 생김새만 맞췄다.
+          모양 기호(●◐○┄)를 함께 쓴다 — 채움 색만으로는 상태가 읽히지 않는다 (D4) */}
       <div className="absolute bottom-3 left-3 z-10">
         <button
+          type="button"
           onClick={() => setLegendOpen((v) => !v)}
           aria-expanded={legendOpen}
-          className="rounded-full bg-surface px-3 py-1.5 text-[12px] font-bold text-ink-sub shadow-[0_2px_10px_rgba(23,58,94,0.1)]"
+          className="flex items-center gap-1.5 rounded-full bg-surface px-3 py-1.5 text-[12px] font-semibold text-ink-sub shadow-card"
         >
-          범례 {legendOpen ? "▾" : "▸"}
+          <span className="font-bold text-ink">범례</span>
+          {legendOpen ? (
+            <span aria-hidden>▾</span>
+          ) : (
+            <span className="flex items-center gap-1.5">
+              <span>● 안정</span>
+              <span>◐ 학습 중</span>
+              <span>○ 미학습</span>
+              <span className="text-info">┄ 학년 연결</span>
+            </span>
+          )}
         </button>
         {legendOpen && (
-          <div className="mt-2 rounded-[16px] bg-surface p-3 text-[12px] leading-relaxed text-ink-sub shadow-[0_2px_14px_rgba(23,58,94,0.12)]">
+          <div className="mt-2 rounded-[16px] bg-surface p-3 text-[12px] leading-relaxed text-ink-sub shadow-card">
             <p className="mb-1 font-bold text-ink">노드</p>
             <p>크기 = 연결 수 · 색 = 과목</p>
-            <p>옅은 색 = 배우는 중 · 진한 색 = 익숙함 · 회색 = 아직</p>
+            <p>● 진한 색 = 안정 · ◐ 옅은 색 = 학습 중 · ○ 회색 = 미학습</p>
             <p className="mb-1 mt-2 font-bold text-ink">선</p>
             <p>진한 선 = 먼저·다음 · 옅은 선 = 관련</p>
-            <p>점선 = 같은 개념의 재등장</p>
+            <p>
+              <span className="text-info">┄ 점선</span> = 같은 개념의 학년 간 재등장
+            </p>
           </div>
         )}
       </div>
 
-      {/* 노드 미리보기 시트 — 여기서 카드로 간다 */}
+      {/* 노드 미리보기 시트 — 여기서 카드로 간다. 캔버스 상자 안의 바닥에 붙으므로
+          탭 바 위에 얹힌다. 손잡이 막대는 "올라온 시트"라는 표시일 뿐 끌기 동작은
+          없다 — 닫기는 ✕ 가 맡는다 */}
       {picked && (
-        <div className="absolute inset-x-0 bottom-0 z-20 rounded-t-[24px] bg-surface p-5 pb-6 shadow-[0_-4px_24px_rgba(23,58,94,0.16)]">
-          <div className="mb-2 flex items-start justify-between gap-3">
-            <div className="min-w-0">
-              <p className="text-[17px] font-extrabold text-ink">
+        <div className="absolute inset-x-0 bottom-0 z-20 rounded-t-[28px] bg-surface px-5 pb-5 pt-2.5 shadow-hero">
+          <div aria-hidden className="mx-auto mb-3 h-1 w-9 rounded-full bg-line" />
+          <div className="mb-2 flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-2">
+              <p className="truncate text-[20px] font-bold text-ink">
                 {pickedCard?.term ?? picked.id}
               </p>
-              <p className="mt-0.5 text-[12px] text-ink-faint">
-                {pickedCard?.subject} · {pickedCard?.unit?.split(" > ").pop()} · 연결{" "}
-                {picked.degree}개
-              </p>
+              <LearnedChip learned={levelOf(picked.id)} />
             </div>
             <button
+              type="button"
               onClick={() => setPicked(null)}
               aria-label="닫기"
-              className="shrink-0 text-[18px] text-ink-faint"
+              className="-mr-2 flex h-11 w-11 shrink-0 items-center justify-center text-[18px] text-ink-faint"
             >
               ✕
             </button>
           </div>
           {pickedCard?.definition && (
-            <p className="line-clamp-2 text-[14px] leading-relaxed text-ink-sub">
+            <p className="line-clamp-2 text-[15px] leading-relaxed text-ink-sub">
               {pickedCard.definition}
             </p>
           )}
+          <p className="mt-2 truncate text-[12px] text-ink-faint">
+            연결 {picked.degree}개
+            {pickedCard?.subject && <> · {pickedCard.subject}</>}
+            {pickedCard?.unit && <> › {pickedCard.unit.split(" > ").pop()}</>}
+          </p>
           <Link
             href={`/concepts/${picked.id}`}
-            className="mt-4 flex h-12 items-center justify-center rounded-full bg-primary-500 text-[15px] font-bold text-white shadow-cta"
+            className="mt-4 flex h-14 items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta active:bg-primary-600"
           >
             카드 열기
           </Link>

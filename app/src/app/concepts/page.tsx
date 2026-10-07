@@ -5,10 +5,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { buildTree, byTopic, conceptById, majorNo, minorNo, topicNo } from "@/data/concepts";
 import { orderSubjectNames, subjectNameOf } from "@/data/catalog";
 import type { Concept } from "@/lib/types";
-import { BookmarkStar, LevelDots, Screen, ScreenTitle } from "@/components/ui";
+import { BookmarkStar, Chip, LevelDots, ProgressBar, Screen, ScreenTitle } from "@/components/ui";
 import { loadProgress, toggleBookmark, useProgress } from "@/lib/store";
 import { loadUi, saveUi } from "@/lib/ui-state";
-import { accentOfSubject, subjectAccent } from "@/lib/brand";
+import { accentOfSubject, subjectAccent, type Accent } from "@/lib/brand";
 
 /** 개념 탭 — 과목 드롭다운 → 대단원 카드 → 중단원 접기 → 소주제 → 개념 행 */
 export default function ConceptsPage() {
@@ -92,27 +92,55 @@ export default function ConceptsPage() {
   const majors =
     tree.get(subject) ?? new Map<string, Map<string, Concept[]>>();
 
+  // 과목 요약 한 줄 — 지금 고른 과목 안에서만 센다
+  const subjectAll = Array.from(majors.values()).flatMap((m) =>
+    Array.from(m.values()).flat(),
+  );
+  const subjectStudied = countStudied(subjectAll, progress);
+
   return (
     <Screen>
       <ScreenTitle>개념</ScreenTitle>
 
       <SubjectSelect subjects={subjects} value={subject} onChange={chooseSubject} />
 
+      {subjectAll.length > 0 && (
+        <p className="-mt-2 mb-4 text-[13px] text-ink-faint">
+          {subjectAll.length}개 개념 · 학습 시작 {subjectStudied}
+        </p>
+      )}
+
       <BookmarkShelf ids={marks} onRemove={unmark} />
 
       {Array.from(majors.entries()).map(([major, minors]) => {
         // 과목 색 — 같은 과목의 대단원은 전부 같은 색이다
         const accent = accentOfSubject(subject);
+        // 대단원 진도 — 학습을 시작한 카드 / 전체 (Design.md §5.6 단원 진행 바)
+        const all = Array.from(minors.values()).flat();
+        const majorStudied = countStudied(all, progress);
         return (
         <section
           key={major}
-          className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]"
+          className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-card"
         >
           {/* 과목 색 머리띠 — 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
-          <h2 className={`px-5 pb-3 pt-4 text-[16px] font-bold ${accent.tint}`}>
-            <No value={majorNo(firstOf(minors))} cls={accent.text} />
-            {major}
-          </h2>
+          <div className={`px-5 pb-4 pt-4 ${accent.tint}`}>
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <h2 className="min-w-0 text-[17px] font-bold">
+                <No value={majorNo(firstOf(minors))} cls={accent.text} />
+                {major}
+              </h2>
+              <span className={`shrink-0 text-[14px] font-bold tabular-nums ${accent.text}`}>
+                {majorStudied} / {all.length}
+              </span>
+            </div>
+            <ProgressBar
+              value={all.length ? majorStudied / all.length : 0}
+              tone={toneOf(accent)}
+              size="sm"
+              label={`${major} 학습 ${majorStudied}/${all.length}`}
+            />
+          </div>
 
           {Array.from(minors.entries()).map(([minor, concepts]) => {
             const key = `${major}>${minor}`;
@@ -123,14 +151,23 @@ export default function ConceptsPage() {
               <div key={key}>
                 <button
                   onClick={() => toggleSection(key, isOpen)}
-                  className="flex w-full items-center justify-between px-5 py-3 text-left"
+                  className="flex min-h-[48px] w-full items-center gap-2 px-5 py-3 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-[15px] font-semibold text-ink-sub">
+                  <Chevron open={isOpen} />
+                  <span className="min-w-0 flex-1 text-[15px] font-semibold text-ink">
                     <No value={minorNo(concepts[0])} />
                     {minor}
                   </span>
-                  <Meta studied={studied} total={concepts.length} open={isOpen} accent={accent} />
+                  {/* 펼친 중단원은 과목 색 진도 배지(교사 결정 2026-09-07 — brand.ts),
+                      접힌 중단원은 카드 수만 흐리게 (Design.md §4.1 "▸ 화학 결합 12장") */}
+                  {isOpen ? (
+                    <Meta studied={studied} total={concepts.length} accent={accent} />
+                  ) : (
+                    <span className="shrink-0 text-[13px] text-ink-faint">
+                      {concepts.length}장
+                    </span>
+                  )}
                 </button>
 
                 {isOpen &&
@@ -145,19 +182,15 @@ export default function ConceptsPage() {
                           onClick={() =>
                             setOpen((o) => ({ ...o, [tkey]: !tOpen }))
                           }
-                          className="flex w-full items-center justify-between py-2 pl-8 pr-5 text-left active:bg-bg-subtle"
+                          className="flex min-h-[44px] w-full items-center gap-2 py-2 pl-9 pr-5 text-left active:bg-bg-subtle"
                           aria-expanded={tOpen}
                         >
-                          <span className="text-[14px] font-medium text-ink">
+                          <Chevron open={tOpen} />
+                          <span className="min-w-0 flex-1 text-[14px] font-medium text-ink-sub">
                             <No value={topicNo(list[0])} />
                             {topic || "개념"}
                           </span>
-                          <Meta
-                            studied={tStudied}
-                            total={list.length}
-                            open={tOpen}
-                            subtle
-                          />
+                          <Meta studied={tStudied} total={list.length} subtle />
                         </button>
 
                         {tOpen && (
@@ -166,12 +199,10 @@ export default function ConceptsPage() {
                               <Link
                                 key={c.id}
                                 href={`/concepts/${c.id}`}
-                                className="mx-2 flex min-h-[48px] items-center justify-between rounded-2xl py-2.5 pl-9 pr-3 active:bg-bg-subtle"
+                                className="mx-2 flex min-h-[56px] items-center justify-between gap-3 rounded-2xl py-2.5 pl-14 pr-3 active:bg-bg-subtle"
                               >
-                                <span className="text-[15px] font-medium">
-                                  {c.term}
-                                </span>
-                                <span className="flex items-center gap-2.5">
+                                <ConceptRowText c={c} />
+                                <span className="flex shrink-0 items-center gap-2.5">
                                   {marks.includes(c.id) && (
                                     <span className="text-[13px] text-primary-500" aria-label="북마크한 개념">
                                       ★
@@ -224,7 +255,7 @@ function BookmarkShelf({
   if (list.length === 0) return null;
 
   return (
-    <section className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
+    <section className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-card">
       <button
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
@@ -416,38 +447,90 @@ function countStudied(
   return list.filter((c) => (progress.concepts[c.id]?.level ?? 0) > 0).length;
 }
 
-/** 진도 뱃지 + 펼침 화살표 — 중단원과 소주제가 같은 모양을 쓴다 */
+/** 진도 뱃지 — 중단원과 소주제가 같은 모양을 쓴다. 펼침 표시는 왼쪽 Chevron 이 맡는다 */
 function Meta({
   studied,
   total,
-  open,
   subtle = false,
   accent,
 }: {
   studied: number;
   total: number;
-  open: boolean;
   subtle?: boolean;
   /** 중단원 배지는 그 단원의 색을 입는다. 소주제(subtle)는 회색 그대로 */
   accent?: { tint: string; text: string };
 }) {
   return (
-    <span className="flex items-center gap-2">
-      <span
-        className={`rounded-full px-2.5 py-0.5 text-[12px] font-bold ${
-          subtle
-            ? "bg-bg-subtle text-ink-sub"
-            : `${accent?.tint ?? "bg-primary-50"} ${accent?.text ?? "text-primary-600"}`
-        }`}
-      >
-        {studied}/{total}
-      </span>
-      <span
-        className={`text-ink-faint transition-transform ${open ? "rotate-180" : ""}`}
-        aria-hidden
-      >
-        ⌄
-      </span>
+    <span
+      className={`shrink-0 rounded-full px-2.5 py-0.5 text-[12px] font-bold tabular-nums ${
+        subtle
+          ? "bg-bg-subtle text-ink-sub"
+          : `${accent?.tint ?? "bg-primary-50"} ${accent?.text ?? "text-primary-600"}`
+      }`}
+    >
+      {studied}/{total}
     </span>
   );
 }
+
+/** 펼침 표시 — 접힘 ›, 펼침 ⌄. 색이 아니라 방향(형태)으로 상태를 말한다 (D4) */
+function Chevron({ open }: { open: boolean }) {
+  return (
+    <span
+      aria-hidden
+      className={`inline-flex w-4 shrink-0 justify-center text-[15px] text-ink-faint transition-transform ${
+        open ? "rotate-90" : ""
+      }`}
+    >
+      ›
+    </span>
+  );
+}
+
+/**
+ * 과목 색 → 진행 막대 색. brand.ts 가 색 이름을 내보내지 않아 채움 클래스로 거꾸로 찾는다.
+ * 사전에 없는 색은 브랜드색으로 — 없는 색을 지어내지 않는다.
+ */
+function toneOf(accent: Accent): "primary" | "violet" | "azure" | "rose" {
+  if (accent.solid === "bg-violet-500") return "violet";
+  if (accent.solid === "bg-azure-500") return "azure";
+  if (accent.solid === "bg-rose-500") return "rose";
+  return "primary";
+}
+
+/**
+ * 개념 행의 글자 부분 — 표제어 + 표기 줄 + same 배지 (Design.md §5.1).
+ *
+ * same 배지는 파이프라인이 concept_key 로 확정해 둔 links 에서만 뽑는다. 표제어
+ * 문자열을 다른 과목과 맞대어 만들지 않는다 (CLAUDE.md §9.5). 대상 카드가 이
+ * 앱에 아직 없으면 배지를 그리지 않는다 — 눌러도 갈 곳이 없는 약속이 된다.
+ */
+function ConceptRowText({ c }: { c: Concept }) {
+  const same = c.links
+    .filter((l) => l.type === "same")
+    .map((l) => conceptById(l.target))
+    .find((t): t is Concept => Boolean(t) && t!.subject !== c.subject);
+  // 한자가 없는 음차어(null·"해당 없음")는 한자 자리를 아예 만들지 않는다
+  const hanja = c.hanja && c.hanja !== "해당 없음" ? c.hanja : null;
+  const notation = [hanja, c.english].filter(Boolean).join(" · ");
+  return (
+    <span className="min-w-0 flex-1">
+      <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span className="text-[16px] font-bold">{c.term}</span>
+        {same && (
+          <Chip tone="info">
+            <span aria-hidden>↔</span>
+            <span className="sr-only">다른 과목에서도 배움:</span>
+            {same.subject}
+          </Chip>
+        )}
+      </span>
+      {notation && (
+        <span className="mt-0.5 block truncate text-[12px] text-ink-faint">
+          {notation}
+        </span>
+      )}
+    </span>
+  );
+}
+

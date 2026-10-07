@@ -4,12 +4,18 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import LoginPanel from "@/components/LoginPanel";
 import SchoolPicker, { type SchoolValue } from "@/components/SchoolPicker";
-import { BottomCta, Card, Screen, ScreenTitle, SectionLabel } from "@/components/ui";
-import { CATALOG, courseTypeLabel, groupByCourseType } from "@/data/catalog";
+import { BottomCta, Card, Chip, Screen, ScreenTitle, SectionLabel, StatRow } from "@/components/ui";
+import {
+  CATALOG,
+  courseTypeLabel,
+  groupByCourseType,
+  orderSubjectNames,
+  subjectNameOf,
+} from "@/data/catalog";
 import { isSupabaseConfigured, supabase, type Profile } from "@/lib/supabase";
 import { accentOfSubject } from "@/lib/brand";
 import { loadProfile, pullStudyStates, saveProfile } from "@/lib/sync";
-import { loadProgress, saveProgress } from "@/lib/store";
+import { loadProgress, saveProgress, useProgress } from "@/lib/store";
 import {
   initialPlan,
   normalizePlan,
@@ -185,7 +191,7 @@ function Account() {
     return <Consent onAgreed={setProfile} />;
   }
 
-  return <ProfileForm profile={phase.profile} onSaved={setProfile} onSignOut={signOut} />;
+  return <ProfileHome profile={phase.profile} onSaved={setProfile} onSignOut={signOut} />;
 }
 
 /** 개인정보 수집·이용 동의 — 필수 4요소를 한 화면에 (docs/privacy_notice.md) */
@@ -206,13 +212,27 @@ function Consent({ onAgreed }: { onAgreed: (p: Profile) => void }) {
     }
   }
 
+  // 시안 ⑫ 의 '2 / 3' 진행 막대는 달지 않는다. 이 화면은 가입 단계의 하나가
+  // 아니라 로그인 뒤에 따로 뜨는 관문이고, 동의 버전이 오르면 이미 가입한
+  // 학생에게도 단독으로 뜬다 — 그때 '몇 단계 중 몇'은 맞는 말이 아니다.
+  //
+  // 문구는 한 글자도 바꾸지 않았다. 바꾸면 CONSENT_VERSION 판단이 따라오고,
+  // 그것은 교사가 정한다 (맨 위 주석). 고친 것은 배치와 색뿐이다.
   return (
     <Screen>
-      <ScreenTitle>개인정보 수집·이용 동의</ScreenTitle>
-      <p className="-mt-3 mb-4 text-[13px] text-ink-sub">
+      {/* 제목을 두 줄로 — 끊는 자리는 '동의' 앞이다. 학생이 이 화면에서 할 일이
+          그 한 단어라서 줄 머리에 오게 둔다 */}
+      <h1 className="mb-2 text-[24px] font-extrabold leading-snug">
+        개인정보 수집·이용
+        <br />
+        동의
+      </h1>
+      <p className="mb-5 text-[14px] leading-relaxed text-ink-sub">
         학습 기록을 서버에 남기려면 아래 내용에 동의가 필요해요. 꼭 필요한 것만 받아요.
       </p>
-      <Card className="text-[14px] leading-relaxed">
+      {/* 안내문은 흰 카드가 아니라 옅은 바탕에 둔다 — 아래 체크 줄과 CTA 가
+          눈에 먼저 들어오지 않게, 읽을거리라는 것이 모양으로 보이게 */}
+      <div className="rounded-[24px] bg-bg-subtle px-5 py-4 text-[14px] leading-relaxed">
         <Row k="수집 항목">
           아이디·비밀번호, 닉네임, 이메일 주소(비밀번호 찾기),
           학교(지역·시군구·학교급·학교명), 학년·학기·수강 과목,
@@ -233,23 +253,49 @@ function Consent({ onAgreed }: { onAgreed: (p: Profile) => void }) {
           스터디룸·순위표)은 쓸 수 없고, 로그인 없이 개념 카드 열람과 문항 풀이는
           계속 가능해요.
         </Row>
-      </Card>
+      </div>
       <p className="mt-3 px-1 text-[12px] leading-relaxed text-ink-faint">
         만 14세 미만이라면 보호자(법정대리인)의 동의가 필요해요. 이름·전화번호·주소는
         받지 않아요. 전문은 <Link href="/privacy" className="underline">개인정보 처리방침</Link>
         에서 볼 수 있어요.
       </p>
-      <label className="mt-5 flex items-start gap-3 rounded-[20px] bg-surface p-4 shadow-[0_2px_14px_rgba(23,58,94,0.06)]">
-        <input
-          type="checkbox"
-          checked={checked}
-          onChange={(e) => setChecked(e.target.checked)}
-          className="mt-1 h-5 w-5 accent-[#4b5be8]"
-        />
-        <span className="text-[14px] leading-relaxed">
-          위 내용을 읽었고, 개인정보 수집·이용에 <b>동의합니다</b>. (필수)
-        </span>
-      </label>
+      <div className="mt-5 flex items-start gap-3 px-1">
+        {/* 진짜 체크박스는 화면에서만 감추고(sr-only) 키보드·스크린 리더는 그대로
+            쓰게 둔다. 보이는 상자는 그 상태를 따라 그린다 — 켜지면 색과 함께
+            ✓ 모양이 생겨서 색을 못 가려도 상태가 읽힌다 (D4).
+            예전의 accent-[#…] 는 토큰 밖의 색이라 걷어냈다 */}
+        <label className="flex flex-1 cursor-pointer items-start gap-3">
+          <input
+            type="checkbox"
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+            className="peer sr-only"
+          />
+          <span
+            aria-hidden
+            className={`mt-px flex h-6 w-6 shrink-0 items-center justify-center rounded-md transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-primary-300 ${
+              checked ? "bg-primary-500 text-white" : "bg-surface ring-2 ring-inset ring-line"
+            }`}
+          >
+            {checked && (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12.5l4.5 4.5L19 7.5" />
+              </svg>
+            )}
+          </span>
+          <span className="text-[14px] leading-relaxed">
+            위 내용을 읽었고, 개인정보 수집·이용에 <b>동의합니다</b>. (필수)
+          </span>
+        </label>
+        {/* '보기'는 label 밖에 둔다 — 안에 두면 링크를 누를 때 체크까지 바뀐다 */}
+        <Link
+          href="/privacy"
+          aria-label="개인정보 처리방침 전문 보기"
+          className="shrink-0 pt-0.5 text-[14px] font-bold text-primary-700 underline underline-offset-4"
+        >
+          보기
+        </Link>
+      </div>
       <BottomCta onClick={agree} disabled={!checked || busy}>
         동의하고 계속하기
       </BottomCta>
@@ -259,14 +305,25 @@ function Consent({ onAgreed }: { onAgreed: (p: Profile) => void }) {
 
 function Row({ k, children }: { k: string; children: React.ReactNode }) {
   return (
-    <div className="border-b border-line py-3 first:pt-0 last:border-b-0 last:pb-0">
-      <p className="mb-1 text-[12px] font-bold text-ink-faint">{k}</p>
-      <p className="text-ink">{children}</p>
+    // 옅은 바탕 위라 줄 대신 간격으로 나눈다 — 라벨은 진하게, 내용은 한 단계 옅게
+    <div className="py-2.5 first:pt-0 last:pb-0">
+      <p className="mb-0.5 text-[13px] font-bold text-ink">{k}</p>
+      <p className="text-ink-sub">{children}</p>
     </div>
   );
 }
 
-function ProfileForm({
+/**
+ * 프로필 첫 화면 — 보기와 고치기를 나눈다 (Figma 시안 ⑪).
+ *
+ * 예전에는 들어오자마자 입력 칸 여섯 묶음이 펼쳐진 폼이었다. 학생이 이 탭을
+ * 여는 이유는 대개 "내가 무슨 과목으로 잡혀 있나"를 보는 것이라, 고칠 때만
+ * 폼을 연다. 폼 자체(저장 내용·출제 범위 규칙)는 그대로다.
+ *
+ * 학년·학기를 아직 고르지 않은 학생은 바로 폼으로 간다 — 보기 화면에 빈 칸만
+ * 늘어놓아 봐야 할 일은 결국 '수정'을 누르는 것 하나다.
+ */
+function ProfileHome({
   profile,
   onSaved,
   onSignOut,
@@ -275,6 +332,169 @@ function ProfileForm({
   onSaved: (p: Profile) => void;
   onSignOut: () => void;
 }) {
+  const [editing, setEditing] = useState<null | "all" | "subjects">(() =>
+    profile.grade == null || profile.semester == null ? "all" : null,
+  );
+  const [msg, setMsg] = useState<string | null>(null);
+  const progress = useProgress();
+
+  if (editing) {
+    return (
+      <ProfileForm
+        profile={profile}
+        focus={editing}
+        onSaved={(p) => {
+          onSaved(p);
+          setEditing(null);
+          setMsg("저장했어요. 오늘의 문항이 이 범위로 다시 뽑혀요.");
+        }}
+        onCancel={() => setEditing(null)}
+      />
+    );
+  }
+
+  const open = (what: "all" | "subjects") => {
+    setMsg(null);
+    setEditing(what);
+  };
+
+  // 실명은 받지 않는다(R13). 보이는 이름은 닉네임, 없으면 아이디다
+  const alias = profile.nickname || profile.username || "이름 없음";
+  const initial = Array.from(alias)[0] ?? "?";
+  const where = [
+    profile.school_name,
+    profile.grade && profile.semester ? `${profile.grade}학년 ${profile.semester}학기` : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+  const subjectNames = orderSubjectNames(
+    (profile.subjects ?? []).map(subjectNameOf).filter((n): n is string => Boolean(n)),
+  );
+
+  return (
+    <Screen>
+      <ScreenTitle>내 정보</ScreenTitle>
+
+      <Card className="flex items-center gap-4">
+        <span
+          aria-hidden
+          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary-100 text-[22px] font-extrabold text-primary-700"
+        >
+          {initial}
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-[17px] font-bold">{alias}</p>
+          <p className="mt-0.5 truncate text-[13px] text-ink-faint">
+            {where || "학교·학년을 아직 고르지 않았어요"}
+          </p>
+        </div>
+        <button
+          onClick={() => open("all")}
+          className="h-9 shrink-0 rounded-full bg-surface px-4 text-[13px] font-bold text-ink-sub ring-1 ring-inset ring-line"
+        >
+          수정
+        </button>
+      </Card>
+
+      {msg && (
+        <p role="status" className="mt-3 px-1 text-[14px] font-semibold text-primary-700">
+          {msg}
+        </p>
+      )}
+
+      {/* 숫자는 이 기기의 기록(lib/store)에서 센다 — 세지 않는 값은 올리지 않는다.
+          인출한 개념 = FSRS 기억 상태가 생긴 카드(한 번이라도 떠올려 본 카드),
+          푼 문항 = 기출·평가 문항 */}
+      <div className="mt-3">
+        <StatRow
+          items={[
+            { value: `${progress.streak.count}일`, label: "연속 학습" },
+            { value: Object.keys(progress.studyStates).length, label: "인출한 개념" },
+            { value: Object.keys(progress.exam).length, label: "푼 문항" },
+          ]}
+        />
+      </div>
+
+      <Card className="mt-3">
+        <div className="flex items-center justify-between">
+          <h2 className="text-[16px] font-bold">수강 과목</h2>
+          <button
+            onClick={() => open("subjects")}
+            className="-mr-1 px-1 text-[14px] font-bold text-primary-700"
+          >
+            변경 ›
+          </button>
+        </div>
+        {/* 스케줄러(lib/scheduler)와 개념 탭(concepts/page)이 모두 이 값을 본다 */}
+        <p className="mt-1.5 text-[13px] leading-relaxed text-ink-sub">
+          오늘의 문항과 개념 탭이 이 과목으로 좁혀져요
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {subjectNames.map((n) => (
+            <Chip key={n} tone="primary">{n}</Chip>
+          ))}
+          {/* 더하는 것도 고르는 화면이 같다 — 따로 만들지 않고 같은 폼을 연다 */}
+          <button
+            onClick={() => open("subjects")}
+            className="inline-flex items-center rounded-full bg-surface px-3.5 py-1.5 text-[13px] font-semibold text-ink-sub ring-1 ring-inset ring-line"
+          >
+            ＋ 과목 추가
+          </button>
+        </div>
+      </Card>
+
+      {/* 설정 줄 — 지금 있는 것만 둔다. 초대 코드는 2026-09-11 교사 결정으로
+          화면에서 뺐다(아래 ProfileForm 의 '초대 코드 자리' 주석). 학습 알림은
+          아직 없는 기능이라 시안에 있어도 올리지 않는다 */}
+      <Card className="mt-3 !px-0 !py-2">
+        <div className="flex items-center justify-between px-5 py-3">
+          <span className="text-[15px]">아이디</span>
+          {/* 아이디는 바꾸지 않는다 — 폼의 '아이디' 자리 주석 */}
+          <span className="text-[14px] text-ink-faint">{profile.username ?? "—"}</span>
+        </div>
+        <Link
+          href="/privacy"
+          className="flex items-center justify-between px-5 py-3 active:bg-bg-subtle"
+        >
+          <span className="text-[15px]">개인정보 처리방침</span>
+          <Chevron />
+        </Link>
+        <button
+          onClick={onSignOut}
+          className="flex w-full items-center px-5 py-3 text-left text-[15px] text-ink-sub active:bg-bg-subtle"
+        >
+          로그아웃
+        </button>
+      </Card>
+    </Screen>
+  );
+}
+
+function Chevron() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-ink-faint" aria-hidden>
+      <path d="M9 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+function ProfileForm({
+  profile,
+  focus,
+  onSaved,
+  onCancel,
+}: {
+  profile: Profile;
+  /** '변경'으로 들어오면 과목 고르는 자리로 바로 내려간다 */
+  focus: "all" | "subjects";
+  onSaved: (p: Profile) => void;
+  onCancel: () => void;
+}) {
+  const subjectsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (focus === "subjects") subjectsRef.current?.scrollIntoView({ block: "start" });
+  }, [focus]);
+
   const [nickname, setNickname] = useState(profile.nickname ?? "");
   const [grade, setGrade] = useState<1 | 2 | 3 | null>(profile.grade);
   const [semester, setSemester] = useState<1 | 2 | null>(profile.semester);
@@ -339,10 +559,9 @@ function ProfileForm({
         // invite_code 는 여기서 손대지 않는다 — 화면에서 뺐을 뿐 값은 그대로
         // 남는다 (아래 '초대 코드' 자리의 주석)
       });
-      if (p) {
-        onSaved(p);
-        setMsg("저장했어요. 오늘의 문항이 이 범위로 다시 뽑혀요.");
-      }
+      // 저장 알림("저장했어요 …")은 보기 화면이 띄운다 — 저장하면 폼을 닫고
+      // 그리로 돌아가므로, 여기서 띄우면 읽기도 전에 사라진다
+      if (p) onSaved(p);
     } catch (e) {
       const m = (e as Error).message;
       // 유일 인덱스에 걸린 것이라 서버 문구가 영어다. 학생이 읽을 말로 바꾼다
@@ -381,9 +600,11 @@ function ProfileForm({
   return (
     <Screen>
       <div className="mb-1 flex items-center justify-between">
-        <ScreenTitle>내 정보</ScreenTitle>
-        <button onClick={onSignOut} className="mb-5 text-[13px] font-semibold text-ink-faint">
-          로그아웃
+        <ScreenTitle>내 정보 수정</ScreenTitle>
+        {/* 로그아웃은 보기 화면의 설정 줄로 옮겼다. 여기서는 고친 것을 버리고
+            나가는 길만 둔다 — 폼이 닫히면 입력 상태도 함께 사라진다 */}
+        <button onClick={onCancel} className="mb-5 text-[13px] font-semibold text-ink-faint">
+          취소
         </button>
       </div>
 
@@ -422,6 +643,7 @@ function ProfileForm({
         </div>
       </div>
 
+      <div ref={subjectsRef} className="scroll-mt-4" />
       <SectionLabel>학기별 수강 과목</SectionLabel>
       <p className="-mt-1 mb-3 text-[13px] leading-relaxed text-ink-sub">
         오늘의 문항은 <b className="text-ink">지금 학기</b>에 고른 과목에서만 나와요.

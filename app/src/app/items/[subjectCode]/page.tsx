@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use, useEffect, useState } from "react";
-import { Card, Screen } from "@/components/ui";
+import { Card, ProgressBar, Screen } from "@/components/ui";
 import { subjectSummaries, subjectTitle, unitsOfSubject } from "@/lib/exam";
 import { accentOfSubject } from "@/lib/brand";
 import { examProgress } from "@/lib/store";
@@ -146,8 +146,8 @@ function UnitRow({
         </span>
       </div>
       {/* 진행 막대 — 단원을 얼마나 훑었는지가 고르는 근거가 된다 */}
-      <div className="mt-3 h-2 overflow-hidden rounded-full bg-bg-subtle">
-        <div className="h-full rounded-full bg-primary-500 transition-all" style={{ width: `${pct}%` }} />
+      <div className="mt-3">
+        <ProgressBar value={pct / 100} label={`${title} 진행률`} />
       </div>
     </>
   );

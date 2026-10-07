@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useSyncExternalStore } from "react";
 import { Art } from "@/components/Art";
 import { BottomCta, Card, Screen } from "@/components/ui";
 import { BRAND, TILE } from "@/lib/brand";
@@ -50,13 +50,11 @@ export default function TodayPage() {
         </span>
       </header>
 
-      {/* 히어로 카드 */}
+      {/* 히어로 카드 — 날짜 줄 · 제목 · 구성 알약. 시작 단추는 넣지 않는다:
+          이 화면의 CTA 는 아래 BottomCta 하나다 (D2) */}
       <section className="relative overflow-hidden rounded-[28px] bg-primary-500 p-6 text-white shadow-hero">
-        <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[12px] font-semibold">
-          <Art name="timer" />
-          유형당 약 3분 · {perKind}문항
-        </span>
-        <h2 className="text-[24px] font-extrabold leading-snug">
+        <DayLine />
+        <h2 className="mt-2 text-[24px] font-extrabold leading-snug">
           {doneToday ? (
             <>
               오늘 학습 끝!
@@ -74,6 +72,20 @@ export default function TodayPage() {
         <p className="mt-2 text-[14px] text-white/85">
           OX · 단답 · 선택형 — 하나 골라 시작해요
         </p>
+        {/* 오늘 세트의 구성 — 아래 타일과 같은 값이지만 히어로만 보고 들어가는
+            학생에게도 "얼마나" 를 먼저 말한다. 분량은 유형당 어림값만 안다 */}
+        <ul className="relative z-10 mt-4 flex flex-wrap gap-2 text-[13px] font-bold">
+          <li className="rounded-full bg-white/20 px-3.5 py-1.5">
+            복습 {today.reviewConceptCount}
+          </li>
+          <li className="rounded-full bg-white/20 px-3.5 py-1.5">
+            신규 {today.newConceptCount}
+          </li>
+          <li className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3.5 py-1.5">
+            <Art name="timer" px={14} />
+            유형당 약 3분
+          </li>
+        </ul>
         <span className="pointer-events-none absolute -bottom-3 -right-1" aria-hidden>
           <Art name={doneToday ? "daily-done" : "daily-todo"} />
         </span>
@@ -89,10 +101,13 @@ export default function TodayPage() {
 
       {/* 출석 잔디 */}
       <Card className="mt-4">
-        <h3 className="mb-3 flex items-center gap-1.5 text-[15px] font-bold">
-          <Art name="attendance" />
-          출석 체크
-        </h3>
+        <div className="mb-3 flex items-center justify-between">
+          <h3 className="flex items-center gap-1.5 text-[15px] font-bold">
+            <Art name="attendance" />
+            출석 체크
+          </h3>
+          <span className="text-[12px] text-ink-faint">최근 12주</span>
+        </div>
         <Grass doneDates={progress.doneDates} />
       </Card>
 
@@ -142,6 +157,42 @@ function Tile({
   );
 }
 
+const WEEKDAY = ["일", "월", "화", "수", "목", "금", "토"];
+
+function subscribeMinute(onChange: () => void) {
+  // 자정을 넘기며 화면을 켜 둔 경우를 위해 1분마다 다시 읽는다
+  const t = setInterval(onChange, 60_000);
+  return () => clearInterval(t);
+}
+/** 분 단위로 자른 시각 — 스냅숏이 같은 분 안에서는 같은 값이어야 한다 */
+const minuteNow = () => Math.floor(Date.now() / 60_000);
+
+/**
+ * 히어로 첫 줄 — "10월 7일 화요일 · 자정까지 6시간".
+ *
+ * 서버 렌더 시각과 기기 시각이 다르므로 마운트 뒤에만 그린다. 그 전에는 같은
+ * 높이의 빈 줄을 두어 히어로가 한 번 출렁이지 않게 한다 (hydration 불일치 방지).
+ */
+function DayLine() {
+  const minute = useSyncExternalStore(subscribeMinute, minuteNow, () => null);
+  const now = minute == null ? null : new Date(minute * 60_000);
+
+  let text = String.fromCharCode(160); // NBSP — 마운트 전 자리 지킴 — 빈 줄 높이
+  if (now) {
+    const midnight = new Date(now);
+    midnight.setHours(24, 0, 0, 0);
+    const mins = Math.max(0, Math.round((+midnight - +now) / 60_000));
+    const left = mins >= 60 ? `${Math.floor(mins / 60)}시간` : `${mins}분`;
+    text = `${now.getMonth() + 1}월 ${now.getDate()}일 ${WEEKDAY[now.getDay()]}요일 · 자정까지 ${left}`;
+  }
+  return <p className="text-[13px] font-semibold text-white/85">{text}</p>;
+}
+
+/**
+ * 출석 잔디 — 이분값(한 날 / 안 한 날).
+ * 시안은 5단계 농도지만 store 가 날짜별 문항 수를 남기지 않는다(doneDates 뿐).
+ * 날짜별 횟수가 생기면 bg-subtle → primary-100/300/500/700 로 나눈다.
+ */
 function Grass({ doneDates }: { doneDates: string[] }) {
   const cells = useMemo(() => {
     const out: { key: string; done: boolean }[] = [];
