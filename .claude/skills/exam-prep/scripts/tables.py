@@ -31,7 +31,7 @@ OUT = REPO / "output" / "items"
 LOG = REPO / "output" / "logs" / "pipeline.jsonl"
 
 CHOICE = "①②③④⑤"
-CURRICULUM = re.compile(r"\[?((?:10통과\d|12물에)\d?-?\d\d-\d\d)\]?")
+CURRICULUM = re.compile(r"\[?((?:10통과\d|12물에|12세포)\d?-?\d\d-\d\d)\]?")
 
 # 교사용 문제지 끝의 정답 블록 — `01 ① 02 ② 03 ④ …`
 #
@@ -135,7 +135,7 @@ def parse_info(pdf_path: Path) -> dict[int, dict]:
                         # 객관식만 앱으로 간다. 나머지는 내부에만 남는다
                         "answer": answer if answer in list(CHOICE) else None,
                         "kind": "choice" if answer in list(CHOICE) else "written",
-                        "curriculum": code.group(1) if code else None,
+                        "curriculum": re.sub(r"^(12세포)-", r"\1", code.group(1)) if code else None,
                         "topic_label": cell(row, idx.get("내용")) or None,
                         "domain": cell(row, idx.get("영역")) or None,
                         "difficulty": cell(row, idx.get("난이도")) or None,
@@ -143,18 +143,25 @@ def parse_info(pdf_path: Path) -> dict[int, dict]:
     return found
 
 
-def parse_teacher(pdf_path: Path) -> dict[int, dict]:
+def parse_teacher(pdf_path: Path, answer_pages_only: bool = False) -> dict[int, dict]:
     """교사용 문제지에서 **객관식 정답만** 읽는다.
 
     발행사에 따라 문항정보표가 없고 교사용 문제지에 정답이 표시돼 오는 자료가
     있다(물질과 에너지). 그 지면에는 해설도 함께 있지만 우리는 끝의 정답
     블록에서 번호와 기호만 가져온다 — 서술형은 기호가 없으므로 자연히 빠진다.
+
+    `answer_pages_only`: 문제와 정답이 **한 파일**에 든 자료(세포·통합과학2 단일
+    파일)는 문제 쪽에도 "①" 이 널려 있다. 「정답 및 해설」 쪽(split.py 가 오려내지
+    않은 쪽)만 읽는다 — 거기서도 번호와 기호뿐이다.
     """
     import pdfplumber
+    from split import is_answer_page
 
     found: dict[int, dict] = {}
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
+            if answer_pages_only and not is_answer_page(page):
+                continue
             for m in TEACHER_ANSWER.finditer(page.extract_text() or ""):
                 no = int(m.group(1))
                 if 1 <= no <= 40:
@@ -193,16 +200,23 @@ def main() -> int:
         pdfs = rec.get("pdf", {})
         info_pdf = pdfs.get("info")
         teacher_pdf = pdfs.get("answers-teacher")
+        doc = json.loads(items_path.read_text(encoding="utf-8"))
+        # 정답 쪽이 문제지 안에 있는 자료 — split.py 가 그 쪽을 찾아 기록해 뒀다
+        inline_pdf = pdfs.get("paper") if doc.get("answer_pages") else None
         if info_pdf:
             table = parse_info(REPO / info_pdf)
             source = info_pdf
         elif teacher_pdf:
             table = parse_teacher(REPO / teacher_pdf)
             source = teacher_pdf
+        elif inline_pdf:
+            table = parse_teacher(REPO / inline_pdf, answer_pages_only=True)
+            source = inline_pdf
         else:
             table, source = {}, None
-
-        doc = json.loads(items_path.read_text(encoding="utf-8"))
+        # 정답표가 객관식만 담는 자료(교사용 정답 블록·문서 안 정답 쪽·정답 없는
+        # 수행평가)에서는 표에 없는 문항이 결함이 아니라 서술형이다
+        sheet_only = bool(teacher_pdf or inline_pdf or not source)
         gaps: list[int] = []
         # 회차 전체가 한 성취기준인 자료가 있다(최소성취수준평가). 그 값은
         # 파일 이름에서 왔고, 문항마다 따로 적혀 있지 않다
@@ -211,8 +225,8 @@ def main() -> int:
             row = table.get(item["no"])
             if not row:
                 # 정답표에 없는 문항 = 서술형. 정답표가 객관식만 담는 자료에서는
-                # 이것이 결함이 아니라 형식이다 — 교사용에서 온 경우만 그렇게 본다
-                if teacher_pdf:
+                # 이것이 결함이 아니라 형식이다 — 문항정보표가 아닌 경우만 그렇게 본다
+                if sheet_only:
                     item.update({"answer": None, "kind": "written",
                                  "curriculum": paper_code, "topic_label": None,
                                  "domain": None, "difficulty": None})

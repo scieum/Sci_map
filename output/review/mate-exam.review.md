@@ -85,3 +85,33 @@ approved_at: 2026-09-16
 3. 권리 대장의 4필드와 워터마크 문구 — 학교명을 실제 학교명으로 바꿔야 한다
 4. 로그인 한정 공개가 맞는가 (docs/rights_policy.md §2.7)
 
+## 추가 회차 — 2026-10-11 (inbox 잔여 자료 전부 처리)
+
+inbox 에 남아 있던 자료 전부를 같은 파이프라인(Q0~Q3)으로 처리했다. 교사가 2026-10-10
+대화에서 전부 구현·승인하겠다고 말했지만, **승인 기록은 교사가 직접 적는다** — 에이전트는
+아래 블록을 채우지 않는다 (CLAUDE.md §5). 이 과목의 과목 단위 게이트(위 블록)가 이미
+`true` 라 `build_items.py` 는 아래 회차도 번들에 담는다. 검토 뒤 빼고 싶은 회차가 있으면
+그 회차 items.json 의 문항에 `excluded` 사유를 적고 다시 빌드한다 (부분 승인).
+
+```yaml
+approved: false
+approved_by:
+approved_at:
+```
+
+회차 4 · 문항 13 (객관식 0 · 서술형 13). 서술형·수행평가·서논술형은 기호 정답이
+없어 `answer: null` 이며 앱은 "스스로 확인" 으로 다룬다. 모범답안·해설 텍스트는 가져오지
+않았다(split.py 가 정답·해설 쪽을 `answer_pages` 로 기록하고 크롭에서 제외, tables.py 는 그
+쪽에서 번호+기호만 읽음). 권리 대장: ledger.jsonl 에 13행, access_tier=restricted.
+
+| 회차 | 유형 | 범위 | 문항 | 객관식 | 정답 출처 |
+|---|---|---|---|---|---|
+| mate-perf-1 | 대단원수행평가 | mate-1 | 2 | 0 | output/source/exam/mate-perf-1/answers-teacher.pdf |
+| mate-perf-2 | 대단원수행평가 | mate-2 | 3 | 0 | output/source/exam/mate-perf-2/answers-teacher.pdf |
+| mate-perf-3 | 대단원수행평가 | mate-3 | 4 | 0 | output/source/exam/mate-perf-3/answers-teacher.pdf |
+| mate-perf-4 | 대단원수행평가 | mate-4 | 4 | 0 | output/source/exam/mate-perf-4/answers-teacher.pdf |
+
+확인이 남은 것: 성취기준이 문항마다 적혀 있지 않은 자료라 `curriculum` 이 전부 null 이고,
+후보 카드는 중단원(topic_prefix) 또는 단원 범위다. Q3·Q4 매핑은 `mate-curation.review.md`
+의 추가 회차 절에 따로 기록한다. 문항 이미지는 교사가 `upload_exam_assets.py` 로 올려야
+학생에게 보인다.

@@ -67,19 +67,61 @@ def derive_access_tier(holder: str) -> str:
 # ── 경계 검출 ──────────────────────────────────────────────────────────────
 
 NUM_AT_START = re.compile(r"^(\d{1,2})(?!\d)")
+# 번호를 굵게 보이려고 같은 자리에 세 번 겹쳐 찍은 편집 — pdfplumber 는 "000111"
+# 로 읽는다. 세 글자씩 같은 숫자면 한 글자로 접는다 (세포·통합과학2 단일 파일 자료)
+TRIPLED = re.compile(r"^(?:(\d)\1\1)+$")
+
+# ★ 정답·해설·채점 기준이 **같은 문서 안에** 있는 자료가 있다(세포·통합과학2 단일
+#   파일). 그 쪽은 오려내지 않는다 — 학생에게 가는 크롭에 해설이 실리면 안 되고
+#   (CLAUDE.md §6), 해설 머리의 "01 ①" 이 문항 번호로 잡히면 번호가 두 번 나온다.
+#   최소성취수준평가의 첫 쪽(교육과정 성취 기준·예시 답안·채점 기준 표)도 교사용이다
+ANSWER_MARKERS = ("정답 및 해설", "정답및해설", "정답과 해설", "채점 기준", "채점기준",
+                  "예시 답안", "예시답안", "예시 평가 문항")
+
+
+def is_answer_page(page) -> bool:
+    """정답·해설·채점 기준 쪽인가. 형식만 본다 — 내용은 읽지 않는다."""
+    text = re.sub(r"\s+", " ", page.extract_text() or "")
+    return any(m in text for m in ANSWER_MARKERS)
 
 
 def number_candidates(page) -> list[dict]:
-    """문항 번호로 볼 만한 토큰 후보.
+    r"""문항 번호로 볼 만한 토큰 후보.
 
     ★ 번호가 뒤 글자에 붙어 나오는 쪽이 있다 — "09그림은" 처럼 한 낱말로
       잡힌다. `\d{1,2}` 전체 일치만 보면 그 문항이 통째로 사라진다(실제로
       한 회차에서 9번이 빠졌다). 낱말 **앞머리**의 숫자를 본다.
     """
     out = []
-    for w in page.extract_words():
+    words = page.extract_words()
+    consumed = set()
+    for index, original in enumerate(words):
+        if index in consumed:
+            continue
+        w = original
+        # HWP PDFs can split overlapping digits into separate words ("2", "0").
+        # Join only adjacent digits on the same baseline and at the same size.
+        if re.fullmatch(r"\d", w["text"]):
+            for other_index in range(index + 1, len(words)):
+                other = words[other_index]
+                if (re.fullmatch(r"\d", other["text"])
+                        and abs(other["top"] - w["top"]) < 0.5
+                        and abs(other["bottom"] - w["bottom"]) < 0.5
+                        and w["x0"] < other["x0"]
+                        and -2 <= other["x0"] - w["x1"] <= 1):
+                    w = {**w, "text": w["text"] + other["text"], "x1": other["x1"]}
+                    consumed.add(other_index)
+                    break
+        if TRIPLED.match(w["text"]):
+            w = {**w, "text": w["text"][::3]}
         m = NUM_AT_START.match(w["text"])
         if not m:
+            continue
+        # "1." 은 문항 번호가 아니다 — 중단원 제목("1. 생태계평형과 기후 변화")과
+        # 보기 상자 안의 목록("1. 2. 3.")이 이 꼴이다. 이 자료들의 문항 번호는
+        # 마침표 없이 찍힌다(01 · 1 · 000111). 제목 하나가 단 하나로 잡혀
+        # 문항이 되고, 목록이 번호 크기 결정을 흔든 적이 있다
+        if re.fullmatch(r"\d{1,2}\.", w["text"]):
             continue
         n = int(m.group(1))
         if not (1 <= n <= 40):
@@ -110,7 +152,9 @@ def pick_number_band(cands: list[dict]) -> float | None:
         run = 0
         while run + 1 in nums:
             run += 1
-        if run > best_run:
+        # 같은 길이면 **큰 글자**가 번호다. 보기 상자 안의 "1. 2. 3." 목록이
+        # 본 번호와 같은 길이로 이어져 작은 쪽이 뽑힌 적이 있다
+        if run > best_run or (run == best_run and best is not None and h > best):
             best, best_run = h, run
     if best_run >= 3:
         return best
@@ -195,10 +239,16 @@ def blocks_from(page, starts: list[float], item_toks: list[dict]) -> tuple[list[
     meta_toks = [w for w in words if w["text"].startswith("성취기준")]
     items: list[dict] = []
     stims: list[dict] = []
+
+    def column_of(w: dict) -> int:
+        """번호가 속한 단 — 가장 가까운 단 시작점. detect() 와 같은 너그러움으로 본다."""
+        return min(range(len(starts)), key=lambda k: abs(w["x0"] - starts[k]))
+
     for i, cstart in enumerate(starts):
         left, right = band_of(starts, i, page.width)
         marks = sorted(
-            [("item", w) for w in item_toks if abs(w["x0"] - cstart) <= COL_TOL]
+            [("item", w) for w in item_toks
+             if column_of(w) == i and abs(w["x0"] - cstart) <= COL_TOL * 2]
             + [("stim", w) for w in stim_toks if left <= w["x0"] <= right]
             + [("meta", w) for w in meta_toks if left <= w["x0"] <= right],
             key=lambda t: t[1]["top"],
@@ -207,9 +257,25 @@ def blocks_from(page, starts: list[float], item_toks: list[dict]) -> tuple[list[
             top = w["top"] - PAD
             nxt = marks[j + 1][1]["top"] - PAD if j + 1 < len(marks) else None
             bottom = nxt if nxt is not None else content_bottom(page, left, right, top) + PAD
+            # 「문항 01」 처럼 번호 앞에 머리말이 붙는 편집(수행평가)은 그 말까지
+            # 한 줄이다. 번호 왼쪽 같은 줄의 낱말까지 왼쪽 경계를 넓힌다
+            box_left = left
+            if kind == "item":
+                for other in words:
+                    if (abs(other["top"] - w["top"]) <= 3 and other["x1"] <= w["x0"] + 1
+                            and w["x0"] - other["x1"] <= 40):
+                        box_left = min(box_left, max(0.0, other["x0"] - 4))
+                # 본문이 번호보다 왼쪽에서 시작하는 편집(수행평가 — 번호는 들여 쓴
+                # 「문항 01」 상자에 있고 본문은 여백 끝까지 간다). 블록 높이 안에서
+                # 경계를 **가로질러** 들어오는 낱말까지 왼쪽을 넓힌다. 옆 단의 낱말은
+                # 경계를 넘지 않으므로 끌려오지 않는다. 넓히는 폭은 40pt 까지
+                for other in words + page.rects + page.lines + page.images:
+                    if (top <= other["top"] <= bottom and left - 40 <= other["x0"] < left
+                            and other["x1"] > left + 2):
+                        box_left = min(box_left, max(0.0, other["x0"] - 4))
             box = {
                 "page": page.page_number,
-                "bbox": [left, max(0.0, top), right, min(float(page.height), bottom)],
+                "bbox": [box_left, max(0.0, top), right, min(float(page.height), bottom)],
                 "column": i,
             }
             if kind == "meta":
@@ -223,7 +289,7 @@ def blocks_from(page, starts: list[float], item_toks: list[dict]) -> tuple[list[
     return items, stims
 
 
-def detect(doc) -> tuple[dict[int, list[dict]], dict[tuple[int, int], list[float]], list[int]]:
+def detect(doc, skip: set[int] = frozenset()) -> tuple[dict[int, list[dict]], dict[tuple[int, int], list[float]], list[int]]:
     """회차 전체에서 문항 번호 토큰을 가려낸다.
 
     ① 지면 모양별로 번호 글자 크기와 단 위치를 정하고
@@ -239,6 +305,8 @@ def detect(doc) -> tuple[dict[int, list[dict]], dict[tuple[int, int], list[float
     by_shape: dict[tuple[int, int], list[dict]] = {}
     shape_of: dict[int, tuple[int, int]] = {}
     for page in doc.pages:
+        if page.page_number in skip:
+            continue
         cs = number_candidates(page)
         cands_of[page.page_number] = cs
         shape = (round(page.width), round(page.height))
@@ -253,7 +321,9 @@ def detect(doc) -> tuple[dict[int, list[dict]], dict[tuple[int, int], list[float
     }
 
     def aligned_to(c: dict, shape) -> bool:
-        return any(abs(c["x0"] - st) <= COL_TOL for st in starts_of.get(shape, []))
+        # 단 위치를 정할 때(columns_of)보다 느슨하게 본다 — 번호 하나가 단에서
+        # 5pt 밀려 찍힌 쪽이 있었다. 단은 이미 정해져 있으니 가까우면 그 단이다
+        return any(abs(c["x0"] - st) <= COL_TOL * 2 for st in starts_of.get(shape, []))
 
     taken: dict[int, list[dict]] = {}
     seen: dict[int, tuple[int, dict]] = {}
@@ -349,9 +419,13 @@ def split_paper(rec: dict, dry: bool) -> dict:
 
     items: list[dict] = []
     stims: list[dict] = []
+    answer_pages: list[int] = []
     with pdfplumber.open(pdf_path) as doc:
-        taken, starts_of, _ = detect(doc)
+        answer_pages = [p.page_number for p in doc.pages if is_answer_page(p)]
+        taken, starts_of, _ = detect(doc, set(answer_pages))
         for page in doc.pages:
+            if page.page_number in answer_pages:
+                continue
             starts = starts_of.get((round(page.width), round(page.height)))
             if not starts:
                 continue
@@ -368,7 +442,10 @@ def split_paper(rec: dict, dry: bool) -> dict:
         expected = list(range(1, max(numbers) + 1))
         if numbers != expected:
             problems.append(f"번호가 이어지지 않는다: {numbers}")
-    short = [b["no"] for b in items if b["bbox"][3] - b["bbox"][1] < MIN_BLOCK_H]
+    short = [b["no"] for b in items
+             if b["bbox"][3] - b["bbox"][1]
+             + sum(s["bbox"][3] - s["bbox"][1] for s in stims
+                   if s["range"][0] <= b["no"] <= s["range"][1]) < MIN_BLOCK_H]
     if short:
         problems.append(f"블록이 너무 낮다(잘렸을 수 있다): {short}")
 
@@ -388,6 +465,8 @@ def split_paper(rec: dict, dry: bool) -> dict:
         "source_pdf": rec["pdf"]["paper"],
         "access_tier": tier,
         "rights": rec["rights"],
+        # 같은 문서 안의 정답·해설·채점 기준 쪽 — 오려내지 않았다는 기록
+        "answer_pages": answer_pages,
         "items": [],
         "problems": problems,
     }
@@ -483,7 +562,7 @@ def split_paper(rec: dict, dry: bool) -> dict:
             fh.write(json.dumps(row, ensure_ascii=False) + "\n")
 
     log(result="ok" if not problems else "warn", paper_id=pid,
-        items=len(result["items"]), problems=problems)
+        items=len(result["items"]), problems=problems, answer_pages=answer_pages)
     return result
 
 

@@ -928,10 +928,19 @@
         "isci2-pathogen",
         "isci2-pcr-test"
       ],
-      "concept_ids": [],
-      "mapping": "needs-llm",
+      "concept_ids": [
+        "isci2-antigen-test",
+        "isci2-pcr-test"
+      ],
+      "mapping": "llm",
       "text_internal": "21 그림은 감염병 진단 방법 중 하나에 사용되는 도구이다. 진단 방법의 이름을 쓰고, 장점을 한 가지 서술하시오.",
-      "mapping_reason": "그림 속 도구가 무엇인지 문항 텍스트만으로는 가려지지 않아, 세 진단법 가운데 어느 카드인지 확정할 수 없다"
+      "mapping_reason": "그림 문항이라 도구가 항원 검사 키트인지 PCR 장비인지 확정할 수 없어 두 진단법 카드를 함께 두었다; Q6에서 그림을 보고 하나로 좁히는 것이 좋다",
+      "explanation": "교과서가 든 세 진단법은 서로 장단점이 갈린다. 항원 검사는 결과가 빨리 나와 격리와 접촉자 확인을 일찍 시작할 수 있고, PCR 검사는 결과는 늦지만 감염 여부를 가장 정확하게 알려 준다. 그림의 도구가 어느 진단법의 것인지 이름을 맞게 쓰고, 장점을 그 진단법에 맞게(빠름 또는 정확함) 짝지어 썼는지 보면 된다.",
+      "cited_relations": [
+        "rel-agt-tradeoff",
+        "rel-agt-response",
+        "rel-pcr-tradeoff"
+      ]
     },
     {
       "item_id": "isci2-mid-3-r1-q22",

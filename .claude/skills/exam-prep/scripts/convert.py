@@ -38,13 +38,37 @@ OUT = REPO / "output" / "source" / "exam"
 LOG = REPO / "output" / "logs" / "pipeline.jsonl"
 
 # 과목 이름 → 앱/백로그의 과목 코드
-SUBJECT_CODE = {"통합과학1": "isci1", "통합과학2": "isci2", "물질과 에너지": "mate"}
+SUBJECT_CODE = {"통합과학1": "isci1", "통합과학2": "isci2", "물질과 에너지": "mate",
+                "세포와 물질대사": "cell"}
 
-ROMAN = {"Ⅰ": 1, "Ⅱ": 2, "Ⅲ": 3, "Ⅳ": 4, "Ⅴ": 5, "Ⅵ": 6}
+ROMAN = {"Ⅰ": 1, "Ⅱ": 2, "Ⅲ": 3, "Ⅳ": 4, "Ⅴ": 5, "Ⅵ": 6,
+         # 파일 이름에 로마 숫자 글자(Ⅰ) 대신 영문 대문자(I, II)를 쓴 자료가 섞여 있다
+         "I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6}
+ROMAN_RE = r"(Ⅰ|Ⅱ|Ⅲ|Ⅳ|Ⅴ|Ⅵ|III|II|IV|VI|V|I)"
+ROMAN_GLYPH = {1: "Ⅰ", 2: "Ⅱ", 3: "Ⅲ", 4: "Ⅳ", 5: "Ⅴ", 6: "Ⅵ"}
+
+# 대단원·중단원 이름 — 학생이 읽을 label 에 쓴다. 카드 데이터(app/src/data/
+# concepts.generated.json 의 unit/topic 문자열)와 같은 표기를 쓴다
+UNIT_NAME = {
+    "cell-1": "세포", "cell-2": "물질대사와 에너지", "cell-3": "세포호흡과 광합성",
+    "isci2-1": "변화와 다양성", "isci2-2": "환경과 에너지", "isci2-3": "과학과 미래 사회",
+    "mate-1": "물질의 세 가지 상태", "mate-2": "용액의 성질",
+    "mate-3": "화학 변화의 자발성", "mate-4": "반응 속도",
+}
+MINOR_NAME = {
+    "cell-1-1": "생물의 구성 물질", "cell-1-2": "세포의 연구 방법",
+    "cell-1-3": "세포소기관의 구조와 기능", "cell-1-4": "세포막의 구조와 특성",
+    "cell-2-1": "생명활동과 에너지", "cell-2-2": "효소의 특성과 활용",
+    "cell-3-1": "마이토콘드리아와 엽록체", "cell-3-2": "세포호흡", "cell-3-3": "발효",
+    "cell-3-4": "광합성", "cell-3-5": "세포호흡과 광합성의 비교",
+    "isci2-1-1": "지질 시대와 생물다양성", "isci2-1-2": "화학 변화와 에너지 출입",
+    "isci2-2-1": "생태계평형과 기후 변화", "isci2-2-2": "에너지 자원과 활용",
+    "isci2-3-1": "과학과 미래 사회",
+}
 
 # 권리자 — 대장의 `holder` 로 그대로 간다. 파일 속성(HwpSummaryInformation)의
 # 저작자와 맞춰 적는다. 모르면 넣지 마라, 권리 미상 자산은 배포하지 않는다
-PUBLISHER = {"isci2": "천재교육", "isci1": "천재교육", "mate": "천재교육"}
+PUBLISHER = {"isci2": "천재교육", "isci1": "천재교육", "mate": "천재교육", "cell": "천재교육"}
 
 # 파일 이름에서 읽어 내는 것들
 KIND = {
@@ -73,7 +97,93 @@ def parse_name(path: Path, subject_code: str) -> dict | None:
     """
     if subject_code == "mate":
         return parse_name_mate(path, subject_code)
-    return parse_name_isci(path, subject_code)
+    if subject_code == "cell":
+        return parse_name_isci(path, subject_code) or parse_name_cell_single(path, subject_code)
+    return parse_name_isci(path, subject_code) or parse_name_isci_single(path, subject_code)
+
+
+def _single(path: Path, subject_code: str, paper_id: str, exam_type: str, unit_no: int,
+            minor: int | None, label: str) -> dict:
+    """정답지·문항정보표 없이 **파일 하나**로 오는 자료의 공통 메타.
+
+    정답이 같은 문서 안에 있으면 tables.py 가 객관식 기호만 집어 온다
+    (`answers_from` = paper.pdf). 없으면 서술형(스스로 확인)으로 남는다.
+    """
+    unit_id = f"{subject_code}-{unit_no}"
+    return {
+        "paper_id": paper_id,
+        "kind": "paper",
+        "subject_code": subject_code,
+        "exam_type": exam_type,
+        "unit_id": unit_id,
+        "topic_id": None,
+        "topic_prefix": f"{unit_id}-{minor}" if minor else None,
+        "curriculum": None,
+        "round": 1,
+        "label": label,
+        "src": str(path.relative_to(REPO)).replace("\\", "/"),
+    }
+
+
+def parse_name_cell_single(path: Path, subject_code: str) -> dict | None:
+    """세포와 물질대사 — 단원별 단일 파일 자료.
+
+    `세_I_1_최소성취수준` / `세_Ⅱ_1_최소성취수준평가` / `세_I_대단원평가` / `세_Ⅲ_수행평가`.
+    로마 숫자 표기(I/Ⅱ)와 꼬리말(최소성취수준/최소성취수준평가)이 제각각이라 느슨하게 받는다.
+
+    `세_I_n` 의 n 은 **중단원** 번호다 — 단원별 파일 수(4·2·5)가 중단원 수와 같고
+    성취기준 수(5·5·8)와는 다르다. 성취기준은 문항마다 적혀 있지 않으므로
+    `topic_prefix` 로 중단원까지만 좁힌다.
+    """
+    stem = path.stem.replace(" ", "")
+    m = re.match(rf"^세_{ROMAN_RE}_(?:(\d+)_)?(최소성취수준(?:평가)?|대단원평가|수행평가)$", stem)
+    if not m:
+        return None
+    roman, minor, tail = m.groups()
+    no = ROMAN[roman]
+    unit = f"{subject_code}-{no}"
+    glyph = ROMAN_GLYPH[no]
+    if tail.startswith("최소성취수준"):
+        if not minor:
+            return None
+        minor_no = int(minor)
+        name = MINOR_NAME.get(f"{unit}-{minor_no}", "")
+        return _single(path, subject_code, f"{subject_code}-min-{no}-{minor_no:02d}",
+                       "최소성취수준평가", no, minor_no,
+                       f"{glyph}-{minor_no} {name} 최소성취수준평가".replace("  ", " "))
+    if minor:
+        return None
+    if tail == "대단원평가":
+        return _single(path, subject_code, f"{subject_code}-unit-{no}", "대단원평가", no, None,
+                       f"{glyph} {UNIT_NAME.get(unit, '')} 대단원평가")
+    return _single(path, subject_code, f"{subject_code}-perf-{no}", "수행평가", no, None,
+                   f"{glyph} {UNIT_NAME.get(unit, '')} 수행평가")
+
+
+def parse_name_isci_single(path: Path, subject_code: str) -> dict | None:
+    """통합과학2 — 중단원별 단일 파일 자료.
+
+    `통2_II_1_서논술형 평가` / `통2_II_1_수행 평가` / `통2_II_1_최소 성취 수준 평가` /
+    `통2_II_1_학업성취도 평가` / `통2_III_1_최소수준평가`. 띄어쓰기와 표기가 제각각이다 —
+    공백을 전부 지우고 머리말만 본다.
+    """
+    stem = path.stem.replace(" ", "")
+    m = re.match(rf"^통2_{ROMAN_RE}_(\d+)_(서논술형|수행|최소|학업성취도)", stem)
+    if not m:
+        return None
+    roman, minor, head = m.groups()
+    no = ROMAN[roman]
+    minor_no = int(minor)
+    unit = f"{subject_code}-{no}"
+    name = MINOR_NAME.get(f"{unit}-{minor_no}", "")
+    code, exam_type = {
+        "서논술형": ("essay", "서논술형평가"),
+        "수행": ("perf", "수행평가"),
+        "최소": ("min", "최소성취수준평가"),
+        "학업성취도": ("ach", "학업성취도평가"),
+    }[head]
+    return _single(path, subject_code, f"{subject_code}-{code}-{no}-{minor_no}", exam_type,
+                   no, minor_no, f"{ROMAN_GLYPH[no]}-{minor_no} {name} {exam_type}")
 
 
 def parse_name_isci(path: Path, subject_code: str) -> dict | None:
@@ -193,7 +303,26 @@ def parse_name_mate(path: Path, subject_code: str) -> dict | None:
             "src": str(path.relative_to(REPO)).replace("\\", "/"),
         }
 
-    # 대단원 수행평가 — 앱에서 채점할 수 없는 형식이라 이번 범위가 아니다
+    # ④ 대단원 수행평가 — `대단원수행평가_Ⅰ 물질의 세 가지 상태`
+    #    학생용을 오리고, 교사용은 객관식 기호가 있을 때만 정답으로 쓴다
+    mm = re.match(r"^대단원수행평가_([ⅠⅡⅢⅣⅤⅥ])\s*(.+)$", body)
+    if mm:
+        roman, unit_name = mm.groups()
+        no = ROMAN[roman]
+        return {
+            "paper_id": f"{subject_code}-perf-{no}",
+            "kind": kind,
+            "subject_code": subject_code,
+            "exam_type": "대단원수행평가",
+            "unit_id": f"{subject_code}-{no}",
+            "topic_id": None,
+            "topic_prefix": None,
+            "curriculum": None,
+            "round": 1,
+            "label": f"{roman} {unit_name} 수행평가",
+            "src": str(path.relative_to(REPO)).replace("\\", "/"),
+        }
+
     return None
 
 
