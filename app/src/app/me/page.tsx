@@ -377,28 +377,28 @@ function ProfileHome({
 
   return (
     <Screen>
-      <ScreenTitle>내 정보</ScreenTitle>
+      <h1 className="sr-only">내 정보</h1>
 
-      <Card className="flex items-center gap-4">
+      {/* 틴트 헤더 — 아바타·이름·학교를 가운데 모아 "내 화면"으로 읽히게 한다
+          (세모 내 정보, 시안 v2 내 정보 B). 좌우로 화면 끝까지 깔린다 */}
+      <section className="-mx-5 -mt-5 mb-3 flex flex-col items-center bg-gradient-to-b from-primary-50 to-bg px-5 pb-5 pt-7 text-center md:-mx-8 md:px-8">
         <span
           aria-hidden
-          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary-100 text-[22px] font-extrabold text-primary-700"
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-primary-500 text-[24px] font-extrabold text-white shadow-chip"
         >
           {initial}
         </span>
-        <div className="min-w-0 flex-1">
-          <p className="truncate text-[17px] font-bold">{alias}</p>
-          <p className="mt-0.5 truncate text-[13px] text-ink-faint">
-            {where || "학교·학년을 아직 고르지 않았어요"}
-          </p>
-        </div>
+        <p className="mt-3 max-w-full truncate text-[19px] font-extrabold">{alias}</p>
+        <p className="mt-0.5 max-w-full truncate text-[13px] text-ink-sub">
+          {where || "학교·학년을 아직 고르지 않았어요"}
+        </p>
         <button
           onClick={() => open("all")}
-          className="h-9 shrink-0 rounded-full bg-surface px-4 text-[13px] font-bold text-ink-sub ring-1 ring-inset ring-line"
+          className="mt-3 h-9 rounded-full bg-surface px-4 text-[13px] font-bold text-ink-sub shadow-card"
         >
-          수정
+          프로필 수정 ✎
         </button>
-      </Card>
+      </section>
 
       {msg && (
         <p role="status" className="mt-3 px-1 text-[14px] font-semibold text-primary-700">
@@ -434,9 +434,18 @@ function ProfileHome({
           오늘의 문항과 개념 탭이 이 과목으로 좁혀져요
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
-          {subjectNames.map((n) => (
-            <Chip key={n} tone="primary">{n}</Chip>
-          ))}
+          {/* 과목 칩은 과목 색을 입는다 — 개념 탭·문제 탭과 같은 색이라야 한 과목으로 읽힌다 */}
+          {subjectNames.map((n) => {
+            const a = accentOfSubject(n);
+            return (
+              <span
+                key={n}
+                className={`inline-flex items-center rounded-full px-3.5 py-1.5 text-[13px] font-semibold ${a.tint} ${a.text}`}
+              >
+                {n}
+              </span>
+            );
+          })}
           {/* 더하는 것도 고르는 화면이 같다 — 따로 만들지 않고 같은 폼을 연다 */}
           <button
             onClick={() => open("subjects")}
@@ -451,8 +460,22 @@ function ProfileHome({
           화면에서 뺐다(아래 ProfileForm 의 '초대 코드 자리' 주석). 학습 알림은
           아직 없는 기능이라 시안에 있어도 올리지 않는다 */}
       <Card className="mt-3 !px-0 !py-2">
+        <Link
+          href="/concepts"
+          className="flex items-center justify-between px-5 py-3 active:bg-bg-subtle"
+        >
+          <span className="flex items-center gap-2.5 text-[15px]">
+            <span aria-hidden className="text-primary-500">★</span>북마크한 개념
+          </span>
+          <span className="flex items-center gap-1.5 text-[14px] text-ink-faint">
+            {progress.bookmarks.length}
+            <Chevron />
+          </span>
+        </Link>
         <div className="flex items-center justify-between px-5 py-3">
-          <span className="text-[15px]">아이디</span>
+          <span className="flex items-center gap-2.5 text-[15px]">
+            <span aria-hidden className="text-ink-faint">ⓘ</span>아이디
+          </span>
           {/* 아이디는 바꾸지 않는다 — 폼의 '아이디' 자리 주석 */}
           <span className="text-[14px] text-ink-faint">{profile.username ?? "—"}</span>
         </div>
@@ -460,14 +483,16 @@ function ProfileHome({
           href="/privacy"
           className="flex items-center justify-between px-5 py-3 active:bg-bg-subtle"
         >
-          <span className="text-[15px]">개인정보 처리방침</span>
+          <span className="flex items-center gap-2.5 text-[15px]">
+            <span aria-hidden className="text-ink-faint">🔒</span>개인정보 처리방침
+          </span>
           <Chevron />
         </Link>
         <button
           onClick={onSignOut}
-          className="flex w-full items-center px-5 py-3 text-left text-[15px] text-ink-sub active:bg-bg-subtle"
+          className="flex w-full items-center gap-2.5 px-5 py-3 text-left text-[15px] text-ink-sub active:bg-bg-subtle"
         >
-          로그아웃
+          <span aria-hidden className="text-ink-faint">↪</span>로그아웃
         </button>
       </Card>
     </Screen>

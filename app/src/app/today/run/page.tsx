@@ -6,9 +6,9 @@ import { Suspense, useMemo, useState } from "react";
 import { asKind, buildDailySet, checkShortAnswer, KIND_LABEL } from "@/data/quiz";
 import { Art, hasArt } from "@/components/Art";
 import { conceptById } from "@/data/concepts";
-import type { QuizItem } from "@/lib/types";
+import type { QuizItem, QuizKind } from "@/lib/types";
 import { completeDaily, loadProgress, markConcept, todayKey, useBookmark } from "@/lib/store";
-import { BookmarkStar, Chip, SectionLabel, SegmentedProgress } from "@/components/ui";
+import { BookmarkStar, Chip, SectionLabel, SegmentedProgress, StatRow } from "@/components/ui";
 import { gradeFor, reviewConcept, todayPlan } from "@/lib/scheduler";
 import { logAttempt } from "@/lib/sync";
 
@@ -47,6 +47,9 @@ function Runner() {
   const [answers, setAnswers] = useState<Answered[]>([]);
   const [feedback, setFeedback] = useState<Answered | null>(null);
   const [finished, setFinished] = useState(false);
+  // 세션 전체 시간 — 결과 화면의 "풀이 시간". 문항별 시간(shownAt)과는 다른 값이다
+  const [startedAt] = useState(() => Date.now());
+  const [elapsedMs, setElapsedMs] = useState(0);
 
   const item = set.items[idx];
   const total = set.items.length;
@@ -74,6 +77,7 @@ function Runner() {
     if (idx + 1 >= total) {
       const wrong = answers.filter((a) => !a.correct).map((a) => a.item.conceptId);
       completeDaily(Array.from(new Set(wrong)), kind);
+      setElapsedMs(Date.now() - startedAt);
       setFinished(true);
     } else {
       setIdx(idx + 1);
@@ -90,7 +94,7 @@ function Runner() {
       </main>
     );
 
-  if (finished) return <ResultScreen answers={answers} />;
+  if (finished) return <ResultScreen answers={answers} kind={kind} elapsedMs={elapsedMs} />;
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-xl flex-col px-5 pt-5">
@@ -388,12 +392,54 @@ function BookmarkToggle({ conceptId }: { conceptId: string }) {
   return <BookmarkStar on={on} onToggle={toggle} />;
 }
 
-/** 결과 화면 — 점수 히어로 카드 + 다시 볼 문항(오답) + 맞힌 문항 + [완료] */
-function ResultScreen({ answers }: { answers: Answered[] }) {
+/** 링 게이지 — 정답 수를 원호로. 흰 원호가 파란 히어로 위에 올라간다 (산타 학습 결과) */
+function Ring({ value, label, sub }: { value: number; label: string; sub: string }) {
+  const r = 44;
+  const c = 2 * Math.PI * r;
+  const v = Math.min(1, Math.max(0, value));
+  return (
+    <div className="relative mx-auto h-[112px] w-[112px]">
+      <svg viewBox="0 0 112 112" className="h-full w-full -rotate-90" aria-hidden>
+        <circle cx="56" cy="56" r={r} fill="none" stroke="rgba(255,255,255,0.22)" strokeWidth="10" />
+        <circle
+          cx="56" cy="56" r={r} fill="none" stroke="#fff" strokeWidth="10" strokeLinecap="round"
+          strokeDasharray={`${c * v} ${c}`}
+          className="transition-[stroke-dasharray] duration-500"
+        />
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center leading-none">
+        <span className="text-[26px] font-extrabold tabular-nums">{label}</span>
+        <span className="mt-1 text-[11px] font-bold text-white/80">{sub}</span>
+      </div>
+    </div>
+  );
+}
+
+const fmtElapsed = (ms: number) => {
+  const s = Math.max(0, Math.round(ms / 1000));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+};
+
+/** 결과 화면 — 링 게이지 히어로 + 지표 3칸 + 다시 볼 문항(오답) + 맞힌 문항 + [완료] (시안 v2 결과 B) */
+function ResultScreen({
+  answers,
+  kind,
+  elapsedMs,
+}: {
+  answers: Answered[];
+  kind: QuizKind;
+  elapsedMs: number;
+}) {
   const correct = answers.filter((a) => a.correct).length;
   const streak = loadProgress().streak.count;
   const perfect = correct === answers.length;
   const score = answers.length ? Math.round((correct / answers.length) * 100) : 0;
+  const wrongCount = answers.length - correct;
+  const headline = perfect
+    ? "전부 맞혔어요!"
+    : wrongCount <= 2
+      ? `잘했어요, 오답 ${wrongCount}개만 다시 봐요`
+      : `오답 ${wrongCount}개를 다시 봐요`;
   // 문항 번호는 푼 순서다 — 오답만 따로 모아도 Q# 은 원래 자리를 가리킨다
   const numbered = answers.map((a, i) => ({ a, n: i + 1 }));
   const wrong = numbered.filter((x) => !x.a.correct);
@@ -401,27 +447,27 @@ function ResultScreen({ answers }: { answers: Answered[] }) {
 
   return (
     <main className="mx-auto w-full max-w-xl px-5 pb-32 pt-6">
-      {/* 점수 히어로 */}
-      <section className="relative overflow-hidden rounded-[28px] bg-primary-500 px-6 py-7 text-center text-white shadow-hero">
-        <h1 className="text-[14px] font-semibold text-white/85">
-          {answers.length}문항 중 {correct}문항 맞혔어요
-        </h1>
-        <p className="mt-2 text-[52px] font-extrabold leading-none">
-          {score}
-          <span className="text-[26px] font-bold">점</span>
-        </p>
-        <ul className="relative z-10 mt-4 flex flex-wrap justify-center gap-2 text-[13px] font-bold">
-          <li className="rounded-full bg-white/20 px-3.5 py-1.5">✓ 정답 {correct}</li>
-          <li className="rounded-full bg-white/20 px-3.5 py-1.5">✕ 오답 {answers.length - correct}</li>
-          <li className="inline-flex items-center gap-1 rounded-full bg-surface px-3.5 py-1.5 text-primary-700">
-            <Art name="streak-flame" px={14} />
-            연속 {streak}일
-          </li>
-        </ul>
+      {/* 링 게이지 히어로 — 정답 수가 원호로, 한 줄 평가가 그 아래 */}
+      <section className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-primary-700 to-primary-500 px-6 pb-6 pt-5 text-center text-white shadow-hero">
+        <p className="mb-3 text-[13px] font-semibold text-white/80">{KIND_LABEL[kind]} · 오늘의 학습</p>
+        <Ring value={answers.length ? correct / answers.length : 0} label={`${correct}/${answers.length}`} sub="정답" />
+        <h1 className="mt-3 text-[20px] font-extrabold leading-snug">{headline}</h1>
         <span className="pointer-events-none absolute -right-2 -top-3" aria-hidden>
           <Art name={perfect ? "result-perfect" : "result-good"} />
         </span>
       </section>
+
+      {/* 지표 3칸 — 정답률·풀이 시간·연속. 풀이 시간은 이미 재고 있던 값이라
+          새로 저장하는 것은 없다 */}
+      <div className="mt-3">
+        <StatRow
+          items={[
+            { value: `${score}점`, label: "정답률" },
+            { value: fmtElapsed(elapsedMs), label: "풀이 시간" },
+            { value: `${streak}일`, label: "연속 학습" },
+          ]}
+        />
+      </div>
 
       <SectionLabel>다시 볼 문항 {wrong.length}</SectionLabel>
       {wrong.length === 0 ? (
@@ -449,14 +495,23 @@ function ResultScreen({ answers }: { answers: Answered[] }) {
         </>
       )}
 
-      {/* 탭 바가 숨는 화면이라 BottomCta(탭 바 위에 뜬다) 대신 바닥에 붙인다 */}
+      {/* 탭 바가 숨는 화면이라 BottomCta(탭 바 위에 뜬다) 대신 바닥에 붙인다.
+          "다른 유형 풀기"는 유형 고르기 화면으로 — 홈의 유형 카드와 같은 선택이다 */}
       <div className="fixed inset-x-0 bottom-0 bg-gradient-to-t from-bg via-bg/90 to-transparent px-5 pb-[max(20px,env(safe-area-inset-bottom))] pt-6">
-        <Link
-          href="/"
-          className="mx-auto flex h-14 max-w-xl items-center justify-center rounded-full bg-primary-500 text-[17px] font-bold text-white shadow-cta"
-        >
-          완료
-        </Link>
+        <div className="mx-auto flex max-w-xl gap-2.5">
+          <Link
+            href="/today"
+            className="flex h-14 flex-1 items-center justify-center rounded-full bg-surface text-[16px] font-bold text-primary-700 shadow-card"
+          >
+            다른 유형 풀기
+          </Link>
+          <Link
+            href="/"
+            className="flex h-14 flex-1 items-center justify-center rounded-full bg-primary-500 text-[16px] font-bold text-white shadow-cta"
+          >
+            완료
+          </Link>
+        </div>
       </div>
     </main>
   );

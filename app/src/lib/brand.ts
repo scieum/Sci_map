@@ -21,15 +21,15 @@ export const BRAND = {
  * `bg-${x}-500` 처럼 조립하면 그 클래스가 빌드에서 사라진다.
  */
 const PILL: Record<string, string> = {
-  indigo: "bg-primary-500 shadow-chip",
-  azure: "bg-azure-500 shadow-[0_4px_12px_rgba(33,104,214,0.28)]",
+  blue: "bg-primary-500 shadow-chip",
+  green: "bg-green-500 shadow-[0_4px_12px_rgba(11,127,68,0.28)]",
   violet: "bg-violet-500 shadow-[0_4px_12px_rgba(107,75,214,0.28)]",
-  rose: "bg-rose-500 shadow-[0_4px_12px_rgba(194,58,114,0.28)]",
+  orange: "bg-orange-500 shadow-[0_4px_12px_rgba(196,80,28,0.28)]",
 };
 
 /** 활성 과목 알약 칩 — 과목 색의 채움판. 사전에 없는 과목은 브랜드색 */
 export const subjectAccent = (subject: string): string =>
-  PILL[SUBJECT_HUE[subject] ?? "indigo"];
+  PILL[SUBJECT_HUE[subject] ?? "blue"];
 
 /**
  * 과목 색 — 과목마다 보조 팔레트에서 하나씩 (Design.md §2.4).
@@ -53,28 +53,34 @@ export type Accent = {
   fillSoft: string;
 };
 const ACCENT: Record<string, Accent> = {
-  indigo: { tint: "bg-primary-50", text: "text-primary-700", solid: "bg-primary-500",
-            fillSolid: "fill-primary-500", fillSoft: "fill-primary-100" },
-  azure: { tint: "bg-azure-50", text: "text-azure-700", solid: "bg-azure-500",
-           fillSolid: "fill-azure-500", fillSoft: "fill-azure-50" },
+  blue: { tint: "bg-primary-50", text: "text-primary-700", solid: "bg-primary-500",
+          fillSolid: "fill-primary-500", fillSoft: "fill-primary-100" },
+  green: { tint: "bg-green-50", text: "text-green-700", solid: "bg-green-500",
+           fillSolid: "fill-green-500", fillSoft: "fill-green-50" },
   violet: { tint: "bg-violet-50", text: "text-violet-700", solid: "bg-violet-500",
             fillSolid: "fill-violet-500", fillSoft: "fill-violet-50" },
-  rose: { tint: "bg-rose-50", text: "text-rose-700", solid: "bg-rose-500",
-          fillSolid: "fill-rose-500", fillSoft: "fill-rose-50" },
+  orange: { tint: "bg-orange-50", text: "text-orange-700", solid: "bg-orange-500",
+            fillSolid: "fill-orange-500", fillSoft: "fill-orange-50" },
 };
-/** 과목 이름 → 색 이름. 카드는 과목을 이름으로 갖는다 */
+/**
+ * 과목 이름 → 색 이름. 카드는 과목을 이름으로 갖는다.
+ *
+ * 2026-10-10 팔레트 교체(천재 블루)와 함께 다시 배정했다 — 통합과학1 은
+ * 천재교육 로고의 초록, 통합과학2 는 T셀파 로고의 주황. 예전 애저(파랑)는
+ * 새 키 컬러와 같은 계열이라 과목 신호가 묻혀서 뺐다.
+ */
 const SUBJECT_HUE: Record<string, keyof typeof ACCENT> = {
-  "물질과 에너지": "indigo",
+  "물질과 에너지": "blue",
   "화학 반응의 세계": "violet",
-  통합과학1: "azure",
-  통합과학2: "rose",
+  통합과학1: "green",
+  통합과학2: "orange",
 };
 export const accentOfSubject = (subject: string): Accent =>
-  ACCENT[SUBJECT_HUE[subject] ?? "indigo"];
+  ACCENT[SUBJECT_HUE[subject] ?? "blue"];
 
 /** 홈 "오늘의 구성" 타일 — 참고 이미지의 파스텔 카드 + 작은 색 태그 */
 export const TILE = {
   review: { tint: "bg-violet-50", tag: "text-violet-700", value: "text-violet-700" },
-  fresh: { tint: "bg-azure-50", tag: "text-azure-700", value: "text-azure-700" },
-  streak: { tint: "bg-rose-50", tag: "text-rose-700", value: "text-rose-700" },
+  fresh: { tint: "bg-green-50", tag: "text-green-700", value: "text-green-700" },
+  streak: { tint: "bg-orange-50", tag: "text-orange-700", value: "text-orange-700" },
 } as const;

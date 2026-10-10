@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use, useEffect, useMemo, useState } from "react";
 import { BottomCta, Card, Chip, ProgressBar } from "@/components/ui";
+import { Chip as ModeChip, ChipRow } from "@/components/hub";
 import { conceptById } from "@/data/concepts";
 import {
   CHOICES,
@@ -30,8 +31,67 @@ import { isSupabaseConfigured, supabase } from "@/lib/supabase";
  *
  * ★ 이미지는 로그인한 세션에만 내려오는 서명 URL 이다. 세션이 없으면 문항을
  *   아예 받아 오지 않는다.
+ *
+ * ★ 출제 순서는 다섯 가지다 (2026-10-10, 시안 v2 문제 B): 순서대로 · 쉬운 것부터 ·
+ *   어려운 것부터 · 랜덤 · 안 푼 것만. 평가지 번호 순 하나뿐이던 때에는 시험 전에
+ *   어려운 것만 보거나 특정 문항으로 건너뛸 길이 없었다. 난이도 표가 없는 자료
+ *   (물질과 에너지)에서는 난이도 두 칩이 비활성이 된다 — 없는 정보로 정렬하지 않는다.
+ *   랜덤은 세션 안에서 씨앗을 고정해 뒤로 갔다 와도 같은 순서다.
  */
 type UnitItem = UnitItems["items"][number];
+
+type Order = "seq" | "easy" | "hard" | "random" | "unsolved";
+const ORDERS: { key: Order; label: string; needsDifficulty?: boolean }[] = [
+  { key: "seq", label: "순서대로" },
+  { key: "easy", label: "쉬운 것부터", needsDifficulty: true },
+  { key: "hard", label: "어려운 것부터", needsDifficulty: true },
+  { key: "random", label: "랜덤" },
+  { key: "unsolved", label: "안 푼 것만" },
+];
+/** 발행사 난이도 표기 → 숫자. 표기가 없으면 가운데로 둔다 (정렬에서 앞뒤로 튀지 않게) */
+const DIFF_RANK: Record<string, number> = { 하: 1, 중: 2, 상: 3 };
+const rankOf = (i: UnitItem) => DIFF_RANK[i.difficulty ?? ""] ?? 2;
+
+/** 씨앗 있는 셔플 (mulberry32 + Fisher–Yates) — 같은 씨앗이면 같은 순서다 */
+function shuffled<T>(list: T[], seed: number): T[] {
+  let a = seed >>> 0;
+  const rnd = () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  const out = list.slice();
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+type Answered = Record<string, { given: string; correct: boolean }>;
+
+/** 순서 설정대로 문항을 세운다. 순수 함수 — 같은 입력이면 같은 순서다 */
+function orderItems(
+  all: UnitItem[],
+  sort: { order: Order; seed: number; skip: Answered },
+): UnitItem[] {
+  switch (sort.order) {
+    case "easy":
+      return all.slice().sort((a, b) => rankOf(a) - rankOf(b));
+    case "hard":
+      return all.slice().sort((a, b) => rankOf(b) - rankOf(a));
+    case "random":
+      return shuffled(all, sort.seed);
+    case "unsolved": {
+      const rest = all.filter((i) => !sort.skip[i.id]);
+      return rest.length > 0 ? rest : all;
+    }
+    default:
+      return all;
+  }
+}
 
 export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[unitId]">) {
   const { subjectCode, unitId } = use(params);
@@ -44,8 +104,48 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
   const [idx, setIdx] = useState<number | null>(null);
   const [given, setGiven] = useState<string | null>(null);
   const [score, setScore] = useState({ done: 0, correct: 0 });
+  // 풀이 기록 — 문항 고르기 그리드의 ✓·✕ 와 "안 푼 것만" 의 근거. localStorage 는
+  // 마운트 뒤에만 읽는다 (서버 렌더와 첫 그림이 같아야 한다)
+  const [answered, setAnswered] = useState<Answered>({});
+  // 순서 설정은 한 덩어리로 바뀐다 — 어떤 순서인지, 랜덤 씨앗, "안 푼 것만" 을
+  // 고른 순간의 기록. 셋이 따로 놀면 목록이 풀 때마다 줄어 지금 보는 문항이 사라진다
+  const [sort, setSort] = useState<{ order: Order; seed: number; skip: Answered }>({
+    order: "seq",
+    seed: 1,
+    skip: {},
+  });
+  const order = sort.order;
+  const [pickerOpen, setPickerOpen] = useState(false);
 
-  const items = useMemo(() => unit?.items ?? [], [unit]);
+  const all = useMemo(() => unit?.items ?? [], [unit]);
+  const hasDifficulty = useMemo(() => all.some((i) => i.difficulty), [all]);
+
+  /** 지금 순서대로 세운 문항 */
+  const items = useMemo(() => orderItems(all, sort), [all, sort]);
+
+  /** 순서를 바꾼다. 새 순서에서 아직 답하지 않은 첫 문항으로 간다. 랜덤을 다시 누르면 다시 섞인다 */
+  function changeOrder(next: Order) {
+    const nextSort = {
+      order: next,
+      // 다시 섞을 때마다 씨앗을 한 칸 민다 — 시계를 읽지 않아도 매번 다른 순서가 된다
+      seed: next === "random" ? (sort.seed * 16807 + 11) % 2147483647 : sort.seed,
+      skip: answered,
+    };
+    const list = orderItems(all, nextSort);
+    const first = list.findIndex((i) => !answered[i.id]);
+    setSort(nextSort);
+    setGiven(null);
+    setIdx(first === -1 ? 0 : first);
+    setPickerOpen(false);
+  }
+
+  /** 그리드에서 고른 문항으로. 이미 푼 문항이면 그때의 답과 해설을 그대로 보여 준다 */
+  function jumpTo(i: number) {
+    const it = items[i];
+    setIdx(i);
+    setGiven(it && answered[it.id] ? answered[it.id].given : null);
+    setPickerOpen(false);
+  }
 
   useEffect(() => {
     if (!isSupabaseConfigured()) {
@@ -62,24 +162,27 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
   }, []);
 
   useEffect(() => {
-    if (!signedIn || items.length === 0) return;
+    if (!signedIn || all.length === 0) return;
     let alive = true;
-    void signedUrls(items).then((u) => {
+    void signedUrls(all).then((u) => {
       if (alive) setUrls(u);
     });
     return () => {
       alive = false;
     };
-  }, [items, signedIn]);
+  }, [all, signedIn]);
 
   // 풀던 자리부터. 전부 풀었다면 처음으로 돌아간다(다시 풀 수 있어야 한다)
   useEffect(() => {
-    if (items.length === 0) return;
-    const answered = loadProgress().exam;
-    const next = items.findIndex((i) => !answered[i.id]);
+    if (all.length === 0) return;
+    const rec = loadProgress().exam;
+    const mine: Answered = {};
+    for (const i of all) if (rec[i.id]) mine[i.id] = { given: rec[i.id].given, correct: rec[i.id].correct };
+    setAnswered(mine);
+    const next = all.findIndex((i) => !rec[i.id]);
     setIdx(next === -1 ? 0 : next);
-    setScore(examProgress(items.map((i) => i.id)));
-  }, [items]);
+    setScore(examProgress(all.map((i) => i.id)));
+  }, [all]);
 
   // Fetch and decode only the next two images while the student reads this one.
   // Signed URLs alone do not download the image bytes.
@@ -106,6 +209,7 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
     const correct = item.kind === "choice" ? choice === item.answer : true;
     setGiven(choice);
     recordExam(item.id, choice, correct);
+    setAnswered((a) => ({ ...a, [item.id]: { given: choice, correct } }));
     setScore((s) => ({ done: s.done + 1, correct: s.correct + (correct ? 1 : 0) }));
   }
 
@@ -150,6 +254,29 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
 
   return (
     <Shell head={head} back={back} count={`${idx! + 1} / ${total}`} withCta={Boolean(given)}>
+      {/* 출제 순서 — 칩 한 줄. 랜덤을 다시 누르면 다시 섞인다 */}
+      <ChipRow scroll>
+        {ORDERS.map((o) => (
+          <ModeChip
+            key={o.key}
+            on={order === o.key}
+            disabled={Boolean(o.needsDifficulty) && !hasDifficulty}
+            onClick={() => changeOrder(o.key)}
+          >
+            {o.key === "random" && order === "random" ? "랜덤 · 다시 섞기" : o.label}
+          </ModeChip>
+        ))}
+      </ChipRow>
+
+      <ItemPicker
+        items={items}
+        answered={answered}
+        current={idx!}
+        open={pickerOpen}
+        onToggle={() => setPickerOpen((o) => !o)}
+        onPick={jumpTo}
+      />
+
       <div className="mb-4">
         <ProgressBar
           value={(idx! + (given ? 1 : 0)) / total}
@@ -272,6 +399,75 @@ export default function UnitPage({ params }: PageProps<"/items/[subjectCode]/[un
         </BottomCta>
       )}
     </Shell>
+  );
+}
+
+/**
+ * 문항 고르기 — 접이식 그리드. 칸은 지금 순서의 자리 번호이고, 색과 글자(✓·✕)가
+ * 풀이 결과를 말한다 (D4). 누르면 그 문항으로 간다.
+ */
+function ItemPicker({
+  items,
+  answered,
+  current,
+  open,
+  onToggle,
+  onPick,
+}: {
+  items: UnitItem[];
+  answered: Answered;
+  current: number;
+  open: boolean;
+  onToggle: () => void;
+  onPick: (i: number) => void;
+}) {
+  const ok = items.filter((i) => answered[i.id]?.correct).length;
+  const bad = items.filter((i) => answered[i.id] && !answered[i.id].correct).length;
+  const rest = items.length - ok - bad;
+  return (
+    <div className="mb-3 overflow-hidden rounded-[20px] bg-surface shadow-card">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="flex min-h-[44px] w-full items-center justify-between px-4 py-2.5 text-left"
+      >
+        <span className="text-[13px] font-bold">문항 고르기</span>
+        <span className="flex items-center gap-2 text-[12px] text-ink-sub">
+          <span className="text-success">✓ {ok}</span>
+          <span className="text-danger">✕ {bad}</span>
+          <span>안 품 {rest}</span>
+          <span aria-hidden className={`text-ink-faint transition-transform ${open ? "rotate-180" : ""}`}>⌄</span>
+        </span>
+      </button>
+      {open && (
+        <div className="grid grid-cols-6 gap-1.5 px-4 pb-4 pt-1">
+          {items.map((it, i) => {
+            const a = answered[it.id];
+            const look = a
+              ? a.correct
+                ? "bg-success-bg text-success"
+                : "bg-danger-bg text-danger"
+              : "bg-bg-subtle text-ink-sub";
+            return (
+              <button
+                key={it.id}
+                type="button"
+                onClick={() => onPick(i)}
+                aria-current={i === current ? "true" : undefined}
+                aria-label={`${i + 1}번째 문항${a ? (a.correct ? " · 정답" : " · 오답") : ""}${it.difficulty ? ` · 난이도 ${it.difficulty}` : ""}`}
+                className={`flex aspect-square flex-col items-center justify-center rounded-[10px] text-[12px] font-bold tabular-nums ${look} ${
+                  i === current ? "ring-2 ring-primary-500" : ""
+                }`}
+              >
+                {i + 1}
+                {a && <span className="text-[9px] leading-none">{a.correct ? "✓" : "✕"}</span>}
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 }
 

@@ -119,6 +119,10 @@ export default function RecallPage({
               <GradeBtn onClick={() => grade(2)} art="grade-vague" label="애매해요" />
               <GradeBtn onClick={() => grade(3)} art="grade-perfect" label="완벽해요" />
             </div>
+            {/* 평가가 무엇을 바꾸는지 한 줄 — 복습 간격은 FSRS 가 정한다 (lib/scheduler) */}
+            <p className="mt-3 text-center text-[12px] text-ink-faint">
+              완벽할수록 다음 복습이 늦게, 아직이면 곧 다시 나와요
+            </p>
           </div>
         )}
       </div>

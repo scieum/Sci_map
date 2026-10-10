@@ -1,7 +1,8 @@
 "use client";
 
+import { BRAND } from "@/lib/brand";
 import { useState } from "react";
-import { BottomCta, Card, Screen, ScreenTitle } from "@/components/ui";
+import { BottomCta, Card, Screen } from "@/components/ui";
 import SchoolPicker, { type SchoolValue } from "@/components/SchoolPicker";
 import {
   emailProblem,
@@ -40,10 +41,18 @@ export default function LoginPanel() {
 
   return (
     <Screen>
-      <ScreenTitle>내 정보</ScreenTitle>
-      <p className="-mt-3 mb-4 text-[14px] leading-relaxed text-ink-sub">
-        로그인하면 기록이 서버에 남고, 폰을 바꿔도 이어져요.
-      </p>
+      <h1 className="sr-only">내 정보 — 로그인</h1>
+      {/* 브랜드 머리 — 세모·하이링구얼처럼 첫 화면에 이름과 한 줄 설명을 크게 둔다
+          (시안 v2 로그인 C). 로그인 방식(아이디·비밀번호)은 교사 결정이라 그대로다 */}
+      <div className="mb-5 flex flex-col items-center pt-4 text-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/brand/mark.png" alt="" width={80} height={45} className="h-[45px] w-auto object-contain" />
+        <p className="mt-3 text-[24px] font-extrabold text-primary-700">{BRAND.name}</p>
+        <p className="mt-1 text-[13px] text-ink-sub">{BRAND.tagline}</p>
+        <p className="mt-3 text-[13px] leading-relaxed text-ink-sub">
+          로그인하면 기록이 서버에 남고, 폰을 바꿔도 이어져요.
+        </p>
+      </div>
 
       <div className="mb-4 flex gap-1 rounded-full bg-bg-subtle p-1">
         <Tab on={mode === "in"} onClick={() => setMode("in")}>로그인</Tab>

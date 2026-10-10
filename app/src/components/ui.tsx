@@ -43,12 +43,15 @@ export function Card({
 export function SectionLabel({
   children,
   tone = "primary",
+  id,
 }: {
   children: ReactNode;
   tone?: "primary" | "warning";
+  /** 섹션 점프 칩이 스크롤해 올 자리. 고정 칩 줄 높이만큼 위 여백을 둔다 */
+  id?: string;
 }) {
   return (
-    <h2 className="mb-2.5 mt-7 flex items-center gap-2 text-[16px] font-bold">
+    <h2 id={id} className="mb-2.5 mt-7 flex scroll-mt-16 items-center gap-2 text-[16px] font-bold">
       <span
         aria-hidden
         className={`h-4 w-1 rounded-full ${tone === "warning" ? "bg-warning" : "bg-primary-500"}`}
@@ -124,7 +127,7 @@ export function ProgressBar({
 }: {
   /** 0~1 */
   value: number;
-  tone?: "primary" | "soft" | "violet" | "azure" | "rose";
+  tone?: "primary" | "soft" | "violet" | "green" | "orange";
   size?: "sm" | "md";
   /** 스크린 리더용 이름 */
   label?: string;
@@ -133,8 +136,8 @@ export function ProgressBar({
     primary: "bg-primary-500",
     soft: "bg-primary-300",
     violet: "bg-violet-500",
-    azure: "bg-azure-500",
-    rose: "bg-rose-500",
+    green: "bg-green-500",
+    orange: "bg-orange-500",
   } as const;
   const pct = Math.round(Math.min(1, Math.max(0, value)) * 100);
   return (

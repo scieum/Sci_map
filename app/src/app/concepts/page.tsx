@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { buildTree, byTopic, conceptById, majorNo, minorNo, topicNo } from "@/data/concepts";
 import { orderSubjectNames, subjectNameOf } from "@/data/catalog";
 import type { Concept } from "@/lib/types";
-import { BookmarkStar, Chip, LevelDots, ProgressBar, Screen, ScreenTitle } from "@/components/ui";
+import { BookmarkStar, Chip, LevelDots, ProgressBar, Screen } from "@/components/ui";
 import { loadProgress, toggleBookmark, useProgress } from "@/lib/store";
 import { loadUi, saveUi } from "@/lib/ui-state";
 import { accentOfSubject, subjectAccent, type Accent } from "@/lib/brand";
@@ -98,21 +98,77 @@ export default function ConceptsPage() {
   );
   const subjectStudied = countStudied(subjectAll, progress);
 
+  // 대단원 점프 — 칩을 누르면 그 대단원 카드로, 스크롤하면 보이는 대단원의 칩이 켜진다
+  // (윌라 목차의 현재 위치 강조, 시안 v2 목차 B). 대단원이 하나면 칩 줄을 두지 않는다
+  const majorNames = Array.from(majors.keys());
+  const [activeMajor, setActiveMajor] = useState<string | null>(null);
+  const majorKey = majorNames.join("|");
+  useEffect(() => {
+    const els = majorNames
+      .map((_, i) => document.getElementById(majorAnchor(i)))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (els.length < 2) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const seen = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (seen[0]) setActiveMajor(seen[0].target.getAttribute("data-major"));
+      },
+      // 화면 위쪽 1/4 자리를 지나는 대단원을 "지금 보는 것"으로 친다
+      { rootMargin: "-12% 0px -70% 0px" },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [majorKey, subject]);
+  const jumpTo = useCallback((i: number, name: string) => {
+    setActiveMajor(name);
+    document.getElementById(majorAnchor(i))?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   return (
     <Screen>
-      <ScreenTitle>개념</ScreenTitle>
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <h1 className="text-[22px] font-bold">개념</h1>
+        <SubjectSelect subjects={subjects} value={subject} onChange={chooseSubject} />
+      </div>
 
-      <SubjectSelect subjects={subjects} value={subject} onChange={chooseSubject} />
+      {majorNames.length > 1 && (
+        <div
+          role="tablist"
+          aria-label="대단원 바로가기"
+          className="sticky top-0 z-20 -mx-5 mb-3 flex gap-2 overflow-x-auto bg-bg/95 px-5 py-2 backdrop-blur [scrollbar-width:none] md:-mx-8 md:px-8 [&::-webkit-scrollbar]:hidden"
+        >
+          {majorNames.map((name, i) => {
+            const on = (activeMajor ?? majorNames[0]) === name;
+            return (
+              <button
+                key={name}
+                type="button"
+                role="tab"
+                aria-selected={on}
+                onClick={() => jumpTo(i, name)}
+                className={`h-9 shrink-0 whitespace-nowrap rounded-full px-3.5 text-[13px] font-bold transition-colors ${
+                  on ? "bg-ink text-white" : "bg-surface text-ink-sub shadow-[0_1px_6px_rgba(23,58,94,0.06)]"
+                }`}
+              >
+                {majorNo(firstOf(majors.get(name)!))} {name}
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {subjectAll.length > 0 && (
-        <p className="-mt-2 mb-4 text-[13px] text-ink-faint">
+        <p className="mb-4 text-[13px] text-ink-faint">
           {subjectAll.length}개 개념 · 학습 시작 {subjectStudied}
         </p>
       )}
 
       <BookmarkShelf ids={marks} onRemove={unmark} />
 
-      {Array.from(majors.entries()).map(([major, minors]) => {
+      {Array.from(majors.entries()).map(([major, minors], majorIndex) => {
         // 과목 색 — 같은 과목의 대단원은 전부 같은 색이다
         const accent = accentOfSubject(subject);
         // 대단원 진도 — 학습을 시작한 카드 / 전체 (Design.md §5.6 단원 진행 바)
@@ -121,7 +177,9 @@ export default function ConceptsPage() {
         return (
         <section
           key={major}
-          className="mb-4 overflow-hidden rounded-[24px] bg-surface shadow-card"
+          id={majorAnchor(majorIndex)}
+          data-major={major}
+          className="mb-4 scroll-mt-16 overflow-hidden rounded-[24px] bg-surface shadow-card"
         >
           {/* 과목 색 머리띠 — 번호는 목록 순서가 아니라 백로그 id 에서 온다 (concepts.ts) */}
           <div className={`px-5 pb-4 pt-4 ${accent.tint}`}>
@@ -340,31 +398,29 @@ function SubjectSelect({
   }, [open]);
 
   const label = (
-    <span className="truncate text-[15px] font-bold text-white">{value}</span>
+    <span className="truncate text-[14px] font-bold text-white">{value}</span>
   );
 
   if (subjects.length <= 1) {
     return (
-      <div className="mb-5">
-        <span
-          className={`inline-flex h-12 max-w-full items-center rounded-full px-5 ${subjectAccent(value)}`}
-        >
-          {label}
-        </span>
-      </div>
+      <span
+        className={`inline-flex h-10 max-w-full items-center rounded-full px-4 ${subjectAccent(value)}`}
+      >
+        {label}
+      </span>
     );
   }
 
   return (
     // 폭은 과목 이름만큼만. 한 줄을 가로지르는 단추는 "여기서 무엇이든 고른다" 는
     // 신호가 너무 커서, 정작 아래 목차보다 눈에 먼저 든다
-    <div ref={box} className="relative mb-5 w-fit max-w-full">
+    <div ref={box} className="relative w-fit max-w-full">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className={`flex h-12 max-w-full items-center gap-2 rounded-full pl-5 pr-4 ${subjectAccent(value)}`}
+        className={`flex h-10 max-w-full items-center gap-2 rounded-full pl-4 pr-3 ${subjectAccent(value)}`}
       >
         {label}
         <span
@@ -381,7 +437,7 @@ function SubjectSelect({
         <ul
           role="listbox"
           aria-label="과목"
-          className="absolute left-0 top-[calc(100%+8px)] z-30 w-max min-w-full max-w-[calc(100vw-2.5rem)] overflow-hidden rounded-[20px] bg-surface p-1.5 shadow-[0_10px_30px_rgba(23,58,94,0.18)]"
+          className="absolute right-0 top-[calc(100%+8px)] z-30 w-max min-w-full max-w-[calc(100vw-2.5rem)] overflow-hidden rounded-[20px] bg-surface p-1.5 shadow-[0_10px_30px_rgba(23,58,94,0.18)]"
         >
           {subjects.map((s) => {
             const on = s === value;
@@ -421,6 +477,9 @@ function SubjectSelect({
     </div>
   );
 }
+
+/** 대단원 카드의 앵커 id — 점프 칩과 IntersectionObserver 가 같은 이름을 쓴다 */
+const majorAnchor = (i: number) => `major-${i}`;
 
 /**
  * 목차 번호 조각 — 번호가 없는 카드(시드)에서는 아무것도 그리지 않는다.
@@ -491,10 +550,10 @@ function Chevron({ open }: { open: boolean }) {
  * 과목 색 → 진행 막대 색. brand.ts 가 색 이름을 내보내지 않아 채움 클래스로 거꾸로 찾는다.
  * 사전에 없는 색은 브랜드색으로 — 없는 색을 지어내지 않는다.
  */
-function toneOf(accent: Accent): "primary" | "violet" | "azure" | "rose" {
+function toneOf(accent: Accent): "primary" | "violet" | "green" | "orange" {
   if (accent.solid === "bg-violet-500") return "violet";
-  if (accent.solid === "bg-azure-500") return "azure";
-  if (accent.solid === "bg-rose-500") return "rose";
+  if (accent.solid === "bg-green-500") return "green";
+  if (accent.solid === "bg-orange-500") return "orange";
   return "primary";
 }
 

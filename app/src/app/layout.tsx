@@ -16,7 +16,7 @@ export const viewport: Viewport = {
   // 키보드가 화면을 덮기만 해서, 바닥에 붙은 입력창을 브라우저가 스크롤로
   // 끌어올리며 문항을 위로 밀어냈다 (단답형 치명 버그, 2026-09-06).
   interactiveWidget: "resizes-content",
-  themeColor: "#4b5be8",
+  themeColor: "#2b6cb0",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

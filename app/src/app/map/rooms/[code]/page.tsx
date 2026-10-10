@@ -359,12 +359,12 @@ const PODIUM = {
     chip: "bg-primary-500 text-white",
   },
   2: {
-    circle: "h-12 w-12 bg-azure-50 text-[17px] text-azure-700 ring-2 ring-azure-500",
-    chip: "bg-azure-50 text-azure-700",
+    circle: "h-12 w-12 bg-green-50 text-[17px] text-green-700 ring-2 ring-green-500",
+    chip: "bg-green-50 text-green-700",
   },
   3: {
-    circle: "h-12 w-12 bg-rose-50 text-[17px] text-rose-700 ring-2 ring-rose-500",
-    chip: "bg-rose-50 text-rose-700",
+    circle: "h-12 w-12 bg-orange-50 text-[17px] text-orange-700 ring-2 ring-orange-500",
+    chip: "bg-orange-50 text-orange-700",
   },
 } as const;
 

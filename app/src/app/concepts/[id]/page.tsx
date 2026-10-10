@@ -23,6 +23,63 @@ import {
  * 개념 카드 화면 — 정의 → 표기 → 관계 명제 → 함정 → 그림 → 링크, CTA 하나.
  * 한자가 없는 음차어는 표기 줄에 한자 자리를 아예 만들지 않는다.
  */
+/**
+ * 섹션 점프 칩 — 긴 카드에서 그림·연결로 바로 내려가는 줄. 칩마다 그 섹션의
+ * 개수를 함께 적어 두어, 누르기 전에 카드에 무엇이 얼마나 있는지 읽힌다.
+ * 스크롤 위치는 IntersectionObserver 로 따라간다 — 손으로 내려도 칩이 켜진다.
+ */
+function SectionJump({ sections }: { sections: { id: string; label: string }[] }) {
+  const [active, setActive] = useState(sections[0]?.id ?? "");
+  const key = sections.map((s) => s.id).join("|");
+  useEffect(() => {
+    const els = sections
+      .map((s) => document.getElementById(s.id))
+      .filter((el): el is HTMLElement => Boolean(el));
+    if (els.length < 2) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const seen = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (seen[0]) setActive(seen[0].target.id);
+      },
+      { rootMargin: "-10% 0px -75% 0px" },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+  if (sections.length < 2) return null;
+  return (
+    <div
+      role="tablist"
+      aria-label="카드 안 이동"
+      className="sticky top-0 z-20 -mx-5 mt-3 flex gap-2 overflow-x-auto bg-bg/95 px-5 py-2 backdrop-blur [scrollbar-width:none] md:-mx-8 md:px-8 [&::-webkit-scrollbar]:hidden"
+    >
+      {sections.map((s) => {
+        const on = active === s.id;
+        return (
+          <button
+            key={s.id}
+            type="button"
+            role="tab"
+            aria-selected={on}
+            onClick={() => {
+              setActive(s.id);
+              document.getElementById(s.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className={`h-8 shrink-0 whitespace-nowrap rounded-full px-3.5 text-[12.5px] font-bold transition-colors ${
+              on ? "bg-ink text-white" : "bg-surface text-ink-sub shadow-[0_1px_6px_rgba(23,58,94,0.06)]"
+            }`}
+          >
+            {s.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
   const { id } = use(params);
   const c = conceptById(id);
@@ -44,6 +101,19 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
   const level = progress.concepts[c.id]?.level ?? 0;
   // 한자가 없는 음차어는 null 이지만 "해당 없음" 문자열로 올 때도 같은 대접을 한다
   const hanja = c.hanja && c.hanja !== "해당 없음" ? c.hanja : null;
+  // 연계 배지 — 파이프라인이 concept_key 로 확정한 same 링크에서만 (CLAUDE.md §9.5)
+  const same = c.links
+    .filter((l) => l.type === "same")
+    .map((l) => conceptById(l.target))
+    .find((t): t is NonNullable<typeof t> => Boolean(t) && t!.subject !== c.subject);
+  const linkCount = c.links.filter((l) => conceptById(l.target)).length;
+  const sections = [
+    { id: "sec-def", label: "정의" },
+    { id: "sec-rel", label: `관계 명제 ${c.relations.length}` },
+    ...(c.misconceptions.length > 0 ? [{ id: "sec-trap", label: `함정 ${c.misconceptions.length}` }] : []),
+    ...((c.media?.length ?? 0) > 0 ? [{ id: "sec-media", label: `그림 ${c.media!.length}` }] : []),
+    ...(linkCount > 0 ? [{ id: "sec-links", label: `연결 ${linkCount}` }] : []),
+  ];
 
   return (
     <Screen>
@@ -64,42 +134,58 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
         <BookmarkStar on={marked} onToggle={toggleMark} />
       </nav>
 
-      <h1 className="text-[24px] font-bold leading-tight">{c.term}</h1>
-      {hanja ? (
-        <button
-          onClick={() => setShowGloss((v) => !v)}
-          className="mt-1 text-left text-[15px] text-ink-sub"
-        >
-          {hanja} · {c.english}
-          {c.hanjaGloss && (
-            <span className="ml-1.5 text-primary-600">
-              {showGloss ? "접기" : "풀이"}
-            </span>
-          )}
-        </button>
-      ) : (
-        <p className="mt-1 text-[15px] text-ink-sub">{c.english}</p>
-      )}
-      {showGloss && c.hanjaGloss && (
-        <p className="mt-2 rounded-2xl bg-surface px-4 py-3 text-[14px] text-ink-sub shadow-card">
-          {c.hanjaGloss}
-        </p>
-      )}
-      {level > 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          <Chip tone="primary">
-            학습 중
-            <LevelDots level={level} />
-          </Chip>
-        </div>
-      )}
+      {/* 표제어 히어로 — 표제어·표기·학습 상태·연계 배지를 틴트 판 한 장에 모은다
+          (말해보카 단어 정보, 시안 v2 카드 B). 연계 배지는 **링크가 아니다** —
+          같은 카드로 가는 입구는 아래 '연결된 개념' 하나뿐이어야 한다 */}
+      <section className="rounded-[24px] bg-primary-50 px-5 pb-5 pt-6 text-center">
+        <h1 className="text-[26px] font-bold leading-tight">{c.term}</h1>
+        {hanja ? (
+          <button
+            onClick={() => setShowGloss((v) => !v)}
+            className="mt-1 text-[15px] text-ink-sub"
+          >
+            {hanja} · {c.english}
+            {c.hanjaGloss && (
+              <span className="ml-1.5 font-semibold text-primary-700">
+                {showGloss ? "접기" : "풀이"}
+              </span>
+            )}
+          </button>
+        ) : (
+          <p className="mt-1 text-[15px] text-ink-sub">{c.english}</p>
+        )}
+        {showGloss && c.hanjaGloss && (
+          <p className="mt-3 rounded-2xl bg-surface px-4 py-3 text-left text-[14px] text-ink-sub">
+            {c.hanjaGloss}
+          </p>
+        )}
+        {(level > 0 || same) && (
+          <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+            {level > 0 && (
+              <Chip tone="primary">
+                학습 중
+                <LevelDots level={level} />
+              </Chip>
+            )}
+            {same && (
+              <Chip tone="info">
+                <span aria-hidden>↔</span>
+                <span className="sr-only">다른 과목에서도 배움:</span>
+                {same.subject}
+              </Chip>
+            )}
+          </div>
+        )}
+      </section>
 
-      <SectionLabel>정의</SectionLabel>
+      <SectionJump sections={sections} />
+
+      <SectionLabel id="sec-def">정의</SectionLabel>
       <Card>
         <p className="text-[16px] leading-relaxed">{c.definition}</p>
       </Card>
 
-      <SectionLabel>
+      <SectionLabel id="sec-rel">
         <Art name="section-relations" className="mr-1.5 align-[-2px]" />
         관계 명제
       </SectionLabel>
@@ -122,7 +208,7 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
 
       {c.misconceptions.length > 0 && (
         <>
-          <SectionLabel tone="warning">
+          <SectionLabel id="sec-trap" tone="warning">
             <Art name="section-caution" className="mr-1.5 align-[-2px]" />
             흔한 함정
           </SectionLabel>
@@ -150,14 +236,14 @@ export default function ConceptPage({ params }: PageProps<"/concepts/[id]">) {
 
       {(c.media?.length ?? 0) > 0 && (
         <>
-          <SectionLabel>그림</SectionLabel>
+          <SectionLabel id="sec-media">그림</SectionLabel>
           <ConceptMediaList assets={c.media!} />
         </>
       )}
 
       {/* same 링크는 표기 줄 아래 배지가 제자리다 (Design.md §4.1). 여기서 또
           렌더하면 같은 카드로 가는 입구가 한 화면에 둘이 된다. */}
-      <SectionLabel>
+      <SectionLabel id="sec-links">
         <Art name="section-links" className="mr-1.5 align-[-2px]" />
         연결된 개념
       </SectionLabel>
